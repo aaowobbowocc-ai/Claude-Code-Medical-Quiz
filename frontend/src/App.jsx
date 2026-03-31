@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import Lobby from './pages/Lobby'
@@ -8,6 +8,7 @@ import Map from './pages/Map'
 import Browse from './pages/Browse'
 import Practice from './pages/Practice'
 import { useSocket } from './hooks/useSocket'
+import SplashScreen from './components/SplashScreen'
 
 function AppRoutes() {
   useSocket() // Mount socket listener globally
@@ -29,5 +30,12 @@ function AppRoutes() {
 }
 
 export default function App() {
-  return <AppRoutes />
+  const [splashDone, setSplashDone] = useState(false)
+
+  return (
+    <>
+      {!splashDone && <SplashScreen onDone={() => setSplashDone(true)} />}
+      <AppRoutes />
+    </>
+  )
 }

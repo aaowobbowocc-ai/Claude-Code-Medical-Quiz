@@ -8,8 +8,7 @@ const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','
 
 // ── 外部連結（請依需求替換） ──────────────────────────────────────
 
-const GITHUB_ISSUE  = 'https://github.com/aaowobbowocc-ai/Claude-Code-Medical-Quiz/issues/new'
-const FEEDBACK_MAIL = 'aaowobbowocc@gmail.com'                   // TODO: 替換為你的收件 Email
+const CONTACT_MAIL = 'aaowobbowocc@gmail.com'
 
 function Sheet({ onClose, children }) {
   return (
@@ -86,7 +85,7 @@ export default function Home() {
 
   const sendFeedback = () => {
     if (!feedbackText.trim()) return
-    window.open(`mailto:${FEEDBACK_MAIL}?subject=${encodeURIComponent('醫師知識王 意見回饋')}&body=${encodeURIComponent(feedbackText)}`)
+    window.open(`mailto:${CONTACT_MAIL}?subject=${encodeURIComponent('醫師知識王 意見回饋')}&body=${encodeURIComponent(feedbackText)}`)
     setFeedbackSent(true)
   }
 
@@ -124,13 +123,13 @@ export default function Home() {
             <p>• 遊戲當掉或顯示異常？請描述操作步驟</p>
           </div>
           <button
-            onClick={() => window.open(GITHUB_ISSUE, '_blank')}
+            onClick={() => window.open(`mailto:${CONTACT_MAIL}?subject=${encodeURIComponent('醫師知識王 問題回報')}&body=${encodeURIComponent('【問題描述】\n\n【發生步驟】\n\n【題目年份/題號（若有）】\n')}`)}
             className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform"
             style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
           >
-            前往 GitHub 提交回報 →
+            以 Email 回報問題 →
           </button>
-          <p className="text-center text-xs text-gray-300 mt-3">需要 GitHub 帳號（免費）</p>
+          <p className="text-center text-xs text-gray-300 mt-3">{CONTACT_MAIL}</p>
         </Sheet>
       )}
 

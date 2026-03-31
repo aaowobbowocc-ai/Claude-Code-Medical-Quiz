@@ -83,66 +83,36 @@ export default function Home() {
   const expPct = Math.min(((usePlayerStore.getState().exp || 0) / 300) * 100, 100)
   const { message: dailyMsg, loading: dailyLoading } = useDailyMessage(name, level)
 
-  const sendFeedback = () => {
+  const sendContact = () => {
     if (!feedbackText.trim()) return
-    window.open(`mailto:${CONTACT_MAIL}?subject=${encodeURIComponent('醫師知識王 意見回饋')}&body=${encodeURIComponent(feedbackText)}`)
+    const subj = encodeURIComponent('醫師知識王 意見／回報')
+    const body = encodeURIComponent(feedbackText)
+    window.open(`mailto:${CONTACT_MAIL}?subject=${subj}&body=${body}`)
     setFeedbackSent(true)
   }
 
   /* ── 底部支援列（主畫面共用） ──────────────────────────── */
   const SupportBar = () => (
-    <div className="flex items-center justify-center gap-2 mt-3 pb-1">
-      <button onClick={() => setSheet('bugreport')}
+    <div className="flex items-center justify-center mt-3 pb-1">
+      <button onClick={() => setSheet('contact')}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
-        🐛 回報問題
-      </button>
-      <button onClick={() => setSheet('feedback')}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
-        💌 意見回饋
+        💌 意見回饋 · 問題回報
       </button>
     </div>
   )
 
-  /* ── 三個支援 Sheet ─────────────────────────────────────── */
+  /* ── 聯絡 Sheet ──────────────────────────────────────────── */
   const SupportSheets = () => (
     <>
-      {/* Bug Report */}
-      {sheet === 'bugreport' && (
-        <Sheet onClose={() => setSheet(null)}>
-          <div className="text-center mb-5">
-            <div className="text-5xl mb-3">🐛</div>
-            <h2 className="text-xl font-bold text-medical-dark">發現問題了嗎？</h2>
-            <p className="text-gray-400 text-sm mt-1.5 leading-relaxed">
-              題目有誤、功能異常，或是任何讓你皺眉的地方——<br />
-              你的每一條回報，都讓這個專案更完整。
-            </p>
-          </div>
-          <div className="bg-amber-50 border border-amber-100 rounded-2xl p-4 mb-5 text-sm text-amber-800 leading-relaxed">
-            <p className="font-semibold mb-1">常見問題請先確認：</p>
-            <p>• 題目答案有疑義？可能來自原始考題，歡迎附上年份題號</p>
-            <p>• 遊戲當掉或顯示異常？請描述操作步驟</p>
-          </div>
-          <button
-            onClick={() => window.open(`mailto:${CONTACT_MAIL}?subject=${encodeURIComponent('醫師知識王 問題回報')}&body=${encodeURIComponent('【問題描述】\n\n【發生步驟】\n\n【題目年份/題號（若有）】\n')}`)}
-            className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform"
-            style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
-          >
-            以 Email 回報問題 →
-          </button>
-          <p className="text-center text-xs text-gray-300 mt-3">{CONTACT_MAIL}</p>
-        </Sheet>
-      )}
-
-      {/* Feedback */}
-      {sheet === 'feedback' && (
+      {sheet === 'contact' && (
         <Sheet onClose={() => { setSheet(null); setFeedbackSent(false); setFeedbackText('') }}>
           {feedbackSent ? (
             <div className="text-center py-6">
               <div className="text-6xl mb-4">🙏</div>
               <h2 className="text-xl font-bold text-medical-dark mb-2">謝謝你！</h2>
               <p className="text-gray-400 text-sm leading-relaxed">
-                你的意見我都會認真讀。<br />
-                正是這樣的鼓勵讓開發者繼續走下去。
+                每一條訊息我都會認真讀。<br />
+                正是這樣的回饋讓這個專案繼續走下去。
               </p>
               <button onClick={() => { setSheet(null); setFeedbackSent(false); setFeedbackText('') }}
                       className="mt-6 px-8 py-3 rounded-2xl font-bold text-white active:scale-95"
@@ -154,34 +124,33 @@ export default function Home() {
             <>
               <div className="text-center mb-5">
                 <div className="text-5xl mb-3">💌</div>
-                <h2 className="text-xl font-bold text-medical-dark">告訴我你的想法</h2>
+                <h2 className="text-xl font-bold text-medical-dark">聯絡開發者</h2>
                 <p className="text-gray-400 text-sm mt-1.5 leading-relaxed">
-                  這個遊戲對你的備考有幫到忙嗎？<br />
-                  還是有什麼你希望它能做到的？
+                  意見回饋、功能建議、題目有誤——<br />
+                  什麼都可以說，我都想聽。
                 </p>
               </div>
               <textarea
                 autoFocus
                 className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3.5 text-sm text-gray-700 outline-none focus:border-medical-blue resize-none mb-4 leading-relaxed"
                 rows={5}
-                placeholder="任何想說的都歡迎，沒有格式限制。哪個功能最有用、哪裡還可以改進、或只是說聲謝謝——都很棒。"
+                placeholder="例如：113年第一次第42題答案有疑義、希望新增某功能、或只是說聲謝謝……"
                 value={feedbackText}
                 onChange={e => setFeedbackText(e.target.value)}
               />
               <button
-                onClick={sendFeedback}
+                onClick={sendContact}
                 disabled={!feedbackText.trim()}
                 className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-40"
                 style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
               >
-                送出意見
+                以 Email 送出
               </button>
-              <p className="text-center text-xs text-gray-300 mt-3">將透過 Email 傳送</p>
+              <p className="text-center text-xs text-gray-300 mt-3">{CONTACT_MAIL}</p>
             </>
           )}
         </Sheet>
       )}
-
     </>
   )
 

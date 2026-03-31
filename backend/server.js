@@ -27,9 +27,9 @@ const questionsData = JSON.parse(
 function getQuestionsByStage(stageId) {
   if (stageId === 0) {
     // All questions
-    return questionsData.questions.filter(q => q.answer);
+    return questionsData.questions.filter(q => q.answer && q.options[q.answer]);
   }
-  return questionsData.questions.filter(q => q.stage_id === stageId && q.answer);
+  return questionsData.questions.filter(q => q.stage_id === stageId && q.answer && q.options[q.answer]);
 }
 
 function shuffle(arr) {
@@ -330,7 +330,7 @@ app.get('/questions/random', (req, res) => {
   const tag = stage_id && parseInt(stage_id) > 0
     ? questionsData.stages.find(s => s.id === parseInt(stage_id))?.tag
     : null;
-  let pool = questionsData.questions.filter(q => q.answer);
+  let pool = questionsData.questions.filter(q => q.answer && q.options[q.answer]);
   if (tag) pool = pool.filter(q => q.subject_tag === tag);
   const picked = shuffle(pool).slice(0, parseInt(count));
   res.json({ total: pool.length, questions: picked });

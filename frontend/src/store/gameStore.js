@@ -48,6 +48,7 @@ export const useGameStore = create((set) => ({
   questionIndex: 0,
   totalQuestions: 0,
   timeRemaining: 15,
+  timeLimit: 15,
   myAnswer: null,
   correctAnswer: null,
   myScore: 0,
@@ -58,11 +59,12 @@ export const useGameStore = create((set) => ({
   setPhase: (phase) => set({ phase }),
   setPlayers: (players) => set({ players }),
   setStage: (stage) => set({ stage }),
-  setQuestion: (q, index, total) => set({
+  setQuestion: (q, index, total, timeLimit = 15) => set({
     currentQuestion: q,
     questionIndex: index,
     totalQuestions: total,
-    timeRemaining: 15,
+    timeRemaining: timeLimit,
+    timeLimit,
     myAnswer: null,
     correctAnswer: null,
   }),

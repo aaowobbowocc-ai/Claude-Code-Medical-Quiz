@@ -45,7 +45,7 @@ export function useSocket() {
         navigate('/game')
       },
       question: ({ index, total, question, options, timeLimit }) => {
-        setQuestion({ question, options }, index, total)
+        setQuestion({ question, options }, index, total, timeLimit)
         setMyAnswer(null)
         setCorrectAnswer(null)
       },

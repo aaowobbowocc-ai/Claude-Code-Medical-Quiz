@@ -19,7 +19,7 @@ export default function Game() {
 
   const {
     currentQuestion, questionIndex, totalQuestions,
-    timeRemaining, myAnswer, correctAnswer, myScore,
+    timeRemaining, timeLimit, myAnswer, correctAnswer, myScore,
     players, phase, roomCode, stageName,
   } = useGameStore()
 
@@ -27,7 +27,7 @@ export default function Game() {
     if (!roomCode) navigate('/')
   }, [roomCode])
 
-  // Tick sound when time is low
+  // Tick sound when time is low (last 5s)
   useEffect(() => {
     if (timeRemaining <= 5 && timeRemaining > 0 && !myAnswer) {
       play('countdown')
@@ -62,8 +62,8 @@ export default function Game() {
   }
 
   const progress = ((questionIndex) / totalQuestions) * 100
-  const timePercent = (timeRemaining / 15) * 100
-  const timeColor = timeRemaining > 8 ? 'bg-medical-success' : timeRemaining > 4 ? 'bg-amber-400' : 'bg-medical-danger'
+  const timePercent = (timeRemaining / timeLimit) * 100
+  const timeColor = timeRemaining > timeLimit * 0.5 ? 'bg-medical-success' : timeRemaining > timeLimit * 0.25 ? 'bg-amber-400' : 'bg-medical-danger'
 
   // Sort players by score
   const sorted = [...players].sort((a, b) => b.score - a.score)

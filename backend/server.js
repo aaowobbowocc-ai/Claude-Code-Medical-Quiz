@@ -48,8 +48,13 @@ const rooms = new Map();
 //   stage, questions[], qIndex, timer, phase: 'lobby'|'playing'|'ended'
 // }
 
-const QUESTION_TIME = 15; // seconds
 const QUESTIONS_PER_GAME = 10;
+
+function calcTimeLimit(q) {
+  const totalLen = q.question.length + Object.values(q.options).join('').length;
+  // 15s base; +1s per 30 chars over 100; cap at 35s
+  return Math.min(35, Math.max(15, 15 + Math.floor((totalLen - 100) / 30)));
+}
 
 function makeRoomCode() {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -92,6 +97,8 @@ function startQuestion(room) {
     p.lastAnswer = null;
   }
 
+  const timeLimit = calcTimeLimit(q);
+
   // Send question (without answer)
   io.to(room.code).emit('question', {
     index: room.qIndex,
@@ -99,11 +106,11 @@ function startQuestion(room) {
     number: q.number,
     question: q.question,
     options: q.options,
-    timeLimit: QUESTION_TIME,
+    timeLimit,
   });
 
   // Start countdown
-  let remaining = QUESTION_TIME;
+  let remaining = timeLimit;
   room.timer = setInterval(() => {
     remaining--;
     io.to(room.code).emit('tick', { remaining });

@@ -34,7 +34,7 @@ function QuestionCard({ q }) {
   const [open, setOpen] = useState(false)
   const [explainReq, setExplainReq] = useState(false)
   const tagColor = STAGE_COLORS[q.subject_tag] || '#94A3B8'
-  const { text: explainText, loading: explainLoading, explain } = useExplain()
+  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, explain } = useExplain()
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
@@ -82,6 +82,7 @@ function QuestionCard({ q }) {
             <ExplainPanel
               text={explainText}
               loading={explainLoading}
+              limitHit={explainLimitHit}
               requested={explainReq}
               onRequest={() => { setExplainReq(true); explain(q) }}
               answer={q.answer}

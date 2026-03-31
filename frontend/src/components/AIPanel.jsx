@@ -26,7 +26,7 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit }) {
   if (!requested) {
     return (
       <button
@@ -53,27 +53,35 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
       )}
 
       {/* AI explanation */}
-      <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-4 border border-blue-100">
-        <div className="flex items-center gap-2 mb-3">
-          <span className="text-lg">🤖</span>
-          <span className="font-bold text-medical-blue text-sm">AI 解說</span>
-          <span className="text-xs text-gray-400 ml-0.5">僅供參考</span>
-          {loading && (
-            <span className="flex gap-1 ml-1">
-              {[0,1,2].map(i => (
-                <span key={i} className="w-1.5 h-1.5 rounded-full bg-medical-blue animate-bounce"
-                      style={{ animationDelay: `${i * 0.12}s` }} />
-              ))}
-            </span>
-          )}
+      {limitHit ? (
+        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
+          <p className="text-2xl mb-2">😴</p>
+          <p className="text-sm font-semibold text-amber-700">今日 AI 解說已達上限</p>
+          <p className="text-xs text-amber-500 mt-1">每天 100 次，明天 00:00 重置</p>
         </div>
-        <div className="text-sm text-gray-700 flex flex-col gap-1">
-          {renderText(text)}
-          {loading && !text && (
-            <div className="h-4 w-3/4 bg-blue-100 rounded animate-pulse" />
-          )}
+      ) : (
+        <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-4 border border-blue-100">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-lg">🤖</span>
+            <span className="font-bold text-medical-blue text-sm">AI 解說</span>
+            <span className="text-xs text-gray-400 ml-0.5">僅供參考</span>
+            {loading && (
+              <span className="flex gap-1 ml-1">
+                {[0,1,2].map(i => (
+                  <span key={i} className="w-1.5 h-1.5 rounded-full bg-medical-blue animate-bounce"
+                        style={{ animationDelay: `${i * 0.12}s` }} />
+                ))}
+              </span>
+            )}
+          </div>
+          <div className="text-sm text-gray-700 flex flex-col gap-1">
+            {renderText(text)}
+            {loading && !text && (
+              <div className="h-4 w-3/4 bg-blue-100 rounded animate-pulse" />
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }

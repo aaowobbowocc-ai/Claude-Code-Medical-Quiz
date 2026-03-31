@@ -352,9 +352,22 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 // POST /explain  — streaming SSE explanation for a single question
 // Body: { question, options:{A,B,C,D}, answer, subject_name, user_answer? }
+// ── Daily AI usage counter (resets at midnight Taipei time) ────
+const aiUsage = { date: '', count: 0 };
+const AI_DAILY_LIMIT = 100;
+
+function checkAILimit() {
+  const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' });
+  if (aiUsage.date !== today) { aiUsage.date = today; aiUsage.count = 0; }
+  if (aiUsage.count >= AI_DAILY_LIMIT) return false;
+  aiUsage.count++;
+  return true;
+}
+
 app.post('/explain', async (req, res) => {
   const { question, options, answer, subject_name, user_answer } = req.body;
   if (!question || !options || !answer) return res.status(400).json({ error: 'missing fields' });
+  if (!checkAILimit()) return res.status(429).json({ error: 'daily_limit', message: '今日 AI 解說次數已達上限，明天再來喔！' });
 
   res.setHeader('Content-Type', 'text/event-stream');
   res.setHeader('Cache-Control', 'no-cache');

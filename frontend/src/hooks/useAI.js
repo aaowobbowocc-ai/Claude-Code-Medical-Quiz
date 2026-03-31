@@ -3,12 +3,18 @@ import { useState, useCallback } from 'react'
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 // Stream text from a POST endpoint that returns SSE
-async function streamPost(url, body, onChunk, onDone) {
+async function streamPost(url, body, onChunk, onDone, onError) {
   const res = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   })
+  if (!res.ok) {
+    const json = await res.json().catch(() => ({}))
+    onError?.(json.message || 'error')
+    onDone?.()
+    return
+  }
   const reader = res.body.getReader()
   const decoder = new TextDecoder()
   let buf = ''
@@ -36,9 +42,11 @@ async function streamPost(url, body, onChunk, onDone) {
 export function useExplain() {
   const [text, setText]       = useState('')
   const [loading, setLoading] = useState(false)
+  const [limitHit, setLimitHit] = useState(false)
 
   const explain = useCallback(async (q) => {
     setText('')
+    setLimitHit(false)
     setLoading(true)
     try {
       await streamPost(
@@ -47,13 +55,14 @@ export function useExplain() {
           subject_name: q.subject_name || q.subject, user_answer: q.user_answer },
         (chunk) => setText(t => t + chunk),
         () => setLoading(false),
+        (msg) => { setLimitHit(true); setText(msg) },
       )
     } catch { setLoading(false) }
   }, [])
 
-  const reset = () => setText('')
+  const reset = () => { setText(''); setLimitHit(false) }
 
-  return { text, loading, explain, reset }
+  return { text, loading, limitHit, explain, reset }
 }
 
 // Hook: review a full session

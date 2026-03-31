@@ -136,7 +136,7 @@ function PracticeGame({ config, onFinish }) {
   const [explainRequested, setExplainRequested] = useState(false)
   const sessionLog = useRef([])   // track every q+answer for review
 
-  const { text: explainText, loading: explainLoading, explain, reset: resetExplain } = useExplain()
+  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, explain, reset: resetExplain } = useExplain()
 
   // Load questions — use fast /random endpoint
   useEffect(() => {
@@ -332,6 +332,7 @@ function PracticeGame({ config, onFinish }) {
             <ExplainPanel
               text={explainText}
               loading={explainLoading}
+              limitHit={explainLimitHit}
               requested={explainRequested}
               onRequest={() => {
                 setExplainRequested(true)

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: medical-quiz-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+    autoDeploy: true

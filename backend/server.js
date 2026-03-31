@@ -8,7 +8,10 @@ const path = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: (origin, cb) => cb(null, true), // allow all origins (Vercel + localhost)
+  credentials: true,
+}));
 app.use(express.json());
 
 const server = http.createServer(app);

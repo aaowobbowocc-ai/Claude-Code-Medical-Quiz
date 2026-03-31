@@ -5,8 +5,16 @@ import { ExplainPanel } from '../components/AIPanel'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
-const YEARS    = ['110', '111', '112', '113']
-const SESSIONS = ['第一次', '第二次']
+const EXAMS = [
+  { label: '110年一', year: '110', session: '第一次' },
+  { label: '110年二', year: '110', session: '第二次' },
+  { label: '111年一', year: '111', session: '第一次' },
+  { label: '111年二', year: '111', session: '第二次' },
+  { label: '112年一', year: '112', session: '第一次' },
+  { label: '112年二', year: '112', session: '第二次' },
+  { label: '113年一', year: '113', session: '第一次' },
+  { label: '113年二', year: '113', session: '第二次' },
+]
 const STAGE_COLORS = {
   anatomy:      '#3B82F6', physiology:  '#EF4444', biochemistry: '#8B5CF6',
   histology:    '#6366F1', microbiology:'#10B981', parasitology: '#D97706',
@@ -107,8 +115,7 @@ export default function Browse() {
   const [hasMore, setHasMore]     = useState(true)
 
   // Filters
-  const [year, setYear]         = useState('')
-  const [session, setSession]   = useState('')
+  const [exam, setExam]         = useState(null)  // { label, year, session } | null
   const [stageTag, setStageTag] = useState('')
   const [query, setQuery]       = useState('')
   const [searchInput, setSearchInput] = useState('')
@@ -126,10 +133,10 @@ export default function Browse() {
     setLoading(true)
     const p = reset ? 1 : page
     const params = new URLSearchParams({ page: p, limit: LIMIT })
-    if (year)     params.set('year', year)
-    if (session)  params.set('session', session)
-    if (stageTag) params.set('subject_tag', stageTag)
-    if (query)    params.set('q', query)
+    if (exam?.year)    params.set('year', exam.year)
+    if (exam?.session) params.set('session', exam.session)
+    if (stageTag)      params.set('subject_tag', stageTag)
+    if (query)         params.set('q', query)
 
     try {
       const r = await fetch(`${BACKEND}/questions?${params}`)
@@ -140,7 +147,7 @@ export default function Browse() {
       if (!reset) setPage(p + 1)
     } catch {}
     setLoading(false)
-  }, [year, session, stageTag, query, page])
+  }, [exam, stageTag, query, page])
 
   // Reset on filter change
   useEffect(() => {
@@ -148,7 +155,7 @@ export default function Browse() {
     setQuestions([])
     setHasMore(true)
     fetchQuestions(true)
-  }, [year, session, stageTag, query])
+  }, [exam, stageTag, query])
 
   // Infinite scroll
   useEffect(() => {
@@ -171,9 +178,9 @@ export default function Browse() {
   }, [page])
 
   const clearFilters = () => {
-    setYear(''); setSession(''); setStageTag(''); setQuery(''); setSearchInput('')
+    setExam(null); setStageTag(''); setQuery(''); setSearchInput('')
   }
-  const hasFilters = year || session || stageTag || query
+  const hasFilters = exam || stageTag || query
 
   return (
     <div className="flex flex-col min-h-dvh no-select" style={{ background: '#F0F4F8' }}>
@@ -216,20 +223,12 @@ export default function Browse() {
         <div className="overflow-x-auto scrollbar-none">
           <div className="flex gap-2 px-4 pb-3 w-max">
 
-            {/* Year */}
-            <Chip label="全部年份" active={!year} color="#1A6B9A"
-                  onClick={() => setYear('')} />
-            {YEARS.map(y => (
-              <Chip key={y} label={`${y}年`} active={year === y} color="#1A6B9A"
-                    onClick={() => setYear(year === y ? '' : y)} />
-            ))}
-
-            <div className="w-px bg-white/20 self-stretch mx-1" />
-
-            {/* Session */}
-            {SESSIONS.map(s => (
-              <Chip key={s} label={s} active={session === s} color="#0D9488"
-                    onClick={() => setSession(session === s ? '' : s)} />
+            {/* Exam (year + session combined) */}
+            <Chip label="全部考試" active={!exam} color="#1A6B9A"
+                  onClick={() => setExam(null)} />
+            {EXAMS.map(e => (
+              <Chip key={e.label} label={e.label} active={exam?.label === e.label} color="#1A6B9A"
+                    onClick={() => setExam(exam?.label === e.label ? null : e)} />
             ))}
 
             <div className="w-px bg-white/20 self-stretch mx-1" />

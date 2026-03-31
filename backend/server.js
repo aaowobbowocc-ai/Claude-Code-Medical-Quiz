@@ -60,9 +60,10 @@ function makeRoomCode() {
   return code;
 }
 
-function getRoomPlayers(room) {
+function getRoomPlayers(room, includeAnswer = false) {
   return Array.from(room.players.entries()).map(([id, p]) => ({
-    id, name: p.name, score: p.score, ready: p.ready
+    id, name: p.name, score: p.score, ready: p.ready,
+    ...(includeAnswer ? { lastAnswer: p.lastAnswer, answered: p.answered } : {}),
   }));
 }
 
@@ -118,7 +119,7 @@ function revealAnswer(room) {
   const q = room.questions[room.qIndex];
   io.to(room.code).emit('reveal', {
     correctAnswer: q.answer,
-    players: getRoomPlayers(room),
+    players: getRoomPlayers(room, true),
   });
 
   // Next question after 3s

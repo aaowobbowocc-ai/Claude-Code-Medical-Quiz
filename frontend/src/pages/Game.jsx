@@ -83,12 +83,23 @@ export default function Game() {
 
         {/* Player scores */}
         <div className="flex gap-2">
-          {sorted.map((p, i) => (
-            <div key={p.id} className={`flex-1 rounded-xl px-3 py-2 ${i === 0 ? 'bg-white/20' : 'bg-white/10'}`}>
-              <p className="text-white/60 text-xs truncate">{p.name}</p>
-              <p className="text-white font-bold text-lg leading-tight">{p.score}</p>
-            </div>
-          ))}
+          {sorted.map((p, i) => {
+            const answerTag = correctAnswer && p.lastAnswer
+              ? (p.lastAnswer === correctAnswer
+                  ? <span className="text-xs font-bold text-green-300 ml-1">{p.lastAnswer} ✓</span>
+                  : <span className="text-xs font-bold text-red-300 ml-1">{p.lastAnswer} ✗</span>)
+              : correctAnswer && !p.lastAnswer
+                ? <span className="text-xs text-white/40 ml-1">—</span>
+                : null
+            return (
+              <div key={p.id} className={`flex-1 rounded-xl px-3 py-2 ${i === 0 ? 'bg-white/20' : 'bg-white/10'}`}>
+                <p className="text-white/60 text-xs truncate flex items-center gap-0.5">
+                  {p.name}{answerTag}
+                </p>
+                <p className="text-white font-bold text-lg leading-tight">{p.score}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
 

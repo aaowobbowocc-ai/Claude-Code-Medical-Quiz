@@ -485,5 +485,50 @@ ${wrongSummary || '（全部答對！）'}
   }
 });
 
+// POST /daily-message — personalized daily motivational message
+// Body: { name, level }
+app.post('/daily-message', async (req, res) => {
+  const { name = '學員', level = 1 } = req.body;
+
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.flushHeaders();
+
+  const today = new Date().toLocaleDateString('zh-TW', {
+    timeZone: 'Asia/Taipei', year: 'numeric', month: 'long', day: 'numeric', weekday: 'long',
+  });
+
+  const prompt = `你是醫師知識王的AI導師。今天是${today}。
+請為正在備考醫師一階國考的醫學生「${name}」（遊戲等級 Lv.${level}）寫一段今日寄語。
+
+要求：
+- 70字以內
+- 語氣像過來人的前輩醫師：溫暖、真實、不說教
+- 融入真實備考情感（疲憊、堅持、那個還沒放棄的自己）
+- 可以用人體或醫學作隱喻，讓文字有質感
+- 繁體中文，台灣語感，不要英文
+- 直接輸出文字，不要任何格式標籤或前綴`;
+
+  try {
+    const stream = await anthropic.messages.stream({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 180,
+      messages: [{ role: 'user', content: prompt }],
+    });
+
+    for await (const chunk of stream) {
+      if (chunk.type === 'content_block_delta' && chunk.delta?.text) {
+        res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`);
+      }
+    }
+    res.write('data: [DONE]\n\n');
+    res.end();
+  } catch (e) {
+    res.write('data: [DONE]\n\n');
+    res.end();
+  }
+});
+
 const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));

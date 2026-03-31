@@ -2,13 +2,14 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
+import { useDailyMessage } from '../hooks/useDailyMessage'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
 
 // ── 外部連結（請依需求替換） ──────────────────────────────────────
 const LINEPAY_URL   = 'https://line.me/ti/p/XXXXXXX'    // TODO: 替換為你的 LINE Pay 贊助連結
 const GITHUB_ISSUE  = 'https://github.com/aaowobbowocc-ai/Claude-Code-Medical-Quiz/issues/new'
-const FEEDBACK_MAIL = 'your@email.com'                   // TODO: 替換為你的收件 Email
+const FEEDBACK_MAIL = 'aaowobbowocc@gmail.com'                   // TODO: 替換為你的收件 Email
 
 function Sheet({ onClose, children }) {
   return (
@@ -81,6 +82,7 @@ export default function Home() {
   }
 
   const expPct = Math.min(((usePlayerStore.getState().exp || 0) / 300) * 100, 100)
+  const { message: dailyMsg, loading: dailyLoading } = useDailyMessage(name, level)
 
   const sendFeedback = () => {
     if (!feedbackText.trim()) return
@@ -369,6 +371,23 @@ export default function Home() {
             <div className="h-full bg-white/70 rounded-full transition-all duration-500" style={{ width: `${expPct}%` }} />
           </div>
         </div>
+
+        {/* 今日寄語 */}
+        {(dailyMsg || dailyLoading) && (
+          <div className="relative bg-white/8 border border-white/12 rounded-2xl px-4 py-3 mt-1">
+            <p className="text-white/35 text-xs mb-1.5 tracking-wide">✨ 今日寄語</p>
+            {dailyLoading && !dailyMsg ? (
+              <div className="flex gap-1.5 py-1">
+                {[0,1,2].map(i => (
+                  <span key={i} className="w-1.5 h-1.5 rounded-full bg-white/30 animate-bounce"
+                        style={{ animationDelay: `${i * 0.15}s` }} />
+                ))}
+              </div>
+            ) : (
+              <p className="text-white/75 text-sm leading-relaxed">{dailyMsg}</p>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Actions */}

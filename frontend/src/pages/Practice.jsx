@@ -337,6 +337,8 @@ function PracticeGame({ config, onFinish }) {
                 setExplainRequested(true)
                 explain({ ...q, user_answer: myAnswer })
               }}
+              answer={q?.answer}
+              options={q?.options}
             />
           </div>
         )}

@@ -84,6 +84,8 @@ function QuestionCard({ q }) {
               loading={explainLoading}
               requested={explainReq}
               onRequest={() => { setExplainReq(true); explain(q) }}
+              answer={q.answer}
+              options={q.options}
             />
           </div>
         </div>

@@ -1,0 +1,215 @@
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useGameStore, usePlayerStore } from '../store/gameStore'
+import { getSocket } from '../hooks/useSocket'
+
+const STAGES = [
+  { id: 0, name: '隨機混合',   icon: '🎲', color: '#64748B', count: 1238 },
+  { id: 1, name: '解剖學殿堂', icon: '🦴', color: '#3B82F6', count: 306  },
+  { id: 2, name: '生理學之谷', icon: '💓', color: '#EF4444', count: 114  },
+  { id: 3, name: '生化迷宮',   icon: '⚗️',  color: '#8B5CF6', count: 208  },
+  { id: 4, name: '組織胚胎學', icon: '🔬', color: '#6366F1', count: 65   },
+  { id: 5, name: '微免聖域',   icon: '🦠', color: '#10B981', count: 195  },
+  { id: 6, name: '寄生蟲荒原', icon: '🪱', color: '#D97706', count: 27   },
+  { id: 7, name: '藥理決鬥場', icon: '💊', color: '#F97316', count: 193  },
+  { id: 8, name: '病理學深淵', icon: '🩺', color: '#DC2626', count: 97   },
+  { id: 9, name: '公衛學巔峰', icon: '📊', color: '#0D9488', count: 33   },
+]
+
+/* Pulsing dot animation for "waiting" */
+function PulseDot() {
+  return (
+    <span className="inline-flex gap-1">
+      {[0,1,2].map(i => (
+        <span key={i} className="w-1.5 h-1.5 rounded-full bg-medical-blue inline-block animate-bounce"
+              style={{ animationDelay: `${i * 0.15}s` }} />
+      ))}
+    </span>
+  )
+}
+
+export default function Lobby() {
+  const navigate = useNavigate()
+  const socket = getSocket()
+  const { roomCode, isHost, players, stage } = useGameStore()
+  const { name } = usePlayerStore()
+  const [copied, setCopied] = useState(false)
+  const [showStages, setShowStages] = useState(false)
+
+  useEffect(() => { if (!roomCode) navigate('/') }, [roomCode])
+
+  const selectedStage = STAGES.find(s => s.id === stage) || STAGES[0]
+
+  const handleShare = async () => {
+    const msg = `我在玩「醫師知識王」，邀請碼：${roomCode}，快來挑戰我！`
+    if (navigator.share) {
+      try { await navigator.share({ title: '醫師知識王', text: msg }); return } catch {}
+    }
+    await navigator.clipboard?.writeText(msg).catch(() => {})
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
+  const handleStart = () => socket.emit('start_game')
+  const handleStageChange = (id) => { socket.emit('select_stage', { stageId: id }); setShowStages(false) }
+
+  const avatarOf = (p) => p.avatar || '👨‍⚕️'
+
+  return (
+    <div className="flex flex-col min-h-dvh no-select" style={{ background: '#F0F4F8' }}>
+
+      {/* ── Header ──────────────────────────────────────────────── */}
+      <div className="relative overflow-hidden px-5 pt-14 pb-6"
+           style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
+        {/* BG cross */}
+        <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+          {[...Array(4)].map((_,i) => (
+            <div key={i} className="absolute text-white/5 font-bold text-7xl"
+                 style={{ top:`${15+i*30}%`, right:`${5+i*20}%` }}>✚</div>
+          ))}
+        </div>
+
+        <button onClick={() => { socket.disconnect(); navigate('/') }}
+                className="text-white/50 text-sm mb-4 relative inline-flex items-center gap-1">
+          ‹ 返回主畫面
+        </button>
+
+        <p className="text-white/50 text-xs uppercase tracking-widest font-medium relative">
+          {isHost ? '房間已建立' : '已加入房間'}
+        </p>
+
+        {/* Room code */}
+        <div className="relative flex items-end gap-4 mt-1 mb-4">
+          <div>
+            <div className="flex gap-2.5 mt-1">
+              {roomCode?.split('').map((ch, i) => (
+                <div key={i}
+                     className="w-10 h-12 rounded-xl bg-white/15 border border-white/20 flex items-center justify-center text-white font-mono font-bold text-2xl backdrop-blur">
+                  {ch}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Share button */}
+        <button
+          onClick={handleShare}
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95
+            ${copied ? 'bg-medical-teal text-white' : 'bg-white/15 text-white border border-white/20'}`}
+        >
+          <span>{copied ? '✓ 已複製' : '📤 分享給好友'}</span>
+        </button>
+      </div>
+
+      {/* ── Players ─────────────────────────────────────────────── */}
+      <div className="px-4 mt-5">
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">玩家</p>
+          <p className="text-xs text-gray-400">{players.length} / 4</p>
+        </div>
+
+        <div className="flex flex-col gap-2.5">
+          {players.map((p, i) => (
+            <div key={p.id}
+                 className="bg-white rounded-2xl px-4 py-3.5 flex items-center gap-3 shadow-sm border border-gray-100">
+              <div className="w-12 h-12 rounded-xl bg-medical-ice flex items-center justify-center text-2xl">
+                {avatarOf(p)}
+              </div>
+              <div className="flex-1">
+                <p className="font-bold text-medical-dark text-base">{p.name}</p>
+                <p className="text-gray-400 text-xs">{i === 0 ? '房主' : '玩家'}</p>
+              </div>
+              {i === 0 && (
+                <span className="text-xs bg-medical-gold text-white px-2.5 py-1 rounded-full font-semibold">
+                  👑 房主
+                </span>
+              )}
+            </div>
+          ))}
+
+          {/* Empty slot */}
+          {players.length < 4 && (
+            <div className="bg-white rounded-2xl px-4 py-3.5 flex items-center gap-3 border-2 border-dashed border-gray-200">
+              <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center">
+                <PulseDot />
+              </div>
+              <p className="text-gray-400 text-sm">等待對手加入...</p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* ── Stage selector ──────────────────────────────────────── */}
+      <div className="px-4 mt-5">
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">關卡</p>
+          {isHost && (
+            <button onClick={() => setShowStages(!showStages)}
+                    className="text-xs text-medical-blue font-medium">
+              {showStages ? '收起' : '更換'}
+            </button>
+          )}
+        </div>
+
+        {/* Selected stage card */}
+        {!showStages && (
+          <div className="bg-white rounded-2xl px-4 py-4 flex items-center gap-3 shadow-sm border border-gray-100">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
+                 style={{ background: selectedStage.color + '20' }}>
+              {selectedStage.icon}
+            </div>
+            <div className="flex-1">
+              <p className="font-bold text-medical-dark">{selectedStage.name}</p>
+              <p className="text-xs text-gray-400">{selectedStage.count} 題可用</p>
+            </div>
+            <div className="w-2 h-2 rounded-full" style={{ background: selectedStage.color }} />
+          </div>
+        )}
+
+        {/* Stage grid */}
+        {showStages && isHost && (
+          <div className="grid grid-cols-2 gap-2">
+            {STAGES.map(s => (
+              <button key={s.id} onClick={() => handleStageChange(s.id)}
+                      className={`flex items-center gap-2.5 px-3 py-3 rounded-xl text-sm font-medium transition-all active:scale-95
+                        ${stage === s.id ? 'text-white shadow-md scale-105' : 'bg-white text-medical-dark border border-gray-100 shadow-sm'}`}
+                      style={stage === s.id ? { background: s.color } : {}}>
+                <span className="text-xl">{s.icon}</span>
+                <div className="text-left">
+                  <p className="font-semibold leading-tight text-xs">{s.name}</p>
+                  <p className="opacity-60 text-xs">{s.count}題</p>
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="flex-1" />
+
+      {/* ── Start button ────────────────────────────────────────── */}
+      <div className="px-4 pb-10 mt-5">
+        {isHost ? (
+          <button
+            onClick={handleStart}
+            disabled={players.length < 2}
+            className={`w-full py-5 rounded-2xl font-bold text-xl shadow-lg transition-all active:scale-95
+              ${players.length >= 2
+                ? 'text-white'
+                : 'bg-gray-200 text-gray-400'}`}
+            style={players.length >= 2 ? { background: 'linear-gradient(135deg, #16A34A, #0D9488)' } : {}}
+          >
+            {players.length >= 2
+              ? '🚀  開始遊戲'
+              : <span className="flex items-center justify-center gap-2">等待玩家加入 <PulseDot /></span>}
+          </button>
+        ) : (
+          <div className="bg-white rounded-2xl py-5 text-center text-gray-400 border border-gray-100 shadow-sm flex items-center justify-center gap-2 text-base">
+            等待房主開始遊戲 <PulseDot />
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}

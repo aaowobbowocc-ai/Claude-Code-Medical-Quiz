@@ -7,7 +7,7 @@ import { useDailyMessage } from '../hooks/useDailyMessage'
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
 
 // ── 外部連結（請依需求替換） ──────────────────────────────────────
-const LINEPAY_URL   = 'https://line.me/ti/p/XXXXXXX'    // TODO: 替換為你的 LINE Pay 贊助連結
+
 const GITHUB_ISSUE  = 'https://github.com/aaowobbowocc-ai/Claude-Code-Medical-Quiz/issues/new'
 const FEEDBACK_MAIL = 'aaowobbowocc@gmail.com'                   // TODO: 替換為你的收件 Email
 
@@ -101,10 +101,6 @@ export default function Home() {
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
         💌 意見回饋
       </button>
-      <button onClick={() => setSheet('sponsor')}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-amber-600 bg-amber-50 border border-amber-200 active:scale-95 transition-transform shadow-sm font-medium">
-        ☕ 贊助開發
-      </button>
     </div>
   )
 
@@ -187,45 +183,6 @@ export default function Home() {
         </Sheet>
       )}
 
-      {/* Sponsor */}
-      {sheet === 'sponsor' && (
-        <Sheet onClose={() => setSheet(null)}>
-          <div className="text-center mb-5">
-            <div className="text-5xl mb-3">☕</div>
-            <h2 className="text-xl font-bold text-medical-dark">支持這個專案</h2>
-            <p className="text-gray-400 text-sm mt-1.5 leading-relaxed">
-              醫師知識王由醫學生獨立開發，完全免費。<br />
-              如果它有幫到你的備考，一杯咖啡的心意<br />
-              就能讓它繼續更新、持續免費。
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100 rounded-2xl p-4 mb-5">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-lg">💚</span>
-              <p className="font-semibold text-green-800 text-sm">LINE Pay 贊助</p>
-            </div>
-            <p className="text-green-700 text-xs leading-relaxed">
-              透過 LINE Pay 安全付款，無需另外下載 App。<br />
-              金額由你決定，沒有最低限制。
-            </p>
-            <div className="flex gap-2 mt-3 text-xs text-green-600">
-              <span className="bg-white px-2.5 py-1 rounded-full border border-green-100">💳 信用卡</span>
-              <span className="bg-white px-2.5 py-1 rounded-full border border-green-100">🏧 轉帳</span>
-              <span className="bg-white px-2.5 py-1 rounded-full border border-green-100">📱 LINE Pay</span>
-            </div>
-          </div>
-
-          <button
-            onClick={() => window.open(LINEPAY_URL, '_blank')}
-            className="w-full py-4 rounded-2xl font-bold text-lg active:scale-95 transition-transform"
-            style={{ background: 'linear-gradient(135deg, #00B900, #00C851)', color: 'white' }}
-          >
-            💚 透過 LINE Pay 贊助
-          </button>
-          <p className="text-center text-xs text-gray-300 mt-3">感謝你讓這個專案繼續走下去 🙏</p>
-        </Sheet>
-      )}
     </>
   )
 

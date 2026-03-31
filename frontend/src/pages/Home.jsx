@@ -5,6 +5,11 @@ import { getSocket } from '../hooks/useSocket'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
 
+// ── 外部連結（請依需求替換） ──────────────────────────────────────
+const LINEPAY_URL   = 'https://line.me/ti/p/XXXXXXX'    // TODO: 替換為你的 LINE Pay 贊助連結
+const GITHUB_ISSUE  = 'https://github.com/aaowobbowocc-ai/Claude-Code-Medical-Quiz/issues/new'
+const FEEDBACK_MAIL = 'your@email.com'                   // TODO: 替換為你的收件 Email
+
 function Sheet({ onClose, children }) {
   return (
     <div className="sheet-overlay" onClick={onClose}>
@@ -23,11 +28,13 @@ export default function Home() {
   const setAvatar = usePlayerStore(s => s.setAvatar)
   const socket = getSocket()
 
-  const [sheet, setSheet]         = useState(null)   // null | 'editname' | 'join'
+  const [sheet, setSheet]         = useState(null)   // null | 'editname' | 'join' | 'bugreport' | 'feedback' | 'sponsor'
   const [inputName, setInputName] = useState('')
   const [joinCode, setJoinCode]   = useState('')
   const [joinError, setJoinError] = useState('')
   const [connecting, setConnecting] = useState(false)
+  const [feedbackText, setFeedbackText] = useState('')
+  const [feedbackSent, setFeedbackSent] = useState(false)
 
   // Quick-name: inline input shown only when no name
   const [quickName, setQuickName] = useState('')
@@ -74,6 +81,151 @@ export default function Home() {
   }
 
   const expPct = Math.min(((usePlayerStore.getState().exp || 0) / 300) * 100, 100)
+
+  const sendFeedback = () => {
+    if (!feedbackText.trim()) return
+    window.open(`mailto:${FEEDBACK_MAIL}?subject=${encodeURIComponent('醫師知識王 意見回饋')}&body=${encodeURIComponent(feedbackText)}`)
+    setFeedbackSent(true)
+  }
+
+  /* ── 底部支援列（主畫面共用） ──────────────────────────── */
+  const SupportBar = () => (
+    <div className="flex items-center justify-center gap-2 mt-3 pb-1">
+      <button onClick={() => setSheet('bugreport')}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
+        🐛 回報問題
+      </button>
+      <button onClick={() => setSheet('feedback')}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
+        💌 意見回饋
+      </button>
+      <button onClick={() => setSheet('sponsor')}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-amber-600 bg-amber-50 border border-amber-200 active:scale-95 transition-transform shadow-sm font-medium">
+        ☕ 贊助開發
+      </button>
+    </div>
+  )
+
+  /* ── 三個支援 Sheet ─────────────────────────────────────── */
+  const SupportSheets = () => (
+    <>
+      {/* Bug Report */}
+      {sheet === 'bugreport' && (
+        <Sheet onClose={() => setSheet(null)}>
+          <div className="text-center mb-5">
+            <div className="text-5xl mb-3">🐛</div>
+            <h2 className="text-xl font-bold text-medical-dark">發現問題了嗎？</h2>
+            <p className="text-gray-400 text-sm mt-1.5 leading-relaxed">
+              題目有誤、功能異常，或是任何讓你皺眉的地方——<br />
+              你的每一條回報，都讓這個專案更完整。
+            </p>
+          </div>
+          <div className="bg-amber-50 border border-amber-100 rounded-2xl p-4 mb-5 text-sm text-amber-800 leading-relaxed">
+            <p className="font-semibold mb-1">常見問題請先確認：</p>
+            <p>• 題目答案有疑義？可能來自原始考題，歡迎附上年份題號</p>
+            <p>• 遊戲當掉或顯示異常？請描述操作步驟</p>
+          </div>
+          <button
+            onClick={() => window.open(GITHUB_ISSUE, '_blank')}
+            className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform"
+            style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
+          >
+            前往 GitHub 提交回報 →
+          </button>
+          <p className="text-center text-xs text-gray-300 mt-3">需要 GitHub 帳號（免費）</p>
+        </Sheet>
+      )}
+
+      {/* Feedback */}
+      {sheet === 'feedback' && (
+        <Sheet onClose={() => { setSheet(null); setFeedbackSent(false); setFeedbackText('') }}>
+          {feedbackSent ? (
+            <div className="text-center py-6">
+              <div className="text-6xl mb-4">🙏</div>
+              <h2 className="text-xl font-bold text-medical-dark mb-2">謝謝你！</h2>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                你的意見我都會認真讀。<br />
+                正是這樣的鼓勵讓開發者繼續走下去。
+              </p>
+              <button onClick={() => { setSheet(null); setFeedbackSent(false); setFeedbackText('') }}
+                      className="mt-6 px-8 py-3 rounded-2xl font-bold text-white active:scale-95"
+                      style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}>
+                關閉
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="text-center mb-5">
+                <div className="text-5xl mb-3">💌</div>
+                <h2 className="text-xl font-bold text-medical-dark">告訴我你的想法</h2>
+                <p className="text-gray-400 text-sm mt-1.5 leading-relaxed">
+                  這個遊戲對你的備考有幫到忙嗎？<br />
+                  還是有什麼你希望它能做到的？
+                </p>
+              </div>
+              <textarea
+                autoFocus
+                className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3.5 text-sm text-gray-700 outline-none focus:border-medical-blue resize-none mb-4 leading-relaxed"
+                rows={5}
+                placeholder="任何想說的都歡迎，沒有格式限制。哪個功能最有用、哪裡還可以改進、或只是說聲謝謝——都很棒。"
+                value={feedbackText}
+                onChange={e => setFeedbackText(e.target.value)}
+              />
+              <button
+                onClick={sendFeedback}
+                disabled={!feedbackText.trim()}
+                className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-40"
+                style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
+              >
+                送出意見
+              </button>
+              <p className="text-center text-xs text-gray-300 mt-3">將透過 Email 傳送</p>
+            </>
+          )}
+        </Sheet>
+      )}
+
+      {/* Sponsor */}
+      {sheet === 'sponsor' && (
+        <Sheet onClose={() => setSheet(null)}>
+          <div className="text-center mb-5">
+            <div className="text-5xl mb-3">☕</div>
+            <h2 className="text-xl font-bold text-medical-dark">支持這個專案</h2>
+            <p className="text-gray-400 text-sm mt-1.5 leading-relaxed">
+              醫師知識王由醫學生獨立開發，完全免費。<br />
+              如果它有幫到你的備考，一杯咖啡的心意<br />
+              就能讓它繼續更新、持續免費。
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100 rounded-2xl p-4 mb-5">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-lg">💚</span>
+              <p className="font-semibold text-green-800 text-sm">LINE Pay 贊助</p>
+            </div>
+            <p className="text-green-700 text-xs leading-relaxed">
+              透過 LINE Pay 安全付款，無需另外下載 App。<br />
+              金額由你決定，沒有最低限制。
+            </p>
+            <div className="flex gap-2 mt-3 text-xs text-green-600">
+              <span className="bg-white px-2.5 py-1 rounded-full border border-green-100">💳 信用卡</span>
+              <span className="bg-white px-2.5 py-1 rounded-full border border-green-100">🏧 轉帳</span>
+              <span className="bg-white px-2.5 py-1 rounded-full border border-green-100">📱 LINE Pay</span>
+            </div>
+          </div>
+
+          <button
+            onClick={() => window.open(LINEPAY_URL, '_blank')}
+            className="w-full py-4 rounded-2xl font-bold text-lg active:scale-95 transition-transform"
+            style={{ background: 'linear-gradient(135deg, #00B900, #00C851)', color: 'white' }}
+          >
+            💚 透過 LINE Pay 贊助
+          </button>
+          <p className="text-center text-xs text-gray-300 mt-3">感謝你讓這個專案繼續走下去 🙏</p>
+        </Sheet>
+      )}
+    </>
+  )
 
   // ── No-name: inline quick-start ──────────────────────────
   if (!name) {
@@ -142,6 +294,8 @@ export default function Home() {
               </button>
             ))}
           </div>
+
+          <SupportBar />
         </div>
 
         {/* Join sheet */}
@@ -164,6 +318,8 @@ export default function Home() {
             </button>
           </Sheet>
         )}
+
+        <SupportSheets />
       </div>
     )
   }
@@ -267,6 +423,8 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        <SupportBar />
       </div>
 
       {/* Sheet: edit name */}
@@ -313,6 +471,8 @@ export default function Home() {
           </button>
         </Sheet>
       )}
+
+      <SupportSheets />
     </div>
   )
 }

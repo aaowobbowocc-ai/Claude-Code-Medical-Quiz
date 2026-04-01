@@ -126,7 +126,7 @@ export default function SplashScreen({ onDone }) {
         <div className="text-center mt-5">
           <h1 className="text-white font-bold tracking-tight leading-none"
               style={{ fontSize: 38, letterSpacing: '-0.02em' }}>
-            醫師知識王
+            醫學知識王
           </h1>
           <p className="text-white/45 text-sm mt-2 tracking-[0.18em]">
             醫師一階國考 · 即時對戰

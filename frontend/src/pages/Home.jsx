@@ -9,7 +9,7 @@ const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','
 // ── 外部連結（請依需求替換） ──────────────────────────────────────
 
 const CONTACT_MAIL = 'aaowobbowocc@gmail.com'
-const ECPAY_URL    = 'https://p.ecpay.com.tw/XXXXXXX' // ← 換成你的 ECPay 收款連結
+const ECPAY_URL    = 'https://p.ecpay.com.tw/E11DBDD' // ← 換成你的 ECPay 收款連結
 
 function Sheet({ onClose, children }) {
   return (
@@ -86,7 +86,7 @@ export default function Home() {
 
   const sendContact = () => {
     if (!feedbackText.trim()) return
-    const subj = encodeURIComponent('醫師知識王 意見／回報')
+    const subj = encodeURIComponent('醫學知識王 意見／回報')
     const body = encodeURIComponent(feedbackText)
     window.open(`mailto:${CONTACT_MAIL}?subject=${subj}&body=${body}`)
     setFeedbackSent(true)
@@ -202,7 +202,7 @@ export default function Home() {
                  style={{ top: `${10 + i * 28}%`, left: `${-5 + (i % 3) * 40}%` }}>✚</div>
           ))}
           <div className="relative text-6xl mb-3">⚕️</div>
-          <h1 className="relative text-white font-bold text-3xl tracking-tight mb-1">醫師知識王</h1>
+          <h1 className="relative text-white font-bold text-3xl tracking-tight mb-1">醫學知識王</h1>
           <p className="relative text-white/50 text-sm">醫師國考一階 · 即時對戰</p>
         </div>
 

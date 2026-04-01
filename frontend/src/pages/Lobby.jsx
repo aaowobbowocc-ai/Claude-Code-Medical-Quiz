@@ -42,9 +42,9 @@ export default function Lobby() {
   const selectedStage = STAGES.find(s => s.id === stage) || STAGES[0]
 
   const handleShare = async () => {
-    const msg = `我在玩「醫師知識王」，邀請碼：${roomCode}，快來挑戰我！`
+    const msg = `我在玩「醫學知識王」，邀請碼：${roomCode}，快來挑戰我！`
     if (navigator.share) {
-      try { await navigator.share({ title: '醫師知識王', text: msg }); return } catch {}
+      try { await navigator.share({ title: '醫學知識王', text: msg }); return } catch {}
     }
     await navigator.clipboard?.writeText(msg).catch(() => {})
     setCopied(true)

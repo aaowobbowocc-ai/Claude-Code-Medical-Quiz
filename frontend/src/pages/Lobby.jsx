@@ -33,13 +33,21 @@ export default function Lobby() {
   const socket = getSocket()
   const { roomCode, isHost, players, stage, timerMode } = useGameStore()
   const { name } = usePlayerStore()
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false)   // share msg
+  const [codeCopied, setCodeCopied] = useState(false) // code only
   const [showStages, setShowStages] = useState(false)
   const [showAIDiff, setShowAIDiff] = useState(false)
+  const [customSec, setCustomSec] = useState('')
 
   useEffect(() => { if (!roomCode) navigate('/') }, [roomCode])
 
   const selectedStage = STAGES.find(s => s.id === stage) || STAGES[0]
+
+  const handleCopyCode = async () => {
+    await navigator.clipboard?.writeText(roomCode).catch(() => {})
+    setCodeCopied(true)
+    setTimeout(() => setCodeCopied(false), 2000)
+  }
 
   const handleShare = async () => {
     const msg = `我在玩「醫學知識王」，邀請碼：${roomCode}，快來挑戰我！`
@@ -83,28 +91,38 @@ export default function Lobby() {
           {isHost ? '房間已建立' : '已加入房間'}
         </p>
 
-        {/* Room code */}
-        <div className="relative flex items-end gap-4 mt-1 mb-4">
-          <div>
-            <div className="flex gap-2.5 mt-1">
-              {roomCode?.split('').map((ch, i) => (
-                <div key={i}
-                     className="w-10 h-12 rounded-xl bg-white/15 border border-white/20 flex items-center justify-center text-white font-mono font-bold text-2xl backdrop-blur">
-                  {ch}
-                </div>
-              ))}
-            </div>
+        {/* Room code — tap to copy */}
+        <button onClick={handleCopyCode} className="relative mt-1 mb-3 active:scale-95 transition-transform">
+          <div className="flex gap-2.5">
+            {roomCode?.split('').map((ch, i) => (
+              <div key={i}
+                   className="w-10 h-12 rounded-xl bg-white/15 border border-white/20 flex items-center justify-center text-white font-mono font-bold text-2xl backdrop-blur">
+                {ch}
+              </div>
+            ))}
           </div>
-        </div>
-
-        {/* Share button */}
-        <button
-          onClick={handleShare}
-          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95
-            ${copied ? 'bg-medical-teal text-white' : 'bg-white/15 text-white border border-white/20'}`}
-        >
-          <span>{copied ? '✓ 已複製' : '📤 分享給好友'}</span>
+          <p className={`text-xs mt-1.5 text-center transition-all ${codeCopied ? 'text-medical-teal font-semibold' : 'text-white/40'}`}>
+            {codeCopied ? '✓ 邀請碼已複製' : '點擊複製邀請碼'}
+          </p>
         </button>
+
+        {/* Share buttons */}
+        <div className="flex gap-2 relative">
+          <button
+            onClick={handleCopyCode}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95
+              ${codeCopied ? 'bg-medical-teal text-white' : 'bg-white/15 text-white border border-white/20'}`}
+          >
+            <span>{codeCopied ? '✓ 已複製' : '📋 複製邀請碼'}</span>
+          </button>
+          <button
+            onClick={handleShare}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95
+              ${copied ? 'bg-medical-teal text-white' : 'bg-white/15 text-white border border-white/20'}`}
+          >
+            <span>{copied ? '✓ 已分享' : '📤 分享給好友'}</span>
+          </button>
+        </div>
       </div>
 
       {/* ── Players ─────────────────────────────────────────────── */}
@@ -235,16 +253,40 @@ export default function Lobby() {
         <div className="flex gap-2">
           {[['auto','自動'],['15','15秒'],['20','20秒'],['30','30秒'],['45','45秒']].map(([mode, label]) => (
             <button key={mode}
-                    onClick={() => isHost && handleTimerMode(mode)}
+                    onClick={() => { if (!isHost) return; handleTimerMode(mode); setCustomSec('') }}
                     className={`flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all active:scale-95
-                      ${timerMode === mode
+                      ${timerMode === mode && !customSec
                         ? 'text-white shadow'
                         : 'bg-white text-gray-500 border border-gray-200'}`}
-                    style={timerMode === mode ? { background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' } : {}}>
+                    style={timerMode === mode && !customSec ? { background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' } : {}}>
               {label}
             </button>
           ))}
         </div>
+        {isHost && (
+          <div className="flex items-center gap-2 mt-2">
+            <input
+              type="number"
+              min={5} max={120}
+              className={`flex-1 border-2 rounded-xl px-3 py-2 text-center text-sm font-semibold outline-none transition-all
+                ${customSec ? 'border-violet-500 bg-violet-50' : 'border-gray-200 bg-white text-gray-500'}`}
+              placeholder="自訂秒數（5–120）"
+              value={customSec}
+              onChange={e => setCustomSec(e.target.value)}
+            />
+            <button
+              onClick={() => {
+                const v = parseInt(customSec)
+                if (isNaN(v) || v < 5 || v > 120) return
+                handleTimerMode(String(v))
+              }}
+              disabled={!customSec}
+              className="px-4 py-2 rounded-xl text-white text-sm font-bold active:scale-95 transition-transform disabled:opacity-30"
+              style={{ background: 'linear-gradient(135deg, #8B5CF6, #6366F1)' }}>
+              套用
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="flex-1" />

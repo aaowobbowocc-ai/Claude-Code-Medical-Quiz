@@ -118,12 +118,43 @@ function ChatPanel({ onSend, onClose }) {
   )
 }
 
+/* ── Quit confirm sheet ──────────────────────────────────────── */
+function QuitSheet({ onConfirm, onCancel }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50" onClick={onCancel}>
+      <div className="w-full max-w-[430px] bg-white rounded-t-3xl px-5 pb-10 pt-4 shadow-2xl"
+           onClick={e => e.stopPropagation()}>
+        <div className="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-5" />
+        <p className="text-lg font-bold text-medical-dark text-center mb-1">確定要退出對戰？</p>
+        <p className="text-sm text-gray-500 text-center mb-6">退出後將計為本場落敗，無法繼續。</p>
+        <button
+          onClick={onConfirm}
+          className="w-full py-4 rounded-2xl font-bold text-white text-base mb-3 active:scale-95 transition-transform"
+          style={{ background: 'linear-gradient(135deg, #EF4444, #DC2626)' }}>
+          退出對戰
+        </button>
+        <button
+          onClick={onCancel}
+          className="w-full py-4 rounded-2xl font-bold text-gray-600 text-base bg-gray-100 active:scale-95 transition-transform">
+          繼續作答
+        </button>
+      </div>
+    </div>
+  )
+}
+
 /* ── Main Game page ──────────────────────────────────────────── */
 export default function Game() {
   const navigate = useNavigate()
   const socket = getSocket()
   const { play } = useSound()
   const [chatOpen, setChatOpen] = useState(false)
+  const [quitOpen, setQuitOpen] = useState(false)
+
+  const handleQuit = () => {
+    socket.disconnect()
+    navigate('/')
+  }
 
   const {
     currentQuestion, questionIndex, totalQuestions,
@@ -202,7 +233,12 @@ export default function Game() {
 
         {/* Question progress */}
         <div className="flex items-center justify-between px-5 pt-12 pb-2">
-          <span className="text-white/50 text-xs truncate max-w-[120px]">{stageName}</span>
+          <button
+            onClick={() => setQuitOpen(true)}
+            className="text-white/50 text-sm active:opacity-70 transition-opacity"
+          >
+            ✕ 退出
+          </button>
           <span className="text-white font-bold text-sm">{questionIndex + 1} / {totalQuestions}</span>
           <div className="w-20 h-1.5 bg-white/20 rounded-full overflow-hidden">
             <div className="h-full bg-white/70 rounded-full transition-all duration-300"
@@ -342,6 +378,10 @@ export default function Game() {
 
       {chatOpen && (
         <ChatPanel onSend={handleSendChat} onClose={() => setChatOpen(false)} />
+      )}
+
+      {quitOpen && (
+        <QuitSheet onConfirm={handleQuit} onCancel={() => setQuitOpen(false)} />
       )}
     </div>
   )

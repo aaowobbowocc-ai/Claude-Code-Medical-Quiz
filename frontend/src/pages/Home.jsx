@@ -36,6 +36,12 @@ export default function Home() {
   const [connecting, setConnecting] = useState(false)
   const [feedbackText, setFeedbackText] = useState('')
   const [feedbackSent, setFeedbackSent] = useState(false)
+  const [createPublic, setCreatePublic] = useState(false)
+  const [createPwd, setCreatePwd]       = useState('')
+  const [joinPwd, setJoinPwd]           = useState('')
+  const [needsPwd, setNeedsPwd]         = useState(false)
+  const [publicRooms, setPublicRooms]   = useState([])
+  const [roomsLoading, setRoomsLoading] = useState(false)
 
   // Quick-name: inline input shown only when no name
   const [quickName, setQuickName] = useState('')
@@ -43,28 +49,38 @@ export default function Home() {
 
   useEffect(() => {
     const s = socket
-    const onErr = ({ message }) => { setJoinError(message); setConnecting(false) }
+    const onErr = ({ message }) => {
+      if (message === 'needs_password') {
+        setNeedsPwd(true); setJoinError('此房間設有密碼，請輸入密碼')
+      } else if (message === 'wrong_password') {
+        setJoinError('密碼錯誤，請重試')
+      } else {
+        setJoinError(message)
+      }
+      setConnecting(false)
+    }
     s.on('error', onErr)
     return () => s.off('error', onErr)
   }, [socket])
 
   // ── Actions ────────────────────────────────────────────────
-  const doCreate = (nameToUse) => {
+  const doCreate = (nameToUse, { isPublic = false, password = null } = {}) => {
     setConnecting(true)
     socket.connect()
-    socket.emit('create_room', { playerName: nameToUse, playerAvatar: av })
+    socket.emit('create_room', { playerName: nameToUse, playerAvatar: av, isPublic, password })
   }
 
   const doJoin = (nameToUse) => {
     if (!joinCode.trim()) { setJoinError('請輸入邀請碼'); return }
+    if (needsPwd && !joinPwd.trim()) { setJoinError('請輸入密碼'); return }
     setConnecting(true)
     setJoinError('')
     socket.connect()
-    socket.emit('join_room', { code: joinCode.trim().toUpperCase(), playerName: nameToUse, playerAvatar: av })
+    socket.emit('join_room', { code: joinCode.trim().toUpperCase(), playerName: nameToUse, playerAvatar: av, password: joinPwd || undefined })
   }
 
   const handleCreate = () => {
-    if (name) { doCreate(name); return }
+    if (name) { setCreatePublic(false); setCreatePwd(''); setSheet('create'); return }
     if (quickName.trim()) { setName(quickName.trim()); doCreate(quickName.trim()); return }
     quickRef.current?.focus()
   }
@@ -79,6 +95,16 @@ export default function Home() {
     if (!inputName.trim()) return
     setName(inputName.trim())
     setSheet(null)
+  }
+
+  const fetchRooms = async () => {
+    setRoomsLoading(true)
+    try {
+      const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+      const r = await fetch(`${BACKEND}/rooms`)
+      setPublicRooms(await r.json())
+    } catch { setPublicRooms([]) }
+    setRoomsLoading(false)
   }
 
   const expPct = Math.min(((usePlayerStore.getState().exp || 0) / 300) * 100, 100)
@@ -261,16 +287,25 @@ export default function Home() {
 
         {/* Join sheet */}
         {sheet === 'join' && (
-          <Sheet onClose={() => { setSheet(null); setJoinError(''); setJoinCode('') }}>
+          <Sheet onClose={() => { setSheet(null); setJoinError(''); setJoinCode(''); setNeedsPwd(false); setJoinPwd('') }}>
             <h2 className="text-xl font-bold text-medical-dark text-center mb-2">加入房間</h2>
             <p className="text-center text-gray-400 text-sm mb-4">輸入好友的 6 碼邀請碼</p>
             <input
               autoFocus
               className="w-full border-2 border-medical-teal rounded-2xl px-4 py-4 text-3xl text-center font-mono tracking-[0.3em] outline-none focus:border-medical-accent mb-2 uppercase"
               placeholder="XXXXXX" value={joinCode}
-              onChange={e => { setJoinCode(e.target.value.toUpperCase()); setJoinError('') }}
+              onChange={e => { setJoinCode(e.target.value.toUpperCase()); setJoinError(''); setNeedsPwd(false); setJoinPwd('') }}
               maxLength={6}
             />
+            {needsPwd && (
+              <input
+                className="w-full border-2 border-amber-400 rounded-2xl px-4 py-3.5 text-base text-center outline-none focus:border-amber-500 mb-2"
+                placeholder="🔒 請輸入房間密碼"
+                type="password"
+                value={joinPwd}
+                onChange={e => { setJoinPwd(e.target.value); setJoinError('') }}
+              />
+            )}
             {joinError && <p className="text-medical-danger text-sm text-center mb-2 animate-shake">{joinError}</p>}
             <button onClick={handleJoin} disabled={connecting || joinCode.length < 6}
                     className="w-full py-4 rounded-2xl font-bold text-lg text-white mt-2 active:scale-95 transition-transform disabled:opacity-50"
@@ -372,6 +407,16 @@ export default function Home() {
           <div className="text-gray-300 text-xl">›</div>
         </button>
 
+        <button onClick={() => { fetchRooms(); setSheet('browse') }}
+                className="w-full rounded-2xl py-4 flex items-center px-5 gap-4 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">
+          <div className="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-2xl shrink-0">🌐</div>
+          <div className="text-left flex-1">
+            <p className="text-medical-dark font-bold text-base leading-tight">公開房間</p>
+            <p className="text-gray-400 text-xs mt-0.5">瀏覽並加入公開對戰</p>
+          </div>
+          <div className="text-gray-300 text-xl">›</div>
+        </button>
+
         <button onClick={() => navigate('/history')}
                 className="w-full rounded-2xl py-4 flex items-center px-5 gap-4 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">
           <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-2xl shrink-0">📊</div>
@@ -443,20 +488,116 @@ export default function Home() {
 
       {/* Sheet: join room */}
       {sheet === 'join' && (
-        <Sheet onClose={() => { setSheet(null); setJoinError(''); setJoinCode('') }}>
+        <Sheet onClose={() => { setSheet(null); setJoinError(''); setJoinCode(''); setNeedsPwd(false); setJoinPwd('') }}>
           <h2 className="text-xl font-bold text-medical-dark text-center mb-2">加入房間</h2>
           <p className="text-center text-gray-400 text-sm mb-4">輸入好友的 6 碼邀請碼</p>
           <input autoFocus
                  className="w-full border-2 border-medical-teal rounded-2xl px-4 py-4 text-3xl text-center font-mono tracking-[0.3em] outline-none focus:border-medical-accent mb-2 uppercase"
                  placeholder="XXXXXX" value={joinCode}
-                 onChange={e => { setJoinCode(e.target.value.toUpperCase()); setJoinError('') }}
+                 onChange={e => { setJoinCode(e.target.value.toUpperCase()); setJoinError(''); setNeedsPwd(false); setJoinPwd('') }}
                  maxLength={6} />
+          {needsPwd && (
+            <input
+              className="w-full border-2 border-amber-400 rounded-2xl px-4 py-3.5 text-base text-center outline-none focus:border-amber-500 mb-2"
+              placeholder="🔒 請輸入房間密碼"
+              type="password"
+              value={joinPwd}
+              onChange={e => { setJoinPwd(e.target.value); setJoinError('') }}
+            />
+          )}
           {joinError && <p className="text-medical-danger text-sm text-center mb-2 animate-shake">{joinError}</p>}
           <button onClick={handleJoin} disabled={connecting || joinCode.length < 6}
                   className="w-full py-4 rounded-2xl font-bold text-lg text-white mt-2 active:scale-95 transition-transform disabled:opacity-50"
                   style={{ background: 'linear-gradient(135deg, #0D9488, #1A6B9A)' }}>
             {connecting ? '連線中...' : '加入'}
           </button>
+        </Sheet>
+      )}
+
+      {/* Sheet: create room */}
+      {sheet === 'create' && (
+        <Sheet onClose={() => setSheet(null)}>
+          <h2 className="text-xl font-bold text-medical-dark text-center mb-5">建立房間</h2>
+          <div className="flex gap-3 mb-5">
+            <button onClick={() => setCreatePublic(false)}
+                    className={`flex-1 py-4 rounded-2xl text-sm font-bold border-2 transition-all
+                      ${!createPublic ? 'border-medical-blue text-medical-blue bg-blue-50' : 'border-gray-200 text-gray-500 bg-white'}`}>
+              🔒 私密房間<br/><span className="font-normal text-xs opacity-70">僅邀請碼可加入</span>
+            </button>
+            <button onClick={() => setCreatePublic(true)}
+                    className={`flex-1 py-4 rounded-2xl text-sm font-bold border-2 transition-all
+                      ${createPublic ? 'border-emerald-500 text-emerald-600 bg-emerald-50' : 'border-gray-200 text-gray-500 bg-white'}`}>
+              🌐 公開房間<br/><span className="font-normal text-xs opacity-70">可被瀏覽及加入</span>
+            </button>
+          </div>
+          {createPublic && (
+            <div className="mb-5">
+              <p className="text-xs text-gray-400 mb-2">設定密碼（選填，不填則開放加入）</p>
+              <input
+                className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3.5 text-base text-center outline-none focus:border-medical-blue"
+                placeholder="留空表示不需要密碼"
+                value={createPwd}
+                onChange={e => setCreatePwd(e.target.value)}
+                maxLength={20}
+              />
+            </div>
+          )}
+          <button
+            onClick={() => { setSheet(null); doCreate(name, { isPublic: createPublic, password: createPwd || null }) }}
+            disabled={connecting}
+            className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-50"
+            style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
+          >
+            {connecting ? '連線中...' : '🏠 建立房間'}
+          </button>
+        </Sheet>
+      )}
+
+      {/* Sheet: browse public rooms */}
+      {sheet === 'browse' && (
+        <Sheet onClose={() => setSheet(null)}>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-bold text-medical-dark">公開房間</h2>
+            <button onClick={fetchRooms}
+                    className="text-xs text-medical-blue font-medium px-3 py-1.5 bg-blue-50 rounded-xl active:scale-95">
+              🔄 重新整理
+            </button>
+          </div>
+          {roomsLoading ? (
+            <div className="text-center text-gray-400 py-8">載入中...</div>
+          ) : publicRooms.length === 0 ? (
+            <div className="text-center text-gray-400 py-8">
+              <p className="text-4xl mb-2">🏜️</p>
+              <p className="text-sm">目前沒有公開房間</p>
+              <p className="text-xs mt-1 opacity-60">建立一個公開房間，讓大家加入吧！</p>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-2.5 max-h-80 overflow-y-auto">
+              {publicRooms.map(room => (
+                <button
+                  key={room.code}
+                  onClick={() => {
+                    setJoinCode(room.code)
+                    setNeedsPwd(room.hasPassword)
+                    setJoinPwd('')
+                    setJoinError(room.hasPassword ? '此房間設有密碼，請輸入密碼' : '')
+                    setSheet('join')
+                  }}
+                  className="flex items-center gap-3 p-3.5 bg-white rounded-2xl border border-gray-100 shadow-sm text-left active:scale-[0.97] transition-transform"
+                >
+                  <div className="text-2xl">{room.stageIcon}</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-1.5">
+                      <span className="font-bold text-medical-dark text-sm truncate">{room.hostName} 的房間</span>
+                      {room.hasPassword && <span className="text-xs shrink-0">🔒</span>}
+                    </div>
+                    <p className="text-xs text-gray-400">{room.stageName} · {room.playerCount}/4 人</p>
+                  </div>
+                  <span className="font-mono text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-lg shrink-0">{room.code}</span>
+                </button>
+              ))}
+            </div>
+          )}
         </Sheet>
       )}
 

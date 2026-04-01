@@ -193,7 +193,7 @@ io.on('connection', (socket) => {
   console.log(`[+] ${socket.id}`);
 
   // Create room
-  socket.on('create_room', ({ playerName, playerAvatar }) => {
+  socket.on('create_room', ({ playerName, playerAvatar, isPublic = false, password = null }) => {
     const code = makeRoomCode();
     const room = {
       code,
@@ -205,6 +205,8 @@ io.on('connection', (socket) => {
       qIndex: 0,
       timer: null,
       phase: 'lobby',
+      isPublic: !!isPublic,
+      password: password || null,
     };
     rooms.set(code, room);
     socket.join(code);
@@ -214,7 +216,7 @@ io.on('connection', (socket) => {
   });
 
   // Join room
-  socket.on('join_room', ({ code, playerName, playerAvatar }) => {
+  socket.on('join_room', ({ code, playerName, playerAvatar, password }) => {
     const room = rooms.get(code.toUpperCase());
     if (!room) {
       socket.emit('error', { message: '找不到房間，請確認邀請碼' });
@@ -227,6 +229,16 @@ io.on('connection', (socket) => {
     if (room.players.size >= 4) {
       socket.emit('error', { message: '房間已滿（最多4人）' });
       return;
+    }
+    if (room.password) {
+      if (!password) {
+        socket.emit('error', { message: 'needs_password' });
+        return;
+      }
+      if (password !== room.password) {
+        socket.emit('error', { message: 'wrong_password' });
+        return;
+      }
     }
     room.players.set(socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', score: 0, ready: false, answered: false });
     socket.join(code.toUpperCase());
@@ -405,6 +417,25 @@ io.on('connection', (socket) => {
 // ── Health + stages API ──────────────────────────────────────────────────
 app.get('/health', (_, res) => res.json({ ok: true }));
 app.get('/stages', (_, res) => res.json(questionsData.stages));
+
+// GET /rooms  — list public lobby rooms
+const STAGE_ICONS = ['🎲','🦴','💓','⚗️','🔬','🦠','🪱','💊','🩺','📊'];
+app.get('/rooms', (_, res) => {
+  const list = [];
+  for (const [code, room] of rooms) {
+    if (!room.isPublic || room.phase !== 'lobby') continue;
+    const humanPlayers = Array.from(room.players.values()).filter(p => !p.isAI);
+    list.push({
+      code,
+      playerCount: humanPlayers.length,
+      stageName: questionsData.stages.find(s => s.id === room.stage)?.name || '隨機混合',
+      stageIcon: STAGE_ICONS[room.stage] || '🎲',
+      hostName: humanPlayers[0]?.name || '未知',
+      hasPassword: !!room.password,
+    });
+  }
+  res.json(list);
+});
 
 // ── Question browser API ──────────────────────────────────────────────────
 // GET /questions?year=110&session=第一次&subject_tag=anatomy&q=搜尋文字&page=1&limit=20

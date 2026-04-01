@@ -239,25 +239,39 @@ def classify(q_text):
 def fill_by_neighbors(questions_in_exam):
     """
     Within one exam, same-subject questions have consecutive numbers.
-    Fill 'unknown' questions using the majority tag of their ±4 neighbors.
-    Repeat until no more changes (handles multiple consecutive unknowns).
+    Pass 1: Fill 'unknown' questions using majority neighbor tag.
+    Pass 2: Correct isolated misclassifications — if ≥3 neighbors agree on
+            a different tag AND ≤1 neighbor supports the current tag, override.
+    Repeats up to 6 passes until convergence.
     """
     tag_meta = {tag: (name, stage) for tag, name, stage, _ in SUBJECT_RULES}
     qs = sorted(questions_in_exam, key=lambda q: q['number'])
-    changed = True
-    while changed:
+
+    for _ in range(6):
         changed = False
         for i, q in enumerate(qs):
-            if q['subject_tag'] != 'unknown':
-                continue
             window = qs[max(0, i-4):i] + qs[i+1:min(len(qs), i+5)]
-            tags = [n['subject_tag'] for n in window if n['subject_tag'] != 'unknown']
-            if not tags:
+            neighbor_tags = [n['subject_tag'] for n in window if n['subject_tag'] != 'unknown']
+            if not neighbor_tags:
                 continue
-            best = max(set(tags), key=tags.count)
-            q['subject_tag'] = best
-            q['subject_name'], q['stage_id'] = tag_meta.get(best, ('未分類', 0))
-            changed = True
+            best = max(set(neighbor_tags), key=neighbor_tags.count)
+            best_count = neighbor_tags.count(best)
+            cur_count  = neighbor_tags.count(q['subject_tag'])
+
+            # Fill unknown
+            if q['subject_tag'] == 'unknown' and best != 'unknown':
+                q['subject_tag'] = best
+                q['subject_name'], q['stage_id'] = tag_meta.get(best, ('未分類', 0))
+                changed = True
+            # Correct isolated misclassification:
+            # ≥3 neighbors agree on different tag, ≤1 neighbor supports current
+            elif q['subject_tag'] != best and best_count >= 3 and cur_count <= 1:
+                q['subject_tag'] = best
+                q['subject_name'], q['stage_id'] = tag_meta.get(best, ('未分類', 0))
+                changed = True
+
+        if not changed:
+            break
 
 def main():
     with open(INPUT, encoding='utf-8') as f:

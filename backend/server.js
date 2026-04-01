@@ -118,6 +118,10 @@ function startQuestion(room) {
     number: q.number,
     question: q.question,
     options: q.options,
+    image_url: q.image_url || null,
+    roc_year: q.roc_year,
+    session: q.session,
+    subject_name: q.subject_name,
     timeLimit,
   });
 

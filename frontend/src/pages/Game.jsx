@@ -314,6 +314,14 @@ export default function Game() {
       {/* ── Question + options ────────────────────────────────── */}
       <div className="flex-1 overflow-y-auto px-5 pb-24">
         <div className="bg-medical-ice rounded-2xl p-4 mb-4">
+          {(currentQuestion.roc_year || currentQuestion.subject_name) && (
+            <p className="text-xs text-gray-400 font-mono mb-2">
+              {currentQuestion.roc_year && currentQuestion.session
+                ? `${currentQuestion.roc_year}(${currentQuestion.session === '第一次' ? '一' : '二'})-${currentQuestion.number}`
+                : currentQuestion.number ? `#${currentQuestion.number}` : ''}
+              {currentQuestion.subject_name ? `　${currentQuestion.subject_name}` : ''}
+            </p>
+          )}
           <p className="text-medical-dark font-medium text-base leading-relaxed">
             {currentQuestion.question}
           </p>

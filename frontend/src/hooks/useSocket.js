@@ -45,8 +45,8 @@ export function useSocket() {
         setStageName(stageName)
         navigate('/game')
       },
-      question: ({ index, total, question, options, timeLimit }) => {
-        setQuestion({ question, options }, index, total, timeLimit)
+      question: ({ index, total, question, options, image_url, roc_year, session, subject_name, number, timeLimit }) => {
+        setQuestion({ question, options, image_url, roc_year, session, subject_name, number }, index, total, timeLimit)
         setMyAnswer(null)
         setCorrectAnswer(null)
       },

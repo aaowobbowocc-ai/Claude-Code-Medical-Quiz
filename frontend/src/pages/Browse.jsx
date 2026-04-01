@@ -14,6 +14,9 @@ const EXAMS = [
   { label: '112年二', year: '112', session: '第二次' },
   { label: '113年一', year: '113', session: '第一次' },
   { label: '113年二', year: '113', session: '第二次' },
+  { label: '114年一', year: '114', session: '第一次' },
+  { label: '114年二', year: '114', session: '第二次' },
+  { label: '115年一', year: '115', session: '第一次' },
 ]
 const STAGE_COLORS = {
   anatomy:      '#3B82F6', physiology:  '#EF4444', biochemistry: '#8B5CF6',
@@ -149,7 +152,9 @@ function QuestionCard({ q }) {
             🏷️ 幫忙分類
           </button>
         )}
-        <span className="text-xs text-gray-300 ml-auto">#{q.number}</span>
+        <span className="text-xs font-mono font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-lg ml-auto">
+          #{q.number}
+        </span>
       </div>
 
       {classifying && (

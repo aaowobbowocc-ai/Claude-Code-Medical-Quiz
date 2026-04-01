@@ -447,7 +447,7 @@ export default function Home() {
         </div>
 
         <div className="flex gap-3 mt-1">
-          {[{ icon:'📚', val:'1400', lbl:'題目' },{ icon:'📅', val:'110–113', lbl:'年份' },{ icon:'🔬', val:'9', lbl:'科目' }]
+          {[{ icon:'📚', val:'2000', lbl:'題目' },{ icon:'📅', val:'110–115', lbl:'年份' },{ icon:'🔬', val:'9', lbl:'科目' }]
             .map(s => (
             <div key={s.lbl} className="flex-1 bg-white rounded-2xl py-3 flex flex-col items-center shadow-sm border border-gray-100">
               <span className="text-xl">{s.icon}</span>

@@ -31,7 +31,7 @@ function PulseDot() {
 export default function Lobby() {
   const navigate = useNavigate()
   const socket = getSocket()
-  const { roomCode, isHost, players, stage } = useGameStore()
+  const { roomCode, isHost, players, stage, timerMode } = useGameStore()
   const { name } = usePlayerStore()
   const [copied, setCopied] = useState(false)
   const [showStages, setShowStages] = useState(false)
@@ -55,6 +55,7 @@ export default function Lobby() {
   const handleStageChange = (id) => { socket.emit('select_stage', { stageId: id }); setShowStages(false) }
   const handleAddAI = (diff) => { socket.emit('add_ai_player', { difficulty: diff }); setShowAIDiff(false) }
   const handleRemoveAI = () => socket.emit('remove_ai_player')
+  const handleTimerMode = (mode) => socket.emit('set_timer_mode', { mode })
 
   const avatarOf = (p) => p.avatar || '👨‍⚕️'
   const hasAI = players.some(p => p.isAI)
@@ -223,6 +224,27 @@ export default function Lobby() {
             ))}
           </div>
         )}
+      </div>
+
+      {/* ── Timer setting ───────────────────────────────────────── */}
+      <div className="px-4 mt-5">
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">每題秒數</p>
+          <p className="text-xs text-gray-400">{timerMode === 'auto' ? '依題目長度自動' : `固定 ${timerMode} 秒`}</p>
+        </div>
+        <div className="flex gap-2">
+          {[['auto','自動'],['15','15秒'],['20','20秒'],['30','30秒'],['45','45秒']].map(([mode, label]) => (
+            <button key={mode}
+                    onClick={() => isHost && handleTimerMode(mode)}
+                    className={`flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all active:scale-95
+                      ${timerMode === mode
+                        ? 'text-white shadow'
+                        : 'bg-white text-gray-500 border border-gray-200'}`}
+                    style={timerMode === mode ? { background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' } : {}}>
+              {label}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="flex-1" />

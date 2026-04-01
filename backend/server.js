@@ -86,6 +86,7 @@ function broadcastRoomState(room) {
     stage: room.stage,
     phase: room.phase,
     hostId: room.hostId,
+    timerMode: room.timerMode || 'auto',
   });
 }
 
@@ -104,7 +105,9 @@ function startQuestion(room) {
     p.lastAnswer = null;
   }
 
-  const timeLimit = calcTimeLimit(q);
+  const timeLimit = room.timerMode && room.timerMode !== 'auto'
+    ? parseInt(room.timerMode)
+    : calcTimeLimit(q);
   room.questionStartAt = Date.now();
   room.currentTimeLimit = timeLimit;
 
@@ -197,6 +200,7 @@ io.on('connection', (socket) => {
       hostId: socket.id,
       players: new Map([[socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', score: 0, ready: false, answered: false }]]),
       stage: 0,
+      timerMode: 'auto',
       questions: [],
       qIndex: 0,
       timer: null,
@@ -236,6 +240,14 @@ io.on('connection', (socket) => {
     const room = rooms.get(socket.data.roomCode);
     if (!room || room.hostId !== socket.id) return;
     room.stage = stageId;
+    broadcastRoomState(room);
+  });
+
+  // Set timer mode (host only): 'auto' | '15' | '20' | '30' | '45'
+  socket.on('set_timer_mode', ({ mode }) => {
+    const room = rooms.get(socket.data.roomCode);
+    if (!room || room.hostId !== socket.id) return;
+    room.timerMode = mode;
     broadcastRoomState(room);
   });
 

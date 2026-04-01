@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
@@ -9,6 +9,7 @@ const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','
 // ── 外部連結（請依需求替換） ──────────────────────────────────────
 
 const CONTACT_MAIL = 'aaowobbowocc@gmail.com'
+const ECPAY_URL    = 'https://p.ecpay.com.tw/XXXXXXX' // ← 換成你的 ECPay 收款連結
 
 function Sheet({ onClose, children }) {
   return (
@@ -93,17 +94,53 @@ export default function Home() {
 
   /* ── 底部支援列（主畫面共用） ──────────────────────────── */
   const SupportBar = () => (
-    <div className="flex items-center justify-center mt-3 pb-1">
+    <div className="flex items-center justify-center gap-2 mt-3 pb-1">
+      <button onClick={() => setSheet('donate')}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-amber-500 bg-amber-50 border border-amber-200 active:scale-95 transition-transform shadow-sm font-medium">
+        ☕ 贊助開發者
+      </button>
       <button onClick={() => setSheet('contact')}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
-        💌 意見回饋 · 問題回報
+        💌 意見回饋
       </button>
     </div>
   )
 
-  /* ── 聯絡 Sheet ──────────────────────────────────────────── */
+  /* ── 聯絡 / 贊助 Sheets ─────────────────────────────────── */
   const SupportSheets = () => (
     <>
+      {sheet === 'donate' && (
+        <Sheet onClose={() => setSheet(null)}>
+          <div className="text-center mb-5">
+            <div className="text-5xl mb-3">☕</div>
+            <h2 className="text-xl font-bold text-medical-dark">支持這個計畫</h2>
+            <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+              「免費」是這裡的核心。<br />
+              每位努力備考的醫學生，都值得一個好用的練習工具。
+            </p>
+          </div>
+
+          <div className="bg-amber-50 rounded-2xl px-4 py-4 mb-5 text-sm text-amber-800 leading-relaxed space-y-1.5">
+            <p>你的贊助會直接用於：</p>
+            <p>🖥️ 伺服器費用，讓大家隨時連得到</p>
+            <p>🤖 AI 解說功能，看懂每一道題</p>
+            <p>📚 題庫持續更新，緊跟最新考試</p>
+          </div>
+
+          <button
+            onClick={() => window.open(ECPAY_URL, '_blank')}
+            className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform mb-3"
+            style={{ background: 'linear-gradient(135deg, #F59E0B, #D97706)' }}
+          >
+            ☕ 前往贊助頁面
+          </button>
+
+          <p className="text-center text-xs text-gray-300 leading-relaxed">
+            不贊助也完全沒關係 🙏<br />這裡永遠為你開著。
+          </p>
+        </Sheet>
+      )}
+
       {sheet === 'contact' && (
         <Sheet onClose={() => { setSheet(null); setFeedbackSent(false); setFeedbackText('') }}>
           {feedbackSent ? (
@@ -368,7 +405,7 @@ export default function Home() {
         </div>
 
         <div className="flex gap-3 mt-1">
-          {[{ icon:'📚', val:'1396', lbl:'題目' },{ icon:'📅', val:'110–113', lbl:'年份' },{ icon:'🔬', val:'9', lbl:'科目' }]
+          {[{ icon:'📚', val:'1400', lbl:'題目' },{ icon:'📅', val:'110–113', lbl:'年份' },{ icon:'🔬', val:'9', lbl:'科目' }]
             .map(s => (
             <div key={s.lbl} className="flex-1 bg-white rounded-2xl py-3 flex flex-col items-center shadow-sm border border-gray-100">
               <span className="text-xl">{s.icon}</span>

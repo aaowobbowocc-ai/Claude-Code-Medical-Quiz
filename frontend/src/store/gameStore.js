@@ -58,7 +58,9 @@ export const useGameStore = create((set) => ({
   stageName: '',
   chatMessages: [],
 
+  timerMode: 'auto',
   setRoom: (code, isHost, myId) => set({ roomCode: code, isHost, myId }),
+  setTimerMode: (m) => set({ timerMode: m }),
   setPhase: (phase) => set({ phase }),
   setPlayers: (players) => set({ players }),
   setStage: (stage) => set({ stage }),

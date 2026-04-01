@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { io } from 'socket.io-client'
 import { useNavigate } from 'react-router-dom'
-import { useGameStore, usePlayerStore } from '../store/gameStore'
+import { useGameStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -17,11 +17,10 @@ export function getSocket() {
 export function useSocket() {
   const navigate = useNavigate()
   const socket = getSocket()
-  const { avatar } = usePlayerStore()
   const {
-    setRoom, setPhase, setPlayers, setStage,
+    setRoom, setPhase, setPlayers, setStage, setTimerMode,
     setQuestion, setTimeRemaining, setMyAnswer,
-    setCorrectAnswer, setMyScore, setFinalPlayers, setStageName, addChatMessage, reset,
+    setCorrectAnswer, setMyScore, setFinalPlayers, setStageName, addChatMessage,
   } = useGameStore()
 
   useEffect(() => {
@@ -36,12 +35,13 @@ export function useSocket() {
         setRoom(code, false, socket.id)
         navigate('/lobby')
       },
-      room_state: ({ players, stage, phase, hostId }) => {
+      room_state: ({ players, stage, phase, timerMode }) => {
         setPlayers(players)
         setStage(stage)
         setPhase(phase)
+        if (timerMode) setTimerMode(timerMode)
       },
-      game_starting: ({ stageName, questionCount }) => {
+      game_starting: ({ stageName }) => {
         setStageName(stageName)
         navigate('/game')
       },
@@ -51,14 +51,11 @@ export function useSocket() {
         setCorrectAnswer(null)
       },
       tick: ({ remaining }) => setTimeRemaining(remaining),
-      answer_result: ({ correct, score, timeBonus }) => {
+      answer_result: ({ score, timeBonus }) => {
         setMyScore(score, timeBonus || 0)
       },
-      chat_msg: (msg) => {
-        addChatMessage(msg)
-      },
+      chat_msg: (msg) => addChatMessage(msg),
       reveal: ({ correctAnswer, players }) => {
-        // Record question result before state changes
         const st = useGameStore.getState()
         if (st.currentQuestion) {
           st.addQuestionResult({
@@ -78,13 +75,8 @@ export function useSocket() {
         navigate('/results')
       },
       host_changed: () => {},
-      player_left: ({ message }) => {
-        alert(message)
-      },
-      error: ({ message }) => {
-        // Handled per-page via direct socket.on listeners
-        console.warn('[socket error]', message)
-      },
+      player_left: ({ message }) => alert(message),
+      error: ({ message }) => console.warn('[socket error]', message),
     }
 
     Object.entries(handlers).forEach(([ev, fn]) => socket.on(ev, fn))

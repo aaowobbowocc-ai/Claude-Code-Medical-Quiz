@@ -48,7 +48,7 @@ function SetupScreen({ onStart }) {
     <div className="flex flex-col min-h-dvh" style={{ background: '#F0F4F8' }}>
       <div className="px-4 pt-14 pb-6"
            style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
-        <p className="text-white/50 text-sm mb-1">← 自主練習</p>
+        <button onClick={() => navigate('/')} className="text-white/50 text-sm mb-2 flex items-center gap-1 active:opacity-70">‹ 返回</button>
         <h1 className="text-white font-bold text-2xl">設定練習模式</h1>
       </div>
 

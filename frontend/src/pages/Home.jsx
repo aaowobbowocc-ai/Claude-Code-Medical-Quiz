@@ -9,7 +9,7 @@ const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','
 // ── 外部連結（請依需求替換） ──────────────────────────────────────
 
 const CONTACT_MAIL = 'aaowobbowocc@gmail.com'
-const ECPAY_URL    = 'https://p.ecpay.com.tw/E11DBDD' // ← 換成你的 ECPay 收款連結
+// const ECPAY_URL = 'https://p.ecpay.com.tw/E11DBDD' // 審核通過後取消註解並恢復按鈕
 
 function Sheet({ onClose, children }) {
   return (
@@ -127,13 +127,10 @@ export default function Home() {
             <p>📚 題庫持續更新，緊跟最新考試</p>
           </div>
 
-          <button
-            onClick={() => window.open(ECPAY_URL, '_blank')}
-            className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform mb-3"
-            style={{ background: 'linear-gradient(135deg, #F59E0B, #D97706)' }}
-          >
-            ☕ 前往贊助頁面
-          </button>
+          <div className="w-full py-4 rounded-2xl text-center mb-3 bg-gray-100 border-2 border-dashed border-gray-300">
+            <p className="text-base font-bold text-gray-500">🔧 收款功能審核中</p>
+            <p className="text-xs text-gray-400 mt-1">很快就好，感謝你的耐心等待 🙏</p>
+          </div>
 
           <p className="text-center text-xs text-gray-300 leading-relaxed">
             不贊助也完全沒關係 🙏<br />這裡永遠為你開著。

@@ -146,9 +146,11 @@ function startQuestion(room) {
     setTimeout(() => {
       if (room.qIndex !== capturedQIndex || room.phase !== 'playing') return;
       if (player.answered) return;
+      const capturedQ = room.questions[capturedQIndex];
+      if (!capturedQ) return;
       const correct = Math.random() < profile.accuracy;
-      const wrongOpts = Object.keys(q.options).filter(k => k !== q.answer);
-      const answer = correct ? q.answer : wrongOpts[Math.floor(Math.random() * wrongOpts.length)];
+      const wrongOpts = Object.keys(capturedQ.options).filter(k => k !== capturedQ.answer);
+      const answer = correct ? capturedQ.answer : wrongOpts[Math.floor(Math.random() * wrongOpts.length)];
       player.answered = true;
       player.lastAnswer = answer;
       if (correct) {
@@ -168,6 +170,7 @@ function startQuestion(room) {
 
 function revealAnswer(room) {
   const q = room.questions[room.qIndex];
+  if (!q) return;
   io.to(room.code).emit('reveal', {
     correctAnswer: q.answer,
     players: getRoomPlayers(room, true),

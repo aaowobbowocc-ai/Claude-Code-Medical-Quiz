@@ -221,6 +221,12 @@ SUBJECT_RULES = [
     ]),
 ]
 
+# Manual overrides: (roc_year, session, subject, q_start, q_end, tag)
+# Use when keyword matching misfires due to overlapping anatomical terms
+MANUAL_OVERRIDES = [
+    ('110', '第一次', '醫學(一)', 32, 46, 'histology'),  # 組織胚胎學區段被誤判為解剖
+]
+
 def classify(q_text):
     text = q_text.lower()
     scores = {}
@@ -302,6 +308,16 @@ def main():
                 **({'image_url': q['image_url']} if q.get('image_url') else {}),
             }
             exam_qs.append(q_out)
+
+        # Apply manual overrides
+        tag_meta = {tag: (name, stage) for tag, name, stage, _ in SUBJECT_RULES}
+        for rule in MANUAL_OVERRIDES:
+            yr, sess, subj, qstart, qend, force_tag = rule
+            if exam['roc_year'] == yr and exam['session'] == sess and exam['subject'] == subj:
+                for q_out in exam_qs:
+                    if qstart <= q_out['number'] <= qend:
+                        q_out['subject_tag'] = force_tag
+                        q_out['subject_name'], q_out['stage_id'] = tag_meta[force_tag]
 
         # Fill unknowns using neighboring question numbers (same subject = consecutive)
         fill_by_neighbors(exam_qs)

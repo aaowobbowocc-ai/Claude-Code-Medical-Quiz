@@ -6,6 +6,7 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const app = express();
 app.use(cors({
@@ -481,11 +482,9 @@ app.get('/meta', (_, res) => {
   res.json({ years, sessions, stages: questionsData.stages });
 });
 
-// ── Claude AI endpoints ───────────────────────────────────────────────────
+// ── AI endpoints ─────────────────────────────────────────────────────────
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
-// POST /explain  — streaming SSE explanation for a single question
-// Body: { question, options:{A,B,C,D}, answer, subject_name, user_answer? }
 // ── Daily AI usage counter (resets at midnight Taipei time) ────
 const aiUsage = { date: '', count: 0 };
 const AI_DAILY_LIMIT = 100;
@@ -544,7 +543,6 @@ ${wrongNote}
       max_tokens: 600,
       messages: [{ role: 'user', content: prompt }],
     });
-
     for await (const chunk of stream) {
       if (chunk.type === 'content_block_delta' && chunk.delta?.text) {
         res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`);
@@ -618,7 +616,6 @@ ${wrongSummary || '（全部答對！）'}
       max_tokens: 800,
       messages: [{ role: 'user', content: prompt }],
     });
-
     for await (const chunk of stream) {
       if (chunk.type === 'content_block_delta' && chunk.delta?.text) {
         res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`);
@@ -663,7 +660,6 @@ app.post('/daily-message', async (req, res) => {
       max_tokens: 180,
       messages: [{ role: 'user', content: prompt }],
     });
-
     for await (const chunk of stream) {
       if (chunk.type === 'content_block_delta' && chunk.delta?.text) {
         res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`);

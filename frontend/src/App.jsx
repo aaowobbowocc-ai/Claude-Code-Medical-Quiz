@@ -7,6 +7,8 @@ import Results from './pages/Results'
 import Map from './pages/Map'
 import Browse from './pages/Browse'
 import Practice from './pages/Practice'
+import History from './pages/History'
+import Review from './pages/Review'
 import { useSocket } from './hooks/useSocket'
 import SplashScreen from './components/SplashScreen'
 
@@ -23,6 +25,8 @@ function AppRoutes() {
         <Route path="/lobby"     element={<Lobby />} />
         <Route path="/game"      element={<Game />} />
         <Route path="/results"   element={<Results />} />
+        <Route path="/history"   element={<History />} />
+        <Route path="/review"    element={<Review />} />
         <Route path="*"          element={<Navigate to="/" />} />
       </Routes>
     </div>

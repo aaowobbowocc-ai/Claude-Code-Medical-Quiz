@@ -40,6 +40,7 @@ export const usePlayerStore = create(
 // Ephemeral game state
 export const useGameStore = create((set) => ({
   roomCode: null,
+  myId: null,
   isHost: false,
   phase: 'lobby', // lobby | playing | ended
   players: [],
@@ -52,10 +53,12 @@ export const useGameStore = create((set) => ({
   myAnswer: null,
   correctAnswer: null,
   myScore: 0,
+  lastTimeBonus: 0,
   finalPlayers: [],
   stageName: '',
+  chatMessages: [],
 
-  setRoom: (code, isHost) => set({ roomCode: code, isHost }),
+  setRoom: (code, isHost, myId) => set({ roomCode: code, isHost, myId }),
   setPhase: (phase) => set({ phase }),
   setPlayers: (players) => set({ players }),
   setStage: (stage) => set({ stage }),
@@ -71,12 +74,18 @@ export const useGameStore = create((set) => ({
   setTimeRemaining: (t) => set({ timeRemaining: t }),
   setMyAnswer: (a) => set({ myAnswer: a }),
   setCorrectAnswer: (a) => set({ correctAnswer: a }),
-  setMyScore: (s) => set({ myScore: s }),
+  setMyScore: (s, bonus = 0) => set({ myScore: s, lastTimeBonus: bonus }),
   setFinalPlayers: (p) => set({ finalPlayers: p }),
   setStageName: (n) => set({ stageName: n }),
+  addChatMessage: (msg) => set(s => ({
+    chatMessages: [...s.chatMessages.slice(-30), { ...msg, id: Date.now() + Math.random() }],
+  })),
+  questionResults: [],
+  addQuestionResult: (r) => set(s => ({ questionResults: [...s.questionResults, r] })),
   reset: () => set({
-    roomCode: null, isHost: false, phase: 'lobby', players: [],
+    roomCode: null, myId: null, isHost: false, phase: 'lobby', players: [],
     currentQuestion: null, myAnswer: null, correctAnswer: null,
-    myScore: 0, finalPlayers: [], timeRemaining: 15,
+    myScore: 0, lastTimeBonus: 0, finalPlayers: [], timeRemaining: 15,
+    chatMessages: [], questionResults: [],
   }),
 }))

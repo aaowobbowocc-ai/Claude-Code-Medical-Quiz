@@ -23,6 +23,24 @@ const STAGE_COLORS = {
 }
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F97316', D: '#EF4444' }
 
+const SUBJECTS = [
+  { tag: 'anatomy',      name: '解剖學',      color: '#3B82F6' },
+  { tag: 'physiology',   name: '生理學',      color: '#EF4444' },
+  { tag: 'biochemistry', name: '生物化學',    color: '#8B5CF6' },
+  { tag: 'histology',    name: '組織胚胎學',  color: '#6366F1' },
+  { tag: 'microbiology', name: '微生物與免疫', color: '#10B981' },
+  { tag: 'parasitology', name: '寄生蟲學',   color: '#D97706' },
+  { tag: 'pharmacology', name: '藥理學',     color: '#F97316' },
+  { tag: 'pathology',    name: '病理學',     color: '#DC2626' },
+  { tag: 'public_health',name: '公共衛生',   color: '#0D9488' },
+]
+
+const VOTED_KEY = 'classified-votes'
+function getVoted() { try { return JSON.parse(localStorage.getItem(VOTED_KEY) || '{}') } catch { return {} } }
+function markVoted(id, tag) {
+  const v = getVoted(); v[id] = tag; localStorage.setItem(VOTED_KEY, JSON.stringify(v))
+}
+
 /* ── Filter chip ─────────────────────────────────────────────── */
 function Chip({ label, active, color, onClick }) {
   return (
@@ -37,12 +55,82 @@ function Chip({ label, active, color, onClick }) {
   )
 }
 
+/* ── Classify sheet ──────────────────────────────────────────── */
+function ClassifySheet({ q, onClose }) {
+  const voted = getVoted()[q.id]
+  const [sent, setSent] = useState(voted || null)
+  const [counts, setCounts] = useState({})
+
+  const vote = async (tag) => {
+    setSent(tag)
+    markVoted(q.id, tag)
+    try {
+      const r = await fetch(`${BACKEND}/classify-vote`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: q.id, subjectTag: tag }),
+      })
+      const data = await r.json()
+      setCounts(prev => ({ ...prev, [tag]: data.count }))
+    } catch {}
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50"
+         onClick={onClose}>
+      <div className="w-full max-w-[430px] bg-white rounded-t-3xl px-5 pb-10 pt-2"
+           onClick={e => e.stopPropagation()}>
+        <div className="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-5" />
+        {sent ? (
+          <div className="text-center py-6">
+            <div className="text-5xl mb-3">🙌</div>
+            <p className="font-bold text-medical-dark text-lg">感謝你的貢獻！</p>
+            <p className="text-gray-400 text-sm mt-1.5 leading-relaxed">
+              你認為這題屬於<span className="text-medical-blue font-semibold">「{SUBJECTS.find(s=>s.tag===sent)?.name}」</span>
+              <br />累積 3 票即自動更新分類
+            </p>
+            <button onClick={() => onClose(sent)}
+                    className="mt-6 px-8 py-3 rounded-2xl font-bold text-white active:scale-95"
+                    style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}>
+              關閉
+            </button>
+          </div>
+        ) : (
+          <>
+            <p className="font-bold text-medical-dark text-center mb-1">這題屬於哪個科目？</p>
+            <p className="text-gray-400 text-xs text-center mb-5 leading-relaxed">
+              你的判斷會幫助其他同學找到題目
+            </p>
+            <div className="grid grid-cols-3 gap-2">
+              {SUBJECTS.map(s => (
+                <button key={s.tag} onClick={() => vote(s.tag)}
+                        className="py-3 rounded-2xl text-white text-sm font-semibold active:scale-95 transition-transform"
+                        style={{ background: s.color }}>
+                  {s.name}
+                </button>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  )
+}
+
 /* ── Question card ───────────────────────────────────────────── */
 function QuestionCard({ q }) {
   const [open, setOpen] = useState(false)
   const [explainReq, setExplainReq] = useState(false)
-  const tagColor = STAGE_COLORS[q.subject_tag] || '#94A3B8'
-  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, explain } = useExplain()
+  const [classifying, setClassifying] = useState(false)
+  const [localTag, setLocalTag] = useState(q.subject_tag)
+  const tagColor = STAGE_COLORS[localTag] || '#94A3B8'
+  const tagName  = localTag === 'unknown'
+    ? '未分類' : (SUBJECTS.find(s => s.tag === localTag)?.name || q.subject_name)
+  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, explain, remaining: explainRemaining } = useExplain()
+
+  const handleVoteDone = (tag) => {
+    if (tag) setLocalTag(tag)  // optimistic update if classified
+    setClassifying(false)
+  }
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
@@ -50,15 +138,31 @@ function QuestionCard({ q }) {
       <div className="flex items-center gap-2 px-4 pt-3 pb-2">
         <span className="text-xs font-semibold text-white px-2 py-0.5 rounded-full"
               style={{ background: tagColor }}>
-          {q.subject_name}
+          {tagName}
         </span>
         <span className="text-xs text-gray-400">{q.roc_year}年{q.session}</span>
+        {localTag === 'unknown' && (
+          <button
+            onClick={() => setClassifying(true)}
+            className="text-xs text-amber-500 border border-amber-300 px-2 py-0.5 rounded-full bg-amber-50 active:scale-95 transition-transform"
+          >
+            🏷️ 幫忙分類
+          </button>
+        )}
         <span className="text-xs text-gray-300 ml-auto">#{q.number}</span>
       </div>
+
+      {classifying && (
+        <ClassifySheet q={q} onClose={(tag) => handleVoteDone(tag)} />
+      )}
 
       {/* Question text */}
       <div className="px-4 pb-3">
         <p className="text-sm text-gray-800 leading-relaxed">{q.question}</p>
+        {q.image_url && (
+          <img src={q.image_url} alt="題目圖片"
+               className="mt-3 w-full rounded-xl border border-gray-100 object-contain max-h-56" />
+        )}
       </div>
 
       {/* Toggle options */}
@@ -91,6 +195,7 @@ function QuestionCard({ q }) {
               text={explainText}
               loading={explainLoading}
               limitHit={explainLimitHit}
+              remaining={explainRemaining}
               requested={explainReq}
               onRequest={() => { setExplainReq(true); explain(q) }}
               answer={q.answer}

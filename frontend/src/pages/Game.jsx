@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useGameStore, usePlayerStore } from '../store/gameStore'
+import { useGameStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import { useSound } from '../hooks/useSound'
 
@@ -11,33 +11,137 @@ const OPTION_COLORS = {
   D: { base: 'bg-rose-50  border-rose-300  text-rose-800',  active: 'bg-rose-500  border-rose-500  text-white' },
 }
 
+const QUICK_PHRASES = ['加油！💪', '哈哈哈😂', '這題好難😅', '我知道了！', '太強了！', '運氣好🍀']
+const STICKERS = ['🔥','⚡','🎯','👍','😭','🤯','🏆','💀','🥲','🎉']
+
+/* ── Chat bubble overlay ─────────────────────────────────────── */
+function ChatBubbles({ messages, myId }) {
+  return (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden z-20">
+      {messages.map(msg => {
+        const isMe = msg.fromId === myId
+        return (
+          <ChatBubble key={msg.id} msg={msg} isMe={isMe} />
+        )
+      })}
+    </div>
+  )
+}
+
+function ChatBubble({ msg, isMe }) {
+  const [visible, setVisible] = useState(true)
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(false), 2800)
+    return () => clearTimeout(t)
+  }, [])
+  if (!visible) return null
+  return (
+    <div className={`absolute top-16 animate-fadeout ${isMe ? 'left-4' : 'right-4'}`}>
+      <div className={`px-3 py-2 rounded-2xl shadow-lg text-sm font-medium max-w-[120px] text-center
+        ${msg.type === 'sticker' ? 'text-3xl bg-transparent shadow-none' : 'bg-white border border-gray-200 text-gray-800'}`}>
+        {msg.content}
+      </div>
+      <div className={`text-center text-xs mt-0.5 opacity-50 ${isMe ? '' : 'text-right'}`}>
+        {msg.name}
+      </div>
+    </div>
+  )
+}
+
+/* ── Player avatar card ──────────────────────────────────────── */
+function PlayerCard({ player, isMe, flip, maxScore, hasAnswered, isReveal, correct }) {
+  const pct = maxScore > 0 ? Math.min((player.score / maxScore) * 100, 100) : 0
+  const answerIcon = isReveal && hasAnswered
+    ? (correct ? '✅' : '❌')
+    : isReveal && !hasAnswered ? '⏱️' : null
+
+  return (
+    <div className={`flex flex-col items-center gap-1 ${flip ? 'items-end' : 'items-start'}`}
+         style={{ width: '42%' }}>
+      {/* Avatar + answer icon */}
+      <div className="relative">
+        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shadow-md border-2
+          ${isMe ? 'border-blue-400 bg-blue-900/40' : 'border-rose-400 bg-rose-900/40'}`}>
+          {player.avatar || '👨‍⚕️'}
+        </div>
+        {answerIcon && (
+          <span className="absolute -top-1 -right-1 text-base">{answerIcon}</span>
+        )}
+        {hasAnswered && !isReveal && (
+          <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-green-400 border-2 border-white" />
+        )}
+      </div>
+      {/* Name */}
+      <p className="text-white text-xs font-semibold truncate max-w-[100px]">{player.name}</p>
+      {/* Score */}
+      <p className="text-white font-bold text-base leading-none">{player.score}</p>
+      {/* Score bar */}
+      <div className={`w-full h-2 rounded-full bg-white/20 overflow-hidden ${flip ? 'scale-x-[-1]' : ''}`}>
+        <div
+          className={`h-full rounded-full transition-all duration-700 ${isMe ? 'bg-blue-400' : 'bg-rose-400'}`}
+          style={{ width: `${pct}%` }}
+        />
+      </div>
+    </div>
+  )
+}
+
+/* ── Chat panel ──────────────────────────────────────────────── */
+function ChatPanel({ onSend, onClose }) {
+  return (
+    <div className="fixed inset-0 z-40 flex items-end justify-center bg-black/40" onClick={onClose}>
+      <div className="w-full max-w-[430px] bg-white rounded-t-3xl px-4 pb-10 pt-3 shadow-2xl"
+           onClick={e => e.stopPropagation()}>
+        <div className="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-4" />
+        <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">快速對話</p>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {QUICK_PHRASES.map(p => (
+            <button key={p}
+                    onClick={() => { onSend('phrase', p); onClose() }}
+                    className="px-3.5 py-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-2xl text-sm font-medium active:scale-95 transition-transform">
+              {p}
+            </button>
+          ))}
+        </div>
+        <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">貼圖</p>
+        <div className="flex gap-2 flex-wrap">
+          {STICKERS.map(s => (
+            <button key={s}
+                    onClick={() => { onSend('sticker', s); onClose() }}
+                    className="w-12 h-12 rounded-2xl bg-gray-50 border border-gray-200 text-2xl flex items-center justify-center active:scale-90 transition-transform">
+              {s}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/* ── Main Game page ──────────────────────────────────────────── */
 export default function Game() {
   const navigate = useNavigate()
   const socket = getSocket()
   const { play } = useSound()
-  const tickRef = useRef(false)
+  const [chatOpen, setChatOpen] = useState(false)
 
   const {
     currentQuestion, questionIndex, totalQuestions,
     timeRemaining, timeLimit, myAnswer, correctAnswer, myScore,
-    players, phase, roomCode, stageName,
+    players, phase, roomCode, stageName, myId, chatMessages, lastTimeBonus,
   } = useGameStore()
 
   useEffect(() => {
     if (!roomCode) navigate('/')
   }, [roomCode])
 
-  // Tick sound when time is low (last 5s)
+  // Tick sound
   useEffect(() => {
-    if (timeRemaining <= 5 && timeRemaining > 0 && !myAnswer) {
-      play('countdown')
-    }
-    if (timeRemaining === 0) {
-      play('time_up')
-    }
+    if (timeRemaining <= 5 && timeRemaining > 0 && !myAnswer) play('countdown')
+    if (timeRemaining === 0) play('time_up')
   }, [timeRemaining])
 
-  // Sound on reveal
+  // Reveal sound
   useEffect(() => {
     if (correctAnswer && myAnswer) {
       if (myAnswer === correctAnswer) play('correct')
@@ -51,6 +155,10 @@ export default function Game() {
     socket.emit('submit_answer', { answer: letter })
   }
 
+  const handleSendChat = (type, content) => {
+    socket.emit('send_chat', { type, content })
+  }
+
   if (!currentQuestion) {
     return (
       <div className="flex flex-col min-h-dvh bg-medical-blue items-center justify-center text-white gap-4">
@@ -61,73 +169,129 @@ export default function Game() {
     )
   }
 
-  const progress = ((questionIndex) / totalQuestions) * 100
+  const progress = (questionIndex / totalQuestions) * 100
   const timePercent = (timeRemaining / timeLimit) * 100
-  const timeColor = timeRemaining > timeLimit * 0.5 ? 'bg-medical-success' : timeRemaining > timeLimit * 0.25 ? 'bg-amber-400' : 'bg-medical-danger'
+  const timeColor = timeRemaining > timeLimit * 0.5
+    ? 'bg-emerald-400'
+    : timeRemaining > timeLimit * 0.25
+      ? 'bg-amber-400'
+      : 'bg-rose-500'
 
-  // Sort players by score
-  const sorted = [...players].sort((a, b) => b.score - a.score)
+  // Identify me vs opponents
+  const resolvedMyId = myId || socket.id
+  const me = players.find(p => p.id === resolvedMyId) || players[0]
+  const opponents = players.filter(p => p.id !== resolvedMyId)
+  const opponent = opponents[0]  // primary opponent (2-player)
+  const extraPlayers = opponents.slice(1)
+
+  // Max possible score: totalQuestions * 150
+  const maxScore = totalQuestions * 150
+
+  // Recent chat messages (last 6)
+  const recentChat = chatMessages.slice(-6)
 
   return (
     <div className="flex flex-col min-h-dvh bg-white">
-      {/* Top bar: scores */}
-      <div className="bg-medical-blue px-4 pt-10 pb-4">
+
+      {/* ── Top: gradient header with avatars ─────────────────── */}
+      <div className="relative"
+           style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
+
+        {/* Chat bubbles overlay */}
+        <ChatBubbles messages={recentChat} myId={resolvedMyId} />
+
         {/* Question progress */}
-        <div className="flex items-center justify-between text-white text-xs mb-2">
-          <span>{stageName}</span>
-          <span className="font-bold">{questionIndex + 1} / {totalQuestions}</span>
-        </div>
-        <div className="w-full h-1.5 bg-white/20 rounded-full mb-4">
-          <div className="h-full bg-white rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
+        <div className="flex items-center justify-between px-5 pt-12 pb-2">
+          <span className="text-white/50 text-xs truncate max-w-[120px]">{stageName}</span>
+          <span className="text-white font-bold text-sm">{questionIndex + 1} / {totalQuestions}</span>
+          <div className="w-20 h-1.5 bg-white/20 rounded-full overflow-hidden">
+            <div className="h-full bg-white/70 rounded-full transition-all duration-300"
+                 style={{ width: `${progress}%` }} />
+          </div>
         </div>
 
-        {/* Player scores */}
-        <div className="flex gap-2">
-          {sorted.map((p, i) => {
-            const answerTag = correctAnswer && p.lastAnswer
-              ? (p.lastAnswer === correctAnswer
-                  ? <span className="text-xs font-bold text-green-300 ml-1">{p.lastAnswer} ✓</span>
-                  : <span className="text-xs font-bold text-red-300 ml-1">{p.lastAnswer} ✗</span>)
-              : correctAnswer && !p.lastAnswer
-                ? <span className="text-xs text-white/40 ml-1">—</span>
-                : null
-            return (
-              <div key={p.id} className={`flex-1 rounded-xl px-3 py-2 ${i === 0 ? 'bg-white/20' : 'bg-white/10'}`}>
-                <p className="text-white/60 text-xs truncate flex items-center gap-0.5">
-                  {p.name}{answerTag}
-                </p>
-                <p className="text-white font-bold text-lg leading-tight">{p.score}</p>
+        {/* Player vs layout */}
+        <div className="flex items-start justify-between px-5 pt-2 pb-4">
+          {/* Me (left) */}
+          {me && (
+            <PlayerCard
+              player={me}
+              isMe={true}
+              flip={false}
+              maxScore={maxScore}
+              hasAnswered={!!myAnswer}
+              isReveal={!!correctAnswer}
+              correct={myAnswer === correctAnswer}
+            />
+          )}
+
+          {/* VS center */}
+          <div className="flex flex-col items-center justify-center gap-1 pt-3">
+            <span className="text-white/40 text-xs font-bold tracking-widest">VS</span>
+            {players.length > 2 && (
+              <div className="flex flex-col gap-0.5">
+                {extraPlayers.map(p => (
+                  <div key={p.id}
+                       className="text-[10px] text-white/50 text-center truncate max-w-[60px]">
+                    {p.avatar} {p.score}
+                  </div>
+                ))}
               </div>
-            )
-          })}
+            )}
+          </div>
+
+          {/* Opponent (right) */}
+          {opponent ? (
+            <PlayerCard
+              player={opponent}
+              isMe={false}
+              flip={true}
+              maxScore={maxScore}
+              hasAnswered={opponent.answered}
+              isReveal={!!correctAnswer}
+              correct={opponent.lastAnswer === correctAnswer}
+            />
+          ) : (
+            <div style={{ width: '42%' }} className="flex flex-col items-end gap-1 opacity-30">
+              <div className="w-14 h-14 rounded-2xl border-2 border-dashed border-white/30 flex items-center justify-center text-2xl">
+                ?
+              </div>
+              <p className="text-white text-xs">等待對手</p>
+            </div>
+          )}
+        </div>
+
+        {/* Timer bar */}
+        <div className="h-2 bg-black/20">
+          <div
+            className={`h-full transition-all duration-1000 ease-linear ${timeColor} ${timeRemaining <= 5 ? 'animate-pulse' : ''}`}
+            style={{ width: `${timePercent}%` }}
+          />
         </div>
       </div>
 
-      {/* Timer bar */}
-      <div className="h-2.5 bg-gray-100">
-        <div
-          className={`h-full transition-all duration-1000 ease-linear ${timeColor} ${timeRemaining <= 5 ? 'animate-pulse' : ''}`}
-          style={{ width: `${timePercent}%` }}
-        />
-      </div>
+      {/* Timer number */}
       <div className="text-center text-3xl font-bold text-medical-dark py-2 leading-none">
         {timeRemaining}
       </div>
 
-      {/* Question */}
-      <div className="flex-1 overflow-y-auto px-5 pb-4">
+      {/* ── Question + options ────────────────────────────────── */}
+      <div className="flex-1 overflow-y-auto px-5 pb-24">
         <div className="bg-medical-ice rounded-2xl p-4 mb-4">
           <p className="text-medical-dark font-medium text-base leading-relaxed">
             {currentQuestion.question}
           </p>
+          {currentQuestion.image_url && (
+            <img src={currentQuestion.image_url} alt="題目圖片"
+                 className="mt-3 w-full rounded-xl border border-blue-100 object-contain max-h-48" />
+          )}
         </div>
 
-        {/* Options */}
         <div className="flex flex-col gap-3">
           {Object.entries(currentQuestion.options).map(([letter, text]) => {
             const isSelected = myAnswer === letter
-            const isCorrect = correctAnswer === letter
-            const isWrong = myAnswer === letter && correctAnswer && correctAnswer !== letter
+            const isCorrect  = correctAnswer === letter
+            const isWrong    = myAnswer === letter && correctAnswer && correctAnswer !== letter
 
             let cls = `border-2 rounded-2xl px-4 py-3.5 text-left transition-all active:scale-95 flex items-start gap-3`
             if (isCorrect && correctAnswer) {
@@ -143,7 +307,7 @@ export default function Game() {
             return (
               <button key={letter} className={cls} onClick={() => handleAnswer(letter)}>
                 <span className="font-bold text-lg w-6 shrink-0 leading-tight">{letter}</span>
-                <span className="text-sm leading-snug">{text}</span>
+                <span className="text-sm leading-snug flex-1">{text}</span>
                 {isCorrect && correctAnswer && <span className="ml-auto shrink-0">✓</span>}
                 {isWrong && <span className="ml-auto shrink-0">✗</span>}
               </button>
@@ -154,9 +318,10 @@ export default function Game() {
         {/* Answer feedback */}
         {correctAnswer && (
           <div className={`mt-4 rounded-2xl p-4 text-center font-bold text-lg
-            ${myAnswer === correctAnswer ? 'bg-medical-light text-medical-success' : 'bg-red-50 text-medical-danger'}`}
-          >
-            {myAnswer === correctAnswer ? '✅ 答對了！' : `❌ 正確答案是 ${correctAnswer}`}
+            ${myAnswer === correctAnswer ? 'bg-medical-light text-medical-success' : 'bg-red-50 text-medical-danger'}`}>
+            {myAnswer === correctAnswer
+              ? <>✅ 答對了！{lastTimeBonus > 0 && <span className="text-base font-normal ml-2 text-emerald-600">+{100 + lastTimeBonus}分（含速度加成+{lastTimeBonus}）</span>}</>
+              : `❌ 正確答案是 ${correctAnswer}`}
             <p className="text-sm font-normal opacity-70 mt-1">下一題即將到來...</p>
           </div>
         )}
@@ -165,6 +330,19 @@ export default function Game() {
           <p className="text-center text-xs text-gray-400 mt-4">點選選項作答</p>
         )}
       </div>
+
+      {/* ── Floating chat button ──────────────────────────────── */}
+      <button
+        onClick={() => setChatOpen(true)}
+        className="fixed bottom-6 right-5 w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-2xl active:scale-90 transition-transform z-30"
+        style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
+      >
+        💬
+      </button>
+
+      {chatOpen && (
+        <ChatPanel onSend={handleSendChat} onClose={() => setChatOpen(false)} />
+      )}
     </div>
   )
 }

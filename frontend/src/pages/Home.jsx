@@ -51,7 +51,7 @@ export default function Home() {
   const doCreate = (nameToUse) => {
     setConnecting(true)
     socket.connect()
-    socket.emit('create_room', { playerName: nameToUse })
+    socket.emit('create_room', { playerName: nameToUse, playerAvatar: av })
   }
 
   const doJoin = (nameToUse) => {
@@ -59,7 +59,7 @@ export default function Home() {
     setConnecting(true)
     setJoinError('')
     socket.connect()
-    socket.emit('join_room', { code: joinCode.trim().toUpperCase(), playerName: nameToUse })
+    socket.emit('join_room', { code: joinCode.trim().toUpperCase(), playerName: nameToUse, playerAvatar: av })
   }
 
   const handleCreate = () => {
@@ -334,6 +334,16 @@ export default function Home() {
           <div className="text-left flex-1">
             <p className="text-medical-dark font-bold text-xl leading-tight">加入房間</p>
             <p className="text-gray-400 text-xs mt-0.5">輸入好友的邀請碼</p>
+          </div>
+          <div className="text-gray-300 text-xl">›</div>
+        </button>
+
+        <button onClick={() => navigate('/history')}
+                className="w-full rounded-2xl py-4 flex items-center px-5 gap-4 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">
+          <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-2xl shrink-0">📊</div>
+          <div className="text-left flex-1">
+            <p className="text-medical-dark font-bold text-base leading-tight">對戰紀錄</p>
+            <p className="text-gray-400 text-xs mt-0.5">查看歷史戰績與錯題檢討</p>
           </div>
           <div className="text-gray-300 text-xl">›</div>
         </button>

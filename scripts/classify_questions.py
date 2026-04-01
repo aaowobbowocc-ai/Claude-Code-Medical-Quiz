@@ -261,6 +261,7 @@ def main():
                 'question': q['question'],
                 'options': q['options'],
                 'answer': q.get('answer'),
+                **({'image_url': q['image_url']} if q.get('image_url') else {}),
             }
             all_questions.append(q_out)
             tag_counts[tag] = tag_counts.get(tag, 0) + 1

@@ -2,6 +2,32 @@ import { useState, useCallback } from 'react'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
+// ── Per-device daily quota ──────────────────────────────────────
+const PERSONAL_LIMIT = 10
+const QUOTA_KEY = 'ai-explain-quota'
+
+function getTaipeiDate() {
+  return new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
+}
+
+function getQuota() {
+  try {
+    const q = JSON.parse(localStorage.getItem(QUOTA_KEY) || '{}')
+    if (q.date !== getTaipeiDate()) return { date: getTaipeiDate(), used: 0 }
+    return q
+  } catch { return { date: getTaipeiDate(), used: 0 } }
+}
+
+function incrementQuota() {
+  const q = getQuota()
+  q.used += 1
+  try { localStorage.setItem(QUOTA_KEY, JSON.stringify(q)) } catch {}
+}
+
+export function getPersonalQuotaRemaining() {
+  return Math.max(0, PERSONAL_LIMIT - getQuota().used)
+}
+
 // Stream text from a POST endpoint that returns SSE
 async function streamPost(url, body, onChunk, onDone, onError) {
   const res = await fetch(url, {
@@ -40,14 +66,20 @@ async function streamPost(url, body, onChunk, onDone, onError) {
 
 // Hook: explain a single question
 export function useExplain() {
-  const [text, setText]       = useState('')
-  const [loading, setLoading] = useState(false)
+  const [text, setText]         = useState('')
+  const [loading, setLoading]   = useState(false)
   const [limitHit, setLimitHit] = useState(false)
 
   const explain = useCallback(async (q) => {
+    // Check per-device quota first (no server call needed)
+    if (getPersonalQuotaRemaining() <= 0) {
+      setLimitHit(true)
+      return
+    }
     setText('')
     setLimitHit(false)
     setLoading(true)
+    incrementQuota()
     try {
       await streamPost(
         `${BACKEND}/explain`,
@@ -62,7 +94,7 @@ export function useExplain() {
 
   const reset = () => { setText(''); setLimitHit(false) }
 
-  return { text, loading, limitHit, explain, reset }
+  return { text, loading, limitHit, explain, reset, remaining: getPersonalQuotaRemaining() }
 }
 
 // Hook: review a full session

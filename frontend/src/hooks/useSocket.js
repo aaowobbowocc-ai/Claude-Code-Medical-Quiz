@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { io } from 'socket.io-client'
 import { useNavigate } from 'react-router-dom'
-import { useGameStore } from '../store/gameStore'
+import { useGameStore, usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -17,10 +17,11 @@ export function getSocket() {
 export function useSocket() {
   const navigate = useNavigate()
   const socket = getSocket()
+  const { avatar } = usePlayerStore()
   const {
     setRoom, setPhase, setPlayers, setStage,
     setQuestion, setTimeRemaining, setMyAnswer,
-    setCorrectAnswer, setMyScore, setFinalPlayers, setStageName, reset,
+    setCorrectAnswer, setMyScore, setFinalPlayers, setStageName, addChatMessage, reset,
   } = useGameStore()
 
   useEffect(() => {
@@ -28,11 +29,11 @@ export function useSocket() {
 
     const handlers = {
       room_created: ({ code }) => {
-        setRoom(code, true)
+        setRoom(code, true, socket.id)
         navigate('/lobby')
       },
       room_joined: ({ code }) => {
-        setRoom(code, false)
+        setRoom(code, false, socket.id)
         navigate('/lobby')
       },
       room_state: ({ players, stage, phase, hostId }) => {
@@ -50,10 +51,24 @@ export function useSocket() {
         setCorrectAnswer(null)
       },
       tick: ({ remaining }) => setTimeRemaining(remaining),
-      answer_result: ({ correct, score }) => {
-        setMyScore(score)
+      answer_result: ({ correct, score, timeBonus }) => {
+        setMyScore(score, timeBonus || 0)
+      },
+      chat_msg: (msg) => {
+        addChatMessage(msg)
       },
       reveal: ({ correctAnswer, players }) => {
+        // Record question result before state changes
+        const st = useGameStore.getState()
+        if (st.currentQuestion) {
+          st.addQuestionResult({
+            question: st.currentQuestion.question,
+            options: st.currentQuestion.options,
+            answer: correctAnswer,
+            myAnswer: st.myAnswer,
+            correct: st.myAnswer === correctAnswer,
+          })
+        }
         setCorrectAnswer(correctAnswer)
         setPlayers(players)
       },

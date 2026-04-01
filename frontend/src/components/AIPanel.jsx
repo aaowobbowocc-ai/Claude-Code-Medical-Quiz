@@ -26,15 +26,23 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, remaining }) {
   if (!requested) {
+    const isOut = remaining === 0
     return (
       <button
-        onClick={onRequest}
-        className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border-2 border-dashed border-medical-blue text-medical-blue text-sm font-medium active:scale-95 transition-transform bg-blue-50"
+        onClick={isOut ? undefined : onRequest}
+        disabled={isOut}
+        className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl border-2 border-dashed text-sm font-medium transition-transform
+          ${isOut
+            ? 'border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed'
+            : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
       >
         <span className="text-lg">🤖</span>
-        AI 解說這題
+        {isOut ? '今日個人解說額度已用完' : 'AI 解說這題'}
+        {!isOut && remaining != null && remaining <= 3 && (
+          <span className="text-xs opacity-60 ml-1">（剩 {remaining} 次）</span>
+        )}
       </button>
     )
   }
@@ -56,8 +64,8 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
       {limitHit ? (
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
           <p className="text-2xl mb-2">😴</p>
-          <p className="text-sm font-semibold text-amber-700">今日 AI 解說已達上限</p>
-          <p className="text-xs text-amber-500 mt-1">每天 100 次，明天 00:00 重置</p>
+          <p className="text-sm font-semibold text-amber-700">今日解說已達上限</p>
+          <p className="text-xs text-amber-500 mt-1">個人每天 10 次，明天 00:00 重置</p>
         </div>
       ) : (
         <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-4 border border-blue-100">

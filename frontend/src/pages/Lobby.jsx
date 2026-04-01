@@ -35,6 +35,7 @@ export default function Lobby() {
   const { name } = usePlayerStore()
   const [copied, setCopied] = useState(false)
   const [showStages, setShowStages] = useState(false)
+  const [showAIDiff, setShowAIDiff] = useState(false)
 
   useEffect(() => { if (!roomCode) navigate('/') }, [roomCode])
 
@@ -52,8 +53,11 @@ export default function Lobby() {
 
   const handleStart = () => socket.emit('start_game')
   const handleStageChange = (id) => { socket.emit('select_stage', { stageId: id }); setShowStages(false) }
+  const handleAddAI = (diff) => { socket.emit('add_ai_player', { difficulty: diff }); setShowAIDiff(false) }
+  const handleRemoveAI = () => socket.emit('remove_ai_player')
 
   const avatarOf = (p) => p.avatar || '👨‍⚕️'
+  const hasAI = players.some(p => p.isAI)
 
   return (
     <div className="flex flex-col min-h-dvh no-select" style={{ background: '#F0F4F8' }}>
@@ -120,22 +124,57 @@ export default function Lobby() {
                 <p className="font-bold text-medical-dark text-base">{p.name}</p>
                 <p className="text-gray-400 text-xs">{i === 0 ? '房主' : '玩家'}</p>
               </div>
-              {i === 0 && (
+              {i === 0 && !p.isAI && (
                 <span className="text-xs bg-medical-gold text-white px-2.5 py-1 rounded-full font-semibold">
                   👑 房主
+                </span>
+              )}
+              {p.isAI && (
+                <span className="text-xs bg-violet-500 text-white px-2.5 py-1 rounded-full font-semibold">
+                  🤖 AI
                 </span>
               )}
             </div>
           ))}
 
-          {/* Empty slot */}
+          {/* Empty slot — show AI invite for host when no AI yet */}
           {players.length < 4 && (
             <div className="bg-white rounded-2xl px-4 py-3.5 flex items-center gap-3 border-2 border-dashed border-gray-200">
               <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center">
                 <PulseDot />
               </div>
-              <p className="text-gray-400 text-sm">等待對手加入...</p>
+              <p className="text-gray-400 text-sm flex-1">等待對手加入...</p>
+              {isHost && !hasAI && (
+                <button
+                  onClick={() => setShowAIDiff(v => !v)}
+                  className="text-xs font-semibold px-3 py-1.5 rounded-xl text-white active:scale-95 transition-transform"
+                  style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}
+                >
+                  🤖 AI 陪練
+                </button>
+              )}
             </div>
+          )}
+
+          {/* AI difficulty picker */}
+          {isHost && showAIDiff && (
+            <div className="flex gap-2">
+              {[['easy','簡單','#10B981'],['normal','普通','#F97316'],['hard','困難','#EF4444']].map(([diff,label,color]) => (
+                <button key={diff} onClick={() => handleAddAI(diff)}
+                        className="flex-1 py-3 rounded-2xl text-white text-sm font-bold active:scale-95 transition-transform"
+                        style={{ background: color }}>
+                  {label}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Remove AI button */}
+          {isHost && hasAI && (
+            <button onClick={handleRemoveAI}
+                    className="text-xs text-gray-400 text-center w-full py-1 active:opacity-70">
+              移除 AI 對手
+            </button>
           )}
         </div>
       </div>

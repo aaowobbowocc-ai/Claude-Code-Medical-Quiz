@@ -50,6 +50,12 @@ const rooms = new Map();
 
 const QUESTIONS_PER_GAME = 10;
 
+const AI_PROFILES = {
+  easy:   { name: '🤖 簡單AI', accuracy: 0.45, minDelay: 9,  maxDelay: 14 },
+  normal: { name: '🤖 普通AI', accuracy: 0.68, minDelay: 4,  maxDelay: 11 },
+  hard:   { name: '🤖 困難AI', accuracy: 0.88, minDelay: 2,  maxDelay:  7 },
+};
+
 function calcTimeLimit(q) {
   const totalLen = q.question.length + Object.values(q.options).join('').length;
   // 15s base; +1s per 30 chars over 100; cap at 35s
@@ -67,7 +73,8 @@ function makeRoomCode() {
 
 function getRoomPlayers(room, includeAnswer = false) {
   return Array.from(room.players.entries()).map(([id, p]) => ({
-    id, name: p.name, score: p.score, ready: p.ready,
+    id, name: p.name, avatar: p.avatar || '👨‍⚕️', score: p.score, ready: p.ready,
+    isAI: p.isAI || false,
     ...(includeAnswer ? { lastAnswer: p.lastAnswer, answered: p.answered } : {}),
   }));
 }
@@ -98,6 +105,8 @@ function startQuestion(room) {
   }
 
   const timeLimit = calcTimeLimit(q);
+  room.questionStartAt = Date.now();
+  room.currentTimeLimit = timeLimit;
 
   // Send question (without answer)
   io.to(room.code).emit('question', {
@@ -120,6 +129,34 @@ function startQuestion(room) {
       revealAnswer(room);
     }
   }, 1000);
+
+  // Schedule AI answers
+  const capturedQIndex = room.qIndex;
+  for (const [id, player] of room.players.entries()) {
+    if (!player.isAI) continue;
+    const profile = AI_PROFILES[player.difficulty] || AI_PROFILES.normal;
+    const delayMs = (profile.minDelay + Math.random() * (profile.maxDelay - profile.minDelay)) * 1000;
+    setTimeout(() => {
+      if (room.qIndex !== capturedQIndex || room.phase !== 'playing') return;
+      if (player.answered) return;
+      const correct = Math.random() < profile.accuracy;
+      const wrongOpts = Object.keys(q.options).filter(k => k !== q.answer);
+      const answer = correct ? q.answer : wrongOpts[Math.floor(Math.random() * wrongOpts.length)];
+      player.answered = true;
+      player.lastAnswer = answer;
+      if (correct) {
+        const elapsed = Math.floor((Date.now() - (room.questionStartAt || Date.now())) / 1000);
+        const rem = Math.max(0, (room.currentTimeLimit || 15) - elapsed);
+        const bonus = Math.round((rem / (room.currentTimeLimit || 15)) * 50);
+        player.score += 100 + bonus;
+      }
+      const allAnswered = Array.from(room.players.values()).every(p => p.answered);
+      if (allAnswered) {
+        clearInterval(room.timer);
+        revealAnswer(room);
+      }
+    }, delayMs);
+  }
 }
 
 function revealAnswer(room) {
@@ -153,12 +190,12 @@ io.on('connection', (socket) => {
   console.log(`[+] ${socket.id}`);
 
   // Create room
-  socket.on('create_room', ({ playerName }) => {
+  socket.on('create_room', ({ playerName, playerAvatar }) => {
     const code = makeRoomCode();
     const room = {
       code,
       hostId: socket.id,
-      players: new Map([[socket.id, { name: playerName, score: 0, ready: false, answered: false }]]),
+      players: new Map([[socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', score: 0, ready: false, answered: false }]]),
       stage: 0,
       questions: [],
       qIndex: 0,
@@ -173,7 +210,7 @@ io.on('connection', (socket) => {
   });
 
   // Join room
-  socket.on('join_room', ({ code, playerName }) => {
+  socket.on('join_room', ({ code, playerName, playerAvatar }) => {
     const room = rooms.get(code.toUpperCase());
     if (!room) {
       socket.emit('error', { message: '找不到房間，請確認邀請碼' });
@@ -187,7 +224,7 @@ io.on('connection', (socket) => {
       socket.emit('error', { message: '房間已滿（最多4人）' });
       return;
     }
-    room.players.set(socket.id, { name: playerName, score: 0, ready: false, answered: false });
+    room.players.set(socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', score: 0, ready: false, answered: false });
     socket.join(code.toUpperCase());
     socket.data.roomCode = code.toUpperCase();
     socket.emit('room_joined', { code: code.toUpperCase() });
@@ -244,17 +281,20 @@ io.on('connection', (socket) => {
     const q = room.questions[room.qIndex];
     const isCorrect = answer === q.answer;
 
-    // Score: 100 base, no time-bonus here (timer handled server-side separately)
-    // The tick event carries remaining time; we'll compute score from remaining
-    // For simplicity: just award 100 per correct answer
+    // Time-based scoring: 100 base + up to 50 speed bonus
+    let timeBonus = 0;
     if (isCorrect) {
-      player.score += 100;
+      const elapsed = Math.floor((Date.now() - (room.questionStartAt || Date.now())) / 1000);
+      const remaining = Math.max(0, (room.currentTimeLimit || 15) - elapsed);
+      timeBonus = Math.round((remaining / (room.currentTimeLimit || 15)) * 50);
+      player.score += 100 + timeBonus;
     }
 
     socket.emit('answer_result', {
       correct: isCorrect,
       correctAnswer: null, // hidden until reveal
       score: player.score,
+      timeBonus,
     });
 
     // If all answered, reveal early
@@ -273,6 +313,50 @@ io.on('connection', (socket) => {
     room.qIndex = 0;
     for (const p of room.players.values()) { p.score = 0; p.ready = false; }
     broadcastRoomState(room);
+  });
+
+  // Add AI player (host only)
+  socket.on('add_ai_player', ({ difficulty = 'normal' }) => {
+    const room = rooms.get(socket.data.roomCode);
+    if (!room || room.hostId !== socket.id) return;
+    if (room.phase !== 'lobby') return;
+    if (room.players.size >= 4) { socket.emit('error', { message: '房間已滿' }); return; }
+    // Remove existing AI first (only one AI allowed)
+    for (const [id, p] of room.players.entries()) {
+      if (p.isAI) room.players.delete(id);
+    }
+    const profile = AI_PROFILES[difficulty] || AI_PROFILES.normal;
+    const aiId = `AI_${room.code}`;
+    room.players.set(aiId, {
+      name: profile.name, avatar: '🤖', score: 0, ready: true,
+      answered: false, isAI: true, difficulty,
+    });
+    broadcastRoomState(room);
+  });
+
+  // Remove AI player (host only)
+  socket.on('remove_ai_player', () => {
+    const room = rooms.get(socket.data.roomCode);
+    if (!room || room.hostId !== socket.id) return;
+    for (const [id, p] of room.players.entries()) {
+      if (p.isAI) room.players.delete(id);
+    }
+    broadcastRoomState(room);
+  });
+
+  // Quick chat
+  socket.on('send_chat', ({ type, content }) => {
+    const room = rooms.get(socket.data.roomCode);
+    if (!room || room.phase !== 'playing') return;
+    const player = room.players.get(socket.id);
+    if (!player) return;
+    io.to(room.code).emit('chat_msg', {
+      fromId: socket.id,
+      name: player.name,
+      avatar: player.avatar || '👨‍⚕️',
+      type,    // 'phrase' | 'sticker'
+      content, // text or emoji
+    });
   });
 
   // Disconnect
@@ -541,6 +625,86 @@ app.post('/daily-message', async (req, res) => {
     res.write('data: [DONE]\n\n');
     res.end();
   }
+});
+
+// ── Crowdsourced classification ───────────────────────────────────────────
+// votes: { [questionId]: { [subjectTag]: count } }
+const VOTES_FILE = path.join(__dirname, 'votes.json');
+const VOTE_THRESHOLD = 3;
+
+const SUBJECT_MAP = {
+  anatomy:      { name: '解剖學',      stage: 1 },
+  physiology:   { name: '生理學',      stage: 2 },
+  biochemistry: { name: '生物化學',    stage: 3 },
+  histology:    { name: '組織胚胎學',  stage: 4 },
+  microbiology: { name: '微生物與免疫', stage: 5 },
+  parasitology: { name: '寄生蟲學',   stage: 6 },
+  pharmacology: { name: '藥理學',     stage: 7 },
+  pathology:    { name: '病理學',     stage: 8 },
+  public_health:{ name: '公共衛生',   stage: 9 },
+};
+
+// Load existing votes and apply any that already hit threshold
+let votes = {};
+try {
+  votes = JSON.parse(fs.readFileSync(VOTES_FILE, 'utf-8'));
+  let applied = 0;
+  for (const [qid, tagCounts] of Object.entries(votes)) {
+    const winner = Object.entries(tagCounts).find(([, c]) => c >= VOTE_THRESHOLD);
+    if (winner) {
+      const q = questionsData.questions.find(x => x.id === qid);
+      if (q && q.subject_tag === 'unknown') {
+        const [tag] = winner;
+        q.subject_tag = tag;
+        q.subject_name = SUBJECT_MAP[tag]?.name || tag;
+        q.stage_id = SUBJECT_MAP[tag]?.stage || 0;
+        applied++;
+      }
+    }
+  }
+  if (applied) console.log(`Applied ${applied} crowd-voted classifications`);
+} catch {}
+
+function saveVotes() {
+  try { fs.writeFileSync(VOTES_FILE, JSON.stringify(votes, null, 2), 'utf-8'); } catch {}
+}
+
+// POST /classify-vote  body: { id, subjectTag }
+app.post('/classify-vote', (req, res) => {
+  const { id, subjectTag } = req.body;
+  if (!id || !SUBJECT_MAP[subjectTag]) return res.status(400).json({ error: 'invalid' });
+
+  const q = questionsData.questions.find(x => x.id === id);
+  if (!q) return res.status(404).json({ error: 'not found' });
+
+  if (!votes[id]) votes[id] = {};
+  votes[id][subjectTag] = (votes[id][subjectTag] || 0) + 1;
+  saveVotes();
+
+  const count = votes[id][subjectTag];
+  let classified = false;
+
+  if (count >= VOTE_THRESHOLD && q.subject_tag === 'unknown') {
+    q.subject_tag   = subjectTag;
+    q.subject_name  = SUBJECT_MAP[subjectTag].name;
+    q.stage_id      = SUBJECT_MAP[subjectTag].stage;
+    classified = true;
+    console.log(`Auto-classified ${id} → ${subjectTag} (${count} votes)`);
+  }
+
+  res.json({ ok: true, count, total: VOTE_THRESHOLD, classified });
+});
+
+// GET /classify-pending  — list questions still unknown + their vote counts
+app.get('/classify-pending', (_, res) => {
+  const pending = questionsData.questions
+    .filter(q => q.subject_tag === 'unknown')
+    .map(q => ({
+      id: q.id, number: q.number, roc_year: q.roc_year, session: q.session,
+      question: q.question.slice(0, 60),
+      votes: votes[q.id] || {},
+    }));
+  res.json({ count: pending.length, questions: pending });
 });
 
 const PORT = process.env.PORT || 3001;

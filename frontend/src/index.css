@@ -57,3 +57,12 @@ html, body {
 }
 
 .no-select { user-select: none; -webkit-user-select: none; }
+
+@keyframes fadeout {
+  0%   { opacity: 1; transform: translateY(0); }
+  70%  { opacity: 1; transform: translateY(-4px); }
+  100% { opacity: 0; transform: translateY(-12px); }
+}
+.animate-fadeout {
+  animation: fadeout 3s ease-in-out forwards;
+}

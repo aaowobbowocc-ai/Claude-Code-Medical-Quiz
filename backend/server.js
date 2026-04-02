@@ -6,7 +6,6 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const app = express();
 app.use(cors({
@@ -192,6 +191,7 @@ function revealAnswer(room) {
 function endGame(room) {
   room.phase = 'ended';
   clearInterval(room.timer);
+  stats.gamesPlayed++;
 
   const players = getRoomPlayers(room).sort((a, b) => b.score - a.score);
   io.to(room.code).emit('game_over', { players });
@@ -200,6 +200,10 @@ function endGame(room) {
 // ── Socket events ────────────────────────────────────────────────────────
 io.on('connection', (socket) => {
   console.log(`[+] ${socket.id}`);
+  stats.connections++;
+  trackDailyVisit();
+  const concurrent = io.engine?.clientsCount || 0;
+  if (concurrent > stats.peakConcurrent) stats.peakConcurrent = concurrent;
 
   // Create room
   socket.on('create_room', ({ playerName, playerAvatar, isPublic = false, password = null }) => {
@@ -310,6 +314,7 @@ io.on('connection', (socket) => {
 
     player.answered = true;
     player.lastAnswer = answer;
+    stats.questionsAnswered++;
 
     const q = room.questions[room.qIndex];
     const isCorrect = answer === q.answer;
@@ -423,9 +428,89 @@ io.on('connection', (socket) => {
   });
 });
 
-// ── Health + stages API ──────────────────────────────────────────────────
+// ── Stats tracking ──────────────────────────────────────────────────────
+const stats = {
+  startedAt: new Date().toISOString(),
+  connections: 0,         // 總連線數
+  peakConcurrent: 0,      // 最高同時在線
+  gamesPlayed: 0,         // 完成的遊戲局數
+  questionsAnswered: 0,   // 回答的題數
+  aiExplains: 0,          // AI 解說次數
+  dailyVisits: {},        // { '2026-04-02': 15 }
+};
+
+function trackDailyVisit() {
+  const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' });
+  stats.dailyVisits[today] = (stats.dailyVisits[today] || 0) + 1;
+  // 只保留最近 30 天
+  const keys = Object.keys(stats.dailyVisits).sort();
+  while (keys.length > 30) { delete stats.dailyVisits[keys.shift()]; }
+}
+
+// ── Health + stages + stats API ─────────────────────────────────────────
 app.get('/health', (_, res) => res.json({ ok: true }));
 app.get('/stages', (_, res) => res.json(questionsData.stages));
+
+app.get('/stats', (_, res) => {
+  const concurrent = io.engine?.clientsCount || 0;
+  const activeRooms = Array.from(rooms.values()).filter(r => r.phase === 'playing').length;
+  const lobbyRooms = Array.from(rooms.values()).filter(r => r.phase === 'lobby').length;
+  const uptime = Math.floor((Date.now() - new Date(stats.startedAt).getTime()) / 1000);
+
+  res.send(`<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>醫學知識王 Stats</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,sans-serif; background:#0f172a; color:#e2e8f0; padding:20px; max-width:600px; margin:auto; }
+  h1 { font-size:1.4rem; margin-bottom:16px; }
+  .card { background:#1e293b; border-radius:16px; padding:16px; margin-bottom:12px; }
+  .card h2 { font-size:.85rem; color:#94a3b8; margin-bottom:10px; text-transform:uppercase; letter-spacing:1px; }
+  .row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #334155; }
+  .row:last-child { border:none; }
+  .label { color:#94a3b8; }
+  .val { font-weight:700; color:#38bdf8; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .stat-box { background:#334155; border-radius:12px; padding:12px; text-align:center; }
+  .stat-box .num { font-size:1.6rem; font-weight:800; color:#38bdf8; }
+  .stat-box .lbl { font-size:.75rem; color:#94a3b8; margin-top:2px; }
+  .bar-row { display:flex; align-items:center; gap:8px; padding:4px 0; }
+  .bar-label { width:70px; font-size:.75rem; color:#94a3b8; text-align:right; }
+  .bar { height:20px; background:#38bdf8; border-radius:6px; min-width:2px; }
+  .bar-val { font-size:.75rem; color:#64748b; }
+  .footer { text-align:center; font-size:.7rem; color:#475569; margin-top:16px; }
+</style></head><body>
+<h1>📊 醫學知識王 即時統計</h1>
+
+<div class="grid">
+  <div class="stat-box"><div class="num">${concurrent}</div><div class="lbl">目前在線</div></div>
+  <div class="stat-box"><div class="num">${activeRooms}</div><div class="lbl">進行中對戰</div></div>
+  <div class="stat-box"><div class="num">${lobbyRooms}</div><div class="lbl">等待中房間</div></div>
+  <div class="stat-box"><div class="num">${stats.peakConcurrent}</div><div class="lbl">最高同時在線</div></div>
+</div>
+
+<div class="card">
+  <h2>累計統計</h2>
+  <div class="row"><span class="label">總連線數</span><span class="val">${stats.connections}</span></div>
+  <div class="row"><span class="label">完成遊戲</span><span class="val">${stats.gamesPlayed} 局</span></div>
+  <div class="row"><span class="label">回答題數</span><span class="val">${stats.questionsAnswered}</span></div>
+  <div class="row"><span class="label">AI 解說</span><span class="val">${stats.aiExplains} 次</span></div>
+  <div class="row"><span class="label">運行時間</span><span class="val">${Math.floor(uptime/3600)}h ${Math.floor(uptime%3600/60)}m</span></div>
+</div>
+
+<div class="card">
+  <h2>每日訪問（近期）</h2>
+  ${(() => {
+    const days = Object.entries(stats.dailyVisits).sort().slice(-7);
+    const max = Math.max(...days.map(d => d[1]), 1);
+    return days.map(([d, c]) =>
+      '<div class="bar-row"><span class="bar-label">' + d.replace(/\d{4}\//, '') + '</span><div class="bar" style="width:' + Math.round(c/max*200) + 'px"></div><span class="bar-val">' + c + '</span></div>'
+    ).join('') || '<div style="color:#475569;text-align:center;padding:12px">尚無數據</div>';
+  })()}
+</div>
+
+<div class="footer">自動刷新：<script>setTimeout(()=>location.reload(),30000)</script>每 30 秒 · 啟動於 ${stats.startedAt.slice(0,16).replace('T',' ')}</div>
+</body></html>`);
+});
 
 // GET /rooms  — list public lobby rooms
 const STAGE_ICONS = ['🎲','🦴','💓','⚗️','🔬','🦠','🪱','💊','🩺','📊'];
@@ -495,6 +580,7 @@ function checkAILimit() {
   if (aiUsage.date !== today) { aiUsage.date = today; aiUsage.count = 0; }
   if (aiUsage.count >= AI_DAILY_LIMIT) return false;
   aiUsage.count++;
+  stats.aiExplains++;
   return true;
 }
 

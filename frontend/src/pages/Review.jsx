@@ -3,9 +3,10 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { useExplain } from '../hooks/useAI'
 import { ExplainPanel } from '../components/AIPanel'
 import SmartBanner from '../components/SmartBanner'
+import { useBookmarks } from '../hooks/useBookmarks'
 
 /* ── Single question review card ───────────────────────────── */
-function ReviewCard({ q, index }) {
+function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
   const [open, setOpen] = useState(!q.correct)  // auto-open wrong ones
   const [explainReq, setExplainReq] = useState(false)
   const { text: explainText, loading: explainLoading, limitHit, explain, remaining } = useExplain()
@@ -23,6 +24,10 @@ function ReviewCard({ q, index }) {
           {q.correct ? '✓ 答對' : '✗ 答錯'}
         </span>
         <span className="text-xs text-gray-400 flex-1">第 {index + 1} 題</span>
+        <button onClick={() => onToggleBookmark(q)}
+                className="text-sm mr-1" title={isBookmarked ? '取消收藏' : '收藏錯題'}>
+          {isBookmarked ? '⭐' : '☆'}
+        </button>
         <button onClick={() => setOpen(o => !o)}
                 className="text-xs text-gray-400 flex items-center gap-0.5">
           {open ? '收起' : '展開'}
@@ -95,15 +100,22 @@ export default function Review() {
   const navigate = useNavigate()
   const { state } = useLocation()
   const [showAll, setShowAll] = useState(false)
+  const { isBookmarked, toggle: toggleBookmark, bookmarks } = useBookmarks()
+  const [showBookmarks, setShowBookmarks] = useState(false)
 
-  if (!state?.questions) {
-    navigate('/')
-    return null
+  if (!state?.questions && !showBookmarks) {
+    if (bookmarks.length > 0) {
+      // Allow viewing bookmarks directly
+    } else {
+      navigate('/')
+      return null
+    }
   }
 
-  const { questions, stage } = state
+  const questions = state?.questions || []
+  const stage = state?.stage || '收藏題目'
   const wrong = questions.filter(q => !q.correct)
-  const displayed = showAll ? questions : wrong
+  const displayed = showBookmarks ? bookmarks : (showAll ? questions : wrong)
 
   return (
     <div className="flex flex-col min-h-dvh no-select" style={{ background: '#F0F4F8' }}>
@@ -128,11 +140,20 @@ export default function Review() {
             <p className="text-white font-bold text-lg leading-none">{questions.length}</p>
             <p className="text-white/50 text-xs">總題</p>
           </div>
-          <button
-            onClick={() => setShowAll(v => !v)}
-            className="ml-auto text-xs text-white/60 border border-white/20 px-3 py-1.5 rounded-xl">
-            {showAll ? '只看錯題' : '看全部'}
-          </button>
+          {bookmarks.length > 0 && (
+            <button
+              onClick={() => setShowBookmarks(v => !v)}
+              className="text-xs text-white/60 border border-white/20 px-3 py-1.5 rounded-xl">
+              {showBookmarks ? '返回' : `⭐ ${bookmarks.length}`}
+            </button>
+          )}
+          {!showBookmarks && questions.length > 0 && (
+            <button
+              onClick={() => setShowAll(v => !v)}
+              className="ml-auto text-xs text-white/60 border border-white/20 px-3 py-1.5 rounded-xl">
+              {showAll ? '只看錯題' : '看全部'}
+            </button>
+          )}
         </div>
         <p className="text-white/35 text-xs mt-2">每道 AI 解說使用共用的每日配額（100次/天）</p>
       </div>
@@ -146,7 +167,10 @@ export default function Review() {
           </div>
         )}
         {displayed.map((q, i) => (
-          <ReviewCard key={i} q={q} index={questions.indexOf(q)} />
+          <ReviewCard key={q.id || i} q={q}
+            index={showBookmarks ? i : questions.indexOf(q)}
+            isBookmarked={isBookmarked(q)}
+            onToggleBookmark={toggleBookmark} />
         ))}
 
         {/* 底部廣告 / 贊助橫幅 */}

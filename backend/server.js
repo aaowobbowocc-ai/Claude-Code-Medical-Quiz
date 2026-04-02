@@ -428,16 +428,33 @@ io.on('connection', (socket) => {
   });
 });
 
-// ── Stats tracking ──────────────────────────────────────────────────────
-const stats = {
-  startedAt: new Date().toISOString(),
-  connections: 0,         // 總連線數
-  peakConcurrent: 0,      // 最高同時在線
-  gamesPlayed: 0,         // 完成的遊戲局數
-  questionsAnswered: 0,   // 回答的題數
-  aiExplains: 0,          // AI 解說次數
-  dailyVisits: {},        // { '2026-04-02': 15 }
-};
+// ── Stats tracking (persist to file) ────────────────────────────────────
+const STATS_FILE = path.join(__dirname, 'stats.json');
+
+function loadStats() {
+  const defaults = {
+    connections: 0, peakConcurrent: 0, gamesPlayed: 0,
+    questionsAnswered: 0, aiExplains: 0, dailyVisits: {},
+  };
+  try {
+    const data = JSON.parse(fs.readFileSync(STATS_FILE, 'utf-8'));
+    return { ...defaults, ...data, startedAt: new Date().toISOString() };
+  } catch {
+    return { ...defaults, startedAt: new Date().toISOString() };
+  }
+}
+
+const stats = loadStats();
+
+function saveStats() {
+  try {
+    const { startedAt, ...persist } = stats;
+    fs.writeFileSync(STATS_FILE, JSON.stringify(persist), 'utf-8');
+  } catch {}
+}
+
+// Auto-save every 60 seconds
+setInterval(saveStats, 60_000);
 
 function trackDailyVisit() {
   const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' });
@@ -841,6 +858,10 @@ app.get('/classify-pending', (_, res) => {
     }));
   res.json({ count: pending.length, questions: pending });
 });
+
+// Save stats on shutdown
+process.on('SIGTERM', () => { saveStats(); process.exit(0); });
+process.on('SIGINT', () => { saveStats(); process.exit(0); });
 
 const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));

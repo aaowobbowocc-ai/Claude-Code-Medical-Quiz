@@ -30,6 +30,37 @@ const DIFFICULTIES = [
 
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F97316', D: '#EF4444' }
 
+const PRACTICE_HISTORY_KEY = 'practice-history'
+const PRACTICE_MAX_RECORDS = 50
+const PRACTICE_LAST_CONFIG_KEY = 'practice-last-config'
+
+function savePracticeRecord({ stage, diff, count, correct, total, myScore, aiScore }) {
+  const record = {
+    id: Date.now(),
+    date: new Date().toISOString(),
+    stage, diff, count, correct, total, myScore, aiScore,
+    pct: total > 0 ? Math.round((correct / total) * 100) : 0,
+  }
+  try {
+    const prev = JSON.parse(localStorage.getItem(PRACTICE_HISTORY_KEY) || '[]')
+    const next = [record, ...prev].slice(0, PRACTICE_MAX_RECORDS)
+    localStorage.setItem(PRACTICE_HISTORY_KEY, JSON.stringify(next))
+  } catch {}
+  return record
+}
+
+function getPracticeHistory() {
+  try { return JSON.parse(localStorage.getItem(PRACTICE_HISTORY_KEY) || '[]') } catch { return [] }
+}
+
+function getLastConfig() {
+  try { return JSON.parse(localStorage.getItem(PRACTICE_LAST_CONFIG_KEY) || '{}') } catch { return {} }
+}
+
+function saveLastConfig(cfg) {
+  try { localStorage.setItem(PRACTICE_LAST_CONFIG_KEY, JSON.stringify(cfg)) } catch {}
+}
+
 function shuffle(arr) {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -41,9 +72,12 @@ function shuffle(arr) {
 
 /* ── Setup screen ─────────────────────────────────────────────── */
 function SetupScreen({ onStart }) {
-  const [stage, setStage]     = useState(0)
-  const [diff, setDiff]       = useState('medium')
-  const [count, setCount]     = useState(10)
+  const last = getLastConfig()
+  const [stage, setStage]     = useState(last.stage ?? 0)
+  const [diff, setDiff]       = useState(last.diff ?? 'medium')
+  const [count, setCount]     = useState(last.count ?? 10)
+  const history = getPracticeHistory()
+  const recentPct = history.slice(0, 10)
 
   return (
     <div className="flex flex-col min-h-dvh" style={{ background: '#F0F4F8' }}>
@@ -105,9 +139,37 @@ function SetupScreen({ onStart }) {
         </div>
       </div>
 
+      {/* Recent accuracy trend */}
+      {recentPct.length > 0 && (
+        <div className="px-4">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">最近正確率</p>
+          <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+            <div className="flex items-end gap-1 h-12">
+              {recentPct.slice().reverse().map((r, i) => (
+                <div key={r.id} className="flex-1 flex flex-col items-center gap-0.5">
+                  <div className="w-full rounded-t"
+                       style={{
+                         height: `${Math.max(r.pct * 0.4, 4)}px`,
+                         background: r.pct >= 70 ? '#10B981' : r.pct >= 50 ? '#F97316' : '#EF4444',
+                       }} />
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-between text-[10px] text-gray-400 mt-1">
+              <span>舊</span>
+              <span>平均 {Math.round(recentPct.reduce((a, r) => a + r.pct, 0) / recentPct.length)}%</span>
+              <span>新</span>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="px-4 pb-10">
         <button
-          onClick={() => onStart({ stage, diff, count })}
+          onClick={() => {
+            saveLastConfig({ stage, diff, count })
+            onStart({ stage, diff, count })
+          }}
           className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform"
           style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
         >
@@ -380,6 +442,10 @@ function PracticeResults({ result, config, onRestart, onHome }) {
     play(won ? 'victory' : 'defeat')
     addCoins(won ? 80 : 20)
     addExp(correct * 10)
+    savePracticeRecord({
+      stage: config.stage, diff: config.diff, count: config.count,
+      correct, total, myScore: result.myScore, aiScore: result.aiScore,
+    })
   }, [])
 
   const grade = pct >= 90 ? ['S', '#D97706'] : pct >= 75 ? ['A', '#10B981'] :

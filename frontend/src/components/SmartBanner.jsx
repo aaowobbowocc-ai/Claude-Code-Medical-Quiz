@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-const AD_SLOT = '' // 填入 AdSense ad-slot ID（從 AdSense 後台取得）
+const AD_SLOT = '1093265050'
 const AD_CLIENT = 'ca-pub-3134321405509741'
 
 export default function SmartBanner() {

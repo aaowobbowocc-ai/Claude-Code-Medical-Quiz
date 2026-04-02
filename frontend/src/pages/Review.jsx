@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useExplain } from '../hooks/useAI'
 import { ExplainPanel } from '../components/AIPanel'
+import SmartBanner from '../components/SmartBanner'
 
 /* ── Single question review card ───────────────────────────── */
 function ReviewCard({ q, index }) {
@@ -147,6 +148,9 @@ export default function Review() {
         {displayed.map((q, i) => (
           <ReviewCard key={i} q={q} index={questions.indexOf(q)} />
         ))}
+
+        {/* 底部廣告 / 贊助橫幅 */}
+        <SmartBanner />
       </div>
     </div>
   )

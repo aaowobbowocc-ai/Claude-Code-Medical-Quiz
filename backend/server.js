@@ -542,6 +542,7 @@ app.get('/questions', (req, res) => {
   if (q)           list = list.filter(x => x.question.includes(q) || Object.values(x.options).some(o => o.includes(q)));
   const total = list.length;
   const start = (parseInt(page) - 1) * parseInt(limit);
+  res.set('Cache-Control', 'public, max-age=300, stale-while-revalidate=60');
   res.json({ total, page: parseInt(page), limit: parseInt(limit), questions: list.slice(start, start + parseInt(limit)) });
 });
 
@@ -565,6 +566,7 @@ app.get('/meta', (_, res) => {
     sessions[q.session]     = (sessions[q.session]     || 0) + 1;
     tags[q.subject_tag]     = (tags[q.subject_tag]     || 0) + 1;
   }
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=60');
   res.json({ years, sessions, stages: questionsData.stages });
 });
 

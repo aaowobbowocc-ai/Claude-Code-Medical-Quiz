@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import { useDailyMessage } from '../hooks/useDailyMessage'
+import { usePWA } from '../hooks/usePWA'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
 
@@ -25,6 +26,7 @@ function Sheet({ onClose, children }) {
 export default function Home() {
   const navigate = useNavigate()
   const { name, setName, coins, level } = usePlayerStore()
+  const { showBanner, isIOS, install, installPrompt, dismiss } = usePWA()
   const av = usePlayerStore(s => s.avatar) || '👨‍⚕️'
   const setAvatar = usePlayerStore(s => s.setAvatar)
   const socket = getSocket()
@@ -323,6 +325,31 @@ export default function Home() {
   // ── Has name: instant home ───────────────────────────────
   return (
     <div className="flex flex-col min-h-dvh no-select" style={{ background: '#F0F4F8' }}>
+
+      {/* PWA Install Banner */}
+      {showBanner && (
+        <div className="bg-gradient-to-r from-medical-blue to-medical-teal text-white px-4 py-3 flex items-center gap-3">
+          <span className="text-2xl shrink-0">📲</span>
+          <div className="flex-1 min-w-0">
+            {isIOS ? (
+              <p className="text-xs leading-snug">
+                點擊 Safari 底部 <span className="inline-block bg-white/20 rounded px-1 mx-0.5">⬆</span> 分享按鈕，再選「<strong>加入主畫面</strong>」即可安裝
+              </p>
+            ) : installPrompt ? (
+              <p className="text-xs leading-snug">安裝到桌面，更快開啟、更好體驗</p>
+            ) : (
+              <p className="text-xs leading-snug">使用瀏覽器選單「加入主畫面」安裝 App</p>
+            )}
+          </div>
+          {installPrompt && !isIOS && (
+            <button onClick={install}
+              className="shrink-0 bg-white text-medical-blue text-xs font-bold px-3 py-1.5 rounded-lg active:scale-95">
+              安裝
+            </button>
+          )}
+          <button onClick={dismiss} className="shrink-0 text-white/60 text-lg leading-none">&times;</button>
+        </div>
+      )}
 
       {/* Hero */}
       <div className="relative overflow-hidden px-5 pt-14 pb-6"

@@ -80,6 +80,7 @@ function ReviewCard({ q, index }) {
               remaining={remaining}
               answer={q.answer}
               options={q.options}
+              explanation={q.explanation}
             />
           </div>
         </div>

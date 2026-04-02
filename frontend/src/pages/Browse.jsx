@@ -206,6 +206,7 @@ function QuestionCard({ q }) {
               onRequest={() => { setExplainReq(true); explain(q) }}
               answer={q.answer}
               options={q.options}
+              explanation={q.explanation}
             />
           </div>
         </div>

@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-/* Render streamed markdown-lite text with bold, bullets */
+/* Render markdown-lite text with bold, bullets */
 function renderText(text) {
   if (!text) return null
   return text.split('\n').map((line, i) => {
     if (!line.trim()) return <div key={i} className="h-2" />
 
-    // Bold headers: **text**
     const parts = line.split(/(\*\*[^*]+\*\*)/)
     const rendered = parts.map((p, j) =>
       p.startsWith('**') && p.endsWith('**')
@@ -14,7 +13,6 @@ function renderText(text) {
         : p
     )
 
-    // Detect bullet-ish lines
     const isBullet = line.trimStart().startsWith('（') || line.trimStart().startsWith('•') || line.trimStart().startsWith('-')
 
     return (
@@ -26,33 +24,31 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, remaining }) {
-  if (!requested) {
-    const isOut = remaining === 0
-    return (
-      <button
-        onClick={isOut ? undefined : onRequest}
-        disabled={isOut}
-        className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl border-2 border-dashed text-sm font-medium transition-transform
-          ${isOut
-            ? 'border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed'
-            : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
-      >
-        <span className="text-lg">🤖</span>
-        {isOut ? '今日個人解說額度已用完' : 'AI 解說這題'}
-        {!isOut && remaining != null && remaining <= 3 && (
-          <span className="text-xs opacity-60 ml-1">（剩 {remaining} 次）</span>
-        )}
-      </button>
-    )
-  }
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, remaining, explanation }) {
+  const [showAI, setShowAI] = useState(false)
+  const [reportSent, setReportSent] = useState(false)
+
+  const hasExplanation = !!explanation
 
   return (
     <div className="flex flex-col gap-2">
-      {/* 參考答案 — always shown, sourced from question bank */}
+      {/* 參考答案 */}
       {answer && options && (
         <div className="bg-white rounded-2xl border-2 border-medical-teal px-4 py-3">
-          <p className="text-xs font-semibold text-medical-teal mb-1.5 tracking-wide">📋 參考答案（題庫來源）</p>
+          <div className="flex items-center justify-between mb-1.5">
+            <p className="text-xs font-semibold text-medical-teal tracking-wide">📋 參考答案</p>
+            <button
+              onClick={() => setReportSent(true)}
+              disabled={reportSent}
+              className={`text-xs px-2 py-0.5 rounded-lg transition-colors ${
+                reportSent
+                  ? 'bg-gray-100 text-gray-400'
+                  : 'bg-red-50 text-red-500 active:bg-red-100'
+              }`}
+            >
+              {reportSent ? '✓ 已回報' : '⚠️ 回報錯誤'}
+            </button>
+          </div>
           <div className="flex items-start gap-2.5">
             <span className="font-bold text-medical-teal text-base shrink-0 w-5">{answer}</span>
             <span className="text-sm text-gray-700 leading-snug">{options[answer]}</span>
@@ -60,35 +56,92 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
         </div>
       )}
 
-      {/* AI explanation */}
-      {limitHit ? (
-        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
-          <p className="text-2xl mb-2">😴</p>
-          <p className="text-sm font-semibold text-amber-700">今日解說已達上限</p>
-          <p className="text-xs text-amber-500 mt-1">個人每天 10 次，明天 00:00 重置</p>
-        </div>
-      ) : (
-        <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-4 border border-blue-100">
+      {/* 預存解答 */}
+      {hasExplanation && (
+        <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-4 border border-emerald-100">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-lg">🤖</span>
-            <span className="font-bold text-medical-blue text-sm">AI 解說</span>
+            <span className="text-lg">📝</span>
+            <span className="font-bold text-emerald-700 text-sm">參考解答</span>
             <span className="text-xs text-gray-400 ml-0.5">僅供參考</span>
-            {loading && (
-              <span className="flex gap-1 ml-1">
-                {[0,1,2].map(i => (
-                  <span key={i} className="w-1.5 h-1.5 rounded-full bg-medical-blue animate-bounce"
-                        style={{ animationDelay: `${i * 0.12}s` }} />
-                ))}
-              </span>
-            )}
           </div>
           <div className="text-sm text-gray-700 flex flex-col gap-1">
-            {renderText(text)}
-            {loading && !text && (
-              <div className="h-4 w-3/4 bg-blue-100 rounded animate-pulse" />
-            )}
+            {renderText(explanation)}
           </div>
         </div>
+      )}
+
+      {/* AI 解說按鈕（可選） */}
+      {!showAI && !requested && (
+        <button
+          onClick={() => {
+            if (hasExplanation) {
+              setShowAI(true)
+            } else {
+              onRequest()
+            }
+          }}
+          disabled={!hasExplanation && remaining === 0}
+          className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-dashed text-sm font-medium transition-transform
+            ${remaining === 0 && !hasExplanation
+              ? 'border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed'
+              : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
+        >
+          <span className="text-base">🤖</span>
+          {hasExplanation ? 'AI 進階解說' : 'AI 解說這題'}
+          {!hasExplanation && remaining != null && remaining <= 3 && (
+            <span className="text-xs opacity-60 ml-1">（剩 {remaining} 次）</span>
+          )}
+        </button>
+      )}
+
+      {/* AI 解說面板（展開後） */}
+      {(showAI || requested) && (
+        <>
+          {!requested ? (
+            <button
+              onClick={onRequest}
+              disabled={remaining === 0}
+              className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-dashed text-sm font-medium transition-transform
+                ${remaining === 0
+                  ? 'border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed'
+                  : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
+            >
+              <span className="text-base">🤖</span>
+              {remaining === 0 ? '今日 AI 額度已用完' : 'AI 解說這題'}
+              {remaining != null && remaining <= 3 && remaining > 0 && (
+                <span className="text-xs opacity-60 ml-1">（剩 {remaining} 次）</span>
+              )}
+            </button>
+          ) : limitHit ? (
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
+              <p className="text-2xl mb-2">😴</p>
+              <p className="text-sm font-semibold text-amber-700">今日解說已達上限</p>
+              <p className="text-xs text-amber-500 mt-1">個人每天 10 次，明天 00:00 重置</p>
+            </div>
+          ) : (
+            <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-4 border border-blue-100">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-lg">🤖</span>
+                <span className="font-bold text-medical-blue text-sm">AI 解說</span>
+                <span className="text-xs text-gray-400 ml-0.5">僅供參考</span>
+                {loading && (
+                  <span className="flex gap-1 ml-1">
+                    {[0,1,2].map(i => (
+                      <span key={i} className="w-1.5 h-1.5 rounded-full bg-medical-blue animate-bounce"
+                            style={{ animationDelay: `${i * 0.12}s` }} />
+                    ))}
+                  </span>
+                )}
+              </div>
+              <div className="text-sm text-gray-700 flex flex-col gap-1">
+                {renderText(text)}
+                {loading && !text && (
+                  <div className="h-4 w-3/4 bg-blue-100 rounded animate-pulse" />
+                )}
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   )
@@ -115,7 +168,7 @@ export function ReviewPanel({ text, loading, onRequest, requested }) {
            style={{ background: 'linear-gradient(135deg, #EFF6FF, #F0FDFA)' }}>
         <span className="text-xl">🤖</span>
         <span className="font-bold text-medical-blue">AI 檢討報告</span>
-        <span className="text-xs text-gray-400 ml-1">Claude Haiku</span>
+        <span className="text-xs text-gray-400 ml-1">Gemini Flash</span>
         {loading && (
           <span className="flex gap-1 ml-auto">
             {[0,1,2].map(i => (

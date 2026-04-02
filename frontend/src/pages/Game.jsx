@@ -158,7 +158,7 @@ export default function Game() {
 
   const {
     currentQuestion, questionIndex, totalQuestions,
-    timeRemaining, timeLimit, myAnswer, correctAnswer, myScore,
+    timeRemaining, timeLimit, myAnswer, correctAnswer, explanation, myScore,
     players, phase, roomCode, stageName, myId, chatMessages, lastTimeBonus,
   } = useGameStore()
 

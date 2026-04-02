@@ -20,7 +20,7 @@ export function useSocket() {
   const {
     setRoom, setPhase, setPlayers, setStage, setTimerMode,
     setQuestion, setTimeRemaining, setMyAnswer,
-    setCorrectAnswer, setMyScore, setFinalPlayers, setStageName, addChatMessage,
+    setCorrectAnswer, setExplanation, setMyScore, setFinalPlayers, setStageName, addChatMessage,
   } = useGameStore()
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export function useSocket() {
         setMyScore(score, timeBonus || 0)
       },
       chat_msg: (msg) => addChatMessage(msg),
-      reveal: ({ correctAnswer, players }) => {
+      reveal: ({ correctAnswer, explanation, players }) => {
         const st = useGameStore.getState()
         if (st.currentQuestion) {
           st.addQuestionResult({
@@ -67,6 +67,7 @@ export function useSocket() {
           })
         }
         setCorrectAnswer(correctAnswer)
+        setExplanation(explanation || null)
         setPlayers(players)
       },
       game_over: ({ players }) => {

@@ -342,6 +342,7 @@ function PracticeGame({ config, onFinish }) {
               }}
               answer={q?.answer}
               options={q?.options}
+              explanation={q?.explanation}
             />
           </div>
         )}

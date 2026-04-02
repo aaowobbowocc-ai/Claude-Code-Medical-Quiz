@@ -174,6 +174,7 @@ function revealAnswer(room) {
   if (!q) return;
   io.to(room.code).emit('reveal', {
     correctAnswer: q.answer,
+    explanation: q.explanation || null,
     players: getRoomPlayers(room, true),
   });
 

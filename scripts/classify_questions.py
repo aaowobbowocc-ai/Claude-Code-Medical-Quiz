@@ -66,6 +66,14 @@ SUBJECT_RULES = [
         '纖毛', '鞭毛', '黏液', '黏液清除',
         '貧血', '紅血球', '血紅素合成', '缺鐵',
         'anemia', 'erythropoiesis', 'iron deficiency', 'ferritin',
+        '反射', '反射弧', '神經傳導', '突觸', '傳導速度',
+        '內分泌', '甲狀腺功能', '副甲狀腺', '腦下垂體',
+        '腎素', '醛固酮', '抗利尿', 'ADH', 'renin', 'aldosterone',
+        '血氧', '氧解離', '二氧化碳', '酸鹼',
+        '收縮', '鬆弛', '肌肉收縮', '興奮收縮耦合',
+        'reflex', 'synapse', 'neurotransmitter', 'conduction velocity',
+        'excitation', 'contraction coupling', 'calcium channel',
+        'oxygen dissociation', 'acid-base', 'buffer',
         '生理', '功能', '調節', '恆定', '平衡',
     ]),
     ('biochemistry', '生物化學', 3, [
@@ -94,32 +102,59 @@ SUBJECT_RULES = [
         '雙醣', '單醣', '多醣', '醣類', '醣苷鍵',
         '生化', '代謝', '合成', '分解', '氧化', '還原',
     ]),
-    ('histology',    '組織胚胎學', 4, [
+    ('histology',    '組織學', 4, [
         # 中文
         '上皮', '結締組織', '肌肉組織', '神經組織', '四大組織',
         '纖維母細胞', '膠原蛋白', '彈性纖維', '網狀纖維',
         '緻密骨', '海綿骨', '軟骨', '透明軟骨', '纖維軟骨',
-        '胚胎', '胚層', '外胚層', '中胚層', '內胚層', '胚盤',
-        '器官形成', '分化', '受精', '著床', '胎盤', '臍帶',
-        '神經管', '體節', '腸道形成', '心臟形成',
-        '精母細胞', '卵母細胞', '精子形成', '減數分裂',
         '基底膜', '細胞連接', '緊密連接', '橋粒',
+        '腺體', '分泌腺', '內分泌腺', '外分泌腺',
+        '杯狀細胞', '黏液細胞', '漿液細胞',
+        '橫紋肌', '平滑肌', '心肌', '骨骼肌纖維',
+        '血球生成', '骨髓', '造血',
+        '淋巴組織', '脾臟構造', '胸腺',
+        '表皮', '真皮', '皮膚構造', '角質',
+        '嗜酸性', '嗜鹼性', '嗜酸性球', '嗜鹼性球',
+        '蘭氏', 'Langerhans', '皮膚附屬',
+        '細胞骨架', '微管', '微絲', '中間絲',
+        '頂漿分泌', '全漿分泌', '局漿分泌',
         # 英文
-        'epithelium', 'connective tissue', 'collagen', 'fibroblast', 'elastin',
+        'epithelium', 'epithelial', 'connective tissue', 'collagen', 'fibroblast', 'elastin',
         'cartilage', 'compact bone', 'spongy bone', 'osteoblast', 'osteoclast',
-        'embryo', 'fetal', 'ectoderm', 'mesoderm', 'endoderm', 'blastocyst',
-        'histology', 'tissue', 'organogenesis', 'differentiation',
-        'neural tube', 'somite', 'notochord', 'pharyngeal arch',
-        'spermatogenesis', 'oogenesis', 'meiosis', 'mitosis',
+        'histology', 'tissue section',
         'tight junction', 'desmosome', 'gap junction', 'basement membrane',
-        'myoblast', 'myotube', 'sarcomere', 'myosin', 'actin',
-        'gubernaculum', 'mesentery', 'midgut', 'hindgut', 'foregut',
         'microtubule', 'microfilament', 'intermediate filament', 'cytoskeleton',
         'centriole', 'centrosome', 'flagellum',
         'apocrine', 'merocrine', 'holocrine', 'eccrine',
-        '細胞骨架', '微管', '微絲', '中間絲',
-        '頂漿分泌', '全漿分泌', '局漿分泌',
-        '組織', '胚胎', '發育', '增生', '凋亡',
+        'goblet cell', 'serous', 'mucous', 'gland',
+        'white blood cell', 'leukocyte', 'lymphocyte',
+        'striated', 'smooth muscle', 'cardiac muscle',
+        'epidermis', 'dermis', 'keratin', 'keratinocyte',
+        'acidophil', 'basophil',
+        'Rokitansky', 'Aschoff', 'sinusoid',
+        'cornea', 'retina', 'lens',
+        '組織', '增生', '凋亡',
+    ]),
+    ('embryology',   '胚胎學', 10, [
+        # 中文
+        '胚胎', '胚層', '外胚層', '中胚層', '內胚層', '胚盤',
+        '器官形成', '受精', '著床', '胎盤', '臍帶',
+        '神經管', '體節', '腸道形成', '心臟形成',
+        '精母細胞', '卵母細胞', '精子形成', '減數分裂',
+        '鰓弓', '咽弓', '弓動脈',
+        '卵黃囊', '尿囊', '絨毛膜', '羊膜',
+        '神經脊', '神經嵴',
+        '先天', '畸形', '發育異常',
+        # 英文
+        'embryo', 'embryonic', 'fetal', 'ectoderm', 'mesoderm', 'endoderm', 'blastocyst',
+        'neural tube', 'somite', 'notochord', 'pharyngeal arch', 'branchial',
+        'spermatogenesis', 'oogenesis', 'meiosis', 'mitosis',
+        'gubernaculum', 'mesentery', 'midgut', 'hindgut', 'foregut',
+        'neural crest', 'yolk sac', 'allantois', 'chorion', 'amnion',
+        'sclerotome', 'dermatome', 'myotome',
+        'myoblast', 'myotube',
+        'organogenesis', 'differentiation',
+        '胚胎', '發育',
     ]),
     ('microbiology', '微生物與免疫', 5, [
         # 中文
@@ -224,10 +259,18 @@ SUBJECT_RULES = [
 # Manual overrides: (roc_year, session, subject, q_start, q_end, tag)
 # Use when keyword matching misfires due to overlapping anatomical terms
 MANUAL_OVERRIDES = [
-    ('110', '第一次', '醫學(一)', 32, 46, 'histology'),  # 組織胚胎學區段被誤判為解剖
+    ('110', '第一次', '醫學(一)', 32, 36, 'embryology'),  # 胚胎學區段
+    ('110', '第一次', '醫學(一)', 37, 46, 'histology'),   # 組織學區段
 ]
 
-def classify(q_text):
+# Subject restriction: 醫學(一) only has anatomy/physiology/biochemistry/histology
+# 醫學(二) only has microbiology/parasitology/pharmacology/pathology/public_health
+SUBJECT_ALLOWED = {
+    '醫學(一)': {'anatomy', 'physiology', 'biochemistry', 'histology', 'embryology'},
+    '醫學(二)': {'microbiology', 'parasitology', 'pharmacology', 'pathology', 'public_health'},
+}
+
+def classify(q_text, exam_subject=None):
     text = q_text.lower()
     scores = {}
     for tag, name, stage, keywords in SUBJECT_RULES:
@@ -236,6 +279,19 @@ def classify(q_text):
             scores[tag] = score
     if not scores:
         return 'unknown', '未分類', 0
+    # Filter by allowed subjects for this exam
+    if exam_subject and exam_subject in SUBJECT_ALLOWED:
+        allowed = SUBJECT_ALLOWED[exam_subject]
+        filtered = {k: v for k, v in scores.items() if k in allowed}
+        if filtered:
+            scores = filtered
+    # Anatomy keywords are very generic (nerve, muscle, bone appear everywhere).
+    # If another subject also matches, anatomy needs a higher bar to win.
+    if 'anatomy' in scores and len(scores) > 1:
+        others_max = max(v for k, v in scores.items() if k != 'anatomy')
+        # Anatomy must score at least 2 more than the best competitor to win
+        if scores['anatomy'] - others_max < 2:
+            scores['anatomy'] = others_max - 1  # demote
     best = max(scores, key=scores.get)
     for tag, name, stage, _ in SUBJECT_RULES:
         if tag == best:
@@ -253,6 +309,10 @@ def fill_by_neighbors(questions_in_exam):
     tag_meta = {tag: (name, stage) for tag, name, stage, _ in SUBJECT_RULES}
     qs = sorted(questions_in_exam, key=lambda q: q['number'])
 
+    # Determine allowed tags for this exam
+    exam_subject = qs[0].get('subject') if qs else None
+    allowed = SUBJECT_ALLOWED.get(exam_subject)
+
     for _ in range(6):
         changed = False
         for i, q in enumerate(qs):
@@ -260,6 +320,9 @@ def fill_by_neighbors(questions_in_exam):
             neighbor_tags = [n['subject_tag'] for n in window if n['subject_tag'] != 'unknown']
             if not neighbor_tags:
                 continue
+            # Filter neighbors to allowed tags only
+            if allowed:
+                neighbor_tags = [t for t in neighbor_tags if t in allowed] or neighbor_tags
             best = max(set(neighbor_tags), key=neighbor_tags.count)
             best_count = neighbor_tags.count(best)
             cur_count  = neighbor_tags.count(q['subject_tag'])
@@ -290,7 +353,7 @@ def main():
         exam_qs = []
         for q in exam['questions']:
             full_text = q['question'] + ' ' + ' '.join(q['options'].values())
-            tag, name, stage = classify(full_text)
+            tag, name, stage = classify(full_text, exam['subject'])
 
             q_out = {
                 'id': f"{exam['exam_code']}_{q['number']}",

@@ -20,9 +20,9 @@ const EXAMS = [
 ]
 const STAGE_COLORS = {
   anatomy:      '#3B82F6', physiology:  '#EF4444', biochemistry: '#8B5CF6',
-  histology:    '#6366F1', microbiology:'#10B981', parasitology: '#D97706',
-  pharmacology: '#F97316', pathology:   '#DC2626', public_health:'#0D9488',
-  unknown:      '#94A3B8',
+  histology:    '#6366F1', embryology:  '#818CF8', microbiology:'#10B981',
+  parasitology: '#D97706', pharmacology: '#F97316', pathology:   '#DC2626',
+  public_health:'#0D9488', unknown:      '#94A3B8',
 }
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F97316', D: '#EF4444' }
 
@@ -30,7 +30,8 @@ const SUBJECTS = [
   { tag: 'anatomy',      name: '解剖學',      color: '#3B82F6' },
   { tag: 'physiology',   name: '生理學',      color: '#EF4444' },
   { tag: 'biochemistry', name: '生物化學',    color: '#8B5CF6' },
-  { tag: 'histology',    name: '組織胚胎學',  color: '#6366F1' },
+  { tag: 'histology',    name: '組織學',      color: '#6366F1' },
+  { tag: 'embryology',   name: '胚胎學',      color: '#818CF8' },
   { tag: 'microbiology', name: '微生物與免疫', color: '#10B981' },
   { tag: 'parasitology', name: '寄生蟲學',   color: '#D97706' },
   { tag: 'pharmacology', name: '藥理學',     color: '#F97316' },

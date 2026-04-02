@@ -4,16 +4,17 @@ import { useGameStore, usePlayerStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 
 const STAGES = [
-  { id: 0, name: '隨機混合',   icon: '🎲', color: '#64748B', count: 1238 },
-  { id: 1, name: '解剖學殿堂', icon: '🦴', color: '#3B82F6', count: 306  },
-  { id: 2, name: '生理學之谷', icon: '💓', color: '#EF4444', count: 114  },
-  { id: 3, name: '生化迷宮',   icon: '⚗️',  color: '#8B5CF6', count: 208  },
-  { id: 4, name: '組織胚胎學', icon: '🔬', color: '#6366F1', count: 65   },
-  { id: 5, name: '微免聖域',   icon: '🦠', color: '#10B981', count: 195  },
-  { id: 6, name: '寄生蟲荒原', icon: '🪱', color: '#D97706', count: 27   },
-  { id: 7, name: '藥理決鬥場', icon: '💊', color: '#F97316', count: 193  },
-  { id: 8, name: '病理學深淵', icon: '🩺', color: '#DC2626', count: 97   },
-  { id: 9, name: '公衛學巔峰', icon: '📊', color: '#0D9488', count: 33   },
+  { id: 0, name: '隨機混合',   icon: '🎲', color: '#64748B', count: 2000 },
+  { id: 1, name: '解剖學殿堂', icon: '🦴', color: '#3B82F6', count: 335  },
+  { id: 2, name: '生理學之谷', icon: '💓', color: '#EF4444', count: 269  },
+  { id: 3, name: '生化迷宮',   icon: '⚗️',  color: '#8B5CF6', count: 261  },
+  { id: 4, name: '組織學',     icon: '🔬', color: '#6366F1', count: 107  },
+  { id: 10,name: '胚胎學',     icon: '🧬', color: '#818CF8', count: 28   },
+  { id: 5, name: '微免聖域',   icon: '🦠', color: '#10B981', count: 316  },
+  { id: 6, name: '寄生蟲荒原', icon: '🪱', color: '#D97706', count: 53   },
+  { id: 7, name: '藥理決鬥場', icon: '💊', color: '#F97316', count: 281  },
+  { id: 8, name: '病理學深淵', icon: '🩺', color: '#DC2626', count: 216  },
+  { id: 9, name: '公衛學巔峰', icon: '📊', color: '#0D9488', count: 134  },
 ]
 
 /* Pulsing dot animation for "waiting" */

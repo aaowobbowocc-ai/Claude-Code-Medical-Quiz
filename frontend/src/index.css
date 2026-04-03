@@ -86,6 +86,7 @@ html.dark .bg-gray-300 { background: #4a4a4a !important; }
 html.dark .bg-medical-ice { background: #1e1e1e !important; }
 html.dark .bg-medical-light { background: #333333 !important; }
 html.dark .bg-emerald-50 { background: #1a332a !important; }
+html.dark .bg-medical-blue { background: #1e1e1e !important; }
 html.dark .active\:bg-gray-50:active { background: #333333 !important; }
 html.dark .sheet-panel { background: #2d2d2d !important; color: #cccccc; }
 html.dark .sheet-handle { background: #4a4a4a; }
@@ -135,9 +136,13 @@ html.dark input, html.dark textarea {
 }
 html.dark input::placeholder, html.dark textarea::placeholder { color: #666666 !important; }
 
-/* Buttons — gradient CTA in dark mode */
-html.dark [style*="linear-gradient"] {
-  filter: brightness(0.85) !important;
+/* Gradient headers (160deg) — darken significantly */
+html.dark [style*="160deg"] {
+  background: linear-gradient(160deg, #0a0a0a 0%, #1a2a2a 60%, #152020 100%) !important;
+}
+/* Gradient CTA buttons (135deg) — slightly muted */
+html.dark [style*="135deg"] {
+  filter: brightness(0.75) !important;
 }
 
 /* Shadows — softer in dark mode */

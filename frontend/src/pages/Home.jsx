@@ -123,6 +123,9 @@ export default function Home() {
   /* ── 底部支援列（主畫面共用） ──────────────────────────── */
   const darkMode = usePlayerStore(s => s.darkMode)
   const toggleDarkMode = usePlayerStore(s => s.toggleDarkMode)
+  const heroGrad = darkMode
+    ? 'linear-gradient(160deg, #0a0a0a 0%, #1a2a2a 60%, #152020 100%)'
+    : 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 60%, #0D9488 100%)'
 
   const SupportBar = () => (
     <div className="flex items-center justify-center gap-2 mt-3 pb-1">
@@ -228,7 +231,7 @@ export default function Home() {
     return (
       <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
         <div className="relative overflow-hidden px-5 pt-14 pb-10 flex flex-col items-center"
-             style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 60%, #0D9488 100%)' }}>
+             style={{ background: heroGrad }}>
           {[...Array(6)].map((_, i) => (
             <div key={i} className="absolute text-white/5 font-bold text-7xl select-none"
                  style={{ top: `${10 + i * 28}%`, left: `${-5 + (i % 3) * 40}%` }}>✚</div>
@@ -335,7 +338,7 @@ export default function Home() {
 
       {/* PWA Install Banner */}
       {showBanner && (
-        <div className="bg-gradient-to-r from-medical-blue to-medical-teal text-white px-4 py-3 flex items-center gap-3">
+        <div className={`text-white px-4 py-3 flex items-center gap-3 ${darkMode ? 'bg-[#2d2d2d]' : 'bg-gradient-to-r from-medical-blue to-medical-teal'}`}>
           <span className="text-2xl shrink-0">📲</span>
           <div className="flex-1 min-w-0">
             {isIOS ? (
@@ -360,7 +363,7 @@ export default function Home() {
 
       {/* Hero */}
       <div className="relative overflow-hidden px-5 pt-14 pb-6"
-           style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 60%, #0D9488 100%)' }}>
+           style={{ background: heroGrad }}>
         {[...Array(6)].map((_, i) => (
           <div key={i} className="absolute text-white/5 font-bold text-7xl select-none"
                style={{ top: `${10 + i * 28}%`, left: `${-5 + (i % 3) * 40}%` }}>✚</div>

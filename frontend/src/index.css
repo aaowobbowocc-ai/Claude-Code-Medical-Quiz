@@ -121,6 +121,12 @@ html.dark .bg-red-50 { background: #2e1f1f !important; }
 html.dark .bg-amber-50 { background: #2e2618 !important; }
 html.dark .bg-blue-50 { background: #1e2430 !important; }
 html.dark .bg-orange-50 { background: #2e2218 !important; }
+html.dark .bg-rose-50 { background: #2e1f1f !important; }
+html.dark .text-rose-800 { color: #e88888 !important; }
+html.dark .border-rose-300 { border-color: #6b3030 !important; }
+html.dark .text-blue-800 { color: #7ab4e8 !important; }
+html.dark .border-blue-300 { border-color: #2a4060 !important; }
+html.dark .border-green-300 { border-color: #2a5040 !important; }
 html.dark .text-green-800 { color: #6ec89b !important; }
 html.dark .text-red-700 { color: #e88888 !important; }
 html.dark .text-amber-800 { color: #d4a84a !important; }

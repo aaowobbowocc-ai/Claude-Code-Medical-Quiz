@@ -1,6 +1,27 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
+// Level title tiers
+const LEVEL_TITLES = [
+  { min: 1,  title: '初心學徒', icon: '📖' },
+  { min: 3,  title: '翻書新手', icon: '🩹' },
+  { min: 6,  title: '知識行者', icon: '🔬' },
+  { min: 10, title: '解題勇者', icon: '💉' },
+  { min: 15, title: '學海探險家', icon: '🧭' },
+  { min: 20, title: '智慧鍛造師', icon: '🔥' },
+  { min: 28, title: '真理守護者', icon: '🛡️' },
+  { min: 36, title: '醫道宗師', icon: '⚕️' },
+  { min: 45, title: '知識霸主', icon: '🏆' },
+  { min: 55, title: '傳說聖手', icon: '👑' },
+]
+
+export function getLevelTitle(level) {
+  for (let i = LEVEL_TITLES.length - 1; i >= 0; i--) {
+    if (level >= LEVEL_TITLES[i].min) return LEVEL_TITLES[i]
+  }
+  return LEVEL_TITLES[0]
+}
+
 // Persistent player profile
 export const usePlayerStore = create(
   persist(

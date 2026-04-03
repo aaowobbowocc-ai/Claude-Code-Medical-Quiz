@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { usePlayerStore } from '../store/gameStore'
+import { usePlayerStore, getLevelTitle } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import { useDailyMessage } from '../hooks/useDailyMessage'
 import { usePWA } from '../hooks/usePWA'
@@ -283,10 +283,10 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="flex gap-3 w-full max-w-xs mt-1">
-            {[['📝','模擬考','/mock-exam'],['🔥','魔王題','/boss'],['🎯','練習','/practice'],['📖','題庫','/browse']].map(([icon,lbl,path]) => (
+          <div className="grid grid-cols-3 gap-2.5 w-full max-w-xs mt-1">
+            {[['📝','模擬考','/mock-exam'],['🔥','魔王題','/boss'],['🎯','練習','/practice'],['📖','題庫','/browse'],['🏆','排行','/leaderboard'],['🗺️','地圖','/map']].map(([icon,lbl,path]) => (
               <button key={path} onClick={() => navigate(path)}
-                      className="flex-1 bg-white rounded-2xl py-3 flex flex-col items-center gap-1 shadow-sm border border-gray-100 active:scale-95">
+                      className="bg-white rounded-2xl py-3 flex flex-col items-center gap-1 shadow-sm border border-gray-100 active:scale-95">
                 <span className="text-xl">{icon}</span>
                 <span className="text-xs text-gray-500 font-medium">{lbl}</span>
               </button>
@@ -389,7 +389,7 @@ export default function Home() {
             <span className="text-3xl">{av}</span>
             <div className="flex-1">
               <p className="text-white font-bold text-xl leading-tight">{name}</p>
-              <p className="text-white/40 text-xs">Lv.{level} 醫師學徒</p>
+              <p className="text-white/40 text-xs">Lv.{level} {getLevelTitle(level).icon} {getLevelTitle(level).title}</p>
             </div>
             <div className="text-right">
               <p className="text-white/40 text-xs">金幣</p>
@@ -467,13 +467,15 @@ export default function Home() {
           <div className="flex-1 h-px bg-gray-200" />
         </div>
 
-        <div className="flex gap-3">
+        <div className="grid grid-cols-3 gap-3">
           {[['📝','模擬考','100題/120分','/mock-exam'],
             ['🔥','魔王題','高答錯率挑戰','/boss'],
             ['🎯','自主練習','練習含AI對手','/practice'],
-            ['📖','題庫瀏覽','依年份科目','/browse']].map(([icon,title,sub,path]) => (
+            ['📖','題庫瀏覽','依年份科目','/browse'],
+            ['🏆','排行榜','每週排名','/leaderboard'],
+            ['🗺️','關卡地圖','10 個科目','/map']].map(([icon,title,sub,path]) => (
             <button key={path} onClick={() => navigate(path)}
-                    className="flex-1 rounded-2xl py-4 flex flex-col items-center gap-1.5 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">
+                    className="rounded-2xl py-4 flex flex-col items-center gap-1.5 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">
               <div className="w-11 h-11 rounded-xl bg-medical-ice flex items-center justify-center text-2xl">{icon}</div>
               <p className="text-medical-dark font-bold text-xs">{title}</p>
               <p className="text-gray-400 text-xs">{sub}</p>

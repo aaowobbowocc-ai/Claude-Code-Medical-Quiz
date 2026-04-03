@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { getLevelTitle } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const MEDALS = ['🥇', '🥈', '🥉']
@@ -74,7 +75,9 @@ export default function Leaderboard() {
             </span>
             <div className="flex-1 min-w-0">
               <p className="font-bold text-gray-800 text-sm truncate">{p.name}</p>
-              <p className="text-xs text-gray-400">{p.played} 場 · 正確率 {p.pct}%</p>
+              <p className="text-xs text-gray-400">
+                {p.level ? `${getLevelTitle(p.level).icon} ${getLevelTitle(p.level).title} · ` : ''}{p.played} 場 · 正確率 {p.pct}%
+              </p>
             </div>
             <div className="text-right shrink-0">
               <p className="font-bold text-lg text-gray-800">{p.score}</p>

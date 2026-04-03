@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import SmartBanner from '../components/SmartBanner'
@@ -10,58 +10,67 @@ const PAPERS = [
   { id: 'paper2', name: '基礎醫學(二)', stages: '5,6,7,8,9', subjects: '微免、寄生蟲、藥理、病理、公衛' },
 ]
 
-const TIME_LIMIT = 120 * 60 // 120 minutes in seconds
-const PASS_RATE = 0.6
+const TIME_LIMIT = 120 * 60 // 120 minutes per paper
+const TOTAL_PASS = 120 // 120/200 to pass full exam
+const SINGLE_PASS = 60 // 60/100 for single paper
 
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444' }
 
 // ── Setup screen ─────────────────────────────────────────────────
-function ExamSetup({ onStart, onBack }) {
-  const [paper, setPaper] = useState('paper1')
-
+function ExamSetup({ onStart, onStartFull, onBack }) {
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
       <div className="px-4 pt-12 pb-6 grad-header">
         <div className="flex items-center gap-3 mb-1">
           <button onClick={onBack} className="text-white/60 text-2xl leading-none">‹</button>
           <div>
-            <h1 className="text-white font-bold text-2xl">📝 模擬考</h1>
-            <p className="text-white/60 text-sm mt-1">模擬國考實戰，100 題 / 120 分鐘</p>
+            <h1 className="text-white font-bold text-2xl">📝 模擬國考</h1>
+            <p className="text-white/60 text-sm mt-1">依照真實國考規則模擬</p>
           </div>
         </div>
       </div>
 
       <div className="flex-1 px-4 py-5 flex flex-col gap-4">
-        <div>
-          <p className="text-sm font-bold text-gray-700 mb-3">選擇考卷</p>
-          <div className="flex flex-col gap-3">
-            {PAPERS.map(p => (
-              <button key={p.id} onClick={() => setPaper(p.id)}
-                className={`w-full text-left rounded-2xl px-5 py-4 border-2 transition-all active:scale-[0.97]
-                  ${paper === p.id ? 'border-medical-blue bg-blue-50 shadow' : 'border-gray-100 bg-white'}`}>
-                <p className={`font-bold text-lg ${paper === p.id ? 'text-medical-blue' : 'text-medical-dark'}`}>{p.name}</p>
-                <p className="text-gray-400 text-xs mt-1">{p.subjects}</p>
-              </button>
-            ))}
+        {/* Full exam option */}
+        <button onClick={onStartFull}
+          className="w-full text-left rounded-2xl px-5 py-5 border-2 border-medical-blue bg-blue-50 shadow transition-all active:scale-[0.97]">
+          <div className="flex items-center gap-3">
+            <span className="text-3xl">📋</span>
+            <div className="flex-1">
+              <p className="font-bold text-lg text-medical-blue">完整模擬考</p>
+              <p className="text-gray-500 text-xs mt-1">醫學(一) + 醫學(二)，共 200 題</p>
+              <p className="text-gray-400 text-xs">各 120 分鐘，總分 120/200 及格</p>
+            </div>
           </div>
+        </button>
+
+        <div className="flex items-center gap-3">
+          <div className="flex-1 h-px bg-gray-200" />
+          <span className="text-gray-400 text-xs">或單獨考一卷</span>
+          <div className="flex-1 h-px bg-gray-200" />
         </div>
 
+        {/* Single paper options */}
+        {PAPERS.map(p => (
+          <button key={p.id} onClick={() => onStart(p)}
+            className="w-full text-left rounded-2xl px-5 py-4 border-2 border-gray-100 bg-white transition-all active:scale-[0.97]">
+            <p className="font-bold text-lg text-medical-dark">{p.name}</p>
+            <p className="text-gray-400 text-xs mt-1">{p.subjects}</p>
+            <p className="text-gray-300 text-xs">100 題 / 120 分鐘，60/100 及格</p>
+          </button>
+        ))}
+
         <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <p className="text-sm font-bold text-gray-700 mb-2">考試規則</p>
+          <p className="text-sm font-bold text-gray-700 mb-2">國考規則</p>
           <div className="text-xs text-gray-500 space-y-1.5">
-            <p>📋 100 題選擇題，隨機出題</p>
-            <p>⏱️ 限時 120 分鐘</p>
-            <p>✅ 每題 1 分，滿分 100 分</p>
-            <p>🎯 及格標準：60 分（答對 60 題）</p>
-            <p>❌ 答錯不倒扣</p>
+            <p>📋 兩張考卷各 100 題，共 200 題</p>
+            <p>⏱️ 每卷限時 120 分鐘</p>
+            <p>✅ 每題 1 分，兩卷合計 200 分</p>
+            <p>🎯 及格：總分 120 分（60%），不設單科低標</p>
+            <p>❌ 答錯不倒扣，不會就猜！</p>
             <p>📌 可跳題作答，最後統一交卷</p>
           </div>
         </div>
-
-        <button onClick={() => onStart(PAPERS.find(p => p.id === paper))}
-          className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform grad-cta">
-          🚀 開始考試
-        </button>
       </div>
     </div>
   )
@@ -69,16 +78,18 @@ function ExamSetup({ onStart, onBack }) {
 
 // ── Exam in progress ─────────────────────────────────────────────
 function ExamInProgress({ paper, questions, onFinish, onBack }) {
-  const [answers, setAnswers] = useState({}) // { index: 'A'|'B'|'C'|'D' }
+  const [answers, setAnswers] = useState({})
   const [qIdx, setQIdx] = useState(0)
   const [timeLeft, setTimeLeft] = useState(TIME_LIMIT)
   const [showNav, setShowNav] = useState(false)
   const timerRef = useRef(null)
+  const answersRef = useRef(answers)
+  answersRef.current = answers
 
   useEffect(() => {
     timerRef.current = setInterval(() => {
       setTimeLeft(t => {
-        if (t <= 1) { clearInterval(timerRef.current); onFinish(answers); return 0 }
+        if (t <= 1) { clearInterval(timerRef.current); onFinish(answersRef.current); return 0 }
         return t - 1
       })
     }, 1000)
@@ -104,10 +115,10 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
 
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
-      {/* Header */}
       <div className="sticky top-0 z-10 grad-header px-4 pt-12 pb-3">
         <div className="flex items-center justify-between text-white text-xs mb-1.5">
-          <button onClick={() => { if (confirm('確定要離開考試嗎？進度將不會保存。')) { clearInterval(timerRef.current); onBack() } }} className="text-white/60 text-lg leading-none mr-2">‹</button>
+          <button onClick={() => { if (confirm('確定要離開考試嗎？本卷進度將不會保存。')) { clearInterval(timerRef.current); onBack() } }}
+            className="text-white/60 text-lg leading-none mr-2">‹</button>
           <span className="flex-1">{paper.name}</span>
           <span className={timeUrgent ? 'text-red-300 font-bold animate-pulse' : ''}>{timeStr}</span>
         </div>
@@ -120,13 +131,11 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
         </div>
       </div>
 
-      {/* Question */}
       <div className="flex-1 overflow-y-auto px-4 py-4">
         <div className="bg-white rounded-2xl p-4 mb-4 shadow-sm">
           <p className="text-xs text-gray-400 mb-2">第 {qIdx + 1} / {questions.length} 題</p>
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
         </div>
-
         <div className="flex flex-col gap-2.5">
           {Object.entries(q.options).map(([letter, text]) => {
             const selected = answers[qIdx] === letter
@@ -142,7 +151,6 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
         </div>
       </div>
 
-      {/* Bottom nav */}
       <div className="sticky bottom-0 bg-white border-t border-gray-100 px-4 py-3 flex items-center gap-3">
         <button onClick={() => setQIdx(i => Math.max(0, i - 1))} disabled={qIdx === 0}
           className="px-4 py-3 rounded-xl font-bold text-sm bg-gray-100 text-gray-600 disabled:opacity-30 active:scale-95">
@@ -165,7 +173,6 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
         )}
       </div>
 
-      {/* Question navigator overlay */}
       {showNav && (
         <div className="fixed inset-0 z-50 flex items-end justify-center" onClick={() => setShowNav(false)}>
           <div className="w-full max-w-[430px] bg-white rounded-t-3xl px-5 pb-8 pt-4 shadow-2xl" onClick={e => e.stopPropagation()}>
@@ -191,37 +198,84 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
   )
 }
 
+// ── Intermission: ask to continue Paper 2 ────────────────────────
+function Intermission({ paper1Result, onContinue, onFinishSingle }) {
+  const { correct, total, timeUsed } = paper1Result
+  const pct = Math.round((correct / total) * 100)
+  const mm = Math.floor(timeUsed / 60)
+  const ss = timeUsed % 60
+
+  return (
+    <div className="flex flex-col min-h-dvh bg-medical-ice">
+      <div className="px-4 pt-14 pb-6 grad-header">
+        <h1 className="text-white font-bold text-2xl text-center">基礎醫學(一) 完成！</h1>
+      </div>
+      <div className="flex-1 px-5 py-6 flex flex-col items-center gap-5">
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 w-full text-center">
+          <p className="text-4xl font-black text-medical-dark">{correct}<span className="text-lg text-gray-400">/{total}</span></p>
+          <p className="text-gray-500 text-sm mt-1">正確率 {pct}% · 用時 {mm}:{String(ss).padStart(2, '0')}</p>
+        </div>
+
+        <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200 w-full">
+          <p className="text-amber-800 font-bold text-sm mb-1">📋 真實國考是兩卷合計算分</p>
+          <p className="text-amber-700 text-xs leading-relaxed">
+            總分需達 120/200（60%）才算及格。<br />
+            繼續考醫學(二) 才能得到完整模擬成績。
+          </p>
+        </div>
+
+        <button onClick={onContinue}
+          className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform grad-cta">
+          📝 繼續考 基礎醫學(二)
+        </button>
+        <button onClick={onFinishSingle}
+          className="w-full py-4 rounded-2xl font-bold text-lg bg-white text-gray-500 border border-gray-200 active:scale-95 transition-transform">
+          先看醫學(一) 的結果
+        </button>
+      </div>
+    </div>
+  )
+}
+
 // ── Results screen ───────────────────────────────────────────────
-function ExamResults({ paper, questions, answers, timeUsed }) {
-  const navigate = useNavigate()
+function ExamResults({ papers, navigate }) {
   const { addCoins, addExp } = usePlayerStore()
   const [saved, setSaved] = useState(false)
 
-  const correct = questions.filter((q, i) => answers[i] === q.answer).length
-  const total = questions.length
-  const score = correct
-  const pct = Math.round((correct / total) * 100)
-  const passed = pct >= PASS_RATE * 100
-  const mm = Math.floor(timeUsed / 60)
-  const ss = timeUsed % 60
+  const isFullExam = papers.length === 2
+  const totalCorrect = papers.reduce((s, p) => s + p.correct, 0)
+  const totalQuestions = papers.reduce((s, p) => s + p.total, 0)
+  const totalTime = papers.reduce((s, p) => s + p.timeUsed, 0)
+  const passed = isFullExam ? totalCorrect >= TOTAL_PASS : null
+  const pct = Math.round((totalCorrect / totalQuestions) * 100)
+  const mm = Math.floor(totalTime / 60)
+  const ss = totalTime % 60
+
+  const allQuestions = papers.flatMap(p => p.questions)
+  const allAnswers = papers.reduce((acc, p, pi) => {
+    p.questions.forEach((_, qi) => { acc[acc._offset + qi] = p.answers[qi] })
+    acc._offset += p.questions.length
+    return acc
+  }, { _offset: 0 })
 
   useEffect(() => {
     if (saved) return
     setSaved(true)
-    addCoins(passed ? 200 : 50)
-    addExp(passed ? 150 : 40)
-    // Save to localStorage
+    addCoins(passed === true ? 200 : isFullExam ? 50 : 80)
+    addExp(passed === true ? 150 : isFullExam ? 40 : 60)
     try {
       const key = 'mock-exam-history'
       const prev = JSON.parse(localStorage.getItem(key) || '[]')
-      prev.unshift({ date: new Date().toISOString(), paper: paper.name, score, total, pct, passed, timeUsed })
+      const paperName = isFullExam ? '完整模擬考' : papers[0].paperName
+      prev.unshift({ date: new Date().toISOString(), paper: paperName, score: totalCorrect, total: totalQuestions, pct, passed, timeUsed: totalTime })
       localStorage.setItem(key, JSON.stringify(prev.slice(0, 20)))
     } catch {}
     // Submit per-question stats
-    const stats = questions.filter(q => q.id).map((q, i) => ({
-      questionId: q.id,
-      correct: answers[i] === q.answer,
-    }))
+    const stats = allQuestions.filter(q => q.id).map((q, i) => {
+      const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
+      const qIdx = pIdx === 0 ? i : i - papers[0].questions.length
+      return { questionId: q.id, correct: papers[pIdx]?.answers[qIdx] === q.answer }
+    })
     if (stats.length > 0) {
       fetch(`${BACKEND}/questions/track`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -230,24 +284,41 @@ function ExamResults({ paper, questions, answers, timeUsed }) {
     }
   }, [])
 
-  const wrongQuestions = questions
-    .map((q, i) => ({ ...q, myAnswer: answers[i] || null, correct: answers[i] === q.answer }))
-    .filter(q => !q.correct)
+  const wrongQuestions = allQuestions.map((q, i) => {
+    const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
+    const qIdx = pIdx === 0 ? i : i - papers[0].questions.length
+    const myAnswer = papers[pIdx]?.answers[qIdx] || null
+    return { ...q, myAnswer, correct: myAnswer === q.answer }
+  }).filter(q => !q.correct)
 
   return (
     <div className="flex flex-col min-h-dvh grad-header">
       <div className="flex-1 flex flex-col items-center justify-center px-5 gap-5 pt-16">
-        {/* Score circle */}
         <div className={`w-36 h-36 rounded-full border-4 flex flex-col items-center justify-center shadow-2xl bg-white/10
-          ${passed ? 'border-green-400' : 'border-red-400'}`}>
-          <span className="text-5xl font-black text-white">{score}</span>
-          <span className="text-white/60 text-xs">/ {total}</span>
+          ${passed === true ? 'border-green-400' : passed === false ? 'border-red-400' : 'border-white/40'}`}>
+          <span className="text-5xl font-black text-white">{totalCorrect}</span>
+          <span className="text-white/60 text-xs">/ {totalQuestions}</span>
         </div>
 
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-white mb-1">{passed ? '🎉 及格！' : '😤 再接再厲'}</h1>
-          <p className="text-white/60 text-sm">{paper.name}</p>
+          <h1 className="text-3xl font-bold text-white mb-1">
+            {passed === true ? '🎉 及格！' : passed === false ? '😤 再接再厲' : '📊 測驗完成'}
+          </h1>
+          <p className="text-white/60 text-sm">{isFullExam ? '完整模擬考' : papers[0].paperName}</p>
+          {!isFullExam && <p className="text-white/40 text-xs mt-1">單卷測驗不計及格，需兩卷合計</p>}
         </div>
+
+        {/* Per-paper breakdown */}
+        {isFullExam && (
+          <div className="flex gap-3 w-full max-w-xs">
+            {papers.map((p, i) => (
+              <div key={i} className="flex-1 bg-white/10 rounded-xl px-3 py-2 text-center">
+                <p className="text-white/50 text-xs">{p.paperName}</p>
+                <p className="text-white font-bold text-lg">{p.correct}/{p.total}</p>
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="flex gap-4">
           <div className="bg-white/10 rounded-xl px-4 py-2 text-center">
@@ -256,18 +327,20 @@ function ExamResults({ paper, questions, answers, timeUsed }) {
           </div>
           <div className="bg-white/10 rounded-xl px-4 py-2 text-center">
             <p className="text-white/50 text-xs">用時</p>
-            <p className="text-white font-bold text-lg">{mm}:{ss.toString().padStart(2, '0')}</p>
+            <p className="text-white font-bold text-lg">{mm}:{String(ss).padStart(2, '0')}</p>
           </div>
-          <div className="bg-white/10 rounded-xl px-4 py-2 text-center">
-            <p className="text-white/50 text-xs">獎勵</p>
-            <p className="text-white font-bold text-lg">🪙 {passed ? 200 : 50}</p>
-          </div>
+          {isFullExam && (
+            <div className="bg-white/10 rounded-xl px-4 py-2 text-center">
+              <p className="text-white/50 text-xs">及格線</p>
+              <p className="text-white font-bold text-lg">{TOTAL_PASS}</p>
+            </div>
+          )}
         </div>
       </div>
 
       <div className="bg-white rounded-t-3xl px-5 pt-5 pb-10 flex flex-col gap-3">
         {wrongQuestions.length > 0 && (
-          <button onClick={() => navigate('/review', { state: { questions: wrongQuestions.map(q => ({ ...q })), stage: paper.name } })}
+          <button onClick={() => navigate('/review', { state: { questions: wrongQuestions, stage: isFullExam ? '完整模擬考' : papers[0].paperName } })}
             className="w-full py-4 rounded-2xl font-bold text-lg border-2 active:scale-95 transition-transform flex items-center justify-center gap-2"
             style={{ borderColor: '#EF4444', color: '#EF4444', background: '#FFF5F5' }}>
             📋 錯題檢討（{wrongQuestions.length} 題）
@@ -290,53 +363,129 @@ function ExamResults({ paper, questions, answers, timeUsed }) {
 // ── Main component ───────────────────────────────────────────────
 export default function MockExam() {
   const navigate = useNavigate()
-  const [phase, setPhase] = useState('setup') // setup | loading | exam | results
-  const [paper, setPaper] = useState(null)
+  // phases: setup | loading | exam | intermission | loading2 | exam2 | results
+  const [phase, setPhase] = useState('setup')
+  const [currentPaper, setCurrentPaper] = useState(null)
   const [questions, setQuestions] = useState([])
-  const [answers, setAnswers] = useState({})
-  const [timeUsed, setTimeUsed] = useState(0)
+  const [paperResults, setPaperResults] = useState([]) // array of { paperName, questions, answers, correct, total, timeUsed }
+  const [isFullExam, setIsFullExam] = useState(false)
   const startTime = useRef(0)
 
-  const handleStart = async (selectedPaper) => {
-    setPaper(selectedPaper)
+  const loadQuestions = async (paper) => {
+    const res = await fetch(`${BACKEND}/questions/exam?stages=${paper.stages}&count=100`)
+    const data = await res.json()
+    if (data.questions.length < 10) throw new Error('not enough')
+    return data.questions
+  }
+
+  // Start single paper
+  const handleStartSingle = async (paper) => {
+    setIsFullExam(false)
+    setCurrentPaper(paper)
+    setPaperResults([])
     setPhase('loading')
     try {
-      const res = await fetch(`${BACKEND}/questions/exam?stages=${selectedPaper.stages}&count=100`)
-      const data = await res.json()
-      if (data.questions.length < 10) {
-        alert('題目不足，請稍後再試')
-        setPhase('setup')
-        return
-      }
-      setQuestions(data.questions)
+      const qs = await loadQuestions(paper)
+      setQuestions(qs)
       startTime.current = Date.now()
       setPhase('exam')
     } catch {
-      alert('載入失敗，請檢查網路連線')
+      alert('題目不足或載入失敗，請稍後再試')
       setPhase('setup')
     }
   }
 
-  const handleFinish = (finalAnswers) => {
-    setAnswers(finalAnswers)
-    setTimeUsed(Math.floor((Date.now() - startTime.current) / 1000))
+  // Start full exam (paper 1 first)
+  const handleStartFull = async () => {
+    setIsFullExam(true)
+    setCurrentPaper(PAPERS[0])
+    setPaperResults([])
+    setPhase('loading')
+    try {
+      const qs = await loadQuestions(PAPERS[0])
+      setQuestions(qs)
+      startTime.current = Date.now()
+      setPhase('exam')
+    } catch {
+      alert('題目不足或載入失敗，請稍後再試')
+      setPhase('setup')
+    }
+  }
+
+  const handleFinishPaper = (answers) => {
+    const timeUsed = Math.floor((Date.now() - startTime.current) / 1000)
+    const correct = questions.filter((q, i) => answers[i] === q.answer).length
+    const result = {
+      paperName: currentPaper.name,
+      questions: [...questions],
+      answers: { ...answers },
+      correct,
+      total: questions.length,
+      timeUsed,
+    }
+
+    if (isFullExam && paperResults.length === 0) {
+      // Finished paper 1 of full exam → show intermission
+      setPaperResults([result])
+      setPhase('intermission')
+    } else {
+      // Finished single paper or paper 2
+      setPaperResults(prev => [...prev, result])
+      setPhase('results')
+    }
+  }
+
+  // Continue to paper 2
+  const handleContinuePaper2 = async () => {
+    setCurrentPaper(PAPERS[1])
+    setPhase('loading2')
+    try {
+      const qs = await loadQuestions(PAPERS[1])
+      setQuestions(qs)
+      startTime.current = Date.now()
+      setPhase('exam2')
+    } catch {
+      alert('題目不足或載入失敗，請稍後再試')
+      // Fall back to showing paper 1 results only
+      setPhase('results')
+    }
+  }
+
+  // View paper 1 only results
+  const handleFinishSingle = () => {
+    setIsFullExam(false)
     setPhase('results')
   }
 
-  if (phase === 'setup') return <ExamSetup onStart={handleStart} onBack={() => navigate('/')} />
+  if (phase === 'setup') {
+    return <ExamSetup onStart={handleStartSingle} onStartFull={handleStartFull} onBack={() => navigate('/')} />
+  }
 
-  if (phase === 'loading') {
+  if (phase === 'loading' || phase === 'loading2') {
     return (
       <div className="flex flex-col items-center justify-center min-h-dvh bg-medical-ice gap-4">
         <div className="text-5xl animate-bounce">📝</div>
-        <p className="text-gray-500 font-medium">正在出題中…</p>
+        <p className="text-gray-500 font-medium">
+          {phase === 'loading2' ? '正在載入 基礎醫學(二)…' : '正在出題中…'}
+        </p>
       </div>
     )
   }
 
-  if (phase === 'exam') {
-    return <ExamInProgress paper={paper} questions={questions} onFinish={handleFinish} onBack={() => setPhase('setup')} />
+  if (phase === 'exam' || phase === 'exam2') {
+    return <ExamInProgress paper={currentPaper} questions={questions} onFinish={handleFinishPaper} onBack={() => setPhase('setup')} />
   }
 
-  return <ExamResults paper={paper} questions={questions} answers={answers} timeUsed={timeUsed} />
+  if (phase === 'intermission') {
+    return (
+      <Intermission
+        paper1Result={paperResults[0]}
+        onContinue={handleContinuePaper2}
+        onFinishSingle={handleFinishSingle}
+      />
+    )
+  }
+
+  // results
+  return <ExamResults papers={paperResults} navigate={navigate} />
 }

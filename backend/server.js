@@ -137,7 +137,8 @@ function startQuestion(room) {
     timeLimit,
   });
 
-  // Start countdown
+  // Start countdown (clear any previous timer first)
+  if (room.timer) clearInterval(room.timer);
   let remaining = timeLimit;
   room.timer = setInterval(() => {
     remaining--;
@@ -181,6 +182,7 @@ function startQuestion(room) {
 }
 
 function revealAnswer(room) {
+  if (room.timer) { clearInterval(room.timer); room.timer = null; }
   const q = room.questions[room.qIndex];
   if (!q) return;
   io.to(room.code).emit('reveal', {
@@ -502,7 +504,7 @@ function getWeekKey() {
   return `${d.getFullYear()}-W${String(week).padStart(2, '0')}`;
 }
 
-function recordScore(name, correct, total) {
+function recordScore(name, correct, total, level) {
   const lb = loadLeaderboard();
   const week = getWeekKey();
   if (!lb[week]) lb[week] = {};
@@ -512,6 +514,7 @@ function recordScore(name, correct, total) {
   entry.correct += correct;
   entry.total += total;
   entry.score += correct * 10;
+  if (level !== undefined) entry.level = level;
   // Keep only last 4 weeks
   const weeks = Object.keys(lb).sort();
   while (weeks.length > 4) { delete lb[weeks.shift()]; }
@@ -534,11 +537,11 @@ app.get('/leaderboard', (req, res) => {
 });
 
 app.post('/leaderboard/submit', express.json(), (req, res) => {
-  const { name, correct, total } = req.body;
+  const { name, correct, total, level } = req.body;
   if (!name || typeof correct !== 'number' || typeof total !== 'number') {
     return res.status(400).json({ error: 'invalid' });
   }
-  recordScore(name.slice(0, 20), correct, total);
+  recordScore(name.slice(0, 20), correct, total, typeof level === 'number' ? level : undefined);
   res.json({ ok: true });
 });
 

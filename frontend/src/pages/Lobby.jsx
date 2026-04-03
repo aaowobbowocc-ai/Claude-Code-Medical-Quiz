@@ -70,7 +70,7 @@ export default function Lobby() {
   const hasAI = players.some(p => p.isAI)
 
   return (
-    <div className="flex flex-col min-h-dvh no-select" style={{ background: '#F0F4F8' }}>
+    <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
 
       {/* ── Header ──────────────────────────────────────────────── */}
       <div className="relative overflow-hidden px-5 pt-14 pb-6"

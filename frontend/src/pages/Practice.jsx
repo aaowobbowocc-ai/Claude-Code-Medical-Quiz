@@ -81,7 +81,7 @@ function SetupScreen({ onStart }) {
   const recentPct = history.slice(0, 10)
 
   return (
-    <div className="flex flex-col min-h-dvh" style={{ background: '#F0F4F8' }}>
+    <div className="flex flex-col min-h-dvh bg-medical-ice">
       <div className="px-4 pt-14 pb-6"
            style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
         <button onClick={() => navigate('/')} className="text-white/50 text-sm mb-2 flex items-center gap-1 active:opacity-70">‹ 返回</button>
@@ -296,7 +296,7 @@ function PracticeGame({ config, onFinish }) {
   const progressPct = (qIdx / questions.length) * 100
 
   return (
-    <div className="flex flex-col min-h-dvh" style={{ background: '#F0F4F8' }}>
+    <div className="flex flex-col min-h-dvh bg-medical-ice">
 
       {/* ── Top bar ─────────────────────────────────────────── */}
       <div className="px-4 pt-12 pb-3"

@@ -23,7 +23,7 @@ export default function Leaderboard() {
   useEffect(() => { fetchLB() }, [])
 
   return (
-    <div className="flex flex-col min-h-dvh no-select" style={{ background: '#F0F4F8' }}>
+    <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
       {/* Header */}
       <div className="sticky top-0 z-10 px-4 pt-12 pb-4"
            style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>

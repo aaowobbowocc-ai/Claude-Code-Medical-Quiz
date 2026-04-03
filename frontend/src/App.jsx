@@ -17,7 +17,7 @@ const Leaderboard  = lazy(() => import('./pages/Leaderboard'))
 
 function PageLoader() {
   return (
-    <div className="flex items-center justify-center min-h-dvh" style={{ background: '#F0F4F8' }}>
+    <div className="flex items-center justify-center min-h-dvh bg-medical-ice">
       <span className="text-4xl animate-bounce">⚕️</span>
     </div>
   )

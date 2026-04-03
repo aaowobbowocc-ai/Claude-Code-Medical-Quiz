@@ -10,7 +10,7 @@ try {
   if (stored.state?.darkMode) {
     document.documentElement.classList.add('dark')
     const meta = document.querySelector('meta[name="theme-color"]')
-    if (meta) meta.content = '#0a0f1a'
+    if (meta) meta.content = '#1a1a1a'
   }
 } catch {}
 

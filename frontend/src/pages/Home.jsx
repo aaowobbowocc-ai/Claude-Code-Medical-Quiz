@@ -226,7 +226,7 @@ export default function Home() {
   // ── No-name: inline quick-start ──────────────────────────
   if (!name) {
     return (
-      <div className="flex flex-col min-h-dvh no-select" style={{ background: '#F0F4F8' }}>
+      <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
         <div className="relative overflow-hidden px-5 pt-14 pb-10 flex flex-col items-center"
              style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 60%, #0D9488 100%)' }}>
           {[...Array(6)].map((_, i) => (
@@ -331,7 +331,7 @@ export default function Home() {
 
   // ── Has name: instant home ───────────────────────────────
   return (
-    <div className="flex flex-col min-h-dvh no-select" style={{ background: '#F0F4F8' }}>
+    <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
 
       {/* PWA Install Banner */}
       {showBanner && (

@@ -295,7 +295,7 @@ export default function Browse() {
   const hasFilters = exam || stageTag || query
 
   return (
-    <div className="flex flex-col min-h-dvh no-select" style={{ background: '#F0F4F8' }}>
+    <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
 
       {/* ── Header ───────────────────────────────────────────── */}
       <div className="sticky top-0 z-10"

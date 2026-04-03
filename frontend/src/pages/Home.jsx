@@ -5,6 +5,7 @@ import { getSocket } from '../hooks/useSocket'
 import { useDailyMessage } from '../hooks/useDailyMessage'
 import { usePWA } from '../hooks/usePWA'
 import { useBookmarks } from '../hooks/useBookmarks'
+import Footer from '../components/Footer'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
 
@@ -300,6 +301,8 @@ export default function Home() {
           </div>
 
           <SupportBar />
+
+          <Footer />
         </div>
 
         {/* Join sheet */}
@@ -519,7 +522,22 @@ export default function Home() {
           ))}
         </div>
 
+        {/* SEO 內容區塊 */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 text-sm text-gray-500 leading-relaxed space-y-3">
+          <h2 className="font-bold text-base text-medical-dark">關於醫學知識王</h2>
+          <p>
+            醫學知識王是專為醫師國考第一階段設計的免費題庫練習平台，收錄 110 至 115 年度超過 2000 題考古題，
+            涵蓋解剖學、生理學、生化學、藥理學、微生物與免疫學、病理學、組織學、胚胎學、公共衛生等 9 大基礎醫學科目。
+          </p>
+          <p>
+            平台提供即時對戰、AI 題目解說、模擬考試（完整模擬醫學一＋醫學二，120/200 及格制）、
+            錯題間隔複習等功能，讓醫學生在互動中高效備考。無需註冊，完全免費。
+          </p>
+        </div>
+
         <SupportBar />
+
+        <Footer />
       </div>
 
       {/* Sheet: edit name */}

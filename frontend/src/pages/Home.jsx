@@ -219,7 +219,6 @@ export default function Home() {
               >
                 以 Email 送出
               </button>
-              <p className="text-center text-xs text-gray-300 mt-3">{CONTACT_MAIL}</p>
             </>
           )}
         </Sheet>
@@ -285,7 +284,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-3 w-full max-w-xs mt-1">
-            {[['📝','模擬考','/mock-exam'],['🎯','練習','/practice'],['📖','題庫','/browse'],['🏆','排行','/leaderboard']].map(([icon,lbl,path]) => (
+            {[['📝','模擬考','/mock-exam'],['🔥','魔王題','/boss'],['🎯','練習','/practice'],['📖','題庫','/browse']].map(([icon,lbl,path]) => (
               <button key={path} onClick={() => navigate(path)}
                       className="flex-1 bg-white rounded-2xl py-3 flex flex-col items-center gap-1 shadow-sm border border-gray-100 active:scale-95">
                 <span className="text-xl">{icon}</span>
@@ -470,9 +469,9 @@ export default function Home() {
 
         <div className="flex gap-3">
           {[['📝','模擬考','100題/120分','/mock-exam'],
+            ['🔥','魔王題','高答錯率挑戰','/boss'],
             ['🎯','自主練習','練習含AI對手','/practice'],
-            ['📖','題庫瀏覽','依年份科目','/browse'],
-            ['🗺️','關卡地圖','9 個科目','/map']].map(([icon,title,sub,path]) => (
+            ['📖','題庫瀏覽','依年份科目','/browse']].map(([icon,title,sub,path]) => (
             <button key={path} onClick={() => navigate(path)}
                     className="flex-1 rounded-2xl py-4 flex flex-col items-center gap-1.5 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">
               <div className="w-11 h-11 rounded-xl bg-medical-ice flex items-center justify-center text-2xl">{icon}</div>

@@ -13,8 +13,8 @@ const STAGES = [
   { id: 1,  name: '解剖學殿堂', icon: '🦴', color: '#3B82F6' },
   { id: 2,  name: '生理學之谷', icon: '💓', color: '#EF4444' },
   { id: 3,  name: '生化迷宮',   icon: '⚗️',  color: '#8B5CF6' },
-  { id: 4,  name: '組織學',     icon: '🔬', color: '#6366F1' },
-  { id: 10, name: '胚胎學',     icon: '🧬', color: '#818CF8' },
+  { id: 4,  name: '組織學祕境', icon: '🔬', color: '#6366F1' },
+  { id: 10, name: '胚胎學源脈', icon: '🧬', color: '#818CF8' },
   { id: 5,  name: '微免聖域',   icon: '🦠', color: '#10B981' },
   { id: 6,  name: '寄生蟲荒原', icon: '🪱', color: '#D97706' },
   { id: 7,  name: '藥理決鬥場', icon: '💊', color: '#F97316' },
@@ -72,7 +72,7 @@ function shuffle(arr) {
 }
 
 /* ── Setup screen ─────────────────────────────────────────────── */
-function SetupScreen({ onStart }) {
+function SetupScreen({ onStart, onBack }) {
   const last = getLastConfig()
   const [stage, setStage]     = useState(last.stage ?? 0)
   const [diff, setDiff]       = useState(last.diff ?? 'medium')
@@ -83,7 +83,7 @@ function SetupScreen({ onStart }) {
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
       <div className="px-4 pt-14 pb-6 grad-header">
-        <button onClick={() => navigate('/')} className="text-white/50 text-sm mb-2 flex items-center gap-1 active:opacity-70">‹ 返回</button>
+        <button onClick={onBack} className="text-white/50 text-sm mb-2 flex items-center gap-1 active:opacity-70">‹ 返回</button>
         <h1 className="text-white font-bold text-2xl">設定練習模式</h1>
       </div>
 
@@ -444,6 +444,19 @@ function PracticeResults({ result, config, onRestart, onHome }) {
       stage: config.stage, diff: config.diff, count: config.count,
       correct, total, myScore: result.myScore, aiScore: result.aiScore,
     })
+    // Submit per-question stats
+    if (result.log && result.log.length > 0) {
+      const stats = result.log.filter(q => q.id).map(q => ({
+        questionId: q.id,
+        correct: q.user_answer === q.answer,
+      }))
+      if (stats.length > 0) {
+        fetch(`${BACKEND}/questions/track`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ stats }),
+        }).catch(() => {})
+      }
+    }
     // Submit to leaderboard
     const playerName = usePlayerStore.getState().name
     if (playerName) {
@@ -535,7 +548,7 @@ export default function Practice() {
   const [result, setResult] = useState(null)
 
   if (phase === 'setup') {
-    return <SetupScreen onStart={cfg => { setConfig(cfg); setPhase('game') }} />
+    return <SetupScreen onStart={cfg => { setConfig(cfg); setPhase('game') }} onBack={() => navigate('/')} />
   }
   if (phase === 'game') {
     return <PracticeGame config={config} onFinish={r => { setResult(r); setPhase('results') }} />

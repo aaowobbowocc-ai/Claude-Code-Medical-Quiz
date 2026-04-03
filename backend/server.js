@@ -331,6 +331,13 @@ io.on('connection', (socket) => {
     const q = room.questions[room.qIndex];
     const isCorrect = answer === q.answer;
 
+    // Track per-question stats
+    if (q.id && !player.isAI) {
+      if (!stats.questionStats) stats.questionStats = {};
+      if (!stats.questionStats[q.id]) stats.questionStats[q.id] = { correct: 0, wrong: 0 };
+      stats.questionStats[q.id][isCorrect ? 'correct' : 'wrong']++;
+    }
+
     // Time-based scoring: 100 base + up to 50 speed bonus
     let timeBonus = 0;
     if (isCorrect) {
@@ -447,6 +454,7 @@ function loadStats() {
   const defaults = {
     connections: 0, peakConcurrent: 0, gamesPlayed: 0,
     questionsAnswered: 0, aiExplains: 0, dailyVisits: {},
+    questionStats: {}, // { questionId: { correct: N, wrong: N } }
   };
   try {
     const data = JSON.parse(fs.readFileSync(STATS_FILE, 'utf-8'));
@@ -656,6 +664,49 @@ app.get('/questions/exam', (req, res) => {
   let pool = questionsData.questions.filter(q => q.answer && q.options[q.answer] && tags.includes(q.subject_tag));
   const picked = shuffle(pool).slice(0, parseInt(count));
   res.json({ total: pool.length, questions: picked });
+});
+
+// POST /questions/track — batch track answer stats from practice/mock exam
+app.post('/questions/track', (req, res) => {
+  const { results } = req.body; // [{ id, correct: true/false }]
+  if (!Array.isArray(results)) return res.status(400).json({ error: 'results array required' });
+  if (!stats.questionStats) stats.questionStats = {};
+  let tracked = 0;
+  for (const r of results.slice(0, 200)) {
+    if (!r.id) continue;
+    if (!stats.questionStats[r.id]) stats.questionStats[r.id] = { correct: 0, wrong: 0 };
+    stats.questionStats[r.id][r.correct ? 'correct' : 'wrong']++;
+    tracked++;
+  }
+  res.json({ tracked });
+});
+
+// GET /questions/hardest — top questions by wrong rate (min 5 attempts)
+app.get('/questions/hardest', (req, res) => {
+  const count = Math.min(parseInt(req.query.count) || 20, 50);
+  if (!stats.questionStats) return res.json({ questions: [] });
+
+  const ranked = Object.entries(stats.questionStats)
+    .map(([id, s]) => {
+      const total = s.correct + s.wrong;
+      if (total < 5) return null; // need min attempts
+      return { id, wrongRate: s.wrong / total, total, correct: s.correct, wrong: s.wrong };
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.wrongRate - a.wrongRate)
+    .slice(0, count);
+
+  // Attach full question data
+  const qMap = new Map(questionsData.questions.map(q => [String(q.id), q]));
+  const questions = ranked
+    .map(r => {
+      const q = qMap.get(String(r.id));
+      if (!q) return null;
+      return { ...q, wrongRate: Math.round(r.wrongRate * 100), attempts: r.total };
+    })
+    .filter(Boolean);
+
+  res.json({ questions });
 });
 
 // GET /meta  — year/session/subject_tag options with counts

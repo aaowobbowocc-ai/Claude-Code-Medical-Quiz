@@ -16,14 +16,19 @@ const PASS_RATE = 0.6
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444' }
 
 // ── Setup screen ─────────────────────────────────────────────────
-function ExamSetup({ onStart }) {
+function ExamSetup({ onStart, onBack }) {
   const [paper, setPaper] = useState('paper1')
 
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
-      <div className="px-4 pt-14 pb-6 grad-header">
-        <h1 className="text-white font-bold text-2xl">📝 模擬考</h1>
-        <p className="text-white/60 text-sm mt-1">模擬國考實戰，100 題 / 120 分鐘</p>
+      <div className="px-4 pt-12 pb-6 grad-header">
+        <div className="flex items-center gap-3 mb-1">
+          <button onClick={onBack} className="text-white/60 text-2xl leading-none">‹</button>
+          <div>
+            <h1 className="text-white font-bold text-2xl">📝 模擬考</h1>
+            <p className="text-white/60 text-sm mt-1">模擬國考實戰，100 題 / 120 分鐘</p>
+          </div>
+        </div>
       </div>
 
       <div className="flex-1 px-4 py-5 flex flex-col gap-4">
@@ -63,7 +68,7 @@ function ExamSetup({ onStart }) {
 }
 
 // ── Exam in progress ─────────────────────────────────────────────
-function ExamInProgress({ paper, questions, onFinish }) {
+function ExamInProgress({ paper, questions, onFinish, onBack }) {
   const [answers, setAnswers] = useState({}) // { index: 'A'|'B'|'C'|'D' }
   const [qIdx, setQIdx] = useState(0)
   const [timeLeft, setTimeLeft] = useState(TIME_LIMIT)
@@ -102,7 +107,8 @@ function ExamInProgress({ paper, questions, onFinish }) {
       {/* Header */}
       <div className="sticky top-0 z-10 grad-header px-4 pt-12 pb-3">
         <div className="flex items-center justify-between text-white text-xs mb-1.5">
-          <span>{paper.name}</span>
+          <button onClick={() => { if (confirm('確定要離開考試嗎？進度將不會保存。')) { clearInterval(timerRef.current); onBack() } }} className="text-white/60 text-lg leading-none mr-2">‹</button>
+          <span className="flex-1">{paper.name}</span>
           <span className={timeUrgent ? 'text-red-300 font-bold animate-pulse' : ''}>{timeStr}</span>
         </div>
         <div className="flex items-center gap-3">
@@ -211,6 +217,17 @@ function ExamResults({ paper, questions, answers, timeUsed }) {
       prev.unshift({ date: new Date().toISOString(), paper: paper.name, score, total, pct, passed, timeUsed })
       localStorage.setItem(key, JSON.stringify(prev.slice(0, 20)))
     } catch {}
+    // Submit per-question stats
+    const stats = questions.filter(q => q.id).map((q, i) => ({
+      questionId: q.id,
+      correct: answers[i] === q.answer,
+    }))
+    if (stats.length > 0) {
+      fetch(`${BACKEND}/questions/track`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ stats }),
+      }).catch(() => {})
+    }
   }, [])
 
   const wrongQuestions = questions
@@ -306,7 +323,7 @@ export default function MockExam() {
     setPhase('results')
   }
 
-  if (phase === 'setup') return <ExamSetup onStart={handleStart} />
+  if (phase === 'setup') return <ExamSetup onStart={handleStart} onBack={() => navigate('/')} />
 
   if (phase === 'loading') {
     return (
@@ -318,7 +335,7 @@ export default function MockExam() {
   }
 
   if (phase === 'exam') {
-    return <ExamInProgress paper={paper} questions={questions} onFinish={handleFinish} />
+    return <ExamInProgress paper={paper} questions={questions} onFinish={handleFinish} onBack={() => setPhase('setup')} />
   }
 
   return <ExamResults paper={paper} questions={questions} answers={answers} timeUsed={timeUsed} />

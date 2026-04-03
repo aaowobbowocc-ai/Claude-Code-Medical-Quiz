@@ -15,7 +15,8 @@ const Practice = lazy(() => import('./pages/Practice'))
 const History  = lazy(() => import('./pages/History'))
 const Review       = lazy(() => import('./pages/Review'))
 const Leaderboard  = lazy(() => import('./pages/Leaderboard'))
-const MockExam     = lazy(() => import('./pages/MockExam'))
+const MockExam       = lazy(() => import('./pages/MockExam'))
+const BossChallenge  = lazy(() => import('./pages/BossChallenge'))
 
 function PageLoader() {
   return (
@@ -52,6 +53,7 @@ function AppRoutes() {
           <Route path="/review"       element={<Review />} />
           <Route path="/leaderboard"  element={<Leaderboard />} />
           <Route path="/mock-exam"    element={<MockExam />} />
+          <Route path="/boss"        element={<BossChallenge />} />
           <Route path="*"          element={<Navigate to="/" />} />
         </Routes>
       </Suspense>

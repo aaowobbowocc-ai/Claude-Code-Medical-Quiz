@@ -40,5 +40,16 @@ export function useBookmarks() {
     setList([])
   }, [])
 
-  return { bookmarks: list, isBookmarked, toggle, clear }
+  // Spaced repetition: questions due for review
+  // Intervals: 1 day, 3 days, 7 days, 14 days, 30 days
+  const getDueCount = useCallback(() => {
+    const now = Date.now()
+    const INTERVALS = [1, 3, 7, 14, 30].map(d => d * 86400000)
+    return list.filter(q => {
+      const age = now - (q.bookmarkedAt || 0)
+      return INTERVALS.some(iv => age >= iv && age < iv + 86400000)
+    }).length
+  }, [list])
+
+  return { bookmarks: list, isBookmarked, toggle, clear, getDueCount }
 }

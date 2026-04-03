@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useGameStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import { useSound } from '../hooks/useSound'
+import ConnectionStatus from '../components/ConnectionStatus'
 
 const OPTION_COLORS = {
   A: { base: 'bg-blue-50  border-blue-300  text-blue-800',  active: 'bg-blue-500  border-blue-500  text-white' },
@@ -49,7 +50,7 @@ function ChatBubble({ msg, isMe }) {
 }
 
 /* ── Player avatar card ──────────────────────────────────────── */
-function PlayerCard({ player, isMe, flip, maxScore, hasAnswered, isReveal, correct }) {
+const PlayerCard = memo(function PlayerCard({ player, isMe, flip, maxScore, hasAnswered, isReveal, correct }) {
   const pct = maxScore > 0 ? Math.min((player.score / maxScore) * 100, 100) : 0
   const answerIcon = isReveal && hasAnswered
     ? (correct ? '✅' : '❌')
@@ -84,7 +85,7 @@ function PlayerCard({ player, isMe, flip, maxScore, hasAnswered, isReveal, corre
       </div>
     </div>
   )
-}
+})
 
 /* ── Chat panel ──────────────────────────────────────────────── */
 function ChatPanel({ onSend, onClose }) {
@@ -182,6 +183,7 @@ export default function Game() {
 
   const handleAnswer = (letter) => {
     if (myAnswer || correctAnswer) return
+    navigator.vibrate?.(15)
     useGameStore.getState().setMyAnswer(letter)
     socket.emit('submit_answer', { answer: letter })
   }
@@ -223,6 +225,7 @@ export default function Game() {
 
   return (
     <div className="flex flex-col min-h-dvh bg-white">
+      <ConnectionStatus />
 
       {/* ── Top: gradient header with avatars ─────────────────── */}
       <div className="relative grad-header">

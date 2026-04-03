@@ -260,6 +260,7 @@ function PracticeGame({ config, onFinish }) {
 
   const handleAnswer = (letter) => {
     if (revealed) return
+    navigator.vibrate?.(15)
     reveal(letter)
   }
 

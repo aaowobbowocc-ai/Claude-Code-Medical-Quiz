@@ -7,12 +7,24 @@ const fs = require('fs');
 const path = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
 
+const compression = require('compression');
+const rateLimit = require('express-rate-limit');
+
 const app = express();
+app.use(compression());
 app.use(cors({
   origin: (origin, cb) => cb(null, true), // allow all origins (Vercel + localhost)
   credentials: true,
 }));
 app.use(express.json());
+
+// Rate limiting
+const apiLimiter = rateLimit({ windowMs: 60 * 1000, max: 60, standardHeaders: true, legacyHeaders: false });
+const submitLimiter = rateLimit({ windowMs: 60 * 1000, max: 10, standardHeaders: true, legacyHeaders: false });
+app.use('/questions', apiLimiter);
+app.use('/meta', apiLimiter);
+app.use('/leaderboard/submit', submitLimiter);
+app.use('/explain', submitLimiter);
 
 const server = http.createServer(app);
 const io = new Server(server, {
@@ -629,6 +641,19 @@ app.get('/questions/random', (req, res) => {
     : null;
   let pool = questionsData.questions.filter(q => q.answer && q.options[q.answer]);
   if (tag) pool = pool.filter(q => q.subject_tag === tag);
+  const picked = shuffle(pool).slice(0, parseInt(count));
+  res.json({ total: pool.length, questions: picked });
+});
+
+// GET /questions/exam — fetch questions from multiple stages for mock exam
+app.get('/questions/exam', (req, res) => {
+  const { stages, count = 100 } = req.query;
+  if (!stages) return res.status(400).json({ error: 'stages required' });
+  const stageIds = stages.split(',').map(Number);
+  const tags = stageIds
+    .map(id => questionsData.stages.find(s => s.id === id)?.tag)
+    .filter(Boolean);
+  let pool = questionsData.questions.filter(q => q.answer && q.options[q.answer] && tags.includes(q.subject_tag));
   const picked = shuffle(pool).slice(0, parseInt(count));
   res.json({ total: pool.length, questions: picked });
 });

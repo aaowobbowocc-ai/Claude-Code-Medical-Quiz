@@ -4,6 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import { useDailyMessage } from '../hooks/useDailyMessage'
 import { usePWA } from '../hooks/usePWA'
+import { useBookmarks } from '../hooks/useBookmarks'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
 
@@ -27,6 +28,8 @@ export default function Home() {
   const navigate = useNavigate()
   const { name, setName, coins, level } = usePlayerStore()
   const { showBanner, isIOS, install, installPrompt, dismiss } = usePWA()
+  const { getDueCount } = useBookmarks()
+  const dueCount = getDueCount()
   const av = usePlayerStore(s => s.avatar) || '👨‍⚕️'
   const setAvatar = usePlayerStore(s => s.setAvatar)
   const socket = getSocket()
@@ -282,7 +285,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-3 w-full max-w-xs mt-1">
-            {[['🎯','練習','/practice'],['📖','題庫','/browse'],['🏆','排行','/leaderboard'],['🗺️','地圖','/map']].map(([icon,lbl,path]) => (
+            {[['📝','模擬考','/mock-exam'],['🎯','練習','/practice'],['📖','題庫','/browse'],['🏆','排行','/leaderboard']].map(([icon,lbl,path]) => (
               <button key={path} onClick={() => navigate(path)}
                       className="flex-1 bg-white rounded-2xl py-3 flex flex-col items-center gap-1 shadow-sm border border-gray-100 active:scale-95">
                 <span className="text-xl">{icon}</span>
@@ -466,7 +469,8 @@ export default function Home() {
         </div>
 
         <div className="flex gap-3">
-          {[['🎯','自主練習','練習含AI對手','/practice'],
+          {[['📝','模擬考','100題/120分','/mock-exam'],
+            ['🎯','自主練習','練習含AI對手','/practice'],
             ['📖','題庫瀏覽','依年份科目','/browse'],
             ['🗺️','關卡地圖','9 個科目','/map']].map(([icon,title,sub,path]) => (
             <button key={path} onClick={() => navigate(path)}
@@ -477,6 +481,18 @@ export default function Home() {
             </button>
           ))}
         </div>
+
+        {dueCount > 0 && (
+          <button onClick={() => navigate('/review', { state: { fromBookmarks: true } })}
+                  className="w-full rounded-2xl py-3.5 px-4 flex items-center gap-3 bg-amber-50 border border-amber-200 active:scale-[0.97] transition-transform mt-1">
+            <span className="text-2xl">🔔</span>
+            <div className="flex-1 text-left">
+              <p className="text-amber-800 font-bold text-sm">有 {dueCount} 題錯題該複習了</p>
+              <p className="text-amber-600 text-xs">間隔複習，記得更牢</p>
+            </div>
+            <span className="text-amber-400">›</span>
+          </button>
+        )}
 
         <div className="flex gap-3 mt-1">
           {[{ icon:'📚', val:'2000', lbl:'題目' },{ icon:'📅', val:'110–115', lbl:'年份' },{ icon:'🔬', val:'9', lbl:'科目' }]

@@ -225,11 +225,12 @@ export default function Browse() {
   const [loading, setLoading]     = useState(false)
   const [hasMore, setHasMore]     = useState(true)
 
-  // Filters
-  const [exam, setExam]         = useState(null)  // { label, year, session } | null
-  const [stageTag, setStageTag] = useState('')
-  const [query, setQuery]       = useState('')
-  const [searchInput, setSearchInput] = useState('')
+  // Filters — restore from sessionStorage
+  const saved = useRef((() => { try { return JSON.parse(sessionStorage.getItem('browse-filters') || '{}') } catch { return {} } })())
+  const [exam, setExam]         = useState(saved.current.exam || null)
+  const [stageTag, setStageTag] = useState(saved.current.stageTag || '')
+  const [query, setQuery]       = useState(saved.current.query || '')
+  const [searchInput, setSearchInput] = useState(saved.current.query || '')
 
   const loaderRef = useRef(null)
   const LIMIT = 15
@@ -260,12 +261,13 @@ export default function Browse() {
     setLoading(false)
   }, [exam, stageTag, query, page])
 
-  // Reset on filter change
+  // Reset on filter change + persist
   useEffect(() => {
     setPage(1)
     setQuestions([])
     setHasMore(true)
     fetchQuestions(true)
+    try { sessionStorage.setItem('browse-filters', JSON.stringify({ exam, stageTag, query })) } catch {}
   }, [exam, stageTag, query])
 
   // Infinite scroll

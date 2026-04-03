@@ -66,6 +66,7 @@ export const useGameStore = create((set) => ({
   finalPlayers: [],
   stageName: '',
   chatMessages: [],
+  socketConnected: true,
 
   timerMode: 'auto',
   setRoom: (code, isHost, myId) => set({ roomCode: code, isHost, myId }),

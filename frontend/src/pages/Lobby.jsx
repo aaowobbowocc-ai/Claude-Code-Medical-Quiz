@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useGameStore, usePlayerStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
+import ConnectionStatus from '../components/ConnectionStatus'
 
 const STAGES = [
   { id: 0, name: '隨機混合',   icon: '🎲', color: '#64748B', count: 2000 },
@@ -71,6 +72,7 @@ export default function Lobby() {
 
   return (
     <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
+      <ConnectionStatus />
 
       {/* ── Header ──────────────────────────────────────────────── */}
       <div className="relative overflow-hidden px-5 pt-14 pb-6 grad-header">

@@ -11,6 +11,12 @@ function loadSound(src) {
   return cache[src]
 }
 
+// Preload common sounds on first import
+const PRELOAD = ['correct', 'wrong', 'coin', 'countdown', 'start']
+if (typeof window !== 'undefined') {
+  PRELOAD.forEach(name => loadSound(`/sounds/${name}.mp3`))
+}
+
 export function useSound() {
   const play = useCallback((name) => {
     try {

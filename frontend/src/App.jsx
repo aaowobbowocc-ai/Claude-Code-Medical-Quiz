@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import { useSocket } from './hooks/useSocket'
 import SplashScreen from './components/SplashScreen'
+import ErrorBoundary from './components/ErrorBoundary'
 
 // Lazy-load non-critical pages
 const Lobby    = lazy(() => import('./pages/Lobby'))
@@ -14,11 +15,21 @@ const Practice = lazy(() => import('./pages/Practice'))
 const History  = lazy(() => import('./pages/History'))
 const Review       = lazy(() => import('./pages/Review'))
 const Leaderboard  = lazy(() => import('./pages/Leaderboard'))
+const MockExam     = lazy(() => import('./pages/MockExam'))
 
 function PageLoader() {
   return (
-    <div className="flex items-center justify-center min-h-dvh bg-medical-ice">
-      <span className="text-4xl animate-bounce">⚕️</span>
+    <div className="flex flex-col min-h-dvh bg-medical-ice">
+      <div className="h-32 grad-header animate-pulse" />
+      <div className="flex flex-col gap-3 px-4 py-4">
+        {[0,1,2,3].map(i => (
+          <div key={i} className="bg-white rounded-2xl p-4 shadow-sm animate-pulse">
+            <div className="h-4 bg-gray-200 rounded w-3/4 mb-3" />
+            <div className="h-3 bg-gray-200 rounded w-full mb-2" />
+            <div className="h-3 bg-gray-200 rounded w-5/6" />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
@@ -40,6 +51,7 @@ function AppRoutes() {
           <Route path="/history"   element={<History />} />
           <Route path="/review"       element={<Review />} />
           <Route path="/leaderboard"  element={<Leaderboard />} />
+          <Route path="/mock-exam"    element={<MockExam />} />
           <Route path="*"          element={<Navigate to="/" />} />
         </Routes>
       </Suspense>
@@ -51,9 +63,9 @@ export default function App() {
   const [splashDone, setSplashDone] = useState(false)
 
   return (
-    <>
+    <ErrorBoundary>
       {!splashDone && <SplashScreen onDone={() => setSplashDone(true)} />}
       <AppRoutes />
-    </>
+    </ErrorBoundary>
   )
 }

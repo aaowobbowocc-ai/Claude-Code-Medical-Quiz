@@ -81,7 +81,21 @@ export function useSocket() {
     }
 
     Object.entries(handlers).forEach(([ev, fn]) => socket.on(ev, fn))
-    return () => Object.keys(handlers).forEach(ev => socket.off(ev))
+
+    // Connection status tracking
+    const onDisconnect = () => useGameStore.setState({ socketConnected: false })
+    const onConnect = () => useGameStore.setState({ socketConnected: true })
+    const onReconnect = () => useGameStore.setState({ socketConnected: true })
+    socket.on('disconnect', onDisconnect)
+    socket.on('connect', onConnect)
+    socket.io.on('reconnect', onReconnect)
+
+    return () => {
+      Object.keys(handlers).forEach(ev => socket.off(ev))
+      socket.off('disconnect', onDisconnect)
+      socket.off('connect', onConnect)
+      socket.io.off('reconnect', onReconnect)
+    }
   }, [navigate])
 
   return socket

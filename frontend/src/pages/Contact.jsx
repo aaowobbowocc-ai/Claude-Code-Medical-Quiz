@@ -59,7 +59,7 @@ export default function Contact() {
               <li><strong>AI 題目解說：</strong>每題都有 AI 生成的詳細解析，幫你理解觀念</li>
               <li><strong>模擬考試：</strong>完全模擬真實國考流程（醫學一 + 醫學二），120/200 及格制</li>
               <li><strong>錯題複習：</strong>自動記錄錯題，搭配間隔複習，越練越強</li>
-              <li><strong>9 大科目：</strong>解剖學、生理學、生化學、藥理學、微生物與免疫學、病理學、組織學、胚胎學、公共衛生</li>
+              <li><strong>10 大科目：</strong>解剖學、生理學、生化學、藥理學、微生物與免疫學、寄生蟲學、病理學、組織學、胚胎學、公共衛生</li>
               <li><strong>完全免費：</strong>所有核心功能永久免費，不需註冊帳號</li>
             </ul>
           </section>

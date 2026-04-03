@@ -512,7 +512,7 @@ export default function Home() {
         )}
 
         <div className="flex gap-3 mt-1">
-          {[{ icon:'📚', val:'2000', lbl:'題目' },{ icon:'📅', val:'110–115', lbl:'年份' },{ icon:'🔬', val:'9', lbl:'科目' }]
+          {[{ icon:'📚', val:'2000', lbl:'題目' },{ icon:'📅', val:'110–115', lbl:'年份' },{ icon:'🔬', val:'10', lbl:'科目' }]
             .map(s => (
             <div key={s.lbl} className="flex-1 bg-white rounded-2xl py-3 flex flex-col items-center shadow-sm border border-gray-100">
               <span className="text-xl">{s.icon}</span>
@@ -527,7 +527,7 @@ export default function Home() {
           <h2 className="font-bold text-base text-medical-dark">關於醫學知識王</h2>
           <p>
             醫學知識王是專為醫師國考第一階段設計的免費題庫練習平台，收錄 110 至 115 年度超過 2000 題考古題，
-            涵蓋解剖學、生理學、生化學、藥理學、微生物與免疫學、病理學、組織學、胚胎學、公共衛生等 9 大基礎醫學科目。
+            涵蓋解剖學、生理學、生化學、藥理學、微生物與免疫學、寄生蟲學、病理學、組織學、胚胎學、公共衛生等 10 大基礎醫學科目。
           </p>
           <p>
             平台提供即時對戰、AI 題目解說、模擬考試（完整模擬醫學一＋醫學二，120/200 及格制）、

@@ -18,7 +18,7 @@ export const usePlayerStore = create(
         const next = !s.darkMode
         document.documentElement.classList.toggle('dark', next)
         const meta = document.querySelector('meta[name="theme-color"]')
-        if (meta) meta.content = next ? '#1a1a1a' : '#1A6B9A'
+        if (meta) meta.content = next ? '#1a1714' : '#1A6B9A'
         return { darkMode: next }
       }),
       addCoins: (n) => set((s) => ({ coins: s.coins + n })),

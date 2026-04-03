@@ -93,8 +93,7 @@ function ClassifySheet({ q, onClose }) {
               <br />累積 3 票即自動更新分類
             </p>
             <button onClick={() => onClose(sent)}
-                    className="mt-6 px-8 py-3 rounded-2xl font-bold text-white active:scale-95"
-                    style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}>
+                    className="mt-6 px-8 py-3 rounded-2xl font-bold text-white active:scale-95 grad-cta">
               關閉
             </button>
           </div>
@@ -298,8 +297,7 @@ export default function Browse() {
     <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
 
       {/* ── Header ───────────────────────────────────────────── */}
-      <div className="sticky top-0 z-10"
-           style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
+      <div className="sticky top-0 z-10 grad-header">
         <div className="px-4 pt-12 pb-3">
           <div className="flex items-center gap-3 mb-3">
             <button onClick={() => navigate('/')} className="text-white/60 text-2xl leading-none">‹</button>

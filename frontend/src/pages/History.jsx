@@ -20,8 +20,7 @@ export default function History() {
   return (
     <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
       {/* Header */}
-      <div className="sticky top-0 z-10 px-4 pt-12 pb-4"
-           style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
+      <div className="sticky top-0 z-10 px-4 pt-12 pb-4 grad-header">
         <div className="flex items-center gap-3">
           <button onClick={() => navigate(-1)} className="text-white/60 text-2xl leading-none">‹</button>
           <h1 className="text-white font-bold text-xl flex-1">對戰紀錄</h1>
@@ -36,8 +35,7 @@ export default function History() {
             <span className="text-5xl">🎮</span>
             <p className="text-gray-400 text-sm">還沒有對戰紀錄</p>
             <button onClick={() => navigate('/')}
-                    className="mt-2 px-6 py-3 rounded-2xl font-bold text-white text-sm active:scale-95"
-                    style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}>
+                    className="mt-2 px-6 py-3 rounded-2xl font-bold text-white text-sm active:scale-95 grad-cta">
               去對戰
             </button>
           </div>

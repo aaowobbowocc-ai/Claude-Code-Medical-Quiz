@@ -124,7 +124,7 @@ export default function Home() {
   const darkMode = usePlayerStore(s => s.darkMode)
   const toggleDarkMode = usePlayerStore(s => s.toggleDarkMode)
   const heroGrad = darkMode
-    ? 'linear-gradient(160deg, #1a1714 0%, #2a2320 60%, #252018 100%)'
+    ? 'linear-gradient(160deg, #1a1714 0%, #3a2a1a 60%, #2e2010 100%)'
     : 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 60%, #0D9488 100%)'
 
   const SupportBar = () => (
@@ -187,8 +187,7 @@ export default function Home() {
                 正是這樣的回饋讓這個專案繼續走下去。
               </p>
               <button onClick={() => { setSheet(null); setFeedbackSent(false); setFeedbackText('') }}
-                      className="mt-6 px-8 py-3 rounded-2xl font-bold text-white active:scale-95"
-                      style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}>
+                      className="mt-6 px-8 py-3 rounded-2xl font-bold text-white active:scale-95 grad-cta">
                 關閉
               </button>
             </div>
@@ -213,8 +212,7 @@ export default function Home() {
               <button
                 onClick={sendContact}
                 disabled={!feedbackText.trim()}
-                className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-40"
-                style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
+                className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-40 grad-cta"
               >
                 以 Email 送出
               </button>
@@ -271,8 +269,7 @@ export default function Home() {
             <button
               onClick={handleCreate}
               disabled={connecting}
-              className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-50"
-              style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
+              className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-50 grad-cta"
             >
               🏠 建立房間
             </button>
@@ -320,8 +317,7 @@ export default function Home() {
             )}
             {joinError && <p className="text-medical-danger text-sm text-center mb-2 animate-shake">{joinError}</p>}
             <button onClick={handleJoin} disabled={connecting || joinCode.length < 6}
-                    className="w-full py-4 rounded-2xl font-bold text-lg text-white mt-2 active:scale-95 transition-transform disabled:opacity-50"
-                    style={{ background: 'linear-gradient(135deg, #0D9488, #1A6B9A)' }}>
+                    className="w-full py-4 rounded-2xl font-bold text-lg text-white mt-2 active:scale-95 transition-transform disabled:opacity-50 grad-cta-reverse">
               {connecting ? '連線中...' : '加入'}
             </button>
           </Sheet>
@@ -424,8 +420,7 @@ export default function Home() {
       {/* Actions */}
       <div className="flex-1 px-4 pt-4 pb-8 flex flex-col gap-3">
         <button onClick={handleCreate} disabled={connecting}
-                className="w-full rounded-2xl py-5 flex items-center px-5 gap-4 shadow-lg active:scale-[0.97] transition-transform disabled:opacity-60"
-                style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}>
+                className="w-full rounded-2xl py-5 flex items-center px-5 gap-4 shadow-lg active:scale-[0.97] transition-transform disabled:opacity-60 grad-cta">
           <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-2xl shrink-0">🏠</div>
           <div className="text-left flex-1">
             <p className="text-white font-bold text-xl leading-tight">建立房間</p>
@@ -516,8 +511,7 @@ export default function Home() {
                  onKeyDown={e => e.key === 'Enter' && handleSaveEdit()}
                  maxLength={12} />
           <button onClick={handleSaveEdit}
-                  className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform"
-                  style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}>
+                  className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform grad-cta">
             儲存
           </button>
         </Sheet>
@@ -544,8 +538,7 @@ export default function Home() {
           )}
           {joinError && <p className="text-medical-danger text-sm text-center mb-2 animate-shake">{joinError}</p>}
           <button onClick={handleJoin} disabled={connecting || joinCode.length < 6}
-                  className="w-full py-4 rounded-2xl font-bold text-lg text-white mt-2 active:scale-95 transition-transform disabled:opacity-50"
-                  style={{ background: 'linear-gradient(135deg, #0D9488, #1A6B9A)' }}>
+                  className="w-full py-4 rounded-2xl font-bold text-lg text-white mt-2 active:scale-95 transition-transform disabled:opacity-50 grad-cta-reverse">
             {connecting ? '連線中...' : '加入'}
           </button>
         </Sheet>
@@ -582,8 +575,7 @@ export default function Home() {
           <button
             onClick={() => { setSheet(null); doCreate(name, { isPublic: createPublic, password: createPwd || null }) }}
             disabled={connecting}
-            className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-50"
-            style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
+            className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-50 grad-cta"
           >
             {connecting ? '連線中...' : '🏠 建立房間'}
           </button>

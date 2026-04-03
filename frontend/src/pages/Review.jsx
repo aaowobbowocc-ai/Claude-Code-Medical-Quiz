@@ -120,8 +120,7 @@ export default function Review() {
   return (
     <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
       {/* Header */}
-      <div className="sticky top-0 z-10 px-4 pt-12 pb-4"
-           style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
+      <div className="sticky top-0 z-10 px-4 pt-12 pb-4 grad-header">
         <div className="flex items-center gap-3 mb-1">
           <button onClick={() => navigate(-1)} className="text-white/60 text-2xl leading-none">‹</button>
           <h1 className="text-white font-bold text-xl flex-1">錯題檢討</h1>

@@ -99,7 +99,7 @@ html.dark .text-gray-500 { color: #9a938a !important; }
 html.dark .text-gray-400 { color: #8a827a !important; }
 html.dark .text-gray-300 { color: #6a635c !important; }
 html.dark .text-medical-dark { color: #e8e2db !important; }
-html.dark .text-medical-blue { color: #6db5d8 !important; }
+html.dark .text-medical-blue { color: #d4a054 !important; }
 html.dark p, html.dark span, html.dark label, html.dark h1, html.dark h2, html.dark h3 {
   color: inherit;
 }
@@ -112,7 +112,7 @@ html.dark .border-gray-300 { border-color: #5a5248 !important; }
 html.dark .border-amber-200 { border-color: #5c4813 !important; }
 html.dark .border-amber-300 { border-color: #6b5518 !important; }
 html.dark .border-white\/20 { border-color: rgba(255,255,255,0.10) !important; }
-html.dark .border-medical-blue { border-color: #6db5d8 !important; }
+html.dark .border-medical-blue { border-color: #d4a054 !important; }
 
 /* Status colors (answers) */
 html.dark .bg-green-50 { background: #1e2c22 !important; }
@@ -136,9 +136,30 @@ html.dark input, html.dark textarea {
 }
 html.dark input::placeholder, html.dark textarea::placeholder { color: #6a635c !important; }
 
-/* All inline gradient backgrounds — darken in dark mode */
-html.dark [style*="gradient"] {
-  filter: brightness(0.65) saturate(0.7) !important;
+/* Gradient utility classes — reliable dark mode override */
+.grad-cta {
+  background: linear-gradient(135deg, #1A6B9A, #0D9488);
+}
+html.dark .grad-cta {
+  background: linear-gradient(135deg, #5c3d1a, #3a2810) !important;
+}
+.grad-cta-reverse {
+  background: linear-gradient(135deg, #0D9488, #1A6B9A);
+}
+html.dark .grad-cta-reverse {
+  background: linear-gradient(135deg, #3a2810, #5c3d1a) !important;
+}
+.grad-header {
+  background: linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%);
+}
+html.dark .grad-header {
+  background: linear-gradient(160deg, #1a1714 0%, #3a2a1a 100%) !important;
+}
+.grad-cta-green {
+  background: linear-gradient(135deg, #16A34A, #0D9488);
+}
+html.dark .grad-cta-green {
+  background: linear-gradient(135deg, #1a4030, #0a2825) !important;
 }
 
 /* Shadows — softer in dark mode */

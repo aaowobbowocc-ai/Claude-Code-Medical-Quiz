@@ -225,8 +225,7 @@ export default function Game() {
     <div className="flex flex-col min-h-dvh bg-white">
 
       {/* ── Top: gradient header with avatars ─────────────────── */}
-      <div className="relative"
-           style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
+      <div className="relative grad-header">
 
         {/* Chat bubbles overlay */}
         <ChatBubbles messages={recentChat} myId={resolvedMyId} />
@@ -378,8 +377,7 @@ export default function Game() {
       {/* ── Floating chat button ──────────────────────────────── */}
       <button
         onClick={() => setChatOpen(true)}
-        className="fixed bottom-6 right-5 w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-2xl active:scale-90 transition-transform z-30"
-        style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
+        className="fixed bottom-6 right-5 w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-2xl active:scale-90 transition-transform z-30 grad-cta"
       >
         💬
       </button>

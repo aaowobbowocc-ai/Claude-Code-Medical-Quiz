@@ -82,8 +82,7 @@ function SetupScreen({ onStart }) {
 
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
-      <div className="px-4 pt-14 pb-6"
-           style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
+      <div className="px-4 pt-14 pb-6 grad-header">
         <button onClick={() => navigate('/')} className="text-white/50 text-sm mb-2 flex items-center gap-1 active:opacity-70">‹ 返回</button>
         <h1 className="text-white font-bold text-2xl">設定練習模式</h1>
       </div>
@@ -171,8 +170,7 @@ function SetupScreen({ onStart }) {
             saveLastConfig({ stage, diff, count })
             onStart({ stage, diff, count })
           }}
-          className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform"
-          style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
+          className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform grad-cta"
         >
           🚀 開始練習
         </button>
@@ -299,8 +297,7 @@ function PracticeGame({ config, onFinish }) {
     <div className="flex flex-col min-h-dvh bg-medical-ice">
 
       {/* ── Top bar ─────────────────────────────────────────── */}
-      <div className="px-4 pt-12 pb-3"
-           style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
+      <div className="px-4 pt-12 pb-3 grad-header">
         {/* Progress */}
         <div className="flex items-center justify-between text-white text-xs mb-1.5">
           <span>{stageInfo.icon} {stageInfo.name}</span>
@@ -413,8 +410,7 @@ function PracticeGame({ config, onFinish }) {
         {/* Next button */}
         {revealed && (
           <button onClick={next}
-                  className="w-full mt-3 py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform shadow-lg"
-                  style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}>
+                  className="w-full mt-3 py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform shadow-lg grad-cta">
             {qIdx + 1 >= questions.length ? '查看結果 →' : '下一題 →'}
           </button>
         )}
@@ -461,7 +457,7 @@ function PracticeResults({ result, config, onRestart, onHome }) {
                 pct >= 60 ? ['B', '#3B82F6'] : pct >= 40 ? ['C', '#8B5CF6'] : ['D', '#EF4444']
 
   return (
-    <div className="flex flex-col min-h-dvh" style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
+    <div className="flex flex-col min-h-dvh grad-header">
       <div className="flex-1 flex flex-col items-center justify-center px-5 gap-5 pt-16">
         {/* Grade circle */}
         <div className="w-32 h-32 rounded-full border-4 flex items-center justify-center shadow-2xl bg-white/10"
@@ -520,8 +516,7 @@ function PracticeResults({ result, config, onRestart, onHome }) {
           🔄 再練一次
         </button>
         <button onClick={onHome}
-                className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform"
-                style={{ background: 'linear-gradient(135deg, #16A34A, #0D9488)' }}>
+                className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform grad-cta-green">
           🏠 回主畫面
         </button>
 

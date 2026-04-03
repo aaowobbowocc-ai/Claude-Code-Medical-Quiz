@@ -73,8 +73,7 @@ export default function Lobby() {
     <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
 
       {/* ── Header ──────────────────────────────────────────────── */}
-      <div className="relative overflow-hidden px-5 pt-14 pb-6"
-           style={{ background: 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%)' }}>
+      <div className="relative overflow-hidden px-5 pt-14 pb-6 grad-header">
         {/* BG cross */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
           {[...Array(4)].map((_,i) => (
@@ -257,9 +256,8 @@ export default function Lobby() {
                     onClick={() => { if (!isHost) return; handleTimerMode(mode); setCustomSec('') }}
                     className={`flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all active:scale-95
                       ${timerMode === mode && !customSec
-                        ? 'text-white shadow'
-                        : 'bg-white text-gray-500 border border-gray-200'}`}
-                    style={timerMode === mode && !customSec ? { background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' } : {}}>
+                        ? 'text-white shadow grad-cta'
+                        : 'bg-white text-gray-500 border border-gray-200'}`}>
               {label}
             </button>
           ))}
@@ -300,9 +298,8 @@ export default function Lobby() {
             disabled={players.length < 2}
             className={`w-full py-5 rounded-2xl font-bold text-xl shadow-lg transition-all active:scale-95
               ${players.length >= 2
-                ? 'text-white'
+                ? 'text-white grad-cta-green'
                 : 'bg-gray-200 text-gray-400'}`}
-            style={players.length >= 2 ? { background: 'linear-gradient(135deg, #16A34A, #0D9488)' } : {}}
           >
             {players.length >= 2
               ? '🚀  開始遊戲'

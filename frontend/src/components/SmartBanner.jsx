@@ -58,8 +58,7 @@ export default function SmartBanner() {
             </div>
             <button
               onClick={() => window.open('mailto:aaowobbowocc@gmail.com?subject=贊助醫學知識王', '_blank')}
-              className="shrink-0 text-xs font-bold px-3 py-1.5 rounded-lg text-white active:scale-95 transition-transform"
-              style={{ background: 'linear-gradient(135deg, #1A6B9A, #0D9488)' }}
+              className="shrink-0 text-xs font-bold px-3 py-1.5 rounded-lg text-white active:scale-95 transition-transform grad-cta"
             >
               贊助
             </button>

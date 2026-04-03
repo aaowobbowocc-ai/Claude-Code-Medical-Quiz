@@ -78,18 +78,19 @@ html.dark #root { background: #1a1714 !important; }
 html.dark .phone-frame { background: #211d19 !important; color: #d5cec6; }
 
 /* Cards & panels */
-html.dark .bg-white { background: #2c2622 !important; }
-html.dark .bg-gray-50 { background: #262120 !important; }
-html.dark .bg-gray-100 { background: #2c2622 !important; }
-html.dark .bg-gray-200 { background: #3a332c !important; }
-html.dark .bg-gray-300 { background: #4a4238 !important; }
+html.dark .bg-white { background: #302820 !important; }
+html.dark .bg-gray-50 { background: #2a2318 !important; }
+html.dark .bg-gray-100 { background: #302820 !important; }
+html.dark .bg-gray-200 { background: #3e3428 !important; }
+html.dark .bg-gray-300 { background: #4e4438 !important; }
 html.dark .bg-medical-ice { background: #211d19 !important; }
-html.dark .bg-medical-light { background: #362f28 !important; }
-html.dark .bg-emerald-50 { background: #1e2c22 !important; }
+html.dark .bg-medical-light { background: #3a3020 !important; }
+html.dark .bg-emerald-50 { background: #2a3020 !important; }
 html.dark .bg-medical-blue { background: #211d19 !important; }
-html.dark .active\:bg-gray-50:active { background: #362f28 !important; }
-html.dark .sheet-panel { background: #2c2622 !important; color: #d5cec6; }
-html.dark .sheet-handle { background: #524a40; }
+html.dark .bg-amber-50 { background: #3a3018 !important; }
+html.dark .active\:bg-gray-50:active { background: #3a3020 !important; }
+html.dark .sheet-panel { background: #302820 !important; color: #d5cec6; }
+html.dark .sheet-handle { background: #584e40; }
 
 /* Text colors */
 html.dark .text-gray-800 { color: #e8e2db !important; }
@@ -105,10 +106,10 @@ html.dark p, html.dark span, html.dark label, html.dark h1, html.dark h2, html.d
 }
 
 /* Borders */
-html.dark .border-gray-50 { border-color: #2c2622 !important; }
-html.dark .border-gray-100 { border-color: #3a332c !important; }
-html.dark .border-gray-200 { border-color: #4a4238 !important; }
-html.dark .border-gray-300 { border-color: #5a5248 !important; }
+html.dark .border-gray-50 { border-color: #302820 !important; }
+html.dark .border-gray-100 { border-color: #40362a !important; }
+html.dark .border-gray-200 { border-color: #504430 !important; }
+html.dark .border-gray-300 { border-color: #605438 !important; }
 html.dark .border-amber-200 { border-color: #5c4813 !important; }
 html.dark .border-amber-300 { border-color: #6b5518 !important; }
 html.dark .border-white\/20 { border-color: rgba(255,255,255,0.10) !important; }
@@ -130,36 +131,36 @@ html.dark .border-red-100 { border-color: #3e2a2a !important; }
 
 /* Inputs */
 html.dark input, html.dark textarea {
-  background: #362f28 !important;
+  background: #3a3020 !important;
   color: #d5cec6 !important;
-  border-color: #4a4238 !important;
+  border-color: #504430 !important;
 }
-html.dark input::placeholder, html.dark textarea::placeholder { color: #6a635c !important; }
+html.dark input::placeholder, html.dark textarea::placeholder { color: #7a6e5c !important; }
 
 /* Gradient utility classes — reliable dark mode override */
 .grad-cta {
   background: linear-gradient(135deg, #1A6B9A, #0D9488);
 }
 html.dark .grad-cta {
-  background: linear-gradient(135deg, #5c3d1a, #3a2810) !important;
+  background: linear-gradient(135deg, #7a4a20, #5c3518) !important;
 }
 .grad-cta-reverse {
   background: linear-gradient(135deg, #0D9488, #1A6B9A);
 }
 html.dark .grad-cta-reverse {
-  background: linear-gradient(135deg, #3a2810, #5c3d1a) !important;
+  background: linear-gradient(135deg, #5c3518, #7a4a20) !important;
 }
 .grad-header {
   background: linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 100%);
 }
 html.dark .grad-header {
-  background: linear-gradient(160deg, #1a1714 0%, #3a2a1a 100%) !important;
+  background: linear-gradient(160deg, #1e1810 0%, #3e2c18 100%) !important;
 }
 .grad-cta-green {
   background: linear-gradient(135deg, #16A34A, #0D9488);
 }
 html.dark .grad-cta-green {
-  background: linear-gradient(135deg, #1a4030, #0a2825) !important;
+  background: linear-gradient(135deg, #3a5030, #2a3820) !important;
 }
 
 /* Shadows — softer in dark mode */
@@ -170,7 +171,7 @@ html.dark .shadow-2xl { box-shadow: 0 8px 30px rgba(0,0,0,0.7) !important; }
 
 /* Scrollbar */
 html.dark ::-webkit-scrollbar { background: #211d19; }
-html.dark ::-webkit-scrollbar-thumb { background: #4a4238; border-radius: 4px; }
+html.dark ::-webkit-scrollbar-thumb { background: #504430; border-radius: 4px; }
 
 @keyframes fadeout {
   0%   { opacity: 1; transform: translateY(0); }

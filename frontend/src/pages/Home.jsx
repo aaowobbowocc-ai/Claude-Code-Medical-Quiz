@@ -124,7 +124,7 @@ export default function Home() {
   const darkMode = usePlayerStore(s => s.darkMode)
   const toggleDarkMode = usePlayerStore(s => s.toggleDarkMode)
   const heroGrad = darkMode
-    ? 'linear-gradient(160deg, #1a1714 0%, #3a2a1a 60%, #2e2010 100%)'
+    ? 'linear-gradient(160deg, #1e1810 0%, #3e2c18 60%, #30220e 100%)'
     : 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 60%, #0D9488 100%)'
 
   const SupportBar = () => (

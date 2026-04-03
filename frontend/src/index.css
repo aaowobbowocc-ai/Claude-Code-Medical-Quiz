@@ -59,21 +59,70 @@ html, body {
 .no-select { user-select: none; -webkit-user-select: none; }
 
 /* ── Dark mode ───────────────────────────────────────── */
-html.dark #root { background: #0a0f1a; }
-html.dark .phone-frame { background: #111827; color: #e5e7eb; }
-html.dark .bg-white { background: #1f2937 !important; }
-html.dark .bg-gray-50, html.dark .bg-medical-ice { background: #1a2332 !important; }
-html.dark .text-gray-800, html.dark .text-medical-dark { color: #e5e7eb !important; }
-html.dark .text-gray-700 { color: #d1d5db !important; }
-html.dark .text-gray-600 { color: #9ca3af !important; }
-html.dark .text-gray-500 { color: #9ca3af !important; }
-html.dark .text-gray-400 { color: #6b7280 !important; }
-html.dark .border-gray-100, html.dark .border-gray-50 { border-color: #374151 !important; }
-html.dark .border-gray-200 { border-color: #4b5563 !important; }
-html.dark .sheet-panel { background: #1f2937; }
+/* Core surfaces */
+html.dark { background: #0a0f1a !important; color-scheme: dark; }
+html.dark body { background: #0a0f1a !important; color: #e5e7eb; }
+html.dark #root { background: #0a0f1a !important; }
+html.dark .phone-frame { background: #111827 !important; color: #e5e7eb; }
+
+/* Override inline style={{ background: '#F0F4F8' }} via higher specificity */
+html.dark [style*="F0F4F8"] { background: #111827 !important; }
+html.dark [style*="f0f4f8"] { background: #111827 !important; }
+
+/* Cards & panels */
+html.dark .bg-white { background: #1e293b !important; }
+html.dark .bg-gray-50 { background: #1a2332 !important; }
+html.dark .bg-gray-100 { background: #1e293b !important; }
+html.dark .bg-medical-ice { background: #1a2332 !important; }
+html.dark .sheet-panel { background: #1e293b !important; color: #e5e7eb; }
 html.dark .sheet-handle { background: #4b5563; }
+
+/* Text colors — light text on dark bg */
+html.dark .text-gray-800 { color: #f3f4f6 !important; }
+html.dark .text-gray-700 { color: #e5e7eb !important; }
+html.dark .text-gray-600 { color: #d1d5db !important; }
+html.dark .text-gray-500 { color: #9ca3af !important; }
+html.dark .text-gray-400 { color: #9ca3af !important; }
+html.dark .text-gray-300 { color: #6b7280 !important; }
+html.dark .text-medical-dark { color: #f3f4f6 !important; }
+html.dark .text-medical-blue { color: #60a5fa !important; }
+html.dark p, html.dark span, html.dark label, html.dark h1, html.dark h2, html.dark h3 {
+  color: inherit;
+}
+
+/* Borders */
+html.dark .border-gray-50 { border-color: #1e293b !important; }
+html.dark .border-gray-100 { border-color: #374151 !important; }
+html.dark .border-gray-200 { border-color: #4b5563 !important; }
+html.dark .border-white\/20 { border-color: rgba(255,255,255,0.15) !important; }
+
+/* Status colors (answers) */
 html.dark .bg-green-50 { background: #064e3b !important; }
-html.dark .bg-red-50 { background: #7f1d1d !important; }
+html.dark .bg-red-50 { background: #450a0a !important; }
+html.dark .bg-amber-50 { background: #451a03 !important; }
+html.dark .bg-blue-50 { background: #172554 !important; }
+html.dark .bg-orange-50 { background: #431407 !important; }
+html.dark .text-green-800 { color: #86efac !important; }
+html.dark .text-red-700 { color: #fca5a5 !important; }
+html.dark .border-green-100 { border-color: #166534 !important; }
+html.dark .border-red-100 { border-color: #7f1d1d !important; }
+
+/* Inputs */
+html.dark input, html.dark textarea {
+  background: #1e293b !important;
+  color: #e5e7eb !important;
+  border-color: #4b5563 !important;
+}
+html.dark input::placeholder, html.dark textarea::placeholder { color: #6b7280 !important; }
+
+/* Shadows — softer in dark mode */
+html.dark .shadow-sm { box-shadow: 0 1px 2px rgba(0,0,0,0.4) !important; }
+html.dark .shadow { box-shadow: 0 2px 4px rgba(0,0,0,0.4) !important; }
+html.dark .shadow-lg { box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important; }
+
+/* Scrollbar */
+html.dark ::-webkit-scrollbar { background: #111827; }
+html.dark ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
 
 @keyframes fadeout {
   0%   { opacity: 1; transform: translateY(0); }

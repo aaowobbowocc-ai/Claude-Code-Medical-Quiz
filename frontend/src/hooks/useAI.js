@@ -1,6 +1,8 @@
 import { useState, useCallback } from 'react'
+import { usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+const EXPLAIN_COST = 200
 
 // ── Per-device daily quota ──────────────────────────────────────
 const PERSONAL_LIMIT = 10
@@ -69,15 +71,22 @@ export function useExplain() {
   const [text, setText]         = useState('')
   const [loading, setLoading]   = useState(false)
   const [limitHit, setLimitHit] = useState(false)
+  const [notEnoughCoins, setNotEnoughCoins] = useState(false)
 
   const explain = useCallback(async (q) => {
-    // Check per-device quota first (no server call needed)
     if (getPersonalQuotaRemaining() <= 0) {
       setLimitHit(true)
       return
     }
+    // Check coins
+    const { spendCoins } = usePlayerStore.getState()
+    if (!spendCoins(EXPLAIN_COST)) {
+      setNotEnoughCoins(true)
+      return
+    }
     setText('')
     setLimitHit(false)
+    setNotEnoughCoins(false)
     setLoading(true)
     incrementQuota()
     try {
@@ -92,9 +101,9 @@ export function useExplain() {
     } catch { setLoading(false) }
   }, [])
 
-  const reset = () => { setText(''); setLimitHit(false) }
+  const reset = () => { setText(''); setLimitHit(false); setNotEnoughCoins(false) }
 
-  return { text, loading, limitHit, explain, reset, remaining: getPersonalQuotaRemaining() }
+  return { text, loading, limitHit, notEnoughCoins, explain, reset, remaining: getPersonalQuotaRemaining(), cost: EXPLAIN_COST }
 }
 
 // Hook: review a full session

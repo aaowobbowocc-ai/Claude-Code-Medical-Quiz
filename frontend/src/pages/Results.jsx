@@ -42,20 +42,26 @@ export default function Results() {
   const navigate = useNavigate()
   const socket = getSocket()
   const { play } = useSound()
-  const { finalPlayers, isHost, stageName, questionResults, reset } = useGameStore()
+  const { finalPlayers, isHost, stageName, questionResults, reset, betAmount } = useGameStore()
   const { name, addCoins, addExp } = usePlayerStore()
 
   const myResult = finalPlayers.find(p => p.name === name)
   const myRank = finalPlayers.findIndex(p => p.name === name) + 1
   const isWinner = myRank === 1
+  const correctCount = questionResults.filter(q => q.correct).length
+  const accuracyPct = questionResults.length > 0 ? correctCount / questionResults.length : 0
+  const meetsThreshold = accuracyPct >= 0.7
+  const betWinnings = isWinner && betAmount > 0 ? betAmount * 2 : 0
+  const baseReward = meetsThreshold ? (isWinner ? 150 : 30) : 0
+  const totalReward = baseReward + betWinnings
 
   useEffect(() => {
     if (finalPlayers.length === 0) { navigate('/'); return }
     play(isWinner ? 'victory' : 'defeat')
-    const reward = isWinner ? 150 : 30
-    addCoins(reward)
-    addExp(isWinner ? 100 : 30)
-    play('coin')
+
+    if (totalReward > 0) addCoins(totalReward)
+    if (meetsThreshold) addExp(isWinner ? 100 : 30)
+    if (totalReward > 0) play('coin')
 
     // Save battle record
     const opponents = finalPlayers
@@ -97,7 +103,10 @@ export default function Results() {
       <div className="pt-16 pb-8 flex flex-col items-center text-white">
         <div className="text-7xl mb-4 animate-pop">{isWinner ? '🏆' : '💪'}</div>
         <h1 className="text-3xl font-bold">{isWinner ? '你贏了！' : '再接再厲！'}</h1>
-        <p className="opacity-70 mt-1">{isWinner ? '+150 金幣 · +100 EXP' : '+30 金幣 · +30 EXP'}</p>
+        <p className="opacity-70 mt-1">
+          {betWinnings > 0 && `🪙 賭注 +${betWinnings} `}
+          {meetsThreshold ? (isWinner ? '+150 金幣 · +100 EXP' : '+30 金幣 · +30 EXP') : '正確率未達 70%，無基本獎勵'}
+        </p>
         {questionResults.length > 0 && (
           <p className="opacity-50 text-sm mt-1">
             答對 {questionResults.filter(q => q.correct).length} / {questionResults.length} 題

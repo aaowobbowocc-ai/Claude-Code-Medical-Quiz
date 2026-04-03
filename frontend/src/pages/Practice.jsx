@@ -198,7 +198,7 @@ function PracticeGame({ config, onFinish }) {
   const [explainRequested, setExplainRequested] = useState(false)
   const sessionLog = useRef([])   // track every q+answer for review
 
-  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, explain, reset: resetExplain, remaining: explainRemaining } = useExplain()
+  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, notEnoughCoins: explainNoCoins, explain, reset: resetExplain, remaining: explainRemaining, cost: explainCost } = useExplain()
 
   // Load questions — use fast /random endpoint
   useEffect(() => {
@@ -395,7 +395,9 @@ function PracticeGame({ config, onFinish }) {
               text={explainText}
               loading={explainLoading}
               limitHit={explainLimitHit}
+              notEnoughCoins={explainNoCoins}
               remaining={explainRemaining}
+              cost={explainCost}
               requested={explainRequested}
               onRequest={() => {
                 setExplainRequested(true)
@@ -438,8 +440,11 @@ function PracticeResults({ result, config, onRestart, onHome }) {
 
   useEffect(() => {
     play(won ? 'victory' : 'defeat')
-    addCoins(won ? 80 : 20)
-    addExp(correct * 10)
+    const meetsThreshold = pct >= 70
+    if (meetsThreshold) {
+      addCoins(won ? 80 : 20)
+      addExp(correct * 10)
+    }
     savePracticeRecord({
       stage: config.stage, diff: config.diff, count: config.count,
       correct, total, myScore: result.myScore, aiScore: result.aiScore,
@@ -497,7 +502,9 @@ function PracticeResults({ result, config, onRestart, onHome }) {
           </div>
         )}
 
-        <p className="text-white/60 text-sm">{won ? '🏆 你贏了！+80 金幣' : '💪 繼續加油！+20 金幣'}</p>
+        <p className="text-white/60 text-sm">
+          {pct < 70 ? '正確率未達 70%，無金幣獎勵' : won ? '🏆 你贏了！+80 金幣' : '💪 繼續加油！+20 金幣'}
+        </p>
 
         {/* LINE Share */}
         <button

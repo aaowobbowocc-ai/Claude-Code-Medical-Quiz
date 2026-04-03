@@ -33,8 +33,8 @@ function PulseDot() {
 export default function Lobby() {
   const navigate = useNavigate()
   const socket = getSocket()
-  const { roomCode, isHost, players, stage, timerMode } = useGameStore()
-  const { name } = usePlayerStore()
+  const { roomCode, isHost, players, stage, timerMode, betAmount, setBetAmount } = useGameStore()
+  const { name, coins } = usePlayerStore()
   const [copied, setCopied] = useState(false)   // share msg
   const [codeCopied, setCodeCopied] = useState(false) // code only
   const [showStages, setShowStages] = useState(false)
@@ -61,7 +61,16 @@ export default function Lobby() {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const handleStart = () => socket.emit('start_game')
+  const handleStart = () => {
+    if (betAmount > 0 && coins < betAmount) {
+      alert(`金幣不足！需要 ${betAmount} 金幣`)
+      return
+    }
+    if (betAmount > 0) {
+      usePlayerStore.getState().spendCoins(betAmount)
+    }
+    socket.emit('start_game', { betAmount })
+  }
   const handleStageChange = (id) => { socket.emit('select_stage', { stageId: id }); setShowStages(false) }
   const handleAddAI = (diff) => { socket.emit('add_ai_player', { difficulty: diff }); setShowAIDiff(false) }
   const handleRemoveAI = () => socket.emit('remove_ai_player')
@@ -289,6 +298,30 @@ export default function Lobby() {
           </div>
         )}
       </div>
+
+      {/* ── Bet setting ───────────────────────────────────────── */}
+      {isHost && (
+        <div className="px-4 mt-5">
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">賭注金幣</p>
+            <p className="text-xs text-gray-400">你有 🪙 {coins}</p>
+          </div>
+          <div className="flex gap-2">
+            {[0, 100, 200, 500].map(amt => (
+              <button key={amt} onClick={() => setBetAmount(amt)}
+                className={`flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all active:scale-95
+                  ${betAmount === amt ? 'text-white shadow grad-cta' : 'bg-white text-gray-500 border border-gray-200'}`}>
+                {amt === 0 ? '免費' : `🪙 ${amt}`}
+              </button>
+            ))}
+          </div>
+          {betAmount > 0 && (
+            <p className="text-xs text-amber-600 mt-2 text-center">
+              雙方各出 {betAmount} 金幣，贏家全拿 {betAmount * 2}！
+            </p>
+          )}
+        </div>
+      )}
 
       <div className="flex-1" />
 

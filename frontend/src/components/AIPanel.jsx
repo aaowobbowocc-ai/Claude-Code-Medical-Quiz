@@ -24,7 +24,7 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, remaining, explanation }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 200 }) {
   const [showAI, setShowAI] = useState(false)
   const [reportSent, setReportSent] = useState(false)
 
@@ -88,9 +88,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
         >
           <span className="text-base">🤖</span>
           {hasExplanation ? 'AI 進階解說' : 'AI 解說這題'}
-          {!hasExplanation && remaining != null && remaining <= 3 && (
-            <span className="text-xs opacity-60 ml-1">（剩 {remaining} 次）</span>
-          )}
+          <span className="text-xs opacity-60 ml-1">🪙 {cost}</span>
         </button>
       )}
 
@@ -108,10 +106,14 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
             >
               <span className="text-base">🤖</span>
               {remaining === 0 ? '今日 AI 額度已用完' : 'AI 解說這題'}
-              {remaining != null && remaining <= 3 && remaining > 0 && (
-                <span className="text-xs opacity-60 ml-1">（剩 {remaining} 次）</span>
-              )}
+              {remaining > 0 && <span className="text-xs opacity-60 ml-1">🪙 {cost}</span>}
             </button>
+          ) : notEnoughCoins ? (
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
+              <p className="text-2xl mb-2">🪙</p>
+              <p className="text-sm font-semibold text-amber-700">金幣不足</p>
+              <p className="text-xs text-amber-500 mt-1">AI 解說需要 {cost} 金幣，多練習賺取金幣吧！</p>
+            </div>
           ) : limitHit ? (
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
               <p className="text-2xl mb-2">😴</p>

@@ -26,7 +26,13 @@ function Sheet({ onClose, children }) {
 
 export default function Home() {
   const navigate = useNavigate()
-  const { name, setName, coins, level } = usePlayerStore()
+  const { name, setName, coins, level, claimDailyBonus } = usePlayerStore()
+  const [dailyClaimed, setDailyClaimed] = useState(false)
+
+  useEffect(() => {
+    const claimed = claimDailyBonus()
+    if (claimed) setDailyClaimed(true)
+  }, [])
   const { showBanner, isIOS, install, installPrompt, dismiss } = usePWA()
   const { getDueCount } = useBookmarks()
   const dueCount = getDueCount()
@@ -284,7 +290,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-3 gap-2.5 w-full max-w-xs mt-1">
-            {[['📝','模擬考','/mock-exam'],['🔥','魔王題','/boss'],['🎯','練習','/practice'],['📖','題庫','/browse'],['🏆','排行','/leaderboard'],['🗺️','地圖','/map']].map(([icon,lbl,path]) => (
+            {[['📝','模擬考','/mock-exam'],['🔥','魔王題','/boss'],['🎯','練習','/practice'],['📖','題庫','/browse'],['🏆','排行','/leaderboard'],['📊','紀錄','/history']].map(([icon,lbl,path]) => (
               <button key={path} onClick={() => navigate(path)}
                       className="bg-white rounded-2xl py-3 flex flex-col items-center gap-1 shadow-sm border border-gray-100 active:scale-95">
                 <span className="text-xl">{icon}</span>
@@ -401,6 +407,13 @@ export default function Home() {
           </div>
         </div>
 
+        {/* 每日獎勵 */}
+        {dailyClaimed && (
+          <div className="bg-amber-400/20 border border-amber-400/30 rounded-2xl px-4 py-3 mt-1 text-center animate-fadeIn">
+            <p className="text-white font-bold text-sm">🎁 每日登入獎勵 +500 金幣！</p>
+          </div>
+        )}
+
         {/* 今日寄語 */}
         {(dailyMsg || dailyLoading) && (
           <div className="relative bg-white/8 border border-white/12 rounded-2xl px-4 py-3 mt-1">
@@ -473,7 +486,7 @@ export default function Home() {
             ['🎯','自主練習','練習含AI對手','/practice'],
             ['📖','題庫瀏覽','依年份科目','/browse'],
             ['🏆','排行榜','每週排名','/leaderboard'],
-            ['🗺️','關卡地圖','10 個科目','/map']].map(([icon,title,sub,path]) => (
+            ['📊','歷史紀錄','對戰/練習/模考','/history']].map(([icon,title,sub,path]) => (
             <button key={path} onClick={() => navigate(path)}
                     className="rounded-2xl py-4 flex flex-col items-center gap-1.5 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">
               <div className="w-11 h-11 rounded-xl bg-medical-ice flex items-center justify-center text-2xl">{icon}</div>

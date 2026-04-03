@@ -42,6 +42,13 @@ export const usePlayerStore = create(
         if (meta) meta.content = next ? '#1a1714' : '#1A6B9A'
         return { darkMode: next }
       }),
+      lastDailyBonus: '',
+      claimDailyBonus: () => {
+        const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
+        if (get().lastDailyBonus === today) return false
+        set((s) => ({ coins: s.coins + 500, lastDailyBonus: today }))
+        return true
+      },
       addCoins: (n) => set((s) => ({ coins: s.coins + n })),
       spendCoins: (n) => {
         if (get().coins < n) return false
@@ -90,8 +97,10 @@ export const useGameStore = create((set) => ({
   socketConnected: true,
 
   timerMode: 'auto',
+  betAmount: 0,
   setRoom: (code, isHost, myId) => set({ roomCode: code, isHost, myId }),
   setTimerMode: (m) => set({ timerMode: m }),
+  setBetAmount: (n) => set({ betAmount: n }),
   setPhase: (phase) => set({ phase }),
   setPlayers: (players) => set({ players }),
   setStage: (stage) => set({ stage }),

@@ -121,8 +121,15 @@ export default function Home() {
   }
 
   /* ── 底部支援列（主畫面共用） ──────────────────────────── */
+  const darkMode = usePlayerStore(s => s.darkMode)
+  const toggleDarkMode = usePlayerStore(s => s.toggleDarkMode)
+
   const SupportBar = () => (
     <div className="flex items-center justify-center gap-2 mt-3 pb-1">
+      <button onClick={toggleDarkMode}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
+        {darkMode ? '☀️ 淺色' : '🌙 深色'}
+      </button>
       <button onClick={() => setSheet('donate')}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-amber-500 bg-amber-50 border border-amber-200 active:scale-95 transition-transform shadow-sm font-medium">
         ☕ 贊助開發者
@@ -275,7 +282,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-3 w-full max-w-xs mt-1">
-            {[['🎯','練習','/practice'],['📖','題庫','/browse'],['🗺️','地圖','/map']].map(([icon,lbl,path]) => (
+            {[['🎯','練習','/practice'],['📖','題庫','/browse'],['🏆','排行','/leaderboard'],['🗺️','地圖','/map']].map(([icon,lbl,path]) => (
               <button key={path} onClick={() => navigate(path)}
                       className="flex-1 bg-white rounded-2xl py-3 flex flex-col items-center gap-1 shadow-sm border border-gray-100 active:scale-95">
                 <span className="text-xl">{icon}</span>

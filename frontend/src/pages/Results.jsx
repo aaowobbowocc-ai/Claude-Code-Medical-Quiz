@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { useGameStore, usePlayerStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import { useSound } from '../hooks/useSound'
+import SmartBanner from '../components/SmartBanner'
 
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const HISTORY_KEY = 'battle-history'
 const MAX_RECORDS = 30
 
@@ -68,6 +70,14 @@ export default function Results() {
       opponents,
       questionResults,
     })
+    // Submit to leaderboard
+    if (name && questionResults.length > 0) {
+      const correct = questionResults.filter(q => q.correct).length
+      fetch(`${BACKEND}/leaderboard/submit`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, correct, total: questionResults.length }),
+      }).catch(() => {})
+    }
   }, [])
 
   const handlePlayAgain = () => {
@@ -120,6 +130,21 @@ export default function Results() {
 
         {/* Actions */}
         <div className="flex flex-col gap-3 mt-6 pb-10">
+          {/* LINE Share */}
+          <button
+            onClick={() => {
+              const correctCount = questionResults.filter(q => q.correct).length
+              const pct = questionResults.length > 0 ? Math.round((correctCount / questionResults.length) * 100) : 0
+              const text = `醫學知識王｜${stageName} 對戰 ${isWinner ? '🏆 勝利' : '💪 第' + myRank + '名'}！正確率 ${pct}%\n一起來挑戰 👉 ${window.location.origin}`
+              window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(window.location.origin)}&text=${encodeURIComponent(text)}`, '_blank')
+            }}
+            className="w-full py-4 rounded-2xl font-bold text-lg active:scale-95 transition-transform flex items-center justify-center gap-2"
+            style={{ background: '#06C755', color: 'white' }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 4.21 3.74 7.74 8.79 8.4.34.07.81.23.93.52.1.27.07.68.03.95l-.15.9c-.05.27-.21 1.07.94.58 1.15-.49 6.2-3.65 8.46-6.25C22.97 13.35 22 11.03 22 10.5 22 5.82 17.52 2 12 2z"/></svg>
+            分享到 LINE
+          </button>
+
           {/* Review wrong answers */}
           {wrongCount > 0 && (
             <button
@@ -149,6 +174,8 @@ export default function Results() {
                   className="w-full bg-medical-ice text-medical-blue font-bold py-4 rounded-2xl text-lg border-2 border-medical-blue active:scale-95 transition-transform">
             🏠 回主畫面
           </button>
+
+          <SmartBanner />
         </div>
       </div>
     </div>

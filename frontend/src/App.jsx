@@ -12,7 +12,8 @@ const Map      = lazy(() => import('./pages/Map'))
 const Browse   = lazy(() => import('./pages/Browse'))
 const Practice = lazy(() => import('./pages/Practice'))
 const History  = lazy(() => import('./pages/History'))
-const Review   = lazy(() => import('./pages/Review'))
+const Review       = lazy(() => import('./pages/Review'))
+const Leaderboard  = lazy(() => import('./pages/Leaderboard'))
 
 function PageLoader() {
   return (
@@ -37,7 +38,8 @@ function AppRoutes() {
           <Route path="/game"      element={<Game />} />
           <Route path="/results"   element={<Results />} />
           <Route path="/history"   element={<History />} />
-          <Route path="/review"    element={<Review />} />
+          <Route path="/review"       element={<Review />} />
+          <Route path="/leaderboard"  element={<Leaderboard />} />
           <Route path="*"          element={<Navigate to="/" />} />
         </Routes>
       </Suspense>

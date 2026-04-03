@@ -4,6 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import { useSound } from '../hooks/useSound'
 import { useExplain, useReview } from '../hooks/useAI'
 import { ExplainPanel, ReviewPanel } from '../components/AIPanel'
+import SmartBanner from '../components/SmartBanner'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -446,6 +447,14 @@ function PracticeResults({ result, config, onRestart, onHome }) {
       stage: config.stage, diff: config.diff, count: config.count,
       correct, total, myScore: result.myScore, aiScore: result.aiScore,
     })
+    // Submit to leaderboard
+    const playerName = usePlayerStore.getState().name
+    if (playerName) {
+      fetch(`${BACKEND}/leaderboard/submit`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: playerName, correct, total }),
+      }).catch(() => {})
+    }
   }, [])
 
   const grade = pct >= 90 ? ['S', '#D97706'] : pct >= 75 ? ['A', '#10B981'] :
@@ -479,6 +488,19 @@ function PracticeResults({ result, config, onRestart, onHome }) {
         )}
 
         <p className="text-white/60 text-sm">{won ? '🏆 你贏了！+80 金幣' : '💪 繼續加油！+20 金幣'}</p>
+
+        {/* LINE Share */}
+        <button
+          onClick={() => {
+            const stageName = STAGES.find(s => s.id === config.stage)?.name || '隨機'
+            const text = `醫學知識王｜${stageName} ${pct}% (${correct}/${total})\n${won ? '🏆 贏了！' : '💪 繼續加油'}\n一起來挑戰 👉 ${window.location.origin}`
+            window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(window.location.origin)}&text=${encodeURIComponent(text)}`, '_blank')
+          }}
+          className="flex items-center justify-center gap-2 bg-[#06C755] text-white font-bold px-6 py-3 rounded-2xl active:scale-95 transition-transform shadow-lg"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 4.21 3.74 7.74 8.79 8.4.34.07.81.23.93.52.1.27.07.68.03.95l-.15.9c-.05.27-.21 1.07.94.58 1.15-.49 6.2-3.65 8.46-6.25C22.97 13.35 22 11.03 22 10.5 22 5.82 17.52 2 12 2z"/></svg>
+          分享到 LINE
+        </button>
       </div>
 
       <div className="px-5 pb-12 flex flex-col gap-3">
@@ -502,6 +524,8 @@ function PracticeResults({ result, config, onRestart, onHome }) {
                 style={{ background: 'linear-gradient(135deg, #16A34A, #0D9488)' }}>
           🏠 回主畫面
         </button>
+
+        <SmartBanner />
       </div>
     </div>
   )

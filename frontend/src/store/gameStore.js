@@ -11,8 +11,14 @@ export const usePlayerStore = create(
       level: 1,
       exp: 0,
       unlockedStages: [0, 1], // 0 = random, 1 = anatomy
+      darkMode: false,
       setName: (name) => set({ name }),
       setAvatar: (avatar) => set({ avatar }),
+      toggleDarkMode: () => set((s) => {
+        const next = !s.darkMode
+        document.documentElement.classList.toggle('dark', next)
+        return { darkMode: next }
+      }),
       addCoins: (n) => set((s) => ({ coins: s.coins + n })),
       spendCoins: (n) => {
         if (get().coins < n) return false

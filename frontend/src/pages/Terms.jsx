@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function Terms() {
   const navigate = useNavigate()
+  usePageMeta('服務條款', '醫學知識王服務條款：題庫來源（考選部）、使用規範、免責聲明。')
 
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">

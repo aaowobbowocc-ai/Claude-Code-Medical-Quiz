@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function Privacy() {
   const navigate = useNavigate()
+  usePageMeta('隱私權政策', '醫學知識王隱私權政策：Cookie 使用、Google 廣告、資料蒐集與保護說明。')
 
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">

@@ -5,7 +5,10 @@ const { Server } = require('socket.io');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-const Anthropic = require('@anthropic-ai/sdk');
+
+const leaderboard = require('./leaderboard');
+const ai = require('./ai');
+const questionsApi = require('./questions-api');
 
 const compression = require('compression');
 const rateLimit = require('express-rate-limit');
@@ -44,14 +47,7 @@ function getQuestionsByStage(stageId) {
   return questionsData.questions.filter(q => q.stage_id === stageId && q.answer && q.options[q.answer]);
 }
 
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
+const { shuffle } = require('./questions-api');
 
 // ── Room state ──────────────────────────────────────────────────────────
 const rooms = new Map();
@@ -234,6 +230,7 @@ io.on('connection', (socket) => {
       phase: 'lobby',
       isPublic: !!isPublic,
       password: password || null,
+      lastActivity: Date.now(),
     };
     rooms.set(code, room);
     socket.join(code);
@@ -268,9 +265,40 @@ io.on('connection', (socket) => {
       }
     }
     room.players.set(socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', score: 0, ready: false, answered: false });
+    room.lastActivity = Date.now();
     socket.join(code.toUpperCase());
     socket.data.roomCode = code.toUpperCase();
     socket.emit('room_joined', { code: code.toUpperCase() });
+    broadcastRoomState(room);
+  });
+
+  // Rejoin room after reconnect
+  socket.on('rejoin_room', ({ code, playerName, playerAvatar }) => {
+    const room = rooms.get(code);
+    if (!room) { socket.emit('error', { message: '房間已關閉' }); return; }
+    // If player was already in room (by name), replace their entry
+    let existingId = null;
+    for (const [id, p] of room.players.entries()) {
+      if (p.name === playerName && !p.isAI && id !== socket.id) {
+        existingId = id;
+        break;
+      }
+    }
+    if (existingId) {
+      const old = room.players.get(existingId);
+      room.players.delete(existingId);
+      room.players.set(socket.id, { ...old, avatar: playerAvatar || old.avatar });
+      // Transfer host if needed
+      if (room.hostId === existingId) room.hostId = socket.id;
+    } else if (!room.players.has(socket.id)) {
+      // New join (room still has space)
+      if (room.players.size >= 4) { socket.emit('error', { message: '房間已滿' }); return; }
+      room.players.set(socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', score: 0, ready: false, answered: false });
+    }
+    socket.join(code);
+    socket.data.roomCode = code;
+    room.lastActivity = Date.now();
+    socket.emit('room_joined', { code });
     broadcastRoomState(room);
   });
 
@@ -308,6 +336,7 @@ io.on('connection', (socket) => {
     room.questions = shuffle(pool).slice(0, QUESTIONS_PER_GAME);
     room.qIndex = 0;
     room.phase = 'playing';
+    room.lastActivity = Date.now();
     for (const p of room.players.values()) { p.score = 0; }
 
     io.to(room.code).emit('game_starting', {
@@ -328,6 +357,7 @@ io.on('connection', (socket) => {
 
     player.answered = true;
     player.lastAnswer = answer;
+    room.lastActivity = Date.now();
     stats.questionsAnswered++;
 
     const q = room.questions[room.qIndex];
@@ -449,6 +479,19 @@ io.on('connection', (socket) => {
   });
 });
 
+// ── Idle room cleanup (every 5 min, remove rooms idle > 30 min) ────────
+setInterval(() => {
+  const now = Date.now();
+  for (const [code, room] of rooms) {
+    const age = now - (room.lastActivity || now);
+    if (age > 30 * 60 * 1000) {
+      clearInterval(room.timer);
+      rooms.delete(code);
+      console.log(`[cleanup] removed idle room ${code}`);
+    }
+  }
+}, 5 * 60 * 1000);
+
 // ── Stats tracking (persist to file) ────────────────────────────────────
 const STATS_FILE = path.join(__dirname, 'stats.json');
 
@@ -486,64 +529,10 @@ function trackDailyVisit() {
   while (keys.length > 30) { delete stats.dailyVisits[keys.shift()]; }
 }
 
-// ── Leaderboard ────────────────────────────────────────────────────────
-const LB_FILE = path.join(__dirname, 'leaderboard.json');
-
-function loadLeaderboard() {
-  try { return JSON.parse(fs.readFileSync(LB_FILE, 'utf-8')); } catch { return {}; }
-}
-
-function saveLeaderboard(lb) {
-  try { fs.writeFileSync(LB_FILE, JSON.stringify(lb), 'utf-8'); } catch {}
-}
-
-function getWeekKey() {
-  const d = new Date();
-  const jan1 = new Date(d.getFullYear(), 0, 1);
-  const week = Math.ceil(((d - jan1) / 86400000 + jan1.getDay() + 1) / 7);
-  return `${d.getFullYear()}-W${String(week).padStart(2, '0')}`;
-}
-
-function recordScore(name, correct, total, level) {
-  const lb = loadLeaderboard();
-  const week = getWeekKey();
-  if (!lb[week]) lb[week] = {};
-  if (!lb[week][name]) lb[week][name] = { played: 0, correct: 0, total: 0, score: 0 };
-  const entry = lb[week][name];
-  entry.played += 1;
-  entry.correct += correct;
-  entry.total += total;
-  entry.score += correct * 10;
-  if (level !== undefined) entry.level = level;
-  // Keep only last 4 weeks
-  const weeks = Object.keys(lb).sort();
-  while (weeks.length > 4) { delete lb[weeks.shift()]; }
-  saveLeaderboard(lb);
-}
-
-app.get('/leaderboard', (req, res) => {
-  const lb = loadLeaderboard();
-  const week = req.query.week || getWeekKey();
-  const data = lb[week] || {};
-  const ranked = Object.entries(data)
-    .map(([name, d]) => ({
-      name, ...d,
-      pct: d.total > 0 ? Math.round((d.correct / d.total) * 100) : 0,
-    }))
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 50);
-  res.set('Cache-Control', 'public, max-age=60');
-  res.json({ week, players: ranked, availableWeeks: Object.keys(lb).sort().reverse() });
-});
-
-app.post('/leaderboard/submit', express.json(), (req, res) => {
-  const { name, correct, total, level } = req.body;
-  if (!name || typeof correct !== 'number' || typeof total !== 'number') {
-    return res.status(400).json({ error: 'invalid' });
-  }
-  recordScore(name.slice(0, 20), correct, total, typeof level === 'number' ? level : undefined);
-  res.json({ ok: true });
-});
+// ── Register modular routes ────────────────────────────────────────────
+leaderboard.registerRoutes(app);
+questionsApi.registerRoutes(app, questionsData, stats);
+ai.registerRoutes(app, questionsData, stats);
 
 // ── Health + stages + stats API ─────────────────────────────────────────
 app.get('/health', (_, res) => res.json({ ok: true }));
@@ -627,293 +616,6 @@ app.get('/rooms', (_, res) => {
     });
   }
   res.json(list);
-});
-
-// ── Question browser API ──────────────────────────────────────────────────
-// GET /questions?year=110&session=第一次&subject_tag=anatomy&q=搜尋文字&page=1&limit=20
-app.get('/questions', (req, res) => {
-  const { year, session, subject_tag, q, page = 1, limit = 20 } = req.query;
-  let list = questionsData.questions;
-  if (year)        list = list.filter(x => x.roc_year === year);
-  if (session)     list = list.filter(x => x.session === session);
-  if (subject_tag) list = list.filter(x => x.subject_tag === subject_tag);
-  if (q)           list = list.filter(x => x.question.includes(q) || Object.values(x.options).some(o => o.includes(q)));
-  const total = list.length;
-  const start = (parseInt(page) - 1) * parseInt(limit);
-  res.set('Cache-Control', 'public, max-age=300, stale-while-revalidate=60');
-  res.json({ total, page: parseInt(page), limit: parseInt(limit), questions: list.slice(start, start + parseInt(limit)) });
-});
-
-// GET /questions/random?stage_id=1&count=10  — fast random pick, no pagination overhead
-app.get('/questions/random', (req, res) => {
-  const { stage_id, count = 10 } = req.query;
-  const tag = stage_id && parseInt(stage_id) > 0
-    ? questionsData.stages.find(s => s.id === parseInt(stage_id))?.tag
-    : null;
-  let pool = questionsData.questions.filter(q => q.answer && q.options[q.answer]);
-  if (tag) pool = pool.filter(q => q.subject_tag === tag);
-  const picked = shuffle(pool).slice(0, parseInt(count));
-  res.json({ total: pool.length, questions: picked });
-});
-
-// GET /questions/exam — fetch questions from multiple stages for mock exam
-app.get('/questions/exam', (req, res) => {
-  const { stages, count = 100 } = req.query;
-  if (!stages) return res.status(400).json({ error: 'stages required' });
-  const stageIds = stages.split(',').map(Number);
-  const tags = stageIds
-    .map(id => questionsData.stages.find(s => s.id === id)?.tag)
-    .filter(Boolean);
-  let pool = questionsData.questions.filter(q => q.answer && q.options[q.answer] && tags.includes(q.subject_tag));
-  const picked = shuffle(pool).slice(0, parseInt(count));
-  res.json({ total: pool.length, questions: picked });
-});
-
-// POST /questions/track — batch track answer stats from practice/mock exam
-app.post('/questions/track', (req, res) => {
-  const { results } = req.body; // [{ id, correct: true/false }]
-  if (!Array.isArray(results)) return res.status(400).json({ error: 'results array required' });
-  if (!stats.questionStats) stats.questionStats = {};
-  let tracked = 0;
-  for (const r of results.slice(0, 200)) {
-    if (!r.id) continue;
-    if (!stats.questionStats[r.id]) stats.questionStats[r.id] = { correct: 0, wrong: 0 };
-    stats.questionStats[r.id][r.correct ? 'correct' : 'wrong']++;
-    tracked++;
-  }
-  res.json({ tracked });
-});
-
-// GET /questions/hardest — top questions by wrong rate (min 5 attempts)
-app.get('/questions/hardest', (req, res) => {
-  const count = Math.min(parseInt(req.query.count) || 20, 50);
-  if (!stats.questionStats) return res.json({ questions: [] });
-
-  const ranked = Object.entries(stats.questionStats)
-    .map(([id, s]) => {
-      const total = s.correct + s.wrong;
-      if (total < 5) return null; // need min attempts
-      return { id, wrongRate: s.wrong / total, total, correct: s.correct, wrong: s.wrong };
-    })
-    .filter(Boolean)
-    .sort((a, b) => b.wrongRate - a.wrongRate)
-    .slice(0, count);
-
-  // Attach full question data
-  const qMap = new Map(questionsData.questions.map(q => [String(q.id), q]));
-  const questions = ranked
-    .map(r => {
-      const q = qMap.get(String(r.id));
-      if (!q) return null;
-      return { ...q, wrongRate: Math.round(r.wrongRate * 100), attempts: r.total };
-    })
-    .filter(Boolean);
-
-  res.json({ questions });
-});
-
-// GET /meta  — year/session/subject_tag options with counts
-app.get('/meta', (_, res) => {
-  const years = {}, sessions = {}, tags = {};
-  for (const q of questionsData.questions) {
-    years[q.roc_year]       = (years[q.roc_year]       || 0) + 1;
-    sessions[q.session]     = (sessions[q.session]     || 0) + 1;
-    tags[q.subject_tag]     = (tags[q.subject_tag]     || 0) + 1;
-  }
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=60');
-  res.json({ years, sessions, stages: questionsData.stages });
-});
-
-// ── AI endpoints ─────────────────────────────────────────────────────────
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
-// ── Daily AI usage counter (resets at midnight Taipei time) ────
-const aiUsage = { date: '', count: 0 };
-const AI_DAILY_LIMIT = 100;
-
-function checkAILimit() {
-  const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' });
-  if (aiUsage.date !== today) { aiUsage.date = today; aiUsage.count = 0; }
-  if (aiUsage.count >= AI_DAILY_LIMIT) return false;
-  aiUsage.count++;
-  stats.aiExplains++;
-  return true;
-}
-
-app.post('/explain', async (req, res) => {
-  const { question, options, answer, subject_name, user_answer } = req.body;
-  if (!question || !options || !answer) return res.status(400).json({ error: 'missing fields' });
-  if (!checkAILimit()) return res.status(429).json({ error: 'daily_limit', message: '今日 AI 解說次數已達上限，明天再來喔！' });
-
-  res.setHeader('Content-Type', 'text/event-stream');
-  res.setHeader('Cache-Control', 'no-cache');
-  res.setHeader('Connection', 'keep-alive');
-  res.flushHeaders();
-
-  const optionText = Object.entries(options).map(([k,v]) => `${k}. ${v}`).join('\n');
-  const wrongNote  = user_answer && user_answer !== answer
-    ? `考生選了 ${user_answer}，但正確答案是 ${answer}。`
-    : '';
-
-  const prompt = `你是一位臺灣醫師國考（一階）的解題老師，用繁體中文回答。
-
-科目：${subject_name}
-題目：${question}
-
-選項：
-${optionText}
-
-正確答案：${answer}
-${wrongNote}
-
-請用以下格式回答（每段都要有，簡潔扼要）：
-
-**✅ 為什麼答案是 ${answer}**
-（說明核心機制或概念，2-3句）
-
-**❌ 排除其他選項**
-（每個錯誤選項一句話說明為何不對）
-
-**🧠 記憶關鍵字**
-（給一個好記的口訣或記憶技巧）
-
-**🏥 臨床應用**
-（一句話說明這個知識點在臨床上的意義）`;
-
-  try {
-    const stream = await anthropic.messages.stream({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 600,
-      messages: [{ role: 'user', content: prompt }],
-    });
-    for await (const chunk of stream) {
-      if (chunk.type === 'content_block_delta' && chunk.delta?.text) {
-        res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`);
-      }
-    }
-    res.write('data: [DONE]\n\n');
-    res.end();
-  } catch (e) {
-    res.write(`data: ${JSON.stringify({ error: e.message })}\n\n`);
-    res.end();
-  }
-});
-
-// POST /review  — review a completed match/practice session
-// Body: { questions: [{question, options, answer, user_answer, subject_name}], mode }
-app.post('/review', async (req, res) => {
-  const { questions, mode = 'practice' } = req.body;
-  if (!questions?.length) return res.status(400).json({ error: 'no questions' });
-
-  res.setHeader('Content-Type', 'text/event-stream');
-  res.setHeader('Cache-Control', 'no-cache');
-  res.setHeader('Connection', 'keep-alive');
-  res.flushHeaders();
-
-  const wrong  = questions.filter(q => q.user_answer !== q.answer);
-  const total  = questions.length;
-  const correct = total - wrong.length;
-
-  const wrongSummary = wrong.slice(0, 8).map((q, i) =>
-    `${i+1}. [${q.subject_name}] ${q.question.slice(0,60)}…\n   我選：${q.user_answer || '未作答'}，正確：${q.answer}`
-  ).join('\n');
-
-  const subjectStats = {};
-  for (const q of questions) {
-    if (!subjectStats[q.subject_name]) subjectStats[q.subject_name] = { total: 0, wrong: 0 };
-    subjectStats[q.subject_name].total++;
-    if (q.user_answer !== q.answer) subjectStats[q.subject_name].wrong++;
-  }
-  const statText = Object.entries(subjectStats)
-    .map(([s,v]) => `${s}: ${v.total - v.wrong}/${v.total}`)
-    .join('、');
-
-  const prompt = `你是一位臺灣醫師國考（一階）的家教老師，用繁體中文給學生檢討報告。
-
-本次${mode === 'battle' ? '對戰' : '練習'}成績：答對 ${correct}/${total} 題
-各科表現：${statText}
-
-答錯的題目（前8題）：
-${wrongSummary || '（全部答對！）'}
-
-請用以下格式給出**個人化學習建議**：
-
-**📊 本次表現總評**
-（2句話評價整體表現，語氣鼓勵但誠實）
-
-**💪 強項科目**
-（說明哪些科目表現好，為什麼）
-
-**⚠️ 需要加強**
-（列出最需要複習的1-3個科目，具體說明弱點）
-
-**📝 錯題分析**
-（針對答錯的題目，找出共同的錯誤模式或知識盲點）
-
-**🗓️ 建議複習計畫**
-（給3個具體可執行的複習建議）`;
-
-  try {
-    const stream = await anthropic.messages.stream({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 800,
-      messages: [{ role: 'user', content: prompt }],
-    });
-    for await (const chunk of stream) {
-      if (chunk.type === 'content_block_delta' && chunk.delta?.text) {
-        res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`);
-      }
-    }
-    res.write('data: [DONE]\n\n');
-    res.end();
-  } catch (e) {
-    res.write(`data: ${JSON.stringify({ error: e.message })}\n\n`);
-    res.end();
-  }
-});
-
-// POST /daily-message — personalized daily motivational message
-// Body: { name, level }
-app.post('/daily-message', async (req, res) => {
-  const { name = '學員', level = 1 } = req.body;
-
-  res.setHeader('Content-Type', 'text/event-stream');
-  res.setHeader('Cache-Control', 'no-cache');
-  res.setHeader('Connection', 'keep-alive');
-  res.flushHeaders();
-
-  const today = new Date().toLocaleDateString('zh-TW', {
-    timeZone: 'Asia/Taipei', year: 'numeric', month: 'long', day: 'numeric', weekday: 'long',
-  });
-
-  const prompt = `你是醫學知識王的AI導師。今天是${today}。
-請為正在備考醫師一階國考的醫學生「${name}」（遊戲等級 Lv.${level}）寫一段今日寄語。
-
-要求：
-- 70字以內
-- 語氣像過來人的前輩醫師：溫暖、真實、不說教
-- 融入真實備考情感（疲憊、堅持、那個還沒放棄的自己）
-- 可以用人體或醫學作隱喻，讓文字有質感
-- 繁體中文，台灣語感，不要英文
-- 直接輸出文字，不要任何格式標籤或前綴`;
-
-  try {
-    const stream = await anthropic.messages.stream({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 180,
-      messages: [{ role: 'user', content: prompt }],
-    });
-    for await (const chunk of stream) {
-      if (chunk.type === 'content_block_delta' && chunk.delta?.text) {
-        res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`);
-      }
-    }
-    res.write('data: [DONE]\n\n');
-    res.end();
-  } catch (e) {
-    res.write('data: [DONE]\n\n');
-    res.end();
-  }
 });
 
 // ── Crowdsourced classification ───────────────────────────────────────────

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getLevelTitle } from '../store/gameStore'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const MEDALS = ['🥇', '🥈', '🥉']
 
 export default function Leaderboard() {
   const navigate = useNavigate()
+  usePageMeta('排行榜', '醫學知識王每週排行榜，看看誰是最強醫師國考挑戰者！')
   const [data, setData] = useState(null)
   const [week, setWeek] = useState('')
   const [loading, setLoading] = useState(true)

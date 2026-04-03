@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { io } from 'socket.io-client'
 import { useNavigate } from 'react-router-dom'
-import { useGameStore } from '../store/gameStore'
+import { useGameStore, usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -9,7 +9,13 @@ let socketInstance = null
 
 export function getSocket() {
   if (!socketInstance) {
-    socketInstance = io(BACKEND, { autoConnect: false })
+    socketInstance = io(BACKEND, {
+      autoConnect: false,
+      reconnection: true,
+      reconnectionAttempts: 10,
+      reconnectionDelay: 1000,
+      reconnectionDelayMax: 5000,
+    })
   }
   return socketInstance
 }
@@ -82,19 +88,24 @@ export function useSocket() {
 
     Object.entries(handlers).forEach(([ev, fn]) => socket.on(ev, fn))
 
-    // Connection status tracking
+    // Connection status tracking + auto-rejoin on reconnect
     const onDisconnect = () => useGameStore.setState({ socketConnected: false })
-    const onConnect = () => useGameStore.setState({ socketConnected: true })
-    const onReconnect = () => useGameStore.setState({ socketConnected: true })
+    const onConnect = () => {
+      useGameStore.setState({ socketConnected: true })
+      // Auto-rejoin room after reconnect
+      const { roomCode } = useGameStore.getState()
+      if (roomCode) {
+        const { name, avatar } = usePlayerStore.getState()
+        socket.emit('rejoin_room', { code: roomCode, playerName: name, playerAvatar: avatar })
+      }
+    }
     socket.on('disconnect', onDisconnect)
     socket.on('connect', onConnect)
-    socket.io.on('reconnect', onReconnect)
 
     return () => {
       Object.keys(handlers).forEach(ev => socket.off(ev))
       socket.off('disconnect', onDisconnect)
       socket.off('connect', onConnect)
-      socket.io.off('reconnect', onReconnect)
     }
   }, [navigate])
 

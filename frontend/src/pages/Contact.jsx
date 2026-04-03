@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const CONTACT_MAIL = 'aaowobbowocc@gmail.com'
 
 export default function Contact() {
   const navigate = useNavigate()
+  usePageMeta('關於我們', '醫學知識王：醫學生獨立開發的免費醫師國考練習平台，2000+ 題、即時對戰、AI 解說。')
   const [feedbackText, setFeedbackText] = useState('')
   const [sent, setSent] = useState(false)
 

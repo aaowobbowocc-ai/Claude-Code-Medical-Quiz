@@ -93,7 +93,8 @@ export function useExplain() {
       await streamPost(
         `${BACKEND}/explain`,
         { question: q.question, options: q.options, answer: q.answer,
-          subject_name: q.subject_name || q.subject, user_answer: q.user_answer },
+          subject_name: q.subject_name || q.subject, user_answer: q.user_answer,
+          question_id: q.id },
         (chunk) => setText(t => t + chunk),
         () => setLoading(false),
         (msg) => { setLimitHit(true); setText(msg) },

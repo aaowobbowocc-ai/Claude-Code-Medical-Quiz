@@ -6,24 +6,11 @@ import { useDailyMessage } from '../hooks/useDailyMessage'
 import { usePWA } from '../hooks/usePWA'
 import { useBookmarks } from '../hooks/useBookmarks'
 import Footer from '../components/Footer'
+import Sheet from '../components/Sheet'
+import SupportBar from '../components/SupportBar'
+import SupportSheets from '../components/SupportSheets'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
-
-// ── 外部連結（請依需求替換） ──────────────────────────────────────
-
-const CONTACT_MAIL = 'aaowobbowocc@gmail.com'
-// const ECPAY_URL = 'https://p.ecpay.com.tw/E11DBDD' // 審核通過後取消註解並恢復按鈕
-
-function Sheet({ onClose, children }) {
-  return (
-    <div className="sheet-overlay" onClick={onClose}>
-      <div className="sheet-panel" onClick={e => e.stopPropagation()}>
-        <div className="sheet-handle" />
-        {children}
-      </div>
-    </div>
-  )
-}
 
 export default function Home() {
   const navigate = useNavigate()
@@ -46,8 +33,6 @@ export default function Home() {
   const [joinCode, setJoinCode]   = useState('')
   const [joinError, setJoinError] = useState('')
   const [connecting, setConnecting] = useState(false)
-  const [feedbackText, setFeedbackText] = useState('')
-  const [feedbackSent, setFeedbackSent] = useState(false)
   const [createPublic, setCreatePublic] = useState(false)
   const [createPwd, setCreatePwd]       = useState('')
   const [joinPwd, setJoinPwd]           = useState('')
@@ -122,116 +107,10 @@ export default function Home() {
   const expPct = Math.min(((usePlayerStore.getState().exp || 0) / 300) * 100, 100)
   const { message: dailyMsg, loading: dailyLoading } = useDailyMessage(name, level)
 
-  const sendContact = () => {
-    if (!feedbackText.trim()) return
-    const subj = encodeURIComponent('醫學知識王 意見／回報')
-    const body = encodeURIComponent(feedbackText)
-    window.open(`mailto:${CONTACT_MAIL}?subject=${subj}&body=${body}`)
-    setFeedbackSent(true)
-  }
-
-  /* ── 底部支援列（主畫面共用） ──────────────────────────── */
   const darkMode = usePlayerStore(s => s.darkMode)
-  const toggleDarkMode = usePlayerStore(s => s.toggleDarkMode)
   const heroGrad = darkMode
     ? 'linear-gradient(160deg, #1e1810 0%, #3e2c18 60%, #30220e 100%)'
     : 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 60%, #0D9488 100%)'
-
-  const SupportBar = () => (
-    <div className="flex items-center justify-center gap-2 mt-3 pb-1">
-      <button onClick={toggleDarkMode}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
-        {darkMode ? '☀️ 淺色' : '🌙 深色'}
-      </button>
-      <button onClick={() => setSheet('donate')}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-amber-500 bg-amber-50 border border-amber-200 active:scale-95 transition-transform shadow-sm font-medium">
-        ☕ 贊助開發者
-      </button>
-      <button onClick={() => setSheet('contact')}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
-        💌 意見回饋
-      </button>
-    </div>
-  )
-
-  /* ── 聯絡 / 贊助 Sheets ─────────────────────────────────── */
-  const SupportSheets = () => (
-    <>
-      {sheet === 'donate' && (
-        <Sheet onClose={() => setSheet(null)}>
-          <div className="text-center mb-5">
-            <div className="text-5xl mb-3">☕</div>
-            <h2 className="text-xl font-bold text-medical-dark">支持這個計畫</h2>
-            <p className="text-gray-400 text-sm mt-2 leading-relaxed">
-              「免費」是這裡的核心。<br />
-              每位努力備考的醫學生，都值得一個好用的練習工具。
-            </p>
-          </div>
-
-          <div className="bg-amber-50 rounded-2xl px-4 py-4 mb-5 text-sm text-amber-800 leading-relaxed space-y-1.5">
-            <p>你的贊助會直接用於：</p>
-            <p>🖥️ 伺服器費用，讓大家隨時連得到</p>
-            <p>🤖 AI 解說功能，看懂每一道題</p>
-            <p>📚 題庫持續更新，緊跟最新考試</p>
-          </div>
-
-          <div className="w-full py-4 rounded-2xl text-center mb-3 bg-gray-100 border-2 border-dashed border-gray-300">
-            <p className="text-base font-bold text-gray-500">🔧 收款功能審核中</p>
-            <p className="text-xs text-gray-400 mt-1">很快就好，感謝你的耐心等待 🙏</p>
-          </div>
-
-          <p className="text-center text-xs text-gray-300 leading-relaxed">
-            不贊助也完全沒關係 🙏<br />這裡永遠為你開著。
-          </p>
-        </Sheet>
-      )}
-
-      {sheet === 'contact' && (
-        <Sheet onClose={() => { setSheet(null); setFeedbackSent(false); setFeedbackText('') }}>
-          {feedbackSent ? (
-            <div className="text-center py-6">
-              <div className="text-6xl mb-4">🙏</div>
-              <h2 className="text-xl font-bold text-medical-dark mb-2">謝謝你！</h2>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                每一條訊息我都會認真讀。<br />
-                正是這樣的回饋讓這個專案繼續走下去。
-              </p>
-              <button onClick={() => { setSheet(null); setFeedbackSent(false); setFeedbackText('') }}
-                      className="mt-6 px-8 py-3 rounded-2xl font-bold text-white active:scale-95 grad-cta">
-                關閉
-              </button>
-            </div>
-          ) : (
-            <>
-              <div className="text-center mb-5">
-                <div className="text-5xl mb-3">💌</div>
-                <h2 className="text-xl font-bold text-medical-dark">聯絡開發者</h2>
-                <p className="text-gray-400 text-sm mt-1.5 leading-relaxed">
-                  意見回饋、功能建議、題目有誤——<br />
-                  什麼都可以說，我都想聽。
-                </p>
-              </div>
-              <textarea
-                autoFocus
-                className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3.5 text-sm text-gray-700 outline-none focus:border-medical-blue resize-none mb-4 leading-relaxed"
-                rows={5}
-                placeholder="例如：113年第一次第42題答案有疑義、希望新增某功能、或只是說聲謝謝……"
-                value={feedbackText}
-                onChange={e => setFeedbackText(e.target.value)}
-              />
-              <button
-                onClick={sendContact}
-                disabled={!feedbackText.trim()}
-                className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-40 grad-cta"
-              >
-                以 Email 送出
-              </button>
-            </>
-          )}
-        </Sheet>
-      )}
-    </>
-  )
 
   // ── No-name: inline quick-start ──────────────────────────
   if (!name) {
@@ -300,7 +179,7 @@ export default function Home() {
             ))}
           </div>
 
-          <SupportBar />
+          <SupportBar setSheet={setSheet} />
 
           <Footer />
         </div>
@@ -334,7 +213,7 @@ export default function Home() {
           </Sheet>
         )}
 
-        <SupportSheets />
+        <SupportSheets sheet={sheet} setSheet={setSheet} />
       </div>
     )
   }
@@ -535,7 +414,7 @@ export default function Home() {
           </p>
         </div>
 
-        <SupportBar />
+        <SupportBar setSheet={setSheet} />
 
         <Footer />
       </div>
@@ -678,7 +557,7 @@ export default function Home() {
         </Sheet>
       )}
 
-      <SupportSheets />
+      <SupportSheets sheet={sheet} setSheet={setSheet} />
     </div>
   )
 }

@@ -1,23 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const nodemailer = require('nodemailer');
 
 const FEEDBACK_FILE = path.join(__dirname, 'feedback.json');
 const ADMIN_KEY = process.env.FEEDBACK_ADMIN_KEY || 'med-king-admin-2026';
-const GMAIL_USER = process.env.GMAIL_USER;
-const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD;
-
-let transporter = null;
-if (GMAIL_USER && GMAIL_APP_PASSWORD) {
-  transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
-    auth: { user: GMAIL_USER, pass: GMAIL_APP_PASSWORD },
-    tls: { rejectUnauthorized: false },
-    family: 4,
-  });
-}
+const DISCORD_WEBHOOK = process.env.DISCORD_WEBHOOK_URL;
 
 function loadFeedback() {
   try {
@@ -31,17 +17,26 @@ function saveFeedback(data) {
   fs.writeFileSync(FEEDBACK_FILE, JSON.stringify(data, null, 2), 'utf-8');
 }
 
-async function sendMail(entry) {
-  if (!transporter) return;
+async function sendDiscord(entry) {
+  if (!DISCORD_WEBHOOK) return;
   try {
-    await transporter.sendMail({
-      from: `醫學知識王 <${GMAIL_USER}>`,
-      to: GMAIL_USER,
-      subject: `[用戶回饋] ${entry.name} - ${entry.time.slice(0, 10)}`,
-      text: `來自：${entry.name}\n時間：${entry.time}\n\n${entry.message}`,
+    await fetch(DISCORD_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        embeds: [{
+          title: '📩 新用戶回饋',
+          color: 0x3b82f6,
+          fields: [
+            { name: '來自', value: entry.name, inline: true },
+            { name: '時間', value: entry.time.slice(0, 19).replace('T', ' '), inline: true },
+            { name: '內容', value: entry.message.slice(0, 1024) },
+          ],
+        }],
+      }),
     });
   } catch (e) {
-    console.error('Mail send failed:', e.message);
+    console.error('Discord notify failed:', e.message);
   }
 }
 
@@ -64,8 +59,8 @@ function registerRoutes(app) {
     feedbacks.push(entry);
     saveFeedback(feedbacks);
 
-    // Send email notification (non-blocking)
-    sendMail(entry);
+    // Send Discord notification (non-blocking)
+    sendDiscord(entry);
 
     res.json({ ok: true });
   });

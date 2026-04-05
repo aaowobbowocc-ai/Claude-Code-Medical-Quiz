@@ -9,6 +9,7 @@ const path = require('path');
 const leaderboard = require('./leaderboard');
 const ai = require('./ai');
 const questionsApi = require('./questions-api');
+const feedback = require('./feedback');
 
 const compression = require('compression');
 const rateLimit = require('express-rate-limit');
@@ -28,6 +29,7 @@ app.use('/questions', apiLimiter);
 app.use('/meta', apiLimiter);
 app.use('/leaderboard/submit', submitLimiter);
 app.use('/explain', submitLimiter);
+app.use('/feedback', submitLimiter);
 
 const server = http.createServer(app);
 const io = new Server(server, {
@@ -533,6 +535,7 @@ function trackDailyVisit() {
 leaderboard.registerRoutes(app);
 questionsApi.registerRoutes(app, questionsData, stats);
 ai.registerRoutes(app, questionsData, stats);
+feedback.registerRoutes(app);
 
 // ── Health + stages + stats API ─────────────────────────────────────────
 app.get('/health', (_, res) => res.json({ ok: true }));

@@ -5,6 +5,9 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const aiUsage = { date: '', count: 0 };
 const AI_DAILY_LIMIT = 100;
 
+// daily-message cache: key = "date|level", value = message text
+const dailyMsgCache = new Map();
+
 function checkAILimit(stats) {
   const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' });
   if (aiUsage.date !== today) { aiUsage.date = today; aiUsage.count = 0; }
@@ -151,14 +154,35 @@ ${wrongSummary || '（全部答對！）'}
     await streamAnthropic(res, prompt, 800);
   });
 
-  // POST /daily-message
+  // POST /daily-message (cached per day+level)
   app.post('/daily-message', async (req, res) => {
     const { name = '學員', level = 1 } = req.body;
-    sseHeaders(res);
 
     const today = new Date().toLocaleDateString('zh-TW', {
       timeZone: 'Asia/Taipei', year: 'numeric', month: 'long', day: 'numeric', weekday: 'long',
     });
+
+    const cacheKey = `${today}|${level}`;
+
+    // Return cached message if available
+    if (dailyMsgCache.has(cacheKey)) {
+      sseHeaders(res);
+      const cached = dailyMsgCache.get(cacheKey);
+      const chunks = cached.match(/.{1,40}/gs) || [cached];
+      for (const chunk of chunks) {
+        res.write(`data: ${JSON.stringify({ text: chunk })}\n\n`);
+      }
+      res.write('data: [DONE]\n\n');
+      res.end();
+      return;
+    }
+
+    // Clear old cache entries (different date)
+    for (const key of dailyMsgCache.keys()) {
+      if (!key.startsWith(today)) dailyMsgCache.delete(key);
+    }
+
+    sseHeaders(res);
 
     const prompt = `你是醫學知識王的AI導師。今天是${today}。
 請為正在備考醫師一階國考的醫學生「${name}」（遊戲等級 Lv.${level}）寫一段今日寄語。
@@ -171,7 +195,27 @@ ${wrongSummary || '（全部答對！）'}
 - 繁體中文，台灣語感，不要英文
 - 直接輸出文字，不要任何格式標籤或前綴`;
 
-    await streamAnthropic(res, prompt, 180);
+    // Stream and collect response for caching
+    let fullText = '';
+    try {
+      const stream = await anthropic.messages.stream({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 180,
+        messages: [{ role: 'user', content: prompt }],
+      });
+      for await (const chunk of stream) {
+        if (chunk.type === 'content_block_delta' && chunk.delta?.text) {
+          fullText += chunk.delta.text;
+          res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`);
+        }
+      }
+      if (fullText) dailyMsgCache.set(cacheKey, fullText);
+      res.write('data: [DONE]\n\n');
+      res.end();
+    } catch (e) {
+      res.write(`data: ${JSON.stringify({ error: e.message })}\n\n`);
+      res.end();
+    }
   });
 }
 

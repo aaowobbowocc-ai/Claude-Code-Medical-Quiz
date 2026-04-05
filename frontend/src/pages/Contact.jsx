@@ -3,20 +3,27 @@ import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { usePageMeta } from '../hooks/usePageMeta'
 
-const CONTACT_MAIL = 'aaowobbowocc@gmail.com'
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 export default function Contact() {
   const navigate = useNavigate()
   usePageMeta('關於我們', '醫學知識王：醫學生獨立開發的免費醫師國考練習平台，2000+ 題、即時對戰、AI 解說。')
   const [feedbackText, setFeedbackText] = useState('')
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
 
-  const handleSend = () => {
-    if (!feedbackText.trim()) return
-    const subj = encodeURIComponent('醫學知識王 意見／回報')
-    const body = encodeURIComponent(feedbackText)
-    window.open(`mailto:${CONTACT_MAIL}?subject=${subj}&body=${body}`)
-    setSent(true)
+  const handleSend = async () => {
+    if (!feedbackText.trim() || sending) return
+    setSending(true)
+    try {
+      const res = await fetch(`${BACKEND}/feedback`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: feedbackText }),
+      })
+      if (res.ok) setSent(true)
+    } catch { /* ignore */ }
+    setSending(false)
   }
 
   return (
@@ -98,10 +105,10 @@ export default function Contact() {
               />
               <button
                 onClick={handleSend}
-                disabled={!feedbackText.trim()}
+                disabled={!feedbackText.trim() || sending}
                 className="w-full py-3.5 rounded-2xl font-bold text-white active:scale-95 transition-transform disabled:opacity-40 grad-cta"
               >
-                送出意見
+                {sending ? '送出中...' : '送出意見'}
               </button>
             </>
           )}

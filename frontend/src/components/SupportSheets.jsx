@@ -1,18 +1,25 @@
 import { useState } from 'react'
 import Sheet from './Sheet'
 
-const CONTACT_MAIL = 'aaowobbowocc@gmail.com'
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 export default function SupportSheets({ sheet, setSheet }) {
   const [feedbackText, setFeedbackText] = useState('')
   const [feedbackSent, setFeedbackSent] = useState(false)
+  const [sending, setSending] = useState(false)
 
-  const sendContact = () => {
-    if (!feedbackText.trim()) return
-    const subj = encodeURIComponent('醫學知識王 意見／回報')
-    const body = encodeURIComponent(feedbackText)
-    window.open(`mailto:${CONTACT_MAIL}?subject=${subj}&body=${body}`)
-    setFeedbackSent(true)
+  const sendContact = async () => {
+    if (!feedbackText.trim() || sending) return
+    setSending(true)
+    try {
+      const res = await fetch(`${BACKEND}/feedback`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: feedbackText }),
+      })
+      if (res.ok) setFeedbackSent(true)
+    } catch { /* ignore */ }
+    setSending(false)
   }
 
   return (
@@ -81,10 +88,10 @@ export default function SupportSheets({ sheet, setSheet }) {
               />
               <button
                 onClick={sendContact}
-                disabled={!feedbackText.trim()}
+                disabled={!feedbackText.trim() || sending}
                 className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-40 grad-cta"
               >
-                以 Email 送出
+                {sending ? '送出中...' : '送出意見'}
               </button>
             </>
           )}

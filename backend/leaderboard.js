@@ -1,15 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-
-const LB_FILE = path.join(__dirname, 'leaderboard.json');
-
-function loadLeaderboard() {
-  try { return JSON.parse(fs.readFileSync(LB_FILE, 'utf-8')); } catch { return {}; }
-}
-
-function saveLeaderboard(lb) {
-  try { fs.writeFileSync(LB_FILE, JSON.stringify(lb), 'utf-8'); } catch {}
-}
+const supabase = require('./supabase');
 
 function getWeekKey() {
   const d = new Date();
@@ -18,44 +7,72 @@ function getWeekKey() {
   return `${d.getFullYear()}-W${String(week).padStart(2, '0')}`;
 }
 
-function recordScore(name, correct, total, level) {
-  const lb = loadLeaderboard();
+async function recordScore(name, correct, total, level) {
   const week = getWeekKey();
-  if (!lb[week]) lb[week] = {};
-  if (!lb[week][name]) lb[week][name] = { played: 0, correct: 0, total: 0, score: 0 };
-  const entry = lb[week][name];
-  entry.played += 1;
-  entry.correct += correct;
-  entry.total += total;
-  entry.score += correct * 10;
-  if (level !== undefined) entry.level = level;
-  const weeks = Object.keys(lb).sort();
-  while (weeks.length > 4) { delete lb[weeks.shift()]; }
-  saveLeaderboard(lb);
+
+  // Try upsert: if (week, name) exists, increment; otherwise insert
+  const { data: existing } = await supabase
+    .from('leaderboard')
+    .select('id, played, correct, total, score')
+    .eq('week', week)
+    .eq('name', name)
+    .single();
+
+  if (existing) {
+    await supabase.from('leaderboard').update({
+      played: existing.played + 1,
+      correct: existing.correct + correct,
+      total: existing.total + total,
+      score: existing.score + correct * 10,
+      level: level !== undefined ? level : existing.level,
+      updated_at: new Date().toISOString(),
+    }).eq('id', existing.id);
+  } else {
+    await supabase.from('leaderboard').insert({
+      week, name,
+      played: 1,
+      correct,
+      total,
+      score: correct * 10,
+      level: level !== undefined ? level : null,
+    });
+  }
 }
 
 function registerRoutes(app) {
-  app.get('/leaderboard', (req, res) => {
-    const lb = loadLeaderboard();
+  app.get('/leaderboard', async (req, res) => {
     const week = req.query.week || getWeekKey();
-    const data = lb[week] || {};
-    const ranked = Object.entries(data)
-      .map(([name, d]) => ({
-        name, ...d,
-        pct: d.total > 0 ? Math.round((d.correct / d.total) * 100) : 0,
-      }))
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 50);
+
+    const { data } = await supabase
+      .from('leaderboard')
+      .select('name, played, correct, total, score, level')
+      .eq('week', week)
+      .order('score', { ascending: false })
+      .limit(50);
+
+    const players = (data || []).map(d => ({
+      ...d,
+      pct: d.total > 0 ? Math.round((d.correct / d.total) * 100) : 0,
+    }));
+
+    // Get available weeks
+    const { data: weeks } = await supabase
+      .from('leaderboard')
+      .select('week')
+      .order('week', { ascending: false });
+
+    const availableWeeks = [...new Set((weeks || []).map(w => w.week))];
+
     res.set('Cache-Control', 'public, max-age=60');
-    res.json({ week, players: ranked, availableWeeks: Object.keys(lb).sort().reverse() });
+    res.json({ week, players, availableWeeks });
   });
 
-  app.post('/leaderboard/submit', require('express').json(), (req, res) => {
+  app.post('/leaderboard/submit', require('express').json(), async (req, res) => {
     const { name, correct, total, level } = req.body;
     if (!name || typeof correct !== 'number' || typeof total !== 'number') {
       return res.status(400).json({ error: 'invalid' });
     }
-    recordScore(name.slice(0, 20), correct, total, typeof level === 'number' ? level : undefined);
+    await recordScore(name.slice(0, 20), correct, total, typeof level === 'number' ? level : undefined);
     res.json({ ok: true });
   });
 }

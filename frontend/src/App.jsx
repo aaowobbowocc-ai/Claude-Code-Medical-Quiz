@@ -16,7 +16,7 @@ const History  = lazy(() => import('./pages/History'))
 const Review       = lazy(() => import('./pages/Review'))
 const Leaderboard  = lazy(() => import('./pages/Leaderboard'))
 const MockExam       = lazy(() => import('./pages/MockExam'))
-const BossChallenge  = lazy(() => import('./pages/BossChallenge'))
+const Board          = lazy(() => import('./pages/Board'))
 const Notes          = lazy(() => import('./pages/Notes'))
 const Privacy        = lazy(() => import('./pages/Privacy'))
 const Terms          = lazy(() => import('./pages/Terms'))
@@ -57,7 +57,7 @@ function AppRoutes() {
           <Route path="/review"       element={<Review />} />
           <Route path="/leaderboard"  element={<Leaderboard />} />
           <Route path="/mock-exam"    element={<MockExam />} />
-          <Route path="/boss"        element={<BossChallenge />} />
+          <Route path="/board"       element={<Board />} />
           <Route path="/notes"      element={<Notes />} />
           <Route path="/privacy"    element={<Privacy />} />
           <Route path="/tos"        element={<Terms />} />

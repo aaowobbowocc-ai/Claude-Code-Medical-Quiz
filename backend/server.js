@@ -10,6 +10,7 @@ const leaderboard = require('./leaderboard');
 const ai = require('./ai');
 const questionsApi = require('./questions-api');
 const feedback = require('./feedback');
+const board = require('./board');
 
 const compression = require('compression');
 const rateLimit = require('express-rate-limit');
@@ -30,6 +31,7 @@ app.use('/meta', apiLimiter);
 app.use('/leaderboard/submit', submitLimiter);
 app.use('/explain', submitLimiter);
 app.use('/feedback', submitLimiter);
+app.use('/board', rateLimit({ windowMs: 60 * 1000, max: 30, standardHeaders: true, legacyHeaders: false }));
 
 const server = http.createServer(app);
 const io = new Server(server, {
@@ -536,6 +538,7 @@ leaderboard.registerRoutes(app);
 questionsApi.registerRoutes(app, questionsData, stats);
 ai.registerRoutes(app, questionsData, stats);
 feedback.registerRoutes(app);
+board.registerRoutes(app);
 
 // ── Health + stages + stats API ─────────────────────────────────────────
 app.get('/health', (_, res) => res.json({ ok: true }));

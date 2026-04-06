@@ -171,7 +171,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-3 gap-2.5 w-full max-w-xs mt-1">
-            {[['📝','模擬考','/mock-exam'],['🔥','魔王題','/boss'],['🎯','練習','/practice'],['📖','題庫','/browse'],['🏆','排行','/leaderboard'],['📊','紀錄','/history']].map(([icon,lbl,path]) => (
+            {[['📝','模擬考','/mock-exam'],['💬','留言板','/board'],['🎯','練習','/practice'],['📖','題庫','/browse'],['🏆','排行','/leaderboard'],['📊','紀錄','/history']].map(([icon,lbl,path]) => (
               <button key={path} onClick={() => navigate(path)}
                       className="bg-white rounded-2xl py-3 flex flex-col items-center gap-1 shadow-sm border border-gray-100 active:scale-95">
                 <span className="text-xl">{icon}</span>
@@ -372,7 +372,7 @@ export default function Home() {
             ['🎯','自主練習','練習含AI對手','/practice'],
             ['📖','題庫瀏覽','依年份科目','/browse'],
             ['🏆','排行榜','每週排名','/leaderboard'],
-            ['📊','歷史紀錄','對戰/練習/模考','/history']].map(([icon,title,sub,path]) => (
+            ['💬','留言板','交流備考心得','/board']].map(([icon,title,sub,path]) => (
             <button key={path} onClick={() => navigate(path)}
                     className="rounded-2xl py-4 flex flex-col items-center gap-1.5 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">
               <div className="w-11 h-11 rounded-xl bg-medical-ice flex items-center justify-center text-2xl">{icon}</div>
@@ -402,9 +402,9 @@ export default function Home() {
               { step: '1', icon: '🎯', title: '自主練習', desc: '從科目地圖選擇弱科，10 題快速練習，答完看 AI 詳解' },
               { step: '2', icon: '⚔️', title: '即時對戰', desc: '開房間邀朋友 PK，或加入公開房間，比速度也比正確率' },
               { step: '3', icon: '📝', title: '模擬考試', desc: '選歷屆原卷或隨機出題，200 題限時 120 分鐘，模擬真實國考' },
-              { step: '4', icon: '🔥', title: '魔王題挑戰', desc: '全台醫學生答錯率最高的題目，花 50 金幣挑戰，答對 70% 賺 200' },
-              { step: '5', icon: '📋', title: '錯題複習', desc: '系統自動收集你的錯題，間隔複習時會提醒你，記得更牢' },
-              { step: '6', icon: '🪙', title: '金幣系統', desc: '每日登入送金幣，連續登入加碼。用金幣解鎖 AI 解說、模擬考、魔王題' },
+              { step: '4', icon: '📋', title: '錯題複習', desc: '系統自動收集你的錯題，間隔複習時會提醒你，記得更牢' },
+              { step: '5', icon: '💬', title: '留言板', desc: '和其他醫學生交流心得、分享讀書方法，一起加油打氣' },
+              { step: '6', icon: '🪙', title: '金幣系統', desc: '每日登入送金幣，連續登入加碼。用金幣解鎖 AI 解說、模擬考' },
             ].map(item => (
               <div key={item.step} className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-full bg-medical-blue text-white text-sm font-bold flex items-center justify-center shrink-0 mt-0.5">{item.step}</div>
@@ -461,7 +461,7 @@ export default function Home() {
             <li><strong>AI 智慧解說：</strong>每道題目提供 AI 生成的詳細解析，包含答案說明、選項排除、記憶口訣與臨床應用。</li>
             <li><strong>錯題複習：</strong>自動追蹤答錯題目，利用間隔重複原理安排複習時機，有效鞏固弱項。</li>
             <li><strong><Link to="/map" className="text-medical-blue underline">科目篩選</Link>：</strong>可依科目、年度自由篩選練習範圍，針對弱科重點加強。</li>
-            <li><strong><Link to="/boss" className="text-medical-blue underline">魔王題挑戰</Link>：</strong>挑戰全台醫學生答錯率最高的題目，測試你的實力極限。</li>
+            <li><strong><Link to="/board" className="text-medical-blue underline">留言板</Link>：</strong>與其他醫學生交流備考心得、分享讀書方法，互相鼓勵打氣。</li>
             <li><strong><Link to="/leaderboard" className="text-medical-blue underline">排行榜</Link>：</strong>查看全台醫學生的答題表現排名，激勵持續進步。</li>
           </ul>
 

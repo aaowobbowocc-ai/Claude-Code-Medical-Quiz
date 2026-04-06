@@ -135,6 +135,14 @@ html.dark .text-emerald-600 { color: #4db87a !important; }
 html.dark .border-green-100 { border-color: #2a3e30 !important; }
 html.dark .border-red-100 { border-color: #3e2a2a !important; }
 
+/* Gradient panels (AI / explanation) */
+html.dark .from-emerald-50 { --tw-gradient-from: #1e2818 !important; }
+html.dark .to-teal-50 { --tw-gradient-to: #1a2820 !important; }
+html.dark .from-blue-50 { --tw-gradient-from: #1a2030 !important; }
+html.dark .border-emerald-100 { border-color: #2a3e28 !important; }
+html.dark .border-blue-100 { border-color: #2a3050 !important; }
+html.dark .text-emerald-700 { color: #5cc88a !important; }
+
 /* Inputs */
 html.dark input, html.dark textarea {
   background: #3a3020 !important;

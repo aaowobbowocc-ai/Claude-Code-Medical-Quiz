@@ -29,8 +29,12 @@ async function sendDiscord(entry) {
 async function sendReportDiscord(entry) {
   if (!DISCORD_REPORT_WEBHOOK) return;
   try {
+    const yearInfo = entry.rocYear
+      ? `${entry.rocYear}年${entry.session || ''} 第${entry.number || '?'}題`
+      : '';
     const fields = [
       { name: '題目 ID', value: entry.questionId || '未知', inline: true },
+      { name: '年份/題號', value: yearInfo || '未知', inline: true },
       { name: '時間', value: new Date().toISOString().slice(0, 19).replace('T', ' '), inline: true },
     ];
     if (entry.questionText) {
@@ -78,7 +82,7 @@ function registerRoutes(app) {
 
   // POST /report — user reports a question error
   app.post('/report', async (req, res) => {
-    const { questionId, questionText, message } = req.body;
+    const { questionId, questionText, rocYear, session, number, message } = req.body;
     if (!questionId) {
       return res.status(400).json({ error: 'questionId is required' });
     }
@@ -86,6 +90,9 @@ function registerRoutes(app) {
     const entry = {
       questionId,
       questionText: (questionText || '').slice(0, 300),
+      rocYear: rocYear || '',
+      session: session || '',
+      number: number || '',
       message: (message || '').slice(0, 500),
     };
 

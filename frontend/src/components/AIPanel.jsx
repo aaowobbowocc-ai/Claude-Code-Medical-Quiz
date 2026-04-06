@@ -26,7 +26,7 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 200, questionId, questionText }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 200, questionId, questionText, rocYear, session, number }) {
   const [showAI, setShowAI] = useState(false)
   const [reportSent, setReportSent] = useState(false)
   const [showReportForm, setShowReportForm] = useState(false)
@@ -86,6 +86,9 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                         body: JSON.stringify({
                           questionId: questionId || '未知',
                           questionText: questionText || '',
+                          rocYear: rocYear || '',
+                          session: session || '',
+                          number: number || '',
                           message: reportText.trim(),
                         }),
                       })

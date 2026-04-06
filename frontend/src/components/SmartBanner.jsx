@@ -57,7 +57,7 @@ export default function SmartBanner() {
               <p className="text-xs text-gray-400 mt-0.5">你的贊助讓所有醫學生都能免費使用</p>
             </div>
             <button
-              onClick={() => window.open('mailto:aaowobbowocc@gmail.com?subject=贊助醫學知識王', '_blank')}
+              onClick={() => alert('贊助功能目前尚未開放，敬請期待！🙏')}
               className="shrink-0 text-xs font-bold px-3 py-1.5 rounded-lg text-white active:scale-95 transition-transform grad-cta"
             >
               贊助

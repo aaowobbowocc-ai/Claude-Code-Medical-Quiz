@@ -43,12 +43,12 @@ export default function SupportSheets({ sheet, setSheet }) {
           </div>
 
           <div className="w-full py-4 rounded-2xl text-center mb-3 bg-gray-100 border-2 border-dashed border-gray-300">
-            <p className="text-base font-bold text-gray-500">🔧 收款功能審核中</p>
-            <p className="text-xs text-gray-400 mt-1">很快就好，感謝你的耐心等待 🙏</p>
+            <p className="text-base font-bold text-gray-500">🔧 贊助功能尚未開放</p>
+            <p className="text-xs text-gray-400 mt-1">目前正在準備中，敬請期待！</p>
           </div>
 
           <p className="text-center text-xs text-gray-300 leading-relaxed">
-            不贊助也完全沒關係 🙏<br />這裡永遠為你開著。
+            加油，未來的醫生！🩺<br />這裡永遠為你開著。
           </p>
         </Sheet>
       )}

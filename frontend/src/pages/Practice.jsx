@@ -416,6 +416,9 @@ function PracticeGame({ config, onFinish }) {
               explanation={q?.explanation}
               questionId={q?.id}
               questionText={q?.question}
+              rocYear={q?.roc_year}
+              session={q?.session}
+              number={q?.number}
             />
           </div>
         )}

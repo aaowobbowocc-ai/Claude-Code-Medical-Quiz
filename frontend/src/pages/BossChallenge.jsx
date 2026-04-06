@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+const BOSS_FEE = 50
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444' }
 
 function BossCard({ q, index, onAnswer, answered }) {
@@ -65,19 +67,37 @@ function BossCard({ q, index, onAnswer, answered }) {
 
 export default function BossChallenge() {
   const navigate = useNavigate()
+  const { coins, spendCoins, addCoins } = usePlayerStore()
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(true)
   const [score, setScore] = useState({ correct: 0, total: 0 })
+  const [paid, setPaid] = useState(false)
+  const [reward, setReward] = useState(null)
 
   useEffect(() => {
+    if (!spendCoins(BOSS_FEE)) {
+      setLoading(false)
+      return
+    }
+    setPaid(true)
     fetch(`${BACKEND}/questions/hardest?count=10`)
       .then(r => r.json())
       .then(data => { setQuestions(data.questions || []); setLoading(false) })
-      .catch(() => setLoading(false))
+      .catch(() => { setLoading(false); addCoins(BOSS_FEE) }) // refund on error
   }, [])
 
   const handleAnswer = (correct) => {
-    setScore(s => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }))
+    setScore(s => {
+      const newScore = { correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }
+      // Award coins when all questions answered
+      if (newScore.total === questions.length && reward === null) {
+        const pct = newScore.correct / newScore.total
+        const earned = pct >= 0.7 ? 200 : 40
+        addCoins(earned)
+        setReward(earned)
+      }
+      return newScore
+    })
   }
 
   return (
@@ -99,7 +119,17 @@ export default function BossChallenge() {
       </div>
 
       <div className="flex-1 px-4 py-4 flex flex-col gap-3">
-        {loading ? (
+        {!paid && !loading ? (
+          <div className="flex flex-col items-center justify-center py-20 gap-3">
+            <span className="text-5xl">🪙</span>
+            <p className="text-gray-500 font-medium">金幣不足！</p>
+            <p className="text-gray-400 text-sm">需要 {BOSS_FEE} 金幣，目前只有 {coins} 金幣</p>
+            <button onClick={() => navigate('/')}
+              className="mt-2 px-6 py-3 rounded-2xl font-bold text-white text-sm active:scale-95 grad-cta">
+              回主畫面
+            </button>
+          </div>
+        ) : loading ? (
           <div className="flex flex-col gap-3">
             {[0,1,2].map(i => (
               <div key={i} className="bg-white rounded-2xl p-4 shadow-sm animate-pulse">
@@ -134,6 +164,9 @@ export default function BossChallenge() {
                 <p className="text-gray-400 text-sm mt-1">
                   答對 {score.correct} / {score.total} 題魔王題
                 </p>
+                {reward !== null && (
+                  <p className="text-amber-600 font-bold text-sm mt-2">🪙 +{reward} 金幣{reward >= 200 ? ' (入場費 50 → 淨賺 150！)' : ''}</p>
+                )}
               </div>
             )}
           </>

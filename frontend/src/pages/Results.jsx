@@ -52,7 +52,7 @@ export default function Results() {
   const accuracyPct = questionResults.length > 0 ? correctCount / questionResults.length : 0
   const meetsThreshold = accuracyPct >= 0.7
   const betWinnings = isWinner && betAmount > 0 ? betAmount * 2 : 0
-  const baseReward = meetsThreshold ? (isWinner ? 150 : 30) : 0
+  const baseReward = meetsThreshold ? (isWinner ? 120 : 30) : 0
   const totalReward = baseReward + betWinnings
 
   useEffect(() => {

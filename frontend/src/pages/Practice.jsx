@@ -442,7 +442,7 @@ function PracticeResults({ result, config, onRestart, onHome }) {
     play(won ? 'victory' : 'defeat')
     const meetsThreshold = pct >= 70
     if (meetsThreshold) {
-      addCoins(won ? 80 : 20)
+      addCoins(won ? 60 : 20)
       addExp(correct * 10)
     }
     savePracticeRecord({

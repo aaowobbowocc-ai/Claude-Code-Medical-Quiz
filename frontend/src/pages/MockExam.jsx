@@ -6,9 +6,14 @@ import SmartBanner from '../components/SmartBanner'
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 const PAPERS = [
-  { id: 'paper1', name: '基礎醫學(一)', stages: '1,2,3,4,10', subjects: '解剖、生理、生化、組織、胚胎' },
-  { id: 'paper2', name: '基礎醫學(二)', stages: '5,6,7,8,9', subjects: '微免、寄生蟲、藥理、病理、公衛' },
+  { id: 'paper1', name: '基礎醫學(一)', stages: '1,2,3,4,10', subject: '醫學(一)', subjects: '解剖、生理、生化、組織、胚胎' },
+  { id: 'paper2', name: '基礎醫學(二)', stages: '5,6,7,8,9', subject: '醫學(二)', subjects: '微免、寄生蟲、藥理、病理、公衛' },
 ]
+
+const TAG_NAMES = {
+  anatomy: '解剖', physiology: '生理', biochemistry: '生化', histology: '組織', embryology: '胚胎',
+  microbiology: '微免', parasitology: '寄生蟲', pharmacology: '藥理', pathology: '病理', public_health: '公衛',
+}
 
 const TIME_LIMIT = 120 * 60 // 120 minutes per paper
 const TOTAL_PASS = 120 // 120/200 to pass full exam
@@ -17,48 +22,171 @@ const SINGLE_PASS = 60 // 60/100 for single paper
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444' }
 
 // ── Setup screen ─────────────────────────────────────────────────
-function ExamSetup({ onStart, onStartFull, onBack }) {
+const FULL_EXAM_FEE = 500
+const SINGLE_EXAM_FEE = 200
+
+function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
+  const [tab, setTab] = useState('historical') // 'historical' | 'random'
+  const [examYears, setExamYears] = useState([])
+  const [loadingYears, setLoadingYears] = useState(true)
+  const [selectedExam, setSelectedExam] = useState(null) // { roc_year, session, papers }
+
+  useEffect(() => {
+    fetch(`${BACKEND}/questions/exam-years`)
+      .then(r => r.json())
+      .then(data => { setExamYears(data); setLoadingYears(false) })
+      .catch(() => setLoadingYears(false))
+  }, [])
+
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
-      <div className="px-4 pt-12 pb-6 grad-header">
-        <div className="flex items-center gap-3 mb-1">
-          <button onClick={onBack} className="text-white/60 text-2xl leading-none">‹</button>
+      <div className="px-4 pt-12 pb-4 grad-header">
+        <div className="flex items-center gap-3 mb-3">
+          <button onClick={selectedExam ? () => setSelectedExam(null) : onBack} className="text-white/60 text-2xl leading-none">‹</button>
           <div>
             <h1 className="text-white font-bold text-2xl">📝 模擬國考</h1>
             <p className="text-white/60 text-sm mt-1">依照真實國考規則模擬</p>
           </div>
         </div>
+        {/* Tab switcher */}
+        <div className="flex bg-white/15 rounded-xl p-1">
+          <button onClick={() => { setTab('historical'); setSelectedExam(null) }}
+            className={`flex-1 py-2 rounded-lg text-sm font-bold transition-all ${tab === 'historical' ? 'bg-white text-medical-blue shadow' : 'text-white/70'}`}>
+            📜 歷屆考題
+          </button>
+          <button onClick={() => { setTab('random'); setSelectedExam(null) }}
+            className={`flex-1 py-2 rounded-lg text-sm font-bold transition-all ${tab === 'random' ? 'bg-white text-medical-blue shadow' : 'text-white/70'}`}>
+            🎲 隨機模擬
+          </button>
+        </div>
       </div>
 
-      <div className="flex-1 px-4 py-5 flex flex-col gap-4">
-        {/* Full exam option */}
-        <button onClick={onStartFull}
-          className="w-full text-left rounded-2xl px-5 py-5 border-2 border-medical-blue bg-blue-50 shadow transition-all active:scale-[0.97]">
-          <div className="flex items-center gap-3">
-            <span className="text-3xl">📋</span>
-            <div className="flex-1">
-              <p className="font-bold text-lg text-medical-blue">完整模擬考</p>
-              <p className="text-gray-500 text-xs mt-1">醫學(一) + 醫學(二)，共 200 題</p>
-              <p className="text-gray-400 text-xs">各 120 分鐘，總分 120/200 及格</p>
+      <div className="flex-1 px-4 py-4 flex flex-col gap-3 overflow-y-auto">
+        {tab === 'historical' ? (
+          /* ── Historical exam selection ── */
+          selectedExam ? (
+            /* Paper selection for chosen exam */
+            <>
+              <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 text-center">
+                <p className="text-2xl mb-1">📜</p>
+                <p className="font-bold text-lg text-medical-dark">{selectedExam.roc_year} 年{selectedExam.session}</p>
+                <p className="text-gray-400 text-xs mt-1">原卷題目 · 按照國考原始題序出題</p>
+              </div>
+
+              {/* Full exam */}
+              <button onClick={() => onStartHistorical(selectedExam.roc_year, selectedExam.session, true)}
+                className={`w-full text-left rounded-2xl px-5 py-5 border-2 shadow transition-all active:scale-[0.97] ${coins >= FULL_EXAM_FEE ? 'border-medical-blue bg-blue-50' : 'border-gray-200 bg-gray-50 opacity-60'}`}>
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">📋</span>
+                  <div className="flex-1">
+                    <p className="font-bold text-lg text-medical-blue">完整模擬考</p>
+                    <p className="text-gray-500 text-xs mt-1">醫學(一) + 醫學(二)，共 200 題</p>
+                    <p className="text-gray-400 text-xs">各 120 分鐘，120/200 及格</p>
+                  </div>
+                  <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {FULL_EXAM_FEE}</span>
+                </div>
+              </button>
+
+              <div className="flex items-center gap-3">
+                <div className="flex-1 h-px bg-gray-200" />
+                <span className="text-gray-400 text-xs">或單獨考一卷</span>
+                <div className="flex-1 h-px bg-gray-200" />
+              </div>
+
+              {/* Single paper with distribution */}
+              {selectedExam.papers.map((p, pi) => {
+                const paperDef = PAPERS[pi]
+                if (!paperDef) return null
+                const distText = Object.entries(p.distribution || {})
+                  .map(([tag, cnt]) => `${TAG_NAMES[tag] || tag} ${cnt}`)
+                  .join('、')
+                return (
+                  <button key={pi} onClick={() => onStartHistorical(selectedExam.roc_year, selectedExam.session, false, paperDef)}
+                    className={`w-full text-left rounded-2xl px-5 py-4 border-2 transition-all active:scale-[0.97] ${coins >= SINGLE_EXAM_FEE ? 'border-gray-100 bg-white' : 'border-gray-100 bg-gray-50 opacity-60'}`}>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-bold text-lg text-medical-dark">{p.name}</p>
+                        <p className="text-gray-400 text-xs mt-1">{distText}</p>
+                        <p className="text-gray-300 text-xs">{p.total} 題 / 120 分鐘</p>
+                      </div>
+                      <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {SINGLE_EXAM_FEE}</span>
+                    </div>
+                  </button>
+                )
+              })}
+            </>
+          ) : (
+            /* Year/session list */
+            loadingYears ? (
+              <div className="flex flex-col gap-3">
+                {[0,1,2,3].map(i => (
+                  <div key={i} className="bg-white rounded-2xl p-4 shadow-sm animate-pulse">
+                    <div className="h-5 bg-gray-200 rounded w-1/3 mb-2" />
+                    <div className="h-3 bg-gray-200 rounded w-2/3" />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              examYears.map(exam => (
+                <button key={`${exam.roc_year}_${exam.session}`}
+                  onClick={() => setSelectedExam(exam)}
+                  className="w-full text-left bg-white rounded-2xl px-5 py-4 border border-gray-100 shadow-sm transition-all active:scale-[0.97]">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-bold text-lg text-medical-dark">{exam.roc_year} 年{exam.session}</p>
+                      <p className="text-gray-400 text-xs mt-1">
+                        {exam.papers.map(p => `${p.name} ${p.total}題`).join(' + ')}
+                      </p>
+                    </div>
+                    <span className="text-gray-300 text-xl">›</span>
+                  </div>
+                </button>
+              ))
+            )
+          )
+        ) : (
+          /* ── Random mode ── */
+          <>
+            <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 text-center">
+              <p className="text-2xl mb-1">🎲</p>
+              <p className="font-bold text-medical-dark">隨機模擬考</p>
+              <p className="text-gray-400 text-xs mt-1">從所有年份題庫隨機抽題，按照國考各科比例出題</p>
             </div>
-          </div>
-        </button>
 
-        <div className="flex items-center gap-3">
-          <div className="flex-1 h-px bg-gray-200" />
-          <span className="text-gray-400 text-xs">或單獨考一卷</span>
-          <div className="flex-1 h-px bg-gray-200" />
-        </div>
+            <button onClick={onStartFull}
+              className={`w-full text-left rounded-2xl px-5 py-5 border-2 shadow transition-all active:scale-[0.97] ${coins >= FULL_EXAM_FEE ? 'border-medical-blue bg-blue-50' : 'border-gray-200 bg-gray-50 opacity-60'}`}>
+              <div className="flex items-center gap-3">
+                <span className="text-3xl">📋</span>
+                <div className="flex-1">
+                  <p className="font-bold text-lg text-medical-blue">完整模擬考</p>
+                  <p className="text-gray-500 text-xs mt-1">醫學(一) + 醫學(二)，共 200 題</p>
+                  <p className="text-gray-400 text-xs">各 120 分鐘，120/200 及格</p>
+                </div>
+                <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {FULL_EXAM_FEE}</span>
+              </div>
+            </button>
 
-        {/* Single paper options */}
-        {PAPERS.map(p => (
-          <button key={p.id} onClick={() => onStart(p)}
-            className="w-full text-left rounded-2xl px-5 py-4 border-2 border-gray-100 bg-white transition-all active:scale-[0.97]">
-            <p className="font-bold text-lg text-medical-dark">{p.name}</p>
-            <p className="text-gray-400 text-xs mt-1">{p.subjects}</p>
-            <p className="text-gray-300 text-xs">100 題 / 120 分鐘，60/100 及格</p>
-          </button>
-        ))}
+            <div className="flex items-center gap-3">
+              <div className="flex-1 h-px bg-gray-200" />
+              <span className="text-gray-400 text-xs">或單獨考一卷</span>
+              <div className="flex-1 h-px bg-gray-200" />
+            </div>
+
+            {PAPERS.map(p => (
+              <button key={p.id} onClick={() => onStart(p)}
+                className={`w-full text-left rounded-2xl px-5 py-4 border-2 transition-all active:scale-[0.97] ${coins >= SINGLE_EXAM_FEE ? 'border-gray-100 bg-white' : 'border-gray-100 bg-gray-50 opacity-60'}`}>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-bold text-lg text-medical-dark">{p.name}</p>
+                    <p className="text-gray-400 text-xs mt-1">{p.subjects}</p>
+                    <p className="text-gray-300 text-xs">100 題 / 120 分鐘</p>
+                  </div>
+                  <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {SINGLE_EXAM_FEE}</span>
+                </div>
+              </button>
+            ))}
+          </>
+        )}
 
         <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
           <p className="text-sm font-bold text-gray-700 mb-2">國考規則</p>
@@ -261,7 +389,7 @@ function ExamResults({ papers, navigate }) {
   useEffect(() => {
     if (saved) return
     setSaved(true)
-    addCoins(passed === true ? 200 : isFullExam ? 50 : 80)
+    addCoins(passed === true ? 300 : isFullExam ? 80 : 100)
     addExp(passed === true ? 150 : isFullExam ? 40 : 60)
     try {
       const key = 'mock-exam-history'
@@ -371,6 +499,8 @@ export default function MockExam() {
   const [isFullExam, setIsFullExam] = useState(false)
   const startTime = useRef(0)
 
+  const [historicalExam, setHistoricalExam] = useState(null) // { year, session } for historical mode
+
   const loadQuestions = async (paper) => {
     const res = await fetch(`${BACKEND}/questions/exam?stages=${paper.stages}&count=100`)
     const data = await res.json()
@@ -378,9 +508,23 @@ export default function MockExam() {
     return data.questions
   }
 
-  // Start single paper
+  const loadHistoricalQuestions = async (year, session, subjectName) => {
+    const res = await fetch(`${BACKEND}/questions/exam?year=${year}&session=${encodeURIComponent(session)}&subject=${encodeURIComponent(subjectName)}`)
+    const data = await res.json()
+    if (data.questions.length < 10) throw new Error('not enough')
+    return data.questions
+  }
+
+  const { coins, spendCoins } = usePlayerStore()
+
+  // Start single paper (random)
   const handleStartSingle = async (paper) => {
+    if (!spendCoins(SINGLE_EXAM_FEE)) {
+      alert(`金幣不足！需要 ${SINGLE_EXAM_FEE} 金幣，目前只有 ${coins} 金幣`)
+      return
+    }
     setIsFullExam(false)
+    setHistoricalExam(null)
     setCurrentPaper(paper)
     setPaperResults([])
     setPhase('loading')
@@ -391,13 +535,19 @@ export default function MockExam() {
       setPhase('exam')
     } catch {
       alert('題目不足或載入失敗，請稍後再試')
+      usePlayerStore.getState().addCoins(SINGLE_EXAM_FEE) // refund
       setPhase('setup')
     }
   }
 
-  // Start full exam (paper 1 first)
+  // Start full exam (random, paper 1 first)
   const handleStartFull = async () => {
+    if (!spendCoins(FULL_EXAM_FEE)) {
+      alert(`金幣不足！需要 ${FULL_EXAM_FEE} 金幣，目前只有 ${coins} 金幣`)
+      return
+    }
     setIsFullExam(true)
+    setHistoricalExam(null)
     setCurrentPaper(PAPERS[0])
     setPaperResults([])
     setPhase('loading')
@@ -408,6 +558,32 @@ export default function MockExam() {
       setPhase('exam')
     } catch {
       alert('題目不足或載入失敗，請稍後再試')
+      usePlayerStore.getState().addCoins(FULL_EXAM_FEE) // refund
+      setPhase('setup')
+    }
+  }
+
+  // Start historical exam
+  const handleStartHistorical = async (year, session, isFull, paper) => {
+    const fee = isFull ? FULL_EXAM_FEE : SINGLE_EXAM_FEE
+    if (!spendCoins(fee)) {
+      alert(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣`)
+      return
+    }
+    setIsFullExam(isFull)
+    setHistoricalExam({ year, session })
+    const targetPaper = paper || PAPERS[0]
+    setCurrentPaper(targetPaper)
+    setPaperResults([])
+    setPhase('loading')
+    try {
+      const qs = await loadHistoricalQuestions(year, session, targetPaper.subject)
+      setQuestions(qs)
+      startTime.current = Date.now()
+      setPhase('exam')
+    } catch {
+      alert('題目不足或載入失敗，請稍後再試')
+      usePlayerStore.getState().addCoins(fee) // refund
       setPhase('setup')
     }
   }
@@ -440,13 +616,14 @@ export default function MockExam() {
     setCurrentPaper(PAPERS[1])
     setPhase('loading2')
     try {
-      const qs = await loadQuestions(PAPERS[1])
+      const qs = historicalExam
+        ? await loadHistoricalQuestions(historicalExam.year, historicalExam.session, PAPERS[1].subject)
+        : await loadQuestions(PAPERS[1])
       setQuestions(qs)
       startTime.current = Date.now()
       setPhase('exam2')
     } catch {
       alert('題目不足或載入失敗，請稍後再試')
-      // Fall back to showing paper 1 results only
       setPhase('results')
     }
   }
@@ -458,7 +635,7 @@ export default function MockExam() {
   }
 
   if (phase === 'setup') {
-    return <ExamSetup onStart={handleStartSingle} onStartFull={handleStartFull} onBack={() => navigate('/')} />
+    return <ExamSetup onStart={handleStartSingle} onStartFull={handleStartFull} onStartHistorical={handleStartHistorical} onBack={() => navigate('/')} coins={coins} />
   }
 
   if (phase === 'loading' || phase === 'loading2') {
@@ -466,7 +643,7 @@ export default function MockExam() {
       <div className="flex flex-col items-center justify-center min-h-dvh bg-medical-ice gap-4">
         <div className="text-5xl animate-bounce">📝</div>
         <p className="text-gray-500 font-medium">
-          {phase === 'loading2' ? '正在載入 基礎醫學(二)…' : '正在出題中…'}
+          {phase === 'loading2' ? '正在載入 基礎醫學(二)…' : historicalExam ? `正在載入 ${historicalExam.year}年${historicalExam.session}…` : '正在出題中…'}
         </p>
       </div>
     )

@@ -2,7 +2,8 @@ import { useState, useCallback } from 'react'
 import { usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
-const EXPLAIN_COST = 200
+const EXPLAIN_COST = 150
+const REVIEW_COST = 100
 
 // ── Per-device daily quota ──────────────────────────────────────
 const PERSONAL_LIMIT = 10
@@ -111,9 +112,16 @@ export function useExplain() {
 export function useReview() {
   const [text, setText]       = useState('')
   const [loading, setLoading] = useState(false)
+  const [notEnoughCoins, setNotEnoughCoins] = useState(false)
 
   const review = useCallback(async (questions, mode = 'practice') => {
+    const { spendCoins } = usePlayerStore.getState()
+    if (!spendCoins(REVIEW_COST)) {
+      setNotEnoughCoins(true)
+      return
+    }
     setText('')
+    setNotEnoughCoins(false)
     setLoading(true)
     try {
       await streamPost(
@@ -125,5 +133,5 @@ export function useReview() {
     } catch { setLoading(false) }
   }, [])
 
-  return { text, loading, review }
+  return { text, loading, review, notEnoughCoins, cost: REVIEW_COST }
 }

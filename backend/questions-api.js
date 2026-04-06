@@ -37,17 +37,79 @@ function registerRoutes(app, questionsData, stats) {
     res.json({ total: pool.length, questions: picked });
   });
 
-  // GET /questions/exam
+  // GET /questions/exam-years — list available historical exams
+  app.get('/questions/exam-years', (req, res) => {
+    const exams = {};
+    for (const q of questionsData.questions) {
+      if (!q.answer || !q.options[q.answer]) continue;
+      const key = `${q.roc_year}_${q.session}`;
+      if (!exams[key]) exams[key] = { roc_year: q.roc_year, session: q.session, papers: {} };
+      if (!exams[key].papers[q.subject]) exams[key].papers[q.subject] = {};
+      const tag = q.subject_tag;
+      exams[key].papers[q.subject][tag] = (exams[key].papers[q.subject][tag] || 0) + 1;
+    }
+    const list = Object.values(exams)
+      .map(e => ({
+        roc_year: e.roc_year,
+        session: e.session,
+        label: `${e.roc_year}年${e.session}`,
+        papers: Object.entries(e.papers).map(([name, dist]) => ({
+          name,
+          total: Object.values(dist).reduce((a, b) => a + b, 0),
+          distribution: dist,
+        })),
+      }))
+      .sort((a, b) => b.roc_year.localeCompare(a.roc_year) || b.session.localeCompare(a.session));
+    res.set('Cache-Control', 'public, max-age=3600');
+    res.json(list);
+  });
+
+  // GET /questions/exam — supports historical (year+session) or random (stages) mode
   app.get('/questions/exam', (req, res) => {
-    const { stages, count = 100 } = req.query;
-    if (!stages) return res.status(400).json({ error: 'stages required' });
+    const { stages, count = 100, year, session, subject } = req.query;
+
+    // Historical mode: return exact questions from a specific exam
+    if (year && session && subject) {
+      const pool = questionsData.questions.filter(q =>
+        q.answer && q.options[q.answer] &&
+        q.roc_year === year && q.session === session && q.subject === subject
+      );
+      // Return in original question number order
+      pool.sort((a, b) => a.number - b.number);
+      return res.json({ total: pool.length, questions: pool, mode: 'historical' });
+    }
+
+    // Random proportional mode
+    if (!stages) return res.status(400).json({ error: 'stages required (or use year+session+subject for historical)' });
     const stageIds = stages.split(',').map(Number);
     const tags = stageIds
       .map(id => questionsData.stages.find(s => s.id === id)?.tag)
       .filter(Boolean);
-    let pool = questionsData.questions.filter(q => q.answer && q.options[q.answer] && tags.includes(q.subject_tag));
-    const picked = shuffle(pool).slice(0, parseInt(count));
-    res.json({ total: pool.length, questions: picked });
+
+    // Calculate average distribution from all exams for these tags
+    const target = parseInt(count);
+    const byTag = {};
+    for (const tag of tags) {
+      byTag[tag] = questionsData.questions.filter(q => q.answer && q.options[q.answer] && q.subject_tag === tag);
+    }
+    // Use average proportions from real exams
+    const avgDist = {
+      anatomy: 33, physiology: 27, biochemistry: 26, histology: 10, embryology: 4,
+      microbiology: 30, parasitology: 6, pharmacology: 28, pathology: 22, public_health: 14,
+    };
+    let picked = [];
+    let remaining = target;
+    const relevantTags = tags.filter(t => byTag[t]?.length > 0);
+    for (let i = 0; i < relevantTags.length; i++) {
+      const tag = relevantTags[i];
+      const isLast = i === relevantTags.length - 1;
+      const quota = isLast ? remaining : Math.round(target * (avgDist[tag] || 10) / 100);
+      const tagPicked = shuffle(byTag[tag]).slice(0, Math.min(quota, byTag[tag].length));
+      picked.push(...tagPicked);
+      remaining -= tagPicked.length;
+    }
+    picked = shuffle(picked);
+    res.json({ total: picked.length, questions: picked, mode: 'random' });
   });
 
   // POST /questions/track

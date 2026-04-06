@@ -307,7 +307,7 @@ export default function Lobby() {
             <p className="text-xs text-gray-400">你有 🪙 {coins}</p>
           </div>
           <div className="flex gap-2">
-            {[0, 100, 200, 500].map(amt => (
+            {[0, 50, 100, 200, 500].map(amt => (
               <button key={amt} onClick={() => setBetAmount(amt)}
                 className={`flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all active:scale-95
                   ${betAmount === amt ? 'text-white shadow grad-cta' : 'bg-white text-gray-500 border border-gray-200'}`}>

@@ -43,11 +43,22 @@ export const usePlayerStore = create(
         return { darkMode: next }
       }),
       lastDailyBonus: '',
+      loginStreak: 0,
       claimDailyBonus: () => {
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
         if (get().lastDailyBonus === today) return false
-        set((s) => ({ coins: s.coins + 500, lastDailyBonus: today }))
-        return true
+
+        // Check if yesterday was claimed → streak continues
+        const yesterday = new Date(Date.now() - 86400000).toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
+        const wasYesterday = get().lastDailyBonus === yesterday
+        const newStreak = wasYesterday ? get().loginStreak + 1 : 1
+
+        // Streak bonus: Day2:+50, Day3-4:+100, Day5-6:+150, Day7+:+200
+        const streakBonus = newStreak >= 7 ? 200 : newStreak >= 5 ? 150 : newStreak >= 3 ? 100 : newStreak >= 2 ? 50 : 0
+        const totalBonus = 300 + streakBonus
+
+        set((s) => ({ coins: s.coins + totalBonus, lastDailyBonus: today, loginStreak: newStreak }))
+        return totalBonus
       },
       addCoins: (n) => set((s) => ({ coins: s.coins + n })),
       spendCoins: (n) => {

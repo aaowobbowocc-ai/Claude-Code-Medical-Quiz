@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { usePlayerStore, getLevelTitle } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import { useDailyMessage } from '../hooks/useDailyMessage'
@@ -14,12 +14,13 @@ const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','
 
 export default function Home() {
   const navigate = useNavigate()
-  const { name, setName, coins, level, claimDailyBonus } = usePlayerStore()
+  const { name, setName, coins, level, claimDailyBonus, loginStreak } = usePlayerStore()
   const [dailyClaimed, setDailyClaimed] = useState(false)
+  const [dailyAmount, setDailyAmount] = useState(0)
 
   useEffect(() => {
-    const claimed = claimDailyBonus()
-    if (claimed) setDailyClaimed(true)
+    const amount = claimDailyBonus()
+    if (amount) { setDailyClaimed(true); setDailyAmount(amount) }
   }, [])
   const { showBanner, isIOS, install, installPrompt, dismiss } = usePWA()
   const { getDueCount } = useBookmarks()
@@ -292,7 +293,10 @@ export default function Home() {
         {/* 每日獎勵 */}
         {dailyClaimed && (
           <div className="bg-amber-400/20 border border-amber-400/30 rounded-2xl px-4 py-3 mt-1 text-center animate-fadeIn">
-            <p className="text-white font-bold text-sm">🎁 每日登入獎勵 +500 金幣！</p>
+            <p className="text-white font-bold text-sm">🎁 每日登入獎勵 +{dailyAmount} 金幣！</p>
+            {loginStreak >= 2 && (
+              <p className="text-amber-300/80 text-xs mt-1">🔥 連續登入 {loginStreak} 天{loginStreak >= 7 ? ' · 最高加成！' : loginStreak >= 5 ? ' · +150 加成' : loginStreak >= 3 ? ' · +100 加成' : ' · +50 加成'}</p>
+            )}
           </div>
         )}
 
@@ -363,8 +367,8 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-3 gap-3">
-          {[['📝','模擬考','100題/120分','/mock-exam'],
-            ['🔥','魔王題','高答錯率挑戰','/boss'],
+          {[['📝','模擬考','歷屆/隨機模擬','/mock-exam'],
+            ['📒','精華筆記','10科高頻考點','/notes'],
             ['🎯','自主練習','練習含AI對手','/practice'],
             ['📖','題庫瀏覽','依年份科目','/browse'],
             ['🏆','排行榜','每週排名','/leaderboard'],
@@ -390,24 +394,40 @@ export default function Home() {
           </button>
         )}
 
-        <div className="flex gap-3 mt-1">
-          {[{ icon:'📚', val:'2000', lbl:'題目' },{ icon:'📅', val:'110–115', lbl:'年份' },{ icon:'🔬', val:'10', lbl:'科目' }]
-            .map(s => (
-            <div key={s.lbl} className="flex-1 bg-white rounded-2xl py-3 flex flex-col items-center shadow-sm border border-gray-100">
-              <span className="text-xl">{s.icon}</span>
-              <span className="font-bold text-medical-dark text-sm">{s.val}</span>
-              <span className="text-gray-400 text-xs">{s.lbl}</span>
-            </div>
-          ))}
+        {/* 使用教學 */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+          <h2 className="font-bold text-base text-medical-dark mb-3">📖 新手上路</h2>
+          <div className="space-y-3">
+            {[
+              { step: '1', icon: '🎯', title: '自主練習', desc: '從科目地圖選擇弱科，10 題快速練習，答完看 AI 詳解' },
+              { step: '2', icon: '⚔️', title: '即時對戰', desc: '開房間邀朋友 PK，或加入公開房間，比速度也比正確率' },
+              { step: '3', icon: '📝', title: '模擬考試', desc: '選歷屆原卷或隨機出題，200 題限時 120 分鐘，模擬真實國考' },
+              { step: '4', icon: '🔥', title: '魔王題挑戰', desc: '全台醫學生答錯率最高的題目，花 50 金幣挑戰，答對 70% 賺 200' },
+              { step: '5', icon: '📋', title: '錯題複習', desc: '系統自動收集你的錯題，間隔複習時會提醒你，記得更牢' },
+              { step: '6', icon: '🪙', title: '金幣系統', desc: '每日登入送金幣，連續登入加碼。用金幣解鎖 AI 解說、模擬考、魔王題' },
+            ].map(item => (
+              <div key={item.step} className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-medical-blue text-white text-sm font-bold flex items-center justify-center shrink-0 mt-0.5">{item.step}</div>
+                <div className="flex-1">
+                  <p className="font-bold text-sm text-medical-dark">{item.icon} {item.title}</p>
+                  <p className="text-xs text-gray-400 mt-0.5 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 bg-medical-ice rounded-xl p-3 text-center">
+            <p className="text-xs text-gray-500">建議路線：<strong className="text-medical-dark">自主練習</strong> → <strong className="text-medical-dark">對戰</strong> → <strong className="text-medical-dark">模擬考</strong></p>
+            <p className="text-xs text-gray-400 mt-1">先練熟基礎，再用對戰提速，最後模擬考驗收！</p>
+          </div>
         </div>
 
         {/* SEO 內容區塊 */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 text-sm text-gray-500 leading-relaxed space-y-3">
+        <article className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 text-sm text-gray-500 leading-relaxed space-y-3">
           <h2 className="font-bold text-base text-medical-dark">關於醫學知識王</h2>
           <p>
-            醫學知識王是專為醫師國考第一階段設計的免費題庫練習平台，收錄 110 至 115 年度超過 2000 題考古題，
+            醫學知識王是專為<strong>醫師國考第一階段</strong>設計的免費題庫練習平台，收錄 110 至 115 年度超過 2000 題考古題，
             涵蓋解剖學、生理學、生化學、藥理學、微生物與免疫學、寄生蟲學、病理學、組織學、胚胎學、公共衛生等 10 大基礎醫學科目。
-            平台提供即時對戰、AI 題目解說、模擬考試（完整模擬醫學一＋醫學二，120/200 及格制）、
+            平台提供<Link to="/lobby" className="text-medical-blue underline">即時對戰</Link>、AI 題目解說、<Link to="/mock-exam" className="text-medical-blue underline">模擬考試</Link>（完整模擬醫學一＋醫學二，120/200 及格制）、
             錯題間隔複習等功能，讓醫學生在互動中高效備考。無需註冊，完全免費。
           </p>
 
@@ -431,17 +451,19 @@ export default function Home() {
             <strong>組織學：</strong>各組織的顯微結構與功能特徵，光學與電子顯微鏡下的辨識。
             <strong>胚胎學：</strong>人體發育過程、先天異常的成因與機制。
             <strong>公共衛生：</strong>流行病學研究設計、生物統計基本概念、衛生政策與預防醫學。
+            所有科目皆可在<Link to="/map" className="text-medical-blue underline">科目地圖</Link>中自由選擇練習，或透過<Link to="/browse" className="text-medical-blue underline">題庫瀏覽</Link>依年度與科目篩選。
           </p>
 
           <h3 className="font-bold text-medical-dark">平台功能特色</h3>
-          <p>
-            <strong>即時對戰：</strong>邀請同學組隊對戰，在競爭中提升答題速度與正確率，對戰結果即時顯示排行榜。
-            <strong>模擬考試：</strong>完整模擬國考規格，200 題限時作答，自動計算成績並判定是否及格。
-            <strong>AI 智慧解說：</strong>每道題目提供 AI 生成的詳細解析，包含答案說明、選項排除、記憶口訣與臨床應用。
-            <strong>錯題複習：</strong>自動追蹤答錯題目，利用間隔重複原理安排複習時機，有效鞏固弱項。
-            <strong>科目篩選：</strong>可依科目、年度自由篩選練習範圍，針對弱科重點加強。
-            <strong>學習歷程：</strong>完整記錄每日練習量、答對率、各科表現趨勢，量化你的備考進度。
-          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong><Link to="/lobby" className="text-medical-blue underline">即時對戰</Link>：</strong>邀請同學組隊對戰，在競爭中提升答題速度與正確率，對戰結果即時顯示排行榜。</li>
+            <li><strong><Link to="/mock-exam" className="text-medical-blue underline">模擬考試</Link>：</strong>支援歷屆考題原卷作答（110-115 年）與按比例隨機出題，完整模擬國考 200 題限時規格。</li>
+            <li><strong>AI 智慧解說：</strong>每道題目提供 AI 生成的詳細解析，包含答案說明、選項排除、記憶口訣與臨床應用。</li>
+            <li><strong>錯題複習：</strong>自動追蹤答錯題目，利用間隔重複原理安排複習時機，有效鞏固弱項。</li>
+            <li><strong><Link to="/map" className="text-medical-blue underline">科目篩選</Link>：</strong>可依科目、年度自由篩選練習範圍，針對弱科重點加強。</li>
+            <li><strong><Link to="/boss" className="text-medical-blue underline">魔王題挑戰</Link>：</strong>挑戰全台醫學生答錯率最高的題目，測試你的實力極限。</li>
+            <li><strong><Link to="/leaderboard" className="text-medical-blue underline">排行榜</Link>：</strong>查看全台醫學生的答題表現排名，激勵持續進步。</li>
+          </ul>
 
           <h3 className="font-bold text-medical-dark">題目來源與免責聲明</h3>
           <p>
@@ -449,8 +471,10 @@ export default function Home() {
             AI 解說由人工智慧自動生成，僅供學習參考，不代表官方標準答案或解釋。
             使用者應以考選部公布之正式資料為準。本平台為非營利性質之免費教育工具，
             旨在協助醫學生高效備考，不收取任何費用。
+            如有任何問題，歡迎透過<Link to="/contact" className="text-medical-blue underline">聯絡我們</Link>頁面反映。
+            使用本平台即表示同意<Link to="/tos" className="text-medical-blue underline">服務條款</Link>與<Link to="/privacy" className="text-medical-blue underline">隱私政策</Link>。
           </p>
-        </div>
+        </article>
 
         <SupportBar setSheet={setSheet} />
 

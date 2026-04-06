@@ -105,7 +105,7 @@ export default function Results() {
         <h1 className="text-3xl font-bold">{isWinner ? '你贏了！' : '再接再厲！'}</h1>
         <p className="opacity-70 mt-1">
           {betWinnings > 0 && `🪙 賭注 +${betWinnings} `}
-          {meetsThreshold ? (isWinner ? '+150 金幣 · +100 EXP' : '+30 金幣 · +30 EXP') : '正確率未達 70%，無基本獎勵'}
+          {meetsThreshold ? (isWinner ? '+120 金幣 · +100 EXP' : '+30 金幣 · +30 EXP') : '正確率未達 70%，無基本獎勵'}
         </p>
         {questionResults.length > 0 && (
           <p className="opacity-50 text-sm mt-1">

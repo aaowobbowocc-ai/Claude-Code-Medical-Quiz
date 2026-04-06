@@ -261,7 +261,9 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
 
       <div className="flex-1 overflow-y-auto px-4 py-4">
         <div className="bg-white rounded-2xl p-4 mb-4 shadow-sm">
-          <p className="text-xs text-gray-400 mb-2">第 {qIdx + 1} / {questions.length} 題</p>
+          <p className="text-xs text-gray-400 mb-2">
+            第 {qIdx + 1} / {questions.length} 題{q.subject_name ? `　·　${q.subject_name}` : ''}
+          </p>
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
         </div>
         <div className="flex flex-col gap-2.5">

@@ -31,6 +31,7 @@ app.use('/meta', apiLimiter);
 app.use('/leaderboard/submit', submitLimiter);
 app.use('/explain', submitLimiter);
 app.use('/feedback', submitLimiter);
+app.use('/report', submitLimiter);
 app.use('/board', rateLimit({ windowMs: 60 * 1000, max: 30, standardHeaders: true, legacyHeaders: false }));
 
 const server = http.createServer(app);

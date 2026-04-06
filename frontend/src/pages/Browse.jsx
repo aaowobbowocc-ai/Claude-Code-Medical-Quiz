@@ -206,6 +206,8 @@ function QuestionCard({ q }) {
               answer={q.answer}
               options={q.options}
               explanation={q.explanation}
+              questionId={q.id}
+              questionText={q.question}
             />
           </div>
         </div>

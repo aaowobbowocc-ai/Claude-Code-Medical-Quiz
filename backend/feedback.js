@@ -1,6 +1,7 @@
 const supabase = require('./supabase');
 
 const DISCORD_WEBHOOK = process.env.DISCORD_WEBHOOK_URL;
+const DISCORD_REPORT_WEBHOOK = process.env.DISCORD_REPORT_WEBHOOK_URL;
 
 async function sendDiscord(entry) {
   if (!DISCORD_WEBHOOK) return;
@@ -25,6 +26,35 @@ async function sendDiscord(entry) {
   }
 }
 
+async function sendReportDiscord(entry) {
+  if (!DISCORD_REPORT_WEBHOOK) return;
+  try {
+    const fields = [
+      { name: '題目 ID', value: entry.questionId || '未知', inline: true },
+      { name: '時間', value: new Date().toISOString().slice(0, 19).replace('T', ' '), inline: true },
+    ];
+    if (entry.questionText) {
+      fields.push({ name: '題目內容', value: entry.questionText.slice(0, 200) });
+    }
+    if (entry.message) {
+      fields.push({ name: '使用者描述', value: entry.message.slice(0, 1024) });
+    }
+    await fetch(DISCORD_REPORT_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        embeds: [{
+          title: '⚠️ 題目錯誤回報',
+          color: 0xef4444,
+          fields,
+        }],
+      }),
+    });
+  } catch (e) {
+    console.error('Discord report notify failed:', e.message);
+  }
+}
+
 function registerRoutes(app) {
   // POST /feedback — user submits feedback
   app.post('/feedback', async (req, res) => {
@@ -42,6 +72,25 @@ function registerRoutes(app) {
 
     // Send Discord notification (non-blocking)
     sendDiscord(entry);
+
+    res.json({ ok: true });
+  });
+
+  // POST /report — user reports a question error
+  app.post('/report', async (req, res) => {
+    const { questionId, questionText, message } = req.body;
+    if (!questionId) {
+      return res.status(400).json({ error: 'questionId is required' });
+    }
+
+    const entry = {
+      questionId,
+      questionText: (questionText || '').slice(0, 300),
+      message: (message || '').slice(0, 500),
+    };
+
+    // Send to Discord report channel (non-blocking)
+    sendReportDiscord(entry);
 
     res.json({ ok: true });
   });

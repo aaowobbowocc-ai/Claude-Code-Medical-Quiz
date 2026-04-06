@@ -23,7 +23,7 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
               style={{ background: q.correct ? answerColor : wrongColor }}>
           {q.correct ? '✓ 答對' : '✗ 答錯'}
         </span>
-        <span className="text-xs text-gray-400 flex-1">第 {index + 1} 題</span>
+        <span className="text-xs text-gray-400 flex-1">第 {index + 1} 題{q.subject_name ? `　·　${q.subject_name}` : ''}</span>
         <button onClick={() => onToggleBookmark(q)}
                 className="text-sm mr-1" title={isBookmarked ? '取消收藏' : '收藏錯題'}>
           {isBookmarked ? '⭐' : '☆'}
@@ -87,6 +87,8 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
               answer={q.answer}
               options={q.options}
               explanation={q.explanation}
+              questionId={q.id}
+              questionText={q.question}
             />
           </div>
         </div>

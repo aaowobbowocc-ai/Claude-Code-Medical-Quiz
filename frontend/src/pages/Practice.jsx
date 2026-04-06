@@ -338,6 +338,14 @@ function PracticeGame({ config, onFinish }) {
       {/* ── Question ─────────────────────────────────────────── */}
       <div className="flex-1 overflow-y-auto px-4 py-4">
         <div className="bg-white rounded-2xl p-4 mb-4 shadow-sm">
+          {(q.subject_name || q.roc_year) && (
+            <p className="text-xs text-gray-400 font-mono mb-2">
+              {q.roc_year && q.session
+                ? `${q.roc_year}(${q.session === '第一次' ? '一' : '二'})-${q.number}`
+                : q.number ? `#${q.number}` : ''}
+              {q.subject_name ? `　${q.subject_name}` : ''}
+            </p>
+          )}
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
         </div>
 
@@ -406,6 +414,8 @@ function PracticeGame({ config, onFinish }) {
               answer={q?.answer}
               options={q?.options}
               explanation={q?.explanation}
+              questionId={q?.id}
+              questionText={q?.question}
             />
           </div>
         )}

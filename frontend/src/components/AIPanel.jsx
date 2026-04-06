@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+
 /* Render markdown-lite text with bold, bullets */
 function renderText(text) {
   if (!text) return null
@@ -24,9 +26,12 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 200 }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 200, questionId, questionText }) {
   const [showAI, setShowAI] = useState(false)
   const [reportSent, setReportSent] = useState(false)
+  const [showReportForm, setShowReportForm] = useState(false)
+  const [reportText, setReportText] = useState('')
+  const [reportSending, setReportSending] = useState(false)
 
   const hasExplanation = !!explanation
 
@@ -38,7 +43,10 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
           <div className="flex items-center justify-between mb-1.5">
             <p className="text-xs font-semibold text-medical-teal tracking-wide">📋 參考答案</p>
             <button
-              onClick={() => setReportSent(true)}
+              onClick={() => {
+                if (reportSent) return
+                setShowReportForm(v => !v)
+              }}
               disabled={reportSent}
               className={`text-xs px-2 py-0.5 rounded-lg transition-colors ${
                 reportSent
@@ -53,6 +61,45 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
             <span className="font-bold text-medical-teal text-base shrink-0 w-5">{answer}</span>
             <span className="text-sm text-gray-700 leading-snug">{options[answer]}</span>
           </div>
+          {showReportForm && !reportSent && (
+            <div className="mt-3 pt-3 border-t border-gray-100">
+              <textarea
+                className="w-full border border-gray-200 rounded-xl px-3 py-2 text-xs resize-none outline-none focus:border-red-300 transition-colors"
+                rows={2}
+                placeholder="請描述問題（例：答案有誤、選項缺漏、題目不完整...）"
+                value={reportText}
+                onChange={e => setReportText(e.target.value)}
+                maxLength={500}
+              />
+              <div className="flex justify-end gap-2 mt-2">
+                <button
+                  onClick={() => { setShowReportForm(false); setReportText('') }}
+                  className="text-xs px-3 py-1.5 rounded-lg bg-gray-100 text-gray-500 active:bg-gray-200"
+                >取消</button>
+                <button
+                  onClick={async () => {
+                    setReportSending(true)
+                    try {
+                      await fetch(`${BACKEND}/report`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                          questionId: questionId || '未知',
+                          questionText: questionText || '',
+                          message: reportText.trim(),
+                        }),
+                      })
+                      setReportSent(true)
+                      setShowReportForm(false)
+                    } catch {}
+                    setReportSending(false)
+                  }}
+                  disabled={reportSending}
+                  className="text-xs px-3 py-1.5 rounded-lg bg-red-500 text-white font-medium active:bg-red-600 disabled:opacity-50"
+                >{reportSending ? '送出中...' : '送出回報'}</button>
+              </div>
+            </div>
+          )}
         </div>
       )}
 

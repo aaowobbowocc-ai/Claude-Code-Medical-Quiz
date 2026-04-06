@@ -38,7 +38,7 @@ function registerRoutes(app) {
       name: (name || '匿名').slice(0, 30),
     };
 
-    await supabase.from('feedback').insert(entry);
+    if (supabase) await supabase.from('feedback').insert(entry);
 
     // Send Discord notification (non-blocking)
     sendDiscord(entry);
@@ -52,6 +52,7 @@ function registerRoutes(app) {
     if (req.query.key !== ADMIN_KEY) {
       return res.status(403).json({ error: 'unauthorized' });
     }
+    if (!supabase) return res.json([]);
     const { data } = await supabase
       .from('feedback')
       .select('*')

@@ -8,6 +8,7 @@ function getWeekKey() {
 }
 
 async function recordScore(name, correct, total, level) {
+  if (!supabase) return;
   const week = getWeekKey();
 
   // Try upsert: if (week, name) exists, increment; otherwise insert
@@ -41,8 +42,8 @@ async function recordScore(name, correct, total, level) {
 
 function registerRoutes(app) {
   app.get('/leaderboard', async (req, res) => {
+    if (!supabase) return res.json({ week: getWeekKey(), players: [], availableWeeks: [] });
     const week = req.query.week || getWeekKey();
-
     const { data } = await supabase
       .from('leaderboard')
       .select('name, played, correct, total, score, level')

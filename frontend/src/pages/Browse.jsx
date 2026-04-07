@@ -1,28 +1,20 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { usePlayerStore } from '../store/gameStore'
 import { useExplain } from '../hooks/useAI'
 import { ExplainPanel } from '../components/AIPanel'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
-const EXAMS = [
-  { label: '110年一', year: '110', session: '第一次' },
-  { label: '110年二', year: '110', session: '第二次' },
-  { label: '111年一', year: '111', session: '第一次' },
-  { label: '111年二', year: '111', session: '第二次' },
-  { label: '112年一', year: '112', session: '第一次' },
-  { label: '112年二', year: '112', session: '第二次' },
-  { label: '113年一', year: '113', session: '第一次' },
-  { label: '113年二', year: '113', session: '第二次' },
-  { label: '114年一', year: '114', session: '第一次' },
-  { label: '114年二', year: '114', session: '第二次' },
-  { label: '115年一', year: '115', session: '第一次' },
-]
+// Dynamic exam list built from /meta data — no longer hardcoded
 const STAGE_COLORS = {
   anatomy:      '#3B82F6', physiology:  '#EF4444', biochemistry: '#8B5CF6',
   histology:    '#6366F1', embryology:  '#818CF8', microbiology:'#10B981',
   parasitology: '#D97706', pharmacology: '#F97316', pathology:   '#DC2626',
   public_health:'#0D9488', unknown:      '#94A3B8',
+  // Paper-based colors for non-doctor1 exams
+  paper1: '#3B82F6', paper2: '#10B981', paper3: '#8B5CF6', paper4: '#F97316',
+  paper5: '#EF4444', paper6: '#0D9488',
 }
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F97316', D: '#EF4444' }
 
@@ -124,10 +116,11 @@ function QuestionCard({ q }) {
   const [open, setOpen] = useState(false)
   const [explainReq, setExplainReq] = useState(false)
   const [classifying, setClassifying] = useState(false)
-  const [localTag, setLocalTag] = useState(q.subject_tag)
+  const [localTag, setLocalTag] = useState(q.subject_tag || '')
   const tagColor = STAGE_COLORS[localTag] || '#94A3B8'
-  const tagName  = localTag === 'unknown'
-    ? '未分類' : (SUBJECTS.find(s => s.tag === localTag)?.name || q.subject_name)
+  const tagName  = !localTag || localTag === 'unknown'
+    ? (q.paper_name || q.subject_name || q.subject || '未分類')
+    : (SUBJECTS.find(s => s.tag === localTag)?.name || q.paper_name || q.subject_name || '未分類')
   const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, explain, remaining: explainRemaining } = useExplain()
 
   const handleVoteDone = (tag) => {
@@ -144,7 +137,7 @@ function QuestionCard({ q }) {
           {tagName}
         </span>
         <span className="text-xs text-gray-400">{q.roc_year}年{q.session}</span>
-        {localTag === 'unknown' && (
+        {localTag === 'unknown' && (usePlayerStore.getState().exam || 'doctor1') === 'doctor1' && (
           <button
             onClick={() => setClassifying(true)}
             className="text-xs text-amber-500 border border-amber-300 px-2 py-0.5 rounded-full bg-amber-50 active:scale-95 transition-transform"
@@ -182,12 +175,23 @@ function QuestionCard({ q }) {
       {/* Options + answer */}
       {open && (
         <div className="px-4 pb-4 flex flex-col gap-1.5 border-t border-gray-50">
+          {q.answer === '送分' && (
+            <div className="px-3 py-2 rounded-xl text-sm bg-amber-50 text-amber-700 font-medium">
+              ⚠️ 本題一律給分（試題疑義後送分）
+            </div>
+          )}
+          {q.answer_corrected && q.answer !== '送分' && (
+            <div className="px-3 py-2 rounded-xl text-sm bg-blue-50 text-blue-700 font-medium">
+              📝 答案已更正：{q.answer.replace(',', ' 或 ')} 均給分{q.original_answer ? `（原答案：${q.original_answer}）` : ''}
+            </div>
+          )}
           {Object.entries(q.options).map(([letter, text]) => {
-            const isAnswer = q.answer === letter
+            const isVoided = q.answer === '送分'
+            const isAnswer = isVoided ? false : (q.answer?.includes(',') ? q.answer.split(',').includes(letter) : q.answer === letter)
             return (
               <div key={letter}
                    className={`flex items-start gap-2.5 px-3 py-2.5 rounded-xl text-sm
-                     ${isAnswer ? 'text-white font-medium' : 'bg-gray-50 text-gray-600'}`}
+                     ${isAnswer ? 'text-white font-medium' : isVoided ? 'bg-green-50 text-gray-600' : 'bg-gray-50 text-gray-600'}`}
                    style={isAnswer ? { background: tagColor } : {}}>
                 <span className="font-bold shrink-0 w-4">{letter}</span>
                 <span className="leading-snug">{text}</span>
@@ -211,6 +215,7 @@ function QuestionCard({ q }) {
               rocYear={q.roc_year}
               session={q.session}
               number={q.number}
+              disputed={q.disputed}
             />
           </div>
         </div>
@@ -240,16 +245,25 @@ export default function Browse() {
   const loaderRef = useRef(null)
   const LIMIT = 15
 
-  // Load meta on mount
+  // Load meta (reactive to exam type)
+  const examType = usePlayerStore(s => s.exam) || 'doctor1'
+  const prevExamRef = useRef(examType)
   useEffect(() => {
-    fetch(`${BACKEND}/meta`).then(r => r.json()).then(setMeta).catch(() => {})
-  }, [])
+    const changed = prevExamRef.current !== examType
+    prevExamRef.current = examType
+    if (changed) {
+      setExam(null); setStageTag(''); setQuery(''); setSearchInput('')
+    }
+    setMeta(null)
+    fetch(`${BACKEND}/meta?exam=${examType}`).then(r => r.json()).then(setMeta).catch(() => {})
+  }, [examType])
 
-  // Fetch questions whenever filters change
+  // Fetch questions
   const fetchQuestions = useCallback(async (reset = false) => {
     setLoading(true)
     const p = reset ? 1 : page
-    const params = new URLSearchParams({ page: p, limit: LIMIT })
+    const currentExam = usePlayerStore.getState().exam || 'doctor1'
+    const params = new URLSearchParams({ page: p, limit: LIMIT, exam: currentExam })
     if (exam?.year)    params.set('year', exam.year)
     if (exam?.session) params.set('session', exam.session)
     if (stageTag)      params.set('subject_tag', stageTag)
@@ -273,7 +287,7 @@ export default function Browse() {
     setHasMore(true)
     fetchQuestions(true)
     try { sessionStorage.setItem('browse-filters', JSON.stringify({ exam, stageTag, query })) } catch {}
-  }, [exam, stageTag, query])
+  }, [exam, stageTag, query, examType])
 
   // Infinite scroll
   useEffect(() => {
@@ -340,24 +354,27 @@ export default function Browse() {
         <div className="overflow-x-auto scrollbar-none">
           <div className="flex gap-2 px-4 pb-3 w-max">
 
-            {/* Exam (year + session combined) */}
+            {/* Exam (year + session combined) — dynamic from /meta */}
             <Chip label="全部考試" active={!exam} color="#1A6B9A"
                   onClick={() => setExam(null)} />
-            {EXAMS.map(e => (
+            {(meta?.exams || []).map(e => (
               <Chip key={e.label} label={e.label} active={exam?.label === e.label} color="#1A6B9A"
                     onClick={() => setExam(exam?.label === e.label ? null : e)} />
             ))}
 
-            <div className="w-px bg-white/20 self-stretch mx-1" />
-
-            {/* Subject / Stage */}
-            <Chip label="全部科目" active={!stageTag} color="#8B5CF6"
-                  onClick={() => setStageTag('')} />
-            {meta?.stages?.filter(s => s.tag !== 'unknown' && s.count > 0).map(s => (
-              <Chip key={s.tag} label={s.name} active={stageTag === s.tag}
-                    color={STAGE_COLORS[s.tag]}
-                    onClick={() => setStageTag(stageTag === s.tag ? '' : s.tag)} />
-            ))}
+            {/* Subject / Stage / Paper — show if exam has stages beyond 'all' */}
+            {meta?.stages?.some(s => s.tag !== 'all' && s.tag !== 'unknown' && (s.count > 0 || s.count === undefined)) && (
+              <>
+                <div className="w-px bg-white/20 self-stretch mx-1" />
+                <Chip label="全部科目" active={!stageTag} color="#8B5CF6"
+                      onClick={() => setStageTag('')} />
+                {meta.stages.filter(s => s.tag !== 'all' && s.tag !== 'unknown').map(s => (
+                  <Chip key={s.tag} label={s.name} active={stageTag === s.tag}
+                        color={STAGE_COLORS[s.tag] || '#94A3B8'}
+                        onClick={() => setStageTag(stageTag === s.tag ? '' : s.tag)} />
+                ))}
+              </>
+            )}
           </div>
         </div>
       </div>

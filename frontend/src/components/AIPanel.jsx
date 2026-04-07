@@ -26,7 +26,7 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 200, questionId, questionText, rocYear, session, number }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 200, questionId, questionText, rocYear, session, number, disputed }) {
   const [showAI, setShowAI] = useState(false)
   const [reportSent, setReportSent] = useState(false)
   const [showReportForm, setShowReportForm] = useState(false)
@@ -61,6 +61,12 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
             <span className="font-bold text-medical-teal text-base shrink-0 w-5">{answer}</span>
             <span className="text-sm text-gray-700 leading-snug">{options[answer]}</span>
           </div>
+          {disputed && (
+            <div className="mt-2 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2">
+              <p className="text-xs font-semibold text-amber-700">⚠️ 爭議題</p>
+              <p className="text-xs text-amber-600 mt-0.5">{disputed}</p>
+            </div>
+          )}
           {showReportForm && !reportSent && (
             <div className="mt-3 pt-3 border-t border-gray-100">
               <textarea

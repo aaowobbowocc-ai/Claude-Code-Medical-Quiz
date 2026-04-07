@@ -8,19 +8,57 @@ import SmartBanner from '../components/SmartBanner'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
-const STAGES = [
-  { id: 0,  name: '隨機混合',   icon: '🎲', color: '#64748B' },
-  { id: 1,  name: '解剖學殿堂', icon: '🦴', color: '#3B82F6' },
-  { id: 2,  name: '生理學之谷', icon: '💓', color: '#EF4444' },
-  { id: 3,  name: '生化迷宮',   icon: '⚗️',  color: '#8B5CF6' },
-  { id: 4,  name: '組織學祕境', icon: '🔬', color: '#6366F1' },
-  { id: 10, name: '胚胎學源脈', icon: '🧬', color: '#818CF8' },
-  { id: 5,  name: '微免聖域',   icon: '🦠', color: '#10B981' },
-  { id: 6,  name: '寄生蟲荒原', icon: '🪱', color: '#D97706' },
-  { id: 7,  name: '藥理決鬥場', icon: '💊', color: '#F97316' },
-  { id: 8,  name: '病理學深淵', icon: '🩺', color: '#DC2626' },
-  { id: 9,  name: '公衛學巔峰', icon: '📊', color: '#0D9488' },
-]
+// Stage icon/color by tag or fallback
+const STAGE_STYLE = {
+  all:       { icon: '🎲', color: '#64748B' },
+  // Doctor1
+  anatomy:   { icon: '🦴', color: '#3B82F6' }, physiology:   { icon: '💓', color: '#EF4444' },
+  biochemistry: { icon: '⚗️', color: '#8B5CF6' }, histology:  { icon: '🔬', color: '#6366F1' },
+  embryology: { icon: '🧬', color: '#818CF8' }, microbiology: { icon: '🦠', color: '#10B981' },
+  parasitology: { icon: '🪱', color: '#D97706' }, pharmacology: { icon: '💊', color: '#F97316' },
+  pathology: { icon: '🩺', color: '#DC2626' }, public_health: { icon: '📊', color: '#0D9488' },
+  // Doctor2
+  internal_medicine: { icon: '🫀', color: '#EF4444' }, infectious_disease: { icon: '🦠', color: '#10B981' },
+  hematology: { icon: '🩸', color: '#DC2626' }, psychiatry: { icon: '🧠', color: '#8B5CF6' },
+  dermatology: { icon: '🧴', color: '#F59E0B' }, pediatrics: { icon: '👶', color: '#3B82F6' },
+  neurology: { icon: '🧬', color: '#6366F1' }, surgery: { icon: '🔪', color: '#059669' },
+  orthopedics: { icon: '🦴', color: '#D97706' }, urology: { icon: '🫘', color: '#0D9488' },
+  anesthesia: { icon: '😴', color: '#64748B' }, ophthalmology: { icon: '👁️', color: '#2563EB' },
+  ent: { icon: '👂', color: '#7C3AED' }, obstetrics_gynecology: { icon: '🤰', color: '#EC4899' },
+  rehabilitation: { icon: '🏋️', color: '#0891B2' }, emergency: { icon: '🚑', color: '#EF4444' },
+  medical_law_ethics: { icon: '⚖️', color: '#374151' },
+  // Dental1
+  dental_anatomy: { icon: '🦷', color: '#3B82F6' }, oral_anatomy: { icon: '👄', color: '#2563EB' },
+  tooth_morphology: { icon: '🦷', color: '#8B5CF6' }, embryology_histology: { icon: '🔬', color: '#6366F1' },
+  oral_pathology: { icon: '🩺', color: '#DC2626' }, dental_pharmacology: { icon: '💊', color: '#F97316' },
+  dental_microbiology: { icon: '🦠', color: '#10B981' }, oral_physiology: { icon: '💓', color: '#EF4444' },
+  // Dental2
+  oral_surgery: { icon: '🔪', color: '#059669' }, periodontics: { icon: '🦷', color: '#0D9488' },
+  orthodontics: { icon: '😁', color: '#3B82F6' }, pediatric_dentistry: { icon: '👶', color: '#8B5CF6' },
+  endodontics: { icon: '🦷', color: '#DC2626' }, prosthodontics_rehab: { icon: '🧩', color: '#64748B' },
+  operative_dentistry: { icon: '🪥', color: '#F97316' }, dental_materials: { icon: '🧪', color: '#D97706' },
+  fixed_prosthodontics: { icon: '👑', color: '#7C3AED' }, removable_prosthodontics: { icon: '🫦', color: '#EC4899' },
+  oral_diagnosis: { icon: '🔍', color: '#2563EB' }, dental_radiology: { icon: '📷', color: '#6366F1' },
+  dental_public_health: { icon: '📊', color: '#0D9488' }, dental_ethics_law: { icon: '⚖️', color: '#374151' },
+  // Pharma1
+  medicinal_chemistry: { icon: '⚗️', color: '#8B5CF6' }, pharmaceutical_analysis: { icon: '📊', color: '#2563EB' },
+  pharmacognosy: { icon: '🌿', color: '#059669' }, pharmaceutics: { icon: '💊', color: '#F97316' },
+  biopharmaceutics: { icon: '🧬', color: '#6366F1' },
+  // Pharma2
+  dispensing: { icon: '🏥', color: '#3B82F6' }, clinical_pharmacy: { icon: '💉', color: '#EF4444' },
+  therapeutics: { icon: '💊', color: '#D97706' }, pharmacotherapy: { icon: '🩺', color: '#DC2626' },
+  pharmacy_law: { icon: '⚖️', color: '#374151' },
+}
+
+const FALLBACK_COLORS = ['#3B82F6', '#EF4444', '#10B981', '#F97316', '#8B5CF6', '#D97706', '#6366F1', '#0D9488', '#DC2626', '#EC4899']
+
+function formatStages(raw) {
+  if (!raw || !raw.length) return [{ id: 0, name: '全部題目', icon: '🎲', color: '#64748B' }]
+  return raw.map((s, i) => {
+    const style = STAGE_STYLE[s.tag] || { icon: '📝', color: FALLBACK_COLORS[i % FALLBACK_COLORS.length] }
+    return { id: s.id, name: s.name, icon: style.icon, color: style.color, count: s.count }
+  })
+}
 
 const DIFFICULTIES = [
   { id: 'easy',   label: '初級',   icon: '🌱', desc: '30秒作答・無AI對手',   time: 30, ai: false },
@@ -73,10 +111,21 @@ function shuffle(arr) {
 
 /* ── Setup screen ─────────────────────────────────────────────── */
 function SetupScreen({ onStart, onBack }) {
+  const examType = usePlayerStore(s => s.exam) || 'doctor1'
+  const [stages, setStages] = useState([{ id: 0, name: '全部題目', icon: '🎲', color: '#64748B' }])
   const last = getLastConfig()
   const [stage, setStage]     = useState(last.stage ?? 0)
   const [diff, setDiff]       = useState(last.diff ?? 'medium')
   const [count, setCount]     = useState(last.count ?? 10)
+
+  useEffect(() => {
+    fetch(`${BACKEND}/meta?exam=${examType}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.stages) setStages(formatStages(data.stages))
+      })
+      .catch(() => {})
+  }, [examType])
   const history = getPracticeHistory()
   const recentPct = history.slice(0, 10)
 
@@ -92,14 +141,14 @@ function SetupScreen({ onStart, onBack }) {
         {/* Subject */}
         <div>
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2.5">選擇科目</p>
-          <div className="grid grid-cols-2 gap-2">
-            {STAGES.map(s => (
+          <div className={`grid gap-2 ${stages.length > 6 ? 'grid-cols-3' : 'grid-cols-2'}`}>
+            {stages.map(s => (
               <button key={s.id} onClick={() => setStage(s.id)}
-                      className={`flex items-center gap-2.5 px-3 py-3 rounded-xl text-sm font-medium transition-all active:scale-95 border
+                      className={`flex items-center gap-2 px-2.5 py-2.5 rounded-xl text-sm font-medium transition-all active:scale-95 border
                         ${stage === s.id ? 'text-white border-transparent shadow' : 'bg-white text-gray-700 border-gray-100 shadow-sm'}`}
                       style={stage === s.id ? { background: s.color } : {}}>
-                <span className="text-xl shrink-0">{s.icon}</span>
-                <span className="text-left leading-tight text-xs">{s.name}</span>
+                <span className="text-lg shrink-0">{s.icon}</span>
+                <span className="text-left leading-tight text-[11px]">{s.name}</span>
               </button>
             ))}
           </div>
@@ -168,7 +217,8 @@ function SetupScreen({ onStart, onBack }) {
         <button
           onClick={() => {
             saveLastConfig({ stage, diff, count })
-            onStart({ stage, diff, count })
+            const s = stages.find(s => s.id === stage)
+            onStart({ stage, diff, count, stageName: s?.name || '練習' })
           }}
           className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform grad-cta"
         >
@@ -182,8 +232,9 @@ function SetupScreen({ onStart, onBack }) {
 /* ── Practice game screen ─────────────────────────────────────── */
 function PracticeGame({ config, onFinish }) {
   const { play } = useSound()
+  const examType = usePlayerStore(s => s.exam) || 'doctor1'
   const diffConfig = DIFFICULTIES.find(d => d.id === config.diff)
-  const stageInfo  = STAGES.find(s => s.id === config.stage)
+  const stageInfo  = { name: config.stageName || '練習', icon: '📝' }
 
   const [questions, setQuestions] = useState([])
   const [qIdx, setQIdx]           = useState(0)
@@ -202,7 +253,8 @@ function PracticeGame({ config, onFinish }) {
 
   // Load questions — use fast /random endpoint
   useEffect(() => {
-    fetch(`${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}`)
+    const exam = usePlayerStore.getState().exam || 'doctor1'
+    fetch(`${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}&exam=${exam}`)
       .then(r => r.json())
       .then(data => {
         setQuestions(data.questions)
@@ -419,6 +471,7 @@ function PracticeGame({ config, onFinish }) {
               rocYear={q?.roc_year}
               session={q?.session}
               number={q?.number}
+              disputed={q?.disputed}
             />
           </div>
         )}
@@ -522,7 +575,7 @@ function PracticeResults({ result, config, onRestart, onHome }) {
         {/* LINE Share */}
         <button
           onClick={() => {
-            const stageName = STAGES.find(s => s.id === config.stage)?.name || '隨機'
+            const stageName = config.stageName || '隨機'
             const text = `醫學知識王｜${stageName} ${pct}% (${correct}/${total})\n${won ? '🏆 贏了！' : '💪 繼續加油'}\n一起來挑戰 👉 ${window.location.origin}`
             window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(window.location.origin)}&text=${encodeURIComponent(text)}`, '_blank')
           }}

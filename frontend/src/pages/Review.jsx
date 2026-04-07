@@ -44,7 +44,7 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
       {open && (
         <div className="px-4 pb-4 flex flex-col gap-1.5 border-t border-gray-50">
           {Object.entries(q.options).map(([letter, text]) => {
-            const isCorrect  = q.answer === letter
+            const isCorrect  = q.answer === '送分' || (q.answer?.includes(',') ? q.answer.split(',').includes(letter) : q.answer === letter)
             const isMyWrong  = q.myAnswer === letter && !q.correct
 
             let bg = 'bg-gray-50'
@@ -68,7 +68,7 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
           {!q.correct && q.myAnswer && (
             <p className="text-xs text-gray-400 mt-1 px-1">
               你選了 <span className="font-semibold text-red-500">{q.myAnswer}</span>，
-              正確答案是 <span className="font-semibold text-green-600">{q.answer}</span>
+              正確答案是 <span className="font-semibold text-green-600">{q.answer === '送分' ? '一律給分' : q.answer?.replace(',', ' 或 ')}</span>
             </p>
           )}
           {!q.myAnswer && (
@@ -92,6 +92,7 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
               rocYear={q.roc_year}
               session={q.session}
               number={q.number}
+              disputed={q.disputed}
             />
           </div>
         </div>

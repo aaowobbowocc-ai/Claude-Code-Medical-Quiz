@@ -121,6 +121,7 @@ export default function Board() {
             </div>
           ))
         )}
+
       </div>
 
       {/* Compose */}

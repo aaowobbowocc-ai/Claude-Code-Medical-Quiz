@@ -1,6 +1,52 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
+// Exam types with paper/pass structure
+export const EXAM_TYPES = [
+  { id: 'doctor1', name: '醫師一階', short: '醫一', icon: '⚕️', totalQ: 200, passScore: 120,
+    papers: [
+      { id: 'paper1', name: '醫學(一)', subjects: '解剖、生理、生化、組織、胚胎', count: 100, stages: '1,2,3,4,10' },
+      { id: 'paper2', name: '醫學(二)', subjects: '微免、寄生蟲、藥理、病理、公衛', count: 100, stages: '5,6,7,8,9' },
+    ],
+  },
+  { id: 'doctor2', name: '醫師二階', short: '醫二', icon: '🏥', totalQ: 320, passScore: 192, totalPoints: 400,
+    papers: [
+      { id: 'paper3', name: '醫學(三)', subjects: '內科、傳染病、血液、精神、皮膚', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper4', name: '醫學(四)', subjects: '小兒、神經', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper5', name: '醫學(五)', subjects: '外科、骨科、泌尿、麻醉、眼、耳鼻喉', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper6', name: '醫學(六)', subjects: '婦產、復健、急診、醫療法規、倫理', count: 80, pointsPerQ: 1.25 },
+    ],
+  },
+  { id: 'dental1', name: '牙醫一階', short: '牙一', icon: '🦷', totalQ: 160, passScore: 96, totalPoints: 200,
+    papers: [
+      { id: 'paper1', name: '卷一', subjects: '牙醫解剖、口腔解剖、牙體形態、胚胎組織', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper2', name: '卷二', subjects: '口腔病理、牙科藥理、微免、口腔生理', count: 80, pointsPerQ: 1.25 },
+    ],
+  },
+  { id: 'dental2', name: '牙醫二階', short: '牙二', icon: '🪥', totalQ: 320, passScore: 192, totalPoints: 400,
+    papers: [
+      { id: 'paper1', name: '卷一', subjects: '口腔顎面外科、牙周病學', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper2', name: '卷二', subjects: '齒顎矯正、兒童牙科、復健牙醫、牙髓病', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper3', name: '卷三', subjects: '牙體復形、牙科材料、固定/活動/全口補綴', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper4', name: '卷四', subjects: '口腔診斷、影像、公衛、倫理、法規', count: 80, pointsPerQ: 1.25 },
+    ],
+  },
+  { id: 'pharma1', name: '藥師一階', short: '藥一', icon: '💊', totalQ: 240, passScore: 180, totalPoints: 300,
+    papers: [
+      { id: 'paper1', name: '卷一', subjects: '藥理學、藥物化學', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper2', name: '卷二', subjects: '藥物分析、生藥學（含中藥學）', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper3', name: '卷三', subjects: '藥劑學、生物藥劑學', count: 80, pointsPerQ: 1.25 },
+    ],
+  },
+  { id: 'pharma2', name: '藥師二階', short: '藥二', icon: '🧪', totalQ: 210, passScore: 180, totalPoints: 300,
+    papers: [
+      { id: 'paper1', name: '卷一', subjects: '調劑學、臨床藥學、治療學', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper2', name: '卷二', subjects: '藥物治療學', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper3', name: '卷三', subjects: '藥事行政與法規', count: 50, pointsPerQ: 2.0 },
+    ],
+  },
+]
+
 // Level title tiers
 const LEVEL_TITLES = [
   { min: 1,  title: '初心學徒', icon: '📖' },
@@ -33,6 +79,8 @@ export const usePlayerStore = create(
       exp: 0,
       unlockedStages: [0, 1], // 0 = random, 1 = anatomy
       darkMode: false,
+      exam: 'doctor1',
+      setExam: (exam) => set({ exam }),
       setName: (name) => set({ name }),
       setAvatar: (avatar) => set({ avatar }),
       toggleDarkMode: () => set((s) => {

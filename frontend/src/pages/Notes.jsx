@@ -168,21 +168,23 @@ export default function Notes() {
       </div>
 
       <div className="flex-1 px-4 py-4 flex flex-col gap-2.5">
-        {SUBJECTS.map(subj => (
-          <button key={subj.id} onClick={() => setSelectedSubject(subj.id)}
-            className="w-full text-left bg-white rounded-2xl px-5 py-4 border border-gray-100 shadow-sm transition-all active:scale-[0.97]">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"
-                   style={{ backgroundColor: subj.color + '15' }}>
-                {subj.icon}
+        {SUBJECTS.map((subj, idx) => (
+          <React.Fragment key={subj.id}>
+            <button onClick={() => setSelectedSubject(subj.id)}
+              className="w-full text-left bg-white rounded-2xl px-5 py-4 border border-gray-100 shadow-sm transition-all active:scale-[0.97]">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"
+                     style={{ backgroundColor: subj.color + '15' }}>
+                  {subj.icon}
+                </div>
+                <div className="flex-1">
+                  <p className="font-bold text-base text-medical-dark">{subj.name}</p>
+                  <p className="text-gray-400 text-xs mt-0.5">{subj.cards.length} 張精華卡 · {subj.cards.map(c => c.title).slice(0, 2).join('、')}…</p>
+                </div>
+                <span className="text-gray-300 text-xl">›</span>
               </div>
-              <div className="flex-1">
-                <p className="font-bold text-base text-medical-dark">{subj.name}</p>
-                <p className="text-gray-400 text-xs mt-0.5">{subj.cards.length} 張精華卡 · {subj.cards.map(c => c.title).slice(0, 2).join('、')}…</p>
-              </div>
-              <span className="text-gray-300 text-xl">›</span>
-            </div>
-          </button>
+            </button>
+          </React.Fragment>
         ))}
       </div>
     </div>

@@ -80,7 +80,8 @@ export default function BossChallenge() {
       return
     }
     setPaid(true)
-    fetch(`${BACKEND}/questions/hardest?count=10`)
+    const examType = usePlayerStore.getState().exam || 'doctor1'
+    fetch(`${BACKEND}/questions/hardest?count=10&exam=${examType}`)
       .then(r => r.json())
       .then(data => { setQuestions(data.questions || []); setLoading(false) })
       .catch(() => { setLoading(false); addCoins(BOSS_FEE) }) // refund on error

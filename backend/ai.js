@@ -44,11 +44,13 @@ async function streamAnthropic(res, prompt, maxTokens = 600) {
   }
 }
 
-function registerRoutes(app, questionsData, stats) {
+function registerRoutes(app, examData, stats) {
   // POST /explain
   app.post('/explain', async (req, res) => {
-    const { question, options, answer, subject_name, user_answer, question_id } = req.body;
+    const { question, options, answer, subject_name, user_answer, question_id, exam } = req.body;
     if (!question || !options || !answer) return res.status(400).json({ error: 'missing fields' });
+
+    const questionsData = examData[exam] || examData.doctor1;
 
     // Try local pre-generated explanation first (no API cost)
     if (question_id) {
@@ -74,7 +76,9 @@ function registerRoutes(app, questionsData, stats) {
     const wrongNote = user_answer && user_answer !== answer
       ? `考生選了 ${user_answer}，但正確答案是 ${answer}。` : '';
 
-    const prompt = `你是一位臺灣醫師國考（一階）的解題老師，用繁體中文回答。
+    const examMeta = examData[exam] || examData.doctor1;
+    const examName = examMeta.metadata?.category || '醫師國考';
+    const prompt = `你是一位臺灣${examName}的解題老師，用繁體中文回答。
 
 科目：${subject_name}
 題目：${question}

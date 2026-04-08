@@ -10,9 +10,22 @@ function shuffle(arr) {
   return a;
 }
 
-function registerRoutes(app, questionsData, stats) {
+// Check if question is single-answer (suitable for practice/PvP)
+// Multi-answer (e.g. "A,B") or voided ("送分") questions are excluded
+function isSingleAnswer(q) {
+  return q.answer && q.answer.length === 1 && q.options[q.answer];
+}
+
+function registerRoutes(app, examData, stats) {
+  // Helper: resolve exam data from query param
+  function resolve(req) {
+    const exam = req.query.exam || 'doctor1';
+    return examData[exam] || examData.doctor1;
+  }
+
   // GET /questions
   app.get('/questions', (req, res) => {
+    const questionsData = resolve(req);
     const { year, session, subject_tag, q, page = 1, limit = 20 } = req.query;
     let list = questionsData.questions;
     if (year)        list = list.filter(x => x.roc_year === year);
@@ -25,13 +38,14 @@ function registerRoutes(app, questionsData, stats) {
     res.json({ total, page: parseInt(page), limit: parseInt(limit), questions: list.slice(start, start + parseInt(limit)) });
   });
 
-  // GET /questions/random
+  // GET /questions/random (practice & PvP — single-answer only)
   app.get('/questions/random', (req, res) => {
+    const questionsData = resolve(req);
     const { stage_id, count = 10 } = req.query;
     const tag = stage_id && parseInt(stage_id) > 0
       ? questionsData.stages.find(s => s.id === parseInt(stage_id))?.tag
       : null;
-    let pool = questionsData.questions.filter(q => q.answer && q.options[q.answer]);
+    let pool = questionsData.questions.filter(isSingleAnswer);
     if (tag) pool = pool.filter(q => q.subject_tag === tag);
     const picked = shuffle(pool).slice(0, parseInt(count));
     res.json({ total: pool.length, questions: picked });
@@ -39,6 +53,7 @@ function registerRoutes(app, questionsData, stats) {
 
   // GET /questions/exam-years — list available historical exams
   app.get('/questions/exam-years', (req, res) => {
+    const questionsData = resolve(req);
     const exams = {};
     for (const q of questionsData.questions) {
       if (!q.answer || !q.options[q.answer]) continue;
@@ -66,33 +81,35 @@ function registerRoutes(app, questionsData, stats) {
 
   // GET /questions/exam — supports historical (year+session) or random (stages) mode
   app.get('/questions/exam', (req, res) => {
+    const questionsData = resolve(req);
     const { stages, count = 100, year, session, subject } = req.query;
 
-    // Historical mode: return exact questions from a specific exam
+    // Historical mode: return ALL questions (including multi-answer & voided) for authentic exam simulation
     if (year && session && subject) {
       const pool = questionsData.questions.filter(q =>
-        q.answer && q.options[q.answer] &&
         q.roc_year === year && q.session === session && q.subject === subject
       );
-      // Return in original question number order
       pool.sort((a, b) => a.number - b.number);
       return res.json({ total: pool.length, questions: pool, mode: 'historical' });
     }
 
-    // Random proportional mode
-    if (!stages) return res.status(400).json({ error: 'stages required (or use year+session+subject for historical)' });
+    // Random mode — if no stages, pick from all questions (single-answer only for random mock)
+    if (!stages) {
+      const target = parseInt(count);
+      const allValid = questionsData.questions.filter(isSingleAnswer);
+      const picked = shuffle(allValid).slice(0, target);
+      return res.json({ total: picked.length, questions: picked, mode: 'random' });
+    }
     const stageIds = stages.split(',').map(Number);
     const tags = stageIds
       .map(id => questionsData.stages.find(s => s.id === id)?.tag)
       .filter(Boolean);
 
-    // Calculate average distribution from all exams for these tags
     const target = parseInt(count);
     const byTag = {};
     for (const tag of tags) {
-      byTag[tag] = questionsData.questions.filter(q => q.answer && q.options[q.answer] && q.subject_tag === tag);
+      byTag[tag] = questionsData.questions.filter(q => isSingleAnswer(q) && q.subject_tag === tag);
     }
-    // Use average proportions from real exams
     const avgDist = {
       anatomy: 33, physiology: 27, biochemistry: 26, histology: 10, embryology: 4,
       microbiology: 30, parasitology: 6, pharmacology: 28, pathology: 22, public_health: 14,
@@ -108,6 +125,13 @@ function registerRoutes(app, questionsData, stats) {
       picked.push(...tagPicked);
       remaining -= tagPicked.length;
     }
+
+    // For exams without subject tags, just pick randomly from all
+    if (picked.length === 0) {
+      const allValid = questionsData.questions.filter(q => q.answer && q.options[q.answer]);
+      picked = shuffle(allValid).slice(0, target);
+    }
+
     picked = shuffle(picked);
     res.json({ total: picked.length, questions: picked, mode: 'random' });
   });
@@ -129,6 +153,7 @@ function registerRoutes(app, questionsData, stats) {
 
   // GET /questions/hardest
   app.get('/questions/hardest', (req, res) => {
+    const questionsData = resolve(req);
     const count = Math.min(parseInt(req.query.count) || 20, 50);
     if (!stats.questionStats) return res.json({ questions: [] });
 
@@ -155,15 +180,31 @@ function registerRoutes(app, questionsData, stats) {
   });
 
   // GET /meta
-  app.get('/meta', (_, res) => {
+  app.get('/meta', (req, res) => {
+    const questionsData = resolve(req);
     const years = {}, sessions = {}, tags = {};
+    const examSet = new Set();
     for (const q of questionsData.questions) {
-      years[q.roc_year]       = (years[q.roc_year]       || 0) + 1;
-      sessions[q.session]     = (sessions[q.session]     || 0) + 1;
-      tags[q.subject_tag]     = (tags[q.subject_tag]     || 0) + 1;
+      if (q.roc_year) years[q.roc_year] = (years[q.roc_year] || 0) + 1;
+      if (q.session)  sessions[q.session] = (sessions[q.session] || 0) + 1;
+      if (q.subject_tag) tags[q.subject_tag] = (tags[q.subject_tag] || 0) + 1;
+      if (q.roc_year && q.session) examSet.add(`${q.roc_year}|${q.session}`);
     }
+    // Build sorted year+session list for filter chips
+    const exams = [...examSet].map(k => {
+      const [year, session] = k.split('|');
+      const shortSession = session === '第一次' ? '一' : session === '第二次' ? '二' : session;
+      return { label: `${year}年${shortSession}`, year, session };
+    }).sort((a, b) => a.year.localeCompare(b.year) || a.session.localeCompare(b.session));
+
+    // Build stages with counts
+    const stagesWithCount = (questionsData.stages || []).map(s => ({
+      ...s,
+      count: s.tag === 'all' ? questionsData.questions.length : (tags[s.tag] || 0),
+    }));
+
     res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=60');
-    res.json({ years, sessions, stages: questionsData.stages });
+    res.json({ years, sessions, exams, stages: stagesWithCount });
   });
 }
 

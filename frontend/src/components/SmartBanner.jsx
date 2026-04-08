@@ -82,7 +82,7 @@ export default function SmartBanner() {
           {adFailed ? '' : '廣告'}
         </span>
         <p className="text-[10px] text-gray-300 text-center flex-1">
-          廣告收益將全數用於維護醫師一階國考題庫伺服器支出
+          廣告收益將全數用於維護國考題庫伺服器支出
         </p>
         <button
           onClick={() => setDismissed(true)}

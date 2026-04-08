@@ -39,17 +39,160 @@ const io = new Server(server, {
   cors: { origin: '*', methods: ['GET', 'POST'] }
 });
 
-// ── Load questions ──────────────────────────────────────────────────────
-const questionsData = JSON.parse(
-  fs.readFileSync(path.join(__dirname, 'questions.json'), 'utf-8')
-);
+// ── Load questions (multi-exam) ─────────────────────────────────────────
+const EXAM_FILES = {
+  doctor1: 'questions.json',
+  doctor2: 'questions-doctor2.json',
+  dental1: 'questions-dental1.json',
+  dental2: 'questions-dental2.json',
+  pharma1: 'questions-pharma1.json',
+  pharma2: 'questions-pharma2.json',
+};
 
-function getQuestionsByStage(stageId) {
-  if (stageId === 0) {
-    // All questions
-    return questionsData.questions.filter(q => q.answer && q.options[q.answer]);
+const EXAM_META = {
+  doctor1: {
+    name: '醫師一階', totalQuestions: 200, passScore: 120, passRate: 0.6,
+    papers: [
+      { id: 'paper1', name: '醫學(一)', subjects: '解剖、生理、生化、組織、胚胎', count: 100, stages: '1,2,3,4,10' },
+      { id: 'paper2', name: '醫學(二)', subjects: '微免、寄生蟲、藥理、病理、公衛', count: 100, stages: '5,6,7,8,9' },
+    ],
+    stages: [
+      { id: 0, tag: 'all', name: '隨機混合' },
+      { id: 1, tag: 'anatomy', name: '解剖學' }, { id: 2, tag: 'physiology', name: '生理學' },
+      { id: 3, tag: 'biochemistry', name: '生物化學' }, { id: 4, tag: 'histology', name: '組織學' },
+      { id: 10, tag: 'embryology', name: '胚胎學' }, { id: 5, tag: 'microbiology', name: '微生物與免疫' },
+      { id: 6, tag: 'parasitology', name: '寄生蟲學' }, { id: 7, tag: 'pharmacology', name: '藥理學' },
+      { id: 8, tag: 'pathology', name: '病理學' }, { id: 9, tag: 'public_health', name: '公共衛生' },
+    ],
+  },
+  doctor2: {
+    name: '醫師二階', totalQuestions: 320, passScore: 192, totalPoints: 400, passRate: 0.6,
+    papers: [
+      { id: 'paper3', name: '醫學(三)', subjects: '內科、傳染病、血液、精神科、皮膚科', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper4', name: '醫學(四)', subjects: '小兒科、神經科', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper5', name: '醫學(五)', subjects: '外科、骨科、泌尿科、麻醉科、眼、耳鼻喉', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper6', name: '醫學(六)', subjects: '婦產科、復健科、急診醫學、醫療法規、醫學倫理', count: 80, pointsPerQ: 1.25 },
+    ],
+    stages: [{ id: 0, tag: 'all', name: '全部' }],
+  },
+  dental1: {
+    name: '牙醫一階', totalQuestions: 160, passScore: 96, totalPoints: 200, passRate: 0.6,
+    papers: [
+      { id: 'paper1', name: '卷一', subjects: '牙醫解剖、口腔解剖、牙體形態、胚胎及組織學', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper2', name: '卷二', subjects: '口腔病理、牙科藥理、微生物及免疫學、口腔生理', count: 80, pointsPerQ: 1.25 },
+    ],
+    stages: [{ id: 0, tag: 'all', name: '全部' }],
+  },
+  dental2: {
+    name: '牙醫二階', totalQuestions: 320, passScore: 192, totalPoints: 400, passRate: 0.6,
+    papers: [
+      { id: 'paper1', name: '卷一', subjects: '口腔顎面外科、牙周病學', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper2', name: '卷二', subjects: '齒顎矯正、兒童牙科、復健牙醫學、牙髓病學', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper3', name: '卷三', subjects: '牙體復形、牙科材料、固定補綴、活動補綴、全口補綴', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper4', name: '卷四', subjects: '口腔診斷、口腔影像、公共衛生、倫理、醫療法規', count: 80, pointsPerQ: 1.25 },
+    ],
+    stages: [{ id: 0, tag: 'all', name: '全部' }],
+  },
+  pharma1: {
+    name: '藥師一階', totalQuestions: 240, passScore: 180, totalPoints: 300, passRate: 0.6,
+    papers: [
+      { id: 'paper1', name: '卷一', subjects: '藥理學、藥物化學', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper2', name: '卷二', subjects: '藥物分析、生藥學（含中藥學）', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper3', name: '卷三', subjects: '藥劑學、生物藥劑學', count: 80, pointsPerQ: 1.25 },
+    ],
+    stages: [{ id: 0, tag: 'all', name: '全部' }],
+  },
+  pharma2: {
+    name: '藥師二階', totalQuestions: 210, passScore: 180, totalPoints: 300, passRate: 0.6,
+    papers: [
+      { id: 'paper1', name: '卷一', subjects: '調劑學、臨床藥學、治療學', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper2', name: '卷二', subjects: '藥物治療學', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper3', name: '卷三', subjects: '藥事行政與法規', count: 50, pointsPerQ: 2.0 },
+    ],
+    stages: [{ id: 0, tag: 'all', name: '全部' }],
+  },
+};
+
+const examData = {};
+for (const [key, file] of Object.entries(EXAM_FILES)) {
+  const filePath = path.join(__dirname, file);
+  if (fs.existsSync(filePath)) {
+    const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    const questions = raw.questions || [];
+    const meta = EXAM_META[key];
+    const papers = meta.papers || [];
+
+    // Assign paper info to each question based on position within year+session groups
+    if (key !== 'doctor1' && papers.length > 0) {
+      // Group questions by year+session
+      const groups = {};
+      questions.forEach((q, idx) => {
+        const gkey = `${q.roc_year}|${q.session}`;
+        if (!groups[gkey]) groups[gkey] = [];
+        groups[gkey].push({ q, idx });
+      });
+
+      for (const items of Object.values(groups)) {
+        // Assign papers based on proportion of paper.count
+        const totalExpected = papers.reduce((s, p) => s + p.count, 0);
+        const boundaries = [];
+        let cumulative = 0;
+        for (const p of papers) {
+          cumulative += Math.round((p.count / totalExpected) * items.length);
+          boundaries.push(cumulative);
+        }
+        // Ensure last boundary covers all items
+        boundaries[boundaries.length - 1] = items.length;
+        items.forEach(({ q }, i) => {
+          const paperIdx = boundaries.findIndex(b => i < b);
+          const actualIdx = paperIdx >= 0 ? paperIdx : papers.length - 1;
+          const paper = papers[actualIdx];
+          q.paper_id = paper.id;
+          q.paper_name = paper.name;
+          q.subject_name = q.subject_name || paper.subjects;
+          q.subject_tag = q.subject_tag || paper.id;
+          // Fix duplicate IDs: append paper suffix
+          if (!q._idFixed) {
+            q.id = `${q.id}_${paper.id}`;
+            q._idFixed = true;
+          }
+        });
+      }
+    }
+
+    // Use stages from JSON data if available (from classification), otherwise build from papers
+    let stages = raw.stages && raw.stages.length > 0
+      ? [{ id: 0, tag: 'all', name: '隨機混合' }, ...raw.stages.filter(s => s.count > 0)]
+      : meta.stages;
+    if (!raw.stages && key !== 'doctor1' && papers.length > 1) {
+      stages = [
+        { id: 0, tag: 'all', name: '全部' },
+        ...papers.map(p => ({ id: p.id, tag: p.id, name: `${p.name}`, subjects: p.subjects })),
+      ];
+    }
+
+    examData[key] = {
+      questions,
+      stages,
+      metadata: raw.metadata || { category: meta.name },
+    };
+    console.log(`Loaded ${key}: ${questions.length} questions, ${stages.length} stages`);
   }
-  return questionsData.questions.filter(q => q.stage_id === stageId && q.answer && q.options[q.answer]);
+}
+
+// Default for backward compatibility
+const questionsData = examData.doctor1;
+
+function getExamData(exam) {
+  return examData[exam] || questionsData;
+}
+
+function getQuestionsByStage(stageId, exam) {
+  const data = getExamData(exam);
+  // PvP/practice: only single-answer questions (exclude multi-answer & voided)
+  const valid = data.questions.filter(q => q.answer && q.answer.length === 1 && q.options[q.answer]);
+  if (stageId === 0) return valid;
+  return valid.filter(q => q.stage_id === stageId);
 }
 
 const { shuffle } = require('./questions-api');
@@ -536,14 +679,35 @@ function trackDailyVisit() {
 
 // ── Register modular routes ────────────────────────────────────────────
 leaderboard.registerRoutes(app);
-questionsApi.registerRoutes(app, questionsData, stats);
-ai.registerRoutes(app, questionsData, stats);
+questionsApi.registerRoutes(app, examData, stats);
+ai.registerRoutes(app, examData, stats);
 feedback.registerRoutes(app);
 board.registerRoutes(app);
 
-// ── Health + stages + stats API ─────────────────────────────────────────
+// ── Health + stages + exams + stats API ─────────────────────────────────
 app.get('/health', (_, res) => res.json({ ok: true }));
-app.get('/stages', (_, res) => res.json(questionsData.stages));
+
+// List available exams
+app.get('/exams', (_, res) => {
+  const list = Object.entries(EXAM_META).map(([id, meta]) => ({
+    id,
+    name: meta.name,
+    questionCount: examData[id]?.questions.length || 0,
+    totalQuestions: meta.totalQuestions,
+    passScore: meta.passScore,
+    passRate: meta.passRate,
+    papers: meta.papers,
+    hasStages: meta.stages.length > 1,
+  }));
+  res.set('Cache-Control', 'public, max-age=3600');
+  res.json(list);
+});
+
+app.get('/stages', (req, res) => {
+  const exam = req.query.exam || 'doctor1';
+  const data = getExamData(exam);
+  res.json(data.stages);
+});
 
 app.get('/stats', (_, res) => {
   const concurrent = io.engine?.clientsCount || 0;

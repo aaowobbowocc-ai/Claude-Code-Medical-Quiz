@@ -112,15 +112,16 @@ function ClassifySheet({ q, onClose }) {
 }
 
 /* ── Question card ───────────────────────────────────────────── */
-function QuestionCard({ q }) {
+function QuestionCard({ q, stageMap }) {
   const [open, setOpen] = useState(false)
   const [explainReq, setExplainReq] = useState(false)
   const [classifying, setClassifying] = useState(false)
   const [localTag, setLocalTag] = useState(q.subject_tag || '')
   const tagColor = STAGE_COLORS[localTag] || '#94A3B8'
+  const stageMeta = stageMap?.[localTag]
   const tagName  = !localTag || localTag === 'unknown'
-    ? (q.paper_name || q.subject_name || q.subject || '未分類')
-    : (SUBJECTS.find(s => s.tag === localTag)?.name || q.paper_name || q.subject_name || '未分類')
+    ? (q.subject_name || q.subject || '未分類')
+    : (stageMeta?.name || q.subject_name || SUBJECTS.find(s => s.tag === localTag)?.name || q.subject || '未分類')
   const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, explain, remaining: explainRemaining } = useExplain()
 
   const handleVoteDone = (tag) => {
@@ -244,6 +245,12 @@ export default function Browse() {
 
   const loaderRef = useRef(null)
   const LIMIT = 15
+
+  // Build tag→name map from meta stages
+  const stageMap = React.useMemo(() => {
+    if (!meta?.stages) return {}
+    return Object.fromEntries(meta.stages.map(s => [s.tag, s]))
+  }, [meta])
 
   // Load meta (reactive to exam type)
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
@@ -389,7 +396,7 @@ export default function Browse() {
         )}
 
         {questions.map(q => (
-          <QuestionCard key={q.id} q={q} />
+          <QuestionCard key={q.id} q={q} stageMap={stageMap} />
         ))}
 
         {/* Infinite scroll trigger */}

@@ -1,24 +1,52 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 
-const STAGES = [
-  { id: 0,  name: '隨機混合',    icon: '🎲', color: 'bg-gray-500',           count: 2000 },
-  { id: 1,  name: '解剖學殿堂',  icon: '🦴', color: 'bg-blue-500',           count: 335 },
-  { id: 2,  name: '生理學之谷',  icon: '💓', color: 'bg-red-500',            count: 269 },
-  { id: 3,  name: '生化迷宮',    icon: '⚗️', color: 'bg-purple-500',         count: 261 },
-  { id: 4,  name: '組織學祕境',  icon: '🔬', color: 'bg-indigo-500',         count: 107 },
-  { id: 10, name: '胚胎學源脈',  icon: '🧬', color: 'bg-indigo-400',         count: 28 },
-  { id: 5,  name: '微免聖域',    icon: '🦠', color: 'bg-green-500',          count: 316 },
-  { id: 6,  name: '寄生蟲荒原',  icon: '🪱', color: 'bg-yellow-600',         count: 53 },
-  { id: 7,  name: '藥理決鬥場',  icon: '💊', color: 'bg-orange-500',         count: 281 },
-  { id: 8,  name: '病理學深淵',  icon: '🩺', color: 'bg-rose-600',           count: 216 },
-  { id: 9,  name: '公衛學巔峰',  icon: '📊', color: 'bg-teal-600',           count: 134 },
-]
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+
+const STAGE_ICONS = {
+  all: '🎲', anatomy: '🦴', physiology: '💓', biochemistry: '⚗️', histology: '🔬',
+  embryology: '🧬', microbiology: '🦠', parasitology: '🪱', pharmacology: '💊',
+  pathology: '🩺', public_health: '📊',
+  internal_medicine: '🫀', infectious_disease: '🦠', hematology: '🩸', psychiatry: '🧠',
+  dermatology: '🧴', pediatrics: '👶', neurology: '🧬', surgery: '🔪',
+  orthopedics: '🦴', urology: '🫘', anesthesia: '😴', ophthalmology: '👁️',
+  ent: '👂', obstetrics_gynecology: '🤰', rehabilitation: '🏋️', emergency: '🚑',
+  medical_law_ethics: '⚖️',
+  dental_anatomy: '🦷', tooth_morphology: '🦷', embryology_histology: '🔬',
+  oral_pathology: '🩺', dental_pharmacology: '💊', dental_microbiology: '🦠', oral_physiology: '💓',
+  oral_surgery: '🔪', periodontics: '🦷', orthodontics: '😁', pediatric_dentistry: '👶',
+  endodontics: '🦷', operative_dentistry: '🪥', dental_materials: '🧪',
+  fixed_prosthodontics: '👑', removable_prosthodontics: '🫦', oral_diagnosis: '🔍',
+  dental_radiology: '📷', dental_public_health: '📊', dental_ethics_law: '⚖️',
+  medicinal_chemistry: '⚗️', pharmaceutical_analysis: '📊', pharmacognosy: '🌿',
+  pharmaceutics: '💊', biopharmaceutics: '🧬',
+  dispensing: '🏥', clinical_pharmacy: '💉', pharmacotherapy: '🩺', pharmacy_law: '⚖️',
+}
+
+const BG_COLORS = ['bg-gray-500', 'bg-blue-500', 'bg-red-500', 'bg-purple-500', 'bg-indigo-500', 'bg-green-500', 'bg-yellow-600', 'bg-orange-500', 'bg-rose-600', 'bg-teal-600', 'bg-indigo-400', 'bg-pink-500', 'bg-cyan-600', 'bg-amber-600', 'bg-emerald-500', 'bg-violet-500', 'bg-sky-500', 'bg-lime-600']
 
 export default function Map() {
   const navigate = useNavigate()
-  const { unlockedStages, level } = usePlayerStore()
+  const { unlockedStages, level, exam } = usePlayerStore()
+  const [STAGES, setSTAGES] = useState([])
+
+  useEffect(() => {
+    fetch(`${BACKEND}/meta?exam=${exam || 'doctor1'}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.stages) {
+          setSTAGES(data.stages.map((s, i) => ({
+            id: s.id,
+            name: s.name,
+            icon: STAGE_ICONS[s.tag] || '📝',
+            color: BG_COLORS[i % BG_COLORS.length],
+            count: s.count,
+          })))
+        }
+      })
+      .catch(() => {})
+  }, [exam])
 
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">

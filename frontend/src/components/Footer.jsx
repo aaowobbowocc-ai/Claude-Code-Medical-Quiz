@@ -24,7 +24,7 @@ export default function Footer() {
       </div>
       <p>© {new Date().getFullYear()} {platformName}</p>
       <p className="text-gray-300">題目來源：考選部歷年公開試題 · AI 解說僅供參考</p>
-      <p className="text-gray-300">aaowobbowocc@gmail.com</p>
+      <p className="text-gray-300">聯絡資訊：aaowobbowocc@gmail.com</p>
     </footer>
   )
 }

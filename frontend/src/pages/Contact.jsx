@@ -114,9 +114,6 @@ export default function Contact() {
           )}
         </div>
 
-        <p className="text-center text-xs text-gray-300 mt-4 mb-2">
-          aaowobbowocc@gmail.com
-        </p>
       </div>
 
       <Footer />

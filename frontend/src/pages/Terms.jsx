@@ -4,7 +4,7 @@ import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function Terms() {
   const navigate = useNavigate()
-  usePageMeta('服務條款', '醫學知識王服務條款：題庫來源（考選部）、使用規範、免責聲明。')
+  usePageMeta('服務條款', '國考知識王服務條款：題庫來源（考選部）、使用規範、免責聲明。')
 
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
@@ -19,22 +19,22 @@ export default function Terms() {
 
       <div className="flex-1 px-5 py-6">
         <div className="bg-white rounded-2xl shadow-sm p-6 text-sm text-gray-700 leading-relaxed space-y-5">
-          <p className="text-xs text-gray-400">最後更新日期：2025 年 4 月</p>
+          <p className="text-xs text-gray-400">最後更新日期：2026 年 4 月</p>
 
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">一、服務說明</h2>
             <p>
-              「醫學知識王」（以下簡稱「本平台」）是一個免費的醫師國考第一階段題庫練習平台，提供即時對戰、自主練習、
-              模擬考試、AI 解說等功能，旨在協助醫學系學生備考醫師國家考試。
+              「國考知識王」（以下簡稱「本平台」）是一個免費的醫事人員國家考試題庫練習平台，涵蓋醫師、牙醫師、藥師等國考類別，
+              提供即時對戰、自主練習、模擬考試、AI 解說等功能，旨在協助考生備考醫事人員國家考試。
             </p>
           </section>
 
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">二、題庫來源與聲明</h2>
             <ul className="list-disc pl-5 space-y-1.5">
-              <li>本平台所使用之題目來源為中華民國<strong>考選部</strong>歷年公開之醫師國家考試第一階段考古題（110–115 年度）。</li>
+              <li>本平台所使用之題目來源為中華民國<strong>考選部</strong>歷年公開之醫事人員國家考試考古題（醫師、牙醫師、藥師，110–115 年度）。</li>
               <li>考選部歷年試題屬政府公開資訊，本平台依合理使用原則提供練習使用。</li>
-              <li>題目之 AI 解說由 OpenAI 人工智慧生成，僅供參考，不代表官方標準答案或醫學專業意見。</li>
+              <li>題目之 AI 解說由 Anthropic Claude 人工智慧生成，僅供參考，不代表官方標準答案或醫學專業意見。</li>
               <li>若您發現題目或答案有誤，歡迎透過意見回饋功能回報，我們會盡速修正。</li>
             </ul>
           </section>
@@ -95,7 +95,7 @@ export default function Terms() {
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">九、聯絡方式</h2>
             <p>
-              如您對本服務條款有任何疑問，歡迎透過平台內的意見回饋功能與我們聯繫。
+              如您對本服務條款有任何疑問，歡迎透過平台內的意見回饋功能與我們聯繫（aaowobbowocc@gmail.com）。
             </p>
           </section>
         </div>

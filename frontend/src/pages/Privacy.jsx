@@ -4,7 +4,7 @@ import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function Privacy() {
   const navigate = useNavigate()
-  usePageMeta('隱私權政策', '醫學知識王隱私權政策：Cookie 使用、Google 廣告、資料蒐集與保護說明。')
+  usePageMeta('隱私權政策', '國考知識王隱私權政策：Cookie 使用、Google 廣告、資料蒐集與保護說明。')
 
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
@@ -19,12 +19,12 @@ export default function Privacy() {
 
       <div className="flex-1 px-5 py-6">
         <div className="bg-white rounded-2xl shadow-sm p-6 text-sm text-gray-700 leading-relaxed space-y-5">
-          <p className="text-xs text-gray-400">最後更新日期：2025 年 4 月</p>
+          <p className="text-xs text-gray-400">最後更新日期：2026 年 4 月</p>
 
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">一、總則</h2>
             <p>
-              「醫學知識王」（以下簡稱「本平台」）為一免費醫師國考第一階段題庫練習平台，致力於保護使用者的隱私權。
+              「國考知識王」（以下簡稱「本平台」）為一免費醫事人員國家考試題庫練習平台，涵蓋醫師、牙醫師、藥師等國考類別，致力於保護使用者的隱私權。
               本政策說明我們如何蒐集、使用與保護您的個人資訊。使用本平台即表示您同意本隱私權政策的內容。
             </p>
           </section>
@@ -34,6 +34,7 @@ export default function Privacy() {
             <ul className="list-disc pl-5 space-y-1.5">
               <li><strong>暱稱與頭像：</strong>您在註冊時自行設定的暱稱與頭像，用於遊戲內顯示。</li>
               <li><strong>遊戲紀錄：</strong>對戰結果、練習紀錄、模擬考成績等，儲存於您的瀏覽器本機（localStorage）。</li>
+              <li><strong>留言板內容：</strong>您在留言板發布的暱稱、頭像與留言內容，儲存於伺服器並公開顯示。</li>
               <li><strong>排行榜資料：</strong>您的暱稱與答題成績可能顯示在公開排行榜上。</li>
               <li><strong>使用分析：</strong>我們使用 Google Analytics 蒐集匿名的使用統計資料（如頁面瀏覽量、裝置類型），以改善使用體驗。</li>
             </ul>
@@ -79,7 +80,7 @@ export default function Privacy() {
               <li>Google Analytics（流量分析）</li>
               <li>Vercel（網站託管）</li>
               <li>Render（後端伺服器託管）</li>
-              <li>OpenAI API（AI 題目解說功能）</li>
+              <li>Anthropic Claude API（AI 題目解說功能）</li>
             </ul>
           </section>
 
@@ -101,7 +102,7 @@ export default function Privacy() {
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">九、聯絡我們</h2>
             <p>
-              如您對本隱私權政策有任何疑問，歡迎透過意見回饋功能或來信至開發者信箱與我們聯繫。
+              如您對本隱私權政策有任何疑問，歡迎透過意見回饋功能與我們聯繫（aaowobbowocc@gmail.com）。
             </p>
           </section>
         </div>

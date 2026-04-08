@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import { useSocket } from './hooks/useSocket'
 import SplashScreen from './components/SplashScreen'
 import ErrorBoundary from './components/ErrorBoundary'
+import FixedBottomAd from './components/FixedBottomAd'
 
 // Lazy-load non-critical pages
 const Lobby    = lazy(() => import('./pages/Lobby'))
@@ -65,6 +66,7 @@ function AppRoutes() {
           <Route path="*"          element={<Navigate to="/" />} />
         </Routes>
       </Suspense>
+      <FixedBottomAd />
     </div>
   )
 }

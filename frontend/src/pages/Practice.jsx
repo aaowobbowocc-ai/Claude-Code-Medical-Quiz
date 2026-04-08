@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import { useSound } from '../hooks/useSound'
 import { useExplain, useReview } from '../hooks/useAI'
+import { getSubjectColor } from '../utils/subjectColors'
 import { ExplainPanel, ReviewPanel } from '../components/AIPanel'
 import SmartBanner from '../components/SmartBanner'
 
@@ -391,12 +392,19 @@ function PracticeGame({ config, onFinish }) {
       <div className="flex-1 overflow-y-auto px-4 py-4">
         <div className="bg-white rounded-2xl p-4 mb-4 shadow-sm">
           {(q.subject_name || q.roc_year) && (
-            <p className="text-xs text-gray-400 font-mono mb-2">
-              {q.roc_year && q.session
-                ? `${q.roc_year}(${q.session === '第一次' ? '一' : '二'})-${q.number}`
-                : q.number ? `#${q.number}` : ''}
-              {q.subject_name ? `　${q.subject_name}` : ''}
-            </p>
+            <div className="flex items-center gap-2 mb-2">
+              {q.subject_name && (
+                <span className="text-xs font-semibold text-white px-2 py-0.5 rounded-full"
+                      style={{ background: getSubjectColor(q.subject_name) }}>
+                  {q.subject_name}
+                </span>
+              )}
+              <span className="text-xs text-gray-400 font-mono">
+                {q.roc_year && q.session
+                  ? `${q.roc_year}(${q.session === '第一次' ? '一' : '二'})-${q.number}`
+                  : q.number ? `#${q.number}` : ''}
+              </span>
+            </div>
           )}
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
         </div>
@@ -496,7 +504,7 @@ function PracticeGame({ config, onFinish }) {
 function PracticeResults({ result, config, onRestart, onHome }) {
   const { addCoins, addExp } = usePlayerStore()
   const { play } = useSound()
-  const { text: reviewText, loading: reviewLoading, review } = useReview()
+  const { text: reviewText, loading: reviewLoading, review, notEnoughCoins: reviewNoCoins, cost: reviewCost } = useReview()
   const [reviewRequested, setReviewRequested] = useState(false)
   const diffConfig = DIFFICULTIES.find(d => d.id === config.diff)
   const correct = result.myScore / 100
@@ -569,7 +577,7 @@ function PracticeResults({ result, config, onRestart, onHome }) {
         )}
 
         <p className="text-white/60 text-sm">
-          {pct < 70 ? '正確率未達 70%，無金幣獎勵' : won ? '🏆 你贏了！+80 金幣' : '💪 繼續加油！+20 金幣'}
+          {pct < 70 ? '正確率未達 70%，無金幣獎勵' : won ? '🏆 你贏了！+60 金幣' : '💪 繼續加油！+20 金幣'}
         </p>
 
         {/* LINE Share */}
@@ -592,6 +600,8 @@ function PracticeResults({ result, config, onRestart, onHome }) {
           text={reviewText}
           loading={reviewLoading}
           requested={reviewRequested}
+          notEnoughCoins={reviewNoCoins}
+          cost={reviewCost}
           onRequest={() => {
             setReviewRequested(true)
             review(result.log || [], 'practice')

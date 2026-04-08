@@ -4,6 +4,7 @@ import { useGameStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import { useSound } from '../hooks/useSound'
 import ConnectionStatus from '../components/ConnectionStatus'
+import { getSubjectColor } from '../utils/subjectColors'
 
 const OPTION_COLORS = {
   A: { base: 'bg-blue-50  border-blue-300  text-blue-800',  active: 'bg-blue-500  border-blue-500  text-white' },
@@ -317,12 +318,19 @@ export default function Game() {
       <div className="flex-1 overflow-y-auto px-5 pb-24">
         <div className="bg-medical-ice rounded-2xl p-4 mb-4">
           {(currentQuestion.roc_year || currentQuestion.subject_name) && (
-            <p className="text-xs text-gray-400 font-mono mb-2">
-              {currentQuestion.roc_year && currentQuestion.session
-                ? `${currentQuestion.roc_year}(${currentQuestion.session === '第一次' ? '一' : '二'})-${currentQuestion.number}`
-                : currentQuestion.number ? `#${currentQuestion.number}` : ''}
-              {currentQuestion.subject_name ? `　${currentQuestion.subject_name}` : ''}
-            </p>
+            <div className="flex items-center gap-2 mb-2">
+              {currentQuestion.subject_name && (
+                <span className="text-xs font-semibold text-white px-2 py-0.5 rounded-full"
+                      style={{ background: getSubjectColor(currentQuestion.subject_name) }}>
+                  {currentQuestion.subject_name}
+                </span>
+              )}
+              <span className="text-xs text-gray-400 font-mono">
+                {currentQuestion.roc_year && currentQuestion.session
+                  ? `${currentQuestion.roc_year}(${currentQuestion.session === '第一次' ? '一' : '二'})-${currentQuestion.number}`
+                  : currentQuestion.number ? `#${currentQuestion.number}` : ''}
+              </span>
+            </div>
           )}
           <p className="text-medical-dark font-medium text-base leading-relaxed">
             {currentQuestion.question}

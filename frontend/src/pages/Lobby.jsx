@@ -4,19 +4,43 @@ import { useGameStore, usePlayerStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import ConnectionStatus from '../components/ConnectionStatus'
 
-const STAGES = [
-  { id: 0, name: '隨機混合',   icon: '🎲', color: '#64748B', count: 2000 },
-  { id: 1, name: '解剖學殿堂', icon: '🦴', color: '#3B82F6', count: 335  },
-  { id: 2, name: '生理學之谷', icon: '💓', color: '#EF4444', count: 269  },
-  { id: 3, name: '生化迷宮',   icon: '⚗️',  color: '#8B5CF6', count: 261  },
-  { id: 4, name: '組織學祕境', icon: '🔬', color: '#6366F1', count: 107  },
-  { id: 10,name: '胚胎學源脈', icon: '🧬', color: '#818CF8', count: 28   },
-  { id: 5, name: '微免聖域',   icon: '🦠', color: '#10B981', count: 316  },
-  { id: 6, name: '寄生蟲荒原', icon: '🪱', color: '#D97706', count: 53   },
-  { id: 7, name: '藥理決鬥場', icon: '💊', color: '#F97316', count: 281  },
-  { id: 8, name: '病理學深淵', icon: '🩺', color: '#DC2626', count: 216  },
-  { id: 9, name: '公衛學巔峰', icon: '📊', color: '#0D9488', count: 134  },
-]
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+
+// Stage icon/color by tag
+const STAGE_STYLE = {
+  all: { icon: '🎲', color: '#64748B' },
+  anatomy: { icon: '🦴', color: '#3B82F6' }, physiology: { icon: '💓', color: '#EF4444' },
+  biochemistry: { icon: '⚗️', color: '#8B5CF6' }, histology: { icon: '🔬', color: '#6366F1' },
+  embryology: { icon: '🧬', color: '#818CF8' }, microbiology: { icon: '🦠', color: '#10B981' },
+  parasitology: { icon: '🪱', color: '#D97706' }, pharmacology: { icon: '💊', color: '#F97316' },
+  pathology: { icon: '🩺', color: '#DC2626' }, public_health: { icon: '📊', color: '#0D9488' },
+  internal_medicine: { icon: '🫀', color: '#EF4444' }, infectious_disease: { icon: '🦠', color: '#10B981' },
+  hematology: { icon: '🩸', color: '#DC2626' }, psychiatry: { icon: '🧠', color: '#8B5CF6' },
+  dermatology: { icon: '🧴', color: '#F59E0B' }, pediatrics: { icon: '👶', color: '#3B82F6' },
+  neurology: { icon: '🧬', color: '#6366F1' }, surgery: { icon: '🔪', color: '#059669' },
+  orthopedics: { icon: '🦴', color: '#D97706' }, urology: { icon: '🫘', color: '#0D9488' },
+  anesthesia: { icon: '😴', color: '#64748B' }, ophthalmology: { icon: '👁️', color: '#2563EB' },
+  ent: { icon: '👂', color: '#7C3AED' }, obstetrics_gynecology: { icon: '🤰', color: '#EC4899' },
+  rehabilitation: { icon: '🏋️', color: '#0891B2' }, emergency: { icon: '🚑', color: '#EF4444' },
+  medical_law_ethics: { icon: '⚖️', color: '#374151' },
+  dental_anatomy: { icon: '🦷', color: '#3B82F6' }, oral_anatomy: { icon: '👄', color: '#2563EB' },
+  tooth_morphology: { icon: '🦷', color: '#8B5CF6' }, embryology_histology: { icon: '🔬', color: '#6366F1' },
+  oral_pathology: { icon: '🩺', color: '#DC2626' }, dental_pharmacology: { icon: '💊', color: '#F97316' },
+  dental_microbiology: { icon: '🦠', color: '#10B981' }, oral_physiology: { icon: '💓', color: '#EF4444' },
+  oral_surgery: { icon: '🔪', color: '#059669' }, periodontics: { icon: '🦷', color: '#0D9488' },
+  orthodontics: { icon: '😁', color: '#3B82F6' }, pediatric_dentistry: { icon: '👶', color: '#8B5CF6' },
+  endodontics: { icon: '🦷', color: '#DC2626' }, operative_dentistry: { icon: '🪥', color: '#F97316' },
+  dental_materials: { icon: '🧪', color: '#D97706' }, fixed_prosthodontics: { icon: '👑', color: '#7C3AED' },
+  removable_prosthodontics: { icon: '🫦', color: '#EC4899' }, oral_diagnosis: { icon: '🔍', color: '#2563EB' },
+  dental_radiology: { icon: '📷', color: '#6366F1' }, dental_public_health: { icon: '📊', color: '#0D9488' },
+  dental_ethics_law: { icon: '⚖️', color: '#374151' },
+  medicinal_chemistry: { icon: '⚗️', color: '#8B5CF6' }, pharmaceutical_analysis: { icon: '📊', color: '#2563EB' },
+  pharmacognosy: { icon: '🌿', color: '#059669' }, pharmaceutics: { icon: '💊', color: '#F97316' },
+  biopharmaceutics: { icon: '🧬', color: '#6366F1' },
+  dispensing: { icon: '🏥', color: '#3B82F6' }, clinical_pharmacy: { icon: '💉', color: '#EF4444' },
+  pharmacotherapy: { icon: '🩺', color: '#DC2626' }, pharmacy_law: { icon: '⚖️', color: '#374151' },
+}
+const FALLBACK_COLORS = ['#3B82F6', '#EF4444', '#10B981', '#F97316', '#8B5CF6', '#D97706']
 
 /* Pulsing dot animation for "waiting" */
 function PulseDot() {
@@ -34,14 +58,30 @@ export default function Lobby() {
   const navigate = useNavigate()
   const socket = getSocket()
   const { roomCode, isHost, players, stage, timerMode, betAmount, setBetAmount } = useGameStore()
-  const { name, coins } = usePlayerStore()
+  const { name, coins, exam } = usePlayerStore()
   const [copied, setCopied] = useState(false)   // share msg
   const [codeCopied, setCodeCopied] = useState(false) // code only
   const [showStages, setShowStages] = useState(false)
   const [showAIDiff, setShowAIDiff] = useState(false)
   const [customSec, setCustomSec] = useState('')
+  const [STAGES, setSTAGES] = useState([{ id: 0, name: '隨機混合', icon: '🎲', color: '#64748B', count: 0 }])
 
   useEffect(() => { if (!roomCode) navigate('/') }, [roomCode])
+
+  useEffect(() => {
+    const examType = exam || 'doctor1'
+    fetch(`${BACKEND}/meta?exam=${examType}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.stages) {
+          setSTAGES(data.stages.map((s, i) => {
+            const style = STAGE_STYLE[s.tag] || { icon: '📝', color: FALLBACK_COLORS[i % FALLBACK_COLORS.length] }
+            return { id: s.id, name: s.name, icon: style.icon, color: style.color, count: s.count }
+          }))
+        }
+      })
+      .catch(() => {})
+  }, [exam])
 
   const selectedStage = STAGES.find(s => s.id === stage) || STAGES[0]
 
@@ -307,7 +347,7 @@ export default function Lobby() {
             <p className="text-xs text-gray-400">你有 🪙 {coins}</p>
           </div>
           <div className="flex gap-2">
-            {[0, 50, 100, 200, 500].map(amt => (
+            {[0, 50, 100, 200, 500, 1000].map(amt => (
               <button key={amt} onClick={() => setBetAmount(amt)}
                 className={`flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all active:scale-95
                   ${betAmount === amt ? 'text-white shadow grad-cta' : 'bg-white text-gray-500 border border-gray-200'}`}>

@@ -206,7 +206,17 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
 }
 
 /* Review panel — shown on results screen */
-export function ReviewPanel({ text, loading, onRequest, requested }) {
+export function ReviewPanel({ text, loading, onRequest, requested, notEnoughCoins, cost = 200 }) {
+  if (notEnoughCoins) {
+    return (
+      <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
+        <p className="text-2xl mb-1">🪙</p>
+        <p className="text-sm font-semibold text-amber-700">金幣不足</p>
+        <p className="text-xs text-amber-500 mt-1">AI 檢討報告需要 {cost} 金幣，多練習賺取金幣吧！</p>
+      </div>
+    )
+  }
+
   if (!requested) {
     return (
       <button
@@ -216,6 +226,7 @@ export function ReviewPanel({ text, loading, onRequest, requested }) {
       >
         <span className="text-xl">🤖</span>
         <span className="text-medical-blue">AI 個人化檢討報告</span>
+        <span className="text-xs opacity-60">🪙 {cost}</span>
       </button>
     )
   }

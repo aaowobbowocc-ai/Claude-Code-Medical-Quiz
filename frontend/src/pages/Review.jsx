@@ -4,6 +4,7 @@ import { useExplain } from '../hooks/useAI'
 import { ExplainPanel } from '../components/AIPanel'
 import SmartBanner from '../components/SmartBanner'
 import { useBookmarks } from '../hooks/useBookmarks'
+import { getSubjectColor } from '../utils/subjectColors'
 
 /* ── Single question review card ───────────────────────────── */
 function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
@@ -23,7 +24,14 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
               style={{ background: q.correct ? answerColor : wrongColor }}>
           {q.correct ? '✓ 答對' : '✗ 答錯'}
         </span>
-        <span className="text-xs text-gray-400 flex-1">第 {index + 1} 題{q.subject_name ? `　·　${q.subject_name}` : ''}</span>
+        <span className="text-xs text-gray-400">第 {index + 1} 題</span>
+        {q.subject_name && (
+          <span className="text-xs font-semibold text-white px-1.5 py-0.5 rounded-full"
+                style={{ background: getSubjectColor(q.subject_name) }}>
+            {q.subject_name}
+          </span>
+        )}
+        <span className="flex-1" />
         <button onClick={() => onToggleBookmark(q)}
                 className="text-sm mr-1" title={isBookmarked ? '取消收藏' : '收藏錯題'}>
           {isBookmarked ? '⭐' : '☆'}

@@ -1,38 +1,72 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { usePlayerStore } from '../store/gameStore'
+import { usePlayerStore, EXAM_TYPES } from '../store/gameStore'
 import SmartBanner from '../components/SmartBanner'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
-
-const PAPERS = [
-  { id: 'paper1', name: '基礎醫學(一)', stages: '1,2,3,4,10', subject: '醫學(一)', subjects: '解剖、生理、生化、組織、胚胎' },
-  { id: 'paper2', name: '基礎醫學(二)', stages: '5,6,7,8,9', subject: '醫學(二)', subjects: '微免、寄生蟲、藥理、病理、公衛' },
-]
 
 const TAG_NAMES = {
   anatomy: '解剖', physiology: '生理', biochemistry: '生化', histology: '組織', embryology: '胚胎',
   microbiology: '微免', parasitology: '寄生蟲', pharmacology: '藥理', pathology: '病理', public_health: '公衛',
 }
 
+function getExamConfig(examType) {
+  const et = EXAM_TYPES.find(e => e.id === examType) || EXAM_TYPES[0]
+  const isWeighted = et.papers.some(p => p.pointsPerQ && p.pointsPerQ !== 1)
+  return {
+    papers: et.papers,
+    totalPass: et.passScore,
+    totalPoints: et.totalPoints || et.totalQ, // 300 for pharma, totalQ for others
+    singlePass: Math.round(et.papers[0]?.count * 0.6) || 60,
+    timeLimit: 120 * 60, // 120 min per paper
+    examName: et.name,
+    isWeighted,
+  }
+}
+
+// Calculate weighted score for a paper result
+function calcPaperScore(correct, total, paper) {
+  if (paper?.pointsPerQ && paper.pointsPerQ !== 1) {
+    return +(correct * paper.pointsPerQ).toFixed(2)
+  }
+  return correct
+}
+
+function calcTotalScore(papers, examPapers) {
+  return papers.reduce((sum, p, i) => {
+    const paper = examPapers?.[i]
+    return sum + calcPaperScore(p.correct, p.total, paper)
+  }, 0)
+}
+
 const TIME_LIMIT = 120 * 60 // 120 minutes per paper
-const TOTAL_PASS = 120 // 120/200 to pass full exam
-const SINGLE_PASS = 60 // 60/100 for single paper
+
+// Check if user's answer is correct (supports multi-answer "A,B" and voided "送分"/empty)
+function isAnswerCorrect(userAnswer, correctAnswer) {
+  if (!correctAnswer || correctAnswer === '送分') return true // voided → always correct
+  if (correctAnswer.includes(',')) {
+    return correctAnswer.split(',').map(s => s.trim()).includes(userAnswer)
+  }
+  return userAnswer === correctAnswer
+}
 
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444' }
 
 // ── Setup screen ─────────────────────────────────────────────────
-const FULL_EXAM_FEE = 500
-const SINGLE_EXAM_FEE = 200
+const FULL_EXAM_FEE = 800
+const SINGLE_EXAM_FEE = 300
 
 function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
+  const examType = usePlayerStore(s => s.exam) || 'doctor1'
+  const { papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, examName, isWeighted } = getExamConfig(examType)
   const [tab, setTab] = useState('historical') // 'historical' | 'random'
   const [examYears, setExamYears] = useState([])
   const [loadingYears, setLoadingYears] = useState(true)
   const [selectedExam, setSelectedExam] = useState(null) // { roc_year, session, papers }
 
   useEffect(() => {
-    fetch(`${BACKEND}/questions/exam-years`)
+    const examType = usePlayerStore.getState().exam || 'doctor1'
+    fetch(`${BACKEND}/questions/exam-years?exam=${examType}`)
       .then(r => r.json())
       .then(data => { setExamYears(data); setLoadingYears(false) })
       .catch(() => setLoadingYears(false))
@@ -80,8 +114,8 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                   <span className="text-3xl">📋</span>
                   <div className="flex-1">
                     <p className="font-bold text-lg text-medical-blue">完整模擬考</p>
-                    <p className="text-gray-500 text-xs mt-1">醫學(一) + 醫學(二)，共 200 題</p>
-                    <p className="text-gray-400 text-xs">各 120 分鐘，120/200 及格</p>
+                    <p className="text-gray-500 text-xs mt-1">{PAPERS.map(p => p.name).join(' + ')}，共 {PAPERS.reduce((s,p) => s+p.count, 0)} 題</p>
+                    <p className="text-gray-400 text-xs">各 120 分鐘，{TOTAL_PASS}/{TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 及格</p>
                   </div>
                   <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {FULL_EXAM_FEE}</span>
                 </div>
@@ -159,8 +193,8 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                 <span className="text-3xl">📋</span>
                 <div className="flex-1">
                   <p className="font-bold text-lg text-medical-blue">完整模擬考</p>
-                  <p className="text-gray-500 text-xs mt-1">醫學(一) + 醫學(二)，共 200 題</p>
-                  <p className="text-gray-400 text-xs">各 120 分鐘，120/200 及格</p>
+                  <p className="text-gray-500 text-xs mt-1">{PAPERS.map(p => p.name).join(' + ')}，共 {PAPERS.reduce((s,p) => s+p.count, 0)} 題</p>
+                  <p className="text-gray-400 text-xs">各 120 分鐘，{TOTAL_PASS}/{TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 及格</p>
                 </div>
                 <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {FULL_EXAM_FEE}</span>
               </div>
@@ -179,7 +213,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                   <div>
                     <p className="font-bold text-lg text-medical-dark">{p.name}</p>
                     <p className="text-gray-400 text-xs mt-1">{p.subjects}</p>
-                    <p className="text-gray-300 text-xs">100 題 / 120 分鐘</p>
+                    <p className="text-gray-300 text-xs">{p.count} 題{p.pointsPerQ && p.pointsPerQ !== 1 ? ` · 每題 ${p.pointsPerQ} 分` : ''} / 120 分鐘</p>
                   </div>
                   <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {SINGLE_EXAM_FEE}</span>
                 </div>
@@ -189,12 +223,17 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
         )}
 
         <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <p className="text-sm font-bold text-gray-700 mb-2">國考規則</p>
+          <p className="text-sm font-bold text-gray-700 mb-2">{examName}規則</p>
           <div className="text-xs text-gray-500 space-y-1.5">
-            <p>📋 兩張考卷各 100 題，共 200 題</p>
+            <p>📋 {PAPERS.length} 張考卷{PAPERS.every(p => p.count === PAPERS[0].count) ? `各 ${PAPERS[0].count} 題` : `（${PAPERS.map(p => p.count + '題').join('/')}）`}，共 {PAPERS.reduce((s,p) => s+p.count, 0)} 題</p>
             <p>⏱️ 每卷限時 120 分鐘</p>
-            <p>✅ 每題 1 分，兩卷合計 200 分</p>
-            <p>🎯 及格：總分 120 分（60%），不設單科低標</p>
+            {isWeighted ? (
+              <p>✅ 每科滿分 100 分，{PAPERS.length} 科合計 {TOTAL_POINTS} 分</p>
+            ) : (
+              <p>✅ 每題 1 分，合計 {PAPERS.reduce((s,p) => s+p.count, 0)} 分</p>
+            )}
+            <p>🎯 及格：總分 {TOTAL_PASS} 分（60%），不設單科低標</p>
+            <p>⚠️ 任一科零分者不予錄取（考試規則第 9 條）</p>
             <p>❌ 答錯不倒扣，不會就猜！</p>
             <p>📌 可跳題作答，最後統一交卷</p>
           </div>
@@ -329,38 +368,47 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
 }
 
 // ── Intermission: ask to continue Paper 2 ────────────────────────
-function Intermission({ paper1Result, onContinue, onFinishSingle }) {
-  const { correct, total, timeUsed } = paper1Result
+function Intermission({ paper1Result, onContinue, onFinishSingle, nextPaperName, completedCount, totalPapers, paperConfig }) {
+  const { correct, total, timeUsed, paperName } = paper1Result
+  const examType = usePlayerStore(s => s.exam) || 'doctor1'
+  const { totalPass: TOTAL_PASS, isWeighted } = getExamConfig(examType)
   const pct = Math.round((correct / total) * 100)
   const mm = Math.floor(timeUsed / 60)
   const ss = timeUsed % 60
+  const paperScore = isWeighted && paperConfig ? calcPaperScore(correct, total, paperConfig) : correct
+  const scoreDisplay = isWeighted ? (paperScore % 1 === 0 ? paperScore : paperScore.toFixed(1)) : correct
 
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
       <div className="px-4 pt-14 pb-6 grad-header">
-        <h1 className="text-white font-bold text-2xl text-center">基礎醫學(一) 完成！</h1>
+        <h1 className="text-white font-bold text-2xl text-center">{paperName} 完成！</h1>
+        <p className="text-white/50 text-sm text-center mt-1">{completedCount}/{totalPapers} 卷</p>
       </div>
       <div className="flex-1 px-5 py-6 flex flex-col items-center gap-5">
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 w-full text-center">
-          <p className="text-4xl font-black text-medical-dark">{correct}<span className="text-lg text-gray-400">/{total}</span></p>
+          {isWeighted ? (
+            <p className="text-4xl font-black text-medical-dark">{scoreDisplay}<span className="text-lg text-gray-400">/100 分</span></p>
+          ) : (
+            <p className="text-4xl font-black text-medical-dark">{correct}<span className="text-lg text-gray-400">/{total}</span></p>
+          )}
           <p className="text-gray-500 text-sm mt-1">正確率 {pct}% · 用時 {mm}:{String(ss).padStart(2, '0')}</p>
         </div>
 
         <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200 w-full">
-          <p className="text-amber-800 font-bold text-sm mb-1">📋 真實國考是兩卷合計算分</p>
+          <p className="text-amber-800 font-bold text-sm mb-1">📋 真實國考是全卷合計算分</p>
           <p className="text-amber-700 text-xs leading-relaxed">
-            總分需達 120/200（60%）才算及格。<br />
-            繼續考醫學(二) 才能得到完整模擬成績。
+            總分需達 {TOTAL_PASS} 分（60%）才算及格。<br />
+            繼續考完剩餘 {totalPapers - completedCount} 卷才能得到完整模擬成績。
           </p>
         </div>
 
         <button onClick={onContinue}
           className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform grad-cta">
-          📝 繼續考 基礎醫學(二)
+          📝 繼續考 {nextPaperName}
         </button>
         <button onClick={onFinishSingle}
           className="w-full py-4 rounded-2xl font-bold text-lg bg-white text-gray-500 border border-gray-200 active:scale-95 transition-transform">
-          先看醫學(一) 的結果
+          先看目前的結果
         </button>
       </div>
     </div>
@@ -370,13 +418,17 @@ function Intermission({ paper1Result, onContinue, onFinishSingle }) {
 // ── Results screen ───────────────────────────────────────────────
 function ExamResults({ papers, navigate }) {
   const { addCoins, addExp } = usePlayerStore()
+  const examType = usePlayerStore(s => s.exam) || 'doctor1'
+  const { papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, isWeighted } = getExamConfig(examType)
   const [saved, setSaved] = useState(false)
 
-  const isFullExam = papers.length === 2
+  const isFullExam = papers.length >= PAPERS.length
   const totalCorrect = papers.reduce((s, p) => s + p.correct, 0)
   const totalQuestions = papers.reduce((s, p) => s + p.total, 0)
   const totalTime = papers.reduce((s, p) => s + p.timeUsed, 0)
-  const passed = isFullExam ? totalCorrect >= TOTAL_PASS : null
+  const totalScore = isWeighted ? calcTotalScore(papers, PAPERS) : totalCorrect
+  const hasZeroPaper = isFullExam && papers.some(p => p.correct === 0)
+  const passed = isFullExam ? (totalScore >= TOTAL_PASS && !hasZeroPaper) : null
   const pct = Math.round((totalCorrect / totalQuestions) * 100)
   const mm = Math.floor(totalTime / 60)
   const ss = totalTime % 60
@@ -397,14 +449,14 @@ function ExamResults({ papers, navigate }) {
       const key = 'mock-exam-history'
       const prev = JSON.parse(localStorage.getItem(key) || '[]')
       const paperName = isFullExam ? '完整模擬考' : papers[0].paperName
-      prev.unshift({ date: new Date().toISOString(), paper: paperName, score: totalCorrect, total: totalQuestions, pct, passed, timeUsed: totalTime })
+      prev.unshift({ date: new Date().toISOString(), paper: paperName, score: isWeighted ? totalScore : totalCorrect, total: isWeighted ? TOTAL_POINTS : totalQuestions, pct, passed, timeUsed: totalTime })
       localStorage.setItem(key, JSON.stringify(prev.slice(0, 20)))
     } catch {}
     // Submit per-question stats
     const stats = allQuestions.filter(q => q.id).map((q, i) => {
       const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
       const qIdx = pIdx === 0 ? i : i - papers[0].questions.length
-      return { questionId: q.id, correct: papers[pIdx]?.answers[qIdx] === q.answer }
+      return { questionId: q.id, correct: isAnswerCorrect(papers[pIdx]?.answers[qIdx], q.answer) }
     })
     if (stats.length > 0) {
       fetch(`${BACKEND}/questions/track`, {
@@ -418,7 +470,7 @@ function ExamResults({ papers, navigate }) {
     const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
     const qIdx = pIdx === 0 ? i : i - papers[0].questions.length
     const myAnswer = papers[pIdx]?.answers[qIdx] || null
-    return { ...q, myAnswer, correct: myAnswer === q.answer }
+    return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer) }
   }).filter(q => !q.correct)
 
   return (
@@ -426,8 +478,17 @@ function ExamResults({ papers, navigate }) {
       <div className="flex-1 flex flex-col items-center justify-center px-5 gap-5 pt-16">
         <div className={`w-36 h-36 rounded-full border-4 flex flex-col items-center justify-center shadow-2xl bg-white/10
           ${passed === true ? 'border-green-400' : passed === false ? 'border-red-400' : 'border-white/40'}`}>
-          <span className="text-5xl font-black text-white">{totalCorrect}</span>
-          <span className="text-white/60 text-xs">/ {totalQuestions}</span>
+          {isWeighted ? (
+            <>
+              <span className="text-4xl font-black text-white">{totalScore % 1 === 0 ? totalScore : totalScore.toFixed(1)}</span>
+              <span className="text-white/60 text-xs">/ {TOTAL_POINTS} 分</span>
+            </>
+          ) : (
+            <>
+              <span className="text-5xl font-black text-white">{totalCorrect}</span>
+              <span className="text-white/60 text-xs">/ {totalQuestions}</span>
+            </>
+          )}
         </div>
 
         <div className="text-center">
@@ -435,18 +496,25 @@ function ExamResults({ papers, navigate }) {
             {passed === true ? '🎉 及格！' : passed === false ? '😤 再接再厲' : '📊 測驗完成'}
           </h1>
           <p className="text-white/60 text-sm">{isFullExam ? '完整模擬考' : papers[0].paperName}</p>
-          {!isFullExam && <p className="text-white/40 text-xs mt-1">單卷測驗不計及格，需兩卷合計</p>}
+          {!isFullExam && <p className="text-white/40 text-xs mt-1">單卷測驗不計及格，需全卷合計</p>}
+          {hasZeroPaper && <p className="text-red-300 text-xs mt-1 font-bold">⚠️ 有科目零分，依規定不予錄取</p>}
         </div>
 
         {/* Per-paper breakdown */}
         {isFullExam && (
           <div className="flex gap-3 w-full max-w-xs">
-            {papers.map((p, i) => (
+            {papers.map((p, i) => {
+              const paperScore = isWeighted ? calcPaperScore(p.correct, p.total, PAPERS[i]) : p.correct
+              return (
               <div key={i} className="flex-1 bg-white/10 rounded-xl px-3 py-2 text-center">
                 <p className="text-white/50 text-xs">{p.paperName}</p>
-                <p className="text-white font-bold text-lg">{p.correct}/{p.total}</p>
+                {isWeighted ? (
+                  <p className="text-white font-bold text-lg">{paperScore % 1 === 0 ? paperScore : paperScore.toFixed(1)}<span className="text-white/40 text-xs">/100</span></p>
+                ) : (
+                  <p className="text-white font-bold text-lg">{p.correct}/{p.total}</p>
+                )}
               </div>
-            ))}
+            )})}
           </div>
         )}
 
@@ -462,7 +530,7 @@ function ExamResults({ papers, navigate }) {
           {isFullExam && (
             <div className="bg-white/10 rounded-xl px-4 py-2 text-center">
               <p className="text-white/50 text-xs">及格線</p>
-              <p className="text-white font-bold text-lg">{TOTAL_PASS}</p>
+              <p className="text-white font-bold text-lg">{TOTAL_PASS}{isWeighted ? '分' : ''}</p>
             </div>
           )}
         </div>
@@ -493,31 +561,58 @@ function ExamResults({ papers, navigate }) {
 // ── Main component ───────────────────────────────────────────────
 export default function MockExam() {
   const navigate = useNavigate()
-  // phases: setup | loading | exam | intermission | loading2 | exam2 | results
+  const examType = usePlayerStore(s => s.exam) || 'doctor1'
+  const { papers: PAPERS, totalPass: TOTAL_PASS } = getExamConfig(examType)
+
+  // phases: setup | loading | exam | intermission | results
   const [phase, setPhase] = useState('setup')
   const [currentPaper, setCurrentPaper] = useState(null)
+  const [currentPaperIdx, setCurrentPaperIdx] = useState(0)
   const [questions, setQuestions] = useState([])
-  const [paperResults, setPaperResults] = useState([]) // array of { paperName, questions, answers, correct, total, timeUsed }
+  const [paperResults, setPaperResults] = useState([])
   const [isFullExam, setIsFullExam] = useState(false)
   const startTime = useRef(0)
 
-  const [historicalExam, setHistoricalExam] = useState(null) // { year, session } for historical mode
+  const [historicalExam, setHistoricalExam] = useState(null)
 
   const loadQuestions = async (paper) => {
-    const res = await fetch(`${BACKEND}/questions/exam?stages=${paper.stages}&count=100`)
+    const et = usePlayerStore.getState().exam || 'doctor1'
+    const params = paper.stages
+      ? `stages=${paper.stages}&count=${paper.count || 100}&exam=${et}`
+      : `count=${paper.count || 80}&exam=${et}`
+    const res = await fetch(`${BACKEND}/questions/exam?${params}`)
     const data = await res.json()
     if (data.questions.length < 10) throw new Error('not enough')
     return data.questions
   }
 
   const loadHistoricalQuestions = async (year, session, subjectName) => {
-    const res = await fetch(`${BACKEND}/questions/exam?year=${year}&session=${encodeURIComponent(session)}&subject=${encodeURIComponent(subjectName)}`)
+    const et = usePlayerStore.getState().exam || 'doctor1'
+    const res = await fetch(`${BACKEND}/questions/exam?year=${year}&session=${encodeURIComponent(session)}&subject=${encodeURIComponent(subjectName)}&exam=${et}`)
     const data = await res.json()
     if (data.questions.length < 10) throw new Error('not enough')
     return data.questions
   }
 
   const { coins, spendCoins } = usePlayerStore()
+
+  const startPaper = async (paper, paperIdx, opts = {}) => {
+    setCurrentPaper(paper)
+    setCurrentPaperIdx(paperIdx)
+    setPhase('loading')
+    try {
+      const qs = opts.historical
+        ? await loadHistoricalQuestions(opts.historical.year, opts.historical.session, paper.subject || paper.name)
+        : await loadQuestions(paper)
+      setQuestions(qs)
+      startTime.current = Date.now()
+      setPhase('exam')
+    } catch {
+      alert('題目不足或載入失敗，請稍後再試')
+      if (opts.refund) usePlayerStore.getState().addCoins(opts.refund)
+      setPhase(paperIdx === 0 ? 'setup' : 'results')
+    }
+  }
 
   // Start single paper (random)
   const handleStartSingle = async (paper) => {
@@ -527,22 +622,11 @@ export default function MockExam() {
     }
     setIsFullExam(false)
     setHistoricalExam(null)
-    setCurrentPaper(paper)
     setPaperResults([])
-    setPhase('loading')
-    try {
-      const qs = await loadQuestions(paper)
-      setQuestions(qs)
-      startTime.current = Date.now()
-      setPhase('exam')
-    } catch {
-      alert('題目不足或載入失敗，請稍後再試')
-      usePlayerStore.getState().addCoins(SINGLE_EXAM_FEE) // refund
-      setPhase('setup')
-    }
+    await startPaper(paper, 0, { refund: SINGLE_EXAM_FEE })
   }
 
-  // Start full exam (random, paper 1 first)
+  // Start full exam (all papers sequentially)
   const handleStartFull = async () => {
     if (!spendCoins(FULL_EXAM_FEE)) {
       alert(`金幣不足！需要 ${FULL_EXAM_FEE} 金幣，目前只有 ${coins} 金幣`)
@@ -550,19 +634,8 @@ export default function MockExam() {
     }
     setIsFullExam(true)
     setHistoricalExam(null)
-    setCurrentPaper(PAPERS[0])
     setPaperResults([])
-    setPhase('loading')
-    try {
-      const qs = await loadQuestions(PAPERS[0])
-      setQuestions(qs)
-      startTime.current = Date.now()
-      setPhase('exam')
-    } catch {
-      alert('題目不足或載入失敗，請稍後再試')
-      usePlayerStore.getState().addCoins(FULL_EXAM_FEE) // refund
-      setPhase('setup')
-    }
+    await startPaper(PAPERS[0], 0, { refund: FULL_EXAM_FEE })
   }
 
   // Start historical exam
@@ -574,25 +647,14 @@ export default function MockExam() {
     }
     setIsFullExam(isFull)
     setHistoricalExam({ year, session })
-    const targetPaper = paper || PAPERS[0]
-    setCurrentPaper(targetPaper)
     setPaperResults([])
-    setPhase('loading')
-    try {
-      const qs = await loadHistoricalQuestions(year, session, targetPaper.subject)
-      setQuestions(qs)
-      startTime.current = Date.now()
-      setPhase('exam')
-    } catch {
-      alert('題目不足或載入失敗，請稍後再試')
-      usePlayerStore.getState().addCoins(fee) // refund
-      setPhase('setup')
-    }
+    const targetPaper = paper || PAPERS[0]
+    await startPaper(targetPaper, 0, { historical: { year, session }, refund: fee })
   }
 
   const handleFinishPaper = (answers) => {
     const timeUsed = Math.floor((Date.now() - startTime.current) / 1000)
-    const correct = questions.filter((q, i) => answers[i] === q.answer).length
+    const correct = questions.filter((q, i) => isAnswerCorrect(answers[i], q.answer)).length
     const result = {
       paperName: currentPaper.name,
       questions: [...questions],
@@ -602,35 +664,25 @@ export default function MockExam() {
       timeUsed,
     }
 
-    if (isFullExam && paperResults.length === 0) {
-      // Finished paper 1 of full exam → show intermission
-      setPaperResults([result])
+    const newResults = [...paperResults, result]
+    setPaperResults(newResults)
+
+    if (isFullExam && newResults.length < PAPERS.length) {
+      // More papers to go → show intermission
       setPhase('intermission')
     } else {
-      // Finished single paper or paper 2
-      setPaperResults(prev => [...prev, result])
       setPhase('results')
     }
   }
 
-  // Continue to paper 2
-  const handleContinuePaper2 = async () => {
-    setCurrentPaper(PAPERS[1])
-    setPhase('loading2')
-    try {
-      const qs = historicalExam
-        ? await loadHistoricalQuestions(historicalExam.year, historicalExam.session, PAPERS[1].subject)
-        : await loadQuestions(PAPERS[1])
-      setQuestions(qs)
-      startTime.current = Date.now()
-      setPhase('exam2')
-    } catch {
-      alert('題目不足或載入失敗，請稍後再試')
-      setPhase('results')
-    }
+  // Continue to next paper
+  const handleContinueNext = async () => {
+    const nextIdx = paperResults.length
+    const nextPaper = PAPERS[nextIdx]
+    await startPaper(nextPaper, nextIdx, historicalExam ? { historical: historicalExam } : {})
   }
 
-  // View paper 1 only results
+  // View current results only (stop early)
   const handleFinishSingle = () => {
     setIsFullExam(false)
     setPhase('results')
@@ -645,22 +697,28 @@ export default function MockExam() {
       <div className="flex flex-col items-center justify-center min-h-dvh bg-medical-ice gap-4">
         <div className="text-5xl animate-bounce">📝</div>
         <p className="text-gray-500 font-medium">
-          {phase === 'loading2' ? '正在載入 基礎醫學(二)…' : historicalExam ? `正在載入 ${historicalExam.year}年${historicalExam.session}…` : '正在出題中…'}
+          {currentPaper ? `正在載入 ${currentPaper.name}…` : historicalExam ? `正在載入 ${historicalExam.year}年${historicalExam.session}…` : '正在出題中…'}
         </p>
       </div>
     )
   }
 
-  if (phase === 'exam' || phase === 'exam2') {
+  if (phase === 'exam') {
     return <ExamInProgress paper={currentPaper} questions={questions} onFinish={handleFinishPaper} onBack={() => setPhase('setup')} />
   }
 
   if (phase === 'intermission') {
+    const nextIdx = paperResults.length
+    const nextPaper = PAPERS[nextIdx]
     return (
       <Intermission
-        paper1Result={paperResults[0]}
-        onContinue={handleContinuePaper2}
+        paper1Result={paperResults[paperResults.length - 1]}
+        onContinue={handleContinueNext}
         onFinishSingle={handleFinishSingle}
+        nextPaperName={nextPaper?.name || '下一卷'}
+        completedCount={paperResults.length}
+        totalPapers={PAPERS.length}
+        paperConfig={PAPERS[paperResults.length - 1]}
       />
     )
   }

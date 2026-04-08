@@ -2,8 +2,8 @@ import { useState, useCallback } from 'react'
 import { usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
-const EXPLAIN_COST = 150
-const REVIEW_COST = 100
+const EXPLAIN_COST = 200
+const REVIEW_COST = 200
 
 // ── Per-device daily quota ──────────────────────────────────────
 const PERSONAL_LIMIT = 10
@@ -95,7 +95,7 @@ export function useExplain() {
         `${BACKEND}/explain`,
         { question: q.question, options: q.options, answer: q.answer,
           subject_name: q.subject_name || q.subject, user_answer: q.user_answer,
-          question_id: q.id },
+          question_id: q.id, exam: usePlayerStore.getState().exam || 'doctor1' },
         (chunk) => setText(t => t + chunk),
         () => setLoading(false),
         (msg) => { setLimitHit(true); setText(msg) },

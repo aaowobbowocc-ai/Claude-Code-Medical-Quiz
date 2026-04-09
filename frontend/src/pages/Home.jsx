@@ -427,6 +427,7 @@ export default function Home() {
               ['📒','精華筆記',`${currentExam.papers?.length || 2}卷高頻考點`,'/notes'],
               ['🎯','自主練習','練習含AI對手','/practice'],
               ['📖','題庫瀏覽',`${getYearRange(exam)}年題庫`,'/browse'],
+              ['⭐','收藏題目','分類收藏複習','/favorites'],
               ['🏆','排行榜','每週排名','/leaderboard'],
               ['💬','留言板','交流備考心得','/board']].map(([icon,title,sub,path]) => (
               <button key={path} onClick={() => navigate(path)}
@@ -653,6 +654,7 @@ export default function Home() {
             ['📒','精華筆記',`${currentExam.papers?.length || 2}卷高頻考點`,'/notes'],
             ['🎯','自主練習','練習含AI對手','/practice'],
             ['📖','題庫瀏覽',`${getYearRange(exam)}年題庫`,'/browse'],
+            ['⭐','收藏題目','分類收藏複習','/favorites'],
             ['🏆','排行榜','每週排名','/leaderboard'],
             ['💬','留言板','交流備考心得','/board']].map(([icon,title,sub,path]) => (
             <button key={path} onClick={() => navigate(path)}
@@ -665,11 +667,11 @@ export default function Home() {
         </div>
 
         {dueCount > 0 && (
-          <button onClick={() => navigate('/review', { state: { fromBookmarks: true } })}
+          <button onClick={() => navigate('/favorites')}
                   className="w-full rounded-2xl py-3.5 px-4 flex items-center gap-3 bg-amber-50 border border-amber-200 active:scale-[0.97] transition-transform mt-1">
             <span className="text-2xl">🔔</span>
             <div className="flex-1 text-left">
-              <p className="text-amber-800 font-bold text-sm">有 {dueCount} 題錯題該複習了</p>
+              <p className="text-amber-800 font-bold text-sm">有 {dueCount} 題收藏該複習了</p>
               <p className="text-amber-600 text-xs">間隔複習，記得更牢</p>
             </div>
             <span className="text-amber-400">›</span>

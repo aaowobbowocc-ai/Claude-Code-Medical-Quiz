@@ -8,6 +8,7 @@ import { ExplainPanel, ReviewPanel } from '../components/AIPanel'
 import SmartBanner from '../components/SmartBanner'
 import QuestionImages from '../components/QuestionImages'
 import CommentSection from '../components/CommentSection'
+import { useBookmarks } from '../hooks/useBookmarks'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -250,6 +251,8 @@ function PracticeGame({ config, onFinish }) {
   const [loading, setLoading]     = useState(true)
   const [timerActive, setTimerActive] = useState(false)
   const [explainRequested, setExplainRequested] = useState(false)
+  const [showFolderPick, setShowFolderPick] = useState(false)
+  const { isBookmarked, getFolder, folders, addToFolder, removeBookmark, getFolderQuestions, MAX_PER_FOLDER } = useBookmarks()
   const sessionLog = useRef([])   // track every q+answer for review
 
   const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, notEnoughCoins: explainNoCoins, explain, reset: resetExplain, remaining: explainRemaining, cost: explainCost } = useExplain()
@@ -456,6 +459,28 @@ function PracticeGame({ config, onFinish }) {
             <span>AI 選了 <strong>{aiAnswer}</strong>（
               {aiAnswer === q.answer ? <span className="text-green-600">答對了</span> : <span className="text-red-500">答錯了</span>}）
             </span>
+          </div>
+        )}
+
+        {/* Bookmark */}
+        {revealed && q && (
+          <div className="mt-3 flex items-center gap-2">
+            <button onClick={() => isBookmarked(q) ? removeBookmark(q) : setShowFolderPick(!showFolderPick)}
+              className={`flex items-center gap-1.5 text-sm font-bold px-3 py-2 rounded-xl active:scale-95 transition-all border ${isBookmarked(q) ? 'bg-amber-50 text-amber-600 border-amber-200' : 'bg-gray-50 text-gray-500 border-gray-200'}`}>
+              {isBookmarked(q) ? '⭐ 已收藏' : '☆ 收藏'}
+              {isBookmarked(q) && <span className="text-xs opacity-60">({getFolder(q)})</span>}
+            </button>
+            {showFolderPick && !isBookmarked(q) && folders.map(f => {
+              const count = getFolderQuestions(f).length
+              const full = count >= MAX_PER_FOLDER
+              return (
+                <button key={f} onClick={() => { if (!full) { addToFolder(q, f); setShowFolderPick(false) } }}
+                  disabled={full}
+                  className={`text-xs font-bold px-3 py-2 rounded-xl border active:scale-95 ${full ? 'bg-gray-50 text-gray-300 border-gray-100' : 'bg-amber-50 text-amber-700 border-amber-200'}`}>
+                  {f} ({count}/{MAX_PER_FOLDER})
+                </button>
+              )
+            })}
           </div>
         )}
 

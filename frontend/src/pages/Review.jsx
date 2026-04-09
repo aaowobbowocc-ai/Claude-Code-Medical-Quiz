@@ -9,9 +9,12 @@ import QuestionImages from '../components/QuestionImages'
 import CommentSection from '../components/CommentSection'
 
 /* ── Single question review card ───────────────────────────── */
-function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
+function ReviewCard({ q, index }) {
   const [open, setOpen] = useState(!q.correct)  // auto-open wrong ones
   const [explainReq, setExplainReq] = useState(false)
+  const [showFolderPick, setShowFolderPick] = useState(false)
+  const { isBookmarked, getFolder, folders, addToFolder, removeBookmark, getFolderQuestions, MAX_PER_FOLDER } = useBookmarks()
+  const bookmarked = isBookmarked(q)
   const { text: explainText, loading: explainLoading, limitHit, notEnoughCoins, explain, remaining, cost: explainCost } = useExplain()
 
   const answerColor = '#10B981'   // green for correct
@@ -34,9 +37,9 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
           </span>
         )}
         <span className="flex-1" />
-        <button onClick={() => onToggleBookmark(q)}
-                className="text-sm mr-1" title={isBookmarked ? '取消收藏' : '收藏錯題'}>
-          {isBookmarked ? '⭐' : '☆'}
+        <button onClick={() => bookmarked ? removeBookmark(q) : setShowFolderPick(!showFolderPick)}
+                className="text-sm mr-1" title={bookmarked ? `已收藏（${getFolder(q)}）` : '收藏題目'}>
+          {bookmarked ? '⭐' : '☆'}
         </button>
         <button onClick={() => setOpen(o => !o)}
                 className="text-xs text-gray-400 flex items-center gap-0.5">
@@ -44,6 +47,22 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
           <span className={`transition-transform ${open ? 'rotate-180' : ''}`}>▾</span>
         </button>
       </div>
+
+      {showFolderPick && !bookmarked && (
+        <div className="px-4 pb-2 flex gap-2">
+          {folders.map(f => {
+            const count = getFolderQuestions(f).length
+            const full = count >= MAX_PER_FOLDER
+            return (
+              <button key={f} onClick={() => { if (!full) { addToFolder(q, f); setShowFolderPick(false) } }}
+                disabled={full}
+                className={`flex-1 text-xs font-bold py-2 rounded-xl border active:scale-95 transition-all ${full ? 'bg-gray-50 text-gray-300 border-gray-100' : 'bg-amber-50 text-amber-700 border-amber-200'}`}>
+                ⭐ {f} ({count}/{MAX_PER_FOLDER})
+              </button>
+            )
+          })}
+        </div>
+      )}
 
       {/* Question text */}
       <div className="px-4 pb-3">
@@ -120,22 +139,15 @@ export default function Review() {
   const navigate = useNavigate()
   const { state } = useLocation()
   const [showAll, setShowAll] = useState(false)
-  const { isBookmarked, toggle: toggleBookmark, bookmarks } = useBookmarks()
-  const [showBookmarks, setShowBookmarks] = useState(false)
-
-  if (!state?.questions && !showBookmarks) {
-    if (bookmarks.length > 0) {
-      // Allow viewing bookmarks directly
-    } else {
-      navigate('/')
-      return null
-    }
+  if (!state?.questions) {
+    navigate('/')
+    return null
   }
 
   const questions = state?.questions || []
   const stage = state?.stage || '收藏題目'
   const wrong = questions.filter(q => !q.correct)
-  const displayed = showBookmarks ? bookmarks : (showAll ? questions : wrong)
+  const displayed = showAll ? questions : wrong
 
   return (
     <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
@@ -159,14 +171,7 @@ export default function Review() {
             <p className="text-white font-bold text-lg leading-none">{questions.length}</p>
             <p className="text-white/50 text-xs">總題</p>
           </div>
-          {bookmarks.length > 0 && (
-            <button
-              onClick={() => setShowBookmarks(v => !v)}
-              className="text-xs text-white/60 border border-white/20 px-3 py-1.5 rounded-xl">
-              {showBookmarks ? '返回' : `⭐ ${bookmarks.length}`}
-            </button>
-          )}
-          {!showBookmarks && questions.length > 0 && (
+          {questions.length > 0 && (
             <button
               onClick={() => setShowAll(v => !v)}
               className="ml-auto text-xs text-white/60 border border-white/20 px-3 py-1.5 rounded-xl">
@@ -187,9 +192,7 @@ export default function Review() {
         )}
         {displayed.map((q, i) => (
           <ReviewCard key={q.id || i} q={q}
-            index={showBookmarks ? i : questions.indexOf(q)}
-            isBookmarked={isBookmarked(q)}
-            onToggleBookmark={toggleBookmark} />
+            index={questions.indexOf(q)} />
         ))}
 
         {/* 底部廣告 / 贊助橫幅 */}

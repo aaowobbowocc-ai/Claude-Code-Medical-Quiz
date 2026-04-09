@@ -5,6 +5,7 @@ import { useExplain } from '../hooks/useAI'
 import { ExplainPanel } from '../components/AIPanel'
 import QuestionImages from '../components/QuestionImages'
 import CommentSection from '../components/CommentSection'
+import { useBookmarks } from '../hooks/useBookmarks'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -119,6 +120,10 @@ function QuestionCard({ q, stageMap }) {
   const [explainReq, setExplainReq] = useState(false)
   const [classifying, setClassifying] = useState(false)
   const [localTag, setLocalTag] = useState(q.subject_tag || '')
+  const [showFolderPick, setShowFolderPick] = useState(false)
+  const { isBookmarked, getFolder, folders, addToFolder, removeBookmark, getFolderQuestions, MAX_PER_FOLDER } = useBookmarks()
+  const bookmarked = isBookmarked(q)
+  const currentFolder = getFolder(q)
   const tagColor = STAGE_COLORS[localTag] || '#94A3B8'
   const stageMeta = stageMap?.[localTag]
   const tagName  = !localTag || localTag === 'unknown'
@@ -148,10 +153,32 @@ function QuestionCard({ q, stageMap }) {
             🏷️ 幫忙分類
           </button>
         )}
-        <span className="text-xs font-mono font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-lg ml-auto">
-          #{q.number}
-        </span>
+        <div className="flex items-center gap-1.5 ml-auto">
+          <button onClick={(e) => { e.stopPropagation(); bookmarked ? removeBookmark(q) : setShowFolderPick(!showFolderPick) }}
+            className="text-base active:scale-90 transition-transform" title={bookmarked ? `已收藏（${currentFolder}）` : '收藏題目'}>
+            {bookmarked ? '⭐' : '☆'}
+          </button>
+          <span className="text-xs font-mono font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-lg">
+            #{q.number}
+          </span>
+        </div>
       </div>
+
+      {showFolderPick && (
+        <div className="px-4 pb-2 flex gap-2">
+          {folders.map(f => {
+            const count = getFolderQuestions(f).length
+            const full = count >= MAX_PER_FOLDER
+            return (
+              <button key={f} onClick={() => { if (!full) { addToFolder(q, f); setShowFolderPick(false) } }}
+                disabled={full}
+                className={`flex-1 text-xs font-bold py-2 rounded-xl border active:scale-95 transition-all ${full ? 'bg-gray-50 text-gray-300 border-gray-100' : 'bg-amber-50 text-amber-700 border-amber-200'}`}>
+                ⭐ {f} ({count}/{MAX_PER_FOLDER})
+              </button>
+            )
+          })}
+        </div>
+      )}
 
       {classifying && (
         <ClassifySheet q={q} onClose={(tag) => handleVoteDone(tag)} />

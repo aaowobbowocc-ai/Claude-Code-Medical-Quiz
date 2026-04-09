@@ -511,10 +511,12 @@ function ExamResults({ papers, navigate }) {
   useEffect(() => {
     if (saved) return
     setSaved(true)
+    const singlePassed = !isFullExam && pct >= 60
     const coinReward = passed === true
       ? Math.round(totalQuestions * 1.5)   // 完整模考通過：題數×1.5
       : isFullExam ? 0                     // 完整模考未過：不給獎勵
-      : totalQuestions                     // 單科：題數×1
+      : singlePassed ? totalQuestions      // 單科通過：題數×1
+      : 0                                 // 單科未過：不給獎勵
     if (coinReward > 0) addCoins(coinReward)
     addExp(passed === true ? 150 : isFullExam ? 40 : 60)
     try {

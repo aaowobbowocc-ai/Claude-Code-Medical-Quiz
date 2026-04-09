@@ -8,7 +8,7 @@ const MEDALS = ['🥇', '🥈', '🥉']
 
 export default function Leaderboard() {
   const navigate = useNavigate()
-  usePageMeta('排行榜', '醫學知識王每週排行榜，看看誰是最強醫師國考挑戰者！')
+  usePageMeta('排行榜', '國考知識王每週排行榜，看看誰是最強醫師國考挑戰者！')
   const [data, setData] = useState(null)
   const [week, setWeek] = useState('')
   const [loading, setLoading] = useState(true)

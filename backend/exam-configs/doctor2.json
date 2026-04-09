@@ -1,0 +1,78 @@
+{
+  "id": "doctor2",
+  "name": "醫師二階",
+  "short": "醫二",
+  "icon": "🏥",
+  "category": "medical",
+  "questionsFile": "questions-doctor2.json",
+  "totalQ": 320,
+  "passScore": 192,
+  "totalPoints": 400,
+  "passRate": 0.6,
+  "papers": [
+    { "id": "paper3", "name": "醫學(三)", "subject": "醫學(三)", "subjects": "內科80", "count": 80, "pointsPerQ": 1.25 },
+    { "id": "paper4", "name": "醫學(四)", "subject": "醫學(四)", "subjects": "小兒33、皮膚10、神經15、精神22", "count": 80, "pointsPerQ": 1.25 },
+    { "id": "paper5", "name": "醫學(五)", "subject": "醫學(五)", "subjects": "外科55、骨科8、泌尿17", "count": 80, "pointsPerQ": 1.25 },
+    { "id": "paper6", "name": "醫學(六)", "subject": "醫學(六)", "subjects": "麻醉8、眼10、耳鼻喉9、婦產30、復健18、倫理5", "count": 80, "pointsPerQ": 1.25 }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" }
+  ],
+  "ui": {
+    "tagNames": {
+      "internal_medicine": "內科", "surgery": "外科", "pediatrics": "小兒", "obstetrics_gynecology": "婦產",
+      "psychiatry": "精神", "neurology": "神經", "dermatology": "皮膚", "orthopedics": "骨科", "urology": "泌尿",
+      "anesthesia": "麻醉", "ophthalmology": "眼科", "ent": "耳鼻喉", "rehabilitation": "復健", "medical_law_ethics": "倫理"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "internal_medicine": { "icon": "🫀", "color": "#EF4444" },
+      "infectious_disease": { "icon": "🦠", "color": "#10B981" },
+      "hematology": { "icon": "🩸", "color": "#DC2626" },
+      "psychiatry": { "icon": "🧠", "color": "#8B5CF6" },
+      "dermatology": { "icon": "🧴", "color": "#F59E0B" },
+      "pediatrics": { "icon": "👶", "color": "#3B82F6" },
+      "neurology": { "icon": "🧬", "color": "#6366F1" },
+      "surgery": { "icon": "🔪", "color": "#059669" },
+      "orthopedics": { "icon": "🦴", "color": "#D97706" },
+      "urology": { "icon": "🫘", "color": "#0D9488" },
+      "anesthesia": { "icon": "😴", "color": "#64748B" },
+      "ophthalmology": { "icon": "👁️", "color": "#2563EB" },
+      "ent": { "icon": "👂", "color": "#7C3AED" },
+      "obstetrics_gynecology": { "icon": "🤰", "color": "#EC4899" },
+      "rehabilitation": { "icon": "🏋️", "color": "#0891B2" },
+      "emergency": { "icon": "🚑", "color": "#EF4444" },
+      "medical_law_ethics": { "icon": "⚖️", "color": "#374151" }
+    },
+    "subjectColors": {
+      "醫學(三)": "#3B82F6", "醫學(四)": "#10B981", "醫學(五)": "#8B5CF6", "醫學(六)": "#F97316",
+      "內科": "#3B82F6", "外科": "#EF4444", "小兒科": "#818CF8", "婦產科": "#EC4899",
+      "神經科": "#6366F1", "精神科": "#A855F7", "皮膚科": "#F59E0B", "眼科": "#06B6D4",
+      "耳鼻喉科": "#14B8A6", "骨科": "#78716C", "泌尿科": "#0EA5E9", "麻醉科": "#64748B",
+      "傳染病": "#DC2626", "血液腫瘤": "#BE123C", "醫學倫理與法規": "#0D9488"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 醫師國考二階題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "醫師國考第二階段",
+    "shortName": "醫師二階",
+    "studentType": "醫學生",
+    "years": "110 至 115",
+    "totalQ": 1920,
+    "examDesc": "醫師國考第二階段（二階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為通過一階並完成臨床實習之醫學系學生。",
+    "paperDesc": "考試分為「醫學(三)」至「醫學(六)」共四節，每節各 80 題選擇題，合計 320 題。每題 1.25 分、每卷滿分 100 分，總分 400 分，及格標準為 192 分（60%）。",
+    "subjects": "內科、外科、小兒科、婦產科、精神科、神經科、皮膚科、骨科、泌尿科、眼科、耳鼻喉科、復健科、急診醫學、醫療法規等臨床醫學科目",
+    "mockDesc": "完整模擬醫學(三)～(六)四卷，每題 1.25 分，192/400 及格",
+    "subjectDetails": [
+      ["內科", "各系統內科疾病的診斷、治療與處置，心臟、胸腔、腸胃、腎臟、內分泌為重點。"],
+      ["外科", "一般外科、消化外科、心臟外科的手術適應症與術後照護。"],
+      ["小兒科", "兒童常見疾病、生長發育、新生兒照護與兒童預防接種。"],
+      ["婦產科", "產科學、婦科腫瘤、生殖內分泌與不孕症診療。"],
+      ["精神科", "精神疾病的診斷標準（DSM）、藥物治療與心理治療。"],
+      ["神經科", "中樞及周邊神經系統疾病、腦血管疾病、癲癇與頭痛。"],
+      ["急診醫學", "急重症處置、創傷評估、毒物學與急救流程。"],
+      ["醫療法規", "醫師法、醫療法、病人自主權利法等相關法規與倫理議題。"]
+    ]
+  }
+}

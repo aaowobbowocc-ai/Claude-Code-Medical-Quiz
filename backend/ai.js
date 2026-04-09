@@ -188,7 +188,7 @@ ${wrongSummary || '（全部答對！）'}
 
     sseHeaders(res);
 
-    const prompt = `你是醫學知識王的AI導師。今天是${today}。
+    const prompt = `你是國考知識王的AI導師。今天是${today}。
 請為正在備考醫師一階國考的醫學生「${name}」（遊戲等級 Lv.${level}）寫一段今日寄語。
 
 要求：

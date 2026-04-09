@@ -1,18 +1,10 @@
 import { Link } from 'react-router-dom'
-import { usePlayerStore, EXAM_TYPES } from '../store/gameStore'
-
-const EXAM_PLATFORM_NAME = {
-  doctor1: '醫學知識王 — 醫師國考一階題庫練習平台',
-  doctor2: '醫學知識王 — 醫師國考二階題庫練習平台',
-  dental1: '牙醫知識王 — 牙醫國考一階題庫練習平台',
-  dental2: '牙醫知識王 — 牙醫國考二階題庫練習平台',
-  pharma1: '藥學知識王 — 藥師國考一階題庫練習平台',
-  pharma2: '藥學知識王 — 藥師國考二階題庫練習平台',
-}
+import { usePlayerStore } from '../store/gameStore'
+import { getPlatformName } from '../config/examRegistry'
 
 export default function Footer() {
   const exam = usePlayerStore(s => s.exam) || 'doctor1'
-  const platformName = EXAM_PLATFORM_NAME[exam] || EXAM_PLATFORM_NAME.doctor1
+  const platformName = getPlatformName(exam)
   return (
     <footer className="bg-white border-t border-gray-100 px-5 py-5 text-center text-xs text-gray-400 space-y-2.5">
       <div className="flex items-center justify-center gap-3 flex-wrap">

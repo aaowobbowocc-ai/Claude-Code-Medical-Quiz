@@ -9,57 +9,18 @@ import SmartBanner from '../components/SmartBanner'
 import QuestionImages from '../components/QuestionImages'
 import CommentSection from '../components/CommentSection'
 import { useBookmarks } from '../hooks/useBookmarks'
+import { useAccuracyStore } from '../store/accuracyStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
-// Stage icon/color by tag or fallback
-const STAGE_STYLE = {
-  all:       { icon: '🎲', color: '#64748B' },
-  // Doctor1
-  anatomy:   { icon: '🦴', color: '#3B82F6' }, physiology:   { icon: '💓', color: '#EF4444' },
-  biochemistry: { icon: '⚗️', color: '#8B5CF6' }, histology:  { icon: '🔬', color: '#6366F1' },
-  embryology: { icon: '🧬', color: '#818CF8' }, microbiology: { icon: '🦠', color: '#10B981' },
-  parasitology: { icon: '🪱', color: '#D97706' }, pharmacology: { icon: '💊', color: '#F97316' },
-  pathology: { icon: '🩺', color: '#DC2626' }, public_health: { icon: '📊', color: '#0D9488' },
-  // Doctor2
-  internal_medicine: { icon: '🫀', color: '#EF4444' }, infectious_disease: { icon: '🦠', color: '#10B981' },
-  hematology: { icon: '🩸', color: '#DC2626' }, psychiatry: { icon: '🧠', color: '#8B5CF6' },
-  dermatology: { icon: '🧴', color: '#F59E0B' }, pediatrics: { icon: '👶', color: '#3B82F6' },
-  neurology: { icon: '🧬', color: '#6366F1' }, surgery: { icon: '🔪', color: '#059669' },
-  orthopedics: { icon: '🦴', color: '#D97706' }, urology: { icon: '🫘', color: '#0D9488' },
-  anesthesia: { icon: '😴', color: '#64748B' }, ophthalmology: { icon: '👁️', color: '#2563EB' },
-  ent: { icon: '👂', color: '#7C3AED' }, obstetrics_gynecology: { icon: '🤰', color: '#EC4899' },
-  rehabilitation: { icon: '🏋️', color: '#0891B2' }, emergency: { icon: '🚑', color: '#EF4444' },
-  medical_law_ethics: { icon: '⚖️', color: '#374151' },
-  // Dental1
-  dental_anatomy: { icon: '🦷', color: '#3B82F6' }, oral_anatomy: { icon: '👄', color: '#2563EB' },
-  tooth_morphology: { icon: '🦷', color: '#8B5CF6' }, embryology_histology: { icon: '🔬', color: '#6366F1' },
-  oral_pathology: { icon: '🩺', color: '#DC2626' }, dental_pharmacology: { icon: '💊', color: '#F97316' },
-  dental_microbiology: { icon: '🦠', color: '#10B981' }, oral_physiology: { icon: '💓', color: '#EF4444' },
-  // Dental2
-  oral_surgery: { icon: '🔪', color: '#059669' }, periodontics: { icon: '🦷', color: '#0D9488' },
-  orthodontics: { icon: '😁', color: '#3B82F6' }, pediatric_dentistry: { icon: '👶', color: '#8B5CF6' },
-  endodontics: { icon: '🦷', color: '#DC2626' }, prosthodontics_rehab: { icon: '🧩', color: '#64748B' },
-  operative_dentistry: { icon: '🪥', color: '#F97316' }, dental_materials: { icon: '🧪', color: '#D97706' },
-  fixed_prosthodontics: { icon: '👑', color: '#7C3AED' }, removable_prosthodontics: { icon: '🫦', color: '#EC4899' },
-  oral_diagnosis: { icon: '🔍', color: '#2563EB' }, dental_radiology: { icon: '📷', color: '#6366F1' },
-  dental_public_health: { icon: '📊', color: '#0D9488' }, dental_ethics_law: { icon: '⚖️', color: '#374151' },
-  // Pharma1
-  medicinal_chemistry: { icon: '⚗️', color: '#8B5CF6' }, pharmaceutical_analysis: { icon: '📊', color: '#2563EB' },
-  pharmacognosy: { icon: '🌿', color: '#059669' }, pharmaceutics: { icon: '💊', color: '#F97316' },
-  biopharmaceutics: { icon: '🧬', color: '#6366F1' },
-  // Pharma2
-  dispensing: { icon: '🏥', color: '#3B82F6' }, clinical_pharmacy: { icon: '💉', color: '#EF4444' },
-  therapeutics: { icon: '💊', color: '#D97706' }, pharmacotherapy: { icon: '🩺', color: '#DC2626' },
-  pharmacy_law: { icon: '⚖️', color: '#374151' },
-}
+import { getStageStyle as getStageStyleFromRegistry } from '../config/examRegistry'
 
 const FALLBACK_COLORS = ['#3B82F6', '#EF4444', '#10B981', '#F97316', '#8B5CF6', '#D97706', '#6366F1', '#0D9488', '#DC2626', '#EC4899']
 
 function formatStages(raw) {
   if (!raw || !raw.length) return [{ id: 0, name: '全部題目', icon: '🎲', color: '#64748B' }]
   return raw.map((s, i) => {
-    const style = STAGE_STYLE[s.tag] || { icon: '📝', color: FALLBACK_COLORS[i % FALLBACK_COLORS.length] }
+    const style = getStageStyleFromRegistry(s.tag) || { icon: '📝', color: FALLBACK_COLORS[i % FALLBACK_COLORS.length] }
     return { id: s.id, name: s.name, icon: style.icon, color: style.color, count: s.count }
   })
 }
@@ -309,6 +270,10 @@ function PracticeGame({ config, onFinish }) {
     if (isCorrect) { setMyScore(s => s + 100); play('correct') }
     else play('wrong')
     if (aiChoice === correct && diffConfig.ai) setAiScore(s => s + 100)
+
+    // Record per-subject accuracy
+    const tag = q?.subject_tag || q?.subject_name
+    if (tag) useAccuracyStore.getState().record(examType, tag, isCorrect)
 
     // Log for review
     sessionLog.current.push({
@@ -613,7 +578,7 @@ function PracticeResults({ result, config, onRestart, onHome }) {
         <button
           onClick={() => {
             const stageName = config.stageName || '隨機'
-            const text = `醫學知識王｜${stageName} ${pct}% (${correct}/${total})\n${won ? '🏆 贏了！' : '💪 繼續加油'}\n一起來挑戰 👉 ${window.location.origin}`
+            const text = `國考知識王｜${stageName} ${pct}% (${correct}/${total})\n${won ? '🏆 贏了！' : '💪 繼續加油'}\n一起來挑戰 👉 ${window.location.origin}`
             window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(window.location.origin)}&text=${encodeURIComponent(text)}`, '_blank')
           }}
           className="flex items-center justify-center gap-2 bg-[#06C755] text-white font-bold px-6 py-3 rounded-2xl active:scale-95 transition-transform shadow-lg"

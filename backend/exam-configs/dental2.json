@@ -1,0 +1,73 @@
+{
+  "id": "dental2",
+  "name": "牙醫二階",
+  "short": "牙二",
+  "icon": "🪥",
+  "category": "dental",
+  "questionsFile": "questions-dental2.json",
+  "totalQ": 320,
+  "passScore": 192,
+  "totalPoints": 400,
+  "passRate": 0.6,
+  "papers": [
+    { "id": "paper1", "name": "卷一", "subject": "卷一", "subjects": "牙髓病28、牙體復形24、牙周病28", "count": 80, "pointsPerQ": 1.25 },
+    { "id": "paper2", "name": "卷二", "subject": "卷二", "subjects": "口腔顎面外科55、口腔影像25", "count": 80, "pointsPerQ": 1.25 },
+    { "id": "paper3", "name": "卷三", "subject": "卷三", "subjects": "活動補綴43、牙科材料23、固定補綴14", "count": 80, "pointsPerQ": 1.25 },
+    { "id": "paper4", "name": "卷四", "subject": "卷四", "subjects": "齒顎矯正28、兒童牙科32、公衛16、倫理法規4", "count": 80, "pointsPerQ": 1.25 }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" }
+  ],
+  "ui": {
+    "tagNames": {
+      "endodontics": "牙髓病", "operative_dentistry": "牙體復形", "periodontics": "牙周病",
+      "oral_surgery": "口外", "dental_radiology": "口腔影像",
+      "removable_prosthodontics": "活動補綴", "dental_materials": "牙材", "fixed_prosthodontics": "固定補綴",
+      "orthodontics": "齒矯", "pediatric_dentistry": "兒童牙科", "dental_public_health": "公衛", "dental_ethics_law": "倫理"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "oral_surgery": { "icon": "🔪", "color": "#059669" },
+      "periodontics": { "icon": "🦷", "color": "#0D9488" },
+      "orthodontics": { "icon": "😁", "color": "#3B82F6" },
+      "pediatric_dentistry": { "icon": "👶", "color": "#8B5CF6" },
+      "endodontics": { "icon": "🦷", "color": "#DC2626" },
+      "prosthodontics_rehab": { "icon": "🧩", "color": "#64748B" },
+      "operative_dentistry": { "icon": "🪥", "color": "#F97316" },
+      "dental_materials": { "icon": "🧪", "color": "#D97706" },
+      "fixed_prosthodontics": { "icon": "👑", "color": "#7C3AED" },
+      "removable_prosthodontics": { "icon": "🫦", "color": "#EC4899" },
+      "oral_diagnosis": { "icon": "🔍", "color": "#2563EB" },
+      "dental_radiology": { "icon": "📷", "color": "#6366F1" },
+      "dental_public_health": { "icon": "📊", "color": "#0D9488" },
+      "dental_ethics_law": { "icon": "⚖️", "color": "#374151" }
+    },
+    "subjectColors": {
+      "口腔顎面外科": "#3B82F6", "牙周病學": "#10B981", "齒顎矯正": "#8B5CF6",
+      "兒童牙科": "#818CF8", "牙髓病": "#D97706", "牙體復形": "#F97316",
+      "牙科材料": "#6366F1", "固定補綴": "#DC2626", "活動補綴": "#BE123C",
+      "補綴學": "#DC2626", "口腔診斷": "#0D9488", "口腔影像": "#64748B", "倫理法規": "#0D9488"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 牙醫國考二階題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "牙醫師國考第二階段",
+    "shortName": "牙醫二階",
+    "studentType": "牙醫學生",
+    "years": "110 至 115",
+    "totalQ": 3200,
+    "examDesc": "牙醫師國考第二階段（二階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為通過一階並完成臨床實習之牙醫學系學生。",
+    "paperDesc": "考試分為四卷，每卷各 80 題選擇題，合計 320 題。每題 1.25 分、每卷滿分 100 分，總分 400 分，及格標準為 192 分（60%）。",
+    "subjects": "口腔顎面外科、牙周病學、齒顎矯正、兒童牙科、牙髓病學、牙體復形、牙科材料、補綴學、口腔診斷、公共衛生等臨床牙醫科目",
+    "mockDesc": "完整模擬四卷，每題 1.25 分，192/400 及格",
+    "subjectDetails": [
+      ["口腔顎面外科", "拔牙手術、顎骨骨折處理、口腔腫瘤手術與顎面重建。"],
+      ["牙周病學", "牙周疾病的分類、診斷與治療計畫，牙周手術方式。"],
+      ["齒顎矯正", "齒列不正的分類、矯正力學原理與治療計畫擬定。"],
+      ["牙體復形", "齲齒的修復材料選擇、窩洞設計與直接/間接復形技術。"],
+      ["補綴學", "固定補綴、活動補綴與全口補綴的設計原則與製作流程。"],
+      ["兒童牙科", "兒童齲齒預防、行為管理與乳牙治療。"]
+    ]
+  }
+}

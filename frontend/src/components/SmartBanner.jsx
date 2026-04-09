@@ -53,7 +53,7 @@ export default function SmartBanner() {
           <div className="flex items-center gap-3 px-4 py-3">
             <span className="text-3xl shrink-0">🩺</span>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-bold text-medical-dark leading-snug">支持醫學知識王</p>
+              <p className="text-sm font-bold text-medical-dark leading-snug">支持國考知識王</p>
               <p className="text-xs text-gray-400 mt-0.5">你的贊助讓所有醫學生都能免費使用</p>
             </div>
             <button

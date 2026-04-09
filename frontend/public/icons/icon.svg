@@ -13,33 +13,27 @@
   <rect width="512" height="512" rx="108" fill="url(#bg)"/>
 
   <!-- Subtle medical cross watermark -->
-  <rect x="206" y="50" width="100" height="280" rx="22" fill="rgba(255,255,255,0.08)"/>
-  <rect x="116" y="140" width="280" height="100" rx="22" fill="rgba(255,255,255,0.08)"/>
+  <rect x="206" y="30" width="100" height="280" rx="22" fill="rgba(255,255,255,0.08)"/>
+  <rect x="116" y="120" width="280" height="100" rx="22" fill="rgba(255,255,255,0.08)"/>
 
   <!-- Crown -->
-  <g transform="translate(256,130)" filter="url(#shadow)">
-    <!-- Crown body -->
-    <path d="M-60,30 L-75,-20 L-40,5 L0,-35 L40,5 L75,-20 L60,30 Z" fill="#FFD700" stroke="#FFA000" stroke-width="3"/>
-    <!-- Crown base -->
-    <rect x="-62" y="30" width="124" height="18" rx="5" fill="#FFD700" stroke="#FFA000" stroke-width="2"/>
-    <!-- Gems -->
-    <circle cx="-40" cy="5" r="7" fill="#FF5252"/>
-    <circle cx="0" cy="-8" r="8" fill="#FF5252"/>
-    <circle cx="40" cy="5" r="7" fill="#FF5252"/>
-    <!-- Crown tips -->
-    <circle cx="-75" cy="-20" r="6" fill="#FFD700"/>
-    <circle cx="-40" cy="5" r="4" fill="#FFE082"/>
-    <circle cx="0" cy="-35" r="7" fill="#FFD700"/>
-    <circle cx="40" cy="5" r="4" fill="#FFE082"/>
-    <circle cx="75" cy="-20" r="6" fill="#FFD700"/>
+  <g transform="translate(256,105)" filter="url(#shadow)">
+    <path d="M-55,28 L-68,-18 L-36,4 L0,-32 L36,4 L68,-18 L55,28 Z" fill="#FFD700" stroke="#FFA000" stroke-width="2.5"/>
+    <rect x="-57" y="28" width="114" height="16" rx="4" fill="#FFD700" stroke="#FFA000" stroke-width="2"/>
+    <circle cx="-36" cy="4" r="6" fill="#FF5252"/>
+    <circle cx="0" cy="-8" r="7" fill="#FF5252"/>
+    <circle cx="36" cy="4" r="6" fill="#FF5252"/>
+    <circle cx="-68" cy="-18" r="5.5" fill="#FFD700"/>
+    <circle cx="0" cy="-32" r="6" fill="#FFD700"/>
+    <circle cx="68" cy="-18" r="5.5" fill="#FFD700"/>
   </g>
 
-  <!-- Main text: 知識王 -->
-  <text x="256" y="310" text-anchor="middle" font-family="'Noto Sans TC','Microsoft JhengHei','PingFang TC',Arial,sans-serif" font-weight="900" font-size="120" fill="white" filter="url(#shadow)">知識王</text>
+  <!-- Main text: 國考 -->
+  <text x="256" y="260" text-anchor="middle" font-family="'Noto Sans TC','Microsoft JhengHei','PingFang TC',Arial,sans-serif" font-weight="900" font-size="100" fill="rgba(255,255,255,0.85)" filter="url(#shadow)">國考</text>
 
-  <!-- Sub text: 國考 -->
-  <text x="256" y="400" text-anchor="middle" font-family="'Noto Sans TC','Microsoft JhengHei','PingFang TC',Arial,sans-serif" font-weight="700" font-size="56" fill="rgba(255,255,255,0.7)">國考</text>
+  <!-- Main text: 知識王 -->
+  <text x="256" y="380" text-anchor="middle" font-family="'Noto Sans TC','Microsoft JhengHei','PingFang TC',Arial,sans-serif" font-weight="900" font-size="120" fill="white" filter="url(#shadow)">知識王</text>
 
   <!-- Bottom accent line -->
-  <rect x="186" y="425" width="140" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
+  <rect x="186" y="405" width="140" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
 </svg>

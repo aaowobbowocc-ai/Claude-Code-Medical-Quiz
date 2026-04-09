@@ -1,36 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { usePlayerStore, EXAM_TYPES } from '../store/gameStore'
+import { usePlayerStore } from '../store/gameStore'
+import { getExamTypes, getAllTagNames } from '../config/examRegistry'
 import SmartBanner from '../components/SmartBanner'
+import { useAccuracyStore } from '../store/accuracyStore'
 import QuestionImages from '../components/QuestionImages'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
-const TAG_NAMES = {
-  // Doctor1
-  anatomy: '解剖', physiology: '生理', biochemistry: '生化', histology: '組織', embryology: '胚胎',
-  microbiology: '微免', parasitology: '寄生蟲', d1_pharmacology: '藥理', pathology: '病理', public_health: '公衛',
-  // Doctor2
-  internal_medicine: '內科', surgery: '外科', pediatrics: '小兒', obstetrics_gynecology: '婦產',
-  psychiatry: '精神', neurology: '神經', dermatology: '皮膚', orthopedics: '骨科', urology: '泌尿',
-  anesthesia: '麻醉', ophthalmology: '眼科', ent: '耳鼻喉', rehabilitation: '復健', medical_law_ethics: '倫理',
-  // Dental1
-  dental_anatomy: '牙醫解剖', tooth_morphology: '牙體形態', embryology_histology: '胚胎組織',
-  oral_pathology: '口腔病理', oral_physiology: '口腔生理', dental_microbiology: '微免', dental_pharmacology: '牙科藥理',
-  // Dental2
-  endodontics: '牙髓病', operative_dentistry: '牙體復形', periodontics: '牙周病',
-  oral_surgery: '口外', dental_radiology: '口腔影像',
-  removable_prosthodontics: '活動補綴', dental_materials: '牙材', fixed_prosthodontics: '固定補綴',
-  orthodontics: '齒矯', pediatric_dentistry: '兒童牙科', dental_public_health: '公衛', dental_ethics_law: '倫理',
-  // Pharma1
-  pharmacology: '藥理', medicinal_chemistry: '藥化', pharmaceutical_analysis: '藥分',
-  pharmacognosy: '生藥', pharmaceutics: '藥劑', biopharmaceutics: '生物藥劑',
-  // Pharma2
-  dispensing: '調劑', clinical_pharmacy: '臨床藥學', pharmacotherapy: '藥物治療', pharmacy_law: '藥事法規',
-}
+// TAG_NAMES is now loaded from exam-configs via getAllTagNames()
 
 function getExamConfig(examType) {
-  const et = EXAM_TYPES.find(e => e.id === examType) || EXAM_TYPES[0]
+  const types = getExamTypes()
+  const et = types.find(e => e.id === examType) || types[0]
   const isWeighted = et.papers.some(p => p.pointsPerQ && p.pointsPerQ !== 1)
   return {
     papers: et.papers,
@@ -167,7 +149,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                 if (!paperDef) return null
                 const singleFee = getSingleExamFee(paperDef)
                 const distText = Object.entries(p.distribution || {})
-                  .map(([tag, cnt]) => `${TAG_NAMES[tag] || tag} ${cnt}`)
+                  .map(([tag, cnt]) => `${getAllTagNames()[tag] || tag} ${cnt}`)
                   .join('、')
                 return (
                   <button key={pi} onClick={() => onStartHistorical(selectedExam.roc_year, selectedExam.session, false, paperDef)}
@@ -749,6 +731,14 @@ export default function MockExam() {
       total: questions.length,
       timeUsed,
     }
+
+    // Record per-subject accuracy
+    const examType = usePlayerStore.getState().exam || 'doctor1'
+    const batchResults = questions.map((q, i) => ({
+      tag: q.subject_tag || q.subject_name,
+      isCorrect: isAnswerCorrect(answers[i], q.answer),
+    }))
+    useAccuracyStore.getState().recordBatch(examType, batchResults)
 
     const newResults = [...paperResults, result]
     setPaperResults(newResults)

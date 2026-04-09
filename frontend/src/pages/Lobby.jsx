@@ -6,40 +6,7 @@ import ConnectionStatus from '../components/ConnectionStatus'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
-// Stage icon/color by tag
-const STAGE_STYLE = {
-  all: { icon: '🎲', color: '#64748B' },
-  anatomy: { icon: '🦴', color: '#3B82F6' }, physiology: { icon: '💓', color: '#EF4444' },
-  biochemistry: { icon: '⚗️', color: '#8B5CF6' }, histology: { icon: '🔬', color: '#6366F1' },
-  embryology: { icon: '🧬', color: '#818CF8' }, microbiology: { icon: '🦠', color: '#10B981' },
-  parasitology: { icon: '🪱', color: '#D97706' }, pharmacology: { icon: '💊', color: '#F97316' },
-  pathology: { icon: '🩺', color: '#DC2626' }, public_health: { icon: '📊', color: '#0D9488' },
-  internal_medicine: { icon: '🫀', color: '#EF4444' }, infectious_disease: { icon: '🦠', color: '#10B981' },
-  hematology: { icon: '🩸', color: '#DC2626' }, psychiatry: { icon: '🧠', color: '#8B5CF6' },
-  dermatology: { icon: '🧴', color: '#F59E0B' }, pediatrics: { icon: '👶', color: '#3B82F6' },
-  neurology: { icon: '🧬', color: '#6366F1' }, surgery: { icon: '🔪', color: '#059669' },
-  orthopedics: { icon: '🦴', color: '#D97706' }, urology: { icon: '🫘', color: '#0D9488' },
-  anesthesia: { icon: '😴', color: '#64748B' }, ophthalmology: { icon: '👁️', color: '#2563EB' },
-  ent: { icon: '👂', color: '#7C3AED' }, obstetrics_gynecology: { icon: '🤰', color: '#EC4899' },
-  rehabilitation: { icon: '🏋️', color: '#0891B2' }, emergency: { icon: '🚑', color: '#EF4444' },
-  medical_law_ethics: { icon: '⚖️', color: '#374151' },
-  dental_anatomy: { icon: '🦷', color: '#3B82F6' }, oral_anatomy: { icon: '👄', color: '#2563EB' },
-  tooth_morphology: { icon: '🦷', color: '#8B5CF6' }, embryology_histology: { icon: '🔬', color: '#6366F1' },
-  oral_pathology: { icon: '🩺', color: '#DC2626' }, dental_pharmacology: { icon: '💊', color: '#F97316' },
-  dental_microbiology: { icon: '🦠', color: '#10B981' }, oral_physiology: { icon: '💓', color: '#EF4444' },
-  oral_surgery: { icon: '🔪', color: '#059669' }, periodontics: { icon: '🦷', color: '#0D9488' },
-  orthodontics: { icon: '😁', color: '#3B82F6' }, pediatric_dentistry: { icon: '👶', color: '#8B5CF6' },
-  endodontics: { icon: '🦷', color: '#DC2626' }, operative_dentistry: { icon: '🪥', color: '#F97316' },
-  dental_materials: { icon: '🧪', color: '#D97706' }, fixed_prosthodontics: { icon: '👑', color: '#7C3AED' },
-  removable_prosthodontics: { icon: '🫦', color: '#EC4899' }, oral_diagnosis: { icon: '🔍', color: '#2563EB' },
-  dental_radiology: { icon: '📷', color: '#6366F1' }, dental_public_health: { icon: '📊', color: '#0D9488' },
-  dental_ethics_law: { icon: '⚖️', color: '#374151' },
-  medicinal_chemistry: { icon: '⚗️', color: '#8B5CF6' }, pharmaceutical_analysis: { icon: '📊', color: '#2563EB' },
-  pharmacognosy: { icon: '🌿', color: '#059669' }, pharmaceutics: { icon: '💊', color: '#F97316' },
-  biopharmaceutics: { icon: '🧬', color: '#6366F1' },
-  dispensing: { icon: '🏥', color: '#3B82F6' }, clinical_pharmacy: { icon: '💉', color: '#EF4444' },
-  pharmacotherapy: { icon: '🩺', color: '#DC2626' }, pharmacy_law: { icon: '⚖️', color: '#374151' },
-}
+import { getStageStyle } from '../config/examRegistry'
 const FALLBACK_COLORS = ['#3B82F6', '#EF4444', '#10B981', '#F97316', '#8B5CF6', '#D97706']
 
 /* Pulsing dot animation for "waiting" */
@@ -75,7 +42,7 @@ export default function Lobby() {
       .then(data => {
         if (data.stages) {
           setSTAGES(data.stages.map((s, i) => {
-            const style = STAGE_STYLE[s.tag] || { icon: '📝', color: FALLBACK_COLORS[i % FALLBACK_COLORS.length] }
+            const style = getStageStyle(s.tag) || { icon: '📝', color: FALLBACK_COLORS[i % FALLBACK_COLORS.length] }
             return { id: s.id, name: s.name, icon: style.icon, color: style.color, count: s.count }
           }))
         }
@@ -92,9 +59,9 @@ export default function Lobby() {
   }
 
   const handleShare = async () => {
-    const msg = `我在玩「醫學知識王」，邀請碼：${roomCode}，快來挑戰我！`
+    const msg = `我在玩「國考知識王」，邀請碼：${roomCode}，快來挑戰我！`
     if (navigator.share) {
-      try { await navigator.share({ title: '醫學知識王', text: msg }); return } catch {}
+      try { await navigator.share({ title: '國考知識王', text: msg }); return } catch {}
     }
     await navigator.clipboard?.writeText(msg).catch(() => {})
     setCopied(true)

@@ -43,88 +43,22 @@ const io = new Server(server, {
   cors: { origin: '*', methods: ['GET', 'POST'] }
 });
 
-// ── Load questions (multi-exam) ─────────────────────────────────────────
-const EXAM_FILES = {
-  doctor1: 'questions.json',
-  doctor2: 'questions-doctor2.json',
-  dental1: 'questions-dental1.json',
-  dental2: 'questions-dental2.json',
-  pharma1: 'questions-pharma1.json',
-  pharma2: 'questions-pharma2.json',
-};
-
-const EXAM_META = {
-  doctor1: {
-    name: '醫師一階', totalQuestions: 200, passScore: 120, passRate: 0.6,
-    papers: [
-      { id: 'paper1', name: '醫學(一)', subjects: '解剖、生理、生化、組織、胚胎', count: 100, stages: '1,2,3,4,10' },
-      { id: 'paper2', name: '醫學(二)', subjects: '微免、寄生蟲、藥理、病理、公衛', count: 100, stages: '5,6,7,8,9' },
-    ],
-    stages: [
-      { id: 0, tag: 'all', name: '隨機混合' },
-      { id: 1, tag: 'anatomy', name: '解剖學' }, { id: 2, tag: 'physiology', name: '生理學' },
-      { id: 3, tag: 'biochemistry', name: '生物化學' }, { id: 4, tag: 'histology', name: '組織學' },
-      { id: 10, tag: 'embryology', name: '胚胎學' }, { id: 5, tag: 'microbiology', name: '微生物與免疫' },
-      { id: 6, tag: 'parasitology', name: '寄生蟲學' }, { id: 7, tag: 'pharmacology', name: '藥理學' },
-      { id: 8, tag: 'pathology', name: '病理學' }, { id: 9, tag: 'public_health', name: '公共衛生' },
-    ],
-  },
-  doctor2: {
-    name: '醫師二階', totalQuestions: 320, passScore: 192, totalPoints: 400, passRate: 0.6,
-    papers: [
-      { id: 'paper3', name: '醫學(三)', subjects: '內科、傳染病、血液、精神科、皮膚科', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper4', name: '醫學(四)', subjects: '小兒科、神經科', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper5', name: '醫學(五)', subjects: '外科、骨科、泌尿科、麻醉科、眼、耳鼻喉', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper6', name: '醫學(六)', subjects: '婦產科、復健科、急診醫學、醫療法規、醫學倫理', count: 80, pointsPerQ: 1.25 },
-    ],
-    stages: [{ id: 0, tag: 'all', name: '全部' }],
-  },
-  dental1: {
-    name: '牙醫一階', totalQuestions: 160, passScore: 96, totalPoints: 200, passRate: 0.6,
-    papers: [
-      { id: 'paper1', name: '卷一', subjects: '牙醫解剖、口腔解剖、牙體形態、胚胎及組織學', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper2', name: '卷二', subjects: '口腔病理、牙科藥理、微生物及免疫學、口腔生理', count: 80, pointsPerQ: 1.25 },
-    ],
-    stages: [{ id: 0, tag: 'all', name: '全部' }],
-  },
-  dental2: {
-    name: '牙醫二階', totalQuestions: 320, passScore: 192, totalPoints: 400, passRate: 0.6,
-    papers: [
-      { id: 'paper1', name: '卷一', subjects: '口腔顎面外科、牙周病學', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper2', name: '卷二', subjects: '齒顎矯正、兒童牙科、復健牙醫學、牙髓病學', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper3', name: '卷三', subjects: '牙體復形、牙科材料、固定補綴、活動補綴、全口補綴', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper4', name: '卷四', subjects: '口腔診斷、口腔影像、公共衛生、倫理、醫療法規', count: 80, pointsPerQ: 1.25 },
-    ],
-    stages: [{ id: 0, tag: 'all', name: '全部' }],
-  },
-  pharma1: {
-    name: '藥師一階', totalQuestions: 240, passScore: 180, totalPoints: 300, passRate: 0.6,
-    papers: [
-      { id: 'paper1', name: '卷一', subjects: '藥理學、藥物化學', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper2', name: '卷二', subjects: '藥物分析、生藥學（含中藥學）', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper3', name: '卷三', subjects: '藥劑學、生物藥劑學', count: 80, pointsPerQ: 1.25 },
-    ],
-    stages: [{ id: 0, tag: 'all', name: '全部' }],
-  },
-  pharma2: {
-    name: '藥師二階', totalQuestions: 210, passScore: 180, totalPoints: 300, passRate: 0.6,
-    papers: [
-      { id: 'paper1', name: '卷一', subjects: '調劑學、臨床藥學、治療學', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper2', name: '卷二', subjects: '藥物治療學', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper3', name: '卷三', subjects: '藥事行政與法規', count: 50, pointsPerQ: 2.0 },
-    ],
-    stages: [{ id: 0, tag: 'all', name: '全部' }],
-  },
-};
+// ── Load exam configs from exam-configs/ directory ──────────────────────
+const examConfigDir = path.join(__dirname, 'exam-configs');
+const examConfigs = {};
+for (const file of fs.readdirSync(examConfigDir).filter(f => f.endsWith('.json'))) {
+  const cfg = JSON.parse(fs.readFileSync(path.join(examConfigDir, file), 'utf-8'));
+  examConfigs[cfg.id] = cfg;
+}
+console.log(`Loaded ${Object.keys(examConfigs).length} exam configs: ${Object.keys(examConfigs).join(', ')}`);
 
 const examData = {};
-for (const [key, file] of Object.entries(EXAM_FILES)) {
-  const filePath = path.join(__dirname, file);
+for (const [key, cfg] of Object.entries(examConfigs)) {
+  const filePath = path.join(__dirname, cfg.questionsFile);
   if (fs.existsSync(filePath)) {
     const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     const questions = raw.questions || [];
-    const meta = EXAM_META[key];
-    const papers = meta.papers || [];
+    const papers = cfg.papers || [];
 
     // Assign paper info to each question based on position within year+session groups
     if (key !== 'doctor1' && papers.length > 0) {
@@ -164,11 +98,11 @@ for (const [key, file] of Object.entries(EXAM_FILES)) {
       }
     }
 
-    // Use stages from JSON data if available (from classification), otherwise build from papers
+    // Use stages from JSON data if available (from classification), otherwise from config
     let stages = raw.stages && raw.stages.length > 0
       ? [{ id: 0, tag: 'all', name: '隨機混合' }, ...raw.stages.filter(s => s.count > 0)]
-      : meta.stages;
-    if (!raw.stages && key !== 'doctor1' && papers.length > 1) {
+      : cfg.stages || [{ id: 0, tag: 'all', name: '全部' }];
+    if (!raw.stages && (!cfg.stages || cfg.stages.length <= 1) && papers.length > 1) {
       stages = [
         { id: 0, tag: 'all', name: '全部' },
         ...papers.map(p => ({ id: p.id, tag: p.id, name: `${p.name}`, subjects: p.subjects })),
@@ -178,7 +112,7 @@ for (const [key, file] of Object.entries(EXAM_FILES)) {
     examData[key] = {
       questions,
       stages,
-      metadata: raw.metadata || { category: meta.name },
+      metadata: raw.metadata || { category: cfg.name },
     };
     console.log(`Loaded ${key}: ${questions.length} questions, ${stages.length} stages`);
   }
@@ -697,18 +631,24 @@ app.get('/health', (_, res) => res.json({ ok: true }));
 
 // List available exams
 app.get('/exams', (_, res) => {
-  const list = Object.entries(EXAM_META).map(([id, meta]) => ({
+  const list = Object.entries(examConfigs).map(([id, cfg]) => ({
     id,
-    name: meta.name,
+    name: cfg.name,
     questionCount: examData[id]?.questions.length || 0,
-    totalQuestions: meta.totalQuestions,
-    passScore: meta.passScore,
-    passRate: meta.passRate,
-    papers: meta.papers,
-    hasStages: meta.stages.length > 1,
+    totalQuestions: cfg.totalQ,
+    passScore: cfg.passScore,
+    passRate: cfg.passRate,
+    papers: cfg.papers,
+    hasStages: (cfg.stages || []).length > 1,
   }));
   res.set('Cache-Control', 'public, max-age=3600');
   res.json(list);
+});
+
+// Full exam registry (config-driven, cached aggressively)
+app.get('/exam-registry', (_, res) => {
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.json(examConfigs);
 });
 
 app.get('/stages', (req, res) => {
@@ -724,7 +664,7 @@ app.get('/stats', (_, res) => {
   const uptime = Math.floor((Date.now() - new Date(stats.startedAt).getTime()) / 1000);
 
   res.send(`<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>醫學知識王 Stats</title>
+<title>國考知識王 Stats</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:-apple-system,sans-serif; background:#0f172a; color:#e2e8f0; padding:20px; max-width:600px; margin:auto; }
@@ -745,7 +685,7 @@ app.get('/stats', (_, res) => {
   .bar-val { font-size:.75rem; color:#64748b; }
   .footer { text-align:center; font-size:.7rem; color:#475569; margin-top:16px; }
 </style></head><body>
-<h1>📊 醫學知識王 即時統計</h1>
+<h1>📊 國考知識王 即時統計</h1>
 
 <div class="grid">
   <div class="stat-box"><div class="num">${concurrent}</div><div class="lbl">目前在線</div></div>

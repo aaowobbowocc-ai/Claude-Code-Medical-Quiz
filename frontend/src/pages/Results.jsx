@@ -144,7 +144,7 @@ export default function Results() {
             onClick={() => {
               const correctCount = questionResults.filter(q => q.correct).length
               const pct = questionResults.length > 0 ? Math.round((correctCount / questionResults.length) * 100) : 0
-              const text = `醫學知識王｜${stageName} 對戰 ${isWinner ? '🏆 勝利' : '💪 第' + myRank + '名'}！正確率 ${pct}%\n一起來挑戰 👉 ${window.location.origin}`
+              const text = `國考知識王｜${stageName} 對戰 ${isWinner ? '🏆 勝利' : '💪 第' + myRank + '名'}！正確率 ${pct}%\n一起來挑戰 👉 ${window.location.origin}`
               window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(window.location.origin)}&text=${encodeURIComponent(text)}`, '_blank')
             }}
             className="w-full py-4 rounded-2xl font-bold text-lg active:scale-95 transition-transform flex items-center justify-center gap-2"

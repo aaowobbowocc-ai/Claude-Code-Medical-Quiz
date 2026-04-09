@@ -10,14 +10,10 @@ import { useBookmarks } from '../hooks/useBookmarks'
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 // Dynamic exam list built from /meta data — no longer hardcoded
-const STAGE_COLORS = {
-  anatomy:      '#3B82F6', physiology:  '#EF4444', biochemistry: '#8B5CF6',
-  histology:    '#6366F1', embryology:  '#818CF8', microbiology:'#10B981',
-  parasitology: '#D97706', pharmacology: '#F97316', pathology:   '#DC2626',
-  public_health:'#0D9488', unknown:      '#94A3B8',
-  // Paper-based colors for non-doctor1 exams
-  paper1: '#3B82F6', paper2: '#10B981', paper3: '#8B5CF6', paper4: '#F97316',
-  paper5: '#EF4444', paper6: '#0D9488',
+import { getStageStyle as _getStageStyle } from '../config/examRegistry'
+const _paperColors = { paper1: '#3B82F6', paper2: '#10B981', paper3: '#8B5CF6', paper4: '#F97316', paper5: '#EF4444', paper6: '#0D9488' }
+function getStageColor(tag) {
+  return _getStageStyle(tag)?.color || _paperColors[tag] || '#94A3B8'
 }
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F97316', D: '#EF4444' }
 
@@ -124,7 +120,7 @@ function QuestionCard({ q, stageMap }) {
   const { isBookmarked, getFolder, folders, addToFolder, removeBookmark, getFolderQuestions, MAX_PER_FOLDER } = useBookmarks()
   const bookmarked = isBookmarked(q)
   const currentFolder = getFolder(q)
-  const tagColor = STAGE_COLORS[localTag] || '#94A3B8'
+  const tagColor = getStageColor(localTag)
   const stageMeta = stageMap?.[localTag]
   const tagName  = !localTag || localTag === 'unknown'
     ? (q.subject_name || q.subject || '未分類')
@@ -406,7 +402,7 @@ export default function Browse() {
                       onClick={() => setStageTag('')} />
                 {meta.stages.filter(s => s.tag !== 'all' && s.tag !== 'unknown').map(s => (
                   <Chip key={s.tag} label={s.name} active={stageTag === s.tag}
-                        color={STAGE_COLORS[s.tag] || '#94A3B8'}
+                        color={getStageColor(s.tag)}
                         onClick={() => setStageTag(stageTag === s.tag ? '' : s.tag)} />
                 ))}
               </>

@@ -1,51 +1,8 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-// Exam types with paper/pass structure
-export const EXAM_TYPES = [
-  { id: 'doctor1', name: '醫師一階', short: '醫一', icon: '⚕️', totalQ: 200, passScore: 120,
-    papers: [
-      { id: 'paper1', name: '醫學(一)', subject: '醫學(一)', subjects: '解剖31、胚胎5、組織10、生理27、生化27', count: 100 },
-      { id: 'paper2', name: '醫學(二)', subject: '醫學(二)', subjects: '微免28、寄生蟲7、公衛15、藥理25、病理25', count: 100 },
-    ],
-  },
-  { id: 'doctor2', name: '醫師二階', short: '醫二', icon: '🏥', totalQ: 320, passScore: 192, totalPoints: 400,
-    papers: [
-      { id: 'paper3', name: '醫學(三)', subject: '醫學(三)', subjects: '內科80', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper4', name: '醫學(四)', subject: '醫學(四)', subjects: '小兒33、皮膚10、神經15、精神22', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper5', name: '醫學(五)', subject: '醫學(五)', subjects: '外科55、骨科8、泌尿17', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper6', name: '醫學(六)', subject: '醫學(六)', subjects: '麻醉8、眼10、耳鼻喉9、婦產30、復健18、倫理5', count: 80, pointsPerQ: 1.25 },
-    ],
-  },
-  { id: 'dental1', name: '牙醫一階', short: '牙一', icon: '🦷', totalQ: 160, passScore: 96, totalPoints: 200,
-    papers: [
-      { id: 'paper1', name: '卷一', subject: '卷一', subjects: '牙醫解剖22、牙體形態22、胚胎組織36', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper2', name: '卷二', subject: '卷二', subjects: '口腔病理30、口腔生理21、微免13、牙科藥理16', count: 80, pointsPerQ: 1.25 },
-    ],
-  },
-  { id: 'dental2', name: '牙醫二階', short: '牙二', icon: '🪥', totalQ: 320, passScore: 192, totalPoints: 400,
-    papers: [
-      { id: 'paper1', name: '卷一', subject: '卷一', subjects: '牙髓病28、牙體復形24、牙周病28', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper2', name: '卷二', subject: '卷二', subjects: '口腔顎面外科55、口腔影像25', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper3', name: '卷三', subject: '卷三', subjects: '活動補綴43、牙科材料23、固定補綴14', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper4', name: '卷四', subject: '卷四', subjects: '齒顎矯正28、兒童牙科32、公衛16、倫理法規4', count: 80, pointsPerQ: 1.25 },
-    ],
-  },
-  { id: 'pharma1', name: '藥師一階', short: '藥一', icon: '💊', totalQ: 240, passScore: 180, totalPoints: 300,
-    papers: [
-      { id: 'paper1', name: '卷一', subject: '卷一', subjects: '藥理學40、藥物化學40', count: 80, pointsPerQ: 1.25, timeLimit: 90 },
-      { id: 'paper2', name: '卷二', subject: '卷二', subjects: '藥物分析40、生藥學40', count: 80, pointsPerQ: 1.25, timeLimit: 90 },
-      { id: 'paper3', name: '卷三', subject: '卷三', subjects: '藥劑學40、生物藥劑學40', count: 80, pointsPerQ: 1.25, timeLimit: 90 },
-    ],
-  },
-  { id: 'pharma2', name: '藥師二階', short: '藥二', icon: '🧪', totalQ: 210, passScore: 180, totalPoints: 300,
-    papers: [
-      { id: 'paper1', name: '卷一', subject: '調劑與臨床', subjects: '調劑學27、臨床藥學27、藥物治療26', count: 80, pointsPerQ: 1.25, timeLimit: 90 },
-      { id: 'paper2', name: '卷二', subject: '藥物治療', subjects: '藥物治療學80', count: 80, pointsPerQ: 1.25, timeLimit: 90 },
-      { id: 'paper3', name: '卷三', subject: '法規', subjects: '藥事行政與法規50', count: 50, pointsPerQ: 2.0, timeLimit: 60 },
-    ],
-  },
-]
+// Re-export from registry — consumers should import { getExamTypes } from gameStore or registry directly
+export { getExamTypes, getExamConfig, getExamTypes as EXAM_TYPES_FN } from '../config/examRegistry'
 
 // Level title tiers
 const LEVEL_TITLES = [

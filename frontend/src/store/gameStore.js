@@ -191,3 +191,12 @@ export const useGameStore = create((set) => ({
     chatMessages: [], questionResults: [],
   }),
 }))
+
+// Dev console: window.dev.addCoins(10000)
+if (typeof window !== 'undefined') {
+  window.dev = {
+    addCoins: (n) => { usePlayerStore.getState().addCoins(n); console.log(`+${n} coins → ${usePlayerStore.getState().coins}`) },
+    setCoins: (n) => { usePlayerStore.setState({ coins: n }); console.log(`coins = ${n}`) },
+    getState: () => usePlayerStore.getState(),
+  }
+}

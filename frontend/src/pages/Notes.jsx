@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
+import CommentSection from '../components/CommentSection'
 
 // ── Notes data by exam type ─────────────────────────────────────
 const NOTES = {
@@ -298,27 +299,28 @@ const NOTES = {
 
 // ── Components ──────────────────────────────────────────────────
 
-function NoteCard({ card, index }) {
+function NoteCard({ card, index, subjectId }) {
   const [expanded, setExpanded] = useState(false)
 
   return (
-    <button onClick={() => setExpanded(!expanded)}
-      className="w-full text-left bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all active:scale-[0.98]">
-      <div className="px-4 py-3 flex items-center gap-3">
+    <div className="w-full text-left bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+      <button onClick={() => setExpanded(!expanded)}
+        className="w-full text-left px-4 py-3 flex items-center gap-3 active:scale-[0.98] transition-all">
         <span className="w-7 h-7 rounded-lg bg-medical-ice text-medical-blue text-xs font-bold flex items-center justify-center shrink-0">
           {index + 1}
         </span>
         <p className="font-bold text-sm text-medical-dark flex-1">{card.title}</p>
         <span className={`text-gray-300 text-lg transition-transform ${expanded ? 'rotate-90' : ''}`}>›</span>
-      </div>
+      </button>
       {expanded && (
         <div className="px-4 pb-4 pt-0">
           <div className="bg-medical-ice rounded-xl px-4 py-3">
             <pre className="text-xs text-gray-600 leading-relaxed whitespace-pre-wrap font-[inherit]">{card.content}</pre>
           </div>
+          <CommentSection targetId={`note_${subjectId}_${index}`} />
         </div>
       )}
-    </button>
+    </div>
   )
 }
 
@@ -349,7 +351,7 @@ export default function Notes() {
 
         <div className="flex-1 px-4 py-4 flex flex-col gap-2.5">
           {subj.cards.map((card, i) => (
-            <NoteCard key={i} card={card} index={i} />
+            <NoteCard key={i} card={card} index={i} subjectId={subj.id} />
           ))}
 
           <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200 mt-2">

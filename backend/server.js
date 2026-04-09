@@ -11,6 +11,7 @@ const ai = require('./ai');
 const questionsApi = require('./questions-api');
 const feedback = require('./feedback');
 const board = require('./board');
+const commentsApi = require('./comments');
 
 const compression = require('compression');
 const rateLimit = require('express-rate-limit');
@@ -32,6 +33,7 @@ app.use('/leaderboard/submit', submitLimiter);
 app.use('/explain', submitLimiter);
 app.use('/feedback', submitLimiter);
 app.use('/report', submitLimiter);
+app.use('/comments', apiLimiter);
 app.use('/board', rateLimit({ windowMs: 60 * 1000, max: 30, standardHeaders: true, legacyHeaders: false }));
 
 const server = http.createServer(app);
@@ -681,6 +683,7 @@ function trackDailyVisit() {
 leaderboard.registerRoutes(app);
 questionsApi.registerRoutes(app, examData, stats);
 ai.registerRoutes(app, examData, stats);
+commentsApi.registerRoutes(app);
 feedback.registerRoutes(app);
 board.registerRoutes(app);
 
@@ -870,8 +873,8 @@ app.get('/classify-pending', (_, res) => {
 });
 
 // Save stats on shutdown
-process.on('SIGTERM', () => { saveStats(); process.exit(0); });
-process.on('SIGINT', () => { saveStats(); process.exit(0); });
+process.on('SIGTERM', () => { saveStats(); commentsApi.saveComments(); process.exit(0); });
+process.on('SIGINT', () => { saveStats(); commentsApi.saveComments(); process.exit(0); });
 
 const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));

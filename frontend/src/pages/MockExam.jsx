@@ -256,7 +256,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                 </div>
               </button>
               )
-            ))}
+            })}
           </>
         )}
 

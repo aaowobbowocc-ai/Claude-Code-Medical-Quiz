@@ -8,21 +8,21 @@ export default function SupportBar({ setSheet }) {
 
   return (
     <div className="flex items-center justify-center gap-2 mt-3 pb-1 flex-wrap">
-      <button onClick={toggleDarkMode}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
-        {darkMode ? '☀️ 淺色' : '🌙 深色'}
-      </button>
-      <button onClick={() => setSheet('donate')}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-amber-500 bg-amber-50 border border-amber-200 active:scale-95 transition-transform shadow-sm font-medium">
-        ☕ 贊助開發者
+      <button onClick={() => navigate('/changelog')}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-purple-500 bg-purple-50 border border-purple-200 active:scale-95 transition-transform shadow-sm font-medium">
+        📢 更新公告
       </button>
       <button onClick={() => setSheet('contact')}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
         💌 意見回饋
       </button>
-      <button onClick={() => navigate('/changelog')}
+      <button onClick={() => setSheet('donate')}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-amber-500 bg-amber-50 border border-amber-200 active:scale-95 transition-transform shadow-sm font-medium">
+        ☕ 贊助開發者
+      </button>
+      <button onClick={toggleDarkMode}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
-        📋 開發日誌
+        {darkMode ? '☀️ 淺色' : '🌙 深色'}
       </button>
     </div>
   )

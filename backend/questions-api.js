@@ -56,7 +56,6 @@ function registerRoutes(app, examData, stats) {
     const questionsData = resolve(req);
     const exams = {};
     for (const q of questionsData.questions) {
-      if (!q.answer || !q.options[q.answer]) continue;
       const key = `${q.roc_year}_${q.session}`;
       if (!exams[key]) exams[key] = { roc_year: q.roc_year, session: q.session, papers: {} };
       if (!exams[key].papers[q.subject]) exams[key].papers[q.subject] = {};

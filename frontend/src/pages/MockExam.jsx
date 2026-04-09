@@ -511,7 +511,10 @@ function ExamResults({ papers, navigate }) {
   useEffect(() => {
     if (saved) return
     setSaved(true)
-    addCoins(passed === true ? 300 : isFullExam ? 80 : 100)
+    const coinReward = passed === true
+      ? Math.round(totalQuestions * 1.5)   // 完整模考通過：題數×1.5
+      : totalQuestions                      // 其他（未過/單科）：題數×1
+    addCoins(coinReward)
     addExp(passed === true ? 150 : isFullExam ? 40 : 60)
     try {
       const key = 'mock-exam-history'

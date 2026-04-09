@@ -43,8 +43,8 @@ const EXAM_CONTENT = {
     fullName: '醫師國考第二階段',
     shortName: '醫師二階',
     studentType: '醫學生',
-    years: '110 至 113',
-    totalQ: 1600,
+    years: '110 至 115',
+    totalQ: 1920,
     examDesc: '醫師國考第二階段（二階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為通過一階並完成臨床實習之醫學系學生。',
     paperDesc: '考試分為「醫學(三)」至「醫學(六)」共四節，每節各 80 題選擇題，合計 320 題。每題 1.25 分、每卷滿分 100 分，總分 400 分，及格標準為 192 分（60%）。',
     subjects: '內科、外科、小兒科、婦產科、精神科、神經科、皮膚科、骨科、泌尿科、眼科、耳鼻喉科、復健科、急診醫學、醫療法規等臨床醫學科目',
@@ -65,8 +65,8 @@ const EXAM_CONTENT = {
     fullName: '牙醫師國考第一階段',
     shortName: '牙醫一階',
     studentType: '牙醫學生',
-    years: '110 至 113',
-    totalQ: 1120,
+    years: '110 至 115',
+    totalQ: 1600,
     examDesc: '牙醫師國考第一階段（一階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為完成基礎牙醫學課程之牙醫學系學生。',
     paperDesc: '考試分為兩卷，每卷各 80 題選擇題，合計 160 題。每題 1.25 分、每卷滿分 100 分，總分 200 分，及格標準為 96 分（60%）。',
     subjects: '牙醫解剖、口腔解剖、牙體形態、胚胎及組織學、口腔病理、牙科藥理、微生物及免疫學、口腔生理等基礎牙醫科目',
@@ -85,8 +85,8 @@ const EXAM_CONTENT = {
     fullName: '牙醫師國考第二階段',
     shortName: '牙醫二階',
     studentType: '牙醫學生',
-    years: '110 至 113',
-    totalQ: 2240,
+    years: '110 至 115',
+    totalQ: 3200,
     examDesc: '牙醫師國考第二階段（二階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為通過一階並完成臨床實習之牙醫學系學生。',
     paperDesc: '考試分為四卷，每卷各 80 題選擇題，合計 320 題。每題 1.25 分、每卷滿分 100 分，總分 400 分，及格標準為 192 分（60%）。',
     subjects: '口腔顎面外科、牙周病學、齒顎矯正、兒童牙科、牙髓病學、牙體復形、牙科材料、補綴學、口腔診斷、公共衛生等臨床牙醫科目',
@@ -105,8 +105,8 @@ const EXAM_CONTENT = {
     fullName: '藥師國考第一階段',
     shortName: '藥師一階',
     studentType: '藥學生',
-    years: '110 至 113',
-    totalQ: 1680,
+    years: '110 至 115',
+    totalQ: 2400,
     examDesc: '藥師國考第一階段（一階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為完成基礎藥學課程之藥學系學生。',
     paperDesc: '考試分為三卷，每卷各 80 題選擇題，合計 240 題，採及格制（總分 180 分以上通過，需每科達該科目滿分之五成）。',
     subjects: '藥理學、藥物化學、藥物分析、生藥學（含中藥學）、藥劑學、生物藥劑學等基礎藥學科目',
@@ -125,10 +125,10 @@ const EXAM_CONTENT = {
     fullName: '藥師國考第二階段',
     shortName: '藥師二階',
     studentType: '藥學生',
-    years: '110 至 113',
-    totalQ: 1260,
+    years: '110 至 115',
+    totalQ: 2100,
     examDesc: '藥師國考第二階段（二階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為通過一階並完成實習之藥學系學生。',
-    paperDesc: '考試分為三卷，每卷各 80 題選擇題，合計 240 題，採及格制（總分 180 分以上通過，需每科達該科目滿分之五成）。',
+    paperDesc: '考試分為三卷（藥物治療 80 題、調劑與臨床 80 題、法規 50 題），合計 210 題，採及格制（總分 180 分以上通過，需每科達該科目滿分之五成）。',
     subjects: '調劑學、臨床藥學、治療學、藥物治療學、藥事行政與法規等臨床藥學科目',
     mockDesc: '完整模擬三卷，180/240 及格制',
     subjectDetails: [
@@ -284,7 +284,7 @@ export default function Home() {
   const doCreate = (nameToUse, { isPublic = false, password = null } = {}) => {
     setConnecting(true)
     socket.connect()
-    socket.emit('create_room', { playerName: nameToUse, playerAvatar: av, isPublic, password })
+    socket.emit('create_room', { playerName: nameToUse, playerAvatar: av, isPublic, password, exam })
   }
 
   const doJoin = (nameToUse) => {

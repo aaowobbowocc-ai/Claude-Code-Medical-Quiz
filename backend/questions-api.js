@@ -74,7 +74,7 @@ function registerRoutes(app, examData, stats) {
         })),
       }))
       .sort((a, b) => b.roc_year.localeCompare(a.roc_year) || b.session.localeCompare(a.session));
-    res.set('Cache-Control', 'public, max-age=3600');
+    res.set('Cache-Control', 'public, max-age=300, stale-while-revalidate=60');
     res.json(list);
   });
 

@@ -2,8 +2,8 @@ import { useState, useCallback } from 'react'
 import { usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
-const EXPLAIN_COST = 200
-const REVIEW_COST = 200
+const EXPLAIN_COST = 150
+const REVIEW_COST = 100
 
 // ── Per-device daily quota ──────────────────────────────────────
 const PERSONAL_LIMIT = 10

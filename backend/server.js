@@ -245,6 +245,7 @@ function broadcastRoomState(room) {
     phase: room.phase,
     hostId: room.hostId,
     timerMode: room.timerMode || 'auto',
+    exam: room.exam || 'doctor1',
   });
 }
 
@@ -366,7 +367,7 @@ io.on('connection', (socket) => {
   if (concurrent > stats.peakConcurrent) stats.peakConcurrent = concurrent;
 
   // Create room
-  socket.on('create_room', ({ playerName, playerAvatar, isPublic = false, password = null }) => {
+  socket.on('create_room', ({ playerName, playerAvatar, isPublic = false, password = null, exam = 'doctor1' }) => {
     const code = makeRoomCode();
     const room = {
       code,
@@ -380,6 +381,7 @@ io.on('connection', (socket) => {
       phase: 'lobby',
       isPublic: !!isPublic,
       password: password || null,
+      exam: exam || 'doctor1',
       lastActivity: Date.now(),
     };
     rooms.set(code, room);
@@ -477,7 +479,7 @@ io.on('connection', (socket) => {
       return;
     }
 
-    const pool = getQuestionsByStage(room.stage);
+    const pool = getQuestionsByStage(room.stage, room.exam);
     if (pool.length < QUESTIONS_PER_GAME) {
       socket.emit('error', { message: `此關卡題目不足（${pool.length}題），請換關卡` });
       return;

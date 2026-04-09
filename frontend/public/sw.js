@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-quiz-v1'
+const CACHE_NAME = 'medical-quiz-v2'
 const PRECACHE = [
   '/',
   '/manifest.json',
@@ -47,7 +47,7 @@ self.addEventListener('fetch', (e) => {
   }
 
   // Static assets (js, css, images): cache-first
-  if (url.pathname.match(/\.(js|css|png|jpg|svg|woff2?)$/)) {
+  if (url.pathname.match(/\.(js|css|png|jpg|svg|webp|woff2?)$/)) {
     e.respondWith(
       caches.match(e.request).then(cached =>
         cached || fetch(e.request).then(res => {

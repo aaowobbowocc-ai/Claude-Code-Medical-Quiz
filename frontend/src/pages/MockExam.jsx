@@ -513,8 +513,9 @@ function ExamResults({ papers, navigate }) {
     setSaved(true)
     const coinReward = passed === true
       ? Math.round(totalQuestions * 1.5)   // 完整模考通過：題數×1.5
-      : totalQuestions                      // 其他（未過/單科）：題數×1
-    addCoins(coinReward)
+      : isFullExam ? 0                     // 完整模考未過：不給獎勵
+      : totalQuestions                     // 單科：題數×1
+    if (coinReward > 0) addCoins(coinReward)
     addExp(passed === true ? 150 : isFullExam ? 40 : 60)
     try {
       const key = 'mock-exam-history'

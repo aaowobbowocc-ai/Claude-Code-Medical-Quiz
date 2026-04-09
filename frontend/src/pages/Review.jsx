@@ -12,7 +12,7 @@ import CommentSection from '../components/CommentSection'
 function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
   const [open, setOpen] = useState(!q.correct)  // auto-open wrong ones
   const [explainReq, setExplainReq] = useState(false)
-  const { text: explainText, loading: explainLoading, limitHit, explain, remaining } = useExplain()
+  const { text: explainText, loading: explainLoading, limitHit, notEnoughCoins, explain, remaining, cost: explainCost } = useExplain()
 
   const answerColor = '#10B981'   // green for correct
   const wrongColor  = '#EF4444'   // red for wrong
@@ -92,9 +92,11 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
               text={explainText}
               loading={explainLoading}
               limitHit={limitHit}
+              notEnoughCoins={notEnoughCoins}
+              remaining={remaining}
+              cost={explainCost}
               requested={explainReq}
               onRequest={() => { setExplainReq(true); explain({ question: q.question, options: q.options, answer: q.answer }) }}
-              remaining={remaining}
               answer={q.answer}
               options={q.options}
               explanation={q.explanation}

@@ -26,7 +26,7 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 200, questionId, questionText, rocYear, session, number, disputed }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 150, questionId, questionText, rocYear, session, number, disputed }) {
   const [showAI, setShowAI] = useState(false)
   const [reportSent, setReportSent] = useState(false)
   const [showReportForm, setShowReportForm] = useState(false)
@@ -206,7 +206,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
 }
 
 /* Review panel — shown on results screen */
-export function ReviewPanel({ text, loading, onRequest, requested, notEnoughCoins, cost = 200 }) {
+export function ReviewPanel({ text, loading, onRequest, requested, notEnoughCoins, cost = 100 }) {
   if (notEnoughCoins) {
     return (
       <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">

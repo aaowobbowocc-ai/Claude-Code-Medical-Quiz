@@ -240,6 +240,18 @@ export default function Home() {
   const { showBanner, isIOS, install, installPrompt, dismiss } = usePWA()
   const { getDueCount } = useBookmarks()
   const dueCount = getDueCount()
+  const [devTaps, setDevTaps] = useState(0)
+  const devTimer = useRef(null)
+  const [devCoinsInput, setDevCoinsInput] = useState('')
+  const handleDevTap = () => {
+    setDevTaps(t => {
+      const next = t + 1
+      clearTimeout(devTimer.current)
+      if (next >= 5) { setSheet('dev'); return 0 }
+      devTimer.current = setTimeout(() => setDevTaps(0), 1500)
+      return next
+    })
+  }
   const av = usePlayerStore(s => s.avatar) || '👨‍⚕️'
   const setAvatar = usePlayerStore(s => s.setAvatar)
   const socket = getSocket()
@@ -526,7 +538,7 @@ export default function Home() {
             <p className="text-white/50 text-xs font-medium tracking-widest mb-0.5 flex items-center gap-1">
               {currentExam.icon} {currentExam.name} <span className="text-white/30">▼</span>
             </p>
-            <h1 className="text-white font-bold text-3xl tracking-tight leading-none">知識王</h1>
+            <h1 className="text-white font-bold text-3xl tracking-tight leading-none" onClick={(e) => { e.stopPropagation(); handleDevTap() }}>知識王</h1>
           </button>
           {/* Avatar — tap to edit name */}
           <button onClick={() => { setInputName(name); setSheet('editname') }}
@@ -828,6 +840,37 @@ export default function Home() {
       )}
 
       <SupportSheets sheet={sheet} setSheet={setSheet} />
+
+      {/* Dev panel — tap 知識王 5 times */}
+      {sheet === 'dev' && (
+        <Sheet onClose={() => setSheet(null)}>
+          <h2 className="text-xl font-bold text-medical-dark text-center mb-1">開發者工具</h2>
+          <p className="text-center text-gray-400 text-xs mb-4">測試用，不影響其他玩家</p>
+          <div className="space-y-3">
+            <div className="flex gap-2">
+              <input type="number" value={devCoinsInput} onChange={e => setDevCoinsInput(e.target.value)}
+                placeholder="輸入金幣數量" className="flex-1 border rounded-xl px-3 py-2 text-sm" />
+              <button onClick={() => { const n = parseInt(devCoinsInput); if (n) { usePlayerStore.getState().addCoins(n); setDevCoinsInput('') } }}
+                className="bg-amber-500 text-white px-4 py-2 rounded-xl text-sm font-bold active:scale-95">加金幣</button>
+            </div>
+            <div className="flex gap-2">
+              <button onClick={() => { usePlayerStore.getState().addCoins(1000) }}
+                className="flex-1 bg-amber-100 text-amber-700 py-2 rounded-xl text-sm font-bold active:scale-95">+1,000</button>
+              <button onClick={() => { usePlayerStore.getState().addCoins(5000) }}
+                className="flex-1 bg-amber-100 text-amber-700 py-2 rounded-xl text-sm font-bold active:scale-95">+5,000</button>
+              <button onClick={() => { usePlayerStore.getState().addCoins(10000) }}
+                className="flex-1 bg-amber-100 text-amber-700 py-2 rounded-xl text-sm font-bold active:scale-95">+10,000</button>
+            </div>
+            <div className="flex gap-2">
+              <button onClick={() => { usePlayerStore.setState({ coins: 0 }) }}
+                className="flex-1 bg-red-100 text-red-600 py-2 rounded-xl text-sm font-bold active:scale-95">歸零</button>
+              <button onClick={() => { usePlayerStore.setState({ coins: 500 }) }}
+                className="flex-1 bg-gray-100 text-gray-600 py-2 rounded-xl text-sm font-bold active:scale-95">重設 500</button>
+            </div>
+            <p className="text-center text-gray-400 text-xs">目前金幣：🪙 {coins}</p>
+          </div>
+        </Sheet>
+      )}
     </div>
   )
 }

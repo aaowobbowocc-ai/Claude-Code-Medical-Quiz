@@ -276,6 +276,16 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
             <p>📌 可跳題作答，最後統一交卷</p>
           </div>
         </div>
+
+        <div className="bg-amber-50 rounded-2xl p-4 shadow-sm border border-amber-100">
+          <p className="text-sm font-bold text-amber-700 mb-2">🪙 金幣獎勵規則</p>
+          <div className="text-xs text-amber-900/70 space-y-1.5">
+            <p>📋 完整模考通過：獎勵 = 題數 × 1.5</p>
+            <p>📄 單科通過（≥60%）：獎勵 = 題數 × 1</p>
+            <p>❌ 未通過：無獎勵</p>
+            <p>💡 入場費：完整模考 題數×4、單科 題數×5</p>
+          </div>
+        </div>
       </div>
     </div>
   )

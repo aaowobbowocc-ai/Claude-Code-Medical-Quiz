@@ -5,7 +5,7 @@ const AD_SLOT = '1093265050'
 const AD_CLIENT = 'ca-pub-3134321405509741'
 
 // Pages where fixed bottom ad should NOT show
-const HIDDEN_ROUTES = ['/game', '/lobby', '/board', '/privacy', '/tos', '/contact']
+const HIDDEN_ROUTES = ['/game', '/lobby', '/board', '/privacy', '/tos', '/contact', '/practice', '/mock-exam', '/weakness']
 
 export default function FixedBottomAd() {
   const { pathname } = useLocation()

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { io } from 'socket.io-client'
 import { useNavigate } from 'react-router-dom'
 import { useGameStore, usePlayerStore } from '../store/gameStore'
+import { useAccuracyStore } from '../store/accuracyStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -64,13 +65,18 @@ export function useSocket() {
       reveal: ({ correctAnswer, explanation, players }) => {
         const st = useGameStore.getState()
         if (st.currentQuestion) {
+          const isCorrect = st.myAnswer === correctAnswer
           st.addQuestionResult({
             question: st.currentQuestion.question,
             options: st.currentQuestion.options,
             answer: correctAnswer,
             myAnswer: st.myAnswer,
-            correct: st.myAnswer === correctAnswer,
+            correct: isCorrect,
           })
+          // Record per-subject accuracy
+          const tag = st.currentQuestion.subject_name
+          const exam = usePlayerStore.getState().exam || 'doctor1'
+          if (tag) useAccuracyStore.getState().record(exam, tag, isCorrect)
         }
         setCorrectAnswer(correctAnswer)
         setExplanation(explanation || null)

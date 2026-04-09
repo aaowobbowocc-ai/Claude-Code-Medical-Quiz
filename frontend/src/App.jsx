@@ -5,6 +5,10 @@ import { useSocket } from './hooks/useSocket'
 import SplashScreen from './components/SplashScreen'
 import ErrorBoundary from './components/ErrorBoundary'
 import FixedBottomAd from './components/FixedBottomAd'
+import { initRegistry } from './config/examRegistry'
+
+// Pre-fetch exam registry as early as possible
+initRegistry()
 
 // Lazy-load non-critical pages
 const Lobby    = lazy(() => import('./pages/Lobby'))
@@ -17,6 +21,7 @@ const Practice = lazy(() => import('./pages/Practice'))
 const History  = lazy(() => import('./pages/History'))
 const Review       = lazy(() => import('./pages/Review'))
 const Leaderboard  = lazy(() => import('./pages/Leaderboard'))
+const Weakness = lazy(() => import('./pages/Weakness'))
 const MockExam       = lazy(() => import('./pages/MockExam'))
 const Board          = lazy(() => import('./pages/Board'))
 const Notes          = lazy(() => import('./pages/Notes'))
@@ -60,6 +65,7 @@ function AppRoutes() {
           <Route path="/history"   element={<History />} />
           <Route path="/review"       element={<Review />} />
           <Route path="/leaderboard"  element={<Leaderboard />} />
+          <Route path="/weakness"     element={<Weakness />} />
           <Route path="/mock-exam"    element={<MockExam />} />
           <Route path="/board"       element={<Board />} />
           <Route path="/notes"      element={<Notes />} />

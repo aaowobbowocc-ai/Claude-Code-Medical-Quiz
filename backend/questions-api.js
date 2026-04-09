@@ -93,11 +93,15 @@ function registerRoutes(app, examData, stats) {
       return res.json({ total: pool.length, questions: pool, mode: 'historical' });
     }
 
-    // Random mode — if no stages, pick from all questions (single-answer only for random mock)
+    // Random mode — pick from all questions (single-answer only for random mock)
+    // If subject is given (without year), filter to that paper's questions
     if (!stages) {
       const target = parseInt(count);
-      const allValid = questionsData.questions.filter(isSingleAnswer);
-      const picked = shuffle(allValid).slice(0, target);
+      let pool = questionsData.questions.filter(isSingleAnswer);
+      if (subject) {
+        pool = pool.filter(q => q.subject === subject);
+      }
+      const picked = shuffle(pool).slice(0, target);
       return res.json({ total: picked.length, questions: picked, mode: 'random' });
     }
     const stageIds = stages.split(',').map(Number);
@@ -110,17 +114,15 @@ function registerRoutes(app, examData, stats) {
     for (const tag of tags) {
       byTag[tag] = questionsData.questions.filter(q => isSingleAnswer(q) && q.subject_tag === tag);
     }
-    const avgDist = {
-      anatomy: 33, physiology: 27, biochemistry: 26, histology: 10, embryology: 4,
-      microbiology: 30, parasitology: 6, pharmacology: 28, pathology: 22, public_health: 14,
-    };
+    // Calculate proportional distribution from actual data counts
+    const relevantTags = tags.filter(t => byTag[t]?.length > 0);
+    const totalPool = relevantTags.reduce((s, t) => s + byTag[t].length, 0);
     let picked = [];
     let remaining = target;
-    const relevantTags = tags.filter(t => byTag[t]?.length > 0);
     for (let i = 0; i < relevantTags.length; i++) {
       const tag = relevantTags[i];
       const isLast = i === relevantTags.length - 1;
-      const quota = isLast ? remaining : Math.round(target * (avgDist[tag] || 10) / 100);
+      const quota = isLast ? remaining : Math.round(target * byTag[tag].length / totalPool);
       const tagPicked = shuffle(byTag[tag]).slice(0, Math.min(quota, byTag[tag].length));
       picked.push(...tagPicked);
       remaining -= tagPicked.length;

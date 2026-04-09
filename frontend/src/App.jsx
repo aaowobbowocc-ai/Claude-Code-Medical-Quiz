@@ -22,6 +22,7 @@ const Notes          = lazy(() => import('./pages/Notes'))
 const Privacy        = lazy(() => import('./pages/Privacy'))
 const Terms          = lazy(() => import('./pages/Terms'))
 const Contact        = lazy(() => import('./pages/Contact'))
+const Changelog      = lazy(() => import('./pages/Changelog'))
 
 function PageLoader() {
   return (
@@ -63,6 +64,7 @@ function AppRoutes() {
           <Route path="/privacy"    element={<Privacy />} />
           <Route path="/tos"        element={<Terms />} />
           <Route path="/contact"    element={<Contact />} />
+          <Route path="/changelog"  element={<Changelog />} />
           <Route path="*"          element={<Navigate to="/" />} />
         </Routes>
       </Suspense>

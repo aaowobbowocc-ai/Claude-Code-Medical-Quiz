@@ -1,11 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 
 export default function SupportBar({ setSheet }) {
+  const navigate = useNavigate()
   const darkMode = usePlayerStore(s => s.darkMode)
   const toggleDarkMode = usePlayerStore(s => s.toggleDarkMode)
 
   return (
-    <div className="flex items-center justify-center gap-2 mt-3 pb-1">
+    <div className="flex items-center justify-center gap-2 mt-3 pb-1 flex-wrap">
       <button onClick={toggleDarkMode}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
         {darkMode ? '☀️ 淺色' : '🌙 深色'}
@@ -17,6 +19,10 @@ export default function SupportBar({ setSheet }) {
       <button onClick={() => setSheet('contact')}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
         💌 意見回饋
+      </button>
+      <button onClick={() => navigate('/changelog')}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
+        📋 開發日誌
       </button>
     </div>
   )

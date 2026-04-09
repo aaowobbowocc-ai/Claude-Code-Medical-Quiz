@@ -5,6 +5,7 @@ import { ExplainPanel } from '../components/AIPanel'
 import SmartBanner from '../components/SmartBanner'
 import { useBookmarks } from '../hooks/useBookmarks'
 import { getSubjectColor } from '../utils/subjectColors'
+import QuestionImages from '../components/QuestionImages'
 
 /* ── Single question review card ───────────────────────────── */
 function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
@@ -46,6 +47,7 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
       {/* Question text */}
       <div className="px-4 pb-3">
         <p className="text-sm text-gray-800 leading-relaxed">{q.question}</p>
+        <QuestionImages images={q.images} />
       </div>
 
       {/* Options + answer — collapsible */}

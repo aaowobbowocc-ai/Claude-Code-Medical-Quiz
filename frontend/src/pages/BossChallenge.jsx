@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
+import QuestionImages from '../components/QuestionImages'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const BOSS_FEE = 50
@@ -31,6 +32,7 @@ function BossCard({ q, index, onAnswer, answered }) {
       </div>
       <div className="px-4 py-3">
         <p className="text-sm text-gray-800 leading-relaxed mb-3">{q.question}</p>
+        <QuestionImages images={q.images} />
         <div className="flex flex-col gap-2">
           {Object.entries(q.options).map(([letter, text]) => {
             const isCorrect = revealed && q.answer === letter

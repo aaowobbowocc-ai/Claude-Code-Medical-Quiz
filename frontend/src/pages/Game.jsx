@@ -5,6 +5,7 @@ import { getSocket } from '../hooks/useSocket'
 import { useSound } from '../hooks/useSound'
 import ConnectionStatus from '../components/ConnectionStatus'
 import { getSubjectColor } from '../utils/subjectColors'
+import QuestionImages from '../components/QuestionImages'
 
 const OPTION_COLORS = {
   A: { base: 'bg-blue-50  border-blue-300  text-blue-800',  active: 'bg-blue-500  border-blue-500  text-white' },
@@ -335,6 +336,7 @@ export default function Game() {
           <p className="text-medical-dark font-medium text-base leading-relaxed">
             {currentQuestion.question}
           </p>
+          <QuestionImages images={currentQuestion.images} />
           {currentQuestion.image_url && (
             <img src={currentQuestion.image_url} alt="題目圖片"
                  className="mt-3 w-full rounded-xl border border-blue-100 object-contain max-h-48" />

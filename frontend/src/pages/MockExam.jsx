@@ -2,12 +2,31 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore, EXAM_TYPES } from '../store/gameStore'
 import SmartBanner from '../components/SmartBanner'
+import QuestionImages from '../components/QuestionImages'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 const TAG_NAMES = {
+  // Doctor1
   anatomy: '解剖', physiology: '生理', biochemistry: '生化', histology: '組織', embryology: '胚胎',
-  microbiology: '微免', parasitology: '寄生蟲', pharmacology: '藥理', pathology: '病理', public_health: '公衛',
+  microbiology: '微免', parasitology: '寄生蟲', d1_pharmacology: '藥理', pathology: '病理', public_health: '公衛',
+  // Doctor2
+  internal_medicine: '內科', surgery: '外科', pediatrics: '小兒', obstetrics_gynecology: '婦產',
+  psychiatry: '精神', neurology: '神經', dermatology: '皮膚', orthopedics: '骨科', urology: '泌尿',
+  anesthesia: '麻醉', ophthalmology: '眼科', ent: '耳鼻喉', rehabilitation: '復健', medical_law_ethics: '倫理',
+  // Dental1
+  dental_anatomy: '牙醫解剖', tooth_morphology: '牙體形態', embryology_histology: '胚胎組織',
+  oral_pathology: '口腔病理', oral_physiology: '口腔生理', dental_microbiology: '微免', dental_pharmacology: '牙科藥理',
+  // Dental2
+  endodontics: '牙髓病', operative_dentistry: '牙體復形', periodontics: '牙周病',
+  oral_surgery: '口外', dental_radiology: '口腔影像',
+  removable_prosthodontics: '活動補綴', dental_materials: '牙材', fixed_prosthodontics: '固定補綴',
+  orthodontics: '齒矯', pediatric_dentistry: '兒童牙科', dental_public_health: '公衛', dental_ethics_law: '倫理',
+  // Pharma1
+  pharmacology: '藥理', medicinal_chemistry: '藥化', pharmaceutical_analysis: '藥分',
+  pharmacognosy: '生藥', pharmaceutics: '藥劑', biopharmaceutics: '生物藥劑',
+  // Pharma2
+  dispensing: '調劑', clinical_pharmacy: '臨床藥學', pharmacotherapy: '藥物治療', pharmacy_law: '藥事法規',
 }
 
 function getExamConfig(examType) {
@@ -249,6 +268,7 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
   const [qIdx, setQIdx] = useState(0)
   const [timeLeft, setTimeLeft] = useState(TIME_LIMIT)
   const [showNav, setShowNav] = useState(false)
+  const [showSubmitConfirm, setShowSubmitConfirm] = useState(false)
   const timerRef = useRef(null)
   const answersRef = useRef(answers)
   answersRef.current = answers
@@ -276,6 +296,9 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
   const timeUrgent = timeLeft < 300
 
   const handleSubmit = () => {
+    setShowSubmitConfirm(true)
+  }
+  const confirmSubmit = () => {
     clearInterval(timerRef.current)
     onFinish(answers)
   }
@@ -304,6 +327,7 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
             第 {qIdx + 1} / {questions.length} 題{q.subject_name ? `　·　${q.subject_name}` : ''}
           </p>
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
+          <QuestionImages images={q.images} />
         </div>
         <div className="flex flex-col gap-2.5">
           {Object.entries(q.options).map(([letter, text]) => {
@@ -348,7 +372,7 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
             <div className="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-4" />
             <div className="flex items-center justify-between mb-3">
               <p className="font-bold text-gray-700">題目導覽</p>
-              <button onClick={handleSubmit} className="text-sm font-bold text-red-500 active:scale-95">交卷 →</button>
+              <button onClick={() => { setShowNav(false); handleSubmit() }} className="text-sm font-bold text-red-500 active:scale-95">交卷 →</button>
             </div>
             <div className="grid grid-cols-10 gap-1.5">
               {questions.map((_, i) => (
@@ -359,6 +383,31 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
                   {i + 1}
                 </button>
               ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showSubmitConfirm && (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center px-6" onClick={() => setShowSubmitConfirm(false)}>
+          <div className="bg-white rounded-2xl p-6 w-full max-w-[340px] shadow-2xl" onClick={e => e.stopPropagation()}>
+            <p className="text-center text-3xl mb-3">📝</p>
+            <p className="font-bold text-lg text-center text-medical-dark mb-2">確認交卷？</p>
+            <div className="bg-gray-50 rounded-xl p-3 mb-4 text-sm text-center space-y-1">
+              <p className="text-gray-700">已作答 <strong className="text-medical-blue">{answeredCount}</strong> / {questions.length} 題</p>
+              {answeredCount < questions.length && (
+                <p className="text-amber-600 font-medium">⚠️ 還有 {questions.length - answeredCount} 題未作答</p>
+              )}
+            </div>
+            <div className="flex gap-3">
+              <button onClick={() => setShowSubmitConfirm(false)}
+                className="flex-1 py-3 rounded-xl font-bold text-sm bg-gray-100 text-gray-600 active:scale-95">
+                繼續作答
+              </button>
+              <button onClick={confirmSubmit}
+                className="flex-1 py-3 rounded-xl font-bold text-sm text-white bg-red-500 active:scale-95">
+                確認交卷
+              </button>
             </div>
           </div>
         </div>
@@ -577,9 +626,8 @@ export default function MockExam() {
 
   const loadQuestions = async (paper) => {
     const et = usePlayerStore.getState().exam || 'doctor1'
-    const params = paper.stages
-      ? `stages=${paper.stages}&count=${paper.count || 100}&exam=${et}`
-      : `count=${paper.count || 80}&exam=${et}`
+    const subj = paper.subject || paper.name
+    const params = `count=${paper.count || 80}&subject=${encodeURIComponent(subj)}&exam=${et}`
     const res = await fetch(`${BACKEND}/questions/exam?${params}`)
     const data = await res.json()
     if (data.questions.length < 10) throw new Error('not enough')

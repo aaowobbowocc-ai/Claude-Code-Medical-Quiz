@@ -6,6 +6,7 @@ import { useExplain, useReview } from '../hooks/useAI'
 import { getSubjectColor } from '../utils/subjectColors'
 import { ExplainPanel, ReviewPanel } from '../components/AIPanel'
 import SmartBanner from '../components/SmartBanner'
+import QuestionImages from '../components/QuestionImages'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -407,6 +408,7 @@ function PracticeGame({ config, onFinish }) {
             </div>
           )}
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
+          <QuestionImages images={q.images} />
         </div>
 
         <div className="flex flex-col gap-2.5">

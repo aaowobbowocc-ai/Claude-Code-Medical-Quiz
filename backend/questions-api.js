@@ -88,8 +88,7 @@ function registerRoutes(app, examData, stats) {
       const pool = questionsData.questions.filter(q =>
         q.roc_year === year && q.session === session && q.subject === subject
       );
-      pool.sort((a, b) => a.number - b.number);
-      return res.json({ total: pool.length, questions: pool, mode: 'historical' });
+      return res.json({ total: pool.length, questions: shuffle(pool), mode: 'historical' });
     }
 
     // Random mode — pick from all questions (single-answer only for random mock)

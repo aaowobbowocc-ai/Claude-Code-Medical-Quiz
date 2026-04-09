@@ -33,16 +33,16 @@ export const EXAM_TYPES = [
   },
   { id: 'pharma1', name: '藥師一階', short: '藥一', icon: '💊', totalQ: 240, passScore: 180, totalPoints: 300,
     papers: [
-      { id: 'paper1', name: '卷一', subject: '卷一', subjects: '藥理學40、藥物化學40', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper2', name: '卷二', subject: '卷二', subjects: '藥物分析40、生藥學40', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper3', name: '卷三', subject: '卷三', subjects: '藥劑學40、生物藥劑學40', count: 80, pointsPerQ: 1.25 },
+      { id: 'paper1', name: '卷一', subject: '卷一', subjects: '藥理學40、藥物化學40', count: 80, pointsPerQ: 1.25, timeLimit: 90 },
+      { id: 'paper2', name: '卷二', subject: '卷二', subjects: '藥物分析40、生藥學40', count: 80, pointsPerQ: 1.25, timeLimit: 90 },
+      { id: 'paper3', name: '卷三', subject: '卷三', subjects: '藥劑學40、生物藥劑學40', count: 80, pointsPerQ: 1.25, timeLimit: 90 },
     ],
   },
   { id: 'pharma2', name: '藥師二階', short: '藥二', icon: '🧪', totalQ: 210, passScore: 180, totalPoints: 300,
     papers: [
-      { id: 'paper1', name: '卷一', subject: '調劑與臨床', subjects: '調劑學27、臨床藥學27、藥物治療26', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper2', name: '卷二', subject: '藥物治療', subjects: '藥物治療學80', count: 80, pointsPerQ: 1.25 },
-      { id: 'paper3', name: '卷三', subject: '法規', subjects: '藥事行政與法規50', count: 50, pointsPerQ: 2.0 },
+      { id: 'paper1', name: '卷一', subject: '調劑與臨床', subjects: '調劑學27、臨床藥學27、藥物治療26', count: 80, pointsPerQ: 1.25, timeLimit: 90 },
+      { id: 'paper2', name: '卷二', subject: '藥物治療', subjects: '藥物治療學80', count: 80, pointsPerQ: 1.25, timeLimit: 90 },
+      { id: 'paper3', name: '卷三', subject: '法規', subjects: '藥事行政與法規50', count: 50, pointsPerQ: 2.0, timeLimit: 60 },
     ],
   },
 ]

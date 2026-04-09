@@ -37,7 +37,6 @@ function getExamConfig(examType) {
     totalPass: et.passScore,
     totalPoints: et.totalPoints || et.totalQ, // 300 for pharma, totalQ for others
     singlePass: Math.round(et.papers[0]?.count * 0.6) || 60,
-    timeLimit: 120 * 60, // 120 min per paper
     examName: et.name,
     isWeighted,
   }
@@ -58,7 +57,17 @@ function calcTotalScore(papers, examPapers) {
   }, 0)
 }
 
-const TIME_LIMIT = 120 * 60 // 120 minutes per paper
+const DEFAULT_TIME_LIMIT = 120 // minutes
+function getPaperTimeLimit(paper) {
+  return (paper?.timeLimit || DEFAULT_TIME_LIMIT) * 60 // seconds
+}
+function getPaperTimeLimitMin(paper) {
+  return paper?.timeLimit || DEFAULT_TIME_LIMIT
+}
+function getTimeLimitText(papers) {
+  const times = [...new Set(papers.map(p => getPaperTimeLimitMin(p)))]
+  return times.length === 1 ? `各 ${times[0]} 分鐘` : papers.map(p => `${p.name} ${getPaperTimeLimitMin(p)}分鐘`).join('、')
+}
 
 // Check if user's answer is correct (supports multi-answer "A,B" and voided "送分"/empty)
 function isAnswerCorrect(userAnswer, correctAnswer) {
@@ -71,13 +80,19 @@ function isAnswerCorrect(userAnswer, correctAnswer) {
 
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444' }
 
-// ── Setup screen ─────────────────────────────────────────────────
-const FULL_EXAM_FEE = 800
-const SINGLE_EXAM_FEE = 300
+// ── Fee calculation ──────────────────────────────────────────────
+// 完整模考：總題數 × 4，單科：該卷題數 × 5
+function getFullExamFee(papers) {
+  return papers.reduce((s, p) => s + p.count, 0) * 4
+}
+function getSingleExamFee(paper) {
+  return paper.count * 5
+}
 
 function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
   const { papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, examName, isWeighted } = getExamConfig(examType)
+  const FULL_EXAM_FEE = getFullExamFee(PAPERS)
   const [tab, setTab] = useState('historical') // 'historical' | 'random'
   const [examYears, setExamYears] = useState([])
   const [loadingYears, setLoadingYears] = useState(true)
@@ -134,7 +149,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                   <div className="flex-1">
                     <p className="font-bold text-lg text-medical-blue">完整模擬考</p>
                     <p className="text-gray-500 text-xs mt-1">{PAPERS.map(p => p.name).join(' + ')}，共 {PAPERS.reduce((s,p) => s+p.count, 0)} 題</p>
-                    <p className="text-gray-400 text-xs">各 120 分鐘，{TOTAL_PASS}/{TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 及格</p>
+                    <p className="text-gray-400 text-xs">{getTimeLimitText(PAPERS)}，{TOTAL_PASS}/{TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 及格</p>
                   </div>
                   <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {FULL_EXAM_FEE}</span>
                 </div>
@@ -150,19 +165,20 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
               {selectedExam.papers.map((p, pi) => {
                 const paperDef = PAPERS[pi]
                 if (!paperDef) return null
+                const singleFee = getSingleExamFee(paperDef)
                 const distText = Object.entries(p.distribution || {})
                   .map(([tag, cnt]) => `${TAG_NAMES[tag] || tag} ${cnt}`)
                   .join('、')
                 return (
                   <button key={pi} onClick={() => onStartHistorical(selectedExam.roc_year, selectedExam.session, false, paperDef)}
-                    className={`w-full text-left rounded-2xl px-5 py-4 border-2 transition-all active:scale-[0.97] ${coins >= SINGLE_EXAM_FEE ? 'border-gray-100 bg-white' : 'border-gray-100 bg-gray-50 opacity-60'}`}>
+                    className={`w-full text-left rounded-2xl px-5 py-4 border-2 transition-all active:scale-[0.97] ${coins >= singleFee ? 'border-gray-100 bg-white' : 'border-gray-100 bg-gray-50 opacity-60'}`}>
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="font-bold text-lg text-medical-dark">{p.name}</p>
                         <p className="text-gray-400 text-xs mt-1">{distText}</p>
-                        <p className="text-gray-300 text-xs">{p.total} 題 / 120 分鐘</p>
+                        <p className="text-gray-300 text-xs">{p.total} 題 / {getPaperTimeLimitMin(paperDef)} 分鐘</p>
                       </div>
-                      <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {SINGLE_EXAM_FEE}</span>
+                      <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {singleFee}</span>
                     </div>
                   </button>
                 )
@@ -213,7 +229,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                 <div className="flex-1">
                   <p className="font-bold text-lg text-medical-blue">完整模擬考</p>
                   <p className="text-gray-500 text-xs mt-1">{PAPERS.map(p => p.name).join(' + ')}，共 {PAPERS.reduce((s,p) => s+p.count, 0)} 題</p>
-                  <p className="text-gray-400 text-xs">各 120 分鐘，{TOTAL_PASS}/{TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 及格</p>
+                  <p className="text-gray-400 text-xs">{getTimeLimitText(PAPERS)}，{TOTAL_PASS}/{TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 及格</p>
                 </div>
                 <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {FULL_EXAM_FEE}</span>
               </div>
@@ -225,18 +241,21 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
               <div className="flex-1 h-px bg-gray-200" />
             </div>
 
-            {PAPERS.map(p => (
+            {PAPERS.map(p => {
+              const singleFee = getSingleExamFee(p)
+              return (
               <button key={p.id} onClick={() => onStart(p)}
-                className={`w-full text-left rounded-2xl px-5 py-4 border-2 transition-all active:scale-[0.97] ${coins >= SINGLE_EXAM_FEE ? 'border-gray-100 bg-white' : 'border-gray-100 bg-gray-50 opacity-60'}`}>
+                className={`w-full text-left rounded-2xl px-5 py-4 border-2 transition-all active:scale-[0.97] ${coins >= singleFee ? 'border-gray-100 bg-white' : 'border-gray-100 bg-gray-50 opacity-60'}`}>
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-bold text-lg text-medical-dark">{p.name}</p>
                     <p className="text-gray-400 text-xs mt-1">{p.subjects}</p>
-                    <p className="text-gray-300 text-xs">{p.count} 題{p.pointsPerQ && p.pointsPerQ !== 1 ? ` · 每題 ${p.pointsPerQ} 分` : ''} / 120 分鐘</p>
+                    <p className="text-gray-300 text-xs">{p.count} 題{p.pointsPerQ && p.pointsPerQ !== 1 ? ` · 每題 ${p.pointsPerQ} 分` : ''} / {getPaperTimeLimitMin(p)} 分鐘</p>
                   </div>
-                  <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {SINGLE_EXAM_FEE}</span>
+                  <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {singleFee}</span>
                 </div>
               </button>
+              )
             ))}
           </>
         )}
@@ -245,7 +264,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
           <p className="text-sm font-bold text-gray-700 mb-2">{examName}規則</p>
           <div className="text-xs text-gray-500 space-y-1.5">
             <p>📋 {PAPERS.length} 張考卷{PAPERS.every(p => p.count === PAPERS[0].count) ? `各 ${PAPERS[0].count} 題` : `（${PAPERS.map(p => p.count + '題').join('/')}）`}，共 {PAPERS.reduce((s,p) => s+p.count, 0)} 題</p>
-            <p>⏱️ 每卷限時 120 分鐘</p>
+            <p>⏱️ {getTimeLimitText(PAPERS)}</p>
             {isWeighted ? (
               <p>✅ 每科滿分 100 分，{PAPERS.length} 科合計 {TOTAL_POINTS} 分</p>
             ) : (
@@ -266,7 +285,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
 function ExamInProgress({ paper, questions, onFinish, onBack }) {
   const [answers, setAnswers] = useState({})
   const [qIdx, setQIdx] = useState(0)
-  const [timeLeft, setTimeLeft] = useState(TIME_LIMIT)
+  const [timeLeft, setTimeLeft] = useState(getPaperTimeLimit(paper))
   const [showNav, setShowNav] = useState(false)
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false)
   const timerRef = useRef(null)
@@ -662,16 +681,19 @@ export default function MockExam() {
     }
   }
 
+  const FULL_EXAM_FEE = getFullExamFee(PAPERS)
+
   // Start single paper (random)
   const handleStartSingle = async (paper) => {
-    if (!spendCoins(SINGLE_EXAM_FEE)) {
-      alert(`金幣不足！需要 ${SINGLE_EXAM_FEE} 金幣，目前只有 ${coins} 金幣`)
+    const fee = getSingleExamFee(paper)
+    if (!spendCoins(fee)) {
+      alert(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣`)
       return
     }
     setIsFullExam(false)
     setHistoricalExam(null)
     setPaperResults([])
-    await startPaper(paper, 0, { refund: SINGLE_EXAM_FEE })
+    await startPaper(paper, 0, { refund: fee })
   }
 
   // Start full exam (all papers sequentially)
@@ -688,7 +710,8 @@ export default function MockExam() {
 
   // Start historical exam
   const handleStartHistorical = async (year, session, isFull, paper) => {
-    const fee = isFull ? FULL_EXAM_FEE : SINGLE_EXAM_FEE
+    const targetPaper = paper || PAPERS[0]
+    const fee = isFull ? FULL_EXAM_FEE : getSingleExamFee(targetPaper)
     if (!spendCoins(fee)) {
       alert(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣`)
       return
@@ -696,7 +719,6 @@ export default function MockExam() {
     setIsFullExam(isFull)
     setHistoricalExam({ year, session })
     setPaperResults([])
-    const targetPaper = paper || PAPERS[0]
     await startPaper(targetPaper, 0, { historical: { year, session }, refund: fee })
   }
 

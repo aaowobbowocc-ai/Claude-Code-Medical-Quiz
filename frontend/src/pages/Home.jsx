@@ -243,11 +243,15 @@ export default function Home() {
   const [devTaps, setDevTaps] = useState(0)
   const devTimer = useRef(null)
   const [devCoinsInput, setDevCoinsInput] = useState('')
+  const [devAuthed, setDevAuthed] = useState(false)
+  const [devPwdInput, setDevPwdInput] = useState('')
+  const [devPwdError, setDevPwdError] = useState(false)
+  const DEV_PWD = 'haha9527'
   const handleDevTap = () => {
     setDevTaps(t => {
       const next = t + 1
       clearTimeout(devTimer.current)
-      if (next >= 5) { setSheet('dev'); return 0 }
+      if (next >= 5) { setSheet('devpwd'); setDevPwdInput(''); setDevPwdError(false); return 0 }
       devTimer.current = setTimeout(() => setDevTaps(0), 1500)
       return next
     })
@@ -841,9 +845,26 @@ export default function Home() {
 
       <SupportSheets sheet={sheet} setSheet={setSheet} />
 
-      {/* Dev panel — tap 知識王 5 times */}
-      {sheet === 'dev' && (
+      {/* Dev password gate */}
+      {sheet === 'devpwd' && (
         <Sheet onClose={() => setSheet(null)}>
+          <h2 className="text-xl font-bold text-medical-dark text-center mb-1">開發者驗證</h2>
+          <p className="text-center text-gray-400 text-xs mb-4">請輸入開發者密碼</p>
+          <div className="space-y-3">
+            <input type="password" value={devPwdInput} onChange={e => { setDevPwdInput(e.target.value); setDevPwdError(false) }}
+              placeholder="密碼" className="w-full border rounded-xl px-3 py-2 text-sm text-center" autoFocus />
+            {devPwdError && <p className="text-red-500 text-xs text-center">密碼錯誤</p>}
+            <button onClick={() => {
+              if (devPwdInput === DEV_PWD) { setDevAuthed(true); setSheet('dev') }
+              else { setDevPwdError(true) }
+            }} className="w-full bg-medical-blue text-white py-2.5 rounded-xl text-sm font-bold active:scale-95">確認</button>
+          </div>
+        </Sheet>
+      )}
+
+      {/* Dev panel — only after password */}
+      {sheet === 'dev' && devAuthed && (
+        <Sheet onClose={() => { setSheet(null); setDevAuthed(false) }}>
           <h2 className="text-xl font-bold text-medical-dark text-center mb-1">開發者工具</h2>
           <p className="text-center text-gray-400 text-xs mb-4">測試用，不影響其他玩家</p>
           <div className="space-y-3">

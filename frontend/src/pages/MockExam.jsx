@@ -277,9 +277,9 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
           </div>
         </div>
 
-        <div className="bg-amber-50 rounded-2xl p-4 shadow-sm border border-amber-100">
-          <p className="text-sm font-bold text-amber-700 mb-2">🪙 金幣獎勵規則</p>
-          <div className="text-xs text-amber-900/70 space-y-1.5">
+        <div className="bg-amber-50 dark:bg-amber-950/40 rounded-2xl p-4 shadow-sm border border-amber-100 dark:border-amber-800/50">
+          <p className="text-sm font-bold text-amber-700 dark:text-amber-300 mb-2">🪙 金幣獎勵規則</p>
+          <div className="text-xs text-amber-900/70 dark:text-amber-200/80 space-y-1.5">
             <p>📋 完整模考通過：獎勵 = 題數 × 1.5</p>
             <p>📄 單科通過（≥60%）：獎勵 = 題數 × 1</p>
             <p>❌ 未通過：無獎勵</p>

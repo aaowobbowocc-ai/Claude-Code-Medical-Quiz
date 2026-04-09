@@ -105,7 +105,7 @@ export default function CommentSection({ targetId }) {
   const displayComments = showAll ? comments : comments.slice(0, 5)
 
   return (
-    <div className="mt-4">
+    <div className="mt-4 overflow-hidden">
       <div className="flex items-center gap-2 mb-3">
         <span className="text-sm font-bold text-gray-700">💬 留言討論</span>
         <span className="text-xs text-gray-400">{comments.length} 則</span>
@@ -162,7 +162,7 @@ export default function CommentSection({ targetId }) {
       )}
 
       {/* Input */}
-      <div className="flex gap-2 mt-3">
+      <div className="flex gap-2 mt-3 min-w-0">
         <input
           type="text"
           value={text}
@@ -170,10 +170,10 @@ export default function CommentSection({ targetId }) {
           onKeyDown={e => e.key === 'Enter' && handlePost()}
           placeholder="分享你的心得..."
           maxLength={500}
-          className="flex-1 bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-sm outline-none focus:border-medical-blue transition-colors"
+          className="flex-1 min-w-0 bg-gray-50 border border-gray-200 rounded-xl px-3 py-2 text-sm outline-none focus:border-medical-blue transition-colors"
         />
         <button onClick={handlePost} disabled={!text.trim() || posting}
-          className="px-4 py-2.5 rounded-xl text-sm font-bold text-white grad-cta active:scale-95 disabled:opacity-40 transition-all shrink-0">
+          className="px-3 py-2 rounded-xl text-sm font-bold text-white grad-cta active:scale-95 disabled:opacity-40 transition-all shrink-0">
           送出
         </button>
       </div>

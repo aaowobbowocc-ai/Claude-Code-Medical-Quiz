@@ -1,7 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import CommentSection from '../components/CommentSection'
+
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+
+function getUserId() {
+  let id = localStorage.getItem('comment-uid')
+  if (!id) {
+    id = Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+    localStorage.setItem('comment-uid', id)
+  }
+  return id
+}
+
+function timeAgo(dateStr) {
+  const diff = Date.now() - new Date(dateStr).getTime()
+  const mins = Math.floor(diff / 60000)
+  if (mins < 1) return '剛剛'
+  if (mins < 60) return `${mins}分鐘前`
+  const hrs = Math.floor(mins / 60)
+  if (hrs < 24) return `${hrs}小時前`
+  const days = Math.floor(hrs / 24)
+  if (days < 30) return `${days}天前`
+  return new Date(dateStr).toLocaleDateString('zh-TW')
+}
 
 // ── Notes data by exam type ─────────────────────────────────────
 const NOTES = {
@@ -299,6 +322,206 @@ const NOTES = {
 
 // ── Components ──────────────────────────────────────────────────
 
+// Community note card (user-created)
+function CommunityCard({ note, exam, subject, onDelete, onLikeUpdate }) {
+  const [expanded, setExpanded] = useState(false)
+  const [likedIds, setLikedIds] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('cnote-likes') || '[]') } catch { return [] }
+  })
+  const [reportedIds, setReportedIds] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('cnote-reports') || '[]') } catch { return [] }
+  })
+  const userId = getUserId()
+  const isMine = note.userId === userId
+
+  const handleLike = async () => {
+    try {
+      const res = await fetch(`${BACKEND}/community-notes/like`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ exam, subject, noteId: note.id, userId }),
+      })
+      const data = await res.json()
+      if (data.ok) {
+        const newLiked = data.liked ? [...likedIds, note.id] : likedIds.filter(id => id !== note.id)
+        setLikedIds(newLiked)
+        localStorage.setItem('cnote-likes', JSON.stringify(newLiked))
+        onLikeUpdate?.(note.id, data.likes)
+      }
+    } catch {}
+  }
+
+  const handleReport = async () => {
+    if (reportedIds.includes(note.id)) return
+    if (!confirm('確定要檢舉此筆記嗎？')) return
+    try {
+      await fetch(`${BACKEND}/community-notes/report`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ exam, subject, noteId: note.id, userId }),
+      })
+      const newReported = [...reportedIds, note.id]
+      setReportedIds(newReported)
+      localStorage.setItem('cnote-reports', JSON.stringify(newReported))
+    } catch {}
+  }
+
+  const handleDelete = async () => {
+    if (!confirm('確定要刪除這張筆記嗎？')) return
+    try {
+      const res = await fetch(`${BACKEND}/community-notes/delete`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ exam, subject, noteId: note.id, userId }),
+      })
+      const data = await res.json()
+      if (data.ok) onDelete?.(note.id)
+    } catch {}
+  }
+
+  return (
+    <div className="w-full text-left bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+      <button onClick={() => setExpanded(!expanded)}
+        className="w-full text-left px-4 py-3 flex items-center gap-3 active:scale-[0.98] transition-all">
+        <span className="text-lg">{note.avatar}</span>
+        <div className="flex-1 min-w-0">
+          <p className="font-bold text-sm text-medical-dark truncate">{note.title}</p>
+          <p className="text-xs text-gray-400">{note.name} · {timeAgo(note.createdAt)}</p>
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          {note.likes > 0 && <span className="text-xs text-red-400">❤️ {note.likes}</span>}
+          <span className={`text-gray-300 text-lg transition-transform ${expanded ? 'rotate-90' : ''}`}>›</span>
+        </div>
+      </button>
+      {expanded && (
+        <div className="px-4 pb-4 pt-0">
+          <div className="bg-medical-ice rounded-xl px-4 py-3">
+            <pre className="text-xs text-gray-600 leading-relaxed whitespace-pre-wrap font-[inherit]">{note.content}</pre>
+          </div>
+          <div className="flex items-center gap-3 mt-2">
+            <button onClick={handleLike}
+              className={`flex items-center gap-1 text-xs active:scale-95 transition-transform ${likedIds.includes(note.id) ? 'text-red-500' : 'text-gray-400'}`}>
+              {likedIds.includes(note.id) ? '❤️' : '🤍'} {note.likes > 0 ? note.likes : '讚'}
+            </button>
+            {isMine ? (
+              <button onClick={handleDelete} className="text-xs text-red-400 active:scale-95">🗑 刪除</button>
+            ) : !reportedIds.includes(note.id) ? (
+              <button onClick={handleReport} className="text-xs text-gray-300 active:scale-95">🚩</button>
+            ) : (
+              <span className="text-xs text-gray-300">已檢舉</span>
+            )}
+          </div>
+          <CommentSection targetId={`cnote_${note.id}`} />
+        </div>
+      )}
+    </div>
+  )
+}
+
+// Community notes section for a subject
+function CommunityNotes({ exam, subjectId }) {
+  const [notes, setNotes] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [showForm, setShowForm] = useState(false)
+  const [title, setTitle] = useState('')
+  const [content, setContent] = useState('')
+  const [posting, setPosting] = useState(false)
+  const [error, setError] = useState('')
+
+  const name = usePlayerStore(s => s.name) || '匿名'
+  const avatar = usePlayerStore(s => s.avatar) || '👤'
+  const userId = getUserId()
+
+  const fetchNotes = useCallback(() => {
+    fetch(`${BACKEND}/community-notes?exam=${exam}&subject=${subjectId}`)
+      .then(r => r.json())
+      .then(data => { setNotes(data.notes || []); setLoading(false) })
+      .catch(() => setLoading(false))
+  }, [exam, subjectId])
+
+  useEffect(() => { fetchNotes() }, [fetchNotes])
+
+  const handlePost = async () => {
+    if (!title.trim() || !content.trim() || posting) return
+    setPosting(true)
+    setError('')
+    try {
+      const res = await fetch(`${BACKEND}/community-notes`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ exam, subject: subjectId, title: title.trim(), content: content.trim(), name, avatar, userId }),
+      })
+      const data = await res.json()
+      if (data.ok) {
+        setNotes(prev => [data.note, ...prev])
+        setTitle('')
+        setContent('')
+        setShowForm(false)
+      } else {
+        setError(data.error || '發送失敗')
+      }
+    } catch { setError('網路錯誤') }
+    setPosting(false)
+  }
+
+  const handleDelete = (noteId) => {
+    setNotes(prev => prev.filter(n => n.id !== noteId))
+  }
+
+  const handleLikeUpdate = (noteId, newLikes) => {
+    setNotes(prev => prev.map(n => n.id === noteId ? { ...n, likes: newLikes } : n))
+  }
+
+  return (
+    <div className="mt-6">
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-bold text-gray-700">✍️ 社群筆記</span>
+          <span className="text-xs text-gray-400">{notes.length} 張</span>
+        </div>
+        <button onClick={() => setShowForm(!showForm)}
+          className="text-xs font-bold text-medical-blue bg-medical-ice px-3 py-1.5 rounded-xl active:scale-95">
+          {showForm ? '取消' : '+ 寫筆記'}
+        </button>
+      </div>
+
+      {showForm && (
+        <div className="bg-white rounded-2xl border border-medical-blue/20 p-4 mb-3 shadow-sm">
+          <input type="text" value={title} onChange={e => setTitle(e.target.value)}
+            placeholder="標題（最多 50 字）" maxLength={50}
+            className="w-full border border-gray-200 rounded-xl px-3 py-2 text-sm mb-2 outline-none focus:border-medical-blue" />
+          <textarea value={content} onChange={e => setContent(e.target.value)}
+            placeholder="寫下你的筆記重點、口訣、心得...（最多 2000 字）" maxLength={2000} rows={5}
+            className="w-full border border-gray-200 rounded-xl px-3 py-2 text-sm resize-none outline-none focus:border-medical-blue" />
+          {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
+          <div className="flex items-center justify-between mt-2">
+            <p className="text-xs text-gray-400">{content.length}/2000</p>
+            <button onClick={handlePost} disabled={!title.trim() || !content.trim() || posting}
+              className="px-4 py-2 rounded-xl text-sm font-bold text-white grad-cta active:scale-95 disabled:opacity-40">
+              {posting ? '發送中...' : '發表筆記'}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {loading ? (
+        <div className="text-center text-gray-300 text-xs py-4">載入中...</div>
+      ) : notes.length === 0 ? (
+        <div className="text-center text-gray-300 text-xs py-6">
+          還沒有社群筆記，來當第一個分享的人吧！
+        </div>
+      ) : (
+        <div className="flex flex-col gap-2.5">
+          {notes.map(note => (
+            <CommunityCard key={note.id} note={note} exam={exam} subject={subjectId}
+              onDelete={handleDelete} onLikeUpdate={handleLikeUpdate} />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 function NoteCard({ card, index, subjectId }) {
   const [expanded, setExpanded] = useState(false)
 
@@ -360,6 +583,8 @@ export default function Notes() {
               先看完精華卡建立整體架構，再去「自主練習」用題目驗證理解。答錯的題目會自動加入錯題本，之後間隔複習效果更好。
             </p>
           </div>
+
+          <CommunityNotes exam={exam} subjectId={subj.id} />
         </div>
       </div>
     )

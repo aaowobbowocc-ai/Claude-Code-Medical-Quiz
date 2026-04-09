@@ -1,20 +1,22 @@
 import { useState } from 'react'
 
-export default function QuestionImages({ images }) {
+export default function QuestionImages({ images, imageUrl }) {
   const [expanded, setExpanded] = useState(null)
 
-  if (!images || images.length === 0) return null
+  // Support both images array and single image_url string
+  const imgList = images?.length ? images : imageUrl ? [imageUrl] : []
+  if (imgList.length === 0) return null
 
   return (
     <>
-      <div className={`flex flex-wrap gap-2 mt-2 ${images.length === 1 ? '' : ''}`}>
-        {images.map((src, i) => (
+      <div className={`flex flex-wrap gap-2 mt-2 ${imgList.length === 1 ? '' : ''}`}>
+        {imgList.map((src, i) => (
           <img
             key={i}
             src={src}
             alt={`題目附圖 ${i + 1}`}
             className="rounded-lg border border-gray-200 bg-white cursor-pointer active:scale-95 transition-transform"
-            style={{ maxHeight: images.length === 1 ? 200 : 140, maxWidth: '100%', objectFit: 'contain' }}
+            style={{ maxHeight: imgList.length === 1 ? 200 : 140, maxWidth: '100%', objectFit: 'contain' }}
             onClick={() => setExpanded(src)}
             loading="lazy"
           />

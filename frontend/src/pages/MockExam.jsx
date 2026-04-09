@@ -346,7 +346,7 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
             第 {qIdx + 1} / {questions.length} 題{q.subject_name ? `　·　${q.subject_name}` : ''}
           </p>
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
-          <QuestionImages images={q.images} />
+          <QuestionImages images={q.images} imageUrl={q.image_url} />
         </div>
         <div className="flex flex-col gap-2.5">
           {Object.entries(q.options).map(([letter, text]) => {

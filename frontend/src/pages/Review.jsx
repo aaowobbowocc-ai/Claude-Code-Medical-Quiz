@@ -6,6 +6,7 @@ import SmartBanner from '../components/SmartBanner'
 import { useBookmarks } from '../hooks/useBookmarks'
 import { getSubjectColor } from '../utils/subjectColors'
 import QuestionImages from '../components/QuestionImages'
+import CommentSection from '../components/CommentSection'
 
 /* ── Single question review card ───────────────────────────── */
 function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
@@ -47,7 +48,7 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
       {/* Question text */}
       <div className="px-4 pb-3">
         <p className="text-sm text-gray-800 leading-relaxed">{q.question}</p>
-        <QuestionImages images={q.images} />
+        <QuestionImages images={q.images} imageUrl={q.image_url} />
       </div>
 
       {/* Options + answer — collapsible */}
@@ -104,6 +105,7 @@ function ReviewCard({ q, index, isBookmarked, onToggleBookmark }) {
               number={q.number}
               disputed={q.disputed}
             />
+            {q.id && <CommentSection targetId={`q_${q.id}`} />}
           </div>
         </div>
       )}

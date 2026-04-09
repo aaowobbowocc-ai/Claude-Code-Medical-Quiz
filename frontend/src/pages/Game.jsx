@@ -336,11 +336,7 @@ export default function Game() {
           <p className="text-medical-dark font-medium text-base leading-relaxed">
             {currentQuestion.question}
           </p>
-          <QuestionImages images={currentQuestion.images} />
-          {currentQuestion.image_url && (
-            <img src={currentQuestion.image_url} alt="題目圖片"
-                 className="mt-3 w-full rounded-xl border border-blue-100 object-contain max-h-48" />
-          )}
+          <QuestionImages images={currentQuestion.images} imageUrl={currentQuestion.image_url} />
         </div>
 
         <div className="flex flex-col gap-3">

@@ -4,6 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import { useExplain } from '../hooks/useAI'
 import { ExplainPanel } from '../components/AIPanel'
 import QuestionImages from '../components/QuestionImages'
+import CommentSection from '../components/CommentSection'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -159,11 +160,7 @@ function QuestionCard({ q, stageMap }) {
       {/* Question text */}
       <div className="px-4 pb-3">
         <p className="text-sm text-gray-800 leading-relaxed">{q.question}</p>
-        <QuestionImages images={q.images} />
-        {q.image_url && (
-          <img src={q.image_url} alt="題目圖片"
-               className="mt-3 w-full rounded-xl border border-gray-100 object-contain max-h-56" />
-        )}
+        <QuestionImages images={q.images} imageUrl={q.image_url} />
       </div>
 
       {/* Toggle options */}
@@ -220,6 +217,7 @@ function QuestionCard({ q, stageMap }) {
               number={q.number}
               disputed={q.disputed}
             />
+            {q.id && <CommentSection targetId={`q_${q.id}`} />}
           </div>
         </div>
       )}

@@ -7,6 +7,7 @@ import { getSubjectColor } from '../utils/subjectColors'
 import { ExplainPanel, ReviewPanel } from '../components/AIPanel'
 import SmartBanner from '../components/SmartBanner'
 import QuestionImages from '../components/QuestionImages'
+import CommentSection from '../components/CommentSection'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -408,7 +409,7 @@ function PracticeGame({ config, onFinish }) {
             </div>
           )}
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
-          <QuestionImages images={q.images} />
+          <QuestionImages images={q.images} imageUrl={q.image_url} />
         </div>
 
         <div className="flex flex-col gap-2.5">
@@ -483,6 +484,7 @@ function PracticeGame({ config, onFinish }) {
               number={q?.number}
               disputed={q?.disputed}
             />
+            {q?.id && <CommentSection targetId={`q_${q.id}`} />}
           </div>
         )}
 

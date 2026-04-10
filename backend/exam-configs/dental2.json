@@ -6,24 +6,24 @@
   "category": "dental",
   "questionsFile": "questions-dental2.json",
   "totalQ": 320,
-  "passScore": 192,
+  "passScore": 240,
   "totalPoints": 400,
   "passRate": 0.6,
   "papers": [
-    { "id": "paper1", "name": "卷一", "subject": "卷一", "subjects": "牙髓病28、牙體復形24、牙周病28", "count": 80, "pointsPerQ": 1.25 },
-    { "id": "paper2", "name": "卷二", "subject": "卷二", "subjects": "口腔顎面外科55、口腔影像25", "count": 80, "pointsPerQ": 1.25 },
-    { "id": "paper3", "name": "卷三", "subject": "卷三", "subjects": "活動補綴43、牙科材料23、固定補綴14", "count": 80, "pointsPerQ": 1.25 },
-    { "id": "paper4", "name": "卷四", "subject": "卷四", "subjects": "齒顎矯正28、兒童牙科32、公衛16、倫理法規4", "count": 80, "pointsPerQ": 1.25 }
+    { "id": "paper1", "name": "卷一", "subject": "卷一", "subjects": "口腔顎面外科40、牙周病學40", "count": 80, "pointsPerQ": 1.25 },
+    { "id": "paper2", "name": "卷二", "subject": "卷二", "subjects": "齒顎矯正20、兒童牙科20、牙髓病學20、牙體復形20", "count": 80, "pointsPerQ": 1.25 },
+    { "id": "paper3", "name": "卷三", "subject": "卷三", "subjects": "固定補綴27、活動補綴27、牙科材料26", "count": 80, "pointsPerQ": 1.25 },
+    { "id": "paper4", "name": "卷四", "subject": "卷四", "subjects": "口腔診斷/影像40、牙醫公衛/倫理/法規40", "count": 80, "pointsPerQ": 1.25 }
   ],
   "stages": [
     { "id": 0, "tag": "all", "name": "全部" }
   ],
   "ui": {
     "tagNames": {
-      "endodontics": "牙髓病", "operative_dentistry": "牙體復形", "periodontics": "牙周病",
-      "oral_surgery": "口外", "dental_radiology": "口腔影像",
-      "removable_prosthodontics": "活動補綴", "dental_materials": "牙材", "fixed_prosthodontics": "固定補綴",
-      "orthodontics": "齒矯", "pediatric_dentistry": "兒童牙科", "dental_public_health": "公衛", "dental_ethics_law": "倫理"
+      "oral_surgery": "口腔顎面外科", "periodontics": "牙周病學",
+      "orthodontics": "齒顎矯正", "pediatric_dentistry": "兒童牙科", "endodontics": "牙髓病學", "operative_dentistry": "牙體復形",
+      "fixed_prosthodontics": "固定補綴", "removable_prosthodontics": "活動補綴", "dental_materials": "牙科材料",
+      "dental_radiology": "口腔診斷/影像", "dental_public_health": "公衛/倫理/法規"
     },
     "stageStyles": {
       "all": { "icon": "🎲", "color": "#64748B" },
@@ -43,10 +43,10 @@
       "dental_ethics_law": { "icon": "⚖️", "color": "#374151" }
     },
     "subjectColors": {
-      "口腔顎面外科": "#3B82F6", "牙周病學": "#10B981", "齒顎矯正": "#8B5CF6",
-      "兒童牙科": "#818CF8", "牙髓病": "#D97706", "牙體復形": "#F97316",
-      "牙科材料": "#6366F1", "固定補綴": "#DC2626", "活動補綴": "#BE123C",
-      "補綴學": "#DC2626", "口腔診斷": "#0D9488", "口腔影像": "#64748B", "倫理法規": "#0D9488"
+      "口腔顎面外科": "#059669", "牙周病學": "#0D9488",
+      "齒顎矯正": "#3B82F6", "兒童牙科": "#8B5CF6", "牙髓病學": "#DC2626", "牙體復形": "#F97316",
+      "固定補綴": "#7C3AED", "活動補綴": "#EC4899", "牙科材料": "#D97706",
+      "口腔診斷/影像": "#6366F1", "牙醫公衛/倫理/法規": "#0D9488"
     }
   },
   "seo": {
@@ -58,16 +58,21 @@
     "years": "110 至 115",
     "totalQ": 3200,
     "examDesc": "牙醫師國考第二階段（二階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為通過一階並完成臨床實習之牙醫學系學生。",
-    "paperDesc": "考試分為四卷，每卷各 80 題選擇題，合計 320 題。每題 1.25 分、每卷滿分 100 分，總分 400 分，及格標準為 192 分（60%）。",
-    "subjects": "口腔顎面外科、牙周病學、齒顎矯正、兒童牙科、牙髓病學、牙體復形、牙科材料、補綴學、口腔診斷、公共衛生等臨床牙醫科目",
-    "mockDesc": "完整模擬四卷，每題 1.25 分，192/400 及格",
+    "paperDesc": "考試分為四卷，每卷各 80 題選擇題，合計 320 題。每題 1.25 分、每卷滿分 100 分，總分 400 分，240/400 分及格（答對 192 題）。",
+    "subjects": "口腔顎面外科、牙周病學、齒顎矯正、兒童牙科、牙髓病學、牙體復形、固定補綴、活動補綴、牙科材料、口腔診斷/影像、牙醫公衛/倫理/法規",
+    "mockDesc": "完整模擬四卷，每題 1.25 分，240/400 分及格（答對 192 題）",
     "subjectDetails": [
       ["口腔顎面外科", "拔牙手術、顎骨骨折處理、口腔腫瘤手術與顎面重建。"],
       ["牙周病學", "牙周疾病的分類、診斷與治療計畫，牙周手術方式。"],
       ["齒顎矯正", "齒列不正的分類、矯正力學原理與治療計畫擬定。"],
+      ["兒童牙科", "兒童齲齒預防、行為管理與乳牙治療。"],
+      ["牙髓病學", "牙髓診斷、根管治療技術與根尖手術。"],
       ["牙體復形", "齲齒的修復材料選擇、窩洞設計與直接/間接復形技術。"],
-      ["補綴學", "固定補綴、活動補綴與全口補綴的設計原則與製作流程。"],
-      ["兒童牙科", "兒童齲齒預防、行為管理與乳牙治療。"]
+      ["固定補綴", "牙冠、牙橋設計原則與黏著技術。"],
+      ["活動補綴", "局部與全口活動假牙的設計、製作與調整。"],
+      ["牙科材料", "牙科材料的物理化學特性、選擇與臨床應用。"],
+      ["口腔診斷/影像", "口腔影像判讀、診斷方法與臨床病例分析。"],
+      ["牙醫公衛/倫理/法規", "口腔公共衛生、醫療倫理與牙醫相關法規。"]
     ]
   }
 }

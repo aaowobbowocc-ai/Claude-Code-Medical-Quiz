@@ -1,0 +1,70 @@
+{
+  "id": "medlab",
+  "name": "醫事檢驗師",
+  "short": "醫檢",
+  "icon": "🔬",
+  "category": "medical",
+  "questionsFile": "questions-medlab.json",
+  "totalQ": 480,
+  "passScore": 288,
+  "passRate": 0.6,
+  "papers": [
+    { "id": "paper1", "name": "臨床生理與病理", "subject": "臨床生理學與病理學", "subjects": "臨床生理、病理", "count": 80 },
+    { "id": "paper2", "name": "血液與血庫", "subject": "臨床血液學與血庫學", "subjects": "臨床血液、血庫", "count": 80 },
+    { "id": "paper3", "name": "分子檢驗與鏡檢", "subject": "醫學分子檢驗學與臨床鏡檢學", "subjects": "分子檢驗、尿液鏡檢", "count": 80 },
+    { "id": "paper4", "name": "微生物學", "subject": "微生物學與臨床微生物學", "subjects": "細菌、黴菌、寄生蟲", "count": 80 },
+    { "id": "paper5", "name": "生化與臨床生化", "subject": "生物化學與臨床生化學", "subjects": "生化、臨床化學", "count": 80 },
+    { "id": "paper6", "name": "血清免疫與病毒", "subject": "臨床血清免疫學與臨床病毒學", "subjects": "血清免疫、病毒", "count": 80 }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" }
+  ],
+  "ui": {
+    "tagNames": {
+      "clinical_physio_path": "生理病理",
+      "hematology": "血液血庫",
+      "molecular": "分子鏡檢",
+      "microbiology": "微生物",
+      "biochemistry": "生化",
+      "serology": "血清免疫"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "clinical_physio_path": { "icon": "🫀", "color": "#EF4444" },
+      "hematology": { "icon": "🩸", "color": "#DC2626" },
+      "molecular": { "icon": "🧬", "color": "#8B5CF6" },
+      "microbiology": { "icon": "🦠", "color": "#10B981" },
+      "biochemistry": { "icon": "⚗️", "color": "#3B82F6" },
+      "serology": { "icon": "🛡️", "color": "#F97316" }
+    },
+    "subjectColors": {
+      "臨床生理學與病理學": "#EF4444",
+      "臨床血液學與血庫學": "#DC2626",
+      "醫學分子檢驗學與臨床鏡檢學": "#8B5CF6",
+      "微生物學與臨床微生物學": "#10B981",
+      "生物化學與臨床生化學": "#3B82F6",
+      "臨床血清免疫學與臨床病毒學": "#F97316"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 醫事檢驗師國考題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "醫事檢驗師國考",
+    "shortName": "醫事檢驗師",
+    "studentType": "醫技系學生",
+    "years": "110 至 115",
+    "totalQ": 0,
+    "examDesc": "醫事檢驗師國考為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為醫事技術學系畢業並完成實習。",
+    "paperDesc": "考試分為六科，每科各 80 題選擇題，合計 480 題。及格標準為各科平均達 60 分，無科目得為零分。",
+    "subjects": "臨床生理學與病理學、臨床血液學與血庫學、醫學分子檢驗學與臨床鏡檢學、微生物學與臨床微生物學、生物化學與臨床生化學、臨床血清免疫學與臨床病毒學",
+    "mockDesc": "完整模擬六科，平均 60 分及格",
+    "subjectDetails": [
+      ["臨床生理學與病理學", "人體各系統生理功能與疾病的病理變化機制。"],
+      ["臨床血液學與血庫學", "血液細胞形態、凝血機制、血型鑑定與輸血作業。"],
+      ["醫學分子檢驗學與臨床鏡檢學", "PCR、基因檢測技術，尿液與體液鏡檢判讀。"],
+      ["微生物學與臨床微生物學", "細菌、黴菌、寄生蟲的培養鑑定與藥敏試驗。"],
+      ["生物化學與臨床生化學", "代謝途徑、酵素學，臨床生化檢驗項目與判讀。"],
+      ["臨床血清免疫學與臨床病毒學", "免疫反應機制、血清學檢驗，病毒培養與分子診斷。"]
+    ]
+  }
+}

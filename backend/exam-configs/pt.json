@@ -1,0 +1,70 @@
+{
+  "id": "pt",
+  "name": "物理治療師",
+  "short": "物治",
+  "icon": "🏋️",
+  "category": "rehab",
+  "questionsFile": "questions-pt.json",
+  "totalQ": 480,
+  "passScore": 288,
+  "passRate": 0.6,
+  "papers": [
+    { "id": "paper1", "name": "物理治療基礎學", "subject": "物理治療基礎學", "subjects": "解剖、生理、肌動學、物治導論", "count": 80 },
+    { "id": "paper2", "name": "物理治療學概論", "subject": "物理治療學概論", "subjects": "物治概論、物治倫理", "count": 80 },
+    { "id": "paper3", "name": "物理治療技術學", "subject": "物理治療技術學", "subjects": "物治操作技術", "count": 80 },
+    { "id": "paper4", "name": "神經疾病物治", "subject": "神經疾病物理治療學", "subjects": "神經物治", "count": 80 },
+    { "id": "paper5", "name": "骨科疾病物治", "subject": "骨科疾病物理治療學", "subjects": "骨科物治", "count": 80 },
+    { "id": "paper6", "name": "心肺與小兒物治", "subject": "心肺疾病與小兒疾病物理治療學", "subjects": "心肺物治、小兒物治", "count": 80 }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" }
+  ],
+  "ui": {
+    "tagNames": {
+      "pt_basic": "基礎學",
+      "pt_intro": "概論",
+      "pt_technique": "技術學",
+      "pt_neuro": "神經物治",
+      "pt_ortho": "骨科物治",
+      "pt_cardio_peds": "心肺小兒"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "pt_basic": { "icon": "🦴", "color": "#3B82F6" },
+      "pt_intro": { "icon": "📖", "color": "#10B981" },
+      "pt_technique": { "icon": "🤲", "color": "#F97316" },
+      "pt_neuro": { "icon": "🧠", "color": "#8B5CF6" },
+      "pt_ortho": { "icon": "🦿", "color": "#D97706" },
+      "pt_cardio_peds": { "icon": "🫀", "color": "#EF4444" }
+    },
+    "subjectColors": {
+      "物理治療基礎學": "#3B82F6",
+      "物理治療學概論": "#10B981",
+      "物理治療技術學": "#F97316",
+      "神經疾病物理治療學": "#8B5CF6",
+      "骨科疾病物理治療學": "#D97706",
+      "心肺疾病與小兒疾病物理治療學": "#EF4444"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 物理治療師國考題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "物理治療師國考",
+    "shortName": "物理治療師",
+    "studentType": "物治系學生",
+    "years": "110 至 115",
+    "totalQ": 0,
+    "examDesc": "物理治療師國考為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為物理治療學系畢業並完成實習。",
+    "paperDesc": "考試分為六科，每科各 80 題選擇題，合計 480 題。及格標準為各科平均達 60 分，其中神經、骨科、心肺小兒三科須各達 60 分。",
+    "subjects": "物理治療基礎學、物理治療學概論、物理治療技術學、神經疾病物理治療學、骨科疾病物理治療學、心肺疾病與小兒疾病物理治療學",
+    "mockDesc": "完整模擬六科，平均 60 分及格",
+    "subjectDetails": [
+      ["物理治療基礎學", "解剖學、生理學、肌動學與物理治療導論。"],
+      ["物理治療學概論", "物理治療概念、倫理與法規、循證實踐。"],
+      ["物理治療技術學", "熱療、電療、水療、徒手治療等技術操作。"],
+      ["神經疾病物理治療學", "中風、脊髓損傷、帕金森氏症等神經疾患的物治評估與介入。"],
+      ["骨科疾病物理治療學", "骨折、關節置換、運動傷害等骨科疾患的物治處置。"],
+      ["心肺疾病與小兒疾病物理治療學", "心肺復健、呼吸治療，以及兒童發展遲緩的物治介入。"]
+    ]
+  }
+}

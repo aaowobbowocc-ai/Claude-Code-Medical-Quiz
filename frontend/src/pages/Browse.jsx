@@ -183,7 +183,7 @@ function QuestionCard({ q, stageMap }) {
       {/* Question text */}
       <div className="px-4 pb-3">
         <p className="text-sm text-gray-800 leading-relaxed">{q.question}</p>
-        <QuestionImages images={q.images} imageUrl={q.image_url} />
+        <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
       </div>
 
       {/* Toggle options */}

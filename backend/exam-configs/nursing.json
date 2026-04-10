@@ -5,15 +5,15 @@
   "icon": "👩‍⚕️",
   "category": "nursing",
   "questionsFile": "questions-nursing.json",
-  "totalQ": 400,
-  "passScore": 240,
+  "totalQ": 250,
+  "passScore": 150,
   "passRate": 0.6,
   "papers": [
-    { "id": "paper1", "name": "基礎醫學", "subject": "基礎醫學", "subjects": "解剖、生理、病理、藥理、微免", "count": 80 },
-    { "id": "paper2", "name": "基護與護理行政", "subject": "基本護理學與護理行政", "subjects": "護理原理、護理技術、護理行政", "count": 80 },
-    { "id": "paper3", "name": "內外科護理學", "subject": "內外科護理學", "subjects": "內科護理、外科護理", "count": 80 },
-    { "id": "paper4", "name": "產兒科護理學", "subject": "產兒科護理學", "subjects": "產科護理、兒科護理", "count": 80 },
-    { "id": "paper5", "name": "精神與社區護理", "subject": "精神科與社區衛生護理學", "subjects": "精神護理、社區護理", "count": 80 }
+    { "id": "paper1", "name": "基礎醫學", "subject": "基礎醫學", "subjects": "解剖、生理、病理、藥理、微免", "count": 50 },
+    { "id": "paper2", "name": "基護與護理行政", "subject": "基本護理學與護理行政", "subjects": "護理原理、護理技術、護理行政", "count": 50 },
+    { "id": "paper3", "name": "內外科護理學", "subject": "內外科護理學", "subjects": "內科護理、外科護理", "count": 50 },
+    { "id": "paper4", "name": "產兒科護理學", "subject": "產兒科護理學", "subjects": "產科護理、兒科護理", "count": 50 },
+    { "id": "paper5", "name": "精神與社區護理", "subject": "精神科與社區衛生護理學", "subjects": "精神護理、社區護理", "count": 50 }
   ],
   "stages": [
     { "id": 0, "tag": "all", "name": "全部" }
@@ -49,12 +49,12 @@
     "fullName": "護理師國考",
     "shortName": "護理師",
     "studentType": "護理系學生",
-    "years": "110 至 115",
-    "totalQ": 0,
+    "years": "114 至 115",
+    "totalQ": 498,
     "examDesc": "護理師國考為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為護理系畢業並完成實習之學生。",
-    "paperDesc": "考試分為五科，每科各 80 題選擇題，合計 400 題，及格標準為各科平均達 60 分。",
+    "paperDesc": "考試分為五科，每科各 50 題選擇題，合計 250 題。及格標準為各科平均達 60 分。",
     "subjects": "基礎醫學、基本護理學與護理行政、內外科護理學、產兒科護理學、精神科與社區衛生護理學",
-    "mockDesc": "完整模擬五科，各科平均 60 分及格",
+    "mockDesc": "完整模擬五科各 50 題，150/250 及格",
     "subjectDetails": [
       ["基礎醫學", "解剖學、生理學、病理學、藥理學、微生物學與免疫學。"],
       ["基本護理學與護理行政", "護理原理與技術、護理過程、護理行政管理與倫理法規。"],

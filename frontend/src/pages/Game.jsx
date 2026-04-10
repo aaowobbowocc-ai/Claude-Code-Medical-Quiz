@@ -336,7 +336,7 @@ export default function Game() {
           <p className="text-medical-dark font-medium text-base leading-relaxed">
             {currentQuestion.question}
           </p>
-          <QuestionImages images={currentQuestion.images} imageUrl={currentQuestion.image_url} />
+          <QuestionImages images={currentQuestion.images} imageUrl={currentQuestion.image_url} incomplete={currentQuestion.incomplete} />
         </div>
 
         <div className="flex flex-col gap-3">

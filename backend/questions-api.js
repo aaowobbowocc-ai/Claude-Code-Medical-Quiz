@@ -11,12 +11,12 @@ function shuffle(arr) {
 }
 
 // Check if question is single-answer (suitable for practice/PvP)
-// Multi-answer (e.g. "A,B") or voided ("送分") questions are excluded
+// Multi-answer (e.g. "A,B"), voided ("送分"), or incomplete (missing image) questions are excluded
 function isSingleAnswer(q) {
-  return q.answer && q.answer.length === 1 && q.options[q.answer];
+  return q.answer && q.answer.length === 1 && q.options[q.answer] && !q.incomplete;
 }
 
-function registerRoutes(app, examData, stats) {
+function registerRoutes(app, examData, stats, examConfigs) {
   // Helper: resolve exam data from query param
   function resolve(req) {
     const exam = req.query.exam || 'doctor1';
@@ -53,6 +53,7 @@ function registerRoutes(app, examData, stats) {
 
   // GET /questions/exam-years — list available historical exams
   app.get('/questions/exam-years', (req, res) => {
+    const examId = req.query.exam || 'doctor1';
     const questionsData = resolve(req);
     const exams = {};
     for (const q of questionsData.questions) {
@@ -61,6 +62,13 @@ function registerRoutes(app, examData, stats) {
       if (!exams[key].papers[q.subject]) exams[key].papers[q.subject] = {};
       const tag = q.subject_tag;
       exams[key].papers[q.subject][tag] = (exams[key].papers[q.subject][tag] || 0) + 1;
+    }
+    // Build config paper order for sorting (use paper.subject or paper.name)
+    const cfg = examConfigs && examConfigs[examId];
+    const paperOrder = cfg ? cfg.papers.map(p => p.subject || p.name) : [];
+    function paperSortIdx(name) {
+      const idx = paperOrder.indexOf(name);
+      return idx >= 0 ? idx : 999;
     }
     const list = Object.values(exams)
       .map(e => ({
@@ -71,7 +79,7 @@ function registerRoutes(app, examData, stats) {
           name,
           total: Object.values(dist).reduce((a, b) => a + b, 0),
           distribution: dist,
-        })),
+        })).sort((a, b) => paperSortIdx(a.name) - paperSortIdx(b.name)),
       }))
       .sort((a, b) => b.roc_year.localeCompare(a.roc_year) || b.session.localeCompare(a.session));
     res.set('Cache-Control', 'public, max-age=300, stale-while-revalidate=60');

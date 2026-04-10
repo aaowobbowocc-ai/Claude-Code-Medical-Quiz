@@ -377,7 +377,7 @@ function PracticeGame({ config, onFinish }) {
             </div>
           )}
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
-          <QuestionImages images={q.images} imageUrl={q.image_url} />
+          <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
         </div>
 
         <div className="flex flex-col gap-2.5">

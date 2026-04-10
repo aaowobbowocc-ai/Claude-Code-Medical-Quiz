@@ -619,7 +619,7 @@ function trackDailyVisit() {
 
 // ── Register modular routes ────────────────────────────────────────────
 leaderboard.registerRoutes(app);
-questionsApi.registerRoutes(app, examData, stats);
+questionsApi.registerRoutes(app, examData, stats, examConfigs);
 ai.registerRoutes(app, examData, stats);
 commentsApi.registerRoutes(app);
 communityNotes.registerRoutes(app);

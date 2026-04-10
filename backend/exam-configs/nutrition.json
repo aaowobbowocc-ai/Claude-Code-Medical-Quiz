@@ -5,16 +5,16 @@
   "icon": "🥗",
   "category": "medical",
   "questionsFile": "questions-nutrition.json",
-  "totalQ": 480,
-  "passScore": 288,
+  "totalQ": 280,
+  "passScore": 168,
   "passRate": 0.6,
   "papers": [
-    { "id": "paper1", "name": "生理與生化", "subject": "生理學與生物化學", "subjects": "生理學、生物化學", "count": 80 },
-    { "id": "paper2", "name": "營養學", "subject": "營養學", "subjects": "營養學", "count": 80 },
-    { "id": "paper3", "name": "公共衛生營養學", "subject": "公共衛生營養學", "subjects": "公衛營養", "count": 80 },
-    { "id": "paper4", "name": "食品衛生與安全", "subject": "食品衛生與安全", "subjects": "食品衛生、食安法規", "count": 80 },
-    { "id": "paper5", "name": "膳食療養學", "subject": "膳食療養學", "subjects": "臨床營養、膳食設計", "count": 80 },
-    { "id": "paper6", "name": "團體膳食設計與管理", "subject": "團體膳食設計與管理", "subjects": "團膳管理、食品加工", "count": 80 }
+    { "id": "paper1", "name": "膳食療養學", "subject": "膳食療養學", "subjects": "臨床營養、膳食設計", "count": 40 },
+    { "id": "paper2", "name": "團體膳食設計與管理", "subject": "團體膳食設計與管理", "subjects": "團膳管理、食品加工", "count": 40 },
+    { "id": "paper3", "name": "生理與生化", "subject": "生理學與生物化學", "subjects": "生理學、生物化學", "count": 50 },
+    { "id": "paper4", "name": "營養學", "subject": "營養學", "subjects": "營養學", "count": 50 },
+    { "id": "paper5", "name": "公共衛生營養學", "subject": "公共衛生營養學", "subjects": "公衛營養", "count": 50 },
+    { "id": "paper6", "name": "食品衛生與安全", "subject": "食品衛生與安全", "subjects": "食品衛生、食安法規", "count": 50 }
   ],
   "stages": [
     { "id": 0, "tag": "all", "name": "全部" }
@@ -52,10 +52,10 @@
     "fullName": "營養師國考",
     "shortName": "營養師",
     "studentType": "營養系學生",
-    "years": "110 至 115",
-    "totalQ": 0,
+    "years": "114 至 115",
+    "totalQ": 550,
     "examDesc": "營養師國考為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為營養相關科系畢業並完成實習。",
-    "paperDesc": "考試分為六科，每科各 80 題選擇題，合計 480 題。及格標準為各科平均達 60 分。",
+    "paperDesc": "考試分為六科，膳食療養學與團體膳食各 40 題，其餘四科各 50 題，合計 280 題。及格標準為各科平均達 60 分。",
     "subjects": "生理學與生物化學、營養學、公共衛生營養學、食品衛生與安全、膳食療養學、團體膳食設計與管理",
     "mockDesc": "完整模擬六科，平均 60 分及格",
     "subjectDetails": [

@@ -6,11 +6,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://medical-quiz.vercel.app/map</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://medical-quiz.vercel.app/browse</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -26,9 +21,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://medical-quiz.vercel.app/weakness</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://medical-quiz.vercel.app/map</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://medical-quiz.vercel.app/leaderboard</loc>
     <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://medical-quiz.vercel.app/board</loc>
@@ -39,6 +44,21 @@
     <loc>https://medical-quiz.vercel.app/notes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://medical-quiz.vercel.app/history</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://medical-quiz.vercel.app/favorites</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://medical-quiz.vercel.app/changelog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://medical-quiz.vercel.app/privacy</loc>

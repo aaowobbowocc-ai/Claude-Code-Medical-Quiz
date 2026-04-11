@@ -9250,14 +9250,17 @@
       "number": 27,
       "question": "下列何者最可能為顎骨惡性腫瘤之影像?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/dental2_111020_67_0.webp",
         "/question-images/dental2_111020_67_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_1_68",
@@ -9271,14 +9274,17 @@
       "number": 28,
       "question": "下列何者最可能為鎖顱骨成骨不全(cleidocranial dysostosis)之影像?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/dental2_111020_68_0.webp",
         "/question-images/dental2_111020_68_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_1_69",
@@ -15610,15 +15616,18 @@
       "number": 29,
       "question": "下列何者最可能為自體免疫疾病患者之唾液腺攝影影像?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/dental2_111100_69_0.webp",
         "/question-images/dental2_111100_69_1.webp",
         "/question-images/dental2_111100_69_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111100_1_70",
@@ -18602,8 +18611,10 @@
       "number": 61,
       "question": "用簡化口腔衛生指數(OHI-S)所需檢查的牙齒是:",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -18611,7 +18622,8 @@
         "/question-images/dental2_111100_61_1.webp",
         "/question-images/dental2_111100_61_2.webp",
         "/question-images/dental2_111100_61_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111100_3_62",
@@ -39303,8 +39315,10 @@
       "number": 16,
       "question": "在切開及剝離牙齦時,欲保留齒間乳頭(interdental papilla)的完整,下列何種器械最不適合用於齒間 的區域?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -39312,7 +39326,8 @@
         "/question-images/dental2_113090_68_1.webp",
         "/question-images/dental2_113090_68_2.webp",
         "/question-images/dental2_113090_68_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_69",
@@ -40747,14 +40762,17 @@
       "number": 21,
       "question": "下列何者不屬於咬翼片(bite-wing film)所使用之接受器裝置(receptor-holding device)?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/dental2_113090_61_0.webp",
         "/question-images/dental2_113090_61_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_1_62",
@@ -46699,8 +46717,10 @@
       "number": 67,
       "question": "下列涎管放射攝影檢查(sialogram)影像,何者較可能是謝格連氏症候群(Sjögren's syndrome)所致?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -46708,7 +46728,8 @@
         "/question-images/dental2_114020_39_1.webp",
         "/question-images/dental2_114020_39_2.webp",
         "/question-images/dental2_114020_39_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114020_1_40",
@@ -48292,8 +48313,10 @@
       "number": 39,
       "question": "下列所列的牙齒為上、下顎殘存牙齒的狀態(顎間關係與殘存牙齒的條件都一樣),何者為咬合記 錄取得最困難之症例?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -48301,7 +48324,8 @@
         "/question-images/dental2_114020_39_1.webp",
         "/question-images/dental2_114020_39_2.webp",
         "/question-images/dental2_114020_39_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114020_2_40",
@@ -54908,15 +54932,18 @@
       "number": 53,
       "question": "下列簡圖為四種橋體中央部位的斷面圖",
       "options": {
-        "A": "排齦效果 溝內 壓入牙齦溝內 線 再灌模,也不會影響印模結果? 材 e)彈性印模材 模材 t)的設計,在防止牙齒斷裂方面扮演重要的角色 所扮演的角色就較為不重要? pe)特徵的描述,下列何者正確? 吸收量 吸收 llae)留存 圖,何者最不適合用在咬合垂直距離不足的情況下 色,但當剩餘冠部齒質 下?",
-        "B": "C. D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "D",
       "images": [
         "/question-images/dental2_114090_53_0.webp",
         "/question-images/dental2_114090_53_1.webp",
         "/question-images/dental2_114090_53_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_2_54",
@@ -54972,7 +54999,8 @@
         "C": "僅23",
         "D": "123"
       },
-      "answer": "D"
+      "answer": "D",
+      "incomplete": "image_options"
     },
     {
       "id": "114090_2_57",

@@ -685,7 +685,7 @@ export default function MockExam() {
   const handleStartSingle = async (paper) => {
     const fee = getSingleExamFee(paper)
     if (!spendCoins(fee)) {
-      alert(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣`)
+      if (confirm(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
       return
     }
     setIsFullExam(false)
@@ -697,7 +697,7 @@ export default function MockExam() {
   // Start full exam (all papers sequentially)
   const handleStartFull = async () => {
     if (!spendCoins(FULL_EXAM_FEE)) {
-      alert(`金幣不足！需要 ${FULL_EXAM_FEE} 金幣，目前只有 ${coins} 金幣`)
+      if (confirm(`金幣不足！需要 ${FULL_EXAM_FEE} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
       return
     }
     setIsFullExam(true)
@@ -711,7 +711,7 @@ export default function MockExam() {
     const targetPaper = paper || PAPERS[0]
     const fee = isFull ? FULL_EXAM_FEE : getSingleExamFee(targetPaper)
     if (!spendCoins(fee)) {
-      alert(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣`)
+      if (confirm(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
       return
     }
     setIsFullExam(isFull)

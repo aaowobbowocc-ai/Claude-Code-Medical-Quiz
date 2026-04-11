@@ -16,6 +16,12 @@ const communityNotes = require('./community-notes');
 
 const compression = require('compression');
 const rateLimit = require('express-rate-limit');
+const { createCache } = require('./cache');
+
+// Response caches with different TTLs
+const staticCache  = createCache(3600_000);   // 1hr — data doesn't change after boot
+const dayCache     = createCache(86400_000);  // 24hr — exam configs never change
+const browseCache  = createCache(300_000);    // 5min — paginated browse queries
 
 const app = express();
 app.use(compression());
@@ -619,7 +625,7 @@ function trackDailyVisit() {
 
 // ── Register modular routes ────────────────────────────────────────────
 leaderboard.registerRoutes(app);
-questionsApi.registerRoutes(app, examData, stats, examConfigs);
+questionsApi.registerRoutes(app, examData, stats, examConfigs, { staticCache, browseCache });
 ai.registerRoutes(app, examData, stats);
 commentsApi.registerRoutes(app);
 communityNotes.registerRoutes(app);
@@ -630,7 +636,7 @@ board.registerRoutes(app);
 app.get('/health', (_, res) => res.json({ ok: true }));
 
 // List available exams
-app.get('/exams', (_, res) => {
+app.get('/exams', staticCache, (_, res) => {
   const list = Object.entries(examConfigs).map(([id, cfg]) => ({
     id,
     name: cfg.name,
@@ -646,14 +652,15 @@ app.get('/exams', (_, res) => {
 });
 
 // Full exam registry (config-driven, cached aggressively)
-app.get('/exam-registry', (_, res) => {
+app.get('/exam-registry', dayCache, (_, res) => {
   res.set('Cache-Control', 'public, max-age=86400');
   res.json(examConfigs);
 });
 
-app.get('/stages', (req, res) => {
+app.get('/stages', staticCache, (req, res) => {
   const exam = req.query.exam || 'doctor1';
   const data = getExamData(exam);
+  res.set('Cache-Control', 'public, max-age=3600');
   res.json(data.stages);
 });
 

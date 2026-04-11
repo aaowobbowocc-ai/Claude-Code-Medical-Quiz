@@ -10,6 +10,7 @@ import Footer from '../components/Footer'
 import Sheet from '../components/Sheet'
 import SupportBar from '../components/SupportBar'
 import SupportSheets from '../components/SupportSheets'
+import RewardAdSheet from '../components/RewardAdSheet'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
 
@@ -111,6 +112,12 @@ export default function Home() {
   useEffect(() => {
     const amount = claimDailyBonus()
     if (amount) { setDailyClaimed(true); setDailyAmount(amount) }
+    // Auto-open reward ad sheet if navigated with ?reward=1
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('reward') === '1') {
+      setSheet('reward-ad')
+      window.history.replaceState({}, '', window.location.pathname)
+    }
   }, [])
   const { showBanner, isIOS, install, installPrompt, dismiss } = usePWA()
   const { getDueCount } = useBookmarks()
@@ -372,6 +379,7 @@ export default function Home() {
         )}
 
         <SupportSheets sheet={sheet} setSheet={setSheet} />
+        {sheet === 'reward-ad' && <RewardAdSheet onClose={() => setSheet(null)} />}
       </div>
     )
   }
@@ -441,7 +449,13 @@ export default function Home() {
             </div>
             <div className="text-right">
               <p className="text-white/40 text-xs">金幣</p>
-              <p className="text-white font-bold text-lg">🪙 {coins}</p>
+              <div className="flex items-center gap-1.5">
+                <p className="text-white font-bold text-lg">🪙 {coins}</p>
+                <button onClick={() => setSheet('reward-ad')}
+                  className="text-xs bg-amber-400/30 text-amber-200 px-1.5 py-0.5 rounded-lg font-bold active:scale-90 transition-transform">
+                  ➕
+                </button>
+              </div>
             </div>
           </div>
           <div className="w-full h-1.5 bg-white/20 rounded-full">
@@ -458,6 +472,13 @@ export default function Home() {
             )}
           </div>
         )}
+
+        {/* 看廣告賺金幣 */}
+        <button onClick={() => setSheet('reward-ad')}
+          className="w-full bg-white/10 border border-amber-400/30 rounded-2xl px-4 py-3 mt-1 text-center active:scale-[0.97] transition-transform">
+          <p className="text-white font-bold text-sm">🎬 看廣告免費領金幣</p>
+          <p className="text-white/40 text-xs mt-0.5">功能準備中，即將開放</p>
+        </button>
 
         {/* 今日寄語 */}
         {(dailyMsg || dailyLoading) && (
@@ -723,6 +744,9 @@ export default function Home() {
       )}
 
       <SupportSheets sheet={sheet} setSheet={setSheet} />
+
+      {/* Reward ad sheet */}
+      {sheet === 'reward-ad' && <RewardAdSheet onClose={() => setSheet(null)} />}
 
       {/* Dev password gate */}
       {sheet === 'devpwd' && (

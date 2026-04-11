@@ -1,6 +1,22 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+
+function NotEnoughCoinsBox({ label }) {
+  const navigate = useNavigate()
+  return (
+    <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
+      <p className="text-2xl mb-2">🪙</p>
+      <p className="text-sm font-semibold text-amber-700">金幣不足</p>
+      <p className="text-xs text-amber-500 mt-1">{label}</p>
+      <button onClick={() => navigate('/?reward=1')}
+        className="mt-2 text-xs font-bold text-white bg-amber-400 px-3 py-1.5 rounded-lg active:scale-95 transition-transform">
+        🎬 看廣告賺金幣（即將開放）
+      </button>
+    </div>
+  )
+}
 
 /* Render markdown-lite text with bold, bullets */
 function renderText(text) {
@@ -165,11 +181,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
               {remaining > 0 && <span className="text-xs opacity-60 ml-1">🪙 {cost}</span>}
             </button>
           ) : notEnoughCoins ? (
-            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
-              <p className="text-2xl mb-2">🪙</p>
-              <p className="text-sm font-semibold text-amber-700">金幣不足</p>
-              <p className="text-xs text-amber-500 mt-1">AI 解說需要 {cost} 金幣，多練習賺取金幣吧！</p>
-            </div>
+            <NotEnoughCoinsBox label={`AI 解說需要 ${cost} 金幣`} />
           ) : limitHit ? (
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
               <p className="text-2xl mb-2">😴</p>
@@ -208,13 +220,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
 /* Review panel — shown on results screen */
 export function ReviewPanel({ text, loading, onRequest, requested, notEnoughCoins, cost = 100 }) {
   if (notEnoughCoins) {
-    return (
-      <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
-        <p className="text-2xl mb-1">🪙</p>
-        <p className="text-sm font-semibold text-amber-700">金幣不足</p>
-        <p className="text-xs text-amber-500 mt-1">AI 檢討報告需要 {cost} 金幣，多練習賺取金幣吧！</p>
-      </div>
-    )
+    return <NotEnoughCoinsBox label={`AI 檢討報告需要 ${cost} 金幣`} />
   }
 
   if (!requested) {

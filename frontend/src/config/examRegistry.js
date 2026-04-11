@@ -63,20 +63,35 @@ export function getExamIds() {
   return reg ? Object.keys(reg) : []
 }
 
+// Preferred display order for exam picker
+const EXAM_ORDER = [
+  'doctor1', 'doctor2', 'dental1', 'dental2', 'pharma1', 'pharma2',
+  'nursing', 'nutrition', 'pt', 'ot', 'medlab',
+]
+
 /** Get EXAM_TYPES-compatible array (for backward compat with gameStore consumers) */
 export function getExamTypes() {
   const reg = getRegistry()
   if (!reg) return []
-  return Object.values(reg).map(cfg => ({
-    id: cfg.id,
-    name: cfg.name,
-    short: cfg.short,
-    icon: cfg.icon,
-    totalQ: cfg.totalQ,
-    passScore: cfg.passScore,
-    totalPoints: cfg.totalPoints,
-    papers: cfg.papers,
-  }))
+  const ids = Object.keys(reg)
+  ids.sort((a, b) => {
+    const ai = EXAM_ORDER.indexOf(a)
+    const bi = EXAM_ORDER.indexOf(b)
+    return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi)
+  })
+  return ids.map(id => {
+    const cfg = reg[id]
+    return {
+      id: cfg.id,
+      name: cfg.name,
+      short: cfg.short,
+      icon: cfg.icon,
+      totalQ: cfg.totalQ,
+      passScore: cfg.passScore,
+      totalPoints: cfg.totalPoints,
+      papers: cfg.papers,
+    }
+  })
 }
 
 /** Get tag display name for a given exam */

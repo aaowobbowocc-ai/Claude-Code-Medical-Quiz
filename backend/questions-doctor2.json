@@ -24045,15 +24045,18 @@
       "number": 14,
       "question": "Marfan syndrome 常會合併下列何種晶體異常?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/doctor2_113020_14_0.webp",
         "/question-images/doctor2_113020_14_1.webp",
         "/question-images/doctor2_113020_14_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113020_3_15",

@@ -127,10 +127,16 @@ export default function BossChallenge() {
             <span className="text-5xl">🪙</span>
             <p className="text-gray-500 font-medium">金幣不足！</p>
             <p className="text-gray-400 text-sm">需要 {BOSS_FEE} 金幣，目前只有 {coins} 金幣</p>
-            <button onClick={() => navigate('/')}
-              className="mt-2 px-6 py-3 rounded-2xl font-bold text-white text-sm active:scale-95 grad-cta">
-              回主畫面
-            </button>
+            <div className="flex gap-2 mt-2">
+              <button onClick={() => navigate('/?reward=1')}
+                className="px-5 py-3 rounded-2xl font-bold text-white text-sm active:scale-95 bg-amber-500">
+                🎬 看廣告賺 500 幣
+              </button>
+              <button onClick={() => navigate('/')}
+                className="px-5 py-3 rounded-2xl font-bold text-white text-sm active:scale-95 grad-cta">
+                回主畫面
+              </button>
+            </div>
           </div>
         ) : loading ? (
           <div className="flex flex-col gap-3">

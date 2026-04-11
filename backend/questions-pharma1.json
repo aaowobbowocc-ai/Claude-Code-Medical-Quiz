@@ -947,8 +947,10 @@
       "number": 49,
       "question": "下列何種抗癲癇藥結構含oxazolidinedione環?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -956,7 +958,8 @@
         "/question-images/pharma1_110020_49_1.webp",
         "/question-images/pharma1_110020_49_2.webp",
         "/question-images/pharma1_110020_49_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "110020_50",
@@ -1046,8 +1049,10 @@
       "number": 54,
       "question": "下列何者屬於鈉離子通道阻斷劑,不可用於基因變異造成之卓飛症候群(Dravet syndrome)?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -1055,7 +1060,8 @@
         "/question-images/pharma1_110020_54_1.webp",
         "/question-images/pharma1_110020_54_2.webp",
         "/question-images/pharma1_110020_54_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "110020_55",
@@ -1091,8 +1097,10 @@
       "number": 56,
       "question": "下列何者藥物的抗精神疾症藥效最長?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -1100,7 +1108,8 @@
         "/question-images/pharma1_110020_56_0.webp",
         "/question-images/pharma1_110020_56_1.webp",
         "/question-images/pharma1_110020_56_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "110020_57",
@@ -1294,8 +1303,10 @@
       "number": 66,
       "question": "下列何者不屬於nateglinide之氧化代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -1303,7 +1314,8 @@
         "/question-images/pharma1_110020_66_1.webp",
         "/question-images/pharma1_110020_66_2.webp",
         "/question-images/pharma1_110020_66_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "110020_67",
@@ -1513,15 +1525,18 @@
       "number": 77,
       "question": "Ethionamide可形成下列何種中間體,以抑制結核分枝桿菌的脂肪酸合成?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "B",
       "images": [
         "/question-images/pharma1_110020_77_1.webp",
         "/question-images/pharma1_110020_77_2.webp",
         "/question-images/pharma1_110020_77_0.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "110020_78",
@@ -2433,8 +2448,10 @@
       "number": 44,
       "question": "下列那一個結構不含共軛基團?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -2442,7 +2459,8 @@
         "/question-images/pharma1_110020_44_1.webp",
         "/question-images/pharma1_110020_44_2.webp",
         "/question-images/pharma1_110020_44_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "110020_1_45",
@@ -3380,15 +3398,18 @@
       "number": 11,
       "question": "下列何者代表pseudoplastic物質的流變性(rheology)?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "B",
       "images": [
         "/question-images/pharma1_110020_11_0.webp",
         "/question-images/pharma1_110020_11_1.webp",
         "/question-images/pharma1_110020_11_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "110020_2_12",
@@ -5789,15 +5810,18 @@
       "number": 52,
       "question": "下列何者mu 受體致效劑之中樞鎮痛活",
       "options": {
-        "A": "B. 身麻醉劑之輔助藥? athic pain)的第一線用藥? pilepsy)? 活性最低?",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "D",
       "images": [
         "/question-images/pharma1_111020_52_0.webp",
         "/question-images/pharma1_111020_52_1.webp",
         "/question-images/pharma1_111020_52_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_53",
@@ -5855,15 +5879,18 @@
       "number": 55,
       "question": "下列何者不是almotriptan 常見的代謝",
       "options": {
-        "A": "症藥之結構敘述,何者錯誤? 要活性來源 碳鏈,對活性影響不大 活性 謝物?",
-        "B": "C. D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "B",
       "images": [
         "/question-images/pharma1_111020_55_0.webp",
         "/question-images/pharma1_111020_55_1.webp",
         "/question-images/pharma1_111020_55_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_56",
@@ -6081,8 +6108,10 @@
       "number": 66,
       "question": "下列何者為nateglinide 之主要代謝物",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -6090,7 +6119,8 @@
         "/question-images/pharma1_111020_66_1.webp",
         "/question-images/pharma1_111020_66_2.webp",
         "/question-images/pharma1_111020_66_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_67",
@@ -6123,8 +6153,10 @@
       "number": 68,
       "question": "腎上腺皮質素類藥物結構,通常具下",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -6132,7 +6164,8 @@
         "/question-images/pharma1_111020_68_1.webp",
         "/question-images/pharma1_111020_68_2.webp",
         "/question-images/pharma1_111020_68_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_69",
@@ -6187,8 +6220,10 @@
       "number": 71,
       "question": "下列何者為diclofenac 的主要代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -6196,7 +6231,8 @@
         "/question-images/pharma1_111020_71_1.webp",
         "/question-images/pharma1_111020_71_2.webp",
         "/question-images/pharma1_111020_71_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_72",
@@ -6248,8 +6284,10 @@
       "number": 74,
       "question": "下列何者具有穩定之分子內氫鍵,可 力?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -6257,7 +6295,8 @@
         "/question-images/pharma1_111020_74_2.webp",
         "/question-images/pharma1_111020_74_3.webp",
         "/question-images/pharma1_111020_74_4.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_75",
@@ -6369,15 +6408,18 @@
       "number": 80,
       "question": "下列何者為ifosfamide 的結構?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "D",
       "images": [
         "/question-images/pharma1_111020_80_0.webp",
         "/question-images/pharma1_111020_80_1.webp",
         "/question-images/pharma1_111020_80_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_1_1",
@@ -7341,8 +7383,10 @@
       "number": 50,
       "question": "下列何者為紫蘇葉揮發油主要成分perillaldehyde之化學結構?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -7350,7 +7394,8 @@
         "/question-images/pharma1_111020_50_1.webp",
         "/question-images/pharma1_111020_50_2.webp",
         "/question-images/pharma1_111020_50_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_1_51",
@@ -7407,8 +7452,10 @@
       "number": 53,
       "question": "下列何者為紫草主成分shikonin之化學構造?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -7416,7 +7463,8 @@
         "/question-images/pharma1_111020_53_1.webp",
         "/question-images/pharma1_111020_53_2.webp",
         "/question-images/pharma1_111020_53_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_1_54",
@@ -10611,8 +10659,10 @@
       "number": 52,
       "question": "下列抗癲癇藥,何者clogP值最低?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -10620,7 +10670,8 @@
         "/question-images/pharma1_111100_52_1.webp",
         "/question-images/pharma1_111100_52_2.webp",
         "/question-images/pharma1_111100_52_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111100_53",
@@ -10653,8 +10704,10 @@
       "number": 54,
       "question": "下列何種抗癲癇藥,主要機制為選擇性鈉離子通道阻斷?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -10662,7 +10715,8 @@
         "/question-images/pharma1_111100_54_5.webp",
         "/question-images/pharma1_111100_54_0.webp",
         "/question-images/pharma1_111100_54_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111100_55",
@@ -10777,8 +10831,10 @@
       "number": 60,
       "question": "Angiotensin II receptor blockers (ARBs)的簡式(如下圖),何者並非ARBs中R的結構?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -10786,7 +10842,8 @@
         "/question-images/pharma1_111100_60_2.webp",
         "/question-images/pharma1_111100_60_3.webp",
         "/question-images/pharma1_111100_60_0.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111100_61",
@@ -10942,14 +10999,17 @@
       "number": 68,
       "question": "下列何者是thiazolidinedione(TZD)類的降血糖藥物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C",
+        "D": "選項 D"
       },
       "answer": "B",
       "images": [
         "/question-images/pharma1_111100_68_0.webp",
         "/question-images/pharma1_111100_68_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111100_69",
@@ -11086,8 +11146,10 @@
       "number": 75,
       "question": "下列ibrutinib結構中箭頭指示位置,何者可與Bruton tyrosine kinase(BTK)催化中心Cys481形成共價鍵結合?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -11095,7 +11157,8 @@
         "/question-images/pharma1_111100_75_1.webp",
         "/question-images/pharma1_111100_75_2.webp",
         "/question-images/pharma1_111100_75_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111100_76",
@@ -11191,8 +11254,10 @@
       "number": 80,
       "question": "下列反轉錄酶抑制劑中,何者屬核苷類似物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -11200,7 +11265,8 @@
         "/question-images/pharma1_111100_80_1.webp",
         "/question-images/pharma1_111100_80_2.webp",
         "/question-images/pharma1_111100_80_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111100_1_1",
@@ -12112,7 +12178,8 @@
         "A": "α-amyrin",
         "B": "β-amyrin C.lupane D.dammarane"
       },
-      "answer": "B"
+      "answer": "B",
+      "incomplete": "image_options"
     },
     {
       "id": "111100_1_48",
@@ -15405,15 +15472,18 @@
       "number": 50,
       "question": "下列那一藥物作用時限(duration of action)最長?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "C",
       "images": [
         "/question-images/pharma1_112020_50_0.webp",
         "/question-images/pharma1_112020_50_1.webp",
         "/question-images/pharma1_112020_50_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112020_51",
@@ -15446,8 +15516,10 @@
       "number": 52,
       "question": "下列阿片類藥物結構中,何者鎮痛活性最強?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -15455,7 +15527,8 @@
         "/question-images/pharma1_112020_52_0.webp",
         "/question-images/pharma1_112020_52_1.webp",
         "/question-images/pharma1_112020_52_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112020_53",
@@ -15491,8 +15564,10 @@
       "number": 54,
       "question": "下列何者不是兩性化合物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -15500,7 +15575,8 @@
         "/question-images/pharma1_112020_54_1.webp",
         "/question-images/pharma1_112020_54_2.webp",
         "/question-images/pharma1_112020_54_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112020_55",
@@ -15533,8 +15609,10 @@
       "number": 56,
       "question": "下列何者為risperidone之活性代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -15542,7 +15620,8 @@
         "/question-images/pharma1_112020_56_1.webp",
         "/question-images/pharma1_112020_56_2.webp",
         "/question-images/pharma1_112020_56_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112020_57",
@@ -15618,15 +15697,18 @@
       "number": 60,
       "question": "下列ACE抑制劑中,何者最易進行glucuronidation代謝?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "D",
       "images": [
         "/question-images/pharma1_112020_60_1.webp",
         "/question-images/pharma1_112020_60_2.webp",
         "/question-images/pharma1_112020_60_0.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112020_61",
@@ -15814,8 +15896,10 @@
       "number": 70,
       "question": "下列何者為omeprazole(結構如下圖)的最主要代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -15823,7 +15907,8 @@
         "/question-images/pharma1_112020_70_1.webp",
         "/question-images/pharma1_112020_70_2.webp",
         "/question-images/pharma1_112020_70_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112020_71",
@@ -15913,8 +15998,10 @@
       "number": 75,
       "question": "下列何種藥因不安定,須於15-25°阻光儲存?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -15922,7 +16009,8 @@
         "/question-images/pharma1_112020_75_1.webp",
         "/question-images/pharma1_112020_75_2.webp",
         "/question-images/pharma1_112020_75_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112020_76",
@@ -15936,8 +16024,10 @@
       "number": 76,
       "question": "下列何者是經由鼻腔噴霧給藥的neuraminidase抑制劑?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -15945,7 +16035,8 @@
         "/question-images/pharma1_112020_76_1.webp",
         "/question-images/pharma1_112020_76_2.webp",
         "/question-images/pharma1_112020_76_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112020_77",
@@ -18841,15 +18932,18 @@
       "number": 59,
       "question": "Inulin 僅由腎絲球過濾從尿液排出體外",
       "options": {
-        "A": "其吸收與排除皆依循一次動力特性。若以一室 情況? 型藥之總排泄量為320 mg。已知其血漿蛋白未 此藥口服生體可用率約為若干? 化為C= 22(e -0.1t-e -1.1t),則其清除率(L/h)約為 給與一病人後,在停止輸注後8 hr 及16 hr 其血 室模式,若該藥以200 mg/h 持續輸注至24 hr, 外,下列何圖示意此藥排泄速率與血中濃度之 室模式計算該藥口服投與之 未結合分率(fu)為0.5,且此 為若干?(C:mg/L,t:hr) 血中濃度分別為 10 mg/L 及2.5 則此時血中濃度(mg/L)約 之相關性?",
-        "B": "C. D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "B",
       "images": [
         "/question-images/pharma1_112020_59_0.webp",
         "/question-images/pharma1_112020_59_1.webp",
         "/question-images/pharma1_112020_59_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112020_2_60",
@@ -20231,8 +20325,10 @@
       "number": 50,
       "question": "下列那一個失智症用藥,不屬於cholinesterase抑制劑?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -20240,7 +20336,8 @@
         "/question-images/pharma1_112100_50_1.webp",
         "/question-images/pharma1_112100_50_2.webp",
         "/question-images/pharma1_112100_50_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112100_51",
@@ -20292,8 +20389,10 @@
       "number": 53,
       "question": "下列何者抗精神疾症的活性最低?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -20301,7 +20400,8 @@
         "/question-images/pharma1_112100_53_1.webp",
         "/question-images/pharma1_112100_53_2.webp",
         "/question-images/pharma1_112100_53_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112100_54",
@@ -20405,15 +20505,18 @@
       "number": 58,
       "question": "下列何者為spironolactone的主要活性代謝產物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/pharma1_112100_58_0.webp",
         "/question-images/pharma1_112100_58_1.webp",
         "/question-images/pharma1_112100_58_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112100_59",
@@ -20604,8 +20707,10 @@
       "number": 68,
       "question": "下列何者為降血糖第一線用藥?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -20613,7 +20718,8 @@
         "/question-images/pharma1_112100_68_1.webp",
         "/question-images/pharma1_112100_68_2.webp",
         "/question-images/pharma1_112100_68_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112100_69",
@@ -20728,15 +20834,18 @@
       "number": 74,
       "question": "下列何者是pyrazinamide的活性代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "C",
       "images": [
         "/question-images/pharma1_112100_74_1.webp",
         "/question-images/pharma1_112100_74_2.webp",
         "/question-images/pharma1_112100_74_0.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112100_75",
@@ -20750,8 +20859,10 @@
       "number": 75,
       "question": "下列何者是osimertinib(結構如下圖)最有效的活性代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -20759,7 +20870,8 @@
         "/question-images/pharma1_112100_75_3.webp",
         "/question-images/pharma1_112100_75_0.webp",
         "/question-images/pharma1_112100_75_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112100_76",
@@ -20773,8 +20885,10 @@
       "number": 76,
       "question": "下列何者是廣效型抗病毒藥, 對DNA與RNA病毒均有效?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -20782,7 +20896,8 @@
         "/question-images/pharma1_112100_76_0.webp",
         "/question-images/pharma1_112100_76_1.webp",
         "/question-images/pharma1_112100_76_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112100_77",
@@ -20796,8 +20911,10 @@
       "number": 77,
       "question": "Raltegravir結構中,標示紅色的基團,何者可與鎂離子螯合而抑制integrase?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -20805,7 +20922,8 @@
         "/question-images/pharma1_112100_77_4.webp",
         "/question-images/pharma1_112100_77_0.webp",
         "/question-images/pharma1_112100_77_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112100_78",
@@ -21972,15 +22090,18 @@
       "number": 57,
       "question": "下列何者是Sumatra benzoin的主要成分?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/pharma1_112100_57_0.webp",
         "/question-images/pharma1_112100_57_1.webp",
         "/question-images/pharma1_112100_57_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112100_1_58",
@@ -25225,8 +25346,10 @@
       "number": 59,
       "question": "下列何者為digoxin 結構中C-17 位",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -25235,7 +25358,8 @@
         "/question-images/pharma1_113020_59_3.webp",
         "/question-images/pharma1_113020_59_4.webp",
         "/question-images/pharma1_113020_59_0.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113020_60",
@@ -25249,15 +25373,18 @@
       "number": 60,
       "question": "下列那個選項中的粗體部分,是ept ramine 比較之敘述,何者正確? 的取代基? tifibatide 活性展現的重要結構?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/pharma1_113020_60_0.webp",
         "/question-images/pharma1_113020_60_1.webp",
         "/question-images/pharma1_113020_60_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113020_61",
@@ -26814,8 +26941,10 @@
       "number": 59,
       "question": "Lobeline為北美山梗菜(lobelia)之最主要生物鹼,其化學結構為何?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -26824,7 +26953,8 @@
         "/question-images/pharma1_113020_59_3.webp",
         "/question-images/pharma1_113020_59_4.webp",
         "/question-images/pharma1_113020_59_0.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113020_1_60",
@@ -28320,15 +28450,18 @@
       "number": 55,
       "question": "某藥品屬線性藥物動力學,當以靜脈輸注給藥時,其輸注速率(R)對清除率(CL)之關係為何?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "C",
       "images": [
         "/question-images/pharma1_113020_55_0.webp",
         "/question-images/pharma1_113020_55_1.webp",
         "/question-images/pharma1_113020_55_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113020_2_56",
@@ -29826,8 +29959,10 @@
       "number": 51,
       "question": "下列何者屬內生性賀爾蒙代謝物,作用在GABAA受體,可治療產後憂鬱?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -29835,7 +29970,8 @@
         "/question-images/pharma1_113090_51_1.webp",
         "/question-images/pharma1_113090_51_2.webp",
         "/question-images/pharma1_113090_51_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_52",
@@ -29868,8 +30004,10 @@
       "number": 53,
       "question": "下列何種抗癲癇藥之主要作用標的為GABAA受體?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -29877,7 +30015,8 @@
         "/question-images/pharma1_113090_53_1.webp",
         "/question-images/pharma1_113090_53_2.webp",
         "/question-images/pharma1_113090_53_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_54",
@@ -30056,15 +30195,18 @@
       "number": 62,
       "question": "下列利尿劑,何者作用於圖中方框部位?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "C",
       "images": [
         "/question-images/pharma1_113090_62_0.webp",
         "/question-images/pharma1_113090_62_1.webp",
         "/question-images/pharma1_113090_62_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_63",
@@ -30297,15 +30439,18 @@
       "number": 74,
       "question": "下列何種抗病毒藥是屬於神經胺酸酶(neuraminidase)抑制劑?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "D",
       "images": [
         "/question-images/pharma1_113090_74_1.webp",
         "/question-images/pharma1_113090_74_0.webp",
         "/question-images/pharma1_113090_74_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_75",
@@ -30319,8 +30464,10 @@
       "number": 75,
       "question": "下列何者屬於proteasome抑制劑前驅藥?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -30328,7 +30475,8 @@
         "/question-images/pharma1_113090_75_4.webp",
         "/question-images/pharma1_113090_75_5.webp",
         "/question-images/pharma1_113090_75_0.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_76",
@@ -30342,8 +30490,10 @@
       "number": 76,
       "question": "下列何者是rifampin(結構如下圖)經由胃酸水解得到的活性代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -30351,7 +30501,8 @@
         "/question-images/pharma1_113090_76_2.webp",
         "/question-images/pharma1_113090_76_3.webp",
         "/question-images/pharma1_113090_76_0.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_77",
@@ -30365,8 +30516,10 @@
       "number": 77,
       "question": "下列何者是抗流感藥baloxavir marboxil(結構如下圖)的活性代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -30375,7 +30528,8 @@
         "/question-images/pharma1_113090_77_4.webp",
         "/question-images/pharma1_113090_77_0.webp",
         "/question-images/pharma1_113090_77_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_78",
@@ -31371,14 +31525,17 @@
       "number": 49,
       "question": "Isotretinoin衍生自維生素A,可用於治療皮膚角質化疾病,下列何者為其結構?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/pharma1_113090_49_0.webp",
         "/question-images/pharma1_113090_49_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_1_50",
@@ -31499,8 +31656,10 @@
       "number": 55,
       "question": "下列何者為clove oil主要成分eugenol之結構?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -31509,7 +31668,8 @@
         "/question-images/pharma1_113090_55_2.webp",
         "/question-images/pharma1_113090_55_3.webp",
         "/question-images/pharma1_113090_55_4.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_1_56",
@@ -34409,8 +34569,10 @@
       "number": 41,
       "question": "Somatostatin(結構如下圖)屬環肽,第7~10 號胺基酸為其必要序列,其半衰期短於3 分鐘,致應用受 限。下列何種結構變化,使半衰期增長至約100 分鐘?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -34419,7 +34581,8 @@
         "/question-images/pharma1_114020_41_2.webp",
         "/question-images/pharma1_114020_41_3.webp",
         "/question-images/pharma1_114020_41_4.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114020_42",
@@ -34736,8 +34899,10 @@
       "number": 57,
       "question": "下列何者不是μ-antagonist?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -34745,7 +34910,8 @@
         "/question-images/pharma1_114020_57_1.webp",
         "/question-images/pharma1_114020_57_2.webp",
         "/question-images/pharma1_114020_57_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114020_58",
@@ -34797,8 +34963,10 @@
       "number": 60,
       "question": "下列何者為amiodarone 的主要活性代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -34806,7 +34974,8 @@
         "/question-images/pharma1_114020_60_1.webp",
         "/question-images/pharma1_114020_60_2.webp",
         "/question-images/pharma1_114020_60_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114020_61",
@@ -34881,8 +35050,10 @@
       "number": 64,
       "question": "下列何者為irreversible aromatase inhibitor?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -34890,7 +35061,8 @@
         "/question-images/pharma1_114020_64_1.webp",
         "/question-images/pharma1_114020_64_2.webp",
         "/question-images/pharma1_114020_64_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114020_65",
@@ -34971,8 +35143,10 @@
       "number": 68,
       "question": "下列何種藥物的口服生體可用率最佳?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -34980,7 +35154,8 @@
         "/question-images/pharma1_114020_68_3.webp",
         "/question-images/pharma1_114020_68_0.webp",
         "/question-images/pharma1_114020_68_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114020_69",
@@ -35013,8 +35188,10 @@
       "number": 70,
       "question": "下列何者為Z-sulindac 之結構?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -35022,7 +35199,8 @@
         "/question-images/pharma1_114020_70_3.webp",
         "/question-images/pharma1_114020_70_4.webp",
         "/question-images/pharma1_114020_70_0.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114020_71",
@@ -35036,8 +35214,10 @@
       "number": 71,
       "question": "抗真菌藥naftifine(結構如下圖),其作用機制為抑制ergosterol 生合成路徑的那個階段?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -35046,7 +35226,8 @@
         "/question-images/pharma1_114020_71_2.webp",
         "/question-images/pharma1_114020_71_3.webp",
         "/question-images/pharma1_114020_71_4.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114020_72",
@@ -36130,8 +36311,10 @@
       "number": 47,
       "question": "Black mustard 主要成分sinigrin 的化學結構為:",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -36139,7 +36322,8 @@
         "/question-images/pharma1_114020_47_1.webp",
         "/question-images/pharma1_114020_47_2.webp",
         "/question-images/pharma1_114020_47_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114020_1_48",
@@ -39250,8 +39434,10 @@
       "number": 41,
       "question": "下列抗體偶聯藥物(ADC)的連接子(linker),何者為glutathione-sensitive?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -39259,7 +39445,8 @@
         "/question-images/pharma1_114090_41_1.webp",
         "/question-images/pharma1_114090_41_2.webp",
         "/question-images/pharma1_114090_41_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_42",
@@ -39314,8 +39501,10 @@
       "number": 44,
       "question": "Nusinersen 結構中,含有下列何種已修飾的鹼基(modified base)?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -39323,7 +39512,8 @@
         "/question-images/pharma1_114090_44_2.webp",
         "/question-images/pharma1_114090_44_3.webp",
         "/question-images/pharma1_114090_44_4.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_45",
@@ -39477,14 +39667,17 @@
       "number": 52,
       "question": "下列何者最不可能為naloxone 的代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C",
+        "D": "選項 D"
       },
       "answer": "C",
       "images": [
         "/question-images/pharma1_114090_52_0.webp",
         "/question-images/pharma1_114090_52_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_53",
@@ -39517,8 +39710,10 @@
       "number": 54,
       "question": "下列何者為ethosuximide 之主要代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -39526,7 +39721,8 @@
         "/question-images/pharma1_114090_54_1.webp",
         "/question-images/pharma1_114090_54_2.webp",
         "/question-images/pharma1_114090_54_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_55",
@@ -39883,15 +40079,18 @@
       "number": 72,
       "question": "下列cephalosporins 的前驅藥型式,何者最不易在體內活化?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/pharma1_114090_72_0.webp",
         "/question-images/pharma1_114090_72_1.webp",
         "/question-images/pharma1_114090_72_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_73",
@@ -40000,15 +40199,18 @@
       "number": 78,
       "question": "下列何種VEGFR 抑制劑,會導致病患皮膚與體液變黃?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "B",
       "images": [
         "/question-images/pharma1_114090_78_0.webp",
         "/question-images/pharma1_114090_78_1.webp",
         "/question-images/pharma1_114090_78_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_79",
@@ -40373,8 +40575,10 @@
       "number": 17,
       "question": "下列選項所標示的氫核,何者的偶合常數(J)最大?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -40382,7 +40586,8 @@
         "/question-images/pharma1_114090_17_1.webp",
         "/question-images/pharma1_114090_17_2.webp",
         "/question-images/pharma1_114090_17_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_1_18",
@@ -41159,15 +41364,18 @@
       "number": 56,
       "question": "下列何者為cinnamon oil 之主要成分?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "B",
       "images": [
         "/question-images/pharma1_114090_56_0.webp",
         "/question-images/pharma1_114090_56_1.webp",
         "/question-images/pharma1_114090_56_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_1_57",
@@ -41891,8 +42099,10 @@
       "number": 13,
       "question": "氣化噴霧劑使用propellant 114 作為推進劑,其化學結構式為:",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -41900,7 +42110,8 @@
         "/question-images/pharma1_114090_13_1.webp",
         "/question-images/pharma1_114090_13_2.webp",
         "/question-images/pharma1_114090_13_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_2_14",
@@ -42713,8 +42924,10 @@
       "number": 54,
       "question": "承上題,於elimination phase 進行外插時,於Y 軸所得之截距,下列參數組合排列何者正確?(劑量:D 0)",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -42722,7 +42935,8 @@
         "/question-images/pharma1_114090_54_1.webp",
         "/question-images/pharma1_114090_54_2.webp",
         "/question-images/pharma1_114090_54_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_2_55",
@@ -44046,8 +44260,10 @@
       "number": 41,
       "question": "有關抗體偶聯藥物(ADC)常採用的連接子(linker),下列何者屬於非可裂解(noncleavable)?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -44058,7 +44274,8 @@
         "/question-images/pharma1_115020_41_4.webp",
         "/question-images/pharma1_115020_41_5.webp",
         "/question-images/pharma1_115020_41_6.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_42",
@@ -44072,8 +44289,10 @@
       "number": 42,
       "question": "下列藥物中,何者最不易在胃中被吸收?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "C",
       "images": [
@@ -44085,7 +44304,8 @@
         "/question-images/pharma1_115020_42_3.webp",
         "/question-images/pharma1_115020_42_4.webp",
         "/question-images/pharma1_115020_42_5.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_43",
@@ -44156,8 +44376,10 @@
       "number": 46,
       "question": "根據結構活性關係(SAR),下列藥物結構何者為cholinergic agonist?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -44170,7 +44392,8 @@
         "/question-images/pharma1_115020_46_6.webp",
         "/question-images/pharma1_115020_46_7.webp",
         "/question-images/pharma1_115020_46_8.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_47",
@@ -44222,8 +44445,10 @@
       "number": 49,
       "question": "下列何者抗巴金森氏症作用最強?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -44234,7 +44459,8 @@
         "/question-images/pharma1_115020_49_4.webp",
         "/question-images/pharma1_115020_49_5.webp",
         "/question-images/pharma1_115020_49_6.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_50",
@@ -44267,8 +44493,10 @@
       "number": 51,
       "question": "下列何種藥物作用在H +/K +-ATPase 而抑制胃酸分泌?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -44281,7 +44509,8 @@
         "/question-images/pharma1_115020_51_7.webp",
         "/question-images/pharma1_115020_51_8.webp",
         "/question-images/pharma1_115020_51_9.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_52",
@@ -44295,8 +44524,10 @@
       "number": 52,
       "question": "下列何者為治療痛風的藥物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -44304,7 +44535,8 @@
         "/question-images/pharma1_115020_52_0.webp",
         "/question-images/pharma1_115020_52_1.webp",
         "/question-images/pharma1_115020_52_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_53",
@@ -44500,8 +44732,10 @@
       "number": 61,
       "question": "下列何者為zolpidem 之主要代謝產物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -44512,7 +44746,8 @@
         "/question-images/pharma1_115020_61_2.webp",
         "/question-images/pharma1_115020_61_3.webp",
         "/question-images/pharma1_115020_61_4.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_62",
@@ -44553,8 +44788,10 @@
       "number": 63,
       "question": "將meperidine(結構如下圖)之N 上甲基,修飾為下列何者時,可作為止瀉劑?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -44564,7 +44801,8 @@
         "/question-images/pharma1_115020_63_3.webp",
         "/question-images/pharma1_115020_63_4.webp",
         "/question-images/pharma1_115020_63_5.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_64",
@@ -44710,8 +44948,10 @@
       "number": 70,
       "question": "下列何者不是前驅藥(prodrug)?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -44723,7 +44963,8 @@
         "/question-images/pharma1_115020_70_5.webp",
         "/question-images/pharma1_115020_70_6.webp",
         "/question-images/pharma1_115020_70_7.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_71",
@@ -44775,8 +45016,10 @@
       "number": 73,
       "question": "下列何者為diclofenac 之結構?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -44790,7 +45033,8 @@
         "/question-images/pharma1_115020_73_7.webp",
         "/question-images/pharma1_115020_73_8.webp",
         "/question-images/pharma1_115020_73_9.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_74",
@@ -44804,8 +45048,10 @@
       "number": 74,
       "question": "下列何者是meclofenamic acid 的活性代謝物?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -44816,7 +45062,8 @@
         "/question-images/pharma1_115020_74_4.webp",
         "/question-images/pharma1_115020_74_5.webp",
         "/question-images/pharma1_115020_74_6.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_75",
@@ -46017,8 +46264,10 @@
       "number": 53,
       "question": "洋甘菊(Chamomile)已成為常用花草茶之一,下列何者為guaianolide 倍半萜類成分matricin 之結構?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -46028,7 +46277,8 @@
         "/question-images/pharma1_115020_53_1.webp",
         "/question-images/pharma1_115020_53_4.webp",
         "/question-images/pharma1_115020_53_5.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_1_54",
@@ -47553,8 +47803,10 @@
       "number": 46,
       "question": "一藥品裸錠以cellulose acetate phthalate 包衣後,於pH 1.2 的媒液中進行溶離試驗,其結果最可能是下 列何圖?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "A",
       "images": [
@@ -47567,7 +47819,8 @@
         "/question-images/pharma1_115020_46_6.webp",
         "/question-images/pharma1_115020_46_7.webp",
         "/question-images/pharma1_115020_46_8.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_2_47",
@@ -47931,8 +48184,10 @@
       "number": 62,
       "question": "某藥品經靜脈注射後,如圖示遵循二室開放模式並以一階次從中央室排除,其血中藥品濃度變化可表示為Cp =Ae -αt+Be -βt (t 為時間),下列敘述何者錯誤?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -47942,7 +48197,8 @@
         "/question-images/pharma1_115020_62_3.webp",
         "/question-images/pharma1_115020_62_4.webp",
         "/question-images/pharma1_115020_62_7.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_2_63",

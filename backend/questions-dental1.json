@@ -2152,14 +2152,17 @@
       "number": 30,
       "question": "何者最能代表牙本質(Dentin)與牙釉質(Enamel)受力到破壞的應力-應變曲線?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C",
+        "D": "選項 D"
       },
       "answer": "B",
       "images": [
         "/question-images/dental1_110020_30_0.webp",
         "/question-images/dental1_110020_30_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "110020_1_31",
@@ -2487,7 +2490,8 @@
         "B": "二矽酸鋰 (lithium disilicate)",
         "C": "氧化釔安定之二氧化鋯(Y-TZP) D.氫氧基磷灰石奈米晶用於Y-TZP鑲面 (ceramic with HAP nanocrystals for veneering Y-TZP)"
       },
-      "answer": "C"
+      "answer": "C",
+      "incomplete": "image_options"
     },
     {
       "id": "110020_1_48",
@@ -3859,14 +3863,17 @@
       "number": 38,
       "question": "下列小臼齒的咬合面圖形中,何者不是下顎小臼齒?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/dental1_111020_38_0.webp",
         "/question-images/dental1_111020_38_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111020_39",
@@ -5457,7 +5464,8 @@
         "B": "鈷鉻鎳(Co-Cr-Ni) C.鎳鈦(Ni-Ti)",
         "D": "Beta-鈦(Beta-Ti)"
       },
-      "answer": "C"
+      "answer": "C",
+      "incomplete": "image_options"
     },
     {
       "id": "111020_1_41",
@@ -6518,15 +6526,18 @@
       "number": 15,
       "question": "喉部(larynx)與呼吸、發音、吞嚥等功能都有密切的關係,選項中的示意圖何者為「吞嚥」時解剖構造表 現?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "C",
       "images": [
         "/question-images/dental1_111100_15_0.webp",
         "/question-images/dental1_111100_15_1.webp",
         "/question-images/dental1_111100_15_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "111100_16",
@@ -14287,15 +14298,18 @@
       "number": 15,
       "question": "下列臨床圖片中,何者不是白血病(leukemia)的口腔表徵?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "D",
       "images": [
         "/question-images/dental1_112100_15_0.webp",
         "/question-images/dental1_112100_15_1.webp",
         "/question-images/dental1_112100_15_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "112100_1_16",
@@ -16053,8 +16067,10 @@
       "number": 25,
       "question": "關於乳齒列的號碼制度(numbering system),下列何者為帕瑪氏命名法(Palmer notation system)?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "B",
       "images": [
@@ -16062,7 +16078,8 @@
         "/question-images/dental1_113020_25_0.webp",
         "/question-images/dental1_113020_25_1.webp",
         "/question-images/dental1_113020_25_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113020_26",
@@ -17303,14 +17320,17 @@
       "number": 9,
       "question": "下列何者為神經鞘瘤(neurilemoma)之病理特徵?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C",
+        "D": "選項 D"
       },
       "answer": "A",
       "images": [
         "/question-images/dental1_113020_9_0.webp",
         "/question-images/dental1_113020_9_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113020_1_10",
@@ -19178,8 +19198,10 @@
       "number": 24,
       "question": "下列何者是乳牙齒式(dental formula for primary teeth)的正確表示方法?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D（見圖）"
       },
       "answer": "D",
       "images": [
@@ -19187,7 +19209,8 @@
         "/question-images/dental1_113090_24_1.webp",
         "/question-images/dental1_113090_24_2.webp",
         "/question-images/dental1_113090_24_3.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "113090_25",
@@ -23460,15 +23483,18 @@
       "number": 6,
       "question": "下列黏膜下出血的圖中,何者是瘀斑(petechiae)?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "C",
       "images": [
         "/question-images/dental1_114020_6_0.webp",
         "/question-images/dental1_114020_6_1.webp",
         "/question-images/dental1_114020_6_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114020_1_7",
@@ -26659,15 +26685,18 @@
       "number": 11,
       "question": "病患口腔中出現如附圖箭頭所示之軟組織突起,他抱怨假牙一戴上就痛。下列圖片中,何者與他的症狀最相 符?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C（見圖）",
+        "D": "選項 D"
       },
       "answer": "D",
       "images": [
         "/question-images/dental1_114090_11_0.webp",
         "/question-images/dental1_114090_11_1.webp",
         "/question-images/dental1_114090_11_2.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "114090_1_12",
@@ -29248,14 +29277,17 @@
       "number": 65,
       "question": "黑色箭頭所標示的頰黏膜白線(linea alba),在顯微鏡下最可能為下列何者?",
       "options": {
-        "A": "B.",
-        "C": "D."
+        "A": "選項 A（見圖）",
+        "B": "選項 B（見圖）",
+        "C": "選項 C",
+        "D": "選項 D"
       },
       "answer": "D",
       "images": [
         "/question-images/dental1_115020_65_0.webp",
         "/question-images/dental1_115020_65_1.webp"
-      ]
+      ],
+      "incomplete": "image_options"
     },
     {
       "id": "115020_66",

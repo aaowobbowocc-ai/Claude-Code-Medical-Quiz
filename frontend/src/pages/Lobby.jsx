@@ -70,7 +70,7 @@ export default function Lobby() {
 
   const handleStart = () => {
     if (betAmount > 0 && coins < betAmount) {
-      alert(`金幣不足！需要 ${betAmount} 金幣`)
+      if (confirm(`金幣不足！需要 ${betAmount} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
       return
     }
     if (betAmount > 0) {

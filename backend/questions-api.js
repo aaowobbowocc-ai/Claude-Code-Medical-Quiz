@@ -16,15 +16,15 @@ function isSingleAnswer(q) {
   return q.answer && q.answer.length === 1 && q.options[q.answer] && !q.incomplete;
 }
 
-function registerRoutes(app, examData, stats, examConfigs) {
+function registerRoutes(app, examData, stats, examConfigs, { staticCache, browseCache } = {}) {
   // Helper: resolve exam data from query param
   function resolve(req) {
     const exam = req.query.exam || 'doctor1';
     return examData[exam] || examData.doctor1;
   }
 
-  // GET /questions
-  app.get('/questions', (req, res) => {
+  // GET /questions (browse — cacheable)
+  app.get('/questions', ...(browseCache ? [browseCache] : []), (req, res) => {
     const questionsData = resolve(req);
     const { year, session, subject_tag, q, page = 1, limit = 20 } = req.query;
     let list = questionsData.questions;
@@ -38,8 +38,9 @@ function registerRoutes(app, examData, stats, examConfigs) {
     res.json({ total, page: parseInt(page), limit: parseInt(limit), questions: list.slice(start, start + parseInt(limit)) });
   });
 
-  // GET /questions/random (practice & PvP — single-answer only)
+  // GET /questions/random (practice & PvP — never cached, must be different each time)
   app.get('/questions/random', (req, res) => {
+    res.set('Cache-Control', 'private, no-cache');
     const questionsData = resolve(req);
     const { stage_id, count = 10 } = req.query;
     const tag = stage_id && parseInt(stage_id) > 0
@@ -51,8 +52,8 @@ function registerRoutes(app, examData, stats, examConfigs) {
     res.json({ total: pool.length, questions: picked });
   });
 
-  // GET /questions/exam-years — list available historical exams
-  app.get('/questions/exam-years', (req, res) => {
+  // GET /questions/exam-years — list available historical exams (cacheable)
+  app.get('/questions/exam-years', ...(staticCache ? [staticCache] : []), (req, res) => {
     const examId = req.query.exam || 'doctor1';
     const questionsData = resolve(req);
     const exams = {};
@@ -87,6 +88,7 @@ function registerRoutes(app, examData, stats, examConfigs) {
   });
 
   // GET /questions/exam — supports historical (year+session) or random (stages) mode
+  // Not cached at middleware level: historical mode is cacheable, random mode is not
   app.get('/questions/exam', (req, res) => {
     const questionsData = resolve(req);
     const { stages, count = 100, year, session, subject } = req.query;
@@ -96,6 +98,7 @@ function registerRoutes(app, examData, stats, examConfigs) {
       const pool = questionsData.questions.filter(q =>
         q.roc_year === year && q.session === session && q.subject === subject
       );
+      res.set('Cache-Control', 'public, max-age=3600');
       return res.json({ total: pool.length, questions: shuffle(pool), mode: 'historical' });
     }
 
@@ -159,8 +162,8 @@ function registerRoutes(app, examData, stats, examConfigs) {
     res.json({ tracked });
   });
 
-  // GET /questions/hardest
-  app.get('/questions/hardest', (req, res) => {
+  // GET /questions/hardest (cacheable — stats change slowly)
+  app.get('/questions/hardest', ...(browseCache ? [browseCache] : []), (req, res) => {
     const questionsData = resolve(req);
     const count = Math.min(parseInt(req.query.count) || 20, 50);
     if (!stats.questionStats) return res.json({ questions: [] });
@@ -187,8 +190,8 @@ function registerRoutes(app, examData, stats, examConfigs) {
     res.json({ questions });
   });
 
-  // GET /meta
-  app.get('/meta', (req, res) => {
+  // GET /meta (cacheable — static after boot)
+  app.get('/meta', ...(staticCache ? [staticCache] : []), (req, res) => {
     const questionsData = resolve(req);
     const years = {}, sessions = {}, tags = {};
     const examSet = new Set();

@@ -71,6 +71,36 @@ export const usePlayerStore = create(
         set((s) => ({ coins: s.coins - n }))
         return true
       },
+      // Rewarded ad tracking
+      adRewardToday: 0,
+      lastAdWatch: '',
+      lastAdDate: '',
+      claimAdReward: () => {
+        const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
+        const s = get()
+        // Reset count if new day
+        const count = s.lastAdDate === today ? s.adRewardToday : 0
+        if (count >= 10) return { success: false, reason: 'exhausted' }
+        // Cooldown: 5 minutes
+        if (s.lastAdWatch && Date.now() - new Date(s.lastAdWatch).getTime() < 5 * 60000) {
+          return { success: false, reason: 'cooldown', remaining: Math.ceil((5 * 60000 - (Date.now() - new Date(s.lastAdWatch).getTime())) / 1000) }
+        }
+        const newCount = count + 1
+        set((st) => ({
+          coins: st.coins + 500,
+          adRewardToday: newCount,
+          lastAdWatch: new Date().toISOString(),
+          lastAdDate: today,
+        }))
+        return { success: true, coins: 500, remaining: 10 - newCount }
+      },
+      getAdRewardInfo: () => {
+        const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
+        const s = get()
+        const count = s.lastAdDate === today ? s.adRewardToday : 0
+        const cooldownLeft = s.lastAdWatch ? Math.max(0, 5 * 60000 - (Date.now() - new Date(s.lastAdWatch).getTime())) : 0
+        return { watched: count, remaining: 10 - count, cooldownMs: cooldownLeft }
+      },
       addExp: (n) => {
         const newExp = get().exp + n
         const expPerLevel = 300

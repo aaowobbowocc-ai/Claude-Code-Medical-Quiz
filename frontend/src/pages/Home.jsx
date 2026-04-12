@@ -17,6 +17,91 @@ const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','
 
 // EXAM_CONTENT is now loaded from exam-configs via getExamSeo(examId)
 
+function ComingSoonCard({ icon, name, highlight }) {
+  return (
+    <div className={`relative rounded-2xl p-4 flex flex-col items-center gap-1.5 border-2 cursor-not-allowed
+      ${highlight ? 'border-amber-300 bg-amber-50' : 'border-gray-100 bg-gray-50 opacity-60'}`}>
+      <span className={`text-3xl ${highlight ? '' : 'grayscale'}`}>{icon}</span>
+      <span className={`font-bold text-sm ${highlight ? 'text-amber-700' : 'text-gray-400'}`}>{name}</span>
+      <span className={`absolute top-1 right-1 text-[9px] px-1.5 py-0.5 rounded-full font-bold
+        ${highlight ? 'text-white bg-amber-500' : 'text-amber-500 bg-amber-50'}`}>
+        {highlight ? '🔥 熱門' : '敬請期待'}
+      </span>
+    </div>
+  )
+}
+
+function ExamPickerContent({ exam, setExam, closeSheet }) {
+  return (
+    <>
+      <h2 className="text-xl font-bold text-medical-dark text-center mb-1">選擇考試類別</h2>
+      <p className="text-center text-gray-400 text-sm mb-4">切換不同國考題庫</p>
+
+      {/* 醫事人員專區 */}
+      <div className="mb-5">
+        <p className="text-sm font-bold text-medical-blue mb-2 flex items-center gap-1">
+          <span>⚕️</span> 醫事人員專區
+        </p>
+        <div className="grid grid-cols-2 gap-2.5">
+          {getExamTypes().map(e => (
+            <button key={e.id}
+              onClick={() => { setExam(e.id); closeSheet() }}
+              className={`rounded-2xl p-4 flex flex-col items-center gap-1.5 border-2 transition-all active:scale-95
+                ${exam === e.id ? 'border-medical-blue bg-medical-light shadow' : 'border-gray-100 bg-white'}`}>
+              <span className="text-3xl">{e.icon}</span>
+              <span className={`font-bold text-sm ${exam === e.id ? 'text-medical-blue' : 'text-medical-dark'}`}>{e.name}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* 法政/執照專區 */}
+      <div className="mb-5">
+        <p className="text-sm font-bold text-gray-400 mb-2 flex items-center gap-1">
+          <span>⚖️</span> 法政/執照專區
+        </p>
+        <div className="grid grid-cols-2 gap-2.5">
+          {[
+            { icon: '⚖️', name: '律師' },
+            { icon: '💼', name: '會計師' },
+            { icon: '🏠', name: '地政士' },
+            { icon: '📐', name: '建築師' },
+          ].map(p => <ComingSoonCard key={p.name} {...p} />)}
+        </div>
+      </div>
+
+      {/* 公職行政專區 */}
+      <div className="mb-5">
+        <p className="text-sm font-bold text-gray-400 mb-2 flex items-center gap-1">
+          <span>🏛️</span> 公職行政專區
+        </p>
+        <div className="grid grid-cols-2 gap-2.5">
+          {[
+            { icon: '🏢', name: '高普考' },
+            { icon: '🚔', name: '警察特考' },
+            { icon: '📋', name: '初等考試' },
+          ].map(p => <ComingSoonCard key={p.name} {...p} />)}
+        </div>
+      </div>
+
+      {/* 全民/基礎專區 */}
+      <div className="mb-2">
+        <p className="text-sm font-bold text-gray-400 mb-2 flex items-center gap-1">
+          <span>🎓</span> 全民/基礎專區
+        </p>
+        <div className="grid grid-cols-2 gap-2.5">
+          {[
+            { icon: '📜', name: '法學緒論', highlight: true },
+            { icon: '🇺🇸', name: '多益' },
+            { icon: '🚗', name: '汽機車駕照' },
+            { icon: '📖', name: '國文/英文' },
+          ].map(p => <ComingSoonCard key={p.name} {...p} />)}
+        </div>
+      </div>
+    </>
+  )
+}
+
 function ExamArticle({ exam }) {
   const c = getExamSeo(exam.id) || getExamSeo('doctor1') || {}
   return (
@@ -247,12 +332,20 @@ export default function Home() {
             <div key={i} className="absolute text-white/5 font-bold text-7xl select-none"
                  style={{ top: `${10 + i * 28}%`, left: `${-5 + (i % 3) * 40}%` }}>✚</div>
           ))}
-          <div className="relative text-6xl mb-3">{currentExam.icon}</div>
+          <div className="relative text-5xl mb-2">{currentExam.icon}</div>
           <h1 className="relative text-white font-bold text-3xl tracking-tight mb-1">國考知識王</h1>
           <button onClick={() => setSheet('exam')}
                   className="relative text-white/50 text-sm flex items-center gap-1 active:scale-95 transition-transform">
             {currentExam.name} · 即時對戰 <span className="text-white/30 text-xs">▼</span>
           </button>
+          <div className="relative flex gap-3 mt-3 text-2xl opacity-80">
+            <span>🩺</span>
+            <span>🦷</span>
+            <span>💊</span>
+            <span>⚖️</span>
+            <span>📜</span>
+          </div>
+          <p className="relative text-white/40 text-[10px] mt-1">涵蓋 11 類國考 · 18,000+ 題</p>
         </div>
 
         <div className="flex-1 px-4 pt-4 pb-8 flex flex-col gap-3 -mt-4">
@@ -369,19 +462,7 @@ export default function Home() {
         {/* Exam picker */}
         {sheet === 'exam' && (
           <Sheet onClose={() => setSheet(null)}>
-            <h2 className="text-xl font-bold text-medical-dark text-center mb-1">選擇考試類別</h2>
-            <p className="text-center text-gray-400 text-sm mb-4">切換不同國考題庫</p>
-            <div className="grid grid-cols-2 gap-2.5">
-              {getExamTypes().map(e => (
-                <button key={e.id}
-                  onClick={() => { setExam(e.id); setSheet(null) }}
-                  className={`rounded-2xl p-4 flex flex-col items-center gap-1.5 border-2 transition-all active:scale-95
-                    ${exam === e.id ? 'border-medical-blue bg-medical-light shadow' : 'border-gray-100 bg-white'}`}>
-                  <span className="text-3xl">{e.icon}</span>
-                  <span className={`font-bold text-sm ${exam === e.id ? 'text-medical-blue' : 'text-medical-dark'}`}>{e.name}</span>
-                </button>
-              ))}
-            </div>
+            <ExamPickerContent exam={exam} setExam={setExam} closeSheet={() => setSheet(null)} />
           </Sheet>
         )}
 
@@ -734,19 +815,7 @@ export default function Home() {
       {/* Exam picker */}
       {sheet === 'exam' && (
         <Sheet onClose={() => setSheet(null)}>
-          <h2 className="text-xl font-bold text-medical-dark text-center mb-1">選擇考試類別</h2>
-          <p className="text-center text-gray-400 text-sm mb-4">切換不同國考題庫</p>
-          <div className="grid grid-cols-2 gap-2.5">
-            {getExamTypes().map(e => (
-              <button key={e.id}
-                onClick={() => { setExam(e.id); setSheet(null) }}
-                className={`rounded-2xl p-4 flex flex-col items-center gap-1.5 border-2 transition-all active:scale-95
-                  ${exam === e.id ? 'border-medical-blue bg-medical-light shadow' : 'border-gray-100 bg-white'}`}>
-                <span className="text-3xl">{e.icon}</span>
-                <span className={`font-bold text-sm ${exam === e.id ? 'text-medical-blue' : 'text-medical-dark'}`}>{e.name}</span>
-              </button>
-            ))}
-          </div>
+          <ExamPickerContent exam={exam} setExam={setExam} closeSheet={() => setSheet(null)} />
         </Sheet>
       )}
 

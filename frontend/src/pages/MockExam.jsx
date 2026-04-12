@@ -131,7 +131,12 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                   <div className="flex-1">
                     <p className="font-bold text-lg text-medical-blue">完整模擬考</p>
                     <p className="text-gray-500 text-xs mt-1">{PAPERS.map(p => p.name).join(' + ')}，共 {PAPERS.reduce((s,p) => s+p.count, 0)} 題</p>
-                    <p className="text-gray-400 text-xs">{getTimeLimitText(PAPERS)}，{TOTAL_PASS}/{TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 及格</p>
+                    <p className="text-gray-400 text-xs">
+                      {getTimeLimitText(PAPERS)}，
+                      {isWeighted
+                        ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格（需答對 ${Math.ceil(TOTAL_PASS / PAPERS[0].pointsPerQ)} 題）`
+                        : `${TOTAL_PASS}/${TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 題 及格`}
+                    </p>
                   </div>
                   <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {FULL_EXAM_FEE}</span>
                 </div>
@@ -211,7 +216,12 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                 <div className="flex-1">
                   <p className="font-bold text-lg text-medical-blue">完整模擬考</p>
                   <p className="text-gray-500 text-xs mt-1">{PAPERS.map(p => p.name).join(' + ')}，共 {PAPERS.reduce((s,p) => s+p.count, 0)} 題</p>
-                  <p className="text-gray-400 text-xs">{getTimeLimitText(PAPERS)}，{TOTAL_PASS}/{TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 及格</p>
+                  <p className="text-gray-400 text-xs">
+                    {getTimeLimitText(PAPERS)}，
+                    {isWeighted
+                      ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格（需答對 ${Math.ceil(TOTAL_PASS / PAPERS[0].pointsPerQ)} 題）`
+                      : `${TOTAL_PASS}/${TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 題 及格`}
+                  </p>
                 </div>
                 <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {FULL_EXAM_FEE}</span>
               </div>
@@ -597,6 +607,9 @@ function ExamResults({ papers, navigate }) {
             <div className="bg-white/10 rounded-xl px-4 py-2 text-center">
               <p className="text-white/50 text-xs">及格線</p>
               <p className="text-white font-bold text-lg">{TOTAL_PASS}{isWeighted ? '分' : ''}</p>
+              {isWeighted && PAPERS[0]?.pointsPerQ && (
+                <p className="text-white/40 text-[10px]">需答對 {Math.ceil(TOTAL_PASS / PAPERS[0].pointsPerQ)} 題</p>
+              )}
             </div>
           )}
         </div>

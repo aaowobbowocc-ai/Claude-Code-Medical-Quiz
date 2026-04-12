@@ -7,7 +7,7 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 export default function Contact() {
   const navigate = useNavigate()
-  usePageMeta('關於我們', '國考知識王：醫學生獨立開發的免費醫事國考練習平台，7900+ 題、即時對戰、AI 解說。')
+  usePageMeta('關於我們', '國考知識王：醫學生獨立開發的免費醫事國考練習平台，18,000+ 題、即時對戰、AI 解說。')
   const [feedbackText, setFeedbackText] = useState('')
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)

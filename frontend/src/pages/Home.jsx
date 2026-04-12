@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { usePlayerStore, getLevelTitle } from '../store/gameStore'
 import { getExamTypes, getExamSeo } from '../config/examRegistry'
+import { usePageMeta } from '../hooks/usePageMeta'
 import { getSocket } from '../hooks/useSocket'
 import { useDailyMessage } from '../hooks/useDailyMessage'
 import { usePWA } from '../hooks/usePWA'
@@ -157,6 +158,12 @@ export default function Home() {
   const exam = usePlayerStore(s => s.exam) || 'doctor1'
   const setExam = usePlayerStore(s => s.setExam)
   const currentExam = getExamTypes().find(e => e.id === exam) || getExamTypes()[0]
+
+  // Dynamic SEO title per exam
+  usePageMeta(
+    currentExam ? `國考知識王｜${currentExam.name}` : null,
+    currentExam ? `${currentExam.name}國考題庫練習，涵蓋歷屆考古題、即時對戰、AI 解說、模擬考、弱點分析，免費使用！` : null
+  )
 
   // Quick-name: inline input shown only when no name
   const [quickName, setQuickName] = useState('')
@@ -427,7 +434,7 @@ export default function Home() {
             <p className="text-white/50 text-xs font-medium tracking-widest mb-0.5 flex items-center gap-1">
               {currentExam.icon} {currentExam.name} <span className="text-white/30">▼</span>
             </p>
-            <h1 className="text-white font-bold text-3xl tracking-tight leading-none" onClick={(e) => { e.stopPropagation(); handleDevTap() }}>知識王</h1>
+            <h1 className="text-white font-bold text-2xl tracking-tight leading-none" onClick={(e) => { e.stopPropagation(); handleDevTap() }}>國考知識王</h1>
           </button>
           {/* Avatar — tap to edit name */}
           <button onClick={() => { setInputName(name); setSheet('editname') }}

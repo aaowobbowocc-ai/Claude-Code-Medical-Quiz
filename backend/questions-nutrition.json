@@ -2,10 +2,10 @@
   "metadata": {
     "exam": "nutrition",
     "label": "營養師",
-    "scraped_at": "2026-04-10T01:55:58.541Z",
+    "scraped_at": "2026-04-12T11:15:21.109Z",
     "source": "wwwq.moex.gov.tw"
   },
-  "total": 550,
+  "total": 822,
   "questions": [
     {
       "id": 1,
@@ -11012,6 +11012,5447 @@
         "D": "經高度加工，無法檢驗出含有基因改造成分之 DNA 或蛋白質之食品，不須標示"
       },
       "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_1",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 1,
+      "question": "關於氫離子ATP水解酶（H + -ATPase）的敘述，下列何者正確？",
+      "options": {
+        "A": "位於粒 線 體的內膜上，可維持基質（matrix）的高H + 濃度",
+        "B": "位於溶酶體的膜上，可增加此胞器內部的H + 濃度",
+        "C": "位於細胞膜上，可視細胞內外H + 濃度，決定運輸方向",
+        "D": "位於細胞膜上，除了H + 以外，亦可共同運輸HCO 3 - ，達到電位中和"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_2",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 2,
+      "question": "在小腸上皮細胞中，由幾個胺基酸組成的胜肽（peptide）會與氫離子共同被吸收？",
+      "options": {
+        "A": "2～3個",
+        "B": "5～10個",
+        "C": "15～30個",
+        "D": "大於50個"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_3",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 3,
+      "question": "下列何者是調控人體膽固醇恆定的器官？",
+      "options": {
+        "A": "胃",
+        "B": "胰臟",
+        "C": "脾臟",
+        "D": "肝臟"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_4",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 4,
+      "question": "關於副甲狀腺素（parathyroid hormone）功能的敘述，下列何者正確？",
+      "options": {
+        "A": "增加骨骼釋放鈣離子至血漿",
+        "B": "促進皮膚合成維生素D",
+        "C": "增加腸道吸收食物中的維生素D",
+        "D": "增加腎臟小管對鈣離子的排泄作用"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_5",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 5,
+      "question": "肥大細胞（mast cell）受到刺激活化後會引發過敏反應，主要是因為過敏原與下列何種形式的抗體接合所 致？",
+      "options": {
+        "A": "IgG",
+        "B": "IgE",
+        "C": "IgM",
+        "D": "IgA"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_6",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 6,
+      "question": "下列何種器官或組織僅由交感神經系統支配？",
+      "options": {
+        "A": "消化道括約肌",
+        "B": "心肌",
+        "C": "皮膚之汗腺",
+        "D": "呼吸道平滑肌"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_7",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 7,
+      "question": "負責記得如何騎腳踏車的程序性記憶（procedural memory）的主要腦區為何？",
+      "options": {
+        "A": "海馬迴",
+        "B": "小腦",
+        "C": "杏仁核",
+        "D": "大腦前額葉"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_8",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 8,
+      "question": "正常情況下，大多數在細胞代謝作用後產生的二氧化碳，在血液中主要是以何種形式被運送至肺，進而呼出 體外？",
+      "options": {
+        "A": "二氧化碳氣體",
+        "B": "碳酸氫根（bicarbonate）離子",
+        "C": "碳氧血紅蛋白（carboxyhemoglobin）",
+        "D": "碳酸鎂"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_9",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 9,
+      "question": "關於哺乳類動物的細胞膜，下列敘述何者錯誤？",
+      "options": {
+        "A": "主要脂質為磷脂質（phospholipids）",
+        "B": "細胞膜上的磷脂質（phospholipids）之間無化學鍵結",
+        "C": "細胞膜上的膽固醇（cholesterol）不具有極性（polar）特性",
+        "D": "細胞膜上的膽固醇（cholesterol）參與維持細胞膜之流動性"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_10",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 10,
+      "question": "關於鐮狀細胞特徵（sickle-cell trait）疾病的敘述，下列何者正確？",
+      "options": {
+        "A": "導致疾病發生是因血紅素之α次單位產生基因突變",
+        "B": "導致疾病發生是因血紅素之β次單位產生基因突變",
+        "C": "由於血紅素α次單位的多個纈胺酸（valine）被剔除所導致",
+        "D": "由於血紅素β次單位的多個纈胺酸（valine）被剔除所導致"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_11",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 11,
+      "question": "骨骼肌於等長收縮（isometric contraction）運動時，連續強直性收縮（fused tetanus）所產生之張力遠 大於單次收縮（single twitch）之張力，下列敘述何者最適當？",
+      "options": {
+        "A": "連續性動作電位傳遞之作用下，促使產生更多的力擊（power stroke）",
+        "B": "肌腱（muscle tendon）與微絲蛋白（titin）的彈性作用，促使張力累積",
+        "C": "肌漿質（sarcoplasm）中鈣離子減少，造成橫橋（cross-bridge）數量增加",
+        "D": "肌凝蛋白（myosin）緩慢地與肌動蛋白（actin）結合，延長收縮作用時間"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_12",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 12,
+      "question": "腸道結構的那一部分受損，最易使腸道的免疫功能下降？",
+      "options": {
+        "A": "環肌層",
+        "B": "縱肌層",
+        "C": "漿膜層",
+        "D": "黏膜層"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_13",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 13,
+      "question": "肚子餓的時候看到好吃的食物，所產生的生理反應主要機制為何？",
+      "options": {
+        "A": "由下視丘飽食中樞引起反射",
+        "B": "由體神經系統引起肌肉反射",
+        "C": "由中樞神經系統引起長反射",
+        "D": "由腸道神經系統引起短反射"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_14",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 14,
+      "question": "甲君在炎熱的夏日爬山，下列何種狀況不合理？",
+      "options": {
+        "A": "發生熱衰竭時，會昏倒且體溫稍微增加",
+        "B": "臉部潮紅且大量流汗，會造成血壓上升",
+        "C": "散熱隨著運動反射性增加，體溫穩定",
+        "D": "體溫持續上升但不出汗，會發生熱休克"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_15",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 15,
+      "question": "戰鬥或逃跑（fight-or-flight）反應及運動時，都會增加交感神經活性。此時對腎臟的影響，下列敘述何 者正確？",
+      "options": {
+        "A": "入球小動脈（afferent arteriole）舒張",
+        "B": "腎絲球過濾速率（glomerular filtration rate）下降",
+        "C": "增加尿液生成量",
+        "D": "出球小動脈（efferent arteriole）收縮"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_16",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 16,
+      "question": "下列何者是造成腎臟髓質組織間隙能夠維持高張性（hypertonicity）的主要原因？",
+      "options": {
+        "A": "氯化鈉（NaCl）和尿素（urea）",
+        "B": "氯化鈉（NaCl）和氨（ammonia）",
+        "C": "氯化鉀（KCl）和尿酸（uric acid）",
+        "D": "氯化鉀（KCl）和尿素（urea）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_17",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 17,
+      "question": "腎絲球過濾液之體積，會因大部分的鹽分及水分再吸收回血液循環而持續下降，而由腎絲球囊（glomerular",
+      "options": {
+        "C": "400 mOsm",
+        "A": "200 mOsm",
+        "B": "300 mOsm",
+        "D": "500 mOsm"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_18",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 18,
+      "question": "關於賽氏細胞（Sertoli cells）的敘述，下列何者正確？",
+      "options": {
+        "A": "受黃體生成素（luteinizing hormone）調控刺激精子生成",
+        "B": "受濾泡刺激素（follicle-stimulating hormone）調控生成雌激素（estrogen）",
+        "C": "負責分泌睪固酮（testosterone）",
+        "D": "形成細胞屏障，滋養發育中精子"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_19",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 19,
+      "question": "下列何種賀爾蒙的生合成是由酵素轉換而非基因表達而來？",
+      "options": {
+        "A": "醛固酮（aldosterone）",
+        "B": "昇糖素（glucagon）",
+        "C": "生長激素（growth hormone）",
+        "D": "泌乳素（prolactin）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_20",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 20,
+      "question": "下列何種賀爾蒙的作用為促進骨蝕作用（bone resorption）及血鈣增加？",
+      "options": {
+        "A": "降血鈣素（calcitonin）",
+        "B": "生長激素（growth hormone）",
+        "C": "副甲狀腺素（parathyroid hormone）",
+        "D": "骨化三醇（1, 25-dihydroxyvitamin D 3 ）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_21",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 21,
+      "question": "關於細胞介導免疫系統（cell-mediated immunity）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "主要是靠抗體防禦入侵至血液和淋巴中的外來抗原",
+        "B": "此系統主要是攻擊病原體感染的細胞或腫瘤細胞",
+        "C": "細胞毒性T細胞（cytotoxic T cells）參與此機制",
+        "D": "輔助T細胞（helper T cells）間接參與此機制"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_22",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 22,
+      "question": "關於壓力感應反射（baroreceptor reflex）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "壓力感受器（baroreceptor）主要位於主動脈體（aortic body）及頸動脈體（carotid body）",
+        "B": "壓力感受器（baroreceptor）的感覺神經纖維動作電位頻率隨著動脈血壓上升而增加",
+        "C": "壓力感受器（baroreceptor）的感覺神經活動通過迷走神經（vagus nerve）和舌咽神經 （glossopharyngeal nerve）傳到延髓",
+        "D": "壓力感應反射是藉由交感和副交感神經支配心臟和血管調節血壓"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_23",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 23,
+      "question": "李先生的動脈收縮壓是120 mmHg，動脈舒張壓是90 mmHg，心搏出量（stroke volume）是80 mL，心律是60",
+      "options": {
+        "B": "20 mmHg×min/L",
+        "A": "10 mmHg×min/L",
+        "C": "30 mmHg×min/L",
+        "D": "40 mmHg×min/L"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_24",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 24,
+      "question": "閉眼放鬆時，出現之腦電波（electroencephalogram）頻率範圍為下列何者？",
+      "options": {
+        "A": "lpha波（8～12 Hz）",
+        "B": "eta波（13～40 Hz）",
+        "C": "Theta波（4～8 Hz）",
+        "D": "elta波（< 4 Hz）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_25",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 25,
+      "question": "關於呼吸頻率的調控，下列敘述何者錯誤？",
+      "options": {
+        "A": "位於延腦的背呼吸群（dorsal respiratory group）控制吸氣運動神經元",
+        "B": "位於延腦的腹呼吸群（ventral respiratory group）控制呼氣運動神經元",
+        "C": "位於中腦的呼吸調節中樞（pneumotaxic center）使吸氣與呼氣更順暢",
+        "D": "呼吸頻率也受到周邊化學接受器（peripheral chemoreceptor）所調控"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_26",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 26,
+      "question": "下列何種酵素未參與肝醣合成之反應？",
+      "options": {
+        "A": "mylo-(1,4→1,6) transglycosylase",
+        "B": "",
+        "C": "phosphoglucomutase",
+        "D": "glucan transferase"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_27",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 27,
+      "question": "關於肝醣合成酶（glycogen synthase）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "此酵素之反應受質為glucose-6-phosphate",
+        "B": "催化在非還原端以α(1→4) glycosidic linkage方式延長肝醣鏈",
+        "C": "昇糖素（glucagon）可經由cyclic AMP之作用降低此酵素活性",
+        "D": "此酵素之特定絲胺酸殘基（serine residue）被磷酸化後，則不具活性"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_28",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 28,
+      "question": "關於脂溶性維生素A與D的共同點，下列敘述何者錯誤？",
+      "options": {
+        "A": "魚肝油中富含此兩種維生素",
+        "B": "在構造上皆屬於類異戊烯（isoprenoid）",
+        "C": "兩者皆有保護眼睛之功效",
+        "D": "兩者在細胞中皆有類似荷爾蒙之作用"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_29",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 29,
+      "question": "胺基酸必經由何種作用來產生具有生物功能的胺類（amines），例如精胺（spermine）、組織胺 （histamine）與多巴胺（dopamine）等物質？",
+      "options": {
+        "A": "氧化作用（oxidation）",
+        "B": "羥化作用（hydroxylation）",
+        "C": "脫羧作用（decarboxylation）",
+        "D": "甲基化作用（methylation）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_30",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 30,
+      "question": "代謝疾病alkaptonuria可能起因於無法降解下列何種 胺基酸 ？",
+      "options": {
+        "A": "sparagine",
+        "B": "",
+        "C": "methionine",
+        "D": "phenylalanine"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_31",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 31,
+      "question": "關於雙股核酸分子：①DNA-DNA　②RNA-RNA　③DNA-RNA，對熱穩定性的比較，下列排序何者正確？",
+      "options": {
+        "A": "①＞③＞②",
+        "B": "①＞②＞③",
+        "C": "②＞③＞①",
+        "D": "②＞①＞③"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_32",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 32,
+      "question": "何種化合物與草醯醋酸（oxaloacetate）反應進入檸檬酸循環？",
+      "options": {
+        "A": "丙酮酸（pyruvate）",
+        "B": "乙醯輔酶A（acetyl CoA）",
+        "C": "輔酶A（coenzyme A）",
+        "D": "α-酮基戊二酸（α-ketoglutarate）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_33",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 33,
+      "question": "下列何者不參與維生素E氧化還原循環（redox cycle）？",
+      "options": {
+        "A": "維生素B 1",
+        "B": "維生素C",
+        "C": "穀胱甘肽（glutathione）",
+        "D": "硒（selenium）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_34",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 34,
+      "question": "關於維生素參與代謝的敘述，下列何者錯誤？",
+      "options": {
+        "A": "Transketolase的活性可以用於評估維生素B 1 之營養狀況",
+        "B": "維生素B 2 參與glutathione peroxidase與glutathione reductase的反應，故對紅血球有抗氧化及保護之作 用",
+        "C": "Pyruvate carboxylase需要biotin作為輔因子",
+        "D": "Niacin缺乏與乳酸症的發生有關"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_35",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 35,
+      "question": "於糖解作用中，常見何種酵素之缺陷可能會導致紅血球之溶血性貧血？",
+      "options": {
+        "A": "六碳糖激酶（hexokinase）",
+        "B": "葡萄糖-6-磷酸激酶（glucose-6-phosphate kinase）",
+        "C": "磷酸果糖激酶（phosphofructose kinase）",
+        "D": "丙酮酸激酶（pyruvate kinase）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_36",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 36,
+      "question": "下列何者是直接連結糖解作用、糖質新生、五碳糖磷酸途徑、肝醣合成與分解的重要化合物？",
+      "options": {
+        "A": "乙醯輔酶A（acetyl-CoA）",
+        "B": "葡萄糖-6-磷酸（glucose-6-phosphate）",
+        "C": "丙酮酸（pyruvic acid）",
+        "D": "草醋酸（oxaloacetate）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_37",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 37,
+      "question": "長期高量葡萄糖或果糖攝取，會導致肝臟何種脂質的堆積，造成非酒精性脂肪肝的生成？",
+      "options": {
+        "A": "蠟脂",
+        "B": "磷脂質",
+        "C": "三酸甘油酯",
+        "D": "肌醇三磷酸"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_38",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 38,
+      "question": "酮體於肝臟合成後，會透過血液循環送至肝外組織，血液中的酮體主要型態為何？",
+      "options": {
+        "A": "乙醯輔酶A（acetyl-CoA）",
+        "B": "乙醯乙酸（acetoacetate）",
+        "C": "β-羥基丁酸（β-hydroxybutyric acid）",
+        "D": "β-羥甲基丁酸（β-hydroxymethylbutyric acid）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_39",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 39,
+      "question": "關於神經磷脂質（sphingolipid）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "神經磷脂質結構組成是以甘油作為骨架",
+        "B": "存在於腦部組織中，為構成神經細胞膜的主要成分",
+        "C": "結構碳骨架上接有脂肪酸",
+        "D": "腦磷脂（ceramide）與神經節糖苷（ganglioside）都是屬於神經磷脂質類別"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_40",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 40,
+      "question": "下列那一個apolipoprotein發生突變，將造成細胞無法獲取（uptake）低密度脂蛋白，導致高膽固醇血症？",
+      "options": {
+        "A": "polipoprotein E",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_41",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 41,
+      "question": "關於血紅素（hemoglobin）的敘述，下列何者正確？",
+      "options": {
+        "A": "運送氧氣的重要蛋白質分子，不論原核或是真核生物體內都存在",
+        "B": "高等脊椎動物體內的血紅素，由四個次單元（tetrameric α2β2）組合而成",
+        "C": "血紅素分子表面有兩個可以結合氧氣分子的位置",
+        "D": "紅血球中含有2,3-bisphosphoglycerate（2,3-BPG）參與血紅素與氧分子結合的親和性，登山時體內的 2,3-BPG會降低，以提高氧分子的使用效率"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_42",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 42,
+      "question": "關於肌酸（creatine）的敘述，下列何者正確？",
+      "options": {
+        "A": "來自於肉類及魚類食物，是身體可以自行合成的一種蛋白質，主要功能為參與能量代謝",
+        "B": "大約95%的肌酸儲存在肝臟中",
+        "C": "心臟受傷時可促使心肌細胞釋放肌酸激酶（creatine kinase），以增加肌酸的生成，有助於心臟的自我修 護",
+        "D": "肌酸被作為運動員的運動增補劑，被認為可促進肌肉能量代謝"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_43",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 43,
+      "question": "下列何者為含硒成分的metalloenzymes（含金屬離子的酵素）？",
+      "options": {
+        "A": "lcohol dehydrogenase",
+        "B": "",
+        "C": "ytochrome oxidase",
+        "D": "Glutathione peroxidase"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_44",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 44,
+      "question": "關於廣效抗生素四環黴素（tetracycline）主要作用機制的敘述，下列何者正確？",
+      "options": {
+        "A": "抑制原核生物（prokaryotes）ATP生成",
+        "B": "抑制原核生物（prokaryotes）DNA複製（replication）",
+        "C": "抑制原核生物（prokaryotes）RNA轉錄作用（transcription）",
+        "D": "抑制原核生物（prokaryotes）轉譯蛋白質作用（translation）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_45",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 45,
+      "question": "抗癌藥物methotrexate主要是抑制下列何種生化作用？",
+      "options": {
+        "A": "二氫葉酸（dihydrofolate）還原作用（reduction）",
+        "B": "生育醇（tocopherol）還原作用（reduction）",
+        "C": "脂肪酸（fatty acid）氧化作用（oxidation）",
+        "D": "葡萄糖（glucose）氧化作用（oxidation）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_46",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 46,
+      "question": "下列何者為嘌呤（purine）之類似物（analog），可作為減緩痛風（gout）症狀之用藥？",
+      "options": {
+        "A": "llopurinol",
+        "B": "8-Azaquanine",
+        "C": "5-Fluouracil",
+        "D": "Statin"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_47",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 47,
+      "question": "若哺乳動物DNA損傷時，不完整之DNA複製（replication）會發生在細胞週期（cell cycle）之那一期？",
+      "options": {
+        "A": "G 1 期",
+        "B": "G 2 期",
+        "C": "M期",
+        "D": "S期"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_48",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 48,
+      "question": "下列何者生化淨反應需要消耗ATP？①異化分解（catabolism）　②同化合成（anabolism）　③肌肉收縮 ④神經傳遞　⑤主動運輸（active transport）　⑥被動運輸（passive transport）",
+      "options": {
+        "A": "①③④⑤",
+        "B": "②③④⑤",
+        "C": "①③④⑥",
+        "D": "②③④⑥"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_49",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 49,
+      "question": "酵素動力學利用K",
+      "options": {
+        "C": "時間單位（sec）",
+        "A": "係數沒有單位",
+        "B": "含量單位（mole）",
+        "D": "速率單位（M -1 s -1 ）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_physio_biochem_50",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "生理學與生物化學",
+      "subject_tag": "physio_biochem",
+      "subject_name": "生理學與生物化學",
+      "stage_id": 0,
+      "number": 50,
+      "question": "下列何種抗氧化物在粒線體內膜參與電子傳遞？",
+      "options": {
+        "A": "硫辛酸（lipoic acid）",
+        "B": "抗壞血酸（ascorbic acid）",
+        "C": "輔酶Q（coenzyme Q）或稱泛醌",
+        "D": "生育醌（tocopherol quinone）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_1",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 1,
+      "question": "若以蔗糖之相對甜度1.0為基準值，下列糖類或人工甜味劑之相對甜度由高至低排列，何者正確？",
+      "options": {
+        "A": "spartame＞saccharin＞fructose＞sucrose",
+        "B": "sucrose＞maltose＞lactose＞sorbitol",
+        "C": "glucose＞fructose＞maltose＞lactose",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_2",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 2,
+      "question": "人體無法消化纖維素（cellulose）的原因為何？",
+      "options": {
+        "A": "人體的消化道只分泌α-amylase",
+        "B": "人體的消化道所分泌β-amylase量不足",
+        "C": "纖維素對人體消化道所分泌的β-amylase具有抗性",
+        "D": "纖維素的β-鍵結太強無法水解"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_3",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 3,
+      "question": "依據衛生福利部國民健康署公布之食物代換表，下列何種食物組合之醣類含量最高？",
+      "options": {
+        "A": "蘿蔔糕100公克＋魚丸湯（含不包肉魚丸55公克）",
+        "B": "燒餅油條一套（含燒餅80公克＋油條60公克）",
+        "C": "玉米蛋餅（含蛋餅皮35公克＋玉米粒85公克）",
+        "D": "餐包60公克＋酪梨牛奶（含酪梨40公克與全脂奶240毫升）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_4",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 4,
+      "question": "下列何種雙糖或多醣的糖－糖間是β鍵結？",
+      "options": {
+        "A": "蔗糖",
+        "B": "乳糖",
+        "C": "肝醣",
+        "D": "麥芽糖"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_5",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 5,
+      "question": "肌肉及脂肪組織因缺乏下列何種酵素，無法進行糖質新生作用？",
+      "options": {
+        "A": "cetyl CoA carboxylase",
+        "B": "lactate dehydrogenase",
+        "C": "glucose-6-phosphatase",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_6",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 6,
+      "question": "下列何者是膳食纖維的特性？",
+      "options": {
+        "A": "大量食用可促進礦物質的吸收",
+        "B": "較容易由精製加工後的食物獲得",
+        "C": "容易造成大腸憩室症",
+        "D": "分為水溶性和非水溶性纖維"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_7",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 7,
+      "question": "下列何種胺基酸人體可以自行合成，不需從食物中獲得？",
+      "options": {
+        "A": "白胺酸（leucine）",
+        "B": "離胺酸（lysine）",
+        "C": "丙胺酸（alanine）",
+        "D": "色胺酸（tryptophan）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_8",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 8,
+      "question": "下列何種食物的生物價（BV）是100，且蛋白質含量最高？",
+      "options": {
+        "A": "小麥",
+        "B": "牛奶",
+        "C": "白米",
+        "D": "蛋白"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_9",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 9,
+      "question": "有關蛋白質消化吸收的敘述，下列何者錯誤？",
+      "options": {
+        "A": "蛋白質的消化始於胃，胃蛋白酶可將蛋白質分解成較短的胜肽",
+        "B": "食糜進入小腸會刺激胰臟分泌胰蛋白酶，將蛋白質分解成短胜肽和胺基酸",
+        "C": "在腸道被分解的胺基酸會以滲透、擴散的方式進入小腸細胞",
+        "D": "在嬰兒期的早期，有些未經分解的蛋白質可進入腸道細胞"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_10",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 10,
+      "question": "下列何者不是蛋白質在體內的主要功能？",
+      "options": {
+        "A": "提供能量",
+        "B": "參與免疫反應",
+        "C": "維持體液平衡",
+        "D": "支撐細胞和組織結構"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_11",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 11,
+      "question": "根據衛生福利部對國人膳食營養素參考攝取量（DRIs）第八版的建議，哺乳期間每日的蛋白質攝取量應比未 懷孕前多增加幾公克？",
+      "options": {
+        "A": "10公克",
+        "B": "15公克",
+        "C": "20公克",
+        "D": "25公克"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_12",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 12,
+      "question": "下列何種胺基酸在體內會合成黑色素（melanin）？",
+      "options": {
+        "A": "色胺酸（tryptophan）",
+        "B": "麩胺酸（glutamate）",
+        "C": "脯胺酸（proline）",
+        "D": "酪胺酸（tyrosine）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_13",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 13,
+      "question": "下列何者含較多短鏈脂肪酸？",
+      "options": {
+        "A": "葵花油",
+        "B": "奶油",
+        "C": "氫化油",
+        "D": "花生油"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_14",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 14,
+      "question": "一般而言，健康成年人空腹12～14小時後，下列何種脂蛋白不存在於血液中？",
+      "options": {
+        "A": "",
+        "C": "LDL",
+        "B": "VLDL",
+        "D": "HDL"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_15",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 15,
+      "question": "下列有關脂質的敘述，何者錯誤？",
+      "options": {
+        "A": "人體可以利用脂質製造賀爾蒙",
+        "B": "體內的脂肪可以保護器官免於傷害",
+        "C": "可協助維生素A、C、D、E的吸收",
+        "D": "脂肪（fat）在室溫下是固體的脂質，油（oil）則是液體的脂質"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_16",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 16,
+      "question": "下列何項飲食習慣的改變，無助於降低低密度脂蛋白？",
+      "options": {
+        "A": "儘量少吃人造奶油",
+        "B": "保持多元不飽和脂肪酸低於10%總熱量",
+        "C": "每日攝取2公克以上植物固醇",
+        "D": "每日攝取椰子油達10%總熱量"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_17",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 17,
+      "question": "在人體代謝中，下列何者不是以膽固醇為先質（precursor）所合成之物質？",
+      "options": {
+        "A": "",
+        "C": "holecalciferol",
+        "B": "phytosterol",
+        "D": ""
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_18",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 18,
+      "question": "小華整天沒吃東西，只喝了一杯全糖的綠茶手搖飲。喝完數小時後，血液中三酸甘油酯暫時升高的原因為 何？",
+      "options": {
+        "A": "乳糜微粒（chylomicron）升高",
+        "B": "極低密度脂蛋白（VLDL）升高",
+        "C": "低密度脂蛋白（LDL）升高",
+        "D": "游離脂肪酸升高"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_19",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 19,
+      "question": "臨床上，當RQ＜0.7時，表示人體可能處於何種狀態？",
+      "options": {
+        "A": "酸中毒",
+        "B": "攝取高碳水化合物飲食",
+        "C": "竭力運動後",
+        "D": "飢餓狀態"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_20",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 20,
+      "question": "調控人體飢餓與飽食的中樞，位於腦部的那一個區域？",
+      "options": {
+        "A": "大腦皮質",
+        "B": "海馬迴",
+        "C": "杏仁核",
+        "D": "下視丘"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_21",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 21,
+      "question": "王先生今年28歲，體重75公斤，超出正常體重範圍6公斤，他打算以60天的時間將體重控制在正常範圍內， 則減少1公斤的體重約需消耗多少大卡的熱量？",
+      "options": {
+        "A": "9,000",
+        "B": "7,700",
+        "C": "6,700",
+        "D": "4,500"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_22",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 22,
+      "question": "承上題，經營養師指導，王先生每天飲食減少500大卡，並加上慢跑運動（消耗熱量：0.134大卡／公斤／分 鐘），理論上王先生每天需要至少慢跑多少分鐘，才能在60天後將體重減至正常範圍內？",
+      "options": {
+        "A": "27",
+        "B": "35",
+        "C": "54",
+        "D": "40"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_23",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列何者不是人體中維生素C高保留量（retention）的組織器官？",
+      "options": {
+        "A": "腦下垂體",
+        "B": "腎上腺",
+        "C": "唾液腺",
+        "D": "大腦"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_24",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 24,
+      "question": "由色胺酸（tryptophan）合成15毫克的菸鹼素時，需要代謝多少克的蛋白質？",
+      "options": {
+        "A": "60",
+        "B": "90",
+        "C": "120",
+        "D": "150"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_25",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 25,
+      "question": "有關vitamin B 12 缺乏的臨床症狀，下列何者錯誤？",
+      "options": {
+        "A": "巨球性貧血",
+        "B": "惡性貧血",
+        "C": "神經髓鞘病變",
+        "D": "溶血性貧血"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_26",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 26,
+      "question": "有關膽素生化功能的敘述，下列何者錯誤？",
+      "options": {
+        "A": "為卵磷脂（lecithin）主要成分，參與神經髓鞘合成",
+        "B": "為血清素（serotonin）主要成分，參與神經傳導物質合成",
+        "C": "參與甜菜鹼（betaine）合成，提供甲基進行單碳代謝反應",
+        "D": "為驅脂因子（lipotropic factor），缺乏膽素導致脂肪肝"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_27",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 27,
+      "question": "楊姓婦人因頭暈目眩，身體平衡機制不好，醫師診斷為內耳不平衡，下列何種維生素具有減輕病症的作用？",
+      "options": {
+        "A": "scorbic acid",
+        "B": "folic acid",
+        "C": "niacin",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_28",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 28,
+      "question": "孕婦飲食若缺乏深綠色蔬菜，會缺乏下列何種維生素，導致胎兒neural tube defect（NTD）？",
+      "options": {
+        "A": "",
+        "C": "holine",
+        "B": "thiamin",
+        "D": "folate"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_29",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 29,
+      "question": "下列何者過量攝取時較無安全性疑慮？",
+      "options": {
+        "A": "retinoids",
+        "B": "",
+        "C": "phylloquinones",
+        "D": "niacin"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_30",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 30,
+      "question": "下列何者最不會是因缺乏維生素K造成的新生兒出血症？",
+      "options": {
+        "A": "母乳中維生素K含量過低",
+        "B": "新生兒體內維生素K儲存量低",
+        "C": "腸道沒有生成維生素K的微生物",
+        "D": "因carboxylated凝血因子無法有效率與Na結合"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_31",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 31,
+      "question": "下列何者為可運送維生素A至周邊組織的載體？",
+      "options": {
+        "A": "",
+        "C": "retinol-binding protein (RBP)",
+        "B": "high density lipoprotein",
+        "D": "transferrin"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_32",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 32,
+      "question": "膳食維生素D於腸道消化吸收後，利用下列何種物質運輸至肝臟？",
+      "options": {
+        "A": "血清蛋白",
+        "B": "運鐵蛋白",
+        "C": "游離膽固醇",
+        "D": "乳糜微粒"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_33",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 33,
+      "question": "健康人因流汗或出血而流失體液時，下列那些礦物質的流失量最大？",
+      "options": {
+        "A": "potassium及phosphate",
+        "B": "icarbonate及sulfate",
+        "C": "sodium及chloride",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_34",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 34,
+      "question": "下列何者有助於體內碳酸（H 2",
+      "options": {
+        "C": "arbonic anhydrase",
+        "A": "ngiotensin",
+        "B": "",
+        "D": "renin"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_35",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 35,
+      "question": "人體喝入的水分，大部分在胃腸道的那一個部位被吸收？",
+      "options": {
+        "A": "scending colon",
+        "D": "transverse colon",
+        "B": "jejunum and ileum",
+        "C": ""
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_36",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 36,
+      "question": "有關攝取鉀有助於維持正常血壓的原因，下列何者正確？",
+      "options": {
+        "A": "高鉀攝取可抑制小腸對鈉離子的吸收",
+        "B": "高鉀攝取可減少血液滲透壓",
+        "C": "高鉀攝取可減輕過度換氣造成的鹼中毒",
+        "D": "高鉀攝取可抑制renin-angiotensin system"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_37",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 37,
+      "question": "下列那一種礦物質可加強胰島素的作用，進而調節血糖？",
+      "options": {
+        "A": "selenium",
+        "B": "silicon",
+        "C": "hromium",
+        "D": "zinc"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_38",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 38,
+      "question": "下列有關礦物質的敘述，何者正確？",
+      "options": {
+        "A": "成年人每日鈣的足夠攝取量為2,500 mg",
+        "B": "鈣離子可藉由攜鈣素的作用來控制細胞的代謝",
+        "C": "女性停經後雌激素分泌減少，與骨質流失無關",
+        "D": "當血鈣降低時，甲狀腺會分泌甲狀腺素，刺激骨骼釋出鈣"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_39",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 39,
+      "question": "下列有關磷缺乏的敘述，何者錯誤？",
+      "options": {
+        "A": "缺磷的症狀包含厭食症",
+        "B": "長期缺磷會導致牙齒生長不良",
+        "C": "飲食攝取不足的老人容易有缺磷的狀況",
+        "D": "天天服用制酸劑的人不會有缺磷的問題"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_40",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 40,
+      "question": "下列那種人最容易有iron deficiency anemia？",
+      "options": {
+        "A": "育齡期婦女",
+        "B": "懷孕婦女",
+        "C": "青少年",
+        "D": "成年男性"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_41",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 41,
+      "question": "下列何者與fluorosis較無相關？",
+      "options": {
+        "A": "飲用水含氟量過高",
+        "B": "兒童長期吞入含氟牙膏",
+        "C": "造成兒童斑齒（mottled teeth）",
+        "D": "鈣質及維生素D攝取不足"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_43",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 43,
+      "question": "有關嬰幼兒發生蛀牙的主要原因，下列何者錯誤？",
+      "options": {
+        "A": "口含奶瓶入睡",
+        "B": "吃過多甜食",
+        "C": "刷牙技巧不熟練",
+        "D": "缺乏維生素D"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_44",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 44,
+      "question": "有關年長者欲降低血液中homocysteine時，所需補充的營養素，下列何者錯誤？",
+      "options": {
+        "A": "維生素B 6",
+        "B": "維生素B 1",
+        "C": "葉酸",
+        "D": "維生素B 12"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_45",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 45,
+      "question": "下列食物組合，何者含有的鐵質總量最多？",
+      "options": {
+        "A": "1盤甜豌豆莢（100 g）+1份滷牛腱（35 g）+1碗牡蠣湯（35 g）",
+        "B": "1盤萵苣（100 g）+1份鱈魚（55 g）+1碗牡蠣湯（35 g）",
+        "C": "1盤紅莧菜（100 g）+1個荷包蛋（55 g）+1盤炒豬肝（30 g）",
+        "D": "1盤紅鳳菜（100 g）+1片豆腐皮（30 g）+1盤炒豬肝（30 g）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_46",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 46,
+      "question": "有關嬰兒添加副食品的敘述，下列何者錯誤？",
+      "options": {
+        "A": "開始添加副食品時，以穀類食品為主",
+        "B": "添加新的副食品時，一次只能添加一種",
+        "C": "4個月大嬰兒因為澱粉酵素的活性尚不成熟，因此不建議添加米粉類的副食品",
+        "D": "4個月大嬰兒體重若已經達出生時的2倍重，可以考慮開始添加副食品"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_47",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 47,
+      "question": "嬰兒的生長及發育受到先天基因調控及後天環境的影響，若嬰兒出生時身長位於百分位生長曲線表的10百分 位，但其父母身高屬於高大者，且嬰兒的營養狀況良好，則嬰兒在一歲前的生長趨勢為何？",
+      "options": {
+        "A": "lag-down growth",
+        "B": "",
+        "C": "growth in channel",
+        "D": "stunted growth"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_48",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 48,
+      "question": "有關體重過重的哺乳婦女於哺乳期間需注意之事項，下列何者最適當？",
+      "options": {
+        "A": "不可限制能量攝取",
+        "B": "蛋白質攝取量應比體重正常的母親高",
+        "C": "應增加飲水量改善乳汁生成延遲問題",
+        "D": "曾接受胃繞道手術者應補充鐵劑增進母乳鐵含量"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_49",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 49,
+      "question": "規律從事中度運動強度訓練約1小時之運動員，建議攝取多少碳水化合物以因應其能量需求？",
+      "options": {
+        "A": "每公斤體重1至3克",
+        "B": "每公斤體重5至7克",
+        "C": "每公斤體重8至12克",
+        "D": "每公斤體重15至20克"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_nutrition_science_50",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 0,
+      "number": 50,
+      "question": "申請健康食品認證，如屬第三類非傳統食用食品，可以不用進行下列何種安全性評估？",
+      "options": {
+        "A": "90日餵食試驗",
+        "B": "基因毒性試驗",
+        "C": "致畸試驗",
+        "D": "致癌性試驗"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_1",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 1,
+      "question": "依據「包裝食品營養宣稱應遵行事項」，下列何者不可用於包裝食品的「營養宣稱」？",
+      "options": {
+        "A": "高鈣",
+        "B": "低鈉",
+        "C": "富含膳食纖維",
+        "D": "富含DHA"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_2",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 2,
+      "question": "衛生福利部國民健康署將每日飲食指南的概念繪製成餐盤圖像，帶入類別及份量的概念，提醒民眾每餐皆應 攝取到6大類食物，下列敘述何者正確？",
+      "options": {
+        "A": "餐盤6大類食物的面積，可對應攝取食物的重量",
+        "B": "蔬菜比水果多一點",
+        "C": "飯比菜多一點，飯至少1/3為未精製全穀雜糧，菜選當季且1/3選深色",
+        "D": "每餐攝取堅果種子類1湯匙"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_3",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 3,
+      "question": "下列何種產品須有營養標示？",
+      "options": {
+        "A": "商店販賣由消費者自行以塑膠袋盛裝後過秤，再以壓模機封口包裝的白木耳",
+        "B": "僅販賣給餐廳、拉麵店、加工廠之業務用包裝食品原料",
+        "C": "菜市場販賣用保鮮膜包裝的滷味豆干",
+        "D": "宣稱含有高維生素C的番石榴茶包"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_4",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 4,
+      "question": "「國人膳食營養素參考攝取量」中，懷孕婦女營養素攝取量不需額外增加下列何者？",
+      "options": {
+        "A": "鈣",
+        "B": "泛酸",
+        "C": "維生素A",
+        "D": "維生素E"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_5",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 5,
+      "question": "依據衛生福利部之建議，飲食應以清淡為原則，每日鈉攝取量以不超過多少毫克為原則？",
+      "options": {
+        "A": "2,400",
+        "B": "3,000",
+        "C": "4,200",
+        "D": "6,000"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_6",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 6,
+      "question": "下列何者不是原住民的傳統食物？",
+      "options": {
+        "A": "阿拜（A Bai）",
+        "B": "娘惹糕（Nyonya Kuih）",
+        "C": "奇拿富（Cinavu）",
+        "D": "石板烤山豬肉"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_7",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 7,
+      "question": "有關職場健康促進，下列敘述何者錯誤？",
+      "options": {
+        "A": "WHO建立的「職場周全健康促進推動模式」中強調應包含「生理工作環境」、「社會心理工作環境」、「個 人健康資源」及「企業社區參與」四大層面",
+        "B": "衛生福利部國民健康署自民國96年起開始辦理全國「健康職場認證」，其績優健康職場的獎項中包含「營 養健康獎」，目的是鼓勵職場致力於改變員工飲食行為",
+        "C": "職場健康促進計畫之核心價值為「企業／組織的領導承諾」及「員工共同參與」",
+        "D": "健康職場認證的實施對象為國內合法設立之公、民營事業單位或機關（構）皆可納入，無資格要求"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_8",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 8,
+      "question": "與衛生福利部長期照顧十年計畫1.0（長照1.0）相較，長照2.0擴大納入那些服務對象？",
+      "options": {
+        "A": "65歲以上失能老人",
+        "B": "55歲以上原住民",
+        "C": "未滿50歲失能身心障礙者",
+        "D": "50歲以上身心障礙者"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_9",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 9,
+      "question": "有關人口老化的指數，下列敘述何者錯誤？",
+      "options": {
+        "A": "老化指數＝老年人口數與幼年人口數之比",
+        "B": "老化指數＝每百名工作年齡人口扶養之老年人口數",
+        "C": "扶養比＝（0～14歲人口＋65歲以上人口）／15～64歲人口",
+        "D": "我國目前老化指數已經超過100"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_10",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 10,
+      "question": "依據母嬰親善醫院認證所提的產科機構應該要有哺餵母乳的措施，下列敘述何者錯誤？",
+      "options": {
+        "A": "提供每天8小時的母嬰同室",
+        "B": "鼓勵依嬰兒的需求哺餵母乳",
+        "C": "教導母親哺餵母乳，及在必須和嬰兒分開的情況下如何維持奶水的分泌",
+        "D": "哺餵母乳的嬰兒，不給予人工奶嘴或安撫奶嘴"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_11",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 11,
+      "question": "衛生福利部國民健康署倡議，各縣市政府衛生局應至少建置一處社區營養推廣中心，下列何者不是針對長者 之營養策略？",
+      "options": {
+        "A": "吃得多",
+        "B": "吃得下",
+        "C": "吃得夠",
+        "D": "吃得巧"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_12",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 12,
+      "question": "衛生福利部國民健康署近年來致力推動全民肥胖防治工作，建議各縣市依據「渥太華五大行動綱領」制定全 方位策略，下列何項策略屬於促使民眾發展個人技巧？",
+      "options": {
+        "A": "提供健康飲食及運動諮詢服務",
+        "B": "超市標示食物熱量及營養標示",
+        "C": "開辦健康飲食烹飪班增加製作能力",
+        "D": "與農業單位合作推廣在地新鮮食物及五穀主食"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_13",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 13,
+      "question": "民國104學年度及之後應屆畢業者，其實習內容與時數，下列那一項不符合「專門職業及技術人員高等考試",
+      "options": {
+        "A": "見習營養師；72小時",
+        "B": "",
+        "C": "",
+        "D": "膳食製備與供應、人事管理、行政管理；144小時"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_14",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 14,
+      "question": "有關「健康食品管理法」之敘述，下列何者錯誤？",
+      "options": {
+        "A": "健康食品之製造、輸入許可證有效期限為五年，每次展延不得超過五年",
+        "B": "健康食品許可證期滿仍須繼續製造、輸入者，應於許可證到期前三個月內申請中央主管機關核准展延之",
+        "C": "健康食品許可證若逾期未申請展延或不准展延者，原許可證會自動失效",
+        "D": "未經核准擅自製造或輸入健康食品者，處三年以下有期徒刑或科新臺幣一百萬元以下罰金"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_15",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 15,
+      "question": "有關校園飲品及點心販售範圍之敘述，下列何者正確？",
+      "options": {
+        "A": "可於國中以下學校販售的七種飲品應符合TQF標準規格",
+        "B": "高級中等學校所販售的包裝食品需取得CAS或TQF驗證標章或校園食品標章",
+        "C": "完全中學校園飲品及點心販售，一律比照高中職學校規定辦理",
+        "D": "可於國中以下學校販售的校園烘焙食品（麵包、餅乾、米製品），油及糖所提供熱量之總和不得超過總熱 量之30％"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_16",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 16,
+      "question": "有關常用於老人營養篩檢及營養評估量表，下列敘述何者正確？",
+      "options": {
+        "A": "Subjective Global Assessment適合用於偵測早期營養不良",
+        "B": "",
+        "D": "Mini Nutritional Assessment適合一般照顧者及專業人員使用",
+        "C": "Malnutrition Screening Tool須評量疾病嚴重程度"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_17",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 17,
+      "question": "相較於訪員當面訪問調查，以電話訪問進行膳食評估時，下列敘述何者錯誤？",
+      "options": {
+        "A": "較省時、省經費",
+        "B": "受訪者較有安全感",
+        "C": "換算食物份量時易造成測量誤差",
+        "D": "不適用於大規模調查"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_18",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 18,
+      "question": "以食物頻率問卷進行膳食評估，下列敘述何者錯誤？",
+      "options": {
+        "A": "可自我填寫或線上填答",
+        "B": "選項具文化敏感度（culturally sensitive）",
+        "C": "常用於大型跨國研究比較飲食攝取狀況",
+        "D": "結果較飲食記錄法具代表性"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_19",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 19,
+      "question": "有關嬰幼兒之體位評估，下列何者較不適用？",
+      "options": {
+        "A": "Growth charts",
+        "B": "MI（body mass index）",
+        "C": "Head circumference",
+        "D": "Waist circumference"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_20",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 20,
+      "question": "某人指甲凹陷呈湯匙狀，可能是下列何種營養素缺乏？",
+      "options": {
+        "A": "Iodine",
+        "B": "Iron",
+        "C": "opper",
+        "D": "Zinc"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_21",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 21,
+      "question": "我國成年人腰圍超過多少公分，可能會增加與肥胖相關疾病的危險性？",
+      "options": {
+        "A": "女性75公分，男性85公分",
+        "B": "女性75公分，男性90公分",
+        "C": "女性80公分，男性85公分",
+        "D": "女性80公分，男性90公分"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_22",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 22,
+      "question": "根據美國CDC（Centers for Disease Control and Prevention）提出學校健康教育指引，青少年最理想的",
+      "options": {
+        "A": "家庭",
+        "B": "學校",
+        "C": "網路",
+        "D": "個人"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_23",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列何種膳食調查方法適合調查長期飲食習慣？",
+      "options": {
+        "A": "飲食記錄法",
+        "B": "24小時飲食回憶法",
+        "C": "食物秤重盤存法",
+        "D": "食物攝取頻率法"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_24",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 24,
+      "question": "有關迷你營養評估（Mini Nutritional Assessment, MNA）之敘述，下列何者錯誤？",
+      "options": {
+        "A": "須得知個案之身體質量指數",
+        "B": "須了解個案近三個月食慾變化",
+        "C": "以小腿圍可評估肌肉量的項目",
+        "D": "以三頭肌皮層厚度評估體脂肪"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_25",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 25,
+      "question": "缺乏維生素B 2 可能會有的症狀，不包括下列何者？",
+      "options": {
+        "A": "舌炎",
+        "B": "眼畏光",
+        "C": "口角炎",
+        "D": "點狀皮下出血"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_26",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 26,
+      "question": "執行一項調查，若問卷回收率太低，可能造成何種問題？",
+      "options": {
+        "A": "無法執行統計分析",
+        "B": "收集到的數據有選擇性偏差",
+        "C": "無法充分表現問卷設計的品質",
+        "D": "如果調查為隨機取樣，就不會有問題"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_27",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 27,
+      "question": "有關設計問卷題目的原則，下列敘述何者錯誤？",
+      "options": {
+        "A": "避免使用過於淺顯的文字",
+        "B": "避免有暗示作用的問題",
+        "C": "避免雙重否定的問題",
+        "D": "避免句子過長"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_28",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 28,
+      "question": "關於教學目標之敘述，下列何者錯誤？",
+      "options": {
+        "A": "應以教學者為主體",
+        "B": "每個目標應只包含1項學習結果",
+        "C": "可敘述學習者在何種情境下表現出預期行為",
+        "D": "所敘述的標準是行為表現之最低可接受程度"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_29",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 29,
+      "question": "在學員飲食行為尚未改變前，營養教案可考慮介入行為改變之中介因子，不包括下列何者？",
+      "options": {
+        "A": "結果期待",
+        "B": "知覺危機",
+        "C": "自我效能",
+        "D": "自我管理"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_30",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 30,
+      "question": "某國小實施多喝牛奶長高高計畫，下面策略何者屬於PRECEDE-PROCEED的增強因素（reinforcing factor）？",
+      "options": {
+        "A": "牛奶試喝活動",
+        "B": "牛奶與健康畫畫比賽",
+        "C": "親子共同完成「牛奶與健康」學習單",
+        "D": "福利社牛奶特價月"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_32",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 32,
+      "question": "代表：",
+      "options": {
+        "A": "開放式問題（Open-ended questions）",
+        "B": "機會（Opportunity）",
+        "C": "客觀的（Objective）",
+        "D": "原型的（Original）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_33",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 33,
+      "question": "查核某社區營養計畫所應負起之社會責任，屬於下列何種控制機制？",
+      "options": {
+        "A": "計畫經營控制",
+        "B": "財務性控制",
+        "C": "有效性控制",
+        "D": "策略控制"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_34",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 34,
+      "question": "某體重控制計畫的結果顯示，75%的參與者達到預期目標體重值，屬於下列何種評價？",
+      "options": {
+        "A": "效率",
+        "B": "效能",
+        "C": "效果",
+        "D": "效價"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_35",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 35,
+      "question": "糖尿病營養教育介入後，可降低病人糖化血色素，屬於下列何者計畫成效評估？",
+      "options": {
+        "A": "過程評估",
+        "B": "臨床結果評估",
+        "C": "病人結果評估",
+        "D": "成本評估"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_36",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 36,
+      "question": "兩位不同縣市的社區營養師，採用不同的方案進行體重控制計畫（場地、講師、課程時數、使用設備等不 同），計畫執行完畢後，計算每降低1公斤體重所需要的費用，比較兩方案的成本分析，屬於下列何種分析 方法？",
+      "options": {
+        "A": "成本利益（cost-benefit）",
+        "B": "成本效益（cost-effectiveness）",
+        "C": "成本最小值（cost-minimization）",
+        "D": "成本價值（cost-utility）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_37",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 37,
+      "question": "完成社區需求評估後，訂定解決問題的優先順序時，通常不考慮下列何者？",
+      "options": {
+        "A": "問題的大小",
+        "B": "問題的效益",
+        "C": "問題的嚴重性",
+        "D": "問題的目標對象"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_38",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 38,
+      "question": "有關歷次全國營養調查中飲食評估之敘述，下列何者錯誤？",
+      "options": {
+        "A": "1980～1988年，調查對象未針對年齡層來進行調查",
+        "B": "1993～2002年，調查對象針對不同年齡層分次進行調查",
+        "C": "2005～2008年以後，調查對象針對全國2個月以上民眾進行調查",
+        "D": "2013年起，每年進行數據收集"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_39",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 39,
+      "question": "有關歷次全國營養調查內容之敘述，下列何者錯誤？",
+      "options": {
+        "A": "1986～1988年進行家戶飲食攝取狀況與體位調查",
+        "B": "1993～1996年以後，分年齡層，進行飲食、營養、健康狀況調查",
+        "C": "2001～2002年以後開始進行體檢測量",
+        "D": "2005～2008年首次以CAPI（Computer Assisted Personal Interview）進行訪視"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_40",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 40,
+      "question": "比較1993～1996年、2005～2008年與2013～2016年國民營養健康狀況變遷調查結果，有關國人慢性病的盛行 率，下列敘述何者錯誤？",
+      "options": {
+        "A": "19歲以上國人之糖尿病盛行率持續上升",
+        "B": "歷次調查發現，代謝症候群盛行率有增加的趨勢，且女性增加幅度大於男性",
+        "C": "2013～2016年調查發現，45歲以上人口約20～30％有血脂肪異常問題",
+        "D": "2013～2016年調查發現，45歲以上糖尿病前期的盛行率，男性高於女性"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_41",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 41,
+      "question": "依據2013～2016年國民營養健康狀況變遷調查結果，有關國人維生素的營養狀況，下列敘述何者錯誤？",
+      "options": {
+        "A": "血液分析結果，維生素E測量值嚴重缺乏",
+        "B": "飲食攝取分析結果，維生素D與維生素E缺乏嚴重",
+        "C": "血液中維生D的濃度與地理分佈有關，呈現北低南高的現象",
+        "D": "各年齡層男女性，維生素A、C、B 1 、B 2 、菸鹼酸、B 6 、B 12 的平均攝取量皆高於DRIs 80%以上"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_42",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 42,
+      "question": "依據2013～2016國民營養健康狀況變遷調查結果，下列那幾類食物攝取最偏離每日飲食指南建議量？①全榖 雜糧類　②奶類　③豆魚蛋肉類　④蔬菜類　⑤水果類　⑥油脂及堅果種子類",
+      "options": {
+        "A": "①②③",
+        "B": "②③④",
+        "C": "①②④",
+        "D": "②④⑤"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_43",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 43,
+      "question": "食物、衛生和人類安全相互依賴，下列何者不是造成「糧食不安全」的直接原因？",
+      "options": {
+        "A": "糧食價格上漲",
+        "B": "糧食運輸中斷",
+        "C": "耕地減少",
+        "D": "能源短缺"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_44",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 44,
+      "question": "聯合國糧食及農業組織（Food and Agriculture Organization of the United Nations, FAO）提出監測永 續發展目標（Sustainable Development Goals, SDGs），核心目標 2：「消除飢餓」，該指標是確認糧食 不足的人口比率。下列對於此數據來源之敘述，何者正確？",
+      "options": {
+        "A": "藉由族群的年齡、性別及身高等資料，可換算出族群的熱量供應量",
+        "B": "藉由家庭消費和支出，調查糧食消費量，可得知族群獲得膳食熱量的不平等性",
+        "C": "藉由國家糧食平衡表，可換算出族群的最低熱量需求",
+        "D": "藉由全國健康保險資料庫，可得知膳食熱量不足的人口率"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_45",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 45,
+      "question": "世界衛生組織對一般健康成人的每日糖攝取建議為何？",
+      "options": {
+        "A": "少於10公克",
+        "B": "少於20公克",
+        "C": "低於建議總熱量的10%",
+        "D": "低於建議總熱量的15%"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_46",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 46,
+      "question": "種手段？",
+      "options": {
+        "A": "強制性手段",
+        "B": "消極性手段",
+        "C": "積極性手段",
+        "D": "擴散性手段"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_47",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 47,
+      "question": "下列何種抽樣方法所抽取的樣本，較具集中性與同質性？",
+      "options": {
+        "A": "簡單隨機抽樣（simple random sampling）",
+        "B": "系統隨機抽樣（systematic random sampling）",
+        "C": "分層隨機抽樣（stratified random sampling）",
+        "D": "集束隨機抽樣（cluster random sampling）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_48",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 48,
+      "question": "下列何者不屬於流行病學的研究範圍與方向？",
+      "options": {
+        "A": "社區疾病型態的描述",
+        "B": "疾病自然史與其三段五級的對策",
+        "C": "醫藥保健工作的設計與績效評估",
+        "D": "細胞訊息傳遞路徑探討"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_public_nutrition_49",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "公共衛生營養學",
+      "subject_tag": "public_nutrition",
+      "subject_name": "公共衛生營養學",
+      "stage_id": 0,
+      "number": 49,
+      "question": "若不吃蔬菜者得到癌症的風險為1.00，每週吃蔬菜小於1次者風險0.91，每週1～2次者風險0.91，每週3～4 次風險0.83，每週≧ 5次者的風險0.76，且p for trend = 0.001。下列敘述何者正確？",
+      "options": {
+        "A": "比起每週吃1～2次蔬菜者，每週吃3～4次蔬菜者，有顯著較低的癌症發生風險",
+        "B": "比起每週吃1～2次蔬菜者，每週吃5次以上蔬菜者，有顯著較低的癌症發生風險",
+        "C": "比起每週吃3～4次蔬菜者，每週吃5次以上蔬菜者，有顯著較低的癌症發生風險",
+        "D": "吃蔬菜頻率越高者，有顯著較低的癌症發生風險"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_1",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 1,
+      "question": "某團膳公司將白飯的蒸煮步驟列為重要管制點，並要求白飯蒸煮後之中心溫度要達85°C。下列何者符合食品 安全管制系統所述之驗效（Validation）？",
+      "options": {
+        "A": "管制界限訂定白飯蒸煮之中心溫度須達85°C以上才安全",
+        "B": "白飯蒸煮後若中心溫度未達85°C需重新加熱至90°C",
+        "C": "以金屬探針溫度計量測白飯蒸煮之中心溫度，確保達到85°C",
+        "D": "白飯蒸煮後中心溫度達85°C，經檢驗後未發現會造成食品腐敗或中毒之微生物"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_2",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 2,
+      "question": "依據食品安全管制系統準則之規定，下列何者正確？",
+      "options": {
+        "A": "同公司有兩個不同廠區（獨立廠址），只需成立一個管制小組以方便管理兩個廠區",
+        "B": "管制小組應該要確認產品的加工流程圖與生產現場作業一致，加工流程圖可簡要表示",
+        "C": "團體膳食業或餐飲業所設置專門職業人員可以由畜牧技師、獸醫師或水產養殖技師擔任",
+        "D": "未依規定設置專門職業人員之食品業者，依食品安全衛生管理法第47條第4款規定可處新臺幣3萬元以上300 萬元以下罰鍰"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_3",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 3,
+      "question": "依據食品用洗潔劑衛生標準，食品使用次氯酸鈉為消毒主成分，其殘留濃度以總有效氯計算為：",
+      "options": {
+        "A": "1 ppm以下",
+        "B": "2 ppm以下",
+        "C": "20 ppm以下",
+        "D": "200 ppm以下"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_4",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 4,
+      "question": "下列何者非屬食品良好衛生規範準則涵蓋之範圍？",
+      "options": {
+        "A": "從業人員",
+        "B": "作業場所",
+        "C": "設施衛生管理",
+        "D": "驗證制度"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_5",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 5,
+      "question": "依我國法規規定，以輻射照射下列食品時，何者不以防治蟲害或殺菌為其主要目的：",
+      "options": {
+        "A": "綠豆",
+        "B": "生薑",
+        "C": "香辛料",
+        "D": "稻米"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_6",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 6,
+      "question": "依據包裝食品營養標示應遵行事項規定，包裝食品之營養標示須標示糖含量，此處所稱之糖含量是指下列何 者？",
+      "options": {
+        "A": "10個碳數以下的低分子量醣類之總和",
+        "B": "葡萄糖等單醣之總和",
+        "C": "蔗糖等雙醣之總和",
+        "D": "單醣與雙醣之總和"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_7",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 7,
+      "question": "依據食品安全衛生管理法，對於食品器具、食品容器或包裝的材質名稱及耐熱溫度之標示規定中，若為二種 以上材質組成者，應如何標示？",
+      "options": {
+        "A": "僅需標示材質所占比例最高者",
+        "B": "僅需標示最耐高溫者",
+        "C": "僅需標示最不耐高溫者",
+        "D": "應就各種材質分別標示"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_8",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 8,
+      "question": "冷藏肉品表面形成黑色斑及產生霉味，可能是因為下列何種黴菌污染所導致？",
+      "options": {
+        "A": "青黴菌（Penicillium）",
+        "B": "沙雷氏菌（Serratia）",
+        "C": "麴菌（Aspergillus）",
+        "D": "梭黴菌（Fusarium）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_9",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 9,
+      "question": "在廚房要預防金黃色葡萄球菌的污染，應特別注意：",
+      "options": {
+        "A": "餐具",
+        "B": "用水",
+        "C": "砧板",
+        "D": "手指之傷口、膿瘡"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_10",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 10,
+      "question": "添加下列何種物質，可改變食物的滲透壓，延長其保存期限？",
+      "options": {
+        "A": "蔗糖",
+        "B": "酪蛋白",
+        "C": "維生素E",
+        "D": "多元不飽和脂肪酸"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_11",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 11,
+      "question": "下列何種微生物最適合於高還原電位的食品中生長？",
+      "options": {
+        "A": "絕對好氧菌",
+        "B": "微好氧菌",
+        "C": "兼性厭氧菌",
+        "D": "絕對厭氧菌"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_12",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 12,
+      "question": "將新鮮水果（Aw 0.99）加工製成中濕性食品水果乾，其水活性常介於：",
+      "options": {
+        "A": "0.93〜0.98",
+        "B": "0.85〜0.93",
+        "C": "0.61〜0.85",
+        "D": "0.60以下"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_13",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 13,
+      "question": "在肉製品、醬油中添加酚類或苯甲酸防腐劑，主要為了抑制那種微生物的生長？",
+      "options": {
+        "A": "酵母菌",
+        "B": "黴菌",
+        "C": "乳酸菌",
+        "D": "醋酸菌"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_14",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 14,
+      "question": "下列何種細菌是低酸性罐頭食品殺菌的目標菌？",
+      "options": {
+        "A": "Escherichia coli",
+        "B": "acillus subtilis",
+        "C": "lostridium botulinum",
+        "D": ""
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_15",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 15,
+      "question": "某一健康食品經傳統加工製程而得，該產品中含有非傳統食用之原料B，在我國沒有食用的紀錄，廠商表示 在他國有半世紀以上的食用歷史且無致癌性，則該項產品屬於健康食品安全性評估中的那一類？",
+      "options": {
+        "A": "第一類",
+        "B": "第二類",
+        "C": "第三類",
+        "D": "第四類"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_16",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 16,
+      "question": "依致癌物質之分類，試驗物質或其代謝物作用於標的細胞之遺傳因子且使其癌化者為何？",
+      "options": {
+        "A": "一級致癌物",
+        "B": "二級致癌物",
+        "C": "致癌促進劑",
+        "D": "致突變物"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_17",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 17,
+      "question": "安全性評估試驗中，由無毒害作用劑量（no observed adverse effect level, NOAEL）可以推算出下列何 者？",
+      "options": {
+        "A": "半致死劑量（50% lethal dose）",
+        "B": "半致死濃度（50% lethal concentration）",
+        "C": "每日攝取安全容許量（acceptable daily intake）",
+        "D": "安全係數（safety factor）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_18",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 18,
+      "question": "以安姆氏試驗法（Ames test）進行食品安全性評估，採用下列何種微生物測試？",
+      "options": {
+        "A": "",
+        "B": "Vibrio parahemolyticus",
+        "C": "lostridium botulinum",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_19",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 19,
+      "question": "通常使用半致死劑量（50% lethal dose, LD 50 ）來衡量動物實驗中樣品的急性毒性強弱，當LD 50 為下列何者 時，在毒性分級上可被歸類為實際上無毒（practically nontoxic）？",
+      "options": {
+        "A": "50～500 mg/kg",
+        "B": "500～1,000 mg/kg",
+        "C": "1～3 g/kg",
+        "D": "5～15 g/kg"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_20",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 20,
+      "question": "下列何種甜味劑不適用於苯丙酮尿症（phenylketonuria，PKU）患者？",
+      "options": {
+        "A": "山梨醇",
+        "B": "阿斯巴甜",
+        "C": "糖精",
+        "D": "甜菊糖"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_21",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 21,
+      "question": "有關含烷基苯磺酸鹽類界面活性劑之食品用洗潔劑之特性，下列敘述何者正確？",
+      "options": {
+        "A": "軟性洗潔劑的毒性較硬性者為強",
+        "B": "直鏈式烷基苯磺酸鹽之半衰期較長",
+        "C": "一般家庭多用硬性洗潔劑",
+        "D": "烷基具分支構造者為軟性洗潔劑"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_22",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 22,
+      "question": "有關美耐皿（melamine）餐具的敘述，下列何者正確？",
+      "options": {
+        "A": "美耐皿是由甲醛與酚聚合製成",
+        "B": "美耐皿餐具之水溶出試驗要求甲醛為陰性",
+        "C": "美耐皿是一種熱塑性（thermoplastic）樹脂",
+        "D": "我國衛生法規規定美耐皿餐具之砷、鉛限量各須小於100 ppm"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_23",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列何者為能耐蒸汽殺菌與微波加熱之食品塑膠包裝材料？",
+      "options": {
+        "A": "聚對苯二甲酸乙二酯（polyethylene terephthalate, PET）",
+        "B": "聚乳酸（polylactic acid, PLA）",
+        "C": "聚氯乙烯（polyvinyl chloride, PVC）",
+        "D": "聚丙烯（polypropylene, PP）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_24",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 24,
+      "question": "用於消毒食品器具容器包裝等食品接觸面之四級銨化合物（quaternary ammonium compounds），其特性何 者正確？",
+      "options": {
+        "A": "殺菌作用機制之一為影響細菌細胞壁的功能",
+        "B": "為陰離子系界面活性劑",
+        "C": "溶於熱水中使用時會降低其殺菌效果",
+        "D": "針對不同之四級銨種類，我國法規訂有從100至200 ppm間之使用濃度限量"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_25",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 25,
+      "question": "依據「食品安全衛生管理法」，下列何者非食品器具、容器或包裝應標示項目？",
+      "options": {
+        "A": "有效日期；於必要時得標示製造日期",
+        "B": "材質名稱及耐熱溫度",
+        "C": "淨重、容量或數量",
+        "D": "使用注意事項或微波等其他警語"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_26",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 26,
+      "question": "依據食品器具容器包裝衛生標準之規定，下列何種塑膠製品之DEHP、DBP、BBP、DIDP、DINP、DMP、DNOP、",
+      "options": {
+        "D": "聚氯乙烯（polyvinyl chloride, PVC）",
+        "A": "聚碳酸酯（polycarbonate, PC）",
+        "B": "聚丙烯（polypropylene, PP）",
+        "C": "聚對苯二甲酸乙二酯（polyethylene terephthalate, PET）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_27",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 27,
+      "question": "有關衛生福利部公告之「免洗筷衛生標準」何者正確？",
+      "options": {
+        "A": "外觀雖少許發霉，但未檢出真菌毒素",
+        "B": "過氧化氫殘留量100 ppm以下",
+        "C": "二氧化硫殘留量500 ppm以下",
+        "D": "聯苯殘留量100 ppm以下"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_28",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 28,
+      "question": "下列關於諾羅病毒（Norovirus）之敘述，何者錯誤？",
+      "options": {
+        "A": "可藉由人群聚集方式而引發人畜共通傳染病（zoonosis）",
+        "B": "屬於糞便經口傳染之食源性疾病（foodborne illness）",
+        "C": "常在秋、冬季造成腹瀉群聚事件",
+        "D": "會引起急性腸胃炎（gastroenteritis）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_29",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 29,
+      "question": "下列關於金黃色葡萄球菌（Staphylococcus aureus）之敘述，何者錯誤？",
+      "options": {
+        "A": "此菌為革蘭氏陽性菌，兼性厭氧",
+        "B": "常見引起食物中毒的是A型腸毒素",
+        "C": "此菌易因人體化膿傷口污染食品",
+        "D": "屬於細菌性感染型食物中毒菌"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_30",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 30,
+      "question": "下列食品與其有害成分之組合，何者錯誤？",
+      "options": {
+        "A": "生蛋白，avidin",
+        "B": "棉籽油，gossypol",
+        "C": "金針花，solanine",
+        "D": "蘆薈，aloin"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_31",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 31,
+      "question": "下列何種病原菌之致病能力與其是否具有溶血反應有關？①侵入型大腸桿菌　②腸炎弧菌　③李斯特菌　④ 肉毒桿菌",
+      "options": {
+        "A": "①②",
+        "B": "③④",
+        "C": "①④",
+        "D": "②③"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_32",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 32,
+      "question": "下列何種環境污染物不會引起貧血症狀？",
+      "options": {
+        "A": "砷",
+        "B": "鉛",
+        "C": "鋁",
+        "D": "鋅"
+      },
+      "answer": "A",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "113100_food_safety_33",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 33,
+      "question": "計算食品中化學物質殘留容許量的標準時，不需使用下列何種數據？",
+      "options": {
+        "A": "食品消耗係數",
+        "B": "每日攝取安全容許量（ADI）",
+        "C": "無作用劑量（NOEL）",
+        "D": "參考劑量（RfD）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_34",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 34,
+      "question": "下列何種胺基酸的裂解物，常出現於高溫燒烤之素肉製品，且該物質具致突變性？",
+      "options": {
+        "A": "絲胺酸",
+        "B": "胱胺酸",
+        "C": "離胺酸",
+        "D": "色胺酸"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_35",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 35,
+      "question": "在酸水解黃豆的化學醬油製作過程中，可能會產生下列何種有害物質？",
+      "options": {
+        "A": "單氯丙二醇（3-monochloropropane-1,2-diol）",
+        "B": "異環胺類化合物（heterocyclic amines）",
+        "C": "鄰苯二甲酸二（2-乙基己基）酯（DEHP）",
+        "D": "順丁烯二酸酐（maleic anhydride）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_36",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 36,
+      "question": "具細胞毒性的蕈類毒性大，誤食時致死率高。有關這類食物中毒，下列敘述何者正確？",
+      "options": {
+        "A": "蟾蜍色胺（bufotenin）是一種細胞毒素",
+        "B": "條蕈（Amanita phalloides）上的phallotoxin經細胞酵素代謝後會產生導致肝細胞受損",
+        "C": "具細胞毒性的蕈類一般色彩鮮豔容易辨認",
+        "D": "此類蕈類毒素對熱不安定"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_37",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 37,
+      "question": "下列何者不是合法之食用色素？",
+      "options": {
+        "A": "紅色七號（erythrosine）",
+        "B": "紅色二號（orange B）",
+        "C": "黃色四號（tartrazine）",
+        "D": "黃色五號（sunset yellow）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_38",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 38,
+      "question": "黃變米（yellowed rice）主要是由下列那一屬的微生物污染所致？",
+      "options": {
+        "A": "Rhizopus",
+        "B": "Fusarium",
+        "C": "laviceps",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_39",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 39,
+      "question": "細菌生長曲線四個時期中，那一個時期的菌數最沒有變化，但細胞大小會有改變，如能即時控制將可降低食 安事件的發生率？",
+      "options": {
+        "A": "遲滯期（lag phase）",
+        "B": "對數期（log phase）",
+        "C": "穩定期（stationary phase）",
+        "D": "死亡期（death phase）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_40",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 40,
+      "question": "河豚毒素屬於神經性毒素，通常在河豚的那一部位其毒素含量最低？",
+      "options": {
+        "A": "卵巢",
+        "B": "魚腸",
+        "C": "魚肝",
+        "D": "魚肉"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_41",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 41,
+      "question": "依據食品良好衛生規範準則，有關食品製程及儲存之溫度管理，下列敘述何者錯誤？",
+      "options": {
+        "A": "冷藏是指7°C以下，凍結點以上",
+        "B": "熱藏需在55°C以上",
+        "C": "冷凍是指-18°C以下",
+        "D": "低溫食品理貨及裝卸應在15°C以下之場所進行"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_42",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 42,
+      "question": "下列何者不是「食品從業人員正確洗手步驟」所需之設施及物品？",
+      "options": {
+        "A": "擦手紙與腳踏開蓋式垃圾桶",
+        "B": "流動自來水",
+        "C": "洗手乳與菜瓜布",
+        "D": "烘手機與液體肥皂"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_43",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 43,
+      "question": "若實施食品安全管制系統，下列有關人員教育訓練之敘述，何者錯誤？",
+      "options": {
+        "A": "當年度之HACCP持續教育時數可抵免衛生講習時數",
+        "B": "依規定設置之專門職業人員要受HACCP訓練課程至少30小時，且領有合格證書",
+        "C": "管制小組成員三年至少12小時的HACCP持續教育",
+        "D": "管理衛生人員要受HACCP訓練課程60小時並領有合格證書"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_44",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 44,
+      "question": "有關食品管理之敘述，下列何者正確？",
+      "options": {
+        "A": "先進先出是以進貨日期為準而不是有效日期",
+        "B": "定期檢查食品有效期限，過期品予以拆封銷毀",
+        "C": "過期兩天的罐頭食品外觀還是正常者，可以送給弱勢族群以免浪費",
+        "D": "拆封後的食品保存狀態佳者，其保存期限跟包裝標示一樣"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_45",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 45,
+      "question": "依據食品良好衛生規範準則，有關運輸管制之敘述，下列何者錯誤？",
+      "options": {
+        "A": "為達到最有效之運輸效率並確保穩固，物品應充分緊密堆疊",
+        "B": "車輛於裝載前應檢查其裝備，並保持清潔衛生",
+        "C": "運輸有污染成品、半成品或原料之虞的物品或包裝材料，應做好措施以防止交叉污染",
+        "D": "運輸過程應避免日照、雨淋與撞擊等，並保持穩定的溫濕度"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_46",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 46,
+      "question": "有關餐飲作業場所動線規劃，下列何者錯誤？",
+      "options": {
+        "A": "人流：配膳區→烹調區→洗滌區",
+        "B": "物流：驗收區→烹調區→配膳區",
+        "C": "水流：加工調理區→內包裝室→外包裝室",
+        "D": "氣流：配膳區→烹調區→洗滌區"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_47",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 47,
+      "question": "脂質過度加熱會導致甘油劣變，生成下列何種刺激性物質？",
+      "options": {
+        "A": "聚碳酸酯（polycarbonate）",
+        "B": "偏二氯乙烯（vinylidene chloride）",
+        "C": "異環胺類化合物（heterocyclic amines）",
+        "D": "丙烯醛（acrolein）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_48",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 48,
+      "question": "我國對於基因改造食品的標示管理，下列敘述何者正確？",
+      "options": {
+        "A": "非基因改造食品原料非有意攙入基因改造食品原料超過3％，須標示「基因改造」等字樣",
+        "B": "以基因改造食品原料製造之高層次加工品（如黃豆油、醬油、玉米糖漿等），得免標示「基因改造」等字 樣",
+        "C": "散裝食品可以不用標示「基因改造」等字樣",
+        "D": "我國生產的咖啡豆因為確實不是基因改造食品，所以能自行宣稱「非基因改造」"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_49",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 49,
+      "question": "認定基因改造食品具有「實質等同」，主要取決於下列那兩項特性？①遺傳表現型　②組成分　③過敏原 ④標識基因　⑤病原性",
+      "options": {
+        "A": "①②",
+        "B": "③④",
+        "C": "④⑤",
+        "D": "①⑤"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_food_safety_50",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "食品衛生與安全",
+      "subject_tag": "food_safety",
+      "subject_name": "食品衛生與安全",
+      "stage_id": 0,
+      "number": 50,
+      "question": "依據包裝食品營養宣稱應遵行事項之規定，「可補充攝取」營養宣稱之營養素，不包括下列何者？",
+      "options": {
+        "A": "維生素 A",
+        "B": "維生素 C",
+        "C": "維生素 D",
+        "D": "維生素 E"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_4",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 4,
+      "question": "請試述下列新生兒先天性疾病之代謝特徵及飲食治療原則。（每小題5分，共15分） （一）phenylketonuria （二）maple syrup urine disease （三）galactosemia 二、測驗題 1. 下列何者為提供具成本效益（cost-effective）營養照護（nutrition care process）的第一步？",
+      "options": {
+        "A": "oral intake fortified food",
+        "B": "nasojejunal feeding",
+        "C": "total parenteral nutrition",
+        "D": "gastrostomy"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_5",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 5,
+      "question": "腸道營養與靜脈營養之併發症比較，下列敘述何者錯誤？",
+      "options": {
+        "A": "腸道營養容易發生全身性發炎反應（SIRS）",
+        "B": "對於極度營養不良之個案，二者均可能發生refeeding syndrome",
+        "C": "靜脈營養較易有膽汁鬱積（cholestasis）",
+        "D": "靜脈營養易導致腸黏膜組織萎縮"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_6",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 6,
+      "question": "有關使用全靜脈營養（TPN）時醣類過量的併發症，下列何者最不常見？",
+      "options": {
+        "A": "高血糖",
+        "B": "脂肪肝",
+        "C": "高血磷",
+        "D": "高二氧化碳血症"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_7",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 7,
+      "question": "長期使用corticosteroids類的藥物，如prednisone會導致電解質不平衡和營養素的流失，下列調整何者最適 當？",
+      "options": {
+        "A": "補充鈉",
+        "B": "補充鈣",
+        "C": "限制鉀",
+        "D": "限制鎂"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_8",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 8,
+      "question": "人體脂肪堆積的情形，下列敘述何者錯誤？",
+      "options": {
+        "A": "ndroid obesity常好發於40歲前女性",
+        "B": "",
+        "C": "gynoid obesity的脂肪分布大多在臀部及大腿",
+        "D": "gynoid obesity罹患心血管疾病的機率較低"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_9",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 9,
+      "question": "有關以Very-Low-Calorie Diet減重的敘述，下列何者最不適當？",
+      "options": {
+        "A": "不易罹患膽結石",
+        "B": "易疲勞無力暈眩",
+        "C": "易電解質不平衡",
+        "D": "易便秘或腹瀉"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_10",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 10,
+      "question": "治療神經性厭食症病人飲食中蛋白質、醣類、脂質比例建議為何？",
+      "options": {
+        "A": "20%、50%、30%",
+        "B": "10%、50%、40%",
+        "C": "30%、40%、30%",
+        "D": "25%、40%、35%"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_11",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 11,
+      "question": "缺乏維生素D是影響老年人骨質健康和骨折危險性的因素之一，有關老年人缺乏維生素D的危險因子，下列何 者最不適當？",
+      "options": {
+        "A": "皮下脂肪變厚",
+        "B": "日曬機會減少",
+        "C": "腎功能下降",
+        "D": "體脂肪量增加"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_12",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 12,
+      "question": "有關rheumatoid arthritis，下列敘述何者正確？",
+      "options": {
+        "A": "藥物治療主要使用非固醇類抗發炎藥",
+        "B": "男性發生率較高",
+        "C": "長期高油飲食引發的關節炎症",
+        "D": "飲食建議補充n-6 PUFA"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_13",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 13,
+      "question": "某些腸胃道疾病會建議使用low FODMAPs diet，下列那一種食物成分不在low FODMAPs diet的限制之內？",
+      "options": {
+        "A": "果糖",
+        "B": "糖醇",
+        "C": "半乳寡糖",
+        "D": "纖維素"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_14",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 14,
+      "question": "肝硬化病人腹水的原因和許多因素有關，下列何者錯誤？",
+      "options": {
+        "A": "門靜脈高壓（portal hypertension）",
+        "B": "腎素（renin）與醛固酮（aldosterone）分泌被抑制",
+        "C": "低白蛋白血症（hypoalbuminemia）",
+        "D": "抗利尿激素（ADH）分泌增加"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_15",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 15,
+      "question": "關於膽囊疾病的營養處置，下列敘述何者最不適當？",
+      "options": {
+        "A": "膽汁淤積可能和長期NPO有關",
+        "B": "急性膽囊發炎須暫停進食",
+        "C": "慢性膽囊發炎建議攝取較低脂肪的飲食，約占總熱量25～30%",
+        "D": "膽囊切除術後通常需要終生使用低脂肪飲食，建議占總熱量20%以下"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_16",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 16,
+      "question": "有關cholelithiasis的危險因子，下列敘述何者錯誤？",
+      "options": {
+        "A": "",
+        "C": "high-fat diet",
+        "B": "male gender",
+        "D": "rapid weight loss"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_17",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 17,
+      "question": "下列與短腸症相關之敘述，何者錯誤？",
+      "options": {
+        "A": "小腸前段100公分，負責大部分營養素吸收作用",
+        "B": "小腸切除30%，即會有短腸症",
+        "C": "",
+        "D": "ileum切除，會增加結石的風險"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_18",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 18,
+      "question": "有關第2型糖尿病婦女懷孕，下列何者錯誤？",
+      "options": {
+        "A": "血糖儘量控制在接近正常，能減少孕產期合併症，但也增加低血糖的風險",
+        "B": "胰島素的需求在懷孕第二期及第三期會大幅度增加，生產前可能會到達孕前需求的2～3倍",
+        "C": "應攝取消夜以避免半夜低血糖",
+        "D": "懷孕期間熱量或醣類攝取不足可能引發酮血症，建議規律地在睡前監測尿酮"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_19",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 19,
+      "question": "下列檢驗值何者屬於「糖尿病前期」？",
+      "options": {
+        "A": "隨機血糖值：210 mg/dL",
+        "B": "糖化血色素（A 1C ）：6.8%",
+        "C": "75公克口服葡萄糖耐糖試驗（OGTT）：2小時血糖值126 mg/dL",
+        "D": "空腹血糖值：112 mg/dL"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_20",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 20,
+      "question": "關於降血糖藥物的主要作用機制，下列敘述何者正確？",
+      "options": {
+        "A": "carbose為α-glucosidase抑制劑，延緩醣類吸收",
+        "B": "iguanides類刺激胰臟β-cell分泌胰島素",
+        "C": "thiazolidinediones類減少周邊組織對葡萄糖的利用率",
+        "D": ""
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_21",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 21,
+      "question": "針對胰島素注射的糖尿病病人應自我血糖監控（self-monitoring of blood glucose），下列例行監測時機 何者最適當？",
+      "options": {
+        "A": "每天起床後半小時內",
+        "B": "三餐飯後及睡前",
+        "C": "三正餐及點心前",
+        "D": "每天監控至少8次"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_22",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 22,
+      "question": "王小姐自小罹患腎絲球疾病（glomerular disease），一直門診追蹤控制，在大學期間發生食慾下降、疲倦 乏力、嗜睡、眼皮四周及下肢水腫，體重增加，轉入院檢查後發現尿中蛋白3＋～4＋、血液albumin 1.8 g/dL（低白蛋白血症）， cholesterol 580 mg/dL、Na 125 mEq/L（低血鈉），被診斷為nephrotic syndrome。請依序回答下列三題： 王小姐的飲食建議為何？",
+      "options": {
+        "A": "蛋白質每公斤體重1.5公克、低膽固醇、高鈉飲食",
+        "B": "蛋白質每公斤體重1.5公克、低膽固醇、低鈉飲食",
+        "C": "蛋白質每公斤體重0.8公克、低膽固醇、高鈉飲食",
+        "D": "蛋白質每公斤體重0.8公克、低膽固醇、低鈉飲食"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_23",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 23,
+      "question": "王小姐畢業後出國工作一直沒有追蹤腎功能，十年後返臺進行全身健康檢查發現glomerular filtration rate為42 mL/min/1.73m 2 、三個月後再追蹤仍為40 mL/min/1.73m 2 ，王小姐目前為chronic kidney disease 的第幾期？",
+      "options": {
+        "A": "G2",
+        "B": "G3a",
+        "C": "G3b",
+        "D": "G4a"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_24",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 24,
+      "question": "王小姐身高162公分、體重60公斤，平日有健身重訓，在此階段，下列何飲食處方最不適合王小姐？",
+      "options": {
+        "A": "熱量2,100大卡、蛋白質45公克",
+        "B": "熱量2,100大卡、蛋白質36公克",
+        "C": "熱量2,100大卡、蛋白質90公克",
+        "D": "熱量1,680大卡、蛋白質36公克"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_25",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 25,
+      "question": "預防鈣質腎結石復發的飲食原則，下列何者最不適當？",
+      "options": {
+        "A": "降低動物性蛋白質攝取量",
+        "B": "降低鈣質攝取量",
+        "C": "降低鈉的攝取量",
+        "D": "降低草酸的攝取量"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_26",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 26,
+      "question": "65歲的丁先生平日安靜狀態下的血壓約為SBP 140～145 mmHg，DBP 85～88 mmHg。丁先生的血壓狀態如何？",
+      "options": {
+        "A": "正常",
+        "B": "偏高（elevated）但尚未達高血壓",
+        "C": "高血壓第1期（stage 1）",
+        "D": "高血壓第2期（stage 2）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_27",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 27,
+      "question": "有關心臟衰竭（heart failure）病人的營養狀況和飲食治療策略，下列何者錯誤？",
+      "options": {
+        "A": "補充維生素B 12 （500微克／天）可以改善左心室血液射出率和症狀",
+        "B": "必須謹慎使用鈣補充劑，以免惡化病人心律不整",
+        "C": "環形利尿劑治療可能增加病人維生素B 1 缺乏的風險",
+        "D": "鎂缺乏與預後較差有關，應測量病人血鎂濃度"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_28",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 28,
+      "question": "與心血管疾病風險相關的發炎指標（Inflammatory markers），下列何者最不相關？",
+      "options": {
+        "A": "fibrinogen",
+        "B": "glutathione",
+        "C": "-reactive protein",
+        "D": "trimethylamine-N-oxide"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_29",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 29,
+      "question": "心臟移植術後病人之營養建議，下列何者錯誤？",
+      "options": {
+        "A": "術後長期維持日常所需之熱量需求為30～35 kcal/kg/day",
+        "B": "術後住院期間，蛋白質建議1.3～2.0 g/kg/day",
+        "C": "碳水化合物建議占總熱量的50%以下",
+        "D": "術後血糖過高時，脂肪占總熱量，可大於30%"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_30",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 30,
+      "question": "有關重大燒燙傷後水分補充的方式及量，下列敘述何者錯誤？",
+      "options": {
+        "A": "輸液復甦（fluid resuscitation）需在燒燙傷後24～48小時內立即進行",
+        "B": "輸液復甦給予的量為2～4 mL/kg bw/% 總燒傷面積（total body surface area, TBSA），且在燒傷後12小 時內需灌輸計算總量的一半",
+        "C": "輸液復甦完成後水分補充仍要足夠，由傷口流失的水分亦需補充，其計算公式為2～3.1 mL/kg bw/% TBSA/day",
+        "D": "需要監測血中鈉離子含量、滲透壓之改變及體重變化來觀察液體補充之狀態"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_31",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 31,
+      "question": "當病人進行腹腔手術或是有腸道瘻管時，下列對於手術後之併發症及營養照顧敘述何者錯誤？",
+      "options": {
+        "A": "腹腔手術後常有腹部腔室症候群（abdominal compartment syndrome），為腹腔內壓增加而造成腹腔內的 器官缺血",
+        "B": "計算腹腔手術後病人蛋白質攝取量時，需考慮腹腔引流液所造成的蛋白質流失，每流失1公升的引流液需額 外給予15～30公克的蛋白質",
+        "C": "對腹腔手術後病人如處於穩定時期，不需要額外補充灌輸液或是增壓劑，可給予腸道營養支持",
+        "D": "如腸道瘻管液體流出超過500毫升／天時，則需要立即使用腸道營養支持方式補充營養素"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_32",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 32,
+      "question": "目前重症病人營養治療目標，最不需要考慮下列何者？",
+      "options": {
+        "A": "ttenuate the metabolic response to stress",
+        "B": "increase body weight",
+        "C": "modulate immune response",
+        "D": "prevent oxidative cellular injury"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_33",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 33,
+      "question": "單純飢餓與高生理壓力下之代謝比較，下列那一項最不常見？",
+      "options": {
+        "A": "壓力下呼吸商（respiratory quotient, RQ）較低",
+        "B": "飢餓下常會產生酮體（ketone body）",
+        "C": "壓力下有較高的糖質新生作用及基礎能量消耗（BEE）",
+        "D": "壓力下有較高的骨骼肌蛋白質分解及負氮平衡"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_34",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 34,
+      "question": "有關營養不良對肺部系統的影響，下列敘述何者不適當？",
+      "options": {
+        "A": "蛋白質和鐵缺乏會使血液hemoglobin濃度下降，影響紅血球攜氧能力",
+        "B": "當細胞內鈣、鎂、磷和鉀濃度過低時會影響呼吸肌的功能",
+        "C": "hypoalbuminemia 會使血漿中膠質滲透壓下降，可能引發肺水腫",
+        "D": "肺病病人需注意膠原蛋白的足夠攝取，以強化肺部的結締組織"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_35",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 35,
+      "question": "慢性阻塞性肺病（COPD）病人容易罹患骨質疏鬆症（osteoporosis）的可能原因，下列何者較無關？",
+      "options": {
+        "A": "抽菸",
+        "B": "自體免疫疾病",
+        "C": "類固醇的使用",
+        "D": "維生素D缺乏"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_36",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 36,
+      "question": "接受化療藥物的病人，當發生噁心和嘔吐時，其飲食相關建議下列何者正確？",
+      "options": {
+        "A": "進食後，頭部位置要抬高30分鐘",
+        "B": "增加高濃度食物，以提高熱量攝取",
+        "C": "飯前散步促進腸胃道蠕動",
+        "D": "供應含有液體或醬汁的食物"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_37",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 37,
+      "question": "用於癌症病人之營養篩選或評估量表，下列何者包括「活動狀態」之評估？",
+      "options": {
+        "A": "Patient-Generated Subjective Global Assessment（PG-SGA）",
+        "B": "Malnutrition Screening Tool（MST）",
+        "C": "Malnutrition Universal Screening Tool（MUST）",
+        "D": "Nutrition Risk Screening 2002（NRS 2002）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_38",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 38,
+      "question": "活動量　③藥物　④身體功能　⑤健康行為　⑥知識與信念",
+      "options": {
+        "A": "①②③④⑤⑥",
+        "B": "僅①②④⑤⑥",
+        "C": "僅①②③⑥",
+        "D": "僅①②④⑤"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_39",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 39,
+      "question": "阿茲海默症（Alzheimer Disease）病人進展至那一階段時會出現無法順利咀嚼並吞嚥食物的問題？",
+      "options": {
+        "A": "norexia",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_diet_therapy_40",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "膳食療養學",
+      "subject_tag": "diet_therapy",
+      "subject_name": "膳食療養學",
+      "stage_id": 0,
+      "number": 40,
+      "question": "有吞嚥障礙者，如需使用國際吞嚥障礙飲食標準化創辦組織（the International Dysphagia Diet Standardisation Initiative, IDDSI）第四級飲食，下列食物組合那一項較適宜？",
+      "options": {
+        "A": "糙米飯泥、紅蘿蔔泥、紅龍果泥、豆花",
+        "B": "糙米粥、紅蘿蔔粒、紅龍果泥、豆腐",
+        "C": "糙米飯、紅蘿蔔丁、紅龍果丁、板豆腐",
+        "D": "糙米飯泥、紅蘿蔔汁、紅龍果汁、豆漿"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_3",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 3,
+      "question": "請依清潔衛生原則說明團膳作業中三槽式餐具洗滌之流程與餐具有效殺菌方法。（15分） 二、測驗題 1. 有關營利性和非營利性團膳的敘述，下列何者正確？",
+      "options": {
+        "A": "45",
+        "B": "75",
+        "C": "100",
+        "D": "225"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_4",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 4,
+      "question": "有關循環菜單之敘述，下列何者最不適當？",
+      "options": {
+        "A": "依機構適合之天數設計循環菜單依序循環使用",
+        "B": "循環菜單使用多次可增加員工操作熟練度",
+        "C": "嚴格遵守循環週期內，應盡量避免連續2天相同菜餚",
+        "D": "若遇颱風或節慶時不須修正菜單"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_5",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 5,
+      "question": "有關2019年新版食物代換表內容，下列敘述何者正確？",
+      "options": {
+        "A": "3份（Ex）蝦米為45公克",
+        "B": "雞蛋屬於低脂－豆魚蛋肉類",
+        "C": "2.5份（Ex）雞胸肉為87.5公克",
+        "D": "豬大腸屬於中脂－豆魚蛋肉類"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_6",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 6,
+      "question": "依教育部公告之「學校午餐食物內容及營養基準」，下列關於午餐設計應注意事項，何者正確？",
+      "options": {
+        "A": "每日至少有2種以上蔬菜供應",
+        "B": "油炸品頻率1週不超過3次",
+        "C": "公告菜單只需呈現菜餚名稱",
+        "D": "應儘量避免提供甜品，供應頻率1週不超過2次"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_7",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 7,
+      "question": "有關食品包裝標示之敘述，下列何者正確？",
+      "options": {
+        "A": "",
+        "B": "大豆沙拉油依規定應標示含有致過敏性內容物警語",
+        "C": "使用基因改造食品原料若終產品已不含轉殖基因片段或轉殖蛋白質者得免全標示",
+        "D": "需經復水的產品若未有營養宣稱，則可用復水前或後為標示基準，並須註明其復水方式"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_8",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 8,
+      "question": "團膳業者選擇的食材供應商應落實三級品管制度，下列何者錯誤？",
+      "options": {
+        "A": "對於供應食材皆須主動進行源頭管理並記錄",
+        "B": "自設檢驗室逐批檢驗食材屬於第一級品管制度",
+        "C": "團膳業者進行稽查抽驗屬於第三級品管制度",
+        "D": "將食材送交第三方驗證單位檢驗屬於二級品管制度"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_9",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 9,
+      "question": "若櫛瓜的生廢棄率為5%，收縮率為15%，1人份供應80公克，今要供應500人份，則最適採購量為多少台斤？",
+      "options": {
+        "A": "43",
+        "B": "50",
+        "C": "72",
+        "D": "83"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_10",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 10,
+      "question": "下列何者不屬於驗收時使用之工具或檢測試劑？",
+      "options": {
+        "A": "磅秤",
+        "B": "餘氯試劑",
+        "C": "雙氧試劑",
+        "D": "溫度計"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_11",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 11,
+      "question": "庫房管理設有「庫房管制卡」，下列何者不屬於此卡的紀錄項目？",
+      "options": {
+        "A": "進／出貨日期",
+        "B": "結餘量",
+        "C": "撥發量",
+        "D": "保存期限"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_12",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 12,
+      "question": "下列何種蔬菜適合貯存於陰涼乾燥的地方？",
+      "options": {
+        "A": "南瓜",
+        "B": "萵苣",
+        "C": "菠菜",
+        "D": "青豌豆"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_13",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 13,
+      "question": "製備1份綜合水果沙拉，內含可食之五爪蘋果50 g、香吉士32.5 g、紅西瓜45 g、泰國芭樂 56 g、葡萄乾5 g、低脂原味優格70 g和乳酪絲6 g，這份沙拉含有幾份（Ex）水果和乳品類？",
+      "options": {
+        "A": "水果1.5 Ex和乳品類0.33 Ex",
+        "B": "水果2.0 Ex和乳品類0.33 Ex",
+        "C": "水果1.5 Ex和乳品類0.5 Ex",
+        "D": "水果2.0 Ex和乳品類0.5 Ex"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_14",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 14,
+      "question": "為了提升油炸油的穩定與品質，有關調整油脂物化特性的方法，下列何者正確？",
+      "options": {
+        "A": "提高食用油的酸價",
+        "B": "選擇已產生聚合作用的油脂",
+        "C": "選擇發煙點較高的油炸油較為安全",
+        "D": "添加乳化劑降低油脂黏度以增加炸油穩定性"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_15",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 15,
+      "question": "有關冷凍食品的特性和應用之敘述，下列何者錯誤？",
+      "options": {
+        "A": "冷凍裹粉產品可在凍結狀態下直接下鍋油炸，但一次下鍋量不宜過多以免油溫驟降影響品質",
+        "B": "部分小體積的冷凍調理食品（例如湯圓等）可不需解凍直接加熱調理",
+        "C": "冷凍肉品的保存期限通常較冷藏肉品更長",
+        "D": "冷凍肉品如需緊急使用，可在包裝完整的情形下浸泡於流動之溫熱水中加速解凍"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_16",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 16,
+      "question": "有關豆製品之敘述，下列何者錯誤？",
+      "options": {
+        "A": "盒裝豆腐可以直接冷藏",
+        "B": "同重量的百頁豆腐與板豆腐熱量相近",
+        "C": "隔天使用的板豆腐需冷藏",
+        "D": "豆干及干絲烹煮前先加以川燙以去除可能殘留的過氧化氫"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_17",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 17,
+      "question": "關於食物製備方法之敘述，下列何者錯誤？",
+      "options": {
+        "A": "宮保是指在菜品中加入乾辣椒",
+        "B": "開陽白菜是指在白菜中加入乾蝦米",
+        "C": "魚香是指在菜品添加爆香的小魚乾",
+        "D": "回鍋肉是指將白煮豬肉再切片回鍋煸炒"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_18",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 18,
+      "question": "下列那一種魚肉的鐵質最高？",
+      "options": {
+        "A": "鮪魚",
+        "B": "鱈魚",
+        "C": "旗魚",
+        "D": "鮭魚"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_19",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 19,
+      "question": "配膳熱食菜餚之保溫設備其溫度宜保持在：",
+      "options": {
+        "A": "≧18°C",
+        "B": "≧30°C",
+        "C": "40°C～60°C",
+        "D": "≧60°C"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_20",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 20,
+      "question": "依食品安全管制系統準則規定之供膳單位應成立管制小組，下列敘述何者正確？",
+      "options": {
+        "A": "管制小組人員至少應有2名，且負責人或其指定人員為必要之成員",
+        "B": "成員應曾接受中央主管機關認可之訓練機關（構）辦理之相關課程至少30小時，並領有合格證明書",
+        "C": "從業期間應持續接受與本系統有關之訓練，每3年累計至少8小時",
+        "D": "執行之工作應作成書面紀錄，連同相關文件彙整為檔案，妥善保存至少3年"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_21",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 21,
+      "question": "某便當工廠最近不良率增加，可用下列何種圖表來確認最大的影響因素？",
+      "options": {
+        "A": "柏拉圖",
+        "B": "散布圖",
+        "C": "管制圖",
+        "D": "特性要因圖"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_22",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 22,
+      "question": "有關學校餐廳管理內容，下列敘述何者正確？",
+      "options": {
+        "A": "學校辦理餐飲衛生業務只能由營養師擔任督導人員",
+        "B": "餐飲從業人員每學年應參加衛生講習至少16小時",
+        "C": "每週至少1次餐飲衛生自主檢查表紀錄，紀錄應留存3年",
+        "D": "每餐供應之餐食均須標示日期及餐別，冷藏10°C留存48小時"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_23",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 23,
+      "question": "團膳公司在每餐製備完成的成品中，抽存乙份貯留備檢，應放置保存於下列何種狀況？",
+      "options": {
+        "A": "冷藏1天",
+        "B": "冷藏2天",
+        "C": "冷凍1天",
+        "D": "冷凍2天"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_24",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 24,
+      "question": "有關細菌性食品中毒，下列敘述何者錯誤？",
+      "options": {
+        "A": "生鮮魚貝類易遭腸炎弧菌污染，只要經60°C以上並加熱15～20分鐘即可殺死腸炎弧菌",
+        "B": "製備人員手部有傷口膿瘡直接處理食物，易致金黃色葡萄球菌感染",
+        "C": "米飯於室溫下長期不當貯存，最容易導致沙門氏菌污染中毒",
+        "D": "真空包裝調味豆乾因殺菌不完全，易致肉毒桿菌中毒"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_25",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 25,
+      "question": "有關HACCP的危害因子，下列敘述何者正確？",
+      "options": {
+        "A": "抗生素殘留是物理性因子",
+        "B": "炸油酸價過高是物理性因子",
+        "C": "蔬菜裡面有沙子是化學性因子",
+        "D": "烤雞肉中心溫度不足是生物性因子"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_26",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 26,
+      "question": "若每人每餐以0.3平方公尺（m 2 ）來估算，試問欲設計供應300人份的廚房，下列何者為最適宜的廚房面積？ （1m 2 = 0.3025坪）",
+      "options": {
+        "A": "24坪",
+        "B": "28坪",
+        "C": "80坪",
+        "D": "90坪"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_27",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 27,
+      "question": "廚房設計規劃中烹煮設備的排列方式與說明，下列敘述何者錯誤？",
+      "options": {
+        "A": "廚房主要設備靠牆排成一直線為直線型排列",
+        "B": "於空間較小或不宜採直線排列的廚房可選擇 L形排列",
+        "C": "背對背排列適用於小型廚房，又稱島嶼式排列",
+        "D": "平行排列指廚房主要烹煮設備及工作檯橫置於廚房中間，兩工作檯中無通道"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_28",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 28,
+      "question": "有關管理員工績效策略，下列敘述何者錯誤？",
+      "options": {
+        "A": "工作動機與能力均強者，則給予工作表現機會及適當獎勵",
+        "B": "工作動機與能力均弱者，則給予直接降級、甚至資遣解僱",
+        "C": "工作動機強但能力不足者，則給予訓練、任務指派協助其發展",
+        "D": "工作能力強但動機弱者，則給予直接回饋與獎酬、參與團隊工作"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_29",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 29,
+      "question": "關於勞工工作時間分配，依勞動基準法規定，下列敘述何者正確？",
+      "options": {
+        "A": "雇主應置備勞工出勤紀錄（應逐日記載），並保存3年",
+        "B": "每日正常工作時間為12小時，每週工作總時數不得超過48小時",
+        "C": "針對無工會之事業單位，經勞資會議同意後，得將8週內之正常工作時數加以分配",
+        "D": "雇主得視勞工照顧家庭成員需要，允許勞工彈性調整工作開始及終止之時間在2小時範圍內"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_30",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 30,
+      "question": "自助餐廳去年1年的損益表顯示，總營業額500萬元，固定費用占35%，利潤為125萬元，此餐廳損益平衡點的 營業額與下列何者最接近？",
+      "options": {
+        "A": "250萬元",
+        "B": "300萬元",
+        "C": "350萬元",
+        "D": "400萬元"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_31",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 31,
+      "question": "食物中毒保險費屬於下列何種成本？",
+      "options": {
+        "A": "固定成本",
+        "B": "變動成本",
+        "C": "人事成本",
+        "D": "食物成本"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_32",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 32,
+      "question": "某一學生餐廳之初期存貨為20,000元，本月進貨15,000元，月底時尚有存貨12,000元，當月總營收額72,000 元，則該餐廳之食物成本為多少%？",
+      "options": {
+        "A": "24",
+        "B": "29",
+        "C": "32",
+        "D": "35"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_33",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 33,
+      "question": "某團膳公司的固定成本140,000元，變動成本占售價的60%，銷售實收500,000元，其利潤為多少元？",
+      "options": {
+        "A": "160,000元",
+        "B": "96,000元",
+        "C": "60,000元",
+        "D": "6,000元"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_34",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 34,
+      "question": "有關滅火器之保養及安裝，下列敘述何者錯誤？",
+      "options": {
+        "A": "滅火器的放置應固定於取用方便之明顯處所",
+        "B": "化學泡沫滅火器應每年實施1次性能檢查",
+        "C": "二氧化碳滅火器應每年稱重1次",
+        "D": "廚房樓地板面積每25平方公尺應放手提滅火器1枚"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_35",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 35,
+      "question": "下列何者為工作人員在工作前使用含酒精飲料或使用藥物造成職業災害的原因？",
+      "options": {
+        "A": "不安全的行為",
+        "B": "不安全的設備",
+        "C": "不安全的工作環境",
+        "D": "工作人員之危險狀況"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_36",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 36,
+      "question": "依據「食品良好衛生規範準則」，關於廁所之規定，下列敘述何者錯誤？",
+      "options": {
+        "A": "應於明顯處標示「如廁後應洗手」之字樣",
+        "B": "廁所應正面開向食品作業場所",
+        "C": "設置地點應防止污染水源",
+        "D": "不得有不良氣味"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_37",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 37,
+      "question": "食品作業場所之工作檯面的照明光度須在多少米燭光以上？",
+      "options": {
+        "A": "100",
+        "B": "200",
+        "C": "300",
+        "D": "540"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_38",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 38,
+      "question": "在開標過程中要了解承包商是否具有衛生觀念及熟悉餐廳作業程序等專業知識，最直接的方法為何？",
+      "options": {
+        "A": "進行面談遴選",
+        "B": "查看經營計畫書",
+        "C": "由廠商以往的經營實績",
+        "D": "了解承包商的背景"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_39",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 39,
+      "question": "關於進口牛肉的管理，下列敘述何者錯誤？",
+      "options": {
+        "A": "牛的脊髓、頭骨不准進口",
+        "B": "進口牛肉僅開放3歲以下的牛肉與產品",
+        "C": "牛肉的檢驗項目包含硝基呋喃代謝物、氯黴素、乙型受體素類、Quinolone類",
+        "D": "牛肉出口商必須於外箱包裝上明確標示品名、原產地、製造廠、有效日期等訊息"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "113100_group_meal_40",
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "團體膳食設計與管理",
+      "subject_tag": "group_meal",
+      "subject_name": "團體膳食設計與管理",
+      "stage_id": 0,
+      "number": 40,
+      "question": "關於團膳業務委外之事業單位責任，下列敘述何者錯誤？",
+      "options": {
+        "A": "業務交付承攬前，應告知該承攬人有關其事業工作環境",
+        "B": "簽立合約時，應將安全管理、安全衛生管理納入合約中",
+        "C": "承攬契約中應明確列舉可能發生的災害類型及防範措施",
+        "D": "實施承攬人之工作人員的衛生訓練、安全防護、健康管理及自主檢查等"
+      },
+      "answer": "D",
       "explanation": ""
     }
   ]

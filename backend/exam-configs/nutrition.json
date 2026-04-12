@@ -6,19 +6,58 @@
   "category": "medical",
   "questionsFile": "questions-nutrition.json",
   "totalQ": 280,
-
   "passScore": 168,
   "passRate": 0.6,
   "papers": [
-    { "id": "paper1", "name": "膳食療養學", "subject": "膳食療養學", "subjects": "臨床營養、膳食設計", "count": 40 },
-    { "id": "paper2", "name": "團體膳食設計與管理", "subject": "團體膳食設計與管理", "subjects": "團膳管理、食品加工", "count": 40 },
-    { "id": "paper3", "name": "生理與生化", "subject": "生理學與生物化學", "subjects": "生理學、生物化學", "count": 50 },
-    { "id": "paper4", "name": "營養學", "subject": "營養學", "subjects": "營養學", "count": 50 },
-    { "id": "paper5", "name": "公共衛生營養學", "subject": "公共衛生營養學", "subjects": "公衛營養", "count": 50 },
-    { "id": "paper6", "name": "食品衛生與安全", "subject": "食品衛生與安全", "subjects": "食品衛生、食安法規", "count": 50 }
+    {
+      "id": "paper1",
+      "name": "膳食療養學",
+      "subject": "膳食療養學",
+      "subjects": "臨床營養、膳食設計",
+      "count": 40
+    },
+    {
+      "id": "paper2",
+      "name": "團體膳食設計與管理",
+      "subject": "團體膳食設計與管理",
+      "subjects": "團膳管理、食品加工",
+      "count": 40
+    },
+    {
+      "id": "paper3",
+      "name": "生理與生化",
+      "subject": "生理學與生物化學",
+      "subjects": "生理學、生物化學",
+      "count": 50
+    },
+    {
+      "id": "paper4",
+      "name": "營養學",
+      "subject": "營養學",
+      "subjects": "營養學",
+      "count": 50
+    },
+    {
+      "id": "paper5",
+      "name": "公共衛生營養學",
+      "subject": "公共衛生營養學",
+      "subjects": "公衛營養",
+      "count": 50
+    },
+    {
+      "id": "paper6",
+      "name": "食品衛生與安全",
+      "subject": "食品衛生與安全",
+      "subjects": "食品衛生、食安法規",
+      "count": 50
+    }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {
@@ -30,13 +69,34 @@
       "group_meal": "團體膳食"
     },
     "stageStyles": {
-      "all": { "icon": "🎲", "color": "#64748B" },
-      "physio_biochem": { "icon": "🧬", "color": "#3B82F6" },
-      "nutrition_science": { "icon": "🥗", "color": "#10B981" },
-      "public_nutrition": { "icon": "📊", "color": "#8B5CF6" },
-      "food_safety": { "icon": "🛡️", "color": "#F97316" },
-      "diet_therapy": { "icon": "🍽️", "color": "#EF4444" },
-      "group_meal": { "icon": "🏭", "color": "#D97706" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "physio_biochem": {
+        "icon": "🧬",
+        "color": "#3B82F6"
+      },
+      "nutrition_science": {
+        "icon": "🥗",
+        "color": "#10B981"
+      },
+      "public_nutrition": {
+        "icon": "📊",
+        "color": "#8B5CF6"
+      },
+      "food_safety": {
+        "icon": "🛡️",
+        "color": "#F97316"
+      },
+      "diet_therapy": {
+        "icon": "🍽️",
+        "color": "#EF4444"
+      },
+      "group_meal": {
+        "icon": "🏭",
+        "color": "#D97706"
+      }
     },
     "subjectColors": {
       "生理學與生物化學": "#3B82F6",
@@ -60,12 +120,30 @@
     "subjects": "生理學與生物化學、營養學、公共衛生營養學、食品衛生與安全、膳食療養學、團體膳食設計與管理",
     "mockDesc": "完整模擬六科，平均 60 分及格",
     "subjectDetails": [
-      ["生理學與生物化學", "人體各系統生理功能、代謝途徑、營養素的生化機制。"],
-      ["營養學", "六大營養素的功能與需求、膳食指南、生命期營養。"],
-      ["公共衛生營養學", "社區營養評估、營養監測、營養政策與健康促進計畫。"],
-      ["食品衛生與安全", "食品微生物、食品添加物、食安法規與 HACCP 管理。"],
-      ["膳食療養學", "疾病營養治療、臨床營養評估、治療飲食設計。"],
-      ["團體膳食設計與管理", "團膳作業管理、菜單設計、食品加工與品質管理。"]
+      [
+        "生理學與生物化學",
+        "人體各系統生理功能、代謝途徑、營養素的生化機制。"
+      ],
+      [
+        "營養學",
+        "六大營養素的功能與需求、膳食指南、生命期營養。"
+      ],
+      [
+        "公共衛生營養學",
+        "社區營養評估、營養監測、營養政策與健康促進計畫。"
+      ],
+      [
+        "食品衛生與安全",
+        "食品微生物、食品添加物、食安法規與 HACCP 管理。"
+      ],
+      [
+        "膳食療養學",
+        "疾病營養治療、臨床營養評估、治療飲食設計。"
+      ],
+      [
+        "團體膳食設計與管理",
+        "團膳作業管理、菜單設計、食品加工與品質管理。"
+      ]
     ]
   }
 }

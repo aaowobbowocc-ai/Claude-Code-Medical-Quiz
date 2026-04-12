@@ -10,32 +10,90 @@
   "totalPoints": 200,
   "passRate": 0.6,
   "papers": [
-    { "id": "paper1", "name": "卷一", "subject": "卷一", "subjects": "牙醫解剖22、牙體形態22、胚胎組織36", "count": 80, "pointsPerQ": 1.25 },
-    { "id": "paper2", "name": "卷二", "subject": "卷二", "subjects": "口病20、藥理20、微免20、生理生化20", "count": 80, "pointsPerQ": 1.25 }
+    {
+      "id": "paper1",
+      "name": "卷一",
+      "subject": "卷一",
+      "subjects": "牙醫解剖22、牙體形態22、胚胎組織36",
+      "count": 80,
+      "pointsPerQ": 1.25
+    },
+    {
+      "id": "paper2",
+      "name": "卷二",
+      "subject": "卷二",
+      "subjects": "口病20、藥理20、微免20、生理生化20",
+      "count": 80,
+      "pointsPerQ": 1.25
+    }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {
-      "dental_anatomy": "牙醫解剖", "tooth_morphology": "牙體形態", "embryology_histology": "胚胎組織",
-      "oral_pathology": "口病", "oral_physiology": "生理生化", "dental_microbiology": "微免", "dental_pharmacology": "藥理"
+      "dental_anatomy": "牙醫解剖",
+      "tooth_morphology": "牙體形態",
+      "embryology_histology": "胚胎組織",
+      "oral_pathology": "口病",
+      "oral_physiology": "生理生化",
+      "dental_microbiology": "微免",
+      "dental_pharmacology": "藥理"
     },
     "stageStyles": {
-      "all": { "icon": "🎲", "color": "#64748B" },
-      "dental_anatomy": { "icon": "🦷", "color": "#3B82F6" },
-      "oral_anatomy": { "icon": "👄", "color": "#2563EB" },
-      "tooth_morphology": { "icon": "🦷", "color": "#8B5CF6" },
-      "embryology_histology": { "icon": "🔬", "color": "#6366F1" },
-      "oral_pathology": { "icon": "🩺", "color": "#DC2626" },
-      "dental_pharmacology": { "icon": "💊", "color": "#F97316" },
-      "dental_microbiology": { "icon": "🦠", "color": "#10B981" },
-      "oral_physiology": { "icon": "💓", "color": "#EF4444" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "dental_anatomy": {
+        "icon": "🦷",
+        "color": "#3B82F6"
+      },
+      "oral_anatomy": {
+        "icon": "👄",
+        "color": "#2563EB"
+      },
+      "tooth_morphology": {
+        "icon": "🦷",
+        "color": "#8B5CF6"
+      },
+      "embryology_histology": {
+        "icon": "🔬",
+        "color": "#6366F1"
+      },
+      "oral_pathology": {
+        "icon": "🩺",
+        "color": "#DC2626"
+      },
+      "dental_pharmacology": {
+        "icon": "💊",
+        "color": "#F97316"
+      },
+      "dental_microbiology": {
+        "icon": "🦠",
+        "color": "#10B981"
+      },
+      "oral_physiology": {
+        "icon": "💓",
+        "color": "#EF4444"
+      }
     },
     "subjectColors": {
-      "口腔解剖": "#3B82F6", "牙醫解剖": "#3B82F6", "牙體形態": "#6366F1",
-      "口腔病理": "#DC2626", "口病": "#DC2626", "牙科藥理": "#F97316", "藥理": "#F97316", "口腔生理": "#EF4444", "生理生化": "#EF4444",
-      "胚胎組織": "#818CF8", "微免": "#10B981"
+      "口腔解剖": "#3B82F6",
+      "牙醫解剖": "#3B82F6",
+      "牙體形態": "#6366F1",
+      "口腔病理": "#DC2626",
+      "口病": "#DC2626",
+      "牙科藥理": "#F97316",
+      "藥理": "#F97316",
+      "口腔生理": "#EF4444",
+      "生理生化": "#EF4444",
+      "胚胎組織": "#818CF8",
+      "微免": "#10B981"
     }
   },
   "seo": {
@@ -45,18 +103,36 @@
     "shortName": "牙醫一階",
     "studentType": "牙醫學生",
     "years": "110 至 115",
-    "totalQ": 1600,
+    "totalQ": 1760,
     "examDesc": "牙醫師國考第一階段（一階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為完成基礎牙醫學課程之牙醫學系學生。",
     "paperDesc": "考試分為兩卷，每卷各 80 題選擇題，合計 160 題。每題 1.25 分、每卷滿分 100 分，總分 200 分，120/200 分及格（答對 96 題）。",
     "subjects": "牙醫解剖、口腔解剖、牙體形態、胚胎及組織學、口病、藥理、微免、生理生化等基礎牙醫科目",
     "mockDesc": "完整模擬兩卷，每題 1.25 分，120/200 分及格（答對 96 題）",
     "subjectDetails": [
-      ["牙醫解剖學", "頭頸部解剖構造、顱骨、肌肉、神經與血管分布。"],
-      ["口腔解剖學", "口腔內各組織結構、牙齒周圍組織、唾液腺構造。"],
-      ["牙體形態學", "各類牙齒的外型特徵、萌發順序與齒列發育。"],
-      ["口腔病理學", "口腔常見疾病的病理變化、口腔腫瘤分類與鑑別診斷。"],
-      ["牙科藥理學", "牙科常用藥物的作用機轉、麻醉藥物與抗生素使用。"],
-      ["微生物及免疫學", "口腔微生物生態、齲齒與牙周病相關致病菌。"]
+      [
+        "牙醫解剖學",
+        "頭頸部解剖構造、顱骨、肌肉、神經與血管分布。"
+      ],
+      [
+        "口腔解剖學",
+        "口腔內各組織結構、牙齒周圍組織、唾液腺構造。"
+      ],
+      [
+        "牙體形態學",
+        "各類牙齒的外型特徵、萌發順序與齒列發育。"
+      ],
+      [
+        "口腔病理學",
+        "口腔常見疾病的病理變化、口腔腫瘤分類與鑑別診斷。"
+      ],
+      [
+        "牙科藥理學",
+        "牙科常用藥物的作用機轉、麻醉藥物與抗生素使用。"
+      ],
+      [
+        "微生物及免疫學",
+        "口腔微生物生態、齲齒與牙周病相關致病菌。"
+      ]
     ]
   }
 }

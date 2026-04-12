@@ -10,30 +10,87 @@
   "totalPoints": 300,
   "passRate": 0.6,
   "papers": [
-    { "id": "paper1", "name": "卷一", "subject": "卷一", "subjects": "藥理學40、藥物化學40", "count": 80, "pointsPerQ": 1.25, "timeLimit": 90 },
-    { "id": "paper2", "name": "卷二", "subject": "卷二", "subjects": "藥物分析40、生藥學40", "count": 80, "pointsPerQ": 1.25, "timeLimit": 90 },
-    { "id": "paper3", "name": "卷三", "subject": "卷三", "subjects": "藥劑學40、生物藥劑學40", "count": 80, "pointsPerQ": 1.25, "timeLimit": 90 }
+    {
+      "id": "paper1",
+      "name": "卷一",
+      "subject": "卷一",
+      "subjects": "藥理學40、藥物化學40",
+      "count": 80,
+      "pointsPerQ": 1.25,
+      "timeLimit": 90
+    },
+    {
+      "id": "paper2",
+      "name": "卷二",
+      "subject": "卷二",
+      "subjects": "藥物分析40、生藥學40",
+      "count": 80,
+      "pointsPerQ": 1.25,
+      "timeLimit": 90
+    },
+    {
+      "id": "paper3",
+      "name": "卷三",
+      "subject": "卷三",
+      "subjects": "藥劑學40、生物藥劑學40",
+      "count": 80,
+      "pointsPerQ": 1.25,
+      "timeLimit": 90
+    }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {
-      "pharmacology": "藥理", "medicinal_chemistry": "藥化", "pharmaceutical_analysis": "藥分",
-      "pharmacognosy": "生藥", "pharmaceutics": "藥劑", "biopharmaceutics": "生物藥劑"
+      "pharmacology": "藥理",
+      "medicinal_chemistry": "藥化",
+      "pharmaceutical_analysis": "藥分",
+      "pharmacognosy": "生藥",
+      "pharmaceutics": "藥劑",
+      "biopharmaceutics": "生物藥劑"
     },
     "stageStyles": {
-      "all": { "icon": "🎲", "color": "#64748B" },
-      "pharmacology": { "icon": "💊", "color": "#F97316" },
-      "medicinal_chemistry": { "icon": "⚗️", "color": "#8B5CF6" },
-      "pharmaceutical_analysis": { "icon": "📊", "color": "#2563EB" },
-      "pharmacognosy": { "icon": "🌿", "color": "#059669" },
-      "pharmaceutics": { "icon": "💊", "color": "#F97316" },
-      "biopharmaceutics": { "icon": "🧬", "color": "#6366F1" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "pharmacology": {
+        "icon": "💊",
+        "color": "#F97316"
+      },
+      "medicinal_chemistry": {
+        "icon": "⚗️",
+        "color": "#8B5CF6"
+      },
+      "pharmaceutical_analysis": {
+        "icon": "📊",
+        "color": "#2563EB"
+      },
+      "pharmacognosy": {
+        "icon": "🌿",
+        "color": "#059669"
+      },
+      "pharmaceutics": {
+        "icon": "💊",
+        "color": "#F97316"
+      },
+      "biopharmaceutics": {
+        "icon": "🧬",
+        "color": "#6366F1"
+      }
     },
     "subjectColors": {
-      "藥理學": "#F97316", "藥物化學": "#3B82F6", "藥物分析": "#10B981",
-      "生藥學": "#8B5CF6", "藥劑學": "#F97316", "生物藥劑學": "#D97706"
+      "藥理學": "#F97316",
+      "藥物化學": "#3B82F6",
+      "藥物分析": "#10B981",
+      "生藥學": "#8B5CF6",
+      "藥劑學": "#F97316",
+      "生物藥劑學": "#D97706"
     }
   },
   "seo": {
@@ -43,18 +100,36 @@
     "shortName": "藥師一階",
     "studentType": "藥學生",
     "years": "110 至 115",
-    "totalQ": 2400,
+    "totalQ": 2640,
     "examDesc": "藥師國考第一階段（一階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為完成基礎藥學課程之藥學系學生。",
     "paperDesc": "考試分為三卷，每卷各 80 題選擇題，合計 240 題，採及格制（總分 180 分以上通過，需每科達該科目滿分之五成）。",
     "subjects": "藥理學、藥物化學、藥物分析、生藥學（含中藥學）、藥劑學、生物藥劑學等基礎藥學科目",
     "mockDesc": "完整模擬三卷，180/240 及格制",
     "subjectDetails": [
-      ["藥理學", "各類藥物的作用機轉、藥效學與藥物動力學，受體理論與信號傳遞。"],
-      ["藥物化學", "藥物的化學結構與活性關係（SAR）、藥物設計與代謝途徑。"],
-      ["藥物分析", "藥物定性定量分析方法、儀器分析原理與藥典規範。"],
-      ["生藥學", "天然藥物的來源、有效成分、品質管制與中藥基本理論。"],
-      ["藥劑學", "劑型設計、製劑技術、藥物傳輸系統與穩定性試驗。"],
-      ["生物藥劑學", "藥物吸收、分布、代謝與排泄（ADME）、生體可用率與生體相等性。"]
+      [
+        "藥理學",
+        "各類藥物的作用機轉、藥效學與藥物動力學，受體理論與信號傳遞。"
+      ],
+      [
+        "藥物化學",
+        "藥物的化學結構與活性關係（SAR）、藥物設計與代謝途徑。"
+      ],
+      [
+        "藥物分析",
+        "藥物定性定量分析方法、儀器分析原理與藥典規範。"
+      ],
+      [
+        "生藥學",
+        "天然藥物的來源、有效成分、品質管制與中藥基本理論。"
+      ],
+      [
+        "藥劑學",
+        "劑型設計、製劑技術、藥物傳輸系統與穩定性試驗。"
+      ],
+      [
+        "生物藥劑學",
+        "藥物吸收、分布、代謝與排泄（ADME）、生體可用率與生體相等性。"
+      ]
     ]
   }
 }

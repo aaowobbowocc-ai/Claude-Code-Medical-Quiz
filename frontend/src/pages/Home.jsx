@@ -108,7 +108,7 @@ function ExamArticle({ exam }) {
     <article className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 text-sm text-gray-500 leading-relaxed space-y-3">
       <h2 className="font-bold text-base text-medical-dark">關於{c.title}</h2>
       <p>
-        {c.title}是專為<strong>{c.fullName}</strong>設計的免費題庫練習平台，收錄 {c.years} 年度超過 {c.totalQ} 題考古題，
+        {c.title}是一個包含<strong>{c.fullName}</strong>在內的免費國考題庫練習平台，收錄 {c.years} 年度超過 {c.totalQ} 題考古題，
         涵蓋{c.subjects}。
         平台提供<Link to="/lobby" className="text-medical-blue underline">即時對戰</Link>、AI 題目解說、
         <Link to="/mock-exam" className="text-medical-blue underline">模擬考試</Link>（{c.mockDesc}）、
@@ -516,6 +516,10 @@ export default function Home() {
               {currentExam.icon} {currentExam.name} <span className="text-white/30">▼</span>
             </p>
             <h1 className="text-white font-bold text-2xl tracking-tight leading-none" onClick={(e) => { e.stopPropagation(); handleDevTap() }}>國考知識王</h1>
+            <div className="flex gap-2 mt-1.5 text-base opacity-80">
+              <span>🩺</span><span>🦷</span><span>💊</span><span>⚖️</span><span>📜</span>
+            </div>
+            <p className="text-white/50 text-[10px] mt-0.5">涵蓋 11 類國考 · 18,000+ 題</p>
           </button>
           {/* Avatar — tap to edit name */}
           <button onClick={() => { setInputName(name); setSheet('editname') }}

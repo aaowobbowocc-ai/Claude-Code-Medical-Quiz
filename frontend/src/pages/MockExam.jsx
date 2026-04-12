@@ -14,6 +14,8 @@ function getExamConfig(examType) {
   const types = getExamTypes()
   const et = types.find(e => e.id === examType) || types[0]
   const isWeighted = et.papers.some(p => p.pointsPerQ && p.pointsPerQ !== 1)
+  const ppqs = et.papers.map(p => p.pointsPerQ || 1)
+  const uniformPointsPerQ = ppqs.every(v => v === ppqs[0]) ? ppqs[0] : null
   return {
     papers: et.papers,
     totalPass: et.passScore,
@@ -21,6 +23,7 @@ function getExamConfig(examType) {
     singlePass: Math.round(et.papers[0]?.count * 0.6) || 60,
     examName: et.name,
     isWeighted,
+    uniformPointsPerQ, // null if papers have mixed pointsPerQ (e.g. pharma2)
   }
 }
 
@@ -73,7 +76,7 @@ function getSingleExamFee(paper) {
 
 function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
-  const { papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, examName, isWeighted } = getExamConfig(examType)
+  const { papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, examName, isWeighted, uniformPointsPerQ } = getExamConfig(examType)
   const FULL_EXAM_FEE = getFullExamFee(PAPERS)
   const [tab, setTab] = useState('historical') // 'historical' | 'random'
   const [examYears, setExamYears] = useState([])
@@ -134,7 +137,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                     <p className="text-gray-400 text-xs">
                       {getTimeLimitText(PAPERS)}，
                       {isWeighted
-                        ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格（需答對 ${Math.ceil(TOTAL_PASS / PAPERS[0].pointsPerQ)} 題）`
+                        ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格${uniformPointsPerQ ? `（需答對 ${Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題）` : ''}`
                         : `${TOTAL_PASS}/${TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 題 及格`}
                     </p>
                   </div>
@@ -219,7 +222,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                   <p className="text-gray-400 text-xs">
                     {getTimeLimitText(PAPERS)}，
                     {isWeighted
-                      ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格（需答對 ${Math.ceil(TOTAL_PASS / PAPERS[0].pointsPerQ)} 題）`
+                      ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格${uniformPointsPerQ ? `（需答對 ${Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題）` : ''}`
                       : `${TOTAL_PASS}/${TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 題 及格`}
                   </p>
                 </div>
@@ -489,7 +492,7 @@ function Intermission({ paper1Result, onContinue, onFinishSingle, nextPaperName,
 function ExamResults({ papers, navigate }) {
   const { addCoins, addExp } = usePlayerStore()
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
-  const { papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, isWeighted } = getExamConfig(examType)
+  const { papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, isWeighted, uniformPointsPerQ } = getExamConfig(examType)
   const [saved, setSaved] = useState(false)
 
   const isFullExam = papers.length >= PAPERS.length
@@ -607,8 +610,8 @@ function ExamResults({ papers, navigate }) {
             <div className="bg-white/10 rounded-xl px-4 py-2 text-center">
               <p className="text-white/50 text-xs">及格線</p>
               <p className="text-white font-bold text-lg">{TOTAL_PASS}{isWeighted ? '分' : ''}</p>
-              {isWeighted && PAPERS[0]?.pointsPerQ && (
-                <p className="text-white/40 text-[10px]">需答對 {Math.ceil(TOTAL_PASS / PAPERS[0].pointsPerQ)} 題</p>
+              {isWeighted && uniformPointsPerQ && (
+                <p className="text-white/40 text-[10px]">需答對 {Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題</p>
               )}
             </div>
           )}

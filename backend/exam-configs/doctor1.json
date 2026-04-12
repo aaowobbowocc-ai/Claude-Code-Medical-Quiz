@@ -15,7 +15,14 @@
       "subject": "醫學(一)",
       "subjects": "解剖31、胚胎5、組織10、生理27、生化27",
       "count": 100,
-      "stages": "1,2,3,4,10"
+      "stages": "1,2,3,4,10",
+      "breakdown": [
+        { "subject": "解剖學", "count": 31, "note": "含大解剖、神經解剖" },
+        { "subject": "組織學", "count": 10 },
+        { "subject": "胚胎學", "count": 5 },
+        { "subject": "生理學", "count": 27 },
+        { "subject": "生物化學", "count": 27 }
+      ]
     },
     {
       "id": "paper2",
@@ -23,7 +30,14 @@
       "subject": "醫學(二)",
       "subjects": "微免28、寄生蟲7、公衛15、藥理25、病理25",
       "count": 100,
-      "stages": "5,6,7,8,9"
+      "stages": "5,6,7,8,9",
+      "breakdown": [
+        { "subject": "微生物免疫學", "count": 28, "note": "包含免疫、細菌、病毒" },
+        { "subject": "寄生蟲學", "count": 7 },
+        { "subject": "病理學", "count": 25 },
+        { "subject": "藥理學", "count": 25 },
+        { "subject": "公共衛生學", "count": 15, "note": "包含生物統計、流行病學" }
+      ]
     }
   ],
   "stages": [

@@ -5562,8 +5562,11 @@
         "C": "僅②③",
         "D": "僅③"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第37題更正為 C,D（原答案 D）"
     },
     {
       "id": 278,
@@ -7345,8 +7348,11 @@
         "C": "零級反應指反應速率與酵素活性成正比",
         "D": "溫度每增加攝氏1度，反應速率增加10%"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第46題更正為 B,D（原答案 B）"
     },
     {
       "id": 367,
@@ -10717,8 +10723,11 @@
         "C": "超過標準體重 10％以上稱為過重",
         "D": "超過標準體重 30％以上為輕度肥胖"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第54題更正為 C,D（原答案 D）"
     },
     {
       "id": 535,
@@ -11983,8 +11992,11 @@
         "C": "stable platelet counts 150～200 ×10 9 /L",
         "D": "normal spleen size"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第37題一律給分（原答案 B）"
     },
     {
       "id": 598,
@@ -14166,8 +14178,11 @@
         "C": "RealTime（Abbott）檢測HIV-1，是利用RT-qPCR去偵測pol",
         "D": "RealTime（Abbott）檢測HCV，是利用RT-qPCR去偵測5' UTR"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第66題一律給分（原答案 C）"
     },
     {
       "id": 707,
@@ -15530,8 +15545,11 @@
         "C": "levofloxacin",
         "D": "tetracycline"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第54題更正為 B,C（原答案 C）"
     },
     {
       "id": 775,
@@ -18512,8 +18530,11 @@
         "C": "dNTP",
         "D": "HSV-1 specific primers"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第43題更正為 A,D（原答案 A）"
     },
     {
       "id": 924,
@@ -23091,8 +23112,11 @@
         "C": "縮小胞膜絛蟲（Hymenolepis diminuta）",
         "D": "豬肉絛蟲（Taenia solium）"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第31題一律給分（原答案 D）"
     },
     {
       "id": 1152,
@@ -24734,8 +24758,11 @@
         "C": "抑制腸細胞（enterocyte）G protein的活化，進而造成cyclic adenosine monophosphate（cAMP）的產量 上升",
         "D": "可以促進電解質（electrolytes）由細胞內分泌至腸腔，造成水狀下痢"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第33題更正為 A,C（原答案 A）"
     },
     {
       "id": 1234,
@@ -27477,8 +27504,11 @@
         "C": "AID能夠對單股及雙股DNA的胞嘧啶核苷（cytidine）進行脫氨基的作用",
         "D": "AID能夠啟動免疫球蛋白之類別轉換（class switch recombination）"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第10題更正為 A,C（原答案 C）"
     },
     {
       "id": 1371,
@@ -29579,9 +29609,11 @@
         "C": "7.5 MHz",
         "D": "10 MHz"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第35題一律給分（原答案 B）"
     },
     {
       "id": 1476,
@@ -32260,8 +32292,11 @@
         "C": "會影響激素分析",
         "D": "會使尿酸沉澱"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第9題更正為 B,C（原答案 B）"
     },
     {
       "id": 1610,
@@ -38360,9 +38395,11 @@
         "C": "Flaviviridae",
         "D": "Bunyaviridae"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第74題一律給分（原答案 B）"
     },
     {
       "id": 1915,
@@ -39661,9 +39698,11 @@
         "C": "②③⑤",
         "D": "①④⑤"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第59題一律給分（原答案 B）"
     },
     {
       "id": 1980,
@@ -40262,8 +40301,11 @@
         "C": "Pappenheimer bodies",
         "D": "Heinz bodies"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "A,B,C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第9題更正為 A,B,C,D（原答案 D）"
     },
     {
       "id": 2010,
@@ -45522,8 +45564,11 @@
         "C": "是黑色素（Melatonin）的前驅物",
         "D": "含有咪唑（Imidazole）環狀結構"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第32題更正為 C,D（原答案 D）"
     },
     {
       "id": 2273,
@@ -49222,8 +49267,11 @@
         "C": "第一類主要組織相容性複合體（class I MHC）",
         "D": "第二類主要組織相容性複合體（class II MHC）"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第57題更正為 C,D（原答案 D）"
     },
     {
       "id": 2458,
@@ -54803,8 +54851,7 @@
         "D": "IgG 4"
       },
       "answer": "A",
-      "explanation": "",
-      "disputed": true
+      "explanation": ""
     },
     {
       "id": 2737,
@@ -56063,8 +56110,11 @@
         "C": "血清丙酮（serum acetone）",
         "D": "尿中草酸鹽（urine oxalate）"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "A,B,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第79題更正為 A,B,C（原答案 B）"
     },
     {
       "id": 2800,
@@ -57863,8 +57913,11 @@
         "C": "正常",
         "D": "無法判定"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第9題更正為 A,C（原答案 A）"
     },
     {
       "id": 2890,
@@ -62763,9 +62816,11 @@
         "C": "於培養基上可形成氣生菌絲，組織中可觀察到硫黃顆粒（sulfur granules）",
         "D": "可引起mycetoma"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第14題一律給分（原答案 C）"
     },
     {
       "id": 3135,
@@ -62904,8 +62959,11 @@
         "C": "利用葡萄糖產氣（gas from glucose）",
         "D": "離胺酸脫羰酶（lysine decarboxylase）"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第21題一律給分（原答案 A）"
     },
     {
       "id": 3142,
@@ -64064,8 +64122,11 @@
         "C": "Spirillum minus",
         "D": "Legionella pneumophila"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第79題更正為 A,C（原答案 C）"
     },
     {
       "id": 3200,
@@ -64804,8 +64865,11 @@
         "C": "mg/dL",
         "D": "μg/kg"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第36題更正為 B,D（原答案 B）"
     },
     {
       "id": 3237,
@@ -71284,8 +71348,11 @@
         "C": "報告主管",
         "D": "接受HIV預防處理"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第40題更正為 C,D（原答案 C）"
     },
     {
       "id": 3561,
@@ -74184,8 +74251,11 @@
         "C": "葡萄糖脫氫酶（glucose dehydrogenase）",
         "D": "旋轉酶（mutarotase）"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第25題更正為 A,B（原答案 B）"
     },
     {
       "id": 3706,
@@ -81484,8 +81554,11 @@
         "C": "Tag polymerase的stoffel fragment具有3'端至5'端exonuclease活性",
         "D": "Tag polymerase的stoffel fragment適合擴增高GC比的片段"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第70題更正為 C,D（原答案 C）"
     },
     {
       "id": 4071,
@@ -82224,9 +82297,11 @@
         "C": "屬於健康人正常菌群的組成（Normal flora）",
         "D": "Pseudomonas屬中較常被分離的菌種"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第27題一律給分（原答案 C）"
     },
     {
       "id": 4108,
@@ -82665,8 +82740,11 @@
         "C": "Metronidazole",
         "D": "Vancomycin"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第49題更正為 B,D（原答案 B）"
     },
     {
       "id": 4130,
@@ -82805,8 +82883,11 @@
         "C": "1×10 5",
         "D": "1×10 6"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第56題更正為 B,C（原答案 C）"
     },
     {
       "id": 4137,
@@ -83045,8 +83126,11 @@
         "C": "Piedraia hortae",
         "D": "Hortaea werneckii"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第68題更正為 C,D（原答案 C）"
     },
     {
       "id": 4149,
@@ -83865,8 +83949,11 @@
         "C": "β-羥基丁酸（β-hydroxybutyrate）",
         "D": "醋酸（acetate）"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第29題更正為 A,D（原答案 A）"
     },
     {
       "id": 4190,
@@ -90545,8 +90632,11 @@
         "C": "UGC＞UGA",
         "D": ""
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第44題更正為 C,D（原答案 C）"
     },
     {
       "id": 4524,
@@ -96225,8 +96315,11 @@
         "C": "α波消失，腦波背景波呈現θ慢波，頭頂中央位置出現頭頂銳波，睡眠紡錘波和K複合波",
         "D": "每30秒的腦波出現20～50％的δ慢波，K複合波和部分的睡眠紡錘波"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "A,B,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第12題更正為 A,B,D（原答案 C）"
     },
     {
       "id": 4808,
@@ -98685,8 +98778,11 @@
         "B": "②",
         "C": "③"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "B,C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第55題更正為 B,C,D（原答案 D）"
     },
     {
       "id": 4931,
@@ -103225,8 +103321,11 @@
         "C": "硫化血紅素（sulfhemoglobin）",
         "D": "氧合血紅素（oxyhemoglobin）"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "A,B,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第46題更正為 A,B,D（原答案 D）"
     },
     {
       "id": 5158,

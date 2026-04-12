@@ -1684,8 +1684,11 @@
         "C": "應依據評鑑標準之要求訂定",
         "D": "為指引員工行為的基本準則"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第36題一律給分（原答案 B）"
     },
     {
       "id": 85,
@@ -6904,8 +6907,11 @@
         "C": "提升護理生產力的方法是增加人力及投入時間",
         "D": "護理師投入之時間與資源應用是工作效益指標"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第47題一律給分（原答案 B）"
     },
     {
       "id": 346,
@@ -7564,8 +7570,11 @@
         "C": "疾病調節抗風濕藥（DMARDs）為第一線用藥",
         "D": "抗瘧疾藥物（奎寧類）主要副作用在聽力損傷"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第30題更正為 B,C（原答案 B）"
     },
     {
       "id": 379,
@@ -7624,8 +7633,11 @@
         "C": "氣管氣囊漏氣",
         "D": "氣胸"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第33題更正為 A,D（原答案 A）"
     },
     {
       "id": 382,
@@ -9726,8 +9738,11 @@
         "C": "細菌數",
         "D": "懸浮微粒"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第38題更正為 B,C,D（原答案 B）"
     },
     {
       "id": 487,
@@ -19247,8 +19262,7 @@
         "D": "②③"
       },
       "answer": "A",
-      "explanation": "",
-      "disputed": true
+      "explanation": ""
     },
     {
       "id": "113100_med_surg_2",

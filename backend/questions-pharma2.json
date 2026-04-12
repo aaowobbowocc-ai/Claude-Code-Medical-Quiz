@@ -12020,12 +12020,10 @@
         "D": "povidone iodine solution"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "A",
         "C"
-      ],
-      "correction_note": "第1題答A或C或AC者均給分"
+      ]
     },
     {
       "id": "112020_2",
@@ -12311,16 +12309,16 @@
         "C": "可改善周邊靜脈的耐受性",
         "D": "可降低thrombophlebitis 的風險"
       },
-      "answer": "D",
-      "disputed": true,
+      "answer": "送分",
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
       ],
-      "correction_note": "第16題一律給分",
-      "original_answer": "送分"
+      "disputed": true,
+      "original_answer": "送分",
+      "correction_note": "第16題一律給分（原答案 送分）"
     },
     {
       "id": "112020_17",
@@ -12339,14 +12337,14 @@
         "C": "穩定狀態下:BUN/creatinine 每2~3 週",
         "D": "AST/ALT 每週"
       },
-      "answer": "A",
-      "disputed": true,
+      "answer": "A,C",
       "valid_answers": [
         "A",
         "C"
       ],
-      "correction_note": "第17題答A或C或AC者均給分",
-      "original_answer": "A,C"
+      "disputed": true,
+      "original_answer": "A,C",
+      "correction_note": "第17題更正為 A,C（原答案 A,C）"
     },
     {
       "id": "112020_18",
@@ -14398,15 +14396,16 @@
         "C": "僅13",
         "D": "123"
       },
-      "answer": "D",
-      "disputed": true,
+      "answer": "送分",
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
       ],
-      "correction_note": "第45題一律給分"
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第45題一律給分（原答案 D）"
     },
     {
       "id": "112020_1_46",
@@ -15090,7 +15089,10 @@
         "C": "藥師懲戒及爭議處理為食品藥物管理署之法定職掌",
         "D": "中醫醫事人員管理與人力發展政策之規劃、推動及相關法規之研擬,為衛生福利部中醫藥司之法定職掌"
       },
-      "answer": "C"
+      "answer": "A,C",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第1題更正為 A,C（原答案 C）"
     },
     {
       "id": "112020_2_2",
@@ -15376,14 +15378,12 @@
         "D": "藥品貯藏、陳列管理及衛生安全之指導、檢查事項"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第16題一律給分"
+      ]
     },
     {
       "id": "112020_2_17",
@@ -15403,12 +15403,10 @@
         "D": "藥師幫病人評估給藥流程"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "A",
         "C"
-      ],
-      "correction_note": "第17題答A或C或AC者均給分"
+      ]
     },
     {
       "id": "112020_2_18",
@@ -16054,15 +16052,16 @@
         "C": "silver nitrate 0.1~0.5%",
         "D": "acetic acid 1%"
       },
-      "answer": "B",
-      "disputed": true,
+      "answer": "送分",
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
       ],
-      "correction_note": "第1題一律給分"
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第1題一律給分（原答案 B）"
     },
     {
       "id": "112100_2",
@@ -16081,14 +16080,14 @@
         "C": "microcrystalline cellulose",
         "D": "modified starch"
       },
-      "answer": "A",
-      "disputed": true,
+      "answer": "A,C",
       "valid_answers": [
         "B",
         "C"
       ],
-      "correction_note": "第2題答B或C或BC者均給分",
-      "original_answer": "A"
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第2題更正為 A,C（原答案 A）"
     },
     {
       "id": "112100_3",
@@ -16412,14 +16411,12 @@
         "D": "安定劑"
       },
       "answer": "C",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第19題一律給分"
+      ]
     },
     {
       "id": "112100_20",
@@ -16821,14 +16818,12 @@
         "D": "Phase IV"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第40題一律給分"
+      ]
     },
     {
       "id": "112100_41",
@@ -16847,14 +16842,11 @@
         "C": "較無法取得即時的資料",
         "D": "較無法確認處方者的處方原意"
       },
-      "answer": "B",
-      "disputed": true,
+      "answer": "C",
       "valid_answers": [
         "A",
         "D"
-      ],
-      "correction_note": "第41題答A或D或AD者均給分",
-      "original_answer": "C"
+      ]
     },
     {
       "id": "112100_42",
@@ -16950,12 +16942,10 @@
         "D": "propylene glycol-中樞神經興奮"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "A",
         "D"
-      ],
-      "correction_note": "第46題答A或D或\nAD者均給分"
+      ]
     },
     {
       "id": "112100_47",
@@ -16994,14 +16984,12 @@
         "D": "234"
       },
       "answer": "B",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第48題一律給分"
+      ]
     },
     {
       "id": "112100_49",
@@ -18392,13 +18380,14 @@
         "C": "34",
         "D": "24"
       },
-      "answer": "A",
-      "disputed": true,
+      "answer": "A,D",
       "valid_answers": [
         "A",
         "D"
       ],
-      "correction_note": "第41題答A或D或AD者均給分"
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第41題更正為 A,D（原答案 A）"
     },
     {
       "id": "112100_1_42",
@@ -19159,14 +19148,12 @@
         "D": "國家衛生研究院隸屬於國家科學及技術委員會"
       },
       "answer": "B",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第1題一律給分"
+      ]
     },
     {
       "id": "112100_2_2",
@@ -19185,13 +19172,14 @@
         "C": "臺北市政府",
         "D": "衛生福利部中央健康保險署"
       },
-      "answer": "B",
-      "disputed": true,
+      "answer": "B,C",
       "valid_answers": [
         "A",
         "C"
       ],
-      "correction_note": "第2題答A或C或AC者均給分"
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第2題更正為 B,C（原答案 B）"
     },
     {
       "id": "112100_2_3",
@@ -19514,7 +19502,10 @@
         "C": "如因納入之受試者人數嚴重不足,試驗委託者經主持人同意後,方能終止該試驗",
         "D": "該試驗新藥,屬尚未核發藥證之試用產品,得不受藥品優良製造規範之規範"
       },
-      "answer": "A"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第19題一律給分（原答案 A）"
     },
     {
       "id": "112100_2_20",
@@ -19916,7 +19907,10 @@
         "C": "管制藥品專用處方箋",
         "D": "輸出入憑照"
       },
-      "answer": "C"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第40題一律給分（原答案 C）"
     },
     {
       "id": "112100_2_41",
@@ -20030,7 +20024,10 @@
         "C": "未經轉診,於醫學中心門診就醫者,應自行負擔門診或急診費用之百分之五十",
         "D": "未經轉診,於區域醫院門診就醫者,應自行負擔門診或急診費用之百分之三十"
       },
-      "answer": "D"
+      "answer": "A,D",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第46題更正為 A,D（原答案 D）"
     },
     {
       "id": "112100_2_47",
@@ -20068,7 +20065,10 @@
         "C": "透過轉診,被保險人至各層級保險醫事服務機構就醫得享減免部分負擔",
         "D": "提升醫療品質與醫病關係"
       },
-      "answer": "C"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第48題一律給分（原答案 C）"
     },
     {
       "id": "112100_2_49",
@@ -21952,13 +21952,14 @@
         "C": "此二項疾病之胸部X光檢查結果皆不正常",
         "D": "此二項疾病之肺功能檢查皆顯示呼氣氣流受阻"
       },
-      "answer": "C",
-      "disputed": true,
+      "answer": "A,C",
       "valid_answers": [
         "A",
         "C"
       ],
-      "correction_note": "第17題答A或C或AC者均給分"
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第17題更正為 A,C（原答案 C）"
     },
     {
       "id": "113020_1_18",
@@ -32133,14 +32134,12 @@
         "D": "社區藥局執行無菌調製,應申請中央衛生主管機關核准後,始得為之"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第2題一律給分"
+      ]
     },
     {
       "id": "114090_3",
@@ -35186,7 +35185,10 @@
         "C": "家庭暴力、性侵害及性騷擾防治政策",
         "D": "食品、藥物、化粧品管理政策"
       },
-      "answer": "D"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第2題一律給分（原答案 D）"
     },
     {
       "id": "114090_2_3",
@@ -36121,14 +36123,12 @@
         "D": "meta-cresol"
       },
       "answer": "B",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第1題一律給分"
+      ]
     },
     {
       "id": "115020_2",
@@ -39203,7 +39203,10 @@
         "C": "應保存產品原材料、半成品及成品之來源文件",
         "D": "須向主管機關申請登錄始得營業"
       },
-      "answer": "D"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第1題一律給分（原答案 D）"
     },
     {
       "id": "115020_2_2",
@@ -42090,9 +42093,11 @@
         "C": "Moraxella catarrhalis",
         "D": "Pseudomonas aeruginosa"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第17題一律給分（原答案 D）"
     },
     {
       "id": 115020348,
@@ -43251,8 +43256,11 @@
         "C": "多毛症",
         "D": "心肌梗塞"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,B,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第75題更正為 A,B,D（原答案 A）"
     },
     {
       "id": 115020406,

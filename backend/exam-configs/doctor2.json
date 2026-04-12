@@ -14,33 +14,53 @@
       "id": "paper3",
       "name": "醫學(三)",
       "subject": "醫學(三)",
-      "subjects": "內科80",
+      "subjects": "內科59、精神11、皮膚10",
       "count": 80,
-      "pointsPerQ": 1.25
+      "pointsPerQ": 1.25,
+      "breakdown": [
+        { "subject": "內科", "count": 59, "note": "包含一般內、感染、血液" },
+        { "subject": "精神科", "count": 11 },
+        { "subject": "皮膚科", "count": 10 }
+      ]
     },
     {
       "id": "paper4",
       "name": "醫學(四)",
       "subject": "醫學(四)",
-      "subjects": "小兒33、皮膚10、神經15、精神22",
+      "subjects": "小兒40、神經40",
       "count": 80,
-      "pointsPerQ": 1.25
+      "pointsPerQ": 1.25,
+      "breakdown": [
+        { "subject": "小兒科", "count": 40 },
+        { "subject": "神經科", "count": 40 }
+      ]
     },
     {
       "id": "paper5",
       "name": "醫學(五)",
       "subject": "醫學(五)",
-      "subjects": "外科55、骨科8、泌尿17",
+      "subjects": "一般外科55、眼科13、耳鼻喉12",
       "count": 80,
-      "pointsPerQ": 1.25
+      "pointsPerQ": 1.25,
+      "breakdown": [
+        { "subject": "一般外科", "count": 55, "note": "含骨科、泌尿、麻醉" },
+        { "subject": "眼科", "count": 13 },
+        { "subject": "耳鼻喉科", "count": 12 }
+      ]
     },
     {
       "id": "paper6",
       "name": "醫學(六)",
       "subject": "醫學(六)",
-      "subjects": "麻醉8、眼10、耳鼻喉9、婦產30、復健18、倫理5",
+      "subjects": "婦產35、復健15、急診15、倫理法規15",
       "count": 80,
-      "pointsPerQ": 1.25
+      "pointsPerQ": 1.25,
+      "breakdown": [
+        { "subject": "婦產科", "count": 35 },
+        { "subject": "復健科", "count": 15 },
+        { "subject": "急診醫學", "count": 15 },
+        { "subject": "醫療法規與倫理", "count": 15 }
+      ]
     }
   ],
   "stages": [

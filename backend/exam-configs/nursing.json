@@ -13,36 +13,64 @@
       "id": "paper1",
       "name": "基礎醫學",
       "subject": "基礎醫學",
-      "subjects": "解剖、生理、病理、藥理、微免",
-      "count": 50
+      "subjects": "解剖10、生理12、病理10、藥理10、微免8",
+      "count": 50,
+      "breakdown": [
+        { "subject": "解剖學", "count": 10 },
+        { "subject": "生理學", "count": 12 },
+        { "subject": "病理學", "count": 10 },
+        { "subject": "藥理學", "count": 10 },
+        { "subject": "微生物免疫學", "count": 8 }
+      ],
+      "breakdownNote": "依歷屆題分布估計"
     },
     {
       "id": "paper2",
       "name": "基護與護理行政",
       "subject": "基本護理學與護理行政",
-      "subjects": "護理原理、護理技術、護理行政",
-      "count": 50
+      "subjects": "護理原理技術35、護理行政15",
+      "count": 50,
+      "breakdown": [
+        { "subject": "護理原理與技術", "count": 35 },
+        { "subject": "護理行政", "count": 15 }
+      ],
+      "breakdownNote": "依歷屆題分布估計"
     },
     {
       "id": "paper3",
       "name": "內外科護理學",
       "subject": "內外科護理學",
-      "subjects": "內科護理、外科護理",
-      "count": 50
+      "subjects": "內科護理30、外科護理20",
+      "count": 50,
+      "breakdown": [
+        { "subject": "內科護理", "count": 30, "note": "含心血管、呼吸、腸胃、腎臟、內分泌" },
+        { "subject": "外科護理", "count": 20, "note": "含術前後照護、創傷、腫瘤" }
+      ],
+      "breakdownNote": "依歷屆題分布估計"
     },
     {
       "id": "paper4",
       "name": "產兒科護理學",
       "subject": "產兒科護理學",
-      "subjects": "產科護理、兒科護理",
-      "count": 50
+      "subjects": "產科護理25、兒科護理25",
+      "count": 50,
+      "breakdown": [
+        { "subject": "產科護理", "count": 25, "note": "妊娠、分娩、產後" },
+        { "subject": "兒科護理", "count": 25, "note": "新生兒、生長發育、兒童疾病" }
+      ],
+      "breakdownNote": "依歷屆題分布估計"
     },
     {
       "id": "paper5",
       "name": "精神與社區護理",
       "subject": "精神科與社區衛生護理學",
-      "subjects": "精神護理、社區護理",
-      "count": 50
+      "subjects": "精神科護理25、社區衛生護理25",
+      "count": 50,
+      "breakdown": [
+        { "subject": "精神科護理", "count": 25 },
+        { "subject": "社區衛生護理", "count": 25, "note": "含長期照護、公共衛生" }
+      ],
+      "breakdownNote": "依歷屆題分布估計"
     }
   ],
   "stages": [

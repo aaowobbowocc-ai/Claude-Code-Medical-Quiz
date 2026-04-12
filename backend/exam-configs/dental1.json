@@ -14,17 +14,28 @@
       "id": "paper1",
       "name": "卷一",
       "subject": "卷一",
-      "subjects": "牙醫解剖22、牙體形態22、胚胎組織36",
+      "subjects": "牙醫解剖與組織40、牙體形態20、口腔生理生化20",
       "count": 80,
-      "pointsPerQ": 1.25
+      "pointsPerQ": 1.25,
+      "breakdown": [
+        { "subject": "牙醫解剖與組織", "count": 40 },
+        { "subject": "牙體形態", "count": 20 },
+        { "subject": "口腔生理與生化", "count": 20 }
+      ]
     },
     {
       "id": "paper2",
       "name": "卷二",
       "subject": "卷二",
-      "subjects": "口病20、藥理20、微免20、生理生化20",
+      "subjects": "口病20、藥理20、微免20、口腔解剖組織20",
       "count": 80,
-      "pointsPerQ": 1.25
+      "pointsPerQ": 1.25,
+      "breakdown": [
+        { "subject": "口腔病理", "count": 20 },
+        { "subject": "藥理學", "count": 20 },
+        { "subject": "微生物免疫學", "count": 20 },
+        { "subject": "口腔解剖與組織", "count": 20 }
+      ]
     }
   ],
   "stages": [

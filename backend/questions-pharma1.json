@@ -558,12 +558,10 @@
         "D": "尿失禁"
       },
       "answer": "B",
-      "disputed": true,
       "valid_answers": [
         "B",
         "C"
-      ],
-      "correction_note": "第29題答B、C給分"
+      ]
     },
     {
       "id": "110020_30",
@@ -1016,7 +1014,10 @@
         "C": "buprenorphine",
         "D": "diphenoxylate"
       },
-      "answer": "A"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第52題一律給分（原答案 A）"
     },
     {
       "id": "110020_53",
@@ -2005,14 +2006,12 @@
         "D": "可檢測血液檢品中的鋰濃度"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第21題一律給分"
+      ]
     },
     {
       "id": "110020_1_22",
@@ -3755,12 +3754,10 @@
         "D": "乾燥後之顆粒,應立即放入容器中緊密封存"
       },
       "answer": "B",
-      "disputed": true,
       "valid_answers": [
         "B",
         "C"
-      ],
-      "correction_note": "第29題答B、C給分"
+      ]
     },
     {
       "id": "110020_2_30",
@@ -4213,14 +4210,12 @@
         "D": "53"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第52題一律給分"
+      ]
     },
     {
       "id": "110020_2_53",
@@ -4911,12 +4906,10 @@
         "D": "erythromycin"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "B",
         "D"
-      ],
-      "correction_note": "第6題，答B或D或BD者均給分"
+      ]
     },
     {
       "id": "111020_7",
@@ -5537,7 +5530,10 @@
         "C": "remelteon 或buspirone",
         "D": "zolpidem 或midazolam"
       },
-      "answer": "D"
+      "answer": "B,C",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第38題更正為 B,C（原答案 D）"
     },
     {
       "id": "111020_39",
@@ -5671,12 +5667,9 @@
         "D": "tamoxifen 療效減弱、tolterodine 副作用降低"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "C"
-      ],
-      "correction_note": "第45題，答C給分",
-      "original_answer": "A"
+      ]
     },
     {
       "id": "111020_46",
@@ -7155,12 +7148,10 @@
         "D": "外加電場之強度"
       },
       "answer": "C",
-      "disputed": true,
       "valid_answers": [
         "B",
         "C"
-      ],
-      "correction_note": "第38題，答B或C者均給分"
+      ]
     },
     {
       "id": "111020_1_39",
@@ -7484,14 +7475,12 @@
         "D": "預防化學性肝損傷"
       },
       "answer": "B",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第54題，一律給分"
+      ]
     },
     {
       "id": "111020_1_55",
@@ -8776,12 +8765,10 @@
         "D": "55"
       },
       "answer": "C",
-      "disputed": true,
       "valid_answers": [
         "B",
         "C"
-      ],
-      "correction_note": "第38題，答B或C者均給分"
+      ]
     },
     {
       "id": "111020_2_39",
@@ -9103,14 +9090,12 @@
         "D": "8 隻,體溫分別上升0.6°C、0.6°C、"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第54題，一律給分"
+      ]
     },
     {
       "id": "111020_2_55",
@@ -10566,7 +10551,10 @@
         "C": "articaine",
         "D": "prilocaine"
       },
-      "answer": "D"
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第47題更正為 C,D（原答案 D）"
     },
     {
       "id": "111100_48",
@@ -11009,7 +10997,10 @@
         "/question-images/pharma1_111100_68_0.webp",
         "/question-images/pharma1_111100_68_1.webp"
       ],
-      "incomplete": "image_options"
+      "incomplete": "image_options",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第68題更正為 B（原答案 B）"
     },
     {
       "id": "111100_69",
@@ -11944,12 +11935,10 @@
         "D": "流速愈慢"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "A",
         "D"
-      ],
-      "correction_note": "第35題答A或D或AD者均給分"
+      ]
     },
     {
       "id": "111100_1_36",
@@ -13551,12 +13540,10 @@
         "D": "Candida albican"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "A",
         "D"
-      ],
-      "correction_note": "第35題答A或D或AD者均給分"
+      ]
     },
     {
       "id": "111100_2_36",
@@ -13788,12 +13775,10 @@
         "D": "為延長控釋效果,可在交換樹脂藥物複合物外加上適當包衣"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "C",
         "D"
-      ],
-      "correction_note": "第47題答C或D或CD者均給分"
+      ]
     },
     {
       "id": "111100_2_48",
@@ -14229,12 +14214,9 @@
         "D": "123"
       },
       "answer": "C",
-      "disputed": true,
       "valid_answers": [
         "B"
       ],
-      "correction_note": "第68題答B給分",
-      "original_answer": "C",
       "images": [
         "/question-images/pharma1_111100_68_0.webp",
         "/question-images/pharma1_111100_68_1.webp"
@@ -14981,7 +14963,10 @@
         "C": "risperidone",
         "D": "quetiapine"
       },
-      "answer": "A"
+      "answer": "A,D",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第25題更正為 A,D（原答案 A）"
     },
     {
       "id": "112020_26",
@@ -15228,7 +15213,10 @@
         "C": "phenobarbital",
         "D": "secobarbital"
       },
-      "answer": "C"
+      "answer": "A,C",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第38題更正為 A,C（原答案 C）"
     },
     {
       "id": "112020_39",
@@ -15388,14 +15376,12 @@
         "D": "lorcaserin"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第46題一律給分"
+      ]
     },
     {
       "id": "112020_47",
@@ -16609,13 +16595,10 @@
         "D": "頻率在無線電波之波段"
       },
       "answer": "B",
-      "disputed": true,
       "valid_answers": [
         "A",
         "D"
-      ],
-      "correction_note": "第25題答A或D或AD者均給分",
-      "original_answer": "B"
+      ]
     },
     {
       "id": "112020_1_26",
@@ -16864,12 +16847,10 @@
         "D": "1.0"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "A",
         "C"
-      ],
-      "correction_note": "第38題答A或C或AC者均給分"
+      ]
     },
     {
       "id": "112020_1_39",
@@ -17029,14 +17010,12 @@
         "D": "sugar-6-phosphate"
       },
       "answer": "C",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第46題一律給分"
+      ]
     },
     {
       "id": "112020_1_47",
@@ -18241,12 +18220,10 @@
         "D": "一般膠囊殼呈透明狀,通常係因其殼內含明膠、水、蔗糖、及甘油所致"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "A",
         "D"
-      ],
-      "correction_note": "第25題答A或D或AD者均給分"
+      ]
     },
     {
       "id": "112020_2_26",
@@ -18494,12 +18471,10 @@
         "D": "熱原是無機的,無法將它們氧化成容易排除的氣體,進而除掉"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "A",
         "C"
-      ],
-      "correction_note": "第38題答A或C或AC者均給分"
+      ]
     },
     {
       "id": "112020_2_39",
@@ -19928,10 +19903,13 @@
         "C": "adalimumab",
         "D": "etanercept"
       },
-      "answer": "A",
+      "answer": "B,C",
       "images": [
         "/question-images/pharma1_112100_29_0.webp"
-      ]
+      ],
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第29題更正為 B,C（原答案 A）"
     },
     {
       "id": "112100_30",
@@ -21687,14 +21665,12 @@
         "D": "適用於微量檢品"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第37題一律給分"
+      ]
     },
     {
       "id": "112100_1_38",
@@ -23136,12 +23112,10 @@
         "D": "molded tablets"
       },
       "answer": "B",
-      "disputed": true,
       "valid_answers": [
         "B",
         "C"
       ],
-      "correction_note": "第29題答B或C或BC者均給分",
       "images": [
         "/question-images/pharma1_112100_29_0.webp"
       ]
@@ -23297,14 +23271,12 @@
         "D": "皮內注射"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
-      ],
-      "correction_note": "第37題一律給分"
+      ]
     },
     {
       "id": "112100_2_38",
@@ -24804,7 +24776,10 @@
         "C": "dextromethorphan",
         "D": "methylnaltrexone"
       },
-      "answer": "B"
+      "answer": "A,D",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第32題更正為 A,D（原答案 B）"
     },
     {
       "id": "113020_33",
@@ -24928,12 +24903,10 @@
         "D": "St. John's wort"
       },
       "answer": "B",
-      "disputed": true,
       "valid_answers": [
         "B",
         "D"
-      ],
-      "correction_note": "第38題答B或D或BD者均給分"
+      ]
     },
     {
       "id": "113020_39",
@@ -26833,12 +26806,10 @@
         "D": "podophyllotoxin-lignan"
       },
       "answer": "C",
-      "disputed": true,
       "valid_answers": [
         "B",
         "C"
-      ],
-      "correction_note": "第54題答B或C或BC者均給分"
+      ]
     },
     {
       "id": "113020_1_55",
@@ -27991,12 +27962,10 @@
         "D": "篩網應浸在液面下2.5公分"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "A",
         "D"
-      ],
-      "correction_note": "第32題答A或D或AD者均給分"
+      ]
     },
     {
       "id": "113020_2_33",
@@ -28120,13 +28089,10 @@
         "D": "適用於對熱及濕度敏感之藥品進行滅菌"
       },
       "answer": "C",
-      "disputed": true,
       "valid_answers": [
         "B",
         "D"
-      ],
-      "correction_note": "第38題答B或D或BD者均給分",
-      "original_answer": "C"
+      ]
     },
     {
       "id": "113020_2_39",
@@ -29308,7 +29274,10 @@
         "C": "抑制angiotensin converting enzyme同時抑制kallikrein活性,造成bradykinin, substance P累積所致",
         "D": "抑制angiotensin converting enzyme同時抑制kininogen代謝,造成bradykinin, prostaglandin累積所致"
       },
-      "answer": "A"
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第17題更正為 A,B（原答案 A）"
     },
     {
       "id": "113090_18",
@@ -30469,14 +30438,17 @@
         "C": "選項 C（見圖）",
         "D": "選項 D（見圖）"
       },
-      "answer": "A",
+      "answer": "A,D",
       "images": [
         "/question-images/pharma1_113090_75_3.webp",
         "/question-images/pharma1_113090_75_4.webp",
         "/question-images/pharma1_113090_75_5.webp",
         "/question-images/pharma1_113090_75_0.webp"
       ],
-      "incomplete": "image_options"
+      "incomplete": "image_options",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第75題更正為 A,D（原答案 A）"
     },
     {
       "id": "113090_76",
@@ -36744,13 +36716,14 @@
         "C": "具抗氧化活性",
         "D": "具抗血小板凝集作用"
       },
-      "answer": "B",
-      "disputed": true,
+      "answer": "B,C",
       "valid_answers": [
         "B",
         "C"
       ],
-      "correction_note": "第67題答B或C或BC者均給分"
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第67題更正為 B,C（原答案 B）"
     },
     {
       "id": "114020_1_68",
@@ -37064,7 +37037,10 @@
         "C": "5",
         "D": "6.93"
       },
-      "answer": "C"
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第2題更正為 C,D（原答案 C）"
     },
     {
       "id": "114020_2_3",
@@ -38492,11 +38468,14 @@
         "C": "2,000",
         "D": "4,000"
       },
-      "answer": "A",
+      "answer": "送分",
       "images": [
         "/question-images/pharma1_114020_73_0.webp",
         "/question-images/pharma1_114020_73_1.webp"
-      ]
+      ],
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第73題一律給分（原答案 A）"
     },
     {
       "id": "114020_2_74",
@@ -39202,13 +39181,14 @@
         "C": "可能引起肝毒性",
         "D": "可能加重NSAID 藥物對胃腸道的毒性"
       },
-      "answer": "B",
-      "disputed": true,
+      "answer": "B,D",
       "valid_answers": [
         "B",
         "D"
       ],
-      "correction_note": "第29題答B或D或BD者均給分"
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第29題更正為 B,D（原答案 B）"
     },
     {
       "id": "114090_30",
@@ -41451,7 +41431,10 @@
         "C": "tubocurarine chloride",
         "D": "strychnine"
       },
-      "answer": "A"
+      "answer": "A,C",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第60題更正為 A,C（原答案 A）"
     },
     {
       "id": "114090_1_61",
@@ -43805,13 +43788,14 @@
         "C": "spironolactone",
         "D": "amiloride"
       },
-      "answer": "B",
-      "disputed": true,
+      "answer": "A,B",
       "valid_answers": [
         "A",
         "B"
       ],
-      "correction_note": "第18題答A或B或AB者均給分"
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第18題更正為 A,B（原答案 B）"
     },
     {
       "id": "115020_19",
@@ -44179,17 +44163,18 @@
         "C": "腹瀉(diarrhea)",
         "D": "遲發性運動困難(tardive dyskinesia)"
       },
-      "answer": "C",
-      "disputed": true,
+      "answer": "C,D",
       "valid_answers": [
         "C",
         "D"
       ],
-      "correction_note": "第37題答C或D或CD者均給分",
       "images": [
         "/question-images/pharma1_115020_37_5.webp",
         "/question-images/pharma1_115020_37_6.webp"
-      ]
+      ],
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第37題更正為 C,D（原答案 C）"
     },
     {
       "id": "115020_38",
@@ -45518,7 +45503,10 @@
         "C": "fluorescence spectrophotometry",
         "D": "atomic absorption spectrophotometry"
       },
-      "answer": "B"
+      "answer": "B,D",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第17題更正為 B,D（原答案 B）"
     },
     {
       "id": "115020_1_18",
@@ -47474,7 +47462,10 @@
         "C": "減少造粒過程細粉的比例",
         "D": "增加黏合劑的含量"
       },
-      "answer": "D"
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第30題更正為 C,D（原答案 D）"
     },
     {
       "id": "115020_2_31",
@@ -48773,8 +48764,11 @@
         "C": "itraconazole可有效進入腦脊髓液，可治療隱球菌引起之腦膜炎（cryptococcal meningitis）",
         "D": "voriconazole可能產生視覺障礙之副作用"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第8題更正為 B,C（原答案 C）"
     },
     {
       "id": 115020289,
@@ -49013,8 +49007,11 @@
         "C": "fibrinolytic inhibitor",
         "D": "plasmin inhibitor"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第20題更正為 C,D（原答案 C）"
     },
     {
       "id": 115020301,
@@ -51953,8 +51950,11 @@
         "C": "500",
         "D": "1,000"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第7題更正為 B,C（原答案 C）"
     },
     {
       "id": 115020448,
@@ -52113,8 +52113,11 @@
         "C": "Apparatus 5",
         "D": "Apparatus 6"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第15題更正為 A,B（原答案 A）"
     },
     {
       "id": 115020456,

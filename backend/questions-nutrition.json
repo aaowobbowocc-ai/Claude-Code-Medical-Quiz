@@ -3246,8 +3246,11 @@
         "C": "opper",
         "D": "manganese"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "B,C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第37題更正為 B,C,D（原答案 D）"
     },
     {
       "id": 163,
@@ -4468,8 +4471,11 @@
         "C": "第二段三級",
         "D": "第三段四級"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第48題更正為 A,B（原答案 B）"
     },
     {
       "id": 224,
@@ -14592,8 +14598,7 @@
         "D": "鋅"
       },
       "answer": "A",
-      "explanation": "",
-      "disputed": true
+      "explanation": ""
     },
     {
       "id": "113100_food_safety_33",

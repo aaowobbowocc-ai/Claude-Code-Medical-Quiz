@@ -13,43 +13,82 @@
       "id": "paper1",
       "name": "解剖學與生理學",
       "subject": "解剖學與生理學",
-      "subjects": "解剖、生理",
-      "count": 80
+      "subjects": "解剖40、生理40",
+      "count": 80,
+      "breakdown": [
+        { "subject": "解剖學", "count": 40 },
+        { "subject": "生理學", "count": 40 }
+      ],
+      "breakdownNote": "依歷屆題分布估計"
     },
     {
       "id": "paper2",
       "name": "職能治療學概論",
       "subject": "職能治療學概論",
-      "subjects": "職治概論、職治倫理",
-      "count": 80
+      "subjects": "理論基礎40、倫理法規20、實務框架20",
+      "count": 80,
+      "breakdown": [
+        { "subject": "理論基礎", "count": 40 },
+        { "subject": "倫理與法規", "count": 20 },
+        { "subject": "實務框架", "count": 20 }
+      ],
+      "breakdownNote": "依歷屆題分布估計"
     },
     {
       "id": "paper3",
       "name": "生理疾病職治",
       "subject": "生理疾病職能治療學",
-      "subjects": "生理疾病職治",
-      "count": 80
+      "subjects": "中風腦損傷25、脊髓損傷15、骨科20、其他20",
+      "count": 80,
+      "breakdown": [
+        { "subject": "中風與腦損傷", "count": 25 },
+        { "subject": "脊髓損傷", "count": 15 },
+        { "subject": "骨科疾病", "count": 20 },
+        { "subject": "其他生理疾患", "count": 20 }
+      ],
+      "breakdownNote": "依歷屆題分布估計"
     },
     {
       "id": "paper4",
       "name": "心理疾病職治",
       "subject": "心理疾病職能治療學",
-      "subjects": "心理疾病職治",
-      "count": 80
+      "subjects": "思覺失調25、情緒障礙25、物質濫用15、其他15",
+      "count": 80,
+      "breakdown": [
+        { "subject": "思覺失調症", "count": 25 },
+        { "subject": "情緒障礙", "count": 25 },
+        { "subject": "物質濫用", "count": 15 },
+        { "subject": "其他心理疾患", "count": 15 }
+      ],
+      "breakdownNote": "依歷屆題分布估計"
     },
     {
       "id": "paper5",
       "name": "小兒疾病職治",
       "subject": "小兒疾病職能治療學",
-      "subjects": "小兒職治",
-      "count": 80
+      "subjects": "發展遲緩25、腦性麻痺20、自閉症20、其他15",
+      "count": 80,
+      "breakdown": [
+        { "subject": "發展遲緩", "count": 25 },
+        { "subject": "腦性麻痺", "count": 20 },
+        { "subject": "自閉症類群", "count": 20 },
+        { "subject": "其他兒童疾患", "count": 15 }
+      ],
+      "breakdownNote": "依歷屆題分布估計"
     },
     {
       "id": "paper6",
       "name": "職治技術學",
       "subject": "職能治療技術學",
-      "subjects": "評估方法、技術操作",
-      "count": 80
+      "subjects": "功能評估25、輔具設計20、環境改造15、日常活動訓練20",
+      "count": 80,
+      "breakdown": [
+        { "subject": "功能評估", "count": 25 },
+        { "subject": "輔具設計", "count": 20 },
+        { "subject": "環境改造", "count": 15 },
+        { "subject": "日常活動訓練", "count": 20 }
+      ],
+      "breakdownNote": "依歷屆題分布估計"
     }
   ],
   "stages": [

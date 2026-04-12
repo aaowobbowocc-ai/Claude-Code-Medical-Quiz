@@ -17,7 +17,11 @@
       "subjects": "藥理學40、藥物化學40",
       "count": 80,
       "pointsPerQ": 1.25,
-      "timeLimit": 90
+      "timeLimit": 90,
+      "breakdown": [
+        { "subject": "藥理學", "count": 40 },
+        { "subject": "藥物化學", "count": 40 }
+      ]
     },
     {
       "id": "paper2",
@@ -26,7 +30,11 @@
       "subjects": "藥物分析40、生藥學40",
       "count": 80,
       "pointsPerQ": 1.25,
-      "timeLimit": 90
+      "timeLimit": 90,
+      "breakdown": [
+        { "subject": "藥物分析", "count": 40 },
+        { "subject": "生藥學", "count": 40, "note": "含中藥" }
+      ]
     },
     {
       "id": "paper3",
@@ -35,7 +43,11 @@
       "subjects": "藥劑學40、生物藥劑學40",
       "count": 80,
       "pointsPerQ": 1.25,
-      "timeLimit": 90
+      "timeLimit": 90,
+      "breakdown": [
+        { "subject": "藥劑學", "count": 40 },
+        { "subject": "生物藥劑學", "count": 40 }
+      ]
     }
   ],
   "stages": [

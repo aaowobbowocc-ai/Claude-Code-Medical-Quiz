@@ -14,10 +14,15 @@
       "id": "paper1",
       "name": "卷一",
       "subject": "調劑與臨床",
-      "subjects": "調劑學27、臨床藥學27、藥物治療26",
+      "subjects": "調劑學27、臨床藥學27、治療學26",
       "count": 80,
       "pointsPerQ": 1.25,
-      "timeLimit": 90
+      "timeLimit": 90,
+      "breakdown": [
+        { "subject": "調劑學", "count": 27 },
+        { "subject": "臨床藥學", "count": 27 },
+        { "subject": "治療學", "count": 26 }
+      ]
     },
     {
       "id": "paper2",
@@ -26,7 +31,10 @@
       "subjects": "藥物治療學80",
       "count": 80,
       "pointsPerQ": 1.25,
-      "timeLimit": 90
+      "timeLimit": 90,
+      "breakdown": [
+        { "subject": "藥物治療學", "count": 80, "note": "獨立一卷，全考治療" }
+      ]
     },
     {
       "id": "paper3",
@@ -35,7 +43,10 @@
       "subjects": "藥事行政與法規50",
       "count": 50,
       "pointsPerQ": 2,
-      "timeLimit": 60
+      "timeLimit": 60,
+      "breakdown": [
+        { "subject": "藥事行政與法規", "count": 50, "note": "唯一 50 題配置" }
+      ]
     }
   ],
   "stages": [

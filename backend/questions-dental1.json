@@ -640,12 +640,10 @@
         "D": "上顎正中門齒的遠心接觸區(contact area)較側門齒接近齒頸部"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "C",
         "D"
-      ],
-      "correction_note": "第32題答C、D給分"
+      ]
     },
     {
       "id": "110020_33",
@@ -2200,13 +2198,14 @@
         "C": "硬化膨脹(setting expansion)變大",
         "D": "孔隙率(porosity) 增加"
       },
-      "answer": "D",
-      "disputed": true,
+      "answer": "C,D",
       "valid_answers": [
         "C",
         "D"
       ],
-      "correction_note": "第32題答C、D給分"
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第32題更正為 C,D（原答案 D）"
     },
     {
       "id": "110020_1_33",
@@ -3532,14 +3531,14 @@
         "C": "耳顳神經",
         "D": "深顳神經"
       },
-      "answer": "C",
-      "disputed": true,
+      "answer": "A,C",
       "valid_answers": [
         "A",
         "C"
       ],
-      "correction_note": "第21題，答A或C或AC者均給分",
-      "original_answer": "A,C"
+      "disputed": true,
+      "original_answer": "A,C",
+      "correction_note": "第21題更正為 A,C（原答案 A,C）"
     },
     {
       "id": "111020_22",
@@ -10317,12 +10316,10 @@
         "D": "牙本前質(predentin)"
       },
       "answer": "B",
-      "disputed": true,
       "valid_answers": [
         "A",
         "C"
       ],
-      "correction_note": "第50題答A或C或AC者均給分",
       "images": [
         "/question-images/dental1_112020_50_0.webp"
       ]
@@ -11867,16 +11864,17 @@
         "C": "玻璃離子黏合劑",
         "D": "氧化鋅丁香油酚黏合劑"
       },
-      "answer": "C",
-      "disputed": true,
+      "answer": "A,C",
       "valid_answers": [
         "A",
         "C"
       ],
-      "correction_note": "第50題答A或C或AC者均給分",
       "images": [
         "/question-images/dental1_112020_50_0.webp"
-      ]
+      ],
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第50題更正為 A,C（原答案 C）"
     },
     {
       "id": "112020_1_51",
@@ -12802,18 +12800,19 @@
         "C": "前區(anterior region)",
         "D": "背部區(dorsal region)"
       },
-      "answer": "C",
-      "disputed": true,
+      "answer": "送分",
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
       ],
-      "correction_note": "第18題一律給分",
       "images": [
         "/question-images/dental1_112100_18_0.webp"
-      ]
+      ],
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第18題一律給分（原答案 C）"
     },
     {
       "id": "112100_19",
@@ -14145,13 +14144,14 @@
         "C": "癒合後常呈現疤痕",
         "D": "其發生率較大型復發性口腔潰瘍(major recurrent aphthous ulcerations)高"
       },
-      "answer": "A",
-      "disputed": true,
+      "answer": "A,D",
       "valid_answers": [
         "A",
         "D"
       ],
-      "correction_note": "第7題答A或D或AD者均給分"
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第7題更正為 A,D（原答案 A）"
     },
     {
       "id": "112100_1_8",
@@ -14872,13 +14872,14 @@
         "C": "第二類型(Type II)用來鑄造嵌體(inlay)與牙冠(crown)",
         "D": "調拌時,水粉比率增加,其凝固膨脹與吸濕性膨脹(setting and hygroscopic expansion)也會增加"
       },
-      "answer": "B",
-      "disputed": true,
+      "answer": "B,C",
       "valid_answers": [
         "B",
         "C"
       ],
-      "correction_note": "第44題答B或C或BC者均給分"
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第44題更正為 B,C（原答案 B）"
     },
     {
       "id": "112100_1_45",
@@ -16931,12 +16932,10 @@
         "D": "O2與H+競爭在Hb相同結合位置"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "C",
         "D"
       ],
-      "correction_note": "第69題答C或D或CD者均給分",
       "images": [
         "/question-images/dental1_113020_69_0.webp"
       ]
@@ -18510,16 +18509,17 @@
         "C": "游離藥物分子(free drug)可直接作用在細菌或非專一性的分布於口腔內組織及唾液,此現象稱為 distribution",
         "D": "游離藥物分子(free drug)在唾液中是藉由免疫球蛋白來代謝(metabolism)"
       },
-      "answer": "D",
-      "disputed": true,
+      "answer": "C,D",
       "valid_answers": [
         "C",
         "D"
       ],
-      "correction_note": "第69題答C或D或CD者均給分",
       "images": [
         "/question-images/dental1_113020_69_0.webp"
-      ]
+      ],
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第69題更正為 C,D（原答案 D）"
     },
     {
       "id": "113020_1_70",
@@ -24184,7 +24184,10 @@
         "C": "RMGI 含UDMA 樹脂基質成分提升機械性質",
         "D": "Giomer 內含fluoro-boro-alumino-silicate 玻璃填料"
       },
-      "answer": "C"
+      "answer": "B,C",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第42題更正為 B,C（原答案 C）"
     },
     {
       "id": "114020_1_43",
@@ -26001,12 +26004,10 @@
         "D": "膠原蛋白纖維(collagen fibers)"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "A",
         "D"
-      ],
-      "correction_note": "第56題答A或D或AD者均給分"
+      ]
     },
     {
       "id": "114090_57",
@@ -27559,12 +27560,10 @@
         "D": "毒性比脂多醣(lipopolysaccharides)大"
       },
       "answer": "D",
-      "disputed": true,
       "valid_answers": [
         "A",
         "D"
-      ],
-      "correction_note": "第56題答A或D或AD者均給分"
+      ]
     },
     {
       "id": "114090_1_57",
@@ -28899,7 +28898,10 @@
         "C": "主要經由膜內骨化(intramembranous ossification)而形成,沒有次級軟骨(secondary cartilage)的 參與",
         "D": "上顎竇(maxillary sinus)於出生時尚未發育完全,約只有豌豆大小"
       },
-      "answer": "C"
+      "answer": "A,C",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第45題更正為 A,C（原答案 C）"
     },
     {
       "id": "115020_46",
@@ -28940,7 +28942,10 @@
         "C": "柱間牙釉質(interrod enamel)",
         "D": "最終牙釉質(final enamel)"
       },
-      "answer": "B"
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第47題更正為 A,B（原答案 B）"
     },
     {
       "id": "115020_48",
@@ -31522,9 +31527,11 @@
         "C": "鐙骨神經",
         "D": "耳顳神經"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第20題一律給分（原答案 D）"
     },
     {
       "id": 115020201,
@@ -32403,8 +32410,11 @@
         "C": "硬腭後三分之一區域（posterior third of hard palate）",
         "D": "舌頭（tongue）"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第64題更正為 A,D（原答案 D）"
     },
     {
       "id": 115020245,
@@ -33703,9 +33713,11 @@
         "C": "在硬化過程中，聚羧酸鋅黏合劑的黏稠度與時間關係較明顯",
         "D": "液體中的水分蒸發，硬化時間兩者皆會延長"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第49題更正為 A,C（原答案 A）"
     },
     {
       "id": 115020310,
@@ -33904,8 +33916,11 @@
         "C": "在乳齒萌牙口腔中出現",
         "D": "產生對胺基苯甲酸（PABA）幫助合成Vitamin B，對牙周有益"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第59題一律給分（原答案 A）"
     },
     {
       "id": 115020320,
@@ -34104,8 +34119,11 @@
         "C": "周邊組織水腫",
         "D": "神經病變"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第69題更正為 C,D（原答案 C）"
     },
     {
       "id": 115020330,

@@ -1278,7 +1278,10 @@
         "C": "partly controlled",
         "D": "uncontrolled"
       },
-      "answer": "D"
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第64題更正為 C,D（原答案 D）"
     },
     {
       "id": "110020_65",
@@ -2180,7 +2183,10 @@
         "C": "接受Blalock-Taussig shunt術後",
         "D": "大型的肺動脈-肺靜脈瘻管(Pulmonary arteriovenous fistula)"
       },
-      "answer": "D"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第30題一律給分（原答案 D）"
     },
     {
       "id": "110020_1_31",
@@ -2446,11 +2452,14 @@
         "C": "nail pitting與發生乾癬性關節病變有強烈相關性",
         "D": "oil spots是具高度專一性的乾癬指甲病變"
       },
-      "answer": "C",
+      "answer": "送分",
       "images": [
         "/question-images/doctor2_110020_43_0.webp",
         "/question-images/doctor2_110020_43_1.webp"
-      ]
+      ],
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第43題一律給分（原答案 C）"
     },
     {
       "id": "110020_1_44",
@@ -2798,7 +2807,10 @@
         "C": "lamotrigine使用可能與胎兒唇口裂(oral cleft)有關",
         "D": "carbamazepine使用與胎兒發生神經管異常有關"
       },
-      "answer": "B"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第61題一律給分（原答案 B）"
     },
     {
       "id": "110020_1_62",
@@ -7044,7 +7056,10 @@
         "C": "腫瘤細胞影響調節T細胞(regulatory T cells)可以抑制免疫細胞功能",
         "D": "腫瘤細胞產生CTLA-4可讓毒殺T細胞(cytotoxic T cells)不活化"
       },
-      "answer": "A"
+      "answer": "A,D",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第36題更正為 A,D（原答案 A）"
     },
     {
       "id": "111020_37",
@@ -7499,7 +7514,10 @@
         "C": "僅24",
         "D": "1234"
       },
-      "answer": "A"
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第59題更正為 A,B（原答案 A）"
     },
     {
       "id": "111020_60",
@@ -9017,12 +9035,10 @@
         "D": "單株免疫球蛋白增高血症(monoclonal gammopathy)"
       },
       "answer": "A",
-      "disputed": true,
       "valid_answers": [
         "C",
         "D"
-      ],
-      "correction_note": "第55題，答C或D或CD者均給分"
+      ]
     },
     {
       "id": "111020_1_56",
@@ -10616,12 +10632,10 @@
         "D": "食道閉鎖"
       },
       "answer": "C",
-      "disputed": true,
       "valid_answers": [
         "C",
         "D"
-      ],
-      "correction_note": "第55題，答C或D或CD者均給分"
+      ]
     },
     {
       "id": "111020_2_56",
@@ -10849,7 +10863,10 @@
         "C": "尿液常規檢查",
         "D": "前列腺特定抗原(PSA)"
       },
-      "answer": "B"
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第67題更正為 A,B（原答案 B）"
     },
     {
       "id": "111020_2_68",
@@ -12214,7 +12231,10 @@
         "C": "停經婦女體內雄性素仍維持不減",
         "D": "女性外生殖器發育是受到雌激素刺激而形成的"
       },
-      "answer": "D"
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第55題更正為 C,D（原答案 D）"
     },
     {
       "id": "111020_3_56",
@@ -13651,10 +13671,13 @@
         "C": "氣喘治療採階梯式治療原則",
         "D": "每一階段的治療至少要2個月以上才能考慮降階"
       },
-      "answer": "D",
+      "answer": "送分",
       "images": [
         "/question-images/doctor2_112020_47_0.webp"
-      ]
+      ],
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第47題一律給分（原答案 D）"
     },
     {
       "id": "112020_48",
@@ -21558,7 +21581,10 @@
         "C": "phenytoin",
         "D": "carbamazepine"
       },
-      "answer": "B"
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第47題更正為 A,B（原答案 B）"
     },
     {
       "id": "113020_1_48",
@@ -23560,7 +23586,10 @@
         "C": "在高血壓族群的發生率較一般族群為高",
         "D": "注射Clostridial collagenase 是非手術治療方式之一"
       },
-      "answer": "C"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第69題一律給分（原答案 C）"
     },
     {
       "id": "113020_2_70",
@@ -23680,7 +23709,10 @@
         "C": "脊椎或硬膜外麻醉,比全身麻醉易造成急性尿滯留",
         "D": "肛門直腸手術,比其他手術易造成急性尿滯留"
       },
-      "answer": "A"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第75題一律給分（原答案 A）"
     },
     {
       "id": "113020_2_76",
@@ -25805,7 +25837,10 @@
         "C": "糖尿病",
         "D": "高血脂症"
       },
-      "answer": "B"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第23題一律給分（原答案 B）"
     },
     {
       "id": "114020_24",
@@ -26185,7 +26220,10 @@
         "C": "在成人會有β4 tetramer 的形成",
         "D": "成年病人其HbA 的生成,約為正常人的25~30%"
       },
-      "answer": "A"
+      "answer": "A,D",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第42題更正為 A,D（原答案 A）"
     },
     {
       "id": "114020_43",
@@ -27959,7 +27997,10 @@
         "C": "病理特徵是細胞外類澱粉斑塊與細胞內神經糾結",
         "D": "臨床症狀有時會出現妄想症狀"
       },
-      "answer": "B"
+      "answer": "B,C",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第52題更正為 B,C（原答案 B）"
     },
     {
       "id": "114020_1_53",
@@ -28073,7 +28114,10 @@
         "C": "常是單一病程,不會反覆發病",
         "D": "較好發於成年人"
       },
-      "answer": "D"
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第58題更正為 C,D（原答案 D）"
     },
     {
       "id": "114020_1_59",
@@ -30258,7 +30302,10 @@
         "C": "<200",
         "D": "<100"
       },
-      "answer": "C"
+      "answer": "B,C",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第9題更正為 B,C（原答案 C）"
     },
     {
       "id": "114020_3_10",
@@ -30590,10 +30637,13 @@
         "C": "三叉神經(trigeminal nerve)",
         "D": "迷走神經(vagus nerve)"
       },
-      "answer": "C",
+      "answer": "送分",
       "images": [
         "/question-images/doctor2_114020_26_0.webp"
-      ]
+      ],
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第26題一律給分（原答案 C）"
     },
     {
       "id": "114020_3_27",
@@ -30612,7 +30662,10 @@
         "C": "約75%",
         "D": "約10%"
       },
-      "answer": "C"
+      "answer": "B,C",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第27題更正為 B,C（原答案 C）"
     },
     {
       "id": "114020_3_28",
@@ -31676,7 +31729,10 @@
         "C": "Venerable Elder Survey 13 工具,≧3 分即為衰弱",
         "D": "Strawbridge 等人1994 年設計的Frailty Measure,problem/difficulties in≧2 domains 即為衰弱"
       },
-      "answer": "A"
+      "answer": "A,C",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第1題更正為 A,C（原答案 A）"
     },
     {
       "id": "115020_2",
@@ -31813,7 +31869,10 @@
         "C": "無可確認的靜脈血栓栓塞危險因子(no identifiable risk factor of venous thromboembolism)",
         "D": "外傷(trauma)"
       },
-      "answer": "D"
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第8題更正為 C,D（原答案 D）"
     },
     {
       "id": "115020_9",
@@ -33419,7 +33478,10 @@
         "C": "大型的主動脈到肺動脈側枝血管(major aortopulmonary collateral arteries, MAPCAs)",
         "D": "肺動脈-肺靜脈瘻管(pulmonary arteriovenous fistula)"
       },
-      "answer": "D"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第6題一律給分（原答案 D）"
     },
     {
       "id": "115020_1_7",
@@ -33882,7 +33944,10 @@
         "C": "目前對於自閉症的核心症狀已有很有效的藥物治療",
         "D": "自閉症約有50%病患有智能不足的問題"
       },
-      "answer": "D"
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第29題一律給分（原答案 D）"
     },
     {
       "id": "115020_1_30",
@@ -35732,7 +35797,10 @@
         "C": "單獨外科、化學或放射治療皆無法延長存活",
         "D": "肋膜外全肺切除包括切除肺、臟層、壁層肋膜、心包膜與橫膈"
       },
-      "answer": "B"
+      "answer": "B,C",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第39題更正為 B,C（原答案 B）"
     },
     {
       "id": "115020_2_40",
@@ -36005,7 +36073,7 @@
         "C": "第二對鰓裂瘻管(2nd branchial fistula)",
         "D": "梨狀竇瘻管(pyriform sinus fistula)"
       },
-      "answer": "C",
+      "answer": "送分",
       "images": [
         "/question-images/doctor2_115020_52_0.webp",
         "/question-images/doctor2_115020_52_1.webp",
@@ -36014,7 +36082,10 @@
         "/question-images/doctor2_115020_52_4.webp",
         "/question-images/doctor2_115020_52_5.webp",
         "/question-images/doctor2_115020_52_6.webp"
-      ]
+      ],
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第52題一律給分（原答案 C）"
     },
     {
       "id": "115020_2_53",
@@ -36266,7 +36337,10 @@
         "C": "type IIF 腎臟囊泡有18%以上惡性腫瘤機率",
         "D": "type IV 腎臟囊泡有90%以上惡性腫瘤機率"
       },
-      "answer": "B"
+      "answer": "B,C",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第65題更正為 B,C（原答案 B）"
     },
     {
       "id": "115020_2_66",
@@ -36626,8 +36700,11 @@
         "C": "術中發生的myocardial ischemia 大多可以清楚定位缺血區域",
         "D": "對缺血敏感度最高的lead 是V5,次之則是V4"
       },
-      "answer": "C",
-      "incomplete": "missing_image"
+      "answer": "A,C",
+      "incomplete": "missing_image",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第2題更正為 A,C（原答案 C）"
     },
     {
       "id": "115020_3_3",
@@ -36764,7 +36841,7 @@
         "C": "使用抑制血管收縮素轉化酶(angiotensin converting enzyme)的抗高血壓藥物",
         "D": "使用低劑量硝化甘油輸注(nitroglycerin infusion)"
       },
-      "answer": "D",
+      "answer": "B,C,D",
       "images": [
         "/question-images/doctor2_115020_9_0.webp",
         "/question-images/doctor2_115020_9_1.webp",
@@ -36782,7 +36859,10 @@
         "/question-images/doctor2_115020_9_13.webp",
         "/question-images/doctor2_115020_9_14.webp",
         "/question-images/doctor2_115020_9_15.webp"
-      ]
+      ],
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第9題更正為 B,C,D（原答案 D）"
     },
     {
       "id": "115020_3_10",
@@ -36839,7 +36919,10 @@
         "C": "角膜占整體眼球屈光度的1/3",
         "D": "角膜的鮑曼氏層(Bowman layer)是上皮細胞的基質層(basement membrane)"
       },
-      "answer": "C"
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第12題更正為 C,D（原答案 C）"
     },
     {
       "id": "115020_3_13",
@@ -37132,7 +37215,10 @@
         "C": "術前給與病人抗甲狀腺藥物及碘液(Lugol's iodine)可以降低甲狀腺血流,減少手術過程中出血的風險",
         "D": "凸眼(exophthalmos)症狀在甲狀腺手術後仍無法有效改善"
       },
-      "answer": "B"
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第27題更正為 A,B（原答案 B）"
     },
     {
       "id": "115020_3_28",
@@ -38551,8 +38637,11 @@
         "C": "bilirubin",
         "D": "ALT"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "B,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第16題更正為 B,D（原答案 D）"
     },
     {
       "id": 115020397,
@@ -40131,9 +40220,11 @@
         "C": "藥物引起急性腎小管壞死（Acute tubular necrosis）",
         "D": "泌尿道阻塞（Urinary tract obstruction）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第15題一律給分（原答案 C）"
     },
     {
       "id": 115020476,
@@ -40812,8 +40903,11 @@
         "C": "橫竇（transverse sinus）",
         "D": "海綿竇（cavernous sinus）"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第49題更正為 A,C（原答案 A）"
     },
     {
       "id": 115020510,
@@ -41032,8 +41126,11 @@
         "C": "目前基因研究指出有幾個基因之位置與此病症相關，在第18對染色體長臂及第22對染色體長臂被認為是較 相關之區域",
         "D": "目前研究顯示環境因素可以解釋其病因之70%，生物體質病因大約為30%"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "B,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第60題更正為 B,D（原答案 D）"
     },
     {
       "id": 115020521,
@@ -41152,8 +41249,11 @@
         "C": "失眠常有潛在的生理或心理疾病，使用zolpidem和BZD類藥物是「治標不治本」，只能暫時緩和症狀",
         "D": "沒有任何醫學研究支持長期使用短效型zolpidem和BZD類藥物來治療失眠"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第66題更正為 A,D（原答案 A）"
     },
     {
       "id": 115020527,
@@ -41572,9 +41672,11 @@
         "C": "整個肝葉都為包膜下血腫覆蓋，可能為第五級",
         "D": "總共分五級"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第7題一律給分（原答案 D）"
     },
     {
       "id": 115020548,
@@ -44753,8 +44855,11 @@
         "C": "合併藥物催迫（pharmacological stress）之核醫心肌灌注造影可用以檢出心肌缺血（ischemia）及心肌梗塞後之 疤痕（scar）",
         "D": "電腦斷層（multi-detector CT）測得之鈣化分數（calcium score）可準確診斷冠狀動脈心臟病，但對疾病預後之 應用尚不明確"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第6題更正為 B,D（原答案 B）"
     },
     {
       "id": 115020707,
@@ -45213,8 +45318,11 @@
         "B": "Henle氏環下行枝（descending limb of Henle's loop）",
         "D": "集尿管（collecting duct）"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第29題更正為 C,D（原答案 D）"
     },
     {
       "id": 115020730,
@@ -47534,8 +47642,7 @@
         "D": "強迫症（obsessive-compulsive disorder）女性罹病率高於男性"
       },
       "answer": "D",
-      "explanation": "",
-      "disputed": true
+      "explanation": ""
     },
     {
       "id": 115020846,
@@ -49175,8 +49282,7 @@
         "D": "最常轉移到肺臟及肝臟"
       },
       "answer": "C",
-      "explanation": "",
-      "disputed": true
+      "explanation": ""
     },
     {
       "id": 115020928,
@@ -49916,8 +50022,7 @@
         "D": "在病人的聲門下瘢痕組織中有可能檢出胃蛋白酶（pepsin）"
       },
       "answer": "B",
-      "explanation": "",
-      "disputed": true
+      "explanation": ""
     },
     {
       "id": 115020965,
@@ -50596,8 +50701,11 @@
         "C": "情感失認症（affective agnosia）",
         "D": "動作不能性緘默（akinetic mutism）"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第58題更正為 C,D（原答案 D）"
     },
     {
       "id": 115020999,
@@ -51736,8 +51844,11 @@
         "C": "華人髖關節OA較白種人少見",
         "D": "90%以上OA患者必須先行使用非類固醇抗發炎藥物（NSAID）"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "B,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第35題更正為 B,D（原答案 D）"
     },
     {
       "id": 115021056,
@@ -51896,8 +52007,11 @@
         "C": "自體造血幹細胞移植（autologous hematopoietic stem cell transplantation）並無graft-versus-host",
         "D": "周邊血液中，在施打granulocyte colony-stimulating factor（G-CSF）數天之後，也可能收集到足夠的造血幹細 胞進行移植。若是收集的數量不足，施打plerixafor（一種CXCR4的拮抗劑），可以幫助收集到更多的造血 幹細胞"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第43題更正為 B,C（原答案 B）"
     },
     {
       "id": 115021064,
@@ -52776,9 +52890,11 @@
         "C": "三尖瓣閉鎖（tricuspid atresia）合併肺動脈狹窄（pulmonary stenosis）",
         "D": "動脈幹異常（truncus arteriosus）"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第8題更正為 A,C（原答案 C）"
     },
     {
       "id": 115021108,
@@ -53457,8 +53573,11 @@
         "C": "針對廣泛性反覆發作的病灶，手術切除合併皮瓣重建是一個合理的治療選項",
         "D": "長期發炎的病灶會有產生鱗狀上皮細胞癌的可能"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第42題一律給分（原答案 A）"
     },
     {
       "id": 115021142,
@@ -53577,8 +53696,11 @@
         "C": "乙醯膽鹼（acetylcholine）",
         "D": "多巴胺（dopamine）"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第48題一律給分（原答案 C）"
     },
     {
       "id": 115021148,
@@ -54237,8 +54359,11 @@
         "C": "血漿：血小板：紅血球為1單位：1單位：2單位",
         "D": "血漿：血小板：紅血球為1單位：1單位：1單位"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "第1題更正為 C,D（原答案 D）"
     },
     {
       "id": 115021181,
@@ -54537,8 +54662,11 @@
         "C": "type III：胸大肌（pectoralis major）",
         "D": "type IV：縫匠肌（sartorius）"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第16題更正為 A,C（原答案 C）"
     },
     {
       "id": 115021196,
@@ -55197,8 +55325,11 @@
         "C": "Duhamel procedure",
         "D": "Sistrunk procedure"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第49題更正為 A,B（原答案 B）"
     },
     {
       "id": 115021229,
@@ -55577,8 +55708,11 @@
         "C": "因目前設備及手術技巧進步，經尿道前列腺切除手術後不會造成尿失禁（incontinence）",
         "D": "手術中可能出現經尿道切除手術症候群（TUR syndrome），病人會出現噁心、嘔吐、神智不清及心跳加速 等症狀"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第68題更正為 A,D（原答案 A）"
     },
     {
       "id": 115021248,
@@ -56077,9 +56211,11 @@
         "C": "當外傷或手術造成內皮細胞傷害過度時，將可能造成角膜不可逆之水腫",
         "D": "不可逆之角膜水腫造成病人視力衰退時，可考慮以角膜移植治療"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "第13題一律給分（原答案 A）"
     },
     {
       "id": 115021273,
@@ -56238,8 +56374,11 @@
         "C": "上頜竇（maxillary sinus）的快速增長約在青春期",
         "D": "蝶竇（sphenoid sinus）是最晚開始發育且最晚完成的鼻竇"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "第21題一律給分（原答案 B）"
     },
     {
       "id": 115021281,
@@ -56278,8 +56417,11 @@
         "C": "軟式喉內視鏡僅能局限於臨床診斷用途；硬式喉內視鏡則可進行治療性手術",
         "D": "以目前的光學技術及醫療影像而言，兩者均可呈現高解析度影像畫質"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "第23題更正為 A,C（原答案 C）"
     },
     {
       "id": 115021283,

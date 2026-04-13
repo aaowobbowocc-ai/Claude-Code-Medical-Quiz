@@ -12,7 +12,7 @@ import Sheet from '../components/Sheet'
 import SupportBar from '../components/SupportBar'
 import SupportSheets from '../components/SupportSheets'
 import RewardAdSheet from '../components/RewardAdSheet'
-import { supabase, linkOrSignInGoogle, signOutAndReanon, getLinkedIdentity } from '../lib/supabase'
+import { supabase, linkOrSignInGoogle, switchGoogleAccount, getLinkedIdentity } from '../lib/supabase'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
 
@@ -276,11 +276,11 @@ export default function Home() {
     if (r.error) { setAuthMsg('連線失敗：' + r.error); setAuthBusy(false) }
     // On linking/signingIn, browser redirects — no UI to update
   }
-  const handleSignOut = async () => {
-    if (!confirm('確定要登出？登出後會建立新的訪客帳號，現有進度仍保留在此瀏覽器，但不會跨裝置同步。')) return
-    setAuthBusy(true)
-    await signOutAndReanon()
-    setAuthBusy(false)
+  const handleSwitchGoogle = async () => {
+    setAuthBusy(true); setAuthMsg('')
+    const r = await switchGoogleAccount()
+    if (r.error) { setAuthMsg('連線失敗：' + r.error); setAuthBusy(false) }
+    // On switching, browser redirects — no UI to update
   }
 
   useEffect(() => {
@@ -741,9 +741,9 @@ export default function Home() {
                     <p className="text-sm font-bold text-emerald-700">已綁定 Google</p>
                     <p className="text-xs text-emerald-600 truncate">{linkedIdentity.email || '已連結'}</p>
                   </div>
-                  <button onClick={handleSignOut} disabled={authBusy}
-                          className="text-xs text-gray-500 px-3 py-1.5 bg-white border border-gray-200 rounded-lg active:scale-95 disabled:opacity-50">
-                    登出
+                  <button onClick={handleSwitchGoogle} disabled={authBusy}
+                          className="text-xs text-medical-blue px-3 py-1.5 bg-white border border-medical-blue/30 rounded-lg active:scale-95 disabled:opacity-50 whitespace-nowrap">
+                    換綁
                   </button>
                 </div>
               ) : (

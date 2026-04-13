@@ -71,13 +71,20 @@ export async function linkOrSignInGoogle() {
 }
 
 /**
- * Sign out and immediately create a new anonymous session,
- * so the app stays functional after logout.
+ * Force a Google account picker and switch to whichever account the user picks.
+ * Used by the "換綁 Google" button — replaces current session entirely.
  */
-export async function signOutAndReanon() {
-  if (!supabase) return null
-  await supabase.auth.signOut()
-  return ensureSession()
+export async function switchGoogleAccount() {
+  if (!supabase) return { error: 'auth-disabled' }
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: 'google',
+    options: {
+      redirectTo: window.location.origin,
+      queryParams: { prompt: 'select_account' }, // force account picker even if already signed in
+    },
+  })
+  if (error) return { error: error.message }
+  return { switching: true }
 }
 
 /** Get current user's email + provider info, or null if anon. */

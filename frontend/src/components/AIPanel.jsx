@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -112,6 +113,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                           session: session || '',
                           number: number || '',
                           message: reportText.trim(),
+                          name: usePlayerStore.getState().name || '',
                         }),
                       })
                       setReportSent(true)

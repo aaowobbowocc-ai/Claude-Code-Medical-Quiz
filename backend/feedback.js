@@ -33,6 +33,7 @@ async function sendReportDiscord(entry) {
       ? `${entry.rocYear}年${entry.session || ''} 第${entry.number || '?'}題`
       : '';
     const fields = [
+      { name: '來自', value: entry.name || '匿名', inline: true },
       { name: '題目 ID', value: entry.questionId || '未知', inline: true },
       { name: '年份/題號', value: yearInfo || '未知', inline: true },
       { name: '時間', value: new Date().toISOString().slice(0, 19).replace('T', ' '), inline: true },
@@ -82,7 +83,7 @@ function registerRoutes(app) {
 
   // POST /report — user reports a question error
   app.post('/report', async (req, res) => {
-    const { questionId, questionText, rocYear, session, number, message } = req.body;
+    const { questionId, questionText, rocYear, session, number, message, name } = req.body;
     if (!questionId) {
       return res.status(400).json({ error: 'questionId is required' });
     }
@@ -94,12 +95,45 @@ function registerRoutes(app) {
       session: session || '',
       number: number || '',
       message: (message || '').slice(0, 500),
+      name: (name || '').slice(0, 30),
     };
+
+    if (supabase) {
+      try {
+        await supabase.from('reports').insert({
+          question_id: entry.questionId,
+          question_text: entry.questionText,
+          roc_year: entry.rocYear,
+          session: entry.session,
+          number: String(entry.number),
+          message: entry.message,
+          name: entry.name,
+        });
+      } catch (e) {
+        console.error('reports insert failed:', e.message);
+      }
+    }
 
     // Send to Discord report channel (non-blocking)
     sendReportDiscord(entry);
 
     res.json({ ok: true });
+  });
+
+  // GET /reports?key=xxx — admin views question reports
+  app.get('/reports', async (req, res) => {
+    const ADMIN_KEY = process.env.FEEDBACK_ADMIN_KEY || 'med-king-admin-2026';
+    if (req.query.key !== ADMIN_KEY) {
+      return res.status(403).json({ error: 'unauthorized' });
+    }
+    if (!supabase) return res.json([]);
+    const { data } = await supabase
+      .from('reports')
+      .select('*')
+      .order('created_at', { ascending: false })
+      .limit(200);
+
+    res.json(data || []);
   });
 
   // GET /feedback?key=xxx — admin views feedback

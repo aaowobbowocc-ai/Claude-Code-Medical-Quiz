@@ -22,39 +22,56 @@ export const isAuthEnabled = !!supabase
  * Ensure the user has a session. If none exists, sign in anonymously.
  * Returns the user object, or null if auth is disabled.
  *
- * IMPORTANT: After Google OAuth redirect, the URL contains `?code=...` (PKCE flow)
- * and Supabase needs to async-exchange it for a session. If we call signInAnonymously
- * before that exchange finishes, we'd clobber the just-linked Google session with a
- * fresh anon user. So we wait for the SIGNED_IN event when an OAuth callback is detected.
+ * IMPORTANT: After Google OAuth redirect, Supabase async-processes ?code= in the
+ * background. The URL gets cleared early (before the API exchange returns), so a
+ * URL-only check races against the exchange and can wrongly fall through to
+ * signInAnonymously, clobbering the pending Google session with a fresh anon user.
+ * linkOrSignInGoogle/switchGoogleAccount set a sessionStorage flag right before
+ * redirecting; if that flag is present we wait for a non-anon session before
+ * giving up.
  */
+const OAUTH_PENDING_KEY = 'medking-oauth-pending'
+
 export async function ensureSession() {
   if (!supabase) return null
 
-  // Detect mid-flight OAuth callback (PKCE: ?code=, implicit: #access_token=)
   const url = typeof window !== 'undefined' ? window.location : null
-  const hasOAuthCallback = url && (
+  const urlHasCallback = url && (
     /[?&]code=/.test(url.search) ||
     /access_token=/.test(url.hash)
   )
+  const oauthPending = typeof sessionStorage !== 'undefined' &&
+    sessionStorage.getItem(OAUTH_PENDING_KEY) === '1'
 
-  if (hasOAuthCallback) {
-    // Wait up to 5s for Supabase to finish processing the OAuth callback
+  if (urlHasCallback || oauthPending) {
+    if (oauthPending) sessionStorage.removeItem(OAUTH_PENDING_KEY)
+
+    // Wait up to 8s for a real (non-anon) session to appear. Resolves on
+    // SIGNED_IN/INITIAL_SESSION events OR if getSession already has one.
     const session = await new Promise(resolve => {
-      const timeout = setTimeout(async () => {
+      let done = false
+      const finish = (s) => {
+        if (done) return
+        done = true
+        clearTimeout(timeout)
         sub.subscription.unsubscribe()
-        const { data: { session: s } } = await supabase.auth.getSession()
         resolve(s)
-      }, 5000)
+      }
+      const timeout = setTimeout(async () => {
+        const { data: { session: s } } = await supabase.auth.getSession()
+        finish(s)
+      }, 8000)
       const sub = supabase.auth.onAuthStateChange((evt, s) => {
-        if (evt === 'SIGNED_IN' || evt === 'INITIAL_SESSION') {
-          clearTimeout(timeout)
-          sub.subscription.unsubscribe()
-          resolve(s)
+        if ((evt === 'SIGNED_IN' || evt === 'INITIAL_SESSION') && s?.user && !s.user.is_anonymous) {
+          finish(s)
         }
+      })
+      // Also poll getSession immediately in case the exchange already completed
+      supabase.auth.getSession().then(({ data: { session: s } }) => {
+        if (s?.user && !s.user.is_anonymous) finish(s)
       })
     })
     if (session?.user) return session.user
-    // Fall through to anon if OAuth failed — at least don't leave the user session-less
   }
 
   const { data: { session } } = await supabase.auth.getSession()
@@ -98,11 +115,18 @@ export async function linkOrSignInGoogle() {
     await supabase.auth.signOut({ scope: 'local' })
   }
 
+  // Mark OAuth in-flight so ensureSession on the post-redirect page knows to
+  // wait for the real session instead of racing into signInAnonymously
+  sessionStorage.setItem(OAUTH_PENDING_KEY, '1')
+
   const { error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: { redirectTo: window.location.origin },
   })
-  if (error) return { error: error.message }
+  if (error) {
+    sessionStorage.removeItem(OAUTH_PENDING_KEY)
+    return { error: error.message }
+  }
   return { signingIn: true }
 }
 
@@ -112,6 +136,7 @@ export async function linkOrSignInGoogle() {
  */
 export async function switchGoogleAccount() {
   if (!supabase) return { error: 'auth-disabled' }
+  sessionStorage.setItem(OAUTH_PENDING_KEY, '1')
   const { error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: {
@@ -119,7 +144,10 @@ export async function switchGoogleAccount() {
       queryParams: { prompt: 'select_account' }, // force account picker even if already signed in
     },
   })
-  if (error) return { error: error.message }
+  if (error) {
+    sessionStorage.removeItem(OAUTH_PENDING_KEY)
+    return { error: error.message }
+  }
   return { switching: true }
 }
 

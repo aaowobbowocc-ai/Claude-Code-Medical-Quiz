@@ -48,28 +48,35 @@ export async function ensureSession() {
 
     // Wait up to 8s for a real (non-anon) session to appear. Resolves on
     // SIGNED_IN/INITIAL_SESSION events OR if getSession already has one.
+    // NOTE: supabase-js v2 returns onAuthStateChange as { data: { subscription } } —
+    // calling sub.subscription.unsubscribe() throws and silently breaks the whole
+    // hydrate flow, leaving the user stuck on the empty-name screen until refresh.
     const session = await new Promise(resolve => {
       let done = false
+      let subscription = null
       const finish = (s) => {
         if (done) return
         done = true
         clearTimeout(timeout)
-        sub.subscription.unsubscribe()
+        try { subscription?.unsubscribe() } catch {}
         resolve(s)
       }
       const timeout = setTimeout(async () => {
-        const { data: { session: s } } = await supabase.auth.getSession()
-        finish(s)
+        try {
+          const { data: { session: s } } = await supabase.auth.getSession()
+          finish(s)
+        } catch { finish(null) }
       }, 8000)
-      const sub = supabase.auth.onAuthStateChange((evt, s) => {
+      const { data } = supabase.auth.onAuthStateChange((evt, s) => {
         if ((evt === 'SIGNED_IN' || evt === 'INITIAL_SESSION') && s?.user && !s.user.is_anonymous) {
           finish(s)
         }
       })
+      subscription = data?.subscription
       // Also poll getSession immediately in case the exchange already completed
       supabase.auth.getSession().then(({ data: { session: s } }) => {
         if (s?.user && !s.user.is_anonymous) finish(s)
-      })
+      }).catch(() => {})
     })
     if (session?.user) return session.user
   }

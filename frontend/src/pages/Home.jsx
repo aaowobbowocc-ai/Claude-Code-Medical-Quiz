@@ -192,7 +192,8 @@ function TutorialSection({ exam }) {
 
 export default function Home() {
   const navigate = useNavigate()
-  const { name, setName, coins, level, claimDailyBonus, loginStreak } = usePlayerStore()
+  const { name, setName, coins, level, claimDailyBonus, loginStreak, bindRewardClaimed, claimBindReward } = usePlayerStore()
+  const [bindRewardToast, setBindRewardToast] = useState(0)
   const [dailyClaimed, setDailyClaimed] = useState(false)
   const [dailyAmount, setDailyAmount] = useState(0)
 
@@ -553,6 +554,35 @@ export default function Home() {
         </div>
       )}
 
+      {/* Bind reward banner — visible only when Google linked & not yet claimed */}
+      {linkedIdentity && !bindRewardClaimed && (
+        <button
+          onClick={() => {
+            const got = claimBindReward()
+            if (got) { setBindRewardToast(got); setTimeout(() => setBindRewardToast(0), 2500) }
+          }}
+          className="w-full px-4 py-3 flex items-center gap-3 active:scale-[0.98] transition-transform"
+          style={{ background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)' }}>
+          <span className="text-2xl shrink-0">🎁</span>
+          <div className="flex-1 text-left min-w-0">
+            <p className="text-white font-bold text-sm leading-tight">綁定 Google 獎勵已準備好！</p>
+            <p className="text-white/80 text-[11px] mt-0.5">點擊領取 +3000 🪙 感謝您的支持</p>
+          </div>
+          <span className="shrink-0 bg-white text-amber-700 text-xs font-bold px-3 py-1.5 rounded-lg">領取</span>
+        </button>
+      )}
+
+      {/* Bind reward toast */}
+      {bindRewardToast > 0 && (
+        <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-white border-2 border-amber-400 rounded-2xl px-5 py-3 shadow-2xl flex items-center gap-3 animate-bounce">
+          <span className="text-3xl">🎉</span>
+          <div>
+            <p className="font-bold text-amber-700 text-sm">+{bindRewardToast} 金幣</p>
+            <p className="text-xs text-gray-500">綁定獎勵已入帳</p>
+          </div>
+        </div>
+      )}
+
       {/* Hero */}
       <div className="relative overflow-hidden px-5 pt-14 pb-6"
            style={{ background: heroGrad }}>
@@ -779,17 +809,30 @@ export default function Home() {
                   </button>
                 </div>
               ) : linkedIdentity ? (
-                <div className="bg-emerald-50 border border-emerald-200 rounded-2xl px-4 py-3 flex items-center gap-3">
-                  <span className="text-2xl">✅</span>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-bold text-emerald-700">已綁定 Google</p>
-                    <p className="text-xs text-emerald-600 truncate">{linkedIdentity.email || '已連結'}</p>
+                <>
+                  <div className="bg-emerald-50 border border-emerald-200 rounded-2xl px-4 py-3 flex items-center gap-3">
+                    <span className="text-2xl">✅</span>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-bold text-emerald-700">已綁定 Google</p>
+                      <p className="text-xs text-emerald-600 truncate">{linkedIdentity.email || '已連結'}</p>
+                    </div>
+                    <button onClick={handleSwitchGoogle} disabled={authBusy}
+                            className="text-xs text-medical-blue px-3 py-1.5 bg-white border border-medical-blue/30 rounded-lg active:scale-95 disabled:opacity-50 whitespace-nowrap">
+                      換綁
+                    </button>
                   </div>
-                  <button onClick={handleSwitchGoogle} disabled={authBusy}
-                          className="text-xs text-medical-blue px-3 py-1.5 bg-white border border-medical-blue/30 rounded-lg active:scale-95 disabled:opacity-50 whitespace-nowrap">
-                    換綁
-                  </button>
-                </div>
+                  {!bindRewardClaimed && (
+                    <button
+                      onClick={() => {
+                        const got = claimBindReward()
+                        if (got) { setBindRewardToast(got); setTimeout(() => setBindRewardToast(0), 2500) }
+                      }}
+                      className="mt-3 w-full py-3 rounded-2xl font-bold text-sm text-white flex items-center justify-center gap-2 active:scale-95 shadow-md"
+                      style={{ background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)' }}>
+                      <span className="text-lg">🎁</span> 領取綁定獎勵 +3000 🪙
+                    </button>
+                  )}
+                </>
               ) : (
                 <>
                   <button onClick={handleLinkGoogle} disabled={authBusy}

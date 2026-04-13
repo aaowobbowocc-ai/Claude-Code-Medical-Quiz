@@ -20,6 +20,7 @@ const FIELD_MAP = {
   adRewardToday: 'ad_reward_today',
   lastAdWatch: 'last_ad_watch',
   lastAdDate: 'last_ad_date',
+  bindRewardClaimed: 'bind_reward_claimed',
 }
 
 function storeToDb(state) {
@@ -147,6 +148,12 @@ export const usePlayerStore = create(
       adRewardToday: 0,
       lastAdWatch: '',
       lastAdDate: '',
+      bindRewardClaimed: false,
+      claimBindReward: () => {
+        if (get().bindRewardClaimed) return false
+        set((s) => ({ coins: s.coins + 3000, bindRewardClaimed: true }))
+        return 3000
+      },
       claimAdReward: () => {
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
         const s = get()

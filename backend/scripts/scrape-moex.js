@@ -218,6 +218,8 @@ function parseQuestionsPdf(text) {
     currentQ = null
   }
 
+  let inMcSection = false  // becomes true after we see "測驗題" header
+
   for (const rawLine of lines) {
     const line = rawLine.trim()
     if (!line) continue
@@ -226,6 +228,16 @@ function parseQuestionsPdf(text) {
     if (/^(代號|類科|科目|考試|頁次|等\s*別|全.*題|本試題|座號|※)/.test(line)) continue
     if (/^\d+\s*頁/.test(line)) continue
     if (/^第\s*\d+\s*頁/.test(line)) continue
+
+    // Detect 測驗題 / 選擇題 section marker (some PDFs have 申論題 essays before MC)
+    // When found, drop any in-progress essay question so the MC Q1 is treated as first.
+    if (/測驗題|單一選擇題|選擇題/.test(line) && !inMcSection) {
+      currentQ = null
+      currentOption = null
+      buffer = ''
+      inMcSection = true
+      continue
+    }
 
     // New question — number followed by period
     // Reject pure decimal numbers like "1.0", "2.5" (short line, no CJK/letters)
@@ -241,8 +253,11 @@ function parseQuestionsPdf(text) {
       }
     }
 
-    // Option line
-    const optMatch = line.match(/^[\(（]?\s*([A-Da-dＡＢＣＤ])\s*[\)）]?\s*[.\s]?\s*(.*)/)
+    // Option line — must have an explicit separator (period/punct or paren)
+    // otherwise option text starting with A-D ("atorvastatin", "Cat scratch")
+    // would be misparsed as a new option marker, dropping the leading letter.
+    const optMatch = line.match(/^[\(（]\s*([A-Da-dＡＢＣＤ])\s*[\)）]\s*(.*)$/)
+      || line.match(/^([A-Da-dＡＢＣＤ])\s*[.．、]\s*(.*)$/)
     if (optMatch && currentQ) {
       flushOption()
       currentOption = optMatch[1].toUpperCase()

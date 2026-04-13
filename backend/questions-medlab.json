@@ -3,7 +3,8 @@
     "exam": "medlab",
     "label": "醫事檢驗師",
     "scraped_at": "2026-04-10T01:56:03.736Z",
-    "source": "wwwq.moex.gov.tw"
+    "source": "wwwq.moex.gov.tw",
+    "last_updated": "2026-04-13T06:19:21.504Z"
   },
   "total": 5269,
   "questions": [
@@ -2631,7 +2632,7 @@
       "subject_name": "臨床血液學與血庫學",
       "stage_id": 0,
       "number": 51,
-      "question": "從三群人檢測血中血小板生成素（thrombopoietin, TPO）濃度：正常對照組、再生不良性貧血（aplastic",
+      "question": "從三群人檢測血中血小板生成素（thrombopoietin, TPO）濃度：正常對照組、再生不良性貧血（aplastic anemia）及原發性血小板過多症（essential thrombocythemia）。結果如圖所示，各組排列最可能是下列何 者？",
       "options": {
         "A": "①正常對照組，②再生不良性貧血，③原發性血小板過多症",
         "B": "①正常對照組，②原發性血小板過多症，③再生不良性貧血",
@@ -2937,7 +2938,7 @@
       "question": "有關Lewis血型的敘述，下列何者正確？",
       "options": {
         "A": "LE基因產物可將半乳醣轉移到第一型前驅物質",
-        "B": "LE基因產物可製造Le",
+        "B": "LE基因產物可製造Le c 抗原",
         "C": "紅血球本身並不製造Lewis抗原，是由血漿中吸附上去的",
         "D": "LE基因產物不可作用到第二型前驅物質"
       },
@@ -3016,10 +3017,10 @@
       "number": 70,
       "question": "下表血型抗體鑑定之結果最可能為何？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "Anti-Lu",
-        "D": "Anti-Fy"
+        "A": "Anti-C",
+        "B": "Anti-C w",
+        "C": "Anti-Lu a",
+        "D": "Anti-Fy b"
       },
       "answer": "A",
       "explanation": ""
@@ -3076,10 +3077,10 @@
       "number": 73,
       "question": "下列何種抗體是臨床上有意義的溫型抗體，且此抗體不會與經無花果蛋白酶（ficin）處理過的紅血球反應？",
       "options": {
-        "A": "",
-        "B": "Anti-Fy",
+        "A": "Anti-D",
+        "B": "Anti-Fy a",
         "C": "Anti-M",
-        "D": "Anti-Jk"
+        "D": "Anti-Jk a"
       },
       "answer": "B",
       "explanation": ""
@@ -3154,10 +3155,10 @@
       "subject_name": "臨床血液學與血庫學",
       "stage_id": 0,
       "number": 77,
-      "question": "在紅血球凝集抑制試驗（hemagglutination-inhibition test）中，若最終加入的A細胞產生凝集反應，但",
+      "question": "在紅血球凝集抑制試驗（hemagglutination-inhibition test）中，若最終加入的A細胞產生凝集反應，但 B細胞未產生凝集，則該唾液中應表現何種抗原？",
       "options": {
-        "B": "僅表現B抗原",
         "A": "僅表現A抗原",
+        "B": "僅表現B抗原",
         "C": "表現A和B抗原",
         "D": "不表現A和B抗原"
       },
@@ -7001,11 +7002,11 @@
       "subject_name": "生物化學與臨床生化學",
       "stage_id": 0,
       "number": 29,
-      "question": "下列那一種分子是膽固醇酯化酵素 lecithin cholesterol acyltransferase（LCAT）反應所需的輔因子",
+      "question": "下列那一種分子是膽固醇酯化酵素 lecithin cholesterol acyltransferase（LCAT）反應所需的輔因子 （cofactor）？",
       "options": {
-        "C": "apo C-II",
         "A": "apo A-I",
         "B": "apo B-100",
+        "C": "apo C-II",
         "D": "apo E"
       },
       "answer": "A",
@@ -7348,9 +7349,8 @@
         "C": "零級反應指反應速率與酵素活性成正比",
         "D": "溫度每增加攝氏1度，反應速率增加10%"
       },
-      "answer": "B,D",
+      "answer": "B",
       "explanation": "",
-      "disputed": true,
       "original_answer": "B",
       "correction_note": "第46題更正為 B,D（原答案 B）"
     },
@@ -27397,7 +27397,7 @@
       "subject_name": "臨床血清免疫學與臨床病毒學",
       "stage_id": 0,
       "number": 5,
-      "question": "下列何種細胞參與先天和適應性免疫之交互作用，在抗原刺激後作為專業抗原呈獻細胞（professional",
+      "question": "下列何種細胞參與先天和適應性免疫之交互作用，在抗原刺激後作為專業抗原呈獻細胞（professional antigen presenting cells）？",
       "options": {
         "A": "CD4 T細胞",
         "B": "嗜中性球（neutrophil）",
@@ -27504,9 +27504,8 @@
         "C": "AID能夠對單股及雙股DNA的胞嘧啶核苷（cytidine）進行脫氨基的作用",
         "D": "AID能夠啟動免疫球蛋白之類別轉換（class switch recombination）"
       },
-      "answer": "A,C",
+      "answer": "C",
       "explanation": "",
-      "disputed": true,
       "original_answer": "C",
       "correction_note": "第10題更正為 A,C（原答案 C）"
     },
@@ -27540,7 +27539,7 @@
       "subject_name": "臨床血清免疫學與臨床病毒學",
       "stage_id": 0,
       "number": 12,
-      "question": "有關T細胞受體複合體中訊息傳遞的免疫受體酪氨酸激活基序（immunoreceptor tyrosine-based",
+      "question": "有關T細胞受體複合體中訊息傳遞的免疫受體酪氨酸激活基序（immunoreceptor tyrosine-based activation motifs, ITAM），下列何者錯誤？",
       "options": {
         "A": "此ITAM序列被Lck激酶活化",
         "B": "ITAM位於CD3的細胞內區域（intracellular domain）",
@@ -33136,7 +33135,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 1652,
@@ -33596,7 +33596,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 1675,
@@ -37836,7 +37837,8 @@
         "D": "HIV-1 Ab"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 1887,
@@ -40685,7 +40687,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2029,
@@ -43265,7 +43268,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2158,
@@ -46608,7 +46612,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2325,
@@ -47388,7 +47393,8 @@
         "D": "嗜中性白血球（neutrophil）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2364,
@@ -50371,7 +50377,8 @@
         "D": "Histiocytes"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2513,
@@ -50531,7 +50538,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2521,
@@ -51071,7 +51079,8 @@
         "D": "A 1"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2548,
@@ -51151,7 +51160,8 @@
         "D": "Anti-E"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2552,
@@ -54311,7 +54321,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2710,
@@ -59777,7 +59788,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2983,
@@ -60037,7 +60049,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2996,
@@ -60877,7 +60890,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3038,
@@ -60937,7 +60951,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3041,
@@ -79955,7 +79970,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3991,
@@ -80075,7 +80091,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3997,
@@ -84453,7 +84470,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4215,
@@ -84893,7 +84911,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4237,
@@ -85213,7 +85232,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4253,
@@ -86453,7 +86473,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4315,
@@ -86993,7 +87014,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4342,
@@ -87673,7 +87695,8 @@
         "D": "血清病（serum sickness）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4376,
@@ -87953,7 +87976,8 @@
         "D": "通常用免疫抑制治療可改善發炎"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4390,
@@ -90013,7 +90037,8 @@
         "D": "Hemoccult ICT試驗"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4493,
@@ -90213,7 +90238,8 @@
         "D": "Lipid"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4503,
@@ -90493,7 +90519,8 @@
         "D": "Meningitis"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4517,
@@ -90573,7 +90600,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4521,
@@ -90656,7 +90684,8 @@
         "D": "亨丁頓舞蹈症（Huntington disease）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4525,
@@ -90676,7 +90705,8 @@
         "D": "玻璃器皿可經4～6小時高溫（400°C）處理，使RNase去活性"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4526,
@@ -90876,7 +90906,8 @@
         "D": "pulse-field gel electrophoresis（PFGE）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4536,
@@ -90896,7 +90927,8 @@
         "C": "y3和Cy5"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4537,
@@ -90936,7 +90968,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4539,
@@ -90956,7 +90989,8 @@
         "D": "G＞A"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4540,
@@ -91296,7 +91330,8 @@
         "D": "HLA-B*5801"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4557,
@@ -91356,7 +91391,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4560,
@@ -91476,7 +91512,8 @@
         "D": "Mycobacterium tuberculosis / BSL-IV"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4566,
@@ -91616,7 +91653,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4573,
@@ -91636,7 +91674,8 @@
         "D": "Mannitol salt agar"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4574,
@@ -91696,7 +91735,8 @@
         "D": "Streptococcus pneumoniae"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4577,
@@ -91736,7 +91776,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4579,
@@ -91756,7 +91797,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4580,
@@ -91796,7 +91838,8 @@
         "D": "serine、threonine"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4582,
@@ -91876,7 +91919,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4586,
@@ -91896,7 +91940,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4587,
@@ -91956,7 +92001,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4590,
@@ -91976,7 +92022,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4591,
@@ -92016,7 +92063,8 @@
         "D": "Pseudomonas aeruginosa 和Pseudomonas fluorescens"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4593,
@@ -92076,7 +92124,8 @@
         "D": "Serratia marcescens"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4596,
@@ -92096,7 +92145,8 @@
         "D": "motility (＋)"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4597,
@@ -92156,7 +92206,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4600,
@@ -92176,7 +92227,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4601,
@@ -92196,7 +92248,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4602,
@@ -92296,7 +92349,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4607,
@@ -92316,7 +92370,8 @@
         "D": "gentamicin"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4608,
@@ -92336,7 +92391,8 @@
         "D": "aptomycin"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4609,
@@ -92356,7 +92412,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4610,
@@ -92376,7 +92433,8 @@
         "D": "macrolide"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4611,
@@ -92396,7 +92454,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4612,
@@ -92436,7 +92495,8 @@
         "D": "白喉（Diphtheria）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4614,
@@ -92476,7 +92536,8 @@
         "D": "Pyruvate broth"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4616,
@@ -92496,7 +92557,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4617,
@@ -92776,7 +92838,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4631,
@@ -92856,7 +92919,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4635,
@@ -92876,7 +92940,8 @@
         "D": "periodic acid-Schiff stain－Candida spp."
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4636,
@@ -92896,7 +92961,8 @@
         "D": "Streptococcus pyogenes"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4637,
@@ -92916,7 +92982,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4638,
@@ -93176,7 +93243,8 @@
         "D": "運鐵蛋白（transferrin）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4651,
@@ -93296,7 +93364,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4657,
@@ -93636,7 +93705,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4674,
@@ -93756,7 +93826,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4680,
@@ -93936,7 +94007,8 @@
         "D": "Lp-PLA 2"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4689,
@@ -93956,7 +94028,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4690,
@@ -94016,7 +94089,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4693,
@@ -94036,7 +94110,8 @@
         "D": "NT-proBNP主要由腎臟排除"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4694,
@@ -94076,7 +94151,8 @@
         "D": "γ-glutamyltransferase（GGT）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4696,
@@ -94096,7 +94172,8 @@
         "D": "γ-glutamyltransferase（GGT）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4697,
@@ -94156,7 +94233,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4700,
@@ -94176,7 +94254,8 @@
         "D": "PSA"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4701,
@@ -94296,7 +94375,8 @@
         "D": "glutathione reductase"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4707,
@@ -94336,7 +94416,8 @@
         "D": "heparin"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4709,
@@ -94636,7 +94717,8 @@
         "C": "巨噬細胞表面接受體CD36能夠辨識病原體表面許多抗原性成分，但是並不包含長鏈脂肪酸（long-chain fatty acids）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4724,
@@ -94656,7 +94738,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4725,
@@ -94776,7 +94859,8 @@
         "C": "ompetitive ELISA"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4731,
@@ -94796,7 +94880,8 @@
         "D": "Lysozyme"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4732,
@@ -94816,7 +94901,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4733,
@@ -94836,7 +94922,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4734,
@@ -94856,7 +94943,8 @@
         "D": "IL-6含量上升"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4735,
@@ -95056,7 +95144,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4745,
@@ -95076,7 +95165,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4746,
@@ -95156,7 +95246,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4750,
@@ -95276,7 +95367,8 @@
         "C": "核仁特異性RNA"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4756,
@@ -95356,7 +95448,8 @@
         "D": "施打減毒疫苗可以預防感染"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4760,
@@ -95416,7 +95509,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4763,
@@ -95496,7 +95590,8 @@
         "D": "輪狀病毒疫苗"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4767,
@@ -95576,7 +95671,8 @@
         "D": "SARS coronavirus-2"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4771,
@@ -95596,7 +95692,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4772,
@@ -95616,7 +95713,8 @@
         "C": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4773,
@@ -95636,7 +95734,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4774,
@@ -95716,7 +95815,8 @@
         "D": "Poxvirus"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4778,
@@ -95736,7 +95836,8 @@
         "D": "Herpes simplex virus type 2"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4779,
@@ -95956,7 +96057,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4790,
@@ -96056,7 +96158,8 @@
         "D": "real-time RT-PCR"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4795,
@@ -96076,7 +96179,8 @@
         "D": "Ribavirin"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4796,
@@ -97339,7 +97443,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4859,
@@ -97559,7 +97664,8 @@
         "D": "TFR2"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4870,
@@ -98019,7 +98125,8 @@
         "D": "Myeloproliferative neoplasm"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4893,
@@ -98059,7 +98166,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4895,
@@ -98079,7 +98187,8 @@
         "D": "Sickle cell anemia"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4896,
@@ -98099,7 +98208,8 @@
         "D": "Heinz body"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4897,
@@ -98119,7 +98229,8 @@
         "D": "Küpffer cell of the liver"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4898,
@@ -98179,7 +98290,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4901,
@@ -98219,7 +98331,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4903,
@@ -98239,7 +98352,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4904,
@@ -98279,7 +98393,8 @@
         "D": "Sudan Black stain：AML(-)，ALL(+)"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4906,
@@ -98359,7 +98474,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4910,
@@ -98379,7 +98495,8 @@
         "D": "MPL mutation"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4911,
@@ -98499,7 +98616,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4917,
@@ -98519,7 +98637,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4918,
@@ -98842,7 +98961,8 @@
         "D": "PT正常"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4934,
@@ -98902,7 +99022,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4937,
@@ -99082,7 +99203,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4946,
@@ -99262,7 +99384,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4955,
@@ -99482,7 +99605,8 @@
         "D": "3% SSA test"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4966,
@@ -99782,7 +99906,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4981,
@@ -99802,7 +99927,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4982,
@@ -100082,7 +100208,8 @@
         "C": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4996,
@@ -100122,7 +100249,8 @@
         "D": "TC"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4998,
@@ -100222,7 +100350,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5003,
@@ -100722,7 +100851,8 @@
         "D": "可測得1／1000微量殘存白血病細胞"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5028,
@@ -100742,7 +100872,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5029,
@@ -100762,7 +100893,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5030,
@@ -100862,7 +100994,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5035,
@@ -100962,7 +101095,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5040,
@@ -100982,7 +101116,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5041,
@@ -101062,7 +101197,8 @@
         "C": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5045,
@@ -101122,7 +101258,8 @@
         "D": "Vibrio cholerae"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5048,
@@ -101182,7 +101319,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5051,
@@ -101382,7 +101520,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5061,
@@ -101442,7 +101581,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5064,
@@ -101462,7 +101602,8 @@
         "D": "Gardnerella vaginalis"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5065,
@@ -101662,7 +101803,8 @@
         "D": "Mycoplasma hominis"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5075,
@@ -101682,7 +101824,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5076,
@@ -101882,7 +102025,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5086,
@@ -101902,7 +102046,8 @@
         "D": "tetracycline"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5087,
@@ -102002,7 +102147,8 @@
         "D": ""
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5092,
@@ -102062,7 +102208,8 @@
         "D": "嗜麥芽窄食單胞菌（Stenotrophomonas maltophilia）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5095,
@@ -102082,7 +102229,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5096,
@@ -102102,7 +102250,8 @@
         "D": "Microsporum"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5097,
@@ -102122,7 +102271,8 @@
         "D": "Talaromyces marneffei"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5098,
@@ -102142,7 +102292,8 @@
         "D": "Mucor"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5099,
@@ -102282,7 +102433,8 @@
         "D": "Neisseria gonorrhoeae"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5106,
@@ -102382,7 +102534,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5111,
@@ -102422,7 +102575,8 @@
         "D": "reversed-phase liquid chromatography"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5113,
@@ -102642,7 +102796,8 @@
         "D": "hCG下降"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5124,
@@ -102662,7 +102817,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5125,
@@ -102682,7 +102838,8 @@
         "D": "雷氏症候群（Reye syndrome）是先天性高血氨的疾病"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5126,
@@ -102702,7 +102859,8 @@
         "D": "urea"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5127,
@@ -102782,7 +102940,8 @@
         "D": "haptoglobin於血管內溶血時會下降"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5131,
@@ -102882,7 +103041,8 @@
         "D": "lysine"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5136,
@@ -102962,7 +103122,8 @@
         "D": "HMG-CoA reductase"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5140,
@@ -103385,7 +103546,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5161,
@@ -103405,7 +103567,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5162,
@@ -103545,7 +103708,8 @@
         "D": "Mn 2+"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5169,
@@ -103585,7 +103749,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5171,
@@ -103865,7 +104030,8 @@
         "D": "methemoglobin"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5185,
@@ -104065,7 +104231,8 @@
         "D": "ICAM-3：LFA-1"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5195,
@@ -104105,7 +104272,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5197,
@@ -104125,7 +104293,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5198,
@@ -104185,7 +104354,8 @@
         "D": "Neutrophils"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5201,
@@ -104265,7 +104435,8 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5205,
@@ -104285,7 +104456,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5206,
@@ -104385,7 +104557,8 @@
         "D": "T細胞"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5211,
@@ -104425,7 +104598,8 @@
         "D": "IL-4 receptor"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5213,
@@ -104445,7 +104619,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5214,
@@ -104485,7 +104660,8 @@
         "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5216,
@@ -104685,7 +104861,8 @@
         "D": "Human epithelial growth factor 2（HER2）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5226,
@@ -104705,7 +104882,8 @@
         "D": "調節型T細胞"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5227,
@@ -104765,7 +104943,8 @@
         "D": "Medigen（高端）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5230,
@@ -104785,7 +104964,8 @@
         "D": "Flt-3"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5231,
@@ -104845,7 +105025,8 @@
         "D": "human papillomavirus"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5234,
@@ -104865,7 +105046,8 @@
         "D": "RNA疫苗"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5235,
@@ -105045,7 +105227,8 @@
         "D": "血漿CMV核酸定量（plasma CMV DNA viral load）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5244,
@@ -105165,7 +105348,8 @@
         "D": "Pre-S"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5250,
@@ -105265,7 +105449,8 @@
         "D": "EBV nuclear antigen（EBNA）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5255,
@@ -105345,7 +105530,8 @@
         "D": "克沙奇病毒B3"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5259,
@@ -105465,7 +105651,8 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5265,

@@ -10695,14 +10695,15 @@
       "subject_name": "藥物治療學",
       "stage_id": 3,
       "number": 62,
-      "question": "下列何者為acarbose的禁忌症? A.osteoporosis B.anemia",
+      "question": "下列何者為acarbose的禁忌症?",
       "options": {
+        "A": "osteoporosis",
+        "B": "anemia",
         "C": "colonic ulceration",
         "D": "asthma"
       },
       "answer": "C",
-      "incomplete": "image_options",
-      "disputed": true
+      "incomplete": "image_options"
     },
     {
       "id": "111100_1_63",

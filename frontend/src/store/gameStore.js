@@ -88,7 +88,16 @@ export const usePlayerStore = create(
             set({ ...dbToStore(row), hydrated: true })
             console.log('[profile] hydrated from cloud')
           } else {
-            // First time on this user — upload current local state (handles migration)
+            // First time on this user — upload current local state (handles migration).
+            // For brand-new Google sign-ins, pre-fill name from Google profile if local is empty.
+            const local = get()
+            if (!local.name) {
+              const meta = user.user_metadata || {}
+              const googleName = meta.full_name || meta.name
+              if (googleName) {
+                set({ name: googleName.slice(0, 12) })
+              }
+            }
             const payload = { user_id: user.id, ...storeToDb(get()) }
             const { error: insErr } = await supabase.from('profiles').insert(payload)
             if (insErr) throw insErr

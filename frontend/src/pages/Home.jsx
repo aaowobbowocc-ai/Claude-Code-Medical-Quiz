@@ -820,14 +820,19 @@ export default function Home() {
             <div className="mt-5 pt-5 border-t border-gray-100">
               <p className="text-xs text-gray-400 mb-2 text-center">帳號綁定</p>
               {isPWAStandalone ? (
-                /* PWA 模式：擋掉 Google 綁定，引導去瀏覽器版 */
+                /* PWA 模式：擋掉 Google 綁定，引導去瀏覽器版 + 提供備份匯出 */
                 <div className="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3">
                   <p className="text-sm font-bold text-amber-700 flex items-center gap-1.5">
                     <span>📱</span> PWA 不支援帳號綁定
                   </p>
                   <p className="text-xs text-amber-600 mt-1.5 leading-relaxed">
-                    PWA 與瀏覽器是兩個獨立的儲存空間，無法共用 Google 登入狀態。要跨裝置同步，請改用瀏覽器版（Chrome / Safari）開啟此網站再綁定。
+                    PWA 與瀏覽器是兩個獨立的儲存空間。要把 PWA 的資料同步到雲端,請按「匯出備份」複製代碼 → 用瀏覽器打開 examking.tw → 在瀏覽器用「匯入備份」貼上 → 然後就能在瀏覽器綁 Google。
                   </p>
+                  <button
+                    onClick={() => { setSheet('backup') }}
+                    className="mt-2.5 w-full py-2 rounded-xl text-xs font-bold text-white active:scale-95 grad-cta">
+                    📦 匯出備份
+                  </button>
                   <button
                     onClick={async () => {
                       try {
@@ -836,8 +841,8 @@ export default function Home() {
                         setTimeout(() => setCopiedUrl(false), 2000)
                       } catch { setCopiedUrl(false) }
                     }}
-                    className="mt-2.5 w-full py-2 rounded-xl text-xs font-bold bg-white border border-amber-300 text-amber-700 active:scale-95">
-                    {copiedUrl ? '✓ 已複製，請貼到瀏覽器' : '📋 複製網址 examking.tw'}
+                    className="mt-1.5 w-full py-2 rounded-xl text-xs font-bold bg-white border border-amber-300 text-amber-700 active:scale-95">
+                    {copiedUrl ? '✓ 已複製,請貼到瀏覽器' : '📋 複製網址 examking.tw'}
                   </button>
                 </div>
               ) : linkedIdentity ? (

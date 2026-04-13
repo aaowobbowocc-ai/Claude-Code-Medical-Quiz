@@ -16,12 +16,25 @@
       "subjects": "解剖20、生理20、肌動學25、物治導論15",
       "count": 80,
       "breakdown": [
-        { "subject": "解剖學", "count": 20 },
-        { "subject": "生理學", "count": 20 },
-        { "subject": "肌動學", "count": 25 },
-        { "subject": "物治導論", "count": 15 }
+        {
+          "subject": "解剖學",
+          "count": 20
+        },
+        {
+          "subject": "生理學",
+          "count": 20
+        },
+        {
+          "subject": "肌動學",
+          "count": 25
+        },
+        {
+          "subject": "物治導論",
+          "count": 15
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper2",
@@ -30,11 +43,21 @@
       "subjects": "物治概念40、倫理法規20、循證實踐20",
       "count": 80,
       "breakdown": [
-        { "subject": "物治概念", "count": 40 },
-        { "subject": "倫理與法規", "count": 20 },
-        { "subject": "循證實踐", "count": 20 }
+        {
+          "subject": "物治概念",
+          "count": 40
+        },
+        {
+          "subject": "倫理與法規",
+          "count": 20
+        },
+        {
+          "subject": "循證實踐",
+          "count": 20
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper3",
@@ -43,12 +66,25 @@
       "subjects": "熱電療25、水療10、徒手治療25、運動治療20",
       "count": 80,
       "breakdown": [
-        { "subject": "熱療與電療", "count": 25 },
-        { "subject": "水療", "count": 10 },
-        { "subject": "徒手治療", "count": 25 },
-        { "subject": "運動治療", "count": 20 }
+        {
+          "subject": "熱療與電療",
+          "count": 25
+        },
+        {
+          "subject": "水療",
+          "count": 10
+        },
+        {
+          "subject": "徒手治療",
+          "count": 25
+        },
+        {
+          "subject": "運動治療",
+          "count": 20
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper4",
@@ -57,11 +93,22 @@
       "subjects": "中風30、脊髓損傷20、其他神經疾患30",
       "count": 80,
       "breakdown": [
-        { "subject": "中風", "count": 30 },
-        { "subject": "脊髓損傷", "count": 20 },
-        { "subject": "其他神經疾患", "count": 30, "note": "含帕金森、多發性硬化症、小兒神經" }
+        {
+          "subject": "中風",
+          "count": 30
+        },
+        {
+          "subject": "脊髓損傷",
+          "count": 20
+        },
+        {
+          "subject": "其他神經疾患",
+          "count": 30,
+          "note": "含帕金森、多發性硬化症、小兒神經"
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper5",
@@ -70,12 +117,25 @@
       "subjects": "骨折術後20、關節置換20、運動傷害20、其他20",
       "count": 80,
       "breakdown": [
-        { "subject": "骨折與術後", "count": 20 },
-        { "subject": "關節置換", "count": 20 },
-        { "subject": "運動傷害", "count": 20 },
-        { "subject": "其他骨科疾患", "count": 20 }
+        {
+          "subject": "骨折與術後",
+          "count": 20
+        },
+        {
+          "subject": "關節置換",
+          "count": 20
+        },
+        {
+          "subject": "運動傷害",
+          "count": 20
+        },
+        {
+          "subject": "其他骨科疾患",
+          "count": 20
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper6",
@@ -84,10 +144,19 @@
       "subjects": "心肺物治40、小兒物治40",
       "count": 80,
       "breakdown": [
-        { "subject": "心肺疾病物治", "count": 40, "note": "心肺復健、呼吸治療" },
-        { "subject": "小兒疾病物治", "count": 40, "note": "兒童發展遲緩、腦麻" }
+        {
+          "subject": "心肺疾病物治",
+          "count": 40,
+          "note": "心肺復健、呼吸治療"
+        },
+        {
+          "subject": "小兒疾病物治",
+          "count": 40,
+          "note": "兒童發展遲緩、腦麻"
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     }
   ],
   "stages": [

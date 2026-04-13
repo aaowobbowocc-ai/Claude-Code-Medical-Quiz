@@ -17,6 +17,7 @@ function getExamConfig(examType) {
   const ppqs = et.papers.map(p => p.pointsPerQ || 1)
   const uniformPointsPerQ = ppqs.every(v => v === ppqs[0]) ? ppqs[0] : null
   return {
+    examId: et.id,
     papers: et.papers,
     totalPass: et.passScore,
     totalPoints: et.totalPoints || et.totalQ, // 300 for pharma, totalQ for others
@@ -24,6 +25,24 @@ function getExamConfig(examType) {
     examName: et.name,
     isWeighted,
     uniformPointsPerQ, // null if papers have mixed pointsPerQ (e.g. pharma2)
+  }
+}
+
+// Per-exam extra pass rules verified against 考選部 official regulations.
+// Returns array of { icon, text } shown after the standard 60% rule.
+function getExtraPassRules(examId) {
+  switch (examId) {
+    case 'pt':
+      return [{ icon: '⚠️', text: '神經、骨科、心肺三大核心科目任一未滿 60 分不及格' }]
+    case 'nutrition':
+      return [{ icon: '⚠️', text: '膳食療養學未滿 50 分不予及格（單科低標）' }]
+    case 'doctor1': case 'doctor2':
+    case 'dental1': case 'dental2':
+    case 'pharma1': case 'pharma2':
+      return [{ icon: '⚠️', text: '任一科零分者不予及格（缺考以零分計算）' }]
+    case 'nursing': case 'nutrition2': case 'medlab': case 'ot':
+    default:
+      return [{ icon: '⚠️', text: '任一科零分者不予及格（缺考以零分計算）' }]
   }
 }
 
@@ -76,7 +95,8 @@ function getSingleExamFee(paper) {
 
 function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
-  const { papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, examName, isWeighted, uniformPointsPerQ } = getExamConfig(examType)
+  const { examId, papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, examName, isWeighted, uniformPointsPerQ } = getExamConfig(examType)
+  const extraRules = getExtraPassRules(examId)
   const FULL_EXAM_FEE = getFullExamFee(PAPERS)
   const [tab, setTab] = useState('historical') // 'historical' | 'random'
   const [examYears, setExamYears] = useState([])
@@ -265,8 +285,10 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
             ) : (
               <p>✅ 每題 1 分，合計 {PAPERS.reduce((s,p) => s+p.count, 0)} 分</p>
             )}
-            <p>🎯 及格：總分 {TOTAL_PASS} 分（60%），不設單科低標</p>
-            <p>⚠️ 任一科零分者不予錄取（考試規則第 9 條）</p>
+            <p>🎯 及格：{isWeighted ? `總分 ${TOTAL_PASS}/${TOTAL_POINTS} 分` : `平均 60 分（${TOTAL_PASS}/${PAPERS.reduce((s,p)=>s+p.count,0)} 題）`}</p>
+            {extraRules.map((r, i) => (
+              <p key={i}>{r.icon} {r.text}</p>
+            ))}
             <p>❌ 答錯不倒扣，不會就猜！</p>
             <p>📌 可跳題作答，最後統一交卷</p>
           </div>

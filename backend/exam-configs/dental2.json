@@ -18,9 +18,16 @@
       "count": 80,
       "pointsPerQ": 1.25,
       "breakdown": [
-        { "subject": "口腔顎面外科", "count": 40 },
-        { "subject": "牙周病學", "count": 40 }
-      ]
+        {
+          "subject": "口腔顎面外科",
+          "count": 40
+        },
+        {
+          "subject": "牙周病學",
+          "count": 40
+        }
+      ],
+      "timeLimit": 60
     },
     {
       "id": "paper2",
@@ -30,11 +37,24 @@
       "count": 80,
       "pointsPerQ": 1.25,
       "breakdown": [
-        { "subject": "齒顎矯正學", "count": 20 },
-        { "subject": "兒童牙科學", "count": 20 },
-        { "subject": "牙髓病學", "count": 20 },
-        { "subject": "復健牙醫學", "count": 20 }
-      ]
+        {
+          "subject": "齒顎矯正學",
+          "count": 20
+        },
+        {
+          "subject": "兒童牙科學",
+          "count": 20
+        },
+        {
+          "subject": "牙髓病學",
+          "count": 20
+        },
+        {
+          "subject": "復健牙醫學",
+          "count": 20
+        }
+      ],
+      "timeLimit": 60
     },
     {
       "id": "paper3",
@@ -44,10 +64,20 @@
       "count": 80,
       "pointsPerQ": 1.25,
       "breakdown": [
-        { "subject": "牙體復形與材料", "count": 27 },
-        { "subject": "固定補綴學", "count": 27 },
-        { "subject": "全口活動補綴", "count": 26 }
-      ]
+        {
+          "subject": "牙體復形與材料",
+          "count": 27
+        },
+        {
+          "subject": "固定補綴學",
+          "count": 27
+        },
+        {
+          "subject": "全口活動補綴",
+          "count": 26
+        }
+      ],
+      "timeLimit": 60
     },
     {
       "id": "paper4",
@@ -57,9 +87,16 @@
       "count": 80,
       "pointsPerQ": 1.25,
       "breakdown": [
-        { "subject": "口腔診斷與影像", "count": 40 },
-        { "subject": "公衛、倫理與法規", "count": 40 }
-      ]
+        {
+          "subject": "口腔診斷與影像",
+          "count": 40
+        },
+        {
+          "subject": "公衛、倫理與法規",
+          "count": 40
+        }
+      ],
+      "timeLimit": 60
     }
   ],
   "stages": [

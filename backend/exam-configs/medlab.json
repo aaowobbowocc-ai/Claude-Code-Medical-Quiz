@@ -16,10 +16,17 @@
       "subjects": "臨床生理40、病理40",
       "count": 80,
       "breakdown": [
-        { "subject": "臨床生理學", "count": 40 },
-        { "subject": "病理學", "count": 40 }
+        {
+          "subject": "臨床生理學",
+          "count": 40
+        },
+        {
+          "subject": "病理學",
+          "count": 40
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper2",
@@ -28,10 +35,19 @@
       "subjects": "臨床血液40、血庫40",
       "count": 80,
       "breakdown": [
-        { "subject": "臨床血液學", "count": 40, "note": "血球形態、凝血" },
-        { "subject": "血庫學", "count": 40, "note": "血型鑑定、輸血作業" }
+        {
+          "subject": "臨床血液學",
+          "count": 40,
+          "note": "血球形態、凝血"
+        },
+        {
+          "subject": "血庫學",
+          "count": 40,
+          "note": "血型鑑定、輸血作業"
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper3",
@@ -40,10 +56,19 @@
       "subjects": "分子檢驗40、臨床鏡檢40",
       "count": 80,
       "breakdown": [
-        { "subject": "醫學分子檢驗學", "count": 40, "note": "PCR、基因檢測" },
-        { "subject": "臨床鏡檢學", "count": 40, "note": "尿液、體液鏡檢" }
+        {
+          "subject": "醫學分子檢驗學",
+          "count": 40,
+          "note": "PCR、基因檢測"
+        },
+        {
+          "subject": "臨床鏡檢學",
+          "count": 40,
+          "note": "尿液、體液鏡檢"
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper4",
@@ -52,11 +77,21 @@
       "subjects": "細菌40、黴菌20、寄生蟲20",
       "count": 80,
       "breakdown": [
-        { "subject": "細菌學", "count": 40 },
-        { "subject": "黴菌學", "count": 20 },
-        { "subject": "寄生蟲學", "count": 20 }
+        {
+          "subject": "細菌學",
+          "count": 40
+        },
+        {
+          "subject": "黴菌學",
+          "count": 20
+        },
+        {
+          "subject": "寄生蟲學",
+          "count": 20
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper5",
@@ -65,10 +100,17 @@
       "subjects": "生物化學40、臨床生化40",
       "count": 80,
       "breakdown": [
-        { "subject": "生物化學", "count": 40 },
-        { "subject": "臨床生化學", "count": 40 }
+        {
+          "subject": "生物化學",
+          "count": 40
+        },
+        {
+          "subject": "臨床生化學",
+          "count": 40
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper6",
@@ -77,10 +119,17 @@
       "subjects": "血清免疫40、病毒40",
       "count": 80,
       "breakdown": [
-        { "subject": "臨床血清免疫學", "count": 40 },
-        { "subject": "臨床病毒學", "count": 40 }
+        {
+          "subject": "臨床血清免疫學",
+          "count": 40
+        },
+        {
+          "subject": "臨床病毒學",
+          "count": 40
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     }
   ],
   "stages": [

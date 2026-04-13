@@ -16,10 +16,17 @@
       "subjects": "解剖40、生理40",
       "count": 80,
       "breakdown": [
-        { "subject": "解剖學", "count": 40 },
-        { "subject": "生理學", "count": 40 }
+        {
+          "subject": "解剖學",
+          "count": 40
+        },
+        {
+          "subject": "生理學",
+          "count": 40
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper2",
@@ -28,11 +35,21 @@
       "subjects": "理論基礎40、倫理法規20、實務框架20",
       "count": 80,
       "breakdown": [
-        { "subject": "理論基礎", "count": 40 },
-        { "subject": "倫理與法規", "count": 20 },
-        { "subject": "實務框架", "count": 20 }
+        {
+          "subject": "理論基礎",
+          "count": 40
+        },
+        {
+          "subject": "倫理與法規",
+          "count": 20
+        },
+        {
+          "subject": "實務框架",
+          "count": 20
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper3",
@@ -41,12 +58,25 @@
       "subjects": "中風腦損傷25、脊髓損傷15、骨科20、其他20",
       "count": 80,
       "breakdown": [
-        { "subject": "中風與腦損傷", "count": 25 },
-        { "subject": "脊髓損傷", "count": 15 },
-        { "subject": "骨科疾病", "count": 20 },
-        { "subject": "其他生理疾患", "count": 20 }
+        {
+          "subject": "中風與腦損傷",
+          "count": 25
+        },
+        {
+          "subject": "脊髓損傷",
+          "count": 15
+        },
+        {
+          "subject": "骨科疾病",
+          "count": 20
+        },
+        {
+          "subject": "其他生理疾患",
+          "count": 20
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper4",
@@ -55,12 +85,25 @@
       "subjects": "思覺失調25、情緒障礙25、物質濫用15、其他15",
       "count": 80,
       "breakdown": [
-        { "subject": "思覺失調症", "count": 25 },
-        { "subject": "情緒障礙", "count": 25 },
-        { "subject": "物質濫用", "count": 15 },
-        { "subject": "其他心理疾患", "count": 15 }
+        {
+          "subject": "思覺失調症",
+          "count": 25
+        },
+        {
+          "subject": "情緒障礙",
+          "count": 25
+        },
+        {
+          "subject": "物質濫用",
+          "count": 15
+        },
+        {
+          "subject": "其他心理疾患",
+          "count": 15
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper5",
@@ -69,12 +112,25 @@
       "subjects": "發展遲緩25、腦性麻痺20、自閉症20、其他15",
       "count": 80,
       "breakdown": [
-        { "subject": "發展遲緩", "count": 25 },
-        { "subject": "腦性麻痺", "count": 20 },
-        { "subject": "自閉症類群", "count": 20 },
-        { "subject": "其他兒童疾患", "count": 15 }
+        {
+          "subject": "發展遲緩",
+          "count": 25
+        },
+        {
+          "subject": "腦性麻痺",
+          "count": 20
+        },
+        {
+          "subject": "自閉症類群",
+          "count": 20
+        },
+        {
+          "subject": "其他兒童疾患",
+          "count": 15
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     },
     {
       "id": "paper6",
@@ -83,12 +139,25 @@
       "subjects": "功能評估25、輔具設計20、環境改造15、日常活動訓練20",
       "count": 80,
       "breakdown": [
-        { "subject": "功能評估", "count": 25 },
-        { "subject": "輔具設計", "count": 20 },
-        { "subject": "環境改造", "count": 15 },
-        { "subject": "日常活動訓練", "count": 20 }
+        {
+          "subject": "功能評估",
+          "count": 25
+        },
+        {
+          "subject": "輔具設計",
+          "count": 20
+        },
+        {
+          "subject": "環境改造",
+          "count": 15
+        },
+        {
+          "subject": "日常活動訓練",
+          "count": 20
+        }
       ],
-      "breakdownNote": "依歷屆題分布估計"
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
     }
   ],
   "stages": [

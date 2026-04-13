@@ -399,16 +399,25 @@ export default function Home() {
           </div>
 
           {/* Name input — inline, no modal */}
-          <input
-            ref={quickRef}
-            autoFocus
-            className="w-full border-2 border-medical-blue rounded-2xl px-4 py-4 text-xl text-center outline-none focus:border-medical-accent font-medium bg-white shadow-sm"
-            placeholder="輸入你的名字"
-            value={quickName}
-            onChange={e => setQuickName(e.target.value)}
-            onKeyDown={e => e.key === 'Enter' && quickName.trim() && (setName(quickName.trim()))}
-            maxLength={12}
-          />
+          <div className="relative">
+            <input
+              ref={quickRef}
+              autoFocus
+              className="w-full border-2 border-medical-blue rounded-2xl pl-4 pr-16 py-4 text-xl text-center outline-none focus:border-medical-accent font-medium bg-white shadow-sm"
+              placeholder="輸入你的名字"
+              value={quickName}
+              onChange={e => setQuickName(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && quickName.trim() && (setName(quickName.trim()))}
+              maxLength={12}
+            />
+            <button
+              onClick={() => quickName.trim() && setName(quickName.trim())}
+              disabled={!quickName.trim()}
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-xl bg-medical-blue text-white text-2xl font-bold flex items-center justify-center active:scale-90 transition-transform disabled:opacity-30 disabled:cursor-not-allowed shadow"
+              aria-label="確認名字">
+              ✓
+            </button>
+          </div>
 
           {/* Google sign-in shortcut — recovers cross-device data */}
           {supabase && !isPWAStandalone && (

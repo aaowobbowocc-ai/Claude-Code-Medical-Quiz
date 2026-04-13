@@ -4,14 +4,33 @@ const KEY = 'bookmarked-questions-v2'
 const MAX_PER_FOLDER = 100
 const DEFAULT_FOLDERS = ['收藏夾 1', '收藏夾 2']
 
+// doctor1 ids used to be `{exam_code}_{number}` and collided between 醫學(一)/醫學(二).
+// Bookmarks saved under the old scheme need to be rewritten to the new
+// `{exam_code}_{paperIdx}_{number}` format so they still match live questions.
+const DOCTOR1_SUBJECT_TO_PAPER = { '醫學(一)': 1, '醫學(二)': 2, '醫學(三)': 3, '醫學(四)': 4 }
+function migrateDoctor1Id(q) {
+  if (!q || typeof q.id !== 'string') return q
+  if (!/^\d{6}_\d+$/.test(q.id)) return q // only touches old doctor1 shape
+  const paperIdx = DOCTOR1_SUBJECT_TO_PAPER[q.subject]
+  if (!paperIdx || !q.exam_code || q.number == null) return q
+  return { ...q, id: `${q.exam_code}_${paperIdx}_${q.number}` }
+}
+
 function load() {
   try {
     const data = JSON.parse(localStorage.getItem(KEY) || 'null')
-    if (data && data.folders) return data
+    if (data && data.folders) {
+      // Walk every bookmark and rewrite legacy doctor1 ids in place
+      const rewritten = { ...data, questions: {} }
+      for (const f of data.folders) {
+        rewritten.questions[f] = (data.questions[f] || []).map(migrateDoctor1Id)
+      }
+      return rewritten
+    }
     // Migrate from v1
     const v1 = JSON.parse(localStorage.getItem('bookmarked-questions') || '[]')
     const migrated = { folders: DEFAULT_FOLDERS, questions: {} }
-    migrated.questions[DEFAULT_FOLDERS[0]] = v1.slice(0, MAX_PER_FOLDER)
+    migrated.questions[DEFAULT_FOLDERS[0]] = v1.slice(0, MAX_PER_FOLDER).map(migrateDoctor1Id)
     migrated.questions[DEFAULT_FOLDERS[1]] = []
     return migrated
   } catch { return { folders: DEFAULT_FOLDERS, questions: { [DEFAULT_FOLDERS[0]]: [], [DEFAULT_FOLDERS[1]]: [] } } }

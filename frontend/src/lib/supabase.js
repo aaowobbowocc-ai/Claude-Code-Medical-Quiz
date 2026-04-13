@@ -88,6 +88,16 @@ export async function linkOrSignInGoogle() {
     return { alreadyLinked: true }
   }
 
+  // CRITICAL: sign out the current anon session before OAuth. With an active
+  // anon session, Supabase treats signInWithOAuth as "attach this OAuth identity
+  // to the current anon user" rather than "sign in to the user that owns this
+  // identity" — so a fresh anon user gets created on every device instead of
+  // restoring the existing Google-linked profile. Signing out first forces the
+  // OAuth flow to resolve to the existing user_id that owns the Google identity.
+  if (user) {
+    await supabase.auth.signOut({ scope: 'local' })
+  }
+
   const { error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: { redirectTo: window.location.origin },

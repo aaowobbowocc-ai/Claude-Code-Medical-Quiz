@@ -9,7 +9,7 @@
     "scraped_at": "2026-04-01",
     "total_questions": 2000
   },
-  "total": 2198,
+  "total": 2200,
   "questions": [
     {
       "id": "110020_1_1",
@@ -43705,6 +43705,46 @@
       },
       "answer": "A",
       "explanation": ""
+    },
+    {
+      "roc_year": "110",
+      "session": "第二次",
+      "exam_code": "110101",
+      "subject": "醫學(一)",
+      "subject_tag": "anatomy",
+      "subject_name": "醫學(一)",
+      "stage_id": 0,
+      "number": 100,
+      "question": "第二型限制酶（type II restriction enzymes）通常能辨認DNA序列的大小為何？",
+      "options": {
+        "A": "4～6個鹼基對（base pairs）",
+        "B": "10～12個鹼基對（base pairs）",
+        "C": "15～20個鹼基對（base pairs）",
+        "D": "20～30個鹼基對（base pairs）"
+      },
+      "answer": "A",
+      "explanation": "",
+      "id": "110101_1_100"
+    },
+    {
+      "roc_year": "110",
+      "session": "第二次",
+      "exam_code": "110101",
+      "subject": "醫學(二)",
+      "subject_tag": "pathology",
+      "subject_name": "醫學(二)",
+      "stage_id": 0,
+      "number": 100,
+      "question": "病人35歲，長有腦瘤（如圖），顯微鏡下觀察很像釉胚（enamel organ）長出的腫瘤。其診斷應是：",
+      "options": {
+        "A": "多形性神經芽細胞瘤（glioblastoma multiforme）",
+        "B": "聽神經瘤（acoustic neuroma）",
+        "C": "顱咽管瘤（craniopharyngioma）",
+        "D": "髓芽細胞瘤（medulloblastoma）"
+      },
+      "answer": "C",
+      "explanation": "",
+      "id": "110101_2_100"
     }
   ],
   "stages": [

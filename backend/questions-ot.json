@@ -6,7 +6,7 @@
     "source": "wwwq.moex.gov.tw",
     "last_updated": "2026-04-13T06:18:59.107Z"
   },
-  "total": 2398,
+  "total": 2400,
   "questions": [
     {
       "id": 1,
@@ -48065,6 +48065,46 @@
       },
       "answer": "B",
       "explanation": ""
+    },
+    {
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113090",
+      "subject": "心理疾病職能治療學",
+      "subject_tag": "ot_mental",
+      "subject_name": "心理疾病職能治療學",
+      "stage_id": 0,
+      "number": 11,
+      "question": "Caselli等人（2006）的研究發現每年有多少比率輕度認知障礙症（mild cognitive impairment）的個案轉 變成阿茲海默症（Alzheimer's disease）？",
+      "options": {
+        "A": "10～15%",
+        "B": "3～5％",
+        "C": "20～25％",
+        "D": "5～7％"
+      },
+      "answer": "A",
+      "explanation": "",
+      "id": 2399
+    },
+    {
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113090",
+      "subject": "心理疾病職能治療學",
+      "subject_tag": "ot_mental",
+      "subject_name": "心理疾病職能治療學",
+      "stage_id": 0,
+      "number": 38,
+      "question": "Ayres將感覺整合障礙（sensory integrative dysfunction）區分為四類，以下何者錯誤？",
+      "options": {
+        "A": "感覺區辨（sensory discrimination）",
+        "B": "形狀與空間知覺（form and space perception）",
+        "C": "姿勢與雙側整合（postural and bilateral integration）",
+        "D": "觸覺防禦（tactile defensiveness）"
+      },
+      "answer": "A",
+      "explanation": "",
+      "id": 2400
     }
   ]
 }

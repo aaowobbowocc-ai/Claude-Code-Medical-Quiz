@@ -70394,6 +70394,26 @@
       },
       "answer": "D",
       "explanation": ""
+    },
+    {
+      "roc_year": "112",
+      "session": "第二次",
+      "exam_code": "112080",
+      "subject": "醫學(三)",
+      "subject_tag": "internal_medicine",
+      "subject_name": "醫學(三)",
+      "stage_id": 0,
+      "number": 46,
+      "question": "COPD病人接受長效型支氣管擴張劑治療3個月後症狀仍不穩定，抽血檢查發現WBC：9,500/mm 3 ； neutrophil：70%；eosinophil：5%；C-reactive protein：1.5 mg/dL，下列治療何者最為恰當？",
+      "options": {
+        "A": "add-on theophylline",
+        "B": "add-on macrolide",
+        "C": "add-on leukotriene modifier",
+        "D": "add-on inhaled corticosteroid"
+      },
+      "answer": "D",
+      "explanation": "",
+      "id": "112080_3_46"
     }
   ],
   "stages": [
@@ -70482,7 +70502,7 @@
       "count": 30
     }
   ],
-  "total": 3519,
+  "total": 3520,
   "metadata": {
     "last_updated": "2026-04-13T05:36:28.426Z"
   }

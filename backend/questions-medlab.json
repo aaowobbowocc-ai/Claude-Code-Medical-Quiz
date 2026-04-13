@@ -6,7 +6,7 @@
     "source": "wwwq.moex.gov.tw",
     "last_updated": "2026-04-13T06:19:21.504Z"
   },
-  "total": 5269,
+  "total": 5280,
   "questions": [
     {
       "id": 1,
@@ -105757,6 +105757,226 @@
       },
       "answer": "A",
       "explanation": ""
+    },
+    {
+      "roc_year": "113",
+      "session": "第一次",
+      "exam_code": "113020",
+      "subject": "臨床生理學與病理學",
+      "subject_tag": "clinical_physio_path",
+      "subject_name": "臨床生理學與病理學",
+      "stage_id": 0,
+      "number": 57,
+      "question": "B淋巴細胞於下列何處發育成熟？",
+      "options": {
+        "A": "骨髓",
+        "B": "皮膚",
+        "C": "胸腺",
+        "D": "脾臟"
+      },
+      "answer": "A",
+      "explanation": "",
+      "id": 5270
+    },
+    {
+      "roc_year": "113",
+      "session": "第一次",
+      "exam_code": "113020",
+      "subject": "微生物學與臨床微生物學",
+      "subject_tag": "microbiology",
+      "subject_name": "微生物學與臨床微生物學",
+      "stage_id": 0,
+      "number": 11,
+      "question": "Bacillus cereus對熱穩定的毒素（cereulide）屬何種毒素？",
+      "options": {
+        "A": "Hemolysin",
+        "B": "Emetic toxin",
+        "C": "Endotoxin",
+        "D": "Neurotoxin"
+      },
+      "answer": "B",
+      "explanation": "",
+      "id": 5271
+    },
+    {
+      "roc_year": "113",
+      "session": "第一次",
+      "exam_code": "113020",
+      "subject": "微生物學與臨床微生物學",
+      "subject_tag": "microbiology",
+      "subject_name": "微生物學與臨床微生物學",
+      "stage_id": 0,
+      "number": 12,
+      "question": "Corynebacterium diphtheriae白喉毒素（Diphtheria toxin）之基因通常位於以下何種基因序列中？",
+      "options": {
+        "A": "Chromosome",
+        "B": "Plasmid",
+        "C": "Bacteriophage",
+        "D": "Insertion sequence"
+      },
+      "answer": "C",
+      "explanation": "",
+      "id": 5272
+    },
+    {
+      "roc_year": "113",
+      "session": "第一次",
+      "exam_code": "113020",
+      "subject": "臨床血清免疫學與臨床病毒學",
+      "subject_tag": "serology",
+      "subject_name": "臨床血清免疫學與臨床病毒學",
+      "stage_id": 0,
+      "number": 3,
+      "question": "B細胞受體重鏈基因的VDJ重組，下列何種分子負責在V-D junction進行N-nucleotide addition？",
+      "options": {
+        "A": "TdT（terminal deoxyribonucleotidyl transferase）",
+        "B": "RAG1/2",
+        "C": "DNA-PKcs",
+        "D": "GST（glutathion S-transferase）"
+      },
+      "answer": "A",
+      "explanation": "",
+      "id": 5273
+    },
+    {
+      "roc_year": "113",
+      "session": "第一次",
+      "exam_code": "113020",
+      "subject": "臨床血清免疫學與臨床病毒學",
+      "subject_tag": "serology",
+      "subject_name": "臨床血清免疫學與臨床病毒學",
+      "stage_id": 0,
+      "number": 27,
+      "question": "Anti-Sm抗體所對抗的抗原是屬於下列何者？",
+      "options": {
+        "A": "dsDNA",
+        "B": "ssDNA",
+        "C": "RNA polymerase",
+        "D": "U-RNP"
+      },
+      "answer": "D",
+      "explanation": "",
+      "id": 5274
+    },
+    {
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113090",
+      "subject": "臨床血液學與血庫學",
+      "subject_tag": "hematology",
+      "subject_name": "臨床血液學與血庫學",
+      "stage_id": 0,
+      "number": 58,
+      "question": "APTT的混合試驗（mixing study）中，當病人檢體與正常血漿混合後立即檢測，發現其APTT仍明顯延長。關 於進一步檢測之敘述，下列何者最適當？",
+      "options": {
+        "A": "應使用較低濃度phospholipid APTT 試劑檢測。若結果正常，則為lupus anticoagulant陽性",
+        "B": "應使用較高濃度phospholipid APTT 試劑檢測。若結果正常，則為lupus anticoagulant陽性",
+        "C": "應使用較低濃度phospholipid APTT 試劑檢測。若結果仍延長，則為lupus anticoagulant陽性",
+        "D": "應使用較高濃度phospholipid APTT 試劑檢測。若結果仍延長，則為lupus anticoagulant陽性"
+      },
+      "answer": "B",
+      "explanation": "",
+      "id": 5275
+    },
+    {
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113090",
+      "subject": "醫學分子檢驗學與臨床鏡檢學",
+      "subject_tag": "molecular",
+      "subject_name": "醫學分子檢驗學與臨床鏡檢學",
+      "stage_id": 0,
+      "number": 37,
+      "question": "Creola bodies常見於氣喘或咳嗽厲害的病患痰液中，其主要是由下列何者聚集成團狀？",
+      "options": {
+        "A": "基底支氣管上皮細胞",
+        "B": "柱狀纖毛支氣管上皮細胞",
+        "C": "肺泡巨噬細胞",
+        "D": "鱗狀上皮細胞"
+      },
+      "answer": "B",
+      "explanation": "",
+      "id": 5276
+    },
+    {
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113090",
+      "subject": "醫學分子檢驗學與臨床鏡檢學",
+      "subject_tag": "molecular",
+      "subject_name": "醫學分子檢驗學與臨床鏡檢學",
+      "stage_id": 0,
+      "number": 48,
+      "question": "DNA經重亞硫酸鈉處理，再轉換為鹼性環境後，未甲基化的胞嘧啶會轉換為何？",
+      "options": {
+        "A": "胞嘧啶",
+        "B": "胸腺嘧啶",
+        "C": "尿嘧啶",
+        "D": "5-甲基胞嘧啶"
+      },
+      "answer": "C",
+      "explanation": "",
+      "id": 5277
+    },
+    {
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113090",
+      "subject": "微生物學與臨床微生物學",
+      "subject_tag": "microbiology",
+      "subject_name": "微生物學與臨床微生物學",
+      "stage_id": 0,
+      "number": 10,
+      "question": "Bacillus anthracis的抗生素感受性試驗於下列何種等級實驗室下進行最適當？",
+      "options": {
+        "A": "Biosafety level 1 laboratory",
+        "B": "Biosafety level 2 laboratory",
+        "C": "Biosafety level 3 laboratory",
+        "D": "Biosafety level 4 laboratory"
+      },
+      "answer": "C",
+      "explanation": "",
+      "id": 5278
+    },
+    {
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113090",
+      "subject": "臨床血清免疫學與臨床病毒學",
+      "subject_tag": "serology",
+      "subject_name": "臨床血清免疫學與臨床病毒學",
+      "stage_id": 0,
+      "number": 5,
+      "question": "B細胞受體（BCR）的生成，由胞膜型IgD轉化成分泌型IgD，最主要由下列何種機制協助？",
+      "options": {
+        "A": "RNA剪接（splicing）",
+        "B": "RNA衰變（decay）",
+        "C": "DNA修復（repair）",
+        "D": "DNA擴增（amplification）"
+      },
+      "answer": "A",
+      "explanation": "",
+      "id": 5279
+    },
+    {
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113090",
+      "subject": "臨床血清免疫學與臨床病毒學",
+      "subject_tag": "serology",
+      "subject_name": "臨床血清免疫學與臨床病毒學",
+      "stage_id": 0,
+      "number": 66,
+      "question": "Acyclovir可抑制下列何者之功能？",
+      "options": {
+        "A": "thymidine kinase",
+        "B": "viral DNA polymerase",
+        "C": "neuraminidase",
+        "D": "hemagglutinin"
+      },
+      "answer": "B",
+      "explanation": "",
+      "id": 5280
     }
   ]
 }

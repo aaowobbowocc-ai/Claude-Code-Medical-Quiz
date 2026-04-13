@@ -413,9 +413,9 @@ export default function Home() {
           {/* Google sign-in shortcut — recovers cross-device data */}
           {supabase && !isPWAStandalone && (
             <button onClick={handleLinkGoogle} disabled={authBusy}
-              className="w-full py-3 rounded-2xl text-sm font-bold bg-white border-2 border-gray-200 text-gray-600 flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50 -mt-1">
-              <span className="text-lg">🔗</span>
-              {authBusy ? '連線中…' : '已有帳號？用 Google 登入'}
+              className="w-full py-3 rounded-2xl text-sm font-bold bg-white border-2 border-amber-300 text-amber-700 flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50 -mt-1">
+              <span className="text-lg">🎁</span>
+              {authBusy ? '連線中…' : '用 Google 登入立即送 3000 🪙'}
             </button>
           )}
           {supabase && isPWAStandalone && (
@@ -569,6 +569,24 @@ export default function Home() {
             <p className="text-white/80 text-[11px] mt-0.5">點擊領取 +3000 🪙 感謝您的支持</p>
           </div>
           <span className="shrink-0 bg-white text-amber-700 text-xs font-bold px-3 py-1.5 rounded-lg">領取</span>
+        </button>
+      )}
+
+      {/* Bind invitation banner — visible to anonymous (unlinked) users */}
+      {supabase && !isPWAStandalone && !linkedIdentity && !bindRewardClaimed && authUser && (
+        <button
+          onClick={handleLinkGoogle}
+          disabled={authBusy}
+          className="w-full px-4 py-3 flex items-center gap-3 active:scale-[0.98] transition-transform disabled:opacity-60"
+          style={{ background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)' }}>
+          <span className="text-2xl shrink-0">🎁</span>
+          <div className="flex-1 text-left min-w-0">
+            <p className="text-white font-bold text-sm leading-tight">綁定 Google 立即送 3000 🪙</p>
+            <p className="text-white/85 text-[11px] mt-0.5">同步跨裝置進度，換手機也不怕資料消失</p>
+          </div>
+          <span className="shrink-0 bg-white text-amber-700 text-xs font-bold px-3 py-1.5 rounded-lg">
+            {authBusy ? '連線中…' : '立即綁定'}
+          </span>
         </button>
       )}
 
@@ -835,8 +853,14 @@ export default function Home() {
                 </>
               ) : (
                 <>
+                  {!bindRewardClaimed && (
+                    <div className="mb-2 px-3 py-2 rounded-xl bg-amber-50 border border-amber-200 flex items-center gap-2">
+                      <span className="text-lg">🎁</span>
+                      <p className="text-xs text-amber-700 font-bold flex-1">綁定即送 3000 金幣</p>
+                    </div>
+                  )}
                   <button onClick={handleLinkGoogle} disabled={authBusy}
-                          className="w-full py-3 rounded-2xl font-bold text-sm bg-white border-2 border-gray-200 text-gray-700 flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50">
+                          className="w-full py-3 rounded-2xl font-bold text-sm bg-white border-2 border-amber-300 text-amber-700 flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50">
                     <span className="text-xl">🔗</span>
                     {authBusy ? '連線中…' : isAnon ? '綁定 Google 帳號' : '使用 Google 登入'}
                   </button>

@@ -66,6 +66,7 @@ export function getExamIds() {
 // Preferred display order for exam picker
 const EXAM_ORDER = [
   'doctor1', 'doctor2', 'dental1', 'dental2', 'pharma1', 'pharma2',
+  'tcm1', 'tcm2', 'vet',
   'nursing', 'nutrition', 'pt', 'ot', 'medlab',
 ]
 

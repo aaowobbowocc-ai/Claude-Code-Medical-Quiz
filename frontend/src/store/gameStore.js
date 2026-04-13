@@ -1,8 +1,42 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { supabase, ensureSession } from '../lib/supabase'
 
 // Re-export from registry — consumers should import { getExamTypes } from gameStore or registry directly
 export { getExamTypes, getExamConfig, getExamTypes as EXAM_TYPES_FN } from '../config/examRegistry'
+
+// Map between camelCase store fields and snake_case DB columns
+const FIELD_MAP = {
+  name: 'name',
+  avatar: 'avatar',
+  coins: 'coins',
+  level: 'level',
+  exp: 'exp',
+  unlockedStages: 'unlocked_stages',
+  darkMode: 'dark_mode',
+  exam: 'exam',
+  lastDailyBonus: 'last_daily_bonus',
+  loginStreak: 'login_streak',
+  adRewardToday: 'ad_reward_today',
+  lastAdWatch: 'last_ad_watch',
+  lastAdDate: 'last_ad_date',
+}
+
+function storeToDb(state) {
+  const out = {}
+  for (const [k, dbk] of Object.entries(FIELD_MAP)) {
+    if (state[k] !== undefined) out[dbk] = state[k]
+  }
+  return out
+}
+
+function dbToStore(row) {
+  const out = {}
+  for (const [k, dbk] of Object.entries(FIELD_MAP)) {
+    if (row[dbk] !== undefined && row[dbk] !== null) out[k] = row[dbk]
+  }
+  return out
+}
 
 // Level title tiers
 const LEVEL_TITLES = [
@@ -37,6 +71,35 @@ export const usePlayerStore = create(
       unlockedStages: [0, 1], // 0 = random, 1 = anatomy
       darkMode: false,
       exam: 'doctor1',
+      hydrated: false, // true after cloud sync attempted (or skipped if no supabase)
+      hydrateFromCloud: async () => {
+        if (!supabase) { set({ hydrated: true }); return }
+        const user = await ensureSession()
+        if (!user) { set({ hydrated: true }); return }
+        try {
+          const { data: row, error } = await supabase
+            .from('profiles')
+            .select('*')
+            .eq('user_id', user.id)
+            .maybeSingle()
+          if (error) throw error
+          if (row) {
+            // Cloud wins — overwrite local
+            set({ ...dbToStore(row), hydrated: true })
+            console.log('[profile] hydrated from cloud')
+          } else {
+            // First time on this user — upload current local state (handles migration)
+            const payload = { user_id: user.id, ...storeToDb(get()) }
+            const { error: insErr } = await supabase.from('profiles').insert(payload)
+            if (insErr) throw insErr
+            set({ hydrated: true })
+            console.log('[profile] uploaded local state to cloud')
+          }
+        } catch (e) {
+          console.error('[profile] hydrate failed:', e.message)
+          set({ hydrated: true })
+        }
+      },
       setExam: (exam) => set({ exam }),
       setName: (name) => set({ name }),
       setAvatar: (avatar) => set({ avatar }),
@@ -118,6 +181,28 @@ export const usePlayerStore = create(
     { name: 'medical-quiz-player' }
   )
 )
+
+// Debounced write-through to Supabase profiles table
+let saveTimer = null
+usePlayerStore.subscribe((state, prevState) => {
+  if (!supabase || !state.hydrated) return
+  // Skip the initial transition from not-hydrated → hydrated (cloud → local sync itself)
+  if (!prevState.hydrated) return
+  clearTimeout(saveTimer)
+  saveTimer = setTimeout(async () => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession()
+      const user = session?.user
+      if (!user) return
+      const payload = storeToDb(usePlayerStore.getState())
+      payload.updated_at = new Date().toISOString()
+      const { error } = await supabase.from('profiles').update(payload).eq('user_id', user.id)
+      if (error) console.error('[profile] save failed:', error.message)
+    } catch (e) {
+      console.error('[profile] save error:', e.message)
+    }
+  }, 800)
+})
 
 // Ephemeral game state
 export const useGameStore = create((set) => ({

@@ -73,10 +73,16 @@ export const usePlayerStore = create(
       darkMode: false,
       exam: 'doctor1',
       hydrated: false, // true after cloud sync attempted (or skipped if no supabase)
-      hydrateFromCloud: async () => {
+      lastHydratedUserId: null,
+      hydrateFromCloud: async (force = false) => {
         if (!supabase) { set({ hydrated: true }); return }
         const user = await ensureSession()
         if (!user) { set({ hydrated: true }); return }
+        // Re-entry guard: main.jsx runs this on load, App.jsx also re-runs it
+        // after post-OAuth SIGNED_IN. Skip if we've already hydrated this user
+        // unless caller forces it.
+        if (!force && get().lastHydratedUserId === user.id) return
+        set({ lastHydratedUserId: user.id })
         try {
           const { data: row, error } = await supabase
             .from('profiles')
@@ -207,7 +213,15 @@ export const usePlayerStore = create(
         }
       },
     }),
-    { name: 'medical-quiz-player' }
+    {
+      name: 'medical-quiz-player',
+      // lastHydratedUserId is an in-memory re-entry guard for hydrateFromCloud;
+      // don't persist it, otherwise a page reload would skip the cloud fetch.
+      partialize: (state) => {
+        const { lastHydratedUserId, ...rest } = state
+        return rest
+      },
+    }
   )
 )
 

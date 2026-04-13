@@ -262,17 +262,9 @@ export default function Home() {
   const quickRef = useRef(null)
 
   // ── Supabase auth state (for Google bind UI) ─────────────────
-  // PWA 安裝後使用獨立的 storage scope，OAuth 必須跳到 supabase.co（scope 外），
-  // Android 會把 OAuth 開在 Chrome Custom Tab，cookies 不通到 PWA — 綁了等於白綁。
-  // 偵測 standalone 模式直接擋掉，引導使用者去瀏覽器版綁定。
-  const isPWAStandalone = typeof window !== 'undefined' && (
-    window.matchMedia?.('(display-mode: standalone)').matches ||
-    window.navigator.standalone === true
-  )
   const [authUser, setAuthUser] = useState(null)
   const [authBusy, setAuthBusy] = useState(false)
   const [authMsg, setAuthMsg] = useState('')
-  const [copiedUrl, setCopiedUrl] = useState(false)
   useEffect(() => {
     if (!supabase) return
     supabase.auth.getUser().then(({ data }) => setAuthUser(data.user))
@@ -425,17 +417,12 @@ export default function Home() {
           </div>
 
           {/* Google sign-in shortcut — recovers cross-device data */}
-          {supabase && !isPWAStandalone && (
+          {supabase && (
             <button onClick={handleLinkGoogle} disabled={authBusy}
               className="w-full py-3 rounded-2xl text-sm font-bold bg-white border-2 border-amber-300 text-amber-700 flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50 -mt-1">
               <span className="text-lg">🎁</span>
               {authBusy ? '連線中…' : '用 Google 登入立即送 3000 🪙'}
             </button>
-          )}
-          {supabase && isPWAStandalone && (
-            <p className="text-[11px] text-amber-600 text-center -mt-1 leading-relaxed px-2">
-              📱 PWA 不支援 Google 登入，請改用瀏覽器版進站綁定
-            </p>
           )}
           {authMsg && <p className="text-xs text-red-500 text-center -mt-1">{authMsg}</p>}
 
@@ -587,7 +574,7 @@ export default function Home() {
       )}
 
       {/* Bind invitation banner — visible to anonymous (unlinked) users */}
-      {supabase && !isPWAStandalone && !linkedIdentity && !bindRewardClaimed && authUser && (
+      {supabase && !linkedIdentity && !bindRewardClaimed && authUser && (
         <button
           onClick={handleLinkGoogle}
           disabled={authBusy}
@@ -819,33 +806,7 @@ export default function Home() {
           {supabase && (
             <div className="mt-5 pt-5 border-t border-gray-100">
               <p className="text-xs text-gray-400 mb-2 text-center">帳號綁定</p>
-              {isPWAStandalone ? (
-                /* PWA 模式：擋掉 Google 綁定，引導去瀏覽器版 + 提供備份匯出 */
-                <div className="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3">
-                  <p className="text-sm font-bold text-amber-700 flex items-center gap-1.5">
-                    <span>📱</span> PWA 不支援帳號綁定
-                  </p>
-                  <p className="text-xs text-amber-600 mt-1.5 leading-relaxed">
-                    PWA 與瀏覽器是兩個獨立的儲存空間。要把 PWA 的資料同步到雲端,請按「匯出備份」複製代碼 → 用瀏覽器打開 examking.tw → 在瀏覽器用「匯入備份」貼上 → 然後就能在瀏覽器綁 Google。
-                  </p>
-                  <button
-                    onClick={() => { setSheet('backup') }}
-                    className="mt-2.5 w-full py-2 rounded-xl text-xs font-bold text-white active:scale-95 grad-cta">
-                    📦 匯出備份
-                  </button>
-                  <button
-                    onClick={async () => {
-                      try {
-                        await navigator.clipboard.writeText('https://examking.tw')
-                        setCopiedUrl(true)
-                        setTimeout(() => setCopiedUrl(false), 2000)
-                      } catch { setCopiedUrl(false) }
-                    }}
-                    className="mt-1.5 w-full py-2 rounded-xl text-xs font-bold bg-white border border-amber-300 text-amber-700 active:scale-95">
-                    {copiedUrl ? '✓ 已複製,請貼到瀏覽器' : '📋 複製網址 examking.tw'}
-                  </button>
-                </div>
-              ) : linkedIdentity ? (
+              {linkedIdentity ? (
                 <>
                   <div className="bg-emerald-50 border border-emerald-200 rounded-2xl px-4 py-3 flex items-center gap-3">
                     <span className="text-2xl">✅</span>

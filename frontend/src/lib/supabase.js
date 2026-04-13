@@ -31,6 +31,15 @@ export const isAuthEnabled = !!supabase
  * giving up.
  */
 const OAUTH_PENDING_KEY = 'medking-oauth-pending'
+const OAUTH_RETURN_PATH_KEY = 'medking-oauth-return-path'
+
+export function consumeOAuthReturnPath() {
+  try {
+    const p = sessionStorage.getItem(OAUTH_RETURN_PATH_KEY)
+    if (p) sessionStorage.removeItem(OAUTH_RETURN_PATH_KEY)
+    return p || null
+  } catch { return null }
+}
 
 export async function ensureSession() {
   if (!supabase) return null
@@ -122,6 +131,12 @@ export async function linkOrSignInGoogle() {
     await supabase.auth.signOut({ scope: 'local' })
   }
 
+  // Remember where the user was before OAuth so App.jsx can restore it after
+  // the post-redirect hydrate completes. redirectTo must stay = origin because
+  // Supabase validates against the dashboard allow-list.
+  try {
+    sessionStorage.setItem(OAUTH_RETURN_PATH_KEY, window.location.pathname + window.location.search)
+  } catch {}
   // Mark OAuth in-flight so ensureSession on the post-redirect page knows to
   // wait for the real session instead of racing into signInAnonymously
   sessionStorage.setItem(OAUTH_PENDING_KEY, '1')
@@ -143,6 +158,9 @@ export async function linkOrSignInGoogle() {
  */
 export async function switchGoogleAccount() {
   if (!supabase) return { error: 'auth-disabled' }
+  try {
+    sessionStorage.setItem(OAUTH_RETURN_PATH_KEY, window.location.pathname + window.location.search)
+  } catch {}
   sessionStorage.setItem(OAUTH_PENDING_KEY, '1')
   const { error } = await supabase.auth.signInWithOAuth({
     provider: 'google',

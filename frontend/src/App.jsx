@@ -1,7 +1,9 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import { useSocket } from './hooks/useSocket'
+import { supabase, consumeOAuthReturnPath } from './lib/supabase'
+import { usePlayerStore } from './store/gameStore'
 import SplashScreen from './components/SplashScreen'
 import ErrorBoundary from './components/ErrorBoundary'
 import FixedBottomAd from './components/FixedBottomAd'
@@ -49,6 +51,30 @@ function PageLoader() {
 
 function AppRoutes() {
   useSocket() // Mount socket listener globally
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  // Post-OAuth: when Google sign-in completes, force-rehydrate the profile
+  // (main.jsx already hydrated the pre-OAuth anon user) and navigate back to
+  // whatever page the user was on when they tapped the bind button.
+  useEffect(() => {
+    if (!supabase) return
+    const { data } = supabase.auth.onAuthStateChange(async (evt, session) => {
+      if (evt !== 'SIGNED_IN') return
+      const user = session?.user
+      if (!user || user.is_anonymous) return
+      const hasGoogle = user.identities?.some(i => i.provider === 'google')
+      if (!hasGoogle) return
+      try { await usePlayerStore.getState().hydrateFromCloud(true) } catch {}
+      const returnPath = consumeOAuthReturnPath()
+      if (returnPath) {
+        const current = location.pathname + location.search
+        if (returnPath !== current) navigate(returnPath, { replace: true })
+      }
+    })
+    return () => { try { data?.subscription?.unsubscribe() } catch {} }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="phone-frame shadow-2xl">

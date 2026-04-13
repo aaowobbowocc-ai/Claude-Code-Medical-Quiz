@@ -68,38 +68,31 @@ export async function ensureSession() {
 }
 
 /**
- * Link Google identity to the current user.
- * - If current user is anon and Google is unlinked → upgrades anon to permanent (keeps user_id + profile data)
- * - If Google is already linked to another supabase user → falls back to signInWithOAuth (switches to that account)
+ * Sign in with Google. If the user already has a Google-linked account, restores it.
+ * If this is a brand-new Google sign-in, hydrateFromCloud uploads current zustand
+ * state (anon progress) as the new profile, so first-time linkers don't lose data.
  *
- * Both paths trigger a redirect; nothing happens after this call returns until Supabase processes the callback.
+ * NOTE: previously used linkIdentity for anon users to preserve user_id, but that
+ * fails silently on a second device — linkIdentity tries to attach Google to the
+ * fresh anon user, hits "identity already linked elsewhere" async during OAuth
+ * callback (no sync error so our fallback never triggered), and the user lands on
+ * a stuck anon session that looks like a brand-new account. signInWithOAuth always
+ * signs in to the user that owns the Google identity, which is correct "bind"
+ * semantics.
  */
 export async function linkOrSignInGoogle() {
   if (!supabase) return { error: 'auth-disabled' }
-  const redirectTo = window.location.origin
   const { data: { user } } = await supabase.auth.getUser()
 
-  // Already linked? Just return identity info.
   if (user?.identities?.some(i => i.provider === 'google')) {
     return { alreadyLinked: true }
   }
 
-  // Try link first (preserves current anon user_id + profile)
-  if (user && user.is_anonymous) {
-    const { error } = await supabase.auth.linkIdentity({
-      provider: 'google',
-      options: { redirectTo },
-    })
-    if (!error) return { linking: true }
-    console.warn('[supabase] linkIdentity failed, falling back to signIn:', error.message)
-  }
-
-  // Fallback: full OAuth sign-in (used on new devices where Google already exists)
-  const { error: signErr } = await supabase.auth.signInWithOAuth({
+  const { error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
-    options: { redirectTo },
+    options: { redirectTo: window.location.origin },
   })
-  if (signErr) return { error: signErr.message }
+  if (error) return { error: error.message }
   return { signingIn: true }
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 
@@ -49,6 +49,15 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
   const [showReportForm, setShowReportForm] = useState(false)
   const [reportText, setReportText] = useState('')
   const [reportSending, setReportSending] = useState(false)
+
+  // Reset panel-local state when the parent navigates to a different question, so
+  // toggles like "showAI" / open report form don't leak across question boundaries.
+  useEffect(() => {
+    setShowAI(false)
+    setReportSent(false)
+    setShowReportForm(false)
+    setReportText('')
+  }, [questionId])
 
   const hasExplanation = !!explanation
 

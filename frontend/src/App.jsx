@@ -1,14 +1,14 @@
-import React, { Suspense, lazy, useState } from 'react'
+import React, { Suspense, lazy, useState, useEffect } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import { useSocket } from './hooks/useSocket'
 import SplashScreen from './components/SplashScreen'
 import ErrorBoundary from './components/ErrorBoundary'
 import FixedBottomAd from './components/FixedBottomAd'
-import { initRegistry } from './config/examRegistry'
+import { initRegistry, getRegistry } from './config/examRegistry'
 
 // Pre-fetch exam registry as early as possible
-initRegistry()
+const registryPromise = initRegistry()
 
 // Lazy-load non-critical pages
 const Lobby    = lazy(() => import('./pages/Lobby'))
@@ -83,11 +83,23 @@ function AppRoutes() {
 
 export default function App() {
   const [splashDone, setSplashDone] = useState(false)
+  // Block render until exam registry is loaded — first-load on a fresh device has no
+  // localStorage cache, so getExamTypes() returns [] until fetch completes, which crashes
+  // pages that read currentExam.icon. Cached visits resolve synchronously so this is a no-op.
+  const [registryReady, setRegistryReady] = useState(() => !!getRegistry())
+  useEffect(() => {
+    if (registryReady) return
+    let cancelled = false
+    registryPromise.then(() => { if (!cancelled) setRegistryReady(true) })
+    // Failsafe: even if fetch hangs, unblock after 8s — fallback components handle missing data
+    const t = setTimeout(() => { if (!cancelled) setRegistryReady(true) }, 8000)
+    return () => { cancelled = true; clearTimeout(t) }
+  }, [registryReady])
 
   return (
     <ErrorBoundary>
       {!splashDone && <SplashScreen onDone={() => setSplashDone(true)} />}
-      <AppRoutes />
+      {registryReady ? <AppRoutes /> : <PageLoader />}
     </ErrorBoundary>
   )
 }

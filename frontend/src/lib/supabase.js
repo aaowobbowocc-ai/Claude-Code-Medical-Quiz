@@ -21,9 +21,42 @@ export const isAuthEnabled = !!supabase
 /**
  * Ensure the user has a session. If none exists, sign in anonymously.
  * Returns the user object, or null if auth is disabled.
+ *
+ * IMPORTANT: After Google OAuth redirect, the URL contains `?code=...` (PKCE flow)
+ * and Supabase needs to async-exchange it for a session. If we call signInAnonymously
+ * before that exchange finishes, we'd clobber the just-linked Google session with a
+ * fresh anon user. So we wait for the SIGNED_IN event when an OAuth callback is detected.
  */
 export async function ensureSession() {
   if (!supabase) return null
+
+  // Detect mid-flight OAuth callback (PKCE: ?code=, implicit: #access_token=)
+  const url = typeof window !== 'undefined' ? window.location : null
+  const hasOAuthCallback = url && (
+    /[?&]code=/.test(url.search) ||
+    /access_token=/.test(url.hash)
+  )
+
+  if (hasOAuthCallback) {
+    // Wait up to 5s for Supabase to finish processing the OAuth callback
+    const session = await new Promise(resolve => {
+      const timeout = setTimeout(async () => {
+        sub.subscription.unsubscribe()
+        const { data: { session: s } } = await supabase.auth.getSession()
+        resolve(s)
+      }, 5000)
+      const sub = supabase.auth.onAuthStateChange((evt, s) => {
+        if (evt === 'SIGNED_IN' || evt === 'INITIAL_SESSION') {
+          clearTimeout(timeout)
+          sub.subscription.unsubscribe()
+          resolve(s)
+        }
+      })
+    })
+    if (session?.user) return session.user
+    // Fall through to anon if OAuth failed — at least don't leave the user session-less
+  }
+
   const { data: { session } } = await supabase.auth.getSession()
   if (session?.user) return session.user
   const { data, error } = await supabase.auth.signInAnonymously()

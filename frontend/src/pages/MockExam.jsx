@@ -157,7 +157,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                     <p className="text-gray-400 text-xs">
                       {getTimeLimitText(PAPERS)}，
                       {isWeighted
-                        ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格${uniformPointsPerQ ? `（需答對 ${Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題）` : ''}`
+                        ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格${uniformPointsPerQ ? `（需答對 ${Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題）` : `（總分達 ${Math.round(TOTAL_PASS/TOTAL_POINTS*100)}%）`}`
                         : `${TOTAL_PASS}/${TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 題 及格`}
                     </p>
                   </div>
@@ -242,7 +242,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                   <p className="text-gray-400 text-xs">
                     {getTimeLimitText(PAPERS)}，
                     {isWeighted
-                      ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格${uniformPointsPerQ ? `（需答對 ${Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題）` : ''}`
+                      ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格${uniformPointsPerQ ? `（需答對 ${Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題）` : `（總分達 ${Math.round(TOTAL_PASS/TOTAL_POINTS*100)}%）`}`
                       : `${TOTAL_PASS}/${TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 題 及格`}
                   </p>
                 </div>
@@ -632,8 +632,12 @@ function ExamResults({ papers, navigate }) {
             <div className="bg-white/10 rounded-xl px-4 py-2 text-center">
               <p className="text-white/50 text-xs">及格線</p>
               <p className="text-white font-bold text-lg">{TOTAL_PASS}{isWeighted ? '分' : ''}</p>
-              {isWeighted && uniformPointsPerQ && (
-                <p className="text-white/40 text-[10px]">需答對 {Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題</p>
+              {isWeighted && (
+                <p className="text-white/40 text-[10px]">
+                  {uniformPointsPerQ
+                    ? `需答對 ${Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題`
+                    : `總分達 ${Math.round(TOTAL_PASS/TOTAL_POINTS*100)}%`}
+                </p>
               )}
             </div>
           )}

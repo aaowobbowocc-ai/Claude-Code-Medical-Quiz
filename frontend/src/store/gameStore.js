@@ -84,20 +84,33 @@ export const usePlayerStore = create(
             .eq('user_id', user.id)
             .maybeSingle()
           if (error) throw error
+          // Helper: derive a usable name from Google identity (full_name → name → email prefix)
+          const deriveGoogleName = () => {
+            const meta = user.user_metadata || {}
+            const candidate = meta.full_name || meta.name || (user.email ? user.email.split('@')[0] : '')
+            return candidate ? candidate.slice(0, 12) : ''
+          }
           if (row) {
             // Cloud wins — overwrite local
             set({ ...dbToStore(row), hydrated: true })
             console.log('[profile] hydrated from cloud')
+            // If this row has empty name but user just linked Google, backfill from Google profile
+            if (!get().name) {
+              const filled = deriveGoogleName()
+              if (filled) {
+                set({ name: filled })
+                supabase.from('profiles').update({ name: filled }).eq('user_id', user.id).then(({ error: upErr }) => {
+                  if (upErr) console.warn('[profile] backfill name failed:', upErr.message)
+                  else console.log('[profile] backfilled name from Google:', filled)
+                })
+              }
+            }
           } else {
             // First time on this user — upload current local state (handles migration).
             // For brand-new Google sign-ins, pre-fill name from Google profile if local is empty.
-            const local = get()
-            if (!local.name) {
-              const meta = user.user_metadata || {}
-              const googleName = meta.full_name || meta.name
-              if (googleName) {
-                set({ name: googleName.slice(0, 12) })
-              }
+            if (!get().name) {
+              const filled = deriveGoogleName()
+              if (filled) set({ name: filled })
             }
             const payload = { user_id: user.id, ...storeToDb(get()) }
             const { error: insErr } = await supabase.from('profiles').insert(payload)

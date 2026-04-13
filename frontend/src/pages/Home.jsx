@@ -244,7 +244,12 @@ export default function Home() {
 
   const exam = usePlayerStore(s => s.exam) || 'doctor1'
   const setExam = usePlayerStore(s => s.setExam)
-  const currentExam = getExamTypes().find(e => e.id === exam) || getExamTypes()[0]
+  // Hard fallback so that even if registry fetch fails (offline/backend down) the page
+  // still renders instead of crashing on currentExam.icon — App.jsx gates first paint
+  // on registry readiness, this is just belt-and-braces.
+  const currentExam = getExamTypes().find(e => e.id === exam) || getExamTypes()[0] || {
+    id: 'doctor1', name: '醫師一階', short: '醫一', icon: '🩺', papers: [],
+  }
 
   // Dynamic SEO title per exam
   usePageMeta(

@@ -42,10 +42,17 @@ export default function SupportSheets({ sheet, setSheet }) {
             <p>📚 題庫持續更新，緊跟最新考試</p>
           </div>
 
-          <div className="w-full py-4 rounded-2xl text-center mb-3 bg-gray-100 border-2 border-dashed border-gray-300">
-            <p className="text-base font-bold text-gray-500">🔧 贊助功能尚未開放</p>
-            <p className="text-xs text-gray-400 mt-1">目前正在準備中，敬請期待！</p>
-          </div>
+          <a
+            href="https://p.ecpay.com.tw/E11DBDD"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full py-4 rounded-2xl text-center mb-3 font-bold text-lg text-white active:scale-95 transition-transform grad-cta shadow-md"
+          >
+            ☕ 前往贊助
+          </a>
+          <p className="text-center text-[11px] text-gray-400 mb-3">
+            支援信用卡、ATM、超商代碼（綠界金流）
+          </p>
 
           <p className="text-center text-xs text-gray-300 leading-relaxed">
             加油，未來的醫生！🩺<br />這裡永遠為你開著。

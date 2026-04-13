@@ -12,6 +12,7 @@ import Sheet from '../components/Sheet'
 import SupportBar from '../components/SupportBar'
 import SupportSheets from '../components/SupportSheets'
 import RewardAdSheet from '../components/RewardAdSheet'
+import { supabase, linkOrSignInGoogle, signOutAndReanon, getLinkedIdentity } from '../lib/supabase'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
 
@@ -253,6 +254,34 @@ export default function Home() {
   // Quick-name: inline input shown only when no name
   const [quickName, setQuickName] = useState('')
   const quickRef = useRef(null)
+
+  // ── Supabase auth state (for Google bind UI) ─────────────────
+  const [authUser, setAuthUser] = useState(null)
+  const [authBusy, setAuthBusy] = useState(false)
+  const [authMsg, setAuthMsg] = useState('')
+  useEffect(() => {
+    if (!supabase) return
+    supabase.auth.getUser().then(({ data }) => setAuthUser(data.user))
+    const { data: sub } = supabase.auth.onAuthStateChange((_evt, session) => {
+      setAuthUser(session?.user || null)
+    })
+    return () => sub.subscription.unsubscribe()
+  }, [])
+  const linkedIdentity = getLinkedIdentity(authUser)
+  const isAnon = authUser?.is_anonymous === true
+
+  const handleLinkGoogle = async () => {
+    setAuthBusy(true); setAuthMsg('')
+    const r = await linkOrSignInGoogle()
+    if (r.error) { setAuthMsg('連線失敗：' + r.error); setAuthBusy(false) }
+    // On linking/signingIn, browser redirects — no UI to update
+  }
+  const handleSignOut = async () => {
+    if (!confirm('確定要登出？登出後會建立新的訪客帳號，現有進度仍保留在此瀏覽器，但不會跨裝置同步。')) return
+    setAuthBusy(true)
+    await signOutAndReanon()
+    setAuthBusy(false)
+  }
 
   useEffect(() => {
     const s = socket
@@ -700,6 +729,40 @@ export default function Home() {
                   className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform grad-cta">
             儲存
           </button>
+
+          {/* ── Account binding ─────────────────────── */}
+          {supabase && (
+            <div className="mt-5 pt-5 border-t border-gray-100">
+              <p className="text-xs text-gray-400 mb-2 text-center">帳號綁定</p>
+              {linkedIdentity ? (
+                <div className="bg-emerald-50 border border-emerald-200 rounded-2xl px-4 py-3 flex items-center gap-3">
+                  <span className="text-2xl">✅</span>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-bold text-emerald-700">已綁定 Google</p>
+                    <p className="text-xs text-emerald-600 truncate">{linkedIdentity.email || '已連結'}</p>
+                  </div>
+                  <button onClick={handleSignOut} disabled={authBusy}
+                          className="text-xs text-gray-500 px-3 py-1.5 bg-white border border-gray-200 rounded-lg active:scale-95 disabled:opacity-50">
+                    登出
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <button onClick={handleLinkGoogle} disabled={authBusy}
+                          className="w-full py-3 rounded-2xl font-bold text-sm bg-white border-2 border-gray-200 text-gray-700 flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50">
+                    <span className="text-xl">🔗</span>
+                    {authBusy ? '連線中…' : isAnon ? '綁定 Google 帳號' : '使用 Google 登入'}
+                  </button>
+                  <p className="text-[10px] text-gray-400 text-center mt-2 leading-relaxed">
+                    {isAnon
+                      ? '綁定後可在不同裝置同步金幣與進度，現有資料會保留'
+                      : '使用 Google 登入以同步跨裝置的進度'}
+                  </p>
+                </>
+              )}
+              {authMsg && <p className="text-xs text-red-500 text-center mt-2">{authMsg}</p>}
+            </div>
+          )}
         </Sheet>
       )}
 

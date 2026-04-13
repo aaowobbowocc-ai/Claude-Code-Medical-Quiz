@@ -264,8 +264,8 @@ export const useGameStore = create((set) => ({
   }),
 }))
 
-// Dev console: window.dev.addCoins(10000)
-if (typeof window !== 'undefined') {
+// Dev console: window.dev.addCoins(10000) — only available in `npm run dev`, stripped from production build
+if (import.meta.env.DEV && typeof window !== 'undefined') {
   window.dev = {
     addCoins: (n) => { usePlayerStore.getState().addCoins(n); console.log(`+${n} coins → ${usePlayerStore.getState().coins}`) },
     setCoins: (n) => { usePlayerStore.setState({ coins: n }); console.log(`coins = ${n}`) },

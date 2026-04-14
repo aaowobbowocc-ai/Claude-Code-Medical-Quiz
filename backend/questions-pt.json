@@ -4,7 +4,7 @@
     "label": "物理治療師",
     "scraped_at": "2026-04-10T01:55:58.342Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-04-14T09:13:50.945Z"
+    "last_updated": "2026-04-14T09:51:26.737Z"
   },
   "total": 5278,
   "questions": [
@@ -674,7 +674,10 @@
         "D": "肢體偏癱無感覺障礙，僅有下肢動作受影響"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/pt_32_0.webp"
+      ]
     },
     {
       "id": 34,
@@ -5994,7 +5997,10 @@
         "D": "內側副韌帶扭傷"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/pt_296_0.webp"
+      ]
     },
     {
       "id": 298,
@@ -16038,7 +16044,18 @@
         "D": "前臂旋前和盂肱關節冠狀面外展"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/pt_792_0.webp",
+        "/question-images/pt_792_1.webp",
+        "/question-images/pt_792_2.webp",
+        "/question-images/pt_792_3.webp",
+        "/question-images/pt_792_4.webp",
+        "/question-images/pt_792_5.webp",
+        "/question-images/pt_792_6.webp",
+        "/question-images/pt_792_7.webp",
+        "/question-images/pt_792_8.webp"
+      ]
     },
     {
       "id": 794,
@@ -40789,7 +40806,7 @@
       "subject_name": "骨科疾病物理治療學",
       "stage_id": 0,
       "number": 23,
-      "question": "觸診時發現右側坐骨粗隆內上緣組織較左側緊繃，此問題可能與下列何種情況有關？①右側薦骨基部（sacral",
+      "question": "觸診時發現右側坐骨粗隆內上緣組織較左側緊繃，此問題可能與下列何種情況有關？①右側薦骨基部（sacral base）較淺 ②右側薦骨基部較深 ③薦骨向右旋轉 ④薦骨向左旋轉 ⑤右側薦骨前屈 ⑥右側薦骨後仰",
       "options": {
         "B": "②④⑤",
         "A": "①③⑤",
@@ -45170,7 +45187,10 @@
       "explanation": "",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第80題更正為 A,D（原答案 A）"
+      "correction_note": "第80題更正為 A,D（原答案 A）",
+      "images": [
+        "/question-images/pt_2237_0.webp"
+      ]
     },
     {
       "id": 2239,
@@ -51569,7 +51589,7 @@
       "subject_name": "骨科疾病物理治療學",
       "stage_id": 0,
       "number": 79,
-      "question": "下列那些是下肢截肢患者因肢體疼痛而容易出現的姿勢？①髖屈曲（hip flexion） ②髖內收（hip",
+      "question": "下列那些是下肢截肢患者因肢體疼痛而容易出現的姿勢？①髖屈曲（hip flexion） ②髖內收（hip adduction） ③髖外轉（external rotation） ④膝屈曲（knee flexion）",
       "options": {
         "A": "①②③",
         "B": "②③④",
@@ -55781,7 +55801,10 @@
         "D": "Subramanian, 2013；變異數最大"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/pt_2765_0.webp"
+      ]
     },
     {
       "id": 2767,
@@ -55853,7 +55876,7 @@
       "subject_name": "物理治療學概論",
       "stage_id": 0,
       "number": 52,
-      "question": "下列研究設計證據力等級由高至低依序為何？①世代追蹤研究（cohort study） ②臨床控制研究（clinical",
+      "question": "下列研究設計證據力等級由高至低依序為何？①世代追蹤研究（cohort study） ②臨床控制研究（clinical control trial） ③病例對照研究（case control study）",
       "options": {
         "C": "①②③",
         "A": "②①③",
@@ -64337,7 +64360,10 @@
         "D": "曲線下所涵蓋面積"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/pt_3191_0.webp"
+      ]
     },
     {
       "id": 3193,
@@ -76390,7 +76416,7 @@
       "subject_name": "物理治療技術學",
       "stage_id": 0,
       "number": 34,
-      "question": "下列那些肌肉之肌力測試必須考慮三角肌（deltoid）肌力而改變阻力（resistance）位置？①菱形肌 （rhomboid） ②中斜方肌（middle fiber of trapezius） ③闊背肌（latissimus dorsi） ④前鋸肌（serratus",
+      "question": "下列那些肌肉之肌力測試必須考慮三角肌（deltoid）肌力而改變阻力（resistance）位置？①菱形肌（rhomboid） ②中斜方肌（middle fiber of trapezius） ③闊背肌（latissimus dorsi） ④前鋸肌（serratus anterior）",
       "options": {
         "A": "①④",
         "B": "僅①②",
@@ -78094,7 +78120,7 @@
       "subject_name": "神經疾病物理治療學",
       "stage_id": 0,
       "number": 38,
-      "question": "對下列那幾條血管栓塞之中風病患，治療師應仔細評估運動失調（ataxia）的問題？①中大腦動脈（middle",
+      "question": "對下列那幾條血管栓塞之中風病患，治療師應仔細評估運動失調（ataxia）的問題？①中大腦動脈（middlecerebral artery） ②後大腦動脈（posterior cerebral artery） ③基底動脈（basilar artery） ④椎動脈（vertebral artery）",
       "options": {
         "C": "③",
         "A": "①②③",
@@ -82749,7 +82775,7 @@
       "subject_name": "物理治療基礎學",
       "stage_id": 0,
       "number": 30,
-      "question": "人坐在機艙內，當飛機在跑道上加速前進準備起飛時，於起飛離地前偵測人體直線加速度（linear",
+      "question": "人坐在機艙內，當飛機在跑道上加速前進準備起飛時，於起飛離地前偵測人體直線加速度（linear acceleration）的主要偵測器最有可能為下列何者？",
       "options": {
         "A": "半規管的壺腹（ampulla）",
         "B": "耳石（otolith）系統中的聽斑（maculae）",
@@ -102532,7 +102558,7 @@
       "subject_name": "物理治療基礎學",
       "stage_id": 0,
       "number": 55,
-      "question": "骨盆後傾動作，可由下列那些肌肉所形成之力偶（force-couple）收縮達成？①腹直肌（rectus",
+      "question": "骨盆後傾動作，可由下列那些肌肉所形成之力偶（force-couple）收縮達成？①腹直肌（rectusabdominis） ②髂腰肌（iliopsoas） ③臀大肌（gluteus maximus）  ④豎棘肌（erector spinae）⑤大腿後肌（hamstrings） ⑥縫匠肌（sartorius）",
       "options": {
         "A": "①③⑤",
         "B": "②④⑥",

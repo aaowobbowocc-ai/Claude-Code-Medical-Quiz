@@ -8,7 +8,7 @@
     "description": "醫師國考第一階段文字題題庫（已過濾圖片題）",
     "scraped_at": "2026-04-01",
     "total_questions": 2000,
-    "last_updated": "2026-04-14T09:35:07.439Z"
+    "last_updated": "2026-04-14T09:46:39.514Z"
   },
   "total": 2200,
   "questions": [
@@ -4612,7 +4612,10 @@
       },
       "answer": "A",
       "explanation": "**✅ 為什麼答案是 A**\n尺神經（ulnar nerve）支配小指和無名指的表皮感覺，黑色區域正是這兩個手指的範圍。\n\n**❌ 排除其他選項**\n橈神經（radial nerve）主要支配背側手指和手掌的表皮感覺，不包括黑色區域；正中神經（median nerve）支配食指、中指和半個無名指的表皮感覺，也不包括黑色區域；肌皮神經（musculocutaneous nerve）不直接支配手指的表皮感覺。\n\n**🧠 記憶關鍵字**\n「ULNAR」可以記憶為「小指和無名指」。\n\n**🏥 臨床應用**\n了解尺神經的支配範圍對於診斷和治療手指麻木、無力等症狀有重要意義。",
-      "incomplete": "missing_image"
+      "incomplete": "missing_image",
+      "images": [
+        "/question-images/doctor1_111020_1_29_0.webp"
+      ]
     },
     {
       "id": "111020_1_30",
@@ -24023,7 +24026,10 @@
         "D": "出現腦膜炎"
       },
       "answer": "C",
-      "incomplete": "missing_image"
+      "incomplete": "missing_image",
+      "images": [
+        "/question-images/doctor1_113020_2_99_0.webp"
+      ]
     },
     {
       "id": "113020_2_100",
@@ -43674,7 +43680,10 @@
         "D": "卵黃囊瘤（yolk sac tumor）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/doctor1_110101_2_97_0.webp"
+      ]
     },
     {
       "id": "110101_2_98",
@@ -43754,7 +43763,10 @@
       },
       "answer": "C",
       "explanation": "",
-      "id": "110101_2_100"
+      "id": "110101_2_100",
+      "images": [
+        "/question-images/doctor1_110101_2_100_0.webp"
+      ]
     }
   ],
   "stages": [

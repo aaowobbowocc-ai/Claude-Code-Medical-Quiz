@@ -4,7 +4,7 @@
     "label": "醫事檢驗師",
     "scraped_at": "2026-04-10T01:56:03.736Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-04-14T09:10:30.506Z"
+    "last_updated": "2026-04-14T09:50:30.349Z"
   },
   "total": 5280,
   "questions": [
@@ -22849,7 +22849,11 @@
         "D": "1.26"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_1130_0.webp",
+        "/question-images/medlab_1130_1.webp"
+      ]
     },
     {
       "id": 1132,
@@ -29962,7 +29966,7 @@
       "subject_name": "臨床生理學與病理學",
       "stage_id": 0,
       "number": 45,
-      "question": "下列何者是惡性腫瘤（malignant tumor）？①何杰金氏病（Hodgkin disease） ②骨頭派吉特氏病（Paget",
+      "question": "下列何者是惡性腫瘤（malignant tumor）？①何杰金氏病（Hodgkin disease） ②骨頭派吉特氏病（Paget disease of bone） ③華欣氏腫瘤（Warthin tumor） ④微伍氏腫瘤（Wilms tumor）",
       "options": {
         "D": "①④",
         "A": "①②",
@@ -42724,7 +42728,10 @@
         "D": "敗血性關節炎"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2119_0.webp"
+      ]
     },
     {
       "id": 2121,
@@ -43447,7 +43454,10 @@
         "D": "檢體3為偵測不到HSV"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2155_0.webp"
+      ]
     },
     {
       "id": 2157,
@@ -43493,7 +43503,13 @@
         "D": "CDK1"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2157_0.webp",
+        "/question-images/medlab_2157_1.webp",
+        "/question-images/medlab_2157_2.webp",
+        "/question-images/medlab_2157_3.webp"
+      ]
     },
     {
       "id": 2159,
@@ -43536,7 +43552,10 @@
         "D": "絕對不是"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2159_0.webp"
+      ]
     },
     {
       "id": 2161,
@@ -50800,7 +50819,10 @@
         "D": "Chemotaxis"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2521_0.webp"
+      ]
     },
     {
       "id": 2523,
@@ -52823,7 +52845,10 @@
         "D": "檢體3是腸病毒陰性"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2622_0.webp"
+      ]
     },
     {
       "id": 2624,
@@ -57591,7 +57616,7 @@
       "subject_name": "臨床血清免疫學與臨床病毒學",
       "stage_id": 0,
       "number": 61,
-      "question": "下列有關Cellular prion protein（PrP",
+      "question": "下列有關Cellular prion protein（PrPc）及Scrapie-like prion protein（PrPsc）的比較，何者正確？",
       "options": {
         "C": "快（代謝時間短）",
         "A": "PrP sc 結構是Multimeric",
@@ -58534,7 +58559,7 @@
       "subject_name": "臨床生理學與病理學",
       "stage_id": 0,
       "number": 28,
-      "question": "關於一氧化碳肺瀰散量測定（DL",
+      "question": "關於一氧化碳肺瀰散量測定（DLCO）的敘述，下列何者錯誤？",
       "options": {
         "C": "受測者須在功能餘氣量（FRC）時閉氣10秒",
         "A": "一氧化碳對血紅素親和力比氧氣多達約200倍",
@@ -69706,7 +69731,7 @@
       "subject_name": "臨床血液學與血庫學",
       "stage_id": 0,
       "number": 23,
-      "question": "有關chronic granulomatous disease（CGD",
+      "question": "有關chronic granulomatous disease（CGD）的特徵，下列敘述何者正確？",
       "options": {
         "A": "Neutropenia（neutrophil的數目減少）",
         "B": "Neutrophil之穿透血管壁／趨化反應有缺陷",
@@ -70023,7 +70048,11 @@
         "D": "AML"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3477_0.webp",
+        "/question-images/medlab_3477_1.webp"
+      ]
     },
     {
       "id": 3479,
@@ -70395,7 +70424,7 @@
       "subject_name": "臨床血液學與血庫學",
       "stage_id": 0,
       "number": 57,
-      "question": "有關dilute Russell viper venom time（dRVVT",
+      "question": "有關dilute Russell viper venom time（dRVVT）試驗，下列敘述何者正確？",
       "options": {
         "A": "RVV活化factor X產生FXa後進行的下游活化作用被",
         "B": "RVV利用lupus anticoagulant作為輔因子進行酵素反應",
@@ -71895,7 +71924,10 @@
         "D": "需要進行其他的檢驗才能下結論"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3570_0.webp"
+      ]
     },
     {
       "id": 3572,
@@ -71939,7 +71971,11 @@
         "D": "採取同病人血球DNA，進行該位點的變異分析"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3572_0.webp",
+        "/question-images/medlab_3572_1.webp"
+      ]
     },
     {
       "id": 3574,
@@ -71971,7 +72007,7 @@
       "subject_name": "醫學分子檢驗學與臨床鏡檢學",
       "stage_id": 0,
       "number": 55,
-      "question": "臨床上常使用增幅阻礙突變系統（ARMS",
+      "question": "臨床上常使用增幅阻礙突變系統（ARMS）進行等位基因特異性檢驗，下列敘述何",
       "options": {
         "A": "可以偵測已知及未知的基因突變點",
         "B": "可以偵測大片段突變（例如deletion",
@@ -80661,7 +80697,10 @@
         "D": "黃疸"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_4007_0.webp"
+      ]
     },
     {
       "id": 4009,
@@ -91357,7 +91396,10 @@
         "D": "20%"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_4539_0.webp"
+      ]
     },
     {
       "id": 4541,
@@ -100440,7 +100482,10 @@
         "D": "亞硝酸鹽"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_4991_0.webp"
+      ]
     },
     {
       "id": 4993,

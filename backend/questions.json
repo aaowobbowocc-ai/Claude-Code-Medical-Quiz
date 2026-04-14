@@ -1531,7 +1531,7 @@
       "answer": "A",
       "explanation": "**✅ 為什麼答案是 A**\n在Michaelis-Menten反應速率方程中，加入競爭性抑制劑後，反應速率方程式變為 V = Vmax \\* [S] / (Km + [S]) \\* (1 + [I]/Ki)，其中 [I] 是抑制劑度，Ki 是抑制劑的半抑制濃度。這種情況下，Lineweaver-Burk圖的直線與未加抑制劑所得之直線相交於y-軸，表示抑制劑競爭與受質結合位點。\n\n**❌ 排除其他選項**\n非競爭性抑制劑（uncompetitive inhibitor）會改變 Km 值，但不會改變 Vmax 值，混合性抑制劑（mixed inhibitor）會改變 Km 值和 Vmax 值，不會相交於y-軸，不可逆抑制劑（irreversible inhibitor）會完全抑制酵素活性，不會有任何的競爭或非競爭抑制效果。\n\n**🧠 記憶關鍵字**\n\"競爭性抑制劑會改變Km值，讓直線在y-軸相交\"。\n\n**🏥 臨床應用**\n競爭性抑制劑的臨床意義在於可以用來抑制特定的酵素活性，從而治療某些疾病，如某些癌症或代謝疾病。",
       "images": [
-        "/question-images/doctor1_110020_76_0.png"
+        "/question-images/doctor1_110020_1_76_0.webp"
       ]
     },
     {
@@ -8317,7 +8317,7 @@
       "answer": "A",
       "explanation": "**✅ 為什麼答案是 A**\n視交叉（optic chiasm）是兩個視神經（optic nerve）在腦幹交叉的部位，損傷時會導致同側視野缺損。然而，這個題目描述的是單側視野缺損，與視交叉損傷不符。左視徑（left optic tract）損傷會導致右側視野缺損，因此正確答案是 A。\n\n**❌ 排除其他選項**\nB. 視交叉（optic chiasm）損傷會導致雙側視野缺損，不是單側視野缺損。\nC. 右視神經（right optic nerve）損傷會導致右側全視野缺損，不是單側視野缺損。\nD. 右外膝狀核（right lateral geniculate nucleus）損傷會導致視覺問題，但不會導致特定的視野缺損。\n\n**🧠 記憶關鍵字**\n「同側視野缺損與視神經有關，雙側視野缺損與視交叉有關」\n\n**🏥 臨床應用**\n這個知識對於診斷視神經疾病或視交叉疾病非常重要，能夠幫助醫生進行正確的診斷和治療。",
       "images": [
-        "/question-images/doctor1_111100_13_0.webp"
+        "/question-images/doctor1_111100_1_13_0.webp"
       ]
     },
     {
@@ -11990,7 +11990,7 @@
       "answer": "B",
       "explanation": "**✅ 為什麼答案是 B**\n糖尿病腎病變（diabetic glomerulopathy）是由於長期糖尿病導致腎絲球基底膜增厚和腎絲球病變，無需免疫複合體或補體沉積。\n\n**❌ 排除其他選項**\nA. 膜性腎病變（membranous nephropathy）通常涉及免疫複合體沉積，不符合題目描述。\nC. 最小變化腎病變（minimal change nephropathy）通常見於兒童，且無明顯的病理變化。\nD. IgA腎病變（IgA nephropathy）通常涉及IgA抗體沉積，不符合題目描述。\n\n**🧠 記憶關鍵字**\n\"糖尿病腎病變 → 基底膜增厚 → 無免疫複合體沉積\"\n\n**🏥 臨床應用**\n糖尿病腎病變是糖尿病的常見並發症，早期發現和治療對於預防腎衰竭至關重要。",
       "images": [
-        "/question-images/doctor1_111100_94_0.webp"
+        "/question-images/doctor1_111100_2_94_0.webp"
       ]
     },
     {
@@ -17384,7 +17384,7 @@
         "A": "甲試管血液中的氧分壓最高",
         "B": "乙試管血液中的血氧飽和度百分比",
         "C": "丙試管血液中的血氧飽和度百分比最",
-        "D": "三支試管血液中的氧氣總含量（tota"
+        "D": "三支試管血液中的氧氣總含量（total oxygen content）皆相同"
       },
       "answer": "C",
       "explanation": ""
@@ -17421,10 +17421,10 @@
       "number": 64,
       "question": "在一般正常生理狀態下，有關胃酸分",
       "options": {
-        "A": "受胃泌素釋放胜肽（gastrin releasing",
-        "B": "經氫氯離子共同轉運蛋白（H +-Cl - co",
+        "A": "受胃泌素釋放胜肽（gastrin releasing peptide, GRP）直接刺激細胞生成胃酸",
+        "B": "經氫氯離子共同轉運蛋白（H+-Cl- cotransporter）作用後，釋放胃酸",
         "C": "受黏液素（mucin）直接抑制Gs 蛋白",
-        "D": "需有碳酸酐酵素（carbonic anhydrase"
+        "D": "需有碳酸酐酵素（carbonic anhydrase）的參與，才能生成胃酸"
       },
       "answer": "D",
       "explanation": ""
@@ -21053,7 +21053,7 @@
       "answer": "A",
       "explanation": "",
       "images": [
-        "/question-images/doctor1_113020_46_0.png"
+        "/question-images/doctor1_113020_1_46_0.webp"
       ]
     },
     {
@@ -24039,8 +24039,7 @@
       },
       "answer": "D",
       "images": [
-        "/question-images/doctor1_113020_100_0.webp",
-        "/question-images/doctor1_113020_100_1.webp"
+        "/question-images/doctor1_113020_2_100_0.webp"
       ]
     },
     {
@@ -27800,7 +27799,7 @@
       },
       "answer": "C",
       "images": [
-        "/question-images/doctor1_113090_92_0.jpg"
+        "/question-images/doctor1_113090_2_92_0.webp"
       ]
     },
     {
@@ -32451,7 +32450,7 @@
       "answer": "C",
       "explanation": "",
       "images": [
-        "/question-images/doctor1_114090_29_0.jpg"
+        "/question-images/doctor1_114090_1_29_0.webp"
       ]
     },
     {
@@ -35746,7 +35745,7 @@
       },
       "answer": "A",
       "images": [
-        "/question-images/doctor1_114090_97_0.webp"
+        "/question-images/doctor1_114090_2_97_0.webp"
       ]
     },
     {
@@ -36396,7 +36395,7 @@
       "subject_name": "解剖學",
       "stage_id": 1,
       "number": 30,
-      "question": "股骨骨折導致大轉子（greater trocha",
+      "question": "股骨骨折導致大轉子（greater trochanter）斷裂，下列何者的功能最不受影響？",
       "options": {
         "A": "上孖肌（superior gemellus）",
         "B": "閉孔內肌（obturator internus）",
@@ -36416,12 +36415,12 @@
       "subject_name": "解剖學",
       "stage_id": 1,
       "number": 31,
-      "question": "下列何者的肌腱，不會通過跗骨隧道（",
+      "question": "下列何者的肌腱，不會通過跗骨隧道（tarsal tunnel）？",
       "options": {
         "A": "脛前肌（tibialis anterior）",
         "B": "脛後肌（tibialis posterior）",
-        "C": "屈 長肌（flexor hallucis longus",
-        "D": "屈趾長肌（flexor digitorum longus"
+        "C": "屈長肌（flexor hallucis longus）",
+        "D": "屈趾長肌（flexor digitorum longus）"
       },
       "answer": "A",
       "explanation": ""
@@ -36436,10 +36435,10 @@
       "subject_name": "胚胎學",
       "stage_id": 2,
       "number": 32,
-      "question": "女性在青春期時，體內何種激素（horm",
+      "question": "女性在青春期時，體內何種激素（hormone）的釋放量，會在排卵前與排卵後，分別出現一次高峰？",
       "options": {
-        "A": "濾泡刺激激素（follicle-stimulatin",
-        "B": "黃體成長激素（luteinizing hormone",
+        "A": "濾泡刺激激素（follicle-stimulating hormone）",
+        "B": "黃體成長激素（luteinizing hormone）",
         "C": "動情素（estrogen）",
         "D": "黃體酮（progesterone）"
       },
@@ -36456,7 +36455,7 @@
       "subject_name": "胚胎學",
       "stage_id": 2,
       "number": 33,
-      "question": "胚胎發育至何種時期，會突破透明層（",
+      "question": "胚胎發育至何種時期，會突破透明層（zona pellucida）而孵化（hatching）？",
       "options": {
         "A": "受精卵（zygote）",
         "B": "八細胞時期（eight-cell stage）",
@@ -36478,8 +36477,8 @@
       "number": 34,
       "question": "下列關於染色體數目異常的敘述，何者",
       "options": {
-        "A": "孕婦的年齡不影響染色體21 三倍體（",
-        "B": "性染色體三倍症（trisomy of sex ch",
+        "A": "孕婦的年齡不影響染色體21 三倍體（trisomy 21）的發生率",
+        "B": "性染色體三倍症（trisomy of sex chromosomes），常在青春期時才發現",
         "C": "透納氏症（Turner syndrome）多為男",
         "D": "具有染色體四倍體（tetrasomy）的胎"
       },
@@ -36496,7 +36495,7 @@
       "subject_name": "胚胎學",
       "stage_id": 2,
       "number": 35,
-      "question": "下列何種構造之來源不是外胚層（ecto",
+      "question": "下列何種構造之來源不是外胚層（ectoderm）？",
       "options": {
         "A": "皮脂腺（sebaceous gland）",
         "B": "汗腺（sweat gland）",
@@ -37017,7 +37016,7 @@
       "subject_name": "生理學",
       "stage_id": 4,
       "number": 61,
-      "question": "內肋間肌（internal intercostal mus",
+      "question": "內肋間肌（internal intercostal muscle）主要在何時會收縮？",
       "options": {
         "A": "平靜吸氣",
         "B": "平靜呼氣",
@@ -37037,12 +37036,12 @@
       "subject_name": "生理學",
       "stage_id": 4,
       "number": 62,
-      "question": "當肺內某區域的肺小動脈（pulmonary",
+      "question": "當肺內某區域的肺小動脈（pulmonary arteriole）發生局部血管阻塞時，最可能會導致下列何種反應？",
       "options": {
-        "A": "此區域的肺泡內二氧化碳分壓（",
-        "B": "此區域的肺泡內二氧化碳分壓（",
-        "C": "此區域的肺泡內二氧化碳分壓（",
-        "D": "此區域的肺泡內二氧化碳分壓（"
+        "A": "此區域的肺泡內二氧化碳分壓（）升高，進入此區域肺泡之通氣量（ventilation, VA）增加",
+        "B": "此區域的肺泡內二氧化碳分壓（）升高，進入此區域肺泡之通氣量（ventilation, VA）減少",
+        "C": "此區域的肺泡內二氧化碳分壓（）降低，進入此區域肺泡之通氣量（ventilation, VA）增加",
+        "D": "此區域的肺泡內二氧化碳分壓（）降低，進入此區域肺泡之通氣量（ventilation, VA）減少"
       },
       "answer": "D",
       "explanation": ""
@@ -37059,7 +37058,7 @@
       "number": 63,
       "question": "關於胃壁細胞（parietal cells）的運",
       "options": {
-        "A": "H +-K +-ATPase 位於細胞膜的底側面（b",
+        "A": "H+-K+-ATPase 位於細胞膜的底側面（basolateral membrane）",
         "B": "anion exchanger 位於細胞膜的底側面",
         "C": "cystic fibrosis transmembrane con membrane）",
         "D": "peptide transporter 1（PepT1）位於 體靜壓為36 毫米汞柱，血漿蛋白質造成之滲透壓 組織間液蛋白質造成之滲透壓為3 毫米汞柱，該 者最為適當？ ulation）機制較肝臟顯著，腦部動脈血中二氧化 ulation）機制較腦部顯著，腦部動脈血中二氧化 ulation）機制較肝臟顯著，腦部動脈血中二氧化 ulation）機制較腦部顯著，腦部動脈血中二氧化 scle）主要在何時會收縮？ arteriole）發生局部血管阻塞時，最可能會導 ）升高，進入此區域肺泡之通氣量（ventilat ）升高，進入此區域肺泡之通氣量（ventilat ）降低，進入此區域肺泡之通氣量（ventilat ）降低，進入此區域肺泡之通氣量（ventilat 運輸器在細胞膜表現位置，下列敘述何者最為適當 asolateral membrane） 面（basolateral membrane） nductance regulator（CFTR）位於細胞膜的底側 於細胞膜的的頂端面（apical membrane） 為26 毫米汞柱，微血 該微血管之淨過濾壓值 化碳濃度升高時會引起 化碳濃度升高時會引起 化碳濃度升高時會引起 化碳濃度升高時會引起 致下列何種反應？ ion, VA）增加 ion, VA）減少 ion, VA）增加 ion, VA）減少 當？ 側面（basolateral"
@@ -42676,7 +42675,7 @@
       "subject_name": "醫學(二)",
       "stage_id": 0,
       "number": 48,
-      "question": "健康轉型期（health transition）或流行病學轉型（epidemiological  transition）包含四個階段：①大流行及飢荒 期（the age of pestilence and famine） ②流行減退期（the age of receding pandemics） ③延後退化期（the",
+      "question": "健康轉型期（health transition）或流行病學轉型（epidemiological  transition）包含四個階段：①大流行及飢荒期（the age of pestilence and famine） ②流行減退期（the age of receding pandemics） ③延後退化期（theage of delayed degenerative diseases）④退化及人為疾病期（the age of degenerative and man-made diseases）。其先後順序何者正確？",
       "options": {
         "A": "①②③④",
         "B": "①②④③",

@@ -30,6 +30,9 @@ function isTruncated(stem) {
   const s = (stem || '').trim()
   if (!s) return false
   if (/[（(][a-zA-Z\u4e00-\u9fff]{0,8}$/.test(s)) return true
+  // Ends mid-question-construct: "下列敘述何", "下列敘述何者", "何者", "為何"
+  // but NO trailing "?" or "？" or sentence-final punct
+  if (/(下列敘述何者?|[何何]者|為何)$/.test(s)) return true
   return false
 }
 

@@ -461,9 +461,17 @@ async function scrapeExam(examId, filterYear, dryRun) {
       const parsed = parseQuestionsPdf(qText)
       console.log(`  ✓ ${sub.name}: ${parsed.length} questions, ${Object.keys(answers).length} answers`)
 
+      // Defensive: strip mupdf PUA markers (U+E000..U+F8FF). MoEX PDFs use a
+      // custom font whose A/B/C/D circled glyphs land in PUA and render as 口
+      // boxes in the user's app font.
+      const stripPUA = s => typeof s === 'string' ? s.replace(/[\uE000-\uF8FF]/g, '').trim() : s
+
       for (const q of parsed) {
         const ans = answers[q.number]
         if (!ans) continue
+
+        const cleanOpts = {}
+        for (const k of ['A', 'B', 'C', 'D']) cleanOpts[k] = stripPUA(q.options[k])
 
         // Determine paper (subject_name from config)
         allQuestions.push({
@@ -476,8 +484,8 @@ async function scrapeExam(examId, filterYear, dryRun) {
           subject_name: sub.name,
           stage_id: 0,
           number: q.number,
-          question: q.question.trim(),
-          options: q.options,
+          question: stripPUA(q.question),
+          options: cleanOpts,
           answer: ans === '*' ? (answers[q.number] || 'A') : ans,
           explanation: '',
           disputed: ans === '*' ? true : undefined,

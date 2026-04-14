@@ -5,7 +5,10 @@
  */
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
-const CACHE_KEY = 'exam-registry-v1'
+// Bump version to force-invalidate stale localStorage caches when the registry shape
+// changes or new exams are added. (v2: 中醫一/中醫二/獸醫師 added 4/13 — clients with
+// pre-4/13 cache were still serving the old list within the 24h TTL.)
+const CACHE_KEY = 'exam-registry-v2'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache

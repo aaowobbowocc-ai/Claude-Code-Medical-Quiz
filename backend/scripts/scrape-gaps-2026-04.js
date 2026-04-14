@@ -92,6 +92,17 @@ function parseLabeled(text) {
     if (/^(代號|類科|科目|考試|頁次|等\s*別|本試題|座號|※|注意)/.test(line)) continue
     if (/^\d+\s*頁/.test(line) || /^第\s*\d+\s*頁/.test(line)) continue
 
+    // Section reset: a line like "二、測驗題", "乙、測驗題", "貳、選擇題" marks
+    // the start of the MCQ section after an essay section. The essay items
+    // counted as "1.", "2.", "3." would otherwise leave currentQ pointing at
+    // the last essay item, causing the first 2 MCQ questions to be lost
+    // (their numbers fail the "currentQ.number + 1" check).
+    if (/^([一二三四乙貳]、|乙[、.])\s*(測驗|選擇|單選)/.test(line)) {
+      currentQ = null; currentOption = null; buffer = ''
+      questions.length = 0
+      continue
+    }
+
     const qm = line.match(/^(\d{1,2})[.、．]\s*(.*)$/)
     if (qm && (line.length > 6 || /[\u4e00-\u9fff a-zA-Z]/.test(qm[2] || '') || (qm[2] || '') === '')) {
       const num = parseInt(qm[1])
@@ -125,6 +136,10 @@ async function parseColumnAware(buf) {
   const doc = mupdf.Document.openDocument(new Uint8Array(buf), 'application/pdf')
   const n = doc.countPages()
 
+  // mupdf sometimes injects PUA (Private Use Area) chars as invisible markers
+  // for superscripts/subscripts — they break char-class regexes during salvage.
+  const stripPUA = s => s.replace(/[\uE000-\uF8FF]/g, '')
+
   function parsePage(pg) {
     const parsed = JSON.parse(pg.toStructuredText('preserve-images').asJSON())
     const lines = []
@@ -133,7 +148,12 @@ async function parseColumnAware(buf) {
       for (const ln of (b.lines || [])) {
         const t = (ln.text || '').trim()
         if (!t) continue
-        lines.push({ y: Math.round(ln.bbox.y), x: Math.round(ln.bbox.x), w: Math.round(ln.bbox.w), text: t })
+        const fs = (ln.font && ln.font.size) || ln.bbox.h || 12
+        lines.push({
+          y: Math.round(ln.bbox.y), x: Math.round(ln.bbox.x),
+          w: Math.round(ln.bbox.w), h: Math.round(ln.bbox.h),
+          fs: Math.round(fs * 10) / 10, text: t,
+        })
       }
     }
     lines.sort((a, b) => a.y - b.y || a.x - b.x)
@@ -156,12 +176,12 @@ async function parseColumnAware(buf) {
     return anchors.filter(a => { if (seen.has(a.num)) return false; seen.add(a.num); return true })
   }
 
-  function extractQuestionFromContent(content) {
+  function extractQuestionFromContent(content, columnHistogram) {
     if (!content.length) return null
     const rows = []
     for (const ln of content) {
       const last = rows[rows.length - 1]
-      const clone = { y: ln.y, x: ln.x, w: ln.w, text: ln.text }
+      const clone = { y: ln.y, x: ln.x, w: ln.w, h: ln.h, fs: ln.fs, text: ln.text }
       if (last && Math.abs(last.y - ln.y) <= 5) last.parts.push(clone)
       else rows.push({ y: ln.y, parts: [clone] })
     }
@@ -209,35 +229,145 @@ async function parseColumnAware(buf) {
       optionParts = rows.slice(rows.length - 4).map(r => r.parts[0])
     }
     // Salvage: when mupdf merged two adjacent column cells into one part, we
-    // get fewer than 4 options. Try to split the widest part on a structural
-    // boundary (closing bracket + CJK/English start, or full-stop + non-final).
-    if (optionParts.length === 3 || optionParts.length === 2) {
-      const need = 4 - optionParts.length
+    // get fewer than 4 options. Try to split the widest part on structural
+    // boundaries: bracket/period (strict), unit+digit (medium), or a bare
+    // CJK→digit transition (loose). Loose rules run only when we still need
+    // a split after the strict ones failed.
+    while (optionParts.length < 4) {
       const wides = optionParts.map((p, i) => ({ p, i, w: p.w || p.text.length * 10 }))
         .sort((a, b) => b.w - a.w)
+      let progressed = false
       for (const cand of wides) {
-        if (need <= 0) break
-        const text = cand.p.text
-        // Try these split patterns in order
+        // Use a PUA-stripped view for regex matching — but record the offset
+        // mapping so we can map matches back to the ORIGINAL text indices.
+        const origText = cand.p.text
+        const offsetMap = []  // offsetMap[i] = original index of stripped[i]
+        let stripped = ''
+        for (let i = 0; i < origText.length; i++) {
+          const code = origText.charCodeAt(i)
+          if (code >= 0xE000 && code <= 0xF8FF) continue
+          offsetMap.push(i)
+          stripped += origText[i]
+        }
+        const text = stripped
         const patterns = [
-          /([）)])([^\s，。；、])/,           // ")X" where X is not punctuation
-          /([。！？])([^\s，。；、)])/,        // "。X"
+          /([）)])([^\s，。；、])/,
+          /([。！？])([^\s，。；、)])/,
+          /([倍件條項個種類型次年月日時分秒級度])([0-9０-９])/,
+          /([\u4e00-\u9fff])([A-Za-zＡ-Ｚａ-ｚ])/,
+          /([\u4e00-\u9fff])([0-9０-９])/,
+          /([0-9０-９])([\u4e00-\u9fff])/,
         ]
-        let splitAt = -1
+        let splitAtStripped = -1
         for (const re of patterns) {
-          // Search within the middle 60% of the string
           const mid = Math.floor(text.length / 2)
-          const range = Math.floor(text.length * 0.3)
+          const range = Math.floor(text.length * 0.35)
           const slice = text.slice(mid - range, mid + range)
           const m = slice.match(re)
-          if (m) { splitAt = mid - range + m.index + m[1].length; break }
+          if (m) { splitAtStripped = mid - range + m.index + m[1].length; break }
         }
-        if (splitAt > 0 && splitAt < text.length) {
-          const left = text.slice(0, splitAt)
-          const right = text.slice(splitAt)
+        if (splitAtStripped > 0 && splitAtStripped < text.length) {
+          // Map stripped index back to the original text. The split point is
+          // the original index of the char at stripped[splitAtStripped] (i.e.
+          // the start of the right side).
+          const splitAt = splitAtStripped < offsetMap.length
+            ? offsetMap[splitAtStripped]
+            : origText.length
+          const left = origText.slice(0, splitAt)
+          const right = origText.slice(splitAt)
           optionParts.splice(cand.i, 1, { text: left }, { text: right })
+          progressed = true
           break
         }
+      }
+      if (!progressed) break
+    }
+
+    // Histogram-based salvage: when structural patterns can't find a split,
+    // fall back to column-x position + character-width estimation. Needs the
+    // doc-level columnHistogram (the typical x positions of option columns
+    // observed across the whole paper).
+    if (optionParts.length < 4 && columnHistogram && columnHistogram.length >= 2) {
+      while (optionParts.length < 4) {
+        // Find the widest part that starts at (or near) a known column-x and
+        // whose width spans into the next column. Split it at the char index
+        // whose accumulated width would land on the next column boundary.
+        let progressed = false
+        const widesByW = optionParts.map((p, i) => ({ p, i }))
+          .sort((a, b) => (b.p.w || 0) - (a.p.w || 0))
+        for (const cand of widesByW) {
+          const p = cand.p
+          if (!p.w || !p.fs) continue
+          const startX = p.x
+          // Find next column boundary > startX
+          const nextCol = columnHistogram.find(cx => cx > startX + 30)
+          if (!nextCol) continue
+          const targetSpan = nextCol - startX
+          if (p.w <= targetSpan + 5) continue   // doesn't actually spill
+          // Estimate char widths: prefer measured (part.w / chars) over fs heuristic.
+          const fs = p.fs
+          const origText = p.text
+          const offsetMap = []
+          let stripped = ''
+          for (let i = 0; i < origText.length; i++) {
+            const code = origText.charCodeAt(i)
+            if (code >= 0xE000 && code <= 0xF8FF) continue
+            offsetMap.push(i)
+            stripped += origText[i]
+          }
+          // Weight chars (CJK ≈ 1.0, ASCII ≈ 0.55) and scale to actual width
+          const charWeight = c => /[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]/.test(c) ? 1.0 : 0.55
+          const totalWeight = [...stripped].reduce((s, c) => s + charWeight(c), 0)
+          const pxPerWeight = totalWeight > 0 ? p.w / totalWeight : fs
+          let cum = 0
+          let splitIdx = -1
+          for (let j = 0; j < stripped.length; j++) {
+            cum += charWeight(stripped[j]) * pxPerWeight
+            if (cum >= targetSpan - pxPerWeight * 0.5) { splitIdx = j; break }
+          }
+          if (splitIdx <= 0 || splitIdx >= stripped.length - 1) continue
+          // Snap to nearest natural boundary (whitespace > CJK↔ASCII transition >
+          // bracket close > sentence punctuation). Search wider for whitespace
+          // because ASCII-heavy options merge with no other markers.
+          const isCJK = c => /[\u4e00-\u9fff]/.test(c)
+          const isSpace = c => /\s/.test(c)
+          const isBracket = c => /[）)」】]/.test(c)
+          const isPunct = c => /[。！？；]/.test(c)
+          const score = j => {
+            if (j <= 0 || j >= stripped.length) return -1
+            const prev = stripped[j - 1], cur = stripped[j]
+            // Split right after a space (whitespace ends previous token)
+            if (isSpace(prev) && !isSpace(cur)) return 100
+            // Split right before a space (whitespace begins next token); the
+            // trailing space gets trimmed so this is equivalent.
+            if (!isSpace(prev) && isSpace(cur)) return 95
+            if (isBracket(prev)) return 90
+            if (isPunct(prev)) return 85
+            if (isCJK(prev) !== isCJK(cur)) return 60
+            return 0
+          }
+          let bestIdx = splitIdx, bestScore = score(splitIdx)
+          for (let d = 1; d <= 12; d++) {
+            for (const j of [splitIdx - d, splitIdx + d]) {
+              const s = score(j)
+              // Prefer higher score; on tie, prefer closer to estimate
+              if (s > bestScore) { bestScore = s; bestIdx = j }
+            }
+            // Stop early if we found a strong boundary nearby
+            if (bestScore >= 90 && d >= 3) break
+          }
+          const splitAt = bestIdx < offsetMap.length ? offsetMap[bestIdx] : origText.length
+          const left = stripPUA(origText.slice(0, splitAt)).trim()
+          const right = stripPUA(origText.slice(splitAt)).trim()
+          if (!left || !right) continue
+          optionParts.splice(cand.i, 1,
+            { text: left, x: startX, w: targetSpan, fs },
+            { text: right, x: nextCol, w: (p.w - targetSpan), fs },
+          )
+          progressed = true
+          break
+        }
+        if (!progressed) break
       }
     }
 
@@ -255,6 +385,45 @@ async function parseColumnAware(buf) {
   }
   // Drop anchor-pattern lines from each page's content
   const isAnchorLine = ln => ln.x <= 60 && ln.w <= 22 && /^\d{1,3}$/.test(ln.text)
+  // Header/masthead lines that appear at the top of every page — never part of question content.
+  const isHeaderLine = ln => /^(代號|頁次|類\s*科|科\s*目|考試時間|等\s*別|本試題|座號|※\s*注意|頁\s*次)/.test(ln.text)
+
+  // Build column-x histogram from rows that look like "clean" option rows
+  // (2 parts with a wide gap, both narrow). The 2 dominant x positions are
+  // the column starts. Used as fallback for histogram salvage.
+  const xCounts = new Map()
+  for (const { lines } of pageData) {
+    // Group lines into rows by y
+    const rows = []
+    for (const ln of lines) {
+      if (isAnchorLine(ln)) continue
+      const last = rows[rows.length - 1]
+      if (last && Math.abs(last.y - ln.y) <= 5) last.parts.push(ln)
+      else rows.push({ y: ln.y, parts: [ln] })
+    }
+    for (const r of rows) {
+      r.parts.sort((a, b) => a.x - b.x)
+      if (r.parts.length < 2) continue
+      const xs = r.parts.map(p => p.x)
+      let wide = false
+      for (let i = 1; i < xs.length; i++) if (xs[i] - xs[i - 1] > 50) { wide = true; break }
+      if (!wide) continue
+      const maxW = Math.max(...r.parts.map(p => p.w || 0))
+      if (maxW > 260) continue
+      for (const p of r.parts) {
+        const k = p.x
+        xCounts.set(k, (xCounts.get(k) || 0) + 1)
+      }
+    }
+  }
+  // Pick the top x positions (cluster within ±4px)
+  const sortedX = [...xCounts.entries()].sort((a, b) => b[1] - a[1])
+  const columnHistogram = []
+  for (const [x] of sortedX) {
+    if (columnHistogram.every(cx => Math.abs(cx - x) > 6)) columnHistogram.push(x)
+    if (columnHistogram.length >= 4) break
+  }
+  columnHistogram.sort((a, b) => a - b)
 
   const out = {}
   for (let pi = 0; pi < pageData.length; pi++) {
@@ -265,23 +434,24 @@ async function parseColumnAware(buf) {
       let content
       if (nextA) {
         content = lines.filter(ln =>
-          !isAnchorLine(ln) &&
+          !isAnchorLine(ln) && !isHeaderLine(ln) &&
           ln.y >= a.y - 2 && ln.y < nextA.y - 2
         )
       } else if (pi + 1 < pageData.length) {
-        const curTail = lines.filter(ln => !isAnchorLine(ln) && ln.y >= a.y - 2)
+        const curTail = lines.filter(ln => !isAnchorLine(ln) && !isHeaderLine(ln) && ln.y >= a.y - 2)
         const np = pageData[pi + 1]
         const nextOnNext = np.anchors.length ? np.anchors[0] : null
-        // Offset next-page y so it sorts after current-page y
+        // Offset next-page y so it sorts after current-page y.
         const yOffset = 2000
         const nextTail = np.lines
-          .filter(ln => !isAnchorLine(ln) && (nextOnNext == null || ln.y < nextOnNext.y - 2))
+          .filter(ln => !isAnchorLine(ln) && !isHeaderLine(ln)
+            && (nextOnNext == null || ln.y < nextOnNext.y - 2))
           .map(ln => ({ ...ln, y: ln.y + yOffset }))
         content = curTail.concat(nextTail)
       } else {
-        content = lines.filter(ln => !isAnchorLine(ln) && ln.y >= a.y - 2)
+        content = lines.filter(ln => !isAnchorLine(ln) && !isHeaderLine(ln) && ln.y >= a.y - 2)
       }
-      const q = extractQuestionFromContent(content)
+      const q = extractQuestionFromContent(content, columnHistogram)
       if (q && !out[a.num]) out[a.num] = q
     }
   }
@@ -433,6 +603,128 @@ const BATCHES = [
       { s: '0305', name: '精神科與社區衛生護理學', tag: 'psych_community' },
     ],
   },
+  // tcm2 110-111 (both sessions) — column format, c=102 (pre-reform class code reuse)
+  {
+    file: 'questions-tcm2.json',
+    tag: 'tcm2_110_1',
+    code: '110030',
+    classCode: '102',
+    year: '110',
+    session: '第一次',
+    parser: 'column',
+    subjects: [
+      { s: '0103', name: '中醫臨床醫學(一)', tag: 'tcm_clinical_1' },
+      { s: '0104', name: '中醫臨床醫學(二)', tag: 'tcm_clinical_2' },
+      { s: '0105', name: '中醫臨床醫學(三)', tag: 'tcm_clinical_3' },
+      { s: '0106', name: '中醫臨床醫學(四)', tag: 'tcm_clinical_4' },
+    ],
+  },
+  {
+    file: 'questions-tcm2.json',
+    tag: 'tcm2_110_2',
+    code: '110111',
+    classCode: '102',
+    year: '110',
+    session: '第二次',
+    parser: 'column',
+    subjects: [
+      { s: '0103', name: '中醫臨床醫學(一)', tag: 'tcm_clinical_1' },
+      { s: '0104', name: '中醫臨床醫學(二)', tag: 'tcm_clinical_2' },
+      { s: '0105', name: '中醫臨床醫學(三)', tag: 'tcm_clinical_3' },
+      { s: '0106', name: '中醫臨床醫學(四)', tag: 'tcm_clinical_4' },
+    ],
+  },
+  {
+    file: 'questions-tcm2.json',
+    tag: 'tcm2_111_1',
+    code: '111030',
+    classCode: '102',
+    year: '111',
+    session: '第一次',
+    parser: 'column',
+    subjects: [
+      { s: '0103', name: '中醫臨床醫學(一)', tag: 'tcm_clinical_1' },
+      { s: '0104', name: '中醫臨床醫學(二)', tag: 'tcm_clinical_2' },
+      { s: '0105', name: '中醫臨床醫學(三)', tag: 'tcm_clinical_3' },
+      { s: '0106', name: '中醫臨床醫學(四)', tag: 'tcm_clinical_4' },
+    ],
+  },
+  {
+    file: 'questions-tcm2.json',
+    tag: 'tcm2_111_2',
+    code: '111110',
+    classCode: '102',
+    year: '111',
+    session: '第二次',
+    parser: 'column',
+    subjects: [
+      { s: '0103', name: '中醫臨床醫學(一)', tag: 'tcm_clinical_1' },
+      { s: '0104', name: '中醫臨床醫學(二)', tag: 'tcm_clinical_2' },
+      { s: '0105', name: '中醫臨床醫學(三)', tag: 'tcm_clinical_3' },
+      { s: '0106', name: '中醫臨床醫學(四)', tag: 'tcm_clinical_4' },
+    ],
+  },
+  // nutrition 110-111 — c=103 (not 102 like later years); mixed essay+MCQ PDFs
+  // Each subject has 40 MCQ after an essay section; expected 240/session
+  ...['110030','110111','111030','111110'].map(code => {
+    const year = code.slice(0, 3)
+    const session = code.slice(3) === '030' ? '第一次' : '第二次'
+    return {
+      file: 'questions-nutrition.json',
+      tag: `nutrition_${year}_${session === '第一次' ? '1' : '2'}`,
+      code,
+      classCode: '103',
+      year,
+      session,
+      parser: 'column',
+      subjects: [
+        { s: '0201', name: '生理學與生物化學', tag: 'physio_biochem' },
+        { s: '0202', name: '營養學', tag: 'nutrition_science' },
+        { s: '0203', name: '膳食療養學', tag: 'diet_therapy' },
+        { s: '0204', name: '團體膳食設計與管理', tag: 'group_meal' },
+        { s: '0205', name: '公共衛生營養學', tag: 'public_nutrition' },
+        { s: '0206', name: '食品衛生與安全', tag: 'food_safety' },
+      ],
+    }
+  }),
+  // nutrition 112 第一次 — joint exam with nursing/social worker, c=101 (NOT 102/103)
+  // Pre-reform PDF format (no A/B/C/D labels) → column parser; 40 MCQ per subject after essay section
+  {
+    file: 'questions-nutrition.json',
+    tag: 'nutrition_112_1',
+    code: '112030',
+    classCode: '101',
+    year: '112',
+    session: '第一次',
+    parser: 'column',
+    subjects: [
+      { s: '0101', name: '生理學與生物化學', tag: 'physio_biochem' },
+      { s: '0102', name: '營養學', tag: 'nutrition_science' },
+      { s: '0103', name: '膳食療養學', tag: 'diet_therapy' },
+      { s: '0104', name: '團體膳食設計與管理', tag: 'group_meal' },
+      { s: '0105', name: '公共衛生營養學', tag: 'public_nutrition' },
+      { s: '0106', name: '食品衛生與安全', tag: 'food_safety' },
+    ],
+  },
+  // nutrition 113 第一次 — c=102, atypical 2-digit s codes (11/22/33/44/55/66)
+  // Post-reform format with A./B./C./D. labels → labeled parser; essay then MCQ
+  {
+    file: 'questions-nutrition.json',
+    tag: 'nutrition_113_1',
+    code: '113030',
+    classCode: '102',
+    year: '113',
+    session: '第一次',
+    parser: 'labeled',
+    subjects: [
+      { s: '33', name: '生理學與生物化學', tag: 'physio_biochem' },
+      { s: '44', name: '營養學', tag: 'nutrition_science' },
+      { s: '11', name: '膳食療養學', tag: 'diet_therapy' },
+      { s: '22', name: '團體膳食設計與管理', tag: 'group_meal' },
+      { s: '55', name: '公共衛生營養學', tag: 'public_nutrition' },
+      { s: '66', name: '食品衛生與安全', tag: 'food_safety' },
+    ],
+  },
 ]
 
 async function main() {
@@ -500,6 +792,12 @@ async function main() {
           if (!q.question || !q.options.A || !q.options.B || !q.options.C || !q.options.D) continue
           const dupKey = `${batch.year}|${batch.session}|${batch.code}|${sub.tag}|${num}`
           if (existingKeys.has(dupKey)) continue
+          // Defensive: strip mupdf PUA markers (U+E000..U+F8FF) from all text fields.
+          // The MoEX PDFs use a custom font whose A/B/C/D circled glyphs land in PUA;
+          // they render as 口 boxes in the user's app font.
+          const stripPUA = s => typeof s === 'string' ? s.replace(/[\uE000-\uF8FF]/g, '').trim() : s
+          const cleanOpts = {}
+          for (const k of ['A', 'B', 'C', 'D']) cleanOpts[k] = stripPUA(q.options[k])
           newQs.push({
             id: nextId++,
             roc_year: batch.year,
@@ -510,8 +808,8 @@ async function main() {
             subject_name: sub.name,
             stage_id: 0,
             number: num,
-            question: q.question,
-            options: q.options,
+            question: stripPUA(q.question),
+            options: cleanOpts,
             answer: a,
             explanation: '',
             ...(corrections[num] === '*' ? { disputed: true } : {}),

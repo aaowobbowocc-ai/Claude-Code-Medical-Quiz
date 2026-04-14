@@ -4,7 +4,7 @@
     "label": "醫事檢驗師",
     "scraped_at": "2026-04-10T01:56:03.736Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-04-14T09:52:42.119Z"
+    "last_updated": "2026-04-14T11:49:13.537Z"
   },
   "total": 5280,
   "questions": [
@@ -90,7 +90,10 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "missing_image"
+      "incomplete": "missing_image",
+      "images": [
+        "/question-images/medlab_4_0.webp"
+      ]
     },
     {
       "id": 5,
@@ -2851,7 +2854,10 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "missing_image"
+      "incomplete": "missing_image",
+      "images": [
+        "/question-images/medlab_140_0.webp"
+      ]
     },
     {
       "id": 141,
@@ -3051,7 +3057,10 @@
         "D": "Anti-Fy b"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_150_0.webp"
+      ]
     },
     {
       "id": 151,
@@ -9739,7 +9748,10 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "missing_image"
+      "incomplete": "missing_image",
+      "images": [
+        "/question-images/medlab_483_0.webp"
+      ]
     },
     {
       "id": 484,
@@ -9805,7 +9817,12 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "missing_image"
+      "incomplete": "missing_image",
+      "images": [
+        "/question-images/medlab_486_0.webp",
+        "/question-images/medlab_486_1.webp",
+        "/question-images/medlab_486_2.webp"
+      ]
     },
     {
       "id": 487,
@@ -9910,7 +9927,11 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "missing_image"
+      "incomplete": "missing_image",
+      "images": [
+        "/question-images/medlab_491_0.webp",
+        "/question-images/medlab_491_1.webp"
+      ]
     },
     {
       "id": 492,
@@ -12611,7 +12632,10 @@
         "D": "紅血球凝集抑制試驗（hemagglutination-inhibition test）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_624_0.webp"
+      ]
     },
     {
       "id": 625,
@@ -19406,7 +19430,10 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "missing_image"
+      "incomplete": "missing_image",
+      "images": [
+        "/question-images/medlab_961_0.webp"
+      ]
     },
     {
       "id": 962,
@@ -19469,7 +19496,10 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "missing_image"
+      "incomplete": "missing_image",
+      "images": [
+        "/question-images/medlab_964_0.webp"
+      ]
     },
     {
       "id": 965,
@@ -19532,7 +19562,10 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "missing_image"
+      "incomplete": "missing_image",
+      "images": [
+        "/question-images/medlab_967_0.webp"
+      ]
     },
     {
       "id": 968,
@@ -19574,7 +19607,10 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "missing_image"
+      "incomplete": "missing_image",
+      "images": [
+        "/question-images/medlab_969_0.webp"
+      ]
     },
     {
       "id": 970,
@@ -29171,7 +29207,10 @@
         "D": "陳舊型前壁心肌梗塞"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_1445_0.webp"
+      ]
     },
     {
       "id": 1446,
@@ -29211,7 +29250,10 @@
         "D": "完全房室傳導阻斷"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_1447_0.webp"
+      ]
     },
     {
       "id": 1448,
@@ -29231,7 +29273,10 @@
         "D": "狹心症"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_1448_0.webp"
+      ]
     },
     {
       "id": 1449,
@@ -31094,7 +31139,10 @@
         "D": "Natural killer cell"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_1541_0.webp"
+      ]
     },
     {
       "id": 1542,
@@ -31294,7 +31342,10 @@
         "D": "Myelodysplastic syndrome"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_1551_0.webp"
+      ]
     },
     {
       "id": 1552,
@@ -37295,7 +37346,10 @@
         "D": "細胞內蛋白質（intracellular protein）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_1850_0.webp"
+      ]
     },
     {
       "id": 1851,
@@ -38721,7 +38775,10 @@
         "D": "心房顫動 （atrial fibrillation）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_1921_0.webp"
+      ]
     },
     {
       "id": 1922,
@@ -38901,7 +38958,10 @@
         "D": "心室頻脈（ventricular tachycardia）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_1930_0.webp"
+      ]
     },
     {
       "id": 1931,
@@ -39361,7 +39421,10 @@
         "D": "向量陣列（vector array）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_1953_0.webp"
+      ]
     },
     {
       "id": 1954,
@@ -40853,7 +40916,10 @@
         "D": "Large granular lymphocyte"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2027_0.webp"
+      ]
     },
     {
       "id": 2028,
@@ -42645,7 +42711,10 @@
         "D": "正常女性的檢體"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2116_0.webp"
+      ]
     },
     {
       "id": 2117,
@@ -47181,7 +47250,10 @@
         "D": "哥哥"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2341_0.webp"
+      ]
     },
     {
       "id": 2342,
@@ -48404,7 +48476,10 @@
         "D": "陳舊型下壁心肌梗塞"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2402_0.webp"
+      ]
     },
     {
       "id": 2403,
@@ -48564,7 +48639,10 @@
         "D": "此為一度房室傳導阻斷"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2410_0.webp"
+      ]
     },
     {
       "id": 2411,
@@ -48604,7 +48682,10 @@
         "D": "第三度房室間傳導阻斷（atrioventricular block）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2412_0.webp"
+      ]
     },
     {
       "id": 2413,
@@ -51922,7 +52003,10 @@
         "D": "與腎臟疾病一定有關"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2577_0.webp"
+      ]
     },
     {
       "id": 2578,
@@ -58044,7 +58128,10 @@
         "D": "此為側壁心肌梗塞"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2882_0.webp"
+      ]
     },
     {
       "id": 2883,
@@ -58064,7 +58151,10 @@
         "D": "心房撲動（atrial flutter）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2883_0.webp"
+      ]
     },
     {
       "id": 2884,
@@ -58227,7 +58317,10 @@
         "D": "有一度房室傳導阻斷"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_2891_0.webp"
+      ]
     },
     {
       "id": 2892,
@@ -61455,7 +61548,10 @@
         "D": "是胺基酸代謝之產物"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3051_0.webp"
+      ]
     },
     {
       "id": 3052,
@@ -67725,7 +67821,10 @@
         "D": "心跳速率不規則"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3363_0.webp"
+      ]
     },
     {
       "id": 3364,
@@ -67845,7 +67944,10 @@
         "D": "心室逃漏性心律（ventricular escape rhythm）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3369_0.webp"
+      ]
     },
     {
       "id": 3370,
@@ -70452,7 +70554,12 @@
         "D": "Type 3 VWD"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3498_0.webp",
+        "/question-images/medlab_3498_1.webp",
+        "/question-images/medlab_3498_2.webp"
+      ]
     },
     {
       "id": 3499,
@@ -77138,7 +77245,13 @@
         "D": "病毒體顆粒平均大小120 nm"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3831_0.webp",
+        "/question-images/medlab_3831_1.webp",
+        "/question-images/medlab_3831_2.webp",
+        "/question-images/medlab_3831_3.webp"
+      ]
     },
     {
       "id": 3832,
@@ -77378,7 +77491,10 @@
         "D": "85"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3843_0.webp"
+      ]
     },
     {
       "id": 3844,
@@ -77478,7 +77594,11 @@
         "D": "完全房室傳導阻斷"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3848_0.webp",
+        "/question-images/medlab_3848_1.webp"
+      ]
     },
     {
       "id": 3849,
@@ -77518,7 +77638,10 @@
         "D": "2：1房室傳導阻斷"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3850_0.webp"
+      ]
     },
     {
       "id": 3851,
@@ -79524,7 +79647,10 @@
         "D": "Leukeran"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_3950_0.webp"
+      ]
     },
     {
       "id": 3951,
@@ -87006,7 +87132,10 @@
         "D": "平躺休息即會恢復"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_4322_0.webp"
+      ]
     },
     {
       "id": 4323,
@@ -87066,7 +87195,10 @@
         "D": "急性心包膜炎"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_4325_0.webp"
+      ]
     },
     {
       "id": 4326,
@@ -87586,7 +87718,10 @@
         "D": "D圖"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_4351_0.webp"
+      ]
     },
     {
       "id": 4352,
@@ -90085,7 +90220,10 @@
         "D": "僅荜"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_4475_0.webp"
+      ]
     },
     {
       "id": 4476,
@@ -91679,7 +91817,10 @@
         "D": "病人可給與標靶藥物治療，使用一段時間後，可能產生次級突變（secondary mutation），造成用藥無效"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_4554_0.webp"
+      ]
     },
     {
       "id": 4555,
@@ -96568,7 +96709,10 @@
         "D": "竇性心律過緩（sinus bradycardia）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_4798_0.webp"
+      ]
     },
     {
       "id": 4799,
@@ -96708,7 +96852,10 @@
         "D": "心律不規律"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_4805_0.webp"
+      ]
     },
     {
       "id": 4806,
@@ -99536,7 +99683,10 @@
         "D": "Anti- Fy a"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_4945_0.webp"
+      ]
     },
     {
       "id": 4946,
@@ -101068,7 +101218,10 @@
         "D": "偵測不到目標"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/medlab_5021_0.webp"
+      ]
     },
     {
       "id": 5022,

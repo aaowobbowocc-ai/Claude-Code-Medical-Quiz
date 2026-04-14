@@ -94,6 +94,7 @@ const CANDIDATE_SUBJECT_CODES = [
   '0501', '0502', '0503', '0504', '0505',
   '0701', '0702', '0703', '0704', '0705', '0706',
   '0801', '0802', '0803', '0804', '0805',
+  '1001', '1002', '1003', '1004', '1005', '1006',
 ]
 async function probeSubjectCodes(exam, code, classCode) {
   const k = `${exam}_${code}`
@@ -312,35 +313,93 @@ async function cropImage(mupdf, page, bbox, outPath) {
 // ─── Exam registry ───
 // Static class codes (no per-year variance): use as primary; fall back to
 // probing alternates only if the static one yields no PDFs.
+//
+// `examName` is the exact 類科 string printed on the official PDF — used to
+// validate that a cached/downloaded PDF actually belongs to this exam. Without
+// this check, scripts blindly trusted the cached `c{NN}` filename and picked
+// up the wrong-exam PDFs from earlier years where the same class code was
+// reused for a different 類科 (e.g. nursing 030-c=101 in 110/111 is actually
+// 中醫師, not 護理師).
 const EXAM_REGISTRY = {
-  doctor1:   { file: 'questions.json',           classCodes: ['301'] },
-  doctor2:   { file: 'questions-doctor2.json',   classCodes: ['302'] },
-  dental1:   { file: 'questions-dental1.json',   classCodes: ['303'] },
-  dental2:   { file: 'questions-dental2.json',   classCodes: ['304'] },
-  pharma1:   { file: 'questions-pharma1.json',   classCodes: ['305'] },
-  pharma2:   { file: 'questions-pharma2.json',   classCodes: ['306'] },
-  nursing:   { file: 'questions-nursing.json',   classCodes: ['101', '102', '104'] },
-  nutrition: { file: 'questions-nutrition.json', classCodes: ['101', '102'] },
-  medlab:    { file: 'questions-medlab.json',    classCodes: ['308'] },
-  pt:        { file: 'questions-pt.json',        classCodes: ['311'] },
-  ot:        { file: 'questions-ot.json',        classCodes: ['312'] },
-  vet:       { file: 'questions-vet.json',       classCodes: ['314'] },
-  tcm1:      { file: 'questions-tcm1.json',      classCodes: ['317'] },
-  tcm2:      { file: 'questions-tcm2.json',      classCodes: ['318'] },
+  doctor1:   { file: 'questions.json',           classCodes: ['301'], examName: '醫師' },
+  doctor2:   { file: 'questions-doctor2.json',   classCodes: ['302'], examName: '醫師' },
+  dental1:   { file: 'questions-dental1.json',   classCodes: ['303'], examName: '牙醫師' },
+  dental2:   { file: 'questions-dental2.json',   classCodes: ['304'], examName: '牙醫師' },
+  pharma1:   { file: 'questions-pharma1.json',   classCodes: ['305'], examName: '藥師' },
+  pharma2:   { file: 'questions-pharma2.json',   classCodes: ['306'], examName: '藥師' },
+  nursing:   { file: 'questions-nursing.json',   classCodes: ['101', '102', '104'], examName: '護理師' },
+  nutrition: { file: 'questions-nutrition.json', classCodes: ['101', '102'],        examName: '營養師' },
+  medlab:    { file: 'questions-medlab.json',    classCodes: ['308'], examName: '醫事檢驗師' },
+  pt:        { file: 'questions-pt.json',        classCodes: ['311'], examName: '物理治療師' },
+  ot:        { file: 'questions-ot.json',        classCodes: ['312'], examName: '職能治療師' },
+  vet:       { file: 'questions-vet.json',       classCodes: ['314'], examName: '獸醫師' },
+  tcm1:      { file: 'questions-tcm1.json',      classCodes: ['317'], examName: '中醫師' },
+  tcm2:      { file: 'questions-tcm2.json',      classCodes: ['318'], examName: '中醫師' },
 }
 
-// Pick the working classCode for (exam, exam_code) by checking for cached PDFs
-// (filename pattern includes c{NN}) or probing fresh.
+// Read the 類科 line from the first page of a PDF buffer. Returns null on
+// failure. The official 考選部 試題 PDF always prints
+// 「類科：護理師」 (or similar) near the top of page 1, so checking against
+// EXAM_REGISTRY[exam].examName proves the file actually belongs to that exam
+// and not a same-class-code from a different year.
+async function pdfExamName(buf) {
+  try {
+    const mupdf = await import('mupdf')
+    const doc = mupdf.Document.openDocument(new Uint8Array(buf), 'application/pdf')
+    const parsed = JSON.parse(doc.loadPage(0).toStructuredText('preserve-images').asJSON())
+    let txt = ''
+    for (const b of parsed.blocks || []) {
+      if (b.type !== 'text') continue
+      for (const ln of (b.lines || [])) txt += (ln.text || '') + '\n'
+    }
+    // Match across line breaks. Two layouts exist on moex:
+    //   old: "類　科：護理師"        → strips to 類科：護理師
+    //   new: "類科名稱：中醫師(一)"   → strips to 類科名稱：中醫師(一)
+    // Accept an optional 名稱 between 類科 and the colon, and allow CJK
+    // brackets / arabic digits in the captured name (covers 中醫師(一) etc).
+    const compact = txt.replace(/\s+/g, '')
+    const m = compact.match(/類科(?:名稱)?[：:]([\u4e00-\u9fff()（）]{2,12})/)
+    return m ? m[1] : null
+  } catch { return null }
+}
+
+async function pdfMatchesExam(buf, examName) {
+  if (!buf || !examName) return false
+  const found = await pdfExamName(buf)
+  if (!found) return false
+  // Loose match: PDF 類科 must contain or equal the registry name (e.g. some
+  // PDFs print "醫師" while others print "醫師(臨床)").
+  return found.includes(examName) || examName.includes(found)
+}
+
+// Pick the working classCode for (exam, exam_code). For each candidate we:
+//   1. Look at any cached PDF with that c-code
+//   2. Verify its 類科 line actually matches this exam (otherwise the cache
+//      is stale data from another exam that reused the code)
+//   3. If no cached file passes, probe-download one subject code and verify
 async function pickClassCode(examTag, code, candidates) {
+  const expectedName = EXAM_REGISTRY[examTag]?.examName
   for (const c of candidates) {
-    const cached = fs.readdirSync(PDF_CACHE)
-      .find(f => f.startsWith(`${examTag}_${code}_c${c}_`) && fs.statSync(path.join(PDF_CACHE, f)).size > 100000)
-    if (cached) return c
-    // Probe one subject code to test
-    for (const probeS of ['0101', '0201', '0301', '11', '0501', '0701']) {
+    // Try every cached file with this class code (both naming conventions:
+    // {exam}_{code}_c{c}_s{s}.pdf and {exam}_Q_{code}_c{c}_s{s}.pdf)
+    const cachedFiles = fs.readdirSync(PDF_CACHE).filter(f =>
+      (f.startsWith(`${examTag}_${code}_c${c}_`) || f.startsWith(`${examTag}_Q_${code}_c${c}_`))
+      && f.endsWith('.pdf')
+      && fs.statSync(path.join(PDF_CACHE, f)).size > 100000
+    )
+    let validatedFromCache = false
+    for (const f of cachedFiles) {
+      const buf = fs.readFileSync(path.join(PDF_CACHE, f))
+      if (await pdfMatchesExam(buf, expectedName)) { validatedFromCache = true; break }
+    }
+    if (validatedFromCache) return c
+    // No cached file matched → probe-download a few common subject codes and
+    // verify against expected exam name. Only return this c if at least one
+    // probe actually contains the right exam.
+    for (const probeS of ['0101', '0201', '0301', '11', '0501', '0701', '1001']) {
       try {
         const buf = await cachedPdf(examTag, code, c, probeS)
-        if (buf && buf.length > 100000) return c
+        if (buf && buf.length > 100000 && await pdfMatchesExam(buf, expectedName)) return c
       } catch {}
     }
   }
@@ -356,12 +415,20 @@ async function processExamCode(examTag, code, opts) {
 
   // Candidate questions: same exam_code, no images, and either:
   //   (default)        strict 圖 reference in stem/options, OR
-  //   (blank-options)  any option is empty (likely image-based answer choices)
+  //   (blank-options)  any option is empty (likely image-based answer choices), OR
+  //   (auto)           any question without images — relies on text-match + actual
+  //                    PDF image presence to gate attachment (no false positives
+  //                    because pdfImgs.length must be ≥ 1)
   const isBlank = q => ['A','B','C','D'].some(k => !q.options?.[k] || !q.options[k].trim())
-  const filter = opts.mode === 'blank-options'
-    ? (q => q.exam_code === code && (!q.images || !q.images.length) && isBlank(q))
-    : (q => q.exam_code === code && (!q.images || !q.images.length) &&
-            STRICT.test((q.question || '') + ' ' + Object.values(q.options || {}).join(' ')))
+  let filter
+  if (opts.mode === 'blank-options') {
+    filter = q => q.exam_code === code && (!q.images || !q.images.length) && isBlank(q)
+  } else if (opts.mode === 'auto') {
+    filter = q => q.exam_code === code && (!q.images || !q.images.length)
+  } else {
+    filter = q => q.exam_code === code && (!q.images || !q.images.length) &&
+            STRICT.test((q.question || '') + ' ' + Object.values(q.options || {}).join(' '))
+  }
   const candidates = qs.filter(filter)
   if (!candidates.length) return { added: 0, skipped: 0 }
 
@@ -473,6 +540,8 @@ async function main() {
       if (q.images && q.images.length) continue
       if (mode === 'blank-options') {
         if (isBlank(q)) codes.add(q.exam_code)
+      } else if (mode === 'auto') {
+        codes.add(q.exam_code)
       } else {
         const txt = (q.question || '') + ' ' + Object.values(q.options || {}).join(' ')
         if (STRICT.test(txt)) codes.add(q.exam_code)

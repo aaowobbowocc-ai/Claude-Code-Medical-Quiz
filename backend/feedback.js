@@ -29,14 +29,20 @@ async function sendDiscord(entry) {
 async function sendReportDiscord(entry) {
   if (!DISCORD_REPORT_WEBHOOK) return;
   try {
-    const yearInfo = entry.rocYear
-      ? `${entry.rocYear}年${entry.session || ''} 第${entry.number || '?'}題`
-      : '';
+    // 「定位字串」— 讓我能直接從 Discord 訊息找到題目的單行格式。
+    // 例：「醫師一階 110年第一次 醫學(一) 第15題」
+    const locator = [
+      entry.examName || '',
+      entry.rocYear ? `${entry.rocYear}年${entry.session || ''}` : '',
+      entry.subject || '',
+      entry.number ? `第${entry.number}題` : '',
+    ].filter(Boolean).join(' ') || '未知';
+
     const fields = [
       { name: '來自', value: entry.name || '匿名', inline: true },
-      { name: '題目 ID', value: entry.questionId || '未知', inline: true },
-      { name: '年份/題號', value: yearInfo || '未知', inline: true },
       { name: '時間', value: new Date().toISOString().slice(0, 19).replace('T', ' '), inline: true },
+      { name: '定位', value: locator },
+      { name: '題目 ID', value: entry.questionId || '未知', inline: true },
     ];
     if (entry.questionText) {
       fields.push({ name: '題目內容', value: entry.questionText.slice(0, 200) });
@@ -60,7 +66,22 @@ async function sendReportDiscord(entry) {
   }
 }
 
-function registerRoutes(app) {
+// Look up a question by id across all loaded exams. Returns
+// { examId, examName, question } or null. Question id is unique within an
+// exam file but not globally — we scan every exam.
+function locateQuestion(examData, examConfigs, questionId) {
+  if (!examData || !questionId) return null;
+  for (const [examId, data] of Object.entries(examData)) {
+    const q = data.questions?.find(x => String(x.id) === String(questionId));
+    if (q) {
+      const examName = examConfigs?.[examId]?.name || examId;
+      return { examId, examName, question: q };
+    }
+  }
+  return null;
+}
+
+function registerRoutes(app, examData, examConfigs) {
   // POST /feedback — user submits feedback
   app.post('/feedback', async (req, res) => {
     const { message, name } = req.body;
@@ -88,12 +109,20 @@ function registerRoutes(app) {
       return res.status(400).json({ error: 'questionId is required' });
     }
 
+    // Server-side enrichment: trust the question DB, not the client. The
+    // client only knows what's currently rendered; here we look up the real
+    // exam/paper/year/number so the Discord report always has a precise
+    // locator like 「醫師一階 110年第一次 醫學(一) 第15題」.
+    const found = locateQuestion(examData, examConfigs, questionId);
+    const q = found?.question;
     const entry = {
       questionId,
-      questionText: (questionText || '').slice(0, 300),
-      rocYear: rocYear || '',
-      session: session || '',
-      number: number || '',
+      questionText: (questionText || q?.question || '').slice(0, 300),
+      examName: found?.examName || '',
+      subject: q?.subject_name || q?.subject || '',
+      rocYear: q?.roc_year || rocYear || '',
+      session: q?.session || session || '',
+      number: q?.number || number || '',
       message: (message || '').slice(0, 500),
       name: (name || '').slice(0, 30),
     };

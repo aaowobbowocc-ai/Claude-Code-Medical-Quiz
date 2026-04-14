@@ -71,6 +71,7 @@ export const usePlayerStore = create(
       exp: 0,
       unlockedStages: [0, 1], // 0 = random, 1 = anatomy
       darkMode: false,
+      soundMuted: false,
       exam: 'doctor1',
       hydrated: false, // true after cloud sync attempted (or skipped if no supabase)
       lastHydratedUserId: null,
@@ -139,6 +140,7 @@ export const usePlayerStore = create(
         if (meta) meta.content = next ? '#1a1714' : '#1A6B9A'
         return { darkMode: next }
       }),
+      toggleSoundMuted: () => set((s) => ({ soundMuted: !s.soundMuted })),
       lastDailyBonus: '',
       loginStreak: 0,
       claimDailyBonus: () => {

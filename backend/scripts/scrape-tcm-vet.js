@@ -18,65 +18,82 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
 
 // ─── Exam definitions ───
-// session code → 第一次/第二次 label
-//   020/030/070 series are typically 第一次
-//   080/090/100 series are typically 第二次
+// 114+ uses 4-digit s codes (s=0201, 1001 etc); 112-113 used 2-digit (s=11, 22).
+// classCode is also per-session: 114+ uses 317/318/314 directly, while 110-111
+// (中醫) used the older 101/102 codes alongside a different question-text layout.
+// Each session here carries its own (classCode, subjects) override.
+
+const VET_SUBJECTS_OLD = [
+  { s: '11', name: '獸醫病理學',     tag: 'vet_pathology' },
+  { s: '22', name: '獸醫藥理學',     tag: 'vet_pharmacology' },
+  { s: '33', name: '獸醫實驗診斷學', tag: 'vet_lab_diagnosis' },
+  { s: '44', name: '獸醫普通疾病學', tag: 'vet_common_disease' },
+  { s: '55', name: '獸醫傳染病學',   tag: 'vet_infectious' },
+  { s: '66', name: '獸醫公共衛生學', tag: 'vet_public_health' },
+]
+const VET_SUBJECTS_NEW = [
+  { s: '1001', name: '獸醫病理學',     tag: 'vet_pathology' },
+  { s: '1002', name: '獸醫藥理學',     tag: 'vet_pharmacology' },
+  { s: '1003', name: '獸醫實驗診斷學', tag: 'vet_lab_diagnosis' },
+  { s: '1004', name: '獸醫普通疾病學', tag: 'vet_common_disease' },
+  { s: '1005', name: '獸醫傳染病學',   tag: 'vet_infectious' },
+  { s: '1006', name: '獸醫公共衛生學', tag: 'vet_public_health' },
+]
+
+const TCM1_SUBJECTS_OLD = [
+  { s: '11', name: '中醫基礎醫學(一)', tag: 'tcm_basic_1' },
+  { s: '22', name: '中醫基礎醫學(二)', tag: 'tcm_basic_2' },
+]
+const TCM1_SUBJECTS_NEW = [
+  { s: '0201', name: '中醫基礎醫學(一)', tag: 'tcm_basic_1' },
+  { s: '0202', name: '中醫基礎醫學(二)', tag: 'tcm_basic_2' },
+]
+
+const TCM2_SUBJECTS_OLD = [
+  { s: '11', name: '中醫臨床醫學(一)', tag: 'tcm_clinical_1' },
+  { s: '22', name: '中醫臨床醫學(二)', tag: 'tcm_clinical_2' },
+  { s: '33', name: '中醫臨床醫學(三)', tag: 'tcm_clinical_3' },
+  { s: '44', name: '中醫臨床醫學(四)', tag: 'tcm_clinical_4' },
+]
+const TCM2_SUBJECTS_NEW = [
+  { s: '0201', name: '中醫臨床醫學(一)', tag: 'tcm_clinical_1' },
+  { s: '0202', name: '中醫臨床醫學(二)', tag: 'tcm_clinical_2' },
+  { s: '0203', name: '中醫臨床醫學(三)', tag: 'tcm_clinical_3' },
+  { s: '0204', name: '中醫臨床醫學(四)', tag: 'tcm_clinical_4' },
+]
+
 const EXAMS = {
   vet: {
     label: '獸醫師',
-    classCode: '314',
     file: 'questions-vet.json',
-    subjects: [
-      { s: '11', name: '獸醫病理學',     tag: 'vet_pathology' },
-      { s: '22', name: '獸醫藥理學',     tag: 'vet_pharmacology' },
-      { s: '33', name: '獸醫實驗診斷學', tag: 'vet_lab_diagnosis' },
-      { s: '44', name: '獸醫普通疾病學', tag: 'vet_common_disease' },
-      { s: '55', name: '獸醫傳染病學',   tag: 'vet_infectious' },
-      { s: '66', name: '獸醫公共衛生學', tag: 'vet_public_health' },
-    ],
     sessions: [
-      { year: '110', code: '110100', label: '第二次' },
-      { year: '111', code: '111100', label: '第二次' },
-      { year: '112', code: '112100', label: '第二次' },
-      { year: '113', code: '113090', label: '第二次' },
+      { year: '110', code: '110100', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_OLD },
+      { year: '111', code: '111100', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_OLD },
+      { year: '112', code: '112100', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_OLD },
+      { year: '113', code: '113090', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_OLD },
+      { year: '114', code: '114090', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_NEW },
     ],
   },
   tcm1: {
     label: '中醫師(一)',
-    classCode: '317',
     file: 'questions-tcm1.json',
-    subjects: [
-      { s: '11', name: '中醫基礎醫學(一)', tag: 'tcm_basic_1',
-        description: '醫學史、基礎理論、內經、難經' },
-      { s: '22', name: '中醫基礎醫學(二)', tag: 'tcm_basic_2',
-        description: '方劑學、藥物學' },
-    ],
     sessions: [
-      { year: '112', code: '112020', label: '第一次' },
-      { year: '112', code: '112100', label: '第二次' },
-      { year: '113', code: '113020', label: '第一次' },
-      { year: '113', code: '113090', label: '第二次' },
+      { year: '112', code: '112020', label: '第一次', classCode: '317', subjects: TCM1_SUBJECTS_OLD },
+      { year: '112', code: '112100', label: '第二次', classCode: '317', subjects: TCM1_SUBJECTS_OLD },
+      { year: '113', code: '113020', label: '第一次', classCode: '317', subjects: TCM1_SUBJECTS_OLD },
+      { year: '113', code: '113090', label: '第二次', classCode: '317', subjects: TCM1_SUBJECTS_OLD },
+      { year: '114', code: '114090', label: '第二次', classCode: '317', subjects: TCM1_SUBJECTS_NEW },
     ],
   },
   tcm2: {
     label: '中醫師(二)',
-    classCode: '318',
     file: 'questions-tcm2.json',
-    subjects: [
-      { s: '11', name: '中醫臨床醫學(一)', tag: 'tcm_clinical_1',
-        description: '傷寒論、溫病學、金匱要略、中醫證治' },
-      { s: '22', name: '中醫臨床醫學(二)', tag: 'tcm_clinical_2',
-        description: '內科、婦科、兒科' },
-      { s: '33', name: '中醫臨床醫學(三)', tag: 'tcm_clinical_3',
-        description: '外科、傷科、五官科' },
-      { s: '44', name: '中醫臨床醫學(四)', tag: 'tcm_clinical_4',
-        description: '針灸科學' },
-    ],
     sessions: [
-      { year: '112', code: '112020', label: '第一次' },
-      { year: '112', code: '112080', label: '第二次' },
-      { year: '113', code: '113020', label: '第一次' },
-      { year: '113', code: '113070', label: '第二次' },
+      { year: '112', code: '112020', label: '第一次', classCode: '318', subjects: TCM2_SUBJECTS_OLD },
+      { year: '112', code: '112080', label: '第二次', classCode: '318', subjects: TCM2_SUBJECTS_OLD },
+      { year: '113', code: '113020', label: '第一次', classCode: '318', subjects: TCM2_SUBJECTS_OLD },
+      { year: '113', code: '113070', label: '第二次', classCode: '318', subjects: TCM2_SUBJECTS_OLD },
+      { year: '114', code: '114070', label: '第二次', classCode: '318', subjects: TCM2_SUBJECTS_NEW },
     ],
   },
 }
@@ -214,12 +231,12 @@ async function scrapeExam(key, dryRun) {
   let nextId = 1
 
   for (const sess of def.sessions) {
-    console.log(`\n--- ${sess.year}年${sess.label} (${sess.code}) ---`)
+    console.log(`\n--- ${sess.year}年${sess.label} (${sess.code}, c=${sess.classCode}) ---`)
 
-    for (const sub of def.subjects) {
-      const qUrl = `${BASE}?t=Q&code=${sess.code}&c=${def.classCode}&s=${sub.s}&q=1`
-      const aUrl = `${BASE}?t=S&code=${sess.code}&c=${def.classCode}&s=${sub.s}&q=1`
-      const mUrl = `${BASE}?t=M&code=${sess.code}&c=${def.classCode}&s=${sub.s}&q=1`
+    for (const sub of sess.subjects) {
+      const qUrl = `${BASE}?t=Q&code=${sess.code}&c=${sess.classCode}&s=${sub.s}&q=1`
+      const aUrl = `${BASE}?t=S&code=${sess.code}&c=${sess.classCode}&s=${sub.s}&q=1`
+      const mUrl = `${BASE}?t=M&code=${sess.code}&c=${sess.classCode}&s=${sub.s}&q=1`
 
       if (dryRun) {
         console.log(`  Q ${qUrl}`)

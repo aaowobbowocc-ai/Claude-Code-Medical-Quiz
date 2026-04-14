@@ -2,11 +2,11 @@
   "metadata": {
     "exam": "tcm2",
     "label": "中醫師(二)",
-    "scraped_at": "2026-04-13T14:33:26.455Z",
+    "scraped_at": "2026-04-14T11:34:53.579Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-04-14T07:02:59.451Z"
+    "last_updated": "2026-04-14T11:37:12.087Z"
   },
-  "total": 1280,
+  "total": 1600,
   "questions": [
     {
       "id": 1,
@@ -25657,6 +25657,6424 @@
         "B": "2",
         "C": "3",
         "D": "4"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1281,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 1,
+      "question": "依《傷寒論》條文，關於「不可發汗」者，下列敘述何者錯誤？",
+      "options": {
+        "A": "脈浮緊、身疼痛、尺中遲者，不可發汗",
+        "B": "亡血家，不可發汗，汗出則痙",
+        "C": "淋家，不可發汗，發汗必便血",
+        "D": "衄家，不可發汗，汗出必額上陷，脈急緊，直視不能眴，不得眠"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1282,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 2,
+      "question": "有關桂枝湯的適應症，下列何者最不適宜？",
+      "options": {
+        "A": "太陽病，外證未解，脈浮弱者",
+        "B": "太陽病，其人脈浮緊，發熱汗不出者",
+        "C": "太陽病，傷寒發汗已解，半日許復煩，脈浮數者",
+        "D": "太陽病，下之後，其氣上衝者"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1283,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 3,
+      "question": "依《醫宗金鑑．訂正仲景全書傷寒論注》：「下之後，復發汗，晝日煩躁不得眠，夜而安靜，不嘔 不渴，無表證，脈沉微，身無大熱者」，應用何方治之？",
+      "options": {
+        "A": "茯苓、豬苓、澤瀉、白术、桂枝",
+        "B": "乾薑、附子",
+        "C": "茯苓、豬苓、澤瀉、阿膠、滑石",
+        "D": "黃連、阿膠、雞子黃"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1284,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 4,
+      "question": "依《醫宗金鑑．訂正仲景全書傷寒論注》所述，大病瘥後勞復者的治療，下列何者錯誤？",
+      "options": {
+        "A": "傷寒瘥以後，更發熱，脈沉實者，以汗解之",
+        "B": "大病瘥後，喜唾，久不了了，胸上有寒，當以丸藥溫之",
+        "C": "大病瘥後，從腰以下有水氣者，牡蠣澤瀉散主之",
+        "D": "傷寒解後，虛羸少氣，氣逆欲吐，竹葉石膏湯主之"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1285,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 5,
+      "question": "依《傷寒論》所述：「傷寒六七日，結胸熱實，脈沉而緊，心下痛，按之石硬者」，治以下列何方 最適當？",
+      "options": {
+        "A": "大陷胸丸",
+        "B": "大柴胡湯",
+        "C": "小陷胸湯",
+        "D": "大陷胸湯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1286,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 6,
+      "question": "依《傷寒論》，有關「心陽虛欲作奔豚」的證候，治以下列何方最適當？",
+      "options": {
+        "A": "桂枝加桂湯",
+        "B": "真武湯",
+        "C": "茯苓桂枝甘草大棗湯",
+        "D": "桂枝甘草龍骨牡蠣湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1287,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 7,
+      "question": "依《醫宗金鑑．訂正仲景全書傷寒論注》，傷寒汗出，解之後，胃中不和，心下痞硬，乾噫食臭， 脅下有水氣，腹中雷鳴下痢者，下列何方治療最適當？",
+      "options": {
+        "A": "半夏瀉心湯",
+        "B": "生薑瀉心湯",
+        "C": "葛根黃芩黃連湯",
+        "D": "旋覆代赭石湯"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1288,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 8,
+      "question": "依《醫宗金鑑．訂正仲景全書傷寒論注》，發熱，頭痛 ，身疼，惡寒， 吐痢者，屬下列何病證？",
+      "options": {
+        "A": "恊熱痢",
+        "B": "剛痙",
+        "C": "蚘厥",
+        "D": "霍亂"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1289,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 9,
+      "question": "依《傷寒論》所述，陽明病，下之，心中懊憹而煩，胃中有燥屎者，可攻。腹微滿，下列那一個症 狀，則不可攻之？",
+      "options": {
+        "A": "喘",
+        "B": "臍周腹痛",
+        "C": "轉矢氣",
+        "D": "排便前面硬，後面軟稀"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1290,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 10,
+      "question": "依《醫宗金鑑．訂正仲景全書傷寒論注》：傷寒四五日，身熱，惡風，頸項強，脅下滿，手足溫而 渴者，小柴胡湯主之。下列何者最不適宜？",
+      "options": {
+        "A": "傷寒四五日，身熱，惡風，頸項強屬太陽表證",
+        "B": "脅下滿，屬少陽半表半裏之證",
+        "C": "手足溫而渴，知其邪已入陰",
+        "D": "本條文三陽證見，治從少陽，以和解為主"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1291,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 11,
+      "question": "有關柴胡加芒硝湯與大柴胡湯之敘述，下列何者錯誤？",
+      "options": {
+        "A": "柴胡加芒硝湯為和解少陽瀉下裏實雙解之劑",
+        "B": "大柴胡湯為和解少陽瀉下裏實之劑",
+        "C": "大柴胡湯中加枳實、大黃利氣消痞，通下熱結",
+        "D": "柴胡加芒硝湯中之枳實、大黃蕩滌破滯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1292,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 12,
+      "question": "依《傷寒論》所述：「傷寒，瘀熱在裏，身必黃」，治以下列何方最適當？",
+      "options": {
+        "A": "茵陳蒿湯",
+        "B": "梔子柏皮湯",
+        "C": "茵陳五苓散",
+        "D": "麻黃連翹赤小豆湯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1293,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 13,
+      "question": "依《醫宗金鑑．訂正仲景全書傷寒論注》：病者手足厥冷，言我不結胸，小腹滿，按之痛者，其主 要原因為何？",
+      "options": {
+        "A": "胃中寒冷故也",
+        "B": "有陰無陽故也",
+        "C": "有燥屎也，宜小承氣湯",
+        "D": "此冷結在膀胱關元也"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1294,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 14,
+      "question": "依《醫宗金鑑．訂正仲景全書傷寒論注》所述，關於厥陰病下痢的治療，下列何者錯誤？",
+      "options": {
+        "A": "熱痢下重者，白頭翁湯主之",
+        "B": "下痢清穀，裏寒外熱，汗出而厥者，通脈四逆湯主之",
+        "C": "下痢腹脹滿，身體疼痛者，先攻其表，桂枝湯主之",
+        "D": "下痢譫語者，有燥屎也，宜小承氣湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1295,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 15,
+      "question": "依《傷寒論》所述，桂枝加芍藥湯之「腹滿時痛」病因病機，下列敘述何者最適當？",
+      "options": {
+        "A": "邪陷陽明，腑氣不通",
+        "B": "誤下傷脾，脾氣滯而不運，脾傷氣滯絡瘀",
+        "C": "誤下邪陷，寒痰結於胸膈，而累及腹部",
+        "D": "脾虛濕阻，氣機不暢，陽氣時通時閉"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1296,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 16,
+      "question": "依《醫宗金鑑．訂正仲景全書傷寒論注》，厥陰病，飢而不欲食，其原因為下列何者？",
+      "options": {
+        "A": "因食則動而吐蚘",
+        "B": "因熱也",
+        "C": "因飲也",
+        "D": "因水與熱也"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1297,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 17,
+      "question": "依《金匱要略．痙濕暍病脈證治第二》，風濕病者一身盡疼，發熱，日晡所劇者，乃傷於汗出當風 或久傷取冷所致，治以下列何方最適宜？",
+      "options": {
+        "A": "越婢加朮湯",
+        "B": "甘草麻黃湯",
+        "C": "麻黃杏仁薏苡甘草湯",
+        "D": "防己黃耆湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1298,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 18,
+      "question": "依《金匱要略．血痹虛勞病脈證并治第六》，關於虛勞的證治，下列何者最適當？",
+      "options": {
+        "A": "腰痛，少腹拘急，小便不利，八味腎氣丸主之",
+        "B": "裏急，腹中痛，夢失精，大建中湯主之",
+        "C": "少腹弦急，失精，陰頭寒，柴胡加龍骨牡蠣湯主之",
+        "D": "男子失精，女子夢交，酸棗仁湯主之"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1299,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 19,
+      "question": "關於胸痹與心痛之主治用藥，下列敘述何者錯誤？",
+      "options": {
+        "A": "胸痹不得臥，心痛徹背者，栝蔞薤白半夏湯主之",
+        "B": "胸痹，胸中氣塞，短氣，茯苓桂枝白朮甘草湯主之",
+        "C": "胸痹緩急者，薏苡附子散主之",
+        "D": "心中痞，諸逆心懸痛，桂枝生薑枳實湯主之"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1300,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 20,
+      "question": "依《 金匱要略 》所述：「太陽中暍，身熱疼重，而脈微弱，一物瓜蒂湯主之。」，下列何者是太陽 中暍的主要病因？",
+      "options": {
+        "A": "汗出當風或久傷取冷",
+        "B": "夏月傷冷水，水行皮中",
+        "C": "汗出入水中，如水傷心",
+        "D": "飲酒汗出當風"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1301,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 21,
+      "question": "依《金匱要略．臟腑經絡先後病脈證第一》所述：「夫肝之病，補用酸，助用焦苦，益用甘味之藥 調之。」的治療原則，若證見「腎之病」，下列治法何者最適當？",
+      "options": {
+        "A": "補用辛",
+        "B": "助用酸",
+        "C": "益用鹹",
+        "D": "調用苦"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1302,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 22,
+      "question": "《金匱要略．中風歷節病脈證并治第五》下列何者不是「桂枝芍藥知母湯」之組成藥物？",
+      "options": {
+        "A": "芍藥、防風",
+        "B": "附子、甘草",
+        "C": "苡仁、桂枝",
+        "D": "麻黃、桂枝"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1303,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 23,
+      "question": "依《醫宗金鑑．訂正仲景全書金匱要略注》：下血，先便後血，此遠血也，下列何方主之？",
+      "options": {
+        "A": "大黃、黃連、黃芩",
+        "B": "柏葉、乾薑、艾",
+        "C": "赤小豆、當歸",
+        "D": "甘草、乾地黃、白朮、附子、阿膠、黃芩、灶中黃土"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1304,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 24,
+      "question": "依《醫宗金鑑．訂正仲景全書金匱要略注》條文，下列敘述何者錯誤？",
+      "options": {
+        "A": "支飲，喘不能臥、短氣不得息，葶藶大棗湯主之",
+        "B": "心下有痰飲，胸脅支滿，目眩，澤瀉湯主之",
+        "C": "懸飲內痛，脈沉而弦，十棗湯主之",
+        "D": "腹滿口舌乾燥，此腸間有水氣，己椒藶黃圓主之"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1305,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 25,
+      "question": "6歲男孩，全身浮腫多日，先自足胕部開始浮腫，四肢水氣聶聶動，色明亮，皮光薄，按之凹陷， 小便短氣喘，脈浮弱。治以下列何方最適宜？",
+      "options": {
+        "A": "越婢加朮湯",
+        "B": "越婢湯",
+        "C": "防己茯苓湯",
+        "D": "實脾飲"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1306,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 26,
+      "question": "依《金匱要略．水氣病脈證》症見身腫而冷，狀如周痹，胸中窒，不能食，反聚痛，暮躁不得眠， 痛在骨節，其診斷為何疾病？",
+      "options": {
+        "A": "風水",
+        "B": "不寐",
+        "C": "黃汗",
+        "D": "胸痹"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1307,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 27,
+      "question": "依《金匱要略》所述，患者症見心下痞滿，嘈雜吞酸，乾嘔，吐涎沫，頭痛，肢冷，舌淡紅，苔白 膩，脈弦，治以下列何方最適宜？",
+      "options": {
+        "A": "半夏瀉心湯",
+        "B": "橘皮竹茹湯",
+        "C": "大黃甘草湯",
+        "D": "吳茱萸湯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1308,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 28,
+      "question": "依《金匱要略．嘔吐噦下痢》所述：「嘔而發熱者」，治以下列何方最適當？",
+      "options": {
+        "A": "茱萸湯",
+        "B": "半夏瀉心湯",
+        "C": "小柴胡湯",
+        "D": "當歸四逆湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1309,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 29,
+      "question": "紫舌大多由絳舌發展而來，主要與靜脈鬱血、缺氧等因素有關，下列敘述何者較不適宜？",
+      "options": {
+        "A": "焦紫起刺，為血分熱毒極盛",
+        "B": "紫晦而乾，為肝腎陰竭",
+        "C": "紫而青滑，為陰邪化熱",
+        "D": "紫而胖大，為素喜飲酒"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1310,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 30,
+      "question": "常見的溫病斑疹的治療中，發現很多傳染病也具有皮疹的臨床特徵，但分布部位與治療方式均有所 不同，在常規的觀察及治則，下列敘述何者不適宜？",
+      "options": {
+        "A": "斑宜透發，勿用補氣",
+        "B": "斑疹並見，以化斑為主",
+        "C": "斑疹傷寒面部通常無疹",
+        "D": "斑疹初透，不可早用涼瀉"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1311,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 31,
+      "question": "依據溫病病機變化的不同，所對應之治法亦不相同，關於此點，葉天士於《溫熱論》中提出「入血 就恐耗血動血，直須涼血散血」之治法。下列那些是葉天士於文中所提出用於此法的藥物？",
+      "options": {
+        "A": "犀角、羚羊角",
+        "B": "生地、丹皮",
+        "C": "銀花、連翹",
+        "D": "竹葉、石膏"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1312,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 32,
+      "question": "藿朴夏苓湯的適應證，下列敘述何者正確？",
+      "options": {
+        "A": "適用於濕溫初起，濕邪偏重，身熱不揚，頭脹如裹，脘痞腹脹，口渴不欲飲，嘔惡，便溏，溲短， 苔膩，脈緩",
+        "B": "適用於夏月受暑為寒濕所遏，肌表鬱閉，症見頭痛，惡寒，身形拘急，發熱無汗，口渴心煩",
+        "C": "適用於發熱、口微渴、咳嗽微惡風寒、無汗或汗泄不暢，脈浮數，苔薄白，舌邊尖紅等邪在肺衛的 表證",
+        "D": "適用於秋感燥熱邪氣，頭痛身熱，咳嗽不已，咽乾喉痛，鼻乾唇燥，苔白、舌紅欠潤"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1313,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 33,
+      "question": "溫病的命名，下列何者是根據季節與主氣結合而命名？",
+      "options": {
+        "A": "風溫",
+        "B": "秋燥",
+        "C": "濕溫",
+        "D": "暑溫"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1314,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 34,
+      "question": "王小姐過年感冒不癒多日後出現身熱、咳嗽、胸悶、肌膚紅疹，舌紅苔薄黃，脈數，治療以下列何 方藥最為合適？",
+      "options": {
+        "A": "連翹，銀花，桔梗，薄荷，竹葉，甘草，荊芥穗，牛蒡子，細生地，大青葉，牡丹皮，玄參",
+        "B": "黃連，栝蔞，枳實，半夏",
+        "C": "杏仁，連翹，薄荷，桑葉，菊花，苦桔梗，生甘草，葦根",
+        "D": "生石膏，生大黃，杏仁，栝蔞皮"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1315,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 35,
+      "question": "下列何方劑乃取白虎、承氣二方之意而變其制？",
+      "options": {
+        "A": "涼膈散",
+        "B": "增液承氣湯",
+        "C": "宣白承氣湯",
+        "D": "導赤承氣湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1316,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 36,
+      "question": "溫病「三寶」，擅治溫熱病竅閉神昏之證，下列敘述何者最正確？",
+      "options": {
+        "A": "三寶方劑共同藥物組成為犀角（或以水牛角代）、硃砂、牛黃",
+        "B": "安宮牛黃丸長於開竅醒神",
+        "C": "至寶丹長於清心豁痰",
+        "D": "紫雪丹長於止痙熄風"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1317,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 37,
+      "question": "《溫病條辨》增液承氣湯的組成藥物不包含下列何者？",
+      "options": {
+        "A": "玄參",
+        "B": "麥冬",
+        "C": "芒硝",
+        "D": "甘草"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1318,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 38,
+      "question": "「凡病傷寒而成溫者，先夏至日者為病溫，後夏至日者為病暑」出自何處？",
+      "options": {
+        "A": "《傷暑全書》",
+        "B": "《素問‧熱論》",
+        "C": "《醫學正傳》",
+        "D": "《景岳全書》"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1319,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 39,
+      "question": "春溫，氣血兩燔證，見肌膚發斑，以下列何方劑治療最適宜？",
+      "options": {
+        "A": "玉女煎",
+        "B": "化斑湯",
+        "C": "清營湯",
+        "D": "白虎湯"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1320,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 40,
+      "question": "關於吳又可對溫疫的病因病理、臨床表現、傳變趨勢，下列敘述何者錯誤？",
+      "options": {
+        "A": "認為無論老少強弱，一經感觸即可致病",
+        "B": "初起的臨床表現：先凜凜惡寒，甚則四肢厥冷，繼而往來寒熱，有汗或無汗",
+        "C": "膜原處於經絡與胃腑交界之處，故屬半表半裡。邪離膜原，或從表解，或內陷入裡",
+        "D": "邪在膜原，波及到某經就可以出現某經之形證，一般以波及太陽者多"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1321,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 41,
+      "question": "《溫病條辨》之三仁湯於煎煮時，應使用下列那一種水？",
+      "options": {
+        "A": "陰陽水",
+        "B": "甘瀾水",
+        "C": "百沸水",
+        "D": "急流水"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1322,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 42,
+      "question": "依余師愚《疫疹一得》，疫病發斑疹時，以下列何者判斷預後或生死？",
+      "options": {
+        "A": "斑疹之大小",
+        "B": "斑疹之顏色",
+        "C": "斑疹形之鬆浮緊束",
+        "D": "斑疹發出之時間"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1323,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 43,
+      "question": "關於暑濕病邪，伏而為病，下列何者非其特點？",
+      "options": {
+        "A": "暑濕最易阻遏氣機",
+        "B": "發於營分為多",
+        "C": "發於氣分病勢較輕",
+        "D": "發於營分者，暑熱性質較突出"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1324,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 44,
+      "question": "秋燥若症見耳鳴，目赤，齦腫，咽痛，下列敘述何者錯誤？",
+      "options": {
+        "A": "病機為上焦氣分燥熱擾及清竅所致",
+        "B": "治則當以輕清宣透上焦燥熱為主",
+        "C": "處方宜用沙參麥冬湯",
+        "D": "治療宜選用辛涼清火的輕劑"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1325,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 45,
+      "question": "關於張景岳「十問篇」原文內容，不包括下列何者？",
+      "options": {
+        "A": "寒熱",
+        "B": "飲食",
+        "C": "經期",
+        "D": "口渴"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1326,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 46,
+      "question": "中醫在診斷上重視人體的整體性，關於五臟與形體組織器官關係的敘述，下列何者最不適宜？",
+      "options": {
+        "A": "肝主血、主目",
+        "B": "腎主骨、主耳",
+        "C": "脾主肉、主口",
+        "D": "肺主皮毛、主鼻"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1327,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 47,
+      "question": "關於面部望診的五色主病中，青色病證的敘述，下列何者最不適宜？",
+      "options": {
+        "A": "青而黑多寒痛",
+        "B": "青而白主虛風",
+        "C": "青而赤為心火",
+        "D": "青赤而晦為鬱火"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1328,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 48,
+      "question": "關於大便辨寒熱的鑑別診斷，下列何項最適宜？",
+      "options": {
+        "A": "大便的顏色",
+        "B": "大便的味道",
+        "C": "大便的次數",
+        "D": "大便的多寡"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1329,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 49,
+      "question": "舌診中關於「黑舌苔」之敘述，下列何者最適宜？",
+      "options": {
+        "A": "黑舌苔的形成，主要是蕈狀乳頭增殖變黑所造成",
+        "B": "《舌鑒辨正》：「凡舌苔見黑色，......，均屬裏證，無表證也。」",
+        "C": "根據中醫辨證觀點來看黑苔，可分為熱極耗陰型、陰陽俱虛型及腎虧型",
+        "D": "黑舌苔的臨床意義，都因熱邪傳裏化火，致舌苔轉為黑苔"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1330,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 50,
+      "question": "望口中津液的多寡是望診重要的一環，下列關於津液診斷的敘述，何者最不適宜？",
+      "options": {
+        "A": "可評估胃氣的盛衰",
+        "B": "熱深入血分，則舌必乾燥",
+        "C": "多津亦可見於滑苔",
+        "D": "可診斷溫熱病的預後"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1331,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 51,
+      "question": "一位45歲女性，久為頭痛所苦已經20年，疼痛的部位為後頭部，可連及後頸部，頭痛的發作時痛時 止。下列敘述何者最適宜？",
+      "options": {
+        "A": "太陽經頭痛",
+        "B": "陽明經頭痛",
+        "C": "少陽經頭痛",
+        "D": "太陰經頭痛"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1332,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 52,
+      "question": "一患者感覺入夜後則目視物不清，關於此患者的診斷下列何者最不適宜？",
+      "options": {
+        "A": "為雀盲",
+        "B": "為夜盲",
+        "C": "為肝火證",
+        "D": "為肝虛證"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1333,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 53,
+      "question": "關於平脈的敘述，下列何者最不適宜？",
+      "options": {
+        "A": "秋天脈象輕而如毛，脈稍浮，當為平脈",
+        "B": "肥胖的人，脈常沉",
+        "C": "腦力勞動之人，脈多弱於體力勞動者",
+        "D": "脈之有根，其重點在脈象不快不慢，從容和緩"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1334,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 54,
+      "question": "35歲男性，因近1週腹痛就診，切診發現腹部脹滿，左少腹按之累累有硬塊，脈沉實，下列何者最 為適宜？",
+      "options": {
+        "A": "宿糞",
+        "B": "腸癰",
+        "C": "臌脹",
+        "D": "瘧母"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1335,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 55,
+      "question": "關於「血分證」中血分虛熱之敘述，下列何者最不適宜？",
+      "options": {
+        "A": "表現有手足心熱甚於手背",
+        "B": "口乾咽燥、暮熱朝涼、持續低熱",
+        "C": "可見煩熱躁擾、昏狂、譫妄",
+        "D": "神倦，耳聾，或手足蠕動"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1336,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 56,
+      "question": "關於暑濕臨床表現之敘述，下列何者最不適宜？",
+      "options": {
+        "A": "高熱持續不退",
+        "B": "疲乏無力，胸悶、嘔惡",
+        "C": "小便短赤",
+        "D": "大便多溏瀉不爽"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1337,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 57,
+      "question": "臨床上出現譫語，其可能的辨證歸類，下列何者最不適宜？",
+      "options": {
+        "A": "風邪入侵經絡",
+        "B": "痰火擾心證",
+        "C": "營分證候",
+        "D": "陽明病腑證"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1338,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 58,
+      "question": "20歲年輕男性，於夏日出現發熱、口渴、下利，舌紅苔黃，其可能的辨證歸類，下列何者最不適 宜？",
+      "options": {
+        "A": "太陰病證",
+        "B": "氣分證候",
+        "C": "中焦病證",
+        "D": "大腸濕熱證"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1339,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 59,
+      "question": "小陳近來準備考試，感到心情煩亂，頭暈脹痛，口苦咽乾，急躁易怒，舌紅苔黃，脈弦數，下列敘 述何者最適宜？",
+      "options": {
+        "A": "肝藏血不足",
+        "B": "肝陰虛不能上濡頭面",
+        "C": "肝陽不潛藏",
+        "D": "肝經氣血湧盛於絡脈"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1340,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 60,
+      "question": "下列何者與「肝氣鬱結」的因果關係最小？",
+      "options": {
+        "A": "手指震顫",
+        "B": "結喉兩旁腫塊",
+        "C": "月經不調、乳房脹痛",
+        "D": "喉中如有物梗塞，吞之不下，吐之不出"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1341,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 61,
+      "question": "臌脹因臟腑功能失調，終至氣滯、血瘀、水停腹中。其病變與下列何臟腑最不相關？",
+      "options": {
+        "A": "肝",
+        "B": "心",
+        "C": "脾",
+        "D": "腎"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1342,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 62,
+      "question": "下列有關遺精病因病機的敘述，何者最不適當？",
+      "options": {
+        "A": "心腎不交",
+        "B": "濕熱下注",
+        "C": "腎虛精脫",
+        "D": "勞傷心肺"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1343,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 63,
+      "question": "下列病證何者以小便頻急，淋瀝不盡，尿道澀痛，小腹拘急，痛引臍中為主要臨床症狀？",
+      "options": {
+        "A": "尿濁",
+        "B": "遺尿",
+        "C": "癃閉",
+        "D": "淋證"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1344,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 64,
+      "question": "50歲男性，肝硬化多年，近期身目俱黃，黃色鮮明，主訴小便短少黃赤，腹脹便秘，舌苔黃膩，脈 弦數。治以下列何方最適合？",
+      "options": {
+        "A": "大黃、黃芩、黃連",
+        "B": "梔子、茵陳、大黃",
+        "C": "梔子、黃連、黃芩、黃柏",
+        "D": "龍膽草、梔子、黃芩、澤瀉、木通、車前子、當歸、生地、柴胡、甘草"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1345,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 65,
+      "question": "40歲男性，房仲業務員，近日工作壓力大，睡眠品質差且多夢，起床後仍覺疲倦，工作時精神萎 靡，健忘，就診時主訴眩暈，伴隨眼睛乾澀，腰痠，耳鳴，舌淡紅，苔少，脈細。下列證型何者最 適合？",
+      "options": {
+        "A": "腎精不足",
+        "B": "痰濁中阻",
+        "C": "肝陽上亢",
+        "D": "氣血虧虛"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1346,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 66,
+      "question": "22歲男性，平日右脅肋隱隱作痛，每逢考試數日眠不足後症狀加重，口乾咽燥，心中煩熱，頭暈目 眩，舌紅，少苔，脈弦細數。下列敘述何者最不適宜？",
+      "options": {
+        "A": "辨證為肝膽濕熱證",
+        "B": "病機為精血虧損，肝陰不足，脅絡失養",
+        "C": "治則為養陰柔肝",
+        "D": "處方為一貫煎"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1347,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 67,
+      "question": "30歲女性，診斷為二尖瓣膜脫垂，長期短氣自汗，主訴胸悶心悸，口乾，舌紅少苔，脈虛細數。下 列病機何者最適宜？",
+      "options": {
+        "A": "心氣不足，血行不力",
+        "B": "陰虛陽亢，心脈不暢",
+        "C": "陰寒凝滯，心失所養",
+        "D": "氣陰不足，心脈痹阻"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1348,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 68,
+      "question": "60歲男性，西醫診斷為心臟衰竭，主訴心悸數月，動則更甚，胸悶氣短，形寒肢冷，腰膝痠軟，無 下肢水腫，舌淡紅苔薄白，脈虛弱。治以下列何方最適合？",
+      "options": {
+        "A": "茯苓、白朮、白芍、生薑、附子",
+        "B": "桂枝、茯苓、白朮、甘草",
+        "C": "桂枝、甘草、龍骨、牡蠣",
+        "D": "茯苓、甘草、乾薑、細辛、五味子"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1349,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 69,
+      "question": "50歲男性，車禍腦傷多年，服用抗癲癇藥物，記憶力較差，頭暈眼花，主訴癲癇偶發，五心煩熱， 腰痠，大便乾，舌紅少苔，脈細數。治以下列何方最適合？",
+      "options": {
+        "A": "桂枝、甘草、龍骨、牡蠣",
+        "B": "桂枝、甘草、生薑、人參、地黃、阿膠、麥冬、火麻仁、大棗",
+        "C": "人參、黃耆、白朮、茯苓、當歸、酸棗仁、桂圓、遠志、木香、甘草、生薑、大棗",
+        "D": "地黃、白芍、麥冬、阿膠、雞子黃、龜板、牡蠣、鱉甲、火麻仁、五味子、甘草"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1350,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 70,
+      "question": "50歲男性，有糖尿病、高血壓，未規律服用西藥控制。主訴胸痛如針刺感二日，疼痛牽引左臂，唇 黯，舌瘀斑，脈弦澀。治以下列何方最適合？",
+      "options": {
+        "A": "桃仁、紅花、當歸、柴胡、大黃、穿山甲、栝蔞、甘草",
+        "B": "桃仁、紅花、當歸、川芎、羌活、沒藥、五靈脂、香附、牛膝、地龍、秦艽、甘草",
+        "C": "紅花、桃仁、黃耆、當歸、赤芍、地龍、川芎",
+        "D": "桃仁、紅花、當歸、川芎、赤芍、柴胡、枳殼、甘草、生地、桔梗"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1351,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 71,
+      "question": "關於口瘡、口糜之敘述，下列何者最不適當？",
+      "options": {
+        "A": "口瘡為口腔黏膜、唇舌之點狀潰瘍",
+        "B": "口糜多由外感火毒或內傷灼熱所致",
+        "C": "口瘡又稱雪口；口糜又稱口疳",
+        "D": "口瘡可見於現代西醫學的復發性口瘡，白塞氏綜合症等"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1352,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 72,
+      "question": "47歲林先生，體型肥胖，BMI：39，吐酸時作時止已半年，胸脘脹悶，噯氣臭腐，口水多，常吐涎 沫，喜熱飲，四肢不溫，疲倦乏力，大便溏薄，舌淡紅，苔薄白，脈沉遲。治以下列何方最適宜？",
+      "options": {
+        "A": "四逆湯",
+        "B": "柴苓湯",
+        "C": "香砂六君子湯加吳茱萸",
+        "D": "藿香正氣散"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1353,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 73,
+      "question": "34歲李小姐，自去年生產後，腹痛反覆難癒已一年，症見腹中綿綿作痛，痛勢時發時止，喜溫喜 按，飢餓及勞累後腹痛加重，飲食或休息後痛減，大便稀溏，怕冷、易疲倦短氣，舌淡紅苔白，脈 沉細。治以下列何方最適宜？",
+      "options": {
+        "A": "天香正氣散",
+        "B": "柴胡疏肝散",
+        "C": "少腹逐瘀湯",
+        "D": "小建中湯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1354,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 74,
+      "question": "24歲男性，至墾丁衝浪，天熱喝了2瓶冰啤酒後，到下午後自覺身熱，又有一點怕冷，頭昏重脹 痛，胸悶，上腹脹，欲嘔，大便溏，覺得口中黏膩感，口渴但喝不多，苔微黃膩質偏紅，脈濡數。 治以下列何方最適合？",
+      "options": {
+        "A": "龍膽瀉肝湯",
+        "B": "新加香薷飲",
+        "C": "參苓白朮散",
+        "D": "荊防敗毒飲"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1355,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 75,
+      "question": "42歲葉小姐，新冠肺炎染疫後，症見喉癢咽乾，乾咳，鼻塞、頭痛、微寒惡風、身熱，痰黏口乾， 不易咳出，有時痰中帶血絲，舌紅少津苔薄白，脈浮數。治以下列何方最適合？",
+      "options": {
+        "A": "黃芩、山梔、桔梗、甘草、貝母、知母、麥冬、桑白皮、橘紅、栝蔞仁、茯苓",
+        "B": "桔梗、荊芥、紫菀、百部、白前、甘草、陳皮",
+        "C": "桑葉、菊花、連翹、薄荷、桔梗、杏仁、蘆根、甘草",
+        "D": "桑葉、杏仁、貝母、沙參、梨皮、山梔、豆豉"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1356,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 76,
+      "question": "哮證發作時病機為痰阻氣閉，以邪實為主，於臨床治療時應優先考慮下列何者？",
+      "options": {
+        "A": "虛實",
+        "B": "寒熱",
+        "C": "陰陽",
+        "D": "表裏"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1357,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 77,
+      "question": "有關厥證的敘述，下列何者最不適當？",
+      "options": {
+        "A": "多因外邪所致",
+        "B": "可指暴不知人，卒然昏倒",
+        "C": "可指為六經形證之厥",
+        "D": "熱厥可致手足逆冷"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1358,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 78,
+      "question": "有關瘀證的敘述，下列何者最不適當？",
+      "options": {
+        "A": "《景岳全書‧婦人規‧血癥》提及血必由氣，氣行則血行，故凡欲治血，則或攻或補，皆當以調氣 為先",
+        "B": "《醫學衷中參西錄》認為乳香、沒藥二藥並用，為直通臟腑流通經絡之要藥",
+        "C": "張錫純以活絡效靈丹廣泛應用於治療氣血凝滯所導致身體各處的痛證、癥積",
+        "D": "朱丹溪創立氣、血、濕、痰、食、熱六鬱之說，其中以濕、痰之鬱尤為重要"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1359,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 79,
+      "question": "55歲女性，某日大雨未撐傘，長時間淋雨，隔日症見頭痛、頭重如裹，肢體困重，大便溏，舌淡 紅，苔白膩，脈濡。治以下列何方最適合？",
+      "options": {
+        "A": "川芎茶調散",
+        "B": "半夏白朮天麻湯",
+        "C": "人參養榮湯",
+        "D": "羌活勝濕湯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1360,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 0,
+      "number": 80,
+      "question": "下列何種病因病機引起的痙證，於發病前大多有一段時間較劇烈的頭痛，隨著頭痛日益加劇，會突 然出現四肢抽搐，角弓反張，並同時出現複視、失明、肢體癱瘓等症狀？",
+      "options": {
+        "A": "瘡家發汗",
+        "B": "瘀血合痰濁內阻",
+        "C": "氣血虧虛",
+        "D": "感受外邪"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1361,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 1,
+      "question": "陳小姐自訴2個月前感冒，經治療後已無咽痛，但仍咽乾咳喘，咳痰偶帶血絲，胸悶，疲倦，手足心熱，納 可，二便可，診其脈細數，苔少，舌質紅。治以下列何方最適宜？",
+      "options": {
+        "A": "六君子湯",
+        "B": "玉屏風散",
+        "C": "沙參麥冬湯",
+        "D": "清金化痰湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1362,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 2,
+      "question": "18歲女性患者有支氣管哮喘病史，近日喘咳兼見倦怠食少，畏寒肢冷，便軟，小便清長，舌胖苔白，脈沉 細，下列中醫辨證何者最適宜？",
+      "options": {
+        "A": "寒飲伏肺",
+        "B": "脾腎陽虛",
+        "C": "風寒束肺",
+        "D": "肺脾氣虛"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1363,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 3,
+      "question": "58歲男性患者，就醫主訴咳嗽已1週，咳聲嘶啞，喀痰黏稠色黃，舌苔薄黃，脈浮數，下列處方何者最適 宜？",
+      "options": {
+        "A": "止嗽散",
+        "B": "荊防敗毒散",
+        "C": "杏蘇散",
+        "D": "桑菊飲"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1364,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 4,
+      "question": "關於肺痿的敘述，下列何者錯誤？",
+      "options": {
+        "A": "主要症狀是吐痰腥臭膿血",
+        "B": "是肺部慢性虛損疾患",
+        "C": "病機可為熱在上焦，肺燥津傷",
+        "D": "治療以補肺生津為原則"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1365,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 5,
+      "question": "關於氣喘緩解期的證治，下列敘述何者錯誤？",
+      "options": {
+        "A": "咳痰質稀而清，氣短，語音低微，容易外感，氣候變化時容易發作，舌淡苔薄白，脈細弱，可用玉屏風散加 味",
+        "B": "咳痰質稠而白，倦怠食少，大便軟散，食油膩易腹瀉，舌淡苔薄白，脈細軟，可用六君子湯加味",
+        "C": "咳痰質黏而白，嗆咳陣作，咳甚則胸悶脅肋不適，舌淡苔薄白，脈弦，可用桂枝加黃耆湯加味",
+        "D": "咳痰質黏而白，短氣，吸氣不利，腰痠無力，夜尿二三行，舌淡苔薄白，脈沉細，可用金匱腎氣丸加味"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1366,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 6,
+      "question": "治療胸膜腔積水，下列何方攻逐水飲之力最峻？",
+      "options": {
+        "A": "大青龍湯",
+        "B": "小青龍湯",
+        "C": "十棗湯",
+        "D": "葶藶大棗瀉肺湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1367,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 7,
+      "question": "19歲陳先生，自小膽小易驚，睡眠多夢，甚則驚醒，近因課業壓力症狀更加重，偶見心悸，易身倦頭昏，診 其舌淡、苔薄白，脈弦細，治以下列何方最適宜？",
+      "options": {
+        "A": "歸脾湯",
+        "B": "安神定志丸",
+        "C": "溫膽湯",
+        "D": "半夏秫米湯"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1368,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 8,
+      "question": "71歲男性長期抽菸，右心衰竭，腹脹大不舒，入暮尤甚。脘悶納呆，神倦怯寒，下肢浮腫，小便短少，面色 蒼黃，舌淡胖紫，脈沉弦無力。治以下列何方最適合？",
+      "options": {
+        "A": "膈下逐瘀湯",
+        "B": "胃苓湯",
+        "C": "生脈散",
+        "D": "附子理中湯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1369,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 9,
+      "question": "72歲范先生就診時主訴胸痛徹背，受寒加重，形寒肢冷，舌苔白滑，脈沉遲。治以下列何方最適合？",
+      "options": {
+        "A": "栝蔞薤白半夏湯",
+        "B": "栝蔞薤白枳殼湯",
+        "C": "血府逐瘀湯",
+        "D": "栝蔞薤白白酒湯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1370,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 10,
+      "question": "在歷史沿革中有關心悸的敘述，下列何者錯誤？",
+      "options": {
+        "A": "《內經》中並無驚悸、怔忡的病證名稱",
+        "B": "王清任對瘀血導致的心悸，提出了血府逐瘀湯的有效方劑",
+        "C": "朱丹溪提出了心悸由血虛致病的理論，並強調痰的致病作用",
+        "D": "炙甘草湯出自於《金匱要略》"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1371,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 11,
+      "question": "有關胸痹的辨證要點，下列敘述何者錯誤？",
+      "options": {
+        "A": "悶痛是臨床最常見的一種心痛，悶重而痛輕，無定處，兼見脅脹痛，善嘆息者，屬氣滯者多",
+        "B": "心痛部位固定，病情較深、較重；不固定者，病情較淺、較輕",
+        "C": "流汗是真心痛的常見症，若汗出漸少，須防止其發生厥脫之變",
+        "D": "神萎和煩躁是真心痛常見的精神表現，如果神萎和煩躁逐漸加重，應充分注意病情"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1372,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 12,
+      "question": "40歲男性，1日前出現鼻塞頭痛，惡寒發熱，今日因腹痛腸鳴，泄瀉清稀，小便正常，前來就診，舌苔薄 白，脈濡緩，下列敘述何者錯誤？",
+      "options": {
+        "A": "關於泄瀉之辨證，若大便清稀，腹痛喜溫，完穀不化，多屬寒證",
+        "B": "關於泄瀉之辨證，若瀉下腹痛，痛勢急迫拒按，瀉後痛減，多屬實證",
+        "C": "病機為外感寒濕",
+        "D": "治法為淡滲利濕，以《傷寒論》五苓散為主方"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1373,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 13,
+      "question": "70歲男性，大便秘結，小便清長，腰膝痠軟，四肢不溫，舌淡苔白，脈沉遲，治以下列何方最適宜？",
+      "options": {
+        "A": "舟車丸",
+        "B": "濟川煎",
+        "C": "黃龍湯",
+        "D": "黃耆湯"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1374,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 14,
+      "question": "五更泄瀉，下列何者非屬於腎陽虛衰？",
+      "options": {
+        "A": "病程長，久瀉不已，用溫脾或其他藥治療無效者",
+        "B": "黎明之前即大便，便酸腐臭或夾有糞塊",
+        "C": "腰膝痠軟，四肢不溫，或少腹冷痛",
+        "D": "舌質淡，脈沉細而弱"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1375,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 15,
+      "question": "53歲游先生，自述近日大便顏色跟之前不一樣，下列敘述何者錯誤？",
+      "options": {
+        "A": "若大便色如瓷白，兼身目發黃者，可能為肝膽濕熱阻滯",
+        "B": "若大便色黑如柏油樣，可能為肛門近端出血",
+        "C": "若大便溏垢，內有不消化食物，臭如敗卵，可能為傷食證",
+        "D": "若大便稀黏，色黃褐，臭穢者，可能為濕熱證"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1376,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 16,
+      "question": "45歲江女士有肺癌病史，主述自從完成化學治療後，常覺腹痛綿綿，時作時止，下利清穀，形寒肢冷，面色 白，舌淡，苔薄白，脈沉細，治以下列何方最適當？",
+      "options": {
+        "A": "四逆散",
+        "B": "逍遙散",
+        "C": "右歸丸",
+        "D": "附子理中湯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1377,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 17,
+      "question": "55歲男性患者，已知為B型肝炎帶原者，平素有飲酒習慣，求診時可見身目俱黃，食慾減退，胸脘悶脹，噁 心嘔吐，略有腹瀉，舌苔厚膩微黃，脈濡緩，肝指數如下：天門冬胺酸轉胺酶（AST）為100 U/L，丙胺酸轉 胺酶（ALT）為153 U/L，黃疸指數略高，血液總膽紅素2.2 mg/dL。下列敘述何者錯誤？",
+      "options": {
+        "A": "辨證為濕重於熱型黃疸",
+        "B": "處方以大黃、梔子、茵陳蒿",
+        "C": "病機為濕遏熱伏，膽汁外溢，致身目俱黃",
+        "D": "證屬陽黃。如治療後黃疸逐漸加重，為逆證"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1378,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 18,
+      "question": "35歲男性有慢性B型肝炎、肝硬化病史，其平日常上夜班，生活作息不正常，並經常應酬飲酒而導致肝指數 上升，血液生化檢查顯示AST：450 IU/L，ALT：752 IU/L，total bilirubin：12 mg/dL，direct bilirubin：7.2 mg/dL。近3個月發病迅速，身目均黃，其色如金，高熱煩渴，脅痛脹滿，神昏譫語，便 血，肌衄瘀斑，舌質紅絳，苔黃燥，脈弦數。下列病機何者最適宜？",
+      "options": {
+        "A": "濕遏熱伏，膽汁外溢",
+        "B": "濕遏熱伏，腎氣虧虛",
+        "C": "濕熱毒盛，迫血妄行",
+        "D": "濕熱薰蒸，膽汁外溢"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1379,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 19,
+      "question": "【承上題．前情提要】\n第18題：35歲男性有慢性B型肝炎、肝硬化病史，其平日常上夜班，生活作息不正常，並經常應酬飲酒而導致肝指數 上升，血液生化檢查顯示AST：450 IU/L，ALT：752 IU/L，total bilirubin：12 mg/dL，direct bilirubin：7.2 mg/dL。近3個月發病迅速，身目均黃，其色如金，高熱煩渴，脅痛脹滿，神昏譫語，便 血，肌衄瘀斑，舌質紅絳，苔黃燥，脈弦數。下列病機何者最適宜？\n上題答案：(C) 濕熱毒盛，迫血妄行\n──────────\n承上題，此屬黃疸中的下列何證？",
+      "options": {
+        "A": "陽黃之熱重於濕",
+        "B": "陽黃之濕重於熱",
+        "C": "急黃",
+        "D": "陰黃"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1380,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 20,
+      "question": "72歲男性慢性B型肝炎多年，超音波檢查有肝硬化，半年前出現腹大脹滿不舒，甚則青筋暴露，叩診： shifting dullness（+），心煩失眠，齒鼻時或衄血，口燥，舌紅絳、少津，脈弦細數。AST：210 IU/L、 ALT：106 IU/L、Albumin：2.7 g/dL、T-Bil：6 mg/dL。下列病機何者最適宜？",
+      "options": {
+        "A": "脾陽不振，水蓄不行",
+        "B": "邪熱內盛，濕阻氣機",
+        "C": "肝腎陰虛，熱傷血絡",
+        "D": "氣滯濕阻，肝鬱脾虛"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1381,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 21,
+      "question": "【承上題．前情提要】\n第20題：72歲男性慢性B型肝炎多年，超音波檢查有肝硬化，半年前出現腹大脹滿不舒，甚則青筋暴露，叩診： shifting dullness（+），心煩失眠，齒鼻時或衄血，口燥，舌紅絳、少津，脈弦細數。AST：210 IU/L、 ALT：106 IU/L、Albumin：2.7 g/dL、T-Bil：6 mg/dL。下列病機何者最適宜？\n上題答案：(C) 肝腎陰虛，熱傷血絡\n──────────\n承上題，治以下列何方最適宜？",
+      "options": {
+        "A": "膈下逐瘀湯合六味地黃丸",
+        "B": "附子理中湯合濟生腎氣丸",
+        "C": "調營飲合血府逐瘀湯",
+        "D": "茵陳蒿湯合中滿分消丸"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1382,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 22,
+      "question": "王先生素有泌尿道結石的問題，小便常不順，解尿時會疼痛偶有中斷，曾經痛到冒冷汗，也有數次解血尿的 紀錄，今日就診，尋求中醫調理，經四診發現，舌質紅，苔薄黃，脈弦數，治以下列何方最適宜？",
+      "options": {
+        "A": "無比山藥丸",
+        "B": "萆薢分清飲",
+        "C": "膏淋湯",
+        "D": "石葦散"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1383,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 23,
+      "question": "龐先生，從事水泥工作，長時間蹲著工作，常覺得腰痠背痛，步行無力，下班後就想躺在沙發上，尺脈虛 浮，治以下列何方最適宜？",
+      "options": {
+        "A": "二妙散",
+        "B": "五積散",
+        "C": "獨活寄生湯",
+        "D": "復元活血湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1384,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 24,
+      "question": "65歲陳先生，因糖尿病控制不佳導致慢性腎衰竭，症見身腫，腰以下更甚，下肢按之凹陷不易恢復，脘腹脹 悶，納少便溏，面色萎黃，神疲肢冷，小便短少，舌質淡紅，苔白滑，脈沉緩，其病機何者最適宜？",
+      "options": {
+        "A": "腎氣虛衰，陽氣不化",
+        "B": "中陽不振，健運失司，氣不化水",
+        "C": "水濕之邪，浸漬肌膚，壅滯不行",
+        "D": "風邪襲表，肺失宣降，不能通調水道"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1385,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 25,
+      "question": "50歲王女士，罹患慢性腎衰竭第五期，症見小便量越來越少，神疲乏力，納不佳，面色黧黑，下眼瞼色白， 怕冷，下肢及面水腫，舌質淡，苔白，脈沉細，尺弱。下列何方治療最適宜？",
+      "options": {
+        "A": "補中益氣湯",
+        "B": "濟生腎氣丸",
+        "C": "實脾飲",
+        "D": "左歸丸"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1386,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 26,
+      "question": "下列關於消渴、水逆與渴證之敘述，下列何者錯誤？",
+      "options": {
+        "A": "消渴是胃中燥熱，渴而小便多，隨飲隨溲",
+        "B": "水逆是蓄水不化，水不上輸，渴欲飲，小便多而頻",
+        "C": "胃家實則渴欲飲，小便少，胃腸積滯，阻礙轉輸",
+        "D": "常病渴飲，胃火內生，水液不足，暴瀉，小便少"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1387,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 27,
+      "question": "50歲男性病人，因尿血而來求診，下列何者錯誤？",
+      "options": {
+        "A": "表現有小便灼熱，心煩口渴，面赤口瘡，脈數，可使用小薊飲子",
+        "B": "表現有小便頻急，少腹脹滿，渴不欲飲，脈滑數，可使用八正散",
+        "C": "表現有小便頻數，腰膝痠軟，五心煩熱，脈細數，可使用濟生腎氣丸",
+        "D": "表現有小便頻數，納呆，神疲，便溏，脈細弱，可使用無比山藥丸"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1388,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 28,
+      "question": "淋證，若見小便艱澀疼痛，尿有餘瀝，少腹脹滿者，屬下列何者？",
+      "options": {
+        "A": "氣淋",
+        "B": "尿濁",
+        "C": "膏淋",
+        "D": "勞淋"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1389,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 29,
+      "question": "痹證與痿證的證候鑑別，下列敘述何者錯誤？",
+      "options": {
+        "A": "兩者的症狀主要都在肢體、關節",
+        "B": "痹證以關節痠痛、屈伸不利為主",
+        "C": "痿證以肢體痿弱、肌肉瘦削為主，一般不痛",
+        "D": "痹證初期因肢體疼痛，亦有癱痿表現"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1390,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 30,
+      "question": "50歲患者，流感高燒後出現下肢軟弱無力，心煩口渴，乾咳無痰，尿黃，便秘，舌紅，脈細數，治以下列何 方最適宜？",
+      "options": {
+        "A": "柴葛解肌湯",
+        "B": "銀翹散",
+        "C": "防風通聖散",
+        "D": "清燥救肺湯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1391,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 31,
+      "question": "38歲紅斑性狼瘡（SLE）女性患者，近半年雙下肢反覆水腫，下列敘述何者錯誤？",
+      "options": {
+        "A": "若有蛋白尿或血尿，必要時要做腎臟切片來決定是否進行pulse therapy",
+        "B": "張仲景在《金匱要略》水氣病中，將水氣病分為風水、皮水、正水、石水",
+        "C": "宋元以後，有陰水、陽水之分，張景岳十分強調水腫與腎陽不足有關",
+        "D": "若此患者症見面浮身腫，腰以下尤甚，心悸短氣，腰痠四肢厥冷，舌淡胖有齒痕，脈沉遲無力，方以薏苡仁 湯最宜"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1392,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 32,
+      "question": "下列有關於關節炎敘述，何者錯誤？①鶴膝風為常見的退化性關節炎 ②類風濕性關節炎初期以手部小關節 多發為主，每一個關節面都會受侵犯，包含DIP、PIP、MCP joint ③尻以代踵，脊以代頭的關節病變可見 於嚴重的僵直性脊椎炎病人 ④關節痛合併有口破、面部紅疹、乏力，可確診為白塞氏症",
+      "options": {
+        "A": "①④",
+        "B": "②③",
+        "C": "②④",
+        "D": "③④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1393,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 33,
+      "question": "52歲類風濕性關節炎女性，雙手關節疼痛反覆已數年，西藥穩定控制中，近半年月經週期不正常，口乾，口 苦，目澀反覆，失眠，潮熱，盜汗，服中藥1個月後症狀改善，自行將目前每週使用免疫調節劑 methotrexate 7.5 mg及止痛藥celebrex停掉，舌紅，苔少，脈弦細，治以下列何法最適合？",
+      "options": {
+        "A": "滋陰清熱",
+        "B": "清熱瀉火",
+        "C": "補脾胃瀉陰火升陽",
+        "D": "滋補肝腎"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1394,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 34,
+      "question": "78歲祈先生，1年前大腸癌化療後體力較虛弱、僅能在家行走，牙口較差，僅能咀嚼軟食，食物種類受限， 但肝腎功能追蹤尚正常，有輕微貧血Hb：9.5 g/dL。近來身體水腫日漸加重，腰以下水腫尤甚，按之凹陷不 易恢復，脘腹悶脹，食量更少，大便稀溏，面色萎黃，神倦身冷肢冷，小便量減，舌淡紅，苔白滑，脈沉 緩。治以下列何方最適宜？",
+      "options": {
+        "A": "苓桂朮甘湯",
+        "B": "實脾飲",
+        "C": "濟生腎氣丸",
+        "D": "疏鑿飲子"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1395,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 35,
+      "question": "20歲花同學，近來因為體重減輕、血壓低下、頭髮變細掉髮而被診斷有Addison's Disease。他短氣自汗、 聲音低怯，反覆感冒，咳喘無力，勞作後加重，面色蒼白，舌質淡，脈弱。治以下列何方最適宜？",
+      "options": {
+        "A": "四君子湯",
+        "B": "八味地黃丸",
+        "C": "補肺湯",
+        "D": "四物湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1396,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 36,
+      "question": "49歲王先生，中廣身材，體重過重，少運動，上週進行身體健康檢查發現：總膽固醇（TCH）：275 mg/dL， 低密度脂蛋白膽固醇（LDL-C）：171 mg/dL，三酸甘油脂（TG）：235 mg/dL；自訴有心悸現象、受驚易作， 偶爾會胸悶煩躁，眠差惡夢紛紜，口乾舌燥，並有其他症狀如排便硬不暢2～3日1行，小便黃；舌暗紅，苔 黃膩，脈弦滑。下列證型何者最適宜？",
+      "options": {
+        "A": "心膽虛怯",
+        "B": "肝膽濕熱",
+        "C": "痰火擾心",
+        "D": "痰瘀交阻"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1397,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 37,
+      "question": "【承上題．前情提要】\n第36題：49歲王先生，中廣身材，體重過重，少運動，上週進行身體健康檢查發現：總膽固醇（TCH）：275 mg/dL， 低密度脂蛋白膽固醇（LDL-C）：171 mg/dL，三酸甘油脂（TG）：235 mg/dL；自訴有心悸現象、受驚易作， 偶爾會胸悶煩躁，眠差惡夢紛紜，口乾舌燥，並有其他症狀如排便硬不暢2～3日1行，小便黃；舌暗紅，苔 黃膩，脈弦滑。下列證型何者最適宜？\n上題答案：(C) 痰火擾心\n──────────\n承上題，治以下列何方最適宜？",
+      "options": {
+        "A": "龍膽瀉肝湯",
+        "B": "血府逐瘀湯",
+        "C": "安神定志丸",
+        "D": "黃連溫膽湯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1398,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 38,
+      "question": "依據《三因方．癭瘤證治》：「堅硬不可移者」，為癭病中的何種分類？",
+      "options": {
+        "A": "氣癭",
+        "B": "肉癭",
+        "C": "石癭",
+        "D": "血癭"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1399,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 39,
+      "question": "關於失眠之證治，下列何者錯誤？",
+      "options": {
+        "A": "陰虛火旺證，治以酸棗仁湯",
+        "B": "痰熱擾心證，治以溫膽湯",
+        "C": "心脾兩虛證，治以歸脾湯",
+        "D": "胃氣失和證，治以半夏米湯"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1400,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 40,
+      "question": "35歲女性，過去無系統性疾病，近半年壓力較大，眠差，身體疲倦感重，上週有感冒病史，今晨突發右側臉 部口眼歪斜，語言不利，口角流涎，肌膚不仁，手足麻木，肢體拘急，關節疼痛，兩側肢體肌肉力量一致， 無手足無力感，舌苔薄白，脈浮細無力。下列敘述何者錯誤？",
+      "options": {
+        "A": "可能為面癱，須注意有無腫瘤或腦血管疾病的可能性",
+        "B": "可能機轉為正氣不足，脈絡空虛，風邪入中經絡，引發氣血痹阻",
+        "C": "治法為鎮肝潛陽，溫補脾腎",
+        "D": "處方以牽正散"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1401,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 41,
+      "question": "65歲王先生突然昏倒不省人事，靜臥不煩，牙關緊閉，兩手握固，大小便閉，四肢冰冷強痙，痰涎壅盛，舌 苔白膩，脈沉滑緩，確診為出血性中風，下列治法何者最適宜？",
+      "options": {
+        "A": "豁痰熄風，辛溫開竅",
+        "B": "清肝熄風，辛涼開竅",
+        "C": "扶正固脫，益氣回陽",
+        "D": "育陰潛陽，鎮肝熄風"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1402,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 42,
+      "question": "王先生罹患痙病，項背強直，發熱不惡寒，頭痛汗出，苔薄白，脈沉細而遲，以下列何方治療最適宜？",
+      "options": {
+        "A": "羌活勝濕湯",
+        "B": "葛根湯",
+        "C": "栝蔞桂枝湯",
+        "D": "宣痹湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1403,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 43,
+      "question": "關於虛證頭痛之特性，下列何者最不適當？",
+      "options": {
+        "A": "重痛",
+        "B": "隱痛",
+        "C": "痛勢悠悠",
+        "D": "遇勞則劇，時作時止"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1404,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 44,
+      "question": "關於虛勞順逆證之敘述，下列何者正確？",
+      "options": {
+        "A": "逆證表現，食慾不振，發熱難解，聲音圓潤，能受補益",
+        "B": "脈象順證表現，脈來急促細弦或浮大無根",
+        "C": "舌象逆證表現，舌質淡胖無華或光紅如鏡",
+        "D": "順證表現，元氣衰敗，脾腎衰憊，飲食尚佳"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1405,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 45,
+      "question": "患者腹腔內長出腫塊，固著不移，脹痛並見，脈弦。上述症狀較接近下列那個證型？",
+      "options": {
+        "A": "氣滯血瘀",
+        "B": "氣滯痰阻",
+        "C": "氣血兩虛",
+        "D": "熱毒血瘀"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1406,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 46,
+      "question": "【承上題．前情提要】\n第45題：患者腹腔內長出腫塊，固著不移，脹痛並見，脈弦。上述症狀較接近下列那個證型？\n上題答案：(A) 氣滯血瘀\n──────────\n承上題，此種證型的腫塊，治以下列何方劑組合最適宜",
+      "options": {
+        "A": "逍遙散合黨參",
+        "B": "八珍湯合五積散",
+        "C": "金鈴子散合失笑散",
+        "D": "烏貝散合四物湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1407,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 47,
+      "question": "58歲林先生為肝癌晚期患者，近來發現吐血，同時症見口苦，脅痛，心煩易怒，寐少夢多，目赤，溲黃，舌 質紅絳，脈弦數。此吐血之病機以下列何者最適當？",
+      "options": {
+        "A": "肝火上炎",
+        "B": "肝氣橫逆",
+        "C": "肝氣鬱結",
+        "D": "肝陽上亢"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1408,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 48,
+      "question": "48歲楊女士罹患乳癌，化療後以抗荷爾蒙藥物治療。主訴夜寐盜汗，五心煩熱，午後潮熱，兩顴色紅，口 渴，皮膚粗糙、有皮屑的現象。證型以下列何者最適當？",
+      "options": {
+        "A": "營衛不和",
+        "B": "肝鬱氣滯",
+        "C": "陰虛內熱",
+        "D": "肝火上炎"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1409,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 49,
+      "question": "有關婦科疾病的病因，下列敘述何者最不適當？",
+      "options": {
+        "A": "過食辛熱助陽之品，可使衝任蘊熱，迫血妄行",
+        "B": "憂、怒、悲、恐是導致婦科疾病的主要七情因素",
+        "C": "產後過早勞動，可致子宮脫垂",
+        "D": "婦女在妊娠期間、未產之前，縱使胎元穩固亦應避免運動"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1410,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 50,
+      "question": "臨床上月經過多證最多見的病機，下列何者最為適當？",
+      "options": {
+        "A": "血熱",
+        "B": "血虛",
+        "C": "痰阻",
+        "D": "血瘀"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1411,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 51,
+      "question": "下列何者屬於健固湯《傅青主女科》之組成？①巴戟天 ②菟絲子 ③肉豆蔻 ④薏苡仁",
+      "options": {
+        "A": "①②",
+        "B": "①④",
+        "C": "②③",
+        "D": "③④"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1412,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 52,
+      "question": "28歲患者，出血淋漓，日久不淨，血色鮮紅，量時多時少，午後低熱，顏面潮紅，頭暈耳鳴，口乾唇紅，煩 躁不寐，舌紅少苔，脈細數。治以下列何方最為適宜？",
+      "options": {
+        "A": "清海丸《傅青主女科》合花蕊石散《十藥神書》",
+        "B": "固陰煎《景岳全書》",
+        "C": "固本止崩湯《傅青主女科》",
+        "D": "逐瘀止血湯《傅青主女科》"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1413,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 53,
+      "question": "陳小姐，28歲，近1年月經由後期量少漸至閉經，面色萎黃，頭暈目眩，心悸氣短，神疲肢軟，舌淡，脈細 緩無力。治以下列何方最適宜？",
+      "options": {
+        "A": "當歸、川芎、赤芍、生地、桃仁、紅花、柴胡、枳殼、甘草、牛膝、桔梗",
+        "B": "當歸、丹皮、茯苓、白芍、白朮、香附、天花粉",
+        "C": "當歸、茯苓、白芍、白朮、柴胡、薄荷、甘草",
+        "D": "當歸、川芎、白芍、熟地、黨參、茯苓、白朮、甘草"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1414,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 54,
+      "question": "依《醫宗金鑑‧婦科心法要訣》之《嗣育門彙方》，婦人肥盛者，多不受孕，最宜使用下列何方治療？",
+      "options": {
+        "A": "滌痰湯送滌痰丸",
+        "B": "二陳湯送六味地黃丸",
+        "C": "滌痰湯送六味地黃丸",
+        "D": "四物湯送啟宮丸"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1415,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 55,
+      "question": "大營煎《景岳全書》治療下列何種證型最為適宜？",
+      "options": {
+        "A": "腎陰虛",
+        "B": "腎陽虛",
+        "C": "肝血虛",
+        "D": "脾氣虛"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1416,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 56,
+      "question": "依《醫宗金鑑‧婦科心法要訣》，五色帶下的敘述，下列何者最不適宜？",
+      "options": {
+        "A": "五色帶下，皆從濕化",
+        "B": "帶下色青者屬肝，為風濕",
+        "C": "帶下若似瘡膿，為瘀血所化",
+        "D": "帶下起因於六淫之邪入於胞中者，宜吳茱萸湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1417,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 57,
+      "question": "依《醫宗金鑑‧婦科心法要訣》，陰挺之致病機理，下列有幾項敘述正確？①分娩用力太過 ②久嗽 ③泄 瀉 ④胞絡傷損",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1418,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 58,
+      "question": "48歲林小姐，子宮腺肌症病史，近半年月經紊亂，經行下腹痛甚，經量少，伴有腰痠，口乾舌燥，眠差多 夢，大便秘，脈細數，舌質紅，苔薄白。下列何種證型最為適宜？",
+      "options": {
+        "A": "氣滯夾血瘀",
+        "B": "腎陽虛血瘀",
+        "C": "腎陰虛內熱",
+        "D": "腎虛肝火旺"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1419,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 59,
+      "question": "【承上題．前情提要】\n第58題：48歲林小姐，子宮腺肌症病史，近半年月經紊亂，經行下腹痛甚，經量少，伴有腰痠，口乾舌燥，眠差多 夢，大便秘，脈細數，舌質紅，苔薄白。下列何種證型最為適宜？\n上題答案：(C) 腎陰虛內熱\n──────────\n承上題，治以下列何方最為適宜？",
+      "options": {
+        "A": "三陰煎《景岳全書》",
+        "B": "加減一陰煎《景岳全書》",
+        "C": "定經湯《傅青主女科》",
+        "D": "當歸芍藥散《金匱要略》"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1420,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 60,
+      "question": "依《醫宗金鑑‧婦科心法要訣》，妊娠3個月之內，胎兒尚未成形而墜者，診為下列何者最為適宜？",
+      "options": {
+        "A": "小產",
+        "B": "半產",
+        "C": "滑胎",
+        "D": "墮胎"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1421,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 61,
+      "question": "《傅青主女科》：「妊娠有至五個月，肢體倦怠，飲食無味，先兩足腫，漸至遍頭面俱腫，人以為濕氣使然 也，誰知是肺脾氣虛乎？」治法當補其脾之血與肺之氣，最宜用下列何方治之？",
+      "options": {
+        "A": "援土固胎湯",
+        "B": "加減補中益氣湯",
+        "C": "健固湯",
+        "D": "安奠二天湯"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1422,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 62,
+      "question": "依《醫宗金鑑‧婦科心法要訣‧子煩證治》謂孕婦別無他證，惟時時心煩者，名曰子煩。下列敘述何者最為 適宜？",
+      "options": {
+        "A": "由胎中鬱熱上乘於肺也",
+        "B": "宜用知母飲",
+        "C": "氣虛加白朮",
+        "D": "口渴加石斛"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1423,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 63,
+      "question": "關於產後痙病的辨證論治，下列敘述何者最不適當？",
+      "options": {
+        "A": "產後失血可能造成筋脈失養，肝風內動而發痙",
+        "B": "面呈苦笑，項強口噤，發熱惡寒者，屬感染邪毒",
+        "C": "辨證屬血虛者可用三甲復脈湯《溫病條辨》治療",
+        "D": "產後多虛，不宜用蟲類藥鎮痙息風"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1424,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 64,
+      "question": "產後盜汗嚴重，夜眠醒來多次，醫師處方生脈散加煅牡蠣、浮小麥、生地黃、炒白芍。下列敘述何者最不適 宜？",
+      "options": {
+        "A": "加煅牡蠣以固澀",
+        "B": "病因是產時傷血，氣隨血脫",
+        "C": "可能伴有面色潮紅，五心煩熱，口燥咽乾",
+        "D": "治法以益氣養陰，生津斂汗"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1425,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 65,
+      "question": "關於歷代兒科著作之作者，下列何者正確？",
+      "options": {
+        "A": "徐謙著《幼科發揮》",
+        "B": "陳文中著《小兒藥證直訣》",
+        "C": "薛鎧、薛己著《嬰童百問》",
+        "D": "陳飛霞著《幼幼集成》"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1426,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 66,
+      "question": "關於痰濕咳嗽的特徵做為鑑別診斷，下列何者最適當？①痰色白稀 ②語聲低微 ③氣短懶言 ④身重困倦",
+      "options": {
+        "A": "僅①④",
+        "B": "僅②③",
+        "C": "僅①②④",
+        "D": "①②③④"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1427,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 67,
+      "question": "依《醫宗金鑑．幼科雜病心法要訣》，關於疳證的敘述：「解顱鶴膝齒行遲，瘦骨如柴面黑黧，齒齦出血口 臭氣，足冷腹痛瀉哭啼」，先用下列何方治療最適宜？",
+      "options": {
+        "A": "五虎湯",
+        "B": "調原散",
+        "C": "金蟾丸",
+        "D": "右歸丸"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1428,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 68,
+      "question": "依《醫宗金鑑．幼科雜病心法要訣》，血淋莖中不時作痛，下列何者最適宜？",
+      "options": {
+        "A": "扁蓄、瞿麥、滑石、木通、赤茯苓、車前子、生大黃、梔子",
+        "B": "通草、滑石、淡竹葉、當歸、小薊、梔子、甘草、生地、蒲黃、藕節",
+        "C": "生地、梔子、木通、瞿麥、滑石、淡竹葉、茵陳蒿、黃芩、甘草、豬苓",
+        "D": "桑皮、瞿麥、梔子、赤茯苓、木通、車前子、甘草"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1429,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 69,
+      "question": "依《醫宗金鑑．幼科雜病心法要訣》水腫門，小兒證見頭面手足皆腫，屬內停濕飲，外感風邪，風濕相搏， 關於治療，下列敘述何者正確？",
+      "options": {
+        "A": "水停上攻於肺，喘急不得臥者，以蘇葶丸瀉之",
+        "B": "水停中州脹滿者，以大聖浚川散攻之",
+        "C": "輕者用實脾飲和解之",
+        "D": "重者用舟車神祐丸峻攻之"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1430,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 70,
+      "question": "6歲黃小弟，近1週出現面色㿠白，全身浮腫，以腰腹下肢為甚，按之深陷難起，多見腰痠怕冷，尿清而 頻，夜間尤甚，舌胖質淡苔白，脈來沉細。治以下列何方最適宜？",
+      "options": {
+        "A": "己椒藶黃丸合參附湯",
+        "B": "真武湯",
+        "C": "茯苓導水湯",
+        "D": "溫膽湯合附子瀉心湯"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1431,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 71,
+      "question": "依《醫宗金鑑．幼科雜病心法要訣》，對於瘧疾的敘述，下列何者錯誤？",
+      "options": {
+        "A": "食瘧輕者宜柴平湯主之",
+        "B": "食瘧重者宜柴葛解肌湯加檳榔草果主之",
+        "C": "瘧疾痰飲，痰盛者用清脾飲加橘紅倍半夏",
+        "D": "瘧疾痰飲，飲盛者用清脾飲加蒼朮倍茯苓"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1432,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 72,
+      "question": "歷代有關兒科水痘之敘述，下列何者正確？①又名水喜 ②即唇疱疹（herpes） ③發病過程不結痂 ④冬 春兩季較常見",
+      "options": {
+        "A": "①②",
+        "B": "①③",
+        "C": "①④",
+        "D": "②③"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1433,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 73,
+      "question": "4歲男孩，出現黃疸症狀，全身皮膚呈現亮黃色，眼白透黃，口渴、小便黃，身熱，無汗，依《醫宗金鑑． 幼科雜病心法要訣》，治以下列何方最適宜？",
+      "options": {
+        "A": "茵陳蒿、赤苓、豬苓、澤瀉、白朮、肉桂",
+        "B": "茵陳蒿、麻黃",
+        "C": "茵陳蒿、川大黃、梔子",
+        "D": "附子、乾薑、茵陳蒿、甘草"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1434,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 74,
+      "question": "12歲李小弟主訴食後作瀉2個月，症見大便色黃，四肢溫，腹滿不渴，精神差，面黃懶食，肌肉消瘦，小便 如常，依《醫宗金鑑．幼科雜病心法要訣》，下列治療何者最適當？",
+      "options": {
+        "A": "胃苓湯",
+        "B": "參苓白朮散",
+        "C": "調中湯",
+        "D": "理中湯"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1435,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 75,
+      "question": "依《醫宗金鑑．痘疹心法要訣》，痘中雜症的敘述，下列何者正確？①痘瘡內外宜宣暢，大便不通八正散主 之 ②痘證初熱作瀉，柴苓湯主之 ③痘不起，其色淡白，手足逆冷，陳氏木香散主之 ④痘證如中滿惡 食，瀉黃酸臭，手足心熱，面赤瘡紅，清胃散主之",
+      "options": {
+        "A": "①②",
+        "B": "②③",
+        "C": "③④",
+        "D": "①④"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1436,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 76,
+      "question": "依《醫宗金鑑．幼科雜病心法要訣．雜證門》：「小兒熱結二便秘，口渴舌乾唇面紅」，此症多因乳食停滯 生熱，結於腸胃。小便秘濇用八正散，大便秘，腹脹痛者，宜何方主之？",
+      "options": {
+        "A": "保和丸",
+        "B": "涼膈散",
+        "C": "神芎丸",
+        "D": "消乳丸"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1437,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 77,
+      "question": "剛滿月之小寶，白天如常，但入夜啼哭不止，怕熱，若遇燈光刺激則哭更劇烈，哭時面紅唇紅，煩躁不安， 大便秘結，診察時見舌尖紅苔黃，下列何方最適宜？",
+      "options": {
+        "A": "烏藥散《小兒藥證直訣》",
+        "B": "導赤散《醫宗金鑑》",
+        "C": "蓮子清心飲《醫方集解》",
+        "D": "龍膽瀉肝湯《蘭室秘藏》"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1438,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 78,
+      "question": "關於兒童泌尿道感染的敘述，下列何者錯誤？",
+      "options": {
+        "A": "嬰幼兒時期，通常症狀是發燒、食慾降低、嘔吐、嗜睡等",
+        "B": "反覆泌尿道感染宜考慮先天結構發育異常",
+        "C": "泌尿道感染以大腸桿菌（Escherichia coli）最常見",
+        "D": "男童罹病率較高"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1439,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 79,
+      "question": "關於性早熟（Precocious puberty）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "女生9歲以前，男生8歲以前，出現第二性徵，稱為性早熟",
+        "B": "中樞型性早熟：腦下垂體性腺促素依賴型（gonadotropin dependent），由下視丘、腦垂體啟動，也有可能 因中樞神經的病變造成，如惡性或良性的腫瘤",
+        "C": "周邊型性早熟：腦下垂體性腺促素非依賴型（gonadotropin independent），因性腺腫瘤、腎上腺增生症或 腫瘤過度分泌",
+        "D": "中樞型性早熟女孩的發生率為男孩的5～10倍"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1440,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 0,
+      "number": 80,
+      "question": "關於兒童疫苗注射，下列何者是活性減毒疫苗？",
+      "options": {
+        "A": "B型肝炎疫苗",
+        "B": "百日咳疫苗",
+        "C": "麻疹疫苗",
+        "D": "肺炎鏈球菌疫苗"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1441,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 1,
+      "question": "依《中醫外科講義》下列何者不是多血少氣之經？",
+      "options": {
+        "A": "手少陰心經",
+        "B": "足厥陰肝經",
+        "C": "手太陽小腸經",
+        "D": "足太陽膀胱經"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1442,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 2,
+      "question": "40 歲陳先生，因肝膿瘍住院，中醫師診其脈為洪數之脈，依《中醫外科講義》辨膿，此病人肝膿瘍的目前狀 態為何？",
+      "options": {
+        "A": "尚未成膿",
+        "B": "部分膿成",
+        "C": "膿已大成",
+        "D": "膿已消散"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1443,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 3,
+      "question": "依據《中醫外科講義》，侵腦疽將潰之時宜服下列何方最適當？",
+      "options": {
+        "A": "托裏透膿湯",
+        "B": "荊防敗毒散",
+        "C": "內疏黃連湯",
+        "D": "托裏排膿湯"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1444,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 4,
+      "question": "關於臀癰及坐馬癰的描述，下列何者最適當？",
+      "options": {
+        "A": "臀癰生於臀部皮膚常摩擦處的急性化膿性疾病",
+        "B": "坐馬癰為生於腹股溝處的化膿性疾病",
+        "C": "臀癰發生處常有瘡癤史，初起紅腫疼痛，中心明顯，逐漸擴大而有硬結",
+        "D": "坐馬癰發病前通常無徵兆，發時結如雞卵，腫脹發熱，隨後迅速化膿"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1445,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 5,
+      "question": "疔瘡治療大致可分為外治及內服兩部分，下列敘述何者最不適當？",
+      "options": {
+        "A": "雖所患之處不同，但性質相近，治法大致相同",
+        "B": "面部疔瘡大部分能自行排膿，手足因肌肉堅厚，多數需要切開引流",
+        "C": "患疔可行刺，無論何疔，均可刺委中穴使出血少許",
+        "D": "生黃耆於外科中用之恰當，但在疔瘡屬慎用或禁用藥"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1446,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 6,
+      "question": "依疔瘡的部位與定名，下列選項何者完全正確？①釘腦疔生於百會穴處  ②鎖口疔生於嘴角  ③斷指疔生於大 指，其他較少  ④蛇頭疔生於手指指甲基部  ⑤蜣螂蛀多生於體虛人之手指關節  ⑥手丫疔生於大指與食指 間，位於合谷穴處",
+      "options": {
+        "A": "①②⑤",
+        "B": "②③⑤",
+        "C": "②⑤⑥",
+        "D": "③④⑤"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1447,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 7,
+      "question": "王先生在二個月前發現足底一處突然堅腫且隱隱作痛，而後漸漸潰破，滲流腐臭滋水而無膿血，繼則皮爛日 大，瘡口凹陷，色如雞肝。根據《中醫外科講義》，下列敘述何者錯誤？",
+      "options": {
+        "A": "最可能的診斷為漏底風",
+        "B": "可內服萆薢滲濕湯兼服知柏八味丸",
+        "C": "本症病情纏綿，即調理得宜，也得數月始癒",
+        "D": "若病灶潰爛流膿，肌肉紅活者，又名顱眼疽，病情較本患者嚴重，更不易收口"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1448,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 8,
+      "question": "周小姐，20 歲學生，本學期以來課業壓力大，經常熬夜，最近幾個月開始出現月經不規則，而且常突然大量 掉髮，以至於頭皮出現幾個錢幣樣禿髮，但是不癢也不痛，下列何者是最合適的中醫診斷？",
+      "options": {
+        "A": "禿瘡",
+        "B": "錢癬",
+        "C": "髮際瘡",
+        "D": "油風"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1449,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 9,
+      "question": "根據《中醫外科講義》關於虛證鶴膝風的敘述，下列何者正確？",
+      "options": {
+        "A": "由足三陰虧損，風寒濕入絡化熱所致",
+        "B": "初起膝腫而如棉，皮色微紅，焮熱光亮",
+        "C": "疼痛日增，及至數月以後，漸感屈伸不利，行走無力",
+        "D": "如腫潰後時出白漿膿，可用硇砂散蓋貼，不難平復而癒"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1450,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 10,
+      "question": "根據《中醫外科講義》，下列何者不是破傷風的症狀？",
+      "options": {
+        "A": "有創傷，瘡口周圍燥起白痂",
+        "B": "牙關緊閉，口撮唇緊",
+        "C": "身體強直，角弓反張",
+        "D": "遍身麻木不仁"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1451,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 11,
+      "question": "70 歲男性，肩頸痠痛多日，自行貼敷痠痛藥布後局部出現大片紅疹，診斷為接觸性皮膚炎，中醫診斷下列何 者最適宜？",
+      "options": {
+        "A": "血風瘡",
+        "B": "漆瘡",
+        "C": "白疕",
+        "D": "風疹"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1452,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 12,
+      "question": "學齡兒童，在頭皮出現圓形或不規則形的斑片，覆蓋灰白色鱗屑，病灶區毛髮乾枯無澤，甚至多參差不齊的 折斷，毛囊根部還繞有白色菌鞘。中醫診斷下列何者最適合？",
+      "options": {
+        "A": "白屑風",
+        "B": "白癜風",
+        "C": "胎癬",
+        "D": "禿瘡"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1453,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 13,
+      "question": "30 歲男性，半年來全身皮膚病灶皆生，初形如粟米，搔癢無度，抓破後脂水浸淫成片，血痕累累，搔癢日輕 夜甚，伴有煩躁口渴，依《中醫外科講義》，下列何方最適合？",
+      "options": {
+        "A": "消風散",
+        "B": "五苓散",
+        "C": "五味消毒飲",
+        "D": "龍膽瀉肝湯"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1454,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 14,
+      "question": "下列何者不是下肢的皮膚病？",
+      "options": {
+        "A": "濕瘡",
+        "B": "臁瘡",
+        "C": "瘑瘡",
+        "D": "猴疳"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1455,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 15,
+      "question": "50 歲職業婦女，雙頰漸生深褐色斑片，大小不等，伴有性情急躁，易怒，胸脅滿悶；舌質紅，苔薄白，脈弦 數。依《中醫外科講義》，下列敘述何者錯誤？",
+      "options": {
+        "A": "診斷為黧黑斑",
+        "B": "治宜疏肝理氣清熱",
+        "C": "方用六味地黃丸",
+        "D": "外以玉容散洗之"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1456,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 16,
+      "question": "70 歲女性，得到嚴重特殊傳染性肺炎（COVID-19）後一個月，右胸脅突發紅疹，且有水泡累累如串珠，灼熱 刺痛，伴有口苦咽乾，煩躁易怒，大便乾結，舌紅，苔薄黃，脈弦滑數。下列何種方藥最適宜？",
+      "options": {
+        "A": "真人活命飲",
+        "B": "龍膽瀉肝湯",
+        "C": "除濕胃苓湯",
+        "D": "柴胡清肝湯"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1457,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 17,
+      "question": "依《中醫外科講義》，螻蛄癤的起因為何？",
+      "options": {
+        "A": "胃熱過盛",
+        "B": "暑毒引起",
+        "C": "濕氣重",
+        "D": "風寒侵襲"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1458,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 18,
+      "question": "瘤依《三因極一病證方論》分類，下列何者正確？",
+      "options": {
+        "A": "骨瘤、脂瘤、氣瘤、肉瘤、膿瘤、血瘤",
+        "B": "筋瘤、腸瘤、脂瘤、骨瘤",
+        "C": "氣瘤、血瘤、肉瘤、筋瘤、骨瘤",
+        "D": "痰瘤、濁瘤、氣瘤、骨瘤"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1459,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 19,
+      "question": "依照《中醫外科講義》有關淋症治療的敘述，下列何者錯誤？",
+      "options": {
+        "A": "加味葵子散用以治療石淋",
+        "B": "小薊飲子用於治療血淋",
+        "C": "沉香散可用於治療氣淋",
+        "D": "六味地黃丸合聚精丸可治療勞淋"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1460,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 20,
+      "question": "依《中醫外科講義》燒傷的脈象在治癒後仍可能持續較長時間的是那種脈象？",
+      "options": {
+        "A": "洪大弦數",
+        "B": "弦細而長",
+        "C": "微欲絶",
+        "D": "脈伏不起"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1461,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 21,
+      "question": "肘關節屬於下列那一種關節型式？",
+      "options": {
+        "A": "球窩關節（ball and socket joint）",
+        "B": "鞍狀關節（saddle joint）",
+        "C": "車軸關節（pivot joint）",
+        "D": "屈戍關節（hinge joint）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1462,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 22,
+      "question": "50 歲女性，因長期手麻求診，自述握物端物時偶有突然失手情況，理學檢查 Phalen 試驗陽性，併見大魚際 肌萎縮，下列敘述何者最不適宜？",
+      "options": {
+        "A": "病程長者可能產生猿狀手變形",
+        "B": "Tinel 氏試驗常見陽性",
+        "C": "主要是橈神經受損，可手術減壓",
+        "D": "對掌動作可能產生障礙"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1463,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 23,
+      "question": "24 歲女性，車禍臀部著地，經 X 光檢查發現薦椎無移位骨折，因坐下與走路時臀部疼痛，來中醫求診，下列 敘述何者正確？",
+      "options": {
+        "A": "依《醫宗金鑑‧正骨心法要旨》尾骶骨又名尻骨，相當於現代解剖部位薦椎",
+        "B": "依《醫宗金鑑‧正骨心法要旨》尾椎又名尾閭骨、骶端、橛骨",
+        "C": "依《醫宗金鑑‧正骨心法要旨》尾骶骨傷損可內服復元活血湯",
+        "D": "懷疑薦椎骨折可拍攝骨盆正位 X 光（pelvis AP view）配合肛門指檢作出明確診斷"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1464,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 24,
+      "question": "依《醫宗金鑑‧正骨心法要旨》，傷損而少腹引陰莖作痛者，治宜下列何方？",
+      "options": {
+        "A": "小柴胡湯加大黃、黃連、山梔",
+        "B": "四逆湯加香附、延胡索",
+        "C": "補中益氣湯加生薑、半夏",
+        "D": "八味地黃丸加當歸、川芎"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1465,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 25,
+      "question": "60 歲女性，腰痛 3 個月未緩解，腰椎 X 光如圖所示，下列敘述何者正確？①L2～L3 椎間明顯狹窄  ②L3 脊 椎滑脫  ③滑脫根據 Meyerding classification 為第一級  ④L2 有壓迫性骨折史",
+      "options": {
+        "A": "②④",
+        "B": "①④",
+        "C": "②③",
+        "D": "①③"
+      },
+      "answer": "D",
+      "explanation": "",
+      "images": [
+        "/question-images/tcm2_1465_0.webp"
+      ]
+    },
+    {
+      "id": 1466,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 26,
+      "question": "20 歲男性，右大腿內下側摸到質地堅硬腫塊，X 光如圖所示，下列敘述何者正確？①此類腫瘤為常見的良性 骨腫瘤  ②此類腫瘤好發在脛骨上端與股骨下端  ③X 光可診斷為骨軟骨瘤（osteochondroma）  ④此類腫 瘤常規治療皆建議切除",
+      "options": {
+        "A": "①②③",
+        "B": "①③④",
+        "C": "①②④",
+        "D": "②③④"
+      },
+      "answer": "A",
+      "explanation": "",
+      "images": [
+        "/question-images/tcm2_1466_0.webp",
+        "/question-images/tcm2_1466_1.webp"
+      ]
+    },
+    {
+      "id": 1467,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 27,
+      "question": "35 歲男性，長期早上起床下背疼痛，活動後稍緩解，X 光如圖所示，下列敘述何者正確？①依據 X 光的診斷 為僵直性脊椎炎（ankylosing spondylitis）  ②該病晚期會導致腰部活動角度明顯消失  ③部分病人會伴 隨眼部結膜炎  ④X 光可見到竹竿樣脊椎（bamboo spine）",
+      "options": {
+        "A": "①②③",
+        "B": "①③④",
+        "C": "②③④",
+        "D": "①②④"
+      },
+      "answer": "D",
+      "explanation": "",
+      "images": [
+        "/question-images/tcm2_1467_0.webp",
+        "/question-images/tcm2_1467_1.webp"
+      ]
+    },
+    {
+      "id": 1468,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 28,
+      "question": "下列何者不是足踝扭傷評估的渥太華原則（Ottawa rules）內容？",
+      "options": {
+        "A": "第五蹠骨基底部有壓痛",
+        "B": "脛骨遠端近內踝頂端後側緣 6 公分範圍內有壓痛",
+        "C": "腓骨遠端近外踝頂端的骨頭有壓痛",
+        "D": "跟骨有壓痛"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1469,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 29,
+      "question": "20 歲男性，足球運動時，急轉向動作後致膝關節腫脹，屈伸不能，行走困難，下列敘述何者最適宜？",
+      "options": {
+        "A": "彎曲膝蓋後再伸直，同時將小腿極度外展外旋或內收內旋，逐漸伸直，過程中，可能觸發病灶部位疼痛",
+        "B": "令病患仰臥膝關節彎曲 25～30 度，將脛骨近端，向前拉牽測其位移，評估是否合併後十字韌帶損傷",
+        "C": "若 sagittal MRI 有 double PCL sign 出現，表示外側半月板損傷",
+        "D": "若為外側半月板損傷，合併內側副韌帶及前十字韌帶損傷，形成 unhappy triad"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1470,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 30,
+      "question": "足球選手遭遇後十字韌帶斷裂，經重建手術後六個月，下列何項八段錦練功療法最適宜？",
+      "options": {
+        "A": "雙手托天理三焦",
+        "B": "背後七顛百病消",
+        "C": "五勞七傷往後瞧",
+        "D": "搖頭擺尾去心火"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1471,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 31,
+      "question": "球員做出運球變向動作後，感覺腳跟疼痛，如同被踢了一腳，一跛一跛走下場，下列何項理學檢查最適宜？",
+      "options": {
+        "A": "anterior drawer test",
+        "B": "Ober's test",
+        "C": "Thompson's test",
+        "D": "Lachman's test"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1472,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 32,
+      "question": "關於莫頓氏神經瘤（Morton's neuroma）之敘述，下列何者正確？",
+      "options": {
+        "A": "通常好發在前足部第 3、4 趾間",
+        "B": "足變形稱為 hollow foot",
+        "C": "男性比例較高，可能因為常穿寬頭鞋",
+        "D": "疼痛部位多發於足底後側及足跟"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1473,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 33,
+      "question": "有關腰椎椎管狹窄之敘述，下列何者錯誤？",
+      "options": {
+        "A": "分為原發性及繼發性，男性又多於女性",
+        "B": "以第五腰椎和第一薦椎最多見",
+        "C": "有單純腰痛，有單純腿痛，亦有腰腿同痛",
+        "D": "疼痛多發於站立或走路過久，休息或騎單車時疼痛減輕"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1474,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 34,
+      "question": "《正骨心法》中有關頭肩頸部結構之敘述，下列何者錯誤？",
+      "options": {
+        "A": "旋台骨又名玉柱骨，頭後頸骨三節也，一名天柱骨",
+        "B": "山角骨即完骨，在耳後接於耳之玉樓骨者也。損傷時或致頭暈眼迷，兩太陽扶桑骨脹痛",
+        "C": "後山骨即頭後枕骨也。其骨形狀多有不同。損傷時其人頭暈目眩，耳鳴有聲，項強咽直，飲食難進",
+        "D": "鎖子骨橫臥兩肩前缺盆之外，擊打損傷可內服人參紫金丹"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1475,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 35,
+      "question": "《正骨心法》中關於軀幹部結構之敘述，下列何者錯誤？",
+      "options": {
+        "A": "岐骨者，即兩鳧骨骨端相接之處，其下即鳩尾骨也。損傷輕者只在於膈上，重者必入心臟，致神昏目閉",
+        "B": "鳧骨者，即胸下之邊肋也，上下二條，易被損傷，左右皆然",
+        "C": "蔽心骨乃胸脅眾骨之統名也，若傷重者，內干胸中，必通心肺兩臟，其人氣亂昏迷",
+        "D": "膂骨，脊骨也。外小而內巨，人之所以能負任者，以是骨之巨也"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1476,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 36,
+      "question": "有關下半身理學檢查之敘述，下列何者錯誤？",
+      "options": {
+        "A": "Beevor 氏徵：脊髓灰質炎或脊髓膜脊髓膨出者會呈陽性",
+        "B": "Valsalva 氏測試：要求病人坐姿向下用力若排便，若引起下背痛或下肢輻射痛為陽性",
+        "C": "Hoover 氏測試：坐骨神經痛或椎間盤突出患者多呈現陽性",
+        "D": "Babinski 氏測試：陽性表示上運動神經元病變，常合併創傷或腦瘤之腦部傷害"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1477,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 37,
+      "question": "30 歲男性，因開車撞擊之車禍損傷頸部，下列敘述何者最不適宜？",
+      "options": {
+        "A": "病人頸椎發生前後方的鞭動（whiplash）時，可能傷及神經根；可以 X 光排除因骨刺造成之影響",
+        "B": "在病人能配合的前提下，亦可經由 Valsalva 氏測試，排除椎間盤突出的可能",
+        "C": "若僅拉扯頸部前後側肌肉，可引起頸部特定區域疼痛，也會放射到肩部和肩胛骨內緣",
+        "D": "如上臂外側臂章處呈現麻痺，疑似頸椎第 4 節神經損傷"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1478,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 38,
+      "question": "有關股骨頭骨骺炎的敘述，下列何者錯誤？",
+      "options": {
+        "A": "大多發生於 10～15 歲的兒童或少年",
+        "B": "男性多於女性",
+        "C": "多為單側",
+        "D": "嚴重者患肢會有短縮現象、大轉子上移"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1479,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 39,
+      "question": "50 歲女性，主訴雙足底痛，病程三個月以上，通常起床或久坐站立時腳底痛，走了幾分鐘後症狀顯著減輕， 但若行走持續半小時以上又開始會痛。下列何診斷最適宜？",
+      "options": {
+        "A": "跟腱滑囊炎",
+        "B": "足底筋膜炎",
+        "C": "扁平足",
+        "D": "趾外翻"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1480,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 40,
+      "question": "單純棘上肌撕裂的肩痛症，下列理學檢查何者最容易呈陽性？①drop arm test  ②apprehension test  ③ empty can test  ④Yergason's test",
+      "options": {
+        "A": "②④",
+        "B": "①④",
+        "C": "②③",
+        "D": "①③"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1481,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 41,
+      "question": "關於肩胛帶的外展運動檢查，下列敘述何者正確？",
+      "options": {
+        "A": "當手臂由 0 度開始外展時，前 5 度即可見到肱骨和肩胛骨皆有移動",
+        "B": "只有配合肱骨的內旋才有可能做到完全的外展",
+        "C": "外展時盂肱關節和肩胛骨胸廓關節接合以 1：2 比值進行",
+        "D": "外展到 120 度時肱骨的外科頸會與肩峰相撞擊"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1482,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 42,
+      "question": "依附圖所示，下列敘述何者正確？",
+      "options": {
+        "A": "此為鵝頸畸形（swan-neck deformity）",
+        "B": "伸指肌群之肌腱自遠端指骨（distal）基部剝離",
+        "C": "伴隨近端指間關節（PIP）會出現腫大，稱為 Heberden 氏結節",
+        "D": "類風濕性關節炎患者可見此畸形"
+      },
+      "answer": "D",
+      "explanation": "",
+      "images": [
+        "/question-images/tcm2_1482_0.webp"
+      ]
+    },
+    {
+      "id": 1483,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 43,
+      "question": "關於小圓肌的敘述，下列何者最不適當？",
+      "options": {
+        "A": "由 C5、C6 分出的脊神經根所組成的腋神經（axillary）支配",
+        "B": "主要功能為收縮時使肩部向內旋轉（internal rotation）",
+        "C": "與棘上肌、棘下肌和肩胛下肌共同組成旋轉肌袖",
+        "D": "受損傷時疼痛範圍較侷限在後側肩部及上臂後方"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1484,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 44,
+      "question": "下列肩部動作所對應的肌群，何者最不適當？",
+      "options": {
+        "A": "聳肩（scapular elevation）：斜方肌、大小菱形肌、提肩胛肌",
+        "B": "伸展（extension）：闊背肌、大小圓肌、三角肌後束",
+        "C": "內旋（internal rotation）：棘下肌、胸大肌、小圓肌、闊背肌",
+        "D": "外展（abduction）：三角肌中束、棘上肌、前鋸肌"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1485,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 45,
+      "question": "依《醫宗金鑑‧正骨心法要旨》所述，對應於現代解剖學，下列敘述何者最適宜？",
+      "options": {
+        "A": "「骭骨」跌仆致遠端骨折，外觀易呈現餐叉畸形（dinner-fork deformity）",
+        "B": "「肩解」部位發生脫位時，以「後脫位」型態最多，可能造成「臂臑」穴處有知覺異樣",
+        "C": "因墜墮致「臑骨」骨幹中段骨折，可導致病患手腕無法作背伸動作",
+        "D": "常跑跳運動之青少年易發生於下肢的「輔骨」粗隆部位呈現突起、疼痛的疾患"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1486,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 46,
+      "question": "依《正骨心法要旨》傷損作嘔之敘述，下列何者正確？①傷損作嘔，若因痛甚，或因克伐而傷胃者，宜四君 子湯加當歸、半夏、生薑  ②因忿怒而肝傷者，用小柴胡湯加山梔、茯苓  ③因痰火盛者，用龍膽瀉肝湯 ④因胃氣虛者，用六君子湯加當歸",
+      "options": {
+        "A": "①②",
+        "B": "②④",
+        "C": "③④",
+        "D": "①③"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1487,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 47,
+      "question": "關於掌指及指間關節的敘述，下列何者正確？①《正骨心法要旨》：五指之骨，名錘骨  ②掌指關節多見向 背側脫位，尤以第 1 掌指關節脫位為多  ③掌指關節脫位發生於指端被猛烈撞擊，掌指關節極度掌屈，背側 關節囊撕裂  ④指間關節脫位整復後可採用鄰指膠布固定",
+      "options": {
+        "A": "①③",
+        "B": "②③",
+        "C": "①④",
+        "D": "②④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1488,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 48,
+      "question": "下列敘述，何者不是上肢骨折「臨床癒合」的標準？",
+      "options": {
+        "A": "骨小樑通過骨折斷面",
+        "B": "局部已無縱向叩擊痛",
+        "C": "連續觀察兩週，骨折處不變形",
+        "D": "解除外固定後，能平舉 1 公斤物品達 1 分鐘"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1489,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 49,
+      "question": "關於肱骨髁上骨折的敘述，下列何者最不適當？",
+      "options": {
+        "A": "此類骨折若傷及血管，以肱動脈損傷最常見",
+        "B": "肘內翻（cubitus varus）是常見的併發症",
+        "C": "無位移的骨折不會發生肘內翻（cubitus varus）",
+        "D": "可能會造成骨化性肌炎"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1490,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 50,
+      "question": "國小棒球隊左投手，前天比賽後突然發生左手肘內側疼痛不適。下列敘述何者最不適當？",
+      "options": {
+        "A": "可能是肱骨內上髁骨折",
+        "B": "可能是手肘內側副韌帶損傷",
+        "C": "X 光上可能發現生長板的間隔變大",
+        "D": "因手肘外翻（valgus）壓力及前臂伸肌群收縮所致"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1491,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 51,
+      "question": "患者昨天走路踢到石頭，往前跌撲，其後右手肘疼痛不適，自行塗抹草藥後疼痛稍有改善，但仍活動困難。 下列敘述何者最不適當？",
+      "options": {
+        "A": "外敷草藥後疼痛稍有改善，橈骨頭骨折的情況仍要考慮",
+        "B": "橈骨頭骨折，若血腫被關節囊包裹，局部腫脹未必明顯",
+        "C": "影像檢查開立肘關節 X 光正位（AP view）",
+        "D": "X 光無明確骨折線，若見「fat pad sign」，應先外固定，於 7～10 天後再追蹤一次"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1492,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 52,
+      "question": "關於肋骨骨折的敘述，下列何者最適當？",
+      "options": {
+        "A": "肋骨與軟骨交接處的骨折，在 X 光片上可容易鑑別",
+        "B": "肋骨骨折多發生於第 1 肋至第 3 肋",
+        "C": "嚴重咳嗽或噴嚏時可引起肋骨骨折",
+        "D": "單一肋骨骨折時，胸廓可見吸氣時向內凹陷，呼氣時向外凸出的現象"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1493,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 53,
+      "question": "關於骨盆骨折之敘述，下列何者最適當？",
+      "options": {
+        "A": "未損及骨盆後部負重弓者，大多不需固定，只需臥床休息，故傷後第 1 週即可下地活動",
+        "B": "髂前上棘骨折常見的原因是直接暴力",
+        "C": "中後期的治則為強筋壯骨、舒筋通絡，可內服健步虎潛丸",
+        "D": "若患者發生骨盆不穩定性骨折，最重要的是先確認骨折型態"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1494,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 54,
+      "question": "有關骨折造成神經損傷後遺症的敘述，下列何者最不適當？",
+      "options": {
+        "A": "肱骨內上髁骨折並伴有肘關節向橈側脫位容易造成橈神經損傷",
+        "B": "腓骨小頭上端骨折常伴隨腓總神經損傷",
+        "C": "髖臼骨折脫位容易伴隨坐骨神經損傷",
+        "D": "高處落下造成腰椎骨折脫位容易合併脊髓神經損傷"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1495,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 55,
+      "question": "有關骨折之敘述，下列何者最適當？①蔽心骨骨折容易造成氣胸  ②膂骨骨折於第 11～12 節處好發  ③橛骨 骨折大多無明顯移位，若有移位，仍可用手法復位  ④一側下橫骨上、下支骨折合併同側髂關節脫位較容易 合併出現血管或神經損傷等併發症  ⑤交骨骨折若出現移位，下折段多重疊於上折段的前面",
+      "options": {
+        "A": "②③④",
+        "B": "②③⑤",
+        "C": "①②⑤",
+        "D": "①③④"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1496,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 56,
+      "question": "有關足部舟狀骨骨折之敘述，下列何者正確？①《證治準繩‧瘍醫》：「踝骨之前，各有下力骨者左右各 十」，此處下力骨包含足部舟狀骨  ②足部舟狀骨，位於足部內側，上接跟骨形成關節面，下接楔形骨形成 內側足縱弓  ③足部舟狀骨，會因外傷暴力導致血管損傷，常造成足部舟狀骨缺血性壞死  ④脛骨後肌肌腱 附著於足部舟狀骨結節，常因外翻暴力或蹠屈暴力導致撕脫性骨折",
+      "options": {
+        "A": "①②③",
+        "B": "②③④",
+        "C": "①③④",
+        "D": "①②④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1497,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 57,
+      "question": "有關髖關節及其脫位之敘述，下列何者正確？①髖關節，古稱「髀樞」、「大膀」，《傷科補要》：「若出 之，則難上，因其膀大肉厚，手捏不住故也。」  ②髖關節，由股骨頭與髖臼窩形成關節面，為身體最大的 關節，具有極佳的穩定性，但其靈活度不足  ③髖關節，周圍之肌肉豐厚，周圍韌帶厚實，連接軀幹與下 肢，負重性佳，一般而言不易發生關節脫位  ④髖關節的脫位，若依脫出髖臼的位置而定，可分成後脫位、 前脫位與中心脫位",
+      "options": {
+        "A": "①②③",
+        "B": "②③④",
+        "C": "①②④",
+        "D": "①③④"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1498,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 58,
+      "question": "有關髖關節中心性脫位之敘述，下列何者最不適當？",
+      "options": {
+        "A": "髖關節中心性脫位，即股骨頭往骨盆腔內脫出，通常會合併骨盆骨折或髖臼底骨折",
+        "B": "其症狀腫脹不明顯，但疼痛與活動障礙明顯，此種骨折會因股骨頸被髖臼骨折處卡住而不易復位",
+        "C": "患側之股骨大轉子較健側不易摸到，且外觀畸型不明顯，縮短的現象也較不明顯",
+        "D": "脫位初期，因股骨頭往骨盆腔內陷導致髖關節腫脹，腹脹，大便不下，此為濕熱阻滯，應以清利濕熱為主"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1499,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 59,
+      "question": "有關膝關節及其脫位之敘述，下列何者最不適當？",
+      "options": {
+        "A": "膝關節骨性穩定性較差，主要由周圍軟組織維持穩定性，故膝關節脫位常伴隨骨折、肌肉神經血管損傷",
+        "B": "膝關節前脫位，常因膝伸直而脛骨遭受暴力往後破壞後側關節囊，導致脛骨脫位於股骨前方所致",
+        "C": "膝關節後脫位，常因脛骨接受前側暴力而使膝關節過度伸直，脛骨向後脫出於股骨之後所致",
+        "D": "膝關節側方脫位，常因接受由側向來的暴力，合併對側脛骨平臺骨折、腓總神經與副韌帶的損傷"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1500,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 60,
+      "question": "有關踝關節及其脫位之敘述，下列何者最不適當？",
+      "options": {
+        "A": "踝關節內側為三角韌帶，較為堅強有力；外側為跟腓韌帶、前距腓韌帶與後距腓韌帶",
+        "B": "下脛腓聯合常因過度外翻時產生損傷，導致下脛腓聯合分離，會造成關節的穩定性變差",
+        "C": "踝關節脫位，可依脫位方向分成前脫位、後脫位、內脫位與外脫位，臨床上以內脫位最為常見",
+        "D": "踝關節的開放性脫位，多為外脫位引起，主要治療重點為先縫合、後復位，並且強調復位準確以利負重"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1501,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 61,
+      "question": "胞瞼內面顆粒纍纍，色黃而軟，狀如粟粒，《證治準繩‧七竅門》稱之為粟瘡，下列何者不是其病因病機？",
+      "options": {
+        "A": "脾胃虛弱，濕邪阻絡",
+        "B": "濕鬱化熱，濕熱壅阻脈絡",
+        "C": "風濕熱壅阻脈絡",
+        "D": "肺肝風熱，血熱壅滯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1502,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 62,
+      "question": "依據五輪學說，下列敘述何者正確？",
+      "options": {
+        "A": "眼瞼為水輪",
+        "B": "兩眦為風輪",
+        "C": "黑睛為氣輪",
+        "D": "瞳神為水輪"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1503,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 63,
+      "question": "40 歲的張小姐患有類風濕性關節炎，近日因右眼劇烈疼痛、視物模糊至眼科就診，檢查發現白睛深部有一向 外突起之橢圓形紫紅色結節，推之不移，壓痛明顯，周圍布有紫赤血脈。關於張小姐的狀況，下列敘述何者 正確？",
+      "options": {
+        "A": "中醫病名為火疳，又名金疳",
+        "B": "本病類似於西醫學的前部鞏膜炎",
+        "C": "本病病程進展迅速，但一旦治癒，便不易復發",
+        "D": "本病邪熱每多累及氣分，故治療亦應顧及氣分"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1504,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 64,
+      "question": "有關白睛溢血之敘述，下列何者錯誤？",
+      "options": {
+        "A": "心營耗損，肝腎不足者，以歸芍地黃湯加減",
+        "B": "肺熱引起者，可以退赤散加減，清肺散血",
+        "C": "熱客肺經，肺氣不降，血液逆於上，導致血脈破裂，白睛溢血",
+        "D": "風熱引起者，宜滋陰降火，宜立騰煎敷眼"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1505,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 65,
+      "question": "關於黑睛疾病，下列敘述何者錯誤？",
+      "options": {
+        "A": "黑睛易受風熱邪毒侵襲",
+        "B": "黑睛毫無血絡，營養供應較差，抵抗力較低，一旦發生病變，往往需要較長時間才能痊癒",
+        "C": "黑睛在五輪學說中屬風輪，辨證常從肝膽著手",
+        "D": "抱輪紅赤是指環繞黑睛周圍發紅，其血絡推之可動"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1506,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 66,
+      "question": "現代醫學視網膜色素變性導致視野變窄，視物不清，相當於下列何種疾病？",
+      "options": {
+        "A": "圓翳內障",
+        "B": "青風內障",
+        "C": "高風內障",
+        "D": "驚震內障"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1507,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 67,
+      "question": "何書首載「咽喉梅毒」及「瘟疫病」？",
+      "options": {
+        "A": "《千金翼方》",
+        "B": "《外台秘要》",
+        "C": "《景岳全書》",
+        "D": "《外科正宗》"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1508,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 68,
+      "question": "常用於治療腫瘤的中草藥，如白花蛇舌草、石上柏、山豆根、虎杖、青黛、半枝蓮，以上草藥之功效屬於下 列何種類型？",
+      "options": {
+        "A": "活血散結",
+        "B": "鎮靜止痛",
+        "C": "瀉火解毒",
+        "D": "祛痰散結"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1509,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 69,
+      "question": "某患者耳殼反覆糜爛，皮膚增厚、粗糙、上覆鱗屑，面色萎黃，身倦乏力，舌質淡，苔白，脈細緩，下列辨 證施治何者正確？①此病為耳瘡  ②相當於外耳濕疹  ③內治宜清熱利濕  ④外治用紫連膏、碧玉散  ⑤護 理可用油膏類藥，使之滋潤",
+      "options": {
+        "A": "①②③",
+        "B": "①③⑤",
+        "C": "②③④",
+        "D": "②④⑤"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1510,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 70,
+      "question": "耳鳴係因風熱之邪侵襲時，下列治法何者錯誤？",
+      "options": {
+        "A": "內治宜疏風清熱散邪",
+        "B": "常用方劑如銀翹散、蔓荊子散",
+        "C": "外治忌滴耳",
+        "D": "可用咽鼓管自行吹張法和耳膜按摩術"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1511,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 71,
+      "question": "在耳殼部腫起而膚色不變，不熱不痛，穿刺有淡黃色黏液，抽後消腫，不久便復脹起的病症為何？",
+      "options": {
+        "A": "斷耳瘡",
+        "B": "旋耳瘡",
+        "C": "耳癤",
+        "D": "耳殼流痰"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1512,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 72,
+      "question": "患者經鼻腔檢查，發現鼻內有多個表面光滑、大小不一、帶蒂可活動、質軟無痛的贅生物，為下列何病的主 要診斷依據？",
+      "options": {
+        "A": "鼻槁",
+        "B": "鼻鼽",
+        "C": "鼻疳",
+        "D": "鼻息肉"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1513,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 73,
+      "question": "為治療因肺經蘊熱，邪毒外襲所致之鼻疳，宜清熱瀉肺，疏風解毒，可選用下列何方加減內服治療？",
+      "options": {
+        "A": "通竅湯",
+        "B": "草薢滲濕湯",
+        "C": "黃芩湯",
+        "D": "龍膽瀉肝湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1514,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 74,
+      "question": "傷風鼻塞之病，因外感風寒所致，用針灸療法，鼻塞者，宜選下列何穴治療？",
+      "options": {
+        "A": "頭維穴、太陽穴",
+        "B": "迎香穴、印堂穴",
+        "C": "支溝穴、手三里穴",
+        "D": "內關穴、三陰交穴"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1515,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 75,
+      "question": "陳老師長期教書，聲嘶日久，勞則加重，上午明顯，語言低微，講話費力，不能持久。檢查咽喉黏膜色淡， 聲帶鬆弛無力，閉合不良。以上敘述應屬於慢喉瘖的何種證型？",
+      "options": {
+        "A": "肺腎陰虛",
+        "B": "肺脾氣虛",
+        "C": "肝腎陰虛",
+        "D": "氣滯血瘀"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1516,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 76,
+      "question": "張大年長期做婚禮主持人，聲嘶日久，講話費力，喉內不適，有異物感，常清喉嚨，胸悶。檢查見聲帶色暗 滯，有小結節。依上述診斷應給予何項處置較適宜？",
+      "options": {
+        "A": "宜行氣活血、化痰開音，選用會厭逐瘀湯加減",
+        "B": "宜滋陰降火、清利咽喉，選用知柏地黃湯加減",
+        "C": "宜滋養補陰、降火利喉，選用百合固金湯加減",
+        "D": "宜補益肺脾、益氣開音，選用補中益氣湯加減"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1517,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 77,
+      "question": "關於「風熱乳蛾」之診斷要點及敘述，下列何者正確？",
+      "options": {
+        "A": "為急性傳染病，體熱不高",
+        "B": "咽喉疼痛喉核紅腫，有黃白色膿點",
+        "C": "虛弱病容，神疲，面色蒼白，脈細而數",
+        "D": "喉部假膜呈現奶油樣，超過喉核範圍，白膜堅韌而厚，不易擦去"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1518,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 78,
+      "question": "下列何者是治療風熱牙痛最宜選用的內治方劑？",
+      "options": {
+        "A": "薄荷連翹方",
+        "B": "涼膈散去大黃、芒硝",
+        "C": "知柏八味丸加狗脊",
+        "D": "清胃散"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1519,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 79,
+      "question": "牙齒疏豁鬆動，牙齦潰爛萎縮，牙根宣露，潰爛邊緣微紅腫，或有頭暈，耳鳴，手足心熱，腰痠，舌質微 紅，少苔，脈細數，兼口燥咽乾，口臭，齦腫，溢膿，便秘等症狀，最宜選用下列何方來治療？",
+      "options": {
+        "A": "清胃散加枸杞子、龜板、杜仲",
+        "B": "玉女煎加女貞子、菟絲子",
+        "C": "六味地黃湯加枸杞子、龜板、杜仲",
+        "D": "甘露飲加女貞子、菟絲子"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1520,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 0,
+      "number": 80,
+      "question": "齦肉萎縮，牙根漸露，牙齒鬆動，經常滲出血液或膿液為特徵的病證，為下列何者？",
+      "options": {
+        "A": "牙癰",
+        "B": "牙齩癰",
+        "C": "牙瘡",
+        "D": "牙宣"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1521,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 1,
+      "question": "下列何人為感慨時醫之針術與內經古法不合，而作《針灸失傳論》？",
+      "options": {
+        "A": "徐靈胎",
+        "B": "楊繼洲",
+        "C": "徐鳳",
+        "D": "朱丹溪"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1522,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 2,
+      "question": "《素問》中的那一篇章並非記載腧穴論述？",
+      "options": {
+        "A": "《氣穴論》",
+        "B": "《氣府論》",
+        "C": "《骨空論》",
+        "D": "《蘭靈秘典論》"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1523,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 3,
+      "question": "針灸傳入歐洲約於公元幾世紀？",
+      "options": {
+        "A": "十六",
+        "B": "十七",
+        "C": "十八",
+        "D": "十九"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1524,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 4,
+      "question": "有關足太陽膀胱經病候，下列何者錯誤？",
+      "options": {
+        "A": "衝頭痛",
+        "B": "目似脫，項如拔",
+        "C": "臂厥",
+        "D": "項、背、腰、尻、膕、腨、腳皆痛"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1525,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 5,
+      "question": "依《難經．二十八難》記載，「起於跟中，循外踝上行，入風池」，係指下列何經的循行內容？",
+      "options": {
+        "A": "陽維脈",
+        "B": "陰維脈",
+        "C": "陽蹻脈",
+        "D": "陰蹻脈"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1526,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 6,
+      "question": "有關衝脈之敘述，下列何者錯誤？",
+      "options": {
+        "A": "其為病苦寒熱",
+        "B": "起於氣衝",
+        "C": "經脈之海",
+        "D": "並足陽明、足少陰之經而行"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1527,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 7,
+      "question": "臨床上常檢測十二經絡原穴的導電度，進而推測臟腑的虛實，下列那些可作為量測的穴位點？①陽 谷　②陽池　③京骨　④束骨　⑤大鍾　⑥大陵",
+      "options": {
+        "A": "①③⑤",
+        "B": "②③⑥",
+        "C": "①④⑥",
+        "D": "②④⑤"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1528,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 8,
+      "question": "《針灸科學》綜合諸著所載，下列各經脈的單側穴數何者正確？",
+      "options": {
+        "A": "足太陰脾經20穴",
+        "B": "足少陰腎經27穴",
+        "C": "足太陽膀胱經66穴",
+        "D": "足少陽膽經45穴"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1529,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 9,
+      "question": "有關「足少陰腎經」五腧穴的敘述，下列何者正確？",
+      "options": {
+        "A": "井穴為湧泉穴",
+        "B": "俞穴為然谷穴",
+        "C": "經穴為照海穴",
+        "D": "合穴為復溜穴"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1530,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 10,
+      "question": "下列何穴為馬丹陽天星十二穴之一？",
+      "options": {
+        "A": "內關",
+        "B": "太衝",
+        "C": "神門",
+        "D": "公孫"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1531,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 11,
+      "question": "在國際期刊中經常提到PC6，對這個穴位的敘述下列何者錯誤？",
+      "options": {
+        "A": "是陰蹻脈的會穴",
+        "B": "深刺時可能會碰觸到神經",
+        "C": "對癌症化療引起的眩暈嘔吐有效",
+        "D": "配人中，治暈厥"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1532,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 12,
+      "question": "產後母乳分泌不足，下列幾個穴可治療之？①關衝　②前谷　③液門　④少澤",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1533,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 13,
+      "question": "一患者因頸椎狹窄導致項背僵硬及手指麻木不能握物，下列何穴較不適當？",
+      "options": {
+        "A": "後谿",
+        "B": "蠡溝",
+        "C": "列缺",
+        "D": "外關"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1534,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 14,
+      "question": "1989年大陸學者在證明經絡循行研究中，利用叩擊方法以聽診器聽出經脈的高振動聲波。若叩擊支 正穴，則無法在下列那個循行處聽出高振動音聲？",
+      "options": {
+        "A": "出肘內側兩筋之間",
+        "B": "其直者，復從心系，卻上肺",
+        "C": "入缺盆絡心",
+        "D": "出肩解，繞肩胛，交肩上"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1535,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 15,
+      "question": "《針灸甲乙經》卷十二提到主治「失欠，下齒齲，下牙痛，䪼腫」的是下列那一個穴位？",
+      "options": {
+        "A": "商陽",
+        "B": "下關",
+        "C": "頰車",
+        "D": "合谷"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1536,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 16,
+      "question": "膀胱經之通谷、束骨、崑崙、委中、至陰，其五腧穴之經氣流注順序分別為何？",
+      "options": {
+        "A": "行—溜—注—入—出",
+        "B": "出—行—溜—注—入",
+        "C": "入—出—行—溜—注",
+        "D": "溜—注—行—入—出"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1537,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 17,
+      "question": "有關足太陰脾經的五腧穴敘述，下列何者錯誤？",
+      "options": {
+        "A": "俞穴為太白",
+        "B": "井穴為隱白",
+        "C": "滎穴為公孫",
+        "D": "合穴為陰陵泉"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1538,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 18,
+      "question": "有關足厥陰肝經穴位主治之敘述，下列何者錯誤？",
+      "options": {
+        "A": "陰包，主治腰尻引小腹痛",
+        "B": "足五里，主治頭風頭痛",
+        "C": "章門，主治兩脅積氣如卵石",
+        "D": "期門，主治胸中煩熱奔豚上下"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1539,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 19,
+      "question": "下列何穴位於口角外四分？",
+      "options": {
+        "A": "頰車",
+        "B": "地倉",
+        "C": "迎香",
+        "D": "素髎"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1540,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 20,
+      "question": "有關商丘穴的敘述，下列何者錯誤？",
+      "options": {
+        "A": "在足內踝尖上一寸",
+        "B": "五行屬性屬金穴",
+        "C": "主治胃脘痛、腹脹、腹痛、腸鳴、足踝痛",
+        "D": "係脾經的經穴"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1541,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 21,
+      "question": "有關通天穴的敘述，下列何者錯誤？",
+      "options": {
+        "A": "穴處膀胱經至高之位",
+        "B": "百會穴旁開一寸五分",
+        "C": "四神聰穴包含通天穴",
+        "D": "通天穴也可以用來治療落枕"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1542,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 22,
+      "question": "有關任脈穴位之敘述，下列何者錯誤？",
+      "options": {
+        "A": "臍上量七寸為巨闕",
+        "B": "胃酸過多，鳩尾可能出現壓痛點",
+        "C": "中庭、中府治療膈塞食不下",
+        "D": "膻中為手厥陰心包經之募穴"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1543,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列敘述何者正確？",
+      "options": {
+        "A": "百會之為病，男子七疝",
+        "B": "帶脈之為病，女子瘕聚",
+        "C": "督脈之別絡，名曰尾翳",
+        "D": "督脈之為病，脊強而厥"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1544,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 24,
+      "question": "有關經外奇穴與新穴中，下列何穴主治小腸疝氣、胎衣不下、胸痛吐酸？",
+      "options": {
+        "A": "髖骨",
+        "B": "百勞",
+        "C": "內外踝尖",
+        "D": "獨陰"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1545,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 25,
+      "question": "耳針治療，「三角窩」是圖中何穴位？",
+      "options": {
+        "A": "甲",
+        "B": "乙",
+        "C": "丙",
+        "D": "丁"
+      },
+      "answer": "A",
+      "explanation": "",
+      "images": [
+        "/question-images/tcm2_1545_0.webp"
+      ]
+    },
+    {
+      "id": 1546,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 26,
+      "question": "灸的劑量分輕、中、重度灸，其中「中度灸」 一般燃燒幾壯？",
+      "options": {
+        "A": "3～5",
+        "B": "7～10",
+        "C": "15～20",
+        "D": "21以上"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1547,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 27,
+      "question": "施灸之先後，據千金方云，下列何者正確？",
+      "options": {
+        "A": "凡灸先陽後陰，是說治療從頭向左而漸上",
+        "B": "凡灸先陰後陽，是說治療從頭向右而漸上",
+        "C": "凡灸先陽後陰，是說治療從頭向左而漸下",
+        "D": "凡灸先陰後陽，是說治療從頭向左而漸下"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1548,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 28,
+      "question": "下列何者不屬於刮痧療法的適應症？",
+      "options": {
+        "A": "糖尿病",
+        "B": "中暑",
+        "C": "急性吐瀉",
+        "D": "頑固性痹證"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1549,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 29,
+      "question": "有關「腰痛」之敘述，下列何者錯誤？",
+      "options": {
+        "A": "多與足太陽經、督脈和足少陰經脈、經筋病變有關",
+        "B": "寒濕腰痛多搭配水道、陽陵泉治療",
+        "C": "勞損腰痛多搭配膈俞、水溝治療",
+        "D": "腎虛腰痛多搭配志室、太谿治療"
+      },
+      "answer": "B",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": 1550,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 30,
+      "question": "有關牙痛之敘述，下列何者錯誤？",
+      "options": {
+        "A": "病因病機分為：腎陰虧損、腎虛致精髓不足，或是胃火熾盛、大腸燥熱而循經上擾",
+        "B": "主要治療穴位為：合谷、內庭、頰車、聽會、曲池",
+        "C": "先針健側合谷，針斜向下而入，利用雀啄法，使患者感覺酸麻如電氣直達手指",
+        "D": "如屬腎虛及肝火所致之虛火浮動，可以選取太谿及太衝穴"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1551,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 31,
+      "question": "有關肝硬化病因病機之敘述，下列何者錯誤？",
+      "options": {
+        "A": "病機為初期肝腎失調，久病累及脾陰脾陽",
+        "B": "脾腎陽虛會導致水濕運化不足，氣化不利，加重腹水",
+        "C": "血吸蟲也會導致肝硬化的產生",
+        "D": "常觀察到氣滯血瘀、寒濕困脾"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1552,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 32,
+      "question": "針灸治療心悸的穴位，下列選項何者較適宜？①神門　②心俞　③中都　④巨闕　⑤內關　⑥大巨",
+      "options": {
+        "A": "①②③④",
+        "B": "①②④⑤",
+        "C": "②③⑤⑥",
+        "D": "③④⑤⑥"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1553,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 33,
+      "question": "外用白芥子、白芷、甘遂研末，調以蜂蜜，在氣喘病患身上何穴上熨之，可減輕呼吸困難？",
+      "options": {
+        "A": "身柱",
+        "B": "風市",
+        "C": "大赫",
+        "D": "風府"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1554,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 34,
+      "question": "下列何穴位不是尿道炎的常用穴？",
+      "options": {
+        "A": "內關、魚際",
+        "B": "腎俞、大腸俞、小腸俞",
+        "C": "氣海、關元",
+        "D": "灸神闕"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1555,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 35,
+      "question": "有關遺精病因病機及針灸治療之敘述，下列何者錯誤？",
+      "options": {
+        "A": "大部分遺精的患者是由於精神因素所引起",
+        "B": "外生殖器及附屬性腺的炎症也可導致遺精",
+        "C": "治療遺精以關元、三陰交、太衝、神門、大陵、志室、腎俞、太谿等穴為基礎",
+        "D": "若濕熱下注加照海、陽谷。若陰虛火旺加中極、陽陵泉等穴"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1556,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 36,
+      "question": "中國那一個朝代因醫術以針灸為主，所以有「一針二灸三用藥」之說？",
+      "options": {
+        "A": "唐朝",
+        "B": "春秋戰國時代",
+        "C": "元朝",
+        "D": "明朝"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1557,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 37,
+      "question": "關於手三陽經及手三陰經在頭面部的分布情形，下列何者錯誤？",
+      "options": {
+        "A": "手陽明大腸經自頸前貫頰，交人中，挾鼻旁",
+        "B": "手少陽三焦經自頸側而下，繞行耳前後",
+        "C": "手太陽小腸經自頸後上頰，至目內眥，卻入鼻中",
+        "D": "手少陰心經有一分支，上挾咽，繫目系"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1558,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 38,
+      "question": "根據《靈樞．經脈》，關於足陽明胃經的循行及病候敘述，下列何者錯誤？",
+      "options": {
+        "A": "起於鼻之交頞中，旁約太陽之脈",
+        "B": "下膈屬胃，絡脾",
+        "C": "是動則病，齒痛頸腫",
+        "D": "是主血所生病者"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1559,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 39,
+      "question": "關於手厥陰心包經的循行及病候敘述，下列何者錯誤？",
+      "options": {
+        "A": "循臑內，行太陰少陰之間",
+        "B": "其支者，循胸，出脅，下腋三寸，上抵腋下",
+        "C": "其支者，別掌中，循小指出其端",
+        "D": "是動則病：......甚則胸脅支滿，心中憺憺大動，面赤目黃，喜笑不休"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1560,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 40,
+      "question": "關於奇經八脈的循行及病候敘述，下列何者正確？",
+      "options": {
+        "A": "任脈起於中極之下；任之為病，腹滿，腰溶溶若坐水中",
+        "B": "陽維起於諸陽會；陽維為病，苦心痛",
+        "C": "陰蹻脈，起於跟中；陰蹻為病，陽緩而陰急",
+        "D": "衝脈者，並足厥陰之經，夾臍上行；衝之為病，苦寒熱"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1561,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 41,
+      "question": "關於十二原穴治療功能與臨床應用的敘述，下列何者錯誤？",
+      "options": {
+        "A": "因俞原同氣，故陰經無原，治俞即所以治原也，陽經有原，治原即所以治俞也",
+        "B": "臟腑原穴相配是五臟原穴與六腑原穴陰陽上下的配穴法，適用於內臟有病，而症狀主要反映在體表 器官上",
+        "C": "原絡相配可使用在外感、內傷變成的多種慢性疾病，在取用原穴的同時，常配合異經的絡穴來協同 治療",
+        "D": "異經原合相配，如手陽明大腸經原穴合谷配足陽明胃經合穴足三里，可用來調理腸胃、理氣消脹、 化滯通便"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1562,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 42,
+      "question": "有關十二經脈流注起止穴的敘述，下列何者正確？",
+      "options": {
+        "A": "足太陰脾經：起穴為大敦；止穴為大包",
+        "B": "手少陰心經：起穴為極泉；止穴為少海",
+        "C": "手厥陰心包經：起穴為風池；止穴為中沖",
+        "D": "手太陰肺經：起穴為中府；止穴為少商"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1563,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 43,
+      "question": "腎小球腎炎和腎盂腎炎的患者，其壓痛反應位於何穴之上？",
+      "options": {
+        "A": "太淵",
+        "B": "太白",
+        "C": "太谿",
+        "D": "太衝"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1564,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 44,
+      "question": "手厥陰心包經，自「天泉穴」到「中衝穴」之間共有幾個穴位？",
+      "options": {
+        "A": "6",
+        "B": "5",
+        "C": "4",
+        "D": "3"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1565,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 45,
+      "question": "有關「大陵穴」的敘述，下列何者錯誤？",
+      "options": {
+        "A": "手掌後，腕關節橫紋中央處，兩筋兩骨之間陷中",
+        "B": "主治身熱、頭痛、短氣等",
+        "C": "為心包經的滎穴",
+        "D": "配神門、人中、百會，治精神病"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1566,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 46,
+      "question": "四總穴中主治頭面一切病症之穴位，下列敘述何者錯誤？",
+      "options": {
+        "A": "取穴：手伸指側置，尺側向上",
+        "B": "為原穴",
+        "C": "可用在針刺麻醉",
+        "D": "懷孕時慎用本穴"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1567,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 47,
+      "question": "有關臑會穴的敘述，下列何者錯誤？",
+      "options": {
+        "A": "位於三角肌後緣",
+        "B": "消濼穴上三寸",
+        "C": "在臂外廉，去肩髎五寸",
+        "D": "斜舉其臂，前臂旋前，則三角肌隆起，與肱三頭肌外側頭隆起間之凹陷中是穴"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1568,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 48,
+      "question": "根據《針灸科學》，有關然谷穴的位置與主治敘述，下列何者錯誤？",
+      "options": {
+        "A": "穴位於足內踝前下方，去公孫後二寸陷中",
+        "B": "穴位在舟狀骨與楔狀骨關節部之下陷中",
+        "C": "治療足一寒一熱，不能久立",
+        "D": "治療喘呼煩渴、咳血、喉痺"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1569,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 49,
+      "question": "根據《針灸科學》，下列何者不是大敦穴的主治項目？",
+      "options": {
+        "A": "五淋七疝、小便頻數不禁",
+        "B": "善恐，心中結熱",
+        "C": "陰痛引少腹，陰挺出",
+        "D": "血崩，尸厥如死"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1570,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 50,
+      "question": "臀部至大腿外側疼痛，採循經取穴，下列何者錯誤？",
+      "options": {
+        "A": "足三里",
+        "B": "風市",
+        "C": "居髎",
+        "D": "中瀆"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1571,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 51,
+      "question": "有關胃經與任脈同高度之穴位，下列何者錯誤？",
+      "options": {
+        "A": "梁門—中脘",
+        "B": "承滿—上脘",
+        "C": "太乙—下脘",
+        "D": "滑肉門—陰交"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1572,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 52,
+      "question": "關於氣海穴的敘述，下列何者錯誤？",
+      "options": {
+        "A": "在陰交穴下半寸",
+        "B": "石門穴上一寸",
+        "C": "關元穴上一寸五分",
+        "D": "肚臍下一寸五分"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1573,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 53,
+      "question": "《靈樞．九針十二原》記載九針的形狀及功用：「長四寸、尖如挺，其鋒微圓，以瀉機關之水」為 下列何者？",
+      "options": {
+        "A": "員針",
+        "B": "鍉針",
+        "C": "大針",
+        "D": "員利針"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1574,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 54,
+      "question": "下列針刺基本手法，可以操作出補瀉作用者，何者除外？",
+      "options": {
+        "A": "撚法",
+        "B": "捫法",
+        "C": "提法",
+        "D": "搓法"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1575,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 55,
+      "question": "下列針刺基本手法，何者操作補瀉時會結合呼吸的動作？",
+      "options": {
+        "A": "盤法",
+        "B": "退法",
+        "C": "刮法",
+        "D": "努法"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1576,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 56,
+      "question": "《內經．官針》：「直入直出，稀發針而深之，以治氣盛而熱者也。」此為何種刺法？",
+      "options": {
+        "A": "報刺",
+        "B": "輸刺",
+        "C": "贊刺",
+        "D": "直針刺"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1577,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 57,
+      "question": "有關艾灸法中之艾卷灸，下列敘述何者正確？",
+      "options": {
+        "A": "艾條灸包括雀啄灸及迴旋灸",
+        "B": "雷火針先用墨筆點記穴位，直接將捲之艾葉點燃，於穴位上來治療閃挫諸骨間痛及寒濕痛的病人",
+        "C": "太乙神針用來治療熱痺、半身不遂，及一切痛症，沉痼之疾",
+        "D": "太乙神針製法與艾條灸相似，用純艾絨不加藥物，熏灸患處"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1578,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 58,
+      "question": "下列敘述中共有幾項是拔火罐的禁忌或不適合拔火罐？①毛髮多的部位　②血友病　③抽搐患者 ④骨骼凹凸不平處　⑤全身皮膚病",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1579,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 59,
+      "question": "有關婦女須慎用刮痧療法之四個期間，下列何者正確？①行經期　②排卵期　③妊娠期　④更年期 ⑤青春期　⑥哺乳期",
+      "options": {
+        "A": "①②⑤⑥",
+        "B": "②③④⑤",
+        "C": "①③④⑥",
+        "D": "③④⑤⑥"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1580,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 60,
+      "question": "下列那些疾病為刮痧療法的適應症？①急性咽喉痛　②新冠肺炎高燒　③目赤腫痛　④急性吐瀉 ⑤急性盲腸炎",
+      "options": {
+        "A": "①③④",
+        "B": "①②③",
+        "C": "③④⑤",
+        "D": "①③⑤"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1581,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 61,
+      "question": "45歲某女，由於長期情志不舒，經常出現心悸、失眠、健忘、頭暈、食慾不振等症狀，其舌質淡， 脈細弱。下列診斷及針刺治療之選項何者最適宜？①屬於鬱證範疇，證屬心脾兩虛　②屬於痙證範 疇，證屬肝風內動　③針刺內關、三陰交、太衝等穴　④針刺水溝、環跳、陽陵泉等穴",
+      "options": {
+        "A": "①④",
+        "B": "②③",
+        "C": "①③",
+        "D": "②④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1582,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 62,
+      "question": "陳小姐由於經常情緒欠佳導致氣機鬱滯，近日出現咽中作梗，如有梅核梗於咽中，吞之不下，咯之 不出，胸中窒悶，苔白膩，脈弦滑，診為痰氣鬱結導致的梅核氣，下列隨證選穴何者最適宜？",
+      "options": {
+        "A": "膻中、豐隆",
+        "B": "陽陵泉、湧泉",
+        "C": "睛明、光明",
+        "D": "啞門、通里"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1583,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 63,
+      "question": "驚悸之病位在心，常取心經「原穴」、心經「郄穴」、心包經「絡穴」，以調理心經氣血，收寧心 安神，定悸止驚之效，上述提及的三個穴位分別為下列何者？",
+      "options": {
+        "A": "少府、通里、大陵",
+        "B": "神門、陰郄、內關",
+        "C": "少衝、靈道、間使",
+        "D": "少海、極泉、郄門"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1584,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 64,
+      "question": "20歲某大學生外出騎車吹風淋雨後，第二日睡覺醒來發現皺眉時患側的額頭沒有皺紋產生，且患側 面部麻木感，眼不易閉合，鼻唇溝平坦，口角下垂，不能做鼓頰和吹口哨的動作，其餘手腳的動作 與感覺無異常。下列對該患者的臨床診斷及治療方法之選項何者最適當？①屬於末梢型顏面神經麻 痺　②屬於中樞型顏面神經麻痺　③取手足陽明經穴為主　④取手足太陰經穴為主",
+      "options": {
+        "A": "①④",
+        "B": "②③",
+        "C": "①③",
+        "D": "②④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1585,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 65,
+      "question": "關於坐骨神經痛的病因病機及診斷要點，下列何者錯誤？",
+      "options": {
+        "A": "本病是由於形成坐骨神經的第一、二腰椎神經根受到刺激所造成",
+        "B": "坐骨神經痛大多為一側性的腰腿部陣發性或持續性疼痛",
+        "C": "風寒濕痺者之疼痛，得暖則緩解，遇寒冷或陰雨天氣以及秋冬季節則加劇",
+        "D": "勞損腎虛者是腰痛綿綿不休，休息後能暫時輕減，但稍遇勞累則疼痛會加重"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1586,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 66,
+      "question": "狹窄性肌腱滑膜炎以針灸治療取穴，下列何者最不適當？",
+      "options": {
+        "A": "列缺",
+        "B": "偏歷",
+        "C": "外關",
+        "D": "陽谿"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1587,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 67,
+      "question": "針灸治療中指扳機指，其取穴下列何者最適當？",
+      "options": {
+        "A": "少府",
+        "B": "合谷",
+        "C": "勞宮",
+        "D": "魚際"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1588,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 68,
+      "question": "頸椎脊髓損傷針灸治療，應選下列那一穴組？",
+      "options": {
+        "A": "照海、列缺",
+        "B": "公孫、內關",
+        "C": "足臨泣、外關",
+        "D": "申脈、後谿"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1589,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 69,
+      "question": "有關頸肌痛之描述，下列何者錯誤？",
+      "options": {
+        "A": "痛連項背，俯仰受限，病變以足太陽膀胱經為主",
+        "B": "痛連頸臂，頸部不能側彎，病變以手足少陽經為主",
+        "C": "頭針可選用感覺區上1/5",
+        "D": "體針可選用風池、大椎、肩井"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1590,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 70,
+      "question": "顳頷關節症候群（Temporomandibular Joint Syndrome），依經脈循行，其病位在何經？",
+      "options": {
+        "A": "膀胱經",
+        "B": "腎經",
+        "C": "脾經",
+        "D": "胃經"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1591,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 71,
+      "question": "膽結石造成腹部疼痛時選用的穴位有中脘、內關、章門、期門、日月、陽陵泉等，下列敘述何者錯 誤？",
+      "options": {
+        "A": "腑會中脘、也是胃募穴",
+        "B": "臟會章門",
+        "C": "筋會陽陵泉",
+        "D": "膽募期門"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1592,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 72,
+      "question": "灸法治療泄瀉，下列敘述共幾項正確？①灸關元穴治下焦濕熱　②隔鹽灸神闕穴可以溫腎壯陽　③ 灸大腸俞穴可固腸止瀉　④脾俞穴針灸並用可溫運脾陽",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1593,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 73,
+      "question": "端午時節吃了過多的粽子，腹脹滿疼痛，甚則嘔吐，選用穴位以治療嘔吐症狀，下列敘述共幾項正 確？①先選內關、大陵、內庭、足三里　②中脘是胃之募穴，採用置針術　③如無發熱，中脘與上 脘各灸三五壯　④熱邪內蘊時，可瀉大陵治療之",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1594,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 74,
+      "question": "平素體質虛弱，心虛膽怯，惱怒，自覺心跳、心慌，時作時息，脈細弱或結代，舌質淡紅。下列何 穴位最不適當？",
+      "options": {
+        "A": "小海",
+        "B": "郄門",
+        "C": "神門",
+        "D": "巨闕"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 1595,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 75,
+      "question": "56歲女性，經常偏頭患，全身關節痛緊及麻無定處，痰涎頻頻上壅喉中，嘴巴張不開，想說說不出 來，心中懊憹及怔忡，四肢困重，頭面腮頰紅潤。依據《馬丹陽天星十二穴治雜病歌》，用何組穴 位治療？",
+      "options": {
+        "A": "曲池、合谷",
+        "B": "委中、承山",
+        "C": "崑崙、太衝",
+        "D": "列缺、通里"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1596,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 76,
+      "question": "依據《針灸大成》：「小腸之病豈為良，頰腫肩疼兩臂旁，項頸強疼難轉側，嗌頷腫痛甚非常，肩 似拔兮臑似折，生病耳聾及目黃，臑肘臂外後廉痛。」可刺下列何組穴位？",
+      "options": {
+        "A": "少澤、少府",
+        "B": "後谿、靈道",
+        "C": "支正、神門",
+        "D": "腕骨、通里"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1597,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 77,
+      "question": "有關癃閉的針灸治療方法，下列敘述何者錯誤？",
+      "options": {
+        "A": "小便失禁時，可以針陰陵泉、三陰交，灸療腎俞、氣海、關元",
+        "B": "小便淋瀝時，可中極或陰陵泉",
+        "C": "癃閉者，急取足三里、陰陵泉、關元、水道、大敦",
+        "D": "小便不通，可以先針三陰交、陰陵泉，繼灸五柱穴"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1598,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 78,
+      "question": "下列有關水腫針灸治療選穴方義之敘述，那些較適當？①水腫，是指體內水液滯留，泛溢肌膚引起 局部或全身浮腫，可以分為陽水及陰水　②水分穴屬任脈而位近小腸，功能分清濁而為治水效穴 ③足三里，足陽明經合穴，與足太陰經相表裡，取其健脾胃以制水　④人中為手陽明與督脈之會， 是治療面部浮腫經驗穴",
+      "options": {
+        "A": "僅①②③",
+        "B": "僅①②④",
+        "C": "僅②③④",
+        "D": "①②③④"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 1599,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 79,
+      "question": "有關子宮脫垂的敘述，下列何者錯誤？",
+      "options": {
+        "A": "子宮脫垂屬於傳統中醫「陰挺」、「陰脫」、「產腸不收」等範疇，大多發生在生產過的婦女",
+        "B": "其病機主要分為中氣下陷與腎氣不固二類",
+        "C": "改善便秘、慢性咳嗽的情形，無緩解子宮脫垂的機會",
+        "D": "針刺腹部穴位，用強刺激手法，使針感散至前陰部，使之有向上收縮感覺"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 1600,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114070",
+      "subject": "中醫臨床醫學(四)",
+      "subject_tag": "tcm_clinical_4",
+      "subject_name": "中醫臨床醫學(四)",
+      "stage_id": 0,
+      "number": 80,
+      "question": "小兒夜尿針灸治療，下列何者錯誤？",
+      "options": {
+        "A": "若屬「腎氣不足」證型，可以針任脈與足三陰經交會穴，關元",
+        "B": "若屬「脾肺氣虛」證型，可以針肺經原穴，又是俞土穴，太淵",
+        "C": "以皮膚針叩刺氣海、關元、曲骨、夾脊（11－21椎）",
+        "D": "毫針刺用瀉法，不可灸"
       },
       "answer": "D",
       "explanation": ""

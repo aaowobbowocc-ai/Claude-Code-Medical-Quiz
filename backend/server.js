@@ -629,7 +629,7 @@ questionsApi.registerRoutes(app, examData, stats, examConfigs, { staticCache, br
 ai.registerRoutes(app, examData, stats);
 commentsApi.registerRoutes(app);
 communityNotes.registerRoutes(app);
-feedback.registerRoutes(app);
+feedback.registerRoutes(app, examData, examConfigs);
 board.registerRoutes(app);
 
 // ── Health + stages + exams + stats API ─────────────────────────────────

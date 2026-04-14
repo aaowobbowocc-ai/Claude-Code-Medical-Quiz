@@ -1,4 +1,5 @@
-import { useRef, useCallback } from 'react'
+import { useCallback } from 'react'
+import { usePlayerStore } from '../store/gameStore'
 
 const cache = {}
 
@@ -18,14 +19,16 @@ if (typeof window !== 'undefined') {
 }
 
 export function useSound() {
+  const muted = usePlayerStore(s => s.soundMuted)
   const play = useCallback((name) => {
+    if (muted) return
     try {
       const audio = loadSound(`/sounds/${name}.mp3`)
       const clone = audio.cloneNode()
       clone.volume = 0.7
       clone.play().catch(() => {})
     } catch {}
-  }, [])
+  }, [muted])
 
   return { play }
 }

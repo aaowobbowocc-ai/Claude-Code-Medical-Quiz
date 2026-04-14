@@ -93,13 +93,16 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     const questionsData = resolve(req);
     const { stages, count = 100, year, session, subject } = req.query;
 
-    // Historical mode: return ALL questions (including multi-answer & voided) for authentic exam simulation
+    // Historical mode: return ALL questions (including multi-answer & voided) for authentic exam simulation.
+    // Sort by question number to preserve original order — critical for 承上題 (carryover)
+    // questions to appear right after their root question, matching the printed exam.
     if (year && session && subject) {
       const pool = questionsData.questions.filter(q =>
         q.roc_year === year && q.session === session && q.subject === subject
       );
+      const ordered = [...pool].sort((a, b) => (a.number || 0) - (b.number || 0));
       res.set('Cache-Control', 'public, max-age=3600');
-      return res.json({ total: pool.length, questions: shuffle(pool), mode: 'historical' });
+      return res.json({ total: ordered.length, questions: ordered, mode: 'historical' });
     }
 
     // Random mode — pick from all questions (single-answer only for random mock)

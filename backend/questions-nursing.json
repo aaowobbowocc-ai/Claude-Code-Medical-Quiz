@@ -4,10 +4,10 @@
     "label": "護理師",
     "scraped_at": "2026-04-12T11:12:59.735Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-04-14T10:54:16.276Z",
+    "last_updated": "2026-04-14T12:47:45.306Z",
     "total": 3190
   },
-  "total": 3190,
+  "total": 3552,
   "questions": [
     {
       "id": "110030_0303_1",
@@ -63848,6 +63848,7247 @@
         "B": "是一群容易導致心血管代謝疾病的危險因子之總稱",
         "C": "三低健康飲食是指低油、低糖、低纖",
         "D": "罹患糖尿病者經藥物控制良好，即不屬之"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 512,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 1,
+      "question": "下列何種胃腺細胞，其分泌物質與大腸杯狀細胞所分泌的相似？",
+      "options": {
+        "A": "黏液頸細胞",
+        "B": "壁細胞",
+        "C": "主細胞",
+        "D": "腸內分泌細胞"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 513,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 2,
+      "question": "二氧化碳在血液中最主要的運送形式是：",
+      "options": {
+        "A": "與白血球結合",
+        "B": "與血紅素結合",
+        "C": "形成重碳酸離子",
+        "D": "與血漿白蛋白結合"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 514,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 3,
+      "question": "胸大肌收縮可使上臂：",
+      "options": {
+        "A": "外展及外旋",
+        "B": "外展及內旋",
+        "C": "內收及外旋",
+        "D": "內收及內旋"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 515,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 4,
+      "question": "下列那一構造，不是完全由腹膜反摺構成的？",
+      "options": {
+        "A": "肝鐮韌帶",
+        "B": "肝圓韌帶",
+        "C": "小網膜",
+        "D": "腸繫膜"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 516,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 5,
+      "question": "下列何者傳送頸動脈竇受器所感受血壓改變的訊息？",
+      "options": {
+        "A": "三叉神經",
+        "B": "舌咽神經",
+        "C": "顏面神經",
+        "D": "副神經"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 517,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 6,
+      "question": "手術時不小心移除下列何者，最可能直接造成血鈣濃度下降？",
+      "options": {
+        "A": "胸腺",
+        "B": "腎上腺皮質",
+        "C": "胰島",
+        "D": "副甲狀腺"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 518,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 7,
+      "question": "腭骨（palatine bone）不參與下列何者的組成？",
+      "options": {
+        "A": "鼻腔",
+        "B": "眼眶",
+        "C": "上腭",
+        "D": "顱腔"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 519,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 8,
+      "question": "鼠蹊部疝氣（inguinal hernia）嚴重時，擠入鼠蹊管（inguinal canal）的腸子，最容易直接壓迫到下列何者，造成睪丸的血液循環受阻？",
+      "options": {
+        "A": "睪丸（testis）",
+        "B": "副睪（epididymis）",
+        "C": "精索（spermatic cord）",
+        "D": "儲精囊（seminal vesicle）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 520,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 9,
+      "question": "下列何者是由勃起組織（erectile tissue）構成，與男性的陰莖（penis）有相似的構造，受刺激時會充血勃起？",
+      "options": {
+        "A": "陰阜（mons pubis）",
+        "B": "陰蒂（clitoris）",
+        "C": "大陰唇（labia majora）",
+        "D": "小陰唇（labia minora）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 521,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 10,
+      "question": "有關舌乳頭之敘述，下列何者正確？",
+      "options": {
+        "A": "絲狀乳頭數目最多且含有許多味蕾",
+        "B": "蕈狀乳頭多分布於舌尖且不含味蕾",
+        "C": "輪廓狀乳頭分布於舌後半部且含有味蕾",
+        "D": "僅由顏面神經傳遞味覺訊息"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 522,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 11,
+      "question": "有關無氧快肌與有氧慢肌的比較，下列何者正確？",
+      "options": {
+        "A": "無氧快肌含有比較多的肌紅素",
+        "B": "無氧快肌含有比較多的的粒線體",
+        "C": "無氧快肌有比較多的微血管",
+        "D": "無氧快肌含有比較多的肝醣"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 523,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 12,
+      "question": "當小偷被警察追著跑時，下列何者不是小偷的交感神經調控之生理作用？",
+      "options": {
+        "A": "腸胃道蠕動減少",
+        "B": "汗液分泌增加",
+        "C": "氣管擴張",
+        "D": "瞳孔縮小"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 524,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 13,
+      "question": "決定血流速率大小，下列何者最不重要？",
+      "options": {
+        "A": "血液黏滯度",
+        "B": "心跳速率",
+        "C": "血管半徑",
+        "D": "血管兩端壓力差"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 525,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 14,
+      "question": "下列何者具有最低的腎臟血漿清除率（renal clearance）？代號：1104頁次：4－2",
+      "options": {
+        "A": "葡萄糖（glucose）",
+        "B": "尿素（urea）",
+        "C": "肌酐酸（creatinine）",
+        "D": "對胺基馬尿酸（para-aminohippuric acid）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 526,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 15,
+      "question": "體制素（somatostatin）主要由消化道何處分泌？",
+      "options": {
+        "A": "唾腺",
+        "B": "胃",
+        "C": "膽囊",
+        "D": "十二指腸"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 527,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 16,
+      "question": "河豚毒素（tetrodotoxin）對神經細胞最主要的影響為何？",
+      "options": {
+        "A": "阻止神經細胞再極化（repolarization）",
+        "B": "阻止神經細胞去極化（depolarization）",
+        "C": "促進神經傳導物質的釋放",
+        "D": "抑制神經傳導物質的釋放"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 528,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 17,
+      "question": "有關突觸後電位（postsynaptic potentials）的敘述，下列何者正確？",
+      "options": {
+        "A": "均為動作電位（action potential）",
+        "B": "均為興奮性（excitatory）",
+        "C": "均為抑制性（inhibitory）",
+        "D": "缺乏不反應期（refractory period）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 529,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 18,
+      "question": "人體內胰島β 細胞被破壞時，不會產生下列何種反應？",
+      "options": {
+        "A": "血漿中游離脂肪酸增加",
+        "B": "血漿中胺基酸濃度下降",
+        "C": "血漿的滲透度上升",
+        "D": "血漿中升糖素（glucagon）增加"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 530,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 19,
+      "question": "下列那一種人類細胞中，巴氏體（barr body）的數量會超過一個？",
+      "options": {
+        "A": "正常女性",
+        "B": "超女性症（super female）",
+        "C": "透納氏症（Turner’s syndrome）",
+        "D": "柯林菲特氏症（Klinefelter’s syndrome）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 531,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 20,
+      "question": "口渴時，腎小管增加水分再吸收的機轉為下列何者？",
+      "options": {
+        "A": "抑制醛固酮分泌",
+        "B": "抑制血管收縮素分泌",
+        "C": "增加抗利尿激素分泌",
+        "D": "降低細胞膜水通道蛋白的量"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 532,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 21,
+      "question": "下列何者不屬於急性風濕熱瓊斯氏標準（Jones criteria）的主要標準（major criteria）？",
+      "options": {
+        "A": "心臟炎（carditis）",
+        "B": "邊緣性紅班（erythema marginatum）",
+        "C": "白血球增多（leukocytosis）",
+        "D": "多關節炎（polyarthritis）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 533,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 22,
+      "question": "有關重症肌無力（myasthenia gravis）病人之敘述，下列何者正確？",
+      "options": {
+        "A": "肌肉運動減少，神經傳導減少",
+        "B": "肌肉運動減少，神經傳導正常",
+        "C": "肌肉運動正常，神經傳導減少",
+        "D": "肌肉運動正常，神經傳導正常"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 534,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 23,
+      "question": "有關靜脈血栓的敘述，下列何者最不適當？",
+      "options": {
+        "A": "罹患靜脈曲張病人發生淺層靜脈血栓的風險較高",
+        "B": "相較於深層靜脈血栓，淺層靜脈血栓比較少見栓塞發生",
+        "C": "來自膝部以下深處腿靜脈血栓有較高的風險造成肺栓塞",
+        "D": "鬱血性心衰竭的病人有可能產生靜脈血栓"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 535,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 24,
+      "question": "18 歲的男病人至醫院門診，表示自己吃了海鮮後皮膚癢且出現蕁麻疹，此病人最有可能發生：",
+      "options": {
+        "A": "立即型過敏反應",
+        "B": "抗體媒介過敏反應",
+        "C": "免疫複合物媒介過敏反應",
+        "D": "遲發型過敏反應"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 536,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 25,
+      "question": "關於唐氏症（Down syndrome）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "唐氏症病人常見第21 對染色體有三條（trisomy 21）的現象",
+        "B": "唐氏症發生率與母親生育年齡呈正相關",
+        "C": "白血病（leukemia）是唐氏症病人早夭最主要的原因",
+        "D": "病人的眼睛出現內眥贅皮（epicanthal fold），眼瞼縫向外上方傾斜"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 537,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 26,
+      "question": "55 歲男性患有咳嗽數月並伴有體重減輕和發熱，肺臟組織學檢查發現多發性乾酪樣肉芽腫，此病人最有可能感染下列何種微生物？",
+      "options": {
+        "A": "Mycobacterium tuberculosis",
+        "B": "Toxoplasma gondii",
+        "C": "Candida albicans",
+        "D": "Staphylococcus aureus"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 538,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 27,
+      "question": "B 細胞濾泡性淋巴瘤（follicular lymphoma）常見下列何種染色體異常？",
+      "options": {
+        "A": "染色體12 三染色體症（trisomy 12）",
+        "B": "t（14, 18）（染色體14 及18 轉位）",
+        "C": "t（11, 14）（染色體11 及14 轉位）",
+        "D": "t（9, 22）（染色體9 及22 轉位）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 539,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 29,
+      "question": "關於卵巢腫瘤的敘述，下列何者錯誤？",
+      "options": {
+        "A": "未生產（nulliparity）為卵巢癌的危險因子",
+        "B": "表面上皮腫瘤（surface epithelial tumor）為最常見的原發卵巢腫瘤",
+        "C": "惡性漿液性腫瘤（serous carcinoma）為最常見的原發惡性卵巢腫瘤",
+        "D": "Krukenberg 腫瘤為原發雙側性卵巢腫瘤"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 540,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 30,
+      "question": "Creutzfeldt-Jakob 病會造成大腦皮質及深部灰質的海綿狀變形（spongiform transformation），這種病的病因主要與下列何者有關？",
+      "options": {
+        "A": "病毒感染",
+        "B": "細菌感染",
+        "C": "原蟲感染",
+        "D": "Prion 蛋白變異"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 541,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 31,
+      "question": "Amantadine 具有抗巴金森氏症的作用，有關其副作用，下列敘述何者錯誤？",
+      "options": {
+        "A": "口乾",
+        "B": "高血壓",
+        "C": "周邊水腫",
+        "D": "尿液滯留"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 542,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 32,
+      "question": "下列降血壓藥物，何者初次服用會造成姿態性低血壓，可給予較少的起始劑量或睡前服用？",
+      "options": {
+        "A": "Propranolol",
+        "B": "Minoxidil",
+        "C": "Furosemide",
+        "D": "Prazosin"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 543,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 33,
+      "question": "下列何者不是1995 年東京地鐵發生沙林（sarin）毒氣攻擊事件受害者的症狀？",
+      "options": {
+        "A": "心跳加速",
+        "B": "瞳孔縮小",
+        "C": "頻尿",
+        "D": "唾液增加"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 544,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 34,
+      "question": "下列何者為Ethosuximide 治療失神性癲癇（absence seizures）的主要作用機轉？",
+      "options": {
+        "A": "抑制L 型鈣離子通道",
+        "B": "抑制P 型鈣離子通道",
+        "C": "抑制T 型鈣離子通道",
+        "D": "抑制N 型鈣離子通道"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 545,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 35,
+      "question": "下列何者為Lorsatan 降血壓的作用機制？",
+      "options": {
+        "A": "血管收縮素轉換酶抑制劑（ACE inhibitor）",
+        "B": "血管收縮素II 受體拮抗劑（angiotensin II receptor antagonist）",
+        "C": "血管收縮素I 受體拮抗劑（angiotensin I receptor antagonist）",
+        "D": "Beta 腎上腺素受體抑制劑"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 546,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 36,
+      "question": "下列那一個抗心律不整藥物，不適合用來治療陣發性上心室心律不整？",
+      "options": {
+        "A": "Verapamil",
+        "B": "Atropine",
+        "C": "Adenosine",
+        "D": "Propranolol"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 547,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 37,
+      "question": "下列何種藥物是藉由周邊作用來抑制咳嗽反射，作為治療咳嗽的藥物？",
+      "options": {
+        "A": "Codeine",
+        "B": "Dextromethorphan",
+        "C": "Guaifenesin",
+        "D": "Benzonatate"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 548,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 38,
+      "question": "關於甲狀腺機能亢進（hyperthyroidism）治療藥物Propylthiouracil 之敘述，下列何者錯誤？",
+      "options": {
+        "A": "屬於thionamides 類藥物，會抑制周邊T4 轉化成T3",
+        "B": "可抑制甲狀腺素合成過程之碘化反應",
+        "C": "對於已經儲存在腺體中的甲狀腺素仍有抑制的作用",
+        "D": "Methimazole 較Propylthiouracil 的藥效長，且較有致畸胎之風險"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 549,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 39,
+      "question": "一名病人因肺炎感染而住院，菌種分離偵測到Methicillin 抗藥性的金黃色葡萄球菌，下列何者不適於治療此病人？",
+      "options": {
+        "A": "Daptomycin",
+        "B": "Quinupristin/Dalfopristin",
+        "C": "Teicoplanin",
+        "D": "Telavancin"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 550,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 40,
+      "question": "Imatinib 是慢性骨髓性白血病（chronic myeloid leukemia）的標靶療法用藥，下列何者為其作用機轉？",
+      "options": {
+        "A": "抑制BCR-ABL",
+        "B": "抑制EGF receptor",
+        "C": "抑制HER2",
+        "D": "抑制c-KIT"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 551,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 41,
+      "question": "下列那一種作用過程，不能用來傳遞細菌的遺傳物質？代號：1104頁次：4－4",
+      "options": {
+        "A": "接合作用（conjugation）",
+        "B": "形質導入（transduction）",
+        "C": "形質轉換（transformation）",
+        "D": "分泌作用（secretion）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 552,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 42,
+      "question": "尿漿菌（Ureaplasma）對萬古黴素（Vancomycin）具抵抗性的機制為何？",
+      "options": {
+        "A": "沒有細胞壁",
+        "B": "特殊之細胞壁結構、鍵結",
+        "C": "特殊之細胞壁成分",
+        "D": "細胞膜較厚且具有外莢膜"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 553,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 43,
+      "question": "關於第I 類MHC 分子呈現經由內源性路徑產生的抗原，下列敘述何者正確？",
+      "options": {
+        "A": "細胞主要從吞噬作用獲得抗原",
+        "B": "抗原在溶小體（lysosome）被降解成短胜肽",
+        "C": "抗原在蛋白酶體（proteasome）被降解成短胜肽",
+        "D": "是個體清除胞外菌相當重要的作用機制"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 554,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 44,
+      "question": "補體活化啟動一系列的蛋白質水解產生次單位「a」、「b」與其他次單位，具備不同的生物活性。下列何者是補體C3b 主要的功能？",
+      "options": {
+        "A": "增加血管通透性",
+        "B": "吸引吞噬細胞到感染部位",
+        "C": "促進發炎反應",
+        "D": "促進病原體被吞噬細胞辨識"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 555,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 45,
+      "question": "因為IgG 和可溶性抗原形成免疫複合物（immune complex）造成的過敏反應，屬於那一型過敏反應？",
+      "options": {
+        "A": "第一型過敏反應",
+        "B": "第二型過敏反應",
+        "C": "第三型過敏反應",
+        "D": "第四型過敏反應"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 556,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 46,
+      "question": "下列何種細菌不會在吞噬細胞內生存複製，而造成疾病？",
+      "options": {
+        "A": "退伍軍人肺炎菌(Legionella pneumophila)",
+        "B": "鼠疫桿菌（Yersinia pestis)",
+        "C": "破傷風梭狀菌(Clostridium tetani)",
+        "D": "單胞李斯特菌(Listeria monocytogenes )"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 557,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 47,
+      "question": "下列何種黴菌常經由呼吸道感染？",
+      "options": {
+        "A": "麴菌屬（Aspergillus）",
+        "B": "念珠菌屬（Candida）",
+        "C": "著色芽生屬（Fonsecaea）",
+        "D": "小芽胞菌屬（Microsporum）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 558,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 48,
+      "question": "有關梅毒（syphilis）的敘述，下列何者正確？",
+      "options": {
+        "A": "第一期梅毒會出現具疼痛的潰瘍，按壓糜軟，故又稱軟性下疳",
+        "B": "第二期梅毒有高量細菌匯聚在淋巴結，病人無太明顯臨床症狀",
+        "C": "第三期症狀主要以皮疹及濕疣為主，具高傳染力",
+        "D": "先天性梅毒主要通過孕婦胎盤傳染給胎兒"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 559,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 49,
+      "question": "下列何種病毒不具有鞘膜（envelope）？",
+      "options": {
+        "A": "腺病毒（adenovirus）",
+        "B": "單純疱疹病毒（herpes simplex virus）",
+        "C": "B 型肝炎病毒（hepatitis B virus）",
+        "D": "A 型流行性感冒病毒（influenza A virus）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 560,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基礎醫學",
+      "subject_tag": "basic_medicine",
+      "subject_name": "基礎醫學",
+      "stage_id": 0,
+      "number": 50,
+      "question": "生食野生動物的內臟較易感染下列何種絛蟲？",
+      "options": {
+        "A": "亞洲絛蟲",
+        "B": "豬肉絛蟲",
+        "C": "牛肉絛蟲",
+        "D": "廣節裂頭絛蟲"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 561,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 1,
+      "question": "有關健康與疾病觀點的敘述，下列何者錯誤？",
+      "options": {
+        "A": "社會學的觀點而言，健康是人與其存在的生態環境達到和諧關係的結果",
+        "B": "消費者的觀點而言，健康是一種可以被購買的商品",
+        "C": "生理學的觀點認為，疾病是身體的系統或功能有不正常現象",
+        "D": "流行病學觀點認為，疾病為宿主在其所處環境中對病原體產生易感性"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 562,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 2,
+      "question": "一位意識清楚的腎衰竭病人，當醫師告知需進行長期且定期血液透析時，病人考慮醫院路程太遠及造成家人負擔，堅持出院不願意接受治療。下列敘述何者正確？",
+      "options": {
+        "A": "接受病人的醫療決定讓他出院，以符合保密原則",
+        "B": "答應病人不告知家屬他的決定，以符合正義原則",
+        "C": "強制病人一定要留在醫院進行血液透析，以符合施益原則",
+        "D": "提供病人居家附近血液透析室的完整訊息，以符合資源公平原則"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 563,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 3,
+      "question": "有關使用直腸栓劑以助排便的敘述，下列何者錯誤？",
+      "options": {
+        "A": "應將栓劑塞入直腸中約7 公分深",
+        "B": "藥物須留置體內約15～30 分鐘",
+        "C": "為利用胃結腸反射，宜於飯後1 小時塞入",
+        "D": "栓劑平時應儲存於冰箱"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 564,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 4,
+      "question": "有關感染控制措施，下列敘述何者錯誤？",
+      "options": {
+        "A": "絕對嗜中性白血球500 個/mm3 以下的病人，應採保護性隔離",
+        "B": "疥瘡的病人，應採接觸性隔離",
+        "C": "德國麻疹的病人，應採飛沫隔離",
+        "D": "水痘感染的病人，應採接觸性隔離但無須單獨房間"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 565,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 5,
+      "question": "有關執行導尿技術時，下列何者違反無菌原則？",
+      "options": {
+        "A": "注意導尿包滅菌的有效日期",
+        "B": "導尿管置於無菌區域邊緣1 吋以內",
+        "C": "消毒會陰後的棉棒應放置於無菌區外的垃圾袋",
+        "D": "消毒會陰部後，可於無菌區執行抽取無菌蒸餾水的動作"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 566,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 6,
+      "question": "護理師評估病人所收集的資料，下列何者為症狀（symptom）？",
+      "options": {
+        "A": "測量體溫：39.7 度",
+        "B": "壓傷傷口紅、有異味",
+        "C": "聽診1 分鐘腸蠕動為12 次",
+        "D": "檢查血色素為8.7 g/dL"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 567,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 7,
+      "question": "當某病房出現火災時，以R.A.C.E.原則處理，有關其口訣與意義的敘述，下列何者錯誤？",
+      "options": {
+        "A": "R：將病人移出火源區",
+        "B": "A：啟動警報裝置及通報",
+        "C": "C：關上房門，侷限火煙於一處",
+        "D": "E：立即撤離著火房間再進行初期滅火"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 568,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 8,
+      "question": "下列何項屬於治療性溝通技巧？①反映（Reflecting） ②重述（Restating） ③猜測（Questioning）④批判（Criticize）",
+      "options": {
+        "A": "①②",
+        "B": "①④",
+        "C": "②③",
+        "D": "③④"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 569,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 10,
+      "question": "執行病人身體擦澡時，同時觀察其骨突處有無發生壓傷，屬於下列何種觀察種類？",
+      "options": {
+        "A": "旁觀性",
+        "B": "參與性",
+        "C": "自省性",
+        "D": "被動性"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 570,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 11,
+      "question": "病歷正確記錄的原則，下列何者錯誤？①大便次數的記錄是指該天一整天所解出的次數 ②疼痛指數的記錄以黑色實心圓記錄 ③輸出量包括大便、胸腔引流液量 ④灌腸後才解的大便次數以「1/E」表示",
+      "options": {
+        "A": "①②",
+        "B": "③④",
+        "C": "①③",
+        "D": "②④"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 571,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 12,
+      "question": "病人同時有下列護理問題，何者須優先處理？",
+      "options": {
+        "A": "無效性呼吸型態",
+        "B": "睡眠型態紊亂",
+        "C": "便秘",
+        "D": "身體心像紊亂"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 572,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 13,
+      "question": "焦點紀錄法中D.A.R.T.（Data, Action, Response, Teaching），不包含護理過程的那個部分？",
+      "options": {
+        "A": "護理評估",
+        "B": "護理目標",
+        "C": "護理措施",
+        "D": "護理評值"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 573,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 14,
+      "question": "有關護理評值的敘述，下列何者錯誤？",
+      "options": {
+        "A": "在查看擬定之成果目標是否已達成",
+        "B": "評估護理活動執行後，病人的行為反應",
+        "C": "護理師需依護理評值結果修訂護理診斷",
+        "D": "是護理過程的最後一個步驟"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 574,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 16,
+      "question": "醫囑：Unasyn 750 mg I.V.D q.6.h，現有Unasyn 2 gm/vial 粉劑，以無菌蒸餾水稀釋粉劑成總量4 c.c.後，應抽出多少c.c. 才符合此次注射劑量？",
+      "options": {
+        "A": "1 c.c.",
+        "B": "1.25 c.c.",
+        "C": "1.5 c.c.",
+        "D": "2 c.c."
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 575,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 17,
+      "question": "依衛生福利部疾病管制署公告資料，關於藥物的管理及保存，下列何者錯誤？",
+      "options": {
+        "A": "Pethidine(Demerol)針劑應置於上鎖的櫃中",
+        "B": "未開封的胰島素，可置於室溫中保存",
+        "C": "稀釋後之Penicillin G 置於2～8℃藥物冰箱",
+        "D": "流感疫苗置於2～8℃專用冰箱"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 576,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 18,
+      "question": "下列住院醫囑，何者是護理師於給藥前，必須提出質疑？",
+      "options": {
+        "A": "Cefazolin (1,000 mg/vail) 1,000 mg q.d. I.V.",
+        "B": "Acetaminophen 500mg/tab 1# P.O. p.r.n. for pain",
+        "C": "15% KCl(10 mEq / 5 mL /Amp)20 mL q.d. I.V. drip",
+        "D": "NTG(Nitroglycerin)0.6 mg/tab 1# S.L. St."
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 577,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 19,
+      "question": "有關給藥醫囑常見縮寫名詞的解釋，下列何者正確？①q.i.d.與q.4.h.的給藥時間相同 ②q.o.d.是指「每隔一天」 ③M.N. 是指「睡前」 ④O.D. 是指「右眼」 ⑤S.O.S.是指12 小時內「如有需要給予一次」",
+      "options": {
+        "A": "①②④",
+        "B": "①③⑤",
+        "C": "②④⑤",
+        "D": "③④⑤"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 578,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 20,
+      "question": "有關藥物與食物服用禁忌的說明，下列敘述何者錯誤？",
+      "options": {
+        "A": "甘草與毛地黃一起合用可能引發高血鉀",
+        "B": "鎮靜劑避免以茶水一起服用，以免降低藥效",
+        "C": "葡萄柚汁會干擾鈣離子阻斷劑在肝臟的代謝",
+        "D": "酒精會促進抗組織胺對中樞神經之抑制作用"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 579,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 21,
+      "question": "當一個人的動脈血中pH 值：7.25，PaCO2：65 mmHg，〔HCO3-〕：25 mEq/L，在臨床上是屬於那一類酸鹼平衡失調？",
+      "options": {
+        "A": "呼吸性酸中毒",
+        "B": "呼吸性鹼中毒",
+        "C": "代謝性酸中毒",
+        "D": "代謝性鹼中毒"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 580,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 22,
+      "question": "病人目前正接受輸液治療，醫囑：D5S 80 mL/hour I.V.F.，對於此輸液，下列敘述何者錯誤？",
+      "options": {
+        "A": "含有5%葡萄糖",
+        "B": "含有0.9%氯化鈉",
+        "C": "屬於等張溶液",
+        "D": "適用於水腫情況"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 581,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 23,
+      "question": "如果注射部位周圍皮膚冰冷、腫脹、有壓痛感，輸注速度變慢現象時，下列處理方法何者最適當？①停止輸注 ②局部濕熱敷 ③給予解熱藥物 ④重新更換注射部位 ⑤按摩注射部位",
+      "options": {
+        "A": "①②③",
+        "B": "①②④",
+        "C": "②③④",
+        "D": "③④⑤代號：2104頁次：6－3"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 582,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 24,
+      "question": "有關執行輸血措施的步驟，下列何者錯誤？",
+      "options": {
+        "A": "輸血前病人姓名、血型、血液種類及血袋號碼為必核對資料",
+        "B": "輸血開始15 分鐘內速度宜為20～40 滴／分",
+        "C": "除了大量失血有休克傾向者外，一般輸血時不建議加壓輸血",
+        "D": "一般輸血完，應立即使用林格氏溶液輸注"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 583,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 25,
+      "question": "冷療可以抑制炎症反應的主要原理，下列何者正確？",
+      "options": {
+        "A": "增加血流，將氧氣、抗體輸送至組織",
+        "B": "增加微血管的通透性，促進代謝",
+        "C": "增加心臟的輸出量，提高組織的延展度",
+        "D": "增加血管收縮，減緩將白血球、淋巴球等送至組織"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 584,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 26,
+      "question": "有關常見的熱療法方式與目的之敘述，下列何者錯誤？",
+      "options": {
+        "A": "溫水浸泡可促進燒傷病人焦痂的軟化",
+        "B": "熱敷墊可以促進肌肉鬆弛減少下背痛",
+        "C": "熱水袋可以促進循環，以減緩懷孕宮縮",
+        "D": "烤燈可促進循環與乾燥，改善嬰兒紅臀"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 585,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 27,
+      "question": "有關不宜使用熱療法的高危險情況與原因的理論依據，下列敘述何者正確？",
+      "options": {
+        "A": "開放性傷口，因對溫度改變不敏感，且溫覺接受器增加，所以容易引起燙傷",
+        "B": "局部惡性腫瘤，會促進血流增加，癌細胞獲得更多氧氣與養分，加速其轉移",
+        "C": "頭部外傷，會降低血管的通透性，抑制血管與組織間液體的交換，導致腦水腫",
+        "D": "末梢血管疾病，因循環及局部組織缺損，增加的熱能易於散發，易導致組織損傷"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 586,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 28,
+      "question": "邱先生發高燒，體溫39℃，醫囑開立溫水拭浴使用，護理師為病人執行溫水拭浴時，水溫應該準備幾度？",
+      "options": {
+        "A": "41～43℃",
+        "B": "38～40℃",
+        "C": "27～37℃",
+        "D": "18～26℃"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 587,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 29,
+      "question": "有關灌腸時肛管插入的深度及大小的選擇，下列敘述何者正確？",
+      "options": {
+        "A": "兒童肛管插入深度約2.5～4.5 公分",
+        "B": "成人肛管插入深度約5～7 公分",
+        "C": "兒童小量灌腸宜選用19～20 Fr.的肛管",
+        "D": "成人大量灌腸宜選用22～24 Fr.的肛管"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 588,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 30,
+      "question": "楊女士接受子宮全切除手術，術後使用Morphine PCA (patient controlled analgesia)和靜脈輸液持續滴注，術後第一天楊女士移除foley 後6 小時仍尚未解尿，觸診下腹部膀胱處鼓脹，下列何者不是有關其尿瀦留的原因？",
+      "options": {
+        "A": "尿道括約肌收縮過強",
+        "B": "Morphine 藥物作用",
+        "C": "手術導致膀胱組織受損",
+        "D": "靜脈輸液量過少"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 589,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 31,
+      "question": "尿液中紅血球增加的可能原因，下列何者錯誤？",
+      "options": {
+        "A": "導尿受傷",
+        "B": "尿路結石",
+        "C": "肝膽疾病",
+        "D": "輸血血型不合"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 590,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 32,
+      "question": "下列那一種情況，病人的大便較不可能是黑色？",
+      "options": {
+        "A": "十二指腸潰瘍",
+        "B": "直腸出血",
+        "C": "服用鐵劑",
+        "D": "吃太多豬肝"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 591,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 33,
+      "question": "護理師為老年病人執行背部護理時，下列何者錯誤？",
+      "options": {
+        "A": "可以預防長期臥床之皮膚合併症",
+        "B": "開始與結束時使用敲擊法",
+        "C": "臀部及頸背部使用揉捏法",
+        "D": "以拇指及手掌心執行重擦法"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 592,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 34,
+      "question": "有關擺位的敘述，下列何者錯誤？",
+      "options": {
+        "A": "行腰椎穿刺後適用俯臥式",
+        "B": "懷孕胎位不正適用膝胸臥式",
+        "C": "痔瘡切除採取截刀式臥姿",
+        "D": "子宮頸抹片檢查採膀胱截石術臥姿"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 593,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 35,
+      "question": "陳小姐術後留置導尿管，月經來潮，協助執行床上會陰沖洗，下列敘述何者正確？",
+      "options": {
+        "A": "沖洗前，先以棉球置放陰道口，避免清洗時液體進入陰道",
+        "B": "順序應先沖洗中間尿道口及陰道口，然後清洗小陰唇、大陰唇",
+        "C": "應避開清洗尿道口之導尿管置入處，以避免感染",
+        "D": "應以棉棒來回擦拭沾附經血之會陰部，直到乾淨"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 594,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 36,
+      "question": "使用床上護架的情況，下列何者錯誤？",
+      "options": {
+        "A": "可用於燒傷病人",
+        "B": "可用於肢體石膏未乾的病人",
+        "C": "目的是避免被蓋直接接觸患部",
+        "D": "可用於固定病人姿勢"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 595,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 37,
+      "question": "有關影響體溫的因素，下列敘述何者正確？①老人的體溫往往稍高 ②焦慮時體溫會上升 ③甲狀腺功能不足，體溫會偏高 ④女生排卵時，體溫會稍高",
+      "options": {
+        "A": "①②",
+        "B": "①③",
+        "C": "②④",
+        "D": "③④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 596,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 38,
+      "question": "下列何種情況，不需要每4 小時測量一次體溫？",
+      "options": {
+        "A": "發燒病人",
+        "B": "病危病人",
+        "C": "手術後第二天",
+        "D": "電腦斷層檢查後"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 597,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 39,
+      "question": "關於換氣過度（hyperventilation）的特徵，下列敘述何者正確？①一種較正常慢而淺的呼吸 ②一種深而快的呼吸 ③造成血液中CO2 下降，而O2 上升 ④造成血液中O2 下降，而CO2 上升",
+      "options": {
+        "A": "①②",
+        "B": "①④",
+        "C": "②③",
+        "D": "③④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 598,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 40,
+      "question": "關於常見脈律不整類型的敘述，下列何者錯誤？",
+      "options": {
+        "A": "二重脈（bigeminal pulse）：脈動出現每二次正常脈之後，緊跟著一次不成熟脈動",
+        "B": "間歇脈（intermittent pulse）：脈搏間隔時間長短不一，跳幾下會停一下，無一定節律",
+        "C": "跑脈（running pulse）：脈律細、不規則而快，150 次／分鐘以上，有時會快到無法測量",
+        "D": "脈搏短絀（pulse deficit）：心尖脈和橈動脈的跳動不一致，常見於心房纖維顫動"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 599,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 41,
+      "question": "關於影響血壓的因素，下列敘述何者正確？",
+      "options": {
+        "A": "年齡越大，血管壁的彈性下降，血壓會變低",
+        "B": "抽菸因為有尼古丁的作用，使血管放鬆，血壓下降",
+        "C": "受到重力影響，平躺的血壓通常會較坐姿血壓還要高",
+        "D": "使用鎮靜劑，會使血管擴張，導致血壓下降"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 600,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 42,
+      "question": "王小姐平時血壓為110～120/76～80 mmHg。則以錶式血壓計測量時，應充氣至下列何壓力值為佳？",
+      "options": {
+        "A": "120 mmHg",
+        "B": "130 mmHg",
+        "C": "150 mmHg",
+        "D": "180 mmHg"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 601,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 43,
+      "question": "對於胺基酸的敘述，下列何者錯誤？",
+      "options": {
+        "A": "動植物的蛋白質都需要分解成胺基酸才能供人體應用",
+        "B": "非必需胺基酸是指人體不一定需要的胺基酸",
+        "C": "必需胺基酸是指必須由食物中攝取，人體無法自己合成",
+        "D": "激素和酶都是由胺基酸所合成"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 602,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 44,
+      "question": "有關體脂肪的敘述，下列何者錯誤？",
+      "options": {
+        "A": "女性體脂肪占體重的22%屬於肥胖",
+        "B": "男性腰圍大於90 公分表示為肥胖",
+        "C": "上身肥胖型（蘋果型）較易罹患慢性病",
+        "D": "女性腰臀比大於0.85 表示為肥胖"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 603,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 45,
+      "question": "管灌食物的注意事項，下列何者錯誤？",
+      "options": {
+        "A": "管灌配方開封後，放置冰箱應於24 小時內食用完畢",
+        "B": "灌食食物應儘量提高濃度，減少胃容量負荷",
+        "C": "食物與藥物灌食間隔時間需為30 分鐘",
+        "D": "一次灌食的總量不超過500 c.c."
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 604,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 46,
+      "question": "張先生長期仰臥在床上，若未採取預防措施，其髖關節最容易發生何種變化？",
+      "options": {
+        "A": "外旋（exterenal rotation）",
+        "B": "外展（abduction）",
+        "C": "內旋（inteneral rotation）",
+        "D": "內翻（inversion）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 605,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 47,
+      "question": "有關腕關節過度伸展的敘述，下列何者正確？",
+      "options": {
+        "A": "彎曲腕部，使手背朝向前臂外側",
+        "B": "彎曲腕部，使掌心朝向前臂內側",
+        "C": "伸直原本彎曲的腕部",
+        "D": "腕部向拇指側彎"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 606,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 48,
+      "question": "有關阻塞性睡眠呼吸暫停（obstructive sleep apnea），下列敘述何者錯誤？",
+      "options": {
+        "A": "好發於肥胖者",
+        "B": "睡眠時呼吸道肌肉緊縮",
+        "C": "發作時間可達10 秒到2 分鐘",
+        "D": "整晚睡眠週期可發作50～600 次不等"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 607,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 49,
+      "question": "林奶奶79 歲，因閃避機車不慎跌倒，右手腕有擦傷、腫脹情形，至醫院進行傷口處置與繃帶包紮，下列護理措施何者錯誤？",
+      "options": {
+        "A": "包紮後每30 分鐘需評估末梢血液循環",
+        "B": "繃帶宜經常更換，保持清潔與乾燥",
+        "C": "衛教個案若有分泌物，應告知醫護人員",
+        "D": "為促進舒適，每8 小時重新包紮"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 608,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 50,
+      "question": "邱先生為建築工人，在工地不慎被鋼筋壓傷左腳腳踝，目前需要傷口包紮，下列措施何者正確？",
+      "options": {
+        "A": "採8 字形包紮法",
+        "B": "採螺旋形包紮法",
+        "C": "由近心端開始包紮",
+        "D": "將肢體平放15～30 分鐘"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 609,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 51,
+      "question": "一位持續發燒被懷疑敗血症的新入院病人，醫師為確認其診斷及治療，開立了「checkblood culture × II 套St.」，在實際執行該項醫囑之檢體收集時，下列敘述何者錯誤？①應先施打抗生素後再進行該項檢體收集②檢體注入收集瓶前應先以碘酒（iodine tincture）消毒瓶口 ③為免病人疼痛，兩套檢體於同時間同部位抽取 ④抽取到的檢體先注入需氧菌培養瓶中 ⑤檢體注入培養瓶前應先更換無菌針頭",
+      "options": {
+        "A": "①②⑤",
+        "B": "①③④",
+        "C": "②③⑤",
+        "D": "②④⑤代號：2104頁次：6－5"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 610,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 52,
+      "question": "有關糞便檢體之收集，下列敘述那些正確？①糞便常規檢查可以檢查細菌、寄生蟲等 ②利用糞便培養可以檢測出痢疾 ③利用糞便培養可以檢測出阿米巴原蟲 ④糞便潛血試驗可以檢測糞便中是否有潛血現象 ⑤收集痢疾檢體，需溫熱便盆 ⑥女性生理期間，潛血反應可能呈現偽陰性",
+      "options": {
+        "A": "①②④",
+        "B": "③④⑤",
+        "C": "②④⑥",
+        "D": "①③⑥"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 611,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 53,
+      "question": "有關痰液檢體收集方式，下列敘述何者正確？①痰液無法咳出，可協助震顫叩擊 ②早上起床後可先刷牙，再留第一口痰 ③痰液量少的病人，可以口咽部唾液代替 ④氣切留置病人，可用抽痰法取得檢體",
+      "options": {
+        "A": "①②",
+        "B": "②③",
+        "C": "③④",
+        "D": "①④"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 612,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 54,
+      "question": "依照衛生福利部公告之腦死判定準則，下列何者屬於腦死的認定標準？①低體溫昏迷 ②無腦幹反射③須經一次腦幹功能測試 ④無自行呼吸",
+      "options": {
+        "A": "①②",
+        "B": "①③",
+        "C": "②④",
+        "D": "③④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 613,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 55,
+      "question": "根據死亡後的遺體生理變化，有關遺體之擺位，下列敘述何者正確？①採側臥以利口腔分泌物流出②採仰臥維持遺容 ③頭下放置枕頭 ④將手腳以繃帶纏繞固定",
+      "options": {
+        "A": "①③",
+        "B": "①④",
+        "C": "②③",
+        "D": "②④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 614,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 56,
+      "question": "針對病人離世，喪親家屬之哀傷情緒支持，下列敘述何者最適當？",
+      "options": {
+        "A": "安慰喪親者節哀順變，以避免情緒潰堤",
+        "B": "鼓勵以工作轉移注意力，以免過度沉浸哀傷",
+        "C": "建議清除所有病人遺物，以避免睹物思人",
+        "D": "可透過照片等紀念物引導，以抒發情緒不壓抑"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 615,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 57,
+      "question": "有關組織願景、價值觀、理念與使命的敘述，下列何者正確？",
+      "options": {
+        "A": "願景是一個組織未來想要達成的目標指引",
+        "B": "在組織內，由每一位員工設定組織的價值觀",
+        "C": "理念是組織的中心目標，提供員工明確方向",
+        "D": "使命是一個組織存在的理由及未來的圖像"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 616,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 58,
+      "question": "護理師正在執行常規生理指標測量及給藥作業，此時甲病人因術後疼痛要求止痛劑；乙病人血糖高，要求施打胰島素；丙病人主訴胸部悶痛且放射至肩部，臉色蒼白，醫囑要立即做EKG。下列何者為緊急且重要的工作？",
+      "options": {
+        "A": "繼續完成常規作業",
+        "B": "給甲病人送止痛藥",
+        "C": "給乙病人注射胰島素",
+        "D": "安排丙病人做EKG"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 617,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 59,
+      "question": "有關「精實」應用於醫療專業的敘述，下列何者正確？",
+      "options": {
+        "A": "改造結構創造價值",
+        "B": "增加步驟改善流程",
+        "C": "精簡人力降低成本",
+        "D": "以病人需求為核心"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 618,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 60,
+      "question": "護理機構僱用非護理科系畢業人員執行護理業務，依護理人員法第29 條規定，下列懲處何者正確？",
+      "options": {
+        "A": "機構負責人須接受輔導教育40 小時",
+        "B": "新臺幣二萬元以上十萬元以下罰鍰",
+        "C": "永久廢止該護理機構之開業執照",
+        "D": "吊扣機構負責人護理人員證書二年"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 619,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 61,
+      "question": "有關管理學專家道格拉斯（Douglass）提出的管理過程，包括下列那些項目？①確認基層人員需求②進行現況分析 ③擬定政策與方案 ④建立護理標準 ⑤應用領導與影響力",
+      "options": {
+        "A": "①②③",
+        "B": "②③④",
+        "C": "③④⑤",
+        "D": "①④⑤"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 620,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 62,
+      "question": "Mayo 和Roethlisberger 共同主持的霍桑實驗，研究「工作條件改變與員工工作績效之間的關係」，最後所作的研究結論，下列敘述何者正確？",
+      "options": {
+        "A": "工作的物質條件對員工有極大影響力",
+        "B": "組織員工經常會對特定事實提出抱怨",
+        "C": "非正式團體對員工工作態度具控制力",
+        "D": "社會變動是組織無法抗拒的干擾因素"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 621,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 63,
+      "question": "下列何者不屬於警訊事件（sentinel event）？",
+      "options": {
+        "A": "嬰兒失竊找回來",
+        "B": "病人跌倒無受傷",
+        "C": "病人自殺未死亡",
+        "D": "手術部位有錯誤"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 622,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 64,
+      "question": "有關以熱處理之可燃性生物醫療感染性廢棄物的貯存容器，下列何者正確？",
+      "options": {
+        "A": "紅色容器（垃圾袋）",
+        "B": "黃色容器（垃圾袋）",
+        "C": "白色容器（垃圾袋）",
+        "D": "黑色容器（垃圾袋）"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 623,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 65,
+      "question": "護理長於年度考核時，對於平時表現不佳的護理師，刻意給予較高的成績，避免護理師對護理長有負面評價。屬於下列何種績效考核偏誤？",
+      "options": {
+        "A": "霍桑效應",
+        "B": "光圈效應",
+        "C": "中央趨勢",
+        "D": "膨脹壓力"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 624,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 66,
+      "question": "有關人事管理及人力資源管理的敘述，下列何者正確？",
+      "options": {
+        "A": "人力資源管理認為員工屬於成本負擔",
+        "B": "人事管理強調勞資雙方的平等與和諧",
+        "C": "人力資源管理強調員工參與組織經營",
+        "D": "人事管理強調人力確保、開發與維持"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 625,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 67,
+      "question": "有關組織管轄幅度的設計，下列敘述何者正確？",
+      "options": {
+        "A": "環境越複雜，管轄幅度應該越大",
+        "B": "充分授權的組織，管轄幅度應該越小",
+        "C": "工作越重要，管轄幅度應該越小",
+        "D": "工作性質變化越大，管轄幅度應該越大"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 626,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 68,
+      "question": "有關護理長授權給單位組長執行的任務，下列何者最適當？",
+      "options": {
+        "A": "單位護理人員的排班",
+        "B": "追回遺失的麻醉藥物",
+        "C": "擬定單位的年度計畫",
+        "D": "提振單位低迷的士氣"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 627,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 69,
+      "question": "A 病房甲醫師經常出現情緒性字眼，護理人員無法忍受請護理長協助。護理長找A 病房的病房主任（醫師）溝通，屬於下列何種溝通類型？",
+      "options": {
+        "A": "上行溝通",
+        "B": "下行溝通",
+        "C": "平行溝通",
+        "D": "非正式溝通"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 628,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 70,
+      "question": "為擴大護理師視野，採水平方向改變工作職務，職稱不變，屬於下列何種工作設計方式？",
+      "options": {
+        "A": "工作擴大",
+        "B": "工作輪調",
+        "C": "工作再設計",
+        "D": "工作豐富"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 629,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 71,
+      "question": "由輔助人員（或稱護佐）與護理師共同執行病人照護工作，減少護理師工作負荷，屬於下列何種護理照護模式？",
+      "options": {
+        "A": "全責護理模式",
+        "B": "主護護理模式",
+        "C": "技術混合模式",
+        "D": "成組護理模式"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 630,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 72,
+      "question": "下列那一種圖最適合用於分析問題發生的原因？",
+      "options": {
+        "A": "趨勢圖",
+        "B": "矩陣圖",
+        "C": "散布圖",
+        "D": "魚骨圖"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 631,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 73,
+      "question": "有關Spreizer(1995)的心理賦權（psychological empowerment）策略之敘述，下列何者正確？",
+      "options": {
+        "A": "護理長於會議向同仁說明進行專案改善的必要性和意義",
+        "B": "護理長指定某位N1 護理師為圈長，籌組專案改善小組",
+        "C": "護理長要求專案小組需要定期回報改善專案的執行進度",
+        "D": "護理長請專案小組自行找相關單位協商變更作業流程"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 632,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 74,
+      "question": "醫院評鑑時，一位腦部手術後7 天剛從加護病房轉出的病人，目前有尾骶骨壓傷、傷口感染、無人照顧等問題，下列何項為查證重點？① 加護病房預防壓傷之標準流程及執行狀況 ②供應中心器械消毒流程 ③開刀房手術中之病人安全防護措施 ④病房的儀器保養計畫",
+      "options": {
+        "A": "①②③",
+        "B": "①②④",
+        "C": "②③④",
+        "D": "①③④"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 633,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 75,
+      "question": "下列何者屬於間接成本（indirect cost）？①空調水電費 ②行政管理費 ③護理衛材費 ④護理教育訓練費",
+      "options": {
+        "A": "①②③",
+        "B": "②③④",
+        "C": "①②④",
+        "D": "①③④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 634,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 76,
+      "question": "有關管理與領導的敘述，下列何者正確？",
+      "options": {
+        "A": "領導者是組織任命，有正式職位",
+        "B": "管理者擁有特定的影響力和權力",
+        "C": "領導者是引導部屬，把事情做對",
+        "D": "管理者是引導群體，做對的事情"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 635,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 77,
+      "question": "有關醫院風險危害分析（hazard vulnerability analysis），下列敘述何者正確？",
+      "options": {
+        "A": "依據標準作業程序執行，就不會發生風險",
+        "B": "評估對組織衝擊程度，考量財產損失即可",
+        "C": "需要定期評估組織規劃及各項資源準備度",
+        "D": "危害風險由小到大排序，高迫切性者優先"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 636,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 78,
+      "question": "藥劑部主管與護理部主管在審查年度預算時發生預算協調上的衝突，屬於下列何種衝突類型？",
+      "options": {
+        "A": "目標間衝突（inter-goal conflict）",
+        "B": "團體間衝突（inter-group conflict）",
+        "C": "組織間衝突（inter-organizational conflict）",
+        "D": "個人內在衝突（intra-personal conflict）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 637,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 79,
+      "question": "護理師平時表現不錯，於年終考核期間，與護理長在新進人員教學方法上意見相左，產生爭執，因而考核得到乙等。屬於下列何種績效考核偏誤？",
+      "options": {
+        "A": "向日葵效應",
+        "B": "月暈效應",
+        "C": "觸角效應",
+        "D": "霍桑效應"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 638,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "基本護理學與護理行政",
+      "subject_tag": "fundamentals_admin",
+      "subject_name": "基本護理學與護理行政",
+      "stage_id": 0,
+      "number": 80,
+      "question": "護理長在年度預算中編列電動床維修費用，屬於下列何種預算？",
+      "options": {
+        "A": "績效預算",
+        "B": "日落預算",
+        "C": "固定預算",
+        "D": "零基預算"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 639,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 1,
+      "question": "有關頭部外傷病人顱內壓升高的照護，下列何者錯誤？",
+      "options": {
+        "A": "避免用力排便、咳嗽、打噴嚏及等長運動",
+        "B": "可以使用Dilantin 預防受傷後抽搐的發生",
+        "C": "若病人有鼻漏時應請病人將鼻水擤乾淨",
+        "D": "嚴重的顱內壓升高的病人可以使用巴比妥酸鹽（Barbiturate）讓病人鎮靜"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 640,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 2,
+      "question": "有關脊髓損傷後脊髓休克期照護的敘述，下列何者錯誤？",
+      "options": {
+        "A": "肛門反射出現表示脊髓休克期已結束",
+        "B": "可以插鼻胃管引流胃液減壓",
+        "C": "可使用高劑量類固醇治療以減輕脊髓水腫",
+        "D": "經電腦斷層攝影可確診為完全或不完全脊髓損傷"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 641,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 3,
+      "question": "有關椎間盤突出手術治療的敘述，下列何者正確？",
+      "options": {
+        "A": "經皮內視鏡椎間盤切除術，因脊椎穩定度低，通常需住院一星期以上",
+        "B": "術後傷口癒合後，可進行威廉氏運動加強下背部的肌肉力",
+        "C": "穿背架時先穿一件厚一點的內衣保護皮膚",
+        "D": "術後二週傷口癒合後即可恢復原來的活動型態"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 642,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 4,
+      "question": "有關誘發腦下垂體中風原因的敘述，下列何者正確？",
+      "options": {
+        "A": "導因於腫瘤壓迫於蝶鞍處，造成內部壓力上升",
+        "B": "導因於腫瘤壓迫於腦室，造成內部壓力上升",
+        "C": "導因於下視丘的顱內出血，造成內部壓力上升",
+        "D": "導因於近腦下垂體血管梗塞，造成內部壓力上升"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 643,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 5,
+      "question": "有關身體單側忽略病人的護理措施，下列何者正確？①經常變動房間物品擺設，以增加對周圍環境關注 ②教導病人用轉頭方式，來代償視野缺損 ③鼓勵病人注意及照顧自己患側 ④叫人鈴及電話放在患側，以增加對患側環境關注",
+      "options": {
+        "A": "①②",
+        "B": "①③",
+        "C": "②③",
+        "D": "③④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 644,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 6,
+      "question": "有關巴金森氏症病人的臨床表徵，下列何者錯誤？",
+      "options": {
+        "A": "走路向前傾",
+        "B": "活動時顫抖厲害",
+        "C": "臉部表情僵硬",
+        "D": "走路時雙手不會隨之搖擺"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 645,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 7,
+      "question": "腦腫瘤病人使用類固醇（Decadron）治療的主要目的，下列何者正確？",
+      "options": {
+        "A": "預防出血",
+        "B": "減輕腦水腫",
+        "C": "預防感染",
+        "D": "抑制免疫力"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 646,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 8,
+      "question": "有關內視鏡椎間盤切除術的敘述，下列何者錯誤？",
+      "options": {
+        "A": "可採用局部麻醉",
+        "B": "傷口小、局部損傷少、減少硬腦膜的撕裂",
+        "C": "亦可用於治療嚴重椎間盤位移或是脊椎滑脫者",
+        "D": "手術及住院的時間均比傳統手術短"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 647,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 9,
+      "question": "有關發炎性腸道疾病的敘述，下列何者正確？",
+      "options": {
+        "A": "好發於60～80 歲",
+        "B": "男性發生比例較女性高",
+        "C": "可能與感染、食物過敏相關",
+        "D": "盛行率東方國家比歐美國家常見"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 648,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 10,
+      "question": "有關慢性胰臟炎典型徵象的敘述，下列何者錯誤？",
+      "options": {
+        "A": "腹痛",
+        "B": "脂肪痢",
+        "C": "血糖上升",
+        "D": "出現透納氏徵象（Turner’s sign）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 649,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 11,
+      "question": "有關肝癌的敘述，下列何者正確？",
+      "options": {
+        "A": "肝癌好發於女性",
+        "B": "原發性肝癌常見於歐美國家",
+        "C": "原發性肝癌病人常同時罹患B 型肝炎",
+        "D": "血液中的β-胎兒蛋白升高"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 650,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 12,
+      "question": "有關下腸胃道攝影檢查的敘述，下列何者正確？",
+      "options": {
+        "A": "檢查前2 天採正常飲食，檢查前1 天採清流飲食",
+        "B": "檢查前須清潔灌腸",
+        "C": "檢查後需限制飲水1,000 mL 以下",
+        "D": "檢查後2～3 天解出灰白色糞便是正常現象"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 651,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 13,
+      "question": "有關胃食道逆流的敘述，下列何者正確？",
+      "options": {
+        "A": "心灼熱感是胃食道逆流最常見的症狀",
+        "B": "可能是因為下食道括約肌壓力太高導致逆流",
+        "C": "可使用β-block 藥物治療",
+        "D": "進食後應躺下，以緩解胃食道逆流不適症狀"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 652,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 14,
+      "question": "有關消化性潰瘍的敘述，下列何者正確？",
+      "options": {
+        "A": "胃酸分泌過多，破壞消化道的肌肉層",
+        "B": "胃潰瘍好發年輕人為主",
+        "C": "十二指腸潰瘍進食後30 分鐘內疼痛症狀會加劇",
+        "D": "可能為幽門桿菌感染所引起"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 653,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 15,
+      "question": "王先生最近感覺疲勞就醫，抽血檢驗發現血清IgG Anti-HAV 為陽性時所代表的意義，下列何者正確？",
+      "options": {
+        "A": "表示感染源為血液污染",
+        "B": "表示曾經感染A 型肝炎",
+        "C": "表示目前是A 型肝炎急性期",
+        "D": "表示對A 型肝炎已無免疫力"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 654,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 16,
+      "question": "白老太太76 歲，有高血壓及糖尿病，配戴假牙，下列何者不是預防齲齒的護理指導？",
+      "options": {
+        "A": "建議植牙",
+        "B": "使用牙線剔牙",
+        "C": "牙齒塗氟",
+        "D": "減少醣類攝取"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 655,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 17,
+      "question": "有關黃疸的敘述，下列何者錯誤？",
+      "options": {
+        "A": "阻塞性黃疸會使大便呈灰白色",
+        "B": "溶血性黃疸之凝血酶原時間延長",
+        "C": "膽鹽沉積於皮膚引起搔癢",
+        "D": "尿中尿膽素原增加，尿液呈茶色"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 656,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 18,
+      "question": "有關骨性關節炎病人適合的運動類型，下列何者錯誤？",
+      "options": {
+        "A": "慢跑",
+        "B": "水中有氧運動",
+        "C": "騎腳踏車",
+        "D": "走路"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 657,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 19,
+      "question": "王先生接受右側全髖關節置換術後出現胸痛、呼吸短促、皮膚蒼白、冰冷。下列何者是王先生最可能產生的術後合併症？",
+      "options": {
+        "A": "關節脫位",
+        "B": "出血",
+        "C": "肺栓塞",
+        "D": "深部靜脈栓塞"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 658,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 20,
+      "question": "有關上石膏病人的護理指導，下列何者錯誤？",
+      "options": {
+        "A": "若石膏肢體遠端皮膚顏色呈現蒼白或冰冷，表示動脈循環受阻",
+        "B": "若石膏肢體遠端出現不尋常腫脹，表示靜脈回流受阻",
+        "C": "若石膏表面出現灼熱點，表示石膏內的肢體有感染的情形",
+        "D": "若聞到石膏有酸味，表示石膏內的肢體有組織壞死或感染"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 659,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 21,
+      "question": "有關骨科手術合併症的敘述，下列何者錯誤？",
+      "options": {
+        "A": "脂肪栓塞是因脂肪球由皮下組織釋出而導致的嚴重合併症",
+        "B": "開放性骨折復位手術最常見的合併症為神經血管合併症",
+        "C": "手術肢體若長時間固定不動，易導致血栓性靜脈炎之發生",
+        "D": "若術後突然胸痛、呼吸困難，有可能是肺栓塞，需緊急治療"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 660,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 22,
+      "question": "有關白內障的晶體乳化法手術的敘述，下列何者錯誤？",
+      "options": {
+        "A": "需等晶狀體成熟後才執行手術",
+        "B": "用超音波將晶體核震碎後取出",
+        "C": "可縮小傷口至0.3 公分",
+        "D": "手術中同時植入人工水晶體"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 661,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 23,
+      "question": "有關美尼爾氏症候群（Meniere’s disease）病人的護理指導，下列何者錯誤？",
+      "options": {
+        "A": "移動身體需緩慢",
+        "B": "病人應採用低鉀飲食",
+        "C": "給予利尿劑可減輕症狀",
+        "D": "鼓勵病人做頭部及全身的平衡運動"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 662,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 24,
+      "question": "有關鼻咽癌病人接受放射線治療的敘述，下列何者錯誤？",
+      "options": {
+        "A": "放射線治療為主要治療方式",
+        "B": "放射線治療前要評估聽力",
+        "C": "放射線治療前先要處理蛀牙",
+        "D": "連續6～7 週不間斷地放射線治療"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 663,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 25,
+      "question": "有關扁桃腺炎的處置，下列何者錯誤？",
+      "options": {
+        "A": "急性發炎時行扁桃腺切除術",
+        "B": "用溫食鹽水漱口",
+        "C": "冰敷可以緩解咽喉部疼痛",
+        "D": "發燒症狀消退後，抗生素仍需使用48～72 小時代號：3104頁次：6－3"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 664,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 26,
+      "question": "86 歲男性，長期高血壓，近日經醫師診斷為主動脈瓣狹窄，醫師建議更換心臟瓣膜，有關瓣膜選擇與抗凝劑使用的敘述，下列何者正確？",
+      "options": {
+        "A": "宜選用機械性人工瓣膜，並需終身服用Warfarin",
+        "B": "宜選用生物性人工瓣膜，不需終身服用Warfarin",
+        "C": "宜選用機械性人工瓣膜，不需終身服用Warfarin",
+        "D": "宜選用生物性人工瓣膜，並需終身服用Warfarin"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 665,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 27,
+      "question": "關於雷諾氏病的敘述，下列何者錯誤？",
+      "options": {
+        "A": "該疾病好發於年輕女性",
+        "B": "好發於近心端肢體",
+        "C": "容易因為冷的環境或壓力誘發",
+        "D": "患側肢體先變白，再轉為發紺"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 666,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 28,
+      "question": "有關冠狀動脈繞道手術後，為維持正常心輸出量的處置，下列敘述何者錯誤？",
+      "options": {
+        "A": "使用Dobutamine，可以增加心肌收縮力",
+        "B": "使用Furosemide（Lasix），可以降低心臟之前負荷",
+        "C": "使用Nitroglycerine，可以增加心肌收縮力",
+        "D": "使用Nipride，可以同時降低心臟之前、後負荷"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 667,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 29,
+      "question": "有關風濕熱的主要臨床表徵，下列何者錯誤？",
+      "options": {
+        "A": "邊緣性紅斑",
+        "B": "凝血時間延長",
+        "C": "多發性關節炎",
+        "D": "皮下結節"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 668,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 30,
+      "question": "有關心包填塞（cardiac tamponade）症狀的敘述，下列何者錯誤？",
+      "options": {
+        "A": "頸靜脈怒張",
+        "B": "心跳變快",
+        "C": "尿量減少",
+        "D": "收縮壓上升"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 669,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 31,
+      "question": "下肢周邊血管動脈疾病的護理指導，下列敘述何者正確？",
+      "options": {
+        "A": "多攝取高飽和脂肪酸食物",
+        "B": "鼓勵促進下肢血循運動",
+        "C": "鼓勵抬高患肢",
+        "D": "給予局部熱敷"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 670,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 32,
+      "question": "病人昨天接受冠狀動脈繞道手術（CABG），胸管引流量共600 mL，今體溫38.7℃，血壓100/60 mmHg，SaO2 94%。下列處置何者錯誤？",
+      "options": {
+        "A": "胸管引流量多，應評估凝血功能",
+        "B": "SaO2 94%，應給予O2 cannula 3 L/min",
+        "C": "血壓偏低，應給予輸血",
+        "D": "體溫過高，應給予Aspirin"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 671,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 33,
+      "question": "有關搭飛機長程旅行後常會出現深部靜脈栓塞的主要原因，下列何者正確？",
+      "options": {
+        "A": "靜脈內皮細胞受損",
+        "B": "血液凝固性增加",
+        "C": "血液鬱積",
+        "D": "血管收縮"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 672,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 34,
+      "question": "奇脈（paradoxical pulse）是指下列何種情況？",
+      "options": {
+        "A": "呼氣時，收縮壓下降超過10 mmHg",
+        "B": "吸氣時，收縮壓下降超過10 mmHg",
+        "C": "呼氣時，舒張壓下降超過10 mmHg",
+        "D": "吸氣時，舒張壓下降超過10 mmHg"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 673,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 35,
+      "question": "有關多發性骨髓瘤病人的護理指導，下列何者錯誤？",
+      "options": {
+        "A": "避免接觸感冒的親友",
+        "B": "避免運動以預防病理性骨折",
+        "C": "建議穿上背架減輕骨骼壓力",
+        "D": "鼓勵飲水以降低血鈣濃度"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 674,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 36,
+      "question": "有關癌症疼痛三階梯止痛療法的敘述，下列何者正確？",
+      "options": {
+        "A": "需要時給予止痛劑，比按時給予止痛劑的止痛效果好",
+        "B": "第一階段建議使用弱效麻醉性止痛劑，合併輔助性藥物",
+        "C": "麻醉性止痛劑有天花板效應，即使增加劑量，止痛效果也不會增加",
+        "D": "麻醉性止痛藥物的解毒劑是Naloxone"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 675,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 37,
+      "question": "有關癌症病人口腔黏膜障礙照護的敘述，下列何者正確？①使用含類固醇的口內膏，可緩解疼痛和發炎 ②Nystatin 可預防白色念珠菌感染，漱口後要吐掉不可吞服 ③病人對苦味的敏感度減少，故可以吃苦瓜和芥菜，補充纖維素 ④使用口香糖可維持口腔濕潤",
+      "options": {
+        "A": "①②",
+        "B": "①④",
+        "C": "②③",
+        "D": "③④"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 676,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 38,
+      "question": "有關癌症病人感染問題的照護與護理指導，下列何者正確？",
+      "options": {
+        "A": "嗜中性白血球低下病人都會出現典型發炎症狀，如發燒等",
+        "B": "多吃養樂多和優格等食品對病人是有益處的",
+        "C": "絕對嗜中性白血球低於500/mm3 要採取保護隔離",
+        "D": "家屬接種活性疫苗3 週後即可探視病人"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 677,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 39,
+      "question": "有關補充鐵劑的敘述，下列何者正確？",
+      "options": {
+        "A": "鐵劑不會刺激腸胃道可空腹服用",
+        "B": "維生素E 有助於鐵劑吸收",
+        "C": "口服後立刻漱口可減少牙齒染色",
+        "D": "鐵劑注射後要按摩以加速吸收"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 678,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 40,
+      "question": "林先生在輸血過程中出現頭痛、咳嗽、呼吸困難、心跳加快及血壓升高等情形，最有可能是出現下列那一種輸血反應？",
+      "options": {
+        "A": "急性溶血反應",
+        "B": "循環過度負荷",
+        "C": "過敏反應",
+        "D": "輸血相關之急性肺損傷"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 679,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 41,
+      "question": "長期攝取低纖維或精緻飲食，可能與下列何種癌症的發生最有關？",
+      "options": {
+        "A": "胃癌",
+        "B": "肝癌",
+        "C": "大腸癌",
+        "D": "乳癌"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 680,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 42,
+      "question": "下列何者不是接受周邊造血幹細胞移植治療的禁忌症？",
+      "options": {
+        "A": "血小板數目＞150,000/mm3 者",
+        "B": "有肺部或深部靜脈栓塞病史者",
+        "C": "懷孕或哺乳中的婦女",
+        "D": "自體免疫疾病者"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 681,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 43,
+      "question": "化學治療最常見的副作用，下列何者正確？①便秘 ②白血球增加 ③紅血球減少 ④口腔黏膜破損⑤掉頭髮",
+      "options": {
+        "A": "①②⑤",
+        "B": "①③④",
+        "C": "②④⑤",
+        "D": "③④⑤"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 682,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 44,
+      "question": "18 歲女大生因玩煙火，導致左手有部分燒痂到急診求診，對燒傷部位的立即護理處置，下列何者正確？",
+      "options": {
+        "A": "將左手浸生理食鹽水中",
+        "B": "抬高左手減輕水腫",
+        "C": "局部用藥減輕感染",
+        "D": "手術切開水泡和清創"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 683,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 45,
+      "question": "皮膚表皮破皮並看得到皮下脂肪組織，且傷口出現黏液或滲出物，可能為第幾期壓傷？",
+      "options": {
+        "A": "第一期",
+        "B": "第二期",
+        "C": "第三期",
+        "D": "無法分期"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 684,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 46,
+      "question": "有關皮膚惡性腫瘤病人的護理措施，下列何者錯誤？",
+      "options": {
+        "A": "病灶處需要適當的加壓，以減少疼痛",
+        "B": "教導每日檢查皮膚，觀察病灶及其變化",
+        "C": "儘量減少曝曬於陽光下，並須執行適當的防曬措施",
+        "D": "告知身上的痣若出現潰瘍、滲液、痛癢時，則需就醫"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 685,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 47,
+      "question": "有關燒傷的病生理變化，下列何者錯誤？",
+      "options": {
+        "A": "燒傷48 小時內，應密切監測鉀離子，以避免高血鉀影響心臟功能及危及生命",
+        "B": "燒傷初期病人會出現少尿、尿液濃縮及尿比重增加",
+        "C": "大範圍燒傷面積病人常在燒傷後72 小時出現壓力性潰瘍",
+        "D": "在燒傷後48～72 小時，病人會出現血比容升高、血鈉上升以及尿量減少"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 686,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 48,
+      "question": "有關過敏反應護理指導的敘述，下列何者錯誤？",
+      "options": {
+        "A": "建議關閉門窗以隔離髒空氣及過敏原，並打開空調讓室內的空氣循環",
+        "B": "建議使用填充家具，如布沙發、椰子墊、草蓆、榻榻米等",
+        "C": "定期清理住家環境，且不使用噴霧清潔劑",
+        "D": "避免飼養寵物，或服用容易引起過敏的食物"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 687,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 49,
+      "question": "有關愛滋病病人護理指導的敘述，下列何者正確？",
+      "options": {
+        "A": "鼓勵多食用生菜，以促進維生素之攝取",
+        "B": "勿與剛接種疫苗或受傳染病感染的家人接觸",
+        "C": "服用Zidovudine 反轉錄酶抑制劑，需注意末梢神經痛的症狀",
+        "D": "勿握手、擁抱、共用餐具、共用浴池，以避免傳染他人"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 688,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 50,
+      "question": "接觸性皮膚炎病人因搔癢不適至門診治療，下列護理指導何者錯誤？",
+      "options": {
+        "A": "屬於過敏反應",
+        "B": "避免接觸已知的過敏原",
+        "C": "經常用肥皂清潔以緩解過敏症狀",
+        "D": "服用抗組織胺類藥物時須避免開車"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 689,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 51,
+      "question": "下列何者為與第一型立即性過敏反應有密切關聯的免疫球蛋白？",
+      "options": {
+        "A": "IgA",
+        "B": "IgE",
+        "C": "IgG",
+        "D": "IgM"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 690,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 52,
+      "question": "有關促進胸腔手術術後病人咳嗽的護理措施，下列何者最適當？",
+      "options": {
+        "A": "深呼吸後應至少隔6 小時再行咳嗽",
+        "B": "咳嗽前2 小時給止痛劑",
+        "C": "咳嗽前喝至少500 mL 的開水",
+        "D": "咳嗽前請病人坐起且以枕頭壓住傷口"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 691,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 53,
+      "question": "有關肺水腫（pulmonary edema）的敘述，下列何者正確？",
+      "options": {
+        "A": "為肋膜過度積水",
+        "B": "常為左心衰竭所引起",
+        "C": "應提供增加前負荷之處置",
+        "D": "鼓勵病人下肢抬高增加靜脈血液回流代號：3104頁次：6－5"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 692,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 54,
+      "question": "有關移除胸管的護理措施，下列何者錯誤？",
+      "options": {
+        "A": "水封瓶液面，隨呼吸上下浮動，表示可拔除胸管",
+        "B": "拔管前，應提前給予止痛劑",
+        "C": "拔管時，應請病人深吸氣後閉氣再拔出胸管",
+        "D": "拔管後，應以無菌凡士林紗布覆蓋傷口"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 693,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 55,
+      "question": "有關慢性支氣管炎病人出院護理指導的敘述，下列何者正確？",
+      "options": {
+        "A": "限制水分的攝取量",
+        "B": "增加醣類的攝取量",
+        "C": "戒菸或避免二手菸",
+        "D": "避免注射流感疫苗"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 694,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 56,
+      "question": "評估慢性阻塞性肺病（COPD）病人的呼吸道阻塞嚴重度，下列何者為最重要的評估指標？",
+      "options": {
+        "A": "用力肺活量（FVC）",
+        "B": "第一秒鐘用力呼氣容積（FEV1）",
+        "C": "肺活量（VC）",
+        "D": "全肺容量（TLC）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 695,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 57,
+      "question": "李先生為氣喘病人，目前使用Aminophylline 靜脈輸注溶液，護理師得知李先生血清中的Theophylline濃度為12 μg/mL，此時最適當的護理措施為何？",
+      "options": {
+        "A": "立即告知主治醫師檢驗報告的數值",
+        "B": "繼續使用Aminophylline 輸注溶液",
+        "C": "將輸注溶液更換為不含Aminophylline 的點滴溶液",
+        "D": "聯絡檢驗部門確認數值是否有誤"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 696,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 58,
+      "question": "有關急性呼吸窘迫症候群（ARDS）病生理變化的敘述，下列何者正確？",
+      "options": {
+        "A": "微血管細胞膜的通透性增加，導致肺水腫",
+        "B": "肺泡過度擴張導致呼吸道阻力下降",
+        "C": "肺泡表面張力素過度分泌，導致肺泡過度撐大",
+        "D": "支氣管擴張導致進入肺的氣體流量下降"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 697,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 59,
+      "question": "肺擴張不全病人的身體評估，下列發現何者正確？",
+      "options": {
+        "A": "視診氣管明顯向健側擴張",
+        "B": "觸診患側觸覺震顫明顯變大",
+        "C": "叩診患側有明顯濁音出現",
+        "D": "聽診患側呼吸音變大"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 698,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 61,
+      "question": "有關腎臟結石常見的臨床症狀，下列何者錯誤？",
+      "options": {
+        "A": "後背腰部疼痛",
+        "B": "頻尿、尿急",
+        "C": "噁心、嘔吐",
+        "D": "寒顫、發燒"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 699,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 62,
+      "question": "有關膀胱結石的治療與照護措施，下列何者錯誤？",
+      "options": {
+        "A": "建議使用體外震波碎石術治療，較不具侵入性",
+        "B": "結石成分為尿酸時，指導避免食用內臟、香菇等",
+        "C": "預防感染通常會先用廣效性抗生素",
+        "D": "術後鼓勵多喝水並監測輸出入量與尿液顏色、氣味等"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 700,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 63,
+      "question": "有關前列腺肥大與前列腺癌的敘述，下列何者錯誤？",
+      "options": {
+        "A": "排尿困難、頻尿與尿瀦留等是常見症狀",
+        "B": "前列腺癌與雄性素有關，好發於前列腺中葉",
+        "C": "前列腺肥大經常會合併膀胱結石、尿路感染",
+        "D": "直腸指診和前列腺特異抗原是篩檢的診斷方法"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 701,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 64,
+      "question": "有關腎臟癌的敘述，下列何者正確？",
+      "options": {
+        "A": "以腎細胞癌（renal cell carcinoma）最常見",
+        "B": "最常轉移部位是腦部",
+        "C": "腹脇部疼痛是最早期的症狀",
+        "D": "抽菸與暴露在汞是可能的致病因"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 702,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 66,
+      "question": "有關多囊性腎病的敘述，下列何者錯誤？",
+      "options": {
+        "A": "是一種遺傳性疾病",
+        "B": "大多數在青春期發病",
+        "C": "常見症狀為後腰部鈍痛",
+        "D": "通常可由腎超音波確認囊腫"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 703,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 67,
+      "question": "下列何者可能出現膀胱容量增加？",
+      "options": {
+        "A": "膀胱發炎",
+        "B": "膀胱纖維化",
+        "C": "上運動神經元受損",
+        "D": "慢性膀胱出口阻塞"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 704,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 68,
+      "question": "有關甲狀腺風暴的敘述，下列何者錯誤？",
+      "options": {
+        "A": "病人臨床檢驗結果出現血中游離甲狀腺素（free T4）與TSH 上升",
+        "B": "評估病人是否出現發燒、心跳過速、脫水及暴躁不安之徵象",
+        "C": "依醫囑給予β-腎上腺素阻斷劑（Propranolol），以降低心搏速率",
+        "D": "依醫囑給予抑制甲狀腺素合成與釋放藥物，如：Methimazole (Tapazole)"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 705,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 69,
+      "question": "有關庫欣氏症候群（Cushing’s syndrome）的飲食指導，下列何者錯誤？",
+      "options": {
+        "A": "高鈣",
+        "B": "高鉀",
+        "C": "低熱量",
+        "D": "低蛋白"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 706,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 70,
+      "question": "有關抗利尿激素分泌不當症候群（SIADH）的護理指導，下列何者錯誤？",
+      "options": {
+        "A": "須限制液體，故每天液體攝入不超過500 mL",
+        "B": "向病人說明使用四環素主要目的是為了預防感染",
+        "C": "跟病人解釋頭部最好保持平躺，以防腦水腫",
+        "D": "教導病人攝取高纖、含鈉的食物，以改善便秘"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 707,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 71,
+      "question": "有關糖尿病酮酸中毒（DKA）病人的呼吸特徵，下列何者正確？",
+      "options": {
+        "A": "深、快、有果香味",
+        "B": "淺、慢、有尿騷味",
+        "C": "深、慢、有果香味",
+        "D": "淺、快、有尿騷味"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 708,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 72,
+      "question": "有關高滲透壓高血糖狀態（HHS）的敘述，下列何者正確？",
+      "options": {
+        "A": "好發於第一型糖尿病人",
+        "B": "呼吸加速且深度增加",
+        "C": "檢驗血中呈現無或微量酮體",
+        "D": "因無胰島素分泌導致高血糖"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 709,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 73,
+      "question": "有關甲狀腺功能亢進病人的飲食指導，下列何者正確？",
+      "options": {
+        "A": "低蛋白飲食",
+        "B": "高碳水化合物飲食",
+        "C": "低熱量飲食",
+        "D": "高纖維飲食"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 710,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 74,
+      "question": "有關糖化血色素的敘述，下列何者正確？",
+      "options": {
+        "A": "抽血前必須禁食12 小時",
+        "B": "可了解病人過去1 年血糖控制情形",
+        "C": "值< 7%表示血糖控制不好",
+        "D": "是指葡萄糖分子與血色素結合的一種反應"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 711,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 75,
+      "question": "下列何者在副甲狀腺功能低下病人會呈現陽性反應？",
+      "options": {
+        "A": "黎明現象（dawn phenomenon）",
+        "B": "洛夫辛徵象（Rovsing’s sign）",
+        "C": "腔室症候群（compartment syndrome）",
+        "D": "沃斯特克氏徵象（Chvostek’s sign）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 712,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 76,
+      "question": "有關骨折病人到院前急救處理原則，下列何者為最優先的處置？",
+      "options": {
+        "A": "給予疼痛處理",
+        "B": "將骨折部位復位",
+        "C": "固定骨折部位",
+        "D": "給予熱敷處理"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 713,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 77,
+      "question": "有關服用有機磷中毒的護理措施，下列何者錯誤？",
+      "options": {
+        "A": "維持呼吸道通暢",
+        "B": "清醒者可進行催吐以減少有機磷之吸收",
+        "C": "照顧病人時要穿戴防護措施，包括口罩、手套、隔離衣以及適當通風",
+        "D": "使用Atropine 靜脈注射時，維持病人心跳在60 次／分鐘左右"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 714,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 78,
+      "question": "有關矯正休克病人低血壓的護理措施，下列何者錯誤？",
+      "options": {
+        "A": "應優先輸血以恢復全身循環血量",
+        "B": "放置靜脈導管時應優先使用大管徑的導管",
+        "C": "靜脈導管放置應優先考慮中心靜脈導管",
+        "D": "密切注意病人血壓的變化"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 715,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 79,
+      "question": "有關敗血症病人臨床徵象與症狀的敘述，下列何者正確？",
+      "options": {
+        "A": "高血氧",
+        "B": "呼吸變慢",
+        "C": "尿量增加",
+        "D": "代謝性酸中毒"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 716,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "內外科護理學",
+      "subject_tag": "med_surg",
+      "subject_name": "內外科護理學",
+      "stage_id": 0,
+      "number": 80,
+      "question": "有關狂牛症（mad cow disease）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "又稱新型庫賈氏病，是與牛海綿狀腦病變（BSE）有關",
+        "B": "主要因腦部奈格利氏小體（Negri body）發生基因突變",
+        "C": "好發於較為年輕的族群，且其在臨床上的病程較長",
+        "D": "此類病人通常以焦慮、妄想等精神症狀為最初的表現"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 717,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 1,
+      "question": "有關懷孕期正常內分泌變化的敘述，下列何者正確？",
+      "options": {
+        "A": "腦下垂體前葉分泌濾泡刺激素及黃體生成素會增加",
+        "B": "甲狀腺所分泌的甲狀腺素會增加",
+        "C": "腎上腺分泌留鹽激素會降低",
+        "D": "胎盤分泌的雌二醇分泌增加取代卵巢分泌的雌三醇"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 718,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 2,
+      "question": "阮女士，目前懷孕30 週，飲食偏好辣與冷食，公婆一直抱怨這樣飲食型態對孩子健康不好，下列護理處置，何者較不適當？",
+      "options": {
+        "A": "評估孕婦的飲食嗜好及行為",
+        "B": "尊重接受孕婦的看法採不批評的態度",
+        "C": "認同公婆想法，一起說服其改變不健康的飲食",
+        "D": "尊重孕婦最後的信念與決定"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 719,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 3,
+      "question": "有關周產期死亡率的定義，下列何者正確？",
+      "options": {
+        "A": "妊娠20 週以上之死胎數及出生1 週內的嬰兒死亡數÷ 一年中活產數×1000",
+        "B": "妊娠28 週以上之死胎數及出生1 週內的嬰兒死亡數÷ 一年中活產數×1000",
+        "C": "妊娠28 週以上之死胎數÷ 一年中活產數×1000",
+        "D": "妊娠24 週以上之死胎數÷ 一年中活產數×1000"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 720,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 4,
+      "question": "王女士，懷孕10 週，有關雌性素（estrogen）增加而發生的子宮頸變化，下列何者錯誤？",
+      "options": {
+        "A": "子宮頸血管增生充血",
+        "B": "子宮頸黏液分泌增加",
+        "C": "子宮頸組織變肥厚堅硬",
+        "D": "子宮頸腺體增加腫脹"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 721,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 5,
+      "question": "李女士，懷孕11 週，第一胎為唐氏症，此胎希望可以提前檢查確診，下列何者為此時較適當的檢查？",
+      "options": {
+        "A": "胎兒頸部透明帶",
+        "B": "絨毛膜取樣術",
+        "C": "羊膜腔穿刺術",
+        "D": "唐氏症母血檢驗"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 722,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 6,
+      "question": "李女士，懷孕40 週尚無產兆，前來進行30 分鐘的無壓力試驗，有關無壓力試驗判讀所需的資料，下列何者錯誤？",
+      "options": {
+        "A": "宮縮時胎心率出現至少15 秒的加速",
+        "B": "胎心率的變異性介於3～6 次／分鐘",
+        "C": "前10 分鐘無胎動，後10 分鐘5 次胎動",
+        "D": "胎心率加速通常介於12～15 次／分鐘"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 723,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 7,
+      "question": "有關我國全民健康保險給付之產前檢查時間，一般孕婦常規接受妊娠糖尿病篩檢的週數為何？",
+      "options": {
+        "A": "18～20 週",
+        "B": "24～28 週",
+        "C": "30～34 週",
+        "D": "35～37 週"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 724,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 8,
+      "question": "有關懷孕期間血液系統的變化，下列敘述何者錯誤？",
+      "options": {
+        "A": "血漿量比未懷孕時增加",
+        "B": "血比容比未懷孕時降低",
+        "C": "纖維蛋白原數目比未懷孕時增加",
+        "D": "血小板數目比未懷孕時增加"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 725,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 9,
+      "question": "懷孕24 週婦女，孕前BMI 為23，目前體重比孕前增加5 公斤，血色素（Hb）＝11.2 g/dL，血比容（Hct）＝35%，目前飲食指導內容，下列何者除外？",
+      "options": {
+        "A": "每日熱量攝取量較孕前增加300 卡",
+        "B": "每日額外增加鐵劑攝取量45 mg",
+        "C": "每日增加蛋白質攝取量10 g",
+        "D": "需攝取足夠含鈣質食物"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 726,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 10,
+      "question": "妊娠36 週時，腹部四段式觸診觸得胎位是LOA，則評估胎心音時，超音波胎音器（doppler）應放在何處，會聽得最清楚？",
+      "options": {
+        "A": "肚臍周圍",
+        "B": "左側肚臍、髖骨前上棘延長線",
+        "C": "右側肚臍與髖骨前上棘連線的中點",
+        "D": "左側肚臍與髖骨前上棘連線的中點"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 727,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 11,
+      "question": "陳女士，產後1 小時後評估發現其子宮位置於臍上2 指且偏向右側，其最有可能的原因為何？",
+      "options": {
+        "A": "子宮內胎盤殘留",
+        "B": "子宮內積血",
+        "C": "子宮收縮不佳",
+        "D": "膀胱漲滿"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 728,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 12,
+      "question": "王女士，29 歲，G1P0，40 週。目前子宮頸擴張4 公分，子宮收縮強度達50 mmHg，可自在與護理師交談，下列護理處置何者不適當？",
+      "options": {
+        "A": "提供呼吸技巧的訓練及舒適措施指導",
+        "B": "每30 分鐘陰道內診一次，以監測產程進展",
+        "C": "協助經常改變姿勢促進舒適與放鬆",
+        "D": "每2 小時提醒待產婦解小便排空膀胱"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 729,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 13,
+      "question": "王女士，G1P0，懷孕24 週，常規的產前檢查正常。詢問護理師：「我有時會覺得肚子繃緊，但不覺得痛。繃緊感有時候幾秒鐘就過去，通常不超過1 分鐘，沒有其他不舒服，這樣是正常嗎？」下列的回答，何者最適當？",
+      "options": {
+        "A": "這可能是早產的徵兆，需要立即通知醫師，可能需要住院安胎",
+        "B": "雖然目前沒事，但妳可能是早產的高危險群，需要多臥床休息",
+        "C": "這種收縮對子宮頸變薄有幫助，妳的身體開始生產前的準備，不用擔心",
+        "D": "這是懷孕期間一種正常的無痛性子宮收縮，無需太擔心"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 730,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 14,
+      "question": "有關胎兒娩出的過程，當左枕前位（LOA）的胎兒完成內回轉（internal rotation）。此時胎頭與母體骨盆間的關係，下列敘述何者正確？",
+      "options": {
+        "A": "胎頭的矢狀縫合與母體骨盆的前後徑，呈平行狀態",
+        "B": "胎頭的冠狀縫合與母體骨盆的前後徑，呈平行狀態",
+        "C": "胎頭的額縫合與母體骨盆的前後徑，呈垂直狀態",
+        "D": "胎頭的枕下前囟徑與母體骨盆的前後徑，呈垂直狀態"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 731,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 15,
+      "question": "根據世界衛生組織（WHO）對無併發症或任何健康問題婦女的待產期照護建議，下列何者正確？",
+      "options": {
+        "A": "採間歇性胎心音聽診監測",
+        "B": "例行性灌腸及陰毛剃除",
+        "C": "產程活動期開始禁食",
+        "D": "常規性施打點滴"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 732,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 16,
+      "question": "王女士，G1P0，子宮頸口開10 公分，待產時宮縮疼痛，下列措施何者最適當？",
+      "options": {
+        "A": "直接送入分娩室，等醫師來方可用力生產",
+        "B": "可採膀胱截石臥位，此為最有助於產程進展之姿勢",
+        "C": "當進入第二產程每30 分鐘監測待產婦的血壓、脈搏和呼吸",
+        "D": "有強烈便意感時，可採緩慢開聲門用力生產"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 733,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 17,
+      "question": "使用催產素催生的待產婦女，當發生下列何種情況仍可持續使用催產素促進產程？",
+      "options": {
+        "A": "胎頭與骨盆不對稱",
+        "B": "胎兒窘迫",
+        "C": "前置胎盤",
+        "D": "早期破水"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 734,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 18,
+      "question": "一位足月懷孕的孕婦，因腹痛來院準備待產，護理師評估其疼痛的性質：子宮收縮壓力在40 mmHg，收縮的頻率不規則，子宮頸沒有變化，疼痛與不適的部位侷限在腹部，協助來回走動時其疼痛可減輕，該產婦的子宮收縮是屬於那一種陣痛？",
+      "options": {
+        "A": "真陣痛",
+        "B": "假陣痛",
+        "C": "混合型陣痛",
+        "D": "無法分辨陣痛型態"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 735,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 19,
+      "question": "有關新生兒蒙古斑的敘述，下列何者錯誤？",
+      "options": {
+        "A": "為新生兒胎記的一種",
+        "B": "多分布於臀部、背部和大腿",
+        "C": "一般於12～18 歲會逐漸消失",
+        "D": "邊緣界線不明顯代號：4104頁次：8－3"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 736,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 20,
+      "question": "產後第二天純母乳哺餵的母親詢問：「我的寶寶兩餐之間是否需要餵開水？」下列護理指導何者最適當？",
+      "options": {
+        "A": "6 天內的純母乳寶寶都需要餵開水，避免導致結晶尿",
+        "B": "6 天內的純母乳寶寶都需要餵少量開水，避免鵝口瘡",
+        "C": "6 個月內的純母乳寶寶皆需要餵開水，避免便秘",
+        "D": "6 個月內的純母乳寶寶皆不需要餵開水，避免增加腎臟負荷"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 737,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 21,
+      "question": "有關產後生命徵象的評估，下列何者正確？",
+      "options": {
+        "A": "產後心輸出量增加，不易發生姿位性低血壓",
+        "B": "產後心輸出量增加，最初6～10 天常發生心跳過緩",
+        "C": "會陰傷口痛、子宮收縮痛，使呼吸速率下降",
+        "D": "分娩時用力與脫水，會導致體溫升高至39 ℃"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 738,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 22,
+      "question": "有關泌乳機轉的敘述，下列何者正確？",
+      "options": {
+        "A": "乳汁的移出與吸吮次數會影響泌乳量",
+        "B": "吸吮刺激腦下垂體前葉分泌催產素",
+        "C": "泌乳素可作用於肌皮細胞產生排乳反射",
+        "D": "泌乳素夜間分泌較少，母親夜間應有充足睡眠以利奶水分泌"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 739,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 23,
+      "question": "有關各種避孕方法作用原理的敘述，下列何者正確？",
+      "options": {
+        "A": "迷你丸使子宮內膜產生炎症反應而干擾受精卵著床",
+        "B": "子宮內避孕器使子宮頸黏液變黏稠而產生避孕效果",
+        "C": "避孕貼片使子宮內膜產生前列腺素化學物質而干擾受精卵著床",
+        "D": "陰道避孕環可抑制排卵，使子宮頸黏液變黏稠而產生避孕效果"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 740,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 24,
+      "question": "有關產後子宮復舊（uterine involution），下列敘述何者正確？",
+      "options": {
+        "A": "子宮底每天下降一指寬，約產後5 天降至骨盆腔",
+        "B": "除胎盤位置外，子宮內膜復舊約需6 週",
+        "C": "蛋白質自體溶解使子宮細胞數目減少而復舊",
+        "D": "胎盤部位是由剝落過程而復舊，所以沒有疤痕形成"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 741,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 25,
+      "question": "吳女士，G1P1，產後第三天，計畫採純母乳哺育，詢問：「哺乳是否可以避孕？」下列護理指導何者最適當？",
+      "options": {
+        "A": "在月經尚未出現之前，不分日夜純母乳哺餵，頻率8～10 次以上，6 個月內可當作避孕措施",
+        "B": "分娩後42 天可能排卵，哺乳避孕只適用於產後1 個月內",
+        "C": "哺乳可以抑制排卵，只要純母乳哺餵，月經未恢復即可避孕",
+        "D": "純母乳哺餵是最不安全的避孕方式，不建議產後6 個月內使用"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 742,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 26,
+      "question": "齊女士，月經週期規律，擬以安全期法避孕，下列護理師的指導何者正確？",
+      "options": {
+        "A": "瞭解齊女士記憶中的最長及最短週期",
+        "B": "最長月經週期減10，最短月經週期減18",
+        "C": "卵子排卵後可存活48～72 小時",
+        "D": "避孕效果約80%"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 743,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 27,
+      "question": "有關剖腹產後陰道生產（vaginal birth after cesarean, VBAC）的敘述，下列何者正確？",
+      "options": {
+        "A": "前胎剖腹生產的次數，不影響VBAC",
+        "B": "前置胎盤者，可以建議行VBAC",
+        "C": "前胎採子宮下段橫切剖腹產，此胎不宜行VBAC",
+        "D": "曾有子宮破裂病史者，此胎不宜行VBAC"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 744,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 29,
+      "question": "下列何項為新生兒晚期飢餓的暗示行為（late hunger cues）？",
+      "options": {
+        "A": "吸吮嘴唇",
+        "B": "不斷哭泣",
+        "C": "將手放進嘴巴",
+        "D": "嘴唇出現尋乳動作"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 745,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 30,
+      "question": "下列何項不是新生兒於睡眠活動週期中「安靜清醒期」（quiet alert state）的行為表徵？",
+      "options": {
+        "A": "注意周圍環境",
+        "B": "眼睛張大、明亮、有精神",
+        "C": "對照顧者有反應",
+        "D": "呼吸不規律"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 746,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 31,
+      "question": "有關妊娠合併糖尿病孕婦預後及其相關檢測的敘述，下列何者正確？",
+      "options": {
+        "A": "產後血糖值檢測仍超過標準值者，未來一定會罹患第一型糖尿病",
+        "B": "具第二型糖尿病的危險因子，下胎懷孕即在第一次產檢就須進行篩檢",
+        "C": "產後血糖值檢測正常者，在產後6～12 週就不需再做糖尿病篩檢",
+        "D": "妊娠期糖尿病與卵巢分泌雌性素有關，與下一胎再度罹患糖尿病的關聯性高"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 747,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 32,
+      "question": "有關孕婦前置胎盤的症狀敘述，下列何者錯誤？",
+      "options": {
+        "A": "腹部較少疼痛表現",
+        "B": "常合併有胎位不正的現象",
+        "C": "腹部呈現木板狀的堅硬",
+        "D": "突發性鮮紅色陰道出血"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 748,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 33,
+      "question": "臍帶血中可作為胎兒在子宮內感染診斷之免疫球蛋白，下列何者正確？",
+      "options": {
+        "A": "IgA",
+        "B": "IgE",
+        "C": "IgG",
+        "D": "IgM"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 749,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 34,
+      "question": "王女士，G1P0，過去產檢皆正常，於妊娠32 週產檢時主訴胎動有減少情形，感到很擔心，此時何項處置最適當？",
+      "options": {
+        "A": "指導個案返家記錄每日胎動",
+        "B": "此為此期常見情形，告知不用擔心",
+        "C": "安排無壓力試驗",
+        "D": "立即安排引產"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 750,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 35,
+      "question": "有關我國後天免疫缺乏症候群母嬰的照護，下列何者錯誤？①產婦的排泄物以漂白水浸泡1 小時後再沖入馬桶 ②新生兒出生7 天後即給予預防性投藥 ③可以採取親子同室 ④應鼓勵餵母奶以促進親子關係",
+      "options": {
+        "A": "①②",
+        "B": "②③",
+        "C": "②④",
+        "D": "③④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 751,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 36,
+      "question": "有關更年期熱潮紅症狀的敘述，下列何者錯誤？",
+      "options": {
+        "A": "與黃體素的減少有關",
+        "B": "起因於血管舒張與收縮之間不穩定",
+        "C": "藉由流汗、發熱來降低體溫",
+        "D": "體重過輕者，熱潮紅症狀更為嚴重"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 752,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 37,
+      "question": "女性於經期不適時建議可補充的維生素為何？",
+      "options": {
+        "A": "維生素A",
+        "B": "維生素D",
+        "C": "維生素E",
+        "D": "維生素C"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 753,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 38,
+      "question": "有關精液檢查的敘述，下列何者錯誤？",
+      "options": {
+        "A": "檢查前3～5 天需禁慾",
+        "B": "自慰射精並以保險套方式收集精液",
+        "C": "精液收集完成後保存於室溫環境中",
+        "D": "1～2 小時內送至醫院檢查"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 754,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 39,
+      "question": "劉女士，28 歲，因外陰部搔癢、排尿時有灼熱感並有濃稠白色的陰道分泌物，內診時可見陰道壁有乳酪狀白色附著物，最有可能是下列何種病原感染？",
+      "options": {
+        "A": "砂眼披衣菌",
+        "B": "白色念珠球菌",
+        "C": "梅毒螺旋體",
+        "D": "陰道鞭毛滴蟲"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 755,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 40,
+      "question": "有關乳癌的護理措施，下列何者正確？",
+      "options": {
+        "A": "術後患側手臂易發生腫脹感染，會自然恢復",
+        "B": "術後以PQRST 評估患者疼痛，其中R 是recovery，評估疼痛恢復的狀況",
+        "C": "外出時，儘量避免陽光直射患側手臂",
+        "D": "術後腋下會出現僵硬、緊繃的感覺是正常的，會慢慢恢復，不需特別注意"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 756,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 41,
+      "question": "依據美國燒傷協會有關兒童重度燒燙傷程度的分類，下列敘述何者正確？",
+      "options": {
+        "A": "二度燒燙傷占10～20%體表面積",
+        "B": "二度燒燙傷占<10%體表面積",
+        "C": "三度燒燙傷占2～10%體表面積",
+        "D": "三度燒燙傷占>10%體表面積代號：4104頁次：8－5"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 757,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 42,
+      "question": "有關自閉症兒童的敘述，下列何者護理照護較為正確？",
+      "options": {
+        "A": "低功能自閉症兒童語言表達與理解能力通常正常",
+        "B": "有自傷行為的自閉兒，必要時可執行適當的約束",
+        "C": "增加身體的碰觸可刺激自閉症兒童的感覺統合",
+        "D": "經常改變生活環境可增加自閉症兒童的學習刺激"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 758,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 43,
+      "question": "玲玲，2 歲12 公斤，媽媽自己開車載她看醫生，玲玲乘坐汽車的方式，下列何者正確？",
+      "options": {
+        "A": "坐嬰兒安全座椅，置前座，面向車尾",
+        "B": "坐幼兒安全座椅，置後座，面向車頭",
+        "C": "坐幼兒安全座椅，置前座，面向車頭",
+        "D": "坐嬰兒安全座椅，置後座，面向車尾"
+      },
+      "answer": "B",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": 759,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 44,
+      "question": "小奇，2 個月大，在吃奶時，突然沒有呼吸、心跳，且嘴唇發紫，保母立即施以心肺復甦術，下列步驟何者錯誤？",
+      "options": {
+        "A": "刺激腳跟以評估意識狀態",
+        "B": "以10 秒內檢查肱動脈",
+        "C": "心外按摩部位於胸部兩乳頭連線中央下方",
+        "D": "以單手掌根方式進行心外按摩"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 760,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 45,
+      "question": "兒童誤食下列那種毒物時，可採用催吐處理？",
+      "options": {
+        "A": "清潔劑",
+        "B": "鐵劑",
+        "C": "漂白劑",
+        "D": "洗碗劑"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 761,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 46,
+      "question": "丁丁，3 歲，被家中養的母貓咬傷手背，傷口流血，疼痛哭泣，送至急診處理，下列處置何者錯誤？",
+      "options": {
+        "A": "儘快打破傷風抗毒素",
+        "B": "沖洗傷口，予抗生素藥膏局部塗抹",
+        "C": "指導家長，傷口若發生紅腫須趕快就醫",
+        "D": "指導家長回家應注意體溫及局部淋巴腫脹"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 762,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 47,
+      "question": "小玲，8 歲，住院期間常抱怨因右手打點滴無法自己吃飯及畫畫、不願意打針及吃藥，護理師協助小玲增進其「自我控制感」的護理措施，下列敘述何者最適當？",
+      "options": {
+        "A": "讓小玲表達及討論可以參與治療的方式",
+        "B": "在小玲的同意下讓小玲的同學來院陪伴",
+        "C": "跟小玲聊聊她喜歡的卡通以轉移注意力",
+        "D": "請小玲的主要照顧者留在病房內陪伴"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 763,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 48,
+      "question": "有關執行兒童生命徵象的測量，下列敘述何者錯誤？",
+      "options": {
+        "A": "幼兒生命徵象測量依序是呼吸、脈搏、體溫和血壓",
+        "B": "呼吸暫停是新生兒常見表徵，僅需持續觀察和記錄",
+        "C": "2 歲以下幼兒，需測量心尖脈脈動完整1 分鐘",
+        "D": "3 歲以下幼兒，測量耳溫時將耳朵向下向後拉"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 764,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 49,
+      "question": "有關兒童疼痛的處理，下列何者最不適當？",
+      "options": {
+        "A": "使用鴉片類藥物，會合併給予緩瀉藥物以預防合併症發生",
+        "B": "讀故事書是一種分散注意力法，可運用於6 歲以上的小孩",
+        "C": "EMLA 是一種局部麻醉劑，需於侵入性治療前1 小時使用",
+        "D": "Acetaminophen 是一種非類固醇抗發炎藥物，適合輕度疼痛"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 765,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 50,
+      "question": "小明，4 歲半，入院須接受疝氣手術治療，下列那項護理措施較不適當？",
+      "options": {
+        "A": "使用臉譜量表來評估小明術前、術後的疼痛程度",
+        "B": "向小明解說開刀過程，應避免使用「切除」、「切開」等字眼來說明",
+        "C": "注射後用膠布覆蓋注射部位，其目的是要轉移注意力，減輕疼痛",
+        "D": "運用遊戲方式，如：角色扮演等，來表達術前、術後疼痛感受"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 766,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 52,
+      "question": "生理徵象的改變為評估疼痛的重要指標之一，下列何種徵象與疼痛較無直接關係？",
+      "options": {
+        "A": "尿量",
+        "B": "心跳",
+        "C": "呼吸",
+        "D": "瞳孔"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 767,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 53,
+      "question": "有關早產兒安全的擺位，下列敘述何者不適當？",
+      "options": {
+        "A": "口胃管灌食後，維持頭部抬高45 度約10 分鐘",
+        "B": "休息時，可肩膀朝前，雙手屈曲朝向身體中線並靠近嘴巴",
+        "C": "平時，屈曲髖部及膝蓋，預留四肢活動的空間",
+        "D": "若出現呼吸暫停，可頸部微仰，勿過度屈曲與伸展"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 768,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 54,
+      "question": "早產兒若氧氣濃度超過60%，PaO2 < 60 mmHg 時，醫囑使用持續性氣道正壓呼吸（CPAP），下列敘述何者不適當？",
+      "options": {
+        "A": "適用於可自行呼吸之呼吸窘迫症候群早產兒",
+        "B": "給予4～7 cmH2O 壓力",
+        "C": "可增加早產兒肺功能性肺餘容積",
+        "D": "防止吸氣時肺泡塌陷"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 769,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 55,
+      "question": "對於高胱胺酸尿症（homocystinuria, HCU）兒童的長期照護，下列何者錯誤？",
+      "options": {
+        "A": "禁食母奶，採用豆類配方之特殊奶粉（如3200-K）",
+        "B": "對於維生素B6 反應不佳的兒童，需限制含甲硫胺酸食物",
+        "C": "建議按時接受體格與智力發育評估",
+        "D": "早期發現早期治療可以避免近視、水晶體脫垂等眼睛病變"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 770,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 56,
+      "question": "小文，2 歲6 個月，罹患慢性病長達一年，下列有關其壓力反應之敘述，何者最適當？",
+      "options": {
+        "A": "身體心像改變",
+        "B": "自主感的建立",
+        "C": "性別角色的建立",
+        "D": "社交隔離的困擾"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 771,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 57,
+      "question": "小華，5 歲，因其3 歲弟弟罹患慢性疾病，需反覆長期住院，下列何者較不是造成小華壓力反應的風險因子？",
+      "options": {
+        "A": "小華的性別",
+        "B": "發病前小華與弟弟或父母關係不良",
+        "C": "父母親情緒或行為大幅改變",
+        "D": "害怕會被送到其他地方接受照顧"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 772,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 58,
+      "question": "安安，9 歲，因白血病復發病況惡化，常主訴身體疼痛，下列處置何者較不適當？",
+      "options": {
+        "A": "告訴安安不要焦慮，要放輕鬆，帶她去遊戲室轉移心情",
+        "B": "使用安安可理解的語言與方式，以了解其身體不適的心情",
+        "C": "評估安安的疼痛程度、疼痛性質、疼痛持續時間及範圍",
+        "D": "協助安安採取舒適臥位，依醫囑給予止痛藥並監測成效"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 773,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 59,
+      "question": "有關兒童罹患後天免疫缺乏症候群（acquired immune deficiency syndrome）的敘述，下列何者不適當？",
+      "options": {
+        "A": "病毒會侵犯輔助T 細胞，造成兒童後天的免疫缺乏",
+        "B": "間質性肺炎是愛滋病兒童最常見的臨床症狀",
+        "C": "兒童感染愛滋病毒的潛伏期較成人長",
+        "D": "愛滋病兒童大多是生產時經產道接觸到母親的血液和分泌物而致病"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 774,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 60,
+      "question": "小乖，18 個月大，因感染腸病毒上吐下瀉多日而入院，原體重為14kg，入院時體重只有12kg，皮膚黏膜乾燥、脈搏淺快、尿很少，其症狀屬於：",
+      "options": {
+        "A": "輕度脫水",
+        "B": "中度脫水",
+        "C": "重度脫水",
+        "D": "正常體液流失"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 775,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 61,
+      "question": "有關呼吸道融合病毒（Respiratory Syncytial Virus, RSV）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "是一種罕見病毒，罹患RSV 嬰幼兒通常會低血氧及肺擴張不全",
+        "B": "吸入性抗病毒藥物利巴韋林（Ribavirin）可用於治療RSV",
+        "C": "使用RSV 免疫球蛋白，預防高危險嬰兒感染RSV 的風險",
+        "D": "RSV 可引起呼吸窘迫和肺炎，因此需入院治療代號：4104頁次：8－7"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 776,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 62,
+      "question": "有關罹患呼吸系統疾病兒童接受胸腔物理治療之敘述，下列何者最適當？",
+      "options": {
+        "A": "胸腔物理治療包括呼吸運動（breathing exercise）及呼吸肌訓練",
+        "B": "為利排痰，最有效的方法為胸部叩擊後接著給予噴霧治療",
+        "C": "飯前及飯後1 小時，是進行胸腔物理治療的最佳時間",
+        "D": "當肺部的上、下葉皆須引流時，應以下葉為優先"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 777,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 63,
+      "question": "關於兒童罹患黴漿菌性肺炎（mycoplasma pneumonia）照護措施之敘述，下列何者最適當？",
+      "options": {
+        "A": "告知家屬該肺炎的傳染性低，不用擔心會有家人間的傳染",
+        "B": "提醒家屬注意兒童常會出現高燒、痰液量多及胸肋膜疼痛的症狀",
+        "C": "指導家屬由於黴漿菌喜侵犯肺泡及細支氣管，故病程進展是突發且快速",
+        "D": "跟家屬說明以Azithromycin 治療，療程短且副作用較少"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 778,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 64,
+      "question": "小真，6 個月大，體重7 公斤，剛接受完開心手術入住心臟外科加護病房，有關腎臟衰竭之臨床表徵，下列何者錯誤？",
+      "options": {
+        "A": "1 小時內尿量排出0.5～2 mL/kg/hr",
+        "B": "意識不清或昏睡",
+        "C": "高血鉀出現心悸現象",
+        "D": "血中尿素氮和血清肌酸酐降低"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 779,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 65,
+      "question": "有關早產兒開放性動脈導管的醫療處置，下列敘述何者錯誤？",
+      "options": {
+        "A": "沒有症狀者，可於12 週內自動關閉",
+        "B": "給予前列腺素E1(PGE1)是優先的治療方式",
+        "C": "出生體重低於1000 g 有心衰竭症狀，宜提早作結紮手術",
+        "D": "可在左側第二肋間聽到連續性的心雜音，成長至幼兒時期，若導管仍未關閉，通常會先考慮導管栓塞術"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 780,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 66,
+      "question": "為了增加法洛氏四重症（TOF）兒童的肺循環血流，以增加其左心充氧血的含量，下列照護處置何者錯誤？",
+      "options": {
+        "A": "缺氧發作時予膝胸臥姿",
+        "B": "口服給予Aspirin",
+        "C": "靜脈滴注前列腺素E1(PGE1)",
+        "D": "布萊洛克陶西分流術（Blalock-Taussing shunt）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 781,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 67,
+      "question": "小蘋，5 歲，診斷為缺鐵性貧血，血紅素（Hb）為5.5 g/dL，下列何項身體反應與此檢驗值最不相關？",
+      "options": {
+        "A": "常出現發燒症狀",
+        "B": "休息時，心跳100～120 次／分鐘",
+        "C": "注意力不集中",
+        "D": "生長發展遲緩"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 782,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 68,
+      "question": "有關肌肉注射鐵劑時的注意事項，下列敘述何者錯誤？",
+      "options": {
+        "A": "採Z 字型深部肌肉注射",
+        "B": "抽藥之後需要更換針頭",
+        "C": "搓揉注射部位以利吸收",
+        "D": "注射後應停5 秒再拔針"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 783,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 69,
+      "question": "有關腸病毒的預防與環境消毒，下列何者正確？",
+      "options": {
+        "A": "利用75%的酒精消毒玩具可預防腸病毒感染",
+        "B": "接觸腸病毒幼童，可口服3 天巨環黴素預防性投藥",
+        "C": "兒童的分泌物或排泄物污染的物品建議使用1,000 ppm 的含氯漂白水消毒",
+        "D": "冷凍可殺滅腸病毒"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 784,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 70,
+      "question": "小芬，11 個月大，初次診斷為單純性熱性痙攣（simple febrile convulsion）住院治療，下列護理措施何者錯誤？",
+      "options": {
+        "A": "發作時協助採側臥，維持呼吸道通暢",
+        "B": "教導家屬終生服用抗痙攣藥物的重要性",
+        "C": "提供床欄護墊使用",
+        "D": "通常停止發燒10 天後，才執行腦電波檢查"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 785,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 71,
+      "question": "花花，3 歲，罹患癌症需住院接受化學藥物治療。目前血液檢查結果為：白血球：1,200/mm3，其中多形核白血球（segmented neutrophi1）：11%、帶狀白血球（band neutrophil）：1%、單核球（monocyte）：2%、淋巴球（lymphocyte）：37%。請問其絕對嗜中性白血球（absolute neutrophi1 count, ANC）數量為何？",
+      "options": {
+        "A": "24",
+        "B": "144",
+        "C": "156",
+        "D": "444"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 786,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 72,
+      "question": "小莉，因診斷有食道氣管瘻管（tracheo-esophageal fistula）而住加護病房，欲執行鼻胃管放置，下列護理措施之敘述，何者較不適當？",
+      "options": {
+        "A": "經鼻插入，長度由鼻尖到耳垂到劍突之長度為準",
+        "B": "可接上空針並反抽，如有胃液，表示鼻胃管位置正確",
+        "C": "灌食前，應以灌食空針反抽，評估是否有殘餘量，以了解消化吸收情形",
+        "D": "鼻胃管灌食後鼓勵採左側臥以預防吸入性肺炎"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 787,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 73,
+      "question": "小佳，3 歲半女童，因經常泌尿道感染而反覆入院，此次入院準備作靜脈注射腎盂攝影（intravenouspyelogram, IVP）檢查，下列護理指導之敘述，何者不適當？",
+      "options": {
+        "A": "檢查目的為觀察上泌尿道結構",
+        "B": "檢查期間，為防止感染宜給予預防性抗生素",
+        "C": "檢查前，宜先確認有無對放射線顯影劑產生過敏",
+        "D": "檢查後，宜讓小佳攝取大量液體"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 788,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 74,
+      "question": "陳小弟，4 歲，診斷急性腎絲球性腎炎（acute glomerulonephritis），下列護理指導何者最適當？",
+      "options": {
+        "A": "急性期合併水腫時，鼓勵多活動，排出過量體液",
+        "B": "急性期合併少尿時，鼓勵多攝入果汁、湯汁等，增加尿量",
+        "C": "急性期合併水腫時，宜以海苔、蘇打餅、洋芋片等食物，補充熱量",
+        "D": "急性期合併少尿時，避免牛奶、蛋類、香蕉等食物"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 789,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 75,
+      "question": "有關兒童因幽門狹窄，需進行幽門切開術（pyloromyotomy），下列何者正確？",
+      "options": {
+        "A": "嬰兒需禁食至排氣後，始可給予少量的葡萄糖水或電解質口服液",
+        "B": "若給予葡萄糖水未出現嘔吐，8 小時後可開始漸進式給予餵食",
+        "C": "餵食時抬高頭部，餵食後應採左側臥或半坐臥位",
+        "D": "手術後，易造成腸阻塞宜補充脂溶性維生素"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 790,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 76,
+      "question": "小明，14 歲，最近常抱怨大腿肌肉疼痛，經檢查後確認是生長痛（growing pain），下列護理措施何者不適當？",
+      "options": {
+        "A": "建議小明應維持日常活動",
+        "B": "減少參與太多不同種類的運動，適時休息以減緩疼痛",
+        "C": "必要時，可依醫囑給予止痛藥，如Acetaminophen",
+        "D": "若每晚都持續嚴重疼痛，建議尋求醫療診治"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 791,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 77,
+      "question": "有關兒童罹患妥瑞氏症（Tourette’s disorder）的疾病特徵，下列敘述何者正確？",
+      "options": {
+        "A": "通常在18 歲之前出現抽動病徵",
+        "B": "屬於精神心理疾病，會影響未來智能發展",
+        "C": "不自主的聲語型抽動相當罕見",
+        "D": "動作型抽動最常出現的是聳肩"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 792,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 78,
+      "question": "小強，7 歲，罹患癲癇，有長期服用抗癲癇藥，包括Phenytoin(Dilantin)及Valproic acid(Depakine)，有關藥物護理指導，下列敘述何者錯誤？",
+      "options": {
+        "A": "指導父母須定時返院監測血中藥物濃度",
+        "B": "當疾病發作被控制時，可暫停服用藥物以降低副作用",
+        "C": "Dilantin 易造成牙齦增生，須執行良好的口腔護理",
+        "D": "雖有定時服用藥物，仍鼓勵維持正常生活習慣，以預防發作"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 793,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 79,
+      "question": "有關腦性麻痺（cerebral palsy）兒童常見的健康問題，下列敘述何者較不適當？",
+      "options": {
+        "A": "皆合併有智力障礙",
+        "B": "普遍有粗動作發展遲緩",
+        "C": "常會合併有發音困難或語言障礙",
+        "D": "非進行性的神經病變"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 794,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "產兒科護理學",
+      "subject_tag": "ob_peds",
+      "subject_name": "產兒科護理學",
+      "stage_id": 0,
+      "number": 80,
+      "question": "張小弟，5 個月大，因不慎跌落床下，診斷為顱內出血，有顱內壓增高（increase intracranial pressure,IICP）現象，有關其護理措施，下列敘述何者較不適當？",
+      "options": {
+        "A": "觀察兒童囟門有無緊繃鼓脹現象，每天測量頭圍",
+        "B": "鼓勵父母陪伴，並給予安撫，減少哭泣不安",
+        "C": "給予多喝水，增加體液容積以及腦組織灌流",
+        "D": "保持床頭抬高約30～45 度，維持頭部於中線位置，並避免壓迫頸靜脈"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 795,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 1,
+      "question": "倪女士，29 歲，程式工程師，輕躁症發作（hypomanic episode）。「我都有按照醫生的交代認真吃藥，為什麼還會發病？」護理師說：「你覺得很挫折，覺得自己很認真的吃藥卻還是發病」，此時護理師所運用的溝通技巧，下列何者最適當？",
+      "options": {
+        "A": "反映",
+        "B": "鼓勵比較",
+        "C": "面質",
+        "D": "提出懷疑"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 796,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 2,
+      "question": "精神復健機構的資深護理師協助病人接受「強制社區治療」的工作項目中，下列何者正確？①藥物治療 ②藥物之依賴性評估 ③藥物之血液檢驗 ④藥物之尿液濃度檢驗 ⑤酒精篩檢 ⑥放射性藥物檢驗",
+      "options": {
+        "A": "①②③④",
+        "B": "②③④⑤",
+        "C": "①③④⑤",
+        "D": "①③④⑥"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 797,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 3,
+      "question": "身為專業的精神衛生護理人員，對精神科病人應有的認識，下列敘述何者正確？①病人怪異的想法和行為，都是有目的、有意義的，且為滿足某個需要或溝通某種訊息而呈現出來 ②精神病人的導因，並非來自單一的病因，而是基因、生活、心理、社會，相互影響的結果 ③精神病人多半缺乏自信，無安全感、挫折忍受度或抗壓性低 ④一旦診斷為重度精神疾患，就難以治癒，故不需太多關注於病人的病態思想、情緒和行為，只需維持病人的基本生理照護即可",
+      "options": {
+        "A": "①②③",
+        "B": "①②④",
+        "C": "①③④",
+        "D": "②③④"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 798,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 4,
+      "question": "精神科醫師伯恩（Eric Berne）在溝通分析中，將人與人互動時彼此的人生地位分為四種型式。下列何者敘述屬於「我好－你不好型」？",
+      "options": {
+        "A": "覺得自己、他人，甚至全世界都毫無意義",
+        "B": "相信自己與他人，能積極面對自己與他人",
+        "C": "覺得自己沒有價值，常歸咎自己，認為人生不快樂",
+        "D": "不相信別人、自大，易以憤怒的狀態去面對別人"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 799,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 5,
+      "question": "俗稱安公子的安非他命，其戒斷症狀最可能為下列何者？",
+      "options": {
+        "A": "精力旺盛",
+        "B": "全身耗竭虛脫、憂鬱沮喪",
+        "C": "肌肉僵直",
+        "D": "注意力集中"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 800,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 6,
+      "question": "有關抗精神病藥物的副作用，下列敘述何者最適當？",
+      "options": {
+        "A": "可能引起血壓下降，病人臥姿改為立姿動作應緩慢及注意安全",
+        "B": "靜坐不能副作用主要發生在服用抗精神病藥物達兩年以上的病人",
+        "C": "服用第一代抗精神病藥物較第二代抗精神病藥物容易發生代謝症候群",
+        "D": "若發生類巴金森氏症的錐體外徑症候群副作用，應立即停藥觀察"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 801,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 7,
+      "question": "有關Benzodiazepine(BZD)類藥物，下列注意事項敘述何者最適當？",
+      "options": {
+        "A": "為海洛因成癮替代療法之主要用藥",
+        "B": "可減緩病人因酒精戒斷產生的不適",
+        "C": "短效型藥物的半衰期為12 小時以上才能達助眠效果",
+        "D": "長期使用BZD 不會發生耐受性、成癮性和戒斷症狀"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 802,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 8,
+      "question": "羅小姐，30 歲，診斷為雙相情緒障礙症，居家護理師至其家中訪視，發現可能是躁症發作。下列何者為其最可能出現的症狀？",
+      "options": {
+        "A": "淡漠、病識感差、思考貧乏",
+        "B": "焦慮、身體症狀、睡眠中斷",
+        "C": "高昂、活動量大、判斷力差",
+        "D": "社交隔離、妄想、音韻連結"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 803,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 10,
+      "question": "有關思覺失調症病因的敘述，下列何者最適當？",
+      "options": {
+        "A": "發生率為5%左右",
+        "B": "好發年齡是中老年期",
+        "C": "發病與神經心理因素無關",
+        "D": "男女發生率相當"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 804,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 11,
+      "question": "某次張小姐在團體治療過程中說：「尤先生剛才指出我在團體中講話的態度引起別人的不舒服，使我更了解到自己和別人互動的問題。」這段話在團體治療中有關對治療性因素的敘述，下列何者最適當？",
+      "options": {
+        "A": "利他因素",
+        "B": "人際學習",
+        "C": "模仿行為",
+        "D": "普遍性"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 805,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 12,
+      "question": "下列何者屬於心理分析治療的策略？",
+      "options": {
+        "A": "抗拒的解析",
+        "B": "正向增強",
+        "C": "人際溝通訓練",
+        "D": "認知再建構"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 806,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 13,
+      "question": "根據門寧格（William Menninger）所提出的態度治療理論，對於有操控、挑撥、過分要求的病人，最適當的治療態度為何？",
+      "options": {
+        "A": "主動友善",
+        "B": "被動友善",
+        "C": "就事論事",
+        "D": "寬容"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 807,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 14,
+      "question": "有關下列疾患的心理因素，下列何者正確？",
+      "options": {
+        "A": "人際關係學派提及強迫症的發作源自於早年的肛門期，個人常以自我防衛機轉處理焦慮",
+        "B": "以精神分析的觀點來分析焦慮之導因，主要認為焦慮與同儕缺乏同理心有關",
+        "C": "學習理論之行為學派視焦慮為一種刺激、反應連結的學習反應",
+        "D": "認知學派認為趨避衝突最會誘發個人的焦慮"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 808,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 15,
+      "question": "關於認知行為治療技巧的敘述，下列何者最適當？",
+      "options": {
+        "A": "僅需要寫下能夠支持負向想法的證據",
+        "B": "用會引起焦慮或災難化的解釋",
+        "C": "分析早期發展對問題的影響",
+        "D": "利用觀察現實，排除自我中心"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 809,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 16,
+      "question": "張太太，58 歲，診斷為憂鬱症，入院第三天，整天躺床，覺得焦慮不安、精神不集中且常常哭泣，對病房活動沒有參與動機，下列何者照護措施較適當？",
+      "options": {
+        "A": "安排在走廊最後一間的房間，以避免過多人走動而干擾病人的休息",
+        "B": "選擇競爭性活動以增進病人的生存動機",
+        "C": "接受病人宣洩抑鬱情緒的表達方式",
+        "D": "安排白天參與需要耗費體力的活動"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 810,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 17,
+      "question": "楊小姐，52 歲，診斷為憂鬱症，向護理師抱怨：「請你告訴醫生吃藥讓我非常不舒服。」護理師的回答，下列何者最適當？",
+      "options": {
+        "A": "醫生是為了妳好，請妳多忍耐",
+        "B": "醫生查房時，請妳直接跟醫生說",
+        "C": "請再多描述是怎麼樣的不舒服",
+        "D": "樂觀一點，妳很快就會好起來"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 811,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 18,
+      "question": "小菲，18 歲，診斷為思覺失調症。小菲雖有規則服藥，但是幻聽干擾時好時壞。父母打聽可以做電氣痙攣療法，因此詢問護理師的意見，下列何者回答最適當？",
+      "options": {
+        "A": "告知須完全聽從醫師的指示",
+        "B": "指出電氣痙攣療法的效果不好",
+        "C": "說明病人年紀太小不適合",
+        "D": "詢問父母對電氣痙攣療法的期望"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 812,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 19,
+      "question": "王小姐，與男朋友分手後，出現被跟蹤的感覺，身邊沒有人時卻聽到有人跟她說話，害怕到無法外出工作，且上述症狀持續1 個月以上。依據DSM-5 診斷準則，下列何者是王小姐最可能的診斷？",
+      "options": {
+        "A": "重度憂鬱症（major depressive disorder）",
+        "B": "創傷後壓力症（posttraumatic stress disorder）",
+        "C": "思覺失調症（schizophrenia）",
+        "D": "強迫症（obsessive-compulsive disorder）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 813,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 20,
+      "question": "林小姐，15 歲，診斷為思覺失調症，多次因和母親的男朋友有爭執，出現幻聽。下列何者居家護理措施最適當？",
+      "options": {
+        "A": "教導病人接受母親的男友",
+        "B": "建議病人獨居減輕衝突",
+        "C": "安排強制住院",
+        "D": "安排家庭治療"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 814,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 21,
+      "question": "葛先生，診斷為雙相情緒障礙症，入院第三天，在入院期間常常在大廳走動，很容易與其他病友起口角或衝突，經醫療團隊討論後決定給予葛先生執行隔離措施，對隔離措施的敘述，下列何者正確？",
+      "options": {
+        "A": "減少感覺輸入，減少外界過多的刺激",
+        "B": "是一種行為治療法，藉以約束葛先生的行為，以減少與他人之衝突",
+        "C": "隔離措施沒有程度上的差別",
+        "D": "是一種控制手段，以維護病房的安寧"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 815,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 22,
+      "question": "有關創傷後壓力症（posttraumatic stress disorder）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "對災難事件不斷反覆的經驗再現（flashback）",
+        "B": "持續逃避與此創傷有關的刺激",
+        "C": "症狀持續超過1 個月",
+        "D": "常使用抵消的防衛機轉代號：5104頁次：6－3"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 816,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 23,
+      "question": "強迫症（obsessive-compulsive disorder）的主要臨床症狀，下列敘述何者正確？",
+      "options": {
+        "A": "10 分鐘內達到極重度之焦慮表現，如呼吸困難",
+        "B": "刻意逃避社交場所",
+        "C": "有特定對象引發焦慮，如針筒",
+        "D": "出現難以控制的重複性行為及思想"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 817,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 24,
+      "question": "下列有關急性壓力症（acute stress disorder）的敘述，何者錯誤？",
+      "options": {
+        "A": "創傷後次日可確定診斷",
+        "B": "暴露於真正或具威脅性的死亡、或重傷",
+        "C": "會出現逃避、解離、警覺等症狀",
+        "D": "會引起社交、職業等功能減損"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 818,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 25,
+      "question": "有關焦慮的敘述，下列何者最適當？",
+      "options": {
+        "A": "焦慮是主觀的感受，皆與情境無關",
+        "B": "中度焦慮時注意力集中，利於學習效果",
+        "C": "焦慮伴隨的身體症狀，主要以自主神經系統反應為主",
+        "D": "防衛機轉不能降低焦慮"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 819,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 26,
+      "question": "張先生為長期飲酒，反覆住院戒酒之病人，此次入院後第二天，心跳過快、血壓升高、大量流汗，聲稱於病室內看到蛇。此時病人最可能出現的是下列何者？",
+      "options": {
+        "A": "酒精性失憶",
+        "B": "躁症發作",
+        "C": "癲癇發作",
+        "D": "震顫性譫妄（delirium tremens）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 820,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 27,
+      "question": "物質使用障礙症病人，會產生心理依賴（psychological dependence），下列敘述何者正確？",
+      "options": {
+        "A": "使用物質過量或過久而持續想要戒除，因此花時間尋找使用之物質以及對物質的渴求",
+        "B": "強烈對物質的渴求，為避免不愉快的感受，而持續或間歇式的使用該物質",
+        "C": "使用物質造成身體傷害，明知使用物質對身體有傷害仍持續使用",
+        "D": "因物質使用嚴重，而產生了依賴性，一旦停止使用，會導致身體不適情形"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 821,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 28,
+      "question": "有關物質使用障礙症個案的追蹤輔導的敘述，下列何者錯誤？",
+      "options": {
+        "A": "降低個案渴求物質與預防再發",
+        "B": "建立健康與調適的生活型態",
+        "C": "主要採取住院方式實施輔導",
+        "D": "定期諮商以及協助個案參加治療"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 822,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 29,
+      "question": "有關厭食症（anorexia nervosa）的臨床特徵敘述，下列何者最不適當？",
+      "options": {
+        "A": "好發於年輕女性",
+        "B": "強烈害怕體重增加或變胖",
+        "C": "臨床上常見合併思覺失調症",
+        "D": "限制攝取身體所需能量"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 823,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 30,
+      "question": "有關與神經障礙症兒童溝通，下列何者最不適當？",
+      "options": {
+        "A": "簡短具體的結構性語句",
+        "B": "初次評估必須運用身體接觸技巧",
+        "C": "避免太抽象的語句",
+        "D": "強調正向的回饋"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 824,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 31,
+      "question": "針對譫妄病人的護理措施，下列何者正確？",
+      "options": {
+        "A": "限制飲水，以減少尿失禁情形",
+        "B": "環境布置多元豐富，以增加感官刺激",
+        "C": "出現睡眠紊亂時，應優先給予安眠藥物幫助入睡",
+        "D": "溝通時應簡短扼要，重複告知人事時地物的訊息"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 825,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 32,
+      "question": "有關老年精神病人的藥物治療，下列敘述何者最適當？",
+      "options": {
+        "A": "第二代抗精神病藥物較第一代藥物不會引發老年人的錐體外徑症候群",
+        "B": "使用三環抗憂鬱劑治療老人憂鬱症，較不會出現心血管方面的副作用",
+        "C": "情緒穩定劑有嚴重的副作用，不建議老年躁症病人使用",
+        "D": "老年病人使用抗精神病藥物，應從高劑量開始，以增加藥物療效"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 826,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 33,
+      "question": "慢性思覺失調症病人，於急性病房出院後，轉介至社區復健中心接受工作技能訓練。以三級預防概念來看，「社區復健中心」是屬於何種層級的預防性服務範疇？",
+      "options": {
+        "A": "初級預防",
+        "B": "次級預防",
+        "C": "三級預防",
+        "D": "危機處置"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 827,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 34,
+      "question": "有關社區心理衛生的敘述，下列何者最適當？",
+      "options": {
+        "A": "社區心理衛生的工作完全仰賴社區健康服務中心執行",
+        "B": "醫院與社區的銜接是社區心理衛生工作不可或缺的一環",
+        "C": "社區心理衛生乃以社區沒有精神疾病為目標",
+        "D": "社區心理衛生乃以生物醫學治療模式為主要介入模式"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 828,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 35,
+      "question": "根據DSM-5 診斷準則，智能不足嚴重度的分類，下列何者最不適當？",
+      "options": {
+        "A": "依據智力測驗分數區分",
+        "B": "依據適應功能做區分",
+        "C": "嚴重度分為輕、中、重以及極重度",
+        "D": "智力與適應功能缺損在發展期間發生"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 829,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 36,
+      "question": "下列何者屬於社區心理衛生工作的初級預防？",
+      "options": {
+        "A": "轉介精神病人至社區復健機構",
+        "B": "提供社區民眾心理衛生教育",
+        "C": "提供康復期精神病人職能訓練",
+        "D": "提高慢性精神病人服藥順從度"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 830,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 37,
+      "question": "在精神護理之家的護理人員以住民為中心，提供連續性、持續性的照顧，於其角色功能，下列何者正確？①醫療疾病診斷者 ②聯繫者 ③策畫者 ④協調者 ⑤個案管理者",
+      "options": {
+        "A": "僅①②③",
+        "B": "僅②③④",
+        "C": "①③④⑤",
+        "D": "②③④⑤"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 831,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 38,
+      "question": "陳女士，診斷為思覺失調症，因擅自停藥致病情復發，已入院治療一個月，預計下週辦理出院，有關出院準備的護理措施，下列何者最適當？",
+      "options": {
+        "A": "要求家屬完全負起監督病人服藥的責任",
+        "B": "安排病人接受職業訓練，出院後謀生",
+        "C": "教導家屬凡事皆予代勞，以預防病人再度發病",
+        "D": "引導病人與家屬了解精神疾病規則服藥的重要性"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 832,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 39,
+      "question": "護理人員與精神病人會談時，常用的治療技巧，下列何者正確？①全神貫注地傾聽 ②儘量不要使用「為什麼」的問句 ③運用面質技巧盡速建立護病關係 ④運用澄清的技巧了解病人的想法",
+      "options": {
+        "A": "①②③",
+        "B": "①②④",
+        "C": "①③④",
+        "D": "②③④"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 833,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 40,
+      "question": "有關慢性精神病人四段七級健康促進模式的主要策略，下列何者正確？",
+      "options": {
+        "A": "第一級策略為健康促進、急性精神症狀控制",
+        "B": "第三級策略為居家護理、社區小作手方案",
+        "C": "第五級策略為健康檢查、吸菸嚼檳榔等高風險族群篩檢",
+        "D": "第六級策略為轉介居家治療與精神長照機構"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 834,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 41,
+      "question": "有關依賴指數（dependency ratio）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "又稱扶養比",
+        "B": "是指65 歲以上老年人口占生產力人口的比例",
+        "C": "數值越高表示生產力人口的負擔愈重",
+        "D": "生產力人口是指15~64 歲人口"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 835,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 42,
+      "question": "依據傳染病致病三角模式，若要提升宿主的抵抗力，下列敘述何者最適當？①離開醫院要洗手 ②注射疫苗 ③攝取均衡飲食 ④保持規律運動 ⑤手部噴酒精",
+      "options": {
+        "A": "①②③",
+        "B": "①②⑤",
+        "C": "②③④",
+        "D": "③④⑤"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 836,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 43,
+      "question": "有關長期照顧十年計畫2.0，A、B、C 級服務單位的敘述，下列何者最不適當？",
+      "options": {
+        "A": "A 級單位為失能者擬定照顧服務計畫及連結或提供長照服務",
+        "B": "B 級單位為複合型服務中心，擴充提供照護服務",
+        "C": "C 級單位可提供社區第一線的長期照顧服務",
+        "D": "為提供可近性服務，應普設A 級單位"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 837,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 44,
+      "question": "有關鉛中毒的敘述，下列何者最不適當？",
+      "options": {
+        "A": "孩童比成人更容易鉛中毒",
+        "B": "建議水龍頭應選用不鏽鋼材質",
+        "C": "煮沸法可去除水中的鉛",
+        "D": "鉛可能導致嬰幼兒的學習能力障礙"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 838,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 45,
+      "question": "全民健康保險大幅減低就醫者的經濟負擔，造成民眾因而可能隨意使用過多的醫療服務，此現象為下列何種危害？",
+      "options": {
+        "A": "經濟危害（economic hazard）",
+        "B": "道德危害（moral hazard）",
+        "C": "社會危害（social hazard）",
+        "D": "制度危害（system hazard）"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 839,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 46,
+      "question": "有關出院準備服務的敘述，下列何者最不適當？",
+      "options": {
+        "A": "強調跨專業團隊合作",
+        "B": "一入院24 小時內開始進行",
+        "C": "協助照護資源之轉介或利用",
+        "D": "個案出院當日即結案"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 840,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 47,
+      "question": "某社區共有5,700 位居民運用某子宮頸癌篩檢工具，發現原本2,500 名子宮頸癌的個案經篩檢後有500名呈現陽性，2,000 名呈現陰性；而原本3,200 健康者經篩檢後有1,600 名呈現陽性，另1,600 名呈現陰性結果，此篩檢工具的陽性預測值為何？",
+      "options": {
+        "A": "20%",
+        "B": "23.81%",
+        "C": "44.44%",
+        "D": "50%"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 841,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 48,
+      "question": "下列何項生命統計指標可做為評估國家、社會、經濟和衛生等政策規劃的綜合指標？",
+      "options": {
+        "A": "社會增加率",
+        "B": "人口成長率",
+        "C": "原因別死亡率",
+        "D": "育齡婦女總生育率"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 842,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 49,
+      "question": "根據資料顯示，出血型登革熱的病例中有15～50%會死亡。15～50%代表的意義為何？",
+      "options": {
+        "A": "死亡率",
+        "B": "致死率",
+        "C": "原因別死亡率",
+        "D": "死亡相對危險性"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 843,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 50,
+      "question": "根據三段五級疾病預防概念，下列何者屬於特殊保護的層級？①婚前健康檢查 ②均衡飲食 ③職場使用護具 ④疫苗接種 ⑤性教育",
+      "options": {
+        "A": "①②",
+        "B": "②③",
+        "C": "③④",
+        "D": "④⑤代號：5104頁次：6－5"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 844,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 51,
+      "question": "以走街式調查法進行社區健康評估，較不適合用來收集下列那一個系統的資料？",
+      "options": {
+        "A": "娛樂系統",
+        "B": "安全運輸系統",
+        "C": "人口與生命統計",
+        "D": "健康及社會服務"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 845,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 52,
+      "question": "某社區糖尿病盛行率高但運動風氣不佳，社區護理師邀請奧運國手拍攝規律運動的宣導短片，引發社區動力。這是使用下列那一種方法？",
+      "options": {
+        "A": "攀龍附貴法",
+        "B": "競賽法",
+        "C": "自我導向學習法",
+        "D": "社會行銷"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 846,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 53,
+      "question": "有關評估社區民眾需求與互動方式的資料，下列何者較不適當？",
+      "options": {
+        "A": "實地考察",
+        "B": "參與式觀察",
+        "C": "德菲（Delphi）法",
+        "D": "重要人物訪談"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 847,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 54,
+      "question": "進行社區評估資料收集時，下列資料，何者無法從各鄉鎮區公所的戶政系統取得？",
+      "options": {
+        "A": "遷入遷出人數",
+        "B": "出生死亡人數",
+        "C": "外籍人口數",
+        "D": "身心障礙人數"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 848,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 55,
+      "question": "護理師進行社區評估，運用政府或相關機構的統計資料，是屬於何種評估方法？",
+      "options": {
+        "A": "參與式觀察法",
+        "B": "文獻考察法",
+        "C": "擋風玻璃式調查法",
+        "D": "社會調查法"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 849,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 56,
+      "question": "政府為提升嚴重特殊傳染性肺炎（COVID-19）疫苗接種率，透過里幹事協助老人預約鄰近的診所，並發通知單提醒接種時間與地點。此方式是應用健康信念模式的那些要素？①增加行動線索 ②降低行動障礙認知 ③增進疾病嚴重度的認知 ④提升自我效能",
+      "options": {
+        "A": "①②",
+        "B": "①④",
+        "C": "②③",
+        "D": "②④"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 850,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 57,
+      "question": "社區護理師於社區關懷據點推動健康飲食計畫，記錄每次活動參與人數，是屬於下列何者護理指導的評價？",
+      "options": {
+        "A": "過程評價",
+        "B": "效益評價",
+        "C": "成果評價",
+        "D": "發展評價"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 851,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 58,
+      "question": "有關健康促進介入措施描述，下列何者最不適當？",
+      "options": {
+        "A": "提供健康知識教育民眾做正確決定",
+        "B": "透過正向或負向增強法促使民眾行為改變",
+        "C": "透過法律制定酒駕罰則增進社區賦權",
+        "D": "透過社區賦權使民眾獲得更多控制權"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 852,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 59,
+      "question": "為社區民眾進行護理指導時，下列策略何者無法促進情意層面的改變？",
+      "options": {
+        "A": "認同運動有益健康",
+        "B": "說出對運動的喜愛",
+        "C": "願意安排可以運動的時間",
+        "D": "列舉三項有益健康的運動"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 853,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 60,
+      "question": "下列何者最適合用來解釋嚴重特殊傳染性肺炎（COVID-19）的致病模式？",
+      "options": {
+        "A": "三角模式",
+        "B": "輪狀模式",
+        "C": "生態模式",
+        "D": "網狀模式"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 854,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 61,
+      "question": "有關自來水廠水質處理工程中曝氣法（aeration）的目的，下列何者最適當？①增加水中溶氧量 ②去除不良氣味 ③降低pH 值 ④淨化水質",
+      "options": {
+        "A": "①②",
+        "B": "②③",
+        "C": "②④",
+        "D": "③④"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 855,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 62,
+      "question": "有關傳染病與其病媒的敘述，下列何者錯誤？",
+      "options": {
+        "A": "霍亂—蒼蠅",
+        "B": "鼠疫—跳蚤",
+        "C": "萊姆病—蚊子",
+        "D": "漢他病毒症候群—老鼠"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 856,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 63,
+      "question": "有關Smilkstein 所提出之APGAR 家庭功能評估的敘述，下列何者錯誤？",
+      "options": {
+        "A": "融洽度（resolve）是指家庭成員對於彼此共享各種資源的滿意情形",
+        "B": "情感度（affection）是指家庭成員對於彼此之間互相關愛的情形",
+        "C": "成長度（growth）是指家庭成員對於彼此之間相處所衍生壓力的調適情形",
+        "D": "適應度（adaptation）是指家庭在發生問題或面臨困難的時候，家庭成員對於內在資源或外在資源的運用情形"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 857,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 64,
+      "question": "王女士，45 歲，山地原住民女性，平時沒有抽菸、飲酒習慣，從沒參加社區健康篩檢活動，今天第一次參加篩檢。下列何者為其可使用的公費篩檢項目？①成人預防保健服務 ②子宮頸癌篩檢 ③大腸癌篩檢 ④B、C 型肝炎篩檢 ⑤乳癌篩檢 ⑥口腔癌篩檢",
+      "options": {
+        "A": "①②④⑤",
+        "B": "①②⑤⑥",
+        "C": "①③⑤⑥",
+        "D": "②③④⑥"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 858,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 65,
+      "question": "林先生與父親、太太和二位幼稚園女兒同住。請問林家是屬於何種家庭類型？",
+      "options": {
+        "A": "公社家庭（commute family）",
+        "B": "大家庭（extended family）",
+        "C": "折衷家庭（stem family）",
+        "D": "核心家庭（nuclear family）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 859,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 66,
+      "question": "社區護理師用來改善社區獨居老人支持系統的措施，下列何者最不適當？",
+      "options": {
+        "A": "介紹參與宗教活動",
+        "B": "定期關懷訪視",
+        "C": "轉介社福機構",
+        "D": "建議入住長期照護機構"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 860,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 67,
+      "question": "有關護理師對更年期婦女的護理指導，下列何者最不適當？",
+      "options": {
+        "A": "結合社區活動促進婦女彼此分享經驗",
+        "B": "提供相關保健資訊與協助",
+        "C": "鼓勵使用賀爾蒙替代療法減輕不適症狀",
+        "D": "鼓勵以正向態度面對"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 861,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 68,
+      "question": "下列何項資料最適合用來收集社區民眾的價值觀、行為特質、風俗習慣、文化特性以及政治體系？",
+      "options": {
+        "A": "社區的地理疆界",
+        "B": "社區發展史",
+        "C": "人口學組成",
+        "D": "自然資源"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 862,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 69,
+      "question": "有關校園結核病護理指導，下列何者正確？① 結核病主要為直接接觸傳染應保持教室通風 ②教職員生若有咳嗽超過一週應建議其盡速就醫 ③都治計畫是針對確診個案的治療策略 ④結核病指標個案是指確定診斷的結核病病人",
+      "options": {
+        "A": "①②",
+        "B": "②③",
+        "C": "③④",
+        "D": "①④"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 863,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 70,
+      "question": "有關醫療工作環境常見的危害因子，下列何者最不適當？",
+      "options": {
+        "A": "Ｘ射線",
+        "B": "熱傷害",
+        "C": "微生物",
+        "D": "針扎"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 864,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 71,
+      "question": "有關學校護理師應用流行病學方法進行校園評估的目的，下列何者最不適當？",
+      "options": {
+        "A": "用於疾病監測",
+        "B": "瞭解校園環境中危險因子",
+        "C": "用於教學器材設備管理",
+        "D": "提供衛生教育宣導"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 865,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 72,
+      "question": "有關居家式照顧服務的敘述，下列何者較不適當？",
+      "options": {
+        "A": "護理人員可獨立開設居家護理所",
+        "B": "居家護理可提供鼻胃管、氣切、尿管之照護",
+        "C": "依照顧管理中心專員評估需求，必要者可提供居家復健服務",
+        "D": "居家藥事服務不屬於服務範圍"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 866,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 73,
+      "question": "陳先生75 歲，因腦中風住院，出院時留置鼻胃管及導尿管，並申請全民健康保險居家護理服務。居家護理師對照顧者的指導，下列敘述何者最不適當？",
+      "options": {
+        "A": "居家護理師可每月2 次至家中進行鼻胃管及尿管更換",
+        "B": "照顧者需要學習鼻胃管灌食及尿管照護技巧，並每日進行管路清潔與消毒",
+        "C": "醫師可每月1 次至家中診療個案",
+        "D": "照顧者如發現陳先生有管路滑脫可致電居家護理所處理"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 867,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 74,
+      "question": "林先生工作中從鷹架跌落，脊椎受傷導致四肢癱瘓，已經從醫院出院返家，其主要照顧者為妻子，且家中浴室狹小，社區護理師發現其妻每天協助擦澡，主訴每天照顧先生感到很疲憊。提供下列長照資源何者較適當？①轉介住日間照顧 ②進行復健訓練 ③轉介使用喘息服務 ④轉介住安養中心⑤轉介使用居家無障礙改善服務",
+      "options": {
+        "A": "①②⑤",
+        "B": "②③④",
+        "C": "②③⑤",
+        "D": "③④⑤"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 868,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 75,
+      "question": "承上題，林太太所需的支持性服務，下列何者最不適當？",
+      "options": {
+        "A": "教導脊髓損傷照護技巧",
+        "B": "轉介林先生至社區照顧關懷據點",
+        "C": "加入家庭照顧者支持團體",
+        "D": "教導壓力處理技巧"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 869,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 76,
+      "question": "有關長者在家進行肌力和肌耐力訓練，下列敘述何者錯誤？",
+      "options": {
+        "A": "長者每週應累計至少150 分鐘中等費力運動",
+        "B": "運動的強度，以不疼痛為原則，體能提升後再逐漸增加活動的類型、強度及次數",
+        "C": "坐姿肌力訓練不適合長者採用",
+        "D": "除特殊禁忌外，身體活動量不足且體能差的長者，以增加日常性活動為優先"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 870,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 77,
+      "question": "67 歲的歐陽先生於上個月參加成人健檢，檢查結果：三酸甘油脂為218 mg/dL，低密度膽固醇196 mg/dL，血壓158/110 mmHg，空腹血糖99 mg/dL。下列何者不是心血管疾病危險因子？",
+      "options": {
+        "A": "高血壓",
+        "B": "大於60 歲",
+        "C": "高血脂",
+        "D": "高血糖"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 871,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 78,
+      "question": "有關老人跌倒的危險因子中，下列何者屬於外因性的因素？",
+      "options": {
+        "A": "光線不足",
+        "B": "中風病史",
+        "C": "使用鎮靜劑",
+        "D": "白內障"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 872,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 79,
+      "question": "有關慢性腎臟病初期病人的飲食指導，下列何者最不適當？",
+      "options": {
+        "A": "建議攝取高品質蛋白質食物為原則",
+        "B": "麵筋、麵腸等屬高蛋白質食物可以多食用",
+        "C": "減少攝取磷含量高的食物",
+        "D": "多食蔬菜且儘量減少湯汁攝取"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 873,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "精神科與社區衛生護理學",
+      "subject_tag": "psych_community",
+      "subject_name": "精神科與社區衛生護理學",
+      "stage_id": 0,
+      "number": 80,
+      "question": "有關中老年慢性病個案管理的目標，下列何者最不適當？",
+      "options": {
+        "A": "個案學習自我照顧是最終目標",
+        "B": "定期監測疾病，以利早日痊癒",
+        "C": "控制疾病，預防合併症產生",
+        "D": "個案能利用資源，接受疾病相關的保健諮詢"
       },
       "answer": "B",
       "explanation": ""

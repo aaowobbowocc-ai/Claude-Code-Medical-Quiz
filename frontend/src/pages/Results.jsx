@@ -90,6 +90,10 @@ export default function Results() {
     if (isHost) { socket.emit('play_again'); navigate('/lobby') }
   }
 
+  const handleBackToRoom = () => {
+    navigate('/lobby')
+  }
+
   const handleLeave = () => {
     socket.disconnect(); reset(); navigate('/')
   }
@@ -173,10 +177,15 @@ export default function Results() {
             📊 對戰紀錄
           </button>
 
-          {isHost && (
+          {isHost ? (
             <button onClick={handlePlayAgain}
                     className="w-full bg-medical-blue text-white font-bold py-4 rounded-2xl text-lg active:scale-95 transition-transform">
               🔄 再玩一局
+            </button>
+          ) : (
+            <button onClick={handleBackToRoom}
+                    className="w-full bg-medical-blue text-white font-bold py-4 rounded-2xl text-lg active:scale-95 transition-transform">
+              🚪 回房間等下一局
             </button>
           )}
           <button onClick={handleLeave}

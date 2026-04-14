@@ -47,6 +47,12 @@ export function useSocket() {
         setStage(stage)
         setPhase(phase)
         if (timerMode) setTimerMode(timerMode)
+        // Host pressed 再玩一局 → server reset phase to 'lobby'. Pull
+        // everyone (including non-hosts stuck on /results) back to /lobby.
+        if (phase === 'lobby') {
+          const here = window.location.pathname
+          if (here === '/results' || here === '/game') navigate('/lobby')
+        }
       },
       game_starting: ({ stageName }) => {
         setStageName(stageName)

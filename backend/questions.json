@@ -7,7 +7,8 @@
     "subjects": "醫學(一): 生化/解剖/生理/組織/胚胎; 醫學(二): 微免/寄生蟲/藥理/病理/公衛",
     "description": "醫師國考第一階段文字題題庫（已過濾圖片題）",
     "scraped_at": "2026-04-01",
-    "total_questions": 2000
+    "total_questions": 2000,
+    "last_updated": "2026-04-14T09:35:07.439Z"
   },
   "total": 2200,
   "questions": [
@@ -8638,7 +8639,10 @@
         "D": "丙→甲→乙"
       },
       "answer": "D",
-      "explanation": "**✅ 為什麼答案是 D**\n脊柱由頭端往尾端的排列順序，通常使用「C7、T1、L1」的記憶關鍵字，代表頸部（C）、胸部（T）和腰部（L）椎骨的順序。根據這個順序，丙（L1）位於最尾端，甲（C7）位於頸部，乙（T1）位於胸部。\n\n**❌ 排除其他選項**\n選項 A 甲→乙→丙 錯誤，因為這個順序錯誤，沒有按照 C7、T1、L1 的順序排列。\n選項 B 丙→乙→甲 錯誤，因為 L1 位於最尾端，不能在頭端。\n選項 C 乙→甲→丙 錯誤，因為 T1 位於胸部，不能在頸部。\n\n**🧠 記憶關鍵字**\n使用 C7、T1、L1 的記憶關鍵字，來記憶脊柱的順序。\n\n**🏥 臨床應用**\n了解脊柱的順序對於診斷和治療背部疾病有重要意義，例如脊柱椎間盤突出或脊柱骨折。"
+      "explanation": "**✅ 為什麼答案是 D**\n脊柱由頭端往尾端的排列順序，通常使用「C7、T1、L1」的記憶關鍵字，代表頸部（C）、胸部（T）和腰部（L）椎骨的順序。根據這個順序，丙（L1）位於最尾端，甲（C7）位於頸部，乙（T1）位於胸部。\n\n**❌ 排除其他選項**\n選項 A 甲→乙→丙 錯誤，因為這個順序錯誤，沒有按照 C7、T1、L1 的順序排列。\n選項 B 丙→乙→甲 錯誤，因為 L1 位於最尾端，不能在頭端。\n選項 C 乙→甲→丙 錯誤，因為 T1 位於胸部，不能在頸部。\n\n**🧠 記憶關鍵字**\n使用 C7、T1、L1 的記憶關鍵字，來記憶脊柱的順序。\n\n**🏥 臨床應用**\n了解脊柱的順序對於診斷和治療背部疾病有重要意義，例如脊柱椎間盤突出或脊柱骨折。",
+      "images": [
+        "/question-images/doctor1_111100_1_29_0.webp"
+      ]
     },
     {
       "id": "111100_1_30",
@@ -11880,7 +11884,7 @@
       "subject_name": "病理學",
       "stage_id": 10,
       "number": 89,
-      "question": "承上題，其癌細胞最有可能轉移至何處？",
+      "question": "【承上題．前情提要】\n第88題：60 歲女性有抽菸史，主訴咳嗽、胸痛及體重下降。胸部X-ray 顯示，有一陰影，組織圖如下，其最可能的診斷 為：\n上題答案：(C) 鱗狀上皮細胞癌\n──────────\n承上題，其癌細胞最有可能轉移至何處？",
       "options": {
         "A": "皮膚",
         "B": "心臟",
@@ -17459,11 +17463,12 @@
       "subject_name": "生理學",
       "stage_id": 4,
       "number": 66,
-      "question": "貝氏症候群（Bartter syndrome）致病機 （transporters）或通道（channels）發生",
+      "question": "貝氏症候群（Bartter syndrome）致病機機轉主要因亨利氏上升厚小管（thick ascending limb, Henle's loop）之載體（transporters）或通道（channels）發生問題所致。這些載體或通道最不可能包括下列何者？",
       "options": {
-        "A": "Na +-Cl - cotransporter",
-        "B": "Na +-K +-2Cl - contrasporter（NKCC2）",
-        "C": "ClC-Kb Cl - channels 三支試管內，甲試管：血紅素（hemoglobin）濃 管：血紅素總濃度正常，但是其中50%為一氧化 餘條件皆相同。若將氧分壓（ ）均為40 m 述何者正確？ （oxygen saturation percentage, ）為甲試管的 最高 al oxygen content）皆相同 列何者最適當？ 量會較副交感神經作用下為多 交感神經作用下為黏稠 參與的訊息因子有鈣離子 腎上腺素（alpha-adrenergic）受體與尼古丁（n 分泌與調控的敘述，下列何者正確？ g peptide, GRP）直接刺激細胞生成胃酸 otransporter）作用後，釋放胃酸 白，因而打開氯離子通道（Cl - channel），抑制 e）的參與，才能生成胃酸"
+        "A": "Na⁺-Cl⁻ cotransporter",
+        "B": "Na⁺-K⁺-2Cl⁻ contrasporter（NKCC2）",
+        "C": "ClC-Kb Cl⁻ channels",
+        "D": "ROMK K⁺ channels"
       },
       "answer": "A",
       "explanation": "",
@@ -29502,7 +29507,13 @@
       ],
       "disputed": true,
       "original_answer": "D",
-      "correction_note": "第77題一律給分（原答案 D）"
+      "correction_note": "第77題一律給分（原答案 D）",
+      "images": [
+        "/question-images/doctor1_114020_1_77_0.webp",
+        "/question-images/doctor1_114020_1_77_1.webp",
+        "/question-images/doctor1_114020_1_77_2.webp",
+        "/question-images/doctor1_114020_1_77_3.webp"
+      ]
     },
     {
       "id": "114020_1_78",

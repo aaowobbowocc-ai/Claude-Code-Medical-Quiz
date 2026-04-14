@@ -3009,7 +3009,7 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 12,
       "number": 36,
-      "question": "承上題,此病患之下顎右側犬齒附近疼痛區如附圖黑圈區域所示,下列何者為最可能之診斷?",
+      "question": "【承上題．前情提要】\n第35題：一名15歲男孩因下顎右側犬齒附近疼痛而來求診,經X光檢查如附圖所示,發現病患的上下顎骨密度不正 常,其最有可能罹患何疾病?\n上題答案：(C) 骨質石化症(osteopetrosis)\n──────────\n承上題,此病患之下顎右側犬齒附近疼痛區如附圖黑圈區域所示,下列何者為最可能之診斷?",
       "options": {
         "A": "牙骨質骨化發育異常(cemento-osseous dysplasia)",
         "B": "慢性骨髓炎(chronic osteomyelitis)",
@@ -3053,7 +3053,7 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 12,
       "number": 38,
-      "question": "承上題,從其病灶中抽出一管黃色液體(如圖),下列診斷中何者最不可能?",
+      "question": "【承上題．前情提要】\n第37題：26歲男性因右臉腫脹而照了一張X光片如附圖,下列敘述何者錯誤?\n上題答案：(D) 病灶區的internal oblique ridge及下顎骨板(cortical border)變薄且上下擴張\n──────────\n承上題,從其病灶中抽出一管黃色液體(如圖),下列診斷中何者最不可能?",
       "options": {
         "A": "造釉細胞瘤(ameloblastoma )",
         "B": "含齒囊腫(dentigerous cyst)",
@@ -3097,14 +3097,17 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 12,
       "number": 40,
-      "question": "承上題,影像中下顎舌側之放射線不透過性病變,最可能的診斷為下列何者?",
+      "question": "【承上題．前情提要】\n第39題：圖示影像是以何種方法拍攝?\n上題答案：(D) computed tomography\n──────────\n承上題,影像中下顎舌側之放射線不透過性病變,最可能的診斷為下列何者?",
       "options": {
         "A": "涎石(sialoliths)",
         "B": "隆突(tori)",
         "C": "牙瘤(odontomae)",
         "D": "靜脈結石(phleboliths)"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/dental2_110020_1_79_0.webp"
+      ]
     },
     {
       "id": "110020_2_1",
@@ -5784,14 +5787,17 @@
       "subject_name": "牙醫公衛/倫理/法規",
       "stage_id": 4,
       "number": 60,
-      "question": "承上題,對此症之治療計畫為何?",
+      "question": "【承上題．前情提要】\n第59題：一位5歲男童因左上顎牙齒疼痛,拒食,母親帶來求診,口腔檢查發現左上顎乳臼齒區有嚴重蛀牙,牙齦有腫 脹,軟組織觸診有浮動感,敲診時發現第一乳臼齒疼痛,最佳之診斷為下列何者?\n上題答案：(C) 為牙根尖急性膿腫\n──────────\n承上題,對此症之治療計畫為何?",
       "options": {
         "A": "齲齒填補",
         "B": "做牙周之排膿與牙周刮除術",
         "C": "做根管治療",
         "D": "將組織切除,送病理檢查"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/dental2_110020_3_59_0.webp"
+      ]
     },
     {
       "id": "110020_3_61",
@@ -14439,7 +14445,7 @@
       "subject_name": "口腔顎面外科",
       "stage_id": 1,
       "number": 58,
-      "question": "承上題,若是利用囊腫造袋術(cystic marsupialization)來治療下顎後齒區含齒囊腫,則下列敘述何者錯誤?",
+      "question": "【承上題．前情提要】\n第57題：下列何者不是以造袋術(marsupialization)治療含齒囊腫(dentigerous cyst)的適應症?\n上題答案：(C) 懷疑為造釉細胞瘤\n──────────\n承上題,若是利用囊腫造袋術(cystic marsupialization)來治療下顎後齒區含齒囊腫,則下列敘述何者錯誤?",
       "options": {
         "A": "容易造成病理性骨折",
         "B": "術後口腔傷口必須時時沖洗乾淨,照護較為困難",
@@ -19665,14 +19671,17 @@
       "subject_name": "牙周病學",
       "stage_id": 2,
       "number": 8,
-      "question": "承上題該病患之此象限的治療需求(treatment needs)為下列何者?",
+      "question": "【承上題．前情提要】\n第7題：依圖示之社區牙周治療需求指數記錄(community periodontal index for treatment needs, CPITN),此象限應為 下列何者?\n上題答案：(D) Code 4\n──────────\n承上題該病患之此象限的治療需求(treatment needs)為下列何者?",
       "options": {
         "A": "此象限因牙齒數不足三顆,其治療需求應依前牙象限的紀錄指數為主",
         "B": "14、15兩顆小臼齒只需加強口腔衛生及洗牙",
         "C": "僅15小臼齒需加強口腔衛生及洗牙",
         "D": "此象限除了加強口腔衛生及洗牙,還需進一步牙周專業處理"
       },
-      "answer": "D"
+      "answer": "D",
+      "images": [
+        "/question-images/dental2_112020_59_0.webp"
+      ]
     },
     {
       "id": "112020_61",
@@ -20162,7 +20171,7 @@
       "subject_name": "口腔顎面外科",
       "stage_id": 1,
       "number": 34,
-      "question": "承上題,下列何處理方式最適當?",
+      "question": "【承上題．前情提要】\n第33題：健康成人接受下齒槽神經傳導麻醉後出現悸動性(throbbing)頭痛,最可能的原因為下列何者?\n上題答案：(B) 血管收縮劑過量\n──────────\n承上題,下列何處理方式最適當?",
       "options": {
         "A": "讓病人休息,安撫病人並持續觀察",
         "B": "病人姿勢改為頭低腳高",
@@ -27613,14 +27622,17 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 12,
       "number": 34,
-      "question": "承上題,這個影像,最不易看到下列何者?",
+      "question": "【承上題．前情提要】\n第33題：附圖為那種X光影像?\n上題答案：(A) submentovertex projection\n──────────\n承上題,這個影像,最不易看到下列何者?",
       "options": {
         "A": "額竇(frontal sinus)",
         "B": "卵圓孔(foramen ovale)",
         "C": "蝶竇(sphenoid sinus)",
         "D": "顴骨弓(zygomatic arch)"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/dental2_112100_1_73_0.webp"
+      ]
     },
     {
       "id": "112100_1_75",
@@ -33758,14 +33770,17 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 12,
       "number": 33,
-      "question": "承上題,下列何種狀況最適合採用此拍攝方式評估?",
+      "question": "【承上題．前情提要】\n第32題：圖中之X 光影像為何種拍攝方式?\n上題答案：(C) reverse Towne projection\n──────────\n承上題,下列何種狀況最適合採用此拍攝方式評估?",
       "options": {
         "A": "慢性鼻竇炎",
         "B": "下顎骨髁頭骨折",
         "C": "眼眶骨骨折",
         "D": "顴骨骨折"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/dental2_113020_1_72_0.webp"
+      ]
     },
     {
       "id": "113020_1_74",
@@ -33799,14 +33814,17 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 12,
       "number": 35,
-      "question": "承上題,下列敘述何者與這個疾病有關?",
+      "question": "【承上題．前情提要】\n第34題：病人的顱骨X 光如圖所示,最可能是那一種疾病?\n上題答案：(B) 骨質石化病(osteopetrosis)\n──────────\n承上題,下列敘述何者與這個疾病有關?",
       "options": {
         "A": "又稱為大理石骨病(marble bone disease)",
         "B": "病人血清鹼性磷酸酶(alkaline phosphatase)數值可能極高",
         "C": "常會出現多生牙",
         "D": "皮膚出現咖啡牛奶(café-au-lait)斑"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/dental2_113020_1_74_0.webp"
+      ]
     },
     {
       "id": "113020_1_76",
@@ -52274,14 +52292,17 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 12,
       "number": 34,
-      "question": "承上題,這種影像,最不適合評估下列何者?",
+      "question": "【承上題．前情提要】\n第33題：附圖所示之X 光影像是由何種拍攝方式所產生?\n上題答案：(B) Waters projection\n──────────\n承上題,這種影像,最不適合評估下列何者?",
       "options": {
         "A": "慢性鼻竇炎",
         "B": "下顎骨髁頭骨折",
         "C": "眼眶骨骨折",
         "D": "顴骨骨折"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/dental2_114090_1_73_0.webp"
+      ]
     },
     {
       "id": "114090_1_75",
@@ -53472,11 +53493,12 @@
       "subject_name": "牙科材料",
       "stage_id": 8,
       "number": 56,
-      "question": "下列何者是選擇全瓷修復體系統(all-",
+      "question": "危險因子（risk factors）可增加產生疾病（develop the disease）的可能性，下列何者最不屬於牙周疾病的危險因子？",
       "options": {
-        "A": "僅12 -bonded fixed partial denture)的禁忌? veneer)的敘述,下列何者錯誤? ypoplasia)之前牙修復 修復 -ceramic system)的主要考量?1抗破裂性 2美觀 3磨耗性",
-        "C": "僅23",
-        "D": "123"
+        "A": "吸菸（tobacco smoking）",
+        "B": "糖尿病（diabetes）",
+        "C": "致病菌（pathogenic bacteria）及牙齒的微生物堆積（microbial tooth deposits）",
+        "D": "探測出血（bleeding on probing）"
       },
       "answer": "D",
       "incomplete": "image_options",
@@ -64423,7 +64445,7 @@
       "subject_name": "牙醫學(四)",
       "stage_id": 0,
       "number": 56,
-      "question": "承上題，請問這是屬於何種型式的骨折？",
+      "question": "【承上題．前情提要】\n第55題：根據這張頭部X光片請選出正確的檢查名稱？\n上題答案：(C) submental vertex view\n──────────\n承上題，請問這是屬於何種型式的骨折？",
       "options": {
         "A": "favorable fracture",
         "B": "greenstick fracture",

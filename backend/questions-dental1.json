@@ -2074,7 +2074,7 @@
       "subject_name": "藥理",
       "stage_id": 5,
       "number": 28,
-      "question": "承上題,此患者罹患下列何疾病的機率最低?",
+      "question": "【承上題．前情提要】\n第27題：一位12歲女患者來牙科做定期檢查,其嘴唇及口周圍皮膚上有許多如雀斑樣的棕黑色斑點,病患最可能罹患 下列何種症候群?\n上題答案：(D) 浦茲-詹賀症候群(Peutz-Jeghers syndrome)\n──────────\n承上題,此患者罹患下列何疾病的機率最低?",
       "options": {
         "A": "基底細胞癌(basal cell carcinoma)",
         "B": "乳房腫瘤(breast tumor)",
@@ -5091,14 +5091,17 @@
       "subject_name": "藥理",
       "stage_id": 5,
       "number": 24,
-      "question": "承上題,最佳治療方法為下列何者?",
+      "question": "【承上題．前情提要】\n第23題：35歲女性因舌痛就醫(如圖),自述不吃葷食已經2年,發現自己的舌苔比以前少,則她較可能得了何種疾 病?1正中菱形舌炎(median rhomboid glossitis) 2 Hunter's glossitis 3再生不良性貧血(aplastic anemia) 4惡性貧血(pernicious anemia)\n上題答案：(B) 24\n──────────\n承上題,最佳治療方法為下列何者?",
       "options": {
         "A": "口服抗黴菌藥",
         "B": "服用鐵劑",
         "C": "施打維他命B12針劑",
         "D": "輸全血"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/dental1_111020_1_23_0.webp"
+      ]
     },
     {
       "id": "111020_1_25",
@@ -8062,14 +8065,18 @@
       "subject_name": "口病",
       "stage_id": 5,
       "number": 19,
-      "question": "承上題,此疾病診斷最有可能為下列何者?",
+      "question": "【承上題．前情提要】\n第18題：患者右下顎腫脹,放射線檢查發現如附圖一之蜂巢狀(honeycombed)放射線透過性病灶,切片檢查結果如附 圖二,為確定診斷,下列檢查何者最有幫助? (附圖一) (附圖二)\n上題答案：(B) 剛果紅染色(Congo red stain)\n──────────\n承上題,此疾病診斷最有可能為下列何者?",
       "options": {
         "A": "顆粒細胞造釉細胞瘤(ameloblastoma, granular cell type)",
         "B": "鈣化上皮齒源性腫瘤 (calcifying epithelial odontogenic tumor)",
         "C": "顆粒細胞齒源性腫瘤(granular cell odontogenic tumor)",
         "D": "骨內鱗狀細胞癌(intraosseous squamous cell carcinoma)"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/dental1_111100_1_18_0.webp",
+        "/question-images/dental1_111100_1_18_1.webp"
+      ]
     },
     {
       "id": "111100_1_20",
@@ -8123,14 +8130,18 @@
       "subject_name": "藥理",
       "stage_id": 5,
       "number": 22,
-      "question": "承上題,其病變及周圍組織切片,直接免疫螢光檢查預期呈現何種分布型態?",
+      "question": "【承上題．前情提要】\n第21題：47 歲男性患者主訴全口潰瘍疼痛,口內檢查發現如附圖一,使用棉棒稍推壓即造成潰瘍,切片檢查如附圖 二,則最可能的診斷為下列何者? (附圖一) (附圖二)\n上題答案：(D) 尋常性天疱瘡(pemphigus vulgaris)\n──────────\n承上題,其病變及周圍組織切片,直接免疫螢光檢查預期呈現何種分布型態?",
       "options": {
         "A": "纖維蛋白原(fibrinogen)沉積在基底膜(basement membrane)",
         "B": "免疫球蛋白G(IgG)沉積在基底膜(basement membrane)",
         "C": "免疫球蛋白G(IgG)沉積在細胞間隙(intercellular spaces)",
         "D": "免疫球蛋白G(IgG)沉積在基底(basal)或基底旁(parabasal)細胞的細胞質內"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/dental1_111100_1_21_0.webp",
+        "/question-images/dental1_111100_1_21_1.webp"
+      ]
     },
     {
       "id": "111100_1_23",

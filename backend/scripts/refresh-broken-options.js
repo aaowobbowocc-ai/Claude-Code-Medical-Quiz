@@ -22,57 +22,66 @@ const pdfParse = require('pdf-parse')
 const EXAM_DEFS = {
   nursing: {
     label: '護理師', classCode: '101',
+    // Class code varies by year/session: 110030/110110/111030 used 104,
+    // 113030 uses 101 with 2-digit s codes, 112110/114100 use 102 with 0201+,
+    // 114030+ uses 101 with 0101+. Cache + altClassCodes covers all.
+    altClassCodes: ['102', '104'],
     subjects: [
-      { s: '0101', name: '基礎醫學', tag: 'basic_medicine' },
-      { s: '0102', name: '基本護理學與護理行政', tag: 'basic_nursing' },
-      { s: '0103', name: '內外科護理學', tag: 'med_surg' },
-      { s: '0104', name: '產兒科護理學', tag: 'obs_ped' },
-      { s: '0105', name: '精神科與社區衛生護理學', tag: 'psych_community' },
+      { sCodes: ['0101', '11'], name: '基礎醫學',                 tag: 'basic_medicine' },
+      { sCodes: ['0102', '22'], name: '基本護理學與護理行政',     tag: 'basic_nursing' },
+      { sCodes: ['0103', '33'], name: '內外科護理學',             tag: 'med_surg' },
+      { sCodes: ['0104', '44'], name: '產兒科護理學',             tag: 'obs_ped' },
+      { sCodes: ['0105', '55'], name: '精神科與社區衛生護理學',   tag: 'psych_community' },
     ],
   },
   nutrition: {
     label: '營養師', classCode: '102',
+    // Older years (113100, 114100) used class code 101 with s=0101-0106;
+    // newer (115030+) use 102 with s=0201-0206. The script checks the cache
+    // first so old PDFs still work even though the URLs no longer do.
+    altClassCodes: ['101'],
     subjects: [
-      { s: '0201', name: '膳食療養學', tag: 'diet_therapy' },
-      { s: '0202', name: '團體膳食設計與管理', tag: 'group_meal' },
-      { s: '0203', name: '生理學與生物化學', tag: 'physio_biochem' },
-      { s: '0204', name: '營養學', tag: 'nutrition_science' },
-      { s: '0205', name: '公共衛生營養學', tag: 'public_nutrition' },
-      { s: '0206', name: '食品衛生與安全', tag: 'food_safety' },
+      { sCodes: ['0201', '0101'], name: '膳食療養學',         tag: 'diet_therapy' },
+      { sCodes: ['0202', '0102'], name: '團體膳食設計與管理', tag: 'group_meal' },
+      { sCodes: ['0203', '0103'], name: '生理學與生物化學',   tag: 'physio_biochem' },
+      { sCodes: ['0204', '0104'], name: '營養學',             tag: 'nutrition_science' },
+      { sCodes: ['0205', '0105'], name: '公共衛生營養學',     tag: 'public_nutrition' },
+      { sCodes: ['0206', '0106'], name: '食品衛生與安全',     tag: 'food_safety' },
     ],
   },
   medlab: {
     label: '醫事檢驗師', classCode: '308',
     subjects: [
-      // try both historic codes
-      { s: '0107', altS: '0103', name: '臨床生理學與病理學', tag: 'clinical_physio_path' },
-      { s: '0501', name: '臨床血液學與血庫學', tag: 'hematology' },
-      { s: '0502', name: '醫學分子檢驗學與臨床鏡檢學', tag: 'molecular' },
-      { s: '0503', name: '微生物學與臨床微生物學', tag: 'microbiology' },
-      { s: '0504', name: '生物化學與臨床生化學', tag: 'biochemistry' },
-      { s: '0505', name: '臨床血清免疫學與臨床病毒學', tag: 'serology' },
+      // sCodes: try every code in order until one returns the right PDF.
+      // Old years (110-113) use 2-digit codes; new years (114+) use 4-digit.
+      { sCodes: ['0107', '0103', '11'], name: '臨床生理學與病理學', tag: 'clinical_physio_path' },
+      { sCodes: ['0501', '22'],         name: '臨床血液學與血庫學',         tag: 'hematology' },
+      { sCodes: ['0502', '33'],         name: '醫學分子檢驗學與臨床鏡檢學', tag: 'molecular' },
+      { sCodes: ['0503', '44'],         name: '微生物學與臨床微生物學',     tag: 'microbiology' },
+      { sCodes: ['0504', '55'],         name: '生物化學與臨床生化學',       tag: 'biochemistry' },
+      { sCodes: ['0505', '66'],         name: '臨床血清免疫學與臨床病毒學', tag: 'serology' },
     ],
   },
   pt: {
     label: '物理治療師', classCode: '311',
     subjects: [
-      { s: '0701', name: '神經疾病物理治療學', tag: 'pt_neuro' },
-      { s: '0702', name: '骨科疾病物理治療學', tag: 'pt_ortho' },
-      { s: '0703', name: '心肺疾病與小兒疾病物理治療學', tag: 'pt_cardio_peds' },
-      { s: '0704', name: '物理治療基礎學', tag: 'pt_basic' },
-      { s: '0705', name: '物理治療學概論', tag: 'pt_intro' },
-      { s: '0706', name: '物理治療技術學', tag: 'pt_technique' },
+      { sCodes: ['0701', '11'], name: '神經疾病物理治療學',           tag: 'pt_neuro' },
+      { sCodes: ['0702', '22'], name: '骨科疾病物理治療學',           tag: 'pt_ortho' },
+      { sCodes: ['0703', '33'], name: '心肺疾病與小兒疾病物理治療學', tag: 'pt_cardio_peds' },
+      { sCodes: ['0704', '44'], name: '物理治療基礎學',               tag: 'pt_basic' },
+      { sCodes: ['0705', '55'], name: '物理治療學概論',               tag: 'pt_intro' },
+      { sCodes: ['0706', '66'], name: '物理治療技術學',               tag: 'pt_technique' },
     ],
   },
   ot: {
     label: '職能治療師', classCode: '312',
     subjects: [
-      { s: '0105', name: '解剖學與生理學', tag: 'ot_anatomy' },
-      { s: '0801', name: '職能治療學概論', tag: 'ot_intro' },
-      { s: '0802', name: '生理疾病職能治療學', tag: 'ot_physical' },
-      { s: '0803', name: '心理疾病職能治療學', tag: 'ot_mental' },
-      { s: '0804', name: '小兒疾病職能治療學', tag: 'ot_pediatric' },
-      { s: '0805', name: '職能治療技術學', tag: 'ot_technique' },
+      { sCodes: ['0105', '11'], name: '解剖學與生理學',         tag: 'ot_anatomy' },
+      { sCodes: ['0801', '22'], name: '職能治療學概論',         tag: 'ot_intro' },
+      { sCodes: ['0802', '33'], name: '生理疾病職能治療學',     tag: 'ot_physical' },
+      { sCodes: ['0803', '44'], name: '心理疾病職能治療學',     tag: 'ot_mental' },
+      { sCodes: ['0804', '55'], name: '小兒疾病職能治療學',     tag: 'ot_pediatric' },
+      { sCodes: ['0805', '66'], name: '職能治療技術學',         tag: 'ot_technique' },
     ],
   },
 }
@@ -88,6 +97,21 @@ const EXAM_FILES = {
 
 const BASE_URL = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+const PDF_CACHE = path.join(__dirname, '..', '_tmp', 'pdf-cache')
+
+// Check the local PDF cache first using all known filename conventions.
+// Returns Buffer or null. Falls back to HTTP fetch from caller.
+function tryCache(examTag, kind, code, c, s) {
+  const candidates = [
+    `${examTag}_${kind}_${code}_c${c}_s${s}.pdf`, // new prefix: nutrition_Q_…
+    `${examTag}_${code}_c${c}_s${s}.pdf`,         // legacy prefix: medlab_…
+  ]
+  for (const k of candidates) {
+    const p = path.join(PDF_CACHE, k)
+    if (fs.existsSync(p) && fs.statSync(p).size > 1000) return fs.readFileSync(p)
+  }
+  return null
+}
 
 function fetchPdf(url, retries = 2) {
   return new Promise((resolve, reject) => {
@@ -226,43 +250,52 @@ function parseCorrectionsPdf(text) {
 
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
-async function tryFetchPaper(examCode, classCode, subj, defLabel) {
-  // Try primary s, then altS if defined
-  const sCodes = subj.altS ? [subj.s, subj.altS] : [subj.s]
-  for (const s of sCodes) {
-    try {
-      const qBuf = await fetchPdf(buildUrl('Q', examCode, classCode, s))
-      const qText = (await pdfParse(qBuf)).text
-
-      // Sanity check: PDF should belong to the right class (類科名稱)
-      // — subject name has historically been renamed (e.g. 生理疾病→生理障礙)
-      // so we only check the class label
-      if (defLabel && !qText.includes(defLabel)) {
-        continue
-      }
-
-      let answers = {}
+async function tryFetchPaper(examTag, examCode, classCodes, subj, defLabel) {
+  // sCodes is preferred (array); fall back to legacy s/altS pair
+  const sCodes = subj.sCodes
+    ? subj.sCodes
+    : (subj.altS ? [subj.s, subj.altS] : [subj.s])
+  // Try every (classCode, s) combination. Cache hit short-circuits the URL.
+  for (const c of classCodes) {
+    for (const s of sCodes) {
       try {
-        const aBuf = await fetchPdf(buildUrl('S', examCode, classCode, s))
-        answers = parseAnswersPdf((await pdfParse(aBuf)).text)
-      } catch {}
+        let qBuf = tryCache(examTag, 'Q', examCode, c, s)
+        if (!qBuf) qBuf = await fetchPdf(buildUrl('Q', examCode, c, s))
+        const qText = (await pdfParse(qBuf)).text
 
-      let corrections = {}
-      try {
-        const mBuf = await fetchPdf(buildUrl('M', examCode, classCode, s))
-        corrections = parseCorrectionsPdf((await pdfParse(mBuf)).text)
-      } catch {}
+        // Sanity check: PDF must have 類科名稱: <defLabel>. Just looking for
+        // the bare word fails when the cover page lists every exam that day.
+        if (defLabel) {
+          const m = qText.match(/類\s*科\s*名?\s*稱?\s*[:：]\s*(\S+)/)
+          const actualClass = m ? m[1] : null
+          if (!actualClass || !actualClass.includes(defLabel)) continue
+        }
 
-      const disputedNums = new Set()
-      for (const [num, ans] of Object.entries(corrections)) {
-        if (ans === '*') disputedNums.add(parseInt(num))
-        else answers[num] = ans
+        let answers = {}
+        try {
+          let aBuf = tryCache(examTag, 'S', examCode, c, s)
+          if (!aBuf) aBuf = await fetchPdf(buildUrl('S', examCode, c, s))
+          answers = parseAnswersPdf((await pdfParse(aBuf)).text)
+        } catch {}
+
+        let corrections = {}
+        try {
+          let mBuf = tryCache(examTag, 'M', examCode, c, s)
+          if (!mBuf) mBuf = await fetchPdf(buildUrl('M', examCode, c, s))
+          corrections = parseCorrectionsPdf((await pdfParse(mBuf)).text)
+        } catch {}
+
+        const disputedNums = new Set()
+        for (const [num, ans] of Object.entries(corrections)) {
+          if (ans === '*') disputedNums.add(parseInt(num))
+          else answers[num] = ans
+        }
+
+        const parsed = parseQuestionsPdf(qText)
+        return { parsed, answers, disputedNums, sUsed: s, cUsed: c }
+      } catch (e) {
+        // try next combo
       }
-
-      const parsed = parseQuestionsPdf(qText)
-      return { parsed, answers, disputedNums, sUsed: s }
-    } catch (e) {
-      // try next s
     }
   }
   return null
@@ -320,7 +353,8 @@ async function refreshFile(fname) {
     }
 
     process.stdout.write(`  Refetching ${examCode} ${subj.name}... `)
-    const result = await tryFetchPaper(examCode, def.classCode, subj, def.label)
+    const allClassCodes = [def.classCode, ...(def.altClassCodes || [])]
+    const result = await tryFetchPaper(examId, examCode, allClassCodes, subj, def.label)
     if (!result) {
       console.log(`✗ FAIL`)
       failedFetches++
@@ -329,7 +363,7 @@ async function refreshFile(fname) {
       continue
     }
 
-    const { parsed, answers, disputedNums, sUsed } = result
+    const { parsed, answers, disputedNums, sUsed, cUsed } = result
     // Accept if we got at least 80% of the expected number of questions in this paper
     const expected = indices.length
     if (parsed.length < Math.max(20, Math.floor(expected * 0.8))) {
@@ -400,7 +434,7 @@ async function refreshFile(fname) {
         added++
       }
     }
-    console.log(`✓ replaced ${replaced}, added ${added} (s=${sUsed})`)
+    console.log(`✓ replaced ${replaced}, added ${added} (c=${cUsed} s=${sUsed})`)
     fixedPapers++
     fixedQuestions += replaced + added
     await sleep(400)

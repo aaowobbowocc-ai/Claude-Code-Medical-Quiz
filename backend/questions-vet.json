@@ -3,7 +3,8 @@
     "exam": "vet",
     "label": "獸醫師",
     "scraped_at": "2026-04-13T14:33:48.616Z",
-    "source": "wwwq.moex.gov.tw"
+    "source": "wwwq.moex.gov.tw",
+    "last_updated": "2026-04-14T09:12:00.948Z"
   },
   "total": 1920,
   "questions": [
@@ -205,7 +206,10 @@
         "D": "腎血腫－直動脈與入球動脈"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_10_0.webp"
+      ]
     },
     {
       "id": 11,
@@ -505,7 +509,10 @@
         "D": "③④"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_25_0.webp"
+      ]
     },
     {
       "id": 26,
@@ -585,7 +592,10 @@
         "D": "本病僅發生在雞，鴨有耐受性"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_29_0.webp"
+      ]
     },
     {
       "id": 30,
@@ -1085,7 +1095,10 @@
         "D": "牛疱疹病毒腦炎（bovine herpesvirus encephalitis）；患牛有大腦局部壞死"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_54_0.webp"
+      ]
     },
     {
       "id": 55,
@@ -1105,7 +1118,10 @@
         "D": "②④"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_55_0.webp"
+      ]
     },
     {
       "id": 56,
@@ -1165,7 +1181,11 @@
         "D": "慢性鼻淚管化膿性肉芽腫"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_58_0.webp",
+        "/question-images/vet_58_1.webp"
+      ]
     },
     {
       "id": 59,
@@ -1225,7 +1245,12 @@
         "D": "鋅缺乏"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_61_0.webp",
+        "/question-images/vet_61_1.webp",
+        "/question-images/vet_61_2.webp"
+      ]
     },
     {
       "id": 62,
@@ -1485,7 +1510,10 @@
         "D": "spermatids"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_74_0.webp"
+      ]
     },
     {
       "id": 75,
@@ -3646,7 +3674,10 @@
         "D": "鴿子；thrombocyte"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_182_0.webp"
+      ]
     },
     {
       "id": 183,
@@ -3686,7 +3717,10 @@
         "D": "Anaplasma platys"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_184_0.webp"
+      ]
     },
     {
       "id": 185,
@@ -4386,7 +4420,10 @@
         "D": "鏡檢尿液是否出現異常，可透過低倍視野（10X）下來計算細胞的種類、數目及是否發現微生物存在等加以 判斷"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_219_0.webp"
+      ]
     },
     {
       "id": 220,
@@ -4718,7 +4755,7 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 76,
-      "question": "承上題，若此犬隻有慢性化膿性皮炎，下列何者最可能為其血清蛋白質電泳圖？",
+      "question": "【承上題．前情提要】\n第75題：當犬隻發生組織損傷或炎症期間，最可能見到下列何種蛋白質異常？\n上題答案：(B) 高球蛋白血症\n──────────\n承上題，若此犬隻有慢性化膿性皮炎，下列何者最可能為其血清蛋白質電泳圖？",
       "options": {
         "A": "",
         "B": "",
@@ -4726,7 +4763,13 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_236_0.webp",
+        "/question-images/vet_236_1.webp",
+        "/question-images/vet_236_2.webp",
+        "/question-images/vet_236_3.webp"
+      ]
     },
     {
       "id": 237,
@@ -4758,7 +4801,7 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 78,
-      "question": "承上題，若此犬有基因缺陷，最可能為何種物質蓄積於肝細胞？",
+      "question": "【承上題．前情提要】\n第77題：10歲雄性Bedlington terrier梗犬，主人發現其有2～3個月的黃疸及腹水症狀，因而前來就診。 血檢符合臨床症 狀最可能會出現下列何種異常？\n上題答案：(C) 低白蛋白血症、膽紅素上升\n──────────\n承上題，若此犬有基因缺陷，最可能為何種物質蓄積於肝細胞？",
       "options": {
         "A": "銅",
         "B": "鉛",
@@ -4798,7 +4841,7 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 80,
-      "question": "承上題，此2種尿液酵素在下列那些物種，可用來做為診斷腎小管早期損傷的敏感指標？",
+      "question": "【承上題．前情提要】\n第79題：下列那兩種酵素為腎小管中高活性之酵素，可用來早期偵測腎小管之損傷？\n上題答案：(D) 훾-glutamyltransferase（GGT）& N-acetylglucosamidase（NAG）\n──────────\n承上題，此2種尿液酵素在下列那些物種，可用來做為診斷腎小管早期損傷的敏感指標？",
       "options": {
         "A": "牛、山羊",
         "B": "狗、馬",
@@ -4826,7 +4869,10 @@
         "D": "equine Cushing's disease"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_241_0.webp"
+      ]
     },
     {
       "id": 242,
@@ -5446,7 +5492,10 @@
         "D": "24"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_272_0.webp"
+      ]
     },
     {
       "id": 273,
@@ -5906,7 +5955,11 @@
         "D": "腹腔內有積液（peritoneal effusion）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_295_0.webp",
+        "/question-images/vet_295_1.webp"
+      ]
     },
     {
       "id": 296,
@@ -6358,7 +6411,7 @@
       "subject_name": "獸醫普通疾病學",
       "stage_id": 0,
       "number": 78,
-      "question": "承上題，下列何種處置最不適合？",
+      "question": "【承上題．前情提要】\n第77題：馬皮膚最常發生的腫瘤為：\n上題答案：(D) sarcoid\n──────────\n承上題，下列何種處置最不適合？",
       "options": {
         "A": "投予dexamethasone",
         "B": "Bacille Calmette-Guérin（BCG）vaccination",
@@ -6398,7 +6451,7 @@
       "subject_name": "獸醫普通疾病學",
       "stage_id": 0,
       "number": 80,
-      "question": "承上題，下列治療方式何者最正確？",
+      "question": "【承上題．前情提要】\n第79題：一匹馬呈現急性、非常嚴重且持續性疝痛，腹部明顯擴張（abdominal distention），其最可能罹患下列何項疾 病？\n上題答案：(C) 大腸捻轉\n──────────\n承上題，下列治療方式何者最正確？",
       "options": {
         "A": "立即進行腹腔手術",
         "B": "內科療法，給與止痛藥及輸液並住院觀察",
@@ -6466,7 +6519,10 @@
         "D": "Brucella suis"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_323_0.webp"
+      ]
     },
     {
       "id": 324,
@@ -6506,7 +6562,10 @@
         "D": "Escherichia coli"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_325_0.webp"
+      ]
     },
     {
       "id": 326,
@@ -6546,7 +6605,10 @@
         "D": "Haemophilus parasuis"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_327_0.webp"
+      ]
     },
     {
       "id": 328,
@@ -6867,7 +6929,10 @@
         "D": "家禽流行性感冒"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_343_0.webp"
+      ]
     },
     {
       "id": 344,
@@ -7487,7 +7552,10 @@
         "D": "wheal"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_374_0.webp"
+      ]
     },
     {
       "id": 375,
@@ -7527,7 +7595,10 @@
         "D": "scabies"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_376_0.webp"
+      ]
     },
     {
       "id": 377,
@@ -7607,7 +7678,10 @@
         "D": "犬瘟熱"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_380_0.webp"
+      ]
     },
     {
       "id": 381,
@@ -7847,7 +7921,11 @@
         "D": "white spot syndrome baculovirus complex"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_392_0.webp",
+        "/question-images/vet_392_1.webp"
+      ]
     },
     {
       "id": 393,
@@ -7887,7 +7965,10 @@
         "D": "Dactylogyrus spp. infection"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_394_0.webp"
+      ]
     },
     {
       "id": 395,
@@ -7927,7 +8008,10 @@
         "D": "Pseudodactylogyrus spp."
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_396_0.webp"
+      ]
     },
     {
       "id": 397,
@@ -7967,7 +8051,11 @@
         "D": "Streptobacillus moniliformis"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_398_0.webp",
+        "/question-images/vet_398_1.webp"
+      ]
     },
     {
       "id": 399,
@@ -8027,7 +8115,10 @@
         "D": "圖中各年齡層呈現的百分比為年齡別盛行率（age-specific prevalence）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_401_0.webp"
+      ]
     },
     {
       "id": 402,
@@ -8447,7 +8538,10 @@
         "D": "禽肉包裝束口"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_422_0.webp"
+      ]
     },
     {
       "id": 423,
@@ -9519,7 +9613,7 @@
       "subject_name": "獸醫公共衛生學",
       "stage_id": 0,
       "number": 76,
-      "question": "承上題，有關此研究結果之敘述，下列何者錯誤？",
+      "question": "【承上題．前情提要】\n第75題：隨機選取500隻健康母犬，病歷回顧發現有200隻曾進行結紮手術，進而觀察兩年後發現結紮母犬中有10隻被 診斷罹患乳腺腫瘤，未結紮母犬中有60隻被診斷罹患乳腺腫瘤。此研究為何種流行病學研究法？\n上題答案：(A) 追蹤性世代研究法\n──────────\n承上題，有關此研究結果之敘述，下列何者錯誤？",
       "options": {
         "A": "結紮母犬罹患乳腺腫瘤累積發生率為5%，未結紮母犬為20%",
         "B": "無法推論有進行結紮母犬罹患乳腺腫瘤發生率",
@@ -9547,7 +9641,10 @@
         "D": "0.067 per dog-month at risk"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_477_0.webp"
+      ]
     },
     {
       "id": 478,
@@ -9559,7 +9656,7 @@
       "subject_name": "獸醫公共衛生學",
       "stage_id": 0,
       "number": 78,
-      "question": "承上題，假設感染犬小病毒經治療會在1.5個月後痊癒，則在研究期間第4個月時的盛行率為何？",
+      "question": "【承上題．前情提要】\n第77題：有一群12隻3個月齡尚未接種疫苗犬隻，在6個月研究期間感染犬小病毒情形如下圖，發生率密度值為何？\n上題答案：(C) 0.05 per dog-month at risk\n──────────\n承上題，假設感染犬小病毒經治療會在1.5個月後痊癒，則在研究期間第4個月時的盛行率為何？",
       "options": {
         "A": "0.08",
         "B": "0.09",
@@ -9599,7 +9696,7 @@
       "subject_name": "獸醫公共衛生學",
       "stage_id": 0,
       "number": 80,
-      "question": "承上題，若A試驗結果為陽性者才再做B試驗，兩個試驗結果皆為陽性才判定為陽性，則試驗總特異性為何？",
+      "question": "【承上題．前情提要】\n第79題：一羊群有1,000頭羊，同時接受A及B兩種試驗檢測Q熱感染情形（A試驗：敏感性80%，特異性70%；B試驗： 敏感性90%，特異性80%），只要其中一種試驗結果為陽性即視為陽性，兩個試驗皆為陰性時才視為陰性， 假設盛行率為20%，則試驗總特異性為何？\n上題答案：(D) 56%\n──────────\n承上題，若A試驗結果為陽性者才再做B試驗，兩個試驗結果皆為陽性才判定為陽性，則試驗總特異性為何？",
       "options": {
         "A": "44%",
         "B": "56%",
@@ -10007,7 +10104,10 @@
         "D": "血色食道蟲性肉芽腫"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_500_0.webp"
+      ]
     },
     {
       "id": 501,
@@ -10167,7 +10267,11 @@
         "D": "先天性心室中隔缺損"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_508_0.webp",
+        "/question-images/vet_508_1.webp"
+      ]
     },
     {
       "id": 509,
@@ -10687,7 +10791,13 @@
         "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_534_0.webp",
+        "/question-images/vet_534_1.webp",
+        "/question-images/vet_534_2.webp",
+        "/question-images/vet_534_3.webp"
+      ]
     },
     {
       "id": 535,
@@ -10827,7 +10937,11 @@
         "D": "皮黴菌病（dermatophytosis）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_541_0.webp",
+        "/question-images/vet_541_1.webp"
+      ]
     },
     {
       "id": 542,
@@ -10847,7 +10961,12 @@
         "D": "pseudomycetoma"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_542_0.webp",
+        "/question-images/vet_542_1.webp",
+        "/question-images/vet_542_2.webp"
+      ]
     },
     {
       "id": 543,
@@ -11067,7 +11186,11 @@
         "D": "spermatic granuloma"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_553_0.webp",
+        "/question-images/vet_553_1.webp"
+      ]
     },
     {
       "id": 554,
@@ -11087,7 +11210,11 @@
         "D": "focal spermatid metaplasia"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_554_0.webp",
+        "/question-images/vet_554_1.webp"
+      ]
     },
     {
       "id": 555,
@@ -12960,12 +13087,12 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 8,
-      "question": "檢體以乾冰低溫保存時，其溫度約維持在幾度？",
+      "question": "有關性腺畸胎瘤（teratoma），何者最正確？",
       "options": {
-        "A": "4～10 o",
-        "C": "",
-        "B": "-20～-30 o",
-        "D": "-180～-190 o"
+        "A": "中線處裂溝的封閉不全",
+        "B": "成雙器官合一",
+        "C": "兩性組織器官的混合",
+        "D": "發育中組織的異位"
       },
       "answer": "C",
       "explanation": ""
@@ -13288,7 +13415,10 @@
         "D": "單核球，Heinz bodies"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_664_0.webp"
+      ]
     },
     {
       "id": 665,
@@ -13308,7 +13438,10 @@
         "D": "單核球"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_665_0.webp"
+      ]
     },
     {
       "id": 666,
@@ -13320,7 +13453,7 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 26,
-      "question": "承上題，有關此種血球之敘述，下列何者正確",
+      "question": "【承上題．前情提要】\n第25題：下圖為犬隻劉氏染色血液抹片，箭頭所指爲何種血球？\n上題答案：(D) 單核球\n──────────\n承上題，有關此種血球之敘述，下列何者正確",
       "options": {
         "A": "當許多此種血球進入血中，稱為核左轉",
         "B": "此種血球形成過程受顆粒球生成素調控",
@@ -13348,7 +13481,11 @@
         "D": "basophilic leukemia"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_667_0.webp",
+        "/question-images/vet_667_1.webp"
+      ]
     },
     {
       "id": 668,
@@ -13368,7 +13505,10 @@
         "D": "化膿性炎症病變之形成期"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_668_0.webp"
+      ]
     },
     {
       "id": 669,
@@ -14100,7 +14240,7 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 65,
-      "question": "承上題，由臨床症狀及血檢結果可判定該犬有下列何種酸鹼不平衡？",
+      "question": "【承上題．前情提要】\n第64題：2歲未結紮黃金獵犬雌犬，有嗜睡、抑鬱、共濟失調、嘔吐、脫水、乏尿之臨床症狀。 CBC可見嗜中性球顯 著上升，且有核左轉。生化檢查可見BUN與血清肌酸酐上升。有高血糖、高蛋白血症，也同時可見高血鉀、 低血氯與低血鈣。血液氣體檢查顯示pH為7.231，並有低重碳酸鹽與低PCO2之情況出現。造成該犬低血氯最 有可能的原因為何？\n上題答案：(A) 嘔吐\n──────────\n承上題，由臨床症狀及血檢結果可判定該犬有下列何種酸鹼不平衡？",
       "options": {
         "A": "呼吸性酸中毒",
         "B": "呼吸性鹼中毒",
@@ -14120,7 +14260,7 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 66,
-      "question": "承上題，輸液後若該犬尿檢中出現等比重尿、輕微的蛋白尿，但無血尿或是膿尿之結果，且尿渣中觀察到單 水草酸鈣結晶，則下列何者最可能是造成該犬臨床症狀之病因？",
+      "question": "【承上題．前情提要】\n第65題：【承上題．前情提要】\n第64題：2歲未結紮黃金獵犬雌犬，有嗜睡、抑鬱、共濟失調、嘔吐、脫水、乏尿之臨床症狀。 CBC可見嗜中性球顯 著上升，且有核左轉。生化檢查可見BUN與血清肌酸酐上升。有高血糖、高蛋白血症，也同時可見高血鉀、 低血氯與低血鈣。血液氣體檢查顯示pH為7.231，並有低重碳酸鹽與低PCO2之情況出現。造成該犬低血氯最 有可能的原因為何？\n上題答案：(A) 嘔吐\n──────────\n承上題，由臨床症狀及血檢結果可判定該犬有下列何種酸鹼不平衡？\n上題答案：(C) 代謝性酸中毒\n──────────\n承上題，輸液後若該犬尿檢中出現等比重尿、輕微的蛋白尿，但無血尿或是膿尿之結果，且尿渣中觀察到單 水草酸鈣結晶，則下列何者最可能是造成該犬臨床症狀之病因？",
       "options": {
         "A": "ethylene glycol中毒",
         "B": "肝腦病變",
@@ -14848,7 +14988,10 @@
         "D": "直腸脫垂"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_742_0.webp"
+      ]
     },
     {
       "id": 743,
@@ -15288,7 +15431,10 @@
         "D": "張口呼吸"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_764_0.webp"
+      ]
     },
     {
       "id": 765,
@@ -15300,7 +15446,7 @@
       "subject_name": "獸醫普通疾病學",
       "stage_id": 0,
       "number": 45,
-      "question": "承上題，下列何項治療方法可以最有效減低該犬隻的呼吸窘迫，且有助於進行之後的區別診斷？",
+      "question": "【承上題．前情提要】\n第44題：下圖犬隻的肋膜腔內有大量的X-ray不透明穿透度的物質，在該犬的臨床檢查中，最具有診斷意義的症狀為下 列何項？\n上題答案：(C) 反常呼吸（paradoxical breathing）\n──────────\n承上題，下列何項治療方法可以最有效減低該犬隻的呼吸窘迫，且有助於進行之後的區別診斷？",
       "options": {
         "A": "給予利尿劑",
         "B": "胸腔穿刺術",
@@ -15428,7 +15574,10 @@
         "D": "念珠菌"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_771_0.webp"
+      ]
     },
     {
       "id": 772,
@@ -15440,7 +15589,7 @@
       "subject_name": "獸醫普通疾病學",
       "stage_id": 0,
       "number": 52,
-      "question": "承上題，若此病原確定為此貓的致病病原，則何項器官最不易受到波及？",
+      "question": "【承上題．前情提要】\n第51題：下圖為一隻患有慢性鼻膿的貓隻之鼻腔塗抹採樣，此病原最有可能為何？\n上題答案：(A) 隱球菌\n──────────\n承上題，若此病原確定為此貓的致病病原，則何項器官最不易受到波及？",
       "options": {
         "A": "消化道",
         "B": "皮膚",
@@ -15748,7 +15897,10 @@
         "D": "所有數值皆無異常"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_787_0.webp"
+      ]
     },
     {
       "id": 788,
@@ -15848,7 +16000,10 @@
         "D": "畸形胎"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_792_0.webp"
+      ]
     },
     {
       "id": 793,
@@ -16008,7 +16163,10 @@
         "D": "乏情期（anoestrus）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_800_0.webp"
+      ]
     },
     {
       "id": 801,
@@ -16288,7 +16446,10 @@
         "D": "Cystoisospora suis"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_814_0.webp"
+      ]
     },
     {
       "id": 815,
@@ -17268,7 +17429,10 @@
         "D": "Microsporum canis"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_863_0.webp"
+      ]
     },
     {
       "id": 864,
@@ -17388,7 +17552,12 @@
         "D": "Photobacterium damselae ssp. piscicida"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_869_0.webp",
+        "/question-images/vet_869_1.webp",
+        "/question-images/vet_869_2.webp"
+      ]
     },
     {
       "id": 870,
@@ -17408,7 +17577,15 @@
         "D": "Diplostomum spp."
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_870_0.webp",
+        "/question-images/vet_870_1.webp",
+        "/question-images/vet_870_2.webp",
+        "/question-images/vet_870_3.webp",
+        "/question-images/vet_870_4.webp",
+        "/question-images/vet_870_5.webp"
+      ]
     },
     {
       "id": 871,
@@ -17428,7 +17605,11 @@
         "D": "Centrocestus formosanus"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_871_0.webp",
+        "/question-images/vet_871_1.webp"
+      ]
     },
     {
       "id": 872,
@@ -20428,7 +20609,10 @@
         "D": "exudative epidermitis"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1021_0.webp"
+      ]
     },
     {
       "id": 1022,
@@ -20448,7 +20632,12 @@
         "D": "viral papilloma"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1022_0.webp",
+        "/question-images/vet_1022_1.webp",
+        "/question-images/vet_1022_2.webp"
+      ]
     },
     {
       "id": 1023,
@@ -20648,7 +20837,11 @@
         "D": "骨質石化病（osteopetrosis）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1032_0.webp",
+        "/question-images/vet_1032_1.webp"
+      ]
     },
     {
       "id": 1033,
@@ -20668,7 +20861,10 @@
         "D": "varicocele"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1033_0.webp"
+      ]
     },
     {
       "id": 1034,
@@ -20688,7 +20884,10 @@
         "D": "interstitial cell tumor"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1034_0.webp"
+      ]
     },
     {
       "id": 1035,
@@ -22928,7 +23127,10 @@
         "D": "canine distemper inclusion body"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1146_0.webp"
+      ]
     },
     {
       "id": 1147,
@@ -22948,7 +23150,10 @@
         "D": "化膿性炎症病變之形成期"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1147_0.webp"
+      ]
     },
     {
       "id": 1148,
@@ -23380,7 +23585,7 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 49,
-      "question": "承上題，該犬之血檢同時發現有磷及BUN、creatinine顯著上升，初判下列何種原因最有可能造成此現象？",
+      "question": "【承上題．前情提要】\n第48題：2歲雄性混種犬，近日發現有疲倦、厭食及黃疸現象。體溫為攝氏39.5度，血液生化檢查發現PCV37%，總膽 紅素值與ALP活性值顯著上升，ALT、AST活性值升高。則該犬最可能是何種肝臟病變？\n上題答案：(D) 膽管肝炎\n──────────\n承上題，該犬之血檢同時發現有磷及BUN、creatinine顯著上升，初判下列何種原因最有可能造成此現象？",
       "options": {
         "A": "鈎端螺旋體感染",
         "B": "心絲蟲症",
@@ -23500,7 +23705,7 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 55,
-      "question": "承上題，將該犬透過右旋木糖（D-xylose）試驗尋找病因，投予後的0.5～2小時，其血漿中的右旋木糖濃度均 偏低，造成此結果可能的原因為何？",
+      "question": "【承上題．前情提要】\n第54題：6歲已結紮德國牧羊犬，2個月來持續地慢性下痢、食慾佳、外觀消瘦。血檢發現淋巴球偏低，血清總蛋白與 白蛋白均偏低，A/G ratio落在參考值範圍內，血糖也偏低，其血中蛋白質濃度過低的原因最有可能為何？\n上題答案：(D) 腸道吸收功能不佳\n──────────\n承上題，將該犬透過右旋木糖（D-xylose）試驗尋找病因，投予後的0.5～2小時，其血漿中的右旋木糖濃度均 偏低，造成此結果可能的原因為何？",
       "options": {
         "A": "肝門靜脈分流",
         "B": "內出血",
@@ -23520,7 +23725,7 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 56,
-      "question": "承上題，該犬隻的trypsin-like immunoreactivity（TLI）值若在正常範圍內，糞便進行明膠消化試驗呈現陽性反 應，則下列敘述何者最正確？",
+      "question": "【承上題．前情提要】\n第55題：【承上題．前情提要】\n第54題：6歲已結紮德國牧羊犬，2個月來持續地慢性下痢、食慾佳、外觀消瘦。血檢發現淋巴球偏低，血清總蛋白與 白蛋白均偏低，A/G ratio落在參考值範圍內，血糖也偏低，其血中蛋白質濃度過低的原因最有可能為何？\n上題答案：(D) 腸道吸收功能不佳\n──────────\n承上題，將該犬透過右旋木糖（D-xylose）試驗尋找病因，投予後的0.5～2小時，其血漿中的右旋木糖濃度均 偏低，造成此結果可能的原因為何？\n上題答案：(D) 空腸吸收不良\n──────────\n承上題，該犬隻的trypsin-like immunoreactivity（TLI）值若在正常範圍內，糞便進行明膠消化試驗呈現陽性反 應，則下列敘述何者最正確？",
       "options": {
         "A": "血清總蛋白濃度偏低，可能會有繼發性凝血功能不足的情況出現",
         "B": "低血糖可能源自於內分泌胰腺之功能不足",
@@ -24028,7 +24233,10 @@
         "D": "無汗症（anhidrosis）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1201_0.webp"
+      ]
     },
     {
       "id": 1202,
@@ -24040,7 +24248,7 @@
       "subject_name": "獸醫普通疾病學",
       "stage_id": 0,
       "number": 2,
-      "question": "承上題，下列何項不是伴隨此種疾病常見的狀況？",
+      "question": "【承上題．前情提要】\n第1題：下圖中這匹馬最可能罹患下列何種疾病？\n上題答案：(A) 腦下垂體的中間部功能異常（pituitary pars intermedia dysfunction）\n──────────\n承上題，下列何項不是伴隨此種疾病常見的狀況？",
       "options": {
         "A": "蹄葉炎（laminitis）",
         "B": "體重下降（weight loss）",
@@ -24088,7 +24296,10 @@
         "D": "angular limb deformity"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1204_0.webp"
+      ]
     },
     {
       "id": 1205,
@@ -24308,7 +24519,10 @@
         "D": "重瓣胃食滯"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1215_0.webp"
+      ]
     },
     {
       "id": 1216,
@@ -24408,7 +24622,10 @@
         "D": "連續IV注射oxytetracycline"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1220_0.webp"
+      ]
     },
     {
       "id": 1221,
@@ -24608,7 +24825,10 @@
         "D": "右心室擴大（right ventricular enlargement）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1230_0.webp"
+      ]
     },
     {
       "id": 1231,
@@ -24908,7 +25128,11 @@
         "D": "側照右中葉可見支氣管圖像（bronchial pattern）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1245_0.webp",
+        "/question-images/vet_1245_1.webp"
+      ]
     },
     {
       "id": 1246,
@@ -24920,7 +25144,7 @@
       "subject_name": "獸醫普通疾病學",
       "stage_id": 0,
       "number": 46,
-      "question": "承上題，最有可能的區別診斷為何?",
+      "question": "【承上題．前情提要】\n第45題：1歲混種犬，咳嗽3日，胸腔左側臥及仰躺照如圖，下列影像敘述何者錯誤？\n上題答案：(D) 側照右中葉可見支氣管圖像（bronchial pattern）\n──────────\n承上題，最有可能的區別診斷為何?",
       "options": {
         "A": "肺炎",
         "B": "心因性肺水腫",
@@ -25488,7 +25712,10 @@
         "D": "follicle-stimulating hormone（FSH）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1274_0.webp"
+      ]
     },
     {
       "id": 1275,
@@ -25500,7 +25727,7 @@
       "subject_name": "獸醫普通疾病學",
       "stage_id": 0,
       "number": 75,
-      "question": "承上題，母犬陰道有多量血液樣分泌物，最可能是處於動情週期的那一個階段？",
+      "question": "【承上題．前情提要】\n第74題：下列母犬動情週期的圖示中，A所指實線最可能代表下列何種內泌素之週期變化？\n上題答案：(C) luteinizing hormone（LH）\n──────────\n承上題，母犬陰道有多量血液樣分泌物，最可能是處於動情週期的那一個階段？",
       "options": {
         "A": "late pro-oestrus",
         "B": "late oestrus",
@@ -25688,7 +25915,10 @@
         "D": "致病原為一螺旋體"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1284_0.webp"
+      ]
     },
     {
       "id": 1285,
@@ -26648,7 +26878,10 @@
         "D": "Babesia gibsoni"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1332_0.webp"
+      ]
     },
     {
       "id": 1333,
@@ -26808,7 +27041,10 @@
         "D": "skin scraping"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1340_0.webp"
+      ]
     },
     {
       "id": 1341,
@@ -26888,7 +27124,10 @@
         "D": "車輪蟲"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1344_0.webp"
+      ]
     },
     {
       "id": 1345,
@@ -27148,7 +27387,10 @@
         "D": "Polyplax serrata"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1357_0.webp"
+      ]
     },
     {
       "id": 1358,
@@ -27480,7 +27722,7 @@
       "subject_name": "獸醫公共衛生學",
       "stage_id": 0,
       "number": 14,
-      "question": "承上題，尿道結石與結紮有關的相差危險性（attributable risk）為何？",
+      "question": "【承上題．前情提要】\n第13題：下表為一個利用世代研究法（cohort study）分析結紮與尿道結石是否相關之研究所得出的結果，結紮與尿道 結石之相對危險性（relative risk）為何？\n上題答案：(A) (30/400) / (10/3000)\n──────────\n承上題，尿道結石與結紮有關的相差危險性（attributable risk）為何？",
       "options": {
         "A": "(30/400) / (10/3000)",
         "B": "(30/400)－(10/3000)",
@@ -28988,7 +29230,10 @@
         "D": "豬鐵士古病毒（Teschovirus）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1449_0.webp"
+      ]
     },
     {
       "id": 1450,
@@ -29068,7 +29313,10 @@
         "D": "後腔靜脈症候群"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1453_0.webp"
+      ]
     },
     {
       "id": 1454,
@@ -29348,7 +29596,10 @@
         "D": "此現象多與貧血有關"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1467_0.webp"
+      ]
     },
     {
       "id": 1468,
@@ -29368,7 +29619,10 @@
         "D": "①②③"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1468_0.webp"
+      ]
     },
     {
       "id": 1469,
@@ -29428,7 +29682,10 @@
         "D": "tiger heart"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1471_0.webp"
+      ]
     },
     {
       "id": 1472,
@@ -29468,7 +29725,10 @@
         "D": "liquefactive necrosis"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1473_0.webp"
+      ]
     },
     {
       "id": 1474,
@@ -29608,7 +29868,10 @@
         "D": "蛀牙（cavities）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1480_0.webp"
+      ]
     },
     {
       "id": 1481,
@@ -29928,7 +30191,10 @@
         "D": "左圖－gitter cells，右圖－intramyelinic edema，犬瘟熱"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1496_0.webp"
+      ]
     },
     {
       "id": 1497,
@@ -30048,7 +30314,10 @@
         "D": "dermatophytosis"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1502_0.webp"
+      ]
     },
     {
       "id": 1503,
@@ -30268,7 +30537,10 @@
         "D": "pyometra"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1513_0.webp"
+      ]
     },
     {
       "id": 1514,
@@ -30308,7 +30580,10 @@
         "D": "fibroadenomatous hyperplasia"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1515_0.webp"
+      ]
     },
     {
       "id": 1516,
@@ -31440,7 +31715,7 @@
       "subject_name": "獸醫藥理學",
       "stage_id": 0,
       "number": 52,
-      "question": "承上題，下列何種藥物歸類於該等級？",
+      "question": "【承上題．前情提要】\n第51題：傳統分類抗心律不整藥物，若其對心臟節律點（pacemaker）及心肌細胞動作電位之第2期均有作用者，屬 於：\n上題答案：(D) Class IV\n──────────\n承上題，下列何種藥物歸類於該等級？",
       "options": {
         "A": "phenytoin",
         "B": "atenolol",
@@ -32348,7 +32623,10 @@
         "D": "platelet"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1617_0.webp"
+      ]
     },
     {
       "id": 1618,
@@ -32360,7 +32638,7 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 18,
-      "question": "承上題，犬隻在下列何種狀況下此種血球數目最容易增多﹖",
+      "question": "【承上題．前情提要】\n第17題：下圖為新亞甲基藍染色之犬隻血液抹片，箭頭所指最可能為何種血球？\n上題答案：(A) reticulocyte\n──────────\n承上題，犬隻在下列何種狀況下此種血球數目最容易增多﹖",
       "options": {
         "A": "急性發炎",
         "B": "犬小病毒感染",
@@ -33020,7 +33298,7 @@
       "subject_name": "獸醫實驗診斷學",
       "stage_id": 0,
       "number": 51,
-      "question": "承上題，推測該貓最有可能誤食何種藥物？",
+      "question": "【承上題．前情提要】\n第50題：貓誤食主人藥物，出現黃疸、茶棕色尿、血液抹片中發現Heinz body，下列何種血檢異常最可能同時出現？\n上題答案：(C) methemoglobinemia\n──────────\n承上題，推測該貓最有可能誤食何種藥物？",
       "options": {
         "A": "chlorpheniramine",
         "B": "dextromethorphan",
@@ -33668,7 +33946,10 @@
         "D": "C 為 radial carpal bone"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1683_0.webp"
+      ]
     },
     {
       "id": 1684,
@@ -33688,7 +33969,10 @@
         "D": "賽前密集訓練的結果"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1684_0.webp"
+      ]
     },
     {
       "id": 1685,
@@ -33720,7 +34004,7 @@
       "subject_name": "獸醫普通疾病學",
       "stage_id": 0,
       "number": 6,
-      "question": "承上題，其手術部位應該在何處？",
+      "question": "【承上題．前情提要】\n第5題：馬匹 deep digital flexor tenotomy可用於治療下列何種疾病？\n上題答案：(B) 蹄骨已呈旋轉之蹄葉炎\n──────────\n承上題，其手術部位應該在何處？",
       "options": {
         "A": "hock area",
         "B": "navicular bone",
@@ -34188,7 +34472,10 @@
         "D": ""
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1709_0.webp"
+      ]
     },
     {
       "id": 1710,
@@ -34288,7 +34575,10 @@
         "D": "50/min"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1714_0.webp"
+      ]
     },
     {
       "id": 1715,
@@ -34560,7 +34850,7 @@
       "subject_name": "獸醫普通疾病學",
       "stage_id": 0,
       "number": 48,
-      "question": "承上題，該病必須要進行的確診方式為下列何項？",
+      "question": "【承上題．前情提要】\n第47題：LuLu為年約2歲，已節育之雌性混種犬。呈現消瘦、精神沉鬱、食慾不佳之情形，經地方動物醫院診斷為腎 衰竭。經輸液治療後情況良好，脫水改善，食慾增加，於是辦理出院。但3日後再度因精神不振、食慾不 佳、虛弱無力再轉院。當日血清生化值如表所示。依照病史及血檢數值可作出最有可能的診斷為何？\n上題答案：(B) Addison's disease\n──────────\n承上題，該病必須要進行的確診方式為下列何項？",
       "options": {
         "A": "高濃度dexamethasone刺激試驗",
         "B": "血清cortisol濃度檢測",
@@ -34620,7 +34910,7 @@
       "subject_name": "獸醫普通疾病學",
       "stage_id": 0,
       "number": 51,
-      "question": "承上題，該貓的頸部腹側屈曲（neck ventroflexion）與下列何項血檢結果最具相關性？",
+      "question": "【承上題．前情提要】\n第50題：一隻14歲未絕育雌貓，飼主發現牠食慾下降和活動力減少已逾2週，這兩天又出現頸部腹側屈曲（neck ventroflexion）。這隻貓在3個月前已被診斷出患有慢性腎病（CKD），但未作任何治療。理學檢查未發現 脫水現象，黏膜蒼白，體重2.5 公斤，心跳每分鐘 150次，血壓收縮壓165 mmHg。下表是患貓的血液和尿液 檢查結果。根據International Renal Interest Society（IRIS）的分級，此貓的慢性腎病分級為：\n上題答案：(C) stage IV proteinuria hypertension\n──────────\n承上題，該貓的頸部腹側屈曲（neck ventroflexion）與下列何項血檢結果最具相關性？",
       "options": {
         "A": "低血鈉（hyponatremia）",
         "B": "高血磷（hyperphosphatemia）",
@@ -35008,7 +35298,10 @@
         "D": "以助產器進行胎兒牽引"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1750_0.webp"
+      ]
     },
     {
       "id": 1751,
@@ -35188,7 +35481,10 @@
         "D": "pyometra"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1759_0.webp"
+      ]
     },
     {
       "id": 1760,
@@ -35248,7 +35544,10 @@
         "D": "sporulated oocyst"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1762_0.webp"
+      ]
     },
     {
       "id": 1763,
@@ -35308,7 +35607,10 @@
         "D": "Staphylococcus aureus"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1765_0.webp"
+      ]
     },
     {
       "id": 1766,
@@ -35328,7 +35630,10 @@
         "D": "沙門氏菌症"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1766_0.webp"
+      ]
     },
     {
       "id": 1767,
@@ -36360,12 +36665,12 @@
       "subject_name": "獸醫傳染病學",
       "stage_id": 0,
       "number": 58,
-      "question": "下列何者不是貓白血病病毒的亞群？",
+      "question": "新生仔豬出現先天性小腦發育不全，與下列何者有關？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "豬假性狂犬病",
+        "B": "豬瘟",
+        "C": "砷劑中毒",
+        "D": "維生素E缺乏"
       },
       "answer": "D",
       "explanation": ""
@@ -36508,7 +36813,11 @@
         "D": "sea lice"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1825_0.webp",
+        "/question-images/vet_1825_1.webp"
+      ]
     },
     {
       "id": 1826,
@@ -36648,7 +36957,11 @@
         "D": "Pseudomonas anguilliseptica"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1832_0.webp",
+        "/question-images/vet_1832_1.webp"
+      ]
     },
     {
       "id": 1833,
@@ -36748,7 +37061,10 @@
         "D": "lymphocytic choriomeningitis virus"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/vet_1837_0.webp"
+      ]
     },
     {
       "id": 1838,
@@ -37300,7 +37616,7 @@
       "subject_name": "獸醫公共衛生學",
       "stage_id": 0,
       "number": 25,
-      "question": "承上題，若以B點為判定點，並利用此診斷工具進行疾病調查，當疾病盛行率為10％時，檢測結果陽性者確 實罹患該疾病的機率最接近下列何者？",
+      "question": "【承上題．前情提要】\n第24題：某診斷工具之ROC曲線分析結果，在X軸為偽陽性率，Y軸為真陽性率，曲線上有切點A（0.1, 0.4）、 B（0.4, 0.8）、C（0.9, 0.9），下列敘述何者正確？\n上題答案：(C) C點敏感性最高\n──────────\n承上題，若以B點為判定點，並利用此診斷工具進行疾病調查，當疾病盛行率為10％時，檢測結果陽性者確 實罹患該疾病的機率最接近下列何者？",
       "options": {
         "A": "10％",
         "B": "20％",

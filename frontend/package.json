@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/generate-shells.cjs",
+    "build": "vite build && node build-shells.cjs",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -14,8 +14,8 @@
 const fs = require('fs')
 const path = require('path')
 
-const DIST = path.resolve(__dirname, '..', 'dist')
-const CONFIGS_DIR = path.resolve(__dirname, '..', '..', 'backend', 'exam-configs')
+const DIST = path.resolve(__dirname, 'dist')
+const CONFIGS_DIR = path.resolve(__dirname, '..', 'backend', 'exam-configs')
 const TEMPLATE = path.join(DIST, 'index.html')
 
 const CATEGORY_LABEL = {

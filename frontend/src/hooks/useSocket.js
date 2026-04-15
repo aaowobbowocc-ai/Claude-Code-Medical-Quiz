@@ -97,6 +97,11 @@ export function useSocket() {
       },
       host_changed: () => {},
       player_left: ({ message }) => alert(message),
+      kicked_from_room: ({ reason }) => {
+        useGameStore.getState().reset()
+        navigate('/')
+        alert(reason || '你已被房主請出房間')
+      },
       error: ({ message }) => console.warn('[socket error]', message),
     }
 

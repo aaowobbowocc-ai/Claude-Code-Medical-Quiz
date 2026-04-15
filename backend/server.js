@@ -548,6 +548,26 @@ io.on('connection', (socket) => {
     broadcastRoomState(room);
   });
 
+  // Kick player (host only, lobby only, cannot kick self)
+  socket.on('kick_player', ({ targetId }) => {
+    const room = rooms.get(socket.data.roomCode);
+    if (!room || room.hostId !== socket.id) return;
+    if (room.phase !== 'lobby') return;
+    if (!targetId || targetId === socket.id) return;
+    const target = room.players.get(targetId);
+    if (!target) return;
+    room.players.delete(targetId);
+    if (!target.isAI) {
+      const targetSocket = io.sockets.sockets.get(targetId);
+      if (targetSocket) {
+        targetSocket.emit('kicked_from_room', { reason: '房主已將你請出房間' });
+        try { targetSocket.leave(room.code); } catch {}
+        targetSocket.data.roomCode = null;
+      }
+    }
+    broadcastRoomState(room);
+  });
+
   // Quick chat
   socket.on('send_chat', ({ type, content }) => {
     const room = rooms.get(socket.data.roomCode);

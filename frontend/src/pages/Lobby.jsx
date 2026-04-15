@@ -24,7 +24,7 @@ function PulseDot() {
 export default function Lobby() {
   const navigate = useNavigate()
   const socket = getSocket()
-  const { roomCode, isHost, players, stage, timerMode, betAmount, setBetAmount } = useGameStore()
+  const { roomCode, isHost, myId, players, stage, timerMode, betAmount, setBetAmount } = useGameStore()
   const { name, coins, exam } = usePlayerStore()
   const [copied, setCopied] = useState(false)   // share msg
   const [codeCopied, setCodeCopied] = useState(false) // code only
@@ -84,6 +84,10 @@ export default function Lobby() {
   const handleStageChange = (id) => { socket.emit('select_stage', { stageId: id }); setShowStages(false) }
   const handleAddAI = (diff) => { socket.emit('add_ai_player', { difficulty: diff }); setShowAIDiff(false) }
   const handleRemoveAI = () => socket.emit('remove_ai_player')
+  const handleKick = (targetId, targetName) => {
+    if (!window.confirm(`確定要將「${targetName}」請出房間嗎？`)) return
+    socket.emit('kick_player', { targetId })
+  }
   const handleTimerMode = (mode) => socket.emit('set_timer_mode', { mode })
 
   const avatarOf = (p) => p.avatar || '👨‍⚕️'
@@ -173,6 +177,15 @@ export default function Lobby() {
                 <span className="text-xs bg-violet-500 text-white px-2.5 py-1 rounded-full font-semibold">
                   🤖 AI
                 </span>
+              )}
+              {isHost && i !== 0 && !p.isAI && p.id !== myId && (
+                <button
+                  onClick={() => handleKick(p.id, p.name)}
+                  className="text-xs text-red-500 font-semibold px-2.5 py-1 rounded-full border border-red-200 active:bg-red-50 transition-colors"
+                  aria-label={`踢出 ${p.name}`}
+                >
+                  踢出
+                </button>
               )}
             </div>
           ))}

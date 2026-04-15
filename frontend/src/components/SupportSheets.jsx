@@ -1,12 +1,21 @@
 import { useState } from 'react'
 import Sheet from './Sheet'
+import { usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 export default function SupportSheets({ sheet, setSheet }) {
+  const storedName = usePlayerStore(s => s.name) || ''
   const [feedbackText, setFeedbackText] = useState('')
+  const [feedbackName, setFeedbackName] = useState(storedName)
   const [feedbackSent, setFeedbackSent] = useState(false)
   const [sending, setSending] = useState(false)
+
+  const resetFeedback = () => {
+    setFeedbackSent(false)
+    setFeedbackText('')
+    setFeedbackName(storedName)
+  }
 
   const sendContact = async () => {
     if (!feedbackText.trim() || sending) return
@@ -15,7 +24,10 @@ export default function SupportSheets({ sheet, setSheet }) {
       const res = await fetch(`${BACKEND}/feedback`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: feedbackText }),
+        body: JSON.stringify({
+          message: feedbackText,
+          name: feedbackName.trim() || undefined,
+        }),
       })
       if (res.ok) setFeedbackSent(true)
     } catch { /* ignore */ }
@@ -61,7 +73,7 @@ export default function SupportSheets({ sheet, setSheet }) {
       )}
 
       {sheet === 'contact' && (
-        <Sheet onClose={() => { setSheet(null); setFeedbackSent(false); setFeedbackText('') }}>
+        <Sheet onClose={() => { setSheet(null); resetFeedback() }}>
           {feedbackSent ? (
             <div className="text-center py-6">
               <div className="text-6xl mb-4">🙏</div>
@@ -70,7 +82,7 @@ export default function SupportSheets({ sheet, setSheet }) {
                 每一條訊息我都會認真讀。<br />
                 正是這樣的回饋讓這個專案繼續走下去。
               </p>
-              <button onClick={() => { setSheet(null); setFeedbackSent(false); setFeedbackText('') }}
+              <button onClick={() => { setSheet(null); resetFeedback() }}
                       className="mt-6 px-8 py-3 rounded-2xl font-bold text-white active:scale-95 grad-cta">
                 關閉
               </button>
@@ -85,6 +97,14 @@ export default function SupportSheets({ sheet, setSheet }) {
                   什麼都可以說，我都想聽。
                 </p>
               </div>
+              <input
+                type="text"
+                className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3 text-sm text-gray-700 outline-none focus:border-medical-blue mb-3"
+                placeholder="你的名字（選填，留空則匿名）"
+                maxLength={30}
+                value={feedbackName}
+                onChange={e => setFeedbackName(e.target.value)}
+              />
               <textarea
                 autoFocus
                 className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3.5 text-sm text-gray-700 outline-none focus:border-medical-blue resize-none mb-4 leading-relaxed"

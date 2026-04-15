@@ -251,6 +251,17 @@ export default function Home() {
     if (params.get('reward') === '1') {
       setSheet('reward-ad')
       window.history.replaceState({}, '', window.location.pathname)
+      return
+    }
+    // Truly new user (no name) without a deep-link → force Stage 1 persona picker.
+    // Zustand defaults exam='doctor1' so we can't trust the exam field to detect
+    // "has chosen". We check URL ?exam= directly instead of sessionStorage because
+    // React fires child effects before parent effects — App.jsx's deep-link handler
+    // hasn't run yet when this Home effect fires on first mount.
+    const deepLinkExam = params.get('exam')
+    const deepLinkValid = deepLinkExam && getExamConfig(deepLinkExam)
+    if (!name && !deepLinkValid) {
+      setSheet('exam')
     }
   }, [])
   const { showBanner, isIOS, install, installPrompt, dismiss } = usePWA()

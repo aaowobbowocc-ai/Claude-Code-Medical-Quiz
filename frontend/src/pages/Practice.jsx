@@ -192,15 +192,28 @@ function SetupScreen({ onStart, onBack }) {
                 🌊 大水庫
               </button>
             </div>
-            {showModeInfo && (
-              <div className="mt-2 p-3 bg-white rounded-xl border border-gray-100 text-[11px] text-gray-500 leading-relaxed">
-                <p><strong className="text-medical-dark">歷屆真題</strong>：只從本考試自己的歷屆題出題。</p>
-                <p className="mt-1"><strong className="text-medical-dark">大水庫</strong>：加入同等級其他考試的共同科目題，加強刷題量。</p>
-                {meta?.totalQ != null && (
-                  <p className="mt-1 text-gray-400">共 {meta.totalQ} 題 · 題庫更新：{new Date().toISOString().slice(0, 10)}</p>
-                )}
-              </div>
-            )}
+            {showModeInfo && (() => {
+              const sharedPapers = (meta?.mergedPapers || []).filter(p => p.fromSharedBank)
+              const ownCount = Number(meta?.totalQ) || 0
+              const sharedCount = sharedPapers.reduce((s, p) => s + (Number(p.count) || 0), 0)
+              const shownCount = sourceMode === 'reservoir' ? ownCount + sharedCount : ownCount
+              // Most recent last_synced_at across the shared banks feeding this exam
+              const syncedTs = sharedPapers
+                .map(p => p.last_synced_at)
+                .filter(Boolean)
+                .sort()
+                .pop()
+              const syncedLabel = syncedTs ? new Date(syncedTs).toISOString().slice(0, 10) : null
+              return (
+                <div className="mt-2 p-3 bg-white rounded-xl border border-gray-100 text-[11px] text-gray-500 leading-relaxed">
+                  <p><strong className="text-medical-dark">歷屆真題</strong>：只從本考試自己的歷屆題出題。</p>
+                  <p className="mt-1"><strong className="text-medical-dark">大水庫</strong>：加入同等級其他考試的共同科目題，加強刷題量。</p>
+                  <p className="mt-1 text-gray-400">
+                    共 {shownCount} 題{syncedLabel ? ` · 題庫更新：${syncedLabel}` : ''}
+                  </p>
+                </div>
+              )
+            })()}
           </div>
         )}
 
@@ -474,12 +487,20 @@ function PracticeGame({ config, onFinish, onExit }) {
       {/* ── Question ─────────────────────────────────────────── */}
       <div className="flex-1 overflow-y-auto px-4 py-4">
         <div className="bg-white rounded-2xl p-4 mb-4 shadow-sm">
-          {(q.subject_name || q.roc_year) && (
-            <div className="flex items-center gap-2 mb-2">
+          {(q.subject_name || q.roc_year || q.isSharedBank) && (
+            <div className="flex items-center gap-2 mb-2 flex-wrap">
               {q.subject_name && (
                 <span className="text-xs font-semibold text-white px-2 py-0.5 rounded-full"
                       style={{ background: getSubjectColor(q.subject_name) }}>
                   {q.subject_name}
+                </span>
+              )}
+              {q.isSharedBank && (
+                <span
+                  className="text-[10px] font-semibold text-sky-700 bg-sky-50 border border-sky-200 px-1.5 py-0.5 rounded-full"
+                  title={q.sourceLabel || '同等推薦'}
+                >
+                  同等推薦
                 </span>
               )}
               <span className="text-xs text-gray-400 font-mono">

@@ -131,6 +131,22 @@ function ExamPickerContent({ exam, setExam, closeSheet }) {
 
 function ExamArticle({ exam }) {
   const c = getExamSeo(exam.id) || getExamSeo('doctor1') || {}
+  const isPioneer = !exam?.totalQ || exam.totalQ === 0 || !Array.isArray(c.subjectDetails) || c.subjectDetails.length === 0
+  if (isPioneer) {
+    return (
+      <article className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 text-sm text-gray-500 leading-relaxed space-y-3">
+        <h2 className="font-bold text-base text-medical-dark">關於{c.fullName || exam?.name}</h2>
+        <p>
+          <strong>{c.fullName || exam?.name}</strong> 題庫目前<span className="text-amber-600 font-semibold">拓荒中</span>，
+          我們正在整理歷屆考古題與共享題庫（憲法、法學大意等），稍後會陸續上線。
+        </p>
+        {c.examDesc && <p>{c.examDesc}{c.paperDesc || ''}</p>}
+        <p className="text-gray-400">
+          想先試試其他考試？點畫面上方的考試名稱旁「▼」即可切換身分/領域。
+        </p>
+      </article>
+    )
+  }
   return (
     <article className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 text-sm text-gray-500 leading-relaxed space-y-3">
       <h2 className="font-bold text-base text-medical-dark">關於{c.title}</h2>
@@ -149,7 +165,7 @@ function ExamArticle({ exam }) {
 
       <h3 className="font-bold text-medical-dark">考科範圍與準備方向</h3>
       <p>
-        {c.subjectDetails.map(([name, desc]) => (
+        {(c.subjectDetails || []).map(([name, desc]) => (
           <span key={name}><strong>{name}：</strong>{desc}</span>
         ))}
         所有科目皆可透過<Link to="/browse" className="text-medical-blue underline">題庫瀏覽</Link>依年度與科目篩選練習。

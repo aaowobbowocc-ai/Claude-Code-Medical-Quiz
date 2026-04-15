@@ -1,0 +1,241 @@
+{
+  "id": "radiology",
+  "name": "醫事放射師",
+  "short": "放射",
+  "icon": "☢️",
+  "category": "medical",
+  "subCategory": "醫事放射師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "radiology-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-radiology.json",
+  "totalQ": 480,
+  "passScore": 288,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "基礎醫學",
+      "subject": "基礎醫學（包括解剖學、生理學與病理學）",
+      "subjects": "解剖、生理、病理",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "解剖學",
+          "count": 27
+        },
+        {
+          "subject": "生理學",
+          "count": 27
+        },
+        {
+          "subject": "病理學",
+          "count": 26
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper2",
+      "name": "醫學物理與輻射安全",
+      "subject": "醫學物理學與輻射安全",
+      "subjects": "醫學物理40、輻射安全40",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "醫學物理學",
+          "count": 40
+        },
+        {
+          "subject": "輻射安全",
+          "count": 40
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper3",
+      "name": "放射線器材學",
+      "subject": "放射線器材學（包括磁振學與超音波學）",
+      "subjects": "X光機、MRI、超音波",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "X光與電腦斷層",
+          "count": 30
+        },
+        {
+          "subject": "磁振造影",
+          "count": 25
+        },
+        {
+          "subject": "超音波",
+          "count": 25
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper4",
+      "name": "放射線診斷",
+      "subject": "放射線診斷原理與技術學",
+      "subjects": "影像診斷原理、攝影技術",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "影像診斷原理",
+          "count": 40
+        },
+        {
+          "subject": "放射攝影技術",
+          "count": 40
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper5",
+      "name": "放射線治療",
+      "subject": "放射線治療原理與技術學",
+      "subjects": "治療原理、治療技術",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "放射治療原理",
+          "count": 40
+        },
+        {
+          "subject": "放射治療技術",
+          "count": 40
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper6",
+      "name": "核子醫學",
+      "subject": "核子醫學診療原理與技術學",
+      "subjects": "核醫原理、核醫技術",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "核醫診療原理",
+          "count": 40
+        },
+        {
+          "subject": "核醫技術",
+          "count": 40
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "basic_medicine": "基礎醫學",
+      "med_physics": "醫學物理",
+      "radio_instruments": "放射器材",
+      "radio_diagnosis": "放射診斷",
+      "radio_therapy": "放射治療",
+      "nuclear_medicine": "核子醫學"
+    },
+    "stageStyles": {
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "basic_medicine": {
+        "icon": "🫀",
+        "color": "#EF4444"
+      },
+      "med_physics": {
+        "icon": "⚛️",
+        "color": "#F59E0B"
+      },
+      "radio_instruments": {
+        "icon": "📡",
+        "color": "#8B5CF6"
+      },
+      "radio_diagnosis": {
+        "icon": "🩻",
+        "color": "#3B82F6"
+      },
+      "radio_therapy": {
+        "icon": "💥",
+        "color": "#EC4899"
+      },
+      "nuclear_medicine": {
+        "icon": "☢️",
+        "color": "#10B981"
+      }
+    },
+    "subjectColors": {
+      "基礎醫學（包括解剖學、生理學與病理學）": "#EF4444",
+      "醫學物理學與輻射安全": "#F59E0B",
+      "放射線器材學（包括磁振學與超音波學）": "#8B5CF6",
+      "放射線診斷原理與技術學": "#3B82F6",
+      "放射線治療原理與技術學": "#EC4899",
+      "核子醫學診療原理與技術學": "#10B981"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 醫事放射師國考題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "醫事放射師國考",
+    "shortName": "醫事放射師",
+    "studentType": "醫學影像暨放射科學系學生",
+    "years": "114 至 115",
+    "totalQ": 1360,
+    "examDesc": "醫事放射師國考為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為醫學影像暨放射科學系（或相關學系）畢業並完成臨床實習。",
+    "paperDesc": "考試分為六科，每科各 80 題選擇題，合計 480 題。及格標準為各科平均達 60 分，無科目得為零分。",
+    "subjects": "基礎醫學、醫學物理學與輻射安全、放射線器材學、放射線診斷原理與技術學、放射線治療原理與技術學、核子醫學診療原理與技術學",
+    "mockDesc": "完整模擬六科，平均 60 分及格",
+    "subjectDetails": [
+      [
+        "基礎醫學（包括解剖學、生理學與病理學）",
+        "人體解剖構造、生理功能與疾病病理變化，放射技術的醫學基礎。"
+      ],
+      [
+        "醫學物理學與輻射安全",
+        "放射線物理原理、劑量學、輻射防護與游離輻射安全作業。"
+      ],
+      [
+        "放射線器材學（包括磁振學與超音波學）",
+        "X 光機、電腦斷層、磁振造影與超音波影像設備的原理與操作。"
+      ],
+      [
+        "放射線診斷原理與技術學",
+        "放射影像攝影技術、對比劑使用與影像判讀基礎。"
+      ],
+      [
+        "放射線治療原理與技術學",
+        "放射治療計畫、定位技術與癌症治療劑量規劃。"
+      ],
+      [
+        "核子醫學診療原理與技術學",
+        "核醫造影（SPECT/PET）與放射性核素治療的原理與技術。"
+      ]
+    ]
+  }
+}

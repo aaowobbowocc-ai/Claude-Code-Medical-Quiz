@@ -74,7 +74,7 @@ export function getExamIds() {
 const EXAM_ORDER = [
   'doctor1', 'doctor2', 'dental1', 'dental2', 'pharma1', 'pharma2',
   'tcm1', 'tcm2', 'vet',
-  'nursing', 'nutrition', 'pt', 'ot', 'medlab',
+  'nursing', 'nutrition', 'pt', 'ot', 'medlab', 'radiology',
   'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
 ]
 

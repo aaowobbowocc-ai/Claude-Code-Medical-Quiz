@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import QuestionImages from '../components/QuestionImages'
+import ShareChallengeButton from '../components/ShareChallengeButton'
+import { getExamConfig } from '../config/examRegistry'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const BOSS_FEE = 50
@@ -176,6 +178,16 @@ export default function BossChallenge() {
                 {reward !== null && (
                   <p className="text-amber-600 font-bold text-sm mt-2">🪙 +{reward} 金幣{reward >= 200 ? ' (入場費 50 → 淨賺 150！)' : ''}</p>
                 )}
+                <div className="flex justify-center mt-4">
+                  <ShareChallengeButton
+                    exam={usePlayerStore.getState().exam || 'doctor1'}
+                    examName={getExamConfig(usePlayerStore.getState().exam || 'doctor1')?.name || '國考'}
+                    subjectName="魔王題挑戰"
+                    correct={score.correct}
+                    total={score.total}
+                    mode="practice"
+                  />
+                </div>
               </div>
             )}
           </>

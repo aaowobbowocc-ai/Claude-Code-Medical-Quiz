@@ -103,6 +103,21 @@ const EXAM_DEFS = {
       { s: '0805', name: '職能治療技術學', tag: 'ot_technique' },
     ],
   },
+  radiology: {
+    label: '醫事放射師',
+    classCode: '309',
+    series: ['020', '090'],
+    // subject codes confirmed for 115020 via MoEX search page (s=0108 + 0601-0605)
+    // 090 series year availability unknown; scraper will gracefully skip if missing
+    subjects: [
+      { s: '0108', name: '基礎醫學（包括解剖學、生理學與病理學）', tag: 'basic_medicine' },
+      { s: '0601', name: '醫學物理學與輻射安全', tag: 'med_physics' },
+      { s: '0602', name: '放射線器材學（包括磁振學與超音波學）', tag: 'radio_instruments' },
+      { s: '0603', name: '放射線診斷原理與技術學', tag: 'radio_diagnosis' },
+      { s: '0604', name: '放射線治療原理與技術學', tag: 'radio_therapy' },
+      { s: '0605', name: '核子醫學診療原理與技術學', tag: 'nuclear_medicine' },
+    ],
+  },
 }
 
 // ─── 考選部場次代碼 ───

@@ -1,0 +1,1312 @@
+{
+  "bankId": "common_law_basics",
+  "name": "common_law_basics",
+  "description": "",
+  "bankVersion": 1,
+  "last_synced_at": "2026-04-15T11:18:28.978Z",
+  "levels": [
+    "elementary"
+  ],
+  "questions": [
+    {
+      "id": "common_law_basics-114-civil-elementary-general-1",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 1,
+      "question": "下列關於法源的敘述，何者錯誤？",
+      "options": {
+        "A": "憲法為國家的根本大法，規範政府組織及人民的權利義務",
+        "B": "法律經立法機關通過後，不待總統公布，即可發生效力",
+        "C": "命令係指行政機關基於法律授權或職權，所發布之規章，必須要注意不得超越母法的規定",
+        "D": "憲法、法律、命令等位階，憲法的位階最高，法律次之，命令最低"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-2",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 2,
+      "question": "上級政府或主管機關，對於下級政府或機關所陳報之事項，加以審查，並作成決定，以完成該事項之法定效力。上級政府或主管機關之行為，稱為：",
+      "options": {
+        "A": "考核",
+        "B": "備查",
+        "C": "監督",
+        "D": "核定"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-3",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 3,
+      "question": "下列有關擴張與限縮解釋的敘述，何者錯誤？",
+      "options": {
+        "A": "擴張解釋與限縮解釋，都是以文義的可能範圍為界限",
+        "B": "憲法第8 條人民身體之自由應予保障，所稱人民指自然人，即為限縮解釋",
+        "C": "處罰或課予人民義務之規定文字，應從嚴解釋，不得任意擴張",
+        "D": "例外規定應為擴張解釋，否則有失其規定之旨"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-4",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 4,
+      "question": "下列何者不是形成權？",
+      "options": {
+        "A": "甲、乙二人共有一筆土地，因協議分割不成，甲提起訴訟，請求法院為裁判分割",
+        "B": "甲售予車輛於乙，惟該車有瑕疵，乙向甲主張減少價金",
+        "C": "甲與乙成立買賣契約，甲未給付價金，15 年後乙向甲請求給付價金，甲主張已超過15 年，拒絕給付價金",
+        "D": "甲與乙成立買賣契約，但乙未於期限內給付，甲向乙解除契約"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-5",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 5,
+      "question": "促進產業升級條例於民國99 年5 月12 日公布廢止。關於該條例之廢止，下列敘述何者正確？",
+      "options": {
+        "A": "該條例之廢止，應經立法院通過，由立法院公布",
+        "B": "該條例之廢止，應經立法院通過，總統公布",
+        "C": "該條例之廢止，應由主管機關公布，並送立法院備查",
+        "D": "該條例於民國99 年5 月12 日公布廢止時即失效"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-6",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 6,
+      "question": "下列何者為立法院通過，總統公布之法律？",
+      "options": {
+        "A": "財政部各地區國稅局組織通則",
+        "B": "內政部土地重劃工程處辦事細則",
+        "C": "工程施工查核小組組織準則",
+        "D": "不當黨產處理委員會組織規程"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-7",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 7,
+      "question": "依司法院大法官解釋，關於法律保留原則，下列敘述何者正確？",
+      "options": {
+        "A": "對於人民生命之剝奪，應由憲法明文規範",
+        "B": "對於人民財產權之限制，僅能以法律為之",
+        "C": "對於人民入出境自由之限制，得由立法機關授權主管機關以命令限制之",
+        "D": "社會福利給付之資格、方式，皆非法律保留事項，行政機關得自行發布命令加以規範"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-8",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 8,
+      "question": "依憲法及增修條文規定，下列何者之人事任命，應經立法院同意？",
+      "options": {
+        "A": "行政院院長",
+        "B": "行政院政務委員",
+        "C": "審計長",
+        "D": "司法院秘書長"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-9",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 9,
+      "question": "依司法院大法官解釋意旨，立法機關就遺屬年金給付請求權之限制，其目的須為追求重要公益，所採手段與目的之達成間須具有實質關聯，其所適用之審查標準為何？",
+      "options": {
+        "A": "較為嚴格之審查標準",
+        "B": "寬鬆審查標準",
+        "C": "合理審查標準",
+        "D": "嚴格審查標準"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-10",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 10,
+      "question": "依憲法增修條文規定，須經中華民國自由地區選舉人投票通過始生效力者，不包括下列何者？",
+      "options": {
+        "A": "總統、副總統彈劾案",
+        "B": "總統、副總統罷免案",
+        "C": "領土變更案",
+        "D": "憲法修正案"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-11",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 11,
+      "question": "關於民主，下列敘述何者正確？",
+      "options": {
+        "A": "有民主就有成文憲法",
+        "B": "有民主就有共和政體",
+        "C": "有民主就有人民參政",
+        "D": "有民主就不會有貴族"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-12",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 12,
+      "question": "憲法關於權力分立之設計及規定，下列何者錯誤？",
+      "options": {
+        "A": "兼採水平及垂直權力分立之設計",
+        "B": "立法委員得兼任官吏",
+        "C": "立法院對司法院大法官提名享有同意權",
+        "D": "行政權應受立法權監督"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-13",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 13,
+      "question": "依司法院大法官解釋及憲法法庭判決，關於言論自由的保障，下列敘述何者錯誤？",
+      "options": {
+        "A": "醫療法僅允許醫療機構為醫療廣告，禁止醫師為醫療廣告之規定，違憲",
+        "B": "誹謗他人之言論，若事涉公共利益，表意人雖無法證明其言論為真實，卻已盡合理查證，有充分理由信其言論為真，則非誹謗罪處罰範圍",
+        "C": "法院以判決命加害人公開道歉，違憲",
+        "D": "菸害防制法規定，菸品業者應於菸品容器上標示尼古丁與焦油含量，違憲"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-14",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 14,
+      "question": "有關信賴保護原則之敘述，何者錯誤？",
+      "options": {
+        "A": "信賴值得保護",
+        "B": "僅限於信賴行政機關合法之行政處分",
+        "C": "信賴表現",
+        "D": "信賴基礎"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-15",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 15,
+      "question": "關於辯護人之規定，下列敘述何者錯誤？",
+      "options": {
+        "A": "被告得隨時選任辯護人",
+        "B": "審判中的被告才可選任辯護人",
+        "C": "辯護人於偵查中之羈押審查程序，除法律另有規定外，得檢閱卷宗及證物並得抄錄或攝影",
+        "D": "最輕本刑為3 年以上有期徒刑案件於審判中未經選任辯護人者，審判長應指定公設辯護人或律師為被告辯護"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-16",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 16,
+      "question": "主管機關對於人民開發山坡地發生危害時，並未考慮危害源之責任歸屬，逕行認定土地所有權人應負全責，而作成命其負擔費用之行政處分，可能屬於下列何種違法之瑕疵？",
+      "options": {
+        "A": "裁量逾越",
+        "B": "裁量怠惰",
+        "C": "裁量濫用",
+        "D": "裁量不減縮"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-17",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 17,
+      "question": "下列何者非屬於行政「裁量限縮至零」的情況？",
+      "options": {
+        "A": "觀光主管機關對於已經違反規範風景區水域遊憩法令所允許載客上限之船舶，禁止其出航",
+        "B": "建築主管機關對於已經瀕臨倒塌之違章建築，逕行強制拆除",
+        "C": "消防主管機關對於接獲火災之通報電話，派遣消防救護車輛援救",
+        "D": "環保主管機關對於接獲民眾檢舉工廠疑似排放廢氣之檢舉電話，立刻勒令停工"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-18",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 18,
+      "question": "有關特別權力關係之敘述，下列何者正確？",
+      "options": {
+        "A": "公務員與國家、學生與學校間的關係，曾被認為是特別權力關係之適用對象",
+        "B": "特別權力關係向來以法律高密度規範之",
+        "C": "特別權力關係，要求行政機關本於此種權力所為之決定，應當由普通法院審理之",
+        "D": "特別權力關係具有憲法規範之依據"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-19",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 19,
+      "question": "依國家賠償法規定，關於公共設施設置管理有欠缺之國家賠償責任要件，下列敘述何者錯誤？",
+      "options": {
+        "A": "行政機關對於公共設施須有管領權限",
+        "B": "公務員須有故意或過失",
+        "C": "須設置或管理有欠缺",
+        "D": "須造成人民生命、身體、人身自由或財產損害"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-20",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 20,
+      "question": "下列何者非屬行政罰？",
+      "options": {
+        "A": "因酒駕吊銷駕駛執照",
+        "B": "學校依校規記學生大過",
+        "C": "要求拆除農地上違規新建之工廠",
+        "D": "違反廢棄物清理法規定處罰鍰"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-21",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 21,
+      "question": "關於比例原則之敘述，下列何者錯誤？",
+      "options": {
+        "A": "比例原則為行政行為應遵守之一般法律原則",
+        "B": "違反比例原則之行政裁量，構成裁量濫用",
+        "C": "僅干預行政適用比例原則",
+        "D": "雙方行政行為亦適用比例原則"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-22",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 22,
+      "question": "下列何種情形，不得作成訴願不受理之決定？",
+      "options": {
+        "A": "訴願書不合法定程式經通知補正逾期不補正",
+        "B": "行政處分不合法",
+        "C": "提起訴願逾法定期間",
+        "D": "行政處分已不存在"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-23",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 23,
+      "question": "下列關於行政法院就課予義務訴訟所為裁判方式之敘述，何者錯誤？",
+      "options": {
+        "A": "原告之訴不合法者，應以裁定駁回之",
+        "B": "原告之訴無理由者，應以判決駁回之",
+        "C": "原告之訴有理由，且案件事證明確者，應判命行政機關作成原告所申請內容之行政處分",
+        "D": "原告之訴雖有理由，惟案件涉及行政機關之行政裁量決定者，應以判決駁回之"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-24",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 24,
+      "question": "基於行政契約所生之金錢補償爭議，應向行政法院提起何種訴訟？",
+      "options": {
+        "A": "撤銷訴訟",
+        "B": "課予義務訴訟",
+        "C": "給付訴訟",
+        "D": "確認訴訟"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-25",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 25,
+      "question": "下列有關行政訴訟法「情況判決」規定之敘述，何者錯誤？",
+      "options": {
+        "A": "限於撤銷訴訟",
+        "B": "倘依原告聲明判決，於公益將生重大損害",
+        "C": "限於無人訴訟參加之情形",
+        "D": "法院判決時，應於主文中諭知原處分或決定違法"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-26",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 26,
+      "question": "在民事訴訟程序中，下列何種事項，法院原則上不應依職權為調查？",
+      "options": {
+        "A": "證明事實之證據",
+        "B": "當事人能力",
+        "C": "審判權之有無",
+        "D": "上訴有無逾期"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-27",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 27,
+      "question": "關於民事訴訟言詞審理原則與公開審理原則，下列敘述何者正確？",
+      "options": {
+        "A": "依民事訴訟法規定，言詞辯論程序，應以訴訟代理人聲明應受裁判之事項為始",
+        "B": "於言詞辯論期日，原告應由本人出席庭期，且不得以手機簡訊截圖、照片、影音或其他文件取代其言詞陳述",
+        "C": "當事人對於他造提出之事實及證據，應由其訴訟代理人或特別代理人，代為撰狀陳明，以增其攻擊防禦方法之確實性",
+        "D": "當事人提出之攻擊方法，如涉及當事人隱私，經當事人聲請，法院認為適當者，得不公開審判"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-28",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 28,
+      "question": "住所地在臺北之甲，與住所地在桃園之乙及住所地在新竹之丙，三人相約在臺中見面。言談間因細故發生爭吵，甲遭乙與丙共同毆傷。甲欲依民法侵權行為規定，將乙、丙列為共同被告，請求損害賠償，依民事訴訟法規定，由何法院管轄？",
+      "options": {
+        "A": "臺灣臺北地方法院",
+        "B": "臺灣桃園地方法院",
+        "C": "臺灣新竹地方法院",
+        "D": "臺灣臺中地方法院"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-29",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 29,
+      "question": "下列關於民事訴訟上和解之敘述，何者錯誤？",
+      "options": {
+        "A": "法院不問訴訟程度如何，得隨時試行和解",
+        "B": "和解成立者，與確定判決有同一之效力",
+        "C": "當事人就未聲明之事項和解成立者，不得為執行名義",
+        "D": "和解有無效或得撤銷之原因者，當事人得請求繼續審判"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-30",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 30,
+      "question": "下列何種占有狀態之人，不得行使占有人之物上請求權？",
+      "options": {
+        "A": "占有物之無權占有人",
+        "B": "占有物之惡意占有人",
+        "C": "占有物之間接占有人",
+        "D": "占有物之輔助占有人"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-31",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 31,
+      "question": "受輔助宣告之人，未得輔助人之同意所為拋棄繼承之效力為何？",
+      "options": {
+        "A": "有效",
+        "B": "無效",
+        "C": "得撤銷",
+        "D": "效力未定"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-32",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 32,
+      "question": "下列何者非民法之債務不履行責任？",
+      "options": {
+        "A": "給付不能損害賠償責任",
+        "B": "給付遲延損害賠償責任",
+        "C": "不當得利返還責任",
+        "D": "不完全給付損害賠償責任"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-33",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 33,
+      "question": "甲委請乙律師擔任訴訟代理人，到法院進行訴訟，就甲與乙間之法律關係，下列敘述何者正確？",
+      "options": {
+        "A": "委任",
+        "B": "僱傭",
+        "C": "承攬",
+        "D": "居間"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-34",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 34,
+      "question": "甲將A 屋出租給乙並交付，乙合法轉租給丙並交付，下列敘述何者正確？",
+      "options": {
+        "A": "甲得請求乙返還A 屋",
+        "B": "甲不得請求丙返還A 屋",
+        "C": "甲得請求丙支付A 屋租金",
+        "D": "甲得向乙請求丙支付之租金"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-35",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 35,
+      "question": "關於收養之效力，下列敘述何者正確？",
+      "options": {
+        "A": "養子女對本生父母，仍享有法定繼承權",
+        "B": "養父母均死亡時，應為未成年之養子女置監護人",
+        "C": "繼親收養者，養子女與本生父母之權利義務關係均停止",
+        "D": "本生父母若有受扶養之必要時，得向其已被出養之子女，請求給付扶養費"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-36",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 36,
+      "question": "關於親屬間之扶養義務與權利，下列敘述何者正確？",
+      "options": {
+        "A": "夫妻互負扶養義務，其負扶養義務之順序與直系血親卑親屬同，其受扶養權利之順序與直系血親尊親屬同",
+        "B": "父母離婚後，未行使親權之一方，對未成年子女無須負扶養義務",
+        "C": "扶養之方法與給付費用，由當事人協議定之，不能協議時，專屬親屬會議或法定監護人定之",
+        "D": "受扶養權利人為直系血親尊親屬時，如其不能維持生活，且無謀生能力，並未領取重大傷病卡者，扶養義務人不得減輕或免除其扶養義務"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-37",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 37,
+      "question": "下列何者不構成信賴利益的賠償？",
+      "options": {
+        "A": "自始客觀不能",
+        "B": "自始主觀不能",
+        "C": "締約上過失",
+        "D": "錯誤意思表示之撤銷"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-38",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 38,
+      "question": "下列何者，非屬要物契約？",
+      "options": {
+        "A": "定金契約",
+        "B": "合會",
+        "C": "押租金契約",
+        "D": "使用借貸"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-39",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 39,
+      "question": "訊（詢）問被告或犯罪嫌疑人應告知其得選任辯護人之規定，下列何者不適用之？",
+      "options": {
+        "A": "司法警察詢問時",
+        "B": "檢察官訊問時",
+        "C": "法官訊問時",
+        "D": "法醫詢問時"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-40",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 40,
+      "question": "下列何項情形，於審判中未經選任辯護人者，審判長應指定公設辯護人或律師為被告辯護？",
+      "options": {
+        "A": "被告犯內亂罪",
+        "B": "被告犯醉態駕駛罪",
+        "C": "被告犯侵占遺失物罪",
+        "D": "被告犯公然侮辱罪"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-41",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 41,
+      "question": "下列何項事實，應經舉證證明？",
+      "options": {
+        "A": "台積電是股票上市公司之事實",
+        "B": "法官職務上所已知之事實",
+        "C": "臺灣地區之日出、日沒時刻",
+        "D": "被告抗辯自白不具任意性之事實"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-42",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 42,
+      "question": "被告及其辯護人於偵查中之羈押審查程序，有關權利與限制規定，下列敘述何者正確？",
+      "options": {
+        "A": "基於偵查不公開原則，在偵查中之羈押審查程序，檢察官得限制被告與其辯護人接見",
+        "B": "基於偵查不公開原則，在偵查中之羈押審查程序，檢察官得限制被告與其辯護人通訊",
+        "C": "被告及其辯護人得於法官訊問前，請求給予適當時間為答辯之準備",
+        "D": "被告得請求檢閱所有檢察官送交法院之卷宗及證物並得抄錄、重製或攝影"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-43",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 43,
+      "question": "刑法第14 條第1 項規定「行為人雖非故意，但按其情節應注意，並能注意，而不注意者，為過失。」下列何者不屬於本項注意義務的來源？",
+      "options": {
+        "A": "法令規則",
+        "B": "業界成規",
+        "C": "契約",
+        "D": "法律草案"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-44",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 44,
+      "question": "關於正當防衛，下列敘述何者錯誤？",
+      "options": {
+        "A": "防衛過當，僅能減輕或免除其刑，不能阻卻違法",
+        "B": "正當防衛之所以不罰，是因為阻卻行為之違法性",
+        "C": "正當防衛必須對於現時不法之侵害，出於防衛自己或他人權利之行為",
+        "D": "正當防衛行為之所以不罰，是因行為人無責任能力"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-45",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 45,
+      "question": "某甲在擔任里長期間，將向臺北市政府申請里民補助所得款項加以侵吞。下列敘述何者錯誤？",
+      "options": {
+        "A": "某甲在偵查中自白犯罪，並將全部犯罪所得自動繳交，符合減輕其刑之規定",
+        "B": "某甲擔任里長，不是公務員，只能論以業務侵占罪",
+        "C": "某甲侵吞里民補助款，仍會構成貪污治罪條例之罪名",
+        "D": "某甲與不具有公務員身分的里民乙共謀侵吞，乙仍然會成立貪污治罪條例之罪名"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-46",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 46,
+      "question": "關於貪污治罪條例第4 條第1 項第5 款對於違背職務之行為收賄罪，及第11 條第1 項對於公務員違背職務之行為行賄罪，下列敘述何者正確？",
+      "options": {
+        "A": "上開兩罪為聚合犯",
+        "B": "上開兩罪為集合犯",
+        "C": "上開兩罪為結合犯",
+        "D": "上開兩罪為對向犯"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-47",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 47,
+      "question": "甲駕駛汽車與乙機車騎士發生行車糾紛，乙下車欲與甲爭吵，甲見狀急踩油門欲駕車逃離現場，不慎轉向錯誤撞擊乙，乙因而倒地不治死亡。關於甲之罪責，下列敘述何者正確？",
+      "options": {
+        "A": "甲構成過失致死罪",
+        "B": "甲構成殺人罪",
+        "C": "甲構成傷害罪",
+        "D": "甲構成傷害致死罪"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-48",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 48,
+      "question": "關於刑法第24 條第1 項緊急避難規定之適用，下列敘述何者正確？",
+      "options": {
+        "A": "緊急避難情狀僅限於不法侵害情狀",
+        "B": "以因避免緊急危難而出於不得已為要件",
+        "C": "緊急避難過當與否，依據最後手段性原則判斷",
+        "D": "以避免自己生命、身體之緊急危難為限"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-49",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 49,
+      "question": "甲欲殺乙，誤丙為乙而殺之，屬於何種錯誤型態？",
+      "options": {
+        "A": "因果歷程錯誤",
+        "B": "等價的客體錯誤",
+        "C": "打擊錯誤",
+        "D": "包攝錯誤"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-114-civil-elementary-general-50",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-elementary-general",
+      "source_exam_name": "114 年初等考試一般行政",
+      "subject": "法學大意",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 50,
+      "question": "某甲為縣政府教育訓練業務承辦人，利用邀請講師所簽空白領據，填入4 堂課，但僅給講師2 堂課的鐘點費，利用代墊方式領款，將多出來的2 堂課費用，中飽私囊，該行為應如何論處？",
+      "options": {
+        "A": "貪污治罪條例第4 條第1 項第1 款侵占公有財物罪",
+        "B": "貪污治罪條例第5 條第1 項第1 款意圖得利截留公款罪",
+        "C": "貪污治罪條例第5 條第1 項第2 款利用職務上機會詐取財物罪",
+        "D": "刑法第339 條第2 項詐欺得利罪"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    }
+  ]
+}

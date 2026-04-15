@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import { hasLegalSubjectTag } from '../config/examRegistry'
+import { supabase } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -44,13 +45,23 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 150, questionId, questionText, rocYear, session, number, disputed, subjectTags, meta, onVote }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 150, questionId, questionText, rocYear, session, number, disputed, subjectTags, sourceBankId, meta, onVote }) {
   const [showAI, setShowAI] = useState(false)
   const [reportSent, setReportSent] = useState(false)
   const [showReportForm, setShowReportForm] = useState(false)
   const [reportText, setReportText] = useState('')
   const [reportSending, setReportSending] = useState(false)
   const [voteLocked, setVoteLocked] = useState(false)
+
+  // D.6 deprecation report — separate from the generic /report channel.
+  // Writes directly to Supabase `deprecation_reports` so admin can flip
+  // the question's is_deprecated flag after review, granting legal_guardian.
+  const [showDepForm, setShowDepForm] = useState(false)
+  const [depReason, setDepReason] = useState('')
+  const [depNewAnswer, setDepNewAnswer] = useState('')
+  const [depSending, setDepSending] = useState(false)
+  const [depSent, setDepSent] = useState(false)
+  const [depError, setDepError] = useState(null)
 
   // Reset panel-local state when the parent navigates to a different question, so
   // toggles like "showAI" / open report form don't leak across question boundaries.
@@ -60,6 +71,11 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
     setShowReportForm(false)
     setReportText('')
     setVoteLocked(false)
+    setShowDepForm(false)
+    setDepReason('')
+    setDepNewAnswer('')
+    setDepSent(false)
+    setDepError(null)
   }, [questionId])
 
   // Has this device already voted on this explanation? Locks the buttons on mount
@@ -85,28 +101,74 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
 
   const hasExplanation = !!explanation
   const isLegal = hasLegalSubjectTag(subjectTags)
+  const canReportDeprecation = isLegal && !!sourceBankId && !!questionId
+
+  const submitDeprecation = async () => {
+    if (!depReason.trim() || depSending) return
+    setDepSending(true)
+    setDepError(null)
+    try {
+      if (!supabase) throw new Error('auth-disabled')
+      const { data: { session: s } } = await supabase.auth.getSession()
+      const uid = s?.user?.id
+      if (!uid) {
+        setDepError('請先登入才能回報（點右上角頭像登入 Google）')
+        setDepSending(false)
+        return
+      }
+      const { error } = await supabase.from('deprecation_reports').insert({
+        shared_bank_id: sourceBankId,
+        question_id: String(questionId),
+        reporter_user_id: uid,
+        reason: depReason.trim().slice(0, 1000),
+        new_answer_suggestion: depNewAnswer.trim() ? depNewAnswer.trim().slice(0, 500) : null,
+      })
+      if (error) throw error
+      setDepSent(true)
+      setShowDepForm(false)
+    } catch (e) {
+      setDepError(e.message || '送出失敗，請稍後再試')
+    }
+    setDepSending(false)
+  }
 
   return (
     <div className="flex flex-col gap-2">
       {/* 參考答案 */}
       {answer && options && (
         <div className="bg-white rounded-2xl border-2 border-medical-teal px-4 py-3">
-          <div className="flex items-center justify-between mb-1.5">
+          <div className="flex items-center justify-between mb-1.5 gap-2">
             <p className="text-xs font-semibold text-medical-teal tracking-wide">📋 參考答案</p>
-            <button
-              onClick={() => {
-                if (reportSent) return
-                setShowReportForm(v => !v)
-              }}
-              disabled={reportSent}
-              className={`text-xs px-2 py-0.5 rounded-lg transition-colors ${
-                reportSent
-                  ? 'bg-gray-100 text-gray-400'
-                  : 'bg-red-50 text-red-500 active:bg-red-100'
-              }`}
-            >
-              {reportSent ? '✓ 已回報' : '⚠️ 回報錯誤'}
-            </button>
+            <div className="flex items-center gap-1.5">
+              {canReportDeprecation && (
+                <button
+                  onClick={() => { if (!depSent) setShowDepForm(v => !v) }}
+                  disabled={depSent}
+                  title="回報此題對應法條已修正"
+                  className={`text-xs px-2 py-0.5 rounded-lg transition-colors ${
+                    depSent
+                      ? 'bg-gray-100 text-gray-400'
+                      : 'bg-amber-50 text-amber-600 active:bg-amber-100'
+                  }`}
+                >
+                  {depSent ? '✓ 已回報法條' : '🛡️ 回報法條更新'}
+                </button>
+              )}
+              <button
+                onClick={() => {
+                  if (reportSent) return
+                  setShowReportForm(v => !v)
+                }}
+                disabled={reportSent}
+                className={`text-xs px-2 py-0.5 rounded-lg transition-colors ${
+                  reportSent
+                    ? 'bg-gray-100 text-gray-400'
+                    : 'bg-red-50 text-red-500 active:bg-red-100'
+                }`}
+              >
+                {reportSent ? '✓ 已回報' : '⚠️ 回報錯誤'}
+              </button>
+            </div>
           </div>
           <div className="flex items-start gap-2.5">
             <span className="font-bold text-medical-teal text-base shrink-0 w-5">{answer}</span>
@@ -158,6 +220,46 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                   disabled={reportSending}
                   className="text-xs px-3 py-1.5 rounded-lg bg-red-500 text-white font-medium active:bg-red-600 disabled:opacity-50"
                 >{reportSending ? '送出中...' : '送出回報'}</button>
+              </div>
+            </div>
+          )}
+          {showDepForm && !depSent && (
+            <div className="mt-3 pt-3 border-t border-amber-100">
+              <div className="bg-amber-50 border border-amber-200 rounded-xl px-3 py-2 mb-2">
+                <p className="text-[11px] font-bold text-amber-700">🛡️ 法律衛道人士</p>
+                <p className="text-[11px] text-amber-600 mt-0.5 leading-relaxed">
+                  若此題對應的法條已修正、原答案不再適用，請回報詳情。管理員審核採納後，你會獲得「法律衛道人士」徽章。
+                </p>
+              </div>
+              <textarea
+                className="w-full border border-amber-200 rounded-xl px-3 py-2 text-xs resize-none outline-none focus:border-amber-400 transition-colors"
+                rows={3}
+                placeholder="哪條法修正了？（例：民法 §184 於 114 年修正，原 B 選項已不適用）"
+                value={depReason}
+                onChange={e => setDepReason(e.target.value)}
+                maxLength={1000}
+              />
+              <input
+                className="w-full mt-2 border border-amber-200 rounded-xl px-3 py-2 text-xs outline-none focus:border-amber-400 transition-colors"
+                type="text"
+                placeholder="新答案應為（選填，例：C）"
+                value={depNewAnswer}
+                onChange={e => setDepNewAnswer(e.target.value)}
+                maxLength={500}
+              />
+              {depError && (
+                <p className="text-[11px] text-red-500 mt-2">{depError}</p>
+              )}
+              <div className="flex justify-end gap-2 mt-2">
+                <button
+                  onClick={() => { setShowDepForm(false); setDepReason(''); setDepNewAnswer(''); setDepError(null) }}
+                  className="text-xs px-3 py-1.5 rounded-lg bg-gray-100 text-gray-500 active:bg-gray-200"
+                >取消</button>
+                <button
+                  onClick={submitDeprecation}
+                  disabled={depSending || !depReason.trim()}
+                  className="text-xs px-3 py-1.5 rounded-lg bg-amber-500 text-white font-medium active:bg-amber-600 disabled:opacity-50"
+                >{depSending ? '送出中...' : '送出回報'}</button>
               </div>
             </div>
           )}

@@ -587,6 +587,7 @@ function PracticeGame({ config, onFinish }) {
               number={q?.number}
               disputed={q?.disputed}
               subjectTags={q?.subject_tags}
+              sourceBankId={q?.sourceBankId}
               meta={explainMeta}
               onVote={explainVote}
             />

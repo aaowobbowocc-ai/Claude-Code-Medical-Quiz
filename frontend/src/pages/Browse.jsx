@@ -260,6 +260,7 @@ function QuestionCard({ q, stageMap }) {
               number={q.number}
               disputed={q.disputed}
               subjectTags={q.subject_tags}
+              sourceBankId={q.sourceBankId}
               meta={explainMeta}
               onVote={explainVote}
             />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
+import { hasLegalSubjectTag } from '../config/examRegistry'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -43,12 +44,13 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 150, questionId, questionText, rocYear, session, number, disputed }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 150, questionId, questionText, rocYear, session, number, disputed, subjectTags, meta, onVote }) {
   const [showAI, setShowAI] = useState(false)
   const [reportSent, setReportSent] = useState(false)
   const [showReportForm, setShowReportForm] = useState(false)
   const [reportText, setReportText] = useState('')
   const [reportSending, setReportSending] = useState(false)
+  const [voteLocked, setVoteLocked] = useState(false)
 
   // Reset panel-local state when the parent navigates to a different question, so
   // toggles like "showAI" / open report form don't leak across question boundaries.
@@ -57,9 +59,32 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
     setReportSent(false)
     setShowReportForm(false)
     setReportText('')
+    setVoteLocked(false)
   }, [questionId])
 
+  // Has this device already voted on this explanation? Locks the buttons on mount
+  // + after a successful vote so double-tap is cheap to detect client-side.
+  useEffect(() => {
+    if (!meta?.cacheKey) { setVoteLocked(false); return }
+    try {
+      setVoteLocked(!!localStorage.getItem(`ai-votes:${meta.cacheKey}`))
+    } catch { setVoteLocked(false) }
+  }, [meta?.cacheKey])
+
+  const handleVote = async (v) => {
+    if (voteLocked || !onVote) return
+    setVoteLocked(true) // optimistic — server-side dupes come back as 409 anyway
+    const result = await onVote(v)
+    if (!result) {
+      // server rejected or offline; unlock only if no localStorage entry
+      try {
+        if (!localStorage.getItem(`ai-votes:${meta?.cacheKey}`)) setVoteLocked(false)
+      } catch { setVoteLocked(false) }
+    }
+  }
+
   const hasExplanation = !!explanation
+  const isLegal = hasLegalSubjectTag(subjectTags)
 
   return (
     <div className="flex flex-col gap-2">
@@ -200,10 +225,22 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
               <p className="text-xs text-amber-500 mt-1">個人每天 10 次，明天 00:00 重置</p>
             </div>
           ) : (
-            <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-4 border border-blue-100">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-lg">🤖</span>
-                <span className="font-bold text-medical-blue text-sm">AI 解說</span>
+            <div className={`rounded-2xl p-4 border ${
+              meta?.status === 'verified'
+                ? 'bg-gradient-to-br from-emerald-50 to-teal-50 border-emerald-200'
+                : 'bg-gradient-to-br from-blue-50 to-teal-50 border-blue-100'
+            }`}>
+              <div className="flex items-center gap-2 mb-3 flex-wrap">
+                <span className="text-lg">{meta?.status === 'verified' ? '📝' : '🤖'}</span>
+                <span className={`font-bold text-sm ${meta?.status === 'verified' ? 'text-emerald-700' : 'text-medical-blue'}`}>
+                  {meta?.status === 'verified' ? '參考解答' : 'AI 解說'}
+                </span>
+                {meta?.status === 'verified' && (
+                  <span className="text-[10px] font-semibold text-emerald-600 bg-emerald-100 px-1.5 py-0.5 rounded-full">社群認證</span>
+                )}
+                {meta?.status === 'pending' && (
+                  <span className="text-[10px] font-semibold text-amber-600 bg-amber-100 px-1.5 py-0.5 rounded-full">尚未驗證</span>
+                )}
                 <span className="text-xs text-gray-400 ml-0.5">僅供參考</span>
                 {loading && (
                   <span className="flex gap-1 ml-1">
@@ -220,9 +257,44 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                   <div className="h-4 w-3/4 bg-blue-100 rounded animate-pulse" />
                 )}
               </div>
+              {isLegal && !loading && (
+                <p className="mt-3 pt-2 border-t border-blue-100 text-[11px] leading-relaxed text-gray-400">
+                  ⚠️ AI 解析僅供參考,法律條文可能隨時間修正,請以最新全國法規資料庫為準。
+                </p>
+              )}
+              {/* Voting row — appears once the stream finishes and we have a cacheKey */}
+              {!loading && meta?.cacheKey && onVote && (
+                <div className="mt-3 pt-3 border-t border-blue-100 flex items-center gap-2">
+                  <span className="text-[11px] text-gray-500 mr-auto">這份解析有幫助嗎？</span>
+                  <button
+                    onClick={() => handleVote(1)}
+                    disabled={voteLocked}
+                    className={`text-xs px-2.5 py-1 rounded-lg border transition-transform ${
+                      voteLocked
+                        ? 'border-gray-200 bg-gray-50 text-gray-400 cursor-default'
+                        : 'border-emerald-300 bg-white text-emerald-600 active:scale-95'
+                    }`}
+                  >👍 {meta.upvotes || 0}</button>
+                  <button
+                    onClick={() => handleVote(-1)}
+                    disabled={voteLocked}
+                    className={`text-xs px-2.5 py-1 rounded-lg border transition-transform ${
+                      voteLocked
+                        ? 'border-gray-200 bg-gray-50 text-gray-400 cursor-default'
+                        : 'border-rose-300 bg-white text-rose-600 active:scale-95'
+                    }`}
+                  >👎 {meta.downvotes || 0}</button>
+                </div>
+              )}
             </div>
           )}
         </>
+      )}
+      {/* Legal disclaimer also shown under pre-stored explanation */}
+      {isLegal && hasExplanation && (
+        <p className="text-[11px] leading-relaxed text-gray-400 px-1">
+          ⚠️ 解析僅供參考,法律條文可能隨時間修正,請以最新全國法規資料庫為準。
+        </p>
       )}
     </div>
   )

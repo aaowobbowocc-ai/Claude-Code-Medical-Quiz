@@ -4,7 +4,7 @@
     "label": "護理師",
     "scraped_at": "2026-04-12T11:12:59.735Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-04-14T15:13:00.155Z",
+    "last_updated": "2026-04-15T03:33:16.692Z",
     "total": 3190
   },
   "total": 3559,
@@ -3608,7 +3608,9 @@
         "D": "3"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "incomplete_reason": "110年第一次原始 PDF 為舊格式（題號獨立行、無選項標記），自動 parser 無法處理，待手動補"
     },
     {
       "id": "110030_0301_21",

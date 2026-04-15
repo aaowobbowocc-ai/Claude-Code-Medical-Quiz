@@ -8,7 +8,7 @@
     "description": "醫師國考第一階段文字題題庫（已過濾圖片題）",
     "scraped_at": "2026-04-01",
     "total_questions": 2000,
-    "last_updated": "2026-04-14T09:52:42.094Z"
+    "last_updated": "2026-04-15T03:33:08.888Z"
   },
   "total": 2200,
   "questions": [
@@ -5307,7 +5307,7 @@
       "subject_name": "生理學",
       "stage_id": 4,
       "number": 64,
-      "question": "相較於正常換氣（normal ventilation），過度換氣（hyperventilation）時可見：①肺泡內氧分壓（ ）顯著 上升 ②肺泡內二氧化碳分壓（ ）顯著下降 ③體動脈血中二氧化碳總含量（total content of CO2）顯著 下降",
+      "question": "相較於正常換氣（normal ventilation），過度換氣（hyperventilation）時可見：①肺泡內氧分壓（）顯著上升 ②肺泡內二氧化碳分壓（）顯著下降 ③體動脈血中二氧化碳總含量（total content of CO2）顯著下降",
       "options": {
         "A": "僅①②",
         "B": "僅②③",
@@ -9399,7 +9399,7 @@
       "subject_name": "生理學",
       "stage_id": 4,
       "number": 66,
-      "question": "計算純水清除率（clearance of free-water, ）的公式是 = V（urine flow rate）–Cosm（clearance of osmoles）。而Cosm之定義為：V×（Uosm/Posm），其中Uosm與Posm分別為尿液與血漿之osmolality。下列何種 生理狀態，最可能使純水清除率（ ）成為負值？",
+      "question": "計算純水清除率（clearance of free-water, ）的公式是 = V（urine flow rate）–Cosm（clearance ofosmoles）。而Cosm之定義為：V×（Uosm/Posm），其中Uosm與Posm分別為尿液與血漿之osmolality。下列何種生理狀態，最可能使純水清除率（）成為負值？",
       "options": {
         "A": "飲用大量純水之後",
         "B": "腎小球濾過率（glomerular filtration rate）增加",
@@ -17386,11 +17386,11 @@
       "subject_name": "生理學",
       "stage_id": 4,
       "number": 62,
-      "question": "三種血液樣本分別置於甲、乙、丙三 血紅素濃度為正常值的50%、丙試管 （carboxyhemoglobin），三管血液其餘 支試管，達成反應平衡後，下列敘述",
+      "question": "三種血液樣本分別置於甲、乙、丙三支試管內，甲試管：血紅素（hemoglobin）濃度與成分皆正常、乙試管：血紅素濃度為正常值的50%、丙試管：血紅素總濃度正常，但是其中50%為一氧化碳血紅素（carboxyhemoglobin），三管血液其餘條件皆相同。若將氧分壓（）均為40 mmHg 之相同氣體分別灌入三支試管，達成反應平衡後，下列敘述何者正確？",
       "options": {
         "A": "甲試管血液中的氧分壓最高",
-        "B": "乙試管血液中的血氧飽和度百分比",
-        "C": "丙試管血液中的血氧飽和度百分比最",
+        "B": "乙試管血液中的血氧飽和度百分比（oxygen saturation percentage,）為甲試管的50%",
+        "C": "丙試管血液中的血氧飽和度百分比最高",
         "D": "三支試管血液中的氧氣總含量（total oxygen content）皆相同"
       },
       "answer": "C",
@@ -17406,12 +17406,12 @@
       "subject_name": "生理學",
       "stage_id": 4,
       "number": 63,
-      "question": "關於神經影響唾液分泌的敘述，下列",
+      "question": "關於神經影響唾液分泌的敘述，下列何者最適當？",
       "options": {
-        "A": "在交感神經的作用下，唾液的分泌量",
-        "B": "在副交感神經的作用下，唾液會較交",
-        "C": "接受自主神經影響後，唾腺細胞內參",
-        "D": "唾腺細胞上的接受器，主要為甲型腎"
+        "A": "在交感神經的作用下，唾液的分泌量會較副交感神經作用下為多",
+        "B": "在副交感神經的作用下，唾液會較交感神經作用下為黏稠",
+        "C": "接受自主神經影響後，唾腺細胞內參與的訊息因子有鈣離子",
+        "D": "唾腺細胞上的接受器，主要為甲型腎上腺素（alpha-adrenergic）受體與尼古丁（nicotinic）型受體"
       },
       "answer": "C",
       "explanation": ""
@@ -17426,11 +17426,11 @@
       "subject_name": "生理學",
       "stage_id": 4,
       "number": 64,
-      "question": "在一般正常生理狀態下，有關胃酸分",
+      "question": "在一般正常生理狀態下，有關胃酸分泌與調控的敘述，下列何者正確？",
       "options": {
         "A": "受胃泌素釋放胜肽（gastrin releasing peptide, GRP）直接刺激細胞生成胃酸",
         "B": "經氫氯離子共同轉運蛋白（H+-Cl- cotransporter）作用後，釋放胃酸",
-        "C": "受黏液素（mucin）直接抑制Gs 蛋白",
+        "C": "受黏液素（mucin）直接抑制Gs 蛋白，因而打開氯離子通道（Cl- channel），抑制細胞生成胃酸",
         "D": "需有碳酸酐酵素（carbonic anhydrase）的參與，才能生成胃酸"
       },
       "answer": "D",
@@ -21374,7 +21374,7 @@
       "subject_name": "生理學",
       "stage_id": 4,
       "number": 62,
-      "question": "某健康者在海平面呼吸一般空氣，正常情況下，比較各處氧分壓（ ）的大小關係，下列排序何者正確？ ①吸入的氣體（inspired air，在鼻腔中測量） ②肺泡內氣體（alveolar air） ③呼出的氣體 （expired air，在鼻腔中測量）",
+      "question": "某健康者在海平面呼吸一般空氣，正常情況下，比較各處氧分壓（①吸入的氣體（inspired air，在鼻腔中測量） ②肺泡內氣體（alveolar air） ③呼出的氣體（expired air，在鼻腔中測量）",
       "options": {
         "A": "①＞②＞③",
         "B": "①＞③＞②",
@@ -29199,7 +29199,7 @@
       "question": "下列何種刺激最可能會造成支氣管收縮（bronchoconstriction）？",
       "options": {
         "A": "鄰近的肺小動脈（pulmonary arteriole）被阻塞",
-        "B": "肺泡（alveolus）內二氧化碳分壓（ ）上升",
+        "B": "肺泡（alveolus）內二氧化碳分壓（）上升",
         "C": "吸氣（inspiration）",
         "D": "支氣管平滑肌（smooth muscle）的β2腎上腺素受器（adrenergic receptor）被刺激"
       },
@@ -29496,12 +29496,12 @@
       "subject_name": "生物化學",
       "stage_id": 5,
       "number": 77,
-      "question": "NAD + 的化學結構應為下列何者？",
+      "question": "下列何者最可能為可逆性細胞核的變化？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "核溶解（karyolysis）",
+        "B": "細胞核碎裂（karyorrhexis）",
+        "C": "核濃縮（pyknosis）",
+        "D": "核質凝聚（chromatin clumping）"
       },
       "answer": "送分",
       "explanation": "",
@@ -40951,11 +40951,11 @@
       "subject_name": "醫學(一)",
       "stage_id": 0,
       "number": 61,
-      "question": "甲、乙兩試管內含有相同的正常人體血液，分別灌入氣體使得兩者血液之氧分壓（）均為40 mmHg，甲 試管內血液之二氧化碳分壓（）為40 mmHg，乙試管內血液之二氧化碳分壓為46 mmHg。下列敘述何者 正確？",
+      "question": "甲、乙兩試管內含有相同的正常人體血液，分別灌入氣體使得兩者血液之氧分壓（）均為40 mmHg，甲試管內血液之二氧化碳分壓（）為40 mmHg，乙試管內血液之二氧化碳分壓為46 mmHg。下列敘述何者正確？",
       "options": {
         "A": "甲、乙兩試管內血液之氧氣總含量（total oxygen content）相同",
         "B": "甲試管內血漿（plasma）含有的氧氣量比乙試管更多",
-        "C": "乙試管內血液的血氧飽和度（blood O 2 saturation or hemoglobin saturation）比甲試管更少",
+        "C": "乙試管內血液的血氧飽和度（blood O2 saturation or hemoglobin saturation）比甲試管更少",
         "D": "乙試管內血液pH值比甲試管更高"
       },
       "answer": "C",
@@ -41011,12 +41011,12 @@
       "subject_name": "醫學(一)",
       "stage_id": 0,
       "number": 64,
-      "question": "在distal convoluted tubule的靠管腔（tubular lumen）側的細胞膜上，對鈉再吸收的同向運輸子（cotransporter） 的運轉，最有賴於在靠組織間液（interstitial fluid）側的細胞膜上何種通道之搭配？",
+      "question": "在distal convoluted tubule的靠管腔（tubular lumen）側的細胞膜上，對鈉再吸收的同向運輸子（cotransporter）的運轉，最有賴於在靠組織間液（interstitial fluid）側的細胞膜上何種通道之搭配？",
       "options": {
-        "A": "鉀離子通道（K +",
-        "C": "hannel）",
-        "B": "氯離子通道（Cl -",
-        "D": "水通道（H 2 O channel）"
+        "A": "鉀離子通道（K+ channel）",
+        "B": "氯離子通道（Cl- channel）",
+        "C": "鈉離子通道（Na+ channel）",
+        "D": "水通道（H2O channel）"
       },
       "answer": "A,B",
       "explanation": "",

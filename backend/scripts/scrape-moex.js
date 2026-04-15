@@ -13,9 +13,15 @@
 const fs = require('fs')
 const path = require('path')
 const https = require('https')
+const { atomicWriteJson, withLock } = require('./lib/atomic-write')
+const { loadSchema, deriveTagsFromSubjectName, validateTags } = require('./lib/shared-bank-schema')
+const { parseColumnAware, parseAnswersColumnAware, parseAnswersText } = require('./lib/moex-column-parser')
 
 let pdfParse
 try { pdfParse = require('pdf-parse') } catch { /* optional */ }
+
+const SHARED_BANKS_DIR = path.join(__dirname, '..', 'shared-banks')
+const VALID_LEVELS = new Set(['license', 'senior', 'junior', 'elementary'])
 
 // ─── 考試定義 ───
 // classCode = 類科代碼, subjects = [{s, name, tag}]
@@ -516,18 +522,211 @@ async function scrapeExam(examId, filterYear, dryRun) {
     total: allQuestions.length,
     questions: allQuestions,
   }
-  fs.writeFileSync(outFile, JSON.stringify(output, null, 2), 'utf-8')
+  withLock(outFile, () => atomicWriteJson(outFile, output))
   console.log(`\n✅ Wrote ${allQuestions.length} questions to ${outFile}`)
   return allQuestions.length
 }
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)) }
 
+// ─── Shared bank scraping ───
+//
+// Generic mode for civil-service / law exams: takes raw MoEX params
+// (--moex-code/-class/-subject) instead of relying on EXAM_DEFS, derives
+// subject_tags from --paper via schema.md alias map (or accepts explicit
+// --subject-tags), and merges into backend/shared-banks/<bankId>.json.
+//
+// Existing per-exam EXAM_DEFS path is untouched.
+
+async function scrapeSharedBank(opts) {
+  const {
+    bankId, level, sourceExamName, sourceExamCode,
+    moexCode, moexClass, moexSubject,
+    paper, year, session,
+    explicitTags, dryRun,
+  } = opts
+
+  const { whitelist, aliasMap } = loadSchema()
+
+  // Resolve subject_tags: explicit > derive from paper name
+  let subjectTags
+  if (explicitTags && explicitTags.length) {
+    subjectTags = validateTags(explicitTags, whitelist)
+  } else {
+    subjectTags = deriveTagsFromSubjectName(paper, aliasMap)
+    if (subjectTags.length === 0) {
+      throw new Error(
+        `unknown subject "${paper}"; add to backend/shared-banks/schema.md ` +
+        `or pass --subject-tags explicitly`
+      )
+    }
+  }
+
+  console.log(`\n${'='.repeat(60)}`)
+  console.log(`  Shared bank: ${bankId}`)
+  console.log(`  Source: ${sourceExamName} (${moexCode} c=${moexClass} s=${moexSubject})`)
+  console.log(`  Paper: ${paper}  → tags: [${subjectTags.join(', ')}]`)
+  console.log(`  Level: ${level}`)
+  console.log(`${'='.repeat(60)}`)
+
+  const qUrl = buildUrl('Q', moexCode, moexClass, moexSubject)
+  const aUrl = buildUrl('S', moexCode, moexClass, moexSubject)
+
+  if (dryRun) {
+    console.log(`  Q: ${qUrl}`)
+    console.log(`  A: ${aUrl}`)
+    console.log(`  (Dry run — no fetch, no write)`)
+    return 0
+  }
+
+  // Fetch + column-aware parse Q (civil-service combined papers have no A/B/C/D
+  // labels in the PDF glyph layer; pdf-parse text mode loses the option boundaries
+  // entirely, so we go through mupdf bbox reconstruction)
+  const qBuf = await fetchPdf(qUrl)
+  const parsedMap = await parseColumnAware(qBuf)
+  const parsedNums = Object.keys(parsedMap).map(Number).sort((a, b) => a - b)
+
+  // Fetch + parse A (try column-aware first for table-layout answer PDFs,
+  // fall back to text regex for the old 答案ＣＡＡＣＢＤ layout)
+  let answers = {}
+  try {
+    const aBuf = await fetchPdf(aUrl)
+    try {
+      answers = await parseAnswersColumnAware(aBuf)
+    } catch { /* fall through */ }
+    if (Object.keys(answers).length < 20) {
+      const aText = await extractTextFromPdf(aBuf)
+      answers = parseAnswersText(aText)
+    }
+  } catch (e) {
+    console.log(`  ⚠ No answer PDF: ${e.message}`)
+  }
+
+  console.log(`  Parsed ${parsedNums.length} questions, ${Object.keys(answers).length} answers`)
+
+  const stripPUA = s => typeof s === 'string' ? s.replace(/[\uE000-\uF8FF]/g, '').trim() : s
+
+  const newQuestions = []
+  for (const num of parsedNums) {
+    const q = parsedMap[num]
+    const ans = answers[num]
+    if (!ans) continue
+    const cleanOpts = {}
+    for (const k of ['A', 'B', 'C', 'D']) cleanOpts[k] = stripPUA(q.options[k])
+    newQuestions.push({
+      id: `${bankId}-${year}-${sourceExamCode}-${num}`,
+      roc_year: String(year),
+      session,
+      source_exam_code: sourceExamCode,
+      source_exam_name: sourceExamName,
+      subject: paper,
+      subject_tags: subjectTags,
+      number: num,
+      question: stripPUA(q.question),
+      options: cleanOpts,
+      answer: ans,
+      level,
+      shared_bank: bankId,
+      parent_id: null,
+      case_context: null,
+      is_deprecated: false,
+      deprecated_reason: null,
+    })
+  }
+
+  if (newQuestions.length === 0) {
+    console.log('  ✗ No questions to merge (parse + answer match yielded 0)')
+    return 0
+  }
+
+  // Merge into bank file
+  if (!fs.existsSync(SHARED_BANKS_DIR)) fs.mkdirSync(SHARED_BANKS_DIR, { recursive: true })
+  const bankFile = path.join(SHARED_BANKS_DIR, `${bankId}.json`)
+
+  let bank
+  if (fs.existsSync(bankFile)) {
+    bank = JSON.parse(fs.readFileSync(bankFile, 'utf-8'))
+  } else {
+    bank = {
+      bankId,
+      name: bankId,
+      description: '',
+      bankVersion: 0,
+      last_synced_at: null,
+      levels: [],
+      questions: [],
+    }
+  }
+
+  // Dedupe by id (newer wins, so re-running a scrape replaces stale rows)
+  const byId = new Map(bank.questions.map(q => [q.id, q]))
+  let added = 0, replaced = 0
+  for (const nq of newQuestions) {
+    if (byId.has(nq.id)) replaced++; else added++
+    byId.set(nq.id, nq)
+  }
+  bank.questions = Array.from(byId.values())
+  bank.bankVersion = (bank.bankVersion || 0) + 1
+  bank.last_synced_at = new Date().toISOString()
+  if (!bank.levels.includes(level)) bank.levels.push(level)
+
+  withLock(bankFile, () => atomicWriteJson(bankFile, bank))
+  console.log(`\n✅ ${bankFile}`)
+  console.log(`   +${added} new, ${replaced} replaced  (bank now ${bank.questions.length} total, v${bank.bankVersion})`)
+  return added + replaced
+}
+
+function parseSharedBankArgs(args) {
+  const get = (flag) => {
+    const i = args.indexOf(flag)
+    return i !== -1 ? args[i + 1] : null
+  }
+  const bankId = get('--shared-bank')
+  if (!bankId) return null
+
+  const level = get('--level') || 'senior'
+  if (!VALID_LEVELS.has(level)) {
+    throw new Error(`--level must be one of: ${[...VALID_LEVELS].join(', ')}`)
+  }
+  const sourceExamName = get('--source-exam-name')
+  if (!sourceExamName) throw new Error('--source-exam-name is required')
+  const sourceExamCode = get('--source-exam-code')
+  if (!sourceExamCode) throw new Error('--source-exam-code is required')
+  const moexCode = get('--moex-code')
+  if (!moexCode) throw new Error('--moex-code is required (e.g. 114080)')
+  const moexClass = get('--moex-class')
+  if (!moexClass) throw new Error('--moex-class is required (MoEX c= param)')
+  const moexSubject = get('--moex-subject')
+  if (!moexSubject) throw new Error('--moex-subject is required (MoEX s= param)')
+  const paper = get('--paper')
+  if (!paper) throw new Error('--paper is required (Chinese paper name, e.g. 憲法)')
+  const year = get('--year')
+  if (!year) throw new Error('--year is required (ROC year, e.g. 114)')
+  const session = get('--session') || '第一次'
+  const explicitTagsRaw = get('--subject-tags')
+  const explicitTags = explicitTagsRaw
+    ? explicitTagsRaw.split(',').map(s => s.trim()).filter(Boolean)
+    : null
+
+  return {
+    bankId, level, sourceExamName, sourceExamCode,
+    moexCode, moexClass, moexSubject,
+    paper, year, session, explicitTags,
+  }
+}
+
 // ─── CLI ───
 
 async function main() {
   const args = process.argv.slice(2)
   const dryRun = args.includes('--dry-run')
+
+  // Shared bank mode short-circuits the per-exam EXAM_DEFS path
+  const sb = parseSharedBankArgs(args)
+  if (sb) {
+    await scrapeSharedBank({ ...sb, dryRun })
+    return
+  }
 
   // Extract --year option
   const yearIdx = args.indexOf('--year')
@@ -561,6 +760,15 @@ async function main() {
     console.log('  node scripts/scrape-moex.js --exam nursing --year 114')
     console.log('  node scripts/scrape-moex.js --dry-run --exam pt')
     console.log('  node scripts/scrape-moex.js --list-urls')
+    console.log('')
+    console.log('Shared bank mode (法律/公職 共享題庫):')
+    console.log('  node scripts/scrape-moex.js \\')
+    console.log('    --shared-bank common_constitution \\')
+    console.log('    --level senior \\')
+    console.log('    --source-exam-name "114 年高考三等一般行政" \\')
+    console.log('    --source-exam-code senior-general \\')
+    console.log('    --moex-code 114080 --moex-class 003 --moex-subject 0101 \\')
+    console.log('    --paper 憲法 --year 114 [--session 第一次] [--subject-tags constitution]')
     console.log('')
     console.log('Available exams:')
     for (const [id, def] of Object.entries(EXAM_DEFS)) {

@@ -4,7 +4,7 @@
     "label": "中醫師(二)",
     "scraped_at": "2026-04-14T11:34:53.579Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-04-14T15:13:04.324Z"
+    "last_updated": "2026-04-15T03:33:16.711Z"
   },
   "total": 3200,
   "questions": [
@@ -38897,7 +38897,9 @@
         "D": "代號：1102頁次：7－3"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "incomplete_reason": "舌診題目為圖片選項，PDF 文字提取無法處理"
     },
     {
       "id": 1942,

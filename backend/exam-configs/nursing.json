@@ -3,7 +3,19 @@
   "name": "護理師",
   "short": "護理",
   "icon": "👩‍⚕️",
-  "category": "nursing",
+  "category": "medical",
+  "subCategory": "護理師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "nursing-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
   "questionsFile": "questions-nursing.json",
   "totalQ": 250,
   "passScore": 150,

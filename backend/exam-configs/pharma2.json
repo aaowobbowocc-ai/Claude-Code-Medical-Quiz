@@ -3,7 +3,19 @@
   "name": "藥師二階",
   "short": "藥二",
   "icon": "🧪",
-  "category": "pharma",
+  "category": "medical",
+  "subCategory": "藥師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "pharmacy-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
   "questionsFile": "questions-pharma2.json",
   "totalQ": 210,
   "passScore": 180,
@@ -19,9 +31,18 @@
       "pointsPerQ": 1.25,
       "timeLimit": 90,
       "breakdown": [
-        { "subject": "調劑學", "count": 27 },
-        { "subject": "臨床藥學", "count": 27 },
-        { "subject": "治療學", "count": 26 }
+        {
+          "subject": "調劑學",
+          "count": 27
+        },
+        {
+          "subject": "臨床藥學",
+          "count": 27
+        },
+        {
+          "subject": "治療學",
+          "count": 26
+        }
       ]
     },
     {
@@ -33,7 +54,11 @@
       "pointsPerQ": 1.25,
       "timeLimit": 90,
       "breakdown": [
-        { "subject": "藥物治療學", "count": 80, "note": "獨立一卷，全考治療" }
+        {
+          "subject": "藥物治療學",
+          "count": 80,
+          "note": "獨立一卷，全考治療"
+        }
       ]
     },
     {
@@ -45,7 +70,11 @@
       "pointsPerQ": 2,
       "timeLimit": 60,
       "breakdown": [
-        { "subject": "藥事行政與法規", "count": 50, "note": "唯一 50 題配置" }
+        {
+          "subject": "藥事行政與法規",
+          "count": 50,
+          "note": "唯一 50 題配置"
+        }
       ]
     }
   ],

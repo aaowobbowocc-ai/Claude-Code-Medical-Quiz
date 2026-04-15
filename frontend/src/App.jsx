@@ -1,13 +1,13 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react'
 import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
-import { useSocket } from './hooks/useSocket'
+import { useSocket, getSocket } from './hooks/useSocket'
 import { supabase, consumeOAuthReturnPath } from './lib/supabase'
 import { usePlayerStore } from './store/gameStore'
 import SplashScreen from './components/SplashScreen'
 import ErrorBoundary from './components/ErrorBoundary'
 import FixedBottomAd from './components/FixedBottomAd'
-import { initRegistry, getRegistry } from './config/examRegistry'
+import { initRegistry, getRegistry, getExamConfig } from './config/examRegistry'
 
 // Pre-fetch exam registry as early as possible
 const registryPromise = initRegistry()
@@ -53,6 +53,94 @@ function AppRoutes() {
   useSocket() // Mount socket listener globally
   const navigate = useNavigate()
   const location = useLocation()
+
+  // Deep-link handler: ?exam=…&mode=…&subject=…&from=share
+  // Priority: URL Param > localStorage activeExam > Stage 1 picker.
+  // Runs once on mount (registry is ready because <App> gates on it).
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const examParam = params.get('exam')
+    if (!examParam) return
+    const cfg = getExamConfig(examParam)
+    if (!cfg) return // unknown exam id — silently ignore, don't clobber state
+
+    usePlayerStore.getState().setExam(examParam)
+    try { sessionStorage.setItem('deep-link-exam', examParam) } catch {}
+
+    const modeParam = params.get('mode')
+    if (modeParam === 'pure' || modeParam === 'reservoir') {
+      try { localStorage.setItem(`practice-source-mode:${examParam}`, modeParam) } catch {}
+    }
+
+    const subjectParam = params.get('subject')
+    if (subjectParam) {
+      try { localStorage.setItem(`practice-default-subject:${examParam}`, subjectParam) } catch {}
+    }
+
+    if (params.get('from') === 'share' && typeof window.gtag === 'function') {
+      try {
+        window.gtag('event', 'share_link_landing', {
+          exam: examParam,
+          subject: subjectParam || null,
+        })
+      } catch {}
+    }
+
+    // Strip deep-link params from URL so F5 / share-back doesn't repeatedly rewrite state
+    const preservedKeys = new Set(['exam', 'mode', 'subject', 'from'])
+    const preserved = new URLSearchParams()
+    for (const [k, v] of params.entries()) {
+      if (!preservedKeys.has(k)) preserved.append(k, v)
+    }
+    const qs = preserved.toString()
+    navigate(location.pathname + (qs ? `?${qs}` : ''), { replace: true })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // ── Invite-link handler: ?join=<roomCode> ────────────────────────────
+  // Flow: capture roomCode into sessionStorage, strip from URL. If user already
+  // has a name, fire join_room immediately; otherwise Home.jsx prompts for name
+  // and the second effect below completes the join once name is set.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const joinCode = params.get('join')
+    if (!joinCode) return
+    const normalized = joinCode.trim().toUpperCase()
+    if (!/^[A-Z0-9]{3,8}$/.test(normalized)) return
+    try { sessionStorage.setItem('pending-join-room', normalized) } catch {}
+
+    // Strip the ?join= param so refresh doesn't loop
+    const clean = new URLSearchParams(params)
+    clean.delete('join')
+    const qs = clean.toString()
+    navigate(location.pathname + (qs ? `?${qs}` : ''), { replace: true })
+
+    // If we already have a name, short-circuit: connect + emit immediately.
+    const state = usePlayerStore.getState()
+    if (state.name) {
+      const s = getSocket()
+      try { s.connect() } catch {}
+      s.emit('join_room', { code: normalized, playerName: state.name, playerAvatar: state.avatar })
+      try { sessionStorage.removeItem('pending-join-room') } catch {}
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // Watcher: when name becomes available (user just submitted the no-name form),
+  // consume the pending join code and auto-emit join_room. useSocket's room_joined
+  // listener handles the navigate('/lobby') for us.
+  const name = usePlayerStore(s => s.name)
+  useEffect(() => {
+    if (!name) return
+    let pending = null
+    try { pending = sessionStorage.getItem('pending-join-room') } catch {}
+    if (!pending) return
+    const state = usePlayerStore.getState()
+    const s = getSocket()
+    try { s.connect() } catch {}
+    s.emit('join_room', { code: pending, playerName: state.name, playerAvatar: state.avatar })
+    try { sessionStorage.removeItem('pending-join-room') } catch {}
+  }, [name])
 
   // Post-OAuth: when Google sign-in completes, force-rehydrate the profile
   // (main.jsx already hydrated the pre-OAuth anon user) and navigate back to

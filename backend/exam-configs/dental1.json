@@ -3,7 +3,19 @@
   "name": "牙醫一階",
   "short": "牙一",
   "icon": "🦷",
-  "category": "dental",
+  "category": "medical",
+  "subCategory": "牙醫師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "dentistry-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
   "questionsFile": "questions-dental1.json",
   "totalQ": 160,
   "passScore": 120,

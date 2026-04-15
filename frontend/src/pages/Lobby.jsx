@@ -59,9 +59,12 @@ export default function Lobby() {
   }
 
   const handleShare = async () => {
-    const msg = `我在玩「國考知識王」，邀請碼：${roomCode}，快來挑戰我！`
+    // Deep link: friends tap this and land straight in this lobby after entering
+    // their name (App.jsx reads ?join= and auto-emits join_room post-name-entry).
+    const inviteUrl = `${window.location.origin}/?join=${roomCode}`
+    const msg = `我在玩「國考知識王」，快來挑戰我！\n點連結直接加入房間：${inviteUrl}`
     if (navigator.share) {
-      try { await navigator.share({ title: '國考知識王', text: msg }); return } catch {}
+      try { await navigator.share({ title: '國考知識王', text: msg, url: inviteUrl }); return } catch {}
     }
     await navigator.clipboard?.writeText(msg).catch(() => {})
     setCopied(true)

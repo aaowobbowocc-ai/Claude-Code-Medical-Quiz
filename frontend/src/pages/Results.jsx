@@ -4,6 +4,8 @@ import { useGameStore, usePlayerStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import { useSound } from '../hooks/useSound'
 import SmartBanner from '../components/SmartBanner'
+import ShareChallengeButton from '../components/ShareChallengeButton'
+import { getExamConfig } from '../config/examRegistry'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const HISTORY_KEY = 'battle-history'
@@ -192,6 +194,17 @@ export default function Results() {
                   className="w-full bg-medical-ice text-medical-blue font-bold py-4 rounded-2xl text-lg border-2 border-medical-blue active:scale-95 transition-transform">
             🏠 回主畫面
           </button>
+
+          <div className="flex justify-center pt-1">
+            <ShareChallengeButton
+              exam={usePlayerStore.getState().exam || 'doctor1'}
+              examName={getExamConfig(usePlayerStore.getState().exam || 'doctor1')?.name || '國考'}
+              subjectName={stageName || null}
+              correct={correctCount}
+              total={questionResults.length}
+              mode="pvp"
+            />
+          </div>
 
           <SmartBanner />
         </div>

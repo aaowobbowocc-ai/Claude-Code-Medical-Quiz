@@ -6,13 +6,17 @@
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // Bump version to force-invalidate stale localStorage caches when the registry shape
-// changes or new exams are added. (v2: 中醫一/中醫二/獸醫師 added 4/13 — clients with
-// pre-4/13 cache were still serving the old list within the 24h TTL.)
-const CACHE_KEY = 'exam-registry-v2'
+// changes or new exams are added.
+// v2: 中醫一/中醫二/獸醫師 added 4/13
+// v3: taxonomy fields (category/subCategory/level/selectionType/persona/sharedBanks/uxHints)
+//     + civil-service shell configs + sharedBanks metadata
+const CACHE_KEY = 'exam-registry-v3'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache
 let fetchPromise = null
+let sharedBanksCache = null
+let sharedBanksFetchPromise = null
 
 // Try loading from localStorage on module init
 try {
@@ -71,7 +75,52 @@ const EXAM_ORDER = [
   'doctor1', 'doctor2', 'dental1', 'dental2', 'pharma1', 'pharma2',
   'tcm1', 'tcm2', 'vet',
   'nursing', 'nutrition', 'pt', 'ot', 'medlab',
+  'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
 ]
+
+// Category display metadata (Stage 1 persona cards)
+const CATEGORY_META = {
+  medical: {
+    id: 'medical',
+    icon: '🏥',
+    name: '醫事人員',
+    description: '醫學生、護理師、藥學生、醫檢師…',
+    order: 1,
+  },
+  'law-professional': {
+    id: 'law-professional',
+    icon: '⚖️',
+    name: '法律與司法',
+    description: '律師、司法官、法學生',
+    order: 2,
+    pioneer: true,
+  },
+  'civil-service': {
+    id: 'civil-service',
+    icon: '🏛️',
+    name: '公職人員',
+    description: '高普考、初考、各類特考',
+    order: 3,
+    pioneer: true,
+  },
+  'common-subjects': {
+    id: 'common-subjects',
+    icon: '📚',
+    name: '共同科目',
+    description: '憲法、法緒、國文、英文（水庫練習）',
+    order: 4,
+    pioneer: true,
+  },
+}
+
+// Legal subject tag whitelist (for hasLegalSubjectTag helper — AI explain warnings)
+const LEGAL_SUBJECT_TAGS = new Set([
+  'constitution', 'law_basics', 'admin_law', 'civil_law', 'criminal_law',
+  'civil_procedure', 'criminal_procedure', 'commercial_law',
+  'administrative_procedure', 'international_law', 'intellectual_property',
+  'law_knowledge_combined', 'jurisprudence', 'legal_history',
+  'evidence_law', 'enforcement_law',
+])
 
 /** Get EXAM_TYPES-compatible array (for backward compat with gameStore consumers) */
 export function getExamTypes() {
@@ -161,4 +210,88 @@ export function getExamSeo(examId) {
 export function getPlatformName(examId) {
   const cfg = getExamConfig(examId)
   return cfg?.seo?.platformName || '國考知識王'
+}
+
+/** List of all categories in display order */
+export function getExamCategories() {
+  return Object.values(CATEGORY_META)
+    .slice()
+    .sort((a, b) => a.order - b.order)
+}
+
+/** Get all exams belonging to a given category, sorted by EXAM_ORDER */
+export function getExamsByCategory(category) {
+  const reg = getRegistry()
+  if (!reg) return []
+  const ids = Object.keys(reg).filter(id => reg[id]?.category === category)
+  ids.sort((a, b) => {
+    const ai = EXAM_ORDER.indexOf(a)
+    const bi = EXAM_ORDER.indexOf(b)
+    return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi)
+  })
+  return ids.map(id => reg[id])
+}
+
+/** Category metadata + live exam counts / question totals */
+export function getCategoryMeta(category) {
+  const meta = CATEGORY_META[category]
+  if (!meta) return null
+  const exams = getExamsByCategory(category)
+  const examCount = exams.length
+  const totalQ = exams.reduce((sum, e) => sum + (Number(e.totalQ) || 0), 0)
+  return { ...meta, examCount, totalQ }
+}
+
+/** Union of persona tags across all exam configs */
+export function getPersonaTags() {
+  const reg = getRegistry()
+  if (!reg) return []
+  const set = new Set()
+  for (const cfg of Object.values(reg)) {
+    for (const tag of cfg.persona || []) set.add(tag)
+  }
+  return Array.from(set)
+}
+
+/** Fetch shared banks metadata from backend (async, cached in memory) */
+export function getSharedBanks() {
+  if (sharedBanksCache) return Promise.resolve(sharedBanksCache)
+  if (sharedBanksFetchPromise) return sharedBanksFetchPromise
+  sharedBanksFetchPromise = fetch(`${BACKEND}/shared-banks`)
+    .then(r => r.ok ? r.json() : null)
+    .then(data => {
+      sharedBanksCache = data?.banks || data || []
+      return sharedBanksCache
+    })
+    .catch(() => {
+      sharedBanksCache = []
+      return sharedBanksCache
+    })
+  return sharedBanksFetchPromise
+}
+
+/** Check whether any tag in the given array is a legal subject (for AI explain warning) */
+export function hasLegalSubjectTag(tags) {
+  if (!Array.isArray(tags)) return false
+  return tags.some(t => LEGAL_SUBJECT_TAGS.has(t))
+}
+
+const prefetched = new Set()
+
+/** Fire-and-forget: prefetch every shared bank declared by exams in this category.
+ *  The Service Worker intercepts and persists the response in the shared-banks cache,
+ *  so the user gets offline access the moment they open a reservoir-mode practice. */
+export function prefetchCategorySharedBanks(category) {
+  const exams = getExamsByCategory(category)
+  const bankIds = new Set()
+  for (const e of exams) {
+    for (const b of e.sharedBanks || []) bankIds.add(b)
+  }
+  bankIds.forEach(bankId => {
+    if (prefetched.has(bankId)) return
+    prefetched.add(bankId)
+    fetch(`${BACKEND}/shared-banks/${bankId}.json`).catch(() => {
+      prefetched.delete(bankId)
+    })
+  })
 }

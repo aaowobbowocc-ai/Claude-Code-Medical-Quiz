@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import { getExamTypes, getAllTagNames } from '../config/examRegistry'
 import SmartBanner from '../components/SmartBanner'
+import ShareChallengeButton from '../components/ShareChallengeButton'
 import { useAccuracyStore } from '../store/accuracyStore'
 import QuestionImages from '../components/QuestionImages'
 
@@ -514,8 +515,11 @@ function Intermission({ paper1Result, onContinue, onFinishSingle, nextPaperName,
 function ExamResults({ papers, navigate }) {
   const { addCoins, addExp } = usePlayerStore()
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
-  const { papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, isWeighted, uniformPointsPerQ } = getExamConfig(examType)
+  const examCfg = getExamConfig(examType) || {}
+  const { papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, isWeighted, uniformPointsPerQ } = examCfg
+  const isQuota = examCfg.selectionType === 'quota'
   const [saved, setSaved] = useState(false)
+  const [prInfo, setPrInfo] = useState(null)
 
   const isFullExam = papers.length >= PAPERS.length
   const totalCorrect = papers.reduce((s, p) => s + p.correct, 0)
@@ -565,6 +569,16 @@ function ExamResults({ papers, navigate }) {
         body: JSON.stringify({ stats }),
       }).catch(() => {})
     }
+    // Quota exams: compute approximate PR from weekly leaderboard distribution
+    if (isQuota) {
+      fetch(`${BACKEND}/leaderboard`).then(r => r.json()).then(data => {
+        const all = (data?.players || []).filter(p => typeof p.pct === 'number')
+        if (all.length === 0) return
+        const below = all.filter(p => p.pct < pct).length
+        const pr = Math.round((below / all.length) * 100)
+        setPrInfo({ pr, sampleSize: all.length })
+      }).catch(() => {})
+    }
   }, [])
 
   const wrongQuestions = allQuestions.map((q, i) => {
@@ -578,8 +592,21 @@ function ExamResults({ papers, navigate }) {
     <div className="flex flex-col min-h-dvh grad-header">
       <div className="flex-1 flex flex-col items-center justify-center px-5 gap-5 pt-16">
         <div className={`w-36 h-36 rounded-full border-4 flex flex-col items-center justify-center shadow-2xl bg-white/10
-          ${passed === true ? 'border-green-400' : passed === false ? 'border-red-400' : 'border-white/40'}`}>
-          {isWeighted ? (
+          ${isQuota
+            ? 'border-blue-400'
+            : passed === true ? 'border-green-400' : passed === false ? 'border-red-400' : 'border-white/40'}`}>
+          {isQuota && prInfo ? (
+            <>
+              <span className="text-xs text-white/60">PR</span>
+              <span className="text-5xl font-black text-white">{prInfo.pr}</span>
+              <span className="text-white/60 text-[10px]">贏過 {prInfo.pr}% 考生</span>
+            </>
+          ) : isQuota ? (
+            <>
+              <span className="text-4xl font-black text-white">{pct}%</span>
+              <span className="text-white/60 text-xs">{totalCorrect}/{totalQuestions}</span>
+            </>
+          ) : isWeighted ? (
             <>
               <span className="text-4xl font-black text-white">{totalScore % 1 === 0 ? totalScore : totalScore.toFixed(1)}</span>
               <span className="text-white/60 text-xs">/ {TOTAL_POINTS} 分</span>
@@ -594,11 +621,14 @@ function ExamResults({ papers, navigate }) {
 
         <div className="text-center">
           <h1 className="text-3xl font-bold text-white mb-1">
-            {passed === true ? '🎉 及格！' : passed === false ? '😤 再接再厲' : '📊 測驗完成'}
+            {isQuota
+              ? (prInfo ? (prInfo.pr >= 80 ? '🏆 前段班！' : prInfo.pr >= 50 ? '💪 中段班' : '📊 需再加強') : '📊 測驗完成')
+              : passed === true ? '🎉 及格！' : passed === false ? '😤 再接再厲' : '📊 測驗完成'}
           </h1>
           <p className="text-white/60 text-sm">{isFullExam ? '完整模擬考' : papers[0].paperName}</p>
-          {!isFullExam && <p className="text-white/40 text-xs mt-1">單卷測驗不計及格，需全卷合計</p>}
-          {hasZeroPaper && <p className="text-red-300 text-xs mt-1 font-bold">⚠️ 有科目零分，依規定不予錄取</p>}
+          {!isFullExam && !isQuota && <p className="text-white/40 text-xs mt-1">單卷測驗不計及格，需全卷合計</p>}
+          {isQuota && <p className="text-white/40 text-xs mt-1">公職為名額制,前段班才有機會上榜</p>}
+          {!isQuota && hasZeroPaper && <p className="text-red-300 text-xs mt-1 font-bold">⚠️ 有科目零分，依規定不予錄取</p>}
         </div>
 
         {/* Per-paper breakdown */}
@@ -628,7 +658,7 @@ function ExamResults({ papers, navigate }) {
             <p className="text-white/50 text-xs">用時</p>
             <p className="text-white font-bold text-lg">{mm}:{String(ss).padStart(2, '0')}</p>
           </div>
-          {isFullExam && (
+          {isFullExam && !isQuota && (
             <div className="bg-white/10 rounded-xl px-4 py-2 text-center">
               <p className="text-white/50 text-xs">及格線</p>
               <p className="text-white font-bold text-lg">{TOTAL_PASS}{isWeighted ? '分' : ''}</p>
@@ -639,6 +669,13 @@ function ExamResults({ papers, navigate }) {
                     : `總分達 ${Math.round(TOTAL_PASS/TOTAL_POINTS*100)}%`}
                 </p>
               )}
+            </div>
+          )}
+          {isFullExam && isQuota && prInfo && (
+            <div className="bg-white/10 rounded-xl px-4 py-2 text-center">
+              <p className="text-white/50 text-xs">對照樣本</p>
+              <p className="text-white font-bold text-lg">{prInfo.sampleSize}</p>
+              <p className="text-white/40 text-[10px]">本週全站考生</p>
             </div>
           )}
         </div>
@@ -660,6 +697,15 @@ function ExamResults({ papers, navigate }) {
           className="w-full py-4 rounded-2xl font-bold text-lg bg-medical-ice text-medical-dark border border-gray-200 active:scale-95 transition-transform">
           🏠 回主畫面
         </button>
+        <div className="flex justify-center pt-2">
+          <ShareChallengeButton
+            exam={examType}
+            examName={getExamConfig(examType)?.name || '國考'}
+            correct={totalCorrect}
+            total={totalQuestions}
+            mode="mock"
+          />
+        </div>
         <SmartBanner />
       </div>
     </div>
@@ -774,12 +820,16 @@ export default function MockExam() {
       timeUsed,
     }
 
-    // Record per-subject accuracy
+    // Record per-subject accuracy (skip deprecated questions)
     const examType = usePlayerStore.getState().exam || 'doctor1'
-    const batchResults = questions.map((q, i) => ({
-      tag: q.subject_tag || q.subject_name,
-      isCorrect: isAnswerCorrect(answers[i], q.answer),
-    }))
+    const batchResults = questions
+      .map((q, i) => ({
+        tag: q.subject_tag || q.subject_tags?.[0] || q.subject_name,
+        isCorrect: isAnswerCorrect(answers[i], q.answer),
+        sharedBankId: q.isSharedBank ? q.sourceBankId : null,
+        isDeprecated: !!q.is_deprecated,
+      }))
+      .filter(r => !r.isDeprecated)
     useAccuracyStore.getState().recordBatch(examType, batchResults)
 
     const newResults = [...paperResults, result]

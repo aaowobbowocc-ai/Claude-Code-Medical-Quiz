@@ -3,7 +3,19 @@
   "name": "藥師一階",
   "short": "藥一",
   "icon": "💊",
-  "category": "pharma",
+  "category": "medical",
+  "subCategory": "藥師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "pharmacy-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
   "questionsFile": "questions-pharma1.json",
   "totalQ": 240,
   "passScore": 180,
@@ -19,8 +31,14 @@
       "pointsPerQ": 1.25,
       "timeLimit": 90,
       "breakdown": [
-        { "subject": "藥理學", "count": 40 },
-        { "subject": "藥物化學", "count": 40 }
+        {
+          "subject": "藥理學",
+          "count": 40
+        },
+        {
+          "subject": "藥物化學",
+          "count": 40
+        }
       ]
     },
     {
@@ -32,8 +50,15 @@
       "pointsPerQ": 1.25,
       "timeLimit": 90,
       "breakdown": [
-        { "subject": "藥物分析", "count": 40 },
-        { "subject": "生藥學", "count": 40, "note": "含中藥" }
+        {
+          "subject": "藥物分析",
+          "count": 40
+        },
+        {
+          "subject": "生藥學",
+          "count": 40,
+          "note": "含中藥"
+        }
       ]
     },
     {
@@ -45,8 +70,14 @@
       "pointsPerQ": 1.25,
       "timeLimit": 90,
       "breakdown": [
-        { "subject": "藥劑學", "count": 40 },
-        { "subject": "生物藥劑學", "count": 40 }
+        {
+          "subject": "藥劑學",
+          "count": 40
+        },
+        {
+          "subject": "生物藥劑學",
+          "count": 40
+        }
       ]
     }
   ],

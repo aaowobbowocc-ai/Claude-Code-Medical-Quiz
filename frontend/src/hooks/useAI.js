@@ -2,8 +2,26 @@ import { useState, useCallback, useRef, useEffect } from 'react'
 import { usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+// Pessimistic upfront charge — backend tells us the real price via the first SSE
+// `meta` frame, and we refund the difference. This keeps the UX responsive (no
+// pre-flight fetch) while still charging verified explanations for free.
 const EXPLAIN_COST = 150
 const REVIEW_COST = 100
+
+// Stable per-device id for vote anti-cheat. Generated lazily on first read.
+const DEVICE_ID_KEY = 'ai-device-id'
+export function getDeviceId() {
+  try {
+    let id = localStorage.getItem(DEVICE_ID_KEY)
+    if (!id) {
+      id = (crypto.randomUUID?.() || Math.random().toString(36).slice(2) + Date.now().toString(36))
+      localStorage.setItem(DEVICE_ID_KEY, id)
+    }
+    return id
+  } catch {
+    return 'anon-' + Math.random().toString(36).slice(2)
+  }
+}
 
 // ── Per-device daily quota ──────────────────────────────────────
 const PERSONAL_LIMIT = 10
@@ -33,7 +51,8 @@ export function getPersonalQuotaRemaining() {
 
 // Stream text from a POST endpoint that returns SSE.
 // Pass an AbortSignal so callers can cancel an in-flight stream.
-async function streamPost(url, body, onChunk, onDone, onError, signal) {
+// onMeta fires once with the meta frame (if the server sends one).
+async function streamPost(url, body, onChunk, onDone, onError, signal, onMeta) {
   let res
   try {
     res = await fetch(url, {
@@ -72,6 +91,7 @@ async function streamPost(url, body, onChunk, onDone, onError, signal) {
         if (raw === '[DONE]') { onDone?.(); return }
         try {
           const parsed = JSON.parse(raw)
+          if (parsed.meta) onMeta?.(parsed.meta)
           if (parsed.text) onChunk(parsed.text)
         } catch {}
       }
@@ -89,6 +109,8 @@ export function useExplain() {
   const [loading, setLoading]   = useState(false)
   const [limitHit, setLimitHit] = useState(false)
   const [notEnoughCoins, setNotEnoughCoins] = useState(false)
+  // Meta from the first SSE frame — drives the pending/verified badge + vote UI
+  const [meta, setMeta]         = useState(null) // { cacheKey, status, upvotes, downvotes, price }
   // Track the question id this hook is currently streaming for, so stale chunks
   // from a previous question can be dropped if the caller switched questions.
   const activeQidRef = useRef(null)
@@ -102,7 +124,9 @@ export function useExplain() {
       setLimitHit(true)
       return
     }
-    const { spendCoins } = usePlayerStore.getState()
+    const { spendCoins, addCoins } = usePlayerStore.getState()
+    // Reserve the full price; refund the difference once the server tells us
+    // the real tier in the first meta frame.
     if (!spendCoins(EXPLAIN_COST)) {
       setNotEnoughCoins(true)
       return
@@ -115,6 +139,7 @@ export function useExplain() {
     activeQidRef.current = qid
 
     setText('')
+    setMeta(null)
     setLimitHit(false)
     setNotEnoughCoins(false)
     setLoading(true)
@@ -124,9 +149,9 @@ export function useExplain() {
         `${BACKEND}/explain`,
         { question: q.question, options: q.options, answer: q.answer,
           subject_name: q.subject_name || q.subject, user_answer: q.user_answer,
-          question_id: q.id, exam: usePlayerStore.getState().exam || 'doctor1' },
+          question_id: q.id, exam: usePlayerStore.getState().exam || 'doctor1',
+          shared_bank: q.isSharedBank ? q.sourceBankId : undefined },
         (chunk) => {
-          // Drop chunks that arrive after the user moved on
           if (activeQidRef.current !== qid) return
           setText(t => t + chunk)
         },
@@ -138,22 +163,62 @@ export function useExplain() {
           setLimitHit(true); setText(msg)
         },
         ctrl.signal,
+        (m) => {
+          if (activeQidRef.current !== qid) return
+          setMeta(m)
+          // Refund overage: we reserved EXPLAIN_COST, true price is m.price
+          const refund = EXPLAIN_COST - (Number.isFinite(m?.price) ? m.price : EXPLAIN_COST)
+          if (refund > 0) addCoins(refund)
+        },
       )
     } catch {
       if (activeQidRef.current === qid) setLoading(false)
     }
   }, [])
 
+  // Vote on the currently-loaded explanation. Returns the updated tally or null.
+  // localStorage dedupe key: `ai-votes:<cacheKey>` stores 1 | -1 per device.
+  const vote = useCallback(async (value) => {
+    if (!meta?.cacheKey) return null
+    if (value !== 1 && value !== -1) return null
+    const voteKey = `ai-votes:${meta.cacheKey}`
+    try {
+      if (localStorage.getItem(voteKey)) return null // already voted on this device
+    } catch {}
+    const { name } = usePlayerStore.getState()
+    try {
+      const res = await fetch(`${BACKEND}/ai/vote`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          cacheKey: meta.cacheKey,
+          value,
+          deviceId: getDeviceId(),
+          userId: name || null,
+        }),
+      })
+      if (!res.ok) return null
+      const json = await res.json()
+      try { localStorage.setItem(voteKey, String(value)) } catch {}
+      // Merge server tally into meta so the UI updates instantly
+      setMeta(m => m ? { ...m, status: json.status, upvotes: json.upvotes, downvotes: json.downvotes, price: json.price } : m)
+      return json
+    } catch {
+      return null
+    }
+  }, [meta])
+
   const reset = useCallback(() => {
     abortRef.current?.abort()
     activeQidRef.current = null
     setText('')
+    setMeta(null)
     setLoading(false)
     setLimitHit(false)
     setNotEnoughCoins(false)
   }, [])
 
-  return { text, loading, limitHit, notEnoughCoins, explain, reset, remaining: getPersonalQuotaRemaining(), cost: EXPLAIN_COST }
+  return { text, loading, limitHit, notEnoughCoins, explain, reset, vote, meta, remaining: getPersonalQuotaRemaining(), cost: EXPLAIN_COST }
 }
 
 // Hook: review a full session

@@ -79,10 +79,12 @@ export function useSocket() {
             myAnswer: st.myAnswer,
             correct: isCorrect,
           })
-          // Record per-subject accuracy
-          const tag = st.currentQuestion.subject_name
+          // Record per-subject accuracy (shared-bank questions route to cross-exam pool)
+          const cq = st.currentQuestion
+          const tag = cq.subject_tag || cq.subject_tags?.[0] || cq.subject_name
           const exam = usePlayerStore.getState().exam || 'doctor1'
-          if (tag) useAccuracyStore.getState().record(exam, tag, isCorrect)
+          const bankId = cq.isSharedBank ? cq.sourceBankId : null
+          if (tag && !cq.is_deprecated) useAccuracyStore.getState().record(exam, tag, isCorrect, bankId)
         }
         setCorrectAnswer(correctAnswer)
         setExplanation(explanation || null)

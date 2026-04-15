@@ -6,11 +6,12 @@ import { ExplainPanel } from '../components/AIPanel'
 import QuestionImages from '../components/QuestionImages'
 import CommentSection from '../components/CommentSection'
 import { useBookmarks } from '../hooks/useBookmarks'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 // Dynamic exam list built from /meta data — no longer hardcoded
-import { getStageStyle as _getStageStyle } from '../config/examRegistry'
+import { getStageStyle as _getStageStyle, getExamConfig } from '../config/examRegistry'
 const _paperColors = { paper1: '#3B82F6', paper2: '#10B981', paper3: '#8B5CF6', paper4: '#F97316', paper5: '#EF4444', paper6: '#0D9488' }
 function getStageColor(tag) {
   return _getStageStyle(tag)?.color || _paperColors[tag] || '#94A3B8'
@@ -125,7 +126,7 @@ function QuestionCard({ q, stageMap }) {
   const tagName  = !localTag || localTag === 'unknown'
     ? (q.subject_name || q.subject || '未分類')
     : (stageMeta?.name || q.subject_name || SUBJECTS.find(s => s.tag === localTag)?.name || q.subject || '未分類')
-  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, notEnoughCoins: explainNoCoins, explain, remaining: explainRemaining, cost: explainCost } = useExplain()
+  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, notEnoughCoins: explainNoCoins, explain, remaining: explainRemaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
 
   const handleVoteDone = (tag) => {
     if (tag) setLocalTag(tag)  // optimistic update if classified
@@ -141,6 +142,14 @@ function QuestionCard({ q, stageMap }) {
           {tagName}
         </span>
         <span className="text-xs text-gray-400">{q.roc_year}年{q.session}</span>
+        {q.isSharedBank && (
+          <span
+            className="text-[10px] font-semibold text-sky-700 bg-sky-50 border border-sky-200 px-1.5 py-0.5 rounded-full"
+            title={q.sourceLabel || '同等推薦'}
+          >
+            同等推薦
+          </span>
+        )}
         {localTag === 'unknown' && (usePlayerStore.getState().exam || 'doctor1') === 'doctor1' && (
           <button
             onClick={() => setClassifying(true)}
@@ -182,6 +191,15 @@ function QuestionCard({ q, stageMap }) {
 
       {/* Question text */}
       <div className="px-4 pb-3">
+        {q.is_deprecated && (
+          <div className="mb-2 bg-red-50 border-l-4 border-red-400 rounded-r-xl px-3 py-2">
+            <p className="text-xs font-bold text-red-600">⚠️ 此題對應條文已修正</p>
+            {q.deprecated_reason && (
+              <p className="text-xs text-red-500 mt-0.5 leading-relaxed">{q.deprecated_reason}</p>
+            )}
+            <p className="text-[11px] text-red-400 mt-1">原答案僅供歷史參考,本題不計入弱點與任務進度</p>
+          </div>
+        )}
         <p className="text-sm text-gray-800 leading-relaxed">{q.question}</p>
         <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
       </div>
@@ -241,6 +259,9 @@ function QuestionCard({ q, stageMap }) {
               session={q.session}
               number={q.number}
               disputed={q.disputed}
+              subjectTags={q.subject_tags}
+              meta={explainMeta}
+              onVote={explainVote}
             />
             {q.id && <CommentSection targetId={`q_${q.id}`} />}
           </div>
@@ -279,6 +300,13 @@ export default function Browse() {
 
   // Load meta (reactive to exam type)
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
+  const examCfg = getExamConfig(examType)
+  const examName = examCfg?.name || '國考'
+  usePageMeta(
+    `${examName} 題庫瀏覽`,
+    `${examName}歷屆考古題線上題庫，按科目年度自由瀏覽，支援搜尋、AI 解說與收藏，歷年國考完整收錄。`,
+    { canonical: `https://examking.tw/browse?exam=${examType}` }
+  )
   const prevExamRef = useRef(examType)
   useEffect(() => {
     const changed = prevExamRef.current !== examType

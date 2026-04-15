@@ -3,7 +3,19 @@
   "name": "物理治療師",
   "short": "物治",
   "icon": "🏋️",
-  "category": "rehab",
+  "category": "medical",
+  "subCategory": "物理治療師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "rehab-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
   "questionsFile": "questions-pt.json",
   "totalQ": 480,
   "passScore": 288,

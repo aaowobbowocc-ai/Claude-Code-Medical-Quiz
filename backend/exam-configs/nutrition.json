@@ -4,6 +4,18 @@
   "short": "營養",
   "icon": "🥗",
   "category": "medical",
+  "subCategory": "營養師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "nutrition-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
   "questionsFile": "questions-nutrition.json",
   "totalQ": 280,
   "passScore": 168,
@@ -16,8 +28,16 @@
       "subjects": "臨床營養25、膳食設計15",
       "count": 40,
       "breakdown": [
-        { "subject": "臨床營養", "count": 25, "note": "疾病營養治療、評估" },
-        { "subject": "膳食設計", "count": 15, "note": "治療飲食設計" }
+        {
+          "subject": "臨床營養",
+          "count": 25,
+          "note": "疾病營養治療、評估"
+        },
+        {
+          "subject": "膳食設計",
+          "count": 15,
+          "note": "治療飲食設計"
+        }
       ],
       "breakdownNote": "依歷屆題分布估計"
     },
@@ -28,8 +48,15 @@
       "subjects": "團膳管理25、食品加工15",
       "count": 40,
       "breakdown": [
-        { "subject": "團膳管理", "count": 25, "note": "作業管理、菜單設計" },
-        { "subject": "食品加工", "count": 15 }
+        {
+          "subject": "團膳管理",
+          "count": 25,
+          "note": "作業管理、菜單設計"
+        },
+        {
+          "subject": "食品加工",
+          "count": 15
+        }
       ],
       "breakdownNote": "依歷屆題分布估計"
     },
@@ -40,8 +67,14 @@
       "subjects": "生理學25、生物化學25",
       "count": 50,
       "breakdown": [
-        { "subject": "生理學", "count": 25 },
-        { "subject": "生物化學", "count": 25 }
+        {
+          "subject": "生理學",
+          "count": 25
+        },
+        {
+          "subject": "生物化學",
+          "count": 25
+        }
       ],
       "breakdownNote": "依歷屆題分布估計"
     },
@@ -52,7 +85,11 @@
       "subjects": "營養學50",
       "count": 50,
       "breakdown": [
-        { "subject": "營養學", "count": 50, "note": "六大營養素、生命期營養、膳食指南" }
+        {
+          "subject": "營養學",
+          "count": 50,
+          "note": "六大營養素、生命期營養、膳食指南"
+        }
       ]
     },
     {
@@ -62,7 +99,11 @@
       "subjects": "公共衛生營養學50",
       "count": 50,
       "breakdown": [
-        { "subject": "公共衛生營養學", "count": 50, "note": "社區營養、營養政策、健康促進" }
+        {
+          "subject": "公共衛生營養學",
+          "count": 50,
+          "note": "社區營養、營養政策、健康促進"
+        }
       ]
     },
     {
@@ -72,8 +113,15 @@
       "subjects": "食品衛生30、食安法規20",
       "count": 50,
       "breakdown": [
-        { "subject": "食品衛生", "count": 30, "note": "食品微生物、添加物、HACCP" },
-        { "subject": "食安法規", "count": 20 }
+        {
+          "subject": "食品衛生",
+          "count": 30,
+          "note": "食品微生物、添加物、HACCP"
+        },
+        {
+          "subject": "食安法規",
+          "count": 20
+        }
       ],
       "breakdownNote": "依歷屆題分布估計"
     }

@@ -4,6 +4,18 @@
   "short": "醫檢",
   "icon": "🔬",
   "category": "medical",
+  "subCategory": "醫事檢驗師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "medlab-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
   "questionsFile": "questions-medlab.json",
   "totalQ": 480,
   "passScore": 288,

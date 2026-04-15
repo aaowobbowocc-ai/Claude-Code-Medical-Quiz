@@ -13,6 +13,7 @@ const feedback = require('./feedback');
 const board = require('./board');
 const commentsApi = require('./comments');
 const communityNotes = require('./community-notes');
+const sharedBanksLoader = require('./shared-banks-loader');
 
 const compression = require('compression');
 const rateLimit = require('express-rate-limit');
@@ -60,6 +61,18 @@ console.log(`Loaded ${Object.keys(examConfigs).length} exam configs: ${Object.ke
 
 const examData = {};
 for (const [key, cfg] of Object.entries(examConfigs)) {
+  if (!cfg.questionsFile) {
+    // Shell config (no own questions yet, may pull from sharedBanks). Build a
+    // minimal examData entry so endpoints that look up stages don't fall back
+    // to doctor1.
+    examData[key] = {
+      questions: [],
+      stages: cfg.stages && cfg.stages.length > 0 ? cfg.stages : [{ id: 0, tag: 'all', name: '全部' }],
+      metadata: { category: cfg.name, isShell: true },
+    };
+    console.log(`Initialized shell ${key}: 0 own questions, sharedBanks=[${(cfg.sharedBanks || []).join(',')}]`);
+    continue;
+  }
   const filePath = path.join(__dirname, cfg.questionsFile);
   if (fs.existsSync(filePath)) {
     const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
@@ -651,10 +664,31 @@ app.get('/exams', staticCache, (_, res) => {
   res.json(list);
 });
 
-// Full exam registry (config-driven, cached aggressively)
+// Full exam registry (config-driven, cached aggressively).
+// Backward compatible: top-level keys remain exam IDs (legacy clients iterate
+// Object.entries unchanged). Shared bank metadata is exposed via the dedicated
+// /shared-banks endpoint and not folded into this response.
 app.get('/exam-registry', dayCache, (_, res) => {
   res.set('Cache-Control', 'public, max-age=86400');
   res.json(examConfigs);
+});
+
+// Shared question bank metadata — scanned from backend/shared-banks/*.json.
+// Returns one entry per bank file with bankId/name/levels/questionCount/bankVersion/last_synced_at.
+app.get('/shared-banks', staticCache, (_, res) => {
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=60');
+  res.json({ banks: sharedBanksLoader.getAllBankMeta() });
+});
+
+// Full bank JSON — used by frontend PWA prefetch so shared banks are available offline.
+// Path shape `/shared-banks/<bankId>.json` matches the SW regex in public/sw.js.
+app.get('/shared-banks/:bankId.json', (req, res) => {
+  const bankId = req.params.bankId;
+  if (!/^[a-z0-9_]+$/i.test(bankId)) return res.status(400).json({ error: 'invalid bankId' });
+  const bank = sharedBanksLoader.loadBank(bankId);
+  if (!bank) return res.status(404).json({ error: 'not found' });
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=300');
+  res.json(bank);
 });
 
 app.get('/stages', staticCache, (req, res) => {

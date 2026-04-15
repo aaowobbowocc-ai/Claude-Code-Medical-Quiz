@@ -3,7 +3,19 @@
   "name": "中醫師(一)",
   "short": "中醫一",
   "icon": "🌿",
-  "category": "tcm",
+  "category": "medical",
+  "subCategory": "中醫師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "tcm-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
   "questionsFile": "questions-tcm1.json",
   "totalQ": 160,
   "passScore": 96,
@@ -27,7 +39,11 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {
@@ -35,9 +51,18 @@
       "tcm_basic_2": "基礎(二)"
     },
     "stageStyles": {
-      "all": { "icon": "🎲", "color": "#64748B" },
-      "tcm_basic_1": { "icon": "📜", "color": "#059669" },
-      "tcm_basic_2": { "icon": "🌿", "color": "#10B981" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "tcm_basic_1": {
+        "icon": "📜",
+        "color": "#059669"
+      },
+      "tcm_basic_2": {
+        "icon": "🌿",
+        "color": "#10B981"
+      }
     },
     "subjectColors": {
       "中醫基礎醫學(一)": "#059669",
@@ -57,8 +82,14 @@
     "subjects": "中醫基礎醫學(一)、中醫基礎醫學(二)",
     "mockDesc": "完整模擬兩科各 80 題，96/160 及格",
     "subjectDetails": [
-      ["中醫基礎醫學(一)", "中醫醫學史、中醫基礎理論、內經、難經。"],
-      ["中醫基礎醫學(二)", "中醫方劑學、中醫藥物學。"]
+      [
+        "中醫基礎醫學(一)",
+        "中醫醫學史、中醫基礎理論、內經、難經。"
+      ],
+      [
+        "中醫基礎醫學(二)",
+        "中醫方劑學、中醫藥物學。"
+      ]
     ]
   }
 }

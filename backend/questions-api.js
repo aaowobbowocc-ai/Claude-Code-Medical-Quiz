@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const sharedBanksLoader = require('./shared-banks-loader');
 
 function shuffle(arr) {
   const a = [...arr];
@@ -17,17 +18,55 @@ function isSingleAnswer(q) {
 }
 
 function registerRoutes(app, examData, stats, examConfigs, { staticCache, browseCache } = {}) {
-  // Helper: resolve exam data from query param
+  // Resolve exam id (default doctor1)
+  function resolveExamId(req) {
+    return req.query.exam || 'doctor1';
+  }
+
+  // Resolve exam data (legacy: own questions only)
   function resolve(req) {
-    const exam = req.query.exam || 'doctor1';
+    const exam = resolveExamId(req);
     return examData[exam] || examData.doctor1;
+  }
+
+  // Resolve effective mode for a given exam:
+  //   query.mode > cfg.uxHints.defaultMode > 'pure'
+  // Exams without sharedBanks always behave as pure regardless of input.
+  function resolveMode(req, examId) {
+    const cfg = examConfigs[examId];
+    if (!cfg || !Array.isArray(cfg.sharedBanks) || cfg.sharedBanks.length === 0) return 'pure';
+    const requested = req.query.mode;
+    if (requested === 'pure' || requested === 'reservoir') return requested;
+    return (cfg.uxHints && cfg.uxHints.defaultMode) || 'pure';
+  }
+
+  // Core helper: returns the effective question pool for an exam given mode.
+  // - mode 'pure'      → exam's own questions only
+  // - mode 'reservoir' → own + shared bank questions (filtered by sharedScope level)
+  // Shared questions carry { isSharedBank, sourceBankId, sourceLabel } markers.
+  function loadExamQuestions(examId, { mode = 'pure' } = {}) {
+    const data = examData[examId];
+    const own = data && data.questions ? data.questions : [];
+    if (mode !== 'reservoir') return own;
+    const cfg = examConfigs[examId];
+    const shared = sharedBanksLoader.getSharedQuestionsForExam(cfg);
+    return [...own, ...shared];
+  }
+
+  // Apply limit/offset to an array, returning { total, slice }.
+  function paginate(arr, { limit, offset } = {}) {
+    const total = arr.length;
+    const off = Math.max(0, parseInt(offset) || 0);
+    const lim = limit != null ? Math.max(0, parseInt(limit)) : total;
+    return { total, slice: arr.slice(off, off + lim) };
   }
 
   // GET /questions (browse — cacheable)
   app.get('/questions', ...(browseCache ? [browseCache] : []), (req, res) => {
-    const questionsData = resolve(req);
+    const examId = resolveExamId(req);
+    const mode = resolveMode(req, examId);
     const { year, session, subject_tag, q, page = 1, limit = 20 } = req.query;
-    let list = questionsData.questions;
+    let list = loadExamQuestions(examId, { mode });
     if (year)        list = list.filter(x => x.roc_year === year);
     if (session)     list = list.filter(x => x.session === session);
     if (subject_tag) list = list.filter(x => x.subject_tag === subject_tag);
@@ -35,29 +74,35 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     const total = list.length;
     const start = (parseInt(page) - 1) * parseInt(limit);
     res.set('Cache-Control', 'public, max-age=300, stale-while-revalidate=60');
-    res.json({ total, page: parseInt(page), limit: parseInt(limit), questions: list.slice(start, start + parseInt(limit)) });
+    res.json({ total, page: parseInt(page), limit: parseInt(limit), mode, questions: list.slice(start, start + parseInt(limit)) });
   });
 
   // GET /questions/random (practice & PvP — never cached, must be different each time)
   app.get('/questions/random', (req, res) => {
     res.set('Cache-Control', 'private, no-cache');
-    const questionsData = resolve(req);
-    const { stage_id, count = 10 } = req.query;
+    const examId = resolveExamId(req);
+    const mode = resolveMode(req, examId);
+    const data = examData[examId] || examData.doctor1;
+    const { stage_id, count = 10, limit, offset } = req.query;
     const tag = stage_id && parseInt(stage_id) > 0
-      ? questionsData.stages.find(s => s.id === parseInt(stage_id))?.tag
+      ? data.stages.find(s => s.id === parseInt(stage_id))?.tag
       : null;
-    let pool = questionsData.questions.filter(isSingleAnswer);
+    let pool = loadExamQuestions(examId, { mode }).filter(isSingleAnswer);
     if (tag) pool = pool.filter(q => q.subject_tag === tag);
-    const picked = shuffle(pool).slice(0, parseInt(count));
-    res.json({ total: pool.length, questions: picked });
+    const target = parseInt(limit != null ? limit : count) || 50;
+    const shuffled = shuffle(pool);
+    const off = Math.max(0, parseInt(offset) || 0);
+    const picked = shuffled.slice(off, off + target);
+    res.json({ total: pool.length, mode, questions: picked });
   });
 
   // GET /questions/exam-years — list available historical exams (cacheable)
+  // Always pure: historical structure (year+session+paper) only applies to exam's own questions.
   app.get('/questions/exam-years', ...(staticCache ? [staticCache] : []), (req, res) => {
-    const examId = req.query.exam || 'doctor1';
-    const questionsData = resolve(req);
+    const examId = resolveExamId(req);
+    const ownQuestions = loadExamQuestions(examId, { mode: 'pure' });
     const exams = {};
-    for (const q of questionsData.questions) {
+    for (const q of ownQuestions) {
       const key = `${q.roc_year}_${q.session}`;
       if (!exams[key]) exams[key] = { roc_year: q.roc_year, session: q.session, papers: {} };
       if (!exams[key].papers[q.subject]) exams[key].papers[q.subject] = {};
@@ -90,17 +135,23 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
   // GET /questions/exam — supports historical (year+session) or random (stages) mode
   // Not cached at middleware level: historical mode is cacheable, random mode is not
   app.get('/questions/exam', (req, res) => {
-    const questionsData = resolve(req);
+    const examId = resolveExamId(req);
+    // Mock exam mode is always pure for quota exams (preserve fixed paper structure)
+    const cfg = examConfigs[examId];
+    const isQuota = cfg && cfg.selectionType === 'quota';
+    const mode = isQuota ? 'pure' : resolveMode(req, examId);
+    const questionsData = examData[examId] || examData.doctor1;
+    const pool = loadExamQuestions(examId, { mode });
     const { stages, count = 100, year, session, subject } = req.query;
 
     // Historical mode: return ALL questions (including multi-answer & voided) for authentic exam simulation.
     // Sort by question number to preserve original order — critical for 承上題 (carryover)
     // questions to appear right after their root question, matching the printed exam.
     if (year && session && subject) {
-      const pool = questionsData.questions.filter(q =>
+      const filtered = pool.filter(q =>
         q.roc_year === year && q.session === session && q.subject === subject
       );
-      const ordered = [...pool].sort((a, b) => (a.number || 0) - (b.number || 0));
+      const ordered = [...filtered].sort((a, b) => (a.number || 0) - (b.number || 0));
       res.set('Cache-Control', 'public, max-age=3600');
       return res.json({ total: ordered.length, questions: ordered, mode: 'historical' });
     }
@@ -109,11 +160,11 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     // If subject is given (without year), filter to that paper's questions
     if (!stages) {
       const target = parseInt(count);
-      let pool = questionsData.questions.filter(isSingleAnswer);
+      let valid = pool.filter(isSingleAnswer);
       if (subject) {
-        pool = pool.filter(q => q.subject === subject);
+        valid = valid.filter(q => q.subject === subject);
       }
-      const picked = shuffle(pool).slice(0, target);
+      const picked = shuffle(valid).slice(0, target);
       return res.json({ total: picked.length, questions: picked, mode: 'random' });
     }
     const stageIds = stages.split(',').map(Number);
@@ -124,7 +175,7 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     const target = parseInt(count);
     const byTag = {};
     for (const tag of tags) {
-      byTag[tag] = questionsData.questions.filter(q => isSingleAnswer(q) && q.subject_tag === tag);
+      byTag[tag] = pool.filter(q => isSingleAnswer(q) && q.subject_tag === tag);
     }
     // Calculate proportional distribution from actual data counts
     const relevantTags = tags.filter(t => byTag[t]?.length > 0);
@@ -142,7 +193,7 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
 
     // For exams without subject tags, just pick randomly from all
     if (picked.length === 0) {
-      const allValid = questionsData.questions.filter(q => q.answer && q.options[q.answer]);
+      const allValid = pool.filter(q => q.answer && q.options[q.answer]);
       picked = shuffle(allValid).slice(0, target);
     }
 
@@ -195,10 +246,16 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
 
   // GET /meta (cacheable — static after boot)
   app.get('/meta', ...(staticCache ? [staticCache] : []), (req, res) => {
-    const questionsData = resolve(req);
+    const examId = resolveExamId(req);
+    const cfg = examConfigs[examId];
+    const data = examData[examId];
+    const own = data && data.questions ? data.questions : [];
+
     const years = {}, sessions = {}, tags = {};
     const examSet = new Set();
-    for (const q of questionsData.questions) {
+    let deprecatedCount = 0;
+    for (const q of own) {
+      if (q.is_deprecated) { deprecatedCount++; continue; }
       if (q.roc_year) years[q.roc_year] = (years[q.roc_year] || 0) + 1;
       if (q.session)  sessions[q.session] = (sessions[q.session] || 0) + 1;
       if (q.subject_tag) tags[q.subject_tag] = (tags[q.subject_tag] || 0) + 1;
@@ -211,14 +268,30 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
       return { label: `${year}年${shortSession}`, year, session };
     }).sort((a, b) => a.year.localeCompare(b.year) || a.session.localeCompare(b.session));
 
-    // Build stages with counts
-    const stagesWithCount = (questionsData.stages || []).map(s => ({
+    const stagesWithCount = (data?.stages || []).map(s => ({
       ...s,
-      count: s.tag === 'all' ? questionsData.questions.length : (tags[s.tag] || 0),
+      count: s.tag === 'all' ? own.length - deprecatedCount : (tags[s.tag] || 0),
     }));
 
+    // Merged papers: exam's own papers + shared bank "virtual papers"
+    const ownPapers = (cfg && cfg.papers) ? cfg.papers : [];
+    const sharedPapers = sharedBanksLoader.getSharedPapersForExam(cfg);
+    const mergedPapers = [...ownPapers, ...sharedPapers];
+
+    // Total Q (own only, excluding deprecated)
+    const totalQ = own.length - deprecatedCount;
+
     res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=60');
-    res.json({ years, sessions, exams, stages: stagesWithCount });
+    res.json({
+      years, sessions, exams,
+      stages: stagesWithCount,
+      papers: ownPapers,
+      mergedPapers,
+      totalQ,
+      deprecatedCount,
+      defaultMode: (cfg && cfg.uxHints && cfg.uxHints.defaultMode) || 'pure',
+      hasSharedBanks: sharedPapers.length > 0,
+    });
   });
 }
 

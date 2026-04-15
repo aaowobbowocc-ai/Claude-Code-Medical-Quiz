@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { usePlayerStore, getLevelTitle } from '../store/gameStore'
-import { getExamTypes, getExamSeo } from '../config/examRegistry'
+import { getExamTypes, getExamSeo, getExamConfig, getExamCategories, getExamsByCategory, getCategoryMeta, prefetchCategorySharedBanks } from '../config/examRegistry'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { getSocket } from '../hooks/useSocket'
 import { useDailyMessage } from '../hooks/useDailyMessage'
@@ -18,87 +18,113 @@ const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','
 
 // EXAM_CONTENT is now loaded from exam-configs via getExamSeo(examId)
 
-function ComingSoonCard({ icon, name, highlight }) {
-  return (
-    <div className={`relative rounded-2xl p-4 flex flex-col items-center gap-1.5 border-2 cursor-not-allowed
-      ${highlight ? 'border-amber-300 bg-amber-50' : 'border-gray-100 bg-gray-50 opacity-60'}`}>
-      <span className={`text-3xl ${highlight ? '' : 'grayscale'}`}>{icon}</span>
-      <span className={`font-bold text-sm ${highlight ? 'text-amber-700' : 'text-gray-400'}`}>{name}</span>
-      <span className={`absolute top-1 right-1 text-[9px] px-1.5 py-0.5 rounded-full font-bold
-        ${highlight ? 'text-white bg-amber-500' : 'text-amber-500 bg-amber-50'}`}>
-        {highlight ? '🔥 熱門' : '敬請期待'}
-      </span>
-    </div>
-  )
-}
-
 function ExamPickerContent({ exam, setExam, closeSheet }) {
+  const currentCfg = getExamConfig(exam)
+  // Initial stage: if the user already has an active exam, jump straight to that category's Stage 2
+  const initialCategory = currentCfg?.category || null
+  const [stage, setStage] = useState(initialCategory ? 'exam-list' : 'persona')
+  const [activeCategory, setActiveCategory] = useState(initialCategory || null)
+
+  const categories = getExamCategories()
+
+  const goPersona = () => { setStage('persona'); setActiveCategory(null) }
+  const pickCategory = (cat) => {
+    const meta = getCategoryMeta(cat)
+    if (!meta || meta.examCount === 0) {
+      // Category is still 拓荒中 with zero exams — stay on persona and do nothing
+      return
+    }
+    // Fire-and-forget: warm the Service Worker's shared-banks cache so the user
+    // can practice offline the moment they open a reservoir-mode page.
+    prefetchCategorySharedBanks(cat)
+    setActiveCategory(cat)
+    setStage('exam-list')
+  }
+
+  if (stage === 'persona') {
+    return (
+      <>
+        <h2 className="text-xl font-bold text-medical-dark text-center mb-1">選擇身分領域</h2>
+        <p className="text-center text-gray-400 text-sm mb-4">先選你的備考身分，再挑具體考試</p>
+
+        <div className="grid grid-cols-2 gap-3">
+          {categories.map(cat => {
+            const meta = getCategoryMeta(cat.id) || cat
+            const isEmpty = meta.examCount === 0
+            const isPioneer = cat.pioneer
+            return (
+              <button
+                key={cat.id}
+                onClick={() => pickCategory(cat.id)}
+                disabled={isEmpty}
+                className={`relative rounded-2xl p-4 flex flex-col items-start gap-1.5 border-2 transition-all active:scale-95 text-left
+                  ${isEmpty
+                    ? 'border-gray-100 bg-gray-50 opacity-60 cursor-not-allowed'
+                    : 'border-gray-100 bg-white hover:border-medical-blue hover:shadow'}`}
+              >
+                {isPioneer && (
+                  <span className="absolute top-2 right-2 text-[9px] px-1.5 py-0.5 rounded-full font-bold text-amber-700 bg-amber-100">
+                    拓荒中
+                  </span>
+                )}
+                <span className="text-3xl">{cat.icon}</span>
+                <span className="font-bold text-sm text-medical-dark">{cat.name}</span>
+                <span className="text-[11px] text-gray-400 leading-snug">{cat.description}</span>
+                <span className="text-[10px] text-medical-blue font-semibold mt-1">
+                  {meta.examCount} 考試 · {meta.totalQ >= 1000 ? `${(meta.totalQ / 1000).toFixed(1)}k` : meta.totalQ} 題
+                </span>
+              </button>
+            )
+          })}
+        </div>
+      </>
+    )
+  }
+
+  // Stage 2: exam list for the chosen category
+  const catMeta = getCategoryMeta(activeCategory)
+  const exams = getExamsByCategory(activeCategory)
   return (
     <>
-      <h2 className="text-xl font-bold text-medical-dark text-center mb-1">選擇考試類別</h2>
-      <p className="text-center text-gray-400 text-sm mb-4">切換不同國考題庫</p>
+      <div className="flex items-center gap-2 mb-3">
+        <button
+          onClick={goPersona}
+          className="text-xs text-medical-blue font-semibold flex items-center gap-1 active:scale-95"
+        >
+          ← 返回分類
+        </button>
+        <h2 className="flex-1 text-center text-lg font-bold text-medical-dark">
+          {catMeta?.icon} {catMeta?.name}
+        </h2>
+        <span className="w-10" />
+      </div>
+      <p className="text-center text-gray-400 text-xs mb-4">{catMeta?.description}</p>
 
-      {/* 醫事人員專區 */}
-      <div className="mb-5">
-        <p className="text-sm font-bold text-medical-blue mb-2 flex items-center gap-1">
-          <span>⚕️</span> 醫事人員專區
-        </p>
+      {exams.length === 0 ? (
+        <div className="text-center py-8 text-sm text-gray-400">
+          此分類題庫拓荒中，請稍候
+        </div>
+      ) : (
         <div className="grid grid-cols-2 gap-2.5">
-          {getExamTypes().map(e => (
+          {exams.map(e => (
             <button key={e.id}
               onClick={() => { setExam(e.id); closeSheet() }}
               className={`rounded-2xl p-4 flex flex-col items-center gap-1.5 border-2 transition-all active:scale-95
                 ${exam === e.id ? 'border-medical-blue bg-medical-light shadow' : 'border-gray-100 bg-white'}`}>
               <span className="text-3xl">{e.icon}</span>
-              <span className={`font-bold text-sm ${exam === e.id ? 'text-medical-blue' : 'text-medical-dark'}`}>{e.name}</span>
+              <span className={`font-bold text-sm ${exam === e.id ? 'text-medical-blue' : 'text-medical-dark'}`}>
+                {e.name}
+              </span>
+              {e.totalQ > 0 && (
+                <span className="text-[10px] text-gray-400">{e.totalQ} 題</span>
+              )}
+              {e.totalQ === 0 && (
+                <span className="text-[10px] text-amber-600 font-semibold">拓荒中</span>
+              )}
             </button>
           ))}
         </div>
-      </div>
-
-      {/* 法政/執照專區 */}
-      <div className="mb-5">
-        <p className="text-sm font-bold text-gray-400 mb-2 flex items-center gap-1">
-          <span>⚖️</span> 法政/執照專區
-        </p>
-        <div className="grid grid-cols-2 gap-2.5">
-          {[
-            { icon: '⚖️', name: '律師' },
-            { icon: '💼', name: '會計師' },
-            { icon: '🏠', name: '地政士' },
-            { icon: '📐', name: '建築師' },
-          ].map(p => <ComingSoonCard key={p.name} {...p} />)}
-        </div>
-      </div>
-
-      {/* 公職行政專區 */}
-      <div className="mb-5">
-        <p className="text-sm font-bold text-gray-400 mb-2 flex items-center gap-1">
-          <span>🏛️</span> 公職行政專區
-        </p>
-        <div className="grid grid-cols-2 gap-2.5">
-          {[
-            { icon: '🏢', name: '高普考' },
-            { icon: '🚔', name: '警察特考' },
-            { icon: '📋', name: '初等考試' },
-          ].map(p => <ComingSoonCard key={p.name} {...p} />)}
-        </div>
-      </div>
-
-      {/* 全民/基礎專區 */}
-      <div className="mb-2">
-        <p className="text-sm font-bold text-gray-400 mb-2 flex items-center gap-1">
-          <span>🎓</span> 全民/基礎專區
-        </p>
-        <div className="grid grid-cols-2 gap-2.5">
-          {[
-            { icon: '📜', name: '法學緒論', highlight: true },
-            { icon: '🇺🇸', name: '多益' },
-            { icon: '🚗', name: '汽機車駕照' },
-            { icon: '📖', name: '國文/英文' },
-          ].map(p => <ComingSoonCard key={p.name} {...p} />)}
-        </div>
-      </div>
+      )}
     </>
   )
 }
@@ -251,10 +277,12 @@ export default function Home() {
     id: 'doctor1', name: '醫師一階', short: '醫一', icon: '🩺', papers: [],
   }
 
-  // Dynamic SEO title per exam
+  // Dynamic SEO title / canonical / og per exam — powers Threads/FB/Google previews
+  // when someone shares examking.tw/?exam=<id>
   usePageMeta(
     currentExam ? `國考知識王｜${currentExam.name}` : null,
-    currentExam ? `${currentExam.name}國考題庫練習，涵蓋歷屆考古題、即時對戰、AI 解說、模擬考、弱點分析，免費使用！` : null
+    currentExam ? `${currentExam.name}國考題庫練習，涵蓋歷屆考古題、即時對戰、AI 解說、模擬考、弱點分析，免費使用！` : null,
+    { canonical: currentExam ? `https://examking.tw/?exam=${currentExam.id}` : 'https://examking.tw/' }
   )
 
   // Quick-name: inline input shown only when no name
@@ -357,6 +385,11 @@ export default function Home() {
     ? 'linear-gradient(160deg, #1e1810 0%, #3e2c18 60%, #30220e 100%)'
     : 'linear-gradient(160deg, #0F2A3F 0%, #1A6B9A 60%, #0D9488 100%)'
 
+  // Friend tapped an invite link? Tell the new user what's waiting for them so the
+  // "enter your name" step doesn't feel like a cold gate.
+  let pendingJoinCode = null
+  try { pendingJoinCode = sessionStorage.getItem('pending-join-room') } catch {}
+
   // ── No-name: inline quick-start ──────────────────────────
   if (!name) {
     return (
@@ -367,6 +400,12 @@ export default function Home() {
             <div key={i} className="absolute text-white/5 font-bold text-7xl select-none"
                  style={{ top: `${10 + i * 28}%`, left: `${-5 + (i % 3) * 40}%` }}>✚</div>
           ))}
+          {pendingJoinCode && (
+            <div className="relative w-full mb-3 bg-white/15 border border-white/25 rounded-2xl px-4 py-3 backdrop-blur text-center">
+              <p className="text-white text-sm font-semibold">🎯 你的朋友正在房間等你</p>
+              <p className="text-white/60 text-xs mt-0.5">邀請碼 <span className="font-mono tracking-widest">{pendingJoinCode}</span> · 填完名字就會自動加入</p>
+            </div>
+          )}
           <div className="relative text-5xl mb-2">{currentExam.icon}</div>
           <h1 className="relative text-white font-bold text-3xl tracking-tight mb-1">國考知識王</h1>
           <button onClick={() => setSheet('exam')}

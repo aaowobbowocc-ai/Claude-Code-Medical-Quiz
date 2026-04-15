@@ -3,7 +3,19 @@
   "name": "職能治療師",
   "short": "職治",
   "icon": "🧩",
-  "category": "rehab",
+  "category": "medical",
+  "subCategory": "職能治療師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "rehab-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
   "questionsFile": "questions-ot.json",
   "totalQ": 480,
   "passScore": 288,

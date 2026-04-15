@@ -10,10 +10,29 @@ import QuestionImages from '../components/QuestionImages'
 import CommentSection from '../components/CommentSection'
 import { useBookmarks } from '../hooks/useBookmarks'
 import { useAccuracyStore } from '../store/accuracyStore'
+import { usePageMeta } from '../hooks/usePageMeta'
+import ShareChallengeButton from '../components/ShareChallengeButton'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
-import { getStageStyle as getStageStyleFromRegistry } from '../config/examRegistry'
+import { getStageStyle as getStageStyleFromRegistry, getExamConfig } from '../config/examRegistry'
+
+const SOURCE_MODE_KEY_PREFIX = 'practice-source-mode:'
+function getSourceMode(examId) {
+  try {
+    const v = localStorage.getItem(SOURCE_MODE_KEY_PREFIX + examId)
+    if (v === 'pure' || v === 'reservoir') return v
+  } catch {}
+  const cfg = getExamConfig(examId)
+  return cfg?.uxHints?.defaultMode === 'reservoir' ? 'reservoir' : 'pure'
+}
+function saveSourceMode(examId, mode) {
+  try { localStorage.setItem(SOURCE_MODE_KEY_PREFIX + examId, mode) } catch {}
+}
+function examHasSharedBanks(examId) {
+  const cfg = getExamConfig(examId)
+  return Array.isArray(cfg?.sharedBanks) && cfg.sharedBanks.length > 0
+}
 
 const FALLBACK_COLORS = ['#3B82F6', '#EF4444', '#10B981', '#F97316', '#8B5CF6', '#D97706', '#6366F1', '#0D9488', '#DC2626', '#EC4899']
 
@@ -82,15 +101,38 @@ function SetupScreen({ onStart, onBack }) {
   const [stage, setStage]     = useState(last.stage ?? 0)
   const [diff, setDiff]       = useState(last.diff ?? 'medium')
   const [count, setCount]     = useState(last.count ?? 10)
+  const hasSharedBanks = examHasSharedBanks(examType)
+  const [sourceMode, setSourceMode] = useState(() => getSourceMode(examType))
+  const [meta, setMeta] = useState(null)
+  const [showModeInfo, setShowModeInfo] = useState(false)
+  const [online, setOnline] = useState(() => (typeof navigator !== 'undefined' ? navigator.onLine : true))
+
+  useEffect(() => {
+    const on = () => setOnline(true)
+    const off = () => setOnline(false)
+    window.addEventListener('online', on)
+    window.addEventListener('offline', off)
+    return () => {
+      window.removeEventListener('online', on)
+      window.removeEventListener('offline', off)
+    }
+  }, [])
 
   useEffect(() => {
     fetch(`${BACKEND}/meta?exam=${examType}`)
       .then(r => r.json())
       .then(data => {
         if (data.stages) setStages(formatStages(data.stages))
+        setMeta(data)
       })
       .catch(() => {})
   }, [examType])
+
+  useEffect(() => { setSourceMode(getSourceMode(examType)) }, [examType])
+  const toggleSourceMode = (m) => {
+    setSourceMode(m)
+    saveSourceMode(examType, m)
+  }
   const history = getPracticeHistory()
   const recentPct = history.slice(0, 10)
 
@@ -102,6 +144,64 @@ function SetupScreen({ onStart, onBack }) {
       </div>
 
       <div className="flex-1 px-4 py-5 flex flex-col gap-5 overflow-y-auto">
+
+        {/* Source mode toggle (only when exam has sharedBanks) */}
+        {hasSharedBanks && (
+          <div>
+            <div className="flex items-center justify-between mb-2.5">
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">題目來源</p>
+              <div className="flex items-center gap-1.5">
+                <span
+                  className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${
+                    online
+                      ? 'text-emerald-600 bg-emerald-50 border-emerald-200'
+                      : 'text-red-500 bg-red-50 border-red-200'
+                  }`}
+                  title={online ? '已連線,共享題庫可正常更新' : '目前離線,僅能使用已快取的題目'}
+                >
+                  {online ? '🟢 可離線練習' : '🔴 離線模式'}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setShowModeInfo(v => !v)}
+                  className="text-xs text-gray-400 hover:text-medical-blue"
+                  aria-label="題目來源說明"
+                >ⓘ</button>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                type="button"
+                onClick={() => toggleSourceMode('pure')}
+                className={`py-3 rounded-xl font-bold text-sm border transition-all active:scale-95
+                  ${sourceMode === 'pure'
+                    ? 'bg-medical-blue text-white border-medical-blue shadow'
+                    : 'bg-white text-gray-700 border-gray-100 shadow-sm'}`}
+              >
+                📄 歷屆真題
+              </button>
+              <button
+                type="button"
+                onClick={() => toggleSourceMode('reservoir')}
+                className={`py-3 rounded-xl font-bold text-sm border transition-all active:scale-95
+                  ${sourceMode === 'reservoir'
+                    ? 'bg-medical-blue text-white border-medical-blue shadow'
+                    : 'bg-white text-gray-700 border-gray-100 shadow-sm'}`}
+              >
+                🌊 大水庫
+              </button>
+            </div>
+            {showModeInfo && (
+              <div className="mt-2 p-3 bg-white rounded-xl border border-gray-100 text-[11px] text-gray-500 leading-relaxed">
+                <p><strong className="text-medical-dark">歷屆真題</strong>：只從本考試自己的歷屆題出題。</p>
+                <p className="mt-1"><strong className="text-medical-dark">大水庫</strong>：加入同等級其他考試的共同科目題，加強刷題量。</p>
+                {meta?.totalQ != null && (
+                  <p className="mt-1 text-gray-400">共 {meta.totalQ} 題 · 題庫更新：{new Date().toISOString().slice(0, 10)}</p>
+                )}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Subject */}
         <div>
@@ -183,7 +283,7 @@ function SetupScreen({ onStart, onBack }) {
           onClick={() => {
             saveLastConfig({ stage, diff, count })
             const s = stages.find(s => s.id === stage)
-            onStart({ stage, diff, count, stageName: s?.name || '練習' })
+            onStart({ stage, diff, count, stageName: s?.name || '練習', sourceMode })
           }}
           className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform grad-cta"
         >
@@ -216,12 +316,13 @@ function PracticeGame({ config, onFinish }) {
   const { isBookmarked, getFolder, folders, addToFolder, removeBookmark, getFolderQuestions, MAX_PER_FOLDER } = useBookmarks()
   const sessionLog = useRef([])   // track every q+answer for review
 
-  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, notEnoughCoins: explainNoCoins, explain, reset: resetExplain, remaining: explainRemaining, cost: explainCost } = useExplain()
+  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, notEnoughCoins: explainNoCoins, explain, reset: resetExplain, remaining: explainRemaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
 
   // Load questions — use fast /random endpoint
   useEffect(() => {
     const exam = usePlayerStore.getState().exam || 'doctor1'
-    fetch(`${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}&exam=${exam}`)
+    const modeParam = config.sourceMode ? `&mode=${config.sourceMode}` : ''
+    fetch(`${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}&exam=${exam}${modeParam}`)
       .then(r => r.json())
       .then(data => {
         setQuestions(data.questions)
@@ -271,9 +372,11 @@ function PracticeGame({ config, onFinish }) {
     else play('wrong')
     if (aiChoice === correct && diffConfig.ai) setAiScore(s => s + 100)
 
-    // Record per-subject accuracy
-    const tag = q?.subject_tag || q?.subject_name
-    if (tag) useAccuracyStore.getState().record(examType, tag, isCorrect)
+    // Record per-subject accuracy (shared-bank questions route to cross-exam pool).
+    // Skip deprecated questions so stale legal items don't pollute weakness/progress.
+    const tag = q?.subject_tag || q?.subject_tags?.[0] || q?.subject_name
+    const bankId = q?.isSharedBank ? q.sourceBankId : null
+    if (tag && !q?.is_deprecated) useAccuracyStore.getState().record(examType, tag, isCorrect, bankId)
 
     // Log for review
     sessionLog.current.push({
@@ -376,6 +479,15 @@ function PracticeGame({ config, onFinish }) {
               </span>
             </div>
           )}
+          {q.is_deprecated && (
+            <div className="mb-3 bg-red-50 border-l-4 border-red-400 rounded-r-xl px-3 py-2">
+              <p className="text-xs font-bold text-red-600">⚠️ 此題對應條文已修正</p>
+              {q.deprecated_reason && (
+                <p className="text-xs text-red-500 mt-0.5 leading-relaxed">{q.deprecated_reason}</p>
+              )}
+              <p className="text-[11px] text-red-400 mt-1">原答案僅供歷史參考,本題不計入弱點與任務進度</p>
+            </div>
+          )}
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
           <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
         </div>
@@ -473,6 +585,9 @@ function PracticeGame({ config, onFinish }) {
               session={q?.session}
               number={q?.number}
               disputed={q?.disputed}
+              subjectTags={q?.subject_tags}
+              meta={explainMeta}
+              onVote={explainVote}
             />
             {q?.id && <CommentSection targetId={`q_${q.id}`} />}
           </div>
@@ -517,9 +632,9 @@ function PracticeResults({ result, config, onRestart, onHome }) {
       stage: config.stage, diff: config.diff, count: config.count,
       correct, total, myScore: result.myScore, aiScore: result.aiScore,
     })
-    // Submit per-question stats
+    // Submit per-question stats (skip deprecated questions)
     if (result.log && result.log.length > 0) {
-      const stats = result.log.filter(q => q.id).map(q => ({
+      const stats = result.log.filter(q => q.id && !q.is_deprecated).map(q => ({
         questionId: q.id,
         correct: q.user_answer === q.answer,
       }))
@@ -574,18 +689,16 @@ function PracticeResults({ result, config, onRestart, onHome }) {
           {pct < 70 ? '正確率未達 70%，無金幣獎勵' : won ? '🏆 你贏了！+60 金幣' : '💪 繼續加油！+20 金幣'}
         </p>
 
-        {/* LINE Share */}
-        <button
-          onClick={() => {
-            const stageName = config.stageName || '隨機'
-            const text = `國考知識王｜${stageName} ${pct}% (${correct}/${total})\n${won ? '🏆 贏了！' : '💪 繼續加油'}\n一起來挑戰 👉 ${window.location.origin}`
-            window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(window.location.origin)}&text=${encodeURIComponent(text)}`, '_blank')
-          }}
-          className="flex items-center justify-center gap-2 bg-[#06C755] text-white font-bold px-6 py-3 rounded-2xl active:scale-95 transition-transform shadow-lg"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 4.21 3.74 7.74 8.79 8.4.34.07.81.23.93.52.1.27.07.68.03.95l-.15.9c-.05.27-.21 1.07.94.58 1.15-.49 6.2-3.65 8.46-6.25C22.97 13.35 22 11.03 22 10.5 22 5.82 17.52 2 12 2z"/></svg>
-          分享到 LINE
-        </button>
+        {/* Share challenge — Web Share API → clipboard fallback, deep-links receiver */}
+        <ShareChallengeButton
+          exam={usePlayerStore.getState().exam || 'doctor1'}
+          subject={config.stage || null}
+          examName={getExamConfig(usePlayerStore.getState().exam || 'doctor1')?.name || '國考'}
+          subjectName={config.stageName || null}
+          correct={correct}
+          total={total}
+          mode="practice"
+        />
       </div>
 
       <div className="px-5 pb-12 flex flex-col gap-3">
@@ -623,6 +736,14 @@ export default function Practice() {
   const [phase, setPhase]   = useState('setup')  // setup | game | results
   const [config, setConfig] = useState(null)
   const [result, setResult] = useState(null)
+  const examId = usePlayerStore(s => s.exam) || 'doctor1'
+  const examCfg = getExamConfig(examId)
+  const examName = examCfg?.name || '國考'
+  usePageMeta(
+    `${examName} 練習模式`,
+    `${examName}歷屆考古題線上練習，涵蓋所有科目與年度，支援大水庫模式、AI 解說、即時對戰，免費使用！`,
+    { canonical: `https://examking.tw/practice?exam=${examId}` }
+  )
 
   if (phase === 'setup') {
     return <SetupScreen onStart={cfg => { setConfig(cfg); setPhase('game') }} onBack={() => navigate('/')} />

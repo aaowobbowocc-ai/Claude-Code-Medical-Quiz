@@ -15,7 +15,7 @@ function ReviewCard({ q, index }) {
   const [showFolderPick, setShowFolderPick] = useState(false)
   const { isBookmarked, getFolder, folders, addToFolder, removeBookmark, getFolderQuestions, MAX_PER_FOLDER } = useBookmarks()
   const bookmarked = isBookmarked(q)
-  const { text: explainText, loading: explainLoading, limitHit, notEnoughCoins, explain, remaining, cost: explainCost } = useExplain()
+  const { text: explainText, loading: explainLoading, limitHit, notEnoughCoins, explain, remaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
 
   const answerColor = '#10B981'   // green for correct
   const wrongColor  = '#EF4444'   // red for wrong
@@ -125,6 +125,9 @@ function ReviewCard({ q, index }) {
               session={q.session}
               number={q.number}
               disputed={q.disputed}
+              subjectTags={q.subject_tags}
+              meta={explainMeta}
+              onVote={explainVote}
             />
             {q.id && <CommentSection targetId={`q_${q.id}`} />}
           </div>

@@ -1,0 +1,72 @@
+{
+  "id": "civil-elementary-general",
+  "name": "初等考試 一般行政",
+  "short": "初考行政",
+  "icon": "🏛️",
+  "category": "civil-service",
+  "subCategory": "初考",
+  "level": "elementary",
+  "selectionType": "quota",
+  "persona": ["civil-exam-prep", "elementary-seeker", "career-changer"],
+  "sharedBanks": ["common_constitution", "common_law_basics", "common_chinese", "common_english"],
+  "sharedScope": "level_5_common",
+  "uxHints": {
+    "defaultMode": "reservoir",
+    "longText": true
+  },
+  "questionsFile": null,
+  "totalQ": 0,
+  "passScore": 0,
+  "passRate": 0,
+  "papers": [
+    {
+      "id": "constitution_law_basics",
+      "name": "公民與英文（含憲法、法緒）",
+      "subject": "公民與英文",
+      "subjects": "公民、憲法常識、法學大意、英文",
+      "count": 0
+    },
+    {
+      "id": "chinese",
+      "name": "國文",
+      "subject": "國文",
+      "subjects": "閱讀測驗、修辭、應用文",
+      "count": 0
+    },
+    {
+      "id": "public_admin",
+      "name": "行政學大意",
+      "subject": "行政學大意",
+      "subjects": "公共行政入門概念",
+      "count": 0
+    },
+    {
+      "id": "law_basics_general",
+      "name": "法學大意",
+      "subject": "法學大意",
+      "subjects": "法律基本知識、各部門法常識",
+      "count": 0
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" }
+  ],
+  "ui": {
+    "tagNames": {},
+    "stageStyles": {},
+    "subjectColors": {}
+  },
+  "seo": {
+    "platformName": "國考知識王 — 初等考試一般行政題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "初等考試 一般行政",
+    "shortName": "初考",
+    "studentType": "五等公職、初考應考者、轉職應考者",
+    "years": "114 起（拓荒中）",
+    "totalQ": 0,
+    "examDesc": "公務人員初等考試一般行政類科，由考選部舉辦，採名額制錄取，為公職入門考試。",
+    "paperDesc": "共同科目（國文、公民與英文）+ 專業科目（行政學大意、法學大意）。",
+    "subjects": "公民與英文、國文、行政學大意、法學大意",
+    "mockDesc": "初考一般行政模擬考（拓荒中）"
+  }
+}

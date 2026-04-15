@@ -4,7 +4,7 @@
     "label": "醫事檢驗師",
     "scraped_at": "2026-04-10T01:56:03.736Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-04-14T11:49:13.537Z"
+    "last_updated": "2026-04-15T03:29:16.876Z"
   },
   "total": 5280,
   "questions": [
@@ -12687,12 +12687,12 @@
       "subject_name": "臨床血液學與血庫學",
       "stage_id": 0,
       "number": 67,
-      "question": "有關白血球之輸血反應作用機轉，下列敘述何者錯誤？",
+      "question": "有關急性呼吸窘迫症候群（acute respiratory distress syndrome, ARDS）的敘述，下列何者錯誤？",
       "options": {
-        "A": "lloimmunization）",
-        "B": "HLA 抗體異體免疫是受血者抗原呈現細胞（antigen presenting cell）造成HLA   致敏化的關鍵（HLA",
-        "C": "輸入之淋巴球對抗受血者之反應，可導致輸血相關移植物抗宿主反應（transfusion associated graft vs. host reaction）",
-        "D": "輸入之顆粒球抗體與顆粒球結合，可導致輸血相關急性肺損傷（transfusion related acute lung injury）"
+        "A": "成因是急性瀰漫性肺泡損害，肺泡微血管通透性增加，造成肺水腫及呼吸窘迫",
+        "B": "臨床表現為呼吸衰竭、動脈血氣分壓過低",
+        "C": "造成的原因為休克、吸入胃酸、溺水、嚴重感染等",
+        "D": "病理觀察到的玻璃膜（hyaline membrane）主要堆積在肺微血管壁上"
       },
       "answer": "B",
       "explanation": ""
@@ -33342,12 +33342,12 @@
       "subject_name": "醫學分子檢驗學與臨床鏡檢學",
       "stage_id": 0,
       "number": 51,
-      "question": "癌症患者的腫瘤組織可以藉由 PCR 放大一段 microsatellite repeat locus 的DNA片段，並由 capillary electrophoresis 分析檢測是否具有 loss of heterozygosity（LOH）。正常組織的分析圖型如圖示： 下列何種分析圖形出現時可以判斷為該腫瘤具LOH的現象？",
+      "question": "肥胖（obesity）可增加疾病風險，下列何種疾病與肥胖最無關？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "男性大腸癌",
+        "B": "子宮內膜癌",
+        "C": "高血脂",
+        "D": "第一型糖尿病"
       },
       "answer": "C",
       "explanation": "",
@@ -33812,12 +33812,12 @@
       "subject_name": "醫學分子檢驗學與臨床鏡檢學",
       "stage_id": 0,
       "number": 74,
-      "question": "DNA桑格定序法（Sanger sequencing）結果分別呈現如下列四選項，何者最可能是核苷酸插入（insertion）或 刪去（deletion）突變所造成？",
+      "question": "關於神經退化性疾病的分子機轉之敘述，下列何者較不正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "Alzheimer disease的形成與Aβ及tau蛋白之異常堆積有關",
+        "B": "tau蛋白之基因突變可能造成frontotemporal lobar degeneration",
+        "C": "Parkinson disease之成因與α-synuclein形成之神經元內包涵體有關",
+        "D": "Huntington disease與TDP43基因之CAG trinucleotide重複序列之大幅縮短有關"
       },
       "answer": "D",
       "explanation": "",
@@ -40931,12 +40931,12 @@
       "subject_name": "臨床血液學與血庫學",
       "stage_id": 0,
       "number": 28,
-      "question": "Sézary Syndrome是一罕見的T細胞淋巴癌，但卻是最常見的皮膚T細胞淋巴癌，下列何種細胞最可能是Sézary cell？",
+      "question": "平靜吸氣後，再盡力吸氣至最大程度，所吸入的氣體量稱為：",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "潮氣容積（tidal volume, TV）",
+        "B": "功能餘氣量（functional residual capacity, FRC）",
+        "C": "吸氣儲備容積（inspiratory reserve volume, IRV）",
+        "D": "肺活量（vital capacity, VC）"
       },
       "answer": "A",
       "explanation": "",
@@ -43538,12 +43538,12 @@
       "subject_name": "醫學分子檢驗學與臨床鏡檢學",
       "stage_id": 0,
       "number": 77,
-      "question": "某大腸癌病人的血液與腫瘤組織的 DNA 以 PCR 放大一個 microsatellite repeat locus 的片段。正常組織的分析 圖型如圖示。而腫瘤組織的 PCR 產物經由 DNA sequencer 分析後，發現其有 microsatellite instability 的現象。 下列何者是最有可能的分析圖型？",
+      "question": "下列關於肌萎縮性側索硬化症（amyotrophic lateral sclerosis）的敘述，何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "影響大腦、腦幹及脊髓之運動神經元",
+        "B": "部分是因銅鋅超氧化歧化酶（copper-zinc superoxide dismutase, SOD1）基因突變造成",
+        "C": "有路易氏小體（Lewy bodies）堆積在運動神經元之中",
+        "D": "好發於中年人（40～50歲）"
       },
       "answer": "D",
       "explanation": "",
@@ -46899,12 +46899,12 @@
       "subject_name": "臨床血清免疫學與臨床病毒學",
       "stage_id": 0,
       "number": 4,
-      "question": "在輔助性T細胞活化時，下列何種示意圖代表呈獻抗原的MHC分子？",
+      "question": "心電圖PR區間（PR interval）大於0.20秒時，最可能的診斷為何？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "第一度房室傳導阻斷",
+        "B": "第二度房室傳導阻斷",
+        "C": "完全房室傳導阻斷",
+        "D": "伍爾夫－巴金森－懷特症候群（Wolff–Parkinson–White syndrome）"
       },
       "answer": "C",
       "explanation": "",
@@ -48921,8 +48921,8 @@
       "options": {
         "A": "氮洗去法（nitrogen wash out test）",
         "B": "氦稀釋法（helium dilution test）",
-        "C": "O ）",
-        "D": "一氧化碳肺瀰散量測定（DL"
+        "C": "人體體箱計法（body plethysmography）",
+        "D": "一氧化碳肺瀰散量測定（DLCO）"
       },
       "answer": "C",
       "explanation": ""
@@ -49782,8 +49782,8 @@
       "number": 67,
       "question": "有關庫欣氏症候群（Cushing syndrome）之敘述，下列何者錯誤？",
       "options": {
-        "A": "CTH）值會下降",
-        "B": "如因腎上腺腺瘤（adrenocortical adenoma）所引起的，血液中促腎上腺皮質素（adrenocorticotrophic hormone,",
+        "A": "如因庫欣氏病（Cushing disease）所引起的，血液中促腎上腺皮質素（adrenocorticotrophic hormone, ACTH）值會下降",
+        "B": "如因腎上腺腺瘤（adrenocortical adenoma）所引起的，血液中促腎上腺皮質素（adrenocorticotrophic hormone,ACTH）值會下降",
         "C": "肺小細胞癌（small cell carcinoma）可引起此一症候群",
         "D": "長期服用類固醇（steroid）藥物是臨床上造成此一症候群最常見的原因"
       },
@@ -54644,12 +54644,12 @@
       "subject_name": "微生物學與臨床微生物學",
       "stage_id": 0,
       "number": 69,
-      "question": "下列何者為Trichophyton屬的大分生孢子形態？",
+      "question": "遺傳性非息肉大腸直腸癌（hereditary nonpolyposis colorectal cancer）又稱為林奇綜合症（Lynch syndrome），和大腸及多種器官的癌症有關，下列何種基因突變是致病的主因？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "MSH2",
+        "B": "PTEN",
+        "C": "SMAD4",
+        "D": "TSC1"
       },
       "answer": "D",
       "explanation": "",
@@ -68199,12 +68199,12 @@
       "subject_name": "臨床生理學與病理學",
       "stage_id": 0,
       "number": 22,
-      "question": "患者因呼吸困難至急診就診，進行血液氣體分析檢查",
+      "question": "患者因呼吸困難至急診就診，進行血液氣體分析檢查，下列操作何者正確？",
       "options": {
         "A": "因動脈血及靜脈血結果差異不大，可抽靜脈血做氣體分析即可",
-        "B": "因血管很細不好抽血，直接在頸動脈抽血較易找到血管",
-        "C": "送檢的採血管應加入抗凝劑如肝素（",
-        "D": "若有延遲送檢會影響分析結果，故採血管在"
+        "B": "因血管很細不好抽血，直接在頸動脈抽血較易找到血管，而且也相對安全",
+        "C": "送檢的採血管應加入抗凝劑如肝素（heparin）密封、冰浴並快速送檢",
+        "D": "若有延遲送檢會影響分析結果，故採血管在37°C 保存下，應在2 小時內完成檢驗"
       },
       "answer": "C",
       "explanation": ""
@@ -69913,12 +69913,12 @@
       "subject_name": "臨床血液學與血庫學",
       "stage_id": 0,
       "number": 27,
-      "question": "有關嗜酸性球（eosinophil）之特性，",
+      "question": "下列何種姿勢下的一氧化碳肺瀰散量（DLCO）最大？",
       "options": {
-        "A": "初級顆粒主要含有酸性蛋白質",
-        "B": "次級顆粒主要含有Chartcot-Leyden結晶蛋白質",
-        "C": "骨髓中的嗜酸性球，多屬髓前（promyelocytic",
-        "D": "成熟的嗜酸性球，細胞核常為雙葉（"
+        "A": "坐姿",
+        "B": "站姿",
+        "C": "平躺",
+        "D": "側躺"
       },
       "answer": "D",
       "explanation": ""
@@ -89427,12 +89427,12 @@
       "subject_name": "臨床血液學與血庫學",
       "stage_id": 0,
       "number": 37,
-      "question": "下列何者不是造成 neutropenia的原因",
+      "question": "當超音波的波長為0.8 mm，頻率為2 MHz，則傳導速度為何（m/s）？",
       "options": {
-        "A": "Fulminant bacterial infection（",
-        "B": "Systemic lupus erythematosus",
-        "C": "Myelodysplastic syndrome",
-        "D": "Hyposplenism"
+        "A": "160",
+        "B": "320",
+        "C": "1,600",
+        "D": "3,200"
       },
       "answer": "D",
       "explanation": ""
@@ -91477,12 +91477,12 @@
       "subject_name": "醫學分子檢驗學與臨床鏡檢學",
       "stage_id": 0,
       "number": 59,
-      "question": " NPM1基因的變異常出現在血液腫瘤中，其中最常見的是在第十二外顯子（exon 12）有4 bp的插入 （insertion）突變。假設野生型的序列為GCTATTCAAGATCTCTG ▼ GCAGTGGAGGAAGTCTCTT， ▼ 表示突變插入處。 若以傳統的聚合酶連鎖反應配合桑格定序（Sanger sequencing），則最有可能有插入突變的定序圖為何？",
+      "question": "與子宮頸癌最相關之人類乳突病毒（HPV）為： �①HPV6 ②HPV11   ③HPV16   ④HPV18",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "①②",
+        "B": "①③",
+        "C": "②④",
+        "D": "③④"
       },
       "answer": "C",
       "explanation": "",
@@ -100827,12 +100827,12 @@
       "subject_name": "醫學分子檢驗學與臨床鏡檢學",
       "stage_id": 0,
       "number": 50,
-      "question": " 利用解離曲線分析法（melting curve analysis）進行單一核苷酸多型性（single nucleotide polymorphism, SNP）的檢測；下圖中的何種曲線是C/T異型合子（heterozygote）樣本的檢驗結果？",
+      "question": "有關體溫過高之敘述，下列何者錯誤？",
       "options": {
-        "A": "B、C曲線",
-        "B": "僅B、C曲線",
-        "C": "僅A、C曲線",
-        "D": ""
+        "A": "發燒（fever）是下視丘體溫調節中樞將體溫設定值調高",
+        "B": "中暑（heat stroke）是下視丘體溫調節中樞將體溫設定值調高",
+        "C": "中暑時體溫調節系統及散熱機能發生障礙，無法將體內多餘的熱散發出去",
+        "D": "中暑易發生於嬰幼兒、老年人、過度運動或體能操練及心臟血管病患"
       },
       "answer": "D",
       "explanation": "",

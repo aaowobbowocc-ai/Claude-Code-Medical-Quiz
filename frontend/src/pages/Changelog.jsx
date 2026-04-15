@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
+import { usePlayerStore } from '../store/gameStore'
 
 const TAG_STYLE = {
   reply:   { label: '回覆', bg: 'bg-purple-50', text: 'text-purple-600', border: 'border-purple-200' },
@@ -8,6 +9,21 @@ const TAG_STYLE = {
   fix:     { label: '修正', bg: 'bg-red-50', text: 'text-red-600', border: 'border-red-200' },
   improve: { label: '改善', bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-200' },
   notice:  { label: '公告', bg: 'bg-amber-50', text: 'text-amber-600', border: 'border-amber-200' },
+}
+
+const CLAIMED_KEY = 'changelog-claimed-rewards'
+export const CHANGELOG_LAST_SEEN_KEY = 'changelog-last-seen'
+
+function getClaimedIds() {
+  try { return new Set(JSON.parse(localStorage.getItem(CLAIMED_KEY) || '[]')) }
+  catch { return new Set() }
+}
+function markClaimed(id) {
+  try {
+    const set = getClaimedIds()
+    set.add(id)
+    localStorage.setItem(CLAIMED_KEY, JSON.stringify([...set]))
+  } catch {}
 }
 
 function TagBadge({ tag }) {
@@ -26,15 +42,34 @@ function formatDate(dateStr) {
 
 export default function Changelog() {
   const navigate = useNavigate()
+  const addCoins = usePlayerStore(s => s.addCoins)
   const [entries, setEntries] = useState([])
   const [loading, setLoading] = useState(true)
+  const [claimed, setClaimed] = useState(getClaimedIds())
+  const [flashReward, setFlashReward] = useState(null)
 
   useEffect(() => {
     fetch('/changelog.json')
       .then(r => r.json())
-      .then(data => { setEntries(data); setLoading(false) })
+      .then(data => {
+        setEntries(data)
+        setLoading(false)
+        // Mark the newest entry as "seen" so the badge disappears next time
+        if (data[0]?.date) {
+          try { localStorage.setItem(CHANGELOG_LAST_SEEN_KEY, data[0].date) } catch {}
+        }
+      })
       .catch(() => setLoading(false))
   }, [])
+
+  const handleClaim = (reward) => {
+    if (!reward?.id || claimed.has(reward.id)) return
+    addCoins(reward.coins || 0)
+    markClaimed(reward.id)
+    setClaimed(new Set([...claimed, reward.id]))
+    setFlashReward({ id: reward.id, coins: reward.coins })
+    setTimeout(() => setFlashReward(null), 2400)
+  }
 
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
@@ -93,6 +128,28 @@ export default function Changelog() {
                     </li>
                   ))}
                 </ul>
+
+                {/* Reward claim (per-entry, device-local) */}
+                {entry.reward && (() => {
+                  const isClaimed = claimed.has(entry.reward.id)
+                  return (
+                    <button
+                      onClick={() => handleClaim(entry.reward)}
+                      disabled={isClaimed}
+                      className={`mt-3 w-full flex items-center justify-center gap-2 font-bold py-3 rounded-2xl transition-transform active:scale-95 ${
+                        isClaimed
+                          ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                          : 'bg-gradient-to-r from-amber-400 to-yellow-500 text-white shadow-lg animate-pulse'
+                      }`}
+                    >
+                      {isClaimed ? (
+                        <>✓ 已領取 {entry.reward.label || '補償'} +{entry.reward.coins} 金幣</>
+                      ) : (
+                        <>💰 點此領取 {entry.reward.label || '更新補償'} +{entry.reward.coins} 金幣</>
+                      )}
+                    </button>
+                  )
+                })()}
               </div>
             ))}
           </div>
@@ -104,6 +161,12 @@ export default function Changelog() {
       </div>
 
       <Footer />
+
+      {flashReward && (
+        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-yellow-500 text-white font-bold px-6 py-3 rounded-full shadow-2xl z-50 pointer-events-none animate-bounce">
+          🎉 +{flashReward.coins} 金幣已入袋!
+        </div>
+      )}
     </div>
   )
 }

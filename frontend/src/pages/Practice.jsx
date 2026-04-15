@@ -296,7 +296,7 @@ function SetupScreen({ onStart, onBack }) {
 }
 
 /* ── Practice game screen ─────────────────────────────────────── */
-function PracticeGame({ config, onFinish }) {
+function PracticeGame({ config, onFinish, onExit }) {
   const { play } = useSound()
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
   const diffConfig = DIFFICULTIES.find(d => d.id === config.diff)
@@ -428,6 +428,15 @@ function PracticeGame({ config, onFinish }) {
       <div className="px-4 pt-12 pb-3 grad-header">
         {/* Progress */}
         <div className="flex items-center justify-between text-white text-xs mb-1.5">
+          <button
+            onClick={() => {
+              if (window.confirm('確定要退出練習？目前進度將不會保存。')) onExit?.()
+            }}
+            className="text-white/60 text-sm active:opacity-70 transition-opacity -ml-1"
+            aria-label="退出練習"
+          >
+            ✕ 退出
+          </button>
           <span>{stageInfo.icon} {stageInfo.name}</span>
           <span className="font-bold">{qIdx + 1} / {questions.length}</span>
         </div>
@@ -766,7 +775,13 @@ export default function Practice() {
     return <SetupScreen onStart={cfg => { setConfig(cfg); setPhase('game') }} onBack={() => navigate('/')} />
   }
   if (phase === 'game') {
-    return <PracticeGame config={config} onFinish={r => { setResult(r); setPhase('results') }} />
+    return (
+      <PracticeGame
+        config={config}
+        onFinish={r => { setResult(r); setPhase('results') }}
+        onExit={() => navigate('/')}
+      />
+    )
   }
   return (
     <PracticeResults

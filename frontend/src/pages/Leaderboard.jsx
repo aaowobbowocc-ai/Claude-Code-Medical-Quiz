@@ -22,6 +22,14 @@ const CATEGORY_FILTERS = [
   { id: 'civil-service',    label: '公職'   },
 ]
 
+// Achievement badges awarded via crowdsourced maintenance / exam pioneering.
+// legal_guardian is the only one wired this phase; the others are reserved.
+const ACHIEVEMENT_BADGES = {
+  legal_guardian:  { icon: '🛡️', title: '法律衛道人士', suffix: '已修正 {n} 題過時法條' },
+  exam_pioneer:    { icon: '⭐',  title: '考試拓荒者',   suffix: '前 {n} 名首批挑戰者'   },
+  disputed_hunter: { icon: '🎯',  title: '爭議題獵人',   suffix: '回報 {n} 題爭議題被採納' },
+}
+
 export default function Leaderboard() {
   const navigate = useNavigate()
   usePageMeta('排行榜', '國考知識王每週排行榜，看看誰是最強國考挑戰者！')
@@ -141,6 +149,17 @@ export default function Leaderboard() {
                     </span>
                   )}
                   <p className="font-bold text-gray-800 text-sm truncate">{p.name}</p>
+                  {p.achievements && Object.entries(p.achievements).map(([aid, cnt]) => {
+                    const def = ACHIEVEMENT_BADGES[aid]
+                    if (!def || !cnt) return null
+                    return (
+                      <span key={aid}
+                            title={`${def.title}・${def.suffix.replace('{n}', cnt)}`}
+                            className="text-sm leading-none">
+                        {def.icon}
+                      </span>
+                    )
+                  })}
                 </div>
                 <p className="text-xs text-gray-400 mt-0.5">
                   {p.level ? `${getLevelTitle(p.level).icon} ${getLevelTitle(p.level).title} · ` : ''}{p.played} 場 · 正確率 {p.pct}%

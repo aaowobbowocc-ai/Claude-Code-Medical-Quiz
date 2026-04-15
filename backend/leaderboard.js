@@ -31,9 +31,12 @@ function getWeekKey() {
   return `${d.getFullYear()}-W${String(week).padStart(2, '0')}`;
 }
 
-async function recordScore(name, correct, total, level, examId) {
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+async function recordScore(name, correct, total, level, examId, userId) {
   if (!supabase) return;
   const week = getWeekKey();
+  const cleanUserId = typeof userId === 'string' && UUID_RE.test(userId) ? userId : null;
 
   const { data: existing } = await supabase
     .from('leaderboard')
@@ -52,6 +55,7 @@ async function recordScore(name, correct, total, level, examId) {
       updated_at: new Date().toISOString(),
     };
     if (examId) update.exam_id = examId;
+    if (cleanUserId) update.user_id = cleanUserId;
     await supabase.from('leaderboard').update(update).eq('id', existing.id);
   } else {
     await supabase.from('leaderboard').insert({
@@ -62,6 +66,7 @@ async function recordScore(name, correct, total, level, examId) {
       score: correct * 10,
       level: level !== undefined ? level : null,
       exam_id: examId || null,
+      user_id: cleanUserId,
     });
   }
 }
@@ -74,12 +79,33 @@ function registerRoutes(app) {
 
     const { data } = await supabase
       .from('leaderboard')
-      .select('name, played, correct, total, score, level, exam_id')
+      .select('name, played, correct, total, score, level, exam_id, user_id')
       .eq('week', week)
       .order('score', { ascending: false })
       .limit(200);
 
     const raw = data || [];
+
+    // Fetch achievements for any rows with a user_id. Guarded in try/catch —
+    // if migration 003 hasn't run yet, we fall back to empty achievements
+    // rather than 500-ing the entire leaderboard.
+    const userIds = [...new Set(raw.map(d => d.user_id).filter(Boolean))];
+    const achievementsByUser = {};
+    if (userIds.length > 0) {
+      try {
+        const { data: ach } = await supabase
+          .from('user_achievements')
+          .select('user_id, achievement_id, count')
+          .in('user_id', userIds);
+        for (const a of ach || []) {
+          if (!achievementsByUser[a.user_id]) achievementsByUser[a.user_id] = {};
+          achievementsByUser[a.user_id][a.achievement_id] = a.count || 1;
+        }
+      } catch (e) {
+        // table missing or RLS blocking — degrade gracefully
+      }
+    }
+
     const enriched = raw.map(d => {
       const cat = d.exam_id ? (examIdToCategory[d.exam_id] || null) : null;
       const selection = d.exam_id ? (examIdToSelectionType[d.exam_id] || 'license') : 'license';
@@ -94,6 +120,7 @@ function registerRoutes(app) {
         examId: d.exam_id || null,
         category: cat,
         selectionType: selection,
+        achievements: d.user_id ? (achievementsByUser[d.user_id] || {}) : {},
       };
     });
 
@@ -132,7 +159,7 @@ function registerRoutes(app) {
   });
 
   app.post('/leaderboard/submit', require('express').json(), async (req, res) => {
-    const { name, correct, total, level, examId } = req.body;
+    const { name, correct, total, level, examId, userId } = req.body;
     if (!name || typeof correct !== 'number' || typeof total !== 'number') {
       return res.status(400).json({ error: 'invalid' });
     }
@@ -142,6 +169,7 @@ function registerRoutes(app) {
       total,
       typeof level === 'number' ? level : undefined,
       typeof examId === 'string' ? examId.slice(0, 40) : undefined,
+      typeof userId === 'string' ? userId : undefined,
     );
     res.json({ ok: true });
   });

@@ -12,6 +12,7 @@ import { useBookmarks } from '../hooks/useBookmarks'
 import { useAccuracyStore } from '../store/accuracyStore'
 import { usePageMeta } from '../hooks/usePageMeta'
 import ShareChallengeButton from '../components/ShareChallengeButton'
+import { supabase } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -645,19 +646,28 @@ function PracticeResults({ result, config, onRestart, onHome }) {
         }).catch(() => {})
       }
     }
-    // Submit to leaderboard
+    // Submit to leaderboard — attach userId so legal_guardian badge (and future
+    // achievements) can be joined back on the leaderboard endpoint.
     const playerName = usePlayerStore.getState().name
     if (playerName) {
-      fetch(`${BACKEND}/leaderboard/submit`, {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: playerName,
-          correct,
-          total,
-          level: usePlayerStore.getState().level,
-          examId: usePlayerStore.getState().exam,
-        }),
-      }).catch(() => {})
+      ;(async () => {
+        let userId = null
+        try {
+          const { data } = await supabase?.auth.getSession() || {}
+          userId = data?.session?.user?.id || null
+        } catch {}
+        fetch(`${BACKEND}/leaderboard/submit`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: playerName,
+            correct,
+            total,
+            level: usePlayerStore.getState().level,
+            examId: usePlayerStore.getState().exam,
+            userId,
+          }),
+        }).catch(() => {})
+      })()
     }
   }, [])
 

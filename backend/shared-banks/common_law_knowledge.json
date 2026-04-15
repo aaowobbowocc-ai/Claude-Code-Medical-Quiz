@@ -2,8 +2,8 @@
   "bankId": "common_law_knowledge",
   "name": "法學知識與英文",
   "description": "高考三等／普考共通科目：法學知識與英文（含中華民國憲法、法學緒論、英文）",
-  "bankVersion": 2,
-  "last_synced_at": "2026-04-15T05:01:27.859Z",
+  "bankVersion": 3,
+  "last_synced_at": "2026-04-16T00:00:00.000Z",
   "levels": [
     "senior",
     "junior"
@@ -540,7 +540,7 @@
         "law_knowledge_combined"
       ],
       "number": 23,
-      "question": "Lina had toquality time with her family before she passed the lawyer license examination.",
+      "question": "Lina had to _____ quality time with her family before she passed the lawyer license examination.",
       "options": {
         "A": "constitute",
         "B": "guarantee",
@@ -566,7 +566,7 @@
         "law_knowledge_combined"
       ],
       "number": 25,
-      "question": "Even with the restaurant’s the-customer-is-always-right policy, the waiter was stillby the guests’ rudeattitudes and languages.",
+      "question": "Even with the restaurant’s the-customer-is-always-right policy, the waiter was still _____ by the guests’ rude attitudes and languages.",
       "options": {
         "A": "irritated",
         "B": "furnished",
@@ -592,7 +592,7 @@
         "law_knowledge_combined"
       ],
       "number": 26,
-      "question": "Blown out of the open window by a sudden breeze, the letterto the ground below.",
+      "question": "Blown out of the open window by a sudden breeze, the letter _____ to the ground below.",
       "options": {
         "A": "abated",
         "B": "elicited",
@@ -618,7 +618,7 @@
         "law_knowledge_combined"
       ],
       "number": 27,
-      "question": "You should not listen to other people’s private conversations; it is not polite to.",
+      "question": "You should not listen to other people’s private conversations; it is not polite to _____.",
       "options": {
         "A": "boost",
         "B": "eavesdrop",
@@ -644,7 +644,7 @@
         "law_knowledge_combined"
       ],
       "number": 28,
-      "question": "Some workers dug up the street near our house, which caused frequentinside.",
+      "question": "Some workers dug up the street near our house, which caused frequent _____ inside.",
       "options": {
         "A": "stimulants",
         "B": "simulation",
@@ -670,7 +670,7 @@
         "law_knowledge_combined"
       ],
       "number": 29,
-      "question": "Refugees were forced to leave their country to find safety in another country because of.",
+      "question": "Refugees were forced to leave their country to find safety in another country because of _____.",
       "options": {
         "A": "persecution",
         "B": "recognition",
@@ -696,7 +696,7 @@
         "law_knowledge_combined"
       ],
       "number": 30,
-      "question": "Aof 7.0 earthquake attacked the northern part of the country so harshly that it caused hundreds of peopleto lose their lives and properties.",
+      "question": "A _____ of 7.0 earthquake attacked the northern part of the country so harshly that it caused hundreds of people to lose their lives and properties.",
       "options": {
         "A": "magnitude",
         "B": "maintenance",
@@ -722,11 +722,11 @@
         "law_knowledge_combined"
       ],
       "number": 32,
-      "question": "International trade allows countries to expand their markets and access goods that may not have been",
+      "question": "International trade allows countries to expand their markets and access goods that may not have been _____ domestically.",
       "options": {
         "A": "available",
-        "B": ".",
-        "C": "domestically",
+        "B": "comparable",
+        "C": "replaceable",
         "D": "analytically"
       },
       "answer": "A",
@@ -734,8 +734,8 @@
       "shared_bank": "common_law_knowledge",
       "parent_id": null,
       "case_context": null,
-      "is_deprecated": false,
-      "deprecated_reason": null
+      "is_deprecated": true,
+      "deprecated_reason": "原始 PDF 選項 B 抽取失敗（為 '.'），選項已由 Claude 推斷，僅供參考；請以考選部原題為準"
     },
     {
       "id": "common_law_knowledge-114-civil-senior-general-34",
@@ -748,7 +748,7 @@
         "law_knowledge_combined"
       ],
       "number": 34,
-      "question": "The payment for the tuition can be made into be paid partially each month until the full amount is paid.",
+      "question": "The payment for the tuition can be made in _____ to be paid partially each month until the full amount is paid.",
       "options": {
         "A": "installment",
         "B": "retail",
@@ -774,7 +774,7 @@
         "law_knowledge_combined"
       ],
       "number": 37,
-      "question": "Music can improve mood, decrease pain and anxiety; it canyou when you are down.",
+      "question": "Music can improve mood, decrease pain and anxiety; it can _____ you when you are down.",
       "options": {
         "A": "elate",
         "B": "amble",
@@ -800,7 +800,7 @@
         "law_knowledge_combined"
       ],
       "number": 38,
-      "question": "Thein the contract led to disputes between the two parties involved, intensifying misunderstandings.",
+      "question": "The _____ in the contract led to disputes between the two parties involved, intensifying misunderstandings.",
       "options": {
         "A": "lucidity",
         "B": "precision",
@@ -826,7 +826,7 @@
         "law_knowledge_combined"
       ],
       "number": 39,
-      "question": "The room waslit, making it difficult to see the details of the painting on the wall.",
+      "question": "The room was _____ lit, making it difficult to see the details of the painting on the wall.",
       "options": {
         "A": "brightly",
         "B": "obviously",
@@ -852,7 +852,7 @@
         "law_knowledge_combined"
       ],
       "number": 40,
-      "question": "As the story, we learned that the boy became an orphan when he was one year old.",
+      "question": "As the story _____, we learned that the boy became an orphan when he was one year old.",
       "options": {
         "A": "allowed",
         "B": "called",
@@ -1762,7 +1762,7 @@
         "law_knowledge_combined"
       ],
       "number": 31,
-      "question": "The school is making additional efforts to educate students about the negativeof drug abuse.",
+      "question": "The school is making additional efforts to educate students about the negative _____ of drug abuse.",
       "options": {
         "A": "decorations",
         "B": "percentages",
@@ -1788,7 +1788,7 @@
         "law_knowledge_combined"
       ],
       "number": 32,
-      "question": "Thefled the scene when they heard the sound of approaching footsteps.",
+      "question": "The _____ fled the scene when they heard the sound of approaching footsteps.",
       "options": {
         "A": "burgers",
         "B": "bulges",
@@ -1814,7 +1814,7 @@
         "law_knowledge_combined"
       ],
       "number": 33,
-      "question": "The constant rainfallthe structure of the old bridge, making it unsafe for vehicles.",
+      "question": "The constant rainfall _____ the structure of the old bridge, making it unsafe for vehicles.",
       "options": {
         "A": "compiles",
         "B": "examines",
@@ -1840,7 +1840,7 @@
         "law_knowledge_combined"
       ],
       "number": 34,
-      "question": "When walking into a crowded room, we cannot help but look forfaces to release our nerves.",
+      "question": "When walking into a crowded room, we cannot help but look for _____ faces to release our nerves.",
       "options": {
         "A": "familiar",
         "B": "panic",
@@ -1866,7 +1866,7 @@
         "law_knowledge_combined"
       ],
       "number": 35,
-      "question": "Many young people abuse drugs without thinking the severe.",
+      "question": "Many young people abuse drugs without thinking the severe _____.",
       "options": {
         "A": "dominance",
         "B": "convenience",
@@ -1892,7 +1892,7 @@
         "law_knowledge_combined"
       ],
       "number": 36,
-      "question": "The attack remains mysterious, and the authorities are not revealing ayet.",
+      "question": "The attack remains mysterious, and the authorities are not revealing a _____ yet.",
       "options": {
         "A": "motive",
         "B": "package",
@@ -1918,7 +1918,7 @@
         "law_knowledge_combined"
       ],
       "number": 37,
-      "question": "Over 50% of the members claimed to have participated in those activities, while only 32% attendedregularly.",
+      "question": "Over 50% of the members claimed to have participated in those activities, while only 32% attended _____ regularly.",
       "options": {
         "A": "occasionally",
         "B": "generously",
@@ -1944,7 +1944,7 @@
         "law_knowledge_combined"
       ],
       "number": 39,
-      "question": "Students can get to know the moon’s features better by observing thesurface through telescopes.",
+      "question": "Students can get to know the moon’s features better by observing the _____ surface through telescopes.",
       "options": {
         "A": "civil",
         "B": "grave",
@@ -1970,7 +1970,7 @@
         "law_knowledge_combined"
       ],
       "number": 40,
-      "question": "Each student is a unique, different in ability, interests, potential, and learning styles.",
+      "question": "Each student is a unique _____, different in ability, interests, potential, and learning styles.",
       "options": {
         "A": "association",
         "B": "individual",

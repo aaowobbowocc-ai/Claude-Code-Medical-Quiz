@@ -7,14 +7,14 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 export default function SupportSheets({ sheet, setSheet }) {
   const storedName = usePlayerStore(s => s.name) || ''
   const [feedbackText, setFeedbackText] = useState('')
-  const [feedbackName, setFeedbackName] = useState(storedName)
+  const [sendAnonymous, setSendAnonymous] = useState(false)
   const [feedbackSent, setFeedbackSent] = useState(false)
   const [sending, setSending] = useState(false)
 
   const resetFeedback = () => {
     setFeedbackSent(false)
     setFeedbackText('')
-    setFeedbackName(storedName)
+    setSendAnonymous(false)
   }
 
   const sendContact = async () => {
@@ -26,7 +26,7 @@ export default function SupportSheets({ sheet, setSheet }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: feedbackText,
-          name: feedbackName.trim() || undefined,
+          name: sendAnonymous ? undefined : (storedName || undefined),
         }),
       })
       if (res.ok) setFeedbackSent(true)
@@ -97,22 +97,30 @@ export default function SupportSheets({ sheet, setSheet }) {
                   什麼都可以說，我都想聽。
                 </p>
               </div>
-              <input
-                type="text"
-                className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3 text-sm text-gray-700 outline-none focus:border-medical-blue mb-3"
-                placeholder="你的名字（選填，留空則匿名）"
-                maxLength={30}
-                value={feedbackName}
-                onChange={e => setFeedbackName(e.target.value)}
-              />
               <textarea
                 autoFocus
-                className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3.5 text-sm text-gray-700 outline-none focus:border-medical-blue resize-none mb-4 leading-relaxed"
+                className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3.5 text-sm text-gray-700 outline-none focus:border-medical-blue resize-none mb-2 leading-relaxed"
                 rows={5}
                 placeholder="例如：113年第一次第42題答案有疑義、希望新增某功能、或只是說聲謝謝……"
                 value={feedbackText}
                 onChange={e => setFeedbackText(e.target.value)}
               />
+              <div className="flex items-center justify-between mb-4 px-1 text-xs text-gray-400">
+                <span>
+                  {sendAnonymous || !storedName
+                    ? '將以匿名送出'
+                    : <>將以 <span className="font-bold text-medical-dark">{storedName}</span> 送出</>}
+                </span>
+                {storedName && (
+                  <button
+                    type="button"
+                    onClick={() => setSendAnonymous(v => !v)}
+                    className="text-medical-blue underline active:opacity-60"
+                  >
+                    {sendAnonymous ? '改用我的名字' : '改為匿名'}
+                  </button>
+                )}
+              </div>
               <button
                 onClick={sendContact}
                 disabled={!feedbackText.trim() || sending}

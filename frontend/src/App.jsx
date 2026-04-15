@@ -2,6 +2,7 @@ import React, { Suspense, lazy, useState, useEffect } from 'react'
 import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import { useSocket, getSocket } from './hooks/useSocket'
+import { useDocumentMeta } from './hooks/useDocumentMeta'
 import { supabase, consumeOAuthReturnPath } from './lib/supabase'
 import { usePlayerStore, useGameStore } from './store/gameStore'
 import SplashScreen from './components/SplashScreen'
@@ -51,6 +52,7 @@ function PageLoader() {
 
 function AppRoutes() {
   useSocket() // Mount socket listener globally
+  useDocumentMeta() // Sync <title>/<meta>/<canonical> with active exam
   const navigate = useNavigate()
   const location = useLocation()
 

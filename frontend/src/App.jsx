@@ -1,5 +1,5 @@
-import React, { Suspense, lazy, useState, useEffect } from 'react'
-import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom'
+import React, { Suspense, lazy, useState, useEffect, useLayoutEffect } from 'react'
+import { Routes, Route, Navigate, useNavigate, useLocation, useParams } from 'react-router-dom'
 import Home from './pages/Home'
 import { useSocket, getSocket } from './hooks/useSocket'
 import { useDocumentMeta } from './hooks/useDocumentMeta'
@@ -32,6 +32,21 @@ const Privacy        = lazy(() => import('./pages/Privacy'))
 const Terms          = lazy(() => import('./pages/Terms'))
 const Contact        = lazy(() => import('./pages/Contact'))
 const Changelog      = lazy(() => import('./pages/Changelog'))
+
+// Path-based exam landing route. Rendered for URLs like /doctor1/ or
+// /civil-senior-general/ served from prerendered HTML shells (see
+// scripts/generate-shells.cjs). On mount, set the active exam in the
+// store so Home renders the correct dashboard; keep the URL unchanged
+// so the canonical href matches what Google indexed.
+function ExamLandingRoute() {
+  const { examSlug } = useParams()
+  useLayoutEffect(() => {
+    if (!examSlug) return
+    const cfg = getExamConfig(examSlug)
+    if (cfg) usePlayerStore.getState().setExam(examSlug)
+  }, [examSlug])
+  return <Home />
+}
 
 function PageLoader() {
   return (
@@ -198,6 +213,12 @@ function AppRoutes() {
           <Route path="/tos"        element={<Terms />} />
           <Route path="/contact"    element={<Contact />} />
           <Route path="/changelog"  element={<Changelog />} />
+          {/* Per-exam landing: served from prerendered dist/<id>/index.html
+              with baked SEO meta so Googlebot indexes each exam distinctly.
+              React Router ranks static segments above params, so all the
+              routes above still win — only unknown one-segment paths fall
+              through here. */}
+          <Route path="/:examSlug"  element={<ExamLandingRoute />} />
           <Route path="*"          element={<Navigate to="/" />} />
         </Routes>
       </Suspense>

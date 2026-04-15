@@ -29,7 +29,7 @@ function buildExamMeta(cfg) {
   const title = `${fullName}｜國考知識王 — ${categoryLabel || '國考'}線上刷題`
   const base = seo.examDesc || `${fullName}歷屆考古題練習平台，提供模擬考、即時對戰、AI 解說與弱點分析。`
   const description = base.length > 150 ? base.slice(0, 147) + '…' : base
-  const canonical = `https://examking.tw/?exam=${cfg.id}`
+  const canonical = `https://examking.tw/${cfg.id}/`
   return { title, description, canonical, ogUrl: canonical }
 }
 

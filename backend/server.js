@@ -637,6 +637,7 @@ function trackDailyVisit() {
 }
 
 // ── Register modular routes ────────────────────────────────────────────
+leaderboard.configureExams(examConfigs);
 leaderboard.registerRoutes(app);
 questionsApi.registerRoutes(app, examData, stats, examConfigs, { staticCache, browseCache });
 ai.registerRoutes(app, examData, stats);

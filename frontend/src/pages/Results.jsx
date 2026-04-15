@@ -83,7 +83,13 @@ export default function Results() {
       const correct = questionResults.filter(q => q.correct).length
       fetch(`${BACKEND}/leaderboard/submit`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, correct, total: questionResults.length, level: usePlayerStore.getState().level }),
+        body: JSON.stringify({
+          name,
+          correct,
+          total: questionResults.length,
+          level: usePlayerStore.getState().level,
+          examId: usePlayerStore.getState().exam,
+        }),
       }).catch(() => {})
     }
   }, [])

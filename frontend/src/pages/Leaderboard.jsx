@@ -1,10 +1,26 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { getLevelTitle } from '../store/gameStore'
+import { getLevelTitle, usePlayerStore } from '../store/gameStore'
 import { usePageMeta } from '../hooks/usePageMeta'
+import { getExamConfig, getCategoryMeta } from '../config/examRegistry'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const MEDALS = ['🥇', '🥈', '🥉']
+
+// Colour/icon per category — matches persona cards on Home Stage 1
+const CATEGORY_BADGE = {
+  medical:           { icon: '🩺', label: '醫護', color: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
+  'law-professional':{ icon: '🛡️', label: '法律', color: 'bg-sky-50 text-sky-700 border-sky-200' },
+  'civil-service':   { icon: '🏛️', label: '公職', color: 'bg-violet-50 text-violet-700 border-violet-200' },
+  'common-subjects': { icon: '📚', label: '共同', color: 'bg-amber-50 text-amber-700 border-amber-200' },
+}
+
+const CATEGORY_FILTERS = [
+  { id: 'all',              label: '全部'   },
+  { id: 'medical',          label: '醫事'   },
+  { id: 'law-professional', label: '法律'   },
+  { id: 'civil-service',    label: '公職'   },
+]
 
 export default function Leaderboard() {
   const navigate = useNavigate()
@@ -13,9 +29,21 @@ export default function Leaderboard() {
   const [week, setWeek] = useState('')
   const [loading, setLoading] = useState(true)
 
-  const fetchLB = (w) => {
+  // Default category filter = the category of the user's current exam.
+  const currentExam = usePlayerStore(s => s.exam) || 'doctor1'
+  const defaultCategory = useMemo(() => {
+    const cfg = getExamConfig(currentExam)
+    return cfg?.category || 'all'
+  }, [currentExam])
+  const [category, setCategory] = useState(defaultCategory)
+
+  const fetchLB = (w, cat) => {
     setLoading(true)
-    const url = w ? `${BACKEND}/leaderboard?week=${w}` : `${BACKEND}/leaderboard`
+    const params = new URLSearchParams()
+    if (w) params.set('week', w)
+    if (cat && cat !== 'all') params.set('category', cat)
+    const qs = params.toString()
+    const url = qs ? `${BACKEND}/leaderboard?${qs}` : `${BACKEND}/leaderboard`
     fetch(url).then(r => r.json()).then(d => {
       setData(d)
       setWeek(d.week)
@@ -23,7 +51,13 @@ export default function Leaderboard() {
     }).catch(() => setLoading(false))
   }
 
-  useEffect(() => { fetchLB() }, [])
+  useEffect(() => { fetchLB(null, category) }, [category])
+
+  // When the user-selected category's cohort is entirely quota-based, swap the
+  // main score column from raw points to PR percentile — name-by-level exams
+  // care about rank-in-cohort, not absolute points.
+  const players = data?.players || []
+  const showPR = category === 'civil-service' || category === 'law-professional'
 
   return (
     <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
@@ -33,13 +67,30 @@ export default function Leaderboard() {
           <button onClick={() => navigate(-1)} className="text-white/60 text-2xl leading-none">‹</button>
           <h1 className="text-white font-bold text-xl flex-1">🏆 每週排行榜</h1>
         </div>
+
+        {/* Category filter chips */}
+        <div className="flex gap-2 mt-1 overflow-x-auto pb-1 -mx-1 px-1">
+          {CATEGORY_FILTERS.map(f => {
+            const active = f.id === category
+            const count = data?.categoryCounts?.[f.id] ?? (f.id === 'all' ? data?.categoryCounts?.all : undefined)
+            return (
+              <button key={f.id} onClick={() => setCategory(f.id)}
+                      className={`text-xs px-3 py-1.5 rounded-lg shrink-0 font-semibold transition-colors ${
+                        active ? 'bg-white text-medical-blue' : 'bg-white/15 text-white/70'
+                      }`}>
+                {f.label}{typeof count === 'number' && count > 0 ? ` · ${count}` : ''}
+              </button>
+            )
+          })}
+        </div>
+
         {/* Week selector */}
         {data?.availableWeeks?.length > 1 && (
-          <div className="flex gap-2 mt-1 overflow-x-auto pb-1">
+          <div className="flex gap-2 mt-2 overflow-x-auto pb-1 -mx-1 px-1">
             {data.availableWeeks.map(w => (
-              <button key={w} onClick={() => fetchLB(w)}
-                      className={`text-xs px-3 py-1.5 rounded-lg shrink-0 ${
-                        w === week ? 'bg-white text-medical-blue font-bold' : 'bg-white/15 text-white/60'
+              <button key={w} onClick={() => fetchLB(w, category)}
+                      className={`text-[10px] px-2.5 py-1 rounded-md shrink-0 ${
+                        w === week ? 'bg-white text-medical-blue font-bold' : 'bg-white/10 text-white/50'
                       }`}>
                 {w}
               </button>
@@ -56,37 +107,61 @@ export default function Leaderboard() {
           </div>
         )}
 
-        {!loading && (!data?.players || data.players.length === 0) && (
+        {!loading && players.length === 0 && (
           <div className="flex flex-col items-center justify-center py-20 gap-3">
             <span className="text-5xl">🏜️</span>
-            <p className="text-gray-400 text-sm">本週還沒有紀錄</p>
+            <p className="text-gray-400 text-sm">
+              {category === 'all' ? '本週還沒有紀錄' : `此分類本週還沒有紀錄`}
+            </p>
             <p className="text-gray-300 text-xs">練習或對戰後成績會自動上榜</p>
           </div>
         )}
 
-        {!loading && data?.players?.map((p, i) => (
-          <div key={p.name}
-               className={`flex items-center gap-3 px-4 py-3.5 rounded-2xl shadow-sm border ${
-                 i === 0 ? 'bg-amber-50 border-amber-200' :
-                 i === 1 ? 'bg-gray-50 border-gray-200' :
-                 i === 2 ? 'bg-orange-50 border-orange-200' :
-                 'bg-white border-gray-100'
-               }`}>
-            <span className="text-2xl w-8 text-center shrink-0">
-              {MEDALS[i] || <span className="text-sm font-bold text-gray-400">{i + 1}</span>}
-            </span>
-            <div className="flex-1 min-w-0">
-              <p className="font-bold text-gray-800 text-sm truncate">{p.name}</p>
-              <p className="text-xs text-gray-400">
-                {p.level ? `${getLevelTitle(p.level).icon} ${getLevelTitle(p.level).title} · ` : ''}{p.played} 場 · 正確率 {p.pct}%
-              </p>
+        {!loading && players.map((p, i) => {
+          const badge = p.category ? CATEGORY_BADGE[p.category] : null
+          // PR mode: display PR percentile as the primary metric; raw score → sub-line.
+          // Score mode: display score as primary; correct/total → sub-line.
+          const quotaRow = showPR && (p.selectionType === 'quota' || !p.selectionType)
+          return (
+            <div key={`${p.name}-${p.examId || ''}`}
+                 className={`flex items-center gap-3 px-4 py-3.5 rounded-2xl shadow-sm border ${
+                   i === 0 ? 'bg-amber-50 border-amber-200' :
+                   i === 1 ? 'bg-gray-50 border-gray-200' :
+                   i === 2 ? 'bg-orange-50 border-orange-200' :
+                   'bg-white border-gray-100'
+                 }`}>
+              <span className="text-2xl w-8 text-center shrink-0">
+                {MEDALS[i] || <span className="text-sm font-bold text-gray-400">{i + 1}</span>}
+              </span>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  {badge && (
+                    <span className={`text-[9px] px-1.5 py-0.5 rounded border font-semibold ${badge.color}`}>
+                      {badge.icon}{badge.label}
+                    </span>
+                  )}
+                  <p className="font-bold text-gray-800 text-sm truncate">{p.name}</p>
+                </div>
+                <p className="text-xs text-gray-400 mt-0.5">
+                  {p.level ? `${getLevelTitle(p.level).icon} ${getLevelTitle(p.level).title} · ` : ''}{p.played} 場 · 正確率 {p.pct}%
+                </p>
+              </div>
+              <div className="text-right shrink-0">
+                {quotaRow ? (
+                  <>
+                    <p className="font-bold text-lg text-gray-800">PR {p.pr}</p>
+                    <p className="text-[10px] text-gray-400">{p.score} 分</p>
+                  </>
+                ) : (
+                  <>
+                    <p className="font-bold text-lg text-gray-800">{p.score}</p>
+                    <p className="text-[10px] text-gray-400">{p.correct}/{p.total}</p>
+                  </>
+                )}
+              </div>
             </div>
-            <div className="text-right shrink-0">
-              <p className="font-bold text-lg text-gray-800">{p.score}</p>
-              <p className="text-[10px] text-gray-400">{p.correct}/{p.total}</p>
-            </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </div>
   )

@@ -650,7 +650,13 @@ function PracticeResults({ result, config, onRestart, onHome }) {
     if (playerName) {
       fetch(`${BACKEND}/leaderboard/submit`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: playerName, correct, total, level: usePlayerStore.getState().level }),
+        body: JSON.stringify({
+          name: playerName,
+          correct,
+          total,
+          level: usePlayerStore.getState().level,
+          examId: usePlayerStore.getState().exam,
+        }),
       }).catch(() => {})
     }
   }, [])

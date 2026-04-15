@@ -20,8 +20,12 @@ const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','
 
 function ExamPickerContent({ exam, setExam, closeSheet }) {
   const currentCfg = getExamConfig(exam)
-  // Initial stage: if the user already has an active exam, jump straight to that category's Stage 2
-  const initialCategory = currentCfg?.category || null
+  // zustand's `exam` field defaults to 'doctor1' even for brand-new users, so we
+  // can't use it alone to decide "has an exam been chosen yet". Gate on `name`:
+  // no name = truly new user → force Stage 1 persona picker. Existing users
+  // (with a name) jump straight to their current exam's Stage 2.
+  const hasName = !!usePlayerStore.getState().name
+  const initialCategory = hasName ? (currentCfg?.category || null) : null
   const [stage, setStage] = useState(initialCategory ? 'exam-list' : 'persona')
   const [activeCategory, setActiveCategory] = useState(initialCategory || null)
 

@@ -11,7 +11,7 @@ const CATEGORY_LABEL = {
 
 const DEFAULT_META = {
   title: '國考知識王 — 醫事 · 法律 · 公職國考對戰練習平台',
-  description: '免費國家考試題庫練習平台，涵蓋醫事 14 類、公職高普考、法律與共同科目，18,000+ 題考古題。即時對戰、AI 解說、歷屆模擬考、弱點分析，助你高效備考。',
+  description: '免費國家考試題庫練習平台，涵蓋醫事 15 類、公職高普考、法律與共同科目，43,000+ 題考古題。即時對戰、AI 解說、歷屆模擬考、弱點分析，助你高效備考。',
   canonical: 'https://examking.tw/',
   ogUrl: 'https://examking.tw/',
 }

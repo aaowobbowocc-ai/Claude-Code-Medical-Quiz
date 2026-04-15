@@ -84,11 +84,24 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     const mode = resolveMode(req, examId);
     const data = examData[examId] || examData.doctor1;
     const { stage_id, count = 10, limit, offset } = req.query;
-    const tag = stage_id && parseInt(stage_id) > 0
-      ? data.stages.find(s => s.id === parseInt(stage_id))?.tag
+    // stage_id may be numeric (doctor1 classification stages) or a string paper id
+    // (e.g. "paper1" for nursing/pharma/etc — see server.js stages fallback).
+    // Compare as strings so both shapes resolve. '0' / falsy = no filter.
+    const sidStr = stage_id != null ? String(stage_id) : '';
+    const tag = sidStr && sidStr !== '0'
+      ? data.stages.find(s => String(s.id) === sidStr)?.tag
       : null;
     let pool = loadExamQuestions(examId, { mode }).filter(isSingleAnswer);
-    if (tag) pool = pool.filter(q => q.subject_tag === tag);
+    if (tag && tag !== 'all') {
+      // Filter by paper_id (exams with paper-derived stages) OR subject_tag
+      // (doctor1 / pharma etc with classification stages) OR subject_tags array
+      // (shared bank questions).
+      pool = pool.filter(q =>
+        q.paper_id === tag ||
+        q.subject_tag === tag ||
+        (Array.isArray(q.subject_tags) && q.subject_tags.includes(tag))
+      );
+    }
     const target = parseInt(limit != null ? limit : count) || 50;
     const shuffled = shuffle(pool);
     const off = Math.max(0, parseInt(offset) || 0);
@@ -167,15 +180,21 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
       const picked = shuffle(valid).slice(0, target);
       return res.json({ total: picked.length, questions: picked, mode: 'random' });
     }
-    const stageIds = stages.split(',').map(Number);
+    // Stages may be numeric (doctor1) or string paper ids (other exams). Compare as strings.
+    const stageIds = stages.split(',').map(s => s.trim()).filter(Boolean);
     const tags = stageIds
-      .map(id => questionsData.stages.find(s => s.id === id)?.tag)
-      .filter(Boolean);
+      .map(id => questionsData.stages.find(s => String(s.id) === id)?.tag)
+      .filter(Boolean)
+      .filter(t => t !== 'all');
 
     const target = parseInt(count);
     const byTag = {};
     for (const tag of tags) {
-      byTag[tag] = pool.filter(q => isSingleAnswer(q) && q.subject_tag === tag);
+      byTag[tag] = pool.filter(q => isSingleAnswer(q) && (
+        q.paper_id === tag ||
+        q.subject_tag === tag ||
+        (Array.isArray(q.subject_tags) && q.subject_tags.includes(tag))
+      ));
     }
     // Calculate proportional distribution from actual data counts
     const relevantTags = tags.filter(t => byTag[t]?.length > 0);

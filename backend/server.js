@@ -348,9 +348,17 @@ io.on('connection', (socket) => {
 
   // Join room
   socket.on('join_room', ({ code, playerName, playerAvatar, password }) => {
-    const room = rooms.get(code.toUpperCase());
+    const upper = code.toUpperCase();
+    const room = rooms.get(upper);
     if (!room) {
       socket.emit('error', { message: '找不到房間，請確認邀請碼' });
+      return;
+    }
+    // Self-invite guard: same socket already in this room (host tapping their
+    // own share link, or double-tap join). Bounce to lobby without resetting
+    // their existing player entry.
+    if (socket.data.roomCode === upper && room.players.has(socket.id)) {
+      socket.emit('room_joined', { code: upper });
       return;
     }
     if (room.phase !== 'lobby') {

@@ -3,7 +3,7 @@ import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-
 import Home from './pages/Home'
 import { useSocket, getSocket } from './hooks/useSocket'
 import { supabase, consumeOAuthReturnPath } from './lib/supabase'
-import { usePlayerStore } from './store/gameStore'
+import { usePlayerStore, useGameStore } from './store/gameStore'
 import SplashScreen from './components/SplashScreen'
 import ErrorBoundary from './components/ErrorBoundary'
 import FixedBottomAd from './components/FixedBottomAd'
@@ -107,13 +107,22 @@ function AppRoutes() {
     if (!joinCode) return
     const normalized = joinCode.trim().toUpperCase()
     if (!/^[A-Z0-9]{3,8}$/.test(normalized)) return
-    try { sessionStorage.setItem('pending-join-room', normalized) } catch {}
 
-    // Strip the ?join= param so refresh doesn't loop
+    // Strip the ?join= param first so refresh doesn't loop
     const clean = new URLSearchParams(params)
     clean.delete('join')
     const qs = clean.toString()
     navigate(location.pathname + (qs ? `?${qs}` : ''), { replace: true })
+
+    // Self-invite guard: if the user is already in this same room (usually the
+    // host tapping their own share link), don't re-emit join_room — that would
+    // reset their own player entry on the backend. Just bounce them to /lobby.
+    if (useGameStore.getState().roomCode === normalized) {
+      navigate('/lobby', { replace: true })
+      return
+    }
+
+    try { sessionStorage.setItem('pending-join-room', normalized) } catch {}
 
     // If we already have a name, short-circuit: connect + emit immediately.
     const state = usePlayerStore.getState()

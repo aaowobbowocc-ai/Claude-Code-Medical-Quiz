@@ -290,10 +290,14 @@ async function main() {
     { year: '113', code: '113040', session: '第一次' },
     { year: '114', code: '114040', session: '第一次' },
   ]
+  // 法學知識 subject code changes between years!
+  const LAW_KNOWLEDGE_CODES = {
+    '110': '0308', '111': '0310', '112': '0308', '113': '0306', '114': '0305',
+  }
   const SUBJECTS = [
-    { c: '101', s: '0305', name: '法學知識', tag: 'law_knowledge', expectedQ: 50, onlyYears: ['114'] },
+    { c: '101', s: LAW_KNOWLEDGE_CODES, name: '法學知識', tag: 'law_knowledge', expectedQ: 50, perYearSubjectCode: true },
     { c: '101', s: '0201', name: '英文', tag: 'english', expectedQ: 25, mixedEssayYears: ['113','114'] },
-    { c: '101', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['114'] },
+    { c: '101', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true },
   ]
   const file = path.join(__dirname, '..', 'questions-customs.json')
 
@@ -311,8 +315,10 @@ async function main() {
     console.log(`\n--- ${sess.year} ${sess.session} (${sess.code}) ---`)
     for (const sub of SUBJECTS) {
       if (sub.onlyYears && !sub.onlyYears.includes(sess.year)) continue
-      const qUrl = `${BASE}?t=Q&code=${sess.code}&c=${sub.c}&s=${sub.s}&q=1`
-      const aUrl = `${BASE}?t=S&code=${sess.code}&c=${sub.c}&s=${sub.s}&q=1`
+      const subjectCode = sub.perYearSubjectCode ? sub.s[sess.year] : sub.s
+      if (!subjectCode) { console.log(`  - ${sub.name}: no subject code for ${sess.year}`); continue }
+      const qUrl = `${BASE}?t=Q&code=${sess.code}&c=${sub.c}&s=${subjectCode}&q=1`
+      const aUrl = `${BASE}?t=S&code=${sess.code}&c=${sub.c}&s=${subjectCode}&q=1`
       let qBuf, aBuf
 
       try { qBuf = await fetchPdf(qUrl) } catch (e) {

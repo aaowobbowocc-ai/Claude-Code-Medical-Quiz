@@ -78,6 +78,7 @@ const EXAM_ORDER = [
   'lawyer1', 'judicial',
   'civil-senior', 'customs', 'police',
   'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
+  'driver-car', 'driver-moto',
 ]
 
 // Category display metadata (Stage 1 persona cards)
@@ -112,6 +113,13 @@ const CATEGORY_META = {
     description: '憲法、法緒、國文、英文（水庫練習）',
     order: 4,
     pioneer: true,
+  },
+  independent: {
+    id: 'independent',
+    icon: '🚗',
+    name: '駕照考試',
+    description: '汽車駕照、機車駕照',
+    order: 5,
   },
 }
 

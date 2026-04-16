@@ -141,7 +141,7 @@ function QuestionCard({ q, stageMap }) {
               style={{ background: tagColor }}>
           {tagName}
         </span>
-        <span className="text-xs text-gray-400">{q.roc_year}年{q.session}</span>
+        {q.roc_year && <span className="text-xs text-gray-400">{q.roc_year}年{q.session}</span>}
         {q.isSharedBank && (
           <span
             className="text-[10px] font-semibold text-sky-700 bg-sky-50 border border-sky-200 px-1.5 py-0.5 rounded-full"

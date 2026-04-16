@@ -23,6 +23,7 @@ const CATEGORY_LABEL = {
   'law-professional': '法律專技國考',
   'civil-service': '公職國考',
   'common-subjects': '共同科目題庫',
+  independent: '駕照筆試題庫',
 }
 
 function esc(s) {

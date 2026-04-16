@@ -1,0 +1,72 @@
+{
+  "id": "driver-car",
+  "name": "汽車駕照",
+  "short": "汽車",
+  "icon": "🚗",
+  "category": "independent",
+  "subCategory": "汽車駕照",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "driver-license"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false,
+    "fixedBank": true,
+    "threeChoice": true,
+    "trueFalse": true,
+    "noYearFilter": true,
+    "mockQuestionCount": 40,
+    "mockPointsPerQ": 2.5
+  },
+  "questionsFile": "questions-driver-car.json",
+  "totalQ": 1107,
+  "totalPoints": 100,
+  "passScore": 85,
+  "passRate": 0.85,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "汽車法規",
+      "subject": "汽車法規",
+      "subjects": "汽車法規選擇題＋是非題，從 1,107 題題庫隨機抽 40 題",
+      "count": 40,
+      "pointsPerQ": 2.5,
+      "timeLimit": 30
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" }
+  ],
+  "ui": {
+    "tagNames": {
+      "car_rules": "汽車法規"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "car_rules": { "icon": "🚗", "color": "#3B82F6" }
+    },
+    "subjectColors": {
+      "汽車法規": "#3B82F6"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 汽車駕照筆試題庫",
+    "title": "汽車駕照筆試題庫",
+    "fullName": "汽車駕照筆試",
+    "shortName": "汽車駕照",
+    "studentType": "汽車考生",
+    "years": "115版",
+    "totalQ": 1107,
+    "examDesc": "交通部公路局汽車駕照筆試題庫，含法規選擇題 448 題（三選一）及法規是非題 659 題，共 1,107 題。筆試隨機抽 40 題，每題 2.5 分，滿分 100 分，85 分及格。",
+    "paperDesc": "法規選擇題 448 題 + 法規是非題 659 題，共 1,107 題。筆試隨機抽 40 題。",
+    "subjects": "汽車法規選擇題、汽車法規是非題",
+    "mockDesc": "模擬汽車駕照筆試 40 題",
+    "subjectDetails": [
+      ["汽車法規", "含三選一選擇題 448 題及是非題 659 題，涵蓋路口安全、轉彎、行駛注意事項、燈光使用、大型車注意、貨物裝載、事故處理、酒駕禁止、行車檢查等 10 大分類。"]
+    ]
+  }
+}

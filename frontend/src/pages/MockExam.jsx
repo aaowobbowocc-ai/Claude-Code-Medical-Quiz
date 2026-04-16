@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
-import { getExamTypes, getAllTagNames } from '../config/examRegistry'
+import { getExamTypes, getAllTagNames, getExamConfig as getFullExamConfig } from '../config/examRegistry'
 import SmartBanner from '../components/SmartBanner'
 import ShareChallengeButton from '../components/ShareChallengeButton'
 import { useAccuracyStore } from '../store/accuracyStore'
@@ -41,6 +41,8 @@ function getExtraPassRules(examId) {
     case 'dental1': case 'dental2':
     case 'pharma1': case 'pharma2':
       return [{ icon: '⚠️', text: '任一科零分者不予及格（缺考以零分計算）' }]
+    case 'driver-moto': case 'driver-car':
+      return [{ icon: '🚗', text: '85 分及格（40 題 × 2.5 分 = 100 分，答對 34 題以上通過）' }]
     case 'nursing': case 'nutrition2': case 'medlab': case 'ot':
     default:
       return [{ icon: '⚠️', text: '任一科零分者不予及格（缺考以零分計算）' }]
@@ -97,9 +99,11 @@ function getSingleExamFee(paper) {
 function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
   const { examId, papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, examName, isWeighted, uniformPointsPerQ } = getExamConfig(examType)
+  const fullCfg = getFullExamConfig(examType)
+  const isFixedBank = fullCfg?.uxHints?.fixedBank || fullCfg?.uxHints?.noYearFilter
   const extraRules = getExtraPassRules(examId)
   const FULL_EXAM_FEE = getFullExamFee(PAPERS)
-  const [tab, setTab] = useState('historical') // 'historical' | 'random'
+  const [tab, setTab] = useState(isFixedBank ? 'random' : 'historical') // 'historical' | 'random'
   const [examYears, setExamYears] = useState([])
   const [loadingYears, setLoadingYears] = useState(true)
   const [selectedExam, setSelectedExam] = useState(null) // { roc_year, session, papers }
@@ -122,7 +126,8 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
             <p className="text-white/60 text-sm mt-1">依照真實國考規則模擬</p>
           </div>
         </div>
-        {/* Tab switcher */}
+        {/* Tab switcher — hidden for fixed-bank exams (driver license etc.) */}
+        {!isFixedBank && (
         <div className="flex bg-white/15 rounded-xl p-1">
           <button onClick={() => { setTab('historical'); setSelectedExam(null) }}
             className={`flex-1 py-2 rounded-lg text-sm font-bold transition-all ${tab === 'historical' ? 'bg-white text-medical-blue shadow' : 'text-white/70'}`}>
@@ -133,6 +138,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
             🎲 隨機模擬
           </button>
         </div>
+        )}
       </div>
 
       <div className="flex-1 px-4 py-4 flex flex-col gap-3 overflow-y-auto">
@@ -229,8 +235,8 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
           <>
             <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 text-center">
               <p className="text-2xl mb-1">🎲</p>
-              <p className="font-bold text-medical-dark">隨機模擬考</p>
-              <p className="text-gray-400 text-xs mt-1">從所有年份題庫隨機抽題，按照國考各科比例出題</p>
+              <p className="font-bold text-medical-dark">{isFixedBank ? '模擬筆試' : '隨機模擬考'}</p>
+              <p className="text-gray-400 text-xs mt-1">{isFixedBank ? `從 ${fullCfg?.totalQ || ''} 題題庫隨機抽題` : '從所有年份題庫隨機抽題，按照國考各科比例出題'}</p>
             </div>
 
             <button onClick={onStartFull}

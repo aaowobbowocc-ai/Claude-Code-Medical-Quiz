@@ -76,7 +76,7 @@ for (const [key, cfg] of Object.entries(examConfigs)) {
   const filePath = path.join(__dirname, cfg.questionsFile);
   if (fs.existsSync(filePath)) {
     const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-    const questions = raw.questions || [];
+    const questions = Array.isArray(raw) ? raw : (raw.questions || []);
     const papers = cfg.papers || [];
 
     // Assign paper info to each question based on position within year+session groups

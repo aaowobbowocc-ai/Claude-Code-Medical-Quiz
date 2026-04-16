@@ -118,6 +118,19 @@ const OLD_EXAM_DEFS = {
       { s: '66', subject: '職能治療技術學',                 tag: 'ot_technique', name: '職能治療技術學' },
     ],
   },
+  radiology: {
+    label: '醫事放射師',
+    file: 'questions-radiology.json',
+    classCode: '309',
+    papers: [
+      { s: '11', subject: '基礎醫學（包括解剖學、生理學與病理學）', tag: 'basic_medicine',     name: '基礎醫學（包括解剖學、生理學與病理學）' },
+      { s: '22', subject: '醫學物理學與輻射安全',                   tag: 'med_physics',        name: '醫學物理學與輻射安全' },
+      { s: '33', subject: '放射線器材學（包括磁振學與超音波學）',   tag: 'radio_instruments',  name: '放射線器材學（包括磁振學與超音波學）' },
+      { s: '44', subject: '放射線診斷原理與技術學',                 tag: 'radio_diagnosis',    name: '放射線診斷原理與技術學' },
+      { s: '55', subject: '放射線治療原理與技術學',                 tag: 'radio_therapy',      name: '放射線治療原理與技術學' },
+      { s: '66', subject: '核子醫學診療原理與技術學',               tag: 'nuclear_medicine',   name: '核子醫學診療原理與技術學' },
+    ],
+  },
 }
 
 // ─── 目標場次（year × session → code 列表）───
@@ -240,6 +253,16 @@ const TARGETS = {
     { year: '111', session: '第二次', code: '111100' },
     { year: '112', session: '第二次', code: '112100' },
     { year: '113', session: '第二次', code: '113090' },
+  ],
+  radiology: [
+    { year: '106', session: '第一次', code: '106020' },
+    { year: '106', session: '第二次', code: '106100' },
+    { year: '107', session: '第一次', code: '107020' },
+    { year: '107', session: '第二次', code: '107100' },
+    { year: '108', session: '第一次', code: '108030' },
+    { year: '108', session: '第二次', code: '108100' },
+    { year: '109', session: '第一次', code: '109020' },
+    { year: '109', session: '第二次', code: '109100' },
   ],
 }
 

@@ -450,7 +450,7 @@ export default function Home() {
             <span>⚖️</span>
             <span>📜</span>
           </div>
-          <p className="relative text-white/40 text-[10px] mt-1">涵蓋 21 類國考 · 60,000+ 題</p>
+          <p className="relative text-white/40 text-[10px] mt-1">涵蓋 21 類國考 · 65,000+ 題</p>
         </div>
 
         <div className="flex-1 px-4 pt-4 pb-8 flex flex-col gap-3 -mt-4">
@@ -690,7 +690,7 @@ export default function Home() {
             <div className="flex gap-2 mt-1.5 text-base opacity-80">
               <span>🩺</span><span>🦷</span><span>💊</span><span>⚖️</span><span>📜</span>
             </div>
-            <p className="text-white/50 text-[10px] mt-0.5">涵蓋 21 類國考 · 60,000+ 題</p>
+            <p className="text-white/50 text-[10px] mt-0.5">涵蓋 21 類國考 · 65,000+ 題</p>
           </button>
           {/* Avatar — tap to edit name */}
           <button onClick={() => { setInputName(name); setSheet('editname') }}

@@ -67,6 +67,15 @@ const EXAMS = {
     label: '獸醫師',
     file: 'questions-vet.json',
     sessions: [
+      // 106-109: first=020/030, second=100 (108 uses 030 for first session)
+      { year: '106', code: '106020', label: '第一次', classCode: '314', subjects: VET_SUBJECTS_OLD },
+      { year: '106', code: '106100', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_OLD },
+      { year: '107', code: '107020', label: '第一次', classCode: '314', subjects: VET_SUBJECTS_OLD },
+      { year: '107', code: '107100', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_OLD },
+      { year: '108', code: '108030', label: '第一次', classCode: '314', subjects: VET_SUBJECTS_OLD },
+      { year: '108', code: '108100', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_OLD },
+      { year: '109', code: '109020', label: '第一次', classCode: '314', subjects: VET_SUBJECTS_OLD },
+      { year: '109', code: '109100', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_OLD },
       { year: '110', code: '110100', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_OLD },
       { year: '111', code: '111100', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_OLD },
       { year: '112', code: '112100', label: '第二次', classCode: '314', subjects: VET_SUBJECTS_OLD },

@@ -141,7 +141,8 @@
       "C": "車輛空重"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_009.png"
   },
   {
     "id": "moto_10",
@@ -1069,7 +1070,8 @@
       "C": "禁止超車"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_067.png"
   },
   {
     "id": "moto_68",
@@ -1085,7 +1087,8 @@
       "C": "注意左側落石"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_068.png"
   },
   {
     "id": "moto_69",
@@ -1101,7 +1104,8 @@
       "C": "危險路面"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_069.png"
   },
   {
     "id": "moto_70",
@@ -1117,7 +1121,8 @@
       "C": "注意右側落石"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_070.png"
   },
   {
     "id": "moto_71",
@@ -1133,7 +1138,8 @@
       "C": "慢行"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_071.png"
   },
   {
     "id": "moto_72",
@@ -1149,7 +1155,8 @@
       "C": "醫院"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_072.png"
   },
   {
     "id": "moto_73",
@@ -1901,7 +1908,8 @@
       "C": "匝道會車"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_119.png"
   },
   {
     "id": "moto_120",
@@ -1917,7 +1925,8 @@
       "C": "狹橋"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_120.png"
   },
   {
     "id": "moto_121",
@@ -3453,7 +3462,8 @@
       "C": "以上皆是"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_216.png"
   },
   {
     "id": "moto_217",
@@ -3485,7 +3495,8 @@
       "C": "禁止汽車進入"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_218.png"
   },
   {
     "id": "moto_219",
@@ -3501,7 +3512,8 @@
       "C": "禁止行人通行"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_219.png"
   },
   {
     "id": "moto_220",
@@ -3517,7 +3529,8 @@
       "C": "禁止通行"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_220.png"
   },
   {
     "id": "moto_221",
@@ -6477,7 +6490,8 @@
       "C": "危險"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_405.png"
   },
   {
     "id": "moto_406",
@@ -6493,7 +6507,8 @@
       "C": "狹橋"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_406.png"
   },
   {
     "id": "moto_407",
@@ -6509,7 +6524,8 @@
       "C": "禁止超車"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_407.png"
   },
   {
     "id": "moto_408",
@@ -6525,7 +6541,8 @@
       "C": "禁止任何車輛進入"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_408.png"
   },
   {
     "id": "moto_409",
@@ -6541,7 +6558,8 @@
       "C": "禁止四輪以上汽車進入"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_409.png"
   },
   {
     "id": "moto_410",
@@ -6557,7 +6575,8 @@
       "C": "禁止大貨車及聯結車進入"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_410.png"
   },
   {
     "id": "moto_411",
@@ -6573,7 +6592,8 @@
       "C": "禁止超車"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_411.png"
   },
   {
     "id": "moto_412",
@@ -6589,7 +6609,8 @@
       "C": "國道路線編號"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_412.png"
   },
   {
     "id": "moto_413",
@@ -6605,7 +6626,8 @@
       "C": "國道路線編號"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_413.png"
   },
   {
     "id": "moto_414",
@@ -6621,7 +6643,8 @@
       "C": "國道路線編號"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_414.png"
   },
   {
     "id": "moto_415",
@@ -6637,7 +6660,8 @@
       "C": "國道路線編號"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_415.png"
   },
   {
     "id": "moto_416",
@@ -6653,7 +6677,8 @@
       "C": "區、鄉道路線編號標誌"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_416.png"
   },
   {
     "id": "moto_417",
@@ -6669,7 +6694,8 @@
       "C": "單線電化鐵路平交道"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_417.png"
   },
   {
     "id": "moto_418",
@@ -6685,7 +6711,8 @@
       "C": "車輛停放線"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_418.png"
   },
   {
     "id": "moto_419",
@@ -6701,7 +6728,8 @@
       "C": "高速鐵路車站"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_419.png"
   },
   {
     "id": "moto_420",
@@ -6717,7 +6745,8 @@
       "C": "停車處"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_420.png"
   },
   {
     "id": "moto_421",
@@ -6733,7 +6762,8 @@
       "C": "車道預告"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_421.png"
   },
   {
     "id": "moto_422",
@@ -6749,7 +6779,8 @@
       "C": "車道預告"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_422.png"
   },
   {
     "id": "moto_423",
@@ -6765,7 +6796,8 @@
       "C": "車輛故障標誌"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_423.png"
   },
   {
     "id": "moto_424",
@@ -6781,7 +6813,8 @@
       "C": "檢查輪胎"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_424.png"
   },
   {
     "id": "moto_425",
@@ -6797,7 +6830,8 @@
       "C": "雙方禁止超車線"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_425.png"
   },
   {
     "id": "moto_426",
@@ -6813,7 +6847,8 @@
       "C": "自行車穿越道線。"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_426.png"
   },
   {
     "id": "moto_427",
@@ -6829,7 +6864,8 @@
       "C": "車道縮減標線"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_427.png"
   },
   {
     "id": "moto_428",
@@ -6845,7 +6881,8 @@
       "C": "車道管制號誌"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_428.png"
   },
   {
     "id": "moto_429",
@@ -6861,7 +6898,8 @@
       "C": "當心機車"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_429.png"
   },
   {
     "id": "moto_430",
@@ -6877,7 +6915,8 @@
       "C": "修理站"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_430.png"
   },
   {
     "id": "moto_431",
@@ -6893,7 +6932,8 @@
       "C": "高速鐵路車站"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_431.png"
   },
   {
     "id": "moto_432",
@@ -6909,7 +6949,8 @@
       "C": "計程車招呼站"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_432.png"
   },
   {
     "id": "moto_433",
@@ -6925,7 +6966,8 @@
       "C": "減速暫停"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_433.png"
   },
   {
     "id": "moto_434",
@@ -6941,7 +6983,8 @@
       "C": "減速暫停"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_434.png"
   },
   {
     "id": "moto_435",
@@ -6957,7 +7000,8 @@
       "C": "減速暫停"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_435.png"
   },
   {
     "id": "moto_436",
@@ -6973,7 +7017,8 @@
       "C": "減速暫停"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_436.png"
   },
   {
     "id": "moto_437",
@@ -6989,7 +7034,8 @@
       "C": "車道指定大眾捷運系統車輛專行。"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_437.png"
   },
   {
     "id": "moto_438",
@@ -7005,7 +7051,8 @@
       "C": "禁止大眾捷運系統車輛進入。"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_438.png"
   },
   {
     "id": "moto_439",
@@ -7021,7 +7068,8 @@
       "C": "車道指定四輪以上汽車及大型重型機車以外之機車專行"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_439.png"
   },
   {
     "id": "moto_440",
@@ -7037,7 +7085,8 @@
       "C": "車道指定大眾捷運系統車輛專行"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_440.png"
   },
   {
     "id": "moto_441",
@@ -7053,7 +7102,8 @@
       "C": "禁止大客車、大貨車及聯結車進入"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_441.png"
   },
   {
     "id": "moto_442",
@@ -7069,7 +7119,8 @@
       "C": "單線電化鐵路平交道"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_442.png"
   },
   {
     "id": "moto_443",
@@ -7085,7 +7136,8 @@
       "C": "地名方向指示"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_443.png"
   },
   {
     "id": "moto_444",
@@ -7101,7 +7153,8 @@
       "C": "減速暫停"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_444.png"
   },
   {
     "id": "moto_445",
@@ -7117,7 +7170,8 @@
       "C": "減速暫停"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_445.png"
   },
   {
     "id": "moto_446",
@@ -7133,7 +7187,8 @@
       "C": "禁止汽車進入"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_446.png"
   },
   {
     "id": "moto_447",
@@ -7149,7 +7204,8 @@
       "C": "有柵門鐵路平交道"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_447.png"
   },
   {
     "id": "moto_448",
@@ -8141,7 +8197,8 @@
       "C": "岔路"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_509.png"
   },
   {
     "id": "moto_510",
@@ -8157,7 +8214,8 @@
       "C": "禁止行人通行"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_510.png"
   },
   {
     "id": "moto_511",
@@ -8173,7 +8231,8 @@
       "C": "岔路"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_511.png"
   },
   {
     "id": "moto_512",
@@ -8189,7 +8248,8 @@
       "C": "碼頭"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_512.png"
   },
   {
     "id": "moto_513",
@@ -8205,7 +8265,8 @@
       "C": "當心行人"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_513.png"
   },
   {
     "id": "moto_514",
@@ -8221,7 +8282,8 @@
       "C": "禁止行人通行"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_514.png"
   },
   {
     "id": "moto_515",
@@ -8237,7 +8299,8 @@
       "C": "禁止行人通行"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_515.png"
   },
   {
     "id": "moto_516",
@@ -8253,7 +8316,8 @@
       "C": "行車管制號誌"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_516.png"
   },
   {
     "id": "moto_517",
@@ -8269,7 +8333,8 @@
       "C": "當心兒童"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_517.png"
   },
   {
     "id": "moto_518",
@@ -8285,7 +8350,8 @@
       "C": "行人專用"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_518.png"
   },
   {
     "id": "moto_519",
@@ -8301,7 +8367,8 @@
       "C": "加油站"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_519.png"
   },
   {
     "id": "moto_520",
@@ -8317,7 +8384,8 @@
       "C": "雙閃光黃燈"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_520.png"
   },
   {
     "id": "moto_521",
@@ -8333,7 +8401,8 @@
       "C": "時相交通號誌"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_521.png"
   },
   {
     "id": "moto_522",
@@ -8349,7 +8418,8 @@
       "C": "時相交通號誌"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_522.png"
   },
   {
     "id": "moto_523",
@@ -8365,7 +8435,8 @@
       "C": "行人穿越道號誌"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_523.png"
   },
   {
     "id": "moto_524",
@@ -8381,7 +8452,8 @@
       "C": "路寬變更線"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_524.png"
   },
   {
     "id": "moto_525",
@@ -8397,7 +8469,8 @@
       "C": "路面邊線"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_525.png"
   },
   {
     "id": "moto_526",
@@ -8413,7 +8486,8 @@
       "C": "行人穿越道線"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_526.png"
   },
   {
     "id": "moto_527",
@@ -8429,7 +8503,8 @@
       "C": "前後來車停止，左右來車通行"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_527.png"
   },
   {
     "id": "moto_528",
@@ -8445,7 +8520,8 @@
       "C": "前方來車停止"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_528.png"
   },
   {
     "id": "moto_529",
@@ -8461,7 +8537,8 @@
       "C": "左方來車速行"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_529.png"
   },
   {
     "id": "moto_530",
@@ -8477,7 +8554,8 @@
       "C": "右方來車速行"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_530.png"
   },
   {
     "id": "moto_531",
@@ -8493,7 +8571,8 @@
       "C": "右方來車速行"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_531.png"
   },
   {
     "id": "moto_532",
@@ -8509,7 +8588,8 @@
       "C": "左方來車停止"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_532.png"
   },
   {
     "id": "moto_533",
@@ -8525,7 +8605,8 @@
       "C": "全部車輛停止"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_533.png"
   },
   {
     "id": "moto_534",
@@ -8541,7 +8622,8 @@
       "C": "右方來車速行"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_534.png"
   },
   {
     "id": "moto_535",
@@ -9005,7 +9087,8 @@
       "C": "以上皆是"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_563.png"
   },
   {
     "id": "moto_564",
@@ -9293,7 +9376,8 @@
       "C": "開亮頭燈"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_581.png"
   },
   {
     "id": "moto_582",
@@ -9325,7 +9409,8 @@
       "C": "禁止右轉"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_583.png"
   },
   {
     "id": "moto_584",
@@ -9341,7 +9426,8 @@
       "C": "禁止左轉及直行"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_584.png"
   },
   {
     "id": "moto_585",
@@ -9357,7 +9443,8 @@
       "C": "行車方向指示"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_585.png"
   },
   {
     "id": "moto_586",
@@ -9373,7 +9460,8 @@
       "C": "車輛改道"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_586.png"
   },
   {
     "id": "moto_587",
@@ -9389,7 +9477,8 @@
       "C": "機慢車兩段左轉"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_587.png"
   },
   {
     "id": "moto_588",
@@ -9405,7 +9494,8 @@
       "C": "機慢車兩段左轉"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_588.png"
   },
   {
     "id": "moto_589",
@@ -9421,7 +9511,8 @@
       "C": "槽化線"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_589.png"
   },
   {
     "id": "moto_590",
@@ -9437,7 +9528,8 @@
       "C": "地名方向指示"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_590.png"
   },
   {
     "id": "moto_591",
@@ -9453,7 +9545,8 @@
       "C": "地名方向指示"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_591.png"
   },
   {
     "id": "moto_592",
@@ -9469,7 +9562,8 @@
       "C": "行車管制號誌"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_592.png"
   },
   {
     "id": "moto_593",
@@ -9485,7 +9579,8 @@
       "C": "僅准左轉"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_593.png"
   },
   {
     "id": "moto_594",
@@ -9501,7 +9596,8 @@
       "C": "單行道"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_594.png"
   },
   {
     "id": "moto_595",
@@ -11165,7 +11261,8 @@
       "C": "以上皆是"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_698.png"
   },
   {
     "id": "moto_699",
@@ -11197,7 +11294,8 @@
       "C": "連續彎路先向左"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_700.png"
   },
   {
     "id": "moto_701",
@@ -11213,7 +11311,8 @@
       "C": "右彎"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_701.png"
   },
   {
     "id": "moto_702",
@@ -11229,7 +11328,8 @@
       "C": "左彎"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_702.png"
   },
   {
     "id": "moto_703",
@@ -11245,7 +11345,8 @@
       "C": "路寬變更線"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_703.png"
   },
   {
     "id": "moto_704",
@@ -11261,7 +11362,8 @@
       "C": "狹路"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_704.png"
   },
   {
     "id": "moto_705",
@@ -11277,7 +11379,8 @@
       "C": "匝道會車"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_705.png"
   },
   {
     "id": "moto_706",
@@ -11293,7 +11396,8 @@
       "C": "遵行方向"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_706.png"
   },
   {
     "id": "moto_707",
@@ -11309,7 +11413,8 @@
       "C": "修路"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_707.png"
   },
   {
     "id": "moto_708",
@@ -11325,7 +11430,8 @@
       "C": "路面高突"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_708.png"
   },
   {
     "id": "moto_709",
@@ -11341,7 +11447,8 @@
       "C": "慢行"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_709.png"
   },
   {
     "id": "moto_710",
@@ -11357,7 +11464,8 @@
       "C": "車輛總重限制"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_710.png"
   },
   {
     "id": "moto_711",
@@ -11373,7 +11481,8 @@
       "C": "禁止行人通行"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_711.png"
   },
   {
     "id": "moto_712",
@@ -11389,7 +11498,8 @@
       "C": "禁止大型重型機車進入"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_712.png"
   },
   {
     "id": "moto_713",
@@ -11405,7 +11515,8 @@
       "C": "禁止自行車進入"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_713.png"
   },
   {
     "id": "moto_714",
@@ -11421,7 +11532,8 @@
       "C": "禁止機車進入"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_714.png"
   },
   {
     "id": "moto_715",
@@ -11437,7 +11549,8 @@
       "C": "禁止行人"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_715.png"
   },
   {
     "id": "moto_716",
@@ -11453,7 +11566,8 @@
       "C": "禁止停車"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_716.png"
   },
   {
     "id": "moto_717",
@@ -11469,7 +11583,8 @@
       "C": "車輛總重限制"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_717.png"
   },
   {
     "id": "moto_718",
@@ -11485,7 +11600,8 @@
       "C": "右轉"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_718.png"
   },
   {
     "id": "moto_719",
@@ -11501,7 +11617,8 @@
       "C": "禁止臨時停車"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_719.png"
   },
   {
     "id": "moto_720",
@@ -11517,7 +11634,8 @@
       "C": "停止線"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_720.png"
   },
   {
     "id": "moto_721",
@@ -11533,7 +11651,8 @@
       "C": "禁止超車線"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_721.png"
   },
   {
     "id": "moto_722",
@@ -11549,7 +11668,8 @@
       "C": "近障礙物線"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_722.png"
   },
   {
     "id": "moto_723",
@@ -11565,7 +11685,8 @@
       "C": "路面邊線"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_723.png"
   },
   {
     "id": "moto_724",
@@ -11581,7 +11702,8 @@
       "C": "路寬變更線"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_724.png"
   },
   {
     "id": "moto_725",
@@ -11597,7 +11719,8 @@
       "C": "車輛停放線。"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_725.png"
   },
   {
     "id": "moto_726",
@@ -11613,7 +11736,8 @@
       "C": "近障礙物線"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_726.png"
   },
   {
     "id": "moto_727",
@@ -11629,7 +11753,8 @@
       "C": "路寬變更線"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_727.png"
   },
   {
     "id": "moto_728",
@@ -11645,7 +11770,8 @@
       "C": "枕木紋行人穿越道線"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_728.png"
   },
   {
     "id": "moto_729",
@@ -11661,7 +11787,8 @@
       "C": "車輛改道"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_729.png"
   },
   {
     "id": "moto_730",
@@ -11677,7 +11804,8 @@
       "C": "車輛改道"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_730.png"
   },
   {
     "id": "moto_731",
@@ -11693,7 +11821,8 @@
       "C": "道路施工"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_731.png"
   },
   {
     "id": "moto_732",
@@ -11709,7 +11838,8 @@
       "C": "車輛改道"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_732.png"
   },
   {
     "id": "moto_733",
@@ -11725,7 +11855,8 @@
       "C": "自行車及大型重型機車以外之機車專行"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_733.png"
   },
   {
     "id": "moto_734",
@@ -11741,7 +11872,8 @@
       "C": "禁止四輪以上汽車與汽缸排氣量 550 立方公分以上大型重型機車進入"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_734.png"
   },
   {
     "id": "moto_735",
@@ -11757,7 +11889,8 @@
       "C": "禁止四輪以上汽車及大型重型機車進入。"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_735.png"
   },
   {
     "id": "moto_736",
@@ -11773,7 +11906,8 @@
       "C": "禁止四輪以上汽車及汽缸排氣量 550 立方公分以上大型重型機車進入"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_736.png"
   },
   {
     "id": "moto_737",
@@ -11789,7 +11923,8 @@
       "C": "車道指定自行車及輕型機車專行。"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_737.png"
   },
   {
     "id": "moto_738",
@@ -11805,7 +11940,8 @@
       "C": "車道指定機車專行"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_738.png"
   },
   {
     "id": "moto_739",
@@ -11821,7 +11957,8 @@
       "C": "狹路"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_739.png"
   },
   {
     "id": "moto_740",
@@ -11837,7 +11974,8 @@
       "C": "高速鐵路車站"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_740.png"
   },
   {
     "id": "moto_741",
@@ -11853,7 +11991,8 @@
       "C": "讓後車超車"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_741.png"
   },
   {
     "id": "moto_742",
@@ -11869,7 +12008,8 @@
       "C": "慢行"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_742.png"
   },
   {
     "id": "moto_743",
@@ -11885,7 +12025,8 @@
       "C": "倒車"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_743.png"
   },
   {
     "id": "moto_744",
@@ -11901,7 +12042,8 @@
       "C": "靠左側車道行駛"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_744.png"
   },
   {
     "id": "moto_745",
@@ -11917,7 +12059,8 @@
       "C": "地名方向指示"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_745.png"
   },
   {
     "id": "moto_746",
@@ -11933,7 +12076,8 @@
       "C": "一般道路 之車輛駛往高速公路交流道"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_746.png"
   },
   {
     "id": "moto_747",
@@ -11949,7 +12093,8 @@
       "C": "縣道路線編號標誌"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_747.png"
   },
   {
     "id": "moto_748",
@@ -11965,7 +12110,8 @@
       "C": "高速鐵路車站"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_748.png"
   },
   {
     "id": "moto_749",
@@ -11981,7 +12127,8 @@
       "C": "停車處"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_749.png"
   },
   {
     "id": "moto_750",
@@ -12669,7 +12816,8 @@
       "C": "按鳴喇叭"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_792.png"
   },
   {
     "id": "moto_793",

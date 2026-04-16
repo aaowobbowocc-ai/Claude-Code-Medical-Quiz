@@ -1,0 +1,70 @@
+{
+  "id": "civil-senior",
+  "name": "高考三等",
+  "short": "高考",
+  "icon": "🏛️",
+  "category": "civil-service",
+  "subCategory": "高考三等",
+  "level": "senior",
+  "selectionType": "quota",
+  "persona": [
+    "civil-exam-prep"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": true
+  },
+  "questionsFile": "questions-civil-senior.json",
+  "totalQ": 50,
+  "passScore": null,
+  "passRate": null,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "法學知識與英文",
+      "subject": "法學知識與英文",
+      "subjects": "中華民國憲法、法學緒論、英文",
+      "count": 50,
+      "breakdown": [
+        { "subject": "憲法", "count": 15 },
+        { "subject": "法學緒論", "count": 15 },
+        { "subject": "英文", "count": 20 }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" }
+  ],
+  "ui": {
+    "tagNames": {
+      "law_knowledge_english": "法學知識與英文"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "law_knowledge_english": { "icon": "⚖️", "color": "#6366F1" }
+    },
+    "subjectColors": {
+      "法學知識與英文": "#6366F1"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 高考三等題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "高考三等（公務人員高等考試三級）",
+    "shortName": "高考三等",
+    "studentType": "公職考生",
+    "years": "114",
+    "totalQ": 50,
+    "examDesc": "公務人員高等考試三級考試，為我國公職考試中規模最大的一類。法學知識與英文為各類科共同科目，包含中華民國憲法、法學緒論及英文，共 50 題選擇題。",
+    "paperDesc": "法學知識與英文共 50 題，考試時間 1 小時。",
+    "subjects": "法學知識與英文（中華民國憲法、法學緒論、英文）",
+    "mockDesc": "模擬法學知識與英文 50 題選擇題",
+    "subjectDetails": [
+      ["法學知識與英文", "涵蓋中華民國憲法、法學緒論、英文三大部分。"]
+    ]
+  }
+}

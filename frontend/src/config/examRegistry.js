@@ -121,6 +121,7 @@ const LEGAL_SUBJECT_TAGS = new Set([
   'law_knowledge_combined', 'jurisprudence', 'legal_history',
   'evidence_law', 'enforcement_law',
   'comprehensive_law_1', 'comprehensive_law_2', 'comprehensive_law_3', 'comprehensive_law_4',
+  'law_knowledge_english',
 ])
 
 /** Get EXAM_TYPES-compatible array (for backward compat with gameStore consumers) */

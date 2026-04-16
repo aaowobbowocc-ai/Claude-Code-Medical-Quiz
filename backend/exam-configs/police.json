@@ -1,0 +1,76 @@
+{
+  "id": "police",
+  "name": "一般警察特考三等",
+  "short": "警察",
+  "icon": "👮",
+  "category": "civil-service",
+  "subCategory": "一般警察特考",
+  "level": "senior",
+  "selectionType": "quota",
+  "persona": [
+    "civil-exam-prep"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-police.json",
+  "totalQ": 100,
+  "passScore": null,
+  "passRate": null,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "行政學",
+      "subject": "行政學",
+      "subjects": "行政學（選擇題部分）",
+      "count": 25,
+      "timeLimit": null
+    },
+    {
+      "id": "paper2",
+      "name": "行政法",
+      "subject": "行政法",
+      "subjects": "行政法（選擇題部分）",
+      "count": 25,
+      "timeLimit": null
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" }
+  ],
+  "ui": {
+    "tagNames": {
+      "admin_studies": "行政學",
+      "admin_law": "行政法"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "admin_studies": { "icon": "🏢", "color": "#10B981" },
+      "admin_law": { "icon": "📜", "color": "#8B5CF6" }
+    },
+    "subjectColors": {
+      "行政學": "#10B981",
+      "行政法": "#8B5CF6"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 一般警察特考題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "一般警察特考三等（公務人員特種考試一般警察人員考試）",
+    "shortName": "一般警察特考三等",
+    "studentType": "警察考生",
+    "years": "113-114",
+    "totalQ": 100,
+    "examDesc": "公務人員特種考試一般警察人員考試三等，涵蓋行政警察、行政管理等類科。專業科目行政學 25 題、行政法 25 題（選擇題部分）。",
+    "paperDesc": "行政學 25 題、行政法 25 題（選擇題部分）。",
+    "subjects": "行政學、行政法",
+    "mockDesc": "模擬一般警察特考選擇題",
+    "subjectDetails": [
+      ["行政學", "行政學選擇題部分，25 題。"],
+      ["行政法", "行政法選擇題部分，25 題。"]
+    ]
+  }
+}

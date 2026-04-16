@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Scrape 高考三等 MCQ subjects using pdfjs-dist position data
 // for proper 2-column option layout parsing.
-// Currently: 114年 法學知識與英文 (50Q) + 國文測驗 (10Q)
+// Subjects: 法學知識與英文 (50Q) + 國文測驗 (10Q) + 行政學 (25Q) + 行政法 (25Q)
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 const fs = require('fs')
@@ -287,6 +287,9 @@ async function main() {
   ]
   const SUBJECTS = [
     { c: '201', s: '0401', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50 },
+    { c: '201', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true },
+    { c: '201', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true },
+    { c: '201', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true },
   ]
   const file = path.join(__dirname, '..', 'questions-civil-senior.json')
 
@@ -315,7 +318,16 @@ async function main() {
       }
 
       // Extract with position data
-      const posItems = await extractPositionedText(qBuf)
+      let posItems = await extractPositionedText(qBuf)
+      // For mixed essay+MCQ subjects, skip everything before 選擇題 section
+      if (sub.mixedEssay) {
+        const mcqIdx = posItems.findIndex(it => it.str.includes('選擇題'))
+        if (mcqIdx >= 0) {
+          posItems = posItems.slice(mcqIdx)
+        } else {
+          console.log(`  ⚠ ${sub.name}: no 選擇題 section found`); continue
+        }
+      }
       const logLines = buildLogicalLines(posItems)
       const parsed = parseQuestions(logLines)
       const answers = aBuf ? await parseAnswers(aBuf) : {}

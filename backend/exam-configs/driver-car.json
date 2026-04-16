@@ -32,10 +32,18 @@
       "id": "paper1",
       "name": "汽車法規",
       "subject": "汽車法規",
-      "subjects": "汽車法規選擇題＋是非題，從 1,107 題題庫隨機抽 40 題",
+      "subjects": "汽車法規選擇題＋是非題，從 1,107 題題庫隨機抽題",
       "count": 40,
       "pointsPerQ": 2.5,
       "timeLimit": 30
+    },
+    {
+      "id": "paper2",
+      "name": "標誌標線號誌",
+      "subject": "汽車標誌標線號誌",
+      "subjects": "交通標誌、標線、號誌辨識是非題 240 題",
+      "count": 0,
+      "pointsPerQ": 2.5
     }
   ],
   "stages": [

@@ -17051,5 +17051,4085 @@
     },
     "answer": "B",
     "type": "tf"
+  },
+  {
+    "id": "car_sign_1",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 1,
+    "question": "連續彎路先向右",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_001.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_2",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 2,
+    "question": "連續彎路先向左",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_002.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_3",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 3,
+    "question": "岔路",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_003.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_4",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 4,
+    "question": "救護站",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_004.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_5",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 5,
+    "question": "狹路",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_005.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_6",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 6,
+    "question": "狹橋",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_006.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_7",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 7,
+    "question": "險升坡",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_007.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_8",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 8,
+    "question": "險降坡",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_008.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_9",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 9,
+    "question": "狹橋",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_009.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_10",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 10,
+    "question": "狹路",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_010.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_11",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 11,
+    "question": "圓環",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_011.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_12",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 12,
+    "question": "圓環遵行方向",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_012.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_13",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 13,
+    "question": "雙向道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_013.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_14",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 14,
+    "question": "狹路",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_014.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_15",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 15,
+    "question": "無柵門鐵路平交道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_015.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_16",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 16,
+    "question": "有柵門鐵路平交道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_016.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_17",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 17,
+    "question": "當心行人",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_017.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_18",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 18,
+    "question": "當心兒童",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_018.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_19",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 19,
+    "question": "注意強風",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_019.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_20",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 20,
+    "question": "注意標誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_020.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_21",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 21,
+    "question": "當心兒童",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_021.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_22",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 22,
+    "question": "當心行人",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_022.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_23",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 23,
+    "question": "左側斷崖",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_023.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_24",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 24,
+    "question": "注意落石",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_024.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_25",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 25,
+    "question": "危險",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_025.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_26",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 26,
+    "question": "注意號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_026.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_27",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 27,
+    "question": "停車再開",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_027.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_28",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 28,
+    "question": "禁止停車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_028.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_29",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 29,
+    "question": "讓路",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_029.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_30",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 30,
+    "question": "慢行",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_030.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_31",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 31,
+    "question": "禁止停車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_031.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_32",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 32,
+    "question": "停車再開",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_032.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_33",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 33,
+    "question": "禁止四輪以上汽車進入",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_033.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_34",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 34,
+    "question": "禁止進入",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_034.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_35",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 35,
+    "question": "禁止迴車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_035.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_36",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 36,
+    "question": "禁止左轉",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_036.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_37",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 37,
+    "question": "禁止四輪以上汽車及機車進入",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_037.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_38",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 38,
+    "question": "禁止四輪以上汽車進入",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_038.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_39",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 39,
+    "question": "車輛高度限制",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_039.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_40",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 40,
+    "question": "車輛寬度限制",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_040.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_41",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 41,
+    "question": "停車檢查",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_041.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_42",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 42,
+    "question": "禁止停車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_042.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_43",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 43,
+    "question": "最高速限",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_043.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_44",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 44,
+    "question": "最低速限",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_044.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_45",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 45,
+    "question": "停車檢查",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_045.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_46",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 46,
+    "question": "停車再開",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_046.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_47",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 47,
+    "question": "禁止超車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_047.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_48",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 48,
+    "question": "禁止會車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_048.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_49",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 49,
+    "question": "最低速限",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_049.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_50",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 50,
+    "question": "最高速限",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_050.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_51",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 51,
+    "question": "當心身心障礙者",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_051.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_52",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 52,
+    "question": "當心兒童",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_052.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_53",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 53,
+    "question": "禁止臨時停車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_053.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_54",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 54,
+    "question": "禁止停車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_054.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_55",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 55,
+    "question": "專行車輛（大客車專行）",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_055.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_56",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 56,
+    "question": "車輛長度限制",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_056.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_57",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 57,
+    "question": "車輛寬度限制",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_057.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_58",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 58,
+    "question": "車輛長度限制",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_058.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_59",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 59,
+    "question": "停車檢查",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_059.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_60",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 60,
+    "question": "車輛總重限制",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_060.png",
+    "sign_category": "06"
+  },
+  {
+    "id": "car_sign_61",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 61,
+    "question": "禁止空計程車進入",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_061.png",
+    "sign_category": "08"
+  },
+  {
+    "id": "car_sign_62",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 62,
+    "question": "禁止汽車進入",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_062.png",
+    "sign_category": "08"
+  },
+  {
+    "id": "car_sign_63",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 63,
+    "question": "禁止任何車輛進入",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_063.png",
+    "sign_category": "08"
+  },
+  {
+    "id": "car_sign_64",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 64,
+    "question": "此路不通",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_064.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_65",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 65,
+    "question": "路面低窪",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_065.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_66",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 66,
+    "question": "路面顛簸",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_066.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_67",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 67,
+    "question": "注意號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_067.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_68",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 68,
+    "question": "行車管制號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_068.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_69",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 69,
+    "question": "路面高突",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_069.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_70",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 70,
+    "question": "路面顛簸",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_070.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_71",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 71,
+    "question": "遵行方向",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_071.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_72",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 72,
+    "question": "單行道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_072.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_73",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 73,
+    "question": "遵行方向",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_073.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_74",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 74,
+    "question": "分道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_074.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_75",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 75,
+    "question": "救護站",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_075.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_76",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 76,
+    "question": "醫院",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_076.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_77",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 77,
+    "question": "連續彎路先向左",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_077.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_78",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 78,
+    "question": "連續彎路先向右",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_078.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_79",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 79,
+    "question": "岔路",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_079.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_80",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 80,
+    "question": "此路不通",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_080.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_81",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 81,
+    "question": "遵行方向",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_081.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_82",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 82,
+    "question": "單行道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_082.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_83",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 83,
+    "question": "右轉方向",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_083.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_84",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 84,
+    "question": "遵行方向",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_084.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_85",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 85,
+    "question": "避車彎",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_085.png",
+    "sign_category": "07"
+  },
+  {
+    "id": "car_sign_86",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 86,
+    "question": "狹路",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_086.png",
+    "sign_category": "07"
+  },
+  {
+    "id": "car_sign_87",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 87,
+    "question": "靠右行駛",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_087.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_88",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 88,
+    "question": "靠左行駛",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_088.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_89",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 89,
+    "question": "單行道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_089.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_90",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 90,
+    "question": "遵行方向",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_090.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_91",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 91,
+    "question": "省道路線編號",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_091.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_92",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 92,
+    "question": "國道路線編號",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_092.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_93",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 93,
+    "question": "市、縣道路線編號",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_093.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_94",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 94,
+    "question": "省道路線編號",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_094.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_95",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 95,
+    "question": "國道路線編號",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_095.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_96",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 96,
+    "question": "省道路線編號",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_096.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_97",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 97,
+    "question": "分道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_097.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_98",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 98,
+    "question": "岔路",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_098.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_99",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 99,
+    "question": "禁止會車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_099.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_100",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 100,
+    "question": "雙向道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_100.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_101",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 101,
+    "question": "右側車道路寬縮減",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_101.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_102",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 102,
+    "question": "左側車道路寬縮減",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_102.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_103",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 103,
+    "question": "左側車道路寬縮減",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_103.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_104",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 104,
+    "question": "右側車道路寬縮減",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_104.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_105",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 105,
+    "question": "特種閃光「黃燈」號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_105.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_106",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 106,
+    "question": "行車管制號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_106.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_107",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 107,
+    "question": "行人專用號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_107.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_108",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 108,
+    "question": "當心行人",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_108.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_109",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 109,
+    "question": "行人穿越道號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_109.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_110",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 110,
+    "question": "行車管制號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_110.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_111",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 111,
+    "question": "雙線以上電化鐵路平交道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_111.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_112",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 112,
+    "question": "雙線以上鐵路平交道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_112.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_113",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 113,
+    "question": "特種閃光「紅燈」號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_113.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_114",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 114,
+    "question": "行車管制號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_114.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_115",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 115,
+    "question": "行車管制號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_115.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_116",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 116,
+    "question": "行人專用號誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_116.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_117",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 117,
+    "question": "人行天橋",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_117.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_118",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 118,
+    "question": "人行地下道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_118.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_119",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 119,
+    "question": "電話",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_119.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_120",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 120,
+    "question": "修理站",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_120.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_121",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 121,
+    "question": "渡口",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_121.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_122",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 122,
+    "question": "專行汽車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_122.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_123",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 123,
+    "question": "右轉方向",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_123.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_124",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 124,
+    "question": "左轉方向",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_124.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_125",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 125,
+    "question": "左右轉方向",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_125.png",
+    "sign_category": "02"
+  },
+  {
+    "id": "car_sign_126",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 126,
+    "question": "雙向道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_126.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_127",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 127,
+    "question": "餐旅服務",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_127.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_128",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 128,
+    "question": "加油站",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_128.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_129",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 129,
+    "question": "人行地下道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_129.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_130",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 130,
+    "question": "人行天橋",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_130.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_131",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 131,
+    "question": "加油站",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_131.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_132",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 132,
+    "question": "餐旅服務",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_132.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_133",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 133,
+    "question": "左道封閉",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_133.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_134",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 134,
+    "question": "右道封閉",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_134.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_135",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 135,
+    "question": "右道封閉",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_135.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_136",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 136,
+    "question": "左道封閉",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_136.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_137",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 137,
+    "question": "道路施工",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_137.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_138",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 138,
+    "question": "當心行人",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_138.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_139",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 139,
+    "question": "車輛改道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_139.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_140",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 140,
+    "question": "岔路",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_140.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_141",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 141,
+    "question": "指示改道方向",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_141.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_142",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 142,
+    "question": "單行道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_142.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_143",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 143,
+    "question": "道路封閉",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_143.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_144",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 144,
+    "question": "道路施工",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_144.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_145",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 145,
+    "question": "圖中黃色雙實線為：雙向禁止超車線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_145.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_146",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 146,
+    "question": "圖中黃色雙實線為：單向禁止超車線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_146.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_147",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 147,
+    "question": "圖中黃色單實線配合黃色虛線為：單向禁止超車線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_147.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_148",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 148,
+    "question": "圖中黃色單實線配合黃色虛線為：雙向禁止超車線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_148.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_149",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 149,
+    "question": "圖中白色雙實線為：禁止變換車道線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_149.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_150",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 150,
+    "question": "圖中白色雙實線為：行車分向線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_150.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_151",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 151,
+    "question": "圖中黃色實線為：禁止停車線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_151.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_152",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 152,
+    "question": "圖中黃色實線為：禁止臨時停車線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_152.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_153",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 153,
+    "question": "圖中紅色實線為：禁止臨時停車線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_153.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_154",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 154,
+    "question": "圖中紅色實線為：禁止停車線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_154.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_155",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 155,
+    "question": "圖中黃色虛線為：行車分向線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_155.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_156",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 156,
+    "question": "圖中黃色虛線為：分向限制線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_156.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_157",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 157,
+    "question": "圖中白色虛線為：車道線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_157.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_158",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 158,
+    "question": "圖中白色虛線為：行車分向線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_158.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_159",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 159,
+    "question": "圖中橫向白色實線為：停止線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_159.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_160",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 160,
+    "question": "圖中橫向白色實線為：讓路線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_160.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_161",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 161,
+    "question": "圖中白色斜紋線為：斑馬紋行人穿越道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_161.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_162",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 162,
+    "question": "圖中白色斜紋線為：枕木紋行人穿越道",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_162.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_163",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 163,
+    "question": "指向線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_163.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_164",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 164,
+    "question": "行車分向線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_164.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_165",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 165,
+    "question": "圖中白色紋線為：枕木紋行人穿越道線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_165.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_166",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 166,
+    "question": "圖中白色紋線為：斑馬紋行人穿越道線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_166.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_167",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 167,
+    "question": "圖中黃色雙實線為：分向限制線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_167.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_168",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 168,
+    "question": "圖中黃色雙實線為：行車分向線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_168.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_169",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 169,
+    "question": "路寬變更線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_169.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_170",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 170,
+    "question": "狹路變更線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_170.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_171",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 171,
+    "question": "近障礙物線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_171.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_172",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 172,
+    "question": "圖中黃色標線為單向禁止超車線。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_172.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_173",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 173,
+    "question": "近鐵路平交道線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_173.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_174",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 174,
+    "question": "讓路線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_174.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_175",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 175,
+    "question": "圖中白色倒三角型標線為：讓路線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_175.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_176",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 176,
+    "question": "圖中白色倒三角型標線為：指向線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_176.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_177",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 177,
+    "question": "圖中網狀線，用以告示車輛駕駛人在本標線範圍內禁止臨時停車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_177.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_178",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 178,
+    "question": "圖中網狀線，用以告示車輛駕駛人在本標線範圍內可以臨時停車",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_178.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_179",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 179,
+    "question": "車輛停放線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_179.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_180",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 180,
+    "question": "停止線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_180.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_181",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 181,
+    "question": "圖中白色虛線為：轉彎線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_181.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_182",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 182,
+    "question": "圖中白色虛線為：槽化線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_182.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_183",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 183,
+    "question": "全部車輛停止",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_183.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_184",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 184,
+    "question": "前面來車停止",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_184.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_185",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 185,
+    "question": "右面來車左轉彎",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_185.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_186",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 186,
+    "question": "左面來車右轉彎",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_186.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_187",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 187,
+    "question": "右面來車停止",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_187.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_188",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 188,
+    "question": "左面來車停止",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_188.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_189",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 189,
+    "question": "左面來車左轉彎",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_189.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_190",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 190,
+    "question": "右面來車左轉彎",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_190.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_191",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 191,
+    "question": "左面來車停止",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_191.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_192",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 192,
+    "question": "右面來車停止",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_192.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_193",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 193,
+    "question": "前後來車停止，左右來車通行",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_193.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_194",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 194,
+    "question": "全部車輛停止",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_194.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_195",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 195,
+    "question": "右面來車速行",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_195.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_196",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 196,
+    "question": "左面來車速行",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_196.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_197",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 197,
+    "question": "前面來車停止",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_197.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_198",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 198,
+    "question": "全部車輛停止",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_198.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_199",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 199,
+    "question": "左面來車速行",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_199.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_200",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 200,
+    "question": "右面來車速行",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_200.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_201",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 201,
+    "question": "本標誌為：在高速公路行駛此路段之車輛，速度限制每小時最高不得超過１１０公里。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_201.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_202",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 202,
+    "question": "警告左線車道終止於前面不遠處，行駛於左線車道之車輛，必須插入右鄰車道。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_202.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_203",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 203,
+    "question": "指示高（快）速公路出口處，及出口匝道的方向。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_203.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_204",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 204,
+    "question": "此標誌促使駕駛人注意，遇有障礙物或交通島時，車輛應該分駛其兩側。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_204.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_205",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 205,
+    "question": "新竹，且距該兩處出口之里程分別為５公里與",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_205.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_206",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 206,
+    "question": "指示前方有服務區及其距離里程。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_206.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_207",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 207,
+    "question": "指示前面１５０公尺處之最右側車道為慢速車爬坡之專用車道。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_207.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_208",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 208,
+    "question": "指示要上高速公路（往南方向）或要去斗南的車輛，須依箭頭方向駛入交流道進口匝道。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_208.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_209",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 209,
+    "question": "本號誌是車道管制號誌。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_209.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_210",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 210,
+    "question": "當心動物。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_210.png",
+    "sign_category": "03"
+  },
+  {
+    "id": "car_sign_211",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 211,
+    "question": "本標誌是指向北行。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_211.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_212",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 212,
+    "question": "這是警告標誌，表示前面路段封閉。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_212.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_213",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 213,
+    "question": "這是「交通錐」，用以輔助拒馬阻擋或分隔交通。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_213.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_214",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 214,
+    "question": "本標誌用以指示駕駛人，從中壢往高速公路有二處出口。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_214.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_215",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 215,
+    "question": "本標誌用以指示通達地點應行駛之車道。",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_215.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_216",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 216,
+    "question": "左圖標誌表示該標誌與前方交流道出口距離為2,000 公尺",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_216.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_217",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 217,
+    "question": "煞車系統警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_217.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_218",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 218,
+    "question": "ABS 煞車警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_218.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_219",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 219,
+    "question": "充電警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_219.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_220",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 220,
+    "question": "引擎故障警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_220.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_221",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 221,
+    "question": "低機油壓力警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_221.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_222",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 222,
+    "question": "低燃油油位警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_222.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_223",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 223,
+    "question": "引擎故障警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_223.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_224",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 224,
+    "question": "充電警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_224.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_225",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 225,
+    "question": "低燃油油位警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_225.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_226",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 226,
+    "question": "低機油壓力警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_226.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_227",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 227,
+    "question": "車門開啟警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_227.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_228",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 228,
+    "question": "轉向指示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_228.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_229",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 229,
+    "question": "轉向指示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_229.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_230",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 230,
+    "question": "車寬指示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_230.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_231",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 231,
+    "question": "遠光指示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_231.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_232",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 232,
+    "question": "霧燈指示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_232.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_233",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 233,
+    "question": "安全帶警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_233.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_234",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 234,
+    "question": "氣囊警示燈",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_234.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_235",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 235,
+    "question": "危險警告燈按鈕",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_235.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_236",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 236,
+    "question": "三角警示架",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "B",
+    "type": "tf",
+    "image_url": "/signs/sign_236.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_237",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 237,
+    "question": "自行車騎士手勢預告即將左轉",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_237.png",
+    "sign_category": "10"
+  },
+  {
+    "id": "car_sign_238",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 238,
+    "question": "自行車騎士手勢預告即將右轉",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_238.png",
+    "sign_category": ""
+  },
+  {
+    "id": "car_sign_239",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 239,
+    "question": "通學區起點標線",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_239.png",
+    "sign_category": "01"
+  },
+  {
+    "id": "car_sign_240",
+    "subject": "汽車標誌標線號誌",
+    "subject_tag": "car_signs",
+    "subject_name": "汽車標誌、標線、號誌是非題",
+    "stage_id": 0,
+    "number": 240,
+    "question": "行人優先區起點標誌",
+    "options": {
+      "A": "○（正確）",
+      "B": "✕（錯誤）"
+    },
+    "answer": "A",
+    "type": "tf",
+    "image_url": "/signs/sign_240.png",
+    "sign_category": ""
   }
 ]

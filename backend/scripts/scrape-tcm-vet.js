@@ -48,6 +48,10 @@ const TCM1_SUBJECTS_NEW = [
   { s: '0201', name: '中醫基礎醫學(一)', tag: 'tcm_basic_1' },
   { s: '0202', name: '中醫基礎醫學(二)', tag: 'tcm_basic_2' },
 ]
+const TCM1_SUBJECTS_115 = [
+  { s: '0301', name: '中醫基礎醫學(一)', tag: 'tcm_basic_1' },
+  { s: '0302', name: '中醫基礎醫學(二)', tag: 'tcm_basic_2' },
+]
 
 const TCM2_SUBJECTS_OLD = [
   { s: '11', name: '中醫臨床醫學(一)', tag: 'tcm_clinical_1' },
@@ -60,6 +64,12 @@ const TCM2_SUBJECTS_NEW = [
   { s: '0202', name: '中醫臨床醫學(二)', tag: 'tcm_clinical_2' },
   { s: '0203', name: '中醫臨床醫學(三)', tag: 'tcm_clinical_3' },
   { s: '0204', name: '中醫臨床醫學(四)', tag: 'tcm_clinical_4' },
+]
+const TCM2_SUBJECTS_115 = [
+  { s: '0303', name: '中醫臨床醫學(一)', tag: 'tcm_clinical_1' },
+  { s: '0304', name: '中醫臨床醫學(二)', tag: 'tcm_clinical_2' },
+  { s: '0305', name: '中醫臨床醫學(三)', tag: 'tcm_clinical_3' },
+  { s: '0306', name: '中醫臨床醫學(四)', tag: 'tcm_clinical_4' },
 ]
 
 const EXAMS = {
@@ -92,6 +102,7 @@ const EXAMS = {
       { year: '113', code: '113020', label: '第一次', classCode: '317', subjects: TCM1_SUBJECTS_OLD },
       { year: '113', code: '113090', label: '第二次', classCode: '317', subjects: TCM1_SUBJECTS_OLD },
       { year: '114', code: '114090', label: '第二次', classCode: '317', subjects: TCM1_SUBJECTS_NEW },
+      { year: '115', code: '115020', label: '第一次', classCode: '317', subjects: TCM1_SUBJECTS_115 },
     ],
   },
   tcm2: {
@@ -103,6 +114,7 @@ const EXAMS = {
       { year: '113', code: '113020', label: '第一次', classCode: '318', subjects: TCM2_SUBJECTS_OLD },
       { year: '113', code: '113070', label: '第二次', classCode: '318', subjects: TCM2_SUBJECTS_OLD },
       { year: '114', code: '114070', label: '第二次', classCode: '318', subjects: TCM2_SUBJECTS_NEW },
+      { year: '115', code: '115020', label: '第一次', classCode: '318', subjects: TCM2_SUBJECTS_115 },
     ],
   },
 }

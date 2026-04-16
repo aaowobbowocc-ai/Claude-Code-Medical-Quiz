@@ -284,6 +284,8 @@ function atomicWrite(p, obj) {
 
 async function main() {
   const SESSIONS = [
+    { year: '108', code: '108050', session: '第一次' },
+    { year: '109', code: '109050', session: '第一次' },
     { year: '110', code: '110050', session: '第一次' },
     { year: '111', code: '111050', session: '第一次' },
     { year: '112', code: '112050', session: '第一次' },
@@ -292,11 +294,12 @@ async function main() {
   ]
   // 法學知識 subject code changes between years!
   const LAW_KNOWLEDGE_CODES = {
+    '108': '0307', '109': '0308',
     '110': '0308', '111': '0310', '112': '0308', '113': '0306', '114': '0305',
   }
   const SUBJECTS = [
     { c: '101', s: LAW_KNOWLEDGE_CODES, name: '法學知識', tag: 'law_knowledge', expectedQ: 50, perYearSubjectCode: true },
-    { c: '101', s: '0201', name: '英文', tag: 'english', expectedQ: 25, mixedEssayYears: ['113','114'] },
+    { c: '101', s: '0201', name: '英文', tag: 'english', expectedQ: 25, mixedEssayYears: ['108','109','113','114'] },
     { c: '101', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true },
   ]
   const file = path.join(__dirname, '..', 'questions-customs.json')

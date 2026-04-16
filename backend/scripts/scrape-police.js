@@ -285,15 +285,23 @@ function atomicWrite(p, obj) {
 
 async function main() {
   const SESSIONS = [
+    // 070 series (一般警察+退除役+鐵路 combined exam)
+    { year: '108', code: '108070', session: '第一次' },
+    { year: '109', code: '109070', session: '第一次' },
+    { year: '110', code: '110070', session: '第一次' },
+    { year: '111', code: '111070', session: '第一次' },
+    { year: '112', code: '112070', session: '第一次' },
+    // 060 series (一般警察 standalone from 113+)
     { year: '113', code: '113060', session: '第一次' },
     { year: '114', code: '114060', session: '第一次' },
   ]
   const SUBJECTS = [
-    // 113: 行政學 = s=0301, 114: 行政學 = s=0304 (subject code changed)
-    { c: '301', s: '0301', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['113'] },
+    // 行政學: s=0301 for 070 series (108-112) and 060/113, s=0304 for 060/114
+    { c: '301', s: '0301', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['108','109','110','111','112','113'] },
     { c: '301', s: '0304', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['114'] },
-    // 行政法 = s=0403 (same across years)
-    { c: '301', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true },
+    // 行政法: s=0402 for 109/070, s=0403 for 060 series (113-114)
+    { c: '301', s: '0402', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['109'] },
+    { c: '301', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['113','114'] },
   ]
   const file = path.join(__dirname, '..', 'questions-police.json')
 

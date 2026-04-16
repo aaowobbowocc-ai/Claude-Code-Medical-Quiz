@@ -76,7 +76,8 @@ const EXAM_ORDER = [
   'tcm1', 'tcm2', 'vet',
   'nursing', 'nutrition', 'pt', 'ot', 'medlab', 'radiology',
   'lawyer1', 'judicial',
-  'civil-senior', 'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
+  'civil-senior', 'customs',
+  'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
 ]
 
 // Category display metadata (Stage 1 persona cards)

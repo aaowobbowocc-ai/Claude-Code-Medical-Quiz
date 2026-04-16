@@ -1,0 +1,88 @@
+{
+  "id": "customs",
+  "name": "關務特考三等",
+  "short": "關務",
+  "icon": "🛃",
+  "category": "civil-service",
+  "subCategory": "關務特考",
+  "level": "senior",
+  "selectionType": "quota",
+  "persona": [
+    "civil-exam-prep"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-customs.json",
+  "totalQ": 100,
+  "passScore": null,
+  "passRate": null,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "法學知識",
+      "subject": "法學知識",
+      "subjects": "中華民國憲法、法學緒論",
+      "count": 50,
+      "timeLimit": null
+    },
+    {
+      "id": "paper2",
+      "name": "英文",
+      "subject": "英文",
+      "subjects": "外國文（英文）",
+      "count": 25,
+      "timeLimit": null
+    },
+    {
+      "id": "paper3",
+      "name": "國文（測驗）",
+      "subject": "國文（測驗）",
+      "subjects": "作文與測驗之測驗部分",
+      "count": 10,
+      "timeLimit": null
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" }
+  ],
+  "ui": {
+    "tagNames": {
+      "law_knowledge": "法學知識",
+      "english": "英文",
+      "chinese": "國文（測驗）"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "law_knowledge": { "icon": "⚖️", "color": "#6366F1" },
+      "english": { "icon": "🌐", "color": "#3B82F6" },
+      "chinese": { "icon": "📝", "color": "#F59E0B" }
+    },
+    "subjectColors": {
+      "法學知識": "#6366F1",
+      "英文": "#3B82F6",
+      "國文（測驗）": "#F59E0B"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 關務特考題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "關務特考三等（公務人員特種考試關務人員考試）",
+    "shortName": "關務特考三等",
+    "studentType": "關務考生",
+    "years": "110-114",
+    "totalQ": 159,
+    "examDesc": "公務人員特種考試關務人員考試三等，涵蓋財稅行政、關稅法務等類科。共同科目法學知識（憲法、法學緒論）50 題、英文 25 題、國文測驗 10 題。",
+    "paperDesc": "法學知識 50 題、英文 25 題、國文測驗 10 題。",
+    "subjects": "法學知識、英文、國文（測驗）",
+    "mockDesc": "模擬關務特考選擇題",
+    "subjectDetails": [
+      ["法學知識", "涵蓋中華民國憲法、法學緒論。"],
+      ["英文", "外國文（英文）選擇題。"],
+      ["國文（測驗）", "國文測驗部分，10 題。"]
+    ]
+  }
+}

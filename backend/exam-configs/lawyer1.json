@@ -17,7 +17,7 @@
     "longText": true
   },
   "questionsFile": "questions-lawyer1.json",
-  "totalQ": 2400,
+  "totalQ": 2968,
   "passScore": 400,
   "passRate": 0.33,
   "papers": [
@@ -28,10 +28,22 @@
       "subjects": "憲法、行政法、國際公法、國際私法",
       "count": 75,
       "breakdown": [
-        { "subject": "憲法", "count": 25 },
-        { "subject": "行政法", "count": 25 },
-        { "subject": "國際公法", "count": 13 },
-        { "subject": "國際私法", "count": 12 }
+        {
+          "subject": "憲法",
+          "count": 25
+        },
+        {
+          "subject": "行政法",
+          "count": 25
+        },
+        {
+          "subject": "國際公法",
+          "count": 13
+        },
+        {
+          "subject": "國際私法",
+          "count": 12
+        }
       ],
       "breakdownNote": "依歷屆題分布估計",
       "timeLimit": 90
@@ -43,8 +55,14 @@
       "subjects": "民法、民事訴訟法",
       "count": 80,
       "breakdown": [
-        { "subject": "民法", "count": 45 },
-        { "subject": "民事訴訟法", "count": 35 }
+        {
+          "subject": "民法",
+          "count": 45
+        },
+        {
+          "subject": "民事訴訟法",
+          "count": 35
+        }
       ],
       "breakdownNote": "依歷屆題分布估計",
       "timeLimit": 90
@@ -56,12 +74,30 @@
       "subjects": "公司法、保險法、票據法、證交法、強執法、法學英文",
       "count": 70,
       "breakdown": [
-        { "subject": "公司法", "count": 12 },
-        { "subject": "保險法", "count": 12 },
-        { "subject": "票據法", "count": 12 },
-        { "subject": "證券交易法", "count": 12 },
-        { "subject": "強制執行法", "count": 12 },
-        { "subject": "法學英文", "count": 10 }
+        {
+          "subject": "公司法",
+          "count": 12
+        },
+        {
+          "subject": "保險法",
+          "count": 12
+        },
+        {
+          "subject": "票據法",
+          "count": 12
+        },
+        {
+          "subject": "證券交易法",
+          "count": 12
+        },
+        {
+          "subject": "強制執行法",
+          "count": 12
+        },
+        {
+          "subject": "法學英文",
+          "count": 10
+        }
       ],
       "breakdownNote": "依歷屆題分布估計",
       "timeLimit": 90
@@ -73,16 +109,29 @@
       "subjects": "刑法、刑事訴訟法、法律倫理",
       "count": 75,
       "breakdown": [
-        { "subject": "刑法", "count": 30 },
-        { "subject": "刑事訴訟法", "count": 30 },
-        { "subject": "法律倫理", "count": 15 }
+        {
+          "subject": "刑法",
+          "count": 30
+        },
+        {
+          "subject": "刑事訴訟法",
+          "count": 30
+        },
+        {
+          "subject": "法律倫理",
+          "count": 15
+        }
       ],
       "breakdownNote": "依歷屆題分布估計",
       "timeLimit": 90
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {
@@ -92,11 +141,26 @@
       "comprehensive_law_4": "綜合法學四"
     },
     "stageStyles": {
-      "all": { "icon": "🎲", "color": "#64748B" },
-      "comprehensive_law_1": { "icon": "📜", "color": "#3B82F6" },
-      "comprehensive_law_2": { "icon": "⚖️", "color": "#10B981" },
-      "comprehensive_law_3": { "icon": "🏢", "color": "#F59E0B" },
-      "comprehensive_law_4": { "icon": "🔨", "color": "#EF4444" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "comprehensive_law_1": {
+        "icon": "📜",
+        "color": "#3B82F6"
+      },
+      "comprehensive_law_2": {
+        "icon": "⚖️",
+        "color": "#10B981"
+      },
+      "comprehensive_law_3": {
+        "icon": "🏢",
+        "color": "#F59E0B"
+      },
+      "comprehensive_law_4": {
+        "icon": "🔨",
+        "color": "#EF4444"
+      }
     },
     "subjectColors": {
       "綜合法學（憲法、行政法、國際公法、國際私法）": "#3B82F6",
@@ -112,16 +176,28 @@
     "shortName": "律師一試",
     "studentType": "法律系學生",
     "years": "105-114",
-    "totalQ": 2400,
+    "totalQ": 2968,
     "examDesc": "律師高考第一試與司法官特考第一試合併舉行，每年一次。第一試為選擇題測驗，通過後方能參加第二試（申論題）。應考資格為法律相關學系畢業或修畢特定法律學分。",
     "paperDesc": "第一試分為四卷綜合法學選擇題，合計 300 題。錄取標準為當年度成績前 33% 者通過。",
     "subjects": "綜合法學一（憲法、行政法、國際公法、國際私法）、綜合法學二（民法、民事訴訟法）、綜合法學三（公司法、保險法、票據法、證券交易法、強制執行法、法學英文）、綜合法學四（刑法、刑事訴訟法、法律倫理）",
     "mockDesc": "完整模擬四卷，300 題選擇題",
     "subjectDetails": [
-      ["綜合法學一", "憲法、行政法、國際公法、國際私法，公法領域核心考題。"],
-      ["綜合法學二", "民法總則、債編、物權、親屬、繼承，以及民事訴訟法。"],
-      ["綜合法學三", "公司法、保險法、票據法、證券交易法、強制執行法、法學英文。"],
-      ["綜合法學四", "刑法總則、分則，刑事訴訟法，以及法律倫理。"]
+      [
+        "綜合法學一",
+        "憲法、行政法、國際公法、國際私法，公法領域核心考題。"
+      ],
+      [
+        "綜合法學二",
+        "民法總則、債編、物權、親屬、繼承，以及民事訴訟法。"
+      ],
+      [
+        "綜合法學三",
+        "公司法、保險法、票據法、證券交易法、強制執行法、法學英文。"
+      ],
+      [
+        "綜合法學四",
+        "刑法總則、分則，刑事訴訟法，以及法律倫理。"
+      ]
     ]
   }
 }

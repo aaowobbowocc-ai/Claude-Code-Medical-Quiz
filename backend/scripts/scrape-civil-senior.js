@@ -295,16 +295,18 @@ async function main() {
     { year: '110', code: '110090', session: '第一次' },
     { year: '111', code: '111090', session: '第一次' },
     { year: '112', code: '112090', session: '第一次' },
+    { year: '113', code: '113080', session: '第一次' },
     { year: '114', code: '114080', session: '第一次' },
   ]
   const SUBJECTS = [
     { c: '201', s: '0401', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['114'] },
     // 國文 class code varies: 201 for 106/108, 301 for 107/109/110/111/112
     { c: '201', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['106','108','114'] },
-    { c: '301', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['107','109','110','111','112'] },
+    { c: '301', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['107','109','110','111','112','113'] },
     { c: '301', s: '0301', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['111','112'] },
+    { c: '301', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['113'] },
     { c: '201', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['114'] },
-    { c: '301', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['111','112'] },
+    { c: '301', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['111','112','113'] },
     { c: '201', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['114'] },
   ]
   const file = path.join(__dirname, '..', 'questions-civil-senior.json')

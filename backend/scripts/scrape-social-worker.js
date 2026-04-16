@@ -1,12 +1,15 @@
 #!/usr/bin/env node
-// Scrape 司法特考三等 MCQ subjects using pdfjs-dist position data
-// Subjects: 法學知識與英文 (50Q) + 國文測驗 (10Q)
+// Scrape 社會工作師 MCQ subjects using pdfjs-dist position data
+// Subjects: 社會工作 (40Q) + 社會工作直接服務 (40Q) + 社會工作管理 (40Q)
+// All are mixed essay+MCQ format (50% essay, 50% MCQ)
+// Available: 112-115 (第一次), c=103
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 const fs = require('fs')
 const path = require('path')
 const https = require('https')
 const pdfjsLib = require('pdf-parse/lib/pdf.js/v1.10.100/build/pdf.js')
+const pdfParse = require('pdf-parse')
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/131.0.0.0 Safari/537.36'
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
@@ -39,7 +42,6 @@ function fetchPdf(url, retries = 2) {
   })
 }
 
-// Extract structured text with x,y positions from all pages
 async function extractPositionedText(buf) {
   const doc = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise
   const allItems = []
@@ -56,14 +58,10 @@ async function extractPositionedText(buf) {
       })
     }
   }
-  // Sort by page, then y descending (top to bottom), then x ascending
   allItems.sort((a, b) => a.page - b.page || b.y - a.y || a.x - b.x)
   return allItems
 }
 
-// Build logical lines from positioned items.
-// Items on the same y (±3px) are on the same visual row.
-// Items at x < 200 are column 1, items at x > 200 are column 2.
 function buildLogicalLines(items) {
   const rows = []
   let currentY = null, currentRow = []
@@ -79,23 +77,19 @@ function buildLogicalLines(items) {
   }
   if (currentRow.length) rows.push(currentRow)
 
-  // For each row, detect column boundaries by finding x-gaps between items.
-  // MoEX exam PDFs use 2-column (x≈69, x≈308) or 4-column (x≈69, 187, 308, 427) layouts.
   const lines = []
   for (const row of rows) {
     row.sort((a, b) => a.x - b.x)
 
-    // Find all significant x-gaps (>60px between items)
     const gapIdxs = []
     for (let i = 1; i < row.length; i++) {
-      const prevEnd = row[i - 1].x + row[i - 1].str.length * 11 // rough char width
+      const prevEnd = row[i - 1].x + row[i - 1].str.length * 11
       if (row[i].x - prevEnd > 30 || row[i].x - row[i - 1].x > 80) {
         gapIdxs.push(i)
       }
     }
 
     if (gapIdxs.length >= 3) {
-      // 4 columns (for very short options like Q7, Q17)
       const breaks = [0, ...gapIdxs, row.length]
       for (let b = 0; b < breaks.length - 1; b++) {
         const chunk = row.slice(breaks[b], breaks[b + 1])
@@ -103,13 +97,11 @@ function buildLogicalLines(items) {
         if (text) lines.push({ text, x: chunk[0].x, y: row[0].y, col: 'C' + b })
       }
     } else if (gapIdxs.length >= 1) {
-      // 2 columns
       const left = row.slice(0, gapIdxs[0]).map(r => r.str).join('').trim()
       const right = row.slice(gapIdxs[0]).map(r => r.str).join('').trim()
       if (left) lines.push({ text: left, x: row[0].x, y: row[0].y, col: 'L' })
       if (right) lines.push({ text: right, x: row[gapIdxs[0]].x, y: row[0].y, col: 'R' })
     } else {
-      // Single column
       const text = row.map(r => r.str).join('').trim()
       if (text) lines.push({ text, x: row[0].x, y: row[0].y, col: 'F' })
     }
@@ -117,37 +109,44 @@ function buildLogicalLines(items) {
   return lines
 }
 
-// Parse questions from logical lines
 function parseQuestions(lines) {
-  // Filter header lines
   const filtered = lines.filter(l => {
     const t = l.text
-    if (/^(代號|類\s*科|科\s*目|考試|頁次|等\s*別|本試題|座號|※|禁止|本科目|須用|共\d+題)/.test(t)) return false
+    if (/^(代號|類\s*科|科\s*目|考試|頁次|等\s*別|本試題|座號|※|禁止|本科目|須用|共\d+題|請以|不必|不得)/.test(t)) return false
     if (/^\d+－\d+$/.test(t)) return false
     if (/^頁次/.test(t)) return false
     return true
   })
 
-  // Find question starts
   const qStarts = []
   let expectNext = 1
   for (let i = 0; i < filtered.length; i++) {
     const line = filtered[i]
-    // Question numbers start at x ≈ 41 (left margin, smaller than option indent of 69+)
-    if (line.x > 60) continue // Skip option-indent lines for number detection
+    if (line.x > 60) continue
     const es = String(expectNext)
     if (line.text.startsWith(es)) {
       const rest = line.text.slice(es.length)
       if (rest.length === 0) continue
+      // Skip if rest starts with a digit AND the full leading number != expectNext
+      // e.g. "889歲" when expecting 8: full leading = 889 ≠ 8, so this IS Q8 (8 + "89歲")
+      // e.g. "10社會" when expecting 10: full leading = 10 = 10, so this IS Q10
+      // e.g. "114年" when expecting 1: full leading = 114 ≠ 1, skip (year in header)
       const fullLeading = line.text.match(/^(\d+)/)[1]
       const fullNum = parseInt(fullLeading)
-      if (/^年\s*(第|公務|專門|國家|特種)/.test(rest)) continue
+      if (fullNum !== expectNext) {
+        // The full leading number doesn't match — could be our number + digit content
+        // Accept if our expected number is a prefix AND rest doesn't look like a year/header
+        if (/^年\s*(第|公務|專門|國家|特種)/.test(rest)) continue
+        // Accept: "889歲" = Q8 + "89歲"
+      } else {
+        // Full leading number matches exactly (e.g. "10社會" = Q10)
+        if (/^年\s*(第|公務|專門|國家|特種)/.test(rest)) continue
+      }
       qStarts.push({ idx: i, number: expectNext })
       expectNext++
     }
   }
 
-  // Extract questions
   const questions = []
   for (let qi = 0; qi < qStarts.length; qi++) {
     const start = qStarts[qi].idx
@@ -155,13 +154,9 @@ function parseQuestions(lines) {
     const num = qStarts[qi].number
     const block = filtered.slice(start, end)
 
-    // First item: "Nquestion text"
     const stemText = block[0].text.slice(String(num).length).trim()
     const restItems = block.slice(1)
 
-    // Separate stem from options.
-    // Stem lines are at x ≈ 58 (question indent). Options at x ≈ 69+ or column items.
-    // Stem usually ends with ？ or ：
     let stemEndIdx = 0
     let stemEnded = stemText.includes('？') || stemText.includes('：')
     if (!stemEnded) {
@@ -177,10 +172,6 @@ function parseQuestions(lines) {
     const stemParts = [stemText]
     for (let ri = 0; ri < stemEndIdx; ri++) stemParts.push(restItems[ri].text)
     const optionItems = restItems.slice(stemEndIdx)
-
-    // Group option items into A/B/C/D.
-    // Options come in pairs on the same y-row (col L=odd option, col R=even option)
-    // Or as full-width lines (one option per line).
     const opts = extractOptions(optionItems)
 
     if (opts.length >= 2) {
@@ -198,7 +189,6 @@ function parseQuestions(lines) {
 function extractOptions(items) {
   if (items.length === 0) return []
 
-  // Group items by approximate y value (options on same row share y)
   const yGroups = []
   let curY = null, curGroup = []
   for (const item of items) {
@@ -212,32 +202,21 @@ function extractOptions(items) {
   }
   if (curGroup.length) yGroups.push(curGroup)
 
-  // Each yGroup may have 1, 2, or 4 options (based on column split).
-  // Build option list in reading order.
   const opts = []
   for (const group of yGroups) {
-    // Sort by x for correct reading order
     group.sort((a, b) => a.x - b.x)
-
-    // Check if this is a multi-column row (has C0/C1/C2/C3 or L/R columns)
     const colTypes = new Set(group.map(it => it.col))
 
     if (colTypes.has('C0') || colTypes.has('C1') || colTypes.has('C2') || colTypes.has('C3')) {
-      // 4-column: each item is a separate option
-      for (const item of group) {
-        opts.push(item.text)
-      }
+      for (const item of group) opts.push(item.text)
     } else if (colTypes.has('L') && colTypes.has('R')) {
-      // 2-column: left + right
       const left = group.filter(it => it.col === 'L').map(it => it.text).join('')
       const right = group.filter(it => it.col === 'R').map(it => it.text).join('')
       opts.push(left)
       opts.push(right)
     } else {
-      // Single column: one option or continuation
       const fullText = group.map(it => it.text).join('')
       if (opts.length > 0 && group[0].x > 65 && group[0].col === 'F' && fullText.length < 25) {
-        // Continuation of previous option
         opts[opts.length - 1] += fullText
       } else {
         opts.push(fullText)
@@ -247,13 +226,9 @@ function extractOptions(items) {
   return opts
 }
 
-// Parse answers from answer PDF (using pdf-parse for simplicity)
-const pdfParse = require('pdf-parse')
-
 async function parseAnswers(buf) {
   const { text } = await pdfParse(buf)
   const answers = {}
-  // Fullwidth format
   const fw = /答案\s*([ＡＢＣＤ]+)/g
   let m, n = 1
   while ((m = fw.exec(text)) !== null) {
@@ -263,7 +238,6 @@ async function parseAnswers(buf) {
     }
   }
   if (Object.keys(answers).length >= 5) return answers
-  // Tabular format
   let cleaned = text.replace(/第\d{1,3}題/g, '').replace(/題號/g, '').replace(/答案/g, '')
     .replace(/標準/g, '').replace(/[\s\n\r]+/g, '')
   let idx = 1
@@ -271,6 +245,25 @@ async function parseAnswers(buf) {
     if (ch === 'A' || ch === 'B' || ch === 'C' || ch === 'D') answers[idx++] = ch
   }
   return answers
+}
+
+async function parseCorrections(buf) {
+  const { text } = await pdfParse(buf)
+  const corrections = { disputed: [], changed: [] }
+  const lines = text.split('\n').map(l => l.trim()).filter(Boolean)
+  for (const line of lines) {
+    const giveMatch = line.match(/第\s*(\d+)\s*題.*一律給分/i) || line.match(/(\d+)\s*.*送分/)
+    if (giveMatch) {
+      corrections.disputed.push(parseInt(giveMatch[1]))
+      continue
+    }
+    const changeMatch = line.match(/第\s*(\d+)\s*題.*答案[更修]正.*?([ABCD])/i) ||
+                         line.match(/(\d+)\s*.*更正.*?([ABCD])/)
+    if (changeMatch) {
+      corrections.changed.push({ num: parseInt(changeMatch[1]), answer: changeMatch[2] })
+    }
+  }
+  return corrections
 }
 
 const stripPUA = s => typeof s === 'string' ? s.replace(/[\uE000-\uF8FF]/g, '').trim() : s
@@ -284,14 +277,17 @@ function atomicWrite(p, obj) {
 
 async function main() {
   const SESSIONS = [
-    { year: '113', code: '113120', session: '第一次' },
-    { year: '114', code: '114120', session: '第一次' },
+    { year: '112', code: '112030', session: '第一次' },
+    { year: '113', code: '113030', session: '第一次' },
+    { year: '114', code: '114030', session: '第一次' },
+    { year: '115', code: '115030', session: '第一次' },
   ]
   const SUBJECTS = [
-    { c: '101', s: '0309', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50 },
-    { c: '101', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true },
+    { c: '103', s: '0301', name: '社會工作', tag: 'social_work', expectedQ: 40, mixedEssay: true },
+    { c: '103', s: '0302', name: '社會工作直接服務', tag: 'social_work_direct', expectedQ: 40, mixedEssay: true },
+    { c: '103', s: '0303', name: '社會工作管理', tag: 'social_work_mgmt', expectedQ: 40, mixedEssay: true },
   ]
-  const file = path.join(__dirname, '..', 'questions-judicial.json')
+  const file = path.join(__dirname, '..', 'questions-social-worker.json')
 
   let data
   if (fs.existsSync(file)) {
@@ -308,7 +304,8 @@ async function main() {
     for (const sub of SUBJECTS) {
       const qUrl = `${BASE}?t=Q&code=${sess.code}&c=${sub.c}&s=${sub.s}&q=1`
       const aUrl = `${BASE}?t=S&code=${sess.code}&c=${sub.c}&s=${sub.s}&q=1`
-      let qBuf, aBuf
+      const mUrl = `${BASE}?t=M&code=${sess.code}&c=${sub.c}&s=${sub.s}&q=1`
+      let qBuf, aBuf, mBuf
 
       try { qBuf = await fetchPdf(qUrl) } catch (e) {
         console.log(`  ✗ ${sub.name}: ${e.message}`); continue
@@ -316,21 +313,30 @@ async function main() {
       try { aBuf = await fetchPdf(aUrl) } catch (e) {
         console.log(`  ⚠ ${sub.name} no answers: ${e.message}`); aBuf = null
       }
+      try { mBuf = await fetchPdf(mUrl) } catch (e) { mBuf = null }
 
-      // Extract with position data
       let posItems = await extractPositionedText(qBuf)
-      // For mixed essay+MCQ subjects, skip everything before 選擇題 section
-      if (sub.mixedEssay) {
-        const mcqIdx = posItems.findIndex(it => it.str.includes('選擇題'))
-        if (mcqIdx >= 0) {
-          posItems = posItems.slice(mcqIdx)
-        } else {
-          console.log(`  ⚠ ${sub.name}: no 選擇題 section found`); continue
-        }
+      // Skip to 選擇題 section
+      const mcqIdx = posItems.findIndex(it => it.str.includes('選擇題'))
+      if (mcqIdx >= 0) {
+        posItems = posItems.slice(mcqIdx)
+      } else {
+        console.log(`  ⚠ ${sub.name}: no 選擇題 section found`); continue
       }
+
       const logLines = buildLogicalLines(posItems)
       const parsed = parseQuestions(logLines)
       const answers = aBuf ? await parseAnswers(aBuf) : {}
+
+      // Apply corrections
+      let corrections = { disputed: [], changed: [] }
+      if (mBuf) {
+        corrections = await parseCorrections(mBuf)
+        if (corrections.disputed.length || corrections.changed.length)
+          console.log(`  📋 corrections: ${corrections.disputed.length} disputed, ${corrections.changed.length} changed`)
+        for (const c of corrections.changed) answers[c.num] = c.answer
+      }
+
       console.log(`  ✓ ${sub.tag}: ${parsed.length} Q / ${Object.keys(answers).length} A (expected ${sub.expectedQ})`)
 
       for (const q of parsed) {
@@ -340,13 +346,15 @@ async function main() {
         if (existingKey.has(key)) continue
         const cleanOpts = {}
         for (const k of ['A', 'B', 'C', 'D']) cleanOpts[k] = stripPUA(q.options[k] || '')
-        added.push({
+        const entry = {
           id: nextId++, roc_year: sess.year, session: sess.session, exam_code: sess.code,
           subject: sub.name, subject_tag: sub.tag, subject_name: sub.name,
           stage_id: 0, number: q.number,
           question: stripPUA(q.question), options: cleanOpts,
           answer: ans, explanation: '',
-        })
+        }
+        if (corrections.disputed.includes(q.number)) entry.disputed = true
+        added.push(entry)
       }
       await sleep(400)
     }

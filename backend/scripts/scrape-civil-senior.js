@@ -139,10 +139,15 @@ function parseQuestions(lines) {
     const es = String(expectNext)
     if (line.text.startsWith(es)) {
       const rest = line.text.slice(es.length)
-      if (rest.length > 0 && !/^\d/.test(rest[0]) && !/^年\s*(第|公務|專門|國家|特種)/.test(rest)) {
-        qStarts.push({ idx: i, number: expectNext })
-        expectNext++
+      if (rest.length === 0) continue
+      const fullLeading = line.text.match(/^(\d+)/)[1]
+      const fullNum = parseInt(fullLeading)
+      if (/^年\s*(第|公務|專門|國家|特種)/.test(rest)) continue
+      if (fullNum !== expectNext && fullNum > expectNext) {
+        // e.g. "889歲" when expecting 8 — accept as Q8
       }
+      qStarts.push({ idx: i, number: expectNext })
+      expectNext++
     }
   }
 

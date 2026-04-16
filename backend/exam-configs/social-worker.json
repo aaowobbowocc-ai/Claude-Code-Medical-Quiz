@@ -1,0 +1,61 @@
+{
+  "id": "social-worker",
+  "name": "社會工作師",
+  "short": "社工",
+  "icon": "🤝",
+  "category": "medical",
+  "questionsFile": "questions-social-worker.json",
+  "totalQ": 120,
+  "passScore": 60,
+  "passRate": 0.6,
+  "timeLimit": 120,
+  "papers": [
+    {
+      "id": "social_work",
+      "name": "社會工作",
+      "subject": "社會工作",
+      "subjects": "社會工作概論、社會福利、社會工作理論",
+      "count": 40
+    },
+    {
+      "id": "social_work_direct",
+      "name": "社會工作直接服務",
+      "subject": "社會工作直接服務",
+      "subjects": "個案工作、團體工作、社區工作、直接服務方法",
+      "count": 40
+    },
+    {
+      "id": "social_work_mgmt",
+      "name": "社會工作管理",
+      "subject": "社會工作管理",
+      "subjects": "社會工作行政、方案規劃、組織管理",
+      "count": 40
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" }
+  ],
+  "ui": {
+    "tagNames": {
+      "social_work": "社會工作",
+      "social_work_direct": "直接服務",
+      "social_work_mgmt": "管理"
+    },
+    "stageStyles": {
+      "social_work": { "icon": "📚", "color": "#6366F1" },
+      "social_work_direct": { "icon": "🫂", "color": "#F59E0B" },
+      "social_work_mgmt": { "icon": "📋", "color": "#10B981" }
+    },
+    "subjectColors": {
+      "social_work": "#6366F1",
+      "social_work_direct": "#F59E0B",
+      "social_work_mgmt": "#10B981"
+    }
+  },
+  "seo": {
+    "fullName": "社會工作師國考",
+    "examDesc": "社會工作師高等考試，考試科目包含社會工作、社會工作直接服務、社會工作管理。收錄 112-115 年考古題，共 480 題選擇題。",
+    "totalQ": 480,
+    "years": "112-115"
+  }
+}

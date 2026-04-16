@@ -97,7 +97,49 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" /></noscript>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static content for Googlebot / pre-JS render. React.createRoot replaces this on mount. -->
+      <div style="max-width:640px;margin:40px auto;padding:20px;font-family:'Noto Sans TC',sans-serif;color:#333;line-height:1.7">
+        <h1 style="font-size:1.5rem;color:#1A6B9A">國考知識王 — 醫事 · 法律 · 公職國考對戰練習平台</h1>
+        <p>免費國家考試題庫練習平台，涵蓋醫事人員（醫師、牙醫、藥師、護理師、中醫、獸醫、放射師等 21 類）、公職（高考三等、普考、初考）、法律與共同科目（憲法、法學緒論）國考題庫，收錄 106-115 年 75,000+ 題考古題。即時對戰、AI 解說、歷屆模擬考、弱點分析，助你高效備考。</p>
+        <h2 style="font-size:1.2rem;margin-top:1.5rem">平台功能</h2>
+        <ul>
+          <li>歷屆考古題練習 — 依科目、年度篩選練習</li>
+          <li>即時對戰 — 與其他考生即時 PK 比拼</li>
+          <li>歷屆模擬考 — 模擬真實國考限時作答</li>
+          <li>AI 智慧解說 — 每題提供詳細解析與記憶口訣</li>
+          <li>弱點分析 — 追蹤各科正確率，找出弱科重點加強</li>
+          <li>精華筆記 — 各科高頻考點速記</li>
+          <li>留言板 — 與其他考生交流備考心得</li>
+        </ul>
+        <h2 style="font-size:1.2rem;margin-top:1.5rem">支援考試類別</h2>
+        <ul>
+          <li>醫師國考（一階 / 二階）</li>
+          <li>牙醫師國考（一階 / 二階）</li>
+          <li>藥師國考（一階 / 二階）</li>
+          <li>中醫師國考（一階 / 二階）</li>
+          <li>護理師國考</li>
+          <li>物理治療師國考</li>
+          <li>職能治療師國考</li>
+          <li>醫事檢驗師國考</li>
+          <li>營養師國考</li>
+          <li>獸醫師國考</li>
+          <li>醫事放射師國考</li>
+          <li>社會工作師國考</li>
+          <li>律師/司法官 一試</li>
+          <li>司法特考 三等</li>
+          <li>關務特考 三等</li>
+          <li>一般警察特考 三等</li>
+          <li>公職 — 高考三等 一般行政</li>
+          <li>公職 — 普通考試 一般行政</li>
+          <li>公職 — 初等考試 一般行政</li>
+          <li>共同科目 — 憲法、法學緒論</li>
+        </ul>
+        <p>所有題目來源為考選部歷年公開之國家考試考古題（106-115 年度），AI 解說由 Anthropic Claude 人工智慧生成，僅供參考。完全免費，無需註冊。</p>
+        <nav><a href="/privacy">隱私權政策</a> | <a href="/tos">服務條款</a> | <a href="/contact">關於我們</a></nav>
+      </div>
+      <!-- /static-seo -->
+    </div>
     <noscript>
       <div style="max-width:600px;margin:40px auto;padding:20px;font-family:sans-serif;color:#333">
         <h1>國考知識王 — 醫事 · 法律 · 公職國考對戰練習平台</h1>

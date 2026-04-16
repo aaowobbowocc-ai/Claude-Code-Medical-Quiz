@@ -98,12 +98,12 @@ function buildShell(tpl, cfg) {
   html = replaceTag(html, /<meta name="twitter:description" content="[^"]*" \/>/,
     `<meta name="twitter:description" content="${esc(description)}" />`)
 
-  // Swap noscript body for exam-specific crawlable content
-  const noscriptBody = `
-      <div style="max-width:640px;margin:40px auto;padding:20px;font-family:sans-serif;color:#333;line-height:1.7">
-        <h1>${esc(fullName)} — 國考知識王</h1>
+  // Build exam-specific crawlable content block (shared by #root and <noscript>)
+  const staticBody = `
+      <div style="max-width:640px;margin:40px auto;padding:20px;font-family:'Noto Sans TC',sans-serif;color:#333;line-height:1.7">
+        <h1 style="font-size:1.5rem;color:#1A6B9A">${esc(fullName)} — 國考知識王</h1>
         <p>${esc(descBase)}</p>
-${seo.paperDesc ? `        <h2>考試結構</h2>\n        <p>${esc(seo.paperDesc)}</p>\n` : ''}${seo.subjects ? `        <h2>考試科目</h2>\n        <p>${esc(seo.subjects)}</p>\n` : ''}        <h2>平台功能</h2>
+${seo.paperDesc ? `        <h2 style="font-size:1.2rem;margin-top:1.5rem">考試結構</h2>\n        <p>${esc(seo.paperDesc)}</p>\n` : ''}${seo.subjects ? `        <h2 style="font-size:1.2rem;margin-top:1.5rem">考試科目</h2>\n        <p>${esc(seo.subjects)}</p>\n` : ''}        <h2 style="font-size:1.2rem;margin-top:1.5rem">平台功能</h2>
         <ul>
           <li>歷屆考古題練習 — 依科目、年度篩選</li>
           <li>即時對戰 — 與其他考生即時 PK</li>
@@ -112,17 +112,27 @@ ${seo.paperDesc ? `        <h2>考試結構</h2>\n        <p>${esc(seo.paperDesc
           <li>弱點分析 — 追蹤正確率找出弱科</li>
           <li>精華筆記、留言板、排行榜</li>
         </ul>
-        <p>完全免費，無需註冊。請啟用 JavaScript 以使用完整功能。</p>
+        <p>完全免費，無需註冊。</p>
         <nav>
           <a href="/">首頁</a> |
           <a href="/privacy">隱私權政策</a> |
           <a href="/tos">服務條款</a> |
           <a href="/contact">關於我們</a>
         </nav>
-      </div>
-    `
-  html = html.replace(/<noscript>[\s\S]*?<\/noscript>/,
-    `<noscript>${noscriptBody}</noscript>`)
+      </div>`
+
+  // Inject visible static content inside <div id="root"> so Googlebot reads it
+  // before JS mounts. React.createRoot().render() replaces this on hydration.
+  // The <!-- /static-seo --> marker delimits the replaceable block.
+  html = html.replace(
+    /(<div id="root">)[\s\S]*?<!-- \/static-seo -->/,
+    `$1${staticBody}\n      <!-- /static-seo -->`
+  )
+
+  // Also update the main content <noscript> (the one inside <body>, not the font one in <head>).
+  // Target it by matching the noscript that contains the platform description.
+  html = html.replace(/<noscript>\s*<div style="max-width:6[\s\S]*?<\/noscript>/,
+    `<noscript>${staticBody}\n      <p>請啟用 JavaScript 以使用完整功能。</p>\n    </noscript>`)
 
   return html
 }

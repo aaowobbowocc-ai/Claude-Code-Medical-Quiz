@@ -86,7 +86,8 @@ function parseQuestionsPUA(text) {
       const expectedStr = String(expectedNum)
       if (line.startsWith(expectedStr) && line.length > expectedStr.length) {
         const rest = line.slice(expectedStr.length)
-        if (!rest.startsWith('年')) {
+        // Block year headers like "112年第二次..." or "111年公務人員..." but allow questions starting with 年 like "年僅17歲..."
+        if (!/^年\s*(第|公務|專門|國家|特種)/.test(rest)) {
           flushQ()
           cur = { number: expectedNum, question: rest.trim(), options: {} }
           continue

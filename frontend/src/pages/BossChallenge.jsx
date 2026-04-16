@@ -4,6 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import QuestionImages from '../components/QuestionImages'
 import ShareChallengeButton from '../components/ShareChallengeButton'
 import { getExamConfig } from '../config/examRegistry'
+import { supabase } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const BOSS_FEE = 50
@@ -100,6 +101,30 @@ export default function BossChallenge() {
         const earned = pct >= 0.7 ? 200 : 40
         addCoins(earned)
         setReward(earned)
+      }
+      // Submit to leaderboard when all questions answered
+      if (newScore.total === questions.length) {
+        const playerName = usePlayerStore.getState().name
+        if (playerName) {
+          ;(async () => {
+            let userId = null
+            try {
+              const { data } = await supabase?.auth.getSession() || {}
+              userId = data?.session?.user?.id || null
+            } catch {}
+            fetch(`${BACKEND}/leaderboard/submit`, {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                name: playerName,
+                correct: newScore.correct,
+                total: newScore.total,
+                level: usePlayerStore.getState().level,
+                examId: usePlayerStore.getState().exam,
+                userId,
+              }),
+            }).catch(() => {})
+          })()
+        }
       }
       return newScore
     })

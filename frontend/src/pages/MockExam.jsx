@@ -6,6 +6,7 @@ import SmartBanner from '../components/SmartBanner'
 import ShareChallengeButton from '../components/ShareChallengeButton'
 import { useAccuracyStore } from '../store/accuracyStore'
 import QuestionImages from '../components/QuestionImages'
+import { supabase } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -574,6 +575,28 @@ function ExamResults({ papers, navigate }) {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ stats }),
       }).catch(() => {})
+    }
+    // Submit to leaderboard
+    const playerName = usePlayerStore.getState().name
+    if (playerName) {
+      ;(async () => {
+        let userId = null
+        try {
+          const { data } = await supabase?.auth.getSession() || {}
+          userId = data?.session?.user?.id || null
+        } catch {}
+        fetch(`${BACKEND}/leaderboard/submit`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: playerName,
+            correct: totalCorrect,
+            total: totalQuestions,
+            level: usePlayerStore.getState().level,
+            examId: usePlayerStore.getState().exam,
+            userId,
+          }),
+        }).catch(() => {})
+      })()
     }
     // Quota exams: compute approximate PR from weekly leaderboard distribution
     if (isQuota) {

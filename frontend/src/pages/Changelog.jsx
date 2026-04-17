@@ -40,6 +40,8 @@ function formatDate(dateStr) {
   return d.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
+const PAGE_SIZE = 10
+
 export default function Changelog() {
   const navigate = useNavigate()
   const addCoins = usePlayerStore(s => s.addCoins)
@@ -47,6 +49,7 @@ export default function Changelog() {
   const [loading, setLoading] = useState(true)
   const [claimed, setClaimed] = useState(getClaimedIds())
   const [flashReward, setFlashReward] = useState(null)
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
     fetch('/changelog.json')
@@ -101,7 +104,7 @@ export default function Changelog() {
           </div>
         ) : (
           <div className="space-y-4">
-            {entries.map((entry, idx) => (
+            {entries.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE).map((entry, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
                 <div className="flex items-center gap-2 mb-2">
                   <TagBadge tag={entry.tag} />
@@ -152,6 +155,36 @@ export default function Changelog() {
                 })()}
               </div>
             ))}
+
+            {/* Pagination */}
+            {entries.length > PAGE_SIZE && (() => {
+              const totalPages = Math.ceil(entries.length / PAGE_SIZE)
+              return (
+                <div className="flex items-center justify-center gap-2 pt-2 pb-4">
+                  <button
+                    onClick={() => { setPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+                    disabled={page === 1}
+                    className={`px-3 py-2 rounded-xl text-sm font-semibold transition-all active:scale-95 ${
+                      page === 1 ? 'text-gray-300 bg-gray-50' : 'text-medical-blue bg-blue-50 border border-blue-200'
+                    }`}
+                  >
+                    ‹ 上一頁
+                  </button>
+                  <span className="text-xs text-gray-400 px-2">
+                    {page} / {totalPages}
+                  </span>
+                  <button
+                    onClick={() => { setPage(p => Math.min(totalPages, p + 1)); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+                    disabled={page === totalPages}
+                    className={`px-3 py-2 rounded-xl text-sm font-semibold transition-all active:scale-95 ${
+                      page === totalPages ? 'text-gray-300 bg-gray-50' : 'text-medical-blue bg-blue-50 border border-blue-200'
+                    }`}
+                  >
+                    下一頁 ›
+                  </button>
+                </div>
+              )
+            })()}
           </div>
         )}
 

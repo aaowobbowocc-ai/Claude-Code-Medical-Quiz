@@ -12,11 +12,12 @@ import { useBookmarks } from '../hooks/useBookmarks'
 import { useAccuracyStore } from '../store/accuracyStore'
 import { usePageMeta } from '../hooks/usePageMeta'
 import ShareChallengeButton from '../components/ShareChallengeButton'
+import ReadingModePopover, { useReadingMode } from '../components/ReadingModePopover'
 import { supabase } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
-import { getStageStyle as getStageStyleFromRegistry, getExamConfig } from '../config/examRegistry'
+import { getStageStyle as getStageStyleFromRegistry, getExamConfig, hasLegalSubjectTag } from '../config/examRegistry'
 
 const SOURCE_MODE_KEY_PREFIX = 'practice-source-mode:'
 function getSourceMode(examId) {
@@ -312,6 +313,11 @@ function SetupScreen({ onStart, onBack }) {
 function PracticeGame({ config, onFinish, onExit }) {
   const { play } = useSound()
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
+  const examCfg = getExamConfig(examType)
+  const isLegal = examCfg?.category === 'law-professional' || examCfg?.category === 'civil-service'
+  const isLongText = !!examCfg?.uxHints?.longText
+  const { prefs: readingPrefs, update: updateReadingPrefs, style: readingStyle } = useReadingMode(examType, isLegal)
+  const [questionCollapsed, setQuestionCollapsed] = useState(isLongText) // start collapsed for long-text exams
   const diffConfig = DIFFICULTIES.find(d => d.id === config.diff)
   const stageInfo  = { name: config.stageName || '練習', icon: '📝' }
 
@@ -416,6 +422,7 @@ function PracticeGame({ config, onFinish, onExit }) {
     setMyAnswer(null)
     setAiAnswer(null)
     setRevealed(false)
+    if (isLongText) setQuestionCollapsed(true)
     setTimeLeft(diffConfig.time)
     setTimerActive(true)
   }
@@ -486,6 +493,18 @@ function PracticeGame({ config, onFinish, onExit }) {
 
       {/* ── Question ─────────────────────────────────────────── */}
       <div className="flex-1 overflow-y-auto px-4 py-4">
+
+        {/* Case context (sticky) — for grouped questions (律師一試 etc.) */}
+        {q.case_context && (
+          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 mb-3 shadow-sm sticky top-0 z-10">
+            <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full mb-2 inline-block">案例</span>
+            <p className="text-sm text-gray-700" style={readingStyle}>{q.case_context}</p>
+            {q.groupInfo && (
+              <p className="text-[10px] text-amber-600 mt-2">題組：第 {q.groupInfo.currentInGroup}/{q.groupInfo.totalInGroup} 題</p>
+            )}
+          </div>
+        )}
+
         <div className="bg-white rounded-2xl p-4 mb-4 shadow-sm">
           {(q.subject_name || q.roc_year || q.isSharedBank) && (
             <div className="flex items-center gap-2 mb-2 flex-wrap">
@@ -508,6 +527,8 @@ function PracticeGame({ config, onFinish, onExit }) {
                   ? `${q.roc_year}(${q.session === '第一次' ? '一' : '二'})-${q.number}`
                   : q.number ? `#${q.number}` : ''}
               </span>
+              <span className="flex-1" />
+              <ReadingModePopover examId={examType} prominent={isLegal} prefs={readingPrefs} onUpdate={updateReadingPrefs} />
             </div>
           )}
           {q.is_deprecated && (
@@ -519,7 +540,24 @@ function PracticeGame({ config, onFinish, onExit }) {
               <p className="text-[11px] text-red-400 mt-1">原答案僅供歷史參考,本題不計入弱點與任務進度</p>
             </div>
           )}
-          <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
+          {/* Question text — long text exams get collapse/expand */}
+          {isLongText ? (
+            <div className="relative">
+              <p className={`text-gray-800 font-medium text-sm ${questionCollapsed ? 'line-clamp-2' : ''}`}
+                 style={readingStyle}>
+                {q.question}
+              </p>
+              <button
+                type="button"
+                onClick={() => setQuestionCollapsed(c => !c)}
+                className="text-[11px] text-medical-blue font-semibold mt-1 active:opacity-70"
+              >
+                {questionCollapsed ? '展開全文 ▾' : '收合 ▴'}
+              </button>
+            </div>
+          ) : (
+            <p className="text-gray-800 font-medium text-sm" style={readingStyle}>{q.question}</p>
+          )}
           <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
         </div>
 
@@ -547,7 +585,7 @@ function PracticeGame({ config, onFinish, onExit }) {
                       style={isCorrect ? { color: 'white' } : { color: OPTION_COLORS[letter] }}>
                   {letter}
                 </span>
-                <span className="flex-1 leading-snug">{text}</span>
+                <span className="flex-1 leading-snug" style={{ lineHeight: readingStyle.lineHeight, fontSize: readingStyle.fontSize }}>{text}</span>
                 <div className="shrink-0 flex flex-col items-end gap-0.5">
                   {isCorrect  && <span className="text-white">✓</span>}
                   {isWrong    && <span className="text-red-400">✗</span>}

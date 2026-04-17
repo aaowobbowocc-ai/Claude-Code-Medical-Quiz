@@ -34,12 +34,11 @@ function ExamPickerContent({ exam, setExam, closeSheet }) {
   const goPersona = () => { setStage('persona'); setActiveCategory(null) }
   const pickCategory = (cat) => {
     const meta = getCategoryMeta(cat)
-    if (!meta || meta.examCount === 0) {
-      // Category is still 拓荒中 with zero exams — stay on persona and do nothing
-      return
+    if (!meta || meta.examCount === 0) return
+    // GA4: track which persona card was tapped
+    if (typeof window.gtag === 'function') {
+      try { window.gtag('event', 'select_content', { content_type: 'persona_card', item_id: cat }) } catch {}
     }
-    // Fire-and-forget: warm the Service Worker's shared-banks cache so the user
-    // can practice offline the moment they open a reservoir-mode page.
     prefetchCategorySharedBanks(cat)
     setActiveCategory(cat)
     setStage('exam-list')
@@ -112,7 +111,12 @@ function ExamPickerContent({ exam, setExam, closeSheet }) {
         <div className="grid grid-cols-2 gap-2.5">
           {exams.map(e => (
             <button key={e.id}
-              onClick={() => { setExam(e.id); closeSheet() }}
+              onClick={() => {
+                if (typeof window.gtag === 'function') {
+                  try { window.gtag('event', 'select_content', { content_type: 'exam', item_id: e.id, category: activeCategory }) } catch {}
+                }
+                setExam(e.id); closeSheet()
+              }}
               className={`rounded-2xl p-4 flex flex-col items-center gap-1.5 border-2 transition-all active:scale-95
                 ${exam === e.id ? 'border-medical-blue bg-medical-light shadow' : 'border-gray-100 bg-white'}`}>
               <span className="text-3xl">{e.icon}</span>

@@ -7,6 +7,7 @@ import QuestionImages from '../components/QuestionImages'
 import CommentSection from '../components/CommentSection'
 import { useBookmarks } from '../hooks/useBookmarks'
 import { usePageMeta } from '../hooks/usePageMeta'
+import ReadingModePopover, { useReadingMode } from '../components/ReadingModePopover'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -112,15 +113,17 @@ function ClassifySheet({ q, onClose }) {
 }
 
 /* ── Question card ───────────────────────────────────────────── */
-function QuestionCard({ q, stageMap }) {
+function QuestionCard({ q, stageMap, readingStyle, readingPrefs, updateReadingPrefs, isLegal, isLongText }) {
   const [open, setOpen] = useState(false)
   const [explainReq, setExplainReq] = useState(false)
   const [classifying, setClassifying] = useState(false)
   const [localTag, setLocalTag] = useState(q.subject_tag || '')
   const [showFolderPick, setShowFolderPick] = useState(false)
+  const [questionCollapsed, setQuestionCollapsed] = useState(!!isLongText)
   const { isBookmarked, getFolder, folders, addToFolder, removeBookmark, getFolderQuestions, MAX_PER_FOLDER } = useBookmarks()
   const bookmarked = isBookmarked(q)
   const currentFolder = getFolder(q)
+  const examType = usePlayerStore(s => s.exam) || 'doctor1'
   const tagColor = getStageColor(localTag)
   const stageMeta = stageMap?.[localTag]
   const tagName  = !localTag || localTag === 'unknown'
@@ -159,6 +162,7 @@ function QuestionCard({ q, stageMap }) {
           </button>
         )}
         <div className="flex items-center gap-1.5 ml-auto">
+          <ReadingModePopover examId={examType} prominent={isLegal} prefs={readingPrefs} onUpdate={updateReadingPrefs} />
           <button onClick={(e) => { e.stopPropagation(); bookmarked ? removeBookmark(q) : setShowFolderPick(!showFolderPick) }}
             className="text-base active:scale-90 transition-transform" title={bookmarked ? `已收藏（${currentFolder}）` : '收藏題目'}>
             {bookmarked ? '⭐' : '☆'}
@@ -189,6 +193,17 @@ function QuestionCard({ q, stageMap }) {
         <ClassifySheet q={q} onClose={(tag) => handleVoteDone(tag)} />
       )}
 
+      {/* Case context (grouped questions) */}
+      {q.case_context && (
+        <div className="mx-4 mb-2 bg-amber-50 border border-amber-200 rounded-xl p-3">
+          <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full mb-1.5 inline-block">案例</span>
+          <p className="text-sm text-gray-700" style={readingStyle}>{q.case_context}</p>
+          {q.groupInfo && (
+            <p className="text-[10px] text-amber-600 mt-1.5">題組：第 {q.groupInfo.currentInGroup}/{q.groupInfo.totalInGroup} 題</p>
+          )}
+        </div>
+      )}
+
       {/* Question text */}
       <div className="px-4 pb-3">
         {q.is_deprecated && (
@@ -200,7 +215,17 @@ function QuestionCard({ q, stageMap }) {
             <p className="text-[11px] text-red-400 mt-1">原答案僅供歷史參考,本題不計入弱點與任務進度</p>
           </div>
         )}
-        <p className="text-sm text-gray-800 leading-relaxed">{q.question}</p>
+        {isLongText ? (
+          <div>
+            <p className={`text-sm text-gray-800 ${questionCollapsed ? 'line-clamp-2' : ''}`} style={readingStyle}>{q.question}</p>
+            <button type="button" onClick={() => setQuestionCollapsed(c => !c)}
+              className="text-[11px] text-medical-blue font-semibold mt-1 active:opacity-70">
+              {questionCollapsed ? '展開全文 ▾' : '收合 ▴'}
+            </button>
+          </div>
+        ) : (
+          <p className="text-sm text-gray-800" style={readingStyle}>{q.question}</p>
+        )}
         <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
       </div>
 
@@ -303,6 +328,9 @@ export default function Browse() {
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
   const examCfg = getExamConfig(examType)
   const examName = examCfg?.name || '國考'
+  const isLegalExam = examCfg?.category === 'law-professional' || examCfg?.category === 'civil-service'
+  const isLongTextExam = !!examCfg?.uxHints?.longText
+  const { prefs: readingPrefs, update: updateReadingPrefs, style: readingStyle } = useReadingMode(examType, isLegalExam)
   usePageMeta(
     `${examName} 題庫瀏覽`,
     `${examName}歷屆考古題線上題庫，按科目年度自由瀏覽，支援搜尋、AI 解說與收藏，歷年國考完整收錄。`,
@@ -450,7 +478,10 @@ export default function Browse() {
         )}
 
         {questions.map(q => (
-          <QuestionCard key={q.id} q={q} stageMap={stageMap} />
+          <QuestionCard key={q.id} q={q} stageMap={stageMap}
+            readingStyle={readingStyle} readingPrefs={readingPrefs}
+            updateReadingPrefs={updateReadingPrefs} isLegal={isLegalExam}
+            isLongText={isLongTextExam} />
         ))}
 
         {/* Infinite scroll trigger */}

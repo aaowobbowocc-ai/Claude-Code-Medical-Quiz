@@ -16,7 +16,6 @@ const CATEGORY_BADGE = {
 }
 
 const CATEGORY_FILTERS = [
-  { id: 'all',              label: '全部'   },
   { id: 'medical',          label: '醫事'   },
   { id: 'law-professional', label: '法律'   },
   { id: 'civil-service',    label: '公職'   },
@@ -41,7 +40,7 @@ export default function Leaderboard() {
   const currentExam = usePlayerStore(s => s.exam) || 'doctor1'
   const defaultCategory = useMemo(() => {
     const cfg = getExamConfig(currentExam)
-    return cfg?.category || 'all'
+    return cfg?.category || 'medical'
   }, [currentExam])
   const [category, setCategory] = useState(defaultCategory)
 
@@ -49,7 +48,7 @@ export default function Leaderboard() {
     setLoading(true)
     const params = new URLSearchParams()
     if (w) params.set('week', w)
-    if (cat && cat !== 'all') params.set('category', cat)
+    if (cat) params.set('category', cat)
     const qs = params.toString()
     const url = qs ? `${BACKEND}/leaderboard?${qs}` : `${BACKEND}/leaderboard`
     fetch(url).then(r => r.json()).then(d => {
@@ -80,7 +79,7 @@ export default function Leaderboard() {
         <div className="flex gap-2 mt-1 overflow-x-auto pb-1 -mx-1 px-1">
           {CATEGORY_FILTERS.map(f => {
             const active = f.id === category
-            const count = data?.categoryCounts?.[f.id] ?? (f.id === 'all' ? data?.categoryCounts?.all : undefined)
+            const count = data?.categoryCounts?.[f.id]
             return (
               <button key={f.id} onClick={() => setCategory(f.id)}
                       className={`text-xs px-3 py-1.5 rounded-lg shrink-0 font-semibold transition-colors ${
@@ -119,7 +118,7 @@ export default function Leaderboard() {
           <div className="flex flex-col items-center justify-center py-20 gap-3">
             <span className="text-5xl">🏜️</span>
             <p className="text-gray-400 text-sm">
-              {category === 'all' ? '本週還沒有紀錄' : `此分類本週還沒有紀錄`}
+              此分類本週還沒有紀錄
             </p>
             <p className="text-gray-300 text-xs">練習或對戰後成績會自動上榜</p>
           </div>
@@ -127,6 +126,8 @@ export default function Leaderboard() {
 
         {!loading && players.map((p, i) => {
           const badge = p.category ? CATEGORY_BADGE[p.category] : null
+          const examCfg = p.examId ? getExamConfig(p.examId) : null
+          const examShort = examCfg?.short || null
           // PR mode: display PR percentile as the primary metric; raw score → sub-line.
           // Score mode: display score as primary; correct/total → sub-line.
           const quotaRow = showPR && (p.selectionType === 'quota' || !p.selectionType)
@@ -145,7 +146,7 @@ export default function Leaderboard() {
                 <div className="flex items-center gap-1.5 flex-wrap">
                   {badge && (
                     <span className={`text-[9px] px-1.5 py-0.5 rounded border font-semibold ${badge.color}`}>
-                      {badge.icon}{badge.label}
+                      {badge.icon}{examShort || badge.label}
                     </span>
                   )}
                   <p className="font-bold text-gray-800 text-sm truncate">{p.name}</p>

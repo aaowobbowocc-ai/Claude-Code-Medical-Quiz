@@ -7,7 +7,7 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 export default function Contact() {
   const navigate = useNavigate()
-  usePageMeta('關於我們', '國考知識王：醫學生獨立開發的免費醫事國考練習平台，75,000+ 題、即時對戰、AI 解說。')
+  usePageMeta('關於我們', '國考知識王：免費國考練習平台，涵蓋醫事、法律、公職 130,000+ 題、即時對戰、AI 解說。')
   const [feedbackText, setFeedbackText] = useState('')
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -43,7 +43,7 @@ export default function Contact() {
           <div className="text-center">
             <div className="text-5xl mb-3">⚕️</div>
             <h2 className="font-bold text-xl text-medical-dark">國考知識王</h2>
-            <p className="text-gray-400 text-sm mt-1">醫事人員國考題庫對戰練習平台</p>
+            <p className="text-gray-400 text-sm mt-1">醫事 ‧ 法律 ‧ 公職 國考題庫練習平台</p>
           </div>
 
           <div className="h-px bg-gray-100" />
@@ -63,8 +63,8 @@ export default function Contact() {
           <section>
             <h3 className="font-bold text-base text-medical-dark mb-2">平台特色</h3>
             <ul className="list-disc pl-5 space-y-1.5">
-              <li><strong>7900+ 考古題：</strong>涵蓋 110–115 年醫師、牙醫師、藥師國考歷屆題目</li>
-              <li><strong>三大國考類別：</strong>醫師（一階+二階）、牙醫師（一階+二階）、藥師（一階+二階）</li>
+              <li><strong>130,000+ 考古題：</strong>涵蓋 100–115 年醫事、法律、公職各類國考歷屆題目</li>
+              <li><strong>多元國考類別：</strong>醫事（醫師/牙醫/藥師/護理師等 14 類）、律師/司法、高普考/特考</li>
               <li><strong>即時對戰：</strong>與好友或 AI 即時搶答，讓讀書不再孤單</li>
               <li><strong>AI 題目解說：</strong>每題都有 AI 生成的詳細解析，幫你理解觀念</li>
               <li><strong>模擬考試：</strong>完全模擬真實國考流程，依各科及格制評分</li>

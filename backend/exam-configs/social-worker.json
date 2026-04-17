@@ -4,8 +4,20 @@
   "short": "社工",
   "icon": "🤝",
   "category": "medical",
+  "subCategory": "社會工作師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "social-worker-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
   "questionsFile": "questions-social-worker.json",
-  "totalQ": 1908,
+  "totalQ": 2267,
   "passScore": 60,
   "passRate": 0.6,
   "timeLimit": 120,
@@ -33,7 +45,11 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {
@@ -42,9 +58,18 @@
       "social_work_mgmt": "管理"
     },
     "stageStyles": {
-      "social_work": { "icon": "📚", "color": "#6366F1" },
-      "social_work_direct": { "icon": "🫂", "color": "#F59E0B" },
-      "social_work_mgmt": { "icon": "📋", "color": "#10B981" }
+      "social_work": {
+        "icon": "📚",
+        "color": "#6366F1"
+      },
+      "social_work_direct": {
+        "icon": "🫂",
+        "color": "#F59E0B"
+      },
+      "social_work_mgmt": {
+        "icon": "📋",
+        "color": "#10B981"
+      }
     },
     "subjectColors": {
       "social_work": "#6366F1",
@@ -55,7 +80,7 @@
   "seo": {
     "fullName": "社會工作師國考",
     "examDesc": "社會工作師高等考試，考試科目包含社會工作、社會工作直接服務、社會工作管理。收錄 112-115 年考古題，共 480 題選擇題。",
-    "totalQ": 1908,
+    "totalQ": 2267,
     "years": "106 至 115"
   }
 }

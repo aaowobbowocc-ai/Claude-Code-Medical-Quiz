@@ -24,7 +24,7 @@ export default function Privacy() {
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">一、總則</h2>
             <p>
-              「國考知識王」（以下簡稱「本平台」）為一免費醫事人員國家考試題庫練習平台，涵蓋醫師、牙醫師、藥師等國考類別，致力於保護使用者的隱私權。
+              「國考知識王」（以下簡稱「本平台」）為一免費國家考試題庫練習平台，涵蓋醫事（醫師、牙醫師、藥師、護理師等）、法律（律師、司法特考）、公職（高考、普考、特考）等多類國考，致力於保護使用者的隱私權。
               本政策說明我們如何蒐集、使用與保護您的個人資訊。使用本平台即表示您同意本隱私權政策的內容。
             </p>
           </section>
@@ -87,7 +87,7 @@ export default function Privacy() {
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">七、兒童隱私</h2>
             <p>
-              本平台主要面向醫學系學生與醫師國考考生。我們不會刻意蒐集 13 歲以下兒童的個人資訊。
+              本平台主要面向各類國考考生（醫學生、護理師、法律系學生、公職考生等）。我們不會刻意蒐集 13 歲以下兒童的個人資訊。
             </p>
           </section>
 

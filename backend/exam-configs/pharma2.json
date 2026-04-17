@@ -17,7 +17,7 @@
     "longText": false
   },
   "questionsFile": "questions-pharma2.json",
-  "totalQ": 3713,
+  "totalQ": 5589,
   "passScore": 180,
   "totalPoints": 300,
   "passRate": 0.6,
@@ -49,15 +49,15 @@
       "id": "paper2",
       "name": "卷二",
       "subject": "藥物治療",
-      "subjects": "藥物治療學80",
-      "count": 80,
+      "subjects": "藥物治療學54（110年起改制）",
+      "count": 54,
       "pointsPerQ": 1.25,
       "timeLimit": 90,
       "breakdown": [
         {
           "subject": "藥物治療學",
-          "count": 80,
-          "note": "獨立一卷，全考治療"
+          "count": 54,
+          "note": "獨立一卷，110年起由80題改為54題"
         }
       ]
     },
@@ -133,8 +133,8 @@
     "fullName": "藥師國考第二階段",
     "shortName": "藥師二階",
     "studentType": "藥學生",
-    "years": "106-115",
-    "totalQ": 3713,
+    "years": "100-115",
+    "totalQ": 5589,
     "examDesc": "藥師國考第二階段（二階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為通過一階並完成實習之藥學系學生。",
     "paperDesc": "考試分為三卷（藥物治療 80 題、調劑與臨床 80 題、法規 50 題），合計 210 題，採及格制（總分 180 分以上通過，需每科達該科目滿分之五成）。",
     "subjects": "調劑學、臨床藥學、治療學、藥物治療學、藥事行政與法規等臨床藥學科目",

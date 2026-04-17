@@ -12,12 +12,13 @@
 // parseAnswers, parseAnswersColumnAware). If you fix bugs here, check whether
 // scrape-gaps-2026-04.js needs the same fix — the copies will drift otherwise.
 
+const stripPUA = s => s.replace(/[\uE000-\uF8FF]/g, '')
+
 async function parseColumnAware(buf) {
   const mupdf = await import('mupdf')
   const doc = mupdf.Document.openDocument(new Uint8Array(buf), 'application/pdf')
   const n = doc.countPages()
 
-  const stripPUA = s => s.replace(/[\uE000-\uF8FF]/g, '')
 
   function parsePage(pg) {
     const parsed = JSON.parse(pg.toStructuredText('preserve-images').asJSON())
@@ -369,4 +370,4 @@ async function parseAnswersColumnAware(buf) {
   return ans
 }
 
-module.exports = { parseColumnAware, parseAnswersColumnAware, parseAnswersText }
+module.exports = { parseColumnAware, parseAnswersColumnAware, parseAnswersText, stripPUA }

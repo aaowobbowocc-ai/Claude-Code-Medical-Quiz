@@ -38,15 +38,25 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {
       "moto_rules": "機車法規"
     },
     "stageStyles": {
-      "all": { "icon": "🎲", "color": "#64748B" },
-      "moto_rules": { "icon": "🏍️", "color": "#EF4444" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "moto_rules": {
+        "icon": "🏍️",
+        "color": "#EF4444"
+      }
     },
     "subjectColors": {
       "機車法規": "#EF4444"
@@ -65,7 +75,10 @@
     "subjects": "機車法規",
     "mockDesc": "模擬機車駕照筆試 40 題",
     "subjectDetails": [
-      ["機車法規", "涵蓋正確觀念與態度、主動停讓文化、安全駕駛能力等三大類。"]
+      [
+        "機車法規",
+        "涵蓋正確觀念與態度、主動停讓文化、安全駕駛能力等三大類。"
+      ]
     ]
   }
 }

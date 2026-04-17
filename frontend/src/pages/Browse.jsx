@@ -38,20 +38,6 @@ function markVoted(id, tag) {
   const v = getVoted(); v[id] = tag; localStorage.setItem(VOTED_KEY, JSON.stringify(v))
 }
 
-/* ── Filter chip ─────────────────────────────────────────────── */
-function Chip({ label, active, color, onClick }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`shrink-0 px-3.5 py-1.5 rounded-full text-sm font-medium transition-all active:scale-95 border
-        ${active ? 'text-white border-transparent shadow-sm' : 'bg-white text-gray-500 border-gray-200'}`}
-      style={active ? { background: color || '#1A6B9A' } : {}}
-    >
-      {label}
-    </button>
-  )
-}
-
 /* ── Classify sheet ──────────────────────────────────────────── */
 function ClassifySheet({ q, onClose }) {
   const voted = getVoted()[q.id]
@@ -439,32 +425,31 @@ export default function Browse() {
           </div>
         </div>
 
-        {/* Filter chips scrollable row */}
-        <div className="overflow-x-auto scrollbar-none">
-          <div className="flex gap-2 px-4 pb-3 w-max">
-
-            {/* Exam (year + session combined) — dynamic from /meta */}
-            <Chip label="全部考試" active={!exam} color="#1A6B9A"
-                  onClick={() => setExam(null)} />
+        {/* Filter dropdowns */}
+        <div className="flex gap-2 px-4 pb-3">
+          <select
+            value={exam?.label || ''}
+            onChange={e => setExam((meta?.exams || []).find(ex => ex.label === e.target.value) || null)}
+            className="flex-1 min-w-0 bg-white/95 text-gray-700 rounded-xl px-3 py-2 text-sm border-0 outline-none"
+          >
+            <option value="">全部年份</option>
             {(meta?.exams || []).map(e => (
-              <Chip key={e.label} label={e.label} active={exam?.label === e.label} color="#1A6B9A"
-                    onClick={() => setExam(exam?.label === e.label ? null : e)} />
+              <option key={e.label} value={e.label}>{e.label}</option>
             ))}
+          </select>
 
-            {/* Subject / Stage / Paper — show if exam has stages beyond 'all' */}
-            {meta?.stages?.some(s => s.tag !== 'all' && s.tag !== 'unknown' && (s.count > 0 || s.count === undefined)) && (
-              <>
-                <div className="w-px bg-white/20 self-stretch mx-1" />
-                <Chip label="全部科目" active={!stageTag} color="#8B5CF6"
-                      onClick={() => setStageTag('')} />
-                {meta.stages.filter(s => s.tag !== 'all' && s.tag !== 'unknown').map(s => (
-                  <Chip key={s.tag} label={s.name} active={stageTag === s.tag}
-                        color={getStageColor(s.tag)}
-                        onClick={() => setStageTag(stageTag === s.tag ? '' : s.tag)} />
-                ))}
-              </>
-            )}
-          </div>
+          {meta?.stages?.some(s => s.tag !== 'all' && s.tag !== 'unknown' && (s.count > 0 || s.count === undefined)) && (
+            <select
+              value={stageTag}
+              onChange={e => setStageTag(e.target.value)}
+              className="flex-1 min-w-0 bg-white/95 text-gray-700 rounded-xl px-3 py-2 text-sm border-0 outline-none"
+            >
+              <option value="">全部科目</option>
+              {meta.stages.filter(s => s.tag !== 'all' && s.tag !== 'unknown').map(s => (
+                <option key={s.tag} value={s.tag}>{s.name}</option>
+              ))}
+            </select>
+          )}
         </div>
       </div>
 

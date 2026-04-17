@@ -19,6 +19,7 @@ const path = require('path')
 const https = require('https')
 const pdfParse = require('pdf-parse')
 const { parseColumnAware, parseAnswersColumnAware, parseAnswersText, stripPUA } = require('./lib/moex-column-parser')
+const { atomicWriteJson } = require('./lib/atomic-write')
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/131.0.0.0 Safari/537.36'
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
@@ -370,6 +371,8 @@ function buildTargets(filterExam, filterYear) {
   add('nursing', 'questions-nursing.json', '105', '105090', '第二次', '106', nursingSubs104)
 
   // Nutrition — c=107 in year 101; c=103 in years 104-105
+  // Year 100: c=107 = TCM (中醫師), NOT nutrition — no nutrition exam in 030 series yr100
+  // Years 102-103: c=103 = TCM, NOT nutrition — correct class code unknown; years skipped
   const nutritionSubs = [
     { s: '0601', subject: '生理學與生物化學', tag: 'physio_biochem', name: '生理學與生物化學' },
     { s: '0602', subject: '營養學', tag: 'nutrition_science', name: '營養學' },
@@ -378,17 +381,10 @@ function buildTargets(filterExam, filterYear) {
     { s: '0605', subject: '公共衛生營養學', tag: 'public_nutrition', name: '公共衛生營養學' },
     { s: '0606', subject: '食品衛生與安全', tag: 'food_safety', name: '食品衛生與安全' },
   ]
-  add('nutrition', 'questions-nutrition.json', '100', '100030', '第一次', '107', nutritionSubs)
   add('nutrition', 'questions-nutrition.json', '101', '101030', '第一次', '107', nutritionSubs)
   const nutritionSubs104 = nutritionSubs.map((sub, i) => ({
     ...sub, s: `020${i + 1}`  // 0201-0206
   }))
-  add('nutrition', 'questions-nutrition.json', '102', '102030', '第一次', '103', nutritionSubs104)
-  // Nutrition yr103 — only 2 of 6 subjects found (生理學與生化, 營養學)
-  add('nutrition', 'questions-nutrition.json', '103', '103030', '第一次', '103', [
-    { s: '0201', subject: '生理學與生物化學', tag: 'physio_biochem', name: '生理學與生物化學' },
-    { s: '0202', subject: '營養學', tag: 'nutrition_science', name: '營養學' },
-  ])
   add('nutrition', 'questions-nutrition.json', '104', '104100', '第二次', '103', nutritionSubs104)
   add('nutrition', 'questions-nutrition.json', '105', '105030', '第一次', '103', nutritionSubs104)
   add('nutrition', 'questions-nutrition.json', '105', '105090', '第二次', '103', nutritionSubs104)
@@ -407,7 +403,7 @@ function buildTargets(filterExam, filterYear) {
 
   // ─── 020 series (2-digit s codes) ───
 
-  // Dental1 — c=301, years 100-104
+  // Dental1 — c=301 years 100-104, c=303 year 105 (class code rotated in 105)
   const dental1Subs = [
     { s: '11', subject: '卷一', tag: 'dental_anatomy', name: '牙醫學(一)' },
     { s: '22', subject: '卷二', tag: 'oral_pathology', name: '牙醫學(二)' },
@@ -420,6 +416,8 @@ function buildTargets(filterExam, filterYear) {
   add('dental1', 'questions-dental1.json', '103', '103020', '第一次', '301', dental1Subs)
   add('dental1', 'questions-dental1.json', '103', '103090', '第二次', '301', dental1Subs)
   add('dental1', 'questions-dental1.json', '104', '104020', '第一次', '301', dental1Subs)
+  add('dental1', 'questions-dental1.json', '105', '105020', '第一次', '303', dental1Subs)
+  add('dental1', 'questions-dental1.json', '105', '105100', '第二次', '303', dental1Subs)
 
   // Dental2 — c=302 in years 100-103, c=304 in years 104-105
   const dental2Subs = [
@@ -596,7 +594,6 @@ async function main() {
   const targets = buildTargets(filterExam, filterYear)
   console.log(`Found ${targets.length} scraping targets`)
 
-  // Group targets by output file
   const byFile = {}
   for (const t of targets) {
     if (!byFile[t.file]) byFile[t.file] = []
@@ -617,7 +614,6 @@ async function main() {
       questions = data.questions
     }
 
-    // Find max existing ID
     let nextId = questions.reduce((max, q) => {
       const n = typeof q.id === 'number' ? q.id : parseInt(q.id) || 0
       return Math.max(max, n)
@@ -627,7 +623,8 @@ async function main() {
     // Note: class_code is intentionally excluded — same subject under two class codes
     // (e.g. tcm2 yr103 中醫臨床醫學(三) shared between c=110 and c=109) should be
     // treated as the same paper and skipped to avoid duplicates.
-    const existingCodes = new Set(questions.map(q => `${q.roc_year}_${q.exam_code}_${q.subject_tag}`))
+    const existingCodes = new Set()
+    for (const q of questions) existingCodes.add(`${q.roc_year}_${q.exam_code}_${q.subject_tag}`)
 
     console.log(`\n═══ ${file} (existing: ${questions.length} Q, next ID: ${nextId}) ═══`)
 
@@ -650,7 +647,6 @@ async function main() {
           continue
         }
 
-        // Download question PDF
         let qBuf
         let networkFetched = false
         try {
@@ -663,7 +659,6 @@ async function main() {
           continue
         }
 
-        // Download answer PDF — try t=S first, fallback to t=A
         let answers = {}
         let ansCount = 0
         for (const ansType of ['S', 'A']) {
@@ -672,20 +667,18 @@ async function main() {
             const { buf: aBuf, fromCache: aFromCache } = await cachedPdf(ansType, t.code, t.classCode, sub.s)
             if (!aFromCache) networkFetched = true
             const aText = (await pdfParse(aBuf)).text
-            // Try local parser (handles both fullwidth and halfwidth)
-            let parsed = parseAnswersPdf(aText)
-            let parsedLen = Object.keys(parsed).length
-            if (parsedLen < 20) {
-              // Try column-aware parser for tabular format
+            let best = parseAnswersPdf(aText)
+            let bestLen = Object.keys(best).length
+            if (bestLen < 20) {
               try {
-                const colParsed = await parseAnswersColumnAware(aBuf)
-                const colLen = Object.keys(colParsed).length
-                if (colLen > parsedLen) { parsed = colParsed; parsedLen = colLen }
+                const col = await parseAnswersColumnAware(aBuf)
+                const colLen = Object.keys(col).length
+                if (colLen > bestLen) { best = col; bestLen = colLen }
               } catch {}
             }
-            if (parsedLen > ansCount) {
-              answers = parsed
-              ansCount = parsedLen
+            if (bestLen > ansCount) {
+              answers = best
+              ansCount = bestLen
               if (ansType === 'A') console.log(`    📎 Used t=A answer PDF`)
             }
           } catch { /* try next */ }
@@ -723,7 +716,6 @@ async function main() {
           }
         } catch { /* no corrections is normal */ }
 
-        // Parse questions — try column-aware (mupdf) first, fallback to text-based
         let parsedMap = {}
         let parseMethod = 'column'
         try {
@@ -733,7 +725,6 @@ async function main() {
           parseMethod = 'text'
         }
 
-        // If column parser got few results, also try text-based and use whichever got more
         if (Object.keys(parsedMap).length < 10) {
           try {
             const qText = (await pdfParse(qBuf)).text
@@ -789,14 +780,11 @@ async function main() {
 
     if (fileNew > 0 && !dryRun) {
       if (data.questions) data.total = questions.length
-      const tmp = filePath + '.tmp'
       try {
-        fs.writeFileSync(tmp, JSON.stringify(data, null, 2))
-        fs.renameSync(tmp, filePath)
+        atomicWriteJson(filePath, data)
         console.log(`  💾 Saved ${file}: ${questions.length} total (+${fileNew} new)`)
       } catch (e) {
         console.error(`  ✗ Failed to save ${file}: ${e.message}`)
-        try { fs.unlinkSync(tmp) } catch {}
       }
     }
 

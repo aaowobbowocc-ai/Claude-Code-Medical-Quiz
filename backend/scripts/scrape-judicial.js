@@ -283,13 +283,17 @@ function atomicWrite(p, obj) {
 }
 
 async function main() {
+  // s code for 法學知識與英文 shifts each year; 130 series for 106-112, 120 series for 113-114
   const SESSIONS = [
-    { year: '113', code: '113120', session: '第一次' },
-    { year: '114', code: '114120', session: '第一次' },
-  ]
-  const SUBJECTS = [
-    { c: '101', s: '0309', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50 },
-    { c: '101', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true },
+    { year: '106', code: '106130', session: '第一次', sLaw: '0415' },
+    { year: '107', code: '107130', session: '第一次', sLaw: '0414' },
+    { year: '108', code: '108130', session: '第一次', sLaw: '0414' },
+    { year: '109', code: '109130', session: '第一次', sLaw: '0412' },
+    { year: '110', code: '110130', session: '第一次', sLaw: '0315' },
+    { year: '111', code: '111130', session: '第一次', sLaw: '0315' },
+    { year: '112', code: '112130', session: '第一次', sLaw: '0313' },
+    { year: '113', code: '113120', session: '第一次', sLaw: '0309' },
+    { year: '114', code: '114120', session: '第一次', sLaw: '0309' },
   ]
   const file = path.join(__dirname, '..', 'questions-judicial.json')
 
@@ -305,6 +309,9 @@ async function main() {
 
   for (const sess of SESSIONS) {
     console.log(`\n--- ${sess.year} ${sess.session} (${sess.code}) ---`)
+    const SUBJECTS = [
+      { c: '101', s: sess.sLaw, name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50 },
+    ]
     for (const sub of SUBJECTS) {
       const qUrl = `${BASE}?t=Q&code=${sess.code}&c=${sub.c}&s=${sub.s}&q=1`
       const aUrl = `${BASE}?t=S&code=${sess.code}&c=${sub.c}&s=${sub.s}&q=1`

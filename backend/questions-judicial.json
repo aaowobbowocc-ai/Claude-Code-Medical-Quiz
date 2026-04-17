@@ -1,5 +1,5 @@
 {
-  "total": 100,
+  "total": 444,
   "questions": [
     {
       "id": 1,
@@ -2001,6 +2001,6886 @@
         "B": "Controlling climate changes can resolve the problem of bees' habitat loss.",
         "C": "Artificial selection has replaced natural selection for genetic diversity in bees.",
         "D": "Group scientific efforts are key to keeping wild bees from becoming endangered."
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 101,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 1,
+      "question": "下列何種案件應由司法院大法官組成憲法法庭審理？",
+      "options": {
+        "A": "關於政黨違憲解散以及解散立法院之案件",
+        "B": "關於政黨違憲解散之案件與關於總統副總統彈劾案之審理案件",
+        "C": "關於憲法解釋之案件",
+        "D": "關於統一解釋法律與命令之案件"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 102,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 2,
+      "question": "依憲法、憲法增修條文及司法院釋字第 601號解釋之意旨，關於司法院大法官之身分與保障，下列敘述 何者錯誤？",
+      "options": {
+        "A": "大法官亦受憲法第",
+        "B": "81條法官非依法律不得減俸之保障",
+        "C": "並為司法院院長、副院長之大法官，不受任期之保障",
+        "D": "大法官除法官轉任者外，不適用法官終身職待遇之規定"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 103,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 3,
+      "question": "立法院之調查權被大法官定性為何種權力？",
+      "options": {
+        "A": "立法權",
+        "B": "行政權",
+        "C": "司法權",
+        "D": "監察權"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 104,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 4,
+      "question": "依憲法相關規定及司法院釋字第 461號解釋之意旨，有義務出席或應邀於立法院委員會備詢者，下列何 者錯誤？",
+      "options": {
+        "A": "考試院院長",
+        "B": "參謀總長",
+        "C": "司法院秘書長",
+        "D": "行政院原住民族委員會主任委員"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 105,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 5,
+      "question": "依憲法第24條後段之規定，被害人民得依法律向國家請求賠償。此種憲法要求立法機關制定法律之性質 為何？",
+      "options": {
+        "A": "訴訟保留",
+        "B": "司法保留",
+        "C": "行政委託",
+        "D": "憲法委託"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 106,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 6,
+      "question": "有關總統、副總統候選人資格之敘述，下列何者錯誤？",
+      "options": {
+        "A": "須為在中華民國自由地區繼續居住六個月以上且曾設籍十五年以上之選舉人",
+        "B": "須年滿四十歲",
+        "C": "不得為現役軍人",
+        "D": "因歸化取得中華民國國籍者，不得登記為總統候選人，但副總統候選人不在此限"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 107,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 7,
+      "question": "行政院公民投票審議委員會之委員，若由各政黨依立法院各黨團席次比例推薦，送交主管機關提請總統 任命，問：此委員任命之方式違反下列何原則？",
+      "options": {
+        "A": "代議士民主原則",
+        "B": "權力分立原則",
+        "C": "主權在民原則",
+        "D": "憲法保障人民之創制、複決權"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 108,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 8,
+      "question": "國軍志願役專業預備軍士官班招生簡章規定，曾受刑之宣告者，不得報考。此為違反下列何者？",
+      "options": {
+        "A": "法律保留原則",
+        "B": "平等原則",
+        "C": "信賴保護原則",
+        "D": "保障人民服公職之權利"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 109,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 9,
+      "question": "下列何者非屬憲法上所規定的人民義務？",
+      "options": {
+        "A": "納稅",
+        "B": "服兵役",
+        "C": "投票",
+        "D": "受國民義務教育"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 110,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 10,
+      "question": "依據司法院釋字第 476號解釋之見解，生命權被定位於下列何種基本權？",
+      "options": {
+        "A": "訴訟權",
+        "B": "生存權",
+        "C": "言論自由",
+        "D": "憲法第22條之概括基本權"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 111,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 11,
+      "question": "人民加入宗教團體，從事慈善服務工作，並擔任該團體之理事職務，並未涉及下列何種基本權？",
+      "options": {
+        "A": "宗教自由",
+        "B": "集會自由",
+        "C": "職業自由",
+        "D": "一般行為自由"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 112,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 12,
+      "question": "司法院釋字第708號、第710號解釋之作成，主要因為相關法令之暫予收容與強制出境涉及侵害人民權 利，此與何種基本權利較無關聯？",
+      "options": {
+        "A": "秘密通訊自由",
+        "B": "正當程序之保障",
+        "C": "遷徙自由權",
+        "D": "人身自由權"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 113,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 13,
+      "question": "依憲法增修條文規定，下列何種支出或經費無須優先編列？",
+      "options": {
+        "A": "社會救助",
+        "B": "社會保險",
+        "C": "國民教育",
+        "D": "國民就業"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 14,
+      "question": "原住民族工作權保障法第 12條第1項規定：「依政府採購法得標之廠商，於國內員工總人數逾一百人者，",
+      "options": {
+        "A": "應於履約期間僱用原住民，其人數不得低於總人數百分之一。」關於此規定，下列敘述何者正確？",
+        "B": "係貫徹憲法第8條規定，人民身體之自由應予保障之意旨",
+        "C": "係貫徹憲法第5條規定，中華民國各民族一律平等之意旨",
+        "D": "係貫徹憲法第157條規定，國家應增進民族健康之意旨"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 115,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 15,
+      "question": "下列何者不受憲法第 12條秘密通訊自由之保障？",
+      "options": {
+        "A": "打電話",
+        "B": "上汽車旅館",
+        "C": "寄送電子郵件",
+        "D": "傳送簡訊"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 116,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 16,
+      "question": "性別工作平等法中有關促進工作平等措施規定之敘述，下列何者錯誤？",
+      "options": {
+        "A": "女性受僱者每月得請生理假一日",
+        "B": "受僱者於其配偶分娩時，雇主應給予陪產假五日",
+        "C": "子女未滿二歲需受僱者親自哺乳者，除規定之休息時間外，雇主應每日另給哺乳時間",
+        "D": "60分鐘"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 117,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 17,
+      "question": "下列那一項不屬於全民健康保險安全準備之來源？",
+      "options": {
+        "A": "每年度收支之結餘",
+        "B": "每年度政府編列預算補助",
+        "C": "保險之滯納金",
+        "D": "保險安全準備所運用之收益"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 118,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 18,
+      "question": "股份有限公司在股東常會開會前三十日內，不得辦理股東名簿記載之變更，該期間稱為「閉鎖期間」。 請問股東在閉鎖期間內將其記名股票轉賣給他人，該買賣行為之效力為何？",
+      "options": {
+        "A": "無效",
+        "B": "有效",
+        "C": "得撤銷",
+        "D": "效力未定"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 119,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 19,
+      "question": "依據我國實務見解，有關幫助犯之敘述，下列何者錯誤？",
+      "options": {
+        "A": "他人犯罪完成後所為之幫助，不構成幫助犯",
+        "B": "二人以上共同幫助犯罪，應適用刑法第",
+        "C": "28條之規定",
+        "D": "教唆幫助犯為幫助犯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 120,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 20,
+      "question": "甲明知X已經死亡，卻告訴 X的仇人乙，趕緊趁著X昏睡，把握機會報仇。於是乙帶著槍遠遠對著坐在 椅子上的X連開數槍，直到X倒在地上。以下有關甲、乙論罪之敘述，何者正確？",
+      "options": {
+        "A": "乙認為射擊的對象是人，所以乙應成立故意殺人既遂",
+        "B": "依照客觀狀況，對於屍體開槍的乙構成毀損屍體罪",
+        "C": "甲雖然引起乙殺害",
+        "D": "X的決意，但是欠缺要乙實現殺人的意思，不成立殺人罪之教唆犯"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 121,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 21,
+      "question": "甲將其房屋先出賣予乙，於未為交付及移轉所有權之前，即再將該屋出售予丙並交付之；其後，在未移 轉所有權予丙之前，又再度將該屋出售予丁並辦理所有權移轉登記。下列敘述何者正確？",
+      "options": {
+        "A": "甲、丙間之買賣契約無效",
+        "B": "由於甲已將該屋交付予丙，故丙已取得該屋之所有權",
+        "C": "甲因已將該屋先出賣予乙、丙，故其將所有權移轉予丁之處分行為為無權處分，惟丁可依民法第",
+        "D": "759條之1第2項主張善意取得該屋所有權"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 122,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 22,
+      "question": "甲公司欲向乙銀行融資貸款，乙主張必須有擔保方得放款，且擔保之方式限於設定抵押權，甲檢視其擁 有之資產包括下列權利，下列何者可提供抵押貸款？",
+      "options": {
+        "A": "甲之A土地對丙之B土地有不動產役權",
+        "B": "甲對丁之C屋有典權",
+        "C": "甲對戊之高級進口車有動產質權",
+        "D": "甲對「來自月亮的你」此部電視劇有著作權"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 123,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 23,
+      "question": "甲在乙之土地上有地上權，並建有房屋一幢，下列敘述何者錯誤？",
+      "options": {
+        "A": "甲之地上權係依法律行為而取得者，不因房屋之滅失而消滅",
+        "B": "甲之地上權係依民法第",
+        "C": "876條之規定而取得者，因房屋之滅失而消滅",
+        "D": "地上權期間屆滿後，地上權人仍繼續為土地用益，而土地所有人不即表示反對之意思時，成為不定期之地上權"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 124,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 24,
+      "question": "傳染病防治法規定，醫師診治病人時，應立即採取控制傳染之措施，並報告主管機關。若立法院修改此 一規定，將前述醫師義務，改為一般人之義務者，主要違反下列那一原則？",
+      "options": {
+        "A": "誠實信用原則",
+        "B": "信賴保護原則",
+        "C": "裁量擴張原則",
+        "D": "期待可能原則"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 125,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 25,
+      "question": "依司法院釋字第443號解釋，有關層級化法律保留之敘述，下列何者錯誤？",
+      "options": {
+        "A": "給付行政措施，涉及公共利益之重大事項，不得以法律授權之命令為之",
+        "B": "憲法第8條屬於憲法保留之事項者，不得以法律加以變更",
+        "C": "執行法律之細節性、技術性次要事項，得由主管機關發布命令為必要之規範",
+        "D": "人民生命、身體以外其他自由權利之限制者，如以法律授權主管機關發布命令時，其授權應符合明確性原則"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 126,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 26,
+      "question": "我國現行法規中之「環境基本法」，其性質與地位為何？",
+      "options": {
+        "A": "中央法律",
+        "B": "地方自治條例",
+        "C": "中央法規命令",
+        "D": "地方自治規則"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 127,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 27,
+      "question": "民法第26條規定：「法人於法令限制內，有享受權利、負擔義務之能力。但專屬於自然人之權利義務，",
+      "options": {
+        "A": "不在此限。」此但書之規定，其性質為：",
+        "B": "暫時法",
+        "C": "特別法",
+        "D": "補充法"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 128,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 28,
+      "question": "依中央法規標準法之規定，下列何者，非法規之生效方式：",
+      "options": {
+        "A": "公布",
+        "B": "發布",
+        "C": "下達",
+        "D": "送達"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 129,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 29,
+      "question": "關於法律之廢止，下列敘述何者錯誤？",
+      "options": {
+        "A": "法律之廢止，應經立法院通過，總統公布",
+        "B": "法律之廢止不得僅公布法律名稱及施行日期；而應將擬廢止之法律全文刊載",
+        "C": "法律定有施行期限者，期滿當然廢止，但應由主管機關公告之",
+        "D": "人民聲請許可案件如在處理程序終結前，其所據以聲請許可之法律已廢止，並由其他法律所替代，但"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 130,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 30,
+      "question": "依司法院大法官解釋，保障人民「接近使用媒體」之權利，係對媒體取材自由及編輯自由之限制，因此， 人民「接近使用媒體」，應在兼顧下列那一原則，予以尊重？",
+      "options": {
+        "A": "媒體取材中立原則",
+        "B": "媒體編輯正確原則",
+        "C": "媒體取材公益原則",
+        "D": "媒體編輯自由原則"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 131,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 31,
+      "question": "Little Johnny had to redo his homework b",
+      "options": {
+        "A": "ecause  his  handwriting  was  so              that his teacher could hardly tell",
+        "B": "what he wrote on the homework he turned in yesterday.",
+        "C": "alternative",
+        "D": "fraudulent"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 132,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 32,
+      "question": "Helen’s  students  didn’t  understand  the  message  she  was  trying  to",
+      "options": {
+        "A": "when  she  wrote  down  a  big  question",
+        "B": "mark on the white board.",
+        "C": "convey",
+        "D": "distribute"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 133,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 33,
+      "question": "After explaining the basic diving skills to her student",
+      "options": {
+        "A": "s, the swimming instructor was ready to             herself  how",
+        "B": "to dive into the water safely.",
+        "C": "demonstrate",
+        "D": "interfere"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 134,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 34,
+      "question": "This company sells its market share at an extrem",
+      "options": {
+        "A": "ely high price, maintaining formidable           .",
+        "B": "protests",
+        "C": "pricks",
+        "D": "profits"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 135,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 35,
+      "question": "Students who rent an off-campus apartment in Taiwan often have to pay their",
+      "options": {
+        "A": "bill to the landlord along",
+        "B": "with their monthly rent.",
+        "C": "utility",
+        "D": "tuition"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 136,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 36,
+      "question": "The  social  media  website  Twitter  has  announced  major",
+      "options": {
+        "A": "to  its  service.  It  no  longer  counts  website",
+        "B": "addresses as characters in tweets, so users",
+        "C": "have more space to share their thoughts.",
+        "D": "counterparts"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 137,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 37,
+      "question": "Many buildings constructed in the last few years",
+      "options": {
+        "A": "have incorporated energy conservation             to reduce energy",
+        "B": "consumption.",
+        "C": "manuals",
+        "D": "measures"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 138,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 38,
+      "question": "Leisure time helps people stay healthy and work more efficiently and ______.",
+      "options": {
+        "A": "commercially",
+        "B": "destructively",
+        "C": "productively",
+        "D": "restlessly"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 139,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 39,
+      "question": "Christine  has  been",
+      "options": {
+        "A": "unreasonable  giving  everyone  in  the  family  a  hard  time  ever  since  she  was  fired  by",
+        "B": "her boss last week.",
+        "C": "considerately",
+        "D": "horizontally"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 140,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 40,
+      "question": "In  the  past,  people  owned  fewer  things,  used  things  l onger,  and  much  of  their  waste  decomposed.  But  today, trash is made from materials that will still be when we no longer are. diverse fragile intact obscure 請依下文回答第41至45題：",
+      "options": {
+        "A": "By  far  some  of  the  most  prestigious  centers  of  Europ",
+        "B": "ean  learning  today  stand  where  they  were  founded  eight",
+        "C": "hundred years ago: Oxford and Cambridge in England; the Univ",
+        "D": "ersity of Paris in France; the University of Bologna in"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 141,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 41,
+      "question": "with regard to",
+      "options": {
+        "A": "in spite of",
+        "B": "except for",
+        "C": "along with",
+        "D": ""
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 142,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 42,
+      "question": "accustomed to",
+      "options": {
+        "A": "associated with",
+        "B": "consistent with",
+        "C": "entitled to",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 143,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 43,
+      "question": "escort",
+      "options": {
+        "A": "aegis",
+        "B": "tremor",
+        "C": "sway",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 144,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 44,
+      "question": "offshoot",
+      "options": {
+        "A": "initiative",
+        "B": "catastrophe",
+        "C": "fraud",
+        "D": ""
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 145,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 45,
+      "question": "secular financial spiritual mercantile 請依下文回答第46至50題：",
+      "options": {
+        "A": "The  word  volcano  can  describe  anything  from  a  single  open",
+        "B": "ing  in  the  earth  a  few  meters  across  to  a  field  of",
+        "C": "connected openings that might be 20 kilometers or more in wi",
+        "D": "dth. Most researchers consider any set of openings that"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 146,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 46,
+      "question": "What is the purpose of this passage?",
+      "options": {
+        "A": "To explain the increasing rate of volcanic activities.",
+        "B": "To explain some facts about volcanoes.",
+        "C": "To describe the causes of volcanic eruptions.",
+        "D": "To analyze the threats of volcanic eruptions."
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 147,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 47,
+      "question": "Which of the following statements is true",
+      "options": {
+        "A": "about volcanic activities in Paragraph Two?",
+        "B": "They have been on the increase over the years.",
+        "C": "They are no more frequent than they used to be.",
+        "D": "They increase as the human population becomes larger."
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 148,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 48,
+      "question": "In Paragraph Four, what does",
+      "options": {
+        "A": "one refer to?",
+        "B": "A wet cloth.",
+        "C": "A volcanic eruption.",
+        "D": "An emergency mask."
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 149,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 49,
+      "question": "According to the passage, what is the right thing",
+      "options": {
+        "A": "to do when being caught near a volcanic eruption?",
+        "B": "Drive to low-lying regions right away.",
+        "C": "Walk along river areas as soon as possible.",
+        "D": "Wear short-sleeved shirts before leaving the house."
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 150,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 50,
+      "question": "According to the passage, whic",
+      "options": {
+        "A": "h of the following is true?",
+        "B": "Volcanic eruptions can last as long as thirty years.",
+        "C": "Most volcanic eruptions last no longer than three months.",
+        "D": "Ojos del Salado in South America is the"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 151,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 1,
+      "question": "依地方制度法之規定，關於直轄市立法機關與行政機關之關係，下列敘述何者錯誤？",
+      "options": {
+        "A": "直轄市長於直轄市議會定期開會時，有提出施政報告之義務",
+        "B": "直轄市議會因直轄市長、議長或議員三分之一以上之請求，得召集臨時會",
+        "C": "直轄市議會小組開會時對特定事項有明瞭必要者，得邀請有關業務機關首長列席說明",
+        "D": "直轄市議員於臨時會開會時，有向直轄市長進行業務質詢之權，直轄市長應列席備詢"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 152,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 2,
+      "question": "下列有關勞工保險制度之敘述，何者錯誤？",
+      "options": {
+        "A": "勞工依法參加勞工保險之權利，應受憲法之保障",
+        "B": "無固定雇主之勞工不得參加勞工保險",
+        "C": "勞工應依法一律強制加入勞工保險",
+        "D": "係國家為實現憲法增修條文實施社會保險制度之基本國策而建立之制度"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 153,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 3,
+      "question": "依據司法院大法官解釋之意旨，下列何種政府措施違反憲法平等原則之要求？",
+      "options": {
+        "A": "配偶間相互贈與免除贈與稅",
+        "B": "限制非視障者從事按摩業",
+        "C": "限制色盲者就讀警察大學碩士班",
+        "D": "限制基層公務人員考試錄取人員任職地點"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 154,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 4,
+      "question": "依司法院大法官解釋之意旨，關於憲法第 11條保障人民表現意見自由之敘述，下列何者正確？",
+      "options": {
+        "A": "藥物廣告刊播前，得經主管機關審核其申請之廣告內容",
+        "B": "人民團體申請設立前，主管機關得審查其政治主張以決定是否許可",
+        "C": "對於傳述誹謗事項之人須能自行證明言論完全屬實始能免於刑罰",
+        "D": "菸商就其菸品之資訊享有不為表述之自由"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 155,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 5,
+      "question": "有關宗教信仰自由之敘述，下列何者錯誤？",
+      "options": {
+        "A": "宗教結社就其內部組織結構、人事及財政管理享有自主權，國家不得以避免寺廟之不動產遭受不當之",
+        "B": "處分或變更，致有害及寺廟信仰之傳布存續為由，予以限制",
+        "C": "國家不得對特定之宗教加以獎勵或禁制，或對人民特定信仰給予優待或不利益",
+        "D": "宗教用地之土地稅得予減免，並未區分不同宗教信仰而有差別，與憲法第"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 156,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 6,
+      "question": "依司法院釋字第718號解釋意旨，下列敘述何者錯誤？",
+      "options": {
+        "A": "集會遊行法第8條第1項規定，室外集會、遊行應向主管機關申請許可，未排除緊急性及偶發性集會、",
+        "B": "遊行部分，並無違背憲法第",
+        "C": "23條之比例原則",
+        "D": "國家除應提供適當集會場所，採取有效保護集會之安全措施外，並應在法律規定與制度設計上使參與集會、遊行者在毫無恐懼的情況下行使集會自由"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 157,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 7,
+      "question": "依司法院釋字第490號解釋意旨，下列對於兵役義務之敘述，何者錯誤？",
+      "options": {
+        "A": "本條所謂依法律，係指兵役義務之重要事項交由立法決定",
+        "B": "基於男女生理上差異及社會生活功能角色不同，女性免除服兵役義務，並未違反平等原則",
+        "C": "違反兵役法規而受禁役者，如實際執行徒刑時間不滿",
+        "D": "4年而免除禁役者，如仍在適役年齡，其兵役義務並不因而免除"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 158,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 8,
+      "question": "有關公職人員選舉罷免法中罷免規定之敘述，下列何者錯誤？",
+      "options": {
+        "A": "全國不分區及僑居國外國民立法委員選舉之當選人，不適用罷免之規定",
+        "B": "罷免案之提議人，得為同一罷免案之連署人",
+        "C": "罷免案之投票，罷免票應在票上刊印同意罷免、不同意罷免二欄",
+        "D": "罷免案通過者，被罷免人自解除職務之日起，"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 159,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 9,
+      "question": "國家安全會議之出席人員，不包括：",
+      "options": {
+        "A": "副總統",
+        "B": "行政院院長",
+        "C": "立法院院長",
+        "D": "大陸委員會主任委員"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 160,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 10,
+      "question": "依行政院組織法之規定，下列何者並非中央二級獨立機關？",
+      "options": {
+        "A": "中央選舉委員會",
+        "B": "金融監督管理委員會",
+        "C": "國家通訊傳播委員會",
+        "D": "公平交易委員會"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 161,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 11,
+      "question": "依憲法增修條文第 4條之規定，全國不分區及僑居國外國民之立法委員如何產生？",
+      "options": {
+        "A": "依直轄市、縣市的當選名額，按比例分配之",
+        "B": "依區域立法委員選舉票之政黨得票比率選出之",
+        "C": "依政黨名單投票選舉之，由獲得百分之五以上政黨選舉票之政黨依得票比率選出之",
+        "D": "依政黨名單投票選舉之，由各政黨依得票比率選出之"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 162,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 12,
+      "question": "依立法院職權行使法，關於覆議案之處理，下列敘述何者正確？",
+      "options": {
+        "A": "行政院得就立法院決議之法律案、預算案、條約案之全部或一部，經總統備查後，移請立法院覆議",
+        "B": "覆議案不經討論，即交全院委員會，就是否維持原決議予以審查。全院委員會審查時，應由立法院邀請行政院院長列席說明",
+        "C": "覆議案審查後，應於行政院送達",
+        "D": "15日內提出院會以記名投票表決。如贊成維持原決議者，超過全體立"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 163,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 13,
+      "question": "依憲法增修條文第 5條之規定，下列敘述何者錯誤？",
+      "options": {
+        "A": "司法院設大法官15人，並以其中1人為院長、1人為副院長，由總統提名，經立法院同意任命之",
+        "B": "司法院大法官除法官轉任者外，不適用憲法第",
+        "C": "81條及有關法官終身職待遇之規定",
+        "D": "司法院大法官任期"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 164,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 14,
+      "question": "依司法院大法官解釋，有關法官聲請釋憲之敘述，下列何者錯誤？",
+      "options": {
+        "A": "憲法之效力高於法律，法官有優先遵守之義務",
+        "B": "法官於審理案件時，認特定法規命令有牴觸憲法之疑義者，應直接拒絕適用，毋庸聲請司法院解釋",
+        "C": "法官於審理案件時，認有牴觸憲法之疑義者，得提出客觀確信違憲之理由，聲請釋憲",
+        "D": "基於審級制度，僅最高法院及最高行政法院之法官，得聲請釋憲"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 165,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 15,
+      "question": "下列人員，何者非超出黨派，依據法律獨立行使職權？",
+      "options": {
+        "A": "考試院院長",
+        "B": "考試委員",
+        "C": "公務人員保障暨培訓委員會委員",
+        "D": "監察委員"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 166,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 16,
+      "question": "法是人類共同生活中，為形成秩序、維繫和平、實現自由，可透過權威機關之強制力所實施的規範，有 關上述權威機關之敘述，下列何者正確？",
+      "options": {
+        "A": "權威機關僅指法院審判機關",
+        "B": "權威機關不包括家庭",
+        "C": "權威機關不包括公法社團",
+        "D": "權威機關不包括地方自治團體"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 167,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 17,
+      "question": "關於委任契約，下列敘述何者錯誤？",
+      "options": {
+        "A": "委任關係原則上不因當事人任何一方死亡、破產或喪失行為能力而消滅",
+        "B": "委任契約當事人的任何一方均可隨時終止契約",
+        "C": "無償委任之委任人亦負有償還費用之義務",
+        "D": "如依委任事務之性質，應給與報酬者，縱未約定報酬，受任人仍得請求報酬"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 168,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 18,
+      "question": "下列何者之某些規定，相對於行政罰法，為特別法？",
+      "options": {
+        "A": "刑法",
+        "B": "社會秩序維護法",
+        "C": "行政程序法",
+        "D": "食品安全衛生管理法行政罰行為數認定標準"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 169,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 19,
+      "question": "下列何者非屬裁量濫用之類型？",
+      "options": {
+        "A": "裁量違反比例原則",
+        "B": "裁量怠惰",
+        "C": "裁量違反平等原則",
+        "D": "裁量違反充分衡量原則"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 170,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 20,
+      "question": "除自律規則及委辦規則外，關於自治法規之公布或發布程序，下列敘述何者錯誤？",
+      "options": {
+        "A": "自治法規須經上級政府核定者，核定機關應於",
+        "B": "1個月內為核定與否之決定，逾期視為核定",
+        "C": "自治法規依規定應經其他機關核定者，應於核定文送達各該地方行政機關",
+        "D": "30日內公布或發布"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 171,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 21,
+      "question": "關於法律例外施行於領域（領土及領海）外之情形，下列敘述何者錯誤？",
+      "options": {
+        "A": "軍艦於他國領海內適用本國法",
+        "B": "軍艦於公海上適用本國法",
+        "C": "本國部分法律得適用於領海外之專屬經濟海域及大陸礁層",
+        "D": "駐於外國之本國使館，除刑法以外，不受駐在國法律之管轄"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 172,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 22,
+      "question": "依相關司法院大法官解釋之意旨，下列情形，何者未違反比例原則？",
+      "options": {
+        "A": "受刑人撰寫之文稿，如題意正確且無礙監獄紀律及信譽者，始得准許投寄報章雜誌",
+        "B": "化粧品之廠商登載或宣播廣告時，應於事前申請中央或直轄市衛生主管機關核准",
+        "C": "大眾捷運系統之毗鄰地區辦理開發所需之土地，得由主管機關依法報請徵收",
+        "D": "汽車駕駛人拒絕接受酒精濃度測試之檢定者，吊銷其駕駛執照"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 173,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列何者不須經中華民國自由地區選舉人之投票同意或複決？",
+      "options": {
+        "A": "憲法修正案",
+        "B": "領土變更案",
+        "C": "總統、副總統罷免案",
+        "D": "違憲政黨之解散案"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 174,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 24,
+      "question": "民法所定之遺囑方式，下列何者所需之見證人的人數最多？",
+      "options": {
+        "A": "公證遺囑",
+        "B": "密封遺囑",
+        "C": "代筆遺囑",
+        "D": "口授遺囑"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 175,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 25,
+      "question": "關於罰金刑，下列敘述何者正確？",
+      "options": {
+        "A": "罰金刑為從刑",
+        "B": "我國罰金刑已經自定額制修法改為日額制",
+        "C": "法院在決定是否課處罰金刑時，應審酌社會觀感",
+        "D": "罰金刑可以替代短期自由刑，我國刑法也給予擴大運用"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 176,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 26,
+      "question": "關於中止未遂之要件與法律效果，下列敘述何者錯誤？",
+      "options": {
+        "A": "行為人中止或防止結果之行為須出於自願",
+        "B": "結果不發生須因行為人之中止行為所致",
+        "C": "成立中止未遂者應予減輕或免除其刑",
+        "D": "行為人必須已經著手於犯罪行為之實行"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 177,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 27,
+      "question": "依消費者保護法之規定，關於企業經營者應負義務及責任，下列敘述何者正確？",
+      "options": {
+        "A": "確保該商品或服務，高於當時科技或專業水準可合理期待之安全性",
+        "B": "僅對消費者負損害賠償責任，對其他人之損害無須負責",
+        "C": "於商品或服務有危害消費者健康之可能時，於明顯處為警告標示",
+        "D": "於能證明其無過失時，不負賠償責任"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 178,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 28,
+      "question": "依據全民健康保險法之規定，關於應參加本保險為保險對象之敘述，下列何者錯誤？",
+      "options": {
+        "A": "具有中華民國國籍最近",
+        "B": "2年內曾有參加本保險紀錄且在臺灣地區設有戶籍",
+        "C": "具有中華民國國籍參加本保險前",
+        "D": "6個月繼續在臺灣地區設有戶籍"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 179,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 29,
+      "question": "性騷擾之被害人因性別工作平等法第 12條之情事致生法律訴訟，於受司法機關通知到庭期間，雇主依該 法第27條應如何處理？",
+      "options": {
+        "A": "給予事假，但不扣薪水",
+        "B": "請勞工自行請特休",
+        "C": "給予事假",
+        "D": "給予公假"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 180,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 30,
+      "question": "有關行政命令之敘述，下列何者正確？",
+      "options": {
+        "A": "適用於機關內部之作為或不作為準則，為法規命令",
+        "B": "行政機關依職權訂定之解釋性規定及裁量基準，為法規命令",
+        "C": "上級機關訂定對於下級機關之一般指示規範，為行政規則",
+        "D": "機關依法律授權訂定之法律施行細則，屬於行政規則"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 181,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 31,
+      "question": "To reach an _____ result from the medication, you have",
+      "options": {
+        "A": "to follow the doctor’s instruction without fail.",
+        "B": "optimal",
+        "C": "exclusive",
+        "D": "elevated"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 182,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 32,
+      "question": "Your apartment looks shabby. A _____ is what it needs if you want to sell it for a better price.",
+      "options": {
+        "A": "renovation",
+        "B": "malfunction",
+        "C": "construction",
+        "D": "detection"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 183,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 33,
+      "question": "That friends have meals together without talking to each other but playing with their own cell phone is a _____",
+      "options": {
+        "A": "often seen in modern society.",
+        "B": "description",
+        "C": "cosmopolitan",
+        "D": "phenomenon"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 184,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 34,
+      "question": "Large cities are usually overcrowded and dirty; __",
+      "options": {
+        "A": "___, they tend to have high crime rates.",
+        "B": "instead",
+        "C": "nevertheless",
+        "D": "in addition"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 185,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 35,
+      "question": "He is a(n) _____ popular and successful si",
+      "options": {
+        "A": "nger who has won four Grammy awards.",
+        "B": "ignorantly",
+        "C": "meticulously",
+        "D": "prosperously"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 186,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 36,
+      "question": "Because the topic of business is so broad, it’s",
+      "options": {
+        "A": "helpful to _____ in on one aspect: management.",
+        "B": "fix",
+        "C": "zero",
+        "D": "focus"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 187,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 37,
+      "question": "Many farmers tend to be more _____ in their crop",
+      "options": {
+        "A": "range and include exotic fruit and vegetables.",
+        "B": "rigid",
+        "C": "diverse",
+        "D": "suspicious"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 188,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 38,
+      "question": "In some African countries, scarring is considered a rite",
+      "options": {
+        "A": "of _____, symbolizing a child turning into an adult.",
+        "B": "anniversary",
+        "C": "passage",
+        "D": "compassion"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 189,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 39,
+      "question": "Rio de Janeiro, the capital city of Brazil, is a_____ city full of life and energy.",
+      "options": {
+        "A": "capable",
+        "B": "desolate",
+        "C": "barren",
+        "D": "vibrant"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 190,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 40,
+      "question": "David got Type A influenza last week. After resting and ta king medicine for a week, he should be back_____ in no time. on hand on his feet under the weather with conscience 請依下文回答第41至45題：",
+      "options": {
+        "A": "As birds awaken the early risers at dawn on the farm, one pers",
+        "B": "on is already up; in fact, he hasn’t even been to bed.",
+        "C": "Sixty-four-year-old Thai Ngoc, from central Quang Nam province",
+        "D": "in Vietnam, claims that he has not slept for 33 years!"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 191,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 41,
+      "question": "contestant",
+      "options": {
+        "A": "contingent",
+        "B": "consecutive",
+        "C": "converging",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 192,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 42,
+      "question": "image",
+      "options": {
+        "A": "impact",
+        "B": "imprint",
+        "C": "impression",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 193,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 43,
+      "question": "According to",
+      "options": {
+        "A": "Because of",
+        "B": "Due to",
+        "C": "Except for",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 194,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 44,
+      "question": "fault",
+      "options": {
+        "A": "tone",
+        "B": "decline",
+        "C": "mistake",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 195,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 45,
+      "question": "funeral wedding baptism opening 請依下文回答第46至50題：",
+      "options": {
+        "A": "One  of  the  fastest  growing  industries  around  the  globe  is  the  creative  and  cultural  industries.  The  industries",
+        "B": "basically combine arts, culture, business and technology.",
+        "C": "In Europe, the United Kingdom owns the hugest amount of",
+        "D": "creative sectors owing to the active and effective promotion"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 196,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 46,
+      "question": "What is the rhetorical mode employed in this passage?",
+      "options": {
+        "A": "Exposition",
+        "B": "Narration",
+        "C": "Persuasion",
+        "D": "Classification"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 197,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 47,
+      "question": "Which following definition of the creative and cultura",
+      "options": {
+        "A": "l industries corresponds closely to the UK’s version?",
+        "B": "They involve an imitation of knowledge and skills in",
+        "C": "order to open up possibilities for trades and businesses.",
+        "D": "They  require  originality,  skill  and  talent  that  can  creat"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 198,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 48,
+      "question": "Which sector listed below is part of the creative and cultural industries?",
+      "options": {
+        "A": "Transportation",
+        "B": "Manufacturing",
+        "C": "Web Services",
+        "D": "Video Games"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 199,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 49,
+      "question": "What is the secret lying behind the successful story of PiLi International?",
+      "options": {
+        "A": "Its outstanding performance of the traditional puppet shows.",
+        "B": "Its innovative adaptation of the puppets as main characters in a film.",
+        "C": "Its notable merchandising of the puppets into popular culture figures.",
+        "D": "Its productive integration of the old and the new into the puppet shows."
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 200,
+      "roc_year": "107",
+      "session": "第一次",
+      "exam_code": "107130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 50,
+      "question": "In which aspect does PiLi International set a good example for other industries to look up to?",
+      "options": {
+        "A": "Its successful implementation of promotion strategies.",
+        "B": "Its cutting-edge conversion of",
+        "C": "the traditional puppet shows.",
+        "D": "Its profitable marketing of the traditional puppet shows."
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 201,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 1,
+      "question": "依憲法及憲法增修條文規定，下列何者非屬立法院之職權？",
+      "options": {
+        "A": "提出總統、副總統之罷免案",
+        "B": "對行政院院長提出不信任案",
+        "C": "依憲法規定提出緊急命令",
+        "D": "解決中央與地方間有關剩餘權分配之爭議"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 202,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 2,
+      "question": "依憲法增修條文之規定，下列何者不屬於經立法院提出後，須經中華民國自由地區選舉人投票複決或同 意，始為通過之議案？",
+      "options": {
+        "A": "憲法修正案",
+        "B": "領土變更案",
+        "C": "總統、副總統彈劾案",
+        "D": "總統、副總統罷免案"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 203,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 3,
+      "question": "依憲法及憲法增修條文規定，關於總統職權之行使，下列何者毋須經行政院會議決議？",
+      "options": {
+        "A": "宣布戒嚴",
+        "B": "任命內政部長",
+        "C": "發布緊急命令",
+        "D": "宣戰"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 204,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 4,
+      "question": "依憲法及憲法增修條文規定，有關行政院組織，下列敘述何者正確？",
+      "options": {
+        "A": "行政院設有行政院會議，故行政院為合議制機關",
+        "B": "行政院之組織毋須適用法律保留原則",
+        "C": "國家機關之職權、設立程序及總員額，得以法律為準則性之規定",
+        "D": "憲法增修條文明文授權行政院得設二級獨立機關"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 205,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 5,
+      "question": "憲法基本國策章有關國民經濟之規定，下列敘述何者正確？",
+      "options": {
+        "A": "甲所有土地所蘊藏之煤礦，亦為甲所有",
+        "B": "憲法規定公用事業應以公營為原則",
+        "C": "憲法要求發達私人資本",
+        "D": "國家徵收土地增值稅，嚴重侵害人民財產權"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 206,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 6,
+      "question": "依司法院大法官解釋，有關行政執行法上拘提管收之相關規定，下列敘述何者錯誤？",
+      "options": {
+        "A": "管收係於一定期間內拘束人民身體自由於一定之處所，屬憲法第",
+        "B": "8條第1項所規定之拘禁",
+        "C": "管收與刑事程序之羈押，目的不同，故其所踐行之司法程序自無須與羈押完全相同",
+        "D": "行政執行法關於拘提、管收交由行政執行處執行之規定，違反憲法第"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 207,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 7,
+      "question": "依司法院大法官解釋：「自辦市地重劃由部分土地所有權人申請主管機關核定成立之籌備會發動，此將使重",
+      "options": {
+        "A": "劃範圍內不同意參與重劃之土地所有權人，被迫參與自辦市地重劃程序」，涉及憲法何項基本權利之限制？",
+        "B": "財產權",
+        "C": "平等權",
+        "D": "生存權"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 208,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 8,
+      "question": "依司法院大法官解釋，關於商業言論，下列敘述何者錯誤？",
+      "options": {
+        "A": "化粧品廣告之事前審查乃對言論自由之重大干預，原則上應為違憲",
+        "B": "菸品與酒類對人體健康皆有影響，立法者對其標示應為相同之規範",
+        "C": "菸品容器上應以中文標示所含尼古丁及焦油含量，乃菸品財產權所具有之社會義務",
+        "D": "商業言論所提供之訊息，應受憲法第"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 209,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 9,
+      "question": "依租稅法律主義，須明定於法律者，不包括下列何者？",
+      "options": {
+        "A": "稅目",
+        "B": "租稅優惠減免",
+        "C": "納稅方法",
+        "D": "列舉扣除額證明方式"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 210,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 10,
+      "question": "依司法院大法官解釋，關於婚姻之保障，下列敘述何者錯誤？",
+      "options": {
+        "A": "一夫一妻之婚姻受憲法所保障",
+        "B": "民法關於重婚無效之規定，就一般情形而言，並未對人民之婚姻自由造成違憲之限制",
+        "C": "國家遭遇重大變故，在夫妻隔離，相聚無期之情況下所發生之重婚，後婚姻應受憲法保障",
+        "D": "憲法保障性行為之自由，故刑法通姦罪違憲"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 211,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 11,
+      "question": "依司法院大法官解釋，下列何者並非憲法第 22條保障之基本權利？",
+      "options": {
+        "A": "名譽權",
+        "B": "婚姻自由",
+        "C": "性行為自由",
+        "D": "政府資訊公開請求權"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 212,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 12,
+      "question": "關於總統之刑事豁免權，下列敘述何者錯誤？",
+      "options": {
+        "A": "總統在職期間犯內亂罪或外患罪時，仍得對之為刑事訴究",
+        "B": "憲法保障之刑事豁免權係屬實體之免責權",
+        "C": "刑事豁免權並不免除總統之行政或民事責任",
+        "D": "總統原則上不得拋棄其刑事豁免權"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 213,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 13,
+      "question": "依據憲法增修條文規定，下列何者非監察院之職權？",
+      "options": {
+        "A": "彈劾權",
+        "B": "糾舉權",
+        "C": "審計權",
+        "D": "同意權"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 214,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 14,
+      "question": "下列何者不是聲請大法官釋憲之主體？",
+      "options": {
+        "A": "立法院",
+        "B": "臺北市市長",
+        "C": "人民",
+        "D": "地方法院法官"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 215,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 15,
+      "question": "有關司法院大法官解釋之效力，下列敘述何者錯誤？",
+      "options": {
+        "A": "大法官解釋有拘束全國各機關之效力",
+        "B": "大法官依人民聲請所為之解釋，對聲請人據以聲請之案件，亦有效力",
+        "C": "大法官解釋有拘束全國人民之效力",
+        "D": "大法官解釋之效力，不得溯及既往"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 216,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 16,
+      "question": "下列何者並非依照憲法第 170條之程序所制定之法律？",
+      "options": {
+        "A": "國立歷史博物館組織條例",
+        "B": "臺灣地區與大陸地區人民關係條例",
+        "C": "離島建設條例",
+        "D": "高雄市建築管理自治條例"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 217,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 17,
+      "question": "總統為下列行為，何者須經行政院院長之副署？",
+      "options": {
+        "A": "依法公布法律",
+        "B": "發布行政院院長之任免命令",
+        "C": "發布依憲法經立法院同意任命人員之任免命令",
+        "D": "發布解散立法院之命令"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 218,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 18,
+      "question": "下列何者不須經公開發行公司股東會之同意？",
+      "options": {
+        "A": "公司發行限制權利新股給員工",
+        "B": "修正公司章程",
+        "C": "股東以對公司之貨幣債權繳納股款",
+        "D": "公司減資彌補虧損"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 219,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 19,
+      "question": "依司法院大法官解釋，關於規定請求權消滅時效之法規，下列敘述何者正確？",
+      "options": {
+        "A": "應以憲法規定",
+        "B": "應以法律規定",
+        "C": "得以法律或法律授權之法規命令規定",
+        "D": "得以行政規則規定"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 220,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 20,
+      "question": "屬於地區性、專門性、特殊性或臨時性事項之法律，其名稱通常為下列何者？",
+      "options": {
+        "A": "法",
+        "B": "律",
+        "C": "條例",
+        "D": "通則"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 221,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 21,
+      "question": "依據地方制度法規定，地方立法機關得訂定：",
+      "options": {
+        "A": "自治規則",
+        "B": "自律規則",
+        "C": "委辦規則",
+        "D": "行政規則"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 222,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 22,
+      "question": "行政命令經立法院各該委員會審查後，發現有違反、變更或牴觸法律者，或應以法律規定事項而以命令 定之者，應提報院會，經議決後，結果如何？",
+      "options": {
+        "A": "該行政命令失其效力",
+        "B": "由立法院公告廢止該行政命令",
+        "C": "由立法院通知原訂頒之機關更正或廢止該行政命令",
+        "D": "由立法院通知行政院予以函告無效"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 223,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 23,
+      "question": "關於推定之敘述，下列何者錯誤？",
+      "options": {
+        "A": "推定乃對於某種事實之存在與否不明確時，依照一般常理加以推論認定之意",
+        "B": "推定乃法律對生活關係合理之規範，不問是否真實，對一定事實之存在，依據法律加以確定",
+        "C": "推定乃是依據法律規定所為之推論認定，若有不同之主張，允許提出反證推翻",
+        "D": "依據經驗法則判斷即屬於推定"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 224,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 24,
+      "question": "依司法院大法官解釋，下列何者違反法律明確性原則？",
+      "options": {
+        "A": "教師法以「行為不檢有損師道，經有關機關查證屬實」為解聘、停聘或不續聘之構成要件",
+        "B": "社會秩序維護法規定，無正當理由，跟追他人，經勸阻不聽者，處新臺幣",
+        "C": "3000元以下罰鍰或申誡",
+        "D": "檢肅流氓條例關於欺壓善良、品行惡劣、遊蕩無賴之規定"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 225,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 25,
+      "question": "甲已喪偶，育有乙、丙、丁 3名子女，乙結婚時，甲贈與 200萬元，丙開設電腦公司時，甲贈與 300萬 元，丁出國遊學時，甲贈與 60萬元旅費，甲死亡時，留下遺產400萬元。丁可分得多少遺產？",
+      "options": {
+        "A": "200萬元",
+        "B": "240萬元",
+        "C": "260萬元",
+        "D": "300萬元"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 226,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 26,
+      "question": "下列法律行為或意思表示，何者不是無效？",
+      "options": {
+        "A": "表意人無欲為其意思表示所拘束之意，而為意思表示，但其情形為相對人所明知",
+        "B": "表意人與相對人通謀而為之虛偽意思表示",
+        "C": "背於公共秩序或善良風俗之法律行為",
+        "D": "限制行為能力人未得法定代理人之允許，所訂立之契約"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 227,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 27,
+      "question": "甲、乙、丙三人平均共有之 A動產被丁不法侵奪，甲欲起訴丁請求返還。下列敘述何者正確？",
+      "options": {
+        "A": "須以甲、乙、丙三人為共同原告",
+        "B": "須以甲、乙為共同原告，請求將A返還予原告",
+        "C": "甲得單獨起訴，請求將",
+        "D": "A返還予共有人全體須有過半數之共有人為共同原告"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 228,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 28,
+      "question": "有關合夥與隱名合夥之敘述，下列何者錯誤？",
+      "options": {
+        "A": "合夥有團體性，隱名合夥則無",
+        "B": "合夥人之出資得以信用或勞務為之，隱名合夥僅以財產為限",
+        "C": "合夥人僅由執行業務合夥人負出資義務，隱名合夥僅由隱名合夥人出資",
+        "D": "合夥事務，原則上由合夥人全體共同執行；隱名合夥之事務，原則上專由出名營業人執行"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 229,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 29,
+      "question": "甲到花蓮遊玩，在乙開設之商店購買當地名產 A物，帶回公司與同事丙分享，詎料二人食用A物後均產 生食物中毒現象，經查 A物為丁工廠所製作，之所以發生食物中毒，主要係因為丁工廠原料使用不當所 致。下列敘述，何者正確？",
+      "options": {
+        "A": "乙開設之商店為消費者，得向丁工廠請求損害賠償",
+        "B": "丙非消費者，因為",
+        "C": "A物並非丙所交易購買",
+        "D": "甲為消費者，僅得向丁依消費者保護法規定請求損害賠償"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 230,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 30,
+      "question": "下列關於勞工保險之給付，何項敘述錯誤？",
+      "options": {
+        "A": "被保險人在保險有效期間發生傷病事故，於保險效力停止後",
+        "B": "1年內，得請領任一傷病及其引起之疾病之傷病給付、失能給付、死亡給付或職業災害醫療給付",
+        "C": "被保險人退保後，經診斷確定於保險有效期間罹患職業病者，得請領職業災害保險失能給付",
+        "D": "同一種保險給付，不得因同一事故而重複請領"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 231,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 31,
+      "question": "This  company  has  been",
+      "options": {
+        "A": ".  It  makes  products  ranging  from  aircraft  engines  to  insurance,  medical",
+        "B": "technology and plastics.",
+        "C": "diversified",
+        "D": "shortened"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 232,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 32,
+      "question": "The mortgage market has been in the",
+      "options": {
+        "A": "since the financial crisis crippled the banking industry last year.",
+        "B": "excursion",
+        "C": "celebrity",
+        "D": "doldrums"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 233,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 33,
+      "question": "There was so much",
+      "options": {
+        "A": "in the streets that travel was slow.",
+        "B": "compression",
+        "C": "combustion",
+        "D": "congestion"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 234,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 34,
+      "question": "This coffee is too strong. Please",
+      "options": {
+        "A": "it by adding some water.",
+        "B": "digest",
+        "C": "dilute",
+        "D": "revise"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 235,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 35,
+      "question": "Using a(n)",
+      "options": {
+        "A": "thermal ice storage system, the device keeps cool with the equivalent of 13,000 tons of ice.",
+        "B": "naive",
+        "C": "innovative",
+        "D": "retarded"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 236,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 36,
+      "question": "A recent study found that a positive attitude towards learning in early grades is to success. anxious crucial insecure romantic 第37題至第40題為篇章結構題組，各題請依文意，從四個選項中選出最合適者，各題答案內容不重複：",
+      "options": {
+        "A": "Is bedtime just a time for dreaming? Do our brains turn off for the night? What if I told you that scientists recently",
+        "B": "discovered  that  our  brains  may  be  just  as  busy  at  night  as  they  are  during  the  day?",
+        "C": "37Researchers  at  the",
+        "D": "University of Rochester found that the brain may be busy cleaning house -- cleaning out harmful waste materials."
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 237,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 37,
+      "question": "They also found that during sleep, the brain’s cells shrink, or become smaller.",
+      "options": {
+        "A": "While we sleep, our brains are doing much more than getting ready for the next",
+        "B": "day.",
+        "C": "She said the results demonstrate just how important sleep is to health and fighting disease.",
+        "D": "The brain expert says our brains perform two very different jobs."
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 238,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 38,
+      "question": "They also found that during sleep, the brain’s cells shrink, or become smaller.",
+      "options": {
+        "A": "While we sleep, our brains are doing much more than getting ready for the next day.",
+        "B": "She said the results demonstrate just how important sleep is to health and fighting disease.",
+        "C": "The brain expert says our brains perform two very different jobs.",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 239,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 39,
+      "question": "They also found that during sleep, the brain’s cells shrink, or become smaller.",
+      "options": {
+        "A": "While we sleep, our brains are doing much more than getting ready for the next day.",
+        "B": "She said the results demonstrate just how important sleep is to health and fighting disease.",
+        "C": "The brain expert says our brains perform two very different jobs.",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 240,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 40,
+      "question": "They also found that during sleep, the brain’s cells shrink, or become smaller. While we sleep, our brains are doing much more than getting ready for the next day. She said the results demonstrate jus t how important sleep is to health and fighting disease. The brain expert says our brains perform two very different jobs. 請依下文回答第41題至第45題：",
+      "options": {
+        "A": "It is believed that the color choices you make reflect a deeper meaning about your personality traits. For example,",
+        "B": "introverts and extroverts are likely to choose different colors – blue and red respectively. The colors you choose to",
+        "C": "wear might also say something about how you are feeling that day. Some days you may feel like wearing something",
+        "D": "lighter, something red, or something blue. These choices are often a reflection of how you are feeling at the moment."
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 241,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 41,
+      "question": "Which of the following is NOT mentioned in the passage?",
+      "options": {
+        "A": "Colors can expand your personality.",
+        "B": "Colors can reveal your feeling.",
+        "C": "Colors can change your mood.",
+        "D": "Colors can cause you to react differently."
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 242,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 42,
+      "question": "Which of the following is considered as low on the visibility index?",
+      "options": {
+        "A": "Expansive colors",
+        "B": "Contractive colors",
+        "C": "Light colors",
+        "D": "Transparentcolors"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 243,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 43,
+      "question": "Which of the following might be the safest vehicle color according to the study?",
+      "options": {
+        "A": "black",
+        "B": "red",
+        "C": "silver",
+        "D": "white"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 244,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 44,
+      "question": "According to the passage, which of the following statements is true?",
+      "options": {
+        "A": "Vehicles with dark colors have higher crash risk during daylight hours.",
+        "B": "Vehicles with light colors have higher crash risk during daylight hours.",
+        "C": "Vehicles with dark colors have lower crash risk during daylight hours.",
+        "D": "Vehicles with light colors have more severe crashes during daylight hours."
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 245,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 45,
+      "question": "Which of the following correlative factors has NOT been proven to be significant? Vehicle color and environmental factors Vehicle color and crash risk Vehicle color and time of the day Vehicle color and crash severity 請依下文回答第46題至第50題：",
+      "options": {
+        "A": "One  of the most  dramatic features of  the  world is the  cycle  of  day and night. Almost  all species exhibit  daily",
+        "B": "changes in their behavior and/or physiology. These daily rhythms are not simply a response to the 24-hour changes in",
+        "C": "the physical environment imposed by the earth turning on its axis but, instead, arise from a timekeeping system within",
+        "D": "the organism. This timekeeping system, or biological “clock,” allows the organism to anticipate and prepare for the"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 246,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 46,
+      "question": "What is the best topic of this passage?",
+      "options": {
+        "A": "The Foundation of Chronobiology.",
+        "B": "The Feature of Life Cycle.",
+        "C": "The Internal and External Environments.",
+        "D": "The Overview of Biological Mechanism."
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 247,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 47,
+      "question": "What does the word “subsumed” mean in the last paragraph?",
+      "options": {
+        "A": "Included",
+        "B": "Reduced",
+        "C": "Downsized",
+        "D": "Underestimated"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 248,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 48,
+      "question": "Which of the following is the result of an asynchrony of an organism with its internal environment?",
+      "options": {
+        "A": "Daily leaf movements of a plant exposed to sunlight.",
+        "B": "Nocturnal animals having a sound sleep during daylight.",
+        "C": "People experiencing",
+        "D": "difficulty falling asleep at night."
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 249,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 49,
+      "question": "Which of the following is considered an external environment?",
+      "options": {
+        "A": "An officesetting.",
+        "B": "A meditative activity.",
+        "C": "A biological timekeeping system.",
+        "D": "A desire to change one’s behavior."
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 250,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 50,
+      "question": "According to this passage, which of the following statements is true?",
+      "options": {
+        "A": "Chronobiologybegan with the studies on circadian rhythm in fruit flies and humans.",
+        "B": "All species simply respond to the cycle of day and night.",
+        "C": "All species have an internal clock that is crucial for their survival.",
+        "D": "Jet lag is a failure of a biological timekeeping mechanism."
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 251,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 1,
+      "question": "09年公務人員特種考試司法人員、法務部 調查局調查人員、國家安全局國家安全情報 人員、海岸巡防人員及移民行政人員考試試題 考 試 別：司法人員、海岸巡防人員、移民行政人員",
+      "options": {
+        "A": "本科目共50題，每題2分，須用2B鉛筆在試卡上依題號清楚劃記，於本試題上作答者，不予計分。禁止使用電子計算器。",
+        "B": "1A報紙報導公務員甲涉嫌違法收受賄賂，甲認為該篇報導涉嫌誹謗，依法提出告訴。下列有關基本權利之敘述，何者正確？",
+        "C": "本案涉及A報紙之新聞自由與甲之名譽權兩項基本權利之衝突",
+        "D": "本案若以刑法誹謗罪之規定處罰"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 252,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 2,
+      "question": "依司法院大法官解釋意旨，下列何者無法律保留原則之適用？",
+      "options": {
+        "A": "全民健康保險醫事服務機構特約內容",
+        "B": "法官迴避制度",
+        "C": "電子遊戲場業營業場所之禁止設立排除區域",
+        "D": "公務人員彈性上下班制度"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 253,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 3,
+      "question": "依司法院大法官解釋，關於言論自由之保障，下列敘述何者正確？",
+      "options": {
+        "A": "低價值言論之事前審查，法院仍應從嚴審查其是否違憲商業廣告不受言論自由保障",
+        "B": "就言論自由的干預強度而言，事前審查必然低於觀點歧視之管制含藥化妝品之廣告均不得事前審查",
+        "C": "",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 254,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 4,
+      "question": "關於國家責任，下列敘述何者錯誤？",
+      "options": {
+        "A": "憲法第24條規定人民得依法律向國家請求賠償為「憲法委託」國家責任包括「國家賠償」及「損失補償」",
+        "B": "司法院大法官認為，經治安機關逮捕以罪嫌不足逕行釋放前受羈押之人民，有權請求國家賠償",
+        "C": "為追求公共利益，人民之財產權負有容忍特別犧牲之義務，國家不負損失補償責任",
+        "D": ""
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 255,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 6,
+      "question": "依憲法規定，制定法律應符合何種程序？",
+      "options": {
+        "A": "立法院通過、總統公布應經各政黨黨團協商應經聽證程序，廣納各方意見",
+        "B": "立法委員不得自行提案，應經由業務主管機關向立法院提出",
+        "C": "",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 256,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 7,
+      "question": "依司法院大法官解釋之意旨，下列差別待遇，何者合憲？",
+      "options": {
+        "A": "為稽徵便利，以年齡作為分類標準，規定僅有扶養一定年齡之親屬始得減除免稅額",
+        "B": "為維持警察養成教育制度，以警大或警官學校畢業或訓練合格為分類標準，作為任用與晉升警察職務之資格",
+        "C": "為維護租稅公平及確保公庫收入，對故意致公司逃漏稅捐之公司負責人一律處徒刑，而對其他受處罰對象得處有期徒刑、拘役或罰金",
+        "D": "為維護一夫一妻婚姻制度，僅限配偶間財產權之移轉免徵贈與稅，其他未婚異性伴侶則無從免徵"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 257,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 8,
+      "question": "依司法院大法官解釋，關於隱私權，下列敘述何者錯誤？",
+      "options": {
+        "A": "女性有決定是否終止懷孕之權利隱私權受憲法第22條之保障資訊隱私權亦屬隱私權之保障範圍",
+        "B": "強制請領國民身分證必須按捺指紋，可能違反隱私權保護",
+        "C": "",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 258,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 9,
+      "question": "下列何者不屬於立法院國會自律權之行使？",
+      "options": {
+        "A": "訂定議事規則",
+        "B": "決議召開臨時會",
+        "C": "決議將立法委員送交黨紀處分",
+        "D": "同意檢察機關於會期中逮捕立法委員"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 259,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 10,
+      "question": "下列有關彈劾權與糾舉權之敘述，何者正確？",
+      "options": {
+        "A": "二者均得對違法或失職之公務人員提出",
+        "B": "彈劾之對象為中央公務人員；糾舉之對象為地方公務人員二者均須由八位監察委員提案後，始得進行調查彈劾之對象為除公務員外，尚包括民意代表",
+        "C": "",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 260,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 11,
+      "question": "依司法院大法官解釋，下列何者有赴立法院各委員會備詢之義務？",
+      "options": {
+        "A": "大學教授",
+        "B": "檢察官",
+        "C": "參謀總長",
+        "D": "監察院院長"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 261,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 12,
+      "question": "憲法或憲法增修條文未明文規定下列何種人員應超出黨派以外，依據法律獨立行使職權？",
+      "options": {
+        "A": "立法委員",
+        "B": "考試委員",
+        "C": "監察委員",
+        "D": "法官"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 262,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 13,
+      "question": "依現行規定及司法院大法官解釋意旨，下列有關司法院之敘述，何者正確？",
+      "options": {
+        "A": "司法院僅為司法行政機關，不具有司法審判機關之性質",
+        "B": "現行制度下，司法院並非民刑事、行政訴訟之終審機關，與憲法第",
+        "C": "77條規定司法院為最高司法機關之意旨，不盡相符",
+        "D": "為維持審判獨立，司法院對於普通法院之審理程序，不得發布任何命令或規則司法院有向立法院提出法律案及預算案之權"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 263,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 14,
+      "question": "關於預算案與決算案之敘述，下列何者正確？",
+      "options": {
+        "A": "立法院對於行政院所提之預算案，不得為增加支出之建議",
+        "B": "行政院主計總處應於會計年度終了後六個月，向立法院提出決算案審查報告考試院所提的考試概算，行政院不得刪減",
+        "C": "行政院於會計年度開始六個月前，應將下年度預算提出於立法院",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 264,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 15,
+      "question": "下列何者不符聲請司法院大法官解釋憲法之要件？",
+      "options": {
+        "A": "總統於行使職權，適用憲法發生疑義時雲林縣政府發布之自治規則經主管機關函告無效後",
+        "B": "經濟部於行使職權時，認立法院通過之法律有牴觸憲法之疑義",
+        "C": "法官於審理非訟事件時，認為適用之法律有牴觸憲法之疑義",
+        "D": ""
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 265,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 16,
+      "question": "有關美國法的特色，下列敘述何者錯誤？",
+      "options": {
+        "A": "繼受了英國的普通法傳統，但也吸收了法國的啟蒙思想，主張更多的平等與自由",
+        "B": "除聯邦憲法或國會的法律已有規定的事項外，一切訴訟案件應以聯邦法優先",
+        "C": "法院有權於個案中判決某項法律違反憲法，是為「司法審查」制度",
+        "D": "擁有一部成文的聯邦憲法，且於增修條文中將人權保障入憲"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 266,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 17,
+      "question": "緊急命令是指國家遇有緊急事變，須為急速處分時所發布的命令，其效力與何者相當？",
+      "options": {
+        "A": "憲法",
+        "B": "法律",
+        "C": "命令",
+        "D": "自治法規"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 267,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 18,
+      "question": "最高法院判決曾指出，雖病人屬消費者保護法所稱之消費者，但因醫療行為具特殊性，如適用消費者 保護法之無過失責任，而導致醫生為避免被訴之風險，選擇消極之醫療行為，反而無法達成消費者保 護法之立法目的，因此醫療行為不適用上述無過失責任。此為下列何種法律適用方法？",
+      "options": {
+        "A": "類推適用",
+        "B": "目的性解釋",
+        "C": "目的性限縮",
+        "D": "目的性擴張"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 268,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 19,
+      "question": "依憲法訴訟法之規定，下列何者不得聲請憲法裁判？",
+      "options": {
+        "A": "人民認為終審法院的確定裁判侵害其基本權利法官審判時，確信作為裁判依據之法律違憲臺北市政府認為其職權上所應適用之中央法律違憲",
+        "B": "行政院就其職權行使而對某法律所表示之見解，與考試院就同一法律所表示之見解不同",
+        "C": "",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 269,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 21,
+      "question": "下列有關立法委員選舉之敘述，何者錯誤？",
+      "options": {
+        "A": "採行「單一選區兩票制」區域代表依人口比例分配名額，但每縣市至少一人",
+        "B": "政黨須在政黨選舉票中獲得百分之五以上的選票，方能分配席次",
+        "C": "各政黨之政黨比例代表席次，婦女名額不得低於三分之一",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 270,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 22,
+      "question": "依司法院釋字第756號解釋，監獄行刑法第 66條規定：「發受書信，由監獄長官檢閱之。如認為有妨害",
+      "options": {
+        "A": "監獄紀律之虞，受刑人發信者，得述明理由，令其刪除後再行發出；受刑人受信者，得述明理由，逕予刪除再行收受。」所涉及之基本權利是：",
+        "B": "秘密通訊自由及財產權",
+        "C": "居住自由及言論自由",
+        "D": "秘密通訊自由及言論自由"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 271,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 23,
+      "question": "為有效管理街頭藝人及其相關活動，某市訂定街頭藝人從事藝文表演活動管理辦法，規定街頭藝人從 事街頭藝文活動須有許可證，此與何種基本權利無涉？",
+      "options": {
+        "A": "言論自由",
+        "B": "工作權",
+        "C": "財產權",
+        "D": "居住遷徙自由"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 272,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 25,
+      "question": "依現行民法規定，下列何者無須經登記即生法律效力？",
+      "options": {
+        "A": "結婚",
+        "B": "婚後以其本姓冠以配偶之姓",
+        "C": "兩願離婚",
+        "D": "土地之繼承"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 273,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 26,
+      "question": "契約當事人約定以將來訂立一定契約為內容之契約，稱之為？",
+      "options": {
+        "A": "本約",
+        "B": "預約",
+        "C": "從契約",
+        "D": "擬制要約"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 274,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 27,
+      "question": "甲允諾贈與其所有之名貴 A跑車一部予乙，允諾3個月內將A車移轉交付給乙，該贈與契約並經公證 人做成公證書。惟經 5個月後，甲仍未交付之。下列敘述何者正確？",
+      "options": {
+        "A": "贈與契約為無償契約，甲得隨時撤銷贈與契約，故乙不得請求交付",
+        "B": "A車",
+        "C": "贈與契約業經公證，乙得請求甲交付",
+        "D": "A車乙得向甲請求因遲延給付所生之遲延利息乙得向甲請求因遲延給付所生之損害賠償"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 275,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 29,
+      "question": "建商甲得知某市政府有一土地開發計劃，委託中間人乙帶著甲的計畫書去見負責開發案的副市長丙。 丙開價500萬元，願意將甲的計畫書內容納入市政府的開發計劃。乙將丙的意思傳達給甲。甲遂請乙 轉交500萬元給丙，同時付佣金 100萬元給乙。下列敘述何者錯誤？",
+      "options": {
+        "A": "丙構成公務員受賄罪",
+        "B": "乙構成行賄罪的共同正犯或幫助犯",
+        "C": "甲構成公務員受賄罪的共同正犯或幫助犯",
+        "D": "乙構成公務員受賄罪的共同正犯或幫助犯"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 276,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 30,
+      "question": "甲死亡後遺留土地一筆，有乙、丙二位繼承人，未辦理繼承登記。下列敘述何者正確？",
+      "options": {
+        "A": "該土地為乙、丙分別共有",
+        "B": "移轉登記前，乙、丙即取得土地所有權，應經登記，始得處分",
+        "C": "若土地被無權占有，乙、丙須共同向無權占有人起訴請求返還",
+        "D": "乙、丙於繼承前在土地上有抵押權，該抵押權因繼承而受影響"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 277,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 31,
+      "question": "The government is considering the creation of a dedicated immigration law to",
+      "options": {
+        "A": "manpower shortage inthe country.",
+        "B": "tickle",
+        "C": "tackle",
+        "D": "trickle"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 278,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 32,
+      "question": "Until they obtain citizenship through",
+      "options": {
+        "A": ", immigrants may be denied full rights of citizenship precisely",
+        "B": "because they are not citizens.",
+        "C": "alienation",
+        "D": "internalization"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 279,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 33,
+      "question": "New  immigrants  not  only  need  to  adjust  to  a  new  culture,  they  also,  often,  must",
+      "options": {
+        "A": "with  traumatic",
+        "B": "experiences from their past.",
+        "C": "come to terms",
+        "D": "come in handy"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 280,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 34,
+      "question": "The  fact  that  Taiwan  has  a  lower",
+      "options": {
+        "A": "of  investment  for  immigration,  compared  to  other  developed",
+        "B": "countries, makes the island country more appealing.",
+        "C": "reputation",
+        "D": "threshold"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 281,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 35,
+      "question": "An  immigration  officer  needs  advanced  knowledge  of  the  immigration  laws  and  procedures  to  uncover",
+      "options": {
+        "A": "potential complex fraud schemes that",
+        "B": "the integrity of the legal immigration system.",
+        "C": "expose",
+        "D": "reinforce"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 282,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 36,
+      "question": "The Kenyan government spends about US$5 million in 2018 to",
+      "options": {
+        "A": "foreigners working in the country",
+        "B": "illegally, a significant increase compared to the US$3.6 million spent in the previous year.",
+        "C": "deport",
+        "D": "consent"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 283,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 37,
+      "question": "New luggage",
+      "options": {
+        "A": "methods can identify liquid explosives and help track down the dangerous substances inthe airport.",
+        "B": "acquisition",
+        "C": "calculation",
+        "D": "inspection"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 284,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 38,
+      "question": "Some tourists intend to",
+      "options": {
+        "A": "from one attraction to the next in order to make the most of the trip.",
+        "B": "drain",
+        "C": "halt",
+        "D": "recess"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 285,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 39,
+      "question": "With the recent increase in number of lone wolf terrorist attacks, governments around the world have been on",
+      "options": {
+        "A": "high alert for social media outlets that may potentially radicalize",
+        "B": ".",
+        "C": "individuals",
+        "D": "animals"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 286,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 40,
+      "question": "The task is",
+      "options": {
+        "A": ", but he has risen to the challenge with intelligence, creativity, flexibility and commitmentsto excellence.",
+        "B": "daunting",
+        "C": "amusing",
+        "D": "delighting"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 287,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 41,
+      "question": "ultimate",
+      "options": {
+        "A": "upmost",
+        "B": "outward",
+        "C": "inbound",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 288,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 42,
+      "question": "sacrificing",
+      "options": {
+        "A": "fortifying",
+        "B": "specifying",
+        "C": "forseeing",
+        "D": ""
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 289,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 43,
+      "question": "in respect of",
+      "options": {
+        "A": "in addition to",
+        "B": "by way of",
+        "C": "in spite of",
+        "D": ""
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 290,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 44,
+      "question": "distributed",
+      "options": {
+        "A": "denominated",
+        "B": "denounced",
+        "C": "discriminated",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 291,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 45,
+      "question": "albeit",
+      "options": {
+        "A": "after",
+        "B": "unless",
+        "C": "thus",
+        "D": "請回答下列第46題至第50題"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 292,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 46,
+      "question": "What is the main idea of this passage?",
+      "options": {
+        "A": "Allowing refugees to work can bring benefits.",
+        "B": "Barring refugees from working boosts economy.",
+        "C": "The Ugandan approach to refugees proves problematic.",
+        "D": "Ugandans host refugees to receive foreign aid."
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 293,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 47,
+      "question": "Why do many governments bar refugees from working in the formal economy?",
+      "options": {
+        "A": "Refugees would rather take odd jobs in a bar than formal jobs.",
+        "B": "The governments intend to preserve jobs for the local natives.",
+        "C": "The research shows that immigrants rarely take native workers’ jobs.",
+        "D": "The research shows that refugees have increased consumption per household."
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 294,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 48,
+      "question": "Which of the following words is closest in meaning to “spillover”?",
+      "options": {
+        "A": "Dividend.",
+        "B": "Magnet.",
+        "C": "Presence.",
+        "D": "Excess."
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 295,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 49,
+      "question": "What is the implication of the statement, “such attitudes are still the exception”?",
+      "options": {
+        "A": "The majority of refugees prefer to reside in rich countries.",
+        "B": "The majority of governments give refugees land plots.",
+        "C": "The majority of people consider refugees to be a burden.",
+        "D": "The majority of local businesses see refugees as a benefit."
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 296,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 50,
+      "question": "Which of the following statements is true?",
+      "options": {
+        "A": "Ugandans welcomed refugees because the central government promised new schools, clinics and a decent road.",
+        "B": "Most refugees stayed in poor countries in order to boost local businesses and act as a magnet for foreign aid.",
+        "C": "A study found that the presence of refugees in Uganda had decreased consumption per household.",
+        "D": "Each new refugee household boosted total income more than the cost of the aid the household was given."
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 297,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 1,
+      "question": "10年公務人員特種考試司法人員、法務部調查局 調查人員、海岸巡防人員、移民行政人員考試及 110年 未具擬任職務任用資格者取得法官遴選資格考試試題 考 試 別：司法人員、海岸巡防人員、移民行政人員",
+      "options": {
+        "A": "本科目共50題，每題2分，須用2B鉛筆在試卡上依題號清楚劃記，於本試題上作答者，不予計分。禁止使用電子計算器。",
+        "B": "1依憲法之規定，下列何者為判斷人民是否為中華民國國民之標準？",
+        "C": "種族",
+        "D": "戶籍"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 298,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 2,
+      "question": "下列有關基本國策中社會安全的敘述，何者正確？",
+      "options": {
+        "A": "國家對於具工作能力者，應予適當工作機會，故人民有向國家請求提供工作機會的權利",
+        "B": "社會補償制度，指的是對於經濟能力較差者，對於其所受的社會經濟待遇給予補償",
+        "C": "基本國策規定國家應該制定保護勞工法律，但保護勞工之內容與方法，立法者有形成自由而不受拘束國家為謀社會福利，應實施社會保險制度",
+        "D": ""
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 299,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 3,
+      "question": "SARS期間有醫師未依規定回到院區集中強制隔離而遭裁罰，依據為當時傳染病防治法第 37條 第1項：「曾與傳染病病人接觸或疑似被傳染者，得由該管主管機關予以留驗；必要時，得令遷入指",
+      "options": {
+        "A": "定之處所檢查，或施行預防接種等必要之處置。」大法官就此作成釋字第",
+        "B": "690號解釋，關於此解釋之內容，下列敘述何者正確？「必要之處置」違反法律明確性原則",
+        "C": "強制隔離係為保護人民生命安全與身體健康，性質上與刑事逮捕拘禁不同，不適用憲法第",
+        "D": "8條"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 300,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 4,
+      "question": "依司法院大法官解釋之意旨，下列敘述何者錯誤？",
+      "options": {
+        "A": "祭祀公業條例維護傳統規約依循傳統宗族觀念以男系子孫（含養子）為派下員之約定，使女子不得為派下員，尚不違反性別平等民法未容許相同性別二人結婚，違反平等保護",
+        "B": "民法規定父母對於未成年子女權利之行使意思不一致時，由父行使，並不違反性別平等",
+        "C": "道路交通管理處罰條例禁止曾犯特定罪名者擔任計程車駕駛，其目的在保障乘客之人身安全，尚屬合憲",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 301,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 5,
+      "question": "依司法院釋字第749號解釋意旨，對於乘客之安全有何風險時，國家始可廢止計程車執業登記？",
+      "options": {
+        "A": "實質風險",
+        "B": "特別風險",
+        "C": "一般風險",
+        "D": "剩餘風險"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 302,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 6,
+      "question": "依憲法增修條文之規定，下列關於覆議之敘述，何者正確？",
+      "options": {
+        "A": "立法院必須在一定期間內議決，逾期未議決時，原決議有效",
+        "B": "覆議時，經全體立法委員二分之一以上維持原案，行政院院長應即接受該決議或辭職行政院得不經總統之核可，移請立法院覆議",
+        "C": "行政院得對於立法院決議之法律案、預算案、條約案提出覆議",
+        "D": ""
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 303,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 7,
+      "question": "關於立法權之敘述，下列何者錯誤？",
+      "options": {
+        "A": "立法院制定公民投票法，使立法院自身得就重大政策之爭議，交由中央選舉委員會辦理公民投票，牴觸權力分立原則",
+        "B": "立法院基於民主正當性之立法責任，得制定或修正法律，乃立法形成之範圍及其固有權限",
+        "C": "民意代表行使選民賦予之職權須遵守與選民約定，任期屆滿，除有不能改選之正當理由外應即改選",
+        "D": "立法委員在開會時，有向行政院院長及行政院各部會首長質詢之權"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 304,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 8,
+      "question": "依憲法增修條文規定，立法委員 35人，未達下列何者之提案門檻？",
+      "options": {
+        "A": "提議總統彈劾案",
+        "B": "提議憲法修正案",
+        "C": "提議總統罷免案",
+        "D": "提議領土變更案"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 305,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 9,
+      "question": "下列何者非屬憲法規定的選舉方法？",
+      "options": {
+        "A": "普通選舉",
+        "B": "間接選舉",
+        "C": "平等選舉",
+        "D": "無記名投票"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 306,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 10,
+      "question": "依司法院大法官解釋，下列何種基本權利受憲法第 22條之保障？",
+      "options": {
+        "A": "學術自由",
+        "B": "營業自由",
+        "C": "財產權",
+        "D": "性行為自由"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 307,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 11,
+      "question": "依憲法及增修條文規定，總統之權限不包括下列何者？",
+      "options": {
+        "A": "主持行政院會議",
+        "B": "依法任免文武官員",
+        "C": "國家安全大政方針決定權",
+        "D": "發布緊急命令"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 308,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 12,
+      "question": "有關地方自治團體居民之權利，下列敘述何者正確？",
+      "options": {
+        "A": "對於地方公職人員有依法創制之權",
+        "B": "對於地方公職人員有依法複決之權",
+        "C": "對於地方自治事項有依法選舉之權",
+        "D": "對於地方自治事項有依法創制之權"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 309,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 14,
+      "question": "依憲法及增修條文規定，下列何者並非司法院大法官之職權？",
+      "options": {
+        "A": "解釋憲法",
+        "B": "政黨違憲審查權",
+        "C": "審理總統、副總統彈劾案",
+        "D": "統一解釋最高法院各庭之歧異見解"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 310,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 15,
+      "question": "依憲法增修條文規定及司法院大法官解釋意旨，有關總統緊急命令權之敘述，下列何者正確？",
+      "options": {
+        "A": "緊急命令因具有暫時替代或變更法律之效力，原則上可具體、明確授權執行機關訂定補充規定總統僅得於立法院休會時發布緊急命令",
+        "B": "緊急命令之發布，不受憲法第",
+        "C": "23條法律保留原則之限制，惟仍應遵守比例原則",
+        "D": "立法院就緊急命令行使追認權時，如認部分內容不當，得為部分追認，或逕予變更其內容"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 311,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 16,
+      "question": "下列有關「法律的制裁」之敘述，何者錯誤？",
+      "options": {
+        "A": "法律的效果不限於制裁，但是制裁卻是相當重要的法律效果",
+        "B": "現代國家透過法律所要達成的政策目標種類日益增加，法律所規定的制裁種類亦越發紛雜多樣當國家課以制裁時，通常是以實施強制力的方式為之監護宣告，屬於民法上的制裁",
+        "C": "",
+        "D": ""
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 312,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 17,
+      "question": "下列何部法律之條文未曾遭司法院大法官宣告違憲？",
+      "options": {
+        "A": "集會遊行法",
+        "B": "出版法",
+        "C": "違警罰法",
+        "D": "檢肅流氓條例"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 313,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 19,
+      "question": "依司法院大法官解釋，大法官於審查法律合憲性遇有立法程序之瑕疵時，應如何審查，下列敘述何者 正確？",
+      "options": {
+        "A": "法律既已公布生效，大法官不得介入審查",
+        "B": "大法官調查事實不受限制，一經發現有立法程序瑕疵時，即得宣告其為無效",
+        "C": "立法程序之瑕疵基於議事自律，立法院應自行認定並解決，但若有明顯重大瑕疵者，釋憲機關仍得宣告其為無效",
+        "D": "大法官僅得形式審查總統之公布與行政院院長之副署是否正確無誤"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 314,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 20,
+      "question": "下列法律條文，何者非法律的擬制？",
+      "options": {
+        "A": "二人以上同時遇難，不能證明其死亡之先後時，推定其為同時死亡電能、熱能及其他能量，關於本章之罪，以動產論",
+        "B": "胎兒以將來非死產者為限，關於其個人利益之保護，視為既已出生",
+        "C": "因條件成就而受利益之當事人，如以不正當行為促其條件之成就者，視為條件不成就",
+        "D": ""
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 315,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 21,
+      "question": "關於法律保留原則，下列敘述何者錯誤？",
+      "options": {
+        "A": "並非所有政府行為均須法律保留並非一切自由權利均受憲法同等保障並非所有對人民權利之限制均須由法律規定",
+        "B": "法律授權主管機關訂定命令時，授權明確之程度必須完全一致",
+        "C": "",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 316,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 22,
+      "question": "主管機關於裁量外國人申請歸化案件時，以國籍法所無之要件，認該外國人之本國與中華民國非友好 國家而拒絕其歸化。此舉最可能構成下列何者？",
+      "options": {
+        "A": "裁量濫用",
+        "B": "裁量萎縮至零",
+        "C": "計畫裁量",
+        "D": "行政保留"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 317,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 23,
+      "question": "稅捐稽徵法與行政程序法均有關於「送達」之規定，則就稅捐文書之送達，此二部法律之適用關係 如何？",
+      "options": {
+        "A": "稅捐稽徵法屬特別法，依特別法優於普通法原則，應僅適用稅捐稽徵法",
+        "B": "行政程序法雖屬普通法，但其中關於送達之規定較為完整，應僅適用行政程序法",
+        "C": "稅捐稽徵法作為特別法而優先適用，於規範不足時補充適用行政程序法由行政機關視具體個案而決定應適用何法律",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 318,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 24,
+      "question": "關於我國股份有限公司之規定，下列敘述何者正確？",
+      "options": {
+        "A": "公司得依章程規定不設董事會，置董事",
+        "B": "1人或2人非公開發行公司，不得採用董事候選人提名制度公開發行公司就董事選舉，可選擇不採用累積投票制",
+        "C": "公司股東會不得在董事任期中，無正當理由而決議解任董事",
+        "D": ""
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 319,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 25,
+      "question": "關於勞工保險月投保薪資之敘述，下列何者正確？",
+      "options": {
+        "A": "直接以被保險人之實際薪資數額作為投保薪資數額，向保險人申報",
+        "B": "按被保險人之月薪資總額，依投保薪資分級表之規定，向保險人申報投保薪資",
+        "C": "每月收入不固定者之投保薪資月薪資總額，以最近",
+        "D": "6個月收入之平均為準"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 320,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 26,
+      "question": "債務人甲恐債權人乙查封其財產，甲乃與丙偽作買賣，將財產讓與丙。下列敘述何者正確？",
+      "options": {
+        "A": "甲丙間之債權行為有效，物權行為無效",
+        "B": "甲丙間之債權行為與物權行為效力未定",
+        "C": "甲丙間之債權行為無效，物權行為有效",
+        "D": "甲丙間之債權行為和物權行為均無效"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 321,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 27,
+      "question": "甲、乙夫妻的18歲獨生子丙，就讀高中三年級，於放學途中毆打路人丁，致丁右手指骨折。依民法 規定，下列敘述何者錯誤？",
+      "options": {
+        "A": "丁得對丙請求全部賠償",
+        "B": "丁得請求財產上損害賠償",
+        "C": "丁得請求非財產上損害賠償",
+        "D": "丁對甲僅得請求三分之一的損害賠償"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 322,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 28,
+      "question": "依民法之規定，下列有關共有關係之敘述，何者正確？",
+      "options": {
+        "A": "首期合會金，為會首與全體合會會員公同共有",
+        "B": "繼承人有數人時，在分割遺產前，各繼承人對於遺產全部為公同共有",
+        "C": "夫妻之財產及所得，合併為共同財產時，為夫妻分別共有之",
+        "D": "合夥人之出資與合夥之財產，各合夥人就出資之比例分別共有之"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 323,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 29,
+      "question": "甲在某大學研究所考試中，事先竊取試題應考，使原本可能名落孫山的自己金榜題名。下列敘述何者 正確？",
+      "options": {
+        "A": "甲的行為不構成刑法第",
+        "B": "137條的妨害考試罪，因為研究所入學考試非屬依考試法所舉行之考試",
+        "C": "甲的行為構成刑法第",
+        "D": "137條的妨害考試罪，因為竊取試題屬詐術或非法之方法"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 324,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 30,
+      "question": "依家庭暴力防治法之規定，有關民事保護令，下列敘述何者錯誤？",
+      "options": {
+        "A": "保護令之聲請，原則上應以書面為之",
+        "B": "被害人得向法院聲請通常保護令、暫時保護令與緊急保護令",
+        "C": "法院於受理民事保護令之聲請後，得於審理終結前聽取社會福利機構之意見",
+        "D": "當被害人有受急迫危險時，檢察官或警察機關得以電信傳真之方式聲請緊急保護令"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 325,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 31,
+      "question": "To make the contract more complete, the hockey star",
+      "options": {
+        "A": "a clause that would guarantee him 50% of his",
+        "B": "salary if an injury ended his career.",
+        "C": "renounced",
+        "D": "inserted"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 326,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 32,
+      "question": "The police",
+      "options": {
+        "A": "themselves as tourists, secretly videotaping visitors as they moved round the exhibitionsite.",
+        "B": "consigned",
+        "C": "harmonized",
+        "D": "moderated"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 327,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 33,
+      "question": "New satellite images of Antarctica just revealed a number of Emperor penguin colonies that scientists were",
+      "options": {
+        "A": "notof in their early research.",
+        "B": "anxious",
+        "C": "aware",
+        "D": "afraid"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 328,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 34,
+      "question": "In a democratic country, everyone is",
+      "options": {
+        "A": "to the freedom of speech and expression. This right is protectedby the law.",
+        "B": "empowered",
+        "C": "enabled",
+        "D": "endowed"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 329,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 35,
+      "question": "After his heart attack, the doctor put him on a strict",
+      "options": {
+        "A": ", and regular appointments are scheduled for furthercheckups.",
+        "B": "decency",
+        "C": "regimen",
+        "D": "casualty"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 330,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 36,
+      "question": "When celebrating a new year, we often wish others happiness,",
+      "options": {
+        "A": ", and good health.",
+        "B": "resistance",
+        "C": "prosperity",
+        "D": "temptation"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 331,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 37,
+      "question": "One benefit of working past the normal retirement age is the ability to",
+      "options": {
+        "A": "current standard of living by",
+        "B": "increasing lifetime income.",
+        "C": "maintain",
+        "D": "mandate"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 332,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 38,
+      "question": "Sadly, their recent, truncated live shows bore no evidence of new material with which to",
+      "options": {
+        "A": "their success.",
+        "B": "sustain",
+        "C": "suppress",
+        "D": "suspect"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 333,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 39,
+      "question": "Patrick is such a good-natured person; he practices",
+      "options": {
+        "A": "faithfully and is always more than ready to helpneedy people.",
+        "B": "altruism",
+        "C": "cynicism",
+        "D": "euphemism"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 334,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 40,
+      "question": "At the roots of my hair a",
+      "options": {
+        "A": "sensation began and ran down the surface of my flesh, leaving me goose-fleshed and cold.",
+        "B": "tingling",
+        "C": "tempering",
+        "D": "twittering"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 335,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 41,
+      "question": "instead of",
+      "options": {
+        "A": "in terms of",
+        "B": "in place of",
+        "C": "in spite of",
+        "D": ""
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 336,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 42,
+      "question": "was harvesting",
+      "options": {
+        "A": "has harvested",
+        "B": "had harvested",
+        "C": "has been harvested",
+        "D": ""
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 337,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 43,
+      "question": "descend",
+      "options": {
+        "A": "deflate",
+        "B": "deprive",
+        "C": "deteriorate",
+        "D": ""
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 338,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 44,
+      "question": "in the meantime",
+      "options": {
+        "A": "in some respects",
+        "B": "on the other hand",
+        "C": "for the time being",
+        "D": ""
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 339,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 45,
+      "question": "Although",
+      "options": {
+        "A": "Despite",
+        "B": "However",
+        "C": "Nonetheless",
+        "D": "請依下文回答第46題至第50題"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 340,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 46,
+      "question": "Which of the following statements is TRUE, according to the text above?",
+      "options": {
+        "A": "At the beginning, there were less than 1,000 colleges with 160,000 students existing in the US.",
+        "B": "In the 1830s, state colleges and universities were set up to train teachers for the explosive growth of K–12education.",
+        "C": "Junior colleges were usually set up by city school systems starting in the 1930s.",
+        "D": "Community colleges were renamed from junior colleges as low-cost institutions with a strong componentof vocational education."
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 341,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 47,
+      "question": "Which of the following statements is true to the description about junior colleges?",
+      "options": {
+        "A": "Junior colleges grew from 1919 students to 70,000 in 1930.",
+        "B": "In 1949, there were 180 private junior colleges affiliated with churches.",
+        "C": "The rapid growth of community colleges is due to the demand for more non-profit independent institutions.",
+        "D": "Teachers’ colleges are the community name for junior colleges."
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 342,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 48,
+      "question": "Which is one of the factors that contributed to the rapid growth of community colleges in the United States?",
+      "options": {
+        "A": "It is a major new trend to include as many rural students as possible.",
+        "B": "The purpose is to handle the explosive growth of K–12 education.",
+        "C": "Parents and businessmen wanted nearby, low-cost schools in rural or small-town areas to provide training",
+        "D": "for the growing white-collar labor force."
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 343,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 49,
+      "question": "Which of the following statistics is TRUE?",
+      "options": {
+        "A": "Before 1919, there were already more than 170 junior colleges.",
+        "B": "In the 1920s, there were about 140 privately-operated junior colleges.",
+        "C": "In 1949, there were totally 180 junior colleges with 108 independent non-profit.",
+        "D": "The peak year for private community college expansion came at the year of 1922."
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 344,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 50,
+      "question": "Which of the following statements is TRUE, according to the text above?",
+      "options": {
+        "A": "Community colleges enrollment is vocationally limited.",
+        "B": "Four-year college growth was affected by the open-enrollment policy of junior colleges.",
+        "C": "Community colleges provide low-cost preparation for transfer students into four-year institutions.",
+        "D": "Community colleges continue to appeal to young, less prepared students."
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 345,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 1,
+      "question": "依司法院大法官解釋，下列何者尚不違背法治國家正當法律程序之要求？",
+      "options": {
+        "A": "以行政文書依法寄存送達完畢時，作為發生送達效力之時點",
+        "B": "稽徵稅捐所發之各種文書，規定對公同共有人中之一人為送達者，其效力及於全體",
+        "C": "於自辦市地重劃案件，未設置適當組織，以審議關於市地重劃範圍之核定程序",
+        "D": "於都市更新程序，未確保利害關係人知悉相關資訊及適時陳述意見之機會"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 346,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 2,
+      "question": "依憲法增修條文規定，下列何者有權提出憲法修正案？",
+      "options": {
+        "A": "自由地區選舉人連署",
+        "B": "國民大會",
+        "C": "總統",
+        "D": "立法院"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 347,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 3,
+      "question": "依司法院釋字第609號解釋意旨，有關勞工保險，下列敘述何者正確？",
+      "options": {
+        "A": "勞工保險應謹守對價原則，以符合保險契約之本質",
+        "B": "勞工保險與商業保險相同，應由勞工保險局評估危險後決定是否簽訂保險契約",
+        "C": "勞工保險得由勞工保險局與被保險人自由約定保險契約，排除勞工保險條例的適用",
+        "D": "勞工保險條例之排除保險給付規定，得由立法機關依保險法理並參酌其他社會安全制度形成之"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 348,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 4,
+      "question": "關於刑法撤銷假釋之規定與人身自由之關係，下列敘述何者正確？",
+      "options": {
+        "A": "撤銷假釋之規定，對受假釋人之人身自由造成限制，故不得再執行殘刑",
+        "B": "撤銷假釋之規定，限制受假釋人之人身自由，屬憲法保留事項，故不得以法律定之",
+        "C": "撤銷假釋之規定，對受假釋人之人身自由造成限制，必須符合比例原則之要求",
+        "D": "撤銷假釋之規定，並未使受假釋人承受新刑罰，故並未限制受假釋人之人身自由"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 349,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 5,
+      "question": "依司法院大法官解釋，有關婚姻與家庭之保障，下列敘述何者錯誤？",
+      "options": {
+        "A": "婚姻與家庭制度應受制度性保障",
+        "B": "家庭制度之保障植根於人格自由",
+        "C": "人民收養子女之自由為憲法第",
+        "D": "22條所保障限制人民收養其配偶之大陸地區子女為違反平等權"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 350,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 6,
+      "question": "中央警察大學研究所碩士班入學考試招生簡章，以有無色盲決定能否取得入學資格之規定，依司法院釋字 第626號解釋，下列敘述何者錯誤？",
+      "options": {
+        "A": "相關入學資格條件之設定，為大學自治事項，於合理及必要之範圍內，不生違反法律保留之問題",
+        "B": "受國民教育以外教育之權利雖受憲法第",
+        "C": "22條所保障，但不包括賦予人民請求給予入學許可之權利",
+        "D": "警大自治權之行使，應受其功能本質之限制，且為確保其達成國家賦予之政策功能，而應接受比一般大學更多之國家監督"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 351,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 7,
+      "question": "法律規定汽車駕駛人駕車強行闖越鐵路平交道，因而肇事者，處新臺幣 1萬5千元以上9萬元以下罰鍰， 並吊銷其駕駛執照，終身不得考領駕駛執照，並應接受道路交通安全講習。關於上開規定，依司法院釋字 第780號解釋，下列敘述何者錯誤？",
+      "options": {
+        "A": "處以罰鍰係對汽車駕駛人財產權之限制",
+        "B": "終身不得考領駕駛執照，係限制汽車駕駛人之一般行為自由",
+        "C": "如駕駛人為職業駕駛人，則吊銷其駕駛執照將涉及人民選擇職業自由之客觀條件限制",
+        "D": "強制駕駛人參加道路交通安全講習，係對人民一般行為自由之限制"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 352,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 8,
+      "question": "有關憲法第22條所稱「其他權利」，下列敘述何者正確？",
+      "options": {
+        "A": "「不妨礙社會秩序公共利益」應遵循社會多數意見作解釋",
+        "B": "本條之基本權利位階及效力較其他基本權劣後",
+        "C": "大法官依據本條而導出新聞自由之保障",
+        "D": "本條會隨著時代及社會的發展而進展"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 353,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 9,
+      "question": "下列何者尚未經司法院大法官解釋明白承認屬憲法財產權之保障範圍？",
+      "options": {
+        "A": "攜帶外幣出入國境須報明登記，違反者應予沒入",
+        "B": "主管機關就其徵收之土地，應定期通知原所有權人土地之後續使用情形",
+        "C": "政府採購得標廠商在符合一定要件下，應於履約期間僱用一定比例之原住民員工",
+        "D": "人民依法請求國家賠償"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 354,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 10,
+      "question": "依憲法訴訟法規定，人民不得針對下列何者聲請判決？",
+      "options": {
+        "A": "最高法院之不利確定終局裁定適用之法律",
+        "B": "最高行政法院之不利確定終局判決",
+        "C": "監察院之彈劾案",
+        "D": "地方自治團體制定之自治條例"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 355,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 11,
+      "question": "在我國憲法體制之下，下列何者得行使憲法上之行政權？",
+      "options": {
+        "A": "總統",
+        "B": "立法院國防委員會",
+        "C": "監察院",
+        "D": "懲戒法院"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 356,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 12,
+      "question": "有關國會質詢權之敘述，下列何者錯誤？",
+      "options": {
+        "A": "司法、考試、監察三院院長，得不受邀備詢，乃係基於憲政慣例",
+        "B": "參謀總長得不受邀備詢，乃係基於國防事務乃屬總統權限",
+        "C": "檢察官得不受邀備詢，乃係基於其依法獨立行使職權、不受外部干涉",
+        "D": "公平交易委員會委員得不受邀備詢，乃係基於其依法獨立行使職權、不受外部干涉"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 357,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 13,
+      "question": "關於審計權之行使，下列敘述何者錯誤？",
+      "options": {
+        "A": "監察院設審計長，由總統提名，經立法院同意任命之",
+        "B": "審計長應於行政院提出決算後",
+        "C": "3個月內，依法完成其審核",
+        "D": "審計長完成決算審核後，應提出審核報告於立法院"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 358,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 14,
+      "question": "有關公務員懲戒，下列敘述何者正確？",
+      "options": {
+        "A": "法官之懲戒，亦包括大法官",
+        "B": "公務員懲戒法之適用對象，包括文職及武職之公務員、公立學校教師",
+        "C": "公務員懲戒案件之審理，為一級一審制",
+        "D": "司法院大法官之懲戒，得經司法院大法官現有總額"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 359,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 15,
+      "question": "司法院釋字第472號解釋宣示，針對無力繳納全民健康保險費者，國家應給予適當救助，不得逕行拒絕給 付，此為何種基本權？",
+      "options": {
+        "A": "生存權",
+        "B": "財產權",
+        "C": "人身自由",
+        "D": "一般行為自由"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 360,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 16,
+      "question": "下列關於世界主要法系的敘述，何者錯誤？",
+      "options": {
+        "A": "羅馬日耳曼法系又常被稱作歐陸法系，重視成文法",
+        "B": "歐陸法系重視公法與私法的分類",
+        "C": "普通法系發源於美國",
+        "D": "普通法系以判決先例為主要法源，並特別重視程序法"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 361,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 17,
+      "question": "下列關於臺灣民商法發展之敘述，何者錯誤？",
+      "options": {
+        "A": "日治時期臺灣人的親屬繼承事項之實體法，原則上乃依照日本民法典",
+        "B": "戰前的日本民法典與戰後施行在臺灣的中華民國民法典，均以歐陸法為範本。是以戰前與戰後的臺灣民事法之實質內容有許多延續之處",
+        "C": "1985年民法親屬繼承編首度修正，參考歐陸立法例朝向更平等的夫妻財產制",
+        "D": "戰後民商法的特色之一，為對於英美法，特別是美國法的繼受"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 362,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 18,
+      "question": "有關地方政府得透過自治規章訂定行政罰則之規定，下列敘述何者錯誤？",
+      "options": {
+        "A": "直轄市法規、縣（市）規章就違反地方自治事項之行政業務者，得規定處以罰鍰或其他種類之行政罰",
+        "B": "直轄市政府、縣（市）政府得透過自治規則訂定罰鍰或其他種類之行政罰，惟需函送各該地方立法機關查照",
+        "C": "自治條例經各該地方立法機關決議後，如規定有罰則時，應分別報經行政院、中央各該主管機關核定後發布",
+        "D": "地方政府為罰鍰之規定，最高以新臺幣"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 363,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 19,
+      "question": "依中央法規標準法規定，關於行政命令，下列敘述何者正確？",
+      "options": {
+        "A": "關於國家各機關組織規範得由行政命令訂之",
+        "B": "行政命令之原發布機關已裁併者，其廢止則由承受其業務之機關或其上級機關為之",
+        "C": "行政命令定有施行期限而主管機關認為需要延長者，須於期限屆滿日前發布延長即可",
+        "D": "各機關依其法定職權所制定之行政命令得自行發布，無須送交立法院"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 364,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 20,
+      "question": "司法院釋字第792號解釋：毒品危害防制條例第",
+      "options": {
+        "A": "4條「第1項至第4項將販賣毒品與製造、運輸毒品之構成要",
+        "B": "件併列，並對該三種犯罪態樣，科以相同之法定刑。由此推論，本條所指之『販賣』毒品行為嚴重程度，應與製",
+        "C": "造及運輸毒品相當。所謂製造毒品係將毒品從無至有，予以生產，進而得危害他人；而運輸毒品係從一地運至他",
+        "D": "地，使毒品流通於他地，產生危害。基於同一法理，販賣毒品罪，應在處罰『賣出』毒品，因而產生毒品危害之"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 365,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 21,
+      "question": "有關授權明確性原則之敘述，下列何者錯誤？",
+      "options": {
+        "A": "立法機關授權行政機關發布命令，為憲法所許，只要其授權目的、內容或範圍其中之一具體明確即可",
+        "B": "在此原則之下，授權條款之明確程度，應與所授權訂定之法規命令對人民權利之影響相稱",
+        "C": "由授權之母法整體觀察，已足使人民預見行為有受處罰之可能，即與得預見行為可罰之意旨無違，不以確信其行為之可罰為必要",
+        "D": "此乃法律保留原則之補充與具體化"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 366,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 22,
+      "question": "依據司法院大法官解釋，下列何者無須由法律明文規定？",
+      "options": {
+        "A": "消滅時效",
+        "B": "課徵租稅之構成要件",
+        "C": "公務員懲戒撤職處分之構成要件",
+        "D": "公務人員專案考績一次記二大過免職之構成要件"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 367,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 23,
+      "question": "關於平等權，下列敘述何者錯誤？",
+      "options": {
+        "A": "平等權旨在防止國家恣意之差別待遇",
+        "B": "平等權之侵害，限於國家之作為，不作為不屬之",
+        "C": "基於平等權保障之要求，國家得為差別待遇",
+        "D": "差別待遇之目的是否合憲，係國家行為有無違反平等保障考量因素之一"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 368,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 24,
+      "question": "甲為某視聽著作之著作人，於創作完成後第 5年始將該視聽著作對外公開發表，有關著作財產權的存續期 間，下列敘述何者正確？",
+      "options": {
+        "A": "若甲為法人，其著作財產權存續至創作完成時起",
+        "B": "50年",
+        "C": "若甲為法人，其著作財產權存續至該法人成立時起",
+        "D": "50年"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 369,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 25,
+      "question": "保險醫事服務機構當年領取之保險醫療費用超過一定數額者，應於期限內向保險人提報經會計師簽證或審 計機關審定之全民健康保險業務有關之財務報告，下列何者非財務報告應包括之報表？",
+      "options": {
+        "A": "資產負債表",
+        "B": "現金流量表",
+        "C": "損益表",
+        "D": "淨值變動表"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 370,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 26,
+      "question": "當事人得以要約與承諾之方式成立契約。關於要約，下列敘述何者錯誤？",
+      "options": {
+        "A": "貨物標定賣價陳列者，依民法規定推定為要約",
+        "B": "契約之要約人，因要約而受拘束",
+        "C": "對話為要約者，除要約人另有意思表示外，非立時承諾，即失其拘束力",
+        "D": "要約定有承諾期限者，非於其期限內為承諾，失其拘束力"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 371,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 27,
+      "question": "依民法之規定，總會決議之內容違反法令或章程，其效力為何？",
+      "options": {
+        "A": "無效",
+        "B": "無效，但不得以其無效對抗善意之第三人",
+        "C": "須經主管機關、檢察官或利害關係人向法院聲請，以宣告其行為為無效",
+        "D": "社員得於決議後3個月內請求法院撤銷其決議"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 372,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 28,
+      "question": "甲將自己的A車以60萬元賣給乙，雙方約定下個月初交車及付款。不料，於交車前數日， A車於公共停 車場中遭雷電擊中而燒毀。依民法規定，下列敘述何者錯誤？",
+      "options": {
+        "A": "甲對乙免給付義務",
+        "B": "乙對甲免支付價金",
+        "C": "甲應對乙負債務不履行的損害賠償責任",
+        "D": "乙不得向甲請求給付A車"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 373,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 29,
+      "question": "甲任職於市政府警察局某分局派出所所長，因處理群眾陳抗事件，派出所人手不足，甲發現派出所內約聘 擔任庶務工作的事務工友乙因喜愛健身而身強體壯，遂拿一套警察制服給乙穿著，並命令乙與其他警員一 同至陳抗現場維持秩序。下列敘述何者正確？",
+      "options": {
+        "A": "乙進行群眾驅離，係依法令之行為，阻卻違法",
+        "B": "乙行使警察職權，係依所屬上級公務員之命令，阻卻違法",
+        "C": "乙依刑法第10條第2項規定，為公務員",
+        "D": "乙犯刑法第158條、第159條之冒充公務員行使職權罪與冒用公務員服章官銜罪"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 374,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 30,
+      "question": "性別工作平等法中有關「性騷擾」之規定，下列敘述何者錯誤？",
+      "options": {
+        "A": "求職者於求職時，雇主以具有性意味之言詞或行為，對其造成冒犯，致侵犯其人格尊嚴，該當性別工作平等法所定義之性騷擾",
+        "B": "求職者於求職時，雇主對求職者為明示之性要求，作為勞務契約成立之交換條件，該當性別工作平等法所定義之性騷擾",
+        "C": "受僱者於執行職務時，客戶以具有性別歧視之言詞或行為，對其造成敵意性之工作環境，致影響其工作表現，該當性別工作平等法所定義之性騷擾",
+        "D": "受僱者於執行職務時，其同事以具有性意味之言詞或行為，對其造成冒犯性之工作環境，致侵犯其人格尊嚴，該當性別工作平等法所定義之性騷擾"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 375,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 31,
+      "question": "The manager is very careful about quality control; he always says that the problems we ignore now will come back",
+      "options": {
+        "A": "to",
+        "B": "us.",
+        "C": "fascinate",
+        "D": "highlight"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 376,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 32,
+      "question": "There have been",
+      "options": {
+        "A": "discussions with strong negative emotions for the new power plant: Some think it would",
+        "B": "bring jobs, while others say it would damage the natural environment.",
+        "C": "warmly",
+        "D": "thermal"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 377,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 33,
+      "question": "Most castles were made from stone instead of timber because stone is more",
+      "options": {
+        "A": "to fire than wood.",
+        "B": "constant",
+        "C": "defendant",
+        "D": "insistent"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 378,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 34,
+      "question": "The deadline for voter registration is this Friday; however, if you are ill or out of the country, you may have a",
+      "options": {
+        "A": "month’s.",
+        "B": "extension",
+        "C": "intention",
+        "D": "expansion"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 379,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 35,
+      "question": "You need to renew your passport as soon as possible before it becomes out of date and",
+      "options": {
+        "A": ".",
+        "B": "abolished",
+        "C": "invalid",
+        "D": "negated"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 380,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 36,
+      "question": "The classroom windows should be left open so students will not feel",
+      "options": {
+        "A": ".",
+        "B": "bewildered",
+        "C": "complicated",
+        "D": "disorganized"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 381,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 37,
+      "question": "If you have a known or diagnosed allergy to a COVID-19 vaccine",
+      "options": {
+        "A": ", you should not get vaccinated.",
+        "B": "ingredient",
+        "C": "syringe",
+        "D": "symptom"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 382,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 38,
+      "question": "The islanders asserted that dumping radioactive wastes in the sea was an act of",
+      "options": {
+        "A": ".",
+        "B": "insanity",
+        "C": "hospitality",
+        "D": "inquiry"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 383,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 39,
+      "question": "The teachers’",
+      "options": {
+        "A": "methods of students’ performances produce controversial results across the country based",
+        "B": "on a core curriculum.",
+        "C": "parliament",
+        "D": "commandment"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 384,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 40,
+      "question": "Thanks to modern",
+      "options": {
+        "A": ", crops now grow abundantly in areas where once nothing but cacti and sagebrush",
+        "B": "could live.",
+        "C": "infection",
+        "D": "inflation"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 385,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 41,
+      "question": "Collective trauma finds outlet in public",
+      "options": {
+        "A": "of a community or a nation, as it seems to remember or forget a",
+        "B": "painful period in its history.",
+        "C": "articulation",
+        "D": "approbation"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 386,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 42,
+      "question": "The  committee  required  that  all  the  sports  players undergo  a",
+      "options": {
+        "A": "drug  test  before  competing  in  the",
+        "B": "championship.",
+        "C": "discretional",
+        "D": "frivolous"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 387,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 43,
+      "question": "It was such a",
+      "options": {
+        "A": "sight when they saw swarms of starving children seeking food on the streets.",
+        "B": "remedial",
+        "C": "pathetic",
+        "D": "eligible"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 388,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 44,
+      "question": "Algonkian-speaking Native Americans greeted the Pilgrims who",
+      "options": {
+        "A": "on the eastern shores of what is now",
+        "B": "New England.",
+        "C": "steered",
+        "D": "stooped"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 389,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 45,
+      "question": "We brought back a model of Taipei 101 as a",
+      "options": {
+        "A": "of our trip to Taipei last month.",
+        "B": "vessel",
+        "C": "relic",
+        "D": "souvenir"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 390,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 46,
+      "question": "The pandemic has",
+      "options": {
+        "A": "for all parents and teachers how indispensable online learning is for education today.",
+        "B": "underscored",
+        "C": "undermined",
+        "D": "unleashed"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 391,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 47,
+      "question": "The weather forecast has said that there may be a temporary break before",
+      "options": {
+        "A": "rain returns on Monday.",
+        "B": "respective",
+        "C": "charitable",
+        "D": "persistent"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 392,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 48,
+      "question": "More than 280 people have been",
+      "options": {
+        "A": "from a ferry in northwestern Greece that caught fire overnight while",
+        "B": "heading to southern Italy in February.",
+        "C": "deserted",
+        "D": "implemented"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 393,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 49,
+      "question": "The transit agency has seen rampant virus infections among employees and difficulties in hiring and",
+      "options": {
+        "A": "drivers.",
+        "B": "retaining",
+        "C": "compiling",
+        "D": "evading"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 394,
+      "roc_year": "111",
+      "session": "第一次",
+      "exam_code": "111130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 50,
+      "question": "Instead of concentrating on incentivizing short-term transactive behaviors, today’s firms focus on building authentic",
+      "options": {
+        "A": "andrelationships with customers.",
+        "B": "transitional",
+        "C": "topical",
+        "D": "sustainable"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 395,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 1,
+      "question": "依據憲法增修條文第 10條第4項之規定，國家對於公營金融機構之管理，應本何項原則？",
+      "options": {
+        "A": "企業經營化",
+        "B": "國際化",
+        "C": "最大利潤化",
+        "D": "全面自由化"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 396,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 2,
+      "question": "依司法院釋字第499號解釋，下列敘述何者正確？",
+      "options": {
+        "A": "為確保修憲決定不受任何不當壓力影響，修憲應符合秘密原則",
+        "B": "修憲若未先得到人民公投之明確授權，不得從事修憲",
+        "C": "修憲雖為國民主權之展現，仍不可修改具本質重要性的憲法條文",
+        "D": "修憲應向所屬政黨負責，以貫徹政黨政治精神"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 397,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 3,
+      "question": "關於秘密通訊自由之敘述，下列何者錯誤？",
+      "options": {
+        "A": "旨在確保人民就通訊之有無、對象、時間、方式及內容等事項，不受國家及他人任意侵擾",
+        "B": "為憲法保障隱私權之具體態樣之一",
+        "C": "國家為確保國家安全及維護社會秩序所必要，於符合法定之實體及程序要件下，得對人民之秘密通訊為監察",
+        "D": "檢察官與司法警察機關，無須經法官審查，可同時負責通訊監察書之聲請與核發"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 398,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 4,
+      "question": "依據釋憲實務見解，關於宗教結社自由，下列敘述何者錯誤？",
+      "options": {
+        "A": "保障範圍包括寺廟組織內部結構",
+        "B": "保障範圍包括寺廟是否加入其他宗教團體成為團體會員",
+        "C": "保障範圍包括寺廟財產之管理、處分",
+        "D": "未經合法設立登記之宗教團體不受憲法宗教結社自由之保障"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 399,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 5,
+      "question": "禁止恣意之差別待遇為下列何種基本權之內涵？",
+      "options": {
+        "A": "平等權",
+        "B": "工作權",
+        "C": "言論自由",
+        "D": "人身自由"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 400,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 6,
+      "question": "下列何者屬於憲法第 16條訴訟權之保障範圍？",
+      "options": {
+        "A": "擔任民、刑事訴訟或行政訴訟之證人",
+        "B": "擔任民、刑事訴訟或行政訴訟之鑑定人",
+        "C": "公務員根據公務員懲戒法規定，提起再審之訴",
+        "D": "監察院將彈劾案連同證據，移送懲戒法院審理"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 401,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 7,
+      "question": "依司法院大法官解釋，下列何者規定係屬違反平等權？",
+      "options": {
+        "A": "兵役法規定「中華民國男子依法皆有服兵役之義務」，而女子則無此義務",
+        "B": "菸害防制法規定「限制菸品業者以公司名義顯名贊助任何形式之活動」，而「酒類產品」無此限制",
+        "C": "社會秩序維護法有規定就「意圖得利與人姦、宿者」為相關處罰，即僅處罰意圖得利之一方，而不處罰支付對價之相對人",
+        "D": "警察大學招生簡章規定「以有無色盲」作為能否取得入學資格的條件，使色盲者無法通過入學考試"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 402,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 8,
+      "question": "下列何者不是司法院大法官解釋已承認為憲法第 22條所保障之自由或權利？",
+      "options": {
+        "A": "健康權",
+        "B": "環境權",
+        "C": "婚姻自由",
+        "D": "契約自由"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 403,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 9,
+      "question": "下列何者不是僅限於中華民國國民才能享有的基本權利？",
+      "options": {
+        "A": "選舉、罷免、創制及複決之權",
+        "B": "受國民教育之權利",
+        "C": "服公職權",
+        "D": "訴訟權"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 404,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 10,
+      "question": "依司法院釋字第419號解釋，下列敘述何者錯誤？",
+      "options": {
+        "A": "行政院院長於新任總統就職時提出總辭，並非其憲法上之義務",
+        "B": "總統無須向立法院負責",
+        "C": "總統對行政院院長非憲法上義務之辭職應如何處理，乃總統之裁量權限",
+        "D": "立法院決議要求總統為一定行為或不為一定行為，總統應受拘束"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 405,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 11,
+      "question": "下列何者係依據司法院大法官解釋而得向立法院提出法律案？",
+      "options": {
+        "A": "考試院",
+        "B": "立法委員",
+        "C": "行政院",
+        "D": "司法院"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 406,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 12,
+      "question": "有關監察院院長之職權，下列敘述何者錯誤？",
+      "options": {
+        "A": "參與總統院際協商",
+        "B": "赴立法院備詢",
+        "C": "綜理院務監督所屬機關",
+        "D": "主持監察院會議"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 407,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 13,
+      "question": "依憲法訴訟法規定，下列何者不屬於憲法法庭得審查之標的？",
+      "options": {
+        "A": "政黨違憲之解散",
+        "B": "地方自治法規與上級自治團體自治條例有無牴觸發生疑義",
+        "C": "自治事項有無違背中央法規發生疑義",
+        "D": "院與院間權限爭議"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 408,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 14,
+      "question": "依司法院大法官解釋，最高司法行政機關得本於其司法行政監督權而發布相關命令，下列敘述何者錯誤？",
+      "options": {
+        "A": "不得違反審判獨立",
+        "B": "不得牴觸法律",
+        "C": "需有法律具體明確授權，才可對人民權利有所限制",
+        "D": "若有涉及審判上之法律見解，法院應受其拘束"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 409,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 15,
+      "question": "原屬國家或其他上級地方自治團體本身的行政事務，委由地方自治團體執行，其法律性質為何？",
+      "options": {
+        "A": "委辦事項",
+        "B": "委任事項",
+        "C": "委託事項",
+        "D": "行政委託"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 410,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 16,
+      "question": "法是人類共同生活中，為形成秩序、解決紛爭、實現自由之規範。下列敘述中，何者屬於符合此定義的規 範？",
+      "options": {
+        "A": "為了考上國考，自己規定每天",
+        "B": "6點起床唸書，要唸滿10小時，若沒做到就不能休息",
+        "C": "朋友結婚請喜宴時，要包禮金",
+        "D": "交通警察以手勢指揮車輛行駛的順序或方式"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 411,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 17,
+      "question": "下列關於強行法與任意法的敘述，何者錯誤？",
+      "options": {
+        "A": "法律行為違反強行法規定時，該法律行為一概無效",
+        "B": "強行法又可再區分為強制規定及禁止規定",
+        "C": "任意法又可再區分為補充規定及解釋規定",
+        "D": "強行法與任意法的區分標準，在於是否容許基於當事人之自由意思，決定該法律應否加以適用"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 412,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 18,
+      "question": "下列有關「準用」的敘述，何者錯誤？",
+      "options": {
+        "A": "準用是以法條明文規定的類推適用",
+        "B": "準用只適用於法律原因，不適用於法律效果",
+        "C": "「比照」其意同於「準用」",
+        "D": "「亦同」其意同於「準用」"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 413,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 19,
+      "question": "下列何者不是行政法上比例原則之內涵？",
+      "options": {
+        "A": "手段應有助於公益目的之達成",
+        "B": "應選擇對人民侵害最小之手段",
+        "C": "手段應符合信賴利益之保護",
+        "D": "手段對人民之侵害不得與公益目的顯失均衡"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 414,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 20,
+      "question": "下列關於「刑之加減」之敘述，何者正確？",
+      "options": {
+        "A": "無期徒刑加重者，為死刑",
+        "B": "死刑減輕者，為不得假釋之無期徒刑",
+        "C": "有期徒刑加重者，僅加重其最高度",
+        "D": "拘役加重者，僅加重其最高度"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 415,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 21,
+      "question": "監所管理員甲因為疏忽，將鑰匙遺落於地上，羈押中的被告乙撿到鑰匙後，以該鑰匙打開大門逃之夭夭。 甲有何刑責？",
+      "options": {
+        "A": "甲不構成犯罪",
+        "B": "甲構成刑法第161條第1項的脫逃罪",
+        "C": "甲構成刑法第162條第1項的縱放或便利脫逃罪",
+        "D": "甲構成刑法第163條第2項的公務員過失縱放或便利脫逃罪"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 416,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 22,
+      "question": "依勞動基準法第 84條之1規定，於特定之情況下，勞工之工作條件得約定有一定之彈性放寬。下列敘述 何者正確？",
+      "options": {
+        "A": "不待主管機關公告，任何勞工都可以直接透過勞資合意，成為適用勞基法第",
+        "B": "84條之1之對象",
+        "C": "勞動條件放寬之約定，必須以書面為之，並且不能有損勞工健康福祉",
+        "D": "雇主可以任意指定企業內特定職位之勞工，成為適用第"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 417,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列何者非行政院所轄相當二級機關之獨立機關？",
+      "options": {
+        "A": "中央選舉委員會",
+        "B": "中央銀行",
+        "C": "公平交易委員會",
+        "D": "國家通訊傳播委員會"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 418,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 24,
+      "question": "歌手甲於演唱會上演唱由乙填詞、丙作曲的一首歌曲，經丁公司將甲的現場表演錄製為唱片（以下簡稱為 「Ａ唱片」），並對外發售。有關著作權之敘述，下列何者錯誤？",
+      "options": {
+        "A": "甲在演唱會上的表演，為一獨立之著作而受著作權法保護",
+        "B": "丁公司於錄製Ａ唱片前，僅須取得甲之同意，毋庸取得乙、丙之同意",
+        "C": "丁公司錄製之Ａ唱片為錄音著作，其著作財產權存續至著作公開發表後五十年",
+        "D": "戊在臺北車站某唱片行購入一張丁所發售的Ａ唱片，嗣後得自由轉售給其他人，毋庸取得甲、乙、丙、丁之同意"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 419,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 25,
+      "question": "依據性別工作平等法，下列敘述何者正確？",
+      "options": {
+        "A": "性別工作平等法於雇主依勞動基準法所招生之技術生，亦有適用",
+        "B": "性別工作平等法僅適用於一般私人企業，教育人員及軍職人員均不適用",
+        "C": "雇主與受僱者之約定若與性別工作平等法之規定有不同時，一律適用性別工作平等法",
+        "D": "公私立高中修習校外實習課程之實習生，若於實習期間遭受性騷擾，無性別工作平等法之適用"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 420,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 26,
+      "question": "依憲法訴訟法規定，關於法庭之友制度，下列敘述何者錯誤？",
+      "options": {
+        "A": "當事人及關係人以外之人民、機關或團體均得擔任法庭之友",
+        "B": "法庭之友得提出具參考價值之專業意見",
+        "C": "法庭之友應以書面敘明其與審理案件之關聯性，聲請憲法法庭許可",
+        "D": "經憲法法庭裁定許可，法庭之友得自行提出具參考價值之資料，無須委任代理人為之"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 421,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 27,
+      "question": "依憲法訴訟法規定，關於聲請之撤回，下列敘述何者錯誤？",
+      "options": {
+        "A": "於裁判宣示或公告前得撤回聲請之全部或一部",
+        "B": "聲請案件於憲法上具原則重要性者，憲法法庭得不准許撤回",
+        "C": "聲請之撤回應以書面為之",
+        "D": "案件經撤回者，聲請人得在聲請不變期間內，更行聲請"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 422,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 28,
+      "question": "依民法之規定，下列關於瑕疵擔保責任之敘述，何者錯誤？",
+      "options": {
+        "A": "出賣人應擔保第三人就買賣之標的物，對於買受人不得主張任何權利",
+        "B": "債權之出賣人，原則上對於債務人之支付能力，不負擔保責任",
+        "C": "買受人於契約成立時，知有權利之瑕疵者，原則上出賣人應負擔保之責",
+        "D": "出賣人應擔保其物無滅失或減少其預定效用之瑕疵"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 423,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 29,
+      "question": "關於先占，下列敘述何者錯誤？",
+      "options": {
+        "A": "須以所有之意思而占有",
+        "B": "標的得為動產或不動產",
+        "C": "限制行為能力人得為先占",
+        "D": "無主之動產先占人取得無主動產之所有權"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 424,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 30,
+      "question": "甲、乙為夫妻，婚後育有子女丙、丁二人。甲因生病死亡，遺留有遺產新臺幣 120萬元。依法定應繼分分 配遺產，下列敘述何者正確？",
+      "options": {
+        "A": "乙分60萬元、丙分30萬元、丁分30萬元乙、丙、丁各分40萬元",
+        "B": "乙分80萬元，丙、丁各分",
+        "C": "20萬元乙分60萬元、丙分40萬元、丁分20萬元",
+        "D": ""
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 425,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 31,
+      "question": "It was _____ that very day even though we had the fan rattling behind us.",
+      "options": {
+        "A": "rollicking",
+        "B": "stifling",
+        "C": "rummaging",
+        "D": "rumbling"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 426,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 32,
+      "question": "If your skin type is _____ oily, the pores around the T-zone would produce the most oil and tend toward blackhead",
+      "options": {
+        "A": "formation.",
+        "B": "prehistorically",
+        "C": "predominantly",
+        "D": "predictably"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 427,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 33,
+      "question": "The news of the forest fire filled them with _____ because they had just had a good vacation there.",
+      "options": {
+        "A": "dismay",
+        "B": "relief",
+        "C": "turbulence",
+        "D": "lucidity"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 428,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 34,
+      "question": "After their general had been captivated, the enemy troops were forced to _____ after months of intense fighting.",
+      "options": {
+        "A": "survive",
+        "B": "weather",
+        "C": "surrender",
+        "D": "withstand"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 429,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 35,
+      "question": "Many successful leaders believe that a _____ approach should be taken in order to solve complex problems, with",
+      "options": {
+        "A": "feasible solutions often being preferred over more idealistic ones.",
+        "B": "resilient",
+        "C": "resistant",
+        "D": "pragmatic"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 430,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 36,
+      "question": "The thriller movie had the audience on the _____ of their seats, who eagerly anticipated the next twist and turn in",
+      "options": {
+        "A": "the plot.",
+        "B": "ledge",
+        "C": "surface",
+        "D": "edge"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 431,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 37,
+      "question": "We were told about the meeting just one day before. Our report was prepared in such a _____ and contained several",
+      "options": {
+        "A": "mistakes.",
+        "B": "stupor",
+        "C": "privilege",
+        "D": "haste"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 432,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 38,
+      "question": "Instead  of  treating  you  like  an  expert,  some  caring  and  sympathetic  doctors  would  give  you more  _____",
+      "options": {
+        "A": "explanations.",
+        "B": "ambiguous",
+        "C": "furious",
+        "D": "portable"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 433,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 39,
+      "question": "Autumn for Max is a _____ season and it easily brings about his deeper feelings and thoughts of just about anything.",
+      "options": {
+        "A": "compulsory",
+        "B": "legitimate",
+        "C": "negligible",
+        "D": "sentimental"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 434,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 40,
+      "question": "In  Japan,  combined  junior  high  and  senior  high  schools  are  mostly  _____,  but  the  number  of  public  ones  is",
+      "options": {
+        "A": "increasing.",
+        "B": "collective",
+        "C": "communal",
+        "D": "shared"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 435,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 41,
+      "question": "Patricia's recent behaviors have become so _____ that nobody can really understand what she is doing.",
+      "options": {
+        "A": "integral",
+        "B": "lavish",
+        "C": "obscure",
+        "D": "relevant"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 436,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 42,
+      "question": "I enjoy going to see musicals at the theater because the live performances and music are very _____ to me.",
+      "options": {
+        "A": "captious",
+        "B": "captivating",
+        "C": "precarious",
+        "D": "preventive"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 437,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 43,
+      "question": "Uncle Jones is always a bit _____; therefore, his relatives and acquaintances keep him at a great distance.",
+      "options": {
+        "A": "proficient",
+        "B": "elastic",
+        "C": "decent",
+        "D": "eccentric"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 438,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 44,
+      "question": "We can see many coral reefs occur in shallow water where the sun provides _____ energy for them to grow rapidly.",
+      "options": {
+        "A": "lucrative",
+        "B": "abundant",
+        "C": "exuberant",
+        "D": "modest"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 439,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 45,
+      "question": "The retired aircraft will be _____ and some of its parts can be reused in other airplanes. detoured dismantled diminished descended 請依下文回答第46題至第50題：",
+      "options": {
+        "A": "When he  moved  from South  Africa to  New  York City,  Norman  Rosenthal, a  psychiatrist, noticed  he felt more",
+        "B": "depressed during the cold, short days of the city’s winters than he had in his home country. Years later, he published the",
+        "C": "first paper to scientifically name the winter blues: Seasonal Affective Disorder (SAD). Subsequent studies have found",
+        "D": "that the seasonal depression affects those in northern latitudes more and that about 10 percent of SAD sufferers have"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 440,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 46,
+      "question": "According to the passage, what prompted Norman Rosenthal to study seasonal depression?",
+      "options": {
+        "A": "His patients’ symptoms.",
+        "B": "His personal experiences.",
+        "C": "Problems of previous studies.",
+        "D": "Rising cases of New York City adults."
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 441,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 47,
+      "question": "According to the passage, what has to be done before receiving SAD treatments?",
+      "options": {
+        "A": "Getting a good light box.",
+        "B": "Talking to family or friends.",
+        "C": "Seeking a professional diagnosis.",
+        "D": "Comparing the effects of different treatments."
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 442,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 48,
+      "question": "According to the passage, which of the following is NOT helpful in treating SAD?",
+      "options": {
+        "A": "Using light boxes daily.",
+        "B": "Being indoors and resting in winter.",
+        "C": "Regulating the production of melatonin.",
+        "D": "Changing the way people think."
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 443,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 49,
+      "question": "Which of the following is closest in meaning to the word “lethargic” in the passage?",
+      "options": {
+        "A": "Guarded.",
+        "B": "Furious.",
+        "C": "Inactive.",
+        "D": "Superior."
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 444,
+      "roc_year": "112",
+      "session": "第一次",
+      "exam_code": "112130",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 50,
+      "question": "According to the passage, which of the following statements is true?",
+      "options": {
+        "A": "SAD affects men more than women.",
+        "B": "Summer SAD is less common than winter SAD.",
+        "C": "Winter depression is often triggered by humidity.",
+        "D": "Sufferers of winter depression are likely to lose appetite."
       },
       "answer": "A",
       "explanation": ""

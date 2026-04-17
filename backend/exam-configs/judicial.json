@@ -18,7 +18,7 @@
     "longText": true
   },
   "questionsFile": "questions-judicial.json",
-  "totalQ": 50,
+  "totalQ": 444,
   "passScore": null,
   "passRate": null,
   "papers": [
@@ -32,15 +32,25 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {
       "law_knowledge_english": "法學知識與英文"
     },
     "stageStyles": {
-      "all": { "icon": "🎲", "color": "#64748B" },
-      "law_knowledge_english": { "icon": "⚖️", "color": "#6366F1" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "law_knowledge_english": {
+        "icon": "⚖️",
+        "color": "#6366F1"
+      }
     },
     "subjectColors": {
       "法學知識與英文": "#6366F1"
@@ -52,14 +62,17 @@
     "fullName": "司法特考三等（公務人員特種考試司法人員考試）",
     "shortName": "司法特考三等",
     "studentType": "司法考生",
-    "years": "113-114",
-    "totalQ": 100,
+    "years": "106-114",
+    "totalQ": 444,
     "examDesc": "公務人員特種考試司法人員考試三等，涵蓋司法官、檢察事務官、法院書記官等類科。法學知識與英文為各類科組共同科目，共 50 題選擇題。",
     "paperDesc": "法學知識與英文共 50 題，考試時間 1 小時。",
     "subjects": "法學知識與英文（中華民國憲法、法學緒論、英文）",
     "mockDesc": "模擬司法特考法學知識與英文 50 題選擇題",
     "subjectDetails": [
-      ["法學知識與英文", "涵蓋中華民國憲法、法學緒論、英文三大部分。"]
+      [
+        "法學知識與英文",
+        "涵蓋中華民國憲法、法學緒論、英文三大部分。"
+      ]
     ]
   }
 }

@@ -289,6 +289,43 @@ export function hasLegalSubjectTag(tags) {
 }
 
 const prefetched = new Set()
+const BANK_VERSION_KEY = 'shared-bank-versions'
+
+function getStoredVersions() {
+  try { return JSON.parse(localStorage.getItem(BANK_VERSION_KEY) || '{}') } catch { return {} }
+}
+
+function saveStoredVersions(v) {
+  try { localStorage.setItem(BANK_VERSION_KEY, JSON.stringify(v)) } catch {}
+}
+
+function notifySWInvalidate(bankId) {
+  if (!('serviceWorker' in navigator)) return
+  navigator.serviceWorker.ready.then(reg => {
+    reg.active?.postMessage({ type: 'invalidate-shared-bank', bankId })
+  }).catch(() => {})
+}
+
+/** Called once on app init. Compares server bankVersions with stored ones;
+ *  sends invalidation messages to the SW for any bank that has been updated. */
+export function syncSharedBankVersions() {
+  getSharedBanks().then(banks => {
+    if (!banks?.length) return
+    const stored = getStoredVersions()
+    const next = { ...stored }
+    let changed = false
+    for (const b of banks) {
+      const prev = stored[b.bankId]
+      if (prev !== undefined && prev !== b.bankVersion) {
+        notifySWInvalidate(b.bankId)
+        prefetched.delete(b.bankId)
+      }
+      next[b.bankId] = b.bankVersion
+      if (next[b.bankId] !== stored[b.bankId]) changed = true
+    }
+    if (changed) saveStoredVersions(next)
+  }).catch(() => {})
+}
 
 /** Fire-and-forget: prefetch every shared bank declared by exams in this category.
  *  The Service Worker intercepts and persists the response in the shared-banks cache,

@@ -8,10 +8,10 @@ import { usePlayerStore, useGameStore } from './store/gameStore'
 import SplashScreen from './components/SplashScreen'
 import ErrorBoundary from './components/ErrorBoundary'
 import FixedBottomAd from './components/FixedBottomAd'
-import { initRegistry, getRegistry, getExamConfig } from './config/examRegistry'
+import { initRegistry, getRegistry, getExamConfig, syncSharedBankVersions } from './config/examRegistry'
 
-// Pre-fetch exam registry as early as possible
-const registryPromise = initRegistry()
+// Pre-fetch exam registry as early as possible; sync shared-bank versions for SW cache invalidation
+const registryPromise = initRegistry().then(() => { syncSharedBankVersions() })
 
 // Lazy-load non-critical pages
 const Lobby    = lazy(() => import('./pages/Lobby'))

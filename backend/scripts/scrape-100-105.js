@@ -63,13 +63,14 @@ function fetchPdf(url, retries = 2) {
 }
 
 async function cachedPdf(kind, code, c, s) {
-  const fname = `${kind}_${code}_c${c}_s${s}.pdf`
-  const fpath = path.join(PDF_CACHE, fname)
-  if (fs.existsSync(fpath) && fs.statSync(fpath).size > 1000) return fs.readFileSync(fpath)
-  const url = `${BASE}?t=${kind}&code=${code}&c=${c}&s=${s}&q=1`
-  const buf = await fetchPdf(url)
+  const fpath = path.join(PDF_CACHE, `${kind}_${code}_c${c}_s${s}.pdf`)
+  try {
+    const buf = fs.readFileSync(fpath)
+    if (buf.length > 1000) return { buf, fromCache: true }
+  } catch {}
+  const buf = await fetchPdf(`${BASE}?t=${kind}&code=${code}&c=${c}&s=${s}&q=1`)
   fs.writeFileSync(fpath, buf)
-  return buf
+  return { buf, fromCache: false }
 }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms))
@@ -608,10 +609,10 @@ async function main() {
     const filePath = path.join(BACKEND, file)
     let data, questions
 
-    if (fs.existsSync(filePath)) {
+    try {
       data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
       questions = data.questions || (Array.isArray(data) ? data : [])
-    } else {
+    } catch {
       data = { metadata: { exam: fileTargets[0].examId, scraped_at: new Date().toISOString() }, total: 0, questions: [] }
       questions = data.questions
     }
@@ -634,6 +635,7 @@ async function main() {
 
     for (const t of fileTargets) {
       console.log(`\n--- ${t.year}年${t.session} (${t.code}, c=${t.classCode}) ---`)
+      let sessionFetched = false
 
       for (const sub of t.subjects) {
         // Skip if already exists
@@ -650,9 +652,12 @@ async function main() {
 
         // Download question PDF
         let qBuf
+        let networkFetched = false
         try {
           console.log(`  📥 ${sub.name}...`)
-          qBuf = await cachedPdf('Q', t.code, t.classCode, sub.s)
+          const { buf, fromCache } = await cachedPdf('Q', t.code, t.classCode, sub.s)
+          qBuf = buf
+          if (!fromCache) networkFetched = true
         } catch (e) {
           console.log(`  ✗ ${sub.name}: Q download failed: ${e.message}`)
           continue
@@ -664,7 +669,8 @@ async function main() {
         for (const ansType of ['S', 'A']) {
           if (ansCount >= 20) break
           try {
-            const aBuf = await cachedPdf(ansType, t.code, t.classCode, sub.s)
+            const { buf: aBuf, fromCache: aFromCache } = await cachedPdf(ansType, t.code, t.classCode, sub.s)
+            if (!aFromCache) networkFetched = true
             const aText = (await pdfParse(aBuf)).text
             // Try local parser (handles both fullwidth and halfwidth)
             let parsed = parseAnswersPdf(aText)
@@ -689,8 +695,10 @@ async function main() {
         }
 
         // Download corrections — also extract answers from corrections text as last resort
+        const disputedNums = new Set()
         try {
-          const mBuf = await cachedPdf('M', t.code, t.classCode, sub.s)
+          const { buf: mBuf, fromCache: mFromCache } = await cachedPdf('M', t.code, t.classCode, sub.s)
+          if (!mFromCache) networkFetched = true
           const mText = (await pdfParse(mBuf)).text
 
           // If we still have no answers, try extracting from corrections PDF
@@ -706,7 +714,7 @@ async function main() {
 
           const corrections = parseCorrectionsPdf(mText)
           for (const [num, ans] of Object.entries(corrections)) {
-            if (ans === '*') { /* keep original, mark disputed later */ }
+            if (ans === '*') disputedNums.add(parseInt(num))
             else answers[num] = ans
           }
           const corrLen = Object.keys(corrections).length
@@ -764,19 +772,19 @@ async function main() {
             number: num,
             question: stripPUA(q.question || ''),
             options: cleanOpts,
-            answer: ans === '*' ? 'A' : ans,
+            answer: ans,
             explanation: '',
-            ...(ans === '*' ? { disputed: true } : {}),
+            ...(disputedNums.has(num) ? { disputed: true } : {}),
           })
           added++
         }
 
         console.log(`  ✓ ${sub.name}: ${parsedCount} parsed (${parseMethod}), ${ansCount} answers, ${added} added`)
         fileNew += added
-        await sleep(300)
+        if (networkFetched) { sessionFetched = true; await sleep(300) }
       }
 
-      await sleep(400)
+      if (sessionFetched) await sleep(400)
     }
 
     if (fileNew > 0 && !dryRun) {

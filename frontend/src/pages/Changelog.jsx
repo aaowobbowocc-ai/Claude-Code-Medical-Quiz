@@ -11,20 +11,7 @@ const TAG_STYLE = {
   notice:  { label: '公告', bg: 'bg-amber-50', text: 'text-amber-600', border: 'border-amber-200' },
 }
 
-const CLAIMED_KEY = 'changelog-claimed-rewards'
 export const CHANGELOG_LAST_SEEN_KEY = 'changelog-last-seen'
-
-function getClaimedIds() {
-  try { return new Set(JSON.parse(localStorage.getItem(CLAIMED_KEY) || '[]')) }
-  catch { return new Set() }
-}
-function markClaimed(id) {
-  try {
-    const set = getClaimedIds()
-    set.add(id)
-    localStorage.setItem(CLAIMED_KEY, JSON.stringify([...set]))
-  } catch {}
-}
 
 function TagBadge({ tag }) {
   const s = TAG_STYLE[tag] || TAG_STYLE.notice
@@ -45,9 +32,10 @@ const PAGE_SIZE = 10
 export default function Changelog() {
   const navigate = useNavigate()
   const addCoins = usePlayerStore(s => s.addCoins)
+  const claimedRewards = usePlayerStore(s => s.claimedRewards || [])
+  const addClaimedReward = usePlayerStore(s => s.addClaimedReward)
   const [entries, setEntries] = useState([])
   const [loading, setLoading] = useState(true)
-  const [claimed, setClaimed] = useState(getClaimedIds())
   const [flashReward, setFlashReward] = useState(null)
   const [page, setPage] = useState(1)
 
@@ -66,10 +54,9 @@ export default function Changelog() {
   }, [])
 
   const handleClaim = (reward) => {
-    if (!reward?.id || claimed.has(reward.id)) return
+    if (!reward?.id || claimedRewards.includes(reward.id)) return
     addCoins(reward.coins || 0)
-    markClaimed(reward.id)
-    setClaimed(new Set([...claimed, reward.id]))
+    addClaimedReward(reward.id)
     setFlashReward({ id: reward.id, coins: reward.coins })
     setTimeout(() => setFlashReward(null), 2400)
   }
@@ -134,7 +121,7 @@ export default function Changelog() {
 
                 {/* Reward claim (per-entry, device-local) */}
                 {entry.reward && (() => {
-                  const isClaimed = claimed.has(entry.reward.id)
+                  const isClaimed = claimedRewards.includes(entry.reward.id)
                   return (
                     <button
                       onClick={() => handleClaim(entry.reward)}

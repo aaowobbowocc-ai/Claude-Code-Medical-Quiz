@@ -21,6 +21,7 @@ const FIELD_MAP = {
   lastAdWatch: 'last_ad_watch',
   lastAdDate: 'last_ad_date',
   bindRewardClaimed: 'bind_reward_claimed',
+  claimedRewards: 'claimed_rewards',
 }
 
 function storeToDb(state) {
@@ -170,6 +171,8 @@ export const usePlayerStore = create(
       lastAdWatch: '',
       lastAdDate: '',
       bindRewardClaimed: false,
+      claimedRewards: [],
+      addClaimedReward: (id) => set(s => ({ claimedRewards: [...(s.claimedRewards || []), id] })),
       claimBindReward: () => {
         if (get().bindRewardClaimed) return false
         set((s) => ({ coins: s.coins + 3000, bindRewardClaimed: true }))

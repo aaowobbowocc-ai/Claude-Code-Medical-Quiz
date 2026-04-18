@@ -4,42 +4,107 @@ import Footer from '../components/Footer'
 
 const API = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
-// Expected sessions per year for each exam group
-// Exams that run twice/year have both sessions; single-session exams only have one
 const EXAM_ORDER = [
   'doctor1', 'doctor2', 'dental1', 'dental2',
   'pharma1', 'pharma2', 'tcm1', 'tcm2',
   'nursing', 'nutrition', 'medlab', 'pt', 'ot', 'radiology',
-  'social-worker',
+  'social-worker', 'vet',
+  'lawyer1', 'judicial', 'customs', 'police',
+  'civil-senior', 'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
+  'driver-car', 'driver-moto',
 ]
 
 const ALL_YEARS = ['100','101','102','103','104','105','106','107','108','109','110','111','112','113','114','115']
 
-function getCellColor(count, hasAny) {
-  if (!hasAny) return 'bg-gray-100 text-gray-300'
-  if (count === 0) return 'bg-red-100 text-red-400'
-  if (count < 100) return 'bg-amber-100 text-amber-600'
-  return 'bg-emerald-100 text-emerald-700'
+// Exams where questions have no roc_year (non-annual question banks)
+function isNonAnnual(examInfo) {
+  const years = Object.keys(examInfo.years)
+  return years.length === 0 || years.every(y => y === 'undefined' || y === undefined)
+}
+
+function getTotalCount(examInfo) {
+  let total = 0
+  for (const yd of Object.values(examInfo.years)) {
+    for (const count of Object.values(yd)) total += count
+  }
+  return total
 }
 
 function CoverageRow({ examId, info }) {
   const [expanded, setExpanded] = useState(false)
   const yearData = info.years || {}
 
-  const sessionTotals = {}
-  let grandTotal = 0
-  for (const yr of ALL_YEARS) {
-    const yd = yearData[yr] || {}
-    const s1 = yd['第一次'] || 0
-    const s2 = yd['第二次'] || 0
-    sessionTotals[yr] = { s1, s2 }
-    grandTotal += s1 + s2
+  // Non-annual exams (driver license etc.)
+  if (isNonAnnual(info)) {
+    const total = getTotalCount(info)
+    return (
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 px-4 py-3 flex items-center gap-3">
+        <span className="text-lg">{info.icon}</span>
+        <div>
+          <p className="font-bold text-sm text-gray-800">{info.name}</p>
+          <p className="text-xs text-gray-400">共 {total.toLocaleString()} 題（非年度制）</p>
+        </div>
+      </div>
+    )
   }
 
-  const missingYears = ALL_YEARS.filter(yr => {
-    const { s1, s2 } = sessionTotals[yr]
-    return s1 === 0 && s2 === 0
-  })
+  // Compute per-year session counts
+  const yearTotals = {}
+  for (const yr of ALL_YEARS) {
+    const yd = yearData[yr] || {}
+    yearTotals[yr] = { s1: yd['第一次'] || 0, s2: yd['第二次'] || 0 }
+  }
+
+  // Determine if this exam runs twice/year (has any second sessions)
+  const hasSecondSessions = ALL_YEARS.some(yr => yearTotals[yr].s2 > 0)
+
+  // For 2-session exams: first year where second session data exists
+  const firstSecondSessionYear = hasSecondSessions
+    ? ALL_YEARS.find(yr => yearTotals[yr].s2 > 0)
+    : null
+
+  // Collect years that actually have any questions
+  const activeYears = ALL_YEARS.filter(yr => yearTotals[yr].s1 > 0 || yearTotals[yr].s2 > 0)
+
+  let grandTotal = 0
+  let missingCount = 0
+  for (const yr of ALL_YEARS) {
+    const { s1, s2 } = yearTotals[yr]
+    grandTotal += s1 + s2
+    // Count as missing only if: year has s1 data AND exam runs twice AND year >= firstSecondSessionYear
+    if (hasSecondSessions && s1 > 0 && s2 === 0 && firstSecondSessionYear && yr >= firstSecondSessionYear) {
+      missingCount++
+    }
+  }
+
+  const displayYears = activeYears.length > 0 ? activeYears : ALL_YEARS.slice(0, 3)
+
+  function getCell(yr, sess) {
+    const count = sess === 's1' ? yearTotals[yr].s1 : yearTotals[yr].s2
+    const hasFirst = yearTotals[yr].s1 > 0
+    const hasSecond = yearTotals[yr].s2 > 0
+    const hasAny = hasFirst || hasSecond
+
+    if (sess === 's2') {
+      if (!hasSecondSessions) return null // don't render second row at all
+
+      // Before second sessions started: show nothing
+      if (firstSecondSessionYear && yr < firstSecondSessionYear) {
+        return { type: 'none' }
+      }
+      // Year has no data at all: gray dot
+      if (!hasAny) return { type: 'empty' }
+      // Has first but no second: missing
+      if (hasFirst && !hasSecond) return { type: 'missing' }
+      // Has second data
+      return { type: 'ok', count }
+    } else {
+      // First session
+      if (!hasAny) return { type: 'empty' }
+      if (count === 0) return { type: 'missing' }
+      return { type: 'ok', count }
+    }
+  }
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
@@ -51,7 +116,10 @@ function CoverageRow({ examId, info }) {
           <span className="text-lg">{info.icon}</span>
           <div className="text-left">
             <p className="font-bold text-sm text-gray-800">{info.name}</p>
-            <p className="text-xs text-gray-400">{grandTotal.toLocaleString()} 題 · 缺 {missingYears.length} 年</p>
+            <p className="text-xs text-gray-400">
+              {grandTotal.toLocaleString()} 題
+              {missingCount > 0 && <span className="text-red-400"> · 缺 {missingCount} 場</span>}
+            </p>
           </div>
         </div>
         <span className="text-gray-400 text-sm">{expanded ? '▲' : '▼'}</span>
@@ -59,38 +127,40 @@ function CoverageRow({ examId, info }) {
 
       {expanded && (
         <div className="px-4 pb-4 overflow-x-auto">
-          <table className="text-xs w-full min-w-[640px]">
+          <table className="text-[11px] w-full" style={{ minWidth: Math.max(400, displayYears.length * 38) + 40 }}>
             <thead>
               <tr>
-                <th className="text-left text-gray-400 font-normal pb-1 pr-2 w-12">場次</th>
-                {ALL_YEARS.map(yr => (
-                  <th key={yr} className="text-center text-gray-400 font-normal pb-1 px-0.5">{yr}</th>
+                <th className="text-left text-gray-400 font-normal pb-1 pr-1 w-6"></th>
+                {displayYears.map(yr => (
+                  <th key={yr} className="text-center text-gray-400 font-normal pb-1 px-0.5 w-9">{yr}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {['第一次', '第二次'].map(sess => {
-                const sessKey = sess === '第一次' ? 's1' : 's2'
+              {['s1', 's2'].map(sess => {
+                if (sess === 's2' && !hasSecondSessions) return null
                 return (
                   <tr key={sess}>
-                    <td className="text-gray-500 pr-2 py-1 whitespace-nowrap">{sess === '第一次' ? '一' : '二'}</td>
-                    {ALL_YEARS.map(yr => {
-                      const count = sessionTotals[yr][sessKey]
-                      const hasAny = (yearData[yr]?.['第一次'] || 0) > 0 || (yearData[yr]?.['第二次'] || 0) > 0
-                      // Detect if this exam is single-session only in this year
-                      const otherCount = sess === '第一次' ? sessionTotals[yr].s2 : sessionTotals[yr].s1
-                      const isSingleSession = count === 0 && otherCount === 0 && hasAny === false
-                      const isOnlySingleSess = count === 0 && otherCount > 0
+                    <td className="text-gray-400 pr-1 py-0.5 text-[10px]">{sess === 's1' ? '一' : '二'}</td>
+                    {displayYears.map(yr => {
+                      const cell = getCell(yr, sess)
+                      if (!cell) return null
                       return (
-                        <td key={yr} className="px-0.5 py-1 text-center">
-                          {isOnlySingleSess ? (
-                            <span className="text-gray-200 text-[10px]">—</span>
-                          ) : (
-                            <span
-                              title={count > 0 ? `${yr} ${sess}: ${count} 題` : `${yr} ${sess}: 無資料`}
-                              className={`inline-block rounded px-1 py-0.5 font-mono text-[10px] min-w-[28px] ${getCellColor(count, !isSingleSession)}`}
-                            >
-                              {count > 0 ? count : '✗'}
+                        <td key={yr} className="px-0.5 py-0.5 text-center">
+                          {cell.type === 'none' && <span className="text-gray-200 text-[10px]">·</span>}
+                          {cell.type === 'empty' && <span className="text-gray-200 text-[10px]">·</span>}
+                          {cell.type === 'missing' && (
+                            <span title={`${yr} ${sess === 's1' ? '第一次' : '第二次'}: 無資料`}
+                                  className="inline-block rounded px-1 py-0.5 font-mono text-[10px] min-w-[28px] bg-red-100 text-red-400">
+                              ✗
+                            </span>
+                          )}
+                          {cell.type === 'ok' && (
+                            <span title={`${yr} ${sess === 's1' ? '第一次' : '第二次'}: ${cell.count} 題`}
+                                  className={`inline-block rounded px-1 py-0.5 font-mono text-[10px] min-w-[28px] ${
+                                    cell.count < 100 ? 'bg-amber-100 text-amber-600' : 'bg-emerald-100 text-emerald-700'
+                                  }`}>
+                              {cell.count}
                             </span>
                           )}
                         </td>
@@ -102,9 +172,9 @@ function CoverageRow({ examId, info }) {
             </tbody>
           </table>
 
-          {missingYears.length > 0 && (
+          {missingCount > 0 && (
             <p className="text-xs text-red-500 mt-2">
-              缺 {missingYears.join('、')} 年資料
+              ✗ = 該場次範圍內無題目，可能待補
             </p>
           )}
         </div>
@@ -121,7 +191,7 @@ export default function Coverage() {
 
   useEffect(() => {
     fetch(`${API}/questions/coverage`)
-      .then(r => r.json())
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json() })
       .then(d => { setData(d); setLoading(false) })
       .catch(e => { setError(e.message); setLoading(false) })
   }, [])
@@ -141,20 +211,22 @@ export default function Coverage() {
           ← 返回
         </button>
         <h1 className="text-white font-bold text-2xl text-center">📊 題庫覆蓋率</h1>
-        <p className="text-white/50 text-sm text-center mt-1">各考試 × 年度 × 場次題數</p>
+        <p className="text-white/50 text-sm text-center mt-1">各考試年度 × 場次題數</p>
       </div>
 
       <div className="flex-1 px-4 py-5 space-y-3">
-        {/* Legend */}
-        <div className="flex items-center gap-3 text-xs text-gray-500 px-1">
+        <div className="flex items-center gap-3 text-xs text-gray-500 px-1 flex-wrap">
           <span className="flex items-center gap-1">
-            <span className="inline-block w-4 h-4 rounded bg-emerald-100"></span> 有題目
+            <span className="inline-block w-6 h-4 rounded bg-emerald-100"></span> 有題
           </span>
           <span className="flex items-center gap-1">
-            <span className="inline-block w-4 h-4 rounded bg-amber-100"></span> &lt;100 題（殘缺）
+            <span className="inline-block w-6 h-4 rounded bg-amber-100"></span> &lt;100（殘缺）
           </span>
           <span className="flex items-center gap-1">
-            <span className="inline-block w-4 h-4 rounded bg-red-100"></span> 缺題
+            <span className="inline-block w-6 h-4 rounded bg-red-100 text-red-400 text-center text-[10px] leading-4">✗</span> 缺題
+          </span>
+          <span className="flex items-center gap-1">
+            <span className="text-gray-300">·</span> 未舉辦 / 不適用
           </span>
         </div>
 

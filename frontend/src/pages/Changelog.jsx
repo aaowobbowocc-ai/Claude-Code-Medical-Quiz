@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { usePlayerStore } from '../store/gameStore'
 
@@ -71,6 +71,12 @@ export default function Changelog() {
         </button>
         <h1 className="text-white font-bold text-2xl text-center">📢 更新公告</h1>
         <p className="text-white/50 text-sm text-center mt-1">回饋回覆 · 功能更新</p>
+        <div className="flex justify-center mt-3">
+          <Link to="/coverage"
+                className="text-xs text-white/60 underline underline-offset-2 hover:text-white/90">
+            📊 查看題庫覆蓋率 →
+          </Link>
+        </div>
       </div>
 
       {/* Content */}

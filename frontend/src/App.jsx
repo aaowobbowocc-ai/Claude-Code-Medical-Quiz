@@ -32,6 +32,7 @@ const Privacy        = lazy(() => import('./pages/Privacy'))
 const Terms          = lazy(() => import('./pages/Terms'))
 const Contact        = lazy(() => import('./pages/Contact'))
 const Changelog      = lazy(() => import('./pages/Changelog'))
+const Coverage       = lazy(() => import('./pages/Coverage'))
 
 // Path-based exam landing route. Rendered for URLs like /doctor1/ or
 // /civil-senior-general/ served from prerendered HTML shells (see
@@ -213,6 +214,7 @@ function AppRoutes() {
           <Route path="/tos"        element={<Terms />} />
           <Route path="/contact"    element={<Contact />} />
           <Route path="/changelog"  element={<Changelog />} />
+          <Route path="/coverage"   element={<Coverage />} />
           {/* Per-exam landing: served from prerendered dist/<id>/index.html
               with baked SEO meta so Googlebot indexes each exam distinctly.
               React Router ranks static segments above params, so all the

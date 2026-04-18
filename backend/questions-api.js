@@ -312,6 +312,28 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
       hasSharedBanks: sharedPapers.length > 0,
     });
   });
+
+  // Coverage endpoint: year × session question counts for all exams
+  app.get('/questions/coverage', staticCache || ((_, __, next) => next()), (req, res) => {
+    const result = {};
+    for (const [examId, data] of Object.entries(examData)) {
+      const questions = data.questions || [];
+      const yearSessions = {};
+      for (const q of questions) {
+        const yr = q.roc_year;
+        const sess = q.session || '第一次';
+        if (!yearSessions[yr]) yearSessions[yr] = {};
+        yearSessions[yr][sess] = (yearSessions[yr][sess] || 0) + 1;
+      }
+      result[examId] = {
+        name: (examConfigs[examId] && examConfigs[examId].name) || examId,
+        short: (examConfigs[examId] && examConfigs[examId].short) || examId,
+        icon: (examConfigs[examId] && examConfigs[examId].icon) || '',
+        years: yearSessions,
+      };
+    }
+    res.json(result);
+  });
 }
 
 module.exports = { registerRoutes, shuffle };

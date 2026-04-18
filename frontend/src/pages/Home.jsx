@@ -216,12 +216,12 @@ function TutorialSection({ exam }) {
       <h2 className="font-bold text-base text-medical-dark mb-3">📖 新手上路</h2>
       <div className="space-y-3">
         {[
-          { step: '1', icon: '🎯', title: '自主練習', desc: '從科目選擇弱科，10 題快速練習，答完看 AI 詳解' },
-          { step: '2', icon: '⚔️', title: '即時對戰', desc: '開房間邀朋友 PK，或加入公開房間，比速度也比正確率' },
-          { step: '3', icon: '📝', title: '模擬考試', desc: `選歷屆原卷或隨機出題，${exam.totalQ} 題限時 ${timeLimit} 分鐘，模擬真實國考` },
-          { step: '4', icon: '📋', title: '錯題複習', desc: '系統自動收集你的錯題，間隔複習時會提醒你，記得更牢' },
-          { step: '5', icon: '💬', title: '留言板', desc: `和其他${c.studentType}交流心得、分享讀書方法，一起加油打氣` },
-          { step: '6', icon: '🪙', title: '金幣系統', desc: '每日登入送金幣，連續登入加碼。用金幣解鎖 AI 解說、模擬考' },
+          { step: '1', icon: '🎯', title: '自主練習', desc: '選科目隨機出題，不確定的馬上看 AI 詳解，邊做邊學最有效' },
+          { step: '2', icon: '📊', title: '弱點分析', desc: '系統自動追蹤各科正確率，找出最弱的科目，一鍵跳去練習' },
+          { step: '3', icon: '📝', title: '模擬考試', desc: '選歷屆原卷，計時模擬真實國考場景，結束後看各科分析' },
+          { step: '4', icon: '⚔️', title: '即時對戰', desc: '開房間邀朋友 PK，或加入公開房間，比速度也比正確率' },
+          { step: '5', icon: '⭐', title: '收藏 + 筆記', desc: '收藏重要題目，記下自己的想法，或看高讚社群筆記吸收精華' },
+          { step: '6', icon: '🪙', title: '金幣系統', desc: '每日登入送金幣，連續登入加碼。金幣用來解鎖 AI 解說' },
         ].map(item => (
           <div key={item.step} className="flex items-start gap-3">
             <div className="w-8 h-8 rounded-full bg-medical-blue text-white text-sm font-bold flex items-center justify-center shrink-0 mt-0.5">{item.step}</div>
@@ -233,8 +233,8 @@ function TutorialSection({ exam }) {
         ))}
       </div>
       <div className="mt-4 bg-medical-ice rounded-xl p-3 text-center">
-        <p className="text-xs text-gray-500">建議路線：<strong className="text-medical-dark">自主練習</strong> → <strong className="text-medical-dark">對戰</strong> → <strong className="text-medical-dark">模擬考</strong></p>
-        <p className="text-xs text-gray-400 mt-1">先練熟基礎，再用對戰提速，最後模擬考驗收！</p>
+        <p className="text-xs text-gray-500">建議路線：<strong className="text-medical-dark">自主練習</strong> → <strong className="text-medical-dark">弱點分析</strong> → <strong className="text-medical-dark">模擬考</strong></p>
+        <p className="text-xs text-gray-400 mt-1">先找弱點、集中練習，再模擬考驗收成果！</p>
       </div>
     </div>
   )

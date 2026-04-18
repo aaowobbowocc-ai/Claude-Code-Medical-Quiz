@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 
-const API = import.meta.env.VITE_API_URL || 'https://backend-6v6i.onrender.com'
+const API = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 // Expected sessions per year for each exam group
 // Exams that run twice/year have both sessions; single-session exams only have one

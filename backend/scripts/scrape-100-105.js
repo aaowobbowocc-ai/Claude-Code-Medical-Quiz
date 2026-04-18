@@ -341,6 +341,9 @@ function buildTargets(filterExam, filterYear) {
     { s: '0503', subject: '中醫臨床醫學(三)', tag: 'tcm_clinical_3', name: '中醫臨床醫學(三)' },
     { s: '0504', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
   ])
+  // tcm2 100-2: code=100090 c=101 returns "(not found)" — PDF on MoEX but no exam name, skipped by validator
+  // tcm1 103-2: code=103100 c=101 same issue
+
   // Years 104-105: c=101 for tcm1, c=102 for tcm2
   const tcm1Subs104 = [
     { s: '0101', subject: '中醫基礎醫學(一)', tag: 'tcm_basic_1', name: '中醫基礎醫學(一)' },
@@ -435,7 +438,9 @@ function buildTargets(filterExam, filterYear) {
   add('dental1', 'questions-dental1.json', '102', '102100', '第二次', '301', dental1Subs)
   add('dental1', 'questions-dental1.json', '103', '103020', '第一次', '301', dental1Subs)
   add('dental1', 'questions-dental1.json', '103', '103090', '第二次', '301', dental1Subs)
+  // dental1 100-2: code=100100 c=301 returns "一等船副" (maritime exam), not dental — truly missing
   add('dental1', 'questions-dental1.json', '104', '104020', '第一次', '301', dental1Subs)
+  add('dental1', 'questions-dental1.json', '104', '104090', '第二次', '303', dental1Subs)
   add('dental1', 'questions-dental1.json', '105', '105020', '第一次', '303', dental1Subs)
   add('dental1', 'questions-dental1.json', '105', '105100', '第二次', '303', dental1Subs)
 
@@ -446,6 +451,7 @@ function buildTargets(filterExam, filterYear) {
     { s: '55', subject: '卷三', tag: 'dental_clinical_3', name: '牙醫學(五)' },
   ]
   add('dental2', 'questions-dental2.json', '100', '100020', '第一次', '302', dental2Subs)
+  // dental2 100-2: code=100100 c=302 returns "一等管輪" (maritime exam), not dental — truly missing
   add('dental2', 'questions-dental2.json', '101', '101100', '第二次', '302', dental2Subs)
   add('dental2', 'questions-dental2.json', '102', '102020', '第一次', '302', dental2Subs)
   add('dental2', 'questions-dental2.json', '102', '102100', '第二次', '302', dental2Subs)
@@ -496,6 +502,7 @@ function buildTargets(filterExam, filterYear) {
   add('ot', 'questions-ot.json', '103', '103090', '第二次', '305', otSubs020)
   add('ot', 'questions-ot.json', '100', '100020', '第一次', '305', otSubs020)
   add('ot', 'questions-ot.json', '104', '104020', '第一次', '305', otSubs020)
+  add('ot', 'questions-ot.json', '104', '104090', '第二次', '312', otSubs020)
   // OT yr105 — c=312 (swapped from pharma1)
   add('ot', 'questions-ot.json', '105', '105020', '第一次', '312', otSubs020)
   add('ot', 'questions-ot.json', '105', '105100', '第二次', '312', otSubs020)
@@ -591,9 +598,8 @@ function buildTargets(filterExam, filterYear) {
   add('pharma1', 'questions-pharma1.json', '103', '103020', '第一次', '310', pharma1Subs310)
   add('pharma1', 'questions-pharma1.json', '103', '103090', '第二次', '310', pharma1Subs310)
   add('pharma1', 'questions-pharma1.json', '104', '104020', '第一次', '310', pharma1Subs310)
-  // 104090 (第二次): class code rotated to c=305 (same pattern as 105100)
-  // c=310 was wrong for 104090 (returned nursing content, already removed)
-  add('pharma1', 'questions-pharma1.json', '104', '104090', '第二次', '305', pharma1Subs020)
+  // 104090 (第二次): c=306 confirmed from MoEX URL, s=11,22,44
+  add('pharma1', 'questions-pharma1.json', '104', '104090', '第二次', '306', pharma1Subs310)
   add('pharma2', 'questions-pharma2.json', '102', '102020', '第一次', '310', pharma2Subs310)
   add('pharma2', 'questions-pharma2.json', '102', '102100', '第二次', '310', pharma2Subs310)
   add('pharma2', 'questions-pharma2.json', '103', '103020', '第一次', '310', pharma2Subs310)

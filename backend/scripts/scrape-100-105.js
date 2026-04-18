@@ -460,8 +460,16 @@ function buildTargets(filterExam, filterYear) {
     { s: '44', subject: '卷二', tag: 'dental_clinical_2', name: '牙醫學(四)' },
     { s: '55', subject: '卷三', tag: 'dental_clinical_3', name: '牙醫學(五)' },
   ]
+  // dental2 101-1: 101010 c=302, 4 subjects (s=33-66) — year 101 had 4 exam papers
+  const dental2Subs101 = [
+    { s: '33', subject: '卷一', tag: 'dental_clinical_1', name: '牙醫學(三)' },
+    { s: '44', subject: '卷二', tag: 'dental_clinical_2', name: '牙醫學(四)' },
+    { s: '55', subject: '卷三', tag: 'dental_clinical_3', name: '牙醫學(五)' },
+    { s: '66', subject: '卷四', tag: 'dental_clinical_4', name: '牙醫學(六)' },
+  ]
   add('dental2', 'questions-dental2.json', '100', '100020', '第一次', '302', dental2Subs)
   // dental2 100-2: code=100100 c=302 returns "一等管輪" (maritime exam), not dental — truly missing
+  add('dental2', 'questions-dental2.json', '101', '101010', '第一次', '302', dental2Subs101)
   add('dental2', 'questions-dental2.json', '101', '101100', '第二次', '302', dental2Subs)
   add('dental2', 'questions-dental2.json', '102', '102020', '第一次', '302', dental2Subs)
   add('dental2', 'questions-dental2.json', '102', '102100', '第二次', '302', dental2Subs)
@@ -615,7 +623,12 @@ function buildTargets(filterExam, filterYear) {
   add('pharma2', 'questions-pharma2.json', '103', '103020', '第一次', '310', pharma2Subs310)
   add('pharma2', 'questions-pharma2.json', '103', '103090', '第二次', '310', pharma2Subs310)
   add('pharma2', 'questions-pharma2.json', '104', '104020', '第一次', '310', pharma2Subs310)
-  add('pharma2', 'questions-pharma2.json', '104', '104090', '第二次', '310', pharma2Subs310)
+  // 104090 pharma2: c=306 (not c=310 which returns wrong content) confirmed s=44,55,66
+  add('pharma2', 'questions-pharma2.json', '104', '104090', '第二次', '306', [
+    { s: '44', subject: '調劑與臨床', tag: 'dispensing', name: '調劑學與臨床藥學' },
+    { s: '55', subject: '藥物治療', tag: 'pharmacotherapy', name: '藥物治療學' },
+    { s: '66', subject: '法規', tag: 'pharmacy_law', name: '藥事行政與法規' },
+  ])
 
   // Pharma1 yr105 — c=305 (swapped from OT), s=11,22,33
   add('pharma1', 'questions-pharma1.json', '105', '105020', '第一次', '305', pharma1Subs020)

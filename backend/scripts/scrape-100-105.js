@@ -196,13 +196,33 @@ function parseQuestions(text) {
 // Each target: { examId, file, year, code, session, classCode, subjects }
 // subjects: [{ s, subject, tag, name }]
 
+// Expected PDF exam name per examId (for contamination validation)
+const EXPECTED_EXAM_NAMES = {
+  'doctor1': '醫師',
+  'doctor2': '醫師',
+  'dental1': '牙醫師',
+  'dental2': '牙醫師',
+  'pharma1': '藥師',
+  'pharma2': '藥師',
+  'medlab': '醫事檢驗師',
+  'radiology': '醫事放射師',
+  'pt': '物理治療師',
+  'ot': '職能治療師',
+  'nursing': '護理師',
+  'nutrition': '營養師',
+  'social-worker': '社會工作師',
+  'tcm1': '中醫師',
+  'tcm2': '中醫師',
+}
+
 function buildTargets(filterExam, filterYear) {
   const targets = []
 
   function add(examId, file, year, code, session, classCode, subjects) {
     if (filterExam && filterExam !== examId) return
     if (filterYear && filterYear !== year) return
-    targets.push({ examId, file, year, code, session, classCode, subjects })
+    targets.push({ examId, file, year, code, session, classCode, subjects,
+                   expectedExamName: EXPECTED_EXAM_NAMES[examId] || null })
   }
 
   // ─── 030 series (4-digit s codes) ───
@@ -497,8 +517,9 @@ function buildTargets(filterExam, filterYear) {
   add('radiology', 'questions-radiology.json', '103', '103020', '第一次', '308', radioSubs020)
   add('radiology', 'questions-radiology.json', '103', '103090', '第二次', '308', radioSubs020)
   add('radiology', 'questions-radiology.json', '104', '104020', '第一次', '308', radioSubs020)
-  add('radiology', 'questions-radiology.json', '105', '105020', '第一次', '308', radioSubs020)
-  add('radiology', 'questions-radiology.json', '105', '105100', '第二次', '308', radioSubs020)
+  // 105年 class code rotated: radiology moved to c=309
+  add('radiology', 'questions-radiology.json', '105', '105020', '第一次', '309', radioSubs020)
+  add('radiology', 'questions-radiology.json', '105', '105100', '第二次', '309', radioSubs020)
 
   // PT — c=309 in 020 series (years 101-105)
   const ptSubs020 = [
@@ -516,8 +537,9 @@ function buildTargets(filterExam, filterYear) {
   add('pt', 'questions-pt.json', '103', '103020', '第一次', '309', ptSubs020)
   add('pt', 'questions-pt.json', '103', '103090', '第二次', '309', ptSubs020)
   add('pt', 'questions-pt.json', '104', '104020', '第一次', '309', ptSubs020)
-  add('pt', 'questions-pt.json', '105', '105020', '第一次', '309', ptSubs020)
-  add('pt', 'questions-pt.json', '105', '105100', '第二次', '309', ptSubs020)
+  // 105年 class code rotated: PT moved to c=311
+  add('pt', 'questions-pt.json', '105', '105020', '第一次', '311', ptSubs020)
+  add('pt', 'questions-pt.json', '105', '105100', '第二次', '311', ptSubs020)
 
   // Medlab — c=311 in 020 series (years 102-105)
   const medlabSubs020 = [
@@ -532,8 +554,9 @@ function buildTargets(filterExam, filterYear) {
   add('medlab', 'questions-medlab.json', '103', '103020', '第一次', '311', medlabSubs020)
   add('medlab', 'questions-medlab.json', '103', '103090', '第二次', '311', medlabSubs020)
   add('medlab', 'questions-medlab.json', '104', '104020', '第一次', '311', medlabSubs020)
-  add('medlab', 'questions-medlab.json', '105', '105020', '第一次', '311', medlabSubs020)
-  add('medlab', 'questions-medlab.json', '105', '105100', '第二次', '311', medlabSubs020)
+  // 105年 class code rotated: medlab moved to c=308
+  add('medlab', 'questions-medlab.json', '105', '105020', '第一次', '308', medlabSubs020)
+  add('medlab', 'questions-medlab.json', '105', '105100', '第二次', '308', medlabSubs020)
 
   // Pharma1 — c=312 in 020 series (years 103-104)
   const pharma1Subs020 = [
@@ -574,9 +597,15 @@ function buildTargets(filterExam, filterYear) {
   add('pharma1', 'questions-pharma1.json', '105', '105020', '第一次', '305', pharma1Subs020)
   add('pharma1', 'questions-pharma1.json', '105', '105100', '第二次', '305', pharma1Subs020)
 
-  // Pharma2 yr105 — still c=310
-  add('pharma2', 'questions-pharma2.json', '105', '105020', '第一次', '310', pharma2Subs310)
-  add('pharma2', 'questions-pharma2.json', '105', '105100', '第二次', '310', pharma2Subs310)
+  // Pharma2 yr105 — c=307 (c=310 was wrong, returned nursing/genetics content)
+  // Subject codes shift: s=44 (調劑), s=55 (藥物治療), s=66 (法規)
+  const pharma2Subs307 = [
+    { s: '44', subject: '調劑與臨床', tag: 'dispensing', name: '調劑學與臨床藥學' },
+    { s: '55', subject: '藥物治療', tag: 'pharmacotherapy', name: '藥物治療學' },
+    { s: '66', subject: '法規', tag: 'pharmacy_law', name: '藥事行政與法規' },
+  ]
+  add('pharma2', 'questions-pharma2.json', '105', '105020', '第一次', '307', pharma2Subs307)
+  add('pharma2', 'questions-pharma2.json', '105', '105100', '第二次', '307', pharma2Subs307)
 
   return targets
 }
@@ -657,6 +686,25 @@ async function main() {
         } catch (e) {
           console.log(`  ✗ ${sub.name}: Q download failed: ${e.message}`)
           continue
+        }
+
+        // Validate exam name in PDF matches expected exam (CLAUDE.md rule)
+        // Use 類科名稱 regex — the title page can contain all exam names in a scrambled
+        // repetition pattern, so simple substring on raw text is unreliable.
+        if (t.expectedExamName) {
+          try {
+            const rawText = (await pdfParse(qBuf)).text.slice(0, 1000)
+            // Normalize: collapse whitespace so "醫事檢驗 師" → "醫事檢驗師"
+            const normalized = rawText.replace(/\s+/g, '')
+            const m = rawText.match(/類科名稱[：:]\s*([^\n\r]+)/)
+            const foundName = m ? m[1].trim() : ''
+            if (!foundName.includes(t.expectedExamName)) {
+              console.error(`  ✗ ${sub.name}: PDF exam name mismatch! Expected "${t.expectedExamName}" but got "${foundName || '(not found)'}". Skipping.`)
+              continue
+            }
+          } catch (e) {
+            console.log(`  ⚠ ${sub.name}: Could not validate exam name: ${e.message}`)
+          }
         }
 
         let answers = {}

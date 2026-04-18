@@ -53,8 +53,19 @@ export default function Changelog() {
       .catch(() => setLoading(false))
   }, [])
 
-  const handleClaim = (reward) => {
+  const isRewardAvailable = (reward, entryDate) => {
+    if (!reward) return false
+    // entryDate is "YYYY-MM-DD" (Gregorian); today comparison in local timezone
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
+    const unlock = new Date(entryDate)
+    unlock.setHours(0, 0, 0, 0)
+    return unlock <= today
+  }
+
+  const handleClaim = (reward, entryDate) => {
     if (!reward?.id || claimedRewards.includes(reward.id)) return
+    if (!isRewardAvailable(reward, entryDate)) return
     addCoins(reward.coins || 0)
     addClaimedReward(reward.id)
     setFlashReward({ id: reward.id, coins: reward.coins })
@@ -128,18 +139,23 @@ export default function Changelog() {
                 {/* Reward claim (per-entry, device-local) */}
                 {entry.reward && (() => {
                   const isClaimed = claimedRewards.includes(entry.reward.id)
+                  const available = isRewardAvailable(entry.reward, entry.date)
                   return (
                     <button
-                      onClick={() => handleClaim(entry.reward)}
-                      disabled={isClaimed}
+                      onClick={() => handleClaim(entry.reward, entry.date)}
+                      disabled={isClaimed || !available}
                       className={`mt-3 w-full flex items-center justify-center gap-2 font-bold py-3 rounded-2xl transition-transform active:scale-95 ${
                         isClaimed
+                          ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                          : !available
                           ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                           : 'bg-gradient-to-r from-amber-400 to-yellow-500 text-white shadow-lg animate-pulse'
                       }`}
                     >
                       {isClaimed ? (
                         <>✓ 已領取 {entry.reward.label || '補償'} +{entry.reward.coins} 金幣</>
+                      ) : !available ? (
+                        <>🔒 {entry.date} 解鎖</>
                       ) : (
                         <>💰 點此領取 {entry.reward.label || '更新補償'} +{entry.reward.coins} 金幣</>
                       )}

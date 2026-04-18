@@ -17,9 +17,10 @@ const EXAM_ORDER = [
 const ALL_YEARS = ['100','101','102','103','104','105','106','107','108','109','110','111','112','113','114','115']
 
 // Exams where questions have no roc_year (non-annual question banks)
+const NON_YEAR_KEYS = new Set(['undefined', 'null', ''])
 function isNonAnnual(examInfo) {
   const years = Object.keys(examInfo.years)
-  return years.length === 0 || years.every(y => y === 'undefined' || y === undefined)
+  return years.length === 0 || years.every(y => NON_YEAR_KEYS.has(y))
 }
 
 function getTotalCount(examInfo) {
@@ -66,15 +67,19 @@ function CoverageRow({ examId, info }) {
   // Collect years that actually have any questions
   const activeYears = ALL_YEARS.filter(yr => yearTotals[yr].s1 > 0 || yearTotals[yr].s2 > 0)
 
+  const firstActiveYear = activeYears[0]
+  const lastActiveYear = activeYears[activeYears.length - 1]
+
   let grandTotal = 0
   let missingCount = 0
   for (const yr of ALL_YEARS) {
     const { s1, s2 } = yearTotals[yr]
     grandTotal += s1 + s2
-    // Count as missing only if: year has s1 data AND exam runs twice AND year >= firstSecondSessionYear
-    if (hasSecondSessions && s1 > 0 && s2 === 0 && firstSecondSessionYear && yr >= firstSecondSessionYear) {
-      missingCount++
-    }
+    if (!firstActiveYear || yr < firstActiveYear || yr > lastActiveYear) continue
+    // Missing first session within active range
+    if (s1 === 0) missingCount++
+    // Missing second session for exams that run twice
+    else if (hasSecondSessions && s2 === 0 && firstSecondSessionYear && yr >= firstSecondSessionYear) missingCount++
   }
 
   const displayYears = activeYears.length > 0 ? activeYears : ALL_YEARS.slice(0, 3)

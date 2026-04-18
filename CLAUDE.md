@@ -425,6 +425,12 @@ https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx
 | 113 | 113120 | 0309 |
 | 114 | 114120 | 0309 |
 
+**已驗證的 MoEX PDF 直連 URL（使用者提供）**：
+
+| 考試 | 年度 | 場次 | URL |
+|------|------|------|-----|
+| 藥師一階 | 104 | 第二次 | `https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=Q&code=104090&c=306&s=44&q=1` |
+
 ---
 
 ## 已知題庫缺口（2026-04-18 審計）

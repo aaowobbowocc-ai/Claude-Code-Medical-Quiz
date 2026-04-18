@@ -430,6 +430,8 @@ https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx
 | 考試 | 年度 | 場次 | URL |
 |------|------|------|-----|
 | 藥師一階 | 104 | 第二次 | `https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=Q&code=104090&c=306&s=44&q=1` |
+| 中醫師(一) | 103 | 第二次 | `https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=Q&code=103100&c=103&s=0201&q=1` |
+| 中醫師(二) | 103 | 第二次 | `https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=Q&code=103100&c=104&s=0203&q=1` |
 
 ---
 

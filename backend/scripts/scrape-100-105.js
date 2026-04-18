@@ -342,7 +342,17 @@ function buildTargets(filterExam, filterYear) {
     { s: '0504', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
   ])
   // tcm2 100-2: code=100090 c=101 returns "(not found)" — PDF on MoEX but no exam name, skipped by validator
-  // tcm1 103-2: code=103100 c=101 same issue
+  // TCM 103-2: code=103100; tcm1 uses c=103 (s=0201,0202), tcm2 uses c=104 (s=0203-0206)
+  add('tcm1', 'questions-tcm1.json', '103', '103100', '第二次', '103', [
+    { s: '0201', subject: '中醫基礎醫學(一)', tag: 'tcm_basic_1', name: '中醫基礎醫學(一)' },
+    { s: '0202', subject: '中醫基礎醫學(二)', tag: 'tcm_basic_2', name: '中醫基礎醫學(二)' },
+  ])
+  add('tcm2', 'questions-tcm2.json', '103', '103100', '第二次', '104', [
+    { s: '0203', subject: '中醫臨床醫學(一)', tag: 'tcm_clinical_1', name: '中醫臨床醫學(一)' },
+    { s: '0204', subject: '中醫臨床醫學(二)', tag: 'tcm_clinical_2', name: '中醫臨床醫學(二)' },
+    { s: '0205', subject: '中醫臨床醫學(三)', tag: 'tcm_clinical_3', name: '中醫臨床醫學(三)' },
+    { s: '0206', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
+  ])
 
   // Years 104-105: c=101 for tcm1, c=102 for tcm2
   const tcm1Subs104 = [
@@ -710,7 +720,8 @@ async function main() {
             const rawText = (await pdfParse(qBuf)).text.slice(0, 1000)
             // Normalize: collapse whitespace so "醫事檢驗 師" → "醫事檢驗師"
             const normalized = rawText.replace(/\s+/g, '')
-            const m = rawText.match(/類科名稱[：:]\s*([^\n\r]+)/)
+            const m = rawText.match(/類科名稱[：:]\s*([^\n\r]+)/) ||
+                      rawText.match(/類\s*科[：:]\s*([^\n\r]+)/)
             const foundName = m ? m[1].trim() : ''
             if (!foundName.includes(t.expectedExamName)) {
               console.error(`  ✗ ${sub.name}: PDF exam name mismatch! Expected "${t.expectedExamName}" but got "${foundName || '(not found)'}". Skipping.`)

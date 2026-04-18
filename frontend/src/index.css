@@ -152,6 +152,16 @@ html.dark input, html.dark textarea {
   color: #d5cec6 !important;
   border-color: #504430 !important;
 }
+html.dark select {
+  background: #3a3020 !important;
+  color: #d5cec6 !important;
+  border-color: #504430 !important;
+  color-scheme: dark !important;
+}
+html.dark select option {
+  background: #3a3020;
+  color: #d5cec6;
+}
 html.dark input::placeholder, html.dark textarea::placeholder { color: #7a6e5c !important; }
 
 /* Gradient utility classes — reliable dark mode override */

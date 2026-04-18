@@ -431,6 +431,7 @@ export default function Browse() {
             value={exam?.label || ''}
             onChange={e => setExam((meta?.exams || []).find(ex => ex.label === e.target.value) || null)}
             className="flex-1 min-w-0 bg-white/95 text-gray-700 rounded-xl px-3 py-2 text-sm border-0 outline-none"
+            style={{ colorScheme: 'light' }}
           >
             <option value="">全部年份</option>
             {(meta?.exams || []).map(e => (
@@ -443,6 +444,7 @@ export default function Browse() {
               value={stageTag}
               onChange={e => setStageTag(e.target.value)}
               className="flex-1 min-w-0 bg-white/95 text-gray-700 rounded-xl px-3 py-2 text-sm border-0 outline-none"
+              style={{ colorScheme: 'light' }}
             >
               <option value="">全部科目</option>
               {meta.stages.filter(s => s.tag !== 'all' && s.tag !== 'unknown').map(s => (

@@ -278,8 +278,11 @@ function atomicWrite(p, obj) {
 async function main() {
   const SESSIONS = [
     { year: '112', code: '112030', session: '第一次' },
+    { year: '112', code: '112110', session: '第二次' },
     { year: '113', code: '113030', session: '第一次' },
+    { year: '113', code: '113100', session: '第二次' },
     { year: '114', code: '114030', session: '第一次' },
+    { year: '114', code: '114100', session: '第二次' },
     { year: '115', code: '115030', session: '第一次' },
   ]
   const SUBJECTS = [

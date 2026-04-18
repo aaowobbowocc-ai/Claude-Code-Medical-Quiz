@@ -40,6 +40,17 @@ function fetchPdf(url, retries = 2) {
   })
 }
 
+// Older MoEX PDFs (106-107 era) encode question numbers and option labels as PUA characters.
+// Decode them to real characters so the parser can detect question starts.
+// Question numbers E0C6-E0CF → "1"-"10"; all other PUA chars → "" (filtered out).
+function decodePUA(s) {
+  if (s.length !== 1) return s
+  const code = s.charCodeAt(0)
+  if (code >= 0xE0C6 && code <= 0xE0CF) return String(code - 0xE0C6 + 1)
+  if (code >= 0xE000 && code <= 0xF8FF) return ''
+  return s
+}
+
 // Extract structured text with x,y positions from all pages
 async function extractPositionedText(buf) {
   const doc = await pdfjsLib.getDocument({ data: new Uint8Array(buf) }).promise
@@ -48,12 +59,13 @@ async function extractPositionedText(buf) {
     const page = await doc.getPage(p)
     const content = await page.getTextContent()
     for (const item of content.items) {
-      if (!item.str.trim()) continue
+      const s = decodePUA(item.str)
+      if (!s.trim()) continue
       allItems.push({
         x: Math.round(item.transform[4]),
         y: Math.round(item.transform[5]),
         page: p,
-        str: item.str,
+        str: s,
       })
     }
   }
@@ -126,6 +138,8 @@ function parseQuestions(lines) {
     if (/^(代號|類\s*科|科\s*目|考試|頁次|等\s*別|本試題|座號|※|禁止|本科目|須用|共\d+題)/.test(t)) return false
     if (/^\d+－\d+$/.test(t)) return false
     if (/^頁次/.test(t)) return false
+    // Page headers like "106年公務人員高等考試..." start with a 3-4 digit year number
+    if (/^\d{3,4}年/.test(t)) return false
     return true
   })
 
@@ -134,8 +148,10 @@ function parseQuestions(lines) {
   let expectNext = 1
   for (let i = 0; i < filtered.length; i++) {
     const line = filtered[i]
-    // Question numbers start at x ≈ 41 (left margin, smaller than option indent of 69+)
-    if (line.x > 60) continue // Skip option-indent lines for number detection
+    // Question numbers: x ≈ 41 (108+ PDFs), x ≈ 65 (106), x ≈ 77 (107 format).
+    // In 106-107 Chinese PDFs, PUA-decoded question numbers land at x=92 after combining
+    // with question text on the same row. Options in those PDFs are at x=106+.
+    if (line.x > 95) continue // Skip option-indent lines for number detection
     const es = String(expectNext)
     if (line.text.startsWith(es)) {
       const rest = line.text.slice(es.length)
@@ -160,7 +176,10 @@ function parseQuestions(lines) {
     const block = filtered.slice(start, end)
 
     // First item: "Nquestion text"
-    const stemText = block[0].text.slice(String(num).length).trim()
+    // Some older PDFs (107 era) have both a "N." text and a PUA "N" on the same row,
+    // producing "N.Nquestion text". Strip the redundant ".N" prefix.
+    let stemText = block[0].text.slice(String(num).length).trim()
+    stemText = stemText.replace(new RegExp('^\\.\\s*' + num + '\\s*'), '')
     const restItems = block.slice(1)
 
     // Separate stem from options.
@@ -238,10 +257,10 @@ function extractOptions(items) {
       opts.push(left)
       opts.push(right)
     } else {
-      // Single column: one option or continuation
+      // Single column: each line is its own option.
+      // Only merge very short fragments (< 6 chars) that are clearly wrapped text, not standalone options.
       const fullText = group.map(it => it.text).join('')
-      if (opts.length > 0 && group[0].x > 65 && group[0].col === 'F' && fullText.length < 25) {
-        // Continuation of previous option
+      if (opts.length > 0 && group[0].x > 65 && group[0].col === 'F' && fullText.length < 6) {
         opts[opts.length - 1] += fullText
       } else {
         opts.push(fullText)
@@ -298,14 +317,37 @@ async function main() {
     { year: '113', code: '113080', session: '第一次' },
     { year: '114', code: '114080', session: '第一次' },
   ]
+  // Subject codes vary per year. Each row uses onlyYears to limit scope.
+  // 法學知識與英文: pure MCQ (50Q), no mixedEssay needed
+  // 行政學/行政法: mixed 申論+MCQ papers, mixedEssay=true skips to 選擇題 section
   const SUBJECTS = [
+    // 法學知識與英文 (50Q MCQ)
+    { c: '201', s: '0210', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['106'] },
+    { c: '301', s: '0210', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['107'] },
+    { c: '201', s: '0213', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['108'] },
+    { c: '301', s: '0216', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['109'] },
+    { c: '301', s: '0105', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['110'] },
+    { c: '301', s: '0115', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['111'] },
+    { c: '301', s: '0118', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['112'] },
+    { c: '301', s: '0112', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['113'] },
     { c: '201', s: '0401', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['114'] },
-    // 國文 class code varies: 201 for 106/108, 301 for 107/109/110/111/112
+    // 國文（測驗）(10Q in mixed paper): c varies by year
     { c: '201', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['106','108','114'] },
     { c: '301', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['107','109','110','111','112','113'] },
+    // 行政學 (25Q in mixed paper): s code changes each year
+    { c: '201', s: '0504', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['106'] },
+    { c: '301', s: '0607', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['107'] },
+    { c: '201', s: '0607', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['108'] },
+    { c: '301', s: '0604', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['109'] },
+    { c: '301', s: '0501', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['110'] },
     { c: '301', s: '0301', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['111','112'] },
     { c: '301', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['113'] },
     { c: '201', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['114'] },
+    // 行政法 (25Q in mixed paper): s code changes each year
+    { c: '201', s: '0701', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['106'] },
+    { c: '301', s: '0801', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['107','109'] },
+    { c: '201', s: '0801', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['108'] },
+    { c: '301', s: '0603', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['110'] },
     { c: '301', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['111','112','113'] },
     { c: '201', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['114'] },
   ]
@@ -338,13 +380,16 @@ async function main() {
 
       // Extract with position data
       let posItems = await extractPositionedText(qBuf)
-      // For mixed essay+MCQ subjects, skip everything before 選擇題 section
+      // For mixed essay+MCQ subjects, skip everything before MCQ section.
+      // Section header varies: 選擇題 (newer), 測驗題部分 (106-108), 測驗部分 (107)
       if (sub.mixedEssay) {
-        const mcqIdx = posItems.findIndex(it => it.str.includes('選擇題'))
+        const mcqIdx = posItems.findIndex(it =>
+          it.str.includes('選擇題') || it.str.includes('測驗題') || it.str.includes('測驗部分')
+        )
         if (mcqIdx >= 0) {
           posItems = posItems.slice(mcqIdx)
         } else {
-          console.log(`  ⚠ ${sub.name}: no 選擇題 section found`); continue
+          console.log(`  ⚠ ${sub.name}: no MCQ section found`); continue
         }
       }
       const logLines = buildLogicalLines(posItems)

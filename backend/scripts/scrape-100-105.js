@@ -517,6 +517,8 @@ function buildTargets(filterExam, filterYear) {
   add('radiology', 'questions-radiology.json', '103', '103020', '第一次', '308', radioSubs020)
   add('radiology', 'questions-radiology.json', '103', '103090', '第二次', '308', radioSubs020)
   add('radiology', 'questions-radiology.json', '104', '104020', '第一次', '308', radioSubs020)
+  // 104090 (第二次): class code rotated to c=309 (same as 105+)
+  add('radiology', 'questions-radiology.json', '104', '104090', '第二次', '309', radioSubs020)
   // 105年 class code rotated: radiology moved to c=309
   add('radiology', 'questions-radiology.json', '105', '105020', '第一次', '309', radioSubs020)
   add('radiology', 'questions-radiology.json', '105', '105100', '第二次', '309', radioSubs020)
@@ -537,6 +539,8 @@ function buildTargets(filterExam, filterYear) {
   add('pt', 'questions-pt.json', '103', '103020', '第一次', '309', ptSubs020)
   add('pt', 'questions-pt.json', '103', '103090', '第二次', '309', ptSubs020)
   add('pt', 'questions-pt.json', '104', '104020', '第一次', '309', ptSubs020)
+  // 104090 (第二次): class code rotated to c=311 (same as 105+)
+  add('pt', 'questions-pt.json', '104', '104090', '第二次', '311', ptSubs020)
   // 105年 class code rotated: PT moved to c=311
   add('pt', 'questions-pt.json', '105', '105020', '第一次', '311', ptSubs020)
   add('pt', 'questions-pt.json', '105', '105100', '第二次', '311', ptSubs020)
@@ -554,6 +558,8 @@ function buildTargets(filterExam, filterYear) {
   add('medlab', 'questions-medlab.json', '103', '103020', '第一次', '311', medlabSubs020)
   add('medlab', 'questions-medlab.json', '103', '103090', '第二次', '311', medlabSubs020)
   add('medlab', 'questions-medlab.json', '104', '104020', '第一次', '311', medlabSubs020)
+  // 104090 (第二次): class code rotated to c=308 (same as 105+)
+  add('medlab', 'questions-medlab.json', '104', '104090', '第二次', '308', medlabSubs020)
   // 105年 class code rotated: medlab moved to c=308
   add('medlab', 'questions-medlab.json', '105', '105020', '第一次', '308', medlabSubs020)
   add('medlab', 'questions-medlab.json', '105', '105100', '第二次', '308', medlabSubs020)
@@ -585,7 +591,9 @@ function buildTargets(filterExam, filterYear) {
   add('pharma1', 'questions-pharma1.json', '103', '103020', '第一次', '310', pharma1Subs310)
   add('pharma1', 'questions-pharma1.json', '103', '103090', '第二次', '310', pharma1Subs310)
   add('pharma1', 'questions-pharma1.json', '104', '104020', '第一次', '310', pharma1Subs310)
-  add('pharma1', 'questions-pharma1.json', '104', '104090', '第二次', '310', pharma1Subs310)
+  // 104090 (第二次): class code rotated to c=305 (same pattern as 105100)
+  // c=310 was wrong for 104090 (returned nursing content, already removed)
+  add('pharma1', 'questions-pharma1.json', '104', '104090', '第二次', '305', pharma1Subs020)
   add('pharma2', 'questions-pharma2.json', '102', '102020', '第一次', '310', pharma2Subs310)
   add('pharma2', 'questions-pharma2.json', '102', '102100', '第二次', '310', pharma2Subs310)
   add('pharma2', 'questions-pharma2.json', '103', '103020', '第一次', '310', pharma2Subs310)

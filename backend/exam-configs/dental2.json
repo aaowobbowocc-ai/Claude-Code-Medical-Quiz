@@ -130,7 +130,10 @@
       "removable_prosthodontics": "活動補綴",
       "dental_materials": "牙科材料",
       "dental_radiology": "口腔診斷/影像",
-      "dental_public_health": "公衛/倫理/法規"
+      "dental_public_health": "公衛/倫理/法規",
+      "dental_clinical_1": "牙醫(三)",
+      "dental_clinical_2": "牙醫(四)",
+      "dental_clinical_3": "牙醫(五)"
     },
     "stageStyles": {
       "all": {
@@ -192,6 +195,18 @@
       "dental_ethics_law": {
         "icon": "⚖️",
         "color": "#374151"
+      },
+      "dental_clinical_1": {
+        "icon": "📋",
+        "color": "#B45309"
+      },
+      "dental_clinical_2": {
+        "icon": "📋",
+        "color": "#0891B2"
+      },
+      "dental_clinical_3": {
+        "icon": "📋",
+        "color": "#7C3AED"
       }
     },
     "subjectColors": {
@@ -205,7 +220,10 @@
       "活動補綴": "#EC4899",
       "牙科材料": "#D97706",
       "口腔診斷/影像": "#6366F1",
-      "牙醫公衛/倫理/法規": "#0D9488"
+      "牙醫公衛/倫理/法規": "#0D9488",
+      "牙醫(三)": "#B45309",
+      "牙醫(四)": "#0891B2",
+      "牙醫(五)": "#7C3AED"
     }
   },
   "seo": {

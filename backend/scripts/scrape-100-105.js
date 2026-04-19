@@ -213,6 +213,7 @@ const EXPECTED_EXAM_NAMES = {
   'social-worker': '社會工作師',
   'tcm1': '中醫師',
   'tcm2': '中醫師',
+  'vet': '獸醫師',
 }
 
 function buildTargets(filterExam, filterYear) {
@@ -238,6 +239,8 @@ function buildTargets(filterExam, filterYear) {
   add('doctor1', 'questions.json', '103', '103030', '第一次', '101', doctor1Subs)
   add('doctor1', 'questions.json', '103', '103100', '第二次', '101', doctor1Subs)
   add('doctor1', 'questions.json', '104', '104030', '第一次', '101', doctor1Subs)
+  // 100140 第二次: c=101, s=0101,0102 (same as 030)
+  add('doctor1', 'questions.json', '100', '100140', '第二次', '101', doctor1Subs)
 
   // Doctor2 — c=102 in 030 series years 100-104
   const doctor2Subs = [
@@ -252,6 +255,8 @@ function buildTargets(filterExam, filterYear) {
   add('doctor2', 'questions-doctor2.json', '103', '103030', '第一次', '102', doctor2Subs)
   add('doctor2', 'questions-doctor2.json', '103', '103100', '第二次', '102', doctor2Subs)
   add('doctor2', 'questions-doctor2.json', '104', '104030', '第一次', '102', doctor2Subs)
+  // 100140 第二次: c=102, s=0103-0106 (same as 030)
+  add('doctor2', 'questions-doctor2.json', '100', '100140', '第二次', '102', doctor2Subs)
 
   // Pharma — c=103 in years 100-101 (combined pharma1+pharma2)
   // pharma1 subjects: 藥理學, 藥物分析, 藥劑學
@@ -270,6 +275,9 @@ function buildTargets(filterExam, filterYear) {
   add('pharma1', 'questions-pharma1.json', '101', '101030', '第一次', '103', pharma1SubsOld)
   add('pharma2', 'questions-pharma2.json', '100', '100030', '第一次', '103', pharma2SubsOld)
   add('pharma2', 'questions-pharma2.json', '101', '101030', '第一次', '103', pharma2SubsOld)
+  // 100140 第二次: c=103, same s-codes split as 030 series
+  add('pharma1', 'questions-pharma1.json', '100', '100140', '第二次', '103', pharma1SubsOld)
+  add('pharma2', 'questions-pharma2.json', '100', '100140', '第二次', '103', pharma2SubsOld)
 
   // Medlab — c=104 in years 100-101 (030 series)
   const medlabSubs030 = [
@@ -282,6 +290,8 @@ function buildTargets(filterExam, filterYear) {
   ]
   add('medlab', 'questions-medlab.json', '100', '100030', '第一次', '104', medlabSubs030)
   add('medlab', 'questions-medlab.json', '101', '101030', '第一次', '104', medlabSubs030)
+  // 100140 第二次: c=104, s=0107,0301-0305 (same as 030)
+  add('medlab', 'questions-medlab.json', '100', '100140', '第二次', '104', medlabSubs030)
 
   // PT — c=106 in year 100 (030 series)
   const ptSubs030 = [
@@ -321,6 +331,9 @@ function buildTargets(filterExam, filterYear) {
   ]
   add('tcm1', 'questions-tcm1.json', '101', '101030', '第一次', '106', tcm1Subs101)
   add('tcm2', 'questions-tcm2.json', '101', '101030', '第一次', '106', tcm2Subs101)
+  // 100140 第二次: c=106 (both tcm1 and tcm2 share same class code, s codes same as 101030)
+  add('tcm1', 'questions-tcm1.json', '100', '100140', '第二次', '106', tcm1Subs101)
+  add('tcm2', 'questions-tcm2.json', '100', '100140', '第二次', '106', tcm2Subs101)
   // Years 102-103: c=109 for tcm1, c=110 for tcm2 (yr103 tcm2 splits across two class codes)
   add('tcm1', 'questions-tcm1.json', '102', '102030', '第一次', '109', tcm1Subs101)
   add('tcm1', 'questions-tcm1.json', '103', '103030', '第一次', '109', tcm1Subs101)
@@ -365,6 +378,17 @@ function buildTargets(filterExam, filterYear) {
     { s: '0105', subject: '中醫臨床醫學(三)', tag: 'tcm_clinical_3', name: '中醫臨床醫學(三)' },
     { s: '0106', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
   ]
+  // 104030 第一次: c=103=tcm1, c=104=tcm2 (different from 104100 system; s codes differ from tcm1Subs101)
+  add('tcm1', 'questions-tcm1.json', '104', '104030', '第一次', '103', [
+    { s: '0201', subject: '中醫基礎醫學(一)', tag: 'tcm_basic_1', name: '中醫基礎醫學(一)' },
+    { s: '0202', subject: '中醫基礎醫學(二)', tag: 'tcm_basic_2', name: '中醫基礎醫學(二)' },
+  ])
+  add('tcm2', 'questions-tcm2.json', '104', '104030', '第一次', '104', [
+    { s: '0203', subject: '中醫臨床醫學(一)', tag: 'tcm_clinical_1', name: '中醫臨床醫學(一)' },
+    { s: '0204', subject: '中醫臨床醫學(二)', tag: 'tcm_clinical_2', name: '中醫臨床醫學(二)' },
+    { s: '0205', subject: '中醫臨床醫學(三)', tag: 'tcm_clinical_3', name: '中醫臨床醫學(三)' },
+    { s: '0206', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
+  ])
   add('tcm1', 'questions-tcm1.json', '104', '104100', '第二次', '101', tcm1Subs104)
   add('tcm2', 'questions-tcm2.json', '104', '104100', '第二次', '102', tcm2Subs104)
   add('tcm1', 'questions-tcm1.json', '105', '105030', '第一次', '101', tcm1Subs104)
@@ -381,6 +405,7 @@ function buildTargets(filterExam, filterYear) {
     { s: '0404', subject: '精神科與社區衛生護理學', tag: 'psych_community', name: '精神科與社區衛生護理學' },
   ]
   add('nursing', 'questions-nursing.json', '100', '100030', '第一次', '105', nursingSubs101)
+  add('nursing', 'questions-nursing.json', '100', '100140', '第二次', '105', nursingSubs101)
   add('nursing', 'questions-nursing.json', '101', '101030', '第一次', '105', nursingSubs101)
   // Nursing yr102-103 — c=107, only 4 subjects found (missing 基礎醫學 s=0108)
   const nursingSubs102 = [
@@ -399,6 +424,14 @@ function buildTargets(filterExam, filterYear) {
     { s: '0504', subject: '產兒科護理學', tag: 'obs_ped', name: '產兒科護理學' },
     { s: '0505', subject: '精神科與社區衛生護理學', tag: 'psych_community', name: '精神科與社區衛生護理學' },
   ]
+  // 104030 第一次: c=109, 4 subjects (no 基礎醫學), s=0501-0504 ≠ nursingSubs104's s=0501
+  const nursingSubs104030 = [
+    { s: '0501', subject: '基本護理學與護理行政', tag: 'basic_nursing', name: '基本護理學與護理行政' },
+    { s: '0502', subject: '內外科護理學', tag: 'med_surg', name: '內外科護理學' },
+    { s: '0503', subject: '產兒科護理學', tag: 'obs_ped', name: '產兒科護理學' },
+    { s: '0504', subject: '精神科與社區衛生護理學', tag: 'psych_community', name: '精神科與社區衛生護理學' },
+  ]
+  add('nursing', 'questions-nursing.json', '104', '104030', '第一次', '109', nursingSubs104030)
   add('nursing', 'questions-nursing.json', '104', '104100', '第二次', '106', nursingSubs104)
   add('nursing', 'questions-nursing.json', '105', '105030', '第一次', '106', nursingSubs104)
   add('nursing', 'questions-nursing.json', '105', '105090', '第二次', '106', nursingSubs104)
@@ -415,9 +448,16 @@ function buildTargets(filterExam, filterYear) {
     { s: '0606', subject: '食品衛生與安全', tag: 'food_safety', name: '食品衛生與安全' },
   ]
   add('nutrition', 'questions-nutrition.json', '101', '101030', '第一次', '107', nutritionSubs)
+  // 100140 第二次: c=107, s=0601-0606 (same as nutritionSubs)
+  add('nutrition', 'questions-nutrition.json', '100', '100140', '第二次', '107', nutritionSubs)
   const nutritionSubs104 = nutritionSubs.map((sub, i) => ({
     ...sub, s: `020${i + 1}`  // 0201-0206
   }))
+  // 104030 第一次: c=106, s=0301-0306
+  const nutritionSubs104030 = nutritionSubs.map((sub, i) => ({
+    ...sub, s: `030${i + 1}`  // 0301-0306
+  }))
+  add('nutrition', 'questions-nutrition.json', '104', '104030', '第一次', '106', nutritionSubs104030)
   add('nutrition', 'questions-nutrition.json', '104', '104100', '第二次', '103', nutritionSubs104)
   add('nutrition', 'questions-nutrition.json', '105', '105030', '第一次', '103', nutritionSubs104)
   add('nutrition', 'questions-nutrition.json', '105', '105090', '第二次', '103', nutritionSubs104)
@@ -430,6 +470,8 @@ function buildTargets(filterExam, filterYear) {
   ]
   // Note: 104100 c=107 has subjects 0601-0606, but SW only has 3 subjects
   // The other 3 (0604-0606) might be different exam sharing class code
+  // 104030 第一次: c=110 (not c=107 which is 臨床心理師 at 104030)
+  add('social-worker', 'questions-social-worker.json', '104', '104030', '第一次', '110', swSubs)
   add('social-worker', 'questions-social-worker.json', '104', '104100', '第二次', '107', swSubs)
   add('social-worker', 'questions-social-worker.json', '105', '105030', '第一次', '107', swSubs)
   add('social-worker', 'questions-social-worker.json', '105', '105090', '第二次', '107', swSubs)
@@ -442,6 +484,8 @@ function buildTargets(filterExam, filterYear) {
     { s: '22', subject: '卷二', tag: 'oral_pathology', name: '牙醫學(二)' },
   ]
   add('dental1', 'questions-dental1.json', '100', '100020', '第一次', '301', dental1Subs)
+  // 100130 第二次: c=301, s=11,22
+  add('dental1', 'questions-dental1.json', '100', '100130', '第二次', '301', dental1Subs)
   add('dental1', 'questions-dental1.json', '101', '101010', '第一次', '301', dental1Subs)
   add('dental1', 'questions-dental1.json', '101', '101100', '第二次', '301', dental1Subs)
   add('dental1', 'questions-dental1.json', '102', '102020', '第一次', '301', dental1Subs)
@@ -468,7 +512,9 @@ function buildTargets(filterExam, filterYear) {
     { s: '66', subject: '卷四', tag: 'dental_clinical_4', name: '牙醫學(六)' },
   ]
   add('dental2', 'questions-dental2.json', '100', '100020', '第一次', '302', dental2Subs)
-  // dental2 100-2: code=100100 c=302 returns "一等管輪" (maritime exam), not dental — truly missing
+  // 100130 第二次: c=302, s=33,44,55,66 (4 papers — same as dental2Subs101)
+  add('dental2', 'questions-dental2.json', '100', '100130', '第二次', '302', dental2Subs101)
+  // dental2 100-2 (100100): code=100100 c=302 returns "一等管輪" (maritime) — 100130 is the real 第二次
   add('dental2', 'questions-dental2.json', '101', '101010', '第一次', '302', dental2Subs101)
   add('dental2', 'questions-dental2.json', '101', '101100', '第二次', '302', dental2Subs)
   add('dental2', 'questions-dental2.json', '102', '102020', '第一次', '302', dental2Subs)
@@ -491,6 +537,14 @@ function buildTargets(filterExam, filterYear) {
   add('dental2', 'questions-dental2.json', '105', '105100', '第二次', '304', [
     { s: '33', subject: '卷一', tag: 'dental_clinical_1', name: '牙醫學(三)' },
   ])
+
+  // Doctor1 — c=301 in 020 series, year 104 second session only
+  // s=55=醫學(一), s=66=醫學(二); s=33/44 return 302 (not available)
+  const doctor1Subs020 = [
+    { s: '55', subject: '醫學(一)', tag: 'anatomy', name: '醫學(一)' },
+    { s: '66', subject: '醫學(二)', tag: 'pathology', name: '醫學(二)' },
+  ]
+  add('doctor1', 'questions.json', '104', '104090', '第二次', '301', doctor1Subs020)
 
   // Doctor2 — c=302 in 020 series, years 104-105
   const doctor2Subs020 = [
@@ -519,6 +573,8 @@ function buildTargets(filterExam, filterYear) {
   add('ot', 'questions-ot.json', '103', '103020', '第一次', '305', otSubs020)
   add('ot', 'questions-ot.json', '103', '103090', '第二次', '305', otSubs020)
   add('ot', 'questions-ot.json', '100', '100020', '第一次', '305', otSubs020)
+  // 100130 第二次: c=305, s=11-66 (same as 020)
+  add('ot', 'questions-ot.json', '100', '100130', '第二次', '305', otSubs020)
   add('ot', 'questions-ot.json', '104', '104020', '第一次', '305', otSubs020)
   add('ot', 'questions-ot.json', '104', '104090', '第二次', '312', otSubs020)
   // OT yr105 — c=312 (swapped from pharma1)
@@ -535,6 +591,8 @@ function buildTargets(filterExam, filterYear) {
     { s: '66', subject: '核子醫學診療原理與技術學', tag: 'nuclear_medicine', name: '核子醫學診療原理與技術學' },
   ]
   add('radiology', 'questions-radiology.json', '100', '100020', '第一次', '308', radioSubs020)
+  // 100130 第二次: c=308, s=11-66 (same as 020)
+  add('radiology', 'questions-radiology.json', '100', '100130', '第二次', '308', radioSubs020)
   add('radiology', 'questions-radiology.json', '101', '101010', '第一次', '308', radioSubs020)
   add('radiology', 'questions-radiology.json', '101', '101100', '第二次', '308', radioSubs020)
   add('radiology', 'questions-radiology.json', '102', '102020', '第一次', '308', radioSubs020)
@@ -557,6 +615,8 @@ function buildTargets(filterExam, filterYear) {
     { s: '55', subject: '骨科疾病物理治療學', tag: 'pt_ortho', name: '骨科疾病物理治療學' },
     { s: '66', subject: '心肺疾��與小兒疾病物理治療學', tag: 'pt_cardio_peds', name: '心肺疾病與小兒疾病物理治療學' },
   ]
+  // 100130 第二次: c=309, s=11-66 (same subjects as 020 series 101+)
+  add('pt', 'questions-pt.json', '100', '100130', '第二次', '309', ptSubs020)
   add('pt', 'questions-pt.json', '101', '101010', '第一次', '309', ptSubs020)
   add('pt', 'questions-pt.json', '101', '101100', '第二次', '309', ptSubs020)
   add('pt', 'questions-pt.json', '102', '102020', '第一次', '309', ptSubs020)
@@ -644,6 +704,17 @@ function buildTargets(filterExam, filterYear) {
   add('pharma2', 'questions-pharma2.json', '105', '105020', '第一次', '307', pharma2Subs307)
   add('pharma2', 'questions-pharma2.json', '105', '105100', '第二次', '307', pharma2Subs307)
 
+  // Vet — c=307 in 100130 第二次 (only 100年 in the 100-105 range)
+  const vetSubs020 = [
+    { s: '11', subject: '獸醫病理學', tag: 'vet_pathology', name: '獸醫病理學' },
+    { s: '22', subject: '獸醫藥理學', tag: 'vet_pharmacology', name: '獸醫藥理學' },
+    { s: '33', subject: '獸醫實驗診斷學', tag: 'vet_lab_diagnosis', name: '獸醫實驗診斷學' },
+    { s: '44', subject: '獸醫普通疾病學', tag: 'vet_common_disease', name: '獸醫普通疾病學' },
+    { s: '55', subject: '獸醫傳染病學', tag: 'vet_infectious', name: '獸醫傳染病學' },
+    { s: '66', subject: '獸醫公共衛生學', tag: 'vet_public_health', name: '獸醫公共衛生學' },
+  ]
+  add('vet', 'questions-vet.json', '100', '100130', '第二次', '307', vetSubs020)
+
   return targets
 }
 
@@ -730,12 +801,12 @@ async function main() {
         // repetition pattern, so simple substring on raw text is unreliable.
         if (t.expectedExamName) {
           try {
-            const rawText = (await pdfParse(qBuf)).text.slice(0, 1000)
+            const rawText = (await pdfParse(qBuf)).text.slice(0, 1000).normalize('NFKC')
             // Normalize: collapse whitespace so "醫事檢驗 師" → "醫事檢驗師"
             const normalized = rawText.replace(/\s+/g, '')
             const m = rawText.match(/類科名稱[：:]\s*([^\n\r]+)/) ||
                       rawText.match(/類\s*科[：:]\s*([^\n\r]+)/)
-            const foundName = m ? m[1].trim() : ''
+            const foundName = m ? m[1].trim().normalize('NFKC') : ''
             if (!foundName.includes(t.expectedExamName)) {
               console.error(`  ✗ ${sub.name}: PDF exam name mismatch! Expected "${t.expectedExamName}" but got "${foundName || '(not found)'}". Skipping.`)
               continue

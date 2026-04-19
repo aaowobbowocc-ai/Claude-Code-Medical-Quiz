@@ -8,6 +8,7 @@ import { usePlayerStore, useGameStore } from './store/gameStore'
 import SplashScreen from './components/SplashScreen'
 import ErrorBoundary from './components/ErrorBoundary'
 import FixedBottomAd from './components/FixedBottomAd'
+import CoinGrantModal from './components/CoinGrantModal'
 import { initRegistry, getRegistry, getExamConfig, syncSharedBankVersions } from './config/examRegistry'
 
 // Pre-fetch exam registry as early as possible; sync shared-bank versions for SW cache invalidation
@@ -225,6 +226,7 @@ function AppRoutes() {
         </Routes>
       </Suspense>
       <FixedBottomAd />
+      <CoinGrantModal />
     </div>
   )
 }

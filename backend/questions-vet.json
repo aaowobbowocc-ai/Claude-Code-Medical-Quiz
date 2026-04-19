@@ -485,7 +485,9 @@
         "D": "胎盤復舊不全"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 25,
@@ -565,7 +567,9 @@
         "D": "肝臟硬化"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 29,
@@ -1125,7 +1129,9 @@
         "D": "腸套疊"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 57,
@@ -1505,7 +1511,9 @@
         "D": "眼細菌性脈絡膜炎"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 76,
@@ -4105,7 +4113,9 @@
         "D": "單核球"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 206,
@@ -5925,7 +5935,9 @@
         "D": "氣管斷裂"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 297,
@@ -7545,7 +7557,9 @@
         "D": "Babesia cati"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 378,
@@ -7785,7 +7799,9 @@
         "D": "koi herpesvirus"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 390,
@@ -7805,7 +7821,9 @@
         "D": "在飼料中添加四環黴素類抗生素，連續數天"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 391,
@@ -7845,7 +7863,9 @@
         "D": "microsporidian"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 393,
@@ -7885,7 +7905,9 @@
         "D": "Aeromonas hydrophila"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 395,
@@ -9685,7 +9707,9 @@
         "D": "血管栓塞"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 485,
@@ -10745,7 +10769,9 @@
         "D": "乳突瘤（papilloma）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 538,
@@ -10825,7 +10851,9 @@
         "D": "suppurative bronchopneumonia"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 542,
@@ -13546,7 +13574,9 @@
         "D": "傳染性花柳性腫瘤（transmissible venereal tumor）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 678,
@@ -16146,7 +16176,9 @@
         "D": "巨大細胞病毒感染症"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 808,
@@ -16166,7 +16198,9 @@
         "D": "第二型豬環狀病毒感染症"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 809,
@@ -17348,7 +17382,9 @@
         "D": "Myxidium sp. infection"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 868,
@@ -17368,7 +17404,9 @@
         "D": "Kudoa sp. infection"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 869,
@@ -17508,7 +17546,9 @@
         "D": "Aeromonas hydrophila"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 876,
@@ -17528,7 +17568,9 @@
         "D": "Vibrio salmonicida"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 877,
@@ -17548,7 +17590,9 @@
         "D": "Achlya spp."
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 878,
@@ -19669,7 +19713,9 @@
         "D": "放線桿菌胸膜肺炎"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 984,
@@ -19969,7 +20015,9 @@
         "D": "血管類纖維素變性"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 999,
@@ -20629,7 +20677,9 @@
         "D": "腦組織疝入左右腦室及鼻腔"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1032,
@@ -20829,7 +20879,9 @@
         "D": "向下移動"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1042,
@@ -22690,7 +22742,9 @@
         "D": "造骨胚細胞"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1135,
@@ -22970,7 +23024,9 @@
         "D": "組織細胞瘤（histiocytoma）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1149,
@@ -24750,7 +24806,9 @@
         "D": "乏情期（anoestrus）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1238,
@@ -25150,7 +25208,9 @@
         "D": "Demodex"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1258,
@@ -26990,7 +27050,9 @@
         "D": "Trichodina sp. infection"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1350,
@@ -27010,7 +27072,9 @@
         "D": "herpesvirus infection"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1351,
@@ -27030,7 +27094,9 @@
         "D": "Photobacterium damselae subsp. damselae"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1352,
@@ -27150,7 +27216,9 @@
         "D": "Aeromonas salmonicida"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1358,
@@ -28931,7 +28999,9 @@
         "D": "局部廣泛性"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1447,
@@ -28951,7 +29021,9 @@
         "D": "轉移性惡性腺癌"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1448,
@@ -30271,7 +30343,9 @@
         "D": "貓傳染性腹膜炎"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1514,
@@ -30291,7 +30365,9 @@
         "D": "矢狀切面"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1515,
@@ -34713,7 +34789,9 @@
         "D": "變大突出的左心房（left atrium）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1736,
@@ -36275,7 +36353,9 @@
         "D": "Microsporum gypseum"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1814,
@@ -36295,7 +36375,9 @@
         "D": "nocardiosis"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1815,
@@ -36695,7 +36777,9 @@
         "D": "Dermocystidium glochidia"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1835,
@@ -36755,7 +36839,9 @@
         "D": "Corynebacterium bovis"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1838,
@@ -38355,7 +38441,9 @@
         "D": "①④"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1918,
@@ -39515,7 +39603,9 @@
         "D": "淋巴瘤（lymphoma）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1976,
@@ -39815,7 +39905,9 @@
         "D": "葉酸"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1991,
@@ -39875,7 +39967,9 @@
         "D": "東方馬腦炎"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 1994,
@@ -40015,7 +40109,9 @@
         "D": "大腸桿菌症"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2001,
@@ -42577,7 +42673,9 @@
         "D": "非炎症性之全身性緊迫"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2129,
@@ -43658,7 +43756,9 @@
         "D": "以near-far-far-near suture進行陰部縫合"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2183,
@@ -44478,7 +44578,9 @@
         "D": "骨髓炎（osteomyelitis）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2224,
@@ -44578,7 +44680,9 @@
         "D": "放置不必處置"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2229,
@@ -44618,7 +44722,9 @@
         "D": "脫毛X（alopecia X）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2231,
@@ -44658,7 +44764,9 @@
         "D": "劑型維持時間過短"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2233,
@@ -44718,7 +44826,9 @@
         "D": "前縱膈囊腫（cranial mediastinal cyst）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2236,
@@ -45898,7 +46008,9 @@
         "D": "Pasteurella multocida"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2295,
@@ -46018,7 +46130,9 @@
         "D": "Cladophialophora bantiana"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2301,
@@ -46338,7 +46452,9 @@
         "D": "吸管蟲"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2317,
@@ -46358,7 +46474,9 @@
         "D": "lymphocytic choriomeningitis virus"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2318,
@@ -46378,7 +46496,9 @@
         "D": "②④"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2319,
@@ -48458,7 +48578,9 @@
         "D": "間質細胞瘤"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2423,
@@ -49458,7 +49580,9 @@
         "D": "李斯特氏菌症"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2473,
@@ -51979,7 +52103,9 @@
         "D": "化膿性炎症病變之形成期"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2599,
@@ -53039,7 +53165,9 @@
         "D": "迷走神經性消化不良"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2652,
@@ -53859,7 +53987,9 @@
         "D": "有可能為前列腺腫瘤"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2693,
@@ -54259,7 +54389,9 @@
         "D": "sertoli cell tumor"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2713,
@@ -54279,7 +54411,9 @@
         "D": "變大的右心室"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2714,
@@ -54319,7 +54453,9 @@
         "D": "左心房收縮，流向左心室之血流波形"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2716,
@@ -54339,7 +54475,9 @@
         "D": "稱為A波（A wave）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2717,
@@ -54359,7 +54497,9 @@
         "D": "稱為E波（E wave）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2718,
@@ -54399,7 +54539,9 @@
         "D": "低血鎂"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2720,
@@ -54819,7 +54961,9 @@
         "D": "蛔蟲"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2741,
@@ -55999,7 +56143,9 @@
         "D": "Microsporum distortum"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2800,
@@ -58699,7 +58845,9 @@
         "D": "噬神經現象（neuronophagia）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2935,
@@ -58719,7 +58867,9 @@
         "D": "狂犬病"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2936,
@@ -58839,7 +58989,9 @@
         "D": "皮膚鈣質沉積症（calcinosis cutis）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2942,
@@ -58859,7 +59011,9 @@
         "D": "天疱瘡"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 2943,
@@ -61361,7 +61515,9 @@
         "D": "basophilic leukemia"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3068,
@@ -61782,7 +61938,9 @@
         "D": "glycogen"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3089,
@@ -61962,7 +62120,9 @@
         "D": "酥氨酸結晶"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3098,
@@ -62922,7 +63082,9 @@
         "D": "subcuticular suture"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3146,
@@ -63182,7 +63344,9 @@
         "D": "50"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3159,
@@ -63202,7 +63366,9 @@
         "D": "初期之懷孕黃體"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3160,
@@ -63402,7 +63568,9 @@
         "D": "atopic alopecia"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3170,
@@ -63442,7 +63610,9 @@
         "D": "支氣管礦化（bronchial mineralization）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3172,
@@ -63542,7 +63712,9 @@
         "D": "傳染性花柳性腫瘤（transmissible venereal tumor）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3177,
@@ -63742,7 +63914,9 @@
         "D": "椎間盤突出（intervertebral disc protrusion）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3187,
@@ -63802,7 +63976,9 @@
         "D": "發情休止期（anoestrus）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3190,
@@ -64024,7 +64200,9 @@
         "D": "靜脈注射esmolol"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3201,
@@ -64104,7 +64282,9 @@
         "D": "Haemophilus parasuis"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3205,
@@ -64124,7 +64304,9 @@
         "D": "致病原分泌的剝落毒素（exfoliative toxin）是重要的致病因子"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3206,
@@ -64164,7 +64346,9 @@
         "D": "Escherichia coli"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3208,
@@ -64604,7 +64788,9 @@
         "D": "Salmonella Gallinarum"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3230,
@@ -65104,7 +65290,9 @@
         "D": "demodex"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3255,
@@ -65124,7 +65312,9 @@
         "D": "actinomycosis"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3256,
@@ -65284,7 +65474,9 @@
         "D": "犬新胞蟲症"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3264,
@@ -65525,7 +65717,9 @@
         "D": "Taura syndrome"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3276,
@@ -65585,7 +65779,9 @@
         "D": "lymphocytic choriomeningitis virus"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3279,
@@ -67206,7 +67402,9 @@
         "D": "17日之後，基本再生數（basic reproduction number, R 0 ）應小於1"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3360,
@@ -67406,7 +67604,9 @@
         "D": "肝硬化"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3370,
@@ -67426,7 +67626,9 @@
         "D": "①③"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3371,
@@ -67807,7 +68009,9 @@
         "D": "metastatic colonic carcinoma"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3390,
@@ -68327,7 +68531,9 @@
         "D": "顆粒層因炎症細胞浸潤而排列疏鬆凌亂、Purkinje細胞數目減少、顆粒層及分子層有淋巴球圍管現象"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3416,
@@ -68367,7 +68573,9 @@
         "D": "硫中毒；腦灰質軟化症"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3418,
@@ -68447,7 +68655,9 @@
         "D": "sarcoptic dermatitis"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3422,
@@ -68467,7 +68677,9 @@
         "D": "天疱瘡"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3423,
@@ -68487,7 +68699,9 @@
         "D": "fly bite hypersensitivity"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3424,
@@ -68687,7 +68901,9 @@
         "D": "luteoma"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3434,
@@ -70888,7 +71104,9 @@
         "D": "毒性反應的嗜中性球"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3544,
@@ -71048,7 +71266,9 @@
         "D": "腹膜炎"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3552,
@@ -71568,7 +71788,9 @@
         "D": "該尿液加入乙醚後會變為澄清透明"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3578,
@@ -71908,7 +72130,9 @@
         "D": "嗜鹼性球增多症"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3595,
@@ -72068,7 +72292,9 @@
         "D": "near-far-far-near suture"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3603,
@@ -72989,7 +73215,9 @@
         "D": "心臟變小，可能和嚴重脫水有關"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3649,
@@ -73469,7 +73697,9 @@
         "D": "朝向中央"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3673,
@@ -73489,7 +73719,9 @@
         "D": "1公尺/秒"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3674,
@@ -73509,7 +73741,9 @@
         "D": "變大的左前肺葉肺靜脈"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3675,
@@ -73549,7 +73783,9 @@
         "D": "左心房容積"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3677,
@@ -73569,7 +73805,9 @@
         "D": "奔馬音（gallop sounds）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3678,
@@ -74069,7 +74307,9 @@
         "D": "雞傳染性喉頭氣管炎"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3703,
@@ -74690,7 +74930,9 @@
         "D": "tape-strip method"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3734,
@@ -74750,7 +74992,9 @@
         "D": "adenovirus"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3737,
@@ -75130,7 +75374,9 @@
         "D": "Penaeus monodon yellow head baculovirus"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3756,
@@ -75150,7 +75396,9 @@
         "D": "鐘形蟲大量附著"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3757,
@@ -75170,7 +75418,9 @@
         "D": "pneumonia virus of mice"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3758,
@@ -77031,7 +77281,9 @@
         "D": "腎血腫－直動脈與入球動脈"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3851,
@@ -77331,7 +77583,9 @@
         "D": "③④"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3866,
@@ -77411,7 +77665,9 @@
         "D": "本病僅發生在雞，鴨有耐受性"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3870,
@@ -77911,7 +78167,9 @@
         "D": "牛疱疹病毒腦炎（bovine herpesvirus encephalitis）；患牛有大腦局部壞死"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3895,
@@ -77931,7 +78189,9 @@
         "D": "②④"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3896,
@@ -77991,7 +78251,9 @@
         "D": "慢性鼻淚管化膿性肉芽腫"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3899,
@@ -78051,7 +78313,9 @@
         "D": "鋅缺乏"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3902,
@@ -78311,7 +78575,9 @@
         "D": "spermatids"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 3915,
@@ -80472,7 +80738,9 @@
         "D": "鴿子；thrombocyte"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4023,
@@ -80512,7 +80780,9 @@
         "D": "Anaplasma platys"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4025,
@@ -81212,7 +81482,9 @@
         "D": "鏡檢尿液是否出現異常，可透過低倍視野（10X）下來計算細胞的種類、數目及是否發現微生物存在等加以 判斷"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4060,
@@ -81653,7 +81925,9 @@
         "D": "equine Cushing's disease"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4082,
@@ -82273,7 +82547,9 @@
         "D": "24"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4113,
@@ -82513,7 +82789,9 @@
         "D": "高血鈣"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4125,
@@ -82733,7 +83011,9 @@
         "D": "腹腔內有積液（peritoneal effusion）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4136,
@@ -83293,7 +83573,9 @@
         "D": "Brucella suis"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4164,
@@ -83333,7 +83615,9 @@
         "D": "Escherichia coli"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4166,
@@ -83373,7 +83657,9 @@
         "D": "Haemophilus parasuis"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4168,
@@ -83694,7 +83980,9 @@
         "D": "家禽流行性感冒"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4184,
@@ -84314,7 +84602,9 @@
         "D": "wheal"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4215,
@@ -84354,7 +84644,9 @@
         "D": "scabies"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4217,
@@ -84434,7 +84726,9 @@
         "D": "犬瘟熱"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4221,
@@ -84674,7 +84968,9 @@
         "D": "white spot syndrome baculovirus complex"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4233,
@@ -84714,7 +85010,9 @@
         "D": "Dactylogyrus spp. infection"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4235,
@@ -84754,7 +85052,9 @@
         "D": "Pseudodactylogyrus spp."
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4237,
@@ -84794,7 +85094,9 @@
         "D": "Streptobacillus moniliformis"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4239,
@@ -84854,7 +85156,9 @@
         "D": "圖中各年齡層呈現的百分比為年齡別盛行率（age-specific prevalence）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4242,
@@ -85274,7 +85578,9 @@
         "D": "禽肉包裝束口"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4263,
@@ -86374,7 +86680,9 @@
         "D": "0.067 per dog-month at risk"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4318,
@@ -86834,7 +87142,9 @@
         "D": "血色食道蟲性肉芽腫"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4341,
@@ -87655,7 +87965,9 @@
         "D": "皮黴菌病（dermatophytosis）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4382,
@@ -87675,7 +87987,9 @@
         "D": "pseudomycetoma"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4383,
@@ -87895,7 +88209,9 @@
         "D": "spermatic granuloma"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4394,
@@ -87915,7 +88231,9 @@
         "D": "focal spermatid metaplasia"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4395,
@@ -89957,7 +90275,9 @@
         "D": "Howell-Jolly body，紅血球中細胞核的殘留物"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4497,
@@ -90117,7 +90437,9 @@
         "D": "單核球，Heinz bodies"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4505,
@@ -90137,7 +90459,9 @@
         "D": "單核球"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4506,
@@ -90177,7 +90501,9 @@
         "D": "basophilic leukemia"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4508,
@@ -90197,7 +90523,9 @@
         "D": "化膿性炎症病變之形成期"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4509,
@@ -91677,7 +92005,9 @@
         "D": "直腸脫垂"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4583,
@@ -92117,7 +92447,9 @@
         "D": "張口呼吸"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4605,
@@ -92257,7 +92589,9 @@
         "D": "念珠菌"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4612,
@@ -92577,7 +92911,9 @@
         "D": "所有數值皆無異常"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4628,
@@ -92677,7 +93013,9 @@
         "D": "畸形胎"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4633,
@@ -92837,7 +93175,9 @@
         "D": "乏情期（anoestrus）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4641,
@@ -93117,7 +93457,9 @@
         "D": "Cystoisospora suis"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4655,
@@ -94097,7 +94439,9 @@
         "D": "Microsporum canis"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4704,
@@ -94217,7 +94561,9 @@
         "D": "Photobacterium damselae ssp. piscicida"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4710,
@@ -94237,7 +94583,9 @@
         "D": "Diplostomum spp."
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4711,
@@ -94257,7 +94605,9 @@
         "D": "Centrocestus formosanus"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4712,
@@ -97257,7 +97607,9 @@
         "D": "exudative epidermitis"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4862,
@@ -97277,7 +97629,9 @@
         "D": "viral papilloma"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4863,
@@ -97477,7 +97831,9 @@
         "D": "骨質石化病（osteopetrosis）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4873,
@@ -97497,7 +97853,9 @@
         "D": "varicocele"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4874,
@@ -97517,7 +97875,9 @@
         "D": "interstitial cell tumor"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4875,
@@ -99757,7 +100117,9 @@
         "D": "canine distemper inclusion body"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4987,
@@ -99777,7 +100139,9 @@
         "D": "化膿性炎症病變之形成期"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 4988,
@@ -100037,7 +100401,9 @@
         "D": "HDL 2"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5001,
@@ -100857,7 +101223,9 @@
         "D": "無汗症（anhidrosis）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5042,
@@ -100917,7 +101285,9 @@
         "D": "angular limb deformity"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5045,
@@ -101137,7 +101507,9 @@
         "D": "重瓣胃食滯"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5056,
@@ -101237,7 +101609,9 @@
         "D": "連續IV注射oxytetracycline"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5061,
@@ -101437,7 +101811,9 @@
         "D": "右心室擴大（right ventricular enlargement）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5071,
@@ -101737,7 +102113,9 @@
         "D": "側照右中葉可見支氣管圖像（bronchial pattern）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5086,
@@ -102317,7 +102695,9 @@
         "D": "follicle-stimulating hormone（FSH）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5115,
@@ -102517,7 +102897,9 @@
         "D": "致病原為一螺旋體"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5125,
@@ -103477,7 +103859,9 @@
         "D": "Babesia gibsoni"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5173,
@@ -103637,7 +104021,9 @@
         "D": "skin scraping"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5181,
@@ -103717,7 +104103,9 @@
         "D": "車輪蟲"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5185,
@@ -103977,7 +104365,9 @@
         "D": "Polyplax serrata"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5198,
@@ -105817,7 +106207,9 @@
         "D": "豬鐵士古病毒（Teschovirus）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5290,
@@ -105897,7 +106289,9 @@
         "D": "後腔靜脈症候群"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5294,
@@ -106177,7 +106571,9 @@
         "D": "此現象多與貧血有關"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5308,
@@ -106197,7 +106593,9 @@
         "D": "①②③"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5309,
@@ -106257,7 +106655,9 @@
         "D": "tiger heart"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5312,
@@ -106297,7 +106697,9 @@
         "D": "liquefactive necrosis"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5314,
@@ -106437,7 +106839,9 @@
         "D": "蛀牙（cavities）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5321,
@@ -106757,7 +107161,9 @@
         "D": "左圖－gitter cells，右圖－intramyelinic edema，犬瘟熱"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5337,
@@ -106877,7 +107283,9 @@
         "D": "dermatophytosis"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5343,
@@ -107097,7 +107505,9 @@
         "D": "pyometra"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5354,
@@ -107137,7 +107547,9 @@
         "D": "fibroadenomatous hyperplasia"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5356,
@@ -109177,7 +109589,9 @@
         "D": "platelet"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5458,
@@ -110497,7 +110911,9 @@
         "D": "C 為 radial carpal bone"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5524,
@@ -110517,7 +110933,9 @@
         "D": "賽前密集訓練的結果"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5525,
@@ -111118,7 +111536,9 @@
         "D": "50/min"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5555,
@@ -111698,7 +112118,9 @@
         "D": "外展拇長肌肌腱（abductor pollicis longus tendon）種子骨"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5584,
@@ -111838,7 +112260,9 @@
         "D": "以助產器進行胎兒牽引"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5591,
@@ -112018,7 +112442,9 @@
         "D": "pyometra"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5600,
@@ -112078,7 +112504,9 @@
         "D": "sporulated oocyst"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5603,
@@ -112138,7 +112566,9 @@
         "D": "Staphylococcus aureus"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5606,
@@ -112158,7 +112588,9 @@
         "D": "沙門氏菌症"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5607,
@@ -113339,7 +113771,9 @@
         "D": "sea lice"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5666,
@@ -113479,7 +113913,9 @@
         "D": "Pseudomonas anguilliseptica"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5673,
@@ -113579,7 +114015,9 @@
         "D": "lymphocytic choriomeningitis virus"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5678,
@@ -115399,7 +115837,9 @@
         "D": "病畜皮膚不一定會出現組織病變"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5769,
@@ -115499,7 +115939,9 @@
         "D": "常與左心衰竭有關"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5774,
@@ -115739,7 +116181,9 @@
         "D": "切片下可見骨髓組織壞死"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5786,
@@ -115779,7 +116223,9 @@
         "D": "Babesia gibsoni"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5788,
@@ -115799,7 +116245,9 @@
         "D": "plasmacytoma"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5789,
@@ -115859,7 +116307,9 @@
         "D": "myocardial mineralization"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5792,
@@ -115879,7 +116329,9 @@
         "D": "leucocytozoonosis"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5793,
@@ -116039,7 +116491,9 @@
         "D": "cervidpoxvirus"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5801,
@@ -116359,7 +116813,9 @@
         "D": "腦水腫"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5817,
@@ -116479,7 +116935,9 @@
         "D": "filamentous bacteria"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5823,
@@ -116499,7 +116957,9 @@
         "D": "histoplasmosis"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5824,
@@ -116659,7 +117119,9 @@
         "D": "畸胎瘤"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5832,
@@ -118679,7 +119141,9 @@
         "D": "馬"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5933,
@@ -118719,7 +119183,9 @@
         "D": "有核紅血球的核"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5935,
@@ -119719,7 +120185,9 @@
         "D": "白血球"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 5985,
@@ -120059,7 +120527,9 @@
         "D": "會厭包嵌（epiglottic entrapment）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6002,
@@ -120099,7 +120569,9 @@
         "D": "flexed dorsoplantar projection"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6004,
@@ -120119,7 +120591,9 @@
         "D": "intermediate ridge of the talus"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6005,
@@ -120139,7 +120613,9 @@
         "D": "腐蹄（thrush）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6006,
@@ -120500,7 +120976,9 @@
         "D": "丁"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6024,
@@ -120540,7 +121018,9 @@
         "D": "④"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6026,
@@ -120740,7 +121220,9 @@
         "D": "淋巴結（lymph node）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6036,
@@ -121500,7 +121982,9 @@
         "D": "胎兒在此狀況下容易缺氧"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6074,
@@ -121540,7 +122024,9 @@
         "D": "注射estradiol，7天後注射prostaglandin F2α"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6076,
@@ -121840,7 +122326,9 @@
         "D": "Cystoisospora suis"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6091,
@@ -122040,7 +122528,9 @@
         "D": "豬沙門氏菌感染症"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6101,
@@ -122960,7 +123450,9 @@
         "D": "Gyrodactylus"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6147,
@@ -123060,7 +123552,9 @@
         "D": "leech"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6152,
@@ -123180,7 +123674,9 @@
         "D": "Balantidium caviae"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6158,
@@ -124020,7 +124516,9 @@
         "D": "丁式標誌"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
     },
     {
       "id": 6200,

@@ -714,6 +714,47 @@ function buildTargets(filterExam, filterYear) {
     { s: '66', subject: '獸醫公共衛生學', tag: 'vet_public_health', name: '獸醫公共衛生學' },
   ]
   add('vet', 'questions-vet.json', '100', '100130', '第二次', '307', vetSubs020)
+  // Vet 101年 第二次 — c=307 in 101100
+  add('vet', 'questions-vet.json', '101', '101100', '第二次', '307', vetSubs020)
+
+  // Pharma 101年 第二次 — c=310 in 101100 (pharma1+pharma2 share class code)
+  add('pharma1', 'questions-pharma1.json', '101', '101100', '第二次', '310', pharma1Subs310)
+  add('pharma2', 'questions-pharma2.json', '101', '101100', '第二次', '310', pharma2Subs310)
+
+  // ─── 101110 第二次 (030 series, NEW session code — 030 考試的第二次) ───
+  // doctor1/doctor2/tcm1/tcm2/nutrition/medlab/nursing all share this session
+  add('doctor1', 'questions.json', '101', '101110', '第二次', '101', doctor1Subs)
+  add('doctor2', 'questions-doctor2.json', '101', '101110', '第二次', '102', doctor2Subs)
+  // tcm: c=103 combined class code (s=0201-0202 tcm1, s=0203-0206 tcm2)
+  add('tcm1', 'questions-tcm1.json', '101', '101110', '第二次', '103', [
+    { s: '0201', subject: '中醫基礎醫學(一)', tag: 'tcm_basic_1', name: '中醫基礎醫學(一)' },
+    { s: '0202', subject: '中醫基礎醫學(二)', tag: 'tcm_basic_2', name: '中醫基礎醫學(二)' },
+  ])
+  add('tcm2', 'questions-tcm2.json', '101', '101110', '第二次', '103', [
+    { s: '0203', subject: '中醫臨床醫學(一)', tag: 'tcm_clinical_1', name: '中醫臨床醫學(一)' },
+    { s: '0204', subject: '中醫臨床醫學(二)', tag: 'tcm_clinical_2', name: '中醫臨床醫學(二)' },
+    { s: '0205', subject: '中醫臨床醫學(三)', tag: 'tcm_clinical_3', name: '中醫臨床醫學(三)' },
+    { s: '0206', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
+  ])
+  // nutrition: c=105, s=0301-0306
+  add('nutrition', 'questions-nutrition.json', '101', '101110', '第二次', '105', nutritionSubs104030)
+  // medlab: c=108, s=0107 + 0501-0505
+  add('medlab', 'questions-medlab.json', '101', '101110', '第二次', '108', [
+    { s: '0107', subject: '臨床生理學與病理學', tag: 'clinical_physio_path', name: '臨床生理學與病理學' },
+    { s: '0501', subject: '臨床血液學與血庫學', tag: 'hematology', name: '臨床血液學與血庫學' },
+    { s: '0502', subject: '醫學分子檢驗學與臨床鏡檢學', tag: 'molecular', name: '臨床鏡檢學（包括寄生蟲學）' },
+    { s: '0503', subject: '微生物學與臨床微生物學', tag: 'microbiology', name: '微生物學及臨床微生物學' },
+    { s: '0504', subject: '生物化學與臨床生化學', tag: 'biochemistry', name: '生物化學與臨床生化學' },
+    { s: '0505', subject: '臨床血清免疫學與臨床病毒學', tag: 'serology', name: '臨床血清免疫學與臨床病毒學' },
+  ])
+  // nursing: c=109, s=0108 (基礎醫學) + 0601-0604
+  add('nursing', 'questions-nursing.json', '101', '101110', '第二次', '109', [
+    { s: '0108', subject: '基礎醫學', tag: 'basic_medicine', name: '基礎醫學' },
+    { s: '0601', subject: '基本護理學與護理行政', tag: 'basic_nursing', name: '基本護理學' },
+    { s: '0602', subject: '內外科護理學', tag: 'med_surg', name: '內外科護理學' },
+    { s: '0603', subject: '產兒科護理學', tag: 'obs_ped', name: '產兒科護理學' },
+    { s: '0604', subject: '精神科與社區衛生護理學', tag: 'psych_community', name: '精神科與社區衛生護理學' },
+  ])
 
   return targets
 }

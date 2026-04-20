@@ -344,6 +344,13 @@ function buildTargets(filterExam, filterYear) {
     { s: '0604', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
   ]
   add('tcm2', 'questions-tcm2.json', '102', '102030', '第一次', '110', tcm2Subs102)
+  // 102110 第二次: c=105 tcm2 (s=0203-0206)
+  add('tcm2', 'questions-tcm2.json', '102', '102110', '第二次', '105', [
+    { s: '0203', subject: '中醫臨床醫學(一)', tag: 'tcm_clinical_1', name: '中醫臨床醫學(一)' },
+    { s: '0204', subject: '中醫臨床醫學(二)', tag: 'tcm_clinical_2', name: '中醫臨床醫學(二)' },
+    { s: '0205', subject: '中醫臨床醫學(三)', tag: 'tcm_clinical_3', name: '中醫臨床醫學(三)' },
+    { s: '0206', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
+  ])
   // TCM2 yr103 — split: c=110 has subjects 0601-0603, c=109 has 0503-0504
   add('tcm2', 'questions-tcm2.json', '103', '103030', '第一次', '110', [
     { s: '0601', subject: '中醫臨床醫學(一)', tag: 'tcm_clinical_1', name: '中醫臨床醫學(一)' },

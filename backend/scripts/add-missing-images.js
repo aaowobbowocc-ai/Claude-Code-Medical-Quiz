@@ -338,7 +338,7 @@ const EXAM_REGISTRY = {
   ot:        { file: 'questions-ot.json',        classCodes: ['312','305'], examName: '職能治療師' },
   vet:       { file: 'questions-vet.json',       classCodes: ['314','307'], examName: '獸醫師' },
   tcm1:      { file: 'questions-tcm1.json',      classCodes: ['317','101','103','106','107'], examName: '中醫師(一)' },
-  tcm2:      { file: 'questions-tcm2.json',      classCodes: ['318','102','103','104','106','107'], examName: '中醫師(二)' },
+  tcm2:      { file: 'questions-tcm2.json',      classCodes: ['318','102','103','104','105','106','107'], examName: '中醫師(二)' },
   radiology: { file: 'questions-radiology.json', classCodes: ['309','308'], examName: '醫事放射師' },
 }
 
@@ -447,7 +447,7 @@ async function pickClassCode(examTag, code, candidates, jsonSubjects) {
       if (await pdfMatchesExam(buf, expectedName) && await pdfPassesSubject(buf)) { validatedFromCache = true; break }
     }
     if (validatedFromCache) return c
-    for (const probeS of ['0101','0102','0103','0104','0108','0201','0203','0301','0401','0501','0503','0601','0603','0701','1001','11','22','33','44','55','66']) {
+    for (const probeS of ['0101','0102','0103','0104','0108','0201','0203','0301','0303','0304','0401','0501','0503','0601','0603','0701','1001','11','22','33','44','55','66']) {
       try {
         const buf = await cachedPdf(examTag, code, c, probeS)
         if (buf && buf.length > 100000 && await pdfMatchesExam(buf, expectedName) && await pdfPassesSubject(buf)) return c
@@ -591,7 +591,13 @@ async function processExamCode(examTag, code, opts) {
         newPaths.push('/question-images/' + fname)
       }
       if (newPaths.length) {
-        if (!opts.dryRun) q.images = newPaths
+        if (!opts.dryRun) {
+          q.images = newPaths
+          if (q.gap_reason === 'missing_image_dep' || q.incomplete === 'missing_image') {
+            delete q.incomplete
+            delete q.gap_reason
+          }
+        }
         added++
         if (opts.verbose) console.log(`  + ${q.id}: ${newPaths.length} img`)
       }

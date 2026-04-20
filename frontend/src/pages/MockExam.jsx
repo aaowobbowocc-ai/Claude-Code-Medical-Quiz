@@ -258,28 +258,32 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
               </div>
             </button>
 
-            <div className="flex items-center gap-3">
-              <div className="flex-1 h-px bg-gray-200" />
-              <span className="text-gray-400 text-xs">或單獨考一卷</span>
-              <div className="flex-1 h-px bg-gray-200" />
-            </div>
-
-            {PAPERS.map(p => {
-              const singleFee = getSingleExamFee(p)
-              return (
-              <button key={p.id} onClick={() => onStart(p)}
-                className={`w-full text-left rounded-2xl px-5 py-4 border-2 transition-all active:scale-[0.97] ${coins >= singleFee ? 'border-gray-100 bg-white' : 'border-gray-100 bg-gray-50 opacity-60'}`}>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-bold text-lg text-medical-dark">{p.name}</p>
-                    <p className="text-gray-400 text-xs mt-1">{p.subjects}</p>
-                    <p className="text-gray-300 text-xs">{p.count} 題{p.pointsPerQ && p.pointsPerQ !== 1 ? ` · 每題 ${p.pointsPerQ} 分` : ''} / {getPaperTimeLimitMin(p)} 分鐘</p>
-                  </div>
-                  <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {singleFee}</span>
+            {!isFixedBank && (
+              <>
+                <div className="flex items-center gap-3">
+                  <div className="flex-1 h-px bg-gray-200" />
+                  <span className="text-gray-400 text-xs">或單獨考一卷</span>
+                  <div className="flex-1 h-px bg-gray-200" />
                 </div>
-              </button>
-              )
-            })}
+
+                {PAPERS.map(p => {
+                  const singleFee = getSingleExamFee(p)
+                  return (
+                  <button key={p.id} onClick={() => onStart(p)}
+                    className={`w-full text-left rounded-2xl px-5 py-4 border-2 transition-all active:scale-[0.97] ${coins >= singleFee ? 'border-gray-100 bg-white' : 'border-gray-100 bg-gray-50 opacity-60'}`}>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-bold text-lg text-medical-dark">{p.name}</p>
+                        <p className="text-gray-400 text-xs mt-1">{p.subjects}</p>
+                        <p className="text-gray-300 text-xs">{p.count} 題{p.pointsPerQ && p.pointsPerQ !== 1 ? ` · 每題 ${p.pointsPerQ} 分` : ''} / {getPaperTimeLimitMin(p)} 分鐘</p>
+                      </div>
+                      <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {singleFee}</span>
+                    </div>
+                  </button>
+                  )
+                })}
+              </>
+            )}
           </>
         )}
 

@@ -43,7 +43,10 @@ function getExtraPassRules(examId) {
     case 'pharma1': case 'pharma2':
       return [{ icon: '⚠️', text: '任一科零分者不予及格（缺考以零分計算）' }]
     case 'driver-moto': case 'driver-car':
-      return [{ icon: '🚗', text: '85 分及格（40 題 × 2.5 分 = 100 分，答對 34 題以上通過）' }]
+      return [
+        { icon: '🚗', text: '85 分及格（40 題 × 2.5 分 = 100 分，答對 34 題以上通過）' },
+        { icon: '📢', text: '公路局預告 2026 年改制：取消是非題、選擇題由三選一改四選一（實施日期待公布）' },
+      ]
     case 'nursing': case 'nutrition2': case 'medlab': case 'ot':
     default:
       return [{ icon: '⚠️', text: '任一科零分者不予及格（缺考以零分計算）' }]

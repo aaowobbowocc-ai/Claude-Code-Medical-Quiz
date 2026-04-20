@@ -78,8 +78,8 @@ function CoverageRow({ examId, info }) {
     if (!firstActiveYear || yr < firstActiveYear || yr > lastActiveYear) continue
     // Missing first session within active range
     if (s1 === 0) missingCount++
-    // Missing second session for exams that run twice
-    else if (hasSecondSessions && s2 === 0 && firstSecondSessionYear && yr >= firstSecondSessionYear) missingCount++
+    // Missing second session for exams that run twice (115 第二次 尚未舉辦，不算缺)
+    else if (hasSecondSessions && s2 === 0 && firstSecondSessionYear && yr >= firstSecondSessionYear && yr !== '115') missingCount++
   }
 
   const displayYears = activeYears.length > 0 ? activeYears : ALL_YEARS.slice(0, 3)
@@ -97,6 +97,8 @@ function CoverageRow({ examId, info }) {
       if (firstSecondSessionYear && yr < firstSecondSessionYear) {
         return { type: 'none' }
       }
+      // 115 第二次 尚未舉辦
+      if (yr === '115' && !hasSecond) return { type: 'none' }
       // Year has no data at all: gray dot
       if (!hasAny) return { type: 'empty' }
       // Has first but no second: missing

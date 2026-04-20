@@ -87,11 +87,12 @@ function saveProbeCache() {
 }
 const CANDIDATE_SUBJECT_CODES = [
   '11', '22', '33', '44', '55', '66', '77', '88',
-  '0101', '0102', '0103', '0104', '0105', '0106', '0107',
+  '0101', '0102', '0103', '0104', '0105', '0106', '0107', '0108',
   '0201', '0202', '0203', '0204', '0205', '0206',
   '0301', '0302', '0303', '0304', '0305', '0306',
   '0401', '0402', '0403', '0404', '0405', '0406',
-  '0501', '0502', '0503', '0504', '0505',
+  '0501', '0502', '0503', '0504', '0505', '0506',
+  '0601', '0602', '0603', '0604', '0605', '0606',
   '0701', '0702', '0703', '0704', '0705', '0706',
   '0801', '0802', '0803', '0804', '0805',
   '1001', '1002', '1003', '1004', '1005', '1006',
@@ -362,7 +363,9 @@ async function pdfExamName(buf) {
     // Accept an optional 名稱 between 類科 and the colon, and allow CJK
     // brackets / arabic digits in the captured name (covers 中醫師(一) etc).
     const compact = txt.replace(/[\uE000-\uF8FF]/g, '').replace(/\s+/g, '').normalize('NFKC')
-    const m = compact.match(/類科(?:名稱)?[：:]([\u4e00-\u9fff()（）]{2,12})/)
+    // Exclude 科 from the char class so we don't greedily eat the next field
+    // "類科：中醫師 科目：..." — previously captured "中醫師科目".
+    const m = compact.match(/類科(?:名稱)?[：:]([\u4e00-\u9fff()（）]{2,12}?)(?=科目|等別|考試|$)/)
     return m ? m[1] : null
   } catch { return null }
 }
@@ -444,7 +447,7 @@ async function pickClassCode(examTag, code, candidates, jsonSubjects) {
       if (await pdfMatchesExam(buf, expectedName) && await pdfPassesSubject(buf)) { validatedFromCache = true; break }
     }
     if (validatedFromCache) return c
-    for (const probeS of ['0101','0102','0103','0201','0203','0301','0401','0501','0701','1001','11','22','33','44','55','66']) {
+    for (const probeS of ['0101','0102','0103','0104','0108','0201','0203','0301','0401','0501','0503','0601','0603','0701','1001','11','22','33','44','55','66']) {
       try {
         const buf = await cachedPdf(examTag, code, c, probeS)
         if (buf && buf.length > 100000 && await pdfMatchesExam(buf, expectedName) && await pdfPassesSubject(buf)) return c
@@ -510,7 +513,6 @@ async function processExamCode(examTag, code, opts) {
 
   // Parse each PDF
   const pdfs = []
-  const sortedSCodes = [...subjectCodes].sort()
   for (let si = 0; si < subjectCodes.length; si++) {
     const s = subjectCodes[si]
     try {
@@ -518,8 +520,26 @@ async function processExamCode(examTag, code, opts) {
       if (buf.length < 2000) continue
       const parsed = await parsePdfFull(buf)
       const subjName = await pdfSubjectName(buf)
-      const orderIdx = sortedSCodes.indexOf(s)
-      const paperSubject = subjectOrder[orderIdx] || null
+      // Match PDF 科目 to JSON subject by ≥4-char CJK common prefix. Handles
+      // cases like PDF "中醫臨床醫學(包括傷寒論...)" ⟷ JSON "中醫臨床醫學(一)".
+      // Returns null when ambiguous; falls back to null-safe paperSubject use.
+      let paperSubject = null
+      if (subjName) {
+        const ns = normText(subjName)
+        let best = null, bestCommon = 0
+        for (const js of subjectOrder) {
+          const njs = normText(js)
+          let common = 0
+          const len = Math.min(ns.length, njs.length)
+          for (let i = 0; i < len; i++) {
+            if (ns[i] !== njs[i]) break
+            if (/[\u4e00-\u9fff]/.test(ns[i])) common++
+            else break
+          }
+          if (common > bestCommon) { bestCommon = common; best = js }
+        }
+        if (bestCommon >= 4) paperSubject = best
+      }
       pdfs.push({ s, classCode, subjectName: subjName, paperSubject, ...parsed })
     } catch (e) { console.error(`    parse ${s} failed: ${e.message}`) }
   }

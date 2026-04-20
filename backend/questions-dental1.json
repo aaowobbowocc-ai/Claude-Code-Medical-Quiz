@@ -578,8 +578,9 @@
         "D": "4"
       },
       "answer": "C",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_110020_30_0.webp"
+      ]
     },
     {
       "id": "110020_31",
@@ -1305,8 +1306,7 @@
         "C": "hypobolic;sigmoidal",
         "D": "hyperbolic;sigmoidal"
       },
-      "answer": "D",
-      "incomplete": "missing_image"
+      "answer": "D"
     },
     {
       "id": "110020_69",
@@ -2127,8 +2127,7 @@
         "/question-images/dental1_110020_1_30_1.webp",
         "/question-images/dental1_110020_1_30_2.webp",
         "/question-images/dental1_110020_1_30_3.webp"
-      ],
-      "incomplete": "image_options"
+      ]
     },
     {
       "id": "110020_1_31",
@@ -2458,8 +2457,7 @@
         "C": "氧化釔安定之二氧化鋯(Y-TZP)",
         "D": "氫氧基磷灰石奈米晶用於Y-TZP鑲面(ceramic with HAP nanocrystals for veneering Y-TZP)"
       },
-      "answer": "C",
-      "incomplete": "image_options"
+      "answer": "C"
     },
     {
       "id": "110020_1_48",
@@ -3824,8 +3822,7 @@
         "/question-images/dental1_111020_38_1.webp",
         "/question-images/dental1_111020_38_2.webp",
         "/question-images/dental1_111020_38_3.webp"
-      ],
-      "incomplete": "image_options"
+      ]
     },
     {
       "id": "111020_39",
@@ -6464,8 +6461,7 @@
         "/question-images/dental1_111100_15_1.webp",
         "/question-images/dental1_111100_15_2.webp",
         "/question-images/dental1_111100_15_3.webp"
-      ],
-      "incomplete": "image_options"
+      ]
     },
     {
       "id": "111100_16",
@@ -14165,8 +14161,7 @@
         "/question-images/dental1_112100_1_15_1.webp",
         "/question-images/dental1_112100_1_15_2.webp",
         "/question-images/dental1_112100_1_15_3.webp"
-      ],
-      "incomplete": "image_options"
+      ]
     },
     {
       "id": "112100_1_16",
@@ -15902,8 +15897,7 @@
       "images": [
         "/question-images/dental1_113020_25_0.webp",
         "/question-images/dental1_113020_25_1.webp"
-      ],
-      "incomplete": "image_options"
+      ]
     },
     {
       "id": "113020_26",
@@ -17150,8 +17144,7 @@
         "/question-images/dental1_113020_1_9_1.webp",
         "/question-images/dental1_113020_1_9_2.webp",
         "/question-images/dental1_113020_1_9_3.webp"
-      ],
-      "incomplete": "image_options"
+      ]
     },
     {
       "id": "113020_1_10",
@@ -18992,8 +18985,7 @@
         "/question-images/dental1_113090_24_1.webp",
         "/question-images/dental1_113090_24_2.webp",
         "/question-images/dental1_113090_24_3.webp"
-      ],
-      "incomplete": "image_options"
+      ]
     },
     {
       "id": "113090_25",
@@ -23244,8 +23236,7 @@
         "/question-images/dental1_114020_1_6_1.webp",
         "/question-images/dental1_114020_1_6_2.webp",
         "/question-images/dental1_114020_1_6_3.webp"
-      ],
-      "incomplete": "image_options"
+      ]
     },
     {
       "id": "114020_1_7",
@@ -25946,8 +25937,7 @@
         "C": "三級結構",
         "D": "四級結構"
       },
-      "answer": "B",
-      "incomplete": "missing_image"
+      "answer": "B"
     },
     {
       "id": "114090_68",
@@ -26422,8 +26412,7 @@
         "/question-images/dental1_114090_1_11_2.webp",
         "/question-images/dental1_114090_1_11_3.webp",
         "/question-images/dental1_114090_1_11_4.webp"
-      ],
-      "incomplete": "image_options"
+      ]
     },
     {
       "id": "114090_1_12",
@@ -29002,8 +28991,7 @@
         "/question-images/dental1_115020_65_2.webp",
         "/question-images/dental1_115020_65_3.webp",
         "/question-images/dental1_115020_65_4.webp"
-      ],
-      "incomplete": "image_options"
+      ]
     },
     {
       "id": "115020_66",
@@ -34156,8 +34144,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020344_0.webp"
+      ]
     },
     {
       "id": 115020345,
@@ -34238,8 +34227,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020348_0.webp"
+      ]
     },
     {
       "id": 115020349,
@@ -34361,8 +34351,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020354_0.webp"
+      ]
     },
     {
       "id": 115020355,
@@ -34423,8 +34414,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020357_0.webp"
+      ]
     },
     {
       "id": 115020358,
@@ -35165,8 +35157,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020394_0.webp"
+      ]
     },
     {
       "id": 115020395,
@@ -35466,8 +35459,7 @@
         "D": "thiamine pyrophosphate（TPP）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020410,
@@ -35687,8 +35679,7 @@
         "D": "aminoacyl-tRNA synthetase具校正能力賦有確保轉譯正確性（fidelity）的功能"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020421,
@@ -35709,8 +35700,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020421_0.webp"
+      ]
     },
     {
       "id": 115020422,
@@ -35771,8 +35763,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020424_0.webp"
+      ]
     },
     {
       "id": 115020425,
@@ -35833,8 +35826,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020427_0.webp"
+      ]
     },
     {
       "id": 115020428,
@@ -35994,8 +35988,7 @@
         "D": "手術切除後，常見復發"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020436,
@@ -36216,8 +36209,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020446_0.webp"
+      ]
     },
     {
       "id": 115020447,
@@ -36497,8 +36491,7 @@
         "D": "Natural gas"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020461,
@@ -37058,8 +37051,7 @@
         "D": "Prostaglandin的釋放"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020489,
@@ -37139,8 +37131,7 @@
         "D": "代謝產物trichloroethanol在體內之半衰期為4～12小時"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020493,
@@ -37200,8 +37191,7 @@
         "D": "Aspirin + heparin"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020496,
@@ -37384,8 +37374,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020504_0.webp"
+      ]
     },
     {
       "id": 115020505,
@@ -37526,8 +37517,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020511_0.webp"
+      ]
     },
     {
       "id": 115020512,
@@ -37787,8 +37779,7 @@
         "D": "J"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020525,
@@ -38249,8 +38240,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020547_0.webp"
+      ]
     },
     {
       "id": 115020548,
@@ -38271,8 +38263,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020548_0.webp"
+      ]
     },
     {
       "id": 115020549,
@@ -38672,8 +38665,7 @@
         "D": "imatinib mesylate（Gleevec）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020569,
@@ -38733,8 +38725,7 @@
         "D": "succinate"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020572,
@@ -38794,8 +38785,7 @@
         "D": "cAMP"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020575,
@@ -38895,8 +38885,7 @@
         "D": "actinomycin D可透過與核糖體結合，抑制原核生物之蛋白質合成"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020580,
@@ -38917,8 +38906,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020580_0.webp"
+      ]
     },
     {
       "id": 115020581,
@@ -38939,8 +38929,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020581_0.webp"
+      ]
     },
     {
       "id": 115020582,
@@ -39981,8 +39972,7 @@
         "D": "CD40"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020634,
@@ -40002,8 +39992,7 @@
         "D": "C5b"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020635,
@@ -40123,8 +40112,7 @@
         "D": "Streptococcus oralis"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020641,
@@ -40204,8 +40192,7 @@
         "D": "Cephradine"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020645,
@@ -40225,8 +40212,7 @@
         "D": "Tetracycline"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020646,
@@ -40266,8 +40252,7 @@
         "D": "Bupivacaine"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020648,
@@ -40708,8 +40693,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020669_0.webp"
+      ]
     },
     {
       "id": 115020670,
@@ -41431,8 +41417,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020705_0.webp"
+      ]
     },
     {
       "id": 115020706,
@@ -41452,8 +41439,7 @@
         "D": "von Korff's fibers"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020707,
@@ -41614,8 +41600,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020714_0.webp"
+      ]
     },
     {
       "id": 115020715,
@@ -41636,8 +41623,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020715_0.webp"
+      ]
     },
     {
       "id": 115020716,
@@ -41777,8 +41765,7 @@
         "D": "uracil"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020723,
@@ -41838,8 +41825,7 @@
         "D": "superoxide dismutase"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020726,
@@ -41979,8 +41965,7 @@
         "D": "ligation"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020733,
@@ -42040,8 +42025,7 @@
         "D": "upstream activator sequence（UAS）"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020736,
@@ -42062,7 +42046,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true
+      "images": [
+        "/question-images/dental1_115020736_0.webp"
+      ]
     },
     {
       "id": 115020737,
@@ -42202,8 +42188,7 @@
         "D": "Reiter's syndrome"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020744,
@@ -42263,8 +42248,7 @@
         "D": "CDla"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020747,
@@ -42745,7 +42729,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true
+      "images": [
+        "/question-images/dental1_115020770_0.webp"
+      ]
     },
     {
       "id": 115020771,
@@ -42805,8 +42791,7 @@
         "D": "benzyl peroxide"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020774,
@@ -43126,8 +43111,7 @@
         "D": "C9b"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020790,
@@ -43187,8 +43171,7 @@
         "D": "Augmentin"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020793,
@@ -43288,8 +43271,7 @@
         "C": "浸泡於稀釋的iodophor中"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020798,
@@ -43309,8 +43291,7 @@
         "D": "Buprenorphine"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020799,
@@ -43330,8 +43311,7 @@
         "D": "Codeine與morphine的止咳作用效果相當"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020800,
@@ -43491,8 +43471,7 @@
         "D": "Nicotinic acid"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020808,
@@ -43552,8 +43531,7 @@
         "D": "B-淋巴球（B-lymphocyte）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020811,
@@ -43593,8 +43571,7 @@
         "D": "Chlorhexidine"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020813,
@@ -43675,8 +43652,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020816_0.webp"
+      ]
     },
     {
       "id": 115020817,
@@ -44058,8 +44036,7 @@
         "D": "D.28"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020836,
@@ -44260,8 +44237,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020845_0.webp"
+      ]
     },
     {
       "id": 115020846,
@@ -44442,8 +44420,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020854_0.webp"
+      ]
     },
     {
       "id": 115020855,
@@ -44504,8 +44483,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020857_0.webp"
+      ]
     },
     {
       "id": 115020858,
@@ -44646,8 +44626,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020864_0.webp"
+      ]
     },
     {
       "id": 115020865,
@@ -45147,8 +45128,7 @@
         "D": "hormone response element（HRE）"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020890,
@@ -45208,8 +45188,7 @@
         "D": "zinc finger"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020893,
@@ -45230,8 +45209,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020893_0.webp"
+      ]
     },
     {
       "id": 115020894,
@@ -45272,8 +45252,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020895_0.webp"
+      ]
     },
     {
       "id": 115020896,
@@ -45294,8 +45275,11 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020896_0.webp",
+        "/question-images/dental1_115020896_1.webp",
+        "/question-images/dental1_115020896_2.webp"
+      ]
     },
     {
       "id": 115020897,
@@ -45335,8 +45319,7 @@
         "D": "Magnesium oxide"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020899,
@@ -45717,8 +45700,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020917_0.webp"
+      ]
     },
     {
       "id": 115020918,
@@ -46359,8 +46343,7 @@
         "D": "Bacillus anthracis"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020950,
@@ -46480,8 +46463,7 @@
         "C": "Ketorolac"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020956,
@@ -46541,8 +46523,7 @@
         "D": "Cytochrome P450 monooxygenase"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020959,
@@ -46582,8 +46563,7 @@
         "D": "Mepivacaine"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020961,
@@ -46844,8 +46824,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020973_0.webp"
+      ]
     },
     {
       "id": 115020974,
@@ -46906,8 +46887,10 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020976_0.webp",
+        "/question-images/dental1_115020976_1.webp"
+      ]
     },
     {
       "id": 115020977,
@@ -47048,8 +47031,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020983_0.webp"
+      ]
     },
     {
       "id": 115020984,
@@ -47070,8 +47054,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115020984_0.webp"
+      ]
     },
     {
       "id": 115020985,
@@ -47832,8 +47817,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021022_0.webp"
+      ]
     },
     {
       "id": 115021023,
@@ -47994,8 +47980,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021030_0.webp"
+      ]
     },
     {
       "id": 115021031,
@@ -48115,8 +48102,7 @@
         "C": "Anterior tympanic artery"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021037,
@@ -48296,8 +48282,7 @@
         "D": "Apo-E"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021046,
@@ -48478,8 +48463,10 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021054_0.webp",
+        "/question-images/dental1_115021054_1.webp"
+      ]
     },
     {
       "id": 115021055,
@@ -48779,8 +48766,7 @@
         "D": "顆粒性白血球"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021070,
@@ -48840,8 +48826,7 @@
         "D": "CBCD1"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021073,
@@ -48881,8 +48866,7 @@
         "D": "calcifying odontogenic cyst最常發⽣在上顎的前齒區"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021075,
@@ -48923,8 +48907,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021076_0.webp"
+      ]
     },
     {
       "id": 115021077,
@@ -48965,8 +48950,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021078_0.webp"
+      ]
     },
     {
       "id": 115021079,
@@ -49246,8 +49232,7 @@
         "D": "Camphorquinone 光起始劑不會影響樹脂聚合前後⾊差"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021093,
@@ -49327,8 +49312,7 @@
         "D": "HEMA"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021097,
@@ -49508,8 +49492,7 @@
         "D": "麻疹疫苗（measles vaccine）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021106,
@@ -49669,8 +49652,7 @@
         "D": "Cl-"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021114,
@@ -49730,8 +49712,7 @@
         "D": "Monoamine oxidase inhibitors"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021117,
@@ -49871,8 +49852,7 @@
         "D": "Cellulose"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021124,
@@ -49892,8 +49872,7 @@
         "C": "lopidogrel"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021125,
@@ -49913,8 +49892,7 @@
         "D": "Prednisone（Deltasone）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021126,
@@ -49954,8 +49932,7 @@
         "D": "Tyrosine kinase inhibitors"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021128,
@@ -49995,8 +49972,7 @@
         "D": "Chlorhexidine對微⽣物孢⼦之殺菌（sporicidal）效果佳"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021130,
@@ -50016,8 +49992,7 @@
         "C": "Antisepsis"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021131,
@@ -50098,8 +50073,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021134_0.webp"
+      ]
     },
     {
       "id": 115021135,
@@ -50280,8 +50256,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021143_0.webp"
+      ]
     },
     {
       "id": 115021144,
@@ -51001,8 +50978,7 @@
         "D": "Root area"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021180,
@@ -51063,8 +51039,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021182_0.webp"
+      ]
     },
     {
       "id": 115021183,
@@ -51404,8 +51381,7 @@
         "D": "ornithine"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021200,
@@ -51425,8 +51401,7 @@
         "D": "ATP 合成酶（ATP synthase）"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021201,
@@ -51486,8 +51461,7 @@
         "D": "intestinal mucosa"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021204,
@@ -51788,8 +51762,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021218_0.webp"
+      ]
     },
     {
       "id": 115021219,
@@ -51950,8 +51925,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021226_0.webp"
+      ]
     },
     {
       "id": 115021227,
@@ -52031,8 +52007,7 @@
         "D": "多發性阻生齒"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021231,
@@ -52133,8 +52108,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021235_0.webp"
+      ]
     },
     {
       "id": 115021236,
@@ -52175,8 +52151,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021237_0.webp"
+      ]
     },
     {
       "id": 115021238,
@@ -52516,8 +52493,7 @@
         "D": "Silane"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021255,
@@ -52897,8 +52873,7 @@
         "D": "B細胞（B cells）"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021274,
@@ -52958,8 +52933,7 @@
         "D": "Cefepime HCl（Maxipime）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021277,
@@ -53059,8 +53033,7 @@
         "D": "Reteplase"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021282,
@@ -53080,8 +53053,7 @@
         "D": "Antibiotics"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021283,
@@ -53101,8 +53073,7 @@
         "D": "Coumarin作用在與維他命K相關的凝血因子"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021284,
@@ -53122,8 +53093,7 @@
         "D": "bispiperidine"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021285,
@@ -53143,8 +53113,7 @@
         "D": "actinomycin D可通過血腦障礙（blood-brain barrier）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021286,
@@ -53164,8 +53133,7 @@
         "D": "Monofluorophosphate"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021287,
@@ -53205,8 +53173,7 @@
         "D": "Quaternary ammonium compounds"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021289,
@@ -53447,8 +53414,10 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021300_0.webp",
+        "/question-images/dental1_115021300_1.webp"
+      ]
     },
     {
       "id": 115021301,
@@ -53469,8 +53438,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021301_0.webp"
+      ]
     },
     {
       "id": 115021302,
@@ -53711,8 +53681,7 @@
         "D": "L"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021314,
@@ -54213,8 +54182,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021338_0.webp"
+      ]
     },
     {
       "id": 115021339,
@@ -54254,8 +54224,7 @@
         "D": "Alcian blue及Masson's trichrome 染色法"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021341,
@@ -54396,8 +54365,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021347_0.webp"
+      ]
     },
     {
       "id": 115021348,
@@ -54617,8 +54587,7 @@
         "D": "aspartate"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021359,
@@ -54758,8 +54727,7 @@
         "D": "alkylation of base"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021366,
@@ -54899,8 +54867,7 @@
         "D": "CMV"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021373,
@@ -54920,8 +54887,7 @@
         "C": "trismus"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021374,
@@ -54962,8 +54928,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021375_0.webp"
+      ]
     },
     {
       "id": 115021376,
@@ -55286,8 +55253,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021391_0.webp"
+      ]
     },
     {
       "id": 115021392,
@@ -55307,8 +55275,7 @@
         "D": "cemento-ossifying fibroma"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021393,
@@ -55329,8 +55296,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021393_0.webp"
+      ]
     },
     {
       "id": 115021394,
@@ -55351,8 +55319,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021394_0.webp"
+      ]
     },
     {
       "id": 115021395,
@@ -55413,8 +55382,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021397_0.webp"
+      ]
     },
     {
       "id": 115021398,
@@ -55594,8 +55564,7 @@
         "D": "hydroquinone"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021407,
@@ -55915,8 +55884,7 @@
         "D": "主要存在於骨髓及其他淋巴組織"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021423,
@@ -55976,8 +55944,7 @@
         "D": "DNAase"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021426,
@@ -56057,8 +56024,7 @@
         "D": "C5"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021430,
@@ -56098,8 +56064,7 @@
         "D": "fluconazole"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021432,
@@ -56139,8 +56104,7 @@
         "C": "morphine"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021434,
@@ -56260,8 +56224,7 @@
         "D": "tetracyclines"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021440,
@@ -56341,8 +56304,7 @@
         "D": "alvimopan"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021444,
@@ -56362,8 +56324,7 @@
         "D": "cyclophosphamide"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021445,
@@ -56383,8 +56344,7 @@
         "D": "高濃度PGE 2 會促進血小板凝集，低濃度PGE 2 會抑制血小板凝集"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021446,
@@ -56404,8 +56364,7 @@
         "D": "folinic acid"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021447,
@@ -57047,8 +57006,7 @@
         "D": "D."
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021479,
@@ -57329,8 +57287,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021492_0.webp"
+      ]
     },
     {
       "id": 115021493,
@@ -57451,8 +57410,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021498_0.webp"
+      ]
     },
     {
       "id": 115021499,
@@ -57573,8 +57533,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021504_0.webp"
+      ]
     },
     {
       "id": 115021505,
@@ -57794,8 +57755,7 @@
         "D": "Kd"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021516,
@@ -58056,8 +58016,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021528_0.webp"
+      ]
     },
     {
       "id": 115021529,
@@ -58078,8 +58039,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021529_0.webp"
+      ]
     },
     {
       "id": 115021530,
@@ -58179,8 +58141,7 @@
         "D": "Langerhans cell rupture"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021535,
@@ -58621,8 +58582,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021556_0.webp"
+      ]
     },
     {
       "id": 115021557,
@@ -58743,8 +58705,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021562_0.webp"
+      ]
     },
     {
       "id": 115021563,
@@ -59776,7 +59739,11 @@
         "C": "若兩圖中固體皆為蠟，液體表面張力（surface tension）：a大於b",
         "D": "若兩圖中固體皆為蠟，液體內聚力（cohesive force）：b大於a"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/dental1_115021614_0.webp",
+        "/question-images/dental1_115021614_1.webp"
+      ]
     },
     {
       "id": "115021615",
@@ -60252,8 +60219,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021638_0.webp"
+      ]
     },
     {
       "id": 115021639,
@@ -60274,8 +60242,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021639_0.webp"
+      ]
     },
     {
       "id": 115021640,
@@ -60296,8 +60265,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021640_0.webp"
+      ]
     },
     {
       "id": 115021641,
@@ -61079,8 +61049,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021679_0.webp"
+      ]
     },
     {
       "id": 115021680,
@@ -61141,8 +61112,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021682_0.webp"
+      ]
     },
     {
       "id": 115021683,
@@ -61963,8 +61935,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021723_0.webp"
+      ]
     },
     {
       "id": 115021724,
@@ -62145,8 +62118,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021732_0.webp"
+      ]
     },
     {
       "id": 115021733,
@@ -62267,8 +62241,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021738_0.webp"
+      ]
     },
     {
       "id": 115021739,
@@ -63129,8 +63104,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021781_0.webp"
+      ]
     },
     {
       "id": 115021782,
@@ -63311,8 +63287,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021790_0.webp"
+      ]
     },
     {
       "id": 115021791,
@@ -63333,8 +63310,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021791_0.webp"
+      ]
     },
     {
       "id": 115021792,
@@ -64316,8 +64294,10 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021840_0.webp",
+        "/question-images/dental1_115021840_1.webp"
+      ]
     },
     {
       "id": 115021841,
@@ -64338,8 +64318,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021841_0.webp"
+      ]
     },
     {
       "id": 115021842,
@@ -64380,8 +64361,10 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021843_0.webp",
+        "/question-images/dental1_115021843_1.webp"
+      ]
     },
     {
       "id": 115021844,
@@ -64402,8 +64385,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021844_0.webp"
+      ]
     },
     {
       "id": 115021845,
@@ -65004,8 +64988,10 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021874_0.webp",
+        "/question-images/dental1_115021874_1.webp"
+      ]
     },
     {
       "id": 115021875,
@@ -65266,8 +65252,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021887_0.webp"
+      ]
     },
     {
       "id": 115021888,
@@ -66509,8 +66496,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021949_0.webp"
+      ]
     },
     {
       "id": 115021950,
@@ -66630,7 +66618,11 @@
         "D": "在右圖標示為 2,3,4,5 處之血管結構中，均有靜脈瓣可以協助控制血流之方向"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/dental1_115021955_0.webp",
+        "/question-images/dental1_115021955_1.webp"
+      ]
     },
     {
       "id": 115021956,
@@ -66651,8 +66643,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021956_0.webp"
+      ]
     },
     {
       "id": 115021957,
@@ -67093,8 +67086,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115021978_0.webp"
+      ]
     },
     {
       "id": 115021979,
@@ -67995,8 +67989,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022023_0.webp"
+      ]
     },
     {
       "id": 115022024,
@@ -68037,8 +68032,11 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022025_0.webp",
+        "/question-images/dental1_115022025_1.webp",
+        "/question-images/dental1_115022025_2.webp"
+      ]
     },
     {
       "id": 115022026,
@@ -68299,8 +68297,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022038_0.webp"
+      ]
     },
     {
       "id": 115022039,
@@ -68621,8 +68620,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022054_0.webp"
+      ]
     },
     {
       "id": 115022055,
@@ -68723,8 +68723,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022059_0.webp"
+      ]
     },
     {
       "id": 115022060,
@@ -68745,8 +68746,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022060_0.webp"
+      ]
     },
     {
       "id": 115022061,
@@ -69587,8 +69589,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022102_0.webp"
+      ]
     },
     {
       "id": 115022103,
@@ -69609,8 +69612,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022103_0.webp"
+      ]
     },
     {
       "id": 115022104,
@@ -69711,8 +69715,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022108_0.webp"
+      ]
     },
     {
       "id": 115022109,
@@ -69813,8 +69818,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022113_0.webp"
+      ]
     },
     {
       "id": 115022114,
@@ -69855,8 +69861,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022115_0.webp"
+      ]
     },
     {
       "id": 115022116,
@@ -71157,8 +71164,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022180_0.webp"
+      ]
     },
     {
       "id": 115022181,
@@ -71179,8 +71187,11 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022181_0.webp",
+        "/question-images/dental1_115022181_1.webp",
+        "/question-images/dental1_115022181_2.webp"
+      ]
     },
     {
       "id": 115022182,
@@ -71201,8 +71212,10 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022182_0.webp",
+        "/question-images/dental1_115022182_1.webp"
+      ]
     },
     {
       "id": 115022183,
@@ -71243,8 +71256,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022184_0.webp"
+      ]
     },
     {
       "id": 115022185,
@@ -71345,8 +71359,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022189_0.webp"
+      ]
     },
     {
       "id": 115022190,
@@ -71627,8 +71642,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022203_0.webp"
+      ]
     },
     {
       "id": 115022204,
@@ -71909,8 +71925,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022217_0.webp"
+      ]
     },
     {
       "id": 115022218,
@@ -71971,8 +71988,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022220_0.webp"
+      ]
     },
     {
       "id": 115022221,
@@ -72933,8 +72951,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022268_0.webp"
+      ]
     },
     {
       "id": 115022269,
@@ -72955,8 +72974,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022269_0.webp"
+      ]
     },
     {
       "id": 115022270,
@@ -72977,8 +72997,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022270_0.webp"
+      ]
     },
     {
       "id": 115022271,
@@ -73159,8 +73180,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022279_0.webp"
+      ]
     },
     {
       "id": 115022280,
@@ -73181,8 +73203,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022280_0.webp"
+      ]
     },
     {
       "id": 115022281,
@@ -74403,8 +74426,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022341_0.webp"
+      ]
     },
     {
       "id": 115022342,
@@ -74444,7 +74468,10 @@
         "D": "丹毒（ erysipelas ）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/dental1_115022343_0.webp"
+      ]
     },
     {
       "id": 115022344,
@@ -76046,8 +76073,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022423_0.webp"
+      ]
     },
     {
       "id": 115022424,
@@ -76228,8 +76256,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022432_0.webp"
+      ]
     },
     {
       "id": 115022433,
@@ -76250,8 +76279,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022433_0.webp"
+      ]
     },
     {
       "id": 115022434,
@@ -76332,8 +76362,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022437_0.webp"
+      ]
     },
     {
       "id": 115022438,
@@ -76634,8 +76665,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022452_0.webp"
+      ]
     },
     {
       "id": 115022453,
@@ -77256,8 +77288,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022483_0.webp"
+      ]
     },
     {
       "id": 115022484,
@@ -77618,8 +77651,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022501_0.webp"
+      ]
     },
     {
       "id": 115022502,
@@ -77800,8 +77834,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022510_0.webp"
+      ]
     },
     {
       "id": 115022511,
@@ -79402,8 +79437,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022590_0.webp"
+      ]
     },
     {
       "id": 115022591,
@@ -80326,8 +80362,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022636_0.webp"
+      ]
     },
     {
       "id": 115022637,
@@ -80808,8 +80845,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022660_0.webp"
+      ]
     },
     {
       "id": 115022661,
@@ -80850,8 +80888,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022662_0.webp"
+      ]
     },
     {
       "id": 115022663,
@@ -81032,8 +81071,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022671_0.webp"
+      ]
     },
     {
       "id": 115022672,
@@ -81314,8 +81354,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022685_0.webp"
+      ]
     },
     {
       "id": 115022686,
@@ -81396,8 +81437,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022689_0.webp"
+      ]
     },
     {
       "id": 115022690,
@@ -81538,8 +81580,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022696_0.webp"
+      ]
     },
     {
       "id": 115022697,
@@ -82620,8 +82663,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022750_0.webp"
+      ]
     },
     {
       "id": 115022751,
@@ -82702,8 +82746,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022754_0.webp"
+      ]
     },
     {
       "id": 115022755,
@@ -82724,8 +82769,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022755_0.webp"
+      ]
     },
     {
       "id": 115022756,
@@ -83307,8 +83353,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022784_0.webp"
+      ]
     },
     {
       "id": 115022785,
@@ -83689,8 +83736,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022803_0.webp"
+      ]
     },
     {
       "id": 115022804,
@@ -84071,8 +84119,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022822_0.webp"
+      ]
     },
     {
       "id": 115022823,
@@ -84473,8 +84522,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022842_0.webp"
+      ]
     },
     {
       "id": 115022843,
@@ -84555,8 +84605,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022846_0.webp"
+      ]
     },
     {
       "id": 115022847,
@@ -84617,8 +84668,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022849_0.webp"
+      ]
     },
     {
       "id": 115022850,
@@ -85704,8 +85756,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022903_0.webp"
+      ]
     },
     {
       "id": 115022904,
@@ -85916,8 +85969,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022913_0.webp"
+      ]
     },
     {
       "id": 115022914,
@@ -86360,8 +86414,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022934_0.webp"
+      ]
     },
     {
       "id": 115022935,
@@ -86614,8 +86669,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022946_0.webp"
+      ]
     },
     {
       "id": 115022947,
@@ -86763,8 +86819,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022953_0.webp"
+      ]
     },
     {
       "id": 115022954,
@@ -87017,8 +87074,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022965_0.webp"
+      ]
     },
     {
       "id": 115022966,
@@ -87334,8 +87392,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022980_0.webp"
+      ]
     },
     {
       "id": 115022981,
@@ -87378,8 +87437,10 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115022982_0.webp",
+        "/question-images/dental1_115022982_1.webp"
+      ]
     },
     {
       "id": 115022983,
@@ -89293,8 +89354,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023073_0.webp"
+      ]
     },
     {
       "id": 115023074,
@@ -89715,8 +89777,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023093_0.webp"
+      ]
     },
     {
       "id": 115023094,
@@ -90095,8 +90158,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023111_0.webp"
+      ]
     },
     {
       "id": 115023112,
@@ -90202,8 +90266,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023116_0.webp"
+      ]
     },
     {
       "id": 115023117,
@@ -90708,8 +90773,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023140_0.webp"
+      ]
     },
     {
       "id": 115023141,
@@ -91046,8 +91112,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023156_0.webp"
+      ]
     },
     {
       "id": 115023157,
@@ -91279,8 +91346,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023167_0.webp"
+      ]
     },
     {
       "id": 115023168,
@@ -92460,8 +92528,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023223_0.webp"
+      ]
     },
     {
       "id": 115023224,
@@ -92630,8 +92699,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023231_0.webp"
+      ]
     },
     {
       "id": 115023232,
@@ -93094,8 +93164,10 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023253_0.webp",
+        "/question-images/dental1_115023253_1.webp"
+      ]
     },
     {
       "id": 115023254,
@@ -93117,8 +93189,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023254_0.webp"
+      ]
     },
     {
       "id": 115023255,
@@ -93644,8 +93717,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023279_0.webp"
+      ]
     },
     {
       "id": 115023280,
@@ -93730,8 +93804,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023283_0.webp"
+      ]
     },
     {
       "id": 115023284,
@@ -94131,8 +94206,10 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023302_0.webp",
+        "/question-images/dental1_115023302_1.webp"
+      ]
     },
     {
       "id": 115023303,
@@ -96086,8 +96163,10 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023395_0.webp",
+        "/question-images/dental1_115023395_1.webp"
+      ]
     },
     {
       "id": 115023396,
@@ -96109,8 +96188,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023396_0.webp"
+      ]
     },
     {
       "id": 115023397,
@@ -97056,8 +97136,10 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023441_0.webp",
+        "/question-images/dental1_115023441_1.webp"
+      ]
     },
     {
       "id": 115023442,
@@ -97079,8 +97161,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023442_0.webp"
+      ]
     },
     {
       "id": 115023443,
@@ -97144,8 +97227,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023445_0.webp"
+      ]
     },
     {
       "id": 115023446,
@@ -97713,8 +97797,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023472_0.webp"
+      ]
     },
     {
       "id": 115023473,
@@ -97799,8 +97884,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023476_0.webp"
+      ]
     },
     {
       "id": 115023477,
@@ -97822,8 +97908,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023477_0.webp"
+      ]
     },
     {
       "id": 115023478,
@@ -98097,8 +98184,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "images": [
+        "/question-images/dental1_115023490_0.webp"
+      ]
     },
     {
       "id": 115023491,

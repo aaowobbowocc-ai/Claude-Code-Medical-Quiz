@@ -159,9 +159,9 @@ function parseQuestions(fullText) {
   }
   function flushQ() {
     flushOpt()
-    if (cur && Object.keys(cur.options).length >= 2) {
+    if (cur) {
       cur.question = qBuf.join('').trim()
-      if (cur.question) out[cur.num] = { question: cur.question, options: cur.options }
+      if (cur.question && cur.question.length >= 4) out[cur.num] = { question: cur.question, options: cur.options }
     }
     cur = null; qBuf = []
   }
@@ -176,7 +176,7 @@ function parseQuestions(fullText) {
     return false
   }
   for (const ln of lines) {
-    const mBare = ln.match(/^(\d{1,3})[.．、]\s*$/)
+    const mBare = ln.match(/^(\d{1,3})(?:[.．、]|)\s*$/)
     if (mBare) {
       const n = +mBare[1]
       if (n >= 1 && n <= 120) { pendingNum = n; continue }
@@ -252,12 +252,15 @@ async function parsePdfFull(buf) {
       if (b.type !== 'text') continue
       for (const ln of (b.lines || [])) {
         const txt = (ln.text || '').trim()
-        const m = txt.match(/^(\d{1,3})[.．、]\s*(.*)/)
+        // Accept "5." "5．" "5、" (modern) and bare "5" (100-105 format).
+        const m = txt.match(/^(\d{1,3})(?:[.．、]|\s*$)\s*(.*)/)
         if (!m) continue
         const num = parseInt(m[1], 10)
         if (num < 1 || num > 120) continue
-        const after = m[2]
-        if (!after || after.length < 2) continue
+        const after = (m[2] || '').trim()
+        // Accept bare-number line (no content after); body will be on next
+        // lines below the anchor y-coordinate.
+        if (after && after.length < 2 && !/^\s*$/.test(after)) continue
         anchors.push({ num, y: ln.bbox.y, x: ln.bbox.x })
       }
     }
@@ -321,20 +324,21 @@ async function cropImage(mupdf, page, bbox, outPath) {
 // reused for a different 類科 (e.g. nursing 030-c=101 in 110/111 is actually
 // 中醫師, not 護理師).
 const EXAM_REGISTRY = {
-  doctor1:   { file: 'questions.json',           classCodes: ['301'], examName: '醫師' },
-  doctor2:   { file: 'questions-doctor2.json',   classCodes: ['302'], examName: '醫師' },
-  dental1:   { file: 'questions-dental1.json',   classCodes: ['303'], examName: '牙醫師' },
-  dental2:   { file: 'questions-dental2.json',   classCodes: ['304'], examName: '牙醫師' },
-  pharma1:   { file: 'questions-pharma1.json',   classCodes: ['305'], examName: '藥師' },
-  pharma2:   { file: 'questions-pharma2.json',   classCodes: ['306'], examName: '藥師' },
-  nursing:   { file: 'questions-nursing.json',   classCodes: ['101', '102', '104'], examName: '護理師' },
-  nutrition: { file: 'questions-nutrition.json', classCodes: ['101', '102'],        examName: '營養師' },
-  medlab:    { file: 'questions-medlab.json',    classCodes: ['308'], examName: '醫事檢驗師' },
-  pt:        { file: 'questions-pt.json',        classCodes: ['311'], examName: '物理治療師' },
-  ot:        { file: 'questions-ot.json',        classCodes: ['312'], examName: '職能治療師' },
-  vet:       { file: 'questions-vet.json',       classCodes: ['314'], examName: '獸醫師' },
-  tcm1:      { file: 'questions-tcm1.json',      classCodes: ['317'], examName: '中醫師' },
-  tcm2:      { file: 'questions-tcm2.json',      classCodes: ['318'], examName: '中醫師' },
+  doctor1:   { file: 'questions.json',           classCodes: ['301','101'], examName: '醫師' },
+  doctor2:   { file: 'questions-doctor2.json',   classCodes: ['302','102'], examName: '醫師' },
+  dental1:   { file: 'questions-dental1.json',   classCodes: ['303','301'], examName: '牙醫師' },
+  dental2:   { file: 'questions-dental2.json',   classCodes: ['304','302'], examName: '牙醫師' },
+  pharma1:   { file: 'questions-pharma1.json',   classCodes: ['305','312','306','310'], examName: '藥師' },
+  pharma2:   { file: 'questions-pharma2.json',   classCodes: ['306','307','310'],       examName: '藥師' },
+  nursing:   { file: 'questions-nursing.json',   classCodes: ['101','102','104','105','106','107','109'], examName: '護理師' },
+  nutrition: { file: 'questions-nutrition.json', classCodes: ['101','102','103','106','107'],              examName: '營養師' },
+  medlab:    { file: 'questions-medlab.json',    classCodes: ['308','311','104','108','109'], examName: '醫事檢驗師' },
+  pt:        { file: 'questions-pt.json',        classCodes: ['311','309'], examName: '物理治療師' },
+  ot:        { file: 'questions-ot.json',        classCodes: ['312','305'], examName: '職能治療師' },
+  vet:       { file: 'questions-vet.json',       classCodes: ['314','307'], examName: '獸醫師' },
+  tcm1:      { file: 'questions-tcm1.json',      classCodes: ['317','101','103','106'], examName: '中醫師' },
+  tcm2:      { file: 'questions-tcm2.json',      classCodes: ['318','102','103','104','106'], examName: '中醫師' },
+  radiology: { file: 'questions-radiology.json', classCodes: ['309','308'], examName: '醫事放射師' },
 }
 
 // Read the 類科 line from the first page of a PDF buffer. Returns null on
@@ -357,8 +361,24 @@ async function pdfExamName(buf) {
     //   new: "類科名稱：中醫師(一)"   → strips to 類科名稱：中醫師(一)
     // Accept an optional 名稱 between 類科 and the colon, and allow CJK
     // brackets / arabic digits in the captured name (covers 中醫師(一) etc).
-    const compact = txt.replace(/\s+/g, '')
+    const compact = txt.replace(/[\uE000-\uF8FF]/g, '').replace(/\s+/g, '').normalize('NFKC')
     const m = compact.match(/類科(?:名稱)?[：:]([\u4e00-\u9fff()（）]{2,12})/)
+    return m ? m[1] : null
+  } catch { return null }
+}
+
+async function pdfSubjectName(buf) {
+  try {
+    const mupdf = await import('mupdf')
+    const doc = mupdf.Document.openDocument(new Uint8Array(buf), 'application/pdf')
+    const parsed = JSON.parse(doc.loadPage(0).toStructuredText('preserve-images').asJSON())
+    let txt = ''
+    for (const b of parsed.blocks || []) {
+      if (b.type !== 'text') continue
+      for (const ln of (b.lines || [])) txt += (ln.text || '') + '\n'
+    }
+    const compact = txt.replace(/[\uE000-\uF8FF]/g, '').replace(/\s+/g, '').normalize('NFKC')
+    const m = compact.match(/科目[：:]([\u4e00-\u9fff()（）一二三四五六七八九十]{2,30})/)
     return m ? m[1] : null
   } catch { return null }
 }
@@ -396,7 +416,7 @@ async function pickClassCode(examTag, code, candidates) {
     // No cached file matched → probe-download a few common subject codes and
     // verify against expected exam name. Only return this c if at least one
     // probe actually contains the right exam.
-    for (const probeS of ['0101', '0201', '0301', '11', '0501', '0701', '1001']) {
+    for (const probeS of ['0101','0102','0103','0201','0301','0401','0501','0701','1001','11','22','33','44','55','66']) {
       try {
         const buf = await cachedPdf(examTag, code, c, probeS)
         if (buf && buf.length > 100000 && await pdfMatchesExam(buf, expectedName)) return c
@@ -446,14 +466,30 @@ async function processExamCode(examTag, code, opts) {
     return { added: 0, skipped: 0 }
   }
 
+  // Build subject ordering from JSON (first-appearance order) for fallback
+  // number-based image matching on old-format PDFs.
+  const subjectOrder = []
+  const seenSubj = new Set()
+  for (const q of qs) {
+    if (q.exam_code !== code || !q.subject) continue
+    if (seenSubj.has(q.subject)) continue
+    seenSubj.add(q.subject)
+    subjectOrder.push(q.subject)
+  }
+
   // Parse each PDF
   const pdfs = []
-  for (const s of subjectCodes) {
+  const sortedSCodes = [...subjectCodes].sort()
+  for (let si = 0; si < subjectCodes.length; si++) {
+    const s = subjectCodes[si]
     try {
       const buf = await cachedPdf(examTag, code, classCode, s)
       if (buf.length < 2000) continue
       const parsed = await parsePdfFull(buf)
-      pdfs.push({ s, classCode, ...parsed })
+      const subjName = await pdfSubjectName(buf)
+      const orderIdx = sortedSCodes.indexOf(s)
+      const paperSubject = subjectOrder[orderIdx] || null
+      pdfs.push({ s, classCode, subjectName: subjName, paperSubject, ...parsed })
     } catch (e) { console.error(`    parse ${s} failed: ${e.message}`) }
   }
   if (!pdfs.length) return { added: 0, skipped: 0 }
@@ -480,6 +516,15 @@ async function processExamCode(examTag, code, opts) {
       for (const pdf of pdfs) {
         const m = findMatch(q, pdf.textIndex)
         if (m) { hit = { pdf, num: m.num }; break }
+      }
+      // Fallback: old-format PDFs that textIndex can't parse. Match by
+      // subject name (PDF 科目 ⟷ JSON subject_name/subject) and use q.number
+      // directly. Only fires when the question actually has an image anchor.
+      if (!hit && q.number && q.subject) {
+        for (const pdf of pdfs) {
+          if (pdf.paperSubject !== q.subject) continue
+          if (pdf.imagesPerNum[q.number]?.length) { hit = { pdf, num: q.number }; break }
+        }
       }
       if (!hit) { skipped++; continue }
       const pdfImgs = hit.pdf.imagesPerNum[hit.num] || []

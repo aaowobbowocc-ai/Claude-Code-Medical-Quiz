@@ -42,10 +42,16 @@ function getExtraPassRules(examId) {
     case 'dental1': case 'dental2':
     case 'pharma1': case 'pharma2':
       return [{ icon: '⚠️', text: '任一科零分者不予及格（缺考以零分計算）' }]
-    case 'driver-moto': case 'driver-car':
+    case 'driver-moto':
+      return [
+        { icon: '🏍️', text: '85 分及格（50 題 × 2 分 = 100 分，答對 43 題以上通過）' },
+        { icon: '✅', text: '2026-01-30 新制已實施：筆試由 40 題增為 50 題、每題 2 分' },
+      ]
+    case 'driver-car':
       return [
         { icon: '🚗', text: '85 分及格（40 題 × 2.5 分 = 100 分，答對 34 題以上通過）' },
-        { icon: '📢', text: '公路局預告 2026 年改制：取消是非題、選擇題由三選一改四選一（實施日期待公布）' },
+        { icon: '📢', text: '2026-06 起汽車新制：筆試改 50 題全選擇題（取消是非題）、每題 2 分' },
+        { icon: '📢', text: '2026-03 起路考新增「路口停讓」「轉彎死角確認」「無號誌路口」項目' },
       ]
     case 'nursing': case 'nutrition2': case 'medlab': case 'ot':
     default:

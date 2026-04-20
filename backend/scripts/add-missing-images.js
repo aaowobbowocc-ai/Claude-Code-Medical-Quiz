@@ -336,8 +336,8 @@ const EXAM_REGISTRY = {
   pt:        { file: 'questions-pt.json',        classCodes: ['311','309'], examName: '物理治療師' },
   ot:        { file: 'questions-ot.json',        classCodes: ['312','305'], examName: '職能治療師' },
   vet:       { file: 'questions-vet.json',       classCodes: ['314','307'], examName: '獸醫師' },
-  tcm1:      { file: 'questions-tcm1.json',      classCodes: ['317','101','103','106'], examName: '中醫師' },
-  tcm2:      { file: 'questions-tcm2.json',      classCodes: ['318','102','103','104','106'], examName: '中醫師' },
+  tcm1:      { file: 'questions-tcm1.json',      classCodes: ['317','101','103','106','107'], examName: '中醫師(一)' },
+  tcm2:      { file: 'questions-tcm2.json',      classCodes: ['318','102','103','104','106','107'], examName: '中醫師(二)' },
   radiology: { file: 'questions-radiology.json', classCodes: ['309','308'], examName: '醫事放射師' },
 }
 
@@ -387,9 +387,10 @@ async function pdfMatchesExam(buf, examName) {
   if (!buf || !examName) return false
   const found = await pdfExamName(buf)
   if (!found) return false
-  // Loose match: PDF 類科 must contain or equal the registry name (e.g. some
-  // PDFs print "醫師" while others print "醫師(臨床)").
-  return found.includes(examName) || examName.includes(found)
+  // Prefix match: either name must start with the other. Prevents "醫師"
+  // falsely matching "中醫師(二)" (where 醫師 is just a substring) while
+  // still allowing "醫師" to match PDF-rendered "醫師(一)" etc.
+  return found === examName || found.startsWith(examName) || examName.startsWith(found)
 }
 
 // Pick the working classCode for (exam, exam_code). For each candidate we:
@@ -397,11 +398,41 @@ async function pdfMatchesExam(buf, examName) {
 //   2. Verify its 類科 line actually matches this exam (otherwise the cache
 //      is stale data from another exam that reused the code)
 //   3. If no cached file passes, probe-download one subject code and verify
-async function pickClassCode(examTag, code, candidates) {
+async function pickClassCode(examTag, code, candidates, jsonSubjects) {
   const expectedName = EXAM_REGISTRY[examTag]?.examName
+  // Build a normalized JSON-subject set for extra validation. When multiple
+  // exams share an ambiguous 類科 (tcm1 vs tcm2, both print 中醫師), the PDF
+  // 科目 line carries the disambiguator (基礎醫學 vs 臨床醫學).
+  const normJsonSubs = new Set((jsonSubjects || []).map(s => normText(s)))
+  // Only disambiguate via 科目 when the registry name has a 一/二 suffix
+  // (tcm1 vs tcm2 both print 中醫師 on PDFs). For unambiguous exams the
+  // 類科 check alone is enough and adding a stricter 科目 check drops valid
+  // matches (pdfSubjectName over-captures noise, e.g. "醫師科目內外科...").
+  const needsSubjectCheck = /\([一二]\)$|（[一二]）$/.test(expectedName || '')
+  async function pdfPassesSubject(buf) {
+    if (!needsSubjectCheck) return true
+    if (!normJsonSubs.size) return true
+    const sn = await pdfSubjectName(buf)
+    if (!sn) return true
+    const ns = normText(sn)
+    // Exact / substring match first
+    for (const js of normJsonSubs) if (ns.includes(js) || js.includes(ns)) return true
+    // Fallback: share ≥4 CJK-char common prefix. PDF 科目 often reads
+    // "中醫臨床醫學(包括傷寒論...)" while JSON has "中醫臨床醫學(一)"; neither
+    // is a substring of the other but they share a 6-char prefix.
+    for (const js of normJsonSubs) {
+      let common = 0
+      const len = Math.min(ns.length, js.length)
+      for (let i = 0; i < len; i++) {
+        if (ns[i] !== js[i]) break
+        if (/[\u4e00-\u9fff]/.test(ns[i])) common++
+        else break
+      }
+      if (common >= 4) return true
+    }
+    return false
+  }
   for (const c of candidates) {
-    // Try every cached file with this class code (both naming conventions:
-    // {exam}_{code}_c{c}_s{s}.pdf and {exam}_Q_{code}_c{c}_s{s}.pdf)
     const cachedFiles = fs.readdirSync(PDF_CACHE).filter(f =>
       (f.startsWith(`${examTag}_${code}_c${c}_`) || f.startsWith(`${examTag}_Q_${code}_c${c}_`))
       && f.endsWith('.pdf')
@@ -410,16 +441,13 @@ async function pickClassCode(examTag, code, candidates) {
     let validatedFromCache = false
     for (const f of cachedFiles) {
       const buf = fs.readFileSync(path.join(PDF_CACHE, f))
-      if (await pdfMatchesExam(buf, expectedName)) { validatedFromCache = true; break }
+      if (await pdfMatchesExam(buf, expectedName) && await pdfPassesSubject(buf)) { validatedFromCache = true; break }
     }
     if (validatedFromCache) return c
-    // No cached file matched → probe-download a few common subject codes and
-    // verify against expected exam name. Only return this c if at least one
-    // probe actually contains the right exam.
-    for (const probeS of ['0101','0102','0103','0201','0301','0401','0501','0701','1001','11','22','33','44','55','66']) {
+    for (const probeS of ['0101','0102','0103','0201','0203','0301','0401','0501','0701','1001','11','22','33','44','55','66']) {
       try {
         const buf = await cachedPdf(examTag, code, c, probeS)
-        if (buf && buf.length > 100000 && await pdfMatchesExam(buf, expectedName)) return c
+        if (buf && buf.length > 100000 && await pdfMatchesExam(buf, expectedName) && await pdfPassesSubject(buf)) return c
       } catch {}
     }
   }
@@ -452,8 +480,11 @@ async function processExamCode(examTag, code, opts) {
   const candidates = qs.filter(filter)
   if (!candidates.length) return { added: 0, skipped: 0 }
 
-  // Find working classCode
-  const classCode = await pickClassCode(examTag, code, def.classCodes)
+  // Find working classCode. Pass JSON subjects for this exam_code so that
+  // ambiguous 類科 names (e.g. tcm1/tcm2 both show "中醫師") are resolved by
+  // matching the PDF 科目 against actual JSON subjects.
+  const jsonSubjects = [...new Set(qs.filter(q => q.exam_code === code).map(q => q.subject).filter(Boolean))]
+  const classCode = await pickClassCode(examTag, code, def.classCodes, jsonSubjects)
   if (!classCode) {
     console.log(`  ${examTag} ${code}: no working class code from ${def.classCodes.join('/')}`)
     return { added: 0, skipped: 0 }

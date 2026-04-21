@@ -29,6 +29,17 @@ async function main() {
   const scale = 3 // 3x for crisp signs
   const imageMap = new Map() // qNum -> image filename
 
+  // Preload question text so image→question assignment can prefer empty-text
+  // or image-keyword questions when multiple candidates are within range.
+  const IMG_KEYWORDS = /圖|標誌|標線|號誌|手勢|箭頭|燈|斑馬|車道|圓環|本標|左臂|右臂|指示|警告|禁制/
+  const allQs = JSON.parse(fs.readFileSync(MOTO_JSON, 'utf8'))
+  const questionByNum = new Map()
+  for (const q of allQs) questionByNum.set(q.number, q)
+  function qIsImageSlot(num) {
+    const t = (questionByNum.get(num)?.question || '').trim()
+    return !t || IMG_KEYWORDS.test(t)
+  }
+
   for (let pi = 0; pi < totalPages; pi++) {
     const pg = doc.loadPage(pi)
     const parsed = JSON.parse(pg.toStructuredText('preserve-images').asJSON())
@@ -59,21 +70,21 @@ async function main() {
       .map(ln => ({ num: parseInt(ln.text), y: ln.y }))
       .sort((a, b) => a.y - b.y)
 
-    // For each image, find closest question by |dy|. The image bbox y is
-    // top-left while question-number text y is a baseline, so legit pairs
-    // can be 60+px apart for tall sign images — keep the 80px window and
-    // rely on the keyword filter below as the real safety gate.
+    // For each image, find candidate questions within 80px window, then
+    // prefer the one whose JSON text is empty or contains an image keyword
+    // — previously the raw |dy| winner was often the text-only question
+    // *above* the image, leaving its image-only neighbour orphaned.
     for (const img of images) {
-      let bestQ = null
-      let bestDist = Infinity
-      for (const q of qNums) {
-        const dist = Math.abs(img.y - q.y)
-        if (dist < bestDist) { bestDist = dist; bestQ = q }
-      }
-      if (!bestQ || bestDist > 80) {
-        console.log(`  Page ${pi}: image at y=${img.y} no match (bestDist=${bestDist})`)
+      const candidates = qNums
+        .map(q => ({ q, dist: Math.abs(img.y - q.y) }))
+        .filter(c => c.dist <= 80)
+        .sort((a, b) => a.dist - b.dist)
+      if (!candidates.length) {
+        console.log(`  Page ${pi}: image at y=${img.y} no match within 80px`)
         continue
       }
+      const preferred = candidates.find(c => qIsImageSlot(c.q.num)) || candidates[0]
+      const bestQ = preferred.q
 
       const num = bestQ.num
       const pad = 2
@@ -108,8 +119,7 @@ async function main() {
   // question text is non-empty and doesn't reference an image (no 圖/標誌/
   // 標線/號誌/手勢/箭頭/燈/斑馬/車道/圓環/本標/左臂/右臂/指示/警告/禁制),
   // skip — the PDF proximity match was spurious.
-  const IMG_KEYWORDS = /圖|標誌|標線|號誌|手勢|箭頭|燈|斑馬|車道|圓環|本標|左臂|右臂|指示|警告|禁制/
-  const questions = JSON.parse(fs.readFileSync(MOTO_JSON, 'utf8'))
+  const questions = allQs
   let updated = 0
   let skipped = 0
   for (const q of questions) {

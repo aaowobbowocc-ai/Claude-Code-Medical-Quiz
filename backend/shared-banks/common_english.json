@@ -2,12 +2,64 @@
   "bankId": "common_english",
   "name": "公職英文",
   "description": "公職考試共通科目：英文（字彙、文法、克漏字、閱讀測驗）",
-  "bankVersion": 2,
-  "last_synced_at": "2026-04-20T15:20:47.777Z",
+  "bankVersion": 5,
+  "last_synced_at": "2026-04-21T02:45:06.777Z",
   "levels": [
     "senior"
   ],
   "questions": [
+    {
+      "id": "common_english-114-civil-senior-4",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "政府變革強調從組織、員工和社區等三層次的賦權授能（ empowerment）。此為歐斯本（D. Osborne） 和派翠克（P. Patrick）所提政府再造五 C策略（Five Cs）中的那一種策略？",
+      "options": {
+        "A": "結果策略（consequence strategy",
+        "B": "）核心策略（core strategy）",
+        "C": "控制策略（control strategy）",
+        "D": "顧客策略（customer strategy）"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-civil-senior-20",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 20,
+      "question": "若某地方政府提供較好的育兒津貼，吸引許多年輕父母移居到該地區，此一現象稱之為：",
+      "options": {
+        "A": "用腳投票（vote by feet）",
+        "B": "外溢效果（spill-over effect）",
+        "C": "集體行動（collective action）",
+        "D": "外部經濟（external economy）"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
     {
       "id": "common_english-114-civil-senior-21",
       "roc_year": "114",
@@ -867,6 +919,32 @@
       "deprecated_reason": null
     },
     {
+      "id": "common_english-113-civil-senior-23",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 23,
+      "question": "非營利組織與公司進行跨界合作有多種模式，由公司另行創造一個非營利實體，並透過該實體來 管理公司的慈善目標，係屬於下列那一種模式？",
+      "options": {
+        "A": "參與型贊助（joint issue promotions",
+        "B": "）",
+        "C": "以交易為基礎的贊助（",
+        "D": "transaction-based promotions）"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
       "id": "common_english-113-civil-senior-24",
       "roc_year": "113",
       "session": "第一次",
@@ -1569,6 +1647,58 @@
       "deprecated_reason": null
     },
     {
+      "id": "common_english-112-civil-senior-2",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "新公共服務（New Public Service ）重新闡述服務、共享、信任合作、公共利益等理念，並對新公 共管理及傳統公共行政有所批判。下列何者不是新公共服務的重要理論基礎？",
+      "options": {
+        "A": "組織人文主義（",
+        "B": "organizational humanism）",
+        "C": "委託—代理人理論（principal-agent theory",
+        "D": "）"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-civil-senior-7",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "甲是政府機關的主管，他能夠放下身段去服務他人，展現犧牲奉獻的精神，並從部屬、民眾的角 度去了解他們的需要，傾聽他們的聲音，甲的行為最接近何種領導理論？",
+      "options": {
+        "A": "轉換型領導（transformational leadership",
+        "B": "）",
+        "C": "交易型領導（transactional leadership",
+        "D": "）"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
       "id": "common_english-112-civil-senior-21",
       "roc_year": "112",
       "session": "第一次",
@@ -1587,6 +1717,32 @@
         "D": "impair"
       },
       "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-civil-senior-21",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 21,
+      "question": "民意調查中的鐘形民意（ bell-shaped）分布型態，一般又稱之為：",
+      "options": {
+        "A": "縱容的共識（permissive consensus",
+        "B": "）",
+        "C": "政治極化（political polarization",
+        "D": "）"
+      },
+      "answer": "A",
       "level": "senior",
       "shared_bank": "common_english",
       "parent_id": null,
@@ -2349,6 +2505,84 @@
       "deprecated_reason": null
     },
     {
+      "id": "common_english-111-civil-senior-5",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "近代行政倫理觀將「行為倫理」擴展到「政策倫理」，進而提出三個倫理準則，以期追求環境永續。 下列何者不是這三個倫理準則？",
+      "options": {
+        "A": "未來責任（duties to the future",
+        "B": "）守護精神（stewardship）",
+        "C": "代際公平（intergenerational equity",
+        "D": "）"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-civil-senior-7",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "下列那一個陳述是用來批評人群關係學派以偽善的方式利用員工，以提高其生產力，而非真正關 心員工的感受？",
+      "options": {
+        "A": "認知失調（cognitive dissonance",
+        "B": "）",
+        "C": "霍桑效應（Hawthorne effect",
+        "D": "）"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-civil-senior-21",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 21,
+      "question": "下列何者用以敘述「國會議員在進行法案投票時彼此資源與利益交換的現象」？",
+      "options": {
+        "A": "逆向選擇（adverse selection",
+        "B": "）",
+        "C": "用腳投票（voting with the feet",
+        "D": "）"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
       "id": "common_english-111-civil-senior-31",
       "roc_year": "111",
       "session": "第一次",
@@ -2861,6 +3095,32 @@
         "D": "Police officers during the Industrial Revolution were not paid very well at work."
       },
       "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-civil-senior-25",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 25,
+      "question": "政府之公共建設「由民間投資興建完成後，政府無償取得所有權，並委託該民間機構營運；營運 期屆滿後，營運權歸還政府」，指的是下列那一種公私協力模式？",
+      "options": {
+        "A": "BOO",
+        "B": "BTO",
+        "C": "BOT",
+        "D": "OT"
+      },
+      "answer": "A",
       "level": "senior",
       "shared_bank": "common_english",
       "parent_id": null,
@@ -3389,6 +3649,32 @@
       "deprecated_reason": null
     },
     {
+      "id": "common_english-109-civil-senior-1",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "1990年代的新公共管理（ New Public Management）化身為各種不同的名稱，下列何者不屬於？",
+      "options": {
+        "A": "管理主義（managerialism）",
+        "B": "市場導向的行政（",
+        "C": "market-based public administration）",
+        "D": "官僚典範（bureaucratic paradigm"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
       "id": "common_english-109-civil-senior-31",
       "roc_year": "109",
       "session": "第一次",
@@ -3909,6 +4195,58 @@
       "deprecated_reason": null
     },
     {
+      "id": "common_english-108-civil-senior-17",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 17,
+      "question": "下列何者不是常用的排程模式（ scheduling models）？",
+      "options": {
+        "A": "甘特圖（Gantt chart）",
+        "B": "決策樹（decision tree）",
+        "C": "要徑法（critical path method",
+        "D": "）"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-civil-senior-22",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 22,
+      "question": "直轄市政府、縣（市）政府為辦理自治事項，充裕財源，除關稅、貨物稅及加值型營業稅外，得 就現有國稅中附加徵收。但其徵收率不得超過原規定稅率的多少？",
+      "options": {
+        "A": "10%",
+        "B": "20%",
+        "C": "30%",
+        "D": "40%"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
       "id": "common_english-108-civil-senior-31",
       "roc_year": "108",
       "session": "第一次",
@@ -4395,6 +4733,32 @@
         "D": "The organic contents released in the Arctic’s melting process will benefit global economy."
       },
       "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-107-civil-senior-14",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 14,
+      "question": "在危機管理過程中，強調當危機已無可避免地轉換成災難時，所應採取的行動，是屬於下列那一個階段 的政策？",
+      "options": {
+        "A": "整備政策（preparedness policy",
+        "B": "）舒緩政策（mitigation policy）",
+        "C": "回應政策（response policy）",
+        "D": "復原政策（recovery policy）"
+      },
+      "answer": "D",
       "level": "senior",
       "shared_bank": "common_english",
       "parent_id": null,
@@ -4923,6 +5287,58 @@
       "deprecated_reason": null
     },
     {
+      "id": "common_english-106-civil-senior-3",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "雷格斯（F. W. Riggs）依國家發展的進程，提出三種比較行政模式，下列何者是高度開發國家的發展模式？",
+      "options": {
+        "A": "繞射模式（diffracted model）",
+        "B": "多元模式（polycentric model）",
+        "C": "鎔合模式（fused model）",
+        "D": "稜柱模式（prismatic model）"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-106-civil-senior-4",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "civil-senior",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "新公共管理（new public management ）可能化身不同的名稱，儘管名稱各異，基本上是指涉相同的概念，但不包 括下列何者？",
+      "options": {
+        "A": "後官僚典範（post-bureaucratic paradigm",
+        "B": "）",
+        "C": "市場導向公共行政（",
+        "D": "market-based public administration）"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
       "id": "common_english-106-civil-senior-31",
       "roc_year": "106",
       "session": "第一次",
@@ -5435,6 +5851,3802 @@
         "D": "Both  are  sponsors."
       },
       "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-1",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "The words of comfort from Jean’s friends served as a",
+      "options": {
+        "A": "during her time of grief.",
+        "B": "compliment",
+        "C": "commitment",
+        "D": "confrontation"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-2",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "The university received  a generous",
+      "options": {
+        "A": "from  a philanthropist to fund scholarships for students in",
+        "B": "need.",
+        "C": "application",
+        "D": "obligation"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-3",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "Theof the ecosystem in the wetlands helped to revitalize the natural habitat for wildlife.",
+      "options": {
+        "A": "deprivation",
+        "B": "restoration",
+        "C": "breakdown",
+        "D": "crackdown"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-4",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "When Berlinda came back home from work late at night, she",
+      "options": {
+        "A": "opened the door without waking",
+        "B": "her sons up.",
+        "C": "definitely",
+        "D": "digitally"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-5",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "Theof the athlete from the team was due to a violation of the code of conduct.",
+      "options": {
+        "A": "award",
+        "B": "reward",
+        "C": "superstition",
+        "D": "suspension"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-6",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "The storm caused",
+      "options": {
+        "A": "flooding in the area, overwhelming local emergency services.",
+        "B": "negligible",
+        "C": "unprecedented",
+        "D": "admirable"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-7",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "Themelody of the piano echoed through the empty halls, evoking memories of lost love.",
+      "options": {
+        "A": "radiant",
+        "B": "content",
+        "C": "jubilant",
+        "D": "melancholy"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-8",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "In comparison with other universities in the country, this university is much smaller with only 5,500",
+      "options": {
+        "A": "students and 235",
+        "B": "members.",
+        "C": "board",
+        "D": "club"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-9",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "Despite facing numerous setbacks, Jane remained",
+      "options": {
+        "A": "and continued to pursue her dreams.",
+        "B": "fragile",
+        "C": "resilient",
+        "D": "irritated"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-10",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "Sophieat John when she discovered to her amazement that John had knocked down her cello to",
+      "options": {
+        "A": "the ground.",
+        "B": "galloped",
+        "C": "gasped",
+        "D": "glared"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-11",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 11,
+      "question": "Our company’s product promotion staff always try to make their presentations short and to the point",
+      "options": {
+        "A": "sincetalks would only drive potential buyers away.",
+        "B": "captive",
+        "C": "lengthy",
+        "D": "punctual"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-12",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 12,
+      "question": "The airport had been",
+      "options": {
+        "A": "closed to all air traffic due to a bomb threat, and it was not reopened until",
+        "B": "three hours later.",
+        "C": "doubtfully",
+        "D": "marvelously"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-13",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 13,
+      "question": "Established  in  1960,  the  Association  is  a  global  leader  in  developing  and",
+      "options": {
+        "A": "knowledge  about",
+        "B": "financial decision making.",
+        "C": "disseminating",
+        "D": "impersonating"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-14",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 14,
+      "question": "Some people are",
+      "options": {
+        "A": "about the existence of UFOs and aliens, while others are convinced without a",
+        "B": "doubt.",
+        "C": "hypocritical",
+        "D": "skeptical"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-15",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 15,
+      "question": "The storm continued to",
+      "options": {
+        "A": "throughout the night, with thunder shaking the windows and lightning",
+        "B": "illuminating the sky.",
+        "C": "urge",
+        "D": "rage"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-16",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 16,
+      "question": "undermines",
+      "options": {
+        "A": "strengthens",
+        "B": "intensifies",
+        "C": "mediates",
+        "D": "strengthens"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-17",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 17,
+      "question": "sustains",
+      "options": {
+        "A": "violates",
+        "B": "safeguards",
+        "C": "verifies",
+        "D": "violates"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-18",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 18,
+      "question": "conquests",
+      "options": {
+        "A": "attainments",
+        "B": "repercussions",
+        "C": "implementations",
+        "D": "attainments"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-19",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 19,
+      "question": "conscientious",
+      "options": {
+        "A": "legitimate",
+        "B": "conscientious",
+        "C": "deceitful",
+        "D": "legitimate"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-20",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 20,
+      "question": "diversity",
+      "options": {
+        "A": "versatility",
+        "B": "ambiguity",
+        "C": "accountability",
+        "D": "請依下文回答第"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-21",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 21,
+      "question": "turns",
+      "options": {
+        "A": "notes",
+        "B": "shape",
+        "C": "block",
+        "D": "notes"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-22",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 22,
+      "question": "delayed",
+      "options": {
+        "A": "portrayed",
+        "B": "refreshed",
+        "C": "tortured",
+        "D": "portrayed"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-23",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 23,
+      "question": "create",
+      "options": {
+        "A": "gain",
+        "B": "create",
+        "C": "solve",
+        "D": "gain"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-24",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 24,
+      "question": "navigate",
+      "options": {
+        "A": "expand",
+        "B": "navigate",
+        "C": "obstruct",
+        "D": "expand"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-customs-25",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 25,
+      "question": "aside from",
+      "options": {
+        "A": "based on",
+        "B": "in spite of",
+        "C": "on behalf of",
+        "D": "based on"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-1",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "The  way  our  eyes  and  brain  handle  information  has  become",
+      "options": {
+        "A": ".  Thanks  to  television,  film  and",
+        "B": "computers, our ability to process images is faster.",
+        "C": "monotonous",
+        "D": "subsequent"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-2",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "When we don’t believe we have the resources or abilities to cope with a certain problem or stimuli, we",
+      "options": {
+        "A": "createbehaviors to deny or avoid it.",
+        "B": "rigid",
+        "C": "adaptive",
+        "D": "indiscrete"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-3",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "Being a professional artist, Lisa mostly makes drawings, paintings, and sculptures, and",
+      "options": {
+        "A": "she is",
+        "B": "invited to make fashion illustrations.",
+        "C": "aggressively",
+        "D": "evidently"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-4",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "Anita’s 2-year gym membership is no longer",
+      "options": {
+        "A": "; she is thinking about getting a lifelong membership",
+        "B": "offered by a newly opened gym near her place.",
+        "C": "cordial",
+        "D": "diverse"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-5",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "During  their  one-week  trip  to  Yushan  National  Park,  the  Lins  visited  many",
+      "options": {
+        "A": "spots  and  truly",
+        "B": "enjoyed the breathtaking views in the mountains.",
+        "C": "chaotic",
+        "D": "drastic"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-6",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "Although Irene failed to make the national swimming team this year, she refused to live her life",
+      "options": {
+        "A": "like",
+        "B": "a loser; instead she practiced even harder to try again next year.",
+        "C": "confidentially",
+        "D": "legitimately"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-7",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "Those board  members  who looked at  Amanda’s  new business idea",
+      "options": {
+        "A": "and challenged it harshly",
+        "B": "would never expect that the idea later turned out to be a huge success.",
+        "C": "leniently",
+        "D": "pervasively"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-8",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "After the old emperor’s death, the empire was",
+      "options": {
+        "A": "into several small states.",
+        "B": "dismounted",
+        "C": "disintegrated",
+        "D": "differentiated"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-9",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "He despised Pitt,",
+      "options": {
+        "A": "the similar views they both held.",
+        "B": "notwithstanding",
+        "C": "respecting",
+        "D": "honoring"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-10",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "The way the government tackles the problem of civil war in this country is",
+      "options": {
+        "A": "because it has never",
+        "B": "ended in such a peaceful manner.",
+        "C": "unanimous",
+        "D": "unidentified"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-11",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 11,
+      "question": "The patients are asked to",
+      "options": {
+        "A": "for their medical expenses if they want to gain better medical service",
+        "B": "from their doctors.",
+        "C": "spill the beans",
+        "D": "miss the boat"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-12",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 12,
+      "question": "Isaac still managed to complete the task he had been assigned to",
+      "options": {
+        "A": "its difficulty and time constraint.",
+        "B": "since",
+        "C": "despite",
+        "D": "instead"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-13",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 13,
+      "question": "When donating a  huge sum of money to  charities, she prefers being an",
+      "options": {
+        "A": "donor and  keeps  her",
+        "B": "identity unknown to the public.",
+        "C": "aboriginal",
+        "D": "abundant"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-14",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 14,
+      "question": "When they climb up to the peak of Mt. Everest, they can do nothing but",
+      "options": {
+        "A": "the stunning and breath-taking",
+        "B": "views out there.",
+        "C": "lay down",
+        "D": "marvel at"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-15",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 15,
+      "question": "John devoted himself to establishing the first hospital for the mentally ill in his country and was a notably",
+      "options": {
+        "A": "generous",
+        "B": "of the poor and outcast.",
+        "C": "tranquilizer",
+        "D": "enchanter"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-16",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 16,
+      "question": "their role in building soil, their importance to gardeners, and the fascination they afford schoolchildren.",
+      "options": {
+        "A": "Earthworms are giants compared with most other soil",
+        "B": "17. The earthworm’s body is made of18",
+        "C": "cylinders, which look like many little rings joined together. They are",
+        "D": "19that chew their way through"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-17",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 17,
+      "question": "organisms",
+      "options": {
+        "A": "fossils",
+        "B": "organisms",
+        "C": "obstacles",
+        "D": "fossils"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-18",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 18,
+      "question": "segmented",
+      "options": {
+        "A": "tormented",
+        "B": "segmented",
+        "C": "lamented",
+        "D": "tormented"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-19",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 19,
+      "question": "omnivores",
+      "options": {
+        "A": "erasers",
+        "B": "omnivores",
+        "C": "ulcers",
+        "D": "erasers"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-20",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 20,
+      "question": "process",
+      "options": {
+        "A": "shuttle",
+        "B": "liability",
+        "C": "hamper",
+        "D": "請依下文回答第"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-21",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 21,
+      "question": "Which interest group in Taiwan is most likely to welcome this new amendment in law?",
+      "options": {
+        "A": "The Consumers’ Foundation.",
+        "B": "The Society of Wilderness.",
+        "C": "The Child Welfare League Foundation.",
+        "D": "The Chinese Association for Relief and Ensuing Services."
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-22",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 22,
+      "question": "Which of the following statements is NOT true about the NIA’s reform of the Immigration Act?",
+      "options": {
+        "A": "It grants the separations between new immigrant mothers and their children in the case of a divorce.",
+        "B": "It protects the rights and interests of the children if they are victims of domestic violence.",
+        "C": "It  sets  up  a  new  model  of  policy-making  that  takes  the  welfare  of  new  immigrant  families  intoconsideration.",
+        "D": "It materializes the ideal of social justice when new immigrant family issues are taken into account."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-23",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 23,
+      "question": "What is another benefit that a new immigrant mother can gain from this law amendment apart from being",
+      "options": {
+        "A": "allowed to stay in Taiwan after a divorce?",
+        "B": "She can apply for a visitor visa.",
+        "C": "She can get a divorce if she wants.",
+        "D": "She can choose to leave the country."
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-24",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 24,
+      "question": "What is the criterion that a new immigrant mother must fulfill in order to benefit from this amendment",
+      "options": {
+        "A": "in law?",
+        "B": "She needs to stay in Taiwan for at least ten years.",
+        "C": "She needs to bear at least two children who were born in Taiwan.",
+        "D": "She needs to be a legal immigrant who has stayed continually in Taiwan."
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-customs-25",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 25,
+      "question": "What message does this law amendment send in terms of Taiwan’s immigration policy?",
+      "options": {
+        "A": "Taiwan implements severe prosecution for illegal new immigrants.",
+        "B": "Taiwan enforces many of its improper laws on new immigrants.",
+        "C": "Taiwan cares for the needs of new immigrant mothers and their children.",
+        "D": "Taiwan serves as a watchdog for new immigrants who have Taiwanese spouses."
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-1",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "The population in Los Angeles is",
+      "options": {
+        "A": "Hispanic American. More than half of the people there speak",
+        "B": "Spanish.",
+        "C": "officially",
+        "D": "predominantly"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-2",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "Sandy always teaches evening classes, but today she is",
+      "options": {
+        "A": "for a sick teacher in the morning class.",
+        "B": "searching",
+        "C": "substituting",
+        "D": "striving"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-3",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "We were",
+      "options": {
+        "A": "after a long day of canoeing, so the roasted chicken over the campfire smelled heavenly.",
+        "B": "ravenous",
+        "C": "bleached",
+        "D": "genuine"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-4",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "The speaker did not deliver her message in an overt manner when she stated",
+      "options": {
+        "A": "about her criticism",
+        "B": "of the government’s policy to deport the illegal immigrants in the country.",
+        "C": "impulsively",
+        "D": "imminently"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-5",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "The president, hailing a “new era” to bring hopes to his people in the country, was",
+      "options": {
+        "A": "last month.",
+        "B": "yielded",
+        "C": "executed",
+        "D": "inaugurated"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-6",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "ran",
+      "options": {
+        "A": "run",
+        "B": "runs",
+        "C": "running",
+        "D": "run"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-7",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "open",
+      "options": {
+        "A": "dig",
+        "B": "visit",
+        "C": "destroy",
+        "D": "dig"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-8",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "Apart from",
+      "options": {
+        "A": "According to",
+        "B": "In view of",
+        "C": "In spite of",
+        "D": "According to"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-9",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "mentioning",
+      "options": {
+        "A": "frustration",
+        "B": "mentioning",
+        "C": "fruition",
+        "D": "frustration"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-10",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "confront",
+      "options": {
+        "A": "allow",
+        "B": "confine",
+        "C": "avoid",
+        "D": "請依下文回答第"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-11",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 11,
+      "question": "apparatuses",
+      "options": {
+        "A": "premonitions",
+        "B": "assessments",
+        "C": "hierarchies",
+        "D": "premonitions"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-12",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 12,
+      "question": "with",
+      "options": {
+        "A": "over",
+        "B": "through",
+        "C": "beyond",
+        "D": "over"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-13",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 13,
+      "question": "defence",
+      "options": {
+        "A": "pretext",
+        "B": "intuition",
+        "C": "reconciliation",
+        "D": "pretext"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-14",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 14,
+      "question": "It is not followed",
+      "options": {
+        "A": "Nor does it follow",
+        "B": "It is not followed",
+        "C": "What follows",
+        "D": "Nor does it follow"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-15",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 15,
+      "question": "is",
+      "options": {
+        "A": "does",
+        "B": "and",
+        "C": "or",
+        "D": "請依下文回答第"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-16",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 16,
+      "question": "According  to  the  passage  above,  which  of  the  following  is  NOT  a  major  concern  of  the  practice  of",
+      "options": {
+        "A": "prostitution?",
+        "B": "Whether it is abusive.",
+        "C": "Whether it is tempting.",
+        "D": "Whether it is enpowering."
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-17",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 17,
+      "question": "According to the passage, which of the following is true of the practice of prostitution?",
+      "options": {
+        "A": "Man’s gaining sexual access to the body of different species should be sanctioned.",
+        "B": "Patriarchal dominance is prevalent in the act of prostitution.",
+        "C": "Sex work harms female subordination.",
+        "D": "Female sexuality is inherently harmful."
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-18",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 18,
+      "question": "According to the passage, which of the following is true of the prostitution discourse?",
+      "options": {
+        "A": "Prostitution is partially defined as exploitative sexuality.",
+        "B": "Prostitution is part and parcel of social work.",
+        "C": "Prostitution is empowered by enhancing morality.",
+        "D": "Social vulnerability sanctions females’ sexual inequality."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-19",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 19,
+      "question": "According to the passage, what is the major reason prostitution is immoral?",
+      "options": {
+        "A": "Religious condemnation.",
+        "B": "Political commitment.",
+        "C": "Economic activity.",
+        "D": "Racial discrimination."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-20",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 20,
+      "question": "Why may prostitution be argued to empower women?",
+      "options": {
+        "A": "Prostituted women could endure extensive sexual and physical violence.",
+        "B": "Sex work is potentially harmful in that it is lucrative.",
+        "C": "Women could liberate their body as they please.",
+        "D": "Prostitution reflects women’s demand for social justice."
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-21",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 21,
+      "question": "brainchild",
+      "options": {
+        "A": "stepchild",
+        "B": "adopted child",
+        "C": "spoiled child",
+        "D": "stepchild"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-22",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 22,
+      "question": "objection",
+      "options": {
+        "A": "objective",
+        "B": "objection",
+        "C": "drawback",
+        "D": "objective"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-23",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 23,
+      "question": "forcing",
+      "options": {
+        "A": "force",
+        "B": "to force",
+        "C": "forced",
+        "D": "force"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-24",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 24,
+      "question": "challenge",
+      "options": {
+        "A": "constrain",
+        "B": "challenge",
+        "C": "regulate",
+        "D": "constrain"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-customs-25",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 25,
+      "question": "escaped",
+      "options": {
+        "A": "excluded",
+        "B": "participated",
+        "C": "persuaded",
+        "D": "excluded"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-1",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "Several stylish",
+      "options": {
+        "A": "can be found on the chairs on display, even though one could easily recognizethe prototype.",
+        "B": "visionaries",
+        "C": "variations",
+        "D": "vocations"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-2",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "Our manager often meditates for about twenty minutes right in his office; afterwards, one could",
+      "options": {
+        "A": "clearly see that he has this",
+        "B": "look on his face.",
+        "C": "radiate",
+        "D": "radish"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-3",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "The robber",
+      "options": {
+        "A": "ran into the police when he was just about to turn around a corner where he was",
+        "B": "trying to escape with his raid.",
+        "C": "immensely",
+        "D": "implicitly"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-4",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "Chemotherapy did not make John feel better. Instead, his health started to",
+      "options": {
+        "A": "soon after.",
+        "B": "underscore",
+        "C": "illustrate",
+        "D": "deteriorate"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-5",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "The journalist was finally caught",
+      "options": {
+        "A": "all the stories he had made up for the newspaper he workedfor.",
+        "B": "dazzling",
+        "C": "equating",
+        "D": "fabricating"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-6",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "Even in the face of personal",
+      "options": {
+        "A": ", she does not see herself as totally defeated. She does what she",
+        "B": "can to make the world a better place.",
+        "C": "adversity",
+        "D": "contribution"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-7",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "Although many people still view Bosnia with",
+      "options": {
+        "A": ", its dramatic landscapes and singular history",
+        "B": "are making it an increasingly popular destination.",
+        "C": "ingenuity",
+        "D": "proximity"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-8",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "What  you are  getting now is a",
+      "options": {
+        "A": "schedule for events in the coming  year, which should be",
+        "B": "finalized by the end of this month.",
+        "C": "permanent",
+        "D": "tentative"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-9",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "When traveling along the coast, we",
+      "options": {
+        "A": "across the ruins of an old fort and enjoyed the historicalsite.",
+        "B": "sneaked",
+        "C": "skipped",
+        "D": "scrambled"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-10",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "Your visa expired 7 months ago. It is not",
+      "options": {
+        "A": "anymore. You need to apply for a new one.",
+        "B": "vacant",
+        "C": "valid",
+        "D": "variable"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-11",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 11,
+      "question": "citadel",
+      "options": {
+        "A": "recital",
+        "B": "citadel",
+        "C": "score",
+        "D": "recital"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-12",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 12,
+      "question": "blurring",
+      "options": {
+        "A": "rising",
+        "B": "blurring",
+        "C": "streaming",
+        "D": "rising"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-13",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 13,
+      "question": "fiendishly",
+      "options": {
+        "A": "categorically",
+        "B": "fiendishly",
+        "C": "transiently",
+        "D": "categorically"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-14",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 14,
+      "question": "research",
+      "options": {
+        "A": "rigor",
+        "B": "ridicule",
+        "C": "rebellion",
+        "D": "rigor"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-15",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 15,
+      "question": "distinguished",
+      "options": {
+        "A": "distinguishing",
+        "B": "extinguished",
+        "C": "extinguishing",
+        "D": "請依下文回答第"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-16",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 16,
+      "question": "looking after",
+      "options": {
+        "A": "looking away",
+        "B": "looking after",
+        "C": "looking up",
+        "D": "looking away"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-17",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 17,
+      "question": "maintain",
+      "options": {
+        "A": "migrate",
+        "B": "maintain",
+        "C": "moderate",
+        "D": "migrate"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-18",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 18,
+      "question": "get rid of",
+      "options": {
+        "A": "do justice to",
+        "B": "keep track of",
+        "C": "make way for",
+        "D": "do justice to"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-19",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 19,
+      "question": "component",
+      "options": {
+        "A": "device",
+        "B": "inventory",
+        "C": "issue",
+        "D": "device"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-20",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 20,
+      "question": "advances",
+      "options": {
+        "A": "impediments",
+        "B": "responses",
+        "C": "fulfillments",
+        "D": "請依下文回答第"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-21",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 21,
+      "question": "What is the main subject of this passage?",
+      "options": {
+        "A": "Airline customer complaints.",
+        "B": "Violent treatment.",
+        "C": "Unusual flights.",
+        "D": "Client-oriented services."
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-22",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 22,
+      "question": "What is the main reason for the ANA flight to turn back to Los Angeles?",
+      "options": {
+        "A": "The famous model Chrissy Teigen attracted 9.2 million followers on Twitter.",
+        "B": "The Security Administration Mike England needed to investigate the two brothers.",
+        "C": "The airline was required to check the overwhelming odor in the lavatory.",
+        "D": "One of the two brothers boarded ANA with a United Airlines ticket."
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-23",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 23,
+      "question": "Which of the following statements best describes the author's opinion about the flight turning back?",
+      "options": {
+        "A": "Flight delay is not acceptable.",
+        "B": "It sounds ridiculous but unavoidable.",
+        "C": "It is a second-best solution.",
+        "D": "The passengers should fight for their rights."
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-110-customs-25",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 25,
+      "question": "What can be inferred from the passage?",
+      "options": {
+        "A": "Most causes of flight delay are beyond control of airlines.",
+        "B": "Passengers on board are aware of what they should not do.",
+        "C": "Long-haul passengers might get extravagant compensations.",
+        "D": "To fly fast and on schedule is the top priority for all airlines."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-1",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "High blood pressure is a serious symptom of cardiovascular",
+      "options": {
+        "A": "and can be the smoking gun behind",
+        "B": "strokes, heart attacks, and more.",
+        "C": "assortment",
+        "D": "dysfunction"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-2",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "Mostfoods are very high in sodium. If you’re eating something out of a can or a package, chances",
+      "options": {
+        "A": "are you’re not doing anything to help your blood pressure.",
+        "B": "condensed",
+        "C": "compressed",
+        "D": "elevated"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-3",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "A group of scientists recently created a system that",
+      "options": {
+        "A": "brain waves into words by focusing on the",
+        "B": "physical movements related to speech.",
+        "C": "evacuates",
+        "D": "postulates"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-4",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "As we sat over our drinks, he",
+      "options": {
+        "A": "his business, and by I expressed casually my surprise at him not",
+        "B": "earning more.",
+        "C": "gloated",
+        "D": "glorified"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-5",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "Our organization doesn’t support any political party and has rigorous safeguards in place at every level",
+      "options": {
+        "A": "to protect our",
+        "B": ".",
+        "C": "neutrality",
+        "D": "maturity"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-6",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "The  directive  aims  to  ensure  that  persons  of  a  particular  religion  or  belief,  disability,  age  or  sexual",
+      "options": {
+        "A": "orientation do not suffer from",
+        "B": ".",
+        "C": "immaturity",
+        "D": "illiteracy"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-7",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "Jenny tried to",
+      "options": {
+        "A": "her parents about where she had been that evening, but her parents could smell the",
+        "B": "smoke and beer on her.",
+        "C": "provoke",
+        "D": "deceive"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-8",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "Koalas are often",
+      "options": {
+        "A": "identified due to their appearance as a member of the bear family, but they are",
+        "B": "scientifically classified as a marsupial related to kangaroos.",
+        "C": "appropriately",
+        "D": "illegally"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-9",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "Our research on the elderly has shown that those who have dementia often appear to suffer a double",
+      "options": {
+        "A": "of",
+        "B": "age and cognitive disability.",
+        "C": "condolence",
+        "D": "concentration"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-10",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "A",
+      "options": {
+        "A": "of scandals and revelations has collectively undermined the government over the past year.",
+        "B": "transmission",
+        "C": "concession",
+        "D": "scenario"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-11",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 11,
+      "question": "once",
+      "options": {
+        "A": "or else",
+        "B": "unless",
+        "C": "since",
+        "D": "or else"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-12",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 12,
+      "question": "past",
+      "options": {
+        "A": "passing",
+        "B": "passed",
+        "C": "to pass",
+        "D": "passing"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-13",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 13,
+      "question": "maintain",
+      "options": {
+        "A": "reserve",
+        "B": "maintain",
+        "C": "survive",
+        "D": "reserve"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-14",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 14,
+      "question": "Despite",
+      "options": {
+        "A": "While",
+        "B": "Despite",
+        "C": "Even now",
+        "D": "While"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-15",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 15,
+      "question": "lasted",
+      "options": {
+        "A": "entertained",
+        "B": "improved",
+        "C": "qualified",
+        "D": "請依下文回答第"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-16",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 16,
+      "question": "mastered",
+      "options": {
+        "A": "destroyed",
+        "B": "widespread",
+        "C": "compiled",
+        "D": "destroyed"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-17",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 17,
+      "question": "perishable",
+      "options": {
+        "A": "fragile",
+        "B": "perishable",
+        "C": "resilient",
+        "D": "fragile"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-18",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 18,
+      "question": "resistant",
+      "options": {
+        "A": "susceptible",
+        "B": "resistant",
+        "C": "welcoming",
+        "D": "susceptible"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-19",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 19,
+      "question": "homelands",
+      "options": {
+        "A": "restraints",
+        "B": "homelands",
+        "C": "profiles",
+        "D": "restraints"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-20",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 20,
+      "question": "misleading",
+      "options": {
+        "A": "alleging",
+        "B": "denouncing",
+        "C": "excluding",
+        "D": "請依下文回答第"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-21",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 21,
+      "question": "What would be the best title of this passage?",
+      "options": {
+        "A": "Possible Causes of Memory Loss.",
+        "B": "Post-traumatic Stress Disorder.",
+        "C": "Studies of Trauma in Humans.",
+        "D": "Suppressing Fearful Memories."
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-22",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 22,
+      "question": "What did researchers do to form a fearful memory of a tone in mice?",
+      "options": {
+        "A": "The researchers gave mice a mild shock when the tone sounded.",
+        "B": "The researchers inserted proteins into the mice’s brains.",
+        "C": "The mice were shown pulses of light when hearing the tone.",
+        "D": "The scientists used different colors of light to activate the mice’s cells."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-23",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 23,
+      "question": "Which of the following is a reason that future technology should not be used to erase a bad memory in",
+      "options": {
+        "A": "humans?",
+        "B": "Optogenetics is an invasive procedure.",
+        "C": "Humans’ brains are different from mice’s.",
+        "D": "Technology should not be used to manipulate memories in people."
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-24",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 24,
+      "question": "Which of the following statements would the author most likely agree to?",
+      "options": {
+        "A": "Optogenetics is a technology used in treating trauma in humans.",
+        "B": "The use of optogenetics needs to take ethics into consideration.",
+        "C": "Mice’s brains contain billions of neurons similar to those of humans.",
+        "D": "The goal of treating memory disorders is to help people suppress fearful memories."
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-109-customs-25",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 25,
+      "question": "Which of the following statements can be inferred?",
+      "options": {
+        "A": "Discoveries of optogenetics might help scientists create new methods in the treatment of memorydisorders.",
+        "B": "The technology of optogenetics can be used to treat post-traumatic stress disorder in humans.",
+        "C": "It is possible to silence memories in humans after all treatment options have been explored.",
+        "D": "With the technology of optogenetics, humans can easily seize moments of joy."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-1",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "Doctor Wong is promoted because he has done an",
+      "options": {
+        "A": "excellent  job  of  supervising  the  medical            .",
+        "B": "catalogue",
+        "C": "laboratory",
+        "D": "compliment"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-2",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "Without receiving final approval from its board of trustees, the university has       set its budget for the next academic year at NT$200 million.",
+      "options": {
+        "A": "of  trustees,  the  university  has              set its budget for",
+        "B": "the next academic year",
+        "C": "at NT$200 million.",
+        "D": "beneficially"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-3",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "After being interrogated by the police for two days, the suspect finally",
+      "options": {
+        "A": "to the crime.",
+        "B": "confessed",
+        "C": "authorized",
+        "D": "disciplined"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-4",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "It  is  believed  that  the",
+      "options": {
+        "A": "have been living on Austonesian (Southern Asian) Islands for thousands",
+        "B": "of years.",
+        "C": "assistants",
+        "D": "aborigines"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-5",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "One  of  North  Korean  leader  Kim  Jong  Un’s  top  offi",
+      "options": {
+        "A": "cials  arrived  at  the  United  States  where  he  is",
+        "B": "expected  to  help",
+        "C": "the groundwork for talks between Kim and US President in Singapore.",
+        "D": "lay"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-6",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "charged with",
+      "options": {
+        "A": "changed into",
+        "B": "charged with",
+        "C": "checked out",
+        "D": "changed into"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-7",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "broke down",
+      "options": {
+        "A": "ran out",
+        "B": "passed away",
+        "C": "started over",
+        "D": "ran out"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-8",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "crucial",
+      "options": {
+        "A": "visual",
+        "B": "crucial",
+        "C": "virtual",
+        "D": "visual"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-9",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "increasingly",
+      "options": {
+        "A": "spaciously",
+        "B": "simultaneously",
+        "C": "interestingly",
+        "D": "spaciously"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-10",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "over",
+      "options": {
+        "A": "alone",
+        "B": "all",
+        "C": "new",
+        "D": "篇章結構題組，下列各題請依文意從四個選項中選出最合適者，答案選用不能重覆。"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-11",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 11,
+      "question": "They fought against laws that woul",
+      "options": {
+        "A": "d make things better for workers.",
+        "B": "In the book Smith argued government",
+        "C": "controls were hurting the economy.",
+        "D": "This economic freedom, he believed, would ma"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-13",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 13,
+      "question": "Many of the old laws controlli",
+      "options": {
+        "A": "ng the economy were abolished.",
+        "B": "They fought against laws that woul",
+        "C": "d make things better for workers.",
+        "D": "In the book Smith argued government"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-16",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 16,
+      "question": "According to the passage, which of the following statements is NOT true?",
+      "options": {
+        "A": "In 1918, the passport color was beige in the US.",
+        "B": "In 1930, the US used burgundy covers for their passports.",
+        "C": "From 1941 to 1976, US travelers",
+        "D": "were issued burgundy passports."
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-17",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 17,
+      "question": "Which of the following countries use the same color for their passports?",
+      "options": {
+        "A": "Peru and the US.",
+        "B": "The UK and Saudi Arabia.",
+        "C": "Spain and Nigeria.",
+        "D": "Liberia and Pakistan."
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-18",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 18,
+      "question": "Which of the followings about the meanings of pa",
+      "options": {
+        "A": "ssport colors is NOT mentioned in the passage?",
+        "B": "Representing their culture.",
+        "C": "Emphasizing their national sovereignty.",
+        "D": "Reflecting their religion."
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-19",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 19,
+      "question": "According to the passage, why do passpor",
+      "options": {
+        "A": "ts normally come in dark shades?",
+        "B": "To show patriotism and",
+        "C": "respect their own history.",
+        "D": "To coordinate with passports of other countries."
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-20",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 20,
+      "question": "What does the word “Int",
+      "options": {
+        "A": "erpol” possibly refer to?",
+        "B": "International Criminal Police Organization.",
+        "C": "Andean Community of Nations.",
+        "D": "Asia-Pacific Economic Cooperation."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-21",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 21,
+      "question": "Which field of study is most cl",
+      "options": {
+        "A": "osely related to this passage?",
+        "B": "Human Resources.",
+        "C": "Social Work.",
+        "D": "Human Rights."
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-22",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 22,
+      "question": "According to the passage, which of the following stat",
+      "options": {
+        "A": "ements is true about the mother-son relationship?",
+        "B": "Mothers find it hard to discipline their sons.",
+        "C": "Sons express less filial pi",
+        "D": "ety to their mothers."
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-23",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 23,
+      "question": "Why is the mother-son separation a prevaili",
+      "options": {
+        "A": "ng theme in contemporary women’s writing?",
+        "B": "Because mothers are advised to",
+        "C": "disconnect with their sons.",
+        "D": "Because mothers feel obligated to"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-24",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 24,
+      "question": "How does Brown portray a mother who seems to",
+      "options": {
+        "A": "be more compelling than that of Forster?",
+        "B": "She makes a mother more dominant by monitoring everything her son does.",
+        "C": "She allows a mother to work out the",
+        "D": "mother-son relationship on her own terms."
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-customs-25",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 25,
+      "question": "What  is  the  actual  meaning  of  the  concluding  sent",
+      "options": {
+        "A": "ence,  “there  exists  a  powerful  reading  and  writing",
+        "B": "against the grain”?",
+        "C": "It indicates that motherhood can",
+        "D": "be manipulative and nurturing."
+      },
+      "answer": "D",
       "level": "senior",
       "shared_bank": "common_english",
       "parent_id": null,
@@ -10089,6 +14301,162 @@
         "D": "Ojos del Salado in South America is the"
       },
       "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-police-9",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "顯示執行特定工作人員必須具備的知識、技能、能力及其他特質的表單，稱之為：",
+      "options": {
+        "A": "職務規範書（job specification）",
+        "B": "工作識別證（job identification）",
+        "C": "工作清單（job list）",
+        "D": "組織圖（organizational chart）"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-114-police-17",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 17,
+      "question": "一個有回饋性的政策系統，包括投入、過程、產出及結果四個階段，以及最終對政策投入的回饋。 考核一個方案被執行的程度與原訂計畫的差別，屬於下列那一種評估類型？",
+      "options": {
+        "A": "過程評估（process evaluation",
+        "B": "）",
+        "C": "影響評估（impact evaluation",
+        "D": "）"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-112-police-24",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 24,
+      "question": "隨著數位化潮流興起，民眾透過手機、 APP和網際網路參與公共政策制定，已成為一種最方便、 直接的民主參與方式，此一發展趨勢稱之為 ：",
+      "options": {
+        "A": "應用民主（application democracy",
+        "B": "）數位行銷（digitalmarketing）",
+        "C": "線上民主（online democracy",
+        "D": "）線上學習（online learning）"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-police-5",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "美國學者羅爾斯（ J. Rawls）認為，想要探討正義的內涵就必須善用：",
+      "options": {
+        "A": "透明之幕（the veil of transparency",
+        "B": "）",
+        "C": "廉正之幕（the veil of integrity",
+        "D": "）"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-111-police-19",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 19,
+      "question": "甲過去的工作表現一直相當良好，今年甲的主管特別要求甲在其業務上參考其他先進國家的作 法，並提出創新作為及改進建議；在以上描述中，主管所展現的行為最符合豪斯（ R. House）提 出的「途徑目標理論（ path goal theory）」中那一種型態的領導行為？",
+      "options": {
+        "A": "工具行為（instrumental behavior",
+        "B": "）",
+        "C": "支持行為（supportive behavior",
+        "D": "）"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-108-police-22",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 22,
+      "question": "「某甲過去平時認真工作時，主管都會予以獎勵，當主管因經費受限而停止獎勵，某甲覺得不需 要再如此認真工作」，這是符合增強理論所描述的下列何者現象？",
+      "options": {
+        "A": "正增強（positive reinforcement",
+        "B": "）",
+        "C": "負增強（negative reinforcement",
+        "D": "）"
+      },
+      "answer": "D",
       "level": "senior",
       "shared_bank": "common_english",
       "parent_id": null,

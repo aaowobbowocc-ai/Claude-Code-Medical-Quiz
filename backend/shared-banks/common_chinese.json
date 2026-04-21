@@ -2,8 +2,8 @@
   "bankId": "common_chinese",
   "name": "公職國文",
   "description": "公職考試共通科目：國文（含公文格式、閱讀測驗、作文）— skeleton，待後續爬蟲填充",
-  "bankVersion": 2,
-  "last_synced_at": "2026-04-20T15:20:47.777Z",
+  "bankVersion": 5,
+  "last_synced_at": "2026-04-21T02:45:06.777Z",
   "levels": [
     "senior"
   ],
@@ -2341,6 +2341,1748 @@
         "D": "墾丁大街只是在模仿「南洋」，並未開創出本"
       },
       "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-114-customs-1",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "下列文句「」中的成語，使用正確的是：",
+      "options": {
+        "A": "李老先生熱心公益，關於他的助人事蹟實是「罄竹難書」",
+        "B": "張君與我一見如故，兩人因此「義結金蘭」，成就一段金石之交",
+        "C": "兩人因互有成見，討論時常常「抵掌而談」，怒目相向，無法形成共識",
+        "D": "趙老師道德學問俱佳，「高山安仰」，人皆崇敬，毋怪乎今日壽辰賀客盈門"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-114-customs-2",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "「在古代，發燒或者拉肚子就是死亡的第一徵兆，面對這些突如其來的疾病、隨處 可見的死亡，無計可施的人們把自己鎖在家，或棄城逃走。在歐洲，面對黑死病也 就是鼠疫的威脅，成千上萬的民眾逃離城市。古代的統治者、政客和巫師往往會利 用人們對瘟疫的恐懼來加強和鞏固他們的統治。但隨科技進步和發展，人類終於找 到能遏制住瘟疫的武器 ——疫苗。疫苗給人類帶來的價值不可估量，通過疫苗，人 類歷史上第一次消滅了一種疾病 ——天花。疫苗給我們的第二個價值就是降低醫療 開支。美國的一項成本收益分析顯示，在疫苗上每投資 1美元可節約2～27美元的 醫療支出。」 下列敘述，何者不符合文意？",
+      "options": {
+        "A": "黑死病即為鼠疫",
+        "B": "疫苗並不是遏制瘟疫的武器",
+        "C": "疫苗有助省下整體醫療開支的花費",
+        "D": "瘟疫牽涉的並非單純的醫學與公衛問題"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-114-customs-3",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "「在網路流行的初期，『即使你是一條狗，在網路上也沒人知道』或許是真的， 但如今的情況是完全相反。數以百計的模型根據我們透露的偏好和行為形態，將我 們分類，替我們排名次或是給予評分。這替正當的廣告活動建立了有力的基礎，但 也助長了掠奪式廣告 ——這些廣告針對處境艱難的人，賣給他們虛假或過度昂貴的 希望。」 根據上文，下列選項何者正確？",
+      "options": {
+        "A": "人們多半無法拒絕網路的誘惑，因此產生過度消費",
+        "B": "廣告可透過網路使用者的偏好之大數據結果來設計",
+        "C": "網路技術日漸進步，使用者的隱私也越發受到保護",
+        "D": "窮人會被掠奪式廣告欺騙主要是因為不良上網偏好"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-114-customs-4",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "「幻想與日常現實匯聚在寫作之中，而寫作往往盤旋在現實主義與非現實主義之 間。《哈利‧波特》小說描繪的現實主義世界往往會發生極不可能發生的事件。讀 者必須認清小說中的現實，才能享受現實被魔法力量改變的樂趣。由於絕大多數讀 者是兒童，而兒童通常沒有地位或權威，因此當他們看到其他孩子擁有強大的力量 時，無疑能產生極大的滿足。」 根據上文，《哈利‧波特》小說的內容特點不包含：",
+      "options": {
+        "A": "在現實世界發生不可能的事件",
+        "B": "傳達魔法力量改變現實的樂趣",
+        "C": "最適合沒有地位或權威的讀者",
+        "D": "可使兒童讀者產生極大的滿足"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-114-customs-5",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "「紋面是賽德克文化的重要特徵，原因大致有三個，一是與繁衍後代有關。傳說中 央山脈之中，名為 Bnuhun的地方，有棵大樹，年長而化為神，有一天從樹中走出 男、女二神。日後女神離家入山，自取樹汁塗臉，換了相貌回家，與男神結為夫妻。 第二個原因是區別背信者。古代人口逐漸增加，分為兩社，約定以喊聲區別下山或 留下的人數，結果下山者使詐，留下的族人便紋面以別於平地人。第三個原因則是 辨識敵我，在戰鬥中不致誤傷本族人。一直以來，賽德克族的紋面文化常被醜化為 黥面或刺青，事實上兩者的意涵不同。紋面是賽德克族人在世的榮耀，也是靈魂能 安然通過祖靈橋的重要烙印之一。」 根據上文對於賽德克族人紋面的原因之描述，下列敘述何者正確？",
+      "options": {
+        "A": "女性必須紋面之後，才能與族中的男性結為夫妻",
+        "B": "孩童長大成人通過黥面儀式，即可參與狩獵戰鬥",
+        "C": "如果沒有紋面，族人在死後就不能為祖靈所接納",
+        "D": "族人若有背信忘義的行為，就會紋上特別的圖案"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-114-customs-6",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "「澳洲昆士蘭科技大學的 Alethea  Blackler研究團隊發表一篇論文：《使用者和說",
+      "options": {
+        "A": "明書及產品累贅功能之間的關係》，他們用了",
+        "B": "7年蒐集170份問卷，再進行6個月",
+        "C": "的使用者日記與訪談，做了質化與量化的研究分析，證實了以下幾個現象：",
+        "D": "1.只有"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-114-customs-7",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "「藍碳（Blue Carbon）指的是保存在海洋生態系統中的碳，將二氧化碳保存在藍碳 中已被確認是減緩大氣中二氧化碳的可行方法之一。藍碳位處藍色海洋周圍的海 草、紅樹林、鹽草及小型浮游微藻等生態系，牠們具備有強力碳吸存的功能，可分 成3類：1.沿岸藍碳：即鹽沼、紅樹林及海草床等看得見的沿岸藍碳生態系，這些",
+      "options": {
+        "A": "沿岸綠色植物和生態系統的儲碳能力，比陸地森林高出數",
+        "B": "6倍以上。2.大洋藍碳：",
+        "C": "生物和物理幫浦之生物幫浦，即浮游植物在透光層中行光合作用，將海水二氧化碳",
+        "D": "轉化成顆粒態的有機碳，並傳送到深海的過程。"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-114-customs-8",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "「嗚呼！曼卿！生而為英，死而為靈。其同乎萬物生死，而復歸於無物者，暫聚之 形；不與萬物共盡，而卓然其不朽者，後世之名。此自古聖賢，莫不皆然。而著在 簡冊者，昭如日星。......奈何荒煙野蔓，荊棘縱橫，風淒露下，走燐飛螢；但見牧 童樵叟，歌吟而上下，與夫驚禽駭獸，悲鳴躑躅而咿嚶。今固如此，更千秋而萬歲 兮，安知其不穴藏狐貉與鼯鼪？此自古聖賢亦皆然兮，獨不見夫纍纍乎曠野與荒",
+      "options": {
+        "A": "城！嗚呼！曼卿！盛衰之理，吾固知其如此，而感念疇昔，悲涼悽愴，不覺臨風而",
+        "B": "隕涕者，有愧乎太上之忘情。尚饗！」",
+        "C": "下列選項，何者最符合本文意旨？",
+        "D": "作者明瞭興衰之理，故能超然自得"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-114-customs-9",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "上謂房玄齡、蕭瑀曰：「隋文何等主？」對曰：「克己復禮，勤勞思政，每一坐朝，",
+      "options": {
+        "A": "或至日昃。五品已上，引之論事。宿衛之人，傳餐而食。雖非性體仁明，亦勵精之",
+        "B": "主也。」上曰：「公得其一，未知其二。此人性至察而心不明。夫心暗則照有不通，",
+        "C": "至察則多疑於物。自以欺孤寡得之，謂群下不可信任，事皆自決，雖勞神苦形，未",
+        "D": "能盡合於理。朝臣既知上意，亦復不敢直言，宰相已下，承受而已。朕意不然。以"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-114-customs-10",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "承上題，唐太宗基於上述體認，最可能諭令宰相：",
+      "options": {
+        "A": "詔敕失當，應即上諫",
+        "B": "摒除私見，戮力從公",
+        "C": "克己復禮，謹承上意",
+        "D": "輕徭薄賦，與民休息"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-113-customs-1",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "下列詞語，運用完全正確的選項是：",
+      "options": {
+        "A": "「令尊生前聲名顯赫，如今仙逝，可謂備極哀榮，懿德可風。」",
+        "B": "「愚父子特來參加貴公司的開幕慶。」「歡迎賢昆仲大駕光臨！」",
+        "C": "「令姐和你相差幾歲？」「家姐長我三歲，已經工作一年多了。」",
+        "D": "「欣聞您榮獲優良教師獎，真是杏林之光！」「哪裡，過獎了！」"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-113-customs-2",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "「我更喜歡《白蛇傳》裡的白蛇，至少她獨當一面，敢愛敢恨，不像許仙是一介懦 夫，出事後只會躲在法海背後，我覺得，《白蛇傳》是傑作，劇中法海象徵的是中 國舊社會秩序，舊社會規範女性應該附屬於男人，而獨立自主的女性則都是異類， 因此只能是蛇蠍。」 根據上文，下列敘述最適當的是：",
+      "options": {
+        "A": "《白蛇傳》男性角色極多，此亦為傳統性別包袱",
+        "B": "《白蛇傳》裡的白蛇反映了傳統女性遭遇的困境",
+        "C": "法海與白蛇的戰爭起因於價值觀與宗教觀的差異",
+        "D": "許仙因羞於表達對白蛇的愛意，被作者評為怯懦10920-11120"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-113-customs-3",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "「北宋四家的書法特色在於表現極為自由且個人式的行書，一反唐代以來貴族門 閥，著重法度與裝飾味極濃的楷書體制，完全為一種抒情與縱意的風格，此即所謂 『唐人尚法』、『宋人尚意』兩個因環境與時勢不同所造成的差異。這種改變類似 由篆書轉為隸書，由規矩森嚴放鬆成為自由任誕；由步步為營，一變而為信筆揮灑； 由古典的莊嚴移進寫意的創新風格。中國書法史的演變，一如文學與繪畫藝術史的 演進，都有著一種時代的變革與反動，及歷史的周期循環。」 根據上文，下列敘述何者正確？",
+      "options": {
+        "A": "書法的演變與文學藝術大不相同，書法家必須依官方訂定的標準字體書寫",
+        "B": "唐宋的書法藝術受到時空環境影響，各有風格特色，有所承繼亦有所新變",
+        "C": "宋代書法家擅寫隸書，改變唐代重法度規矩的篆書，呈現開放隨興的特色",
+        "D": "宋代的書法繪畫勇於突破，超越唐代，成為中國藝術史上最大的創新時期"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-113-customs-4",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "「美國詩人羅伯．佛斯特（ Robert Frost）稱蝴蝶為『不歌唱的飛花』，這樣的意象 如此打動人心；在我們心中，春夏時節野外明媚的風光裡，絕對少不了蝴蝶。另一 方面，人們也用蝴蝶來象徵『脆弱』或『輕浮』的感覺。英文裡有個說法叫做『蝴 蝶心』（Butterfly mind ），就是指一個人像蝴蝶在花叢中流連，在這朵花上短暫停 留後又飛到下朵花上一樣，無法專注在一件事上。但是蝴蝶之所以吸引人，不正是 因為牠們出現的時間極短，譬如朝露嗎？」",
+      "options": {
+        "A": "根據上文，下列敘述最適當的是：",
+        "B": "「不歌唱的飛花」和「蝴蝶心」都是用來形容春天美好風光",
+        "C": "「蝴蝶心」另指蝴蝶壽命如朝露般短暫易逝，更須好好掌握",
+        "D": "蝴蝶的足跡飄忽不定，只會出現在春夏時節的野外明媚風光"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-113-customs-5",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "「山區裸露地勢險惡，造林有其困難，在無法造林的情況下則須防砂，包括野溪整 治工程、施作堰堤、穩固河床、進行浚渫工程等。山坡部分則在沒有走山之虞的山 壁，施作階狀排水溝或栽種防砂植物等。下游的臺中州員林郡二水庄鼻仔頭，以及 臺南州斗六郡林內，因兩處地形急峻，在第一年度就進行防砂設施，否則許多野溪 一遇豪雨造成土石流。山坡地的保安林更攸關縱貫鐵路、集集線、道路與農耕區的 安全。倡立國家公園的呼聲在二十世紀初響起，因其多位於河川上游，所以對水土 保持、保育山林的要求，與官方積極從事上述事業的目的不謀而合。」 根據上文，下列敘述何者最符合文意？",
+      "options": {
+        "A": "築堰堤、栽種植物是山坡防砂工程常用策略",
+        "B": "臺南州斗六郡的兩處險地優先施作防砂設施",
+        "C": "保安林的擴大有益縱貫鐵路與集集線的營運",
+        "D": "國家公園的倡立與育林治水的目的殊途同歸"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-113-customs-6",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "「文學作品或傳統，不可能無視於後人如何論說而自身即具價值。因此，如果沒有 足夠的詮釋，我們的歷史一旦發生重大變化，未來我們可能無法從莎士比亞獲取任 何啟發。他的作品可能看來極其陌生，充滿那個社會狹隘或不相干的思維方式和感 情。在這種狀況下，莎士比亞的價值，和時下許多塗鴉之作就無分軒輊。」 根據上文，下列選項何者最符合文意？",
+      "options": {
+        "A": "莎士比亞作品的價值，與塗鴉之作並沒有高下之分",
+        "B": "即使沒有詮釋，後人都可體會莎士比亞作品的價值",
+        "C": "莎士比亞作品的價值是每一個時代的讀者所建構的",
+        "D": "莎士比亞作品只能在其所處的時代產生影響與作用10920-11120"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-113-customs-7",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "「真正的愛情應該是蒸發的過程，當其結束，只留下一股自己才能辨識的獨特香味 及將在日後浮現或消隱的記憶。愛情要走的時候，如持小刀劃開兩臂，讓棲息在肉 裡骨裡的小藍雀一一飛回天空，恢復自由。傷口雖痛，但不出惡言，不留穢字。」 根據上文，對於「愛情」的說明最符合的是：",
+      "options": {
+        "A": "每個愛情的對象都是獨一無二，真心投入才能發現",
+        "B": "失戀雖令人痛不欲生，但時間終將會撫平所有傷口",
+        "C": "戀愛之際應全心燃燒自我，才能留下蒸發後的結晶",
+        "D": "戀愛過程雖刻骨銘心，但結束之際仍應讓彼此自由"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-113-customs-8",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "「苦味可人，好在若即若離幽微隱約，不像酸甜辣鹹，先驗分明當下即是，無可回 顧流眄。苦味是悖論與解構，夷平抹消殘局舊味，滌盡腔舌的困頓疲憊，讓味蕾歸 零返本，東山再起煥然一新，領受初始真味。」 根據上文，下列選項何者最符合文意？",
+      "options": {
+        "A": "逆來順受，甘之如飴",
+        "B": "苦味既盡，原味始現",
+        "C": "意氣相投，同甘共苦",
+        "D": "世道人情，五味雜陳"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-113-customs-9",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "「一般人可能會覺得老人因為日薄西山，憂鬱症的比例會比年輕人高出許多，其實 並沒有。大部分的長輩能用比較圓融的態度面對不夠完美的現況，但是也有一些老 人家在晚年時陷入憂鬱深谷，每天長吁短歎，認為自己活得很辛苦。跟年輕人不同 的是，老年憂鬱症常以身體不舒服為表現。他們不太會和人傾訴心情低落，而是抱 怨這裡麻、那裡痛、睡不著覺、胃慒慒、呼吸困難 ......乍聽之下，似乎老人家的身 體出現嚴重問題。憂鬱症是一種腦部化學物質失衡的疾病，有些老人家是因為貧血 或甲狀腺功能低下，產生類似憂鬱症的症狀，也有因為中風、失智等慢性病，而併 發憂鬱症。」 根據上文，下列敘述何者正確？",
+      "options": {
+        "A": "憂鬱症是老人家常見的生理疾病，比起其他年齡層出現的比例更高",
+        "B": "老年憂鬱症純粹是心理失調的問題，而不是身體機能所引起的疾病",
+        "C": "因年齡使得身體各個器官老化，導致老年人心情低落而罹患憂鬱症",
+        "D": "當老人家抱怨身體不行，時常失眠或腰酸背痛，可能是得了憂鬱症"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-113-customs-10",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "「鼠疫和瘧疾的式微，以及天花受到控制，都為十八世紀知識份子間流行的自然論 觀點，扎下推廣的預備基礎。若有這樣一個世界，致命傳染病並不會突如其來的降 臨正值盛年的人身上，那麼人們就不會如此需要求神拜佛，以解釋這類暴斃事件。 此外，新流行的機械世界觀支持尋找更有效的方法來應付疾病，使得醫學專業在實 驗測試新療法方面，愈來愈能從經驗中學習。結果，情況真的改善了。於是有關『人 類智慧和技巧不只能改進機械生活，也能改善健康狀態』的想法，似乎變得愈來愈 有道理。因此『歐洲疾病變遷』和『歐陸的文化與政治史』之間，似乎有明顯的關 聯。」 根據上文，下列敘述何者正確？",
+      "options": {
+        "A": "傳染病受到控制，違反當時自然論的觀點",
+        "B": "新流行的機械世界觀，促進醫學科學的重大發展",
+        "C": "人們從世界運行的機械論，解釋傳染病的發生無法預料",
+        "D": "由於歐洲文化與政治的統一，流行病在十八世紀受到控制"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-112-customs-1",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "下列文句「」中成語的使用，何者正確？",
+      "options": {
+        "A": "由於公司的信用風險加速升高，短期債務已在深淵，長期債務也「如履薄冰」",
+        "B": "在這次疫情影響下，國內許多飯店關門，只剩少數還「慘澹經營」，勉強維持",
+        "C": "這個超級強烈颱風昨晚登陸，「石破天驚」，已摧毀許多房舍，造成大量傷亡",
+        "D": "在結婚典禮上，主婚人特別感謝嘉賓的蒞臨，讓婚禮「絕處逢生」，更添光彩"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-112-customs-2",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "「人類是群居動物。我們想要融入群體，想與他人建立關係，想要贏得同儕的尊敬 與肯定。對生存來說，這種傾向是必要的。我們最早的習慣並非來自選擇，而是模 仿。如法國哲人蒙田所寫的：『在生活中，我們被社會的風俗與習慣橫掃。』我們",
+      "options": {
+        "A": "尤其會模仿三種群體的習慣：親近的人（家人與朋友），多數的人（族群），有力",
+        "B": "的人（有地位與聲望的人）。」",
+        "C": "對應作者所強調的人群影響力，下列文句所述，何者不屬於其中情況？",
+        "D": "父母為了孩子教育遷移戶口，讓孩子進入明星學校"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-112-customs-3",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "「艾德勒在經典名著《如何閱讀一本書》中談到了四個層次的閱讀方法，『基礎閱 讀』：相當於識字階段的閱讀，指的是怎麼解決對文字的起碼理解能力，因此一般",
+      "options": {
+        "A": "都是在小學階段就學會的。『檢視閱讀』：指一定時間內，快速掌握一本書大意的",
+        "B": "閱讀。『分析閱讀』：深入了解作者的意圖，掌握全書的文字脈絡與細節，並懂得",
+        "C": "找出作者使用的關鍵字與他進行溝通。『主題閱讀』：也可以稱作比較閱讀。針對",
+        "D": "一個主題，同時閱讀好幾本書，就不同作者之間的意見進行比對與辯證。」"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-112-customs-4",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "軍士請示：「紅夷有兩座城堡，一在鯤鯓島上的大員；另一座則是在臺江岸邊的赤",
+      "options": {
+        "A": "崁。我軍應先攻打何處？」鄭成功已有腹案：「紅夷以為我軍必從大員港道裡過，",
+        "B": "兵士、火砲都布置在此，加上城垣堅固，一時不易強攻；官兵未帶口糧，自然以徵",
+        "C": "糧為當務之急，赤崁多田園，城小易攻，又疏於防備，應當以此為先。待攻下赤崁",
+        "D": "後，大員便只是一座海上孤城，取之易如反掌。」"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-112-customs-5",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "「酒店的黃色室內燈底下，仍清晰可見相同的琥珀色茶湯，落進淨白瓷杯，隨著微 量濾不清的茶渣細粉，和來自舊時代的木質香氣，一起蒸上我的臉，甜穩氣味讓室 外的雨聲安靜，讓兒時光線，轉眼目前。氣味直接釣引出記憶深處的一塊，抿一口， 味道與記憶疊合，在許多年以後，和許多的物是人非以後，茶仍是當年茶，教人深 深感激。」 下列選項，何者最接近上文旨意？",
+      "options": {
+        "A": "時光飛逝，物換星移",
+        "B": "人生苦短，行樂即時",
+        "C": "情感綿延，睹物憶往",
+        "D": "往事如煙，隨遇而安"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-112-customs-6",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "「明末的大儒顧炎武，他的偉大著作《音學五書》，每次清稿完成，書稿就被老鼠 囓壞，囓壞他就重新謄錄，謄錄時又大大修改一番。許多朋友見了都勸他翻瓦倒壁， 灌水薰煙，早早將鼠輩消滅，免得如此惹人厭恨，顧炎武竟然說：『老鼠無心囓破",
+      "options": {
+        "A": "書稿，實在是在勉勵我，不然好好地擱置著等待出版，我那裡肯發心改寫五遍呢？』」",
+        "B": "根據上文，下列何者最適合說明顧炎武的態度？",
+        "C": "心甘情願，喜形於色",
+        "D": "瞻前顧後，投鼠忌器"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-112-customs-7",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "「誰要是死心塌地追隨一個失勢的主人，那麼他的主人雖然被環境征服，他卻能夠 征服那種環境而不為所屈，這樣的人應該在歷史上永遠占據一個地位。」 根據上文，下列敘述何者正確？",
+      "options": {
+        "A": "忠心不二之人應該在歷史上得到應有的肯定",
+        "B": "主人失勢時，才能顯出屬下忠心的高尚節操",
+        "C": "志士被環境所困而不屈服，應在歷史上留名",
+        "D": "成敗難論英雄，只要力爭上游仍會出人頭地"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-112-customs-8",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "「藝術可以提供一個宏大而嚴肅的觀點，讓我們檢視自身處境當中的辛苦艱難，讓 我們體認到自己的微不足道，讓我們理解到人類面臨的問題相較於永恆之道是多麼 瑣碎渺小，從而使我們更能夠理解每個人在人生中的悲劇。」 下列選項，何者最接近上文旨意？",
+      "options": {
+        "A": "鐘鼎山林都是夢，人間寵辱休驚。只消閒處遇平生",
+        "B": "行到水窮處，坐看雲起時。偶然值林叟，談笑無還期",
+        "C": "前不見古人，後不見來者。念天地之悠悠，獨愴然而涕下",
+        "D": "欲渡黃河冰塞川，將登太行雪滿山。閒來垂釣碧溪上，忽復乘舟夢日邊"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-112-customs-9",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "「在競爭激烈的社會裡，很容易以為以生物工程改造孩子和自己來獲取成功是在行 使自由。但是改變天性去適應世界，而不是反過來，其實是最深刻的權利剝奪的方 式。這麼做會分散我們仔細思考這世界的注意力，並減弱我們改進社會和政治的衝 動。」 根據上文，下列選項何者最符合文意？",
+      "options": {
+        "A": "我們擁有選擇以生物工程來改造孩子和自己的自由",
+        "B": "以生物工程改變天性，對人類產生深刻的權利剝奪",
+        "C": "在競爭激烈的社會裡，要選擇以生物工程改造自己",
+        "D": "生物工程的使用，可使我們改進社會和政治的衝動"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-112-customs-10",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "「九二一大地震固然為日月潭帶來莫大的損傷，卻也震掉了一些陳痾痼疾，像是潭 中之島本為邵族人的舊聚落，亦是邵族最高祖靈『 pashala』的居所，邵語稱之『lalu』， 竟被改名為光華島，更在島上建月下老人亭。如此蔑視邵族文化的行徑，想必連老 天都看不下去，該亭崩於強震，災後月下老人移居水社龍鳳宮，該島正名為『拉魯 島』。」 下列選項，最符合上文意旨的是：",
+      "options": {
+        "A": "皮之不存，毛將焉附",
+        "B": "失之東隅，收之桑榆",
+        "C": "鷸蚌相爭，漁翁得利",
+        "D": "千里之堤，潰於蟻穴"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-111-customs-1",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "下列文句中，「」內成語使用正確的是：",
+      "options": {
+        "A": "王同學尊師重道，又友愛同學，值得大家「群起效尤」",
+        "B": "李先生為人坦蕩，行事磊落，是位「不愧屋漏」的君子",
+        "C": "廉頗與藺相如不計私怨，盡棄嫌隙，成為「總角之交」",
+        "D": "這棟建築氣勢宏偉，「冠冕堂皇」，必出自名設計師之手"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-111-customs-2",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "「一個人的功課，通常指的是你用什麼方法讓你自己人格的整個『生態系統』更乾淨健 全。你如何在獨處時無愧天地，如何在與人相對時情理通透，如何在看待生命時，既能 知覺『心包太虛，量周沙界』，又能透視微塵中的一葉一菩提。」 所謂人格的整個生態系統，下列選項最符合本文敘述的是：",
+      "options": {
+        "A": "獨處、容眾態度與天人合一",
+        "B": "情理通透能微觀與巨觀事物",
+        "C": "自處、人際關係與觀物態度",
+        "D": "孤獨、自信態度與待人接物"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-111-customs-3",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "「我聽到他的口袋裡一直傳來手機的聲響，輕輕的不大聲，他按了手機關掉聲響之後， 我們又繼續聊，聊著昨天的游泳、下個週末的派對，他看著我，回應我說的話。後來， 我發現他對手機聲響後的談話內容完全沒有記憶，那兩分鐘的記憶跑到那去了？」",
+      "options": {
+        "A": "關於上文的詮釋，最適當的是：",
+        "B": "文中「他」很想接電話，「我」卻故意閒聊不讓「他」接電話",
+        "C": "文中「他」牽掛著電話聲響的事，跟「我」聊天只是虛應故事",
+        "D": "「他」不想接電話，也對當下的聊天內容不感興趣，心思不知飄向何處"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-111-customs-4",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "「我們一生之中，多少重大的決策都是在知識不充分時，就不得不勉強拿定的！我 們為什麼必須在無知的情況下就把寶貴的明天抵押出去？把我們的明天抵押給學",
+      "options": {
+        "A": "業、前途、戀愛、婚姻、事業、甚至哲學理想？知識之外影響人生的還有時間。人",
+        "B": "生經驗裡經常孕育著見解上的改變。時間就是改變的產婆。從前所追求的，後來也",
+        "C": "許趕忙摒棄還來不及。昨天的敵手成了今天的同伴。今天覺得是天堂也似的幸福，",
+        "D": "明天想起來，臉也要通紅了罷？」"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-111-customs-5",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "「母親有一雙『改方腳』。在她幼年時，雖然已經被訂了終身大事，可是外祖母擔 心女兒日後在夫家因為腳不夠小而被人嘲笑，因此為她纏足。母親是陳家的掌上明 珠，平時要什麼有什麼，唯獨纏足之苦，任她哭得呼天搶地，外祖母還是鐵石心腸。 這種『酷刑』一直到在外地工作的外祖父回家時才救了母親。他告訴外祖母，城裡 早已不興纏足啦，以後腳越小，越嫁不出去；至今，母親的腳一直留著纏足的印記。」 下列選項，何者最符合上文對纏足的敘述？",
+      "options": {
+        "A": "「改方腳」是女人未纏過足的腳",
+        "B": "外祖父對外祖母纏足的守舊觀念感到不悅",
+        "C": "外祖母接受城鄉審美觀的改變，才使母親免受纏足之苦",
+        "D": "外祖母愛女心切，擔心母親因腳大被退婚，才為母親纏足"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-111-customs-6",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "「在深不見底的湖面我選擇背水而行，但在泳池我喜歡潛水，雙手合十向前瞬間墜入池 底，划動臂膀製造出一個人的洋流，熨斗般貼地滑行，感覺背脊上的水壓，輕柔地擠壓 我的胸腔，以身體裡所有的氧氣和力量支持自己專心向前，只是向前，不必費力於八爪 章魚或小丑魚的龐雜交際，單純在那無邊的空洞之中，專注地，存在。......在這個世界 裡泅泳過久，心態上也會長出那種蒼白無力的皺褶。」 關於文中意涵，下列敘述何者錯誤？",
+      "options": {
+        "A": "「蒼白無力的皺褶」指的是容顏憔悴，青春不再",
+        "B": "「八爪章魚或小丑魚的龐雜交際」暗指世間各種複雜的人際關係",
+        "C": "在泳池中選擇池底潛水，「造出一個人的洋流」，講出自己的靜默避世",
+        "D": "游泳的態度就是人生的態度。「湖面」指大自然、「泳池」則指人群聚集處"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-111-customs-7",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "「是人，沒有不想飛的，老是在這地面上多厭煩，不說別的。飛出這圈子，飛出這 圈子！到雲端裡去，到雲端裡去！那個心裡不成天千百遍的這麼想？飛上天空去浮",
+      "options": {
+        "A": "著，看地球這彈丸在太空裡滾著，從陸地看到海，從海再看回陸地。凌空去看一個",
+        "B": "明白――這才是做人的趣味，做人的權威，做人的交代。這皮囊要是太重挪不動，",
+        "C": "就擲了它，可能的話，飛出這圈子，飛出這圈子！」",
+        "D": "根據上文，下列選項最接近作者旨趣的是："
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-111-customs-8",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "「那天，對了斜陽，霞光滿天，一個人騎著腳踏車徜徉於滿街輝煌華麗的紅葉與黃 葉間，正穿梭入京都古城的涼凜氣候，由京都大學文學部馳回位居『修學院』的京 大國際交流會館路上，突然想起了《楚辭》中種種描寫秋景的辭句，也想到了屈原 〈惜往日〉的篇名。自然含冤受屈不是我的經驗，但是『典型在宿昔』的懷念，卻 在我的心頭激盪不已。他們不正是以其『紅於二月花』的秋光晚照燦爛了我的青春， 照亮了我的人生？而不論當時他們的年齡幾何，曾經親浴這些師長友朋的生命輝",
+      "options": {
+        "A": "光，為他們的智慧，為他們的性情所照耀，所溫暖，難道不是我所擁有過，也將永",
+        "B": "遠擁有的至福之一？於是，決定返臺之後，以《昔往的輝光》將它們集結出版。」",
+        "C": "根據上文，可知《昔往的輝光》書中主要抒發的感情是：",
+        "D": "舐犢之情"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-111-customs-9",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "「仔細問診並詳細檢查後，我初步診斷是退化性關節炎，開處方給藥之外，也給他 許多建議，然而他似乎不能接受，最後給予免費治療才勉強把藥收下。剛來蘭嶼不 久，病人不能信賴我的醫療能力，我想治好這位關節炎患者，建立自己的醫師形像， 好讓蘭嶼島民很放心地接受衛生所的醫療服務。於是我幾乎天天跑來為他治療，補 充體液使他精神飽足，卻萬萬沒想到反而讓他不必下床準備食物，減少了他的活動 量，更加重全身關節僵硬程度，病況不因我給的處置而改善。有一天，當我問他的 飲食吃藥狀況時，他因走不到排泄廢物的地方，而且相信病魔再厲害也會餓得逃走， 所以已禁食多天了。我四處尋找他的食物時，發現我送給他的藥擺在屋角下成一堆。 再去訪視他時，一位自稱是病患家屬的年輕人告訴我，他已埋葬了，且向我申請死 亡診斷書......一時之間，我不知所措，什麼，餓死嗎？家屬會不會被控告遺棄；不",
+      "options": {
+        "A": "明原因嗎？對不起死者；退化性關節炎嗎？我會被醫師們嘲笑。回衛生所後，我仍",
+        "B": "然找不到最適合的死因，翻閱前輩醫師開立的死診單，發現一個非常貼切的病死因，",
+        "C": "雖然死者上個月才滿四十七歲，抄寫『老邁』兩字後，拿給等候許久的死者家屬。」",
+        "D": "根據上文，這位蘭嶼獨居老人為何將藥堆置在屋角下而不服用？"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-111-customs-10",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "承上題，作者為何在死亡診斷書填上「老邁」交付家屬？",
+      "options": {
+        "A": "想要保護未善盡照顧之責的家屬不被控告",
+        "B": "年輕醫生對自己未治療好退化性關節炎的卸責",
+        "C": "道出了現代醫療對蘭嶼達悟族傳統觀念的無奈",
+        "D": "離島衛生所的醫生不求務實，因循苟且的追隨前輩醫生"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-110-customs-1",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "「古之人，有高世之才，必有遺俗之累。是故非聰明睿哲不惑之主，則不能全其 用。」文中所謂「遺俗之累」，下列解釋何者正確？",
+      "options": {
+        "A": "遺忘世俗的累贅",
+        "B": "流傳累世的風俗",
+        "C": "遭世人誤解的疑慮",
+        "D": "被俗情牽累的遺憾"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-110-customs-2",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "戰于郎，公叔禺人遇負杖入保者息，曰：「使之雖病也，任之雖重也，君子不能",
+      "options": {
+        "A": "為謀也，士弗能死也，不可！我則既言矣。」與其鄰童汪踦往，皆死焉。魯人欲",
+        "B": "勿殤童汪踦，問於仲尼。仲尼曰：「能執干戈以衛社稷，雖欲勿殤也，不亦可乎！」（《禮記•檀弓下》）根據上文，下列何者最能說明孔子的態度？",
+        "C": "盡忠報國",
+        "D": "謹遵禮法"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-110-customs-3",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "（楚）王聞魏陵之語，喜不自勝，即納秦女為妃，在內不朝三日。伍奢聞之，忿怒。 不懼雷電之威，披髮直至殿前，觸聖情而直諫。王即驚懼，問曰：「有何不祥之事？」 伍奢啟曰：「臣今見王無道，慮恐失國喪邦。忽若國亂臣逃，豈不由秦公之女！與 子娶婦，自納為妃，共子爭妻，可不慚於天地！此乃混沌法律，顛倒禮儀。臣若諫 交，恐社稷難存！」王乃面慚失色，羞見群臣。「國相，可不聞道，成謀不說，覆 水難收；事已如斯，勿復重諫！」（〈伍子胥變文〉） 由上文可知：",
+      "options": {
+        "A": "楚王能聽諫言，並知羞愧",
+        "B": "楚王納秦女為妃，正中敵人圈套",
+        "C": "楚王認為事情已無法挽回，不願更改",
+        "D": "楚王與子爭妻，是法律混沌的權宜之計"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-110-customs-4",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "嵇康從孫登遊，三年，康問其所終，不答，康每嘆息。將別，謂曰：「先生竟無言",
+      "options": {
+        "A": "乎？」登乃曰：「子識火乎？生而有光，不用其光，而果在於用光；人而有才，不",
+        "B": "用其才，而果在於用才。故用光在乎得薪，所以保其曜；用才在於識真，所以全其",
+        "C": "年。今子才多識寡，難乎免於今之世矣。子無求乎！」康不能用，果遭非命。（《太平御覽》）下列選項，何者最符合孫登之言的意旨？",
+        "D": "君子務本，本立道生"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-110-customs-6",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "「生年不滿百，常懷千歲憂。晝短苦夜長，何不秉燭游？為樂當及時，何能待來",
+      "options": {
+        "A": "茲？愚者愛惜費，但為後世嗤。仙人王子喬，難可與等期。」此詩主旨與下列何者最接近？",
+        "B": "荷葉披披一浦涼，青蘆奕奕夜吟商",
+        "C": "春風又綠江南岸，明月何時照我還",
+        "D": "人生得意須盡歡，莫使金樽空對月"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-110-customs-7",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "「正因為有釣勝於魚的觀念作基礎，所以不會產生向上爬的習慣，也不會產生學 而優則仕的風氣。每一個學者一旦發現了自己的興趣所在，往往畢其一生專注研 究。發明小兒麻痺症預防針的沙克，最近對人說：『我所確知的是：科學家不是",
+      "options": {
+        "A": "政治家。我不是明星，讓我回到實驗室去。』然而，不是為魚的釣者，卻常常釣",
+        "B": "上大的魚來，因為他終年在水濱，總有機遇到來，非如緣木而求魚的『智者』，徒勞心力而已。」下列敘述，最符合上文觀點的是：",
+        "C": "與其緣木求魚，不如潛心守株待兔",
+        "D": "放下名利之心，常能獲致理想成果"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-110-customs-8",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "下列文字都透過飲食以寄寓生活所感，何者對所描述物品的說明錯誤？",
+      "options": {
+        "A": "是思緒的延伸，揭露存在的真相。無論是寬窄粗細，扁薄厚實，都是下水前各",
+        "B": "自成理，沸湯中轉相纏縛，但齒牙切咬之後，同樣一一斷離／麵",
+        "C": "這是壽而不壽之物，福亦非福，可仙可腐，既矛既盾。採摘後看似隨時熟成，",
+        "D": "也隨時就要腐壞。長久以來，它總象徵欲望，連繫愛情／水蜜桃"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-110-customs-9",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "豐子愷說他在一本《梅菊譜》的〈序〉中讀到這麼一句話：「詩文字畫，皆為豐 歲之珍，飢年之粟。」豐子愷說：「我最初看到，想給他在『飢年』二字上面加 一『非』字。」但他的朋友則認為並沒有補字的必要。（〈我的書：芥子園畫譜〉） 關於「詩文字畫，皆為豐歲之珍，飢年之粟。」箇中意涵，詮釋最適當的是：",
+      "options": {
+        "A": "詩文字畫作為傳家之寶，其價值無分豐歲與飢年",
+        "B": "詩文字畫有待識者的鑑賞，否則就如明珠之暗投",
+        "C": "詩文字畫可怡情養性、安撫人心，作為精神食糧",
+        "D": "詩文字畫雖有珍與粟之喻，但不可太拘執身外物"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-109-customs-1",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "「在我決定離開這份工作之後，剩餘的一個星期就變得□□□□。一向流利的推銷 話術變得痴肥臃腫，舌頭簡直就是一頭養來比賽用的千斤大豬公，面對那些自動送 上門的客戶，仍舊不想動彈半斤肥肉。」 下列選項，何者最適合填入□□□□之中？",
+      "options": {
+        "A": "倚老賣老",
+        "B": "意興闌珊",
+        "C": "呆若木雞",
+        "D": "腦滿腸肥"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-109-customs-2",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "「單軍東抗虎狼秦，高俎傷心棄老親。世許閩州多義士，天留窮島著完人。中原日 月存孤淚，荒外衣冠創局身。千載□□□下過，古梅猶吐漢家春。」 依據詩意，缺空處最適合填入的是：",
+      "options": {
+        "A": "五妃廟",
+        "B": "水仙宮",
+        "C": "岳王墓",
+        "D": "延平祠"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-109-customs-3",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "臺灣府襟海枕山，山外皆海。東北則層巒疊嶂，西南則巨浸汪洋。北之雞籠城，與 福省對峙；南而沙馬磯頭，則小琉球相近焉。諸番檣櫓之所通，四省藩屏之所寄； 戍以重兵、擇人而治，內拱神京、外控屬國。實東南門戶，非若珠崖可得議棄者也。 （周元文纂輯《重修臺灣府志》） 根據上文，下列選項何者最符合文意？",
+      "options": {
+        "A": "山海地貌具國防戰略優勢",
+        "B": "風景壯麗最適於遊賞觀光",
+        "C": "四面環海檣櫓往來交通發達",
+        "D": "可以取代珠崖成為東南門戶"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-109-customs-4",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "屈原曰：「舉世皆濁我獨清，眾人皆醉我獨醒，是以見放。」漁父曰：「聖人不凝",
+      "options": {
+        "A": "滯於物，而能與世推移。世人皆濁，何不淈其泥而揚其波？眾人皆醉，何不餔其糟",
+        "B": "而歠其釃？何故深思高舉，自令放為？」（屈原〈漁父〉）",
+        "C": "根據這段文意，下列選項與文中漁父處世觀念相似的是：",
+        "D": "推己及人，兼善天下"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-109-customs-5",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "經濟學有一句名言：「豐饒中的貧困」，而現代社會也常見「喧嚷中的孤獨」。兩",
+      "options": {
+        "A": "者都利用對立事物以加強語氣，下列何者沒有使用這種描寫法？",
+        "B": "千山鳥飛絕，萬徑人蹤滅",
+        "C": "江碧鳥逾白，山青花欲燃",
+        "D": "蟬噪林逾靜，鳥鳴山更幽"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-109-customs-6",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "「林肯擔任美國總統時，為了解決南北戰爭的後續問題，經常煩惱不已。有一次在 國會裡，一位議員望著不停長吁短嘆的林肯，以充滿憐憫的口吻說道：『希望以後",
+      "options": {
+        "A": "上帝是站在你那邊。』不料林肯聽了後，似乎並不領情，除了感謝他的好意之外，",
+        "B": "還板著臉，一臉正色地說道：『我可並不希望這樣。』台下開始議論紛紛起來，有",
+        "C": "些人罵林肯不識好歹，有人摸不清他葫蘆裡賣得是什麼藥。這時林肯才慢條斯理地",
+        "D": "繼續說道：『我只希望主是站在對的那一邊，而不是我這一邊。』」"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-109-customs-7",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "「那是許多年以前，我來到小屋的時候正是四月。四月的聲音像流水的清音，點點 滴滴的黃梅，總讓人想起一片素樸淡雅的小野花；我慢慢走過，在荒林莽草之間， 霏霏的雨霧像青烟，而小野花隱蔽的容顏恆是那樣在羞澀微茫間起落，我看到雨在 霧裡，霧在雨裡，走著走著我就忘了，不曉得自己來此是要做山野、叢林，還是流 水、巨岩。」 根據上文，作者所要表達的心境是：",
+      "options": {
+        "A": "走進山林，渾然忘我",
+        "B": "追憶往昔，滄桑淒涼",
+        "C": "隱居深山，枕流漱石",
+        "D": "倘佯山水，和光同塵"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-109-customs-8",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "「種花須見其開，待月須見其滿，著書須見其成，美人須見其暢適，方有實際，否 則皆為虛設。」（張潮《幽夢影》） 根據上文，下列選項最接近作者旨趣的是：",
+      "options": {
+        "A": "梓匠輪輿，能與人規矩，不能使人巧",
+        "B": "有為者辟若掘井，掘井九軔而不及泉，猶為棄井也",
+        "C": "與善人居，如入芝蘭之室，久而不聞其香，即與之化矣",
+        "D": "有志尚者，遂能磨礪，以就素業；無履立者，自茲墮慢，便為凡人"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-109-customs-9",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "「人必須為自己負起完全的責任，亦即是預先規劃人生最後一段旅程，面對老病死 課題。我們年幼時不得不依靠父母成長，但老來，不宜抱持依靠兒女的心態。今之 社會，他們已無法像舊時代重土安遷、父母在不遠遊，恰好相反，像一顆種子被野 鳥帶到天涯海角落地生根。舊時子女多，總有一兩個在身邊，於今多的是單根獨苗， 跑到地球另一端成家立業。......嬰兒潮世代是最同情父母的一代，也是最不想麻煩 子女的一代。新舊社會結構活生生地在他們這一代身上拆解、重組，老來，也得靠 自己搭起帳篷，在尚未準備好迎接老者的社會露營。」 根據上文，下列選項最符合文意的是：",
+      "options": {
+        "A": "老來只想依靠子女，是最不負責任的心態",
+        "B": "嬰兒潮世代面臨許多社會轉型、價值變化",
+        "C": "現代子女不再同情父母，只能對自己負責",
+        "D": "現代社會面對老病死課題，已能充分應對"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-109-customs-10",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "「所有一草一木都是彼此相環扣著，誰都沒有權力被犧牲而造成失衡；存在的理由 就是相互的依賴，當生存的權力超過且影響自然法則時，野蠻是自然回歸原點的方 法。就如人類跟自然和土地要的太多，已超過自我生存的條件時，自然和土地會用 最原始和最歸屬的方式，去恢復人類當初對他們的傷害，土石流、山洪爆發、地層 下移，不就是自然界恢復自我的方式嗎？」",
+      "options": {
+        "A": "下列何者最符合本文要旨？",
+        "B": "強調自然生態平衡的重要性",
+        "C": "人類過度開發是文明進步使然",
+        "D": "水土保持、預防災變是當務之急"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-108-customs-2",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "這是一副以愉悅心情描繪挑燈夜讀的對聯，上聯為「藜火光聯書案月」，最適當的 下聯是：",
+      "options": {
+        "A": "可人和月或同圓",
+        "B": "最難風雨故人來",
+        "C": "筆花香染墨池煙",
+        "D": "月涵太液曉波紅"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-108-customs-3",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "下列選項，何者藉「水」說明「循序漸進」之旨？",
+      "options": {
+        "A": "逝者如斯夫！不舍晝夜",
+        "B": "水善利萬物而不爭，處眾人之所惡",
+        "C": "原泉混混，不舍晝夜，盈科而後進",
+        "D": "天下莫柔弱於水，而攻堅強者莫之能勝"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-108-customs-4",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "《大學》：「所惡於上，毋以使下。所惡於下，毋以事上。所惡於前，毋以先後。",
+      "options": {
+        "A": "所惡於後，毋以從前。所惡於右，毋以交於左。所惡於左，毋以交於右。此之謂絜",
+        "B": "矩之道。」",
+        "C": "下列選項，何者最符合上文旨意？",
+        "D": "己所不欲，勿施於人"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-108-customs-5",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "陶淵明〈讀史述九章〉：「知人未易，相知實難。淡美初交，利乖歲寒。管生稱心， 鮑叔必安。奇情雙亮，令名俱完。」 下列選項，何者對於「淡美初交，利乖歲寒」的解釋最為適當？",
+      "options": {
+        "A": "只有一開始顯得平淡美好的友誼，才能堅持到最後",
+        "B": "只有在處境困頓之時，才能檢驗彼此友誼是否堅定",
+        "C": "剛交往時平淡美好，卻終因利益衝突導致友誼破裂",
+        "D": "因利益而結合者，實難體會何謂「君子之交淡如水」"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-108-customs-6",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "北宋王禹偁詩：「命屈由來道日新，詩家權柄敵陶鈞。任無功業調金鼎，且有篇章",
+      "options": {
+        "A": "到古人。本與樂天為後進，敢期子美是前身。從今莫厭閑官職，主管風騷勝要津。」",
+        "B": "下列選項，最符合詩意的是：",
+        "C": "心繫朝政，不分廟堂江湖",
+        "D": "若無宦達，何妨寄懷詩詠"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-108-customs-7",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "賈伯斯說：「十七歲那年我看到一句話讓我印象深刻，大致上是說：『把每一天都",
+      "options": {
+        "A": "當成生命中的最後一天，總有一天你會猜對的。』從那時起，往後的三十三年，我",
+        "B": "每天早上都看著鏡子自問：『如果今天是我人生的最後一天，我會想做今天要做的",
+        "C": "事嗎？』如果連續好幾天的答案都是『不會』，我就知道該做些改變了。」",
+        "D": "根據上文，賈伯斯認為「該做些改變」意味著甚麼？人應該活在當下，把握住每一寸光陰如果要做出改變，應該今日事今日畢每日自我反思，調整自己要走的道路"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-108-customs-8",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "「氣韻生動」是文藝裡非常重要的美學概念，意指作品所表現的物象，其色彩、線 條應是流暢、敏捷而具獨特的風格，顯現勃發的生意。 下列那一選項最能體現「氣韻生動」之美？",
+      "options": {
+        "A": "空山不見人，但聞人語響",
+        "B": "白芷競新苔，綠蘋齊初葉",
+        "C": "春秋多佳日，登高賦新詩",
+        "D": "雲物高秋節，山川孤客情"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-108-customs-9",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "下列選項中的文句，何者不具備生態保護意識？",
+      "options": {
+        "A": "釣而不綱，弋不射宿為淵驅魚者，獺也；為叢驅雀者，鸇也",
+        "B": "斬伐、養長不失其時，故山林不童，而百姓有餘",
+        "C": "材也",
+        "D": "竭澤而漁，豈不獲得？而明年無魚；焚藪而田，豈不獲得？而明年無獸"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-108-customs-10",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "「想要打造一個能在 AI時代繁榮發展的社會，經濟會需要巨大的改變，文化和價 值觀也是。隨著我們從工業時代轉型到 AI時代，必須改變『工作= 生活』這樣的 心態，不能繼續把人類當成生產力優化演算法的變數，必須轉型到比以往更重視 愛、服務、互助與同理心的新文化。」 下列選項，何者最適合說明上文旨意？",
+      "options": {
+        "A": "己立立人，己達達人",
+        "B": "不忮不求，何用不臧",
+        "C": "舍己從人，樂取於人以為善",
+        "D": "勞心者治人，勞力者治於人"
+      },
+      "answer": "A",
       "level": "senior",
       "shared_bank": "common_chinese",
       "parent_id": null,

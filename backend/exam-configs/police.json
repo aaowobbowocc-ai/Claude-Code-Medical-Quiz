@@ -10,8 +10,8 @@
   "persona": [
     "civil-exam-prep"
   ],
-  "sharedBanks": [],
-  "sharedScope": "none",
+  "sharedBanks": ["common_admin_studies", "common_admin_law"],
+  "sharedScope": "level_3_common",
   "uxHints": {
     "defaultMode": "pure",
     "longText": false

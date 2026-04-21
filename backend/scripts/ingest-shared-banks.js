@@ -35,12 +35,24 @@ function isEnglish(q) {
 const SOURCES = [
   { file: 'questions-customs.json',  exam: 'customs',  level: 'senior', subject: '法學知識',
     split: { constitution: [1,25], law_basics: [26,50] } },
+  { file: 'questions-customs.json',  exam: 'customs',  level: 'senior', subject: '英文',
+    split: { english: [1,100] } },
+  { file: 'questions-customs.json',  exam: 'customs',  level: 'senior', subject: '國文（測驗）',
+    split: { chinese: [1,100] } },
   { file: 'questions-judicial.json', exam: 'judicial', level: 'senior', subject: '法學知識與英文',
     split: { constitution: [1,15], law_basics: [16,30], english: [31,50] } },
   { file: 'questions-civil-senior.json', exam: 'civil-senior', level: 'senior', subject: '法學知識與英文',
     split: { constitution: [1,15], law_basics: [16,30], english: [31,50] } },
   { file: 'questions-civil-senior.json', exam: 'civil-senior', level: 'senior', subject: '國文（測驗）',
     split: { chinese: [1,100] } },
+  { file: 'questions-civil-senior.json', exam: 'civil-senior', level: 'senior', subject: '行政學',
+    split: { admin_studies: [1,200] } },
+  { file: 'questions-civil-senior.json', exam: 'civil-senior', level: 'senior', subject: '行政法',
+    split: { admin_law: [1,200] } },
+  { file: 'questions-police.json', exam: 'police', level: 'senior', subject: '行政學',
+    split: { admin_studies: [1,200] } },
+  { file: 'questions-police.json', exam: 'police', level: 'senior', subject: '行政法',
+    split: { admin_law: [1,200] } },
 ]
 
 function classify(q, split) {
@@ -89,6 +101,14 @@ function main() {
       name: '公職國文',
       description: '公職考試共通科目：國文（閱讀測驗、公文格式、修辭）',
     }),
+    common_admin_studies: loadBank('common_admin_studies', {
+      name: '行政學',
+      description: '公職考試三等／特考共通科目：行政學（含組織理論、人事、財務、政策等）',
+    }),
+    common_admin_law: loadBank('common_admin_law', {
+      name: '行政法',
+      description: '公職考試三等／特考共通科目：行政法（含行政程序法、行政救濟、訴願等）',
+    }),
   }
 
   // Pre-seed seen hashes from existing bank content (so repeated ingest is idempotent)
@@ -110,7 +130,7 @@ function main() {
     const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', src.file), 'utf-8'))
     const qs = data.questions.filter(q => q.subject === src.subject)
     const statKey = `${src.exam}/${src.subject}`
-    stats[statKey] = { total: qs.length, constitution: 0, law_basics: 0, english: 0, chinese: 0, unknown: 0, skipped: 0, added: 0 }
+    stats[statKey] = { total: qs.length, constitution: 0, law_basics: 0, english: 0, chinese: 0, admin_studies: 0, admin_law: 0, unknown: 0, skipped: 0, added: 0 }
 
     for (const q of qs) {
       const bucket = classify(q, src.split)
@@ -136,7 +156,7 @@ function main() {
       }
 
       const bankId = targetBank
-      const tag = bucket === 'constitution' ? 'constitution' : bucket === 'law_basics' ? 'law_basics' : 'english'
+      const tag = bucket
       const newQ = {
         id: `${bankId}-${q.roc_year}-${src.exam}-${q.number}`,
         roc_year: q.roc_year,

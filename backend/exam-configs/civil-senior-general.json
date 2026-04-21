@@ -7,8 +7,19 @@
   "subCategory": "高考三等",
   "level": "senior",
   "selectionType": "quota",
-  "persona": ["civil-exam-prep", "career-changer"],
-  "sharedBanks": ["common_law_knowledge", "common_constitution", "common_law_basics", "common_english", "common_chinese"],
+  "persona": [
+    "civil-exam-prep",
+    "career-changer"
+  ],
+  "sharedBanks": [
+    "common_law_knowledge",
+    "common_constitution",
+    "common_law_basics",
+    "common_english",
+    "common_chinese",
+    "common_admin_studies",
+    "common_admin_law"
+  ],
   "sharedScope": "level_3_common",
   "uxHints": {
     "defaultMode": "reservoir",
@@ -49,7 +60,11 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {},
@@ -63,7 +78,7 @@
     "shortName": "高考三等",
     "studentType": "公職應屆考生、轉職應考者",
     "years": "106 起",
-    "totalQ": 1353,
+    "totalQ": 2728,
     "examDesc": "公務人員高等考試三級考試（高考三等）一般行政類科，由考選部舉辦，採名額制錄取。",
     "paperDesc": "共同科目（國文、法學知識與英文）+ 專業科目（行政法、行政學、政治學等）。",
     "subjects": "憲法、法學緒論、國文、英文、行政法、行政學等",

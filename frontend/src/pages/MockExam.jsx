@@ -773,8 +773,10 @@ export default function MockExam() {
 
   const loadQuestions = async (paper) => {
     const et = usePlayerStore.getState().exam || 'doctor1'
-    const subj = paper.subject || paper.name
-    const params = `count=${paper.count || 80}&subject=${encodeURIComponent(subj)}&exam=${et}`
+    const base = `count=${paper.count || 80}&exam=${et}`
+    const params = paper.mixed
+      ? base
+      : `${base}&subject=${encodeURIComponent(paper.subject || paper.name)}`
     const res = await fetch(`${BACKEND}/questions/exam?${params}`)
     const data = await res.json()
     if (data.questions.length < 10) throw new Error('not enough')

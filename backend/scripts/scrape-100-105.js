@@ -447,7 +447,7 @@ function buildTargets(filterExam, filterYear) {
 
   // Nutrition — c=107 in year 101; c=103 in years 104-105
   // Year 100: c=107 = TCM (中醫師), NOT nutrition — no nutrition exam in 030 series yr100
-  // Years 102-103: c=103 = TCM, NOT nutrition — correct class code unknown; years skipped
+  // Years 102-103: c=106 (not c=103 which was TCM); confirmed via PDF cover probe 2026-04-21
   const nutritionSubs = [
     { s: '0601', subject: '生理學與生物化學', tag: 'physio_biochem', name: '生理學與生物化學' },
     { s: '0602', subject: '營養學', tag: 'nutrition_science', name: '營養學' },
@@ -466,6 +466,10 @@ function buildTargets(filterExam, filterYear) {
   const nutritionSubs104030 = nutritionSubs.map((sub, i) => ({
     ...sub, s: `030${i + 1}`  // 0301-0306
   }))
+  add('nutrition', 'questions-nutrition.json', '102', '102030', '第一次', '106', nutritionSubs104030)
+  add('nutrition', 'questions-nutrition.json', '102', '102110', '第二次', '106', nutritionSubs104030)
+  add('nutrition', 'questions-nutrition.json', '103', '103030', '第一次', '106', nutritionSubs104030)
+  add('nutrition', 'questions-nutrition.json', '103', '103100', '第二次', '106', nutritionSubs104030)
   add('nutrition', 'questions-nutrition.json', '104', '104030', '第一次', '106', nutritionSubs104030)
   add('nutrition', 'questions-nutrition.json', '104', '104100', '第二次', '103', nutritionSubs104)
   add('nutrition', 'questions-nutrition.json', '105', '105030', '第一次', '103', nutritionSubs104)

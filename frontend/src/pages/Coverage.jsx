@@ -16,6 +16,15 @@ const EXAM_ORDER = [
 
 const ALL_YEARS = ['100','101','102','103','104','105','106','107','108','109','110','111','112','113','114','115']
 
+// 制度性未舉辦的場次（非資料缺口）：職治/獸醫 110 年起一年一試，只辦第二次
+const NOT_HELD = {
+  ot: { '110': ['s1'], '111': ['s1'], '112': ['s1'], '113': ['s1'], '114': ['s1'], '115': ['s1'] },
+  vet: { '110': ['s1'], '111': ['s1'], '112': ['s1'], '113': ['s1'], '114': ['s1'], '115': ['s1'] },
+}
+function isNotHeld(examId, yr, sess) {
+  return NOT_HELD[examId]?.[yr]?.includes(sess) || false
+}
+
 // Exams where questions have no roc_year (non-annual question banks)
 const NON_YEAR_KEYS = new Set(['undefined', 'null', ''])
 function isNonAnnual(examInfo) {
@@ -76,10 +85,10 @@ function CoverageRow({ examId, info }) {
     const { s1, s2 } = yearTotals[yr]
     grandTotal += s1 + s2
     if (!firstActiveYear || yr < firstActiveYear || yr > lastActiveYear) continue
-    // Missing first session within active range
-    if (s1 === 0) missingCount++
+    // Missing first session within active range (skip sessions that were never held)
+    if (s1 === 0 && !isNotHeld(examId, yr, 's1')) missingCount++
     // Missing second session for exams that run twice (115 第二次 尚未舉辦，不算缺)
-    else if (hasSecondSessions && s2 === 0 && firstSecondSessionYear && yr >= firstSecondSessionYear && yr !== '115') missingCount++
+    else if (hasSecondSessions && s2 === 0 && firstSecondSessionYear && yr >= firstSecondSessionYear && yr !== '115' && !isNotHeld(examId, yr, 's2')) missingCount++
   }
 
   const displayYears = activeYears.length > 0 ? activeYears : ALL_YEARS.slice(0, 3)
@@ -101,14 +110,14 @@ function CoverageRow({ examId, info }) {
       if (yr === '115' && !hasSecond) return { type: 'none' }
       // Year has no data at all: gray dot
       if (!hasAny) return { type: 'empty' }
-      // Has first but no second: missing
-      if (hasFirst && !hasSecond) return { type: 'missing' }
+      // Has first but no second: missing (unless this session wasn't held)
+      if (hasFirst && !hasSecond) return isNotHeld(examId, yr, 's2') ? { type: 'none' } : { type: 'missing' }
       // Has second data
       return { type: 'ok', count }
     } else {
       // First session
       if (!hasAny) return { type: 'empty' }
-      if (count === 0) return { type: 'missing' }
+      if (count === 0) return isNotHeld(examId, yr, 's1') ? { type: 'none' } : { type: 'missing' }
       return { type: 'ok', count }
     }
   }

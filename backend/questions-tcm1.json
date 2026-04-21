@@ -4,9 +4,10 @@
     "label": "中醫師(一)",
     "scraped_at": "2026-04-14T11:34:33.968Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-04-20T12:51:43.002Z"
+    "last_updated": "2026-04-20T12:51:43.002Z",
+    "total": 4955
   },
-  "total": 4916,
+  "total": 4955,
   "questions": [
     {
       "id": 1,
@@ -99613,6 +99614,244 @@
         "D": "半夏"
       },
       "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "102110_0202_6",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫基礎醫學(二)",
+      "subject_tag": "tcm_basic_2",
+      "subject_name": "中醫基礎醫學(二)",
+      "stage_id": 0,
+      "number": 6,
+      "question": "下列何藥物為五味消毒飲的君藥？",
+      "options": {
+        "A": "圖示1",
+        "B": "圖示2",
+        "C": "圖示3",
+        "D": "圖示4"
+      },
+      "answer": "A",
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
+    },
+    {
+      "id": "102110_0202_50",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫基礎醫學(二)",
+      "subject_tag": "tcm_basic_2",
+      "subject_name": "中醫基礎醫學(二)",
+      "stage_id": 0,
+      "number": 50,
+      "question": "下列何種藥材配滋陰藥和清熱藥，治虛勞發熱，骨蒸潮熱？",
+      "options": {
+        "A": "圖示1",
+        "B": "圖示2",
+        "C": "圖示3",
+        "D": "圖示4"
+      },
+      "answer": "B",
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
+    },
+    {
+      "id": "102110_0202_51",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫基礎醫學(二)",
+      "subject_tag": "tcm_basic_2",
+      "subject_name": "中醫基礎醫學(二)",
+      "stage_id": 0,
+      "number": 51,
+      "question": "下列何種藥材用於治風濕痹痛，經行腹痛、牙痛，咽喉疼痛？",
+      "options": {
+        "A": "圖示5",
+        "B": "圖示6",
+        "C": "圖示7",
+        "D": "圖示8"
+      },
+      "answer": "D",
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
+    },
+    {
+      "id": "102110_0202_59",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫基礎醫學(二)",
+      "subject_tag": "tcm_basic_2",
+      "subject_name": "中醫基礎醫學(二)",
+      "stage_id": 0,
+      "number": 59,
+      "question": "下列何藥能用於梅核氣或噁心嘔吐、痰厥頭痛等症狀？",
+      "options": {
+        "A": "圖示1",
+        "B": "圖示2",
+        "C": "圖示3",
+        "D": "圖示4"
+      },
+      "answer": "B",
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
+    },
+    {
+      "id": "102110_0202_60",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫基礎醫學(二)",
+      "subject_tag": "tcm_basic_2",
+      "subject_name": "中醫基礎醫學(二)",
+      "stage_id": 0,
+      "number": 60,
+      "question": "60歲患者，大便7日未解，腹脹，腹痛繞臍不止，手足不溫，苔白，脈沉弦而遲，宜治以下列何方？",
+      "options": {
+        "A": "大黃附子湯",
+        "B": "小承氣湯",
+        "C": "麻子仁丸",
+        "D": "溫脾湯"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "102110_0202_65",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫基礎醫學(二)",
+      "subject_tag": "tcm_basic_2",
+      "subject_name": "中醫基礎醫學(二)",
+      "stage_id": 0,
+      "number": 65,
+      "question": "下列參類藥物中，何者屬於補氣藥，唯補氣藥力稍弱，體質虛弱和屬陰虛者較適宜？",
+      "options": {
+        "A": "圖示1",
+        "B": "圖示2",
+        "C": "圖示3",
+        "D": "圖示4"
+      },
+      "answer": "B",
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
+    },
+    {
+      "id": "102110_0202_77",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫基礎醫學(二)",
+      "subject_tag": "tcm_basic_2",
+      "subject_name": "中醫基礎醫學(二)",
+      "stage_id": 0,
+      "number": 77,
+      "question": "依《本草備要》，下列何種藥材能行氣而不傷氣？",
+      "options": {
+        "A": "圖示1",
+        "B": "圖示2",
+        "C": "圖示3",
+        "D": "圖示4"
+      },
+      "answer": "A",
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
+    },
+    {
+      "id": "102110_0202_78",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫基礎醫學(二)",
+      "subject_tag": "tcm_basic_2",
+      "subject_name": "中醫基礎醫學(二)",
+      "stage_id": 0,
+      "number": 78,
+      "question": "依《本草備要》，下列何種藥材為療風水之要藥，治水腫風腫。然濕熱在上焦氣分者禁用？",
+      "options": {
+        "A": "圖示1",
+        "B": "圖示2",
+        "C": "圖示3",
+        "D": "圖示4"
+      },
+      "answer": "A",
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
+    },
+    {
+      "id": "102110_0202_79",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫基礎醫學(二)",
+      "subject_tag": "tcm_basic_2",
+      "subject_name": "中醫基礎醫學(二)",
+      "stage_id": 0,
+      "number": 79,
+      "question": "依《本草備要》，下列何藥為肺家主藥，能去營中寒邪？",
+      "options": {
+        "A": "圖示1",
+        "B": "圖示2",
+        "C": "圖示3",
+        "D": "圖示4"
+      },
+      "answer": "D",
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
+    },
+    {
+      "id": "102110_0202_80",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫基礎醫學(二)",
+      "subject_tag": "tcm_basic_2",
+      "subject_name": "中醫基礎醫學(二)",
+      "stage_id": 0,
+      "number": 80,
+      "question": "依《本草備要》，下列何種藥材能定魄安魂，治憂恚驚悸，心下結痛，水腫淋瀝？",
+      "options": {
+        "A": "圖示1",
+        "B": "圖示2",
+        "C": "圖示3",
+        "D": "圖示4"
+      },
+      "answer": "B",
+      "explanation": "",
+      "incomplete": true,
+      "gap_reason": "missing_image_dep"
+    },
+    {
+      "id": "102110_0202_40",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫基礎醫學(二)",
+      "subject_tag": "tcm_basic_2",
+      "subject_name": "中醫基礎醫學(二)",
+      "stage_id": 0,
+      "number": 40,
+      "question": "《內外傷辨惑論》枳實導滯丸中的消食化滯藥是下列何者？",
+      "options": {
+        "A": "山楂",
+        "B": "麥芽",
+        "C": "穀芽",
+        "D": "神麴"
+      },
+      "answer": "D",
       "explanation": ""
     }
   ]

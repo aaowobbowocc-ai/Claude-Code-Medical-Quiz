@@ -11768,14 +11768,15 @@
     "subject_name": "機車法規",
     "stage_id": 0,
     "number": 727,
-    "question": "(",
+    "question": "",
     "options": {
       "A": "近鐵路平交道線",
       "B": "近障礙物線",
       "C": "路寬變更線"
     },
     "answer": "A",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_727.png"
   },
   {
     "id": "moto_728",
@@ -11876,7 +11877,8 @@
       "C": "自行車及大型重型機車以外之機車專行"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "image_url": "/signs/moto_sign_733.png"
   },
   {
     "id": "moto_734",

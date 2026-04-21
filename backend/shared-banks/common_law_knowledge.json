@@ -2,11 +2,12 @@
   "bankId": "common_law_knowledge",
   "name": "法學知識與英文",
   "description": "高考三等／普考共通科目：法學知識與英文（含中華民國憲法、法學緒論、英文）",
-  "bankVersion": 16,
-  "last_synced_at": "2026-04-20T15:18:37.055Z",
+  "bankVersion": 26,
+  "last_synced_at": "2026-04-21T03:59:11.689Z",
   "levels": [
     "senior",
-    "junior"
+    "junior",
+    "elementary"
   ],
   "questions": [
     {
@@ -11027,6 +11028,5570 @@
       },
       "answer": "A",
       "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-1",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 1,
+      "question": "憲法第155 條前段規定：「國家為謀社會福利，應實施社會保險制度」。下列敘述何者錯誤？",
+      "options": {
+        "A": "實施社會保險制度，乃是憲法委託事項",
+        "B": "立法者對社會保險制度，享有完全之形成自由",
+        "C": "國民年金保險，乃是社會保險之一種",
+        "D": "社會保險之實施，須考慮國家財政資源之有限性"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-2",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 2,
+      "question": "依司法院釋字436 號解釋，當時之軍事審判法被宣告為違憲之原因為何？",
+      "options": {
+        "A": "認為「現役軍人」包括軍校學生，違憲",
+        "B": "認為軍法官不是法官而是軍官，因此軍事審判法中由軍法官來行使普通法院之法官職權，違憲",
+        "C": "認為被告因軍事審判法受有期徒刑以上宣告之判決確定後，不得再向普通法院以判決違背法令為由請求救濟，違憲",
+        "D": "認為軍事審判機關不具獨立性與公正性，不符合正當法律程序之最低要求，因此軍事審判制度是違憲的，軍人犯罪應回歸普通法院審判"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-3",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 3,
+      "question": "防疫期間，政府機關調取確診者手機簡訊實聯制紀錄以確認足跡，係影響下列何種基本權？",
+      "options": {
+        "A": "言論自由",
+        "B": "居住自由",
+        "C": "秘密通訊自由",
+        "D": "財產權"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-4",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 4,
+      "question": "依強制執行法第52 條規定，查封動產時，應酌留債務人及其共同生活之親屬2 個月間生活所必需之金錢。此係為直接保障何種憲法權利？",
+      "options": {
+        "A": "工作權",
+        "B": "家庭團聚權",
+        "C": "訴訟權",
+        "D": "生存權"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-5",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 5,
+      "question": "依憲法增修條文第3 條規定，行政院院長在何時，應提出辭職，並得同時呈請總統解散立法院？",
+      "options": {
+        "A": "立法院未通過行政院提出之預算案之時",
+        "B": "立法院對行政院院長所提出之不信任案經通過之時",
+        "C": "對於行政院所提出之覆議案，總統不予核可之時",
+        "D": "行政院向立法院提出之覆議案，經全體立法委員二分之一以上決議維持原案之時"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-6",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 6,
+      "question": "依憲法增修條文，有關領土變更案之立法委員提案程序，下列敘述何者正確？",
+      "options": {
+        "A": "全體立法委員4 分之1 提議、全體立法委員4 分之3 出席、出席委員3 分之2 決議",
+        "B": "全體立法委員4 分之1 提議、全體立法委員4 分之3 出席、出席委員4 分之3 決議",
+        "C": "全體立法委員3 分之1 提議、全體立法委員4 分之3 出席、出席委員3 分之2 決議",
+        "D": "全體立法委員3 分之1 提議、全體立法委員4 分之3 出席、出席委員4 分之3 決議"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-7",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 7,
+      "question": "關於憲法所定監察院彈劾權，下列敘述何者正確？",
+      "options": {
+        "A": "監察院僅得對於中央公務人員，認有失職或違法情事時提出彈劾；地方公務人員之彈劾權，由監督地方自治之行政院掌理",
+        "B": "監察院得對司法院與監察院人員失職或違法情事，行使憲法所賦予之彈劾權",
+        "C": "監察院所彈劾之公務人員如涉及刑事責任時，亦由監察院予以審理",
+        "D": "總統與副總統為中央公務人員，其有失職或違法情事時，監察院依憲法獨立行使職權，亦得予以彈劾"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-8",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 8,
+      "question": "依憲法規定、司法院釋字與憲法法庭判決之見解，有關選舉制度，下列敘述何者錯誤？",
+      "options": {
+        "A": "憲法上所規定之選舉，原則上以普通、平等、直接及無記名投票之方法行之",
+        "B": "修憲機關所定之選舉方法不得有礙民主共和國及國民主權原則之實現，亦不得變動選舉權、平等權之核心內涵",
+        "C": "憲法增修條文就不分區立法委員之產生，所定5%之政黨比例代表門檻，縱造成選票不等值之結果，惟其為重大之政治問題，不應由大法官予以解釋",
+        "D": "憲法增修條文就立法委員選舉採區域代表與政黨比例代表之並立制，並未牴觸民主共和國與國民主權原則"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-9",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 9,
+      "question": "依司法院釋字及憲法法庭裁判，下列何者對於人民財產權所為之限制，已逾越社會義務所應忍受之範圍，侵害人民之財產權？",
+      "options": {
+        "A": "菸害防制法規定菸品業者應於菸品容器上為尼古丁及焦油含量標示",
+        "B": "需用土地人因興辦土地徵收條例第3 條規定之事業，穿越私有土地之上空或地下而不予補償",
+        "C": "道路交通管理處罰條例禁止騎樓擺設攤販，並對違法設攤者為行政處罰",
+        "D": "野生動物保育法對於非法買賣公告之管制動物及製品者予以處罰"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-10",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 10,
+      "question": "有關非明文憲法權利，下列敘述何者錯誤？",
+      "options": {
+        "A": "有關非明文憲法權利，有主張可以參酌國際人權公約進行解釋",
+        "B": "憲法第22 條所規定之「不妨害社會秩序公共利益」，有主張此為基本權利之內在限制",
+        "C": "對於新的基本權之承認，應考量其是否具備普遍性、公共性、歷史正當性以及人格自我實現必要性",
+        "D": "人權觀念之演進，有其時代背景與環境需要，「傳統」係承認非明文憲法權利之必要條件"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-11",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 11,
+      "question": "有關人民基本權利之限制或影響，下列何者不違反法律保留原則？",
+      "options": {
+        "A": "基於大學自治，大學自訂校規將成績不合標準之學生退學",
+        "B": "於網路散布謠言造成慌亂者，主管機關命網路平台加上警語",
+        "C": "全民健康保險之醫療費用支付標準及藥價基準規定",
+        "D": "役男出國應經許可"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-12",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 12,
+      "question": "依司法院釋字第596 號解釋，下列敘述何者錯誤？",
+      "options": {
+        "A": "保護勞工之內容與方式應如何設計，立法者有一定之形成自由",
+        "B": "立法者得衡酌債權人私法上債權實現及債務人生存保護之必要，於不違反憲法第7 條及第23 條之範圍內，禁止對債務人部分財產之執行",
+        "C": "國家基於憲法第153 條保護勞工之基本國策，得立法要求雇主協力保護勞工之退休生活",
+        "D": "勞工退休金條例第29 條規定勞工退休金及請領退休金之權利不得讓與、扣押、抵銷或供擔保，違反憲法第7 條平等原則"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-13",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 13,
+      "question": "有關大法官之任期及身分保障，下列敘述何者正確？",
+      "options": {
+        "A": "大法官卸任後皆受法官終身職待遇之保障",
+        "B": "大法官任期為6 年",
+        "C": "並為司法院院長之大法官，仍受任期之保障",
+        "D": "大法官任期不分屆次，個別計算"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-14",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 14,
+      "question": "下列何者為憲法增修條文所明定應由司法院大法官組成憲法法庭審理之案件？",
+      "options": {
+        "A": "總統、副總統之罷免案",
+        "B": "人民聲請法規範憲法審查",
+        "C": "總統、副總統之彈劾案",
+        "D": "地方自治保障案件"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-15",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 15,
+      "question": "關於中央與地方權限之劃分，憲法係採下列那一項原則？",
+      "options": {
+        "A": "協議原則",
+        "B": "均權原則",
+        "C": "中央優先原則",
+        "D": "地方優先原則"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-16",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 16,
+      "question": "下列何者並非行政程序法所明定之行政法一般原則？",
+      "options": {
+        "A": "裁量濫用禁止原則",
+        "B": "有利不利一律注意原則",
+        "C": "行政一體原則",
+        "D": "誠實信用原則"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-17",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 17,
+      "question": "甲舉槍欲射殺乙，卻誤中乙身旁之丙身亡。下列敘述何者正確？",
+      "options": {
+        "A": "甲對乙成立殺人未遂罪，對丙成立過失致死罪。兩罪想像競合，從過失致死罪處斷",
+        "B": "甲對乙成立殺人未遂罪，對丙成立過失致死罪。兩罪想像競合，從殺人未遂罪處斷",
+        "C": "甲對乙成立殺人未遂罪，對丙成立過失致死罪。兩罪數罪併罰",
+        "D": "甲對乙成立殺人未遂罪，對丙成立過失致死罪。兩罪法條競合，構成殺人未遂罪"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-18",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 18,
+      "question": "甲為某一視聽著作之著作財產權人，將其著作財產權以非專屬授權之方式授權給乙，下列敘述何者正確？",
+      "options": {
+        "A": "甲若嗣後將其著作財產權再專屬授權給丙，乙所獲之授權即告終止",
+        "B": "乙在被授權範圍內，得將其被授與之權利再授權第三人利用，無須取得甲的同意",
+        "C": "若發現有侵權情事，甲在授權範圍內，仍得以自己名義為訴訟上行為",
+        "D": "甲乙之授權契約，非經登記，不生效力"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-19",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 19,
+      "question": "依地方制度法規定，關於直轄市、縣（市）之改制或合併，下列敘述何者錯誤？",
+      "options": {
+        "A": "內政部擬將縣（市）改制或與其他直轄市、縣（市）合併改制為直轄市者，應由內政部擬訂改制計畫，徵詢相關直轄市政府、縣（市）政府意見後，報請行政院核定之",
+        "B": "縣（市）擬與其他直轄市、縣（市）合併改制為直轄市者，相關直轄市政府、縣（市）政府得共同擬訂改制計畫，經各該直轄市議會、縣（市）議會同意後，報請行政院核定之",
+        "C": "行政院收到內政部陳報改制計畫，應於6 個月內決定之",
+        "D": "內政部應於收到行政院核定公文之次日起30 日內，將改制計畫發布，並公告改制日期"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-20",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 20,
+      "question": "在遺產分割前，全部繼承人對於遺產全部的法律關係為何？",
+      "options": {
+        "A": "分別共有",
+        "B": "準分別共有",
+        "C": "公同共有",
+        "D": "準公同共有"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-21",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 21,
+      "question": "有關最高法院大法庭制度，下列敘述何者錯誤？",
+      "options": {
+        "A": "於修正施行前依法選編之判例，一律失去裁判之效力",
+        "B": "最高法院民事庭、刑事庭各庭擬與先前已經依法選編之判例而有裁判全文所示法律見解歧異時，則以判例基礎事實的「先前裁判本身」為準，依循法院組織法第51 條之2 之歧異提案程序處理",
+        "C": "最高法院決議不具統一法律見解之功能",
+        "D": "最高法院審判庭經評議後認採為裁判基礎之法律見解，與先前裁判之法律見解歧異者，經徵詢程序未達成一致見解者，應提案予大法庭裁判"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-22",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 22,
+      "question": "有關國民法官制度之相關規定，下列敘述何者正確？",
+      "options": {
+        "A": "只有刑事審判實施國民法官制度",
+        "B": "國民法官法庭係以國民法官9 人共同組成，進行審判",
+        "C": "擔任國民法官為中華民國國民之義務，因此並不支付日費等相關費用",
+        "D": "國民法官僅就案件事實是否有罪進行討論與表決，法律適用與科刑並非國民法官之權限"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-23",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 23,
+      "question": "下列有關英美法與大陸法之敘述，何者錯誤？",
+      "options": {
+        "A": "英美法系國家與大陸法系國家均有成文法",
+        "B": "大陸法系國家的法院並不否定習慣的效力",
+        "C": "英美法系國家的判決先例效力優先於成文法",
+        "D": "英美法系是衡平法的起源"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-24",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 24,
+      "question": "有關9 年國民教育與高級中等教育之敘述，下列何者正確？",
+      "options": {
+        "A": "兩者皆強迫入學",
+        "B": "9 年國民教育為強迫入學，高級中等教育則為自願入學",
+        "C": "9 年國民教育為自願入學，高級中等教育則為強迫入學",
+        "D": "兩者皆自願入學"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-25",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 25,
+      "question": "關於法源種類之說明，下列何者正確？",
+      "options": {
+        "A": "法理屬於自然法而非實證法，並非我國承認的法源",
+        "B": "抽象的法律原則經法律明文規定者，也是我國法源",
+        "C": "人類社會生活中所有的日常習俗，都屬於我國法源",
+        "D": "法律只能經立法院廢止效力，無法經公投複決後失效"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-26",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 26,
+      "question": "關於自治規則之敘述，下列何者正確？",
+      "options": {
+        "A": "自治規則應分別冠以各該地方自治團體之名稱，在直轄市稱直轄市法規、在縣（市）稱縣（市）規章，在鄉（鎮、市）稱鄉（鎮、市）規約",
+        "B": "自治規則經各該地方立法機關議決後，由各該行政機關公布",
+        "C": "自治規則定有罰則時，應報經地方立法機關核定後發布",
+        "D": "地方行政機關就其自治事項，得依其法定職權或法律、法規命令或自治條例之授權，訂定自治規則"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-27",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 27,
+      "question": "民法第222 條規定，故意或重大過失之責任，不得預先免除。對此，最高法院判例表示，債務人因欠缺善良管理人之注意而發生之輕過失責任，非不得由當事人依特約予以免除。於此則判例中，最高法院主要採取下列何種解釋方法？",
+      "options": {
+        "A": "反面解釋",
+        "B": "合憲性解釋",
+        "C": "擴張解釋",
+        "D": "歷史解釋"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-28",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 28,
+      "question": "甲、乙二人口頭約定，甲以每月新臺幣3 萬元的租金租用乙在鄉下的A 屋，租期3 年，下列敘述，何者正確？",
+      "options": {
+        "A": "A 屋的租賃契約無效，因未訂立書面契約",
+        "B": "當事人間存在A 屋的不定期租賃關係",
+        "C": "在作成書面契約前，A 屋的租賃契約不生效力",
+        "D": "乙僅得依不當得利請求甲返還其使用A 屋所取得之利益"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-29",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 29,
+      "question": "依司法院釋字意旨，下列規定何者並不違憲？",
+      "options": {
+        "A": "刊登化粧品廣告前必須先送交主管機關審查內容",
+        "B": "對於電視上性資訊之傳播，予以適當之限制",
+        "C": "人民團體不得主張共產主義或分裂國土",
+        "D": "受刑人撰寫文稿須題意正確，無礙監獄紀律，始得准許投寄報章雜誌"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-30",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 30,
+      "question": "依司法院釋字第443 號解釋意旨，有關法律保留原則，下列敘述何者正確？",
+      "options": {
+        "A": "財產權與工作權之保障均有憲法明文規定，故其保障均屬憲法保留事項",
+        "B": "憲法第8 條規定中屬於憲法保留之事項者，不得以法律加以變更",
+        "C": "執行法律之細節性和技術性事項，不得由主管機關發布命令為必要之規範",
+        "D": "給付行政涉及人民權益之得喪，不得以法律授權主管機關以發布命令之方式為之"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-31",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 31,
+      "question": "The spokesperson’s vague and elusive response did little tothe growing public concern over thecontaminated water.",
+      "options": {
+        "A": "alleviate",
+        "B": "suffocate",
+        "C": "ornament",
+        "D": "rehabilitate"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-32",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 32,
+      "question": "The mountain climbers had towith freezing temperatures and a lack of oxygen as they pushed toward thesummit.",
+      "options": {
+        "A": "collide",
+        "B": "compose",
+        "C": "conflict",
+        "D": "contend"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-33",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 33,
+      "question": "During the interview, the politicianhis answers to avoid taking a clear stance on the controversial issue.",
+      "options": {
+        "A": "hedged",
+        "B": "devoted",
+        "C": "provoked",
+        "D": "conducted"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-34",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 34,
+      "question": "The publication of Harry Potter helpedJ. K. Rowling’s reputation as one of the most famous Englishnovelists.",
+      "options": {
+        "A": "solicit",
+        "B": "solidify",
+        "C": "revolve",
+        "D": "resolve"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-36",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 36,
+      "question": "The mayora deep sense of loss to the families of the mine explosion victims.",
+      "options": {
+        "A": "captured",
+        "B": "conveyed",
+        "C": "supposed",
+        "D": "replied"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-38",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 38,
+      "question": "Thebetween the two sisters was so striking that people often mistook them for twins.",
+      "options": {
+        "A": "expenditure",
+        "B": "prosecution",
+        "C": "resemblance",
+        "D": "subsistence"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-39",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 39,
+      "question": "Music has a material side which wethrough the sense of hearing and a spiritual side that reaches usthrough the imaginative and emotional part of us.",
+      "options": {
+        "A": "apprehend",
+        "B": "reprehend",
+        "C": "express",
+        "D": "extend"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-40",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 40,
+      "question": "The eagle that was severely injured in a storm returned to the wild this week after.",
+      "options": {
+        "A": "contention",
+        "B": "implementation",
+        "C": "subordination",
+        "D": "rehabilitation"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-46",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 46,
+      "question": "What would be the best title for the passage?",
+      "options": {
+        "A": "What We Should Do When Dehydrated.",
+        "B": "The Ways Water Leaves Our Bodies.",
+        "C": "Regulation of Blood Pressure.",
+        "D": "When Our Bodies Lack Water."
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-47",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 47,
+      "question": "Which of the following is NOT a symptom caused by a body water loss of 2%?",
+      "options": {
+        "A": "Slower heart rate.",
+        "B": "Darker colored urine.",
+        "C": "Higher body temperature.",
+        "D": "Slower blood flow."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-48",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 48,
+      "question": "According to the passage, which of the following is similar in meaning to the word “lethal”?",
+      "options": {
+        "A": "Faint.",
+        "B": "Fluid.",
+        "C": "Deadly.",
+        "D": "Darkening."
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-49",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 49,
+      "question": "What will our cells become when we lose water 4% of body weight?",
+      "options": {
+        "A": "Smaller.",
+        "B": "Larger.",
+        "C": "Active.",
+        "D": "Thicker."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-senior-50",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-senior",
+      "source_exam_name": "114 年地方特考三等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 50,
+      "question": "What stage is it when kidneys are damaged because of dehydration?",
+      "options": {
+        "A": "Stage 1.",
+        "B": "Stage 2.",
+        "C": "Stage 3.",
+        "D": "Stage 4."
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-1",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 1,
+      "question": "憲法增修條文第4條第2項有關政黨比例代表百分之五門檻之規定，可能產生選票不等值之現象。司法院釋字第721號解釋認為未違反自由民主憲政秩序，主要理由為何？",
+      "options": {
+        "A": "無損於民主共和國與國民主權基本原則之實現，未變動選舉權及平等權之核心內涵",
+        "B": "依正當修憲程序而制定，且修憲程序無明顯重大瑕疵",
+        "C": "已依總統令修正公布，且總統選舉有效",
+        "D": "強化政黨合作，增進議事效能"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-2",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 2,
+      "question": "依憲法規定，有關社會安全，下列敘述何者正確？",
+      "options": {
+        "A": "人民有工作能力者，國家有提供工作之法律上義務",
+        "B": "婦女從事勞動者，國家應給予特別之保護",
+        "C": "外國人來我國工作者，應予與本國人相同之工作保障",
+        "D": "國家為謀社會福利，應積極透過商業保險機制，給予老弱身心障礙者，適當之保護"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-3",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 3,
+      "question": "依司法院大法官解釋，有關結社自由，下列敘述何者錯誤？",
+      "options": {
+        "A": "包括團體處分財產之自由",
+        "B": "對團體名稱選用之自由不得予以限制",
+        "C": "不包括組織犯罪幫派之自由",
+        "D": "人民團體有選出其代表之自由"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-4",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 4,
+      "question": "依憲法法庭判決，關於言論自由之保障，下列敘述何者錯誤？",
+      "options": {
+        "A": "人民之言論自由受憲法第11條明文保障，保障之內容包括主觀意見之表達及客觀事實之陳述",
+        "B": "公然貶損他人名譽之言論，如有益於公共事務之思辯，或屬文學、藝術之表現形式，或具學術、專業領域等正面價值者，即不構成公然侮辱罪",
+        "C": "表意人於言論發表前，如已經合理查證程序，且依所取得之證據資料，客觀上可合理相信其言論內容為真實者，即符合刑法第310條第3項前段所定不罰之要件",
+        "D": "法院在審理誹謗言論有無刑法第310條第3項前段所定之言論真實性抗辯之適用時，必須釐清該等言論是否涉及公共利益"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-5",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 5,
+      "question": "關於地方制度及權限之憲法規定，下列敘述何者正確？",
+      "options": {
+        "A": "憲法列舉縣立法與執行事項，並規定有涉及二縣以上者必須由中央立法規定",
+        "B": "就未列舉為中央或地方事項之歸屬，遇有爭議時，由立法院解決之",
+        "C": "依憲法增修條文，省仍為地方自治團體公法人",
+        "D": "地方政府可在自治條例中對進口食品採取比中央法規更為嚴格的食安標準"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-6",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 6,
+      "question": "依司法院大法官解釋與憲法法庭判決，關於言論自由，下列敘述何者錯誤？",
+      "options": {
+        "A": "人民有不表意自由",
+        "B": "言論須具備實現自我、溝通意見、追求真理及監督各種政治或社會活動之功能，始能獲得憲法的保障",
+        "C": "言論依其性質有不同的保護範疇及限制準則",
+        "D": "憲法保障的言論自由，內容包括通訊傳播自由"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-7",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 7,
+      "question": "關於平等原則，下列敘述何者錯誤？",
+      "options": {
+        "A": "憲法第7條平等原則並非指絕對、機械之形式上平等，而係保障人民在法律上地位之實質平等",
+        "B": "立法機關基於憲法之價值體系及立法目的，自得斟酌規範事物性質之差異而為合理之區別對待",
+        "C": "關於給付方式及額度之規定，應力求與受益人之基本生活需求相當，不得超過達成目的所需必要限度而給予明顯過度之照顧",
+        "D": "有關社會政策立法，依憲法增修條文規定，應優先保障原住民之需求"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-8",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 8,
+      "question": "國民教育法第3條規定：「6歲至15歲之國民，應受國民教育；其強迫入學，另以法律定之。」但憲法第160條第1項前段規定：「6歲至12歲之學齡兒童，一律受基本教育，免納學費。」國民教育法有關12歲至15歲國民之強迫入學，是否合於憲法規定？",
+      "options": {
+        "A": "合憲，憲法第160條僅規定「基本教育」之學齡兒童，法律延長國民教育與義務教育之年限，仍符合憲法第23條規定",
+        "B": "違憲，國民教育法不得增加憲法所無之限制",
+        "C": "合憲，因為憲法第160條僅屬訓示規定，並無任何拘束力",
+        "D": "違憲，因求學應尊重個人意願，強迫入學屬違反人性尊嚴之措施"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-9",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 9,
+      "question": "依憲法本文及憲法增修條文之規定，下列何者屬於立法院之職權？",
+      "options": {
+        "A": "提出特赦案",
+        "B": "提出預算案",
+        "C": "提出緊急命令案",
+        "D": "提出總統、副總統彈劾案"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-10",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 10,
+      "question": "甲社區之規約規定，同性婚者不得入住該社區。居住於甲社區且欲與同性結婚之乙主張該規定侵害其婚姻自由，依民法無效。乙之主張係下列何種理論之適用？",
+      "options": {
+        "A": "基本權利之防禦功能",
+        "B": "基本權利之第三人效力",
+        "C": "基本權利之垂直效力",
+        "D": "基本權利之請求功能"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-11",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 11,
+      "question": "有關總統與立法院職權之行使，下列敘述何者正確？",
+      "options": {
+        "A": "總統有向立法院進行國情報告之憲法義務",
+        "B": "依憲法增修條文規定，總統在立法院進行國情報告後，應即時回答立法委員的口頭提問",
+        "C": "立法院得拒絕對總統提名之人事案行使同意權",
+        "D": "總統發布解散立法院之命令，無須行政院院長之副署"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-12",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 12,
+      "question": "下列何者並非憲法及憲法增修條文所明定之立法院職權？",
+      "options": {
+        "A": "對總統及副總統彈劾案之審理權",
+        "B": "對大法官之人事同意權",
+        "C": "對行政院所提預算案之議決權",
+        "D": "對行政院院長之不信任案提出權"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-13",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 13,
+      "question": "依據憲法法庭111年憲判字第9號判決意旨，關於對公務人員之免職權，下列敘述何者正確？",
+      "options": {
+        "A": "公務人員任命與免職之執行事項，為專屬考試院之職權，自應由考試院為之",
+        "B": "公務人員任命與免職之執行事項，為考試院及行政院之共有職權，應由兩院共同行使",
+        "C": "公務人員任命與免職之執行事項，為行政權之固有核心事項，應由行政院掌理",
+        "D": "公務人員任命與免職之執行事項，關乎司法院所掌公務員懲戒權，故考試院於行使時仍須尊重司法院之具體判斷"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-14",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 14,
+      "question": "依據憲法訴訟法規定，下列何者不得自行聲請法規範憲法審查？",
+      "options": {
+        "A": "行政院",
+        "B": "中央選舉委員會",
+        "C": "考選部",
+        "D": "法院"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-15",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 15,
+      "question": "依司法院釋字第670號解釋，關於冤獄賠償，下列敘述何者錯誤？",
+      "options": {
+        "A": "冤獄賠償法於形式上為國家賠償法之特別法",
+        "B": "人民因故意或重大過失行為致受羈押者，由於對自身之自由權利受到侵害亦可歸責，因此一律排除冤獄賠償請求權，仍合乎比例原則要求",
+        "C": "冤獄賠償之本質，應屬以金錢予以填補之刑事補償",
+        "D": "當人民因國家實現其刑罰權而受有超越一般容忍程度之特別犧牲時，始有冤獄賠償之成立"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-16",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 16,
+      "question": "有關法律保留原則，下列敘述何者正確？",
+      "options": {
+        "A": "法律授權以命令定之者，其授權之內容、目的、範圍一律應具體、明確、特定",
+        "B": "有關公務員、學生、受刑人等之權利限制事項，不適用法律保留原則",
+        "C": "給付行政如涉及原則性問題，因而屬於重要性事項者，亦應有法律之依據",
+        "D": "私經濟行政之行為及訂定公法契約，法律保留之要求密度較高"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-17",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 17,
+      "question": "依司法院大法官解釋意旨，下列何者違反我國憲法所要求的權力分立原則？",
+      "options": {
+        "A": "立法院於行政院下創設獨立行政機關",
+        "B": "立法院就重大政策之爭議而認有由人民直接決定之必要者，交付公民投票，由人民直接決定之",
+        "C": "軍事審判法明定國防部為最高軍事審判機關，使軍事機關完全掌理具司法性質之軍事審判",
+        "D": "對於偵查中之案件，檢察機關拒絕立法院向其調閱相關卷證"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-18",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 18,
+      "question": "甲議員近日被提起罷免，甲竟警告選民乙，若前往投票，將對其不利。甲之刑責為何？",
+      "options": {
+        "A": "甲不構成犯罪",
+        "B": "甲構成刑法第142條的妨害投票自由罪",
+        "C": "甲構成刑法第146條的妨害投票結果正確罪",
+        "D": "甲構成刑法第147條的妨害投票事務罪"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-19",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 19,
+      "question": "有關罪刑法定原則的敘述，下列何者正確？",
+      "options": {
+        "A": "空白刑法的規定，因為人民無法從法律中直接明瞭禁止內容，因而一概違反罪刑明確性原則",
+        "B": "針對特定行為，行為時既已定有處罰規定，行為後縱使針對同一行為修法加重處罰，於裁判時適用裁判時法，亦不違反溯及既往原則",
+        "C": "我國關於刑法的時之效力，係採取從舊原則，同時依據罪刑法定原則，不論行為後法律是否有利於行為人，皆僅適用行為時之法律",
+        "D": "繼續犯之行為時，係整個犯罪行為持續的期間，因而縱使法律於此一期間內變更加重，適用「行為終了時之法律」"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-20",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 20,
+      "question": "關於最高法院大法庭之審理程序，下列敘述何者錯誤？",
+      "options": {
+        "A": "刑事案件被告未選任辯護人者，審判長應指定公設辯護人或律師為被告行言詞辯論",
+        "B": "刑事案件被告之辯護人未到場者，得不行言詞辯論",
+        "C": "大法庭庭員因改選而更易時，由原審理該法律爭議之大法庭繼續審理至終結止",
+        "D": "大法庭僅得依當事人、其代理人或辯護人之聲請，就專業法律問題選任專家學者"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-21",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 21,
+      "question": "有關國民參與審判制度「準備程序」、「審判期日」之進行，下列敘述何者錯誤？",
+      "options": {
+        "A": "國民法官及備位國民法官，於準備程序期日無須到庭",
+        "B": "就檢察官起訴書記載犯罪事實之釐清，檢察官、辯護人應於審判期日開始後，進行確認",
+        "C": "檢察官、辯護人不到庭者，不得行準備程序",
+        "D": "法院認為適當者，得於準備程序期日前，聯繫檢察官、辯護人並協商訴訟進行之必要事項"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-22",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 22,
+      "question": "甲、乙間訂立A地買賣契約，雙方約定甲以現金新臺幣（以下同）800萬元購買乙之A地。二人五日後也遵照約定，甲支付乙800萬元，乙將A地讓與甲，並完成移轉登記。甲、乙間那幾個契約，依民法規定應作成書面？",
+      "options": {
+        "A": "只有A地之買賣契約",
+        "B": "只有A地之所有權移轉契約",
+        "C": "A地之買賣契約及所有權移轉契約",
+        "D": "無"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-23",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 23,
+      "question": "依著作權法之規定，下列何者不得為著作權之標的？",
+      "options": {
+        "A": "卡拉OK伴唱帶影像",
+        "B": "電腦程式",
+        "C": "立法院所作成之法律條文英文翻譯",
+        "D": "街頭藝人的即興舞蹈表演"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-24",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 24,
+      "question": "全民健康保險法第2條所定之扣費義務人，指下列何者？",
+      "options": {
+        "A": "所得稅法所定之扣繳義務人",
+        "B": "勞工保險條例所定負擔保險費之被保險人",
+        "C": "應申報或繳納所得稅之納稅義務人",
+        "D": "中華民國境內居住之個人"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-25",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 25,
+      "question": "下列何者非屬間接法源？",
+      "options": {
+        "A": "自治條例",
+        "B": "法理",
+        "C": "習慣",
+        "D": "學說"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-26",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 26,
+      "question": "關於法規之修正或廢止，下列敘述何者正確？",
+      "options": {
+        "A": "修正法規廢止少數條文時，應修正公布名稱及全文",
+        "B": "修正法規增加少數條文時，得將增加之條文列於該法規之最末章節",
+        "C": "修正法規增加少數條文時，得將增加之條文，列在適當條文之後，冠以前條「之一」、「之二」等條次",
+        "D": "修正法規均應自公布後一年內施行"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-27",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 27,
+      "question": "各機關依其法定職權或基於法律授權訂定之命令，應視其性質分別下達或發布，並即送何機關？",
+      "options": {
+        "A": "法院",
+        "B": "行政院",
+        "C": "立法院",
+        "D": "監察院"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-28",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 28,
+      "question": "甲男與乙女結婚數年，生育一女戊。甲與未婚之丙發生婚外情，丙自甲受孕而生下子丁，從母姓；甲雖未辦理丁的認領，但持續提供丁的扶養費及教育費。下列敘述，何者正確？",
+      "options": {
+        "A": "如甲過世，丁無遺產繼承權",
+        "B": "法律上擬制甲已認領丁",
+        "C": "甲與丁間不具民法上的婚生子女關係",
+        "D": "甲過世後，丁即不得提起認領之訴"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-29",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 29,
+      "question": "依民法委任之規定，下列何者非受任人因處理事務所生之權利？",
+      "options": {
+        "A": "必要費用請求權",
+        "B": "有益費用請求權",
+        "C": "報酬請求權",
+        "D": "債務清償請求權"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-30",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 30,
+      "question": "警察甲欲違法拘提犯罪嫌疑人乙，乙推倒甲後，揚長而去。下列敘述何者正確？",
+      "options": {
+        "A": "乙的行為構成刑法第277條的公務員傷害罪",
+        "B": "乙的行為構成刑法第136條的聚眾妨害公務罪",
+        "C": "乙的行為構成刑法第302條的私行拘禁罪",
+        "D": "乙的行為不構成刑法第135條的妨害公務罪"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-31",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 31,
+      "question": "The comedian _____ the audience with a steady stream of jokes.",
+      "options": {
+        "A": "amused",
+        "B": "accused",
+        "C": "alerted",
+        "D": "alarmed"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-32",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 32,
+      "question": "To _____ any misunderstanding, the teacher provided clear instructions and examples.",
+      "options": {
+        "A": "avoid",
+        "B": "state",
+        "C": "recall",
+        "D": "inform"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-33",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 33,
+      "question": "The library tries to encourage people’s _____ of knowledge and, in doing so, improve the community’seconomic, social, and cultural life.",
+      "options": {
+        "A": "hesitation",
+        "B": "ignorance",
+        "C": "pursuit",
+        "D": "reluctance"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-34",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 34,
+      "question": "To protect and assist people affected by violence, the organization _____ people to donate money, food orsupplies.",
+      "options": {
+        "A": "gazes",
+        "B": "halts",
+        "C": "ruins",
+        "D": "urges"
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-35",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 35,
+      "question": "She felt _____ when she couldn’t figure out how to solve the simple math problem.",
+      "options": {
+        "A": "delightful",
+        "B": "grateful",
+        "C": "confused",
+        "D": "relieved"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-36",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 36,
+      "question": "The soldier’s mother _____ over his death and nobody could comfort her.",
+      "options": {
+        "A": "relieved",
+        "B": "grieved",
+        "C": "guaranteed",
+        "D": "achieved"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-37",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 37,
+      "question": "Those pineapples will be harvested and _____ into various products.",
+      "options": {
+        "A": "proceeded",
+        "B": "processed",
+        "C": "prevented",
+        "D": "preached"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-38",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 38,
+      "question": "Be sure to check in at the airline counter two hours before the _____ time.",
+      "options": {
+        "A": "departure",
+        "B": "arrival",
+        "C": "deportation",
+        "D": "signature"
+      },
+      "answer": "A",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-39",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 39,
+      "question": "He tried very hard to _____ his boss Mary by constantly praising her outfits and leadership.",
+      "options": {
+        "A": "dodge",
+        "B": "consult",
+        "C": "flatter",
+        "D": "criticize"
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-40",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 40,
+      "question": "The airline CEO released a statement expressing _____ to the victims of the plane crash.",
+      "options": {
+        "A": "admonitions",
+        "B": "condolences",
+        "C": "indulgences",
+        "D": "terminologies"
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-46",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 46,
+      "question": "According to the passage, which of the following statements is true?",
+      "options": {
+        "A": "This initiative is specifically designed for customers in a rush.",
+        "B": "The slow check-out lane limits customer interaction to save time.",
+        "C": "The slow check-out lane helps to eliminate shopping difficulties.",
+        "D": "Cashiers in the slow lane are trained to engage in friendly conversations."
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-47",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 47,
+      "question": "Which of the following is NOT a positive impact of creating the slow check-out lane?",
+      "options": {
+        "A": "It recognizes the diverse needs of different types of customers.",
+        "B": "It minimizes staffing requirements and boosts revenue for certain industries.",
+        "C": "It enables business to fulfill social responsibility by addressing social needs.",
+        "D": "It adds value of supermarkets as a venue for social interaction and connection."
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-48",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 48,
+      "question": "According to the passage, who benefits most from the slow check-out lane?",
+      "options": {
+        "A": "People avoiding personal interaction.",
+        "B": "Employees looking to reduce work time.",
+        "C": "Seniors and those seeking social interaction.",
+        "D": "Customers enjoying a faster shopping experience."
+      },
+      "answer": "C",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-49",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 49,
+      "question": "According to the passage, what inspired the creation of the slow check-out lane?",
+      "options": {
+        "A": "A strategy to handle customer’s complaints about check-out procedure.",
+        "B": "Encouragement from community organizations to promote social interaction.",
+        "C": "A desire to renovate working environment and to elevate employee efficiency.",
+        "D": "Acknowledgment that some customers value social connection during shopping."
+      },
+      "answer": "D",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-local-elementary-50",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-local-elementary",
+      "source_exam_name": "114 年地方特考五等一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 50,
+      "question": "What is the main idea of this passage?",
+      "options": {
+        "A": "Supermarkets are focusing on efficient check-out systems.",
+        "B": "A slow check-out lane fosters social connection and reduces loneliness.",
+        "C": "New jobs are created for cashiers to improve their working environment.",
+        "D": "Supermarkets are responsible for assisting senior people in their shopping."
+      },
+      "answer": "B",
+      "level": "elementary",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-1",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 1,
+      "question": "有關憲法解釋及法規範之位階，下列敘述何者錯誤？",
+      "options": {
+        "A": "法律與憲法有無牴觸發生疑義時，由行政法院解釋之",
+        "B": "憲法之解釋，由司法院為之",
+        "C": "憲法所稱之法律，謂經立法院通過，總統公布之法律",
+        "D": "命令與憲法或法律牴觸者無效"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-2",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 2,
+      "question": "依憲法本文規定，國家對於邊疆地區各民族之土地使用保障及發展，下列何者並非應特別考量之要素？",
+      "options": {
+        "A": "土地價格",
+        "B": "氣候",
+        "C": "土壤性質",
+        "D": "人民生活習慣"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-3",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 3,
+      "question": "關於受羈押被告之權利，下列敘述何者錯誤？",
+      "options": {
+        "A": "有接見律師權",
+        "B": "有受辯護權",
+        "C": "有與辯護律師自由溝通權",
+        "D": "接見律師時有不受監視權"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-4",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 4,
+      "question": "訴訟應循之程序及相關要件，下列何機關得衡量訴訟案件之種類、性質、訴訟制度之功能及訴訟外解決紛爭之法定途徑等因素，為正當合理之規定？",
+      "options": {
+        "A": "立法機關",
+        "B": "行政機關",
+        "C": "司法機關",
+        "D": "監察機關"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-5",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 5,
+      "question": "財政部函就使用牌照稅法第7條第1項第9款關於交通工具免徵使用牌照稅規定，所稱「每一團體和機構以3輛為限」，明示應以同一法人於同一行政區域內之總分支機構合計3輛為限。其縮減人民依法律享有免徵使用牌照稅優惠，依司法院釋字第798號解釋，係違反下列何項原則？",
+      "options": {
+        "A": "社會國原則",
+        "B": "平等原則",
+        "C": "租稅法律原則",
+        "D": "比例原則"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-6",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 6,
+      "question": "依憲法法庭判決意旨，有關憲法第18條保障人民服公職權，下列敘述何者正確？",
+      "options": {
+        "A": "年終考績丁等者免職係剝奪公務員之身分，該規定違反憲法第18條服公職權之意旨",
+        "B": "免職權之性質屬行政權，且為行政機關人事權之固有核心權限",
+        "C": "行政懲處權應不包括公務人員考績法中具有實質懲戒性質之免職處分",
+        "D": "依憲法第77條規定，必須由法院擔任公務員懲戒及懲處之第一次決定機關"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-7",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 7,
+      "question": "下列何種集會遊行，應向主管機關申請許可？",
+      "options": {
+        "A": "媽祖遶境",
+        "B": "婚喪喜慶活動",
+        "C": "體育路跑活動",
+        "D": "選舉造勢"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-8",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 8,
+      "question": "依憲法增修條文第4條規定，總統、副總統之彈劾案，由下列何者提出？",
+      "options": {
+        "A": "司法院",
+        "B": "檢察總長",
+        "C": "立法院",
+        "D": "監察院"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-9",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 9,
+      "question": "下列何者不得向憲法法庭聲請判決？",
+      "options": {
+        "A": "總統",
+        "B": "臺灣新北地方法院家事法庭法官",
+        "C": "社團法人臺灣身心障礙兒童權利促進會",
+        "D": "屏東縣議會議員現有總額四分之一以上"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-10",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 10,
+      "question": "關於地方行政機關人員受質詢或備詢之義務，下列敘述何者錯誤？",
+      "options": {
+        "A": "就中央對地方之補助款預算案，有至立法院受質詢之義務",
+        "B": "除法律有明定外，無出席立法院委員會備詢之義務",
+        "C": "地方首長與一級單位主管，就其主管業務，有受地方議會質詢之義務",
+        "D": "地方議會於業務質詢時，相關地方政府之業務主管應列席備詢"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-11",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 11,
+      "question": "關於「自由民主憲政秩序」，下列敘述何者錯誤？",
+      "options": {
+        "A": "屬法治國家的統治秩序",
+        "B": "排除任何暴力或獨裁專制",
+        "C": "植基於自由、平等以及依據多數意志而作成之人民自我決定上",
+        "D": "政黨行為雖危害自由民主憲政秩序，仍應受結社自由之保障"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-12",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 12,
+      "question": "在公職人員選舉開票結束後，選務人員將票匭封緘。甲認選舉不公，撕去了票匭上的封條，被撕下的封條仍完好如初。甲的行為是否成立犯罪？",
+      "options": {
+        "A": "甲構成刑法第139條的除去封印罪",
+        "B": "甲構成刑法第135條的妨害公務罪",
+        "C": "甲構成刑法第140條的侮辱公務員罪",
+        "D": "甲不構成犯罪"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-13",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 13,
+      "question": "甲為A股份有限公司之經理人，下列有關甲之敘述，何者錯誤？",
+      "options": {
+        "A": "甲在執行A公司業務之範圍內，亦為公司負責人",
+        "B": "A公司得於公司章程規定，甲之報酬應由董事會以董事3分之2以上出席，及出席董事過半數同意之決議行之",
+        "C": "若甲受破產之宣告，其經理職務應解任之",
+        "D": "甲之職權，應以章程規定，不得依契約訂定之"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-14",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 14,
+      "question": "勞工甲下班回家之後，於晚上11點30分接獲雇主透過通訊軟體發訊，告知有一個緊急文件客戶明天早上9點就要，希望甲可以幫忙加班處理。雖然已經很晚了，但是雇主既然有此需求，甲因此破例熬夜把文件整理完成並且透過通訊軟體回傳給雇主，一共花了3個小時。隔天早上到辦公室之後，甲提出通訊軟體之訊息向雇主請求加班費，但雇主予以拒絕。下列敘述何者正確？",
+      "options": {
+        "A": "甲不能申請加班費，因為其如果不同意，可以當下拒絕，而既然同意下班後還幫忙，就不算是工作，而是額外的人情，不能申請加班費",
+        "B": "甲不能申請加班費，因為加班費要事前申請並且經過雇主同意才有。甲未向雇主申請，因此只能當作私下幫忙，不算是工作",
+        "C": "甲能夠申請加班費，只要甲能透過訊息證明自己確實有受到雇主要求工作，以及工作之時數，應給付加班費",
+        "D": "甲能夠申請加班費，因為加班無需經過雇主同意，只要是下班時間做的事情，都應該能夠申請加班費"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-15",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 15,
+      "question": "聯合國消除對婦女一切形式歧視公約並未提及下列何種權利或保障？",
+      "options": {
+        "A": "保障婦女享有資訊隱私的權利",
+        "B": "保障婦女平等受教育的權利",
+        "C": "提供婦女有關懷孕、分娩和產後期間的適當服務",
+        "D": "消除婦女在經濟生活上的歧視"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-16",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 16,
+      "question": "下列何者非屬公法上事實行為？",
+      "options": {
+        "A": "行政機關由其所屬之承辦人員向相對人送達罰鍰處分書",
+        "B": "否准政府資訊公開之申請",
+        "C": "溢繳稅款匯入義務人帳戶",
+        "D": "警察對於犯罪嫌疑人扣上手銬"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-17",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 17,
+      "question": "甲向公務員乙表示，願以新臺幣10萬元之代價，換取乙將其主辦之工程招標底價洩漏給甲，乙答應後反悔未洩漏底標，將10萬元原封不動退回。依我國刑法之規定，下列敘述何者正確？",
+      "options": {
+        "A": "乙應論以違背職務行為收受賄賂罪",
+        "B": "乙應論以公務員洩漏國防以外秘密罪之共同正犯",
+        "C": "甲應論以不違背職務行為行求賄賂罪",
+        "D": "甲應論以公務員洩漏國防以外秘密罪之教唆犯"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-18",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 18,
+      "question": "有關公職人員之選舉，下列敘述何者正確？",
+      "options": {
+        "A": "經登記為候選人者，得撤回其候選人登記",
+        "B": "全國不分區立法委員選舉候選人之保證金，由登記之政黨繳納",
+        "C": "政黨推薦參加公職人員選舉之候選人，無須為該政黨黨員",
+        "D": "廣播電視事業應無償提供時段供登記之候選人從事競選宣傳"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-19",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 19,
+      "question": "依憲法訴訟法規定，關於法院聲請法規範憲法審查，下列敘述何者錯誤？",
+      "options": {
+        "A": "應以獨任法官或合議庭名義提出聲請",
+        "B": "聲請標的限於裁判所應適用之法律位階法規範",
+        "C": "聲請書應敘明客觀上形成確信法規範違憲之法律見解",
+        "D": "原因案得以聲請憲法審查為由，裁定停止程序，如有急迫情形，並得為必要之處分"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-20",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 20,
+      "question": "於違章建築之買賣，出賣人交付該違章建築，買受人占有之，買受人取得該違章建築之何種權利？",
+      "options": {
+        "A": "地上權",
+        "B": "法律上處分權",
+        "C": "事實上處分權",
+        "D": "占有權"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-21",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 21,
+      "question": "The goverment plans toa new tax on luxury goods in order to generate additional revenue for social welfareprograms.",
+      "options": {
+        "A": "impose",
+        "B": "impair",
+        "C": "imprison",
+        "D": "immerse"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-23",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 23,
+      "question": "Inadequacy of security measures is hard to be tackled, because community policing is expensive and, in an era of",
+      "options": {
+        "A": "budget cuts, increasingly",
+        "B": ".",
+        "C": "lush",
+        "D": "rare"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-24",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 24,
+      "question": "To protect the environment, the company has made progress in reducing its carbon.",
+      "options": {
+        "A": "emissions",
+        "B": "omissions",
+        "C": "permissions",
+        "D": "missions"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-25",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 25,
+      "question": "The willingness of readers toon the content of the stories rather than to accumulate knowledge of conceptsor terms will make the reading easier and more pleasant.",
+      "options": {
+        "A": "reflate",
+        "B": "reflect",
+        "C": "refine",
+        "D": "refresh"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-27",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 27,
+      "question": "The industry is beingby high interest rates and inflation; investors and economists are seriously worriedabout the current situation.",
+      "options": {
+        "A": "dispensed",
+        "B": "prevailed",
+        "C": "glittered",
+        "D": "crippled"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-28",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 28,
+      "question": "The founder’s donation left a lasting, funding scholarships for generations of deserving students to come.",
+      "options": {
+        "A": "legacy",
+        "B": "estimate",
+        "C": "innovation",
+        "D": "modernity"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-29",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 29,
+      "question": "As the captain of the ship, he appointed the first mate as histo take over in case of emergencies.",
+      "options": {
+        "A": "deputy",
+        "B": "poacher",
+        "C": "hypocrite",
+        "D": "contestant"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-30",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 30,
+      "question": "Despite the chaos and commotion around him, the wise old man remained _____ and continued to meditate inpeace.",
+      "options": {
+        "A": "intrusive",
+        "B": "devastated",
+        "C": "horrified",
+        "D": "tranquil"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-31",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 31,
+      "question": "With the plague severity decreasing over time, there is little or no _____ for people to get vaccinated now.",
+      "options": {
+        "A": "deterrent",
+        "B": "turn-off",
+        "C": "resentment",
+        "D": "incentive"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-32",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 32,
+      "question": "My art teacher always says that using the non-dominant hand could lift the spirits, free the imagination, and, mostimportantly, _____ creativity.",
+      "options": {
+        "A": "lease",
+        "B": "unleash",
+        "C": "unload",
+        "D": "lessen"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-33",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 33,
+      "question": "Plastic bags are not _____, that is, decades after they are buried in a landfill, they become nothing but still plasticbags.",
+      "options": {
+        "A": "combustible",
+        "B": "reusable",
+        "C": "biodegradable",
+        "D": "transferable"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-34",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 34,
+      "question": "Two companies have agreed to close a division of their business as a(n) _____ move to avoid public criticism.",
+      "options": {
+        "A": "synthetic",
+        "B": "illiterate",
+        "C": "invasive",
+        "D": "tactical"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-35",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 35,
+      "question": "The European Commission _____ TikTok from most of its employees’ phones, citing security concerns.",
+      "options": {
+        "A": "banned",
+        "B": "comprehended",
+        "C": "recommended",
+        "D": "stunned"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-36",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 36,
+      "question": "The project deadline happens to _____ with my vacation plans, so I need to ensure that all work will be completedbefore I leave.",
+      "options": {
+        "A": "cooperate",
+        "B": "coincide",
+        "C": "compete",
+        "D": "confer"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-37",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 37,
+      "question": "The poachers killed the elephants so they could make a fortune by _____ the ivories overseas.",
+      "options": {
+        "A": "struggling",
+        "B": "smuggling",
+        "C": "strangling",
+        "D": "smearing"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-38",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 38,
+      "question": "Dana visits her parents in New York at regular _____, usually every three months.",
+      "options": {
+        "A": "intervals",
+        "B": "spirals",
+        "C": "terminals",
+        "D": "utensils"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-39",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 39,
+      "question": "The red carpet was filled with excited fans and flashing cameras as the _____ couple made their grand entrance tothe movie premiere.",
+      "options": {
+        "A": "acquaitence",
+        "B": "celebrity",
+        "C": "informant",
+        "D": "delinquent"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-40",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 40,
+      "question": "The artist’s tireless dedication to his craft resulted in a(n) _____ of work that was both beautiful and thought-provoking.",
+      "options": {
+        "A": "blunder",
+        "B": "debris",
+        "C": "eclipse",
+        "D": "opusTaking an exercise every day has become a routine for most people nowadays. People who engage themselves"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-46",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 46,
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "A": "An endangered species that needs more conservation.",
+        "B": "A species that may help on research against ageing.",
+        "C": "The concept of human ageing and its solution.",
+        "D": "Biological background of jellyfishes reproduction."
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-47",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 47,
+      "question": "Which of the following tones best describes the passage?",
+      "options": {
+        "A": "Cynical.",
+        "B": "Scientific.",
+        "C": "Indifferent.",
+        "D": "Entertaining."
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-48",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 48,
+      "question": "According to the passage, which of the following factors is NOT the challenge to the research about the jellyfishTurritopsis dohrnii?",
+      "options": {
+        "A": "The data collected is not enough, and the research is not continuous.",
+        "B": "Turritopsis dohrnii are under threat of too many predators.",
+        "C": "Turritopsis dohrnii are very delicate and often don’t live long enough.",
+        "D": "Turritopsis dohrnii is too large to find the tissues about regeneration."
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-49",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 49,
+      "question": "According to the passage, which of the following is the main factor how Turritopsis dohrnii might help to solve theproblem of ageing?",
+      "options": {
+        "A": "People consume Turritopsis dohrnii to help fight diseases.",
+        "B": "Its gene may turn on or off the mechanism of cell trans-differentiation.",
+        "C": "Turritopsis dohrnii can adapt themselves to different environments.",
+        "D": "Turritopsis dohrnii’s cells can easily integrate with human’s cells."
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-112-civil-indigenous-junior-50",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "112 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 50,
+      "question": "According to the passage, which of the following statements is TRUE?",
+      "options": {
+        "A": "The research on the Turritopsis dohrnii against human ageing has been broadly applied.",
+        "B": "In principle, Turritopsis dohrnii can live forever; however, most of them are short-lived.",
+        "C": "Jellyfish has a fixed biological clock which helps activate regeneration.",
+        "D": "Turritopsis dohrnii never die so that they overpopulate in the ocean."
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-1",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 1,
+      "question": "依據憲法學原理，修正憲法之程序，較修正普通法律之程序繁雜者為：",
+      "options": {
+        "A": "成文憲法",
+        "B": "不成文憲法",
+        "C": "柔性憲法",
+        "D": "剛性憲法"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-2",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 2,
+      "question": "憲法及其增修條文中關於「保險」之規定，不包括下列何者？",
+      "options": {
+        "A": "國家應推行全民健康保險",
+        "B": "國家對於身心障礙者之保險與就醫，應予保障",
+        "C": "國家應獎勵私人保險制度，對於無力繳納保費者，應予以適當之扶助",
+        "D": "國家為謀社會福利，應實施社會保險制度"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-3",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 3,
+      "question": "集會遊行法規定，室外集會、遊行應向主管機關申請許可，未排除緊急性或偶發性集會、遊行，依司法院釋字第718 號解釋，上述規定違反下列何者？",
+      "options": {
+        "A": "平等原則與結社自",
+        "B": "由比例原則與結社自由",
+        "C": "平等原則與集會自由",
+        "D": "比例原則與集會自由"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-4",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 4,
+      "question": "依司法院大法官解釋意旨，關於職業自由及工作權之敘述，下列何者錯誤？",
+      "options": {
+        "A": "職業自由之保障範圍，僅及於為謀求生計而進行之營利性質職業，並不包含公益、非營利以及無給職",
+        "B": "國家為增進公共利益，得於必要限度內以法律或經法律明確授權之命令，對於職業自由加以限制",
+        "C": "人民開業、停業以及從事營業之時間、地點、對象及方式之自由，均屬憲法工作權所保障之範圍",
+        "D": "職業自由之限制，可以區分為「執行職業之自由」、「選擇職業應具備之主觀條件」以及「選擇職業應具備之客觀條件」三種層面，且有寬嚴不同之容許標準"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-5",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 5,
+      "question": "依司法院釋字第490 號解釋，有關兵役義務與人民宗教自由的關係，下列敘述何者錯誤？",
+      "options": {
+        "A": "兵役義務本質上為戰鬥義務，故違反人性尊嚴",
+        "B": "人民服兵役的方式，由立法者決定",
+        "C": "兵役法之規定不包含促進或限制宗教的目的",
+        "D": "兵役義務為防衛國家安全所必須"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-6",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 6,
+      "question": "依憲法第24 條規定，立法者應制定有關國家賠償之法律。此學理上稱為下列何者？",
+      "options": {
+        "A": "政策目標條款",
+        "B": "立法形成自由",
+        "C": "憲法機關忠誠",
+        "D": "憲法委託"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-7",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 7,
+      "question": "有關現行立法委員選舉制度，下列敘述何者錯誤？",
+      "options": {
+        "A": "立法委員名額之分配，以法律定之",
+        "B": "全國不分區立法委員依政黨名單投票選舉之，由獲得百分之五以上政黨選舉票之政黨依得票比率選出之",
+        "C": "自由地區直轄市、縣市之立法委員名額，每縣市至少1 人",
+        "D": "立法委員113 人，任期四年，連選得連任"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-8",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 8,
+      "question": "依現行憲法規定及相關司法院大法官解釋，行政院院長何時具備辭職之法定義務？",
+      "options": {
+        "A": "對行政院院長提出不信任案，如經全體立法委員二分之一以上贊成，行政院院長應於10 日內提出辭職",
+        "B": "國家重要政策未獲立法院支持",
+        "C": "提出之覆議案經立法院決議維持原案時",
+        "D": "立法委員任期屆滿改選後第一次集會前，行政院院長自應向立法院提出辭職"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-9",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 9,
+      "question": "下列何者非屬司法院大法官之職權？",
+      "options": {
+        "A": "統一解釋法令",
+        "B": "憲法解釋",
+        "C": "政黨違憲審查",
+        "D": "總統選舉無效訴訟"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-10",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 10,
+      "question": "關於地方自治立法權之範圍，下列敘述何者錯誤？",
+      "options": {
+        "A": "以轄區內之人、事、物為其規範對象，屬於地方立法權限",
+        "B": "對於轄區外居民或事物，會產生直接、密切之實質影響，則具有跨區之性質，立法權限應屬於中央",
+        "C": "有全國一致之性質者，應屬於中央立法事項",
+        "D": "地方自治規範不得有較中央法規更為嚴格之限制"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-11",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 11,
+      "question": "下列何者並非習慣成為習慣法的要件？",
+      "options": {
+        "A": "社會上確實有反覆施行該習慣的事實",
+        "B": "需要社會上大多數成員對之有法的確信，甘願受其拘束而無爭議",
+        "C": "必須經過國家的調查而記載於官方文書上",
+        "D": "該習慣之內容不得違背公共秩序及善良風俗"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-12",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 12,
+      "question": "依中央法規標準法規定，法規內容條文較多時，得依下列何種順序排列？",
+      "options": {
+        "A": "編、章、節、款、",
+        "B": "目章、目、編、款、節",
+        "C": "章、節、段、篇、目",
+        "D": "目、章、節、段、篇"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-13",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 13,
+      "question": "下列關於文義解釋之敘述，何者錯誤？",
+      "options": {
+        "A": "文義解釋乃指依照語言文字之可能表達方式，掌握法律條文之字面意義",
+        "B": "文義解釋有其極限",
+        "C": "應進行文義解釋之法條，不以法條意義含混者為限",
+        "D": "文義解釋為法律解釋之一種，解釋時以法學用語為斷，無需顧及一般非法律專業者之語言習慣"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-14",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 14,
+      "question": "因為公司經營不善出現虧損，為了避免額外的支出，雇主宣布，基於企業經營所需，所有勞工必須於兩週內將特休全部休完，逾期將不轉成工資發放。下列敘述何者正確？",
+      "options": {
+        "A": "不論企業有無虧損，特休假之排定，原則上都需要勞資雙方同意，任一方不能單方面決定",
+        "B": "對於虧損的企業來說，避免特休假未休完之工資支出，是合理的企業迫切需求，得以之要求勞工配合",
+        "C": "關於公司之請假和休假，雇主有針對企業特性和需求為調整之空間，因此可以限定排休之期間",
+        "D": "勞工有特休之排定權利，雇主不得指明勞工僅能於特定期間內排休"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-15",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 15,
+      "question": "在性別平等工作法的規定下，受僱者同時撫育子女2 人以上者，其育嬰留職停薪期間應如何計算？",
+      "options": {
+        "A": "應分開計算，以每一子女受撫育滿2 年為限",
+        "B": "應合併計算，最長以最長子女受撫育3 年為限",
+        "C": "應合併計算，最長以最幼子女受撫育2 年為限",
+        "D": "應分開計算，最長以最長子女受撫育3 年為限"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-16",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 16,
+      "question": "有關總統、副總統選舉候選人之敘述，下列何者錯誤？",
+      "options": {
+        "A": "副總統候選人於投票日前死亡，該組總統候選人仍當選時，應於就職後提名副總統候選人，由立法院補選",
+        "B": "總統副總統候選人應聯名申請登記，如副總統候選人資格不符規定，則該組候選人應不予登記",
+        "C": "二個以上政黨得共同推薦一組總統副總統候選人；同一政黨，亦得推薦二組以上候選人",
+        "D": "總統候選人之一於登記截止後投票日前死亡，中央選舉委員會應即公告停止選舉，並定期重行選舉"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-17",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 17,
+      "question": "依民法之規定，下列有關債務承擔之敘述，何者正確？",
+      "options": {
+        "A": "第三人與債權人訂立契約承擔債務人之債務者，其債務於債務人承諾時，移轉於該第三人",
+        "B": "第三人與債務人訂立契約承擔其債務者，須經債權人承認，始對於債權人發生效力",
+        "C": "承擔人因承擔債務之法律關係所得對抗債務人之事由，得以之對抗債權人",
+        "D": "債權人拒絕承認時，僅承擔之第三人得撤銷其承擔之契約"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-18",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 18,
+      "question": "關於刑法第15 條第1 項「法律上有防止之義務」之認定，下列何者非實務見解所採的標準？",
+      "options": {
+        "A": "基於外國慣習",
+        "B": "基於法律明文",
+        "C": "基於契約之約定",
+        "D": "基於法律精神"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-19",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 19,
+      "question": "有關臺灣法律繼受之敘述，下列何者錯誤？",
+      "options": {
+        "A": "臺灣自日治時期開始，繼受近代歐陸法",
+        "B": "臺灣在戰後因政治經濟因素，開始繼受美國法",
+        "C": "臺灣在繼受美國法後，法律體制已成為英美法系",
+        "D": "清朝末年民國初年透過日本，中國開始繼受近代歐陸法，此繼受經驗後也影響到臺灣"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-20",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 20,
+      "question": "關於消費者保護法企業經營者之責任，下列敘述何者錯誤？",
+      "options": {
+        "A": "從事生產商品之企業經營者應負無過失責任",
+        "B": "提供服務之企業經營者應負無過失責任",
+        "C": "從事經銷之企業經營者應負推定過失責任",
+        "D": "輸入商品之企業經營者應負推定過失責任"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-21",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 21,
+      "question": "Pretending to be a superhero allows a child to act out and process any anxiety he/she has, thereby resolving orreducing ____ fears.",
+      "options": {
+        "A": "underwriting",
+        "B": "underlying",
+        "C": "underlining",
+        "D": "undertaking"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-22",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 22,
+      "question": "There is every ____ of the weather remaining hot and humid this week.",
+      "options": {
+        "A": "respect",
+        "B": "retrospect",
+        "C": "suspect",
+        "D": "prospect"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-23",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 23,
+      "question": "Since the war broke out, the whole world has been suffering from ____; hence, the prices for goods andservices have been continuously rising.",
+      "options": {
+        "A": "inflation",
+        "B": "expansion",
+        "C": "concession",
+        "D": "reflection"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-24",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 24,
+      "question": "The comedian used humor to ____ the audience’s attention away from the controversial topic.",
+      "options": {
+        "A": "divert",
+        "B": "exclude",
+        "C": "dissolve",
+        "D": "engrave"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-25",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 25,
+      "question": "My sources insist on remaining anonymous because they fear for being punished if they were to be ____.",
+      "options": {
+        "A": "satisfied",
+        "B": "classified",
+        "C": "identified",
+        "D": "modified"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-26",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 26,
+      "question": "No matter how consistent you are with your habits and good disciplines, it is ____ that life will interrupt you atsome point.",
+      "options": {
+        "A": "discontinuous",
+        "B": "discontent",
+        "C": "inefficient",
+        "D": "inevitable"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-27",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 27,
+      "question": "He was quiet and timid, so unlikely to go round ____ afterwards if it was a disaster.",
+      "options": {
+        "A": "gloating",
+        "B": "glistening",
+        "C": "glimpsing",
+        "D": "gossiping"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-28",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 28,
+      "question": "The doctor will ____ on the patient’s lung tomorrow to fix a blockage in one of the arteries.",
+      "options": {
+        "A": "affect",
+        "B": "involve",
+        "C": "operate",
+        "D": "repeat"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-29",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 29,
+      "question": "Our conversation turned ____ when my friend brought up a very personal topic that shouldn’t be mentioned at all.",
+      "options": {
+        "A": "even",
+        "B": "awkward",
+        "C": "seamless",
+        "D": "harmonious"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-30",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 30,
+      "question": "She didn’t say anything to the salesperson, but gave a small ____ of her shoulders and walked away.",
+      "options": {
+        "A": "nod",
+        "B": "bow",
+        "C": "shrug",
+        "D": "curtesy"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-31",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 31,
+      "question": "The police found his alibi to be ____ and decided to investigate him further.",
+      "options": {
+        "A": "sufficient",
+        "B": "convincing",
+        "C": "suspicious",
+        "D": "foolproof"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-32",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 32,
+      "question": "This family’s mealtime conversations often ____ around their children’s schoolwork activities to monitor theirprogress.",
+      "options": {
+        "A": "dissolved",
+        "B": "revolved",
+        "C": "devoted",
+        "D": "provoked"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-33",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 33,
+      "question": "Instead of working on her own, Jane enjoys doing her class assignments and projects through ____ with herclassmates.",
+      "options": {
+        "A": "collaboration",
+        "B": "exaggeration",
+        "C": "intervention",
+        "D": "prosecution"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-34",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 34,
+      "question": "Taiwan’s Centers for Disease Control advised citizens to have at least four vaccination shots against Covid-19 whenthe ____ raged across the island.",
+      "options": {
+        "A": "entertainment",
+        "B": "pandemic",
+        "C": "celebration",
+        "D": "ceremony"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-35",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 35,
+      "question": "Some people like buying high street clothes to wear, whereas others prefer outfits with designer brands as they tendto ____ their high social status.",
+      "options": {
+        "A": "perceive",
+        "B": "relinquish",
+        "C": "showcase",
+        "D": "conceive"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-36",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 36,
+      "question": "A fugitive billionaire was arrested in New York on ____ related to a $1 billion fraud scheme.",
+      "options": {
+        "A": "bills",
+        "B": "charges",
+        "C": "poses",
+        "D": "regards"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-37",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 37,
+      "question": "Children and the elderly are the most ____ to flu infection, so they should get vaccinated as early as possible.",
+      "options": {
+        "A": "fashionable",
+        "B": "considerable",
+        "C": "variable",
+        "D": "vulnerable"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-38",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 38,
+      "question": "The ____ of the company’s financial records was discovered during an internal audit, leading to a legal investigationby regulatory authorities.",
+      "options": {
+        "A": "exhibition",
+        "B": "assumption",
+        "C": "preservation",
+        "D": "manipulation"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-39",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 39,
+      "question": "Polly has been under stress from work and family, but she doesn’t know how to ____ her anxiety to her husband orfriends.",
+      "options": {
+        "A": "articulate",
+        "B": "cumulate",
+        "C": "optimize",
+        "D": "subscribe"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-40",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 40,
+      "question": "Peter ____ his power as supervisor by frequently asking his subordinates to do his personal matters.",
+      "options": {
+        "A": "abused",
+        "B": "accused",
+        "C": "alleged",
+        "D": "amplified"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-46",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 46,
+      "question": "According to this passage, which of the following is closest in meaning to the phrase “make the cut”?",
+      "options": {
+        "A": "Comply.",
+        "B": "Apply.",
+        "C": "Qualify.",
+        "D": "Quantify."
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-47",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 47,
+      "question": "According to the passage, which of the following qualities is not going to be taken account of for choosing a guide dog?",
+      "options": {
+        "A": "Good temperament.",
+        "B": "Intelligence.",
+        "C": "Physical health.",
+        "D": "Willingness to play."
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-48",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 48,
+      "question": "Which of the following can best describe the tone of this passage?",
+      "options": {
+        "A": "Cynical.",
+        "B": "Indifferent.",
+        "C": "Objective.",
+        "D": "Prompt."
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-49",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 49,
+      "question": "According to the passage, which of the following best describes the nature of the first-stage training?",
+      "options": {
+        "A": "Exceptional.",
+        "B": "Incredulous.",
+        "C": "Apprehensive.",
+        "D": "Malicious."
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-113-civil-indigenous-junior-50",
+      "roc_year": "113",
+      "session": "第一次",
+      "source_exam_code": "civil-indigenous-junior",
+      "source_exam_name": "113 年原住民族特考四等",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 50,
+      "question": "According to the passage, how often are the guide dogs evaluated on the second stage of the training?",
+      "options": {
+        "A": "Constantly.",
+        "B": "Sporadically.",
+        "C": "Casually.",
+        "D": "Occasionally."
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-1",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 1,
+      "question": "依據司法院大法官之解釋，關於憲法保障之營業自由，下列敘述何者錯誤？",
+      "options": {
+        "A": "營業自由為憲法第15 條工作權及財產權所保障之內涵",
+        "B": "其保障範圍及於營業場所之選定",
+        "C": "對於營業自由，僅得以立法院制定之法律為限制",
+        "D": "政府採購得標廠商員工逾百者應進用一定比例原住民之規定，因進用比例不大，如未進用，亦得繳納代金代替，故對於得標廠商營業自由之限制並未過當"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-2",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 2,
+      "question": "下列何者並非對人民基本權利之直接限制？",
+      "options": {
+        "A": "主管機關廢止公園公用",
+        "B": "人民團體之會議紀錄須送主管機關核定",
+        "C": "集會遊行須經主管機關許可",
+        "D": "書籍須送主管機關審查始得出版"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-3",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 3,
+      "question": "依法行政原則乃是法治國原則的重要內涵之一。關於依法行政原則，下列敘述何者正確？",
+      "options": {
+        "A": "依據法律優位原則，行政機關依法律授權訂定之法規命令，位階與法律相同",
+        "B": "依據法律優位原則，行政機關依法律授權作成之行政處分，位階與法律相同",
+        "C": "依據法律保留原則，關於涉及財產權限制之事項，法律得授權行政機關訂定法規命令予以規範",
+        "D": "依據法律保留原則，關於涉及秘密通訊自由限制之事項，法律不得授權行政機關訂定法規命令予以規範"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-4",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 4,
+      "question": "依司法院釋字第573 號解釋，有關宗教結社自由，下列敘述何者錯誤？",
+      "options": {
+        "A": "宗教性結社就其內部組織結構、人事及財政管理應享有自主權",
+        "B": "宗教性人民團體之內部關係及寺廟財產之管理、處分等事項，均受宗教結社自由之保障",
+        "C": "寺廟不動產須呈請該管官署許可後始得處分，是為避免寺產遭不當處分而有害信仰存續，符合比例原則之要求而屬合憲",
+        "D": "教會亦有加入其他宗教性人民團體而成為團體會員之自由，此與憲法所保障之宗教信仰自由並無牴觸"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-5",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 5,
+      "question": "關於法官聲請憲法法庭判決，下列敘述何者錯誤？",
+      "options": {
+        "A": "所謂法官審理案件之類型包括刑事、行政訴訟、民事及非訟案件",
+        "B": "限於最高法院或最高行政法院之法官始得聲請",
+        "C": "法院在聲請前，應以裁定停止訴訟程序",
+        "D": "聲請法官應依其合理確信，就裁判所適用之法律有牴觸憲法之疑義，說明理由"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-6",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 6,
+      "question": "關於健康權，下列何者並非大法官解釋所宣示？",
+      "options": {
+        "A": "為憲法第22 條所保障的基本權利",
+        "B": "健康權在保障人民生理及心理機能的完整性，不受任意侵害",
+        "C": "如涉及國家提供資源以提升人民健康之政策目標，應採嚴格標準予以審查",
+        "D": "國家對人民的身心健康有最低限度的照顧義務"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-7",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 7,
+      "question": "有些基本國策規定僅係作為國家施政之依據或參酌之方向，並無強制性之拘束力，也無法作為人民請求之依據。此種規定之性質為：",
+      "options": {
+        "A": "方針規定",
+        "B": "憲法委託",
+        "C": "組織及程序保障",
+        "D": "制度性保障"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-8",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 8,
+      "question": "關於行政院設置不當黨產處理委員會所涉及中央行政機關組織基準法之適用問題，下列何者不是大法官解釋所闡述之內容？",
+      "options": {
+        "A": "中央行政機關組織基準法係依憲法增修條文第3 條第3 項規定制定之一般性、框架性立法",
+        "B": "政黨及其附隨組織不當取得財產處理條例排除中央行政機關組織基準法之適用，並未牴觸憲法增修條文規定",
+        "C": "中央行政機關組織基準法是具有準憲法位階之規範，違反該等規範者，即間接違反憲法增修條文規定",
+        "D": "基於民主原則與權力分立原則，立法院得以法律明定或授權以命令訂定行政院所屬各級機關之設置與組織"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-9",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 9,
+      "question": "下列何者非現代民主國家政府組織之基本原則？",
+      "options": {
+        "A": "權力分立原則",
+        "B": "機關效能原則",
+        "C": "中央與地方均權原則",
+        "D": "民意政治、責任政治原則"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-10",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 10,
+      "question": "依司法院大法官解釋及現行規定，關於中央與地方之財政責任分配，下列敘述何者錯誤？",
+      "options": {
+        "A": "地方自治團體受憲法保障，其財政自主權事項雖適用法律保留原則，但中央不得侵害其核心領域，致其保障虛有化",
+        "B": "中央法律規定由地方分擔經費時，倘中央與地方在權限劃分上依法互有協力義務，或分擔經費符合事物之本質者，並不違憲",
+        "C": "法律之實施須由地方負擔經費者，於法律制定過程中應使地方政府充分參與，中央並應與地方協商，事前妥為規劃所需財源",
+        "D": "憲法條文中使用「國家」一語者，其涵義係專指中央，如憲法第155 條，國家為謀社會福利，應實施社會保險制度之規定"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-11",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 11,
+      "question": "公務員甲將選舉結果公告張貼於機關公布欄之前，乙意圖侮辱甲，搶在公告實貼於公布欄前，撕毀該公告。有關乙之刑責，下列敘述何者正確？",
+      "options": {
+        "A": "乙不構成刑法第141 條的侵害文告罪",
+        "B": "乙構成刑法第142 條的妨害投票罪",
+        "C": "乙不構成刑法第138 條的毀損公務員職務上掌管之文書罪",
+        "D": "乙構成刑法第139 條的妨害封印或查封標示罪"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-12",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 12,
+      "question": "性別平等工作法第14 條有關於生理假之規定，下列何者錯誤？",
+      "options": {
+        "A": "女性受僱者因生理日致工作有困難者，每年得請生理假12 日",
+        "B": "全年請假日數未逾3 日，不併入病假計，其餘日數併入病假計算",
+        "C": "生理假薪資，減半發給",
+        "D": "雇主不得要求女性受僱者，提出醫生證明"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-13",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 13,
+      "question": "依消費者保護法之規定，企業經營者與消費者分期付款買賣契約應以書面為之。下列何者非契約書應載明事項？",
+      "options": {
+        "A": "頭期款",
+        "B": "違約金",
+        "C": "各期價款與其他附加費用合計之總價款與現金交易價格之差額",
+        "D": "利率"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-14",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 14,
+      "question": "關於法規範憲法審查，下列國家機關何者無法聲請？",
+      "options": {
+        "A": "內政部",
+        "B": "國家通訊傳播委員會",
+        "C": "考試院",
+        "D": "總統"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-15",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 15,
+      "question": "法律之廢止，其程序為何？",
+      "options": {
+        "A": "經立法院通過，總統公布",
+        "B": "憲法法院裁判",
+        "C": "原執行機關公布廢止",
+        "D": "人民公投"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-16",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 16,
+      "question": "依民法之規定，關於公示外觀原則的效力，下列敘述何者正確？",
+      "options": {
+        "A": "登記具有絕對效力，占有則推定適法有此權利",
+        "B": "登記為推定適法有此權利，占有則具有絕對效力",
+        "C": "登記具有絕對效力，占有亦具有絕對效力",
+        "D": "登記為推定適法有此權利，占有亦推定適法有此權利"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-17",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 17,
+      "question": "依全民健康保險法第48 條第1 項規定，特定保險對象免自行負擔門診、急診及住院費用。下列何者非屬該等特定保險對象？",
+      "options": {
+        "A": "低收入戶成員",
+        "B": "重大傷病",
+        "C": "分娩",
+        "D": "山地離島地區之就醫"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-18",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 18,
+      "question": "類推適用係就法律未規定之事項，比附援引與其性質相類似之規定，以為適用。據此，類推適用是基於下列何種原則之理念而來？",
+      "options": {
+        "A": "比例原則",
+        "B": "民主原則",
+        "C": "司法自制",
+        "D": "平等原則"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-19",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 19,
+      "question": "關於民法與商法的關係，學說上分成民商合一與民商分立兩種立法例。下列對我國民法與商法採用立法例的說明，何者正確？",
+      "options": {
+        "A": "我國採取民商合一的立法例，民法中有商法規定",
+        "B": "我國在民法規定之外，尚有獨立制定的商法法典",
+        "C": "我國雖無獨立的商法典，但未在民法中規範商業行為",
+        "D": "我國採取民商分立制度"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-20",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 20,
+      "question": "入出國及移民法施行細則第43 條第2 項規定，「本細則中華民國112 年12 月28 日修正發布條文，除第13條及第22 條自113 年3 月1 日施行外，自113 年1 月1 日施行。」該施行細則應自何時生效？",
+      "options": {
+        "A": "中華民國113 年1 月1 日",
+        "B": "中華民國112 年12 月28 日",
+        "C": "中華民國112 年12 月31 日",
+        "D": "中華民國112 年12 月30 日"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-23",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 23,
+      "question": "Lina had toquality time with her family before she passed the lawyer license examination.",
+      "options": {
+        "A": "constitute",
+        "B": "guarantee",
+        "C": "sacrifice",
+        "D": "register"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-25",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 25,
+      "question": "Even with the restaurant’s the-customer-is-always-right policy, the waiter was stillby the guests’ rudeattitudes and languages.",
+      "options": {
+        "A": "irritated",
+        "B": "furnished",
+        "C": "portrayed",
+        "D": "relieved"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-26",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 26,
+      "question": "Blown out of the open window by a sudden breeze, the letterto the ground below.",
+      "options": {
+        "A": "abated",
+        "B": "elicited",
+        "C": "fluttered",
+        "D": "regressed"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-27",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 27,
+      "question": "You should not listen to other people’s private conversations; it is not polite to.",
+      "options": {
+        "A": "boost",
+        "B": "eavesdrop",
+        "C": "relapse",
+        "D": "vitalize"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-28",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 28,
+      "question": "Some workers dug up the street near our house, which caused frequentinside.",
+      "options": {
+        "A": "stimulants",
+        "B": "simulation",
+        "C": "vigor",
+        "D": "vibrations"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-29",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 29,
+      "question": "Refugees were forced to leave their country to find safety in another country because of.",
+      "options": {
+        "A": "persecution",
+        "B": "recognition",
+        "C": "adolescence",
+        "D": "consistency"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-30",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 30,
+      "question": "Aof 7.0 earthquake attacked the northern part of the country so harshly that it caused hundreds of peopleto lose their lives and properties.",
+      "options": {
+        "A": "magnitude",
+        "B": "maintenance",
+        "C": "majesty",
+        "D": "manifesto"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-32",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 32,
+      "question": "International trade allows countries to expand their markets and access goods that may not have been",
+      "options": {
+        "A": "available",
+        "B": ".",
+        "C": "domestically",
+        "D": "analytically"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-34",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 34,
+      "question": "The payment for the tuition can be made into be paid partially each month until the full amount is paid.",
+      "options": {
+        "A": "installment",
+        "B": "retail",
+        "C": "wholesale",
+        "D": "deposit"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-37",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 37,
+      "question": "Music can improve mood, decrease pain and anxiety; it canyou when you are down.",
+      "options": {
+        "A": "elate",
+        "B": "amble",
+        "C": "glean",
+        "D": "libel"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-38",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 38,
+      "question": "Thein the contract led to disputes between the two parties involved, intensifying misunderstandings.",
+      "options": {
+        "A": "lucidity",
+        "B": "precision",
+        "C": "ambiguity",
+        "D": "explicitness"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-39",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 39,
+      "question": "The room waslit, making it difficult to see the details of the painting on the wall.",
+      "options": {
+        "A": "brightly",
+        "B": "obviously",
+        "C": "densely",
+        "D": "scarcely"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-40",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 40,
+      "question": "As the story, we learned that the boy became an orphan when he was one year old.",
+      "options": {
+        "A": "allowed",
+        "B": "called",
+        "C": "undone",
+        "D": "unfolded"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-46",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 46,
+      "question": "What is the main idea of this passage?",
+      "options": {
+        "A": "The revolution in medicine to lengthen lives.",
+        "B": "The introduction of a medical specialty.",
+        "C": "The new perspective on modern medicine.",
+        "D": "The importance of preventive health care."
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-47",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 47,
+      "question": "Which of the following can best describe the tone of the passage?",
+      "options": {
+        "A": "Sarcastic.",
+        "B": "Factual.",
+        "C": "Pessimistic.",
+        "D": "Hilarious."
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-48",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 48,
+      "question": "According to the passage, which of the following is NOT a geriatrician’s treatment?",
+      "options": {
+        "A": "Taking care of a wide range of chronic diseases for the elderly.",
+        "B": "Making comprehensive evaluations about the patient’s life.",
+        "C": "Providing psychological consults to patients who may or will die.",
+        "D": "Performing operations for the elderly people who fall."
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-49",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 49,
+      "question": "According to the passage, which of the following statements about a geriatrician is NOT true?",
+      "options": {
+        "A": "A geriatrician usually works alone in a clinic.",
+        "B": "A geriatrician should be a good adviser and listener.",
+        "C": "A geriatrician needs integration ability to treat his patients.",
+        "D": "A geriatrician will deal with problems according to the priority."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-114-civil-senior-hakka-50",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "civil-senior-hakka",
+      "source_exam_name": "114 年高考三等客家事務行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 50,
+      "question": "Which of the following can we infer from the passage?",
+      "options": {
+        "A": "Geriatric medicine is not necessary in those countries with fewer elderly people.",
+        "B": "Geriatric medicine may play a very important role in aging societies.",
+        "C": "Geriatricians are not specialists; they are caregivers to the elderly.",
+        "D": "Geriatricians focus on the treatment of elderly physical health."
+      },
+      "answer": "B",
+      "level": "senior",
       "shared_bank": "common_law_knowledge",
       "parent_id": null,
       "case_context": null,

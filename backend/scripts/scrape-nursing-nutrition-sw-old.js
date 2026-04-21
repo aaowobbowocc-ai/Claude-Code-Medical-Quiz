@@ -465,4 +465,8 @@ async function main() {
   console.log(`\n🎉 Total new: +${total}`)
 }
 
-main().catch(e => { console.error(e); process.exit(1) })
+module.exports = { parseQuestionsColumnAware, parseAnswersColumnAware, parseAnswersPdfParse, cachedPdf, fetchPdfRaw }
+
+if (require.main === module) {
+  main().catch(e => { console.error(e); process.exit(1) })
+}

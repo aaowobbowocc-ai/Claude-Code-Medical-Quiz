@@ -36,6 +36,29 @@ const LAW_KNOWLEDGE_SESSIONS = [
   { year: '112', code: '112090', c: '401', s: '0119' },
   { year: '113', code: '113080', c: '401', s: '0113' },
   // 114 already scraped
+  // 地特 114 三等/五等 + 原民 112/113 四等 + 高考 114 c=203（法學知識與英文共同科目，可加入 shared bank）
+  { year: '114', code: '114160', c: '101', s: '0105', level: 'senior',
+    sourceName: '114 年地方特考三等一般行政', sourceCode: 'civil-local-senior' },
+  { year: '114', code: '114160', c: '501', s: '0106', level: 'elementary',
+    sourceName: '114 年地方特考五等一般行政', sourceCode: 'civil-local-elementary' },
+  { year: '112', code: '112090', c: '311', s: '0118', level: 'junior',
+    sourceName: '112 年原住民族特考四等', sourceCode: 'civil-indigenous-junior' },
+  { year: '113', code: '113080', c: '311', s: '0112', level: 'junior',
+    sourceName: '113 年原住民族特考四等', sourceCode: 'civil-indigenous-junior' },
+  { year: '114', code: '114080', c: '203', s: '0401', level: 'senior',
+    sourceName: '114 年高考三等客家事務行政', sourceCode: 'civil-senior-hakka' },
+  // 地特三等/五等 112-113（四等不共用 法學知識與英文；s code 沿用 114 的 0105/0106 模式）
+  { year: '112', code: '112160', c: '101', s: '0119', level: 'senior',
+    sourceName: '112 年地方特考三等一般行政', sourceCode: 'civil-local-senior' },
+  { year: '113', code: '113160', c: '101', s: '0113', level: 'senior',
+    sourceName: '113 年地方特考三等一般行政', sourceCode: 'civil-local-senior' },
+  { year: '112', code: '112160', c: '501', s: '0119', level: 'elementary',
+    sourceName: '112 年地方特考五等一般行政', sourceCode: 'civil-local-elementary' },
+  { year: '113', code: '113160', c: '501', s: '0113', level: 'elementary',
+    sourceName: '113 年地方特考五等一般行政', sourceCode: 'civil-local-elementary' },
+  // 教育行政高考三等 113 (c=111)
+  { year: '113', code: '113080', c: '111', s: '0401', level: 'senior',
+    sourceName: '113 年高考三等教育行政', sourceCode: 'civil-senior-education' },
 ]
 
 // common_law_basics: 初等考試（五等）法學大意（一般行政等）c=501
@@ -81,13 +104,13 @@ async function main() {
       if (yearFilter && s.year !== yearFilter) continue
       tasks.push({
         bank: 'common_law_knowledge',
-        level: 'junior',
+        level: s.level || 'junior',
         year: s.year,
         code: s.code,
         c: s.c,
         subj: s.s,
-        sourceName: `${s.year} 年普通考試一般行政`,
-        sourceCode: 'civil-junior-general',
+        sourceName: s.sourceName || `${s.year} 年普通考試一般行政`,
+        sourceCode: s.sourceCode || 'civil-junior-general',
         paper: '法學知識與英文（包括中華民國憲法、法學緒論、英文）',
         tags: 'law_knowledge_combined',
       })

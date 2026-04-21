@@ -176,8 +176,14 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
           </div>
           {disputed && (
             <div className="mt-2 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2">
-              <p className="text-xs font-semibold text-amber-700">⚠️ 爭議題</p>
-              <p className="text-xs text-amber-600 mt-0.5">{disputed}</p>
+              <p className="text-xs font-semibold text-amber-700">
+                {answer === '送分' ? '⚠️ 本題一律給分（試題疑義後送分）'
+                  : (typeof answer === 'string' && answer.includes(',')) ? `⚠️ 本題答案有爭議，${answer.replace(/,/g,' 或 ')} 均給分`
+                  : '⚠️ 爭議題（經試題疑義更正）'}
+              </p>
+              {typeof disputed === 'string' && disputed && (
+                <p className="text-xs text-amber-600 mt-0.5">{disputed}</p>
+              )}
             </div>
           )}
           {showReportForm && !reportSent && (

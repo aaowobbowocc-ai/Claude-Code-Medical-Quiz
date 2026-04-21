@@ -31,7 +31,7 @@ async function main() {
 
   // Preload question text so image→question assignment can prefer empty-text
   // or image-keyword questions when multiple candidates are within range.
-  const IMG_KEYWORDS = /圖|標誌|標線|號誌|手勢|箭頭|燈|斑馬|車道|圓環|本標|左臂|右臂|指示|警告|禁制/
+  const IMG_KEYWORDS = /圖|標誌|標線|號誌|手勢|箭頭|燈|斑馬|車道|圓環|本標|左臂|右臂|指示|警告|禁制|道路指定|指定/
   const allQs = JSON.parse(fs.readFileSync(MOTO_JSON, 'utf8'))
   const questionByNum = new Map()
   for (const q of allQs) questionByNum.set(q.number, q)

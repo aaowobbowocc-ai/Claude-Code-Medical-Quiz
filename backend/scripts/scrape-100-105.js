@@ -168,7 +168,7 @@ function parseQuestions(text) {
     if (qm && (line.length > 6 || /[\u4e00-\u9fff a-zA-Z]/.test(qm[2] || '') || (qm[2] || '') === '')) {
       const num = parseInt(qm[1])
       const isFirst = !cur && questions.length === 0
-      if (num >= 1 && num <= 80 && (isFirst || (cur && num === cur.number + 1))) {
+      if (num >= 1 && num <= 200 && (isFirst || (cur && num === cur.number + 1))) {
         flushQ()
         cur = { number: num, question: (qm[2] || '').trim(), options: {} }
         continue
@@ -241,6 +241,8 @@ function buildTargets(filterExam, filterYear) {
   add('doctor1', 'questions.json', '104', '104030', '第一次', '101', doctor1Subs)
   // 100140 第二次: c=101, s=0101,0102 (same as 030)
   add('doctor1', 'questions.json', '100', '100140', '第二次', '101', doctor1Subs)
+  // 102110 第二次 030系列: c=101, s=0101,0102 (user-provided URL confirmed)
+  add('doctor1', 'questions.json', '102', '102110', '第二次', '101', doctor1Subs)
 
   // Doctor2 — c=102 in 030 series years 100-104
   const doctor2Subs = [
@@ -552,6 +554,11 @@ function buildTargets(filterExam, filterYear) {
     { s: '66', subject: '醫學(二)', tag: 'pathology', name: '醫學(二)' },
   ]
   add('doctor1', 'questions.json', '104', '104090', '第二次', '301', doctor1Subs020)
+  // 105100 第二次 020系列: c=301, s=55,66 — CBT 年但 PDF 仍可下載
+  add('doctor1', 'questions.json', '105', '105100', '第二次', '301', doctor1Subs020)
+  // 105020 / 106020 第一次 c=301 s=55,66 — 補齊 醫學(一)/醫學(二)
+  add('doctor1', 'questions.json', '105', '105020', '第一次', '301', doctor1Subs020)
+  add('doctor1', 'questions.json', '106', '106020', '第一次', '301', doctor1Subs020)
 
   // Doctor2 — c=302 in 020 series, years 104-105
   const doctor2Subs020 = [

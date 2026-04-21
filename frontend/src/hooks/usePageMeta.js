@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 const DEFAULT_TITLE = '國考知識王 — 最專業的醫藥護國考對戰練習平台'
-const DEFAULT_DESC = '免費醫事國考題庫，涵蓋醫師、牙醫、藥師、護理師等 21 類考試，75,000+ 題。即時對戰、AI 解說、歷屆模擬考、弱點分析，助你高效備考！'
+const DEFAULT_DESC = '免費醫事國考題庫，涵蓋醫師、牙醫、藥師、護理師等 26 類考試，150,000+ 題。即時對戰、AI 解說、歷屆模擬考、弱點分析，助你高效備考！'
 const DEFAULT_URL = 'https://examking.tw/'
 const DEFAULT_IMAGE = 'https://examking.tw/icons/icon-512.png'
 

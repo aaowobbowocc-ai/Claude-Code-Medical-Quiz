@@ -2,8 +2,8 @@
   "bankId": "common_admin_studies",
   "name": "行政學",
   "description": "公職考試三等／特考共通科目：行政學（含組織理論、人事、財務、政策等）",
-  "bankVersion": 2,
-  "last_synced_at": "2026-04-21T02:45:06.777Z",
+  "bankVersion": 3,
+  "last_synced_at": "2026-04-21T03:02:28.770Z",
   "levels": [
     "senior"
   ],
@@ -5651,6 +5651,32 @@
       "deprecated_reason": null
     },
     {
+      "id": "common_admin_studies-114-police-9",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 9,
+      "question": "顯示執行特定工作人員必須具備的知識、技能、能力及其他特質的表單，稱之為：",
+      "options": {
+        "A": "職務規範書（job specification）",
+        "B": "工作識別證（job identification）",
+        "C": "工作清單（job list）",
+        "D": "組織圖（organizational chart）"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
       "id": "common_admin_studies-114-police-10",
       "roc_year": "114",
       "session": "第一次",
@@ -5825,6 +5851,32 @@
         "D": "項目預算"
       },
       "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-114-police-17",
+      "roc_year": "114",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 17,
+      "question": "一個有回饋性的政策系統，包括投入、過程、產出及結果四個階段，以及最終對政策投入的回饋。 考核一個方案被執行的程度與原訂計畫的差別，屬於下列那一種評估類型？",
+      "options": {
+        "A": "過程評估（process evaluation",
+        "B": "）",
+        "C": "影響評估（impact evaluation",
+        "D": "）"
+      },
+      "answer": "A",
       "level": "senior",
       "shared_bank": "common_admin_studies",
       "parent_id": null,
@@ -7211,6 +7263,32 @@
       "deprecated_reason": null
     },
     {
+      "id": "common_admin_studies-112-police-24",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 24,
+      "question": "隨著數位化潮流興起，民眾透過手機、 APP和網際網路參與公共政策制定，已成為一種最方便、 直接的民主參與方式，此一發展趨勢稱之為 ：",
+      "options": {
+        "A": "應用民主（application democracy",
+        "B": "）數位行銷（digitalmarketing）",
+        "C": "線上民主（online democracy",
+        "D": "）線上學習（online learning）"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
       "id": "common_admin_studies-112-police-25",
       "roc_year": "112",
       "session": "第一次",
@@ -7333,6 +7411,32 @@
         "D": "講究溝通，充分協調"
       },
       "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-111-police-5",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 5,
+      "question": "美國學者羅爾斯（ J. Rawls）認為，想要探討正義的內涵就必須善用：",
+      "options": {
+        "A": "透明之幕（the veil of transparency",
+        "B": "）",
+        "C": "廉正之幕（the veil of integrity",
+        "D": "）"
+      },
+      "answer": "D",
       "level": "senior",
       "shared_bank": "common_admin_studies",
       "parent_id": null,
@@ -7671,6 +7775,32 @@
         "D": "主要是以學習理論為發展依據"
       },
       "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-111-police-19",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 19,
+      "question": "甲過去的工作表現一直相當良好，今年甲的主管特別要求甲在其業務上參考其他先進國家的作 法，並提出創新作為及改進建議；在以上描述中，主管所展現的行為最符合豪斯（ R. House）提 出的「途徑目標理論（ path goal theory）」中那一種型態的領導行為？",
+      "options": {
+        "A": "工具行為（instrumental behavior",
+        "B": "）",
+        "C": "支持行為（supportive behavior",
+        "D": "）"
+      },
+      "answer": "C",
       "level": "senior",
       "shared_bank": "common_admin_studies",
       "parent_id": null,
@@ -9671,6 +9801,32 @@
         "B": "彼得原則",
         "C": "後測原則",
         "D": "隨機指派"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-108-police-22",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 22,
+      "question": "「某甲過去平時認真工作時，主管都會予以獎勵，當主管因經費受限而停止獎勵，某甲覺得不需 要再如此認真工作」，這是符合增強理論所描述的下列何者現象？",
+      "options": {
+        "A": "正增強（positive reinforcement",
+        "B": "）",
+        "C": "負增強（negative reinforcement",
+        "D": "）"
       },
       "answer": "D",
       "level": "senior",

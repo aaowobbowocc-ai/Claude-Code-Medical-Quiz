@@ -56,7 +56,12 @@ const SOURCES = [
 ]
 
 function classify(q, split) {
-  if (isEnglish(q)) return 'english'
+  // Only auto-route to english when english is a legitimate bucket for this
+  // source (mixed law+english papers). Pure-subject sources like 行政學 list
+  // only one bucket in their split, so isEnglish must not hijack them —
+  // otherwise questions with ASCII-heavy options (acronyms, citations) drift
+  // into common_english.
+  if (split.english && isEnglish(q)) return 'english'
   for (const [bucket, [lo, hi]] of Object.entries(split)) {
     if (q.number >= lo && q.number <= hi) return bucket
   }

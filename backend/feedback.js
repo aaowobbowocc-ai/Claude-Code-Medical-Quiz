@@ -68,17 +68,24 @@ async function sendReportDiscord(entry) {
 
 // Look up a question by id across all loaded exams. Returns
 // { examId, examName, question } or null. Question id is unique within an
-// exam file but not globally — we scan every exam.
-function locateQuestion(examData, examConfigs, questionId) {
+// exam file but not globally — the server mutates ids to `{id}_{paperId}` so
+// e.g. "982_paper2" can exist in both lawyer1 and nursing. When a
+// `questionText` hint is supplied, prefer the exam whose question content
+// matches; otherwise return the first match.
+function locateQuestion(examData, examConfigs, questionId, questionText) {
   if (!examData || !questionId) return null;
+  const matches = [];
   for (const [examId, data] of Object.entries(examData)) {
     const q = data.questions?.find(x => String(x.id) === String(questionId));
-    if (q) {
-      const examName = examConfigs?.[examId]?.name || examId;
-      return { examId, examName, question: q };
-    }
+    if (q) matches.push({ examId, examName: examConfigs?.[examId]?.name || examId, question: q });
   }
-  return null;
+  if (matches.length === 0) return null;
+  if (matches.length > 1 && questionText) {
+    const hint = String(questionText).slice(0, 30);
+    const preferred = matches.find(m => m.question.question && m.question.question.startsWith(hint));
+    if (preferred) return preferred;
+  }
+  return matches[0];
 }
 
 function registerRoutes(app, examData, examConfigs) {
@@ -113,7 +120,7 @@ function registerRoutes(app, examData, examConfigs) {
     // client only knows what's currently rendered; here we look up the real
     // exam/paper/year/number so the Discord report always has a precise
     // locator like 「醫師一階 110年第一次 醫學(一) 第15題」.
-    const found = locateQuestion(examData, examConfigs, questionId);
+    const found = locateQuestion(examData, examConfigs, questionId, questionText);
     const q = found?.question;
     const entry = {
       questionId,

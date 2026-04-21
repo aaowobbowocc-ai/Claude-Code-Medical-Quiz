@@ -59,19 +59,19 @@ async function main() {
       .map(ln => ({ num: parseInt(ln.text), y: ln.y }))
       .sort((a, b) => a.y - b.y)
 
-    // For each image, find closest question by y distance
+    // For each image, find closest question by |dy|. The image bbox y is
+    // top-left while question-number text y is a baseline, so legit pairs
+    // can be 60+px apart for tall sign images — keep the 80px window and
+    // rely on the keyword filter below as the real safety gate.
     for (const img of images) {
       let bestQ = null
       let bestDist = Infinity
       for (const q of qNums) {
         const dist = Math.abs(img.y - q.y)
-        if (dist < bestDist) {
-          bestDist = dist
-          bestQ = q
-        }
+        if (dist < bestDist) { bestDist = dist; bestQ = q }
       }
       if (!bestQ || bestDist > 80) {
-        console.log(`  Page ${pi}: image at y=${img.y} no matching question (bestDist=${bestDist})`)
+        console.log(`  Page ${pi}: image at y=${img.y} no match (bestDist=${bestDist})`)
         continue
       }
 
@@ -104,16 +104,29 @@ async function main() {
 
   console.log(`\nExtracted ${imageMap.size} sign images`)
 
-  // Update existing questions with image_url
+  // Update existing questions with image_url. Second safety gate: if the
+  // question text is non-empty and doesn't reference an image (no 圖/標誌/
+  // 標線/號誌/手勢/箭頭/燈/斑馬/車道/圓環/本標/左臂/右臂/指示/警告/禁制),
+  // skip — the PDF proximity match was spurious.
+  const IMG_KEYWORDS = /圖|標誌|標線|號誌|手勢|箭頭|燈|斑馬|車道|圓環|本標|左臂|右臂|指示|警告|禁制/
   const questions = JSON.parse(fs.readFileSync(MOTO_JSON, 'utf8'))
   let updated = 0
+  let skipped = 0
   for (const q of questions) {
+    // Clear any stale assignment so re-runs are idempotent and fix prior drift.
+    if (q.image_url) delete q.image_url
     const fname = imageMap.get(q.number)
-    if (fname) {
-      q.image_url = `/signs/${fname}`
-      updated++
+    if (!fname) continue
+    const text = (q.question || '').trim()
+    if (text && !IMG_KEYWORDS.test(text)) {
+      console.log(`  Skip q.${q.number} — text has no image keyword: ${text.slice(0, 40)}`)
+      skipped++
+      continue
     }
+    q.image_url = `/signs/${fname}`
+    updated++
   }
+  console.log(`Skipped ${skipped} keyword-mismatch assignments`)
 
   const tmp = MOTO_JSON + '.tmp'
   fs.writeFileSync(tmp, JSON.stringify(questions, null, 2), 'utf-8')

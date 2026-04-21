@@ -47,18 +47,6 @@ const LAW_KNOWLEDGE_SESSIONS = [
     sourceName: '113 年原住民族特考四等', sourceCode: 'civil-indigenous-junior' },
   { year: '114', code: '114080', c: '203', s: '0401', level: 'senior',
     sourceName: '114 年高考三等客家事務行政', sourceCode: 'civil-senior-hakka' },
-  // 地特三等/五等 112-113（四等不共用 法學知識與英文；s code 沿用 114 的 0105/0106 模式）
-  { year: '112', code: '112160', c: '101', s: '0119', level: 'senior',
-    sourceName: '112 年地方特考三等一般行政', sourceCode: 'civil-local-senior' },
-  { year: '113', code: '113160', c: '101', s: '0113', level: 'senior',
-    sourceName: '113 年地方特考三等一般行政', sourceCode: 'civil-local-senior' },
-  { year: '112', code: '112160', c: '501', s: '0119', level: 'elementary',
-    sourceName: '112 年地方特考五等一般行政', sourceCode: 'civil-local-elementary' },
-  { year: '113', code: '113160', c: '501', s: '0113', level: 'elementary',
-    sourceName: '113 年地方特考五等一般行政', sourceCode: 'civil-local-elementary' },
-  // 教育行政高考三等 113 (c=111)
-  { year: '113', code: '113080', c: '111', s: '0401', level: 'senior',
-    sourceName: '113 年高考三等教育行政', sourceCode: 'civil-senior-education' },
 ]
 
 // common_law_basics: 初等考試（五等）法學大意（一般行政等）c=501

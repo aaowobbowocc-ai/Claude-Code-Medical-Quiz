@@ -1,0 +1,914 @@
+{
+  "doctor1": {
+    "total_questions": 4984,
+    "year_gaps": {
+      "count": 6,
+      "examples": [
+        "100/第二次",
+        "101/第二次",
+        "102/第二次",
+        "104/第二次",
+        "105/第二次"
+      ]
+    },
+    "truncated": {
+      "count": 383,
+      "examples": [
+        {
+          "id": "110020_1_3",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110020_1_25",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110020_1_33",
+          "y": "110",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 997,
+      "examples": [
+        {
+          "id": "110020_1_7",
+          "y": "110",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": "110020_1_7",
+          "y": "110",
+          "opt": "B",
+          "issue": "short"
+        },
+        {
+          "id": "110020_1_7",
+          "y": "110",
+          "opt": "C",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 2390
+  },
+  "doctor2": {
+    "total_questions": 8902,
+    "year_gaps": {
+      "count": 4,
+      "examples": [
+        "100/第二次",
+        "101/第二次",
+        "102/第二次",
+        "115/第二次"
+      ]
+    },
+    "truncated": {
+      "count": 2782,
+      "examples": [
+        {
+          "id": "110020_1",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110020_2",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110020_3",
+          "y": "110",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 1161,
+      "examples": [
+        {
+          "id": "110020_21",
+          "y": "110",
+          "opt": "D",
+          "issue": "short"
+        },
+        {
+          "id": "110020_39",
+          "y": "110",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": "110020_39",
+          "y": "110",
+          "opt": "B",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 6662
+  },
+  "medlab": {
+    "total_questions": 12951,
+    "year_gaps": {
+      "count": 5,
+      "examples": [
+        "100/第二次",
+        "101/第二次",
+        "102/第一次",
+        "104/第二次",
+        "115/第二次"
+      ]
+    },
+    "truncated": {
+      "count": 1336,
+      "examples": [
+        {
+          "id": 8,
+          "y": "114",
+          "issue": "no_punct"
+        },
+        {
+          "id": 11,
+          "y": "114",
+          "issue": "no_punct"
+        },
+        {
+          "id": 24,
+          "y": "114",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 3297,
+      "examples": [
+        {
+          "id": 10,
+          "y": "114",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": 10,
+          "y": "114",
+          "opt": "C",
+          "issue": "short"
+        },
+        {
+          "id": 17,
+          "y": "114",
+          "opt": "A",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 10791
+  },
+  "pt": {
+    "total_questions": 13919,
+    "year_gaps": {
+      "count": 3,
+      "examples": [
+        "100/第二次",
+        "104/第二次",
+        "115/第二次"
+      ]
+    },
+    "truncated": {
+      "count": 2117,
+      "examples": [
+        {
+          "id": 10,
+          "y": "114",
+          "issue": "no_punct"
+        },
+        {
+          "id": 11,
+          "y": "114",
+          "issue": "no_punct"
+        },
+        {
+          "id": 30,
+          "y": "114",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 3534,
+      "examples": [
+        {
+          "id": 4,
+          "y": "114",
+          "opt": "D",
+          "issue": "short"
+        },
+        {
+          "id": 17,
+          "y": "114",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": 17,
+          "y": "114",
+          "opt": "B",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 11599
+  },
+  "radiology": {
+    "total_questions": 13905,
+    "year_gaps": {
+      "count": 3,
+      "examples": [
+        "100/第二次",
+        "104/第二次",
+        "115/第二次"
+      ]
+    },
+    "truncated": {
+      "count": 2553,
+      "examples": [
+        {
+          "id": 5191,
+          "y": "106",
+          "issue": "no_punct"
+        },
+        {
+          "id": 5195,
+          "y": "106",
+          "issue": "no_punct"
+        },
+        {
+          "id": 5215,
+          "y": "106",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 5346,
+      "examples": [
+        {
+          "id": 5200,
+          "y": "106",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": 5200,
+          "y": "106",
+          "opt": "B",
+          "issue": "short"
+        },
+        {
+          "id": 5200,
+          "y": "106",
+          "opt": "D",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 11585
+  },
+  "nursing": {
+    "total_questions": 9094,
+    "year_gaps": {
+      "count": 5,
+      "examples": [
+        "100/第二次",
+        "101/第二次",
+        "102/第二次",
+        "104/第一次",
+        "115/第二次"
+      ]
+    },
+    "truncated": {
+      "count": 871,
+      "examples": [
+        {
+          "id": "110030_0303_5",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110030_0303_30",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110030_0303_74",
+          "y": "110",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 3232,
+      "examples": [
+        {
+          "id": "110030_0303_3",
+          "y": "110",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": "110030_0303_6",
+          "y": "110",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": "110030_0303_6",
+          "y": "110",
+          "opt": "C",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 7204
+  },
+  "nutrition": {
+    "total_questions": 5666,
+    "year_gaps": {
+      "count": 9,
+      "examples": [
+        "100/第一次",
+        "100/第二次",
+        "101/第二次",
+        "102/第一次",
+        "102/第二次"
+      ]
+    },
+    "truncated": {
+      "count": 438,
+      "examples": [
+        {
+          "id": "113100_public_nutrition_22",
+          "y": "113",
+          "issue": "no_punct"
+        },
+        {
+          "id": "113100_public_nutrition_32",
+          "y": "113",
+          "issue": "no_punct"
+        },
+        {
+          "id": "113100_public_nutrition_42",
+          "y": "113",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 2226,
+      "examples": [
+        {
+          "id": "113100_public_nutrition_1",
+          "y": "113",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": "113100_public_nutrition_1",
+          "y": "113",
+          "opt": "B",
+          "issue": "short"
+        },
+        {
+          "id": "113100_public_nutrition_4",
+          "y": "113",
+          "opt": "A",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 4696
+  },
+  "pharma1": {
+    "total_questions": 6717,
+    "year_gaps": {
+      "count": 4,
+      "examples": [
+        "100/第二次",
+        "101/第二次",
+        "104/第二次",
+        "115/第二次"
+      ]
+    },
+    "truncated": {
+      "count": 2869,
+      "examples": [
+        {
+          "id": "106020_s22_19",
+          "y": "106",
+          "issue": "image_ref"
+        },
+        {
+          "id": "106020_s22_63",
+          "y": "106",
+          "issue": "very_short"
+        },
+        {
+          "id": "106020_s33_41",
+          "y": "106",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 2800,
+      "examples": [
+        {
+          "id": "106020_s22_7",
+          "y": "106",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": "106020_s22_7",
+          "y": "106",
+          "opt": "B",
+          "issue": "short"
+        },
+        {
+          "id": "106020_s22_7",
+          "y": "106",
+          "opt": "C",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 4477
+  },
+  "pharma2": {
+    "total_questions": 5619,
+    "year_gaps": {
+      "count": 4,
+      "examples": [
+        "100/第二次",
+        "101/第二次",
+        "104/第二次",
+        "115/第二次"
+      ]
+    },
+    "truncated": {
+      "count": 2182,
+      "examples": [
+        {
+          "id": "110020_1",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110020_2",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110020_3",
+          "y": "110",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 1366,
+      "examples": [
+        {
+          "id": "110020_10",
+          "y": "110",
+          "opt": "C",
+          "issue": "short"
+        },
+        {
+          "id": "110020_10",
+          "y": "110",
+          "opt": "D",
+          "issue": "short"
+        },
+        {
+          "id": "110020_11",
+          "y": "110",
+          "opt": "A",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 3379
+  },
+  "ot": {
+    "total_questions": 10966,
+    "year_gaps": {
+      "count": 7,
+      "examples": [
+        "100/第二次",
+        "104/第二次",
+        "110/第一次",
+        "111/第一次",
+        "112/第一次"
+      ]
+    },
+    "truncated": {
+      "count": 1286,
+      "examples": [
+        {
+          "id": 68,
+          "y": "114",
+          "issue": "no_punct"
+        },
+        {
+          "id": 82,
+          "y": "114",
+          "issue": "no_punct"
+        },
+        {
+          "id": 84,
+          "y": "114",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 2590,
+      "examples": [
+        {
+          "id": 45,
+          "y": "114",
+          "opt": "C",
+          "issue": "short"
+        },
+        {
+          "id": 62,
+          "y": "114",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": 62,
+          "y": "114",
+          "opt": "D",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 9126
+  },
+  "dental1": {
+    "total_questions": 4639,
+    "year_gaps": {
+      "count": 1,
+      "examples": [
+        "115/第二次"
+      ]
+    },
+    "truncated": {
+      "count": 1941,
+      "examples": [
+        {
+          "id": "110020_1",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110020_2",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110020_3",
+          "y": "110",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 1025,
+      "examples": [
+        {
+          "id": "110020_1",
+          "y": "110",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": "110020_1",
+          "y": "110",
+          "opt": "C",
+          "issue": "short"
+        },
+        {
+          "id": "110020_1",
+          "y": "110",
+          "opt": "D",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 2319
+  },
+  "dental2": {
+    "total_questions": 7920,
+    "year_gaps": {
+      "count": 3,
+      "examples": [
+        "100/第二次",
+        "101/第一次",
+        "115/第二次"
+      ]
+    },
+    "truncated": {
+      "count": 3885,
+      "examples": [
+        {
+          "id": "110020_1",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110020_2",
+          "y": "110",
+          "issue": "no_punct"
+        },
+        {
+          "id": "110020_3",
+          "y": "110",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 1793,
+      "examples": [
+        {
+          "id": "110020_37",
+          "y": "110",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": "110020_37",
+          "y": "110",
+          "opt": "B",
+          "issue": "short"
+        },
+        {
+          "id": "110020_37",
+          "y": "110",
+          "opt": "C",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 1840,
+      "examples": [
+        {
+          "id": 115023261,
+          "y": "100",
+          "tag": "dental_clinical_1"
+        },
+        {
+          "id": 115023262,
+          "y": "100",
+          "tag": "dental_clinical_1"
+        },
+        {
+          "id": 115023263,
+          "y": "100",
+          "tag": "dental_clinical_1"
+        }
+      ]
+    },
+    "duplicates": 5600
+  },
+  "tcm1": {
+    "total_questions": 4139,
+    "year_gaps": {
+      "count": 6,
+      "examples": [
+        "100/第二次",
+        "101/第二次",
+        "102/第二次",
+        "103/第二次",
+        "104/第一次"
+      ]
+    },
+    "truncated": {
+      "count": 355,
+      "examples": [
+        {
+          "id": 19,
+          "y": "112",
+          "issue": "no_punct"
+        },
+        {
+          "id": 21,
+          "y": "112",
+          "issue": "no_punct"
+        },
+        {
+          "id": 87,
+          "y": "112",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 3890,
+      "examples": [
+        {
+          "id": 2,
+          "y": "112",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": 2,
+          "y": "112",
+          "opt": "B",
+          "issue": "short"
+        },
+        {
+          "id": 2,
+          "y": "112",
+          "opt": "C",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 2059
+  },
+  "tcm2": {
+    "total_questions": 8271,
+    "year_gaps": {
+      "count": 6,
+      "examples": [
+        "100/第二次",
+        "101/第二次",
+        "102/第二次",
+        "103/第二次",
+        "104/第一次"
+      ]
+    },
+    "truncated": {
+      "count": 903,
+      "examples": [
+        {
+          "id": 5,
+          "y": "112",
+          "issue": "no_punct"
+        },
+        {
+          "id": 22,
+          "y": "112",
+          "issue": "no_punct"
+        },
+        {
+          "id": 57,
+          "y": "112",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 5197,
+      "examples": [
+        {
+          "id": 1,
+          "y": "112",
+          "opt": "A",
+          "issue": "short"
+        },
+        {
+          "id": 1,
+          "y": "112",
+          "opt": "B",
+          "issue": "short"
+        },
+        {
+          "id": 1,
+          "y": "112",
+          "opt": "C",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 6191
+  },
+  "social-worker": {
+    "total_questions": 2622,
+    "year_gaps": {
+      "count": 0,
+      "examples": []
+    },
+    "truncated": {
+      "count": 409,
+      "examples": [
+        {
+          "id": 9,
+          "y": "112",
+          "issue": "no_punct"
+        },
+        {
+          "id": 14,
+          "y": "112",
+          "issue": "no_punct"
+        },
+        {
+          "id": 19,
+          "y": "112",
+          "issue": "no_punct"
+        }
+      ]
+    },
+    "answer_issues": {
+      "count": 638,
+      "examples": [
+        {
+          "id": 19,
+          "y": "112",
+          "opt": "B",
+          "issue": "short"
+        },
+        {
+          "id": 19,
+          "y": "112",
+          "opt": "C",
+          "issue": "short"
+        },
+        {
+          "id": 19,
+          "y": "112",
+          "opt": "D",
+          "issue": "short"
+        }
+      ]
+    },
+    "classification_issues": {
+      "count": 0,
+      "examples": []
+    },
+    "duplicates": 1742
+  }
+}

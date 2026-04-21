@@ -1,0 +1,310 @@
+[dotenv@17.3.1] injecting env (2) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Scanning for missing questions...
+  ⚠ No URL lookup for: police 112070 "行政學" (3 missing)
+  ⚠ No URL lookup for: pt 100030 "物理治療基礎學" (1 missing)
+  ⚠ No URL lookup for: dental1 107020 "卷二" (1 missing)
+Found 140 targets with 741 missing questions + 0 empty answers
+
+═══ nursing 106年第一次 內外科護理學 ═══
+    exam_code=106030 c=101 s=0103
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+(node:2059656) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 106年第一次 產兒科護理學 ═══
+    exam_code=106030 c=101 s=0104
+    Missing: 4 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 106年第一次 精神科與社區衛生護理學 ═══
+    exam_code=106030 c=101 s=0105
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 106年第二次 內外科護理學 ═══
+    exam_code=106110 c=101 s=0103
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 106年第二次 產兒科護理學 ═══
+    exam_code=106110 c=101 s=0104
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 106年第二次 精神科與社區衛生護理學 ═══
+    exam_code=106110 c=101 s=0105
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 107年第一次 內外科護理學 ═══
+    exam_code=107030 c=101 s=0103
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 107年第一次 精神科與社區衛生護理學 ═══
+    exam_code=107030 c=101 s=0105
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 107年第二次 內外科護理學 ═══
+    exam_code=107110 c=101 s=0103
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 107年第二次 精神科與社區衛生護理學 ═══
+    exam_code=107110 c=101 s=0105
+    Missing: 5 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 108年第一次 基本護理學與護理行政 ═══
+    exam_code=108020 c=101 s=0102
+    Missing: 1 | Empty answers: 0
+  ✓ Already complete
+
+═══ nursing 108年第一次 內外科護理學 ═══
+    exam_code=108020 c=101 s=0103
+    Missing: 3 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 108年第二次 基本護理學與護理行政 ═══
+    exam_code=108110 c=101 s=0102
+    Missing: 2 | Empty answers: 0
+  ✓ Already complete
+
+═══ nursing 108年第二次 內外科護理學 ═══
+    exam_code=108110 c=101 s=0103
+    Missing: 4 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 108年第二次 精神科與社區衛生護理學 ═══
+    exam_code=108110 c=101 s=0105
+    Missing: 3 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 109年第一次 基礎醫學 ═══
+    exam_code=109030 c=101 s=0101
+    Missing: 1 | Empty answers: 0
+  ✓ Already complete
+
+═══ nursing 109年第二次 基本護理學與護理行政 ═══
+    exam_code=109110 c=101 s=0102
+    Missing: 1 | Empty answers: 0
+  ✓ Already complete
+
+═══ nursing 109年第二次 內外科護理學 ═══
+    exam_code=109110 c=101 s=0103
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 109年第二次 產兒科護理學 ═══
+    exam_code=109110 c=101 s=0104
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 109年第二次 精神科與社區衛生護理學 ═══
+    exam_code=109110 c=101 s=0105
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 101年第一次 基本護理學與護理行政 ═══
+    exam_code=101030 c=105 s=0401
+    Missing: 3 | Empty answers: 0
+  ✓ Already complete
+
+═══ nursing 101年第一次 內外科護理學 ═══
+    exam_code=101030 c=105 s=0402
+    Missing: 1 | Empty answers: 0
+  ✓ Already complete
+
+═══ nursing 101年第一次 產兒科護理學 ═══
+    exam_code=101030 c=105 s=0403
+    Missing: 2 | Empty answers: 0
+  ✓ Already complete
+
+═══ nursing 101年第一次 精神科與社區衛生護理學 ═══
+    exam_code=101030 c=105 s=0404
+    Missing: 2 | Empty answers: 0
+  ✓ Already complete
+
+═══ nursing 105年第一次 基本護理學與護理行政 ═══
+    exam_code=105030 c=106 s=0502
+    Missing: 1 | Empty answers: 0
+  ✓ Already complete
+
+═══ nursing 105年第二次 產兒科護理學 ═══
+    exam_code=105090 c=106 s=0504
+    Missing: 2 | Empty answers: 0
+  ✓ Already complete
+
+═══ nursing 100年第一次 基本護理學與護理行政 ═══
+    exam_code=100030 c=105 s=0401
+    Missing: 1 | Empty answers: 0
+  ✓ Already complete
+
+═══ nursing 100年第一次 產兒科護理學 ═══
+    exam_code=100030 c=105 s=0403
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  80 answers loaded
+  📥 Downloading question PDF...
+  (cached) 286037 bytes
+  🖼  Rendering pages...
+  8 pages
+  🤖 Extracting questions via Vision...
+    Page 1/8... 11 questions
+    Page 2/8... 8 questions
+    Page 3/8... 11 questions
+    Page 4/8... 10 questions
+    Page 5/8... 10 questions
+    Page 6/8... 10 questions
+    Page 7/8... 10 questions
+    Page 8/8... 10 questions
+  1/1 missing questions found
+  💾 Saved questions-nursing.json: 9840 total (+1 new, 0 patched)
+
+═══ nursing 100年第一次 精神科與社區衛生護理學 ═══
+    exam_code=100030 c=105 s=0404
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  79 answers loaded
+  📥 Downloading question PDF...
+  (fetched) 289385 bytes
+  🖼  Rendering pages...
+  8 pages
+  🤖 Extracting questions via Vision...
+    Page 1/8... 9 questions
+    Page 2/8... 11 questions
+    Page 3/8... 11 questions
+    Page 4/8... 10 questions
+    Page 5/8... 10 questions
+    Page 6/8... 9 questions
+    Page 7/8... 7 questions
+    Page 8/8... 13 questions
+  2/2 missing questions found
+  💾 Saved questions-nursing.json: 9842 total (+2 new, 0 patched)
+
+═══ nursing 102年第一次 基本護理學與護理行政 ═══
+    exam_code=102030 c=107 s=0401
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (fetched) 241094 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4... 3 questions
+    Page 2/4... 13 questions
+    Page 3/4... 13 questions
+    Page 4/4... 11 questions
+  0/40 missing questions found
+
+═══ nursing 102年第一次 內外科護理學 ═══
+    exam_code=102030 c=107 s=0402
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (fetched) 234909 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4... 5 questions
+    Page 2/4... 11 questions
+    Page 3/4... 13 questions
+    Page 4/4... 11 questions
+  0/40 missing questions found
+
+═══ nursing 102年第一次 產兒科護理學 ═══
+    exam_code=102030 c=107 s=0403
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  111 answers loaded
+  📥 Downloading question PDF...
+  (cached) 236773 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4... 1 questions
+    Page 2/4... 15 questions
+    Page 3/4... 12 questions
+    Page 4/4... 12 questions
+  0/40 missing questions found
+
+═══ nursing 102年第一次 精神科與社區衛生護理學 ═══
+    exam_code=102030 c=107 s=0404
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 222049 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4... 7 questions
+    Page 2/4... 13 questions
+    Page 3/4... 11 questions
+    Page 4/4... 9 questions
+  0/40 missing questions found
+
+═══ nursing 103年第一次 基本護理學與護理行政 ═══
+    exam_code=103030 c=107 s=0401
+    Missing: 41 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 229359 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4... 4 questions
+    Page 2/4... 12 questions

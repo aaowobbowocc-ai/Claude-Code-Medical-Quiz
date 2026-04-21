@@ -1,0 +1,13 @@
+[dotenv@17.3.1] injecting env (2) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Starting at 2026/4/8 下午3:49:04
+Model: gemini-2.0-flash (FREE), Concurrency: 1
+Files: 5 exams
+
+============================================================
+  questions-doctor2.json — 醫師國考第二階段（臨床醫學）
+  Total: 1600, Missing: 1500
+============================================================
+
+    Rate limited, waiting 20s...
+
+    Rate limited, waiting 40s...

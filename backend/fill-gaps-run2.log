@@ -1,0 +1,1258 @@
+[dotenv@17.3.1] injecting env (2) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Scanning for missing questions...
+  ⚠ No URL lookup for: police 112070 "行政學" (3 missing)
+  ⚠ No URL lookup for: pt 100030 "物理治療基礎學" (1 missing)
+  ⚠ No URL lookup for: dental1 107020 "卷二" (1 missing)
+Found 125 targets with 715 missing questions + 0 empty answers
+
+═══ nursing 106年第一次 內外科護理學 ═══
+    exam_code=106030 c=101 s=0103
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+(node:2318760) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 106年第一次 產兒科護理學 ═══
+    exam_code=106030 c=101 s=0104
+    Missing: 4 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 106年第一次 精神科與社區衛生護理學 ═══
+    exam_code=106030 c=101 s=0105
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 106年第二次 內外科護理學 ═══
+    exam_code=106110 c=101 s=0103
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 106年第二次 產兒科護理學 ═══
+    exam_code=106110 c=101 s=0104
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 106年第二次 精神科與社區衛生護理學 ═══
+    exam_code=106110 c=101 s=0105
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 107年第一次 內外科護理學 ═══
+    exam_code=107030 c=101 s=0103
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 107年第一次 精神科與社區衛生護理學 ═══
+    exam_code=107030 c=101 s=0105
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 107年第二次 內外科護理學 ═══
+    exam_code=107110 c=101 s=0103
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 107年第二次 精神科與社區衛生護理學 ═══
+    exam_code=107110 c=101 s=0105
+    Missing: 5 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 108年第一次 內外科護理學 ═══
+    exam_code=108020 c=101 s=0103
+    Missing: 3 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 108年第二次 內外科護理學 ═══
+    exam_code=108110 c=101 s=0103
+    Missing: 4 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 108年第二次 精神科與社區衛生護理學 ═══
+    exam_code=108110 c=101 s=0105
+    Missing: 3 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 109年第二次 內外科護理學 ═══
+    exam_code=109110 c=101 s=0103
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 109年第二次 產兒科護理學 ═══
+    exam_code=109110 c=101 s=0104
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 109年第二次 精神科與社區衛生護理學 ═══
+    exam_code=109110 c=101 s=0105
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 102年第一次 基本護理學與護理行政 ═══
+    exam_code=102030 c=107 s=0401
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 241094 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5iDgfa8effMt4BNo4M"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5isdhBTsJWunWsDSZH"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5jVoZa7xaYycvRERZJ"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5kB7SLskU3jaibKKBc"}
+0 questions
+  0/40 missing questions found
+
+═══ nursing 102年第一次 內外科護理學 ═══
+    exam_code=102030 c=107 s=0402
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 234909 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5ks7jz85CjNg9cSfDW"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5mRA52DrfPy8mtAzvT"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5myENpjtATYhwLwkwf"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5nWjhr3dhqGbyMRabq"}
+0 questions
+  0/40 missing questions found
+
+═══ nursing 102年第一次 產兒科護理學 ═══
+    exam_code=102030 c=107 s=0403
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 236773 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5o73TAbJ58rF7mPk85"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5ofyrVWoz8uNja3qdr"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5pDebexn7QJyhoQJCm"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5pmG8BM8ozrFDyMkuW"}
+0 questions
+  0/40 missing questions found
+
+═══ nursing 102年第一次 精神科與社區衛生護理學 ═══
+    exam_code=102030 c=107 s=0404
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 222049 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5qJiUkpN5RU9Bu2mNk"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5qrCpHCyFhMQAcw7DP"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5rPiPQJ8c4as6UxgQC"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5rwf1N46wqN9b7RgX4"}
+0 questions
+  0/40 missing questions found
+
+═══ nursing 103年第一次 基本護理學與護理行政 ═══
+    exam_code=103030 c=107 s=0401
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 229359 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5sUyBFWprVYT91wkuw"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5t2MZWTFyFhJMuriq9"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5tcLxsQMm68uM82MfN"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5uAidLgDyhAEVZqxyb"}
+0 questions
+  0/40 missing questions found
+
+═══ nursing 103年第一次 內外科護理學 ═══
+    exam_code=103030 c=107 s=0402
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 251432 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5ui61uzVZkvAWgxkW6"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5vG1QRJTDWUniE6crL"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5vu85DpLANWCo5cuAR"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5wVdED5Frgshjh2FCD"}
+0 questions
+  0/40 missing questions found
+
+═══ nursing 103年第一次 產兒科護理學 ═══
+    exam_code=103030 c=107 s=0403
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 237427 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5x4H1uBqm5PswYEAGJ"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5xbqKTkADS8MP6G6ac"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5yAyceCEXsS1h9Xgth"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5yiWBpRguo7UJJTN27"}
+0 questions
+  0/40 missing questions found
+
+═══ nursing 103年第一次 精神科與社區衛生護理學 ═══
+    exam_code=103030 c=107 s=0404
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 223746 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5zGH8phH3gpdyUPkW5"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD5zomy8Dt9L8CRzhJAw"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD61MUCitmiewL6CCiDg"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD61vR6SABBgiJzKWzCg"}
+0 questions
+  0/40 missing questions found
+
+═══ nursing 103年第二次 基本護理學與護理行政 ═══
+    exam_code=103100 c=107 s=0401
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  114 answers loaded
+  📥 Downloading question PDF...
+  (cached) 312949 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD62ULiz5XFds7siKMA3"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD631zEdWqUL61LQ9NBj"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD63ZfjTc4wRxuzaWMpo"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD647Tfuc7dBLKU1b3LR"}
+0 questions
+  0/40 missing questions found
+
+═══ nursing 103年第二次 內外科護理學 ═══
+    exam_code=103100 c=109 s=0502
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 103年第二次 產兒科護理學 ═══
+    exam_code=103100 c=109 s=0503
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nursing 103年第二次 精神科與社區衛生護理學 ═══
+    exam_code=103100 c=109 s=0504
+    Missing: 40 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 106年第一次 膳食療養學 ═══
+    exam_code=106030 c=102 s=0201
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 106年第一次 團體膳食設計與管理 ═══
+    exam_code=106030 c=102 s=0202
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 106年第一次 公共衛生營養學 ═══
+    exam_code=106030 c=103 s=0205
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 106年第二次 生理學與生物化學 ═══
+    exam_code=106110 c=102 s=0203
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 106年第二次 營養學 ═══
+    exam_code=106110 c=103 s=0202
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 106年第二次 團體膳食設計與管理 ═══
+    exam_code=106110 c=102 s=0202
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 107年第一次 生理學與生物化學 ═══
+    exam_code=107030 c=102 s=0203
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 107年第一次 膳食療養學 ═══
+    exam_code=107030 c=102 s=0201
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 107年第一次 公共衛生營養學 ═══
+    exam_code=107030 c=103 s=0205
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 107年第二次 生理學與生物化學 ═══
+    exam_code=107110 c=102 s=0203
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 107年第二次 營養學 ═══
+    exam_code=107110 c=103 s=0202
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 107年第二次 膳食療養學 ═══
+    exam_code=107110 c=103 s=0203
+    Missing: 3 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 107年第二次 團體膳食設計與管理 ═══
+    exam_code=107110 c=102 s=0202
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 107年第二次 公共衛生營養學 ═══
+    exam_code=107110 c=102 s=0205
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 108年第一次 生理學與生物化學 ═══
+    exam_code=108020 c=103 s=0201
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 108年第一次 膳食療養學 ═══
+    exam_code=108020 c=102 s=0201
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 108年第二次 生理學與生物化學 ═══
+    exam_code=108110 c=102 s=0203
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 108年第二次 團體膳食設計與管理 ═══
+    exam_code=108110 c=102 s=0202
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 108年第二次 公共衛生營養學 ═══
+    exam_code=108110 c=102 s=0205
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 108年第二次 食品衛生與安全 ═══
+    exam_code=108110 c=102 s=0206
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 109年第一次 生理學與生物化學 ═══
+    exam_code=109030 c=103 s=0201
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 109年第一次 營養學 ═══
+    exam_code=109030 c=103 s=0202
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 109年第一次 團體膳食設計與管理 ═══
+    exam_code=109030 c=103 s=0204
+    Missing: 11 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 109年第二次 膳食療養學 ═══
+    exam_code=109110 c=103 s=0203
+    Missing: 4 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 109年第二次 團體膳食設計與管理 ═══
+    exam_code=109110 c=103 s=0204
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ nutrition 101年第一次 營養學 ═══
+    exam_code=101030 c=107 s=0602
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 211330 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD64nSxCzdKZoEerBcaW"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD65LS4N2ZyMCHFZLbYA"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD65w6Pcos3Aw2aKZLDL"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD66UbxwpeHHy3egQ9qz"}
+0 questions
+  0/1 missing questions found
+
+═══ nutrition 101年第一次 公共衛生營養學 ═══
+    exam_code=101030 c=107 s=0605
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  40 answers loaded
+  📥 Downloading question PDF...
+  (cached) 250563 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD671dGh4CAhb5gxVoht"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD67ZAq21GWVtpgwMHUw"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD686ZxPLrYmApeLFC2r"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD68eByd9aZTaVHTgR4f"}
+0 questions
+  0/1 missing questions found
+
+═══ nutrition 104年第二次 生理學與生物化學 ═══
+    exam_code=104100 c=103 s=0201
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  118 answers loaded
+  📥 Downloading question PDF...
+  (cached) 305348 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD69BAZ81iVy4UhY2RnA"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD69ibAtzVwfoLnrg8dW"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6AUZqwF84GSiWChQP1"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6B2fdzhXWAmmmjACEB"}
+0 questions
+  0/1 missing questions found
+
+═══ nutrition 104年第二次 食品衛生與安全 ═══
+    exam_code=104100 c=103 s=0206
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  118 answers loaded
+  📥 Downloading question PDF...
+  (cached) 293666 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6BZsrXyJJWTPRcsSiF"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6C7Kxbz9vyTd9FqTGZ"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6CgtZbLeFGtwQK4bCY"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6DF5ZpJtKodWiN7wta"}
+0 questions
+  0/1 missing questions found
+
+═══ nutrition 105年第二次 膳食療養學 ═══
+    exam_code=105090 c=103 s=0203
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  119 answers loaded
+  📥 Downloading question PDF...
+  (cached) 383468 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6DnsWQUqeAhgsfntyD"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6EMoQY3YEKJcaz1JFn"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6EvCZY4Zc9NwWQYAQ1"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6FUP4pLw8d1FcVLomL"}
+0 questions
+  0/1 missing questions found
+
+═══ social-worker 106年第一次 社會工作直接服務 ═══
+    exam_code=106030 c=107 s=0602
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  120 answers loaded
+  📥 Downloading question PDF...
+  (fetched) 343239 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6G2vA7Cq6vPV69R3ux"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6GbXiBKXmVXnC6yocb"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6H9LPkAZcvXYuN8V6H"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6Hh3dKLYdRt2Du4kbU"}
+0 questions
+  0/1 missing questions found
+
+═══ social-worker 106年第二次 社會工作 ═══
+    exam_code=106110 c=103 s=0301
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ social-worker 107年第二次 社會工作 ═══
+    exam_code=107110 c=103 s=0301
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ social-worker 107年第二次 社會工作直接服務 ═══
+    exam_code=107110 c=103 s=0302
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ social-worker 108年第一次 社會工作直接服務 ═══
+    exam_code=108020 c=107 s=0602
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ social-worker 109年第一次 社會工作 ═══
+    exam_code=109030 c=107 s=0601
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ social-worker 109年第一次 社會工作直接服務 ═══
+    exam_code=109030 c=107 s=0602
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ social-worker 109年第二次 社會工作管理 ═══
+    exam_code=109110 c=103 s=0303
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ social-worker 110年第一次 社會工作 ═══
+    exam_code=110030 c=105 s=0401
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ social-worker 111年第二次 社會工作管理 ═══
+    exam_code=111110 c=103 s=0303
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  0 answers loaded
+  📥 Downloading question PDF...
+  ✗ PDF download failed: redirect
+
+═══ social-worker 105年第一次 社會工作直接服務 ═══
+    exam_code=105030 c=107 s=0602
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  119 answers loaded
+  📥 Downloading question PDF...
+  (cached) 322876 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6JHez1VgiBRVr8rwoM"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6Ju4DSAwTpptj77cus"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6KXPkqrhJsWcKWghFm"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6L5Y2TVXszwkEbP9n6"}
+0 questions
+  0/1 missing questions found
+
+═══ social-worker 113年第二次 社會工作直接服務 ═══
+    exam_code=113100 c=103 s=0302
+    Missing: 4 | Empty answers: 0
+  📥 Loading answers...
+    Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6LkJAw3gvWpP3N7sC6"}
+    Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6MGuvAojrZX5ezp6qo"}
+    Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6Mp8dnirAKNA5M6pyh"}
+    Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6NMCfVCasDKjv63DQV"}
+    Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6NsjD3JLPb99HXJ1q8"}
+    Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6PQrDafgSLFVNjsYub"}
+    Page 7: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6PwmpVzjJDHcyDbjkT"}
+    Page 8: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6QV9D6Pckqe682Ukpc"}
+    Page 9: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6R3VPVS5h4xcYNjCVC"}
+    Page 10: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6RaAMqzkM6LcVK1TbH"}
+    Page 11: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6S8NrU8uzbVk8Fid8L"}
+    Page 12: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6Sf6JcG3AG9Q3a422x"}
+    Page 13: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6TCPEFvCR2UzAysNtS"}
+    Page 14: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6Tj9f5rdTWzz2EWbeG"}
+    Page 15: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6UGofUwTggEZUDw4ut"}
+    Page 16: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6UwAFTjbaor93XUg44"}
+    Page 17: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6VU1de7Nb2tFAd9cLN"}
+  0 answers loaded
+  📥 Downloading question PDF...
+  (cached) 533767 bytes
+  🖼  Rendering pages...
+  6 pages
+  🤖 Extracting questions via Vision...
+    Page 1/6...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6W2uJrdFmr8HR2mrRU"}
+0 questions
+    Page 2/6...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6WaGwiz6Jr7PvcDyF6"}
+0 questions
+    Page 3/6...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6X98PVhzGwqxGywFdR"}
+0 questions
+    Page 4/6...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6XgiReRKE4VAj3Kwgt"}
+0 questions
+    Page 5/6...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6YEdYzNL5257VU3T9n"}
+0 questions
+    Page 6/6...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6YmuzWCC5FEHJF6jhM"}
+0 questions
+  0/4 missing questions found
+
+═══ social-worker 113年第二次 社會工作管理 ═══
+    exam_code=113100 c=103 s=0303
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+    Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6ZVgDBaA5ZaJb6zgBV"}
+    Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6a327e2zEwmT5zJhPL"}
+    Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6aaEprQDGpcoVTzDmK"}
+    Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6b87j4tRHqoKjQKyJ3"}
+    Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6beowNeDGXFYaVqyen"}
+    Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6cCpXK5WdwVXdn4H5L"}
+    Page 7: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6ck1FuF9w3BXnYUcyP"}
+    Page 8: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6dHW667qtqKg6o677U"}
+    Page 9: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6drDLjTqs4SSRBRQrr"}
+    Page 10: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6eNnN2DiGM5kipzDNm"}
+    Page 11: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6euhxoridAW9dr1sbA"}
+    Page 12: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6fSTeYW5JK9nkHwN3i"}
+    Page 13: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6fyCawkXMdZ2NfvzGk"}
+    Page 14: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6gWU2YU2sX3q2B53zQ"}
+    Page 15: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6h3pRkWeM4Pz5eYAwg"}
+    Page 16: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6hao1W2ddWQKt8LhKt"}
+    Page 17: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6i911EV6PqjDSB2bok"}
+  0 answers loaded
+  📥 Downloading question PDF...
+  (cached) 350279 bytes
+  🖼  Rendering pages...
+  4 pages
+  🤖 Extracting questions via Vision...
+    Page 1/4...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6ih4KESp8n2No954na"}
+0 questions
+    Page 2/4...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6jEpGuQMSj3XASUhKm"}
+0 questions
+    Page 3/4...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6jnARoTstQKsWX9JeE"}
+0 questions
+    Page 4/4...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6kL26EiGZ8wkVveNHn"}
+0 questions
+  0/1 missing questions found
+
+═══ tcm1 100年第一次 中醫基礎醫學(二) ═══
+    exam_code=100030 c=107 s=0602
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  79 answers loaded
+  📥 Downloading question PDF...
+  (cached) 2150506 bytes
+  🖼  Rendering pages...
+  12 pages
+  🤖 Extracting questions via Vision...
+    Page 1/12...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6kuUjkazbewUJhE6Y5"}
+0 questions
+    Page 2/12...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6mTqfPWaeoDi2Csewd"}
+0 questions
+    Page 3/12...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6n12e2MTEs6L64hXDE"}
+0 questions
+    Page 4/12...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6ncxNNxBohAWpHoq7v"}
+0 questions
+    Page 5/12...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6oB1grm4SdX3f3fVi8"}
+0 questions
+    Page 6/12...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6oiiB81cwKoZWQ1jvN"}
+0 questions
+    Page 7/12...     Page 7: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6pJhL29DY6e14ewomM"}
+0 questions
+    Page 8/12...     Page 8: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6ps9DDEJq1zi67QZad"}
+0 questions
+    Page 9/12...     Page 9: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6qRuSaBdVQzRgaoneC"}
+0 questions
+    Page 10/12...     Page 10: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6r2J9fadhFzmdsPSYh"}
+0 questions
+    Page 11/12...     Page 11: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6rb4NwX7ZaG5pyXWa8"}
+0 questions
+    Page 12/12...     Page 12: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6s9ZF3Zz2CbMVAYN9R"}
+0 questions
+  0/1 missing questions found
+
+═══ tcm1 105年第二次 中醫基礎醫學(一) ═══
+    exam_code=105090 c=101 s=0101
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  119 answers loaded
+  📥 Downloading question PDF...
+  (cached) 405110 bytes
+  🖼  Rendering pages...
+  8 pages
+  🤖 Extracting questions via Vision...
+    Page 1/8...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6shUcsmFkqxpmQctoW"}
+0 questions
+    Page 2/8...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6tHQoEivV5YTLuzHjY"}
+0 questions
+    Page 3/8...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6tqJwKQskJY7pJJ1bA"}
+0 questions
+    Page 4/8...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6uNkYT54pGmSzf7jVK"}
+0 questions
+    Page 5/8...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6uvBuUa6R6rwm3KYVW"}
+0 questions
+    Page 6/8...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6vU7XyVEaDhojdGD1K"}
+0 questions
+    Page 7/8...     Page 7: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6w1Ug5eapSuDmjoTGV"}
+0 questions
+    Page 8/8...     Page 8: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6whdQnYcfa43xXk96A"}
+0 questions
+  0/1 missing questions found
+
+═══ tcm1 103年第一次 中醫基礎醫學(一) ═══
+    exam_code=103030 c=109 s=0501
+    Missing: 3 | Empty answers: 0
+  📥 Loading answers...
+  80 answers loaded
+  📥 Downloading question PDF...
+  (cached) 276871 bytes
+  🖼  Rendering pages...
+  8 pages
+  🤖 Extracting questions via Vision...
+    Page 1/8...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6xGjyNR5CfgzFHyNpL"}
+0 questions
+    Page 2/8...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6xpHHjfrgiJLbzH1pq"}
+0 questions
+    Page 3/8...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6yPGR1bAosWe26QDqL"}
+0 questions
+    Page 4/8...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6ywozxrXCKwcP1py8L"}
+0 questions
+    Page 5/8...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD6zWUH1o566aPnYu4oN"}
+0 questions
+    Page 6/8...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD713xN2aMn6b6MTYvUg"}
+0 questions
+    Page 7/8...     Page 7: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD71bjouZKzvULANgfgq"}
+0 questions
+    Page 8/8...     Page 8: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD72ELyE3JBY3dB347sQ"}
+0 questions
+  0/3 missing questions found
+
+═══ tcm1 103年第二次 中醫基礎醫學(一) ═══
+    exam_code=103100 c=103 s=0201
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  114 answers loaded
+  📥 Downloading question PDF...
+  (cached) 423925 bytes
+  🖼  Rendering pages...
+  6 pages
+  🤖 Extracting questions via Vision...
+    Page 1/6...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD72pbW29VJcDLbcuxVL"}
+0 questions
+    Page 2/6...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD73R6ALB4sBpdeUFZZ6"}
+0 questions
+    Page 3/6...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD73xvah5Vwahsnv3nRb"}
+0 questions
+    Page 4/6...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD74Y1uQVcnneL71q9Te"}
+0 questions
+    Page 5/6...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD755QnYqJjXz1Tqq9dj"}
+0 questions
+    Page 6/6...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD75ccFxstnGjUqQmDpD"}
+0 questions
+  0/1 missing questions found
+
+═══ tcm1 104年第一次 中醫基礎醫學(二) ═══
+    exam_code=104030 c=103 s=0202
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  117 answers loaded
+  📥 Downloading question PDF...
+  (cached) 516807 bytes
+  🖼  Rendering pages...
+  8 pages
+  🤖 Extracting questions via Vision...
+    Page 1/8...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD76ARSPTa9ckwYFgbgd"}
+0 questions
+    Page 2/8...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD76jzJ6dUz66JaJhyg4"}
+0 questions
+    Page 3/8...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD77PsrDNuJzdbuQ57zB"}
+0 questions
+    Page 4/8...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD77x18WBKvAJEu2Z4p6"}
+0 questions
+    Page 5/8...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD78XKqwKtuMVUZDBTAm"}
+0 questions
+    Page 6/8...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD797eLqykdpaNuMPGCn"}
+0 questions
+    Page 7/8...     Page 7: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD79g5jFTYZ8kP984Pw7"}
+0 questions
+    Page 8/8...     Page 8: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7AFsih9K8KYYr7WbXF"}
+0 questions
+  0/2 missing questions found
+
+═══ tcm2 106年第一次 中醫臨床醫學(四) ═══
+    exam_code=106030 c=102 s=0106
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  120 answers loaded
+  📥 Downloading question PDF...
+  (cached) 430974 bytes
+  🖼  Rendering pages...
+  8 pages
+  🤖 Extracting questions via Vision...
+    Page 1/8...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7Ap111oSTb9hM1NC4S"}
+0 questions
+    Page 2/8...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7BNdoKXatG1ofu42XJ"}
+0 questions
+    Page 3/8...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7Bxnco9oyQRL1smsCR"}
+0 questions
+    Page 4/8...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7CWPQKzB5zPpVHLmMZ"}
+0 questions
+    Page 5/8...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7D4LX66L9ZjJCs9txH"}
+0 questions
+    Page 6/8...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7DbZyekxENSjyv2cnj"}
+0 questions
+    Page 7/8...     Page 7: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7E8kTR12RCZnsmMoz1"}
+0 questions
+    Page 8/8...     Page 8: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7EgYPuwhi5MKnsN2rk"}
+0 questions
+  0/1 missing questions found
+
+═══ tcm2 106年第二次 中醫臨床醫學(四) ═══
+    exam_code=106110 c=102 s=0106
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  117 answers loaded
+  📥 Downloading question PDF...
+  (cached) 414346 bytes
+  🖼  Rendering pages...
+  6 pages
+  🤖 Extracting questions via Vision...
+    Page 1/6...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7FEHrw4yrxpecUZBcL"}
+0 questions
+    Page 2/6...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7FmwcmVKZRyKQ9DsFZ"}
+0 questions
+    Page 3/6...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7GL1BVdiXBCEyD5NyE"}
+0 questions
+    Page 4/6...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7Gty4oECYkaRKaFUEm"}
+0 questions
+    Page 5/6...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7HShHbDyVtHoj7mTNQ"}
+0 questions
+    Page 6/6...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7HzEMd48Z7rAT3W9X7"}
+0 questions
+  0/1 missing questions found
+
+═══ tcm2 107年第一次 中醫臨床醫學(四) ═══
+    exam_code=107030 c=102 s=0106
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+    Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7JWvpH8EL7B3QkNh8d"}
+  0 answers loaded
+  📥 Downloading question PDF...
+  (cached) 405691 bytes
+  🖼  Rendering pages...
+  6 pages
+  🤖 Extracting questions via Vision...
+    Page 1/6...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7K6wCxLaXwbEfJHiLi"}
+0 questions
+    Page 2/6...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7Kej9QDygb5VHi9hPL"}
+0 questions
+    Page 3/6...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7LCX66PrBwqYQmCbTa"}
+0 questions
+    Page 4/6...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7Lk7sKs7W1NohAKcwP"}
+0 questions
+    Page 5/6...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7MHeSNPzkmvTeuDixk"}
+0 questions
+    Page 6/6...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7MqLvUBLeAGY5kJzeV"}
+0 questions
+  0/1 missing questions found
+
+═══ tcm2 107年第二次 中醫臨床醫學(一) ═══
+    exam_code=107110 c=102 s=0103
+    Missing: 5 | Empty answers: 0
+  📥 Loading answers...
+  118 answers loaded
+  📥 Downloading question PDF...
+  (cached) 490528 bytes
+  🖼  Rendering pages...
+  6 pages
+  🤖 Extracting questions via Vision...
+    Page 1/6...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7NQzVHXsKxG2JLsmwC"}
+0 questions
+    Page 2/6...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7NxreUqiyuL2Wqh61y"}
+0 questions
+    Page 3/6...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7PWzv4hAUxtS5h3WXm"}
+0 questions
+    Page 4/6...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7Q5yoKzEiRA3SPDds7"}
+0 questions
+    Page 5/6...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7QeC3SSb8qq9ZKk8yc"}
+0 questions
+    Page 6/6...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7RFVZn9suKNTX265Kj"}
+0 questions
+  0/5 missing questions found
+
+═══ tcm2 107年第二次 中醫臨床醫學(二) ═══
+    exam_code=107110 c=102 s=0104
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  118 answers loaded
+  📥 Downloading question PDF...
+  (cached) 438628 bytes
+  🖼  Rendering pages...
+  6 pages
+  🤖 Extracting questions via Vision...
+    Page 1/6...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7RoY9Hi39TCZJpVndx"}
+0 questions
+    Page 2/6...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7SMNp2iFKssAi8NV7Y"}
+0 questions
+    Page 3/6...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7Stx7ACKZjhU79LH4u"}
+0 questions
+    Page 4/6...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7TSga4uUWx5c9u15gE"}
+0 questions
+    Page 5/6...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7TzDtGTdXrmMTASH9X"}
+0 questions
+    Page 6/6...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7UaNhuqYjGKV8tTKQb"}
+0 questions
+  0/2 missing questions found
+
+═══ tcm2 107年第二次 中醫臨床醫學(三) ═══
+    exam_code=107110 c=102 s=0105
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  118 answers loaded
+  📥 Downloading question PDF...
+  (cached) 611171 bytes
+  🖼  Rendering pages...
+  8 pages
+  🤖 Extracting questions via Vision...
+    Page 1/8...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7V8D8XfAgwCQxn3VTL"}
+0 questions
+    Page 2/8...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7Vg2oxqymT9PU6p14h"}
+0 questions
+    Page 3/8...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7WDas3gEB8h9Q9PPvs"}
+0 questions
+    Page 4/8...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7Wm8fdsvPGcpAcAHn9"}
+0 questions
+    Page 5/8...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7XKRsZqLBzH3CGAgq1"}
+0 questions
+    Page 6/8...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7Xsae55PxgyqF8wtgD"}
+0 questions
+    Page 7/8...     Page 7: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7YRhRybgGcfxMmBgoG"}
+0 questions
+    Page 8/8...     Page 8: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7YyGyBvAkzMwdtdKgh"}
+0 questions
+  0/1 missing questions found
+
+═══ tcm2 107年第二次 中醫臨床醫學(四) ═══
+    exam_code=107110 c=102 s=0106
+    Missing: 3 | Empty answers: 0
+  📥 Loading answers...
+  118 answers loaded
+  📥 Downloading question PDF...
+  (cached) 463710 bytes
+  🖼  Rendering pages...
+  6 pages
+  🤖 Extracting questions via Vision...
+    Page 1/6...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7ZWqGnaz5JMtHedJ5V"}
+0 questions
+    Page 2/6...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7a4osxxcN9KG8LxgTz"}
+0 questions
+    Page 3/6...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7acFEjsV46Yr8545ax"}
+0 questions
+    Page 4/6...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7b9q2hgC7KScFdRfYc"}
+0 questions
+    Page 5/6...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7biCCVuVASmrEpooN4"}
+0 questions
+    Page 6/6...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7cFyPv3LsgpycBQWWV"}
+0 questions
+  0/3 missing questions found
+
+═══ tcm2 108年第二次 中醫臨床醫學(一) ═══
+    exam_code=108110 c=102 s=0103
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+    Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7cqn8w7KCoFXVBm3nE"}
+    Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7dQ1cvR5FDENJXP6HC"}
+    Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7dw2S1kVkgmwnDSA7j"}
+    Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7eVb1M9bTNPFGi41AN"}
+    Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7f4NUeTEj8wNDZjQyL"}
+    Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7fbAtTESP6QfY1eGrm"}
+    Page 7: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7g7tayZtkswsbaEiZ6"}
+    Page 8: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7gfh2VjodbUfdLuigB"}
+    Page 9: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7hCYQnmuuE36rRDrrc"}
+    Page 10: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7hjS2czo1FXghsxzUT"}
+    Page 11: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7iGdzpyukqgejisSza"}
+    Page 12: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7ioVdeUgAq8ggQWB4j"}
+    Page 13: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7jLBMEf7ehfjpEff6X"}
+    Page 14: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7jsfguW1AnMpmYAboV"}
+    Page 15: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7kQZYt2EZvoUSLH8Ti"}
+    Page 16: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7kyP1QKfkV4inbToBC"}
+    Page 17: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7mWX1buztVtTBo6kQp"}
+  0 answers loaded
+  📥 Downloading question PDF...
+  (cached) 433907 bytes
+  🖼  Rendering pages...
+  6 pages
+  🤖 Extracting questions via Vision...
+    Page 1/6...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7n5JyYPZdB6Wg5mwMT"}
+0 questions
+    Page 2/6...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7ne5TU7t33wgp7Uw8b"}
+0 questions
+    Page 3/6...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7oGPG8QcikejauKKQp"}
+0 questions
+    Page 4/6...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7opBTF2h8iP77J7qZs"}
+0 questions
+    Page 5/6...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7pP57nbEAEshtkSyTL"}
+0 questions
+    Page 6/6...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7q7CfTMDLKadqSnNXT"}
+0 questions
+  0/1 missing questions found
+
+═══ tcm2 101年第一次 中醫臨床醫學(四) ═══
+    exam_code=101030 c=106 s=0506
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  80 answers loaded
+  📥 Downloading question PDF...
+  (cached) 360014 bytes
+  🖼  Rendering pages...
+  6 pages
+  🤖 Extracting questions via Vision...
+    Page 1/6...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7qi3AinVAveoZ2HK8k"}
+0 questions
+    Page 2/6...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7rG222mjifigKRr21R"}
+0 questions
+    Page 3/6...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7roXqgMACsnge4U5Fb"}
+0 questions
+    Page 4/6...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7sNppcJSuBFwaetCJr"}
+0 questions
+    Page 5/6...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7svu8DKro6tYcE9dfC"}
+0 questions
+    Page 6/6...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7tkdXJ2ifumf5ZoFnd"}
+0 questions
+  0/1 missing questions found
+
+═══ tcm2 104年第二次 中醫臨床醫學(一) ═══
+    exam_code=104100 c=102 s=0103
+    Missing: 2 | Empty answers: 0
+  📥 Loading answers...
+  118 answers loaded
+  📥 Downloading question PDF...
+  (cached) 393590 bytes
+  🖼  Rendering pages...
+  8 pages
+  🤖 Extracting questions via Vision...
+    Page 1/8...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7unApKK9BhL8EwqR4Z"}
+0 questions
+    Page 2/8...     Page 2: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7vLBuWCsf612AuYuQJ"}
+0 questions
+    Page 3/8...     Page 3: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7vvas5kHn4ACeJXUfX"}
+0 questions
+    Page 4/8...     Page 4: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7wabrXajfEgtSh65de"}
+0 questions
+    Page 5/8...     Page 5: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7x8hQAzSWGB4KWx47V"}
+0 questions
+    Page 6/8...     Page 6: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7xhxPxyiKkPJg2AdGh"}
+0 questions
+    Page 7/8...     Page 7: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7yG7uniDgsx4L6oMqZ"}
+0 questions
+    Page 8/8...     Page 8: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7ysmH4CBNtJu9599ia"}
+0 questions
+  0/2 missing questions found
+
+═══ tcm2 104年第二次 中醫臨床醫學(四) ═══
+    exam_code=104100 c=102 s=0106
+    Missing: 1 | Empty answers: 0
+  📥 Loading answers...
+  118 answers loaded
+  📥 Downloading question PDF...
+  (cached) 383002 bytes
+  🖼  Rendering pages...
+  8 pages
+  🤖 Extracting questions via Vision...
+    Page 1/8...     Page 1: Vision failed: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CaD7zZWCqpovgKtZXf8tf"}
+0 questions
+    Page 2/8... 

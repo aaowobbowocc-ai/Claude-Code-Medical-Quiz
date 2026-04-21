@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta property="og:image" content="http://wwwq.moex.gov.tw/images/ShareLogo.png" />
+<meta property="og:title" content="考畢試題查詢平臺-考選部" />
+<meta property="og:description" content="考畢試題查詢平臺-考選部" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	考畢試題查詢平臺-考選部
+</title><meta http-equiv="X-Frame-Options" content="deny" /> 
+    
+    <script type="text/javascript">
+        if (self == top) {
+            document.documentElement.style.display = 'block';
+        }
+        else { top.location = self.location; }
+    </script>
+        
+    <link href="/library/Bootstrap/reset.min.css" rel="stylesheet" type="text/css" /><link href="/library/Bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/library/cssMoexWebRwd.min.css" rel="stylesheet" type="text/css" />
+        
+    
+    <script src="/library/Bootstrap/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script src="/library/Bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <script src="/library/jquery_dotdotdot.min.js" type="text/javascript"></script>
+        
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/library/Bootstrap/ie10-viewport-bug-workaround.min.js" type="text/javascript"></script>
+    <script src="/library/jsMoexWeb.min.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {            
+            $('.cssTextOverflow').dotdotdot({ watch: 'window' });
+
+            // 把第一層的連結調整為可點選
+            $('.navbar-nav > li > a').click(function () {
+                //location.href = this.href;                
+                if (typeof ($(this).attr('target')) == "undefined") {
+                    location.href = this.href;
+                } else {
+                    window.open(this.href, $(this).attr('target')); 
+                }                
+            });
+            
+            //配合無障礙「定位點」在 Firefox 環境，看不出位置問題
+            //將直接執行內含的超連結，而自動轉至超連結指向的頁面，使定位點失去最重要的「定位」功效
+            //因此，停用 Firefox 時，定位點之 click 動作
+            if (navigator.userAgent.match("Firefox")) {
+                $('a[accesskey]').click(function () {
+                    return false;
+                });
+            };
+
+            $('a.font_size').on('click', function () {
+                OnClickChagneFontSize(this.id);
+                return false;
+            });
+
+            $('#gotocenter,.aPageTop').on('click', function () {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            });
+        });
+        //快速鍵﹝Accesskey﹞Alt + C or Alt + L, 捲軸置頂 scrollTop = 0
+        $(document).keydown(function (e) {
+            if (e.altKey && (e.which == 67 || e.which == 76)) {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            }
+        });
+    </script>
+
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F1G8SC6RK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2F1G8SC6RK');
+    </script>
+    <noscript>
+        <link href="/library/cssMoexNoscript.min.css" rel="stylesheet" type="text/css" />
+    </noscript>
+    
+    <style>
+        .btn-mode {
+            background-color: #3c8200;
+            color: #fff;
+            font-size: 85%;
+            border: none;
+            padding: 2px 15px;
+            margin-left: 5px;
+        }
+        .btn-mode:disabled {
+            background-color:gray;
+        }
+    </style>
+    <script type="text/javascript" language="javascript">
+        function focusTextBox(obj, objtxt) {
+            if (obj.value == objtxt) {
+                obj.value = '';
+                obj.select();
+            }
+        }
+        function blurTextBox(obj, objtxt) {
+            if (obj.value == '') {
+                obj.value = objtxt;
+            }
+        }
+        function setHidValue() {
+            var obj = document.getElementById('ctl00_holderContent_hidStatus');
+            obj.value = '1';
+        }
+
+        function checkall(num, maj) {
+            var tag = num;
+            var Alen = num.length;
+            var switch_checked = maj.checked;
+            var len = document.aspnetForm.elements.length;
+
+            for (var i = 0; i < len; i++) {
+                if (document.aspnetForm.elements[i].name.indexOf(tag) != -1)
+                    document.aspnetForm.elements[i].checked = switch_checked;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="wFrmExamQandASearch.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/ScriptResource.axd?d=_dxIywfH0jDkRdV8UDgdxiirPJ1fpmEOX6E4sRiPTrP9LDXVPy3n15-MeBaBTb7G35g51BzH7Ah41NoR-is0ifDqyDJoUAaiAq-cFNgXbuelcgArjG0hgsDii0yVzP9AEMObvzqdEMDmjrL72Jz399_3IbLE6SdfuDO9JNNN2kQvF-_00&amp;t=559a934d" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="06414AAC" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="cidzANoVsq6iRvIjCqUNoanBf7h40OZDYnkOg+5MCg8OssRTAIzYRX1B6N8vXuufX27XafeoZm+J3YRMp3i0Jti+gzsZsh+YMT93vocc6b5iCi8pL4QTh7U9kXp46NFY7nlMUGvr94bSSe0pd1NhrFQkCZssouUuPP0Z/AVow18PW+rmMpV36yolcPqhmIYwCXHIDhlibG3K5P/gXFVs4Qs+Bor0R91a+hc33GrGpK3dJLoo5yD/Ll8GOHlbNPtoLw8/ZgprBPnd72c8L3tBLg0ZRpjzTXfrYFzdDi2g6X3Ol9gnvwSjNxus5MGhBzUhdMNoJ/Z2EhQgbpSPb6cUAml5raYUF7ALEJCOca7G30QPIkL39CDedVKoYvoXbVWp8Ay60QmfdB18s4UYVNHH3VEPEHtiNwq+yXXkJevz8mahNc0VE+T5ofb/yDE1p/HAMGRGf7TFk5kyi0vJfNzstVSt2YiJ7Pc/op9lweaTFsHntLWqwn3qcpWETtt8pyUR8juCEJrr1gN1Iwn3HEkIwlhlpokzPWDw9Y/+iIcw4hxUSbewN6KDcbjjfO3saJqpyYOJSTNfQDudRynUv2JW37s0EeDR6EulvwIod0y4sJnZ7ISVPJY+JC0vehqPz5w7ngCAHvdjqpsB+Wp2jrNmyrN6y6+nP0YTmJ0d6NwPb630CELe4jC8nUUmJvTy6EyRCRR+aA==" />
+        <div>
+            <a href='#C' id="gotocenter" title="跳到主要內容" tabindex="1" class="sr-only sr-only-focusable">跳到主要內容</a>
+            <div id="divFixTop">
+                <div id="divMenu" class="container">                    
+                    <div class="container">
+                        <nav class="navbar yamm navbar-right">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">功能選單</a>
+                                </div>
+                                <div id="navbar" class="navbar-collapse collapse">
+                                    <a id="U" href="#U" accesskey="U" tabindex="1" style="float: left;" class="sr-only sr-only-focusable" title="上方功能區塊">:::</a>
+                                    <ul class="nav navbar-nav">
+                                        <li class="dropdown yamm-fw">
+                                            <a id="ctl00_lnkMenuItem1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="wfrmSiteMap.aspx">網站導覽</a>
+                                        </li>
+                                        <li class="dropdown yamm-fw">
+                                            <a id="ctl00_lnkMenuItem2" title="另開新視窗，開啟「考選部首頁」" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="https://wwwc.moex.gov.tw" target="_blank">回考選部首頁</a>
+                                        </li>                                        
+                                    </ul>
+                                </div>
+                                <!--/.nav-collapse -->
+                            </div>
+                            <!--/.container-fluid -->
+                        </nav>
+                    </div>
+                </div>                                                               
+            </div>
+            <div id="divHeader">
+                <div class="container">
+                    <div class="top-header">
+                        <div class="top-logo">
+                            <h1><img src="../images/logo_moex.png" class="img-responsive" alt="考選部-考畢試題查詢平臺" title="考選部-考畢試題查詢平臺" /></h1>
+                        </div>
+                        <div class="top-title">
+                            <span>考畢試題查詢平臺</span>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div id="divContent">
+                <div class="container">
+                    
+                        <a id="C" href="#C" accesskey="C" style="float: left;" class="sr-only sr-only-focusable" title="中央內容區塊">:::</a>
+                        <div id="divSubject">
+                            <div style="padding-left: 30px;">
+                                <h2 style="font-size: 140%; font-weight: bold; margin: 0px; padding-left: 5px; color: #0e8383; border-left: 5px solid #0e8383;">考畢試題查詢</h2>
+                            </div>
+                            
+<!-- AddToAny BEGIN -->
+<div style="display: table-cell; width: 140px; vertical-align: bottom; padding-bottom: 5px;">
+    <div class="a2a_kit a2a_kit_size_21 a2a_default_style">
+        
+        <a class="a2a_button_facebook" title="另開新視窗，分享至 Facebook"><img src="../../images/icon_facebook.png" border="0" alt="Facebook 臉書圖示"></a>
+        <a class="a2a_button_line" title="另開新視窗，分享至 Line"><img src="../../images/icon_line.png" border="0" alt="Line 圖示"></a>
+        <a class="a2a_button_twitter" title="另開新視窗，分享至 Twitter"><img src="../../images/icon_twitter.png" border="0" alt="Twitter 推特圖示"></a>
+        <a class="a2a_button_plurk" title="另開新視窗，分享至 Plurk"><img src="../../images/icon_plurk.png" border="0" alt="Plurk 噗浪圖示"></a>
+        <a title="友善列印" href="javascript:window.print();"><img src="../../images/icon_print.png" border="0" alt="列印圖示"></a>
+    </div>
+    <noscript>
+        <div style="text-align: right;">請按Ctrl+P即可列印.</div>
+    </noscript>
+    <script>
+        var a2a_config = a2a_config || {};
+        a2a_config.locale = "zh-TW";
+        a2a_config.prioritize = ["facebook", "line", "twitter", "google_plus", "linkedin", "plurk", "email", "print"];
+    </script>
+    <script src="https://static.addtoany.com/menu/page.js"></script>
+    <!-- AddToAny END -->
+</div>
+                        </div>
+                    
+                    <div class="div-content">                        
+                        
+
+            <div id="ctl00_holderContent_Panel1">
+	
+                <div>
+                    <div style="display: inline-block;">
+                        ◎ 本考畢試題檔案格式係以PDF文件製作，請確定您已安裝Adobe Reader（<a title="另開視窗，連結到Adobe" href="https://get.adobe.com/tw/reader/" target="_blank">下載安裝Adobe Reader</a>）。
+                    </div>
+                    <div style="display: inline-block;">
+                        ◎ 最新考試考畢試題因上載前有相關檢核作業程序，公布時間為當次考試全部筆試結束之次日上午10時。
+                    </div>
+                    <div style="display: inline-block;">                        
+                        ◎ <a href="/content/wfrmContent.aspx?menu_id=1189">考畢試題說明</a>&nbsp;│&nbsp;<a href="/content/wfrmContent.aspx?menu_id=242">考畢試題查閱管道</a>&nbsp;│&nbsp;文字檔格式轉換及語音朗讀簡易操作指引<a href="/content/文字檔格式轉換及語音朗讀簡易操作指引.pdf" target="_blank" title="另開視窗，連結到文字檔格式轉換及語音朗讀簡易操作指引（PDF檔）"><img src="/images/file_icon/pdf.png" alt="文字檔格式轉換及語音朗讀簡易操作指引（PDF檔）" style="vertical-align: middle;" /></a>&nbsp;<a href="/content/文字檔格式轉換及語音朗讀簡易操作指引.docx" target="_blank" title="另開視窗，連結到文字檔格式轉換及語音朗讀簡易操作指引（DOCX檔）"><img src="/images/file_icon/docx.png" alt="文字檔格式轉換及語音朗讀簡易操作指引（DOCX檔）" style="vertical-align: middle;" /></a>
+                        <input type="hidden" name="ctl00$holderContent$hidStatus" id="ctl00_holderContent_hidStatus" />
+                    </div>
+                    <br />
+                    <div class="query-block">
+                        
+                        <div id="ctl00_holderContent_UpdatePanel1">
+		
+                                <div style="display: inline-block;">
+                                    <label for='ctl00_holderContent_wUctlExamYearStart_ddlExamYear'>考試年度：</label>
+                                    <select name="ctl00$holderContent$wUctlExamYearStart$ddlExamYear" id="ctl00_holderContent_wUctlExamYearStart_ddlExamYear" title="考試年度(起)">
+			<option selected="selected" value="2026">115</option>
+			<option value="2025">114</option>
+			<option value="2024">113</option>
+			<option value="2023">112</option>
+			<option value="2022">111</option>
+			<option value="2021">110</option>
+			<option value="2020">109</option>
+			<option value="2019">108</option>
+			<option value="2018">107</option>
+			<option value="2017">106</option>
+			<option value="2016">105</option>
+			<option value="2015">104</option>
+			<option value="2014">103</option>
+			<option value="2013">102</option>
+			<option value="2012">101</option>
+			<option value="2011">100</option>
+			<option value="2010">99</option>
+			<option value="2009">98</option>
+			<option value="2008">97</option>
+			<option value="2007">96</option>
+			<option value="2006">95</option>
+			<option value="2005">94</option>
+			<option value="2004">93</option>
+			<option value="2003">92</option>
+			<option value="2002">91</option>
+			<option value="2001">90</option>
+			<option value="2000">89</option>
+			<option value="1999">88</option>
+			<option value="1998">87</option>
+			<option value="1997">86</option>
+			<option value="1996">85</option>
+			<option value="1995">84</option>
+			<option value="1994">83</option>
+			<option value="1993">82</option>
+			<option value="1992">81</option>
+
+		</select>
+
+                                    &nbsp;~&nbsp;<select name="ctl00$holderContent$wUctlExamYearEnd$ddlExamYear" id="ctl00_holderContent_wUctlExamYearEnd_ddlExamYear" title="考試年度(迄)">
+			<option selected="selected" value="2026">115</option>
+			<option value="2025">114</option>
+			<option value="2024">113</option>
+			<option value="2023">112</option>
+			<option value="2022">111</option>
+			<option value="2021">110</option>
+			<option value="2020">109</option>
+			<option value="2019">108</option>
+			<option value="2018">107</option>
+			<option value="2017">106</option>
+			<option value="2016">105</option>
+			<option value="2015">104</option>
+			<option value="2014">103</option>
+			<option value="2013">102</option>
+			<option value="2012">101</option>
+			<option value="2011">100</option>
+			<option value="2010">99</option>
+			<option value="2009">98</option>
+			<option value="2008">97</option>
+			<option value="2007">96</option>
+			<option value="2006">95</option>
+			<option value="2005">94</option>
+			<option value="2004">93</option>
+			<option value="2003">92</option>
+			<option value="2002">91</option>
+			<option value="2001">90</option>
+			<option value="2000">89</option>
+			<option value="1999">88</option>
+			<option value="1998">87</option>
+			<option value="1997">86</option>
+			<option value="1996">85</option>
+			<option value="1995">84</option>
+			<option value="1994">83</option>
+			<option value="1993">82</option>
+			<option value="1992">81</option>
+
+		</select>
+
+                                    <input type="submit" name="ctl00$holderContent$btnYear" value="依考試年度設定考試簡稱" id="ctl00_holderContent_btnYear" class="btn_display_none" />
+                                </div>
+                                <div style="display: inline-block;">
+                                    
+                                </div>
+                                <div style="display: block;">
+                                    <label for='ctl00_holderContent_ddlExamCode'>考試簡稱：</label>&nbsp;<select name="ctl00$holderContent$ddlExamCode" id="ctl00_holderContent_ddlExamCode" style="width: 85%;">
+			<option value="">所有考試簡稱...</option>
+			<option value="115030">115年第一次專技人員高等考試營養師、護理師、社會工作師考試</option>
+			<option value="115020">115年第一次專技人員高等考試醫師牙醫師中醫師藥師考試分階段考試、醫事檢驗師、醫事放射師、物理治療師考試</option>
+			<option value="115010">115年公務人員初等考試</option>
+
+		</select>
+                                </div>
+                            
+	</div>
+                        <div id="ctl00_holderContent_divSearchSimple" style="text-align: right;">
+                            <input type="submit" name="ctl00$holderContent$btnSearch" value="查詢" id="ctl00_holderContent_btnSearch" class="btn-search" />
+                            <input type="submit" name="ctl00$holderContent$ibtnFull" value="切換至進階查詢" id="ctl00_holderContent_ibtnFull" class="btn-search" />
+                            
+                            <input type="submit" name="ctl00$holderContent$btnFull" value="切換至進階查詢" id="ctl00_holderContent_btnFull" class="btn_display_none_inline" />
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+                <hr />
+                
+                <span id="ctl00_holderContent_lblStatistics"></span><br />
+                <div>
+                    
+                    <table id="ctl00_holderContent_tblExamQand" class="ULQandA" cellspacing="0" cellpadding="0" border="0">
+
+	</table>
+                </div>
+            
+</div>
+       
+
+                    </div>
+                </div>
+            </div>
+            <div id="divPageBottom">
+                <div class="container">
+                    <div style="padding: 0 45px; position: relative;">
+                        <div class="information">
+                            本網站資料，歡迎朋友連結使用。但引用時，請註明資料來源並請確保資料之完整（包括本項宣示在內），均不得任意增刪<br />
+                            考選部 地址：116203臺北市文山區試院路1-1號 (<a id="ctl00_lnkMap" title="另開視窗，連結到考選部所在位置" href="http://wwwc.moex.gov.tw/main/content/wfrmContent.aspx?menu_id=37" target="_blank">所在位置</a>），
+                            總機：(02)2236-9188（<a id="ctl00_HyperLink1" title="另開視窗，連結到考選部聯絡方式" href="http://wwwc.moex.gov.tw/main/content/wfrmContent.aspx?menu_id=40" target="_blank">聯絡方式</a>）<br />
+                            2018 Ministry of Examination R.O.C.(Taiwan) All rights reserved.<br />
+                            建議最佳解析度為1024*768或以上，並使用支援TLS 1.2(含)以上版本瀏覽器瀏覽
+                        </div>
+                        <div class="information_image">
+                            <a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20251001155311" title="另開視窗，連結到通過AA等級無障礙網頁檢測" target="_blank" style="display: inline-block;">
+                                <img src="../images/aa.jpg" style="height: 40px;" alt="通過AA檢測等級無障礙網頁檢測" /></a>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

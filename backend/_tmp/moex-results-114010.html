@@ -1,0 +1,972 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta property="og:image" content="http://wwwq.moex.gov.tw/images/ShareLogo.png" />
+<meta property="og:title" content="考畢試題查詢平臺-考選部" />
+<meta property="og:description" content="考畢試題查詢平臺-考選部" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	考畢試題查詢平臺-考選部
+</title><meta http-equiv="X-Frame-Options" content="deny" /> 
+    
+    <script type="text/javascript">
+        if (self == top) {
+            document.documentElement.style.display = 'block';
+        }
+        else { top.location = self.location; }
+    </script>
+        
+    <link href="/library/Bootstrap/reset.min.css" rel="stylesheet" type="text/css" /><link href="/library/Bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/library/cssMoexWebRwd.min.css" rel="stylesheet" type="text/css" />
+        
+    
+    <script src="/library/Bootstrap/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script src="/library/Bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <script src="/library/jquery_dotdotdot.min.js" type="text/javascript"></script>
+        
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/library/Bootstrap/ie10-viewport-bug-workaround.min.js" type="text/javascript"></script>
+    <script src="/library/jsMoexWeb.min.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {            
+            $('.cssTextOverflow').dotdotdot({ watch: 'window' });
+
+            // 把第一層的連結調整為可點選
+            $('.navbar-nav > li > a').click(function () {
+                //location.href = this.href;                
+                if (typeof ($(this).attr('target')) == "undefined") {
+                    location.href = this.href;
+                } else {
+                    window.open(this.href, $(this).attr('target')); 
+                }                
+            });
+            
+            //配合無障礙「定位點」在 Firefox 環境，看不出位置問題
+            //將直接執行內含的超連結，而自動轉至超連結指向的頁面，使定位點失去最重要的「定位」功效
+            //因此，停用 Firefox 時，定位點之 click 動作
+            if (navigator.userAgent.match("Firefox")) {
+                $('a[accesskey]').click(function () {
+                    return false;
+                });
+            };
+
+            $('a.font_size').on('click', function () {
+                OnClickChagneFontSize(this.id);
+                return false;
+            });
+
+            $('#gotocenter,.aPageTop').on('click', function () {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            });
+        });
+        //快速鍵﹝Accesskey﹞Alt + C or Alt + L, 捲軸置頂 scrollTop = 0
+        $(document).keydown(function (e) {
+            if (e.altKey && (e.which == 67 || e.which == 76)) {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            }
+        });
+    </script>
+
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F1G8SC6RK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2F1G8SC6RK');
+    </script>
+    <noscript>
+        <link href="/library/cssMoexNoscript.min.css" rel="stylesheet" type="text/css" />
+    </noscript>
+    
+    <style>
+        .btn-mode {
+            background-color: #3c8200;
+            color: #fff;
+            font-size: 85%;
+            border: none;
+            padding: 2px 15px;
+            margin-left: 5px;
+        }
+        .btn-mode:disabled {
+            background-color:gray;
+        }
+    </style>
+    <script type="text/javascript" language="javascript">
+        function focusTextBox(obj, objtxt) {
+            if (obj.value == objtxt) {
+                obj.value = '';
+                obj.select();
+            }
+        }
+        function blurTextBox(obj, objtxt) {
+            if (obj.value == '') {
+                obj.value = objtxt;
+            }
+        }
+        function setHidValue() {
+            var obj = document.getElementById('ctl00_holderContent_hidStatus');
+            obj.value = '1';
+        }
+
+        function checkall(num, maj) {
+            var tag = num;
+            var Alen = num.length;
+            var switch_checked = maj.checked;
+            var len = document.aspnetForm.elements.length;
+
+            for (var i = 0; i < len; i++) {
+                if (document.aspnetForm.elements[i].name.indexOf(tag) != -1)
+                    document.aspnetForm.elements[i].checked = switch_checked;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="wFrmExamQandASearch.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=krlfWsYqGFqNJFQMANxPNuygqflGnjRZNI6hBdjhZwk0jS3270wIVB46g2IV3CUTIlN3MpmAvmU6MimMUgNoRPSB9mY1&amp;t=638314190908353130" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=_dxIywfH0jDkRdV8UDgdxiirPJ1fpmEOX6E4sRiPTrP9LDXVPy3n15-MeBaBTb7G35g51BzH7Ah41NoR-is0ifDqyDJoUAaiAq-cFNgXbuelcgArjG0hgsDii0yVzP9AEMObvzqdEMDmjrL72Jz399_3IbLE6SdfuDO9JNNN2kQvF-_00&amp;t=559a934d" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=el-uwCuNFwelORiuRviOS7WZN5WzjsuFU3cYF2zFxRSvEyjuxc-eMyMM3jKhJa0--qX5gWS6mYNJwgpdrsJ2pdESrc--QQvkYsbc0tDln0exGjNaa3CHyWo6dBY9TWQ62Ztcpe7i6Ke6EYWq-BmSzTpXHq6iYr2b7twR4FQwBi3bSDMIYMmwzxhZf-sjJEbiN1tL8A2&amp;t=559a934d" type="text/javascript"></script>
+<script src="/WebResource.axd?d=ATDoJxue7_CKstUPi3cT4Gs8nzloLRS0WeaVazSFcZSJEdccVMblEUqbID51Hsq2zUbVTPj-OsCrTXn6H0PKvlRDFPY1&amp;t=638314190908353130" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="06414AAC" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Mc3WQiOt/l48VVaoiIaYHSzxXZqSOR0kScbtvhG7koOWGfX9SUU/jl05zrfjxg/1s6/C+XV1FVrLaihNKfwISWuKd8qwxUm7GyeHZqomLaqc9cWK4x5EXSfVxNK6QvJI1yLkB+USfguba0X8Y3Nvti+JObJ5l1oqqsxZKChFMh30XDrRvk+gPf+N26fE0DglFoozbpf3rhpFb9mY9U7SvYNBBfQynj9gyHvEAHy3z9AVyhz84000e/rRVvWk1jQAyHUVNjB6Cct4bAO6ElM++q24Atm9NNEQoZcj4a2/9woLq4KF6rTD3d4ThIIb1gtDfuPoTOS9TCxkgL0VMH0vIT2XVR1MVVCVDsVuPn3mhclNlUwQr4Z3YiZmrk3F6O7V3qgkzxJ5W3xVPEIrVe1ZyNWZKIe8XX4ub+B6u2drrnFYPIujJNisOQjLph0dfxNdiDw0zCgd4sHiqyqkNKutH4oGE8ql7nwk1hnWJTjmzUjziD5URLSi/HyOsj2+11HzgU07I7aP3LmZCf/UwRKTc7nElOxGNgdjZpI07Z7uA118/AiqWMOAD0TNE3lFiN4/7UDQaqVXs0XWls8pJ7iS4ao9tU2YFMFRi8aDt0FOPhF0pk4+F+115tzM7oGJfgBVpjsuMDEE2wtiMEuiIqd8HWbsO/WD8RMYBsX7cDAIs5qGP4F7zOMwfycERAj4sI/grr3BVdR080CLAr8ghzQzAfg/MQTbKHW5VdUr6lu+SRIooZN3IKIn3eKmXvnx6+KMS0DRzx9d1ox1OJpx7sSTxasmB9wepPvoD8LjMtwRlhDUQFSAVTYUSviXaZJX/ieWKZOi26sLNEPDOGqINs06kY5LIujAwo0ofD38u5l1q9Qyc66p/DQyUZH8TvmgmXMlY1KabTDTrB4wPmk15YUSClO4TsX0pA/FFbOpRskVpvf/XxMVNZ9QGu65fys+g3dRT0CMEqRNloFK0Yq6VZdYX+6yeZypu9u/+M6klBE3K973WRrpB5I1fwIQK/lq0Lvax29bnh1pQbPxYgT0Zkl38vGeXxb4LwGponPZj98VD5+1Yni8rExaRsNcGcavM3mtAyk9yafhj2uX7RtrZMathxlTNord2ETRDu1NdisnA2MjhloU1BKugHq61a0ZGtdR+QeMKhlvPL6zC+sI1OUUjuXHguH99YUz2oD3TGP5Kd5VzUMUevlOhqGT4G9g7a8D+sM9TDbm9Xd/hYm67jmoDVVntLXkB7EipJt0UZdmKe9FH2iHR1OUNxB1gtY5XE8Lg29XwicEGw09Y67IuTj+3RTz7uSzN/OHKTkVhDMzNxMMmW+oonrkyOu7Mxmps8skUZKuC+myfY7T5nAMaj6e1Whiz3e9wZ6iuRkpCcLBHzN3tw1IhIYtD70wd0y7rbC1gBnSIRroB8rBc0O04RsvI3zWmipXtQ7kffa/RnWLeIpl3g/7eHxtb8Avs93Jiw0cEtzuq6yOiyxvlenGEFV5g736tOhECDhBVoSQQGSs8Bet4r9W" />
+</div>
+        <div>
+            <a href='#C' id="gotocenter" title="跳到主要內容" tabindex="1" class="sr-only sr-only-focusable">跳到主要內容</a>
+            <div id="divFixTop">
+                <div id="divMenu" class="container">                    
+                    <div class="container">
+                        <nav class="navbar yamm navbar-right">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">功能選單</a>
+                                </div>
+                                <div id="navbar" class="navbar-collapse collapse">
+                                    <a id="U" href="#U" accesskey="U" tabindex="1" style="float: left;" class="sr-only sr-only-focusable" title="上方功能區塊">:::</a>
+                                    <ul class="nav navbar-nav">
+                                        <li class="dropdown yamm-fw">
+                                            <a id="ctl00_lnkMenuItem1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="wfrmSiteMap.aspx">網站導覽</a>
+                                        </li>
+                                        <li class="dropdown yamm-fw">
+                                            <a id="ctl00_lnkMenuItem2" title="另開新視窗，開啟「考選部首頁」" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="https://wwwc.moex.gov.tw" target="_blank">回考選部首頁</a>
+                                        </li>                                        
+                                    </ul>
+                                </div>
+                                <!--/.nav-collapse -->
+                            </div>
+                            <!--/.container-fluid -->
+                        </nav>
+                    </div>
+                </div>                                                               
+            </div>
+            <div id="divHeader">
+                <div class="container">
+                    <div class="top-header">
+                        <div class="top-logo">
+                            <h1><img src="../images/logo_moex.png" class="img-responsive" alt="考選部-考畢試題查詢平臺" title="考選部-考畢試題查詢平臺" /></h1>
+                        </div>
+                        <div class="top-title">
+                            <span>考畢試題查詢平臺</span>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div id="divContent">
+                <div class="container">
+                    
+                        <a id="C" href="#C" accesskey="C" style="float: left;" class="sr-only sr-only-focusable" title="中央內容區塊">:::</a>
+                        <div id="divSubject">
+                            <div style="padding-left: 30px;">
+                                <h2 style="font-size: 140%; font-weight: bold; margin: 0px; padding-left: 5px; color: #0e8383; border-left: 5px solid #0e8383;">考畢試題查詢</h2>
+                            </div>
+                            
+<!-- AddToAny BEGIN -->
+<div style="display: table-cell; width: 140px; vertical-align: bottom; padding-bottom: 5px;">
+    <div class="a2a_kit a2a_kit_size_21 a2a_default_style">
+        
+        <a class="a2a_button_facebook" title="另開新視窗，分享至 Facebook"><img src="../../images/icon_facebook.png" border="0" alt="Facebook 臉書圖示"></a>
+        <a class="a2a_button_line" title="另開新視窗，分享至 Line"><img src="../../images/icon_line.png" border="0" alt="Line 圖示"></a>
+        <a class="a2a_button_twitter" title="另開新視窗，分享至 Twitter"><img src="../../images/icon_twitter.png" border="0" alt="Twitter 推特圖示"></a>
+        <a class="a2a_button_plurk" title="另開新視窗，分享至 Plurk"><img src="../../images/icon_plurk.png" border="0" alt="Plurk 噗浪圖示"></a>
+        <a title="友善列印" href="javascript:window.print();"><img src="../../images/icon_print.png" border="0" alt="列印圖示"></a>
+    </div>
+    <noscript>
+        <div style="text-align: right;">請按Ctrl+P即可列印.</div>
+    </noscript>
+    <script>
+        var a2a_config = a2a_config || {};
+        a2a_config.locale = "zh-TW";
+        a2a_config.prioritize = ["facebook", "line", "twitter", "google_plus", "linkedin", "plurk", "email", "print"];
+    </script>
+    <script src="https://static.addtoany.com/menu/page.js"></script>
+    <!-- AddToAny END -->
+</div>
+                        </div>
+                    
+                    <div class="div-content">                        
+                        
+
+            <div id="ctl00_holderContent_Panel1" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_holderContent_btnQuery')">
+	
+                <div>
+                    <div style="display: inline-block;">
+                        ◎ 本考畢試題檔案格式係以PDF文件製作，請確定您已安裝Adobe Reader（<a title="另開視窗，連結到Adobe" href="https://get.adobe.com/tw/reader/" target="_blank">下載安裝Adobe Reader</a>）。
+                    </div>
+                    <div style="display: inline-block;">
+                        ◎ 最新考試考畢試題因上載前有相關檢核作業程序，公布時間為當次考試全部筆試結束之次日上午10時。
+                    </div>
+                    <div style="display: inline-block;">                        
+                        ◎ <a href="/content/wfrmContent.aspx?menu_id=1189">考畢試題說明</a>&nbsp;│&nbsp;<a href="/content/wfrmContent.aspx?menu_id=242">考畢試題查閱管道</a>&nbsp;│&nbsp;文字檔格式轉換及語音朗讀簡易操作指引<a href="/content/文字檔格式轉換及語音朗讀簡易操作指引.pdf" target="_blank" title="另開視窗，連結到文字檔格式轉換及語音朗讀簡易操作指引（PDF檔）"><img src="/images/file_icon/pdf.png" alt="文字檔格式轉換及語音朗讀簡易操作指引（PDF檔）" style="vertical-align: middle;" /></a>&nbsp;<a href="/content/文字檔格式轉換及語音朗讀簡易操作指引.docx" target="_blank" title="另開視窗，連結到文字檔格式轉換及語音朗讀簡易操作指引（DOCX檔）"><img src="/images/file_icon/docx.png" alt="文字檔格式轉換及語音朗讀簡易操作指引（DOCX檔）" style="vertical-align: middle;" /></a>
+                        <input type="hidden" name="ctl00$holderContent$hidStatus" id="ctl00_holderContent_hidStatus" />
+                    </div>
+                    <br />
+                    <div class="query-block">
+                        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$holderContent$ScriptManager1', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$holderContent$UpdatePanel1'], [], [], 90);
+	//]]>
+</script>
+
+                        <div id="ctl00_holderContent_UpdatePanel1">
+		
+                                <div style="display: inline-block;">
+                                    <label for='ctl00_holderContent_wUctlExamYearStart_ddlExamYear'>考試年度：</label>
+                                    <select name="ctl00$holderContent$wUctlExamYearStart$ddlExamYear" onchange="javascript:setTimeout('__doPostBack(\'ctl00$holderContent$wUctlExamYearStart$ddlExamYear\',\'\')', 0)" id="ctl00_holderContent_wUctlExamYearStart_ddlExamYear" title="考試年度(起)">
+			<option value="2026">115</option>
+			<option selected="selected" value="2025">114</option>
+			<option value="2024">113</option>
+			<option value="2023">112</option>
+			<option value="2022">111</option>
+			<option value="2021">110</option>
+			<option value="2020">109</option>
+			<option value="2019">108</option>
+			<option value="2018">107</option>
+			<option value="2017">106</option>
+			<option value="2016">105</option>
+			<option value="2015">104</option>
+			<option value="2014">103</option>
+			<option value="2013">102</option>
+			<option value="2012">101</option>
+			<option value="2011">100</option>
+			<option value="2010">99</option>
+			<option value="2009">98</option>
+			<option value="2008">97</option>
+			<option value="2007">96</option>
+			<option value="2006">95</option>
+			<option value="2005">94</option>
+			<option value="2004">93</option>
+			<option value="2003">92</option>
+			<option value="2002">91</option>
+			<option value="2001">90</option>
+			<option value="2000">89</option>
+			<option value="1999">88</option>
+			<option value="1998">87</option>
+			<option value="1997">86</option>
+			<option value="1996">85</option>
+			<option value="1995">84</option>
+			<option value="1994">83</option>
+			<option value="1993">82</option>
+			<option value="1992">81</option>
+
+		</select>
+
+                                    &nbsp;~&nbsp;<select name="ctl00$holderContent$wUctlExamYearEnd$ddlExamYear" onchange="javascript:setTimeout('__doPostBack(\'ctl00$holderContent$wUctlExamYearEnd$ddlExamYear\',\'\')', 0)" id="ctl00_holderContent_wUctlExamYearEnd_ddlExamYear" title="考試年度(迄)">
+			<option value="2026">115</option>
+			<option selected="selected" value="2025">114</option>
+			<option value="2024">113</option>
+			<option value="2023">112</option>
+			<option value="2022">111</option>
+			<option value="2021">110</option>
+			<option value="2020">109</option>
+			<option value="2019">108</option>
+			<option value="2018">107</option>
+			<option value="2017">106</option>
+			<option value="2016">105</option>
+			<option value="2015">104</option>
+			<option value="2014">103</option>
+			<option value="2013">102</option>
+			<option value="2012">101</option>
+			<option value="2011">100</option>
+			<option value="2010">99</option>
+			<option value="2009">98</option>
+			<option value="2008">97</option>
+			<option value="2007">96</option>
+			<option value="2006">95</option>
+			<option value="2005">94</option>
+			<option value="2004">93</option>
+			<option value="2003">92</option>
+			<option value="2002">91</option>
+			<option value="2001">90</option>
+			<option value="2000">89</option>
+			<option value="1999">88</option>
+			<option value="1998">87</option>
+			<option value="1997">86</option>
+			<option value="1996">85</option>
+			<option value="1995">84</option>
+			<option value="1994">83</option>
+			<option value="1993">82</option>
+			<option value="1992">81</option>
+
+		</select>
+
+                                    <input type="submit" name="ctl00$holderContent$btnYear" value="依考試年度設定考試簡稱" id="ctl00_holderContent_btnYear" class="btn_display_none" />
+                                </div>
+                                <div style="display: inline-block;">
+                                    
+                                </div>
+                                <div style="display: block;">
+                                    <label for='ctl00_holderContent_ddlExamCode'>考試簡稱：</label>&nbsp;<select name="ctl00$holderContent$ddlExamCode" id="ctl00_holderContent_ddlExamCode" style="width: 85%;">
+			<option value="">所有考試簡稱...</option>
+			<option value="114200">114年國防法務官考試</option>
+			<option value="114190">114年特種考試地方政府公務人員考試、離島地區公務人員考試</option>
+			<option value="114180">114年專技人員高等考試建築師、25類科技師(含第二次食品技師)、大地工程技師考試分階段考試(第二階段考試)暨普通考試不動產經紀人、記帳士考...</option>
+			<option value="114170">114年第三次專門職業及技術人員高等考試護理師考試</option>
+			<option value="114160">114年公務人員升官等考試、114年關務人員升官等考試、114年交通事業郵政人員升資考試、114年交通事業港務人員升資考試</option>
+			<option value="114111">114年公務人員特種考試司法官考試（第二試）、114年專門職業及技術人員高等考試律師考試（第二試）</option>
+			<option value="114150">114年公務人員高等考試一級暨二級考試</option>
+			<option value="114140">114年公務人員特種考試外交領事人員及外交行政人員考試、國際經濟商務人員考試、民航人員考試、原住民族考試</option>
+			<option value="114130">114年專門職業及技術人員高等考試會計師、不動產估價師、專利師、植物診療師考試</option>
+			<option value="114120">114年公務人員特種考試司法人員考試、法務部調查局調查人員考試、海岸巡防人員考試、未具擬任職務任用資格取得法官遴選資格考試</option>
+			<option value="114110">114年公務人員特種考試司法官考試（第一試）、114年專門職業及技術人員高等考試律師考試（第一試）</option>
+			<option value="114100">114年第二次專技人員高等考試營養師、護理師、社會工作師考試、114年專技人員高等考試心理師、法醫師、語言治療師、聽力師、牙體技術師、公共衛...</option>
+			<option value="114090">114年第二次專技人員高等考試醫師中醫師考試分階段考試（第一階段考試）、牙醫師藥師考試分階段考試、醫事檢驗師、醫事放射師、物理治療師考試、1...</option>
+			<option value="114080">114年公務人員高等考試三級考試暨普通考試</option>
+			<option value="114070">114年第二次專技人員高等考試醫師中醫師考試分階段考試（第二階段考試）</option>
+			<option value="114060">114年公務人員特種考試警察人員考試、一般警察人員考試、國家安全情報人員考試、移民行政人員考試、退除役軍人轉任公務人員考試</option>
+			<option value="114050">114年專技人員高等考試大地工程技師考試分階段考試(第一階段考試)、驗船師、引水人、第一次食品技師考試、高等暨普通考試消防設備人員考試、普通...</option>
+			<option value="114040">114年公務人員特種考試關務人員考試、身心障礙人員考試、國軍上校以上軍官轉任公務人員考試</option>
+			<option value="114030">114年第一次專技人員高等考試營養師、護理師、社會工作師考試</option>
+			<option value="114020">114年第一次專技人員高等考試醫師牙醫師中醫師藥師考試分階段考試、醫事檢驗師、醫事放射師、物理治療師考試</option>
+			<option selected="selected" value="114010">114年公務人員初等考試</option>
+
+		</select>
+                                </div>
+                            
+	</div>
+                        <div id="ctl00_holderContent_divSearchSimple" style="text-align: right;">
+                            <input type="submit" name="ctl00$holderContent$btnSearch" value="查詢" id="ctl00_holderContent_btnSearch" class="btn-search" />
+                            <input type="submit" name="ctl00$holderContent$ibtnFull" value="切換至進階查詢" id="ctl00_holderContent_ibtnFull" class="btn-search" />
+                            
+                            <input type="submit" name="ctl00$holderContent$btnFull" value="切換至進階查詢" id="ctl00_holderContent_btnFull" class="btn_display_none_inline" />
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+                <hr />
+                <div id="ctl00_holderContent_divDownLoad">
+                    <div style="text-align: center;">
+                        <span id="ctl00_holderContent_lblQandMemo" style="color: #ea0000; font-weight: bold;">因網路資源有限，本功能一次最多可打包8個科目，本部並將視網路流量隨時調整或關閉。</span>
+                    </div>
+                    <div>
+                        
+                        <div style="text-align: right;">
+                            <input type="submit" name="ctl00$holderContent$ibtnDownLoad" value="試題打包" onclick="setHidValue();" id="ctl00_holderContent_ibtnDownLoad" title="開啓考畢題答(zip)" class="btn-search" />
+                            <input type="submit" name="ctl00$holderContent$ibtnCancleSelect" value="全部取消" onclick="setHidValue();" id="ctl00_holderContent_ibtnCancleSelect" class="btn-search" />
+                        </div>
+                    </div>
+                    
+                </div>
+                <span id="ctl00_holderContent_lblStatistics">共 1 考試 17 類科 68 科目</span><br />
+                <div>
+                    
+                    <table id="ctl00_holderContent_tblExamQand" class="ULQandA" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+		<tr>
+			<td class="level1"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td class="link_1Ua"></td><td style="vertical-align:text-top;">114年公務人員初等考試</td><td style="width:10%;white-space:nowrap;text-align:right;vertical-align:text-top;padding-right:20px;"><a title="另開視窗，開啓114年公務人員初等考試盲用電腦專用試題(zip檔)" href="wHandExamQandA_File.ashx?t=B&amp;code=114010" target="_blank">盲用電腦<br>專用試題</a></td><td style="width:10%;white-space:nowrap;text-align:right;vertical-align:text-top;"><a title="另開視窗，開啓114年公務人員初等考試所有測驗題標準答案(Pdf檔)" href="wHandExamQandA_File.ashx?t=A&amp;code=114010" target="_blank">本考試所有測<br>驗題標準答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_501" type="checkbox" name="ctl00$holderContent$chk_114010_501" onclick="checkall('chk_114010_501',this);" onKeyPress="checkall('chk_114010_501',this);" /></td><td><label for="ctl00_holderContent_chk_114010_501">初等考試_一般行政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_501_0101" type="checkbox" name="ctl00$holderContent$chk_114010_501_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_501_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=501&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=501&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=501&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=501&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_501_0102" type="checkbox" name="ctl00$holderContent$chk_114010_501_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_501_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=501&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=501&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=501&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=501&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=501&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=501&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_501_0202" type="checkbox" name="ctl00$holderContent$chk_114010_501_0202" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_501_0202" class="exam-title">法學大意</label><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=501&amp;s=0202&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=501&amp;s=0202&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=501&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=501&amp;s=0202&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=501&amp;s=0202&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=501&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_501_0302" type="checkbox" name="ctl00$holderContent$chk_114010_501_0302" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_501_0302" class="exam-title">行政學大意</label><a title="另開視窗，開啓行政學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=501&amp;s=0302&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓行政學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=501&amp;s=0302&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓行政學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=501&amp;s=0302&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓行政學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=501&amp;s=0302&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_502" type="checkbox" name="ctl00$holderContent$chk_114010_502" onclick="checkall('chk_114010_502',this);" onKeyPress="checkall('chk_114010_502',this);" /></td><td><label for="ctl00_holderContent_chk_114010_502">初等考試_一般民政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_502_0101" type="checkbox" name="ctl00$holderContent$chk_114010_502_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_502_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=502&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=502&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=502&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=502&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_502_0102" type="checkbox" name="ctl00$holderContent$chk_114010_502_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_502_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=502&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=502&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=502&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=502&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=502&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=502&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_502_0202" type="checkbox" name="ctl00$holderContent$chk_114010_502_0202" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_502_0202" class="exam-title">法學大意</label><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=502&amp;s=0202&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=502&amp;s=0202&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=502&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=502&amp;s=0202&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=502&amp;s=0202&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=502&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_502_0303" type="checkbox" name="ctl00$holderContent$chk_114010_502_0303" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_502_0303" class="exam-title">地方自治大意</label><a title="另開視窗，開啓地方自治大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=502&amp;s=0303&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓地方自治大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=502&amp;s=0303&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓地方自治大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=502&amp;s=0303&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓地方自治大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=502&amp;s=0303&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_503" type="checkbox" name="ctl00$holderContent$chk_114010_503" onclick="checkall('chk_114010_503',this);" onKeyPress="checkall('chk_114010_503',this);" /></td><td><label for="ctl00_holderContent_chk_114010_503">初等考試_戶政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_503_0101" type="checkbox" name="ctl00$holderContent$chk_114010_503_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_503_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=503&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=503&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=503&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=503&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_503_0102" type="checkbox" name="ctl00$holderContent$chk_114010_503_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_503_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=503&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=503&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=503&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=503&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=503&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=503&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_503_0202" type="checkbox" name="ctl00$holderContent$chk_114010_503_0202" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_503_0202" class="exam-title">法學大意</label><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=503&amp;s=0202&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=503&amp;s=0202&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=503&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=503&amp;s=0202&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=503&amp;s=0202&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=503&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_503_0203" type="checkbox" name="ctl00$holderContent$chk_114010_503_0203" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_503_0203" class="exam-title">戶籍法規大意</label><a title="另開視窗，開啓戶籍法規大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=503&amp;s=0203&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓戶籍法規大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=503&amp;s=0203&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓戶籍法規大意更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=503&amp;s=0203&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓戶籍法規大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=503&amp;s=0203&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓戶籍法規大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=503&amp;s=0203&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓戶籍法規大意更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=503&amp;s=0203&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_504" type="checkbox" name="ctl00$holderContent$chk_114010_504" onclick="checkall('chk_114010_504',this);" onKeyPress="checkall('chk_114010_504',this);" /></td><td><label for="ctl00_holderContent_chk_114010_504">初等考試_原住民族行政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_504_0101" type="checkbox" name="ctl00$holderContent$chk_114010_504_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_504_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=504&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=504&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=504&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=504&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_504_0102" type="checkbox" name="ctl00$holderContent$chk_114010_504_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_504_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=504&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=504&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=504&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=504&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=504&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=504&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_504_0301" type="checkbox" name="ctl00$holderContent$chk_114010_504_0301" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_504_0301" class="exam-title">臺灣原住民族史大意</label><a title="另開視窗，開啓臺灣原住民族史大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=504&amp;s=0301&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓臺灣原住民族史大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=504&amp;s=0301&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓臺灣原住民族史大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=504&amp;s=0301&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓臺灣原住民族史大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=504&amp;s=0301&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_504_0304" type="checkbox" name="ctl00$holderContent$chk_114010_504_0304" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_504_0304" class="exam-title">原住民族行政及法規大意</label><a title="另開視窗，開啓原住民族行政及法規大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=504&amp;s=0304&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓原住民族行政及法規大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=504&amp;s=0304&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓原住民族行政及法規大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=504&amp;s=0304&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓原住民族行政及法規大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=504&amp;s=0304&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_505" type="checkbox" name="ctl00$holderContent$chk_114010_505" onclick="checkall('chk_114010_505',this);" onKeyPress="checkall('chk_114010_505',this);" /></td><td><label for="ctl00_holderContent_chk_114010_505">初等考試_社會行政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_505_0101" type="checkbox" name="ctl00$holderContent$chk_114010_505_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_505_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=505&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=505&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=505&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=505&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_505_0102" type="checkbox" name="ctl00$holderContent$chk_114010_505_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_505_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=505&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=505&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=505&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=505&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=505&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=505&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_505_0401" type="checkbox" name="ctl00$holderContent$chk_114010_505_0401" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_505_0401" class="exam-title">社政法規大意</label><a title="另開視窗，開啓社政法規大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=505&amp;s=0401&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓社政法規大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=505&amp;s=0401&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓社政法規大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=505&amp;s=0401&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓社政法規大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=505&amp;s=0401&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_505_0404" type="checkbox" name="ctl00$holderContent$chk_114010_505_0404" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_505_0404" class="exam-title">社會工作大意</label><a title="另開視窗，開啓社會工作大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=505&amp;s=0404&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓社會工作大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=505&amp;s=0404&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓社會工作大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=505&amp;s=0404&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓社會工作大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=505&amp;s=0404&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_506" type="checkbox" name="ctl00$holderContent$chk_114010_506" onclick="checkall('chk_114010_506',this);" onKeyPress="checkall('chk_114010_506',this);" /></td><td><label for="ctl00_holderContent_chk_114010_506">初等考試_勞工行政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_506_0101" type="checkbox" name="ctl00$holderContent$chk_114010_506_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_506_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=506&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=506&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=506&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=506&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_506_0102" type="checkbox" name="ctl00$holderContent$chk_114010_506_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_506_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=506&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=506&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=506&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=506&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=506&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=506&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_506_0202" type="checkbox" name="ctl00$holderContent$chk_114010_506_0202" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_506_0202" class="exam-title">法學大意</label><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=506&amp;s=0202&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=506&amp;s=0202&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=506&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=506&amp;s=0202&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=506&amp;s=0202&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=506&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_506_0204" type="checkbox" name="ctl00$holderContent$chk_114010_506_0204" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_506_0204" class="exam-title">勞工行政與勞工法規大意</label><a title="另開視窗，開啓勞工行政與勞工法規大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=506&amp;s=0204&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓勞工行政與勞工法規大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=506&amp;s=0204&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓勞工行政與勞工法規大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=506&amp;s=0204&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓勞工行政與勞工法規大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=506&amp;s=0204&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_507" type="checkbox" name="ctl00$holderContent$chk_114010_507" onclick="checkall('chk_114010_507',this);" onKeyPress="checkall('chk_114010_507',this);" /></td><td><label for="ctl00_holderContent_chk_114010_507">初等考試_教育行政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_507_0101" type="checkbox" name="ctl00$holderContent$chk_114010_507_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_507_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=507&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=507&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=507&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=507&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_507_0102" type="checkbox" name="ctl00$holderContent$chk_114010_507_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_507_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=507&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=507&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=507&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=507&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=507&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=507&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_507_0501" type="checkbox" name="ctl00$holderContent$chk_114010_507_0501" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_507_0501" class="exam-title">教育法規大意</label><a title="另開視窗，開啓教育法規大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=507&amp;s=0501&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓教育法規大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=507&amp;s=0501&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓教育法規大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=507&amp;s=0501&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓教育法規大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=507&amp;s=0501&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_507_0503" type="checkbox" name="ctl00$holderContent$chk_114010_507_0503" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_507_0503" class="exam-title">教育學大意</label><a title="另開視窗，開啓教育學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=507&amp;s=0503&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓教育學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=507&amp;s=0503&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓教育學大意更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=507&amp;s=0503&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓教育學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=507&amp;s=0503&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓教育學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=507&amp;s=0503&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓教育學大意更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=507&amp;s=0503&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_508" type="checkbox" name="ctl00$holderContent$chk_114010_508" onclick="checkall('chk_114010_508',this);" onKeyPress="checkall('chk_114010_508',this);" /></td><td><label for="ctl00_holderContent_chk_114010_508">初等考試_圖書資訊管理</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_508_0101" type="checkbox" name="ctl00$holderContent$chk_114010_508_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_508_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=508&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=508&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=508&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=508&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_508_0102" type="checkbox" name="ctl00$holderContent$chk_114010_508_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_508_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=508&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=508&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=508&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=508&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=508&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=508&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_508_0502" type="checkbox" name="ctl00$holderContent$chk_114010_508_0502" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_508_0502" class="exam-title">圖書館學大意</label><a title="另開視窗，開啓圖書館學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=508&amp;s=0502&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓圖書館學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=508&amp;s=0502&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓圖書館學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=508&amp;s=0502&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓圖書館學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=508&amp;s=0502&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_508_0504" type="checkbox" name="ctl00$holderContent$chk_114010_508_0504" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_508_0504" class="exam-title">中文圖書分類編目大意</label><a title="另開視窗，開啓中文圖書分類編目大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=508&amp;s=0504&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓中文圖書分類編目大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=508&amp;s=0504&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓中文圖書分類編目大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=508&amp;s=0504&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓中文圖書分類編目大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=508&amp;s=0504&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_509" type="checkbox" name="ctl00$holderContent$chk_114010_509" onclick="checkall('chk_114010_509',this);" onKeyPress="checkall('chk_114010_509',this);" /></td><td><label for="ctl00_holderContent_chk_114010_509">初等考試_人事行政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_509_0101" type="checkbox" name="ctl00$holderContent$chk_114010_509_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_509_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=509&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=509&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=509&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=509&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_509_0102" type="checkbox" name="ctl00$holderContent$chk_114010_509_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_509_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=509&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=509&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=509&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=509&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=509&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=509&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_509_0202" type="checkbox" name="ctl00$holderContent$chk_114010_509_0202" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_509_0202" class="exam-title">法學大意</label><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=509&amp;s=0202&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=509&amp;s=0202&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=509&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=509&amp;s=0202&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=509&amp;s=0202&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=509&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_509_0305" type="checkbox" name="ctl00$holderContent$chk_114010_509_0305" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_509_0305" class="exam-title">人事行政大意</label><a title="另開視窗，開啓人事行政大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=509&amp;s=0305&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓人事行政大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=509&amp;s=0305&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓人事行政大意更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=509&amp;s=0305&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓人事行政大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=509&amp;s=0305&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓人事行政大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=509&amp;s=0305&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓人事行政大意更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=509&amp;s=0305&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_510" type="checkbox" name="ctl00$holderContent$chk_114010_510" onclick="checkall('chk_114010_510',this);" onKeyPress="checkall('chk_114010_510',this);" /></td><td><label for="ctl00_holderContent_chk_114010_510">初等考試_財稅行政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_510_0101" type="checkbox" name="ctl00$holderContent$chk_114010_510_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_510_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=510&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=510&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=510&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=510&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_510_0102" type="checkbox" name="ctl00$holderContent$chk_114010_510_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_510_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=510&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=510&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=510&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=510&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=510&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=510&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_510_0601" type="checkbox" name="ctl00$holderContent$chk_114010_510_0601" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_510_0601" class="exam-title">稅務法規大意</label><a title="另開視窗，開啓稅務法規大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=510&amp;s=0601&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓稅務法規大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=510&amp;s=0601&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓稅務法規大意更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=510&amp;s=0601&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓稅務法規大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=510&amp;s=0601&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓稅務法規大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=510&amp;s=0601&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓稅務法規大意更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=510&amp;s=0601&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_510_0603" type="checkbox" name="ctl00$holderContent$chk_114010_510_0603" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_510_0603" class="exam-title">財政學大意</label><a title="另開視窗，開啓財政學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=510&amp;s=0603&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓財政學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=510&amp;s=0603&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓財政學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=510&amp;s=0603&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓財政學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=510&amp;s=0603&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_511" type="checkbox" name="ctl00$holderContent$chk_114010_511" onclick="checkall('chk_114010_511',this);" onKeyPress="checkall('chk_114010_511',this);" /></td><td><label for="ctl00_holderContent_chk_114010_511">初等考試_會計</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_511_0101" type="checkbox" name="ctl00$holderContent$chk_114010_511_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_511_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=511&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=511&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=511&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=511&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_511_0102" type="checkbox" name="ctl00$holderContent$chk_114010_511_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_511_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=511&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=511&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=511&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=511&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=511&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=511&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_511_0602" type="checkbox" name="ctl00$holderContent$chk_114010_511_0602" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_511_0602" class="exam-title">會計審計法規大意</label><a title="另開視窗，開啓會計審計法規大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=511&amp;s=0602&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓會計審計法規大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=511&amp;s=0602&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓會計審計法規大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=511&amp;s=0602&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓會計審計法規大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=511&amp;s=0602&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_511_0604" type="checkbox" name="ctl00$holderContent$chk_114010_511_0604" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_511_0604" class="exam-title">會計學大意</label><a title="另開視窗，開啓會計學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=511&amp;s=0604&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓會計學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=511&amp;s=0604&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓會計學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=511&amp;s=0604&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓會計學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=511&amp;s=0604&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_512" type="checkbox" name="ctl00$holderContent$chk_114010_512" onclick="checkall('chk_114010_512',this);" onKeyPress="checkall('chk_114010_512',this);" /></td><td><label for="ctl00_holderContent_chk_114010_512">初等考試_統計</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_512_0101" type="checkbox" name="ctl00$holderContent$chk_114010_512_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_512_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=512&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=512&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=512&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=512&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_512_0102" type="checkbox" name="ctl00$holderContent$chk_114010_512_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_512_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=512&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=512&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=512&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=512&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=512&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=512&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_512_0605" type="checkbox" name="ctl00$holderContent$chk_114010_512_0605" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_512_0605" class="exam-title">統計學大意</label><a title="另開視窗，開啓統計學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=512&amp;s=0605&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓統計學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=512&amp;s=0605&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓統計學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=512&amp;s=0605&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓統計學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=512&amp;s=0605&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_512_0701" type="checkbox" name="ctl00$holderContent$chk_114010_512_0701" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_512_0701" class="exam-title">資料處理大意</label><a title="另開視窗，開啓資料處理大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=512&amp;s=0701&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓資料處理大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=512&amp;s=0701&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓資料處理大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=512&amp;s=0701&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓資料處理大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=512&amp;s=0701&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_513" type="checkbox" name="ctl00$holderContent$chk_114010_513" onclick="checkall('chk_114010_513',this);" onKeyPress="checkall('chk_114010_513',this);" /></td><td><label for="ctl00_holderContent_chk_114010_513">初等考試_廉政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_513_0101" type="checkbox" name="ctl00$holderContent$chk_114010_513_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_513_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=513&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=513&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=513&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=513&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_513_0102" type="checkbox" name="ctl00$holderContent$chk_114010_513_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_513_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=513&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=513&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=513&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=513&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=513&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=513&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_513_0202" type="checkbox" name="ctl00$holderContent$chk_114010_513_0202" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_513_0202" class="exam-title">法學大意</label><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=513&amp;s=0202&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=513&amp;s=0202&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=513&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=513&amp;s=0202&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=513&amp;s=0202&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=513&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_513_0205" type="checkbox" name="ctl00$holderContent$chk_114010_513_0205" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_513_0205" class="exam-title">公務員法大意（包括任用、服務、考績、懲戒、行政中立、利益衝突迴避與財產申報）</label><a title="另開視窗，開啓公務員法大意（包括任用、服務、考績、懲戒、行政中立、利益衝突迴避與財產申報）試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=513&amp;s=0205&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公務員法大意（包括任用、服務、考績、懲戒、行政中立、利益衝突迴避與財產申報）答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=513&amp;s=0205&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公務員法大意（包括任用、服務、考績、懲戒、行政中立、利益衝突迴避與財產申報）更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=513&amp;s=0205&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公務員法大意（包括任用、服務、考績、懲戒、行政中立、利益衝突迴避與財產申報）試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=513&amp;s=0205&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公務員法大意（包括任用、服務、考績、懲戒、行政中立、利益衝突迴避與財產申報）答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=513&amp;s=0205&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公務員法大意（包括任用、服務、考績、懲戒、行政中立、利益衝突迴避與財產申報）更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=513&amp;s=0205&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_514" type="checkbox" name="ctl00$holderContent$chk_114010_514" onclick="checkall('chk_114010_514',this);" onKeyPress="checkall('chk_114010_514',this);" /></td><td><label for="ctl00_holderContent_chk_114010_514">初等考試_經建行政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_514_0101" type="checkbox" name="ctl00$holderContent$chk_114010_514_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_514_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=514&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=514&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=514&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=514&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_514_0102" type="checkbox" name="ctl00$holderContent$chk_114010_514_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_514_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=514&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=514&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=514&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=514&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=514&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=514&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_514_0202" type="checkbox" name="ctl00$holderContent$chk_114010_514_0202" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_514_0202" class="exam-title">法學大意</label><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=514&amp;s=0202&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=514&amp;s=0202&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=514&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=514&amp;s=0202&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=514&amp;s=0202&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓法學大意更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=514&amp;s=0202&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_514_0606" type="checkbox" name="ctl00$holderContent$chk_114010_514_0606" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_514_0606" class="exam-title">經濟學大意</label><a title="另開視窗，開啓經濟學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=514&amp;s=0606&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓經濟學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=514&amp;s=0606&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓經濟學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=514&amp;s=0606&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓經濟學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=514&amp;s=0606&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_515" type="checkbox" name="ctl00$holderContent$chk_114010_515" onclick="checkall('chk_114010_515',this);" onKeyPress="checkall('chk_114010_515',this);" /></td><td><label for="ctl00_holderContent_chk_114010_515">初等考試_交通行政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_515_0101" type="checkbox" name="ctl00$holderContent$chk_114010_515_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_515_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=515&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=515&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=515&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=515&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_515_0102" type="checkbox" name="ctl00$holderContent$chk_114010_515_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_515_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=515&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=515&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=515&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=515&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=515&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=515&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_515_0402" type="checkbox" name="ctl00$holderContent$chk_114010_515_0402" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_515_0402" class="exam-title">交通行政大意</label><a title="另開視窗，開啓交通行政大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=515&amp;s=0402&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓交通行政大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=515&amp;s=0402&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓交通行政大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=515&amp;s=0402&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓交通行政大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=515&amp;s=0402&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_515_0405" type="checkbox" name="ctl00$holderContent$chk_114010_515_0405" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_515_0405" class="exam-title">運輸學大意</label><a title="另開視窗，開啓運輸學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=515&amp;s=0405&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓運輸學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=515&amp;s=0405&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓運輸學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=515&amp;s=0405&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓運輸學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=515&amp;s=0405&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_516" type="checkbox" name="ctl00$holderContent$chk_114010_516" onclick="checkall('chk_114010_516',this);" onKeyPress="checkall('chk_114010_516',this);" /></td><td><label for="ctl00_holderContent_chk_114010_516">初等考試_地政</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_516_0101" type="checkbox" name="ctl00$holderContent$chk_114010_516_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_516_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=516&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=516&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=516&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=516&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_516_0102" type="checkbox" name="ctl00$holderContent$chk_114010_516_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_516_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=516&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=516&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=516&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=516&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=516&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=516&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_516_0403" type="checkbox" name="ctl00$holderContent$chk_114010_516_0403" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_516_0403" class="exam-title">土地法大意</label><a title="另開視窗，開啓土地法大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=516&amp;s=0403&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓土地法大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=516&amp;s=0403&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓土地法大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=516&amp;s=0403&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓土地法大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=516&amp;s=0403&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_516_0406" type="checkbox" name="ctl00$holderContent$chk_114010_516_0406" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_516_0406" class="exam-title">土地行政大意</label><a title="另開視窗，開啓土地行政大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=516&amp;s=0406&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓土地行政大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=516&amp;s=0406&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓土地行政大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=516&amp;s=0406&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓土地行政大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=516&amp;s=0406&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td class="level2"><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:20px;"></td><td class="link_2Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_517" type="checkbox" name="ctl00$holderContent$chk_114010_517" onclick="checkall('chk_114010_517',this);" onKeyPress="checkall('chk_114010_517',this);" /></td><td><label for="ctl00_holderContent_chk_114010_517">初等考試_電子工程</label></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_517_0101" type="checkbox" name="ctl00$holderContent$chk_114010_517_0101" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_517_0101" class="exam-title">國文</label><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=517&amp;s=0101&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=517&amp;s=0101&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=517&amp;s=0101&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓國文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=517&amp;s=0101&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_517_0102" type="checkbox" name="ctl00$holderContent$chk_114010_517_0102" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_517_0102" class="exam-title">公民與英文</label><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=517&amp;s=0102&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=517&amp;s=0102&amp;q=1" target="_blank">答案</a><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=517&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=517&amp;s=0102&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=517&amp;s=0102&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓公民與英文更正答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=M&amp;code=114010&amp;c=517&amp;s=0102&amp;q=1" target="_blank">更正答案</a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_517_0702" type="checkbox" name="ctl00$holderContent$chk_114010_517_0702" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_517_0702" class="exam-title">電子學大意</label><a title="另開視窗，開啓電子學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=517&amp;s=0702&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓電子學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=517&amp;s=0702&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓電子學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=517&amp;s=0702&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓電子學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=517&amp;s=0702&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr><tr>
+			<td><table cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;">
+				<tr>
+					<td style="width:35px;"></td><td class="link_3Ua"></td><td style="width:1%;vertical-align:text-top;"><input id="ctl00_holderContent_chk_114010_517_0703" type="checkbox" name="ctl00$holderContent$chk_114010_517_0703" /></td><td style="align:left;"><label for="ctl00_holderContent_chk_114010_517_0703" class="exam-title">基本電學大意</label><a title="另開視窗，開啓基本電學大意試題(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=517&amp;s=0703&amp;q=1" target="_blank">試題</a><a title="另開視窗，開啓基本電學大意答案(Pdf檔)" class="exam-question-ans-mobile" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=517&amp;s=0703&amp;q=1" target="_blank">答案</a><a></a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓基本電學大意試題(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=Q&amp;code=114010&amp;c=517&amp;s=0703&amp;q=1" target="_blank">試題</a></td><td class="exam-question-ans" style="width:6%;vertical-align:text-top;white-space:nowrap;align:right;"><a title="另開視窗，開啓基本電學大意答案(Pdf檔)" class="exam-question-ans" href="wHandExamQandA_File.ashx?t=S&amp;code=114010&amp;c=517&amp;s=0703&amp;q=1" target="_blank">答案</a></td><td class="exam-question-ans" style="width:10%;vertical-align:text-top;white-space:nowrap;align:right;"><a></a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table>
+                </div>
+            
+</div>
+       
+
+                    </div>
+                </div>
+            </div>
+            <div id="divPageBottom">
+                <div class="container">
+                    <div style="padding: 0 45px; position: relative;">
+                        <div class="information">
+                            本網站資料，歡迎朋友連結使用。但引用時，請註明資料來源並請確保資料之完整（包括本項宣示在內），均不得任意增刪<br />
+                            考選部 地址：116203臺北市文山區試院路1-1號 (<a id="ctl00_lnkMap" title="另開視窗，連結到考選部所在位置" href="http://wwwc.moex.gov.tw/main/content/wfrmContent.aspx?menu_id=37" target="_blank">所在位置</a>），
+                            總機：(02)2236-9188（<a id="ctl00_HyperLink1" title="另開視窗，連結到考選部聯絡方式" href="http://wwwc.moex.gov.tw/main/content/wfrmContent.aspx?menu_id=40" target="_blank">聯絡方式</a>）<br />
+                            2018 Ministry of Examination R.O.C.(Taiwan) All rights reserved.<br />
+                            建議最佳解析度為1024*768或以上，並使用支援TLS 1.2(含)以上版本瀏覽器瀏覽
+                        </div>
+                        <div class="information_image">
+                            <a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20251001155311" title="另開視窗，連結到通過AA等級無障礙網頁檢測" target="_blank" style="display: inline-block;">
+                                <img src="../images/aa.jpg" style="height: 40px;" alt="通過AA檢測等級無障礙網頁檢測" /></a>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('ctl00_holderContent_btnSearch');Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

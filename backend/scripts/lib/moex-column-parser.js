@@ -26,7 +26,7 @@ async function parseColumnAware(buf) {
     for (const b of parsed.blocks) {
       if (b.type !== 'text') continue
       for (const ln of (b.lines || [])) {
-        const t = (ln.text || '').trim()
+        const t = stripPUA(ln.text || '').trim()
         if (!t) continue
         const fs = (ln.font && ln.font.size) || ln.bbox.h || 12
         lines.push({
@@ -324,7 +324,7 @@ async function parseAnswersColumnAware(buf) {
     for (const b of parsed.blocks) {
       if (b.type !== 'text') continue
       for (const ln of (b.lines || [])) {
-        const t = (ln.text || '').trim()
+        const t = stripPUA(ln.text || '').trim()
         if (!t) continue
         lines.push({ y: Math.round(ln.bbox.y), x: Math.round(ln.bbox.x), text: t })
       }

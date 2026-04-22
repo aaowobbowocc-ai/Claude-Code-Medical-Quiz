@@ -157,7 +157,7 @@ export default function BossChallenge() {
             <div className="flex gap-2 mt-2">
               <button onClick={() => navigate('/?reward=1')}
                 className="px-5 py-3 rounded-2xl font-bold text-white text-sm active:scale-95 bg-amber-500">
-                🎬 看廣告賺 500 幣
+                🎬 看廣告賺 300 幣
               </button>
               <button onClick={() => navigate('/')}
                 className="px-5 py-3 rounded-2xl font-bold text-white text-sm active:scale-95 grad-cta">

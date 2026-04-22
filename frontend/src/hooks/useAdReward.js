@@ -5,7 +5,12 @@ import { usePlayerStore } from '../store/gameStore'
 // Set VITE_REWARDED_AD_SLOT in Vercel env vars after AdSense H5 approval
 const AD_CLIENT = 'ca-pub-3134321405509741'
 const REWARDED_AD_SLOT = import.meta.env.VITE_REWARDED_AD_SLOT || ''
-const REWARD_COINS = 500
+// Monetag Direct Link URL — used while AdSense H5 rewarded is unavailable.
+// Swap provider by changing the env var; if empty the hook falls back to
+// simulation mode so local dev still works.
+const MONETAG_DIRECT_LINK = import.meta.env.VITE_MONETAG_DIRECT_LINK || 'https://omg10.com/4/10909987'
+const DIRECT_LINK_COUNTDOWN_SEC = 15
+const REWARD_COINS = 300
 
 // ── Script loaders ──────────────────────────────────
 let adScriptLoaded = false
@@ -102,7 +107,41 @@ export function useAdReward() {
       }
     }
 
-    // Simulation mode: 3-second countdown
+    // Monetag Direct Link fallback: open ad URL in new tab, 15-second countdown
+    // in our tab. Monetag counts the impression once the URL loads, so the
+    // countdown is primarily a UX beat + anti-spam guard. User can freely
+    // switch back to our tab during the wait.
+    if (MONETAG_DIRECT_LINK) {
+      const popup = window.open(MONETAG_DIRECT_LINK, '_blank', 'noopener,noreferrer')
+      if (!popup) {
+        // Popup blocked — tell user to allow popups or retry
+        setPhase('error')
+        return false
+      }
+      setPhase('playing')
+      setCountdown(DIRECT_LINK_COUNTDOWN_SEC)
+      return new Promise(resolve => {
+        let t = DIRECT_LINK_COUNTDOWN_SEC
+        timerRef.current = setInterval(() => {
+          t--
+          setCountdown(t)
+          if (t <= 0) {
+            clearInterval(timerRef.current)
+            const result = claimAdReward()
+            if (result.success) {
+              setPhase('success')
+              refreshInfo()
+              resolve(true)
+            } else {
+              setPhase(result.reason === 'cooldown' ? 'cooldown' : 'exhausted')
+              resolve(false)
+            }
+          }
+        }, 1000)
+      })
+    }
+
+    // Simulation mode (local dev with no ad URL): 3-second countdown
     setPhase('playing')
     setCountdown(3)
     return new Promise(resolve => {
@@ -137,7 +176,7 @@ export function useAdReward() {
     showAd,           // trigger ad
     refreshInfo,      // manually refresh
     rewardCoins: REWARD_COINS,
-    isSimulation: !REWARDED_AD_SLOT,
+    isSimulation: !REWARDED_AD_SLOT && !MONETAG_DIRECT_LINK,
   }
 }
 

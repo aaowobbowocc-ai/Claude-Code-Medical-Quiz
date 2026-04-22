@@ -9,8 +9,9 @@ function formatCooldown(sec) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-// Set to true when AdSense H5 rewarded ads are approved and ready
-const AD_REWARD_ENABLED = false
+// Toggle the whole feature off without a code push by flipping this flag.
+// Enabled via Monetag Direct Link (15-sec countdown, 300 coins/view, 10/day).
+const AD_REWARD_ENABLED = true
 
 export default function RewardAdSheet({ onClose }) {
   const { phase, setPhase, countdown, cooldownSec, info, showAd, refreshInfo, rewardCoins, isSimulation } = useAdReward()
@@ -37,7 +38,7 @@ export default function RewardAdSheet({ onClose }) {
             此功能目前正在準備中，即將開放！
           </p>
           <div className="bg-amber-50 rounded-2xl px-4 py-4 mt-4 mb-4">
-            <p className="text-amber-700 text-sm font-medium">每次觀看可獲得 500 金幣</p>
+            <p className="text-amber-700 text-sm font-medium">每次觀看可獲得 300 金幣</p>
             <p className="text-amber-500 text-xs mt-1">每日最多 10 次，敬請期待</p>
           </div>
           <button onClick={onClose}
@@ -82,9 +83,13 @@ export default function RewardAdSheet({ onClose }) {
 
         {phase === 'playing' && (
           <div className="w-full py-6 rounded-2xl text-center bg-gray-900">
-            <p className="text-white text-sm mb-2">{isSimulation ? '模擬廣告播放中' : '廣告播放中'}</p>
+            <p className="text-white text-sm mb-2">
+              {isSimulation ? '模擬廣告播放中' : '廣告已在新分頁開啟'}
+            </p>
             <p className="text-white font-bold text-4xl">{countdown}</p>
-            <p className="text-white/50 text-xs mt-2">請稍候...</p>
+            <p className="text-white/50 text-xs mt-2">
+              {isSimulation ? '請稍候...' : '倒數結束即可領取金幣'}
+            </p>
           </div>
         )}
 
@@ -122,7 +127,9 @@ export default function RewardAdSheet({ onClose }) {
           <div className="text-center">
             <div className="w-full py-4 rounded-2xl bg-red-50 border border-red-200 mb-3">
               <p className="text-red-600 font-bold">廣告載入失敗</p>
-              <p className="text-red-400 text-sm mt-1">請稍後再試</p>
+              <p className="text-red-400 text-sm mt-1">
+                可能是瀏覽器擋彈出視窗，請允許後再試
+              </p>
             </div>
             <button onClick={() => { setPhase('idle'); refreshInfo() }}
               className="mt-2 px-6 py-2 rounded-xl text-sm font-bold text-gray-500 bg-gray-100 active:scale-95">

@@ -190,12 +190,12 @@ export const usePlayerStore = create(
         }
         const newCount = count + 1
         set((st) => ({
-          coins: st.coins + 500,
+          coins: st.coins + 300,
           adRewardToday: newCount,
           lastAdWatch: new Date().toISOString(),
           lastAdDate: today,
         }))
-        return { success: true, coins: 500, remaining: 10 - newCount }
+        return { success: true, coins: 300, remaining: 10 - newCount }
       },
       getAdRewardInfo: () => {
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })

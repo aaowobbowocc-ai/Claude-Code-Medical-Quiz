@@ -148,7 +148,37 @@
     {
       "id": 0,
       "tag": "all",
-      "name": "全部"
+      "name": "隨機混合"
+    },
+    {
+      "id": 1,
+      "tag": "rad_basic",
+      "name": "基礎醫學"
+    },
+    {
+      "id": 2,
+      "tag": "rad_physics",
+      "name": "醫學物理與輻安"
+    },
+    {
+      "id": 3,
+      "tag": "rad_equipment",
+      "name": "放射器材"
+    },
+    {
+      "id": 4,
+      "tag": "rad_diagnostic",
+      "name": "放射診斷"
+    },
+    {
+      "id": 5,
+      "tag": "rad_therapy",
+      "name": "放射治療"
+    },
+    {
+      "id": 6,
+      "tag": "rad_nuclear",
+      "name": "核子醫學"
     }
   ],
   "ui": {
@@ -158,7 +188,13 @@
       "radio_instruments": "放射器材",
       "radio_diagnosis": "放射診斷",
       "radio_therapy": "放射治療",
-      "nuclear_medicine": "核子醫學"
+      "nuclear_medicine": "核子醫學",
+      "rad_basic": "基礎",
+      "rad_physics": "醫物輻安",
+      "rad_equipment": "器材",
+      "rad_diagnostic": "診斷",
+      "rad_therapy": "治療",
+      "rad_nuclear": "核醫"
     },
     "stageStyles": {
       "all": {
@@ -188,6 +224,30 @@
       "nuclear_medicine": {
         "icon": "☢️",
         "color": "#10B981"
+      },
+      "rad_basic": {
+        "icon": "🫀",
+        "color": "#3B82F6"
+      },
+      "rad_physics": {
+        "icon": "⚛️",
+        "color": "#F97316"
+      },
+      "rad_equipment": {
+        "icon": "🔭",
+        "color": "#8B5CF6"
+      },
+      "rad_diagnostic": {
+        "icon": "📷",
+        "color": "#0EA5E9"
+      },
+      "rad_therapy": {
+        "icon": "☢️",
+        "color": "#DC2626"
+      },
+      "rad_nuclear": {
+        "icon": "☢️",
+        "color": "#EC4899"
       }
     },
     "subjectColors": {

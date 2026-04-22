@@ -176,7 +176,37 @@
     {
       "id": 0,
       "tag": "all",
-      "name": "全部"
+      "name": "隨機混合"
+    },
+    {
+      "id": 1,
+      "tag": "ot_anatomy_physio",
+      "name": "解剖與生理"
+    },
+    {
+      "id": 2,
+      "tag": "ot_intro",
+      "name": "職能治療概論"
+    },
+    {
+      "id": 3,
+      "tag": "ot_physical",
+      "name": "生理疾病職治"
+    },
+    {
+      "id": 4,
+      "tag": "ot_mental",
+      "name": "心理疾病職治"
+    },
+    {
+      "id": 5,
+      "tag": "ot_pediatrics",
+      "name": "小兒疾病職治"
+    },
+    {
+      "id": 6,
+      "tag": "ot_techniques",
+      "name": "職能治療技術"
     }
   ],
   "ui": {
@@ -186,7 +216,10 @@
       "ot_physical": "生理疾病",
       "ot_mental": "心理疾病",
       "ot_pediatric": "小兒",
-      "ot_technique": "技術學"
+      "ot_technique": "技術學",
+      "ot_anatomy_physio": "解剖生理",
+      "ot_pediatrics": "小兒",
+      "ot_techniques": "技術"
     },
     "stageStyles": {
       "all": {
@@ -215,6 +248,18 @@
       },
       "ot_technique": {
         "icon": "🤲",
+        "color": "#D97706"
+      },
+      "ot_anatomy_physio": {
+        "icon": "🧬",
+        "color": "#3B82F6"
+      },
+      "ot_pediatrics": {
+        "icon": "👶",
+        "color": "#A855F7"
+      },
+      "ot_techniques": {
+        "icon": "🛠️",
         "color": "#D97706"
       }
     },

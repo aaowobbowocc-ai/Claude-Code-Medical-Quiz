@@ -175,7 +175,37 @@
     {
       "id": 0,
       "tag": "all",
-      "name": "全部"
+      "name": "隨機混合"
+    },
+    {
+      "id": 1,
+      "tag": "pt_foundation",
+      "name": "物理治療基礎"
+    },
+    {
+      "id": 2,
+      "tag": "pt_intro",
+      "name": "物理治療概論"
+    },
+    {
+      "id": 3,
+      "tag": "pt_techniques",
+      "name": "物理治療技術"
+    },
+    {
+      "id": 4,
+      "tag": "pt_neuro",
+      "name": "神經疾病物治"
+    },
+    {
+      "id": 5,
+      "tag": "pt_ortho",
+      "name": "骨科疾病物治"
+    },
+    {
+      "id": 6,
+      "tag": "pt_cardio_peds",
+      "name": "心肺與小兒"
     }
   ],
   "ui": {
@@ -185,7 +215,9 @@
       "pt_technique": "技術學",
       "pt_neuro": "神經物治",
       "pt_ortho": "骨科物治",
-      "pt_cardio_peds": "心肺小兒"
+      "pt_cardio_peds": "心肺小兒",
+      "pt_foundation": "基礎",
+      "pt_techniques": "技術"
     },
     "stageStyles": {
       "all": {
@@ -215,6 +247,14 @@
       "pt_cardio_peds": {
         "icon": "🫀",
         "color": "#EF4444"
+      },
+      "pt_foundation": {
+        "icon": "🧠",
+        "color": "#3B82F6"
+      },
+      "pt_techniques": {
+        "icon": "🛠️",
+        "color": "#D97706"
       }
     },
     "subjectColors": {

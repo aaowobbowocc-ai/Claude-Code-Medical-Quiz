@@ -1,0 +1,87 @@
+{
+  "id": "civil-senior-general",
+  "name": "高考三等 一般行政",
+  "short": "高三行政",
+  "icon": "🏛️",
+  "category": "civil-service",
+  "subCategory": "高考三等",
+  "level": "senior",
+  "selectionType": "quota",
+  "persona": [
+    "civil-exam-prep",
+    "career-changer"
+  ],
+  "sharedBanks": [
+    "common_law_knowledge",
+    "common_constitution",
+    "common_law_basics",
+    "common_english",
+    "common_chinese",
+    "common_admin_studies",
+    "common_admin_law"
+  ],
+  "sharedScope": "level_3_common",
+  "uxHints": {
+    "defaultMode": "reservoir",
+    "longText": true
+  },
+  "questionsFile": null,
+  "totalQ": 0,
+  "passScore": 0,
+  "passRate": 0,
+  "papers": [
+    {
+      "id": "law_knowledge",
+      "name": "法學知識與英文",
+      "subject": "法學知識與英文",
+      "subjects": "中華民國憲法、法學緒論、英文（合卷）",
+      "count": 0
+    },
+    {
+      "id": "chinese",
+      "name": "國文",
+      "subject": "國文",
+      "subjects": "公文寫作、閱讀測驗、修辭",
+      "count": 0
+    },
+    {
+      "id": "admin_law",
+      "name": "行政法",
+      "subject": "行政法",
+      "subjects": "行政程序法、行政罰法、行政執行法、訴願法",
+      "count": 0
+    },
+    {
+      "id": "public_admin",
+      "name": "行政學",
+      "subject": "行政學",
+      "subjects": "公共行政理論、組織理論、人事行政",
+      "count": 0
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {},
+    "stageStyles": {},
+    "subjectColors": {}
+  },
+  "seo": {
+    "platformName": "國考知識王 — 高考三等一般行政題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "高考三等 一般行政",
+    "shortName": "高考三等",
+    "studentType": "公職應屆考生、轉職應考者",
+    "years": "106 起",
+    "totalQ": 2728,
+    "examDesc": "公務人員高等考試三級考試（高考三等）一般行政類科，由考選部舉辦，採名額制錄取。",
+    "paperDesc": "共同科目（國文、法學知識與英文）+ 專業科目（行政法、行政學、政治學等）。",
+    "subjects": "憲法、法學緒論、國文、英文、行政法、行政學等",
+    "mockDesc": "高考三等一般行政模擬考（拓荒中）"
+  }
+}

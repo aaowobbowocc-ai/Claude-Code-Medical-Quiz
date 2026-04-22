@@ -1,0 +1,84 @@
+{
+  "id": "driver-moto",
+  "name": "機車駕照",
+  "short": "機車",
+  "icon": "🏍️",
+  "category": "independent",
+  "subCategory": "機車駕照",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "driver-license"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false,
+    "fixedBank": true,
+    "threeChoice": true,
+    "noYearFilter": true,
+    "mockQuestionCount": 50,
+    "mockPointsPerQ": 2
+  },
+  "questionsFile": "questions-driver-moto.json",
+  "totalQ": 804,
+  "totalPoints": 100,
+  "passScore": 85,
+  "passRate": 0.85,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "機車法規",
+      "subject": "機車法規",
+      "subjects": "機車法規（三選一選擇題），從 804 題題庫隨機抽 50 題",
+      "count": 50,
+      "pointsPerQ": 2,
+      "timeLimit": 30
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "moto_rules": "機車法規"
+    },
+    "stageStyles": {
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "moto_rules": {
+        "icon": "🏍️",
+        "color": "#EF4444"
+      }
+    },
+    "subjectColors": {
+      "機車法規": "#EF4444"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 機車駕照筆試題庫",
+    "title": "機車駕照筆試題庫",
+    "fullName": "機車駕照筆試",
+    "shortName": "機車駕照",
+    "studentType": "機車考生",
+    "years": "115.02版",
+    "totalQ": 804,
+    "examDesc": "交通部公路局機車駕照筆試題庫（115.02.18 版），共 804 題三選一選擇題（含 148 題標誌圖片題）。2026-01-30 新制上路：筆試隨機抽 50 題，每題 2 分，滿分 100 分，85 分及格（原 40 題 × 2.5 分）。公路局另有危險感知影片選擇題獨立題庫。",
+    "paperDesc": "三選一選擇題 804 題（含 148 題標誌圖片題），筆試隨機抽 50 題作答。",
+    "subjects": "機車法規",
+    "mockDesc": "模擬機車駕照筆試 50 題",
+    "subjectDetails": [
+      [
+        "機車法規",
+        "涵蓋正確觀念與態度、主動停讓文化、安全駕駛能力等三大類。"
+      ]
+    ]
+  }
+}

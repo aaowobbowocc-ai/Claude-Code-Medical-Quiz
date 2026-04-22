@@ -15,7 +15,11 @@ const fs = require('fs')
 const path = require('path')
 
 const DIST = path.resolve(__dirname, 'dist')
-const CONFIGS_DIR = path.resolve(__dirname, '..', 'backend', 'exam-configs')
+// Prefer in-tree snapshot (works on Vercel where ../backend isn't in build context).
+// Fall back to backend/exam-configs for local dev where snapshot may be stale.
+const CONFIGS_SNAPSHOT = path.resolve(__dirname, 'src', 'exam-configs-snapshot')
+const CONFIGS_BACKEND = path.resolve(__dirname, '..', 'backend', 'exam-configs')
+const CONFIGS_DIR = fs.existsSync(CONFIGS_SNAPSHOT) ? CONFIGS_SNAPSHOT : CONFIGS_BACKEND
 const TEMPLATE = path.join(DIST, 'index.html')
 const INTROS_FILE = path.resolve(__dirname, 'src', 'seo-intros.json')
 

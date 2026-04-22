@@ -1,0 +1,161 @@
+{
+  "id": "pharma2",
+  "name": "藥師二階",
+  "short": "藥二",
+  "icon": "🧪",
+  "category": "medical",
+  "subCategory": "藥師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "pharmacy-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-pharma2.json",
+  "totalQ": 5829,
+  "passScore": 180,
+  "totalPoints": 300,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "卷一",
+      "subject": "調劑與臨床",
+      "subjects": "調劑學27、臨床藥學27、治療學26",
+      "count": 80,
+      "pointsPerQ": 1.25,
+      "timeLimit": 90,
+      "breakdown": [
+        {
+          "subject": "調劑學",
+          "count": 27
+        },
+        {
+          "subject": "臨床藥學",
+          "count": 27
+        },
+        {
+          "subject": "治療學",
+          "count": 26
+        }
+      ]
+    },
+    {
+      "id": "paper2",
+      "name": "卷二",
+      "subject": "藥物治療",
+      "subjects": "藥物治療學54（110年起改制）",
+      "count": 54,
+      "pointsPerQ": 1.25,
+      "timeLimit": 90,
+      "breakdown": [
+        {
+          "subject": "藥物治療學",
+          "count": 54,
+          "note": "獨立一卷，110年起由80題改為54題"
+        }
+      ]
+    },
+    {
+      "id": "paper3",
+      "name": "卷三",
+      "subject": "法規",
+      "subjects": "藥事行政與法規50",
+      "count": 50,
+      "pointsPerQ": 2,
+      "timeLimit": 60,
+      "breakdown": [
+        {
+          "subject": "藥事行政與法規",
+          "count": 50,
+          "note": "唯一 50 題配置"
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "dispensing": "調劑",
+      "clinical_pharmacy": "臨床藥學",
+      "pharmacotherapy": "藥物治療",
+      "pharmacy_law": "藥事法規"
+    },
+    "stageStyles": {
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "dispensing": {
+        "icon": "🏥",
+        "color": "#3B82F6"
+      },
+      "clinical_pharmacy": {
+        "icon": "💉",
+        "color": "#EF4444"
+      },
+      "therapeutics": {
+        "icon": "💊",
+        "color": "#D97706"
+      },
+      "pharmacotherapy": {
+        "icon": "🩺",
+        "color": "#DC2626"
+      },
+      "pharmacy_law": {
+        "icon": "⚖️",
+        "color": "#374151"
+      }
+    },
+    "subjectColors": {
+      "調劑學": "#3B82F6",
+      "臨床藥學": "#10B981",
+      "治療學": "#8B5CF6",
+      "藥物治療學": "#EF4444",
+      "藥事行政法規": "#0D9488",
+      "藥事行政與法規": "#0D9488"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 藥師國考二階題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "藥師國考第二階段",
+    "shortName": "藥師二階",
+    "studentType": "藥學生",
+    "years": "100-115",
+    "totalQ": 5829,
+    "examDesc": "藥師國考第二階段（二階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為通過一階並完成實習之藥學系學生。",
+    "paperDesc": "考試分為三卷（藥物治療 80 題、調劑與臨床 80 題、法規 50 題），合計 210 題，採及格制（總分 180 分以上通過，需每科達該科目滿分之五成）。",
+    "subjects": "調劑學、臨床藥學、治療學、藥物治療學、藥事行政與法規等臨床藥學科目",
+    "mockDesc": "完整模擬三卷，180/240 及格制",
+    "subjectDetails": [
+      [
+        "調劑學",
+        "處方判讀、調劑作業流程、藥物交互作用與配伍禁忌。"
+      ],
+      [
+        "臨床藥學",
+        "藥物治療監測（TDM）、藥事照護計畫與臨床藥動學應用。"
+      ],
+      [
+        "藥物治療學",
+        "各系統疾病的藥物治療指引、實證醫學與治療準則。"
+      ],
+      [
+        "藥事行政與法規",
+        "藥事法、管制藥品管理條例、全民健保用藥規範與藥師執業相關法規。"
+      ]
+    ]
+  }
+}

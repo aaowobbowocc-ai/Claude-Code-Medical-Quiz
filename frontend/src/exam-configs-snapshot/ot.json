@@ -1,0 +1,269 @@
+{
+  "id": "ot",
+  "name": "職能治療師",
+  "short": "職治",
+  "icon": "🧩",
+  "category": "medical",
+  "subCategory": "職能治療師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "rehab-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-ot.json",
+  "totalQ": 10966,
+  "passScore": 288,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "解剖學與生理學",
+      "subject": "解剖學與生理學",
+      "subjects": "解剖40、生理40",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "解剖學",
+          "count": 40
+        },
+        {
+          "subject": "生理學",
+          "count": 40
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper2",
+      "name": "職能治療學概論",
+      "subject": "職能治療學概論",
+      "subjects": "理論基礎40、倫理法規20、實務框架20",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "理論基礎",
+          "count": 40
+        },
+        {
+          "subject": "倫理與法規",
+          "count": 20
+        },
+        {
+          "subject": "實務框架",
+          "count": 20
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper3",
+      "name": "生理疾病職治",
+      "subject": "生理疾病職能治療學",
+      "subjects": "中風腦損傷25、脊髓損傷15、骨科20、其他20",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "中風與腦損傷",
+          "count": 25
+        },
+        {
+          "subject": "脊髓損傷",
+          "count": 15
+        },
+        {
+          "subject": "骨科疾病",
+          "count": 20
+        },
+        {
+          "subject": "其他生理疾患",
+          "count": 20
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper4",
+      "name": "心理疾病職治",
+      "subject": "心理疾病職能治療學",
+      "subjects": "思覺失調25、情緒障礙25、物質濫用15、其他15",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "思覺失調症",
+          "count": 25
+        },
+        {
+          "subject": "情緒障礙",
+          "count": 25
+        },
+        {
+          "subject": "物質濫用",
+          "count": 15
+        },
+        {
+          "subject": "其他心理疾患",
+          "count": 15
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper5",
+      "name": "小兒疾病職治",
+      "subject": "小兒疾病職能治療學",
+      "subjects": "發展遲緩25、腦性麻痺20、自閉症20、其他15",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "發展遲緩",
+          "count": 25
+        },
+        {
+          "subject": "腦性麻痺",
+          "count": 20
+        },
+        {
+          "subject": "自閉症類群",
+          "count": 20
+        },
+        {
+          "subject": "其他兒童疾患",
+          "count": 15
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper6",
+      "name": "職治技術學",
+      "subject": "職能治療技術學",
+      "subjects": "功能評估25、輔具設計20、環境改造15、日常活動訓練20",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "功能評估",
+          "count": 25
+        },
+        {
+          "subject": "輔具設計",
+          "count": 20
+        },
+        {
+          "subject": "環境改造",
+          "count": 15
+        },
+        {
+          "subject": "日常活動訓練",
+          "count": 20
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "ot_anatomy": "解剖生理",
+      "ot_intro": "概論",
+      "ot_physical": "生理疾病",
+      "ot_mental": "心理疾病",
+      "ot_pediatric": "小兒",
+      "ot_technique": "技術學"
+    },
+    "stageStyles": {
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "ot_anatomy": {
+        "icon": "🦴",
+        "color": "#3B82F6"
+      },
+      "ot_intro": {
+        "icon": "📖",
+        "color": "#10B981"
+      },
+      "ot_physical": {
+        "icon": "🏥",
+        "color": "#EF4444"
+      },
+      "ot_mental": {
+        "icon": "🧠",
+        "color": "#8B5CF6"
+      },
+      "ot_pediatric": {
+        "icon": "👶",
+        "color": "#F97316"
+      },
+      "ot_technique": {
+        "icon": "🤲",
+        "color": "#D97706"
+      }
+    },
+    "subjectColors": {
+      "解剖學與生理學": "#3B82F6",
+      "職能治療學概論": "#10B981",
+      "生理疾病職能治療學": "#EF4444",
+      "心理疾病職能治療學": "#8B5CF6",
+      "小兒疾病職能治療學": "#F97316",
+      "職能治療技術學": "#D97706"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 職能治療師國考題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "職能治療師國考",
+    "shortName": "職能治療師",
+    "studentType": "職治系學生",
+    "years": "100-114",
+    "totalQ": 10966,
+    "examDesc": "職能治療師國考為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為職能治療學系畢業並完成實習。",
+    "paperDesc": "考試分為六科，每科各 80 題選擇題，合計 480 題。及格標準為各科平均達 60 分，其中生理、心理、小兒三科須各達 60 分。",
+    "subjects": "解剖學與生理學、職能治療學概論、生理疾病職能治療學、心理疾病職能治療學、小兒疾病職能治療學、職能治療技術學",
+    "mockDesc": "完整模擬六科，平均 60 分及格",
+    "subjectDetails": [
+      [
+        "解剖學與生理學",
+        "人體結構與功能，著重與職能治療相關之神經、肌肉骨骼系統。"
+      ],
+      [
+        "職能治療學概論",
+        "職能治療的理論基礎、倫理法規與實務框架。"
+      ],
+      [
+        "生理疾病職能治療學",
+        "中風、脊髓損傷、骨科疾病等生理疾患的職治評估與介入。"
+      ],
+      [
+        "心理疾病職能治療學",
+        "思覺失調、情緒障礙、物質濫用等心理疾患的職治處置。"
+      ],
+      [
+        "小兒疾病職能治療學",
+        "發展遲緩、腦性麻痺、自閉症等兒童疾患的職治介入。"
+      ],
+      [
+        "職能治療技術學",
+        "功能評估方法、輔具設計、環境改造與日常活動訓練。"
+      ]
+    ]
+  }
+}

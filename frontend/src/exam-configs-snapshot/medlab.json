@@ -1,0 +1,241 @@
+{
+  "id": "medlab",
+  "name": "醫事檢驗師",
+  "short": "醫檢",
+  "icon": "🔬",
+  "category": "medical",
+  "subCategory": "醫事檢驗師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "medlab-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-medlab.json",
+  "totalQ": 13431,
+  "passScore": 288,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "臨床生理與病理",
+      "subject": "臨床生理學與病理學",
+      "subjects": "臨床生理40、病理40",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "臨床生理學",
+          "count": 40
+        },
+        {
+          "subject": "病理學",
+          "count": 40
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper2",
+      "name": "血液與血庫",
+      "subject": "臨床血液學與血庫學",
+      "subjects": "臨床血液40、血庫40",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "臨床血液學",
+          "count": 40,
+          "note": "血球形態、凝血"
+        },
+        {
+          "subject": "血庫學",
+          "count": 40,
+          "note": "血型鑑定、輸血作業"
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper3",
+      "name": "分子檢驗與鏡檢",
+      "subject": "醫學分子檢驗學與臨床鏡檢學",
+      "subjects": "分子檢驗40、臨床鏡檢40",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "醫學分子檢驗學",
+          "count": 40,
+          "note": "PCR、基因檢測"
+        },
+        {
+          "subject": "臨床鏡檢學",
+          "count": 40,
+          "note": "尿液、體液鏡檢"
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper4",
+      "name": "微生物學",
+      "subject": "微生物學與臨床微生物學",
+      "subjects": "細菌40、黴菌20、寄生蟲20",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "細菌學",
+          "count": 40
+        },
+        {
+          "subject": "黴菌學",
+          "count": 20
+        },
+        {
+          "subject": "寄生蟲學",
+          "count": 20
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper5",
+      "name": "生化與臨床生化",
+      "subject": "生物化學與臨床生化學",
+      "subjects": "生物化學40、臨床生化40",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "生物化學",
+          "count": 40
+        },
+        {
+          "subject": "臨床生化學",
+          "count": 40
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    },
+    {
+      "id": "paper6",
+      "name": "血清免疫與病毒",
+      "subject": "臨床血清免疫學與臨床病毒學",
+      "subjects": "血清免疫40、病毒40",
+      "count": 80,
+      "breakdown": [
+        {
+          "subject": "臨床血清免疫學",
+          "count": 40
+        },
+        {
+          "subject": "臨床病毒學",
+          "count": 40
+        }
+      ],
+      "breakdownNote": "依歷屆題分布估計",
+      "timeLimit": 60
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "clinical_physio_path": "生理病理",
+      "hematology": "血液血庫",
+      "molecular": "分子鏡檢",
+      "microbiology": "微生物",
+      "biochemistry": "生化",
+      "serology": "血清免疫"
+    },
+    "stageStyles": {
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "clinical_physio_path": {
+        "icon": "🫀",
+        "color": "#EF4444"
+      },
+      "hematology": {
+        "icon": "🩸",
+        "color": "#DC2626"
+      },
+      "molecular": {
+        "icon": "🧬",
+        "color": "#8B5CF6"
+      },
+      "microbiology": {
+        "icon": "🦠",
+        "color": "#10B981"
+      },
+      "biochemistry": {
+        "icon": "⚗️",
+        "color": "#3B82F6"
+      },
+      "serology": {
+        "icon": "🛡️",
+        "color": "#F97316"
+      }
+    },
+    "subjectColors": {
+      "臨床生理學與病理學": "#EF4444",
+      "臨床血液學與血庫學": "#DC2626",
+      "醫學分子檢驗學與臨床鏡檢學": "#8B5CF6",
+      "微生物學與臨床微生物學": "#10B981",
+      "生物化學與臨床生化學": "#3B82F6",
+      "臨床血清免疫學與臨床病毒學": "#F97316"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 醫事檢驗師國考題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "醫事檢驗師國考",
+    "shortName": "醫事檢驗師",
+    "studentType": "醫技系學生",
+    "years": "100-115",
+    "totalQ": 13431,
+    "examDesc": "醫事檢驗師國考為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為醫事技術學系畢業並完成實習。",
+    "paperDesc": "考試分為六科，每科各 80 題選擇題，合計 480 題。及格標準為各科平均達 60 分，無科目得為零分。",
+    "subjects": "臨床生理學與病理學、臨床血液學與血庫學、醫學分子檢驗學與臨床鏡檢學、微生物學與臨床微生物學、生物化學與臨床生化學、臨床血清免疫學與臨床病毒學",
+    "mockDesc": "完整模擬六科，平均 60 分及格",
+    "subjectDetails": [
+      [
+        "臨床生理學與病理學",
+        "人體各系統生理功能與疾病的病理變化機制。"
+      ],
+      [
+        "臨床血液學與血庫學",
+        "血液細胞形態、凝血機制、血型鑑定與輸血作業。"
+      ],
+      [
+        "醫學分子檢驗學與臨床鏡檢學",
+        "PCR、基因檢測技術，尿液與體液鏡檢判讀。"
+      ],
+      [
+        "微生物學與臨床微生物學",
+        "細菌、黴菌、寄生蟲的培養鑑定與藥敏試驗。"
+      ],
+      [
+        "生物化學與臨床生化學",
+        "代謝途徑、酵素學，臨床生化檢驗項目與判讀。"
+      ],
+      [
+        "臨床血清免疫學與臨床病毒學",
+        "免疫反應機制、血清學檢驗，病毒培養與分子診斷。"
+      ]
+    ]
+  }
+}

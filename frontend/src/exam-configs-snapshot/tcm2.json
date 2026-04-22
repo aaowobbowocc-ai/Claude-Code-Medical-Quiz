@@ -1,0 +1,131 @@
+{
+  "id": "tcm2",
+  "name": "中醫師(二)",
+  "short": "中醫二",
+  "icon": "🍃",
+  "category": "medical",
+  "subCategory": "中醫師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "tcm-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-tcm2.json",
+  "totalQ": 9249,
+  "passScore": 192,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "中醫臨床(一)",
+      "subject": "中醫臨床醫學(一)",
+      "subjects": "傷寒論(學)、溫病學、金匱要略、中醫證治學",
+      "count": 80,
+      "timeLimit": 60
+    },
+    {
+      "id": "paper2",
+      "name": "中醫臨床(二)",
+      "subject": "中醫臨床醫學(二)",
+      "subjects": "中醫內科學、中醫婦科學、中醫兒科學",
+      "count": 80,
+      "timeLimit": 60
+    },
+    {
+      "id": "paper3",
+      "name": "中醫臨床(三)",
+      "subject": "中醫臨床醫學(三)",
+      "subjects": "中醫外科學、中醫傷科學、中醫五官科學",
+      "count": 80,
+      "timeLimit": 60
+    },
+    {
+      "id": "paper4",
+      "name": "中醫臨床(四)",
+      "subject": "中醫臨床醫學(四)",
+      "subjects": "針灸科學",
+      "count": 80,
+      "timeLimit": 60
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "tcm_clinical_1": "傷寒/溫病",
+      "tcm_clinical_2": "內婦兒",
+      "tcm_clinical_3": "外傷五官",
+      "tcm_clinical_4": "針灸"
+    },
+    "stageStyles": {
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "tcm_clinical_1": {
+        "icon": "📖",
+        "color": "#B45309"
+      },
+      "tcm_clinical_2": {
+        "icon": "👶",
+        "color": "#EF4444"
+      },
+      "tcm_clinical_3": {
+        "icon": "🩹",
+        "color": "#8B5CF6"
+      },
+      "tcm_clinical_4": {
+        "icon": "🪡",
+        "color": "#0891B2"
+      }
+    },
+    "subjectColors": {
+      "中醫臨床醫學(一)": "#B45309",
+      "中醫臨床醫學(二)": "#EF4444",
+      "中醫臨床醫學(三)": "#8B5CF6",
+      "中醫臨床醫學(四)": "#0891B2"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 中醫師二階國考題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "中醫師第二階段國考",
+    "shortName": "中醫師(二)",
+    "studentType": "中醫學系學生",
+    "years": "100-115",
+    "totalQ": 9230,
+    "examDesc": "中醫師國考第二階段為專門職業及技術人員高等考試，每年舉行兩次。通過第一階段後始得應考，通過第二階段並完成臨床訓練即可取得中醫師執照。",
+    "paperDesc": "考試分為四科，每科各 80 題選擇題，合計 320 題。及格標準為總分達 60 分。",
+    "subjects": "中醫臨床醫學(一)、(二)、(三)、(四)",
+    "mockDesc": "完整模擬四科各 80 題，192/320 及格",
+    "subjectDetails": [
+      [
+        "中醫臨床醫學(一)",
+        "傷寒論(學)、溫病學、金匱要略、中醫證治學。"
+      ],
+      [
+        "中醫臨床醫學(二)",
+        "中醫內科學、中醫婦科學、中醫兒科學。"
+      ],
+      [
+        "中醫臨床醫學(三)",
+        "中醫外科學、中醫傷科學、中醫五官科學。"
+      ],
+      [
+        "中醫臨床醫學(四)",
+        "針灸科學。"
+      ]
+    ]
+  }
+}

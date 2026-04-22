@@ -1,0 +1,95 @@
+{
+  "id": "tcm1",
+  "name": "中醫師(一)",
+  "short": "中醫一",
+  "icon": "🌿",
+  "category": "medical",
+  "subCategory": "中醫師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "tcm-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-tcm1.json",
+  "totalQ": 4624,
+  "passScore": 96,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "中醫基礎(一)",
+      "subject": "中醫基礎醫學(一)",
+      "subjects": "中醫醫學史、中醫基礎理論、內經、難經",
+      "count": 80,
+      "timeLimit": 60
+    },
+    {
+      "id": "paper2",
+      "name": "中醫基礎(二)",
+      "subject": "中醫基礎醫學(二)",
+      "subjects": "中醫方劑學、中醫藥物學",
+      "count": 80,
+      "timeLimit": 60
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "tcm_basic_1": "基礎(一)",
+      "tcm_basic_2": "基礎(二)"
+    },
+    "stageStyles": {
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "tcm_basic_1": {
+        "icon": "📜",
+        "color": "#059669"
+      },
+      "tcm_basic_2": {
+        "icon": "🌿",
+        "color": "#10B981"
+      }
+    },
+    "subjectColors": {
+      "中醫基礎醫學(一)": "#059669",
+      "中醫基礎醫學(二)": "#10B981"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 中醫師一階國考題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "中醫師第一階段國考",
+    "shortName": "中醫師(一)",
+    "studentType": "中醫學系學生",
+    "years": "100-115",
+    "totalQ": 4536,
+    "examDesc": "中醫師國考第一階段為專門職業及技術人員高等考試，每年舉行兩次，應考資格為中醫學系學生修業至規定年限。第一階段通過後始得應考第二階段。",
+    "paperDesc": "考試分為兩科，每科各 80 題選擇題，合計 160 題。及格標準為總分達 60 分。",
+    "subjects": "中醫基礎醫學(一)、中醫基礎醫學(二)",
+    "mockDesc": "完整模擬兩科各 80 題，96/160 及格",
+    "subjectDetails": [
+      [
+        "中醫基礎醫學(一)",
+        "中醫醫學史、中醫基礎理論、內經、難經。"
+      ],
+      [
+        "中醫基礎醫學(二)",
+        "中醫方劑學、中醫藥物學。"
+      ]
+    ]
+  }
+}

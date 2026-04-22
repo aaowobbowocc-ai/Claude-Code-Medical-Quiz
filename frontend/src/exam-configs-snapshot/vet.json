@@ -1,0 +1,167 @@
+{
+  "id": "vet",
+  "name": "獸醫師",
+  "short": "獸醫",
+  "icon": "🐾",
+  "category": "medical",
+  "subCategory": "獸醫師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "vet-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-vet.json",
+  "totalQ": 6240,
+  "passScore": 288,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "病理學",
+      "subject": "獸醫病理學",
+      "subjects": "獸醫病理學",
+      "count": 80,
+      "timeLimit": 60
+    },
+    {
+      "id": "paper2",
+      "name": "藥理學",
+      "subject": "獸醫藥理學",
+      "subjects": "獸醫藥理學",
+      "count": 80,
+      "timeLimit": 60
+    },
+    {
+      "id": "paper3",
+      "name": "實驗診斷學",
+      "subject": "獸醫實驗診斷學",
+      "subjects": "獸醫實驗診斷學",
+      "count": 80,
+      "timeLimit": 60
+    },
+    {
+      "id": "paper4",
+      "name": "普通疾病學",
+      "subject": "獸醫普通疾病學",
+      "subjects": "獸醫普通疾病學",
+      "count": 80,
+      "timeLimit": 60
+    },
+    {
+      "id": "paper5",
+      "name": "傳染病學",
+      "subject": "獸醫傳染病學",
+      "subjects": "獸醫傳染病學",
+      "count": 80,
+      "timeLimit": 60
+    },
+    {
+      "id": "paper6",
+      "name": "公共衛生學",
+      "subject": "獸醫公共衛生學",
+      "subjects": "獸醫公共衛生學",
+      "count": 80,
+      "timeLimit": 60
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "vet_pathology": "病理",
+      "vet_pharmacology": "藥理",
+      "vet_lab_diagnosis": "實驗診斷",
+      "vet_common_disease": "普通疾病",
+      "vet_infectious": "傳染病",
+      "vet_public_health": "公共衛生"
+    },
+    "stageStyles": {
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "vet_pathology": {
+        "icon": "🔬",
+        "color": "#DC2626"
+      },
+      "vet_pharmacology": {
+        "icon": "💊",
+        "color": "#7C3AED"
+      },
+      "vet_lab_diagnosis": {
+        "icon": "🧪",
+        "color": "#0891B2"
+      },
+      "vet_common_disease": {
+        "icon": "🩺",
+        "color": "#059669"
+      },
+      "vet_infectious": {
+        "icon": "🦠",
+        "color": "#D97706"
+      },
+      "vet_public_health": {
+        "icon": "🌍",
+        "color": "#0EA5E9"
+      }
+    },
+    "subjectColors": {
+      "獸醫病理學": "#DC2626",
+      "獸醫藥理學": "#7C3AED",
+      "獸醫實驗診斷學": "#0891B2",
+      "獸醫普通疾病學": "#059669",
+      "獸醫傳染病學": "#D97706",
+      "獸醫公共衛生學": "#0EA5E9"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 獸醫師國考題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "獸醫師國考",
+    "shortName": "獸醫師",
+    "studentType": "獸醫學系學生",
+    "years": "106-114",
+    "totalQ": 6240,
+    "examDesc": "獸醫師國考為專門職業及技術人員高等考試，通常於每年第二次考試梯次舉行，應考資格為獸醫學系畢業。通過後即可取得獸醫師執照。",
+    "paperDesc": "考試分為六科，每科各 80 題選擇題，合計 480 題。及格標準為總分達 60 分。",
+    "subjects": "獸醫病理學、藥理學、實驗診斷學、普通疾病學、傳染病學、公共衛生學",
+    "mockDesc": "完整模擬六科各 80 題，288/480 及格",
+    "subjectDetails": [
+      [
+        "獸醫病理學",
+        "動物疾病之病因學、病理變化及組織學變化。"
+      ],
+      [
+        "獸醫藥理學",
+        "獸醫常用藥物之藥物動力學、藥效學及臨床應用。"
+      ],
+      [
+        "獸醫實驗診斷學",
+        "動物血液學、尿液學、細胞學等實驗室診斷。"
+      ],
+      [
+        "獸醫普通疾病學",
+        "犬貓馬牛豬等動物之常見內科、外科疾病。"
+      ],
+      [
+        "獸醫傳染病學",
+        "動物細菌、病毒、寄生蟲傳染病及人畜共通傳染病。"
+      ],
+      [
+        "獸醫公共衛生學",
+        "食品衛生、環境衛生、流行病學與人畜共通疾病防治。"
+      ]
+    ]
+  }
+}

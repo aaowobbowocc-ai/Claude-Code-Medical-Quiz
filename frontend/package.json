@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node build-shells.cjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "seo:intros": "node scripts/generate-seo-intros.cjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.103.0",

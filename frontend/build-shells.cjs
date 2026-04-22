@@ -17,6 +17,19 @@ const path = require('path')
 const DIST = path.resolve(__dirname, 'dist')
 const CONFIGS_DIR = path.resolve(__dirname, '..', 'backend', 'exam-configs')
 const TEMPLATE = path.join(DIST, 'index.html')
+const INTROS_FILE = path.resolve(__dirname, 'src', 'seo-intros.json')
+
+let INTROS = {}
+try {
+  if (fs.existsSync(INTROS_FILE)) {
+    INTROS = JSON.parse(fs.readFileSync(INTROS_FILE, 'utf8'))
+    console.log(`[generate-shells] loaded ${Object.keys(INTROS).length} long-form intros from src/seo-intros.json`)
+  } else {
+    console.warn(`[generate-shells] warn: ${INTROS_FILE} not found — will fall back to examDesc for intro`)
+  }
+} catch (e) {
+  console.warn(`[generate-shells] warn: cannot parse seo-intros.json (${e.message}) — falling back`)
+}
 
 const CATEGORY_LABEL = {
   medical: '醫事人員國考',
@@ -99,22 +112,42 @@ function buildShell(tpl, cfg) {
   html = replaceTag(html, /<meta name="twitter:description" content="[^"]*" \/>/,
     `<meta name="twitter:description" content="${esc(description)}" />`)
 
-  // Build exam-specific crawlable content block (shared by #root and <noscript>)
+  // Long-form intro (400字 Gemini-generated) with fallback to examDesc + paperDesc
+  const longIntro = (INTROS[cfg.id] && String(INTROS[cfg.id]).trim())
+    || [descBase, seo.paperDesc].filter(Boolean).join('')
+
+  // Paper/subject list from papers[].subject (falls back to seo.subjects split)
+  const paperSubjects = Array.isArray(cfg.papers) && cfg.papers.length
+    ? cfg.papers.map(p => p.subject || p.name).filter(Boolean)
+    : subjectList
+  const paperListHtml = paperSubjects.length
+    ? paperSubjects.map(s => `          <li>${esc(s)}</li>`).join('\n')
+    : '          <li>詳見考選部公告</li>'
+
+  const totalQ = cfg.totalQ || (seo && seo.totalQ) || ''
+  const statsSentence = totalQ
+    ? `題庫收錄 ${totalQ} 題，年度範圍 106-115 年。即時對戰、AI 解說、歷屆模擬考、弱點分析。`
+    : `題庫收錄歷屆考古題，年度範圍 106-115 年。即時對戰、AI 解說、歷屆模擬考、弱點分析。`
+
+  // Build exam-specific crawlable content block (shared by #root and <noscript>).
+  // Structure per SEO spec: H1 → 400字 intro → 考試科目 → 統計 → 相關資源.
   const staticBody = `
-      <div style="max-width:640px;margin:40px auto;padding:20px;font-family:'Noto Sans TC',sans-serif;color:#333;line-height:1.7">
-        <h1 style="font-size:1.5rem;color:#1A6B9A">${esc(fullName)} — 國考知識王</h1>
-        <p>${esc(descBase)}</p>
-${seo.paperDesc ? `        <h2 style="font-size:1.2rem;margin-top:1.5rem">考試結構</h2>\n        <p>${esc(seo.paperDesc)}</p>\n` : ''}${seo.subjects ? `        <h2 style="font-size:1.2rem;margin-top:1.5rem">考試科目</h2>\n        <p>${esc(seo.subjects)}</p>\n` : ''}        <h2 style="font-size:1.2rem;margin-top:1.5rem">平台功能</h2>
+      <div style="max-width:720px;margin:40px auto;padding:20px;font-family:'Noto Sans TC',sans-serif;color:#333;line-height:1.7">
+        <h1 style="font-size:1.6rem;color:#1A6B9A">${esc(fullName)} 線上題庫與模擬考</h1>
+        <p>${esc(longIntro)}</p>
+        <h2 style="font-size:1.2rem;margin-top:1.5rem">考試科目</h2>
         <ul>
-          <li>歷屆考古題練習 — 依科目、年度篩選</li>
-          <li>即時對戰 — 與其他考生即時 PK</li>
-          <li>歷屆模擬考 — 模擬真實國考限時作答</li>
-          <li>AI 智慧解說 — 每題提供詳細解析</li>
-          <li>弱點分析 — 追蹤正確率找出弱科</li>
-          <li>精華筆記、留言板、排行榜</li>
+${paperListHtml}
         </ul>
-        <p>完全免費，無需註冊。</p>
-        <nav>
+        <h2 style="font-size:1.2rem;margin-top:1.5rem">統計</h2>
+        <p>${esc(statsSentence)}</p>
+        <h2 style="font-size:1.2rem;margin-top:1.5rem">相關資源</h2>
+        <ul>
+          <li><a href="/practice">練習模式</a></li>
+          <li><a href="/mock-exam">歷屆模擬考</a></li>
+          <li><a href="/browse">題庫瀏覽</a></li>
+        </ul>
+        <nav style="margin-top:1.5rem;font-size:0.9rem;color:#666">
           <a href="/">首頁</a> |
           <a href="/privacy">隱私權政策</a> |
           <a href="/tos">服務條款</a> |

@@ -114,7 +114,11 @@ function AppRoutes() {
       if (!preservedKeys.has(k)) preserved.append(k, v)
     }
     const qs = preserved.toString()
-    navigate(location.pathname + (qs ? `?${qs}` : ''), { replace: true })
+    // If user landed on "/" with ?exam=X, rewrite to "/X/" so the URL matches
+    // the canonical exam-landing path. Otherwise keep current pathname (e.g.
+    // /practice?exam=doctor1 → /practice with state set).
+    const targetPath = location.pathname === '/' ? `/${examParam}/` : location.pathname
+    navigate(targetPath + (qs ? `?${qs}` : ''), { replace: true })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

@@ -30,10 +30,12 @@ export default function ShareChallengeButton({
   const buildUrl = () => {
     const origin = (typeof window !== 'undefined' && window.location?.origin) || 'https://examking.tw'
     const qs = new URLSearchParams()
-    if (exam)    qs.set('exam', exam)
     if (subject) qs.set('subject', subject)
     qs.set('from', 'share')
-    return `${origin}/?${qs.toString()}`
+    // Use canonical exam-landing path /{examId}/ instead of /?exam=X to keep
+    // Google index + GA4 page_view consistent with sitemap entries.
+    const path = exam ? `/${exam}/` : '/'
+    return `${origin}${path}?${qs.toString()}`
   }
 
   const buildMessage = (url) => {

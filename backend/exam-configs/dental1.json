@@ -26,50 +26,56 @@
       "id": "paper1",
       "name": "卷一",
       "subject": "卷一",
-      "subjects": "牙醫解剖與組織40、牙體形態20、口腔生理生化20",
+      "subjects": "口腔解剖、牙體形態、口腔組織與胚胎、生化（牙醫學一）",
       "count": 80,
       "pointsPerQ": 1.25,
       "breakdown": [
         {
-          "subject": "牙醫解剖與組織",
-          "count": 40
+          "subject": "口腔解剖學",
+          "count": null
         },
         {
-          "subject": "牙體形態",
-          "count": 20
+          "subject": "牙體形態學",
+          "count": null
         },
         {
-          "subject": "口腔生理與生化",
-          "count": 20
+          "subject": "口腔組織與胚胎學",
+          "count": null
+        },
+        {
+          "subject": "生物化學",
+          "count": null
         }
       ],
+      "breakdownNote": "考選部命題大綱（114 年版）：牙醫學（一）含四科，不規定題數比例亦不規定題號順序，故不做子科目分類",
       "timeLimit": 60
     },
     {
       "id": "paper2",
       "name": "卷二",
       "subject": "卷二",
-      "subjects": "口病20、藥理20、微免20、口腔解剖組織20",
+      "subjects": "口腔病理、牙科材料、口腔微生物、牙科藥理（牙醫學二）",
       "count": 80,
       "pointsPerQ": 1.25,
       "breakdown": [
         {
-          "subject": "口腔病理",
-          "count": 20
+          "subject": "口腔病理學",
+          "count": null
         },
         {
-          "subject": "藥理學",
-          "count": 20
+          "subject": "牙科材料學",
+          "count": null
         },
         {
-          "subject": "微生物免疫學",
-          "count": 20
+          "subject": "口腔微生物學",
+          "count": null
         },
         {
-          "subject": "口腔解剖與組織",
-          "count": 20
+          "subject": "牙科藥理學",
+          "count": null
         }
       ],
+      "breakdownNote": "考選部命題大綱（114 年版）：牙醫學（二）含四科，不規定題數比例亦不規定題號順序，故不做子科目分類",
       "timeLimit": 60
     }
   ],

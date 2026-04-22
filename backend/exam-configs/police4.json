@@ -1,0 +1,100 @@
+{
+  "id": "police4",
+  "name": "一般警察特考四等",
+  "short": "警四",
+  "icon": "👮",
+  "category": "civil-service",
+  "subCategory": "一般警察特考",
+  "level": "junior",
+  "selectionType": "quota",
+  "persona": [
+    "civil-exam-prep"
+  ],
+  "sharedBanks": ["common_chinese", "common_english", "common_law_knowledge"],
+  "sharedScope": "level_3_common",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-police4.json",
+  "totalQ": 807,
+  "passScore": null,
+  "passRate": null,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "國文",
+      "subject": "國文",
+      "subjects": "國文（作文、公文、測驗）選擇題部分",
+      "count": 10,
+      "timeLimit": null
+    },
+    {
+      "id": "paper2",
+      "name": "英文",
+      "subject": "英文",
+      "subjects": "英文",
+      "count": 50,
+      "timeLimit": null
+    },
+    {
+      "id": "paper3",
+      "name": "法學知識",
+      "subject": "法學知識",
+      "subjects": "中華民國憲法概要、法學緒論",
+      "count": 50,
+      "timeLimit": null
+    },
+    {
+      "id": "paper4",
+      "name": "刑法概要",
+      "subject": "刑法概要",
+      "subjects": "刑法概要（選擇題部分）",
+      "count": 25,
+      "timeLimit": null
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" }
+  ],
+  "ui": {
+    "tagNames": {
+      "chinese": "國文",
+      "english": "英文",
+      "law_knowledge": "法學知識",
+      "criminal_law": "刑法概要"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "chinese": { "icon": "📝", "color": "#EF4444" },
+      "english": { "icon": "🔤", "color": "#3B82F6" },
+      "law_knowledge": { "icon": "⚖️", "color": "#8B5CF6" },
+      "criminal_law": { "icon": "🔒", "color": "#DC2626" }
+    },
+    "subjectColors": {
+      "國文": "#EF4444",
+      "英文": "#3B82F6",
+      "法學知識": "#8B5CF6",
+      "刑法概要": "#DC2626"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 一般警察特考四等題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "一般警察特考四等（公務人員特種考試一般警察人員考試四等）",
+    "shortName": "一般警察特考四等",
+    "studentType": "警察考生",
+    "years": "108-114",
+    "totalQ": 807,
+    "examDesc": "公務人員特種考試一般警察人員考試四等，含行政警察人員等類科。考科：國文（作文、公文、測驗）、英文、法學知識（中華民國憲法概要+法學緒論）、刑法概要。",
+    "paperDesc": "國文 10 題、英文 50 題、法學知識 50 題、刑法概要 25 題（皆為選擇題部分）。",
+    "subjects": "國文、英文、法學知識、刑法概要",
+    "mockDesc": "模擬一般警察特考四等選擇題",
+    "subjectDetails": [
+      ["國文", "國文選擇題部分，每年 10 題（原卷含作文+公文+測驗）。"],
+      ["英文", "英文單選題，每年 50 題。"],
+      ["法學知識", "含中華民國憲法概要與法學緒論，每年 50 題。"],
+      ["刑法概要", "刑法概要選擇題部分，每年 25 題（原卷含申論+選擇）。"]
+    ]
+  }
+}

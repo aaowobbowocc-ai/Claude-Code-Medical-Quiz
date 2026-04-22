@@ -76,7 +76,7 @@ const EXAM_ORDER = [
   'tcm1', 'tcm2', 'vet',
   'nursing', 'nutrition', 'social-worker', 'pt', 'ot', 'medlab', 'radiology',
   'lawyer1', 'judicial',
-  'civil-senior', 'customs', 'police',
+  'civil-senior', 'customs', 'police', 'police4',
   'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
   'driver-car', 'driver-moto',
 ]

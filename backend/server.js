@@ -89,8 +89,32 @@ for (const [key, cfg] of Object.entries(examConfigs)) {
         groups[gkey].push({ q, idx });
       });
 
+      // Build subject→paper lookup for direct assignment when questions
+      // already carry a subject field that matches a paper's subject.
+      const bySubject = {};
+      for (const p of papers) {
+        if (p.subject) bySubject[p.subject] = p;
+      }
       for (const items of Object.values(groups)) {
-        // Assign papers based on proportion of paper.count
+        // Direct assignment path: every question has a subject matching a paper
+        const allMatch = items.every(({ q }) => q.subject && bySubject[q.subject]);
+        if (allMatch) {
+          items.forEach(({ q }) => {
+            const paper = bySubject[q.subject];
+            q.paper_id = paper.id;
+            q.paper_name = paper.name;
+            q.subject_name = q.subject_name || paper.subjects;
+            q.subject_tag = q.subject_tag || paper.id;
+            if (!q._idFixed) {
+              q.id = `${q.id}_${paper.id}`;
+              q._idFixed = true;
+            }
+          });
+          continue;
+        }
+        // Fallback: assign by proportional position within the year group.
+        // This is lossy when scrape yields vary by year (off-by-one paper drift),
+        // but needed for legacy JSONs without a subject field.
         const totalExpected = papers.reduce((s, p) => s + p.count, 0);
         const boundaries = [];
         let cumulative = 0;
@@ -98,7 +122,6 @@ for (const [key, cfg] of Object.entries(examConfigs)) {
           cumulative += Math.round((p.count / totalExpected) * items.length);
           boundaries.push(cumulative);
         }
-        // Ensure last boundary covers all items
         boundaries[boundaries.length - 1] = items.length;
         items.forEach(({ q }, i) => {
           const paperIdx = boundaries.findIndex(b => i < b);
@@ -108,7 +131,6 @@ for (const [key, cfg] of Object.entries(examConfigs)) {
           q.paper_name = paper.name;
           q.subject_name = q.subject_name || paper.subjects;
           q.subject_tag = q.subject_tag || paper.id;
-          // Fix duplicate IDs: append paper suffix
           if (!q._idFixed) {
             q.id = `${q.id}_${paper.id}`;
             q._idFixed = true;

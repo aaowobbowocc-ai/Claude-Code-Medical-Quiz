@@ -80,6 +80,22 @@
       ]
     }
     </script>
+    <!-- Strip tracking query params BEFORE analytics/ads scripts load so GA4
+         sees a clean page_location (prevents fbclid/gclid fragmenting reports).
+         utm_* params are kept — GA uses them for source/medium attribution. -->
+    <script>
+      (function stripTracking() {
+        try {
+          var url = new URL(window.location.href);
+          var dropList = ['fbclid','gclid','msclkid','yclid','twclid','igshid','_ga','mc_eid','mc_cid'];
+          var changed = false;
+          dropList.forEach(function (k) {
+            if (url.searchParams.has(k)) { url.searchParams.delete(k); changed = true; }
+          });
+          if (changed) window.history.replaceState({}, '', url.toString());
+        } catch (e) {}
+      })();
+    </script>
     <!-- Google AdSense -->
     <meta name="google-adsense-account" content="ca-pub-3134321405509741" />
     <!-- Monetag site verification (disabled during AdSense re-review; restore after approval) -->

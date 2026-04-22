@@ -39,7 +39,7 @@ export default function RewardAdSheet({ onClose }) {
           </p>
           <div className="bg-amber-50 rounded-2xl px-4 py-4 mt-4 mb-4">
             <p className="text-amber-700 text-sm font-medium">每次觀看可獲得 300 金幣</p>
-            <p className="text-amber-500 text-xs mt-1">每日最多 10 次，敬請期待</p>
+            <p className="text-amber-500 text-xs mt-1">每日最多 2 次，敬請期待</p>
           </div>
           <button onClick={onClose}
             className="px-8 py-3 rounded-2xl font-bold text-white active:scale-95 grad-cta">
@@ -57,14 +57,14 @@ export default function RewardAdSheet({ onClose }) {
           <div className="text-5xl mb-3">🎬</div>
           <h2 className="text-xl font-bold text-medical-dark">免費領取金幣</h2>
           <p className="text-gray-400 text-sm mt-2 leading-relaxed">
-            觀看廣告即可獲得金幣<br />每天最多 10 次
+            觀看廣告即可獲得金幣<br />每天最多 2 次
           </p>
         </div>
 
         {/* Reward info box */}
         <div className="bg-amber-50 rounded-2xl px-4 py-4 mb-5 text-center">
           <p className="text-amber-800 font-bold text-lg">🪙 看廣告獲得 {rewardCoins} 金幣</p>
-          <p className="text-amber-600/70 text-sm mt-1">今日已看 {info.watched}/10 次 · 剩餘 {info.remaining} 次</p>
+          <p className="text-amber-600/70 text-sm mt-1">今日已看 {info.watched}/2 次 · 剩餘 {info.remaining} 次</p>
         </div>
 
         {/* Phase-specific content */}

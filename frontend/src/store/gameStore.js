@@ -181,13 +181,8 @@ export const usePlayerStore = create(
       claimAdReward: () => {
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
         const s = get()
-        // Reset count if new day
         const count = s.lastAdDate === today ? s.adRewardToday : 0
-        if (count >= 10) return { success: false, reason: 'exhausted' }
-        // Cooldown: 5 分鐘，但當日前 2 次免冷卻（讓急需補幣的使用者能快速拿到 600）
-        if (count >= 2 && s.lastAdWatch && Date.now() - new Date(s.lastAdWatch).getTime() < 5 * 60000) {
-          return { success: false, reason: 'cooldown', remaining: Math.ceil((5 * 60000 - (Date.now() - new Date(s.lastAdWatch).getTime())) / 1000) }
-        }
+        if (count >= 2) return { success: false, reason: 'exhausted' }
         const newCount = count + 1
         set((st) => ({
           coins: st.coins + 300,
@@ -195,16 +190,13 @@ export const usePlayerStore = create(
           lastAdWatch: new Date().toISOString(),
           lastAdDate: today,
         }))
-        return { success: true, coins: 300, remaining: 10 - newCount }
+        return { success: true, coins: 300, remaining: 2 - newCount }
       },
       getAdRewardInfo: () => {
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
         const s = get()
         const count = s.lastAdDate === today ? s.adRewardToday : 0
-        const cooldownLeft = count >= 2 && s.lastAdWatch
-          ? Math.max(0, 5 * 60000 - (Date.now() - new Date(s.lastAdWatch).getTime()))
-          : 0
-        return { watched: count, remaining: 10 - count, cooldownMs: cooldownLeft }
+        return { watched: count, remaining: 2 - count, cooldownMs: 0 }
       },
       addExp: (n) => {
         const newExp = get().exp + n

@@ -114,7 +114,7 @@ export function useAdReward() {
       // In installed PWA mode, window.open often returns null even when the tab
       // opens successfully (COOP / standalone isolation). So we can't rely on
       // the return value — trust the call unless it throws, and let the daily
-      // 10/view + 5min cooldown gate guard against abuse.
+      // 2/view gate guard against abuse.
       try {
         window.open(MONETAG_DIRECT_LINK, '_blank', 'noopener,noreferrer')
       } catch {

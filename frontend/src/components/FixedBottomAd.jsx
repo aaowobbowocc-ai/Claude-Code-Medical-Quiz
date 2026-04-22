@@ -10,7 +10,9 @@ const HIDDEN_ROUTES = ['/game', '/lobby', '/board', '/privacy', '/tos', '/contac
 export default function FixedBottomAd() {
   const { pathname } = useLocation()
   const [dismissed, setDismissed] = useState(false)
-  const [adFailed, setAdFailed] = useState(!AD_CLIENT || !AD_SLOT)
+  // AdSense 尚未過審，直接進 fallback（贊助卡），避免新用戶看到空白廣告位。
+  // 過審後改回 useState(!AD_CLIENT || !AD_SLOT) 即可恢復 AdSense 嘗試。
+  const [adFailed, setAdFailed] = useState(true)
   const adRef = useRef(null)
   const pushedRef = useRef(false)
 

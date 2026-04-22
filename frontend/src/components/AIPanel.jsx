@@ -409,7 +409,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
 }
 
 /* Review panel — shown on results screen */
-export function ReviewPanel({ text, loading, onRequest, requested, notEnoughCoins, cost = 100 }) {
+export function ReviewPanel({ text, loading, onRequest, requested, notEnoughCoins, cost = 300 }) {
   if (notEnoughCoins) {
     return <NotEnoughCoinsBox label={`AI 檢討報告需要 ${cost} 金幣`} />
   }

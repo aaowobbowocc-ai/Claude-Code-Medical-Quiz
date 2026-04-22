@@ -1,10 +1,32 @@
 const crypto = require('crypto');
+const fs = require('fs');
+const path = require('path');
+const https = require('https');
 const Anthropic = require('@anthropic-ai/sdk');
 const supabase = require('./supabase');
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 const EXPLAIN_MODEL = 'claude-haiku-4-5-20251001';
+const GEMINI_MODEL = 'gemini-2.5-flash';
+
+// Gemini key: env var takes precedence (prod/Render); local dev falls back to
+// backend/.gemini-key (gitignored). Absence is fine — GEMINI_EXAMS just route
+// back to Claude Haiku.
+let GEMINI_KEY = process.env.GEMINI_API_KEY || '';
+if (!GEMINI_KEY) {
+  try { GEMINI_KEY = fs.readFileSync(path.join(__dirname, '.gemini-key'), 'utf8').trim(); } catch {}
+}
+
+// Cold / low-cache exams. Fresh Haiku calls for these never amortise through
+// the shared Supabase cache the way hot medical exams do, so we serve first
+// generations from Gemini Flash (free tier). Cache hits still stream the
+// stored text regardless of which model originally produced it.
+const GEMINI_EXAMS = new Set([
+  'vet', 'social-worker', 'lawyer1', 'judicial', 'customs', 'police',
+  'civil-senior', 'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
+  'driver-car', 'driver-moto',
+]);
 
 // Community-voting tiers for AI explanations (see migrations/002).
 //   pending   — fresh gen, unverified → half price (reward early reviewers)
@@ -157,7 +179,80 @@ async function streamAnthropic(res, prompt, maxTokens = 600, onComplete) {
   }
 }
 
+// Streaming Gemini via REST SSE. No SDK — uses built-in https to avoid adding
+// a dep for one call site. `thinkingBudget: 0` is required; otherwise 2.5-flash
+// silently burns maxOutputTokens on thinking and returns empty text.
+function streamGemini(res, prompt, maxTokens = 600, onComplete) {
+  return new Promise((resolve) => {
+    let fullText = '';
+    const body = JSON.stringify({
+      contents: [{ role: 'user', parts: [{ text: prompt }] }],
+      generationConfig: {
+        maxOutputTokens: maxTokens,
+        thinkingConfig: { thinkingBudget: 0 },
+      },
+    });
+    const req = https.request({
+      hostname: 'generativelanguage.googleapis.com',
+      path: `/v1beta/models/${GEMINI_MODEL}:streamGenerateContent?alt=sse&key=${GEMINI_KEY}`,
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) },
+    }, (gRes) => {
+      if (gRes.statusCode !== 200) {
+        let errBody = '';
+        gRes.on('data', d => { errBody += d.toString(); });
+        gRes.on('end', () => {
+          res.write(`data: ${JSON.stringify({ error: `gemini_${gRes.statusCode}` })}\n\n`);
+          res.end();
+          console.warn(`[gemini] HTTP ${gRes.statusCode}: ${errBody.slice(0, 200)}`);
+          resolve();
+        });
+        return;
+      }
+      let buf = '';
+      gRes.on('data', (chunk) => {
+        buf += chunk.toString('utf8');
+        const lines = buf.split('\n');
+        buf = lines.pop();
+        for (const line of lines) {
+          if (!line.startsWith('data: ')) continue;
+          const raw = line.slice(6).trim();
+          if (!raw) continue;
+          try {
+            const parsed = JSON.parse(raw);
+            const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
+            if (text) {
+              fullText += text;
+              res.write(`data: ${JSON.stringify({ text })}\n\n`);
+            }
+          } catch { /* partial JSON frame, ignore */ }
+        }
+      });
+      gRes.on('end', () => {
+        res.write('data: [DONE]\n\n');
+        res.end();
+        if (onComplete && fullText) onComplete(fullText);
+        resolve();
+      });
+      gRes.on('error', (e) => {
+        res.write(`data: ${JSON.stringify({ error: e.message })}\n\n`);
+        res.end();
+        resolve();
+      });
+    });
+    req.on('error', (e) => {
+      res.write(`data: ${JSON.stringify({ error: e.message })}\n\n`);
+      res.end();
+      resolve();
+    });
+    req.write(body);
+    req.end();
+  });
+}
+
 function registerRoutes(app, examData, stats) {
+  console.log(`[ai] explain model: Haiku default, Gemini fallback ${GEMINI_KEY ? 'enabled' : 'DISABLED (no key)'} for ${GEMINI_EXAMS.size} exams`);
+
   // POST /explain
   app.post('/explain', async (req, res) => {
     const { question, options, answer, subject_name, user_answer, question_id, exam, shared_bank } = req.body;
@@ -239,8 +334,13 @@ ${wrongNote}
 **🏥 臨床應用**
 （一句話說明這個知識點在臨床上的意義）`;
 
-    await streamAnthropic(res, prompt, 600, (fullText) => {
-      saveCachedExplanation(cacheKey, fullText, EXPLAIN_MODEL);
+    // Route cold exams to Gemini Flash (free tier) when a key is available;
+    // otherwise everything falls through to Claude Haiku.
+    const useGemini = GEMINI_KEY && GEMINI_EXAMS.has(exam);
+    const modelUsed = useGemini ? GEMINI_MODEL : EXPLAIN_MODEL;
+    const streamer = useGemini ? streamGemini : streamAnthropic;
+    await streamer(res, prompt, 600, (fullText) => {
+      saveCachedExplanation(cacheKey, fullText, modelUsed);
     });
   });
 

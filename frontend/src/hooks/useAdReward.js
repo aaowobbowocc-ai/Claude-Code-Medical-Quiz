@@ -112,9 +112,13 @@ export function useAdReward() {
     // countdown is primarily a UX beat + anti-spam guard. User can freely
     // switch back to our tab during the wait.
     if (MONETAG_DIRECT_LINK) {
-      const popup = window.open(MONETAG_DIRECT_LINK, '_blank', 'noopener,noreferrer')
-      if (!popup) {
-        // Popup blocked — tell user to allow popups or retry
+      // In installed PWA mode, window.open often returns null even when the tab
+      // opens successfully (COOP / standalone isolation). So we can't rely on
+      // the return value — trust the call unless it throws, and let the daily
+      // 10/view + 5min cooldown gate guard against abuse.
+      try {
+        window.open(MONETAG_DIRECT_LINK, '_blank', 'noopener,noreferrer')
+      } catch {
         setPhase('error')
         return false
       }

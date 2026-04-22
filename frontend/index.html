@@ -140,7 +140,35 @@
           <li>機車駕照筆試（三選一選擇題）</li>
         </ul>
         <p>所有題目來源為考選部歷年公開之國家考試考古題（106-115 年度），AI 解說由 Anthropic Claude 人工智慧生成，僅供參考。完全免費，無需註冊。</p>
-        <nav><a href="/privacy">隱私權政策</a> | <a href="/tos">服務條款</a> | <a href="/contact">關於我們</a></nav>
+
+        <h2 style="font-size:1.2rem;margin-top:1.5rem">我們和其他題庫有什麼不同？</h2>
+        <p>台灣的國考題庫平台為數不少，但多數只是把考選部 PDF 複製成純列表，缺乏「怎麼讀得快」的輔助。國考知識王把題目按<strong>年度、科目、子科目</strong>三層切開，配合即時對戰與弱點分析，讓使用者從「盲刷」變成「知道自己哪裡弱」。以醫師一階為例，平台將每份卷分成解剖、生理、病理、藥理、微免等 10 個子科目分桶，使用者可針對特定科目連刷 50 題，比散彈式練習有效率許多。</p>
+
+        <h2 style="font-size:1.2rem;margin-top:1.5rem">各考試改制一覽（2024-2026）</h2>
+        <ul>
+          <li><strong>護理師</strong>：111 年起基礎醫學改 50 題、113 年起全科改 50 題（原 80 題）</li>
+          <li><strong>藥師二階</strong>：110 年起藥物治療卷從 80 題改為 54 題；法規卷維持 50 題</li>
+          <li><strong>牙醫師</strong>：114 年第二次起啟用新版命題大綱（牙醫學二修訂）</li>
+          <li><strong>機車駕照</strong>：2026-01-30 起筆試 50 題 × 2 分（原 40 題 × 2.5 分）、全選擇題</li>
+          <li><strong>汽車駕照</strong>：2026-06 起筆試 40→50 題，取消是非題、全選擇題</li>
+          <li><strong>醫師一階</strong>：113 年起固定分卷（醫學一=解剖+生理+病理+藥理+微免，醫學二=應用醫學）</li>
+        </ul>
+
+        <h2 style="font-size:1.2rem;margin-top:1.5rem">常見問題 (FAQ)</h2>
+        <dl>
+          <dt style="font-weight:bold;margin-top:0.8rem">Q：為什麼有些題目沒有圖？</dt>
+          <dd style="margin-left:0">A：考選部公開的 PDF 在轉檔過程中會遺失部分影像（切片、X 光片、心電圖等）。平台已自動從 PDF 抽出可解析的嵌入圖，無法解析的題目會標示「缺圖」並在題目前附上備註。</dd>
+          <dt style="font-weight:bold;margin-top:0.8rem">Q：AI 解說準確嗎？</dt>
+          <dd style="margin-left:0">A：AI 解說為 Anthropic Claude 生成的參考意見，會標示「AI 解說」或「參考解答」。少部分高頻考點由人工審核後會升級為「參考解答」綠標。使用時請以考選部公布答案為準。</dd>
+          <dt style="font-weight:bold;margin-top:0.8rem">Q：歷屆送分題（disputed）怎麼處理？</dt>
+          <dd style="margin-left:0">A：送分題於資料庫標記 <code>disputed: true</code>，練習模式與隨機出題時自動排除，避免使用者被已失效的答案誤導。模擬考則保留在原題號以忠實模擬當年考況。</dd>
+          <dt style="font-weight:bold;margin-top:0.8rem">Q：對戰模式怎麼運作？</dt>
+          <dd style="margin-left:0">A：即時 PvP 對戰房間，雙方答同一批題目，先答對 5 題者勝。房間公開或邀請碼連線。WebSocket 同步狀態，平均延遲 &lt; 100 ms。</dd>
+          <dt style="font-weight:bold;margin-top:0.8rem">Q：弱點分析怎麼看？</dt>
+          <dd style="margin-left:0">A：每次答題後記錄該科正確率，累積夠樣本後會標示「弱項科目」，並推薦針對該科的歷屆題連刷。資料存本機與 Supabase 雙寫，換裝置也會同步。</dd>
+        </dl>
+
+        <nav style="margin-top:1.5rem"><a href="/guides">備考攻略</a> | <a href="/privacy">隱私權政策</a> | <a href="/tos">服務條款</a> | <a href="/contact">關於我們</a> | <a href="/coverage">題庫覆蓋率</a> | <a href="/changelog">更新公告</a></nav>
       </div>
       <!-- /static-seo -->
     </div>

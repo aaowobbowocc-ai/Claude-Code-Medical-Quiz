@@ -175,6 +175,84 @@ ${paperListHtml}
   return html
 }
 
+function buildGuideShell(tpl, guide) {
+  const title = `${guide.title}｜國考知識王`
+  const description = trim(guide.description || '', 150)
+  const canonical = `https://examking.tw/guides/${guide.slug}/`
+  const keywords = guide.keywords || '國考,備考攻略,國考知識王'
+  let html = tpl
+
+  html = replaceTag(html, /<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`)
+  html = replaceTag(html, /<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${esc(description)}" />`)
+  html = replaceTag(html, /<meta name="keywords" content="[^"]*" \/>/, `<meta name="keywords" content="${esc(keywords)}" />`)
+  html = replaceTag(html, /<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${canonical}" />`)
+  html = replaceTag(html, /<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${esc(title)}" />`)
+  html = replaceTag(html, /<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${esc(description)}" />`)
+  html = replaceTag(html, /<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${canonical}" />`)
+  html = replaceTag(html, /<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${esc(title)}" />`)
+  html = replaceTag(html, /<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${esc(description)}" />`)
+
+  const related = (guide.related || [])
+    .map(r => `        <li><a href="${esc(r.slug)}">${esc(r.label)}</a></li>`)
+    .join('\n')
+
+  const staticBody = `
+      <article style="max-width:720px;margin:40px auto;padding:20px;font-family:'Noto Sans TC',sans-serif;color:#333;line-height:1.8">
+        <nav style="font-size:0.85rem;color:#666;margin-bottom:0.5rem">
+          <a href="/guides">備考攻略</a> › <span>${esc(guide.title)}</span>
+        </nav>
+        <h1 style="font-size:1.6rem;color:#1A6B9A">${esc(guide.title)}</h1>
+        <p style="font-size:0.8rem;color:#999">${esc(guide.date || '')}</p>
+        <div>${guide.contentHtml || ''}</div>
+        ${related ? `<h2 style="font-size:1.1rem;margin-top:2rem">相關資源</h2>\n        <ul>\n${related}\n        </ul>` : ''}
+        <nav style="margin-top:2rem;font-size:0.9rem;color:#666">
+          <a href="/guides">← 返回攻略列表</a> | <a href="/">首頁</a>
+        </nav>
+      </article>`
+
+  html = html.replace(
+    /(<div id="root">)[\s\S]*?<!-- \/static-seo -->/,
+    `$1${staticBody}\n      <!-- /static-seo -->`
+  )
+  html = html.replace(/<noscript>\s*<div style="max-width:6[\s\S]*?<\/noscript>/,
+    `<noscript>${staticBody}\n      <p>請啟用 JavaScript 以使用完整功能。</p>\n    </noscript>`)
+  return html
+}
+
+function buildGuideIndexShell(tpl, guides) {
+  const title = '備考攻略｜國考知識王'
+  const description = '國考備考攻略與學習心法：醫師、藥師、護理師、醫檢師等各國考準備指南，以及 AI 刷題、間隔重複等學習法實戰。'
+  const canonical = 'https://examking.tw/guides/'
+  let html = tpl
+  html = replaceTag(html, /<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`)
+  html = replaceTag(html, /<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${esc(description)}" />`)
+  html = replaceTag(html, /<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${canonical}" />`)
+  html = replaceTag(html, /<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${esc(title)}" />`)
+  html = replaceTag(html, /<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${esc(description)}" />`)
+  html = replaceTag(html, /<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${canonical}" />`)
+
+  const list = guides.map(g =>
+    `        <li style="margin-bottom:1rem"><a href="/guides/${esc(g.slug)}" style="font-weight:bold;color:#1A6B9A">${esc(g.title)}</a><br><span style="color:#666;font-size:0.9rem">${esc(g.description)}</span></li>`
+  ).join('\n')
+
+  const staticBody = `
+      <div style="max-width:720px;margin:40px auto;padding:20px;font-family:'Noto Sans TC',sans-serif;color:#333;line-height:1.7">
+        <h1 style="font-size:1.6rem;color:#1A6B9A">備考攻略</h1>
+        <p>依考試類別 & 學習方法整理的長文指南。</p>
+        <ul>
+${list}
+        </ul>
+        <nav style="margin-top:2rem;font-size:0.9rem;color:#666"><a href="/">首頁</a> | <a href="/changelog">更新公告</a></nav>
+      </div>`
+  html = html.replace(
+    /(<div id="root">)[\s\S]*?<!-- \/static-seo -->/,
+    `$1${staticBody}\n      <!-- /static-seo -->`
+  )
+  html = html.replace(/<noscript>\s*<div style="max-width:6[\s\S]*?<\/noscript>/,
+    `<noscript>${staticBody}\n      <p>請啟用 JavaScript 以使用完整功能。</p>\n    </noscript>`)
+  return html
+}
+
 function main() {
   if (!fs.existsSync(TEMPLATE)) {
     console.error(`[generate-shells] ${TEMPLATE} not found — run vite build first`)
@@ -208,6 +286,28 @@ function main() {
     count++
   }
   console.log(`[generate-shells] wrote ${count} exam shells → dist/<id>/index.html`)
+
+  // Guides: prerender /guides/ + each /guides/:slug/
+  const guidesFile = path.resolve(__dirname, 'src', 'guides.json')
+  if (fs.existsSync(guidesFile)) {
+    try {
+      const { guides } = JSON.parse(fs.readFileSync(guidesFile, 'utf8'))
+      if (Array.isArray(guides) && guides.length) {
+        const guidesDir = path.join(DIST, 'guides')
+        fs.mkdirSync(guidesDir, { recursive: true })
+        fs.writeFileSync(path.join(guidesDir, 'index.html'), buildGuideIndexShell(tpl, guides))
+        for (const g of guides) {
+          if (!g.slug) continue
+          const outDir = path.join(guidesDir, g.slug)
+          fs.mkdirSync(outDir, { recursive: true })
+          fs.writeFileSync(path.join(outDir, 'index.html'), buildGuideShell(tpl, g))
+        }
+        console.log(`[generate-shells] wrote 1 guides index + ${guides.length} guide pages → dist/guides/`)
+      }
+    } catch (e) {
+      console.warn(`[generate-shells] guides skip: ${e.message}`)
+    }
+  }
 }
 
 main()

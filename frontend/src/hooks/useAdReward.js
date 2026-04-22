@@ -5,10 +5,9 @@ import { usePlayerStore } from '../store/gameStore'
 // Set VITE_REWARDED_AD_SLOT in Vercel env vars after AdSense H5 approval
 const AD_CLIENT = 'ca-pub-3134321405509741'
 const REWARDED_AD_SLOT = import.meta.env.VITE_REWARDED_AD_SLOT || ''
-// Monetag Direct Link URL — used while AdSense H5 rewarded is unavailable.
-// Swap provider by changing the env var; if empty the hook falls back to
-// simulation mode so local dev still works.
-const MONETAG_DIRECT_LINK = import.meta.env.VITE_MONETAG_DIRECT_LINK || 'https://omg10.com/4/10909987'
+// Monetag Direct Link URL — disabled during AdSense re-review.
+// To restore: change '' back to `import.meta.env.VITE_MONETAG_DIRECT_LINK || 'https://omg10.com/4/10909987'`
+const MONETAG_DIRECT_LINK = ''
 const DIRECT_LINK_COUNTDOWN_SEC = 15
 const REWARD_COINS = 300
 

@@ -48,7 +48,22 @@
     {
       "id": 0,
       "tag": "all",
-      "name": "全部"
+      "name": "隨機混合"
+    },
+    {
+      "id": 1,
+      "tag": "social_work",
+      "name": "社會工作"
+    },
+    {
+      "id": 2,
+      "tag": "social_work_direct",
+      "name": "社會工作直接服務"
+    },
+    {
+      "id": 3,
+      "tag": "social_work_mgmt",
+      "name": "社會工作管理"
     }
   ],
   "ui": {

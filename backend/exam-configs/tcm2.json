@@ -58,7 +58,27 @@
     {
       "id": 0,
       "tag": "all",
-      "name": "全部"
+      "name": "隨機混合"
+    },
+    {
+      "id": 1,
+      "tag": "tcm_clinical_1",
+      "name": "中醫臨床醫學(一)"
+    },
+    {
+      "id": 2,
+      "tag": "tcm_clinical_2",
+      "name": "中醫臨床醫學(二)"
+    },
+    {
+      "id": 3,
+      "tag": "tcm_clinical_3",
+      "name": "中醫臨床醫學(三)"
+    },
+    {
+      "id": 4,
+      "tag": "tcm_clinical_4",
+      "name": "中醫臨床醫學(四)"
     }
   ],
   "ui": {

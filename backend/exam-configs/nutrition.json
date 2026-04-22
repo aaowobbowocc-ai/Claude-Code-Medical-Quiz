@@ -130,7 +130,37 @@
     {
       "id": 0,
       "tag": "all",
-      "name": "全部"
+      "name": "隨機混合"
+    },
+    {
+      "id": 1,
+      "tag": "diet_therapy",
+      "name": "膳食療養學"
+    },
+    {
+      "id": 2,
+      "tag": "group_meal",
+      "name": "團體膳食設計"
+    },
+    {
+      "id": 3,
+      "tag": "physio_biochem",
+      "name": "生理與生化"
+    },
+    {
+      "id": 4,
+      "tag": "nutrition_science",
+      "name": "營養學"
+    },
+    {
+      "id": 5,
+      "tag": "public_nutrition",
+      "name": "公共衛生營養"
+    },
+    {
+      "id": 6,
+      "tag": "food_safety",
+      "name": "食品衛生安全"
     }
   ],
   "ui": {

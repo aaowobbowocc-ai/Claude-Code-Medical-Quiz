@@ -19,12 +19,12 @@ export default function Privacy() {
 
       <div className="flex-1 px-5 py-6">
         <div className="bg-white rounded-2xl shadow-sm p-6 text-sm text-gray-700 leading-relaxed space-y-5">
-          <p className="text-xs text-gray-400">最後更新日期：2026 年 4 月</p>
+          <p className="text-xs text-gray-400">最後更新日期：2026 年 4 月 23 日</p>
 
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">一、總則</h2>
             <p>
-              「國考知識王」（以下簡稱「本平台」）為一免費國家考試題庫練習平台，涵蓋醫事（醫師、牙醫師、藥師、護理師等）、法律（律師、司法特考）、公職（高考、普考、特考）等多類國考，致力於保護使用者的隱私權。
+              「國考知識王」（以下簡稱「本平台」）為一免費國家考試題庫練習平台，涵蓋醫事（醫師、牙醫師、藥師、護理師、中醫、獸醫、醫檢、物治、職治、放射、營養、社工等 16 類）、法律（律師一試、司法特考）、公職（高考三等、普考、初考、關務、警察等 8 類）、汽機車駕照筆試合計 26 類國考，收錄 100-115 年 150,000+ 題考古題，致力於保護使用者的隱私權。
               本政策說明我們如何蒐集、使用與保護您的個人資訊。使用本平台即表示您同意本隱私權政策的內容。
             </p>
           </section>
@@ -78,9 +78,13 @@ export default function Privacy() {
             <ul className="list-disc pl-5 space-y-1.5 mt-2">
               <li>Google AdSense（廣告）</li>
               <li>Google Analytics（流量分析）</li>
+              <li>Google Search Console（搜尋引擎檢索狀態）</li>
+              <li>Google OAuth（可選：綁定 Google 帳號同步資料）</li>
+              <li>Supabase（帳號資料同步：暱稱、金幣、跨裝置記錄；選擇綁定後才啟用）</li>
               <li>Vercel（網站託管）</li>
               <li>Render（後端伺服器託管）</li>
               <li>Anthropic Claude API（AI 題目解說功能）</li>
+              <li>Google Gemini API（部分考試的 AI 解說；冷門考試降低成本）</li>
             </ul>
           </section>
 

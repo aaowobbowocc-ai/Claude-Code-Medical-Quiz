@@ -19,12 +19,12 @@ export default function Terms() {
 
       <div className="flex-1 px-5 py-6">
         <div className="bg-white rounded-2xl shadow-sm p-6 text-sm text-gray-700 leading-relaxed space-y-5">
-          <p className="text-xs text-gray-400">最後更新日期：2026 年 4 月</p>
+          <p className="text-xs text-gray-400">最後更新日期：2026 年 4 月 23 日</p>
 
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">一、服務說明</h2>
             <p>
-              「國考知識王」（以下簡稱「本平台」）是一個免費的國家考試題庫練習平台，涵蓋醫事（醫師、牙醫師、藥師、護理師等）、法律（律師、司法特考）、公職（高考、普考、特考）等多類國考，
+              「國考知識王」（以下簡稱「本平台」）是一個免費的國家考試題庫練習平台，涵蓋醫事 16 類（醫師、牙醫師、藥師、護理師、中醫師、獸醫師、醫事檢驗師、物理治療師、職能治療師、醫事放射師、營養師、社會工作師等）、律師一試、公職 8 類（高考三等、普考、初考、關務、警察、司法特考等）、汽機車駕照筆試，合計 26 類國考，收錄 100-115 年 150,000+ 題考古題，
               提供即時對戰、自主練習、模擬考試、AI 解說等功能，旨在協助考生備考各類國家考試。
             </p>
           </section>

@@ -25,7 +25,7 @@
       "id": "paper1",
       "name": "基礎醫學",
       "subject": "基礎醫學",
-      "subjects": "解剖10、生理12、病理10、藥理10、微免8",
+      "subjects": "解剖10、生理10、病理10、藥理10、微免10",
       "count": 50,
       "breakdown": [
         {
@@ -34,7 +34,7 @@
         },
         {
           "subject": "生理學",
-          "count": 12
+          "count": 10
         },
         {
           "subject": "病理學",
@@ -46,10 +46,10 @@
         },
         {
           "subject": "微生物免疫學",
-          "count": 8
+          "count": 10
         }
       ],
-      "breakdownNote": "依歷屆題分布估計",
+      "breakdownNote": "歷屆題實測 Q1-10 解剖 / Q11-20 生理 / Q21-30 病理 / Q31-40 藥理 / Q41-50 微免；舊制 80 題版均分為 16/16/16/16/16",
       "timeLimit": 60
     },
     {
@@ -135,53 +135,73 @@
     }
   ],
   "stages": [
-    {
-      "id": 0,
-      "tag": "all",
-      "name": "全部"
-    }
+    { "id": 0,  "tag": "all",                "name": "隨機混合" },
+    { "id": 1,  "tag": "anatomy",            "name": "解剖學" },
+    { "id": 2,  "tag": "physiology",         "name": "生理學" },
+    { "id": 3,  "tag": "pathology",          "name": "病理學" },
+    { "id": 4,  "tag": "pharmacology",       "name": "藥理學" },
+    { "id": 5,  "tag": "microimmuno",        "name": "微生物免疫學" },
+    { "id": 6,  "tag": "fundamental_nursing","name": "基本護理學" },
+    { "id": 7,  "tag": "nursing_admin",      "name": "護理行政" },
+    { "id": 8,  "tag": "internal_nursing",   "name": "內科護理學" },
+    { "id": 9,  "tag": "surgical_nursing",   "name": "外科護理學" },
+    { "id": 10, "tag": "obstetric_nursing",  "name": "產科護理學" },
+    { "id": 11, "tag": "pediatric_nursing",  "name": "兒科護理學" },
+    { "id": 12, "tag": "psychiatric_nursing","name": "精神科護理學" },
+    { "id": 13, "tag": "community_nursing",  "name": "社區護理學" }
   ],
   "ui": {
     "tagNames": {
-      "basic_medicine": "基礎醫學",
-      "basic_nursing": "基護行政",
-      "med_surg": "內外科",
-      "obs_ped": "產兒科",
-      "psych_community": "精神社區"
+      "anatomy":             "解剖",
+      "physiology":          "生理",
+      "pathology":           "病理",
+      "pharmacology":        "藥理",
+      "microimmuno":         "微免",
+      "fundamental_nursing": "基本護理",
+      "nursing_admin":       "護理行政",
+      "internal_nursing":    "內科",
+      "surgical_nursing":    "外科",
+      "obstetric_nursing":   "產科",
+      "pediatric_nursing":   "兒科",
+      "psychiatric_nursing": "精神科",
+      "community_nursing":   "社區"
     },
     "stageStyles": {
-      "all": {
-        "icon": "🎲",
-        "color": "#64748B"
-      },
-      "basic_medicine": {
-        "icon": "🧬",
-        "color": "#3B82F6"
-      },
-      "basic_nursing": {
-        "icon": "💉",
-        "color": "#10B981"
-      },
-      "med_surg": {
-        "icon": "🏥",
-        "color": "#EF4444"
-      },
-      "obs_ped": {
-        "icon": "👶",
-        "color": "#8B5CF6"
-      },
-      "psych_community": {
-        "icon": "🧠",
-        "color": "#D97706"
-      }
+      "all":                 { "icon": "🎲", "color": "#64748B" },
+      "anatomy":             { "icon": "🦴", "color": "#EF4444" },
+      "physiology":          { "icon": "🫀", "color": "#F97316" },
+      "pathology":           { "icon": "🔬", "color": "#DC2626" },
+      "pharmacology":        { "icon": "💊", "color": "#8B5CF6" },
+      "microimmuno":         { "icon": "🦠", "color": "#10B981" },
+      "fundamental_nursing": { "icon": "💉", "color": "#3B82F6" },
+      "nursing_admin":       { "icon": "📋", "color": "#6366F1" },
+      "internal_nursing":    { "icon": "🏥", "color": "#0EA5E9" },
+      "surgical_nursing":    { "icon": "🩹", "color": "#D97706" },
+      "obstetric_nursing":   { "icon": "🤰", "color": "#EC4899" },
+      "pediatric_nursing":   { "icon": "👶", "color": "#A855F7" },
+      "psychiatric_nursing": { "icon": "🧠", "color": "#7C3AED" },
+      "community_nursing":   { "icon": "🏘️", "color": "#059669" }
     },
     "subjectColors": {
-      "基礎醫學": "#3B82F6",
-      "基本護理學與護理行政": "#10B981",
-      "基護與護理行政": "#10B981",
-      "內外科護理學": "#EF4444",
-      "產兒科護理學": "#8B5CF6",
-      "精神科與社區衛生護理學": "#D97706"
+      "解剖學":            "#EF4444",
+      "生理學":            "#F97316",
+      "病理學":            "#DC2626",
+      "藥理學":            "#8B5CF6",
+      "微生物免疫學":      "#10B981",
+      "基本護理學":        "#3B82F6",
+      "護理行政":          "#6366F1",
+      "內科護理學":        "#0EA5E9",
+      "外科護理學":        "#D97706",
+      "產科護理學":        "#EC4899",
+      "兒科護理學":        "#A855F7",
+      "精神科護理學":      "#7C3AED",
+      "社區護理學":        "#059669",
+      "基礎醫學":                   "#3B82F6",
+      "基本護理學與護理行政":       "#3B82F6",
+      "基護與護理行政":             "#3B82F6",
+      "內外科護理學":               "#0EA5E9",
+      "產兒科護理學":               "#EC4899",
+      "精神科與社區衛生護理學":     "#7C3AED"
     }
   },
   "seo": {

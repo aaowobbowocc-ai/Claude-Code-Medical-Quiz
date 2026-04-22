@@ -1,7 +1,10 @@
 import { useEffect } from 'react'
 
-const DEFAULT_TITLE = '國考知識王 — 最專業的醫藥護國考對戰練習平台'
-const DEFAULT_DESC = '免費醫事國考題庫，涵蓋醫師、牙醫、藥師、護理師等 26 類考試，150,000+ 題。即時對戰、AI 解說、歷屆模擬考、弱點分析，助你高效備考！'
+// Must match index.html static <title> AND useDocumentMeta.js DEFAULT_META.title.
+// Three sources setting document.title with different strings is what produced
+// the "醫學知識王 —..." / "國考知識王｜醫師一階 | 國考知識王" fragmentation in GA4.
+const DEFAULT_TITLE = '國考知識王 — 醫事 · 法律 · 公職國考對戰練習平台'
+const DEFAULT_DESC = '免費國家考試題庫練習平台，涵蓋醫事 16 類 + 社工 + 律師一試 + 警察特考、公職高普考、法律與共同科目，150,000+ 題考古題。即時對戰、AI 解說、歷屆模擬考、弱點分析，助你高效備考。'
 const DEFAULT_URL = 'https://examking.tw/'
 const DEFAULT_IMAGE = 'https://examking.tw/icons/icon-512.png'
 

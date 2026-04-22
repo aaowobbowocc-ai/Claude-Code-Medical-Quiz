@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { usePlayerStore, getLevelTitle } from '../store/gameStore'
 import { getExamTypes, getExamSeo, getExamConfig, getExamCategories, getExamsByCategory, getCategoryMeta, prefetchCategorySharedBanks } from '../config/examRegistry'
-import { usePageMeta } from '../hooks/usePageMeta'
 import { getSocket } from '../hooks/useSocket'
 import { useDailyMessage } from '../hooks/useDailyMessage'
 import { usePWA } from '../hooks/usePWA'
@@ -312,13 +311,11 @@ export default function Home() {
     id: 'doctor1', name: '醫師一階', short: '醫一', icon: '🩺', papers: [],
   }
 
-  // Dynamic SEO title / canonical / og per exam — powers Threads/FB/Google previews
-  // when someone shares examking.tw/?exam=<id>
-  usePageMeta(
-    currentExam ? `國考知識王｜${currentExam.name}` : null,
-    currentExam ? `${currentExam.name}國考題庫練習，涵蓋歷屆考古題、即時對戰、AI 解說、模擬考、弱點分析，免費使用！` : null,
-    { canonical: currentExam ? `https://examking.tw/?exam=${currentExam.id}` : 'https://examking.tw/' }
-  )
+  // NOTE: Removed the per-exam usePageMeta call that produced titles like
+  // "國考知識王｜醫師一階 | 國考知識王". useDocumentMeta (AppRoutes) already
+  // syncs <title> with the active exam using the same format as the prerendered
+  // shell ("醫師國考第一階段｜國考知識王 — 醫事人員國考線上刷題"), so two
+  // sources fighting over document.title caused GA4 to see fragmented titles.
 
   // Quick-name: inline input shown only when no name
   const [quickName, setQuickName] = useState('')

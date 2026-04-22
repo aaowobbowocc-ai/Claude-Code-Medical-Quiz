@@ -14,6 +14,9 @@ const DEFAULT_META = {
   description: '免費國家考試題庫練習平台，涵蓋醫事 16 類 + 社工 + 律師一試 + 警察特考、公職高普考、法律與共同科目，150,000+ 題考古題。即時對戰、AI 解說、歷屆模擬考、弱點分析，助你高效備考。',
   canonical: 'https://examking.tw/',
   ogUrl: 'https://examking.tw/',
+  contentGroup: '首頁',
+  examId: null,
+  category: '首頁',
 }
 
 function setTag(selector, attr, value) {
@@ -30,7 +33,12 @@ function buildExamMeta(cfg) {
   const base = seo.examDesc || `${fullName}歷屆考古題練習平台，提供模擬考、即時對戰、AI 解說與弱點分析。`
   const description = base.length > 150 ? base.slice(0, 147) + '…' : base
   const canonical = `https://examking.tw/${cfg.id}/`
-  return { title, description, canonical, ogUrl: canonical }
+  return {
+    title, description, canonical, ogUrl: canonical,
+    contentGroup: fullName,           // e.g. "醫師國考第一階段"
+    examId: cfg.id,                   // e.g. "doctor1"
+    category: categoryLabel || '一般',// e.g. "醫事人員國考"
+  }
 }
 
 function applyMeta(meta) {
@@ -42,6 +50,27 @@ function applyMeta(meta) {
   setTag('meta[name="twitter:title"]', 'content', meta.title)
   setTag('meta[name="twitter:description"]', 'content', meta.description)
   setTag('link[rel="canonical"]', 'href', meta.canonical)
+
+  // GA4 content grouping: push content_group + custom dimensions with each
+  // page_view so fragmented page_titles get merged under a stable key. Set the
+  // default for all subsequent events via gtag('set'), then fire a synthetic
+  // page_view to register the updated grouping for this navigation.
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    try {
+      window.gtag('set', {
+        content_group: meta.contentGroup,
+        exam_id: meta.examId || '(none)',
+        exam_category: meta.category,
+      })
+      window.gtag('event', 'page_view', {
+        page_title: meta.title,
+        page_location: window.location.href,
+        content_group: meta.contentGroup,
+        exam_id: meta.examId || '(none)',
+        exam_category: meta.category,
+      })
+    } catch {}
+  }
 }
 
 /**

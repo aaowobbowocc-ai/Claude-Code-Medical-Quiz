@@ -79,52 +79,38 @@
     }
   ],
   "stages": [
-    {
-      "id": 0,
-      "tag": "all",
-      "name": "全部"
-    }
+    { "id": 0, "tag": "all",               "name": "隨機混合" },
+    { "id": 1, "tag": "dispensing",        "name": "調劑學" },
+    { "id": 2, "tag": "clinical_pharmacy", "name": "臨床藥學" },
+    { "id": 3, "tag": "therapeutics",      "name": "治療學" },
+    { "id": 4, "tag": "pharmacotherapy",   "name": "藥物治療學" },
+    { "id": 5, "tag": "pharmacy_law",      "name": "藥事行政與法規" }
   ],
   "ui": {
     "tagNames": {
-      "dispensing": "調劑",
+      "dispensing":        "調劑",
       "clinical_pharmacy": "臨床藥學",
-      "pharmacotherapy": "藥物治療",
-      "pharmacy_law": "藥事法規"
+      "therapeutics":      "治療學",
+      "pharmacotherapy":   "藥物治療",
+      "pharmacy_law":      "藥事法規"
     },
     "stageStyles": {
-      "all": {
-        "icon": "🎲",
-        "color": "#64748B"
-      },
-      "dispensing": {
-        "icon": "🏥",
-        "color": "#3B82F6"
-      },
-      "clinical_pharmacy": {
-        "icon": "💉",
-        "color": "#EF4444"
-      },
-      "therapeutics": {
-        "icon": "💊",
-        "color": "#D97706"
-      },
-      "pharmacotherapy": {
-        "icon": "🩺",
-        "color": "#DC2626"
-      },
-      "pharmacy_law": {
-        "icon": "⚖️",
-        "color": "#374151"
-      }
+      "all":               { "icon": "🎲", "color": "#64748B" },
+      "dispensing":        { "icon": "🏥", "color": "#3B82F6" },
+      "clinical_pharmacy": { "icon": "💉", "color": "#EF4444" },
+      "therapeutics":      { "icon": "💊", "color": "#D97706" },
+      "pharmacotherapy":   { "icon": "🩺", "color": "#DC2626" },
+      "pharmacy_law":      { "icon": "⚖️", "color": "#374151" }
     },
     "subjectColors": {
       "調劑學": "#3B82F6",
-      "臨床藥學": "#10B981",
-      "治療學": "#8B5CF6",
-      "藥物治療學": "#EF4444",
-      "藥事行政法規": "#0D9488",
-      "藥事行政與法規": "#0D9488"
+      "臨床藥學": "#EF4444",
+      "治療學": "#D97706",
+      "藥物治療學": "#DC2626",
+      "藥事行政與法規": "#374151",
+      "調劑與臨床": "#3B82F6",
+      "藥物治療": "#DC2626",
+      "法規": "#374151"
     }
   },
   "seo": {

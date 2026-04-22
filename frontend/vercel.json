@@ -16,6 +16,8 @@
     { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/ads.txt", "destination": "/ads.txt" },
+    { "source": "/:examId(civil-elementary-general|civil-junior-general|civil-senior-general|civil-senior|customs|dental1|dental2|doctor1|doctor2|driver-car|driver-moto|judicial|lawyer1|medlab|nursing|nutrition|ot|pharma1|pharma2|police|pt|radiology|social-worker|tcm1|tcm2|vet)/", "destination": "/:examId/index.html" },
+    { "source": "/:examId(civil-elementary-general|civil-junior-general|civil-senior-general|civil-senior|customs|dental1|dental2|doctor1|doctor2|driver-car|driver-moto|judicial|lawyer1|medlab|nursing|nutrition|ot|pharma1|pharma2|police|pt|radiology|social-worker|tcm1|tcm2|vet)", "destination": "/:examId/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [

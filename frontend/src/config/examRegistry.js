@@ -10,7 +10,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v2: 中醫一/中醫二/獸醫師 added 4/13
 // v3: taxonomy fields (category/subCategory/level/selectionType/persona/sharedBanks/uxHints)
 //     + civil-service shell configs + sharedBanks metadata
-const CACHE_KEY = 'exam-registry-v3'
+// v4: civil shell exams totalQ 補齊 (junior/senior/elementary) — force refresh 字卡
+const CACHE_KEY = 'exam-registry-v4'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache

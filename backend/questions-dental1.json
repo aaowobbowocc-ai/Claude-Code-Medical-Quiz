@@ -2076,14 +2076,15 @@
       "subject_name": "藥理",
       "stage_id": 5,
       "number": 28,
-      "question": "【承上題．前情提要】\n第27題：一位12歲女患者來牙科做定期檢查,其嘴唇及口周圍皮膚上有許多如雀斑樣的棕黑色斑點,病患最可能罹患 下列何種症候群?\n上題答案：(D) 浦茲-詹賀症候群(Peutz-Jeghers syndrome)\n──────────\n承上題,此患者罹患下列何疾病的機率最低?",
+      "question": "承上題,此患者罹患下列何疾病的機率最低?",
       "options": {
         "A": "基底細胞癌(basal cell carcinoma)",
         "B": "乳房腫瘤(breast tumor)",
         "C": "胃腸道腺癌(gastrointestinal adenocarcinoma)",
         "D": "腸息肉(intestinal polyps)"
       },
-      "answer": "A"
+      "answer": "A",
+      "case_context": "第 27 題：一位12歲女患者來牙科做定期檢查,其嘴唇及口周圍皮膚上有許多如雀斑樣的棕黑色斑點,病患最可能罹患 下列何種症候群?\n(A) 嘉德耐氏症候群(Gardner syndrome)\n(B) 麥克滾-阿爾布萊德氏症候群(McCune-Albright syndrome)\n(C) 痣樣基底細胞癌症候群(nevoid basal cell carcinoma syndrome)\n(D) 浦茲-詹賀症候群(Peutz-Jeghers syndrome)\n上題答案：(D) 浦茲-詹賀症候群(Peutz-Jeghers syndrome)"
     },
     {
       "id": "110020_1_29",
@@ -5092,7 +5093,7 @@
       "subject_name": "藥理",
       "stage_id": 5,
       "number": 24,
-      "question": "【承上題．前情提要】\n第23題：35歲女性因舌痛就醫(如圖),自述不吃葷食已經2年,發現自己的舌苔比以前少,則她較可能得了何種疾 病?1正中菱形舌炎(median rhomboid glossitis) 2 Hunter's glossitis 3再生不良性貧血(aplastic anemia) 4惡性貧血(pernicious anemia)\n上題答案：(B) 24\n──────────\n承上題,最佳治療方法為下列何者?",
+      "question": "承上題,最佳治療方法為下列何者?",
       "options": {
         "A": "口服抗黴菌藥",
         "B": "服用鐵劑",
@@ -5102,7 +5103,8 @@
       "answer": "C",
       "images": [
         "/question-images/dental1_111020_1_23_0.webp"
-      ]
+      ],
+      "case_context": "第 23 題：35歲女性因舌痛就醫(如圖),自述不吃葷食已經2年,發現自己的舌苔比以前少,則她較可能得了何種疾 病?1正中菱形舌炎(median rhomboid glossitis) 2 Hunter's glossitis 3再生不良性貧血(aplastic anemia) 4惡性貧血(pernicious anemia)\n(A) 13\n(B) 24\n(C) 14\n(D) 23\n上題答案：(B) 24"
     },
     {
       "id": "111020_1_25",
@@ -8065,7 +8067,7 @@
       "subject_name": "口病",
       "stage_id": 5,
       "number": 19,
-      "question": "【承上題．前情提要】\n第18題：患者右下顎腫脹,放射線檢查發現如附圖一之蜂巢狀(honeycombed)放射線透過性病灶,切片檢查結果如附 圖二,為確定診斷,下列檢查何者最有幫助? (附圖一) (附圖二)\n上題答案：(B) 剛果紅染色(Congo red stain)\n──────────\n承上題,此疾病診斷最有可能為下列何者?",
+      "question": "承上題,此疾病診斷最有可能為下列何者?",
       "options": {
         "A": "顆粒細胞造釉細胞瘤(ameloblastoma, granular cell type)",
         "B": "鈣化上皮齒源性腫瘤 (calcifying epithelial odontogenic tumor)",
@@ -8076,7 +8078,8 @@
       "images": [
         "/question-images/dental1_111100_1_18_0.webp",
         "/question-images/dental1_111100_1_18_1.webp"
-      ]
+      ],
+      "case_context": "第 18 題：患者右下顎腫脹,放射線檢查發現如附圖一之蜂巢狀(honeycombed)放射線透過性病灶,切片檢查結果如附 圖二,為確定診斷,下列檢查何者最有幫助? (附圖一) (附圖二)\n(A) 耐酸性染色(acid fast stain)\n(B) 剛果紅染色(Congo red stain)\n(C) 黏液紅染色(mucicarmine stain)\n(D) 過碘酸-許夫試劑染色法(periodic acid-Schiff stain)\n上題答案：(B) 剛果紅染色(Congo red stain)"
     },
     {
       "id": "111100_1_20",
@@ -8130,7 +8133,7 @@
       "subject_name": "藥理",
       "stage_id": 5,
       "number": 22,
-      "question": "【承上題．前情提要】\n第21題：47 歲男性患者主訴全口潰瘍疼痛,口內檢查發現如附圖一,使用棉棒稍推壓即造成潰瘍,切片檢查如附圖 二,則最可能的診斷為下列何者? (附圖一) (附圖二)\n上題答案：(D) 尋常性天疱瘡(pemphigus vulgaris)\n──────────\n承上題,其病變及周圍組織切片,直接免疫螢光檢查預期呈現何種分布型態?",
+      "question": "承上題,其病變及周圍組織切片,直接免疫螢光檢查預期呈現何種分布型態?",
       "options": {
         "A": "纖維蛋白原(fibrinogen)沉積在基底膜(basement membrane)",
         "B": "免疫球蛋白G(IgG)沉積在基底膜(basement membrane)",
@@ -8141,7 +8144,8 @@
       "images": [
         "/question-images/dental1_111100_1_21_0.webp",
         "/question-images/dental1_111100_1_21_1.webp"
-      ]
+      ],
+      "case_context": "第 21 題：47 歲男性患者主訴全口潰瘍疼痛,口內檢查發現如附圖一,使用棉棒稍推壓即造成潰瘍,切片檢查如附圖 二,則最可能的診斷為下列何者? (附圖一) (附圖二)\n(A) 良性黏膜類天疱瘡(benign mucous membrane pemphigoid)\n(B) 大泡性表皮鬆解(epidermolysis bullosa)\n(C) 扁平苔癬(lichen planus)\n(D) 尋常性天疱瘡(pemphigus vulgaris)\n上題答案：(D) 尋常性天疱瘡(pemphigus vulgaris)"
     },
     {
       "id": "111100_1_23",
@@ -52142,7 +52146,11 @@
         "D": "抗細胞間質抗體（anti-intercellular substance antibody）呈陽性反應"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 25 題：中年女性病患因刷牙疼痛容易流血求診，檢查發現全口牙齦潰瘍（如附圖），臉頰有蝴蝶斑（malar rash）， 此患者最可能罹患下列何種疾病？ 病？\n(A) 移植體抗宿主疾病（graft-versus-host disease ）\n(B) 扁平苔癬（lichen planus）\n(C) 尋常性天疱瘡（pemphigus vulgaris）\n(D) 全身性紅斑性狼瘡（systemic lupus erythematosus）\n上題答案：(D) 全身性紅斑性狼瘡（systemic lupus erythematosus）",
+      "images": [
+        "/question-images/dental1_115021235_0.webp"
+      ]
     },
     {
       "id": 115021237,
@@ -52185,7 +52193,11 @@
         "D": "EBV原位雜交（in situ hybridization）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 27 題：一位48歲的男士，主訴舌右側緣出現無痛白色線條（如圖示），此舌側緣病變最有可能為下列何種疾 病？\n(A) 毛狀舌\n(B) 地圖舌\n(C) 毛狀白斑\n(D) 正中菱形舌炎\n上題答案：(C) 毛狀白斑",
+      "images": [
+        "/question-images/dental1_115021237_0.webp"
+      ]
     },
     {
       "id": 115021239,
@@ -55287,7 +55299,11 @@
         "D": "cemento-ossifying fibroma"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 24 題：55歲患者抱怨牙床腫脹變形，患者有尿毒症病史，並接受血液透析多年，牙科X光片的檢查如下圖。其最有 可能罹患下列何種疾病？\n(A) 甲狀腺機能過旺\n(B) 甲狀腺功能不足\n(C) 繼發性副甲狀腺機能過旺\n(D) 繼發性副甲狀腺功能不足\n上題答案：(C) 繼發性副甲狀腺機能過旺",
+      "images": [
+        "/question-images/dental1_115021391_0.webp"
+      ]
     },
     {
       "id": 115021393,
@@ -69200,7 +69216,8 @@
         "D": "Staphylococcus aureus"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 62 題：一位 68 歲患者，因為嚴重牙周病而接受拔牙，術後不久被診斷為感染性心內膜炎（ infective endocarditis ），懷疑與未事前給藥有關，下列何者是患者最有可能的疾病或問題？\n(A) 心臟冠狀動脈繞道手術（ coronary artery by-pass ）\n(B) 心絞痛（ angina ）\n(C) 心臟中隔缺損（ septal defects ）\n(D) 粥狀動脈硬化（ atherosclerosis ）\n上題答案：(C) 心臟中隔缺損（ septal defects ）"
     },
     {
       "id": 115022083,
@@ -69220,7 +69237,8 @@
         "D": "Streptomycin"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 62 題：一位 68 歲患者，因為嚴重牙周病而接受拔牙，術後不久被診斷為感染性心內膜炎（ infective endocarditis ），懷疑與未事前給藥有關，下列何者是患者最有可能的疾病或問題？\n(A) 心臟冠狀動脈繞道手術（ coronary artery by-pass ）\n(B) 心絞痛（ angina ）\n(C) 心臟中隔缺損（ septal defects ）\n(D) 粥狀動脈硬化（ atherosclerosis ）\n上題答案：(C) 心臟中隔缺損（ septal defects ）"
     },
     {
       "id": 115022084,
@@ -78188,7 +78206,8 @@
         "D": "外科切除後，這種腫瘤再發率很高"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 27 題：40 歲女士有一個不甚明顯的小腫瘤，位於口內左側舌尖，大小約 0.6 × 0.4 公分；腫瘤外面覆蓋正 常的黏膜，但病患覺得有疼痛現象，尤其是在碰觸時；鏡下腫瘤呈現多處密集梭狀細胞（ spindle cell ）呈柵狀平行排列，並圍繞在一些無細胞區域，或是腫瘤細胞分散在稀疏的黏液樣背景裡。 試問此一腫瘤最有可能為下列何者？\n(A) 顆粒細胞瘤（ granular cell tumor ）\n(B) 肌纖維瘤（ myofibroma ）\n(C) 神經鞘瘤（ neurilemoma ）\n(D) 神經纖維瘤（ neurofibroma ）\n上題答案：(C) 神經鞘瘤（ neurilemoma ）"
     },
     {
       "id": 115022528,

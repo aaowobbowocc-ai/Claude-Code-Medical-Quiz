@@ -17,7 +17,7 @@
     "longText": false
   },
   "questionsFile": "questions-pharma2.json",
-  "totalQ": 5829,
+  "totalQ": 6248,
   "passScore": 180,
   "totalPoints": 300,
   "passRate": 0.6,
@@ -79,28 +79,70 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all",               "name": "隨機混合" },
-    { "id": 1, "tag": "dispensing",        "name": "調劑學" },
-    { "id": 2, "tag": "clinical_pharmacy", "name": "臨床藥學" },
-    { "id": 3, "tag": "therapeutics",      "name": "治療學" },
-    { "id": 4, "tag": "pharmacotherapy",   "name": "藥物治療學" },
-    { "id": 5, "tag": "pharmacy_law",      "name": "藥事行政與法規" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "隨機混合"
+    },
+    {
+      "id": 1,
+      "tag": "dispensing",
+      "name": "調劑學"
+    },
+    {
+      "id": 2,
+      "tag": "clinical_pharmacy",
+      "name": "臨床藥學"
+    },
+    {
+      "id": 3,
+      "tag": "therapeutics",
+      "name": "治療學"
+    },
+    {
+      "id": 4,
+      "tag": "pharmacotherapy",
+      "name": "藥物治療學"
+    },
+    {
+      "id": 5,
+      "tag": "pharmacy_law",
+      "name": "藥事行政與法規"
+    }
   ],
   "ui": {
     "tagNames": {
-      "dispensing":        "調劑",
+      "dispensing": "調劑",
       "clinical_pharmacy": "臨床藥學",
-      "therapeutics":      "治療學",
-      "pharmacotherapy":   "藥物治療",
-      "pharmacy_law":      "藥事法規"
+      "therapeutics": "治療學",
+      "pharmacotherapy": "藥物治療",
+      "pharmacy_law": "藥事法規"
     },
     "stageStyles": {
-      "all":               { "icon": "🎲", "color": "#64748B" },
-      "dispensing":        { "icon": "🏥", "color": "#3B82F6" },
-      "clinical_pharmacy": { "icon": "💉", "color": "#EF4444" },
-      "therapeutics":      { "icon": "💊", "color": "#D97706" },
-      "pharmacotherapy":   { "icon": "🩺", "color": "#DC2626" },
-      "pharmacy_law":      { "icon": "⚖️", "color": "#374151" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "dispensing": {
+        "icon": "🏥",
+        "color": "#3B82F6"
+      },
+      "clinical_pharmacy": {
+        "icon": "💉",
+        "color": "#EF4444"
+      },
+      "therapeutics": {
+        "icon": "💊",
+        "color": "#D97706"
+      },
+      "pharmacotherapy": {
+        "icon": "🩺",
+        "color": "#DC2626"
+      },
+      "pharmacy_law": {
+        "icon": "⚖️",
+        "color": "#374151"
+      }
     },
     "subjectColors": {
       "調劑學": "#3B82F6",
@@ -120,7 +162,7 @@
     "shortName": "藥師二階",
     "studentType": "藥學生",
     "years": "100-115",
-    "totalQ": 5829,
+    "totalQ": 6248,
     "examDesc": "藥師國考第二階段（二階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為通過一階並完成實習之藥學系學生。",
     "paperDesc": "考試分為三卷（藥物治療 80 題、調劑與臨床 80 題、法規 50 題），合計 210 題，採及格制（總分 180 分以上通過，需每科達該科目滿分之五成）。",
     "subjects": "調劑學、臨床藥學、治療學、藥物治療學、藥事行政與法規等臨床藥學科目",

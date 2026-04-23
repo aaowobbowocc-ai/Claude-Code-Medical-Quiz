@@ -17,7 +17,7 @@
     "longText": false
   },
   "questionsFile": "questions-customs.json",
-  "totalQ": 526,
+  "totalQ": 647,
   "passScore": null,
   "passRate": null,
   "papers": [
@@ -47,7 +47,11 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {
@@ -56,10 +60,22 @@
       "chinese": "國文（測驗）"
     },
     "stageStyles": {
-      "all": { "icon": "🎲", "color": "#64748B" },
-      "law_knowledge": { "icon": "⚖️", "color": "#6366F1" },
-      "english": { "icon": "🌐", "color": "#3B82F6" },
-      "chinese": { "icon": "📝", "color": "#F59E0B" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "law_knowledge": {
+        "icon": "⚖️",
+        "color": "#6366F1"
+      },
+      "english": {
+        "icon": "🌐",
+        "color": "#3B82F6"
+      },
+      "chinese": {
+        "icon": "📝",
+        "color": "#F59E0B"
+      }
     },
     "subjectColors": {
       "法學知識": "#6366F1",
@@ -74,15 +90,24 @@
     "shortName": "關務特考三等",
     "studentType": "關務考生",
     "years": "108-114",
-    "totalQ": 526,
+    "totalQ": 647,
     "examDesc": "公務人員特種考試關務人員考試三等，涵蓋財稅行政、關稅法務等類科。共同科目法學知識（憲法、法學緒論）50 題、英文 25 題、國文測驗 10 題。",
     "paperDesc": "法學知識 50 題、英文 25 題、國文測驗 10 題。",
     "subjects": "法學知識、英文、國文（測驗）",
     "mockDesc": "模擬關務特考選擇題",
     "subjectDetails": [
-      ["法學知識", "涵蓋中華民國憲法、法學緒論。"],
-      ["英文", "外國文（英文）選擇題。"],
-      ["國文（測驗）", "國文測驗部分，10 題。"]
+      [
+        "法學知識",
+        "涵蓋中華民國憲法、法學緒論。"
+      ],
+      [
+        "英文",
+        "外國文（英文）選擇題。"
+      ],
+      [
+        "國文（測驗）",
+        "國文測驗部分，10 題。"
+      ]
     ]
   }
 }

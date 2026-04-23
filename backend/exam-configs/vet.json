@@ -17,7 +17,7 @@
     "longText": false
   },
   "questionsFile": "questions-vet.json",
-  "totalQ": 6240,
+  "totalQ": 11961,
   "passScore": 288,
   "passRate": 0.6,
   "papers": [
@@ -71,13 +71,41 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all",                 "name": "隨機混合" },
-    { "id": 1, "tag": "vet_pathology",       "name": "獸醫病理學" },
-    { "id": 2, "tag": "vet_pharmacology",    "name": "獸醫藥理學" },
-    { "id": 3, "tag": "vet_lab_diagnosis",   "name": "獸醫實驗診斷學" },
-    { "id": 4, "tag": "vet_common_disease",  "name": "獸醫普通疾病學" },
-    { "id": 5, "tag": "vet_infectious",      "name": "獸醫傳染病學" },
-    { "id": 6, "tag": "vet_public_health",   "name": "獸醫公共衛生學" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "隨機混合"
+    },
+    {
+      "id": 1,
+      "tag": "vet_pathology",
+      "name": "獸醫病理學"
+    },
+    {
+      "id": 2,
+      "tag": "vet_pharmacology",
+      "name": "獸醫藥理學"
+    },
+    {
+      "id": 3,
+      "tag": "vet_lab_diagnosis",
+      "name": "獸醫實驗診斷學"
+    },
+    {
+      "id": 4,
+      "tag": "vet_common_disease",
+      "name": "獸醫普通疾病學"
+    },
+    {
+      "id": 5,
+      "tag": "vet_infectious",
+      "name": "獸醫傳染病學"
+    },
+    {
+      "id": 6,
+      "tag": "vet_public_health",
+      "name": "獸醫公共衛生學"
+    }
   ],
   "ui": {
     "tagNames": {
@@ -134,7 +162,7 @@
     "shortName": "獸醫師",
     "studentType": "獸醫學系學生",
     "years": "106-114",
-    "totalQ": 6240,
+    "totalQ": 11961,
     "examDesc": "獸醫師國考為專門職業及技術人員高等考試，通常於每年第二次考試梯次舉行，應考資格為獸醫學系畢業。通過後即可取得獸醫師執照。",
     "paperDesc": "考試分為六科，每科各 80 題選擇題，合計 480 題。及格標準為總分達 60 分。",
     "subjects": "獸醫病理學、藥理學、實驗診斷學、普通疾病學、傳染病學、公共衛生學",

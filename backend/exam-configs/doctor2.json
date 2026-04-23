@@ -17,7 +17,7 @@
     "longText": false
   },
   "questionsFile": "questions-doctor2.json",
-  "totalQ": 8936,
+  "totalQ": 9889,
   "passScore": 240,
   "totalPoints": 400,
   "passRate": 0.6,
@@ -30,8 +30,14 @@
       "count": 80,
       "pointsPerQ": 1.25,
       "breakdown": [
-        { "subject": "內科學",   "count": null },
-        { "subject": "家庭醫學", "count": null }
+        {
+          "subject": "內科學",
+          "count": null
+        },
+        {
+          "subject": "家庭醫學",
+          "count": null
+        }
       ],
       "breakdownNote": "考選部命題大綱（114 年版）：醫學(三) 含內科 + 家醫，不規定題數比例亦不規定題號順序，故不做子科目分類",
       "timeLimit": 120
@@ -44,10 +50,22 @@
       "count": 80,
       "pointsPerQ": 1.25,
       "breakdown": [
-        { "subject": "小兒科", "count": null },
-        { "subject": "皮膚科", "count": null },
-        { "subject": "神經科", "count": null },
-        { "subject": "精神科", "count": null }
+        {
+          "subject": "小兒科",
+          "count": null
+        },
+        {
+          "subject": "皮膚科",
+          "count": null
+        },
+        {
+          "subject": "神經科",
+          "count": null
+        },
+        {
+          "subject": "精神科",
+          "count": null
+        }
       ],
       "breakdownNote": "考選部命題大綱（114 年版）：醫學(四) 含四科，不規定題數比例亦不規定題號順序，故不做子科目分類",
       "timeLimit": 120
@@ -60,9 +78,18 @@
       "count": 80,
       "pointsPerQ": 1.25,
       "breakdown": [
-        { "subject": "外科學", "count": null },
-        { "subject": "骨科",   "count": null },
-        { "subject": "泌尿科", "count": null }
+        {
+          "subject": "外科學",
+          "count": null
+        },
+        {
+          "subject": "骨科",
+          "count": null
+        },
+        {
+          "subject": "泌尿科",
+          "count": null
+        }
       ],
       "breakdownNote": "考選部命題大綱（114 年版）：醫學(五) 含三科，不規定題數比例亦不規定題號順序，故不做子科目分類",
       "timeLimit": 120
@@ -75,11 +102,26 @@
       "count": 80,
       "pointsPerQ": 1.25,
       "breakdown": [
-        { "subject": "麻醉科",   "count": null },
-        { "subject": "眼科",     "count": null },
-        { "subject": "耳鼻喉科", "count": null },
-        { "subject": "婦產科",   "count": null },
-        { "subject": "復健科",   "count": null }
+        {
+          "subject": "麻醉科",
+          "count": null
+        },
+        {
+          "subject": "眼科",
+          "count": null
+        },
+        {
+          "subject": "耳鼻喉科",
+          "count": null
+        },
+        {
+          "subject": "婦產科",
+          "count": null
+        },
+        {
+          "subject": "復健科",
+          "count": null
+        }
       ],
       "breakdownNote": "考選部命題大綱（114 年版）：醫學(六) 含五科，不規定題數比例亦不規定題號順序，故不做子科目分類",
       "timeLimit": 120
@@ -212,7 +254,7 @@
     "shortName": "醫師二階",
     "studentType": "醫學生",
     "years": "100-115",
-    "totalQ": 8902,
+    "totalQ": 9889,
     "examDesc": "醫師國考第二階段（二階）為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為通過一階並完成臨床實習之醫學系學生。",
     "paperDesc": "考試分為「醫學(三)」至「醫學(六)」共四節，每節各 80 題選擇題，合計 320 題。每題 1.25 分、每卷滿分 100 分，總分 400 分，240/400 分及格（答對 192 題）。",
     "subjects": "內科、外科、小兒科、婦產科、精神科、神經科、皮膚科、骨科、泌尿科、眼科、耳鼻喉科、復健科、急診醫學、醫療法規等臨床醫學科目",

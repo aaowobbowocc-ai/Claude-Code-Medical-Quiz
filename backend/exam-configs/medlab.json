@@ -17,7 +17,7 @@
     "longText": false
   },
   "questionsFile": "questions-medlab.json",
-  "totalQ": 13431,
+  "totalQ": 14496,
   "passScore": 288,
   "passRate": 0.6,
   "papers": [
@@ -145,46 +145,130 @@
     }
   ],
   "stages": [
-    { "id": 0,  "tag": "all",                  "name": "隨機混合" },
-    { "id": 1,  "tag": "clinical_physiology",  "name": "臨床生理學" },
-    { "id": 2,  "tag": "pathology",            "name": "病理學" },
-    { "id": 3,  "tag": "hematology",           "name": "臨床血液學" },
-    { "id": 4,  "tag": "blood_bank",           "name": "血庫學" },
-    { "id": 5,  "tag": "clinical_micro",       "name": "臨床鏡檢學" },
-    { "id": 6,  "tag": "molecular_dx",         "name": "醫學分子檢驗學" },
-    { "id": 7,  "tag": "medical_microbiology", "name": "微生物學" },
-    { "id": 8,  "tag": "biochemistry",         "name": "生物化學" },
-    { "id": 9,  "tag": "clinical_biochem",     "name": "臨床生化學" },
-    { "id": 10, "tag": "serology",             "name": "臨床血清免疫學" },
-    { "id": 11, "tag": "virology",             "name": "臨床病毒學" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "隨機混合"
+    },
+    {
+      "id": 1,
+      "tag": "clinical_physiology",
+      "name": "臨床生理學"
+    },
+    {
+      "id": 2,
+      "tag": "pathology",
+      "name": "病理學"
+    },
+    {
+      "id": 3,
+      "tag": "hematology",
+      "name": "臨床血液學"
+    },
+    {
+      "id": 4,
+      "tag": "blood_bank",
+      "name": "血庫學"
+    },
+    {
+      "id": 5,
+      "tag": "clinical_micro",
+      "name": "臨床鏡檢學"
+    },
+    {
+      "id": 6,
+      "tag": "molecular_dx",
+      "name": "醫學分子檢驗學"
+    },
+    {
+      "id": 7,
+      "tag": "medical_microbiology",
+      "name": "微生物學"
+    },
+    {
+      "id": 8,
+      "tag": "biochemistry",
+      "name": "生物化學"
+    },
+    {
+      "id": 9,
+      "tag": "clinical_biochem",
+      "name": "臨床生化學"
+    },
+    {
+      "id": 10,
+      "tag": "serology",
+      "name": "臨床血清免疫學"
+    },
+    {
+      "id": 11,
+      "tag": "virology",
+      "name": "臨床病毒學"
+    }
   ],
   "ui": {
     "tagNames": {
-      "clinical_physiology":  "臨床生理",
-      "pathology":            "病理",
-      "hematology":           "血液",
-      "blood_bank":           "血庫",
-      "clinical_micro":       "臨床鏡檢",
-      "molecular_dx":         "分子檢驗",
+      "clinical_physiology": "臨床生理",
+      "pathology": "病理",
+      "hematology": "血液",
+      "blood_bank": "血庫",
+      "clinical_micro": "臨床鏡檢",
+      "molecular_dx": "分子檢驗",
       "medical_microbiology": "微生物",
-      "biochemistry":         "生化",
-      "clinical_biochem":     "臨床生化",
-      "serology":             "血清免疫",
-      "virology":             "病毒"
+      "biochemistry": "生化",
+      "clinical_biochem": "臨床生化",
+      "serology": "血清免疫",
+      "virology": "病毒"
     },
     "stageStyles": {
-      "all":                  { "icon": "🎲", "color": "#64748B" },
-      "clinical_physiology":  { "icon": "🫀", "color": "#EF4444" },
-      "pathology":            { "icon": "🩺", "color": "#DC2626" },
-      "hematology":           { "icon": "🩸", "color": "#B91C1C" },
-      "blood_bank":           { "icon": "💉", "color": "#F97316" },
-      "clinical_micro":       { "icon": "🔬", "color": "#6366F1" },
-      "molecular_dx":         { "icon": "🧬", "color": "#8B5CF6" },
-      "medical_microbiology": { "icon": "🦠", "color": "#10B981" },
-      "biochemistry":         { "icon": "⚗️", "color": "#3B82F6" },
-      "clinical_biochem":     { "icon": "🧪", "color": "#0EA5E9" },
-      "serology":             { "icon": "🛡️", "color": "#D97706" },
-      "virology":             { "icon": "🦠", "color": "#059669" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "clinical_physiology": {
+        "icon": "🫀",
+        "color": "#EF4444"
+      },
+      "pathology": {
+        "icon": "🩺",
+        "color": "#DC2626"
+      },
+      "hematology": {
+        "icon": "🩸",
+        "color": "#B91C1C"
+      },
+      "blood_bank": {
+        "icon": "💉",
+        "color": "#F97316"
+      },
+      "clinical_micro": {
+        "icon": "🔬",
+        "color": "#6366F1"
+      },
+      "molecular_dx": {
+        "icon": "🧬",
+        "color": "#8B5CF6"
+      },
+      "medical_microbiology": {
+        "icon": "🦠",
+        "color": "#10B981"
+      },
+      "biochemistry": {
+        "icon": "⚗️",
+        "color": "#3B82F6"
+      },
+      "clinical_biochem": {
+        "icon": "🧪",
+        "color": "#0EA5E9"
+      },
+      "serology": {
+        "icon": "🛡️",
+        "color": "#D97706"
+      },
+      "virology": {
+        "icon": "🦠",
+        "color": "#059669"
+      }
     },
     "subjectColors": {
       "臨床生理學": "#EF4444",
@@ -213,7 +297,7 @@
     "shortName": "醫事檢驗師",
     "studentType": "醫技系學生",
     "years": "100-115",
-    "totalQ": 13431,
+    "totalQ": 14496,
     "examDesc": "醫事檢驗師國考為考選部舉辦之專門職業及技術人員高等考試，每年舉行一至兩次，應考資格為醫事技術學系畢業並完成實習。",
     "paperDesc": "考試分為六科，每科各 80 題選擇題，合計 480 題。及格標準為各科平均達 60 分，無科目得為零分。",
     "subjects": "臨床生理學與病理學、臨床血液學與血庫學、醫學分子檢驗學與臨床鏡檢學、微生物學與臨床微生物學、生物化學與臨床生化學、臨床血清免疫學與臨床病毒學",

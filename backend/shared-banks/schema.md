@@ -52,6 +52,7 @@
 ### 公職專業科目（拓荒中，先列槽位）
 
 - public_admin
+- admin_studies
 - public_finance
 - statistics
 - economics
@@ -136,6 +137,9 @@
 | `common_chinese` | `chinese` |
 | `common_english` | `english` |
 | `common_admin_law` | `admin_law` |
+| `common_admin_law_junior` | `admin_law` |
+| `common_admin_studies` | `admin_studies` |
+| `common_admin_studies_junior` | `admin_studies` |
 | `common_civil_law` | `civil_law` |
 | `common_criminal_law` | `criminal_law` |
 | `common_law_knowledge` | `law_knowledge_combined` |

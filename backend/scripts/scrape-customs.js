@@ -291,11 +291,12 @@ async function main() {
     { year: '112', code: '112050', session: '第一次' },
     { year: '113', code: '113040', session: '第一次' },
     { year: '114', code: '114040', session: '第一次' },
+    { year: '115', code: '115040', session: '第一次' },
   ]
   // 法學知識 subject code changes between years!
   const LAW_KNOWLEDGE_CODES = {
     '108': '0307', '109': '0308',
-    '110': '0308', '111': '0310', '112': '0308', '113': '0306', '114': '0305',
+    '110': '0308', '111': '0310', '112': '0308', '113': '0306', '114': '0305', '115': '0305',
   }
   const SUBJECTS = [
     { c: '101', s: LAW_KNOWLEDGE_CODES, name: '法學知識', tag: 'law_knowledge', expectedQ: 50, perYearSubjectCode: true },

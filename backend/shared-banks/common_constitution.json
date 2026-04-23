@@ -2,8 +2,8 @@
   "bankId": "common_constitution",
   "name": "中華民國憲法",
   "description": "公職考試共通科目：中華民國憲法（含大法官解釋、憲法法庭判決、增修條文）",
-  "bankVersion": 6,
-  "last_synced_at": "2026-04-21T03:02:28.770Z",
+  "bankVersion": 7,
+  "last_synced_at": "2026-04-22T17:49:26.021Z",
   "levels": [
     "senior"
   ],
@@ -3509,6 +3509,604 @@
         "B": "憲法法庭審理案件，以司法院院長充審判長",
         "C": "憲法法庭行言詞辯論，須有大法官現有總額",
         "D": "2/3以上出席，始得為之。未參與辯論之大法官不得參與評議判決"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-1",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 1,
+      "question": "15年公務人員特種考試關務人員、身心障礙人員考試及 115年國軍上校以上軍官轉任公務人員考試試題 考 試 別：關務人員考試",
+      "options": {
+        "A": "本科目共50題，每題2分，須用2B鉛筆在試卡上依題號清楚劃記，於本試題上作答者，不予計分。禁止使用電子計算器。",
+        "B": "1憲法第154條規定，勞資糾紛之調解與仲裁，以法律定之，其性質為何？",
+        "C": "方針條款，不具效力",
+        "D": "憲法委託，具有拘束力"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-2",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 2,
+      "question": "依憲法增修條文規定，立法院得對行政院院長提出不信任案，下列敘述何者錯誤？",
+      "options": {
+        "A": "其提出須經全體立法委員三分之一以上連署其通過須經全體立法委員二分之一以上贊成",
+        "B": "若不信任案未獲通過，對同一行政院院長任期內不得再提不信任案不信任案通過，行政院院長應提出辭職",
+        "C": "",
+        "D": ""
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-3",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 3,
+      "question": "依司法院大法官解釋，關於憲法上人民之被選舉權，下列敘述何者錯誤？",
+      "options": {
+        "A": "於選舉辦理完畢後，始就候選人資格之准駁處分提起救濟，因無實益，法院無須受理",
+        "B": "就總統副總統之參選，以連署及保證金之規定防止人民任意參選，係屬合憲規定",
+        "C": "法律就各級民意代表候選人之學經歷加以限制，並未違憲",
+        "D": "依有無政黨推薦而對參選人收取不等額之登記保證金，違反平等保障"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-4",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 4,
+      "question": "法官於審理案件時，對於應適用之法律，依其合理之確信，認為有牴觸憲法之疑義者，各級法院得以 之為先決問題，裁定停止訴訟程序。得裁定停止之「程序」，包括下列何者？",
+      "options": {
+        "A": "僅指各該事件或案件之民刑事訴訟，但不包括非訟程序",
+        "B": "係指各該事件或案件之所有訴訟程序，但不包括非訟程序係指各該事件或案件之所有訴訟或非訟程序僅指各該事件或案件之民刑事訴訟與非訟程序",
+        "C": "",
+        "D": ""
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-5",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 5,
+      "question": "權力分立之主要目的在於透過下列何者之適當分工，以確保人民之自由與權利？",
+      "options": {
+        "A": "資本市場",
+        "B": "政黨權力",
+        "C": "國家權力",
+        "D": "國防安全"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-6",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 6,
+      "question": "依司法院釋字第 803號解釋意旨，關於原住民受憲法所保障從事狩獵活動之文化權利，下列敘述何 者錯誤？",
+      "options": {
+        "A": "包括精神性思想、價值、信仰、禮俗規範等",
+        "B": "包括傳承已久之食物取得方式、日常飲食習慣與物質生活方式等包含原住民因營利目的所從事之狩獵活動",
+        "C": "除有特殊例外，原住民得獵捕、宰殺或利用之野生動物，不包括保育類野生動物",
+        "D": ""
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-7",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 7,
+      "question": "憲法第10條規定人民有居住及遷徙之自由，係指人民有選擇其居住處所，以及下列何種之自由？",
+      "options": {
+        "A": "財務自主",
+        "B": "選擇工作",
+        "C": "與任何人來往",
+        "D": "營私人生活"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-8",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 8,
+      "question": "關於憲法第13條宗教信仰自由對於佛教徒之保障，下列敘述何者正確？",
+      "options": {
+        "A": "僅保障內心信仰佛教之自由，不保障參加佛教法會之自由",
+        "B": "僅保障內心信仰佛教以及參加佛教法會之自由，不保障組成佛教團體之自由",
+        "C": "保障內心信仰佛教之自由、參加佛教法會之自由，以及組成佛教團體之自由不保障佛教徒不信仰基督教之自由",
+        "D": ""
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-9",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 9,
+      "question": "依司法院大法官解釋，下列何者違反平等原則？",
+      "options": {
+        "A": "中央主管機關依廢棄物清理法第",
+        "B": "15條公告以容器商品製造業者，而非容器之製造業者，負回收清除等責任",
+        "C": "菸害防制法第9條第8款限制菸品業者以公司名義贊助任何形式之活動",
+        "D": "依毒品危害防制條例第"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-10",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 10,
+      "question": "依司法院大法官解釋意旨，有關徵收程序之憲法要求，下列敘述何者錯誤？",
+      "options": {
+        "A": "徵收計畫確定前，應聽取土地所有權人及利害關係人之意見徵收之補償不僅需相當，更應儘速發給",
+        "B": "區段徵收申請發給抵價地之申請期限規定，應確保利害關係人及時獲知相關資訊",
+        "C": "國家所負之程序保障義務，不僅及於徵收前，並及於徵收時；惟並不及於徵收完成後",
+        "D": ""
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-11",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 11,
+      "question": "甲為公立大學學生，因與老師乙發生爭辯，因此指責乙有理解障礙。乙認為受到甲之羞辱，要求學校 依據校規對甲記警告一次。甲對此一警告不服，下列敘述何者正確？",
+      "options": {
+        "A": "警告未影響甲之學生身分，甲僅得循校內學生申訴管道救濟",
+        "B": "警告影響甲之名譽，甲應提起民事訴訟，請求學校撤銷警告處分，回復原狀",
+        "C": "警告屬教育管理措施，甲得提起訴願，但不得提起行政訴訟",
+        "D": "警告有侵害甲之權利之可能，甲得提起相應之行政救濟"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-12",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 12,
+      "question": "在1997年修憲前，依司法院釋字第 387及419號解釋，立法院或總統改選後，行政院院長是否應辭 職？",
+      "options": {
+        "A": "新國會第一次集會前，行政院院長有辭職之義務，但新總統就職時，行政院院長只是禮貌性辭職，並無辭職之憲法義務",
+        "B": "新國會第一次集會前，行政院院長只是禮貌性辭職，但新總統就職時，行政院院長有辭職之憲法義務",
+        "C": "無論是新國會第一次集會時，或新總統就職時，行政院院長均有率內閣總辭之憲法義務",
+        "D": "無論是新國會第一次集會時，或新總統就職時，行政院院長均無率內閣總辭之憲法義務"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-13",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 13,
+      "question": "依憲法增修條文及立法院職權行使法，關於行政院向立法院提出報告之規定，下列敘述何者錯誤？",
+      "options": {
+        "A": "新任行政院院長應於就職後",
+        "B": "2週內，向立法院提出施政方針之報告",
+        "C": "行政院院長或有關部會首長遇有重要事項發生或施政方針變更時，應主動提出報告",
+        "D": "所謂施政方針主要是施政前之說明，施政報告則是施政後之說明"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-16",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 16,
+      "question": "依司法院大法官解釋，有關憲法秘密通訊自由的保障，下列敘述何者正確？",
+      "options": {
+        "A": "犯罪偵查階段之通訊監察書應向法院聲請核發",
+        "B": "為維護監獄的秩序與安全，受刑人不得主張秘密通訊自由",
+        "C": "看守所監聽律師接見受羈押被告時的談話內容，係對於被告秘密通訊自由的侵害",
+        "D": "監獄長官閱讀受刑人發受書信，係對秘密通訊自由核心內涵之侵害，無法基於任何理由正當化"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-17",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 17,
+      "question": "所謂租稅法定主義之內容及適用範圍，不包括下列何者？",
+      "options": {
+        "A": "課稅要件法定主義",
+        "B": "課稅要件明確性原則",
+        "C": "租稅平等原則",
+        "D": "減免稅捐之優惠"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-18",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 18,
+      "question": "因虔誠宗教信仰拒服兵役經判刑後，又因相同原因判刑入獄，依司法院大法官解釋，此等處罰是否牴 觸憲法？",
+      "options": {
+        "A": "違憲，因其違反「一行為不二罰」之憲法原則違憲，因其逾越必要限度，違反「比例原則」合憲，人民有「無條件服兵役」之義務",
+        "B": "合憲，多次拒服兵役，並非同一行為，故不構成「重複處罰」問題",
+        "C": "",
+        "D": ""
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-19",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 19,
+      "question": "依司法院大法官解釋，有關契約自由之保障，下列敘述何者錯誤？",
+      "options": {
+        "A": "契約自由為個人自主發展與實現自我之重要機制並為私法自治之基礎，屬憲法第",
+        "B": "22條所保障之自由",
+        "C": "憲法第22條保障契約當事人得自由決定其締約方式、內容及對象",
+        "D": "耕地三七五減租條例對出租人終止耕地租約之限制，合憲"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-20",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 20,
+      "question": "依司法院大法官解釋，下列何者尚非憲法第 22條保障之自由權利？",
+      "options": {
+        "A": "自由命名以表現自我之自由",
+        "B": "人民收養其配偶之大陸地區子女之自由",
+        "C": "選擇與同性別者締結婚姻之自由",
+        "D": "個人所食用之食品安全衛生均無虞之權利"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-21",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 21,
+      "question": "依司法院釋字第708號解釋，關於外國人之人身自由，下列敘述何者正確？",
+      "options": {
+        "A": "憲法第8條人身自由之保障雖不及於外國人，但應於法律層次立法保障",
+        "B": "憲法第8條人身自由之保障亦應及於外國人，使之與本國人同受保障",
+        "C": "憲法第8條人身自由之保障不及於外國人，外國人之人身自由是否保障，純屬立法形成自由",
+        "D": "憲法第8條人身自由之保障亦應及於外國人，但其保障程度均應較本國人為低"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-22",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 22,
+      "question": "依憲法本文及增修條文規定、司法院大法官解釋，有關總統發布緊急命令，下列敘述何者正確？",
+      "options": {
+        "A": "若立法院不同意總統所發布之緊急命令，緊急命令即自始無效",
+        "B": "緊急命令之內容應力求周延，以不得再授權為補充規定為原則有需要為補充規定時，得不經立法院追認，而先發布",
+        "C": "總統僅於立法院休會期間方能發布緊急命令，且應恪遵緊急命令法",
+        "D": ""
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-23",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 23,
+      "question": "依現行規定，有關考試院之職權，下列敘述何者正確？",
+      "options": {
+        "A": "考試院不得對立法院議決之有關考試的法律案提出覆議",
+        "B": "考試院掌理公務人員任免、考績、級俸、陞遷、褒獎之法制與執行事項所有政府官吏均須經考選銓敘始可任用考試院不得向立法院提出法律案",
+        "C": "",
+        "D": ""
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-24",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 24,
+      "question": "依憲法及憲法法庭判決意旨，關於中央與地方關係，下列敘述何者正確？",
+      "options": {
+        "A": "憲法就政府體制垂直權力分立之設計，係採聯邦國體制直轄市並沒有受憲法直接保障之地方自治事項",
+        "B": "為貫徹中央地方權限劃分，憲法就中央、省及縣立法權事項及範圍之規定，係相互排斥，互不重疊",
+        "C": "地方自治條例若僅以各該地方居民或事物為其規範對象者，不論其實際規範效果為何，均不屬跨地方轄區甚至全國性質事項之規範",
+        "D": ""
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_constitution",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_constitution-115-customs-25",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "constitution"
+      ],
+      "number": 25,
+      "question": "依司法院大法官解釋，有關預算案，下列敘述何者錯誤？",
+      "options": {
+        "A": "行政院所提之預算案經立法院通過及公布手續，為法定預算，即所謂措施性法律",
+        "B": "主管機關依職權停止法定預算中部分支出項目之執行，倘停止執行致影響機關存續者，即非法之所許",
+        "C": "若非屬國家重要政策之變更且符合預算法所定要件，主管機關依其合義務之裁量，自得裁減經費或變動執行",
+        "D": "因施政方針或重要政策變更涉及法定預算之停止執行時，總統應依規定適時向立法院提出報告並備質詢"
       },
       "answer": "B",
       "level": "senior",

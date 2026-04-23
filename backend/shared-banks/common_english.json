@@ -2,8 +2,8 @@
   "bankId": "common_english",
   "name": "公職英文",
   "description": "公職考試共通科目：英文（字彙、文法、克漏字、閱讀測驗）",
-  "bankVersion": 7,
-  "last_synced_at": "2026-04-21T03:02:28.770Z",
+  "bankVersion": 8,
+  "last_synced_at": "2026-04-22T17:49:26.021Z",
   "levels": [
     "senior"
   ],
@@ -5849,6 +5849,656 @@
         "B": "Both are companies with social responsibility.",
         "C": "Both are marketing strategies.",
         "D": "Both  are  sponsors."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-1",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 1,
+      "question": "John was determined to take on a part-time job to make",
+      "options": {
+        "A": "money for his upcoming schooling.",
+        "B": "extra",
+        "C": "harsh",
+        "D": "marital"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-2",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 2,
+      "question": "Before taking the job, Jim",
+      "options": {
+        "A": "over the possibilities, weighing the good against the bad.",
+        "B": "pondered",
+        "C": "merged",
+        "D": "reinforced"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-3",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 3,
+      "question": "Edward always makes rash promises about what he is going to do, but he never",
+      "options": {
+        "A": "those promises.",
+        "B": "suspends",
+        "C": "reveals",
+        "D": "fulfills"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-4",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 4,
+      "question": "Some children suffer from malnutrition, mainly because they are",
+      "options": {
+        "A": "dairy products.",
+        "B": "aware of",
+        "C": "deficient in",
+        "D": "informed of"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-5",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 5,
+      "question": "It is important to",
+      "options": {
+        "A": "a healthy diet and exercise regularly to keep your body in good shape.",
+        "B": "neglect",
+        "C": "disregard",
+        "D": "maintain"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-6",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 6,
+      "question": "The global economic recession has caused August car sales to",
+      "options": {
+        "A": "the industry's expectations.",
+        "B": "put up with",
+        "C": "come up with",
+        "D": "fall short of"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-7",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 7,
+      "question": "Awareness of skin cancer has led us to be more",
+      "options": {
+        "A": "of prolonged exposure to sunlight.",
+        "B": "remorseful",
+        "C": "cautious",
+        "D": "deficient"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-8",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 8,
+      "question": "She was",
+      "options": {
+        "A": "for the scholarship because she had a high GPA and participated in many extracurricular",
+        "B": "activities.",
+        "C": "detained",
+        "D": "procured"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-9",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 9,
+      "question": "The  typewriter,  replaced  by  computers  and  other  more  advanced  devices,  is  now  considered",
+      "options": {
+        "A": "a(n)technology.",
+        "B": "conceptual",
+        "C": "obsolete",
+        "D": "automatic"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-10",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 10,
+      "question": "Despite the protest of a few workers, we finally managed to reach a",
+      "options": {
+        "A": "about a non-smoking area in",
+        "B": "the office.",
+        "C": "conservation",
+        "D": "consequence"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-11",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 11,
+      "question": "By paying homage to the nation's founding fathers, some politicians were able to ______ a sense of",
+      "options": {
+        "A": "national pride and unity among different parties.",
+        "B": "abate",
+        "C": "distain",
+        "D": "instill"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-12",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 12,
+      "question": "Although rumor has it that previous elections in the school were",
+      "options": {
+        "A": "by the former principal, there",
+        "B": "has never been any evidence.",
+        "C": "rigged",
+        "D": "revealed"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-13",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 13,
+      "question": "When we ask the students to choose between red and green apples, they always go for the",
+      "options": {
+        "A": "option;",
+        "B": "they think green apples taste better.",
+        "C": "late",
+        "D": "later"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-14",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 14,
+      "question": "The film industry has long noticed that as they",
+      "options": {
+        "A": "to other countries, their films are receiving more",
+        "B": "attention and a larger fan base.",
+        "C": "reduce",
+        "D": "immigrate"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-15",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 15,
+      "question": "Although still being treated with breast cancer, the supermodel appeared on the TV interview",
+      "options": {
+        "A": ",",
+        "B": "looking young and beautiful as always.",
+        "C": "dubiously",
+        "D": "glamorously"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-16",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 16,
+      "question": "After the",
+      "options": {
+        "A": "of his legs due to a terrible car accident three years ago, the man now can finally move",
+        "B": "around on a wheelchair.",
+        "C": "amputation",
+        "D": "mummification"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-17",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 17,
+      "question": "After hearing my explanation, the customs officer who had been",
+      "options": {
+        "A": "in the first place stamped my",
+        "B": "passport to let me go without examining my luggage.",
+        "C": "carefree",
+        "D": "sophisticated"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-18",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 18,
+      "question": "If you agree with what he proposed, then we would have a",
+      "options": {
+        "A": "decision and close this meeting much",
+        "B": "earlier than planned.",
+        "C": "unanimous",
+        "D": "conflicting"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-19",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 19,
+      "question": "Many nations decided to _______ economic sanctions on the invading country.",
+      "options": {
+        "A": "expose",
+        "B": "impose",
+        "C": "recap",
+        "D": "depose"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-20",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 20,
+      "question": "After a series of protests, the king was forced with no other option but to",
+      "options": {
+        "A": "his throne.",
+        "B": "renounce",
+        "C": "regard",
+        "D": "yield"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-21",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 21,
+      "question": "What topic is the passage primarily concerned with?",
+      "options": {
+        "A": "The development of Cubism.",
+        "B": "Contemporary artists in Europe.",
+        "C": "Modern art movements in the United States.",
+        "D": "The influence of photography on landscape painters."
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-22",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 22,
+      "question": "According to the passage, in which year may European art trends affect art forms in the United States?",
+      "options": {
+        "A": "1936",
+        "B": "1901",
+        "C": "1905",
+        "D": "1913"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-23",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 23,
+      "question": "Which of the following is NOT mentioned as a means through which American artists learned about new",
+      "options": {
+        "A": "movements?",
+        "B": "Trips to Europe.",
+        "C": "The Armory Show of 1913.",
+        "D": "Lessons from successful artists."
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-24",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 24,
+      "question": "Why does the author mention Alfred Stieglitz?",
+      "options": {
+        "A": "To compare him to other artists of the time.",
+        "B": "To give an example of someone who had an influence on modern art.",
+        "C": "To point out that many artists learned their craft by studying with him.",
+        "D": "To demonstrate that photography was the major influence in modern art."
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_english",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_english-115-customs-25",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "英文",
+      "subject_tags": [
+        "english"
+      ],
+      "number": 25,
+      "question": "According to the passage, which of the following was a major new movement in twentieth-century art?",
+      "options": {
+        "A": "Cubism.",
+        "B": "Realism.",
+        "C": "Impressionism.",
+        "D": "The rational tradition."
       },
       "answer": "A",
       "level": "senior",

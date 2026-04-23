@@ -173,9 +173,11 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                     <p className="text-gray-500 text-xs mt-1">{PAPERS.map(p => p.name).join(' + ')}，共 {PAPERS.reduce((s,p) => s+p.count, 0)} 題</p>
                     <p className="text-gray-400 text-xs">
                       {getTimeLimitText(PAPERS)}，
-                      {isWeighted
-                        ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格${uniformPointsPerQ ? `（需答對 ${Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題）` : `（總分達 ${Math.round(TOTAL_PASS/TOTAL_POINTS*100)}%）`}`
-                        : `${TOTAL_PASS}/${TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 題 及格`}
+                      {TOTAL_PASS == null
+                        ? '答對越多越好'
+                        : isWeighted
+                          ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格${uniformPointsPerQ ? `（需答對 ${Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題）` : `（總分達 ${Math.round(TOTAL_PASS/TOTAL_POINTS*100)}%）`}`
+                          : `${TOTAL_PASS}/${TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 題 及格`}
                     </p>
                   </div>
                   <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {FULL_EXAM_FEE}</span>
@@ -258,9 +260,11 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                   <p className="text-gray-500 text-xs mt-1">{PAPERS.map(p => p.name).join(' + ')}，共 {PAPERS.reduce((s,p) => s+p.count, 0)} 題</p>
                   <p className="text-gray-400 text-xs">
                     {getTimeLimitText(PAPERS)}，
-                    {isWeighted
-                      ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格${uniformPointsPerQ ? `（需答對 ${Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題）` : `（總分達 ${Math.round(TOTAL_PASS/TOTAL_POINTS*100)}%）`}`
-                      : `${TOTAL_PASS}/${TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 題 及格`}
+                    {TOTAL_PASS == null
+                      ? '答對越多越好'
+                      : isWeighted
+                        ? `${TOTAL_PASS}/${TOTAL_POINTS} 分 及格${uniformPointsPerQ ? `（需答對 ${Math.ceil(TOTAL_PASS / uniformPointsPerQ)} 題）` : `（總分達 ${Math.round(TOTAL_PASS/TOTAL_POINTS*100)}%）`}`
+                        : `${TOTAL_PASS}/${TOTAL_POINTS || PAPERS.reduce((s,p)=>s+p.count,0)} 題 及格`}
                   </p>
                 </div>
                 <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {FULL_EXAM_FEE}</span>
@@ -306,7 +310,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
             ) : (
               <p>✅ 每題 1 分，合計 {PAPERS.reduce((s,p) => s+p.count, 0)} 分</p>
             )}
-            <p>🎯 及格：{isWeighted ? `總分 ${TOTAL_PASS}/${TOTAL_POINTS} 分` : `平均 60 分（${TOTAL_PASS}/${PAPERS.reduce((s,p)=>s+p.count,0)} 題）`}</p>
+            {TOTAL_PASS != null && <p>🎯 及格：{isWeighted ? `總分 ${TOTAL_PASS}/${TOTAL_POINTS} 分` : `平均 60 分（${TOTAL_PASS}/${PAPERS.reduce((s,p)=>s+p.count,0)} 題）`}</p>}
             {extraRules.map((r, i) => (
               <p key={i}>{r.icon} {r.text}</p>
             ))}
@@ -513,7 +517,7 @@ function Intermission({ paper1Result, onContinue, onFinishSingle, nextPaperName,
         <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200 w-full">
           <p className="text-amber-800 font-bold text-sm mb-1">📋 真實國考是全卷合計算分</p>
           <p className="text-amber-700 text-xs leading-relaxed">
-            總分需達 {TOTAL_PASS} 分（60%）才算及格。<br />
+            {TOTAL_PASS != null ? <>總分需達 {TOTAL_PASS} 分（60%）才算及格。<br /></> : null}
             繼續考完剩餘 {totalPapers - completedCount} 卷才能得到完整模擬成績。
           </p>
         </div>
@@ -547,7 +551,7 @@ function ExamResults({ papers, navigate }) {
   const totalTime = papers.reduce((s, p) => s + p.timeUsed, 0)
   const totalScore = isWeighted ? calcTotalScore(papers, PAPERS) : totalCorrect
   const hasZeroPaper = isFullExam && papers.some(p => p.correct === 0)
-  const passed = isFullExam ? (totalScore >= TOTAL_PASS && !hasZeroPaper) : null
+  const passed = (isFullExam && TOTAL_PASS != null) ? (totalScore >= TOTAL_PASS && !hasZeroPaper) : null
   const pct = Math.round((totalCorrect / totalQuestions) * 100)
   const mm = Math.floor(totalTime / 60)
   const ss = totalTime % 60
@@ -700,7 +704,7 @@ function ExamResults({ papers, navigate }) {
             <p className="text-white/50 text-xs">用時</p>
             <p className="text-white font-bold text-lg">{mm}:{String(ss).padStart(2, '0')}</p>
           </div>
-          {isFullExam && !isQuota && (
+          {isFullExam && !isQuota && TOTAL_PASS != null && (
             <div className="bg-white/10 rounded-xl px-4 py-2 text-center">
               <p className="text-white/50 text-xs">及格線</p>
               <p className="text-white font-bold text-lg">{TOTAL_PASS}{isWeighted ? '分' : ''}</p>

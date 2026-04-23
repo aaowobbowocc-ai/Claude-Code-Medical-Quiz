@@ -2,8 +2,8 @@
   "bankId": "common_law_basics",
   "name": "法學大意",
   "description": "初等考試共通科目：法學大意（含憲法、行政法、民刑法基礎）",
-  "bankVersion": 15,
-  "last_synced_at": "2026-04-21T03:02:28.770Z",
+  "bankVersion": 16,
+  "last_synced_at": "2026-04-22T17:49:26.021Z",
   "levels": [
     "elementary",
     "senior"
@@ -14432,6 +14432,656 @@
         "D": "受遺贈人之直系血親"
       },
       "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-26",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 26,
+      "question": "關於「法」、人類生活與自然界，下列敘述何者錯誤？",
+      "options": {
+        "A": "現在社會的法是人類生活的規範，人類以外的自然界（例如人類以外的山川星辰）等自然界，並不擁有法律",
+        "B": "自然界有所謂「法則」、「規律」，或「自然律」，此為自然界所「指示」給人類的法律",
+        "C": "人類社會具有關於社會生活、行動方式、經濟活動等的「規律」",
+        "D": "在各個歷史悠久的文明中，人類常覺得上帝、神祇、天地，宇宙等，與人類社會不可分割，所以幾"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-27",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 27,
+      "question": "從現行我國法秩序的角度來看，下列敘述何者正確？",
+      "options": {
+        "A": "國家公園管理處組織通則位階屬於法律自治條例的法位階與海關緝私條例相同施行細則屬於法律的一部分，也須由立法院制定通過",
+        "B": "行政院技職教育審議會組織及運作辦法為行政院所制定之法律",
+        "C": "",
+        "D": ""
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-28",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 28,
+      "question": "關於法律史的考察方法，下列敘述何者正確？",
+      "options": {
+        "A": "由於法律主要是國家、官僚與法學知識精英所制定，所以對於法律與法律史的理解，不需考慮一般庶民的法律經驗",
+        "B": "在目前的中華民國法體系下，原住民的法律經驗與法律意識並非現行法的一部分，其在歷史上的發展並不重要",
+        "C": "曾經以及現居臺灣的各族群的法律經驗，共同構成了目前「多源」與「多元」的臺灣法律經驗",
+        "D": "強調以臺灣為法律史史觀，必須只著眼於臺灣的地理空間上之經驗，而無庸放眼世界"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-29",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 29,
+      "question": "有關法律解釋之原則，下列何者錯誤？",
+      "options": {
+        "A": "刑罰規定禁止類推適用",
+        "B": "例外法應採從寬解釋",
+        "C": "法律解釋之順序應以文義解釋為先",
+        "D": "行政機關有法令解釋權"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-30",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 30,
+      "question": "假設針對同一事項，①法律  ②法規命令  ③自治規則  ④自治條例，四項法源均有規定，關於其效 力優先性之排序（優先者排在前面），下列何者正確？",
+      "options": {
+        "A": "①②③④",
+        "B": "④①②③",
+        "C": "①②④③",
+        "D": "①④②③"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-31",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 31,
+      "question": "某部法律之末條規定：「本法自公布日施行」。假設該法律於",
+      "options": {
+        "A": "114年9月30日公布，請問該法律自何日起發生效力？",
+        "B": "114年9月30日114年10月1日114年10月2日114年10月3日",
+        "C": "",
+        "D": ""
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-32",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 32,
+      "question": "司法院釋字第530號解釋認為，現行司法院之職掌有最高司法審判機關與最高司法行政機關分離之 情形。為期符合司法院為最高審判機關之制憲本旨，應修正相關法律規定。其所使用的解釋方法為 何？",
+      "options": {
+        "A": "歷史解釋",
+        "B": "文義解釋",
+        "C": "體系解釋",
+        "D": "當然解釋"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-33",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 33,
+      "question": "依憲法法庭裁判，關於刑罰規定授權明確性之判斷標準，下列敘述何者錯誤？",
+      "options": {
+        "A": "立法機關得授權行政機關發布命令，以補充刑罰法",
+        "B": "法律授權條款之明確程度，應與對於人民權利所造成之影響程度相稱",
+        "C": "授權母法文義應具體明確，使受規範者得以確信行為為可罰，以符合罪刑法定主義",
+        "D": "授權是否明確，不應拘泥授權條款本身文字，而應就法律整體解釋認定"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-34",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 34,
+      "question": "下列何者得不適用法律保留原則？",
+      "options": {
+        "A": "大學研究所對碩士候選人資格之規定",
+        "B": "涉及重大公共利益之行政措施",
+        "C": "行政機關做成懲罰性之行政處分",
+        "D": "有關人民行使權利之時效制度"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-35",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 35,
+      "question": "甲、乙結婚後育有一子丙，平日由乙之姊妹丁照顧。嗣後甲乙成立調解離婚，約定由甲對未成年之丙 行使親權。關於對丙之親權行使及會面交往，下列敘述何者正確？",
+      "options": {
+        "A": "甲、乙約定由甲對丙行使親權，則應由甲對丙單獨負擔扶養義務",
+        "B": "甲、乙間關於乙與丙會面交往的約定，日後僅乙得請求法院變更之現行法並沒有丁得請求與丙會面交往的法律依據甲日後欲將丙出養給戊時，皆無須取得乙之同意",
+        "C": "",
+        "D": ""
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-36",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 36,
+      "question": "關於扶養義務，下列敘述何者正確？",
+      "options": {
+        "A": "夫妻互負扶養義務，其負扶養義務之順序，次於直系血親卑親屬而屬第二順序",
+        "B": "負扶養義務者有數人，而其順序及親等同一時，應按人數平均分擔義務",
+        "C": "夫妻離婚後，未行使負擔未成年子女權利義務之一方，仍須對該子女負扶養義務",
+        "D": "子女即使因負擔對父母之扶養義務而不能維持自己生活，亦不得減輕其義務"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-37",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 37,
+      "question": "依司法院大法官解釋，有關法官職務，下列敘述何者錯誤？",
+      "options": {
+        "A": "司法院大法官由總統提名，不屬於憲法第",
+        "B": "80條之法官",
+        "C": "法官與國家之職務關係，與一般公務員與國家之職務關係不同",
+        "D": "法官如有懲戒事由，依憲法第"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-38",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 38,
+      "question": "下列何種權利被侵害時，被害人不得依民法向加害人請求非財產上之損害賠償？",
+      "options": {
+        "A": "健康權",
+        "B": "隱私權",
+        "C": "所有權",
+        "D": "名譽權"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-39",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 39,
+      "question": "關於民法物權編規定，下列敘述何者正確？",
+      "options": {
+        "A": "目前只有依法律才可以創設物權",
+        "B": "當事人訂立房屋買賣契約後，買受人就取得房屋的所有權",
+        "C": "繼承人繼承的遺產為房屋時，必須要去登記，才能取得房屋的所有權",
+        "D": "隔壁房屋因地震傾斜，可能影響到我家房屋的安危時，可請求隔壁房屋所有人防止侵害之發生"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-40",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 40,
+      "question": "甲酒後駕車，載著一名朋友乙在返家途中，撞死一名計程車司機後逃逸，導致其傷重不治身亡，涉犯 刑法第185條之3不能安全駕駛動力交通工具致人於死罪，該車之副駕駛座同時坐著乙，乙始終都 在睡覺。下列敘述何者正確？",
+      "options": {
+        "A": "刑法第185條之3之罪，僅只於駕駛人甲，乙對於事故無參與，亦不知情，無罪",
+        "B": "乙雖然未造成事故，但若於事故現場未如實告知警察案發情形，則會構成偽證罪",
+        "C": "甲造成事故，若於事故現場未如實告知警察案發情形，則會構成偽證罪",
+        "D": "甲教唆乙向警察陳述事故當時乃乙所駕駛，為乙拒絕，甲仍可成立教唆偽證罪"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-41",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 41,
+      "question": "關於刑法第21條第2項依上級公務員命令之行為得阻卻違法之規定，下列敘述何者錯誤？",
+      "options": {
+        "A": "行為人必須具備刑法上的公務員身分命令之內容須屬於上下級公務員之職權範圍",
+        "B": "下級公務員對於上級公務員所下達之命令合法性，僅有形式審查之義務，而無實質審查之權限",
+        "C": "若下級公務員明知命令違法而仍遵守者，即不得援引刑法第",
+        "D": "21條阻卻違法"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-42",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 42,
+      "question": "甲為某市殯葬管理處僱用之臨時人員，處理法定掌理之職務事項。該處區分職務為公墓區、火化場。 甲於火化場執行職務。乙委託甲代為向該處申請公墓使用許可證，並檢附相關證明文件、申請使用費 用新臺幣3萬餘元給甲。但甲侵吞款項卻未辦事。有關本案，下列敘述何者正確？",
+      "options": {
+        "A": "甲為契約聘僱之臨時人員，非刑法上之公務員",
+        "B": "甲利用其殯葬管理處臨時人員之身分而侵占款項，構成刑法第",
+        "C": "134條不純正瀆職罪",
+        "D": "凡具有公務員身分，並以故意犯刑法瀆職罪章以外各罪者，即成立刑法第"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-43",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 43,
+      "question": "警察甲於執行勤務時，臨檢到通緝犯乙，乙隨即從車輛後座拿一疊千元現鈔予甲，要求甲網開一面不 要執行逮捕。甲正好家裡遭逢變故，便默默收下現金，未予逮捕即讓乙離開。下列敘述何者錯誤？",
+      "options": {
+        "A": "甲的行為觸犯刑法第",
+        "B": "122條第1項、第2項違背職務收受賄賂罪",
+        "C": "乙的行為觸犯刑法第",
+        "D": "122條第3項違背職務行賄罪"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-44",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 44,
+      "question": "依我國著作權法規定，下列何者會侵害他人之著作財產權？",
+      "options": {
+        "A": "法院為了進行司法程序之必要，而在判決理由中摘錄某法學教授所撰寫教科書中的一句話",
+        "B": "國家圖書館應其他供公眾使用之圖書館的要求，而重製其所收藏之已絕版書籍",
+        "C": "某公立高中之教師，為學校授課之必要，而將電視所播放之一小時影片以家用錄影機錄製後，在課堂上完整播送供同學觀賞",
+        "D": "國立大學圖書館，重製已公開發表之研討會論文集所附之摘要"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-45",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 45,
+      "question": "甲為A有限公司之股東，其對該公司董事一職很有興趣，其從友人乙口中聽來董事相關之資訊。下 列乙對有限公司董事之相關敘述，何者錯誤？",
+      "options": {
+        "A": "有限公司應至少置董事",
+        "B": "3人有限公司董事應從有行為能力之股東中選任之",
+        "C": "董事非得其他股東表決權三分之二以上之同意，不得以其出資之全部或一部，轉讓於他人有限公司董事為公司負責人",
+        "D": ""
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-46",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 46,
+      "question": "下列何者為消費者保護法中規定之通訊交易？",
+      "options": {
+        "A": "企業經營者以電話通知消費者領獎",
+        "B": "消費者以手機上網訂購餐點",
+        "C": "百貨專櫃以通訊軟體通知會員優惠活動",
+        "D": "公司用電子郵件向供應商下單購買原料"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-47",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 47,
+      "question": "勞動基準法關於強制退休之規定，下列敘述何者正確？",
+      "options": {
+        "A": "勞工於職業災害醫療期間不堪勝任工作者，雇主得強制該勞工退休勞工年滿65歲者，雇主即不得僱用",
+        "B": "工作規則中規定強制退休年齡為",
+        "C": "67歲，雇主仍得於勞工年滿65歲時，強制勞工退休",
+        "D": "勞工身心障礙不堪勝任工作者，雇主得強制該勞工退休"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-48",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 48,
+      "question": "依勞工保險條例規定，因被保險人故意犯罪行為，以致發生保險事故者，關於保險給付，下列敘述何 者正確？",
+      "options": {
+        "A": "於被保險人假釋期間始發給保險給付",
+        "B": "於被保險人受有期徒刑以上刑之宣告，執行完畢或赦免後，始發給保險給付概不給與保險給付以退保論，繳納之保險費則予退還",
+        "C": "",
+        "D": ""
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-49",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 49,
+      "question": "為保障工作權之性別平等，性別平等工作法訂有各項相關措施，下列何者錯誤？",
+      "options": {
+        "A": "主管機關辦理之職業訓練，訓練期間應提供婦女托兒設施性騷擾防治措施應納入勞動檢查項目",
+        "B": "女性受僱者每月得請生理假",
+        "C": "1日，薪資減半發給",
+        "D": "受僱者如於休息時間外哺乳"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_law_basics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_basics-115-customs-50",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "法學知識",
+      "subject_tags": [
+        "law_basics"
+      ],
+      "number": 50,
+      "question": "有關家庭暴力防治法民事保護令，下列敘述何者正確？",
+      "options": {
+        "A": "被害人得向法院聲請緊急保護令",
+        "B": "通常保護令之聲請，得以任何形式為之，不以書面為限",
+        "C": "民事保護令有效期間之延長，每次為",
+        "D": "2年以下，無次數之限制民事保護令事件之審理應公開之"
+      },
+      "answer": "C",
       "level": "senior",
       "shared_bank": "common_law_basics",
       "parent_id": null,

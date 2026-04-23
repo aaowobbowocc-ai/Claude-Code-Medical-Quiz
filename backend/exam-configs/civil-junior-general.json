@@ -8,14 +8,14 @@
   "level": "junior",
   "selectionType": "quota",
   "persona": ["civil-exam-prep", "career-changer"],
-  "sharedBanks": ["common_law_knowledge", "common_constitution", "common_law_basics", "common_english", "common_chinese"],
+  "sharedBanks": ["common_law_knowledge", "common_constitution", "common_law_basics", "common_english", "common_chinese", "common_admin_law_junior", "common_admin_studies_junior"],
   "sharedScope": "level_4_common",
   "uxHints": {
     "defaultMode": "reservoir",
     "longText": true
   },
   "questionsFile": null,
-  "totalQ": 0,
+  "totalQ": 3545,
   "passScore": 0,
   "passRate": 0,
   "papers": [
@@ -63,7 +63,7 @@
     "shortName": "普考",
     "studentType": "公職應屆考生、轉職應考者",
     "years": "106 起",
-    "totalQ": 385,
+    "totalQ": 3545,
     "examDesc": "公務人員普通考試一般行政類科，由考選部舉辦，採名額制錄取。",
     "paperDesc": "共同科目（國文、法學知識與英文）+ 專業科目（行政法概要、行政學概要等）。",
     "subjects": "憲法、法學緒論、國文、英文、行政法概要、行政學概要等",

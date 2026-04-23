@@ -2,8 +2,8 @@
   "bankId": "common_admin_studies",
   "name": "行政學",
   "description": "公職考試三等／特考共通科目：行政學（含組織理論、人事、財務、政策等）",
-  "bankVersion": 3,
-  "last_synced_at": "2026-04-21T03:02:28.770Z",
+  "bankVersion": 4,
+  "last_synced_at": "2026-04-22T17:49:26.021Z",
   "levels": [
     "senior"
   ],
@@ -6951,6 +6951,32 @@
       "deprecated_reason": null
     },
     {
+      "id": "common_admin_studies-112-police-9",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 9,
+      "question": "依據中央行政機關組織基準法之規定，下列何者正確？",
+      "options": {
+        "A": "立法院各級機關組織名稱依此法律設置",
+        "B": "機關組織以法律定之者，其組織法律定名為法或通則",
+        "C": "機關內部單位區分為業務單位及總務單位",
+        "D": "獨立機關為依法獨立行使職權之首長制機關"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
       "id": "common_admin_studies-112-police-10",
       "roc_year": "112",
       "session": "第一次",
@@ -7255,6 +7281,58 @@
         "D": "貨幣單位"
       },
       "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-112-police-22",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 22,
+      "question": "當代公共問題的影響範圍往往跨越了專業藩籬，下列何者是錯誤的解決方式？",
+      "options": {
+        "A": "採用韋伯（M. Weber）的官僚制度，加強專業分工",
+        "B": "以宏觀全局的視野，了解利害關係者所形成的系統問題",
+        "C": "消除部門與部門之間僵硬的界線",
+        "D": "融合各種專業，提供整合性的解決方法"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-112-police-23",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "police",
+      "source_exam_name": "police",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 23,
+      "question": "有關政府與非營利組織之間的互動關係，下列敘述何者錯誤？",
+      "options": {
+        "A": "公共治理強調非營利組織參與公共事務的角色",
+        "B": "非營利組織應與政府區隔，所以不可接受政府經費補助",
+        "C": "非營利組織應受到政府相關法令的約束",
+        "D": "政府與非營利組織可以契約外包的方式合作"
+      },
+      "answer": "A",
       "level": "senior",
       "shared_bank": "common_admin_studies",
       "parent_id": null,

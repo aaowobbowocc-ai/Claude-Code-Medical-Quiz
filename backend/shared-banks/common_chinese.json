@@ -2,8 +2,8 @@
   "bankId": "common_chinese",
   "name": "公職國文",
   "description": "公職考試共通科目：國文（含公文格式、閱讀測驗、作文）— skeleton，待後續爬蟲填充",
-  "bankVersion": 6,
-  "last_synced_at": "2026-04-21T03:02:28.770Z",
+  "bankVersion": 7,
+  "last_synced_at": "2026-04-22T17:49:26.021Z",
   "levels": [
     "senior"
   ],
@@ -2341,6 +2341,266 @@
         "D": "墾丁大街只是在模仿「南洋」，並未開創出本"
       },
       "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-115-customs-1",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "chinese"
+      ],
+      "number": 1,
+      "question": "「科學在冷戰時期被認定為普遍真理。當湯瑪斯．孔恩提出科學是歷史上的偶然， 而且連繫在特定時空裡的主張後，就迎來了不小的騷動。孔恩作為科學家，經歷過 同僚們的唯科學主義；作為史家，他看破了科學哲學的誘惑，它聲稱可以解釋科學 發現的普遍『邏輯』。」 下列選項，何者最符合本文意旨？",
+      "options": {
+        "A": "科學是歷史上的必然",
+        "B": "科學是特定時空下的產物",
+        "C": "科學哲學能解釋任何科學問題",
+        "D": "冷戰時期發現科學的普遍邏輯"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-115-customs-2",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "chinese"
+      ],
+      "number": 2,
+      "question": "有關臺灣輸美金針菇在美國被檢出李斯特菌，農業部農糧署說明如下：「本批金針",
+      "options": {
+        "A": "菇出口前已自主採樣送",
+        "B": "SGS檢驗，檢驗完全合格才出口，惟因國際航運受肺炎疫",
+        "C": "情影響時程拉長，往年輸美約需",
+        "D": "18-20天，最近則長達40-45天，加上該菌在攝氏"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-115-customs-3",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "chinese"
+      ],
+      "number": 3,
+      "question": "齊景公問晏子曰：「孔子為人何如？」晏子不對，公又復問，不對。景公曰：「以",
+      "options": {
+        "A": "孔某語寡人者眾矣，俱以賢人也。今寡人問之，而子不對，何也？」晏子對曰：「嬰",
+        "B": "不肖，不足以知賢人。雖然，嬰聞所謂賢人者，入人之國必務合其君臣之親，而弭",
+        "C": "其上下之怨。孔某之荊，知白公之謀，而奉之以石乞，君身幾滅，而白公僇。」（《墨",
+        "D": "子．非儒》）"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-115-customs-4",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "chinese"
+      ],
+      "number": 4,
+      "question": "予甚自愧，方予少時，嘗有志於出遊天下，顧以學未成而不暇。及年壯可出，而四 方兵起，無所投足。逮今聖主興而宇內定，極海之際，合為一家，而予齒益加耄矣。 欲如庭學之遊，尚可得乎？（宋濂〈送天臺陳庭學序〉）",
+      "options": {
+        "A": "上述宋濂所言情事，下列何者形容最為貼切？",
+        "B": "念茲在茲",
+        "C": "事過境遷",
+        "D": "優柔寡斷"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-115-customs-5",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "chinese"
+      ],
+      "number": 5,
+      "question": "「美國有一項對人類祖先南方古猿的研究，發現現代人和古人類最大的區別在於眉 脊。科學家認為古人類鮮明而突出的眉脊，具有類似於其他靈長類動物的某種社交 功能，可用來展現社會支配地位。現代人失去這樣的眉脊可能會讓我們看上去較為 友好，而且平坦、豎直的前額讓我們的眉毛變得更富有表現力。過去人們認為，眉 毛可以防止水和細微的碎屑進人的眼睛。可那些眉毛稀疏，甚至沒有眉毛的人也未 受到影響。大約在 20萬年前，人類才進化出了靈活的眉毛。那個時候，人類社會 正處於重大的變革中。其中最主要的是，沒有親緣關係的人類群體開始合作了。最 近的研究發現，眉毛的作用是用來傳達表情的。現代人能擁有社交所需的龐大表情 系統，很大程度上是眉毛的功勞。我們的祖先不再局限於血緣之間的合作，而開始 了與非家族成員的協同合作。此時，人類祖先開始透過眉毛表達出更多的情緒，尤 其是友好。」 下列選項中，何者最符合本文旨意？",
+      "options": {
+        "A": "現代人和古人類最大的區別在於眉毛的作用不同",
+        "B": "眉毛主要的功能為防止水和細微碎屑進入人類眼睛",
+        "C": "現代人類是因為溝通合作的需要，所以進化出靈活的眉毛",
+        "D": "人類透過眉毛表達友好情緒，如：喜上眉梢、眉飛色舞等"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-115-customs-6",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "chinese"
+      ],
+      "number": 6,
+      "question": "「思想貧乏、人云亦云，是文章寫作常見的通病。許多文章無法有新意，是因為一 直重複前人已經說過的話，套用既有的概念，沿襲固陋的成見。一篇好的文章，最 可貴的是思想的高度，思考能否深刻，決定了文章的高下。」 根據上文，下列選項何者最符合文意？",
+      "options": {
+        "A": "沒有自己的洞見與思想的貧乏，是文章寫作的致命傷",
+        "B": "寫作應標新立異，內容力求有使人信以為真的說服力",
+        "C": "真實事件描寫中夾帶著虛構的細節，可避免人云亦云",
+        "D": "寫作要避免重複引用，並展現高潔的人格，才有高度"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-115-customs-7",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "chinese"
+      ],
+      "number": 7,
+      "question": "且鳳凰不與凡鳥同群，麒麟不代凡駟伏櫪。大丈夫既不能為名世碩人，洗蕩乾坤， 即當居高山之頂，目視雲漢，手捫星辰，必不隨群逐隊，自取羞辱也。（袁中道〈寄 祈年〉） 根據上文，下列敘述何者不符合文中表達的生活哲學？",
+      "options": {
+        "A": "出淤泥而不染",
+        "B": "道不行，乘桴浮於海",
+        "C": "唯仁者能好人，能惡人",
+        "D": "眾人皆醉我獨醒，眾人皆濁我獨清"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-115-customs-8",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "chinese"
+      ],
+      "number": 8,
+      "question": "「好比說看到路邊撿破爛的阿婆正彎著腰撿拾掉了一地的破銅爛鐵，在無數過往的 人群中可能沒有任何人會對這個舉動留下一絲絲回想，甚至未曾在腦海中呈現過一 丁點影像。這個時候我們不妨靠過去說：『阿婆，我來幫妳撿。』這時你可能會被",
+      "options": {
+        "A": "報以一個親切的微笑，然後當你俯身拾起這些文明人視之為敝屣的廢棄物時，進一",
+        "B": "步體會到與社會中處於較不鮮明角落的弱勢個體往來的那種感覺，忽然間覺得自己",
+        "C": "變大了。那種大不是一種自我膨脹，而是發自對原本認為不屬於自己這一族類的認",
+        "D": "同感，覺得自己大到了足以接納所有原本自以為不屬於己身的事。」"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-115-customs-9",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "chinese"
+      ],
+      "number": 9,
+      "question": "「推理小說在臺灣的發展，由於受到政治與歷史不斷轉換的影響，長期以來無法累 積出這個類型的敘事傳統，因此其實是在一再重複的『斷裂』中，不斷向西方與日 本等發展成熟母體進行『正宗／本格』型態探尋與譯寫的過程。對臺灣的推理小說 創作者而言，類型形式上的忠實與完整，是寫作的第一要務，唯有在此前提被滿足 的情況下，才可能作到創新與發展出在地性，也因此，這成為每個歷史階段被臺灣 創作者重複再現的翻譯者任務，也形塑出他們主要的譯寫策略。」 下列關於臺灣推理小說的敘述，說明正確的是：",
+      "options": {
+        "A": "受到西方與日本等母體的政治影響，難以發展成熟",
+        "B": "創作者需要不斷向母體探尋「正宗／本格」小說型態",
+        "C": "創作者須把創新與發展在地性，當作寫作的第一要務",
+        "D": "西方與日本母體間的「斷裂」，使本土創作者無法建立傳統"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_chinese",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_chinese-115-customs-10",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "customs",
+      "source_exam_name": "customs",
+      "subject": "國文（測驗）",
+      "subject_tags": [
+        "chinese"
+      ],
+      "number": 10,
+      "question": "「天地萬物本是一個有機整體，人是萬物之一，物我同源，同類相召，情意相通。 然而，現代人陷溺在人類自我中心的意識型態中，任意毀壞萬物，導致全球性的生 態危機。要真正解決生態環境的問題，人類需要從動輒砍伐森林、殺戮生物的惡習 中，返回到物我融通的性命之情上。人們只有被激發出對山河大地的審美意識，懂 得欣賞萬物之美，感物而後動，才能真正建立保護生態的意識，進而上升到『天地 與我並生，萬物與我為一』的齊物境界。科技發達雖然給現代人帶來了便利快捷的 物欲生活，但人與人之間卻產生了嚴重的疏離感。相較於此，莊子透過觀賞濠上的 自然美景，將自身的性命之情安放於大自然中，因著情與景的交流而產生物與我的 情意相通。這份人與天地之間的親和感，正適合充滿孤立感的現代人重新細細品 味。」 下列選項，何者非上文意旨？",
+      "options": {
+        "A": "懂得欣賞萬物之美，是現代環保的重要條件",
+        "B": "莊子的美學思想，對於現代社會具有高度啟發性",
+        "C": "唯有建立物我融通的生命觀，才能真正解決生態問題",
+        "D": "當今人與人之間的嚴重疏離感，全係來自科技發達的結果"
+      },
+      "answer": "D",
       "level": "senior",
       "shared_bank": "common_chinese",
       "parent_id": null,

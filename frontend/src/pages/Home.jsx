@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { usePlayerStore, getLevelTitle } from '../store/gameStore'
 import { getExamTypes, getExamSeo, getExamConfig, getExamCategories, getExamsByCategory, getCategoryMeta, prefetchCategorySharedBanks } from '../config/examRegistry'
+import { prefetchMeta } from '../config/metaCache'
 import { getSocket } from '../hooks/useSocket'
 import { useDailyMessage } from '../hooks/useDailyMessage'
 import { usePWA } from '../hooks/usePWA'
@@ -114,6 +115,7 @@ function ExamPickerContent({ exam, setExam, closeSheet }) {
                 if (typeof window.gtag === 'function') {
                   try { window.gtag('event', 'select_content', { content_type: 'exam', item_id: e.id, category: activeCategory }) } catch {}
                 }
+                prefetchMeta(e.id)
                 setExam(e.id); closeSheet()
               }}
               className={`rounded-2xl p-4 flex flex-col items-center gap-1.5 border-2 transition-all active:scale-95

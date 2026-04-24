@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
+import { getMeta, getMetaSync } from '../config/metaCache'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -29,23 +30,25 @@ const BG_COLORS = ['bg-gray-500', 'bg-blue-500', 'bg-red-500', 'bg-purple-500', 
 export default function Map() {
   const navigate = useNavigate()
   const { unlockedStages, level, exam } = usePlayerStore()
-  const [STAGES, setSTAGES] = useState([])
+  const mapStages = (arr) => arr.map((s, i) => ({
+    id: s.id,
+    name: s.name,
+    icon: STAGE_ICONS[s.tag] || '📝',
+    color: BG_COLORS[i % BG_COLORS.length],
+    count: s.count,
+  }))
+  const [STAGES, setSTAGES] = useState(() => {
+    const c = getMetaSync(exam || 'doctor1')
+    return c?.stages ? mapStages(c.stages) : []
+  })
 
   useEffect(() => {
-    fetch(`${BACKEND}/meta?exam=${exam || 'doctor1'}`)
-      .then(r => r.json())
-      .then(data => {
-        if (data.stages) {
-          setSTAGES(data.stages.map((s, i) => ({
-            id: s.id,
-            name: s.name,
-            icon: STAGE_ICONS[s.tag] || '📝',
-            color: BG_COLORS[i % BG_COLORS.length],
-            count: s.count,
-          })))
-        }
-      })
-      .catch(() => {})
+    let cancelled = false
+    getMeta(exam || 'doctor1').then(data => {
+      if (cancelled) return
+      if (data?.stages) setSTAGES(mapStages(data.stages))
+    }).catch(() => {})
+    return () => { cancelled = true }
   }, [exam])
 
   return (

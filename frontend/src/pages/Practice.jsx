@@ -18,6 +18,7 @@ import { supabase } from '../lib/supabase'
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 import { getStageStyle as getStageStyleFromRegistry, getExamConfig, hasLegalSubjectTag } from '../config/examRegistry'
+import { getMeta, getMetaSync } from '../config/metaCache'
 
 const SOURCE_MODE_KEY_PREFIX = 'practice-source-mode:'
 function getSourceMode(examId) {
@@ -107,7 +108,11 @@ function SetupScreen({ onStart, onBack }) {
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
   const coins = usePlayerStore(s => s.coins)
   const navigate = useNavigate()
-  const [stages, setStages] = useState([{ id: 0, name: '全部題目', icon: '🎲', color: '#64748B' }])
+  // Seed stages/meta synchronously from cache so exam switches feel instant
+  const cachedMeta = getMetaSync(examType)
+  const [stages, setStages] = useState(() =>
+    cachedMeta?.stages ? formatStages(cachedMeta.stages) : [{ id: 0, name: '全部題目', icon: '🎲', color: '#64748B' }]
+  )
   const last = getLastConfig()
   const [stage, setStage]     = useState(last.stage ?? 0)
   const [diff, setDiff]       = useState(last.diff ?? 'medium')
@@ -119,7 +124,7 @@ function SetupScreen({ onStart, onBack }) {
   const customFee = customCount * CUSTOM_FEE_PER_Q
   const hasSharedBanks = examHasSharedBanks(examType)
   const [sourceMode, setSourceMode] = useState(() => getSourceMode(examType))
-  const [meta, setMeta] = useState(null)
+  const [meta, setMeta] = useState(() => cachedMeta || null)
   const [showModeInfo, setShowModeInfo] = useState(false)
   const [online, setOnline] = useState(() => (typeof navigator !== 'undefined' ? navigator.onLine : true))
 
@@ -135,13 +140,13 @@ function SetupScreen({ onStart, onBack }) {
   }, [])
 
   useEffect(() => {
-    fetch(`${BACKEND}/meta?exam=${examType}`)
-      .then(r => r.json())
-      .then(data => {
-        if (data.stages) setStages(formatStages(data.stages))
-        setMeta(data)
-      })
-      .catch(() => {})
+    let cancelled = false
+    getMeta(examType).then(data => {
+      if (cancelled) return
+      if (data?.stages) setStages(formatStages(data.stages))
+      setMeta(data)
+    }).catch(() => {})
+    return () => { cancelled = true }
   }, [examType])
 
   useEffect(() => { setSourceMode(getSourceMode(examType)) }, [examType])

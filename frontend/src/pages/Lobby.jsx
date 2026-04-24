@@ -7,6 +7,7 @@ import ConnectionStatus from '../components/ConnectionStatus'
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 import { getStageStyle } from '../config/examRegistry'
+import { getMeta, getMetaSync } from '../config/metaCache'
 const FALLBACK_COLORS = ['#3B82F6', '#EF4444', '#10B981', '#F97316', '#8B5CF6', '#D97706']
 
 /* Pulsing dot animation for "waiting" */
@@ -31,23 +32,25 @@ export default function Lobby() {
   const [showStages, setShowStages] = useState(false)
   const [showAIDiff, setShowAIDiff] = useState(false)
   const [customSec, setCustomSec] = useState('')
-  const [STAGES, setSTAGES] = useState([{ id: 0, name: '隨機混合', icon: '🎲', color: '#64748B', count: 0 }])
+  const formatStagesArr = (arr) => arr.map((s, i) => {
+    const style = getStageStyle(s.tag) || { icon: '📝', color: FALLBACK_COLORS[i % FALLBACK_COLORS.length] }
+    return { id: s.id, name: s.name, icon: style.icon, color: style.color, count: s.count }
+  })
+  const [STAGES, setSTAGES] = useState(() => {
+    const cached = getMetaSync(exam || 'doctor1')
+    return cached?.stages ? formatStagesArr(cached.stages) : [{ id: 0, name: '隨機混合', icon: '🎲', color: '#64748B', count: 0 }]
+  })
 
   useEffect(() => { if (!roomCode) navigate('/') }, [roomCode])
 
   useEffect(() => {
     const examType = exam || 'doctor1'
-    fetch(`${BACKEND}/meta?exam=${examType}`)
-      .then(r => r.json())
-      .then(data => {
-        if (data.stages) {
-          setSTAGES(data.stages.map((s, i) => {
-            const style = getStageStyle(s.tag) || { icon: '📝', color: FALLBACK_COLORS[i % FALLBACK_COLORS.length] }
-            return { id: s.id, name: s.name, icon: style.icon, color: style.color, count: s.count }
-          }))
-        }
-      })
-      .catch(() => {})
+    let cancelled = false
+    getMeta(examType).then(data => {
+      if (cancelled) return
+      if (data?.stages) setSTAGES(formatStagesArr(data.stages))
+    }).catch(() => {})
+    return () => { cancelled = true }
   }, [exam])
 
   const selectedStage = STAGES.find(s => s.id === stage) || STAGES[0]

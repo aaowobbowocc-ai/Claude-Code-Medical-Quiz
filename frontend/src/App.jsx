@@ -10,9 +10,15 @@ import ErrorBoundary from './components/ErrorBoundary'
 import FixedBottomAd from './components/FixedBottomAd'
 import CoinGrantModal from './components/CoinGrantModal'
 import { initRegistry, getRegistry, getExamConfig, syncSharedBankVersions } from './config/examRegistry'
+import { prefetchMeta } from './config/metaCache'
 
 // Pre-fetch exam registry as early as possible; sync shared-bank versions for SW cache invalidation
 const registryPromise = initRegistry().then(() => { syncSharedBankVersions() })
+
+// Prefetch current exam's /meta early so Practice/Map/Lobby don't wait on exam switch
+setTimeout(() => {
+  try { prefetchMeta(usePlayerStore.getState().exam || 'doctor1') } catch {}
+}, 100)
 
 // Lazy-load non-critical pages
 const Lobby    = lazy(() => import('./pages/Lobby'))
@@ -47,7 +53,10 @@ function ExamLandingRoute() {
   useLayoutEffect(() => {
     if (!examSlug) return
     const cfg = getExamConfig(examSlug)
-    if (cfg) usePlayerStore.getState().setExam(examSlug)
+    if (cfg) {
+      usePlayerStore.getState().setExam(examSlug)
+      prefetchMeta(examSlug)
+    }
   }, [examSlug])
   return <Home />
 }

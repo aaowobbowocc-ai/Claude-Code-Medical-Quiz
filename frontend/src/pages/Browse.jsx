@@ -13,6 +13,7 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 // Dynamic exam list built from /meta data — no longer hardcoded
 import { getStageStyle as _getStageStyle, getExamConfig } from '../config/examRegistry'
+import { getMeta, getMetaSync } from '../config/metaCache'
 const _paperColors = { paper1: '#3B82F6', paper2: '#10B981', paper3: '#8B5CF6', paper4: '#F97316', paper5: '#EF4444', paper6: '#0D9488' }
 function getStageColor(tag) {
   return _getStageStyle(tag)?.color || _paperColors[tag] || '#94A3B8'
@@ -329,8 +330,12 @@ export default function Browse() {
     if (changed) {
       setExam(null); setStageTag(''); setQuery(''); setSearchInput('')
     }
-    setMeta(null)
-    fetch(`${BACKEND}/meta?exam=${examType}`).then(r => r.json()).then(setMeta).catch(() => {})
+    // Seed from cache for instant render, then async-refresh
+    const cached = getMetaSync(examType)
+    setMeta(cached || null)
+    let cancelled = false
+    getMeta(examType).then(data => { if (!cancelled) setMeta(data) }).catch(() => {})
+    return () => { cancelled = true }
   }, [examType])
 
   // Fetch questions

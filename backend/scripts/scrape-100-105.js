@@ -294,6 +294,17 @@ function buildTargets(filterExam, filterYear) {
   add('medlab', 'questions-medlab.json', '101', '101030', '第一次', '104', medlabSubs030)
   // 100140 第二次: c=104, s=0107,0301-0305 (same as 030)
   add('medlab', 'questions-medlab.json', '100', '100140', '第二次', '104', medlabSubs030)
+  // 102030 第一次: c=109 (not c=104), s codes rotated to 0107 + 0501-0505
+  // (confirmed via PDF cover probe 2026-04-24). Fixes 312/480 missing questions.
+  const medlabSubs102 = [
+    { s: '0107', subject: '臨床生理學與病理學', tag: 'clinical_physio_path', name: '臨床生理學與病理學' },
+    { s: '0501', subject: '臨床血液學與血庫學', tag: 'hematology', name: '臨床血液學與血庫學' },
+    { s: '0502', subject: '醫學分子檢驗學與臨床鏡檢學', tag: 'molecular', name: '臨床鏡檢學（包括寄生蟲學）' },
+    { s: '0503', subject: '微生物學與臨床微生物學', tag: 'microbiology', name: '微生物學及臨床微生物學' },
+    { s: '0504', subject: '生物化學與臨床生化學', tag: 'biochemistry', name: '生物化學與臨床生化學' },
+    { s: '0505', subject: '臨床血清免疫學與臨床病毒學', tag: 'serology', name: '臨床血清免疫學與臨床病毒學' },
+  ]
+  add('medlab', 'questions-medlab.json', '102', '102030', '第一次', '109', medlabSubs102)
 
   // PT — c=106 in year 100 (030 series)
   const ptSubs030 = [

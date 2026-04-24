@@ -17,13 +17,19 @@ function isSingleAnswer(q) {
   return q.answer && q.answer.length === 1 && q.options[q.answer] && !q.incomplete;
 }
 
-// Doctor1 paper-constraint: each subject_tag strictly belongs to one paper.
-// 100年 (pre-101 240Q format) has many mis-tagged questions; this guard
-// prevents e.g. a 醫學(二) question incorrectly tagged 'anatomy' from
-// leaking into anatomy-filtered practice sessions.
+// Doctor1 paper-constraint: 101+ has strict paper/tag mapping.
+// 醫學(一) = anatomy/embryology/histology/physiology/biochemistry
+// 醫學(二) = microbiology/parasitology/public_health/pharmacology/pathology
+//
+// 100年 uses a DIFFERENT paper split (pre-101 format):
+//   醫學(一) includes anatomy/embryology/histology + microbiology/parasitology/public_health
+//   醫學(二) includes physiology/biochemistry + pharmacology/pathology
+// So we exempt 100年 from the constraint — trust the existing tag as-is.
 const DOCTOR1_MED1_TAGS = new Set(['anatomy', 'embryology', 'histology', 'physiology', 'biochemistry']);
 const DOCTOR1_MED2_TAGS = new Set(['microbiology', 'parasitology', 'public_health', 'pharmacology', 'pathology']);
 function doctor1PaperOK(q, tag) {
+  // Pre-101 uses different paper split; don't apply constraint.
+  if (q.roc_year && parseInt(q.roc_year) < 101) return true;
   if (DOCTOR1_MED1_TAGS.has(tag)) return !q.subject || q.subject === '醫學(一)';
   if (DOCTOR1_MED2_TAGS.has(tag)) return !q.subject || q.subject === '醫學(二)';
   return true;

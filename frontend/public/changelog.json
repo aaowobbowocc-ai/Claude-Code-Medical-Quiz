@@ -1,6 +1,16 @@
 [
   {
     "date": "2026-04-24",
+    "tag": "fix",
+    "title": "修正使用者回報錯題 + 題目篩選精準化",
+    "items": [
+      "感謝回饋：醫師一階 100年第一次 醫學(二) 第57題 — HIV+CMV 首選藥物題原答案 C (Fluconazole 抗黴菌藥) 不合邏輯，從考選部官方答案清冊確認正解為 D (Ganciclovir)",
+      "科目篩選精準化：選「解剖」不會再跳出「微免」等跨紙卷題；doctor2 + dental2 共 8,585 題用 canonical Q-number 範圍重新分類",
+      "醫師一階 100 年（240 題舊格式）殘留 84 題錯標，用 neighbor smoothing 修正"
+    ]
+  },
+  {
+    "date": "2026-04-24",
     "tag": "feature",
     "title": "金幣經濟調整：AI 解釋降價、練習獎勵改分級",
     "items": [

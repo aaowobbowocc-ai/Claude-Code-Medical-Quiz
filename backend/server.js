@@ -664,7 +664,7 @@ const STATS_FILE = path.join(__dirname, 'stats.json');
 function loadStats() {
   const defaults = {
     connections: 0, peakConcurrent: 0, gamesPlayed: 0,
-    questionsAnswered: 0, aiExplains: 0, dailyVisits: {},
+    questionsAnswered: 0, aiExplains: 0, aiDaily: {}, dailyVisits: {},
     questionStats: {}, // { questionId: { correct: N, wrong: N } }
   };
   try {
@@ -812,6 +812,17 @@ app.get('/stats', (_, res) => {
     return days.map(([d, c]) =>
       '<div class="bar-row"><span class="bar-label">' + d.replace(/\d{4}\//, '') + '</span><div class="bar" style="width:' + Math.round(c/max*200) + 'px"></div><span class="bar-val">' + c + '</span></div>'
     ).join('') || '<div style="color:#475569;text-align:center;padding:12px">尚無數據</div>';
+  })()}
+</div>
+
+<div class="card">
+  <h2>每日 AI 解說（近 14 天）</h2>
+  ${(() => {
+    const days = Object.entries(stats.aiDaily || {}).sort().slice(-14);
+    const max = Math.max(...days.map(d => d[1]), 1);
+    return days.map(([d, c]) =>
+      '<div class="bar-row"><span class="bar-label">' + d.replace(/\d{4}\//, '') + '</span><div class="bar" style="background:#a78bfa;width:' + Math.round(c/max*200) + 'px"></div><span class="bar-val">' + c + ' 次</span></div>'
+    ).join('') || '<div style="color:#475569;text-align:center;padding:12px">尚無數據（從此部署開始紀錄）</div>';
   })()}
 </div>
 

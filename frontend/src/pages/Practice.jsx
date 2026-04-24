@@ -777,14 +777,15 @@ function PracticeResults({ result, config, onRestart, onHome }) {
 
   useEffect(() => {
     play(won ? 'victory' : 'defeat')
-    // Tiered rewards so casual players get something every round:
-    //   base: 3 coin / question answered (always — encourages practice)
-    //   pct ≥ 60 (及格): +30 coin bonus
-    //   pct ≥ 80 (優秀): +50 coin bonus (stacked with 及格 → total +80)
-    //   won vs AI opponent: +20 coin bonus (only when diffConfig.ai)
-    let reward = total * 3
-    if (pct >= 60) reward += 30
-    if (pct >= 80) reward += 50
+    // Tiered rewards so casual players get something every round, but not
+    // enough to farm. Custom practice costs 4/Q so base must be lower.
+    //   base: 1 coin / question answered
+    //   pct ≥ 60 (及格): +20
+    //   pct ≥ 80 (優秀): +30 (stacked with 及格 → total +50)
+    //   won vs AI opponent: +20 (only when diffConfig.ai)
+    let reward = total * 1
+    if (pct >= 60) reward += 20
+    if (pct >= 80) reward += 30
     if (diffConfig.ai && won) reward += 20
     addCoins(reward)
     addExp(correct * 10)
@@ -862,10 +863,10 @@ function PracticeResults({ result, config, onRestart, onHome }) {
 
         <p className="text-white/60 text-sm text-center">
           {(() => {
-            let r = total * 3
-            const parts = [`完成 ${total} 題 +${total * 3}`]
-            if (pct >= 60) { r += 30; parts.push('及格 +30') }
-            if (pct >= 80) { r += 50; parts.push('優秀 +50') }
+            let r = total
+            const parts = [`完成 ${total} 題 +${total}`]
+            if (pct >= 60) { r += 20; parts.push('及格 +20') }
+            if (pct >= 80) { r += 30; parts.push('優秀 +30') }
             if (diffConfig.ai && won) { r += 20; parts.push('🏆 勝 AI +20') }
             return `🪙 +${r}：${parts.join(' · ')}`
           })()}

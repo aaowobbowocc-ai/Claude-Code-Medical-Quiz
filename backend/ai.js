@@ -146,7 +146,18 @@ function checkAILimit(stats) {
   if (aiUsage.count >= AI_DAILY_LIMIT) return false;
   aiUsage.count++;
   stats.aiExplains++;
+  bumpAIDaily(stats, today);
   return true;
+}
+
+function bumpAIDaily(stats, today) {
+  if (!stats.aiDaily) stats.aiDaily = {};
+  stats.aiDaily[today] = (stats.aiDaily[today] || 0) + 1;
+  // Keep only last 60 days to prevent unbounded growth
+  const keys = Object.keys(stats.aiDaily).sort();
+  while (keys.length > 60) {
+    delete stats.aiDaily[keys.shift()];
+  }
 }
 
 function sseHeaders(res) {
@@ -275,6 +286,7 @@ function registerRoutes(app, examData, stats) {
     const cached = await getCachedExplanation(cacheKey);
     if (cached) {
       stats.aiExplains++; // count as a successful explain even though no API call
+      bumpAIDaily(stats, new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' }));
       sseHeaders(res);
       // Meta frame first so the frontend can render the verified/pending badge
       // and charge the correct price before the text starts flowing.

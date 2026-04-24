@@ -221,15 +221,20 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
   });
 
   // POST /questions/track
+  // Accept both {results:[{id,correct}]} and {stats:[{questionId,correct}]}
+  // (frontend Practice.jsx uses the latter; keep compat both ways)
   app.post('/questions/track', (req, res) => {
-    const { results } = req.body;
-    if (!Array.isArray(results)) return res.status(400).json({ error: 'results array required' });
+    const arr = Array.isArray(req.body?.results) ? req.body.results
+              : Array.isArray(req.body?.stats)   ? req.body.stats
+              : null;
+    if (!arr) return res.status(400).json({ error: 'results|stats array required' });
     if (!stats.questionStats) stats.questionStats = {};
     let tracked = 0;
-    for (const r of results.slice(0, 200)) {
-      if (!r.id) continue;
-      if (!stats.questionStats[r.id]) stats.questionStats[r.id] = { correct: 0, wrong: 0 };
-      stats.questionStats[r.id][r.correct ? 'correct' : 'wrong']++;
+    for (const r of arr.slice(0, 200)) {
+      const id = r.id || r.questionId;
+      if (!id) continue;
+      if (!stats.questionStats[id]) stats.questionStats[id] = { correct: 0, wrong: 0 };
+      stats.questionStats[id][r.correct ? 'correct' : 'wrong']++;
       tracked++;
     }
     res.json({ tracked });

@@ -17,6 +17,18 @@ function isSingleAnswer(q) {
   return q.answer && q.answer.length === 1 && q.options[q.answer] && !q.incomplete;
 }
 
+// Doctor1 paper-constraint: each subject_tag strictly belongs to one paper.
+// 100年 (pre-101 240Q format) has many mis-tagged questions; this guard
+// prevents e.g. a 醫學(二) question incorrectly tagged 'anatomy' from
+// leaking into anatomy-filtered practice sessions.
+const DOCTOR1_MED1_TAGS = new Set(['anatomy', 'embryology', 'histology', 'physiology', 'biochemistry']);
+const DOCTOR1_MED2_TAGS = new Set(['microbiology', 'parasitology', 'public_health', 'pharmacology', 'pathology']);
+function doctor1PaperOK(q, tag) {
+  if (DOCTOR1_MED1_TAGS.has(tag)) return !q.subject || q.subject === '醫學(一)';
+  if (DOCTOR1_MED2_TAGS.has(tag)) return !q.subject || q.subject === '醫學(二)';
+  return true;
+}
+
 function registerRoutes(app, examData, stats, examConfigs, { staticCache, browseCache } = {}) {
   // Resolve exam id (default doctor1)
   function resolveExamId(req) {
@@ -69,7 +81,7 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     let list = loadExamQuestions(examId, { mode });
     if (year)        list = list.filter(x => x.roc_year === year);
     if (session)     list = list.filter(x => x.session === session);
-    if (subject_tag) list = list.filter(x => x.subject_tag === subject_tag);
+    if (subject_tag) list = list.filter(x => x.subject_tag === subject_tag && doctor1PaperOK(x, subject_tag));
     if (q)           list = list.filter(x => x.question.includes(q) || Object.values(x.options).some(o => o.includes(q)));
     const total = list.length;
     const start = (parseInt(page) - 1) * parseInt(limit);
@@ -97,9 +109,10 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
       // (doctor1 / pharma etc with classification stages) OR subject_tags array
       // (shared bank questions).
       pool = pool.filter(q =>
-        q.paper_id === tag ||
-        q.subject_tag === tag ||
-        (Array.isArray(q.subject_tags) && q.subject_tags.includes(tag))
+        (q.paper_id === tag ||
+         q.subject_tag === tag ||
+         (Array.isArray(q.subject_tags) && q.subject_tags.includes(tag)))
+        && doctor1PaperOK(q, tag)
       );
     }
     const target = parseInt(limit != null ? limit : count) || 50;
@@ -194,7 +207,7 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
         q.paper_id === tag ||
         q.subject_tag === tag ||
         (Array.isArray(q.subject_tags) && q.subject_tags.includes(tag))
-      ));
+      ) && doctor1PaperOK(q, tag));
     }
     // Calculate proportional distribution from actual data counts
     const relevantTags = tags.filter(t => byTag[t]?.length > 0);

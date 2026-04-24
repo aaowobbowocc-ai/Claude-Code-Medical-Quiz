@@ -51,7 +51,14 @@ const DIFFICULTIES = [
   { id: 'medium', label: '普通',   icon: '⚡', desc: '15秒作答・AI對手',     time: 15, ai: true,  aiAcc: 0.55 },
   { id: 'hard',   label: '困難',   icon: '🔥', desc: '10秒作答・強化AI對手', time: 10, ai: true,  aiAcc: 0.80 },
   { id: 'expert', label: '地獄',   icon: '💀', desc: '6秒作答・天才AI對手',  time: 6,  ai: true,  aiAcc: 0.92 },
+  { id: 'custom', label: '自訂',   icon: '⚙️', desc: '自選秒數與題數・無AI對手', time: 20, ai: false, custom: true },
 ]
+
+const CUSTOM_FEE = 20
+const CUSTOM_TIME_MIN = 5
+const CUSTOM_TIME_MAX = 60
+const CUSTOM_COUNT_MIN = 5
+const CUSTOM_COUNT_MAX = 50
 
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F97316', D: '#EF4444' }
 
@@ -98,11 +105,17 @@ function shuffle(arr) {
 /* ── Setup screen ─────────────────────────────────────────────── */
 function SetupScreen({ onStart, onBack }) {
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
+  const coins = usePlayerStore(s => s.coins)
+  const navigate = useNavigate()
   const [stages, setStages] = useState([{ id: 0, name: '全部題目', icon: '🎲', color: '#64748B' }])
   const last = getLastConfig()
   const [stage, setStage]     = useState(last.stage ?? 0)
   const [diff, setDiff]       = useState(last.diff ?? 'medium')
   const [count, setCount]     = useState(last.count ?? 10)
+  const [customTime, setCustomTime]   = useState(last.customTime ?? 20)
+  const [customCount, setCustomCount] = useState(last.customCount ?? 15)
+  const isCustom = diff === 'custom'
+  const effectiveCount = isCustom ? customCount : count
   const hasSharedBanks = examHasSharedBanks(examType)
   const [sourceMode, setSourceMode] = useState(() => getSourceMode(examType))
   const [meta, setMeta] = useState(null)
@@ -253,19 +266,65 @@ function SetupScreen({ onStart, onBack }) {
           </div>
         </div>
 
-        {/* Question count */}
-        <div>
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2.5">題數</p>
-          <div className="flex gap-2">
-            {[5, 10, 20, 30].map(n => (
-              <button key={n} onClick={() => setCount(n)}
-                      className={`flex-1 py-3 rounded-xl font-bold text-base border transition-all active:scale-95
-                        ${count === n ? 'bg-medical-blue text-white border-medical-blue shadow' : 'bg-white text-gray-700 border-gray-100 shadow-sm'}`}>
-                {n}
-              </button>
-            ))}
+        {/* Question count (hidden in custom mode) */}
+        {!isCustom && (
+          <div>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2.5">題數</p>
+            <div className="flex gap-2">
+              {[5, 10, 20, 30].map(n => (
+                <button key={n} onClick={() => setCount(n)}
+                        className={`flex-1 py-3 rounded-xl font-bold text-base border transition-all active:scale-95
+                          ${count === n ? 'bg-medical-blue text-white border-medical-blue shadow' : 'bg-white text-gray-700 border-gray-100 shadow-sm'}`}>
+                  {n}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
+
+        {/* Custom sliders */}
+        {isCustom && (
+          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-4 border-2 border-amber-200 shadow-sm">
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-xs font-bold text-amber-700 uppercase tracking-widest">自訂參數</p>
+              <span className="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full">🪙 {CUSTOM_FEE}</span>
+            </div>
+
+            <div className="mb-4">
+              <div className="flex items-baseline justify-between mb-1.5">
+                <p className="text-sm font-semibold text-gray-700">每題作答時間</p>
+                <p className="text-lg font-bold text-amber-600">{customTime} <span className="text-xs text-gray-500 font-normal">秒</span></p>
+              </div>
+              <input type="range" min={CUSTOM_TIME_MIN} max={CUSTOM_TIME_MAX} step="5"
+                     value={customTime}
+                     onChange={e => setCustomTime(Number(e.target.value))}
+                     className="w-full accent-amber-500" />
+              <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                <span>{CUSTOM_TIME_MIN}秒</span>
+                <span>{CUSTOM_TIME_MAX}秒</span>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-baseline justify-between mb-1.5">
+                <p className="text-sm font-semibold text-gray-700">題數</p>
+                <p className="text-lg font-bold text-amber-600">{customCount} <span className="text-xs text-gray-500 font-normal">題</span></p>
+              </div>
+              <input type="range" min={CUSTOM_COUNT_MIN} max={CUSTOM_COUNT_MAX} step="5"
+                     value={customCount}
+                     onChange={e => setCustomCount(Number(e.target.value))}
+                     className="w-full accent-amber-500" />
+              <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                <span>{CUSTOM_COUNT_MIN}題</span>
+                <span>{CUSTOM_COUNT_MAX}題</span>
+              </div>
+            </div>
+
+            <p className="text-[11px] text-amber-700/80 mt-3 leading-snug">
+              🪙 自訂模式收 {CUSTOM_FEE} 金幣 · 純練習無 AI 對手
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Recent accuracy trend */}
@@ -296,13 +355,27 @@ function SetupScreen({ onStart, onBack }) {
       <div className="px-4 pb-10">
         <button
           onClick={() => {
-            saveLastConfig({ stage, diff, count })
+            if (isCustom) {
+              const { spendCoins } = usePlayerStore.getState()
+              if (!spendCoins(CUSTOM_FEE)) {
+                if (confirm(`金幣不足！自訂模式需要 ${CUSTOM_FEE} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
+                return
+              }
+            }
+            saveLastConfig({ stage, diff, count, customTime, customCount })
             const s = stages.find(s => s.id === stage)
-            onStart({ stage, diff, count, stageName: s?.name || '練習', sourceMode })
+            onStart({
+              stage,
+              diff,
+              count: effectiveCount,
+              customTime: isCustom ? customTime : null,
+              stageName: s?.name || '練習',
+              sourceMode,
+            })
           }}
           className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform grad-cta"
         >
-          🚀 開始練習
+          {isCustom ? `🚀 開始練習（扣 ${CUSTOM_FEE} 🪙）` : '🚀 開始練習'}
         </button>
       </div>
     </div>
@@ -318,7 +391,12 @@ function PracticeGame({ config, onFinish, onExit }) {
   const isLongText = !!examCfg?.uxHints?.longText
   const { prefs: readingPrefs, update: updateReadingPrefs, style: readingStyle } = useReadingMode(examType, isLegal)
   const [questionCollapsed, setQuestionCollapsed] = useState(isLongText) // start collapsed for long-text exams
-  const diffConfig = DIFFICULTIES.find(d => d.id === config.diff)
+  const diffConfig = (() => {
+    const base = DIFFICULTIES.find(d => d.id === config.diff) || DIFFICULTIES[1]
+    return config.diff === 'custom' && config.customTime
+      ? { ...base, time: config.customTime }
+      : base
+  })()
   const stageInfo  = { name: config.stageName || '練習', icon: '📝' }
 
   const [questions, setQuestions] = useState([])
@@ -685,7 +763,7 @@ function PracticeResults({ result, config, onRestart, onHome }) {
   const { play } = useSound()
   const { text: reviewText, loading: reviewLoading, review, notEnoughCoins: reviewNoCoins, cost: reviewCost } = useReview()
   const [reviewRequested, setReviewRequested] = useState(false)
-  const diffConfig = DIFFICULTIES.find(d => d.id === config.diff)
+  const diffConfig = DIFFICULTIES.find(d => d.id === config.diff) || DIFFICULTIES[1]
   const correct = result.myScore / 100
   const total   = result.total
   const pct     = Math.round((correct / total) * 100)

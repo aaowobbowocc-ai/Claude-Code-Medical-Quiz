@@ -51,12 +51,12 @@ const DIFFICULTIES = [
   { id: 'medium', label: '普通',   icon: '⚡', desc: '15秒作答・AI對手',     time: 15, ai: true,  aiAcc: 0.55 },
   { id: 'hard',   label: '困難',   icon: '🔥', desc: '10秒作答・強化AI對手', time: 10, ai: true,  aiAcc: 0.80 },
   { id: 'expert', label: '地獄',   icon: '💀', desc: '6秒作答・天才AI對手',  time: 6,  ai: true,  aiAcc: 0.92 },
-  { id: 'custom', label: '自訂',   icon: '⚙️', desc: '自選秒數與題數・無AI對手', time: 20, ai: false, custom: true },
+  { id: 'custom', label: '自訂',   icon: '⚙️', desc: '5-120秒可選・自選題數・無AI對手', time: 20, ai: false, custom: true },
 ]
 
-const CUSTOM_FEE = 20
+const CUSTOM_FEE_PER_Q = 4
 const CUSTOM_TIME_MIN = 5
-const CUSTOM_TIME_MAX = 60
+const CUSTOM_TIME_MAX = 120
 const CUSTOM_COUNT_MIN = 5
 const CUSTOM_COUNT_MAX = 50
 
@@ -116,6 +116,7 @@ function SetupScreen({ onStart, onBack }) {
   const [customCount, setCustomCount] = useState(last.customCount ?? 15)
   const isCustom = diff === 'custom'
   const effectiveCount = isCustom ? customCount : count
+  const customFee = customCount * CUSTOM_FEE_PER_Q
   const hasSharedBanks = examHasSharedBanks(examType)
   const [sourceMode, setSourceMode] = useState(() => getSourceMode(examType))
   const [meta, setMeta] = useState(null)
@@ -287,7 +288,7 @@ function SetupScreen({ onStart, onBack }) {
           <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-4 border-2 border-amber-200 shadow-sm">
             <div className="flex items-center justify-between mb-3">
               <p className="text-xs font-bold text-amber-700 uppercase tracking-widest">自訂參數</p>
-              <span className="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full">🪙 {CUSTOM_FEE}</span>
+              <span className="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full">🪙 {customFee}</span>
             </div>
 
             <div className="mb-4">
@@ -321,7 +322,7 @@ function SetupScreen({ onStart, onBack }) {
             </div>
 
             <p className="text-[11px] text-amber-700/80 mt-3 leading-snug">
-              🪙 自訂模式收 {CUSTOM_FEE} 金幣 · 純練習無 AI 對手
+              🪙 一題 {CUSTOM_FEE_PER_Q} 金幣 · {customCount} 題共 {customFee} 金幣 · 純練習無 AI 對手
             </p>
           </div>
         )}
@@ -357,8 +358,8 @@ function SetupScreen({ onStart, onBack }) {
           onClick={() => {
             if (isCustom) {
               const { spendCoins } = usePlayerStore.getState()
-              if (!spendCoins(CUSTOM_FEE)) {
-                if (confirm(`金幣不足！自訂模式需要 ${CUSTOM_FEE} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
+              if (!spendCoins(customFee)) {
+                if (confirm(`金幣不足！自訂模式需要 ${customFee} 金幣（${customCount} 題 × ${CUSTOM_FEE_PER_Q}），目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
                 return
               }
             }
@@ -375,7 +376,7 @@ function SetupScreen({ onStart, onBack }) {
           }}
           className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform grad-cta"
         >
-          {isCustom ? `🚀 開始練習（扣 ${CUSTOM_FEE} 🪙）` : '🚀 開始練習'}
+          {isCustom ? `🚀 開始練習（扣 ${customFee} 🪙）` : '🚀 開始練習'}
         </button>
       </div>
     </div>

@@ -621,10 +621,19 @@ io.on('connection', (socket) => {
       return;
     }
 
-    // Transfer host if needed
+    // Transfer host if needed — never transfer to AI
     if (room.hostId === socket.id) {
-      room.hostId = room.players.keys().next().value;
-      io.to(code).emit('host_changed', { newHostId: room.hostId });
+      const nextHumanId = [...room.players.entries()]
+        .find(([, p]) => !p.isAI)?.[0];
+      if (nextHumanId) {
+        room.hostId = nextHumanId;
+        io.to(code).emit('host_changed', { newHostId: room.hostId });
+      } else {
+        // Only AI players left — close the room
+        clearInterval(room.timer);
+        rooms.delete(code);
+        return;
+      }
     }
 
     if (room.phase === 'playing') {

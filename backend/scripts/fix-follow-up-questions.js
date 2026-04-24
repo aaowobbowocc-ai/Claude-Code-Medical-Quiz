@@ -22,19 +22,9 @@ const FILES = fs.readdirSync(BACKEND_DIR)
   .map(f => path.join(BACKEND_DIR, f))
 
 function buildContext(stem) {
-  const lines = []
-  lines.push(`第 ${stem.number} 題：${stem.question}`)
-  if (stem.options) {
-    for (const [k, v] of Object.entries(stem.options)) {
-      lines.push(`(${k}) ${v}`)
-    }
-  }
-  if (stem.answer) {
-    const ansKey = String(stem.answer).trim()
-    const ansText = stem.options?.[ansKey]
-    lines.push(ansText ? `上題答案：(${ansKey}) ${ansText}` : `上題答案：${ansKey}`)
-  }
-  return lines.join('\n')
+  // Only include the stem's question text. Options and answer are intentionally
+  // omitted so the follow-up doesn't leak the previous answer / become a gift.
+  return `第 ${stem.number} 題：${stem.question}`
 }
 
 function stripLegacyPrefix(questionText) {

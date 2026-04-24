@@ -5,7 +5,7 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // Pessimistic upfront charge — backend tells us the real price via the first SSE
 // `meta` frame, and we refund the difference. This keeps the UX responsive (no
 // pre-flight fetch) while still charging verified explanations for free.
-const EXPLAIN_COST = 150
+const EXPLAIN_COST = 100
 const REVIEW_COST = 300
 
 // Stable per-device id for vote anti-cheat. Generated lazily on first read.

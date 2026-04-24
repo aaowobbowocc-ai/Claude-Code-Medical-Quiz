@@ -658,34 +658,93 @@ setInterval(() => {
   }
 }, 5 * 60 * 1000);
 
-// ── Stats tracking (persist to file) ────────────────────────────────────
+// ── Stats tracking ──────────────────────────────────────────────────────
+// Primary: Supabase `site_stats` table (survives Render free-tier FS wipes).
+// Fallback: local stats.json (dev / Supabase down).
+const supabase = require('./supabase');
 const STATS_FILE = path.join(__dirname, 'stats.json');
+const STATS_KEY = 'snapshot';
 
-function loadStats() {
-  const defaults = {
+function emptyStats() {
+  return {
     connections: 0, peakConcurrent: 0, gamesPlayed: 0,
     questionsAnswered: 0, aiExplains: 0, aiDaily: {}, dailyVisits: {},
     questionStats: {}, // { questionId: { correct: N, wrong: N } }
   };
-  try {
-    const data = JSON.parse(fs.readFileSync(STATS_FILE, 'utf-8'));
-    return { ...defaults, ...data, startedAt: new Date().toISOString() };
-  } catch {
-    return { ...defaults, startedAt: new Date().toISOString() };
-  }
 }
 
-const stats = loadStats();
+function loadStatsFromFile() {
+  try {
+    return JSON.parse(fs.readFileSync(STATS_FILE, 'utf-8'));
+  } catch { return null; }
+}
 
-function saveStats() {
+async function loadStatsFromSupabase() {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase
+      .from('site_stats')
+      .select('data')
+      .eq('key', STATS_KEY)
+      .single();
+    if (error || !data?.data) return null;
+    return data.data;
+  } catch { return null; }
+}
+
+const stats = { ...emptyStats(), startedAt: new Date().toISOString() };
+
+// Seed synchronously from file (for immediate use), then async-merge from Supabase
+Object.assign(stats, loadStatsFromFile() || {});
+
+(async () => {
+  const remote = await loadStatsFromSupabase();
+  if (remote) {
+    // Supabase is source of truth. Take max of numeric counters in case
+    // local file has newer unsynced data; merge daily maps additively.
+    const merged = { ...emptyStats(), ...remote };
+    for (const k of ['connections', 'peakConcurrent', 'gamesPlayed', 'questionsAnswered', 'aiExplains']) {
+      merged[k] = Math.max(remote[k] || 0, stats[k] || 0);
+    }
+    merged.aiDaily = { ...(remote.aiDaily || {}), ...(stats.aiDaily || {}) };
+    merged.dailyVisits = { ...(remote.dailyVisits || {}), ...(stats.dailyVisits || {}) };
+    Object.assign(stats, merged);
+    console.log('[stats] loaded from Supabase');
+  } else {
+    console.log('[stats] no Supabase snapshot, using local file / defaults');
+  }
+})();
+
+function saveStatsToFile() {
   try {
     const { startedAt, ...persist } = stats;
     fs.writeFileSync(STATS_FILE, JSON.stringify(persist), 'utf-8');
   } catch {}
 }
 
-// Auto-save every 60 seconds
-setInterval(saveStats, 60_000);
+async function saveStatsToSupabase() {
+  if (!supabase) return;
+  try {
+    const { startedAt, ...persist } = stats;
+    await supabase
+      .from('site_stats')
+      .upsert({ key: STATS_KEY, data: persist, updated_at: new Date().toISOString() }, { onConflict: 'key' });
+  } catch (e) {
+    console.error('[stats] supabase upsert failed:', e?.message);
+  }
+}
+
+// Auto-save locally every 60s (cheap), Supabase every 5 min (avoid quota)
+setInterval(saveStatsToFile, 60_000);
+setInterval(saveStatsToSupabase, 5 * 60_000);
+
+// Also flush on graceful shutdown
+process.on('SIGTERM', async () => {
+  console.log('[stats] SIGTERM — flushing stats');
+  saveStatsToFile();
+  await saveStatsToSupabase();
+  process.exit(0);
+});
 
 function trackDailyVisit() {
   const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' });
@@ -802,6 +861,7 @@ app.get('/stats', (_, res) => {
   <div class="row"><span class="label">回答題數</span><span class="val">${stats.questionsAnswered}</span></div>
   <div class="row"><span class="label">AI 解說</span><span class="val">${stats.aiExplains} 次</span></div>
   <div class="row"><span class="label">運行時間</span><span class="val">${Math.floor(uptime/3600)}h ${Math.floor(uptime%3600/60)}m</span></div>
+  <div class="row"><span class="label">持久化</span><span class="val" style="color:${supabase ? '#10b981' : '#f97316'}">${supabase ? '✓ Supabase 同步中' : '⚠ 僅本地（重啟歸零）'}</span></div>
 </div>
 
 <div class="card">

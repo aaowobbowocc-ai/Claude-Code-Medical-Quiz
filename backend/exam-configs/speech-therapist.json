@@ -1,0 +1,96 @@
+{
+  "id": "speech-therapist",
+  "name": "語言治療師",
+  "short": "語治",
+  "icon": "🗣️",
+  "category": "medical",
+  "questionsFile": "questions-speech-therapist.json",
+  "totalQ": 3643,
+  "passScore": 180,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "基礎言語科學",
+      "subject": "基礎言語科學",
+      "subjects": "解剖、生理、語音聲學與語音知覺",
+      "count": 50
+    },
+    {
+      "id": "paper2",
+      "name": "神經性溝通障礙學",
+      "subject": "神經性溝通障礙學",
+      "subjects": "失語症、運動言語障礙、認知溝通障礙",
+      "count": 50
+    },
+    {
+      "id": "paper3",
+      "name": "兒童語言障礙",
+      "subject": "兒童語言障礙",
+      "subjects": "語言發展遲緩、特定型語言障礙、自閉症",
+      "count": 50
+    },
+    {
+      "id": "paper4",
+      "name": "嗓音與吞嚥障礙",
+      "subject": "嗓音與吞嚥障礙",
+      "subjects": "嗓音障礙、吞嚥障礙評估與治療",
+      "count": 50
+    },
+    {
+      "id": "paper5",
+      "name": "構音與語暢障礙",
+      "subject": "構音與語暢障礙",
+      "subjects": "構音音韻障礙、口吃、迅吃",
+      "count": 50
+    },
+    {
+      "id": "paper6",
+      "name": "聽力學與輔助溝通系統（包括專業倫理）",
+      "subject": "聽力學與輔助溝通系統（包括專業倫理）",
+      "subjects": "聽力學基礎、AAC、專業倫理",
+      "count": 50
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" },
+    { "id": 1, "tag": "speech_basic", "name": "基礎言語" },
+    { "id": 2, "tag": "speech_neuro", "name": "神經性溝通" },
+    { "id": 3, "tag": "speech_child", "name": "兒童語言" },
+    { "id": 4, "tag": "speech_voice", "name": "嗓音吞嚥" },
+    { "id": 5, "tag": "speech_articulation", "name": "構音語暢" },
+    { "id": 6, "tag": "speech_hearing", "name": "聽力與AAC" }
+  ],
+  "ui": {
+    "tagNames": {
+      "speech_basic": "基礎言語",
+      "speech_neuro": "神經性溝通",
+      "speech_child": "兒童語言",
+      "speech_voice": "嗓音吞嚥",
+      "speech_articulation": "構音語暢",
+      "speech_hearing": "聽力與AAC"
+    },
+    "stageStyles": {
+      "speech_basic": { "icon": "🧬", "color": "#3B82F6" },
+      "speech_neuro": { "icon": "🧠", "color": "#10B981" },
+      "speech_child": { "icon": "👶", "color": "#F97316" },
+      "speech_voice": { "icon": "🎤", "color": "#8B5CF6" },
+      "speech_articulation": { "icon": "💬", "color": "#EF4444" },
+      "speech_hearing": { "icon": "🦻", "color": "#14B8A6" }
+    },
+    "subjectColors": {}
+  },
+  "seo": {
+    "platformName": "國考知識王 — 語言治療師題庫練習平台",
+    "title": "語言治療師國考練習",
+    "fullName": "語言治療師",
+    "shortName": "語言治療師",
+    "studentType": "語言治療師國考應考生、聽語系學生",
+    "years": "103 起",
+    "totalQ": 3643,
+    "examDesc": "語言治療師考試（專技人員高等考試），每年 2 月舉行，每科 50 題（107 年起）。考選部於 115 年起改為電腦化測驗（CBT）。",
+    "paperDesc": "共 6 科：基礎言語科學、神經性溝通障礙學、兒童語言障礙、嗓音與吞嚥障礙、構音與語暢障礙、聽力學與輔助溝通系統。",
+    "subjects": "基礎言語、神經性溝通、兒童語言、嗓音吞嚥、構音語暢、聽力AAC",
+    "mockDesc": "語言治療師模擬考"
+  }
+}

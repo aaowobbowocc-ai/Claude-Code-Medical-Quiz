@@ -14,7 +14,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v5: 全考試 totalQ 同步實際題數（修正 doctor1/vet/nursing 等 17 套）
 // v6: 新增 聽力師 audiologist 考試（111-113 年，885 題）
 // v7: 聽力師擴充至 103-114（4023 題）
-const CACHE_KEY = 'exam-registry-v7'
+// v8: 新增 語言治療師 speech-therapist 考試（103-114 年，3643 題）
+const CACHE_KEY = 'exam-registry-v8'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache
@@ -78,7 +79,7 @@ export function getExamIds() {
 const EXAM_ORDER = [
   'doctor1', 'doctor2', 'dental1', 'dental2', 'pharma1', 'pharma2',
   'tcm1', 'tcm2', 'vet',
-  'nursing', 'nutrition', 'social-worker', 'pt', 'ot', 'medlab', 'radiology', 'audiologist',
+  'nursing', 'nutrition', 'social-worker', 'pt', 'ot', 'medlab', 'radiology', 'audiologist', 'speech-therapist',
   'lawyer1', 'judicial',
   'civil-senior', 'customs', 'police', 'police4',
   'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',

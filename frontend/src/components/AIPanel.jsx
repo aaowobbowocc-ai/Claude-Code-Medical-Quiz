@@ -52,6 +52,9 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
   const [reportText, setReportText] = useState('')
   const [reportSending, setReportSending] = useState(false)
   const [voteLocked, setVoteLocked] = useState(false)
+  const [showDownvoteReason, setShowDownvoteReason] = useState(false)
+  const [downvoteReason, setDownvoteReason] = useState('')
+  const [downvoteSent, setDownvoteSent] = useState(false)
 
   // D.6 deprecation report — separate from the generic /report channel.
   // Writes directly to Supabase `deprecation_reports` so admin can flip
@@ -71,6 +74,9 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
     setShowReportForm(false)
     setReportText('')
     setVoteLocked(false)
+    setShowDownvoteReason(false)
+    setDownvoteReason('')
+    setDownvoteSent(false)
     setShowDepForm(false)
     setDepReason('')
     setDepNewAnswer('')
@@ -92,11 +98,35 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
     setVoteLocked(true) // optimistic — server-side dupes come back as 409 anyway
     const result = await onVote(v)
     if (!result) {
-      // server rejected or offline; unlock only if no localStorage entry
       try {
         if (!localStorage.getItem(`ai-votes:${meta?.cacheKey}`)) setVoteLocked(false)
       } catch { setVoteLocked(false) }
+      return
     }
+    // After a successful downvote, ask why (optional). Skip on upvote.
+    if (v === -1) setShowDownvoteReason(true)
+  }
+
+  const submitDownvoteReason = async () => {
+    const trimmed = downvoteReason.trim()
+    if (!trimmed) return
+    try {
+      await fetch(`${BACKEND}/report`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          questionId: questionId || '未知',
+          questionText: questionText || '',
+          rocYear: rocYear || '',
+          session: session || '',
+          number: number || '',
+          message: `[AI 解析回饋｜cacheKey=${meta?.cacheKey || '?'}] ${trimmed}`,
+          name: usePlayerStore.getState().name || '',
+        }),
+      })
+    } catch {}
+    setDownvoteSent(true)
+    setShowDownvoteReason(false)
   }
 
   const hasExplanation = !!explanation
@@ -392,6 +422,35 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                         : 'border-rose-300 bg-white text-rose-600 active:scale-95'
                     }`}
                   >👎 {meta.downvotes || 0}</button>
+                </div>
+              )}
+              {showDownvoteReason && (
+                <div className="mt-3 pt-3 border-t border-blue-100">
+                  <p className="text-[11px] text-gray-500 mb-2">謝謝回饋。如果方便，告訴我們是哪裡不對？(選填)</p>
+                  <textarea
+                    rows={2}
+                    maxLength={500}
+                    value={downvoteReason}
+                    onChange={e => setDownvoteReason(e.target.value)}
+                    placeholder="例：步驟 2 的推導錯了 / 與題目無關 / 內容過時"
+                    className="w-full border border-gray-200 rounded-xl px-3 py-2 text-xs resize-none outline-none focus:border-rose-300 transition-colors"
+                  />
+                  <div className="flex justify-end gap-2 mt-2">
+                    <button
+                      onClick={() => { setShowDownvoteReason(false); setDownvoteReason('') }}
+                      className="text-xs px-3 py-1.5 rounded-lg bg-gray-100 text-gray-500 active:bg-gray-200"
+                    >略過</button>
+                    <button
+                      onClick={submitDownvoteReason}
+                      disabled={!downvoteReason.trim()}
+                      className="text-xs px-3 py-1.5 rounded-lg bg-rose-500 text-white font-medium active:bg-rose-600 disabled:opacity-50"
+                    >送出</button>
+                  </div>
+                </div>
+              )}
+              {downvoteSent && (
+                <div className="mt-3 pt-3 border-t border-blue-100">
+                  <p className="text-[11px] text-emerald-600">✓ 已收到，我們會根據回饋優化解析。</p>
                 </div>
               )}
             </div>

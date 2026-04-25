@@ -817,6 +817,29 @@ app.get('/stages', staticCache, (req, res) => {
   res.json(data.stages);
 });
 
+// Public cumulative metrics (for homepage trust signals).
+// Cached 5 minutes — these change slowly and the homepage hits this on every load.
+app.get('/cumulative-stats', (_req, res) => {
+  let totalQuestions = 0;
+  let examsCount = 0;
+  for (const [key, cfg] of Object.entries(examConfigs)) {
+    if (cfg.questionsFile) examsCount++;
+    const data = examData[key];
+    if (data?.questions) totalQuestions += data.questions.length;
+  }
+  // Reduce explanations cache: count of verified+pending across questionStats
+  const ratedQuestions = Object.keys(stats.questionStats || {}).length;
+  res.set('Cache-Control', 'public, max-age=300');
+  res.json({
+    questionsAnswered: stats.questionsAnswered || 0,
+    gamesPlayed: stats.gamesPlayed || 0,
+    aiExplains: stats.aiExplains || 0,
+    totalQuestions,
+    examsCount,
+    ratedQuestions,
+  });
+});
+
 app.get('/stats', (_, res) => {
   const concurrent = io.engine?.clientsCount || 0;
   const activeRooms = Array.from(rooms.values()).filter(r => r.phase === 'playing').length;

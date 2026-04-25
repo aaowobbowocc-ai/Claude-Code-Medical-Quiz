@@ -10,6 +10,7 @@ import { useBookmarks } from '../hooks/useBookmarks'
 import Footer from '../components/Footer'
 import Sheet from '../components/Sheet'
 import SupportBar from '../components/SupportBar'
+import CumulativeStatsBar from '../components/CumulativeStatsBar'
 import SupportSheets from '../components/SupportSheets'
 import RewardAdSheet from '../components/RewardAdSheet'
 import { supabase, linkOrSignInGoogle, switchGoogleAccount, getLinkedIdentity } from '../lib/supabase'
@@ -551,6 +552,8 @@ export default function Home() {
 
           <TutorialSection exam={currentExam} />
           <ExamArticle exam={currentExam} />
+
+          <CumulativeStatsBar />
 
           <SupportBar setSheet={setSheet} />
 

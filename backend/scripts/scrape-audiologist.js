@@ -26,6 +26,10 @@ const SUBJECTS = [
 ]
 
 const S_CODES = {
+  '103100': ['0901', '0902', '0903', '0904', '0905', '0906'],
+  '104100': ['0901', '0902', '0903', '0904', '0905', '0906'],
+  '105090': ['0901', '0902', '0903', '0904', '0905', '0906'],
+  '106110': ['0901', '0902', '0903', '0904', '0905', '0906'],
   '107110': ['0901', '0902', '0903', '0904', '0905', '0906'],
   '108110': ['0901', '0902', '0903', '0904', '0905', '0906'],
   '109110': ['0901', '0902', '0903', '0904', '0905', '0906'],
@@ -33,9 +37,14 @@ const S_CODES = {
   '111110': ['0701', '0702', '0703', '0704', '0705', '0706'],
   '112110': ['0601', '0602', '0603', '0604', '0605', '0606'],
   '113100': ['0601', '0602', '0603', '0604', '0605', '0606'],
+  '114100': ['0601', '0602', '0603', '0604', '0605', '0606'],
 }
 
 const TARGETS = [
+  { year: '103', session: '第一次', code: '103100', c: '113' },
+  { year: '104', session: '第一次', code: '104100', c: '110' },
+  { year: '105', session: '第一次', code: '105090', c: '110' },
+  { year: '106', session: '第一次', code: '106110', c: '110' },
   { year: '107', session: '第一次', code: '107110', c: '110' },
   { year: '108', session: '第一次', code: '108110', c: '110' },
   { year: '109', session: '第一次', code: '109110', c: '110' },
@@ -43,6 +52,7 @@ const TARGETS = [
   { year: '111', session: '第一次', code: '111110', c: '108' },
   { year: '112', session: '第一次', code: '112110', c: '106' },
   { year: '113', session: '第一次', code: '113100', c: '106' },
+  { year: '114', session: '第一次', code: '114100', c: '106' },
 ]
 
 function fetchPdf(url, retries = 2) {
@@ -71,20 +81,34 @@ async function getPdf(kind, code, c, s) {
   return buf
 }
 
-// PUA U+E18C..F encode (A)(B)(C)(D) in MoEX 聽力師 PDFs
+// Three MoEX 聽力師 PDF formats:
+//   104-106: PUA chars for options + question number alone on line ("\n1\n因耳蝸...")
+//   107-113: PUA chars + question on same line ("1基礎..." or "1 有關...")
+//   114+:    "A.\nopt\n" pattern, no PUA + question prefix "1.\n"
 function parseQuestions(text) {
   let t = text
   const LETTERS = ['A', 'B', 'C', 'D']
-  for (let i = 0; i < 4; i++) {
-    const pua = String.fromCharCode(0xE18C + i)
-    t = t.split(pua).join('\n__OPT_' + LETTERS[i] + '__ ')
+  const hasPUA = t.includes(String.fromCharCode(0xE18C))
+
+  if (hasPUA) {
+    for (let i = 0; i < 4; i++) {
+      const pua = String.fromCharCode(0xE18C + i)
+      t = t.split(pua).join('\n__OPT_' + LETTERS[i] + '__ ')
+    }
+  } else {
+    // 114+ format: "A.\noption text" (letter on own line followed by content)
+    t = t.replace(/(^|\n)\s*([A-D])[.．]\s*\n/g, (m, p1, letter) => {
+      return p1 + '\n__OPT_' + letter + '__ '
+    })
   }
-  // Question number at start of line — handle both:
-  //   "1聽覺..."        (no space, 112+)
-  //   "1 有關耳鳴..."   (single space, 108-)
-  //   "1.題目..."       (dot, alternate)
-  // Don't match common prefixes like "1.0", "115年", "代號：1106"
-  t = t.replace(/(^|\n)\s{0,3}(\d{1,3})[.\s]?([^\d\s.、．]|[^\d.])/g, (m, p1, num, ch) => {
+
+  // Question number boundary — match all three formats:
+  //   "\n1\n..."       (104-106, num alone on line)
+  //   "\n1基礎..."     (107+ no space)
+  //   "\n1 有關..."    (with space)
+  //   "\n1.下列..."    (114+ with dot)
+  // Don't match: "1.0" (digit-after-dot), "115年" (3-digit year), "代號：1106"
+  t = t.replace(/(^|\n)\s{0,3}(\d{1,3})\s*[.．]?\s*([^\d\s])/g, (m, p1, num, ch) => {
     const n = parseInt(num)
     if (n < 1 || n > 100) return m
     return p1 + '\n__Q_' + n + '__ ' + ch

@@ -13,7 +13,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v4: civil shell exams totalQ 補齊 (junior/senior/elementary) — force refresh 字卡
 // v5: 全考試 totalQ 同步實際題數（修正 doctor1/vet/nursing 等 17 套）
 // v6: 新增 聽力師 audiologist 考試（111-113 年，885 題）
-const CACHE_KEY = 'exam-registry-v6'
+// v7: 聽力師擴充至 103-114（4023 題）
+const CACHE_KEY = 'exam-registry-v7'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache

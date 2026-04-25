@@ -12,7 +12,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 //     + civil-service shell configs + sharedBanks metadata
 // v4: civil shell exams totalQ 補齊 (junior/senior/elementary) — force refresh 字卡
 // v5: 全考試 totalQ 同步實際題數（修正 doctor1/vet/nursing 等 17 套）
-const CACHE_KEY = 'exam-registry-v5'
+// v6: 新增 聽力師 audiologist 考試（111-113 年，885 題）
+const CACHE_KEY = 'exam-registry-v6'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache
@@ -76,7 +77,7 @@ export function getExamIds() {
 const EXAM_ORDER = [
   'doctor1', 'doctor2', 'dental1', 'dental2', 'pharma1', 'pharma2',
   'tcm1', 'tcm2', 'vet',
-  'nursing', 'nutrition', 'social-worker', 'pt', 'ot', 'medlab', 'radiology',
+  'nursing', 'nutrition', 'social-worker', 'pt', 'ot', 'medlab', 'radiology', 'audiologist',
   'lawyer1', 'judicial',
   'civil-senior', 'customs', 'police', 'police4',
   'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',

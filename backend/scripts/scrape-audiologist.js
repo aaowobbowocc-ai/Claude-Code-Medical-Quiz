@@ -26,12 +26,20 @@ const SUBJECTS = [
 ]
 
 const S_CODES = {
+  '107110': ['0901', '0902', '0903', '0904', '0905', '0906'],
+  '108110': ['0901', '0902', '0903', '0904', '0905', '0906'],
+  '109110': ['0901', '0902', '0903', '0904', '0905', '0906'],
+  '110111': ['0901', '0902', '0903', '0904', '0905', '0906'],
   '111110': ['0701', '0702', '0703', '0704', '0705', '0706'],
   '112110': ['0601', '0602', '0603', '0604', '0605', '0606'],
   '113100': ['0601', '0602', '0603', '0604', '0605', '0606'],
 }
 
 const TARGETS = [
+  { year: '107', session: '第一次', code: '107110', c: '110' },
+  { year: '108', session: '第一次', code: '108110', c: '110' },
+  { year: '109', session: '第一次', code: '109110', c: '110' },
+  { year: '110', session: '第一次', code: '110111', c: '110' },
   { year: '111', session: '第一次', code: '111110', c: '108' },
   { year: '112', session: '第一次', code: '112110', c: '106' },
   { year: '113', session: '第一次', code: '113100', c: '106' },
@@ -71,8 +79,16 @@ function parseQuestions(text) {
     const pua = String.fromCharCode(0xE18C + i)
     t = t.split(pua).join('\n__OPT_' + LETTERS[i] + '__ ')
   }
-  // Question number at start of line (no dot): "1聽覺..."
-  t = t.replace(/(^|\n)(\d{1,3})([^\d\s.、．])/g, '$1\n__Q_$2__ $3')
+  // Question number at start of line — handle both:
+  //   "1聽覺..."        (no space, 112+)
+  //   "1 有關耳鳴..."   (single space, 108-)
+  //   "1.題目..."       (dot, alternate)
+  // Don't match common prefixes like "1.0", "115年", "代號：1106"
+  t = t.replace(/(^|\n)\s{0,3}(\d{1,3})[.\s]?([^\d\s.、．]|[^\d.])/g, (m, p1, num, ch) => {
+    const n = parseInt(num)
+    if (n < 1 || n > 100) return m
+    return p1 + '\n__Q_' + n + '__ ' + ch
+  })
 
   const lines = t.split('\n').map(l => l.trim()).filter(Boolean)
   const out = []

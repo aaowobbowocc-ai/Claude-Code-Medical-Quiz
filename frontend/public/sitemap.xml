@@ -32,32 +32,37 @@
   </url>
   <url>
     <loc>https://examking.tw/leaderboard</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://examking.tw/board</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://examking.tw/notes</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://examking.tw/history</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://examking.tw/favorites</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://examking.tw/changelog</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/coverage</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
@@ -75,14 +80,33 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <!-- Per-exam landing pages (prerendered HTML shells, see scripts/generate-shells.cjs) -->
   <url>
-    <loc>https://examking.tw/doctor1/</loc>
+    <loc>https://examking.tw/audiologist/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://examking.tw/doctor2/</loc>
+    <loc>https://examking.tw/civil-elementary-general/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/civil-junior-general/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/civil-senior/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/civil-senior-general/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/customs/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -97,12 +121,92 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://examking.tw/doctor1/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/doctor2/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/driver-car/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/driver-moto/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/judicial/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/lawyer1/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/medlab/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/nursing/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/nutrition/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/ot/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://examking.tw/pharma1/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://examking.tw/pharma2/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/police/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/police4/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/pt/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/radiology/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/social-worker/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/speech-therapist/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -117,83 +221,38 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://examking.tw/nursing/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://examking.tw/pt/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://examking.tw/ot/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://examking.tw/medlab/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://examking.tw/radiology/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://examking.tw/nutrition/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://examking.tw/vet/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://examking.tw/civil-senior-general/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://examking.tw/civil-junior-general/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://examking.tw/civil-elementary-general/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://examking.tw/guides/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://examking.tw/guides/doctor1-vs-doctor2/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://examking.tw/guides/pharma2-reform-110/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://examking.tw/guides/nursing-50q-strategy/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://examking.tw/guides/ai-practice-best-practices/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://examking.tw/guides/medlab-six-subjects-guide/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/guides/nursing-50q-strategy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/guides/pharma2-reform-110/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://examking.tw/guides/ai-practice-best-practices/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

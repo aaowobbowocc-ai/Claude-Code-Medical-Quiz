@@ -1,0 +1,142 @@
+{
+  "id": "audiologist",
+  "name": "聽力師",
+  "short": "聽力",
+  "icon": "👂",
+  "category": "medical",
+  "questionsFile": "questions-audiologist.json",
+  "totalQ": 4023,
+  "passScore": 180,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "基礎聽力科學",
+      "subject": "基礎聽力科學",
+      "subjects": "外耳中耳內耳解剖、聲學、聽覺神經傳導",
+      "count": 50
+    },
+    {
+      "id": "paper2",
+      "name": "行為聽力學",
+      "subject": "行為聽力學",
+      "subjects": "純音測聽、語音測聽、遮蔽",
+      "count": 50
+    },
+    {
+      "id": "paper3",
+      "name": "電生理聽力學",
+      "subject": "電生理聽力學",
+      "subjects": "ABR、ASSR、OAE、中耳功能檢查",
+      "count": 50
+    },
+    {
+      "id": "paper4",
+      "name": "聽覺輔具原理與實務學",
+      "subject": "聽覺輔具原理與實務學",
+      "subjects": "助聽器選配、人工電子耳、聽覺輔助科技",
+      "count": 50
+    },
+    {
+      "id": "paper5",
+      "name": "聽覺與平衡系統之創健與復健學",
+      "subject": "聽覺與平衡系統之創健與復健學",
+      "subjects": "聽能創健、前庭復健、兒童聽能訓練",
+      "count": 50
+    },
+    {
+      "id": "paper6",
+      "name": "聽語溝通障礙學（包括專業倫理）",
+      "subject": "聽語溝通障礙學（包括專業倫理）",
+      "subjects": "語言障礙、溝通策略、專業倫理",
+      "count": 50
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    },
+    {
+      "id": 1,
+      "tag": "audio_basic",
+      "name": "基礎聽力"
+    },
+    {
+      "id": 2,
+      "tag": "audio_behavioral",
+      "name": "行為聽力"
+    },
+    {
+      "id": 3,
+      "tag": "audio_electro",
+      "name": "電生理聽力"
+    },
+    {
+      "id": 4,
+      "tag": "audio_devices",
+      "name": "聽覺輔具"
+    },
+    {
+      "id": 5,
+      "tag": "audio_rehab",
+      "name": "創健復健"
+    },
+    {
+      "id": 6,
+      "tag": "audio_comm",
+      "name": "聽語溝通障礙"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "audio_basic": "基礎聽力",
+      "audio_behavioral": "行為聽力",
+      "audio_electro": "電生理聽力",
+      "audio_devices": "聽覺輔具",
+      "audio_rehab": "創健復健",
+      "audio_comm": "聽語溝通障礙"
+    },
+    "stageStyles": {
+      "audio_basic": {
+        "icon": "🧬",
+        "color": "#3B82F6"
+      },
+      "audio_behavioral": {
+        "icon": "🎧",
+        "color": "#10B981"
+      },
+      "audio_electro": {
+        "icon": "⚡",
+        "color": "#F97316"
+      },
+      "audio_devices": {
+        "icon": "🔊",
+        "color": "#8B5CF6"
+      },
+      "audio_rehab": {
+        "icon": "🏥",
+        "color": "#EF4444"
+      },
+      "audio_comm": {
+        "icon": "💬",
+        "color": "#14B8A6"
+      }
+    },
+    "subjectColors": {}
+  },
+  "seo": {
+    "platformName": "國考知識王 — 聽力師題庫練習平台",
+    "title": "聽力師國考練習",
+    "fullName": "聽力師",
+    "shortName": "聽力師",
+    "studentType": "聽力師國考應考生、聽語系學生",
+    "years": "103 起",
+    "totalQ": 4023,
+    "examDesc": "聽力師考試（專技人員高等考試），每年 2 月考行動化試，每科 50 題。考選部於 115 年起改為電腦化測驗（CBT）。",
+    "paperDesc": "共 6 科：基礎聽力科學、行為聽力學、電生理聽力學、聽覺輔具原理與實務學、聽覺與平衡系統之創健與復健學、聽語溝通障礙學。",
+    "subjects": "基礎聽力科學、行為聽力學、電生理聽力學、聽覺輔具、聽能復健、聽語溝通障礙",
+    "mockDesc": "聽力師模擬考"
+  }
+}

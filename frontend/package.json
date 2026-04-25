@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node build-shells.cjs",
+    "build": "vite build && node build-shells.cjs && node generate-sitemap.cjs",
     "preview": "vite preview",
     "seo:intros": "node scripts/generate-seo-intros.cjs"
   },

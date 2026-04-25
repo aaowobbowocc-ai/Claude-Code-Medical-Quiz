@@ -7,7 +7,7 @@ const API = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const EXAM_ORDER = [
   'doctor1', 'doctor2', 'dental1', 'dental2',
   'pharma1', 'pharma2', 'tcm1', 'tcm2',
-  'nursing', 'nutrition', 'medlab', 'pt', 'ot', 'radiology',
+  'nursing', 'nutrition', 'medlab', 'pt', 'ot', 'radiology', 'audiologist', 'speech-therapist',
   'social-worker', 'vet',
   'lawyer1', 'judicial', 'customs', 'police',
   'civil-senior', 'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',

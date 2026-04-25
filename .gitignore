@@ -8,6 +8,10 @@ frontend/.env.local
 # Backend secrets
 backend/.env
 backend/.gemini-key
+backend/gcp-sa.json
+backend/gcp-oauth.json
+backend/gcp-token.json
+backend/_tmp/ga-snapshot/
 
 # Python
 __pycache__/

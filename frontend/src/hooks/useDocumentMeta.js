@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import { getExamConfig } from '../config/examRegistry'
 
@@ -81,10 +82,14 @@ function applyMeta(meta) {
  */
 export function useDocumentMeta() {
   const examId = usePlayerStore(s => s.exam)
+  const location = useLocation()
 
+  // Fire on BOTH exam change AND route change. Previously only fired on exam
+  // change → 88% of GA4 page_views had content_group=(not set) because users
+  // navigating /lobby /game /results without switching exam never re-fired.
   useEffect(() => {
     const cfg = examId ? getExamConfig(examId) : null
     const meta = cfg ? buildExamMeta(cfg) : DEFAULT_META
     applyMeta(meta)
-  }, [examId])
+  }, [examId, location.pathname])
 }

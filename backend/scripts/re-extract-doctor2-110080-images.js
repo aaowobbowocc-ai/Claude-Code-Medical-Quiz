@@ -8,16 +8,16 @@ const path = require('path');
 const fs = require('fs');
 const { extractSession } = require('./extract-images-v3');
 
-// Doctor2 110年第二次 (110080) — class code 301, subjects by paper
+// Doctor2 110年第二次 (110080) — class code 301, 2-digit s codes
 // Paper: 醫學(三) 醫學(四) 醫學(五) 醫學(六) (4 papers, c=301)
 const DOCTOR2_110080 = {
   exam: 'doctor2',
   code: '110080',
   papers: [
-    { c: '301', s: '0301' },  // 醫學(三)
-    { c: '301', s: '0401' },  // 醫學(四)
-    { c: '301', s: '0501' },  // 醫學(五)
-    { c: '301', s: '0601' },  // 醫學(六) ← User reported image issue here
+    { c: '302', s: '11' },  // 醫學(三) internal_medicine
+    { c: '302', s: '22' },  // 醫學(四) pediatrics
+    { c: '302', s: '33' },  // 醫學(五) surgery
+    { c: '302', s: '44' },  // 醫學(六) medical_law_ethics ← User reported image issue here
   ],
 };
 

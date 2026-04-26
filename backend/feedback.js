@@ -67,25 +67,68 @@ async function sendReportDiscord(entry) {
 }
 
 // Look up a question by id across all loaded exams. Returns
-// { examId, examName, question } or null. Question id is unique within an
-// exam file but not globally — the server mutates ids to `{id}_{paperId}` so
-// e.g. "982_paper2" can exist in both lawyer1 and nursing. When a
-// `questionText` hint is supplied, prefer the exam whose question content
+// { examId, examName, question } or null.
+//
+// Question ids vary by source:
+// - Exam own questions: "{exam_code}_{paper}_{number}" (e.g., "111100_1_17")
+// - Shared bank questions: "{bankId}-{year}-{examCode}-{number}" (e.g., "common_constitution-114-civil-senior-1")
+//
+// When a `questionText` hint is supplied, prefer the exam whose question content
 // matches; otherwise return the first match.
-function locateQuestion(examData, examConfigs, questionId, questionText) {
+//
+// If exact ID lookup fails, falls back to rocYear + number (useful when ID format
+// is corrupted or mismatched).
+function locateQuestion(examData, examConfigs, questionId, questionText, rocYear, number) {
   if (!examData || !questionId) return null;
   const matches = [];
+
+  // Round 1: Try exact ID match
   for (const [examId, data] of Object.entries(examData)) {
     const q = data.questions?.find(x => String(x.id) === String(questionId));
     if (q) matches.push({ examId, examName: examConfigs?.[examId]?.name || examId, question: q });
   }
-  if (matches.length === 0) return null;
-  if (matches.length > 1 && questionText) {
-    const hint = String(questionText).slice(0, 30);
-    const preferred = matches.find(m => m.question.question && m.question.question.startsWith(hint));
-    if (preferred) return preferred;
+
+  // If exact match found, use it
+  if (matches.length > 0) {
+    if (matches.length > 1 && questionText) {
+      const hint = String(questionText).slice(0, 30);
+      const preferred = matches.find(m => m.question.question && m.question.question.startsWith(hint));
+      if (preferred) return preferred;
+    }
+    return matches[0];
   }
-  return matches[0];
+
+  // Round 2: Fallback to rocYear + number if ID lookup failed
+  // This handles cases where ID format is corrupted or frontend/backend mismatch
+  if (rocYear && number) {
+    const fallbackMatches = [];
+    for (const [examId, data] of Object.entries(examData)) {
+      const q = data.questions?.find(x =>
+        String(x.roc_year) === String(rocYear) &&
+        (x.number == number || Number(x.number) === Number(number))
+      );
+      if (q) {
+        fallbackMatches.push({ examId, examName: examConfigs?.[examId]?.name || examId, question: q });
+      }
+    }
+
+    if (fallbackMatches.length > 0) {
+      if (fallbackMatches.length > 1 && questionText) {
+        const hint = String(questionText).slice(0, 30);
+        const preferred = fallbackMatches.find(m => m.question.question && m.question.question.startsWith(hint));
+        if (preferred) {
+          console.warn(`[locateQuestion] ID lookup failed (${questionId}), fell back to rocYear+number: ${rocYear}年第${number}題`);
+          return preferred;
+        }
+      }
+      if (fallbackMatches.length > 0) {
+        console.warn(`[locateQuestion] ID lookup failed (${questionId}), fell back to rocYear+number: ${rocYear}年第${number}題`);
+        return fallbackMatches[0];
+      }
+    }
+  }
+
+  return null;
 }
 
 function registerRoutes(app, examData, examConfigs) {
@@ -120,7 +163,8 @@ function registerRoutes(app, examData, examConfigs) {
     // client only knows what's currently rendered; here we look up the real
     // exam/paper/year/number so the Discord report always has a precise
     // locator like 「醫師一階 110年第一次 醫學(一) 第15題」.
-    const found = locateQuestion(examData, examConfigs, questionId, questionText);
+    // If exact ID lookup fails, falls back to rocYear + number matching.
+    const found = locateQuestion(examData, examConfigs, questionId, questionText, rocYear, number);
     const q = found?.question;
     const entry = {
       questionId,

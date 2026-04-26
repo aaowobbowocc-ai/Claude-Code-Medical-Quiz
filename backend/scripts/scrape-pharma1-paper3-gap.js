@@ -10,6 +10,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 
 const fs = require('fs')
 const path = require('path')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 const https = require('https')
 const pdfParse = require('pdf-parse')
 
@@ -34,28 +35,6 @@ const SUBJECT = '卷三'
 const SUBJECT_TAG = 'pharmaceutics'  // 藥劑學 tag
 const SUBJECT_NAME = '藥學(三)(包括藥劑學與生物藥劑學)'
 
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const req = https.get(url, {
-      rejectUnauthorized: false, timeout: 20000,
-      headers: { 'User-Agent': UA, Accept: 'application/pdf,*/*',
-                 Referer: 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx' },
-    }, (res) => {
-      if (res.statusCode !== 200) {
-        res.resume()
-        if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-        return reject(new Error(`HTTP ${res.statusCode}`))
-      }
-      const chunks = []
-      res.on('data', c => chunks.push(c))
-      res.on('end', () => resolve(Buffer.concat(chunks)))
-    })
-    req.on('error', e => retries > 0
-      ? setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-      : reject(e))
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')) })
-  })
-}
 
 function parseQuestions(text) {
   const questions = []

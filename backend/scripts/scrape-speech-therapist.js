@@ -10,6 +10,7 @@ const path = require('path')
 const https = require('https')
 const pdfParse = require('pdf-parse')
 const { parseAnswersColumnAware } = require('./lib/moex-column-parser')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/131.0.0.0 Safari/537.36'
@@ -53,23 +54,6 @@ const TARGETS = [
   { year: '114', session: '第一次', code: '114100', c: '105' },
 ]
 
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const agent = new https.Agent({ rejectUnauthorized: false })
-    https.get(url, { agent, headers: { 'User-Agent': UA } }, res => {
-      if (res.statusCode === 301 || res.statusCode === 302) {
-        const loc = res.headers.location
-        if (!loc || !loc.startsWith('http')) { res.resume(); return reject(new Error('bad redirect')) }
-        return fetchPdf(loc, retries).then(resolve, reject)
-      }
-      if (res.statusCode !== 200) { res.resume(); return reject(new Error('HTTP ' + res.statusCode)) }
-      const chunks = []
-      res.on('data', c => chunks.push(c))
-      res.on('end', () => resolve(Buffer.concat(chunks)))
-      res.on('error', reject)
-    }).on('error', e => retries > 0 ? fetchPdf(url, retries - 1).then(resolve, reject) : reject(e))
-  })
-}
 
 async function getPdf(kind, code, c, s) {
   const file = path.join(CACHE, 'speech_' + code + '_c' + c + '_s' + s + '_' + kind + '.pdf')

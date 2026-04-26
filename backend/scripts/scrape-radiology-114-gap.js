@@ -10,6 +10,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 
 const fs = require('fs')
 const path = require('path')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 const https = require('https')
 const pdfParse = require('pdf-parse')
 
@@ -17,28 +18,6 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/131.0.0.0 Safari/53
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
 const RAD_JSON = path.join(__dirname, '..', 'questions-radiology.json')
 
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const req = https.get(url, {
-      rejectUnauthorized: false, timeout: 20000,
-      headers: { 'User-Agent': UA, Accept: 'application/pdf,*/*',
-                 Referer: 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx' },
-    }, (res) => {
-      if (res.statusCode !== 200) {
-        res.resume()
-        if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-        return reject(new Error(`HTTP ${res.statusCode}`))
-      }
-      const chunks = []
-      res.on('data', c => chunks.push(c))
-      res.on('end', () => resolve(Buffer.concat(chunks)))
-    })
-    req.on('error', e => retries > 0
-      ? setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-      : reject(e))
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')) })
-  })
-}
 
 function parseQuestions(text) {
   const questions = []

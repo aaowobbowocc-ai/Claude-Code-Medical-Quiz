@@ -20,6 +20,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 
 const fs = require('fs')
 const path = require('path')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 const https = require('https')
 const pdfParse = require('pdf-parse')
 

@@ -16,6 +16,7 @@
 
 const fs = require('fs')
 const path = require('path')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 const https = require('https')
 const pdfParse = require('pdf-parse')
 
@@ -34,53 +35,6 @@ const PAPERS = [
 const BASE_URL = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
 
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const opts = {
-      rejectUnauthorized: false,
-      timeout: 25000,
-      headers: {
-        'User-Agent': USER_AGENT,
-        'Accept': 'application/pdf,*/*',
-        'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
-        'Referer': 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx',
-      },
-    }
-    const req = https.get(url, opts, (res) => {
-      if (res.statusCode === 302 || res.statusCode === 301) {
-        const loc = res.headers.location
-        if (loc && !loc.startsWith('http')) {
-          res.resume()
-          return reject(new Error(`Redirect to ${loc}`))
-        }
-        return fetchPdf(loc, retries).then(resolve, reject)
-      }
-      if (res.statusCode !== 200) {
-        res.resume()
-        if (retries > 0) {
-          return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-        }
-        return reject(new Error(`HTTP ${res.statusCode}`))
-      }
-      const ct = res.headers['content-type'] || ''
-      if (!ct.includes('pdf') && !ct.includes('octet')) {
-        res.resume()
-        return reject(new Error(`Not PDF: ${ct}`))
-      }
-      const chunks = []
-      res.on('data', c => chunks.push(c))
-      res.on('end', () => resolve(Buffer.concat(chunks)))
-      res.on('error', reject)
-    })
-    req.on('error', e => {
-      if (retries > 0) {
-        return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-      }
-      reject(e)
-    })
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')) })
-  })
-}
 
 function buildUrl(t, s) {
   return `${BASE_URL}?t=${t}&code=${EXAM_CODE}&c=${CLASS_CODE}&s=${s}&q=1`

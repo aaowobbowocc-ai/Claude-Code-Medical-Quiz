@@ -11,6 +11,7 @@
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 const fs = require('fs')
 const path = require('path')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 const https = require('https')
 const pdfParse = require('pdf-parse')
 
@@ -121,44 +122,6 @@ const EXAMS = {
 
 // ─── HTTP ───
 
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const req = https.get(url, {
-      rejectUnauthorized: false, timeout: 20000,
-      headers: {
-        'User-Agent': UA,
-        'Accept': 'application/pdf,*/*',
-        'Referer': 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx',
-      },
-    }, res => {
-      if (res.statusCode === 301 || res.statusCode === 302) {
-        const loc = res.headers.location
-        if (!loc || !loc.startsWith('http')) {
-          res.resume()
-          return reject(new Error(`bad redirect to ${loc}`))
-        }
-        return fetchPdf(loc, retries).then(resolve, reject)
-      }
-      if (res.statusCode !== 200) {
-        res.resume()
-        if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-        return reject(new Error(`HTTP ${res.statusCode}`))
-      }
-      const ct = res.headers['content-type'] || ''
-      if (!ct.includes('pdf') && !ct.includes('octet')) {
-        res.resume()
-        return reject(new Error(`not PDF: ${ct}`))
-      }
-      const cs = []
-      res.on('data', c => cs.push(c))
-      res.on('end', () => resolve(Buffer.concat(cs)))
-    })
-    req.on('error', e => retries > 0
-      ? setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-      : reject(e))
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')) })
-  })
-}
 
 // ─── Parsing (lifted from recover-missing-16.js — the fixed version) ───
 

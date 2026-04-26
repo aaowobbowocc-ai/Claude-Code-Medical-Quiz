@@ -9,6 +9,7 @@
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 const fs = require('fs')
 const path = require('path')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 const https = require('https')
 const pdfParse = require('pdf-parse')
 
@@ -17,25 +18,6 @@ const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 const stripPUA = s => typeof s === 'string' ? s.replace(/[\uE000-\uF8FF]/g, '').trim() : s
 
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    https.get(url, { rejectUnauthorized: false, timeout: 25000,
-      headers: { 'User-Agent': UA, Accept: 'application/pdf,*/*', Referer: 'https://wwwq.moex.gov.tw/' } }, res => {
-      if (res.statusCode === 301 || res.statusCode === 302) {
-        res.resume()
-        if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 800)
-        return reject(new Error('redirect'))
-      }
-      if (res.statusCode !== 200) {
-        res.resume()
-        if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 800)
-        return reject(new Error('HTTP ' + res.statusCode))
-      }
-      const cs = []; res.on('data', c => cs.push(c))
-      res.on('end', () => resolve(Buffer.concat(cs)))
-    }).on('error', e => retries > 0 ? setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 800) : reject(e))
-  })
-}
 
 function parseQuestionsText(text) {
   const out = {}

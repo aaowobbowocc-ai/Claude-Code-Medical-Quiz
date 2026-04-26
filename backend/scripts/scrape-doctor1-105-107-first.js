@@ -12,6 +12,7 @@
 
 const fs   = require('fs')
 const path = require('path')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 const https = require('https')
 const pdfParse = require('pdf-parse')
 
@@ -45,48 +46,6 @@ const SESSIONS = [
 
 // ---------- HTTP helpers ----------
 
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const opts = {
-      rejectUnauthorized: false,
-      timeout: 25000,
-      headers: {
-        'User-Agent': USER_AGENT,
-        'Accept': 'application/pdf,*/*',
-        'Referer': 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx',
-      },
-    }
-    const req = https.get(url, opts, (res) => {
-      if (res.statusCode === 302 || res.statusCode === 301) {
-        const loc = res.headers.location
-        if (!loc || !loc.startsWith('http')) {
-          res.resume()
-          return reject(new Error(`Redirect to ${loc}`))
-        }
-        return fetchPdf(loc, retries).then(resolve, reject)
-      }
-      if (res.statusCode !== 200) {
-        res.resume()
-        if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1200)
-        return reject(new Error(`HTTP ${res.statusCode}`))
-      }
-      const ct = res.headers['content-type'] || ''
-      if (!ct.includes('pdf') && !ct.includes('octet')) {
-        res.resume()
-        return reject(new Error(`Not PDF: ${ct}`))
-      }
-      const chunks = []
-      res.on('data', c => chunks.push(c))
-      res.on('end', () => resolve(Buffer.concat(chunks)))
-      res.on('error', reject)
-    })
-    req.on('error', e => {
-      if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1200)
-      reject(e)
-    })
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')) })
-  })
-}
 
 function buildUrl(t, code, s) {
   return `${BASE_URL}?t=${t}&code=${code}&c=301&s=${s}&q=1`

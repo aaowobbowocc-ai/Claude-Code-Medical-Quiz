@@ -10,40 +10,13 @@
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 const fs = require('fs')
 const path = require('path')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 const https = require('https')
 const pdfParse = require('pdf-parse')
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/131.0.0.0 Safari/537.36'
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
 
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const req = https.get(url, {
-      rejectUnauthorized: false, timeout: 25000,
-      headers: { 'User-Agent': UA, Accept: 'application/pdf,*/*',
-                 Referer: 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx' },
-    }, res => {
-      if (res.statusCode === 301 || res.statusCode === 302) {
-        const loc = res.headers.location
-        res.resume()
-        if (!loc || !loc.startsWith('http')) return reject(new Error('redirect→' + loc))
-        return fetchPdf(loc, retries).then(resolve, reject)
-      }
-      if (res.statusCode !== 200) {
-        res.resume()
-        if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 800)
-        return reject(new Error('HTTP ' + res.statusCode))
-      }
-      const ct = res.headers['content-type'] || ''
-      if (!ct.includes('pdf') && !ct.includes('octet')) { res.resume(); return reject(new Error('not PDF: ' + ct)) }
-      const cs = []
-      res.on('data', c => cs.push(c))
-      res.on('end', () => resolve(Buffer.concat(cs)))
-    })
-    req.on('error', e => retries > 0 ? setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 800) : reject(e))
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')) })
-  })
-}
 
 function parseQuestionsPdf(text) {
   // Pre-normalize: some MoEX PDFs put "1." / "A." on their own lines, with the

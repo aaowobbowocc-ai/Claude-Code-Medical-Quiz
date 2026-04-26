@@ -6,39 +6,13 @@
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 const fs = require('fs')
 const path = require('path')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 const https = require('https')
 const pdfjsLib = require('pdf-parse/lib/pdf.js/v1.10.100/build/pdf.js')
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/131.0.0.0 Safari/537.36'
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
 
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const req = https.get(url, {
-      rejectUnauthorized: false, timeout: 25000,
-      headers: { 'User-Agent': UA, Accept: 'application/pdf,*/*',
-                 Referer: 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx' },
-    }, res => {
-      if (res.statusCode === 301 || res.statusCode === 302) {
-        res.resume()
-        if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 800)
-        return reject(new Error('redirect'))
-      }
-      if (res.statusCode !== 200) {
-        res.resume()
-        if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 800)
-        return reject(new Error('HTTP ' + res.statusCode))
-      }
-      const ct = res.headers['content-type'] || ''
-      if (!ct.includes('pdf') && !ct.includes('octet')) { res.resume(); return reject(new Error('not PDF')) }
-      const cs = []
-      res.on('data', c => cs.push(c))
-      res.on('end', () => resolve(Buffer.concat(cs)))
-    })
-    req.on('error', e => retries > 0 ? setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 800) : reject(e))
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')) })
-  })
-}
 
 // Older MoEX PDFs (106-107 era) encode question numbers and option labels as PUA characters.
 // Decode them to real characters so the parser can detect question starts.

@@ -23,6 +23,7 @@
 
 const fs = require('fs')
 const path = require('path')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 const https = require('https')
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
@@ -33,27 +34,6 @@ const CACHE = path.join(__dirname, '..', '_tmp', 'pdf-cache')
 fs.mkdirSync(CACHE, { recursive: true })
 
 // ─── HTTP ───
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const req = https.get(url, {
-      rejectUnauthorized: false, timeout: 25000,
-      headers: { 'User-Agent': UA, 'Accept': 'application/pdf,*/*', 'Referer': 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx' },
-    }, res => {
-      if (res.statusCode === 301 || res.statusCode === 302) {
-        const loc = res.headers.location
-        if (!loc || !loc.startsWith('http')) { res.resume(); return reject(new Error('bad redirect')) }
-        return fetchPdf(loc, retries).then(resolve, reject)
-      }
-      if (res.statusCode !== 200) { res.resume(); return reject(new Error('HTTP ' + res.statusCode)) }
-      const chunks = []
-      res.on('data', c => chunks.push(c))
-      res.on('end', () => resolve(Buffer.concat(chunks)))
-      res.on('error', reject)
-    })
-    req.on('error', e => retries > 0 ? setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000) : reject(e))
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')) })
-  })
-}
 
 async function cachedPdf(tag, t, code, c, s) {
   const key = `${tag}_${t}_${code}_c${c}_s${s}.pdf`

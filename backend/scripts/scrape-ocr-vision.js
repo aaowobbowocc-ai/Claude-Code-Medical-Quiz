@@ -24,6 +24,7 @@ const https = require('https')
 const Anthropic = require('@anthropic-ai/sdk')
 const pdfParse  = require('pdf-parse')
 const { atomicWriteJson } = require('./lib/atomic-write')
+const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
 
 const UA      = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/131.0.0.0 Safari/537.36'
 const BASE    = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
@@ -97,38 +98,6 @@ const TARGETS = [
 
 // ─── HTTP helpers ─────────────────────────────────────────────────────────────
 
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const req = https.get(url, {
-      rejectUnauthorized: false, timeout: 20000,
-      headers: { 'User-Agent': UA, Accept: 'application/pdf,*/*',
-                 Referer: 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx' },
-    }, res => {
-      if (res.statusCode === 301 || res.statusCode === 302) {
-        const loc = res.headers.location
-        if (!loc || !loc.startsWith('http')) { res.resume(); return reject(new Error('redirect')) }
-        return fetchPdf(loc, retries).then(resolve, reject)
-      }
-      if (res.statusCode !== 200) {
-        res.resume()
-        if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-        return reject(new Error(`HTTP ${res.statusCode}`))
-      }
-      const ct = res.headers['content-type'] || ''
-      if (!ct.includes('pdf') && !ct.includes('octet')) { res.resume(); return reject(new Error('not PDF')) }
-      const cs = []
-      res.on('data', c => cs.push(c))
-      res.on('end', () => resolve(Buffer.concat(cs)))
-      res.on('error', e => retries > 0
-        ? setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-        : reject(e))
-    })
-    req.on('error', e => retries > 0
-      ? setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-      : reject(e))
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')) })
-  })
-}
 
 async function cachedPdf(kind, code, c, s) {
   const fpath = path.join(CACHE, `${kind}_${code}_c${c}_s${s}.pdf`)

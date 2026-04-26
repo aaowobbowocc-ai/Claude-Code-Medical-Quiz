@@ -139,8 +139,15 @@ async function cropImage(mupdf, page, bbox, outPath) {
   const width = right - left
   const height = bottom - top
   if (width < 10 || height < 10) return false
+
+  // Extract initial crop, then auto-trim white/transparent borders
+  // This removes padding and white space around the actual content (e.g. X-ray margins)
   await sharp(png)
     .extract({ left, top, width, height })
+    .trim({
+      lineArt: false,      // Allow trimming non-pure-white backgrounds
+      threshold: 10        // Tolerance for near-white (RGB 220+ considered white)
+    })
     .webp({ quality: 82 })
     .toFile(outPath)
   return true

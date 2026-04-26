@@ -1,0 +1,12 @@
+[
+  {
+    "source": "Gemini 免費驗證",
+    "examId": "doctor1",
+    "questionNumber": 5,
+    "roc_year": 110,
+    "subject": "microbiology",
+    "reason": "Gemini 判斷可能有誤（高信心度）",
+    "action": "待深度驗證 (Opus)",
+    "estimatedCost": "0.5 NTD"
+  }
+]

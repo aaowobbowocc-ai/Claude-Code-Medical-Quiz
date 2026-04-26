@@ -12,10 +12,11 @@
 
 const fs = require('fs')
 const path = require('path')
-const https = require('https')
 const { atomicWriteJson, withLock } = require('./lib/atomic-write')
 const { loadSchema, deriveTagsFromSubjectName, validateTags } = require('./lib/shared-bank-schema')
 const { parseColumnAware, parseAnswersColumnAware, parseAnswersText } = require('./lib/moex-column-parser')
+const { fetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher')
+const { parseQuestions, parseAnswers, parseCorrections, stripPUA } = require('./lib/pdf-question-parser')
 
 let pdfParse
 try { pdfParse = require('pdf-parse') } catch { /* optional */ }
@@ -146,63 +147,9 @@ const SESSION_CODES = {
   },
 }
 
-const BASE_URL = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
-const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+// ─── HTTP helpers (now in lib/pdf-fetcher.js) ───
 
-// ─── HTTP helpers ───
-
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const opts = {
-      rejectUnauthorized: false,
-      timeout: 20000,
-      headers: {
-        'User-Agent': USER_AGENT,
-        'Accept': 'application/pdf,*/*',
-        'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
-        'Referer': 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx',
-      },
-    }
-    const req = https.get(url, opts, (res) => {
-      if (res.statusCode === 302 || res.statusCode === 301) {
-        let loc = res.headers.location
-        if (loc && !loc.startsWith('http')) {
-          // Relative redirect — likely an error page
-          res.resume()
-          return reject(new Error(`Redirect to ${loc}`))
-        }
-        return fetchPdf(loc, retries).then(resolve, reject)
-      }
-      if (res.statusCode !== 200) {
-        res.resume()
-        if (retries > 0) {
-          return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-        }
-        return reject(new Error(`HTTP ${res.statusCode}`))
-      }
-      const contentType = res.headers['content-type'] || ''
-      if (!contentType.includes('pdf') && !contentType.includes('octet')) {
-        res.resume()
-        return reject(new Error(`Not PDF: ${contentType}`))
-      }
-      const chunks = []
-      res.on('data', c => chunks.push(c))
-      res.on('end', () => resolve(Buffer.concat(chunks)))
-      res.on('error', reject)
-    })
-    req.on('error', (e) => {
-      if (retries > 0) {
-        return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-      }
-      reject(e)
-    })
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')) })
-  })
-}
-
-function buildUrl(type, code, classCode, subjectCode) {
-  return `${BASE_URL}?t=${type}&code=${code}&c=${classCode}&s=${subjectCode}&q=1`
-}
+const buildUrl = (type, code, classCode, subjectCode) => buildMoexUrl(type, code, classCode, subjectCode)
 
 // ─── PDF Parsing ───
 

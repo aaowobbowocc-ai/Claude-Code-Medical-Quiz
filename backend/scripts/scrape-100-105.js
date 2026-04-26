@@ -16,10 +16,11 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 
 const fs = require('fs')
 const path = require('path')
-const https = require('https')
 const pdfParse = require('pdf-parse')
-const { parseColumnAware, parseAnswersColumnAware, parseAnswersText, stripPUA } = require('./lib/moex-column-parser')
+const { parseColumnAware, parseAnswersColumnAware, parseAnswersText, stripPUA: stripPUA_column } = require('./lib/moex-column-parser')
 const { atomicWriteJson } = require('./lib/atomic-write')
+const { fetchPdf: libFetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher')
+const { parseQuestions: libParseQuestions, parseAnswers: libParseAnswers, parseCorrections: libParseCorrections, stripPUA } = require('./lib/pdf-question-parser')
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/131.0.0.0 Safari/537.36'
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
@@ -30,38 +31,6 @@ if (!fs.existsSync(PDF_CACHE)) fs.mkdirSync(PDF_CACHE, { recursive: true })
 
 // ─── HTTP ───
 
-function fetchPdf(url, retries = 2) {
-  return new Promise((resolve, reject) => {
-    const req = https.get(url, {
-      rejectUnauthorized: false, timeout: 20000,
-      headers: { 'User-Agent': UA, Accept: 'application/pdf,*/*',
-                 Referer: 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx' },
-    }, res => {
-      if (res.statusCode === 301 || res.statusCode === 302) {
-        const loc = res.headers.location
-        if (!loc || !loc.startsWith('http')) { res.resume(); return reject(new Error('redirect')) }
-        return fetchPdf(loc, retries).then(resolve, reject)
-      }
-      if (res.statusCode !== 200) {
-        res.resume()
-        if (retries > 0) return setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-        return reject(new Error(`HTTP ${res.statusCode}`))
-      }
-      const ct = res.headers['content-type'] || ''
-      if (!ct.includes('pdf') && !ct.includes('octet')) { res.resume(); return reject(new Error(`not PDF`)) }
-      const cs = []
-      res.on('data', c => cs.push(c))
-      res.on('end', () => resolve(Buffer.concat(cs)))
-      res.on('error', e => retries > 0
-        ? setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-        : reject(e))
-    })
-    req.on('error', e => retries > 0
-      ? setTimeout(() => fetchPdf(url, retries - 1).then(resolve, reject), 1000)
-      : reject(e))
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')) })
-  })
-}
 
 async function cachedPdf(kind, code, c, s) {
   const fpath = path.join(PDF_CACHE, `${kind}_${code}_c${c}_s${s}.pdf`)
@@ -69,7 +38,8 @@ async function cachedPdf(kind, code, c, s) {
     const buf = fs.readFileSync(fpath)
     if (buf.length > 1000) return { buf, fromCache: true }
   } catch {}
-  const buf = await fetchPdf(`${BASE}?t=${kind}&code=${code}&c=${c}&s=${s}&q=1`)
+  const url = buildMoexUrl(kind, code, c, s)
+  const buf = await libFetchPdf(url, { userAgent: UA, referer: 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx' })
   fs.writeFileSync(fpath, buf)
   return { buf, fromCache: false }
 }
@@ -78,118 +48,24 @@ const sleep = ms => new Promise(r => setTimeout(r, ms))
 
 // ─── Answer PDF parser (handles both fullwidth ＡＢＣＤ and halfwidth ABCD) ───
 
+// Delegate to lib version with 100-105 specific cap (120 to avoid t=A blending)
 function parseAnswersPdf(text) {
-  const answers = {}
-
-  // Pattern 1: fullwidth 答案ＡＢＣＤ... (may include ＃ for corrected answers)
-  const fwPattern = /答案\s*([ＡＢＣＤ＃]+)/g
-  let m, n = 1
-  while ((m = fwPattern.exec(text)) !== null) {
-    for (const ch of m[1]) {
-      const k = ch === 'Ａ' ? 'A' : ch === 'Ｂ' ? 'B' : ch === 'Ｃ' ? 'C' : ch === 'Ｄ' ? 'D' : null
-      if (k) answers[n++] = k
-      else if (ch === '＃') n++ // corrected answer, skip position
-    }
-  }
-  if (Object.keys(answers).length >= 20) return answers
-
-  // Pattern 2: halfwidth 答案ABCD... (years 100-105 format)
-  // Answers are concatenated: 答案ACCCDBCADB... (each char = one question)
-  // '#' marks corrected answers (skip those)
-  // Cap at 120 to avoid t=A combined PDFs blending other subjects' answers
-  const hwConcat = /答案\s*([A-D#]{10,})/gi
-  n = 1
-  const hwAnswers = {}
-  while ((m = hwConcat.exec(text)) !== null) {
-    for (const ch of m[1]) {
-      if (/[A-D]/i.test(ch) && n <= 120) hwAnswers[n] = ch.toUpperCase()
-      n++ // '#' still increments position
-    }
-  }
-  if (Object.keys(hwAnswers).length > Object.keys(answers).length) {
-    return hwAnswers
-  }
-
-  // Pattern 3: numbered format "1. A  2. B  3. C"
-  const numbered = /(\d{1,2})\s*[.\s、．:：]\s*([A-Da-d])/g
-  while ((m = numbered.exec(text)) !== null) {
-    const num = parseInt(m[1])
-    if (num >= 1 && num <= 120) answers[num] = m[2].toUpperCase()
-  }
-  return answers
+  return libParseAnswers(text, { maxQNum: 120 })
 }
 
 // ─── Corrections parser ───
 
+// Delegate to lib version
 function parseCorrectionsPdf(text) {
-  const corrections = {}
-  for (const line of text.split(/\n/)) {
-    const give = line.match(/第?\s*(\d{1,2})\s*題.*(?:一律給分|送分)/i)
-    if (give) { corrections[parseInt(give[1])] = '*'; continue }
-    const change = line.match(/第?\s*(\d{1,2})\s*題.*更正.*([A-D])/i)
-    if (change) { corrections[parseInt(change[1])] = change[2]; continue }
-    // Table format: "1  A" or "23  *" (some PDFs use tabular layout)
-    const tbl = line.match(/^(\d{1,2})\s+([A-D*＊])$/)
-    if (tbl) { corrections[parseInt(tbl[1])] = tbl[2] === '＊' ? '*' : tbl[2]; continue }
-  }
-  return corrections
+  return libParseCorrections(text)
 }
 
 // ─── Question parser (labeled format: 1. question, (A)/(B)/(C)/(D)) ───
 
+// Delegate to lib version (supports up to 200 questions for old systems)
+// Delegate to lib version (supports up to 200 questions)
 function parseQuestions(text) {
-  const questions = []
-  const lines = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n')
-  let cur = null, opt = null, buf = ''
-  let inMcSection = false
-
-  const flushOpt = () => { if (cur && opt) cur.options[opt] = buf.trim(); buf = ''; opt = null }
-  const flushQ = () => {
-    flushOpt()
-    if (cur && cur.question && Object.keys(cur.options).length >= 2) questions.push(cur)
-    cur = null
-  }
-
-  for (const raw of lines) {
-    const line = raw.trim()
-    if (!line) continue
-    if (/^(代\s*號|類\s*科|科\s*目|考試|頁次|等\s*別|全.*題|本試題|座號|※|注意|【|】)/.test(line)) continue
-    if (/^第?\s*\d+\s*頁/.test(line)) continue
-    if (/^\d+\s*頁/.test(line)) continue
-
-    // Detect MC section
-    if (/([一二三四乙貳]、|乙[、.])\s*(測驗|選擇|單選)/.test(line) || /測驗題|單一選擇題|選擇題/.test(line)) {
-      if (!inMcSection) { cur = null; opt = null; buf = ''; inMcSection = true }
-      continue
-    }
-
-    // New question
-    const qm = line.match(/^(\d{1,2})[.、．]\s*(.*)$/)
-    if (qm && (line.length > 6 || /[\u4e00-\u9fff a-zA-Z]/.test(qm[2] || '') || (qm[2] || '') === '')) {
-      const num = parseInt(qm[1])
-      const isFirst = !cur && questions.length === 0
-      if (num >= 1 && num <= 200 && (isFirst || (cur && num === cur.number + 1))) {
-        flushQ()
-        cur = { number: num, question: (qm[2] || '').trim(), options: {} }
-        continue
-      }
-    }
-
-    // Option
-    const om = line.match(/^[\(（]\s*([A-Da-dＡＢＣＤ])\s*[\)）]\s*(.*)$/)
-      || line.match(/^([A-Da-dＡＢＣＤ])\s*[.．、]\s*(.*)$/)
-    if (om && cur) {
-      flushOpt()
-      opt = om[1].toUpperCase().replace('Ａ', 'A').replace('Ｂ', 'B').replace('Ｃ', 'C').replace('Ｄ', 'D')
-      buf = om[2] || ''
-      continue
-    }
-
-    if (opt) buf += ' ' + line
-    else if (cur) cur.question += ' ' + line
-  }
-  flushQ()
-  return questions
+  return libParseQuestions(text, { maxQNum: 200 })
 }
 
 // ─── Exam definitions for years 100-105 ───
@@ -787,6 +663,15 @@ function buildTargets(filterExam, filterYear) {
 
   return targets
 }
+
+// ─── Override: force use of lib versions ───
+// Note: fetchPdf, parseAnswersPdf, etc. are defined as functions above.
+// We reassign them here to use lib versions, taking precedence since this runs after the definitions.
+// To override a function, we must use assignment without const/let/var.
+
+fetchPdf = libFetchPdf
+// For const-declared functions, we re-wrap them:
+// (parseAnswersPdf, parseCorrectionsPdf, parseQuestions are reassigned below in main scope)
 
 // ─── Main ───
 

@@ -23,3 +23,6 @@ Thumbs.db
 
 # MCP (contains Supabase PAT)
 .mcp.json
+
+# Backend tmp cache
+backend/_tmp/

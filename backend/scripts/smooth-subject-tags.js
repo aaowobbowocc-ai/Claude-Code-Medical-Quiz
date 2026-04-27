@@ -1,11 +1,17 @@
 #!/usr/bin/env node
 /**
- * Neighbor-smoothing for subject_tag.
+ * Confidence-aware neighbor-smoothing for subject_tag.
  *
  * Observation: within each (year, session, paper) block, questions are
  * ordered and grouped by subject (contiguous runs). If a single question's
- * tag differs from its surrounding window, it's almost certainly a
- * misclassification and should adopt the majority tag.
+ * tag differs from its surrounding window, it's likely a misclassification
+ * and should adopt the majority tag.
+ *
+ * Confidence rules (override only when high confidence):
+ *   1. Need ≥ MAJORITY supporters in 7-question window
+ *   2. Current tag must be a *lone outlier* (≤ 1 same-tag in window)
+ *      → 防止合理的小群組（如 2-3 題公衛夾在病理中）被抹掉
+ *   3. Margin: new majority must exceed current tag count by ≥ MIN_MARGIN
  *
  * Applies across all exams that use subject_tag for classification (doctor1,
  * doctor2, etc). Idempotent — stops when no changes occur in a full pass.
@@ -14,6 +20,7 @@
  *   node scripts/smooth-subject-tags.js --dry-run      # report only
  *   node scripts/smooth-subject-tags.js                # apply
  *   node scripts/smooth-subject-tags.js --exam doctor1 # single exam
+ *   node scripts/smooth-subject-tags.js --legacy       # 用舊的不留情面規則（不建議）
  */
 
 const fs = require('fs')
@@ -21,10 +28,13 @@ const path = require('path')
 
 const args = process.argv.slice(2)
 const DRY = args.includes('--dry-run')
+const LEGACY = args.includes('--legacy')
 const examFilter = args.includes('--exam') ? args[args.indexOf('--exam') + 1] : null
 
 const WINDOW = 3           // ± neighbors to look at
 const MAJORITY = 4         // need this many of 7 (self + 6 neighbors) to override
+const MIN_MARGIN = 3       // new majority must exceed current tag count by ≥ this
+const LONE_OUTLIER_MAX = 1 // current tag count ≤ this 才視為孤立 outlier
 const MAX_PASSES = 5
 
 const FILES = [
@@ -61,6 +71,16 @@ function smoothBlock(block) {
       if (!bestTag) continue
       if (bestCnt < MAJORITY) continue
       if (block[i].subject_tag === bestTag) continue
+
+      // Confidence checks (skip in --legacy mode)
+      if (!LEGACY) {
+        const currentTagCount = counts[block[i].subject_tag] || 0
+        // Rule 1: 只有當目前 tag 是孤立 outlier 才覆蓋
+        if (currentTagCount > LONE_OUTLIER_MAX) continue
+        // Rule 2: 多數要明顯領先目前 tag
+        if (bestCnt - currentTagCount < MIN_MARGIN) continue
+      }
+
       block[i].subject_tag = bestTag
       passChanges++
     }

@@ -166,15 +166,27 @@ const KW = {
   },
 }
 
+// Match an English/abbrev term using word boundaries to avoid substring false positives.
+//   'IQ' should not match 'obliquus', 'CI' should not match 'incidence', 'OR' should not match 'work'
+// Heuristic: if term is pure ASCII letters/digits (no spaces or hyphens) and ≤ 4 chars, use word boundary.
+//   Longer/multi-word English terms (e.g. 'odds ratio', 'cohort study') and Chinese terms keep substring match.
+const SHORT_ENG_RE = /^[a-z0-9]{1,4}$/i
+function termMatches(text, lowerText, term) {
+  if (SHORT_ENG_RE.test(term)) {
+    // word boundary: term is preceded/followed by non-word char or string edge
+    const re = new RegExp('(?:^|[^a-z0-9])' + term.toLowerCase() + '(?:$|[^a-z0-9])', 'i')
+    return re.test(text)
+  }
+  return lowerText.includes(term.toLowerCase())
+}
+
 function scoreQuestion(text) {
+  const lower = text.toLowerCase()
   const scores = {}
   for (const [tag, cfg] of Object.entries(KW)) {
     let s = 0
     for (const [term, w] of cfg.terms) {
-      // Case-insensitive substring match. For Chinese simple includes works; for English also.
-      const lower = text.toLowerCase()
-      const t = term.toLowerCase()
-      if (lower.includes(t)) s += w
+      if (termMatches(text, lower, term)) s += w
     }
     scores[tag] = s
   }
@@ -225,11 +237,26 @@ function main() {
     const entries = Object.entries(scores).filter(([,s]) => s > 0)
     let chosen
     if (entries.length === 0) {
-      chosen = PAPER_DEFAULTS[q.subject]
+      // No keyword match — 保留現有 tag（如果合法），否則才用 paper default
+      // 避免：把已經 smoothed 過的正確 tag reset 掉
+      if (q.subject_tag && TAG_META[q.subject_tag]) {
+        chosen = q.subject_tag
+      } else {
+        chosen = PAPER_DEFAULTS[q.subject]
+      }
       fallback++
     } else {
       entries.sort((a, b) => b[1] - a[1])
-      chosen = entries[0][0]
+      const top = entries[0]
+      const second = entries[1]
+      // Confidence: 最高分需要明顯領先（避免 1 分微弱命中蓋過 smoothed 結果）
+      // 如果現有 tag 也有分但不是最高，且差距 < 2，保留現有 tag
+      const currentScore = scores[q.subject_tag] || 0
+      if (currentScore > 0 && top[1] - currentScore < 2 && top[0] !== q.subject_tag) {
+        chosen = q.subject_tag
+      } else {
+        chosen = top[0]
+      }
     }
     const meta = TAG_META[chosen]
     q.subject_tag = chosen

@@ -43,6 +43,22 @@ const KW = {
       ['ectoderm', 3], ['mesoderm', 3], ['endoderm', 3], ['fetal', 2], ['embryo', 3],
       ['placenta', 2], ['neural tube', 3], ['chorion', 2], ['gestation', 1],
       ['derive', 1], ['derives from', 3], ['derived from', 3],
+      // ── 補：發育構造 ──
+      ['體節', 3], ['somite', 3], ['生骨節', 3], ['sclerotome', 3],
+      ['皮節', 3], ['dermatome', 3], ['肌節', 3], ['myotome', 3],
+      ['神經嵴', 3], ['neural crest', 3], ['neural plate', 3],
+      ['鰓弓', 3], ['鰓裂', 3], ['branchial arch', 3], ['pharyngeal arch', 3], ['pharyngeal pouch', 3],
+      // ── 心血管胚胎 ──
+      ['動脈導管', 3], ['ductus arteriosus', 3], ['卵圓孔', 3], ['foramen ovale', 3],
+      ['臍動脈', 3], ['臍靜脈', 3], ['umbilical', 2],
+      // ── 泌尿生殖胚胎 ──
+      ['Wolffian', 3], ['Müllerian', 3], ['泌尿生殖嵴', 3],
+      ['前腎', 2], ['中腎', 2], ['後腎', 2],
+      // ── 消化胚胎 ──
+      ['前腸', 2], ['中腸', 2], ['後腸', 2], ['foregut', 2], ['midgut', 2], ['hindgut', 2],
+      // ── 缺陷 ──
+      ['脊柱裂', 3], ['spina bifida', 3], ['無腦症', 3], ['anencephaly', 3],
+      ['唇顎裂', 3], ['cleft', 2],
     ]
   },
   histology: {
@@ -65,6 +81,35 @@ const KW = {
       ['action potential', 3], ['membrane potential', 3], ['osmolarity', 2],
       ['secretion', 1], ['absorption', 1], ['hormone', 1], ['synapse', 2],
       ['cardiac output', 2], ['glomerular', 2], ['excretion', 1],
+      // ── 補：心臟血管生理 ──
+      ['心房', 2], ['心室', 2], ['atria', 2], ['ventricle', 2],
+      ['主動脈瓣', 3], ['二尖瓣', 3], ['三尖瓣', 3], ['肺動脈瓣', 3],
+      ['aortic valve', 3], ['mitral valve', 3], ['tricuspid', 2],
+      ['等容收縮', 3], ['isovolumic', 3], ['cardiac cycle', 3],
+      ['動脈壓', 2], ['平均動脈壓', 3], ['mean arterial pressure', 3],
+      ['感壓接受器', 3], ['baroreceptor', 3], ['化學接受器', 2], ['chemoreceptor', 2],
+      ['心電圖', 2], ['ECG', 2], ['EKG', 2],
+      // ── 神經/感覺生理 ──
+      ['肌梭', 3], ['muscle spindle', 3], ['反射弧', 3], ['reflex arc', 3],
+      ['脊髓反射', 3], ['stretch reflex', 3], ['膝反射', 3],
+      ['交感神經', 2], ['副交感神經', 2], ['sympathetic', 2], ['parasympathetic', 2],
+      ['自主神經', 2], ['autonomic', 2],
+      ['視網膜', 2], ['retina', 2], ['視桿', 2], ['視錐', 2], ['rod', 2], ['cone', 2],
+      ['耳蝸', 2], ['cochlea', 2], ['前庭', 2], ['vestibular', 2],
+      // ── 呼吸/腎臟/消化 ──
+      ['肺通氣', 2], ['ventilation', 2], ['呼氣', 1], ['吸氣', 1],
+      ['潮氣量', 3], ['tidal volume', 3], ['肺活量', 3], ['vital capacity', 3],
+      ['gas exchange', 2], ['氣體交換', 2],
+      ['腎絲球過濾率', 3], ['GFR', 2], ['再吸收', 2], ['reabsorption', 2],
+      ['尿液', 1], ['抗利尿', 2], ['ADH', 2], ['vasopressin', 2], ['aldosterone', 2],
+      ['胃酸', 2], ['壁細胞', 3], ['parietal cell', 3], ['主細胞', 3], ['chief cell', 3],
+      // ── 內分泌生理 ──
+      ['胰島素', 2], ['insulin', 2], ['升糖素', 2], ['glucagon', 2],
+      ['甲狀腺素', 2], ['thyroxine', 2], ['T3', 2], ['T4', 2], ['TSH', 2],
+      ['類固醇', 1], ['cortisol', 2], ['腎上腺素', 2], ['adrenaline', 2],
+      ['黃體素', 2], ['動情素', 2], ['estrogen', 2], ['progesterone', 2], ['testosterone', 2],
+      // ── 體液/電解質 ──
+      ['鈉離子', 2], ['鉀離子', 2], ['鈣離子', 2],
     ]
   },
   biochemistry: {
@@ -78,6 +123,27 @@ const KW = {
       ['glycolysis', 3], ['gluconeogenesis', 3], ['TCA', 3], ['oxidative phosphorylation', 3],
       ['transcription', 2], ['translation', 2], ['replication', 1], ['biochemistry', 3],
       ['Michaelis', 3], ['Km', 2], ['Vmax', 2],
+      // ── 補：脂質/醣類代謝 ──
+      ['酮體', 3], ['ketone body', 3], ['ketone bodies', 3],
+      ['脂肪酸', 2], ['fatty acid', 2], ['β-氧化', 3], ['beta-oxidation', 3],
+      ['膽固醇', 2], ['cholesterol', 2], ['lipoprotein', 2], ['HDL', 2], ['LDL', 2],
+      ['三酸甘油酯', 3], ['triglyceride', 3],
+      ['醣類', 1], ['glucose', 1], ['lactate', 2], ['pyruvate', 2],
+      ['glycogen', 2], ['肝醣', 2],
+      // ── 維生素/輔因子 ──
+      ['維生素', 1], ['vitamin', 1], ['cofactor', 2], ['coenzyme', 2],
+      // ── 氨基酸代謝 ──
+      ['尿素循環', 3], ['urea cycle', 3], ['ammonia', 2], ['glutamine', 2],
+      // ── 核酸/分子生物 ──
+      ['mRNA', 2], ['tRNA', 2], ['rRNA', 2], ['ribosome', 2], ['核糖體', 2],
+      ['DNA polymerase', 3], ['RNA polymerase', 3], ['核苷酸', 2], ['nucleotide', 2],
+      ['基因突變', 2], ['mutation', 1], ['遺傳密碼', 3], ['codon', 2], ['anticodon', 3],
+      // ── 蛋白質結構 ──
+      ['α螺旋', 3], ['β摺疊', 3], ['alpha helix', 3], ['beta sheet', 3],
+      ['二級結構', 2], ['三級結構', 2], ['四級結構', 2],
+      // ── 訊息傳遞 ──
+      ['訊息傳遞', 2], ['signaling', 2], ['cAMP', 2], ['cGMP', 2], ['kinase', 2],
+      ['phosphorylation', 2], ['磷酸化', 2],
     ]
   },
   microbiology: {

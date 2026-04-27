@@ -9,6 +9,15 @@
 //   - 計算每題對 10 個子科目的關鍵字命中分數
 //   - 選分數最高者為 subject_tag；若完全沒命中，用 paper 預設（醫學一→anatomy, 醫學二→pathology）
 //   - 113+ 題目已有正確分類，略過
+//
+// ⚠️ 不要在已 smoothed 的資料上重跑此腳本！
+//   smooth-subject-tags.js 會根據鄰居把單一錯誤分類修正成多數決。
+//   若已 smoothed 後重跑此 classifier，無 keyword 命中的題目會被 reset 回 paper default，
+//   抹掉 smoothing 修正過的好分類（2026-04-27 實測：淨損失 ~200 題公衛分類）。
+//
+//   只在以下情境執行：
+//     1. 新爬蟲剛抓完，題目沒有 subject_tag
+//     2. 想完全 re-classify（接受會抹掉 smoothing 結果，需後續重跑 smooth-subject-tags.js）
 
 const fs = require('fs')
 const path = require('path')
@@ -126,10 +135,33 @@ const KW = {
       ['統計', 1], ['問卷', 1], ['樣本', 1], ['相對危險', 3], ['絕對危險', 3],
       ['平衡計分卡', 3], ['測量尺度', 3], ['管理方法', 1], ['盲性', 2], ['單盲', 2], ['雙盲', 2],
       ['epidemiology', 3], ['incidence', 3], ['prevalence', 3], ['relative risk', 3],
-      ['cohort', 2], ['case-control', 3], ['RCT', 2], ['randomized', 2], ['blinded', 2],
+      ['cohort', 3], ['case-control', 3], ['RCT', 2], ['randomized', 2], ['blinded', 2],
       ['public health', 3], ['health service', 2], ['health policy', 2],
-      ['biostatistics', 3], ['sensitivity', 2], ['specificity', 2],
+      ['biostatistics', 3],
       ['IQ', 1], ['智力測驗', 2], ['多氯', 2],
+      // ── 補：明確流行病學/統計術語（避免加 mortality/sensitivity 等臨床常見詞）──
+      ['SMR', 3], ['標準化死亡比', 3], ['standardized mortality', 3],
+      ['odds ratio', 3], ['勝算比', 3],
+      ['hazard ratio', 3], ['危險比', 3],
+      ['attributable risk', 3], ['歸因危險', 3],
+      ['信賴區間', 3], ['confidence interval', 3],
+      // 研究設計
+      ['世代研究', 3], ['個案對照', 3], ['案例對照', 3], ['橫斷研究', 3], ['橫斷面研究', 3],
+      ['生態學研究', 3], ['cross-sectional', 3],
+      ['confounding', 3], ['confounder', 3], ['干擾因子', 3],
+      ['霍桑效應', 3], ['hawthorne', 3], ['lead-time bias', 3], ['length bias', 3],
+      ['selection bias', 3], ['recall bias', 3],
+      // 篩檢
+      ['陽性預測值', 3], ['陰性預測值', 3], ['positive predictive value', 3], ['negative predictive value', 3],
+      ['screening test', 3], ['預防接種', 2],
+      // 環境/職業（特異性詞彙）
+      ['環境暴露', 3], ['職業病', 3], ['職業暴露', 3], ['空氣污染', 3],
+      ['砷暴露', 3], ['鉛中毒', 3], ['戴奧辛', 3], ['二手菸', 3],
+      // 衛生政策（特異性詞彙）
+      ['全民健保', 3], ['疾管署', 3], ['世界衛生組織', 3],
+      ['長期照護', 3], ['health promotion', 3],
+      // 統計方法（特異性）
+      ['logistic regression', 3], ['卡方檢定', 3], ['chi-square', 3], ['變異數分析', 3], ['ANOVA', 3],
     ]
   },
 }

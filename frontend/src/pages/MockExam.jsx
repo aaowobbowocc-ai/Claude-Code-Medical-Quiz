@@ -7,6 +7,7 @@ import ShareChallengeButton from '../components/ShareChallengeButton'
 import { useAccuracyStore } from '../store/accuracyStore'
 import QuestionImages from '../components/QuestionImages'
 import { supabase } from '../lib/supabase'
+import { getExamYears, getHistoricalPaper, getRandomPaper, isExamSupportedByCDN } from '../lib/cdnQuestions'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -120,10 +121,25 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
 
   useEffect(() => {
     const examType = usePlayerStore.getState().exam || 'doctor1'
-    fetch(`${BACKEND}/questions/exam-years?exam=${examType}`)
-      .then(r => r.json())
-      .then(data => { setExamYears(data); setLoadingYears(false) })
-      .catch(() => setLoadingYears(false))
+    // Try CDN first; fall back to backend
+    if (isExamSupportedByCDN(examType)) {
+      const cfg = getFullExamConfig(examType)
+      const paperOrder = cfg?.papers ? cfg.papers.map(p => p.subject || p.name) : []
+      getExamYears(examType, { paperOrder })
+        .then(data => { setExamYears(data); setLoadingYears(false) })
+        .catch(err => {
+          console.warn('CDN exam-years failed, falling back:', err)
+          fetch(`${BACKEND}/questions/exam-years?exam=${examType}`)
+            .then(r => r.json())
+            .then(data => { setExamYears(data); setLoadingYears(false) })
+            .catch(() => setLoadingYears(false))
+        })
+    } else {
+      fetch(`${BACKEND}/questions/exam-years?exam=${examType}`)
+        .then(r => r.json())
+        .then(data => { setExamYears(data); setLoadingYears(false) })
+        .catch(() => setLoadingYears(false))
+    }
   }, [])
 
   return (
@@ -777,6 +793,16 @@ export default function MockExam() {
 
   const loadQuestions = async (paper) => {
     const et = usePlayerStore.getState().exam || 'doctor1'
+    // CDN path: pure mode random pick (no shared banks here)
+    if (isExamSupportedByCDN(et)) {
+      try {
+        const data = await getRandomPaper(et, {
+          count: paper.count || 80,
+          subject: paper.mixed ? undefined : (paper.subject || paper.name),
+        })
+        if (data.questions.length >= 10) return data.questions
+      } catch (e) { console.warn('CDN loadQuestions failed:', e) }
+    }
     const base = `count=${paper.count || 80}&exam=${et}`
     const params = paper.mixed
       ? base
@@ -789,6 +815,12 @@ export default function MockExam() {
 
   const loadHistoricalQuestions = async (year, session, subjectName) => {
     const et = usePlayerStore.getState().exam || 'doctor1'
+    if (isExamSupportedByCDN(et)) {
+      try {
+        const data = await getHistoricalPaper(et, { year, session, subject: subjectName })
+        if (data.questions.length >= 10) return data.questions
+      } catch (e) { console.warn('CDN loadHistoricalQuestions failed:', e) }
+    }
     const res = await fetch(`${BACKEND}/questions/exam?year=${year}&session=${encodeURIComponent(session)}&subject=${encodeURIComponent(subjectName)}&exam=${et}`)
     const data = await res.json()
     if (data.questions.length < 10) throw new Error('not enough')

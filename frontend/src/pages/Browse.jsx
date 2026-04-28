@@ -8,6 +8,7 @@ import CommentSection from '../components/CommentSection'
 import { useBookmarks } from '../hooks/useBookmarks'
 import { usePageMeta } from '../hooks/usePageMeta'
 import ReadingModePopover, { useReadingMode } from '../components/ReadingModePopover'
+import { browseQuestions, isExamSupportedByCDN } from '../lib/cdnQuestions'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -350,13 +351,35 @@ export default function Browse() {
     if (query)         params.set('q', query)
 
     try {
-      const r = await fetch(`${BACKEND}/questions?${params}`)
-      const data = await r.json()
+      let data
+      if (isExamSupportedByCDN(currentExam)) {
+        data = await browseQuestions(currentExam, {
+          year: exam?.year,
+          session: exam?.session,
+          subject_tag: stageTag,
+          q: query,
+          page: p,
+          limit: LIMIT,
+        })
+      } else {
+        const r = await fetch(`${BACKEND}/questions?${params}`)
+        data = await r.json()
+      }
       setTotal(data.total)
       setQuestions(prev => reset ? data.questions : [...prev, ...data.questions])
       setHasMore(data.questions.length === LIMIT)
       if (!reset) setPage(p + 1)
-    } catch {}
+    } catch (e) {
+      console.warn('Browse fetch failed, trying backend:', e)
+      try {
+        const r = await fetch(`${BACKEND}/questions?${params}`)
+        const data = await r.json()
+        setTotal(data.total)
+        setQuestions(prev => reset ? data.questions : [...prev, ...data.questions])
+        setHasMore(data.questions.length === LIMIT)
+        if (!reset) setPage(p + 1)
+      } catch {}
+    }
     setLoading(false)
   }, [exam, stageTag, query, page])
 

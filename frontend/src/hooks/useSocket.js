@@ -16,9 +16,24 @@ export function getSocket() {
       reconnectionAttempts: 10,
       reconnectionDelay: 1000,
       reconnectionDelayMax: 5000,
+      // websocket-only — avoids long-polling XHR pings that prevent backend sleep
+      transports: ['websocket'],
     })
   }
   return socketInstance
+}
+
+// Lazy connect: only connect when explicitly needed (PvP create/join/rejoin).
+// Prevents every page-load from waking up backend (saves Render free instance hours).
+export function ensureSocketConnected() {
+  const s = getSocket()
+  if (!s.connected) s.connect()
+  return s
+}
+
+// Explicit disconnect when leaving PvP context — lets backend sleep sooner.
+export function disconnectSocket() {
+  if (socketInstance && socketInstance.connected) socketInstance.disconnect()
 }
 
 export function useSocket() {
@@ -31,8 +46,8 @@ export function useSocket() {
   } = useGameStore()
 
   useEffect(() => {
-    if (!socket.connected) socket.connect()
-
+    // Don't auto-connect — only register handlers. Explicit connect happens
+    // when user creates/joins a PvP room (Home.jsx) or has a pending share link (App.jsx).
     const handlers = {
       room_created: ({ code }) => {
         setRoom(code, true, socket.id)

@@ -13,7 +13,6 @@ import { useAccuracyStore } from '../store/accuracyStore'
 import { usePageMeta } from '../hooks/usePageMeta'
 import ShareChallengeButton from '../components/ShareChallengeButton'
 import ReadingModePopover, { useReadingMode } from '../components/ReadingModePopover'
-import { getRandomQuestions, isExamSupportedByCDN } from '../lib/cdnQuestions'
 import { supabase } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
@@ -423,31 +422,16 @@ function PracticeGame({ config, onFinish, onExit }) {
 
   const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, notEnoughCoins: explainNoCoins, explain, reset: resetExplain, remaining: explainRemaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
 
-  // Load questions — prefer CDN (pure mode); fall back to backend for reservoir mode
-  // or unsupported exams. CDN cuts Render egress to ~0.
+  // Load questions — use fast /random endpoint
   useEffect(() => {
     const exam = usePlayerStore.getState().exam || 'doctor1'
-    const useCDN = isExamSupportedByCDN(exam) && config.sourceMode !== 'reservoir'
-
-    const loader = useCDN
-      ? getRandomQuestions(exam, { stageId: config.stage, count: config.count, stages })
-      : fetch(`${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}&exam=${exam}${config.sourceMode ? `&mode=${config.sourceMode}` : ''}`).then(r => r.json())
-
-    loader
+    const modeParam = config.sourceMode ? `&mode=${config.sourceMode}` : ''
+    fetch(`${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}&exam=${exam}${modeParam}`)
+      .then(r => r.json())
       .then(data => {
         setQuestions(data.questions)
         setLoading(false)
         setTimerActive(true)
-      })
-      .catch(err => {
-        console.warn('CDN load failed, falling back to backend:', err)
-        return fetch(`${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}&exam=${exam}${config.sourceMode ? `&mode=${config.sourceMode}` : ''}`)
-          .then(r => r.json())
-          .then(data => {
-            setQuestions(data.questions)
-            setLoading(false)
-            setTimerActive(true)
-          })
       })
   }, [])
 

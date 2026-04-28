@@ -41,10 +41,10 @@ function examHasSharedBanks(examId) {
 const FALLBACK_COLORS = ['#3B82F6', '#EF4444', '#10B981', '#F97316', '#8B5CF6', '#D97706', '#6366F1', '#0D9488', '#DC2626', '#EC4899']
 
 function formatStages(raw) {
-  if (!raw || !raw.length) return [{ id: 0, name: '全部題目', icon: '🎲', color: '#64748B' }]
+  if (!raw || !raw.length) return [{ id: 0, tag: 'all', name: '全部題目', icon: '🎲', color: '#64748B' }]
   return raw.map((s, i) => {
     const style = getStageStyleFromRegistry(s.tag) || { icon: '📝', color: FALLBACK_COLORS[i % FALLBACK_COLORS.length] }
-    return { id: s.id, name: s.name, icon: style.icon, color: style.color, count: s.count }
+    return { id: s.id, tag: s.tag, name: s.name, icon: style.icon, color: style.color, count: s.count }
   })
 }
 
@@ -426,29 +426,48 @@ function PracticeGame({ config, onFinish, onExit }) {
   // Load questions — prefer CDN (pure mode); fall back to backend for reservoir mode
   // or unsupported exams. CDN cuts Render egress to ~0.
   useEffect(() => {
+    let cancelled = false
     const exam = usePlayerStore.getState().exam || 'doctor1'
+    const backendUrl = `${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}&exam=${exam}${config.sourceMode ? `&mode=${config.sourceMode}` : ''}`
     const useCDN = isExamSupportedByCDN(exam) && config.sourceMode !== 'reservoir'
 
-    const loader = useCDN
-      ? getRandomQuestions(exam, { stageId: config.stage, count: config.count, stages })
-      : fetch(`${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}&exam=${exam}${config.sourceMode ? `&mode=${config.sourceMode}` : ''}`).then(r => r.json())
+    async function fetchBackend() {
+      const r = await fetch(backendUrl)
+      if (!r.ok) throw new Error(`Backend HTTP ${r.status}`)
+      return r.json()
+    }
 
-    loader
-      .then(data => {
-        setQuestions(data.questions)
-        setLoading(false)
-        setTimerActive(true)
-      })
-      .catch(err => {
-        console.warn('CDN load failed, falling back to backend:', err)
-        return fetch(`${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}&exam=${exam}${config.sourceMode ? `&mode=${config.sourceMode}` : ''}`)
-          .then(r => r.json())
-          .then(data => {
+    async function load() {
+      try {
+        const data = useCDN
+          ? await getRandomQuestions(exam, { stageId: config.stage, count: config.count, stages })
+          : await fetchBackend()
+        if (!cancelled && Array.isArray(data?.questions) && data.questions.length > 0) {
+          setQuestions(data.questions)
+          setLoading(false)
+          setTimerActive(true)
+          return
+        }
+        // CDN returned empty → try backend
+        if (useCDN) throw new Error('CDN returned no questions')
+      } catch (err) {
+        if (cancelled) return
+        console.warn('Primary load failed, trying backend:', err)
+        try {
+          const data = await fetchBackend()
+          if (!cancelled && Array.isArray(data?.questions)) {
             setQuestions(data.questions)
             setLoading(false)
             setTimerActive(true)
-          })
-      })
+          }
+        } catch (err2) {
+          console.error('Both CDN and backend failed:', err2)
+          if (!cancelled) setLoading(false)
+        }
+      }
+    }
+    load()
+    return () => { cancelled = true }
   }, [])
 
   const q = questions[qIdx]

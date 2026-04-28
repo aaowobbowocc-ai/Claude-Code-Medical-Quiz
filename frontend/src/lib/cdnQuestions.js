@@ -83,6 +83,17 @@ export function isExamSupportedByCDN(examId) {
   return !!EXAM_FILES[examId]
 }
 
+// Fetch with a hard timeout. Falls back via AbortController.
+async function fetchWithTimeout(url, ms = 8000) {
+  const ctrl = new AbortController()
+  const timer = setTimeout(() => ctrl.abort(), ms)
+  try {
+    return await fetch(url, { signal: ctrl.signal })
+  } finally {
+    clearTimeout(timer)
+  }
+}
+
 // Return full questions array for an exam. Caches in memory + IDB for 24h.
 // Throws if exam unknown or fetch fails (caller should fall back to backend).
 export async function loadExamQuestions(examId) {
@@ -92,21 +103,28 @@ export async function loadExamQuestions(examId) {
   if (!file) throw new Error(`No CDN file mapped for exam ${examId}`)
 
   const cacheKey = `${examId}:v${CACHE_VERSION}`
-  const cached = await idbGet(cacheKey)
-  if (cached && Date.now() - cached.ts < CACHE_TTL_MS) {
-    memCache.set(examId, cached.questions)
-    return cached.questions
-  }
+  // Try IDB cache (silent on any failure)
+  try {
+    const cached = await idbGet(cacheKey)
+    if (cached && cached.questions && Date.now() - cached.ts < CACHE_TTL_MS) {
+      memCache.set(examId, cached.questions)
+      return cached.questions
+    }
+  } catch { /* ignore IDB errors */ }
 
   const url = `${CDN_BASE}/${file}`
-  const r = await fetch(url)
+  const r = await fetchWithTimeout(url, 8000)
   if (!r.ok) throw new Error(`CDN fetch failed: ${r.status}`)
   const data = await r.json()
   const questions = Array.isArray(data) ? data : (data.questions || [])
 
+  if (!Array.isArray(questions) || questions.length === 0) {
+    throw new Error(`CDN returned empty/invalid data for ${examId}`)
+  }
+
   memCache.set(examId, questions)
   // Fire-and-forget cache write
-  idbPut(cacheKey, { ts: Date.now(), questions })
+  idbPut(cacheKey, { ts: Date.now(), questions }).catch(() => {})
 
   return questions
 }

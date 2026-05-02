@@ -953,8 +953,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_106020_p0_35_0.webp"
     },
     {
       "id": 5237,
@@ -14697,8 +14696,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_106100_p3_10_0.webp"
     },
     {
       "id": 5917,
@@ -16081,12 +16079,11 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 77 題：下圖中箭號所顯示為那一條血管出血？",
       "images": [
         "/question-images/radiology_5982_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/radiology_106100_p3_77_0.webp"
     },
     {
       "id": 5984,
@@ -21128,8 +21125,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_107020_p1_3_0.webp"
     },
     {
       "id": 6235,
@@ -23046,8 +23042,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_107020_p5_25_0.webp"
     },
     {
       "id": 6566,
@@ -25735,12 +25730,11 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 79 題：下圖箭號所指最可能的解剖部位為何？",
       "images": [
         "/question-images/radiology_6460_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/radiology_107020_p3_79_0.webp"
     },
     {
       "id": 6305,
@@ -27095,8 +27089,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_107020_p2_66_0.webp"
     },
     {
       "id": 6372,
@@ -27557,8 +27550,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_107020_p4_17_0.webp"
     },
     {
       "id": 6472,
@@ -34646,8 +34638,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_107100_p3_44_0.webp"
     },
     {
       "id": 6904,
@@ -35374,12 +35365,11 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 79 題：下圖 a、b、c、d所指最可能之解剖位置分別為何？",
       "images": [
         "/question-images/radiology_6937_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/radiology_107100_p3_79_0.webp"
     },
     {
       "id": 6781,
@@ -37950,8 +37940,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_107100_p4_48_0.webp"
     },
     {
       "id": 6987,
@@ -61541,8 +61530,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_109020_p5_22_0.webp"
     },
     {
       "id": 8472,
@@ -65868,8 +65856,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_109020_p2_79_0.webp"
     },
     {
       "id": 8291,
@@ -94905,8 +94892,11 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_110100_p2_72_0.webp",
+      "images": [
+        "/question-images/radiology_110100_p2_72_0.webp",
+        "/question-images/radiology_110100_p2_72_1.webp"
+      ]
     },
     {
       "id": 2077,
@@ -94993,12 +94983,11 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 79 題：比較下圖中軟片（S/F 400-speed）之特性曲線與CR影像接收器之反應函數，關於兩者之特性差異，下列敘述 何者正確？",
       "images": [
         "/question-images/radiology_2079_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/radiology_110100_p2_79_0.webp"
     },
     {
       "id": 2161,
@@ -100963,8 +100952,11 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_111020_p5_55_0.webp",
+      "images": [
+        "/question-images/radiology_111020_p5_55_0.webp",
+        "/question-images/radiology_111020_p5_55_1.webp"
+      ]
     },
     {
       "id": 2778,
@@ -105315,8 +105307,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_111020_p4_27_0.webp"
     },
     {
       "id": 2672,
@@ -111780,8 +111771,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_111100_p3_33_0.webp"
     },
     {
       "id": 3063,
@@ -122483,8 +122473,12 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_112020_p2_11_0.webp",
+      "images": [
+        "/question-images/radiology_112020_p2_11_0.webp",
+        "/question-images/radiology_112020_p2_11_1.webp",
+        "/question-images/radiology_112020_p2_11_2.webp"
+      ]
     },
     {
       "id": 3442,
@@ -123385,8 +123379,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_112020_p2_54_0.webp"
     },
     {
       "id": 3487,
@@ -131118,8 +131111,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_112100_p3_41_0.webp"
     },
     {
       "id": 4031,
@@ -139177,8 +139169,11 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_113020_p5_39_0.webp",
+      "images": [
+        "/question-images/radiology_113020_p5_39_0.webp",
+        "/question-images/radiology_113020_p5_39_1.webp"
+      ]
     },
     {
       "id": 4670,
@@ -139199,8 +139194,11 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_113020_p5_39_0.webp",
+      "images": [
+        "/question-images/radiology_113020_p5_39_0.webp",
+        "/question-images/radiology_113020_p5_39_1.webp"
+      ]
     },
     {
       "id": 4671,
@@ -139930,8 +139928,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_113020_p5_71_0.webp"
     },
     {
       "id": 4707,
@@ -196092,8 +196089,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_101010_p3_35_0.webp"
     },
     {
       "id": 114841,
@@ -196930,8 +196926,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_101010_p3_67_0.webp"
     },
     {
       "id": 114882,
@@ -197015,12 +197010,11 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 79 題：下圖為胸部電腦斷層影像，黑線圈圍處最可能的解剖構造為何？",
       "images": [
         "/question-images/radiology_114884_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/radiology_101010_p3_79_0.webp"
     },
     {
       "id": 114886,
@@ -205585,8 +205579,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_101100_p3_26_0.webp"
     },
     {
       "id": 115312,
@@ -206014,8 +206007,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_101100_p3_47_0.webp"
     },
     {
       "id": 115333,
@@ -206036,8 +206028,11 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_101100_p3_48_0.webp",
+      "images": [
+        "/question-images/radiology_101100_p3_48_0.webp",
+        "/question-images/radiology_101100_p3_48_1.webp"
+      ]
     },
     {
       "id": 115334,
@@ -216397,12 +216392,11 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 79 題：40 歲男性病人腎移植後腎功能變差，穿刺檢查後有血尿，灰階及彩色超音波掃描如圖，箭號所指為何？",
       "images": [
         "/question-images/radiology_115844_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/radiology_102020_p3_78_0.webp"
     },
     {
       "id": 115846,
@@ -217387,8 +217381,11 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_102020_p4_49_0.webp",
+      "images": [
+        "/question-images/radiology_102020_p4_49_0.webp",
+        "/question-images/radiology_102020_p4_49_1.webp"
+      ]
     },
     {
       "id": 115895,
@@ -222380,8 +222377,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_102100_p1_42_0.webp"
     },
     {
       "id": 116143,
@@ -225504,8 +225500,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_102100_p3_52_0.webp"
     },
     {
       "id": 116298,
@@ -226012,8 +226007,11 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_102100_p3_77_0.webp",
+      "images": [
+        "/question-images/radiology_102100_p3_77_0.webp",
+        "/question-images/radiology_102100_p3_77_1.webp"
+      ]
     },
     {
       "id": 116323,
@@ -226081,12 +226079,11 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 79 題：下圖磁振造影是使用何種成像序列（ sequence ）？",
       "images": [
         "/question-images/radiology_116324_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/radiology_102100_p3_79_0.webp"
     },
     {
       "id": 116326,
@@ -232021,8 +232018,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_103020_p1_41_0.webp"
     },
     {
       "id": 116620,
@@ -234737,8 +234733,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_103020_p3_28_0.webp"
     },
     {
       "id": 116754,
@@ -235066,8 +235061,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_103020_p3_44_0.webp"
     },
     {
       "id": 116770,
@@ -235810,8 +235804,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_103020_p3_79_0.webp"
     },
     {
       "id": 116805,
@@ -235832,9 +235825,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
-      "case_context": "第 79 題：頭頸部CT檢查通常要注射含碘對比劑，否則頸部太多圓形構造難以區分，對照左、右圖，箭號1 所指的是："
+      "case_context": "第 79 題：頭頸部CT檢查通常要注射含碘對比劑，否則頸部太多圓形構造難以區分，對照左、右圖，箭號1 所指的是：",
+      "image_url": "/question-images/radiology_103020_p3_79_0.webp"
     },
     {
       "id": 116806,
@@ -244894,8 +244886,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_103090_p3_44_0.webp"
     },
     {
       "id": 117256,
@@ -245481,12 +245472,11 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 77 題：腦部傳統血管攝影檢查如下圖中影像是由那條血管注射對比劑？",
       "images": [
         "/question-images/radiology_117282_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/radiology_103090_p3_76_0.webp"
     },
     {
       "id": 117284,
@@ -254570,8 +254560,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_104020_p3_48_0.webp"
     },
     {
       "id": 117734,
@@ -265009,8 +264998,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_105020_p1_78_0.webp"
     },
     {
       "id": 118244,
@@ -267961,8 +267949,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_105020_p3_59_0.webp"
     },
     {
       "id": 118383,
@@ -268354,8 +268341,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_105020_p3_70_0.webp"
     },
     {
       "id": 118401,
@@ -268377,8 +268363,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_105020_p3_70_0.webp"
     },
     {
       "id": 118402,
@@ -268400,8 +268385,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_105020_p3_70_0.webp"
     },
     {
       "id": 118403,
@@ -277921,8 +277905,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_105100_p3_48_0.webp"
     },
     {
       "id": 118852,
@@ -287829,8 +287812,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_104090_p3_32_0.webp"
     },
     {
       "id": 119320,
@@ -288005,8 +287987,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_104090_p3_42_0.webp"
     },
     {
       "id": 119328,
@@ -288238,8 +288219,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_104090_p3_42_0.webp"
     },
     {
       "id": 119339,
@@ -288715,8 +288695,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_104090_p3_76_0.webp"
     },
     {
       "id": 119361,
@@ -288738,8 +288717,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_104090_p3_76_0.webp"
     },
     {
       "id": 119362,
@@ -288761,8 +288739,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_104090_p3_76_0.webp"
     },
     {
       "id": 119363,
@@ -297196,8 +297173,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/radiology_100130_p2_79_0.webp"
     },
     {
       "id": 119763,

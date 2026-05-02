@@ -21564,8 +21564,11 @@
         "D": "right mandible"
       },
       "answer": "A",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_112020_p3_24_0.webp",
+      "images": [
+        "/question-images/dental2_112020_p3_24_0.webp",
+        "/question-images/dental2_112020_p3_24_1.webp"
+      ]
     },
     {
       "id": "112020_1_78",
@@ -21585,8 +21588,11 @@
         "D": "含牙囊腫(dentigerous cyst)"
       },
       "answer": "C",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_112020_p3_24_0.webp",
+      "images": [
+        "/question-images/dental2_112020_p3_24_0.webp",
+        "/question-images/dental2_112020_p3_24_1.webp"
+      ]
     },
     {
       "id": "112020_1_79",
@@ -33202,8 +33208,7 @@
         "D": "較深的傷口,可能要照會口腔顎面"
       },
       "answer": "B",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_113020_p3_12_0.webp"
     },
     {
       "id": "113020_1_44",
@@ -56753,8 +56758,17 @@
         "D": "Stage IV, Grade C, generalized"
       },
       "answer": "D",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_115020_p0_15_0.webp",
+      "images": [
+        "/question-images/dental2_115020_p0_15_0.webp",
+        "/question-images/dental2_115020_p0_15_1.webp",
+        "/question-images/dental2_115020_p0_15_2.webp",
+        "/question-images/dental2_115020_p0_15_3.webp",
+        "/question-images/dental2_115020_p0_15_4.webp",
+        "/question-images/dental2_115020_p0_15_5.webp",
+        "/question-images/dental2_115020_p0_15_6.webp",
+        "/question-images/dental2_115020_p0_15_7.webp"
+      ]
     },
     {
       "id": "115020_65",
@@ -57254,8 +57268,16 @@
         "D": "下顎小臼齒"
       },
       "answer": "A",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_115020_p0_40_0.webp",
+      "images": [
+        "/question-images/dental2_115020_p0_40_0.webp",
+        "/question-images/dental2_115020_p0_40_1.webp",
+        "/question-images/dental2_115020_p0_40_2.webp",
+        "/question-images/dental2_115020_p0_40_3.webp",
+        "/question-images/dental2_115020_p0_40_4.webp",
+        "/question-images/dental2_115020_p0_40_5.webp",
+        "/question-images/dental2_115020_p0_40_6.webp"
+      ]
     },
     {
       "id": "115020_1_11",
@@ -64993,8 +65015,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_110100_p1_78_0.webp"
     },
     {
       "id": 115020540,
@@ -65015,8 +65036,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_110100_p1_78_0.webp"
     },
     {
       "id": 115020541,
@@ -68426,8 +68446,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_106020_p0_9_0.webp"
     },
     {
       "id": 115020711,
@@ -71141,8 +71160,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_106020_p1_64_0.webp"
     },
     {
       "id": 115020845,
@@ -97239,8 +97257,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_108030_p1_78_0.webp"
     },
     {
       "id": 115022136,
@@ -97261,8 +97278,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_108030_p1_78_0.webp"
     },
     {
       "id": 115022137,
@@ -103730,12 +103746,11 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 79 題：圖示影像是以何種方法拍攝？",
       "images": [
         "/question-images/dental2_115022455_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/dental2_108100_p1_79_0.webp"
     },
     {
       "id": 115022457,
@@ -110154,12 +110169,11 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 79 題：附圖影像之拍攝方式為何？",
       "images": [
         "/question-images/dental2_115022772_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/dental2_109020_p1_79_0.webp"
     },
     {
       "id": 115022774,
@@ -116610,12 +116624,11 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 79 題：35歲男性因下顎左側後方不適而來求診，經X光檢查如附圖所示，黑色長箭頭所指的病變，最可能為下列何 者？",
       "images": [
         "/question-images/dental2_115023092_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/dental2_109100_p1_79_0.webp"
     },
     {
       "id": 115023094,
@@ -122873,8 +122886,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_100020_p1_64_0.webp"
     },
     {
       "id": 115023405,
@@ -129723,12 +129735,11 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 79 題：下圖為下顎在矢狀面（ sagittal plane ）上的邊界運動，在那一階段的邊界運動中，下顎的旋轉量 最少？",
       "images": [
         "/question-images/dental2_115023739_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/dental2_101100_p2_79_0.webp"
     },
     {
       "id": 115023741,
@@ -132421,12 +132432,11 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 53 題：一位 25 歲病患就診時，主訴下顎腫脹 3 天兼有吞嚥困難之現象，經照射環口（ panoramic ） X 光， 發現 38 mesial inclination ， 37 distal deep caries 。緊急電腦斷層如下圖所示，會造成吞嚥困難的 原因，是下列何種肌膜間隙有發炎腫脹？",
       "images": [
         "/question-images/dental2_115023873_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/dental2_102020_p1_52_0.webp"
     },
     {
       "id": 115023875,
@@ -132938,8 +132948,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_102020_p1_78_0.webp"
     },
     {
       "id": 115023899,
@@ -142654,12 +142663,11 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep",
       "case_context": "第 77 題：下圖所示之 X 光影像為何種拍攝方式所產生？",
       "images": [
         "/question-images/dental2_115024377_0.webp"
-      ]
+      ],
+      "image_url": "/question-images/dental2_103020_p1_78_0.webp"
     },
     {
       "id": 115024379,
@@ -147307,8 +147315,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_103090_p1_67_0.webp"
     },
     {
       "id": 115024609,
@@ -147329,8 +147336,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_103090_p1_67_0.webp"
     },
     {
       "id": 115024610,
@@ -147520,8 +147526,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_103090_p1_77_0.webp"
     },
     {
       "id": 115024619,
@@ -160628,8 +160633,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_101010_p1_78_0.webp"
     },
     {
       "id": 115025261,
@@ -167075,8 +167079,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/dental2_100130_p1_64_0.webp"
     },
     {
       "id": 115025565,

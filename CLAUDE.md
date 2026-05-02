@@ -488,7 +488,7 @@ https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx
 
 | 項目 | 狀況 | 備注 |
 |------|------|------|
-| 缺圖題（image-dep）2,738 題 | 已 `incomplete:true` 隱藏（2026-04-19）| `gap_reason: "missing_image_dep"`；待 PDF 圖片抽取 pipeline 救回。100年第二次補回後又多 111 題缺圖。受傷最重：放射師、醫師二階、牙醫二階、獸醫、醫檢師 |
+| 缺圖題（image-dep）119 題 | 207/326 題已抽圖補回（2026-05-02）| 剩餘 119 題的 PDF 無可抽取的嵌入圖片（含中醫師、藥師一階早年及部分護理師）；有圖的已設 `image_url`，無圖仍保持 `incomplete:true` |
 | 護理師 110-113 散落缺題 | 部分可補（c=105/106 隨場次不一致） | `scrape-fill-gaps-vision.js` lookup 已標註；遇缺題請先手動 probe c-code |
 
 ### ✅ 已修復

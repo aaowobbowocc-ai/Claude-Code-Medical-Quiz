@@ -52571,7 +52571,7 @@
       "subject_name": "生理學",
       "stage_id": 2,
       "number": 47,
-      "question": "下列①至④項中那些物質運輸方向是由高濃度到低濃度？ ①鈣離子經由幫浦（Ca 2+",
+      "question": "下列①至④項中那些物質運輸方向是由高濃度到低濃度？①鈣離子經由幫浦（Ca²⁺ ATPase）回收至肌漿網（sarcoplasmic reticulum）②鈉離子經由鈉-葡萄糖共同轉運蛋白（sodium-glucose cotransporter）進入小腸表皮細胞內③近端腎小管氫離子經由鈉-氫逆向運輸（Na⁺-H⁺ countertransport）分泌至管腔④鉀離子經由滲漏性鉀離子通道（leak K⁺ channels）流出細胞",
       "options": {
         "A": "①③",
         "C": "②④",
@@ -53535,7 +53535,7 @@
       "options": {
         "A": "氧分子（O 2 ）為電子最終的接受者",
         "B": "NADH的氧化發生於complex I",
-        "C": "ytochrome c（Cyt c）可協助將電子由complex III傳遞至complex IV",
+        "C": "Coenzyme Q（CoQ）可協助將電子由complex I傳遞至complex II",
         "D": "Cytochrome c（Cyt c）可協助將電⼦由complex III傳遞⾄complex IV"
       },
       "answer": "C",
@@ -56874,9 +56874,9 @@
       "number": 65,
       "question": "下列有關腎臟的逆流機制（countercurrent mechanism）的敘述，何者錯誤？",
       "options": {
-        "A": "TPase）提供",
-        "B": "所需要的能量由亨氏管上升段粗枝（thick ascending limb of loop of Henle）的鈉-鉀腺苷三磷酸酶（Na + -K +",
-        "C": "otransporter）將鈉、氯離子分泌至腎小管管腔",
+        "A": "主要是為了形成並維持腎臟髓質垂直性的滲透壓梯度",
+        "B": "所需要的能量由亨氏管上升段粗枝（thick ascending limb of loop of Henle）的鈉-鉀腺苷三磷酸酶（Na⁺-K⁺ ATPase）提供",
+        "C": "亨氏管上升段粗枝會利用鈉-氯協同運輸蛋白（Na⁺-Cl⁺ cotransporter）將鈉、氯離子分泌至腎小管管腔",
         "D": "直管（vasa recta）利用逆流交換（countercurrent exchange）的作用維持腎臟髓質垂直性的滲透壓梯度"
       },
       "answer": "C",
@@ -69747,7 +69747,7 @@
         "C": "C-reactive protein",
         "D": "kallikrein"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -70207,7 +70207,7 @@
         "C": "Alanine",
         "D": "Tyrosine"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -70527,9 +70527,9 @@
         "A": "Succinate→coenzyme Q",
         "B": "NADH→coenzyme Q",
         "C": "Cytochrome c→O2",
-        "D": "Cyt"
+        "D": "Cyt c→Cyt（a+a₃）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": "",
       "incomplete": false
     },

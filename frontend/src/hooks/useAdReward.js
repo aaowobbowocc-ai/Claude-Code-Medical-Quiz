@@ -5,11 +5,22 @@ import { usePlayerStore } from '../store/gameStore'
 // Set VITE_REWARDED_AD_SLOT in Vercel env vars after AdSense H5 approval
 const AD_CLIENT = 'ca-pub-3134321405509741'
 const REWARDED_AD_SLOT = import.meta.env.VITE_REWARDED_AD_SLOT || ''
-// Monetag Direct Link URL — disabled during AdSense re-review.
-// To restore: change '' back to `import.meta.env.VITE_MONETAG_DIRECT_LINK || 'https://omg10.com/4/10909987'`
-const MONETAG_DIRECT_LINK = ''
+const MONETAG_DIRECT_LINK = import.meta.env.VITE_MONETAG_DIRECT_LINK || 'https://omg10.com/4/10909987'
+const SHOPEE_AFFILIATE_LINK = import.meta.env.VITE_SHOPEE_AFFILIATE_LINK || ''
 const DIRECT_LINK_COUNTDOWN_SEC = 15
 const REWARD_COINS = 300
+
+// 每天第一次看廣告導向蝦皮分潤，其餘走 Monetag
+function getDirectLinkUrl() {
+  if (!SHOPEE_AFFILIATE_LINK) return MONETAG_DIRECT_LINK
+  const today = new Date().toDateString()
+  const key = 'ad_first_url_date'
+  if (localStorage.getItem(key) !== today) {
+    localStorage.setItem(key, today)
+    return SHOPEE_AFFILIATE_LINK
+  }
+  return MONETAG_DIRECT_LINK
+}
 
 // ── Script loaders ──────────────────────────────────
 let adScriptLoaded = false
@@ -111,12 +122,9 @@ export function useAdReward() {
     // countdown is primarily a UX beat + anti-spam guard. User can freely
     // switch back to our tab during the wait.
     if (MONETAG_DIRECT_LINK) {
-      // In installed PWA mode, window.open often returns null even when the tab
-      // opens successfully (COOP / standalone isolation). So we can't rely on
-      // the return value — trust the call unless it throws, and let the daily
-      // 2/view gate guard against abuse.
+      const adUrl = getDirectLinkUrl()
       try {
-        window.open(MONETAG_DIRECT_LINK, '_blank', 'noopener,noreferrer')
+        window.open(adUrl, '_blank', 'noopener,noreferrer')
       } catch {
         setPhase('error')
         return false

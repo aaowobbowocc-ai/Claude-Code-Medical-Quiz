@@ -14,12 +14,21 @@ function formatCooldown(sec) {
 const AD_REWARD_ENABLED = true
 
 export default function RewardAdSheet({ onClose, onOpenShop }) {
-  const { phase, setPhase, countdown, cooldownSec, info, showAd, refreshInfo, rewardCoins, isSimulation } = useAdReward()
+  const { phase, setPhase, countdown, cooldownSec, info, showAd, getAdUrl, refreshInfo, rewardCoins, isSimulation } = useAdReward()
   const [showCoinAnim, setShowCoinAnim] = useState(false)
 
-  const handleWatch = async () => {
-    const ok = await showAd()
-    if (ok) setShowCoinAnim(true)
+  // Open the ad window SYNCHRONOUSLY inside the click handler so the browser
+  // still treats it as a user gesture (avoids desktop popup blocker).
+  const handleWatch = () => {
+    let windowOpened = false
+    const url = getAdUrl()
+    if (url) {
+      try {
+        const w = window.open(url, '_blank', 'noopener,noreferrer')
+        windowOpened = !!w
+      } catch {}
+    }
+    showAd(windowOpened).then(ok => { if (ok) setShowCoinAnim(true) })
   }
 
   const handleDone = () => {

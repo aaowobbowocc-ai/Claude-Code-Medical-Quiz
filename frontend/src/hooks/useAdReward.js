@@ -91,7 +91,17 @@ export function useAdReward() {
     return () => clearInterval(id)
   }, [phase, refreshInfo])
 
-  const showAd = useCallback(async () => {
+  // Returns the URL to open (for Monetag path), or null if not applicable.
+  // Called synchronously in the click handler BEFORE any async logic so
+  // the browser still considers it a user gesture (popup blocker bypass).
+  const getAdUrl = useCallback(() => {
+    if (REWARDED_AD_SLOT || !MONETAG_DIRECT_LINK) return null
+    const preCheck = getAdRewardInfo()
+    if (preCheck.remaining <= 0 || preCheck.cooldownMs > 0) return null
+    return getDirectLinkUrl()
+  }, [getAdRewardInfo])
+
+  const showAd = useCallback(async (windowAlreadyOpened = false) => {
     const preCheck = getAdRewardInfo()
     if (preCheck.remaining <= 0) { setPhase('exhausted'); return false }
     if (preCheck.cooldownMs > 0) { setPhase('cooldown'); setCooldownSec(Math.ceil(preCheck.cooldownMs / 1000)); return false }
@@ -117,17 +127,17 @@ export function useAdReward() {
       }
     }
 
-    // Monetag Direct Link fallback: open ad URL in new tab, 15-second countdown
-    // in our tab. Monetag counts the impression once the URL loads, so the
-    // countdown is primarily a UX beat + anti-spam guard. User can freely
-    // switch back to our tab during the wait.
+    // Monetag Direct Link: window should already be opened synchronously by
+    // the click handler (windowAlreadyOpened=true). Fall back to opening here
+    // if caller didn't (e.g. simulation mode or future callers).
     if (MONETAG_DIRECT_LINK) {
-      const adUrl = getDirectLinkUrl()
-      try {
-        window.open(adUrl, '_blank', 'noopener,noreferrer')
-      } catch {
-        setPhase('error')
-        return false
+      if (!windowAlreadyOpened) {
+        try {
+          window.open(getDirectLinkUrl(), '_blank', 'noopener,noreferrer')
+        } catch {
+          setPhase('error')
+          return false
+        }
       }
       setPhase('playing')
       setCountdown(DIRECT_LINK_COUNTDOWN_SEC)
@@ -184,7 +194,8 @@ export function useAdReward() {
     countdown,        // simulation countdown seconds
     cooldownSec,      // cooldown remaining seconds
     info,             // { watched, remaining, cooldownMs }
-    showAd,           // trigger ad
+    showAd,           // trigger ad (pass windowAlreadyOpened=true if caller opened window)
+    getAdUrl,         // call synchronously in click handler to get URL before async
     refreshInfo,      // manually refresh
     rewardCoins: REWARD_COINS,
     isSimulation: !REWARDED_AD_SLOT && !MONETAG_DIRECT_LINK,

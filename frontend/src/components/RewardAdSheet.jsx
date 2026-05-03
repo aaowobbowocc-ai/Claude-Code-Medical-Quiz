@@ -13,7 +13,7 @@ function formatCooldown(sec) {
 // Enabled via Monetag Direct Link (15-sec countdown, 300 coins/view, 10/day).
 const AD_REWARD_ENABLED = true
 
-export default function RewardAdSheet({ onClose }) {
+export default function RewardAdSheet({ onClose, onOpenShop }) {
   const { phase, setPhase, countdown, cooldownSec, info, showAd, refreshInfo, rewardCoins, isSimulation } = useAdReward()
   const [showCoinAnim, setShowCoinAnim] = useState(false)
 
@@ -69,10 +69,25 @@ export default function RewardAdSheet({ onClose }) {
 
         {/* Phase-specific content */}
         {phase === 'idle' && (
-          <button onClick={handleWatch}
-            className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform grad-cta">
-            ▶ 觀看廣告領取金幣
-          </button>
+          <>
+            <button onClick={handleWatch}
+              className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform grad-cta">
+              ▶ 觀看廣告領取金幣
+            </button>
+            {onOpenShop && (
+              <div className="flex items-center gap-3 my-3">
+                <div className="flex-1 h-px bg-gray-100" />
+                <span className="text-xs text-gray-300">或</span>
+                <div className="flex-1 h-px bg-gray-100" />
+              </div>
+            )}
+            {onOpenShop && (
+              <button onClick={() => { onClose(); onOpenShop() }}
+                className="w-full py-3 rounded-2xl font-bold text-sm text-amber-600 bg-amber-50 border border-amber-200 active:scale-95 transition-transform">
+                ☕ 贊助支持，一次獲得更多金幣
+              </button>
+            )}
+          </>
         )}
 
         {phase === 'loading' && (
@@ -119,7 +134,13 @@ export default function RewardAdSheet({ onClose }) {
           <div className="text-center py-4">
             <div className="text-5xl mb-3">😴</div>
             <p className="text-gray-600 font-bold">今天已達上限</p>
-            <p className="text-gray-400 text-sm mt-1">明天再來領取吧！</p>
+            <p className="text-gray-400 text-sm mt-1 mb-4">明天再來領取吧！</p>
+            {onOpenShop && (
+              <button onClick={() => { onClose(); onOpenShop() }}
+                className="px-6 py-3 rounded-2xl font-bold text-sm text-amber-600 bg-amber-50 border border-amber-200 active:scale-95 transition-transform">
+                ☕ 贊助支持，立即獲得金幣
+              </button>
+            )}
           </div>
         )}
 

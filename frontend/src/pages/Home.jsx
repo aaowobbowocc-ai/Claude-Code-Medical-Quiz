@@ -598,7 +598,7 @@ export default function Home() {
         )}
 
         <SupportSheets sheet={sheet} setSheet={setSheet} />
-        {sheet === 'reward-ad' && <RewardAdSheet onClose={() => setSheet(null)} />}
+        {sheet === 'reward-ad' && <RewardAdSheet onClose={() => setSheet(null)} onOpenShop={() => setSheet('coin-shop')} />}
         {sheet === 'coin-shop' && <CoinShopSheet onClose={() => setSheet(null)} />}
       </div>
     )

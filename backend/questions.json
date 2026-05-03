@@ -1534,7 +1534,8 @@
       "images": [
         "/question-images/doctor1_110020_1_76_0.webp"
       ],
-      "image_url": "/question-images/doctor1_110020_p0_76_0.webp"
+      "image_url": "/question-images/doctor1_110020_p0_76_0.webp",
+      "image_dependent": true
     },
     {
       "id": "110020_1_77",
@@ -6769,7 +6770,8 @@
       "answer": "A",
       "explanation": "**✅ 為什麼答案是 A**\n變異數分析（ANOVA）檢定假設三組資料來源的三個母體的變異數皆相等，這是檢定前條件。這樣才能確保檢定結果的正確性。\n\n**❌ 排除其他選項**\nB. 如果要利用兩兩比較的t檢定來代替變異數分析，必須將每個t檢定的顯著水準改成α/3，而不是α/6。\nC. ANOVA的檢定統計量不會服從t分配，而是服從F分配。\nD. 只加入一個解釋變數並不能取代變異數分析，需要考慮多個變數的交互作用和影響。\n\n**🧠 記憶關鍵字**\n\"ANOVA需要等變異\"，這個口訣可以幫助你記住變異數分析的檢定前條件。\n\n**🏥 臨床應用**\n在臨床實踐中，變異數分析可以用於比較不同治療方法或藥物的效果，幫助醫師做出更準確的決策。",
       "answer_corrected": true,
-      "disputed": true
+      "disputed": true,
+      "image_dependent": true
     },
     {
       "id": "111020_2_37",
@@ -7637,7 +7639,8 @@
         "D": "chondrosarcoma"
       },
       "answer": "A",
-      "explanation": "**✅ 為什麼答案是 A**\n該病人最可能罹患的疾病是 A. fibrous cortical defect，因為 X光檢查發現的病灶呈現多葉狀且放射線通透，且病人年齡小（7歲），這些特徵與纖維骨缺陷（fibrous cortical defect）相符。\n\n**❌ 排除其他選項**\nB. fibrous dysplasia 通常出現於骨骼的內部骨髓腔，且病灶通常不呈多葉狀。\nC. giant cell tumor 通常出現於成年人，且病灶通常較大且呈現明顯的破壞性。\nD. chondrosarcoma 是一種骨肉瘤，通常出現於老年人，且病灶通常呈現明顯的破壞性。\n\n**🧠 記憶關鍵字**\n\"多葉狀、放射線通透、年齡小\" 可以幫助你記住纖維骨缺陷的特徵。\n\n**🏥 臨床應用**\n纖維骨缺陷是一種常見的骨骼病變，通常不需要進行治療，但需要定期監測以防止進展為更嚴重的疾病。"
+      "explanation": "**✅ 為什麼答案是 A**\n該病人最可能罹患的疾病是 A. fibrous cortical defect，因為 X光檢查發現的病灶呈現多葉狀且放射線通透，且病人年齡小（7歲），這些特徵與纖維骨缺陷（fibrous cortical defect）相符。\n\n**❌ 排除其他選項**\nB. fibrous dysplasia 通常出現於骨骼的內部骨髓腔，且病灶通常不呈多葉狀。\nC. giant cell tumor 通常出現於成年人，且病灶通常較大且呈現明顯的破壞性。\nD. chondrosarcoma 是一種骨肉瘤，通常出現於老年人，且病灶通常呈現明顯的破壞性。\n\n**🧠 記憶關鍵字**\n\"多葉狀、放射線通透、年齡小\" 可以幫助你記住纖維骨缺陷的特徵。\n\n**🏥 臨床應用**\n纖維骨缺陷是一種常見的骨骼病變，通常不需要進行治療，但需要定期監測以防止進展為更嚴重的疾病。",
+      "grouped": true
     },
     {
       "id": "111020_2_80",
@@ -8323,7 +8326,8 @@
       "images": [
         "/question-images/doctor1_111100_1_13_0.webp"
       ],
-      "image_url": "/question-images/doctor1_111100_p0_13_0.webp"
+      "image_url": "/question-images/doctor1_111100_p0_13_0.webp",
+      "image_dependent": true
     },
     {
       "id": "111100_1_14",
@@ -11899,7 +11903,8 @@
       },
       "answer": "C",
       "explanation": "**✅ 為什麼答案是 C**\n肝臟是人體的第一個滲透器官，血液中的癌細胞容易滲入肝臟組織，因此癌細胞最有可能轉移至肝臟。\n\n**❌ 排除其他選項**\n皮膚（A）通常不被視為癌細胞轉移的常見場所，心臟（B）和脾臟（D）雖然可能受累，但不是癌細胞轉移的首選場所。\n\n**🧠 記憶關鍵字**\n\"滲入第一\"，記住肝臟是第一個滲透器官，癌細胞容易滲入肝臟。\n\n**🏥 臨床應用**\n在臨床上，肝臟轉移是許多癌症的常見現象，了解這一點對於早期診斷和治療非常重要。",
-      "case_context": "第 88 題：60 歲女性有抽菸史，主訴咳嗽、胸痛及體重下降。胸部X-ray 顯示，有一陰影，組織圖如下，其最可能的診斷 為："
+      "case_context": "第 88 題：60 歲女性有抽菸史，主訴咳嗽、胸痛及體重下降。胸部X-ray 顯示，有一陰影，組織圖如下，其最可能的診斷 為：",
+      "grouped": true
     },
     {
       "id": "111100_2_90",
@@ -12003,7 +12008,8 @@
       "images": [
         "/question-images/doctor1_111100_2_94_0.webp"
       ],
-      "image_url": "/question-images/doctor1_111100_p1_94_0.webp"
+      "image_url": "/question-images/doctor1_111100_p1_94_0.webp",
+      "image_dependent": true
     },
     {
       "id": "111100_2_95",
@@ -12090,7 +12096,8 @@
         "D": "動脈瘤樣骨性囊腫（aneurysmal bone cyst）"
       },
       "answer": "D",
-      "explanation": "**✅ 為什麼答案是 D**\n該病人最可能罹患的疾病是動脈瘤樣骨性囊腫（aneurysmal bone cyst），因為病理切片檢查顯示其組成包括含有血之囊腫（blood-filled cystic space），這是動脈瘤樣骨性囊腫的典型特徵。\n\n**❌ 排除其他選項**\nA. 海綿狀血管瘤（cavernous hemangioma）通常不具有膨脹性溶解病變（expansile lytic lesion）。\nB. 骨母細胞瘤（osteoblastoma）通常不具有類似蝕骨細胞之巨細胞（osteoclast-like giant cell）。\nC. 骨巨細胞瘤（giant cell tumor of bone）通常不具有含有血之囊腫（blood-filled cystic space）。\n\n**🧠 記憶關鍵字**\n\"血囊+巨細胞\"（血囊代表動脈瘤樣骨性囊腫，巨細胞代表骨巨細胞瘤的特徵）。\n\n**🏥 臨床應用**\n動脈瘤樣骨性囊腫是一種常見的骨骼系統腫瘤，需要早期診斷和治療，以避免腫瘤擴散和骨骼破壞。"
+      "explanation": "**✅ 為什麼答案是 D**\n該病人最可能罹患的疾病是動脈瘤樣骨性囊腫（aneurysmal bone cyst），因為病理切片檢查顯示其組成包括含有血之囊腫（blood-filled cystic space），這是動脈瘤樣骨性囊腫的典型特徵。\n\n**❌ 排除其他選項**\nA. 海綿狀血管瘤（cavernous hemangioma）通常不具有膨脹性溶解病變（expansile lytic lesion）。\nB. 骨母細胞瘤（osteoblastoma）通常不具有類似蝕骨細胞之巨細胞（osteoclast-like giant cell）。\nC. 骨巨細胞瘤（giant cell tumor of bone）通常不具有含有血之囊腫（blood-filled cystic space）。\n\n**🧠 記憶關鍵字**\n\"血囊+巨細胞\"（血囊代表動脈瘤樣骨性囊腫，巨細胞代表骨巨細胞瘤的特徵）。\n\n**🏥 臨床應用**\n動脈瘤樣骨性囊腫是一種常見的骨骼系統腫瘤，需要早期診斷和治療，以避免腫瘤擴散和骨骼破壞。",
+      "grouped": true
     },
     {
       "id": "111100_2_99",
@@ -21066,7 +21073,8 @@
       "images": [
         "/question-images/doctor1_113020_1_46_0.webp"
       ],
-      "image_url": "/question-images/doctor1_113020_p0_46_0.webp"
+      "image_url": "/question-images/doctor1_113020_p0_46_0.webp",
+      "image_dependent": true
     },
     {
       "id": "113020_1_47",
@@ -24057,7 +24065,8 @@
       "images": [
         "/question-images/doctor1_113020_2_100_0.webp"
       ],
-      "image_url": "/question-images/doctor1_113020_p1_100_0.webp"
+      "image_url": "/question-images/doctor1_113020_p1_100_0.webp",
+      "image_dependent": true
     },
     {
       "id": "113090_1_1",
@@ -26744,7 +26753,8 @@
         "C": "90%信賴區間的寬度會比95%信賴區間的寬度還窄",
         "D": "信賴區間也可以用來檢定假說"
       },
-      "answer": "B"
+      "answer": "B",
+      "image_dependent": true
     },
     {
       "id": "113090_2_37",
@@ -27817,7 +27827,8 @@
       "images": [
         "/question-images/doctor1_113090_2_92_0.webp"
       ],
-      "image_url": "/question-images/doctor1_113090_p1_92_0.webp"
+      "image_url": "/question-images/doctor1_113090_p1_92_0.webp",
+      "image_dependent": true
     },
     {
       "id": "113090_2_93",
@@ -32476,7 +32487,8 @@
       "images": [
         "/question-images/doctor1_114090_1_29_0.webp"
       ],
-      "image_url": "/question-images/doctor1_114090_p0_29_0.webp"
+      "image_url": "/question-images/doctor1_114090_p0_29_0.webp",
+      "image_dependent": true
     },
     {
       "id": "114090_1_30",
@@ -35773,7 +35785,8 @@
       "images": [
         "/question-images/doctor1_114090_2_97_0.webp"
       ],
-      "image_url": "/question-images/doctor1_114090_p1_97_0.webp"
+      "image_url": "/question-images/doctor1_114090_p1_97_0.webp",
+      "image_dependent": true
     },
     {
       "id": "114090_2_98",
@@ -43778,7 +43791,8 @@
       "images": [
         "/question-images/doctor1_110101_2_100_0.webp"
       ],
-      "image_url": "/question-images/doctor1_110101_p1_100_0.webp"
+      "image_url": "/question-images/doctor1_110101_p1_100_0.webp",
+      "image_dependent": true
     },
     {
       "id": 1150202101,
@@ -46084,7 +46098,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "case_context": "第 16 題：3歲男童，因為咽喉疼痛伴隨吞嚥與呼吸困難送至急診室，經醫師檢查，發現他在每次吸氣時都出現明顯阻塞 的聲音，側頸X光（lateral neck x-ray）報告顯示會厭軟骨腫脹（swollen epiglottis）， 此最有可能是下列何種 細菌感染所造成？"
+      "case_context": "第 16 題：3歲男童，因為咽喉疼痛伴隨吞嚥與呼吸困難送至急診室，經醫師檢查，發現他在每次吸氣時都出現明顯阻塞 的聲音，側頸X光（lateral neck x-ray）報告顯示會厭軟骨腫脹（swollen epiglottis）， 此最有可能是下列何種 細菌感染所造成？",
+      "grouped": true
     },
     {
       "id": 1150202216,
@@ -47549,7 +47564,8 @@
       "images": [
         "/question-images/doctor1_1150202288_0.webp"
       ],
-      "image_url": "/question-images/doctor1_106100_p1_92_0.webp"
+      "image_url": "/question-images/doctor1_106100_p1_92_0.webp",
+      "image_dependent": true
     },
     {
       "id": 1150202289,
@@ -47693,7 +47709,8 @@
       "images": [
         "/question-images/doctor1_1150202295_0.webp"
       ],
-      "image_url": "/question-images/doctor1_106100_p1_99_0.webp"
+      "image_url": "/question-images/doctor1_106100_p1_99_0.webp",
+      "image_dependent": true
     },
     {
       "id": 1150202296,
@@ -51339,7 +51356,8 @@
       "images": [
         "/question-images/doctor1_1150202477_0.webp"
       ],
-      "image_url": "/question-images/doctor1_107100_p1_84_0.webp"
+      "image_url": "/question-images/doctor1_107100_p1_84_0.webp",
+      "image_dependent": true
     },
     {
       "id": 1150202478,
@@ -64945,7 +64963,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "case_context": "第 72 題：一位21歲的男性因視力障礙及頭痛就醫，醫師除了發現病患有腦壓增高的現象外，也有視野雙側顳側（bitemporal）偏盲現象。經腦部電腦斷層掃描後，最可能的診斷為下列何者？"
+      "case_context": "第 72 題：一位21歲的男性因視力障礙及頭痛就醫，醫師除了發現病患有腦壓增高的現象外，也有視野雙側顳側（bitemporal）偏盲現象。經腦部電腦斷層掃描後，最可能的診斷為下列何者？",
+      "grouped": true
     },
     {
       "id": 1150203158,
@@ -68563,7 +68582,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 49 題：一名60 歲患有糖尿病的農夫在夏季豪雨過後下田整理農地，三天後出現發燒和倦怠，送醫就診發現有輕微肺炎症狀。由其血液檢體分離出一株革蘭氏陰性、不發酵醣類的桿菌。下列何者最有可能是這名農夫所罹患的感染症？"
+      "case_context": "第 49 題：一名60 歲患有糖尿病的農夫在夏季豪雨過後下田整理農地，三天後出現發燒和倦怠，送醫就診發現有輕微肺炎症狀。由其血液檢體分離出一株革蘭氏陰性、不發酵醣類的桿菌。下列何者最有可能是這名農夫所罹患的感染症？",
+      "grouped": true
     },
     {
       "id": 1150203339,
@@ -69025,7 +69045,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": false
+      "incomplete": true
     },
     {
       "id": 1150203362,
@@ -71424,7 +71444,8 @@
       "images": [
         "/question-images/doctor1_1150203480_0.webp",
         "/question-images/doctor1_1150203480_1.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150203481,
@@ -72526,7 +72547,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 47 題：某國小爆發數十名學童先後在5 日內發生下痢的事件，症狀包含腹瀉、發燒、嘔吐、裏急後重（tenesmus）。由其中十多名患者的糞便中及該校師生用來洗手的地下水中，分離出一株不發酵乳糖、無運動性之腸內桿菌科（Enterobacteriaceae）細菌。衛生單位對患者施以居家隔離，消毒地下水，並對全校師生投予抗生素後，疫情幸未再擴大。下列菌屬中，何者最有可能是造成此次事件的元兇？"
+      "case_context": "第 47 題：某國小爆發數十名學童先後在5 日內發生下痢的事件，症狀包含腹瀉、發燒、嘔吐、裏急後重（tenesmus）。由其中十多名患者的糞便中及該校師生用來洗手的地下水中，分離出一株不發酵乳糖、無運動性之腸內桿菌科（Enterobacteriaceae）細菌。衛生單位對患者施以居家隔離，消毒地下水，並對全校師生投予抗生素後，疫情幸未再擴大。下列菌屬中，何者最有可能是造成此次事件的元兇？",
+      "grouped": true
     },
     {
       "id": 1150203536,
@@ -73528,7 +73550,8 @@
         "D": "中位數"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "image_dependent": true
     },
     {
       "id": 1150203586,
@@ -75516,7 +75539,8 @@
       "gap_reason": "missing_image",
       "images": [
         "/question-images/doctor1_1150203684_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150203685,
@@ -75542,7 +75566,8 @@
         "/question-images/doctor1_1150203685_1.webp",
         "/question-images/doctor1_1150203685_2.webp",
         "/question-images/doctor1_1150203685_3.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150203686,
@@ -75566,7 +75591,8 @@
       "images": [
         "/question-images/doctor1_1150203686_0.webp",
         "/question-images/doctor1_1150203686_1.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150203687,
@@ -76587,7 +76613,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 50 題：一位58 歲男性突然出現嘔吐、大量水性腹瀉、急性腎衰竭等症狀，隨後在其糞便中分離出霍亂弧菌（Vibrio cholerae）。下列何者最能做為確定此人罹患霍亂症（cholera）的依據？"
+      "case_context": "第 50 題：一位58 歲男性突然出現嘔吐、大量水性腹瀉、急性腎衰竭等症狀，隨後在其糞便中分離出霍亂弧菌（Vibrio cholerae）。下列何者最能做為確定此人罹患霍亂症（cholera）的依據？",
+      "grouped": true
     },
     {
       "id": 1150203738,
@@ -79473,7 +79500,8 @@
       "images": [
         "/question-images/doctor1_1150203881_0.webp",
         "/question-images/doctor1_1150203881_1.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150203882,
@@ -79496,7 +79524,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150203882_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150203883,
@@ -79519,7 +79548,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150203883_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150203884,
@@ -79543,7 +79573,8 @@
       "case_context": "第 98 題：65 歲婦人，住加護病房，3 天後發燒、膿痰，X 光顯示有雙側性肺炎，組織學如圖示。其最可能的診斷為：",
       "images": [
         "/question-images/doctor1_1150203883_0.webp"
-      ]
+      ],
+      "grouped": true
     },
     {
       "id": 1150203885,
@@ -79566,7 +79597,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150203885_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150203886,
@@ -83151,7 +83183,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150204064_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150204065,
@@ -83514,7 +83547,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150204082_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150204083,
@@ -83577,7 +83611,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150204085_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150204086,
@@ -84256,7 +84291,8 @@
         "/question-images/doctor1_1150204118_0.webp"
       ],
       "incomplete": false,
-      "gap_reason": "empty_options"
+      "gap_reason": "empty_options",
+      "image_dependent": true
     },
     {
       "id": 1150204119,
@@ -84603,7 +84639,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "case_context": "第 49 題：一位嗜食泡菜的家庭主婦，某天晚上突然發生視覺模糊、吞嚥困難及口乾的情形，且此麻痺現象逐漸向下延伸，引發呼吸困難。送醫急救時，醫師得知該婦人前一天及當天中午獨自在家午餐時，新開了一罐親戚所贈送的自製泡菜作為配菜。下列那種細菌最有可能導致此疾病？"
+      "case_context": "第 49 題：一位嗜食泡菜的家庭主婦，某天晚上突然發生視覺模糊、吞嚥困難及口乾的情形，且此麻痺現象逐漸向下延伸，引發呼吸困難。送醫急救時，醫師得知該婦人前一天及當天中午獨自在家午餐時，新開了一罐親戚所贈送的自製泡菜作為配菜。下列那種細菌最有可能導致此疾病？",
+      "grouped": true
     },
     {
       "id": 1150204136,
@@ -84832,7 +84869,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150204146_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150204147,
@@ -86135,7 +86173,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "case_context": "第 24 題：陳先生得了無精症（azoospermia）。他身材不高、體型稍胖、皮膚細白、體毛較少，乳房較為凸出（gynecomastia）、臉上沒有鬍渣。外陰部檢查，發現兩側睪丸很小，兩側輸精管都摸得到，陰莖發育也還好，染色體分析發現其性染色體為XXY。下列激素分析的結果何者較可能是陳先生的報告？（註：正常值：FSH：1～8 mIU/mL；LH：2～12 mIU/mL；testosterone：3～10.7 ng/mL）"
+      "case_context": "第 24 題：陳先生得了無精症（azoospermia）。他身材不高、體型稍胖、皮膚細白、體毛較少，乳房較為凸出（gynecomastia）、臉上沒有鬍渣。外陰部檢查，發現兩側睪丸很小，兩側輸精管都摸得到，陰莖發育也還好，染色體分析發現其性染色體為XXY。下列激素分析的結果何者較可能是陳先生的報告？（註：正常值：FSH：1～8 mIU/mL；LH：2～12 mIU/mL；testosterone：3～10.7 ng/mL）",
+      "grouped": true
     },
     {
       "id": 1150204210,
@@ -87484,7 +87523,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150204276_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150204277,
@@ -87507,7 +87547,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150204277_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150204278,
@@ -88648,7 +88689,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "case_context": "第 49 題：一名69 歲住院接受血癌（leukemia）治療的病人，住院後第三天發生尿道感染，醫師即刻施以廣效型抗生素治療一週，並於治療前所取得的尿液檢體中檢出大腸桿菌（Escherichia coli）。住院兩週後，病人突發高燒並寒顫，24 小時內血壓即下降，並出現壞死性膿瘡性皮膚病變。此時，由病人血液中檢出一株革蘭氏陰性，不發酵醣類，且產生螢光色素的細菌。下列何者最有可能是此致病菌？"
+      "case_context": "第 49 題：一名69 歲住院接受血癌（leukemia）治療的病人，住院後第三天發生尿道感染，醫師即刻施以廣效型抗生素治療一週，並於治療前所取得的尿液檢體中檢出大腸桿菌（Escherichia coli）。住院兩週後，病人突發高燒並寒顫，24 小時內血壓即下降，並出現壞死性膿瘡性皮膚病變。此時，由病人血液中檢出一株革蘭氏陰性，不發酵醣類，且產生螢光色素的細菌。下列何者最有可能是此致病菌？",
+      "grouped": true
     },
     {
       "id": 1150204335,
@@ -91065,7 +91107,8 @@
       "explanation": "",
       "case_context": "第 69 題：Terfenadine 若合併下列何種藥物使用，最容易產生心室性心律不整（ventricular arrhythmias）？",
       "incomplete": false,
-      "gap_reason": "empty_options"
+      "gap_reason": "empty_options",
+      "grouped": true
     },
     {
       "id": 1150204455,
@@ -91509,7 +91552,8 @@
       "answer": "C",
       "explanation": "",
       "incomplete": true,
-      "gap_reason": "missing_image"
+      "gap_reason": "missing_image",
+      "image_dependent": true
     },
     {
       "id": 1150204477,
@@ -91612,7 +91656,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150204481_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150204482,
@@ -92153,7 +92198,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 23 題：下列何種激素扮演促進胎兒時期中樞神經發育的關鍵角色？"
+      "case_context": "第 23 題：下列何種激素扮演促進胎兒時期中樞神經發育的關鍵角色？",
+      "grouped": true
     },
     {
       "id": 1150204509,
@@ -92174,7 +92220,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "case_context": "第 23 題：下列何種激素扮演促進胎兒時期中樞神經發育的關鍵角色？"
+      "case_context": "第 23 題：下列何種激素扮演促進胎兒時期中樞神經發育的關鍵角色？",
+      "grouped": true
     },
     {
       "id": 1150204510,
@@ -93175,7 +93222,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 74 題：有一位6歲小女孩在上課時經常發生目光呆滯、凝視等現象，經神經科醫師以腦波檢查發現 其腦波中會反覆性的出現spike-wave的波形。初步確認其為一種癲癇症兆，應選用下列何種 藥物治療最適宜？"
+      "case_context": "第 74 題：有一位6歲小女孩在上課時經常發生目光呆滯、凝視等現象，經神經科醫師以腦波檢查發現 其腦波中會反覆性的出現spike-wave的波形。初步確認其為一種癲癇症兆，應選用下列何種 藥物治療最適宜？",
+      "grouped": true
     },
     {
       "id": 1150204560,
@@ -93619,7 +93667,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150204581_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150204582,
@@ -93680,7 +93729,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "case_context": "第 99 題：有一農夫經常在稻穀收割期時發生急性發燒、咳嗽、呼吸困難，且血中白血球增高，其最可 能的診斷為："
+      "case_context": "第 99 題：有一農夫經常在稻穀收割期時發生急性發燒、咳嗽、呼吸困難，且血中白血球增高，其最可 能的診斷為：",
+      "grouped": true
     },
     {
       "id": 1150204585,
@@ -96821,7 +96871,8 @@
         "D": "高山症"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "grouped": true
     },
     {
       "id": 1150204742,
@@ -99265,7 +99316,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150204863_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150204864,
@@ -99388,7 +99440,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150204869_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150204870,
@@ -99571,7 +99624,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150204878_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150204879,
@@ -99755,7 +99809,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "case_context": "第 2 題：32 歲男性，左小腿前側被他人以刀子刺入，他感覺到左足背側第一趾與第二趾之間有麻麻的感覺，這可能是那一條神經受到損傷？"
+      "case_context": "第 2 題：32 歲男性，左小腿前側被他人以刀子刺入，他感覺到左足背側第一趾與第二趾之間有麻麻的感覺，這可能是那一條神經受到損傷？",
+      "grouped": true
     },
     {
       "id": 1150205048,
@@ -99777,7 +99832,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 2 題：32 歲男性，左小腿前側被他人以刀子刺入，他感覺到左足背側第一趾與第二趾之間有麻麻的感覺，這可能是那一條神經受到損傷？"
+      "case_context": "第 2 題：32 歲男性，左小腿前側被他人以刀子刺入，他感覺到左足背側第一趾與第二趾之間有麻麻的感覺，這可能是那一條神經受到損傷？",
+      "grouped": true
     },
     {
       "id": 1150205049,
@@ -100829,7 +100885,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 53 題：一位70 歲的老婦人在整理自家花園時不慎被埋在土裡樹枝上的細刺扎到，當時不以為意，但一週後出現說話、吞嚥、呼吸困難等情形，且有胸痛，兩天後並發生頸部僵硬和呼吸衰竭，急送某醫學中心，醫師立即將她送入加護病房進行氣管切開並接上人工呼吸器。病人被診斷為破傷風（tetanus），下列何者是診斷此病最主要的依據？"
+      "case_context": "第 53 題：一位70 歲的老婦人在整理自家花園時不慎被埋在土裡樹枝上的細刺扎到，當時不以為意，但一週後出現說話、吞嚥、呼吸困難等情形，且有胸痛，兩天後並發生頸部僵硬和呼吸衰竭，急送某醫學中心，醫師立即將她送入加護病房進行氣管切開並接上人工呼吸器。病人被診斷為破傷風（tetanus），下列何者是診斷此病最主要的依據？",
+      "grouped": true
     },
     {
       "id": 1150205099,
@@ -103860,7 +103917,8 @@
       "explanation": "",
       "images": [
         "/question-images/doctor1_1150205242_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150205243,
@@ -104954,7 +105012,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "case_context": "第 49 題：在某安養院，有多名老人先後出現乾咳和胸痛等急性呼吸道感染症狀，其中數名更發展成肺炎而緊急送醫治療。醫院由病人的肺組織或呼吸道分泌液等檢體以及安養院的冷卻水塔中，分離出同一種培養時需添加半胱胺酸（L-cysteine）的革蘭氏陰性桿菌。下列有關此感染症的敘述，何者錯誤？"
+      "case_context": "第 49 題：在某安養院，有多名老人先後出現乾咳和胸痛等急性呼吸道感染症狀，其中數名更發展成肺炎而緊急送醫治療。醫院由病人的肺組織或呼吸道分泌液等檢體以及安養院的冷卻水塔中，分離出同一種培養時需添加半胱胺酸（L-cysteine）的革蘭氏陰性桿菌。下列有關此感染症的敘述，何者錯誤？",
+      "grouped": true
     },
     {
       "id": 1150205295,
@@ -107584,7 +107643,8 @@
       "answer": "A",
       "explanation": "",
       "incomplete": true,
-      "gap_reason": "missing_image"
+      "gap_reason": "missing_image",
+      "image_dependent": true
     },
     {
       "id": 1150205420,
@@ -111619,7 +111679,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "case_context": "第 68 題：下列何類藥物噴劑是急診室治療急性氣喘的第一線用藥？"
+      "case_context": "第 68 題：下列何類藥物噴劑是急診室治療急性氣喘的第一線用藥？",
+      "grouped": true
     },
     {
       "id": 1150205612,
@@ -111831,7 +111892,8 @@
       "answer": "D",
       "explanation": "",
       "incomplete": true,
-      "gap_reason": "missing_image"
+      "gap_reason": "missing_image",
+      "image_dependent": true
     },
     {
       "id": 1150205622,
@@ -112063,7 +112125,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 89 題：一位40 歲病人主訴咳血，X 光顯示局部肺實質化（consolidation）併有新月形腎絲球腎炎（crescenticglomerulonephritis）。其診斷最有可能為："
+      "case_context": "第 89 題：一位40 歲病人主訴咳血，X 光顯示局部肺實質化（consolidation）併有新月形腎絲球腎炎（crescenticglomerulonephritis）。其診斷最有可能為：",
+      "grouped": true
     },
     {
       "id": 1150205633,
@@ -112149,7 +112212,8 @@
       "answer": "D",
       "explanation": "",
       "incomplete": true,
-      "gap_reason": "missing_image"
+      "gap_reason": "missing_image",
+      "image_dependent": true
     },
     {
       "id": 1150205637,
@@ -112277,7 +112341,8 @@
       "answer": "A",
       "explanation": "",
       "incomplete": true,
-      "gap_reason": "missing_image"
+      "gap_reason": "missing_image",
+      "image_dependent": true
     },
     {
       "id": 1150205643,
@@ -114635,7 +114700,8 @@
       "image_url": "/question-images/doctor1_104090_p1_13_0.webp",
       "images": [
         "/question-images/doctor1_1150205754_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150205755,
@@ -116404,7 +116470,8 @@
       "image_url": "/question-images/doctor1_104090_p1_97_0.webp",
       "images": [
         "/question-images/doctor1_1150205838_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150205839,
@@ -120103,7 +120170,8 @@
         "D": "此藥物在長期使用後可能因為抑制代謝此藥物之體內酵素活性，因此藥效遞減"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "grouped": true
     },
     {
       "id": 1150206015,
@@ -120526,7 +120594,8 @@
       "explanation": "",
       "image_url": "/question-images/doctor1_105100_p1_95_0.webp",
       "incomplete": true,
-      "gap_reason": "missing_image"
+      "gap_reason": "missing_image",
+      "image_dependent": true
     },
     {
       "id": 1150206035,
@@ -121894,7 +121963,8 @@
         "D": "凝血酶（coagulase）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "grouped": true
     },
     {
       "id": 1150206100,
@@ -124632,7 +124702,8 @@
       "image_url": "/question-images/doctor1_106020_p1_92_0.webp",
       "images": [
         "/question-images/doctor1_1150206229_0.webp"
-      ]
+      ],
+      "image_dependent": true
     },
     {
       "id": 1150206230,
@@ -124879,7 +124950,8 @@
         "D": "D.何杰金氏淋巴癌（Hodgkin lymphoma）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "grouped": true
     },
     {
       "id": "106020_66_100",
@@ -124899,7 +124971,8 @@
         "D": "D.梅毒血清VDRL試驗"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "grouped": true
     },
     {
       "id": "106100_11_100",
@@ -124980,7 +125053,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "case_context": "第 99 題：誤食農藥，造成呼吸困難，肺部彈性降低（low compliance），X光顯示瀰漫性肺陰影。其診斷最有可能 是："
+      "case_context": "第 99 題：誤食農藥，造成呼吸困難，肺部彈性降低（low compliance），X光顯示瀰漫性肺陰影。其診斷最有可能 是：",
+      "grouped": true
     },
     {
       "id": "108030_11_100",

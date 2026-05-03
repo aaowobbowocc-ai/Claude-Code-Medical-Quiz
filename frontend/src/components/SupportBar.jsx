@@ -47,7 +47,7 @@ export default function SupportBar({ setSheet }) {
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-gray-400 bg-white border border-gray-100 active:scale-95 transition-transform shadow-sm">
         💌 意見回饋
       </button>
-      <button onClick={() => setSheet('donate')}
+      <button onClick={() => setSheet('coin-shop')}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs text-amber-500 bg-amber-50 border border-amber-200 active:scale-95 transition-transform shadow-sm font-medium">
         ☕ 贊助開發者
       </button>

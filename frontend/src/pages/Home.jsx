@@ -13,6 +13,7 @@ import SupportBar from '../components/SupportBar'
 import CumulativeStatsBar from '../components/CumulativeStatsBar'
 import SupportSheets from '../components/SupportSheets'
 import RewardAdSheet from '../components/RewardAdSheet'
+import CoinShopSheet from '../components/CoinShopSheet'
 import { supabase, linkOrSignInGoogle, switchGoogleAccount, getLinkedIdentity } from '../lib/supabase'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
@@ -598,6 +599,7 @@ export default function Home() {
 
         <SupportSheets sheet={sheet} setSheet={setSheet} />
         {sheet === 'reward-ad' && <RewardAdSheet onClose={() => setSheet(null)} />}
+        {sheet === 'coin-shop' && <CoinShopSheet onClose={() => setSheet(null)} />}
       </div>
     )
   }
@@ -1055,8 +1057,8 @@ export default function Home() {
 
       <SupportSheets sheet={sheet} setSheet={setSheet} />
 
-      {/* Reward ad sheet */}
       {sheet === 'reward-ad' && <RewardAdSheet onClose={() => setSheet(null)} />}
+      {sheet === 'coin-shop' && <CoinShopSheet onClose={() => setSheet(null)} />}
 
       {/* Dev password gate */}
       {sheet === 'devpwd' && (

@@ -15,7 +15,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v6: 新增 聽力師 audiologist 考試（111-113 年，885 題）
 // v7: 聽力師擴充至 103-114（4023 題）
 // v8: 新增 語言治療師 speech-therapist 考試（103-114 年，3643 題）
-const CACHE_KEY = 'exam-registry-v8'
+// v9: 新增 學測 gsat / 分科測驗 ast（college-entrance 類別）
+const CACHE_KEY = 'exam-registry-v9'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache
@@ -84,6 +85,7 @@ const EXAM_ORDER = [
   'civil-senior', 'customs', 'police', 'police4',
   'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
   'driver-car', 'driver-moto',
+  'gsat', 'ast',
 ]
 
 // Category display metadata (Stage 1 persona cards)
@@ -125,6 +127,13 @@ const CATEGORY_META = {
     name: '駕照考試',
     description: '汽車駕照、機車駕照',
     order: 5,
+  },
+  'college-entrance': {
+    id: 'college-entrance',
+    icon: '🎓',
+    name: '大學入學',
+    description: '學科能力測驗（學測）、分科測驗',
+    order: 6,
   },
 }
 

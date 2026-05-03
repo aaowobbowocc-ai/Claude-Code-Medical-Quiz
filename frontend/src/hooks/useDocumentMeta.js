@@ -4,10 +4,11 @@ import { usePlayerStore } from '../store/gameStore'
 import { getExamConfig } from '../config/examRegistry'
 
 const CATEGORY_LABEL = {
-  medical:           '醫事人員國考',
-  'law-professional': '法律專技國考',
-  'civil-service':    '公職國考',
-  'common-subjects':  '共同科目題庫',
+  medical:             '醫事人員國考',
+  'law-professional':  '法律專技國考',
+  'civil-service':     '公職國考',
+  'common-subjects':   '共同科目題庫',
+  'college-entrance':  '大學入學考試',
 }
 
 const DEFAULT_META = {

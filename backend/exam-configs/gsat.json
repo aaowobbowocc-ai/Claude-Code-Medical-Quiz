@@ -1,0 +1,102 @@
+{
+  "id": "gsat",
+  "name": "學科能力測驗",
+  "short": "學測",
+  "icon": "📝",
+  "category": "college-entrance",
+  "subCategory": "學測",
+  "level": "university",
+  "selectionType": "university",
+  "persona": ["high-school-student"],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": true
+  },
+  "questionsFile": "questions-gsat.json",
+  "totalQ": 1512,
+  "passScore": null,
+  "passRate": null,
+  "papers": [
+    {
+      "id": "paper_zh",
+      "name": "國文",
+      "subject": "國文",
+      "subjects": "國語文綜合能力（選擇題部分）",
+      "count": 26,
+      "timeLimit": 120
+    },
+    {
+      "id": "paper_en",
+      "name": "英文",
+      "subject": "英文",
+      "subjects": "英文閱讀與語言",
+      "count": 31,
+      "timeLimit": 100
+    },
+    {
+      "id": "paper_social",
+      "name": "社會",
+      "subject": "社會",
+      "subjects": "歷史、地理、公民與社會",
+      "count": 54,
+      "timeLimit": 100
+    },
+    {
+      "id": "paper_science",
+      "name": "自然",
+      "subject": "自然",
+      "subjects": "物理、化學、生物、地球科學（選擇題部分）",
+      "count": 20,
+      "timeLimit": 100
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "隨機混合" },
+    { "id": 1, "tag": "zh", "name": "國文" },
+    { "id": 2, "tag": "en", "name": "英文" },
+    { "id": 3, "tag": "social", "name": "社會" },
+    { "id": 4, "tag": "science", "name": "自然" }
+  ],
+  "ui": {
+    "tagNames": {
+      "zh": "國文",
+      "en": "英文",
+      "social": "社會",
+      "science": "自然"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "zh": { "icon": "📖", "color": "#D97706" },
+      "en": { "icon": "🔤", "color": "#2563EB" },
+      "social": { "icon": "🌏", "color": "#059669" },
+      "science": { "icon": "🔬", "color": "#7C3AED" }
+    },
+    "subjectColors": {
+      "國文": "#D97706",
+      "英文": "#2563EB",
+      "社會": "#059669",
+      "自然": "#7C3AED"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 學測歷屆試題練習",
+    "title": "國考知識王",
+    "fullName": "學科能力測驗",
+    "shortName": "學測",
+    "studentType": "高中生",
+    "years": "105-115",
+    "totalQ": 1512,
+    "examDesc": "學科能力測驗（學測）由大學入學考試中心舉辦，每年一月底舉行，為大學個人申請入學的主要參考成績。",
+    "paperDesc": "考試科目包含國文、英文、數學、社會、自然，本題庫收錄選擇題部分（國文、英文、社會、自然四科）。",
+    "subjects": "國文、英文、社會、自然",
+    "mockDesc": "依年度模擬各科選擇題",
+    "subjectDetails": [
+      ["國文", "國語文綜合能力測驗選擇題，含語文理解、閱讀分析。"],
+      ["英文", "英文閱讀測驗、語法與詞彙。"],
+      ["社會", "歷史、地理、公民與社會三科合測。"],
+      ["自然", "物理、化學、生物、地球科學合測（選擇題部分）。"]
+    ]
+  }
+}

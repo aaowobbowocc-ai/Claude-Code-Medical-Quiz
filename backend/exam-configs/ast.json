@@ -1,0 +1,128 @@
+{
+  "id": "ast",
+  "name": "分科測驗",
+  "short": "分科",
+  "icon": "🎓",
+  "category": "college-entrance",
+  "subCategory": "分科測驗",
+  "level": "university",
+  "selectionType": "university",
+  "persona": ["high-school-student"],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": true
+  },
+  "questionsFile": "questions-ast.json",
+  "totalQ": 432,
+  "passScore": null,
+  "passRate": null,
+  "papers": [
+    {
+      "id": "paper_history",
+      "name": "歷史",
+      "subject": "歷史",
+      "subjects": "歷史",
+      "count": 33,
+      "timeLimit": 100
+    },
+    {
+      "id": "paper_geography",
+      "name": "地理",
+      "subject": "地理",
+      "subjects": "地理",
+      "count": 34,
+      "timeLimit": 100
+    },
+    {
+      "id": "paper_civics",
+      "name": "公民與社會",
+      "subject": "公民與社會",
+      "subjects": "公民與社會",
+      "count": 35,
+      "timeLimit": 100
+    },
+    {
+      "id": "paper_physics",
+      "name": "物理",
+      "subject": "物理",
+      "subjects": "物理（選擇題部分）",
+      "count": 9,
+      "timeLimit": 100
+    },
+    {
+      "id": "paper_chemistry",
+      "name": "化學",
+      "subject": "化學",
+      "subjects": "化學（選擇題部分）",
+      "count": 5,
+      "timeLimit": 100
+    },
+    {
+      "id": "paper_biology",
+      "name": "生物",
+      "subject": "生物",
+      "subjects": "生物（選擇題部分）",
+      "count": 25,
+      "timeLimit": 100
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "隨機混合" },
+    { "id": 1, "tag": "history", "name": "歷史" },
+    { "id": 2, "tag": "geography", "name": "地理" },
+    { "id": 3, "tag": "civics", "name": "公民與社會" },
+    { "id": 4, "tag": "physics", "name": "物理" },
+    { "id": 5, "tag": "chemistry", "name": "化學" },
+    { "id": 6, "tag": "biology", "name": "生物" }
+  ],
+  "ui": {
+    "tagNames": {
+      "history": "歷史",
+      "geography": "地理",
+      "civics": "公民",
+      "physics": "物理",
+      "chemistry": "化學",
+      "biology": "生物"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "history": { "icon": "📜", "color": "#B45309" },
+      "geography": { "icon": "🌏", "color": "#059669" },
+      "civics": { "icon": "🏛️", "color": "#2563EB" },
+      "physics": { "icon": "⚛️", "color": "#7C3AED" },
+      "chemistry": { "icon": "⚗️", "color": "#DC2626" },
+      "biology": { "icon": "🌿", "color": "#16A34A" }
+    },
+    "subjectColors": {
+      "歷史": "#B45309",
+      "地理": "#059669",
+      "公民與社會": "#2563EB",
+      "物理": "#7C3AED",
+      "化學": "#DC2626",
+      "生物": "#16A34A"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 分科測驗歷屆試題練習",
+    "title": "國考知識王",
+    "fullName": "分科測驗",
+    "shortName": "分科",
+    "studentType": "高中生",
+    "years": "111-114",
+    "totalQ": 432,
+    "examDesc": "分科測驗由大學入學考試中心舉辦，每年七月舉行，為大學考試分發入學的主要參考成績，取代舊制指考。",
+    "paperDesc": "考試科目依報考組別選考，本題庫收錄歷史、地理、公民與社會、物理、化學、生物各科選擇題部分。",
+    "subjects": "歷史、地理、公民與社會、物理、化學、生物",
+    "mockDesc": "依年度模擬各科選擇題",
+    "subjectDetails": [
+      ["歷史", "臺灣史、中國史、世界史。"],
+      ["地理", "自然地理、人文地理、區域地理。"],
+      ["公民與社會", "政治、經濟、社會、法律。"],
+      ["物理", "力學、電磁、光學、近代物理（選擇題部分）。"],
+      ["化學", "化學原理、有機化學（選擇題部分）。"],
+      ["生物", "細胞、遺傳、生態（選擇題部分）。"]
+    ]
+  }
+}

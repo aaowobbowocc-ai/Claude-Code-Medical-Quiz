@@ -41,6 +41,7 @@ const CATEGORY_LABEL = {
   'civil-service': '公職國考',
   'common-subjects': '共同科目題庫',
   independent: '駕照筆試題庫',
+  'college-entrance': '大學入學考試',
 }
 
 function esc(s) {

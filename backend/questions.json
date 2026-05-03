@@ -61433,7 +61433,7 @@
       "subject_name": "生物化學",
       "stage_id": 3,
       "number": 95,
-      "question": "人類細胞之氧化磷酸化反應（oxidative phosphorylation）中，參與電子傳遞鏈（electron transport chain）與",
+      "question": "人類細胞之氧化磷酸化反應（oxidative phosphorylation）中，參與電子傳遞鏈（electron transport chain）與ATP合成的酵素位於何處？",
       "options": {
         "A": "電子傳遞鏈位於粒線體外膜；ATP合成的酵素位於粒線體內膜",
         "B": "電子傳遞鏈位於粒線體內膜；ATP合成的酵素位於粒線體外膜",
@@ -66900,10 +66900,10 @@
       "number": 72,
       "question": "Baclofen為中樞性肌肉鬆弛劑，下列何者為該藥物在中樞神經系統的作用機制？",
       "options": {
-        "A": "活化GABA",
-        "B": "受體",
-        "C": "活化α 2 -腎上腺素受體",
-        "D": "抑制α 2 -腎上腺素受體"
+        "A": "活化GABAB受體",
+        "B": "抑制GABAB受體",
+        "C": "活化α2-腎上腺素受體",
+        "D": "抑制α2-腎上腺素受體"
       },
       "answer": "A",
       "explanation": ""
@@ -70300,12 +70300,12 @@
       "subject_name": "生物化學",
       "stage_id": 3,
       "number": 38,
-      "question": "下列那種酶同時參與糖解（glycolysis）及葡萄糖新生（gluconeogenesis）之代謝途徑？ 3-磷酸甘油酸激酶（3-phosphoglycerate kinase） 六碳糖激酶（hexokinase）",
+      "question": "下列那種酶同時參與糖解（glycolysis）及葡萄糖新生（gluconeogenesis）之代謝途徑？",
       "options": {
-        "A": "磷酸果糖激酶",
-        "B": "-1（phosphofructokinase-1）",
-        "C": "丙酮酸激酶（pyruvate",
-        "D": "kinase）"
+        "A": "3-磷酸甘油酸激酶（3-phosphoglycerate kinase）",
+        "B": "六碳糖激酶（hexokinase）",
+        "C": "磷酸果糖激酶-1（phosphofructokinase-1）",
+        "D": "丙酮酸激酶（pyruvate kinase）"
       },
       "answer": "A",
       "explanation": ""

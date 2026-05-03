@@ -182,7 +182,7 @@ export const usePlayerStore = create(
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
         const s = get()
         const count = s.lastAdDate === today ? s.adRewardToday : 0
-        if (count >= 2) return { success: false, reason: 'exhausted' }
+        if (count >= 10) return { success: false, reason: 'exhausted' }
         const newCount = count + 1
         set((st) => ({
           coins: st.coins + 300,
@@ -190,13 +190,13 @@ export const usePlayerStore = create(
           lastAdWatch: new Date().toISOString(),
           lastAdDate: today,
         }))
-        return { success: true, coins: 300, remaining: 2 - newCount }
+        return { success: true, coins: 300, remaining: 10 - newCount }
       },
       getAdRewardInfo: () => {
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
         const s = get()
         const count = s.lastAdDate === today ? s.adRewardToday : 0
-        return { watched: count, remaining: 2 - count, cooldownMs: 0 }
+        return { watched: count, remaining: 10 - count, cooldownMs: 0 }
       },
       addExp: (n) => {
         const newExp = get().exp + n

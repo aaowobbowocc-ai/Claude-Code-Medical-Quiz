@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Sheet from './Sheet'
-import CoinAnimation from './CoinAnimation'
 import { usePlayerStore } from '../store/gameStore'
 
 const TIERS = [
@@ -31,33 +30,26 @@ const TIERS = [
 ]
 
 export default function CoinShopSheet({ onClose }) {
-  const addCoins = usePlayerStore(s => s.addCoins)
   const [step, setStep] = useState('select') // select | confirm | processing | success
   const [selected, setSelected] = useState(null)
-  const [showCoinAnim, setShowCoinAnim] = useState(false)
 
   const tier = TIERS.find(t => t.id === selected)
 
   const handleConfirm = () => {
     setStep('processing')
-    // 模擬付款處理（demo 用）
     setTimeout(() => {
-      if (tier) addCoins(tier.coins)
       setStep('success')
-      setShowCoinAnim(true)
     }, 2000)
   }
 
   const handleClose = () => {
     setStep('select')
     setSelected(null)
-    setShowCoinAnim(false)
     onClose()
   }
 
   return (
-    <>
-      <Sheet onClose={step === 'processing' ? undefined : handleClose}>
+    <Sheet onClose={step === 'processing' ? undefined : handleClose}>
 
         {/* ── 步驟 1：選擇方案 ── */}
         {step === 'select' && (
@@ -205,8 +197,5 @@ export default function CoinShopSheet({ onClose }) {
         )}
 
       </Sheet>
-
-      {showCoinAnim && <CoinAnimation onDone={() => setShowCoinAnim(false)} />}
-    </>
   )
 }

@@ -120502,15 +120502,13 @@
       "number": 26,
       "question": "其右耳鼓室圖（tympanogram），最可能為下列何者？",
       "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
+        "A": "平坦曲線（無峰值），順應性近 0 ml（Type B，中耳積液）",
+        "B": "峰值出現在 -200 daPa，順應性約 0.7 ml（Type C，負壓/耳咽管功能不良）",
+        "C": "寬而低的峰值（峰值約 0.15 ml），順應性偏低（Type As，鼓膜僵硬/聽小骨固著）",
+        "D": "銳峰出現在 0 daPa，順應性約 1.0 ml（Type A，正常）"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_dependent": true,
       "image_url": "/question-images/doctor2_109080_p3_26_0.webp"
     },
     {
@@ -170224,15 +170222,13 @@
       "number": 9,
       "question": "心包填塞（cardiac tamponade）是下列那一個情形？ 中心靜脈壓（central venous pressure），動脈壓（arterial blood pressure），心輸出量（cardiac output），混合靜脈血 氧飽和度（mixed venous oxygenation saturation） 中心靜脈壓 動脈壓 心輸出量 混合靜脈血氧飽和度 A ↓ ↓ ↓ ↓ B ↑ ↓ ↓ ↓ C ↑ ↓ ↓ ↑ D ↑ ↑ ↑ ↓",
       "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
+        "A": "中心靜脈壓 ↓、動脈壓 ↓、心輸出量 ↓、混合靜脈血氧飽和度 ↓",
+        "B": "中心靜脈壓 ↑、動脈壓 ↓、心輸出量 ↓、混合靜脈血氧飽和度 ↓",
+        "C": "中心靜脈壓 ↑、動脈壓 ↓、心輸出量 ↓、混合靜脈血氧飽和度 ↑",
+        "D": "中心靜脈壓 ↑、動脈壓 ↑、心輸出量 ↑、混合靜脈血氧飽和度 ↓"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "empty_options",
       "image_dependent": true,
       "image_url": "/question-images/doctor2_105020_p2_9_0.webp"
     },
@@ -192273,10 +192269,10 @@
       "number": 72,
       "question": "30 歲女性病患，外傷後手腕疼痛，最初先採民俗療法，一個半月後未見改善，故接受影像檢查。A圖為正面之X 光攝影，B 圖為T1WI, coronal view，病患正確診斷應為何？",
       "options": {
-        "A": "A",
-        "B": "B",
-        "C": "osteomyelitis of scaphoid",
-        "D": "scaphoid fracture with avascular necrosis"
+        "A": "osteomyelitis of scaphoid",
+        "B": "scaphoid fracture with avascular necrosis",
+        "C": "lunate fracture with dislocation",
+        "D": "osteolytic bone tumor of scaphoid with fracture"
       },
       "answer": "B",
       "explanation": "",
@@ -192286,8 +192282,6 @@
         "/question-images/doctor2_115027942_2.webp",
         "/question-images/doctor2_115027942_3.webp"
       ],
-      "incomplete": "image_options",
-      "gap_reason": "empty_options",
       "image_dependent": true,
       "image_url": "/question-images/doctor2_101110_p2_72_0.webp"
     },
@@ -194001,15 +193995,13 @@
       "number": 72,
       "question": "72 歲男性，A 圖顯示左側thalamus 出血合併腦室出血（箭頭所指），三週後情況穩定開始做復健治療，再一週之後追蹤一次CT 檢查（B 圖），發現血塊變成hypodense（箭頭所指），此乃因為：",
       "options": {
-        "A": "A",
-        "B": "B",
-        "C": "原來血塊自然演變成亞急性subacute hematoma，呈現hypodense",
-        "D": "同一區域再發生另一次acute infarction"
+        "A": "原來血塊自然演變成亞急性 subacute hematoma，呈現 hypodense",
+        "B": "同一區域再發生另一次 acute infarction",
+        "C": "同一區域原有一 astrocytoma",
+        "D": "同一區域合併 encephalitis"
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "empty_options",
       "image_dependent": true,
       "image_url": "/question-images/doctor2_101110_p3_72_0.webp"
     },

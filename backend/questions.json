@@ -75521,12 +75521,11 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image",
       "images": [
         "/question-images/doctor1_1150203684_0.webp"
       ],
-      "image_dependent": true
+      "image_dependent": true,
+      "image_url": "/question-images/doctor1_101030_p1_98_0.webp"
     },
     {
       "id": 1150203685,
@@ -91537,9 +91536,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image",
-      "image_dependent": true
+      "image_dependent": true,
+      "image_url": "/question-images/doctor1_104030_p1_92_0.webp"
     },
     {
       "id": 1150204477,
@@ -107626,9 +107624,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image",
-      "image_dependent": true
+      "image_dependent": true,
+      "image_url": "/question-images/doctor1_101110_p1_76_0.webp"
     },
     {
       "id": 1150205420,
@@ -111875,9 +111872,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image",
-      "image_dependent": true
+      "image_dependent": true,
+      "image_url": "/question-images/doctor1_102110_p1_79_0.webp"
     },
     {
       "id": 1150205622,
@@ -112195,9 +112191,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image",
-      "image_dependent": true
+      "image_dependent": true,
+      "image_url": "/question-images/doctor1_102110_p1_94_0.webp"
     },
     {
       "id": 1150205637,
@@ -112324,9 +112319,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image",
-      "image_dependent": true
+      "image_dependent": true,
+      "image_url": "/question-images/doctor1_102110_p1_100_0.webp"
     },
     {
       "id": 1150205643,
@@ -120577,8 +120571,6 @@
       "answer": "D",
       "explanation": "",
       "image_url": "/question-images/doctor1_105100_p1_95_0.webp",
-      "incomplete": true,
-      "gap_reason": "missing_image",
       "image_dependent": true
     },
     {
@@ -125146,8 +125138,6 @@
         "/question-images/doctor1_109020_p0_100_2.webp",
         "/question-images/doctor1_109020_p0_100_3.webp"
       ],
-      "incomplete": true,
-      "gap_reason": "empty_options",
       "image_dependent": true
     },
     {

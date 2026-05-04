@@ -139,14 +139,26 @@ export function useAdReward() {
           return false
         }
       }
+      return runWallClockCountdown(DIRECT_LINK_COUNTDOWN_SEC)
+    }
+
+    // Simulation mode (local dev with no ad URL): 3-second countdown
+    return runWallClockCountdown(3)
+
+    // ── Inline helper: wall-clock countdown ────────────────────
+    // Browsers throttle setInterval in background tabs (clicking the ad
+    // opens a new tab, backgrounding ours). Use Date.now() so when the
+    // user returns we catch up immediately even if ticks were paused.
+    function runWallClockCountdown(totalSec) {
       setPhase('playing')
-      setCountdown(DIRECT_LINK_COUNTDOWN_SEC)
+      setCountdown(totalSec)
+      const startMs = Date.now()
+      const totalMs = totalSec * 1000
       return new Promise(resolve => {
-        let t = DIRECT_LINK_COUNTDOWN_SEC
-        timerRef.current = setInterval(() => {
-          t--
-          setCountdown(t)
-          if (t <= 0) {
+        const tick = () => {
+          const remaining = Math.max(0, Math.ceil((totalMs - (Date.now() - startMs)) / 1000))
+          setCountdown(remaining)
+          if (remaining <= 0) {
             clearInterval(timerRef.current)
             const result = claimAdReward()
             if (result.success) {
@@ -158,32 +170,10 @@ export function useAdReward() {
               resolve(false)
             }
           }
-        }, 1000)
+        }
+        timerRef.current = setInterval(tick, 250)
       })
     }
-
-    // Simulation mode (local dev with no ad URL): 3-second countdown
-    setPhase('playing')
-    setCountdown(3)
-    return new Promise(resolve => {
-      let t = 3
-      timerRef.current = setInterval(() => {
-        t--
-        setCountdown(t)
-        if (t <= 0) {
-          clearInterval(timerRef.current)
-          const result = claimAdReward()
-          if (result.success) {
-            setPhase('success')
-            refreshInfo()
-            resolve(true)
-          } else {
-            setPhase(result.reason === 'cooldown' ? 'cooldown' : 'exhausted')
-            resolve(false)
-          }
-        }
-      }, 1000)
-    })
   }, [claimAdReward, getAdRewardInfo, refreshInfo])
 
   // Cleanup timer on unmount

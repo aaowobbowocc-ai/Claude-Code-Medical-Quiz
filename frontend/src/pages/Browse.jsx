@@ -4,6 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import { useExplain } from '../hooks/useAI'
 import { ExplainPanel } from '../components/AIPanel'
 import QuestionImages from '../components/QuestionImages'
+import OptionContent from '../components/OptionContent'
 import CommentSection from '../components/CommentSection'
 import { useBookmarks } from '../hooks/useBookmarks'
 import { usePageMeta } from '../hooks/usePageMeta'
@@ -248,7 +249,9 @@ function QuestionCard({ q, stageMap, readingStyle, readingPrefs, updateReadingPr
                      ${isAnswer ? 'text-white font-medium' : isVoided ? 'bg-green-50 text-gray-600' : 'bg-gray-50 text-gray-600'}`}
                    style={isAnswer ? { background: tagColor } : {}}>
                 <span className="font-bold shrink-0 w-4">{letter}</span>
-                <span className="leading-snug">{text}</span>
+                <span className="leading-snug">
+                  <OptionContent text={text} imageUrl={q.option_images?.[letter]} letter={letter} />
+                </span>
                 {isAnswer && <span className="ml-auto shrink-0">✓</span>}
               </div>
             )

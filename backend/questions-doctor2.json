@@ -120502,14 +120502,19 @@
       "number": 26,
       "question": "其右耳鼓室圖（tympanogram），最可能為下列何者？",
       "options": {
-        "A": "平坦曲線（無峰值），順應性近 0 ml（Type B，中耳積液）",
-        "B": "峰值出現在 -200 daPa，順應性約 0.7 ml（Type C，負壓/耳咽管功能不良）",
-        "C": "寬而低的峰值（峰值約 0.15 ml），順應性偏低（Type As，鼓膜僵硬/聽小骨固著）",
-        "D": "銳峰出現在 0 daPa，順應性約 1.0 ml（Type A，正常）"
+        "A": "Type B（平坦曲線，中耳積液）",
+        "B": "Type C（峰值在 -200 daPa，負壓）",
+        "C": "Type As（寬而低的峰值，鼓膜僵硬）",
+        "D": "Type A（銳峰在 0 daPa，正常）"
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/doctor2_109080_p3_26_0.webp"
+      "option_images": {
+        "A": "/question-images/doctor2_109080_p3_26_A.webp",
+        "B": "/question-images/doctor2_109080_p3_26_B.webp",
+        "C": "/question-images/doctor2_109080_p3_26_C.webp",
+        "D": "/question-images/doctor2_109080_p3_26_D.webp"
+      }
     },
     {
       "id": 115024470,

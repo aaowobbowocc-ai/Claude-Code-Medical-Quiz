@@ -6,6 +6,7 @@ import SmartBanner from '../components/SmartBanner'
 import ShareChallengeButton from '../components/ShareChallengeButton'
 import { useAccuracyStore } from '../store/accuracyStore'
 import QuestionImages from '../components/QuestionImages'
+import OptionContent from '../components/OptionContent'
 import { supabase } from '../lib/supabase'
 import { getExamYears, getHistoricalPaper, getRandomPaper, isExamSupportedByCDN } from '../lib/cdnQuestions'
 
@@ -424,7 +425,9 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
                 className={`flex items-start gap-3 px-4 py-3.5 rounded-2xl border-2 text-sm text-left transition-all active:scale-95 shadow-sm
                   ${selected ? 'border-medical-blue bg-blue-50' : 'bg-white border-gray-100'}`}>
                 <span className="font-bold w-5 shrink-0 text-base" style={{ color: OPTION_COLORS[letter] }}>{letter}</span>
-                <span className={`flex-1 leading-snug ${selected ? 'text-medical-blue font-medium' : 'text-gray-700'}`}>{text}</span>
+                <span className={`flex-1 leading-snug ${selected ? 'text-medical-blue font-medium' : 'text-gray-700'}`}>
+                  <OptionContent text={text} imageUrl={q.option_images?.[letter]} letter={letter} />
+                </span>
               </button>
             )
           })}

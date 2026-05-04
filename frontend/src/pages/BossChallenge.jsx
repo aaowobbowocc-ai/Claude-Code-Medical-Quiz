@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import QuestionImages from '../components/QuestionImages'
+import OptionContent from '../components/OptionContent'
 import ShareChallengeButton from '../components/ShareChallengeButton'
 import { getExamConfig } from '../config/examRegistry'
 import { supabase } from '../lib/supabase'
@@ -53,7 +54,9 @@ function BossCard({ q, index, onAnswer, answered }) {
                 disabled={revealed}
                 className={`flex items-start gap-2.5 px-3.5 py-3 rounded-xl border-2 text-sm text-left transition-all active:scale-95 ${bg} ${textCls}`}>
                 <span className="font-bold w-4 shrink-0" style={{ color: revealed ? undefined : OPTION_COLORS[letter] }}>{letter}</span>
-                <span className="flex-1 leading-snug">{text}</span>
+                <span className="flex-1 leading-snug">
+                  <OptionContent text={text} imageUrl={q.option_images?.[letter]} letter={letter} />
+                </span>
                 {isCorrect && <span>✓</span>}
                 {isWrong && <span>✗</span>}
               </button>

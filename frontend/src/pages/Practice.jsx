@@ -7,6 +7,7 @@ import { getSubjectColor } from '../utils/subjectColors'
 import { ExplainPanel, ReviewPanel } from '../components/AIPanel'
 import SmartBanner from '../components/SmartBanner'
 import QuestionImages from '../components/QuestionImages'
+import OptionContent from '../components/OptionContent'
 import CommentSection from '../components/CommentSection'
 import { useBookmarks } from '../hooks/useBookmarks'
 import { useAccuracyStore } from '../store/accuracyStore'
@@ -704,7 +705,9 @@ function PracticeGame({ config, onFinish, onExit }) {
                       style={isCorrect ? { color: 'white' } : { color: OPTION_COLORS[letter] }}>
                   {letter}
                 </span>
-                <span className="flex-1 leading-snug" style={{ lineHeight: readingStyle.lineHeight, fontSize: readingStyle.fontSize }}>{text}</span>
+                <span className="flex-1 leading-snug" style={{ lineHeight: readingStyle.lineHeight, fontSize: readingStyle.fontSize }}>
+                  <OptionContent text={text} imageUrl={q.option_images?.[letter]} letter={letter} />
+                </span>
                 <div className="shrink-0 flex flex-col items-end gap-0.5">
                   {isCorrect  && <span className="text-white">✓</span>}
                   {isWrong    && <span className="text-red-400">✗</span>}

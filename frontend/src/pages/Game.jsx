@@ -6,6 +6,7 @@ import { useSound } from '../hooks/useSound'
 import ConnectionStatus from '../components/ConnectionStatus'
 import { getSubjectColor } from '../utils/subjectColors'
 import QuestionImages from '../components/QuestionImages'
+import OptionContent from '../components/OptionContent'
 
 const OPTION_COLORS = {
   A: { base: 'bg-blue-50  border-blue-300  text-blue-800',  active: 'bg-blue-500  border-blue-500  text-white' },
@@ -359,7 +360,9 @@ export default function Game() {
             return (
               <button key={letter} className={cls} onClick={() => handleAnswer(letter)}>
                 <span className="font-bold text-lg w-6 shrink-0 leading-tight">{letter}</span>
-                <span className="text-sm leading-snug flex-1">{text}</span>
+                <span className="text-sm leading-snug flex-1">
+                  <OptionContent text={text} imageUrl={currentQuestion.option_images?.[letter]} letter={letter} />
+                </span>
                 {isCorrect && correctAnswer && <span className="ml-auto shrink-0">✓</span>}
                 {isWrong && <span className="ml-auto shrink-0">✗</span>}
               </button>

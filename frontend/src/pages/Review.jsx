@@ -6,6 +6,7 @@ import SmartBanner from '../components/SmartBanner'
 import { useBookmarks } from '../hooks/useBookmarks'
 import { getSubjectColor } from '../utils/subjectColors'
 import QuestionImages from '../components/QuestionImages'
+import OptionContent from '../components/OptionContent'
 import CommentSection from '../components/CommentSection'
 
 /* ── Single question review card ───────────────────────────── */
@@ -87,7 +88,9 @@ function ReviewCard({ q, index }) {
               <div key={letter}
                    className={`flex items-start gap-2.5 px-3 py-2.5 rounded-xl text-sm border ${bg} ${textCls} ${border}`}>
                 <span className="font-bold shrink-0 w-4">{letter}</span>
-                <span className="leading-snug flex-1">{text}</span>
+                <span className="leading-snug flex-1">
+                  <OptionContent text={text} imageUrl={q.option_images?.[letter]} letter={letter} />
+                </span>
                 {isCorrect && <span className="ml-auto text-green-600 shrink-0">✓</span>}
                 {isMyWrong && <span className="ml-auto text-red-500 shrink-0">✗</span>}
               </div>

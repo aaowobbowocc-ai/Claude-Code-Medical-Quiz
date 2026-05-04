@@ -35739,11 +35739,9 @@
         "D": "對缺血敏感度最高的lead 是V5,次之則是V4"
       },
       "answer": "A,C",
-      "incomplete": "missing_image",
       "disputed": true,
       "original_answer": "C",
       "correction_note": "第2題更正為 A,C（原答案 C）",
-      "gap_reason": "missing_image_dep",
       "isMultiAnswer": true
     },
     {
@@ -96244,8 +96242,7 @@
         "D": "acute myeloid leukemia（AML）在化學治療時會產⽣⾼尿酸⾎症，因此可⽤benzbromarone來預防⾼尿酸 ⾎症"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115023277,
@@ -112844,9 +112841,7 @@
         "C": "ST-T elevation"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image"
+      "explanation": ""
     },
     {
       "id": 115024093,
@@ -120516,7 +120511,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true
+      "incomplete": true,
+      "image_dependent": true
     },
     {
       "id": 115024470,
@@ -129992,8 +129988,7 @@
         "D": "12-14"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115024933,
@@ -130257,9 +130252,7 @@
         "D": "Howell-Jolly body"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "explanation": ""
     },
     {
       "id": 115024946,
@@ -150764,16 +150757,14 @@
       "number": 16,
       "question": "承上題，病患之腦部影像檢查在pituitary fossa 發現一直徑約2 公分之腫瘤，向上壓迫optic chiasma，注射顯影劑後呈現均勻且明顯之顯影，請問最可能之診斷為？",
       "options": {
-        "A": "",
-        "B": "lymphoma",
-        "C": "",
-        "D": "pituitary macroadenoma"
+        "A": "lymphoma",
+        "B": "pituitary macroadenoma",
+        "C": "meningioma",
+        "D": "germ cell tumor"
       },
       "answer": "B",
       "explanation": "",
       "case_context": "第 15 題：一位年約30 歲女性因長期無月經至婦產科求診，驗孕結果為陰性，病患並提到時有乳汁分泌的情形，且抽血檢驗血中prolactin 濃度超過正常值約1 千倍以上，因此轉至神經外科門診。則醫師安排之下列處置，何者最不適當？",
-      "incomplete": true,
-      "gap_reason": "empty_options",
       "grouped": true
     },
     {
@@ -151739,15 +151730,13 @@
       "number": 63,
       "question": "下列有關轉子區或轉子間骨折（peritrochanteric or intertrochanteric fracture）之敘述，何者最正確？此類骨折屬於關節囊內骨折（intracapsular fracture）",
       "options": {
-        "A": "",
-        "B": "reverse oblique",
-        "C": "形式之骨折屬於不穩定骨折",
-        "D": "穩定之骨折以非手術治療為原則"
+        "A": "此類骨折屬於關節囊內骨折（intracapsular fracture）",
+        "B": "reverse oblique 形式之骨折屬於不穩定骨折",
+        "C": "穩定之骨折以非手術治療為原則",
+        "D": "不穩定且移位之骨折以人工半髖關節置換術（hemiarthroplasty）為治療原則"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025991,
@@ -152673,15 +152662,13 @@
       "number": 28,
       "question": "懷孕期間不增加的凝血因子是：",
       "options": {
-        "A": "",
-        "B": "凝血因子VII",
-        "C": "",
-        "D": "凝血因子VIII"
+        "A": "factor VII",
+        "B": "factor IX",
+        "C": "factor VIII",
+        "D": "factor XI"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026036,
@@ -152906,9 +152893,7 @@
         "D": "輸卵管卵巢膿瘍（tubo-ovarian abscess）"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "explanation": ""
     },
     {
       "id": 115026046,
@@ -154769,15 +154754,13 @@
       "number": 53,
       "question": "Mitomycin C 和下列何種症候群有關？",
       "options": {
-        "A": "",
-        "B": "hand",
-        "C": "-foot syndrome",
-        "D": "hemolytic uremic syndrome"
+        "A": "hand-foot syndrome",
+        "B": "hemolytic uremic syndrome",
+        "C": "hyperviscosity syndrome",
+        "D": "capillary leak syndrome"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026137,
@@ -170255,7 +170238,8 @@
       "answer": "B",
       "explanation": "",
       "incomplete": true,
-      "gap_reason": "empty_options"
+      "gap_reason": "empty_options",
+      "image_dependent": true
     },
     {
       "id": 115026891,
@@ -184788,15 +184772,13 @@
       "number": 39,
       "question": "50 歲男性肝臟移植術後第七天，出現右上腹痛及輕微發燒，γ-GT、Alk-P 及Bilirubin 有輕微上升，最可能的原因為何？",
       "options": {
-        "A": "肝門靜脈栓塞（Portal vein thrombosis）",
-        "B": "",
-        "C": "Cytomegalovirus",
-        "D": "感染"
+        "A": "肝門靜脈栓塞（Portal vein thrombosis）",
+        "B": "Cytomegalovirus 感染",
+        "C": "新肝扭轉",
+        "D": "急性排斥（Acute rejection）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115027592,
@@ -192312,7 +192294,8 @@
         "/question-images/doctor2_115027942_3.webp"
       ],
       "incomplete": true,
-      "gap_reason": "empty_options"
+      "gap_reason": "empty_options",
+      "image_dependent": true
     },
     {
       "id": 115027943,
@@ -194032,7 +194015,8 @@
       "answer": "A",
       "explanation": "",
       "incomplete": true,
-      "gap_reason": "empty_options"
+      "gap_reason": "empty_options",
+      "image_dependent": true
     },
     {
       "id": 115028023,

@@ -8,7 +8,7 @@
     "description": "醫師國考第一階段文字題題庫（已過濾圖片題）",
     "scraped_at": "2026-04-01",
     "total_questions": 2000,
-    "last_updated": "2026-04-24T08:26:11.538Z"
+    "last_updated": "2026-05-04T04:07:46.169Z"
   },
   "total": 6176,
   "questions": [
@@ -45903,7 +45903,7 @@
         "A": "DNA gyrase",
         "D": "Cloning vector",
         "B": "Restriction enzyme",
-        "C": "loning vector"
+        "C": "DNA ligase"
       },
       "answer": "A",
       "explanation": ""
@@ -45921,7 +45921,7 @@
       "question": "下列那一種造成呼吸道感染的病毒，可不經由反轉錄作用（reverse transcription），而直接以polymerase chain reaction（PCR）檢測？",
       "options": {
         "C": "中東呼吸症候群冠狀病毒（MERS-CoV）",
-        "A": "型流感病毒（influenza A virus）",
+        "A": "腺病毒（adenovirus）",
         "B": "A型流感病毒（influenza A virus）",
         "D": "呼吸道細胞融合病毒（respiratory syncytial virus）"
       },
@@ -46104,7 +46104,7 @@
       "options": {
         "A": "Interferon",
         "B": "IL-1",
-        "C": "omplement",
+        "C": "TNF-α",
         "D": "complement"
       },
       "answer": "D",
@@ -46822,7 +46822,7 @@
       "number": 55,
       "question": "下列那一種利尿劑最適用於急性肺水腫病人？",
       "options": {
-        "A": "cetazolamide",
+        "A": "thiazide",
         "B": "ethacrynic acid",
         "C": "acetazolamide",
         "D": "spironolactone"
@@ -46864,7 +46864,7 @@
       "options": {
         "A": "cromolyn",
         "C": "zileuton",
-        "B": "eclomethasone",
+        "B": "propranolol",
         "D": "beclomethasone"
       },
       "answer": "B",
@@ -46905,7 +46905,7 @@
         "A": "flurazepam",
         "B": "diazepam",
         "D": "chlordiazepoxide",
-        "C": "hlordiazepoxide"
+        "C": "lorazepam"
       },
       "answer": "C",
       "explanation": ""
@@ -48674,7 +48674,7 @@
       "number": 49,
       "question": "在昏暗的環境下，視網膜桿狀細胞（rod cell）外部區段（outer segment）產生的鈉離子內流（influx）電流 主要是因為下列那一物質的作用？",
       "options": {
-        "A": "ll-trans retinal",
+        "A": "cAMP",
         "C": "傳導素（transducin）",
         "B": "cGMP",
         "D": "all-trans retinal"
@@ -48796,7 +48796,7 @@
       "options": {
         "A": "actin",
         "B": "myosin",
-        "C": "almodulin",
+        "C": "troponin",
         "D": "calmodulin"
       },
       "answer": "D",
@@ -49235,7 +49235,7 @@
       "number": 77,
       "question": "乙醯輔酶A（acetyl coenzyme A）分子中，乙醯基與coenzyme A之鍵結為：",
       "options": {
-        "A": "cid anhydride",
+        "A": "amide",
         "B": "Schiff 's base",
         "C": "acid anhydride",
         "D": "thioester"
@@ -49596,8 +49596,8 @@
       "question": "在電子傳遞鏈中，下列何種物質會將其所攜帶的電子直接傳遞給氧分子（O 2 ）？",
       "options": {
         "A": "NADH",
-        "B": "FADH 2",
-        "C": "ytochrome C",
+        "B": "FADH2",
+        "C": "Coenzyme Q",
         "D": "Cytochrome C"
       },
       "answer": "D",
@@ -50675,7 +50675,7 @@
       "number": 51,
       "question": "下列何種藥物作用於dihydroorotate dehydrogenase而抑制pyrimidine合成，用於類風濕性關節炎 （rheumatoid arthritis）治療？",
       "options": {
-        "A": "zathioprine",
+        "A": "leflunomide",
         "B": "mycophenolic acid",
         "C": "azathioprine",
         "D": "methotrexate"
@@ -50896,8 +50896,8 @@
       "question": "關於penicillins之藥物動力學的敘述，下列何者正確？",
       "options": {
         "A": "ticarcillin可以經腸胃道吸收，因此可以口服方式治療感染",
-        "B": "enzathine penicillin相對其他penicillin藥物有較長的半衰期，約可長達 14 天",
-        "C": "benzathine penicillin相對其他penicillin藥物有較長的半衰期，約可長達 14 天",
+        "B": "probenecid可以抑制penicillins由腎小管過濾方式排至尿中",
+        "C": "benzathine penicillin相對其他penicillin藥物有較長的半衰期，約可長達14天",
         "D": "amoxicillin口服吸收效果易受食物干擾而降低藥效"
       },
       "answer": "C",
@@ -53020,7 +53020,7 @@
       "number": 70,
       "question": "下列那一種激素主要是進入細胞內與其受器（receptor）結合而產生作用？",
       "options": {
-        "A": "trial natriuretic peptide（ANP）",
+        "A": "thyroid hormone",
         "B": "insulin",
         "C": "growth hormone",
         "D": "atrial natriuretic peptide（ANP）"
@@ -53520,7 +53520,7 @@
       "number": 95,
       "question": "下列關於ATP synthase的敘述，何者錯誤？",
       "options": {
-        "A": "TP會在粒線體內膜及外膜之間的間隙中形成",
+        "A": "位於粒線體內膜",
         "B": "使用粒線體內膜兩側的氫離子濃度差合成ATP",
         "C": "ATP會在粒線體內膜及外膜之間的間隙中形成",
         "D": "合成ATP的過程中涉及ATP synthase之四級結構變化"
@@ -54640,7 +54640,7 @@
       "number": 52,
       "question": "王⼩姐45歲，未婚，最近發現左側乳房有⼩塊腫瘤，經醫師診斷為乳癌，進⾏⼿術切除後，並給予 cyclophosphamide, methotrexate及5-fluorouracil癌症化學治療，下列藥物與機轉之配對何者正確？",
       "options": {
-        "C": "yclophosphamide & 5-fluorouracil：DNA烷基化物（DNA alkylating agents）",
+        "C": "methotrexate & 5-fluorouracil：抗代謝藥物（anti-metabolites）",
         "A": "cyclophosphamide & methotrexate：抑制topoisomerase II",
         "B": "methotrexate & 5-fluorouracil：抑制有絲分裂（mitosis）",
         "D": "cyclophosphamide & 5-fluorouracil：DNA烷基化物（DNA alkylating agents）"
@@ -54722,7 +54722,7 @@
       "options": {
         "A": "furosemide",
         "B": "hydrochlorothiazide",
-        "C": "onivaptan",
+        "C": "amiloride",
         "D": "conivaptan"
       },
       "answer": "A",
@@ -54740,7 +54740,7 @@
       "number": 57,
       "question": "下列藥物中何者之主要臨床副作用為類紅斑性狼瘡症狀？",
       "options": {
-        "A": "miodarone",
+        "A": "sotalol",
         "B": "disopyramide",
         "D": "procainamide",
         "C": "amiodarone"
@@ -54980,8 +54980,8 @@
       "number": 69,
       "question": "病人做化療（chemotherapy）或手術後所引起的噁心、嘔吐症狀，可以預先使用下列何種藥物來緩解，其作 用機轉是透過拮抗neurokinin（NK 1 ）的受體？",
       "options": {
-        "A": "prepitant",
-        "B": "osentan",
+        "A": "riociguat",
+        "B": "fasudil",
         "C": "bosentan",
         "D": "aprepitant"
       },
@@ -55060,7 +55060,7 @@
       "number": 73,
       "question": "下列藥物之中樞鎮靜作用可被flumazenil拮抗，何者為誤？",
       "options": {
-        "A": "plrazolam",
+        "A": "zolpidem",
         "B": "lorazapam",
         "C": "alcohol",
         "D": "aplrazolam"
@@ -56641,7 +56641,7 @@
       "number": 53,
       "question": "下運動神經元（lower motor neurons）的損傷會導致下列那一種疾病？",
       "options": {
-        "A": "myotrophic lateral sclerosis",
+        "A": "Parkinson’s disease",
         "B": "Huntington’s disease",
         "C": "amyotrophic lateral sclerosis",
         "D": "myasthenia gravis"
@@ -56941,7 +56941,7 @@
       "number": 68,
       "question": "下列有關胰臟β細胞分泌胰島素主要機轉的敘述，何者正確？",
       "options": {
-        "A": "TP敏感性的鉀離子通道打開造成鉀離子的外流是促進胰島素分泌的重要步驟",
+        "A": "血中葡萄糖是經由第四型葡萄糖轉運蛋白進入胰臟β細胞刺激胰島素分泌",
         "B": "ATP敏感性的鉀離子通道打開造成鉀離子的外流是促進胰島素分泌的重要步驟",
         "C": "血中的胺基酸會經由增加β細胞內的cAMP濃度促進胰島素的分泌作用",
         "D": "β細胞內鈣離子的濃度升高與胰島素從分泌囊泡中釋放的作用有關"
@@ -56961,7 +56961,7 @@
       "number": 69,
       "question": "當血中之鉀離子濃度上升時，下列那一個激素分泌增加最明顯？",
       "options": {
-        "A": "trial natriuretic peptide",
+        "A": "anti-diuretic hormone",
         "B": "angiotensinogen",
         "C": "aldosterone",
         "D": "atrial natriuretic peptide"
@@ -58322,7 +58322,7 @@
       "question": "有關X和Y的一個簡單的線性迴歸模型的迴歸係數估計值b與X和Y的皮爾森（Pearson）相關係數估值r的敘 述，下列何者錯誤？",
       "options": {
         "A": "一個大的|b|與|r|值並不能確認X對Y的因果關係",
-        "B": "與r值一定同正或同負（不會一正一負）",
+        "B": "r值一定介於-1與1之間",
         "C": "b與r值一定同正或同負（不會一正一負）",
         "D": "如果Y和X反應變項與解釋變項的角色互換仍然有相同的b與r值"
       },
@@ -58802,7 +58802,7 @@
       "number": 62,
       "question": "下列何者會先被病毒的thymidine kinase磷酸化而干擾病毒複製，因此對被感染的細胞具選擇性，主要用於治 療疱疹病毒（herpes viruses）的感染？",
       "options": {
-        "A": "zidothymidine",
+        "A": "abacavir",
         "B": "acyclovir",
         "C": "amantadine",
         "D": "azidothymidine"
@@ -59042,7 +59042,7 @@
       "number": 74,
       "question": "反股寡核甘酸（antisense oligonucleotide）藥物mipomersen其主要用於治療同型性家族性高膽固醇血症 （homozygous familial hypercholesterolemia），藉由降低血中low density lipoprotein (LDL)含量以達降血脂療 效，下列何者為其主要之抑制標的？",
       "options": {
-        "A": "poA-I",
+        "A": "PCSK9",
         "B": "apoC-III",
         "C": "apoB-100",
         "D": "apoA-I"
@@ -59183,7 +59183,7 @@
       "question": "Li-Fraumeni症候群之特性為平均發病年齡比正常族群低，且可同時發生一種以上的癌症。它與下列何種基因 的變異關係最高？",
       "options": {
         "A": "RB",
-        "B": "RCA-1及BRCA-2",
+        "B": "TP53",
         "C": "WT-1",
         "D": "BRCA-1及BRCA-2"
       },
@@ -62564,7 +62564,7 @@
       "number": 52,
       "question": "下列何種藥物不具有改善骨質疏鬆的效果？",
       "options": {
-        "A": "lendronate",
+        "A": "vitamin D",
         "B": "alendronate",
         "C": "raloxifene",
         "D": "danazol"
@@ -62724,7 +62724,7 @@
       "number": 60,
       "question": "下列何種藥物，不會增加細胞中的cyclic GMP含量？",
       "options": {
-        "A": "trial natriuretic peptide",
+        "A": "isoproterenol",
         "B": "sodium nitroprusside",
         "C": "sildenafil",
         "D": "atrial natriuretic peptide"
@@ -62905,9 +62905,9 @@
       "number": 70,
       "question": "小孩因病毒感染而引起發燒反應，首選退燒藥物應是下列何者？",
       "options": {
-        "A": "cetaminophen",
+        "A": "aspirin",
         "B": "acetaminophen",
-        "C": "elecoxib",
+        "C": "etodolac",
         "D": "celecoxib"
       },
       "answer": "B",
@@ -62965,7 +62965,7 @@
       "number": 73,
       "question": "乙醇（酒精）與下列何者併用會造成乙醛（acetaldehyde）蓄積，導致噁心、嘔吐及低血壓等身體不適的反 應？",
       "options": {
-        "A": "camprosate",
+        "A": "disulfiram",
         "D": "baclofen",
         "B": "acamprosate",
         "C": "naltrexone"
@@ -86520,9 +86520,9 @@
       "question": "下列關於Cystic fibrosis 遺傳疾病的敘述，何者錯誤？",
       "options": {
         "A": "造成cystic fibrosis 的原因是CFTR（Cystic fibrosis transmembrane conductance regulator）基因發生突變",
-        "B": "Cystic",
-        "C": "Cystic fibrosis",
-        "D": "Cystic fibrosis"
+        "B": "Cystic fibrosis導致嚴重的上呼吸道感染",
+        "C": "Cystic fibrosis導致上皮細胞纖毛（cilia）擺動困難造成細菌容易感染",
+        "D": "Cystic fibrosis的CFTR缺陷，造成Cl⁻離子由細胞外大量運到細胞內"
       },
       "answer": "D",
       "explanation": ""

@@ -752,8 +752,9 @@ export default function Home() {
             <p className="text-white font-bold text-sm">🎬 看廣告領金幣</p>
             <p className="text-white/40 text-xs mt-0.5">每次 +300，每日 10 次</p>
           </button>
-          <button onClick={() => setSheet('coin-shop')}
-            className="flex-1 bg-white/10 border border-amber-400/30 rounded-2xl px-3 py-3 text-center active:scale-[0.97] transition-transform">
+          <button disabled
+            className="flex-1 bg-white/10 border border-amber-400/30 rounded-2xl px-3 py-3 text-center opacity-50 relative">
+            <span className="absolute -top-2 right-2 bg-white/20 text-white/70 text-[10px] font-bold px-2 py-0.5 rounded-full">尚未開放</span>
             <p className="text-white font-bold text-sm">🪙 金幣商店</p>
             <p className="text-white/40 text-xs mt-0.5">贊助支持獲更多金幣</p>
           </button>

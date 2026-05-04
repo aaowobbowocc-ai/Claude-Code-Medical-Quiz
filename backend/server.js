@@ -44,6 +44,7 @@ app.use('/report', submitLimiter);
 app.use('/comments', apiLimiter);
 app.use('/community-notes', apiLimiter);
 app.use('/board', rateLimit({ windowMs: 60 * 1000, max: 30, standardHeaders: true, legacyHeaders: false }));
+app.use('/api/coins', rateLimit({ windowMs: 60 * 1000, max: 60, standardHeaders: true, legacyHeaders: false }));
 
 const server = http.createServer(app);
 const io = new Server(server, {
@@ -763,6 +764,31 @@ commentsApi.registerRoutes(app);
 communityNotes.registerRoutes(app);
 feedback.registerRoutes(app, examData, examConfigs);
 board.registerRoutes(app);
+
+// ── Coins delta endpoint ─────────────────────────────────────────────────
+// Accepts { delta: number } via JWT-authenticated POST.
+// Never trusts a client-supplied absolute coins value — only applies a delta
+// server-side to prevent localStorage manipulation exploits.
+app.post('/api/coins/delta', async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: 'Supabase not configured' })
+  const token = req.headers.authorization?.replace('Bearer ', '')
+  if (!token) return res.status(401).json({ error: 'Unauthorized' })
+  const { delta } = req.body
+  if (typeof delta !== 'number' || !Number.isInteger(delta)) return res.status(400).json({ error: 'Invalid delta' })
+  if (delta > 5000 || delta < -200000) return res.status(400).json({ error: 'Delta out of range' })
+  try {
+    const { data: { user }, error: authErr } = await supabase.auth.getUser(token)
+    if (authErr || !user) return res.status(401).json({ error: 'Invalid token' })
+    const { data: profile, error: fetchErr } = await supabase.from('profiles').select('coins').eq('user_id', user.id).single()
+    if (fetchErr) return res.status(500).json({ error: fetchErr.message })
+    const newCoins = Math.max(0, (profile.coins || 0) + delta)
+    const { error: updateErr } = await supabase.from('profiles').update({ coins: newCoins }).eq('user_id', user.id)
+    if (updateErr) return res.status(500).json({ error: updateErr.message })
+    res.json({ coins: newCoins })
+  } catch (e) {
+    res.status(500).json({ error: e.message })
+  }
+})
 
 // ── Health + stages + exams + stats API ─────────────────────────────────
 app.get('/health', (_, res) => res.json({ ok: true }));

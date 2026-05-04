@@ -2,6 +2,23 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { supabase, ensureSession } from '../lib/supabase'
 
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+
+// Server-side delta write — prevents localStorage manipulation from inflating coins.
+// Fire-and-forget: local state updates immediately for UI responsiveness.
+async function persistCoinDelta(delta) {
+  if (!supabase) return
+  try {
+    const { data: { session } } = await supabase.auth.getSession()
+    if (!session?.access_token) return
+    fetch(`${BACKEND}/api/coins/delta`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${session.access_token}` },
+      body: JSON.stringify({ delta }),
+    }).catch(() => {})
+  } catch {}
+}
+
 // Re-export from registry — consumers should import { getExamTypes } from gameStore or registry directly
 export { getExamTypes, getExamConfig, getExamTypes as EXAM_TYPES_FN } from '../config/examRegistry'
 
@@ -158,12 +175,17 @@ export const usePlayerStore = create(
         const totalBonus = 300 + streakBonus
 
         set((s) => ({ coins: s.coins + totalBonus, lastDailyBonus: today, loginStreak: newStreak }))
+        persistCoinDelta(totalBonus)
         return totalBonus
       },
-      addCoins: (n) => set((s) => ({ coins: s.coins + n })),
+      addCoins: (n) => {
+        set((s) => ({ coins: s.coins + n }))
+        persistCoinDelta(n)
+      },
       spendCoins: (n) => {
         if (get().coins < n) return false
         set((s) => ({ coins: s.coins - n }))
+        persistCoinDelta(-n)
         return true
       },
       // Rewarded ad tracking
@@ -176,6 +198,7 @@ export const usePlayerStore = create(
       claimBindReward: () => {
         if (get().bindRewardClaimed) return false
         set((s) => ({ coins: s.coins + 3000, bindRewardClaimed: true }))
+        persistCoinDelta(3000)
         return 3000
       },
       claimAdReward: () => {
@@ -190,6 +213,7 @@ export const usePlayerStore = create(
           lastAdWatch: new Date().toISOString(),
           lastAdDate: today,
         }))
+        persistCoinDelta(300)
         return { success: true, coins: 300, remaining: 10 - newCount }
       },
       getAdRewardInfo: () => {
@@ -237,6 +261,7 @@ usePlayerStore.subscribe((state, prevState) => {
       const user = session?.user
       if (!user) return
       const payload = storeToDb(usePlayerStore.getState())
+      delete payload.coins  // never overwrite coins via write-through; use persistCoinDelta instead
       payload.updated_at = new Date().toISOString()
       const { error } = await supabase.from('profiles').update(payload).eq('user_id', user.id)
       if (error) console.error('[profile] save failed:', error.message)

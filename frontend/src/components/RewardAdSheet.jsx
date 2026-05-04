@@ -93,7 +93,7 @@ export default function RewardAdSheet({ onClose, onOpenShop }) {
             {onOpenShop && (
               <button onClick={() => { onClose(); onOpenShop() }}
                 className="w-full py-3 rounded-2xl font-bold text-sm text-amber-600 bg-amber-50 border border-amber-200 active:scale-95 transition-transform">
-                ☕ 贊助支持，一次獲得更多金幣
+                🪙 金幣商店 — 贊助支持獲得更多金幣
               </button>
             )}
           </>

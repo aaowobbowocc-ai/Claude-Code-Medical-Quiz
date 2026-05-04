@@ -540,6 +540,7 @@ export default function Home() {
               ['📖','題庫瀏覽',`${getYearRange(exam)}年題庫`,'/browse'],
               ['📊','弱點分析','各科正確率','/weakness'],
               ['⭐','收藏題目','分類收藏複習','/favorites'],
+              ['📚','備考攻略','考試重點整理','/guides'],
               ['🏆','排行榜','每週排名','/leaderboard'],
               ['💬','留言板','交流備考心得','/board']].map(([icon,title,sub,path]) => (
               <button key={path} onClick={() => navigate(path)}
@@ -744,12 +745,19 @@ export default function Home() {
           </div>
         )}
 
-        {/* 看廣告賺金幣 */}
-        <button onClick={() => setSheet('reward-ad')}
-          className="w-full bg-white/10 border border-amber-400/30 rounded-2xl px-4 py-3 mt-1 text-center active:scale-[0.97] transition-transform">
-          <p className="text-white font-bold text-sm">🎬 看廣告免費領金幣</p>
-          <p className="text-white/40 text-xs mt-0.5">功能準備中，即將開放</p>
-        </button>
+        {/* 看廣告賺金幣 + 金幣商店 */}
+        <div className="flex gap-2 mt-1">
+          <button onClick={() => setSheet('reward-ad')}
+            className="flex-1 bg-white/10 border border-amber-400/30 rounded-2xl px-3 py-3 text-center active:scale-[0.97] transition-transform">
+            <p className="text-white font-bold text-sm">🎬 看廣告領金幣</p>
+            <p className="text-white/40 text-xs mt-0.5">每次 +300，每日 10 次</p>
+          </button>
+          <button onClick={() => setSheet('coin-shop')}
+            className="flex-1 bg-white/10 border border-amber-400/30 rounded-2xl px-3 py-3 text-center active:scale-[0.97] transition-transform">
+            <p className="text-white font-bold text-sm">🪙 金幣商店</p>
+            <p className="text-white/40 text-xs mt-0.5">贊助支持獲更多金幣</p>
+          </button>
+        </div>
 
         {/* 今日寄語 */}
         {(dailyMsg || dailyLoading) && (
@@ -824,6 +832,7 @@ export default function Home() {
             ['📖','題庫瀏覽',`${getYearRange(exam)}年題庫`,'/browse'],
             ['📊','弱點分析','各科正確率','/weakness'],
             ['⭐','收藏題目','分類收藏複習','/favorites'],
+            ['📚','備考攻略','考試重點整理','/guides'],
             ['🏆','排行榜','每週排名','/leaderboard'],
             ['💬','留言板','交流備考心得','/board']].map(([icon,title,sub,path]) => (
             <button key={path} onClick={() => navigate(path)}
@@ -1057,7 +1066,7 @@ export default function Home() {
 
       <SupportSheets sheet={sheet} setSheet={setSheet} />
 
-      {sheet === 'reward-ad' && <RewardAdSheet onClose={() => setSheet(null)} />}
+      {sheet === 'reward-ad' && <RewardAdSheet onClose={() => setSheet(null)} onOpenShop={() => setSheet('coin-shop')} />}
       {sheet === 'coin-shop' && <CoinShopSheet onClose={() => setSheet(null)} />}
 
       {/* Dev password gate */}

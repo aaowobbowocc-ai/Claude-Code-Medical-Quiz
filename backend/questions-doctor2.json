@@ -120528,14 +120528,20 @@
       "number": 27,
       "question": "左耳鼓室圖（tympanogram），最可能為下列何者？",
       "options": {
-        "A": "中耳積水 (Otitis Media with Effusion)",
-        "B": "鼓膜穿孔 (Perforated eardrum)",
-        "C": "歐氏管功能不良 (Eustachian tube dysfunction)",
-        "D": "耳硬化症 (Otosclerosis)"
+        "A": "Type B（平坦曲線，中耳積液）",
+        "B": "Type C（峰值在 -200 daPa，負壓）",
+        "C": "Type As（寬而低的峰值，鼓膜僵硬）",
+        "D": "Type A（銳峰在 0 daPa，正常）"
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": false
+      "incomplete": false,
+      "option_images": {
+        "A": "/question-images/doctor2_109080_p3_26_A.webp",
+        "B": "/question-images/doctor2_109080_p3_26_B.webp",
+        "C": "/question-images/doctor2_109080_p3_26_C.webp",
+        "D": "/question-images/doctor2_109080_p3_26_D.webp"
+      }
     },
     {
       "id": 115024471,
@@ -170235,7 +170241,13 @@
       "answer": "B",
       "explanation": "",
       "image_dependent": true,
-      "image_url": "/question-images/doctor2_105020_p2_9_0.webp"
+      "image_url": "/question-images/doctor2_105020_p2_9_0.webp",
+      "option_images": {
+        "A": "/question-images/doctor2_105020_p2_9_A.webp",
+        "B": "/question-images/doctor2_105020_p2_9_B.webp",
+        "C": "/question-images/doctor2_105020_p2_9_C.webp",
+        "D": "/question-images/doctor2_105020_p2_9_D.webp"
+      }
     },
     {
       "id": 115026891,

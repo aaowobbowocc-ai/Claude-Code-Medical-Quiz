@@ -29,7 +29,10 @@ const BACKEND = path.resolve(__dirname, '..')
 if (!fs.existsSync(CACHE)) fs.mkdirSync(CACHE, { recursive: true })
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
-const visionModel = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' })
+const visionModel = genAI.getGenerativeModel({
+  model: 'gemini-2.5-flash',
+  generationConfig: { thinkingConfig: { thinkingBudget: 0 } },
+})
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
 // ─── URL lookup: (exam_code, subject) → {c, s} ────────────────────────────────

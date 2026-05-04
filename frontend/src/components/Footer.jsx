@@ -16,6 +16,8 @@ export default function Footer() {
         <span className="text-gray-200">|</span>
         <Link to="/changelog" className="hover:text-medical-blue transition-colors">更新公告</Link>
         <span className="text-gray-200">|</span>
+        <Link to="/guides" className="hover:text-medical-blue transition-colors">備考攻略</Link>
+        <span className="text-gray-200">|</span>
         <Link to="/coverage" className="hover:text-medical-blue transition-colors">題庫狀態</Link>
       </div>
       <p>© {new Date().getFullYear()} {platformName}</p>

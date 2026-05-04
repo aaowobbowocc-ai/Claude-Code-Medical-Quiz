@@ -318,6 +318,213 @@ const NOTES = {
       { title: '藥事法重點', content: '藥品分級：\n處方藥(Rx): 需醫師處方\n指示藥(OTC-I): 藥師指示\n成藥(OTC-II): 可自行購買\n\n管制藥品分四級：\n第一級: 海洛因(最嚴格)\n第二級: 嗎啡、古柯鹼、安非他命\n第三級: FM2、Ketamine\n第四級: Diazepam, Zolpidem\n\n藥師業務：\n調劑、藥品管理、用藥諮詢、藥事照護\n\n藥局設置: 需有藥師駐店、親自執行業務\nGMP: 藥品製造規範' },
     ]},
   ],
+
+  nursing: [
+    {
+      id: 'basic_science', icon: '🔬', name: '基礎醫學', color: '#3B82F6',
+      cards: [
+        { title: '生命徵象正常值', content: '體溫：36.1-37.2°C（口溫），肛溫+0.5°C，腋溫-0.5°C\n脈搏：60-100 次/分；新生兒 120-160\n呼吸：12-20 次/分；新生兒 30-60\n血壓：收縮壓 <120、舒張壓 <80 mmHg\nSpO₂：95-100%\n\n異常警訊：\n發燒 >38.5°C → 報告醫師\n心跳 <50 or >120 → 評估心律\n呼吸 >25 → 呼吸窘迫評估\nSBP <90 or >180 → 立即評估' },
+        { title: '電解質異常速記', content: '低血鈉 (<135)：混亂、抽搐；限水\n高血鈉 (>145)：口渴、皮膚乾燥；補水\n低血鉀 (<3.5)：肌肉無力、心律不整(U波↑)\n高血鉀 (>5.5)：心跳變慢、peaked T波 → 心電圖\n低血鈣 (<8.5)：Trousseau sign、Chvostek sign、肌肉痙攣\n高血鈣 (>10.5)：「Bones, Stones, Groans, Psychic moans」\n低血糖 (<70)：冒冷汗、顫抖、意識混亂 → 先給糖' },
+        { title: '常用藥物護理重點', content: 'Digoxin：給藥前數脈搏 60 秒，<60 不給\nInsulin：抽取順序 Regular → NPH（清→濁）\nWarfarin：監測 INR（目標 2-3），避免深色蔬菜\nHeparin：監測 aPTT，解毒 Protamine sulfate\nMorphine：監測呼吸（<12 次/分不給），備 Naloxone\nNitroglycerine：舌下含服，頭痛為常見副作用\nFurosemide：監測電解質(K⁺)、尿量' },
+      ]
+    },
+    {
+      id: 'fundamental_nursing', icon: '🏥', name: '基護與護理行政', color: '#8B5CF6',
+      cards: [
+        { title: '護理過程 (Nursing Process)', content: 'ADPIE:\nA: Assessment(評估) — 主觀+客觀資料\nD: Diagnosis(診斷) — NANDA 格式 P/E/S\nP: Planning(計畫) — SMART 目標\nI: Implementation(執行) — 護理措施\nE: Evaluation(評值) — 目標達成與否\n\nNANDA 護理診斷格式：\n問題 + 相關因素(RT) + 徵象症狀(AEB)\n如：活動耐受力不足 RT 心臟輸出量減少 AEB 呼吸困難\n\n優先順序：Maslow 需求層次\n生理>安全>愛與歸屬>自尊>自我實現' },
+        { title: '無菌技術與感控', content: '外科無菌（滅菌）vs 內科無菌（清潔）\n\n手術無菌原則：\n- 無菌區域一旦潮濕→視為污染\n- 無菌區域邊緣 1 inch 視為污染\n- 腰部以下視為污染\n- 面向無菌區域\n\n標準防護措施：洗手、手套、口罩、護目鏡、隔離衣\n空氣傳染隔離：N95 口罩、負壓病房（TB、麻疹、水痘）\n飛沫傳染：外科口罩、單人房（流感、百日咳）\n接觸傳染：手套+隔離衣（MRSA、VRE）' },
+        { title: '護理行政與法規', content: '護理師法重點：\n護理人員分類：護理師（5年大學/二技）、護士（3年護專）\n業務：健康問題評估、護理諮詢、護理指導、護理行政\n\n病人安全目標（IPSG）：\n1. 確認病人身份（二項核對：姓名+生日）\n2. 改善有效溝通（SBAR）\n3. 高警訊藥品安全（濃縮電解質分開存放）\n4. 確保正確部位手術\n5. 降低醫療相關感染\n6. 降低跌倒傷害\n\nISBAR 溝通：\nI:Identify、S:Situation、B:Background、A:Assessment、R:Recommendation' },
+      ]
+    },
+    {
+      id: 'medical_surgical', icon: '⚕️', name: '內外科護理', color: '#10B981',
+      cards: [
+        { title: '心臟衰竭護理', content: '左心衰竭：肺水腫、端坐呼吸(orthopnea)、PND\n右心衰竭：周邊水腫、頸靜脈怒張、肝腫大\n\n護理措施：\n- 端坐臥位（減少回心血量、改善呼吸）\n- 每日測體重（早晨空腹）：增加 >1kg/天 → 體液滯留\n- 限水（1-1.5 L/天）、限鈉（2g/天）\n- I/O 精確記錄\n- 監測 BNP/NT-proBNP（>100 pg/mL異常）\n\n藥物教育：\nDigoxin：查脈搏 >60 才服用\nACEI：乾咳為副作用，不可突然停藥' },
+        { title: '糖尿病護理', content: '低血糖 (<70 mg/dL)：\n症狀：盜汗、顫抖、心悸、飢餓、意識混亂\n處置：15-15 法則：15g 糖（4顆方糖/半杯果汁）→等15分鐘\n\n高血糖緊急：\nDKA (type 1)：Kussmaul呼吸、酮味、AG↑代酸\nHHNS (type 2)：嚴重脫水、意識改變、血糖 >600\n\n足部護理教育（預防神經病變）：\n- 每日檢查足部（鏡子）\n- 禁止打赤腳\n- 橫剪趾甲\n- 避免過緊鞋子\n- 水溫 <43°C（感覺鈍）\n\nHbA1c <7% 為控制目標' },
+        { title: '術後護理重點', content: '術後立即評估（PACU）：\n氣道 → 呼吸 → 循環 → 意識 → 疼痛\nAldrete Score ≥9 → 可送回病房\n\n術後常見合併症：\n肺塌陷/肺炎：深呼吸+咳嗽（護住傷口）、誘導性肺計量器\n術後出血：生命徵象↓、敷料滲血增加\n深部靜脈栓塞(DVT)：Homan sign（偽陽性率高）、腳踝轉動\n腸阻塞：腸蠕動未恢復前禁食\n\n傷口引流管護理：\nJackson-Pratt(JP)：封閉式負壓引流，每8小時擠壓排空\nHemovac：每班排空記錄' },
+      ]
+    },
+    {
+      id: 'ob_peds', icon: '👶', name: '產兒科護理', color: '#F97316',
+      cards: [
+        { title: '產程分期', content: '第一產程：宮頸擴張\n潛伏期：宮頸 0→6 cm（初產婦可 >20hr）\n活躍期：6→10 cm（1-2 cm/hr 初產婦）\n\n第二產程：胎兒娩出（宮頸全開→娩出）\n初產婦 ≤3 hr；經產婦 ≤2 hr\n\n第三產程：胎盤娩出（娩出後 30 分鐘內）\n\nFHR 正常：110-160 bpm\n\n減速類型：\n早期(Early)：宮縮高峰同步 → 頭部受壓（正常）\n變動(Variable)：臍帶壓迫 → 換側臥位\n晚期(Late)：宮縮後才減速 → 胎盤功能不足（危險）\n\n胎位：LOA（左枕前）最常見' },
+        { title: '新生兒評估', content: 'Apgar Score（1分鐘、5分鐘評估）：\nA: Appearance(膚色) 0-2\nP: Pulse(心跳) 0-2\nG: Grimace(反射) 0-2\nA: Activity(肌張力) 0-2\nR: Respiration(呼吸) 0-2\n7-10 分：正常；4-6：需刺激；<4：需急救\n\n新生兒常見問題：\n生理性黃疸：出生後 24hr 後出現（>24hr 才正常）\n病理性黃疸：24hr 內出現 → 溶血\n光照治療：覆蓋眼睛與生殖器，多餵奶\n\n先天畸形篩檢：PKU、甲狀腺低下→腳跟採血' },
+      ]
+    },
+    {
+      id: 'psych_community', icon: '🧠', name: '精神與社區護理', color: '#EC4899',
+      cards: [
+        { title: '精神科常見疾病護理', content: '精神分裂症(Schizophrenia)：\n正性症狀：幻覺(聽幻覺最常)、妄想、思考解體\n負性症狀：情感平板、阿羅吉(Alogia)、失志\n護理：現實導向、建立信任、藥物衛教\n\n躁症發作：\n護理重點：結構性環境、減少刺激、確保安全\n監測飲食(過度活動忘記進食)、避免激烈辯論\n\n重鬱症護理：\n自殺風險評估：詢問不會增加風險\nSAD PERSONS scale\n環境安全：移除危險物品\n\nMAOI：避免酪胺食物(起司、陳年紅酒) → 高血壓危象' },
+        { title: '社區護理與流行病學', content: '社區護理重點：\n優先服務：最脆弱族群（嬰幼兒、老人、殘障、低收入）\n\n家庭訪視：建立信任、評估家庭功能\n\n傳染病防治：\n法定傳染病通報時限：\n第一類（霍亂、天花）：立即通報\n第二類（結核病、SARS）：24hr\n第三類（登革熱）：1週\n\n疫苗時程（台灣）：\n出生：B肝第一劑、BCG\n2個月：五合一、肺炎鏈球菌、輪狀病毒\n12個月：MMR、水痘\n\n健康促進模式：Pender Health Promotion Model' },
+      ]
+    },
+  ],
+
+  medlab: [
+    {
+      id: 'hematology', icon: '🩸', name: '血液學', color: '#EF4444',
+      cards: [
+        { title: '貧血分類', content: '依 MCV 分類：\n\n小球性(MCV <80)：\n缺鐵性貧血(IDA)：最常見；ferritin↓, TIBC↑\n地中海型貧血：Hb electrophoresis 診斷\n慢性病貧血：ferritin正常或↑, TIBC↓\n\n正球性(MCV 80-100)：\n溶血性貧血：indirect bilirubin↑, LDH↑, haptoglobin↓\n再生不良性貧血(AA)：骨髓細胞減少\n\n大球性(MCV >100)：\n葉酸缺乏：Hypersegmented PMN, 巨母紅血球\nB12 缺乏：同上 + 神經症狀（脊髓亞急性退化）\nIntrinsic factor缺乏 → 惡性貧血 → Schilling test' },
+        { title: '白血球與凝血', content: '白血球分類(100個)：\n中性球(55-70%)：細菌感染→核左移\n淋巴球(20-40%)：病毒感染、CLL\n單核球(2-8%)：慢性感染\n嗜酸球(1-4%)：過敏、寄生蟲\n嗜鹼球(0.5-1%)：過敏反應\n\n血小板正常：150,000-400,000/μL\nITP(<20,000)：自體免疫，脾臟破壞\nTTP：ADAMTS13↓ → VWF multimers堆積 → 微血管溶血+血小板↓\nDIC：PT↑、aPTT↑、platelet↓、fibrinogen↓、D-dimer↑\n\n凝血：\nPT → 外因性(VII)，監測 Warfarin\naPTT → 內因性(VIII,IX,XI)，監測 Heparin\nThrombin time → Fibrinogen 功能' },
+        { title: '血庫學', content: 'ABO血型：\nA型：A抗原、anti-B\nB型：B抗原、anti-A\nO型：H抗原、anti-A + anti-B（萬能捐血者）\nAB型：A+B抗原、無抗體（萬能受血者）\n\nRh 系統：D抗原最重要\nRh(-)母親+Rh(+)胎兒 → 第二胎可能溶血\n預防：28週+產後72hr RhoGAM\n\n輸血前相容性試驗：\nType & Screen → 交叉試驗(Crossmatch)\n主側交叉(Major)：受血者血清 + 捐血者紅血球\n\n輸血反應：\n急性溶血(ABO不相容)：腰痛、血紅尿 → 立即停輸血\n過敏反應：發疹 → 停輸血、給 antihistamine\nTRALI：輸血後非心因性肺水腫，ICU 處理' },
+      ]
+    },
+    {
+      id: 'microbiology_lab', icon: '🦠', name: '微生物學', color: '#10B981',
+      cards: [
+        { title: '培養基與鑑別', content: '選擇性培養基：\nMacConkey：G(-) 腸桿菌篩選；乳糖發酵菌(E.coli) → 粉紅色\nMannitol Salt Agar：S. aureus → 黃色\nSabouraud：黴菌\nThayer-Martin：Neisseria(+) 淋球菌、腦膜炎雙球菌\n\nBlood agar 溶血：\nα-溶血(綠色)：S. pneumoniae, S. viridans\nβ-溶血(完全透明)：S. pyogenes(GAS), S. agalactiae(GBS)\nγ-溶血(不溶血)：Enterococcus\n\n快速鑑定：\nCatalase(+)：Staph vs Strep(催化酶陰性)\nCoagulase(+)：S. aureus vs CoNS\nOptochin敏感：S. pneumoniae\nBacitracin敏感：GAS(S. pyogenes)' },
+        { title: '分子檢驗重點', content: 'PCR 原理：\nDenaturation(變性，94°C) → Annealing(引子結合) → Extension(延伸，72°C)\n\n重要檢驗：\nReal-time PCR：定量、偵測最敏感\nReverse transcriptase PCR(RT-PCR)：RNA virus（HIV、HCV、流感）\nMultiplex PCR：同時偵測多種病原\n\n電泳分析：\nAgarose gel：DNA 大小分離（小片段跑快）\nSDS-PAGE：蛋白質大小分離\nWestern blot：蛋白質確認（HIV 確認試驗）\n\nSanger sequencing：DNA 定序金標準\nNGS：次世代定序，高通量\n\nHybridization：Southern(DNA), Northern(RNA), FISH' },
+      ]
+    },
+    {
+      id: 'clinical_chemistry', icon: '⚗️', name: '生化與臨床生化', color: '#8B5CF6',
+      cards: [
+        { title: '酵素與心肌標記', content: 'AMI 標記時序：\nTroponin I/T：3-4hr↑，12-24hr 峰值，7-10天→正常（最敏感&特異）\nCK-MB：4-8hr↑，12-24hr 峰值，48-72hr→正常\nMyoglobin：1-2hr 最早↑（無特異性）\nBNP/NT-proBNP：心衰竭標記\n\n肝臟酵素：\nALT(SGPT)：肝細胞損傷特異性高\nAST(SGOT)：肝+心+肌肉\nALP：膽汁淤積、骨骼疾病\nGGT：酒精性肝病（最敏感）\nALT:AST >2:1 → 酒精性肝病\n\n胰臟：\nAmylase：急性胰臟炎（非特異）\nLipase：更特異，維持較久' },
+        { title: '尿液分析', content: '尿液試紙(Dipstick)：\npH：正常 4.5-8\nProtein：>150 mg/day 異常（白蛋白為主）\nGlucose：>180 mg/dL 出現（腎閾值）\nKetone：DKA、飢餓\nBlood：血尿/血紅素尿/肌紅素尿\nNitrite(+)：G(-) 細菌感染\nLE(Leukocyte esterase)(+)：白血球尿\n\n尿沉渣：\nRBC casts：腎絲球腎炎（病理性！）\nWBC casts：腎盂腎炎\nGranular casts：腎小管損傷\nHyaline casts：脫水（非病理）\n\nCreatinine clearance(CrCl)：\nCockcroft-Gault formula → 評估 GFR\n正常 >90 mL/min' },
+      ]
+    },
+    {
+      id: 'immunology_lab', icon: '🛡️', name: '血清免疫學', color: '#F97316',
+      cards: [
+        { title: '免疫檢驗技術', content: 'ELISA（酵素連結免疫吸附試驗）：\n最常用 → HIV篩檢、病毒抗體、過敏原\nDirect ELISA：抗原包被，偵測抗體\nIndirect ELISA：最常見格式\nSandwich ELISA：偵測大分子抗原\n\nImmunoassay 類型：\nRIA：放射性標記，靈敏度高（已少用）\nCLIA：化學發光，全自動分析儀常用\nIFA：螢光 → ANCA, ANA 偵測\n\nWestern Blot：\nHIV 確認試驗（篩檢ELISA陽性後）\n\nComplement fixation test：梅毒(RPR/VDRL 篩檢 → FTA-ABS 確認)\n\n自體抗體：\nANA：SLE（非特異）\nAnti-dsDNA + Anti-Sm：SLE 特異\nAnti-CCP：RA 最特異\nRF：RA（陽性率70%，但低特異）' },
+      ]
+    },
+  ],
+
+  pt: [
+    {
+      id: 'kinesiology', icon: '🦴', name: '運動學基礎', color: '#3B82F6',
+      cards: [
+        { title: '關節活動度(ROM)', content: '頸椎：屈曲/伸展 0-45°，旋轉 0-60°，側屈 0-45°\n肩關節：屈曲 0-180°，外展 0-180°，外旋 0-90°\n肘關節：屈曲 0-150°，旋後/旋前 0-80°\n髖關節：屈曲 0-120°，外展 0-45°，外旋 0-45°\n膝關節：屈曲 0-135°，伸展 0°\n踝關節：背屈 0-20°，蹠屈 0-50°\n\n測量工具：量角器(goniometer)\n信度：inter-rater reliability 腰椎較差\n\n末端感覺(End feel)：\n硬(Hard)：骨對骨(正常，如肘伸展)\n軟(Soft)：肌肉對肌肉(正常，如膝屈)\n彈性(Firm)：韌帶/囊(正常，如肩旋轉)\n病理性：異常阻力（空虛/痙攣/彈跳）' },
+        { title: '肌力測試 (MMT)', content: 'Medical Research Council(MRC) 分級：\n0：無肌肉收縮\n1：可見/可摸到肌肉收縮，無關節運動\n2：在重力消除下可完成全ROM\n3：可對抗重力完成全ROM\n4：可對抗部分阻力完成全ROM\n5：正常肌力，對抗最大阻力完成全ROM\n\n重要注意：\n≥3 才能在功能性活動中使用\n偏癱患者上肢伸肌弱、下肢屈肌弱（Brunnstrom）\n\n相關測試：\nHandheld dynamometer：客觀量化肌力\nDynamometry：等速肌力測試' },
+      ]
+    },
+    {
+      id: 'neuro_pt', icon: '🧠', name: '神經疾病物治', color: '#8B5CF6',
+      cards: [
+        { title: '中風(CVA)物理治療', content: 'Brunnstrom 復原分期：\n1期：軟癱，無反射\n2期：痙攣出現，聯合反應\n3期：痙攣最強，可隨意控制共動模式\n4期：痙攣↓，可脫離共動\n5期：複雜動作，痙攣更↓\n6期：接近正常，協調良好\n\n中風後常見問題：\n肩關節半脫位(subluxation)：承托帶、肩托\n痙攣：牽拉、體位擺位（抑制姿勢）\n肩手症候群(CRPS-I)：抬高、主動運動\n\n步態訓練：\n擺動期問題：足下垂(drop foot)→踝足矯具(AFO)\nCane 用於健側（反方向）' },
+        { title: '脊髓損傷(SCI)物治', content: 'ASIA 分級：\nA：完全損傷（S4-5無感覺運動）\nB：感覺不完全\nC：運動不完全，肌力 <3\nD：運動不完全，關鍵肌力 ≥3\nE：正常\n\n功能預後（損傷平面）：\nC4：電動輪椅、呼吸輔助\nC6：手動輪椅(伸腕夾物)、基本ADL\nT1-6：手動輪椅、軀幹不穩定\nT10-12：站立訓練、KAFO步行可能\nL3-4：前臂拐步行\n\n自主神經反射異常(Autonomic dysreflexia)：\nT6以上損傷，危及生命\n症狀：頭痛、血壓驟升、出汗\n處置：坐起、找並移除刺激源（尿管阻塞最常見）' },
+      ]
+    },
+    {
+      id: 'ortho_pt', icon: '🦵', name: '骨科疾病物治', color: '#10B981',
+      cards: [
+        { title: '膝關節損傷', content: 'ACL 損傷：\n機轉：非接觸性減速轉向（滑雪、籃球）\n評估：Lachman test(最敏感)、前抽屜test、Pivot shift test\n保守：股四頭肌強化、神經肌肉控制\n術後物治：股四頭肌 set → 直腿抬高 → 漸進負重\n\nMCL 損傷：\n評估：外翻壓力測試(Valgus stress test)\n分級：I(輕微)、II(部分撕裂)、III(完全)\n\n半月板損傷：\n評估：McMurray test、Apley compression test\n徒手治療：禁忌於急性期\n\n骨關節炎(OA)護膝：\n大腿股四頭肌強化是核心治療\n水中運動減重力、保護關節' },
+        { title: '肩關節疾病', content: '旋轉肌袖(RTC)損傷：\n組成：棘上肌(最易損傷)、棘下肌、肩胛下肌、小圓肌\n評估：\n棘上肌：Empty can test、Neer impingement\n棘下肌：External rotation lag sign\n肩胛下肌：Lift-off test、Bear hug test\n\n肩夾擊症候群(Impingement)：\n訓練：旋轉肌袖強化、肩胛穩定\n急性期：疼痛弧(60-120°外展)\n\n冰凍肩(Frozen shoulder/Adhesive capsulitis)：\n三期：凍結期(疼痛)→黏連期(僵硬)→解凍期\n物治：關節鬆動術(Maitland/Kaltenborn)、牽拉\n\n肱二頭肌腱測試：\nSpeed test、Yergason test' },
+      ]
+    },
+    {
+      id: 'physical_agents', icon: '⚡', name: '物理因子治療', color: '#EF4444',
+      cards: [
+        { title: '電療', content: 'TENS(經皮電神經刺激)：\nConventional：高頻(80-150Hz)、低強度 → 閘控學說(Gate control)\nAccupuncture-like：低頻(1-4Hz)、高強度 → 內啡肽釋放\n\nNMES(神經肌肉電刺激)：\n使肌肉收縮、預防萎縮\n\n干擾波(IFC)：\n兩組中頻電流交叉 → 深部組織\n\n直流電離子導入(Iontophoresis)：\n陽極(+)：Dexamethasone(抗炎)、Lidocaine(止痛)\n陰極(-)：Mg²⁺、Cl⁻\n\n禁忌：\n心臟節律器、惡性腫瘤、開放性傷口（直流電）\n血栓靜脈炎、活動性出血' },
+        { title: '熱療與超音波', content: '淺層熱療：\n熱敷包(HP)：45°C，毛巾隔4-8層，20分鐘\n石蠟浴：52-54°C，手足\nFluidotherapy：乾熱\n\n深層熱療：\n超音波(US)：1 MHz(深)、3 MHz(淺)\n連續 vs 脈衝：連續=熱效應+機械；脈衝=主要機械\n強度：0.5-3 W/cm²\n\n禁忌：惡性腫瘤、眼球、生殖器、脊椎板術後\n骨骺板勿用（兒童）、血栓區域\n\n冷療：\n冰袋：15-20分鐘\n急性損傷 PRICE 原則\n降低代謝、止痛、消腫\n禁忌：雷諾氏症、感覺缺失、開放性傷口' },
+      ]
+    },
+  ],
+
+  ot: [
+    {
+      id: 'ot_theory', icon: '🎯', name: '職能治療概論', color: '#8B5CF6',
+      cards: [
+        { title: '職能治療理論架構', content: 'MOHO（人類職能模式，Kielhofner）：\n意志(Volition)：個人因果關係、價值觀、興趣\n習慣化(Habituation)：習慣、角色\n表現能力(Performance capacity)：身心能力\n環境(Environment)：物理、社會環境\n\nCMOP-E（加拿大職能表現與參與模式）：\n人(Person) × 職能(Occupation) × 環境(Environment)\n核心：靈性(Spirituality)\n\nBiomechanical Frame of Reference：\nROM、肌力、耐力 → 骨科、脊髓損傷\n\nNeurodevelopmental Treatment(NDT/Bobath)：\n正常動作模式、抑制病理反射\n\nSensory Integration(SI, Ayres)：\n感覺統合理論 → 兒童職治' },
+        { title: 'ADL 評估工具', content: 'Barthel Index(BI)：\n10項BADL(進食、盥洗、如廁、移位、步行等)\n0-100分；60分→中度依賴\n\nFIM(功能獨立性量表)：\n18項(運動13+認知5)\n1-7分量表；1=完全依賴、7=完全獨立\n\nADL層次：\nBADL：進食、洗澡、穿衣、如廁、移位\nIADL：理財、購物、烹飪、交通\n\nKAWA Model(河川模式)：\n文化敏感性；岩石=障礙，河床=環境\n\nECIS/COPM：\n主觀自我評估；找出重要且表現差的職能\n\n輔助科技分類：\nLow tech：加粗握柄\nHigh tech：AAC裝置' },
+      ]
+    },
+    {
+      id: 'pediatric_ot', icon: '🧒', name: '小兒職能治療', color: '#F97316',
+      cards: [
+        { title: '兒童發展里程碑', content: '粗動作：\n2個月：俯臥抬頭(45°)\n4個月：俯臥抬頭(90°)、翻身\n6個月：獨坐(支撐)\n9個月：爬行、拉站\n12個月：獨走\n18個月：跑步、上樓梯(手扶)\n\n精細動作：\n3個月：手張開、物品放嘴\n6個月：雙手傳物\n9個月：橈指抓握(Radial-palmar)\n12個月：捏取(Pincer grasp)\n18個月：堆2-3塊積木\n24個月：堆6塊、翻書頁\n\n語言：\n6週：社會性微笑\n3個月：咕咕聲\n6個月：牙牙學語\n12個月：單字(1-3個)\n24個月：雙詞句(>50個字)' },
+        { title: '感覺統合', content: 'Ayres 感覺統合：\n前庭覺：平衡、姿勢張力、眼球動作\n本體覺：身體位置感覺、動作計畫\n觸覺：識別、辨別、防禦\n\n感覺調節障礙：\n感覺過度反應(SMD)：觸覺防禦、聽覺過敏\n感覺不足反應：尋求感覺刺激\n感覺辨別障礙：兩點辨別差\n\n發展性協調障礙(DCD)：\n動作計畫差、書寫困難、運動表現低\n評估：MABC-2(Movement ABC)\n\n自閉症(ASD)感統介入：\n感覺飲食計畫、重壓、規律前庭刺激\n\n嬰兒顱骨變形：\n斜頭症(Plagiocephaly)：俯趴時間(Tummy time)\n肌性斜頸：SCM 牽拉' },
+      ]
+    },
+    {
+      id: 'psych_ot', icon: '💭', name: '心理疾病職治', color: '#EC4899',
+      cards: [
+        { title: '精神科職能治療', content: '職能治療在精神科角色：\n評估功能、日常生活、社會參與\n\n認知行為模式：\n思想→情緒→行為的連結\n認知重建、行為實驗\n\n精神復健原則：\n最小限制環境、以優勢為基礎\n工作復健、社區融合\n\n常見評估工具：\nAOF(職能功能評估)：精神疾病\nKIFS、OCAIRS：作業病史、職能表現\nRolle Checklist：角色滿意度\n\n精神科 OT 活動：\n工作坊、藝術/音樂治療\n日常生活技能訓練(IADL)\n社交技巧訓練\n\n認知障礙介入：\n記憶補償策略(日記、提醒系統)\n環境改造（標示、簡化）\nErrorless learning：阿茲海默症' },
+      ]
+    },
+  ],
+
+  nutrition: [
+    {
+      id: 'basic_nutrition', icon: '🥗', name: '基礎營養學', color: '#10B981',
+      cards: [
+        { title: '三大營養素速記', content: '醣類(Carbohydrates)：\n4 kcal/g，主要能量來源\n膳食纖維：水溶性(燕麥→降LDL)、非水溶性(麩皮→促排便)\nGI(升糖指數)：>70高GI，<55低GI\n精製醣→↑血糖、↑TG\n\n蛋白質(Protein)：\n4 kcal/g；氮平衡 N in = N out\n必需胺基酸(9種)：PVT TIM HaLL\n完全蛋白質：含全部必需AA(蛋、奶、肉)\n互補性蛋白質：米飯+豆類\nDRI：0.8 g/kg/day(成人)\n\n脂肪(Fat)：\n9 kcal/g\n飽和脂肪↑LDL；反式脂肪↑LDL+↓HDL\nω-3(EPA、DHA)：抗炎，魚油\nω-6(亞麻油酸)：必需，植物油\n膽固醇 DRI：<200 mg/day' },
+        { title: '維生素與礦物質', content: '脂溶性維生素(ADEK)：\nA：視覺、上皮、過多→致畸胎（孕婦注意）\nD：鈣磷吸收；缺→佝僂病/骨質疏鬆；來源：曬太陽\nE：抗氧化；缺→溶血性貧血（早產兒）\nK：凝血(II,VII,IX,X)；Warfarin 拮抗；新生兒需補充\n\n水溶性維生素：\nB1(Thiamine)：缺→腳氣病、Wernicke腦病\nB3(Niacin)：缺→Pellagra(3D)\nB9(Folate)：缺→巨球性貧血、NTDs（孕前補充）\nB12：缺→神經症狀；素食者注意\nC：膠原蛋白合成，缺→壞血病；促進鐵吸收\n\n礦物質：\nCa：1000mg/day；VitD促吸收\nFe：血紅素合成；VitC促吸收；茶/咖啡抑制\nI：甲狀腺素合成；缺→甲狀腺腫' },
+      ]
+    },
+    {
+      id: 'diet_therapy', icon: '🏥', name: '膳食療養學', color: '#3B82F6',
+      cards: [
+        { title: '糖尿病飲食', content: '目標：血糖控制、維持理想體重\n\n醣類計算：\n碳水化合物計算法(CHO counting)\n1份CHO = 15g = 1份\n\n升糖指數(GI) vs 升糖負荷(GL)：\nGL = GI × CHO(g) / 100\n\n飲食原則：\n- 定時定量\n- 低GI食物為主\n- 限制簡單醣類和精製食品\n- 增加膳食纖維\n- 限飽和脂肪(<7%總熱量)\n\n人工甜味劑：\nAcesulfame K、Aspartame(苯酮尿症禁用)、Sucralose\n\n低血糖處置(15-15法則)：\n15g 速效碳水化合物 → 等15分鐘 → 再測血糖' },
+        { title: '腎臟病飲食', content: 'CKD 飲食限制依分期：\n\n蛋白質限制：\nCKD 3-5期（非透析）：0.6-0.8 g/kg/day\n血液透析：1.0-1.2 g/kg/day\n腹膜透析：1.2-1.3 g/kg/day\n\n鉀：\n高鉀食物：香蕉、番茄、馬鈴薯、深綠葉\n降低鉀：煮熟去湯、切小塊浸水\n\n磷：\n限制：奶製品、堅果、可樂(磷酸)\nPhosphate binders：隨餐服用\n\n鈉：\n限制 <2g/天\n\n液體限制：透析患者依殘余尿量調整\n\n熱量：30-35 kcal/kg/day（維持體重）\n\nNPCal/gN 比：腎臟病高，減少蛋白質分解' },
+      ]
+    },
+    {
+      id: 'food_safety', icon: '🦠', name: '食品衛生與安全', color: '#EF4444',
+      cards: [
+        { title: '食品中毒分類', content: '細菌性（最常見）：\nStaph aureus：毒素型，1-6hr發作，耐熱毒素，TSST-1\nSalmonella：感染型，12-36hr，雞蛋/肉類，Typhoid fever\nClostridium botulinum：毒素型，神經症狀，罐頭食品\nE. coli O157:H7：HUS(溶血性尿毒症候群)\nVibrio parahaemolyticus：海鮮，夏季多發\nListeria：冷藏仍生長，孕婦危險\n\n自然毒素：\nHeterodon(河豚毒)：TTX，神經毒，無解毒劑\n麝香毒(毒貝)：PSP，麻痺性貝毒\n黃麴毒素(Aflatoxin)：B1最強，致肝癌，耐熱\n\nHACCP七大原則：\n危害分析→CCP確定→CL設定→\n監測→矯正措施→驗證→記錄保存' },
+      ]
+    },
+  ],
+
+  tcm1: [
+    {
+      id: 'tcm_basic1', icon: '☯️', name: '中醫基礎理論', color: '#10B981',
+      cards: [
+        { title: '陰陽五行', content: '陰陽學說：\n陰：寒、靜、降、內、抑制\n陽：熱、動、升、外、興奮\n陰陽互根：互為對立統一；孤陰不生、獨陽不長\n消長平衡：陰虛→陽亢；陽虛→陰盛\n轉化：物極必反（寒極生熱）\n\n五行：\n木(肝/膽)、火(心/小腸)、土(脾/胃)、金(肺/大腸)、水(腎/膀胱)\n\n相生（母子關係）：木→火→土→金→水→木\n相剋：木→土→水→火→金→木\n\n乘：相剋太過（木乘土 = 肝氣犯脾）\n侮：反克（金反侮木）\n\n生命之本：腎為先天之本；脾為後天之本' },
+        { title: '臟腑學說', content: '五臟（藏精氣，不瀉）：\n心：主血脈、神志；舌為心之苗；汗為心之液\n肺：主氣司呼吸、主宣降；皮毛為肺之所合\n脾：主運化、主升清；口為脾之竅\n肝：主疏洩、藏血；目為肝之竅；肝主筋\n腎：主藏精、水液代謝、納氣；腰為腎之府\n\n六腑（傳化物，不藏）：\n膽、胃、小腸、大腸、膀胱、三焦\n\n奇恆之腑：腦、髓、骨、脈、膽、女子胞\n\n心腎相交：水火既濟（心火下溫腎水、腎水上濟心火）\n肝腎同源：乙癸同源（精血互化）\n脾腎為先後天之本' },
+        { title: '病因與病機', content: '六淫（外感）：\n風：百病之長，善行數變\n寒：主收引、凝滯，易傷陽氣\n暑：夏季，挾濕\n濕：重濁黏滯，阻氣機\n燥：傷津（秋燥）\n火（熱）：生瘡、動血、擾神\n\n七情（內傷）：\n喜→心；怒→肝；思→脾；悲/憂→肺；恐/驚→腎\n\n正虛邪實：邪氣傷人 + 正氣不足\n氣虛：倦怠、氣短、自汗\n血虛：面白、心悸、失眠\n陰虛：潮熱、盜汗、五心煩熱\n陽虛：畏寒肢冷、神疲、舌淡苔白\n\n氣滯血瘀：肝氣鬱結→血行不暢→痛有定處' },
+      ]
+    },
+    {
+      id: 'tcm_herbs', icon: '🌿', name: '中藥學', color: '#84CC16',
+      cards: [
+        { title: '中藥四氣五味', content: '四氣（性）：寒、涼、溫、熱（+平）\n寒/涼藥：清熱、瀉火、解毒（治熱證）\n溫/熱藥：散寒、溫中、助陽（治寒證）\n\n五味：酸、苦、甘、辛、鹹\n酸：收斂固澀（如五味子）\n苦：清熱燥濕、降氣（如黃連）\n甘：補益、緩急止痛（如甘草）\n辛：發散、行氣（如麻黃）\n鹹：軟堅散結（如海藻）\n\n升降浮沉：\n升浮（向上向外）：辛甘溫，發散透表\n沉降（向下向內）：酸苦鹹寒，清熱瀉下\n\n歸經：藥物對特定臟腑的選擇性\n引經藥：桔梗（肺）、黃連（心）、白芍（肝）、甘草（脾）' },
+        { title: '常用中藥速記', content: '解表藥：\n麻黃：辛溫，發汗、平喘、利水；高血壓禁用\n桂枝：辛甘溫，發汗解肌、溫通經脈\n柴胡：辛苦微寒，疏肝解鬱、退熱\n\n清熱藥：\n黃連：苦寒，清心胃之火，治濕熱下痢\n黃芩：苦寒，清肺熱\n石膏：辛甘大寒，清氣分實熱\n生地黃：清熱涼血、養陰\n\n補益藥：\n人參：大補元氣；陰虛燥熱忌用\n黃芪：補氣固表，托毒生肌\n當歸：補血活血，調經止痛\n熟地黃：補血、滋陰\n枸杞：滋補肝腎，益精明目\n\n七情配伍：相須、相使(增效)、相畏/相殺(減毒)、相惡/相反(減效或有害)' },
+      ]
+    },
+  ],
+
+  tcm2: [
+    {
+      id: 'tcm_internal', icon: '🫁', name: '中醫內科', color: '#8B5CF6',
+      cards: [
+        { title: '感冒辨證論治', content: '風寒感冒：\n症狀：惡寒重、發熱輕、無汗、鼻塞流清涕\n舌脈：舌苔薄白、脈浮緊\n治則：辛溫解表\n方劑：麻黃湯、桂枝湯\n\n風熱感冒：\n症狀：發熱重、惡寒輕、咽痛、鼻涕黃\n舌脈：舌尖紅、苔薄黃、脈浮數\n治則：辛涼解表\n方劑：銀翹散、桑菊飲\n\n暑濕感冒（夏季）：\n症狀：發熱、頭痛、胸悶、嘔吐\n方劑：藿香正氣散\n\n體虛感冒：\n氣虛：參蘇飲\n陰虛：加減葳蕤湯' },
+        { title: '中醫胸痹心痛', content: '即西醫冠心病/心絞痛\n\n病機：心脈不通（不通則痛）\n\n辨證分型：\n心血瘀阻：刺痛固定，夜重；血府逐瘀湯\n氣滯心胸：脹痛、善太息；柴胡疏肝散\n痰濁閉阻：悶痛、形胖；瓜蔞薤白半夏湯\n寒凝心脈：遇寒劇痛；枳實薤白桂枝湯\n心腎陰虛：隱痛、潮熱盜汗；天王補心丹\n心腎陽虛：絞痛、畏寒肢冷；參附湯\n\n急症處理：蘇冰滴丸（通心絡）\n\n常用中成藥：\n速效救心丸：芳香開竅，急救用\n丹參滴丸：活血化瘀' },
+      ]
+    },
+    {
+      id: 'acupuncture', icon: '📍', name: '針灸學', color: '#EF4444',
+      cards: [
+        { title: '十二正經與奇經', content: '手三陰（走向：胸→手）：肺、心包、心\n手三陽（走向：手→頭）：大腸、三焦、小腸\n足三陽（走向：頭→足）：胃、膽、膀胱\n足三陰（走向：足→胸）：脾、肝、腎\n\n奇經八脈：\n督脈：陽脈之海，腰背正中\n任脈：陰脈之海，腹胸正中\n衝脈：血海\n\n重要腧穴：\n合谷(LI4)：面口合谷收，頭面問題\n足三里(ST36)：強壯保健、消化系統\n內關(PC6)：寬胸理氣、止嘔、心悸\n三陰交(SP6)：婦科、三陰交匯\n委中(BL40)：腰背委中求\n關元(CV4)：補腎固元\n百會(DU20)：升陽固脫' },
+        { title: '針灸治療原則', content: '取穴原則：\n近部取穴：病位附近\n遠部取穴：循經遠取（面痛取合谷）\n辨證取穴：依證型選穴\n對症取穴：特效穴（止嘔取內關）\n\n補瀉手法：\n補法：順經、輕刺、留針長、捻轉幅小\n瀉法：逆經、重刺、出針快、捻轉幅大\n\n禁忌：\n孕婦：合谷、三陰交、腹部穴禁針\n出血傾向：禁針\n皮膚感染處：禁針\n過饑過飽過勞：禁針\n\n暈針：面白、冷汗、脈弱 → 立即出針、平臥、保暖\n\n灸法：艾灸，溫通經絡\n適用：虛寒證；禁用於實熱、陰虛陽亢' },
+      ]
+    },
+  ],
+
+  radiology: [
+    {
+      id: 'radiation_physics', icon: '⚛️', name: '醫學物理與輻射', color: '#3B82F6',
+      cards: [
+        { title: '輻射基本概念', content: 'X 射線產生：\nBremsstrahlung(制動輻射)：電子減速時放出\n特性X射線：內層電子躍遷放出\n\n輻射量：\n照射量(Exposure)：空氣中游離量，單位 R(倫琴)\n吸收劑量(Absorbed dose)：Gray(Gy) = J/kg\n等效劑量(Equivalent dose)：Sievert(Sv) = Gy × WR\n有效劑量：各器官×組織權重因子(WT)之和\n\n輻射品質因子(WR)：\nX ray/γ/β：1；中子：5-20；α：20\n\n天然背景輻射：台灣約 2 mSv/年\n\n游離輻射防護三原則：\n1. 距離（劑量∝1/r²）\n2. 時間（縮短）\n3. 屏蔽（鉛等）' },
+        { title: '輻射防護與安全', content: '輻射防護目的：\n防止確定性效應（閾值劑量）\n降低隨機性效應（癌症、遺傳）發生率\n\nALARA 原則：\n劑量合理地最低（As Low As Reasonably Achievable）\n\n法規劑量限制（年有效劑量）：\n輻射工作人員：50 mSv/年；5年內≤100mSv\n一般大眾：1 mSv/年\n孕婦（腹部）：2 mSv（任何9個月）\n\n個人劑量監測：\nTLD(熱發光劑量計)：正式量測\nFilm badge：感光度可作證據\n電子個人劑量計(EPD)：即時讀數\n\n輻射事故緊急處理：\n除污(contamination removal)優先\n醫療救治其次（生命優先）' },
+      ]
+    },
+    {
+      id: 'radiographic_equipment', icon: '📡', name: '放射線器材學', color: '#8B5CF6',
+      cards: [
+        { title: 'X 光機構造', content: 'X 光管：\n陰極(Cathode)：鎢絲燈，熱電子放射\n陽極(Anode)：鎢靶，電子撞擊→X光\n旋轉陽極：散熱，可承受高mA\n\n管電壓(kVp)：決定X光穿透力(質)\n管電流(mAs)：決定X光量(量)\n\n焦點(Focal spot)：\n實際焦點 vs 有效焦點(Effective focus)\n陽極跟角(Anode heel effect)：陽極端強度較低\n\nBucky/Grid：\n散射線吸收，提高對比\nGrid ratio = h/d (高/間距)\n\n螢光增感屏(Intensifying screen)：\n吸收X光→轉為可見光→曝光膠片\n影像板(IP, Imaging Plate)：CR系統\n平板偵測器(FPD)：DR系統，最新' },
+        { title: 'MRI 與超音波', content: 'MRI：\n原理：氫原子核在磁場中共振\nT1：組織固有，水=暗、脂肪=亮\nT2：水=亮（水腫、炎症明顯）\n\nT1 vs T2 應用：\nT1：解剖、出血、脂肪\nT2：病灶(水腫)、腦脊液\nFLAIR：T2+抑水 → 白質病灶\nDWI：急性中風（細胞毒性水腫）\n\nMRI 禁忌：\n心臟節律器（絕對）、磁性金屬植入物\n\n超音波(US)：\n原理：壓電效應，2-18 MHz\n高頻：解析度佳、穿透差（淺層組織）\n低頻：解析度差、穿透佳（深層組織）\n\nDoppler：血流速度和方向\n彩色都卜勒：紅近藍遠(BART)\n\n禁忌：無絕對禁忌（無游離輻射）' },
+      ]
+    },
+    {
+      id: 'nuclear_medicine', icon: '☢️', name: '核子醫學', color: '#F97316',
+      cards: [
+        { title: '核子醫學基礎', content: '放射性藥物：\n示蹤劑(Tracer)：放射性核種標記\n最常用：⁹⁹ᵐTc（鍀-99m）\n半衰期：6小時；γ能量 140 keV（適合掃描）\n\n常見核醫檢查：\n骨掃描(Bone scan)：⁹⁹ᵐTc-MDP，骨轉移偵測\nFDG PET：¹⁸F-FDG，腫瘤代謝（葡萄糖攝取↑）\n心肌灌注掃描：⁹⁹ᵐTc-MIBI or ²⁰¹Tl\n甲狀腺掃描：¹²³I or ⁹⁹ᵐTcO₄⁻\n腎掃描：⁹⁹ᵐTc-DTPA(GFR), MAG3(腎小管)\n\nPET vs SPECT：\nPET：正子+電子→兩個511 keV γ光子（coincidence）\nSPECT：單光子，旋轉γ相機→3D重建\nPET解析度>SPECT\n\n治療：¹³¹I治療甲狀腺機能亢進/甲狀腺癌' },
+      ]
+    },
+  ],
 }
 
 // ── Components ──────────────────────────────────────────────────
@@ -550,7 +757,7 @@ function NoteCard({ card, index, subjectId }) {
 export default function Notes() {
   const navigate = useNavigate()
   const exam = usePlayerStore(s => s.exam) || 'doctor1'
-  const subjects = NOTES[exam] || NOTES.doctor1
+  const subjects = NOTES[exam] || []
   const [selectedSubject, setSelectedSubject] = useState(null)
 
   if (selectedSubject) {
@@ -597,28 +804,42 @@ export default function Notes() {
           <button onClick={() => navigate(-1)} className="text-white/60 text-2xl leading-none">‹</button>
           <div>
             <h1 className="text-white font-bold text-xl">📒 精華筆記</h1>
-            <p className="text-white/50 text-xs">{subjects.length} 大科目高頻考點速記</p>
+            <p className="text-white/50 text-xs">{subjects.length > 0 ? `${subjects.length} 大科目高頻考點速記` : '整理中'}</p>
           </div>
         </div>
       </div>
 
       <div className="flex-1 px-4 py-4 flex flex-col gap-2.5">
-        {subjects.map((subj) => (
-          <button key={subj.id} onClick={() => setSelectedSubject(subj.id)}
-            className="w-full text-left bg-white rounded-2xl px-5 py-4 border border-gray-100 shadow-sm transition-all active:scale-[0.97]">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"
-                   style={{ backgroundColor: subj.color + '15' }}>
-                {subj.icon}
+        {subjects.length === 0 ? (
+          <div className="flex-1 flex flex-col items-center justify-center text-center py-16">
+            <div className="text-5xl mb-4">📝</div>
+            <p className="text-medical-dark font-bold text-base">此考試精華筆記整理中</p>
+            <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+              目前已支援：醫師一階、二階、牙醫一階、二階、藥師一階、二階
+            </p>
+            <button onClick={() => navigate('/practice')}
+              className="mt-6 px-6 py-3 rounded-2xl font-bold text-sm text-white grad-cta active:scale-95">
+              直接去練習題目
+            </button>
+          </div>
+        ) : (
+          subjects.map((subj) => (
+            <button key={subj.id} onClick={() => setSelectedSubject(subj.id)}
+              className="w-full text-left bg-white rounded-2xl px-5 py-4 border border-gray-100 shadow-sm transition-all active:scale-[0.97]">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0"
+                     style={{ backgroundColor: subj.color + '15' }}>
+                  {subj.icon}
+                </div>
+                <div className="flex-1">
+                  <p className="font-bold text-base text-medical-dark">{subj.name}</p>
+                  <p className="text-gray-400 text-xs mt-0.5">{subj.cards.length} 張精華卡 · {subj.cards.map(c => c.title).slice(0, 2).join('、')}{subj.cards.length > 2 ? '…' : ''}</p>
+                </div>
+                <span className="text-gray-300 text-xl">›</span>
               </div>
-              <div className="flex-1">
-                <p className="font-bold text-base text-medical-dark">{subj.name}</p>
-                <p className="text-gray-400 text-xs mt-0.5">{subj.cards.length} 張精華卡 · {subj.cards.map(c => c.title).slice(0, 2).join('、')}{subj.cards.length > 2 ? '…' : ''}</p>
-              </div>
-              <span className="text-gray-300 text-xl">›</span>
-            </div>
-          </button>
-        ))}
+            </button>
+          ))
+        )}
       </div>
     </div>
   )

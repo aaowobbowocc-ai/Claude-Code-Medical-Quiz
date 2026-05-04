@@ -150,7 +150,9 @@ export function useExplain() {
         { question: q.question, options: q.options, answer: q.answer,
           subject_name: q.subject_name || q.subject, user_answer: q.user_answer,
           question_id: q.id, exam: usePlayerStore.getState().exam || 'doctor1',
-          shared_bank: q.isSharedBank ? q.sourceBankId : undefined },
+          shared_bank: q.isSharedBank ? q.sourceBankId : undefined,
+          incomplete: q.incomplete, disputed: q.disputed,
+          has_image: !!(q.image_url || q.images?.length || q.option_images) },
         (chunk) => {
           if (activeQidRef.current !== qid) return
           setText(t => t + chunk)

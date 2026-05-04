@@ -266,7 +266,8 @@ function registerRoutes(app, examData, stats) {
 
   // POST /explain
   app.post('/explain', async (req, res) => {
-    const { question, options, answer, subject_name, user_answer, question_id, exam, shared_bank } = req.body;
+    const { question, options, answer, subject_name, user_answer, question_id, exam, shared_bank,
+            incomplete, disputed, has_image } = req.body;
     if (!question || !options || !answer) return res.status(400).json({ error: 'missing fields' });
 
     const questionsData = examData[exam] || examData.doctor1;
@@ -321,8 +322,29 @@ function registerRoutes(app, examData, stats) {
 
     const examMeta = examData[exam] || examData.doctor1;
     const examName = examMeta.metadata?.category || '醫師國考';
+
+    // Conditional notes based on question metadata
+    const notes = [];
+    if (incomplete === 'missing_image' || (incomplete === true && has_image)) {
+      notes.push('⚠️ 本題原 PDF 含圖片但模型看不到。請以題目文字推斷影像特徵，並說明若是常見表現該如何判讀。');
+    }
+    if (incomplete === 'image_options') {
+      notes.push('⚠️ 本題 4 個選項是影像（介面已顯示）。請說明每個選項代表的臨床/影像表現，協助考生比對畫面。');
+    }
+    if (disputed) {
+      notes.push('⚠️ 本題為考選部認定的爭議題（送分），可指出題目歧義所在，並說明各選項合理性。');
+    }
+    const noteBlock = notes.length ? '\n' + notes.join('\n') + '\n' : '';
+
     const prompt = `你是一位臺灣${examName}的解題老師，用繁體中文回答。
 
+【作答原則】
+1. 以題幹線索為核心：題目給的資訊（數據、病史、條文、案例）優先使用，不要憑空加細節。
+2. 台灣考試標準：以台灣現行法規、官方指引、學會共識為準（醫學題用台灣醫學會指引/健保；法律題用台灣現行法）。
+3. 不確定的精確數值（劑量、年限、金額、百分比、cutoff）要標「約」或「依指引」，不要編造具體數字。
+4. 若知識點冷門或題幹資訊不足，誠實說「題幹資訊有限，常見答案是 X」，不要硬掰機制。
+5. 避免無翻譯的艱澀外文；專有名詞中英並列。
+${noteBlock}
 科目：${subject_name}
 題目：${question}
 
@@ -335,7 +357,7 @@ ${wrongNote}
 請用以下格式回答（每段都要有，簡潔扼要）：
 
 **✅ 為什麼答案是 ${answer}**
-（說明核心機制或概念，2-3句）
+（從題幹線索出發，說明核心機制或概念，2-3句）
 
 **❌ 排除其他選項**
 （每個錯誤選項一句話說明為何不對）

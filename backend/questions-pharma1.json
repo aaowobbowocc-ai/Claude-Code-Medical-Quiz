@@ -68812,8 +68812,7 @@
         "D": "CH3-CH2-CHBr(C1)的-CH3上三個氫之屬性為homotopic"
       },
       "answer": "A",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_113020_p1_14_0.webp"
     },
     {
       "id": "113020_1_15",
@@ -86151,8 +86150,7 @@
         "D": "stearic acid"
       },
       "answer": "A",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_115020_p2_66_0.webp"
     },
     {
       "id": "115020_2_67",
@@ -92411,8 +92409,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_100030_p1_19_0.webp"
     },
     {
       "id": 115021253,
@@ -95197,8 +95194,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_100030_p2_79_0.webp"
     },
     {
       "id": 115021392,
@@ -104628,8 +104624,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_103090_p2_71_0.webp"
     },
     {
       "id": 115021862,
@@ -109077,8 +109072,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_104020_p2_52_0.webp"
     },
     {
       "id": 115022083,
@@ -130896,8 +130890,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_105100_p1_14_0.webp"
     },
     {
       "id": 115023345,
@@ -131138,8 +131131,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_105100_p1_26_0.webp"
     },
     {
       "id": 115023357,
@@ -133644,8 +133636,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_105100_p2_71_0.webp"
     },
     {
       "id": 115023482,
@@ -136152,8 +136143,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_104090_p1_30_0.webp"
     },
     {
       "id": 115023601,
@@ -136491,8 +136481,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_104090_p1_46_0.webp"
     },
     {
       "id": 115023617,
@@ -138637,8 +138626,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_104090_p2_68_0.webp"
     },
     {
       "id": 115023719,
@@ -140665,8 +140653,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_100140_p1_5_0.webp"
     },
     {
       "id": 115023815,
@@ -141280,8 +141267,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pharma1_100140_p1_36_0.webp"
     },
     {
       "id": 115023844,
@@ -148964,6 +148950,66 @@
         "D": "四粒膠囊"
       },
       "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 115024208,
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "100030",
+      "subject": "卷二",
+      "subject_tag": "pharmaceutical_analysis",
+      "subject_name": "藥物分析",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列化合物中,其光譜吸收之 λmax最長者為:",
+      "options": {
+        "A": "C₆H₆",
+        "B": "C₆H₅COOH",
+        "C": "C₆H₅ CH=CH COOH",
+        "D": "C₆H₅OH"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 115024209,
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "101030",
+      "subject": "卷一",
+      "subject_tag": "pharmacology",
+      "subject_name": "藥理學",
+      "stage_id": 0,
+      "number": 71,
+      "question": "X 為下列何者?",
+      "options": {
+        "A": "Ranitidine",
+        "B": "Nizatidine",
+        "C": "Famotidine",
+        "D": "Cimetidine"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 115024210,
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "101030",
+      "subject": "卷一",
+      "subject_tag": "pharmacology",
+      "subject_name": "藥理學",
+      "stage_id": 0,
+      "number": 73,
+      "question": "下列何者具有 N-之結構?",
+      "options": {
+        "A": "Promethazine",
+        "B": "Pyrrobutamine",
+        "C": "Phenindamine",
+        "D": "Chlorcyclizine"
+      },
+      "answer": "B",
       "explanation": ""
     }
   ],

@@ -68201,7 +68201,7 @@
       "subject_name": "臨床生理學",
       "stage_id": 1,
       "number": 25,
-      "question": "有關肺泡及呼吸膜的敘述，下列何者錯誤 下列何者錯誤？ 安全性高 須另有參考電極 電刺激是神經傳導檢查的標準刺激方式 波通常位於： ，緩衝能力最大的前二個系統依序為何？ 進行血液氣體分析檢查，下列操作何者正確？ 可抽靜脈血做氣體分析即可 直接在頸動脈抽血較易找到血管，而且也相對安全 （heparin）密封、冰浴並快速送檢 故採血管在37°C保存下，應在2小時內完成檢驗 血液氣體分析結果為pH 7.26、   ：28.6 mmHg、 ？ 下列何者最不可能？ 下列何者錯誤？ 小時內完成檢驗 ：90 mmHg、HCO3 - ：11.0",
+      "question": "有關肺泡及呼吸膜的敘述，下列何者錯誤？",
       "options": {
         "A": "肺泡上的細胞會分泌界面活性素（surfactant）",
         "B": "成人呼吸窘迫症候群的特徵是瀰漫性的肺泡破壞",
@@ -68425,12 +68425,12 @@
       "subject_name": "臨床生理學",
       "stage_id": 1,
       "number": 36,
-      "question": "下列何種超音波模式，是將回音的界面深度當",
+      "question": "下列何種超音波模式，是將回音的界面深度當 Y 軸、時間當 X 軸、回音的強度以亮點表示？",
       "options": {
-        "A": "A模式",
-        "B": "B模式",
-        "C": "M模式",
-        "D": "S模式 依此心臟超音波可以得到的資訊，下列何者錯誤？ ）的定義為： 關於不同頻率的超音波掃描穿透力之敘述，下列何者錯誤？ 公分 公分 公分 公分 是將回音的界面深度當Y軸、時間當X軸、回音的強度以亮點表示回音的強度以亮點表示？"
+        "A": "A 模式",
+        "B": "B 模式",
+        "C": "M 模式",
+        "D": "S 模式"
       },
       "answer": "C",
       "explanation": ""
@@ -145716,7 +145716,7 @@
       "number": 74,
       "question": "下列何者為家族性腺瘤性息肉病（familial adenomatous polyposis）最主要之基因突變？",
       "options": {
-        "A": "PC",
+        "A": "APC",
         "B": "RAF",
         "C": "MLH1",
         "D": "MSH2"
@@ -153645,8 +153645,7 @@
         "D": "左腳對右腳的電位差"
       },
       "answer": "B",
-      "explanation": "",
-      "image_url": "/question-images/medlab_108100_p0_5_0.webp"
+      "explanation": ""
     },
     {
       "id": 7630,
@@ -153726,10 +153725,7 @@
         "D": "心房性纖維顫動（atrial fibrillation）"
       },
       "answer": "B",
-      "explanation": "",
-      "images": [
-        "/question-images/medlab_7635_0.webp"
-      ]
+      "explanation": ""
     },
     {
       "id": 7634,
@@ -153749,7 +153745,8 @@
         "D": "極端心軸偏位"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "image_url": "/question-images/medlab_108100_p0_6_0.webp"
     },
     {
       "id": 7635,
@@ -184749,12 +184746,12 @@
       "subject_name": "病理學",
       "stage_id": 2,
       "number": 65,
-      "question": "泌尿系統感染的尿液分析以下列那些物質的增加為主？細菌 白血球 紅血球 葡萄糖",
+      "question": "泌尿系統感染的尿液分析以下列那些物質的增加為主？①細菌 ②白血球 ③紅血球 ④葡萄糖",
       "options": {
-        "A": "僅",
-        "B": "僅",
-        "C": "僅",
-        "D": "僅"
+        "A": "僅①②③",
+        "B": "僅③④",
+        "C": "僅①②",
+        "D": "僅①③"
       },
       "answer": "C",
       "explanation": ""
@@ -241150,8 +241147,7 @@
         "D": "U波"
       },
       "answer": "A",
-      "explanation": "",
-      "image_url": "/question-images/medlab_105020_p0_3_0.webp"
+      "explanation": ""
     },
     {
       "id": 11991,
@@ -271889,12 +271885,12 @@
       "subject_name": "病理學",
       "stage_id": 2,
       "number": 61,
-      "question": "下列何種人最易得伺機性感染（Opportunistic infection）？",
+      "question": "下列何種人最易得伺機性感染（Opportunistic infection）？",
       "options": {
-        "A": "長途飛",
-        "B": "行的乘客",
-        "C": "免疫力",
-        "D": "低下的人"
+        "A": "長途飛行的乘客",
+        "B": "免疫力低下的人",
+        "C": "懷孕的婦女",
+        "D": "常運動的人"
       },
       "answer": "B",
       "explanation": ""
@@ -272120,12 +272116,12 @@
       "subject_name": "病理學",
       "stage_id": 2,
       "number": 79,
-      "question": "嗜鉻細胞瘤（Pheochromocytoma）可發生在下列那一種腺體？",
+      "question": "嗜鉻細胞瘤（Pheochromocytoma）可發生在下列那一種腺體？",
       "options": {
-        "A": "腎上腺皮",
-        "B": "質",
-        "C": "腎上腺髓",
-        "D": "質"
+        "A": "腎上腺皮質",
+        "B": "腎上腺髓質",
+        "C": "甲狀腺",
+        "D": "腦下垂體"
       },
       "answer": "B",
       "explanation": ""

@@ -69,7 +69,7 @@ function audit(examId) {
   return { examId, examName: cfg.name, papers: cfg.papers.length, perSession: cfg.papers.reduce((s,p) => s + (p.count || 0), 0), issues }
 }
 
-const EXAMS = ['doctor1','doctor2','dental1','dental2','pharma1','pharma2','nursing','nutrition','medlab','pt','ot','radiology','tcm1','tcm2','vet','social-worker','audiologist','speech-therapist']
+const EXAMS = ['doctor1','doctor2','dental1','dental2','pharma1','pharma2','nursing','nutrition','medlab','pt','ot','radiology','tcm1','tcm2','vet','social-worker','audiologist','speech-therapist','civil-senior','police','police4','judicial','customs','lawyer1']
 
 // "Expected missing" — sessions/years that legitimately don't exist (exam not
 // held, exam started later, future year). Format: { exam: ['year-session', ...] }
@@ -98,6 +98,34 @@ const EXPECTED_MISSING = (() => {
   }
   m['speech-therapist'].add('104-1')  // probed: not on MoEX
   m['speech-therapist'].add('115-1')  // PDF 尚未上線
+  // 公職類考試起始年/場次（依現有資料推算，待 probe 確認）：
+  // civil-senior 高考三等：106 年起，每年一次（第一次）
+  for (let y = 100; y <= 115; y++) {
+    if (y < 106) { m['civil-senior'].add(`${y}-1`); m['civil-senior'].add(`${y}-2`) }
+    else m['civil-senior'].add(`${y}-2`)  // 一年一試
+  }
+  // police/police4 一般警察特考：JSON 從 108 起，需 probe 確認 105-107 是否存在
+  for (let y = 100; y <= 115; y++) {
+    if (y < 108) { m['police'].add(`${y}-1`); m['police'].add(`${y}-2`) }
+    else m['police'].add(`${y}-2`)  // 一年一試
+    if (y < 108) { m['police4'].add(`${y}-1`); m['police4'].add(`${y}-2`) }
+    else m['police4'].add(`${y}-2`)
+  }
+  // judicial 司法特考三等：106 起一年一次
+  for (let y = 100; y <= 115; y++) {
+    if (y < 106) { m['judicial'].add(`${y}-1`); m['judicial'].add(`${y}-2`) }
+    else m['judicial'].add(`${y}-2`)
+  }
+  // customs 關務特考三等：108 起，含 115
+  for (let y = 100; y <= 115; y++) {
+    if (y < 108) { m['customs'].add(`${y}-1`); m['customs'].add(`${y}-2`) }
+    else m['customs'].add(`${y}-2`)
+  }
+  // lawyer1 律師一試：105 起，每年一試
+  for (let y = 100; y <= 115; y++) {
+    if (y < 105) { m['lawyer1'].add(`${y}-1`); m['lawyer1'].add(`${y}-2`) }
+    else m['lawyer1'].add(`${y}-2`)
+  }
   return m
 })()
 

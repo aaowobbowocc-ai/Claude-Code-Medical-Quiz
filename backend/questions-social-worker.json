@@ -17774,7 +17774,7 @@
       "subject_name": "社會工作直接服務",
       "stage_id": 2,
       "number": 13,
-      "question": "有關生態圖的繪製，下列注意事項何者正確？①通常中央畫案主的家系圖 ②家系圖周圍環繞著數個圓圈 ③案主/案家與系統間的關係用不同的線條表示 ④線條上的箭頭代表資源的流向是單向或雙向 ⑤案主/案家與不同系統的線條當中波折線代表不確定的關係",
+      "question": "有關生態圖的繪製,下列注意事項何者正確? ①通常中央畫案主的家系圖 ②家系圖周圍環繞著數個圓圈 ③案主/案家與系統間的關係用不同的線條表示 ④線條上的箭頭代表資源的流向是單向或雙向 ⑤案主/案家與不同系統的線條當中波折線代表不確定的關係",
       "options": {
         "A": "①③①①",
         "B": "①①①①",
@@ -17782,9 +17782,7 @@
         "D": "①①①"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "explanation": ""
     },
     {
       "id": 890,
@@ -25618,14 +25616,13 @@
       "number": 9,
       "question": "ERG 理論是常見的激勵理論之一，相較於Maslow 的需求理論，有關ERG 理論的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "ERG 理論包含生存需求、關係需求及成長需求",
+        "B": "ERG 理論認為需求的重要性可能因人而異",
+        "C": "ERG 理論認為個人同時只有一種需求",
+        "D": "ERG 理論認為若高層次的需求受挫,則會導致退化以追求較低層次需求的滿足"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 1282,
@@ -38537,16 +38534,15 @@
       "subject_name": "社會工作",
       "stage_id": 1,
       "number": 19,
-      "question": "在Bronfenbrenner（1979）的生態系統中，如果社會工作師評估案主的家庭生活對學校表現的影響，此時社會工作師是在評估案主的那一個系統層次？",
+      "question": "在 Bronfenbrenner (1979) 的生態系統中，如果社會工作師評估案主的家庭生活對學校表現的影響，此時社會工作師是在評估案主的那一個系統層次？",
       "options": {
-        "A": "",
+        "A": "微觀系統 (microsystem)",
         "B": "微觀系統（microsystem）",
-        "C": "",
+        "C": "鉅視系統 (macrosystem)",
         "D": "外部系統（exosystem）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 2404,
@@ -38600,14 +38596,13 @@
       "number": 22,
       "question": "社會工作者的「紀錄撰寫不實」是屬於那一種業務過失？",
       "options": {
-        "A": "",
+        "A": "濫權 (misfeasance)",
         "B": "濫權（misfeasance）",
-        "C": "",
+        "C": "怠職 (nonfeasance)",
         "D": "瀆職（malfeasance）"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 2407,
@@ -38941,14 +38936,13 @@
       "number": 39,
       "question": "下列那一項關於長期照顧服務法的敘述錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "長期照顧機構依服務內容區分為五大類",
+        "B": "民國 104 年 6 月公布「長期照顧服務法」",
+        "C": "長期照顧機構不能收取服務使用者費用",
+        "D": "考量多元文化是長期照顧服務品質基準的訂定原則之一"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 2424,
@@ -38962,14 +38956,13 @@
       "number": 40,
       "question": "關於臺灣學校社會工作的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "主要以駐校模式、巡迴模式與方案委託方式進入學校",
+        "B": "學校社會工作關心的服務對象包括學生、家庭、學校和社區",
+        "C": "工作模式包括學校變遷模式、社會互動模式、社區學校模式",
+        "D": "「兒童及少年福利與權益保障法」為學校社會工作進入校園輔導網絡提供了法源依據"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 2425,
@@ -54983,6 +54976,246 @@
         "D": "回應（responsiveness）"
       },
       "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 3219,
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106030",
+      "subject": "社會工作直接服務",
+      "subject_tag": "social_work_direct",
+      "subject_name": "社會工作直接服務",
+      "stage_id": 0,
+      "number": 3,
+      "question": "一位逃家少女跟社工說:「我對於爸爸管教的方法實在無法接受,爸爸很明顯的偏愛哥哥,家裡有好吃的不都先給哥哥吃,我什麼都沒有,還得幫忙照顧妹妹,妹妹也只會撒嬌,我變成了家人的眼中釘,既然得家人看到我就覺得礙眼……」聽完這個少女對家人的描述後,社工回答:「你覺得難受,也很受傷,因為妳覺得爸爸偏心。」請問這位社工所用的 是那一種技巧?",
+      "options": {
+        "A": "再框架 (reframing)",
+        "B": "同理 (empathy)",
+        "C": "充權 (empowerment)",
+        "D": "真誠 (authenticity)"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 3220,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108020",
+      "subject": "社會工作直接服務",
+      "subject_tag": "social_work_direct",
+      "subject_name": "社會工作直接服務",
+      "stage_id": 0,
+      "number": 28,
+      "question": "有關角色扮演的知識和概念何者正確？\n①Lewin是心理劇、社會劇最重要的創始人\n②心理劇是一種無腳本的演出\n③社會劇可增加社會角色和社會問題的理解\n④演出受霸凌者心聲的教育短劇演員，其自我揭露最深",
+      "options": {
+        "A": "僅①②④",
+        "B": "僅②③④",
+        "C": "僅①③",
+        "D": "僅②③"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 3221,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109030",
+      "subject": "社會工作",
+      "subject_tag": "social_work",
+      "subject_name": "社會工作",
+      "stage_id": 0,
+      "number": 19,
+      "question": "有關優勢觀點的理論假設，下列何者正確？①每個人都有優勢 ②社會工作者要促進個人對制度壓迫的覺察 ③童年經驗會決定個人如何反應 ④人在面對逆境時常會展現復原力 ⑤服務使用者有能力決定什麼是對他們最好的",
+      "options": {
+        "A": "①④⑤",
+        "B": "①②④",
+        "C": "①②⑤",
+        "D": "①②③"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 3222,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109030",
+      "subject": "社會工作直接服務",
+      "subject_tag": "social_work_direct",
+      "subject_name": "社會工作直接服務",
+      "stage_id": 0,
+      "number": 23,
+      "question": "有關團體工作的歷史發展，下列何者正確？\n①1950年代及1960年代，在鄉里中心及社區機構運用團體方法，來推動社區發展與社會運動\n②1960年代社會工作學院實務朝向綜融觀點發展，導致團體工作方法蓬勃發展\n③1930年代至1940年代間，影響團體工作發展的兩大議題，一為對貧窮作戰，一為公民權利運動\n④1980年代及1990年代，社會團體工作促進協會(AASWG)透過辦理專題研討會、促進團體工作課程之規劃、發展團體工作教育的標準等，試圖復興社會團體工作，持續且不斷地增加\n⑤社會個案工作的先驅Mary Richmond於1920年代開始注意到小團體心理學",
+      "options": {
+        "A": "①④⑤",
+        "B": "①②③④⑤",
+        "C": "②③④⑤",
+        "D": "①③④⑤"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 3223,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110030",
+      "subject": "社會工作",
+      "subject_tag": "social_work",
+      "subject_name": "社會工作",
+      "stage_id": 0,
+      "number": 4,
+      "question": "Greenwood（1957）曾以幾個特質評論社會工作已具專業性，下列何者非 Greenwood 所列之特質？",
+      "options": {
+        "A": "一套專業知識",
+        "B": "具有專業的權威",
+        "C": "共同信守的倫理守則",
+        "D": "具備專業高度感"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 3224,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110030",
+      "subject": "社會工作",
+      "subject_tag": "social_work",
+      "subject_name": "社會工作",
+      "stage_id": 0,
+      "number": 21,
+      "question": "根據 Reamer（1999）的說法，社會工作的發展史上至少有六種不同的價值取向。下列那一個取向極少涉及價值或規範性的概念？",
+      "options": {
+        "A": "父權主義取向（Paternalistic Orientation）",
+        "B": "臨床取向（Clinical Orientation）",
+        "C": "社會正義取向（Social Justice Orientation）",
+        "D": "無道德取向（Amoralistic Orientation）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 3225,
+      "roc_year": "105",
+      "session": "第一次",
+      "exam_code": "105030",
+      "subject": "社會工作直接服務",
+      "subject_tag": "social_work_direct",
+      "subject_name": "社會工作直接服務",
+      "stage_id": 0,
+      "number": 10,
+      "question": "對於社會工作人員扮演系統連結者角色的內涵，下列何者正確？",
+      "options": {
+        "A": "該角色包含有組織分析者、提供諮詢者和監督者",
+        "B": "該角色包含有方案發展者、政策和行政發展者",
+        "C": "該角色包含有服務經紀人、個案管理者和協調者",
+        "D": "該角色包含有研究者、研究使用者和團隊成員"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 3226,
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "社會工作直接服務",
+      "subject_tag": "social_work_direct",
+      "subject_name": "社會工作直接服務",
+      "stage_id": 0,
+      "number": 6,
+      "question": "有關生態系統觀點如何解讀個體和家庭所經歷的「問題」，下列敘述何者錯誤？",
+      "options": {
+        "A": "問題的產生乃因環境資源不足或障礙",
+        "B": "問題的產生是因為系統大於部分之總和",
+        "C": "問題的產生源自於多系統互動交流的結果",
+        "D": "問題的產生需從微視、中介及鉅視面加以考量"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 3227,
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "社會工作直接服務",
+      "subject_tag": "social_work_direct",
+      "subject_name": "社會工作直接服務",
+      "stage_id": 0,
+      "number": 23,
+      "question": "具創傷知情的團體工作目的在營造安全環境，與成員一起合作達成有意義的目標，下列作法何者不適用於團體初期階段？",
+      "options": {
+        "A": "理解到早年經驗暴力攻擊的成員，對參與團體感到疑慮和警戒",
+        "B": "練習不同意見表達，適應團體差異性",
+        "C": "以正向積極方式鼓勵成員分享，建立復原力特質",
+        "D": "辨識成員能力與處境，瞭解曾做的努力"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 3228,
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "社會工作直接服務",
+      "subject_tag": "social_work_direct",
+      "subject_name": "社會工作直接服務",
+      "stage_id": 0,
+      "number": 30,
+      "question": "下列何者不屬於「立基於資產社區發展」(asset-based community development) 的內涵？",
+      "options": {
+        "A": "關注需求與困難，強調實質的成效",
+        "B": "目的是透過公民投入改變社區",
+        "C": "個人、團體與組織都有資產，關係是關鍵性資源",
+        "D": "區辨社區資產相當重要，用社區資產代替社區需求"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 3229,
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "社會工作直接服務",
+      "subject_tag": "social_work_direct",
+      "subject_name": "社會工作直接服務",
+      "stage_id": 0,
+      "number": 34,
+      "question": "下列何者不屬於成熟型永續社區的特徵？",
+      "options": {
+        "A": "社區渴望社區行動的進行，對社區的改變也滿懷期待",
+        "B": "社區組織因計畫成果豐碩而產生自信",
+        "C": "擴張跨部門或跨領域計畫的執行",
+        "D": "社區組織開始朝向專業化，社區組織內聘有專職人員"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 3230,
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "社會工作管理",
+      "subject_tag": "social_work_mgmt",
+      "subject_name": "社會工作管理",
+      "stage_id": 0,
+      "number": 14,
+      "question": "最佳價值的5Cs對於福利服務的運作具有相當的意義，下列何者是最佳價值的核心？",
+      "options": {
+        "A": "比較(comparing)",
+        "B": "合作(co-operation)",
+        "C": "徵詢(consultation)",
+        "D": "競爭(competition)"
+      },
+      "answer": "A",
       "explanation": ""
     }
   ]

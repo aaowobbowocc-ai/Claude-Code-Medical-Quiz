@@ -31,22 +31,34 @@ const AUDIO_PAPERS  = ['基礎聽力科學', '行為聽力學', '電生理聽力
 const TARGETS = [
   // speech-therapist
   { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
-    code: '100090', c: '201', sBase: '0401', papers: SPEECH_PAPERS },
+    code: '100090', c: '201', sBase: '0401', papers: SPEECH_PAPERS },  // 特考(相當高考)
   { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
-    code: '100140', c: '111', sBase: '0901', papers: SPEECH_PAPERS },
+    code: '100140', c: '111', sBase: '0901', papers: SPEECH_PAPERS },  // 高考二次
   { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
-    code: '101110', c: '111', sBase: '0801', papers: SPEECH_PAPERS },
+    code: '101070', c: '201', sBase: '0401', papers: SPEECH_PAPERS },  // 101 特考
   { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
-    code: '104100', c: '109', sBase: '0801', papers: SPEECH_PAPERS },
+    code: '101110', c: '111', sBase: '0801', papers: SPEECH_PAPERS },  // 101 高考二次
+  { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
+    code: '102030', c: '114', sBase: '1001', papers: SPEECH_PAPERS },  // 102 第一次
+  { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
+    code: '102110', c: '114', sBase: '1001', papers: SPEECH_PAPERS },  // 102 第二次
+  { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
+    code: '104100', c: '109', sBase: '0801', papers: SPEECH_PAPERS },  // 104 第二次
   // audiologist
   { exam: 'audiologist', file: 'questions-audiologist.json',
-    code: '100090', c: '301', sBase: '0501', papers: AUDIO_PAPERS },
+    code: '100090', c: '301', sBase: '0501', papers: AUDIO_PAPERS },   // 特考
   { exam: 'audiologist', file: 'questions-audiologist.json',
-    code: '100140', c: '112', sBase: '1001', papers: AUDIO_PAPERS },
+    code: '100140', c: '112', sBase: '1001', papers: AUDIO_PAPERS },   // 高考二次
   { exam: 'audiologist', file: 'questions-audiologist.json',
-    code: '101110', c: '112', sBase: '0901', papers: AUDIO_PAPERS },
+    code: '101070', c: '301', sBase: '0501', papers: AUDIO_PAPERS },   // 101 特考
   { exam: 'audiologist', file: 'questions-audiologist.json',
-    code: '104100', c: '110', sBase: '0901', papers: AUDIO_PAPERS },
+    code: '101110', c: '112', sBase: '0901', papers: AUDIO_PAPERS },   // 101 高考二次
+  { exam: 'audiologist', file: 'questions-audiologist.json',
+    code: '102030', c: '112', sBase: '0801', papers: AUDIO_PAPERS },   // 102 第一次
+  { exam: 'audiologist', file: 'questions-audiologist.json',
+    code: '102110', c: '201', sBase: '0707', papers: AUDIO_PAPERS },   // 102 第二次
+  { exam: 'audiologist', file: 'questions-audiologist.json',
+    code: '104100', c: '110', sBase: '0901', papers: AUDIO_PAPERS },   // 104 第二次
 ]
 
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
@@ -74,7 +86,9 @@ const stripPUA = s => (lib.stripPUA ? lib.stripPUA(s) : s).normalize('NFKC')
 
 function parseHeading(text) {
   const cleaned = stripPUA(text)
-  const m1 = cleaned.match(/(\d{2,3})年(?:第([一二])次)?專門職業/)
+  // Allow optional whitespace between year digits and 年 (some MoEX PDFs format
+  // as "101 年" with a space).
+  const m1 = cleaned.match(/(\d{2,3})\s*年(?:第([一二])次)?專門職業/)
   if (!m1) return null
   const year = m1[1]
   const session = m1[2] === '一' ? '第一次' : m1[2] === '二' ? '第二次' : '第一次'

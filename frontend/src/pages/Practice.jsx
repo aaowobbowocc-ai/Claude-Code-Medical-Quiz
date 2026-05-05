@@ -226,13 +226,20 @@ function SetupScreen({ onStart, onBack }) {
                 .sort()
                 .pop()
               const syncedLabel = syncedTs ? new Date(syncedTs).toISOString().slice(0, 10) : null
+              const sourceList = sharedPapers.length
+                ? sharedPapers.map(p => p.source_exam_name || p.source || p.bankId).filter(Boolean)
+                : []
+              const uniqueSources = [...new Set(sourceList)].slice(0, 6)
               return (
                 <div className="mt-2 p-3 bg-white rounded-xl border border-gray-100 text-[11px] text-gray-500 leading-relaxed">
                   <p><strong className="text-medical-dark">歷屆真題</strong>：只從本考試自己的歷屆題出題。</p>
-                  <p className="mt-1"><strong className="text-medical-dark">大水庫</strong>：加入同等級其他考試的共同科目題，加強刷題量。</p>
+                  <p className="mt-1"><strong className="text-medical-dark">🌊 大水庫</strong>：加入其他考試的共同科目題（憲法、法緒、英文、行政學/法等），加強刷題量。</p>
                   <p className="mt-1 text-gray-400">
-                    共 {shownCount} 題{syncedLabel ? ` · 題庫更新：${syncedLabel}` : ''}
+                    本考試 {ownCount} 題 + 共同科 {sharedCount} 題 = 總共 {shownCount} 題{syncedLabel ? ` · 題庫更新：${syncedLabel}` : ''}
                   </p>
+                  {uniqueSources.length > 0 && (
+                    <p className="mt-1 text-gray-400">題目來源：{uniqueSources.join('、')}</p>
+                  )}
                 </div>
               )
             })()}

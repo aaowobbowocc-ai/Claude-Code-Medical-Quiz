@@ -132,6 +132,11 @@ function ExamPickerContent({ exam, setExam, closeSheet }) {
               {e.totalQ === 0 && (
                 <span className="text-[10px] text-amber-600 font-semibold">拓荒中</span>
               )}
+              {Array.isArray(e.sharedBanks) && e.sharedBanks.length > 0 && (
+                <span className="text-[9px] text-sky-600 font-semibold bg-sky-50 border border-sky-200 px-1.5 py-px rounded-full">
+                  🌊 共同科題庫
+                </span>
+              )}
             </button>
           ))}
         </div>

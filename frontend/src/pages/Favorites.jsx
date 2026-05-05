@@ -4,6 +4,7 @@ import { useBookmarks } from '../hooks/useBookmarks'
 import { useExplain } from '../hooks/useAI'
 import { ExplainPanel } from '../components/AIPanel'
 import { getSubjectColor } from '../utils/subjectColors'
+import { formatYearSession } from '../utils/sessionLabel'
 import QuestionImages from '../components/QuestionImages'
 import CommentSection from '../components/CommentSection'
 
@@ -21,7 +22,7 @@ function FavCard({ q, index, onRemove }) {
         <span className="text-xs font-semibold text-white px-2 py-0.5 rounded-full" style={{ background: tagColor }}>
           {tagName}
         </span>
-        <span className="text-xs text-gray-400">{q.roc_year}年{q.session}</span>
+        <span className="text-xs text-gray-400">{formatYearSession(q)}</span>
         <span className="text-xs font-mono font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-lg">#{q.number}</span>
         <span className="flex-1" />
         <button onClick={() => onRemove(q)} className="text-sm active:scale-90 transition-transform" title="取消收藏">⭐</button>

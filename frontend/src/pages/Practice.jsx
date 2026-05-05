@@ -644,7 +644,7 @@ function PracticeGame({ config, onFinish, onExit }) {
               )}
               <span className="text-xs text-gray-400 font-mono">
                 {q.roc_year && q.session
-                  ? `${q.roc_year}(${q.session === '第一次' ? '一' : '二'})-${q.number}`
+                  ? `${q.roc_year}(${q.exam_type === 'special_high' ? '特' : q.session === '第一次' ? '一' : '二'})-${q.number}`
                   : q.number ? `#${q.number}` : ''}
               </span>
               <span className="flex-1" />

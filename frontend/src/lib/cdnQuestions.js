@@ -198,7 +198,7 @@ export async function getExamYears(examId, { paperOrder = [] } = {}) {
   const exams = {}
   for (const q of questions) {
     const key = `${q.roc_year}_${q.session}`
-    if (!exams[key]) exams[key] = { roc_year: q.roc_year, session: q.session, papers: {} }
+    if (!exams[key]) exams[key] = { roc_year: q.roc_year, session: q.session, exam_type: q.exam_type, papers: {} }
     if (!exams[key].papers[q.subject]) exams[key].papers[q.subject] = {}
     const tag = q.subject_tag
     exams[key].papers[q.subject][tag] = (exams[key].papers[q.subject][tag] || 0) + 1

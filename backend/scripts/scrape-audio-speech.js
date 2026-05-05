@@ -86,14 +86,16 @@ const stripPUA = s => (lib.stripPUA ? lib.stripPUA(s) : s).normalize('NFKC')
 
 function parseHeading(text) {
   const cleaned = stripPUA(text)
-  // Allow optional whitespace between year digits and 年 (some MoEX PDFs format
-  // as "101 年" with a space).
   const m1 = cleaned.match(/(\d{2,3})\s*年(?:第([一二])次)?專門職業/)
   if (!m1) return null
   const year = m1[1]
   const session = m1[2] === '一' ? '第一次' : m1[2] === '二' ? '第二次' : '第一次'
   const subj = cleaned.match(/科\s*目[：:]?\s*([^\s（(]+)/)?.[1] || ''
-  return { year, session, subject: subj }
+  // Detect exam type from heading. "特種考試" / "相當高等考試" → 相當高考.
+  // 語言治療師/聽力師 100-101年 第一次 是特考；其餘為專技高考。
+  const isSpecial = /特種考試|相當高等考試|相當專技高考/.test(cleaned)
+  const exam_type = isSpecial ? 'special_high' : 'high'
+  return { year, session, subject: subj, exam_type }
 }
 
 async function parseQuestions(buf) {
@@ -265,6 +267,7 @@ async function scrapePaper(t, papIdx) {
       question:     q.question,
       options:      q.options,
       answer:       answers[q.number] || '',
+      exam_type:    meta.exam_type || 'high',
       explanation:  '',
     }))
     .filter(q => q.answer)

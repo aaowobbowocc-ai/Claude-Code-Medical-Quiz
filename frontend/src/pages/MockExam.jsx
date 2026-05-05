@@ -248,7 +248,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
                   className="w-full text-left bg-white rounded-2xl px-5 py-4 border border-gray-100 shadow-sm transition-all active:scale-[0.97]">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="font-bold text-lg text-medical-dark">{exam.roc_year} 年{exam.session}</p>
+                      <p className="font-bold text-lg text-medical-dark">{exam.roc_year} 年{exam.exam_type === 'special_high' ? '特考' : exam.session}</p>
                       <p className="text-gray-400 text-xs mt-1">
                         {exam.papers.map(p => `${p.name} ${p.total}題`).join(' + ')}
                       </p>

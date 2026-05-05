@@ -10,6 +10,7 @@ import { useBookmarks } from '../hooks/useBookmarks'
 import { usePageMeta } from '../hooks/usePageMeta'
 import ReadingModePopover, { useReadingMode } from '../components/ReadingModePopover'
 import { browseQuestions, isExamSupportedByCDN } from '../lib/cdnQuestions'
+import { formatYearSession } from '../utils/sessionLabel'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -133,7 +134,7 @@ function QuestionCard({ q, stageMap, readingStyle, readingPrefs, updateReadingPr
               style={{ background: tagColor }}>
           {tagName}
         </span>
-        {q.roc_year && <span className="text-xs text-gray-400">{q.roc_year}年{q.session}</span>}
+        {q.roc_year && <span className="text-xs text-gray-400">{formatYearSession(q)}</span>}
         {q.isSharedBank && (
           <span
             className="text-[10px] font-semibold text-sky-700 bg-sky-50 border border-sky-200 px-1.5 py-0.5 rounded-full"

@@ -329,7 +329,7 @@ export default function Game() {
               )}
               <span className="text-xs text-gray-400 font-mono">
                 {currentQuestion.roc_year && currentQuestion.session
-                  ? `${currentQuestion.roc_year}(${currentQuestion.session === '第一次' ? '一' : '二'})-${currentQuestion.number}`
+                  ? `${currentQuestion.roc_year}(${currentQuestion.exam_type === 'special_high' ? '特' : currentQuestion.session === '第一次' ? '一' : '二'})-${currentQuestion.number}`
                   : currentQuestion.number ? `#${currentQuestion.number}` : ''}
               </span>
             </div>

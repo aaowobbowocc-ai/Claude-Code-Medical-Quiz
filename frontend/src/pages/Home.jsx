@@ -147,7 +147,7 @@ function ExamPickerContent({ exam, setExam, closeSheet }) {
 
 function ExamArticle({ exam }) {
   const c = getExamSeo(exam.id) || getExamSeo('doctor1') || {}
-  const isPioneer = !exam?.totalQ || exam.totalQ === 0 || !Array.isArray(c.subjectDetails) || c.subjectDetails.length === 0
+  const isPioneer = !exam?.totalQ || exam.totalQ === 0
   if (isPioneer) {
     return (
       <article className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 text-sm text-gray-500 leading-relaxed space-y-3">
@@ -179,13 +179,17 @@ function ExamArticle({ exam }) {
         {c.examDesc}{c.paperDesc}題目來源為考選部歷年公開試題，本平台忠實收錄並提供練習與解析。
       </p>
 
-      <h3 className="font-bold text-medical-dark">考科範圍與準備方向</h3>
-      <p>
-        {(c.subjectDetails || []).map(([name, desc]) => (
-          <span key={name}><strong>{name}：</strong>{desc}</span>
-        ))}
-        所有科目皆可透過<Link to="/browse" className="text-medical-blue underline">題庫瀏覽</Link>依年度與科目篩選練習。
-      </p>
+      {Array.isArray(c.subjectDetails) && c.subjectDetails.length > 0 && (
+        <>
+          <h3 className="font-bold text-medical-dark">考科範圍與準備方向</h3>
+          <p>
+            {c.subjectDetails.map(([name, desc]) => (
+              <span key={name}><strong>{name}：</strong>{desc}</span>
+            ))}
+            所有科目皆可透過<Link to="/browse" className="text-medical-blue underline">題庫瀏覽</Link>依年度與科目篩選練習。
+          </p>
+        </>
+      )}
 
       <h3 className="font-bold text-medical-dark">平台功能特色</h3>
       <ul className="list-disc pl-5 space-y-1">

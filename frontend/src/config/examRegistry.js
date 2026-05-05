@@ -17,7 +17,7 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v8: 新增 語言治療師 speech-therapist 考試（103-114 年，3643 題）
 // v9: 新增 學測 gsat / 分科測驗 ast（college-entrance 類別）
 // v10: 強制重抓 — civil-*-general 的 totalQ 已修正、聽力/語言補完到 6500+ 題
-const CACHE_KEY = 'exam-registry-v10'
+const CACHE_KEY = 'exam-registry-v11'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache
@@ -104,7 +104,6 @@ const CATEGORY_META = {
     name: '法律與司法',
     description: '律師、司法官、法學生',
     order: 2,
-    pioneer: true,
   },
   'civil-service': {
     id: 'civil-service',
@@ -112,7 +111,6 @@ const CATEGORY_META = {
     name: '公職人員',
     description: '高普考、初考、各類特考',
     order: 3,
-    pioneer: true,
   },
   'common-subjects': {
     id: 'common-subjects',
@@ -120,7 +118,6 @@ const CATEGORY_META = {
     name: '共同科目',
     description: '憲法、法緒、國文、英文（水庫練習）',
     order: 4,
-    pioneer: true,
   },
   independent: {
     id: 'independent',

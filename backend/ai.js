@@ -338,7 +338,9 @@ function registerRoutes(app, examData, stats) {
         // total under ~200 chars to keep embedding cost low and signal strong.
         const correctOption = options[answer] || '';
         const queryText = (question + '\n' + correctOption).slice(0, 200);
-        const chunks = await rag.retrieve(queryText, { topK: 3, threshold: 0.55, language: 'zh' });
+        // Retrieve from both zh and en corpora — English drug names and
+        // pathophysiology concepts often have better English Wikipedia coverage.
+        const chunks = await rag.retrieve(queryText, { topK: 3, threshold: 0.55, language: null });
         if (chunks.length) {
           ragContext = '\n【參考資料】（從醫學百科檢索）\n' + chunks.map((c, i) =>
             `${i + 1}. 《${c.metadata?.title || '醫學參考'}》：${c.content.replace(/\n+/g, ' ').slice(0, 220)}…`

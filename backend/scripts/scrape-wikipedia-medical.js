@@ -13,7 +13,8 @@
 require('dotenv/config')
 const rag = require('../rag')
 
-const WIKI_API = 'https://zh.wikipedia.org/w/api.php'
+const WIKI_API_ZH = 'https://zh.wikipedia.org/w/api.php'
+const WIKI_API_EN = 'https://en.wikipedia.org/w/api.php'
 
 // Curated list of Taiwan-medical-exam-relevant topics. Tier 1 = original ~130
 // (kept for backwards compatibility / rerun idempotency). Tier 2-5 = expansion.
@@ -211,7 +212,8 @@ const TAIWAN_EXAM_SEEDS = [
   '腕隧道症候群', '骨髓炎', '化膿性關節炎',
 ]
 
-async function fetchWikiArticle(title) {
+async function fetchWikiArticle(title, lang = 'zh') {
+  const api = lang === 'en' ? WIKI_API_EN : WIKI_API_ZH
   const params = new URLSearchParams({
     action:        'query',
     format:        'json',
@@ -223,7 +225,7 @@ async function fetchWikiArticle(title) {
     redirects:     '1',
     formatversion: '2',
   })
-  const resp = await fetch(`${WIKI_API}?${params}`, {
+  const resp = await fetch(`${api}?${params}`, {
     headers: { 'User-Agent': 'TaiwanExamRAGBot/1.0 (https://yourdomain.example)' },
   })
   if (!resp.ok) throw new Error(`wiki fetch ${title}: HTTP ${resp.statusCode || resp.status}`)
@@ -239,22 +241,25 @@ async function fetchWikiArticle(title) {
   }
 }
 
-async function ingestSeed(title, stats) {
+async function ingestSeed(title, stats, lang = 'zh') {
   try {
-    const article = await fetchWikiArticle(title)
+    const article = await fetchWikiArticle(title, lang)
     if (!article) {
       console.log(`  ✗ ${title}: not found / too short`)
       stats.skipped++
       return
     }
     const result = await rag.ingestDocument({
-      source:   'wikipedia_zh',
+      source:   lang === 'en' ? 'wikipedia_en' : 'wikipedia_zh',
       url:      article.url,
       title:    article.title,
-      language: 'zh',
+      language: lang,
       category: article.category,
       content:  article.content,
-      metadata: { license: 'CC-BY-SA-4.0', attribution: 'Wikipedia 中文' },
+      metadata: {
+        license:     'CC-BY-SA-4.0',
+        attribution: lang === 'en' ? 'Wikipedia English' : 'Wikipedia 中文',
+      },
     })
     if (result.skipped) {
       console.log(`  · ${title}: already ingested`)
@@ -273,27 +278,180 @@ async function ingestSeed(title, stats) {
 // Polite rate-limit: 2 req/sec cap to be a good Wikipedia citizen.
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)) }
 
-async function processSeeds(seeds) {
+async function processSeeds(seeds, lang = 'zh') {
   const stats = { ingested: 0, alreadyIngested: 0, skipped: 0, failed: 0, chunks: 0 }
   for (let i = 0; i < seeds.length; i++) {
     const t = seeds[i]
     process.stdout.write(`[${i + 1}/${seeds.length}] `)
-    await ingestSeed(t, stats)
+    await ingestSeed(t, stats, lang)
     await sleep(500)
   }
   console.log('\n--- summary ---')
   console.log(JSON.stringify(stats, null, 2))
 }
 
+// English seeds — focus on items that don't have a good Chinese Wikipedia
+// page (specific drug INNs, US-named conditions, specialty terms).
+const ENGLISH_SEEDS = [
+  // Drug INNs that failed in zh
+  'Carvedilol', 'Bisoprolol', 'Nebivolol', 'Sotalol', 'Esmolol', 'Labetalol',
+  'Sitagliptin', 'Saxagliptin', 'Linagliptin', 'Empagliflozin', 'Dapagliflozin',
+  'Canagliflozin', 'Liraglutide', 'Semaglutide', 'Exenatide', 'Pioglitazone',
+  'Acarbose', 'Glipizide', 'Glyburide', 'Glimepiride',
+  'Tacrolimus', 'Sirolimus', 'Mycophenolate mofetil', 'Etanercept',
+  'Apixaban', 'Edoxaban', 'Fondaparinux', 'Argatroban',
+  'Ticagrelor', 'Prasugrel', 'Cilostazol',
+  'Pravastatin', 'Pitavastatin', 'Lovastatin', 'Fluvastatin',
+  'Ezetimibe', 'Niacin', 'Fenofibrate', 'Gemfibrozil',
+  'Captopril', 'Ramipril', 'Quinapril', 'Olmesartan', 'Telmisartan',
+  'Irbesartan', 'Candesartan',
+  'Cefazolin', 'Cefuroxime', 'Cefepime', 'Ceftriaxone', 'Ceftazidime',
+  'Cefotaxime', 'Cefoxitin', 'Ertapenem', 'Meropenem', 'Imipenem',
+  'Piperacillin', 'Ampicillin', 'Amoxicillin', 'Cloxacillin', 'Oxacillin',
+  'Azithromycin', 'Clarithromycin', 'Erythromycin', 'Doxycycline',
+  'Ciprofloxacin', 'Levofloxacin', 'Moxifloxacin', 'Gentamicin',
+  'Amikacin', 'Tobramycin', 'Streptomycin',
+  'Trimethoprim-sulfamethoxazole', 'Metronidazole', 'Daptomycin',
+  'Acyclovir', 'Valacyclovir', 'Ganciclovir', 'Oseltamivir', 'Remdesivir',
+  'Fluconazole', 'Itraconazole', 'Voriconazole', 'Amphotericin B',
+  'Caspofungin', 'Nystatin',
+  'Pyrazinamide', 'Ethambutol', 'Streptomycin',
+  'Hydroxychloroquine', 'Sulfasalazine', 'Leflunomide',
+  'Allopurinol', 'Colchicine', 'Probenecid', 'Febuxostat',
+  'Bisphosphonate', 'Alendronate', 'Risedronate', 'Zoledronic acid',
+  'Denosumab', 'Teriparatide',
+  'Levodopa-carbidopa', 'Pramipexole', 'Ropinirole', 'Selegiline',
+  'Topiramate', 'Gabapentin', 'Pregabalin', 'Oxcarbazepine',
+  'Citalopram', 'Escitalopram', 'Bupropion', 'Mirtazapine', 'Trazodone',
+  'Aripiprazole', 'Ziprasidone', 'Paliperidone',
+  'Buspirone', 'Alprazolam', 'Clonazepam', 'Midazolam', 'Zolpidem',
+  'Tramadol', 'Codeine', 'Hydromorphone', 'Oxycodone', 'Methadone',
+  'Naloxone', 'Naltrexone',
+
+  // Pathophysiology / clinical terms
+  'Cardiac tamponade physical examination',
+  'Beck triad',
+  'Pulsus paradoxus',
+  'Kussmaul sign',
+  'Cushing reflex',
+  'Cushing triad',
+  'Virchow triad',
+  'Charcot triad',
+  'Saint triad',
+  'Whipple triad',
+  'Reynolds pentad',
+  'Murphy sign',
+  'McBurney point',
+  'Rovsing sign',
+  'Tinel sign',
+  'Phalen maneuver',
+  'Lachman test',
+  'Kernig sign',
+  'Brudzinski sign',
+  'Battle sign',
+  'Raccoon eyes',
+  'Glasgow Coma Scale',
+  'APGAR score',
+  'CHA2DS2-VASc score',
+  'HAS-BLED score',
+  'Wells score',
+  'TIMI risk score',
+
+  // Lab patterns
+  'Anion gap',
+  'Osmolar gap',
+  'Reticulocyte index',
+  'Mean corpuscular volume',
+  'Direct Coombs test',
+  'Indirect Coombs test',
+  'Antinuclear antibody',
+  'Anti-CCP antibody',
+  'Anti-dsDNA antibody',
+  'ANCA',
+  'Rheumatoid factor',
+  'Erythrocyte sedimentation rate',
+  'C-reactive protein',
+  'Procalcitonin',
+  'Troponin',
+  'BNP test',
+  'D-dimer',
+
+  // ECG/imaging concepts
+  'PR interval',
+  'QT interval',
+  'ST elevation',
+  'ST depression',
+  'T wave inversion',
+  'Wolff-Parkinson-White syndrome',
+  'Brugada syndrome',
+  'Long QT syndrome',
+
+  // Specific syndromes/eponyms common in exams
+  'Sjögren syndrome',
+  'Behçet disease',
+  'Takayasu arteritis',
+  'Polymyalgia rheumatica',
+  'Goodpasture syndrome',
+  'Henoch-Schönlein purpura',
+  'IgA vasculitis',
+  'Granulomatosis with polyangiitis',
+  'Eosinophilic granulomatosis with polyangiitis',
+  'Microscopic polyangiitis',
+  'Pheochromocytoma',
+  'Hashimoto thyroiditis',
+  'Graves disease',
+  'Conn syndrome',
+  'Liddle syndrome',
+  'Bartter syndrome',
+  'Gitelman syndrome',
+  'Fanconi syndrome',
+  'Alport syndrome',
+  'Polycystic kidney disease',
+  'Marfan syndrome',
+  'Ehlers-Danlos syndromes',
+  'Loeys-Dietz syndrome',
+  'Osteogenesis imperfecta',
+  'Achondroplasia',
+  'Neurofibromatosis',
+  'Tuberous sclerosis',
+
+  // Microbiology specifics
+  'Methicillin-resistant Staphylococcus aureus',
+  'Vancomycin-resistant enterococcus',
+  'Carbapenem-resistant Enterobacteriaceae',
+  'Pseudomonas aeruginosa',
+  'Klebsiella pneumoniae',
+  'Mycobacterium tuberculosis',
+  'Mycoplasma pneumoniae',
+  'Legionella pneumophila',
+  'Chlamydia trachomatis',
+  'Treponema pallidum',
+  'Borrelia burgdorferi',
+  'Rickettsia',
+  'Hepatitis B virus',
+  'Hepatitis C virus',
+  'Human papillomavirus',
+  'Epstein-Barr virus',
+  'Cytomegalovirus',
+]
+
 async function main() {
-  const seedsArg = process.argv.includes('--seeds')
-  const limitArg = process.argv.find(a => a.startsWith('--limit='))?.slice(8)
-  const limit = limitArg ? parseInt(limitArg) : 0
+  const seedsArg   = process.argv.includes('--seeds')
+  const englishArg = process.argv.includes('--english')
+  const limitArg   = process.argv.find(a => a.startsWith('--limit='))?.slice(8)
+  const limit      = limitArg ? parseInt(limitArg) : 0
+
+  if (englishArg) {
+    const seeds = limit ? ENGLISH_SEEDS.slice(0, limit) : ENGLISH_SEEDS
+    console.log(`Ingesting ${seeds.length} English seed topics from English Wikipedia…\n`)
+    await processSeeds(seeds, 'en')
+    return
+  }
 
   const seeds = limit ? TAIWAN_EXAM_SEEDS.slice(0, limit) : TAIWAN_EXAM_SEEDS
   if (seedsArg || !process.argv.slice(2).find(a => a.startsWith('--category'))) {
     console.log(`Ingesting ${seeds.length} seed topics from Chinese Wikipedia…\n`)
-    await processSeeds(seeds)
+    await processSeeds(seeds, 'zh')
   }
 }
 

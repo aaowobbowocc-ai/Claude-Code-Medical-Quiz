@@ -43,9 +43,11 @@ const PATTERNS = {
     '社會工作管理':     { c: '107', s: '0603' },
   },
   customs: {
-    '法學知識':       { c: '101', sCandidates: ['0309','0312','0313','0315'], codeSuffixes: ['130','120'] },
-    '英文':          { c: '101', sCandidates: ['0309','0310','0312','0307','0308'], codeSuffixes: ['130','120'] },
-    '國文（測驗）':   { c: '101', sCandidates: ['0308','0307','0306','0309'], codeSuffixes: ['130','120'] },
+    // customs 法學知識+英文 為合併卷（一份 PDF 50 題：前 25 法學、後 25 英文），同 s
+    // 已 probe: 108050→0307, 109050→0308, 110050→0308, 111050→0310, 112050→0308, 115040→0305
+    '法學知識':       { c: '101', sCandidates: ['0305','0307','0308','0310','0309','0312','0313','0315','0306','0311'] },
+    '英文':          { c: '101', sCandidates: ['0305','0307','0308','0310','0309','0312','0313','0315','0306','0311'] },
+    '國文（測驗）':   { c: '101', sCandidates: ['0306','0307','0308','0309','0310','0311'] },
   },
   judicial: {
     '法學知識與英文': { c: '101', sCandidates: ['0309','0313','0315','0414','0415','0412'], codeSuffixes: ['130','120'] },
@@ -81,9 +83,14 @@ async function verifyPdf(buf, expectSubject) {
     const mupdf = await import('mupdf')
     const doc = mupdf.Document.openDocument(new Uint8Array(buf), 'application/pdf')
     const text = stripPUA(doc.loadPage(0).toStructuredText('preserve-whitespace').asText())
-    // Match subject in title (subject may contain parentheses to strip)
     const cleanSubj = expectSubject.replace(/[（(].*[）)]/g, '').trim()
-    return text.includes(cleanSubj) || text.includes(expectSubject)
+    if (text.includes(cleanSubj) || text.includes(expectSubject)) return true
+    // Combined paper aliases:
+    //   '英文' (single) shares PDF with '法學知識' / '法學知識與英文'
+    //   customs/civil-senior 有時把合併卷拆成兩個 subject 存在 JSON
+    if (expectSubject === '英文' && /(法學知識|法學知識與英文)/.test(text)) return true
+    if (expectSubject === '法學知識' && /(法學知識與英文)/.test(text)) return true
+    return false
   } catch { return false }
 }
 

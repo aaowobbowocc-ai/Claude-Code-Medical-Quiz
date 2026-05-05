@@ -591,7 +591,7 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 6,
-      "question": "ran",
+      "question": "依司法院大法官解釋,關於「副總統可否兼任行政院院長」,下列敘述何者正確?",
       "options": {
         "A": "run",
         "B": "runs",
@@ -599,8 +599,7 @@
         "D": "run"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 31,
@@ -612,7 +611,7 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 7,
-      "question": "open",
+      "question": "憲法第157條規定：「國家為增進民族健康，應普遍推行衛生保健事業及公醫制度」。下列何者，係在實現憲法第157條之規定？",
       "options": {
         "A": "dig",
         "B": "visit",
@@ -620,8 +619,7 @@
         "D": "dig"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 32,
@@ -713,7 +711,7 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 12,
-      "question": "with",
+      "question": "人民依社會保險相關法律享有之社會保險給付請求權,屬於下列何種基本權之保障?",
       "options": {
         "A": "over",
         "B": "through",
@@ -721,8 +719,7 @@
         "D": "over"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 37,
@@ -774,7 +771,7 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 15,
-      "question": "is",
+      "question": "關於憲法第 21 條規定之受國民教育權，下列敘述何者錯誤？",
       "options": {
         "A": "does",
         "B": "and",
@@ -782,8 +779,7 @@
         "D": "請依下文回答第"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 40,
@@ -10018,7 +10014,7 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 10,
-      "question": "A",
+      "question": "關於立法院職權行使之方式,不受下列何種原則之拘束?",
       "options": {
         "A": "of scandals and revelations has collectively undermined the government over the past year.",
         "B": "transmission",
@@ -10026,8 +10022,7 @@
         "D": "scenario"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 502,
@@ -10039,7 +10034,7 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 11,
-      "question": "once",
+      "question": "依現行規定,下列何者不具有法律案之提案權?",
       "options": {
         "A": "or else",
         "B": "unless",
@@ -10047,8 +10042,7 @@
         "D": "or else"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 503,
@@ -10060,7 +10054,7 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 12,
-      "question": "past",
+      "question": "依司法院大法官解釋,關於憲法第 22 條非明文權利之限制,下列何者合憲?",
       "options": {
         "A": "passing",
         "B": "passed",
@@ -10068,8 +10062,7 @@
         "D": "passing"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 504,
@@ -11325,13 +11318,11 @@
       "options": {
         "A": "其提出須經全體立法委員三分之一以上連署其通過須經全體立法委員二分之一以上贊成",
         "B": "若不信任案未獲通過，對同一行政院院長任期內不得再提不信任案不信任案通過，行政院院長應提出辭職",
-        "C": "",
-        "D": ""
+        "C": "若不信任案未獲通過，對同一行政院院長任期內不得再提不信任案",
+        "D": "不信任案通過，行政院院長應提出辭職"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 567,
@@ -11367,13 +11358,11 @@
       "options": {
         "A": "僅指各該事件或案件之民刑事訴訟，但不包括非訟程序",
         "B": "係指各該事件或案件之所有訴訟程序，但不包括非訟程序係指各該事件或案件之所有訴訟或非訟程序僅指各該事件或案件之民刑事訴訟與非訟程序",
-        "C": "",
-        "D": ""
+        "C": "係指各該事件或案件之所有訴訟或非訟程序",
+        "D": "僅指各該事件或案件之民刑事訴訟與非訟程序"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 569,
@@ -11410,12 +11399,10 @@
         "A": "包括精神性思想、價值、信仰、禮俗規範等",
         "B": "包括傳承已久之食物取得方式、日常飲食習慣與物質生活方式等包含原住民因營利目的所從事之狩獵活動",
         "C": "除有特殊例外，原住民得獵捕、宰殺或利用之野生動物，不包括保育類野生動物",
-        "D": ""
+        "D": "除有特殊例外,原住民得獵捕、宰殺或利用之野生動物,不包括保育類野生動物"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 571,
@@ -11447,17 +11434,15 @@
       "subject_name": "法學知識",
       "stage_id": 0,
       "number": 8,
-      "question": "關於憲法第13條宗教信仰自由對於佛教徒之保障，下列敘述何者正確？",
+      "question": "關於憲法第 13 條宗教信仰自由對於佛教徒之保障，下列敘述何者正確？",
       "options": {
         "A": "僅保障內心信仰佛教之自由，不保障參加佛教法會之自由",
         "B": "僅保障內心信仰佛教以及參加佛教法會之自由，不保障組成佛教團體之自由",
         "C": "保障內心信仰佛教之自由、參加佛教法會之自由，以及組成佛教團體之自由不保障佛教徒不信仰基督教之自由",
-        "D": ""
+        "D": "不保障佛教徒不信仰基督教之自由"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 573,
@@ -11494,12 +11479,10 @@
         "A": "徵收計畫確定前，應聽取土地所有權人及利害關係人之意見徵收之補償不僅需相當，更應儘速發給",
         "B": "區段徵收申請發給抵價地之申請期限規定，應確保利害關係人及時獲知相關資訊",
         "C": "國家所負之程序保障義務，不僅及於徵收前，並及於徵收時；惟並不及於徵收完成後",
-        "D": ""
+        "D": "國家所負之程序保障義務,不僅及於徵收前,並及於徵收時;惟並不及於徵收完成後"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 575,
@@ -11615,13 +11598,11 @@
       "options": {
         "A": "違憲，因其違反「一行為不二罰」之憲法原則違憲，因其逾越必要限度，違反「比例原則」合憲，人民有「無條件服兵役」之義務",
         "B": "合憲，多次拒服兵役，並非同一行為，故不構成「重複處罰」問題",
-        "C": "",
-        "D": ""
+        "C": "合憲，人民有「無條件服兵役」之義務",
+        "D": "合憲，多次拒服兵役，並非同一行為，故不構成「重複處罰」問題"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 581,
@@ -11698,12 +11679,10 @@
         "A": "若立法院不同意總統所發布之緊急命令，緊急命令即自始無效",
         "B": "緊急命令之內容應力求周延，以不得再授權為補充規定為原則有需要為補充規定時，得不經立法院追認，而先發布",
         "C": "總統僅於立法院休會期間方能發布緊急命令，且應恪遵緊急命令法",
-        "D": ""
+        "D": "總統僅於立法院休會期間方能發布緊急命令,且應恪遵緊急命令法"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 585,
@@ -11719,13 +11698,11 @@
       "options": {
         "A": "考試院不得對立法院議決之有關考試的法律案提出覆議",
         "B": "考試院掌理公務人員任免、考績、級俸、陞遷、褒獎之法制與執行事項所有政府官吏均須經考選銓敘始可任用考試院不得向立法院提出法律案",
-        "C": "",
-        "D": ""
+        "C": "所有政府官吏均須經考選銓敘始可任用",
+        "D": "考試院不得向立法院提出法律案"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 586,
@@ -11742,12 +11719,10 @@
         "A": "憲法就政府體制垂直權力分立之設計，係採聯邦國體制直轄市並沒有受憲法直接保障之地方自治事項",
         "B": "為貫徹中央地方權限劃分，憲法就中央、省及縣立法權事項及範圍之規定，係相互排斥，互不重疊",
         "C": "地方自治條例若僅以各該地方居民或事物為其規範對象者，不論其實際規範效果為何，均不屬跨地方轄區甚至全國性質事項之規範",
-        "D": ""
+        "D": "地方自治條例若僅以各該地方居民或事物為其規範對象者,不論其實際規範效果為何,均不屬跨地方轄區甚至全國性質事項之規範"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 587,
@@ -11803,13 +11778,11 @@
       "options": {
         "A": "國家公園管理處組織通則位階屬於法律自治條例的法位階與海關緝私條例相同施行細則屬於法律的一部分，也須由立法院制定通過",
         "B": "行政院技職教育審議會組織及運作辦法為行政院所制定之法律",
-        "C": "",
-        "D": ""
+        "C": "施行細則屬於法律的一部分,也須由立法院制定通過",
+        "D": "行政院技職教育審議會組織及運作辦法為行政院所制定之法律"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 590,
@@ -11881,17 +11854,15 @@
       "subject_name": "法學知識",
       "stage_id": 0,
       "number": 31,
-      "question": "某部法律之末條規定：「本法自公布日施行」。假設該法律於",
+      "question": "某部法律之末條規定：「本法自公布日施行」。假設該法律於 114 年 9 月 30 日公布，請問該法律自何日起發生效力？",
       "options": {
         "A": "114年9月30日公布，請問該法律自何日起發生效力？",
         "B": "114年9月30日114年10月1日114年10月2日114年10月3日",
-        "C": "",
-        "D": ""
+        "C": "114 年 10 月 2 日",
+        "D": "114 年 10 月 3 日"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 594,
@@ -11967,13 +11938,11 @@
       "options": {
         "A": "甲、乙約定由甲對丙行使親權，則應由甲對丙單獨負擔扶養義務",
         "B": "甲、乙間關於乙與丙會面交往的約定，日後僅乙得請求法院變更之現行法並沒有丁得請求與丙會面交往的法律依據甲日後欲將丙出養給戊時，皆無須取得乙之同意",
-        "C": "",
-        "D": ""
+        "C": "現行法並沒有丁得請求與丙會面交往的法律依據",
+        "D": "甲日後欲將丙出養給戊時,皆無須取得乙之同意"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 598,
@@ -12170,12 +12139,10 @@
         "A": "有限公司應至少置董事",
         "B": "3人有限公司董事應從有行為能力之股東中選任之",
         "C": "董事非得其他股東表決權三分之二以上之同意，不得以其出資之全部或一部，轉讓於他人有限公司董事為公司負責人",
-        "D": ""
+        "D": "有限公司董事為公司負責人"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 608,
@@ -12231,13 +12198,11 @@
       "options": {
         "A": "於被保險人假釋期間始發給保險給付",
         "B": "於被保險人受有期徒刑以上刑之宣告，執行完畢或赦免後，始發給保險給付概不給與保險給付以退保論，繳納之保險費則予退還",
-        "C": "",
-        "D": ""
+        "C": "概不給與保險給付",
+        "D": "以退保論，繳納之保險費則予退還"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 611,
@@ -12975,6 +12940,106 @@
         "B": "莊子的美學思想，對於現代社會具有高度啟發性",
         "C": "唯有建立物我融通的生命觀，才能真正解決生態問題",
         "D": "當今人與人之間的嚴重疏離感，全係來自科技發達的結果"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 648,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110050",
+      "subject": "英文",
+      "subject_tag": "english",
+      "subject_name": "英文",
+      "stage_id": 0,
+      "number": 24,
+      "question": "Which of the following reasons for diverting a plane has been mentioned in this passage?",
+      "options": {
+        "A": "Toilet problems.",
+        "B": "Police presence.",
+        "C": "Publicity stunts.",
+        "D": "Twitter updates."
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 649,
+      "roc_year": "110",
+      "session": "第一次",
+      "exam_code": "110050",
+      "subject": "國文（測驗）",
+      "subject_tag": "chinese",
+      "subject_name": "國文（測驗）",
+      "stage_id": 0,
+      "number": 5,
+      "question": "當時共客長安，似二陸初來俱少年。有筆頭千字，胸中萬卷；致君堯舜，此事何難？用舍由時，行藏在我，袖手何妨閑處看。身長健，但優游卒歲，且關尊前。(蘇軾《沁園春》)\n下列選項最合乎本文旨意的是：",
+      "options": {
+        "A": "培養良好文筆，才能上書暢談治國理念",
+        "B": "能否一展長才，需要時勢與機會的配合",
+        "C": "仕宦之餘，應行萬里路，增強自己體魄",
+        "D": "人生知己難逢，慶幸在長安與二陸結識"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 650,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108050",
+      "subject": "國文（測驗）",
+      "subject_tag": "chinese",
+      "subject_name": "國文（測驗）",
+      "stage_id": 0,
+      "number": 1,
+      "question": "下列「 」內詞語的使用，何者錯誤？",
+      "options": {
+        "A": "他是「標榜之才」，足堪負重大任",
+        "B": "公務人員應該守正清廉，「暮夜卻金」",
+        "C": "學問之道無他，唯有「痐僂承嗣」罷了",
+        "D": "去國多年，如今「鶴辭華表」，景物皆非"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 651,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109050",
+      "subject": "法學知識",
+      "subject_tag": "law_knowledge",
+      "subject_name": "法學知識",
+      "stage_id": 0,
+      "number": 26,
+      "question": "下列四個自治法規，何者由地方行政機關訂定，並發布或下達？",
+      "options": {
+        "A": "臺中市污水下水道管理自治條例",
+        "B": "臺南市歸仁美學館場地使用管理辦法",
+        "C": "花蓮縣政府組織自治條例",
+        "D": "臺南市公共設施植栽管理自治條例"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 652,
+      "roc_year": "109",
+      "session": "第一次",
+      "exam_code": "109050",
+      "subject": "法學知識",
+      "subject_tag": "law_knowledge",
+      "subject_name": "法學知識",
+      "stage_id": 0,
+      "number": 31,
+      "question": "關於法律適用之地的效力，下列敘述何者錯誤？",
+      "options": {
+        "A": "國家本於領土主權產生之效力",
+        "B": "法律不得實施於國家領域之外",
+        "C": "駐在外國之我國大使，不受駐在國法律之管轄",
+        "D": "在公海上之我國船艦適用我國法"
       },
       "answer": "D",
       "explanation": ""

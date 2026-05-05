@@ -1,14 +1,21 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import guidesData from '../guides.json'
 import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function Guides() {
+  const navigate = useNavigate()
   usePageMeta(
     '備考攻略｜國考知識王',
     '國考備考攻略與學習心法：醫師、藥師、護理師、醫檢師等各國考準備指南，以及 AI 刷題、間隔重複等學習法實戰。'
   )
   return (
     <div className="max-w-3xl mx-auto px-4 py-6">
+      <button
+        onClick={() => navigate(-1)}
+        className="text-sm text-gray-500 hover:text-medical-blue flex items-center gap-1 mb-3 active:scale-95"
+      >
+        ← 返回
+      </button>
       <h1 className="text-2xl font-bold text-medical-dark mb-2">備考攻略</h1>
       <p className="text-gray-500 text-sm mb-6">依考試類別 & 學習方法整理的長文指南。</p>
       <div className="space-y-3">

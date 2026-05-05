@@ -1,9 +1,10 @@
-import { useParams, Link, Navigate } from 'react-router-dom'
+import { useParams, Link, Navigate, useNavigate } from 'react-router-dom'
 import guidesData from '../guides.json'
 import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function GuideDetail() {
   const { slug } = useParams()
+  const navigate = useNavigate()
   const guide = guidesData.guides.find(g => g.slug === slug)
   usePageMeta(
     guide ? `${guide.title}｜國考知識王` : '備考攻略',
@@ -12,6 +13,12 @@ export default function GuideDetail() {
   if (!guide) return <Navigate to="/guides" />
   return (
     <article className="max-w-3xl mx-auto px-4 py-6">
+      <button
+        onClick={() => navigate(-1)}
+        className="text-sm text-gray-500 hover:text-medical-blue flex items-center gap-1 mb-3 active:scale-95"
+      >
+        ← 返回
+      </button>
       <nav className="text-xs text-gray-400 mb-3">
         <Link to="/guides" className="hover:text-medical-blue">備考攻略</Link>
         <span className="mx-2">›</span>

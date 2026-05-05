@@ -69,7 +69,7 @@ function audit(examId) {
   return { examId, examName: cfg.name, papers: cfg.papers.length, perSession: cfg.papers.reduce((s,p) => s + (p.count || 0), 0), issues }
 }
 
-const EXAMS = ['doctor1','doctor2','dental1','dental2','pharma1','pharma2','nursing','nutrition','medlab','pt','ot','radiology','tcm1','tcm2','vet','social-worker']
+const EXAMS = ['doctor1','doctor2','dental1','dental2','pharma1','pharma2','nursing','nutrition','medlab','pt','ot','radiology','tcm1','tcm2','vet','social-worker','audiologist','speech-therapist']
 
 // "Expected missing" — sessions/years that legitimately don't exist (exam not
 // held, exam started later, future year). Format: { exam: ['year-session', ...] }
@@ -82,10 +82,22 @@ const EXPECTED_MISSING = (() => {
     for (let y = 110; y <= 115; y++) m[e].add(`${y}-1`)
   }
   // 社工師 104 年才開辦
-  m['social-worker'] = new Set([...m['social-worker']])
   for (let y = 100; y <= 103; y++) {
     m['social-worker'].add(`${y}-1`); m['social-worker'].add(`${y}-2`)
   }
+  // 聽力師：103 年起每年只辦第一次（一年一試）。115-1 PDF 可能尚未上線。
+  for (let y = 100; y <= 115; y++) {
+    if (y < 103) { m['audiologist'].add(`${y}-1`); m['audiologist'].add(`${y}-2`) }
+    else m['audiologist'].add(`${y}-2`)  // 第二次永遠不存在
+  }
+  m['audiologist'].add('115-1')  // PDF 尚未上線
+  // 語言治療師：103 起每年第一次。104 年 MoEX 無資料（probed 全 302）。
+  for (let y = 100; y <= 115; y++) {
+    if (y < 103) { m['speech-therapist'].add(`${y}-1`); m['speech-therapist'].add(`${y}-2`) }
+    else m['speech-therapist'].add(`${y}-2`)
+  }
+  m['speech-therapist'].add('104-1')  // probed: not on MoEX
+  m['speech-therapist'].add('115-1')  // PDF 尚未上線
   return m
 })()
 

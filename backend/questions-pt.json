@@ -7406,8 +7406,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pt_114020_p1_49_0.webp"
     },
     {
       "id": 368,
@@ -8985,7 +8984,7 @@
       "subject_name": "物理治療技術學",
       "stage_id": 3,
       "number": 48,
-      "question": "雙人合力將坐於輪椅的病患抬起移動到病患左側地面，兩位搬運者的起始位置圖，下列何者較為合適？",
+      "question": "雙人合力將坐於輪椅的病患抬起移動到病患左側地面, 兩位搬運者的起始位置圖, 下列何者較為合適?",
       "options": {
         "A": "",
         "B": "",
@@ -16131,7 +16130,7 @@
       "subject_name": "物理治療基礎學",
       "stage_id": 1,
       "number": 80,
-      "question": "下列圖形何者最能代表描述肌肉行為的Hill's model？〔CE：收縮元件（contractile element）；  SE：串 聯元件（series element）；PE：並聯元件（parallel element）；η：阻尼元件（dashpot element）〕",
+      "question": "下列圖形何者最能代表描述肌肉行為的Hill's model? [CE:收縮元件(contractile element);SE:串聯元件(series element); PE:並聯元件(parallel element); η:阻尼元件(dashpot element) ]",
       "options": {
         "A": "",
         "B": "",
@@ -19307,8 +19306,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pt_115020_p2_76_0.webp"
     },
     {
       "id": 955,
@@ -20342,9 +20340,7 @@
         "D": "D"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 1006,
@@ -23036,7 +23032,7 @@
       "subject_name": "心肺與小兒物理治療",
       "stage_id": 6,
       "number": 21,
-      "question": " 下圖胸部X光檢查中，那一條是中心靜脈壓導管（CVP line）？",
+      "question": "下圖胸部X光檢查中, 那一條是中心靜脈壓導管 (CVP line) ?",
       "options": {
         "A": "A",
         "B": "B",
@@ -23047,9 +23043,7 @@
       "explanation": "",
       "images": [
         "/question-images/pt_1139_0.webp"
-      ],
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      ]
     },
     {
       "id": 1140,
@@ -34322,9 +34316,7 @@
       "explanation": "",
       "images": [
         "/question-images/pt_1700_0.webp"
-      ],
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      ]
     },
     {
       "id": 1701,
@@ -44210,8 +44202,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pt_110101_p0_33_0.webp"
     },
     {
       "id": 2192,
@@ -78260,9 +78251,7 @@
         "D": "D"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 3883,
@@ -79864,7 +79853,7 @@
       "subject_name": "骨科疾病物理治療",
       "stage_id": 5,
       "number": 44,
-      "question": "下圖為手指伸直機制（extensor mechanism）之背面觀，何處組織斷裂將造成手指鈕扣孔變形（Boutonnière",
+      "question": "下圖為手指伸直機制 (extensor mechanism) 之背面觀,何處組織斷裂將造成手指鈕扣孔變形 (Boutonnière deformities) ?",
       "options": {
         "D": "D",
         "A": "A",
@@ -79875,9 +79864,7 @@
       "explanation": "",
       "images": [
         "/question-images/pt_3962_0.webp"
-      ],
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      ]
     },
     {
       "id": 3963,
@@ -106965,15 +106952,13 @@
       "number": 31,
       "question": "以下為周邊神經損傷的簡示圖，請選出一個部位最有可能發生華勒氏退化（Wallerian degeneratoin）的神經病變？",
       "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
+        "A": "可給予視覺回饋",
+        "B": "可給予口語回饋",
+        "C": "可給予聽覺回饋",
+        "D": "不可給予回饋"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 5312,
@@ -118643,14 +118628,13 @@
       "number": 53,
       "question": "下列表格為母群體的真實情形和研究結論的關係，請問表格A、B、C和D中，何者屬於型二誤差（Type II error）？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "髖外翻(coxa valga)",
+        "B": "髖內翻(coxa vara)",
+        "C": "髖前傾(anteversion)",
+        "D": "髖後傾(retroversion)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 5894,
@@ -120756,16 +120740,15 @@
       "subject_name": "心肺與小兒物理治療",
       "stage_id": 6,
       "number": 78,
-      "question": "治療師要獨力將完全依賴的病患轉位，應該使用下列那種工具為宜？",
+      "question": "有關頭部外傷(traumatic brain injury)兒童的敘述,下列何者錯誤?",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "頭部外傷兒童的記憶力恢復快速,學習與記憶新的動作任務的連續步驟不受影響",
+        "B": "顳葉損傷常伴隨語言功能缺損,表達性或理解性語言功能有問題",
+        "C": "受傷後常發生躁動行為和混亂的心智狀態,因而影響治療過程中行為的持續性",
+        "D": "在較吵雜的環境中觀察個案分心及維持注意力的表現,可以初步了解是否有注意力的損傷"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 5999,
@@ -124520,12 +124503,12 @@
       "subject_name": "物理治療技術學",
       "stage_id": 3,
       "number": 26,
-      "question": "下列何種心電圖為進行運動訓練的絕對禁忌？",
+      "question": "有關向量干擾波的適應症與治療目標之配對,下列何者正確?",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "周邊神經受損-使去神經支配之肌肉收縮,減少肌肉萎縮",
+        "B": "中風-使無法活動的肌肉收縮,達誘發動作的目的",
+        "C": "小兒麻痺-使無法活動的肌肉收縮,達肌力訓練的目的",
+        "D": "尿失禁-使骨盆底肌肌肉收縮,達神經肌肉再教育的目的"
       },
       "answer": "B",
       "explanation": "",
@@ -124535,9 +124518,7 @@
         "/question-images/pt_6186_1.webp",
         "/question-images/pt_6186_2.webp",
         "/question-images/pt_6186_3.webp"
-      ],
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      ]
     },
     {
       "id": 6187,
@@ -134426,15 +134407,13 @@
       "number": 39,
       "question": "此流速－容積圖（flow-volume loop）中，A是TLC（total lung capacity），則FRC（functional residual capacity）是那一點？",
       "options": {
-        "C": "C",
+        "C": "治療區域肌肉張力過高或過低",
         "A": "E",
-        "B": "B",
-        "D": "D"
+        "B": "皮膚腫瘤",
+        "D": "急性水腫"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 6680,
@@ -139956,14 +139935,13 @@
       "number": 74,
       "question": "正常步態週期中，若記錄右腳著地期之地面反作用力在腳底的壓力中心位置，則擺盪前期（pre-swing phase）之壓力中心點示意圖，下列何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "動作速度慢",
+        "B": "動作變異性高",
+        "C": "書寫困難",
+        "D": "高肌肉張力"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 6955,
@@ -139997,14 +139975,13 @@
       "number": 76,
       "question": "若將病患由推床藉由床單來滑行轉位到治療床，則操作的三名人員其相關位置，下列何者較為正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "早期動作訓練時,使用向心收縮會比離心收縮方式容易有效",
+        "B": "為了預防肩關節角度受限,因此新生兒時期可教導父母抱起兒童時,直接將其雙手向上拉起",
+        "C": "當訓練兒童抬高其肩關節時,治療師需協助肩胛骨穩定,以減少代償動作",
+        "D": "為了預防肩關節角度受限,最好一出生就開始進行肩部的被動關節運動"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 6957,
@@ -150328,16 +150305,15 @@
       "subject_name": "物理治療基礎學",
       "stage_id": 1,
       "number": 30,
-      "question": "脊髓損傷患者的右側肢體經評估結果如下表，其脊髓機能損傷等級為何？",
+      "question": "張老太太是肺纖維化病人,其功能肺餘量(functional residual capacity)與正常人相比會如何變化?原因為何?",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "增加;肋膜間壓(intrapleural pressure)的壓力變小",
+        "B": "增加;肋膜間壓(intrapleural pressure)的壓力變大",
+        "C": "減少;肺泡壓(alveolar pressure)與肋膜間壓(intrapleural pressure)的壓力差變大",
+        "D": "減少;肺泡壓(alveolar pressure)與肋膜間壓(intrapleural pressure)的壓力差變小"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 7471,
@@ -153032,16 +153008,15 @@
       "subject_name": "物理治療技術學",
       "stage_id": 3,
       "number": 5,
-      "question": "下列何者最有可能是肺臟纖維化患者的流速－肺容積圖？",
+      "question": "下列何者是全身水療之心臟血管生理效應?①增加靜脈回流 ②增加心輸出量 ③減少靜脈回流 ④減少心輸出量 ⑤增加心臟容積",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "僅①②⑤",
+        "B": "僅③④⑤",
+        "C": "僅①④",
+        "D": "僅②③"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 7606,
@@ -172288,10 +172263,10 @@
       "subject_name": "物理治療技術學",
       "stage_id": 3,
       "number": 6,
-      "question": "下列何者最有可能是抽菸導致之慢性阻塞性肺疾病人的流速－肺容積圖？",
+      "question": "王小姐被診斷出右肩沾黏性關節囊炎(adhesive capsulitis),物理治療師打算在執行牽拉運動前先提高肩部組織溫度,以避免軟組織在牽拉過程中受傷。下列何種物理因子最適合?",
       "options": {
-        "A": "",
-        "B": "",
+        "A": "超音波",
+        "B": "鼓狀電極(drum electrode)短波",
         "C": "",
         "D": ""
       },
@@ -183507,7 +183482,7 @@
         "C": "黏膜層形成許多皺褶（rugae）",
         "D": "管腔內為酸性環境"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -183547,7 +183522,7 @@
         "C": "甲狀腺激素（thyroid hormone）",
         "D": "雌激素（estrogen）"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -183567,7 +183542,7 @@
         "C": "嗜酸細胞（oxyphil cells）",
         "D": "嗜鹼性細胞（basophils）"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -183587,7 +183562,7 @@
         "C": "犬齒（canines）",
         "D": "門齒（incisors）"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -183647,7 +183622,7 @@
         "C": "室旁核（paraventricular nucleus）",
         "D": "腦下垂體（hypophysis）"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -183667,7 +183642,7 @@
         "C": "L1-L4 腰神經",
         "D": "S2-S4 薦神經"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -183727,7 +183702,7 @@
         "C": "舌骨下肌群（infrahyoid muscles）",
         "D": "咽縮肌群（pharyngeal constrictors）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -183767,7 +183742,7 @@
         "C": "蚓狀肌（lumbricals）",
         "D": "掌長肌（palmaris longus）"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -183787,7 +183762,7 @@
         "C": "臀中肌（gluteus medius）",
         "D": "臀小肌（gluteus minimus）"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -183807,7 +183782,7 @@
         "C": "恥骨（pubis）與坐骨（ischium）",
         "D": "恥骨（pubis）與股骨（femur）"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -183827,7 +183802,7 @@
         "C": "棘孔（foramen spinosum）",
         "D": "眶上孔（supraorbital foramen）"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -183847,7 +183822,7 @@
         "C": "髁間線（intercondylar line）",
         "D": "髁間窩（intercondylar fossa）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -183867,7 +183842,7 @@
         "C": "人字縫（lambdoid suture）",
         "D": "鱗狀縫（squamous suture）"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -183887,7 +183862,7 @@
         "C": "減少尿液中鈣質的流失",
         "D": "刺激鈣三醇（calcitriol）分泌"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -183907,7 +183882,7 @@
         "C": "髖關節（hip joint）是屬於hinge joint",
         "D": "骨骼中不具造血功能"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -183927,7 +183902,7 @@
         "C": "僅②③",
         "D": "僅①③"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -183947,7 +183922,7 @@
         "C": "第十對",
         "D": "第十二對"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -183967,7 +183942,7 @@
         "C": "包含血管運動中樞",
         "D": "包含某些腦神經的核"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -183987,7 +183962,7 @@
         "C": "釋放神經傳導物質",
         "D": "對結合到接受器的神經傳導物質起反應"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -184007,7 +183982,7 @@
         "C": "「突觸延遲」是由於突觸釋放神經傳導物質，並作用在突觸後細胞膜上所需要的時間",
         "D": "「突觸延遲」的時間長短與突觸鏈上突觸的數目成反比，即突觸數目越多，突觸延遲時間越短"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -184067,7 +184042,7 @@
         "C": "呼吸阻力變小",
         "D": "換氣閾值升高"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -184107,7 +184082,7 @@
         "C": "患者心跳過速，醫師試圖減緩心跳",
         "D": "患者意識昏迷，醫師試圖刺激患者"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -184147,7 +184122,7 @@
         "C": "2.5 升",
         "D": "5.0 升"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -184187,7 +184162,7 @@
         "C": "①③④",
         "D": "②③④"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -184207,7 +184182,7 @@
         "C": "葡萄糖的氧化",
         "D": "磷酸肌酐酸（creatine phosphate）的分解"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -184267,7 +184242,7 @@
         "C": "往外展方向及下方的滾動",
         "D": "往外展方向及下方的滑動"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -184287,7 +184262,7 @@
         "C": "Ia 類（group Ia）負責傳遞來自肌梭的初級接受器訊息",
         "D": "Ib 類（group Ib）負責傳遞來自高爾基腱器（Golgi tendon organ）的訊息"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -184307,7 +184282,7 @@
         "C": "騎腳踏車，下肢的動作",
         "D": "打棒球時，上肢投球的動作"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -184327,7 +184302,7 @@
         "C": "僅②③",
         "D": "僅①④"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -184347,7 +184322,7 @@
         "C": "手肘從伸直到屈曲將啞鈴舉起時，手肘屈肌進行向心收縮",
         "D": "手肘從屈曲到伸直將啞鈴慢慢放下時，手肘屈肌進行離心收縮"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -184387,7 +184362,7 @@
         "C": "上斜方肌（upper trapezius）",
         "D": "前鋸肌（serratus anterior）"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -184407,7 +184382,7 @@
         "C": "伸拇長肌（extensor pollicis longus）",
         "D": "伸拇短肌（extensor pollicis brevis）"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -184447,7 +184422,7 @@
         "C": "要到外展120 度一定要同時配合肩關節外轉才能達成",
         "D": "外展到160 度時，鎖骨已停止旋轉"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -184527,7 +184502,7 @@
         "C": "脛跟韌帶（tibiocalcanean ligament）",
         "D": "跟舟足底韌帶（plantar calcaneonavicular ligament）"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -184567,7 +184542,7 @@
         "C": "股薄肌",
         "D": "縫匠肌"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -184587,7 +184562,7 @@
         "C": "增加股四頭肌的作用力臂",
         "D": "膝關節伸直姿勢下，提供對股骨髁關節面的保護"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -184607,7 +184582,7 @@
         "C": "股直肌（rectus femoris）",
         "D": "恥骨肌（pectineus）"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -184627,7 +184602,7 @@
         "C": "脛骨相對於股骨往前移動（translation），最明顯發生於由最大屈曲開始要伸直時",
         "D": "大腿後肌可防止脛骨相對於股骨過度往前移動（translation）"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -184647,7 +184622,7 @@
         "C": "距舟（talonavicular）關節",
         "D": "跟骰（calcaneocuboid）關節"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -184667,7 +184642,7 @@
         "C": "髕骨韌帶",
         "D": "膕肌肌腱"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -184687,7 +184662,7 @@
         "C": "髂腰肌（iliopsoas）",
         "D": "內收長肌（adductus longus）"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -184727,7 +184702,7 @@
         "C": "③②①",
         "D": "②①③"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -184747,7 +184722,7 @@
         "C": "胸腔前後徑變大，左右徑都變小",
         "D": "胸腔前後徑變小，左右徑都變大"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -184767,7 +184742,7 @@
         "C": "內翼肌（medial pterygoid muscle）",
         "D": "外翼肌（lateral pterygoid muscle）"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -184787,7 +184762,7 @@
         "C": "一般行走時，腳趾離地（toe-off）瞬間，腰椎椎間盤所受的壓力大",
         "D": "一般行走時，於步態週期20%時，腰椎椎間盤所受壓力最小"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -184807,7 +184782,7 @@
         "C": "身體重心位置降低",
         "D": "身體側向穩定性增加"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -184847,7 +184822,7 @@
         "C": "關節力矩（joint moment）",
         "D": "關節功率（joint power）"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -184867,7 +184842,7 @@
         "C": "身體大幅側彎到左側",
         "D": "踝關節背曲角度增加"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -184887,7 +184862,7 @@
         "C": "使對側腳順利完成擺盪期",
         "D": "幫助對側腳順利完成單腳站立"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -184929,8 +184904,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pt_100030_p0_74_0.webp"
     },
     {
       "id": 9194,
@@ -184949,7 +184923,7 @@
         "C": "第三類槓桿（施力點在中間），費力省時",
         "D": "第三類槓桿（施力點在中間），省力費時"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -184969,7 +184943,7 @@
         "C": "骨折處的荷重較骨折之前小，導致生骨細胞活躍造成",
         "D": "骨折處的荷重較骨折之前小，導致蝕骨細胞活躍造成"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -184989,7 +184963,7 @@
         "C": "年輕骨質在彈性區有較大之形變範圍",
         "D": "年輕骨質在塑性區有較大之形變範圍"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -185009,7 +184983,7 @@
         "C": "滑液膜（synovial membrane）",
         "D": "關節囊之纖維層（stratum fibrosum）"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -185029,7 +185003,7 @@
         "C": "材質應變速率增加，楊氏係數先維持不變後增加",
         "D": "材質應變速率與楊氏係數無關"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -185049,7 +185023,7 @@
         "C": "肌束膜（perimysium）",
         "D": "肌纖維膜（sarcolemma）"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -191474,7 +191448,7 @@
         "C": "內肋間肌是吐氣肌，神經分布為T1-12",
         "D": "腹肌是吐氣肌，神經分布為T8-L1"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -191514,7 +191488,7 @@
         "C": "①③④",
         "D": "②③④"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -191534,7 +191508,7 @@
         "C": "理論上，顫動法可以使呼吸道上的痰液鬆動",
         "D": "扣擊的施行頻率約在1-2 Hz 之間"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -191574,7 +191548,7 @@
         "C": "冠狀動脈循環情形",
         "D": "心輸出狀態"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -191594,7 +191568,7 @@
         "C": "最大血壓及完成距離",
         "D": "測試過程中之休息次數"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -191614,7 +191588,7 @@
         "C": "60%",
         "D": "40%"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -191654,7 +191628,7 @@
         "C": "②③⑤",
         "D": "①③⑤"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -191674,7 +191648,7 @@
         "C": "有呼吸過快情形",
         "D": "右中葉的胸廓擴張降低"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -191714,7 +191688,7 @@
         "C": "125-140 bpm",
         "D": "145-160 bpm"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -191754,7 +191728,7 @@
         "C": "下區梗塞（inferior infarction）",
         "D": "後區梗塞（posterior infarction）"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -191774,7 +191748,7 @@
         "C": "血壓、呼吸交換率",
         "D": "心跳"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -191794,10 +191768,9 @@
         "C": "坐下休息，並使用硝化甘油舌下片",
         "D": "繼續監測，並完成運動訓練"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pt_100030_p5_17_0.webp"
     },
     {
       "id": 9537,
@@ -191816,7 +191789,7 @@
         "C": "心肌攝氧量在低限運動時會增加",
         "D": "骨骼肌的氧化酶濃度會增加"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -191836,7 +191809,7 @@
         "C": "①②③",
         "D": "②③④"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -191856,7 +191829,7 @@
         "C": "①②",
         "D": "③④"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -191876,7 +191849,7 @@
         "C": "②③",
         "D": "①④⑤"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -191936,7 +191909,7 @@
         "C": "協助病人用力吐氣",
         "D": "增加病人的運動量"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -191996,7 +191969,7 @@
         "C": "有氧運動可有效提昇有氧耐力",
         "D": "SpO2 < 95%即應給予氧氣"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -192016,7 +191989,7 @@
         "C": "減少急性惡化及併發症",
         "D": "顯著改善肺功能"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -192036,7 +192009,7 @@
         "C": "甲、乙均為動脈瘡",
         "D": "甲、乙均為靜脈瘡"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -192056,7 +192029,7 @@
         "C": "社區缺乏訓練設備",
         "D": "衛教之提供"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -192076,7 +192049,7 @@
         "C": "①②",
         "D": "③④"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -192136,7 +192109,7 @@
         "C": "呼吸末期正壓",
         "D": "調高敏感度"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -192156,7 +192129,7 @@
         "C": "①③",
         "D": "②③"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -192176,7 +192149,7 @@
         "C": "C7",
         "D": "T2"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -192236,7 +192209,7 @@
         "C": "②③④",
         "D": "①②④"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -192256,7 +192229,7 @@
         "C": "心臟β-adrenergic receptors 刺激反應下降",
         "D": "正腎上腺素分泌濃度下降"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -192276,7 +192249,7 @@
         "C": "家庭",
         "D": "家庭中之父母"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -192296,7 +192269,7 @@
         "C": "注意力∕互動系統（attention/interaction）",
         "D": "情緒調節系統（emotion-regulatory）"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -192316,7 +192289,7 @@
         "C": "站著穿脫鞋子",
         "D": "在草地上將足球丟出後用腳踢"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -192336,7 +192309,7 @@
         "C": "「同化」（assimilation）是兒童以其既有的基模或認知結構去選擇、辨識或解釋環境中的事物，並融於個體原有的認知結構或經驗的過程",
         "D": "在兒童認知發展中，「同化」過程比「調適」（accommodation）過程重要"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -192356,7 +192329,7 @@
         "C": "活動及參與",
         "D": "環境"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -192376,7 +192349,7 @@
         "C": "兒童接受的教導與關鍵點控制越多，新的動作技巧越快習得",
         "D": "讓兒童在設計好的實驗室環境下進行有目的的活動，新的動作技巧越快習得"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -192416,7 +192389,7 @@
         "C": "②③①",
         "D": "②①③"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -192456,7 +192429,7 @@
         "C": "±",
         "D": "±"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -192476,7 +192449,7 @@
         "C": "效標效度（criterion validity）",
         "D": "黃金效度（golden validity）"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -192496,7 +192469,7 @@
         "C": "負預測率是10/184",
         "D": "負預測率是6/184"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -192536,7 +192509,7 @@
         "C": "使用副木以避免關節攣縮",
         "D": "應依據患童的心智功能設計介入的內容"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -192556,7 +192529,7 @@
         "C": "下肢感覺不敏感的部位需要更多的保護，以避免未察覺的傷害",
         "D": "感覺喪失造成的皮膚問題需要注意"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -192596,7 +192569,7 @@
         "C": "脊髓內中間神經元有缺陷",
         "D": "脊髓內的前角細胞有異常"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -192636,7 +192609,7 @@
         "C": "可以分辨冷熱感覺",
         "D": "可以分辨彩色與非彩色"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -192656,7 +192629,7 @@
         "C": "鼓勵主動上下肢運動，以增進骨骼礦化作用（mineralization）",
         "D": "在不同姿勢下訓練頭部動作，以增進頭部控制"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -192676,7 +192649,7 @@
         "C": "踝背屈，前足外展，後足內翻",
         "D": "踝背屈，前足外展，後足外翻"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -192696,7 +192669,7 @@
         "C": "受傷的嬰兒其拉傷部位均會完全地痊癒",
         "D": "在完全恢復前，不得給予患側上肢載重"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -192716,7 +192689,7 @@
         "C": "通常二腳長度差距2 公分以上才需要介入治療",
         "D": "手術後不宜肌力訓練，以避免影響骨頭癒合"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -192756,7 +192729,7 @@
         "C": "美勞課時，拒絕使用膠水",
         "D": "喜歡到處觸摸物體"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -192776,7 +192749,7 @@
         "C": "低負重、高重複次數的訓練比較可增進肌力",
         "D": "低負重、低重複次數的訓練比較可增進肌耐力"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -192796,7 +192769,7 @@
         "C": "雷特氏症候群（Rett syndrome）",
         "D": "威廉氏症候群（Williams syndrome）"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -192836,7 +192809,7 @@
         "C": "可能與嬰兒早期的腦部傷害有關",
         "D": "患童一定合併有注意力不集中或過動的問題"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -192856,7 +192829,7 @@
         "C": "能否配合功能性訓練",
         "D": "痙攣性腦性麻痺的類型"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -192876,7 +192849,7 @@
         "C": "頸椎第六、第七節",
         "D": "頸椎第七節、胸椎第一節"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -192936,7 +192909,7 @@
         "C": "受高張力影響，選擇性動作控制不良",
         "D": "韌帶鬆弛度較高，關節活動度過大"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -192956,7 +192929,7 @@
         "C": "囊狀纖維化兒童少有腸胃症狀",
         "D": "囊狀纖維化兒童少有營養不良問題"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -192976,7 +192949,7 @@
         "C": "③②①",
         "D": "③①②"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -192996,7 +192969,7 @@
         "C": "與居家每日例行作息無關",
         "D": "使兒童在過程中不會發生錯誤，以免產生挫折感"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -193036,7 +193009,7 @@
         "C": "設立短程目標後，逐步設立長程目標",
         "D": "完全由家長設定期待的目標"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -193056,7 +193029,7 @@
         "C": "建立多元遊玩的經驗",
         "D": "具有簡單書寫能力"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -202555,14 +202528,13 @@
       "number": 74,
       "question": "小明是位痙攣型腦性麻痺兒童，在家人的呵護下成長，現在就讀國小五年級的資源班，此時物理 治療的重點「最」需放在：",
       "options": {
-        "A": "",
+        "A": "注意是否因生長快速而有進一步的功能退步",
         "B": "強調營養的供給，以增加體重",
         "C": "調查造成遲緩的病因，做進一步處置",
         "D": "教導家人擺位、餵食、更衣等照顧技巧"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 10074,
@@ -207547,9 +207519,7 @@
         "D": "Golgi tendon organ"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 10323,
@@ -208025,13 +207995,12 @@
       "question": "簡易心智量表（ Mini-Mental State Examination ）並不測量下列何者？",
       "options": {
         "A": "認知功能",
-        "B": "",
+        "B": "注意力",
         "C": "算術能力",
         "D": "情緒反應"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 10347,
@@ -217865,16 +217834,15 @@
       "subject_name": "神經疾病物理治療",
       "stage_id": 4,
       "number": 37,
-      "question": "關於頭部外傷患者昏迷期的治療，下列何者不恰當？",
+      "question": "關於頭部外傷患者昏迷期的治療, 下列何者不恰當?",
       "options": {
         "A": "多做被動關節運動及翻身",
-        "B": "",
+        "B": "注意床上擺位",
         "C": "避免半坐臥或坐起",
         "D": "應多給予各種感覺刺激"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 10837,
@@ -231460,12 +231428,11 @@
       "options": {
         "A": "學習障礙",
         "B": "腦性麻痺",
-        "C": "",
+        "C": "注意力缺失過動症",
         "D": "閱讀障礙"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 11515,
@@ -247374,11 +247341,10 @@
         "A": "定向性",
         "B": "回想記憶",
         "C": "命名能力",
-        "D": ""
+        "D": "注意力"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 12309,
@@ -249496,12 +249462,11 @@
       "options": {
         "A": "於運動前評估其心絞痛之頻率或強度是否有改變",
         "B": "運動過程可能產生之低血壓反應",
-        "C": "",
+        "C": "注意是否有攜帶硝化甘油(Nitroglycerin) 舌下錠",
         "D": "運動訓練時期，要鼓勵病患能達到缺血或心絞痛時之心率，才能有較好之訓練成果"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 12415,
@@ -252987,11 +252952,10 @@
         "A": "縣市物理治療師公會",
         "B": "中央健康保險署",
         "C": "直轄市政府或縣市政府之衛生局",
-        "D": ""
+        "D": "考試院"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 12589,
@@ -262648,15 +262612,13 @@
       "number": 26,
       "question": " 物理治療師證書是由何種機關核發？",
       "options": {
-        "A": "",
+        "A": "考試院",
         "B": "衛生福利部",
         "C": "縣市衛生局",
         "D": "物理治療師公會"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 13066,
@@ -263854,8 +263816,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/pt_105020_p2_3_0.webp"
     },
     {
       "id": 13123,
@@ -265962,13 +265923,11 @@
       "options": {
         "A": "長期記憶",
         "B": "短期記憶",
-        "C": "",
+        "C": "注意力",
         "D": "判斷力"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 13223,
@@ -269731,12 +269690,10 @@
         "A": "生理（physiological）",
         "B": "動作（motor）",
         "C": "行為（behavioral）",
-        "D": ""
+        "D": "注意力互動(attention/interaction)"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 13402,
@@ -271311,9 +271268,7 @@
         "D": "B 12"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 13477,
@@ -286232,15 +286187,13 @@
       "number": 26,
       "question": " 唸完一個英文單字，立即要求病患倒著拼出這個單字，最可能是在測病患的何種能力？",
       "options": {
-        "A": "",
+        "A": "注意力",
         "B": "判斷力",
         "C": "抽象思考力",
         "D": "短期記憶力"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 14186,
@@ -287056,15 +287009,13 @@
       "number": 65,
       "question": " 下列敘述何者不是小兒麻痺後症候群（postpolio syndrome）的居家衛教原則？",
       "options": {
-        "A": "",
+        "A": "注意體重控制",
         "B": "肌力訓練以達到過度負荷為原則",
         "C": "儘量將減少能量消耗以及保護關節的技巧運用在日常生活",
         "D": "鼓勵使用輔具來降低疲勞發生"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 14225,
@@ -291532,9 +291483,7 @@
         "D": "D"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 14437,

@@ -15,7 +15,10 @@ const supabase = require('./supabase')
 
 const VERTEX_PROJECT     = 'gen-lang-client-0502672630'
 const VERTEX_REGION      = 'us-central1'
-const EMBEDDING_MODEL    = 'text-embedding-004'  // 768 dims, multilingual
+// text-embedding-004 has a known bug: short Chinese text returns the same
+// embedding for different inputs. text-multilingual-embedding-002 doesn't.
+// Both are 768 dims so the schema is unchanged.
+const EMBEDDING_MODEL    = 'text-multilingual-embedding-002'
 const EMBEDDING_DIM      = 768
 const auth               = new GoogleAuth({ scopes: ['https://www.googleapis.com/auth/cloud-platform'] })
 
@@ -47,7 +50,7 @@ async function embedBatch(texts, taskType = 'RETRIEVAL_DOCUMENT') {
   }
 }
 
-async function embedAll(texts, batchSize = 50) {
+async function embedAll(texts, batchSize = 10) {
   const out = []
   for (let i = 0; i < texts.length; i += batchSize) {
     const batch = texts.slice(i, i + batchSize)
@@ -178,8 +181,12 @@ async function ingestDocument(doc, { force = false } = {}) {
 // ─── Retrieval (used by /explain to inject grounded context) ───────────────
 async function retrieve(queryText, { topK = 5, threshold = 0.55, language = null } = {}) {
   const [embedding] = await embedBatch([queryText], 'RETRIEVAL_QUERY')
+  // supabase-js sends JS arrays as JSON — Postgres function signature
+  // `vector(768)` doesn't auto-cast that. Format as pgvector literal string
+  // `[0.01,0.02,...]` so the implicit text→vector cast triggers.
+  const vectorLiteral = '[' + embedding.join(',') + ']'
   const { data, error } = await supabase.rpc('rag_match_chunks', {
-    query_embedding: embedding,
+    query_embedding: vectorLiteral,
     match_threshold: threshold,
     match_count:     topK,
     language_filter: language,

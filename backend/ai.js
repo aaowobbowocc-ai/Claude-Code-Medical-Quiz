@@ -4,6 +4,7 @@ const path = require('path');
 const https = require('https');
 const Anthropic = require('@anthropic-ai/sdk');
 const supabase = require('./supabase');
+const rag = require('./rag');
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
@@ -323,6 +324,32 @@ function registerRoutes(app, examData, stats) {
     const examMeta = examData[exam] || examData.doctor1;
     const examName = examMeta.metadata?.category || '醫師國考';
 
+    // RAG context retrieval — only for medical exams (Wikipedia medical corpus
+    // doesn't help legal/driver/customs exams). Best-effort: don't block the
+    // explain on retrieval failure.
+    const MEDICAL_EXAMS = new Set([
+      'doctor1','doctor2','dental1','dental2','pharma1','pharma2',
+      'nursing','nutrition','medlab','pt','ot','radiology','tcm1','tcm2','vet'
+    ]);
+    let ragContext = '';
+    if (MEDICAL_EXAMS.has(exam)) {
+      try {
+        // Build a focused query: question text + correct option text. Keep
+        // total under ~200 chars to keep embedding cost low and signal strong.
+        const correctOption = options[answer] || '';
+        const queryText = (question + '\n' + correctOption).slice(0, 200);
+        const chunks = await rag.retrieve(queryText, { topK: 3, threshold: 0.55, language: 'zh' });
+        if (chunks.length) {
+          ragContext = '\n【參考資料】（從醫學百科檢索）\n' + chunks.map((c, i) =>
+            `${i + 1}. 《${c.metadata?.title || '醫學參考'}》：${c.content.replace(/\n+/g, ' ').slice(0, 220)}…`
+          ).join('\n') + '\n（這些段落僅供參考，請優先依照題幹判斷。）\n';
+        }
+      } catch (e) {
+        // Retrieval failure is non-fatal — fall through to no-context generation.
+        console.warn('[explain] RAG retrieve failed:', e.message);
+      }
+    }
+
     // Conditional notes based on question metadata
     const notes = [];
     if (incomplete === 'missing_image' || (incomplete === true && has_image)) {
@@ -337,7 +364,7 @@ function registerRoutes(app, examData, stats) {
     const noteBlock = notes.length ? '\n' + notes.join('\n') + '\n' : '';
 
     const prompt = `你是一位臺灣${examName}的解題老師，用繁體中文回答。
-
+${ragContext}
 【作答原則】
 1. 以題幹線索為核心：題目給的資訊（數據、病史、條文、案例）優先使用，不要憑空加細節。
 2. 台灣考試標準：以台灣現行法規、官方指引、學會共識為準（醫學題用台灣醫學會指引/健保；法律題用台灣現行法）。

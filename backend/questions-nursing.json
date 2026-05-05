@@ -138184,7 +138184,7 @@
       "subject_name": "產科護理學",
       "stage_id": 10,
       "number": 38,
-      "question": "吳女士接受meperidine 注射2 小時後，子宮頸口開5 公分，TPR：36.6、90、16，BP：110/70 mmHg，胎心音監控30 分鐘結果均如下圖示，仍安靜休息中，下列護理處置何者最恰當？",
+      "question": "吳女士接受 meperidine 注射 2 小時後,子宮頸口開 5 公分,TPR:36.6、90、16,BP:110/70 mmHg,胎心音監控 30 分鐘結果均如下圖示,仍安靜休息中,下列護理處置何者最恰當?",
       "options": {
         "A": "200",
         "B": "200",
@@ -138192,9 +138192,7 @@
         "D": "180"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "explanation": ""
     },
     {
       "id": 114373,
@@ -156816,7 +156814,7 @@
       "subject_name": "解剖學",
       "stage_id": 1,
       "number": 10,
-      "question": "男性的三段尿道中，由近端至遠端的順序為何？①陰莖段尿道 ②膜段尿道 ③前列腺段尿道",
+      "question": "《素問・陰陽應象大論》中論及「陰在內,陽之守也;陽在外,陰之使也」主要是說明陰陽之間存在何種關係?",
       "options": {
         "A": "①①①",
         "B": "①①①",
@@ -156824,9 +156822,7 @@
         "D": "①①①"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "parser_circled_number_collision"
+      "explanation": ""
     },
     {
       "id": 115302,
@@ -160528,7 +160524,7 @@
       "subject_name": "內科護理學",
       "stage_id": 8,
       "number": 35,
-      "question": "針對中樞神經系統腫瘤化學治療之給藥方式，下列何者正確？①靜脈 ②Port-A ③腰椎穿刺④Ommaya 藥物儲存槽",
+      "question": "針對中樞神經系統腫瘤化學治療之給藥方式,下列何者正確?①靜脈 ② Port-A ③腰椎穿刺 ④Ommaya 藥物儲存槽",
       "options": {
         "A": "①①",
         "B": "①①",
@@ -160536,9 +160532,7 @@
         "D": "①②"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "parser_circled_number_collision"
+      "explanation": ""
     },
     {
       "id": 115487,
@@ -162155,7 +162149,7 @@
       "subject_name": "產科護理學",
       "stage_id": 10,
       "number": 37,
-      "question": "婦女服用混合雌性素與黃體素製劑改善更年期症狀，初期可能出現下列那些副作用？①體重增加②膚色變淡 ③乳房腫脹 ④月經出現 ⑤陰道分泌物減少",
+      "question": "婦女服用混合雌性素與黃體素製劑改善更年期症狀,初期可能出現下列那些副作用?①體重增加 ②膚色變淡 ③乳房腫脹 ④月經出現 ⑤陰道分泌物減少",
       "options": {
         "A": "①①②",
         "B": "①①①",
@@ -162163,9 +162157,7 @@
         "D": "①②①"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "parser_circled_number_collision"
+      "explanation": ""
     },
     {
       "id": 115568,
@@ -164186,7 +164178,7 @@
       "subject_name": "社區護理學",
       "stage_id": 13,
       "number": 59,
-      "question": "有關空氣污染的敘述，下列何者正確？①空氣污染指標值（PSI）是以二氧化碳污染物濃度來換算②空氣污染指標值超過50 即表示空氣品質不良 ③空氣污染物主要經由呼吸道侵入影響人體健康，易誘發慢性阻塞性肺部疾患 ④汽車排放的廢氣中，造成空氣污染的成分有一氧化碳、氮氧化物等",
+      "question": "有關空氣污染的敘述,下列何者正確?①空氣污染指標值(PSI)是以二氧化碳污染物濃度來換算 ②空氣污染指標值超過50即表示空氣品質不良 ③空氣污染物主要經由呼吸道侵入影響人體健康, 易誘發慢性阻塞性肺部疾患 ④汽車排放的廢氣中,造成空氣污染的成分有一氧化碳、氮氧化物等",
       "options": {
         "A": "①①",
         "B": "①①",
@@ -164194,9 +164186,7 @@
         "D": "①①"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "parser_circled_number_collision"
+      "explanation": ""
     },
     {
       "id": 115669,
@@ -183408,15 +183398,13 @@
       "number": 62,
       "question": "有關薪資與工作滿意度之關係，C 代表工作能力（capacity）、W 代表工作表現或成果（workperformance）、P 代表薪資等級（pay level），下列何種關係形式會讓員工感到衝突而逐漸疏離工作與組織目標？",
       "options": {
-        "A": "",
+        "A": "P > C = W",
         "B": "P > C",
         "C": "= W",
         "D": "C = W > P"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116626,
@@ -183557,17 +183545,15 @@
       "subject_name": "護理行政",
       "stage_id": 7,
       "number": 69,
-      "question": "某病房有40 位病人，占床率80%。病房中病人分類共分四類，病房中四類病人所占%比數分別是10：20：40：30。每類護理時數分別是4、3、2、1，該病房平均每天護理時數是多少小時？",
+      "question": "某病房有 40 位病人,占床率 80%。病房中病人分類共分四類,病房中四類病人所占%比數分別是 10:20:40:30。每類護理時數分別是 4、3、2、1,該病房平均每天護理時數是多少小時?",
       "options": {
-        "A": "",
+        "A": "63.2",
         "B": "63.2",
         "C": "64",
         "D": "67.2"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116633,
@@ -185545,18 +185531,16 @@
       "subject_name": "產科護理學",
       "stage_id": 10,
       "number": 3,
-      "question": "妊娠32 週之胎兒生理活動評估（Biophysical Profile, BPP）結果為：羊水囊直徑1.3 cm，壓力試驗為反應型，30 分鐘之內有3 次胎動，胎兒有1 次短暫呼吸約15 秒，四肢伸展緩慢。下列敘述何者正確？",
+      "question": "妊娠 32 週之胎兒生理活動評估（Biophysical Profile, BPP）結果為：羊水囊直徑 1.3 cm，壓力試驗為反應型，30 分鐘之內有 3 次胎動，胎兒有 1 次短暫呼吸約 15 秒，四肢伸展緩慢。下列敘述何者正確？",
       "options": {
         "A": "總分為8 分",
-        "B": "",
+        "B": "12 小時內再重複測量 1 次",
         "C": "12",
         "D": "小時內再重複測量1 次"
       },
       "answer": "C",
       "explanation": "",
-      "disputed": true,
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "disputed": true
     },
     {
       "id": 116727,
@@ -186747,17 +186731,15 @@
       "subject_name": "兒科護理學",
       "stage_id": 11,
       "number": 60,
-      "question": "小強，12 歲，診斷為氣喘，居家長期監測尖峰呼氣流量（peak expiratory flow rate, PEFR），其自我監測的個人最佳值為250 L/min。某日清晨，其PEFR 為180 L/min，到傍晚上升為220 L/min，估算小強目前PEFR 的變異度（variance）為何？",
+      "question": "小強, 12 歲, 診斷為氣喘, 居家長期監測尖峰呼氣流量 (peak expiratory flow rate, PEFR), 其自我監測的個人最佳值為 250 L/min。某日清晨, 其 PEFR 為 180 L/min, 到傍晚上升為 220 L/min, 估算小強目前 PEFR 的變異度 (variance) 為何?",
       "options": {
-        "A": "",
+        "A": "10%",
         "B": "10%",
-        "C": "",
+        "C": "20%",
         "D": "16%"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116784,
@@ -188518,17 +188500,15 @@
       "subject_name": "社區護理學",
       "stage_id": 13,
       "number": 64,
-      "question": "請依圖示回答A 與B 的關係為何？",
+      "question": "請依圖示回答 A 與 B 的關係為何?",
       "options": {
-        "A": "A",
-        "B": "B",
+        "A": "同居",
+        "B": "離婚",
         "C": "a",
         "D": "b"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "explanation": ""
     },
     {
       "id": 116868,

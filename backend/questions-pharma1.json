@@ -26812,9 +26812,7 @@
         "D": "β"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": "108100_s33_55",
@@ -28416,9 +28414,7 @@
         "D": "β"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115020969,
@@ -31607,7 +31603,7 @@
       "question": "由文獻得知一藥靜脈注射劑量D 0 後的體內動力學符合上述模室理論。藥品血中濃度公式為C p =Ae -at + Be -bt + Ce -ct 。下列敘述何者錯誤？",
       "options": {
         "A": "採樣排除相的兩點血中濃度，所得的速率常數為k",
-        "B": "",
+        "B": "k = (A+B+C)abc / (Abc + Bac + Cab)",
         "C": "",
         "D": "若採樣的血液樣本僅在排除相，無法準確計算V p"
       },
@@ -68157,7 +68153,7 @@
       "subject_name": "藥物化學",
       "stage_id": 2,
       "number": 61,
-      "question": "血管張力素(angiotensin)轉換酶",
+      "question": "血管張力素(angiotensin)轉換酶切割基質之位置(如下圖)為何?\nAsp—Arg—Val—Tyr—Ile—His—Pro—Phe—His—Leu",
       "options": {
         "A": "A",
         "B": "B",
@@ -68169,9 +68165,7 @@
         "/question-images/pharma1_113020_61_0.webp",
         "/question-images/pharma1_113020_61_1.webp",
         "/question-images/pharma1_113020_61_2.webp"
-      ],
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      ]
     },
     {
       "id": "113020_62",
@@ -69166,7 +69160,7 @@
       "subject_name": "藥物分析",
       "stage_id": 3,
       "number": 33,
-      "question": "在下列Van Deemter equation中,何種參數與靜相特性關係最大?",
+      "question": "在下列Van Deemter equation中,何種參數與靜相特性關係最大?\nH = A / (1 + Cm/u^(1/2)) + B/u + Csu + Cmu^(1/2)",
       "options": {
         "A": "A",
         "B": "B",
@@ -69176,9 +69170,7 @@
       "answer": "D",
       "images": [
         "/question-images/pharma1_113020_1_33_0.webp"
-      ],
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      ]
     },
     {
       "id": "113020_1_34",
@@ -78344,16 +78336,14 @@
       "subject_name": "藥物分析",
       "stage_id": 3,
       "number": 24,
-      "question": "在化合物 的 1H NMR 圖譜中,劃底線之氫訊號為幾重峰?又其相對峰面積比為何?",
+      "question": "在化合物CH₃CH₂CH₂Cl的¹H NMR圖譜中,劃底線之氫訊號為幾重峰?又其相對峰面積比為何?",
       "options": {
         "A": "2,1:1",
         "B": "3,1:2:1",
         "C": "4,1:3:3:1",
         "D": "5,1:4:6:4:1"
       },
-      "answer": "B",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "answer": "B"
     },
     {
       "id": "114020_1_25",
@@ -92727,11 +92717,10 @@
         "A": "H2O",
         "B": "CH3OH",
         "C": "CH3CN",
-        "D": ""
+        "D": "O\n||\nCH₃ C CH₃"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021269,
@@ -96087,7 +96076,7 @@
       "subject_name": "藥物化學",
       "stage_id": 2,
       "number": 44,
-      "question": "下列化合物中，何者為enalapril 的活性代謝產物？",
+      "question": "下列化合物中, 何者為 enalapril 的活性代謝產物?",
       "options": {
         "A": "",
         "B": "HO",
@@ -97454,7 +97443,7 @@
       "subject_name": "藥物分析",
       "stage_id": 3,
       "number": 34,
-      "question": "以silica gel TLC 片分析下圖3 個NSAIDs，並以chloroform/acetone（4:1）為移動相，則其Rf 值由小到大的順序應為何？H3CCHCOOH",
+      "question": "以 silica gel TLC 片分析下圖 3 個 NSAIDs，並以 chloroform/acetone (4:1) 為移動相，則其 Rf 值由小到大的順序應為何?\n\n[圖]\n\ndiclofenac\n\nmefenamic acid\n\nibuprofen",
       "options": {
         "A": "Cl",
         "B": "COOHCH2COOH",
@@ -97462,9 +97451,7 @@
         "D": "NH"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "explanation": ""
     },
     {
       "id": 115021505,
@@ -97496,7 +97483,7 @@
       "subject_name": "藥物分析",
       "stage_id": 3,
       "number": 36,
-      "question": "在層析圖中A、B 兩個波峰滯留時間分別為17.1 與16.2 分鐘，波峰底部寬度分別為0.51 與0.59 分鐘，則分離率（Resolution, Rs）約為多少？",
+      "question": "在層析圖中 A、B 兩個波峰滯留時間分別為 17.1 與 16.2 分鐘，波峰底部寬度分別為 0.51 與 0.59 分鐘，則分離率 (Resolution, Rs) 約為多少？",
       "options": {
         "A": "Rs＝0.4",
         "B": "Rs＝0.8",
@@ -97504,9 +97491,7 @@
         "D": "Rs＝2.4"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "explanation": ""
     },
     {
       "id": 115021507,
@@ -101569,7 +101554,7 @@
       "subject_name": "藥物化學",
       "stage_id": 2,
       "number": 79,
-      "question": "Apomorphine可用來治療後期的帕金森氏症（late-stage Parkinson’s disease），其結構為何？",
+      "question": "Apomorphine可用來治療後期的帕金森氏症 (late-stage Parkinson's disease)，其結構為何?",
       "options": {
         "A": "",
         "B": "",
@@ -106217,7 +106202,7 @@
       "subject_name": "藥物化學",
       "stage_id": 2,
       "number": 70,
-      "question": "何者是celecoxib的代謝物（metabolite）？",
+      "question": "何者是celecoxib的代謝物 ( metabolite ) ?",
       "options": {
         "A": "",
         "B": "",
@@ -116323,9 +116308,7 @@
         "D": "c"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115022442,
@@ -140755,12 +140738,10 @@
         "A": "D 是溶劑上升的通路",
         "B": "C",
         "C": "E 是溶劑回流於A 的通路B",
-        "D": "D"
+        "D": "E是溶劑回流於A的通路"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115023820,
@@ -141046,17 +141027,15 @@
       "subject_name": "藥物分析",
       "stage_id": 3,
       "number": 26,
-      "question": "紫外光光譜分析可用於測定某化合物之pKa 值，A 代表該化合物於已知pH 值緩衝液所測得之吸光度；Ai代表該化合物完全離子化型之吸光值；Au 代表該化合物非離子化型之吸光值，則下列何式可測定化合物之pKa 值？",
+      "question": "紫外光光譜分析可用於測定某化合物之 pKa 值，A 代表該化合物於已知 pH 值緩衝液所測得之吸光度；Ai 代表該化合物完全離子化型之吸光值；Au 代表該化合物非離子化型之吸光值，則下列何式可測定化合物之 pKa 值？",
       "options": {
-        "A": "A",
+        "A": "pKa = pH + log (A - Ai) / (Ai - Au)",
         "B": "−",
         "C": "Ai",
         "D": "Ai"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115023834,

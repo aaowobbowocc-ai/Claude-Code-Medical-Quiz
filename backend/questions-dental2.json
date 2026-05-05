@@ -921,17 +921,15 @@
       "number": 40,
       "question": "製備上顎小臼齒的局部覆蓋牙冠(partial-coverage crown)(如圖),最不適當的頰側咬合終接線(finish line)為何?",
       "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
+        "A": "大聲遏止哭泣",
+        "B": "說故事",
+        "C": "輕聲說話與肢體接觸",
+        "D": "說警察伯伯會抓人"
       },
       "answer": "D",
       "images": [
         "/question-images/dental2_110020_48_0.webp"
-      ],
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      ]
     },
     {
       "id": "110020_49",
@@ -9204,16 +9202,14 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 12,
       "number": 37,
-      "question": "圖中黑色箭頭所指的解剖位置為何?",
+      "question": "下列何者不是兒童牙科局部麻醉(dental local anesthesia)施行時,用以注射的藥劑?",
       "options": {
         "A": "right maxilla",
         "B": "left maxilla",
         "C": "right mandible",
         "D": "left mandible"
       },
-      "answer": "D",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "answer": "D"
     },
     {
       "id": "111020_1_78",
@@ -9225,16 +9221,14 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 12,
       "number": 38,
-      "question": "圖中黑色箭頭所指的病變,最可能為下列何者?",
+      "question": "關於窩溝封劑(pit and fissure sealants)的敘述,下列何者錯誤?",
       "options": {
         "A": "殘餘囊腫(residual cyst)",
         "B": "根尖囊腫(radicular cyst)",
         "C": "根尖牙骨質骨質發育不良症(periapical cemento-osseous dysplasia)",
         "D": "外生贅骨(exostoses)"
       },
-      "answer": "C",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "answer": "C"
     },
     {
       "id": "111020_1_79",
@@ -58601,16 +58595,14 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 12,
       "number": 36,
-      "question": "43 歲女性因右下顎缺牙想要植牙,經X 光檢查如附圖所示,此病人最可能罹患下列何種疾病?",
+      "question": "臨床上關於口內已存在的舊銀粉復形物(amalgam restorations)檢查發現中,下列何者最不需要重新置換填補?",
       "options": {
         "A": "麥克滾-阿爾布萊德氏症候群(McCune-Albright syndrome)",
         "B": "繁盛性牙骨質骨發育不良(florid cemento-osseous dysplasia)",
         "C": "變形性骨炎(Paget disease of bone)",
         "D": "家族性巨大畸形牙骨質瘤(familial gigantiform cementoma)"
       },
-      "answer": "B",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "answer": "B"
     },
     {
       "id": "115020_1_77",
@@ -71129,9 +71121,9 @@
       "number": 63,
       "question": "若X光片中牙齒的長度為a，X光片中伸入根管之器械（instrument）長度為b，實際的伸入根管之器械長度為c，下列何者最接 近實際牙齒長度？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
+        "A": "a × c / b",
+        "B": "a × b / c",
+        "C": "c",
         "D": ""
       },
       "answer": "A",
@@ -86488,14 +86480,13 @@
       "number": 23,
       "question": "根據此力量─變形曲線圖（force-deflection curve），曲線上何標示點代表屈服點（yield point）？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115021603,
@@ -103473,7 +103464,7 @@
       "subject_name": "兒童牙科",
       "stage_id": 0,
       "number": 68,
-      "question": "下列何者可診斷為牙本質形成不良（dentinogenesis imperfecta）？",
+      "question": "下列何者可診斷為牙本質形成不良 (dentinogenesis imperfecta) ?",
       "options": {
         "A": "",
         "B": "",
@@ -116376,9 +116367,9 @@
       "subject_name": "兒童牙科",
       "stage_id": 0,
       "number": 69,
-      "question": "下列何者可診斷為牙本質發育不良（dentin dysplasia）？",
+      "question": "下列何者可診斷為牙本質發育不良 ( dentin dysplasia ) ?",
       "options": {
-        "A": "",
+        "A": "A.",
         "B": "",
         "C": "",
         "D": ""
@@ -151565,7 +151556,7 @@
       "subject_name": "牙體復形",
       "stage_id": 0,
       "number": 40,
-      "question": "下列何者屬於下顎垂直型有利性骨折（vertically favorable fracture）？",
+      "question": "下列何者屬於下顎垂直型有利性骨折(vertically favorable fracture) ?",
       "options": {
         "A": "",
         "B": "",
@@ -152164,7 +152155,7 @@
       "number": 69,
       "question": "如圖，下列何者有正中贅齒（mesiodens）？",
       "options": {
-        "A": "",
+        "A": "A.",
         "B": "",
         "C": "",
         "D": ""
@@ -158535,14 +158526,12 @@
       "question": " 下列有關牙周致病菌與破壞性牙周病之敘述何者正確？",
       "options": {
         "A": "actinomycetemcomitans 菌可以侵入上皮細胞，在成年人牙周病中大部份分離出來的是 serotype b",
-        "B": "",
+        "B": "B.A. actinomycetemcomitans菌可以侵入上皮細胞,在成年人牙周病中大部份分離出來的是 serotype b",
         "C": "Tannerella forsythsia （ Bacteroides forsythus ）可造成細胞凋亡，與 Fusobacterium nucleatum 的生長是互相拮抗的",
         "D": "Fusobacterium nucleatum 可侵入牙齦細胞，亦可伴隨上皮細胞 IL-8 分泌的增加，但無法造成嗜 中性白血球細胞凋亡"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025163,

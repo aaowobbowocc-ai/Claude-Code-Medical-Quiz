@@ -71,6 +71,53 @@ function audit(examId) {
 
 const EXAMS = ['doctor1','doctor2','dental1','dental2','pharma1','pharma2','nursing','nutrition','medlab','pt','ot','radiology','tcm1','tcm2','vet','social-worker']
 
+// "Expected missing" — sessions/years that legitimately don't exist (exam not
+// held, exam started later, future year). Format: { exam: ['year-session', ...] }
+const EXPECTED_MISSING = (() => {
+  const m = {}
+  // 115年第二次 not held yet (typical 8月 timing) — applies to all exams
+  for (const e of EXAMS) m[e] = new Set(['115-2'])
+  // 職治師/獸醫師 從 110 起只辦第二次（年度單試）
+  for (const e of ['ot', 'vet']) {
+    for (let y = 110; y <= 115; y++) m[e].add(`${y}-1`)
+  }
+  // 社工師 104 年才開辦
+  m['social-worker'] = new Set([...m['social-worker']])
+  for (let y = 100; y <= 103; y++) {
+    m['social-worker'].add(`${y}-1`); m['social-worker'].add(`${y}-2`)
+  }
+  return m
+})()
+
+function reportMissingYears() {
+  console.log('\n=== 100-115 全年度覆蓋檢查 ===')
+  for (const examId of EXAMS) {
+    const cfg = loadConfig(examId)
+    if (!cfg || !cfg.questionsFile) continue
+    const arr = loadQuestions(cfg.questionsFile)
+    const present = new Set()
+    for (const q of arr) {
+      if (q.roc_year && q.session) {
+        present.add(`${q.roc_year}-${q.session === '第一次' ? '1' : '2'}`)
+      }
+    }
+    const missing = []
+    for (let y = 100; y <= 115; y++) {
+      for (const sid of ['1', '2']) {
+        const key = `${y}-${sid}`
+        if (!present.has(key) && !EXPECTED_MISSING[examId].has(key)) missing.push(key)
+      }
+    }
+    if (missing.length) {
+      console.log(`❌ ${cfg.name} (${examId}): 真實缺漏 ${missing.join(', ')}`)
+    } else {
+      console.log(`✅ ${cfg.name} (${examId}): 100-115 已知該辦的場次都有`)
+    }
+  }
+}
+
+reportMissingYears()
+
 let totalIssues = 0
 let totalMissing = 0
 for (const examId of EXAMS) {

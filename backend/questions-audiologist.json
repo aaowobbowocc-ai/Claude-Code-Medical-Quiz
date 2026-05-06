@@ -99604,6 +99604,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060715,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 14,
+    "question": "聲音強度 20 dynes/cm² 相當於多少音壓級分貝 (dB SPL)？",
+    "options": {
+      "A": "20",
+      "B": "40",
+      "C": "80",
+      "D": "100"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_107110_s0901_15",
     "roc_year": "107",
     "session": "第一次",
@@ -125147,6 +125167,26 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060716,
+    "roc_year": "111",
+    "session": "第一次",
+    "exam_code": "111110",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 34,
+    "question": "正常人耳可聽到最小音量約 2×10⁻⁵ N/m², 與下列何音量相當?",
+    "options": {
+      "A": "2×10⁻⁶ dynes/cm²",
+      "B": "2×10⁻⁶ pascal (Pa)",
+      "C": "2×10⁻⁵ dynes/cm²",
+      "D": "2×10⁻⁵ pascal (Pa)"
+    },
+    "answer": "C",
+    "explanation": ""
   },
   {
     "id": "audiologist_111110_s0701_35",

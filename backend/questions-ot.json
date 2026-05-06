@@ -42522,8 +42522,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/ot_113090_p2_39_0.webp"
     },
     {
       "id": 2120,
@@ -51395,7 +51394,7 @@
       "subject_name": "生理疾病職能治療",
       "stage_id": 3,
       "number": 2,
-      "question": "三個圖例中那一個動態副木outrigger施力的角度會產生近端指間關節（PIP joint）的壓迫力（compressive force）？",
+      "question": "三個圖例中那一個動態副木outrigger施力的角度會產生近端指間關節(PIP joint)的壓迫力(compressive force) ?",
       "options": {
         "A": "A",
         "B": "B",
@@ -51403,9 +51402,7 @@
         "D": "三個均會產生"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 2563,
@@ -52105,9 +52102,7 @@
         "D": "D"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 2598,
@@ -124935,17 +124930,15 @@
       "subject_name": "職能治療學概論",
       "stage_id": 2,
       "number": 6,
-      "question": "（本題含圖片，請參考原始試卷）",
+      "question": "A. Jean Ayres將神經科學的概念運用到職能治療以發展感覺統合治療,並發展一套測驗,名稱為:",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "感覺統合與學習障礙評估 ( Sensory Integration and Learning Disorders Assessment )",
+        "B": "感覺診斷評估測驗 ( Sensory Diagnostic Assessment Tests )",
+        "C": "感覺統合與動作計畫測驗 ( Sensory Integration and Praxis Tests )",
+        "D": "感覺處理與失能測驗 ( Sensory Processing and Disabilities Tests )"
       },
       "answer": "C",
-      "image_only": true,
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "image_only": true
     },
     {
       "id": "6235",
@@ -125033,10 +125026,10 @@
       "subject_name": "職能治療學概論",
       "stage_id": 2,
       "number": 47,
-      "question": "（本題含圖片，請參考原始試卷）",
+      "question": "考試時呆坐數分鐘盯著試卷等靈感出現,屬於那一類的調適反應行為?",
       "options": {
-        "A": "",
-        "B": "",
+        "A": "過渡期",
+        "B": "初級",
         "C": "",
         "D": ""
       },
@@ -127883,13 +127876,12 @@
       "question": "集區（ chunking ） 策略適用於下列何種認知問題？",
       "options": {
         "A": "定向感",
-        "B": "",
+        "B": "注意力",
         "C": "記憶力",
         "D": "執行功能"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 6382,
@@ -128006,11 +127998,10 @@
         "A": "Henderson",
         "B": "J. Schkade & S. Schultz",
         "C": "W. Dunton & A. Meyer",
-        "D": ""
+        "D": "A. Henderson"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 6388,
@@ -128247,11 +128238,10 @@
         "A": "原畢業學校之畢業證書",
         "B": "教育部學歷甄試合格證書",
         "C": "實習期滿成績及格證書",
-        "D": ""
+        "D": "考試院頒發之職能治療師考試及格證書"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 6400,
@@ -129645,14 +129635,13 @@
       "number": 69,
       "question": "提供副木給老人時，下列敘述何者錯誤？",
       "options": {
-        "A": "",
+        "A": "注意穿戴副木不影響其生活安全",
         "B": "要確實教會穿戴技巧與時機",
         "C": "提醒個案自己隨意調整副木",
         "D": "仔細觀察皮膚對副木的反應"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 6470,
@@ -129967,13 +129956,12 @@
       "question": "下列有關 Allen 認知階層：目標導向動作（ goal-directed actions ）的敘述，何者錯誤？",
       "options": {
         "A": "對視覺刺激尚無反應",
-        "B": "",
+        "B": "注意力可達一小時",
         "C": "可以完成大部份自我照顧活動",
         "D": "尚無法學習新事物"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 6486,
@@ -135618,8 +135606,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "image_url": "/question-images/ot_101100_p0_47_0.webp"
     },
     {
       "id": 6768,
@@ -139795,14 +139782,13 @@
       "number": 16,
       "question": "動態互動模式將認知歷程區分為表層處理（ surface processing ）和深層處理（ deep processing ），此二層次的主要差別在於：",
       "options": {
-        "A": "",
+        "A": "注意力集中在巨觀或小細節上",
         "B": "處理的訊息是具體概念或抽象概念",
         "C": "是否藉助視覺化（ visualization ）來深化記憶",
         "D": "記憶的事件或程序是否與有意義的情境相銜接"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 6977,
@@ -146585,12 +146571,11 @@
       "options": {
         "A": "背對個案",
         "B": "維持中立，不表達個人意見",
-        "C": "",
+        "C": "注意個案之非語言表達",
         "D": "要求個案有適當之穿著"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 7316,
@@ -152351,11 +152336,10 @@
         "A": "覺察性注意力",
         "B": "選擇性注意力",
         "C": "持續性注意力",
-        "D": ""
+        "D": "注意力移轉"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 7604,
@@ -153692,12 +153676,11 @@
       "options": {
         "A": "錯誤修正",
         "B": "記憶",
-        "C": "",
+        "C": "注意力",
         "D": "自我覺知"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 7671,
@@ -153815,13 +153798,12 @@
       "question": "治療師使用動視儀（ Dynavision ）讓忽略症個案看到燈亮時，用手去摸亮燈，治療師主要在訓練 下列何種能力？",
       "options": {
         "A": "訓練病患的運動覺",
-        "B": "",
+        "B": "注意細節之能力",
         "C": "藉由感覺動作經驗強化視知覺",
         "D": "重複檢視之能力"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 7677,
@@ -155658,11 +155640,10 @@
         "A": "適應性行為（ adaptive response ）是感統治療最主要的觀察變項",
         "B": "感覺統合理論認為治療後的行為改變反應出腦的可塑性（ plasticity ）",
         "C": "感覺統合的問題主要來自於周邊的（ peripheral ）感覺功能失常",
-        "D": ""
+        "D": "注意力缺失過動症也可能會有感覺統合的問題"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 7769,
@@ -160380,11 +160361,10 @@
         "A": "覺察性注意力",
         "B": "選擇性注意力",
         "C": "持續性注意力",
-        "D": ""
+        "D": "注意力移轉"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 8011,
@@ -173849,12 +173829,11 @@
       "options": {
         "A": "自閉症",
         "B": "精神分裂症",
-        "C": "",
+        "C": "注意力缺失過動症",
         "D": "類風溼性關節炎"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 8684,
@@ -173870,12 +173849,11 @@
       "options": {
         "A": "視力障礙",
         "B": "關節活動度受限",
-        "C": "",
+        "C": "注意力缺損",
         "D": "失語症"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 8685,
@@ -175070,13 +175048,12 @@
       "question": "進行認知功能評估時，個案無法清楚說出目前身在何處、正確時間及陪同的人是誰，據此可 以推斷病患的那一項認知功能受損？",
       "options": {
         "A": "記憶力（memory）",
-        "B": "",
+        "B": "注意力(attention)",
         "C": "概念形成（concept formation）",
         "D": "定向力（orientation）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 8745,
@@ -175411,14 +175388,13 @@
       "number": 35,
       "question": "老年人在記憶過程中，通常那一步驟呈現較明顯的退化現象？",
       "options": {
-        "A": "",
+        "A": "注意力",
         "B": "處理訊息",
         "C": "貯存訊息",
         "D": "抽取訊息"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 8762,
@@ -179976,12 +179952,11 @@
       "options": {
         "A": "學習疾患（LD）",
         "B": "廣泛性發展疾患（PDD）",
-        "C": "",
+        "C": "注意力缺失過動疾患(ADHD)",
         "D": "抽動疾患（tic disorders）"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 8990,
@@ -180900,12 +180875,11 @@
       "options": {
         "A": "空間動作線索（spatiomotor cueing）",
         "B": "掃描（scanning）",
-        "C": "",
+        "C": "注意力訓練(attention training)",
         "D": "認知代償（cognitive compensation）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 9036,
@@ -190142,16 +190116,15 @@
       "subject_name": "職能治療技術學",
       "stage_id": 6,
       "number": 51,
-      "question": "依據Allen（1985）及Levy與Burns（2005）的描述，下列何者不是艾倫認知層級（Allen's Cognitive Level）所包含的要素之一？",
+      "question": "依據Allen (1985)及Levy與Burns (2005)的描述,下列何者不是艾倫認知層級(Allen's Cognitive Level)所包含的要素之一?",
       "options": {
-        "A": "",
+        "A": "注意力",
         "B": "情緒控制",
         "C": "動作控制",
         "D": "口語表現"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 9498,
@@ -190625,14 +190598,13 @@
       "number": 75,
       "question": "用於改善單側忽略症的「燈塔策略」（lighthouse strategy），屬於下列何者？",
       "options": {
-        "A": "",
+        "A": "注意力訓練(attention training)",
         "B": "代償（compensation）",
         "C": "空間動作線索（spatiomotor cueing）",
         "D": "掃描（scanning）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 9522,
@@ -215415,15 +215387,13 @@
       "number": 33,
       "question": "職能治療師與老年失智症患者進行初次會談時，下列何項較不適合？",
       "options": {
-        "A": "",
+        "A": "注意個案非語言反應",
         "B": "使用簡短字句",
         "C": "提供豐富感覺刺激環境",
         "D": "事先了解個案疾病及職能史"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 10760,
@@ -218203,12 +218173,10 @@
         "A": "適應（accommodates）",
         "B": "調整（adjusts）",
         "C": "利益（benefits）",
-        "D": ""
+        "D": "注意/反應(notices/responds)"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 10899,
@@ -224683,12 +224651,10 @@
         "A": "思覺失調症（schizophrenia）",
         "B": "重鬱症（major depressive disorder）",
         "C": "自閉症譜系疾患（autism spectrum disorder）",
-        "D": ""
+        "D": "注意力不足/過動症(attention deficit/hyperactivity disorder)"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 11210,
@@ -228004,13 +227970,11 @@
       "options": {
         "A": "定向感",
         "B": "記憶力",
-        "C": "",
+        "C": "注意力",
         "D": "問題解決能力"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 11368,
@@ -228993,13 +228957,11 @@
       "options": {
         "A": "定向感（orientation）",
         "B": "記憶力（memory）",
-        "C": "",
+        "C": "注意力 (attention)",
         "D": "心像功能（imagery function）"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 11415,
@@ -235886,14 +235848,12 @@
       "question": " 下列針對急性期精神病患到職能治療室參加活動時，環境安全管理的敘述，何者錯誤？",
       "options": {
         "A": "各種工具都要依規定放好，方便清點管理",
-        "B": "",
+        "B": "注意地板是否潮濕,預防病患滑倒",
         "C": "可以方便使用玻璃和美工刀，以達治療成效",
-        "D": ""
+        "D": "注意用電和滅火器的使用,預防意外"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 11743,
@@ -238137,12 +238097,10 @@
         "A": "覺察性注意力",
         "B": "選擇性注意力",
         "C": "持續性注意力",
-        "D": ""
+        "D": "注意力移轉"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 11850,

@@ -98346,6 +98346,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060651,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "行為聽力學",
+    "subject_tag": "paper2",
+    "subject_name": "行為聽力學",
+    "stage_id": 0,
+    "number": 4,
+    "question": "2014 年衛生福利部國民健康署發布的新生兒聽篩與確診指引手冊中，建議新生兒聽篩的臨床程序，何者錯誤？",
+    "options": {
+      "A": "第一次聽篩應於出生後24 至36 小時內完成",
+      "B": "若第一次聽篩未通過，第二次聽篩應於出生後36 至60 小時內、或於滿月前完成",
+      "C": "新生兒加護病房的嬰兒，應於嬰兒出院後由公衛追蹤轉介系統安排後續服務",
+      "D": "新生兒聽篩確診醫院的品質評估指標為新生兒出生後四個月內完成確診率至少達95%"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_107110_s0902_5",
     "roc_year": "107",
     "session": "第一次",
@@ -99459,6 +99479,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060652,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 8,
+    "question": "皮質下中樞聽覺傳導路徑如下：①耳蝸神經核（cochlear nucleus） ②外側蹄系（lateral lemniscus）③內側膝狀體（medial geniculate body） ④上橄欖核（superior olivary complex） ⑤下丘（inferior colliculus）。請問由周邊傳導至中樞依序排列為下列何者？",
+    "options": {
+      "A": "①②",
+      "B": "③④⑤",
+      "C": "①④③②⑤",
+      "D": "①②④③⑤"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_107110_s0901_9",
     "roc_year": "107",
     "session": "第一次",
@@ -100152,6 +100192,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060653,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 43,
+    "question": "根據平方反比定律（inverse square law），小明在距離固定音源1 公尺測得一聲音音強為90 dB SPL。請問需距離音源多遠，音強才會降至72 dB SPL？（log102=0.30, log103=0.48）",
+    "options": {
+      "A": "8 公尺",
+      "B": "14.4 公尺",
+      "C": "16 公尺",
+      "D": "24 公尺"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_107110_s0901_44",
     "roc_year": "107",
     "session": "第一次",
@@ -100549,6 +100609,26 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060654,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 13,
+    "question": "臨床上有關變頻產物耳聲傳射（distortion product OAE）檢查的敘述，下列何者正確？",
+    "options": {
+      "A": "由兩個喇叭各發出一個不同頻率的純音作為刺激音",
+      "B": "所記錄的變頻產物位於頻率2f2-f1（f1 與f2 為刺激音頻率，f2 > f1）",
+      "C": "所記錄的變頻產物又稱作二次差異音（quadratic-difference tone）",
+      "D": "通常f2 為f1 頻率的2 倍時，所記錄的變頻產物振幅最大"
+    },
+    "answer": "D",
+    "explanation": ""
   },
   {
     "id": "audiologist_107110_s0903_14",
@@ -101580,6 +101660,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060708,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "聽語溝通障礙學（包括專業倫理）",
+    "subject_tag": "paper6",
+    "subject_name": "聽語溝通障礙學（包括專業倫理）",
+    "stage_id": 0,
+    "number": 13,
+    "question": "2012 年7 月份起所使用的新制身心障礙鑑定方法，與過去傳統的鑑定方法最大的差異為下列何者？",
+    "options": {
+      "A": "排除障礙者的生理因素",
+      "B": "排除環境及個人因素",
+      "C": "將社會參與性及環境因素納入考量",
+      "D": "將障礙程度標準化"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_107110_s0906_14",
     "roc_year": "107",
     "session": "第一次",
@@ -101811,6 +101911,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060709,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "聽語溝通障礙學（包括專業倫理）",
+    "subject_tag": "paper6",
+    "subject_name": "聽語溝通障礙學（包括專業倫理）",
+    "stage_id": 0,
+    "number": 25,
+    "question": "根據急性與慢性中耳炎之間的區別在於病程時間，下列那一個組合的敘述最適當？①急性為3 週以內 ②急性為6 週以內 ③慢性為超過6 週以上 ④慢性為超過12 週以上",
+    "options": {
+      "A": "①③",
+      "B": "①④",
+      "C": "②③",
+      "D": "②④"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_107110_s0906_26",
     "roc_year": "107",
     "session": "第一次",
@@ -101937,6 +102057,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060710,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "聽語溝通障礙學（包括專業倫理）",
+    "subject_tag": "paper6",
+    "subject_name": "聽語溝通障礙學（包括專業倫理）",
+    "stage_id": 0,
+    "number": 32,
+    "question": "下列何者為兒童言語障礙（speech disorders）的表現？①雙唇常常閉不住 ②鼻音過重 ③無法遵守指令完成動作 ④字音有拖長現象 ⑤常用單字詞回應",
+    "options": {
+      "A": "①③",
+      "B": "②⑤",
+      "C": "①②④",
+      "D": "③④⑤"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_107110_s0906_33",
     "roc_year": "107",
     "session": "第一次",
@@ -101977,6 +102117,66 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060711,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "聽語溝通障礙學（包括專業倫理）",
+    "subject_tag": "paper6",
+    "subject_name": "聽語溝通障礙學（包括專業倫理）",
+    "stage_id": 0,
+    "number": 35,
+    "question": "特定性讀寫障礙的兒童，有那些能力是低於一般兒童的標準，下列何者組合最正確？①口語智商 ②詞彙解碼技巧 ③詞彙閱讀 ④音韻處理",
+    "options": {
+      "A": "①②",
+      "B": "③④",
+      "C": "①②③",
+      "D": "②③④"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "id": 114100060712,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "聽語溝通障礙學（包括專業倫理）",
+    "subject_tag": "paper6",
+    "subject_name": "聽語溝通障礙學（包括專業倫理）",
+    "stage_id": 0,
+    "number": 36,
+    "question": "依據證據本位的口吃治療服務，治療師用於學前幼童的治療技術中，下列何者組合最適當？①間接口吃治療 ②直接口吃治療 ③流暢塑型法 ④口吃修正法",
+    "options": {
+      "A": "①②",
+      "B": "①③",
+      "C": "②③",
+      "D": "③④"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "id": 114100060713,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "聽語溝通障礙學（包括專業倫理）",
+    "subject_tag": "paper6",
+    "subject_name": "聽語溝通障礙學（包括專業倫理）",
+    "stage_id": 0,
+    "number": 37,
+    "question": "有關「Deaf」意義的敘述，下列何者組合最正確？①指稱一般的重度至極重度聽力損失者 ②屬於聾社群的人 ③通常會佩戴助聽器或植入人工耳蝸 ④認為聾為一種文化特質",
+    "options": {
+      "A": "①②",
+      "B": "①③",
+      "C": "②④",
+      "D": "②③④"
+    },
+    "answer": "D",
+    "explanation": ""
   },
   {
     "id": "audiologist_107110_s0906_38",
@@ -102040,6 +102240,26 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060714,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "聽語溝通障礙學（包括專業倫理）",
+    "subject_tag": "paper6",
+    "subject_name": "聽語溝通障礙學（包括專業倫理）",
+    "stage_id": 0,
+    "number": 41,
+    "question": "教導學齡聽障兒童在學校使用溝通策略時，由接收者主要負責的溝通修復策略中，下列何者組合最適當？①確認溝通中斷的原因 ②確認容易混淆的訊息 ③評估說話者的言語精熟能力 ④執行聆聽修復策略",
+    "options": {
+      "A": "①②",
+      "B": "③④",
+      "C": "①②③",
+      "D": "①②④"
+    },
+    "answer": "B",
+    "explanation": ""
   },
   {
     "id": "audiologist_107110_s0906_42",
@@ -102315,6 +102535,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060655,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "聽覺與平衡系統之創健與復健學",
+    "subject_tag": "paper5",
+    "subject_name": "聽覺與平衡系統之創健與復健學",
+    "stage_id": 0,
+    "number": 5,
+    "question": "語音知覺引導課程和評量（SPICE）的目標：①連接言語 ②超音段 ③母音和子音知覺 ④察覺，依序為何？",
+    "options": {
+      "A": "①③②④",
+      "B": "②④③①",
+      "C": "③④②①",
+      "D": "④②③①"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_107110_s0905_6",
     "roc_year": "107",
     "session": "第一次",
@@ -102376,6 +102616,26 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060656,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "聽覺與平衡系統之創健與復健學",
+    "subject_tag": "paper5",
+    "subject_name": "聽覺與平衡系統之創健與復健學",
+    "stage_id": 0,
+    "number": 9,
+    "question": "聽能訓練對學齡聽障兒童階段，那些語言能力需要評估？①書寫 ②語用 ③語法 ④語意",
+    "options": {
+      "A": "①②③",
+      "B": "①②④",
+      "C": "①③④",
+      "D": "②③④"
+    },
+    "answer": "D",
+    "explanation": ""
   },
   {
     "id": "audiologist_107110_s0905_10",
@@ -103890,6 +104150,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060657,
+    "roc_year": "107",
+    "session": "第一次",
+    "exam_code": "107110",
+    "subject": "聽覺輔具原理與實務學",
+    "subject_tag": "paper4",
+    "subject_name": "聽覺輔具原理與實務學",
+    "stage_id": 0,
+    "number": 32,
+    "question": "8 歲的丹丹被診斷為中樞聽覺處理異常（central auditory processing disorder）與輕度感音神經型聽力損失。下列何種處置最可能幫他在吵雜的戶外更能聽懂家人說話的內容？",
+    "options": {
+      "A": "佩戴開放式耳掛型助聽器，保持外耳道自然共振，同時給予更多高頻語音線索",
+      "B": "助聽器搭配使用遠距麥克風，以提升訊噪比",
+      "C": "使用深耳道型助聽器，透過它特殊的壓縮模式把遠方的聲音放得更清楚",
+      "D": "使用助聽器方向性麥克風"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_107110_s0904_33",
     "roc_year": "107",
     "session": "第一次",
@@ -104436,6 +104716,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060658,
+    "roc_year": "108",
+    "session": "第一次",
+    "exam_code": "108110",
+    "subject": "行為聽力學",
+    "subject_tag": "paper2",
+    "subject_name": "行為聽力學",
+    "stage_id": 0,
+    "number": 9,
+    "question": "4 歲的霏霏未通過幼兒園的學前聽力篩檢，被轉介至醫院耳鼻喉科進行聽力檢查，聽力師應使用下列何種確診方法？",
+    "options": {
+      "A": "自動型聽性腦幹反應（automated auditory brainstem response, AABR）",
+      "B": "行為觀察聽力檢查法（behavioral observation audiometry）",
+      "C": "視覺增強聽力檢查法（visual reinforcement audiometry）",
+      "D": "制約遊戲聽力檢查法（conditioned play audiometry）"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_108110_s0902_10",
     "roc_year": "108",
     "session": "第一次",
@@ -104583,6 +104883,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060659,
+    "roc_year": "108",
+    "session": "第一次",
+    "exam_code": "108110",
+    "subject": "行為聽力學",
+    "subject_tag": "paper2",
+    "subject_name": "行為聽力學",
+    "stage_id": 0,
+    "number": 17,
+    "question": "2 個月大的嬰兒在低刺激音量（較接近聽閾）的反應，為下列何者？",
+    "options": {
+      "A": "驚嚇反應（arousal responses）",
+      "B": "吸吮行為改變（a change in sucking）",
+      "C": "眨眼（eye blinks）",
+      "D": "肢體動作（limbs movement）"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_108110_s0902_18",
     "roc_year": "108",
     "session": "第一次",
@@ -104665,6 +104985,26 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060660,
+    "roc_year": "108",
+    "session": "第一次",
+    "exam_code": "108110",
+    "subject": "行為聽力學",
+    "subject_tag": "paper2",
+    "subject_name": "行為聽力學",
+    "stage_id": 0,
+    "number": 22,
+    "question": "Northern and Downs（2002）建議兒童氣導（AC）在500、1000、2000 Hz 三個頻率平均值應小於或等於15 dB HL 才屬正常。下列敘述何者錯誤？",
+    "options": {
+      "A": "PTA AC = 30 dB HL，BC = 0 dB HL，SRT = 30 dB HL，鼓室圖：Type B，分類：輕度傳導性聽損",
+      "B": "PTA AC = 25 dB HL，BC = 25 dB HL，SRT = 25 dB HL，鼓室圖：Type A，分類：輕度感音性聽損",
+      "C": "PTA AC = 15 dB HL，BC = -10 dB HL，SRT = 10 dB HL，鼓室圖：Type As，分類：正常",
+      "D": "PTA AC = 15 dB HL，BC = 10 dB HL，SRT = 10 dB HL，鼓室圖：Type A，分類：正常"
+    },
+    "answer": "B",
+    "explanation": ""
   },
   {
     "id": "audiologist_108110_s0902_23",
@@ -104854,6 +105194,26 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060661,
+    "roc_year": "108",
+    "session": "第一次",
+    "exam_code": "108110",
+    "subject": "行為聽力學",
+    "subject_tag": "paper2",
+    "subject_name": "行為聽力學",
+    "stage_id": 0,
+    "number": 32,
+    "question": "下圖為一名45 歲女性的聽力圖，請問其雙耳的聽損類型為：-101252505001k2k4k8k7501.5k3k6k0102030405060708090100110120",
+    "options": {
+      "A": "右耳聽力在正常範圍，左耳聽力為輕度感音神經型聽力損失",
+      "B": "右耳聽力為輕度感音神經型聽力損失，左耳聽力在正常範圍",
+      "C": "右耳聽力在正常範圍，左耳聽力為輕度傳導型聽力損失",
+      "D": "右耳聽力為輕度傳導型聽力損失，左耳聽力在正常範圍"
+    },
+    "answer": "B",
+    "explanation": ""
   },
   {
     "id": "audiologist_108110_s0902_33",
@@ -105780,6 +106140,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060662,
+    "roc_year": "108",
+    "session": "第一次",
+    "exam_code": "108110",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 27,
+    "question": "ANSI S3.6（2010）的聲場測試標準中，提供了不同角度揚聲器（loudspeakers）的參考音量（referencelevels, RETSPLs）。下列那個角度，並沒有規範在此標準中？",
+    "options": {
+      "A": "90°",
+      "B": "0°",
+      "C": "45°",
+      "D": "180°"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_108110_s0901_28",
     "roc_year": "108",
     "session": "第一次",
@@ -106198,6 +106578,26 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060663,
+    "roc_year": "108",
+    "session": "第一次",
+    "exam_code": "108110",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 48,
+    "question": "關於鼓室圖氣壓值的敘述，下列何者錯誤？",
+    "options": {
+      "A": "單位為十巴斯卡（dekapascals, daPa）",
+      "B": "單位為毫歐姆（mmhos）",
+      "C": "單位可以水壓的毫米數（mm H2 O）表示",
+      "D": "0 daPa 表示耳道內的壓力等同大氣壓力"
+    },
+    "answer": "C",
+    "explanation": ""
   },
   {
     "id": "audiologist_108110_s0901_49",
@@ -107017,6 +107417,26 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060664,
+    "roc_year": "108",
+    "session": "第一次",
+    "exam_code": "108110",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 38,
+    "question": "關於變頻產物耳聲傳射（DPOAE）初級音頻（primary tone）音量影響的敘述，何者正確？",
+    "options": {
+      "A": "較低音量最能反應出接近f1 頻率區域",
+      "B": "較低音量可刺激幾何平均（geometric-mean, GM）頻率的區域",
+      "C": "較高音量可刺激GM 頻率的區域",
+      "D": "較高音量能同時反應出GM 及f1 頻率區域"
+    },
+    "answer": "B",
+    "explanation": ""
   },
   {
     "id": "audiologist_108110_s0903_39",
@@ -108993,6 +109413,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060665,
+    "roc_year": "108",
+    "session": "第一次",
+    "exam_code": "108110",
+    "subject": "聽覺與平衡系統之創健與復健學",
+    "subject_tag": "paper5",
+    "subject_name": "聽覺與平衡系統之創健與復健學",
+    "stage_id": 0,
+    "number": 33,
+    "question": "依據Owens（1972）的研究，對於2 kHz 以上聽閾不佳者，辨識下列那些音素有困難？①/b/ ②/d/③/s/ ④/ɵ/ ⑤/t/",
+    "options": {
+      "A": "①②③",
+      "B": "②③④",
+      "C": "③④⑤",
+      "D": "①③⑤"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_108110_s0905_34",
     "roc_year": "108",
     "session": "第一次",
@@ -109012,6 +109452,26 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060666,
+    "roc_year": "108",
+    "session": "第一次",
+    "exam_code": "108110",
+    "subject": "聽覺與平衡系統之創健與復健學",
+    "subject_tag": "paper5",
+    "subject_name": "聽覺與平衡系統之創健與復健學",
+    "stage_id": 0,
+    "number": 35,
+    "question": "下列那些策略是Carhart 提出可運用於成年人困難聽取情境之聽覺訓練課程？①在背景噪音下的聽取能力 ②聲源定位與辨位 ③在競訊下的聽取能力 ④雙耳異訊聽覺訓練 ⑤電話溝通",
+    "options": {
+      "A": "①②③",
+      "B": "②③④",
+      "C": "③④⑤",
+      "D": "①③⑤"
+    },
+    "answer": "A",
+    "explanation": ""
   },
   {
     "id": "audiologist_108110_s0905_36",
@@ -109537,6 +109997,26 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060667,
+    "roc_year": "108",
+    "session": "第一次",
+    "exam_code": "108110",
+    "subject": "聽覺輔具原理與實務學",
+    "subject_tag": "paper4",
+    "subject_name": "聽覺輔具原理與實務學",
+    "stage_id": 0,
+    "number": 11,
+    "question": "根據成人佩戴助聽器後的語音辨識率，下列何者可為人工耳蝸的候選人？",
+    "options": {
+      "A": "待植入耳在開放式噪音情境65 dB SPL 音量下，語音測試正確率小於50%",
+      "B": "待植入耳在開放式安靜情境65 dB SPL 音量下，語音測試正確率小於50%",
+      "C": "待植入耳在開放式噪音情境65 dB SPL 音量下，語句測試正確率小於50%",
+      "D": "待植入耳在開放式安靜情境65 dB SPL 音量下，語句測試正確率小於50%"
+    },
+    "answer": "D",
+    "explanation": ""
   },
   {
     "id": "audiologist_108110_s0904_12",
@@ -111282,6 +111762,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060668,
+    "roc_year": "109",
+    "session": "第一次",
+    "exam_code": "109110",
+    "subject": "行為聽力學",
+    "subject_tag": "paper2",
+    "subject_name": "行為聽力學",
+    "stage_id": 0,
+    "number": 45,
+    "question": "80 歲男性，家人覺得跟他說話都沒有反應，因此帶來進行聽力評估。家人同時覺得個案有失智症傾向，請問執行純音聽力檢查時，聽力師的測試環境配置或方式等，下列何者較為適切？",
+    "options": {
+      "A": "施測時讓個案背對聽力師以免個案得到視覺線索",
+      "B": "請個案聽到刺激音以按下反應鈕作反應",
+      "C": "先以語音測試，例如SDT，觀察個案對聲音的反應",
+      "D": "先戴骨導器測試個案反應"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_109110_s0902_46",
     "roc_year": "109",
     "session": "第一次",
@@ -112078,6 +112578,26 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060669,
+    "roc_year": "109",
+    "session": "第一次",
+    "exam_code": "109110",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 34,
+    "question": "聲音單位以音強（intensity）或音壓（pressure）來表示0 dB IL（intensity level）或0 dB SPL（soundpressure level），下列數值何者錯誤？",
+    "options": {
+      "A": "10-16（watt/cm2）",
+      "B": "10-12（watt/m2）",
+      "C": "0.002（dynes/cm2）",
+      "D": "20 μPa（micropascal）"
+    },
+    "answer": "C",
+    "explanation": ""
   },
   {
     "id": "audiologist_109110_s0901_35",
@@ -113340,6 +113860,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060670,
+    "roc_year": "109",
+    "session": "第一次",
+    "exam_code": "109110",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 45,
+    "question": "1 歲的小花在接受行為聽力檢查時無法全程配合，如果聽力師想要預測小花500 Hz 的聽覺敏感度，下列測驗何者較為合適？",
+    "options": {
+      "A": "滴答音（click）誘發耳聲傳射（transient evoked OAE）",
+      "B": "變頻耳聲傳射（distortion-product OAE）",
+      "C": "滴答音誘發聽性腦幹反應（click ABR）",
+      "D": "爆破音聽性腦幹反應（tone-burst ABR）"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_109110_s0903_46",
     "roc_year": "109",
     "session": "第一次",
@@ -114598,6 +115138,26 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060671,
+    "roc_year": "109",
+    "session": "第一次",
+    "exam_code": "109110",
+    "subject": "聽覺與平衡系統之創健與復健學",
+    "subject_tag": "paper5",
+    "subject_name": "聽覺與平衡系統之創健與復健學",
+    "stage_id": 0,
+    "number": 6,
+    "question": "關於言語（speech）聲學特徵，下列敘述何者錯誤？",
+    "options": {
+      "A": "言語的聲學能量（acoustic energy）雖相對集中在低頻帶，但人類發聲能量的分布範圍實際上可高於10 kHz",
+      "B": "普通電話語音傳輸頻帶範圍約在500～3,500 Hz，但僅藉由此頻帶範圍的聲學能量尚不足以呈現完整清晰的語言特徵",
+      "C": "在語音的分析，約2 kHz 的頻帶即已足夠做最基本的客觀分析（modest objective speech analysis）",
+      "D": "言語的動態範圍（dynamic range of speech），係指在連續語音訊號中最低發聲能量與最高發聲能量間的範圍，約60 dB"
+    },
+    "answer": "C",
+    "explanation": ""
   },
   {
     "id": "audiologist_109110_s0905_7",
@@ -118317,6 +118877,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060672,
+    "roc_year": "110",
+    "session": "第一次",
+    "exam_code": "110111",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 35,
+    "question": "一個截止頻率（cutoff frequency）為2,000 Hz 的高通濾波器（high-pass filter），其振幅衰減率為每八度音程10 dB（10 dB/octave roll-off），則當一個1,000 Hz 正弦波的聲音通過此濾波器時，其振幅將減少：",
+    "options": {
+      "A": "15 dB",
+      "B": "30 dB",
+      "C": "20 dB",
+      "D": "10 dB"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_110111_s0901_36",
     "roc_year": "110",
     "session": "第一次",
@@ -118378,6 +118958,26 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060673,
+    "roc_year": "110",
+    "session": "第一次",
+    "exam_code": "110111",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 39,
+    "question": "50 Hz 的聲音在經過A 加權（weighting）和C 加權計算後，音量大約相差多少分貝？",
+    "options": {
+      "A": "10 dB",
+      "B": "20 dB",
+      "C": "30 dB",
+      "D": "40 dB"
+    },
+    "answer": "C",
+    "explanation": ""
   },
   {
     "id": "audiologist_110111_s0901_40",
@@ -118695,6 +119295,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060674,
+    "roc_year": "110",
+    "session": "第一次",
+    "exam_code": "110111",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 5,
+    "question": "7 個月以下的新生兒進行鼓室圖檢查時，為維持良好的敏感度和特異性，最好採用何種探測音頻率？",
+    "options": {
+      "A": "226 Hz",
+      "B": "678 Hz",
+      "C": "800 Hz",
+      "D": "1,000 Hz"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_110111_s0903_6",
     "roc_year": "110",
     "session": "第一次",
@@ -118735,6 +119355,26 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060675,
+    "roc_year": "110",
+    "session": "第一次",
+    "exam_code": "110111",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 8,
+    "question": "有關變頻耳聲傳射（DPOAE）之敘述，下列何者錯誤？",
+    "options": {
+      "A": "變頻耳聲傳射在施測時，兩個頻率的純音（f1 與f2）需同時給予",
+      "B": "DPOAE 的頻率與刺激音頻率無任何數學上的關係",
+      "C": "相較於其他DPOAE，2f1-f2 的DPOAE 值最大",
+      "D": "DPOAE 之最大值出現在f2/f1 比值趨近於1.2 時"
+    },
+    "answer": "B",
+    "explanation": ""
   },
   {
     "id": "audiologist_110111_s0903_9",
@@ -122496,6 +123136,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060676,
+    "roc_year": "110",
+    "session": "第一次",
+    "exam_code": "110111",
+    "subject": "聽覺輔具原理與實務學",
+    "subject_tag": "paper4",
+    "subject_name": "聽覺輔具原理與實務學",
+    "stage_id": 0,
+    "number": 38,
+    "question": "2014 年美國FDA 同意植入Nucleus Hybrid cochlear implant 的聽力候選條件為：",
+    "options": {
+      "A": "低頻等於或優於60 dB HL，1 kHz 等於或劣於75 dB HL，2 kHz、3 kHz 與4 kHz 為重度至極重度聽力損失",
+      "B": "1 kHz 以下的聽力損失為劣於75 dB HL，高頻為重度至極重度聽力損失",
+      "C": "2 kHz 以下的低中頻聽力損失為輕至中重度，高頻為重度聽力損失",
+      "D": "2 kHz 以下的低中頻聽力損失為中重度，高頻為極重度聽力損失"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_110111_s0904_39",
     "roc_year": "110",
     "session": "第一次",
@@ -123124,6 +123784,26 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060677,
+    "roc_year": "111",
+    "session": "第一次",
+    "exam_code": "111110",
+    "subject": "行為聽力學",
+    "subject_tag": "paper2",
+    "subject_name": "行為聽力學",
+    "stage_id": 0,
+    "number": 19,
+    "question": "1948 年哈佛學者Egan 發展單音平衡50 詞表（PB-50）時，摘要6 項選詞原則，以發展語音辨識檢查材料。下列敘述何者錯誤？",
+    "options": {
+      "A": "詞表要有相等量的音元組合（phonetic composition），且必須為單音節的結構（monosyllabic structure）",
+      "B": "詞表要有熟悉度",
+      "C": "各詞表間的難度要有高度變異性",
+      "D": "詞表中單音節必須是能代表美式英語的樣本"
+    },
+    "answer": "D",
+    "explanation": ""
   },
   {
     "id": "audiologist_111110_s0702_20",
@@ -124365,6 +125045,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060678,
+    "roc_year": "111",
+    "session": "第一次",
+    "exam_code": "111110",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 29,
+    "question": "下列有關聲音強度（intensity）的敘述，何者錯誤？",
+    "options": {
+      "A": "分貝（decibel, dB）為聲音強度之相對比較值，與強度之絕對值單位不同",
+      "B": "最小聲音強度為10-12 瓦特／平方公尺（watt/m2）",
+      "C": "所謂0 分貝是指聲音強度為零的狀態",
+      "D": "一般交談的音量約為60 dB SPL"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_111110_s0701_30",
     "roc_year": "111",
     "session": "第一次",
@@ -124573,6 +125273,26 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060679,
+    "roc_year": "111",
+    "session": "第一次",
+    "exam_code": "111110",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 41,
+    "question": "關於耳間衰減（interaural attenuation）與跨聽（cross hearing）的敘述，下列何者正確？",
+    "options": {
+      "A": "測試氣導聽力時，給予測試耳純音強度值減去耳間衰減值後小於非測試耳骨導閾值（bone-conduction threshold），就會發生跨聽",
+      "B": "使用插入型耳機（insert earphone）測試氣導聽力時，在250 到1000 Hz 間的最小耳間衰減（minimalinteraural attenuation）值皆小於40 dB",
+      "C": "使用覆耳式耳機（supra-aural phone）測試氣導聽力時，在250 到1000 Hz 間最小耳間衰減值皆大於40 dB",
+      "D": "在不同頻率下骨導最小耳間衰減值皆為10 dB"
+    },
+    "answer": "B",
+    "explanation": ""
   },
   {
     "id": "audiologist_111110_s0701_42",
@@ -124804,6 +125524,26 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060680,
+    "roc_year": "111",
+    "session": "第一次",
+    "exam_code": "111110",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 3,
+    "question": "1 月齡嬰幼兒鼓室圖檢查，下列何者為最佳頻率選擇及其原因？",
+    "options": {
+      "A": "1000 Hz，新生兒中耳是阻力（resistance）較高及負聲抗（negative reactance）較低",
+      "B": "1000 Hz，新生兒中耳是阻力較低及負聲抗較高",
+      "C": "226 Hz，新生兒中耳是阻力較低及負聲抗較高",
+      "D": "226 Hz，新生兒中耳是阻力較高及負聲抗較低"
+    },
+    "answer": "A",
+    "explanation": ""
   },
   {
     "id": "audiologist_111110_s0703_4",
@@ -125749,6 +126489,26 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060681,
+    "roc_year": "111",
+    "session": "第一次",
+    "exam_code": "111110",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 49,
+    "question": "42 歲男性主訴右耳耳鳴不適，沒有頭暈，未自覺有聽損症狀，理學檢查耳膜完整。經初步純音聽力檢查（如附圖），右耳對側聽反射閾值有提升之現象，接下來建議最先安排何種評估以進一步釐清其可能病因？",
+    "options": {
+      "A": "磁振造影（MRI）",
+      "B": "耳蝸電圖（ECochG）",
+      "C": "神經學診斷之聽性腦幹反應",
+      "D": "史丹格測驗（Stenger test）"
+    },
+    "answer": "D",
+    "explanation": ""
   },
   {
     "id": "audiologist_111110_s0703_50",
@@ -126904,6 +127664,26 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060682,
+    "roc_year": "111",
+    "session": "第一次",
+    "exam_code": "111110",
+    "subject": "聽覺與平衡系統之創健與復健學",
+    "subject_tag": "paper5",
+    "subject_name": "聽覺與平衡系統之創健與復健學",
+    "stage_id": 0,
+    "number": 5,
+    "question": "50 歲患有感覺神經性聽力損失且戴有助聽器的吳先生說：「我目前遇到最大的溝通困難是在吵雜的社交聚會，理解對話有問題，不會主動告訴對方我有聽損，已逐漸減少參加這類活動的次數，很期待在參加課程後，能得到改善。」吳先生成人聽覺復健計畫的擬定，下列那一組解決方案最合適？①電話訓練 ②社會心理支持 ③自信訓練 ④溝通訓練 ⑤訊息諮詢",
+    "options": {
+      "A": "①④⑤",
+      "B": "僅②④⑤",
+      "C": "僅②③④",
+      "D": "②③④⑤"
+    },
+    "answer": "D",
+    "explanation": ""
   },
   {
     "id": "audiologist_111110_s0705_6",
@@ -128481,6 +129261,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060683,
+    "roc_year": "111",
+    "session": "第一次",
+    "exam_code": "111110",
+    "subject": "聽覺輔具原理與實務學",
+    "subject_tag": "paper4",
+    "subject_name": "聽覺輔具原理與實務學",
+    "stage_id": 0,
+    "number": 32,
+    "question": "有關使用真耳測試驗證跨傳式（CROS）助聽器增益，下列何者最適當？①喇叭位置靠近優耳前方45度角，測量優耳反應 ②喇叭位置靠近優耳前方45 度角，測量劣耳反應 ③喇叭位置靠近劣耳前方45 度角，測量優耳反應 ④喇叭位置靠近劣耳前方45 度角，測量劣耳反應",
+    "options": {
+      "A": "①②",
+      "B": "③④",
+      "C": "①③",
+      "D": "②④"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_111110_s0704_33",
     "roc_year": "111",
     "session": "第一次",
@@ -129445,6 +130245,26 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060684,
+    "roc_year": "112",
+    "session": "第一次",
+    "exam_code": "112110",
+    "subject": "行為聽力學",
+    "subject_tag": "paper2",
+    "subject_name": "行為聽力學",
+    "stage_id": 0,
+    "number": 29,
+    "question": "12 歲陳姓女學生，主訴上課聽不清楚老師及同學說話，純音聽力檢查結果：右耳中度至重度聽力損失，左耳中度聽力損失；語音辨識閾右耳35 分貝，左耳40 分貝；語音辨識率右耳使用40 分貝測試為88%，左耳使用45 分貝測試為92%，下列何者為此個案最有可能的診斷？",
+    "options": {
+      "A": "非器質性聽力損失",
+      "B": "有響音重振現象",
+      "C": "有聽覺敏感（supersensitivity）",
+      "D": "有聽覺過敏（hyperacusis）"
+    },
+    "answer": "B",
+    "explanation": ""
   },
   {
     "id": "audiologist_112110_s0602_30",
@@ -130959,6 +131779,46 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060685,
+    "roc_year": "112",
+    "session": "第一次",
+    "exam_code": "112110",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 2,
+    "question": "40 歲女性突然發生左側貝爾氏麻痺（Bell's palsy），其雙側聲反射及鼓室圖如下圖所示。下列敘述何者正確？",
+    "options": {
+      "A": "ml",
+      "B": "ml",
+      "C": "daPa",
+      "D": "daPa"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "id": 114100060686,
+    "roc_year": "112",
+    "session": "第一次",
+    "exam_code": "112110",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 3,
+    "question": "35 歲成人最近車禍受傷後聽力變差，檢查發現中耳腔有積血，鼓室圖最可能是下列那一型？",
+    "options": {
+      "A": "Type As",
+      "B": "Type Ad",
+      "C": "Type B",
+      "D": "Type C"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_112110_s0603_4",
     "roc_year": "112",
     "session": "第一次",
@@ -131881,6 +132741,26 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060687,
+    "roc_year": "112",
+    "session": "第一次",
+    "exam_code": "112110",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 48,
+    "question": "10 個月大嬰兒曾因新生兒黃疸接受換血治療，鼓室圖正常但高音強之短聲誘發聽性腦幹反應檢查呈現無反應，接下來應優先安排：",
+    "options": {
+      "A": "耳聲傳射（OAEs）及視覺增強聽覺檢查（visual reinforcement audiometry）",
+      "B": "聽性穩定狀態反應（ASSR）",
+      "C": "依短聲誘發聽性腦幹反應（click evoked ABR）結果選配助聽器",
+      "D": "爆破音聽性腦幹反應（tone burst ABR）"
+    },
+    "answer": "B",
+    "explanation": ""
   },
   {
     "id": "audiologist_112110_s0603_49",
@@ -134298,6 +135178,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060688,
+    "roc_year": "112",
+    "session": "第一次",
+    "exam_code": "112110",
+    "subject": "聽覺輔具原理與實務學",
+    "subject_tag": "paper4",
+    "subject_name": "聽覺輔具原理與實務學",
+    "stage_id": 0,
+    "number": 14,
+    "question": "108 年衛生福利部中央健康保險署公告人工耳蝸適應症明訂「兒童」為幾歲？",
+    "options": {
+      "A": "3 歲",
+      "B": "6 歲",
+      "C": "12 歲",
+      "D": "18 歲"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_112110_s0604_15",
     "roc_year": "112",
     "session": "第一次",
@@ -135936,6 +136836,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060689,
+    "roc_year": "113",
+    "session": "第一次",
+    "exam_code": "113100",
+    "subject": "行為聽力學",
+    "subject_tag": "paper2",
+    "subject_name": "行為聽力學",
+    "stage_id": 0,
+    "number": 43,
+    "question": "36 歲的阿美近來常為右耳耳鳴所困擾，並未有中耳炎、鼻過敏、鼻塞等症狀，其PTA 為輕度感音神經性聽力損失、聽反射閾測驗（ART）卻無反應，懷疑最大可能性為何？",
+    "options": {
+      "A": "耳蝸病變",
+      "B": "耳蝸後病變",
+      "C": "鼻咽癌",
+      "D": "身心症"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_113100_s0602_44",
     "roc_year": "113",
     "session": "第一次",
@@ -136041,6 +136961,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060690,
+    "roc_year": "113",
+    "session": "第一次",
+    "exam_code": "113100",
+    "subject": "行為聽力學",
+    "subject_tag": "paper2",
+    "subject_name": "行為聽力學",
+    "stage_id": 0,
+    "number": 49,
+    "question": "55 歲黃女士左耳耳鳴三天至醫院接受檢查，使用TDH-49 型耳機進行聽力檢查（報告如下圖），依照Turner（2004）提出的非對稱性聽力最佳遮蔽方法（optimized masking method）給予遮蔽音，請問2000 Hz 的氣導遮蔽，最佳初始遮蔽音量應給予多少分貝？",
+    "options": {
+      "A": "5 分貝",
+      "B": "10 分貝",
+      "C": "45 分貝",
+      "D": "65 分貝"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_113100_s0602_50",
     "roc_year": "113",
     "session": "第一次",
@@ -136081,6 +137021,26 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060691,
+    "roc_year": "113",
+    "session": "第一次",
+    "exam_code": "113100",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 2,
+    "question": "鼓膜（tympanic membrane）位於外耳及中耳之間，為聲音傳遞的路徑之一。下列關於鼓膜的敘述，何者錯誤？",
+    "options": {
+      "A": "鬆弛部（pars flaccida）由內而外有三層，分別為上皮層、纖維層、黏膜層",
+      "B": "鼓膜下方主要為緊張部（pars tensa）",
+      "C": "成人鼓膜面積大約55～90 mm2",
+      "D": "整體呈一個錐狀體（cone-shaped），圓錐頂點朝向中耳方向"
+    },
+    "answer": "A",
+    "explanation": ""
   },
   {
     "id": "audiologist_113100_s0601_3",
@@ -137406,6 +138366,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060692,
+    "roc_year": "113",
+    "session": "第一次",
+    "exam_code": "113100",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 16,
+    "question": "進行聽性穩定狀態反應（ASSR）檢查時，將刺激音調變頻率（modulation frequency）從40 Hz 提高至80 Hz，下列敘述何者最為適當？",
+    "options": {
+      "A": "潛時縮短",
+      "B": "相位一致性（phase coherence）下降",
+      "C": "不會影響聽覺閾值之估計",
+      "D": "振幅變大"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_113100_s0603_17",
     "roc_year": "113",
     "session": "第一次",
@@ -137847,6 +138827,46 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060693,
+    "roc_year": "113",
+    "session": "第一次",
+    "exam_code": "113100",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 38,
+    "question": "2 歲小咪的聽覺反應時好時壞，在三個月內檢查出有聽力損失且佩戴助聽器，結果發現是聽神經譜系病變（ANSD），下列敘述何者最為適當？",
+    "options": {
+      "A": "刺激音極性改變時CM 波形會出現相位顛倒",
+      "B": "人工耳蝸植入對小咪較不適合",
+      "C": "OAE 和ABR 檢查結果均不正常",
+      "D": "可以透過雙耳ASSR 紀錄診斷是否有ANSD"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "id": 114100060694,
+    "roc_year": "113",
+    "session": "第一次",
+    "exam_code": "113100",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 39,
+    "question": "以失真產物耳聲傳射（DPOAE）進行嬰幼兒聽力檢查時，會給予2 個頻率分別為f1 和f2（f2＞f1）的刺激音，當兩個頻率的比值（f2/f1）為下列何者時可以觀察到最強的反應？",
+    "options": {
+      "A": "1.11",
+      "B": "1.22",
+      "C": "1.33",
+      "D": "1.44"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_113100_s0603_40",
     "roc_year": "113",
     "session": "第一次",
@@ -137971,6 +138991,46 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060695,
+    "roc_year": "113",
+    "session": "第一次",
+    "exam_code": "113100",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 46,
+    "question": "40 歲王小姐突發性耳聾未痊癒，半年後得到聽力圖如下，有關其電生理檢查結果，下列敘述何者最不適當？",
+    "options": {
+      "A": "若患者有響音重振，則click ABR 的I、III、V 波絕對潛時可能正常",
+      "B": "click ABR 結果若I、III、V 波消失則無法判斷病灶位置",
+      "C": "500 Hz tone burst ABR 不會有第V 波反應",
+      "D": "雙耳聽反射在各頻率均無反應"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "id": 114100060696,
+    "roc_year": "113",
+    "session": "第一次",
+    "exam_code": "113100",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 47,
+    "question": "24 歲職業棒球運動員在過去6 週內出現左耳持續聽力障礙。病歷發現始於頭部外傷，當時患者頭部左側受到打擊。耳鏡檢查顯示鼓膜正常且完整。聽力檢查顯示左耳有中度傳導性聽力損失，右耳聽力正常。左耳鼓室圖為Ad 型，右耳為A 型。關於此患者左耳的診斷下列何者最為適當？",
+    "options": {
+      "A": "耳部血腫",
+      "B": "漿液性中耳炎",
+      "C": "顳骨骨折",
+      "D": "聽小骨斷裂"
+    },
+    "answer": "D",
+    "explanation": ""
   },
   {
     "id": "audiologist_113100_s0603_48",
@@ -140073,6 +141133,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060697,
+    "roc_year": "113",
+    "session": "第一次",
+    "exam_code": "113100",
+    "subject": "聽覺與平衡系統之創健與復健學",
+    "subject_tag": "paper5",
+    "subject_name": "聽覺與平衡系統之創健與復健學",
+    "stage_id": 0,
+    "number": 48,
+    "question": "54 歲王先生因感冒後出現急性眩暈，急診與門診醫師均發現自發性向右眼振，純音聽力檢查為正常。使用止暈藥後症狀改善，一週後已無眩暈症狀以及自發性眼振。該病患之診斷最可能為下列何者？",
+    "options": {
+      "A": "懷疑左耳前庭神經炎，無眩暈症狀代表前庭功能已恢復",
+      "B": "懷疑右耳前庭神經炎，無眩暈症狀代表前庭功能已恢復",
+      "C": "懷疑左耳前庭神經炎，無眩暈症狀並不代表前庭功能已恢復",
+      "D": "懷疑右耳前庭神經炎，無眩暈症狀並不代表前庭功能已恢復"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_113100_s0605_49",
     "roc_year": "113",
     "session": "第一次",
@@ -140703,6 +141783,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060698,
+    "roc_year": "113",
+    "session": "第一次",
+    "exam_code": "113100",
+    "subject": "聽覺輔具原理與實務學",
+    "subject_tag": "paper4",
+    "subject_name": "聽覺輔具原理與實務學",
+    "stage_id": 0,
+    "number": 29,
+    "question": "關於兒童使用的主觀性自我問卷，下列敘述何者正確？",
+    "options": {
+      "A": "客戶導向進步量表（兒童版）（Client Oriented Scale of Improvement for Children, COSI-C）適用於5 歲以上聽損孩童，題目共10 題",
+      "B": "有意義的聽能統合量表（Meaningful Auditory Integration Scale, MAIS）適用於0.5～3 歲的孩童，題目共10 題",
+      "C": "兒童居家聆聽困難清單（Children’s home inventory of listening difficulties, CHILD）適用於3～12 歲的孩童，題目共15 題",
+      "D": "助聽器效益簡易版（兒童版）（Abbreviated Profile of HearingAid Performance for Children, APHAP-C）適用於5～10 歲的孩童，題目共24 題"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_113100_s0604_30",
     "roc_year": "113",
     "session": "第一次",
@@ -141142,6 +142242,26 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060699,
+    "roc_year": "114",
+    "session": "第一次",
+    "exam_code": "114100",
+    "subject": "行為聽力學",
+    "subject_tag": "paper2",
+    "subject_name": "行為聽力學",
+    "stage_id": 0,
+    "number": 1,
+    "question": "臨床上很常使用SOAP來快速記錄個案資訊,下列敘述何者正確?",
+    "options": {
+      "A": "S:代表subjective,為醫師所觀察出個案的相關症狀",
+      "B": "O:代表objective,為檢查的測試結果",
+      "C": "A:代表analyze,醫師評估的有效診斷",
+      "D": "P:代表prognosis,醫師根據需求開出的處方或安排其他項目檢查"
+    },
+    "answer": "B",
+    "explanation": ""
   },
   {
     "id": "audiologist_114100_s0602_2",
@@ -142908,6 +144028,46 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060700,
+    "roc_year": "114",
+    "session": "第一次",
+    "exam_code": "114100",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 36,
+    "question": "60 dB IL聲音與20 dB IL聲音之聲音能量強度相差多少倍?",
+    "options": {
+      "A": "4倍",
+      "B": "40倍",
+      "C": "1,000倍",
+      "D": "10,000倍"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "id": 114100060701,
+    "roc_year": "114",
+    "session": "第一次",
+    "exam_code": "114100",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 37,
+    "question": "聲壓單位之μPa(micro Pascal),其中Pascal之具體單位為何?",
+    "options": {
+      "A": "dynes/cm2",
+      "B": "dynes/m2",
+      "C": "newtons/cm2",
+      "D": "newtons/m2"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_114100_s0601_38",
     "roc_year": "114",
     "session": "第一次",
@@ -143137,6 +144297,46 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060702,
+    "roc_year": "114",
+    "session": "第一次",
+    "exam_code": "114100",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 49,
+    "question": "依據ANSI S3.39(1987, R2012)的規範,下列聽阻儀器(acoustic immittance instruments)的 校準容積量(calibration volumes)何者錯誤?",
+    "options": {
+      "A": "0.5 cm3",
+      "B": "10 cm3",
+      "C": "2 cm3",
+      "D": "5 cm3"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "id": 114100060703,
+    "roc_year": "114",
+    "session": "第一次",
+    "exam_code": "114100",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 50,
+    "question": "關於聲導抗檢查(acoustic immittance test)的敘述,下列何者錯誤?",
+    "options": {
+      "A": "聽小骨骨折病患之患側接受中耳靜態聲暢(static acoustic compliance, Cx, middle ear)檢 查,結果會顯示Cx高於正常值",
+      "B": "中耳鼓室圖測驗(tympanometry)圖形顯示type As,常見於鐙骨固定(immobilized stapes)病 患",
+      "C": "在中耳靜態聲暢(static acoustic compliance, Cx, middle ear)檢查中,結果顯示外耳道順應 性(C1, EAC)值高於正常值,表示受測耳外耳道有異物或耳垢栓塞情形",
+      "D": "在耳鼓室圖測驗(tympanometry)中,圖形顯示type B,表示受測耳有耳垢栓塞或中耳積水情形"
+    },
+    "answer": "C",
+    "explanation": ""
   },
   {
     "id": "audiologist_114100_s0603_1",
@@ -144021,6 +145221,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060704,
+    "roc_year": "114",
+    "session": "第一次",
+    "exam_code": "114100",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 43,
+    "question": "3個月齡嬰兒接受ABR檢查,雙耳氣導click ABR閾值在50 dB nHL且出現第I、V波潛時延長,I V波間潛時正常,接下來該優先做何項檢查?",
+    "options": {
+      "A": "行為觀察聽力檢查",
+      "B": "視覺增強聽力檢查",
+      "C": "氣導tone burst ABR",
+      "D": "骨導click ABR"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_114100_s0603_44",
     "roc_year": "114",
     "session": "第一次",
@@ -144040,6 +145260,26 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060705,
+    "roc_year": "114",
+    "session": "第一次",
+    "exam_code": "114100",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 45,
+    "question": "3歲半女童因學齡前聽篩未通過,被轉介至醫院進一步檢查,檢查結果如下圖。依據檢查結果推 測,該童耳部的異常狀況最可能是下列何者?",
+    "options": {
+      "A": "鼓膜破損",
+      "B": "感音神經性聽損",
+      "C": "聽小骨鏈斷裂",
+      "D": "中耳積水"
+    },
+    "answer": "D",
+    "explanation": ""
   },
   {
     "id": "audiologist_114100_s0603_46",
@@ -144124,6 +145364,26 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060706,
+    "roc_year": "114",
+    "session": "第一次",
+    "exam_code": "114100",
+    "subject": "電生理聽力學",
+    "subject_tag": "paper3",
+    "subject_name": "電生理聽力學",
+    "stage_id": 0,
+    "number": 50,
+    "question": "4歲男孩來診所求診,他的母親說他偶爾會因為不適而拉耳朵,並且懷疑聽力變差。平常身體健 康,其他方面發展正常。耳鏡檢查顯示雙側鼓膜輕微內縮。下列聽力測試何者最為適當?",
+    "options": {
+      "A": "語音聽力檢查",
+      "B": "耳聲傳射檢查",
+      "C": "鼓室圖",
+      "D": "聽性腦幹反應檢查"
+    },
+    "answer": "C",
+    "explanation": ""
   },
   {
     "id": "audiologist_114100_s0606_1",
@@ -146140,6 +147400,26 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060707,
+    "roc_year": "114",
+    "session": "第一次",
+    "exam_code": "114100",
+    "subject": "聽覺與平衡系統之創健與復健學",
+    "subject_tag": "paper5",
+    "subject_name": "聽覺與平衡系統之創健與復健學",
+    "stage_id": 0,
+    "number": 47,
+    "question": "7歲的小明抱怨玩電動或看電影時會引發頭暈,經小兒神經科檢查無異常,因此醫師轉介執行前庭 復健。詢問病史時個案表示看書時不會暈,但快速移動的視覺目標容易引發症狀,下列處置何者最 不適當?",
+    "options": {
+      "A": "若作迪克斯-霍爾派克測試(DixHallpike test)時誘發眼震,則優先考慮先依不同位置執行耳 石復位術",
+      "B": "若作迪克斯-霍爾派克測試(DixHallpike test)時沒有誘發眼震,則考慮執行前庭習慣化治療 (habituation training)",
+      "C": "執行前庭習慣化治療(habituation training)在家可玩電動和觀看電影動作片來訓練",
+      "D": "為個案安排執行反覆引發頭暈的動作,應該誘發到眩暈完全發作"
+    },
+    "answer": "D",
+    "explanation": ""
   },
   {
     "id": "audiologist_114100_s0605_48",

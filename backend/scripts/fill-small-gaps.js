@@ -215,6 +215,12 @@ async function fillGap({ jsonFile, examPrefix, examCode, subject, subject_tag, m
   return added
 }
 
+// Add dental2 + extras to existing SUBJECT_ALIASES (defined earlier as const)
+SUBJECT_ALIASES['卷一'] = (SUBJECT_ALIASES['卷一'] || []).concat(['口腔解剖學', '牙體形態學', '口腔組織', '生物化學'])
+SUBJECT_ALIASES['卷二'] = (SUBJECT_ALIASES['卷二'] || []).concat(['口腔病理學', '牙科材料學', '口腔微生物學', '牙科藥理學'])
+SUBJECT_ALIASES['卷三'] = (SUBJECT_ALIASES['卷三'] || []).concat(['齒內治療學', '牙體復形學', '牙周病學'])
+SUBJECT_ALIASES['卷四'] = ['口腔顎面外科學', '牙科放射線學']
+
 // Define gaps to fill
 const GAPS = [
   // medlab
@@ -232,6 +238,18 @@ const GAPS = [
   // pharma1
   { jsonFile: 'questions-pharma1.json', examPrefix: 'pharma1', examCode: '100140', subject: '卷一', subject_tag: 'paper1', missing: [74], rocYear: '100', session: '第二次', paperCount: 80 },
   { jsonFile: 'questions-pharma1.json', examPrefix: 'pharma1', examCode: '100140', subject: '卷二', subject_tag: 'paper2', missing: [17,24], rocYear: '100', session: '第二次', paperCount: 80 },
+  // dental2 卷三/卷四 散缺 (2026-05-06)
+  { jsonFile: 'questions-dental2.json', examPrefix: 'dental2', examCode: '100020', subject: '卷四', subject_tag: 'paper4', missing: [14,18,61,80], rocYear: '100', session: '第一次', paperCount: 80 },
+  { jsonFile: 'questions-dental2.json', examPrefix: 'dental2', examCode: '101100', subject: '卷四', subject_tag: 'paper4', missing: [7,11,59,80], rocYear: '101', session: '第二次', paperCount: 80 },
+  { jsonFile: 'questions-dental2.json', examPrefix: 'dental2', examCode: '102020', subject: '卷四', subject_tag: 'paper4', missing: [21,80], rocYear: '102', session: '第一次', paperCount: 80 },
+  { jsonFile: 'questions-dental2.json', examPrefix: 'dental2', examCode: '102100', subject: '卷四', subject_tag: 'paper4', missing: [80], rocYear: '102', session: '第二次', paperCount: 80 },
+  { jsonFile: 'questions-dental2.json', examPrefix: 'dental2', examCode: '103020', subject: '卷四', subject_tag: 'paper4', missing: [10,22,27,51,67,80], rocYear: '103', session: '第一次', paperCount: 80 },
+  { jsonFile: 'questions-dental2.json', examPrefix: 'dental2', examCode: '103090', subject: '卷四', subject_tag: 'paper4', missing: [19,80], rocYear: '103', session: '第二次', paperCount: 80 },
+  { jsonFile: 'questions-dental2.json', examPrefix: 'dental2', examCode: '104020', subject: '卷三', subject_tag: 'paper3', missing: [53], rocYear: '104', session: '第一次', paperCount: 80 },
+  { jsonFile: 'questions-dental2.json', examPrefix: 'dental2', examCode: '105020', subject: '卷四', subject_tag: 'paper4', missing: [20], rocYear: '105', session: '第一次', paperCount: 80 },
+  { jsonFile: 'questions-dental2.json', examPrefix: 'dental2', examCode: '105100', subject: '卷二', subject_tag: 'paper2', missing: [14], rocYear: '105', session: '第二次', paperCount: 80 },
+  // pt 100-1 物理治療基礎學 Q30
+  { jsonFile: 'questions-pt.json', examPrefix: 'pt', examCode: '100030', subject: '物理治療基礎學', subject_tag: 'paper1', missing: [30], rocYear: '100', session: '第一次', paperCount: 80 },
   // pharma2
   { jsonFile: 'questions-pharma2.json', examPrefix: 'pharma2', examCode: '100140', subject: '調劑與臨床', subject_tag: 'paper1', missing: [75], rocYear: '100', session: '第二次', paperCount: 80 },
   // vet

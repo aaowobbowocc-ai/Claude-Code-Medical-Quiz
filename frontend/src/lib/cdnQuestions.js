@@ -138,7 +138,11 @@ function isSingleAnswer(q) {
 // doctor1 paper-constraint (mirror of backend)
 const DOCTOR1_MED1_TAGS = new Set(['anatomy', 'embryology', 'histology', 'physiology', 'biochemistry'])
 const DOCTOR1_MED2_TAGS = new Set(['microbiology', 'parasitology', 'public_health', 'pharmacology', 'pathology'])
-function doctor1PaperOK(q, tag) {
+function doctor1PaperOK(q, tag, examId) {
+  // Only enforce for doctor1: tags like 'pathology' / 'physiology' are also
+  // legitimate stage tags in medlab/nursing/etc, which must NOT be filtered
+  // by 醫學(一)/醫學(二) subject names.
+  if (examId !== 'doctor1') return true
   if (q.roc_year && parseInt(q.roc_year) < 101) return true
   if (DOCTOR1_MED1_TAGS.has(tag)) return !q.subject || q.subject === '醫學(一)'
   if (DOCTOR1_MED2_TAGS.has(tag)) return !q.subject || q.subject === '醫學(二)'
@@ -171,7 +175,7 @@ export async function getRandomQuestions(examId, { stageId, count = 50, stages =
       (q.paper_id === tag ||
        q.subject_tag === tag ||
        (Array.isArray(q.subject_tags) && q.subject_tags.includes(tag)))
-      && doctor1PaperOK(q, tag)
+      && doctor1PaperOK(q, tag, examId)
     )
   }
 
@@ -185,7 +189,7 @@ export async function browseQuestions(examId, { year, session, subject_tag, q, p
   let list = await loadExamQuestions(examId)
   if (year)        list = list.filter(x => x.roc_year === year)
   if (session)     list = list.filter(x => x.session === session)
-  if (subject_tag) list = list.filter(x => x.subject_tag === subject_tag && doctor1PaperOK(x, subject_tag))
+  if (subject_tag) list = list.filter(x => x.subject_tag === subject_tag && doctor1PaperOK(x, subject_tag, examId))
   if (q)           list = list.filter(x => x.question.includes(q) || Object.values(x.options || {}).some(o => o.includes(q)))
   const total = list.length
   const start = (parseInt(page) - 1) * parseInt(limit)

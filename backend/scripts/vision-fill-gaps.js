@@ -184,6 +184,17 @@ async function getAnswerKey(examCode, c, s, paperCount, examPrefix) {
   return null
 }
 
+// Per-exam historical paper-count overrides (when older years had different counts)
+// nutrition: 113年起改 50題；100-112 為 40題/paper for 4 中央科目
+function getHistoricalCount(examId, examCode, subject, defaultCount) {
+  if (examId === 'nutrition' && parseInt(examCode.slice(0, 3)) < 113) {
+    if (['生理學與生物化學', '營養學', '公共衛生營養學', '食品衛生與安全'].includes(subject)) {
+      return 40
+    }
+  }
+  return defaultCount
+}
+
 function audit(examFilter) {
   const gaps = []
   for (const [examId, file] of Object.entries(EXAMS)) {
@@ -203,15 +214,16 @@ function audit(examFilter) {
       const [code, subj] = k.split('|')
       const exp = expByPaper[subj]
       if (!exp) continue
-      const gap = exp.count - qs.length
+      const histCount = getHistoricalCount(examId, code, subj, exp.count)
+      const gap = histCount - qs.length
       if (gap < 1 || gap > 25) continue
       const have = new Set(qs.map(q => q.number))
       const missing = []
-      for (let i = 1; i <= exp.count; i++) if (!have.has(i)) missing.push(i)
+      for (let i = 1; i <= histCount; i++) if (!have.has(i)) missing.push(i)
       const sample = qs[0]
       gaps.push({
         examId, jsonFile: file, examCode: code, subject: subj, subject_tag: exp.tag,
-        missing, paperCount: exp.count,
+        missing, paperCount: histCount,
         rocYear: sample?.roc_year || code.slice(0, 3),
         session: sample?.session || (parseInt(code.slice(3, 6)) > 50 ? '第二次' : '第一次'),
       })
@@ -272,8 +284,7 @@ async function fillGapWithVision(gap) {
 }
 
 async function main() {
-  // Limit to non-nutrition first (nutrition needs separate investigation)
-  const TARGETS = ['medlab','pharma1','pharma2','pt','vet','social-worker','audiologist','speech-therapist','tcm2','radiology','dental2','doctor2','nursing']
+  const TARGETS = ['medlab','pharma1','pharma2','pt','vet','social-worker','audiologist','speech-therapist','tcm2','radiology','dental2','doctor2','nursing','nutrition']
   const limit = process.argv.find(a => a.startsWith('--limit='))?.slice(8)
   const max = limit ? parseInt(limit) : Infinity
 

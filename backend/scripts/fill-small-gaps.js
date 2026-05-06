@@ -179,15 +179,19 @@ async function fillGap({ jsonFile, examPrefix, examCode, subject, subject_tag, m
     return Math.max(m, n)
   }, 0)
   let nextId = maxId + 1
+  // Build dedup set so re-runs are idempotent
+  const existing = new Set(arr.filter(q => q.exam_code === examCode && q.subject === subject).map(q => q.number))
 
   let added = 0
   for (const num of missing) {
+    if (existing.has(num)) continue
     const found = questions.find(q => q.number === num)
     if (!found) continue
     if (!found.options || Object.keys(found.options).length !== 4) continue
     if (Object.values(found.options).some(v => !v || v.length < 2)) continue
     const ans = answers[num - 1]
     if (!ans || ans === '#') continue
+    existing.add(num)
     arr.push({
       id: nextId++,
       roc_year: rocYear,
@@ -250,6 +254,18 @@ const GAPS = [
   { jsonFile: 'questions-dental2.json', examPrefix: 'dental2', examCode: '105100', subject: '卷二', subject_tag: 'paper2', missing: [14], rocYear: '105', session: '第二次', paperCount: 80 },
   // pt 100-1 物理治療基礎學 Q30
   { jsonFile: 'questions-pt.json', examPrefix: 'pt', examCode: '100030', subject: '物理治療基礎學', subject_tag: 'paper1', missing: [30], rocYear: '100', session: '第一次', paperCount: 80 },
+  // pharma2 藥物治療 110+ 每年缺 Q55-80（原 scraper 切在 Q54）
+  ...['110020','111020','111100','112020','112100','113020','113090','114020','114090','115020'].map(code => ({
+    jsonFile: 'questions-pharma2.json',
+    examPrefix: 'pharma2',
+    examCode: code,
+    subject: '藥物治療',
+    subject_tag: 'paper2',
+    missing: Array.from({length: 26}, (_, i) => 55 + i),
+    rocYear: code.slice(0, 3),
+    session: parseInt(code.slice(3, 6)) > 50 ? '第二次' : '第一次',
+    paperCount: 80,
+  })),
   // pharma2
   { jsonFile: 'questions-pharma2.json', examPrefix: 'pharma2', examCode: '100140', subject: '調劑與臨床', subject_tag: 'paper1', missing: [75], rocYear: '100', session: '第二次', paperCount: 80 },
   // vet

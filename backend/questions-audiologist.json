@@ -118288,6 +118288,26 @@
     "exam_type": "high"
   },
   {
+    "id": 114100060717,
+    "roc_year": "110",
+    "session": "第二次",
+    "exam_code": "110111",
+    "subject": "基礎聽力科學",
+    "subject_tag": "paper1",
+    "subject_name": "基礎聽力科學",
+    "stage_id": 0,
+    "number": 5,
+    "question": "100 分貝的聲音強度（intensity level）是 50 分貝聲音強度的幾倍？",
+    "options": {
+      "A": "2",
+      "B": "50",
+      "C": "1,000",
+      "D": "100,000"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
     "id": "audiologist_110111_s0901_6",
     "roc_year": "110",
     "session": "第一次",
@@ -128795,6 +128815,26 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
+  },
+  {
+    "id": 114100060718,
+    "roc_year": "111",
+    "session": "第二次",
+    "exam_code": "111110",
+    "subject": "聽覺輔具原理與實務學",
+    "subject_tag": "paper4",
+    "subject_name": "聽覺輔具原理與實務學",
+    "stage_id": 0,
+    "number": 7,
+    "question": "一個全新 675 號鋅空電池的電池容量為 600 mAh，若個案一天使用助聽器 8 小時，助聽器耗電量為 2 mA，可使用時間約為多少週？",
+    "options": {
+      "A": "1",
+      "B": "3",
+      "C": "5",
+      "D": "7"
+    },
+    "answer": "C",
+    "explanation": ""
   },
   {
     "id": "audiologist_111110_s0704_8",

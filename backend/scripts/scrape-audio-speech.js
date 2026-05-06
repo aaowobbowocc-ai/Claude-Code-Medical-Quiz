@@ -25,8 +25,12 @@ const BACKEND   = path.join(__dirname, '..')
 const PDF_CACHE = path.join(BACKEND, '_tmp', 'pdf-cache')
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 
-const SPEECH_PAPERS = ['基礎言語科學', '神經性溝通障礙學', '兒童語言障礙', '嗓音與吞嚥障礙', '構音與語暢障礙', '聽力學與輔助溝通系統']
-const AUDIO_PAPERS  = ['基礎聽力科學', '行為聽力學', '電生理聽力學', '聽覺輔具原理與實務學', '聽覺與平衡系統之創健與復健學', '聽語溝通障礙學']
+// Canonical subject names match the exam-config papers[].subject so the dedup
+// key (exam_code, subject, number) lines up with already-stored entries.
+// 100-104 年舊 PDF 標題寫「聽語溝通障礙學」/「聽力學與輔助溝通系統」（無附加），
+// 但 config 與已 rename 的 JSON 用「（包括專業倫理）」結尾。
+const SPEECH_PAPERS = ['基礎言語科學', '神經性溝通障礙學', '兒童語言障礙', '嗓音與吞嚥障礙', '構音與語暢障礙', '聽力學與輔助溝通系統（包括專業倫理）']
+const AUDIO_PAPERS  = ['基礎聽力科學', '行為聽力學', '電生理聽力學', '聽覺輔具原理與實務學', '聽覺與平衡系統之創健與復健學', '聽語溝通障礙學（包括專業倫理）']
 
 const TARGETS = [
   // speech-therapist
@@ -44,6 +48,8 @@ const TARGETS = [
     code: '102110', c: '114', sBase: '1001', papers: SPEECH_PAPERS },  // 102 第二次
   { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
     code: '104100', c: '109', sBase: '0801', papers: SPEECH_PAPERS },  // 104 第二次
+  { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
+    code: '107110', c: '109', sBase: '0801', papers: SPEECH_PAPERS },  // 107 第一次（小缺）
   // audiologist
   { exam: 'audiologist', file: 'questions-audiologist.json',
     code: '100090', c: '301', sBase: '0501', papers: AUDIO_PAPERS },   // 特考

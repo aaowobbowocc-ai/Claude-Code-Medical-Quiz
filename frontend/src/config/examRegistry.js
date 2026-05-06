@@ -17,7 +17,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v8: 新增 語言治療師 speech-therapist 考試（103-114 年，3643 題）
 // v9: 新增 學測 gsat / 分科測驗 ast（college-entrance 類別）
 // v10: 強制重抓 — civil-*-general 的 totalQ 已修正、聽力/語言補完到 6500+ 題
-const CACHE_KEY = 'exam-registry-v11'
+// v12: 全考試 totalQ 同步至 174,496 題（醫事 100% 完成、SEO 描述同步更新）
+const CACHE_KEY = 'exam-registry-v12'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache

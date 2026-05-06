@@ -53,13 +53,41 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" },
-    { "id": 1, "tag": "speech_basic", "name": "基礎言語" },
-    { "id": 2, "tag": "speech_neuro", "name": "神經性溝通" },
-    { "id": 3, "tag": "speech_child", "name": "兒童語言" },
-    { "id": 4, "tag": "speech_voice", "name": "嗓音吞嚥" },
-    { "id": 5, "tag": "speech_articulation", "name": "構音語暢" },
-    { "id": 6, "tag": "speech_hearing", "name": "聽力與AAC" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    },
+    {
+      "id": 1,
+      "tag": "speech_basic",
+      "name": "基礎言語"
+    },
+    {
+      "id": 2,
+      "tag": "speech_neuro",
+      "name": "神經性溝通"
+    },
+    {
+      "id": 3,
+      "tag": "speech_child",
+      "name": "兒童語言"
+    },
+    {
+      "id": 4,
+      "tag": "speech_voice",
+      "name": "嗓音吞嚥"
+    },
+    {
+      "id": 5,
+      "tag": "speech_articulation",
+      "name": "構音語暢"
+    },
+    {
+      "id": 6,
+      "tag": "speech_hearing",
+      "name": "聽力與AAC"
+    }
   ],
   "ui": {
     "tagNames": {
@@ -71,12 +99,30 @@
       "speech_hearing": "聽力與AAC"
     },
     "stageStyles": {
-      "speech_basic": { "icon": "🧬", "color": "#3B82F6" },
-      "speech_neuro": { "icon": "🧠", "color": "#10B981" },
-      "speech_child": { "icon": "👶", "color": "#F97316" },
-      "speech_voice": { "icon": "🎤", "color": "#8B5CF6" },
-      "speech_articulation": { "icon": "💬", "color": "#EF4444" },
-      "speech_hearing": { "icon": "🦻", "color": "#14B8A6" }
+      "speech_basic": {
+        "icon": "🧬",
+        "color": "#3B82F6"
+      },
+      "speech_neuro": {
+        "icon": "🧠",
+        "color": "#10B981"
+      },
+      "speech_child": {
+        "icon": "👶",
+        "color": "#F97316"
+      },
+      "speech_voice": {
+        "icon": "🎤",
+        "color": "#8B5CF6"
+      },
+      "speech_articulation": {
+        "icon": "💬",
+        "color": "#EF4444"
+      },
+      "speech_hearing": {
+        "icon": "🦻",
+        "color": "#14B8A6"
+      }
     },
     "subjectColors": {}
   },
@@ -87,7 +133,7 @@
     "shortName": "語言治療師",
     "studentType": "語言治療師國考應考生、聽語系學生",
     "years": "103 起",
-    "totalQ": 3643,
+    "totalQ": 6905,
     "examDesc": "語言治療師考試（專技人員高等考試），每年 2 月舉行，每科 50 題（107 年起）。考選部於 115 年起改為電腦化測驗（CBT）。",
     "paperDesc": "共 6 科：基礎言語科學、神經性溝通障礙學、兒童語言障礙、嗓音與吞嚥障礙、構音與語暢障礙、聽力學與輔助溝通系統。",
     "subjects": "基礎言語、神經性溝通、兒童語言、嗓音吞嚥、構音語暢、聽力AAC",

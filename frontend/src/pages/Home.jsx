@@ -13,6 +13,7 @@ import SupportBar from '../components/SupportBar'
 import CumulativeStatsBar from '../components/CumulativeStatsBar'
 import SupportSheets from '../components/SupportSheets'
 import RewardAdSheet from '../components/RewardAdSheet'
+import WelcomeTour, { shouldShowWelcomeTour } from '../components/WelcomeTour'
 import CoinShopSheet from '../components/CoinShopSheet'
 import { supabase, linkOrSignInGoogle, switchGoogleAccount, getLinkedIdentity } from '../lib/supabase'
 
@@ -220,12 +221,20 @@ function getYearRange(examId) {
   return c ? c.years.replace(/ /g, '') : '110至115'
 }
 
-function TutorialSection({ exam }) {
+function TutorialSection({ exam, onShowTour }) {
   const c = getExamSeo(exam.id) || getExamSeo('doctor1') || {}
   const timeLimit = exam.papers?.length >= 3 ? 180 : 120
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
-      <h2 className="font-bold text-base text-medical-dark mb-3">📖 新手上路</h2>
+      <div className="flex items-center justify-between mb-3">
+        <h2 className="font-bold text-base text-medical-dark">📖 新手上路</h2>
+        {onShowTour && (
+          <button onClick={onShowTour}
+            className="text-xs text-medical-blue underline underline-offset-2 active:scale-95">
+            🎬 看完整功能導覽
+          </button>
+        )}
+      </div>
       <div className="space-y-3">
         {[
           { step: '1', icon: '🎯', title: '自主練習', desc: '選科目隨機出題，不確定的馬上看 AI 詳解，邊做邊學最有效' },
@@ -258,6 +267,7 @@ export default function Home() {
   const [bindRewardToast, setBindRewardToast] = useState(0)
   const [dailyClaimed, setDailyClaimed] = useState(false)
   const [dailyAmount, setDailyAmount] = useState(0)
+  const [showTour, setShowTour] = useState(false)
 
   useEffect(() => {
     const amount = claimDailyBonus()
@@ -280,6 +290,7 @@ export default function Home() {
       setSheet('exam')
     }
   }, [])
+
   const { showBanner, isIOS, install, installPrompt, dismiss } = usePWA()
   const { getDueCount } = useBookmarks()
   const dueCount = getDueCount()
@@ -304,6 +315,16 @@ export default function Home() {
   const socket = getSocket()
 
   const [sheet, setSheet]         = useState(null)   // null | 'editname' | 'join' | 'bugreport' | 'feedback' | 'sponsor'
+
+  // Show welcome tour: fire after Home settles (no picker open, profile hydrated).
+  // Re-fires on `name` change so cloud-profile hydrate (Google login) re-triggers.
+  useEffect(() => {
+    if (!shouldShowWelcomeTour()) return
+    if (sheet === 'exam' || sheet === 'editname') return
+    const t = setTimeout(() => setShowTour(true), 600)
+    return () => clearTimeout(t)
+  }, [sheet, name])
+
   const [inputName, setInputName] = useState('')
   const [joinCode, setJoinCode]   = useState('')
   const [joinError, setJoinError] = useState('')
@@ -561,7 +582,7 @@ export default function Home() {
             ))}
           </div>
 
-          <TutorialSection exam={currentExam} />
+          <TutorialSection exam={currentExam} onShowTour={() => setShowTour(true)} />
           <ExamArticle exam={currentExam} />
 
           <CumulativeStatsBar />
@@ -610,6 +631,7 @@ export default function Home() {
         <SupportSheets sheet={sheet} setSheet={setSheet} />
         {sheet === 'reward-ad' && <RewardAdSheet onClose={() => setSheet(null)} onOpenShop={() => setSheet('coin-shop')} />}
         {sheet === 'coin-shop' && <CoinShopSheet onClose={() => setSheet(null)} />}
+        {showTour && <WelcomeTour onClose={() => setShowTour(false)} />}
       </div>
     )
   }
@@ -851,7 +873,7 @@ export default function Home() {
           </button>
         )}
 
-        <TutorialSection exam={currentExam} />
+        <TutorialSection exam={currentExam} onShowTour={() => setShowTour(true)} />
 
         {/* SEO 內容區塊 */}
         <ExamArticle exam={currentExam} />
@@ -1063,6 +1085,8 @@ export default function Home() {
 
       {sheet === 'reward-ad' && <RewardAdSheet onClose={() => setSheet(null)} onOpenShop={() => setSheet('coin-shop')} />}
       {sheet === 'coin-shop' && <CoinShopSheet onClose={() => setSheet(null)} />}
+
+      {showTour && <WelcomeTour onClose={() => setShowTour(false)} />}
 
       {/* Dev password gate */}
       {sheet === 'devpwd' && (

@@ -37,6 +37,7 @@ const EXAMS = {
   radiology: 'questions-radiology.json', tcm1: 'questions-tcm1.json', tcm2: 'questions-tcm2.json',
   vet: 'questions-vet.json', 'social-worker': 'questions-social-worker.json',
   audiologist: 'questions-audiologist.json', 'speech-therapist': 'questions-speech-therapist.json',
+  customs: 'questions-customs.json', police4: 'questions-police4.json',
 }
 
 const SUBJECT_ALIASES = {
@@ -216,7 +217,7 @@ function audit(examFilter) {
       if (!exp) continue
       const histCount = getHistoricalCount(examId, code, subj, exp.count)
       const gap = histCount - qs.length
-      if (gap < 1 || gap > 25) continue
+      if (gap < 1 || gap > 35) continue
       const have = new Set(qs.map(q => q.number))
       const missing = []
       for (let i = 1; i <= histCount; i++) if (!have.has(i)) missing.push(i)
@@ -284,7 +285,7 @@ async function fillGapWithVision(gap) {
 }
 
 async function main() {
-  const TARGETS = ['medlab','pharma1','pharma2','pt','vet','social-worker','audiologist','speech-therapist','tcm2','radiology','dental2','doctor2','nursing','nutrition']
+  const TARGETS = ['medlab','pharma1','pharma2','pt','vet','social-worker','audiologist','speech-therapist','tcm2','radiology','dental2','doctor2','nursing','nutrition','customs','police4']
   const limit = process.argv.find(a => a.startsWith('--limit='))?.slice(8)
   const max = limit ? parseInt(limit) : Infinity
 

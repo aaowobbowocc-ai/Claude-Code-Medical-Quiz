@@ -81,9 +81,8 @@ export default function BreakLounge() {
           </div>
         )}
 
-        {/* Disclaimer — kept brief */}
         <div className="text-center text-[11px] text-gray-300 pt-4 pb-2">
-          連結為合作分潤，不影響你的價格
+          放點廣告維持生計，有興趣可以逛逛
         </div>
       </div>
 

@@ -1,17 +1,29 @@
 {
-  "intro": "想讀點課外書嗎？國考之外的世界很大。",
+  "intro": "",
   "sections": [
     {
       "id": "books",
       "icon": "📚",
-      "title": "課外書",
-      "blurb": "找不到的書可以請書商代訂。",
+      "title": "看點課外書？",
       "products": [
         {
           "name": "合作書商",
           "blurb": "進蝦皮搜尋想要的書，書商會幫你訂。",
           "shopUrl": "https://s.shopee.tw/5L8YhuFJqf",
           "ctaText": "進入書商頁面"
+        }
+      ]
+    },
+    {
+      "id": "tech",
+      "icon": "🔌",
+      "title": "3C 雜貨隨便逛逛？",
+      "products": [
+        {
+          "name": "3C 雜貨店",
+          "blurb": "充電線、滑鼠、藍牙耳機等小物。",
+          "shopUrl": "https://s.shopee.tw/AADoTWLIKz",
+          "ctaText": "進入店家頁面"
         }
       ]
     },
@@ -25,12 +37,6 @@
       "id": "energy",
       "icon": "☕",
       "title": "提神",
-      "products": []
-    },
-    {
-      "id": "study-gear",
-      "icon": "🎧",
-      "title": "讀書周邊",
       "products": []
     }
   ]

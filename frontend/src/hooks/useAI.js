@@ -190,12 +190,20 @@ export function useExplain() {
 
   const explain = useCallback(async (q) => {
     // Snapshot the auth user_id so the request can include it (server-side
-    // unlock lookup + record). getSession is sync once the session is hydrated.
+    // unlock lookup + record). getSession is normally sync once hydrated, but
+    // race with a timeout in case it hangs (slow network / Supabase issue).
+    // 500ms is plenty for a hydrated session — if it doesn't return, we just
+    // proceed without user_id (server falls back to anonymous flow).
     let userId = null
-    try {
-      const { data: { session } } = await supabase?.auth.getSession() || { data: { session: null } }
-      userId = session?.user?.id || null
-    } catch { /* unauthenticated — fall through */ }
+    if (supabase?.auth?.getSession) {
+      try {
+        const session = await Promise.race([
+          supabase.auth.getSession().then(r => r?.data?.session || null),
+          new Promise(resolve => setTimeout(() => resolve(null), 500)),
+        ])
+        userId = session?.user?.id || null
+      } catch { /* swallow — anonymous flow */ }
+    }
     const alreadyUnlocked = isExplainUnlocked(q?.id)
 
     // Per-question unlock + verified cache hits don't burn personal quota —

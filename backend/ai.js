@@ -33,8 +33,11 @@ const GEMINI_EXAMS = new Set([
 //   pending   — fresh gen, unverified → half price (reward early reviewers)
 //   verified  — upvotes >= 3         → free (attracts readers, amortises cost)
 //   retracted — downvotes crossed    → md cleared, next reader regenerates
-const EXPLAIN_PRICE_FULL     = 150;
-const EXPLAIN_PRICE_PENDING  = 75;
+// Pricing recalibrated 2026-05-07 — full price 150 → 100 for friendlier UX.
+// Pending tier scales to roughly half (50) so community-validated content still
+// has the steepest discount path. Verified stays free.
+const EXPLAIN_PRICE_FULL     = 100;
+const EXPLAIN_PRICE_PENDING  = 50;
 const EXPLAIN_PRICE_VERIFIED = 0;
 const VERIFY_THRESHOLD = 3;           // upvotes to flip pending → verified
 const RETRACT_PENDING_THRESHOLD = 3;  // downvotes to retract pending

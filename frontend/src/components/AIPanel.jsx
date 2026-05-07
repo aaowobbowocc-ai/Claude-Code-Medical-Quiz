@@ -46,7 +46,7 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 150, questionId, questionText, rocYear, session, number, disputed, subjectTags, sourceBankId, meta, onVote }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 100, questionId, questionText, rocYear, session, number, disputed, subjectTags, sourceBankId, meta, onVote }) {
   const [showAI, setShowAI] = useState(false)
   const [reportSent, setReportSent] = useState(false)
   const [showReportForm, setShowReportForm] = useState(false)
@@ -322,19 +322,22 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
       {!showAI && !requested && (
         <button
           onClick={() => {
+            if (loading) return
             if (hasExplanation) {
               setShowAI(true)
             } else {
               onRequest()
             }
           }}
-          disabled={!hasExplanation && !unlocked && remaining === 0}
+          disabled={loading || (!hasExplanation && !unlocked && remaining === 0)}
           className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-dashed text-sm font-medium transition-transform
-            ${remaining === 0 && !hasExplanation && !unlocked
+            ${loading
               ? 'border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed'
-              : unlocked
-                ? 'border-emerald-400 text-emerald-600 bg-emerald-50 active:scale-95'
-                : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
+              : remaining === 0 && !hasExplanation && !unlocked
+                ? 'border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed'
+                : unlocked
+                  ? 'border-emerald-400 text-emerald-600 bg-emerald-50 active:scale-95'
+                  : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
         >
           <span className="text-base">{unlocked ? '🔓' : '🤖'}</span>
           {hasExplanation ? 'AI 進階解說' : unlocked ? '查看已解鎖解說' : 'AI 解說這題'}
@@ -347,14 +350,16 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
         <>
           {!requested ? (
             <button
-              onClick={onRequest}
-              disabled={!unlocked && remaining === 0}
+              onClick={() => { if (!loading) onRequest() }}
+              disabled={loading || (!unlocked && remaining === 0)}
               className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-dashed text-sm font-medium transition-transform
-                ${remaining === 0 && !unlocked
+                ${loading
                   ? 'border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed'
-                  : unlocked
-                    ? 'border-emerald-400 text-emerald-600 bg-emerald-50 active:scale-95'
-                    : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
+                  : remaining === 0 && !unlocked
+                    ? 'border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed'
+                    : unlocked
+                      ? 'border-emerald-400 text-emerald-600 bg-emerald-50 active:scale-95'
+                      : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
             >
               <span className="text-base">{unlocked ? '🔓' : '🤖'}</span>
               {unlocked ? '查看已解鎖解說' : (remaining === 0 ? '今日 AI 額度已用完' : 'AI 解說這題')}

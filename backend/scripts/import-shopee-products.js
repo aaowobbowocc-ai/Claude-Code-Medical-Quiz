@@ -61,9 +61,10 @@ for (const p of CSV_PATHS) {
 console.log(`合計：${allRows.length} 筆`)
 console.log(`Header: ${header ? header.join(' | ') : '(未知)'}`)
 
-// 自動偵測欄位 index
-function findCol(predicate) {
-  return header ? header.findIndex(h => predicate(h)) : -1
+// 自動偵測欄位 index — 優先用 header 名稱，再 fallback 到 value sniffing
+function findHeaderCol(...keywords) {
+  if (!header) return -1
+  return header.findIndex(h => keywords.some(k => h.includes(k)))
 }
 function findValueCol(rows, predicate) {
   if (!rows.length) return -1
@@ -75,11 +76,18 @@ function findValueCol(rows, predicate) {
   return -1
 }
 
-let nameIdx = 0  // 第一欄通常是商品名
-let urlIdx = findValueCol(allRows, v => /^https:\/\/s\.shopee\.tw\//.test(v.trim()))
+let nameIdx = findHeaderCol('商品名稱', '商品名', '推廣計畫名稱', '名稱')
+if (nameIdx < 0) nameIdx = 0
+
+let urlIdx = findHeaderCol('推廣短連結', '推廣連結', '短連結')
+if (urlIdx < 0) urlIdx = findValueCol(allRows, v => /^https:\/\/s\.shopee\.tw\//.test(v.trim()))
 if (urlIdx < 0) urlIdx = findValueCol(allRows, v => /^https:\/\/shopee\.tw\//.test(v.trim()))
-const imgIdx = findValueCol(allRows, v => /^https:\/\/.+\.(jpg|jpeg|png|webp)/i.test(v.trim()))
-const priceIdx = findValueCol(allRows, v => /\$|NT|TWD/i.test(v))
+
+let imgIdx = findHeaderCol('商品圖片', '圖片', 'image')
+if (imgIdx < 0) imgIdx = findValueCol(allRows, v => /^https:\/\/.+\.(jpg|jpeg|png|webp)/i.test(v.trim()))
+
+let priceIdx = findHeaderCol('商品價格', '售價', '價格')
+if (priceIdx < 0) priceIdx = findValueCol(allRows, v => /\$|NT|TWD/i.test(v))
 
 console.log(`偵測欄位 → 名稱[${nameIdx}] 短連結[${urlIdx}] 圖片[${imgIdx}] 價格[${priceIdx}]`)
 
@@ -97,7 +105,10 @@ for (const r of allRows) {
   seen.add(shopUrl)
   const item = { name, shopUrl, ctaText: '看看這個商品' }
   if (imgIdx >= 0 && r[imgIdx]) item.image = r[imgIdx].trim()
-  if (priceIdx >= 0 && r[priceIdx]) item.price = r[priceIdx].trim()
+  if (priceIdx >= 0 && r[priceIdx]) {
+    const raw = r[priceIdx].trim()
+    item.price = /^[\d,]+$/.test(raw) ? `NT$${raw}` : raw
+  }
   products.push(item)
 }
 console.log(`去重後：${products.length} 個商品`)

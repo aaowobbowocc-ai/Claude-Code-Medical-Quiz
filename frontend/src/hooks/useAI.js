@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
 import { usePlayerStore } from '../store/gameStore'
+import { supabase } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // Pessimistic upfront charge — backend tells us the real price via the first SSE
@@ -83,6 +84,40 @@ export function getUnlockedCount() {
   return loadUnlocks().size
 }
 
+// Replace local set with a server-fetched superset (pulled at login). Keeps
+// any local IDs the server didn't return — the sync endpoint should already
+// have written them, but we don't want to drop unlocks if the round-trip dropped.
+export function mergeUnlocks(serverIds) {
+  if (!Array.isArray(serverIds)) return
+  const set = loadUnlocks()
+  for (const id of serverIds) set.add(String(id))
+  try { localStorage.setItem(UNLOCKS_KEY, JSON.stringify([...set])) } catch {}
+}
+
+// One-time sync: upload local unlocks to backend, replace local with merged set.
+// Idempotent — safe to call on every login. No-op if no user_id.
+let syncInflight = null
+export async function syncUnlocksToServer(userId) {
+  if (!userId) return
+  if (syncInflight) return syncInflight
+  syncInflight = (async () => {
+    const local = [...loadUnlocks()]
+    try {
+      const res = await fetch(`${BACKEND}/ai/unlocks/sync`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId, questionIds: local }),
+      })
+      if (res.ok) {
+        const json = await res.json()
+        if (Array.isArray(json.unlocks)) mergeUnlocks(json.unlocks)
+      }
+    } catch { /* offline: keep local set */ }
+    finally { syncInflight = null }
+  })()
+  return syncInflight
+}
+
 // Stream text from a POST endpoint that returns SSE.
 // Pass an AbortSignal so callers can cancel an in-flight stream.
 // onMeta fires once with the meta frame (if the server sends one).
@@ -154,6 +189,13 @@ export function useExplain() {
   useEffect(() => () => { abortRef.current?.abort() }, [])
 
   const explain = useCallback(async (q) => {
+    // Snapshot the auth user_id so the request can include it (server-side
+    // unlock lookup + record). getSession is sync once the session is hydrated.
+    let userId = null
+    try {
+      const { data: { session } } = await supabase?.auth.getSession() || { data: { session: null } }
+      userId = session?.user?.id || null
+    } catch { /* unauthenticated — fall through */ }
     const alreadyUnlocked = isExplainUnlocked(q?.id)
 
     // Per-question unlock + verified cache hits don't burn personal quota —
@@ -195,7 +237,8 @@ export function useExplain() {
           question_id: q.id, exam: usePlayerStore.getState().exam || 'doctor1',
           shared_bank: q.isSharedBank ? q.sourceBankId : undefined,
           incomplete: q.incomplete, disputed: q.disputed,
-          has_image: !!(q.image_url || q.images?.length || q.option_images) },
+          has_image: !!(q.image_url || q.images?.length || q.option_images),
+          user_id: userId },
         (chunk) => {
           if (activeQidRef.current !== qid) return
           setText(t => t + chunk)
@@ -210,10 +253,13 @@ export function useExplain() {
         ctrl.signal,
         (m) => {
           if (activeQidRef.current !== qid) return
-          // Override price to 0 if locally unlocked (server doesn't know about
-          // this device's unlock history).
-          const effectivePrice = alreadyUnlocked ? 0 : (Number.isFinite(m?.price) ? m.price : EXPLAIN_COST)
-          setMeta({ ...m, price: effectivePrice, alreadyUnlocked })
+          // Resolve the effective price. The server may report alreadyUnlocked
+          // (cross-device unlock from another login) — in that case treat as
+          // free and mirror to localStorage so future calls go via fast path.
+          const serverUnlocked = !!m?.alreadyUnlocked
+          const isUnlocked = alreadyUnlocked || serverUnlocked
+          const effectivePrice = isUnlocked ? 0 : (Number.isFinite(m?.price) ? m.price : EXPLAIN_COST)
+          setMeta({ ...m, price: effectivePrice, alreadyUnlocked: isUnlocked })
           // Refund overage if we reserved EXPLAIN_COST.
           if (!alreadyUnlocked) {
             const refund = EXPLAIN_COST - effectivePrice
@@ -223,8 +269,10 @@ export function useExplain() {
           // previously-unlocked questions don't count — they cost nothing on
           // the server side and shouldn't penalise the user.
           if (effectivePrice > 0) incrementQuota()
-          // Record unlock when user actually paid (>0).
-          if (effectivePrice > 0 && q?.id != null) recordUnlock(q.id)
+          // Record unlock locally when user actually paid OR server says
+          // already unlocked (cross-device sync). Backend already wrote the
+          // unlock row in both cases.
+          if ((effectivePrice > 0 || serverUnlocked) && q?.id != null) recordUnlock(q.id)
         },
       )
     } catch {

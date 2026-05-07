@@ -136,6 +136,24 @@ async function saveCachedExplanation(cacheKey, explanation_md, model) {
   } catch { /* swallow — cache write failures are non-fatal */ }
 }
 
+// Record a paid explanation unlock for a user. Idempotent (PRIMARY KEY on
+// (user_id, question_id) means duplicates upsert harmlessly). Failures swallowed
+// so a write hiccup doesn't break the explanation stream.
+async function recordUnlock(userId, questionId, examId, paidAmount) {
+  if (!supabase || !userId || !questionId) return;
+  try {
+    await supabase
+      .from('user_explanation_unlocks')
+      .upsert({
+        user_id: String(userId),
+        question_id: String(questionId),
+        exam_id: examId || null,
+        paid_amount: paidAmount || 0,
+        unlocked_at: new Date().toISOString(),
+      }, { onConflict: 'user_id,question_id', ignoreDuplicates: true });
+  } catch { /* non-fatal */ }
+}
+
 // Stream a static string back over an already-open SSE response in the same
 // chunked format the Claude stream produces, so the frontend doesn't care
 // whether the source was cache or Claude.
@@ -275,10 +293,27 @@ function registerRoutes(app, examData, stats) {
   // POST /explain
   app.post('/explain', async (req, res) => {
     const { question, options, answer, subject_name, user_answer, question_id, exam, shared_bank,
-            incomplete, disputed, has_image } = req.body;
+            incomplete, disputed, has_image, user_id } = req.body;
     if (!question || !options || !answer) return res.status(400).json({ error: 'missing fields' });
 
     const questionsData = examData[exam] || examData.doctor1;
+
+    // Per-user unlock check — once paid, any future view is free for THIS user
+    // across devices. Looked up by Supabase auth user_id (anonymous + Google
+    // linked share the same id post-link). Failures (no Supabase, network) are
+    // ignored; falls through to the normal pricing path.
+    let alreadyUnlocked = false;
+    if (user_id && question_id && supabase) {
+      try {
+        const { data } = await supabase
+          .from('user_explanation_unlocks')
+          .select('user_id')
+          .eq('user_id', user_id)
+          .eq('question_id', String(question_id))
+          .maybeSingle();
+        if (data) alreadyUnlocked = true;
+      } catch { /* swallow — no unlock check, pay normal price */ }
+    }
 
     // Tier 1: local pre-generated explanation (no API, no DB)
     if (question_id) {
@@ -299,14 +334,20 @@ function registerRoutes(app, examData, stats) {
       sseHeaders(res);
       // Meta frame first so the frontend can render the verified/pending badge
       // and charge the correct price before the text starts flowing.
+      const realPrice = priceForStatus(cached.status);
       res.write(`data: ${JSON.stringify({ meta: {
         cacheKey,
         status: cached.status,
         upvotes: cached.upvotes,
         downvotes: cached.downvotes,
-        price: priceForStatus(cached.status),
+        price: alreadyUnlocked ? 0 : realPrice,
+        alreadyUnlocked,
       }})}\n\n`);
       streamCachedText(res, cached.md);
+      // Record server-side unlock if this is a paid hit (user actually spent).
+      if (!alreadyUnlocked && realPrice > 0 && user_id && question_id && supabase) {
+        recordUnlock(user_id, question_id, exam, realPrice).catch(() => {});
+      }
       return;
     }
 
@@ -316,13 +357,15 @@ function registerRoutes(app, examData, stats) {
     }
 
     sseHeaders(res);
-    // Fresh generation — always pending, full price
+    // Fresh generation — always pending, full price (or 0 if user already
+    // unlocked this question on another device).
     res.write(`data: ${JSON.stringify({ meta: {
       cacheKey,
       status: 'pending',
       upvotes: 0,
       downvotes: 0,
-      price: EXPLAIN_PRICE_FULL,
+      price: alreadyUnlocked ? 0 : EXPLAIN_PRICE_FULL,
+      alreadyUnlocked,
     }})}\n\n`);
     const optionText = Object.entries(options).map(([k,v]) => `${k}. ${v}`).join('\n');
     const wrongNote = user_answer && user_answer !== answer
@@ -411,7 +454,52 @@ ${wrongNote}
     const streamer = useGemini ? streamGemini : streamAnthropic;
     await streamer(res, prompt, 600, (fullText) => {
       saveCachedExplanation(cacheKey, fullText, modelUsed);
+      // Fresh paid generation — record the unlock so the user gets it free
+      // next time on any device they're logged into.
+      if (!alreadyUnlocked && user_id && question_id) {
+        recordUnlock(user_id, question_id, exam, EXPLAIN_PRICE_FULL).catch(() => {});
+      }
     });
+  });
+
+  // POST /ai/unlocks/sync — Bulk import unlocks from a device's localStorage
+  // when a user logs in. Returns the merged set so the client can update its
+  // local cache. Body: { userId, questionIds: string[] }.
+  app.post('/ai/unlocks/sync', async (req, res) => {
+    if (!supabase) return res.json({ unlocks: [] });
+    const { userId, questionIds } = req.body || {};
+    if (!userId) return res.status(400).json({ error: 'missing userId' });
+    const localList = Array.isArray(questionIds) ? questionIds.filter(Boolean).map(String).slice(0, 5000) : [];
+
+    try {
+      // Push local-only unlocks up. ignoreDuplicates=true respects rows already
+      // recorded server-side.
+      if (localList.length) {
+        const rows = localList.map(qid => ({
+          user_id: String(userId),
+          question_id: qid,
+          paid_amount: 0,
+          unlocked_at: new Date().toISOString(),
+        }));
+        // chunk to stay under request size limits
+        const CHUNK = 500;
+        for (let i = 0; i < rows.length; i += CHUNK) {
+          await supabase
+            .from('user_explanation_unlocks')
+            .upsert(rows.slice(i, i + CHUNK), { onConflict: 'user_id,question_id', ignoreDuplicates: true });
+        }
+      }
+      // Pull the full set back so the client can refresh localStorage.
+      const { data, error } = await supabase
+        .from('user_explanation_unlocks')
+        .select('question_id')
+        .eq('user_id', String(userId))
+        .limit(10000);
+      if (error) return res.status(500).json({ error: 'fetch failed' });
+      res.json({ unlocks: (data || []).map(r => r.question_id) });
+    } catch (e) {
+      res.status(500).json({ error: e.message?.slice(0, 200) || 'sync failed' });
+    }
   });
 
   // POST /ai/vote — community verification of AI explanations.

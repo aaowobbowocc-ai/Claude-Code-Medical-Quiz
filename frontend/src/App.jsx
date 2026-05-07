@@ -197,6 +197,12 @@ function AppRoutes() {
       const hasGoogle = user.identities?.some(i => i.provider === 'google')
       if (!hasGoogle) return
       try { await usePlayerStore.getState().hydrateFromCloud(true) } catch {}
+      // Sync explanation unlocks: upload local-only IDs, pull cloud set back
+      // so the device gets cross-device unlocks for free.
+      try {
+        const { syncUnlocksToServer } = await import('./hooks/useAI')
+        await syncUnlocksToServer(user.id)
+      } catch {}
       const returnPath = consumeOAuthReturnPath()
       if (returnPath) {
         const current = location.pathname + location.search
@@ -205,6 +211,23 @@ function AppRoutes() {
     })
     return () => { try { data?.subscription?.unsubscribe() } catch {} }
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // App-boot unlock sync: on first load, if we already have a session, push
+  // local unlocks up and pull the cloud set down. Anonymous users also have a
+  // user_id (signInAnonymously creates one), so this covers both cases.
+  useEffect(() => {
+    if (!supabase) return
+    let cancelled = false
+    ;(async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession()
+        if (cancelled || !session?.user?.id) return
+        const { syncUnlocksToServer } = await import('./hooks/useAI')
+        await syncUnlocksToServer(session.user.id)
+      } catch {}
+    })()
+    return () => { cancelled = true }
   }, [])
 
   return (

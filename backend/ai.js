@@ -298,24 +298,9 @@ function registerRoutes(app, examData, stats) {
 
     const questionsData = examData[exam] || examData.doctor1;
 
-    // Per-user unlock check — once paid, any future view is free for THIS user
-    // across devices. Looked up by Supabase auth user_id (anonymous + Google
-    // linked share the same id post-link). Failures (no Supabase, network) are
-    // ignored; falls through to the normal pricing path.
-    let alreadyUnlocked = false;
-    if (user_id && question_id && supabase) {
-      try {
-        const { data } = await supabase
-          .from('user_explanation_unlocks')
-          .select('user_id')
-          .eq('user_id', user_id)
-          .eq('question_id', String(question_id))
-          .maybeSingle();
-        if (data) alreadyUnlocked = true;
-      } catch { /* swallow — no unlock check, pay normal price */ }
-    }
-
-    // Tier 1: local pre-generated explanation (no API, no DB)
+    // Tier 1 short-circuit FIRST — pre-stored explanations are free, never
+    // need pricing/unlock metadata, and avoid two Supabase round-trips. This
+    // makes the medical exam fast path 0ms→stream.
     if (question_id) {
       const local = questionsData.questions.find(q => String(q.id) === String(question_id));
       if (local?.explanation) {
@@ -323,6 +308,26 @@ function registerRoutes(app, examData, stats) {
         streamCachedText(res, local.explanation);
         return;
       }
+    }
+
+    // Per-user unlock check — once paid, any future view is free for THIS user
+    // across devices. Looked up by Supabase auth user_id (anonymous + Google
+    // linked share the same id post-link). Race against a 600ms timeout so a
+    // slow Supabase response doesn't keep the user staring at a loading dot.
+    let alreadyUnlocked = false;
+    if (user_id && question_id && supabase) {
+      try {
+        const checkPromise = supabase
+          .from('user_explanation_unlocks')
+          .select('user_id')
+          .eq('user_id', user_id)
+          .eq('question_id', String(question_id))
+          .maybeSingle()
+          .then(({ data }) => !!data)
+          .catch(() => false);
+        const timeoutPromise = new Promise(resolve => setTimeout(() => resolve(false), 600));
+        alreadyUnlocked = await Promise.race([checkPromise, timeoutPromise]);
+      } catch { /* swallow — no unlock check, pay normal price */ }
     }
 
     // Tier 2: Supabase cache (shared keys are reused cross-exam)

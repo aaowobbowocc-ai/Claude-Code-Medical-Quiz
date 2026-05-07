@@ -406,7 +406,10 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
               <div className="text-sm text-gray-700 flex flex-col gap-1">
                 {renderText(text)}
                 {loading && !text && (
-                  <div className="h-4 w-3/4 bg-blue-100 rounded animate-pulse" />
+                  <>
+                    <p className="text-xs text-medical-blue/70 mb-1">AI 正在思考中…通常 5 秒內出爐</p>
+                    <div className="h-4 w-3/4 bg-blue-100 rounded animate-pulse" />
+                  </>
                 )}
               </div>
               {isLegal && !loading && (

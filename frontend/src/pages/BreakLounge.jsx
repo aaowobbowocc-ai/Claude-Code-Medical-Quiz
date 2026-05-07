@@ -25,16 +25,10 @@ export default function BreakLounge() {
       .catch(() => setData({ sections: [] }))
   }, [])
 
-  // Flat product pool with section context
+  // Flat product pool
   const pool = useMemo(() => {
     if (!data) return []
-    const out = []
-    for (const s of data.sections) {
-      for (const p of s.products) {
-        out.push({ ...p, sectionTitle: s.title, sectionIcon: s.icon })
-      }
-    }
-    return out
+    return data.sections.flatMap(s => s.products)
   }, [data])
 
   const spin = useCallback(() => {
@@ -296,14 +290,7 @@ function Reveal({ product, onAgain }) {
       <p className="text-gray-500 text-sm">叮咚 — 你抽到的是</p>
       <a href={product.shopUrl} target="_blank" rel="noopener noreferrer sponsored"
          className="block w-full bg-white rounded-3xl p-5 shadow-xl border-2 border-orange-200 active:scale-[0.99]">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="text-xl">{product.sectionIcon}</span>
-          <span className="text-xs text-orange-600 font-semibold">{product.sectionTitle}</span>
-        </div>
-        <h2 className="text-lg font-bold text-gray-800">{product.name}</h2>
-        {product.blurb && (
-          <p className="text-sm text-gray-600 mt-2 leading-relaxed">{product.blurb}</p>
-        )}
+        <h2 className="text-lg font-bold text-gray-800 text-center break-words">{product.name}</h2>
         <div className="mt-4 px-4 py-2.5 rounded-xl bg-gradient-to-r from-orange-400 to-amber-400 text-white text-center font-semibold text-sm">
           {product.ctaText || '進入店家頁面'} →
         </div>

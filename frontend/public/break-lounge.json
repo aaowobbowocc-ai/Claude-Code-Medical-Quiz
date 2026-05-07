@@ -2,72 +2,1208 @@
   "intro": "",
   "sections": [
     {
-      "id": "exam-books",
-      "icon": "📖",
-      "title": "國考書",
+      "id": "shops",
+      "icon": "🛍️",
+      "title": "隨便逛逛",
       "products": [
         {
-          "name": "國考用書專賣",
+          "name": "幫我取個名",
           "blurb": "",
-          "shopUrl": "https://s.shopee.tw/3qJkwhdJEY",
-          "ctaText": "進入店家頁面"
-        }
-      ]
-    },
-    {
-      "id": "books",
-      "icon": "📚",
-      "title": "看點課外書？",
-      "products": [
-        {
-          "name": "合作書商",
-          "blurb": "",
-          "shopUrl": "https://s.shopee.tw/5L8YhuFJqf",
-          "ctaText": "進入書商頁面"
-        }
-      ]
-    },
-    {
-      "id": "tech",
-      "icon": "🔌",
-      "title": "3C 雜貨隨便逛逛？",
-      "products": [
-        {
-          "name": "3C 周邊",
-          "blurb": "",
-          "shopUrl": "https://s.shopee.tw/4AwbL66r9t",
+          "shopUrl": "https://s.shopee.tw/5L8Ym1KF7a",
           "ctaText": "進入店家頁面"
         },
         {
-          "name": "3C 雜貨",
+          "name": "stu50616",
           "blurb": "",
-          "shopUrl": "https://s.shopee.tw/AADoTWLIKz",
+          "shopUrl": "https://s.shopee.tw/5VRyyKJbmd",
           "ctaText": "進入店家頁面"
-        }
-      ]
-    },
-    {
-      "id": "phonecase",
-      "icon": "📱",
-      "title": "手機殼？",
-      "products": [
+        },
         {
-          "name": "手機殼專賣",
+          "name": "海格精品家俱館-",
           "blurb": "",
-          "shopUrl": "https://s.shopee.tw/4AwbL5FVgO",
+          "shopUrl": "https://s.shopee.tw/6L15xrGR5o",
           "ctaText": "進入店家頁面"
-        }
-      ]
-    },
-    {
-      "id": "snacks",
-      "icon": "🍪",
-      "title": "零食",
-      "products": [
+        },
         {
-          "name": "零食小舖",
+          "name": "漁人百寶閣 Fishing gear supplies 🥇台灣出貨🥇",
           "blurb": "",
-          "shopUrl": "https://s.shopee.tw/2BBWxlf7H2",
+          "shopUrl": "https://s.shopee.tw/6VKWAAFnkr",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "angela0209520",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/60OFZFHhlm",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "pinyu38",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6AhflYH4Qp",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "小馬專業影印機印表機租售",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/70Gml5Dtk0",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "雜七雜八@生活賣場",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7AaCxODGP3",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "出售二手書回血",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6fdwMTFAPy",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "玥楠星-三葉草洗衣膠球/洗臉巾/一次性浴巾/懶人抹布/椰殼抹布",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6pxMYmEX51",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "JSecretTech-台灣現貨商店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7fWTYJBMOC",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "nses0237",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7pptkcAj3F",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "鹿鹿好可愛|鹿角蕨",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7Ktd9hCd4A",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "森活家-居家生活百貨 好市多 淨新 口罩 衛生棉 收納袋 漱口杯 收納架 水餃盒",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7VD3M0BzjD",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【JU小舖】",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8KmALX8p2O",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "DODO Your 彈片收納袋 彈片包 手機套 長夾 短夾 中夾 錢包 外幣收納",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8V5aXq8BhR",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "joe1688",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/809JwvA5iM",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "小阿霏Q衣舖",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8ASk9E9SNP",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "蘭桂開運閣〈玄子瞻太古陰陽篆符〉",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/901r8l6Hga",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "緣福氣-翡翠甄選",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9ALHL45eLd",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "倍特能電動車",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8fP0k97YMY",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "手遊一次消費買斷後台",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8piQwS6v1b",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "a01897246",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9fHXvz3kKm",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "iPhone 手機殼 保護貼 周邊配件",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9pay8I36zp",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "啊香哥金飾💕",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9KehXN510k",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "✨勉勉-精選居家館✨",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9Uy7jg4Nfn",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "mamaleopard韓國Toys*童裝*日本選物",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/AKXEjD1Cyy",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "🍒Cherry moon🌙",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/AUqevW0Ze1",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Cambridge apple",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9zuOKb2Tew",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "躺躺族生活家居園地",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/AADoWu1qJz",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "台灣出貨-元氣生活賣場😎😎",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/LjsopdHH6",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "福佑結緣閣🌟 風水專賣店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/W3J18cdw9",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "小小的夢想-----居家精品店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/172QDeXx4",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "DearPOPO 韓版錢包/韓版長夾/韓版中夾/韓版短夾/各式彈片收納包/零錢包",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/BQScWduc7",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "ME_ACTIVE",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/10zZc3ajvI",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "活力樣 | 保健品牌官方直營",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1BIzoMa6aL",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "GC商行 @本田/SUBARU車貼專賣",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/gMjDRc0bG",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "🎀夢夢瘦身師🎀輕盈體態 體態管理師 減肥",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/qg9PkbNGJ",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【瘦身專業】一對一 體重管理 減肥",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1gFGPHYCZU",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "KD🙏结缘品 真實開光 品質把控 售後無憂",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1qYgbaXZEX",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "淨萃優品Pure Choice - 美好奇蹟經銷商",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1LcQ0fZTFS",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "漫迷者🏅珍藏《小丸子》",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1VvqCyYpuV",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "德貝迪官方旗艦店 | 品質嚴選 | 隔日到貨🚗全店免運|優質服務|",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2LUxCVVfDg",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "✨愛尚日韓風【可以打統編開發票】【關注有禮】",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2VoNOoV1sj",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "台蠶生技股份有限公司",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/20s6ntWvte",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "寶冠·科技（家居用品 午休床 收納櫃 衣櫃 燒水壺 行李箱 智能可視挖耳勺）",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2BBX0CWIYh",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【日本正品】 專業體重管理 一對一定制方案",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/30kdzjT7rs",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "odorata TW Store",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3B44C2SUWv",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【2號倉庫】商品5000+ 不斷上新 敬請關注！",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2g7nb7UOXq",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "鹹蛋還沒閒",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2qRDnQTlCt",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "千姿色內衣專營館： 專注青少年女童、女生、舒適健康、時尚優雅、實惠相結合的內衣館",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3g0KmxQaW4",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "減法生活家居【滿159免運】",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3qJkzGPxB7",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "星 芒 甑 選",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3LNUOLRrC2",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "佛法聖殿 - 卍法真靈 ☸",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3VguaeRDr5",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "DK3C客棧Premium",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4LG1aBO3AG",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "ZX甄選✨汽車百貨",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4VZRmUNPpJ",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "貼貼研究所",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/40dBBZPJqE",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "博士老師哦~！",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4AwbNsOgVH",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "絨紫生技股份有限公司",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/50ViNPLVoS",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "道韻聚氣堂-線上風水服務",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5Ap8ZiKsTV",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "至緣 · 泰北情降秘宗",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4fsrynMmUQ",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "焚仙閣-專業處理各種 財運  感情合和 改運  斬桃花 感情挽回",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4qCIB6M99T",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "工作室丨起點  #拍立得 #反正膠片 #小卡片 #沖洗相片 #車貼 #汽車",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5q4pMwIL7g",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "小仙女咖啡",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5flPAdIySf",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "善の循環小天地",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5VRyyKJbne",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "約翰相機行",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5L8Ym1KF8d",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "CU生活館⭐️台灣賣家⭐️",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6VKWAAFnls",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "24hr 3C 生活館 - 玻璃保護貼｜傳輸線｜耳機｜iPhone 蘋果配件",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6L15xrGR6r",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "小豬優選代購",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6AhflYH4Rq",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "SDM TW Official Store",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/60OFZFHhmp",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "體重管理1對1指導",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7AaCxODGQ4",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "魯士降靈-泰國秘術/強力吸財/開運轉運/感情挽回/拉胡天神/補財庫",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/70Gml5Dtl3",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "㊣沉香小站㊣工廠直營、香品批發。",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6pxMYmEX62",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "小柒家賣場✨餐廚鍋具✨茶道水杯✨家居日用✨優選特賣✨",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6fdwMTFAR1",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "沐椿 |手辦人偶客制化|禮品客製化",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7pptkcAj4G",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "壹品家居や",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7fWTYJBMPF",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "小松鼠百貨",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7VD3M0BzkE",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "✨星同學StarMate ✨",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7Ktd9hCd5D",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【愛可家】Echo House ♥",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8V5aXq8BiS",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "樂購商城精選【珠串、內衣、童裝、靜電貼等客製】",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8KmALX8p3R",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "🙏誠心堂🙏武德宮開光賜福",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8ASk9E9SOQ",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "6188生活家居商場",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/809JwvA5jP",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "欣欣母嬰生活用品",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9ALHL45eMe",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "阿皂屋-母嬰護理專家｜環境賀爾蒙認證｜保護兒童成長期｜精油手工皂",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/901r8l6Hhd",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "joey6161",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8piQwS6v2c",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Winter Oreo",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8fP0k97YNb",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Mpad🏅優選🔥免運鋪 可刻製圖案 可定制",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9pay8I370q",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "沐寫生活 MUXIE LIFE",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9fHXvz3kLp",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【新の屋】_收納 居家 車用 廚房 3C配件 美妝",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9Uy7jg4Ngo",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【雅軒】居家旗艦店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9KehXN511n",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "XHI 軒凰國際",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/AUqevW0Zf2",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【SG】3C超膜世家∣ 保護貼 ＆手機殼＆鏡頭  ∣3C周邊配件",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/AKXEjD1D01",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "千帆❉優選好品超惠店（滿額180出貨哦，開發票）✈",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/AADoWu1qL0",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "7彩印象-時尚配搭",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9zuOKb2Tfz",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "⚜️手工克羅⚜️-925纯银-高奢平替",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/W3J18cdxA",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "fish430313",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/LjsopdHI9",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "MIXTURE 品牌旗艦店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/BQScWdud8",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "萌寵小屋🐾",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/172QDeXy7",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "COVERME",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1BIzoMa6bM",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "百皆香SCENTAO🔥廠家直營 天然原木 線香 臥香 盤香 香爐 立香 日本香",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/10zZc3ajwL",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "文青匯所 ManChing Hub",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7AaCxZ4Yeh",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "名義精品百貨店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7Ktd9s3vJk",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "CHEERLAND",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7VD3MB3Hyn",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "summer（满99出貨）",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7fWTYU2edq",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "洪牛影音賣場",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7pptkn21It",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "精品飛騰百貨店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5L8YmCBXNQ",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "胡鬧趣咪院",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5VRyyVAu2T",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "AIFN 手機配件工廠批發店-專營各式玻璃貼保護貼 玻璃貼 手機殼 防摔手機殼",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5flPAoAGhW",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Aileen │美容l家居用品專賣店 HS.DP飾品 戒指 項鏈 吊墜 耳環",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5q4pN79dMZ",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "光頭強的雜貨舖🛒🛒🛒",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/60OFZQ901c",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "玩具爸爸雜貨店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6Ahflj8Mgf",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "牛牛科技.",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6L15y27jLi",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "BM.LIFE（居家生活旗艦店）",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6VKWAL760l",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "鑫達五金 ≈台灣優選優質賣家 風水五金居家百貨 批發採購聯繫聊聊優惠",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/40dBBkGc5I",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "618好品屋",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4AwbO3FykL",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "xyshoptw",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4LG1aMFLPO",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "羅萊家紡官方旗艦店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4VZRmfEi4R",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "SONOC 官方",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4fsryyE4jU",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "衣櫃優品服飾",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4qCIBHDROX",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "ISLAND小島旗艦店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/50ViNaCo3a",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "華美优选店 ⭐品质保证⭐满99出货",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5Ap8ZtCAid",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "不swag覺代購小舖",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2g7nbILgnA",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "FASHION WORLD時尚界",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2qRDnbL3SD",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "萬米3C數碼旗艦店【專營高CP值手機殼/耳機套/手鏈/掛繩/錶帶/保護膜】",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/30kdzuKQ7G",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "霆創生活舘",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3B44CDJmmJ",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Ju.w_select 日本/美國代購",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3LNUOWJ9RM",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【YJ殼隊長3C】高品質錶帶 手機殼配件",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3VguapIW6P",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【SOS】Suds Of Soap - 天然手工皂",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3g0Kn8HslS",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "卡娃依 かわいい 母嬰專營店👉母嬰好物∣母嬰批發∣好物推薦💗",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3qJkzRHFQV",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "I.T潮流精品店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1LcQ0qQlV2",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "童萌館 全球批發價",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1VvqD9Q8A5",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "UBUA佑寶友安",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1gFGPSPUp8",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "美式工廠<Motor Factory Route66>官網",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1qYgblOrUB",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "繁星燈飾旗艦店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/20s6o4OE9E",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "1111renashop",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2BBX0NNaoH",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "小七私房家居",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2LUxCgMxTK",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "婚禮用品批發",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2VoNOzMK8N",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "AI夢幻工廠",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/172QOVqCu",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "拾光百貨-Daily Box",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/BQSchVCrx",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "GOODHOME·暖居·生活館",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/Ljsp0UZX0",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "君知否真髮專營店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/W3J1JTwC3",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "夢想家生活場",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/gMjDcTIr6",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "李植生活選品",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/qg9PvSfW9",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "好健康 全球購 保證正品",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/10zZcES2BC",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "緁鍇選物所 JK Select",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1BIzoXROqF",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "xx0923h",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9Uy7jqvfvs",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Fipper Taiwan",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9KehXXwJGr",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "On Street 美胸防擴專利",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9pay8SuPFy",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "盒樂坊-HeleFang",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9fHXw9v2ax",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "「HN 心甯實業｜官方旗艦店」",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/AADoX4t8a4",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "芊語美妝優選",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9zuOKltlv3",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "a3283375",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/AUqevgrruA",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "百利金商行 百靈牌刀頭 S3 21B  32B 53B 54B ES9087",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/AKXEjNsVF9",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Chinguyo",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8ASk9P0kdk",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "方研生活館",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/809Jx61Nyj",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【哈哈喵】犬貓寵物用品專賣",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8V5aY0zTxq",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Jellycat 正版代購",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8KmALi07Ip",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "SeedideaCO",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8piQwcyDHw",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "W3手機配件",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/8fP0kJyqcv",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "gordon309",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/9ALHLEwwc2",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "戰神擎天 【威剛售賣】專業男性威猛",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/901r8vxZx1",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "LAVAVA - 拉法美妍",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6pxMYx5pLc",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "𝑴𝒊𝒔𝒔 𝒏𝒆𝒘 ♡ 轉印姓名貼｜名片｜客製化｜設計｜手寫字",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6fdwMe6Sgb",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "chocw770119",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7AaCxZ4Yfi",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "KOI 錦鯉優品",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/70GmlG5C0h",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "三緣閣🔥硃砂吊墜 黃水晶手串 水晶串珠 鑰匙扣 精選只為品質 嚴選百貨專營店✅",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7VD3MB3Hzo",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "の精品小屋❤客製化 美妝 百貨",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7Ktd9s3vKn",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "特寵空間｜獸醫認證爬蟲鈣粉、爬蟲營養品、陸龜鈣粉、守宮鈣粉、陸龜營養品",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7pptkn21Ju",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "MS怪獸盾 x SM怪獸包膜",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/7fWTYU2eet",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "happy科技旗艦店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5VRyyVAu3U",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "壹品生活家居✨",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5L8YmCBXOT",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "羋倪數碼居家旗艦店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5q4pN79dNa",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Kumi 酷咪 美學館",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5flPAoAGiZ",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "AYOYO母嬰家用百貨",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6Ahflj8Mhg",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Tianyang.L天昜麟",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/60OFZQ902f",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "衣架小公主-衣架模特兒 擺攤道具 包裝材料  店舖用品 專賣店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6VKWAL761m",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "🍒@Rarestudio日韓女裝 包包 鞋子 內衣&飾品【滿199出貨】",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/6L15y27jMl",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "紅茶 case",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4AwbO3FylM",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "護士服 刷手服 實驗衣 美容制服 醫師袍 美容服 手術服 美容工作服 刷手服女",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/40dBBkGc6L",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "caraseoul.tw",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4VZRmfEi5S",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "卍【念心堂】卍 萬發緣生🙏皆系緣分",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4LG1aMFLQR",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "🙏聚福堂🙏結緣品 招財 偏財 聚財 招桃花 防小人 保平安 鎮宅 避邪 擋煞",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4qCIBHDRPY",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "DZ⚡️迪鑽好物館【台灣出貨🚚 24小時在線】",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/4fsryyE4kX",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "潮酷釣具商城",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/5Ap8ZtCAje",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "博泉月亮杯",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/50ViNaCo4d",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "HGHMNDS ONLINE",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2qRDnbL3TE",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "布要服裝店鋪",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2g7nbILgoD",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "🌞生活好物探索館🌞",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3B44CDJmnK",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "天價屋",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/30kdzuKQ8J",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "女神的秘密衣櫥",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3VguapIW7Q",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "淺川自製*",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3LNUOWJ9SP",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "潔潔高升清潔有限公司",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3qJkzRHFRW",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "瑠晶舍飾界（ルージェン舎）",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/3g0Kn8HsmV",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "鑫誠儀器儀表車載戶外用品",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1VvqD9Q8B6",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Stone store石頭鏝塗裝藝術 防水建材",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1LcQ0qQlW5",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "五村生活居家百貨",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1qYgblOrVC",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "【 寶卡先生 】玩具、正版寶可夢商品專賣店",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/1gFGPSPUqB",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "Minice創意嚴選",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2BBX0NNapI",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "靖果金選企業社",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/20s6o4OEAH",
+          "ctaText": "進入店家頁面"
+        },
+        {
+          "name": "兔寶寶 3C配件 專賣店 手機殼 鋼化膜 熒幕貼膜 平板套錶帶 外配 原選優質品",
+          "blurb": "",
+          "shopUrl": "https://s.shopee.tw/2VoNOzMK9O",
           "ctaText": "進入店家頁面"
         }
       ]

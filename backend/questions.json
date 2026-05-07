@@ -63510,12 +63510,12 @@
       "subject_name": "病理學",
       "stage_id": 8,
       "number": 99,
-      "question": "下列有關大腦類澱粉血管病變（cerebral amyloid angiopathy, CAA）的描述何者正確？①CAA是造成lobar hemorrhage的危險因子之一②導因於中小型腦膜或皮質腦動脈血管壁有包含tau蛋白之類澱粉沉積③CAA 致病率與ApoE基因（與阿茲海默症有因果關聯的基因）多形性變異（polymorphism）有關④CAA血管病變 常會引起血管纖維化（arteriolar sclerosis/fibrosis）",
+      "question": "下列有關大腦類澱粉血管病變（cerebral amyloid angiopathy, CAA）的描述何者正確？①CAA是造成lobar hemorrhage的危險因子之一 ②導因於中小型腦膜或皮質髓鞘動脈血管壁有包含tau蛋白之類澱粉沉積 ③CAA致病與ApoE基因（與阿茲海默症有因果關聯的基因）多形性變異（polymorphism）有關 ④CAA血管病變常會引起血管樣硬化（arteriolar sclerosis/fibrosis）",
       "options": {
-        "A": "the WNT type",
-        "B": "the SHH type",
-        "C": "group 3 medulloblastoma",
-        "D": "group 4 medulloblastoma"
+        "A": "①②",
+        "B": "①③",
+        "C": "②③",
+        "D": "②④"
       },
       "answer": "B",
       "explanation": ""
@@ -67479,13 +67479,14 @@
       "number": 99,
       "question": "神經退化性疾病（neurodegenerative diseases）的共同病理表徵是蛋白質異常堆積（protein aggregates），下列 疾病與蛋白質堆積的配對，何者錯誤？",
       "options": {
-        "A": "寡樹突神經膠細胞（oligodendrocyte）",
-        "B": "星狀神經膠細胞（astrocyte）",
-        "C": "微膠細胞（microglia）",
-        "D": "神經元細胞（neuron）"
+        "A": "Frontotemporal lobar dementia（額顳葉退化症）與 TDP-43 蛋白堆積",
+        "B": "Alzheimer disease（阿茲海默症）與 Aβ（amyloid-β）蛋白堆積",
+        "C": "Amyotrophic lateral sclerosis（漸凍人）與 Tau 蛋白堆積",
+        "D": "Parkinson disease（帕金森病）與 α-synuclein 蛋白堆積"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "1150203283",
@@ -84061,7 +84062,7 @@
         "C": "臀大肌（gluteus maximus）",
         "D": "前列腺（prostate）"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -87334,7 +87335,7 @@
         "C": "黏液和巨噬細胞",
         "D": "壞死組織和結締組織"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {

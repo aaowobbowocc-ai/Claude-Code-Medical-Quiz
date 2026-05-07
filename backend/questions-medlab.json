@@ -121502,7 +121502,7 @@
       "subject_name": "微生物學",
       "stage_id": 7,
       "number": 68,
-      "question": "皮下黴菌感染症（subcutaneous mycoses）引起產色黴菌病（chromoblastomycosis）的致病菌是：①Pseudallescheria",
+      "question": "皮下黴菌感染症（subcutaneous mycoses）引起產色黴菌病（chromoblastomycosis）的致病菌是：①Pseudallescheria boydii ②Cladophialophora carrionii ③Sporothrix schenckii ④Fonsecaea pedrosoi",
       "options": {
         "B": "②④",
         "A": "①②",
@@ -210641,21 +210641,17 @@
       "subject_name": "臨床血液學",
       "stage_id": 3,
       "number": 28,
-      "question": "平靜吸氣後，再盡力吸氣至最大程度，所吸入的氣體量稱為：",
+      "question": "Sézary Syndrome是一罕見的T細胞淋巴瘤，但卻是最常見的皮膚T細胞淋巴瘤，下列何種細胞最可能是Sézary cell ?",
       "options": {
-        "A": "潮氣容積（tidal volume, TV）",
-        "B": "功能餘氣量（functional residual capacity, FRC）",
-        "C": "吸氣儲備容積（inspiratory reserve volume, IRV）",
-        "D": "肺活量（vital capacity, VC）"
+        "A": "Image A shows several cells with convoluted, cerebriform nuclei.",
+        "B": "Image B shows a large cell, possibly a plasma cell, with multiple cytoplasmic vacuoles.",
+        "C": "...",
+        "D": "Image D shows red blood cells in a stacked 'rouleaux' formation."
       },
       "answer": "A",
       "explanation": "",
-      "images": [
-        "/question-images/medlab_2028_0.webp",
-        "/question-images/medlab_2028_1.webp",
-        "/question-images/medlab_2028_2.webp",
-        "/question-images/medlab_2028_3.webp"
-      ]
+      "image_dependent": true,
+      "note": "此題為影像辨識題，原 PDF 含 4 張細胞顯微圖；選項目前為圖像描述。"
     },
     {
       "id": 2028,

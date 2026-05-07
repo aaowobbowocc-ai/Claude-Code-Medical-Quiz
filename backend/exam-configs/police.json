@@ -20,23 +20,39 @@
     "longText": false
   },
   "questionsFile": "questions-police.json",
-  "totalQ": 250,
+  "totalQ": 935,
   "passScore": null,
   "passRate": null,
   "papers": [
     {
       "id": "paper1",
-      "name": "行政學",
-      "subject": "行政學",
-      "subjects": "行政學（選擇題部分）",
-      "count": 25,
+      "name": "國文",
+      "subject": "國文",
+      "subjects": "國文（作文、公文與測驗）選擇題部分",
+      "count": 10,
       "timeLimit": null
     },
     {
       "id": "paper2",
+      "name": "法學知識與英文",
+      "subject": "法學知識與英文",
+      "subjects": "中華民國憲法、法學緒論、英文",
+      "count": 50,
+      "timeLimit": null
+    },
+    {
+      "id": "paper3",
+      "name": "行政學",
+      "subject": "行政學",
+      "subjects": "行政學選擇題部分",
+      "count": 25,
+      "timeLimit": null
+    },
+    {
+      "id": "paper4",
       "name": "行政法",
       "subject": "行政法",
-      "subjects": "行政法（選擇題部分）",
+      "subjects": "行政法選擇題部分",
       "count": 25,
       "timeLimit": null
     }
@@ -50,24 +66,21 @@
   ],
   "ui": {
     "tagNames": {
+      "chinese": "國文",
+      "law_knowledge_english": "法學知識與英文",
       "admin_studies": "行政學",
       "admin_law": "行政法"
     },
     "stageStyles": {
-      "all": {
-        "icon": "🎲",
-        "color": "#64748B"
-      },
-      "admin_studies": {
-        "icon": "🏢",
-        "color": "#10B981"
-      },
-      "admin_law": {
-        "icon": "📜",
-        "color": "#8B5CF6"
-      }
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "chinese": { "icon": "📝", "color": "#EF4444" },
+      "law_knowledge_english": { "icon": "⚖️", "color": "#3B82F6" },
+      "admin_studies": { "icon": "🏢", "color": "#10B981" },
+      "admin_law": { "icon": "📜", "color": "#8B5CF6" }
     },
     "subjectColors": {
+      "國文": "#EF4444",
+      "法學知識與英文": "#3B82F6",
       "行政學": "#10B981",
       "行政法": "#8B5CF6"
     }
@@ -78,21 +91,17 @@
     "fullName": "一般警察特考三等（公務人員特種考試一般警察人員考試）",
     "shortName": "一般警察特考三等",
     "studentType": "警察考生",
-    "years": "108-114",
-    "totalQ": 250,
-    "examDesc": "公務人員特種考試一般警察人員考試三等，涵蓋行政警察、行政管理等類科。專業科目行政學 25 題、行政法 25 題（選擇題部分）。",
-    "paperDesc": "行政學 25 題、行政法 25 題（選擇題部分）。",
-    "subjects": "行政學、行政法",
-    "mockDesc": "模擬一般警察特考選擇題",
+    "years": "105-114",
+    "totalQ": 935,
+    "examDesc": "公務人員特種考試一般警察人員考試三等，涵蓋行政警察、行政管理等類科。共同科目國文、法學知識與英文；專業科目行政學、行政法（其餘公共政策、刑法與刑事訴訟法、心理學等為純申論題）。",
+    "paperDesc": "國文 10 題、法學知識與英文 50 題、行政學 25 題、行政法 25 題（皆為選擇題部分）。",
+    "subjects": "國文、法學知識與英文、行政學、行政法",
+    "mockDesc": "模擬一般警察特考三等選擇題",
     "subjectDetails": [
-      [
-        "行政學",
-        "行政學選擇題部分，25 題。"
-      ],
-      [
-        "行政法",
-        "行政法選擇題部分，25 題。"
-      ]
+      ["國文", "國文（作文、公文與測驗）選擇題部分，10 題。"],
+      ["法學知識與英文", "中華民國憲法、法學緒論、英文，合計 50 題。"],
+      ["行政學", "行政學選擇題部分，25 題。"],
+      ["行政法", "行政法選擇題部分，25 題。"]
     ]
   }
 }

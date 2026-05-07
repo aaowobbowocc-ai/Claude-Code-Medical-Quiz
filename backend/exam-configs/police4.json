@@ -17,7 +17,7 @@
     "longText": false
   },
   "questionsFile": "questions-police4.json",
-  "totalQ": 807,
+  "totalQ": 1475,
   "passScore": null,
   "passRate": null,
   "papers": [
@@ -41,7 +41,7 @@
       "id": "paper3",
       "name": "法學知識",
       "subject": "法學知識",
-      "subjects": "中華民國憲法概要、法學緒論",
+      "subjects": "中華民國憲法概要、法學緒論（108 年起合併）",
       "count": 50,
       "timeLimit": null
     },
@@ -50,6 +50,38 @@
       "name": "刑法概要",
       "subject": "刑法概要",
       "subjects": "刑法概要（選擇題部分）",
+      "count": 25,
+      "timeLimit": null
+    },
+    {
+      "id": "paper5",
+      "name": "中華民國憲法概要",
+      "subject": "中華民國憲法概要",
+      "subjects": "中華民國憲法概要（105-107 年舊制）",
+      "count": 50,
+      "timeLimit": null
+    },
+    {
+      "id": "paper6",
+      "name": "法學緒論",
+      "subject": "法學緒論",
+      "subjects": "法學緒論（105-107 年舊制）",
+      "count": 50,
+      "timeLimit": null
+    },
+    {
+      "id": "paper7",
+      "name": "行政法概要",
+      "subject": "行政法概要",
+      "subjects": "行政法概要選擇題部分（105-106 年舊制）",
+      "count": 25,
+      "timeLimit": null
+    },
+    {
+      "id": "paper8",
+      "name": "警察法規概要",
+      "subject": "警察法規概要",
+      "subjects": "警察法規概要選擇題部分（107 年舊制）",
       "count": 25,
       "timeLimit": null
     }
@@ -62,20 +94,32 @@
       "chinese": "國文",
       "english": "英文",
       "law_knowledge": "法學知識",
-      "criminal_law": "刑法概要"
+      "criminal_law": "刑法概要",
+      "constitutional_law": "中華民國憲法概要",
+      "jurisprudence": "法學緒論",
+      "administrative_law": "行政法概要",
+      "police_regulations": "警察法規概要"
     },
     "stageStyles": {
       "all": { "icon": "🎲", "color": "#64748B" },
       "chinese": { "icon": "📝", "color": "#EF4444" },
       "english": { "icon": "🔤", "color": "#3B82F6" },
       "law_knowledge": { "icon": "⚖️", "color": "#8B5CF6" },
-      "criminal_law": { "icon": "🔒", "color": "#DC2626" }
+      "criminal_law": { "icon": "🔒", "color": "#DC2626" },
+      "constitutional_law": { "icon": "📜", "color": "#7C3AED" },
+      "jurisprudence": { "icon": "📚", "color": "#A855F7" },
+      "administrative_law": { "icon": "🏛️", "color": "#9333EA" },
+      "police_regulations": { "icon": "🚓", "color": "#EA580C" }
     },
     "subjectColors": {
       "國文": "#EF4444",
       "英文": "#3B82F6",
       "法學知識": "#8B5CF6",
-      "刑法概要": "#DC2626"
+      "刑法概要": "#DC2626",
+      "中華民國憲法概要": "#7C3AED",
+      "法學緒論": "#A855F7",
+      "行政法概要": "#9333EA",
+      "警察法規概要": "#EA580C"
     }
   },
   "seo": {
@@ -84,11 +128,11 @@
     "fullName": "一般警察特考四等（公務人員特種考試一般警察人員考試四等）",
     "shortName": "一般警察特考四等",
     "studentType": "警察考生",
-    "years": "108-114",
-    "totalQ": 807,
-    "examDesc": "公務人員特種考試一般警察人員考試四等，含行政警察人員等類科。考科：國文（作文、公文、測驗）、英文、法學知識（中華民國憲法概要+法學緒論）、刑法概要。",
-    "paperDesc": "國文 10 題、英文 50 題、法學知識 50 題、刑法概要 25 題（皆為選擇題部分）。",
-    "subjects": "國文、英文、法學知識、刑法概要",
+    "years": "105-114",
+    "totalQ": 1475,
+    "examDesc": "公務人員特種考試一般警察人員考試四等，含行政警察人員等類科。108 年起考科精簡為：國文、英文、法學知識（中華民國憲法概要+法學緒論）、刑法概要；105-107 年舊制將法學知識拆為憲法概要、法學緒論，另含行政法概要與警察法規概要。",
+    "paperDesc": "108-114 年：國文 10 題、英文 50 題、法學知識 50 題、刑法概要 25 題；105-107 年舊制依年度科目略有差異。",
+    "subjects": "國文、英文、法學知識、刑法概要、中華民國憲法概要、法學緒論、行政法概要、警察法規概要",
     "mockDesc": "模擬一般警察特考四等選擇題",
     "subjectDetails": [
       ["國文", "國文選擇題部分，每年 10 題（原卷含作文+公文+測驗）。"],

@@ -30635,7 +30635,7 @@
         "C": "病人易成為社會危險分子",
         "D": "家屬照護負荷增加"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -116752,12 +116752,12 @@
       "subject_name": "社區護理學",
       "stage_id": 13,
       "number": 76,
-      "question": "國小入學新生，其健康檢查必要檢查項目為：①尿液檢查 ②立體感篩檢 ③耳鼻喉科檢查 ④蟯 蟲檢查 ⑤血液檢查",
+      "question": "國小入學新生,其健康檢查必要檢查項目為:①尿液檢查 ②立體感篩檢 ③耳鼻喉科檢查 ④蟯蟲檢查 ⑤血液檢查",
       "options": {
-        "A": "蟲檢查  ⑤血液檢查",
-        "B": "①②④⑤",
-        "C": "①②③④",
-        "D": "①②③④"
+        "A": "①②④⑤",
+        "B": "①②③④",
+        "C": "①③④⑤",
+        "D": "②③④⑤"
       },
       "answer": "B",
       "explanation": ""
@@ -141125,16 +141125,15 @@
       "subject_name": "生理學",
       "stage_id": 2,
       "number": 27,
-      "question": "下列何種因素可促使氧合血紅素解離曲線向左挪移？",
+      "question": "下列何種因素可促使氧合血紅素解離曲線向左偏移？",
       "options": {
-        "A": "減少2,3-DPG (Decreased 2,3-diphosphoglycerate)",
-        "B": "pH",
-        "C": "偏鹼 (Alkaline pH / Increased pH)",
-        "D": "增加DPG（2,3-diphosphoglycerate） (Increased DPG)"
+        "A": "pH 偏鹼",
+        "B": "增加 DPG（2,3-diphosphoglycerate）",
+        "C": "體溫上升",
+        "D": "PCO₂ 上升"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": false
+      "explanation": ""
     },
     {
       "id": 114520,
@@ -206521,15 +206520,16 @@
       "subject_name": "生理學",
       "stage_id": 2,
       "number": 18,
-      "question": "有關骨骼肌長度 - 張力關係之敘述，下列何者正確？ 肌纖維在收縮前之起始長度與收縮張力成反比 最適長度（ optimal length ）乃指肌纖維收縮後，可完全舒張之長度 粗、細肌絲形成之橫橋（ cross bridge ）越多，收縮之力量越小",
+      "question": "有關骨骼肌長度—張力關係之敘述，下列何者正確？肌纖維在收縮前之起始長度與收縮張力成正比",
       "options": {
-        "A": "正常生理狀態下",
-        "B": "resting length",
-        "C": "約等於",
-        "D": "optimal length"
+        "A": "正常生理狀態下，resting length 約等於 optimal length",
+        "B": "resting length 約等於 optimal length",
+        "C": "約等於 optimal length",
+        "D": "肌纖維在 optimal length 時，粗細肌絲橫橋數目最多，收縮力量最大"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": true
     },
     {
       "id": "102110_0107_20",

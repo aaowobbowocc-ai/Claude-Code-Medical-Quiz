@@ -3,50 +3,66 @@ import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 
 /**
- * 站長雜貨抽獎 — 讀書讀累了，抽一間店來逛逛？
- * 隨機 3 種動畫：扭蛋 / 翻牌 / 福袋。
- * 商品 pool 從 /break-lounge.json 載入，flatten 所有 sections.products。
- * 無 cooldown，可一直抽。
+ * 站長雜貨抽獎 — 讀書讀累了，抽一間店/一個商品來看看？
+ * Tab 切換：抽商店 (shops) / 抽商品 (products)。
+ * 隨機 3 種動畫：扭蛋 / 翻牌 / 福袋。無 cooldown。
  */
 
 const ANIM_MODES = ['gacha', 'cards', 'fukubukuro']
 
 export default function BreakLounge() {
   const navigate = useNavigate()
-  const [data, setData] = useState(null)
-  const [phase, setPhase] = useState('idle')   // idle | spinning | revealed
-  const [mode, setMode] = useState('gacha')    // gacha | cards | fukubukuro
+  const [shopsData, setShopsData] = useState(null)
+  const [productsData, setProductsData] = useState(null)
+  const [poolType, setPoolType] = useState('shops')  // shops | products
+  const [phase, setPhase] = useState('idle')          // idle | spinning | revealed
+  const [mode, setMode] = useState('gacha')           // gacha | cards | fukubukuro
   const [picked, setPicked] = useState(null)
 
   useEffect(() => {
     fetch('/break-lounge.json', { cache: 'no-cache' })
       .then(r => r.json())
-      .then(setData)
-      .catch(() => setData({ sections: [] }))
+      .then(setShopsData)
+      .catch(() => setShopsData({ sections: [] }))
+    fetch('/break-lounge-products.json', { cache: 'no-cache' })
+      .then(r => r.ok ? r.json() : { sections: [] })
+      .then(setProductsData)
+      .catch(() => setProductsData({ sections: [] }))
   }, [])
 
-  // Flat product pool
-  const pool = useMemo(() => {
-    if (!data) return []
-    return data.sections.flatMap(s => s.products)
-  }, [data])
+  const shopsPool = useMemo(
+    () => shopsData ? shopsData.sections.flatMap(s => s.products) : [],
+    [shopsData]
+  )
+  const productsPool = useMemo(
+    () => productsData ? productsData.sections.flatMap(s => s.products) : [],
+    [productsData]
+  )
+  const pool = poolType === 'shops' ? shopsPool : productsPool
 
   const spin = useCallback(() => {
     if (!pool.length || phase === 'spinning') return
     const newMode = ANIM_MODES[Math.floor(Math.random() * ANIM_MODES.length)]
     const newPick = pool[Math.floor(Math.random() * pool.length)]
     setMode(newMode)
-    setPicked(newPick)
+    setPicked({ ...newPick, _type: poolType })
     setPhase('spinning')
-    // Total animation duration including all sub-stages
     const duration = newMode === 'cards' ? 1800 : newMode === 'fukubukuro' ? 2700 : 3200
     setTimeout(() => setPhase('revealed'), duration)
-  }, [pool, phase])
+  }, [pool, phase, poolType])
 
   const reset = () => {
     setPhase('idle')
     setPicked(null)
   }
+
+  const switchPool = (t) => {
+    if (phase === 'spinning') return
+    setPoolType(t)
+    reset()
+  }
+
+  const dataReady = shopsData && productsData
 
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
@@ -56,20 +72,48 @@ export default function BreakLounge() {
           ← 返回
         </button>
         <h1 className="text-white font-bold text-2xl text-center">🎰 站長雜貨抽獎</h1>
-        <p className="text-white/60 text-xs text-center mt-1">讀書讀累了，抽一間店來逛逛？</p>
+        <p className="text-white/60 text-xs text-center mt-1">讀書讀累了，抽一間來逛逛？</p>
       </div>
 
+      {/* Tab 切換：商店 / 商品 */}
+      {dataReady && (
+        <div className="px-4 pt-4">
+          <div className="flex bg-white rounded-xl p-1 shadow-sm max-w-xs mx-auto">
+            <button
+              onClick={() => switchPool('shops')}
+              disabled={!shopsPool.length || phase === 'spinning'}
+              className={`flex-1 py-2 rounded-lg text-sm font-semibold transition-colors disabled:opacity-40
+                ${poolType === 'shops' ? 'bg-orange-400 text-white' : 'text-gray-600'}`}>
+              🛍️ 抽商店
+              <span className="text-[10px] block opacity-70">{shopsPool.length} 家</span>
+            </button>
+            <button
+              onClick={() => switchPool('products')}
+              disabled={!productsPool.length || phase === 'spinning'}
+              className={`flex-1 py-2 rounded-lg text-sm font-semibold transition-colors disabled:opacity-40
+                ${poolType === 'products' ? 'bg-orange-400 text-white' : 'text-gray-600'}`}>
+              🎁 抽商品
+              <span className="text-[10px] block opacity-70">{productsPool.length} 個</span>
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="flex-1 px-4 py-6 flex flex-col items-center justify-center min-h-[60vh]">
-        {!data && <Loading />}
-        {data && phase === 'idle' && <Idle onSpin={spin} />}
-        {data && phase === 'spinning' && (
+        {!dataReady && <Loading />}
+        {dataReady && phase === 'idle' && (
+          pool.length
+            ? <Idle onSpin={spin} poolType={poolType} />
+            : <Empty poolType={poolType} />
+        )}
+        {dataReady && phase === 'spinning' && (
           <>
             {mode === 'gacha' && <GachaSpinning />}
             {mode === 'cards' && <CardSpinning />}
             {mode === 'fukubukuro' && <FukubukuroSpinning />}
           </>
         )}
-        {data && phase === 'revealed' && picked && <Reveal product={picked} onAgain={() => { reset(); setTimeout(spin, 50) }} />}
+        {dataReady && phase === 'revealed' && picked && <Reveal product={picked} onAgain={() => { reset(); setTimeout(spin, 50) }} />}
       </div>
 
       <div className="text-center text-[11px] text-gray-300 px-5 pb-3">
@@ -77,6 +121,14 @@ export default function BreakLounge() {
       </div>
 
       <Footer />
+    </div>
+  )
+}
+
+function Empty({ poolType }) {
+  return (
+    <div className="text-center text-gray-400 text-sm">
+      {poolType === 'products' ? '商品池還沒準備好，先試試抽商店吧' : '池子是空的'}
     </div>
   )
 }
@@ -92,15 +144,16 @@ function Loading() {
   )
 }
 
-function Idle({ onSpin }) {
+function Idle({ onSpin, poolType }) {
+  const isShops = poolType === 'shops'
   return (
     <div className="flex flex-col items-center gap-6">
-      <div className="text-7xl animate-pulse">🎁</div>
-      <p className="text-gray-500 text-sm">點下方按鈕，看看會抽到哪一家</p>
+      <div className="text-7xl animate-pulse">{isShops ? '🛍️' : '🎁'}</div>
+      <p className="text-gray-500 text-sm">{isShops ? '點下方按鈕，看看會抽到哪一家' : '點下方按鈕，看看會抽到什麼'}</p>
       <button onClick={onSpin}
               className="px-8 py-4 rounded-2xl text-white font-bold text-lg active:scale-95 transition-transform shadow-lg
                          bg-gradient-to-br from-amber-400 via-orange-400 to-pink-400">
-        🎲 來抽一間
+        🎲 {isShops ? '來抽一間' : '來抽一個'}
       </button>
     </div>
   )
@@ -285,14 +338,23 @@ function FukubukuroSpinning() {
 
 /* ── Reveal: 統一的揭曉卡片 ─────────────────── */
 function Reveal({ product, onAgain }) {
+  const isProduct = product._type === 'products'
   return (
     <div className="w-full max-w-sm flex flex-col items-center gap-4 animate-reveal-pop">
       <p className="text-gray-500 text-sm">叮咚 — 你抽到的是</p>
       <a href={product.shopUrl} target="_blank" rel="noopener noreferrer sponsored"
          className="block w-full bg-white rounded-3xl p-5 shadow-xl border-2 border-orange-200 active:scale-[0.99]">
+        {product.image && (
+          <img src={product.image} alt={product.name}
+               className="w-full aspect-square object-cover rounded-2xl mb-3 bg-gray-100"
+               loading="lazy" />
+        )}
         <h2 className="text-lg font-bold text-gray-800 text-center break-words">{product.name}</h2>
+        {product.price && (
+          <p className="text-center text-orange-600 font-bold mt-2">{product.price}</p>
+        )}
         <div className="mt-4 px-4 py-2.5 rounded-xl bg-gradient-to-r from-orange-400 to-amber-400 text-white text-center font-semibold text-sm">
-          {product.ctaText || '進入店家頁面'} →
+          {product.ctaText || (isProduct ? '看看這個商品' : '進入店家頁面')} →
         </div>
       </a>
       <button onClick={onAgain}

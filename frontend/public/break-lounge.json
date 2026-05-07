@@ -66,10 +66,17 @@
       "products": []
     },
     {
-      "id": "energy",
-      "icon": "☕",
-      "title": "提神",
-      "products": []
+      "id": "snacks",
+      "icon": "🍪",
+      "title": "零食",
+      "products": [
+        {
+          "name": "零食小舖",
+          "blurb": "讀書配個零食。",
+          "shopUrl": "https://s.shopee.tw/2BBWxlf7H2",
+          "ctaText": "進入店家頁面"
+        }
+      ]
     }
   ]
 }

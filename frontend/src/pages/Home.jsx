@@ -584,6 +584,7 @@ export default function Home() {
 
           <TutorialSection exam={currentExam} onShowTour={() => setShowTour(true)} />
 
+          {/* 站長雜貨間 — 暫時隱藏，準備改成抽獎形式
           <button onClick={() => navigate('/break')}
                   className="w-full rounded-2xl py-3 px-4 flex items-center gap-3 bg-white border border-gray-100 active:scale-[0.97] transition-transform">
             <span className="text-xl">🛍️</span>
@@ -593,6 +594,7 @@ export default function Home() {
             </div>
             <span className="text-gray-300">›</span>
           </button>
+          */}
 
           <ExamArticle exam={currentExam} />
 
@@ -886,6 +888,7 @@ export default function Home() {
 
         <TutorialSection exam={currentExam} onShowTour={() => setShowTour(true)} />
 
+        {/* 站長雜貨間 — 暫時隱藏，準備改成抽獎形式
         <button onClick={() => navigate('/break')}
                 className="w-full rounded-2xl py-3 px-4 flex items-center gap-3 bg-white border border-gray-100 active:scale-[0.97] transition-transform">
           <span className="text-xl">🛍️</span>
@@ -895,6 +898,7 @@ export default function Home() {
           </div>
           <span className="text-gray-300">›</span>
         </button>
+        */}
 
         {/* SEO 內容區塊 */}
         <ExamArticle exam={currentExam} />

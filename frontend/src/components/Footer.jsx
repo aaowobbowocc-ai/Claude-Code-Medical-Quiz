@@ -19,8 +19,6 @@ export default function Footer() {
         <Link to="/guides" className="hover:text-medical-blue transition-colors">備考攻略</Link>
         <span className="text-gray-200">|</span>
         <Link to="/coverage" className="hover:text-medical-blue transition-colors">題庫狀態</Link>
-        <span className="text-gray-200">|</span>
-        <Link to="/break" className="hover:text-medical-blue transition-colors">站長雜貨間</Link>
       </div>
       <p>© {new Date().getFullYear()} {platformName}</p>
       <p className="text-gray-300">題目來源：考選部歷年公開試題 · AI 解說僅供參考</p>

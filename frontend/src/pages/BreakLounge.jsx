@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 
@@ -44,8 +44,8 @@ export default function BreakLounge() {
     setMode(newMode)
     setPicked(newPick)
     setPhase('spinning')
-    // Animation duration depends on mode
-    const duration = newMode === 'cards' ? 900 : newMode === 'fukubukuro' ? 1800 : 2200
+    // Total animation duration including all sub-stages
+    const duration = newMode === 'cards' ? 1800 : newMode === 'fukubukuro' ? 2700 : 3200
     setTimeout(() => setPhase('revealed'), duration)
   }, [pool, phase])
 
@@ -113,14 +113,24 @@ function Idle({ onSpin }) {
 }
 
 /* ── 扭蛋機動畫 ─────────────────────────────── */
+// Phases: 0-1.0s 機台搖晃球亂跳 → 1.0-1.8s 一顆球掉下來 → 1.8-2.6s 球滾出來 → 2.6-3.2s 球裂開
 function GachaSpinning() {
+  const [stage, setStage] = useState(0)
+  useEffect(() => {
+    const t1 = setTimeout(() => setStage(1), 1000)   // ball drop
+    const t2 = setTimeout(() => setStage(2), 1800)   // roll out
+    const t3 = setTimeout(() => setStage(3), 2600)   // crack open
+    return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3) }
+  }, [])
   return (
     <div className="flex flex-col items-center gap-3">
-      <div className="relative w-44 h-52 animate-gacha-shake">
-        <div className="absolute inset-0 bg-gradient-to-br from-rose-300 to-rose-500 rounded-3xl shadow-xl" />
-        <div className="absolute top-3 left-3 right-3 h-28 bg-white/40 rounded-2xl overflow-hidden border-2 border-white/60">
+      <div className="relative w-56 h-72">
+        {/* Machine body — only shake during stage 0 */}
+        <div className={`absolute inset-x-0 top-0 h-56 bg-gradient-to-br from-rose-300 to-rose-500 rounded-3xl shadow-xl ${stage === 0 ? 'animate-gacha-shake' : ''}`} />
+        {/* Glass dome with bouncing balls */}
+        <div className="absolute top-3 left-3 right-3 h-32 bg-white/40 rounded-2xl overflow-hidden border-2 border-white/60">
           {['🔴','🟢','🔵','🟡','🟣','🟠'].map((b, i) => (
-            <span key={i} className="absolute text-2xl animate-gacha-ball"
+            <span key={i} className={`absolute text-2xl ${stage === 0 ? 'animate-gacha-ball' : ''}`}
                   style={{
                     left: `${10 + (i * 18) % 70}%`,
                     top: `${20 + (i * 23) % 60}%`,
@@ -128,43 +138,153 @@ function GachaSpinning() {
                   }}>{b}</span>
           ))}
         </div>
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-12 h-3 bg-rose-700 rounded-full" />
-        <div className="absolute right-2 top-1/2 w-6 h-6 bg-amber-300 rounded-full border-2 border-amber-600 animate-gacha-knob" />
+        {/* Slot (出口槽) */}
+        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 w-14 h-4 bg-rose-700 rounded-full" />
+        {/* Knob — turning until ball drops */}
+        <div className={`absolute right-2 top-28 w-6 h-6 bg-amber-300 rounded-full border-2 border-amber-600 ${stage <= 1 ? 'animate-gacha-knob' : ''}`} />
+
+        {/* Capsule (the dropping ball) — appears in stage 1, rolls in stage 2, cracks in stage 3 */}
+        {stage >= 1 && stage < 3 && (
+          <div
+            key={`drop-${stage}`}
+            className={`absolute left-1/2 w-10 h-10 ${stage === 1 ? 'animate-gacha-drop' : 'animate-gacha-roll'}`}
+            style={stage === 2 ? { top: '85%' } : {}}
+          >
+            <div className="w-full h-full rounded-full bg-gradient-to-br from-yellow-300 to-orange-400 border-2 border-orange-500 shadow-lg" />
+          </div>
+        )}
+        {/* Cracked open at stage 3 — split into two halves flying apart */}
+        {stage === 3 && (
+          <div className="absolute" style={{ left: '95%', top: '85%', transform: 'translateX(-50%)' }}>
+            <div className="relative w-10 h-10">
+              <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-yellow-300 to-orange-400 border-2 border-orange-500 rounded-t-full animate-gacha-crack-top" />
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-orange-400 to-yellow-300 border-2 border-orange-500 rounded-b-full animate-gacha-crack-bot" />
+              <span className="absolute inset-0 flex items-center justify-center text-2xl animate-pop">✨</span>
+            </div>
+          </div>
+        )}
       </div>
-      <p className="text-gray-500 text-sm">扭蛋中…</p>
+      <p className="text-gray-500 text-sm">
+        {stage === 0 && '搖一搖…'}
+        {stage === 1 && '掉出來了！'}
+        {stage === 2 && '滾出來…'}
+        {stage === 3 && '叩—！打開了'}
+      </p>
     </div>
   )
 }
 
 /* ── 翻牌動畫 ─────────────────────────────── */
+// Phases: 0-0.7s 4 張卡洗牌 → 0.7-1.1s 中間那張變大 → 1.1-1.8s 翻面
 function CardSpinning() {
+  const [stage, setStage] = useState(0)
+  useEffect(() => {
+    const t1 = setTimeout(() => setStage(1), 700)    // pick center card, scale up
+    const t2 = setTimeout(() => setStage(2), 1100)   // flip to reveal
+    return () => { clearTimeout(t1); clearTimeout(t2) }
+  }, [])
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="flex gap-3">
-        {[0,1,2,3].map(i => (
-          <div key={i} className="w-16 h-24 rounded-xl bg-gradient-to-br from-purple-400 to-indigo-600 shadow-lg flex items-center justify-center text-3xl border-2 border-white/40 animate-card-shuffle"
-               style={{ animationDelay: `${i * 0.15}s` }}>
-            <span className="text-white/80">?</span>
-          </div>
-        ))}
+      <div className="flex gap-3 items-center" style={{ height: '160px' }}>
+        {[0,1,2,3].map(i => {
+          const isPicked = i === 1  // arbitrary pick: 2nd card
+          if (stage >= 1 && !isPicked) return null  // hide other cards when picking
+          return (
+            <div
+              key={i}
+              className={`w-16 h-24 rounded-xl bg-gradient-to-br from-purple-400 to-indigo-600 shadow-lg flex items-center justify-center text-3xl border-2 border-white/40
+                ${stage === 0 ? 'animate-card-shuffle' : ''}
+                ${stage === 1 && isPicked ? 'animate-card-select' : ''}
+                ${stage >= 2 && isPicked ? 'animate-card-flip' : ''}
+              `}
+              style={{
+                animationDelay: stage === 0 ? `${i * 0.15}s` : '0s',
+                transformStyle: 'preserve-3d',
+              }}
+            >
+              <span className="text-white/80" style={{ backfaceVisibility: 'hidden' }}>?</span>
+              {/* Front side (revealed when flipped) */}
+              {stage >= 2 && isPicked && (
+                <span
+                  className="absolute inset-0 flex items-center justify-center text-3xl bg-gradient-to-br from-amber-200 to-orange-300 rounded-xl border-2 border-orange-400"
+                  style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                >🎁</span>
+              )}
+            </div>
+          )
+        })}
       </div>
-      <p className="text-gray-500 text-sm">洗牌中…</p>
+      <p className="text-gray-500 text-sm">
+        {stage === 0 && '洗牌中…'}
+        {stage === 1 && '選一張…'}
+        {stage === 2 && '翻開！'}
+      </p>
     </div>
   )
 }
 
 /* ── 福袋動畫 ─────────────────────────────── */
+// Phases: 0-1.0s 福袋搖晃 → 1.0-1.5s 袋口打開 → 1.5-2.2s 禮物彈出 + 紙花
 function FukubukuroSpinning() {
+  const [stage, setStage] = useState(0)
+  useEffect(() => {
+    const t1 = setTimeout(() => setStage(1), 1000)
+    const t2 = setTimeout(() => setStage(2), 1500)
+    return () => { clearTimeout(t1); clearTimeout(t2) }
+  }, [])
+  // Confetti positions (random-ish)
+  const confettiItems = useMemo(() => [
+    { emoji: '🎉', cx: '60px',  cy: '-80px', delay: '0s' },
+    { emoji: '✨', cx: '-50px', cy: '-70px', delay: '0.05s' },
+    { emoji: '⭐', cx: '70px',  cy: '-50px', delay: '0.1s' },
+    { emoji: '🎊', cx: '-70px', cy: '-50px', delay: '0.15s' },
+    { emoji: '💫', cx: '20px',  cy: '-90px', delay: '0.2s' },
+    { emoji: '🌟', cx: '-30px', cy: '-90px', delay: '0.25s' },
+  ], [])
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="relative w-32 h-32">
-        <div className="absolute inset-0 animate-fukubukuro text-7xl flex items-center justify-center">🎁</div>
-        <span className="absolute -top-1 left-4 text-2xl animate-sparkle" style={{ animationDelay: '0s' }}>✨</span>
-        <span className="absolute top-4 -right-1 text-2xl animate-sparkle" style={{ animationDelay: '0.3s' }}>⭐</span>
-        <span className="absolute -bottom-1 right-4 text-2xl animate-sparkle" style={{ animationDelay: '0.5s' }}>✨</span>
-        <span className="absolute bottom-4 -left-1 text-2xl animate-sparkle" style={{ animationDelay: '0.7s' }}>⭐</span>
+      <div className="relative w-40 h-40">
+        {/* Bag emoji — shake until open */}
+        <div className={`absolute inset-0 text-7xl flex items-center justify-center origin-bottom
+          ${stage === 0 ? 'animate-fukubukuro' : ''}
+          ${stage === 1 ? 'animate-fukubukuro-open' : ''}
+          ${stage === 2 ? 'animate-fukubukuro-open' : ''}
+        `}>
+          {stage < 1 ? '🎁' : '👜'}
+        </div>
+        {/* Sparkles around bag */}
+        {stage === 0 && (
+          <>
+            <span className="absolute -top-1 left-6 text-2xl animate-sparkle" style={{ animationDelay: '0s' }}>✨</span>
+            <span className="absolute top-6 -right-1 text-2xl animate-sparkle" style={{ animationDelay: '0.3s' }}>⭐</span>
+            <span className="absolute -bottom-1 right-6 text-2xl animate-sparkle" style={{ animationDelay: '0.5s' }}>✨</span>
+            <span className="absolute bottom-6 -left-1 text-2xl animate-sparkle" style={{ animationDelay: '0.7s' }}>⭐</span>
+          </>
+        )}
+        {/* Item flies up out of bag */}
+        {stage >= 2 && (
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl animate-gift-pop">
+            🎁
+          </div>
+        )}
+        {/* Confetti */}
+        {stage === 2 && confettiItems.map((c, i) => (
+          <span
+            key={i}
+            className="absolute left-1/2 top-1/2 text-xl animate-confetti pointer-events-none"
+            style={{
+              '--cx': c.cx,
+              '--cy': c.cy,
+              animationDelay: c.delay,
+            }}
+          >{c.emoji}</span>
+        ))}
       </div>
-      <p className="text-gray-500 text-sm">福袋裡藏著什麼…</p>
+      <p className="text-gray-500 text-sm">
+        {stage === 0 && '福袋搖一搖…'}
+        {stage === 1 && '袋口打開了！'}
+        {stage === 2 && '出現了！'}
+      </p>
     </div>
   )
 }

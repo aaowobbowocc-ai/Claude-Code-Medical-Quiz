@@ -5,7 +5,9 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // Pessimistic upfront charge — backend tells us the real price via the first SSE
 // `meta` frame, and we refund the difference. This keeps the UX responsive (no
 // pre-flight fetch) while still charging verified explanations for free.
-const EXPLAIN_COST = 100
+// Set to the *full price* (150) so the worst case (cache miss, fresh LLM call)
+// is covered without underflow. Server will refund any over-charge.
+const EXPLAIN_COST = 150
 const REVIEW_COST = 300
 
 // Stable per-device id for vote anti-cheat. Generated lazily on first read.
@@ -24,7 +26,7 @@ export function getDeviceId() {
 }
 
 // ── Per-device daily quota ──────────────────────────────────────
-const PERSONAL_LIMIT = 10
+const PERSONAL_LIMIT = 20
 const QUOTA_KEY = 'ai-explain-quota'
 
 function getTaipeiDate() {
@@ -47,6 +49,38 @@ function incrementQuota() {
 
 export function getPersonalQuotaRemaining() {
   return Math.max(0, PERSONAL_LIMIT - getQuota().used)
+}
+
+// ── Per-question paid unlocks (localStorage, no auth required) ──────────
+// Once a user pays for an explanation on a given question, record the question
+// id locally so subsequent views (in any tab — practice / favorites / browse /
+// review / mock) are free for THIS device. No cross-device sync — clearing
+// localStorage or switching devices loses unlocks. Acceptable trade-off for
+// not requiring registration; future improvement: when user binds an account,
+// upload these IDs to Supabase for server-side tracking.
+const UNLOCKS_KEY = 'ai-explain-unlocks'
+
+function loadUnlocks() {
+  try {
+    const arr = JSON.parse(localStorage.getItem(UNLOCKS_KEY) || '[]')
+    return new Set(Array.isArray(arr) ? arr.map(String) : [])
+  } catch { return new Set() }
+}
+
+export function isExplainUnlocked(questionId) {
+  if (questionId == null) return false
+  return loadUnlocks().has(String(questionId))
+}
+
+function recordUnlock(questionId) {
+  if (questionId == null) return
+  const set = loadUnlocks()
+  set.add(String(questionId))
+  try { localStorage.setItem(UNLOCKS_KEY, JSON.stringify([...set])) } catch {}
+}
+
+export function getUnlockedCount() {
+  return loadUnlocks().size
 }
 
 // Stream text from a POST endpoint that returns SSE.
@@ -120,16 +154,24 @@ export function useExplain() {
   useEffect(() => () => { abortRef.current?.abort() }, [])
 
   const explain = useCallback(async (q) => {
-    if (getPersonalQuotaRemaining() <= 0) {
+    const alreadyUnlocked = isExplainUnlocked(q?.id)
+
+    // Per-question unlock + verified cache hits don't burn personal quota —
+    // both come from cache with zero LLM cost. Quota only protects fresh /
+    // pending generations.
+    if (!alreadyUnlocked && getPersonalQuotaRemaining() <= 0) {
       setLimitHit(true)
       return
     }
     const { spendCoins, addCoins } = usePlayerStore.getState()
-    // Reserve the full price; refund the difference once the server tells us
-    // the real tier in the first meta frame.
-    if (!spendCoins(EXPLAIN_COST)) {
-      setNotEnoughCoins(true)
-      return
+    // For unlocked questions, skip the upfront charge entirely — server will
+    // confirm price=0 via meta frame. For new questions, reserve EXPLAIN_COST
+    // (pessimistic) and refund the difference based on the server's true price.
+    if (!alreadyUnlocked) {
+      if (!spendCoins(EXPLAIN_COST)) {
+        setNotEnoughCoins(true)
+        return
+      }
     }
     // Cancel any previous stream so its trailing chunks don't bleed into this one.
     abortRef.current?.abort()
@@ -143,7 +185,8 @@ export function useExplain() {
     setLimitHit(false)
     setNotEnoughCoins(false)
     setLoading(true)
-    incrementQuota()
+    // Quota is only burned for *real* paid generations — verified hits (price=0)
+    // and previously-unlocked questions both bypass it (set in onMeta).
     try {
       await streamPost(
         `${BACKEND}/explain`,
@@ -167,10 +210,21 @@ export function useExplain() {
         ctrl.signal,
         (m) => {
           if (activeQidRef.current !== qid) return
-          setMeta(m)
-          // Refund overage: we reserved EXPLAIN_COST, true price is m.price
-          const refund = EXPLAIN_COST - (Number.isFinite(m?.price) ? m.price : EXPLAIN_COST)
-          if (refund > 0) addCoins(refund)
+          // Override price to 0 if locally unlocked (server doesn't know about
+          // this device's unlock history).
+          const effectivePrice = alreadyUnlocked ? 0 : (Number.isFinite(m?.price) ? m.price : EXPLAIN_COST)
+          setMeta({ ...m, price: effectivePrice, alreadyUnlocked })
+          // Refund overage if we reserved EXPLAIN_COST.
+          if (!alreadyUnlocked) {
+            const refund = EXPLAIN_COST - effectivePrice
+            if (refund > 0) addCoins(refund)
+          }
+          // Burn quota only for real paid generations. Verified hits and
+          // previously-unlocked questions don't count — they cost nothing on
+          // the server side and shouldn't penalise the user.
+          if (effectivePrice > 0) incrementQuota()
+          // Record unlock when user actually paid (>0).
+          if (effectivePrice > 0 && q?.id != null) recordUnlock(q.id)
         },
       )
     } catch {

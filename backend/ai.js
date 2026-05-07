@@ -58,7 +58,11 @@ function fingerprint(text) {
 }
 
 const aiUsage = { date: '', count: 0 };
-const AI_DAILY_LIMIT = 100;
+// AI_DAILY_LIMIT removed 2026-05-07 — site-wide cap was a tragedy-of-the-commons
+// design that punished all users when one heavy day pushed it over. Per-user
+// cap (frontend PERSONAL_LIMIT) + cache + per-exam Gemini routing already keep
+// cost under control.
+const AI_DAILY_LIMIT = Infinity;
 
 // daily-message cache: key = "date|level", value = message text
 const dailyMsgCache = new Map();

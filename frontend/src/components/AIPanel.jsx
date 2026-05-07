@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import { hasLegalSubjectTag } from '../config/examRegistry'
 import { supabase } from '../lib/supabase'
+import { isExplainUnlocked } from '../hooks/useAI'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -130,6 +131,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
   }
 
   const hasExplanation = !!explanation
+  const unlocked = !hasExplanation && isExplainUnlocked(questionId)
   const isLegal = hasLegalSubjectTag(subjectTags)
   const canReportDeprecation = isLegal && !!sourceBankId && !!questionId
 
@@ -326,15 +328,17 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
               onRequest()
             }
           }}
-          disabled={!hasExplanation && remaining === 0}
+          disabled={!hasExplanation && !unlocked && remaining === 0}
           className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-dashed text-sm font-medium transition-transform
-            ${remaining === 0 && !hasExplanation
+            ${remaining === 0 && !hasExplanation && !unlocked
               ? 'border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed'
-              : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
+              : unlocked
+                ? 'border-emerald-400 text-emerald-600 bg-emerald-50 active:scale-95'
+                : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
         >
-          <span className="text-base">🤖</span>
-          {hasExplanation ? 'AI 進階解說' : 'AI 解說這題'}
-          <span className="text-xs opacity-60 ml-1">🪙 {cost}</span>
+          <span className="text-base">{unlocked ? '🔓' : '🤖'}</span>
+          {hasExplanation ? 'AI 進階解說' : unlocked ? '查看已解鎖解說' : 'AI 解說這題'}
+          {!unlocked && <span className="text-xs opacity-60 ml-1">🪙 {cost}</span>}
         </button>
       )}
 
@@ -344,15 +348,17 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
           {!requested ? (
             <button
               onClick={onRequest}
-              disabled={remaining === 0}
+              disabled={!unlocked && remaining === 0}
               className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-dashed text-sm font-medium transition-transform
-                ${remaining === 0
+                ${remaining === 0 && !unlocked
                   ? 'border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed'
-                  : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
+                  : unlocked
+                    ? 'border-emerald-400 text-emerald-600 bg-emerald-50 active:scale-95'
+                    : 'border-medical-blue text-medical-blue bg-blue-50 active:scale-95'}`}
             >
-              <span className="text-base">🤖</span>
-              {remaining === 0 ? '今日 AI 額度已用完' : 'AI 解說這題'}
-              {remaining > 0 && <span className="text-xs opacity-60 ml-1">🪙 {cost}</span>}
+              <span className="text-base">{unlocked ? '🔓' : '🤖'}</span>
+              {unlocked ? '查看已解鎖解說' : (remaining === 0 ? '今日 AI 額度已用完' : 'AI 解說這題')}
+              {!unlocked && remaining > 0 && <span className="text-xs opacity-60 ml-1">🪙 {cost}</span>}
             </button>
           ) : notEnoughCoins ? (
             <NotEnoughCoinsBox label={`AI 解說需要 ${cost} 金幣`} />
@@ -360,7 +366,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
               <p className="text-2xl mb-2">😴</p>
               <p className="text-sm font-semibold text-amber-700">今日解說已達上限</p>
-              <p className="text-xs text-amber-500 mt-1">個人每天 10 次，明天 00:00 重置</p>
+              <p className="text-xs text-amber-500 mt-1">個人每天 20 次，明天 00:00 重置</p>
             </div>
           ) : (
             <div className={`rounded-2xl p-4 border ${
@@ -378,6 +384,9 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                 )}
                 {meta?.status === 'pending' && (
                   <span className="text-[10px] font-semibold text-amber-600 bg-amber-100 px-1.5 py-0.5 rounded-full">尚未驗證</span>
+                )}
+                {meta?.alreadyUnlocked && (
+                  <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded-full">🔓 已解鎖</span>
                 )}
                 <span className="text-xs text-gray-400 ml-0.5">僅供參考</span>
                 {loading && (

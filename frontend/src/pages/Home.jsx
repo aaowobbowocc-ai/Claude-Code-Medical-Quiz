@@ -583,6 +583,17 @@ export default function Home() {
           </div>
 
           <TutorialSection exam={currentExam} onShowTour={() => setShowTour(true)} />
+
+          <button onClick={() => navigate('/break')}
+                  className="w-full rounded-2xl py-3 px-4 flex items-center gap-3 bg-white border border-gray-100 active:scale-[0.97] transition-transform">
+            <span className="text-xl">🛍️</span>
+            <div className="flex-1 text-left">
+              <p className="text-gray-700 font-medium text-sm">站長雜貨間</p>
+              <p className="text-gray-400 text-xs">隨便逛逛</p>
+            </div>
+            <span className="text-gray-300">›</span>
+          </button>
+
           <ExamArticle exam={currentExam} />
 
           <CumulativeStatsBar />
@@ -874,6 +885,16 @@ export default function Home() {
         )}
 
         <TutorialSection exam={currentExam} onShowTour={() => setShowTour(true)} />
+
+        <button onClick={() => navigate('/break')}
+                className="w-full rounded-2xl py-3 px-4 flex items-center gap-3 bg-white border border-gray-100 active:scale-[0.97] transition-transform">
+          <span className="text-xl">🛍️</span>
+          <div className="flex-1 text-left">
+            <p className="text-gray-700 font-medium text-sm">站長雜貨間</p>
+            <p className="text-gray-400 text-xs">隨便逛逛</p>
+          </div>
+          <span className="text-gray-300">›</span>
+        </button>
 
         {/* SEO 內容區塊 */}
         <ExamArticle exam={currentExam} />

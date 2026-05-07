@@ -42,6 +42,7 @@ const Changelog      = lazy(() => import('./pages/Changelog'))
 const Coverage       = lazy(() => import('./pages/Coverage'))
 const Guides         = lazy(() => import('./pages/Guides'))
 const GuideDetail    = lazy(() => import('./pages/GuideDetail'))
+const BreakLounge    = lazy(() => import('./pages/BreakLounge'))
 
 // Path-based exam landing route. Rendered for URLs like /doctor1/ or
 // /civil-senior-general/ served from prerendered HTML shells (see
@@ -256,6 +257,7 @@ function AppRoutes() {
           <Route path="/coverage"   element={<Coverage />} />
           <Route path="/guides"          element={<Guides />} />
           <Route path="/guides/:slug"    element={<GuideDetail />} />
+          <Route path="/break"           element={<BreakLounge />} />
           {/* Per-exam landing: served from prerendered dist/<id>/index.html
               with baked SEO meta so Googlebot indexes each exam distinctly.
               React Router ranks static segments above params, so all the

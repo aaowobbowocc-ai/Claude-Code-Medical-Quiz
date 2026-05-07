@@ -692,15 +692,13 @@
       "number": 35,
       "question": "下列四張病例圖那一個病例較適合以簡單的復形（ restoration ）方式恢復牙體的外形及美觀？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115023296,
@@ -51143,10 +51141,10 @@
       "number": 80,
       "question": "下圖是一個戴在上顎之咬合板的咬合面示意圖，何者是表示可能被夜間磨牙（bruxism）磨 出的痕跡？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "<img src=\"https://img.doctest.ai/2024-05-21/1716281248-1716281248-0-80-A.png\">",
+        "B": "<img src=\"https://img.doctest.ai/2024-05-21/1716281248-1716281248-0-80-B.png\">",
+        "C": "<img src=\"https://img.doctest.ai/2024-05-21/1716281248-1716281248-0-80-C.png\">",
+        "D": "<img src=\"https://img.doctest.ai/2024-05-21/1716281248-1716281248-0-80-D.png\">"
       },
       "answer": "A",
       "explanation": "",
@@ -61688,15 +61686,13 @@
       "number": 40,
       "question": "下列何者屬於下顎垂直型有利性骨折 (vertically favorable fracture) ?",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "巡視即可",
+        "B": "囊腫壁與鄰近小唾液腺切除",
+        "C": "有安全距離的切除",
+        "D": "袋形術"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115024821,
@@ -68440,15 +68436,13 @@
       "number": 55,
       "question": "2.依下圖口內彩色照片，及X光咬合片影像，下列何種診斷正確？",
       "options": {
-        "A": "口底腫瘤",
-        "B": "唾液結石堵塞於Stensen’s duct",
-        "C": "唾液結石堵塞於Wharton’s duct",
-        "D": "此問題是由舌下腺引起的"
+        "A": "口底蜂窩",
+        "B": "唾液結石堵塞於 Stensen's duct",
+        "C": "唾液結石堵塞於 Wharton's duct",
+        "D": "其他唾液腺之發炎或阻塞"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image"
+      "explanation": ""
     },
     {
       "id": "105020_44_56",
@@ -75063,9 +75057,7 @@
         "D": "病人移動"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image"
+      "explanation": ""
     },
     {
       "id": "105100_44_64",
@@ -75410,12 +75402,10 @@
         "A": "Zygomatic arch",
         "B": "Maxillary sinus",
         "C": "Body of mandible",
-        "D": "Ramus of the mandible"
+        "D": "Heads of the mandible"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image"
+      "explanation": ""
     },
     {
       "id": "105100_44_80",
@@ -77151,14 +77141,12 @@
       "question": "20歲患者的口內齒列檢查與環口X-光影像如下圖，其最可能的臨床診斷為何？",
       "options": {
         "A": "鎖骨顱骨發育不全（cleidocranial dysplasia）",
-        "B": "唇腭裂",
+        "B": "巨指症",
         "C": "半邊小臉症（hemifacial microsomia）",
-        "D": "Treacher Collins症候群"
+        "D": "Teacher Collins症候群"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image"
+      "explanation": ""
     },
     {
       "id": "105100_66_7",
@@ -81533,12 +81521,11 @@
       "options": {
         "A": "a × c / b",
         "B": "a × b / c",
-        "C": "c",
-        "D": ""
+        "C": "b × c / a",
+        "D": "a × b × c"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115020844,
@@ -112832,9 +112819,7 @@
       "explanation": "",
       "images": [
         "/question-images/dental2_115022389_0.webp"
-      ],
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      ]
     },
     {
       "id": 115022390,
@@ -113952,14 +113937,13 @@
       "number": 68,
       "question": "下列何者可診斷為牙本質形成不良 (dentinogenesis imperfecta) ?",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115022445,
@@ -122278,14 +122262,13 @@
       "number": 79,
       "question": "進行顳顎關節攝影時，如果射線與關節髁頭（condyle）之夾角如下，最可能獲得以下何種影像？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115022853,
@@ -126913,13 +126896,12 @@
       "question": "下列何者可診斷為牙本質發育不良 ( dentin dysplasia ) ?",
       "options": {
         "A": "A.",
-        "B": "",
-        "C": "",
-        "D": ""
+        "B": "B.",
+        "C": "C.",
+        "D": "D."
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115023083,
@@ -126933,14 +126915,13 @@
       "number": 70,
       "question": "下列那一唾液腺攝影圖像可以診斷為涎腺管炎 (sialodochitis) ?",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115023084,
@@ -126954,14 +126935,13 @@
       "number": 71,
       "question": "下列何者符合地中海型貧血（thalassemia）之影像學特徵？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "見圖 A",
+        "B": "見圖 B",
+        "C": "見圖 C",
+        "D": "見圖 D"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 115023085,

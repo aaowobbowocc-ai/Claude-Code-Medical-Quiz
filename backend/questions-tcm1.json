@@ -49472,15 +49472,13 @@
       "number": 5,
       "question": "5下列那些方均含麻黃、杏仁、甘草之組成藥物？①定喘湯  ②華蓋散  ③小青龍湯  ④大青龍湯",
       "options": {
-        "A": "①②③",
-        "B": "①②③",
-        "C": "①③④",
-        "D": "①②④"
+        "A": "(A) ①②③④",
+        "B": "(B) ①②④",
+        "C": "(C) ①③④",
+        "D": "(D) ②③④"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "parser_circled_number_collision"
+      "explanation": ""
     },
     {
       "id": 2473,
@@ -63176,14 +63174,13 @@
       "number": 53,
       "question": "依《本草備要》記載，下列何藥治大渴引飲，淋瀝不通，水腫浮大？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 3157,
@@ -63532,14 +63529,13 @@
       "number": 70,
       "question": "治心絞痛、胸痛之失笑散，係由下列何藥與蒲黃組成？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "[Image A]",
+        "B": "[Image B]",
+        "C": "[Image C]",
+        "D": "[Image D]"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 3174,
@@ -66371,14 +66367,13 @@
       "number": 50,
       "question": "依《本草備要》記載，下列何種藥材治傷寒鬱結無汗，陽明頭痛，發熱惡寒？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 3314,
@@ -66392,14 +66387,13 @@
       "number": 51,
       "question": "依《本草備要》記載，下列藥材何者能疏通血脈，宣導百藥，去營衛風寒，表虛自汗？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 3315,
@@ -66436,14 +66430,13 @@
       "number": 53,
       "question": "依《本草備要》記載，下列何種藥材能通行十二經八脈，利三焦，解六鬱？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 3317,
@@ -76195,14 +76188,13 @@
       "number": 61,
       "question": "下列那種藥物能補心脾、益氣血、養血安神？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 3804,
@@ -76216,14 +76208,13 @@
       "number": 62,
       "question": "下列何種藥物既用於治療潮熱盜汗，又用於治療肝脾腫大？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "鱉甲",
+        "B": "龜板",
+        "C": "牡蠣",
+        "D": "龍骨"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 3805,
@@ -77107,9 +77098,7 @@
         "D": "Monocyte"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image_dep"
+      "explanation": ""
     },
     {
       "id": 3849,
@@ -82924,18 +82913,16 @@
       "subject_name": "中醫基礎醫學(二)",
       "stage_id": 2,
       "number": 80,
-      "question": "下列何藥為治經痛要藥？",
+      "question": "A君在求診時被診斷有AIDS。基於個人因素，A君希望主治醫師不要將他的病情透露給其配偶知道。下列主治醫師的處置何者不適當？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "依法通報衛生主管單位",
+        "B": "與A君溝通，說服他向他的配偶說明病情",
+        "C": "若A君拒絕向配偶說明病情，可私下將實情告知A君的親友",
+        "D": "可請社工或心理師對A君提供諮詢或輔導"
       },
       "answer": "B",
       "explanation": "",
-      "id": 4139,
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "id": 4139
     },
     {
       "id": 4140,
@@ -84822,15 +84809,13 @@
       "number": 11,
       "question": "下列何者非柴胡疏肝散的藥物組成？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 4230,
@@ -84845,15 +84830,13 @@
       "number": 12,
       "question": "下列選項中何者為四神丸的君藥？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 4231,
@@ -88805,15 +88788,13 @@
       "number": 41,
       "question": "下列何種藥材用於外感風熱、發熱、頭昏頭痛等證？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 4419,
@@ -95445,14 +95426,12 @@
       "question": "如圖所示之藥物為下列何方劑的組成藥物之一？",
       "options": {
         "A": "抵當湯",
-        "B": "大定風珠",
+        "B": "大承氣湯",
         "C": "鱉甲煎丸",
         "D": "補陽還五湯"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image"
+      "explanation": ""
     },
     {
       "id": 4739,
@@ -99684,10 +99663,10 @@
       "number": 6,
       "question": "下列何藥物為五味消毒飲的君藥？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
       },
       "answer": "A",
       "explanation": "",
@@ -99745,10 +99724,10 @@
       "number": 59,
       "question": "下列何藥能用於梅核氣或噁心嘔吐、痰厥頭痛等症狀？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
       },
       "answer": "B",
       "explanation": "",

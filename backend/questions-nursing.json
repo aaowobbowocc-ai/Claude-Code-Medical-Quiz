@@ -116286,14 +116286,13 @@
       "number": 51,
       "question": "王先生與張女士同居三年，他們領養一個三歲小男孩，請問下列那一個家系圖符合前述狀況？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 3130,
@@ -142149,14 +142148,13 @@
       "number": 77,
       "question": "B 型肝炎例行檢測中，不包括下列那一項？",
       "options": {
-        "A": "",
-        "B": "HBsAg",
-        "C": "",
-        "D": "HBcAg"
+        "A": "HBsAg",
+        "B": "HBcAg",
+        "C": "HBeAg",
+        "D": "抗 HBs抗體"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114570,
@@ -150609,14 +150607,13 @@
       "number": 20,
       "question": "關於藥物儲存之原則，下列敘述何者不適當？",
       "options": {
-        "A": "",
-        "B": "Dulcolax Supp.須置於冰箱保存",
-        "C": "",
-        "D": "肝素使用後須置於冰箱保存"
+        "A": "Dulcolax Supp. 須置於冰箱保存",
+        "B": "肝素使用後須置於冰箱保存",
+        "C": "疫苗須置於冰箱保存",
+        "D": "抗生素未開封前須置於冰箱保存"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114992,
@@ -158253,15 +158250,13 @@
       "number": 1,
       "question": "有關穿脫隔離衣之敘述，下列何者正確？①隔離衣須完全覆蓋工作服且長度及膝者為佳 ②隔離衣使用後，正面、領口皆視為污染區 ③脫隔離衣時，須將隔離衣外面包裹在內側 ④脫下隔離衣後須立即洗手",
       "options": {
-        "A": "①①①",
-        "B": "①①②",
-        "C": "①①②",
-        "D": "①①②"
+        "A": "①②③",
+        "B": "②③④",
+        "C": "①③④",
+        "D": "①②④"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "parser_circled_number_collision"
+      "explanation": ""
     },
     {
       "id": 115373,
@@ -158635,15 +158630,13 @@
       "number": 20,
       "question": "下列那些症狀是Morphine 常見的副作用？①便秘 ②腹瀉 ③呼吸過慢 ④心率過快",
       "options": {
-        "A": "①①",
-        "B": "①②",
-        "C": "①①",
-        "D": "①②"
+        "A": "①③",
+        "B": "①④",
+        "C": "②③",
+        "D": "②④"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "parser_circled_number_collision"
+      "explanation": ""
     },
     {
       "id": 115392,
@@ -159258,15 +159251,13 @@
       "number": 51,
       "question": "有關臨終病人的生理反應，下列敘述何者正確？①由於循環功能減弱，皮膚發紺、蒼白，肢體末端變冷 ②由於呼吸肌肉無力，呼吸困難，因而臉部潮紅，體溫上升 ③心尖搏動比四肢脈搏更早消失 ④臉部肌肉鬆弛，出現希氏面容 ⑤聽覺功能是死亡前最先消失的知覺感官",
       "options": {
-        "A": "①①",
-        "B": "①②",
-        "C": "①①",
-        "D": "①②"
+        "A": "①②③",
+        "B": "①③④",
+        "C": "①④",
+        "D": "③④⑤"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "parser_circled_number_collision"
+      "explanation": ""
     },
     {
       "id": 115423,
@@ -160940,15 +160931,13 @@
       "number": 55,
       "question": "有關慢性阻塞性肺部疾病病人發生呼吸困難之護理措施，下列何者正確？①可以使用凡德里面罩（Venturi’s mask）給氧 ②可以使用鼻導管給氧 ③給與40%濃度的氧氣 ④維持平躺以促進舒適",
       "options": {
-        "A": "①①",
-        "B": "①①",
-        "C": "①②",
-        "D": "①②"
+        "A": "①②",
+        "B": "①③",
+        "C": "②④",
+        "D": "③④"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "parser_circled_number_collision"
+      "explanation": ""
     },
     {
       "id": 115507,
@@ -161662,15 +161651,13 @@
       "number": 11,
       "question": "下列何者為友善生產之概念？①產婦可決定生產陪伴者以獲支持  ②允許待產婦自由走動以促進舒適  ③建議使用止痛藥及麻醉劑降低不適  ④建議待產時禁食以降低生產風險",
       "options": {
-        "A": "①①",
-        "B": "①①",
-        "C": "①①",
-        "D": "①②"
+        "A": "①②",
+        "B": "①③",
+        "C": "②③",
+        "D": "①②④"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "parser_circled_number_collision"
+      "explanation": ""
     },
     {
       "id": 115543,

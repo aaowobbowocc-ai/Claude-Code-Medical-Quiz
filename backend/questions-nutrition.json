@@ -37996,17 +37996,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 23,
-      "question": "下列敘述何者錯誤？",
+      "question": "醣解作用（glycolysis）中，下列那些酵素催化之反應可生成 ATP？ ①phosphofructokinase ②phosphoglycerate kinase ③hexokinase ④pyruvate kinase",
       "options": {
-        "A": "油煙機之抽氣能力以能排氣至少80%為原則",
-        "B": "刀具、砧板保管箱應有紫外線殺菌設備",
-        "C": "器具、餐具及器皿洗滌消毒設備,至少應具備三槽式洗滌設備",
-        "D": "冷凍及冷藏設備之貯物容積宜在70%以下"
+        "A": "②④",
+        "B": "①③",
+        "C": "①②",
+        "D": "③④"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116639,
@@ -39468,17 +39466,15 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 13,
-      "question": "下列敘述何者錯誤？",
+      "question": "有關紅血球生成素（erythropoietin）的分泌調控，下列敘述何者錯誤？",
       "options": {
-        "A": "腰臀比與心血管疾病的發生率具相關性",
-        "B": "腰臀比與心血管疾病的發生率具相關性",
-        "C": "可利用 Deurenberg 公式預估體脂肪含量",
-        "D": "老年人的腰圍與體內胰島素的敏感性密切相關"
+        "A": "紅血球生成素主要在腎臟合成分泌",
+        "B": "缺鐵時會造成紅血球生成素分泌減少",
+        "C": "紅血球生成素的主要作用是促進紅血球產生",
+        "D": "紅血球生成素為促進紅血球生成的重要因素之一"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116549,
@@ -91469,10 +91465,10 @@
       "number": 27,
       "question": "團體膳食為確保食品衛生與安全，其相關管理制度有 HACCP、5S、SSOP、GHP、GMP 等，各 制度相互間的關係，下列圖示何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "(A) 圖示為金字塔階層，由上至下依序為：頂層 HACCP；中層 SS、GHP；底層 GMP、SSOP。",
+        "B": "(B) 圖示為金字塔階層，由上至下依序為：頂層 HACCP；中層 GMP、GHP；底層 SS、SSOP。",
+        "C": "(C) 圖示為金字塔階層，由上至下依序為：頂層 SSOP；中層 SS、GMP；底層 HACCP、GHP。",
+        "D": "(D) 圖示為金字塔階層，由上至下依序為：頂層 GHP；中層 SS、GMP；底層 HACCP、SSOP。"
       },
       "answer": "B",
       "explanation": ""

@@ -198931,9 +198931,7 @@
         "/question-images/radiology_1678_2.webp",
         "/question-images/radiology_1678_3.webp",
         "/question-images/radiology_1678_4.webp"
-      ],
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      ]
     },
     {
       "id": 1679,
@@ -201471,15 +201469,13 @@
       "number": 44,
       "question": "因神經內分泌瘤會大量表現體抑素受體，因此同位素標幟 DOTATOC之核醫造影可用於神經內分泌瘤之診 斷、分期及復發，DOTATOC之分子結構為下列何者？",
       "options": {
-        "A": "A.",
-        "B": "B.",
-        "C": "C.",
-        "D": "D."
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 1805,
@@ -208588,10 +208584,10 @@
       "number": 77,
       "question": "圖中影像f和kernel w進行correlation運算後，結果為下列何者？",
       "options": {
-        "A": "A.",
-        "B": "B.",
-        "C": "C.",
-        "D": "D."
+        "A": "0 0 0 0 0\n0 1 2 3 0\n0 4 5 6 0\n0 7 8 9 0\n0 0 0 0 0",
+        "B": "0 0 0 0 0\n0 9 8 7 0\n0 6 5 4 0\n0 3 2 1 0\n0 0 0 0 0",
+        "C": "0 0 0 0 0\n0 7 8 1 0\n0 4 5 4 0\n0 1 2 7 0\n0 0 0 0 0",
+        "D": "0 0 0 0 0\n0 3 2 1 0\n0 6 5 4 0\n0 9 8 7 0\n0 0 0 0 0"
       },
       "answer": "B",
       "explanation": "",
@@ -208601,9 +208597,7 @@
         "/question-images/radiology_2157_2.webp",
         "/question-images/radiology_2157_3.webp",
         "/question-images/radiology_2157_4.webp"
-      ],
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      ]
     },
     {
       "id": 2158,
@@ -248758,9 +248752,7 @@
         "D": "Al"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 3973,

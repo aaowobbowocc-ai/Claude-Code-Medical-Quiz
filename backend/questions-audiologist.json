@@ -3950,10 +3950,10 @@
     "number": 27,
     "question": "懷孕7 個月即早產之新生兒ABR 聽力篩檢未通過時,可以建議:",
     "options": {
-      "A": "執行ASSR",
-      "B": "高通濾波調整到30 Hz",
-      "C": "延後到著床後實際年齡40 週時再執行聽力篩檢 改到隔音室檢查",
-      "D": ""
+      "A": "執行 ASSR",
+      "B": "高通濾波調整到 30 Hz",
+      "C": "延後到足疾後實際年齡 40 週時再執行聽力篩檢",
+      "D": "改到隔音室檢查"
     },
     "answer": "C",
     "explanation": "",
@@ -4280,10 +4280,10 @@
     "number": 42,
     "question": "下列選項關於耳蝸電圖(ECochG)的臨床應用何者正確?1協助診斷梅尼爾氏症(Meniere’s disease)/",
     "options": {
-      "A": "內淋巴水腫(endolymphatic hydropsy) 2合併聽覺腦幹反應(ABR),用來找出第五波(wave V)",
-      "B": "的潛值(latency) 3合併聽覺腦幹反應(ABR)用於內耳手術監測顏面神經的功能(intraoperative",
-      "C": "monitoring) 4預估人工電子耳病患的聽力殘存狀況(hearing reserve)",
-      "D": ""
+      "A": "①②",
+      "B": "①④",
+      "C": "①②④",
+      "D": "①③④"
     },
     "answer": "C",
     "explanation": "",
@@ -4588,10 +4588,10 @@
     "number": 57,
     "question": "下列指引關於以聽性腦幹反應施行嬰幼兒聽力篩檢(guidelines of ABR test for auditory screening in",
     "options": {
-      "A": "infants & young children)的敘述何者錯誤?1應使用覆耳式耳機(supra-aural earphone) 2應使用",
-      "B": "慢速的刺激速率< 20 次/秒 3應使用噪音遮蔽(noise masking) 4分析的時間窗(analysis window",
-      "C": "time)10 毫秒(ms)",
-      "D": ""
+      "A": "(A) ①④",
+      "B": "(B) ②③",
+      "C": "(C) ①③④",
+      "D": "(D) ①②④"
     },
     "answer": "D",
     "explanation": "",
@@ -4698,10 +4698,10 @@
     "number": 63,
     "question": "下列耳聲傳射(otoacoustic emissions, OAE)何者不屬於誘發性耳聲傳射(evoked OAE, EOAE)?",
     "options": {
-      "A": "1刺激頻率耳聲傳射(stimulus-frquency OAE, SFOAE) 2變頻耳聲傳射(distortion product OAE,",
-      "B": "DPOAE) 3短聲耳聲傳射(transient-evoked OAE, TEOAE) 4自發性耳聲傳射(spontaneous OAE,",
-      "C": "SOAE)",
-      "D": ""
+      "A": "①",
+      "B": "④",
+      "C": "②③",
+      "D": "①④"
     },
     "answer": "B",
     "explanation": "",
@@ -8086,10 +8086,10 @@
     "number": 65,
     "question": "旋轉測試(rotational test)與搖頭測試(headshaking test)最主要的都是比較:",
     "options": {
-      "A": "潛時(latency)",
-      "B": "振幅(amplitudes)",
-      "C": "前庭頸椎反射(Vestibulocervical reflex, VCR) 前庭眼反射的增益與不對稱性",
-      "D": ""
+      "A": "潛時（latency）",
+      "B": "振幅（amplitudes）",
+      "C": "前庭頸椎反射（Vestibulocervical reflex, VCR）",
+      "D": "前庭眼反射的增益與不對稱性"
     },
     "answer": "D",
     "explanation": "",
@@ -9210,8 +9210,8 @@
     "options": {
       "A": "不受個案發展影響",
       "B": "不受麻醉藥物影響",
-      "C": "無需依靠完整的聽覺周邊(auditory peripheral) 無須個案注意力配合檢查",
-      "D": ""
+      "C": "無需依賴完整的聽覺周邊（auditory peripheral）",
+      "D": "無須個案注意力配合檢查"
     },
     "answer": "C",
     "explanation": "",
@@ -11298,10 +11298,10 @@
     "number": 53,
     "question": "60 歲男性,主訴雙側高頻持續耳鳴,經檢視耳膜及外耳均正常,純音聽檢結果如圖示,下列敘述何",
     "options": {
-      "A": "者錯誤?",
-      "B": "Frequency(KHz)",
-      "C": "0.5",
-      "D": ""
+      "A": "雙耳對稱高頻聽力損失，特別是 4000 Hz",
+      "B": "是典型的與年齡相關的聽力損失（age-related hearing loss）",
+      "C": "應密切注意噪音暴露相關職業史",
+      "D": "因沒有骨傳導檢查，無法確認是否單純為感音神經性聽損"
     },
     "answer": "B",
     "explanation": "",
@@ -12445,7 +12445,7 @@
       "A": "1/9",
       "B": "1/6",
       "C": "1/3",
-      "D": ""
+      "D": "3"
     },
     "answer": "A",
     "explanation": "",
@@ -15479,9 +15479,9 @@
     "question": "以下何種方式可以協助聾童發展良好的自我概念?",
     "options": {
       "A": "與成功聾人接觸",
-      "B": "經常與父母溝通互動 參與社交活動",
-      "C": "學習手語",
-      "D": ""
+      "B": "經常與父母溝通互動",
+      "C": "參與社交活動",
+      "D": "學習手語"
     },
     "answer": "A",
     "explanation": "",
@@ -15500,10 +15500,10 @@
     "number": 7,
     "question": "對於噪音性聽力損失的描述,下列那些正確?中年時期常出現的後天性傳導性聽力損失 患者",
     "options": {
-      "A": "經歷暫時性聽閾轉移(temporary threshold shift)時會造成低頻聽力損失 患者經歷暫時性聽閾轉",
-      "B": "移(temporary threshold shift)時常伴隨耳鳴 若長期暴露於噪音環境,可造成永久性聽閾轉移",
-      "C": "(permanent threshold shift) 永久性聽閾轉移(permanent threshold shift)常為高頻聽力損失",
-      "D": ""
+      "A": "①③⑤",
+      "B": "③④⑤",
+      "C": "②④⑤",
+      "D": "①②③"
     },
     "answer": "B",
     "explanation": "",
@@ -15544,10 +15544,10 @@
     "number": 9,
     "question": "對於老年性聽力損失(presbycusis)的描述,下列何者正確?男性發生率高於女性 無法使用藥",
     "options": {
-      "A": "物或手術治癒 周邊聽覺系統以及中樞聽覺神經均可能受損 不會影響中耳功能 配戴助聽",
-      "B": "器可改善具有音素退化(phonemic regression)的老年重聽者對語音的理解",
-      "C": "僅",
-      "D": ""
+      "A": "①②⑤",
+      "B": "②③④",
+      "C": "①②③",
+      "D": "①③⑤"
     },
     "answer": "C",
     "explanation": "",
@@ -15918,10 +15918,10 @@
     "number": 27,
     "question": "中耳炎(otitis media)是小兒常見的疾病之一,下列敘述那些比較正確?是造成聽力損失的主因",
     "options": {
-      "A": "之一 形成傳導性聽力損失 耳咽管功能失調,呈現AD型鼓室圖 中耳積水時呈B型鼓室圖",
-      "B": "痊癒過程期間可能是As型鼓室圖",
-      "C": "僅",
-      "D": ""
+      "A": "僅①②③",
+      "B": "①②④⑤",
+      "C": "②③④⑤",
+      "D": "①③④⑤"
     },
     "answer": "B",
     "explanation": "",
@@ -16468,10 +16468,10 @@
     "number": 53,
     "question": "語言專家用來評量兒童語言能力所採用的誘發方法,下列何者正確?自發性語言 語言模仿",
     "options": {
-      "A": "圖片刺激 系統觀察",
-      "B": "僅",
-      "C": "僅",
-      "D": ""
+      "A": "①",
+      "B": "①②",
+      "C": "①②③",
+      "D": "②③④"
     },
     "answer": "C",
     "explanation": "",
@@ -16534,10 +16534,10 @@
     "number": 56,
     "question": "聽力及中耳篩檢時常使用那些方法?純音聽力篩檢 聽阻聽力檢查 數字語言遞減測驗",
     "options": {
-      "A": "語音辨識測驗",
-      "B": "僅",
-      "C": "僅",
-      "D": ""
+      "A": "①②",
+      "B": "①③",
+      "C": "②④",
+      "D": "③④"
     },
     "answer": "A",
     "explanation": "",
@@ -16732,10 +16732,10 @@
     "number": 65,
     "question": "聽力師業務內容包含下列那些方面?聽覺系統評估 器質性聽覺評估 人工耳蝸手術 聽",
     "options": {
-      "A": "覺創健與復健 內耳前庭功能評估 聽覺輔助器使用評估",
-      "B": "僅",
-      "C": "僅",
-      "D": ""
+      "A": "①②③",
+      "B": "①③⑤⑥",
+      "C": "①②④⑤⑥",
+      "D": "①②④⑥"
     },
     "answer": "B",
     "explanation": "",
@@ -16842,10 +16842,10 @@
     "number": 70,
     "question": "有關聽覺說話法(auditory-oral approach)的說明,下列何者比較正確?強調聽覺訓練課程 運",
     "options": {
-      "A": "用不同視覺策略 讀話與聽覺訓練一起進行 使用口手標音法減少歧義現象 使用手語教學",
-      "B": "僅",
-      "C": "僅",
-      "D": ""
+      "A": "①⑤",
+      "B": "③④",
+      "C": "①②③④",
+      "D": "②③④⑤"
     },
     "answer": "C",
     "explanation": "",
@@ -17128,10 +17128,10 @@
     "number": 4,
     "question": "聽損者主動表達不清楚說者語意,請溝通對象改變速度及表達方式,是屬何種策略?",
     "options": {
-      "A": "加強溝通策略(facilitative communication strategy) 表達端修復策略(expressive repair strategy)",
-      "B": "接受端修復策略(receptive repair strategy)",
-      "C": "溝通不良策略(maladaptive strategy)",
-      "D": ""
+      "A": "加強溝通策略 (facilitative communication strategy)",
+      "B": "表達端修復策略 (expressive repair strategy)",
+      "C": "接受端修復策略 (receptive repair strategy)",
+      "D": "溝通不良策略 (maladaptive strategy)"
     },
     "answer": "C",
     "explanation": "",
@@ -20362,10 +20362,10 @@
     "number": 72,
     "question": "助聽器壓縮處理策略之一是增加配戴時的舒適感(compression to increase comfort),此時相關建議",
     "options": {
-      "A": "的組合以下那組最適當?1建議使用輸入控制壓縮處理(input-controlled compression) 2壓縮比建",
-      "B": "議值為大於1.5:1,但是需小於4:1 3壓縮閾值建議使用50 dB SPL 較為適當 4啟動壓縮時間與解",
-      "C": "除壓縮時間越短越好",
-      "D": ""
+      "A": "①④",
+      "B": "②③",
+      "C": "①②",
+      "D": "③④"
     },
     "answer": "C",
     "explanation": "",
@@ -25114,10 +25114,10 @@
     "number": 56,
     "question": "針對high frequency hearing loss 之患者,於neurodiagnostic ABR assessment 中,wave I 常不易辨識時,",
     "options": {
-      "A": "操作技巧當如何調整以增強wave I?1increase stimulus intensity",
-      "B": "2decrease stimulus intensity",
-      "C": "3faster stimulus rate 4slower stimulus rate",
-      "D": ""
+      "A": "①③",
+      "B": "①④",
+      "C": "②③",
+      "D": "②④"
     },
     "answer": "B",
     "explanation": "",
@@ -25576,10 +25576,10 @@
     "number": 78,
     "question": "下列有關變頻耳聲傳射(disortion product OAEs, DPOAEs)檢查的敘述正確者包括:1f2 與f1 的比",
     "options": {
-      "A": "值(f2/f1)越大,DPOAEs 反應就越大 2DPOAEs 反應不只會出現在比f2 頻率還低的頻帶 3在",
-      "B": "較弱的刺激音強範圍(如45 至65 dB SPL)L1 > L2 的設定所產生的DPOAEs 反應比L1 = L2 來得大",
-      "C": "123",
-      "D": ""
+      "A": "①②③",
+      "B": "①②",
+      "C": "②③",
+      "D": "①③"
     },
     "answer": "C",
     "explanation": "",
@@ -27600,10 +27600,10 @@
     "number": 10,
     "question": "請用以下選項回答下列問題:1電氣眼振圖(Electronystagmography, ENG)  2影像眼振圖",
     "options": {
-      "A": "(Videonystagmography, VNG)  3動態重心動搖儀(dynamic posturography)  4旋轉椅(rotation",
-      "B": "chair)",
-      "C": "上列何者最容易受到電磁波干擾?",
-      "D": ""
+      "A": "①",
+      "B": "②",
+      "C": "③",
+      "D": "④"
     },
     "answer": "A",
     "explanation": "",
@@ -31824,10 +31824,10 @@
     "number": 47,
     "question": "那一種聽力損失型態的個案最不會出現語音聽辨困難?",
     "options": {
-      "A": "感音神經性聽力損失 傳導性聽力損失",
-      "B": "混合性聽力損失",
-      "C": "中樞性聽力損失",
-      "D": ""
+      "A": "感音神經性聽力損失",
+      "B": "傳導性聽力損失",
+      "C": "混合性聽力損失",
+      "D": "中樞性聽力損失"
     },
     "answer": "B",
     "explanation": "",
@@ -32484,10 +32484,10 @@
     "number": 78,
     "question": "典型的聽神經病變(AN/AD)個案被診斷時,不會出現下列那一個檢查結果?",
     "options": {
-      "A": "中耳鼓室圖及聽反射閾值結果皆在正常範圍內 ABR 結果異常或無反應",
-      "B": "OAE 反應在正常範圍內",
-      "C": "噪音下語詞聽辨能力差",
-      "D": ""
+      "A": "中耳鼓室圖及聽反射閾值結果皆在正常範圍內",
+      "B": "ABR結果異常或無反應",
+      "C": "OAE反應在正常範圍內",
+      "D": "噪音下語詞聽辨能力差"
     },
     "answer": "A",
     "explanation": "",
@@ -35124,10 +35124,10 @@
     "number": 42,
     "question": "手術放置鼓室通氣管(PE tube),當手術前後以鼓室圖(tympanogram)測量外耳道體積(Vea: ear",
     "options": {
-      "A": "canal volume),下列發現何者正確?",
-      "B": "手術後的Vea 會增加 手術後的Vea 會減少 手術前後Vea 相同",
-      "C": "手術後無法測量Vea",
-      "D": ""
+      "A": "手術後的 Vea 會增加",
+      "B": "手術後的 Vea 會減少",
+      "C": "手術前後 Vea 相同",
+      "D": "手術後無法測量 Vea"
     },
     "answer": "A",
     "explanation": "",
@@ -35190,10 +35190,10 @@
     "number": 46,
     "question": "如下圖純音聽力檢查結果,預測其聽反射的表現分別是:(右耳對側):(左耳對側):(右耳同",
     "options": {
-      "A": "側):(左耳同側),下列選項何者正確?",
-      "B": "(有反應):(有反應):(有反應):(有反應)(有反應):(無反應):(有反應):(無反應)",
-      "C": "(無反應):(有反應):(無反應):(有反應)(無反應):(無反應):(無反應):(無反應)",
-      "D": ""
+      "A": "（有反應）：（有反應）：（有反應）：（無反應）",
+      "B": "（有反應）：（無反應）：（有反應）：（無反應）",
+      "C": "（無反應）：（有反應）：（無反應）：（有反應）",
+      "D": "（無反應）：（無反應）：（無反應）：（無反應）"
     },
     "answer": "C",
     "explanation": "",
@@ -35212,10 +35212,10 @@
     "number": 47,
     "question": "如圖純音聽力檢查結果,其聽反射的表現分別是:(右耳對側):(左耳對側):(右耳同側):",
     "options": {
-      "A": "(左耳同側),下列何者正確?",
-      "B": "(有反應):(有反應):(有反應):(有反應)(有反應):(無反應):(有反應):(無反應)",
-      "C": "(無反應):(有反應):(無反應):(有反應)(無反應):(無反應):(無反應):(無反應)",
-      "D": ""
+      "A": "(有反應)：(有反應)：(有反應)：(有反應)",
+      "B": "(有反應)：(有反應)：(無反應)：(無反應)",
+      "C": "(無反應)：(無反應)：(有反應)：(有反應)",
+      "D": "(無反應)：(無反應)：(無反應)：(無反應)"
     },
     "answer": "D",
     "explanation": "",
@@ -36224,10 +36224,10 @@
     "number": 14,
     "question": "研究者常使用問卷來測量聽損者的溝通需求及對話流暢度,請問下列何者是其缺點?",
     "options": {
-      "A": "無法量化提供的訊息",
-      "B": "可能遺漏個別化的資料 參加意願不佳",
-      "C": "計分耗時",
-      "D": ""
+      "A": "物體恆存概念應分切為以視覺出發、第一個表達性詞彙",
+      "B": "因果關係應分切為第一個詞彙、以口語表達的「想要」詞彙",
+      "C": "手段目的（means-end）的發展與口語意圖發展成正相關",
+      "D": "遊戲與 9-10 月幼兒的不動詞溝通發展有關"
     },
     "answer": "B",
     "explanation": "",
@@ -37698,10 +37698,10 @@
     "number": 1,
     "question": "在實證研究為導向的治療(evidenced-based practice)決策過程中,聽力師可採用以下5 個步驟,請",
     "options": {
-      "A": "選出正確順序:1搜尋最佳實證研究報告 2計畫執行後的表現評鑑 3提出直接問題 4統合研",
-      "B": "究結果、專業判斷與個案需求 5嚴謹評估實驗研究的證據",
-      "C": "3→1→5→4→2 3→5→1→4→2 3→5→1→2→4 1→3→4→5→2",
-      "D": ""
+      "A": "①→⑤→④→②",
+      "B": "③→①→⑤→④→②",
+      "C": "③→⑤→①→②→④",
+      "D": "①→③→④→⑤→②"
     },
     "answer": "A",
     "explanation": "",
@@ -39304,10 +39304,10 @@
     "number": 80,
     "question": "下列那些刺激可在人類引起前庭誘發肌電位(vestibular-evoked myogenic potentials, VEMP)?1經",
     "options": {
-      "A": "乳突直流電刺激(galvanic stimulation) 2頭骨骨導震動刺激(bone-conduction vibration) 3經",
-      "B": "耳朵聲音刺激(acoustic stimuli)",
-      "C": "123",
-      "D": ""
+      "A": "①②③",
+      "B": "②③",
+      "C": "①③",
+      "D": "③"
     },
     "answer": "A",
     "explanation": "",
@@ -39524,10 +39524,10 @@
     "number": 10,
     "question": "平坦塞入增益的耦合器反應曲線(coupler response for flat insertion gain, CORFIG)轉換函數包括以下",
     "options": {
-      "A": "那幾個數值?1真耳未配戴增益(real-ear unaided gain, REUG) 2真耳耦合器差值(real-ear to",
-      "B": "coupler difference, RECD) 3麥克風位置效應(microphone location effects, MLE) 4真耳塞入增",
-      "C": "益(real-ear insertion gain, REIG)",
-      "D": ""
+      "A": "①④",
+      "B": "①②",
+      "C": "①②③",
+      "D": "②③④"
     },
     "answer": "C",
     "explanation": "",
@@ -39810,10 +39810,10 @@
     "number": 23,
     "question": "使用功能性增益(functional gain)來驗證非線性壓縮助聽器,下列敘述何者不適當?",
     "options": {
-      "A": "會高估助聽器對一般對話音量的增益量",
+      "A": "功能性增益的測量，其優點是諮詢室環境的測量",
       "B": "會低估助聽器對大聲輸入位階的增益量",
-      "C": "只能得到幾個聽檢頻率而不是寬頻率範圍的結果 無法得知助聽器的最大輸出聲壓值",
-      "D": ""
+      "C": "只能得到助聽器整體運作的結果，而無法得知壓縮的結果",
+      "D": "無法取得助聽器的最大輸出聲壓值"
     },
     "answer": "B",
     "explanation": "",
@@ -42780,10 +42780,10 @@
     "number": 7,
     "question": "下列關於耳蝸下行神經支配(efferent innervation)的敘述,何者錯誤?",
     "options": {
-      "A": "由上橄欖核經olivocochlear bundle 至科蒂氏器 神經元終端主要神經傳導物質為乙醯膽鹼",
-      "B": "沒有連接內毛細胞",
-      "C": "突觸直接連接外毛細胞",
-      "D": ""
+      "A": "由上橄欖核經 olivocochlear bundle 至科蒂氏器",
+      "B": "神經元終端主要神經傳導物質為乙醯膽鹼",
+      "C": "沒有連接內毛細胞",
+      "D": "突觸直接連接外毛細胞"
     },
     "answer": "C",
     "explanation": "",
@@ -44364,10 +44364,10 @@
     "number": 1,
     "question": "在聽性腦幹反應的神經診斷(neurodiagnostic ABR, nABR)中,針對高頻聽損患者,其wave I 常不",
     "options": {
-      "A": "易辨識,而造成醫師判讀上之偽陽性。臨床聽力師當如何調整操作技巧以增強wave I 之顯現與辨",
-      "B": "識,下列選項何者最正確?1嘗試改變click stimulus polarity 2增加click stimulus 之強度 3降低",
-      "C": "click stimulus 之速率 4增加click stimulus 之速率",
-      "D": ""
+      "A": "①②",
+      "B": "①③",
+      "C": "②④",
+      "D": "③④"
     },
     "answer": "C",
     "explanation": "",
@@ -49050,10 +49050,10 @@
     "number": 58,
     "question": "有關搖頭眼振(head-shaking nystagmus)的敘述,下列組合何者最正確?1病人主動或被動地左",
     "options": {
-      "A": "右來回搖頭約10 秒後停止,以觀察有無眼振 2檢查時讓病人戴Frenzel 氏眼鏡可去除注視抑制",
-      "B": "(fixation suppression)以利觀察 3產生眼振的機轉與中樞速率儲存機制(central velocity-storage",
-      "C": "mechanism)有關 4可測試單側迷路功能喪失的病患",
-      "D": ""
+      "A": "①②③",
+      "B": "②③④",
+      "C": "①②④",
+      "D": "①③④"
     },
     "answer": "D",
     "explanation": "",
@@ -49138,10 +49138,10 @@
     "number": 64,
     "question": "對於處理急性前庭功能損失(acute vestibular deficits)病患的原則如下,下列組合何者最正確?",
     "options": {
-      "A": "1即便在發病初期,前庭系統就已開始產生適應現象 2一般病患在2-3 天後即可以開始活動以利早",
-      "B": "期適應 3應儘早鼓勵患者轉動頭部及利用視覺來適應 4如果患者一開始活動便嘔吐不已,仍應",
-      "C": "繼續活動",
-      "D": ""
+      "A": "①②③",
+      "B": "②③④",
+      "C": "①③④",
+      "D": "①②④"
     },
     "answer": "C",
     "explanation": "",
@@ -69476,10 +69476,10 @@
     "number": 20,
     "question": "多大的嬰幼兒可有效施測VRA,且最不易習慣化(habituation)?",
     "options": {
-      "A": "足月出生後5~6 個月 矯正年齡6 個月",
-      "B": "足月出生後1 歲",
-      "C": "足月出生後2 歲",
-      "D": ""
+      "A": "足月出生後 5～6 個月，但矯正年齡 6 個月",
+      "B": "足月出生後 1 歲",
+      "C": "足月出生後 1 歲",
+      "D": "足月出生後 2 歲"
     },
     "answer": "A",
     "explanation": "",
@@ -70672,10 +70672,10 @@
     "number": 76,
     "question": "下列何者為新生兒出現漸進性或遲發性聽損的高危險因子?1顱顏異常 2住新生兒加護病房超過",
     "options": {
-      "A": "48 小時 3反覆中耳炎超過3 個月 4高膽紅素血症 5家族有先天永久性聽損病史",
-      "B": "1345",
-      "C": "2345",
-      "D": ""
+      "A": "①③④⑤",
+      "B": "②③④⑤",
+      "C": "①②",
+      "D": "僅②④"
     },
     "answer": "C",
     "explanation": "",
@@ -71890,10 +71890,10 @@
     "number": 54,
     "question": "關於聽力檢查使用的TDH-49 耳機,若以語音為刺激音,其校準基準值,即0 dB HL,相當於多少",
     "options": {
-      "A": "dB SPL?",
-      "B": "6.5",
-      "C": "7.5",
-      "D": ""
+      "A": "6.5",
+      "B": "7.5",
+      "C": "20",
+      "D": "55"
     },
     "answer": "D",
     "explanation": "",
@@ -74947,10 +74947,10 @@
     "number": 39,
     "question": "關於老化聽損(presbycusis)的敘述,下列何者正確?",
     "options": {
-      "A": "典型症狀為雙側緩慢退化的感音神經性聽力損失,常伴隨耳鳴及眩暈症狀",
-      "B": "語詞聽辨能力比純音聽閾的退步更緩慢",
-      "C": "可細分為感音性(sensory)、神經性(neural)、血管紋性(strial)三種",
-      "D": ""
+      "A": "屬於感覺神經性聽力損失，常伴隨耳鳴及眩暈症狀",
+      "B": "語詞辨識能力差於純音聽閾的退化是其特徵",
+      "C": "可細分為感音性（sensory）、神經性（neural）、血管紋性（strial）三種",
+      "D": "1,000 Hz 純音聽閾退步速度以女性較快，6,000 Hz 至 12,000 Hz 純音聽閾退步速度以男性較快"
     },
     "answer": "C",
     "explanation": "",
@@ -75337,10 +75337,10 @@
     "number": 57,
     "question": "下列何種失語症類型不會伴隨閱讀理解困難?",
     "options": {
-      "A": "沃尼克氏失語症",
-      "B": "命名不能型失語症",
-      "C": "經皮質感覺型失語症 混合型失語症",
-      "D": ""
+      "A": "20 dB HL 以上",
+      "B": "21 dB HL 以上",
+      "C": "24 dB HL 以上",
+      "D": "25 dB HL 以上"
     },
     "answer": "A",
     "explanation": "",
@@ -75425,10 +75425,10 @@
     "number": 62,
     "question": "關於兒童之言語失用症(apraxia of speech)的評估,不包括下列何者?",
     "options": {
-      "A": "句子仿說",
+      "A": "動作模仿",
       "B": "大聲朗讀",
-      "C": "仿說音長一樣的單字 自發性說話",
-      "D": ""
+      "C": "仿說音長一樣的單字",
+      "D": "自發性說話"
     },
     "answer": "C",
     "explanation": "",
@@ -75555,10 +75555,10 @@
     "number": 68,
     "question": "關於Usher’s syndrome 之敘述,下列何者正確?",
     "options": {
-      "A": "是一種聽覺與視覺系統基因異常所造成之疾病 發生率大約是每10 萬人有10 到20 人",
-      "B": "為非漸進式之病程",
-      "C": "其特質是輕度至中度的感音神經性聽力損失",
-      "D": ""
+      "A": "是一種聽覺與視覺系統基因異常所造成之疾病",
+      "B": "發生率大約是每 10 萬人有 10 到 20 人",
+      "C": "為非漸進式之病程",
+      "D": "其特質是重度至中度的感音神經性聽力損失"
     },
     "answer": "A",
     "explanation": "",

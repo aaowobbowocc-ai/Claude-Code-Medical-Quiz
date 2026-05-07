@@ -140,15 +140,24 @@ for (const [key, cfg] of Object.entries(examConfigs)) {
       }
     }
 
-    // Use stages from JSON data if available (from classification), otherwise from config
-    let stages = raw.stages && raw.stages.length > 0
-      ? [{ id: 0, tag: 'all', name: '隨機混合' }, ...raw.stages.filter(s => s.count > 0)]
-      : cfg.stages || [{ id: 0, tag: 'all', name: '全部' }];
-    if (!raw.stages && (!cfg.stages || cfg.stages.length <= 1) && papers.length > 1) {
+    // Prefer cfg.stages — config is authoritative (frontend reads cfg.stages
+    // via /exam-registry, so backend MUST agree on stage_id→tag mapping).
+    // Fall back to JSON's embedded stages only when cfg has none. Bug 2026-05-07:
+    // doctor1 had stale JSON.stages with shifted ids (id=7→parasitology) that
+    // disagreed with cfg.stages (id=7→pharmacology) — selecting 藥理學 returned
+    // 148 寄生蟲學 questions. Same drift on doctor2/dental1/dental2/pharma2.
+    let stages
+    if (cfg.stages && cfg.stages.length > 1) {
+      stages = cfg.stages
+    } else if (raw.stages && raw.stages.length > 0) {
+      stages = [{ id: 0, tag: 'all', name: '隨機混合' }, ...raw.stages.filter(s => s.count > 0)]
+    } else if ((!cfg.stages || cfg.stages.length <= 1) && papers.length > 1) {
       stages = [
         { id: 0, tag: 'all', name: '全部' },
         ...papers.map(p => ({ id: p.id, tag: p.id, name: `${p.name}`, subjects: p.subjects })),
-      ];
+      ]
+    } else {
+      stages = cfg.stages || [{ id: 0, tag: 'all', name: '全部' }]
     }
 
     examData[key] = {

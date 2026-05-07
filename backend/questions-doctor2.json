@@ -152259,8 +152259,9 @@
         "C": "趴姿（prone position）目前建議應用在持續血氧過低ARDS 病人",
         "D": "使用吸入性一氧化氮（Inhaled NO）目前可以應用在持續血氧過低ARDS 病人，但對於死亡率沒有影響"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,B,C",
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115026016,
@@ -152299,8 +152300,9 @@
         "C": "早期服用抗病毒藥物（如acyclovir）可降低發生疱疹後神經痛（post-herpetic neuralgia）的機率",
         "D": "口服類固醇為絕對禁忌"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115026018,
@@ -152379,10 +152381,11 @@
         "C": "Randot Stereo Test",
         "D": "大弱視鏡（major amblyoscope）例如：synoptophore"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
       "incomplete": false,
-      "gap_reason": "empty_options"
+      "gap_reason": "empty_options",
+      "disputed": true
     },
     {
       "id": 115026022,
@@ -153083,8 +153086,9 @@
         "C": "-agonist medications",
         "D": "α"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115026055,
@@ -153205,8 +153209,9 @@
         "C": "分期（stage）比照子宮內膜癌",
         "D": "復發時採用化學治療效果良好"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115026061,
@@ -153713,7 +153718,7 @@
         "C": "病人cortisol 23.3 μg/dL，ACTH 13.9 pg/mL，因此病因不是cortisol deficiency",
         "D": "病人hsTSH 66.7 μIU/mL，因此病因為hyperthyroidism"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -153753,7 +153758,7 @@
         "C": "胰臟頭部癌",
         "D": "急性肝炎"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -153773,7 +153778,7 @@
         "C": "個體對酒精性肝病之易感性與許多酒精代謝酶以及基因多型性有關",
         "D": "酒精性肝硬化患者比病毒性肝硬化患者易產生蜘蛛痣（spider angioma）"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -153833,7 +153838,7 @@
         "C": "抽血檢查RF 及ANA",
         "D": "右膝關節液的檢查"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -153853,7 +153858,7 @@
         "C": "nonseminomatous germ cell tumor",
         "D": "non-small cell lung cancer"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -153875,7 +153880,7 @@
         "C": "serum G-6-PD",
         "D": "serum ANA"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": "",
       "gap_reason": "empty_options"
     },
@@ -153896,7 +153901,7 @@
         "C": "經給予廣效性抗生素，大部分病人在7 天內可改善，並脫離呼吸器",
         "D": "死亡率約在26～44%間，且大多非因肺部原因而死亡"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -153916,7 +153921,7 @@
         "C": "尿毒症（uremia）",
         "D": "肺栓塞（pulmonary embolism）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -153936,7 +153941,7 @@
         "C": "心理性飲水過量",
         "D": "腎原性尿崩症"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -153956,7 +153961,7 @@
         "C": "甲釋素刺激試驗（TRH stimulation test）",
         "D": "18FDG 正子斷層攝影（18FDG-PET/CT）"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -153976,7 +153981,7 @@
         "C": "Burkholderia pseudomallei",
         "D": "Coxiella burnetii"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -153996,7 +154001,7 @@
         "C": "ampicillin",
         "D": "vancomycin"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": "",
       "case_context": "第 15 題：一位25 歲男性病人，平日身體健康，喜歡野外旅遊，10 天前剛從澎湖旅遊回到臺中，2 天前開始出現發燒、倦怠感及頭痛，前往某診所就診後，服用一些感冒藥但並未退燒，於是到某醫院就診，血液檢查發現白血球：3600/μL、AST：120 IU/L、ALT：80 IU/L，於右側腋窩附近發現有一焦痂（eschar）。請問最有可能的致病原為何？",
       "incomplete": false,
@@ -154040,8 +154045,9 @@
         "C": "Budd-Chiari syndrome",
         "D": "腎病症候群"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115026102,
@@ -154060,7 +154066,7 @@
         "C": "ketoacidosis",
         "D": "salicylate intoxication"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": "",
       "gap_reason": "empty_options"
     },
@@ -154081,7 +154087,7 @@
         "C": "約有50%可在腸道發現憩室（diverticula）",
         "D": "動脈血氧分壓約70-75 毫米汞柱"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -154101,7 +154107,7 @@
         "C": "憂鬱",
         "D": "尿失禁"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -154141,7 +154147,7 @@
         "C": "自體免疫性疾病（如：SLE、RA）",
         "D": "風濕熱"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -154161,7 +154167,7 @@
         "C": "肺動脈高壓症（pulmonary hypertesion）",
         "D": "鬱血性心衰竭（congestive heart failure）"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -154181,7 +154187,7 @@
         "C": "肺心症（cor pulmonale）",
         "D": "急性冠狀動脈症候群（acute coronary syndrome）"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -154201,7 +154207,7 @@
         "C": "主動脈瓣狹窄（aortic stenosis）",
         "D": "主動脈瓣閉鎖不全（aortic insufficiency or regurgitation）"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -154221,7 +154227,7 @@
         "C": "本病人如未積極治療，存活率大約一年半至兩年",
         "D": "心臟瓣膜氣球擴張術是本病人治療的首選方法"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -154241,7 +154247,7 @@
         "C": "圖C",
         "D": "圖DLeft ventricular volume"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026111_0.webp"
@@ -154265,7 +154271,7 @@
         "C": "hemorrhagic E. coli",
         "D": "Salmonella"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026112_0.webp"
@@ -154289,7 +154295,7 @@
         "C": "Gilbert’s syndrome",
         "D": "Rotor’s syndrome"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -154309,7 +154315,7 @@
         "C": "①④",
         "D": "②③"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -154369,7 +154375,7 @@
         "C": "captopril",
         "D": "penicillin"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -154391,7 +154397,7 @@
         "C": "＜7.0 %",
         "D": "＜8.0 %"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -154411,7 +154417,7 @@
         "C": "微小變化腎病",
         "D": "IgA 腎病"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -154431,7 +154437,7 @@
         "C": "高鉀血症",
         "D": "低鉀血症"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -154471,7 +154477,7 @@
         "C": "有無使用維生素D",
         "D": "有無使用類固醇"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -154491,7 +154497,7 @@
         "C": "這些病人的貧血大多數是低色素小球型貧血（hypochromic microcytic anemia）",
         "D": "矯正時，這些病人的血比容（hematocrit）應控制在36-38%"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -154511,7 +154517,7 @@
         "C": "鉀離子之補充加入生理食鹽水（normal saline）比加入5%葡萄糖要好",
         "D": "需密切監測血鉀，以避免反彈性高血鉀"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -154531,7 +154537,7 @@
         "C": "僵直性脊椎炎合併後房葡萄膜炎（posterior uveitis）及SLE 合併視網膜病變",
         "D": "乾癬性關節炎合併鞏膜炎及僵直性脊椎炎合併前房葡萄膜炎（anterior uveitis）"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -154573,7 +154579,7 @@
         "C": "干擾素-α (Interferon-α)",
         "D": "轉化生長因子-β (Transforming Growth Factor-β)"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -154595,7 +154601,7 @@
         "C": "avascular bone necrosis",
         "D": "tenosynovitis"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "",
       "gap_reason": "empty_options"
     },
@@ -154616,7 +154622,7 @@
         "C": "骨掃描",
         "D": "PET 掃描"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -154636,7 +154642,7 @@
         "C": "serum iron",
         "D": "serum Hb electrophoresis"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -154680,7 +154686,7 @@
         "C": "切除迴盲腸的腫瘤（ileocecal mass）",
         "D": "用長效型octreotide"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -154700,7 +154706,7 @@
         "C": "complication of thrombosis",
         "D": "iron deficiency"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -154742,7 +154748,7 @@
         "C": "病人常出現瀰漫性血管內凝血（DIC）",
         "D": "最適當的誘導性治療為tretinoin（all-trans retinoic acid）加anthracycline 化學治療"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -154782,7 +154788,7 @@
         "C": "一旦罹患多重抗藥性，仍可使用標準藥物合併治療，於六個月內完治",
         "D": "臺灣因為過去抗生素濫用，產生許多超級抗藥結核病（XDRTB），每年約占新結核病個案的1 %，成為嚴重的公衛問題"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -154802,7 +154808,7 @@
         "C": "第一期非小細胞肺癌病人的五年存活率約60-80 %",
         "D": "第IA 期病人術後輔助化學治療（adjuvant chemotherapy）有存活上的好處"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -154842,7 +154848,7 @@
         "C": "肋膜液白血球＞10000/mm3 應引流治療",
         "D": "肋膜液葡萄糖＜60 mg/dL 應引流治療"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -154884,7 +154890,7 @@
         "C": "MEN 2A 與MEN 2B 都是RET 致癌基因之突變所致",
         "D": "對於MEN 2，在嬰幼兒期作全甲狀腺切除手術，大多有助於減少因甲狀腺髓質癌之死亡"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -154906,7 +154912,7 @@
         "C": "伴有智能不足",
         "D": "伴有上顎缺損"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -154928,7 +154934,7 @@
         "C": "85 mg/dL",
         "D": "130 mg/dL"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -154970,7 +154976,7 @@
         "C": "erythromycin (紅黴素)",
         "D": "oxacillin (苯唑西林)"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -154992,7 +154998,7 @@
         "C": "Salmonella spp.",
         "D": "Vibrio parahemolyticus"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -155012,7 +155018,7 @@
         "C": "發病2 至4 天後，皮膚上會出現柯氏斑點（Koplik’s spots）以及紅疹，由頭部向下移至軀幹",
         "D": "施打MMR 疫苗可以用來預防麻疹、流行性腮腺炎（mumps）以及德國麻疹（rubella）"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -155032,7 +155038,7 @@
         "C": "此個案多重用藥不會增加跌倒危險性",
         "D": "此個案不需考慮其他醫源性問題"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -155072,7 +155078,7 @@
         "C": "皆需檢查總膽固醇及血糖",
         "D": "衛教腳踏車、機車安全帽之使用"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -155112,7 +155118,7 @@
         "C": "clonazepam",
         "D": "venlafaxine"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -155134,7 +155140,7 @@
         "C": "根據Mini-Cog test（畫鐘測試及three-item recall）判讀，胡女士有失智症",
         "D": "胡女士容易忘東忘西，臨床上屬於輕度認知功能異常"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -155154,7 +155160,7 @@
         "C": "血液生化檢查",
         "D": "疫苗接種"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -155194,7 +155200,7 @@
         "C": "橫膈疝脫（diaphragmatic hernia）",
         "D": "空洞性肺癌（cystic lung carcinoma）"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026157_0.webp",
@@ -155243,7 +155249,7 @@
         "C": "-36°C",
         "D": "32-34°C"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -155287,7 +155293,7 @@
         "C": "Naloxone",
         "D": "Flumazenil"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -155329,7 +155335,7 @@
         "C": "仔細的解釋與良好的溝通技巧，有助於避免醫療糾紛",
         "D": "依據醫療法第63 條規定，緊急情況可以不用取得同意書"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -155697,8 +155703,9 @@
         "C": "問她身體部位，不會用手比",
         "D": "不會說「不」"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115026182,
@@ -156969,7 +156976,7 @@
         "C": "主要治療方法是vancomycin 靜脈注射",
         "D": "電腦斷層上的表現主要是結腸壁變厚和水腫以及有腹水產生"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157029,7 +157036,7 @@
         "C": "屬於第一級出血性休克，可採1000 毫升濃縮式紅血球（packed red blood cells）灌注",
         "D": "屬於第二級出血性休克，可採1000 毫升濃縮式紅血球（packed red blood cells）灌注"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -157049,7 +157056,7 @@
         "C": "5",
         "D": "6"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -157069,7 +157076,7 @@
         "C": "清創後縫合傷口，再給予局部抗生素治療",
         "D": "對傷口重複清創，給予局部或全身性抗生素治療，待控制住感染後再行縫合傷口或植皮"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -157089,7 +157096,7 @@
         "C": "30 天",
         "D": "1 年"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -157109,7 +157116,7 @@
         "C": "正確使用預防性抗生素就不必注意皮膚的消毒",
         "D": "沒有明顯細菌污染或植入物之低風險清潔傷口（clean wound）手術，可以不必使用預防性抗生素"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157129,7 +157136,7 @@
         "C": "抽血檢驗血糖，並控制血糖",
         "D": "測量血壓，並維持正常血壓"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -157149,7 +157156,7 @@
         "C": "心輸出量",
         "D": "混合靜脈血氧飽和度"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -157169,7 +157176,7 @@
         "C": "室管膜瘤（ependymoma）",
         "D": "髓母細胞瘤（medulloblastoma）"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157189,7 +157196,7 @@
         "C": "type 2 的患者，顱內常併多發的腦膜瘤（multicentric meningioma）",
         "D": "type 1 常有雙側聽神經瘤（acoustic schwannoma）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -157209,7 +157216,7 @@
         "C": "胚組織瘤（germinoma）",
         "D": "內胚層竇腫瘤（endodermal sinus tumor）"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -157229,7 +157236,7 @@
         "C": "黑色素細胞瘤（melanoma）",
         "D": "星狀細胞瘤（astrocytoma）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -157249,7 +157256,7 @@
         "C": "蜘蛛網膜（arachnoid）",
         "D": "腦血管"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157269,7 +157276,7 @@
         "C": "頸椎",
         "D": "腰椎"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -157289,7 +157296,7 @@
         "C": "①①②",
         "D": "僅①①①"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026258_0.webp"
@@ -157313,12 +157320,13 @@
         "C": "extensor pollicis brevis 跟adductor pollicis",
         "D": "abductor pollicis longus 跟extensor pollicis brevis"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026259_0.webp"
       ],
-      "image_dependent": true
+      "image_dependent": true,
+      "disputed": true
     },
     {
       "id": 115026260,
@@ -157337,7 +157345,7 @@
         "C": "初期可以施用副木治療",
         "D": "手術是切斷腕橫韌帶（transverse carpal ligament）"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -157357,7 +157365,7 @@
         "C": "高壓電電傷與一般的燒傷很類似，較少穿透到深部組織造成傷害",
         "D": "肌肉受傷可能會造成橫紋肌溶解，釋放myoglobin 造成obstructive nephropathy"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -157397,7 +157405,7 @@
         "C": "complete hand 截斷",
         "D": "多指截斷"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -157417,7 +157425,7 @@
         "C": "非冠狀動脈瓣（non coronary cusp）脫垂",
         "D": "凡撒爾氏竇瘤（sinus valsalva aneurysm）之發生"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157437,7 +157445,7 @@
         "C": "①①",
         "D": "僅①"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -157457,7 +157465,7 @@
         "C": "①①",
         "D": "僅①"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -157477,7 +157485,7 @@
         "C": "急性心肌梗塞合併梗塞後心室中隔破裂",
         "D": "三條冠狀動脈堵塞合併心室收縮功能不良"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -157497,7 +157505,7 @@
         "C": "Stage IIIb 之肺癌以化學及放射治療為主",
         "D": "bronchoalveolar cell carcinoma 不適合手術"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -157537,7 +157545,7 @@
         "C": "肺結核引起的結節",
         "D": "病人有愛滋病"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -157557,7 +157565,7 @@
         "C": "大部分病人以內科治療即可",
         "D": "大部分病人需以開刀治療才可痊癒"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157577,7 +157585,7 @@
         "C": "食道鋇劑攝影（barium esophagram）",
         "D": "胃鏡檢查"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157597,7 +157605,7 @@
         "C": "age",
         "D": "multifocal tumors"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -157637,7 +157645,7 @@
         "C": "身體質量指數（body mass index）大於40 kg/m2",
         "D": "身體體表面積（body surface area）大於2.0 m2"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157657,7 +157665,7 @@
         "C": "此類肝腫瘤對於手術切除，無線電射頻消融（RFA）或是經動脈化學栓塞治療（TACE）都是可以考慮的治療選項",
         "D": "有些病人會出現荷爾蒙相關症狀，此時長效somatostatin analogues 會有幫助"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157677,7 +157685,7 @@
         "C": "高血鈣",
         "D": "內視鏡逆行性膽道胰管攝影後"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -157717,7 +157725,7 @@
         "C": "懷孕7 到9 個月的孕婦",
         "D": "膽結石堵塞造成膽囊腫脹"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -157737,7 +157745,7 @@
         "C": "腹腔鏡疝氣修補術容易學習且其復發率明顯比傳統方式低",
         "D": "男性以間接型（indirect type）疝氣為主，女性則以直接型（direct type）較多"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157777,7 +157785,7 @@
         "C": "疝氣帶治療即可",
         "D": "一定要補人工網膜（mesh）"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -157797,7 +157805,7 @@
         "C": "王女士的腫瘤屬於三陰性（triple negative），大多在基因檢測歸類於basal-like breast cancer，多與BRCA2 基因有關",
         "D": "建議王女士接受化學藥物治療，不需服用tamoxifen 賀爾蒙療法"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -157817,7 +157825,7 @@
         "C": "冰氈及退燒藥",
         "D": "beta blockers，corticosteroid 靜脈注射"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -157837,7 +157845,7 @@
         "C": "乳頭多發性管道白色分泌物",
         "D": "乳暈的Montgomery gland 突起"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -157877,7 +157885,7 @@
         "C": "內含的異位組織最常見的是胃及腎臟組織",
         "D": "是引起腸套疊（intussusception）的常見導引點（lead point）"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -157917,7 +157925,7 @@
         "C": "染色體異常",
         "D": "產前創傷"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -157937,7 +157945,7 @@
         "C": "下端的食道可剝離一段長距離，以便吻合",
         "D": "一般是經由胸腔外（extrapleural）手術"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157957,7 +157965,7 @@
         "C": "手術時肝臟纖維化的程度",
         "D": "病人的血型"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -157997,7 +158005,7 @@
         "C": "肛門收縮力檢查",
         "D": "改善便秘需切除痔瘡"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -158017,7 +158025,7 @@
         "C": "上消化道鋇劑攝影是必須的，以確定阻塞位置",
         "D": "有小腸缺血現象時，宜手術處理"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -158037,7 +158045,7 @@
         "C": "藥物性大腸炎",
         "D": "感染性大腸炎"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -158057,7 +158065,7 @@
         "C": "給予類固醇",
         "D": "給予磺胺類藥物"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": "",
       "case_context": "第 54 題：一位20 歲女性主訴腹痛，大便有血，經肛門直腸檢查發現直腸黏膜發炎，下列何者為最不可能之診斷？",
       "grouped": true
@@ -158099,7 +158107,7 @@
         "C": "大部分的肱骨應力性骨折（humeral stress fracture）發生在棒球投手中",
         "D": "治療的基本原則是給予適當的休息，避免反覆性的負重，使骨骼有足夠的時間新生及修復"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -158119,7 +158127,7 @@
         "C": "受傷後無法負重（inability to bear weight）",
         "D": "受傷後足踝背屈活動受限（limited dorsiflexion of ankle）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -158139,7 +158147,7 @@
         "C": "navicular fracture",
         "D": "cuboid fracture"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026300_0.webp"
@@ -158163,7 +158171,7 @@
         "C": "股二頭肌（biceps femoris muscle）肌腱炎",
         "D": "外側半月板（lateral meniscus）損傷"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -158183,7 +158191,7 @@
         "C": "蕭鉑氏脊椎前彎測試（Schober’s test）",
         "D": "坐及肢體軀幹前彎測試（sit and reach test）"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -158203,7 +158211,7 @@
         "C": "脊髓膜膨出型脊柱側彎（myelomeningocele scoliosis）",
         "D": "神經纖維瘤脊柱側彎（neurofibromatosis scoliosis）"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -158223,7 +158231,7 @@
         "C": "移位性股骨頸骨折之治療原則為開放性復位內固定手術（open reduction and internal fixation）",
         "D": "缺血性壞死（osteonecrosis）是最常見之合併症"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -158243,7 +158251,7 @@
         "C": "單純使用抗生素治療無效的主要原因是結石中的細菌產生抗藥性",
         "D": "給予預防性抗生素可以降低結石及感染的復發"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -158263,7 +158271,7 @@
         "C": "經皮穿腎取石手術",
         "D": "腎臟切開取石手術"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -158283,7 +158291,7 @@
         "C": "使用抗生素",
         "D": "接受經直腸超音波檢查，以及前列腺穿刺切片"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -158303,7 +158311,7 @@
         "C": "單次注射黃體素釋放激素促進劑（luteinizing hormone releasing hormone agonist）也可以達成荷爾蒙治療",
         "D": "長期荷爾蒙治療可能有骨質疏鬆、貧血、疲倦等副作用"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -158343,7 +158351,7 @@
         "C": "有時anticholinergics 會造成排尿更困難，因為它會造成膀胱逼尿肌收縮力變較差",
         "D": "α-adrenergic blockers 常見到的副作用為姿態性低血壓及腹瀉"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -158363,7 +158371,7 @@
         "C": "如果男孩站立時，理學檢查托起陰囊會減輕疼痛，比較像是急性副睪丸炎",
         "D": "有時不易分辨睪丸扭轉或急性副睪丸炎時，必須開刀探查"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -158383,7 +158391,7 @@
         "C": "安排腎臟與膀胱超音波檢查",
         "D": "安排膀胱鏡或逆行性腎輸尿管攝影"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -158403,7 +158411,7 @@
         "C": "shoulder posterior dislocation and impaction",
         "D": "post-traumatic arthritis"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026313_0.webp"
@@ -158427,7 +158435,7 @@
         "C": "2 歲以下嬰兒，以迴盲套腸為最常見",
         "D": "成年之腸套疊常合併有結腸腫瘤"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -158447,7 +158455,7 @@
         "C": "核磁共振造影",
         "D": "同位素骨骼掃描"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -158467,7 +158475,7 @@
         "C": "1600～2000 ml",
         "D": "2100～3000 ml"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -158487,7 +158495,7 @@
         "C": "立刻復位，右下肢骨骼牽引四周",
         "D": "行人工半髖關節置換（hemiarthroplasty）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -158527,7 +158535,7 @@
         "C": "不傷害原則誠然重要，正直誠實也很重要，所以直接告訴病人你沒有辦法在明知對病人有害的情況下開立類固醇給他，請他接受你的建議或另覓良醫",
         "D": "病人的選擇顯然違反病人自己的最大利益，所以要更深入地與病人溝通，釐清病人真正的問題癥結，了解病人對糖尿病以及對類固醇的看法，再與病人共同討論出一個最能達到病人心願的治療方案"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -158567,7 +158575,7 @@
         "C": "醫師自活體摘取器官前，應向捐贈者說明摘取器官之範圍及手術過程、可能之併發症及危險",
         "D": "醫師施行摘取器官時，應善盡醫療及禮儀上必要之注意"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -158587,7 +158595,7 @@
         "C": "血清肌酸酐（creatinine）",
         "D": "尿液形成量（urine formation）"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -158607,7 +158615,7 @@
         "C": "halothane",
         "D": "sevoflurane"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -158627,7 +158635,7 @@
         "C": "midazolam",
         "D": "flumazenil"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -158667,7 +158675,7 @@
         "C": "①②③",
         "D": "②③④"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -158687,7 +158695,7 @@
         "C": "病患自控止痛裝置不適用於癌症病患",
         "D": "脊椎內嗎啡注射為癌症病患止痛方式"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -158707,7 +158715,7 @@
         "C": "hypalgesia：對疼痛之敏感度增加",
         "D": "allodynia：對外來非引起疼痛的刺激，產生疼痛感"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -158727,7 +158735,7 @@
         "C": "胰臟移植患者常合併肝臟移植，不應減少藥物使用量並嚴格監測血糖",
         "D": "腦幹死的器官捐贈者於器官捐贈手術中如發生心跳過慢，atropine 是首選藥物"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -158767,7 +158775,7 @@
         "C": "常合併有劇癢及分泌物多的症狀",
         "D": "可能造成視網膜變化"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -158787,7 +158795,7 @@
         "C": "核白內障（nuclear cataract）常伴隨遠視，有時反而改善近視力，閱讀時反而不需戴老花眼鏡",
         "D": "皮質白內障（cortical cataract）病人較常會因光線散射而引起眩光（glare）問題"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -158807,7 +158815,7 @@
         "C": "睫狀肌（ciliary muscle）",
         "D": "角膜曲度（corneal curvature）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -158827,7 +158835,7 @@
         "C": "下直肌（inferior rectus muscle）",
         "D": "下斜肌（inferior oblique muscle）"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -158847,7 +158855,7 @@
         "C": "規則型（regular）散光可藉柱鏡（cylindrical lens）來矯正其屈光誤差（refractive errors）",
         "D": "柱鏡（cylindrical lens）之軸度（axis），是指散光度數所在的方向（meridian）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -158867,7 +158875,7 @@
         "C": "乳頭狀肥厚（papillary hypertrophy）好發於上眼瞼板（superior tarsus）",
         "D": "盾狀潰瘍（shield ulcer）是細菌感染所造成"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -158907,7 +158915,7 @@
         "C": "安排顳顎關節攝影檢查",
         "D": "安排頸動脈超音波檢查"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -158927,8 +158935,9 @@
         "C": "左耳Rinne test 呈陰性，Weber test 朝向右側",
         "D": "左耳Rinne test 呈陰性，Weber test 朝向左側"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115026340,
@@ -158947,7 +158956,7 @@
         "C": "Klebsiella pneumoniae",
         "D": "Candida"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -158987,7 +158996,7 @@
         "C": "慢性鼻竇炎治療以開刀引流為主，輔以全身性抗生素及口服類固醇",
         "D": "所有黴菌性鼻竇炎除開刀引流外，均需併用amphotericin B 治療黴菌感染"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -159007,7 +159016,7 @@
         "C": "胸部X 光片可見氣管影像成尖塔狀（steeple sign）",
         "D": "較可能為病毒感染，不建議立即使用抗生素"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -159027,7 +159036,7 @@
         "C": "T4N2b",
         "D": "T4N2c"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -159047,7 +159056,7 @@
         "C": "肺功能檢查",
         "D": "食道鏡檢查"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "",
       "case_context": "第 23 題：王先生，56 歲農夫，有長期吸菸與嚼檳榔習慣，近1 個月有喉嚨異物感、吞嚥不適、左耳疼痛、左前頸部腫大、雙側頸部中段各有一顆最大徑超過2 公分腫瘤，聲音稍啞但無呼吸困難，經醫師檢查後可能的診斷是罹患下咽癌，王先生此時之臨床分期應該是多少？",
       "grouped": true
@@ -159069,7 +159078,7 @@
         "C": "超音波檢查",
         "D": "核磁共振檢查"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -159109,7 +159118,7 @@
         "C": "3 小時",
         "D": "4 小時"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -159153,7 +159162,7 @@
         "C": "equivocal-suspicious",
         "D": "unsatisfactory"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": "",
       "case_context": "第 28 題：一位25 歲孕婦，G5P0AA4，妊娠41 週，接受OCT（oxytocin challenge test 催產素挑釁試驗），結果如下圖，此檢查屬於下列何者？",
       "images": [
@@ -159178,7 +159187,7 @@
         "C": "糖尿病（diabetes）",
         "D": "紅斑性狼瘡（systemic lupus erythematosus）"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -159198,7 +159207,7 @@
         "C": "passage（pelvis）",
         "D": "Pitocin augmentation"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -159218,7 +159227,7 @@
         "C": "Contraction stress test; acceleration",
         "D": "Contraction stress test; late deceleration"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026353_0.webp"
@@ -159271,7 +159280,7 @@
         "C": "顫抖 (Tremor)",
         "D": "低血糖 (Hypoglycemia)"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -159293,7 +159302,7 @@
         "C": "給予atosiban（an oxytocin competitive antagonist）",
         "D": "給予atosiban（an oxytocin competitive antagonist）及抗生素"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -159353,7 +159362,7 @@
         "C": "經腹部水囊穿刺囊液並送細胞學檢查",
         "D": "導尿後再次超音波掃描"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026359_0.webp"
@@ -159377,7 +159386,7 @@
         "C": "子宮肌瘤",
         "D": "尿管及尿管球"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026360_0.webp"
@@ -159401,7 +159410,7 @@
         "C": "化學治療",
         "D": "放射線治療"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -159441,7 +159450,7 @@
         "C": "庫欣氏症候群 (Cushing's Syndrome)",
         "D": "多囊性卵巢症候群 (Polycystic Ovarian Syndrome)"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "",
       "incomplete": false,
       "gap_reason": "empty_options"
@@ -159463,7 +159472,7 @@
         "C": "快速生長（height",
         "D": "spurt） 初經（menarche）"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -159483,7 +159492,7 @@
         "C": "無法作用在子宮內膜",
         "D": "可皮下、肌肉注射及口服投予"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -159523,7 +159532,7 @@
         "C": "乳癌",
         "D": "高血壓"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -159543,7 +159552,7 @@
         "C": "給予皮下注射降血糖藥物",
         "D": "做子宮擴刮術（D & C）"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -159563,7 +159572,7 @@
         "C": "躁症（mania）",
         "D": "心情低落（depression）"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -159583,7 +159592,7 @@
         "C": "骨盆及大動脈旁淋巴結切除",
         "D": "子宮根治性切除"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -159603,7 +159612,7 @@
         "C": "子宮內頸（endocervix）",
         "D": "鱗狀柱狀上皮交接處（squamocolumnar junction）"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -159623,7 +159632,7 @@
         "C": "患者應接受減積手術，可能需包括部分小腸及大腸切除，術後應接受化學治療",
         "D": "患者需接受骨盆腔臟器剜除手術（包括膀胱、子宮及直腸全切除，人工肛門及人工膀胱手術）"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -159643,7 +159652,7 @@
         "C": "患者有時會有嚴重噁心、嘔吐現象，血液中hCG 值很高",
         "D": "完全性葡萄胎因轉為絨毛膜癌機會很高，治療應以全子宮切除手術為佳"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -159663,7 +159672,7 @@
         "C": "2",
         "D": "～7"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -159683,7 +159692,7 @@
         "C": "顏色的改變",
         "D": "不規則表面"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -159703,7 +159712,7 @@
         "C": "腦膜炎（meningoencephalitis）",
         "D": "大腦鐮腦膜瘤（falx meningioma）"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -159723,7 +159732,7 @@
         "C": "肌肉激發電刺激（muscle excitability）檢查",
         "D": "神經連續電刺激（repetitive nerve stimulation）檢查"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -159783,7 +159792,7 @@
         "C": "正中神經（median nerve）",
         "D": "尺神經（ulnar nerve）"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -159803,7 +159812,7 @@
         "C": "肘關節",
         "D": "膝關節"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -159823,7 +159832,7 @@
         "C": "矯正蹠屈攣縮（plantar flexion contracture）",
         "D": "防止足部下垂（drop foot）"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -159863,7 +159872,7 @@
         "C": "貼紮（taping）治療對預防踝關節再扭傷有效",
         "D": "腳踏車運動對踝關節扭傷後之耐力訓練有幫助"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -159883,7 +159892,7 @@
         "C": "腋下放置軟墊，增加肩外展角度",
         "D": "肩關節以膠布貼紮（taping）固定"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -159923,7 +159932,7 @@
         "C": "臥床4～6 週",
         "D": "待病情穩定，轉至普通病房後"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -159943,7 +159952,7 @@
         "C": "多元專業模式（multidisciplinary）是最佳的復健模式",
         "D": "必須要家庭參與及居家訓練，才能成功"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -160003,7 +160012,7 @@
         "C": "噪音（noise）",
         "D": "固定姿勢（sustained posture）"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -160023,7 +160032,7 @@
         "C": "易產生功能障礙且恢復較慢",
         "D": "老人較不會發生系統性疾病（systemic disease）"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -160043,7 +160052,7 @@
         "C": "發育性髖關節發育不良 (Developmental Dysplasia of the Hip, DDH)",
         "D": "股骨頭骨骺滑脫 (Slipped Capital Femoral Epiphysis, SCFE)"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026393_0.webp",
@@ -160070,7 +160079,7 @@
         "C": "小腿膿瘍（lower leg abscess）",
         "D": "阿基里斯肌腱斷裂（Achilles tendon tear）"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026394_0.webp",
@@ -160095,7 +160104,7 @@
         "C": "巧克力囊腫",
         "D": "輸卵管卵巢膿瘍"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026395_0.webp",
@@ -160120,7 +160129,7 @@
         "C": "子宮壞死穿孔",
         "D": "腹膜膿瘍"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115026396_0.webp",
@@ -160145,7 +160154,7 @@
         "C": "在以生理食鹽水沖洗20～30 分鐘後，可以測量眼液的酸鹼度，如果pH > 7.4，仍需繼續沖洗",
         "D": "若有表淺性角膜傷害，可以用局部麻醉劑來減少疼痛"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -160165,7 +160174,7 @@
         "C": "外耳道發炎不會造成聽力突然喪失",
         "D": "耳膜破裂是外傷性聽力突然喪失的常見原因"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -160185,7 +160194,7 @@
         "C": "若孕婦呈現休克現象，可左側躺以減少下腔靜脈的壓迫，增加回心血量",
         "D": "因為胎盤充滿含氧血，即使孕婦已經失血休克，胎兒仍不易立即缺氧"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -160205,7 +160214,7 @@
         "C": "不可。因侵犯性過大，且不符合病人的最大利益",
         "D": "不可。因病人不會簽同意書"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -180244,7 +180253,7 @@
         "C": "milk allergy",
         "D": "congenital megacolon"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -180264,7 +180273,7 @@
         "C": "Huntington chorea",
         "D": "fragile X症候群"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -180284,7 +180293,7 @@
         "C": "罹患發熱性C臟病的6歲兒童",
         "D": "懷孕32週的孕婦"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -180304,7 +180313,7 @@
         "C": "皮耳罹賦症候群（Pierre-Robin syndrome）",
         "D": "雙側後鼻孔閉鎖（bilateral choanal atresia）"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -180324,7 +180333,7 @@
         "C": "足月兒母親在懷孕時有 CMV 之原發感染（primary infection）者",
         "D": "六個月大之嬰兒因接觸母親之唾液而傳染者"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -180384,7 +180393,7 @@
         "C": "von Hippel-Lindau disease – 小腦有血管母細胞瘤（hemangioblastoma）",
         "D": "神經纖維瘤症（von Recklinghausen syndrome）– 基底核出現 unidentified bright objects（UBO）"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -180404,7 +180413,7 @@
         "C": "Waardenburg syndrome –heterochromia irides/piebaldism",
         "D": "Prader-Willi syndrome – severe neonatal hypotonia/hypogonadism"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -180424,8 +180433,9 @@
         "C": "4",
         "D": "8"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115027389,
@@ -180444,7 +180454,7 @@
         "C": "銅",
         "D": "鈣"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": "",
       "image_dependent": true,
       "image_url": "/question-images/doctor2_103100_p1_34_0.webp"
@@ -180466,7 +180476,7 @@
         "C": "手掌",
         "D": "足底"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -180486,7 +180496,7 @@
         "C": "皮膚乾燥",
         "D": "嬰兒期，好發的部位包括臉部"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -180506,7 +180516,7 @@
         "C": "tinea versicolor",
         "D": "tinea cruris"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115027392_0.webp",
@@ -180531,7 +180541,7 @@
         "C": "Candida albicans",
         "D": "Corynebacterium minutissimum"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": "",
       "case_context": "第 37 題：60歲男性，在股溝處出現擴之紅斑，以伍氏燈（Wood's light）檢查出現如圖之發現，最適合之診斷為：",
       "images": [
@@ -180557,7 +180567,7 @@
         "C": "陰部皮蘚（tinea cruris）",
         "D": "陰部柏哲氏病（Paget's disease）"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115027394_0.webp",
@@ -201060,7 +201070,7 @@
         "C": "事後避孕藥（postcoital contraceptive pill）建議在 72 小時內給予",
         "D": "無需安排懷孕檢測"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -201080,7 +201090,7 @@
         "C": "低血小板數",
         "D": "高血糖"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -201124,7 +201134,7 @@
         "C": "靜脈竇栓塞",
         "D": "小腦動脈栓塞"
       },
-      "answer": "",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -201144,7 +201154,7 @@
         "C": "病灶呈棕色斑塊或丘疹",
         "D": "和內分泌異常（如糖尿病）有關"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -201164,7 +201174,7 @@
         "C": "高安氏動脈炎 (Takayasu’s arteritis)",
         "D": "動靜脈血管畸形"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {

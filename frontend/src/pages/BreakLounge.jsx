@@ -72,7 +72,7 @@ export default function BreakLounge() {
           ← 返回
         </button>
         <h1 className="text-white font-bold text-2xl text-center">🎰 站長雜貨抽獎</h1>
-        <p className="text-white/60 text-xs text-center mt-1">讀書讀累了，抽一間來逛逛？</p>
+        <p className="text-white/60 text-xs text-center mt-1">讀書讀累了，抽個東西來逛逛？</p>
       </div>
 
       {/* Tab 切換：商店 / 商品 */}

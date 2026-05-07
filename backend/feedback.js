@@ -128,6 +128,21 @@ function locateQuestion(examData, examConfigs, questionId, questionText, rocYear
     }
   }
 
+  // Round 3: Last-resort question-text full search. Useful when both id and
+  // rocYear/number are missing (e.g. old cached frontend, race condition where
+  // user clicked report before q hydrated). Slower (full scan), but only fires
+  // for the genuinely-broken submissions that already failed two rounds.
+  if (questionText && String(questionText).length >= 12) {
+    const hint = String(questionText).slice(0, 30);
+    for (const [examId, data] of Object.entries(examData)) {
+      const q = data.questions?.find(x => x.question && x.question.startsWith(hint));
+      if (q) {
+        console.warn(`[locateQuestion] ID + year/num lookup both failed (${questionId}), recovered via question-text: ${examId} ${q.roc_year}年第${q.number}題`);
+        return { examId, examName: examConfigs?.[examId]?.name || examId, question: q };
+      }
+    }
+  }
+
   return null;
 }
 

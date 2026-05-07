@@ -1559,7 +1559,7 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 38,
-      "question": "在Lineweaver-Burk 雙倒數作圖中，Y 軸截距為2.0（sec/millimole），且直線斜率為70.0 sec/L，則此反應之Michaelis 常數（Km）為多少mM？",
+      "question": "在 Lineweaver-Burk 雙倒數作圖中,Y 軸截距為 2.0 (sec/millimole),且直線斜率為 70.0 sec/L,則此反應之 Michaelis 常數 (Km) 為多少 mM?",
       "options": {
         "A": "0.35",
         "B": "0.5",
@@ -1567,9 +1567,7 @@
         "D": "35.0"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image"
+      "explanation": ""
     },
     {
       "id": "100030_0701_39",
@@ -10423,15 +10421,13 @@
       "number": 20,
       "question": "在人體處於穩定狀況下，那些指標可用來評估身體肌肉量（ muscle mass ）？尿中鉀離子量  24 小時 尿液肌酸酐量（ creatinine ） 血清白蛋白濃度（ albumin ） 三甲基組織胺（ 3-methylhisidine ）",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "①②",
+        "B": "②③",
+        "C": "②④",
+        "D": "③④"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 114279,
@@ -11303,16 +11299,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 24,
-      "question": "下列糖解作用（glycolysis）的代謝反應中，共可消耗2 分子ATP的反應式為何？glucose→glucose-6-phosphate glucose-6-phosphate→fructose-6-phosphate fructose-6-phosphate→fructose-1,6-bisphosphatefructose-1, 6-bisphosphate→dihydroxyacetone phosphate+glyceraldehyde-3-phosphate",
+      "question": "下列糖解作用(glycolysis)的代謝反應中,共可消耗2分子ATP的反應式為何? ① glucose→glucose-6-phosphate ② glucose-6-phosphate→fructose-6-phosphate ③ fructose-6-phosphate→fructose-1,6-bisphosphate ④ fructose-1, 6-bisphosphate→dihydroxyacetone phosphate+glyceraldehyde-3-phosphate",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "①②",
+        "B": "①③",
+        "C": "②③",
+        "D": "③④"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114125,
@@ -12485,17 +12480,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 3,
-      "question": "佛教徒不吃下列那些食物：芹菜 薑 大蒜 洋蔥 青蔥 韭黃 青椒？",
+      "question": "佛教徒不吃下列那些食物：①芹菜 ②薑 ③大蒜 ④洋蔥 ⑤青蔥 ⑥韭黃 ⑦青椒？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "③④⑤⑥",
+        "B": "②③⑤⑥",
+        "C": "①③⑥⑦",
+        "D": "①②⑤⑦"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 114223,
@@ -12567,17 +12560,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 7,
-      "question": "下列那些為良好之庫房操作管理？每天檢查庫溫，定期檢查各類食物保存期限 冷凍食品解凍後未 使用完，立即凍結入庫貯存 乾貨食材與清潔用品不可存放於同一層架 物品放置固定位置，以後 進先出為原則 魚、肉、蛋等食物不要混在一起放置 洗切之蔬菜肉品等冷藏存放時需覆蓋完整",
+      "question": "下列那些為良好之庫房操作管理?①每天檢查庫溫,定期檢查各類食物保存期限②冷凍食品解凍後未使用完,立即凍結入庫貯存 ③乾貨食材與清潔用品不可存放於同一層架 ④物品放置固定位置,以後進先出為原則 ⑤魚、肉、蛋等食物不要混在一起放置 ⑥洗切之蔬菜肉品等冷藏存放時需覆蓋完整",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "①②③④",
+        "B": "①②③⑤",
+        "C": "①③⑤⑥",
+        "D": "①④⑤⑥"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 114227,
@@ -12731,15 +12722,13 @@
       "number": 15,
       "question": "道菜，其中半葷素占 2/3 ，預計總用餐人數為 500 人，每位學生可選二道半葷素 的菜餚，則每道半葷素的菜餚需製備幾人份？  100 人份  150 人份  200 人份  300 人份 3 佛教徒不吃下列那些食物：芹菜 薑 大蒜 洋蔥 青蔥 韭黃 青椒？     4 La Ru 餐廳每日銷售 200 客牛排餐，每份牛肉供應量（ Servicing Size 或 Portion Size ） 10 oz ，可食部分 產率（ Edible Yield % ）是 80% ，則 200 客牛排餐應採購幾磅牛肉？  156.25 磅  176.75 磅  187.35 磅  200.65 磅 5 餐食供應中，顏色的呈現有非常重要的功用，若不考慮香味與口味的情況下，下列那些顏色餐食是較不 易引起食慾的顏色菜？  橙色的番茄炒蛋 黃色的蘿蔔干炒蛋 翠綠色的炒菠菜 橄欖綠色的燉煮刈菜湯 6 下列有關肉類儲存的敘述，何者錯誤？  在冷凍冷藏時，重量會減少 儲存前應先分裝再儲存 低溫儲存下，肉類由肌肉蛋白變成褐色的氧化肌紅蛋白 醃過的肉易酸敗，冷藏後應儘速用掉 7 下列那些為良好之庫房操作管理？每天檢查庫溫，定期檢查各類食物保存期限 冷凍食品解凍後未 使用完，立即凍結入庫貯存 乾貨食材與清潔用品不可存放於同一層架 物品放置固定位置，以後 進先出為原則 魚、肉、蛋等食物不要混在一起放置 洗切之蔬菜肉品等冷藏存放時需覆蓋完整      8 下列有關溫度之敘述，何者錯誤？  乾料庫房以 5-22 °C為主 細菌在 16-50 °C，繁殖快且可產生毒素 可殺死罐頭食品中細菌的溫度在 70-90 °C 冷凍庫房的溫度應低於 -18 °C 9 有關團膳業採購原料控管之敘述，下列何者錯誤？ 儘可能以大量採購單來降低成本 採購規格書制定需視原料用途而異 增加採購比價措施 運用投機採購不會使採購價格高漲 10 健康小站販售的生機蒟蒻情況為：每萬元營業額的用量是 0.4 包， 3 月 1~10 日預估營業額有 300 萬元， 本次庫存量有 20 包（剛好半箱），若安全係數為 1.2 ，則最少應該訂購多少量？  2 箱  4 箱  6 箱  8 箱 11 供應每人份相同重量之全素菜時，下列何種蔬菜之採購需要量最大？  蘿蔔（菜頭） 絲瓜 小黃瓜 苦瓜 12 豆漿含豆腥味，此特殊味道來自：  寡醣類發酵 含硫胺基酸分解 含硫胺基酸聚合 脂肪酸氧化 13 有關團膳業市場採購方法中，下列何者不屬於不公開採購方法（ Informal Purchase ）之一？  比價採購（ Restricted Tender ） 報價採購（ Quoted Purchase ） 議價採購（ Negotiated Purchase ） 詢價現購（ Purchase at Inquiry Price ） 14 下列何種方式可減少濃湯中牛奶產生凝塊？  濃湯中加醋 濃湯中加木瓜酵素 濃湯中加澱粉芡汁 將濃湯加熱至 100 °C 15 製作場所只有一個水槽，欲洗滌芋頭 茄子 小白菜等食材，最適宜的順序為何？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "①②③",
+        "B": "②③①",
+        "C": "③①②",
+        "D": "③②①"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 114235,
@@ -12751,17 +12740,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 16,
-      "question": "製作酸辣湯的過程有 4 個步驟，其順序應為？煮開 芶芡 加醋 灑胡椒",
+      "question": "製作酸辣湯的過程有4個步驟,其順序應為?①煮開 ②勾芡 ③加醋 ④灑胡椒",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "①②③④",
+        "B": "①③②④",
+        "C": "①③④②",
+        "D": "①④③②"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 114236,
@@ -12933,17 +12920,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 25,
-      "question": "下列那些是團膳公司管理者合理管束（ discipline ）員工之項目？常常遲到 員工理財方式 上班時 大聲喧嘩 體重",
+      "question": "下列那些是團膳公司管理者合理管束(discipline)員工之項目?①常常遲到 ②員工理財方式 ③上班時大聲喧嘩 ④體重",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "①④",
+        "B": "①②",
+        "C": "①③",
+        "D": "②④"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 114245,
@@ -13035,17 +13020,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 30,
-      "question": "團體膳食公司編製預算時，最常考慮下列那些因素？過去的銷售所得的報告和統計 未來產品的定 價策略、營運政策 國家和當地的經濟狀況 過去幾年實際運作與預算的差異 膳食營養量",
+      "question": "團體膳食公司編製預算時，最常考慮下列那些因素？①過去的銷售所得的報告和統計 ②未來產品的定價策略、營運政策 ③國家和當地的經濟狀況 ④過去幾年實際運作與預算的差異 ⑤膳食營養量",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "①②③④",
+        "B": "①②③⑤",
+        "C": "①②④⑤",
+        "D": "①③④⑤"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 114250,
@@ -35025,15 +35008,13 @@
       "number": 1,
       "question": "2020 健康國民中有關飲食之五大目標，不涵蓋下列何者？",
       "options": {
-        "A": "",
+        "A": "增加主食中全穀類",
         "B": "增加主食中全穀類",
-        "C": "",
+        "C": "增加不飽和脂肪酸油脂使用量",
         "D": "增加每天各種蔬果"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116657,
@@ -35048,15 +35029,13 @@
       "number": 2,
       "question": "參考每日飲食指南，建議順序為何才能了解每日進食份量？①查出自己的熱量需求 ②看看自己的每天生活活動強度 ③找到自己的健康體重 ④依熱量需求，查出自己的六大類飲食建議份數",
       "options": {
-        "A": "",
+        "A": "①②③④",
         "B": "①②③④",
-        "C": "",
+        "C": "③②①④",
         "D": "②①④③"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116658,
@@ -35071,15 +35050,13 @@
       "number": 3,
       "question": "DRIs 中，下列何種維生素之建議量值最小？",
       "options": {
-        "A": "",
+        "A": "維生素D",
         "B": "維生素D",
-        "C": "",
+        "C": "維生素B1",
         "D": "維生素E"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116659,
@@ -35094,15 +35071,13 @@
       "number": 4,
       "question": "關於國民飲食指標（100 年）之建議，下列何者正確？",
       "options": {
-        "A": "",
+        "A": "少素多葷少精緻，新鮮粗食少加工",
         "B": "少素多葷少精緻，新鮮粗食少加工",
-        "C": "",
+        "C": "若要飲酒不過量，哺乳絕對不喝酒",
         "D": "來源標示要注意，衛生安全才能吃"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116660,
@@ -35117,15 +35092,13 @@
       "number": 5,
       "question": "下列何者是衛生福利部對幼兒的營養建議？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "2歲以下不宜使用低脂或脫脂奶",
+        "B": "可用果汁代替水果,一天約可攝取500c.c.",
+        "C": "一天應有1/5 為全穀類",
+        "D": "一天豆魚肉蛋類建議3~5份"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116661,
@@ -35140,15 +35113,13 @@
       "number": 6,
       "question": "過氧化氫紅血球溶血試驗，是測量下列何種營養素？",
       "options": {
-        "A": "",
+        "A": "鐵",
         "B": "鐵",
-        "C": "",
+        "C": "維生素E",
         "D": "蛋白質"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116662,
@@ -35163,15 +35134,13 @@
       "number": 7,
       "question": "下列何者是嬰兒副食品選用的建議事項？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "給予新的副食品時,一次以一種為原則",
+        "B": "開始吃副食品時,應停止哺餵母乳以免熱量過剩",
+        "C": "大便中如出現未消化的食物如蔬菜的纖維等,應立即停止餵食",
+        "D": "開始餵食糊狀食物(如米糊、果泥等)時,最好將食物加入奶瓶內一起餵食"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116663,
@@ -35186,15 +35155,13 @@
       "number": 8,
       "question": "11 歲男孩的身體質量指數正常範圍是14.8～20.7，若身高為140 公分的該年齡男孩，下列那一個體重（公斤）不在正常範圍內？",
       "options": {
-        "A": "",
+        "A": "25",
         "B": "25",
-        "C": "",
+        "C": "35",
         "D": "30"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116664,
@@ -35207,17 +35174,15 @@
       "subject_name": "公共衛生營養",
       "stage_id": 5,
       "number": 9,
-      "question": "自102 年起，負責學校午餐的中央權責單位為：",
+      "question": "自 102 年起,負責學校午餐的中央權責單位為:",
       "options": {
-        "A": "",
+        "A": "行政院農業委員會",
         "B": "行政院農業委員會",
-        "C": "",
+        "C": "教育部體育署",
         "D": "衛生福利部食品藥物管理署"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116665,
@@ -35230,17 +35195,15 @@
       "subject_name": "公共衛生營養",
       "stage_id": 5,
       "number": 10,
-      "question": "某牌豆漿每瓶熱量300 大卡、鈉含量200 毫克、添加糖所提供的熱量占總熱量的25%，此豆漿是否符合「校園飲品及點心販售範圍」之規定？",
+      "question": "某牌豆漿每瓶熱量 300 大卡、鈉含量 200 毫克、添加糖所提供的熱量占總熱量的 25%，此豆漿是否符合「校園飲品及點心販售範圍」之規定?",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "符合規定",
+        "B": "不符合規定，熱量含量太高，鈉含量及糖所提供的熱量占總熱量的比例合規定",
+        "C": "不符合規定，熱量含量及添加糖所提供的熱量占總熱量比例均太高，鈉含量合規定",
+        "D": "不符合規定，熱量含量、鈉含量及添加糖所提供的熱量占總熱量比例都太高"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116666,
@@ -35253,17 +35216,15 @@
       "subject_name": "公共衛生營養",
       "stage_id": 5,
       "number": 11,
-      "question": "關於營養諮詢的訊息提供（information giving）原則，下列敘述何者錯誤？",
+      "question": "關於營養諮詢的訊息提供 ( information giving ) 原則，下列敘述何者錯誤?",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "儘量避免提供負面訊息",
+        "B": "每次給予的新資訊不要太多",
+        "C": "應詢問病患對於此些訊息的感覺或想法",
+        "D": "病患對於諮詢過程中較早提供的資訊會記憶較久的時間"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116667,
@@ -35278,15 +35239,13 @@
       "number": 12,
       "question": "臺灣地區食品營養成分資料庫中提供下列那一項營養素的資料？",
       "options": {
-        "A": "",
+        "A": "鋅",
         "B": "鋅",
-        "C": "",
+        "C": "葉酸",
         "D": "硒"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116668,
@@ -35301,15 +35260,13 @@
       "number": 13,
       "question": "根據市售包裝食品營養宣稱規範，可補充攝取之營養宣稱，不包括下列何者？",
       "options": {
-        "A": "",
+        "A": "鈣",
         "B": "鈣",
-        "C": "",
+        "C": "維生素 C",
         "D": "寡醣"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116669,
@@ -35324,15 +35281,13 @@
       "number": 14,
       "question": "關於可宣稱全穀產品之原則，下列敘述何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "全穀重量百分比指扣除原料中水分後之重量",
+        "B": "穀物經過破碎,取其胚芽或麩皮,不摻其他成分,得稱為全穀類",
+        "C": "固體產品所含全穀成分占配方總重量百分比 51%(含)以上,始可以全穀產品宣稱",
+        "D": "產品所含全穀成分未達配方總重量百分比 51%(含)以上,可標示「本產品部分原料使用全穀粉(如: 全麥)原料製作」"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116670,
@@ -35345,17 +35300,15 @@
       "subject_name": "公共衛生營養",
       "stage_id": 5,
       "number": 15,
-      "question": "當尿中甲基丙二酸（methylmalonic acid; MMA）排泄量增加時，表示體內何種營養素缺乏？",
+      "question": "當尿中甲基丙二酸 ( methylmalonic acid; MMA ) 排泄量增加時, 表示體內何種營養素缺乏?",
       "options": {
-        "A": "",
+        "A": "維生素 B₂",
         "B": "維生素B2",
-        "C": "",
+        "C": "維生素 B₁₂",
         "D": "維生素B6"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116671,
@@ -35370,15 +35323,13 @@
       "number": 16,
       "question": "當肌酸酐高度指數（creatinine height index）小於至多多少百分比時，視為嚴重蛋白質缺乏？",
       "options": {
-        "A": "",
+        "A": "20%",
         "B": "20%",
-        "C": "",
+        "C": "60%",
         "D": "40%"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116672,
@@ -35393,15 +35344,13 @@
       "number": 17,
       "question": "色胺酸負荷試驗（tryptophan loading test）可以評估下列何種營養素？",
       "options": {
-        "A": "",
+        "A": "維生素B₁",
         "B": "維生素B1",
-        "C": "",
+        "C": "維生素B₆",
         "D": "維生素B3"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116673,
@@ -35416,15 +35365,13 @@
       "number": 18,
       "question": "下列何種營養素沒有適當的生化指標代表攝取量？",
       "options": {
-        "A": "",
+        "A": "鈉",
         "B": "鈉",
-        "C": "",
+        "C": "維生素E",
         "D": "醣類"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116674,
@@ -35439,15 +35386,13 @@
       "number": 19,
       "question": "「每人每日食物可獲量」的資料是由下列何者產出？",
       "options": {
-        "A": "",
+        "A": "經濟部",
         "B": "經濟部",
-        "C": "",
+        "C": "行政院農業委員會",
         "D": "行政院主計總處"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116675,
@@ -35462,15 +35407,13 @@
       "number": 20,
       "question": "下列何者正確？①營養調查獲得的個人營養素攝取量 ②國人膳食營養素建議參考攝取量中的RDA③健康人的營養素平均需要量",
       "options": {
-        "A": "",
+        "A": "①應高於②",
         "B": "①應高於②",
-        "C": "",
+        "C": "②應高於③",
         "D": "①應低於②"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116676,
@@ -35483,17 +35426,15 @@
       "subject_name": "公共衛生營養",
       "stage_id": 5,
       "number": 21,
-      "question": "關於食物平衡表（food balance sheet）之敘述，下列何者錯誤？",
+      "question": "關於食物平衡表(food balance sheet) 之敘述,下列何者錯誤?",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "可計算國人平均實際食物攝取量",
+        "B": "我國每年由行政院農業委員會編製",
+        "C": "常用來進行國際間飲食與罹患疾病相關性研究",
+        "D": "提供一國的飲食趨勢資料,但依每個國家之發展程度,統計資料的準確度可能有差異"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116677,
@@ -35508,15 +35449,13 @@
       "number": 22,
       "question": "關於頭圍的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "嬰幼兒頭圍的大小與腦部發育是否正常有關",
+        "B": "嬰幼兒頭圍的大小與營養狀況密切相關",
+        "C": "嬰兒出生12個月內,頭圍增加最快速",
+        "D": "幼兒滿3歲後,頭圍的增加趨緩"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116678,
@@ -35531,15 +35470,13 @@
       "number": 23,
       "question": "問卷題目的編排原則，下列敘述何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "開放式問題放在封閉式問題後面",
+        "B": "題目應有適當的間隔,以免版面編排過於擁擠",
+        "C": "題目可依據邏輯順序呈現,以利受試者思考及回答",
+        "D": "受試者的基本資料如年齡、教育程度等問題,應放在問卷的前面詢問"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116679,
@@ -35554,15 +35491,13 @@
       "number": 24,
       "question": "針對老人進行營養調查時，下列何種方式較合適？",
       "options": {
-        "A": "",
+        "A": "當面訪問調查",
         "B": "當面訪問調查",
-        "C": "",
+        "C": "郵寄問卷調查",
         "D": "電話訪問調查"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116680,
@@ -35577,15 +35512,13 @@
       "number": 25,
       "question": "教學目標「學習者願意每天吃一種綠色蔬菜」是屬於下列何種領域的目標？",
       "options": {
-        "A": "",
+        "A": "行為",
         "B": "行為",
-        "C": "",
+        "C": "技能",
         "D": "情意"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116681,
@@ -35600,15 +35533,13 @@
       "number": 26,
       "question": "教學活動引起動機的四個模式，簡稱ARCS，下列敘述何者錯誤？",
       "options": {
-        "A": "",
+        "A": "A:吸引注意力(attention)",
         "B": "A：吸引注意力（attention）",
-        "C": "",
+        "C": "C:使具信心(confidence)",
         "D": "R：具相關性（relevance）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116682,
@@ -35623,15 +35554,13 @@
       "number": 27,
       "question": "發送印有營養訊息的冰箱磁鐵或鑰匙圈，是應用下列何項中介因子所採取的教學策略？",
       "options": {
-        "A": "",
+        "A": "增強",
         "B": "增強",
-        "C": "",
+        "C": "社會支持",
         "D": "自覺危機"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116683,
@@ -35646,15 +35575,13 @@
       "number": 28,
       "question": "營養師說：「你現在不斷地吃甜食，可能和你的新工作有關嗎？」此時營養師的談話，較符合下列何種諮商技巧？",
       "options": {
-        "A": "",
+        "A": "解釋",
         "B": "解釋",
-        "C": "",
+        "C": "情感反應",
         "D": "訊息提供"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116684,
@@ -35669,15 +35596,13 @@
       "number": 29,
       "question": "於執行社區營養計畫時，檢視執行措施是否符合規劃，屬於下列何種評估？",
       "options": {
-        "A": "",
+        "A": "成本評估(cost evaluation)",
         "B": "成本評估（cost evaluation）",
-        "C": "",
+        "C": "過程評估(process evaluation)",
         "D": "結果評估（outcome evaluation）"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116685,
@@ -35692,15 +35617,13 @@
       "number": 30,
       "question": "社區營養需求評估的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "應訂定營養問題的優先次序",
+        "B": "可使用三角檢驗法(triangulation)來進行評估",
+        "C": "可由政府或相關單位公布的現有資料開始分析(如:人口統計學)",
+        "D": "聚焦社區民眾營養健康問題,避免浪費時間於非直接相關因素(如:民眾的價值觀)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116686,
@@ -35713,17 +35636,15 @@
       "subject_name": "公共衛生營養",
       "stage_id": 5,
       "number": 31,
-      "question": "有關SWOT 分析，下列敘述何者正確？",
+      "question": "有關 SWOT 分析,下列敘述何者正確?",
       "options": {
-        "A": "",
+        "A": "SO 策略:克服劣勢,爭取機會",
         "B": "SO 策略：克服劣勢，爭取機會",
-        "C": "",
+        "C": "WO 策略:利用優勢,掌握機會",
         "D": "ST 策略：利用優勢，克服威脅"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116687,
@@ -35738,15 +35659,13 @@
       "number": 32,
       "question": "社區問題確認後，需提出解決方案，以彼此不認識、不同層級、不同專業或經驗的人為小組成員討論社區營養問題，所有人逐一寫下意見及解決方案，方案歸類編號後，由成員對各方案評分，選出最後解決方案，屬於下列何種方法？",
       "options": {
-        "A": "",
+        "A": "delphi technique",
         "B": "delphi technique",
-        "C": "",
+        "C": "in-depth interview",
         "D": "focus group interview"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116688,
@@ -35759,17 +35678,15 @@
       "subject_name": "公共衛生營養",
       "stage_id": 5,
       "number": 33,
-      "question": "依據1999～2000 臺灣地區老人營養健康狀況調查，我國65 歲及以上老人下列何種慢性病盛行率最高？",
+      "question": "依據 1999~2000 臺灣地區老人營養健康狀況調查,我國 65 歲及以上老人下列何種慢性病盛行率最高?",
       "options": {
-        "A": "",
+        "A": "高血壓",
         "B": "高血壓",
-        "C": "",
+        "C": "高尿酸血症",
         "D": "糖尿病"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116689,
@@ -35784,15 +35701,13 @@
       "number": 34,
       "question": "臺灣地區歷次國民營養健康狀況變遷調查均採用分層集束抽樣，其地區分層原則，下列何者錯誤？",
       "options": {
-        "A": "",
+        "A": "人口密度",
         "B": "人口密度",
-        "C": "",
+        "C": "教育程度",
         "D": "特殊族群"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116690,
@@ -35807,15 +35722,13 @@
       "number": 35,
       "question": "歷次臺灣營養健康變遷調查，其設計下列何者錯誤？",
       "options": {
-        "A": "",
+        "A": "包含所有年齡層國人",
         "B": "包含所有年齡層國人",
-        "C": "",
+        "C": "排除孕婦與哺乳婦",
         "D": "採性別年齡分層取樣"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116691,
@@ -35830,15 +35743,13 @@
       "number": 36,
       "question": "2010 臺灣國民營養健康狀況變遷調查結果，國中生的「全穀類飲食攝取行為」，處於跨理論模式的那一個時期？",
       "options": {
-        "A": "",
+        "A": "思考前期",
         "B": "思考前期",
-        "C": "",
+        "C": "準備期",
         "D": "思考期"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116692,
@@ -35853,15 +35764,13 @@
       "number": 37,
       "question": "世界衛生組織建議婦女完全哺餵母乳（exclusive breastfeeding）至少應持續至嬰兒幾個月大？",
       "options": {
-        "A": "",
+        "A": "4",
         "B": "4",
-        "C": "",
+        "C": "12",
         "D": "6"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116693,
@@ -35876,15 +35785,13 @@
       "number": 38,
       "question": "關於「糧食安全」概念架構中，「食物攝取」和「健康狀況」的直接原因，下列敘述何者錯誤？",
       "options": {
-        "A": "",
+        "A": "「照護能量」為「食物攝取」的直接原因",
         "B": "「照護能量」為「食物攝取」的直接原因",
-        "C": "",
+        "C": "「環境狀況」為「健康狀況」的直接原因",
         "D": "「衛生服務」為「健康狀況」的直接原因"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116694,
@@ -35899,15 +35806,13 @@
       "number": 39,
       "question": "關於「公共衛生營養」的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "工作範圍包括設計社區營養問題之計畫",
+        "B": "包括與社區健康有關之食物及營養問題",
+        "C": "是藉著個人力量有效的解決個人的營養問題",
+        "D": "工作範圍包括建立社區中食品及營養政策、組織與管理"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116695,
@@ -35945,15 +35850,13 @@
       "number": 1,
       "question": "下列何者在細胞內的濃度是維持平滑肌張力（smooth muscle tone）的主要因素？",
       "options": {
-        "A": "",
+        "A": "ATP",
         "B": "ATP",
-        "C": "",
+        "C": "鈉離子",
         "D": "鉀離子"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116497,
@@ -35968,15 +35871,13 @@
       "number": 2,
       "question": "人體器官為了增加吸收表面積而產生的適應性刷狀緣（brush border）構造，出現於下列何處？",
       "options": {
-        "A": "",
+        "A": "胃",
         "B": "胃",
-        "C": "",
+        "C": "小腸",
         "D": "直腸"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116498,
@@ -35991,15 +35892,13 @@
       "number": 3,
       "question": "下列何者是用餐時胰液分泌增加的原因？",
       "options": {
-        "A": "",
+        "A": "食物的味道刺激副交感神經作用",
         "B": "食物的味道刺激副交感神經作用",
-        "C": "",
+        "C": "十二指腸的鹼性增加需要中和",
         "D": "食物進入胃需要胰液幫助蛋白質分解"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116499,
@@ -36014,15 +35913,13 @@
       "number": 4,
       "question": "依常理判斷，下列何者是低密度脂蛋白／高密度脂蛋白的比值較低的族群？",
       "options": {
-        "A": "",
+        "A": "抽菸族",
         "B": "抽菸族",
-        "C": "",
+        "C": "肥胖的男性",
         "D": "運動員"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116500,
@@ -36037,15 +35934,13 @@
       "number": 5,
       "question": "尿液濃縮機轉當中，所稱之對流交換器（countercurrent exchanger）是指下列何者？",
       "options": {
-        "A": "",
+        "A": "近側腎小管",
         "B": "近側腎小管",
-        "C": "",
+        "C": "直行血管（vasa recta）",
         "D": "亨利氏環"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116501,
@@ -36060,15 +35955,13 @@
       "number": 6,
       "question": "正常生理狀態下，下列何者為腎絲球淨濾過壓（net glomerular filtration pressure）的最主要決定力量？",
       "options": {
-        "A": "",
+        "A": "腎絲球微血管內靜水壓(hydrostatic pressure)",
         "B": "腎絲球微血管內靜水壓（hydrostatic pressure）",
-        "C": "",
+        "C": "腎絲球毛細血管內膠體滲透壓(oncotic pressure)",
         "D": "鮑氏囊內（Bowman's space）靜水壓"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116502,
@@ -36083,15 +35976,13 @@
       "number": 7,
       "question": "正常情況下，下列何者在腎小管被重吸收的百分比最低？",
       "options": {
-        "A": "",
+        "A": "水",
         "B": "水",
-        "C": "",
+        "C": "鈉離子",
         "D": "尿素"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116503,
@@ -36104,17 +35995,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 8,
-      "question": "小明和爸媽一起去第20 樓層的餐廳用餐，小明搭電梯，爸爸花了20 分鐘爬樓梯，媽媽搭電扶梯一樓一樓逛至餐廳，到達餐廳時誰的胰島素（insulin）分泌下降最明顯？",
+      "question": "小明和爸媽一起去第 20 樓層的餐廳用餐,小明搭電梯,爸爸花了 20 分鐘爬樓梯,媽媽搭電扶梯一樓一樓逛至餐廳,到達餐廳時誰的胰島素(insulin)分泌下降最明顯?",
       "options": {
-        "A": "",
+        "A": "小明",
         "B": "小明",
-        "C": "",
+        "C": "爸爸",
         "D": "媽媽"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116504,
@@ -36127,17 +36016,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 9,
-      "question": "腎上腺素（epinephrine）對心臟的作用可因下列何種荷爾蒙的參與而加強？",
+      "question": "腎上腺素 (epinephrine) 對心臟的作用可因下列何種荷爾蒙的參與而加強？",
       "options": {
-        "A": "",
+        "A": "皮質醇 (cortisol)",
         "B": "皮質醇（cortisol）",
-        "C": "",
+        "C": "甲狀腺激素 (thyroid hormone)",
         "D": "副甲狀腺激素（parathyroid hormone）"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116505,
@@ -36152,16 +36039,14 @@
       "number": 10,
       "question": "承上題，此種作用屬於下列何者？",
       "options": {
-        "A": "",
+        "A": "加成作用(additive effect)",
         "B": "加成作用（additive effect）",
-        "C": "",
+        "C": "允許作用(permissive action)",
         "D": "拮抗作用（antagonism）"
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 9 題：腎上腺素（epinephrine）對心臟的作用可因下列何種荷爾蒙的參與而加強？",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "case_context": "第 9 題：腎上腺素（epinephrine）對心臟的作用可因下列何種荷爾蒙的參與而加強？"
     },
     {
       "id": 116506,
@@ -36176,15 +36061,13 @@
       "number": 11,
       "question": "交感神經影響竇房結（SA node）的功能，主要是經由增加下列何種通道的通透性？",
       "options": {
-        "A": "",
+        "A": "L 型鈣離子通道",
         "B": "L 型鈣離子通道",
-        "C": "",
+        "C": "T 型鈣離子通道",
         "D": "F 型鈉離子通道"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116507,
@@ -36199,15 +36082,13 @@
       "number": 12,
       "question": "有關心臟血管系統中血流方向，下列敘述何者正確？",
       "options": {
-        "A": "",
+        "A": "右心房 → 右心室 → 左心房 → 左心室",
         "B": "右心房 → 右心室 → 左心房 → 左心室",
-        "C": "",
+        "C": "右心房 → 右心室 → 主動脈 → 左心房",
         "D": "左心房 → 左心室 → 肺靜脈 → 右心房"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116508,
@@ -36222,15 +36103,13 @@
       "number": 13,
       "question": "有關紅血球生成素（erythropoietin）的分泌調控，下列敘述何者錯誤？",
       "options": {
-        "A": "",
+        "A": "紅血球生成素主要在腎臟合成及分泌",
         "B": "紅血球生成素主要在腎臟合成分泌",
-        "C": "",
+        "C": "紅血球生成素的主要作用是促進紅血球產生",
         "D": "缺氧時會造成紅血球生成素分泌減少"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116509,
@@ -36243,17 +36122,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 14,
-      "question": "母奶可提供下列何種抗體，提供初生嬰兒免疫力（immunity）？",
+      "question": "母奶可提供下列何種抗體,提供初生嬰兒免疫力(immunity) ?",
       "options": {
-        "A": "",
+        "A": "免疫球蛋白 A (IgA)",
         "B": "免疫球蛋白A（IgA）",
-        "C": "",
+        "C": "免疫球蛋白 E (IgE)",
         "D": "免疫球蛋白D（IgD）"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116510,
@@ -36268,15 +36145,13 @@
       "number": 15,
       "question": "愛滋病主要因人類免疫缺乏病毒（human immunodeficiency virus, HIV）破壞下列何者，造成免疫不全？",
       "options": {
-        "A": "",
+        "A": "毒殺型T細胞(cytotoxic T cell)",
         "B": "毒殺型T 細胞（cytotoxic T cell）",
-        "C": "",
+        "C": "自然殺手細胞(nature killer cell)",
         "D": "輔助型T 細胞（helper T cell）"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116511,
@@ -36291,15 +36166,13 @@
       "number": 16,
       "question": "下列何種反應是活化副交感神經所造成？",
       "options": {
-        "A": "",
+        "A": "瞳孔收縮",
         "B": "瞳孔收縮",
-        "C": "",
+        "C": "支氣管擴張",
         "D": "看清楚遠方物體"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116512,
@@ -36314,15 +36187,13 @@
       "number": 17,
       "question": "下列何者是負責傳遞痛覺的神經傳遞介質？",
       "options": {
-        "A": "",
+        "A": "多巴胺",
         "B": "多巴胺",
-        "C": "",
+        "C": "P 物質",
         "D": "腎上腺素"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116513,
@@ -36337,15 +36208,13 @@
       "number": 18,
       "question": "正常人在直立的情況下，體循環動脈氧分壓略低於肺泡氧分壓之主因，下列敘述何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "單位肺體積的通氣量(ventilation) 由肺尖至肺底呈遞減分布",
+        "B": "單位肺體積的灌流 (perfusion) 由肺尖至肺底呈遞減分布",
+        "C": "肺底的通氣/灌流比值 (ventilation/perfusion ratio) 遠高於在肺尖之比值",
+        "D": "通氣/灌流比值不相稱(mismatch)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116514,
@@ -36360,15 +36229,13 @@
       "number": 19,
       "question": "有關排卵前期激素的變化，下列敘述何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "下視丘促性腺激素釋放激素(GnRH)分泌由低轉高",
+        "B": "動情素分泌在排卵前達到高峰",
+        "C": "濾泡刺激素(FSH)激增是造成排卵的最重要原因",
+        "D": "動情素對黃體刺激素(LH)分泌的調控由負回饋轉為正回饋"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116515,
@@ -36383,15 +36250,13 @@
       "number": 20,
       "question": "尿毒症的病人最可能會出現下列何種臨床症狀？",
       "options": {
-        "A": "",
+        "A": "尿糖減少",
         "B": "尿糖減少",
-        "C": "",
+        "C": "血鉀降低",
         "D": "尿蛋白減少"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116516,
@@ -36404,17 +36269,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 21,
-      "question": "下列何種酵素其所催化之反應需要thiamine pyrophosphate 作為輔酶？",
+      "question": "下列何種酵素其所催化之反應需要 thiamine pyrophosphate 作為輔酶?",
       "options": {
-        "A": "",
+        "A": "lactate dehydrogenase",
         "B": "lactate dehydrogenase",
-        "C": "",
+        "C": "glycerol kinase",
         "D": "transaldolase"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116517,
@@ -36429,15 +36292,13 @@
       "number": 22,
       "question": "下列何者為紅血球細胞糖解反應（glycolysis）之中間產物，其存在可降低血紅蛋白（hemoglobin）與氧氣之親和力？",
       "options": {
-        "A": "",
+        "A": "2,3-bisphosphoglycerate",
         "B": "2,3-bisphosphoglycerate",
-        "C": "",
+        "C": "glyceraldehyde-3-phosphate",
         "D": "1,3-bisphosphoglycerate"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116518,
@@ -36450,17 +36311,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 23,
-      "question": "糖解作用（glycolysis）中，下列那些酵素催化之反應可生成ATP？①phosphofructokinase②phosphoglycerate kinase ③hexokinase ④pyruvate kinase",
+      "question": "糖解作用 (glycolysis)中,下列那些酵素催化之反應可生成ATP? ① phosphofructokinase ②phosphoglycerate kinase ③ hexokinase ④ pyruvate kinase",
       "options": {
-        "A": "",
+        "A": "②④",
         "B": "②④",
-        "C": "",
+        "C": "①②",
         "D": "①③"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116519,
@@ -36475,15 +36334,13 @@
       "number": 24,
       "question": "Pyruvate decarboxylase 可催化酵母菌無氧糖解作用（anaerobic glycolysis）之起始反應，下列何者為此酵素所需之輔酶？",
       "options": {
-        "A": "",
+        "A": "biotin",
         "B": "biotin",
-        "C": "",
+        "C": "pyridoxal phosphate",
         "D": "lipoic acid"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116520,
@@ -36498,16 +36355,14 @@
       "number": 25,
       "question": "甘油生合成之調節與體內脂質代謝有密切相關，以糖皮質固醇而言，此激素可藉由調節下列何種酵素進而調控肝臟和脂肪細胞的甘油生合成？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "丙酮酸羧化酶(pyruvate carboxylase)",
+        "B": "磷酸烯醇丙酮酸羧化酶(PEP carboxylase)",
+        "C": "甘油醛-3-磷酸去氫酶(glyceraldehyde-3-phosphate dehydrogenase)",
+        "D": "甘油激酶(glycerol kinase)"
       },
       "answer": "B",
       "explanation": "",
-      "disputed": true,
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "disputed": true
     },
     {
       "id": 116521,
@@ -36520,17 +36375,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 26,
-      "question": "TZD（thiazolidinediones）是常用以治療糖尿病的藥物，關於其治療原理的敘述，下列何者錯誤？",
+      "question": "TZD (thiazolidinediones) 是常用以治療糖尿病的藥物，關於其治療原理的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "可降低血中游離脂肪酸並提高胰島素敏感性",
+        "B": "可促進脂肪組織合成三酸甘油酯並減少游離脂肪酸之釋放",
+        "C": "可促進脂肪組織的甘油新生作用",
+        "D": "可抑制脂肪組織的 PPARY 活性進而抑制 PEPCK 活性"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116522,
@@ -36545,15 +36398,13 @@
       "number": 27,
       "question": "以魚為主食的愛斯基摩人，雖然攝取高脂飲食但是少有心臟病的問題，目前認為其可能原因是：",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "所攝取之冰原魚類富含長鏈的飽和脂肪酸,且膽固醇含量較低",
+        "B": "這些魚類富含大量的奇數碳脂肪酸,在體內產生特殊代謝產物所致",
+        "C": "大量的魚油攝取使得體內的凝血作用受到抑制",
+        "D": "魚類提供大量膠原蛋白可以抑制體內發炎反應與膽固醇合成"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116523,
@@ -36568,15 +36419,13 @@
       "number": 28,
       "question": "下列何者可藉由轉運蛋白（transporter）通過粒線體膜的物質？",
       "options": {
-        "A": "",
+        "A": "乙醯輔酶 A (acetyl-CoA)",
         "B": "乙醯輔酶A（acetyl-CoA）",
-        "C": "",
+        "C": "檸檬酸 (citrate)",
         "D": "棕櫚酸（palmitate）"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116524,
@@ -36589,17 +36438,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 29,
-      "question": "下列何者是urea cycle 之產物，該產物可經轉換後再度成為urea cycle 之受質？",
+      "question": "下列何者是 urea cycle 之產物，該產物可經轉換後再度成為 urea cycle 之受質？",
       "options": {
-        "A": "",
+        "A": "aspartate",
         "B": "aspartate",
-        "C": "",
+        "C": "fumarate",
         "D": "glutamate"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116525,
@@ -36614,15 +36461,13 @@
       "number": 30,
       "question": "下列何者是形成蛋白質二級結構的重要鍵結？",
       "options": {
-        "A": "",
+        "A": "肽鍵",
         "B": "肽鍵",
-        "C": "",
+        "C": "磷酸鍵",
         "D": "氫鍵"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116526,
@@ -36637,15 +36482,13 @@
       "number": 31,
       "question": "構成蛋白質三級構造之交互作用不包括下列何者？",
       "options": {
-        "A": "",
+        "A": "肽鍵",
         "B": "肽鍵",
-        "C": "",
+        "C": "親水性交互作用",
         "D": "疏水性交互作用"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116527,
@@ -36660,15 +36503,13 @@
       "number": 32,
       "question": "人類血漿蛋白質不具有下列何種功能？",
       "options": {
-        "A": "",
+        "A": "維持血液滲透壓",
         "B": "維持血液滲透壓",
-        "C": "",
+        "C": "運送葡萄糖",
         "D": "運送脂質"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116528,
@@ -36683,15 +36524,13 @@
       "number": 33,
       "question": "在人體中，嘌呤被降解後是以下列何種產物排出體外？",
       "options": {
-        "A": "",
+        "A": "銨離子(NH4+)",
         "B": "銨離子（NH4+）",
-        "C": "",
+        "C": "尿素(urea)",
         "D": "牛磺酸（taurine）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116529,
@@ -36704,17 +36543,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 34,
-      "question": "在有絲分裂（mitosis）過程中DNA 發生損傷時，磷酸化的p53 蛋白會抑制細胞繼續進行有絲分裂，直到損傷DNA 被修復。若受損的DNA 一直都沒有被修復，細胞將會發生下列何種情況？",
+      "question": "在有絲分裂(mitosis)過程中 DNA 發生損傷時,磷酸化的 p53 蛋白會抑制細胞繼續進行有絲分裂,直到損傷 DNA 被修復。若受損的 DNA 一直都沒有被修復,細胞將會發生下列何種情況?",
       "options": {
-        "A": "",
+        "A": "細胞重返至 G1 期 (G1 phase)",
         "B": "細胞重返至G1 期（G1 phase）",
-        "C": "",
+        "C": "細胞重複進行 G2 期 (G2 phase)",
         "D": "細胞重複進行S 期（S phase）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116530,
@@ -36727,17 +36564,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 35,
-      "question": "在細胞凋亡（apoptosis）過程中，蛋白質水解（proteolysis）是由下列何種物質所負責？",
+      "question": "在細胞凋亡(apoptosis)過程中, 蛋白質水解(proteolysis)是由下列何種物質所負責?",
       "options": {
-        "A": "",
+        "A": "ubiquitin",
         "B": "ubiquitin",
-        "C": "",
+        "C": "phagocytic protease",
         "D": "autophagic lysosomal protease"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116531,
@@ -36752,15 +36587,13 @@
       "number": 36,
       "question": "依據P/O ratio 理論，各2 分子的NADH 和FADH2 共可生成幾個ATP？",
       "options": {
-        "A": "",
+        "A": "10",
         "B": "10",
-        "C": "",
+        "C": "6",
         "D": "8"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116532,
@@ -36775,15 +36608,13 @@
       "number": 37,
       "question": "以酒精去氫酶催化酒精為乙醛（acetaldehyde）之間的可逆反應，是以下列何者為氧化劑？",
       "options": {
-        "A": "",
+        "A": "NAD+",
         "B": "NAD+",
-        "C": "",
+        "C": "NADP+",
         "D": "FAD"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116533,
@@ -36796,17 +36627,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 38,
-      "question": "的Michaelis 常數Km 值？",
+      "question": "今有一個酵素甲的 Michaelis 常數 Km 為 7.9 × 10⁻³, 則加入競爭型可逆抑制劑後,下列何者可為調整後的 Michaelis 常數 Km 值?",
       "options": {
-        "A": "",
+        "A": "1.5 x 10⁻²",
         "B": "1.5 × 10-2",
-        "C": "",
+        "C": "7.9 x 10⁻³",
         "D": "6.9 × 10-3"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116534,
@@ -36819,17 +36648,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 39,
-      "question": "若以速率／基質濃度為橫軸，速率為縱軸畫出Eadie-Hofstee plot，則此直線斜率是：",
+      "question": "若以速率/基質濃度為橫軸,速率為縱軸畫出 Eadie-Hofstee plot,則此直線斜率是:",
       "options": {
-        "A": "",
+        "A": "-1/Km",
         "B": "-1/Km",
-        "C": "",
+        "C": "1/Km",
         "D": "-Km"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116535,
@@ -36842,17 +36669,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 40,
-      "question": "對於RNA polymerase II 而言，下列何者是mRNA 起始點上游常見且共同之啟動子元件（common promoterelement）？",
+      "question": "對於 RNA polymerase II 而言,下列何者是 mRNA 起始點上游常見且共同之啟動子元件(common promoter element) ?",
       "options": {
-        "A": "",
+        "A": "CAAT box (GGCCAATCT)",
         "B": "CAAT box（GGCCAATCT）",
-        "C": "",
+        "C": "TRE (GAGGGACGTACCGCA)",
         "D": "GC box（GGGCGG）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116696,
@@ -36867,15 +36692,13 @@
       "number": 1,
       "question": "屠宰場內畜禽的屠宰及分切之衛生檢查，由主管機關依下列何種法規辦理？",
       "options": {
-        "A": "",
+        "A": "食品良好衛生規範",
         "B": "食品良好衛生規範",
-        "C": "",
+        "C": "食品衛生管理法",
         "D": "畜牧法"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116697,
@@ -36890,15 +36713,13 @@
       "number": 2,
       "question": "依據食品良好衛生規範，食品業者應指派下列何種職務人員針對建築與設施及衛生管理之情形填報衛生管理紀錄？",
       "options": {
-        "A": "",
+        "A": "衛生督導專責人員",
         "B": "衛生督導專責人員",
-        "C": "",
+        "C": "衛生清潔專責人員",
         "D": "衛生管理專責人員"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116698,
@@ -36913,15 +36734,13 @@
       "number": 3,
       "question": "依據食品良好衛生規範，食品業者設置建築與設施時，洗手消毒設施之設計，應於明顯之位置懸掛下列何種標示？",
       "options": {
-        "A": "",
+        "A": "簡明易懂的洗手方法之標示",
         "B": "簡明易懂的洗手方法之標示",
-        "C": "",
+        "C": "提醒使用消毒設施之標示",
         "D": "提醒如廁後應洗手之標示"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116699,
@@ -36936,15 +36755,13 @@
       "number": 4,
       "question": "健康食品之許可證於有效期間內，如有下列何種事由者，中央主管機關不需對已經許可之健康食品重新評估？",
       "options": {
-        "A": "",
+        "A": "科學研究對該產品之功效發生疑義時",
         "B": "科學研究對該產品之功效發生疑義時",
-        "C": "",
+        "C": "經食品衛生主管機關認定有必要時",
         "D": "產品之成分、配方或生產方式受到質疑時"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116700,
@@ -36959,15 +36776,13 @@
       "number": 5,
       "question": "關於食品腐敗與微生物的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "食品腐敗最主要原因是來自於微生物的生長",
+        "B": "Pseudomonas 等低溫菌的生長繁殖常造成冷藏肉的腐敗",
+        "C": "通常水果之軟腐現象主要是耐酸性的細菌大量繁殖所造成",
+        "D": "糖漬或乾燥食品較不易腐敗,是因為微生物可利用的水分較少"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116701,
@@ -36982,15 +36797,13 @@
       "number": 6,
       "question": "下列何者屬於易腐敗的食物？",
       "options": {
-        "A": "",
+        "A": "麵粉、乾豆",
         "B": "麵粉、乾豆",
-        "C": "",
+        "C": "蘋果、馬鈴薯",
         "D": "家禽肉、魚肉"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116702,
@@ -37003,17 +36816,15 @@
       "subject_name": "食品衛生安全",
       "stage_id": 6,
       "number": 7,
-      "question": "某生以「標準平板計數法」測貢丸之生菌數，在100 稀釋倍數所得菌落數為：235、168（二重複），則此樣品的生菌數，應表示為：",
+      "question": "某生以「標準平板計數法」測貢丸之生菌數,在 100 稀釋倍數所得菌落數為:235、168(二重複),則此樣品的生菌數,應表示為:",
       "options": {
-        "A": "",
+        "A": "202 x 10² CFU/mL",
         "B": "202 × 102 CFU/mL",
-        "C": "",
+        "C": "2.0 x 10⁴ CFU/g",
         "D": "202 × 102 CFU/g"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116703,
@@ -37028,15 +36839,13 @@
       "number": 8,
       "question": "下列何者為一般食品的衛生指標菌？",
       "options": {
-        "A": "",
+        "A": "腸炎弧菌",
         "B": "腸炎弧菌",
-        "C": "",
+        "C": "沙門氏菌",
         "D": "大腸桿菌"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116704,
@@ -37051,15 +36860,13 @@
       "number": 9,
       "question": "關於冰沙、冰棒等冰品類的衛生標準，下列敘述何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "必須檢測生菌數、大腸桿菌群和大腸桿菌等三種項目",
+        "B": "每公撮中生菌數應在100,000以下",
+        "C": "每公撮中大腸桿菌群應在100以下",
+        "D": "每公撮中大腸桿菌應在10以下"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116705,
@@ -37074,15 +36881,13 @@
       "number": 10,
       "question": "下列何者食物中毒菌為毒素型？",
       "options": {
-        "A": "",
+        "A": "Escherichia coli O157:H7",
         "B": "Escherichia coli O157：H7",
-        "C": "",
+        "C": "Listeria monocytogenes",
         "D": "Vibrio parahaemolyticus"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116706,
@@ -37097,15 +36902,13 @@
       "number": 11,
       "question": "以實驗動物進行致畸胎性實驗所獲得的評估結果，對人類健康具有下列何種意義？",
       "options": {
-        "A": "",
+        "A": "可做進一步實驗或評估的重要參考依據",
         "B": "可做進一步實驗或評估的重要參考依據",
-        "C": "",
+        "C": "可據以推算人類之每日最高攝入量（ADI）",
         "D": "可以直接判定對人類也有完全相同的情形"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116707,
@@ -37120,15 +36923,13 @@
       "number": 12,
       "question": "人類的每日攝取安全容許量（ADI）乃以下列何種數據乘以安全係數計算獲得？",
       "options": {
-        "A": "",
+        "A": "IC50",
         "B": "IC50",
-        "C": "",
+        "C": "VSD",
         "D": "LD50"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116708,
@@ -37143,15 +36944,13 @@
       "number": 13,
       "question": "進行亞急性毒性試驗時，至少要有三個劑量組，其中高劑量組之劑量設計原則為何？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "LD50一半之劑量",
+        "B": "足以引起最低毒性作用之劑量",
+        "C": "足以使試驗動物產生毒性症狀,且造成死亡之劑量",
+        "D": "足以使試驗動物產生毒性症狀,但不造成死亡之劑量"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116709,
@@ -37166,15 +36965,13 @@
       "number": 14,
       "question": "致癌性實驗中，下列實驗結果之推論敘述何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "所有引起實驗動物致癌之物質,一定會引起人類癌症發生",
+        "B": "引起實驗動物致癌之物質,不一定會引起人類癌症發生",
+        "C": "不會引起實驗動物致癌之物質,一定不會引起人類癌症發生",
+        "D": "具有致癌性之物質一定是致突變物質"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116710,
@@ -37189,15 +36986,13 @@
       "number": 15,
       "question": "如果以囓齒類骨髓細胞之微核測試法進行試驗物質之基因毒性評估，主要檢測下列何種血球中之微核發生的數目？",
       "options": {
-        "A": "",
+        "A": "淋巴球(lymphocytes)",
         "B": "淋巴球（lymphocytes）",
-        "C": "",
+        "C": "網狀紅血球(reticulocytes)",
         "D": "血小板（thrombocytes）"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116711,
@@ -37212,15 +37007,13 @@
       "number": 16,
       "question": "我國健康食品之安全性評估中，若產品之原料非屬傳統食用且含有致癌物之類似物者歸屬於第四類安全性評估，下列何者不是其應檢具的毒性測試資料？",
       "options": {
-        "A": "",
+        "A": "基因毒性試驗",
         "B": "基因毒性試驗",
-        "C": "",
+        "C": "繁殖試驗",
         "D": "28 天餵食毒性試驗"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116712,
@@ -37235,15 +37028,13 @@
       "number": 17,
       "question": "根據行政院衛生署（現為衛生福利部）在民國96 年所頒布之「食品用洗潔劑衛生標準」，下列敘述何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "本標準所稱之食品用洗潔劑不適用固態肥皂、供餐具自動洗淨機使用之洗潔劑、酸液、鹼液及漂白水等",
+        "B": "食品用洗潔劑不得檢出任何壬基苯酚類(nonylphenol 及 nonylphenol ethoxylate)介面活性劑",
+        "C": "食品用洗潔劑之螢光增白劑含量須在0.1%以下",
+        "D": "食品用洗潔劑不得添加任何香料及著色劑"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116713,
@@ -37258,15 +37049,13 @@
       "number": 18,
       "question": "俗稱寶特瓶的製造原料為：",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "聚丙烯(polypropylene, PP)",
+        "B": "聚氯乙烯(polyvinylchloride, PVC)",
+        "C": "聚碳酸酯(polycarbonate, PC)",
+        "D": "聚乙烯對苯二甲酸樹脂(polyethylene terephthalate, PET)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116714,
@@ -37281,15 +37070,13 @@
       "number": 19,
       "question": "有關己二烯酸（sorbic acid）之性質，下列敘述何者正確？",
       "options": {
-        "A": "",
+        "A": "為飽和酸",
         "B": "為飽和酸",
-        "C": "",
+        "C": "抑菌能力不受其分子構型影響",
         "D": "抑制真菌能力較細菌高"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116715,
@@ -37304,15 +37091,13 @@
       "number": 20,
       "question": "有關阿斯巴甜（aspartame）的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "適合糖尿病患者食用,不會造成血糖上升",
+        "B": "為天門冬胺酸(asparagine)及苯丙胺酸(phenylalanine)雙胜肽的酯類化合物",
+        "C": "添加於食品中時僅需標示為甜味劑",
+        "D": "甜度約為蔗糖的150~200倍,但每公克可產生4大卡之熱量"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116716,
@@ -37327,15 +37112,13 @@
       "number": 21,
       "question": "熱硬化性樹脂（thermosetting resin）如加熱硬化程度不足，則可能有下列何種物質溶出的問題？",
       "options": {
-        "A": "",
+        "A": "苯乙烯",
         "B": "苯乙烯",
-        "C": "",
+        "C": "氯乙烯",
         "D": "甲醛"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116717,
@@ -37350,15 +37133,13 @@
       "number": 22,
       "question": "依據「罐頭食品類衛生標準」規定，金屬罐裝之罐頭食品，其重金屬最大容許量是規範下列那兩種重金屬？",
       "options": {
-        "A": "",
+        "A": "鉛、鎘",
         "B": "鉛、鎘",
-        "C": "",
+        "C": "鉛、錫",
         "D": "鐵、錫"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116718,
@@ -37373,15 +37154,13 @@
       "number": 23,
       "question": "有關DBP 及DEHP 塑化劑之敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "屬於鄰苯二甲酸酯類化合物",
+        "B": "因共價鍵之破壞從塑膠容器主體結構中釋放出來",
+        "C": "塑膠容器盛裝高油脂食品較易溶出",
+        "D": "為環境荷爾蒙"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116719,
@@ -37396,15 +37175,13 @@
       "number": 24,
       "question": "下列何者不是屬於動物性天然毒素？",
       "options": {
-        "A": "",
+        "A": "saxitoxin",
         "B": "saxitoxin",
-        "C": "",
+        "C": "patulin",
         "D": "brevetoxin"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116720,
@@ -37419,15 +37196,13 @@
       "number": 25,
       "question": "有關腹瀉性貝毒（diarrhetic shellfish poisoning, DSP）中毒，下列敘述何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "毒素不耐熱,易受烹調溫度所破壞",
+        "B": "毒素致死率高",
+        "C": "食用有毒貝類後,會產生麻痺、呼吸衰竭等症狀",
+        "D": "主要是食用受渦鞭毛藻等所污染的二枚貝所導致的中毒"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116721,
@@ -37442,15 +37217,13 @@
       "number": 26,
       "question": "有關鯖魚中毒（scombroid fish poisoning）之敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "鯖科魚魚肉中的離胺酸經分解產生胺類物質而造成",
+        "B": "鯖魚等相關魚種經捕獲後未冷藏、冷凍或不新鮮的魚體經食用後易發生此類中毒",
+        "C": "中毒症狀包括臉部及四肢潮紅、皮膚癢、心悸等,是一種類過敏性食物中毒",
+        "D": "人體具有解毒酵素以分解食入的少量毒性物質"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116722,
@@ -37465,15 +37238,13 @@
       "number": 27,
       "question": "有關仙人掌桿菌之敘述，下列何者錯誤？",
       "options": {
-        "A": "",
+        "A": "是米飯及馬鈴薯等澱粉性食物常見之中毒菌",
         "B": "是米飯及馬鈴薯等澱粉性食物常見之中毒菌",
-        "C": "",
+        "C": "可能會分泌毒素",
         "D": "被污染的食物不包括肉類及牛乳"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116723,
@@ -37488,15 +37259,13 @@
       "number": 28,
       "question": "下列何者不是植物性產氰醣苷（cyanogenic glycosides）？",
       "options": {
-        "A": "",
+        "A": "苦杏仁苷(amygdalin)",
         "B": "苦杏仁苷（amygdalin）",
-        "C": "",
+        "C": "原甲狀腺苷(progoitrin)",
         "D": "亞麻苦苷（linamarin）"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116724,
@@ -37511,15 +37280,13 @@
       "number": 29,
       "question": "關於農藥殘留之敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "有機磷殺蟲劑化性穩定、不易分解,比有機氯殺蟲劑的殘留時間長",
+        "B": "連續性採收或提前採收的蔬菜,農藥殘留的風險較高",
+        "C": "葉菜類比根菜類農藥殘留的機率大",
+        "D": "清洗、去皮等處理方式,都可減少農藥殘留"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116725,
@@ -37534,15 +37301,13 @@
       "number": 30,
       "question": "下列何者為產生腎臟病變之黃變米毒素？",
       "options": {
-        "A": "",
+        "A": "citerovirdin",
         "B": "citerovirdin",
-        "C": "",
+        "C": "trichothecene",
         "D": "citrinin"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116726,
@@ -37557,15 +37322,13 @@
       "number": 31,
       "question": "有關「定位清洗法」的敘述，下列何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "洗能看到及接觸到的機器外部,簡稱CIP",
+        "B": "以不拆卸機器為原則而洗管線內部",
+        "C": "因配合高流速或強力噴灑方式進行,因此完全無清洗上的死角",
+        "D": "在美國稱為CH,在歐洲各國稱為 OPC"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116727,
@@ -37580,15 +37343,13 @@
       "number": 32,
       "question": "有關餐飲業廢棄物的分類處理，下列敘述何者錯誤？",
       "options": {
-        "A": "",
+        "A": "盛裝酸、鹼、漂白水的容器是屬於有害廢棄物",
         "B": "盛裝酸、鹼、漂白水的容器是屬於有害廢棄物",
-        "C": "",
+        "C": "玻璃瓶屬於可回收廢棄物",
         "D": "衛生筷屬於可回收廢棄物"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116728,
@@ -37603,15 +37364,13 @@
       "number": 33,
       "question": "蓄水池（塔、槽）應保持清潔，其設置地點應距污穢場所、化糞池等污染源幾公尺以上？",
       "options": {
-        "A": "",
+        "A": "3",
         "B": "3",
-        "C": "",
+        "C": "10",
         "D": "5"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116729,
@@ -37626,15 +37385,13 @@
       "number": 34,
       "question": "餐具經過消毒與風乾後，應儲存於下列何區？",
       "options": {
-        "A": "",
+        "A": "準清潔區",
         "B": "準清潔區",
-        "C": "",
+        "C": "污染區",
         "D": "一般工作區"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116730,
@@ -37649,15 +37406,13 @@
       "number": 35,
       "question": "將所有細菌完全殺滅使成為無菌狀態，稱為：",
       "options": {
-        "A": "",
+        "A": "消毒",
         "B": "消毒",
-        "C": "",
+        "C": "完全滅菌",
         "D": "商業殺菌"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116731,
@@ -37672,15 +37427,13 @@
       "number": 36,
       "question": "有關食材復熱的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "食物中心溫度需加熱到74℃以上,並維持15秒",
+        "B": "使用微波爐復熱,食材外表與中心溫度需達到88℃",
+        "C": "可使用保溫設備來進行復熱",
+        "D": "不可將新、舊食材混合後再復熱"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116732,
@@ -37695,15 +37448,13 @@
       "number": 37,
       "question": "我國開放含有瘦肉精之牛肉進口，其中核可的瘦肉精種類為下列何者？",
       "options": {
-        "A": "",
+        "A": "特布他林 (Terbutaline)",
         "B": "特布他林（Terbutaline）",
-        "C": "",
+        "C": "科爾特羅 (Colterol)",
         "D": "沙丁胺醇（Salbutamol）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116733,
@@ -37718,15 +37469,13 @@
       "number": 38,
       "question": "下列何種食物發生肉毒桿菌中毒機率較低？",
       "options": {
-        "A": "",
+        "A": "蜂蜜",
         "B": "蜂蜜",
-        "C": "",
+        "C": "蔭花生罐頭",
         "D": "酸黃瓜"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116734,
@@ -37741,15 +37490,13 @@
       "number": 39,
       "question": "依照我國食品標示的相關法令規定，下列何者屬於營養宣稱？",
       "options": {
-        "A": "",
+        "A": "無膽固醇",
         "B": "無膽固醇",
-        "C": "",
+        "C": "含膠原蛋白",
         "D": "含卵磷脂"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116735,
@@ -37764,15 +37511,13 @@
       "number": 40,
       "question": "經過聯合國環境總署所正式通過之「生物安全議定書（Biosafety Protocol）」協定，雖然各國擔心基因改良產品可能危害人體健康，或會破壞自然環境，即使在無法執行評估或缺乏完整科學證據確實有害的情況下，可採取下列何種措施？",
       "options": {
-        "A": "",
+        "A": "有權限制此產品進口",
         "B": "有權限制此產品進口",
-        "C": "",
+        "C": "可暫時進口",
         "D": "不得限制此產品進口"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116616,
@@ -37785,17 +37530,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 1,
-      "question": "製作水餃皮100 張（每張10 公克）約需使用麵粉多少公克？（已知100 公克麵粉約加冷水50 公克來揉成麵糰，另外操作耗損約10%）",
+      "question": "製作水餃皮 100 張（每張 10 公克）約需使用麵粉多少公克？（已知 100 公克麵粉約加冷水 50 公克來揉成麵糰，另外操作耗損約 10%）",
       "options": {
-        "A": "",
+        "A": "750",
         "B": "750",
-        "C": "",
+        "C": "1350",
         "D": "1000"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116617,
@@ -37810,16 +37553,14 @@
       "number": 2,
       "question": "關於標準食譜之製作敘述，下列何者錯誤？",
       "options": {
-        "A": "",
+        "A": "以小成大作擴展",
         "B": "以小成大作擴展",
-        "C": "",
+        "C": "考慮製備烹調損失",
         "D": "使用因數表做換算"
       },
       "answer": "D",
       "explanation": "",
-      "disputed": true,
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "disputed": true
     },
     {
       "id": 116618,
@@ -37832,17 +37573,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 3,
-      "question": "自助餐廳每餐供應600 人，葷菜可以三選一，其中一道為烤肉排，材料為豬里肌肉，每人供應量為75 公克，肉排收縮率為15%，則需採購多少公斤的豬里肌肉？",
+      "question": "自助餐廳每餐供應 600 人，葷菜可以三選一，其中一道為烤肉排，材料為豬里肌肉，每人供應量為 75 公克，肉排收縮率為 15%，則需採購多少公斤的豬里肌肉？",
       "options": {
-        "A": "",
+        "A": "15",
         "B": "15",
-        "C": "",
+        "C": "45",
         "D": "18"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116619,
@@ -37857,15 +37596,13 @@
       "number": 4,
       "question": "下列何種生命週期之男性民眾，在適度活動量下，每人每天所需要的熱量為最多？",
       "options": {
-        "A": "",
+        "A": "7~10歲",
         "B": "7～10 歲",
-        "C": "",
+        "C": "16~18歲",
         "D": "13～15 歲"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116620,
@@ -37880,15 +37617,13 @@
       "number": 5,
       "question": "下列何者屬於含澱粉最高的點心？",
       "options": {
-        "A": "",
+        "A": "肉包",
         "B": "肉包",
-        "C": "",
+        "C": "布丁",
         "D": "粉圓"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116621,
@@ -37903,15 +37638,13 @@
       "number": 6,
       "question": "依據新版「每日飲食指南」建議，鼓勵增加攝取未精緻的全穀食物，應用於團體膳食供應米飯時，白米搭配糙米比例至少達多少為宜？",
       "options": {
-        "A": "",
+        "A": "1 : 2",
         "B": "1：2",
-        "C": "",
+        "C": "2 : 1",
         "D": "1：3"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116622,
@@ -37926,15 +37659,13 @@
       "number": 7,
       "question": "有關冷藏管理方式，下列敘述那些正確？①食品入庫前應清楚標示項目 ②置於不銹鋼盆內之熟食不需加蓋 ③食品應適當包裝 ④生食應置於熟食上方架子",
       "options": {
-        "A": "",
+        "A": "①③",
         "B": "①③",
-        "C": "",
+        "C": "②③",
         "D": "①④"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116623,
@@ -37949,15 +37680,13 @@
       "number": 8,
       "question": "有關庫房管理之敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "步入型冷凍冷藏庫應設有紅色作業燈",
+        "B": "乾料庫房相對濕度應控制在70~80%",
+        "C": "食品存放應符合先進先出原則",
+        "D": "步入型冷凍冷藏庫宜於庫外張貼「庫內食品位置放置圖」"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116624,
@@ -37972,15 +37701,13 @@
       "number": 9,
       "question": "某餐廳依成品特性、用途分為乾料庫房、新鮮材料庫房和非食品庫房，則此種庫房管理為：",
       "options": {
-        "A": "",
+        "A": "依供應商供應方式分類",
         "B": "依供應商供應方式分類",
-        "C": "",
+        "C": "集中庫房",
         "D": "水龍頭倉庫方式"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116625,
@@ -37995,15 +37722,13 @@
       "number": 10,
       "question": "有關團膳公司進行庫房管理時須考量的條件，下列敘述何者錯誤？",
       "options": {
-        "A": "",
+        "A": "乾料庫房,溫度控制5~22℃、濕度40~60%",
         "B": "乾料庫房，溫度控制5～22℃、濕度40～60%",
-        "C": "",
+        "C": "乳品冷藏庫,溫度控制3~7℃、濕度80~85%",
         "D": "蔬果冷藏庫，溫度控制1～7℃、濕度50～65%"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116626,
@@ -38018,15 +37743,13 @@
       "number": 11,
       "question": "關於驗收之敘述，下列何者錯誤？",
       "options": {
-        "A": "",
+        "A": "驗收可由採購人員擔任",
         "B": "驗收可由採購人員擔任",
-        "C": "",
+        "C": "驗收區宜接近前處理區",
         "D": "驗收區應準備秤量器具"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116627,
@@ -38041,15 +37764,13 @@
       "number": 12,
       "question": "有關「議價採購」之敘述，下列何者正確？①為一公開之採購方法 ②較適用於緊急採購 ③以競價方式決定廠商 ④較適用於獨家經營貨品之採購 ⑤手續繁複且耗時",
       "options": {
-        "A": "",
+        "A": "①②",
         "B": "①②",
-        "C": "",
+        "C": "①④⑤",
         "D": "②④"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116628,
@@ -38064,15 +37785,13 @@
       "number": 13,
       "question": "採購過程中經常會對於所要購買的商品制定「規格」，下列何者不屬於規格中的項目？",
       "options": {
-        "A": "",
+        "A": "稠度",
         "B": "稠度",
-        "C": "",
+        "C": "品種",
         "D": "包裝"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116629,
@@ -38087,15 +37806,13 @@
       "number": 14,
       "question": "有關驗收肉品時須注意的事項，下列敘述何者錯誤？",
       "options": {
-        "A": "",
+        "A": "屠體表面要潮濕",
         "B": "屠體表面要潮濕",
-        "C": "",
+        "C": "屠體肥肉要白嫩",
         "D": "豬肉品級分為上肉、中肉、下肉"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116630,
@@ -38110,15 +37827,13 @@
       "number": 15,
       "question": "蛋黃中何種成分是良好乳化劑之來源？",
       "options": {
-        "A": "",
+        "A": "cholesterol",
         "B": "cholesterol",
-        "C": "",
+        "C": "ovomucin",
         "D": "lecithin"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116631,
@@ -38133,15 +37848,13 @@
       "number": 16,
       "question": "下列茶品中，何者屬於全發酵茶？",
       "options": {
-        "A": "",
+        "A": "紅茶",
         "B": "紅茶",
-        "C": "",
+        "C": "包種茶",
         "D": "綠茶"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116632,
@@ -38156,15 +37869,13 @@
       "number": 17,
       "question": "下列何者不是黃豆加工衍生之食品？",
       "options": {
-        "A": "",
+        "A": "沙拉油",
         "B": "沙拉油",
-        "C": "",
+        "C": "醬油",
         "D": "麵筋"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116633,
@@ -38179,15 +37890,13 @@
       "number": 18,
       "question": "肉豬屠體中那一部位最適合回鍋肉及培根之製作？",
       "options": {
-        "A": "",
+        "A": "三層肉",
         "B": "三層肉",
-        "C": "",
+        "C": "腰內肉",
         "D": "後腿肉"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116634,
@@ -38202,15 +37911,13 @@
       "number": 19,
       "question": "下列何者可以防止澱粉老化？",
       "options": {
-        "A": "",
+        "A": "添加醋",
         "B": "添加醋",
-        "C": "",
+        "C": "將澱粉溫度保持於50℃以下",
         "D": "添加油"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116635,
@@ -38225,15 +37932,13 @@
       "number": 20,
       "question": "下列關於西點常用油脂之敘述，何者正確？",
       "options": {
-        "A": "",
+        "A": "酥油又稱為雪白油",
         "B": "酥油又稱為雪白油",
-        "C": "",
+        "C": "瑪琪琳約含6%鹽,以防止黴菌生長",
         "D": "丹麥麵包常添加豬油以製造具有層次的產品"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116636,
@@ -38248,15 +37953,13 @@
       "number": 21,
       "question": "下列何種方式稽查評鑑廠商，最能了解其作業狀況？",
       "options": {
-        "A": "",
+        "A": "不定期,無預警式",
         "B": "不定期，無預警式",
-        "C": "",
+        "C": "不定期,預先告知",
         "D": "定期，無預警式"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116637,
@@ -38271,15 +37974,13 @@
       "number": 22,
       "question": "老人安養機構住民250 人，若廚房只能選購3 種基本設備，則下列那些為宜？①鼓風式瓦斯炒爐 ②電烤箱 ③蒸庫 ④煎臺 ⑤蒸汽迴轉鍋",
       "options": {
-        "A": "",
+        "A": "①②③",
         "B": "①②③",
-        "C": "",
+        "C": "②③④",
         "D": "①③⑤"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116638,
@@ -38294,10 +37995,10 @@
       "number": 23,
       "question": "下列敘述何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "油煙機之抽氣能力以能排氣至少80%為原則",
+        "B": "刀具、砧板保管箱應有紫外線殺菌設備",
+        "C": "器具、餐具及器皿洗滌消毒設備,至少應具備三槽式洗滌設備",
+        "D": "冷凍及冷藏設備之貯物容積宜在70%以下"
       },
       "answer": "A",
       "explanation": "",
@@ -38317,15 +38018,13 @@
       "number": 24,
       "question": "根據「即食餐食工廠良好作業規範專則」之規定，下列敘述何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "原料處理場、烹調場等場所,其地面應有適當之排水斜度(應在1/100以上)及排水系統",
+        "B": "排水溝之側面和底面接合處應有適當之弧度(曲率半徑應在3公分以上)",
+        "C": "烹飪場內之天花板至少要離地面2.0公尺以上",
+        "D": "管制作業區之室內窗檯,檯面深度如有2公分以上者,其檯面與水平面之夾角應達45度以上"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116640,
@@ -38340,15 +38039,13 @@
       "number": 25,
       "question": "下列何者不在人力資源發展計畫中？",
       "options": {
-        "A": "",
+        "A": "人員配置與排班",
         "B": "人員配置與排班",
-        "C": "",
+        "C": "培育訓練員工",
         "D": "人員招募、甄選"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116641,
@@ -38363,15 +38060,13 @@
       "number": 26,
       "question": "績效評估方法中，常被用於評估一個具有管理潛力的工作人員或中級主管，其中包含人格、工作潛力、人際關係，此評估技術常運用多種評估方法及多位評估人員參與，此評估方法為何？",
       "options": {
-        "A": "",
+        "A": "評核中心",
         "B": "評核中心",
-        "C": "",
+        "C": "人與人比較",
         "D": "排列順序"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116642,
@@ -38386,15 +38081,13 @@
       "number": 27,
       "question": "某館子製作水餃皮一張6 公克，麵粉吸水量約為45%，使用5.5 公斤麵粉約可以製作多少張水餃皮？",
       "options": {
-        "A": "",
+        "A": "700",
         "B": "700",
-        "C": "",
+        "C": "1300",
         "D": "1000"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116643,
@@ -38409,15 +38102,13 @@
       "number": 28,
       "question": "為防食物中毒，關於衛生主管機關建議食品業者作業中注意的五要原則，下列敘述何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "要注意保存溫度、要新鮮、要洗手、生熟食要分開、要徹底加熱",
+        "B": "生熟食要分開、要徹底加熱、要先進先出、要標示、要洗手",
+        "C": "要標示、要消毒、要注意保存溫度、要新鮮、要洗手",
+        "D": "要先進先出、要洗手、生熟食要分開、要徹底加熱、要消毒"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116644,
@@ -38432,15 +38123,13 @@
       "number": 29,
       "question": "根據「即食餐食工廠良好作業規範專則」規定，一般作業區域、調理、烹調作業場所及檢查作業檯面之照明應分別保持在多少米燭光以上？",
       "options": {
-        "A": "",
+        "A": "110、220、540",
         "B": "110、220、540",
-        "C": "",
+        "C": "120、220、450",
         "D": "110、320、500"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116645,
@@ -38453,17 +38142,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 30,
-      "question": "開心農場販賣有機蘋果的情況為：每萬元營業額的用量是0.2 箱，5 月10～20 日預估營業額有150 萬元，本次庫存量有12 箱，若安全係數為1.2，則最少應該訂購多少箱？",
+      "question": "開心農場販賣有機蘋果的情況為：每萬元營業額的用量是 0.2 箱，5 月 10~20 日預估營業額有 150 萬元，本次庫存量有 12 箱，若安全係數為 1.2，則最少應該訂購多少箱？",
       "options": {
-        "A": "",
+        "A": "18",
         "B": "18",
-        "C": "",
+        "C": "24",
         "D": "20"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116646,
@@ -38476,17 +38163,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 31,
-      "question": "某員工餐廳每月供應10,000 人份用餐，每份伙食費用50 元，其中固定成本10 萬元，目標利潤為0 元，則變動成本率應為多少%？",
+      "question": "某員工餐廳每月供應 10,000 人份用餐,每份伙食費用 50 元,其中固定成本 10 萬元,目標利潤為 0 元,則變動成本率應為多少%?",
       "options": {
-        "A": "",
+        "A": "90",
         "B": "90",
-        "C": "",
+        "C": "70",
         "D": "80"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116647,
@@ -38501,15 +38186,13 @@
       "number": 32,
       "question": "依據「食品良好衛生規範」，關於「溫度」的敘述，下列何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "低溫食品理貨及裝卸貨作業均應在攝氏十五度以下之場所進行",
+        "B": "食品販賣熱藏(高溫貯存)溫度應保持在攝氏五十度以上",
+        "C": "冷凍食品之中心溫度應保持在攝氏負五度以下",
+        "D": "冷藏食品之中心溫度應保持在攝氏七度以上凍結點以上"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116648,
@@ -38524,15 +38207,13 @@
       "number": 33,
       "question": "關於團體膳食業者用水衛生管理之敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "水塔每二年至少清洗乙次",
+        "B": "國內現行標準正常水質 pH 值 6.0~8.5",
+        "C": "國內現行標準正常自由有效餘氯 0.2~1.0 mg/L",
+        "D": "室外蓄水池距污水管 5 公尺以上"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116649,
@@ -38545,17 +38226,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 34,
-      "question": "若某家餐廳每月固定成本約20 萬元，變動成本占50%，預估利潤30 萬元，則每月營業額至少為多少萬元？",
+      "question": "若某家餐廳每月固定成本約 20 萬元,變動成本占 50%,預估利潤 30 萬元,則每月營業額至少為多少萬元?",
       "options": {
-        "A": "",
+        "A": "50",
         "B": "50",
-        "C": "",
+        "C": "150",
         "D": "100"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116650,
@@ -38568,17 +38247,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 35,
-      "question": "依據我國食品衛生管理法規定，團膳業者聘用新進人員的體檢項目必需包括下列那些項目？①A 型肝炎②膿瘡 ③肌酸酐 ④結核病 ⑤尿蛋白",
+      "question": "依據我國食品衛生管理法規定，團膳業者聘用新進人員的體檢項目必需包括下列那些項目？①A 型肝炎 ②膿瘡 ③肌酸酐 ④結核病 ⑤尿蛋白",
       "options": {
-        "A": "",
+        "A": "②③④",
         "B": "②③④",
-        "C": "",
+        "C": "①②④",
         "D": "①③⑤"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116651,
@@ -38591,17 +38268,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 36,
-      "question": "王先生申請至某團膳公司擔任營養師工作，剛通過面試進入員工體檢階段，則下列檢查項目何者為非必須項目？",
+      "question": "王先生申請至某團膳公司擔任營養師工作,剛通過面試進入員工體檢階段,則下列檢查項目何者為非必 須項目?",
       "options": {
-        "A": "",
+        "A": "個人及家族史",
         "B": "個人及家族史",
-        "C": "",
+        "C": "身高、體重",
         "D": "齟齒"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116652,
@@ -38616,15 +38291,13 @@
       "number": 37,
       "question": "供膳員工的工作衛生習慣管理，下列何種行為是不被允許？",
       "options": {
-        "A": "",
+        "A": "同一塊砧板切熟食與生食前需要清洗",
         "B": "同一塊砧板切熟食與生食前需要清洗",
-        "C": "",
+        "C": "所有的熟食必須蓋好",
         "D": "不可用手直接接觸食品"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116653,
@@ -38637,17 +38310,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 38,
-      "question": "何謂critical limit？",
+      "question": "何謂 critical limit ?",
       "options": {
-        "A": "",
+        "A": "控制界線",
         "B": "控制界線",
-        "C": "",
+        "C": "重要控制點",
         "D": "矯正點"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116654,
@@ -38662,15 +38333,13 @@
       "number": 39,
       "question": "有關素食種類的定義，下列敘述何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "全素或純素:只食用不含奶蛋、植物五辛的純植物性製品",
+        "B": "蛋素:食用全素或純素及蛋製品",
+        "C": "植物五辛素:食用不含植物五辛(蔥、蒜、韭、蕎及興渠)的植物性製品",
+        "D": "奶蛋素:食用全素或純素及奶蛋製品"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116655,
@@ -38685,15 +38354,13 @@
       "number": 40,
       "question": "有關塑化劑的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "起雲劑是一種非法的食品添加物,可幫助食品的乳化",
+        "B": "DEHP為一種鄰苯二甲酸酯類化合物,是塑化劑",
+        "C": "為避免塑化劑的危害,要養成多吃蔬果、多喝開水、多運動,加速塑化劑排出",
+        "D": "不要用保鮮膜包裝油性食物,以避免塑化劑的暴露"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116576,
@@ -38708,15 +38375,13 @@
       "number": 1,
       "question": "關於評估蛋白質狀況的指標，下列何者的半衰期最長？",
       "options": {
-        "A": "",
+        "A": "白蛋白",
         "B": "白蛋白",
-        "C": "",
+        "C": "視網醇結合蛋白",
         "D": "前白蛋白"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116577,
@@ -38731,15 +38396,13 @@
       "number": 2,
       "question": "有關血清中電解質的正常值，下列何者正確？",
       "options": {
-        "A": "",
+        "A": "鈉 3~4.5 mg/dL",
         "B": "鈉3～4.5 mg/dL",
-        "C": "",
+        "C": "鈣 3.5~5 mg/dL",
         "D": "鉀3.5～5 mEq/L"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116578,
@@ -38754,15 +38417,13 @@
       "number": 3,
       "question": "以下有關「營養篩檢」之敘述何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "不是營養治療的一部分",
+        "B": "相等於營養評估,只是步驟簡單些",
+        "C": "目的是快速將高營養風險者找出來,進一步做營養評估",
+        "D": "只能由營養師執行,其他醫療人員不可擔任"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116579,
@@ -38777,15 +38438,13 @@
       "number": 4,
       "question": "下列何種疾病病患，治療中最容易因為腸道吸收不良產生食物與藥物之交互作用？",
       "options": {
-        "A": "",
+        "A": "糖尿病患",
         "B": "糖尿病患",
-        "C": "",
+        "C": "癌症病患",
         "D": "精神病患"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116580,
@@ -38800,15 +38459,13 @@
       "number": 5,
       "question": "服用皮質類固醇（corticosteroids）藥物所引起的高血糖是因下列何種原因？",
       "options": {
-        "A": "",
+        "A": "藥物促進糖解作用(glycolysis)",
         "B": "藥物促進糖解作用（glycolysis）",
-        "C": "",
+        "C": "藥物減少胰島素分泌",
         "D": "藥物降低胰島素阻抗"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116581,
@@ -38823,15 +38480,13 @@
       "number": 6,
       "question": "下列何者不是選擇管灌食插管方式的考慮因素？",
       "options": {
-        "A": "",
+        "A": "需要使用管灌食的時間長短",
         "B": "需要使用管灌食的時間長短",
-        "C": "",
+        "C": "患者發生肺吸入(aspiration)的危險性",
         "D": "患者是否能插管"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116582,
@@ -38846,15 +38501,13 @@
       "number": 7,
       "question": "許多藥物不可與葡萄柚汁一起服用，是因葡萄柚汁會抑制下列何種酵素的活性？",
       "options": {
-        "A": "",
+        "A": "胰脂解酶",
         "B": "胰脂解酶",
-        "C": "",
+        "C": "細胞色素 P-450 3A4 酵素",
         "D": "HMG-CoA 還原酶"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116583,
@@ -38869,15 +38522,13 @@
       "number": 8,
       "question": "提供蛋白質、脂肪或醣類等單一營養素的配方，可用來改變配方組成者稱為：",
       "options": {
-        "A": "",
+        "A": "polymeric formula",
         "B": "polymeric formula",
-        "C": "",
+        "C": "modular formula",
         "D": "monomeric formula"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116584,
@@ -38890,17 +38541,15 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 9,
-      "question": "以下何者為anorexia nervosa 患者飲食較常見的特徵？",
+      "question": "以下何者為 anorexia nervosa 患者飲食較常見的特徵?",
       "options": {
-        "A": "",
+        "A": "嚴格限制蛋白質攝取",
         "B": "嚴格限制蛋白質攝取",
-        "C": "",
+        "C": "嚴格限制鈉的攝取",
         "D": "嚴格限制脂肪攝取"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116585,
@@ -38913,17 +38562,15 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 10,
-      "question": "下列有關eating disorder 患者營養狀況的敘述，何者錯誤？",
+      "question": "下列有關 eating disorder 患者營養狀況的敘述,何者錯誤?",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "使用輕瀉劑及利尿劑的病人會出現脫水、低血鉀及低血氯的問題",
+        "B": "催吐常造成食道炎",
+        "C": "anorexia nervosa 病人的 REE 下降,但食物產熱效應增加",
+        "D": "bulimia nervosa 病人的 BMR 下降,且中樞神經系統被抑制"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116586,
@@ -38938,15 +38585,13 @@
       "number": 11,
       "question": "青少年體重過輕不易造成下列何種問題？",
       "options": {
-        "A": "",
+        "A": "甲狀腺亢進",
         "B": "甲狀腺亢進",
-        "C": "",
+        "C": "免疫力降低",
         "D": "性徵不明顯"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116587,
@@ -38961,15 +38606,13 @@
       "number": 12,
       "question": "飢餓減重法容易造成下列何種現象？",
       "options": {
-        "A": "",
+        "A": "基礎代謝率增加",
         "B": "基礎代謝率增加",
-        "C": "",
+        "C": "初期體脂肪快速降低",
         "D": "體內肝醣僅能提供前三天的熱量需求"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116588,
@@ -38984,15 +38627,13 @@
       "number": 13,
       "question": "肝硬化患者若出現呼吸商降低的情形，反應出患者的代謝以下列何者為主？",
       "options": {
-        "A": "",
+        "A": "醣類",
         "B": "醣類",
-        "C": "",
+        "C": "脂肪",
         "D": "蛋白質"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116589,
@@ -39007,15 +38648,13 @@
       "number": 14,
       "question": "使用靜脈營養時，由靜脈輸入的葡萄糖每1 克產生多少kcal 的熱量？",
       "options": {
-        "A": "",
+        "A": "3.4",
         "B": "3.4",
-        "C": "",
+        "C": "4.0",
         "D": "3.7"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116590,
@@ -39030,15 +38669,13 @@
       "number": 15,
       "question": "造成青少年體重過輕的原因不包括下列何者？",
       "options": {
-        "A": "",
+        "A": "心理壓力",
         "B": "心理壓力",
-        "C": "",
+        "C": "運動過度",
         "D": "甲狀腺功能低下"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116591,
@@ -39051,17 +38688,15 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 16,
-      "question": "關於粥狀瀉（celiac disease）患者之營養照護，下列敘述那些正確？①少量多餐 ②蘇打餅乾做為點心③補充水分 ④增加脂肪攝取，補充熱量",
+      "question": "關於粥狀瀉（celiac disease）患者之營養照護，下列敘述那些正確？①少量多餐 ②蘇打餅乾做為點心 ③補充水分 ④增加脂肪攝取，補充熱量",
       "options": {
-        "A": "",
+        "A": "①②",
         "B": "①②",
-        "C": "",
+        "C": "②④",
         "D": "①③"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116592,
@@ -39076,15 +38711,13 @@
       "number": 17,
       "question": "細菌感染所引發的腹瀉屬於下列何者？",
       "options": {
-        "A": "",
+        "A": "分泌型腹瀉",
         "B": "分泌型腹瀉",
-        "C": "",
+        "C": "滲出型腹瀉",
         "D": "滲透型腹瀉"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116593,
@@ -39099,15 +38732,13 @@
       "number": 18,
       "question": "有關血糖調控的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "胰島素（insulin）抑制脂肪分解，並使血糖下降",
+        "B": "腎上腺皮質類固醇（adrenal corticosteroids）促進消化道對葡萄糖的吸收，使血糖上升",
+        "C": "昇糖激素（glucagon）促進肝臟內肝醣分解，使血糖上升",
+        "D": "ACTH（adrenocorticotropic hormone）減少組織對葡萄糖的利用，使血糖上升"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116594,
@@ -39122,15 +38753,13 @@
       "number": 19,
       "question": "醫生建議李先生服用口服降血糖藥物控制血糖值，若要監測其後3 個月中血糖控制狀況，下列何者為最適合之參考指標？",
       "options": {
-        "A": "",
+        "A": "fasting blood glucose",
         "B": "fasting blood glucose",
-        "C": "",
+        "C": "A1c",
         "D": "postprandial blood glucose"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116595,
@@ -39145,15 +38774,13 @@
       "number": 20,
       "question": "有關糖尿病團隊共同照護的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "團隊成員通常被要求通過糖尿病衛教師認證,醫師也不例外",
+        "B": "通過糖尿病衛教師認證的營養師,代表他們具有糖尿病方面的專業知識,於教導糖尿病病人上具有專業優勢",
+        "C": "團隊共同照護的目的是提供糖尿病人相關「知識」,但不包括「技能」方面的訓練",
+        "D": "糖尿病人本身也有將「自我管理」行動納入每日生活作息中之義務"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116596,
@@ -39168,15 +38795,13 @@
       "number": 21,
       "question": "有關糖尿病之敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "近年來肥胖青少年罹患第1型糖尿病的人數日漸增加",
+        "B": "雖然第1型糖尿病患在任何年齡都會發病,但第1型糖尿病患發病的高峰期是在青少年時期",
+        "C": "有妊娠期糖尿病(gestational diabetes mellitus)及多囊性卵巢症候群(polycystic ovary syndrome)的女性,罹患第2型糖尿病的危險性會增加",
+        "D": "糖尿病前期(prediabetes)包括飯後血糖異常與葡萄糖耐受不良"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116597,
@@ -39191,15 +38816,13 @@
       "number": 22,
       "question": "各種腎臟疾病中，下列何者需要限制水分攝取量？",
       "options": {
-        "A": "",
+        "A": "腎功能不全(impaired renal function)",
         "B": "腎功能不全（impaired renal function）",
-        "C": "",
+        "C": "腹膜透析(CAPD)",
         "D": "血液透析 （HD）"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116598,
@@ -39214,15 +38837,13 @@
       "number": 23,
       "question": "腎臟移植術後四到六週，病人血液生化值的變化為：",
       "options": {
-        "A": "",
+        "A": "低鉀血症",
         "B": "低鉀血症",
-        "C": "",
+        "C": "低鈣血症",
         "D": "高鈉血症"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116599,
@@ -39237,15 +38858,13 @@
       "number": 24,
       "question": "透析病人若同時有糖尿病時，常併發下列何種問題？",
       "options": {
-        "A": "",
+        "A": "高鉀血症",
         "B": "高鉀血症",
-        "C": "",
+        "C": "高鎂血症",
         "D": "高磷血症"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116600,
@@ -39260,15 +38879,13 @@
       "number": 25,
       "question": "下列何種賀爾蒙是由腎臟所分泌？",
       "options": {
-        "A": "",
+        "A": "aldosterone",
         "B": "aldosterone",
-        "C": "",
+        "C": "erythropoietin",
         "D": "agiotension II"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116601,
@@ -39283,15 +38900,13 @@
       "number": 26,
       "question": "關於心衰竭的治療，下列敘述何者錯誤？",
       "options": {
-        "A": "",
+        "A": "需限鈉飲食",
         "B": "需限鈉飲食",
-        "C": "",
+        "C": "需限水",
         "D": "適量飲酒"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116602,
@@ -39306,15 +38921,13 @@
       "number": 27,
       "question": "關於地中海飲食中強調每餐均應要攝取的食物，下列何者錯誤？",
       "options": {
-        "A": "",
+        "A": "橄欖油",
         "B": "橄欖油",
-        "C": "",
+        "C": "堅果類",
         "D": "全榖類"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116603,
@@ -39329,15 +38942,13 @@
       "number": 28,
       "question": "會增加肥胖者罹患心血管疾病的危險因子，下列何者較不相關？",
       "options": {
-        "A": "",
+        "A": "脂肪肝",
         "B": "脂肪肝",
-        "C": "",
+        "C": "血糖不耐",
         "D": "高血壓"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116604,
@@ -39352,15 +38963,13 @@
       "number": 29,
       "question": "下列何者不是脂肪代謝之衍生物？",
       "options": {
-        "A": "",
+        "A": "白三烯素(leukotrienes)",
         "B": "白三烯素（leukotrienes）",
-        "C": "",
+        "C": "前列腺素(prostaglandins)",
         "D": "一氧化氮（nitric oxide）"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116605,
@@ -39373,17 +38982,15 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 30,
-      "question": "根據 2009 SCCM & ASPEN guidelines，建議不可添加下列何者在重症患者的灌食配方中？",
+      "question": "根據 2009 SCCM & ASPEN guidelines, 建議不可添加下列何者在重症患者的灌食配方中?",
       "options": {
-        "A": "",
+        "A": "insoluble fiber",
         "B": "insoluble fiber",
-        "C": "",
+        "C": "vitamin A",
         "D": "vitamin C"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116606,
@@ -39398,15 +39005,13 @@
       "number": 31,
       "question": "對於下列何種病人，以營養支持療法維持瘦體組織（lean body mass）之效果最差？",
       "options": {
-        "A": "",
+        "A": "因慢性疾病而引起的營養不良患者",
         "B": "因慢性疾病而引起的營養不良患者",
-        "C": "",
+        "C": "罹患全身性發炎症候群或多重器官衰竭的患者",
         "D": "腸胃道手術之後的患者"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116607,
@@ -39421,15 +39026,13 @@
       "number": 32,
       "question": "關於消化性潰瘍的營養照護，下列何者錯誤？",
       "options": {
-        "A": "",
+        "A": "戒酒",
         "B": "戒酒",
-        "C": "",
+        "C": "避免油炸食物",
         "D": "少吃蔬果類"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116608,
@@ -39444,15 +39047,13 @@
       "number": 33,
       "question": "有關頭頸癌病人的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "主要造成原因與經常抽菸、喝酒和飲食不正常有關",
+        "B": "因腫瘤部位,飲食上常有咀嚼和吞嚥困難問題",
+        "C": "營養素吸收功能下降",
+        "D": "手術後的飲食,建議以質地改變方式如全流質、軟質等進食"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116609,
@@ -39467,15 +39068,13 @@
       "number": 34,
       "question": "慢性肺部阻塞疾病（COPD）病人需額外補充下列那些維生素？",
       "options": {
-        "A": "",
+        "A": "維生素A、D",
         "B": "維生素A、D",
-        "C": "",
+        "C": "維生素B1、D",
         "D": "維生素D、K"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116610,
@@ -39490,15 +39089,13 @@
       "number": 35,
       "question": "下列何者罹患肺結核的風險最低？",
       "options": {
-        "A": "",
+        "A": "護士",
         "B": "護士",
-        "C": "",
+        "C": "慢性腎臟疾病",
         "D": "HIV 病患"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116611,
@@ -39513,15 +39110,13 @@
       "number": 36,
       "question": "根據流行病學研究報導，下列何種癌症不是與酒精攝取量呈正相關？",
       "options": {
-        "A": "",
+        "A": "肝癌",
         "B": "肝癌",
-        "C": "",
+        "C": "膽管癌",
         "D": "直腸癌"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116612,
@@ -39536,15 +39131,13 @@
       "number": 37,
       "question": "對於造血細胞移植（hematopoietic cell transplantation）病患在治療上的建議，下列敘述何者錯誤？",
       "options": {
-        "A": "",
+        "A": "需注意藥物、飲食改變和避免感染等問題",
         "B": "需注意藥物、飲食改變和避免感染等問題",
-        "C": "",
+        "C": "食物的儲存建議在 10℃ 以下",
         "D": "安全上特別要留意食物是否受到污染"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116613,
@@ -39557,17 +39150,15 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 38,
-      "question": "對於早產兒的營養照護，必需補充下列那些營養素？①vitamin K ②vitamin C ③vitamin A ④carnitine",
+      "question": "對於早產兒的營養照護,必需補充下列那些營養素?① vitamin K ② vitamin C ③vitamin A ④carnitine",
       "options": {
-        "A": "",
+        "A": "①②",
         "B": "①②",
-        "C": "",
+        "C": "②③",
         "D": "①④"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116614,
@@ -39580,17 +39171,15 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 39,
-      "question": "帕金森氏（Parkinson's）症的發生與下列何種營養素攝取不足的關聯性較高？",
+      "question": "帕金森氏 (Parkinson's) 症的發生與下列何種營養素攝取不足的關聯性較高？",
       "options": {
-        "A": "",
+        "A": "菸鹼酸",
         "B": "菸鹼酸",
-        "C": "",
+        "C": "葉酸",
         "D": "硫辛酸"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116615,
@@ -39605,15 +39194,13 @@
       "number": 40,
       "question": "老年人的葉酸營養狀況與下列何種疾病發生的危險性較無關聯？",
       "options": {
-        "A": "",
+        "A": "軟骨症（osteomalacia）",
         "B": "軟骨症（osteomalacia）",
-        "C": "",
+        "C": "粥狀動脈栓塞（atherothrombosis）",
         "D": "阿茲海默氏（Alzheimer's）症"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116536,
@@ -39628,15 +39215,13 @@
       "number": 1,
       "question": "下列何種糖的甜度最高？",
       "options": {
-        "A": "",
+        "A": "果糖",
         "B": "果糖",
-        "C": "",
+        "C": "蔗糖",
         "D": "葡萄糖"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116537,
@@ -39651,15 +39236,13 @@
       "number": 2,
       "question": "下列何種情況的兒童最不可能是蛋白質攝取不足的高危險群？",
       "options": {
-        "A": "",
+        "A": "對於多種食物過敏的兒童",
         "B": "對於多種食物過敏的兒童",
-        "C": "",
+        "C": "食物取得有困難,例如弱勢家庭的兒童",
         "D": "吃純素的兒童"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116538,
@@ -39674,15 +39257,13 @@
       "number": 3,
       "question": "下列有關攝取過多膳食纖維的敘述，何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "每天攝食的膳食纖維超過50~60克就有可能危害健康",
+        "B": "由於膳食纖維具有吸附水分和促進腸胃蠕動的特性,所以攝食過多也不會發生便秘",
+        "C": "會增加痔瘡發生機會",
+        "D": "會增加鐵、鈣等礦物質流失"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116539,
@@ -39697,15 +39278,13 @@
       "number": 4,
       "question": "下列何種纖維，其主要生理功能與降低血液膽固醇的關連性較低？",
       "options": {
-        "A": "",
+        "A": "pectins",
         "B": "pectins",
-        "C": "",
+        "C": "chitin",
         "D": "cellulose"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116540,
@@ -39720,15 +39299,13 @@
       "number": 5,
       "question": "關於寡糖（oligosaccharide）的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
+        "A": "為 3~10 個單醣單位所組成之分子",
         "B": "為3～10 個單醣單位所組成之分子",
-        "C": "",
+        "C": "具甜味",
         "D": "具水溶性"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116541,
@@ -39743,15 +39320,13 @@
       "number": 6,
       "question": "下列有關蛋白質功能的敘述，何者錯誤？",
       "options": {
-        "A": "",
+        "A": "製造核酸的主要碳源",
         "B": "製造核酸的主要碳源",
-        "C": "",
+        "C": "負責細胞生長及修復",
         "D": "維持體液的平衡"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116542,
@@ -39766,15 +39341,13 @@
       "number": 7,
       "question": "下列何種食物可以提供人體需要的所有必需胺基酸？",
       "options": {
-        "A": "",
+        "A": "小麥",
         "B": "小麥",
-        "C": "",
+        "C": "玉米",
         "D": "大豆"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116543,
@@ -39789,15 +39362,13 @@
       "number": 8,
       "question": "下列何種方法無法造成蛋白質變性？",
       "options": {
-        "A": "",
+        "A": "加熱",
         "B": "加熱",
-        "C": "",
+        "C": "加蛋白酶",
         "D": "加酸"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116544,
@@ -39812,15 +39383,13 @@
       "number": 9,
       "question": "有關反式脂肪的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "天然食物中的脂肪酸雙鍵大部分為順式(cis)雙鍵",
+        "B": "食用植物油進行氫化後,會增加反式之雙鍵結構,增加飽和度,減少油脂的酸敗機率",
+        "C": "反式脂肪大部分來自加工食品,天然食物中不含反式脂肪",
+        "D": "攝食過多的反式脂肪,可能會抑制必需脂肪酸的去飽和(desaturation)及鏈加長(elongation)反應"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116545,
@@ -39835,15 +39404,13 @@
       "number": 10,
       "question": "下列何種食物的膽固醇最多？",
       "options": {
-        "A": "",
+        "A": "100 克鮪魚肉",
         "B": "100 克鮪魚肉",
-        "C": "",
+        "C": "1 顆雞蛋 (60 克)",
         "D": "100 克豬瘦肉"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116546,
@@ -39858,15 +39425,13 @@
       "number": 11,
       "question": "下列有關高密度脂蛋白（HDL）的敘述，何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "血液中的 HDL,大部分是由肝臟和小腸製造",
+        "B": "四種脂蛋白中,HDL 的蛋白質比例最低,體積最小",
+        "C": "HDL 膽固醇濃度高低和罹患心血管疾病的風險呈負相關",
+        "D": "負責將周邊組織的膽固醇回收,運送回肝臟"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116547,
@@ -39881,15 +39446,13 @@
       "number": 12,
       "question": "下列有關膽酸（bile acid）的敘述，何者最正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "在膽囊中,由膽固醇轉化而成",
+        "B": "分泌至十二指腸後,可經由腸肝循環(enterohepatic circulation)回到肝臟",
+        "C": "腸道再吸收的膽酸,經由淋巴系統送回肝臟",
+        "D": "增加腸道膽酸的再吸收,將有助於減少血膽固醇濃度"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116548,
@@ -39904,9 +39467,9 @@
       "number": 13,
       "question": "下列敘述何者錯誤？",
       "options": {
-        "A": "",
+        "A": "腰臀比與心血管疾病的發生率具相關性",
         "B": "腰臀比與心血管疾病的發生率具相關性",
-        "C": "",
+        "C": "可利用 Deurenberg 公式預估體脂肪含量",
         "D": "老年人的腰圍與體內胰島素的敏感性密切相關"
       },
       "answer": "D",
@@ -39927,15 +39490,13 @@
       "number": 14,
       "question": "有關瘦素（leptin）的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "瘦素是白色脂肪組織所分泌",
+        "B": "重度肥胖者體內有高濃度的瘦素",
+        "C": "瘦素與位於中樞神經的受體結合後,刺激α-MSH (α-melanocyte-stimulating hormone)的釋放而抑制食慾",
+        "D": "飢餓狀態時瘦素濃度會上升"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116550,
@@ -39950,15 +39511,13 @@
       "number": 15,
       "question": "當飲食中醣類攝取不足時，胺基酸會經由異化作用產生下列何種物質？",
       "options": {
-        "A": "",
+        "A": "乙醇",
         "B": "乙醇",
-        "C": "",
+        "C": "膽鹼",
         "D": "酮體"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116551,
@@ -39973,15 +39532,13 @@
       "number": 16,
       "question": "下列何種荷爾蒙（hormone）會促進食慾？",
       "options": {
-        "A": "",
+        "A": "leptin",
         "B": "leptin",
-        "C": "",
+        "C": "ghrelin",
         "D": "cholecystokinin（CCK）"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116552,
@@ -39996,15 +39553,13 @@
       "number": 17,
       "question": "關於四氫葉酸（tetrahydrofolate）於細胞內之生化代謝功能，下列敘述何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "接受及轉移胺基(NH₂)與CO₂結合形成尿素",
+        "B": "接受及轉移氫質子還原呼吸電子傳遞鍊酵素複合體以利ATP生成",
+        "C": "接受及轉移單碳以利胺基酸生合成",
+        "D": "接受及轉移酮基以利葡萄糖生合成"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116553,
@@ -40019,15 +39574,13 @@
       "number": 18,
       "question": "維生素B2 在食物中除了以游離態的型式存在外，主要是以下列何種輔酶的型式存在？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "核黃素單核苷酸(FMN)及硫胺雙磷酸(TDP)",
+        "B": "核黃素單核苷酸(FMN)及核黃素腺嘌呤雙核苷酸(FAD)",
+        "C": "核黃素腺嘌呤雙核苷酸(FAD)及黃素蛋白(flavoproteins)",
+        "D": "核黃素腺嘌呤雙核苷酸(FAD)及核黃素激酶(flavokinase)"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116554,
@@ -40042,15 +39595,13 @@
       "number": 19,
       "question": "晉小姐近日發現皮膚出現紅狀斑點、牙齦出血及小腿肌肉疼痛，可能與下列何種營養素缺乏有關？",
       "options": {
-        "A": "",
+        "A": "維生素A",
         "B": "維生素A",
-        "C": "",
+        "C": "維生素D",
         "D": "維生素E"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116555,
@@ -40065,15 +39616,13 @@
       "number": 20,
       "question": "協助犬尿胺酸單加氧酶（kynurenine monooxygenase）將色胺酸轉換成菸鹼素的過程中，需要下列何種維生素擔任輔酶？",
       "options": {
-        "A": "",
+        "A": "硫胺",
         "B": "硫胺",
-        "C": "",
+        "C": "磷酸比哆醛",
         "D": "核黃素"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116556,
@@ -40088,15 +39637,13 @@
       "number": 21,
       "question": "有關胡蘿蔔素的敘述，下列何者錯誤？",
       "options": {
-        "A": "",
+        "A": "胡蘿蔔素是維生素A的先質",
         "B": "胡蘿蔔素是維生素A 的先質",
-        "C": "",
+        "C": "胡蘿蔔素的利用率受到脂質存在的影響",
         "D": "動植物均可合成胡蘿蔔素"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116557,
@@ -40109,17 +39656,15 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 22,
-      "question": "下列何者是在視網膜中與視紫蛋白結合而產生視覺的維生素A 衍生物？",
+      "question": "下列何者是在視網膜中與視紫蛋白結合而產生視覺的維生素 A 衍生物?",
       "options": {
-        "A": "",
+        "A": "11-cis-retinal",
         "B": "11-cis-retinal",
-        "C": "",
+        "C": "11-cis-retinol",
         "D": "11-trans-retinol"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116558,
@@ -40134,15 +39679,13 @@
       "number": 23,
       "question": "關於維生素D 的單位換算，下列敘述何者正確？",
       "options": {
-        "A": "",
+        "A": "1 microgram = 400 international unit (IU)",
         "B": "1 microgram＝400 international unit（IU）",
-        "C": "",
+        "C": "1 international unit (IU) = 400 microgram",
         "D": "1 microgram＝40 international unit（IU）"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116559,
@@ -40155,17 +39698,15 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 24,
-      "question": "缺乏維生素E 可能經由下列何種生化作用產生臨床症狀？",
+      "question": "缺乏維生素 E 可能經由下列何種生化作用產生臨床症狀?",
       "options": {
-        "A": "",
+        "A": "促進軟組織鈣化作用,造成血栓",
         "B": "促進軟組織鈣化作用，造成血栓",
-        "C": "",
+        "C": "增加氧化壓力,造成溶血性貧血",
         "D": "抗凝血機制，造成出血性貧血"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116560,
@@ -40180,15 +39721,13 @@
       "number": 25,
       "question": "流行病學指出，食用黃豆製品可以預防骨質疏鬆症，下列何者是其可能的機制？",
       "options": {
-        "A": "",
+        "A": "抑制骨鈣質分解",
         "B": "抑制骨鈣質分解",
-        "C": "",
+        "C": "含有類似雌激素的植物成分",
         "D": "促進鈣質吸收"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116561,
@@ -40203,15 +39742,13 @@
       "number": 26,
       "question": "下列何種營養素組合會促進鈣質的吸收？",
       "options": {
-        "A": "",
+        "A": "葡萄糖+脂質",
         "B": "葡萄糖＋脂質",
-        "C": "",
+        "C": "脂質+維生素A",
         "D": "維生素E＋維生素C"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116562,
@@ -40226,15 +39763,13 @@
       "number": 27,
       "question": "有關鉀的敘述，下列何者正確？",
       "options": {
-        "A": "",
+        "A": "促進胃酸分泌",
         "B": "促進胃酸分泌",
-        "C": "",
+        "C": "參與血液凝固",
         "D": "為細胞內液主要的電解質"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116563,
@@ -40249,15 +39784,13 @@
       "number": 28,
       "question": "有關鐵的敘述，下列何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "albumin 是在血液中協助鐵運送的蛋白質",
+        "B": "hemochromatosis 是指因鐵無法被吸收及運送所導致的疾病",
+        "C": "ferritin 協助將鐵從脾臟運送到骨髓",
+        "D": "transferrin 在血液中協助鐵運送到骨髓"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116564,
@@ -40270,17 +39803,15 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 29,
-      "question": "女性更年期後，由於下列何種荷爾蒙減少而容易發生osteoporosis？",
+      "question": "女性更年期後,由於下列何種荷爾蒙減少而容易發生 osteoporosis?",
       "options": {
-        "A": "",
+        "A": "Insulin",
         "B": "Insulin",
-        "C": "",
+        "C": "Testosterone",
         "D": "Leptin"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116565,
@@ -40295,15 +39826,13 @@
       "number": 30,
       "question": "Glucosamine 是老人常用的保健食品，它的主要保健功效為何？",
       "options": {
-        "A": "",
+        "A": "促進造骨作用",
         "B": "促進造骨作用",
-        "C": "",
+        "C": "緩和關節炎的疼痛",
         "D": "改善鈣及磷之間的平衡"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116566,
@@ -40318,15 +39847,13 @@
       "number": 31,
       "question": "依據行政院衛生署（現為衛生福利部）2011 年修訂最新版「國人膳食營養素參考建議攝取量」，1 歲以下嬰兒的動物性蛋白攝取量在總蛋白質的比例，應占多少？",
       "options": {
-        "A": "",
+        "A": "1/2",
         "B": "1/2",
-        "C": "",
+        "C": "2/3",
         "D": "1/3"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116567,
@@ -40341,15 +39868,13 @@
       "number": 32,
       "question": "同重量的早產兒及一般標準的嬰兒配方奶粉的比較，下列敘述何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "早產兒配方奶粉提供的能量較多",
+        "B": "早產兒配方奶粉提供的蛋白質較少",
+        "C": "兩種配方奶粉提供的鈣質一樣多",
+        "D": "兩種配方奶粉提供的脂肪皆以植物油脂及中鏈油脂為主"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116568,
@@ -40364,15 +39889,13 @@
       "number": 33,
       "question": "有關楓漿尿症（maple syrup urine disease）的新生兒，下列敘述何者錯誤？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "屬於衛生福利部國民健康署目前所提供補助之新生兒篩檢項目",
+        "B": "因體液和尿液會有楓樹糖漿的甜味因而命名",
+        "C": "屬於芳香族胺基酸代謝異常的罕見疾病",
+        "D": "配方奶粉應補充纈胺酸、白胺酸及異白胺酸"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116569,
@@ -40385,17 +39908,15 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 34,
-      "question": "花青素（anthocyanidins）為水溶性之天然色素，而前花青素（proanthocyanidins）之特色為何？",
+      "question": "花青素 (anthocyanidins) 為水溶性之天然色素,而前花青素 (proanthocyanidins) 之特色為何?",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "無色,但於酸性下加以熱處理可以轉化為紅色",
+        "B": "前花青素遇到胃酸即可被轉化為花青素",
+        "C": "前花青素遇到膽汁即可被轉化為花青素",
+        "D": "前花青素為油溶性"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116570,
@@ -40408,17 +39929,15 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 35,
-      "question": "關於sports anemia 的敘述，下列何者正確？",
+      "question": "關於 sports anemia 的敘述,下列何者正確?",
       "options": {
-        "A": "",
+        "A": "並非真正的「iron-deficient」anemia",
         "B": "並非真正的「iron-deficient」anemia",
-        "C": "",
+        "C": "主要是因高溫下大量流汗導致鐵的流失所造成的",
         "D": "必需長時間、給與高劑量鐵的治療"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116571,
@@ -40433,15 +39952,13 @@
       "number": 36,
       "question": "關於運動時，肌肉中肝醣的角色，下列敘述何者正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "是肌肉細胞之主要能量來源",
+        "B": "會釋放至血液中,作為腦細胞能量之來源",
+        "C": "會釋放至血液中,作為合成肝臟中肝醣的原料",
+        "D": "作為當進行高強度運動時,維持正常心臟及肺臟功能所需之能量來源"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116572,
@@ -40456,15 +39973,13 @@
       "number": 37,
       "question": "植物固醇存在於植物性蔬果中，已被發現具有調降血膽固醇之功效，最主要可能原因為：",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "植物固醇與膽固醇具有競爭性,可以減少膽固醇之吸收",
+        "B": "植物固醇可以抑制膽固醇之生合成",
+        "C": "植物固醇可以促進膽固醇之排泄",
+        "D": "植物固醇可以促進膽固醇之消化"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116573,
@@ -40479,15 +39994,13 @@
       "number": 38,
       "question": "運動過程中，下列何種荷爾蒙主要作用在脂肪細胞並促使分解成為脂肪酸以作為能量之來源？",
       "options": {
-        "A": "",
+        "A": "epinephrine",
         "B": "epinephrine",
-        "C": "",
+        "C": "leptin",
         "D": "glucagon"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116574,
@@ -40502,15 +40015,13 @@
       "number": 39,
       "question": "關於運動時脂質所扮演的角色，下列敘述何者最為正確？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "最接近肌肉的體脂肪層會先被氧化,當作能量的來源",
+        "B": "脂質是長時間進行中強度運動時最主要的能量來源",
+        "C": "隨著運動強度的增加,脂質氧化作為能量的比率也隨之增加",
+        "D": "脂質氧化的量,於進行高強度短時間運動比低強度長時間運動時來得多"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 116575,
@@ -40525,15 +40036,13 @@
       "number": 40,
       "question": "下列有關基礎代謝率（basal metabolic rate）的敘述，何者錯誤？",
       "options": {
-        "A": "",
+        "A": "休息狀態下維持生命所需的基本能量",
         "B": "休息狀態下維持生命所需的基本能量",
-        "C": "",
+        "C": "飢餓狀態下的基礎代謝率會增加",
         "D": "男性的基礎代謝率高於女性"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115216,
@@ -48735,16 +48244,15 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 28,
-      "question": "某餐廳用餐人數在450 人次，該餐廳使用選擇性菜單，每天中餐供應菜數為：主菜5 道、半葷菜9 道、蔬菜6 道，預估每人可能的選擇菜單道數為主菜1 道、半葷菜2 道、蔬菜2 道，則主菜、半葷菜、蔬菜應準備份數各為何？",
+      "question": "某餐廳用餐人數在 450 人次,該餐廳使用選擇性菜單,每天中餐供應菜數為:主菜 5 道、半葷菜 9 道、蔬菜 6 道,預估每人可能的選擇菜單道數為主菜 1 道、半葷菜 2 道、蔬菜 2 道,則主菜、半葷菜、蔬菜應準備份數各為何?",
       "options": {
-        "A": "",
+        "A": "110、120、170",
         "B": "110",
         "C": "、120、170",
-        "D": ""
+        "D": "100、110、160"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114486,
@@ -48860,12 +48368,11 @@
       "options": {
         "A": "可充分供應冷熱水",
         "B": "備有洗潔劑",
-        "C": "",
+        "C": "65%酒精做手指消毒設備",
         "D": "65%"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114492,
@@ -50680,14 +50187,13 @@
       "number": 5,
       "question": "臺灣國民小學販售之每份飲品或點心，鈉含量應在多少毫克（mg）以下？",
       "options": {
-        "A": "",
+        "A": "300",
         "B": "300",
-        "C": "",
+        "C": "400",
         "D": "350"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114742,
@@ -51960,16 +51466,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 29,
-      "question": "肝臟可以利用amino acid oxidase 將amino acids 轉變成對應的keto acid，該酵素反應亦會產生下列何種產物？",
+      "question": "肝臟可以利用 amino acid oxidase 將 amino acids 轉變成對應的 keto acid,該酵素反應亦會產生下列何種產物?",
       "options": {
-        "A": "",
+        "A": "ATP",
         "B": "ATP",
-        "C": "",
+        "C": "O2",
         "D": "H"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114606,
@@ -51981,16 +51486,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 30,
-      "question": "在pH=13 的鹼性溶液中，glycine 的主要型式為下列何者？",
+      "question": "在 pH=13 的鹼性溶液中, glycine 的主要型式為下列何者?",
       "options": {
-        "A": "",
+        "A": "NH2-CH2-COOH",
         "B": "NH",
         "C": "2-CH2-COOH",
-        "D": ""
+        "D": "NH3⁺-CH2-COO⁻"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114607,
@@ -52062,16 +51566,15 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 34,
-      "question": "下列何種RNA 分子會出現於剪接體（spliceosome）？",
+      "question": "下列何種 RNA 分子會出現於剪接體 (spliceosome) ?",
       "options": {
-        "A": "",
+        "A": "snRNA",
         "B": "snRNA",
         "C": "tRNA",
-        "D": ""
+        "D": "triple-stranded RNA"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114611,
@@ -52145,14 +51648,13 @@
       "number": 38,
       "question": "下列何者是電子於粒線體電子傳遞系統的正確流程？",
       "options": {
-        "A": "",
+        "A": "NADH→FAD→FeS center→FMN→FeS center",
         "B": "NAD",
         "C": "H→FAD→FeS center→FMN→FeS center",
-        "D": ""
+        "D": "FAD→FeS center→CoQ→Cyt b→Cyt c"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114615,
@@ -52446,14 +51948,13 @@
       "number": 13,
       "question": "欲研究胚胎形成的過程中因化學物質之誘發，而可能導致胎兒在構造上或功能上之改變，下列何者為可進行之安全性評估試驗？",
       "options": {
-        "A": "",
+        "A": "genotoxicity test",
         "B": "genotoxicity test",
-        "C": "",
+        "C": "teratogenicity test",
         "D": "carcinogenicity test"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114790,
@@ -53928,14 +53429,13 @@
       "number": 7,
       "question": "長期營養不良患者，給予積極營養支持後出現低血鉀與低血磷的症狀時，可能是發生：",
       "options": {
-        "A": "",
+        "A": "refeeding syndrome",
         "B": "refeeding syndrome",
-        "C": "",
+        "C": "bacterial translocation",
         "D": "aspiration"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114664,
@@ -55388,16 +54888,15 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 40,
-      "question": "進行60 公尺的短跑時，下列何者為主要的能量來源？",
+      "question": "進行 60 公尺的短跑時,下列何者為主要的能量來源?",
       "options": {
-        "A": "",
+        "A": "carbohydrate 與 phosphocreatine",
         "B": "carbohydrate",
         "C": "與phosphocreatine",
-        "D": ""
+        "D": "carbohydrate 與 fat"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114976,
@@ -58611,14 +58110,13 @@
       "number": 1,
       "question": "劉先生罹患大腸癌，手術後正在進行化療，此次化療前劉先生測了白血球數，下列那個數值較適合接受化療？",
       "options": {
-        "A": "",
+        "A": "3×10²/mm³",
         "B": "3×10",
         "C": "2/mm3",
-        "D": ""
+        "D": "7×10³/mm³"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114898,
@@ -58632,14 +58130,13 @@
       "number": 2,
       "question": "下列何者屬於內生性的抗氧化物指標？",
       "options": {
-        "A": "",
+        "A": "ascorbic acid",
         "B": "ascorbic acid",
-        "C": "",
+        "C": "carotenoids",
         "D": "tocopherols"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 114899,
@@ -73983,11 +73480,10 @@
         "A": "Acetyl-CoA                          Pyruvate",
         "B": "Acetyl",
         "C": "Oxaloacetate",
-        "D": ""
+        "D": "Acetoacetyl-CoA"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 2570,
@@ -74603,12 +74099,11 @@
       "options": {
         "A": "phenolic acid",
         "B": "phenolic acid",
-        "C": "",
+        "C": "isoflavones",
         "D": "phytosterol"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 2912,
@@ -80704,12 +80199,11 @@
       "options": {
         "A": "triglyceride",
         "B": "sphingomyelin",
-        "C": "",
+        "C": "phosphatidylcholine",
         "D": "phosphatidylcholine"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": true
+      "explanation": ""
     },
     {
       "id": 3015,

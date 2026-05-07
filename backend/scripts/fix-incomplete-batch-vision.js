@@ -78,10 +78,23 @@ async function loadPdf(pdfPath) {
 }
 
 async function discoverPdf(exam, exam_code, subject, allArr) {
-  const prefix = `${exam}_${exam_code}_`
-  const candidates = fs.readdirSync(PDF_CACHE).filter(f => f.startsWith(prefix) && f.endsWith('.pdf'))
+  // Older scrape rounds saved PDFs without exam prefix (e.g. A_107110_c101_*.pdf
+  // and Q_107110_c102_*.pdf) — newer scrape uses exam prefix (tcm1_107110_*.pdf).
+  // Try both naming conventions, plus PDFs in subdirs (pdf-cache-fix etc.)
+  const prefixed = `${exam}_${exam_code}_`
+  const codeOnly = new RegExp(`^([A-Z]+_)?${exam_code}_c\\d+_s[\\w-]+\\.pdf$`)
+  const allFiles = fs.readdirSync(PDF_CACHE).filter(f => f.endsWith('.pdf'))
+  const candidates = allFiles.filter(f =>
+    f.startsWith(prefixed) || codeOnly.test(f)
+  )
+  // Skip TM_/TS_/A_/M_/S_ answer PDFs (we want question PDFs only).
+  // Keep prefixed exam files as-is (they're question PDFs by convention) and
+  // for codeOnly matches require Q_ prefix or no prefix.
+  const qCandidates = candidates.filter(f =>
+    !/^(TM|TS|A|M|S)_/.test(f) || f.startsWith(prefixed)
+  )
   // Subject literal match
-  for (const f of candidates) {
+  for (const f of qCandidates) {
     const { pages, mupdf } = await loadPdf(path.join(PDF_CACHE, f))
     if (pages[0].text.includes(subject)) {
       return { file: f, pages, mupdf }

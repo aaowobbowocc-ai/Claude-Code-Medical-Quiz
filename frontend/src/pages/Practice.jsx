@@ -4,6 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import { useSound } from '../hooks/useSound'
 import { useExplain, useReview } from '../hooks/useAI'
 import { getSubjectColor } from '../utils/subjectColors'
+import { isAnswerCorrect, isOptionCorrect } from '../utils/scoring'
 import { ExplainPanel, ReviewPanel } from '../components/AIPanel'
 import SmartBanner from '../components/SmartBanner'
 import QuestionImages from '../components/QuestionImages'
@@ -500,7 +501,7 @@ function PracticeGame({ config, onFinish, onExit }) {
     setRevealed(true)
 
     const correct = q?.answer
-    const isCorrect = chosen === correct
+    const isCorrect = isAnswerCorrect(chosen, correct)
 
     // AI answer
     let aiChoice = null
@@ -692,7 +693,7 @@ function PracticeGame({ config, onFinish, onExit }) {
           {Object.entries(q.options).map(([letter, text]) => {
             const isMyPick   = myAnswer === letter
             const isAiPick   = aiAnswer === letter && diffConfig.ai
-            const isCorrect  = revealed && q.answer === letter
+            const isCorrect  = revealed && isOptionCorrect(letter, q.answer)
             const isWrong    = revealed && isMyPick && !isCorrect
 
             let bg = 'bg-white border-gray-100'
@@ -842,7 +843,7 @@ function PracticeResults({ result, config, onRestart, onHome }) {
     if (result.log && result.log.length > 0) {
       const stats = result.log.filter(q => q.id && !q.is_deprecated).map(q => ({
         questionId: q.id,
-        correct: q.user_answer === q.answer,
+        correct: isAnswerCorrect(q.user_answer, q.answer),
       }))
       if (stats.length > 0) {
         fetch(`${BACKEND}/questions/track`, {

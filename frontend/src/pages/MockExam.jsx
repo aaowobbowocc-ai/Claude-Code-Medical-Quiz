@@ -9,6 +9,7 @@ import QuestionImages from '../components/QuestionImages'
 import OptionContent from '../components/OptionContent'
 import { supabase } from '../lib/supabase'
 import { getExamYears, getHistoricalPaper, getRandomPaper, isExamSupportedByCDN } from '../lib/cdnQuestions'
+import { isAnswerCorrect } from '../utils/scoring'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -88,14 +89,7 @@ function getTimeLimitText(papers) {
   return times.length === 1 ? `各 ${times[0]} 分鐘` : papers.map(p => `${p.name} ${getPaperTimeLimitMin(p)}分鐘`).join('、')
 }
 
-// Check if user's answer is correct (supports multi-answer "A,B" and voided "送分"/empty)
-function isAnswerCorrect(userAnswer, correctAnswer) {
-  if (!correctAnswer || correctAnswer === '送分') return true // voided → always correct
-  if (correctAnswer.includes(',')) {
-    return correctAnswer.split(',').map(s => s.trim()).includes(userAnswer)
-  }
-  return userAnswer === correctAnswer
-}
+// isAnswerCorrect now lives in utils/scoring.js (also used by Practice).
 
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444' }
 

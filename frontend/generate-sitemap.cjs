@@ -40,6 +40,11 @@ const GUIDES = [
   '/guides/nursing-50q-strategy/',
   '/guides/pharma2-reform-110/',
   '/guides/ai-practice-best-practices/',
+  '/guides/doctor1-prep-timeline/',
+  '/guides/nursing-fresh-vs-retake/',
+  '/guides/tcm-vs-post-tcm/',
+  '/guides/moto-license-2026-reform/',
+  '/guides/medical-careers-comparison/',
 ]
 
 function loadExamIds() {

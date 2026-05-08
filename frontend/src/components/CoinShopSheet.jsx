@@ -1,6 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Sheet from './Sheet'
 import { usePlayerStore } from '../store/gameStore'
+import { supabase } from '../lib/supabase'
+import { getDeviceId } from '../hooks/useAI'
+
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 const TIERS = [
   {
@@ -30,21 +34,86 @@ const TIERS = [
 ]
 
 export default function CoinShopSheet({ onClose }) {
-  const [step, setStep] = useState('select') // select | confirm | processing | success
+  const [step, setStep] = useState('select') // select | confirm | processing | success | error
   const [selected, setSelected] = useState(null)
+  const [errorMsg, setErrorMsg] = useState('')
+  const [orderId, setOrderId] = useState(null)
+  const pollRef = useRef(null)
 
   const tier = TIERS.find(t => t.id === selected)
 
-  const handleConfirm = () => {
+  const handleConfirm = async () => {
     setStep('processing')
-    setTimeout(() => {
-      setStep('success')
-    }, 2000)
+    setErrorMsg('')
+    try {
+      // Get current Supabase user (must be logged in to receive coins)
+      const { data: { session } } = await supabase.auth.getSession()
+      const user_id = session?.user?.id
+      if (!user_id) {
+        setErrorMsg('請先登入帳號才能領取金幣')
+        setStep('error')
+        return
+      }
+      const device_id = getDeviceId()
+
+      // Create order on backend → returns JKOPay payment URL
+      const r = await fetch(`${BACKEND}/payment/jkos/create-order`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tier: selected, user_id, device_id }),
+      })
+      if (!r.ok) {
+        const j = await r.json().catch(() => ({}))
+        throw new Error(j.error || j.detail || `HTTP ${r.status}`)
+      }
+      const { order_id, payment_url } = await r.json()
+      setOrderId(order_id)
+
+      // Open JKOPay in a new tab; user pays there.
+      window.open(payment_url, '_blank', 'noopener,noreferrer')
+
+      // Poll status every 3s until paid/failed (max 10 min)
+      let attempts = 0
+      const maxAttempts = 200
+      pollRef.current = setInterval(async () => {
+        attempts++
+        try {
+          const sr = await fetch(`${BACKEND}/payment/jkos/status/${order_id}`)
+          if (!sr.ok) return
+          const status = await sr.json()
+          if (status.status === 'paid') {
+            clearInterval(pollRef.current)
+            setStep('success')
+          } else if (status.status === 'failed' || status.status === 'expired') {
+            clearInterval(pollRef.current)
+            setErrorMsg(status.status === 'expired' ? '訂單已過期' : '付款失敗')
+            setStep('error')
+          }
+        } catch {}
+        if (attempts >= maxAttempts) {
+          clearInterval(pollRef.current)
+          setErrorMsg('付款逾時，若已扣款請聯絡客服')
+          setStep('error')
+        }
+      }, 3000)
+    } catch (e) {
+      console.error('create-order failed', e)
+      setErrorMsg(e.message || '建立訂單失敗')
+      setStep('error')
+    }
   }
 
+  // Cleanup polling interval on unmount
+  useEffect(() => () => {
+    if (pollRef.current) clearInterval(pollRef.current)
+  }, [])
+
   const handleClose = () => {
+    if (pollRef.current) clearInterval(pollRef.current)
     setStep('select')
     setSelected(null)
+    setOrderId(null)
+    setErrorMsg('')
     onClose()
   }
 
@@ -171,8 +240,29 @@ export default function CoinShopSheet({ onClose }) {
         {step === 'processing' && (
           <div className="text-center py-8">
             <div className="text-5xl mb-4 animate-pulse">⏳</div>
-            <p className="font-bold text-medical-dark text-lg">付款處理中</p>
-            <p className="text-gray-400 text-sm mt-2">請稍候，勿關閉此頁面...</p>
+            <p className="font-bold text-medical-dark text-lg">等待付款完成</p>
+            <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+              已開啟街口付款頁。<br />付款完成後此頁會自動更新。
+            </p>
+          </div>
+        )}
+
+        {/* ── 錯誤 ── */}
+        {step === 'error' && (
+          <div className="text-center py-6">
+            <div className="text-5xl mb-3">⚠️</div>
+            <h2 className="text-xl font-bold text-medical-dark mb-2">付款失敗</h2>
+            <p className="text-gray-500 text-sm mb-5 leading-relaxed">{errorMsg || '未知錯誤'}</p>
+            <button
+              onClick={() => { setStep('select'); setErrorMsg('') }}
+              className="w-full py-3 rounded-2xl font-bold text-white grad-cta active:scale-95 mb-2"
+            >
+              重新選擇方案
+            </button>
+            <button onClick={handleClose}
+              className="w-full py-2.5 rounded-2xl text-sm text-gray-400 active:bg-gray-50">
+              關閉
+            </button>
           </div>
         )}
 

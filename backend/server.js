@@ -13,6 +13,7 @@ const feedback = require('./feedback');
 const board = require('./board');
 const commentsApi = require('./comments');
 const communityNotes = require('./community-notes');
+const paymentJkos = require('./payment-jkos');
 const sharedBanksLoader = require('./shared-banks-loader');
 
 const compression = require('compression');
@@ -773,6 +774,7 @@ commentsApi.registerRoutes(app);
 communityNotes.registerRoutes(app);
 feedback.registerRoutes(app, examData, examConfigs);
 board.registerRoutes(app);
+paymentJkos.registerJkosRoutes(app, supabase);
 
 // ── Coins delta endpoint ─────────────────────────────────────────────────
 // Accepts { delta: number } via JWT-authenticated POST.

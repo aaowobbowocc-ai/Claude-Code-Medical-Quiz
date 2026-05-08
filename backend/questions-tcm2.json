@@ -36825,8 +36825,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image"
+      "incomplete": "image_options",
+      "gap_reason": "missing_image",
+      "image_url": "/question-images/tcm2_102110_q38_full.webp"
     },
     {
       "id": 102190,
@@ -38576,8 +38577,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image"
+      "incomplete": "image_options",
+      "gap_reason": "missing_image",
+      "image_url": "/question-images/tcm2_102110_q45_full.webp"
     },
     {
       "id": "102110_0206_46",

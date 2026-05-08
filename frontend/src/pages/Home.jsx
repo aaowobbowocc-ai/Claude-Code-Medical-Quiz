@@ -300,8 +300,12 @@ export default function Home() {
   const [devAuthed, setDevAuthed] = useState(false)
   const [devPwdInput, setDevPwdInput] = useState('')
   const [devPwdError, setDevPwdError] = useState(false)
-  const DEV_PWD = 'haha9527'
+  // Dev panel gated to local development only — Vite tree-shakes the entire
+  // panel out of production bundles via import.meta.env.DEV (build-time const).
+  // Production users cannot see DEV_PWD or trigger the panel.
+  const DEV_PWD = import.meta.env.DEV ? 'haha9527' : null
   const handleDevTap = () => {
+    if (!import.meta.env.DEV) return
     setDevTaps(t => {
       const next = t + 1
       clearTimeout(devTimer.current)
@@ -1109,8 +1113,8 @@ export default function Home() {
 
       {showTour && <WelcomeTour onClose={() => setShowTour(false)} />}
 
-      {/* Dev password gate */}
-      {sheet === 'devpwd' && (
+      {/* Dev password gate — production builds tree-shake this entire block */}
+      {import.meta.env.DEV && sheet === 'devpwd' && (
         <Sheet onClose={() => setSheet(null)}>
           <h2 className="text-xl font-bold text-medical-dark text-center mb-1">開發者驗證</h2>
           <p className="text-center text-gray-400 text-xs mb-4">請輸入開發者密碼</p>
@@ -1126,8 +1130,8 @@ export default function Home() {
         </Sheet>
       )}
 
-      {/* Dev panel — only after password */}
-      {sheet === 'dev' && devAuthed && (
+      {/* Dev panel — only after password (production: tree-shaken) */}
+      {import.meta.env.DEV && sheet === 'dev' && devAuthed && (
         <Sheet onClose={() => { setSheet(null); setDevAuthed(false) }}>
           <h2 className="text-xl font-bold text-medical-dark text-center mb-1">開發者工具</h2>
           <p className="text-center text-gray-400 text-xs mb-4">測試用，不影響其他玩家</p>

@@ -6,6 +6,7 @@ import { useSound } from '../hooks/useSound'
 import ConnectionStatus from '../components/ConnectionStatus'
 import { getSubjectColor } from '../utils/subjectColors'
 import QuestionImages from '../components/QuestionImages'
+import HazardVideo from '../components/HazardVideo'
 import OptionContent from '../components/OptionContent'
 
 const OPTION_COLORS = {
@@ -338,6 +339,7 @@ export default function Game() {
             {currentQuestion.question}
           </p>
           <QuestionImages images={currentQuestion.images} imageUrl={currentQuestion.image_url} incomplete={currentQuestion.incomplete} />
+          <HazardVideo src={currentQuestion.video_url} sourceUrl={currentQuestion.source_url} />
         </div>
 
         <div className="flex flex-col gap-3">

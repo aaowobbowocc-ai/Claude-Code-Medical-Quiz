@@ -4,6 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import { useExplain } from '../hooks/useAI'
 import { ExplainPanel } from '../components/AIPanel'
 import QuestionImages from '../components/QuestionImages'
+import HazardVideo from '../components/HazardVideo'
 import OptionContent from '../components/OptionContent'
 import CommentSection from '../components/CommentSection'
 import { useBookmarks } from '../hooks/useBookmarks'
@@ -217,6 +218,7 @@ function QuestionCard({ q, stageMap, readingStyle, readingPrefs, updateReadingPr
           <p className="text-sm text-gray-800" style={readingStyle}>{q.question}</p>
         )}
         <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
+        <HazardVideo src={q.video_url} sourceUrl={q.source_url} />
       </div>
 
       {/* Toggle options */}

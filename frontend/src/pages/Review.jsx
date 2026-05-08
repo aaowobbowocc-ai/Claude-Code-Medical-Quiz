@@ -6,6 +6,7 @@ import SmartBanner from '../components/SmartBanner'
 import { useBookmarks } from '../hooks/useBookmarks'
 import { getSubjectColor } from '../utils/subjectColors'
 import QuestionImages from '../components/QuestionImages'
+import HazardVideo from '../components/HazardVideo'
 import OptionContent from '../components/OptionContent'
 import CommentSection from '../components/CommentSection'
 
@@ -69,6 +70,7 @@ function ReviewCard({ q, index }) {
       <div className="px-4 pb-3">
         <p className="text-sm text-gray-800 leading-relaxed">{q.question}</p>
         <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
+        <HazardVideo src={q.video_url} sourceUrl={q.source_url} />
       </div>
 
       {/* Options + answer — collapsible */}

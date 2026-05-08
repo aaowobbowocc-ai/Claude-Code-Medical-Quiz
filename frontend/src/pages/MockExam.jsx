@@ -6,6 +6,7 @@ import SmartBanner from '../components/SmartBanner'
 import ShareChallengeButton from '../components/ShareChallengeButton'
 import { useAccuracyStore } from '../store/accuracyStore'
 import QuestionImages from '../components/QuestionImages'
+import HazardVideo from '../components/HazardVideo'
 import OptionContent from '../components/OptionContent'
 import { supabase } from '../lib/supabase'
 import { getExamYears, getHistoricalPaper, getRandomPaper, isExamSupportedByCDN } from '../lib/cdnQuestions'
@@ -410,6 +411,7 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
           </p>
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
           <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
+          <HazardVideo src={q.video_url} sourceUrl={q.source_url} />
         </div>
         <div className="flex flex-col gap-2.5">
           {Object.entries(q.options).map(([letter, text]) => {

@@ -8,6 +8,7 @@ import { isAnswerCorrect, isOptionCorrect } from '../utils/scoring'
 import { ExplainPanel, ReviewPanel } from '../components/AIPanel'
 import SmartBanner from '../components/SmartBanner'
 import QuestionImages from '../components/QuestionImages'
+import HazardVideo from '../components/HazardVideo'
 import OptionContent from '../components/OptionContent'
 import CommentSection from '../components/CommentSection'
 import { useBookmarks } from '../hooks/useBookmarks'
@@ -687,6 +688,7 @@ function PracticeGame({ config, onFinish, onExit }) {
             <p className="text-gray-800 font-medium text-sm" style={readingStyle}>{q.question}</p>
           )}
           <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
+          <HazardVideo src={q.video_url} sourceUrl={q.source_url} />
         </div>
 
         <div className="flex flex-col gap-2.5">

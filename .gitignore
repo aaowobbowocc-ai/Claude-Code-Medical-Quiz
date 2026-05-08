@@ -29,3 +29,15 @@ backend/_tmp/
 
 # Local Supabase backups (GitHub Actions stores in artifact, not git)
 backend/_backup/
+
+# Cache directories (PDF, probe, image extraction intermediates)
+backend/.pdf-cache/
+backend/_cache/
+backend/[0-9][0-9][0-9][0-9][0-9][0-9]_*/
+
+# Tesseract OCR training data (large binary, auto-downloaded by tesseract.js if needed)
+backend/*.traineddata
+
+# Historical / one-off scripts (not in active rotation)
+backend/scripts/historical/
+backend/fix_batch_*.py

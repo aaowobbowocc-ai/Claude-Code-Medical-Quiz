@@ -1,0 +1,158 @@
+{
+  "id": "rt",
+  "name": "呼吸治療師",
+  "short": "呼吸",
+  "icon": "🫁",
+  "category": "medical",
+  "subCategory": "呼吸治療師",
+  "level": "license",
+  "selectionType": "license",
+  "persona": [
+    "rehab-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-rt.json",
+  "totalQ": 4320,
+  "passScore": 288,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "心肺基礎醫學",
+      "subject": "心肺基礎醫學",
+      "subjects": "解剖、生理、藥理、病生理",
+      "count": 80,
+      "timeLimit": 90
+    },
+    {
+      "id": "paper2",
+      "name": "基礎呼吸治療學",
+      "subject": "基礎呼吸治療學",
+      "subjects": "氧氣治療、氣道管理、霧化治療",
+      "count": 80,
+      "timeLimit": 90
+    },
+    {
+      "id": "paper3",
+      "name": "呼吸治療儀器設備學",
+      "subject": "呼吸治療儀器設備學",
+      "subjects": "呼吸器、監測儀器、氣體分析儀",
+      "count": 80,
+      "timeLimit": 90
+    },
+    {
+      "id": "paper4",
+      "name": "呼吸器原理及應用",
+      "subject": "呼吸器原理及應用",
+      "subjects": "機械通氣模式、設定與調整、脫離訓練",
+      "count": 80,
+      "timeLimit": 90
+    },
+    {
+      "id": "paper5",
+      "name": "重症呼吸治療學",
+      "subject": "重症呼吸治療學",
+      "subjects": "ARDS、急性呼吸衰竭、ECMO",
+      "count": 80,
+      "timeLimit": 90
+    },
+    {
+      "id": "paper6",
+      "name": "呼吸疾病學",
+      "subject": "呼吸疾病學",
+      "subjects": "氣喘、COPD、肺癌、胸腔疾病",
+      "count": 80,
+      "timeLimit": 90
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "隨機混合"
+    },
+    {
+      "id": 1,
+      "tag": "rt_basic_cardiopulm",
+      "name": "心肺基礎"
+    },
+    {
+      "id": 2,
+      "tag": "rt_basic_therapy",
+      "name": "基礎呼吸治療"
+    },
+    {
+      "id": 3,
+      "tag": "rt_equipment",
+      "name": "儀器設備"
+    },
+    {
+      "id": 4,
+      "tag": "rt_ventilator",
+      "name": "呼吸器原理"
+    },
+    {
+      "id": 5,
+      "tag": "rt_critical",
+      "name": "重症呼吸治療"
+    },
+    {
+      "id": 6,
+      "tag": "rt_diseases",
+      "name": "呼吸疾病"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "rt_basic_cardiopulm": "心肺基礎",
+      "rt_basic_therapy": "基礎呼吸",
+      "rt_equipment": "儀器設備",
+      "rt_ventilator": "呼吸器",
+      "rt_critical": "重症呼吸",
+      "rt_diseases": "呼吸疾病"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "rt_basic_cardiopulm": { "icon": "🫀", "color": "#EF4444" },
+      "rt_basic_therapy": { "icon": "💨", "color": "#06B6D4" },
+      "rt_equipment": { "icon": "🔬", "color": "#8B5CF6" },
+      "rt_ventilator": { "icon": "🫁", "color": "#3B82F6" },
+      "rt_critical": { "icon": "🚨", "color": "#DC2626" },
+      "rt_diseases": { "icon": "🦠", "color": "#F59E0B" }
+    },
+    "subjectColors": {
+      "心肺基礎醫學": "#EF4444",
+      "基礎呼吸治療學": "#06B6D4",
+      "呼吸治療儀器設備學": "#8B5CF6",
+      "呼吸器原理及應用": "#3B82F6",
+      "重症呼吸治療學": "#DC2626",
+      "呼吸疾病學": "#F59E0B"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 呼吸治療師國考題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "呼吸治療師國考",
+    "shortName": "呼吸治療師",
+    "studentType": "呼吸治療系學生",
+    "years": "100-104",
+    "totalQ": 4320,
+    "examDesc": "呼吸治療師國考為考選部舉辦之專門職業及技術人員高等考試，紙本測驗時代為民國 100-104 年（共 9 場次）。105 年起改為電腦化測驗，本平台收錄之題庫為 100-104 年完整紙本歷屆題目。",
+    "paperDesc": "考試分為六科，每科各 80 題選擇題，合計 480 題。及格標準為各科平均達 60 分。",
+    "subjects": "心肺基礎醫學、基礎呼吸治療學、呼吸治療儀器設備學、呼吸器原理及應用、重症呼吸治療學、呼吸疾病學",
+    "mockDesc": "完整模擬六科，平均 60 分及格",
+    "subjectDetails": [
+      ["心肺基礎醫學", "心肺解剖、生理學、藥理學與病生理學基礎。"],
+      ["基礎呼吸治療學", "氧氣治療、氣道管理、霧化治療等基本臨床操作。"],
+      ["呼吸治療儀器設備學", "各類呼吸器、生理監測儀器、氣體分析儀的原理與操作。"],
+      ["呼吸器原理及應用", "機械通氣模式、參數設定、脫離訓練及相關併發症。"],
+      ["重症呼吸治療學", "ARDS、急性呼吸衰竭、ECMO 等重症病人的呼吸治療處置。"],
+      ["呼吸疾病學", "氣喘、COPD、肺癌、其他胸腔與呼吸系統疾病。"]
+    ]
+  }
+}

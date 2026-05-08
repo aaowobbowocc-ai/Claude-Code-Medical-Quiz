@@ -90,6 +90,7 @@ const EXPECTED_EXAM_NAMES = {
   'tcm1': '中醫師',
   'tcm2': '中醫師',
   'vet': '獸醫師',
+  'rt': '呼吸治療師',
 }
 
 function buildTargets(filterExam, filterYear) {
@@ -608,6 +609,26 @@ function buildTargets(filterExam, filterYear) {
   ]
   add('pharma2', 'questions-pharma2.json', '105', '105020', '第一次', '307', pharma2Subs307)
   add('pharma2', 'questions-pharma2.json', '105', '105100', '第二次', '307', pharma2Subs307)
+
+  // RT (呼吸治療師) — c=306 in 020 series, years 100-104 (RT 紙本測驗時代全部)
+  // 105 年起改 CBT，MoEX 不上線題目（probe 確認）
+  const rtSubs020 = [
+    { s: '11', subject: '心肺基礎醫學', tag: 'rt_basic_cardiopulm', name: '心肺基礎醫學' },
+    { s: '22', subject: '基礎呼吸治療學', tag: 'rt_basic_therapy', name: '基礎呼吸治療學' },
+    { s: '33', subject: '呼吸治療儀器設備學', tag: 'rt_equipment', name: '呼吸治療儀器設備學' },
+    { s: '44', subject: '呼吸器原理及應用', tag: 'rt_ventilator', name: '呼吸器原理及應用' },
+    { s: '55', subject: '重症呼吸治療學', tag: 'rt_critical', name: '重症呼吸治療學' },
+    { s: '66', subject: '呼吸疾病學', tag: 'rt_diseases', name: '呼吸疾病學' },
+  ]
+  add('rt', 'questions-rt.json', '100', '100020', '第一次', '306', rtSubs020)
+  add('rt', 'questions-rt.json', '100', '100130', '第二次', '306', rtSubs020)
+  add('rt', 'questions-rt.json', '101', '101010', '第一次', '306', rtSubs020)
+  add('rt', 'questions-rt.json', '101', '101100', '第二次', '306', rtSubs020)
+  add('rt', 'questions-rt.json', '102', '102020', '第一次', '306', rtSubs020)
+  add('rt', 'questions-rt.json', '102', '102100', '第二次', '306', rtSubs020)
+  add('rt', 'questions-rt.json', '103', '103020', '第一次', '306', rtSubs020)
+  add('rt', 'questions-rt.json', '103', '103090', '第二次', '306', rtSubs020)
+  add('rt', 'questions-rt.json', '104', '104020', '第一次', '306', rtSubs020)
 
   // Vet — c=307 in 100130 第二次 (only 100年 in the 100-105 range)
   const vetSubs020 = [

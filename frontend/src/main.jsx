@@ -12,12 +12,16 @@ const SENTRY_DSN = import.meta.env.VITE_SENTRY_DSN
 if (SENTRY_DSN && import.meta.env.PROD) {
   Sentry.init({
     dsn: SENTRY_DSN,
-    // No performance/replay integrations — keeps envelope small enough for
-    // Sentry free-tier (2026-05-08: enabling browserTracing produced 413
-    // Payload Too Large rejections because Vite/React init traces are large).
-    // Only error events are captured; performance/replay can be added later
-    // on a paid plan.
-    integrations: [],
+    // Let SDK include its default integrations (GlobalHandlers / Breadcrumbs /
+    // Dedupe / etc) — those are needed to actually capture window.onerror.
+    // Just disable the heavy / paid-tier ones via the filter below.
+    defaultIntegrations: undefined,
+    integrations: (defaults) =>
+      defaults.filter(i =>
+        i.name !== 'BrowserTracing' &&
+        i.name !== 'Replay' &&
+        i.name !== 'BrowserProfiling'
+      ),
     tracesSampleRate: 0,
     replaysSessionSampleRate: 0,
     replaysOnErrorSampleRate: 0,

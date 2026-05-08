@@ -47250,7 +47250,7 @@
       "subject_name": "外科",
       "stage_id": 0,
       "number": 12,
-      "question": "關於Chiari I herniation的敘述，下列何者錯誤 low socioeconomic class）人士 之敘述，下列何者錯誤？ 男女發生比例為1：1 pediatric brainstem glioma）之敘述，下列何者錯誤？ glioma好 multiple cranial nerve palsies表現 於晚飯後劇烈頭痛頭暈及噁心嘔吐，被家人送來急診，電腦斷層檢查結果如圖 否則會有生命危險",
+      "question": "關於 Chiari I herniation 的敘述,下列何者錯誤?",
       "options": {
         "A": "延髓（medulla）向下疝出，超出foramen magnum位置",
         "B": "可能產生四肢麻木、無力情形",
@@ -94633,8 +94633,6 @@
         "/question-images/doctor2_115023198_2.webp",
         "/question-images/doctor2_115023198_3.webp"
       ],
-      "incomplete": false,
-      "gap_reason": "empty_options",
       "image_dependent": true
     },
     {
@@ -114357,8 +114355,6 @@
         "/question-images/doctor2_115024166_0.webp",
         "/question-images/doctor2_115024166_1.webp"
       ],
-      "incomplete": false,
-      "gap_reason": "empty_options",
       "image_dependent": true
     },
     {
@@ -128810,9 +128806,7 @@
         "D": "HBV DNA 及 HCV RNA"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115024876,
@@ -134766,9 +134760,7 @@
         "D": "動態掌指關節伸直輔助副木 (Dynamic MP extension assist splint)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025164,
@@ -138292,7 +138284,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_dependent": true
+      "image_dependent": true,
+      "image_url": "/question-images/doctor2_102030_q77_patrol.webp"
     },
     {
       "id": 115025333,
@@ -149244,9 +149237,7 @@
         "D": "β-受體阻滯劑 (Beta-blocker)"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025870,
@@ -149266,9 +149257,7 @@
         "D": "先天性髖關節發育不良"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025871,
@@ -149348,9 +149337,7 @@
         "D": "8.2 mmol/L"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025875,
@@ -149372,8 +149359,6 @@
       "answer": "A",
       "explanation": "",
       "case_context": "第 14 題：兩歲女童有生長遲緩（growth failure），血液檢查顯示血中白血球數為9,600/mm3，中性球45%，淋巴球48%，單核球7%；血色素（hemoglobin）值為11.6 g/dL；血小板數為360,000/mm3；血中鉀離子濃度為2.8 mmol/L，鈉離子濃度為133 mmol/L，血中氯離子濃度為104 mmol/L，血中pH 值為7.2，重碳酸根（HCO3-）離子濃度為18 mmol/L，尿液的pH 值為6.5。請計算女童血中的陰離子間隙（aniongap）？",
-      "incomplete": false,
-      "gap_reason": "empty_options",
       "grouped": true
     },
     {
@@ -149394,8 +149379,7 @@
         "D": "myasthenia gravis"
       },
       "answer": "A",
-      "explanation": "",
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025877,
@@ -149435,9 +149419,7 @@
         "D": "7"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025879,
@@ -149477,9 +149459,7 @@
         "D": "Aromatase deficiency"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025881,
@@ -149499,9 +149479,7 @@
         "D": "cortisol"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025882,
@@ -149601,8 +149579,7 @@
         "D": "anaplastic stage IV Wilms tumor"
       },
       "answer": "B",
-      "explanation": "",
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025887,
@@ -149626,8 +149603,6 @@
       "images": [
         "/question-images/doctor2_115025887_0.webp"
       ],
-      "incomplete": false,
-      "gap_reason": "empty_options",
       "image_dependent": true
     },
     {
@@ -149712,9 +149687,7 @@
         "D": "病人服用epidermal growth factor receptor（EGFR）inhibitor"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025892,
@@ -149814,9 +149787,7 @@
         "D": "ACTH、corticosteroid 或benzodiazepine drugs 是常用的治療藥物。"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025897,
@@ -150016,9 +149987,7 @@
         "D": "芬戈莫德 (Fingolimod)"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025907,
@@ -150098,8 +150067,7 @@
         "D": "失去定向感"
       },
       "answer": "B",
-      "explanation": "",
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025911,
@@ -150503,8 +150471,7 @@
         "D": "1.5 g / kg / day"
       },
       "answer": "B",
-      "explanation": "",
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025931,
@@ -150684,9 +150651,7 @@
         "D": "正確。中央脊髓症候群最常見的機制是頸椎過度伸張（hyperextension）損傷，但也可能由過度屈曲（hyperflexion）損傷引起，尤其常見於老年人伴有頸椎病變者。"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025940,
@@ -150808,9 +150773,7 @@
         "D": "type II"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025946,
@@ -151140,9 +151103,7 @@
         "D": "內分泌細胞（endocrine cell），包含負責分泌胃泌素（gastrin）的G 細胞及分泌histamine的parietal cell。"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025962,
@@ -151493,9 +151454,7 @@
         "D": "對於簡單型肛門瘻管，手術切除是一種安全且有效的治療方式。"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025979,
@@ -151595,8 +151554,7 @@
         "D": "compression fracture"
       },
       "answer": "C",
-      "explanation": "",
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025984,
@@ -151899,8 +151857,7 @@
         "D": "centromere"
       },
       "answer": "B",
-      "explanation": "",
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115025999,
@@ -151985,7 +151942,6 @@
         "/question-images/doctor2_115026002_0.webp",
         "/question-images/doctor2_115026002_1.webp"
       ],
-      "gap_reason": "empty_options",
       "image_dependent": true
     },
     {
@@ -152011,7 +151967,6 @@
         "/question-images/doctor2_115026003_0.webp",
         "/question-images/doctor2_115026003_1.webp"
       ],
-      "gap_reason": "empty_options",
       "image_dependent": true
     },
     {
@@ -152137,8 +152092,7 @@
         "D": "brachial plexus"
       },
       "answer": "A",
-      "explanation": "",
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026010,
@@ -152238,9 +152192,7 @@
         "D": "可待因 (codeine)"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026015,
@@ -152383,8 +152335,6 @@
       },
       "answer": "B,C",
       "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options",
       "disputed": true
     },
     {
@@ -152631,8 +152581,7 @@
         "D": "140"
       },
       "answer": "D",
-      "explanation": "",
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026034,
@@ -152652,9 +152601,7 @@
         "D": "巨細胞病毒感染"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026035,
@@ -152723,8 +152670,6 @@
       "images": [
         "/question-images/doctor2_115026036_0.webp"
       ],
-      "incomplete": false,
-      "gap_reason": "empty_options",
       "grouped": true
     },
     {
@@ -152749,8 +152694,6 @@
       "images": [
         "/question-images/doctor2_115026038_0.webp"
       ],
-      "incomplete": false,
-      "gap_reason": "empty_options",
       "image_dependent": true
     },
     {
@@ -152771,9 +152714,7 @@
         "D": "amoxicillin"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026040,
@@ -152963,9 +152904,7 @@
         "D": "coccygeus muscle"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026049,
@@ -153108,9 +153047,7 @@
         "D": "cyclic oral contraceptive pills (週期性口服避孕藥)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026056,
@@ -153331,9 +153268,7 @@
         "D": "ASIA D, level T12"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026067,
@@ -153637,9 +153572,7 @@
         "D": "血管炎"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026082,
@@ -153859,9 +153792,7 @@
         "D": "non-small cell lung cancer"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026093,
@@ -153881,8 +153812,7 @@
         "D": "serum ANA"
       },
       "answer": "A",
-      "explanation": "",
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026094,
@@ -154004,8 +153934,6 @@
       "answer": "A",
       "explanation": "",
       "case_context": "第 15 題：一位25 歲男性病人，平日身體健康，喜歡野外旅遊，10 天前剛從澎湖旅遊回到臺中，2 天前開始出現發燒、倦怠感及頭痛，前往某診所就診後，服用一些感冒藥但並未退燒，於是到某醫院就診，血液檢查發現白血球：3600/μL、AST：120 IU/L、ALT：80 IU/L，於右側腋窩附近發現有一焦痂（eschar）。請問最有可能的致病原為何？",
-      "incomplete": false,
-      "gap_reason": "empty_options",
       "grouped": true
     },
     {
@@ -154067,8 +153995,7 @@
         "D": "salicylate intoxication"
       },
       "answer": "D",
-      "explanation": "",
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026103,
@@ -154376,9 +154303,7 @@
         "D": "penicillin"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026118,
@@ -154558,9 +154483,7 @@
         "D": "D-penicillamine (D-青黴胺/D-硫氫基丙胺酸)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026127,
@@ -154580,9 +154503,7 @@
         "D": "轉化生長因子-β (Transforming Growth Factor-β)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026128,
@@ -154602,8 +154523,7 @@
         "D": "tenosynovitis"
       },
       "answer": "C",
-      "explanation": "",
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026129,
@@ -154643,9 +154563,7 @@
         "D": "serum Hb electrophoresis"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026131,
@@ -154665,9 +154583,7 @@
         "D": "體細胞的nucleotide excision repair gene 突變 (Somatic mutation of a nucleotide excision repair gene)"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026132,
@@ -154707,9 +154623,7 @@
         "D": "iron deficiency"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026134,
@@ -154849,9 +154763,7 @@
         "D": "肋膜液葡萄糖＜60 mg/dL 應引流治療"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026141,
@@ -154891,9 +154803,7 @@
         "D": "對於MEN 2，在嬰幼兒期作全甲狀腺切除手術，大多有助於減少因甲狀腺髓質癌之死亡"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026143,
@@ -154913,9 +154823,7 @@
         "D": "伴有上顎缺損"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026144,
@@ -154935,9 +154843,7 @@
         "D": "130 mg/dL"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026145,
@@ -154977,9 +154883,7 @@
         "D": "oxacillin (苯唑西林)"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026147,
@@ -155119,9 +155023,7 @@
         "D": "venlafaxine"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026154,
@@ -155250,9 +155152,7 @@
         "D": "32-34°C"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026160,
@@ -155272,9 +155172,7 @@
         "D": "55 歲病患，突發劇烈頭痛合併嚴重嘔吐，沒有明顯神經功能異常"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026161,
@@ -155294,9 +155192,7 @@
         "D": "Flumazenil"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026162,
@@ -159232,8 +159128,6 @@
       "images": [
         "/question-images/doctor2_115026353_0.webp"
       ],
-      "incomplete": false,
-      "gap_reason": "empty_options",
       "image_dependent": true
     },
     {
@@ -159259,8 +159153,6 @@
       "images": [
         "/question-images/doctor2_115026353_0.webp"
       ],
-      "incomplete": false,
-      "gap_reason": "empty_options",
       "grouped": true
     },
     {
@@ -159281,9 +159173,7 @@
         "D": "低血糖 (Hypoglycemia)"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026356,
@@ -159451,9 +159341,7 @@
         "D": "多囊性卵巢症候群 (Polycystic Ovarian Syndrome)"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026364,
@@ -160058,8 +159946,6 @@
         "/question-images/doctor2_115026393_0.webp",
         "/question-images/doctor2_115026393_1.webp"
       ],
-      "incomplete": false,
-      "gap_reason": "empty_options",
       "image_dependent": true
     },
     {
@@ -160779,9 +160665,7 @@
         "D": "腹瀉 (Diarrhea)"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026429,
@@ -170126,9 +170010,7 @@
         "D": "確保充分的喉部視野（ensure adequate laryngeal view）"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115026885,
@@ -173375,9 +173257,7 @@
         "D": "心室性心動過速 (Ventricular Tachycardia): 規律的寬QRS波心動過速。"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115027044,
@@ -175817,7 +175697,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_dependent": true
+      "image_dependent": true,
+      "image_url": "/question-images/doctor2_105100_q41_patrol.webp"
     },
     {
       "id": 115027163,
@@ -193222,9 +193103,7 @@
         "D": "teratozoospermia：精蟲型態異常 (Abnormal sperm morphology)"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115027985,
@@ -193413,9 +193292,7 @@
         "D": "salicylates"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": false,
-      "gap_reason": "empty_options"
+      "explanation": ""
     },
     {
       "id": 115027994,
@@ -196625,7 +196502,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_dependent": true
+      "image_dependent": true,
+      "image_url": "/question-images/doctor2_102110_q55_patrol.webp"
     },
     {
       "id": 115028073,
@@ -200711,7 +200589,8 @@
         "D": "脂漏性皮膚炎（seborrheic dermatitis）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "image_url": "/question-images/doctor2_101030_q35_patrol.webp"
     },
     {
       "id": 115028272,
@@ -201135,7 +201014,8 @@
         "D": "小腦動脈栓塞"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "image_url": "/question-images/doctor2_103100_q76_patrol.webp"
     },
     {
       "id": 115028293,
@@ -201215,7 +201095,8 @@
         "D": "XY 純性腺發育異常（XY pure gonadal dysgenesis）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "image_url": "/question-images/doctor2_100140_q30_patrol.webp"
     },
     {
       "id": 115028297,
@@ -201315,7 +201196,8 @@
         "D": "influenza virus"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "image_url": "/question-images/doctor2_102110_q2_patrol.webp"
     },
     {
       "id": 115028302,

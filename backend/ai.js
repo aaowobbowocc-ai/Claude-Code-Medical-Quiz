@@ -42,6 +42,54 @@ const LEGAL_EXAMS = new Set([
 ]);
 const RAG_ENABLED = new Set([...MEDICAL_EXAMS, ...LEGAL_EXAMS, 'driver-car','driver-moto']);
 
+const DRIVER_EXAMS = new Set(['driver-car', 'driver-moto']);
+
+// Category-specific guidance injected into /explain prompt. Tailors emphasis
+// to the discipline (mechanism vs articles vs safety principles) and adapts
+// the final "application" section label.
+function getCategoryGuidance(examId) {
+  if (DRIVER_EXAMS.has(examId)) {
+    return {
+      extraRules: [
+        '駕駛題優先依「防禦駕駛」原則：永遠假設對方會犯錯、預留緩衝、降低風險。',
+        '若涉及處罰，引用《道路交通管理處罰條例》或《道路交通安全規則》具體條文編號。',
+      ],
+      applicationLabel: '🛣️ 路上實際應用',
+      applicationDesc: '一句話說明這在真實路況怎麼運用',
+    };
+  }
+  if (LEGAL_EXAMS.has(examId)) {
+    return {
+      extraRules: [
+        '引用具體法條編號（民§184、刑§271 等），不要只說「依民法」這種模糊用法。',
+        '法律名詞要精確（要件 vs 效果、形式 vs 實質、絕對 vs 相對）；務必區分學說/實務見解。',
+        '若有最高法院重要判例或大法官解釋，可簡要引用字號與要旨。',
+      ],
+      applicationLabel: '⚖️ 實務應用',
+      applicationDesc: '一句話說明此考點在實務上常如何被應用或考試常見變化',
+    };
+  }
+  if (MEDICAL_EXAMS.has(examId)) {
+    return {
+      extraRules: [
+        '醫學題以「機制優先」(mechanism-first) 解釋：先講為什麼會發生（pathophysiology），再講臨床表現/治療。',
+        '藥物題注意作用機轉、副作用、禁忌、相互作用四面向。',
+      ],
+      applicationLabel: '🏥 臨床應用',
+      applicationDesc: '一句話說明這個知識點在臨床上的意義',
+    };
+  }
+  // Civil-service / generic fallback
+  return {
+    extraRules: [
+      '公職題優先連結相關法規、政策方向或公文格式；引用具體條號加分。',
+      '考試常考改制／新舊版差異，注意年度修法資訊。',
+    ],
+    applicationLabel: '📋 考試與實務',
+    applicationDesc: '一句話說明這在實際業務或考試重點上的位置',
+  };
+}
+
 // Community-voting tiers for AI explanations (see migrations/002).
 //   pending   — fresh gen, unverified → half price (reward early reviewers)
 //   verified  — upvotes >= 3         → free (attracts readers, amortises cost)
@@ -431,6 +479,9 @@ function registerRoutes(app, examData, stats) {
     }
     const noteBlock = notes.length ? '\n' + notes.join('\n') + '\n' : '';
 
+    const cat = getCategoryGuidance(exam);
+    const extraRulesBlock = cat.extraRules.map((r, i) => `${6 + i}. ${r}`).join('\n');
+
     const prompt = `你是一位臺灣${examName}的解題老師，用繁體中文回答。
 ${ragContext}
 【作答原則】
@@ -439,6 +490,7 @@ ${ragContext}
 3. 不確定的精確數值（劑量、年限、金額、百分比、cutoff）要標「約」或「依指引」，不要編造具體數字。
 4. 若知識點冷門或題幹資訊不足，誠實說「題幹資訊有限，常見答案是 X」，不要硬掰機制。
 5. 避免無翻譯的艱澀外文；專有名詞中英並列。
+${extraRulesBlock}
 ${noteBlock}
 科目：${subject_name}
 題目：${question}
@@ -460,8 +512,8 @@ ${wrongNote}
 **🧠 記憶關鍵字**
 （給一個好記的口訣或記憶技巧）
 
-**🏥 臨床應用**
-（一句話說明這個知識點在臨床上的意義）`;
+**${cat.applicationLabel}**
+（${cat.applicationDesc}）`;
 
     // Route cold exams to Gemini Flash (free tier) when a key is available;
     // otherwise everything falls through to Claude Haiku.

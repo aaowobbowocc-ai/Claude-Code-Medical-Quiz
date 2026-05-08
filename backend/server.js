@@ -1,4 +1,16 @@
 require('dotenv').config();
+
+// Sentry — production-only error tracking. No-op if SENTRY_DSN unset.
+// Must be required before everything else (instrument first).
+if (process.env.SENTRY_DSN && process.env.NODE_ENV === 'production') {
+  const Sentry = require('@sentry/node');
+  Sentry.init({
+    dsn: process.env.SENTRY_DSN,
+    tracesSampleRate: 0.1,
+    environment: 'production',
+  });
+}
+
 const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');

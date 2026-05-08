@@ -10,6 +10,7 @@
     "seo:intros": "node scripts/generate-seo-intros.cjs"
   },
   "dependencies": {
+    "@sentry/react": "^10.52.0",
     "@supabase/supabase-js": "^2.103.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

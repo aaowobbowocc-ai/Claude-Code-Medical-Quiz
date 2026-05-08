@@ -1,21 +1,29 @@
 /**
- * 街口支付 (JKOPay) 串接
+ * 街口支付 (JKOPay) 串接 — OnlinePay Entry API
+ *
+ * 文件：https://open-doc.jkos.com/
+ * 三個 API：
+ *   POST /platform/entry            — 建單，回傳 payment_url
+ *   POST /platform/refund           — 退款
+ *   GET  /platform/inquiry?platform_order_ids=...  — 查訂單狀態
+ *
+ * 認證：
+ *   - Header: api-key (商店 API key)
+ *   - Header: digest (HMAC-SHA256 of request body / query string, hex lowercase)
  *
  * Flow:
- *   1. POST /payment/jkos/create-order { tier, user_id?, device_id }
- *      → 建 coin_orders row → 呼叫街口建單 → 回傳 payment_url 給 frontend
- *   2. 使用者付款（JKOPay App/網頁）
- *   3. 街口 POST 到 /payment/jkos/callback (server-to-server)
- *      → 驗 HMAC → 更新 coin_orders.status='paid' → 寫入 user_coin_grants
- *   4. 使用者開 app → 看到 grant → 認領 → 金幣入帳
+ *   1. POST /payment/jkos/create-order → backend 呼叫街口 /platform/entry → 回 payment_url
+ *   2. 使用者在街口 App/Web 付款
+ *   3. 街口 POST 到 result_url (我們的 webhook /payment/jkos/callback) → 寫 user_coin_grants
+ *   4. 使用者開 app → 看到 grant → 領取
  *
- * Env vars 需要 (等街口審核通過拿到再填):
- *   JKOS_API_HOST       https://uat.jkopay.com 或正式 host
- *   JKOS_API_KEY        街口給的 API key
- *   JKOS_SECRET_KEY     用來 sign HMAC 的 secret
- *   JKOS_STORE_ID       商店代號
- *   JKOS_WEBHOOK_SECRET (選用) 額外驗 webhook 用
- *   FRONTEND_BASE_URL   付款完成後 redirect 回來的 base
+ * Env vars:
+ *   JKOS_API_HOST       測試: https://test-onlinepay.jkopay.app  正式: 看街口提供
+ *   JKOS_API_KEY        街口提供
+ *   JKOS_SECRET_KEY     街口提供（HMAC 用）
+ *   JKOS_STORE_ID       街口提供
+ *   FRONTEND_BASE_URL   付款完成 redirect 回此 URL
+ *   BACKEND_BASE_URL    街口 webhook 打回此 URL（必須 https）
  */
 const crypto = require('crypto')
 const { randomUUID } = require('crypto')
@@ -26,32 +34,45 @@ const TIERS = {
   large:  { price: 150, coins: 28000 },
 }
 
-function sign(bodyJson, secret) {
-  return crypto.createHmac('sha256', secret).update(bodyJson).digest('hex')
+// 訂單狀態碼（依文件）
+const STATUS = {
+  SUCCESS: 0,
+  PAYMENT_FAIL: 100,
+  NOT_PAID: 101,
+  NOT_FOUND: 102,
 }
 
-function verifyHmac(bodyJson, signature, secret) {
-  const expected = sign(bodyJson, secret)
-  // constant-time compare
+function signPost(bodyJson, secret) {
+  return crypto.createHmac('sha256', secret).update(bodyJson, 'utf8').digest('hex')
+}
+function signGet(queryString, secret) {
+  return crypto.createHmac('sha256', secret).update(queryString, 'utf8').digest('hex')
+}
+
+function verifyHmac(input, signature, secret) {
+  if (!signature) return false
+  const expected = signPost(input, secret)
   if (signature.length !== expected.length) return false
-  return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))
+  try {
+    return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))
+  } catch { return false }
 }
 
-async function jkosCall(path, body) {
+async function jkosPost(path, body) {
   const host = process.env.JKOS_API_HOST
   const apiKey = process.env.JKOS_API_KEY
   const secret = process.env.JKOS_SECRET_KEY
-  if (!host || !apiKey || !secret) {
-    throw new Error('JKOS env vars not configured')
-  }
-  const bodyJson = JSON.stringify(body)
-  const signature = sign(bodyJson, secret)
+  if (!host || !apiKey || !secret) throw new Error('JKOS env vars not configured')
+
+  const bodyJson = JSON.stringify(body)  // compact JSON, no spaces
+  const digest = signPost(bodyJson, secret)
+
   const resp = await fetch(`${host}${path}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'X-iAPI-Key': apiKey,
-      'X-iAPI-HMAC-SHA256': signature,
+      'api-key': apiKey,
+      'digest': digest,
     },
     body: bodyJson,
   })
@@ -59,60 +80,88 @@ async function jkosCall(path, body) {
   return { ok: resp.ok, status: resp.status, data }
 }
 
+async function jkosGet(path, queryParams) {
+  const host = process.env.JKOS_API_HOST
+  const apiKey = process.env.JKOS_API_KEY
+  const secret = process.env.JKOS_SECRET_KEY
+  if (!host || !apiKey || !secret) throw new Error('JKOS env vars not configured')
+
+  // Query string for sign — NOT URL encoded per doc example "platform_order_ids=test123,demo-order-001"
+  const queryString = Object.entries(queryParams).map(([k, v]) => `${k}=${v}`).join('&')
+  const digest = signGet(queryString, secret)
+
+  const resp = await fetch(`${host}${path}?${queryString}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'api-key': apiKey,
+      'digest': digest,
+    },
+  })
+  const data = await resp.json().catch(() => ({}))
+  return { ok: resp.ok, status: resp.status, data }
+}
+
 /**
- * 建立街口訂單
- * @param {object} order - { order_id, amount_twd, coins, valid_seconds }
- * @returns {Promise<{ jkos_order_id, payment_url }>}
+ * 建單 — POST /platform/entry
  */
-async function createJkosOrder({ order_id, amount_twd, valid_seconds = 900 }) {
+async function createJkosOrder({ order_id, amount_twd, valid_seconds = 1200 }) {
   const storeId = process.env.JKOS_STORE_ID
   const frontendBase = process.env.FRONTEND_BASE_URL || 'https://examking.tw'
-  const backendBase = process.env.BACKEND_BASE_URL || ''
+  const backendBase = process.env.BACKEND_BASE_URL
+  if (!backendBase) throw new Error('BACKEND_BASE_URL must be https')
+
+  // valid_time: yyyy-MM-dd HH:mm:ss UTC+8
+  const expireDate = new Date(Date.now() + valid_seconds * 1000 + 8 * 3600 * 1000)
+  const validTime = expireDate.toISOString().replace('T', ' ').slice(0, 19)
 
   const body = {
     platform_order_id: order_id,
+    store_id: storeId,
     currency: 'TWD',
-    final_amount: amount_twd,
-    valid_time: valid_seconds,
-    confirm_url: `${frontendBase}/coin-shop/return?order=${order_id}`,    // 使用者付完跳回
-    confirm_payment_url: `${frontendBase}/coin-shop/return?order=${order_id}`,
-    result_url: `${backendBase}/payment/jkos/callback`,                    // server webhook
+    total_price: amount_twd,
+    final_price: amount_twd,
+    result_url: `${backendBase}/payment/jkos/callback`,
     result_display_url: `${frontendBase}/coin-shop/return?order=${order_id}`,
+    payment_type: 'onetime',
+    escrow: false,
+    valid_time: validTime,
   }
-  const { ok, status, data } = await jkosCall(`/platform/payment/entry/B2BMerchantOrder/${storeId}`, body)
-  if (!ok || data.result_code !== '000') {
-    throw new Error(`JKOPay create-order failed: ${status} ${data.result_message || JSON.stringify(data)}`)
+  const { ok, status, data } = await jkosPost('/platform/entry', body)
+  if (!ok || data.result !== '000') {
+    throw new Error(`JKOPay /entry failed: HTTP ${status} result=${data.result} msg=${data.message || JSON.stringify(data)}`)
   }
   return {
-    jkos_order_id: data.result_object?.platform_tx_id || data.result_object?.order_id,
     payment_url: data.result_object?.payment_url,
+    qr_img: data.result_object?.qr_img,
+    qr_timeout: data.result_object?.qr_timeout,
   }
 }
 
 /**
- * 查詢街口訂單狀態
+ * 查訂單 — GET /platform/inquiry?platform_order_ids=...
  */
 async function inquireJkosOrder(order_id) {
-  const storeId = process.env.JKOS_STORE_ID
-  const body = { platform_order_id: order_id }
-  const { ok, data } = await jkosCall(`/platform/payment/inquiry/B2BMerchantOrder/${storeId}`, body)
-  if (!ok) throw new Error('inquiry failed')
-  return data.result_object || {}
+  const { ok, data } = await jkosGet('/platform/inquiry', { platform_order_ids: order_id })
+  if (!ok || data.result !== '000') {
+    throw new Error(`JKOPay /inquiry failed: ${data.message || JSON.stringify(data)}`)
+  }
+  const tx = (data.result_object?.transactions || [])[0]
+  return tx || null
 }
 
 /**
- * 退款
+ * 退款 — POST /platform/refund
  */
-async function refundJkosOrder({ order_id, amount_twd, reason }) {
-  const storeId = process.env.JKOS_STORE_ID
+async function refundJkosOrder({ order_id, refund_order_id, refund_amount }) {
   const body = {
     platform_order_id: order_id,
-    refund_amount: amount_twd,
-    reason: reason || 'user request',
+    refund_order_id: refund_order_id || `ref_${order_id}_${Date.now()}`,
+    refund_amount,
   }
-  const { ok, data } = await jkosCall(`/platform/payment/refund/B2BMerchantOrder/${storeId}`, body)
-  if (!ok || data.result_code !== '000') {
-    throw new Error(`JKOPay refund failed: ${data.result_message || JSON.stringify(data)}`)
+  const { ok, data } = await jkosPost('/platform/refund', body)
+  if (!ok || data.result !== '000') {
+    throw new Error(`JKOPay /refund failed: ${data.message || JSON.stringify(data)}`)
   }
   return data.result_object || {}
 }
@@ -131,7 +180,7 @@ function registerJkosRoutes(app, supabase) {
 
       const order_id = `ck_${Date.now()}_${randomUUID().slice(0, 8)}`
 
-      // 1. Insert pending row to Supabase (audit trail before calling JKOPay)
+      // 1. Insert pending row to Supabase first (audit trail)
       const { error: insertErr } = await supabase
         .from('coin_orders')
         .insert({ order_id, user_id: user_id || null, device_id, tier, amount_twd, coins, status: 'pending' })
@@ -140,44 +189,45 @@ function registerJkosRoutes(app, supabase) {
         return res.status(500).json({ error: 'db error' })
       }
 
-      // 2. Call JKOPay
-      let jkosResult
+      // 2. Call JKOPay /platform/entry
+      let entry
       try {
-        jkosResult = await createJkosOrder({ order_id, amount_twd })
+        entry = await createJkosOrder({ order_id, amount_twd })
       } catch (e) {
-        console.error('JKOPay createOrder failed', e.message)
+        console.error('JKOPay entry failed', e.message)
         await supabase.from('coin_orders').update({ status: 'failed' }).eq('order_id', order_id)
         return res.status(502).json({ error: 'payment provider error', detail: e.message })
       }
 
-      // 3. Update with JKOPay response
+      // 3. Save payment_url
       await supabase.from('coin_orders')
-        .update({ provider_order_id: jkosResult.jkos_order_id, payment_url: jkosResult.payment_url })
+        .update({ payment_url: entry.payment_url })
         .eq('order_id', order_id)
 
-      res.json({ order_id, payment_url: jkosResult.payment_url, amount_twd, coins })
+      res.json({
+        order_id,
+        payment_url: entry.payment_url,
+        qr_img: entry.qr_img,
+        amount_twd,
+        coins,
+      })
     } catch (e) {
       console.error('create-order error', e)
       res.status(500).json({ error: 'internal error' })
     }
   })
 
-  // POST /payment/jkos/callback — 街口 server-to-server webhook
+  // POST /payment/jkos/confirm — optional confirm_url callback (街口付款前 server-to-server 確認)
+  // 我們不用 confirm_url 機制（暫不實作），如有需要再加
+  // app.post('/payment/jkos/confirm', ...)
+
+  // POST /payment/jkos/callback — result_url webhook (街口付款後通知)
   app.post('/payment/jkos/callback', async (req, res) => {
     try {
-      const rawBody = JSON.stringify(req.body)
-      const signature = req.headers['x-iapi-hmac-sha256'] || req.headers['x-jkos-signature']
-      const secret = process.env.JKOS_SECRET_KEY
+      const tx = req.body?.transaction
+      if (!tx?.platform_order_id) return res.status(400).json({ error: 'missing transaction' })
 
-      if (secret && signature) {
-        if (!verifyHmac(rawBody, signature, secret)) {
-          console.warn('JKOPay callback: invalid HMAC')
-          return res.status(401).json({ error: 'bad signature' })
-        }
-      }
-
-      const { platform_order_id, status, result_code } = req.body
-      if (!platform_order_id) return res.status(400).json({ error: 'missing order_id' })
+      const { platform_order_id, status, tradeNo, final_price, debit_amount } = tx
 
       // Look up our order
       const { data: order, error } = await supabase
@@ -187,21 +237,35 @@ function registerJkosRoutes(app, supabase) {
         return res.status(404).json({ error: 'order not found' })
       }
 
+      // Idempotent — already processed
       if (order.status !== 'pending') {
-        // idempotent — already processed
-        return res.json({ ok: true, duplicate: true })
+        return res.status(200).send('OK')  // 街口要求 HTTP 200
       }
 
-      const isPaid = status === 'SUCCESS' || result_code === '000'
+      // Verify by calling /inquiry (defense in depth — webhook source not auth'd by signature in body)
+      let verified = null
+      try { verified = await inquireJkosOrder(platform_order_id) } catch (e) {
+        console.warn('inquiry verification failed', e.message)
+      }
+
+      const isPaid = (status === STATUS.SUCCESS) ||
+                     (verified && verified.status === STATUS.SUCCESS)
+
+      // Sanity check amount matches
+      const amountOk = Number(final_price) === order.amount_twd
+      if (isPaid && !amountOk) {
+        console.error('JKOPay callback amount mismatch', platform_order_id, final_price, 'vs', order.amount_twd)
+      }
 
       await supabase.from('coin_orders').update({
-        status: isPaid ? 'paid' : 'failed',
+        status: (isPaid && amountOk) ? 'paid' : 'failed',
+        provider_order_id: tradeNo,
         paid_at: isPaid ? new Date().toISOString() : null,
         raw_callback: req.body,
       }).eq('order_id', platform_order_id)
 
       // If paid, create user_coin_grant for redemption
-      if (isPaid && order.user_id) {
+      if (isPaid && amountOk && order.user_id) {
         await supabase.from('user_coin_grants').insert({
           user_id: order.user_id,
           coins: order.coins,
@@ -209,13 +273,13 @@ function registerJkosRoutes(app, supabase) {
           from_name: '街口支付',
         })
       }
-      // For anonymous (no user_id) orders, frontend polls status and shows
-      // "請登入領取金幣" — must bind device_id → user_id first.
 
-      res.json({ ok: true })
+      // 街口要求 HTTP 200 視為收到
+      res.status(200).send('OK')
     } catch (e) {
       console.error('callback error', e)
-      res.status(500).json({ error: 'internal error' })
+      // Still return 200 to avoid retry storm — but log for investigation
+      res.status(200).send('OK')
     }
   })
 
@@ -238,8 +302,9 @@ function registerJkosRoutes(app, supabase) {
 module.exports = {
   registerJkosRoutes,
   TIERS,
-  // exported for tests / scripts
-  sign,
+  STATUS,
+  signPost,
+  signGet,
   verifyHmac,
   createJkosOrder,
   inquireJkosOrder,

@@ -72,6 +72,8 @@ const path = require('path')
       stemLines.push(next)
       j++
     }
+    // EOF flush: if loop ran to end without hitting break, candidate might still hold the video_id
+    if (!videoId && videoIdCandidate) videoId = videoIdCandidate
     const fullStem = stemLines.join(' ').replace(/\s+/g, ' ')
     // 拆題幹 + 3 選項（容忍 ( 1 ) 內含空白）
     const m = fullStem.match(/^(.*?)\(\s*1\s*\)(.*?)\(\s*2\s*\)(.*?)\(\s*3\s*\)(.*)$/)

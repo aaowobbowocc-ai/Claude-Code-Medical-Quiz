@@ -29,6 +29,19 @@ const GEMINI_EXAMS = new Set([
   'driver-car', 'driver-moto',
 ]);
 
+// RAG context retrieval scope — medical exams use wikipedia_zh/en corpus,
+// legal/civil-service exams use law_moj_tw corpus.
+const MEDICAL_EXAMS = new Set([
+  'doctor1','doctor2','dental1','dental2','pharma1','pharma2',
+  'nursing','nutrition','medlab','pt','ot','radiology','tcm1','tcm2','vet'
+]);
+const LEGAL_EXAMS = new Set([
+  'lawyer1','judicial','civil-senior','civil-senior-general',
+  'civil-junior-general','civil-elementary-general',
+  'customs','police','police4','social-worker'
+]);
+const RAG_ENABLED = new Set([...MEDICAL_EXAMS, ...LEGAL_EXAMS, 'driver-car','driver-moto']);
+
 // Community-voting tiers for AI explanations (see migrations/002).
 //   pending   — fresh gen, unverified → half price (reward early reviewers)
 //   verified  — upvotes >= 3         → free (attracts readers, amortises cost)
@@ -379,19 +392,8 @@ function registerRoutes(app, examData, stats) {
     const examMeta = examData[exam] || examData.doctor1;
     const examName = examMeta.metadata?.category || '醫師國考';
 
-    // RAG context retrieval — medical exams use wikipedia_zh/en corpus,
-    // legal/civil-service exams use law_moj_tw corpus. Best-effort: don't
-    // block explain on retrieval failure.
-    const MEDICAL_EXAMS = new Set([
-      'doctor1','doctor2','dental1','dental2','pharma1','pharma2',
-      'nursing','nutrition','medlab','pt','ot','radiology','tcm1','tcm2','vet'
-    ]);
-    const LEGAL_EXAMS = new Set([
-      'lawyer1','judicial','civil-senior','civil-senior-general',
-      'civil-junior-general','civil-elementary-general',
-      'customs','police','police4','social-worker'
-    ]);
-    const RAG_ENABLED = new Set([...MEDICAL_EXAMS, ...LEGAL_EXAMS, 'driver-car','driver-moto']);
+    // RAG context retrieval — sets defined at module scope (RAG_ENABLED).
+    // Best-effort: don't block explain on retrieval failure.
     let ragContext = '';
     if (RAG_ENABLED.has(exam)) {
       try {

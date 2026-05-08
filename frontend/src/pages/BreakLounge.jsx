@@ -8,7 +8,15 @@ import Footer from '../components/Footer'
  * 隨機 3 種動畫：扭蛋 / 翻牌 / 福袋。無 cooldown。
  */
 
-const ANIM_MODES = ['gacha', 'cards', 'fukubukuro']
+const ANIM_MODES = ['gacha', 'cards', 'fukubukuro', 'chest', 'slot']
+
+const ANIM_DURATION = {
+  gacha:       3200,
+  cards:       1800,
+  fukubukuro:  2700,
+  chest:       2600,
+  slot:        2800,
+}
 
 export default function BreakLounge() {
   const navigate = useNavigate()
@@ -47,8 +55,7 @@ export default function BreakLounge() {
     setMode(newMode)
     setPicked({ ...newPick, _type: poolType })
     setPhase('spinning')
-    const duration = newMode === 'cards' ? 1800 : newMode === 'fukubukuro' ? 2700 : 3200
-    setTimeout(() => setPhase('revealed'), duration)
+    setTimeout(() => setPhase('revealed'), ANIM_DURATION[newMode] || 3000)
   }, [pool, phase, poolType])
 
   const reset = () => {
@@ -111,6 +118,8 @@ export default function BreakLounge() {
             {mode === 'gacha' && <GachaSpinning />}
             {mode === 'cards' && <CardSpinning />}
             {mode === 'fukubukuro' && <FukubukuroSpinning />}
+            {mode === 'chest' && <ChestSpinning />}
+            {mode === 'slot' && <SlotSpinning />}
           </>
         )}
         {dataReady && phase === 'revealed' && picked && <Reveal product={picked} onAgain={() => { reset(); setTimeout(spin, 50) }} />}
@@ -336,24 +345,178 @@ function FukubukuroSpinning() {
   )
 }
 
-/* ── Reveal: 統一的揭曉卡片 ─────────────────── */
+/* ── 寶箱動畫 ───────────────────────────── */
+// 0-0.9s 抖動 → 0.9-1.5s 鎖頭掉落 → 1.5-2.1s 蓋子打開+光芒 → 2.1-2.6s 寶物飛出
+function ChestSpinning() {
+  const [stage, setStage] = useState(0)
+  useEffect(() => {
+    const t1 = setTimeout(() => setStage(1), 900)
+    const t2 = setTimeout(() => setStage(2), 1500)
+    const t3 = setTimeout(() => setStage(3), 2100)
+    return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3) }
+  }, [])
+  const coins = useMemo(() => [
+    { e: '🪙', cx: '-70px', cy: '-110px', d: '0s' },
+    { e: '💰', cx: '60px',  cy: '-130px', d: '0.05s' },
+    { e: '💎', cx: '-40px', cy: '-150px', d: '0.1s' },
+    { e: '🪙', cx: '80px',  cy: '-90px',  d: '0.15s' },
+    { e: '⭐', cx: '0px',   cy: '-160px', d: '0.2s' },
+    { e: '✨', cx: '-90px', cy: '-70px',  d: '0.25s' },
+    { e: '💎', cx: '50px',  cy: '-50px',  d: '0.3s' },
+  ], [])
+  return (
+    <div className="flex flex-col items-center gap-4">
+      <div className="relative w-48 h-48">
+        {stage >= 2 && <RayBurst count={14} />}
+        {/* 箱身 */}
+        <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-24 rounded-b-xl shadow-xl
+          bg-gradient-to-b from-amber-700 via-amber-800 to-amber-900 border-2 border-amber-950
+          ${stage === 0 ? 'animate-chest-shake' : ''}
+        `}>
+          <div className="absolute inset-2 rounded-md border border-amber-500/30" />
+          <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-6 h-8 bg-amber-950 rounded" />
+          {stage >= 2 && (
+            <div className="absolute inset-x-2 top-0 h-12 rounded-md bg-gradient-to-b from-amber-200 to-yellow-400 shadow-[0_0_30px_rgba(251,191,36,0.9)]" />
+          )}
+        </div>
+        {/* 蓋子（旋轉打開） */}
+        <div className={`absolute left-1/2 -translate-x-1/2 w-40 h-12 rounded-t-xl
+          bg-gradient-to-b from-amber-600 to-amber-800 border-2 border-amber-950 shadow-lg origin-bottom
+          ${stage === 0 ? 'animate-chest-shake' : ''}
+          ${stage >= 2 ? 'animate-chest-lid-open' : ''}
+        `}
+        style={{ bottom: '96px', transformStyle: 'preserve-3d' }}>
+          <div className="absolute inset-1 rounded-t-md border border-amber-400/30" />
+        </div>
+        {/* 鎖頭 */}
+        {stage < 1 && (
+          <div className={`absolute left-1/2 w-8 h-8 -translate-x-1/2
+            bg-gradient-to-br from-yellow-300 to-amber-500 rounded border-2 border-amber-800 animate-glow-pulse
+          `} style={{ bottom: '92px' }}>
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-3 border-2 border-amber-800 rounded-t-full bg-transparent" />
+          </div>
+        )}
+        {stage === 1 && (
+          <div className="absolute left-1/2 w-8 h-8 bg-gradient-to-br from-yellow-300 to-amber-500 rounded border-2 border-amber-800 animate-chest-lock-fall"
+               style={{ bottom: '92px' }}>
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-3 border-2 border-amber-800 rounded-t-full bg-transparent" />
+          </div>
+        )}
+        {stage >= 3 && coins.map((c, i) => (
+          <span key={i}
+                className="absolute left-1/2 bottom-12 text-2xl animate-coin-fly pointer-events-none"
+                style={{ '--cx': c.cx, '--cy': c.cy, animationDelay: c.d }}>
+            {c.e}
+          </span>
+        ))}
+      </div>
+      <p className="text-gray-500 text-sm">
+        {stage === 0 && '寶箱在抖…'}
+        {stage === 1 && '咔！鎖掉了'}
+        {stage === 2 && '咿呀—打開了'}
+        {stage === 3 && '寶物飛出來了！'}
+      </p>
+    </div>
+  )
+}
+
+/* ── 老虎機動畫 ─────────────────────────── */
+function SlotSpinning() {
+  const [r1, setR1] = useState(false)
+  const [r2, setR2] = useState(false)
+  const [r3, setR3] = useState(false)
+  const [done, setDone] = useState(false)
+  useEffect(() => {
+    const t1 = setTimeout(() => setR1(true), 1200)
+    const t2 = setTimeout(() => setR2(true), 1800)
+    const t3 = setTimeout(() => setR3(true), 2400)
+    const t4 = setTimeout(() => setDone(true), 2500)
+    return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4) }
+  }, [])
+  return (
+    <div className="flex flex-col items-center gap-4">
+      <div className="relative w-64 p-4 rounded-3xl bg-gradient-to-b from-rose-500 to-rose-700 shadow-2xl border-4 border-rose-900">
+        {done && <div className="absolute -inset-1 rounded-3xl pointer-events-none animate-slot-flash bg-yellow-300/30" />}
+        <div className="text-center text-yellow-200 font-black tracking-widest text-sm mb-2 drop-shadow">★ JACKPOT ★</div>
+        <div className="flex gap-1.5 bg-black/40 p-2 rounded-xl">
+          <Reel stopped={r1} symbols={['🍒','🍋','7️⃣','💎','🔔','🍀']} pick="💎" />
+          <Reel stopped={r2} symbols={['🔔','🍀','🍒','7️⃣','💎','🍋']} pick="💎" />
+          <Reel stopped={r3} symbols={['7️⃣','💎','🍋','🍒','🔔','🍀']} pick="💎" />
+        </div>
+        {/* 拉桿 */}
+        <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-2 h-20 bg-gradient-to-b from-gray-300 to-gray-600 rounded-full">
+          <div className="absolute -top-2 -left-1.5 w-5 h-5 rounded-full bg-gradient-to-br from-red-400 to-red-700 border border-red-900" />
+        </div>
+        <div className="flex justify-around mt-3">
+          {[0,1,2,3,4].map(i => (
+            <span key={i} className={`w-2 h-2 rounded-full ${done ? 'bg-yellow-300 animate-pulse' : 'bg-yellow-400/50'}`}
+                  style={{ animationDelay: `${i * 0.1}s` }} />
+          ))}
+        </div>
+      </div>
+      <p className="text-gray-500 text-sm">
+        {!r1 ? '轉啊轉…' : !r3 ? '快停了…' : done ? '🎉 BINGO！' : ''}
+      </p>
+    </div>
+  )
+}
+
+function Reel({ stopped, symbols, pick }) {
+  return (
+    <div className="relative w-14 h-20 bg-white rounded-md overflow-hidden border-2 border-yellow-300 shadow-inner">
+      {!stopped && (
+        <div className="absolute inset-x-0 animate-slot-fast">
+          {[...symbols, ...symbols].map((s, i) => (
+            <div key={i} className="h-20 flex items-center justify-center text-3xl">{s}</div>
+          ))}
+        </div>
+      )}
+      {stopped && (
+        <div className="absolute inset-0 flex items-center justify-center text-3xl animate-slot-stop">{pick}</div>
+      )}
+      <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white/60 to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+    </div>
+  )
+}
+
+/* ── 通用：光芒射線 ─────────────────────── */
+function RayBurst({ count = 10, color = 'from-amber-200/0 via-amber-300/80 to-amber-200/0' }) {
+  return (
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none animate-ray-burst">
+      {Array.from({ length: count }).map((_, i) => (
+        <span key={i}
+              className={`absolute w-1 h-32 bg-gradient-to-b ${color} rounded-full origin-bottom`}
+              style={{ transform: `rotate(${(360 / count) * i}deg) translateY(-50%)` }} />
+      ))}
+    </div>
+  )
+}
+
+/* ── Reveal: 統一的揭曉卡片（含 shimmer 光帶 + 雙星裝飾）─── */
 function Reveal({ product, onAgain }) {
   const isProduct = product._type === 'products'
   return (
     <div className="w-full max-w-sm flex flex-col items-center gap-4 animate-reveal-pop">
-      <p className="text-gray-500 text-sm">叮咚 — 你抽到的是</p>
+      <div className="relative">
+        <p className="text-gray-500 text-sm">叮咚 — 你抽到的是</p>
+        <span className="absolute -top-2 -left-3 text-lg animate-sparkle">✨</span>
+        <span className="absolute -top-2 -right-3 text-lg animate-sparkle" style={{ animationDelay: '0.3s' }}>✨</span>
+      </div>
       <a href={product.shopUrl} target="_blank" rel="noopener noreferrer sponsored"
-         className="block w-full bg-white rounded-3xl p-5 shadow-xl border-2 border-orange-200 active:scale-[0.99]">
+         className="relative block w-full bg-white rounded-3xl p-5 shadow-xl border-2 border-orange-200 active:scale-[0.99] overflow-hidden">
+        <span className="pointer-events-none absolute inset-0 -translate-x-full animate-shimmer
+                         bg-gradient-to-r from-transparent via-white/60 to-transparent" />
         {product.image && (
           <img src={product.image} alt={product.name}
                className="w-full aspect-square object-cover rounded-2xl mb-3 bg-gray-100"
                loading="lazy" />
         )}
-        <h2 className="text-lg font-bold text-gray-800 text-center break-words">{product.name}</h2>
+        <h2 className="relative text-lg font-bold text-gray-800 text-center break-words">{product.name}</h2>
         {product.price && (
-          <p className="text-center text-orange-600 font-bold mt-2">{product.price}</p>
+          <p className="relative text-center text-orange-600 font-bold mt-2">{product.price}</p>
         )}
-        <div className="mt-4 px-4 py-2.5 rounded-xl bg-gradient-to-r from-orange-400 to-amber-400 text-white text-center font-semibold text-sm">
+        <div className="relative mt-4 px-4 py-2.5 rounded-xl bg-gradient-to-r from-orange-400 to-amber-400 text-white text-center font-semibold text-sm shadow">
           {product.ctaText || (isProduct ? '看看這個商品' : '進入店家頁面')} →
         </div>
       </a>

@@ -83,6 +83,50 @@ export default {
         },
         sparkle:     { '0%,100%': { opacity: '0.3', transform: 'scale(0.7)' }, '50%': { opacity: '1', transform: 'scale(1.3)' } },
         revealPop:   { '0%': { opacity: '0', transform: 'scale(0.5) translateY(40px)' }, '70%': { opacity: '1', transform: 'scale(1.05) translateY(-4px)' }, '100%': { opacity: '1', transform: 'scale(1) translateY(0)' } },
+        // 通用：光芒射線、發光脈衝、shimmer、漂浮粒子
+        rayBurst: {
+          '0%':   { transform: 'scale(0) rotate(0)', opacity: '0' },
+          '40%':  { opacity: '0.9' },
+          '100%': { transform: 'scale(2.4) rotate(180deg)', opacity: '0' },
+        },
+        glowPulse: {
+          '0%,100%': { boxShadow: '0 0 0 0 rgba(251,191,36,0.6)' },
+          '50%':     { boxShadow: '0 0 28px 12px rgba(251,191,36,0.85)' },
+        },
+        shimmer: {
+          '0%':   { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        // 寶箱動畫
+        chestShake: { '0%,100%': { transform: 'translateX(0) rotate(0)' }, '25%': { transform: 'translateX(-4px) rotate(-2deg)' }, '75%': { transform: 'translateX(4px) rotate(2deg)' } },
+        chestLockFall: {
+          '0%':   { transform: 'translate(-50%, 0) rotate(0)', opacity: '1' },
+          '100%': { transform: 'translate(-50%, 70px) rotate(120deg)', opacity: '0' },
+        },
+        chestLidOpen: {
+          '0%':   { transform: 'rotateX(0)' },
+          '100%': { transform: 'rotateX(-110deg)' },
+        },
+        coinFly: {
+          '0%':   { transform: 'translate(0, 0) scale(0.5) rotate(0)', opacity: '0' },
+          '20%':  { opacity: '1' },
+          '100%': { transform: 'translate(var(--cx, 0px), var(--cy, -100px)) scale(1) rotate(720deg)', opacity: '0' },
+        },
+        // 老虎機動畫
+        slotReelFast: {
+          '0%':   { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-50%)' },
+        },
+        slotStop: {
+          '0%':   { transform: 'translateY(-3px)' },
+          '40%':  { transform: 'translateY(6px)' },
+          '70%':  { transform: 'translateY(-2px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        slotFlash: {
+          '0%,100%': { opacity: '0', transform: 'scale(0.8)' },
+          '50%':     { opacity: '1', transform: 'scale(1.05)' },
+        },
       },
       animation: {
         pop:   'pop 0.3s ease-out',
@@ -103,6 +147,16 @@ export default {
         'confetti':     'confetti 0.8s ease-out forwards',
         'sparkle':      'sparkle 1s ease-in-out infinite',
         'reveal-pop':   'revealPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both',
+        'ray-burst':       'rayBurst 0.9s ease-out forwards',
+        'glow-pulse':      'glowPulse 1.4s ease-in-out infinite',
+        'shimmer':         'shimmer 1.8s ease-in-out infinite',
+        'chest-shake':     'chestShake 0.35s ease-in-out infinite',
+        'chest-lock-fall': 'chestLockFall 0.6s ease-in forwards',
+        'chest-lid-open':  'chestLidOpen 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+        'coin-fly':        'coinFly 1.1s ease-out forwards',
+        'slot-fast':       'slotReelFast 0.04s linear infinite',
+        'slot-stop':       'slotStop 0.4s ease-out forwards',
+        'slot-flash':      'slotFlash 0.5s ease-in-out infinite',
       },
     },
   },

@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build && node build-shells.cjs && node generate-sitemap.cjs",
     "preview": "vite preview",
-    "seo:intros": "node scripts/generate-seo-intros.cjs"
+    "seo:intros": "node scripts/generate-seo-intros.cjs",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@sentry/react": "^10.52.0",
@@ -23,6 +25,7 @@
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "vitest": "^4.1.5"
   }
 }

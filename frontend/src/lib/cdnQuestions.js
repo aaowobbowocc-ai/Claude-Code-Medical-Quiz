@@ -6,7 +6,8 @@
 
 const CDN_BASE = 'https://cdn.jsdelivr.net/gh/aaowobbowocc-ai/Claude-Code-Medical-Quiz@master/backend'
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000  // 24h
-const CACHE_VERSION = 1
+// v2 (2026-05-08): force re-download after image_options schema change
+const CACHE_VERSION = 2
 const DB_NAME = 'questions-cache'
 const DB_STORE = 'exams'
 
@@ -44,25 +45,40 @@ const EXAM_FILES = {
 const memCache = new Map()
 
 // ── IndexedDB helpers ──────────────────────────────────────────────────────
+// All IDB ops race against a 1.5s timeout — IDB can hang indefinitely if
+// another tab holds a write lock or storage is corrupt. On timeout, we treat
+// it as a cache miss and proceed to CDN fetch.
+const IDB_TIMEOUT = 1500
+
+function withTimeout(promise, ms, fallback = null) {
+  return Promise.race([
+    promise,
+    new Promise(resolve => setTimeout(() => resolve(fallback), ms))
+  ])
+}
+
 function openDB() {
   return new Promise((resolve, reject) => {
     const req = indexedDB.open(DB_NAME, 1)
     req.onupgradeneeded = () => req.result.createObjectStore(DB_STORE)
     req.onsuccess = () => resolve(req.result)
     req.onerror = () => reject(req.error)
+    req.onblocked = () => reject(new Error('IDB blocked'))
   })
 }
 
 async function idbGet(key) {
-  try {
-    const db = await openDB()
-    return await new Promise((resolve, reject) => {
-      const tx = db.transaction(DB_STORE, 'readonly')
-      const req = tx.objectStore(DB_STORE).get(key)
-      req.onsuccess = () => resolve(req.result || null)
-      req.onerror = () => reject(req.error)
-    })
-  } catch { return null }
+  return withTimeout((async () => {
+    try {
+      const db = await openDB()
+      return await new Promise((resolve, reject) => {
+        const tx = db.transaction(DB_STORE, 'readonly')
+        const req = tx.objectStore(DB_STORE).get(key)
+        req.onsuccess = () => resolve(req.result || null)
+        req.onerror = () => reject(req.error)
+      })
+    } catch { return null }
+  })(), IDB_TIMEOUT, null)
 }
 
 async function idbPut(key, value) {

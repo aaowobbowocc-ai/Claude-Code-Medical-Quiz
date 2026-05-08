@@ -20,7 +20,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v12: 全考試 totalQ 同步至 174,496 題（醫事 100% 完成、SEO 描述同步更新）
 // v13: 新增 呼吸治療師 rt 考試（100-104 年紙本，4,320 題）
 // v14: 全站 totalQ 同步至 180,527 題（含 RT 4,320 + 既有題庫累積補爬）
-const CACHE_KEY = 'exam-registry-v14'
+// v15: PT/OT 細分 14 個新 tag（pt_anatomy/physio/kinesio 等 + ot_history_theory 等）
+const CACHE_KEY = 'exam-registry-v15'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache

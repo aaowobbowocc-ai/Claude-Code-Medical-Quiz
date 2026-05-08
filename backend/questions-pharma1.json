@@ -10730,15 +10730,19 @@
       "number": 44,
       "question": "下列化合物中, 何者為 enalapril 的活性代謝產物?",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "HO",
-        "C": "O",
-        "D": "OH"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/pharma1_101030_q44_full.webp"
+      "option_images": {
+        "A": "/question-images/pharma1_101030_q44_opt_A.webp",
+        "B": "/question-images/pharma1_101030_q44_opt_B.webp",
+        "C": "/question-images/pharma1_101030_q44_opt_C.webp",
+        "D": "/question-images/pharma1_101030_q44_opt_D.webp"
+      }
     },
     {
       "id": 115021437,
@@ -25718,16 +25722,19 @@
       "number": 57,
       "question": "阿片類鎮痛藥 dezocine 的結構為何？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "image_only_options",
-      "image_url": "/question-images/pharma1_102100_q57_full.webp"
+      "option_images": {
+        "A": "/question-images/pharma1_102100_q57_opt_A.webp",
+        "B": "/question-images/pharma1_102100_q57_opt_B.webp",
+        "C": "/question-images/pharma1_102100_q57_opt_C.webp",
+        "D": "/question-images/pharma1_102100_q57_opt_D.webp"
+      }
     },
     {
       "id": 115022408,
@@ -50020,16 +50027,19 @@
       "number": 53,
       "question": "全身麻醉劑desflurane的結構為何？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "image_only_options",
-      "image_url": "/question-images/pharma1_105020_q53_full.webp"
+      "option_images": {
+        "A": "/question-images/pharma1_105020_q53_opt_A.webp",
+        "B": "/question-images/pharma1_105020_q53_opt_B.webp",
+        "C": "/question-images/pharma1_105020_q53_opt_C.webp",
+        "D": "/question-images/pharma1_105020_q53_opt_D.webp"
+      }
     },
     {
       "id": 115023064,

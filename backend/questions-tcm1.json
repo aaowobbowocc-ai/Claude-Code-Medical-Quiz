@@ -62656,15 +62656,19 @@
       "number": 28,
       "question": "下列何者為青蒿鱉甲湯、白虎湯與玉女煎的共有藥物？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_100030_q28_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_100030_q28_opt_A.webp",
+        "B": "/question-images/tcm1_100030_q28_opt_B.webp",
+        "C": "/question-images/tcm1_100030_q28_opt_C.webp",
+        "D": "/question-images/tcm1_100030_q28_opt_D.webp"
+      }
     },
     {
       "id": 3132,
@@ -62678,15 +62682,19 @@
       "number": 29,
       "question": "下列何藥物為香砂六君子湯的組成之一？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_100030_q29_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_100030_q29_opt_A.webp",
+        "B": "/question-images/tcm1_100030_q29_opt_B.webp",
+        "C": "/question-images/tcm1_100030_q29_opt_C.webp",
+        "D": "/question-images/tcm1_100030_q29_opt_D.webp"
+      }
     },
     {
       "id": 3133,
@@ -63132,15 +63140,19 @@
       "number": 51,
       "question": "依《本草備要》，下列何種藥材功能補而不滯，行而不峻，為女科要藥？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_100030_q51_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_100030_q51_opt_A.webp",
+        "B": "/question-images/tcm1_100030_q51_opt_B.webp",
+        "C": "/question-images/tcm1_100030_q51_opt_C.webp",
+        "D": "/question-images/tcm1_100030_q51_opt_D.webp"
+      }
     },
     {
       "id": 3155,
@@ -63268,15 +63280,19 @@
       "number": 57,
       "question": "下列藥物中，何者常用於補中益氣、袪痰鎮咳？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_100030_q57_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_100030_q57_opt_A.webp",
+        "B": "/question-images/tcm1_100030_q57_opt_B.webp",
+        "C": "/question-images/tcm1_100030_q57_opt_C.webp",
+        "D": "/question-images/tcm1_100030_q57_opt_D.webp"
+      }
     },
     {
       "id": 3161,
@@ -63310,15 +63326,19 @@
       "number": 59,
       "question": "下列何者善治下半身的風寒濕痹證？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_100030_q59_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_100030_q59_opt_A.webp",
+        "B": "/question-images/tcm1_100030_q59_opt_B.webp",
+        "C": "/question-images/tcm1_100030_q59_opt_C.webp",
+        "D": "/question-images/tcm1_100030_q59_opt_D.webp"
+      }
     },
     {
       "id": 3163,
@@ -63332,15 +63352,19 @@
       "number": 60,
       "question": "下列何種藥材用於治外感風寒或挾濕之頭身痛證？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_100030_q60_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_100030_q60_opt_A.webp",
+        "B": "/question-images/tcm1_100030_q60_opt_B.webp",
+        "C": "/question-images/tcm1_100030_q60_opt_C.webp",
+        "D": "/question-images/tcm1_100030_q60_opt_D.webp"
+      }
     },
     {
       "id": 3164,
@@ -63374,15 +63398,19 @@
       "number": 62,
       "question": "下列何藥用於治療尿道炎、膀胱炎、淋濁，風濕腰膝痹痛？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_100030_q62_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_100030_q62_opt_A.webp",
+        "B": "/question-images/tcm1_100030_q62_opt_B.webp",
+        "C": "/question-images/tcm1_100030_q62_opt_C.webp",
+        "D": "/question-images/tcm1_100030_q62_opt_D.webp"
+      }
     },
     {
       "id": 3166,
@@ -63556,15 +63584,19 @@
       "number": 71,
       "question": "下列何藥可用於咽痛音啞，咳嗽痰多及肺癰，並能引藥上行？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_100030_q71_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_100030_q71_opt_A.webp",
+        "B": "/question-images/tcm1_100030_q71_opt_B.webp",
+        "C": "/question-images/tcm1_100030_q71_opt_C.webp",
+        "D": "/question-images/tcm1_100030_q71_opt_D.webp"
+      }
     },
     {
       "id": 3175,
@@ -66158,15 +66190,19 @@
       "number": 40,
       "question": "保和丸中用量最重的藥物是下列何者？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_101030_q40_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101030_q40_opt_A.webp",
+        "B": "/question-images/tcm1_101030_q40_opt_B.webp",
+        "C": "/question-images/tcm1_101030_q40_opt_C.webp",
+        "D": "/question-images/tcm1_101030_q40_opt_D.webp"
+      }
     },
     {
       "id": 3304,
@@ -66204,15 +66240,19 @@
       "number": 42,
       "question": "下列何種藥材用於瘡瘍初起有表證者？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_101030_q42_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101030_q42_opt_A.webp",
+        "B": "/question-images/tcm1_101030_q42_opt_B.webp",
+        "C": "/question-images/tcm1_101030_q42_opt_C.webp",
+        "D": "/question-images/tcm1_101030_q42_opt_D.webp"
+      }
     },
     {
       "id": 3306,
@@ -66226,15 +66266,19 @@
       "number": 43,
       "question": "下列何者能潤腸通便並兼具滋養補虛的作用？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_101030_q43_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101030_q43_opt_A.webp",
+        "B": "/question-images/tcm1_101030_q43_opt_B.webp",
+        "C": "/question-images/tcm1_101030_q43_opt_C.webp",
+        "D": "/question-images/tcm1_101030_q43_opt_D.webp"
+      }
     },
     {
       "id": 3307,
@@ -66271,15 +66315,19 @@
       "number": 45,
       "question": "下列何藥能治產後惡露不盡及小便不利、水腫？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_101030_q45_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101030_q45_opt_A.webp",
+        "B": "/question-images/tcm1_101030_q45_opt_B.webp",
+        "C": "/question-images/tcm1_101030_q45_opt_C.webp",
+        "D": "/question-images/tcm1_101030_q45_opt_D.webp"
+      }
     },
     {
       "id": 3309,
@@ -66293,15 +66341,19 @@
       "number": 46,
       "question": "肺癰咳吐膿血，可用鮮蘆根、冬瓜子、薏苡仁與下列何藥配伍？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_101030_q46_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101030_q46_opt_A.webp",
+        "B": "/question-images/tcm1_101030_q46_opt_B.webp",
+        "C": "/question-images/tcm1_101030_q46_opt_C.webp",
+        "D": "/question-images/tcm1_101030_q46_opt_D.webp"
+      }
     },
     {
       "id": 3310,
@@ -66315,15 +66367,19 @@
       "number": 47,
       "question": "下列藥物中，何者可用於腎虛久瀉之「五更腹瀉」？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_101030_q47_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101030_q47_opt_A.webp",
+        "B": "/question-images/tcm1_101030_q47_opt_B.webp",
+        "C": "/question-images/tcm1_101030_q47_opt_C.webp",
+        "D": "/question-images/tcm1_101030_q47_opt_D.webp"
+      }
     },
     {
       "id": 3311,
@@ -66337,15 +66393,19 @@
       "number": 48,
       "question": "下列藥物中，何者能開竅醒腦，對中風口噤有作用？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/tcm1_101030_q48_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101030_q48_opt_A.webp",
+        "B": "/question-images/tcm1_101030_q48_opt_B.webp",
+        "C": "/question-images/tcm1_101030_q48_opt_C.webp",
+        "D": "/question-images/tcm1_101030_q48_opt_D.webp"
+      }
     },
     {
       "id": 3312,
@@ -96052,16 +96112,19 @@
       "number": 52,
       "question": "下列何種藥材功能安神定驚，明目消翳，解毒生肌？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "empty_options",
-      "image_url": "/question-images/tcm1_101110_q52_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101110_q52_opt_A.webp",
+        "B": "/question-images/tcm1_101110_q52_opt_B.webp",
+        "C": "/question-images/tcm1_101110_q52_opt_C.webp",
+        "D": "/question-images/tcm1_101110_q52_opt_D.webp"
+      }
     },
     {
       "id": 4768,
@@ -96350,16 +96413,19 @@
       "number": 66,
       "question": "下列何者最適用於妊娠惡阻，胎動不安？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "empty_options",
-      "image_url": "/question-images/tcm1_101110_q66_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101110_q66_opt_A.webp",
+        "B": "/question-images/tcm1_101110_q66_opt_B.webp",
+        "C": "/question-images/tcm1_101110_q66_opt_C.webp",
+        "D": "/question-images/tcm1_101110_q66_opt_D.webp"
+      }
     },
     {
       "id": 4782,
@@ -96374,16 +96440,19 @@
       "number": 67,
       "question": "下列何者可治療濕熱黃疸及婦女產後惡露不下？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "empty_options",
-      "image_url": "/question-images/tcm1_101110_q67_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101110_q67_opt_A.webp",
+        "B": "/question-images/tcm1_101110_q67_opt_B.webp",
+        "C": "/question-images/tcm1_101110_q67_opt_C.webp",
+        "D": "/question-images/tcm1_101110_q67_opt_D.webp"
+      }
     },
     {
       "id": 4783,
@@ -96545,16 +96614,19 @@
       "number": 75,
       "question": "下列何種藥材用於治熱病熱邪傷津，及消渴證口渴多飲？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "empty_options",
-      "image_url": "/question-images/tcm1_101110_q75_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101110_q75_opt_A.webp",
+        "B": "/question-images/tcm1_101110_q75_opt_B.webp",
+        "C": "/question-images/tcm1_101110_q75_opt_C.webp",
+        "D": "/question-images/tcm1_101110_q75_opt_D.webp"
+      }
     },
     {
       "id": 4791,
@@ -96569,16 +96641,19 @@
       "number": 76,
       "question": "依《本草備要》，下列何種藥材功專利濕行水，濕熱既除，則清氣上行？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "empty_options",
-      "image_url": "/question-images/tcm1_101110_q76_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101110_q76_opt_A.webp",
+        "B": "/question-images/tcm1_101110_q76_opt_B.webp",
+        "C": "/question-images/tcm1_101110_q76_opt_C.webp",
+        "D": "/question-images/tcm1_101110_q76_opt_D.webp"
+      }
     },
     {
       "id": 4792,
@@ -96614,16 +96689,19 @@
       "number": 78,
       "question": "依《本草備要》，下列何種藥材能墜諸藥至於下極，瀉胸中至高之氣，使之下行？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "empty_options",
-      "image_url": "/question-images/tcm1_101110_q78_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101110_q78_opt_A.webp",
+        "B": "/question-images/tcm1_101110_q78_opt_B.webp",
+        "C": "/question-images/tcm1_101110_q78_opt_C.webp",
+        "D": "/question-images/tcm1_101110_q78_opt_D.webp"
+      }
     },
     {
       "id": 4794,
@@ -96638,16 +96716,19 @@
       "number": 79,
       "question": "依《本草備要》，下列何種藥材多食，收令太過，令人壅氣臚脹、小兒發驚動疳？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "empty_options",
-      "image_url": "/question-images/tcm1_101110_q79_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101110_q79_opt_A.webp",
+        "B": "/question-images/tcm1_101110_q79_opt_B.webp",
+        "C": "/question-images/tcm1_101110_q79_opt_C.webp",
+        "D": "/question-images/tcm1_101110_q79_opt_D.webp"
+      }
     },
     {
       "id": 4795,
@@ -96662,16 +96743,19 @@
       "number": 80,
       "question": "依《本草備要》，下列何種藥材功能蕩滌腸胃，下燥結而除瘀熱？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "empty_options",
-      "image_url": "/question-images/tcm1_101110_q80_full.webp"
+      "option_images": {
+        "A": "/question-images/tcm1_101110_q80_opt_A.webp",
+        "B": "/question-images/tcm1_101110_q80_opt_B.webp",
+        "C": "/question-images/tcm1_101110_q80_opt_C.webp",
+        "D": "/question-images/tcm1_101110_q80_opt_D.webp"
+      }
     },
     {
       "id": "102110_0201_1",

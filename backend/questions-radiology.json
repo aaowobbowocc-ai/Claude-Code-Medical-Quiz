@@ -79032,15 +79032,19 @@
       "number": 54,
       "question": "下列關於TG-51報告中的射質轉換因子（quality conversion factor）k Q 的敘述，何者正確？",
       "options": {
-        "A": "kQ = Dw / Dgas",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/radiology_104020_q54_full.webp"
+      "option_images": {
+        "A": "/question-images/radiology_104020_q54_opt_A.webp",
+        "B": "/question-images/radiology_104020_q54_opt_B.webp",
+        "C": "/question-images/radiology_104020_q54_opt_C.webp",
+        "D": "/question-images/radiology_104020_q54_opt_D.webp"
+      }
     },
     {
       "id": 117820,
@@ -82096,15 +82100,13 @@
       "number": 45,
       "question": "MRI頭部線圈 (head coil) 所產生的B₁磁場單位向量為 a⃗, 體線圈 (body coil) 所產生的B₁磁場單位向量為 b⃗, 主磁場B₀單位向量為 c⃗, 則下列何者正確?",
       "options": {
-        "A": "a⃗ ⋅ c⃗ = 1",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "a⃗ ⋅ b⃗ = 1",
+        "B": "a⃗ ⋅ c⃗ = 1",
+        "C": "|b⃗ × c⃗| = 1",
+        "D": "|a⃗ × c⃗| = 0"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": "image_options",
-      "image_url": "/question-images/radiology_104020_q45_full.webp"
+      "explanation": ""
     },
     {
       "id": 117651,
@@ -268388,14 +268390,13 @@
       "number": 76,
       "question": "進行180度SPECT造影，附圖為投影影像矩陣示意圖，若不考慮投影角度不足，下列何者不是此造影之弦波圖 （sinogram）？",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options",
       "images": [
         "/question-images/radiology_4945_0.webp",
         "/question-images/radiology_4945_1.webp",
@@ -268403,7 +268404,12 @@
         "/question-images/radiology_4945_3.webp",
         "/question-images/radiology_4945_4.webp"
       ],
-      "image_url": "/question-images/radiology_113090_q76_full.webp"
+      "option_images": {
+        "A": "/question-images/radiology_113090_q76_opt_A.webp",
+        "B": "/question-images/radiology_113090_q76_opt_B.webp",
+        "C": "/question-images/radiology_113090_q76_opt_C.webp",
+        "D": "/question-images/radiology_113090_q76_opt_D.webp"
+      }
     },
     {
       "id": 4946,

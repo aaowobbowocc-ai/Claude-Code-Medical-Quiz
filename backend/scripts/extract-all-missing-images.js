@@ -37,6 +37,13 @@ const examFilter = (() => {
 //   subject = matches q.subject exactly
 
 const PAPERS = [
+  // ── DOCTOR1 ──────────────────────────────────────────────────────────────
+  // Years 100-104: c=101, s=0102 (醫學二 — only paper with image-dep questions)
+  { exam:'doctor1', file:'questions.json', code:'101030', c:'101', s:'0102', pi:1, year:'101', session:'第一次', subject:'醫學(二)' },
+  { exam:'doctor1', file:'questions.json', code:'101110', c:'101', s:'0102', pi:1, year:'101', session:'第二次', subject:'醫學(二)' },
+  { exam:'doctor1', file:'questions.json', code:'102110', c:'101', s:'0102', pi:1, year:'102', session:'第二次', subject:'醫學(二)' },
+  { exam:'doctor1', file:'questions.json', code:'104030', c:'101', s:'0102', pi:1, year:'104', session:'第一次', subject:'醫學(二)' },
+
   // ── DOCTOR2 ──────────────────────────────────────────────────────────────
   // 100-103: c=102, s=0103-0106
   { exam:'doctor2', file:'questions-doctor2.json', code:'100030', c:'102', s:'0104', pi:1, year:'100', session:'第一次', subject:'醫學(四)' },
@@ -345,7 +352,7 @@ async function main() {
       // Build index for fast lookup
       const idx = new Map()
       for (const q of arr) {
-        if (!q.incomplete || q.gap_reason !== 'missing_image_dep') continue
+        if (!q.incomplete || !['missing_image', 'missing_image_dep'].includes(q.gap_reason)) continue
         const k = `${q.roc_year}|${q.session}|${q.subject}|${q.number}`
         idx.set(k, q)
       }

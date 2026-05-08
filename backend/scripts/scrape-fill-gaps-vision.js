@@ -16,7 +16,7 @@ require('dotenv').config()
 const fs      = require('fs')
 const path    = require('path')
 const https   = require('https')
-const { GoogleGenerativeAI } = require('@google/generative-ai')
+const { GoogleAuth } = require('google-auth-library')
 const pdfParse  = require('pdf-parse')
 const { atomicWriteJson } = require('./lib/atomic-write')
 const { fetchPdf, cachedFetch, buildMoexUrl } = require('./lib/pdf-fetcher')
@@ -28,11 +28,10 @@ const BACKEND = path.resolve(__dirname, '..')
 
 if (!fs.existsSync(CACHE)) fs.mkdirSync(CACHE, { recursive: true })
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
-const visionModel = genAI.getGenerativeModel({
-  model: 'gemini-2.5-flash',
-  generationConfig: { thinkingConfig: { thinkingBudget: 0 } },
-})
+const VERTEX_PROJECT = 'gen-lang-client-0502672630'
+const VERTEX_REGION  = 'us-central1'
+const VERTEX_MODEL   = 'gemini-2.5-pro'
+const vertexAuth = new GoogleAuth({ scopes: ['https://www.googleapis.com/auth/cloud-platform'] })
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
 // ─── URL lookup: (exam_code, subject) → {c, s} ────────────────────────────────
@@ -258,6 +257,19 @@ const LOOKUP_ENTRIES = [
     lu(code,'醫學(六)','302','44'),
   ]),
 
+  // ── DENTAL1 ──────────────────────────────────────────────────────────────────
+  // 107020: c=303, 卷一=s11 (already scraped), 卷二=s22
+  lu('107020','卷二','303','22'),
+
+  // ── DENTAL2 ──────────────────────────────────────────────────────────────────
+  // 104020: c=302 for all papers (scraper only got 卷一=s33)
+  lu('104020','卷二','302','44'), lu('104020','卷三','302','55'), lu('104020','卷四','302','66'),
+  // 104090: 卷一=c302 s33, 卷二/三=c304 s44,55 (already in scraper)
+  lu('104090','卷一','302','33'),
+  // 105020/105100: c=304, scraper only got 卷一=s33
+  lu('105020','卷二','304','44'), lu('105020','卷三','304','55'), lu('105020','卷四','304','66'),
+  lu('105100','卷二','304','44'), lu('105100','卷三','304','55'),
+
   // ── JUDICIAL ─────────────────────────────────────────────────────────────────
   lu('109130','法學知識與英文','101','0412'),
   lu('110130','法學知識與英文','101','0315'),
@@ -446,13 +458,25 @@ const VISION_A_PROMPT = `這是一張台灣國家考試答案表的掃描圖片�
 
 async function visionExtract(pngBuf, prompt, pageNum) {
   const base64 = pngBuf.toString('base64')
+  const url = `https://${VERTEX_REGION}-aiplatform.googleapis.com/v1/projects/${VERTEX_PROJECT}/locations/${VERTEX_REGION}/publishers/google/models/${VERTEX_MODEL}:generateContent`
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
-      const result = await visionModel.generateContent([
-        { inlineData: { data: base64, mimeType: 'image/png' } },
-        prompt,
-      ])
-      const text = result.response.text().trim()
+      const token = await vertexAuth.getAccessToken()
+      const body = {
+        contents: [{ role: 'user', parts: [
+          { inlineData: { data: base64, mimeType: 'image/png' } },
+          { text: prompt },
+        ]}],
+        generationConfig: { temperature: 0.1, maxOutputTokens: 8192 },
+      }
+      const resp = await fetch(url, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      })
+      const data = await resp.json()
+      if (!resp.ok) throw new Error(data.error?.message || JSON.stringify(data))
+      const text = (data.candidates?.[0]?.content?.parts?.[0]?.text || '').trim()
       const match = text.match(/[\[{][\s\S]*[\]}]/)
       if (!match) return prompt.startsWith('[') ? [] : {}
       return JSON.parse(match[0])

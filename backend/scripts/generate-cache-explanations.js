@@ -139,29 +139,46 @@ ${wrongNote}
 }
 
 async function callGemini(prompt) {
-  const tk = await auth.getAccessToken()
-  const tokenStr = (typeof tk === 'string') ? tk : tk.token
-  const url = `https://${VERTEX_REGION}-aiplatform.googleapis.com/v1/projects/${VERTEX_PROJECT}/locations/${VERTEX_REGION}/publishers/google/models/${VERTEX_MODEL}:generateContent`
-  const ctrl = new AbortController()
-  const timer = setTimeout(() => ctrl.abort(), 60000)
-  try {
-    const resp = await fetch(url, {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${tokenStr}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ role: 'user', parts: [{ text: prompt }] }],
-        generationConfig: { temperature: 0.3, maxOutputTokens: 800, thinkingConfig: { thinkingBudget: 0 } },
-      }),
-      signal: ctrl.signal,
-    })
-    clearTimeout(timer)
-    if (!resp.ok) {
-      const errBody = await resp.text().catch(() => '')
-      throw new Error(`HTTP ${resp.status}: ${errBody.slice(0, 200)}`)
+  // Retry with exponential backoff on 429 (rate-limited). Vertex Gemini Flash
+  // free tier has spiky throttling; up to ~10 attempts with backoff usually
+  // eventually succeeds. Persistent failures bubble up.
+  let lastErr
+  for (let attempt = 0; attempt < 8; attempt++) {
+    const tk = await auth.getAccessToken()
+    const tokenStr = (typeof tk === 'string') ? tk : tk.token
+    const url = `https://${VERTEX_REGION}-aiplatform.googleapis.com/v1/projects/${VERTEX_PROJECT}/locations/${VERTEX_REGION}/publishers/google/models/${VERTEX_MODEL}:generateContent`
+    const ctrl = new AbortController()
+    const timer = setTimeout(() => ctrl.abort(), 60000)
+    try {
+      const resp = await fetch(url, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${tokenStr}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ role: 'user', parts: [{ text: prompt }] }],
+          generationConfig: { temperature: 0.3, maxOutputTokens: 800, thinkingConfig: { thinkingBudget: 0 } },
+        }),
+        signal: ctrl.signal,
+      })
+      clearTimeout(timer)
+      if (resp.status === 429) {
+        const wait = Math.min(60000, 2000 * Math.pow(2, attempt))  // 2s, 4s, 8s, 16s, ...
+        await new Promise(r => setTimeout(r, wait))
+        lastErr = new Error('429 rate-limited')
+        continue
+      }
+      if (!resp.ok) {
+        const errBody = await resp.text().catch(() => '')
+        throw new Error(`HTTP ${resp.status}: ${errBody.slice(0, 200)}`)
+      }
+      const data = await resp.json()
+      return data.candidates?.[0]?.content?.parts?.[0]?.text || ''
+    } catch (e) {
+      clearTimeout(timer)
+      lastErr = e
+      if (attempt < 7) await new Promise(r => setTimeout(r, 2000 * (attempt + 1)))
     }
-    const data = await resp.json()
-    return data.candidates?.[0]?.content?.parts?.[0]?.text || ''
-  } finally { clearTimeout(timer) }
+  }
+  throw lastErr
 }
 
 async function getExistingCacheKeys(examId, qids) {

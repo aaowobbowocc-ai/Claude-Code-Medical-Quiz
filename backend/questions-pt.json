@@ -274304,21 +274304,25 @@
       "number": 48,
       "question": "雙人合力將坐於輪椅的病患抬起移動到病患左側地面, 兩位搬運者的起始位置圖, 下列何者較為合適?",
       "options": {
-        "A": "（見附圖選項 A）",
-        "B": "（見附圖選項 B）",
-        "C": "（見附圖選項 C）",
-        "D": "（見附圖選項 D）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "image_options",
       "images": [
         "/question-images/pt_446_0.webp",
         "/question-images/pt_446_1.webp",
         "/question-images/pt_446_2.webp",
         "/question-images/pt_446_3.webp"
       ],
-      "image_url": "/question-images/pt_114020_q48_full.webp"
+      "option_images": {
+        "A": "/question-images/pt_446_0.webp",
+        "B": "/question-images/pt_446_1.webp",
+        "C": "/question-images/pt_446_2.webp",
+        "D": "/question-images/pt_446_3.webp"
+      }
     },
     {
       "id": 447,

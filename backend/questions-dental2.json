@@ -62282,9 +62282,9 @@
       "question": "如圖，下列何者有正中贅齒（mesiodens）？",
       "options": {
         "A": "A.",
-        "B": "",
-        "C": "",
-        "D": ""
+        "B": "（見附圖選項 B）",
+        "C": "（見附圖選項 C）",
+        "D": "（見附圖選項 D）"
       },
       "answer": "C",
       "explanation": "",
@@ -62294,7 +62294,7 @@
         "/question-images/dental2_115024849_2.webp",
         "/question-images/dental2_115024849_3.webp"
       ],
-      "incomplete": true,
+      "incomplete": "image_options",
       "gap_reason": "empty_options"
     },
     {
@@ -94252,8 +94252,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "missing_image"
+      "incomplete": "image_options",
+      "gap_reason": "missing_image",
+      "image_url": "/question-images/dental2_107020_q53_full.webp"
     },
     {
       "id": 115021473,

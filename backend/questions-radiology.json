@@ -59778,17 +59778,17 @@
       "number": 63,
       "question": "如圖所示，在此劑量與空間的關係圖中， ABCD 四點何者不適合作為治療計劃參考點？",
       "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
+        "A": "（見附圖選項 A）",
+        "B": "（見附圖選項 B）",
+        "C": "（見附圖選項 C）",
+        "D": "（見附圖選項 D）"
       },
       "answer": "C",
       "explanation": "",
       "images": [
         "/question-images/radiology_116868_0.webp"
       ],
-      "incomplete": true,
+      "incomplete": "image_options",
       "gap_reason": "empty_options"
     },
     {
@@ -79033,13 +79033,14 @@
       "question": "下列關於TG-51報告中的射質轉換因子（quality conversion factor）k Q 的敘述，何者正確？",
       "options": {
         "A": "kQ = Dw / Dgas",
-        "B": "",
-        "C": "",
-        "D": ""
+        "B": "（見附圖選項 B）",
+        "C": "（見附圖選項 C）",
+        "D": "（見附圖選項 D）"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true
+      "incomplete": "image_options",
+      "image_url": "/question-images/radiology_104020_q54_full.webp"
     },
     {
       "id": 117820,
@@ -82096,13 +82097,14 @@
       "question": "MRI頭部線圈 (head coil) 所產生的B₁磁場單位向量為 a⃗, 體線圈 (body coil) 所產生的B₁磁場單位向量為 b⃗, 主磁場B₀單位向量為 c⃗, 則下列何者正確?",
       "options": {
         "A": "a⃗ ⋅ c⃗ = 1",
-        "B": "",
-        "C": "",
-        "D": ""
+        "B": "（見附圖選項 B）",
+        "C": "（見附圖選項 C）",
+        "D": "（見附圖選項 D）"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true
+      "incomplete": "image_options",
+      "image_url": "/question-images/radiology_104020_q45_full.webp"
     },
     {
       "id": 117651,
@@ -228006,14 +228008,15 @@
       "number": 77,
       "question": "影像中像素（pixel）數值0用最黑來顯示，像素數值255用最白來顯示，圖D的像素灰階值直方圖 （histogram）為下列何者？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "（見附圖選項 A）",
+        "B": "（見附圖選項 B）",
+        "C": "（見附圖選項 C）",
+        "D": "（見附圖選項 D）"
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": true
+      "incomplete": "image_options",
+      "image_url": "/question-images/radiology_111100_q77_full.webp"
     },
     {
       "id": 3107,
@@ -268385,21 +268388,22 @@
       "number": 76,
       "question": "進行180度SPECT造影，附圖為投影影像矩陣示意圖，若不考慮投影角度不足，下列何者不是此造影之弦波圖 （sinogram）？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "（見附圖選項 A）",
+        "B": "（見附圖選項 B）",
+        "C": "（見附圖選項 C）",
+        "D": "（見附圖選項 D）"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
+      "incomplete": "image_options",
       "images": [
         "/question-images/radiology_4945_0.webp",
         "/question-images/radiology_4945_1.webp",
         "/question-images/radiology_4945_2.webp",
         "/question-images/radiology_4945_3.webp",
         "/question-images/radiology_4945_4.webp"
-      ]
+      ],
+      "image_url": "/question-images/radiology_113090_q76_full.webp"
     },
     {
       "id": 4946,

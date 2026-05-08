@@ -10730,14 +10730,15 @@
       "number": 44,
       "question": "下列化合物中, 何者為 enalapril 的活性代謝產物?",
       "options": {
-        "A": "",
+        "A": "（見附圖選項 A）",
         "B": "HO",
         "C": "O",
         "D": "OH"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true
+      "incomplete": "image_options",
+      "image_url": "/question-images/pharma1_101030_q44_full.webp"
     },
     {
       "id": 115021437,
@@ -25717,15 +25718,16 @@
       "number": 57,
       "question": "阿片類鎮痛藥 dezocine 的結構為何？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "（見附圖選項 A）",
+        "B": "（見附圖選項 B）",
+        "C": "（見附圖選項 C）",
+        "D": "（見附圖選項 D）"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "image_only_options"
+      "incomplete": "image_options",
+      "gap_reason": "image_only_options",
+      "image_url": "/question-images/pharma1_102100_q57_full.webp"
     },
     {
       "id": 115022408,
@@ -50018,15 +50020,16 @@
       "number": 53,
       "question": "全身麻醉劑desflurane的結構為何？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "（見附圖選項 A）",
+        "B": "（見附圖選項 B）",
+        "C": "（見附圖選項 C）",
+        "D": "（見附圖選項 D）"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": true,
-      "gap_reason": "image_only_options"
+      "incomplete": "image_options",
+      "gap_reason": "image_only_options",
+      "image_url": "/question-images/pharma1_105020_q53_full.webp"
     },
     {
       "id": 115023064,

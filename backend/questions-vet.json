@@ -186210,14 +186210,15 @@
       "number": 79,
       "question": "利用10個豬瘟病毒確診陽性檢體及10個確診陰性檢體，依ELISA之OD讀值結果如下表。下列何者為利用OD ＝0.05（A）、0.45（B）、0.85（C）、1.15（D）及1.8（E）共5個判定值（cut-off point）畫出的ROC曲線 （receiver operating characteristic curve）？",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "（見附圖選項 A）",
+        "B": "（見附圖選項 B）",
+        "C": "（見附圖選項 C）",
+        "D": "（見附圖選項 D）"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": true
+      "incomplete": "image_options",
+      "image_url": "/question-images/vet_109100_q79_full.webp"
     },
     {
       "id": 3840,

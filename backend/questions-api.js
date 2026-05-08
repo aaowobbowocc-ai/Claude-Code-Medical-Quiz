@@ -12,9 +12,12 @@ function shuffle(arr) {
 }
 
 // Check if question is single-answer (suitable for practice/PvP)
-// Multi-answer (e.g. "A,B"), voided ("送分"), or incomplete (missing image) questions are excluded
+// Multi-answer (e.g. "A,B"), voided ("送分"), or incomplete (missing image) questions are excluded.
+// 'image_options' is allowed — those questions show full page image and let user pick A/B/C/D visually.
 function isSingleAnswer(q) {
-  return q.answer && q.answer.length === 1 && q.options[q.answer] && !q.incomplete;
+  if (!q.answer || q.answer.length !== 1 || !q.options[q.answer]) return false;
+  if (!q.incomplete) return true;
+  return q.incomplete === 'image_options';
 }
 
 // Doctor1 paper-constraint: 101+ has strict paper/tag mapping.

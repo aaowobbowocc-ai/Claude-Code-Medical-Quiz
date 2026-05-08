@@ -779,12 +779,6 @@ function trackDailyVisit() {
   while (keys.length > 30) { delete stats.dailyVisits[keys.shift()]; }
 }
 
-// Debug route — verify Sentry backend integration. Remove after testing.
-// Hit https://api.examking.tw/debug-sentry in browser, should 500.
-app.get('/debug-sentry', (req, res) => {
-  throw new Error('Sentry backend test — please ignore (delete this route after verifying)');
-});
-
 // ── Register modular routes ────────────────────────────────────────────
 leaderboard.configureExams(examConfigs);
 leaderboard.registerRoutes(app);
@@ -1076,9 +1070,10 @@ if (Sentry) {
   Sentry.setupExpressErrorHandler(app);
 }
 
-// Save stats on shutdown
-process.on('SIGTERM', () => { saveStats(); commentsApi.saveComments(); communityNotes.saveNotes(); process.exit(0); });
-process.on('SIGINT', () => { saveStats(); commentsApi.saveComments(); communityNotes.saveNotes(); process.exit(0); });
+// Save stats on shutdown — use saveStatsToFile (saveStats was renamed long
+// ago but SIGTERM handlers were not updated; Sentry caught this 2026-05-08).
+process.on('SIGTERM', () => { saveStatsToFile(); commentsApi.saveComments(); communityNotes.saveNotes(); process.exit(0); });
+process.on('SIGINT',  () => { saveStatsToFile(); commentsApi.saveComments(); communityNotes.saveNotes(); process.exit(0); });
 
 const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));

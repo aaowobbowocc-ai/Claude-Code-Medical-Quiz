@@ -167,7 +167,7 @@ const SLIDES = [
     icon: '🎉',
     title: '準備好了！',
     desc: '隨時點首頁「🎬 看完整功能導覽」可以再看一次',
-    detail: '目前已收錄 17 萬+ 國考題（醫事人員 18 種、法律與司法、公職、駕照、學測分科都有），全部免費。如果覺得有幫助，歡迎到頁尾的「💛 贊助支持」小額贊助一杯咖啡，幫我分擔伺服器與 AI 解說 API 費用。祝你高分上岸！',
+    detail: '目前已收錄 18 萬+ 國考題（醫事人員 19 種、法律與司法、公職、駕照、學測分科都有），全部免費。如果覺得有幫助，歡迎到頁尾的「💛 贊助支持」小額贊助一杯咖啡，幫我分擔伺服器與 AI 解說 API 費用。祝你高分上岸！',
     illust: (dark) => (
       <div className="flex flex-col items-center gap-3">
         <img src="/icons/icon-192.png" alt="國考知識王" className="w-20 h-20 rounded-2xl shadow-lg" />

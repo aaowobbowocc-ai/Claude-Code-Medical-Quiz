@@ -26,3 +26,6 @@ Thumbs.db
 
 # Backend tmp cache
 backend/_tmp/
+
+# Local Supabase backups (GitHub Actions stores in artifact, not git)
+backend/_backup/

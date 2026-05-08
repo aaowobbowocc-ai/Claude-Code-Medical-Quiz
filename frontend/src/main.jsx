@@ -30,6 +30,9 @@ if (SENTRY_DSN && import.meta.env.PROD) {
       'ResizeObserver loop limit exceeded',
       'Non-Error promise rejection captured',
       /Network request failed/,
+      // Supabase auth multi-tab lock contention — benign, fires when another
+      // browser tab refreshes the session token concurrently.
+      /Lock .+ was released because another request stole it/,
     ],
   })
 }

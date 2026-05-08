@@ -18,7 +18,11 @@ const path = require('path')
 const sharp = require('sharp')
 
 const BACKEND = path.join(__dirname, '..')
-const PDF_CACHE = path.join(BACKEND, '_tmp', 'pdf-cache')
+const PDF_CACHE_DIRS = [
+  path.join(BACKEND, '_tmp', 'pdf-cache'),
+  path.join(BACKEND, '_tmp', 'pdf-cache-100-105'),
+]
+const PDF_CACHE = PDF_CACHE_DIRS[0]  // legacy alias
 const IMG_OUT = path.join(BACKEND, '..', 'frontend', 'public', 'question-images')
 const SCALE = 3
 
@@ -62,15 +66,21 @@ async function loadPdfPages(pdfPath) {
 }
 
 function findCandidatePdfs(exam, exam_code) {
-  if (!fs.existsSync(PDF_CACHE)) return []
-  const allFiles = fs.readdirSync(PDF_CACHE).filter(f => f.endsWith('.pdf'))
-  return allFiles.filter(f => {
-    if (/^(TM|TS|M|S|A|TA)_/.test(f)) return false
-    if (f.startsWith(`${exam}_${exam_code}_`)) return true
-    if (new RegExp(`(?:^|_)Q_${exam_code}_c\\d+_s`).test(f)) return true
-    if (new RegExp(`^[A-Za-z\\-]+_Q_${exam_code}_c\\d+_s`).test(f)) return true
-    return false
-  })
+  // Walk every cache dir; return [{dir, file}, ...]
+  const out = []
+  for (const dir of PDF_CACHE_DIRS) {
+    if (!fs.existsSync(dir)) continue
+    const allFiles = fs.readdirSync(dir).filter(f => f.endsWith('.pdf'))
+    for (const f of allFiles) {
+      if (/^(TM|TS|M|S|A|TA)_/.test(f)) continue
+      if (f.startsWith(`${exam}_${exam_code}_`) ||
+          new RegExp(`(?:^|_)Q_${exam_code}_c\\d+_s`).test(f) ||
+          new RegExp(`^[A-Za-z\\-]+_Q_${exam_code}_c\\d+_s`).test(f)) {
+        out.push({ dir, file: f })
+      }
+    }
+  }
+  return out
 }
 
 // Strip whitespace + common punctuation for substring matching.
@@ -139,10 +149,11 @@ async function processExam(exam) {
     const candidates = findCandidatePdfs(exam, q.exam_code)
     let info = null
     let sourcePdf = null
-    for (const f of candidates) {
+    let sourceDir = null
+    for (const { dir, file: f } of candidates) {
       try {
-        info = await findPageWithQuestion(path.join(PDF_CACHE, f), q.number, dbQHint)
-        if (info) { sourcePdf = f; break }
+        info = await findPageWithQuestion(path.join(dir, f), q.number, dbQHint)
+        if (info) { sourcePdf = f; sourceDir = dir; break }
       } catch (e) {
         if (process.env.VERBOSE) console.log(`    error ${f}: ${e.message}`)
       }
@@ -163,7 +174,7 @@ async function processExam(exam) {
         const nextPage = info.doc.loadPage(info.idx + 1)
         const nextOut = path.join(IMG_OUT, `${exam}_${q.exam_code}_q${q.number}_next.webp`)
         // Only render next page if current page text doesn't contain D option marker
-        const curText = (await loadPdfPages(path.join(PDF_CACHE, sourcePdf))).pages[info.idx].text
+        const curText = (await loadPdfPages(path.join(sourceDir, sourcePdf))).pages[info.idx].text
         if (!/(\(D\)|（D）|D[.、．])/.test(curText)) {
           await renderPageToWebp(nextPage, info.mupdf, nextOut, SCALE)
           pngs.push(nextOut)

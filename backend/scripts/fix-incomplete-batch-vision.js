@@ -19,7 +19,12 @@ const path  = require('path')
 const { GoogleAuth } = require('google-auth-library')
 
 const BACKEND   = path.join(__dirname, '..')
-const PDF_CACHE = path.join(BACKEND, '_tmp', 'pdf-cache')
+const PDF_CACHE_DIRS = [
+  path.join(BACKEND, '_tmp', 'pdf-cache'),
+  path.join(BACKEND, '_tmp', 'pdf-cache-100-105'),
+]
+// Backward compat alias for any code path still referencing PDF_CACHE
+const PDF_CACHE = PDF_CACHE_DIRS[0]
 
 const VERTEX_PROJECT = 'gen-lang-client-0502672630'
 const VERTEX_REGION  = 'us-central1'
@@ -83,21 +88,23 @@ async function discoverPdf(exam, exam_code, subject, allArr) {
   // Try both naming conventions, plus PDFs in subdirs (pdf-cache-fix etc.)
   const prefixed = `${exam}_${exam_code}_`
   const codeOnly = new RegExp(`^([A-Z]+_)?${exam_code}_c\\d+_s[\\w-]+\\.pdf$`)
-  const allFiles = fs.readdirSync(PDF_CACHE).filter(f => f.endsWith('.pdf'))
-  const candidates = allFiles.filter(f =>
-    f.startsWith(prefixed) || codeOnly.test(f)
-  )
-  // Skip TM_/TS_/A_/M_/S_ answer PDFs (we want question PDFs only).
-  // Keep prefixed exam files as-is (they're question PDFs by convention) and
-  // for codeOnly matches require Q_ prefix or no prefix.
-  const qCandidates = candidates.filter(f =>
-    !/^(TM|TS|A|M|S)_/.test(f) || f.startsWith(prefixed)
-  )
+  // Walk every cache dir
+  const qCandidates = []
+  for (const dir of PDF_CACHE_DIRS) {
+    if (!fs.existsSync(dir)) continue
+    const files = fs.readdirSync(dir).filter(f => f.endsWith('.pdf'))
+    for (const f of files) {
+      if (!(f.startsWith(prefixed) || codeOnly.test(f))) continue
+      // Skip TM_/TS_/A_/M_/S_ answer PDFs unless prefixed-exam style
+      if (/^(TM|TS|A|M|S)_/.test(f) && !f.startsWith(prefixed)) continue
+      qCandidates.push({ dir, file: f })
+    }
+  }
   // Subject literal match
-  for (const f of qCandidates) {
-    const { pages, mupdf } = await loadPdf(path.join(PDF_CACHE, f))
+  for (const { dir, file: f } of qCandidates) {
+    const { pages, mupdf } = await loadPdf(path.join(dir, f))
     if (pages[0].text.includes(subject)) {
-      return { file: f, pages, mupdf }
+      return { file: f, dir, pages, mupdf }
     }
   }
   // Content fingerprint match using a complete sibling
@@ -125,10 +132,10 @@ async function discoverPdf(exam, exam_code, subject, allArr) {
     if (snippet) break
   }
   if (!snippet) return null
-  for (const f of candidates) {
-    const { pages, mupdf } = await loadPdf(path.join(PDF_CACHE, f))
+  for (const { dir, file: f } of qCandidates) {
+    const { pages, mupdf } = await loadPdf(path.join(dir, f))
     if (pages.some(p => p.text.includes(snippet))) {
-      return { file: f, pages, mupdf }
+      return { file: f, dir, pages, mupdf }
     }
   }
   return null

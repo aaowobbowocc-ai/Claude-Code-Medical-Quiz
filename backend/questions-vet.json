@@ -126703,14 +126703,13 @@
       "number": 15,
       "question": "披衣菌屬中，在人類所引起的鸚鵡病其病原之種別名為何？",
       "options": {
-        "A": "",
+        "A": "psittaci",
         "C": "muridarum",
         "B": "abortus",
         "D": "trachomatis"
       },
-      "answer": "C",
-      "explanation": "",
-      "incomplete": true
+      "answer": "A",
+      "explanation": ""
     },
     {
       "id": 896,
@@ -186208,7 +186207,7 @@
       "subject_name": "獸醫公共衛生學",
       "stage_id": 6,
       "number": 79,
-      "question": "利用10個豬瘟病毒確診陽性檢體及10個確診陰性檢體，依ELISA之OD讀值結果如下表。下列何者為利用OD ＝0.05（A）、0.45（B）、0.85（C）、1.15（D）及1.8（E）共5個判定值（cut-off point）畫出的ROC曲線 （receiver operating characteristic curve）？",
+      "question": "利用10個豬瘟病毒確診陽性檢體及10個確診陰性檢體,依ELISA之OD讀值結果如下表。下列何者為利用OD=0.05(A)、0.45(B)、0.85(C)、1.15(D)及1.8(E)共5個判定值(cut-off point)畫出的ROC曲線(receiver operating characteristic curve)?\n陽性檢體 0.8 0.9 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7\n陰性檢體 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0",
       "options": {
         "A": "（見附圖選項 A）",
         "B": "（見附圖選項 B）",
@@ -186217,7 +186216,6 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
       "image_url": "/question-images/vet_109100_q79_full.webp"
     },
     {

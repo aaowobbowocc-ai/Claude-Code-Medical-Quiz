@@ -99,7 +99,7 @@ function locateQuestion(examData, examConfigs, questionId, questionText, rocYear
   }
 
   // Round 2: Fallback to rocYear + number if ID lookup failed
-  // This handles cases where ID format is corrupted or frontend/backend mismatch
+  // (e.g. ID format corrupted, frontend race-condition where questionId was "未知")
   if (rocYear && number) {
     const fallbackMatches = [];
     for (const [examId, data] of Object.entries(examData)) {
@@ -113,18 +113,33 @@ function locateQuestion(examData, examConfigs, questionId, questionText, rocYear
     }
 
     if (fallbackMatches.length > 0) {
-      if (fallbackMatches.length > 1 && questionText) {
-        const hint = String(questionText).slice(0, 30);
-        const preferred = fallbackMatches.find(m => m.question.question && m.question.question.startsWith(hint));
-        if (preferred) {
-          console.warn(`[locateQuestion] ID lookup failed (${questionId}), fell back to rocYear+number: ${rocYear}年第${number}題`);
-          return preferred;
-        }
-      }
-      if (fallbackMatches.length > 0) {
-        console.warn(`[locateQuestion] ID lookup failed (${questionId}), fell back to rocYear+number: ${rocYear}年第${number}題`);
+      // Single match — safe to return
+      if (fallbackMatches.length === 1) {
+        console.warn(`[locateQuestion] ID lookup failed (${questionId}), fell back to rocYear+number: ${rocYear}年第${number}題 → ${fallbackMatches[0].examId}`);
         return fallbackMatches[0];
       }
+      // Multiple matches — require text disambiguation. Score by longest-prefix
+      // overlap; require minimum overlap to accept (avoid arbitrary-first picks
+      // that produce wrong-exam labels in Discord reports).
+      if (questionText && String(questionText).length >= 10) {
+        const norm = s => String(s || '').replace(/\s+/g, '').slice(0, 60);
+        const userText = norm(questionText);
+        let best = null, bestScore = 0;
+        for (const m of fallbackMatches) {
+          const candText = norm(m.question.question);
+          let i = 0;
+          while (i < userText.length && i < candText.length && userText[i] === candText[i]) i++;
+          if (i > bestScore) { bestScore = i; best = m; }
+        }
+        // Require ≥ 8 chars of common prefix to accept disambiguation
+        if (best && bestScore >= 8) {
+          console.warn(`[locateQuestion] ID lookup failed (${questionId}), text-disambiguated to ${best.examId} (${bestScore} char prefix match)`);
+          return best;
+        }
+      }
+      // Ambiguous — refuse to guess. Better to log "unknown" than to mislabel.
+      console.warn(`[locateQuestion] AMBIGUOUS: ID=${questionId} matched ${fallbackMatches.length} exams by rocYear+number, none disambiguated by text. exams: ${fallbackMatches.map(m=>m.examId).join(',')}`);
+      return null;
     }
   }
 

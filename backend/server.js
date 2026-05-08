@@ -2,8 +2,9 @@ require('dotenv').config();
 
 // Sentry — production-only error tracking. No-op if SENTRY_DSN unset.
 // Must be required before everything else (instrument first).
+let Sentry = null;
 if (process.env.SENTRY_DSN && process.env.NODE_ENV === 'production') {
-  const Sentry = require('@sentry/node');
+  Sentry = require('@sentry/node');
   Sentry.init({
     dsn: process.env.SENTRY_DSN,
     tracesSampleRate: 0.1,
@@ -778,6 +779,12 @@ function trackDailyVisit() {
   while (keys.length > 30) { delete stats.dailyVisits[keys.shift()]; }
 }
 
+// Debug route — verify Sentry backend integration. Remove after testing.
+// Hit https://api.examking.tw/debug-sentry in browser, should 500.
+app.get('/debug-sentry', (req, res) => {
+  throw new Error('Sentry backend test — please ignore (delete this route after verifying)');
+});
+
 // ── Register modular routes ────────────────────────────────────────────
 leaderboard.configureExams(examConfigs);
 leaderboard.registerRoutes(app);
@@ -1062,6 +1069,12 @@ app.get('/classify-pending', (_, res) => {
     }));
   res.json({ count: pending.length, questions: pending });
 });
+
+// Sentry Express error handler — must be after all routes, before
+// other custom error handlers. No-op if Sentry isn't initialized.
+if (Sentry) {
+  Sentry.setupExpressErrorHandler(app);
+}
 
 // Save stats on shutdown
 process.on('SIGTERM', () => { saveStats(); commentsApi.saveComments(); communityNotes.saveNotes(); process.exit(0); });

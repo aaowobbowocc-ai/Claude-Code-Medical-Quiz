@@ -372,7 +372,9 @@ export default function Browse() {
       setTotal(data.total)
       setQuestions(prev => reset ? data.questions : [...prev, ...data.questions])
       setHasMore(data.questions.length === LIMIT)
-      if (!reset) setPage(p + 1)
+      // NOTE: do NOT setPage(p+1) here — the IntersectionObserver below is
+      // the sole source of page increments. Bumping here too creates an
+      // infinite loop: setPage → useEffect[page] → fetchQuestions → setPage…
     } catch (e) {
       console.warn('Browse fetch failed, trying backend:', e)
       try {
@@ -381,7 +383,6 @@ export default function Browse() {
         setTotal(data.total)
         setQuestions(prev => reset ? data.questions : [...prev, ...data.questions])
         setHasMore(data.questions.length === LIMIT)
-        if (!reset) setPage(p + 1)
       } catch {}
     }
     setLoading(false)

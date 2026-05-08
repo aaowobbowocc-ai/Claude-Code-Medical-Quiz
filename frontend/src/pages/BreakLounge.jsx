@@ -279,66 +279,90 @@ function CardSpinning() {
   )
 }
 
-/* ── 福袋動畫 ─────────────────────────────── */
-// Phases: 0-1.0s 福袋搖晃 → 1.0-1.5s 袋口打開 → 1.5-2.2s 禮物彈出 + 紙花
+/* ── 禮物盒動畫 ─────────────────────────────── */
+// 0-1.0s 整盒搖晃 → 1.0-1.6s 蓋子飛走 → 1.6-2.7s 寶物彈出 + 紙花
 function FukubukuroSpinning() {
   const [stage, setStage] = useState(0)
   useEffect(() => {
     const t1 = setTimeout(() => setStage(1), 1000)
-    const t2 = setTimeout(() => setStage(2), 1500)
+    const t2 = setTimeout(() => setStage(2), 1600)
     return () => { clearTimeout(t1); clearTimeout(t2) }
   }, [])
-  // Confetti positions (random-ish)
   const confettiItems = useMemo(() => [
-    { emoji: '🎉', cx: '60px',  cy: '-80px', delay: '0s' },
-    { emoji: '✨', cx: '-50px', cy: '-70px', delay: '0.05s' },
-    { emoji: '⭐', cx: '70px',  cy: '-50px', delay: '0.1s' },
-    { emoji: '🎊', cx: '-70px', cy: '-50px', delay: '0.15s' },
-    { emoji: '💫', cx: '20px',  cy: '-90px', delay: '0.2s' },
-    { emoji: '🌟', cx: '-30px', cy: '-90px', delay: '0.25s' },
+    { emoji: '🎉', cx: '60px',  cy: '-90px',  delay: '0s' },
+    { emoji: '✨', cx: '-60px', cy: '-80px',  delay: '0.05s' },
+    { emoji: '⭐', cx: '80px',  cy: '-50px',  delay: '0.1s' },
+    { emoji: '🎊', cx: '-80px', cy: '-50px',  delay: '0.15s' },
+    { emoji: '💫', cx: '20px',  cy: '-110px', delay: '0.2s' },
+    { emoji: '🌟', cx: '-30px', cy: '-110px', delay: '0.25s' },
+    { emoji: '🎈', cx: '50px',  cy: '-130px', delay: '0.3s' },
+    { emoji: '🎀', cx: '-40px', cy: '-130px', delay: '0.35s' },
   ], [])
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="relative w-40 h-40">
-        {/* Bag emoji — shake until open */}
-        <div className={`absolute inset-0 text-7xl flex items-center justify-center origin-bottom
+      <div className="relative w-44 h-44">
+        {stage >= 2 && <RayBurst count={12} />}
+
+        {/* 禮物盒身（不動，蓋子飛走後留下打開的箱子） */}
+        <div className={`absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-20 rounded-lg
+          bg-gradient-to-b from-rose-400 to-rose-600 border-2 border-rose-700 shadow-xl
           ${stage === 0 ? 'animate-fukubukuro' : ''}
-          ${stage === 1 ? 'animate-fukubukuro-open' : ''}
-          ${stage === 2 ? 'animate-fukubukuro-open' : ''}
         `}>
-          {stage < 1 ? '🎁' : '👜'}
+          {/* 直緞帶 */}
+          <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-3 bg-gradient-to-b from-amber-300 to-amber-500" />
+          {/* 內部金光（蓋子飛走後顯示） */}
+          {stage >= 1 && (
+            <div className="absolute inset-x-1 top-0 h-3 rounded bg-gradient-to-b from-yellow-200 to-amber-300 shadow-[0_0_20px_rgba(251,191,36,0.8)]" />
+          )}
         </div>
-        {/* Sparkles around bag */}
+
+        {/* 蓋子（含蝴蝶結，stage 1 起飛） */}
+        <div className={`absolute left-1/2 w-32 h-7 rounded-md
+          bg-gradient-to-b from-rose-300 to-rose-500 border-2 border-rose-700 shadow-md
+          ${stage === 0 ? 'animate-fukubukuro' : ''}
+          ${stage >= 1 ? 'animate-gift-lid-fly' : ''}
+        `} style={{ bottom: '78px', transform: 'translateX(-50%)' }}>
+          {/* 直緞帶 */}
+          <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-3 bg-gradient-to-b from-amber-300 to-amber-500" />
+          {/* 蝴蝶結 */}
+          <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-2xl">🎀</span>
+        </div>
+
+        {/* 周圍閃光（stage 0） */}
         {stage === 0 && (
           <>
-            <span className="absolute -top-1 left-6 text-2xl animate-sparkle" style={{ animationDelay: '0s' }}>✨</span>
-            <span className="absolute top-6 -right-1 text-2xl animate-sparkle" style={{ animationDelay: '0.3s' }}>⭐</span>
-            <span className="absolute -bottom-1 right-6 text-2xl animate-sparkle" style={{ animationDelay: '0.5s' }}>✨</span>
-            <span className="absolute bottom-6 -left-1 text-2xl animate-sparkle" style={{ animationDelay: '0.7s' }}>⭐</span>
+            <span className="absolute top-2 left-2 text-xl animate-sparkle" style={{ animationDelay: '0s' }}>✨</span>
+            <span className="absolute top-4 right-2 text-xl animate-sparkle" style={{ animationDelay: '0.3s' }}>⭐</span>
+            <span className="absolute bottom-8 left-1 text-xl animate-sparkle" style={{ animationDelay: '0.5s' }}>✨</span>
+            <span className="absolute bottom-6 right-1 text-xl animate-sparkle" style={{ animationDelay: '0.7s' }}>⭐</span>
           </>
         )}
-        {/* Item flies up out of bag */}
+
+        {/* 寶物從盒內飛出（stage 2） */}
         {stage >= 2 && (
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl animate-gift-pop">
-            🎁
+          <div className="absolute left-1/2 -translate-x-1/2 text-4xl animate-gift-pop"
+               style={{ bottom: '70px' }}>
+            ✨
           </div>
         )}
-        {/* Confetti */}
+
+        {/* 紙花 */}
         {stage === 2 && confettiItems.map((c, i) => (
-          <span
-            key={i}
-            className="absolute left-1/2 top-1/2 text-xl animate-confetti pointer-events-none"
-            style={{
-              '--cx': c.cx,
-              '--cy': c.cy,
-              animationDelay: c.delay,
-            }}
-          >{c.emoji}</span>
+          <span key={i}
+                className="absolute left-1/2 text-xl animate-confetti pointer-events-none"
+                style={{
+                  bottom: '70px',
+                  '--cx': c.cx,
+                  '--cy': c.cy,
+                  animationDelay: c.delay,
+                }}>
+            {c.emoji}
+          </span>
         ))}
       </div>
       <p className="text-gray-500 text-sm">
-        {stage === 0 && '福袋搖一搖…'}
-        {stage === 1 && '袋口打開了！'}
+        {stage === 0 && '禮物搖一搖…'}
+        {stage === 1 && '緞帶鬆開了！'}
         {stage === 2 && '出現了！'}
       </p>
     </div>

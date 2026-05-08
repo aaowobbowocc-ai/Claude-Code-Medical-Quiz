@@ -532,6 +532,16 @@ export default function Home() {
           {authMsg && <p className="text-xs text-red-500 text-center -mt-1">{authMsg}</p>}
 
           {/* Action buttons — card style matching logged-in view */}
+          <button onClick={() => navigate('/break')}
+                  className="w-full rounded-2xl py-3.5 px-4 flex items-center gap-3 bg-gradient-to-r from-amber-50 via-orange-50 to-pink-50 border-2 border-amber-200 active:scale-[0.97] transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-300 to-orange-400 flex items-center justify-center text-xl shrink-0">🎰</div>
+            <div className="flex-1 text-left">
+              <p className="text-medical-dark font-bold text-sm">站長雜貨抽獎</p>
+              <p className="text-gray-500 text-xs">讀書讀累了，抽個東西來逛逛？</p>
+            </div>
+            <span className="text-amber-600">›</span>
+          </button>
+
           <button
             onClick={handleCreate}
             disabled={connecting}
@@ -583,16 +593,6 @@ export default function Home() {
           </div>
 
           <TutorialSection exam={currentExam} onShowTour={() => setShowTour(true)} />
-
-          <button onClick={() => navigate('/break')}
-                  className="w-full rounded-2xl py-3 px-4 flex items-center gap-3 bg-white border border-gray-100 active:scale-[0.97] transition-transform">
-            <span className="text-xl">🎰</span>
-            <div className="flex-1 text-left">
-              <p className="text-gray-700 font-medium text-sm">站長雜貨抽獎</p>
-              <p className="text-gray-400 text-xs">讀書讀累了，抽個東西來逛逛？</p>
-            </div>
-            <span className="text-gray-300">›</span>
-          </button>
 
           <ExamArticle exam={currentExam} />
 
@@ -807,6 +807,16 @@ export default function Home() {
 
       {/* Actions */}
       <div className="flex-1 px-4 pt-4 pb-8 flex flex-col gap-3">
+        <button onClick={() => navigate('/break')}
+                className="w-full rounded-2xl py-3.5 px-4 flex items-center gap-3 bg-gradient-to-r from-amber-50 via-orange-50 to-pink-50 border-2 border-amber-200 active:scale-[0.97] transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-300 to-orange-400 flex items-center justify-center text-xl shrink-0">🎰</div>
+          <div className="flex-1 text-left">
+            <p className="text-medical-dark font-bold text-sm">站長雜貨抽獎</p>
+            <p className="text-gray-500 text-xs">讀書讀累了，抽個東西來逛逛？</p>
+          </div>
+          <span className="text-amber-600">›</span>
+        </button>
+
         <button onClick={handleCreate} disabled={connecting}
                 className="w-full rounded-2xl py-5 flex items-center px-5 gap-4 shadow-lg active:scale-[0.97] transition-transform disabled:opacity-60 grad-cta">
           <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-2xl shrink-0">🏠</div>
@@ -885,16 +895,6 @@ export default function Home() {
         )}
 
         <TutorialSection exam={currentExam} onShowTour={() => setShowTour(true)} />
-
-        <button onClick={() => navigate('/break')}
-                className="w-full rounded-2xl py-3 px-4 flex items-center gap-3 bg-white border border-gray-100 active:scale-[0.97] transition-transform">
-          <span className="text-xl">🎰</span>
-          <div className="flex-1 text-left">
-            <p className="text-gray-700 font-medium text-sm">站長雜貨抽獎</p>
-            <p className="text-gray-400 text-xs">讀書讀累了，抽個東西來逛逛？</p>
-          </div>
-          <span className="text-gray-300">›</span>
-        </button>
 
         {/* SEO 內容區塊 */}
         <ExamArticle exam={currentExam} />

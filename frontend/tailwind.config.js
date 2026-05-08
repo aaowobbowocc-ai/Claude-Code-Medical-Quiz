@@ -68,6 +68,11 @@ export default {
           '0%':   { transform: 'scaleY(1) scaleX(1)' },
           '100%': { transform: 'scaleY(0.7) scaleX(1.3)' },
         },
+        // 禮物盒蓋子飛起（往上+傾斜+淡出）
+        giftLidFly: {
+          '0%':   { transform: 'translate(-50%, 0) rotate(0)', opacity: '1' },
+          '100%': { transform: 'translate(-50%, -80px) rotate(-25deg)', opacity: '0' },
+        },
         // 禮物從袋口飛出（向上彈）
         giftPop: {
           '0%':   { transform: 'translateY(0) scale(0)', opacity: '0' },
@@ -143,6 +148,7 @@ export default {
         'card-flip':    'cardFlip 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards',
         'fukubukuro':   'fukubukuroAnim 0.5s ease-in-out infinite',
         'fukubukuro-open': 'fukubukuroOpen 0.4s ease-out forwards',
+        'gift-lid-fly':    'giftLidFly 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
         'gift-pop':     'giftPop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
         'confetti':     'confetti 0.8s ease-out forwards',
         'sparkle':      'sparkle 1s ease-in-out infinite',

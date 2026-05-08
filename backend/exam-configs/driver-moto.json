@@ -22,7 +22,7 @@
     "mockPointsPerQ": 2
   },
   "questionsFile": "questions-driver-moto.json",
-  "totalQ": 804,
+  "totalQ": 930,
   "totalPoints": 100,
   "passScore": 85,
   "passRate": 0.85,
@@ -40,13 +40,19 @@
   "stages": [
     {
       "id": 0,
-      "tag": "all",
-      "name": "全部"
+      "tag": "moto_rules",
+      "name": "機車法規"
+    },
+    {
+      "id": 1,
+      "tag": "hazard_perception",
+      "name": "危險感知"
     }
   ],
   "ui": {
     "tagNames": {
-      "moto_rules": "機車法規"
+      "moto_rules": "機車法規",
+      "hazard_perception": "危險感知"
     },
     "stageStyles": {
       "all": {
@@ -56,10 +62,15 @@
       "moto_rules": {
         "icon": "🏍️",
         "color": "#EF4444"
+      },
+      "hazard_perception": {
+        "icon": "⚠️",
+        "color": "#F59E0B"
       }
     },
     "subjectColors": {
-      "機車法規": "#EF4444"
+      "機車法規": "#EF4444",
+      "危險感知": "#F59E0B"
     }
   },
   "seo": {

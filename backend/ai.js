@@ -379,15 +379,21 @@ function registerRoutes(app, examData, stats) {
     const examMeta = examData[exam] || examData.doctor1;
     const examName = examMeta.metadata?.category || '醫師國考';
 
-    // RAG context retrieval — only for medical exams (Wikipedia medical corpus
-    // doesn't help legal/driver/customs exams). Best-effort: don't block the
-    // explain on retrieval failure.
+    // RAG context retrieval — medical exams use wikipedia_zh/en corpus,
+    // legal/civil-service exams use law_moj_tw corpus. Best-effort: don't
+    // block explain on retrieval failure.
     const MEDICAL_EXAMS = new Set([
       'doctor1','doctor2','dental1','dental2','pharma1','pharma2',
       'nursing','nutrition','medlab','pt','ot','radiology','tcm1','tcm2','vet'
     ]);
+    const LEGAL_EXAMS = new Set([
+      'lawyer1','judicial','civil-senior','civil-senior-general',
+      'civil-junior-general','civil-elementary-general',
+      'customs','police','police4','social-worker'
+    ]);
+    const RAG_ENABLED = new Set([...MEDICAL_EXAMS, ...LEGAL_EXAMS, 'driver-car','driver-moto']);
     let ragContext = '';
-    if (MEDICAL_EXAMS.has(exam)) {
+    if (RAG_ENABLED.has(exam)) {
       try {
         // Build a focused query: question text + correct option text. Keep
         // total under ~200 chars to keep embedding cost low and signal strong.
@@ -397,8 +403,11 @@ function registerRoutes(app, examData, stats) {
         // pathophysiology concepts often have better English Wikipedia coverage.
         const chunks = await rag.retrieve(queryText, { topK: 3, threshold: 0.55, language: null });
         if (chunks.length) {
-          ragContext = '\n【參考資料】（從醫學百科檢索）\n' + chunks.map((c, i) =>
-            `${i + 1}. 《${c.metadata?.title || '醫學參考'}》：${c.content.replace(/\n+/g, ' ').slice(0, 220)}…`
+          // Label depends on source: 法規 → 法條條文; 醫學 → 醫學百科
+          const isLegal = chunks.some(c => c.metadata?.attribution?.includes('全國法規資料庫'));
+          const sourceLabel = isLegal ? '法規條文' : '醫學百科';
+          ragContext = `\n【參考資料】（從${sourceLabel}檢索）\n` + chunks.map((c, i) =>
+            `${i + 1}. 《${c.metadata?.title || c.metadata?.law_name || '參考'}》：${c.content.replace(/\n+/g, ' ').slice(0, 220)}…`
           ).join('\n') + '\n（這些段落僅供參考，請優先依照題幹判斷。）\n';
         }
       } catch (e) {

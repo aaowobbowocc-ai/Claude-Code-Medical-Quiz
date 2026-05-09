@@ -116,12 +116,17 @@ async function isCropBlank(buf, threshold = 0.02) {
 
 function findQuestionY(page, mupdf, qnum) {
   const stJson = JSON.parse(page.toStructuredText('preserve-whitespace').asJSON())
+  // Q-number can appear as:
+  //   "1. 題目"             ← N + 標點
+  //   "1 題目"               ← N + 空白
+  //   "1"                    ← 單獨一行（N 跟題目分開）
+  //   "(1)" 不算 question marker
+  const re1 = new RegExp(`^${qnum}(?:[.、．]|\\s|$)`)  // start with N + delim/space/end
   for (const block of (stJson.blocks || [])) {
     if (!block.lines) continue
     for (const line of block.lines) {
-      const t = (line.text || '').replace(/^\s+/, '')
-      const re = new RegExp(`^${qnum}(?:[.、．]|\\s)`)
-      if (re.test(t)) return line.bbox?.y ?? null
+      const t = (line.text || '').trim()
+      if (re1.test(t)) return line.bbox?.y ?? null
     }
   }
   return null

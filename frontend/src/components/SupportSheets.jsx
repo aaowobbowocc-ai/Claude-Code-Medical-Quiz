@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import Sheet from './Sheet'
 import { usePlayerStore } from '../store/gameStore'
+import { supabase } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 export default function SupportSheets({ sheet, setSheet }) {
   const storedName = usePlayerStore(s => s.name) || ''
+  const lastHydratedUserId = usePlayerStore(s => s.lastHydratedUserId) || ''
   const [feedbackText, setFeedbackText] = useState('')
   const [sendAnonymous, setSendAnonymous] = useState(false)
   const [feedbackSent, setFeedbackSent] = useState(false)
@@ -21,12 +23,18 @@ export default function SupportSheets({ sheet, setSheet }) {
     if (!feedbackText.trim() || sending) return
     setSending(true)
     try {
+      // 永遠送 user_id（即使匿名）— 後台用來定位帳號處理金幣等問題
+      let userId = lastHydratedUserId || ''
+      if (!userId) {
+        try { const { data } = await supabase.auth.getUser(); userId = data?.user?.id || '' } catch {}
+      }
       const res = await fetch(`${BACKEND}/feedback`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: feedbackText,
           name: sendAnonymous ? undefined : (storedName || undefined),
+          user_id: userId || undefined,
         }),
       })
       if (res.ok) setFeedbackSent(true)

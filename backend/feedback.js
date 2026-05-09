@@ -4,6 +4,7 @@ const DISCORD_WEBHOOK = process.env.DISCORD_WEBHOOK_URL;
 const DISCORD_REPORT_WEBHOOK = process.env.DISCORD_REPORT_WEBHOOK_URL;
 
 async function sendDiscord(entry) {
+  // entry: { message, name, user_id? }
   if (!DISCORD_WEBHOOK) return;
   try {
     await fetch(DISCORD_WEBHOOK, {
@@ -16,6 +17,7 @@ async function sendDiscord(entry) {
           fields: [
             { name: '來自', value: entry.name, inline: true },
             { name: '時間', value: new Date().toISOString().slice(0, 19).replace('T', ' '), inline: true },
+            ...(entry.user_id ? [{ name: 'user_id', value: '`' + entry.user_id + '`' }] : []),
             { name: '內容', value: entry.message.slice(0, 1024) },
           ],
         }],
@@ -164,17 +166,29 @@ function locateQuestion(examData, examConfigs, questionId, questionText, rocYear
 function registerRoutes(app, examData, examConfigs) {
   // POST /feedback — user submits feedback
   app.post('/feedback', async (req, res) => {
-    const { message, name } = req.body;
+    const { message, name, user_id } = req.body;
     if (!message || !message.trim()) {
       return res.status(400).json({ error: 'message is required' });
     }
 
+    const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    const cleanUserId = (typeof user_id === 'string' && UUID_RE.test(user_id)) ? user_id : null;
+
     const entry = {
       message: message.trim().slice(0, 2000),
       name: (name || '匿名').slice(0, 30),
+      user_id: cleanUserId,
     };
 
-    if (supabase) await supabase.from('feedback').insert(entry);
+    if (supabase) {
+      const { error } = await supabase.from('feedback').insert(entry);
+      if (error) {
+        // schema may lack user_id column — retry without it (so insert still succeeds)
+        if (/user_id/i.test(error.message || '')) {
+          await supabase.from('feedback').insert({ message: entry.message, name: entry.name });
+        }
+      }
+    }
 
     // Send Discord notification (non-blocking)
     sendDiscord(entry);

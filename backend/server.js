@@ -816,6 +816,41 @@ app.post('/api/coins/delta', async (req, res) => {
   }
 })
 
+// 領 grant — 原子化操作（避免 fire-and-forget 失敗導致 3000 金幣消失 bug）
+app.post('/api/grants/claim', async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: 'Supabase not configured' })
+  const token = req.headers.authorization?.replace('Bearer ', '')
+  if (!token) return res.status(401).json({ error: 'Unauthorized' })
+  const { grant_id } = req.body
+  if (!grant_id) return res.status(400).json({ error: 'grant_id required' })
+  try {
+    const { data: { user }, error: authErr } = await supabase.auth.getUser(token)
+    if (authErr || !user) return res.status(401).json({ error: 'Invalid token' })
+
+    // 1. Read grant — 必須沒被 claim 且 user_id 對得上
+    const { data: grant, error: gErr } = await supabase.from('user_coin_grants')
+      .select('*').eq('id', grant_id).eq('user_id', user.id).is('claimed_at', null).single()
+    if (gErr || !grant) return res.status(404).json({ error: 'Grant not found or already claimed' })
+
+    // 2. Mark claimed (race-safe: condition is_claimed_at is null)
+    const claimedAt = new Date().toISOString()
+    const { data: updGrant, error: claimErr } = await supabase.from('user_coin_grants')
+      .update({ claimed_at: claimedAt }).eq('id', grant_id).is('claimed_at', null).select().single()
+    if (claimErr || !updGrant) return res.status(409).json({ error: 'Grant already claimed (race)' })
+
+    // 3. Add coins to profile (atomic — fetch + update)
+    const { data: profile, error: pErr } = await supabase.from('profiles')
+      .select('coins').eq('user_id', user.id).single()
+    if (pErr) return res.status(500).json({ error: pErr.message })
+    const newCoins = (profile.coins || 0) + grant.coins
+    const { error: uErr } = await supabase.from('profiles')
+      .update({ coins: newCoins }).eq('user_id', user.id)
+    if (uErr) return res.status(500).json({ error: uErr.message })
+
+    res.json({ ok: true, coins: newCoins, granted: grant.coins })
+  } catch (e) { res.status(500).json({ error: e.message }) }
+})
+
 // ── Health + stages + exams + stats API ─────────────────────────────────
 app.get('/health', (_, res) => res.json({ ok: true }));
 

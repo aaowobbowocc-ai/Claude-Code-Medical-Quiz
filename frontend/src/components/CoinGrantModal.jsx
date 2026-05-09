@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
 import { usePlayerStore } from '../store/gameStore'
 
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+
 export default function CoinGrantModal() {
   const [grant, setGrant] = useState(null)
   const [claiming, setClaiming] = useState(false)
@@ -31,19 +33,28 @@ export default function CoinGrantModal() {
   const claim = async () => {
     if (!grant || claiming) return
     setClaiming(true)
-    const { error } = await supabase
-      .from('user_coin_grants')
-      .update({ claimed_at: new Date().toISOString() })
-      .eq('id', grant.id)
-      .is('claimed_at', null)
-    if (error) {
-      console.error('[coin-grant] claim failed:', error.message)
+    try {
+      // Atomic server-side claim — 避免 fire-and-forget 導致金幣丟失 bug
+      const { data: { session } } = await supabase.auth.getSession()
+      if (!session?.access_token) throw new Error('No session')
+      const res = await fetch(`${BACKEND}/api/grants/claim`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${session.access_token}` },
+        body: JSON.stringify({ grant_id: grant.id }),
+      })
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}))
+        throw new Error(err.error || `HTTP ${res.status}`)
+      }
+      const { coins } = await res.json()
+      // Sync local store with server-authoritative coin balance
+      usePlayerStore.setState({ coins })
+      setGrant(null)
+    } catch (e) {
+      console.error('[coin-grant] claim failed:', e.message)
+    } finally {
       setClaiming(false)
-      return
     }
-    usePlayerStore.getState().addCoins(grant.coins)
-    setGrant(null)
-    setClaiming(false)
   }
 
   if (!grant) return null

@@ -14,6 +14,14 @@ require('dotenv').config()
 const fs = require('fs')
 const path = require('path')
 const sharp = require('sharp')
+const { GoogleAuth } = require('google-auth-library')
+
+const VERTEX_PROJECT = 'gen-lang-client-0502672630'
+const VERTEX_REGION = 'us-central1'
+const VERTEX_MODEL = 'gemini-2.5-pro'
+const vertexAuth = new GoogleAuth({ scopes: ['https://www.googleapis.com/auth/cloud-platform'] })
+
+let visionCallCount = 0
 
 const BACKEND = path.resolve(__dirname, '..')
 const PDF_CACHE_DIRS = [
@@ -90,16 +98,31 @@ async function loadPdf(pdfPath) {
     pages.push({ page, text, idx: i, bounds })
   }
   // 抓「類科」(first page) for validation
-  const klass = pages[0]?.text.match(/類\s*科[：:名稱]*\s*([^\s\n（(]{2,15})/)?.[1]?.trim() || ''
-  const result = { doc, pages, mupdf, klass }
+  const txt0 = pages[0]?.text || ''
+  const klass = txt0.match(/類\s*科[：:名稱]*\s*([^\s\n（(]{2,15})/)?.[1]?.trim() || ''
+  // 抓「科目」for finer validation (tcm1 vs tcm2 共用類科時需要)
+  const subj = txt0.match(/科\s*目[：:名稱]*\s*([^\n\r（(]{2,30})/)?.[1]?.trim() || ''
+  const result = { doc, pages, mupdf, klass, subj }
   pdfCache[pdfPath] = result
   return result
 }
 
-function pdfMatchesExam(loaded, examId) {
+function pdfMatchesExam(loaded, examId, qSubject) {
   const expect = EXPECTED_EXAM_NAMES[examId]
   if (!expect || !loaded?.klass) return true
-  return loaded.klass.includes(expect)
+  if (!loaded.klass.includes(expect)) return false
+  // 二級驗證：當有 PDF 科目時用「主科目」比對（去掉括號描述）
+  // 不要求嚴格 (一)/(二) 區分，因 PDF 用「包括方劑學」這種描述而非編號
+  if (qSubject && loaded.subj) {
+    // 取主科目（去掉括號內容）
+    const stripParen = s => (s || '').replace(/[（(][^）)]*[）)]/g, '').trim()
+    const qMain = stripParen(qSubject)
+    const pdfMain = stripParen(loaded.subj)
+    if (qMain.length >= 4 && pdfMain && !pdfMain.includes(qMain.slice(0, 4)) && !qMain.includes(pdfMain.slice(0, 4))) {
+      return false
+    }
+  }
+  return true
 }
 
 async function isCropBlank(buf, threshold = 0.02) {
@@ -132,21 +155,77 @@ function findQuestionY(page, mupdf, qnum) {
   return null
 }
 
-async function smartCrop(pageInfo, mupdf, qnum) {
-  const ystart = findQuestionY(pageInfo.page, mupdf, qnum)
-  if (ystart === null) return null
-  const yend = findQuestionY(pageInfo.page, mupdf, qnum + 1)
-  const bounds = pageInfo.bounds
-  const padTop = 5, padBot = 5
-  const cropY0 = Math.max(bounds[1], ystart - padTop)
-  const cropY1 = yend !== null ? Math.min(bounds[3], yend - padBot) : bounds[3]
+// 純圖像 PDF (text layer 為空) 用 Vision OCR 找題號 Y 座標
+async function findQuestionYViaVision(pngBuf, qnums) {
+  visionCallCount++
+  const tk = await vertexAuth.getAccessToken()
+  const tokenStr = (typeof tk === 'string') ? tk : tk.token
+  const url = `https://${VERTEX_REGION}-aiplatform.googleapis.com/v1/projects/${VERTEX_PROJECT}/locations/${VERTEX_REGION}/publishers/google/models/${VERTEX_MODEL}:generateContent`
+  const prompt = `這是台灣國家考試試題掃描頁。請找出題號 ${qnums.join('、')} 在圖片中的 Y 座標（從圖片頂端算起的像素值）。
+題號通常出現在每題開頭，可能是「${qnums[0]}.」「${qnums[0]}、」或單獨「${qnums[0]}」。
+只輸出 JSON，格式：{"${qnums[0]}": Y值, "${qnums[1] || qnums[0] + 1}": Y值}
+找不到的題號回 null。Y 座標必須是整數（像素值，假設圖片高 2000 左右）。`
+  const body = {
+    contents: [{ role: 'user', parts: [
+      { inlineData: { data: pngBuf.toString('base64'), mimeType: 'image/png' } },
+      { text: prompt },
+    ]}],
+    generationConfig: { temperature: 0.0, maxOutputTokens: 200, thinkingConfig: { thinkingBudget: 128 } },
+  }
+  for (let attempt = 0; attempt < 4; attempt++) {
+    try {
+      const resp = await fetch(url, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${tokenStr}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      })
+      if (resp.status === 429) {
+        await new Promise(r => setTimeout(r, 3000 * (attempt + 1)))
+        continue
+      }
+      if (!resp.ok) return {}
+      const data = await resp.json()
+      const text = (data.candidates?.[0]?.content?.parts?.[0]?.text || '').trim()
+      const match = text.match(/\{[\s\S]*\}/)
+      if (!match) return {}
+      try { return JSON.parse(match[0]) } catch { return {} }
+    } catch (e) {
+      if (attempt === 3) return {}
+      await new Promise(r => setTimeout(r, 2000))
+    }
+  }
+  return {}
+}
 
+async function smartCrop(pageInfo, mupdf, qnum, useVision = false) {
+  const bounds = pageInfo.bounds
   const matrix = mupdf.Matrix.scale(SCALE, SCALE)
   const fullPx = pageInfo.page.toPixmap(matrix, mupdf.ColorSpace.DeviceRGB, false, true)
   const fullBuf = Buffer.from(fullPx.asPNG())
   const meta = await sharp(fullBuf).metadata()
   const pdfH = bounds[3] - bounds[1]
   const pxPer = meta.height / pdfH
+
+  let ystart, yend  // PDF coordinates
+
+  if (useVision) {
+    // Vision OCR 路徑（純圖像 PDF）— Y 直接是像素值，需轉回 PDF coords
+    const yMap = await findQuestionYViaVision(fullBuf, [qnum, qnum + 1])
+    const yPxStart = yMap[qnum] ?? yMap[String(qnum)]
+    const yPxEnd = yMap[qnum + 1] ?? yMap[String(qnum + 1)]
+    if (typeof yPxStart !== 'number') return null
+    ystart = bounds[1] + yPxStart / pxPer
+    yend = (typeof yPxEnd === 'number') ? bounds[1] + yPxEnd / pxPer : null
+  } else {
+    ystart = findQuestionY(pageInfo.page, mupdf, qnum)
+    if (ystart === null) return null
+    yend = findQuestionY(pageInfo.page, mupdf, qnum + 1)
+  }
+
+  const padTop = 5, padBot = 5
+  const cropY0 = Math.max(bounds[1], ystart - padTop)
+  const cropY1 = yend !== null ? Math.min(bounds[3], yend - padBot) : bounds[3]
+
   const top = Math.round((cropY0 - bounds[1]) * pxPer)
   const cropH = Math.round((cropY1 - cropY0) * pxPer)
   if (cropH < 50) return null
@@ -181,18 +260,37 @@ async function processExam(exam) {
     const candidates = findCandidatePdfs(exam, q.exam_code)
     if (!candidates.length) { noPdf++; continue }
 
-    let info = null, pageInfo = null
+    let info = null, pageInfo = null, useVision = false
     let triedAndMismatched = false
     for (const { dir, file: f } of candidates) {
       try {
         const loaded = await loadPdf(path.join(dir, f))
-        if (!pdfMatchesExam(loaded, exam)) { triedAndMismatched = true; continue }
+        if (!pdfMatchesExam(loaded, exam, q.subject)) { triedAndMismatched = true; continue }
+        // Pass 1: 文字層找
         for (const p of loaded.pages) {
           if (findQuestionY(p.page, mupdfMod, q.number) !== null) {
             pageInfo = p; info = { dir, file: f, pages: loaded.pages }; break
           }
         }
         if (pageInfo) break
+        // Pass 2: 文字層找不到任何 Q-marker → 純圖像 PDF
+        // 偵測：任何 page 找不到 Q1..Q5 中至少一個 → image-only
+        let anyMarkerFound = false
+        for (const p of loaded.pages) {
+          for (let n = 1; n <= 5; n++) {
+            if (findQuestionY(p.page, mupdfMod, n) !== null) { anyMarkerFound = true; break }
+          }
+          if (anyMarkerFound) break
+        }
+        if (!anyMarkerFound && loaded.pages.length > 1) {
+          // image-only PDF — 用題號估頁
+          const totalPages = loaded.pages.length
+          const estPage = Math.min(totalPages - 1, Math.max(0, Math.floor((q.number - 1) * totalPages / 80)))
+          pageInfo = loaded.pages[estPage]
+          info = { dir, file: f, pages: loaded.pages }
+          useVision = true
+          break
+        }
       } catch {}
     }
     if (!pageInfo) {
@@ -201,7 +299,7 @@ async function processExam(exam) {
     }
 
     try {
-      const result = await smartCrop(pageInfo, mupdfMod, q.number)
+      const result = await smartCrop(pageInfo, mupdfMod, q.number, useVision)
       if (!result) continue
       if (await isCropBlank(result.cropped)) { blank++; continue }
 
@@ -258,6 +356,7 @@ async function main() {
     totalMismatch += r.mismatch || 0
   }
   console.log(`\n=== 總計 ${total} 題重切，跳過 ${totalBlank} 空白、${totalNoPdf} 無 PDF、${totalMismatch} PDF 類科不符 ===`)
+  console.log(`Vision OCR fallback 呼叫次數: ${visionCallCount}`)
 }
 
 main().catch(e => { console.error(e); process.exit(1) })

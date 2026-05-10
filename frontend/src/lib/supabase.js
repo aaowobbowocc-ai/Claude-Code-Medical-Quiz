@@ -177,28 +177,67 @@ export async function switchGoogleAccount() {
 }
 
 /**
- * Read user_id and access_token directly from localStorage 'medking-auth'.
+ * Read user_id and access_token directly from localStorage.
  * Synchronous, never hangs on Supabase auth lock — used by feedback/report
  * forms so user_id is captured even before hydrateFromCloud completes (which
  * is in-memory and lost on every page refresh).
  *
+ * Supabase v2 sometimes splits session.user into a separate 'medking-auth-user'
+ * key (legacy userStorage mode), so we check both keys.
+ *
+ * Last-resort: scan all localStorage keys for any access_token / sub claim,
+ * since some browser-state quirks can stash auth under unexpected keys.
+ *
  * Returns { user_id, token } where either may be null.
  */
 export function readAuthFromStorage() {
+  let user_id = null
+  let token = null
   try {
     const raw = localStorage.getItem('medking-auth')
-    if (!raw) return { user_id: null, token: null }
-    const parsed = JSON.parse(raw)
-    // supabase-js v2 stores { access_token, user: { id, ... }, ... } at top level
-    // v1 wrapped it under currentSession — keep both for safety
-    const session = parsed?.currentSession || parsed
-    return {
-      user_id: session?.user?.id || null,
-      token: session?.access_token || null,
+    if (raw) {
+      const parsed = JSON.parse(raw)
+      const session = parsed?.currentSession || parsed
+      user_id = session?.user?.id || null
+      token = session?.access_token || null
     }
-  } catch {
-    return { user_id: null, token: null }
+  } catch {}
+  if (!user_id) {
+    try {
+      const userRaw = localStorage.getItem('medking-auth-user')
+      if (userRaw) {
+        const parsed = JSON.parse(userRaw)
+        user_id = parsed?.user?.id || parsed?.id || null
+      }
+    } catch {}
   }
+  // Last resort: decode JWT sub claim from token
+  if (!user_id && token) {
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')))
+      user_id = payload?.sub || null
+    } catch {}
+  }
+  // Last-last resort: scan all localStorage keys for sb-*-auth-token (default key pattern)
+  if (!user_id || !token) {
+    try {
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i)
+        if (!k || k === 'medking-auth' || k === 'medking-auth-user') continue
+        if (!/auth.*token|sb-.*-auth/i.test(k)) continue
+        const v = localStorage.getItem(k)
+        if (!v) continue
+        try {
+          const p = JSON.parse(v)
+          const s = p?.currentSession || p
+          if (!user_id) user_id = s?.user?.id || p?.user?.id || null
+          if (!token) token = s?.access_token || p?.access_token || null
+          if (user_id && token) break
+        } catch {}
+      }
+    } catch {}
+  }
+  return { user_id, token }
 }
 
 /** Get current user's email + provider info, or null if anon. */

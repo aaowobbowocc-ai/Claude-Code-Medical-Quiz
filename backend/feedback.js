@@ -219,15 +219,20 @@ function registerRoutes(app, examData, examConfigs) {
     // user_id 雙來源（取任一有效）
     const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
     let cleanUserId = (typeof bodyUserId === 'string' && UUID_RE.test(bodyUserId)) ? bodyUserId : null;
+    let uidSource = cleanUserId ? 'body' : null;
+    const token = req.headers.authorization?.replace('Bearer ', '');
     if (!cleanUserId) {
-      const token = req.headers.authorization?.replace('Bearer ', '');
       if (token && supabase) {
         try {
           const { data: { user } } = await supabase.auth.getUser(token);
-          if (user?.id) cleanUserId = user.id;
-        } catch {}
+          if (user?.id) { cleanUserId = user.id; uidSource = 'token'; }
+          else uidSource = 'token-no-user';
+        } catch (e) { uidSource = 'token-fail:' + (e.message || '').slice(0,30); }
+      } else {
+        uidSource = token ? 'no-supabase' : 'no-body-no-token';
       }
     }
+    console.log(`[report] uid=${cleanUserId ? cleanUserId.slice(0,8) : 'NULL'} src=${uidSource} bodyUid=${bodyUserId ? String(bodyUserId).slice(0,8) : 'unset'} authHdr=${token ? 'set('+token.length+'chars)' : 'unset'} qid=${questionId} name=${name||'匿名'}`);
 
     // Server-side enrichment: trust the question DB, not the client. The
     // client only knows what's currently rendered; here we look up the real

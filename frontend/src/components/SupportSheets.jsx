@@ -23,13 +23,13 @@ export default function SupportSheets({ sheet, setSheet }) {
     if (!feedbackText.trim() || sending) return
     setSending(true)
     try {
-      // user_id 由後端從 Authorization Bearer token 解析（不在 frontend 呼叫
-      // supabase.auth 避免 lock hang）。session token 從 localStorage 同步取得。
+      // 1. 直接從 zustand 拿 user_id（hydrate 完的使用者都有）— 最可靠
+      // 2. fallback 從 localStorage 解析 Bearer token 給 server 二次驗證
       const headers = { 'Content-Type': 'application/json' }
       try {
         const raw = localStorage.getItem('medking-auth')
         const parsed = raw ? JSON.parse(raw) : null
-        const token = parsed?.access_token
+        const token = parsed?.access_token || parsed?.currentSession?.access_token
         if (token) headers['Authorization'] = `Bearer ${token}`
       } catch {}
       const res = await fetch(`${BACKEND}/feedback`, {
@@ -38,6 +38,7 @@ export default function SupportSheets({ sheet, setSheet }) {
         body: JSON.stringify({
           message: feedbackText,
           name: sendAnonymous ? undefined : (storedName || undefined),
+          user_id: lastHydratedUserId || undefined,  // 直接從 zustand 帶
         }),
       })
       if (res.ok) setFeedbackSent(true)

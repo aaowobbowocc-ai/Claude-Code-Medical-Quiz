@@ -167,19 +167,24 @@ function locateQuestion(examData, examConfigs, questionId, questionText, rocYear
 function registerRoutes(app, examData, examConfigs) {
   // POST /feedback — user submits feedback
   app.post('/feedback', async (req, res) => {
-    const { message, name } = req.body;
+    const { message, name, user_id: bodyUserId } = req.body;
     if (!message || !message.trim()) {
       return res.status(400).json({ error: 'message is required' });
     }
 
-    // 從 Authorization Bearer token 拿 user_id（server-side 驗證，可靠）
-    let cleanUserId = null;
-    const token = req.headers.authorization?.replace('Bearer ', '');
-    if (token && supabase) {
-      try {
-        const { data: { user } } = await supabase.auth.getUser(token);
-        if (user?.id) cleanUserId = user.id;
-      } catch {}
+    // user_id 雙來源 (取任一有效)：
+    //   1. body.user_id (frontend 從 zustand 帶)
+    //   2. Authorization Bearer token (server 解析)
+    const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    let cleanUserId = (typeof bodyUserId === 'string' && UUID_RE.test(bodyUserId)) ? bodyUserId : null;
+    if (!cleanUserId) {
+      const token = req.headers.authorization?.replace('Bearer ', '');
+      if (token && supabase) {
+        try {
+          const { data: { user } } = await supabase.auth.getUser(token);
+          if (user?.id) cleanUserId = user.id;
+        } catch {}
+      }
     }
 
     const entry = {
@@ -206,19 +211,22 @@ function registerRoutes(app, examData, examConfigs) {
 
   // POST /report — user reports a question error
   app.post('/report', async (req, res) => {
-    const { questionId, questionText, rocYear, session, number, message, name } = req.body;
+    const { questionId, questionText, rocYear, session, number, message, name, user_id: bodyUserId } = req.body;
     if (!questionId) {
       return res.status(400).json({ error: 'questionId is required' });
     }
 
-    // 從 Authorization Bearer token 拿 user_id（server-side 驗證，可靠）
-    let cleanUserId = null;
-    const token = req.headers.authorization?.replace('Bearer ', '');
-    if (token && supabase) {
-      try {
-        const { data: { user } } = await supabase.auth.getUser(token);
-        if (user?.id) cleanUserId = user.id;
-      } catch {}
+    // user_id 雙來源（取任一有效）
+    const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    let cleanUserId = (typeof bodyUserId === 'string' && UUID_RE.test(bodyUserId)) ? bodyUserId : null;
+    if (!cleanUserId) {
+      const token = req.headers.authorization?.replace('Bearer ', '');
+      if (token && supabase) {
+        try {
+          const { data: { user } } = await supabase.auth.getUser(token);
+          if (user?.id) cleanUserId = user.id;
+        } catch {}
+      }
     }
 
     // Server-side enrichment: trust the question DB, not the client. The

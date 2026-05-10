@@ -45,6 +45,7 @@ async function sendReportDiscord(entry) {
       { name: '時間', value: new Date().toISOString().slice(0, 19).replace('T', ' '), inline: true },
       { name: '定位', value: locator },
       { name: '題目 ID', value: entry.questionId || '未知', inline: true },
+      ...(entry.user_id ? [{ name: 'user_id', value: '`' + entry.user_id + '`', inline: true }] : []),
     ];
     if (entry.questionText) {
       fields.push({ name: '題目內容', value: entry.questionText.slice(0, 200) });
@@ -198,10 +199,13 @@ function registerRoutes(app, examData, examConfigs) {
 
   // POST /report — user reports a question error
   app.post('/report', async (req, res) => {
-    const { questionId, questionText, rocYear, session, number, message, name } = req.body;
+    const { questionId, questionText, rocYear, session, number, message, name, user_id } = req.body;
     if (!questionId) {
       return res.status(400).json({ error: 'questionId is required' });
     }
+
+    const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    const cleanUserId = (typeof user_id === 'string' && UUID_RE.test(user_id)) ? user_id : null;
 
     // Server-side enrichment: trust the question DB, not the client. The
     // client only knows what's currently rendered; here we look up the real
@@ -220,11 +224,12 @@ function registerRoutes(app, examData, examConfigs) {
       number: q?.number || number || '',
       message: (message || '').slice(0, 500),
       name: (name || '').slice(0, 30),
+      user_id: cleanUserId,
     };
 
     if (supabase) {
       try {
-        await supabase.from('reports').insert({
+        const row = {
           question_id: entry.questionId,
           question_text: entry.questionText,
           roc_year: entry.rocYear,
@@ -232,7 +237,14 @@ function registerRoutes(app, examData, examConfigs) {
           number: String(entry.number),
           message: entry.message,
           name: entry.name,
-        });
+          user_id: entry.user_id,
+        };
+        const { error } = await supabase.from('reports').insert(row);
+        if (error && /user_id/i.test(error.message || '')) {
+          // schema 還沒有 user_id 欄 — fallback
+          delete row.user_id;
+          await supabase.from('reports').insert(row);
+        }
       } catch (e) {
         console.error('reports insert failed:', e.message);
       }

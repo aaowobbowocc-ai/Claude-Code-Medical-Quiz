@@ -176,6 +176,31 @@ export async function switchGoogleAccount() {
   return { switching: true }
 }
 
+/**
+ * Read user_id and access_token directly from localStorage 'medking-auth'.
+ * Synchronous, never hangs on Supabase auth lock — used by feedback/report
+ * forms so user_id is captured even before hydrateFromCloud completes (which
+ * is in-memory and lost on every page refresh).
+ *
+ * Returns { user_id, token } where either may be null.
+ */
+export function readAuthFromStorage() {
+  try {
+    const raw = localStorage.getItem('medking-auth')
+    if (!raw) return { user_id: null, token: null }
+    const parsed = JSON.parse(raw)
+    // supabase-js v2 stores { access_token, user: { id, ... }, ... } at top level
+    // v1 wrapped it under currentSession — keep both for safety
+    const session = parsed?.currentSession || parsed
+    return {
+      user_id: session?.user?.id || null,
+      token: session?.access_token || null,
+    }
+  } catch {
+    return { user_id: null, token: null }
+  }
+}
+
 /** Get current user's email + provider info, or null if anon. */
 export function getLinkedIdentity(user) {
   if (!user) return null

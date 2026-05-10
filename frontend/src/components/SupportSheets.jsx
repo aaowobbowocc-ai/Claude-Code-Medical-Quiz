@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Sheet from './Sheet'
 import { usePlayerStore } from '../store/gameStore'
-import { supabase } from '../lib/supabase'
+import { supabase, readAuthFromStorage } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -23,22 +23,20 @@ export default function SupportSheets({ sheet, setSheet }) {
     if (!feedbackText.trim() || sending) return
     setSending(true)
     try {
-      // 1. 直接從 zustand 拿 user_id（hydrate 完的使用者都有）— 最可靠
-      // 2. fallback 從 localStorage 解析 Bearer token 給 server 二次驗證
+      // 三層 fallback：
+      //   1. zustand lastHydratedUserId (hydrate 完才有，page reload 後重置 null)
+      //   2. localStorage user.id (Supabase persistSession 寫入，最穩)
+      //   3. backend 用 Bearer token 二次驗證
+      const { user_id: storageUid, token } = readAuthFromStorage()
       const headers = { 'Content-Type': 'application/json' }
-      try {
-        const raw = localStorage.getItem('medking-auth')
-        const parsed = raw ? JSON.parse(raw) : null
-        const token = parsed?.access_token || parsed?.currentSession?.access_token
-        if (token) headers['Authorization'] = `Bearer ${token}`
-      } catch {}
+      if (token) headers['Authorization'] = `Bearer ${token}`
       const res = await fetch(`${BACKEND}/feedback`, {
         method: 'POST',
         headers,
         body: JSON.stringify({
           message: feedbackText,
           name: sendAnonymous ? undefined : (storedName || undefined),
-          user_id: lastHydratedUserId || undefined,  // 直接從 zustand 帶
+          user_id: lastHydratedUserId || storageUid || undefined,
         }),
       })
       if (res.ok) setFeedbackSent(true)

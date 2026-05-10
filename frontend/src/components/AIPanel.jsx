@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import { hasLegalSubjectTag } from '../config/examRegistry'
-import { supabase } from '../lib/supabase'
+import { supabase, readAuthFromStorage } from '../lib/supabase'
 import { isExplainUnlocked } from '../hooks/useAI'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
@@ -112,14 +112,10 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
     const trimmed = downvoteReason.trim()
     if (!trimmed) return
     try {
+      const { user_id: storageUid, token } = readAuthFromStorage()
       const headers = { 'Content-Type': 'application/json' }
-      try {
-        const raw = localStorage.getItem('medking-auth')
-        const parsed = raw ? JSON.parse(raw) : null
-        const token = parsed?.access_token || parsed?.currentSession?.access_token
-        if (token) headers['Authorization'] = `Bearer ${token}`
-      } catch {}
-      const uid = usePlayerStore.getState().lastHydratedUserId
+      if (token) headers['Authorization'] = `Bearer ${token}`
+      const uid = usePlayerStore.getState().lastHydratedUserId || storageUid
       await fetch(`${BACKEND}/report`, {
         method: 'POST',
         headers,
@@ -246,14 +242,10 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                   onClick={async () => {
                     setReportSending(true)
                     try {
+                      const { user_id: storageUid, token } = readAuthFromStorage()
                       const headers = { 'Content-Type': 'application/json' }
-                      try {
-                        const raw = localStorage.getItem('medking-auth')
-                        const parsed = raw ? JSON.parse(raw) : null
-                        const token = parsed?.access_token || parsed?.currentSession?.access_token
-                        if (token) headers['Authorization'] = `Bearer ${token}`
-                      } catch {}
-                      const uid = usePlayerStore.getState().lastHydratedUserId
+                      if (token) headers['Authorization'] = `Bearer ${token}`
+                      const uid = usePlayerStore.getState().lastHydratedUserId || storageUid
                       await fetch(`${BACKEND}/report`, {
                         method: 'POST',
                         headers,

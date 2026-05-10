@@ -33,6 +33,8 @@ if (SENTRY_DSN && import.meta.env.PROD) {
       // Supabase auth multi-tab lock contention — benign, fires when another
       // browser tab refreshes the session token concurrently.
       /Lock .+ was released because another request stole it/,
+      /Lock broken by another request with the 'steal' option/,
+      /Lock .* (was|broken|released)/i,
     ],
   })
 }

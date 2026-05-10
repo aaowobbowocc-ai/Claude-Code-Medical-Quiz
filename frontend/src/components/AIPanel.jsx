@@ -112,18 +112,17 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
     const trimmed = downvoteReason.trim()
     if (!trimmed) return
     try {
-      // user_id 是 best-effort — auth lock 偶爾 hang 加 timeout 避免卡住
-      let authUserId = ''
-      if (supabase) {
-        try {
-          const timeout = new Promise(res => setTimeout(() => res(null), 1500))
-          const r = await Promise.race([supabase.auth.getSession(), timeout])
-          authUserId = r?.data?.session?.user?.id || ''
-        } catch {}
-      }
+      // Bearer token 從 localStorage 同步讀取，後端解析 user_id（不卡 supabase auth）
+      const headers = { 'Content-Type': 'application/json' }
+      try {
+        const raw = localStorage.getItem('medking-auth')
+        const parsed = raw ? JSON.parse(raw) : null
+        const token = parsed?.access_token
+        if (token) headers['Authorization'] = `Bearer ${token}`
+      } catch {}
       await fetch(`${BACKEND}/report`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({
           questionId: questionId || '未知',
           questionText: questionText || '',
@@ -132,7 +131,6 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
           number: number || '',
           message: `[AI 解析回饋｜cacheKey=${meta?.cacheKey || '?'}] ${trimmed}`,
           name: usePlayerStore.getState().name || '',
-          user_id: authUserId || undefined,
         }),
       })
     } catch {}
@@ -247,18 +245,16 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                   onClick={async () => {
                     setReportSending(true)
                     try {
-                      // user_id best-effort with 1.5s timeout (auth lock hang 防呆)
-                      let authUserId = ''
-                      if (supabase) {
-                        try {
-                          const timeout = new Promise(res => setTimeout(() => res(null), 1500))
-                          const r = await Promise.race([supabase.auth.getSession(), timeout])
-                          authUserId = r?.data?.session?.user?.id || ''
-                        } catch {}
-                      }
+                      const headers = { 'Content-Type': 'application/json' }
+                      try {
+                        const raw = localStorage.getItem('medking-auth')
+                        const parsed = raw ? JSON.parse(raw) : null
+                        const token = parsed?.access_token
+                        if (token) headers['Authorization'] = `Bearer ${token}`
+                      } catch {}
                       await fetch(`${BACKEND}/report`, {
                         method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
+                        headers,
                         body: JSON.stringify({
                           questionId: questionId || '未知',
                           questionText: questionText || '',
@@ -267,7 +263,6 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                           number: number || '',
                           message: reportText.trim(),
                           name: usePlayerStore.getState().name || '',
-                          user_id: authUserId || undefined,
                         }),
                       })
                       setReportSent(true)

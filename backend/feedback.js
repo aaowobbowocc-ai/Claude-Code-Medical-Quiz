@@ -167,13 +167,20 @@ function locateQuestion(examData, examConfigs, questionId, questionText, rocYear
 function registerRoutes(app, examData, examConfigs) {
   // POST /feedback — user submits feedback
   app.post('/feedback', async (req, res) => {
-    const { message, name, user_id } = req.body;
+    const { message, name } = req.body;
     if (!message || !message.trim()) {
       return res.status(400).json({ error: 'message is required' });
     }
 
-    const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-    const cleanUserId = (typeof user_id === 'string' && UUID_RE.test(user_id)) ? user_id : null;
+    // 從 Authorization Bearer token 拿 user_id（server-side 驗證，可靠）
+    let cleanUserId = null;
+    const token = req.headers.authorization?.replace('Bearer ', '');
+    if (token && supabase) {
+      try {
+        const { data: { user } } = await supabase.auth.getUser(token);
+        if (user?.id) cleanUserId = user.id;
+      } catch {}
+    }
 
     const entry = {
       message: message.trim().slice(0, 2000),
@@ -199,13 +206,20 @@ function registerRoutes(app, examData, examConfigs) {
 
   // POST /report — user reports a question error
   app.post('/report', async (req, res) => {
-    const { questionId, questionText, rocYear, session, number, message, name, user_id } = req.body;
+    const { questionId, questionText, rocYear, session, number, message, name } = req.body;
     if (!questionId) {
       return res.status(400).json({ error: 'questionId is required' });
     }
 
-    const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-    const cleanUserId = (typeof user_id === 'string' && UUID_RE.test(user_id)) ? user_id : null;
+    // 從 Authorization Bearer token 拿 user_id（server-side 驗證，可靠）
+    let cleanUserId = null;
+    const token = req.headers.authorization?.replace('Bearer ', '');
+    if (token && supabase) {
+      try {
+        const { data: { user } } = await supabase.auth.getUser(token);
+        if (user?.id) cleanUserId = user.id;
+      } catch {}
+    }
 
     // Server-side enrichment: trust the question DB, not the client. The
     // client only knows what's currently rendered; here we look up the real

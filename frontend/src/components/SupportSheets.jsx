@@ -23,23 +23,21 @@ export default function SupportSheets({ sheet, setSheet }) {
     if (!feedbackText.trim() || sending) return
     setSending(true)
     try {
-      // user_id 是 best-effort — supabase auth 偶爾會 lock contention hang，
-      // 加 1.5 秒 timeout 避免整個 form 卡住
-      let userId = lastHydratedUserId || ''
-      if (!userId && supabase) {
-        try {
-          const timeout = new Promise(res => setTimeout(() => res(null), 1500))
-          const r = await Promise.race([supabase.auth.getUser(), timeout])
-          userId = r?.data?.user?.id || ''
-        } catch {}
-      }
+      // user_id 由後端從 Authorization Bearer token 解析（不在 frontend 呼叫
+      // supabase.auth 避免 lock hang）。session token 從 localStorage 同步取得。
+      const headers = { 'Content-Type': 'application/json' }
+      try {
+        const raw = localStorage.getItem('medking-auth')
+        const parsed = raw ? JSON.parse(raw) : null
+        const token = parsed?.access_token
+        if (token) headers['Authorization'] = `Bearer ${token}`
+      } catch {}
       const res = await fetch(`${BACKEND}/feedback`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({
           message: feedbackText,
           name: sendAnonymous ? undefined : (storedName || undefined),
-          user_id: userId || undefined,
         }),
       })
       if (res.ok) setFeedbackSent(true)

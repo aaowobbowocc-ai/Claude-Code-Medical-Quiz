@@ -1,0 +1,50 @@
+node_modules
+npm-debug.log*
+
+# 開發/實驗資源 — 不要放進 image
+_tmp/
+_cache/
+_backup_*/
+.pdf-cache/
+_driver_license/
+_hazard/
+
+# Test PDFs / probe artifacts
+*.pdf
+probe-*.json
+probe*.js
+alt-probe*
+ALT-PROBE-*.md
+MISSING-*.md
+
+# Logs
+*.log
+*.log.*
+
+# Backups
+*.bak
+*.bak2
+*.bak3
+*.backup-*
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Git
+.git
+.gitignore
+
+# Env (production env vars 在 fly.toml secrets)
+.env
+.env.*
+
+# 其他
+.gemini-key
+gcp-oauth.json
+gcp-token.json
+*.traineddata
+
+# Tests / scripts 不需要在 production runtime
+# (但要保留 scripts/lib/ 給 server.js require)

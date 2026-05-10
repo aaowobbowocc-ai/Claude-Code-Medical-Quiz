@@ -23,10 +23,15 @@ export default function SupportSheets({ sheet, setSheet }) {
     if (!feedbackText.trim() || sending) return
     setSending(true)
     try {
-      // 永遠送 user_id（即使匿名）— 後台用來定位帳號處理金幣等問題
+      // user_id 是 best-effort — supabase auth 偶爾會 lock contention hang，
+      // 加 1.5 秒 timeout 避免整個 form 卡住
       let userId = lastHydratedUserId || ''
-      if (!userId) {
-        try { const { data } = await supabase.auth.getUser(); userId = data?.user?.id || '' } catch {}
+      if (!userId && supabase) {
+        try {
+          const timeout = new Promise(res => setTimeout(() => res(null), 1500))
+          const r = await Promise.race([supabase.auth.getUser(), timeout])
+          userId = r?.data?.user?.id || ''
+        } catch {}
       }
       const res = await fetch(`${BACKEND}/feedback`, {
         method: 'POST',

@@ -112,7 +112,15 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
     const trimmed = downvoteReason.trim()
     if (!trimmed) return
     try {
-      const { data: { session: authSession } } = await supabase.auth.getSession()
+      // user_id 是 best-effort — auth lock 偶爾 hang 加 timeout 避免卡住
+      let authUserId = ''
+      if (supabase) {
+        try {
+          const timeout = new Promise(res => setTimeout(() => res(null), 1500))
+          const r = await Promise.race([supabase.auth.getSession(), timeout])
+          authUserId = r?.data?.session?.user?.id || ''
+        } catch {}
+      }
       await fetch(`${BACKEND}/report`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -124,7 +132,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
           number: number || '',
           message: `[AI 解析回饋｜cacheKey=${meta?.cacheKey || '?'}] ${trimmed}`,
           name: usePlayerStore.getState().name || '',
-          user_id: authSession?.user?.id || undefined,
+          user_id: authUserId || undefined,
         }),
       })
     } catch {}
@@ -239,7 +247,15 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                   onClick={async () => {
                     setReportSending(true)
                     try {
-                      const { data: { session: authSession } } = await supabase.auth.getSession()
+                      // user_id best-effort with 1.5s timeout (auth lock hang 防呆)
+                      let authUserId = ''
+                      if (supabase) {
+                        try {
+                          const timeout = new Promise(res => setTimeout(() => res(null), 1500))
+                          const r = await Promise.race([supabase.auth.getSession(), timeout])
+                          authUserId = r?.data?.session?.user?.id || ''
+                        } catch {}
+                      }
                       await fetch(`${BACKEND}/report`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
@@ -251,7 +267,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                           number: number || '',
                           message: reportText.trim(),
                           name: usePlayerStore.getState().name || '',
-                          user_id: authSession?.user?.id || undefined,
+                          user_id: authUserId || undefined,
                         }),
                       })
                       setReportSent(true)

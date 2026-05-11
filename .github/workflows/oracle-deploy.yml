@@ -44,8 +44,20 @@ jobs:
             fi
             echo "=== restart backend ==="
             sudo systemctl restart examking-backend
-            sleep 5
             sudo systemctl status examking-backend --no-pager | head -10
-            echo "=== health check ==="
-            curl -fs http://localhost:3001/health || (echo "HEALTH FAIL" && exit 1)
+            echo "=== wait for backend ready (up to 60s) ==="
+            for i in $(seq 1 60); do
+              if curl -fs -m 2 http://localhost:3001/health > /dev/null 2>&1; then
+                echo "✓ backend ready after ${i}s"
+                break
+              fi
+              if [ $i -eq 60 ]; then
+                echo "✗ HEALTH FAIL after 60s"
+                sudo journalctl -u examking-backend --no-pager -n 30
+                exit 1
+              fi
+              sleep 1
+            done
+            curl -fs http://localhost:3001/health
+            echo
             echo "=== deploy ok ==="

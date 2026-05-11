@@ -16,6 +16,24 @@ const fixes = [
     changes: { disputed: true },
     reason: '楊迪欣回報：選項文字被切（含 ①②③④ 但只看到部分）',
   },
+  {
+    file: 'questions-medlab.json',
+    qid: '5586',
+    changes: { disputed: true },
+    reason: '讚讚蹦蹦回報 106-1 微生物 Q68：題目不完整 (chromoblastomycosis)',
+  },
+  {
+    file: 'questions-nursing.json',
+    qid: '3153',
+    changes: { disputed: true },
+    reason: '讚讚蹦蹦回報 108-2 精神科 Q76：a選項有缺漏',
+  },
+  {
+    file: 'questions-nursing.json',
+    qid: '112030_psych_community_40',
+    changes: { disputed: true },
+    reason: 'garfield 回報 112-1 精神科 Q40：答案有誤應為D（current 已是 D，使用者可能看到 cache 舊版）',
+  },
 ];
 
 let totalChanged = 0;

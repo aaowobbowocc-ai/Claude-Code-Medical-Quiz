@@ -6968,13 +6968,14 @@
         "C": "機關內部單位區分為業務單位及總務單位",
         "D": "獨立機關為依法獨立行使職權之首長制機關"
       },
-      "answer": "A",
+      "answer": "B",
       "level": "senior",
       "shared_bank": "common_admin_studies",
       "parent_id": null,
       "case_context": null,
       "is_deprecated": false,
-      "deprecated_reason": null
+      "deprecated_reason": null,
+      "disputed": true
     },
     {
       "id": "common_admin_studies-112-police-10",
@@ -7332,13 +7333,14 @@
         "C": "非營利組織應受到政府相關法令的約束",
         "D": "政府與非營利組織可以契約外包的方式合作"
       },
-      "answer": "A",
+      "answer": "B",
       "level": "senior",
       "shared_bank": "common_admin_studies",
       "parent_id": null,
       "case_context": null,
       "is_deprecated": false,
-      "deprecated_reason": null
+      "deprecated_reason": null,
+      "disputed": true
     },
     {
       "id": "common_admin_studies-112-police-24",

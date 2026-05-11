@@ -1,0 +1,51 @@
+name: Oracle Deploy
+
+# 觸發條件：master 分支有任何 backend 改動
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/oracle-deploy.yml'
+  # 也支援手動觸發
+  workflow_dispatch:
+
+# 同一時間只跑一個 deploy（避免 git pull 撞期）
+concurrency:
+  group: oracle-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Deploy to Oracle VM
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.ORACLE_HOST }}
+          username: ubuntu
+          key: ${{ secrets.ORACLE_SSH_KEY }}
+          port: 22
+          timeout: 60s
+          command_timeout: 5m
+          script: |
+            set -e
+            cd /home/ubuntu/app
+            echo "=== git pull ==="
+            git pull origin master
+            cd backend
+            # 只在 package-lock 變動時才重裝（省時間）
+            if git diff HEAD@{1} HEAD --name-only | grep -q "backend/package"; then
+              echo "=== package.json changed, npm ci ==="
+              npm ci --omit=dev --no-audit --no-fund
+            else
+              echo "=== no dep change, skip npm ci ==="
+            fi
+            echo "=== restart backend ==="
+            sudo systemctl restart examking-backend
+            sleep 5
+            sudo systemctl status examking-backend --no-pager | head -10
+            echo "=== health check ==="
+            curl -fs http://localhost:3001/health || (echo "HEALTH FAIL" && exit 1)
+            echo "=== deploy ok ==="

@@ -46,6 +46,17 @@ const FILES = [
   ['pharma2', 'questions-pharma2.json'],
   ['tcm1', 'questions-tcm1.json'],
   ['tcm2', 'questions-tcm2.json'],
+  ['nursing', 'questions-nursing.json'],
+  ['nutrition', 'questions-nutrition.json'],
+  ['medlab', 'questions-medlab.json'],
+  ['pt', 'questions-pt.json'],
+  ['ot', 'questions-ot.json'],
+  ['radiology', 'questions-radiology.json'],
+  ['vet', 'questions-vet.json'],
+  ['audiologist', 'questions-audiologist.json'],
+  ['speech-therapist', 'questions-speech-therapist.json'],
+  ['rt', 'questions-rt.json'],
+  ['social-worker', 'questions-social-worker.json'],
 ]
 
 function smoothBlock(block) {
@@ -71,6 +82,9 @@ function smoothBlock(block) {
       if (!bestTag) continue
       if (bestCnt < MAJORITY) continue
       if (block[i].subject_tag === bestTag) continue
+
+      // 禁止往 generic placeholder (paperN) 方向改 — 那是未分類殘留
+      if (!LEGACY && /^paper\d+$/.test(bestTag)) continue
 
       // Confidence checks (skip in --legacy mode)
       if (!LEGACY) {

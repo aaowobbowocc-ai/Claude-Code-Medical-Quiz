@@ -72,6 +72,7 @@ function FavCard({ q, index, onRemove }) {
               session={q.session}
               number={q.number}
               disputed={q.disputed}
+              visionUncertain={q.vision_uncertain}
               subjectTags={q.subject_tags}
               meta={explainMeta}
               onVote={explainVote}

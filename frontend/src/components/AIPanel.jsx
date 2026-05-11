@@ -46,7 +46,7 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 100, questionId, questionText, rocYear, session, number, disputed, subjectTags, sourceBankId, meta, onVote }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 100, questionId, questionText, rocYear, session, number, disputed, visionUncertain, subjectTags, sourceBankId, meta, onVote }) {
   const [showAI, setShowAI] = useState(false)
   const [reportSent, setReportSent] = useState(false)
   const [showReportForm, setShowReportForm] = useState(false)
@@ -221,6 +221,16 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
               {typeof disputed === 'string' && disputed && (
                 <p className="text-xs text-amber-600 mt-0.5">{disputed}</p>
               )}
+            </div>
+          )}
+          {!disputed && visionUncertain && (
+            <div className="mt-2 bg-sky-50 border border-sky-200 rounded-xl px-3 py-2">
+              <p className="text-xs font-semibold text-sky-700">
+                🔍 系統驗證中：答案可能與官方標答不一致
+              </p>
+              <p className="text-xs text-sky-600 mt-0.5">
+                正在重新比對 PDF，發現異常請點下方「題目錯誤回報」
+              </p>
             </div>
           )}
           {showReportForm && !reportSent && (

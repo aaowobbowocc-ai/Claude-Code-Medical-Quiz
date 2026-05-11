@@ -278,6 +278,7 @@ function QuestionCard({ q, stageMap, readingStyle, readingPrefs, updateReadingPr
               session={q.session}
               number={q.number}
               disputed={q.disputed}
+              visionUncertain={q.vision_uncertain}
               subjectTags={q.subject_tags}
               sourceBankId={q.sourceBankId}
               meta={explainMeta}

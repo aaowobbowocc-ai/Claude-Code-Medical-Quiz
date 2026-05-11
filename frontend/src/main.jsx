@@ -31,10 +31,10 @@ if (SENTRY_DSN && import.meta.env.PROD) {
       'Non-Error promise rejection captured',
       /Network request failed/,
       // Supabase auth multi-tab lock contention — benign, fires when another
-      // browser tab refreshes the session token concurrently.
-      /Lock .+ was released because another request stole it/,
-      /Lock broken by another request with the 'steal' option/,
-      /Lock .* (was|broken|released)/i,
+      // browser tab refreshes the session token concurrently. 各種訊息變體都過濾。
+      /Lock/i,             // 任何含 "Lock" 的訊息（Supabase 內建機制，永遠是雜訊）
+      /AbortError/i,       // Supabase 取消請求觸發
+      /stolen|steal/i,     // lock stealing 系列
     ],
   })
 }

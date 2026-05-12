@@ -65,6 +65,15 @@ const TARGETS = [
     code: '102110', c: '201', sBase: '0707', papers: AUDIO_PAPERS },   // 102 第二次
   { exam: 'audiologist', file: 'questions-audiologist.json',
     code: '104100', c: '110', sBase: '0901', papers: AUDIO_PAPERS },   // 104 第二次
+  // === 補缺新增 targets (2026-05-12) ===
+  { exam: 'audiologist', file: 'questions-audiologist.json',
+    code: '103100', c: '113', sBase: '0901', papers: AUDIO_PAPERS },   // 103 第一次（用 103100 c=113）
+  { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
+    code: '103100', c: '112', sBase: '0801', papers: SPEECH_PAPERS },  // 103 第一次
+  { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
+    code: '105090', c: '109', sBase: '0801', papers: SPEECH_PAPERS },  // 105 第一次
+  { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
+    code: '106110', c: '109', sBase: '0801', papers: SPEECH_PAPERS },  // 106 第一次
 ]
 
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'

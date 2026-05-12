@@ -68,6 +68,8 @@ const TARGETS = [
   // === 補缺新增 targets (2026-05-12) ===
   { exam: 'audiologist', file: 'questions-audiologist.json',
     code: '103100', c: '113', sBase: '0901', papers: AUDIO_PAPERS },   // 103 第一次（用 103100 c=113）
+  { exam: 'audiologist', file: 'questions-audiologist.json',
+    code: '106110', c: '110', sBase: '0901', papers: AUDIO_PAPERS },   // 106 第一次
   { exam: 'speech-therapist', file: 'questions-speech-therapist.json',
     code: '103100', c: '112', sBase: '0801', papers: SPEECH_PAPERS },  // 103 第一次
   { exam: 'speech-therapist', file: 'questions-speech-therapist.json',

@@ -131,8 +131,8 @@ function buildShell(tpl, cfg) {
 
   const totalQ = cfg.totalQ || (seo && seo.totalQ) || ''
   const statsSentence = totalQ
-    ? `題庫收錄 ${totalQ} 題，年度範圍 106-115 年。即時對戰、AI 解說、歷屆模擬考、弱點分析。`
-    : `題庫收錄歷屆考古題，年度範圍 106-115 年。即時對戰、AI 解說、歷屆模擬考、弱點分析。`
+    ? `題庫收錄 ${totalQ} 題，年度範圍 100-115 年。即時對戰、AI 解說、歷屆模擬考、弱點分析。`
+    : `題庫收錄歷屆考古題，年度範圍 100-115 年。即時對戰、AI 解說、歷屆模擬考、弱點分析。`
 
   // Build exam-specific crawlable content block (shared by #root and <noscript>).
   // Structure per SEO spec: H1 → 400字 intro → 考試科目 → 統計 → 相關資源.

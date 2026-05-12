@@ -63,7 +63,7 @@ export default function Contact() {
           <section>
             <h3 className="font-bold text-base text-medical-dark mb-2">平台特色</h3>
             <ul className="list-disc pl-5 space-y-1.5">
-              <li><strong>180,000+ 考古題：</strong>涵蓋 100–115 年醫事、法律、公職各類國考歷屆題目</li>
+              <li><strong>187,000+ 考古題：</strong>涵蓋 100–115 年醫事、法律、公職各類國考歷屆題目</li>
               <li><strong>多元國考類別：</strong>醫事 17 類（醫師/牙醫/藥師/中醫/護理/物治/職治/醫檢/放射/營養/獸醫/社工/呼吸治療等）、律師一試、公職 8 類（高考三等/普考/初考/關務/司法特考/警察等）、汽機車駕照筆試，合計 27 類</li>
               <li><strong>即時對戰：</strong>與好友或 AI 即時搶答，讓讀書不再孤單</li>
               <li><strong>AI 題目解說：</strong>每題都有 AI 生成的詳細解析，幫你理解觀念</li>

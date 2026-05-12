@@ -277,6 +277,17 @@ const GAPS = [
   { jsonFile: 'questions-vet.json', examPrefix: 'vet', examCode: '103090', subject: '獸醫公共衛生學', subject_tag: 'public_health', missing: [9], rocYear: '103', session: '第二次', paperCount: 80 },
   { jsonFile: 'questions-vet.json', examPrefix: 'vet', examCode: '103090', subject: '獸醫普通疾病學', subject_tag: 'general_diseases', missing: [18], rocYear: '103', session: '第二次', paperCount: 80 },
   { jsonFile: 'questions-vet.json', examPrefix: 'vet', examCode: '105100', subject: '獸醫普通疾病學', subject_tag: 'general_diseases', missing: [47], rocYear: '105', session: '第二次', paperCount: 80 },
+  // pharma2 藥物治療 散缺 1 題（2026-05-12）
+  { jsonFile: 'questions-pharma2.json', examPrefix: 'pharma2', examCode: '110020', subject: '藥物治療', subject_tag: 'therapeutics', missing: [79], rocYear: '110', session: '第一次', paperCount: 80 },
+  { jsonFile: 'questions-pharma2.json', examPrefix: 'pharma2', examCode: '112020', subject: '藥物治療', subject_tag: 'pharmacotherapy', missing: [73], rocYear: '112', session: '第一次', paperCount: 80 },
+  { jsonFile: 'questions-pharma2.json', examPrefix: 'pharma2', examCode: '114090', subject: '藥物治療', subject_tag: 'therapeutics', missing: [77], rocYear: '114', session: '第二次', paperCount: 80 },
+  { jsonFile: 'questions-pharma2.json', examPrefix: 'pharma2', examCode: '115020', subject: '藥物治療', subject_tag: 'therapeutics', missing: [77], rocYear: '115', session: '第一次', paperCount: 80 },
+  // nursing 散缺（2026-05-12）
+  { jsonFile: 'questions-nursing.json', examPrefix: 'nursing', examCode: '102030', subject: '精神科與社區衛生護理學', subject_tag: 'psychiatric_nursing', missing: [47, 72], rocYear: '102', session: '第一次', paperCount: 80 },
+  { jsonFile: 'questions-nursing.json', examPrefix: 'nursing', examCode: '101110', subject: '基本護理學與護理行政', subject_tag: 'fundamental_nursing', missing: [41], rocYear: '101', session: '第二次', paperCount: 80 },
+  { jsonFile: 'questions-nursing.json', examPrefix: 'nursing', examCode: '101110', subject: '產兒科護理學', subject_tag: 'obstetric_nursing', missing: [72], rocYear: '101', session: '第二次', paperCount: 80 },
+  { jsonFile: 'questions-nursing.json', examPrefix: 'nursing', examCode: '101110', subject: '精神科與社區衛生護理學', subject_tag: 'psychiatric_nursing', missing: [28], rocYear: '101', session: '第二次', paperCount: 80 },
+  { jsonFile: 'questions-nursing.json', examPrefix: 'nursing', examCode: '104030', subject: '基礎醫學', subject_tag: 'paper1', missing: [60], rocYear: '104', session: '第一次', paperCount: 80 },
 ]
 
 ;(async () => {

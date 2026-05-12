@@ -4,26 +4,61 @@ import Footer from '../components/Footer'
 
 const API = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
-const EXAM_ORDER = [
-  'doctor1', 'doctor2', 'dental1', 'dental2',
-  'pharma1', 'pharma2', 'tcm1', 'tcm2',
-  'nursing', 'nutrition', 'medlab', 'pt', 'ot', 'radiology', 'audiologist', 'speech-therapist',
-  'social-worker', 'vet',
-  'lawyer1', 'judicial', 'customs', 'police',
-  'civil-senior', 'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
-  'driver-car', 'driver-moto',
+// 考試分類（顯示用分組）
+const CATEGORIES = [
+  {
+    id: 'medical',
+    name: '醫療專技',
+    icon: '🏥',
+    exams: [
+      'doctor1', 'doctor2', 'dental1', 'dental2',
+      'pharma1', 'pharma2', 'tcm1', 'tcm2',
+      'nursing', 'nutrition', 'medlab',
+      'pt', 'ot', 'rt', 'radiology',
+      'audiologist', 'speech-therapist',
+      'social-worker', 'vet',
+    ],
+  },
+  {
+    id: 'legal-civil',
+    name: '法律 / 公職',
+    icon: '⚖️',
+    exams: [
+      'lawyer1', 'judicial', 'customs', 'police', 'police4',
+      'civil-senior', 'civil-senior-general',
+      'civil-junior-general', 'civil-elementary-general',
+    ],
+  },
+  {
+    id: 'education',
+    name: '升學考試',
+    icon: '🎓',
+    exams: ['gsat', 'ast'],
+  },
+  {
+    id: 'driver',
+    name: '駕照',
+    icon: '🚗',
+    exams: ['driver-car', 'driver-moto'],
+  },
 ]
+const EXAM_ORDER = CATEGORIES.flatMap(c => c.exams)
+function categoryFor(examId) {
+  for (const c of CATEGORIES) if (c.exams.includes(examId)) return c.id
+  return 'other'
+}
 
 const ALL_YEARS = ['100','101','102','103','104','105','106','107','108','109','110','111','112','113','114','115']
 
 // 制度性未舉辦的場次（非資料缺口）：
-//   ot/vet 110 年起一年一試，只辦第二次
+//   ot/vet/rt 110 年起一年一試，只辦第二次
 //   audiologist/speech-therapist 103 年起一年一試，只辦第一次（102→103 改制）
 //   audiologist/speech-therapist 100-102 年仍兩場齊
 //   social-worker 104 起辦、103 以前未辦
 const NOT_HELD = {
   ot: { '110': ['s1'], '111': ['s1'], '112': ['s1'], '113': ['s1'], '114': ['s1'], '115': ['s1'] },
   vet: { '110': ['s1'], '111': ['s1'], '112': ['s1'], '113': ['s1'], '114': ['s1'], '115': ['s1'] },
+  rt: { '110': ['s1'], '111': ['s1'], '112': ['s1'], '113': ['s1'], '114': ['s1'], '115': ['s1'] },
   audiologist: {
     '103': ['s2'], '104': ['s2'], '105': ['s2'], '106': ['s2'], '107': ['s2'],
     '108': ['s2'], '109': ['s2'], '110': ['s2'], '111': ['s2'],
@@ -229,11 +264,14 @@ export default function Coverage() {
       .catch(e => { setError(e.message); setLoading(false) })
   }, [])
 
-  const orderedExams = data
-    ? [
-        ...EXAM_ORDER.filter(id => data[id]),
-        ...Object.keys(data).filter(id => !EXAM_ORDER.includes(id)).sort(),
-      ]
+  const groupedExams = data
+    ? CATEGORIES.map(cat => ({
+        ...cat,
+        examIds: cat.exams.filter(id => data[id]),
+      })).filter(g => g.examIds.length > 0)
+    : []
+  const ungrouped = data
+    ? Object.keys(data).filter(id => !EXAM_ORDER.includes(id)).sort()
     : []
 
   return (
@@ -281,9 +319,33 @@ export default function Coverage() {
           </div>
         )}
 
-        {data && orderedExams.map(examId => (
-          <CoverageRow key={examId} examId={examId} info={data[examId]} />
+        {data && groupedExams.map(group => (
+          <div key={group.id} className="space-y-2">
+            <div className="flex items-center gap-2 px-1 pt-2">
+              <span className="text-base">{group.icon}</span>
+              <h2 className="text-sm font-bold text-gray-600">{group.name}</h2>
+              <span className="text-xs text-gray-400">· {group.examIds.length} 種</span>
+            </div>
+            <div className="space-y-2">
+              {group.examIds.map(examId => (
+                <CoverageRow key={examId} examId={examId} info={data[examId]} />
+              ))}
+            </div>
+          </div>
         ))}
+        {data && ungrouped.length > 0 && (
+          <div className="space-y-2">
+            <div className="flex items-center gap-2 px-1 pt-2">
+              <span className="text-base">📦</span>
+              <h2 className="text-sm font-bold text-gray-600">其他</h2>
+            </div>
+            <div className="space-y-2">
+              {ungrouped.map(examId => (
+                <CoverageRow key={examId} examId={examId} info={data[examId]} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       <Footer />

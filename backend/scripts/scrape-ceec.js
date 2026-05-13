@@ -43,7 +43,7 @@ const REGISTRY = {
         science: { q: '/files/file_pool/1/0q054346117821958325/06-115%e5%ad%b8%e6%b8%ac%e8%87%aa%e7%84%b6%e8%a9%a6%e5%8d%b7.pdf',                         a: '/files/file_pool/1/0q040579122726476606/06-115%e5%ad%b8%e6%b8%ac%e8%87%aa%e7%84%b6%e7%ad%94%e6%a1%88.pdf' },
       },
       '114': {
-        // zh Q 尚未找到（答題卷非試卷），待補
+        zh:      { q: '/files/file_pool/1/0P036403076668286531/114%E5%AD%B8%E6%B8%AC%E5%9C%8B%E7%B6%9C%E8%A9%A6%E9%A1%8C.pdf',                              a: '/files/file_pool/1/0P020599887773780175/114%E5%AD%B8%E6%B8%AC%E5%9C%8B%E8%AA%9E%E6%96%87%E7%B6%9C%E5%90%88%E8%83%BD%E5%8A%9B%E6%B8%AC%E9%A9%97%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88.pdf' },
         en:      { q: '/files/file_pool/1/0p056425554473267580/02-114%e5%ad%b8%e6%b8%ac%e8%8b%b1%e6%96%87%e8%a9%a6%e9%a1%8c.pdf',                         a: '/files/file_pool/1/0p051545433631383724/02-114%e5%ad%b8%e6%b8%ac%e8%8b%b1%e6%96%87%e7%ad%94%e6%a1%88.pdf' },
         social:  { q: '/files/file_pool/1/0p056429479567292230/05-114%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83%E8%A9%A6%E9%A1%8C.pdf',                         a: '/files/file_pool/1/0P043432063382560936/05-114%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83%E7%AD%94%E6%A1%88.pdf' },
         science: { q: '/files/file_pool/1/0P018538274098988724/114%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E8%A9%A6%E9%A1%8C.pdf',                            a: '/files/file_pool/1/0P019609131102357003/114%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88.pdf' },
@@ -55,8 +55,10 @@ const REGISTRY = {
         science: { q: '/files/file_pool/1/0o051419133380092609/06-113%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E8%A9%A6%E9%A1%8C%E5%AE%9A%E7%A8%BF.pdf',         a: '/files/file_pool/1/0O037619670384057968/06-113%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E7%AD%94%E6%A1%88.pdf' },
       },
       '112': {
+        zh:      { q: '/files/file_pool/1/0n045361284386617720/01-1-112%E5%AD%B8%E6%B8%AC%E5%9C%8B%E6%96%87(%E5%9C%8B%E7%B6%9C)%E8%A9%A6%E5%8D%B7.pdf',  a: '/files/file_pool/1/0N015546576278192757/01-112%E5%AD%B8%E6%B8%AC%E5%9C%8B%E8%AA%9E%E6%96%87%E7%B6%9C%E5%90%88%E8%83%BD%E5%8A%9B%E6%B8%AC%E9%A9%97%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88.pdf' },
         en:      { q: '/files/file_pool/1/0n045359274947649605/02-112%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E8%A9%A6%E5%8D%B7.pdf',                         a: '/files/file_pool/1/0N015546416633213720/02-112%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88.pdf' },
-        // social Q、science Q 尚未找到正確 URL，待補
+        social:  { q: '/files/file_pool/1/0n045355860270752519/05-112%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83%E8%A9%A6%E5%8D%B7.pdf',                          a: '/files/file_pool/1/0N016537820294446149/05-112%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88.pdf' },
+        science: { q: '/files/file_pool/1/0n045354345199955411/06-112%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E8%A9%A6%E5%8D%B7.pdf',                          a: '/files/file_pool/1/0N015546235009344702/06-112%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88.pdf' },
       },
       '111': {
         // zh Q 尚未找到（111年起改格式），待補

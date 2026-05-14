@@ -18,6 +18,7 @@ import ShareChallengeButton from '../components/ShareChallengeButton'
 import ReadingModePopover, { useReadingMode } from '../components/ReadingModePopover'
 import { getRandomQuestions, isExamSupportedByCDN } from '../lib/cdnQuestions'
 import { supabase } from '../lib/supabase'
+import { addWrong } from '../lib/wrongBank'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -71,12 +72,13 @@ const PRACTICE_HISTORY_KEY = 'practice-history'
 const PRACTICE_MAX_RECORDS = 50
 const PRACTICE_LAST_CONFIG_KEY = 'practice-last-config'
 
-function savePracticeRecord({ stage, diff, count, correct, total, myScore, aiScore }) {
+function savePracticeRecord({ stage, diff, count, correct, total, myScore, aiScore, wrongQuestions }) {
   const record = {
     id: Date.now(),
     date: new Date().toISOString(),
     stage, diff, count, correct, total, myScore, aiScore,
     pct: total > 0 ? Math.round((correct / total) * 100) : 0,
+    wrongQuestions: wrongQuestions || [],   // 存錯題 → 之後可從歷史紀錄再次檢討
   }
   try {
     const prev = JSON.parse(localStorage.getItem(PRACTICE_HISTORY_KEY) || '[]')
@@ -838,9 +840,15 @@ function PracticeResults({ result, config, onRestart, onHome }) {
     if (diffConfig.ai && won) reward += 20
     addCoins(reward)
     addExp(correct * 10)
+    // 整理錯題（含 myAnswer）供歷史紀錄檢討 + 錯題夾
+    const wrongQuestions = (result.log || []).filter(q => q && !isAnswerCorrect(q.user_answer, q.answer)).map(q => ({
+      ...q, myAnswer: q.user_answer, correct: false,
+    }))
+    addWrong(wrongQuestions)
     savePracticeRecord({
       stage: config.stage, diff: config.diff, count: config.count,
       correct, total, myScore: result.myScore, aiScore: result.aiScore,
+      wrongQuestions,
     })
     // Submit per-question stats (skip deprecated questions)
     if (result.log && result.log.length > 0) {

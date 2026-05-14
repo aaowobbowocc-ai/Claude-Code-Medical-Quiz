@@ -7,6 +7,7 @@ import SmartBanner from '../components/SmartBanner'
 import ShareChallengeButton from '../components/ShareChallengeButton'
 import { getExamConfig } from '../config/examRegistry'
 import { supabase } from '../lib/supabase'
+import { addWrong } from '../lib/wrongBank'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const HISTORY_KEY = 'battle-history'
@@ -79,6 +80,8 @@ export default function Results() {
       opponents,
       questionResults,
     })
+    // 對戰答錯的也加入錯題夾
+    addWrong(questionResults.filter(q => !q.correct))
     // Submit to leaderboard — attach userId so achievements can be joined back.
     if (name && questionResults.length > 0) {
       const correct = questionResults.filter(q => q.correct).length

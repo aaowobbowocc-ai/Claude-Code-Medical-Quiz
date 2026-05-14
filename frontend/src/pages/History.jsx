@@ -76,10 +76,12 @@ function BattleCard({ r, navigate }) {
 }
 
 /* ── Practice record card ───────────────────────────────────── */
-function PracticeCard({ r }) {
+function PracticeCard({ r, navigate }) {
   const stageName = STAGES_MAP[r.stage] || '隨機'
   const diffName = DIFF_MAP[r.diff] || r.diff
   const pct = r.pct || 0
+  const wrongCount = (r.total || 0) - (r.correct || 0)
+  const hasWrong = wrongCount > 0 && r.wrongQuestions?.length > 0
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden px-4 py-3">
@@ -97,17 +99,28 @@ function PracticeCard({ r }) {
           <p className="text-xs text-gray-400">{r.correct}/{r.total}</p>
         </div>
       </div>
-      <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
-        <div className="h-full rounded-full" style={{ width: `${pct}%`, background: pct >= 70 ? '#10B981' : pct >= 50 ? '#F97316' : '#EF4444' }} />
+      <div className="flex items-center gap-3">
+        <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+          <div className="h-full rounded-full" style={{ width: `${pct}%`, background: pct >= 70 ? '#10B981' : pct >= 50 ? '#F97316' : '#EF4444' }} />
+        </div>
+        {hasWrong && (
+          <button onClick={() => navigate('/review', { state: { questions: r.wrongQuestions, stage: stageName } })}
+            className="shrink-0 text-xs font-bold px-3 py-1.5 rounded-xl text-white active:scale-95 transition-transform"
+            style={{ background: '#EF4444' }}>
+            📋 檢討 {wrongCount}
+          </button>
+        )}
       </div>
     </div>
   )
 }
 
 /* ── Mock exam record card ──────────────────────────────────── */
-function MockCard({ r }) {
+function MockCard({ r, navigate }) {
   const mm = Math.floor((r.timeUsed || 0) / 60)
   const ss = (r.timeUsed || 0) % 60
+  const wrongCount = r.wrongQuestions?.length || 0
+  const hasWrong = wrongCount > 0
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden px-4 py-3">
@@ -127,8 +140,17 @@ function MockCard({ r }) {
           <p className="text-xs text-gray-400">/ {r.total}</p>
         </div>
       </div>
-      <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
-        <div className="h-full rounded-full" style={{ width: `${r.pct}%`, background: r.pct >= 60 ? '#10B981' : r.pct >= 40 ? '#F97316' : '#EF4444' }} />
+      <div className="flex items-center gap-3">
+        <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+          <div className="h-full rounded-full" style={{ width: `${r.pct}%`, background: r.pct >= 60 ? '#10B981' : r.pct >= 40 ? '#F97316' : '#EF4444' }} />
+        </div>
+        {hasWrong && (
+          <button onClick={() => navigate('/review', { state: { questions: r.wrongQuestions, stage: r.paper } })}
+            className="shrink-0 text-xs font-bold px-3 py-1.5 rounded-xl text-white active:scale-95 transition-transform"
+            style={{ background: '#EF4444' }}>
+            📋 檢討 {wrongCount}
+          </button>
+        )}
       </div>
     </div>
   )
@@ -174,8 +196,8 @@ export default function History() {
         )}
 
         {tab === 'battle' && records.map(r => <BattleCard key={r.id} r={r} navigate={navigate} />)}
-        {tab === 'practice' && records.map(r => <PracticeCard key={r.id} r={r} />)}
-        {tab === 'mock' && records.map(r => <MockCard key={r.date} r={r} />)}
+        {tab === 'practice' && records.map(r => <PracticeCard key={r.id} r={r} navigate={navigate} />)}
+        {tab === 'mock' && records.map(r => <MockCard key={r.date} r={r} navigate={navigate} />)}
       </div>
     </div>
   )

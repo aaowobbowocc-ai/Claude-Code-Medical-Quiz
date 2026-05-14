@@ -11,6 +11,7 @@ import OptionContent from '../components/OptionContent'
 import { supabase } from '../lib/supabase'
 import { getExamYears, getHistoricalPaper, getRandomPaper, isExamSupportedByCDN } from '../lib/cdnQuestions'
 import { isAnswerCorrect } from '../utils/scoring'
+import { addWrong } from '../lib/wrongBank'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -596,6 +597,17 @@ function ExamResults({ papers, navigate }) {
     return acc
   }, { _offset: 0 })
 
+  // 提前算 wrongQuestions（含 myAnswer 與 correct 標記），用於：
+  //   1. 儲存到 mock-exam-history 供日後再次檢討
+  //   2. 自動加入錯題夾（wrongBank）
+  //   3. 結果頁底部「檢討錯題」按鈕
+  const wrongQuestions = allQuestions.map((q, i) => {
+    const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
+    const qIdx = pIdx === 0 ? i : i - papers[0].questions.length
+    const myAnswer = papers[pIdx]?.answers[qIdx] || null
+    return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer) }
+  }).filter(q => !q.correct)
+
   useEffect(() => {
     if (saved) return
     setSaved(true)
@@ -611,9 +623,17 @@ function ExamResults({ papers, navigate }) {
       const key = 'mock-exam-history'
       const prev = JSON.parse(localStorage.getItem(key) || '[]')
       const paperName = isFullExam ? '完整模擬考' : papers[0].paperName
-      prev.unshift({ date: new Date().toISOString(), paper: paperName, score: isWeighted ? totalScore : totalCorrect, total: isWeighted ? TOTAL_POINTS : totalQuestions, pct, passed, timeUsed: totalTime })
+      prev.unshift({
+        date: new Date().toISOString(), paper: paperName,
+        score: isWeighted ? totalScore : totalCorrect,
+        total: isWeighted ? TOTAL_POINTS : totalQuestions,
+        pct, passed, timeUsed: totalTime,
+        wrongQuestions,   // 存錯題 → 之後可從歷史紀錄再次檢討
+      })
       localStorage.setItem(key, JSON.stringify(prev.slice(0, 20)))
     } catch {}
+    // 自動加入錯題夾
+    addWrong(wrongQuestions)
     // Submit per-question stats
     const stats = allQuestions.filter(q => q.id).map((q, i) => {
       const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
@@ -659,13 +679,6 @@ function ExamResults({ papers, navigate }) {
       }).catch(() => {})
     }
   }, [])
-
-  const wrongQuestions = allQuestions.map((q, i) => {
-    const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
-    const qIdx = pIdx === 0 ? i : i - papers[0].questions.length
-    const myAnswer = papers[pIdx]?.answers[qIdx] || null
-    return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer) }
-  }).filter(q => !q.correct)
 
   return (
     <div className="flex flex-col min-h-dvh grad-header">

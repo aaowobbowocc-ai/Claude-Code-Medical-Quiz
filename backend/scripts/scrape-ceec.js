@@ -103,24 +103,42 @@ const REGISTRY = {
         science: { q: '/files/file_pool/1/0j076533104764853905/05-105%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E8%A9%A6%E9%A1%8C%E5%AE%9A%E7%A8%BF.pdf',       a: '/files/file_pool/1/0j076533103120985978/05-105%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E7%AD%94%E6%A1%88.pdf' },
       },
       '104': {
-        // zh Q 尚未找到（僅有答案 01-104...國文選擇題答案.pdf）
+        zh:      { q: '/files/file_pool/1/0j076798186273765810/01-104%e5%ad%b8%e6%b8%ac%e5%9c%8b%e6%96%87%e5%ae%9a%e7%a8%bf.pdf',                        a: '/files/file_pool/1/0j076798186818644838/01-104%E5%AD%B8%E6%B8%AC%E5%9C%8B%E6%96%87%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
         en:      { q: '/files/file_pool/1/0j076572827714606282/02-104%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E5%AE%9A%E7%A8%BF.pdf',                        a: '/files/file_pool/1/0j076572827358575210/02-104%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
         social:  { q: '/files/file_pool/1/0j076460240926078376/04-104%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83%E7%A7%91%E5%AE%9A%E7%A8%BF.pdf',               a: '/files/file_pool/1/0j076460240560957303/04-104%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
         // science A 尚未找到
       },
       '103': {
-        zh:      { q: '/files/file_pool/1/0j076797377643100370/01-103%E5%AD%B8%E6%B8%AC%E5%9C%8B%E6%96%87%E8%A9%A6%E9%A1%8C(%E5%AE%9A%E7%A8%BF).pdf' }, // A 尚未找到
+        zh:      { q: '/files/file_pool/1/0j076797377643100370/01-103%E5%AD%B8%E6%B8%AC%E5%9C%8B%E6%96%87%E8%A9%A6%E9%A1%8C(%E5%AE%9A%E7%A8%BF).pdf',     a: '/files/file_pool/1/0j076797377821958325/01-103%E5%AD%B8%E6%B8%AC%E5%9C%8B%E6%96%87%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
         en:      { q: '/files/file_pool/1/0j076572147183041652/02-103%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87-%E5%AE%9A%E7%A8%BF.pdf',                       a: '/files/file_pool/1/0j076572148362899607/02-103%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
         social:  { q: '/files/file_pool/1/0j076456136302776377/04-103%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83-%E5%AE%9A%E7%A8%BF%E5%BE%8C%E4%BF%AE-v1.pdf' }, // A 尚未找到
         science: { q: '/files/file_pool/1/0j076528377326460907/05-103%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E8%A9%A6%E9%A1%8C(%E5%AE%9A%E7%A8%BF).pdf',     a: '/files/file_pool/1/0j076528378504218952/05-103%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
       },
       '102': {
+        zh:      { q: '/files/file_pool/1/0j076796218291393795/01-102%e5%ad%b8%e6%b8%ac%e5%9c%8b%e6%96%87%e5%ae%9a%e7%a8%bf.pdf',                        a: '/files/file_pool/1/0j076796219835272712/01-102%E5%AD%B8%E6%B8%AC%E5%9C%8B%E6%96%87%E7%AD%94%E6%A1%88.pdf' },
         en:      { q: '/files/file_pool/1/0j076571313825971626/02-102%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87(%E5%AE%9A%E7%A8%BF)%20.pdf',                  a: '/files/file_pool/1/0j076571314003729671/02-102%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E7%AD%94%E6%A1%88.pdf' },
-        // zh/social/science Q 尚未找到
+        social:  { q: '/files/file_pool/1/0j076452783122453305/02-102%e5%ad%b8%e6%b8%ac%e7%a4%be%e6%9c%83%e5%ae%9a%e7%a8%bf.pdf',                       a: '/files/file_pool/1/0j076452784300201350/04-102%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83%E7%AD%94%E6%A1%88.pdf' },
+        science: { q: '/files/file_pool/1/0j076524764880916963/05-102%e5%ad%b8%e6%b8%ac%e8%87%aa%e7%84%b6%e7%a7%91(%e5%ae%9a%e7%a8%bf).pdf',             a: '/files/file_pool/1/0j076524764424885980/05-102%e5%ad%b8%e6%b8%ac%e8%87%aa%e7%84%b6%e7%ad%94%e6%a1%88.pdf' },
       },
       '101': {
+        zh:      { q: '/files/file_pool/1/0j076795466755949741/01-101%e5%ad%b8%e6%b8%ac%e5%9c%8b%e6%96%87%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf.pdf',     a: '/files/file_pool/1/0j076795465577191796/01-101%e5%ad%b8%e6%b8%ac%e5%9c%8b%e6%96%87%e7%ad%94%e6%a1%88%e5%ae%9a%e7%a8%bf0.pdf' },
         en:      { q: '/files/file_pool/1/0j076570671923496609/02-101%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E8%A9%A6%E5%8D%B7%E5%AE%9A%E7%A8%BF.pdf',     a: '/files/file_pool/1/0j076570670745648654/02-101%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E7%AD%94%E6%A1%88%E5%AE%9A%E7%A8%BF0.pdf' },
-        // zh/social/science Q 尚未找到
+        social:  { q: '/files/file_pool/1/0j076450921220989289/04-101%e5%ad%b8%e6%b8%ac%e7%a4%be%e6%9c%83%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf%e5%be%8c%e4%bf%ae.pdf' }, // A 尚未找到
+        science: { q: '/files/file_pool/1/0j076521891345563819/05-101%e5%ad%b8%e6%b8%ac%e8%87%aa%e7%84%b6%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf.pdf',     a: '/files/file_pool/1/0j076521890176715864/05-101%e5%ad%b8%e6%b8%ac%e8%87%aa%e7%84%b6%e7%ad%94%e6%a1%88%e5%ae%9a%e7%a8%bf0.pdf' },
+      },
+      '100': {
+        zh:      { q: '/files/file_pool/1/0j076794922031757742/01-100%e5%ad%b8%e6%b8%ac%e5%9c%8b%e6%96%87%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf.pdf',     a: '/files/file_pool/1/0j076794922675626779/100%e5%ad%b8%e6%b8%ac%e5%9c%8b%e6%96%87%e5%8f%83%e8%80%83%e7%ad%94%e6%a1%88%e5%ae%9a%e7%a8%bf.pdf' },
+        en:      { q: '/files/file_pool/1/0j076570267209194600/02-100%e5%ad%b8%e6%b8%ac%e8%8b%b1%e6%96%87%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf.pdf',     a: '/files/file_pool/1/0j076570278844073637/100%e5%ad%b8%e6%b8%ac%e8%8b%b1%e6%96%87%e5%8f%83%e8%80%83%e7%ad%94%e6%a1%88%e5%ae%9a%e7%a8%bf.pdf' },
+        social:  { q: '/files/file_pool/1/0j076449537506787280/04-100%e5%ad%b8%e6%b8%ac%e7%a4%be%e6%9c%83%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf.pdf',     a: '/files/file_pool/1/0j076449538141656207/100%e5%ad%b8%e6%b8%ac%e7%a4%be%e6%9c%83%e5%8f%83%e8%80%83%e7%ad%94%e6%a1%88%e5%ae%9a%e7%a8%bf.pdf' },
+        science: { q: '/files/file_pool/1/0j076520808630361810/05-100%e5%ad%b8%e6%b8%ac%e8%87%aa%e7%84%b6%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf.pdf',     a: '/files/file_pool/1/0j076520808175240837/100%e5%ad%b8%e6%b8%ac%e8%87%aa%e7%84%b6%e5%8f%83%e8%80%83%e7%ad%94%e6%a1%88%e5%ae%9a%e7%a8%bf.pdf' },
+      },
+      // CEEC 官方參考試卷（111 學年度起適用，非年度考試）
+      // 著作權屬 CEEC，公開免費使用
+      'ref': {
+        zh:      { q: '/files/file_pool/1/0K097328714528444354/11-%E5%9C%8B%E7%B6%9C%E5%8F%83%E8%80%83%E8%A9%A6%E5%8D%B7%28%E5%8D%B7%E4%B8%80%29109.04.06%E6%9B%B4%E6%96%B0.pdf', a: '/files/file_pool/1/0K090329026224904029/13-%E5%9C%8B%E7%B6%9C%E5%8F%83%E8%80%83%E8%A9%A6%E5%8D%B7%28%E5%8D%B7%E4%B8%80%29%20%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88%E8%88%87%E8%A9%95%E5%88%86%E5%8E%9F%E5%89%87109.03.30%E6%9B%B4%E6%96%B0.pdf' },
+        en:      { q: '/files/file_pool/1/0M263619256746092628/111%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%94%A8%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E8%80%83%E7%A7%91%E5%8F%83%E8%80%83%E8%A9%A6%E5%8D%B7.pdf', a: '/files/file_pool/1/0M263619887569719600/111%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%94%A8%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E8%80%83%E7%A7%91%E5%8F%83%E8%80%83%E8%A9%A6%E5%8D%B7%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88.pdf' },
+        social:  { q: '/files/file_pool/1/0K022540441422955985/01-%E7%A4%BE%E6%9C%83%E8%80%83%E7%A7%91%E5%8F%83%E8%80%83%E8%A9%A6%E5%8D%B7.pdf', a: '/files/file_pool/1/0K022540452500703930/03-%E7%A4%BE%E6%9C%83%E8%80%83%E7%A7%91%E5%8F%83%E8%80%83%E8%A9%A6%E5%8D%B7%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88.pdf' },
+        science: { q: '/files/file_pool/1/0K022533023261835915/01-%E8%87%AA%E7%84%B6%E8%80%83%E7%A7%91%E5%8F%83%E8%80%83%E8%A9%A6%E5%8D%B7.pdf', a: '/files/file_pool/1/0K022533034449682960/03-%E8%87%AA%E7%84%B6%E8%80%83%E7%A7%91%E5%8F%83%E8%80%83%E8%A9%A6%E5%8D%B7%E5%8F%83%E8%80%83%E7%AD%94%E6%A1%88.pdf' },
       },
     },
   },
@@ -282,7 +300,7 @@ function buildQuestions({ examId, year, subjectTag, subjectName, parsedQs, answe
     results.push({
       id,
       roc_year: year,
-      session: '第一次',
+      session: year === 'ref' ? '參考試卷' : '第一次',
       exam_code: `${examId}_${year}`,
       subject: subjectName,
       subject_tag: subjectTag,

@@ -106,12 +106,12 @@ const REGISTRY = {
         zh:      { q: '/files/file_pool/1/0j076798186273765810/01-104%e5%ad%b8%e6%b8%ac%e5%9c%8b%e6%96%87%e5%ae%9a%e7%a8%bf.pdf',                        a: '/files/file_pool/1/0j076798186818644838/01-104%E5%AD%B8%E6%B8%AC%E5%9C%8B%E6%96%87%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
         en:      { q: '/files/file_pool/1/0j076572827714606282/02-104%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E5%AE%9A%E7%A8%BF.pdf',                        a: '/files/file_pool/1/0j076572827358575210/02-104%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
         social:  { q: '/files/file_pool/1/0j076460240926078376/04-104%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83%E7%A7%91%E5%AE%9A%E7%A8%BF.pdf',               a: '/files/file_pool/1/0j076460240560957303/04-104%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
-        // science A 尚未找到
+        science: { q: '/files/file_pool/1/0j076531010040662906/05-104%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E5%AE%9A%E7%A8%BF.pdf',                       a: '/files/file_pool/1/0j076531011684531934/05-104%e5%ad%b8%e6%b8%ac%e8%87%aa%e7%84%b6%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf' },
       },
       '103': {
         zh:      { q: '/files/file_pool/1/0j076797377643100370/01-103%E5%AD%B8%E6%B8%AC%E5%9C%8B%E6%96%87%E8%A9%A6%E9%A1%8C(%E5%AE%9A%E7%A8%BF).pdf',     a: '/files/file_pool/1/0j076797377821958325/01-103%E5%AD%B8%E6%B8%AC%E5%9C%8B%E6%96%87%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
         en:      { q: '/files/file_pool/1/0j076572147183041652/02-103%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87-%E5%AE%9A%E7%A8%BF.pdf',                       a: '/files/file_pool/1/0j076572148362899607/02-103%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
-        social:  { q: '/files/file_pool/1/0j076456136302776377/04-103%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83-%E5%AE%9A%E7%A8%BF%E5%BE%8C%E4%BF%AE-v1.pdf' }, // A 尚未找到
+        social:  { q: '/files/file_pool/1/0j076456136302776377/04-103%E5%AD%B8%E6%B8%AC%E7%A4%BE%E6%9C%83-%E5%AE%9A%E7%A8%BF%E5%BE%8C%E4%BF%AE-v1.pdf',  a: '/files/file_pool/1/0j076456137480524322/04-103%e5%ad%b8%e6%b8%ac%e7%a4%be%e6%9c%83%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf' },
         science: { q: '/files/file_pool/1/0j076528377326460907/05-103%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E8%A9%A6%E9%A1%8C(%E5%AE%9A%E7%A8%BF).pdf',     a: '/files/file_pool/1/0j076528378504218952/05-103%E5%AD%B8%E6%B8%AC%E8%87%AA%E7%84%B6%E9%81%B8%E6%93%87%E9%A1%8C%E7%AD%94%E6%A1%88.pdf' },
       },
       '102': {
@@ -123,7 +123,7 @@ const REGISTRY = {
       '101': {
         zh:      { q: '/files/file_pool/1/0j076795466755949741/01-101%e5%ad%b8%e6%b8%ac%e5%9c%8b%e6%96%87%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf.pdf',     a: '/files/file_pool/1/0j076795465577191796/01-101%e5%ad%b8%e6%b8%ac%e5%9c%8b%e6%96%87%e7%ad%94%e6%a1%88%e5%ae%9a%e7%a8%bf0.pdf' },
         en:      { q: '/files/file_pool/1/0j076570671923496609/02-101%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E8%A9%A6%E5%8D%B7%E5%AE%9A%E7%A8%BF.pdf',     a: '/files/file_pool/1/0j076570670745648654/02-101%E5%AD%B8%E6%B8%AC%E8%8B%B1%E6%96%87%E7%AD%94%E6%A1%88%E5%AE%9A%E7%A8%BF0.pdf' },
-        social:  { q: '/files/file_pool/1/0j076450921220989289/04-101%e5%ad%b8%e6%b8%ac%e7%a4%be%e6%9c%83%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf%e5%be%8c%e4%bf%ae.pdf' }, // A 尚未找到
+        social:  { q: '/files/file_pool/1/0j076450921220989289/04-101%e5%ad%b8%e6%b8%ac%e7%a4%be%e6%9c%83%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf%e5%be%8c%e4%bf%ae.pdf', a: '/files/file_pool/1/0j076450920042131234/04-101%e5%ad%b8%e6%b8%ac%e7%a4%be%e6%9c%83%e7%ad%94%e6%a1%88%e5%ae%9a%e7%a8%bf0.pdf' },
         science: { q: '/files/file_pool/1/0j076521891345563819/05-101%e5%ad%b8%e6%b8%ac%e8%87%aa%e7%84%b6%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf.pdf',     a: '/files/file_pool/1/0j076521890176715864/05-101%e5%ad%b8%e6%b8%ac%e8%87%aa%e7%84%b6%e7%ad%94%e6%a1%88%e5%ae%9a%e7%a8%bf0.pdf' },
       },
       '100': {

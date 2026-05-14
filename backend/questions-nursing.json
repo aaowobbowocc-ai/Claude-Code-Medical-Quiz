@@ -199422,15 +199422,16 @@
     "subject_name": "兒科護理學",
     "stage_id": 11,
     "number": 69,
-    "question": "小勇，10歲，罹患急性淋巴性白血病，目前接受化學治療中，有關其護理措施之敘述，下列何者",
+    "question": "小勇，10 歲，罹患急性淋巴性白血病，目前接受化學治療中，有關其護理措施之敘述，下列何者錯誤？",
     "options": {
-      "A": "錯誤？",
-      "B": "L-asparaginase會引起血糖過高，需要監測血糖",
-      "C": "Prednisolone會增加感染機會，需採保護性隔離",
-      "D": "Vincristine需監測手腳麻刺感和便秘的現象"
+      "A": "L-asparaginase 會引起血糖過高，需要監測血糖",
+      "B": "Prednisolone 會增加感染機會，需採保護性隔離",
+      "C": "Vincristine 需監測手腳麻刺感和便秘的現象",
+      "D": "Mycostatin 指導於飯後使用，預防革蘭氏陽性菌感染"
     },
-    "answer": "C",
-    "explanation": ""
+    "answer": "D",
+    "explanation": "",
+    "disputed": true
   },
   {
     "id": "112030_obs_ped_70",

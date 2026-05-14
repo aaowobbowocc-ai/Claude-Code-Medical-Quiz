@@ -366,6 +366,24 @@ function ExamInProgress({ paper, questions, onFinish, onBack }) {
     return () => clearInterval(timerRef.current)
   }, [])
 
+  // 防誤觸 edge-swipe / 上一頁手勢：先 push 一個守門 state，pop 時跳 confirm
+  // 修復 5/14 使用者回饋（習慣阿摩往左滑回上一題，誤觸後金幣被扣兩次）
+  useEffect(() => {
+    window.history.pushState({ examGuard: true }, '')
+    const handler = () => {
+      const ok = window.confirm('確定要離開考試嗎？本卷進度將不會保存（金幣不退）。')
+      if (ok) {
+        clearInterval(timerRef.current)
+        onBack()
+      } else {
+        // 使用者取消 → 補回守門 state，下次再 pop 還是會問
+        window.history.pushState({ examGuard: true }, '')
+      }
+    }
+    window.addEventListener('popstate', handler)
+    return () => window.removeEventListener('popstate', handler)
+  }, [onBack])
+
   const selectAnswer = (letter) => {
     navigator.vibrate?.(15)
     setAnswers(prev => ({ ...prev, [qIdx]: letter }))

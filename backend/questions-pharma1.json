@@ -58874,9 +58874,9 @@
       "number": 15,
       "question": "有一球形粉體密度1.3 g/mL，平均粒徑2.5 μm，依據Stokes'方程式測得該粉體在密度1.0 g/mL、黏稠度1 cp之水中沉降速率為 1.02×10 -4",
       "options": {
-        "C": "5",
         "A": "0.04",
         "B": "0.2",
+        "C": "5",
         "D": "25"
       },
       "answer": "B",
@@ -58957,9 +58957,9 @@
       "question": "下列何者在軟膏中不作為穿皮促進劑？",
       "options": {
         "A": "dimethyl formamide（DMF）",
-        "D": "sodium lauryl sulfate",
         "B": "sodium benzoate",
-        "C": "petroleum ether"
+        "C": "petroleum ether",
+        "D": "sodium lauryl sulfate"
       },
       "answer": "D",
       "explanation": "",
@@ -59919,9 +59919,9 @@
       "question": "下列藥物併用時生體可用率改變，其影響因子何者錯誤？",
       "options": {
         "A": "digoxin+amiodarone：後者抑制p-glycoprotein",
-        "D": "tolbutamide+rifampin ：後者抑制CYP 450",
         "B": "ritonavir+lopinavir ：前者抑制CYP 3A",
-        "C": "ritonavir+clarithromycin：前者抑制CYP 3A"
+        "C": "ritonavir+clarithromycin：前者抑制CYP 3A",
+        "D": "tolbutamide+rifampin ：後者抑制CYP 450"
       },
       "answer": "C",
       "explanation": "",
@@ -60110,9 +60110,9 @@
       "number": 73,
       "question": "某病人男性52歲，身高163公分，體重60公斤，血漿中肌酸酐濃度（C",
       "options": {
-        "C": "30.7",
         "A": "18.4",
         "B": "24.8",
+        "C": "30.7",
         "D": "45.6"
       },
       "answer": "B",
@@ -60242,9 +60242,9 @@
       "number": 79,
       "question": "已知tobramycin排除半衰期2小時，隨腎功能衰退而延長，一般劑量為160 mg q8h（Cl",
       "options": {
-        "C": "延長為q24h",
         "A": "維持q8h",
         "B": "延長為q12h",
+        "C": "延長為q24h",
         "D": "延長為q36h"
       },
       "answer": "C",
@@ -63714,8 +63714,8 @@
       "question": "當帶正電荷procaine與帶負電荷penicillin形成較低溶解度的Procaine Penicillin，此現象為何？",
       "options": {
         "A": "complex coacervation",
-        "C": "coalescence",
         "B": "flocculation",
+        "C": "coalescence",
         "D": "creaming"
       },
       "answer": "B",
@@ -63756,9 +63756,9 @@
       "question": "下圖為何種流體特性？",
       "options": {
         "A": "dilatant",
-        "D": "pseudoplastic",
         "B": "elastic",
-        "C": "Newtonian"
+        "C": "Newtonian",
+        "D": "pseudoplastic"
       },
       "answer": "A",
       "explanation": "",
@@ -63781,8 +63781,8 @@
       "question": "下列何者不適合作為sulfonamides粒子之凝絮劑？",
       "options": {
         "A": "l +++",
-        "C": "l -",
         "B": "Al+++",
+        "C": "l -",
         "D": "gelatin A在pH=3"
       },
       "answer": "D",
@@ -64000,8 +64000,8 @@
       "options": {
         "A": "adhesive layer→control membrane→drug reservoir→backing layer",
         "B": "drug reservoir→control membrane→adhesive layer→protective peel strip",
-        "D": "protective peel strip→control membrane→ adhesive layer→drug reservoir",
-        "C": "adhesive layer→drug reservoir→control membrane→backing layer"
+        "C": "adhesive layer→drug reservoir→control membrane→backing layer",
+        "D": "protective peel strip→control membrane→ adhesive layer→drug reservoir"
       },
       "answer": "C",
       "explanation": "",
@@ -64063,8 +64063,8 @@
       "question": "下列何者不具腸溶特性？",
       "options": {
         "A": "cellulose acetate phthalate",
-        "C": "hydroxypropyl methylcellulose phthalate",
         "B": "hydroxypropylcellulose",
+        "C": "hydroxypropyl methylcellulose phthalate",
         "D": "shellac"
       },
       "answer": "A",
@@ -64107,8 +64107,8 @@
       "question": "依據biopharmaceutics classification system（BCS）分類，低溶解度高穿透性的藥是屬於下列何類？",
       "options": {
         "A": "class 1",
-        "C": "class 3",
         "B": "class 2",
+        "C": "class 3",
         "D": "class 4"
       },
       "answer": "C",
@@ -64651,10 +64651,10 @@
       "number": 54,
       "question": "有關藥物的擬似分布體積（apparent volume of distribution，V",
       "options": {
-        "D": "是一常數，並不會因疾病狀況而改變",
         "A": "不一定需要經過計算後才能知道",
         "B": "需知道藥物是屬於何種藥動分室模式（compartment model）才能被計算",
-        "C": "V"
+        "C": "V",
+        "D": "是一常數，並不會因疾病狀況而改變"
       },
       "answer": "A",
       "explanation": "",
@@ -64872,8 +64872,8 @@
       "question": "下列藥物生體可用率不佳，其影響因子何者錯誤？",
       "options": {
         "A": "cyclosporine：低溶解度的藥物",
-        "C": "propranolol：首渡效應達75%",
         "B": "didanosine：胃酸中不安定",
+        "C": "propranolol：首渡效應達75%",
         "D": "rifampin：高溶解度的藥物"
       },
       "answer": "D",
@@ -64995,9 +64995,9 @@
       "number": 70,
       "question": "某藥在體內之排除完全經由CYP2D6及CYP3A4兩種酵素之代謝作用，已知CYP2D6及CYP3A4對此藥之代謝 參數如下表，當藥物之穩定狀態血中濃度為0.1mg/L時，經由CYP2D6及CYP3A4代謝之排除速率約占總排除 速率分別為何？ 代謝酵素 最大排除速率(V max )，mg/h Michaelis-Menten常數(K M )， mg/L",
       "options": {
-        "C": "33%及67%",
         "A": "82%及18%",
         "B": "67%及33%",
+        "C": "33%及67%",
         "D": "18%及82%"
       },
       "answer": "D",
@@ -65150,10 +65150,10 @@
       "number": 77,
       "question": "某藥物（f e =1、V",
       "options": {
-        "D": "0.05",
         "A": "0.83",
         "B": "0.5",
-        "C": "0.25"
+        "C": "0.25",
+        "D": "0.05"
       },
       "answer": "C",
       "explanation": ""
@@ -65170,9 +65170,9 @@
       "number": 78,
       "question": "文獻得知CYP2C9有CYP2C9*1、CYP2C9*2及CYP2C9*3等不同的基因型。根據此一敘述可稱CYP2C9*1、 CYP2C9*2或CYP2C9*3為CYP2C9的：",
       "options": {
-        "C": "phenotype polymorphism",
         "A": "single nucleotide polymorphism（SNP）",
         "B": "allele",
+        "C": "phenotype polymorphism",
         "D": "wild type gene"
       },
       "answer": "B",
@@ -68645,8 +68645,8 @@
       "question": "皂土乳漿（bentonite magma）靜置後形成gel，使用時需搖晃，此為下列何種現象？",
       "options": {
         "A": "cold flow",
-        "C": "Newtonian",
         "B": "dilatant",
+        "C": "Newtonian",
         "D": "thixotropy"
       },
       "answer": "B",
@@ -68667,8 +68667,8 @@
       "question": "利用下列何種染劑可以從顯微鏡下觀察W/O乳劑的外相？",
       "options": {
         "A": "Congo Red",
-        "C": "methylene blue",
         "B": "fluorescein isothiocyanate",
+        "C": "methylene blue",
         "D": "Orange II"
       },
       "answer": "B",
@@ -68709,9 +68709,9 @@
       "question": "一懸浮液塗抹於皮膚表面上如下圖所示，此流體特性為何？",
       "options": {
         "A": "dilatant",
-        "D": "Newtonian",
         "B": "elastic",
-        "C": "pseudoplastic"
+        "C": "pseudoplastic",
+        "D": "Newtonian"
       },
       "answer": "A",
       "explanation": "",
@@ -68798,8 +68798,8 @@
       "question": "下列有效成分的栓劑， 何者主要作用於局部？",
       "options": {
         "A": "chlorpromazine",
-        "C": "morphine",
         "B": "indomethacin",
+        "C": "morphine",
         "D": "miconazole"
       },
       "answer": "B",
@@ -68952,8 +68952,8 @@
       "question": "下列何種裝置，常用於藥物經皮吸收的研究？",
       "options": {
         "A": "Coulter Counter",
-        "C": "Franz diffusion cell",
         "B": "disintegration testing apparatus",
+        "C": "Franz diffusion cell",
         "D": "friabilator"
       },
       "answer": "B",
@@ -68995,8 +68995,8 @@
       "options": {
         "A": "avicel",
         "B": "dibasic calcium phosphate",
-        "D": "xylitol",
-        "C": "lactose"
+        "C": "lactose",
+        "D": "xylitol"
       },
       "answer": "D",
       "explanation": ""
@@ -69014,8 +69014,8 @@
       "question": "下列何者比較適合用來當作製備固醇類錠劑時的稀釋劑？",
       "options": {
         "A": "calcium sulfate",
-        "C": "sorbitol",
         "B": "lactose",
+        "C": "sorbitol",
         "D": "starch"
       },
       "answer": "A",
@@ -69305,8 +69305,8 @@
       "options": {
         "A": "steam",
         "B": "dry heat",
-        "D": "ionizing radiation",
-        "C": "filtration"
+        "C": "filtration",
+        "D": "ionizing radiation"
       },
       "answer": "C",
       "explanation": "",
@@ -69391,8 +69391,8 @@
       "options": {
         "A": "alprostadil",
         "B": "digoxin",
-        "D": "ondansetron",
-        "C": "haloperidol"
+        "C": "haloperidol",
+        "D": "ondansetron"
       },
       "answer": "C",
       "explanation": "",
@@ -69892,8 +69892,8 @@
       "question": "當使用codeine為止痛劑時，病人具有下列何種代謝酶多型性時較不易產生止痛作用？",
       "options": {
         "A": "CYP2C19之extensive metabolizer",
-        "C": "CYP2D6之extensive metabolizer",
         "B": "CYP2C19之poor metabolizer",
+        "C": "CYP2D6之extensive metabolizer",
         "D": "CYP2D6之poor metabolizer"
       },
       "answer": "C",
@@ -69958,8 +69958,8 @@
       "question": "下列那一個代謝酵素基因型與omeprazole及diazepam療效有關？",
       "options": {
         "A": "CYP3A4",
-        "C": "CYP2C9",
         "B": "CYP2C19",
+        "C": "CYP2C9",
         "D": "CYP1A2"
       },
       "answer": "C",
@@ -73586,8 +73586,8 @@
       "options": {
         "A": "sodium dodecyl sulfate",
         "B": "enzalkonium chloride",
-        "D": "polyoxyl 40 stearate",
-        "C": "benzalkonium chloride"
+        "C": "benzalkonium chloride",
+        "D": "polyoxyl 40 stearate"
       },
       "answer": "C",
       "explanation": ""
@@ -73604,9 +73604,9 @@
       "number": 12,
       "question": "預製備懸浮液（顆粒直徑為18 μm，密度為2.25 mg/mL），當懸浮於glycerin（密度1.25 mg/mL，黏度490",
       "options": {
-        "C": "m/s",
         "A": "2.0×10 -6",
         "B": "1.44×10 -4",
+        "C": "m/s",
         "D": "2.0×10 -7"
       },
       "answer": "C",
@@ -73900,8 +73900,8 @@
       "question": "下列何者不是發泡錠常添加的賦形劑？",
       "options": {
         "A": "citric acid",
-        "C": "sodium sulfate",
         "B": "sodium bicarbonate",
+        "C": "sodium sulfate",
         "D": "tartaric acid"
       },
       "answer": "C",
@@ -74782,8 +74782,8 @@
       "question": "若體外與體內溶離速率相似，依生物藥劑分類系統（biopharmaceutical classification system），何類藥物 可預期會有體外－體內相關性（in vitro-in vivo correlation）？",
       "options": {
         "A": "Class 1",
-        "C": "Class 3",
         "B": "Class 2",
+        "C": "Class 3",
         "D": "Class 4"
       },
       "answer": "A",
@@ -74847,9 +74847,9 @@
       "number": 70,
       "question": "已知某藥在體內之排除可用Michaelis-Menten動力學敘述，其給藥速率R（mg/day）與穩定狀態血中濃度",
       "options": {
-        "C": "400",
         "A": "600",
         "B": "500",
+        "C": "400",
         "D": "300"
       },
       "answer": "D",
@@ -74934,8 +74934,8 @@
       "question": "下列何者的代謝受CYP2D6之基因多型性影響較小？",
       "options": {
         "A": "codeine",
-        "C": "fluoxetine",
         "B": "dextromethorphan",
+        "C": "fluoxetine",
         "D": "losartan"
       },
       "answer": "D",
@@ -74953,9 +74953,9 @@
       "number": 75,
       "question": "已知A、B及C三藥的肝臟內生性清除率（f u",
       "options": {
-        "C": "藥",
         "A": "藥",
         "B": "藥",
+        "C": "藥",
         "D": "三藥相同"
       },
       "answer": "A",
@@ -78406,8 +78406,8 @@
       "question": "下列何種糖漿最適合用於苦味藥品之矯味劑？",
       "options": {
         "A": "cherry syrup",
-        "C": "cocoa syrup",
         "B": "orange syrup",
+        "C": "cocoa syrup",
         "D": "raspberry syrup"
       },
       "answer": "C",
@@ -78425,8 +78425,8 @@
       "number": 7,
       "question": "以流體受⼒之切變速率（Y軸）對應⼒（X軸）作圖，當A與B兩流體為通過原點的直線，且A的直線斜率⼤於 B，下列敘述何者正確？",
       "options": {
-        "B": "B為塑性流體",
         "A": "的黏稠度大於B",
+        "B": "B為塑性流體",
         "C": "A的黏稠度⼤於B",
         "D": "二者具有搖變性"
       },
@@ -78748,8 +78748,8 @@
       "question": "下列何者不屬於醇類之軟膏基劑？",
       "options": {
         "A": "cetyl alcohol",
-        "C": "pastibase",
         "B": "glycerol",
+        "C": "pastibase",
         "D": "lanolin"
       },
       "answer": "C",
@@ -79242,9 +79242,9 @@
       "question": "依中華藥典，apomorphine hydrochloride注射液可加入下列何者作為安定劑？",
       "options": {
         "A": "disodium EDTA 0.01%",
-        "D": "sodium metabisulfite 0.1%",
         "B": "cysteine 0.5%",
-        "C": "sodium bisulfite 0.05%"
+        "C": "sodium bisulfite 0.05%",
+        "D": "sodium metabisulfite 0.1%"
       },
       "answer": "A",
       "explanation": "",
@@ -79327,9 +79327,9 @@
       "number": 49,
       "question": "某藥品屬一室藥動性質，每12小時靜脈注射500 mg，已達穩定狀態，注射一劑後抽血得到數據如下表，此藥 的半衰期約為多少小時？ Time (h)112",
       "options": {
-        "C": "4.5",
         "A": "2.8",
         "B": "3.3",
+        "C": "4.5",
         "D": "6.6"
       },
       "answer": "C",
@@ -79655,8 +79655,8 @@
       "question": "有關CYP同功酶多型性對於藥物poor metabolizer的影響，下列何者錯誤？",
       "options": {
         "A": "CYP 2D6－clopidogrel增加⾎⼩板⽣成",
-        "C": "CYP 3A4－nifedipine增加低⾎壓危機",
         "B": "CYP 2C19－omeprazole降胃酸鹼值",
+        "C": "CYP 3A4－nifedipine增加低⾎壓危機",
         "D": "CYP 2C9－warfarin增加出⾎性危機"
       },
       "answer": "A",
@@ -79763,9 +79763,9 @@
       "question": "依據下表，那一個藥品的血液透析效果最佳？",
       "options": {
         "A": "digoxin",
-        "D": "salicylic acid",
         "B": "ethchlorvynol",
-        "C": "phenytoin"
+        "C": "phenytoin",
+        "D": "salicylic acid"
       },
       "answer": "A",
       "explanation": "",
@@ -79806,9 +79806,9 @@
       "number": 71,
       "question": "某藥在體內之排除完全經由CYP2D6及CYP3A4兩種酵素之代謝作用，已知CYP2D6及CYP3A4對此藥之代謝 參數如下表， 當藥物之穩定狀態血中濃度為20mg/L時，下列敘述何者正確？ 代謝酵素 最大排除速率(V max )， mg/h Michaelis-Menten常數 (K M )，mg/L",
       "options": {
-        "C": "此時藥經由CYP 3A4及CYP 2D6代謝之排除速率分別占總排除速率之25%及75%",
         "A": "此時藥主要是由CYP 3A4代謝排除，其排除速率約占總排除速率之90%",
         "B": "此時藥經由CYP 3A4及CYP 2D6代謝之排除速率分別占總排除速率之75%及25%",
+        "C": "此時藥經由CYP 3A4及CYP 2D6代謝之排除速率分別占總排除速率之25%及75%",
         "D": "此時藥主要是由CYP 2D6代謝加以排除，其排除速率約占總排除速率之90%"
       },
       "answer": "D",
@@ -83803,8 +83803,8 @@
       "options": {
         "A": "buccal tablet",
         "B": "dissolving tablet",
-        "D": "sugar coating tablet",
-        "C": "film coating tablet"
+        "C": "film coating tablet",
+        "D": "sugar coating tablet"
       },
       "answer": "C",
       "explanation": "",
@@ -84420,9 +84420,9 @@
       "number": 56,
       "question": "造成血漿蛋白質濃度降低的機轉，下列何者正確？①降低蛋白質生成（synthesis） （catabolism）③阻斷白蛋白（albumin）分布到血管外的空間（extravascular space） 腎排除，特別是白蛋白",
       "options": {
-        "C": "僅①②④",
         "A": "僅①②",
         "B": "僅③④",
+        "C": "僅①②④",
         "D": "①②③④"
       },
       "answer": "D",
@@ -84551,8 +84551,8 @@
       "question": "根據biopharmaceutics drug disposition classification system（BDDCS）的觀念，細胞膜轉運蛋白（membrane transporter）對具有下列何種biopharmaceutics classification system（BCS）特性之原料藥的影響最小？",
       "options": {
         "A": "class 1 ②增加蛋白質的代謝 ④更多的蛋白質經",
-        "C": "class 3",
         "B": "class 2",
+        "C": "class 3",
         "D": "class 4"
       },
       "answer": "A",
@@ -84720,10 +84720,10 @@
       "number": 70,
       "question": "某藥品其藥物動力學參數如下表，下列敘述何者正確？ effective oral availability urinary bound in volume of clearanceconcentration (%)excretion (%)plasma (%)distribution (L) range (mg/L) Vmax=450 90± 3290± 20mg/day5010-20 KM=5 mg/L ①重複持續給藥下，達穩定狀態的時間可用約5個半衰期估算 ②重複持續給藥下，加倍日劑量時，新穩定狀態平均濃度（Css）傾向大於原劑量之兩倍 ③加倍單次靜脈注射劑量，血漿濃度―時間曲線下面積（AUC）將大於原劑量之兩倍；但初始血漿濃度 （Cp0）則仍為原劑量之兩倍",
       "options": {
-        "C": "僅②③",
+        "A": "僅①②",
         "B": "僅①③",
-        "D": "①②③",
-        "A": "僅①②"
+        "C": "僅②③",
+        "D": "①②③"
       },
       "answer": "B",
       "explanation": "",
@@ -84918,9 +84918,9 @@
       "number": 79,
       "question": "已知A、B及C三藥的肝臟內生性清除率（f u",
       "options": {
-        "C": "藥",
         "A": "藥",
         "B": "藥",
+        "C": "藥",
         "D": "三藥皆不會改變"
       },
       "answer": "A",
@@ -88322,10 +88322,10 @@
       "number": 8,
       "question": "甲乙丙三種物質，其彈性係數分別是甲：2×10 12",
       "options": {
-        "D": "乙＞甲＞丙",
         "A": "甲＞乙＞丙",
         "B": "丙＞乙＞甲",
-        "C": "乙＞丙＞甲"
+        "C": "乙＞丙＞甲",
+        "D": "乙＞甲＞丙"
       },
       "answer": "B",
       "explanation": ""
@@ -88516,10 +88516,10 @@
       "number": 17,
       "question": "以可可脂製作基準為2克的栓劑，現擬製作含有水合三氯乙醛500 mg（藥量替換因子為0.67）之栓劑，則依",
       "options": {
-        "D": "2.180",
         "A": "2.000",
         "B": "2.019",
-        "C": "2.085"
+        "C": "2.085",
+        "D": "2.180"
       },
       "answer": "D",
       "explanation": ""
@@ -88603,8 +88603,8 @@
       "question": "苯甲酸與聚乙二醇製作軟膏時，應在基劑中加入下列何者，以增進二者的相容性？",
       "options": {
         "A": "cetyl alcohol",
-        "C": "1,6-hexanediol",
         "B": "stearyl alcohol",
+        "C": "1,6-hexanediol",
         "D": "1,2,6-hexanetriol"
       },
       "answer": "A",
@@ -89093,8 +89093,8 @@
       "question": "依中華藥典第八版，下列何藥須冷藏避光貯之，且其注射液不得冷凍？",
       "options": {
         "A": "cyclosporine",
-        "C": "perphenazine",
         "B": "digoxin",
+        "C": "perphenazine",
         "D": "vasopressin"
       },
       "answer": "C",
@@ -89176,9 +89176,9 @@
       "number": 48,
       "question": "某男性病人（23歲，75kg），經靜脈注射某降血壓藥20 mg/kg後，該藥屬二室式線性動力學特性，其血中藥 物濃度經時變化關係式為C p = 8.8e -1.9t + 3.2e -0.3t",
       "options": {
-        "C": "125",
         "A": "12.5",
         "B": "17",
+        "C": "125",
         "D": "170"
       },
       "answer": "D",
@@ -89264,10 +89264,10 @@
       "number": 52,
       "question": "某藥物在體內之藥物動力學遵循二室分室模式，已知該藥的排除速率常數（elimination rate constant）k=0.4 h - 1 ，該藥的中央室分布體積（V p ）是5 L，而擬似分布體積（V",
       "options": {
-        "D": "16",
         "A": "2",
         "B": "4",
-        "C": "8"
+        "C": "8",
+        "D": "16"
       },
       "answer": "D",
       "explanation": "",
@@ -89286,9 +89286,9 @@
       "number": 53,
       "question": "由文獻得知一藥靜脈注射劑量D0後的體內動力學符合上述模室理論。藥品血中濃度公式為Cp=Ae-at+ Be-bt+ Ce-ct。下列敘述何者錯誤？",
       "options": {
-        "C": "參數a、b通常較c大，代表藥物快速分佈相。",
         "A": "採樣排除相的兩點血中濃度，所得的速率常數為k",
         "B": "藥物在體內的清除率 (CL) 可藉由劑量除以曲線下面積 (AUC) 求得。",
+        "C": "參數a、b通常較c大，代表藥物快速分佈相。",
         "D": "若採樣的血液樣本僅在排除相，無法準確計算V p"
       },
       "answer": "A",
@@ -89767,8 +89767,8 @@
       "question": "有關基因多型性（genetic polymorphism）對藥動學影響之敘述，下列何者正確？",
       "options": {
         "A": "CYP2C9之基因多型性會顯著影響phenytoin之代謝",
-        "C": "CYP2D6之基因多型性會顯著影響omeprazole之藥動學性質",
         "B": "CYP2C19之基因多型性會顯著影響propranolol之代謝",
+        "C": "CYP2D6之基因多型性會顯著影響omeprazole之藥動學性質",
         "D": "CYP1A2之基因多型性會顯著影響codeine之代謝"
       },
       "answer": "C",
@@ -94437,9 +94437,9 @@
       "number": 61,
       "question": "下列何種方式可用於評估biopharmaceutics classification system（BCS）中藥品的滲透性（permeability）：①in situ intestinal perfusion study in rats ②in vitro permeation experiments across a monolayer of cultured Caco-2",
       "options": {
-        "C": "①③④",
         "A": "①②③",
         "B": "②③④",
+        "C": "①③④",
         "D": "①②④"
       },
       "answer": "C",
@@ -94563,9 +94563,9 @@
       "number": 67,
       "question": "某藥物在腸道之穿透甚佳且吸收相當好，但其溶解度不佳。若依生物藥劑分類系統（biopharmaceutics",
       "options": {
-        "C": "Class 3",
         "A": "Class 1",
         "B": "Class 2",
+        "C": "Class 3",
         "D": "Class 4"
       },
       "answer": "A",
@@ -94695,9 +94695,9 @@
       "number": 73,
       "question": "某男性病人52歲，身高163公分，體重103公斤，血漿中肌酸酐濃度（C",
       "options": {
-        "C": "20，不相當",
         "A": "20，相當",
         "B": "29，相當",
+        "C": "20，不相當",
         "D": "29，不相當"
       },
       "answer": "A",
@@ -107217,10 +107217,10 @@
       "number": 59,
       "question": "某藥品體內動態為一室模式，V",
       "options": {
-        "D": "僅②③",
         "A": "僅①②",
         "B": "①②③",
-        "C": "僅①③"
+        "C": "僅①③",
+        "D": "僅②③"
       },
       "answer": "D",
       "explanation": ""

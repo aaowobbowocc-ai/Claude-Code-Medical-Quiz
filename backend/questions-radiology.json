@@ -118229,8 +118229,8 @@
       "question": "下圖表示染色體的變異，A圖現象發生在細胞週期晚期；B圖現象發生在細胞週期早期。下列敘述何者正確？",
       "options": {
         "A": "染色體-型式的變異（chromosome-type aberrations）發生在間期（interphase）早期（G1）；而染色分體-型式的變異",
-        "C": "圖A的變異稱為染色體-型式的變異（chromosome-type aberrations）",
         "B": "染色分體-型式的變異（chromosome-type aberrations），是在染色體複製之後的現象，故該類損傷不會造成細胞死亡",
+        "C": "圖A的變異稱為染色體-型式的變異（chromosome-type aberrations）",
         "D": "圖A與圖B的現象都會造成染色體變異，但細胞繼續進行分裂時，還是能獲得足夠的遺傳訊息，所以兩種現象的細胞都能存活"
       },
       "answer": "A",
@@ -118333,8 +118333,8 @@
       "options": {
         "A": "是細胞存活膚降至10%所需的劑蛉值",
         "B": "D0越大，放射敏感度越大",
-        "D": "哺乳類細胞的D 0 值約在1～2 Gy間",
-        "C": "相當於細胞存活曲線的起始斜率（initial slope）"
+        "C": "相當於細胞存活曲線的起始斜率（initial slope）",
+        "D": "哺乳類細胞的D 0 值約在1～2 Gy間"
       },
       "answer": "D",
       "explanation": ""
@@ -118555,9 +118555,9 @@
       "number": 20,
       "question": "60Co治療機之射源直徑為1.5 cm, SSD=100 cm, SDD=50 cm, 請問皮膚下面10 cm深處之幾何半影 (geometric penumbra) 大小 (cm) 為何?",
       "options": {
-        "C": "1.8",
         "A": "1.2",
         "B": "1.5",
+        "C": "1.8",
         "D": "2"
       },
       "answer": "C",
@@ -118595,9 +118595,9 @@
       "number": 22,
       "question": "已知 60",
       "options": {
-        "C": "155.4",
-        "B": "99.6",
         "A": "96.2",
+        "B": "99.6",
+        "C": "155.4",
         "D": "無法計算"
       },
       "answer": "B",
@@ -118615,9 +118615,9 @@
       "number": 23,
       "question": "有一 60",
       "options": {
-        "C": "1.021",
         "A": "0.958",
         "B": "0.979",
+        "C": "1.021",
         "D": "1.043"
       },
       "answer": "D",
@@ -118918,10 +118918,10 @@
       "number": 38,
       "question": "深度同為d，照野r",
       "options": {
-        "D": "TPR（tissue-phantom ratio）",
         "A": "SAR（scatter-air ratio）",
         "B": "SMR（scatter-maximum ratio）",
-        "C": "TMR（tissue-maximum ratio）"
+        "C": "TMR（tissue-maximum ratio）",
+        "D": "TPR（tissue-phantom ratio）"
       },
       "answer": "A",
       "explanation": ""
@@ -118999,8 +118999,8 @@
       "question": "下列何種同位素較適合作為永久性插種治療的射源？",
       "options": {
         "A": "60",
-        "C": "s",
         "B": "192 Ir",
+        "C": "s",
         "D": "137"
       },
       "answer": "C",
@@ -119338,8 +119338,8 @@
       "number": 59,
       "question": "下圖為一位肺癌病人接受三度空間順形治療計畫之劑量體積直方圖（dose volume histogram），curve A與curve B分別為A與",
       "options": {
-        "B": "計畫",
         "A": "計畫",
+        "B": "計畫",
         "C": "相同安全",
         "D": "無法評估"
       },
@@ -119442,8 +119442,8 @@
       "question": "電腦斷層CT影像成為放射治療計畫中很重要的設備工具，下列相關敘述何者錯誤？",
       "options": {
         "A": "CT模擬定位影像配合電腦可以提供準確的劑量計算",
-        "C": "CT對於腦部內腫瘤與正常組織區分能力比MRI好",
         "B": "CT可以提供腫瘤及鄰近組織器官的位置",
+        "C": "CT對於腦部內腫瘤與正常組織區分能力比MRI好",
         "D": "CT可以得到準確的人體外表輪廓"
       },
       "answer": "C",
@@ -119521,9 +119521,9 @@
       "number": 68,
       "question": "一純鉛擋塊（lead block）厚度為5.0 cm，欲達相同之輻射屏蔽效果，則Lipowitz metal（Cerrobend）擋塊之厚度應約為多少",
       "options": {
-        "C": "6.0",
         "A": "4.2",
         "B": "5.0",
+        "C": "6.0",
         "D": "7.0"
       },
       "answer": "C",
@@ -119604,9 +119604,9 @@
       "number": 72,
       "question": "依輻射醫療曝露品質保證標準規定， 60",
       "options": {
-        "C": "3",
         "A": "1",
         "B": "2",
+        "C": "3",
         "D": "4"
       },
       "answer": "B",
@@ -119664,9 +119664,9 @@
       "number": 75,
       "question": "依據國內法規，下述關於射束平坦性的品保要求那些正確？①直線加速器之光子平坦性＜2% ②直線加速器之電子平坦性＜ 2% ③60Co治療機之射束平坦性＜5% ④直線加速器之光子平坦性＜3% ⑤直線加速器之電子平坦性＜3% ⑥60Co治療機 之射束平坦性＜3%",
       "options": {
-        "C": "②④⑥",
         "A": "①②③",
         "B": "①③⑤",
+        "C": "②④⑥",
         "D": "④⑤⑥"
       },
       "answer": "B",
@@ -119765,8 +119765,8 @@
       "question": "下列何種設備之治療室須考慮中子輻射屏蔽的問題？",
       "options": {
         "A": "60",
-        "C": "能量大於10 MV之直線加速器",
         "B": "Tomotherapy",
+        "C": "能量大於10 MV之直線加速器",
         "D": "遙控後荷式近接治療機"
       },
       "answer": "C",
@@ -120368,8 +120368,8 @@
       "question": "最大亮度投影（maximum intensity projection，MIP）最常應用在：",
       "options": {
         "A": "CT血管影像",
-        "C": "CT骨骼影像",
         "B": "去脂肪影像",
+        "C": "CT骨骼影像",
         "D": "CT胃腸影像"
       },
       "answer": "A",
@@ -121551,9 +121551,9 @@
       "question": "若所使用增感屏之厚度越厚時，下列描述何者正確？",
       "options": {
         "A": "DQE值上升",
-        "D": "intensifier factor降低",
         "B": "空間解析度變好",
-        "C": "MTF值上升"
+        "C": "MTF值上升",
+        "D": "intensifier factor降低"
       },
       "answer": "A",
       "explanation": ""
@@ -121853,9 +121853,9 @@
       "number": 22,
       "question": "多切面電腦斷層掃描儀通常有兩個準直儀，對於病人前準直儀（prepatient collimator）及偵檢器前準直儀（predetector",
       "options": {
-        "C": "偵檢器前準直儀提高影像對比",
         "A": "病人前準直儀會影響病人的輻射劑量",
         "B": "病人前準直儀定義射束寬度",
+        "C": "偵檢器前準直儀提高影像對比",
         "D": "偵檢器前準直儀定義射束寬度"
       },
       "answer": "D",
@@ -121913,10 +121913,10 @@
       "number": 25,
       "question": "超音波都卜勒偏移（Doppler shift, kHz, f",
       "options": {
-        "D": "＝4 × f 0 × c / v",
         "A": "f",
         "B": "f",
-        "C": "f"
+        "C": "f",
+        "D": "＝4 × f 0 × c / v"
       },
       "answer": "A",
       "explanation": ""
@@ -123181,8 +123181,8 @@
       "question": "下列何種放射性同位素所標誌的化合物其同位素效應（isotope effect）最為明顯？",
       "options": {
         "A": "11",
-        "C": "3 H",
         "B": "125 I",
+        "C": "3 H",
         "D": "18 F"
       },
       "answer": "C",
@@ -123300,9 +123300,9 @@
       "number": 14,
       "question": "使用計數率為25%的蓋格計數器，測定 137",
       "options": {
-        "C": "1.80×10 -3",
         "A": "1.1×10 -1",
         "B": "6.5×10 -2",
+        "C": "1.80×10 -3",
         "D": "3.64×10 -4"
       },
       "answer": "C",
@@ -124165,8 +124165,8 @@
       "options": {
         "A": "A圖是左後側位造影",
         "B": "D圖是左側位造影",
-        "D": "本檢查結果顯示受檢者患有急性腎衰竭",
-        "C": "本檢查結果顯示受檢者患有急性肺臟栓塞"
+        "C": "本檢查結果顯示受檢者患有急性肺臟栓塞",
+        "D": "本檢查結果顯示受檢者患有急性腎衰竭"
       },
       "answer": "B",
       "explanation": "",
@@ -124629,10 +124629,10 @@
       "number": 80,
       "question": "關於深部等效劑量（deep-dose equivalent﹐H",
       "options": {
-        "D": "淺部等效劑量指人體表面定點下0.07毫米深度處軟組織體外暴露之等效劑量",
         "A": "深部等效劑量是指強穿輻射的個人等價劑量",
         "B": "淺部等效劑量是指弱穿輻射的個人等價劑量",
-        "C": "深部等效劑量指人體表面定點下1毫米深度處軟組織體內暴露之等效劑量"
+        "C": "深部等效劑量指人體表面定點下1毫米深度處軟組織體內暴露之等效劑量",
+        "D": "淺部等效劑量指人體表面定點下0.07毫米深度處軟組織體外暴露之等效劑量"
       },
       "answer": "D",
       "explanation": ""
@@ -126297,8 +126297,8 @@
       "number": 3,
       "question": "將1.2×10 8",
       "options": {
-        "B": "2.0×10 11",
         "A": "1.2×10 10",
+        "B": "2.0×10 11",
         "C": "1.2×10 12",
         "D": "2.0×10 13"
       },
@@ -126337,9 +126337,9 @@
       "number": 5,
       "question": "請問 60",
       "options": {
-        "C": "1.098×10 -2",
         "A": "2.113×10 -2",
         "B": "1.315",
+        "C": "1.098×10 -2",
         "D": "3.513×10 -1"
       },
       "answer": "C",
@@ -127085,8 +127085,8 @@
       "number": 42,
       "question": "某核種之物理半衰期TP很長，而在人體內之生物半衰期TB很短，則其有效半衰期TE為：",
       "options": {
-        "B": "TETP",
         "A": "T E T",
+        "B": "TETP",
         "C": "T E T",
         "D": "T E T P"
       },
@@ -128230,8 +128230,8 @@
       "question": "如圖所示，當改變不同的照野大小時，可測量下列何者？",
       "options": {
         "A": "S",
-        "C": ",p",
         "B": "S p",
+        "C": ",p",
         "D": "S s,d"
       },
       "answer": "C",
@@ -128415,9 +128415,9 @@
       "number": 28,
       "question": "已知 60",
       "options": {
-        "C": "168 R/min",
         "A": "1.68 R/min",
         "B": "16.8 R/min",
+        "C": "168 R/min",
         "D": "1680 R/min"
       },
       "answer": "C",
@@ -128615,9 +128615,9 @@
       "number": 38,
       "question": "於空氣中的一點量測到曝露量為200 R，試換算其為多少Gy？（1R=2.58×10 -4",
       "options": {
-        "C": "1.20",
         "A": "2.58",
         "B": "1.75",
+        "C": "1.20",
         "D": "0.58"
       },
       "answer": "B",
@@ -128795,9 +128795,9 @@
       "number": 47,
       "question": "關於光子射束劑量計算系統中，吸收劑量（D）與碰撞克馬（K",
       "options": {
-        "C": "在電子平衡區時，β＜1",
         "A": "β與入射能量無關",
         "B": "在電子增建區時，β＞1",
+        "C": "在電子平衡區時，β＜1",
         "D": "在暫態電子平衡區時，β＞1"
       },
       "answer": "D",
@@ -129002,9 +129002,9 @@
       "question": "在電腦化的治療計畫計算系統中，設計射束的最佳入射角度及照野形狀時，下列何者是最有用的工具？",
       "options": {
         "A": "DVH",
-        "D": "isodose curve displays",
         "B": "isosurface viewing tools",
-        "C": "BEV"
+        "C": "BEV",
+        "D": "isodose curve displays"
       },
       "answer": "C",
       "explanation": ""
@@ -129463,8 +129463,8 @@
       "options": {
         "A": "well-type ion chamber",
         "B": "diode detector",
-        "D": "film",
-        "C": "TLD"
+        "C": "TLD",
+        "D": "film"
       },
       "answer": "A",
       "explanation": ""
@@ -130641,8 +130641,8 @@
       "options": {
         "A": "acoustic shadow",
         "B": "distal acoustic enhancement",
-        "D": "section-thickness artifact",
-        "C": "comet tail artifact"
+        "C": "comet tail artifact",
+        "D": "section-thickness artifact"
       },
       "answer": "A",
       "explanation": "",
@@ -131410,8 +131410,8 @@
       "question": "臨床使用的雙源電腦斷層（dual-source CT），其主要應用是：",
       "options": {
         "A": "cardiac imaging",
-        "C": "perfusion",
         "B": "angiography",
+        "C": "perfusion",
         "D": "mammography"
       },
       "answer": "A",
@@ -131618,9 +131618,9 @@
       "number": 25,
       "question": "若二介質的聲阻抗（media impedance）分別為40和60 rayls，則強度傳輸係數（intensity transmission",
       "options": {
-        "C": "0.56",
         "A": "0.04",
         "B": "0.48",
+        "C": "0.56",
         "D": "0.96"
       },
       "answer": "D",
@@ -132321,9 +132321,9 @@
       "number": 60,
       "question": "根據ICRU 19號報告的定義，放射核種之暴露率常數（exposure rate constant）Γ δ ，與 specific γ-ray",
       "options": {
-        "C": "Γ δ 值可由測量準確求得",
         "A": "Γ δ 有考慮來自射源的x光成分的暴露率",
         "B": "同一射源之Γ δ 值比Γ小一些",
+        "C": "Γ δ 值可由測量準確求得",
         "D": "Γ值可由測量準確求得"
       },
       "answer": "A",
@@ -132608,8 +132608,8 @@
       "question": "下列會放出正子的同位素中，其正子射程（positron range）的大小排列順序為？",
       "options": {
         "A": "C-11 > N-13 > O-15 > F-18",
-        "C": "F-18 > C-11 > N-13 > O-15",
         "B": "N-13 > F-18 > O-15 > C-11",
+        "C": "F-18 > C-11 > N-13 > O-15",
         "D": "O-15 > N-13 > C-11 > F-18"
       },
       "answer": "D",
@@ -132668,8 +132668,8 @@
       "question": "下列有關偵檢器之敘述，何者錯誤？",
       "options": {
         "A": "crystal厚度愈厚，其靈敏度（sensitivity）愈差",
-        "C": "rystal厚度愈薄，其解析度（resolution）愈佳",
         "B": "crystal是將光子轉換成可見光",
+        "C": "rystal厚度愈薄，其解析度（resolution）愈佳",
         "D": "crystal厚度愈薄，其解析度（resolution）愈佳"
       },
       "answer": "A",
@@ -132687,9 +132687,9 @@
       "number": 78,
       "question": "在PET造影中常使用的放射元素 11",
       "options": {
-        "C": "< 18 F < 13 N < 15 O",
         "A": "11",
         "B": "15 O > 11",
+        "C": "< 18 F < 13 N < 15 O",
         "D": "11"
       },
       "answer": "C",
@@ -132928,8 +132928,8 @@
       "question": "下列各種藥物均與DNA的複製有關，惟何者除外？",
       "options": {
         "A": "11",
-        "C": "-thymidine",
         "B": "18 F-FLT",
+        "C": "-thymidine",
         "D": "18 F-FUdR"
       },
       "answer": "A",
@@ -133248,9 +133248,9 @@
       "question": "下列何種藥物可作為 201 Tl-TlCl心肌灌注造影的壓力試驗（stress test）？",
       "options": {
         "A": "minophylline",
-        "D": "Lugol solution",
         "B": "furosemide",
-        "C": "aminophylline"
+        "C": "aminophylline",
+        "D": "Lugol solution"
       },
       "answer": "A",
       "explanation": ""
@@ -133921,8 +133921,8 @@
       "question": "下列何種射源，能量與 125 I相近，常用來校正放射免疫分析專用的加馬計數器？",
       "options": {
         "A": "57",
-        "C": "192 Ir",
         "B": "137",
+        "C": "192 Ir",
         "D": "129 I"
       },
       "answer": "D",
@@ -134224,8 +134224,8 @@
       "question": "下列何者非劑量校正儀（dose calibrator）的品管項目？",
       "options": {
         "A": "constancy test",
-        "C": "uniformity test",
         "B": "linearity test",
+        "C": "uniformity test",
         "D": "geometry test"
       },
       "answer": "C",
@@ -136009,9 +136009,9 @@
       "number": 3,
       "question": "有一 60",
       "options": {
-        "C": "6.51",
         "A": "5",
         "B": "3.49",
+        "C": "6.51",
         "D": "8.14"
       },
       "answer": "B",
@@ -136029,9 +136029,9 @@
       "number": 4,
       "question": "13 N與 13",
       "options": {
-        "C": "2.21",
         "A": "0.68",
         "B": "1.70",
+        "C": "2.21",
         "D": "2.72"
       },
       "answer": "C",
@@ -136212,9 +136212,9 @@
       "number": 13,
       "question": "一游離腔之 60",
       "options": {
-        "C": "0.943",
         "A": "0.113",
         "B": "1.18",
+        "C": "0.943",
         "D": "0.127"
       },
       "answer": "D",
@@ -136253,8 +136253,8 @@
       "question": "某治療用光子射束，其在空氣中相對於參考照野的劑量輸出比值稱為：",
       "options": {
         "A": "collimator scatter factor",
-        "C": "output factor",
         "B": "phantom scatter factor",
+        "C": "output factor",
         "D": "tissue-air-ratio"
       },
       "answer": "A",
@@ -136471,8 +136471,8 @@
       "number": 26,
       "question": "現有某原始活度5×10 6",
       "options": {
-        "B": "19",
         "A": "8",
+        "B": "19",
         "C": "76",
         "D": "114"
       },
@@ -136814,9 +136814,9 @@
       "number": 43,
       "question": "氫與氧對4 MeV中子的總截面分別為1.9與1.7邦（1邦＝10 -24",
       "options": {
-        "C": "0.241",
         "A": "0.184",
         "B": "0.120",
+        "C": "0.241",
         "D": "0.303"
       },
       "answer": "A",
@@ -136834,9 +136834,9 @@
       "number": 44,
       "question": "考慮一中子捕獲反應 59",
       "options": {
-        "C": "中子",
         "A": "質子",
         "B": "電子",
+        "C": "中子",
         "D": "光子"
       },
       "answer": "D",
@@ -138204,10 +138204,10 @@
       "number": 32,
       "question": "以直線加速器進行立體定位放射手術（SRS）時，所附加延伸之準直儀，臨床上最常使用之孔徑（cone",
       "options": {
-        "D": "50～80 mm",
         "A": "1～5 mm",
         "B": "5～30 mm",
-        "C": "30～50 mm"
+        "C": "30～50 mm",
+        "D": "50～80 mm"
       },
       "answer": "B",
       "explanation": ""
@@ -138265,8 +138265,8 @@
       "question": "攝護腺癌病人接受根治性放射治療時，可選擇合併高劑量率組織插種近接治療與體外放射治療。在此情況 下，組織插種近接治療常使用的同位素射源為何？",
       "options": {
         "A": "Cesium-137",
-        "C": "Iodine-125",
         "B": "Iridium-192",
+        "C": "Iodine-125",
         "D": "Palladium-103"
       },
       "answer": "B",
@@ -138525,8 +138525,8 @@
       "question": "在光子放射治療中，下列裝置何者最不會造成二次電子污染？",
       "options": {
         "A": "collimator",
-        "C": "motorized wedge",
         "B": "shadow tray",
+        "C": "motorized wedge",
         "D": "bolus"
       },
       "answer": "D",
@@ -139143,9 +139143,9 @@
       "number": 79,
       "question": "某4 MV之直線加速器在最大劑量的參考深度1 cm處，SSD=100 cm，照野=10×10 cm 2 時，輸出劑量率為1",
       "options": {
-        "C": "300",
         "A": "100",
         "B": "200",
+        "C": "300",
         "D": "400"
       },
       "answer": "C",
@@ -139163,9 +139163,9 @@
       "number": 80,
       "question": "承上題，在SSD=120 cm，S",
       "options": {
-        "C": "322",
         "A": "122",
         "B": "222",
+        "C": "322",
         "D": "422"
       },
       "answer": "D",
@@ -139225,9 +139225,9 @@
       "question": "就單一張影像而言，下列何者所需要的記憶體空間（以byte計）最大？",
       "options": {
         "A": "digital mammography（8×10英吋）",
-        "D": "magnetic resonance image",
         "B": "digital radiography（8×10英吋）",
-        "C": "computed tomography"
+        "C": "computed tomography",
+        "D": "magnetic resonance image"
       },
       "answer": "A",
       "explanation": ""
@@ -139548,8 +139548,8 @@
       "question": "下列何種檢查，將所有造影劑注射完所需時間最長？",
       "options": {
         "A": "cerebral angiography",
-        "C": "lymphography",
         "B": "IVC venography",
+        "C": "lymphography",
         "D": "hysterosalpingography"
       },
       "answer": "C",
@@ -139890,9 +139890,9 @@
       "number": 36,
       "question": "一位肝腫瘤患者，施行電腦斷層動態攝影（dynamic scan），在注射造影劑後，可邊打造影劑邊偵測主動脈 CT number變化，以決定動態掃描時機，此技術為下列何者？",
       "options": {
-        "C": "bolus-tracking",
         "A": "fixed delay",
         "B": "olus-tracking",
+        "C": "bolus-tracking",
         "D": "drip infusion"
       },
       "answer": "C",
@@ -139954,9 +139954,9 @@
       "question": "下列關於dose length product（DLP）的計算，何者正確？",
       "options": {
         "A": "DLP = CTDIweighted × scan length",
-        "D": "LP = CTDI volume / scan length",
         "B": "DLP = CTDIvolume × scan length",
-        "C": "DLP = CTDIweighted / scan length"
+        "C": "DLP = CTDIweighted / scan length",
+        "D": "LP = CTDI volume / scan length"
       },
       "answer": "B",
       "explanation": ""
@@ -140981,8 +140981,8 @@
       "question": "若採用影像增強管（image-intensifier tube）進行數位透視攝影（digital fluoroscopy），則下列何者適合與影 像增強管作搭配？",
       "options": {
         "A": "morphous-selenium＋TFT",
-        "C": "charge-coupled device",
         "B": "a-Si＋TFT",
+        "C": "charge-coupled device",
         "D": "amorphous-selenium＋TFT"
       },
       "answer": "C",
@@ -141000,9 +141000,9 @@
       "number": 10,
       "question": "在數位乳房攝影（digital mammography, DM）影像系統中，若影像接收器可看到的高對比微鈣化點（high-",
       "options": {
-        "C": "16 lp/mm",
         "A": "0.125 lp/mm",
         "B": "8 lp/mm",
+        "C": "16 lp/mm",
         "D": "4 lp/mm"
       },
       "answer": "D",
@@ -141081,8 +141081,8 @@
       "question": "下列有關CT值（CT number）之敘述，何者錯誤？",
       "options": {
         "A": "CT值的定義為各種組織相對於水的衰減係數比",
-        "C": "當K值為1000時，CT值被定義為Hounsfield單位",
         "B": "組織衰減係數越高時，CT值越大",
+        "C": "當K值為1000時，CT值被定義為Hounsfield單位",
         "D": "CT值的差異反應影像之空間解析度"
       },
       "answer": "D",
@@ -141262,8 +141262,8 @@
       "options": {
         "A": "sensitivity center",
         "B": "developing agent",
-        "D": "Bromine barrier",
-        "C": "AgI（silver iodide）"
+        "C": "AgI（silver iodide）",
+        "D": "Bromine barrier"
       },
       "answer": "A",
       "explanation": ""
@@ -141720,9 +141720,9 @@
       "number": 46,
       "question": "若主磁場強度 B 0 ＝1 T，線性磁場梯度 Gx＝1 G / cm，若氫質子在x＝1 cm處的拉莫頻率為ω 1 ，在x＝-1",
       "options": {
-        "C": "4.26",
         "A": "-4.26",
         "B": "0",
+        "C": "4.26",
         "D": "8.51"
       },
       "answer": "D",
@@ -142255,9 +142255,9 @@
       "number": 72,
       "question": "單光子發射電腦斷層進行衰減修正（attenuation correction）時， 99m Tc對於組織的衰減係數（attenuation",
       "options": {
-        "C": "0.15",
         "A": "0.693",
         "B": "1.44",
+        "C": "0.15",
         "D": "0.918"
       },
       "answer": "C",
@@ -142436,9 +142436,9 @@
       "question": "有關 18 F-FDOPA的敘述，下列何者正確？",
       "options": {
         "A": "DOPA苯環結構第2個碳鍵結的H被18F取代",
-        "D": "可用於腫瘤造影",
         "B": "只能以親核取代反應製備",
-        "C": "血液中穩定，不容易被酵素代謝"
+        "C": "血液中穩定，不容易被酵素代謝",
+        "D": "可用於腫瘤造影"
       },
       "answer": "D",
       "explanation": ""
@@ -142937,9 +142937,9 @@
       "question": "使用藥物來進行壓力相心肌灌注掃描，下列藥物皆可使用，何者除外？",
       "options": {
         "A": "Dobutamine",
-        "D": "Adenosine",
         "B": "Atropine",
-        "C": "Dipyridamole"
+        "C": "Dipyridamole",
+        "D": "Adenosine"
       },
       "answer": "B",
       "explanation": ""
@@ -143383,8 +143383,8 @@
       "question": "下列何者最適合做為Schilling test的核種？",
       "options": {
         "A": "57",
-        "C": "99m Tc",
         "B": "60",
+        "C": "99m Tc",
         "D": "111 In"
       },
       "answer": "A",
@@ -144029,8 +144029,8 @@
       "question": "下列何者為執行劑量校正器（dose calibrator）品管作業之標準射源？",
       "options": {
         "A": "137",
-        "C": "99m Tc",
         "B": "131 I",
+        "C": "99m Tc",
         "D": "67 Ga"
       },
       "answer": "A",
@@ -145652,8 +145652,8 @@
       "question": "下列元素特性的關係何者錯誤？（碘的原子序為53、氙的原子序為54、銫的原子序為55）",
       "options": {
         "A": "131 X、 130 I、 132",
-        "C": "131 I、 131 Xe是同重素（isobar）",
         "B": "130 I、 131 I是同位素（isotope）",
+        "C": "131 I、 131 Xe是同重素（isobar）",
         "D": "130 I、 131 I是同質異構物（isomer）"
       },
       "answer": "D",
@@ -146060,8 +146060,8 @@
       "question": "下列對近接治療用射源半衰期的敘述，何者正確？",
       "options": {
         "A": "226Ra > 192Ir > 198Au > 60Co",
-        "C": "192Ir> 60Co > 226Ra > 198Au",
         "B": "198Au > 192Ir > 60Co > 226Ra",
+        "C": "192Ir> 60Co > 226Ra > 198Au",
         "D": "226Ra > 60Co > 192Ir > 198Au"
       },
       "answer": "D",
@@ -146139,9 +146139,9 @@
       "number": 25,
       "question": "一病患其腫瘤深度為10 cm，使用10 MV之X光射束，採SAD等比重之兩側平行對照治療，照野為20 cm×20",
       "options": {
-        "C": "200",
         "A": "214",
         "B": "153",
+        "C": "200",
         "D": "306"
       },
       "answer": "B",
@@ -146243,9 +146243,9 @@
       "question": "儲存閃爍造影資訊（scintillation information）的方式有許多種，下圖屬於何種方式？",
       "options": {
         "A": "dynamic frame mode",
-        "D": "frame mode",
         "B": "list mode",
-        "C": "M mode"
+        "C": "M mode",
+        "D": "frame mode"
       },
       "answer": "B",
       "explanation": "",
@@ -146445,9 +146445,9 @@
       "number": 40,
       "question": "磁振造影技術中，當照野（FOV）為24 cm時，使用的磁場梯度為8 mT/m。若其它條件維持不變，照野為6",
       "options": {
-        "C": "16",
         "A": "1",
         "B": "2",
+        "C": "16",
         "D": "32"
       },
       "answer": "D",
@@ -146805,8 +146805,8 @@
       "question": "如圖所示，4種材料的線性衰減係數A（μ：0.17 cm -1 ）、B（μ：0.28 cm -1 ）、C（μ：0.45 cm -1 ）、D （μ：0.69 cm -1 ），何種材料可在4 cm的厚度，將放射線強度阻擋剩下30%以下？",
       "options": {
         "A": "C、D",
-        "C": "A、B",
         "B": "、C、D",
+        "C": "A、B",
         "D": "B、C、D"
       },
       "answer": "A",
@@ -147931,9 +147931,9 @@
       "number": 34,
       "question": "假設 r 0 為參考照野大小，r 為照野大小，關於假體散射因子（phantom scatter factor, S p ）之定義，下列那 些正確？①S p (r) = BSF(r)/BSF(r 0 ) ②S p (r) = BSF(r 0 )/BSF(r) ③S p (r) = S",
       "options": {
-        "C": "②③",
         "A": "①③",
         "B": "①④",
+        "C": "②③",
         "D": "②④"
       },
       "answer": "B",
@@ -147953,8 +147953,8 @@
       "options": {
         "A": "physical wedge",
         "B": "dynamic wedge",
-        "D": "1 cm bolus",
-        "C": "MLC dynamic wedge"
+        "C": "MLC dynamic wedge",
+        "D": "1 cm bolus"
       },
       "answer": "A",
       "explanation": ""
@@ -148153,8 +148153,8 @@
       "question": "根據AAPM TG-43，dose rate constant（Λ）的單位下列何者正確？",
       "options": {
         "A": "cGy",
-        "C": "(cGy/h)/U",
         "B": "cGy/h",
+        "C": "(cGy/h)/U",
         "D": "cGy/U"
       },
       "answer": "C",
@@ -148297,8 +148297,8 @@
       "question": "加馬刀（gamma knife）是利用下列何種射源治療？",
       "options": {
         "A": "137",
-        "C": "o",
         "B": "192 Ir",
+        "C": "o",
         "D": "125 I"
       },
       "answer": "C",
@@ -148397,8 +148397,8 @@
       "question": "治療計畫系統中常用的劑量計算法有三種，不包括下列何者？",
       "options": {
         "A": "correction based algorithm",
-        "C": "simulated annealing algorithm",
         "B": "model based algorithm",
+        "C": "simulated annealing algorithm",
         "D": "Monte Carlo simulation"
       },
       "answer": "C",
@@ -149059,8 +149059,8 @@
       "question": "下列何種攝影方法最適合呈現視神經孔？",
       "options": {
         "A": "Caldwell",
-        "C": "Rhese",
         "B": "PA",
+        "C": "Rhese",
         "D": "Waters"
       },
       "answer": "C",
@@ -149421,8 +149421,8 @@
       "question": "下列何者與腦部電腦斷層攝影血液灌注（CT perfusion）最不相關？",
       "options": {
         "A": "CBF（cerebral blood flow）",
-        "C": "MTT（mean transit time）",
         "B": "CBV（cerebral blood volume）",
+        "C": "MTT（mean transit time）",
         "D": "MTF（modulation transfer function）"
       },
       "answer": "D",
@@ -149611,8 +149611,8 @@
       "options": {
         "A": "Horse-shoe kidneys",
         "B": "Duplication of renal pelvis and ureter",
-        "D": "Ectopic kidney",
-        "C": "Entero-ureteral fistula"
+        "C": "Entero-ureteral fistula",
+        "D": "Ectopic kidney"
       },
       "answer": "B",
       "explanation": "",
@@ -149630,9 +149630,9 @@
       "number": 38,
       "question": "在 CT 劑量測量中，使用游離腔偵檢器測量32cm圓形假體，量測中心CTDI 100 劑量為6 mGy，假體深度1 cm 下之12點、3點、6點與9點鐘各方向量測值為15 mGy、11 mGy、8 mGy、11 mGy，當pitch為1.6時，請問",
       "options": {
-        "C": "7.3 mGy",
         "A": "5.3 mGy",
         "B": "5.9 mGy",
+        "C": "7.3 mGy",
         "D": "8.6 mGy"
       },
       "answer": "B",
@@ -150525,10 +150525,10 @@
       "number": 1,
       "question": "設180°LI（linear interpolation）螺旋式CT（spiral/helical CT）的扇形射束扇形角度為60°，在作數據內插",
       "options": {
-        "D": "60°～120°",
         "A": "90°～150°",
         "B": "210°～330°",
-        "C": "30°～150°"
+        "C": "30°～150°",
+        "D": "60°～120°"
       },
       "answer": "B",
       "explanation": ""
@@ -150565,9 +150565,9 @@
       "number": 3,
       "question": "根據Ehsan Samei所提出的數位放射攝影（digital radiography）系統辨識法，下列那些組件具有收集元件 （collection element）的功能？",
       "options": {
-        "C": "harge-coupled device",
         "A": "photostimulable phosphor",
         "B": "amorphous selenium",
+        "C": "harge-coupled device",
         "D": "charge-coupled device"
       },
       "answer": "D",
@@ -150686,8 +150686,8 @@
       "question": "現今CT一般使用閃爍晶體／光二極體（scintillation crystal/photodiode）為偵測器元件，針對閃爍晶體的選擇 以下列何者最不常使用？",
       "options": {
         "A": "CdWO4",
-        "C": "LaOBr",
         "B": "BGO",
+        "C": "LaOBr",
         "D": "CsI"
       },
       "answer": "C",
@@ -150806,9 +150806,9 @@
       "question": "下列何者不會作為透視攝影（fluoroscopy）影像品質（image quality） 的評估指標？",
       "options": {
         "A": "dose",
-        "D": "temporal resolution",
         "B": "spatial resolution",
-        "C": "contrast resolution"
+        "C": "contrast resolution",
+        "D": "temporal resolution"
       },
       "answer": "A",
       "explanation": ""
@@ -151188,9 +151188,9 @@
       "number": 34,
       "question": "若主磁場強度B 0 ＝1.5 T，線性磁場梯度Gx ＝-10 mT / m，若氫質子在x＝1 cm處的拉莫頻率為ω 1 ，在x＝-1",
       "options": {
-        "C": "ω 2 ＜42.57 MHz",
         "A": "ω 1 ＜ω 2",
         "B": "ω 1 ＝ -ω 2",
+        "C": "ω 2 ＜42.57 MHz",
         "D": "ω 1 －ω 2 ＝12.77 kHz"
       },
       "answer": "A",
@@ -151712,8 +151712,8 @@
       "question": "遠隔放射治療進行模擬治療計畫，那項影像系統為其劑量給予的主要基礎？",
       "options": {
         "A": "CT",
-        "C": "PET",
         "B": "超音波",
+        "C": "PET",
         "D": "EPID"
       },
       "answer": "A",
@@ -152071,8 +152071,8 @@
       "number": 78,
       "question": "重帶電粒子與物質的作用，可能包括那些？①重帶電粒子以直線前進 ②重帶電粒子被大角度散射 ③產生 Bragg-peak ④產生互毀作用（annihilation reaction）",
       "options": {
-        "B": "①②④",
         "A": "①③",
+        "B": "①②④",
         "C": "②③",
         "D": "①③④"
       },
@@ -152775,8 +152775,8 @@
       "question": "下列何者可作為心臟及腫瘤造影劑？",
       "options": {
         "A": "11",
-        "C": "-methionine",
         "B": "18 F-FET",
+        "C": "-methionine",
         "D": "11"
       },
       "answer": "A",
@@ -152815,8 +152815,8 @@
       "question": "氨基酸轉運子（amino acid transporter）的表現量，最不會影響下列何者在腫瘤的積聚量？",
       "options": {
         "A": "11",
-        "C": "18 F-FET",
         "B": "18 F-FLT",
+        "C": "18 F-FET",
         "D": "18 F-FDOPA"
       },
       "answer": "B",
@@ -153197,9 +153197,9 @@
       "number": 54,
       "question": "受熱破壞（heat-denatured）之 51",
       "options": {
-        "C": "發炎反應",
         "A": "脾臟造影",
         "B": "測量紅血球存活期",
+        "C": "發炎反應",
         "D": "凝血反應"
       },
       "answer": "A",
@@ -153377,9 +153377,9 @@
       "number": 63,
       "question": "11C可經由下列那種方式產生？",
       "options": {
-        "C": "14N(p, n)11C",
         "A": "14 N(p, α) 11",
         "B": "10B(p, n)11C",
+        "C": "14N(p, n)11C",
         "D": "10B(n, p)11C"
       },
       "answer": "A",
@@ -153521,8 +153521,8 @@
       "question": "利用電腦收集與儲存核醫影像的最小單位稱為：",
       "options": {
         "A": "CPU",
-        "C": "voxel",
         "B": "pixel",
+        "C": "voxel",
         "D": "byte"
       },
       "answer": "D",
@@ -154642,8 +154642,8 @@
       "question": "下列有關心跳調控的敘述，何者正確？",
       "options": {
         "A": "交感神經系統透過增加鈉離子通道（Na +",
-        "C": "hannels）的通透性來抑制心跳加快",
         "B": "交感神經系統透過抑制鉀離子通道（K +",
+        "C": "hannels）的通透性來抑制心跳加快",
         "D": "副交感神經系統透過抑制鉀離子通道（K +"
       },
       "answer": "A",
@@ -154741,10 +154741,10 @@
       "number": 51,
       "question": "抗利尿激素（antidiuretic hormone, ADH）作用在遠曲小管（distal convoluted tubule）及集尿管（collecting",
       "options": {
-        "D": "不影響血壓調節",
         "A": "增加水的再吸收",
         "B": "減少水的再吸收",
-        "C": "不影響水分調節"
+        "C": "不影響水分調節",
+        "D": "不影響血壓調節"
       },
       "answer": "A",
       "explanation": ""
@@ -154821,10 +154821,10 @@
       "number": 55,
       "question": "下列何種情況會減少25-羥基維生素D（25-OH-vitamin D）轉換成1,25-雙羥維生素D（1,25-(OH) 2 -vitamin",
       "options": {
-        "D": "低血磷",
         "A": "低鈣飲食",
         "B": "副甲狀腺機能亢進",
-        "C": "慢性腎衰竭"
+        "C": "慢性腎衰竭",
+        "D": "低血磷"
       },
       "answer": "C",
       "explanation": ""
@@ -155381,9 +155381,9 @@
       "number": 3,
       "question": "已知 137",
       "options": {
-        "C": "5.2",
         "A": "12",
         "B": "6.0",
+        "C": "5.2",
         "D": "4.4"
       },
       "answer": "C",
@@ -155421,9 +155421,9 @@
       "number": 5,
       "question": "當1 g的 137",
       "options": {
-        "C": "0.165 μg",
-        "B": "1.65 mg",
         "A": "0.165 mg",
+        "B": "1.65 mg",
+        "C": "0.165 μg",
         "D": "1.65 μg"
       },
       "answer": "C",
@@ -155584,10 +155584,10 @@
       "number": 13,
       "question": "若已知某位置的假體劑量為Dmed，對電子射束而言，在電子通量不變的情形下，其相對應等效位置的水中劑 量Dwater為下列何者？（：mean mass energy absorption coefficient，：average restricted mass collision stopping power，：mass attenuation coefficient，：average mass stopping power）",
       "options": {
-        "C": "Dwater＝Dmed×(µ/ρ)water/(µ/ρ)med",
         "A": "Dwater＝Dmed×( /ρ)water/(/ρ)med",
-        "D": "water ＝D med ×(    /ρ) water /(    /ρ) med",
-        "B": "Dwater＝Dmed×(/ρ)water/(/ρ)med"
+        "B": "Dwater＝Dmed×(/ρ)water/(/ρ)med",
+        "C": "Dwater＝Dmed×(µ/ρ)water/(µ/ρ)med",
+        "D": "water ＝D med ×(    /ρ) water /(    /ρ) med"
       },
       "answer": "D",
       "explanation": ""
@@ -155804,10 +155804,10 @@
       "number": 24,
       "question": "一治療用光子射束射入水假體中，假設d代表在水中深度，rd代表在深度d的照野大小，則下列何者正確？",
       "options": {
-        "D": "BSF(rd) ×TAR(d, rd) ×TMR(d, rd)＝1",
         "A": "TAR(d, rd)＝TMR(d, rd) ×BSF(rd)",
         "B": "TMR(d, rd)＝TAR(d, rd) ×BSF(rd)",
-        "C": "BSF(rd)＝TAR(d, rd) ×TMR(d, rd)"
+        "C": "BSF(rd)＝TAR(d, rd) ×TMR(d, rd)",
+        "D": "BSF(rd) ×TAR(d, rd) ×TMR(d, rd)＝1"
       },
       "answer": "A",
       "explanation": ""
@@ -156148,9 +156148,9 @@
       "question": "有關劑量與劑量率效能因數（DDREF）的敘述，下列何者正確？",
       "options": {
         "A": "DDREF是低劑量延伸到高劑量時所制定的參數",
-        "D": "高劑量的危險度乘上此因數可推估低劑量的危險度",
         "B": "此參數主要針對確定性效應",
-        "C": "此參數通常大於1"
+        "C": "此參數通常大於1",
+        "D": "高劑量的危險度乘上此因數可推估低劑量的危險度"
       },
       "answer": "C",
       "explanation": ""
@@ -156187,9 +156187,9 @@
       "number": 43,
       "question": "若不考慮增建因數，某單能光束穿過3 mm的某物質，還剩下96%的強度，此物質之直線衰減係數μ值為多少",
       "options": {
-        "C": "0.408",
         "A": "0.034",
         "B": "0.136",
+        "C": "0.408",
         "D": "0.170"
       },
       "answer": "B",
@@ -156427,9 +156427,9 @@
       "number": 55,
       "question": "若計數某樣品與背景可使用的時間共45分鐘，初步計數得到背景值約為25 cpm，樣品（含背景）約為100",
       "options": {
-        "C": "15",
         "A": "30",
         "B": "20",
+        "C": "15",
         "D": "10"
       },
       "answer": "A",
@@ -156949,8 +156949,8 @@
       "options": {
         "A": "同源重組修復（HRR）路徑常見於late S/G 2 週期",
         "B": "DNA蛋⽩激酶催化次單位（DNA-dependent protein kinase catalytic subunit, DNA-PKcs）會參與非同源末 端接合（NHEJ）之修復路徑，且此路徑易產⽣修復錯誤",
-        "D": "DNA雙股斷裂產⽣後，ATM（Ataxia-Telangiectasia mutated）蛋⽩會由非活性狀態轉為活性狀態",
-        "C": "雙套酵母菌使用非同源末端接合（NHEJ）為修復DNA雙股斷裂最主要的修復方式"
+        "C": "雙套酵母菌使用非同源末端接合（NHEJ）為修復DNA雙股斷裂最主要的修復方式",
+        "D": "DNA雙股斷裂產⽣後，ATM（Ataxia-Telangiectasia mutated）蛋⽩會由非活性狀態轉為活性狀態"
       },
       "answer": "C",
       "explanation": ""
@@ -156968,8 +156968,8 @@
       "question": "下列放射性同位素何者不適用於正子造影（PET）？",
       "options": {
         "A": "11",
-        "C": "3 H",
         "B": "124 I",
+        "C": "3 H",
         "D": "15 O"
       },
       "answer": "C",
@@ -157367,10 +157367,10 @@
       "number": 22,
       "question": "SAR(d, r",
       "options": {
-        "D": ")定義為在假體中某一點的散射劑量，與自由空間中同點劑量比值",
         "A": "SAR(d, r",
         "B": "TAR(d, 0)是代表照野0 × 0 cm 2 的組織空氣比",
-        "C": "TAR(d, r"
+        "C": "TAR(d, r",
+        "D": ")定義為在假體中某一點的散射劑量，與自由空間中同點劑量比值"
       },
       "answer": "C",
       "explanation": ""
@@ -157428,9 +157428,9 @@
       "question": "有關臨床上所指的電子能量（nominal energy）之敘述，下列何者正確？",
       "options": {
         "A": "dmax的平均能量",
-        "D": "R 50 處的能量",
         "B": "表面最可能能量",
-        "C": "R p 處的能量"
+        "C": "R p 處的能量",
+        "D": "R 50 處的能量"
       },
       "answer": "B",
       "explanation": ""
@@ -157587,9 +157587,9 @@
       "number": 33,
       "question": "60Co治療機在SSD=80 cm, 照野為10×10 cm², 深度為7 cm的百分深度劑量為62.4。當SSD增加至100 cm時,則同深度與照野下的百分深度劑量為多少?",
       "options": {
-        "C": "64.3",
         "A": "61.5",
         "B": "63.3",
+        "C": "64.3",
         "D": "60.6"
       },
       "answer": "C",
@@ -157647,9 +157647,9 @@
       "number": 36,
       "question": "欲以 60",
       "options": {
-        "C": "1.07",
         "A": "2.35",
         "B": "1.35",
+        "C": "1.07",
         "D": "2.15"
       },
       "answer": "C",
@@ -157668,8 +157668,8 @@
       "question": "目前AAPM建議評估近接治療之射源強度，為下列何者？",
       "options": {
         "A": "ir-kerma strength",
-        "C": "air-kerma strength",
         "B": "mCi",
+        "C": "air-kerma strength",
         "D": "MBq"
       },
       "answer": "C",
@@ -157687,8 +157687,8 @@
       "number": 38,
       "question": "攝護腺癌之根治性放射治療的治療選項之一，可單獨高劑量率組織插種近接治療（high dose-rate interstitial",
       "options": {
-        "B": "中間風險（intermediate risk）",
         "A": "低風險（low risk）",
+        "B": "中間風險（intermediate risk）",
         "C": "高風險（high risk）",
         "D": "很高風險（very high risk）"
       },
@@ -157708,8 +157708,8 @@
       "question": "低劑量率組織插種近接治療（low dose-rate interstitial brachytherapy）可⽤的同位素有下列那些？①198Au ②137Cs③192Ir④125I",
       "options": {
         "A": "僅①③",
-        "C": "僅②③④",
         "B": "僅①②④",
+        "C": "僅②③④",
         "D": "①②③④"
       },
       "answer": "D",
@@ -157927,9 +157927,9 @@
       "number": 50,
       "question": "加馬刀的 60",
       "options": {
-        "C": "射源的顆數固定，無法再安排分布於頭頂位置",
         "A": "不需要從頭頂入射的治療角度即可得到好的治療計畫",
         "B": "從頭頂入射的治療角度會穿過身體造成其他部位劑量",
+        "C": "射源的顆數固定，無法再安排分布於頭頂位置",
         "D": "從頭頂入射的角度若有射源，機械控制有難度"
       },
       "answer": "B",
@@ -158108,9 +158108,9 @@
       "question": "下列何種影像是由治療計畫系統利用CT影像資訊重組而得？",
       "options": {
         "A": "DRR",
-        "D": "EPID image",
         "B": "portal film",
-        "C": "transverse image"
+        "C": "transverse image",
+        "D": "EPID image"
       },
       "answer": "A",
       "explanation": ""
@@ -159244,8 +159244,8 @@
       "question": "在直徑20公分的均勻水假體中心畫出一個ROI（region of interest）量測其平均值，是在進行下列何項電腦斷 層攝影品質保證？",
       "options": {
         "A": "CT雜訊",
-        "C": "T值的線性度（linearity）",
         "B": "CT均勻度（uniformity）",
+        "C": "T值的線性度（linearity）",
         "D": "CT值的線性度（linearity）"
       },
       "answer": "C",
@@ -159288,9 +159288,9 @@
       "question": "定量CT空間解析度的方法為下列那一項？",
       "options": {
         "A": "detective quantum efficiency（DQE）",
-        "D": "receiver operating characteristic（ROC）curve",
         "B": "Fourier transfer function（FTF）",
-        "C": "modulation transfer function（MTF）"
+        "C": "modulation transfer function（MTF）",
+        "D": "receiver operating characteristic（ROC）curve"
       },
       "answer": "C",
       "explanation": ""
@@ -159415,8 +159415,8 @@
       "question": "下列何者不是供應腦部的動脈？",
       "options": {
         "A": "common carotid artery",
-        "C": "axillary artery",
         "B": "vertebral artery",
+        "C": "axillary artery",
         "D": "internal carotid artery"
       },
       "answer": "C",
@@ -159636,8 +159636,8 @@
       "options": {
         "A": "echo planar imaging",
         "B": "diffusion weighted imaging",
-        "D": "constructive interference in steady state",
-        "C": "onstructive interference in steady state"
+        "C": "onstructive interference in steady state",
+        "D": "constructive interference in steady state"
       },
       "answer": "D",
       "explanation": "",
@@ -159659,9 +159659,9 @@
       "question": "磁振造影診斷急性腦梗塞的影像變化，下列何者錯誤？",
       "options": {
         "A": "DC map上呈現高訊號",
-        "D": "MR perfusion上呈現血流降低",
         "B": "ADC map上呈現⾼訊號",
-        "C": "MRA上呈現血管阻塞"
+        "C": "MRA上呈現血管阻塞",
+        "D": "MR perfusion上呈現血流降低"
       },
       "answer": "B",
       "explanation": ""
@@ -161688,8 +161688,8 @@
       "question": "下列有關正子放射性核種之敘述，何者正確？",
       "options": {
         "A": "正電子能量大小為 82 Rb＞ 18 F＞ 15 O＞ 11",
-        "C": "＜ 18 F",
         "B": "半衰期時間⻑短為 18 F＞ 11",
+        "C": "＜ 18 F",
         "D": "68 Ga核種因為半衰期為271天，故為正子造影機每日之校正射源"
       },
       "answer": "B",
@@ -161807,9 +161807,9 @@
       "number": 80,
       "question": "加馬攝影機主要由下列四個元件所組成，依距離患者的位置，由近至遠排列，其順序為何？①準直儀",
       "options": {
-        "C": "①②④③",
         "A": "①②③④",
         "B": "②①③④",
+        "C": "①②④③",
         "D": "④③①②"
       },
       "answer": "A",
@@ -161848,8 +161848,8 @@
       "question": "下列正子（positron）放射核種，何者釋出的正子能量最高？",
       "options": {
         "A": "11",
-        "C": "15 O",
         "B": "13 N",
+        "C": "15 O",
         "D": "18 F"
       },
       "answer": "C",
@@ -161888,8 +161888,8 @@
       "question": "下列同位素劑量校正儀（isotope dose calibrator）校驗項目，何者須使用至少二種⻑半衰期標準輻射源為之？",
       "options": {
         "A": "constancy test",
-        "C": "linearity test",
         "B": "accuracy test",
+        "C": "linearity test",
         "D": "geometry test"
       },
       "answer": "B",
@@ -162028,9 +162028,9 @@
       "question": "111 In-octreotide放射藥物中，octreotide主要與體內下列何種物質相似？",
       "options": {
         "A": "dopamine",
-        "D": "epinephrine",
         "B": "serotonin",
-        "C": "somatostatin"
+        "C": "somatostatin",
+        "D": "epinephrine"
       },
       "answer": "C",
       "explanation": ""
@@ -162574,8 +162574,8 @@
       "question": "在進行 123 I-MIBG造影前，必須先給予下列何者？",
       "options": {
         "A": "captopril",
-        "C": "furosemide",
         "B": "Lugol solution",
+        "C": "furosemide",
         "D": "dipyridamole"
       },
       "answer": "B",
@@ -162833,8 +162833,8 @@
       "number": 51,
       "question": "若一檢查者的血容比（hematocrit）為40%，血液體積為4,000 ml，校正因子為0.92，其紅血球體積（red",
       "options": {
-        "B": "1,739",
         "A": "1,472",
+        "B": "1,739",
         "C": "10,870",
         "D": "9,200"
       },
@@ -163095,8 +163095,8 @@
       "question": "下列正電子發射核種何者之半高全寬（FWHM）值最小？",
       "options": {
         "A": "62",
-        "C": "68 Ga",
         "B": "18 F",
+        "C": "68 Ga",
         "D": "13 N"
       },
       "answer": "B",
@@ -163295,8 +163295,8 @@
       "question": "準確度（accuracy）為劑量校正器（dose calibrator）的品管項目之一，下列何者不適合作為準確度測試的 放射性核種？",
       "options": {
         "A": "57",
-        "C": "s",
         "B": "a",
+        "C": "s",
         "D": "137"
       },
       "answer": "B",
@@ -164159,9 +164159,9 @@
       "question": "下列何者與真核細胞內蛋白質合成過程的調控作用無關？",
       "options": {
         "A": "DNA轉錄到mRNA之速度",
-        "D": "蛋白質的後修飾作用",
         "B": "核糖體與起始蛋白的組合速度",
-        "C": "mRNA在細胞質的降解速度"
+        "C": "mRNA在細胞質的降解速度",
+        "D": "蛋白質的後修飾作用"
       },
       "answer": "D",
       "explanation": ""
@@ -164359,8 +164359,8 @@
       "question": "下列何種離子通道不參與心室心肌細胞去極化、極化、再極化的過程？",
       "options": {
         "A": "電壓依賴型鈉離子通道（voltage-gated Na +",
-        "C": "hannels）",
         "B": "T型鈣離子通道（T-type Ca 2+",
+        "C": "hannels）",
         "D": "鉀離子通道（K +"
       },
       "answer": "B",
@@ -165040,8 +165040,8 @@
       "options": {
         "A": "α蛻變（α decay）後子核之質量數減2，原子序減4",
         "B": "β - 蛻變（β -",
-        "D": "X-ray是由不穩定之原子核所放出之電磁波",
-        "C": "奧杰電子（Auger electron）主要是從不穩定原子核內釋出之電子"
+        "C": "奧杰電子（Auger electron）主要是從不穩定原子核內釋出之電子",
+        "D": "X-ray是由不穩定之原子核所放出之電磁波"
       },
       "answer": "B",
       "explanation": ""
@@ -165284,8 +165284,8 @@
       "question": "能量為1 MeV的光子射束照射10秒，其通量率為1000 photons/cm 2 ．s，若空氣與軟組織之直線能量吸收係 數分別為μ",
       "options": {
         "A": "5.00×10 -7",
-        "C": "3.67×10 -8",
         "B": "5.00×10 -8",
+        "C": "3.67×10 -8",
         "D": "3.67×10 -7"
       },
       "answer": "A",
@@ -165627,8 +165627,8 @@
       "question": "關於cadmium zinc telluride（CZT）晶體與傳統NaI（Tl）晶體之敘述，下列敘述何者錯誤？",
       "options": {
         "A": "CZT具有較好的能量解析度",
-        "C": "ZT本質效率（intrinsic efficiency）較低",
         "B": "CZT具有較好的空間解析度",
+        "C": "ZT本質效率（intrinsic efficiency）較低",
         "D": "CZT本質效率（intrinsic efficiency）較低"
       },
       "answer": "D",
@@ -165889,8 +165889,8 @@
       "options": {
         "A": "uger electron",
         "B": "β -",
-        "D": "positron",
-        "C": "internal conversion electron"
+        "C": "internal conversion electron",
+        "D": "positron"
       },
       "answer": "A",
       "explanation": ""
@@ -165987,9 +165987,9 @@
       "number": 48,
       "question": "假設 60",
       "options": {
-        "C": "其有效劑量為2.0 mSv",
         "A": "其有效劑量為1.7 mSv",
         "B": "其約定有效劑量為1.7 mSv",
+        "C": "其有效劑量為2.0 mSv",
         "D": "其約定有效劑量為2.0 mSv"
       },
       "answer": "D",
@@ -166068,8 +166068,8 @@
       "question": "γ能量依持性（energy dependent）最小的熱發光劑量計為下列何者？",
       "options": {
         "A": "CaSO4",
-        "C": "aCO 3",
         "B": "CaF2",
+        "C": "aCO 3",
         "D": "CaCO3"
       },
       "answer": "C",
@@ -166187,9 +166187,9 @@
       "number": 58,
       "question": "關於物質對α粒⼦的阻擋本領（stopping power），下列那些正確？①〔〕r ≅0②〔〕c ≅0③ 〔〕≅〔〕c④〔〕≅〔〕r⑤〔〕c ≅〔〕r（r＝radiative, c＝collisional）",
       "options": {
-        "C": "②④",
         "A": "①⑤",
         "B": "①③",
+        "C": "②④",
         "D": "②⑤"
       },
       "answer": "B",
@@ -166207,9 +166207,9 @@
       "number": 59,
       "question": "鉛的克原子量為207克，若鉛對500 keV光子之質量衰減係數(   )為0.16 cm 2 g -1 ，則鉛對500 keV光子的原 子截面約為多少邦？（1邦＝10 -24",
       "options": {
-        "C": "25",
         "A": "55",
         "B": "45",
+        "C": "25",
         "D": "15"
       },
       "answer": "A",
@@ -166348,9 +166348,9 @@
       "question": "在體外輻射防護的TSD原則中，下列何者為D的英文全名？",
       "options": {
         "A": "Dose",
-        "D": "Decontamination",
         "B": "Dosimetry",
-        "C": "Distance"
+        "C": "Distance",
+        "D": "Decontamination"
       },
       "answer": "C",
       "explanation": ""
@@ -166467,9 +166467,9 @@
       "number": 72,
       "question": "已知距離活度1 Ci的 137",
       "options": {
-        "C": "53",
         "A": "40",
         "B": "46",
+        "C": "53",
         "D": "58"
       },
       "answer": "A",
@@ -166648,9 +166648,9 @@
       "question": "有關非同源末端接合（NHEJ）與同源重組修復（HRR），下列敘述何者正確？",
       "options": {
         "A": "DNA雙股斷裂的修復速度，HRR比NHEJ慢",
-        "D": "HRR需要Ku蛋白協助辨認雙股斷裂處",
         "B": "HRR若發生缺陷，只會影響DNA雙股斷裂的修復能力，但不影響DNA複製叉傷害（DNA replication forks） 的修復能力",
-        "C": "NHEJ需要兩個斷裂的DNA片段彼此之間有200～600鹼基對相同區，才能進行修復"
+        "C": "NHEJ需要兩個斷裂的DNA片段彼此之間有200～600鹼基對相同區，才能進行修復",
+        "D": "HRR需要Ku蛋白協助辨認雙股斷裂處"
       },
       "answer": "A",
       "explanation": ""
@@ -166728,9 +166728,9 @@
       "question": "細胞凋亡的啟動訊號可來自DNA受傷以及細胞膜兩種不同路徑，下列敘述何者錯誤？",
       "options": {
         "A": "DNA受傷路徑會經由粒線體啟動凋亡",
-        "D": "p53蛋白會參與DNA受傷路徑的活化",
         "B": "細胞膜上的死亡接受體（death receptors）被活化後，前凋亡蛋白酵素8（procaspase 8）不會由細胞膜移動至 細胞核",
-        "C": "DNA受傷路徑會導致前凋亡蛋白酵素8（procaspase 8）的聚集"
+        "C": "DNA受傷路徑會導致前凋亡蛋白酵素8（procaspase 8）的聚集",
+        "D": "p53蛋白會參與DNA受傷路徑的活化"
       },
       "answer": "C",
       "explanation": ""
@@ -166747,10 +166747,10 @@
       "number": 6,
       "question": "某腫瘤的細胞損失因子Φ=0.6，T pot =12天，其T",
       "options": {
-        "D": "40",
         "A": "10",
         "B": "20",
-        "C": "30"
+        "C": "30",
+        "D": "40"
       },
       "answer": "C",
       "explanation": ""
@@ -166907,9 +166907,9 @@
       "number": 14,
       "question": "立體定位軀體放射治療（SBRT）可使用於治療第一或第二期的非小細胞肺癌，下圖中雙箭頭是指腫瘤位置",
       "options": {
-        "C": "3",
         "A": "1",
         "B": "2",
+        "C": "3",
         "D": "4"
       },
       "answer": "B",
@@ -167110,9 +167110,9 @@
       "number": 24,
       "question": "根據AAPM的TG-21 報告，電子射束之平均能量（MeV）與R 50",
       "options": {
-        "C": "平均能量= R 50 ×1.33",
         "A": "平均能量= R 50 ×0.53",
         "B": "平均能量= R 50",
+        "C": "平均能量= R 50 ×1.33",
         "D": "平均能量= R 50 ×2.33"
       },
       "answer": "D",
@@ -167271,9 +167271,9 @@
       "question": "何種楔形濾器（wedge filter）不會影響射束的品質？",
       "options": {
         "A": "dynamic wedge",
-        "D": "physical  wedge",
         "B": "individualized wedge",
-        "C": "universal wedge"
+        "C": "universal wedge",
+        "D": "physical  wedge"
       },
       "answer": "A",
       "explanation": ""
@@ -167290,9 +167290,9 @@
       "number": 33,
       "question": "對⁶⁰Co射束而言,在照野為15×15 cm²,深度為10 cm,SSD為80 cm時,百分深度劑量為58.4。當照野、深度不變,而SSD變為100 cm時,百分深度劑量約為多少?",
       "options": {
-        "C": "60.9",
         "A": "56.0",
         "B": "58.4",
+        "C": "60.9",
         "D": "66.3"
       },
       "answer": "C",
@@ -167330,9 +167330,9 @@
       "number": 35,
       "question": "以4 MV的SAD技術來治療病人，已知其最大劑量深度是1 cm。劑量校正時SAD為80 cm（output = 1",
       "options": {
-        "C": "0.643",
         "A": "1.563",
         "B": "1.555",
+        "C": "0.643",
         "D": "0.640"
       },
       "answer": "D",
@@ -167370,9 +167370,9 @@
       "number": 37,
       "question": "單獨使用低劑量率永久性組織插種近接治療（low dose-rate permanent implant brachytherapy）為目前攝護腺癌 之根治性放射治療選項之一，下列那些同位素目前較常被使用？① 125 I② 137",
       "options": {
-        "C": "僅①③",
         "A": "僅①②",
         "B": "僅②③",
+        "C": "僅①③",
         "D": "①②③"
       },
       "answer": "C",
@@ -167390,9 +167390,9 @@
       "number": 38,
       "question": "有關攝護腺癌高劑量率組織插種近接治療（high dose-rate interstitial brachytherapy），下列敘述那些正確？① ②137Cs③103Pd 使用之劑量率約100 Gy/hr②從放射生物學的角度而言，如攝護腺癌之α/β低，則高劑量率較低劑量率對癌細 胞之殺傷力較大③較常使用之同位素為137Cs",
       "options": {
-        "C": "僅②③",
         "A": "僅①②",
         "B": "僅①③",
+        "C": "僅②③",
         "D": "①②③"
       },
       "answer": "A",
@@ -167712,8 +167712,8 @@
       "question": "病患在放射治療前必須執行治療部位的確認，下列那一項非為IGRT的使用工具？",
       "options": {
         "A": "cone-beam CT",
-        "C": "electronic portal imaging",
         "B": "ultrasound",
+        "C": "electronic portal imaging",
         "D": "PET"
       },
       "answer": "D",
@@ -167755,8 +167755,8 @@
       "question": "下列關於加馬刀的敘述何者正確？",
       "options": {
         "A": "最多可使用201顆 137",
-        "C": "顱內動靜脈畸型瘤（AVM）常以加馬刀治療",
         "B": "準直儀（collimator）最大口徑為1.8 mm",
+        "C": "顱內動靜脈畸型瘤（AVM）常以加馬刀治療",
         "D": "加馬刀最常使用的治療距離（SAD）為100 cm"
       },
       "answer": "C",
@@ -167775,8 +167775,8 @@
       "question": "下列何者不是實施光子強度調控放射治療過程中常用的設備？",
       "options": {
         "A": "CT scanner",
-        "C": "inverse planning system",
         "B": "block cutter",
+        "C": "inverse planning system",
         "D": "MLC"
       },
       "answer": "B",
@@ -167795,8 +167795,8 @@
       "question": "放射治療計畫劑量運算模式中，不包括下列何種方法？",
       "options": {
         "A": "correction-based method",
-        "C": "direct Monte Carlo method",
         "B": "ack projection algorithm",
+        "C": "direct Monte Carlo method",
         "D": "back projection algorithm"
       },
       "answer": "D",
@@ -167835,8 +167835,8 @@
       "question": "有關ICRU 50和62號報告對腫瘤體積的定義，下列何者正確？",
       "options": {
         "A": "CTV＞ITV（internal target volume）＞GTV",
-        "C": "CTV＞IV（irradiated volume）＞GTV",
         "B": "ITV（internal target volume）＞CTV＞GTV",
+        "C": "CTV＞IV（irradiated volume）＞GTV",
         "D": "ITV（internal target volume）＞IV（irradiated volume）＞PTV"
       },
       "answer": "B",
@@ -168702,8 +168702,8 @@
       "question": "頭頸部腫瘤出血時，需做下列何種血管攝影檢查？",
       "options": {
         "A": "celiac artery, superior mesenteric artery",
-        "C": "common iliac artery, femoral artery",
         "B": "common carotid artery, subclavian artery",
+        "C": "common iliac artery, femoral artery",
         "D": "superior vena cava, jugular vein"
       },
       "answer": "B",
@@ -169579,8 +169579,8 @@
       "question": "附圖中腎臟凸出之處（箭號所指）為下列何者？",
       "options": {
         "A": "column of Bertin",
-        "C": "dromedary hump",
         "B": "junctional parenchymal defect",
+        "C": "dromedary hump",
         "D": "renal infarct"
       },
       "answer": "C",
@@ -170299,9 +170299,9 @@
       "number": 21,
       "question": "透視X光機之影像增強管具有不同尺寸模式，若有8 cm、15 cm、30 cm三種模式可供選擇，則8 cm模式與30",
       "options": {
-        "C": "1.88",
         "A": "2",
         "B": "3.75",
+        "C": "1.88",
         "D": "1"
       },
       "answer": "B",
@@ -170558,9 +170558,9 @@
       "number": 34,
       "question": "使用3 T的磁振造影對碳（ 13",
       "options": {
-        "C": "127.7",
         "A": "10.7",
         "B": "32.1",
+        "C": "127.7",
         "D": "無法使用磁振造影取得碳的訊號"
       },
       "answer": "B",
@@ -170858,9 +170858,9 @@
       "number": 49,
       "question": "下列那些放射性核種，可做為遠隔治療的射源？① 226 Ra② 137",
       "options": {
-        "C": "僅②③",
         "A": "僅①②③",
         "B": "①②③④",
+        "C": "僅②③",
         "D": "僅①④"
       },
       "answer": "A",
@@ -171039,8 +171039,8 @@
       "question": "在臨床放射治療中，針對相同治療部位，目前使用的錐形射束電腦斷層掃描cone beam CT（CBCT）相對於 multiple-slice helical CT，下列敘述何者正確？",
       "options": {
         "A": "CBCT的掃描速度較快",
-        "C": "CBCT的光⼦散射較少",
         "B": "CBCT的單圈照野field of view較⼩",
+        "C": "CBCT的光⼦散射較少",
         "D": "CBCT的影像品質較差"
       },
       "answer": "D",
@@ -171121,9 +171121,9 @@
       "number": 62,
       "question": "下列何組射源之exposure rate constant相似（相差 2.0 Rcm 2 /mCi-h 以內）？① 60",
       "options": {
-        "C": "①③",
         "A": "①②",
         "B": "③④",
+        "C": "①③",
         "D": "②④"
       },
       "answer": "B",
@@ -171265,9 +171265,9 @@
       "question": "四象限假體（bar phantom）是用來偵測閃爍攝影機的何種特性？",
       "options": {
         "A": "dead time",
-        "D": "sensitivity",
         "B": "uniformity",
-        "C": "resolution"
+        "C": "resolution",
+        "D": "sensitivity"
       },
       "answer": "C",
       "explanation": ""
@@ -171345,8 +171345,8 @@
       "question": "有關PET/CT影像衰減校正敘述，下列何者正確？",
       "options": {
         "A": "CT儀器可以產生511 keV能量的X射線，故可以作為衰減校正使用",
-        "C": "在PET/CT系統中，⽔的CT值約為0 HU（Hounsfield units）",
         "B": "PET影像訊號能量高，可以穿透任何物質，故檢查前不用移除金屬物品",
+        "C": "在PET/CT系統中，⽔的CT值約為0 HU（Hounsfield units）",
         "D": "CT穿透的組織影像中，其直線衰減係數值不會因為改變管電壓⽽改變"
       },
       "answer": "C",
@@ -171385,8 +171385,8 @@
       "question": "PET/CT掃描物體時，當發射掃描（emission scan）之投影資料轉換為弦波圖時，若發現中間有線條不連續或 有錯位平移現象，則應是下列何種因素所致？",
       "options": {
         "A": "CT 的kVp過⼤",
-        "C": "病人移動假影",
         "B": "影像重組條件選擇錯誤",
+        "C": "病人移動假影",
         "D": "金屬假影"
       },
       "answer": "C",
@@ -171466,8 +171466,8 @@
       "question": "下列何者可減少造成環狀假影（ring artifact）？",
       "options": {
         "A": "center of rotation correction",
-        "C": "attenuation correction",
         "B": "SPECT⁄CT registration correction",
+        "C": "attenuation correction",
         "D": "motion correction"
       },
       "answer": "A",
@@ -171626,8 +171626,8 @@
       "question": "在無載體（carrier-free）狀況下，下列醫用放射性同位素之比活度（specific activity）何者最低？",
       "options": {
         "A": "11",
-        "C": "18 F",
         "B": "123 I",
+        "C": "18 F",
         "D": "201 Tl"
       },
       "answer": "D",
@@ -171685,9 +171685,9 @@
       "number": 10,
       "question": "利用 57",
       "options": {
-        "C": "碘化鈉（sodium iodide）",
         "A": "氯化亞錫（stannous chloride）",
         "B": "內因子（intrinsic factor）",
+        "C": "碘化鈉（sodium iodide）",
         "D": "內毒素（endotoxin）"
       },
       "answer": "B",
@@ -172206,8 +172206,8 @@
       "question": "下列何者最可能是利用細胞膜合成（membrane synthesis）特性的腫瘤造影劑？",
       "options": {
         "A": "11",
-        "C": "-methionine",
         "B": "18 F-FET",
+        "C": "-methionine",
         "D": "18 F-FDG"
       },
       "answer": "A",
@@ -172346,9 +172346,9 @@
       "question": "圖a為正常的腎圖，計數值（counts）在注射示蹤劑後快速的上升，達到峰值後開始排出（wash out）。圖b的 腎圖曲線其高峰延後，為下列何者狀況？",
       "options": {
         "A": "Dilated non-obstructed pattern",
-        "D": "Golden pattern",
         "B": "Blunted response pattern",
-        "C": "Obstructed pattern"
+        "C": "Obstructed pattern",
+        "D": "Golden pattern"
       },
       "answer": "A",
       "explanation": ""
@@ -172365,8 +172365,8 @@
       "number": 44,
       "question": "如圖是核醫膀胱輸尿管影像，圖a是將放射性示蹤劑藥物直接灌注於膀胱中，經2分鐘後，得到圖b影像，則圖",
       "options": {
-        "B": "膀胱結石",
         "A": "放射性示蹤劑經由膀胱逆流至腎臟",
+        "B": "膀胱結石",
         "C": "輸尿管結石",
         "D": "腎臟皮質肥厚"
       },
@@ -172871,9 +172871,9 @@
       "number": 69,
       "question": "57Co能峰為122 keV,於閃爍攝影機的能譜測量中,測得其FWHM為30 keV,該攝影機的能量解析度為多少?",
       "options": {
-        "C": "2.5％",
         "A": "25％",
         "B": "10％",
+        "C": "2.5％",
         "D": "1.0％"
       },
       "answer": "A",
@@ -172931,9 +172931,9 @@
       "number": 72,
       "question": "PET系統偵測到的訊號包括true coincidence、random coincidence及scatter coincidence，其中對於random",
       "options": {
-        "C": "R s =2×t×R t",
         "A": "R t =2×t×R s",
         "B": "R t =2×t×R s ×R s",
+        "C": "R s =2×t×R t",
         "D": "R s =2×t×R t ×R t"
       },
       "answer": "B",
@@ -172971,10 +172971,10 @@
       "number": 74,
       "question": "深部等效劑量（H",
       "options": {
-        "D": "1.3",
         "A": "0.1",
         "B": "0.3",
-        "C": "1.0"
+        "C": "1.0",
+        "D": "1.3"
       },
       "answer": "C",
       "explanation": ""
@@ -173051,9 +173051,9 @@
       "number": 78,
       "question": "137Cs尖峰能量為667 keV,今使用加馬閃爍攝影機(gamma camera)測量其energy spectrum,得知FWHM為53 keV,計算該設備對137Cs的percent energy resolution為多少%?",
       "options": {
-        "C": "1.3",
         "A": "0.08",
         "B": "8",
+        "C": "1.3",
         "D": "12.5"
       },
       "answer": "B",
@@ -174704,8 +174704,8 @@
       "question": "有關神經元退化疾病（neurodegenerative disorder）之敘述，下列何者錯誤？",
       "options": {
         "A": "帕金森氏病（idiopathic Parkinson disease）之病理變化是腦幹中黑質（substantial nigra）及藍斑（locus",
-        "C": "亨丁頓氏舞蹈症（Huntington chorea）之病理變化是大腦內基底核的尾核（caudate nuclei）、殼腦 （putamen）和蒼白球（globus pallidus）內的神經元持續退化",
         "B": "肌萎縮性側索硬化症（amyotrophic lateral sclerosis）病理變化為脊髓後角運動神經元退化",
+        "C": "亨丁頓氏舞蹈症（Huntington chorea）之病理變化是大腦內基底核的尾核（caudate nuclei）、殼腦 （putamen）和蒼白球（globus pallidus）內的神經元持續退化",
         "D": "阿茲海默病（Alzheimer disease）病理變化為大腦皮質萎縮，顯微鏡下可見神經細纖維纏結（neurofibrillary tangles）、老化神經斑塊（senile neuritic plaque）、類澱粉血管病（amyloid angiopathy）"
       },
       "answer": "B",
@@ -174967,9 +174967,9 @@
       "number": 13,
       "question": "已知熱中子與人體組織產生 14 N(n,p) 14",
       "options": {
-        "C": "3.33",
         "A": "2.63",
         "B": "4.52",
+        "C": "3.33",
         "D": "2.98"
       },
       "answer": "A",
@@ -174987,9 +174987,9 @@
       "number": 14,
       "question": "6⁰Co曝露場之某一位置測得其曝露率(exposure rate)為25R/h,則相同位置其空氣克馬率(air kerma rate)約為多少Gy/h? (Wair/e=33.97 eV / ion pair)",
       "options": {
-        "C": "0.74",
         "A": "0.22",
         "B": "1.36",
+        "C": "0.74",
         "D": "2.58"
       },
       "answer": "A",
@@ -175227,10 +175227,10 @@
       "number": 26,
       "question": "放射衰變中α decay、β +",
       "options": {
-        "D": "4",
         "A": "1",
         "B": "2",
-        "C": "3"
+        "C": "3",
+        "D": "4"
       },
       "answer": "A",
       "explanation": ""
@@ -175427,8 +175427,8 @@
       "number": 36,
       "question": "擴散磁振造影（diffusion MRI, dMRI）中，為確保影像中的訊號下降能反映出組織的擴散現象，而非其它因 素造成失相（dephasing），常另外取一組B0或null的影像來校正。在一般臨床MRI機器中，這一組校正影像",
       "options": {
-        "B": "T2 weighted imaging, T2WI",
         "A": "T1 weighted imaging, T1WI",
+        "B": "T2 weighted imaging, T2WI",
         "C": "Proton density weighted imaging, PDWI",
         "D": "（T1+T2）WI"
       },
@@ -175654,9 +175654,9 @@
       "number": 47,
       "question": "已知 137",
       "options": {
-        "C": "0.876",
         "A": "0.825",
         "B": "0.873",
+        "C": "0.876",
         "D": "0.00873"
       },
       "answer": "A",
@@ -175714,9 +175714,9 @@
       "number": 50,
       "question": "某GM計數器量測結果，樣品全計數率值為300±10 cps，其背景計數率值為28±3 cps，則樣品淨計數率值",
       "options": {
-        "C": "272± 10.4",
         "A": "272± 13.0",
         "B": "272± 7.0",
+        "C": "272± 10.4",
         "D": "272± 6.5"
       },
       "answer": "C",
@@ -175894,9 +175894,9 @@
       "number": 59,
       "question": "鉛屏蔽 60",
       "options": {
-        "C": "8",
         "A": "3",
         "B": "6",
+        "C": "8",
         "D": "9"
       },
       "answer": "C",
@@ -175994,10 +175994,10 @@
       "number": 64,
       "question": "輻射造成染色體的變異有那些？①末端欠失（terminal deletion）②介在（間隙）欠失（interstitial deletion）③環型變異（ring）④雙中節型變異（dicentrics）",
       "options": {
-        "D": "僅①②③",
         "A": "僅②④",
         "B": "①②③④",
-        "C": "僅①③④"
+        "C": "僅①③④",
+        "D": "僅①②③"
       },
       "answer": "B",
       "explanation": ""
@@ -176074,9 +176074,9 @@
       "number": 68,
       "question": "醫院有一部血液照射器，內含一顆200兆貝克（TBq）的 137",
       "options": {
-        "C": "3",
         "A": "1",
         "B": "2",
+        "C": "3",
         "D": "4"
       },
       "answer": "A",
@@ -176314,9 +176314,9 @@
       "number": 80,
       "question": "某工作場所長期有 137",
       "options": {
-        "C": "2.4×10 -2",
         "A": "2.4×10 -5",
         "B": "5.9×10 -4",
+        "C": "2.4×10 -2",
         "D": "5.9×10 -1"
       },
       "answer": "D",
@@ -176419,8 +176419,8 @@
       "options": {
         "A": "Msh2與MLH1",
         "B": "DNA黏合酵素IV（LIG4）與XRCC4",
-        "D": "DNA蛋白激酶催化次單元（DNA-PKcs）與Artemis",
-        "C": "KU70與KU80"
+        "C": "KU70與KU80",
+        "D": "DNA蛋白激酶催化次單元（DNA-PKcs）與Artemis"
       },
       "answer": "A",
       "explanation": ""
@@ -176439,8 +176439,8 @@
       "options": {
         "A": "當劑量率降低時，曲線變陡峭",
         "B": "Dq的倒數等於曲線末段斜率",
-        "D": "當外插數n值為1時，此曲線之a/β值很大",
-        "C": "外插數n值（extrapolation number）隨著LET的增加而增加"
+        "C": "外插數n值（extrapolation number）隨著LET的增加而增加",
+        "D": "當外插數n值為1時，此曲線之a/β值很大"
       },
       "answer": "D",
       "explanation": ""
@@ -176964,9 +176964,9 @@
       "number": 32,
       "question": "若⁶⁰Co治療機在照野15×15 cm²，深度10 cm，SSD=80 cm處的PDD為58.4，最大劑量深度為0.5 cm，在相同照野與深度的條件下，SSD變為95 cm時，PDD變為多少?",
       "options": {
-        "C": "60.4",
         "A": "55.5",
         "B": "58.4",
+        "C": "60.4",
         "D": "63.2"
       },
       "answer": "C",
@@ -177044,9 +177044,9 @@
       "number": 36,
       "question": "使用SSD技術計算MU（monitor unit），若加速器校正於最大劑量深度（水下1 cm，SSD = 100 cm），治療狀 況為處方劑量 = 200 cGy，深度 = 5 cm，SSD = 110 cm，S",
       "options": {
-        "C": "277",
         "A": "190",
         "B": "229",
+        "C": "277",
         "D": "422"
       },
       "answer": "C",
@@ -177165,8 +177165,8 @@
       "question": "腫瘤組織插種進行後荷式近接治療時，下列何者為最常用的射源？",
       "options": {
         "A": "137",
-        "C": "125 I",
         "B": "192 Ir",
+        "C": "125 I",
         "D": "226 Ra"
       },
       "answer": "B",
@@ -178228,8 +178228,8 @@
       "question": "右側頸總動脈分支到頸外動脈和頸內動脈對應脊椎的位置，通常為下列何者？",
       "options": {
         "A": "C1—2",
-        "C": "C6—7",
         "B": "C3—4",
+        "C": "C6—7",
         "D": "T1—2"
       },
       "answer": "B",
@@ -178288,8 +178288,8 @@
       "question": "乳房攝影會使用之投射方向，下列何者錯誤？",
       "options": {
         "A": "CC",
-        "C": "ML",
         "B": "RL",
+        "C": "ML",
         "D": "MLO"
       },
       "answer": "B",
@@ -179046,8 +179046,8 @@
       "question": "下列何種造影技術可以不使用造影劑就能得到血管的影像？",
       "options": {
         "A": "CTA",
-        "C": "onventional angiography",
         "B": "TOF-MRA",
+        "C": "onventional angiography",
         "D": "conventional angiography"
       },
       "answer": "B",
@@ -179833,8 +179833,8 @@
       "number": 13,
       "question": "多層螺旋電腦斷層掃描（multiple-slice helical CT）的X光管旋轉360度時檢查床移動1 cm，X光射束寬度",
       "options": {
-        "B": "5：1",
         "A": "1：5",
+        "B": "5：1",
         "C": "2：1",
         "D": "1：2"
       },
@@ -179913,9 +179913,9 @@
       "number": 17,
       "question": "乳房攝影系統（mammography system）裝置中所需要的各項元件，從X光球管（X-ray tube）開始依序排列， 下列順序何者正確？①濾片（filter）②球管窗口（tube port）③準直儀（collimator）④壓迫板 （compression paddle）⑤柵板（grid）⑥增感屏（screen film）",
       "options": {
-        "C": "②①③④⑥⑤",
         "A": "①②③④⑤⑥",
         "B": "①③②④⑥⑤",
+        "C": "②①③④⑥⑤",
         "D": "②①③④⑤⑥"
       },
       "answer": "D",
@@ -181026,8 +181026,8 @@
       "question": "放射製藥室合成活性20 mCi的正子藥物，經過2分鐘後，只剩下10 mCi，其最有可能為下列那一個放射核種？",
       "options": {
         "A": "11",
-        "C": "15 O",
         "B": "13 N",
+        "C": "15 O",
         "D": "18 F"
       },
       "answer": "C",
@@ -181411,10 +181411,10 @@
       "number": 11,
       "question": "下列何種心臟放射造影藥物，其被心肌攝取的原因為心肌細胞膜電位驅動擴散機制（membrane potential-",
       "options": {
-        "D": "18 F-FDG",
         "A": "201 Tl-TlCl",
         "B": "99m Tc-sestamibi",
-        "C": "99m Tc-tetrofosmin"
+        "C": "99m Tc-tetrofosmin",
+        "D": "18 F-FDG"
       },
       "answer": "C",
       "explanation": ""
@@ -181797,8 +181797,8 @@
       "options": {
         "A": "胸腺嘧啶（thymidine）是DNA的前驅物質",
         "B": "DNA合成速率可藉由11C-thymidine來評估",
-        "D": "18 F-FLT在大腦的攝取極高，比 18 F-FDG更有利於應用在偵測大腦轉移病灶",
-        "C": "可藉由 18 F-FLT來評估腫瘤增生"
+        "C": "可藉由 18 F-FLT來評估腫瘤增生",
+        "D": "18 F-FLT在大腦的攝取極高，比 18 F-FDG更有利於應用在偵測大腦轉移病灶"
       },
       "answer": "D",
       "explanation": ""
@@ -181895,9 +181895,9 @@
       "number": 35,
       "question": "11C-choline與18F-fluorocholine最適合用於偵測下列何種腫瘤?",
       "options": {
-        "C": "甲狀腺癌（thyroid cancer）",
         "A": "前列腺癌（prostate cancer）",
         "B": "胰臟癌（pancreatic cancer）",
+        "C": "甲狀腺癌（thyroid cancer）",
         "D": "黑色素瘤（melanoma）"
       },
       "answer": "A",
@@ -182475,8 +182475,8 @@
       "question": "下列何者不是多巴胺D2受體的核醫造影劑？",
       "options": {
         "A": "11",
-        "C": "-NMSP",
         "B": "99m Tc-TRODAT-1",
+        "C": "-NMSP",
         "D": "123 I-IBZM"
       },
       "answer": "B",
@@ -182535,8 +182535,8 @@
       "question": "利用 90 Y-ibritumomab tiuxetan治療淋巴癌主要是針對腫瘤細胞上的何種抗原表現？",
       "options": {
         "A": "CD-20",
-        "C": "CD-4",
         "B": "CD-22",
+        "C": "CD-4",
         "D": "CD-8"
       },
       "answer": "A",
@@ -182694,8 +182694,8 @@
       "number": 75,
       "question": "僅從事核子醫學業務，但使用之放射性物質活度達1.11×10 9",
       "options": {
-        "B": "輻射防護員1名，輻射防護師1名",
         "A": "輻射防護員1名",
+        "B": "輻射防護員1名，輻射防護師1名",
         "C": "輻射防護師1名",
         "D": "輻射防護員2名，輻射防護師1名"
       },
@@ -183683,8 +183683,8 @@
       "question": "骨骼肌收縮的橫橋週期（cross-bridge cycle）主要受細胞質中何種離子的調控？",
       "options": {
         "A": "Ca2+",
-        "C": "Na +",
         "B": "Mg 2+",
+        "C": "Na +",
         "D": "K +"
       },
       "answer": "A",
@@ -184466,9 +184466,9 @@
       "number": 3,
       "question": "今有一同位素含有1000個原子，從原子核發出γ光子合計1000個（次），在K層轉換能量給予電子有38次，轉 換能量給予其它電子層有12次，觀察到穿出原子的γ光子有950個，則K電子轉換的內轉換產率（internal",
       "options": {
-        "C": "0.038",
         "A": "0.050",
         "B": "0.040",
+        "C": "0.038",
         "D": "0.012"
       },
       "answer": "B",
@@ -184566,9 +184566,9 @@
       "number": 8,
       "question": "10 MeV電子射束在水中與在鉛中碰撞質量阻擋本領（S/ρ）",
       "options": {
-        "C": "水小於鉛",
         "A": "相等",
         "B": "水大於鉛",
+        "C": "水小於鉛",
         "D": "無法比較"
       },
       "answer": "B",
@@ -184667,8 +184667,8 @@
       "question": "能量為1 MeV的光子射束照射10秒，其通量率為1000 photons/cm 2 ．s，若空氣與軟組織之直線能量吸收係數分 別為μ",
       "options": {
         "A": "1.47×10 -9",
-        "C": "1.08×10 -10",
         "B": "1.26×10 -9",
+        "C": "1.08×10 -10",
         "D": "1.46×10 -6"
       },
       "answer": "B",
@@ -184833,8 +184833,8 @@
       "question": "下列對近接治療用射源平均光子能量的敘述，何者正確？",
       "options": {
         "A": "60",
-        "C": "s",
         "B": "60",
+        "C": "s",
         "D": "192 Ir > 103 Pd > 60"
       },
       "answer": "A",
@@ -184932,10 +184932,10 @@
       "number": 26,
       "question": "正子放射核種中，下列那個核種除了正子衰變（β +",
       "options": {
-        "D": "18 F",
         "A": "11",
+        "B": "13 N",
         "C": "15 O",
-        "B": "13 N"
+        "D": "18 F"
       },
       "answer": "D",
       "explanation": ""
@@ -185572,8 +185572,8 @@
       "number": 58,
       "question": "欲將距離某射源1公尺處之劑量率降為其沒有屏蔽時的1/80，若已知屏蔽材料M，在本次計算的增建因數",
       "options": {
-        "B": "1 TVL + 3 HVL",
         "A": "1 TVL + 2 HVL",
+        "B": "1 TVL + 3 HVL",
         "C": "1 TVL + 4 HVL",
         "D": "4 HVL"
       },
@@ -185673,9 +185673,9 @@
       "question": "X射線（或加馬射線）照射到人體後，下列從放射線的吸收到各種不同形式生物傷害的表現中，何者最遲發 生？",
       "options": {
         "A": "DNA傷害",
-        "D": "癌症",
         "B": "DNA突變",
-        "C": "細胞死亡"
+        "C": "細胞死亡",
+        "D": "癌症"
       },
       "answer": "D",
       "explanation": ""
@@ -186195,9 +186195,9 @@
       "number": 9,
       "question": "下列放射線，LET由大到小排列，何者正確？① 60",
       "options": {
-        "C": "①②④③",
         "A": "③④②①",
         "B": "④③②①",
+        "C": "①②④③",
         "D": "②④①③"
       },
       "answer": "B",
@@ -186575,10 +186575,10 @@
       "number": 28,
       "question": "對一10 MV的射束，照野為40×40 cm 2 。觀察其水中的profile，發現在近表面照野邊緣有高劑量區域（high",
       "options": {
-        "D": "在水中深處可達到平坦的dose profile",
         "A": "射束發散造成的結果",
         "B": "射束中心軸有較高平均光子能量",
-        "C": "由整平濾片造成"
+        "C": "由整平濾片造成",
+        "D": "在水中深處可達到平坦的dose profile"
       },
       "answer": "A",
       "explanation": ""
@@ -186715,9 +186715,9 @@
       "number": 35,
       "question": "下列那些因素會影響準直儀散射因子（collimator scatter factor, S",
       "options": {
-        "C": "僅③",
         "A": "①",
         "B": "僅②",
+        "C": "僅③",
         "D": "②③"
       },
       "answer": "D",
@@ -186775,8 +186775,8 @@
       "number": 38,
       "question": "高劑量率組織插種近接治療（high dose-rate interstitial brachytherapy）合併腔內近接治療（intracavitary",
       "options": {
-        "B": "乳癌之術後放射治療",
         "A": "攝護腺癌之根治性放射治療",
+        "B": "乳癌之術後放射治療",
         "C": "子宮頸癌之根治性放射治療",
         "D": "食道癌之根治性放射治療"
       },
@@ -186856,8 +186856,8 @@
       "question": "對於射源所釋出之平均光子能量，下列何者正確？",
       "options": {
         "A": "60Co＞125I＞192Ir",
-        "C": "60Co＞192Ir＞125I",
         "B": "192Ir＞60Co＞125I",
+        "C": "60Co＞192Ir＞125I",
         "D": "125I＞60Co＞192Ir"
       },
       "answer": "C",
@@ -186916,8 +186916,8 @@
       "question": "下列近接治療所用之射源中，何者之曝露率常數最大？",
       "options": {
         "A": "u",
-        "C": "198",
         "B": "192 Ir",
+        "C": "198",
         "D": "226 Ra"
       },
       "answer": "A",
@@ -190309,9 +190309,9 @@
       "number": 52,
       "question": "遠隔放射治療設備，包含下列那些？①超高壓治療儀 ②范德格雷夫加速器 ③貝它加速器 ④60Co治療儀",
       "options": {
-        "C": "僅①③④",
         "A": "①②③④",
         "B": "僅②④",
+        "C": "僅①③④",
         "D": "僅①②③"
       },
       "answer": "A",
@@ -190410,8 +190410,8 @@
       "question": "下列何者用於近接治療的放射性核種，通常不是來自於人工產製？",
       "options": {
         "A": "u",
-        "C": "198",
         "B": "226 Ra",
+        "C": "198",
         "D": "103 Pd"
       },
       "answer": "B",
@@ -190596,8 +190596,8 @@
       "question": "下列何種射源不會在劑量校正儀（dose calibrator）的品管校正時使用？",
       "options": {
         "A": "57",
-        "C": "s",
         "B": "99m Tc",
+        "C": "s",
         "D": "131 I"
       },
       "answer": "D",
@@ -191549,8 +191549,8 @@
       "question": "下列何者最可能是利用腫瘤脂質合成（lipid synthesis）特性的腫瘤造影劑？",
       "options": {
         "A": "11",
-        "C": "-methionine",
         "B": "18 F-FET",
+        "C": "-methionine",
         "D": "11"
       },
       "answer": "A",
@@ -191931,9 +191931,9 @@
       "number": 52,
       "question": "利用 51",
       "options": {
-        "C": "凝血病變",
         "A": "溶血性貧血",
         "B": "發炎",
+        "C": "凝血病變",
         "D": "淋巴癌"
       },
       "answer": "A",
@@ -192151,10 +192151,10 @@
       "number": 63,
       "question": "以 111 In-DTPA結合持續灌注技術（constant infusion method）測量腎絲球過濾速率。若血漿及尿液的 111 In-",
       "options": {
-        "D": "350",
         "A": "117",
         "B": "169",
-        "C": "246"
+        "C": "246",
+        "D": "350"
       },
       "answer": "B",
       "explanation": ""
@@ -193409,8 +193409,8 @@
       "question": "下列有關交感神經系統活化對心肌細胞收縮影響的敘述，何者錯誤？",
       "options": {
         "A": "細胞膜上鈣離子通道（Ca 2+",
-        "C": "收縮力增加",
         "B": "細胞內鈣離子濃度增加",
+        "C": "收縮力增加",
         "D": "收縮週期增長"
       },
       "answer": "D",
@@ -193449,8 +193449,8 @@
       "question": "下列何者並未參與竇房結（SA node）自發性產生動作電位（action potential）的過程？",
       "options": {
         "A": "電壓依賴型鈉離子通道（voltage-gated Na +",
-        "C": "hannels）",
         "B": "F型鈉離子通道（F-type Na +",
+        "C": "hannels）",
         "D": "鉀離子通道（K +"
       },
       "answer": "A",
@@ -193508,10 +193508,10 @@
       "number": 50,
       "question": "血液中的何種變化會促使血紅素對氧氣的親和力下降，造成氧－血紅素解離曲線（oxygen-hemoglobin",
       "options": {
-        "D": "2,3-雙磷酸甘油酸（2,3-diphosphoglycerate）減少",
         "A": "酸鹼值下降",
         "B": "溫度降低",
-        "C": "二氧化碳分壓下降"
+        "C": "二氧化碳分壓下降",
+        "D": "2,3-雙磷酸甘油酸（2,3-diphosphoglycerate）減少"
       },
       "answer": "A",
       "explanation": ""
@@ -194171,10 +194171,10 @@
       "number": 3,
       "question": "關於「吸收劑量」、「時間」、「曝露」、「能量」、「質量」、「長度」等六項，其中有幾項屬於導出量",
       "options": {
-        "D": "5",
         "A": "2",
         "B": "3",
-        "C": "4"
+        "C": "4",
+        "D": "5"
       },
       "answer": "B",
       "explanation": ""
@@ -194211,9 +194211,9 @@
       "number": 5,
       "question": "已知5 MeV光子與碳（ 12",
       "options": {
-        "C": "2.2×10 -30",
         "A": "5.5×10 -31",
         "B": "1.1×10 -30",
+        "C": "2.2×10 -30",
         "D": "3.3×10 -30"
       },
       "answer": "D",
@@ -194232,8 +194232,8 @@
       "question": "下列何者最有可能是下圖中半值層（half-value layer）不固定的主因？",
       "options": {
         "A": "該光子射束由 60",
-        "C": "入射光子隨穿透深度增加而平均能量降低",
         "B": "該光子射束由直線加速器產生",
+        "C": "入射光子隨穿透深度增加而平均能量降低",
         "D": "產生制動輻射（bremsstrahlung）"
       },
       "answer": "B",
@@ -194394,9 +194394,9 @@
       "number": 14,
       "question": "距離3 mCi的 60",
       "options": {
-        "C": "0.34",
         "A": "0.58",
         "B": "1.25",
+        "C": "0.34",
         "D": "0.11"
       },
       "answer": "C",
@@ -194414,9 +194414,9 @@
       "number": 15,
       "question": "有一 60",
       "options": {
-        "C": "1.182×10 -5",
         "A": "1.182×10 -3",
         "B": "1.182×10 -4",
+        "C": "1.182×10 -5",
         "D": "1.182×10 -6"
       },
       "answer": "A",
@@ -195017,9 +195017,9 @@
       "number": 45,
       "question": "曝露率常數（exposure rate constant）為)，則 60",
       "options": {
-        "C": "1.25",
         "A": "0.66",
         "B": "1.17",
+        "C": "1.25",
         "D": "1.32"
       },
       "answer": "D",
@@ -195697,9 +195697,9 @@
       "number": 79,
       "question": "同重素線A＝44有 23 V, 22 Ti, 21 Sc, 20",
       "options": {
-        "C": "3",
         "A": "1",
         "B": "2",
+        "C": "3",
         "D": "4"
       },
       "answer": "B",
@@ -195717,10 +195717,10 @@
       "number": 80,
       "question": "承上題， 21 Sc轉換至 20",
       "options": {
-        "C": "α decay",
         "A": "β -",
-        "D": "neutron decay",
-        "B": "β +"
+        "B": "β +",
+        "C": "α decay",
+        "D": "neutron decay"
       },
       "answer": "B",
       "explanation": "",

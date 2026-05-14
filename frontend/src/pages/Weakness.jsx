@@ -4,6 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import { useAccuracyStore } from '../store/accuracyStore'
 import { getExamConfig, getAllTagNames, getStageStyle } from '../config/examRegistry'
 import { getSubjectColor } from '../utils/subjectColors'
+import { getWrong, removeWrong, clearWrong, WRONG_BANK_MAX } from '../lib/wrongBank'
 
 const MIN_ANSWERS = 5
 
@@ -76,10 +77,14 @@ export default function Weakness() {
   const weakest = useAccuracyStore(s => s.getWeakest(examType, MIN_ANSWERS))
   const resetExam = useAccuracyStore(s => s.resetExam)
   const [showReset, setShowReset] = useState(false)
+  const [tab, setTab] = useState('stats')   // 'stats' | 'wrong'
+  const [wrongVer, setWrongVer] = useState(0)
 
   const examConfig = getExamConfig(examType)
   const tagNames = getAllTagNames()
   const examName = examConfig?.name || '考試'
+
+  const wrongQuestions = getWrong()
 
   const totalAnswered = allSubjects.reduce((s, e) => s + e.total, 0)
   const totalCorrect = allSubjects.reduce((s, e) => s + e.correct, 0)
@@ -104,9 +109,24 @@ export default function Weakness() {
           ‹ 返回
         </button>
         <h1 className="text-white font-bold text-2xl">弱點分析</h1>
-        <p className="text-white/60 text-sm mt-1">{examName} — 各科正確率一覽</p>
+        <p className="text-white/60 text-sm mt-1">
+          {tab === 'stats' ? `${examName} — 各科正確率一覽` : '答錯的題目自動累積，可隨時複習'}
+        </p>
+        {/* Tabs */}
+        <div className="flex gap-2 mt-3">
+          <button onClick={() => setTab('stats')}
+            className={`flex-1 py-2 rounded-xl text-sm font-bold transition-all active:scale-95 ${tab === 'stats' ? 'bg-white text-medical-blue shadow' : 'bg-white/15 text-white/60'}`}>
+            📊 科目統計
+          </button>
+          <button onClick={() => setTab('wrong')}
+            className={`flex-1 py-2 rounded-xl text-sm font-bold transition-all active:scale-95 ${tab === 'wrong' ? 'bg-white text-red-500 shadow' : 'bg-white/15 text-white/60'}`}>
+            🔥 錯題夾 ({wrongQuestions.length})
+          </button>
+        </div>
       </div>
 
+      {tab === 'stats' && (
+      <>
       {/* Overall stats */}
       {totalAnswered > 0 && (
         <div className="px-4 -mt-3 mb-4 relative z-10">
@@ -205,6 +225,65 @@ export default function Weakness() {
           </>
         )}
       </div>
+      </>
+      )}
+
+      {/* ── 錯題夾 tab ─────────────────── */}
+      {tab === 'wrong' && (
+        <div className="flex-1 px-4 pt-4 pb-8 overflow-y-auto">
+          {wrongQuestions.length === 0 ? (
+            <div className="flex flex-col items-center justify-center gap-3 py-20">
+              <span className="text-6xl">🎉</span>
+              <p className="text-gray-500 font-bold">還沒有錯題</p>
+              <p className="text-gray-400 text-sm text-center leading-relaxed">
+                做模擬考 / 練習 / 對戰<br/>答錯的題目會自動累積到這裡
+              </p>
+            </div>
+          ) : (
+            <>
+              <div className="flex items-center gap-2 mb-3">
+                <button onClick={() => navigate('/review', { state: { questions: wrongQuestions, stage: '錯題夾' } })}
+                  className="flex-1 py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95"
+                  style={{ background: '#EF4444' }}>
+                  📋 一鍵檢討全部（{wrongQuestions.length} 題）
+                </button>
+                <button onClick={() => {
+                    if (confirm(`確定清空錯題夾？目前累積 ${wrongQuestions.length} 題`)) {
+                      clearWrong(); setWrongVer(v => v + 1)
+                    }
+                  }}
+                  className="px-3 py-3 rounded-2xl text-xs text-gray-400 bg-white border border-gray-200 active:scale-95">
+                  清空
+                </button>
+              </div>
+              <p className="text-xs text-gray-400 mb-3">
+                自動累積（最多 {WRONG_BANK_MAX} 題，超過會移除最舊的）
+              </p>
+              <div className="flex flex-col gap-2">
+                {wrongQuestions.map((q, i) => (
+                  <div key={q.id || i} className="bg-white rounded-2xl border border-red-100 px-4 py-3 shadow-sm">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      {q.subject_name && (
+                        <span className="text-[10px] font-semibold text-white px-2 py-0.5 rounded-full"
+                              style={{ background: getSubjectColor(q.subject_name) }}>
+                          {q.subject_name}
+                        </span>
+                      )}
+                      {q.roc_year && (
+                        <span className="text-[10px] text-gray-400">{q.roc_year}年{q.session || ''}</span>
+                      )}
+                      <span className="flex-1" />
+                      <button onClick={() => { removeWrong(q); setWrongVer(v => v + 1) }}
+                        className="text-xs text-gray-300 active:text-red-400" title="從錯題夾移除">✕</button>
+                    </div>
+                    <p className="text-sm text-gray-700 line-clamp-2">{q.question}</p>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      )}
     </div>
   )
 }

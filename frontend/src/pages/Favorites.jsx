@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useBookmarks } from '../hooks/useBookmarks'
-import { getWrong, removeWrong, clearWrong, WRONG_BANK_MAX } from '../lib/wrongBank'
 import { useExplain } from '../hooks/useAI'
 import { ExplainPanel } from '../components/AIPanel'
 import { getSubjectColor } from '../utils/subjectColors'
@@ -86,25 +85,14 @@ function FavCard({ q, index, onRemove }) {
   )
 }
 
-const WRONG_TAB = '__wrong__'
-
 export default function Favorites() {
   const navigate = useNavigate()
   const { folders, getFolderQuestions, removeBookmark, renameFolder, clearFolder, MAX_PER_FOLDER } = useBookmarks()
   const [activeTab, setActiveTab] = useState(folders[0])
   const [editing, setEditing] = useState(null) // folder name being edited
   const [editValue, setEditValue] = useState('')
-  const [wrongVer, setWrongVer] = useState(0)  // 觸發 wrongBank re-read
 
-  const isWrongTab = activeTab === WRONG_TAB
-  const wrongQuestions = isWrongTab ? getWrong() : []
-  const questions = isWrongTab ? wrongQuestions : getFolderQuestions(activeTab)
-  const wrongCount = getWrong().length
-
-  const handleRemove = (q) => {
-    if (isWrongTab) { removeWrong(q); setWrongVer(v => v + 1) }
-    else { removeBookmark(q) }
-  }
+  const questions = getFolderQuestions(activeTab)
 
   const handleRename = () => {
     if (editValue.trim() && editValue.trim() !== editing) {
@@ -123,26 +111,20 @@ export default function Favorites() {
         </div>
 
         {/* Folder tabs */}
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex gap-2">
           {folders.map(f => {
             const count = getFolderQuestions(f).length
             const isActive = activeTab === f
             return (
               <button key={f} onClick={() => setActiveTab(f)}
                 onDoubleClick={() => { setEditing(f); setEditValue(f) }}
-                className={`flex-1 min-w-[28%] py-2 rounded-xl text-sm font-bold transition-all active:scale-95 ${isActive ? 'bg-white text-medical-blue shadow' : 'bg-white/15 text-white/60'}`}>
+                className={`flex-1 py-2 rounded-xl text-sm font-bold transition-all active:scale-95 ${isActive ? 'bg-white text-medical-blue shadow' : 'bg-white/15 text-white/60'}`}>
                 {f} ({count}/{MAX_PER_FOLDER})
               </button>
             )
           })}
-          <button onClick={() => setActiveTab(WRONG_TAB)}
-            className={`flex-1 min-w-[28%] py-2 rounded-xl text-sm font-bold transition-all active:scale-95 ${isWrongTab ? 'bg-white text-red-500 shadow' : 'bg-white/15 text-white/60'}`}>
-            🔥 錯題夾 ({wrongCount})
-          </button>
         </div>
-        <p className="text-white/30 text-xs mt-2">
-          {isWrongTab ? '練習/模考/對戰答錯的題目會自動加入此處（最多 ' + WRONG_BANK_MAX + ' 題）' : '長按收藏夾名稱可重新命名'}
-        </p>
+        <p className="text-white/30 text-xs mt-2">長按收藏夾名稱可重新命名</p>
       </div>
 
       {/* Rename dialog */}
@@ -161,30 +143,18 @@ export default function Favorites() {
       <div className="flex-1 px-4 py-4 flex flex-col gap-3">
         {questions.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 gap-3">
-            <span className="text-5xl">{isWrongTab ? '🎉' : '📌'}</span>
-            <p className="text-gray-400 text-sm">
-              {isWrongTab ? '還沒有錯題' : '這個收藏夾還沒有題目'}
-            </p>
-            <p className="text-gray-300 text-xs">
-              {isWrongTab ? '做模擬考/練習/對戰答錯時會自動加入這裡' : '在題庫瀏覽或練習中按 ☆ 收藏'}
-            </p>
+            <span className="text-5xl">📌</span>
+            <p className="text-gray-400 text-sm">這個收藏夾還沒有題目</p>
+            <p className="text-gray-300 text-xs">在題庫瀏覽或練習中按 ☆ 收藏</p>
           </div>
         ) : (
           <>
             <div className="flex justify-end">
-              <button onClick={() => {
-                  const label = isWrongTab ? '錯題夾' : activeTab
-                  if (confirm(`確定清空「${label}」的所有題目？`)) {
-                    if (isWrongTab) { clearWrong(); setWrongVer(v => v + 1) }
-                    else { clearFolder(activeTab) }
-                  }
-                }}
-                className="text-xs text-red-400 active:scale-95">
-                清空{isWrongTab ? '錯題夾' : '此收藏夾'}
-              </button>
+              <button onClick={() => { if (confirm(`確定清空「${activeTab}」的所有題目？`)) clearFolder(activeTab) }}
+                className="text-xs text-red-400 active:scale-95">清空此收藏夾</button>
             </div>
             {questions.map((q, i) => (
-              <FavCard key={q.id || i} q={q} index={i} onRemove={handleRemove} />
+              <FavCard key={q.id || i} q={q} index={i} onRemove={removeBookmark} />
             ))}
           </>
         )}

@@ -6,8 +6,8 @@
 
 const CDN_BASE = 'https://cdn.jsdelivr.net/gh/aaowobbowocc-ai/Claude-Code-Medical-Quiz@master/backend'
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000  // 24h
-// v2 (2026-05-08): force re-download after image_options schema change
-const CACHE_VERSION = 2
+// v3 (2026-05-15): doctor2/tcm/nursing 102 大量題幹+選項重抽，強制刷新 jsDelivr + IndexedDB cache
+const CACHE_VERSION = 3
 const DB_NAME = 'questions-cache'
 const DB_STORE = 'exams'
 
@@ -128,7 +128,9 @@ export async function loadExamQuestions(examId) {
     }
   } catch { /* ignore IDB errors */ }
 
-  const url = `${CDN_BASE}/${file}`
+  // Cache-bust query string forces jsDelivr edge to fetch fresh from GitHub
+  // when @master ref is updated. CACHE_VERSION bump invalidates this batch.
+  const url = `${CDN_BASE}/${file}?v=${CACHE_VERSION}`
   const r = await fetchWithTimeout(url, 8000)
   if (!r.ok) throw new Error(`CDN fetch failed: ${r.status}`)
   const data = await r.json()

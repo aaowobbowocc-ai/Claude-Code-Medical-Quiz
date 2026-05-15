@@ -14,6 +14,22 @@ export default function QuestionImages({ images, imageUrl, incomplete }) {
       </div>
     )
   }
+  // Other incomplete reasons — show a generic warning so users understand why
+  // a question seems broken (added 2026-05-16 with bulk audit fixes)
+  if (incomplete === 'empty_question') {
+    return (
+      <div className="mt-2 px-3 py-2 rounded-lg bg-amber-50 border border-amber-200 text-xs text-amber-700">
+        本題題幹資料缺漏，請參考原始考卷
+      </div>
+    )
+  }
+  if (incomplete === 'truncated_options') {
+    return (
+      <div className="mt-2 px-3 py-2 rounded-lg bg-amber-50 border border-amber-200 text-xs text-amber-700">
+        本題部分選項缺漏，請參考原始考卷
+      </div>
+    )
+  }
   if (incomplete === 'image_options') {
     return (
       <>

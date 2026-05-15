@@ -370,11 +370,17 @@ io.on('connection', (socket) => {
 
   // Create room
   socket.on('create_room', ({ playerName, playerAvatar, isPublic = false, password = null, exam = 'doctor1' }) => {
+    // Sanitize player-controlled strings — playerName goes into chat/leaderboard,
+    // password goes into room config, exam into questions query.
+    const cleanName = (typeof playerName === 'string' ? playerName : '').slice(0, 30).trim() || '匿名';
+    const cleanAvatar = (typeof playerAvatar === 'string' ? playerAvatar : '').slice(0, 8) || '👨‍⚕️';
+    const cleanPw = typeof password === 'string' && password.length <= 30 ? password : null;
+    const cleanExam = typeof exam === 'string' && /^[a-z0-9-]+$/.test(exam) ? exam.slice(0, 40) : 'doctor1';
     const code = makeRoomCode();
     const room = {
       code,
       hostId: socket.id,
-      players: new Map([[socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', score: 0, ready: false, answered: false }]]),
+      players: new Map([[socket.id, { name: cleanName, avatar: cleanAvatar, score: 0, ready: false, answered: false }]]),
       stage: 0,
       timerMode: 'auto',
       questions: [],
@@ -382,8 +388,8 @@ io.on('connection', (socket) => {
       timer: null,
       phase: 'lobby',
       isPublic: !!isPublic,
-      password: password || null,
-      exam: exam || 'doctor1',
+      password: cleanPw,
+      exam: cleanExam,
       lastActivity: Date.now(),
     };
     rooms.set(code, room);
@@ -426,7 +432,9 @@ io.on('connection', (socket) => {
         return;
       }
     }
-    room.players.set(socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', score: 0, ready: false, answered: false });
+    const cleanName = (typeof playerName === 'string' ? playerName : '').slice(0, 30).trim() || '匿名';
+    const cleanAvatar = (typeof playerAvatar === 'string' ? playerAvatar : '').slice(0, 8) || '👨‍⚕️';
+    room.players.set(socket.id, { name: cleanName, avatar: cleanAvatar, score: 0, ready: false, answered: false });
     room.lastActivity = Date.now();
     socket.join(code.toUpperCase());
     socket.data.roomCode = code.toUpperCase();
@@ -621,12 +629,21 @@ io.on('connection', (socket) => {
     if (!room || room.phase !== 'playing') return;
     const player = room.players.get(socket.id);
     if (!player) return;
+    // Validate — prevent payload flooding / malformed types
+    if (type !== 'phrase' && type !== 'sticker') return;
+    if (typeof content !== 'string') return;
+    const cleanContent = type === 'sticker' ? content.slice(0, 8) : content.slice(0, 60);
+    if (!cleanContent.trim()) return;
+    // Per-player rate limit: max 1 chat per second
+    const now = Date.now();
+    if (player._lastChatAt && now - player._lastChatAt < 1000) return;
+    player._lastChatAt = now;
     io.to(room.code).emit('chat_msg', {
       fromId: socket.id,
       name: player.name,
       avatar: player.avatar || '👨‍⚕️',
-      type,    // 'phrase' | 'sticker'
-      content, // text or emoji
+      type,
+      content: cleanContent,
     });
   });
 

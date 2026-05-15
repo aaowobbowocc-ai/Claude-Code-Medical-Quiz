@@ -194472,15 +194472,16 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 9,
-      "question": "先天性 QT 延長症候群（ congenital long QT syndrome ），最常見的遺傳變異為何？",
+      "question": "先天性QT 延長症候群(congenital long QT syndrome),最常見的遺傳變異為何?",
       "options": {
-        "A": "鈉離子通道之突變",
-        "B": "鈣離子通道之突變",
-        "C": "鉀離子通道之突變",
-        "D": "氯離子通道之突變"
+        "A": "鈉離子通道之突變",
+        "B": "鈣離子通道之突變",
+        "C": "鉀離子通道之突變",
+        "D": "氯離子通道之突變"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0103_12",
@@ -194492,15 +194493,16 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 12,
-      "question": "二尖瓣（僧帽瓣）閉鎖不全與主動脈瓣膜狹窄的心雜音，一般而言不能由下列那一項特徵來區分？  一為收縮期雜音，另一為舒張期雜音 雜音的特徵及期間，一為全收縮期，較 soft ；另一為漸強漸弱型收縮期雜音，較 harsh",
+      "question": "二尖瓣(僧帽瓣)閉鎖不全與主動脈瓣膜狹窄的心雜音,一般而言不能由下列那一項特徵來區分?",
       "options": {
-        "A": "雜音",
-        "B": "radiation",
-        "C": "不同，一至左腋下，另一至頸動脈",
-        "D": "心雜音最大強度，一在心尖部位，另一在右第二肋間（心底部位）"
+        "A": "一為收縮期雜音,另一為舒張期雜音",
+        "B": "雜音的特徵及期間,一為全收縮期,較soft;另一為漸強漸弱型收縮期雜音,較harsh",
+        "C": "雜音radiation 不同,一至左腋下,另一至頸動脈",
+        "D": "心雜音最大強度,一在心尖部位,另一在右第二肋間(心底部位)"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0103_14",
@@ -194512,17 +194514,18 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 14,
-      "question": "承上題，對於張先生的處置，下列何者最不恰當？",
+      "question": "承上題,對於張先生的處置,下列何者最不恰當?",
       "options": {
-        "A": "給予氧氣與生理監測器",
-        "B": "靜脈注射嗎啡",
-        "C": "靜脈注射生理食鹽水",
-        "D": "靜脈注射利尿劑"
+        "A": "給予氧氣與生理監測器",
+        "B": "靜脈注射嗎啡",
+        "C": "靜脈注射生理食鹽水",
+        "D": "靜脈注射利尿劑"
       },
       "answer": "C",
       "explanation": "",
       "case_context": "第 13 題：張先生60 歲，因罹患高血壓、糖尿病長期規律服藥，最近2 天，走幾步路就會呼吸急促，睡覺時無法平躺，坐著呼吸才比較舒服，另外走路時胸口悶痛，坐著休息時胸悶就比較緩解，最近胸痛的頻率也比以前增加。張先生到急診求診，血壓160/90 毫米汞柱，心跳每分鐘130 下，體溫攝氏37 度，呼吸每分鐘25 次，在無使用氧氣之下的血氧濃度88%，身體診查呈現如下，頸靜脈怒張（jugular veinengorgement），於心尖處有第2 度（Grade II/VI）心收縮雜音，S3 奔跑音（S3 gallop），雙側均有肺囉音（rales），雙下肢水腫，心電圖呈現竇性心搏過速（sinus tachycardia）與V4-V6 有ST 段下降，胸部X 光片呈現心臟肥大與肺水腫，對於張先生此次到急診的診斷，下列何者最不恰當？",
-      "grouped": true
+      "grouped": true,
+      "disputed": true
     },
     {
       "id": "102110_0103_16",
@@ -194534,15 +194537,16 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 16,
-      "question": "一位 45 歲婦人主訴食慾不振，腹部不適及皮膚發黃，實驗室檢查數據如下： prothrombin time 延長， alkaline phosphatase （ ALP ） 350 U/L ， GGT 280 U/L ， ALT 60 U/L ， AST 50 U/L ， total bilirubin 7.0 mg/dL ， direct bilirubin 4.2 mg/dL 。下列何項步驟或敘述最不恰當？ 應予病患補充維他命 K 病患應先接受腹部超音波檢查 病患應立即進行經皮穿膽管引流術（ PTCD ） 病患之尿液膽紅素（",
+      "question": "一位45 歲婦人主訴食慾不振,腹部不適及皮膚發黃,實驗室檢查數據如下:prothrombin time 延長, alkaline phosphatase(ALP)350 U/L,GGT 280 U/L,ALT 60 U/L,AST 50 U/L,total bilirubin 7.0 mg/dL, direct bilirubin 4.2 mg/dL。下列何項步驟或敘述最不恰當?",
       "options": {
-        "A": "bilirubin",
-        "B": "）會增加，而糞便黃疸色素原（",
-        "C": "urobilinogen",
-        "D": "）會減少"
+        "A": "應予病患補充維他命K",
+        "B": "病患應先接受腹部超音波檢查",
+        "C": "病患應立即進行經皮穿膽管引流術(PTCD)",
+        "D": "病患之尿液膽紅素(bilirubin)會增加,而糞便黃疸色素原(urobilinogen)會減少"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0103_17",
@@ -194554,15 +194558,16 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 17,
-      "question": "關於原發性膽道性肝硬化症（ primary biliary cirrhosis ）的敘述，下列何者錯誤？ 絕大多數發生在中年女性 血清生化檢查，主要顯示典型膽汁滯留的變化， ALP 及 GGT 明顯升高， AST 、 ALT 僅呈輕度升高， 膽紅素升高以間接型膽紅素為主  90% 患者的 AMA 抗體皆呈陽性，可與自體免疫肝炎（ autoimmune hepatitis ）及原發性硬化性膽道 炎（ primary sclerosing cholangitis",
+      "question": "關於原發性膽道性肝硬化症(primary biliary cirrhosis)的敘述,下列何者錯誤?",
       "options": {
-        "A": "絕大多數發生在中年女性",
-        "B": "血清生化檢查，主要顯示典型膽汁滯留的變化，ALP 及 GGT 明顯升高，AST、ALT 僅呈輕度升高，膽紅素升高以間接型膽紅素為主",
-        "C": "90% 患者的 AMA 抗體皆呈陽性，可與自體免疫肝炎（autoimmune hepatitis）及原發性硬化性膽道炎（primary sclerosing cholangitis）作鑑別",
-        "D": "目前認為 ursodeoxycholic acid 能延長患者壽命，且延遲肝移植"
+        "A": "絕大多數發生在中年女性",
+        "B": "血清生化檢查,主要顯示典型膽汁滯留的變化,ALP 及GGT 明顯升高,AST、ALT 僅呈輕度升高,",
+        "C": "膽紅素升高以間接型膽紅素為主",
+        "D": "90%患者的AMA 抗體皆呈陽性,可與自體免疫肝炎(autoimmune hepatitis)及原發性硬化性膽道"
       },
       "answer": "B",
-      "explanation": "原發性膽道性肝硬化（PBC）之膽紅素升高以**直接型膽紅素**（conjugated bilirubin）為主，因為是肝內小膽管破壞造成的膽汁滯留性肝病。**(B) 說「以間接型膽紅素為主」是錯誤**。其他：(A) 中年女性為主 ✓；(C) AMA（抗粒線體抗體）90% 陽性是 PBC 標誌 ✓；(D) UDCA 為一線治療 ✓。答案 B。"
+      "explanation": "原發性膽道性肝硬化（PBC）之膽紅素升高以**直接型膽紅素**（conjugated bilirubin）為主，因為是肝內小膽管破壞造成的膽汁滯留性肝病。**(B) 說「以間接型膽紅素為主」是錯誤**。其他：(A) 中年女性為主 ✓；(C) AMA（抗粒線體抗體）90% 陽性是 PBC 標誌 ✓；(D) UDCA 為一線治療 ✓。答案 B。",
+      "disputed": true
     },
     {
       "id": "102110_0103_18",
@@ -194574,15 +194579,16 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 18,
-      "question": "有關非類固醇抗發炎藥物（NSAIDs）引起的胃病變敘述，下列何者正確？",
+      "question": "有關非類固醇抗發炎藥物(NSAIDs)引起的胃病變敘述,下列何者正確?",
       "options": {
-        "A": "同時服用 aspirin 及 COX-2 抑制劑與只用 COX-2 抑制劑的腸胃出血風險相當",
-        "B": "抗血小板藥物 clopidogrel 並不會引起胃腸出血",
-        "C": "發生胃腸出血的風險為 indomethacin ＞ diclofenac ＞ ibuprofen",
-        "D": "COX-2 抑制劑可減少胃腸出血的風險，但可能增加心血管風險，而非選擇性 NSAID 則不會增加心血管風險"
+        "A": "同時服用aspirin 及COX-2 抑制劑與只用COX-2 抑制劑的腸胃出血風險相當",
+        "B": "抗血小板藥物clopidogrel 並不會引起胃腸出血",
+        "C": "發生胃腸出血的風險為indomethacin>diclofenac>ibuprofen",
+        "D": "COX-2 抑制劑可減少胃腸出血的風險,但可能增加心血管風險,而非選擇性NSAID 則不會增加心"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0103_21",
@@ -194594,15 +194600,16 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 21,
-      "question": "下列有關炎性腸病（ inflammatory bowel disease ）的敘述，何者錯誤？ 潰瘍性大腸炎（ ulcerative colitis, UC ），只侵犯大腸；克隆氏病（ Crohn’s disease, CD ），從口腔到 肛門都可能侵犯  UC 為廣泛性黏膜發炎； CD 呈斑塊性深層發炎，可能形成膿瘍、瘻管  UC 及 CD 皆有癌變之可能，尤其患病 8 年以上時為然 抽菸在",
+      "question": "下列有關炎性腸病(inflammatory bowel disease)的敘述,何者錯誤?",
       "options": {
-        "A": "CD",
-        "B": "病人有利於減輕症狀，但停抽時反會惡化；但對",
-        "C": "UC",
-        "D": "病人則只會使症狀惡化"
+        "A": "潰瘍性大腸炎(ulcerative colitis, UC),只侵犯大腸;克隆氏病(Crohn’s disease, CD),從口腔到",
+        "B": "肛門都可能侵犯",
+        "C": "UC 為廣泛性黏膜發炎;CD 呈斑塊性深層發炎,可能形成膿瘍、瘻管",
+        "D": "UC 及CD 皆有癌變之可能,尤其患病8 年以上時為然"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0103_22",
@@ -194614,15 +194621,16 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 22,
-      "question": "臨床上偶見雙側卵巢轉移癌（ Krukenberg tumor ），最可能由何種細胞型態的消化系原發癌發生轉移？",
+      "question": "臨床上偶見雙側卵巢轉移癌(Krukenberg tumor),最可能由何種細胞型態的消化系原發癌發生轉移?",
       "options": {
-        "A": "鱗狀上皮細胞癌",
-        "B": "不分泌黏液之腺癌",
-        "C": "分泌黏液之腺癌",
-        "D": "肝細胞癌"
+        "A": "鱗狀上皮細胞癌",
+        "B": "不分泌黏液之腺癌",
+        "C": "分泌黏液之腺癌",
+        "D": "肝細胞癌"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0103_23",
@@ -194634,15 +194642,16 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 23,
-      "question": "下列何者為肝癌之主要轉移部位？",
+      "question": "下列何者為肝癌之主要轉移部位?",
       "options": {
-        "A": "胃及腸",
-        "B": "胃及胰",
-        "C": "腹部淋巴結及肺",
-        "D": "腹部淋巴結及腎"
+        "A": "胃及腸",
+        "B": "胃及胰",
+        "C": "腹部淋巴結及肺",
+        "D": "腹部淋巴結及腎"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0103_24",
@@ -194656,10 +194665,10 @@
       "number": 24,
       "question": "與消化道類癌(carcinoid tumor)引起之類癌症候群(carcinoid syndrome),無關之症狀為下列何者?",
       "options": {
-        "A": "下，體溫攝氏",
-        "B": "37",
-        "C": "度，",
-        "D": "呼吸每分鐘"
+        "A": "顏面潮紅",
+        "B": "糙皮病(pellagra)",
+        "C": "氣喘樣症狀",
+        "D": "便秘"
       },
       "answer": "D",
       "explanation": "",
@@ -194677,10 +194686,10 @@
       "number": 36,
       "question": "一位70 歲男性淋巴癌病人,分期為Ann Arbor 第四期,血清LDH 值6,500 U/L(正常<200 U/L),患 者在接受化學治療兩天後發生呼吸急促、寡尿、抽筋等症狀,此時抽血檢查,下列結果何者最不可 能出現?",
       "options": {
-        "A": "160/90",
-        "B": "毫米汞柱，心跳每分鐘",
-        "C": "130",
-        "D": "下，體溫攝氏"
+        "A": "血鉀過高",
+        "B": "血中pH 值偏酸",
+        "C": "血磷過低",
+        "D": "血鈣偏低"
       },
       "answer": "C",
       "explanation": "",
@@ -194696,15 +194705,16 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 50,
-      "question": "有關 GOLD guideline 中 COPD 之分期及治療，下列何者錯誤？ FEV 1 /FVC ＜ 70% 且 50% ≦ FEV 1 ＜ 80% 預測值，為 stage II, moderate COPD FEV 1 /FVC ＜ 70% 且 30% ≦ FEV 1 ＜ 50% 預測值，為 stage III, severe COPD  吸入性類固醇在 FEV 1 ＜ 50% 且常有急性發作之患者，可規則長期使用  對於 FEV 1 ＜",
+      "question": "有關GOLD guideline 中COPD 之分期及治療,下列何者錯誤?",
       "options": {
-        "A": "30%",
-        "B": "預測值之穩定期",
-        "C": "COPD",
-        "D": "患者，可長期使用低劑量之口服類固醇來減少發作之次數"
+        "A": "FEV1/FVC<70%且50%≦FEV1<80%預測值,為stage II, moderate COPD",
+        "B": "FEV1/FVC<70%且30%≦FEV1<50%預測值,為stage III, severe COPD",
+        "C": "吸入性類固醇在FEV1<50%且常有急性發作之患者,可規則長期使用",
+        "D": "對於FEV1<30%預測值之穩定期COPD 患者,可長期使用低劑量之口服類固醇來減少發作之次數"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0103_62",
@@ -194716,17 +194726,18 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 62,
-      "question": "承上題，關於此病症的敘述，下列何者錯誤？  對於未曾接受抗生素治療之患者，血液培養發現致病菌之陽性率可高達 95%  經胸壁心臟超音波（ transthoracic echocardiography ）檢查的敏感度約為 90%  診斷此病症應在 24 小時內由不同部位間隔 1 小時執行 3 套之血液培養",
+      "question": "承上題,關於此病症的敘述,下列何者錯誤?",
       "options": {
-        "A": "60%",
-        "B": "以上的患者有紅血球沉降速率（",
-        "C": "erythrocyte sedimentation rate",
-        "D": "）增加"
+        "A": "對於未曾接受抗生素治療之患者,血液培養發現致病菌之陽性率可高達95%",
+        "B": "經胸壁心臟超音波(transthoracic echocardiography)檢查的敏感度約為90%",
+        "C": "診斷此病症應在24 小時內由不同部位間隔1 小時執行3 套之血液培養",
+        "D": "60%以上的患者有紅血球沉降速率(erythrocyte sedimentation rate)增加"
       },
       "answer": "B",
       "explanation": "",
       "case_context": "第 60 題：一位40 歲男性，因為發燒4 日合併胸痛及呼吸困難而被送至急診，身體診查發現雙手手腕及手肘有多處扎針傷口，胸部X 光有多處散發性病灶，尿液檢查呈現heroin 陽性反應，血液檢查白血球數14,900/μL，segment 88%，lymphocyte 10%，monocyte 2%，兩套血液培養在48 小時後細菌室通報有革蘭氏陰性桿菌，此菌最有可能是：",
-      "grouped": true
+      "grouped": true,
+      "disputed": true
     },
     {
       "id": "102110_0103_63",
@@ -194738,19 +194749,20 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 63,
-      "question": "一位 31 歲的女性，在最近 4 年來兩側耳朵時有突發性的紅腫及疼痛（如附圖左）。經幾次發作之後， 耳朵逐漸變形而軟骨也失去彈性（如附圖右）。患者的診斷為何？",
+      "question": "一位31 歲的女性,在最近4 年來兩側耳朵時有突發性的紅腫及疼痛(如附圖左)。經幾次發作之後, 耳朵逐漸變形而軟骨也失去彈性(如附圖右)。患者的診斷為何?",
       "options": {
-        "A": "relapsing polychondritis",
-        "B": "pyogenic infection of ear auricles",
-        "C": "eczema of ear auricles",
-        "D": "tuberculous infection of ear auricles"
+        "A": "relapsing polychondritis",
+        "B": "pyogenic infection of ear auricles",
+        "C": "eczema of ear auricles",
+        "D": "tuberculous infection of ear auricles"
       },
       "answer": "A",
       "explanation": "",
       "images": [
         "/question-images/doctor2_102110_0103_63_0.webp"
       ],
-      "image_dependent": true
+      "image_dependent": true,
+      "disputed": true
     },
     {
       "id": "102110_0103_64",
@@ -194762,12 +194774,12 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 64,
-      "question": "承上題，本疾病在急性發作時，應給予那種治療最適當？ oral glucocorticoids non-steroid anti-inflammatory drugs",
+      "question": "承上題,本疾病在急性發作時,應給予那種治療最適當?",
       "options": {
-        "A": "local",
-        "B": "anesthetics",
-        "C": "injection",
-        "D": "antibiotics"
+        "A": "oral glucocorticoids",
+        "B": "non-steroid anti-inflammatory drugs",
+        "C": "local anesthetics injection",
+        "D": "antibiotics"
       },
       "answer": "A",
       "explanation": "",
@@ -194775,7 +194787,8 @@
       "images": [
         "/question-images/doctor2_102110_0103_63_0.webp"
       ],
-      "grouped": true
+      "grouped": true,
+      "disputed": true
     },
     {
       "id": "102110_0103_65",
@@ -194787,15 +194800,16 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 65,
-      "question": "一位 67 歲男性，主訴兩週來漸發性呼吸困難，病患抽菸 50 年，近半年來常感倦怠，常咳嗽且併有濃痰。身體診查血壓 90/60 毫米汞柱，呼吸速率每分鐘 30 下，脈搏每分鐘 100 下，心臟的聽診發現心音變小（distant heart sound），但無心雜音，在鼻管通氧 2 公升/分鐘下，動脈血氧飽和度 SaO2：93%。胸部 X 光如下：下列敘述何者錯誤？",
+      "question": "一位67 歲男性,主訴兩週來漸發性呼吸困難,病患抽菸50 年,近半年來常感倦怠,常咳嗽且併有 濃痰。身體診查血壓90/60 毫米汞柱,呼吸速率每分鐘30 下,脈搏每分鐘100 下,心臟的聽診發現 心音變小(distant heart sound),但無心雜音,在鼻管通氧2 公升/分鐘下,動脈血氧飽和度SaO2: 93%。胸部X 光如下: 下列敘述何者錯誤?",
       "options": {
-        "A": "患者之頸靜脈怒張",
-        "B": "患者血壓呼氣時收縮壓下降幅度超過 10 毫米汞柱",
-        "C": "患者心電圖檢查之肢導極及胸前導極均呈低電壓",
-        "D": "下一步應考慮安排心臟超音波檢查確診"
+        "A": "患者之頸靜脈怒張",
+        "B": "患者血壓呼氣時收縮壓下降幅度超過10 毫米汞柱",
+        "C": "患者心電圖檢查之肢導極及胸前導極均呈低電壓",
+        "D": "下一步應考慮安排心臟超音波檢查確診"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_7",
@@ -194807,15 +194821,16 @@
       "subject_name": "小兒科",
       "stage_id": 1,
       "number": 7,
-      "question": "一個食母奶的足月新生兒，於 7 天大時回診，因黃疸，檢查血清膽紅素為 15 mg/dL，其出生體重 3,200 公克，現在為 3,250 公克，活力佳。下列那一項處理最適當？",
+      "question": "一餵食母奶的足月新生兒,於7 天大時回診,因黃疸,檢查血清膽紅素為13 mg/dL,其出生體重3,200 公克,現在為3,250 公克,活力佳。下列那一項處理最適當?",
       "options": {
-        "A": "照光治療",
-        "B": "停餵母奶",
-        "C": "繼續觀察",
-        "D": "住院檢查"
+        "A": "照光治療",
+        "B": "停餵母奶",
+        "C": "繼續觀察",
+        "D": "住院檢查"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_8",
@@ -194827,15 +194842,16 @@
       "subject_name": "小兒科",
       "stage_id": 1,
       "number": 8,
-      "question": "下列有關陰囊水腫的敘述，何者錯誤？ 一般男嬰發生陰囊水腫的機率約為",
+      "question": "下列有關陰囊水腫的敘述,何者錯誤?",
       "options": {
-        "A": "1~2%",
-        "B": "新生兒陰囊水腫需要跟鼠蹊部疝氣做鑑別診斷",
-        "C": "罹患陰囊水腫的男嬰，日後發生睪丸扭轉的機率較正常男嬰高",
-        "D": "陰囊水腫常需要開刀治療"
+        "A": "一般男嬰發生陰囊水腫的機率約為1~2%",
+        "B": "新生兒陰囊水腫需要跟鼠蹊部疝氣做鑑別診斷",
+        "C": "罹患陰囊水腫的男嬰,日後發生睪丸扭轉的機率較正常男嬰高",
+        "D": "陰囊水腫常需要開刀治療"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_16",
@@ -194847,15 +194863,16 @@
       "subject_name": "小兒科",
       "stage_id": 1,
       "number": 16,
-      "question": "一位 5 歲的女童這兩週來有上眼皮浮腫、下肢水腫現象。女童過往無類似病史。尿液常規檢查發現 Protein >300 mg/dL ； WBC 0-2/HPF ； RBC 0-2/HPF 。血清白蛋白值為 1.6 g/dL 。下列相關處置或敘述，何 者錯誤？ 不需先切片診斷，可直接使用類固醇治療 利尿劑有可能會增加血栓併發症（ thromboemboli complication ）的可能性 對類固醇抗藥性（ steroid resistant ）是指在使用全量類固醇 4 週後仍然無法達到緩解（ remission ） 對類固醇倚賴（",
+      "question": "一位5 歲的女童這兩週來有上眼皮浮腫、下肢水腫現象。女童過往無類似病史。尿液常規檢查發現 Protein >300 mg/dL;WBC 0-2/HPF;RBC 0-2/HPF。血清白蛋白值為1.6 g/dL。下列相關處置或敘述,何 者錯誤?",
       "options": {
-        "A": "steroid dependent",
-        "B": "）是指在類固醇改隔日劑量時或停用",
-        "C": "28",
-        "D": "日內復發"
+        "A": "不需先切片診斷,可直接使用類固醇治療",
+        "B": "利尿劑有可能會增加血栓併發症(thromboemboli complication)的可能性",
+        "C": "對類固醇抗藥性(steroid resistant)是指在使用全量類固醇4 週後仍然無法達到緩解(remission)",
+        "D": "對類固醇倚賴(steroid dependent)是指在類固醇改隔日劑量時或停用28 日內復發"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_17",
@@ -194867,15 +194884,16 @@
       "subject_name": "小兒科",
       "stage_id": 1,
       "number": 17,
-      "question": "某嬰兒病房出現 4 名呼吸道細胞融合病毒（ respiratory syncytial virus ）的院內感染病例，下列那一項",
+      "question": "某嬰兒病房出現4 名呼吸道細胞融合病毒(respiratory syncytial virus)的院內感染病例,下列那一項 是最有效的感染管制措施?",
       "options": {
-        "A": "是最有效的感染管制措施？",
-        "B": "病房每天用紫外線照射一小時 加強洗手",
-        "C": "所有住院嬰兒靜脈注射免疫球蛋白",
-        "D": "嬰兒的呼吸道分泌物用漂白水消毒"
+        "A": "病房每天用紫外線照射一小時",
+        "B": "加強洗手",
+        "C": "所有住院嬰兒靜脈注射免疫球蛋白",
+        "D": "嬰兒的呼吸道分泌物用漂白水消毒"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_18",
@@ -194887,15 +194905,16 @@
       "subject_name": "小兒科",
       "stage_id": 1,
       "number": 18,
-      "question": "有關阻塞性睡眠呼吸中止症候群（ obstructive sleep apnea syndrome ； OSAS ）之敘述，下列何者錯誤？ 大部分合併打鼾（ snoring ） 嚴重情況會導致肺高壓",
+      "question": "有關阻塞性睡眠呼吸中止症候群(obstructive sleep apnea syndrome;OSAS)之敘述,下列何者錯誤?",
       "options": {
-        "A": "清晨睡醒易有頭痛現象，乃因血中二氧化碳濃度降低所致",
-        "B": "小孩常見主因為口腔扁桃腺及腺樣體（",
-        "C": "adenoids",
-        "D": "）肥大"
+        "A": "大部分合併打鼾(snoring)",
+        "B": "嚴重情況會導致肺高壓",
+        "C": "清晨睡醒易有頭痛現象,乃因血中二氧化碳濃度降低所致",
+        "D": "小孩常見主因為口腔扁桃腺及腺樣體(adenoids)肥大"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_24",
@@ -194907,15 +194926,16 @@
       "subject_name": "小兒科",
       "stage_id": 1,
       "number": 24,
-      "question": "一位男孩小時前出現右下腹痛，隨後發生嘔吐及輕微發燒，男孩完全無胃口，亦無腹瀉，4小時前腹痛擴展至全腹部且略為腫脹，身體診查發現男孩中度脫水、腸音消失、整個腹部皆有反彈痛（rebound tenderness）。最應優先考慮的診斷為下列何者？",
+      "question": "有關全身性幼年型類風溼性關節炎(systemic-onset juvenile idiopathic arthritis)的臨床表現,何者最少見?",
       "options": {
-        "A": "急性腸胃炎（acute gastroenteritis）",
-        "B": "急性闌尾炎（acute appendicitis）",
-        "C": "急性腸繫膜淋巴腺炎（acute mesenteric lymphadenitis）",
-        "D": "急性腎盂腎炎（acute pyelonephritis）"
+        "A": "通常會合併發燒",
+        "B": "出現鮭魚色(salmon-colored)的皮疹",
+        "C": "會有Gottron 徵象",
+        "D": "可能出現心包膜積水的症狀"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_25",
@@ -194927,15 +194947,16 @@
       "subject_name": "小兒科",
       "stage_id": 1,
       "number": 25,
-      "question": "媽媽帶一位 6 歲小朋友至門診求診，主訴疲倦合併腹痛，身體診查發現下肢有紫紅色之皮疹，眼瞼 及陰囊水腫。下列敘述何者錯誤？ 皮疹可能持續數天至數週 部分病童會合併關節痛，以膝及踝關節最為常見 約 25% 至 50%",
+      "question": "媽媽帶一位6 歲小朋友至門診求診,主訴疲倦合併腹痛,身體診查發現下肢有紫紅色之皮疹,眼瞼 及陰囊水腫。下列敘述何者錯誤?",
       "options": {
-        "A": "的病童會有血尿或蛋白尿，需定期追蹤尿液檢查",
-        "B": "常見血小板低下及",
-        "C": "IgA",
-        "D": "升高"
+        "A": "皮疹可能持續數天至數週",
+        "B": "部分病童會合併關節痛,以膝及踝關節最為常見",
+        "C": "約25%至50%的病童會有血尿或蛋白尿,需定期追蹤尿液檢查",
+        "D": "常見血小板低下及IgA 升高"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_27",
@@ -194947,15 +194968,16 @@
       "subject_name": "小兒科",
       "stage_id": 1,
       "number": 27,
-      "question": "一位 5 歲罹患重型β型海洋性貧血症（β -thalassemia major ）的孩童，下列處置那一項較不適當？ 使用減白血球之濃縮紅血球輸血 最好在血色素為",
+      "question": "一位5 歲罹患重型β型海洋性貧血症(β-thalassemia major)的孩童,下列處置那一項較不適當?",
       "options": {
-        "A": "9.5-10.5 g/dL",
-        "B": "時，給予輸血",
-        "C": "立即切除脾臟",
-        "D": "需給予排鐵劑治療"
+        "A": "使用減白血球之濃縮紅血球輸血",
+        "B": "最好在血色素為9.5-10.5 g/dL 時,給予輸血",
+        "C": "立即切除脾臟",
+        "D": "需給予排鐵劑治療"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_28",
@@ -194967,12 +194989,12 @@
       "subject_name": "小兒科",
       "stage_id": 1,
       "number": 28,
-      "question": "下列何者與兒童急性白血病的預後關係最小？",
+      "question": "下列何者與兒童急性白血病的預後關係最小?",
       "options": {
-        "A": "特殊染色體型",
-        "B": "有無肝臟及脾臟腫大",
-        "C": "有無侵犯中樞神經系統",
-        "D": "對初步化療的反應"
+        "A": "特殊染色體型",
+        "B": "有無肝臟及脾臟腫大",
+        "C": "有無侵犯中樞神經系統",
+        "D": "對初步化療的反應"
       },
       "answer": "B",
       "explanation": "",
@@ -194988,15 +195010,16 @@
       "subject_name": "皮膚科",
       "stage_id": 1,
       "number": 35,
-      "question": "一位 30 歲年輕女性被診斷患有鏈球菌（ Streptococcus ）咽喉炎，數日後在兩小腿脛前，出現數顆壓 痛的紅色結節，下列敘述何者錯誤？ 依照病史，需考慮結節性紅斑（ erythema nodosum ） 皮膚病灶通常不會產生潰瘍 發炎細胞的浸潤主要發生在皮下脂肪組織，以 lobular panniculitis",
+      "question": "一位30 歲年輕女性被診斷患有鏈球菌(Streptococcus)咽喉炎,數日後在兩小腿脛前,出現數顆壓 痛的紅色結節,下列敘述何者錯誤?",
       "options": {
-        "A": "為主",
-        "B": "除治療咽喉炎外，應臥床休息並考慮使用",
-        "C": "NSAIDs",
-        "D": "治療"
+        "A": "依照病史,需考慮結節性紅斑(erythema nodosum)",
+        "B": "皮膚病灶通常不會產生潰瘍",
+        "C": "發炎細胞的浸潤主要發生在皮下脂肪組織,以lobular panniculitis 為主",
+        "D": "除治療咽喉炎外,應臥床休息並考慮使用NSAIDs 治療"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_40",
@@ -195008,15 +195031,16 @@
       "subject_name": "皮膚科",
       "stage_id": 1,
       "number": 40,
-      "question": "有關圓禿（ alopecia areata ），下列敘述何者錯誤？ 大多無其他症狀 可能導致所有的頭髮脫落，稱",
+      "question": "有關圓禿(alopecia areata),下列敘述何者錯誤?",
       "options": {
-        "A": "alopecia totalis",
-        "B": "可能導致全身所有的毛髮脫落，稱",
-        "C": "alopecia universalis",
-        "D": "圓禿多數預後差，掉髮無法復原"
+        "A": "大多無其他症狀",
+        "B": "可能導致所有的頭髮脫落,稱alopecia totalis",
+        "C": "可能導致全身所有的毛髮脫落,稱alopecia universalis",
+        "D": "圓禿多數預後差,掉髮無法復原"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_41",
@@ -195028,15 +195052,16 @@
       "subject_name": "皮膚科",
       "stage_id": 1,
       "number": 41,
-      "question": "有關全身性紅斑狼瘡（ systemic lupus erythematosus ），下列敘述何者錯誤？ 女性多於男性 臉上多有蝴蝶斑（ butterfly rash ）",
+      "question": "有關全身性紅斑狼瘡(systemic lupus erythematosus),下列敘述何者錯誤?",
       "options": {
-        "A": "血清抗核抗體（",
-        "B": "antinuclear antibody",
-        "C": "）為陽性",
-        "D": "應多曬太陽，以強化免疫力"
+        "A": "女性多於男性",
+        "B": "臉上多有蝴蝶斑(butterfly rash)",
+        "C": "血清抗核抗體(antinuclear antibody)為陽性",
+        "D": "應多曬太陽,以強化免疫力"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_42",
@@ -195048,12 +195073,12 @@
       "subject_name": "皮膚科",
       "stage_id": 1,
       "number": 42,
-      "question": "如圖所示之皮疹，下列敘述何者正確？",
+      "question": "如圖所示之皮疹,下列敘述何者正確?",
       "options": {
-        "A": "通常先發生濕疹樣病變",
-        "B": "其發生與陽光照射、懷孕或口服避孕藥有關",
-        "C": "通常伴有肝功能異常",
-        "D": "紅寶石雷射治療是最佳處置"
+        "A": "通常先發生濕疹樣病變",
+        "B": "其發生與陽光照射、懷孕或口服避孕藥有關",
+        "C": "通常伴有肝功能異常",
+        "D": "紅寶石雷射治療是最佳處置"
       },
       "answer": "B",
       "explanation": "",
@@ -195062,7 +195087,8 @@
         "/question-images/doctor2_102110_0104_42_1.webp"
       ],
       "image_dependent": true,
-      "image_url": "/question-images/doctor2_102110_p4_q42.webp"
+      "image_url": "/question-images/doctor2_102110_p4_q42.webp",
+      "disputed": true
     },
     {
       "id": "102110_0104_43",
@@ -195094,15 +195120,16 @@
       "subject_name": "神經科",
       "stage_id": 1,
       "number": 48,
-      "question": "腦內動脈二氧化碳（ CO 2 ）濃度上升時，腦內血管及血流變化為何？ 微動脈（ arterioles ）擴張，血流量不變 微動脈（ arterioles ）擴張，血流量上升 微動脈（",
+      "question": "腦內動脈二氧化碳(CO2)濃度上升時,腦內血管及血流變化為何?",
       "options": {
-        "A": "arterioles",
-        "B": "）收縮，血流量下降 微動脈（",
-        "C": "arterioles",
-        "D": "）收縮，血流量不變"
+        "A": "微動脈(arterioles)擴張,血流量不變",
+        "B": "微動脈(arterioles)擴張,血流量上升",
+        "C": "微動脈(arterioles)收縮,血流量下降",
+        "D": "微動脈(arterioles)收縮,血流量不變"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_52",
@@ -195114,15 +195141,16 @@
       "subject_name": "神經科",
       "stage_id": 1,
       "number": 52,
-      "question": "關於慢性緊縮型頭痛（ chronic tension-type headache ）的敘述，下列何者錯誤？ 每個月頭痛天數超過",
+      "question": "關於慢性緊縮型頭痛(chronic tension-type headache)的敘述,下列何者錯誤?",
       "options": {
-        "A": "15",
-        "B": "天以上 頭痛需要超過一年以上",
-        "C": "建議使用預防性藥物",
-        "D": "不是所有病人都會有肌肉壓痛"
+        "A": "每個月頭痛天數超過15 天以上",
+        "B": "頭痛需要超過一年以上",
+        "C": "建議使用預防性藥物",
+        "D": "不是所有病人都會有肌肉壓痛"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_53",
@@ -195134,15 +195162,16 @@
       "subject_name": "神經科",
       "stage_id": 1,
       "number": 53,
-      "question": "一般而言，血管性失智症（ vascular dementia ）的病人，多具有下列何種特徵？",
+      "question": "一般而言,血管性失智症(vascular dementia)的病人,多具有下列何種特徵?",
       "options": {
-        "A": "多重血管危險因子",
-        "B": "動作遲緩，肢體僵硬，尤以上肢為最",
-        "C": "很少出現憂鬱症狀",
-        "D": "很久以後才會出現大小便失禁"
+        "A": "多重血管危險因子",
+        "B": "動作遲緩,肢體僵硬,尤以上肢為最",
+        "C": "很少出現憂鬱症狀",
+        "D": "很久以後才會出現大小便失禁"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_54",
@@ -195154,15 +195183,16 @@
       "subject_name": "神經科",
       "stage_id": 1,
       "number": 54,
-      "question": "有關裘馨式肌肉失養症（ Duchenne’s muscular dystrophy ）之臨床表徵描述，下列何者錯誤？ 為性聯隱性遺傳 因缺乏 dystrophin 蛋白所造成 發病年齡通常在 20 歲以上 肌肉酵素",
+      "question": "有關裘馨式肌肉失養症(Duchenne’s muscular dystrophy)之臨床表徵描述,下列何者錯誤?",
       "options": {
-        "A": "CK",
-        "B": "之上升通常大於正常值",
-        "C": "10",
-        "D": "倍以上"
+        "A": "為性聯隱性遺傳",
+        "B": "因缺乏dystrophin 蛋白所造成",
+        "C": "發病年齡通常在20 歲以上",
+        "D": "肌肉酵素CK 之上升通常大於正常值10 倍以上"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_65",
@@ -195174,15 +195204,16 @@
       "subject_name": "精神科",
       "stage_id": 1,
       "number": 65,
-      "question": "一位 25 歲女性，由於小學六年級時曾被狗咬過，所以非常怕狗，她因而不敢獨自外出，更害怕到任 何有狗的地方，而出現人際退縮，也無法外出謀職。她了解到這些害怕是太過度了，但又苦惱於不 知如何改變。下列有關此個案的治療，何者錯誤？ 藥物治療效果最佳 心理治療能協助個案了解畏懼的原因，而鼓勵個案尋求進一步的治療",
+      "question": "一位25 歲女性,由於小學六年級時曾被狗咬過,所以非常怕狗,她因而不敢獨自外出,更害怕到任 何有狗的地方,而出現人際退縮,也無法外出謀職。她了解到這些害怕是太過度了,但又苦惱於不 知如何改變。下列有關此個案的治療,何者錯誤?",
       "options": {
-        "A": "催眠、支持性治療與家庭治療或許也有助益",
-        "B": "此類問題以行為治療為主，系統性減敏感法（",
-        "C": "systematic desensitization",
-        "D": "）為最常使用的方法"
+        "A": "藥物治療效果最佳",
+        "B": "心理治療能協助個案了解畏懼的原因,而鼓勵個案尋求進一步的治療",
+        "C": "催眠、支持性治療與家庭治療或許也有助益",
+        "D": "此類問題以行為治療為主,系統性減敏感法(systematic desensitization)為最常使用的方法"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_68",
@@ -195194,15 +195225,16 @@
       "subject_name": "精神科",
       "stage_id": 1,
       "number": 68,
-      "question": "下列有關睡眠衛生之敘述，何者錯誤？",
+      "question": "下列有關睡眠衛生之敘述,何者錯誤?",
       "options": {
-        "A": "準時起床",
-        "B": "儘量臨睡前吃飽可助眠",
-        "C": "不宜睡前一直看電視",
-        "D": "一直睡不著宜暫時離開床鋪"
+        "A": "準時起床",
+        "B": "儘量臨睡前吃飽可助眠",
+        "C": "不宜睡前一直看電視",
+        "D": "一直睡不著宜暫時離開床鋪"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_70",
@@ -195214,15 +195246,16 @@
       "subject_name": "精神科",
       "stage_id": 1,
       "number": 70,
-      "question": "下列關於神經性梅毒（neurosyphilis）之敘述，何者錯誤？",
+      "question": "下列關於神經性梅毒(neurosyphilis)之敘述,何者錯誤?",
       "options": {
-        "A": "在盤尼西林（penicillin）發明後，神經性梅毒較少發生，但自愛滋病出現以來，神經性梅毒再度受到醫學界之重視",
-        "B": "神經性梅毒侵犯腦部之影響主要是顱神經，所以會產生顱底神經麻痺、關節變形與失智",
-        "C": "其腦脊髓液有淋巴球增多（lymphocytosis）及較多之蛋白質",
-        "D": "神經性梅毒通常在感染梅毒螺旋菌 10 至 15 年後發生"
+        "A": "在盤尼希林(penicillin)發明後,神經性梅毒較少發生,但自愛滋病出現以來,神經性梅毒再度受",
+        "B": "到醫學界之重視",
+        "C": "神經性梅毒對腦部之影響主要是顳葉,所以會產生類似精神分裂症患者之幻聽與妄想",
+        "D": "其腦脊髓液有淋巴球增多(lymphocytosis)及較多之蛋白質"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_74",
@@ -195234,15 +195267,16 @@
       "subject_name": "精神科",
       "stage_id": 1,
       "number": 74,
-      "question": "關於中樞神經興奮劑 methylphenidate 的敘述，下列何者錯誤？ 可用於治療注意力不足過動症 常見的副作用有食慾不振，睡眠障礙，頭痛，不自主運動等",
+      "question": "關於中樞神經興奮劑methylphenidate 的敘述,下列何者錯誤?",
       "options": {
-        "A": "可減少中樞神經系統多巴胺（",
-        "B": "dopamine",
-        "C": "）的釋放",
-        "D": "目前除了短效劑型中樞神經興奮劑，也有長效劑型可以選擇"
+        "A": "可用於治療注意力不足過動症",
+        "B": "常見的副作用有食慾不振,睡眠障礙,頭痛,不自主運動等",
+        "C": "可減少中樞神經系統多巴胺(dopamine)的釋放",
+        "D": "目前除了短效劑型中樞神經興奮劑,也有長效劑型可以選擇"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0104_78",
@@ -195254,16 +195288,17 @@
       "subject_name": "精神科",
       "stage_id": 1,
       "number": 78,
-      "question": "承上題，下列敘述何者錯誤？",
+      "question": "承上題,下列敘述何者錯誤?",
       "options": {
-        "A": "必須會診眼科，因為可能侵犯眼角膜（corneal infection）",
-        "B": "發燒的部位是第七對腦神經（facial nerve）所支配",
-        "C": "可使用抗病毒藥物 acyclovir",
-        "D": "可能產生神經痛的後遺症"
+        "A": "必須會診眼科,因為可能侵犯眼角膜(corneal infection)",
+        "B": "侵犯的部位是第七對腦神經(facial nerve)所支配",
+        "C": "可使用抗病毒藥物acyclovir",
+        "D": "可能產生神經痛的後遺症"
       },
       "answer": "B",
       "explanation": "",
-      "grouped": true
+      "grouped": true,
+      "disputed": true
     },
     {
       "id": "102110_0104_79",
@@ -195275,15 +195310,16 @@
       "subject_name": "精神科",
       "stage_id": 1,
       "number": 79,
-      "question": "慢性精神分裂症患者S，個人衛生不佳，受聽幻覺干擾，脾氣暴躁，經常半夜大喊大叫，但是S不認為自己患有精神疾病，且認為抗精神病藥物有副作用，拒絕就醫；S之母不忍見S之病情惡化，自費請曾診視S之精神科專科醫師D開立抗精神病藥物之口服滴劑，由S之母偷偷加入S之飲食中，D出於好意開立滴劑，S於不知情之情況下服用後，病情確有改善，但經常抱怨手抖、肌肉僵硬及排尿不順。此個案主要牽涉到那些倫理原則之衝突？",
+      "question": "慢性精神分裂症患者S,個人衛生不佳,受聽幻覺干擾,脾氣暴躁,經常半夜大喊大叫,但是S 不 認為自己患有精神疾病,且認為抗精神病藥物有副作用,拒絕就醫;S 之母不忍見S 之病情惡化,自 費請曾診視S 之精神科專科醫師D 開立抗精神病藥物之口服滴劑,由S 之母偷偷加入S 之飲食中,D 出 於好意開立滴劑,S 於不知情之情況下服用後,病情確有改善,但經常抱怨手抖、肌肉僵硬及排尿不 順。此個案主要牽涉到那些倫理原則之衝突?",
       "options": {
-        "A": "尊重自主原則、不傷害原則與正義原則",
-        "B": "尊重自主原則、不傷害原則與行善原則",
-        "C": "尊重自主原則、行善原則與正義原則",
-        "D": "不傷害原則、行善原則與正義原則"
+        "A": "尊重自主原則、不傷害原則與正義原則",
+        "B": "尊重自主原則、不傷害原則與行善原則",
+        "C": "尊重自主原則、行善原則與正義原則",
+        "D": "不傷害原則、行善原則與正義原則"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0105_7",
@@ -195295,15 +195331,16 @@
       "subject_name": "外科",
       "stage_id": 1,
       "number": 7,
-      "question": "有關外科傷口的分類，下列何者正確？",
+      "question": "有關外科傷口的分類,下列何者正確?",
       "options": {
-        "A": "小明在門診手術室進行手臂皮下脂肪瘤切除，傷口縫合完整。此傷口應歸類為",
-        "B": "clean wound",
-        "C": "，感染",
-        "D": "機會約"
+        "A": "小明在門診手術室進行手臂皮下脂肪瘤切除,傷口縫合完整。此傷口應歸類為clean wound,感染",
+        "B": "機會約8~15%",
+        "C": "小明因急性闌尾炎(simple appendicitis)進行腹腔鏡闌尾切除手術,術後傷口縫合完整。此傷口應",
+        "D": "歸類為contaminated wound,感染機會約8~15%"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0105_17",
@@ -195315,15 +195352,16 @@
       "subject_name": "外科",
       "stage_id": 1,
       "number": 17,
-      "question": "關於傷口癒合之膠原蛋白（ collagen ）的合成，下列敘述何者錯誤？  受傷後，纖維母細胞開始合成第三型膠原蛋白（ type III collagen ）  膠原蛋白是傷口癒合之主要成分  膠原蛋白之合成，始於膠原蛋白前身（ procollagen ）之 α 鏈（ pro-α-chains ）黏著在高爾基氏體 （ Golgi apparatus ）進行合成",
+      "question": "關於傷口癒合之膠原蛋白(collagen)的合成,下列敘述何者錯誤?",
       "options": {
-        "A": "第一型膠原蛋白（",
-        "B": "type I collagen",
-        "C": "）占成人皮膚的",
-        "D": "80%"
+        "A": "受傷後,纖維母細胞開始合成第三型膠原蛋白(type III collagen)",
+        "B": "膠原蛋白是傷口癒合之主要成分",
+        "C": "膠原蛋白之合成,始於膠原蛋白前身(procollagen)之α 鏈(pro-α-chains)黏著在高爾基氏體",
+        "D": "(Golgi apparatus)進行合成"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0105_40",
@@ -195337,10 +195375,10 @@
       "number": 40,
       "question": "於腹腔鏡手術中,下列何者不是造成large vessel injury 的主要因素?",
       "options": {
-        "A": "的主要因素？",
-        "B": "sharpen the trocar",
-        "C": "perpendicular insertion of the needle or trocar",
-        "D": "lateral deviation of the needle or trocar forceful thrust"
+        "A": "sharpen the trocar",
+        "B": "perpendicular insertion of the needle or trocar",
+        "C": "lateral deviation of the needle or trocar",
+        "D": "forceful thrust"
       },
       "answer": "A",
       "explanation": "",
@@ -195359,10 +195397,10 @@
       "number": 44,
       "question": "王小姐35 歲,於1 週前在左側乳房摸到1 個腫塊,初步檢查後接受了腫塊的組織穿刺檢查,病理化 驗報告為ductal carcinoma in situ(DCIS)。你於門診告知其結果後,王小姐與你進一步討論相關的 問題與治療計畫。下列敘述何者錯誤?",
       "options": {
-        "A": "王小姐的乳房攝影檢查發現左側乳房有廣泛性的群聚微鈣化點（clustered microcalcification），可能手術切除腫塊後的邊緣難以乾淨無瑕（clear margin），治療可能需要做乳房全切除術",
-        "B": "王小姐除了 DCIS 外，也有合併侵襲性癌（invasive carcinoma）的可能，手術可以選擇加入前哨淋巴結（sentinel node）切片手術",
-        "C": "DCIS 表示癌細胞還在基底膜內沒有侵犯其他組織，在組織型態上可歸為數類。其中屬於乳突型（papillary type）者轉變為侵襲癌的過程進展快速、惡性度高，如果屬於面皰型（comedo type）者，則相對轉變為侵襲癌的過程較緩慢",
-        "D": "DCIS 患者術後接受 tamoxifen 的治療，目前臨床試驗（如 NSABPB-24 trial）的結果，對側乳房發生乳癌的風險可顯著降低"
+        "A": "王小姐的乳房攝影檢查發現左側乳房有廣泛性的群聚微鈣化點(clustered microcalcification),可",
+        "B": "能手術切除腫塊組織的邊緣難以乾淨無虞(clear margin),治療可能需要做乳房全切除術",
+        "C": "王小姐除了DCIS 外,也有合併侵襲性癌(invasive carcinoma)的可能,手術可以選擇加入前哨淋",
+        "D": "巴結(sentinel node)切片手術"
       },
       "answer": "C",
       "explanation": "DCIS 的組織型態與惡性度關係恰好**相反**：(C) 說「papillary type 進展快、comedo type 緩慢」是錯誤——**面皰型（comedo type）才是惡性度最高、進展最快的型態**（壞死、群聚微鈣化常見），乳突型則相對緩慢。其他 (A)(B)(D) 皆為正確的 DCIS 衛教內容。答案 C。",
@@ -195378,15 +195416,16 @@
       "subject_name": "外科",
       "stage_id": 1,
       "number": 48,
-      "question": "小兒肝臟母細胞瘤（hepatoblastoma）和肝細胞癌（hepatocellular carcinoma），下列敘述何者正確？",
+      "question": "小兒肝臟惡性腫瘤常見的是肝母細胞瘤(hepatoblastoma)和肝細胞瘤(hepatocellular carcinoma), 下列敘述何者正確?",
       "options": {
-        "A": "肝臟母細胞瘤（hepatoblastoma）好發在 5 歲以上年齡較大的小孩",
-        "B": "二者的腫瘤標記都是胎兒蛋白（α-fetoprotein, AFP）",
-        "C": "肝細胞瘤（hepatocellular carcinoma）預後較肝臟母細胞瘤（hepatoblastoma）好",
-        "D": "肝細胞瘤（hepatocellular carcinoma）常合併 Beckwith-Wiedemann syndrome"
+        "A": "肝母細胞瘤(hepatoblastoma)好發在5 歲以上年齡較大的小孩",
+        "B": "二者的腫瘤標記都是胎兒蛋白(α-fetoprotein, AFP)",
+        "C": "總體而言,肝細胞瘤(hepatocellular carcinoma)預後較肝母細胞瘤(hepatoblastoma)好",
+        "D": "肝細胞瘤(hepatocellular carcinoma)常合併Beckwith-Wiedemann syndrome"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0105_52",
@@ -195398,15 +195437,16 @@
       "subject_name": "外科",
       "stage_id": 1,
       "number": 52,
-      "question": "與HNPCC（hereditary nonpolyposis colorectal cancer）syndrome之形成有關的是下列那一項？",
+      "question": "與HNPCC(hereditary nonpolyposis colorectal cancer)syndrome 之形成有關的是下列那一項?",
       "options": {
-        "A": "APC gene",
-        "B": "MMR（mismatch-repair）gene mutations",
-        "C": "p53 mutation",
-        "D": "RAS mutation"
+        "A": "APC gene",
+        "B": "MMR(mismatch-repair)gene mutations",
+        "C": "p53 mutation",
+        "D": "RAS mutation"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0105_55",
@@ -195418,15 +195458,16 @@
       "subject_name": "外科",
       "stage_id": 1,
       "number": 55,
-      "question": "有關肛門的惡性黑色素瘤，下列敘述何者錯誤？",
+      "question": "有關肛門的惡性黑色素瘤,下列敘述何者錯誤?",
       "options": {
-        "A": "可以出現肛門出血的症狀",
-        "B": "五年活存率約 26% 或更低",
-        "C": "必為 melanotic，不會是 amelanotic",
-        "D": "腹部會陰切除術（APR）的治療效果不一定比局部切除（local excision）要好"
+        "A": "可以出現肛門出血的症狀",
+        "B": "五年活存率約26%或更低",
+        "C": "必為melanotic,不會是amelanotic",
+        "D": "腹部會陰切除術(APR)的治療效果不一定比局部切除(local excision)要好"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0105_72",
@@ -195440,10 +195481,10 @@
       "number": 72,
       "question": "一位35 歲男性病患,在一次跌倒之後,小腿有疼痛及腫脹,症狀持續;最近兩個月有加重趨勢,且 患部紅腫;病患接受小腿MRI 檢查;A 圖為T1WI, sagittal view;B 圖為T2 WI, axial view。正確的診 斷為何?",
       "options": {
-        "A": "。正確的診",
-        "B": "斷為何？",
-        "C": "post-traumatic fracture of tibia primary bone tumor, complicated with fracture",
-        "D": "chronic osteomyelitis with sinus tract of tibia chronic osteomyelitis with sinus tract of fibula"
+        "A": "post-traumatic fracture of tibia",
+        "B": "primary bone tumor, complicated with fracture",
+        "C": "chronic osteomyelitis with sinus tract of tibia",
+        "D": "chronic osteomyelitis with sinus tract of fibula"
       },
       "answer": "C",
       "explanation": "",
@@ -195465,15 +195506,16 @@
       "subject_name": "麻醉科",
       "stage_id": 1,
       "number": 1,
-      "question": "關於快速氣管插管步驟（ rapid sequence intubation ），下列敘述何者正確？",
+      "question": "關於快速氣管插管步驟(rapid sequence intubation),下列敘述何者正確?",
       "options": {
-        "A": "為達快速氣管插管，插管前不應給任何鎮靜麻醉劑",
-        "B": "成人在氣管插管前，應先放置鼻胃管",
-        "C": "快速氣管插管不須等待人員、藥物以及裝備到齊後再進行，以節省時間",
-        "D": "氣管插管前，任何病人皆需給予高濃度的氧氣"
+        "A": "為達快速氣管插管,插管前不應給任何鎮靜麻醉劑",
+        "B": "成人在氣管插管前,應先放置鼻胃管",
+        "C": "快速氣管插管不須等待人員、藥物以及裝備到齊後再進行,以節省時間",
+        "D": "氣管插管前,任何病人皆需給予高濃度的氧氣"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_12",
@@ -195485,15 +195527,16 @@
       "subject_name": "眼科",
       "stage_id": 1,
       "number": 12,
-      "question": "下列敘述，何者較為正確？ 高度近視患者比正常人容易得青光眼、白內障、視網膜剝離、黃斑部出血等眼疾 小朋友睡前點阿托品（",
+      "question": "下列敘述,何者較為正確?",
       "options": {
-        "A": "atropine",
-        "B": "）眼藥水，可以治好近視眼",
-        "C": "近視度數七、八百度，用雷射屈光手術即可治癒近視所導致的眼球病變",
-        "D": "給小朋友角膜塑形術，可以使近視眼球變化不再進行"
+        "A": "高度近視患者比正常人容易得青光眼、白內障、視網膜剝離、黃斑部出血等眼疾",
+        "B": "小朋友睡前點阿托品(atropine)眼藥水,可以治好近視眼",
+        "C": "近視度數七、八百度,用雷射屈光手術即可治癒近視所導致的眼球病變",
+        "D": "給小朋友角膜塑形術,可以使近視眼球變化不再進行"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_15",
@@ -195505,15 +195548,16 @@
       "subject_name": "眼科",
       "stage_id": 1,
       "number": 15,
-      "question": "李小姐習慣長時間於電腦前工作，她有雙眼近視，右眼約一千五百度，左眼一千九百度，日常生活 和近距離工作時配戴一般眼鏡。她注意到有些漂浮物在視線周邊已有一段時間。一週前，李小姐開 始覺得左眼的視野裡漂浮物越來越多，偶爾還伴有閃光。三天前，她的左眼在下鼻側漸漸變成像窗 簾一般遮住她的視線。今天早上，她覺得症狀越來越嚴重，到醫院求診後住院做進一步的檢查和處 置。住院當時，她的右眼以一千五百度鏡片矯正後的最佳矯正視力為 6/12 ，左眼以一千三百度鏡片 矯正後的最佳矯正視力為 6/12 ，她的角膜狀態，瞳孔光反射，水晶體及眼壓都是正常的。視網膜檢",
+      "question": "李小姐習慣長時間於電腦前工作,她有雙眼近視,右眼約一千五百度,左眼一千九百度,日常生活 和近距離工作時配戴一般眼鏡。她注意到有些漂浮物在視線周邊已有一段時間。一週前,李小姐開 始覺得左眼的視野裡漂浮物越來越多,偶爾還伴有閃光。三天前,她的左眼在下鼻側漸漸變成像窗 簾一般遮住她的視線。今天早上,她覺得症狀越來越嚴重,到醫院求診後住院做進一步的檢查和處 置。住院當時,她的右眼以一千五百度鏡片矯正後的最佳矯正視力為6/12,左眼以一千三百度鏡片 矯正後的最佳矯正視力為6/12,她的角膜狀態,瞳孔光反射,水晶體及眼壓都是正常的。視網膜檢 查較可能的發現為何?",
       "options": {
-        "A": "查較可能的發現為何？",
-        "B": "兩眼外上側視網膜下出血 左眼外上側視網膜剝離",
-        "C": "兩眼內下側之脈絡膜腫瘤",
-        "D": "左眼內下側視網膜靜脈血管阻塞"
+        "A": "兩眼外上側視網膜下出血",
+        "B": "左眼外上側視網膜剝離",
+        "C": "兩眼內下側之脈絡膜腫瘤",
+        "D": "左眼內下側視網膜靜脈血管阻塞"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_17",
@@ -195525,15 +195569,16 @@
       "subject_name": "眼科",
       "stage_id": 1,
       "number": 17,
-      "question": "中耳膽脂瘤的組織病理為何？ 含有 cholesterol 之腫瘤 含有",
+      "question": "中耳膽脂瘤的組織病理為何?",
       "options": {
-        "A": "keratin",
-        "B": "之扁平上皮",
-        "C": "含有膽汁之腫瘤",
-        "D": "含有脂質之腫瘤"
+        "A": "含有cholesterol 之腫瘤",
+        "B": "含有keratin 之扁平上皮",
+        "C": "含有膽汁之腫瘤",
+        "D": "含有脂質之腫瘤"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_21",
@@ -195545,15 +195590,16 @@
       "subject_name": "耳鼻喉科",
       "stage_id": 1,
       "number": 21,
-      "question": "下列何者是唾液腺中 adenoid cystic carcinoma 的特性？ 常易有 perineural invasion 不易有遠端轉移",
+      "question": "下列何者是唾液腺中adenoid cystic carcinoma 的特性?",
       "options": {
-        "A": "不易有局部復發",
-        "B": "以五年治癒率（",
-        "C": "five-year cure rate",
-        "D": "）來評估治療是否成功"
+        "A": "常易有perineural invasion",
+        "B": "不易有遠端轉移",
+        "C": "不易有局部復發",
+        "D": "以五年治癒率(five-year cure rate)來評估治療是否成功"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_22",
@@ -195591,10 +195637,10 @@
       "number": 24,
       "question": "當疑有submandibular duct 的結石時,下列何者為最恰當的影像診斷方式?",
       "options": {
-        "A": "five-year cure rate",
-        "B": "）來評估治療是否成功",
-        "C": "22",
-        "D": "一位"
+        "A": "skull basal view",
+        "B": "dental occlusal view",
+        "C": "skull lateral view",
+        "D": "Caldwell view"
       },
       "answer": "B",
       "explanation": "",
@@ -195657,10 +195703,10 @@
       "number": 28,
       "question": "有關產前胎兒健康評估的生物生理計分法(biophysical profile)之敘述,下列何者錯誤?",
       "options": {
-        "A": "10",
-        "B": "分不一定表示胎兒血液",
-        "C": "pH",
-        "D": "值正常"
+        "A": "胎兒生物物理指標最高分為12 分",
+        "B": "胎兒生物物理指標若為0 分,代表有意義的胎兒酸血症(fetal acidosis)",
+        "C": "若分數從原本的2 或4 分變成0 分,表示可更準確的預測不正常的結果",
+        "D": "分數10 分不一定表示胎兒血液pH 值正常"
       },
       "answer": "A",
       "explanation": "",
@@ -195676,15 +195722,16 @@
       "subject_name": "婦產科",
       "stage_id": 1,
       "number": 30,
-      "question": "先生 32 歲，太太 30 歲。太太第一次懷孕時，在第 22 週發現胎兒有複雜先天性心臟病，因此終止該 次懷孕。該胎兒之染色體檢查為 46,XY 。此次為第二次懷孕之第 18 週。下列處理何者最適當？ 告知胎兒發生染色體異常機會較高，可接受羊膜腔穿刺檢查（ amniocentesis ）",
+      "question": "先生32 歲,太太30 歲。太太第一次懷孕時,在第22 週發現胎兒有複雜先天性心臟病,因此終止該 次懷孕。該胎兒之染色體檢查為46,XY。此次為第二次懷孕之第18 週。下列處理何者最適當?",
       "options": {
-        "A": "告知胎兒發生基因突變機會較高，可接受羊膜腔穿刺檢查",
-        "B": "告知胎兒發生先天性心臟病機會較高，可接受超音波檢查",
-        "C": "夫妻接受染色體檢查，若是夫妻之一有染色體異常，胎兒染色體異常機會較高，必須接受羊膜腔",
-        "D": "穿刺檢查"
+        "A": "告知胎兒發生染色體異常機會較高,可接受羊膜腔穿刺檢查(amniocentesis)",
+        "B": "告知胎兒發生基因突變機會較高,可接受羊膜腔穿刺檢查",
+        "C": "告知胎兒發生先天性心臟病機會較高,可接受超音波檢查",
+        "D": "夫妻接受染色體檢查,若是夫妻之一有染色體異常,胎兒染色體異常機會較高,必須接受羊膜腔"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_31",
@@ -195696,15 +195743,16 @@
       "subject_name": "婦產科",
       "stage_id": 1,
       "number": 31,
-      "question": "一位 27 歲懷孕 16 週婦女接受羊膜腔穿刺檢查，檢查結果胎兒染色體為 47,XXY，她決定終止懷孕。4 年之後該婦女再次懷孕，下列何種處理最適當？",
+      "question": "一位27 歲懷孕16 週婦女接受羊膜腔穿刺檢查,檢查結果胎兒染色體為47,XXY,她決定終止懷孕。 4 年之後該婦女再次懷孕,下列何種處理最適當?",
       "options": {
-        "A": "告知再發染色體異常機會較高，可以接受羊膜腔穿刺檢查",
-        "B": "告知再發染色體異常機會並未較常人高",
-        "C": "告知前胎染色體為 47,XXY 並非嚴重問題",
-        "D": "建議夫妻接受血液染色體檢查，若夫妻染色體正常，就不會有問題"
+        "A": "告知再發染色體異常機會較高,可以接受羊膜腔穿刺檢查",
+        "B": "告知再發染色體異常機會並未較常人高",
+        "C": "告知前胎染色體為47,XXY 並非嚴重問題",
+        "D": "建議夫妻接受血液染色體檢查,若夫妻染色體正常,就不會有問題"
       },
       "answer": "A",
-      "explanation": "47,XXY（Klinefelter 症候群）為性染色體不分離（nondisjunction）所致，與母親年齡相關，再次懷孕時染色體異常的再發風險確實高於一般人群。正確處置為 (A) 告知再發機會較高並建議羊膜腔穿刺檢查；(B) 錯誤：再發機會其實是較高的；(C) 錯誤：47,XXY 會影響第二性徵發育與生育能力，不能輕忽；(D) 錯誤：即使父母染色體正常，懷孕時仍可能發生不分離造成的染色體異常。"
+      "explanation": "47,XXY（Klinefelter 症候群）為性染色體不分離（nondisjunction）所致，與母親年齡相關，再次懷孕時染色體異常的再發風險確實高於一般人群。正確處置為 (A) 告知再發機會較高並建議羊膜腔穿刺檢查；(B) 錯誤：再發機會其實是較高的；(C) 錯誤：47,XXY 會影響第二性徵發育與生育能力，不能輕忽；(D) 錯誤：即使父母染色體正常，懷孕時仍可能發生不分離造成的染色體異常。",
+      "disputed": true
     },
     {
       "id": "102110_0106_32",
@@ -195718,10 +195766,10 @@
       "number": 32,
       "question": "佩佩第一次產檢抽血結果發現她的紅血球比較小,MCV 67 fL,MCH 21 pg,血紅素Hb 12.3 g/dL,產 前諮詢時,下列敘述何者錯誤?",
       "options": {
-        "A": "thalassemia major, thalassemia minor",
-        "B": "以及",
-        "C": "thalassemia intermedia",
-        "D": "如果夫妻雙方一個是甲型帶因，一個是乙型帶因，可能會生下重症的小孩，須靠終生輸血"
+        "A": "佩佩有可能是地中海型貧血帶因(carrier)或者是缺鐵性貧血",
+        "B": "應該請佩佩的先生也回門診抽血驗全血球計數(CBC),如果先生的MCV 也小於80 fL,要請夫",
+        "C": "妻雙方一起作地中海型貧血的基因檢測",
+        "D": "地中海型貧血分為thalassemia major, thalassemia minor 以及thalassemia intermedia"
       },
       "answer": "D",
       "explanation": "",
@@ -195737,17 +195785,18 @@
       "subject_name": "婦產科",
       "stage_id": 1,
       "number": 33,
-      "question": "承上題，檢查結果出來，佩佩的先生紅血球也比較小，於是夫妻雙方去做了基因檢測，結果出來， 兩人都是乙型地中海型貧血帶因，下列敘述何者錯誤？ 他們每一胎都有 1/4 的機率生下乙型地中海型貧血重症的胎兒 乙型地中海型貧血重症的胎兒在子宮內通常不能存活，到懷孕末期會發生胎兒水腫（ hydrops fetalis ）",
+      "question": "承上題,檢查結果出來,佩佩的先生紅血球也比較小,於是夫妻雙方去做了基因檢測,結果出來, 兩人都是乙型地中海型貧血帶因,下列敘述何者錯誤?",
       "options": {
-        "A": "乙型地中海型貧血重症的胎兒出生後，若未做幹細胞移植治療，常需仰賴終生輸血",
-        "B": "要知道胎兒是否為乙型地中海型貧血重症，在妊娠",
-        "C": "10~13",
-        "D": "週可用絨毛膜穿刺術做基因檢測"
+        "A": "他們每一胎都有1/4 的機率生下乙型地中海型貧血重症的胎兒",
+        "B": "乙型地中海型貧血重症的胎兒在子宮內通常不能存活,到懷孕末期會發生胎兒水腫(hydrops fetalis)",
+        "C": "乙型地中海型貧血重症的胎兒出生後,若未做幹細胞移植治療,常需仰賴終生輸血",
+        "D": "要知道胎兒是否為乙型地中海型貧血重症,在妊娠10~13 週可用絨毛膜穿刺術做基因檢測"
       },
       "answer": "B",
       "explanation": "",
       "case_context": "第 32 題：歲，太太 30 歲。太太第一次懷孕時，在第 22 週發現胎兒有複雜先天性心臟病，因此終止該 次懷孕。該胎兒之染色體檢查為 46,XY 。此次為第二次懷孕之第 18 週。下列處理何者最適當？ 告知胎兒發生染色體異常機會較高，可接受羊膜腔穿刺檢查（ amniocentesis ） 告知胎兒發生基因突變機會較高，可接受羊膜腔穿刺檢查 告知胎兒發生先天性心臟病機會較高，可接受超音波檢查 夫妻接受染色體檢查，若是夫妻之一有染色體異常，胎兒染色體異常機會較高，必須接受羊膜腔 穿刺檢查 31 一位 27 歲懷孕 16 週婦女接受羊膜腔穿刺檢查，檢查結果胎兒染色體為 47,XXY ，她決定終止懷孕。 4 年之後該婦女再次懷孕，下列何種處理最適當？ 告知再發染色體異常機會較高，可以接受羊膜腔穿刺檢查 告知再發染色體異常機會並未較常人高 告知前胎染色體為 47,XXY 並非嚴重問題 建議夫妻接受血液染色體檢查，若夫妻染色體正常，就不會有問題 32 佩佩第一次產檢抽血結果發現她的紅血球比較小， MCV 67 fL ， MCH 21 pg ，血紅素 Hb 12.3 g/dL ，產 前諮詢時，下列敘述何者錯誤？ 佩佩有可能是地中海型貧血帶因（ carrier ）或者是缺鐵性貧血 應該請佩佩的先生也回門診抽血驗全血球計數（ CBC ），如果先生的 MCV 也小於 80 fL ，要請夫 妻雙方一起作地中海型貧血的基因檢測 地中海型貧血分為",
-      "grouped": true
+      "grouped": true,
+      "disputed": true
     },
     {
       "id": "102110_0106_40",
@@ -195759,15 +195808,16 @@
       "subject_name": "婦產科",
       "stage_id": 1,
       "number": 40,
-      "question": "關於停經後的荷爾蒙療法，下列敘述何者錯誤？",
+      "question": "關於停經後的荷爾蒙療法,下列敘述何者錯誤?",
       "options": {
-        "A": "對於萎縮性陰道炎，可使用局部荷爾蒙療法",
-        "B": "女性荷爾蒙有降低LDL的效果，所以可用於預防心血管疾病",
-        "C": "荷爾蒙療法對於骨質疏鬆所造成的骨折有預防的效果",
-        "D": "若子宮未切除，使用女性荷爾蒙者需合併服用黃體素"
+        "A": "對於萎縮性陰道炎,可使用局部荷爾蒙療法",
+        "B": "女性荷爾蒙有降低LDL 的效果,所以可用於預防心血管疾病",
+        "C": "荷爾蒙療法對於骨質疏鬆所造成的骨折有預防的效果",
+        "D": "若子宮未切除,使用女性荷爾蒙者需合併服用黃體素"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_46",
@@ -195779,15 +195829,16 @@
       "subject_name": "婦產科",
       "stage_id": 1,
       "number": 46,
-      "question": "關於口服排卵藥物 clomiphene citrate ，下列敘述何者最正確？ 需使用於 hypothalamus-pituitary axis 功能失調的女性 具強效的雌激素作用",
+      "question": "關於口服排卵藥物clomiphene citrate,下列敘述何者最正確?",
       "options": {
-        "A": "會減少",
-        "B": "GnRH",
-        "C": "分泌",
-        "D": "會使子宮內膜變薄"
+        "A": "需使用於hypothalamus-pituitary axis 功能失調的女性",
+        "B": "具強效的雌激素作用",
+        "C": "會減少GnRH 分泌",
+        "D": "會使子宮內膜變薄"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_53",
@@ -195799,12 +195850,12 @@
       "subject_name": "婦產科",
       "stage_id": 1,
       "number": 53,
-      "question": "超音波下，下列何者不是惡性卵巢腫瘤的表現？",
+      "question": "超音波下,下列何者不是惡性卵巢腫瘤的表現?",
       "options": {
-        "A": "多房性",
-        "B": "有腹水",
-        "C": "阻力指數（resistance index）較高",
-        "D": "邊緣不規則"
+        "A": "多房性",
+        "B": "有腹水",
+        "C": "阻力指數(resistance index)較高",
+        "D": "邊緣不規則"
       },
       "answer": "C",
       "explanation": "",
@@ -195820,15 +195871,16 @@
       "subject_name": "婦產科",
       "stage_id": 1,
       "number": 54,
-      "question": "婦科腫瘤會與有些血清、生化或免疫染色的腫瘤標記（ tumor markers ）有所關聯，下列敘述何者正 確？  sarcoma 之組織鑑別標記可用 S-100  vimentin 代表是 non-mesenchymal tissue  adenocarcinoma 可以 CA-125 為血清標記",
+      "question": "婦科腫瘤會與有些血清、生化或免疫染色的腫瘤標記(tumor markers)有所關聯,下列敘述何者正 確?",
       "options": {
-        "A": "sarcoma 之組織鑑別標記可用 S-100",
-        "B": "vimentin 代表是 non-mesenchymal tissue",
-        "C": "adenocarcinoma 可以 CA-125 為血清標記",
-        "D": "LDH 是卵巢 stromal tumor 之標記"
+        "A": "sarcoma 之組織鑑別標記可用S-100",
+        "B": "vimentin 代表是non-mesenchymal tissue",
+        "C": "adenocarcinoma 可以CA-125 為血清標記",
+        "D": "LDH 是卵巢stromal tumor 之標記"
       },
       "answer": "C",
-      "explanation": "(C) **腺癌（adenocarcinoma）特別是卵巢漿液性腺癌可用 CA-125 為血清標記**，臨床廣泛用於診斷與追蹤。其他錯誤：(A) S-100 為神經/黑色素瘤標記，sarcoma 用 vimentin、desmin 等；(B) vimentin 代表 mesenchymal tissue（不是 non-mesenchymal）；(D) LDH 是 germ cell tumor（特別是 dysgerminoma）的標記，非 stromal tumor。答案 C。"
+      "explanation": "(C) **腺癌（adenocarcinoma）特別是卵巢漿液性腺癌可用 CA-125 為血清標記**，臨床廣泛用於診斷與追蹤。其他錯誤：(A) S-100 為神經/黑色素瘤標記，sarcoma 用 vimentin、desmin 等；(B) vimentin 代表 mesenchymal tissue（不是 non-mesenchymal）；(D) LDH 是 germ cell tumor（特別是 dysgerminoma）的標記，非 stromal tumor。答案 C。",
+      "disputed": true
     },
     {
       "id": "102110_0106_55",
@@ -195840,15 +195892,16 @@
       "subject_name": "婦產科",
       "stage_id": 1,
       "number": 55,
-      "question": "教導一位右側肢體無力的腦中風病人由跌倒在地上站起來時，下列何種預備姿勢最適當？",
+      "question": "教導一位右側肢體無力的腦中風病人由跌倒在地上站起來時,下列何種預備姿勢最適當?",
       "options": {
-        "A": "右下肢伸膝向前，左下肢屈膝",
-        "B": "左下肢伸膝向前，右下肢屈膝",
-        "C": "左上肢扶地，右下肢屈膝",
-        "D": "右上肢扶地，左下肢屈膝"
+        "A": "右下肢伸膝向前,左下肢屈膝",
+        "B": "左下肢伸膝向前,右下肢屈膝",
+        "C": "左上肢扶地,右下肢屈膝",
+        "D": "右上肢扶地,左下肢屈膝"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_57",
@@ -195860,15 +195913,16 @@
       "subject_name": "婦產科",
       "stage_id": 1,
       "number": 57,
-      "question": "某中風病人合併失語症（ aphasia ），不會講話也聽不懂，但是他的覆述口語（ repetition ）能力卻完全 正常，該病人屬於下列那一種失語症？ 布羅卡（ Broca ）失語症 渥尼卡（ Wernicke ）失語症 傳導型（ conduction",
+      "question": "某中風病人合併失語症(aphasia),不會講話也聽不懂,但是他的覆述口語(repetition)能力卻完全 正常,該病人屬於下列那一種失語症?",
       "options": {
-        "A": "）失語症",
-        "B": "經皮質型（",
-        "C": "transcortical",
-        "D": "）失語症"
+        "A": "布羅卡(Broca)失語症",
+        "B": "渥尼卡(Wernicke)失語症",
+        "C": "傳導型(conduction)失語症",
+        "D": "經皮質型(transcortical)失語症"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_58",
@@ -195880,15 +195934,16 @@
       "subject_name": "復健科",
       "stage_id": 1,
       "number": 58,
-      "question": "由於長時間擺位不當造成總腓神經（common fibular nerve）壓迫損傷，最常見的發生部位在下列何處？",
+      "question": "由於長時間擺位不當造成總腓神經(common fibular nerve)壓迫損傷,最常見的發生部位在下列何處?",
       "options": {
-        "A": "坐骨",
-        "B": "膝部外側",
-        "C": "外踝後緣",
-        "D": "內踝後緣"
+        "A": "坐骨",
+        "B": "膝部外側",
+        "C": "外踝後緣",
+        "D": "內踝後緣"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_59",
@@ -195900,15 +195955,16 @@
       "subject_name": "復健科",
       "stage_id": 1,
       "number": 59,
-      "question": "下列何種降低痙攣（ spasticity",
+      "question": "下列何種降低痙攣(spasticity)的方法,對於治療腦傷病人的效果最好?",
       "options": {
-        "A": "）的方法，對於治療腦傷病人的效果最好？",
-        "B": "藥物治療 冷熱療法",
-        "C": "反射抑制法",
-        "D": "牽拉運動治療"
+        "A": "藥物治療",
+        "B": "冷熱療法",
+        "C": "反射抑制法",
+        "D": "牽拉運動治療"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_64",
@@ -195920,15 +195976,16 @@
       "subject_name": "復健科",
       "stage_id": 1,
       "number": 64,
-      "question": "某病人罹患慢性阻塞性肺病（ COPD ），為了減輕他呼吸窘迫的症狀，應該要建議下列何項呼吸訓練 運動？ 橫膈膜呼吸運動（ diaphragmatic breathing ）＋舌咽呼吸運動（ glossopharyngeal breathing ） 橫膈膜呼吸運動＋圓唇呼吸運動（ pursed-lip breathing ）",
+      "question": "某病人罹患慢性阻塞性肺病(COPD),為了減輕他呼吸窘迫的症狀,應該要建議下列何項呼吸訓練 運動?",
       "options": {
-        "A": "呼吸型式（",
-        "B": "breathing patterns",
-        "C": "）調整＋舌咽呼吸運動",
-        "D": "圓唇呼吸運動＋舌咽呼吸運動"
+        "A": "橫膈膜呼吸運動(diaphragmatic breathing)+舌咽呼吸運動(glossopharyngeal breathing)",
+        "B": "橫膈膜呼吸運動+圓唇呼吸運動(pursed-lip breathing)",
+        "C": "呼吸型式(breathing patterns)調整+舌咽呼吸運動",
+        "D": "圓唇呼吸運動+舌咽呼吸運動"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_65",
@@ -195940,15 +195997,16 @@
       "subject_name": "復健科",
       "stage_id": 1,
       "number": 65,
-      "question": "一位 40 歲心肌病變（ cardiomyopathy ）病人，有關運動測試對其預後判斷的敘述，下列何者最為正確？ 運動測試時，若無法達到 85% 的年齡預期最大心跳率（ age-predicted maximal heart rate ），其預後不佳 其最大心跳率與收縮壓之乘積愈高者，代表其運動耐受度（ exercise capacity ）愈差",
+      "question": "一位40 歲心肌病變(cardiomyopathy)病人,有關運動測試對其預後判斷的敘述,下列何者最為正確?",
       "options": {
-        "A": "運動後，心跳速率快速回復至休息時的心跳速率，表示病人體適能差",
-        "B": "運動測試一開始即出現",
-        "C": "1 mm ST segment",
-        "D": "下降，其預後較佳"
+        "A": "運動測試時,若無法達到85%的年齡預期最大心跳率(age-predicted maximal heart rate),其預後不佳",
+        "B": "其最大心跳率與收縮壓之乘積愈高者,代表其運動耐受度(exercise capacity)愈差",
+        "C": "運動後,心跳速率快速回復至休息時的心跳速率,表示病人體適能差",
+        "D": "運動測試一開始即出現1 mm ST segment 下降,其預後較佳"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_66",
@@ -195984,19 +196042,20 @@
       "subject_name": "復健科",
       "stage_id": 1,
       "number": 67,
-      "question": "至少要達何種年齡以上，嬰兒才開始可以完成下圖中所有的動作發展？",
+      "question": "至少要達何種年齡以上,嬰兒才開始可以完成下圖中所有的動作發展?",
       "options": {
-        "A": "二個月",
-        "B": "四個月",
-        "C": "六個月",
-        "D": "八個月"
+        "A": "二個月",
+        "B": "四個月",
+        "C": "六個月",
+        "D": "八個月"
       },
       "answer": "B",
       "explanation": "",
       "images": [
         "/question-images/doctor2_102110_0106_67_0.webp"
       ],
-      "image_dependent": true
+      "image_dependent": true,
+      "disputed": true
     },
     {
       "id": "102110_0106_70",
@@ -196008,15 +196067,16 @@
       "subject_name": "復健科",
       "stage_id": 1,
       "number": 70,
-      "question": "與電動輪椅比較，下列何者為手動輪椅的優點？",
+      "question": "與電動輪椅比較,下列何者為手動輪椅的優點?",
       "options": {
-        "A": "可長程不疲勞的旅行",
-        "B": "容易運送",
-        "C": "可穿越粗糙地形",
-        "D": "可避免反覆性的上肢傷害"
+        "A": "可長程不疲勞的旅行",
+        "B": "容易運送",
+        "C": "可穿越粗糙地形",
+        "D": "可避免反覆性的上肢傷害"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_79",
@@ -196028,15 +196088,16 @@
       "subject_name": "醫學倫理與法規",
       "stage_id": 1,
       "number": 79,
-      "question": "依據 2008 年版赫爾辛基宣言（ Declaration of Helsinki ），在治療病人的過程中，若無有效的治療方 法，倘若醫師判斷有希望挽救生命，重建健康或減輕痛苦，經那些程序後，得採用未經證實之治療 方法？",
+      "question": "依據2008 年版赫爾辛基宣言(Declaration of Helsinki),在治療病人的過程中,若無有效的治療方 法,倘若醫師判斷有希望挽救生命,重建健康或減輕痛苦,經那些程序後,得採用未經證實之治療 方法?",
       "options": {
-        "A": "只需諮詢過專家",
-        "B": "只需取得病人或其法定代理人之同意書",
-        "C": "需諮詢過專家且取得病人或其法定代理人之同意書",
-        "D": "需諮詢過專家且取得病人或其法定代理人之同意書，並報經主管機關核准"
+        "A": "只需諮詢過專家",
+        "B": "只需取得病人或其法定代理人之同意書",
+        "C": "需諮詢過專家且取得病人或其法定代理人之同意書",
+        "D": "需諮詢過專家且取得病人或其法定代理人之同意書,並報經主管機關核准"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115028031,
@@ -196878,7 +196939,7 @@
       "subject_name": "內科",
       "stage_id": 1,
       "number": 55,
-      "question": "附圖為描述糖尿病發病過程的一些生理變化，甲、乙及丙三條曲線分別描述那些變化？甲乙丙",
+      "question": "附圖為描述糖尿病發病過程的一些生理變化，甲、乙及丙三條曲線分別描述那些變化？",
       "options": {
         "A": "I",
         "B": "II",
@@ -197396,7 +197457,7 @@
       "subject_name": "小兒科",
       "stage_id": 2,
       "number": 5,
-      "question": "一位9 個月男嬰發燒、嘔吐、腹瀉3 天，糞便帶有血絲與黏液，至急診所做的腹部X 光檢查如圖所示，下列那一項處置最不適當？下消化道鋇劑攝影檢查腹部超音波檢查",
+      "question": "一位9 個月男嬰發燒、嘔吐、腹瀉3 天，糞便帶有血絲與黏液，至急診所做的腹部X 光檢查如圖所示，下列那一項處置最不適當？",
       "options": {
         "A": "糞便細菌培養",
         "B": "培養",
@@ -197964,7 +198025,7 @@
       "subject_name": "神經科",
       "stage_id": 2,
       "number": 46,
-      "question": "一位40 歲女性，突發頭痛、暈眩至急診，腦部磁振造影顯示有右側延腦外側梗塞（right lateralmedullary infarction），病人會有下列那些症狀表現？①右側肢體的痛感下降 ②右側臉的痛感下降 ③右側肢體失調（dysmetria） ④右側肢體無力",
+      "question": "一位40 歲女性，突發頭痛、暈眩至急診，腦部磁振造影顯示有右側延腦外側梗塞（right lateralmedullary infarction），病人會有下列那些症狀表現？",
       "options": {
         "A": "①③",
         "B": "②④",

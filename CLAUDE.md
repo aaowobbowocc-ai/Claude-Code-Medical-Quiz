@@ -483,7 +483,7 @@ https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx
 
 ---
 
-## 已知題庫缺口（2026-04-18 審計）
+## 已知題庫缺口（2026-05-15 審計）
 
 > **查現況用 `/coverage` 頁面，不要靠記憶。**
 > 此清單只記錄「Coverage 頁面無法反映的背景原因」，修完請加 ✅ 日期。
@@ -493,12 +493,14 @@ https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx
 | 項目 | 狀況 | 備注 |
 |------|------|------|
 | 缺圖題（image-dep）119 題 | 207/326 題已抽圖補回（2026-05-02）| 剩餘 119 題的 PDF 無可抽取的嵌入圖片（含中醫師、藥師一階早年及部分護理師）；有圖的已設 `image_url`，無圖仍保持 `incomplete:true` |
-| 護理師 110-113 散落缺題 | 部分可補（c=105/106 隨場次不一致） | `scrape-fill-gaps-vision.js` lookup 已標註；遇缺題請先手動 probe c-code |
 
 ### ✅ 已修復
 
 | 項目 | 修復日期 | 說明 |
 |------|---------|------|
+| 多選題題幹污染（trailing-pollution）+80 筆 | 2026-05-15 | nursing 102030/102110/113100 大量污染 + 全題庫 trailing-pollution 掃描；分批修 nursing/doctor2/tcm/nutrition/pharma/ot/radiology/social-worker/speech-therapist。8 題 edge case 手動修 + 1 false positive 保留 |
+| 公職司法全線補齊 | 2026-05-15 | civil-senior(990, 106-114)/police(935, 105-114)/police4(1475, 105-114)/judicial(450, 106-114)/customs(884, 105-115)/lawyer1(2968, 105-114)/social-worker(2760, 104-115) 全 0 incomplete。原 plan 預期的 150 incomplete + 6 年缺口已不存在 |
+| doctor1 106-107 第一次 | 2026-05-15 | 100/卷×4 卷皆完整（CBT 新格式 100 題/卷，非 80），原 CLAUDE.md「部分仍缺」記載已過時 |
 | 護理師 102/103 年散缺 | 2026-04-20 | +550 題 across 102030(c=110, 含基礎醫學)/102110/103030/103100(c=109)。先前誤標「MoEX 不可得」，實為 c-code 非 101 |
 | 醫師一階 102/104/105/106 年散缺 | 2026-04-21 | +1,032 題。修正 parseQuestions `num <= 80` 硬編上限（Q81-100 被靜默丟棄）；新增 102110/105020/105100/106020 scrape targets；105 年 CBT PDF 實際可下載（CLAUDE.md 舊記載有誤）|
 | 關務特考 108/111/112/113 法學知識散缺 + 放射師 111100 + 護理師/tcm2 108+ 散缺 | 2026-04-20 | customs +39, radiology 111100 +11, nursing +10, tcm2 +1；修正 c-code 與新版網格式答案 PDF parser（pdfjs 座標比對）|

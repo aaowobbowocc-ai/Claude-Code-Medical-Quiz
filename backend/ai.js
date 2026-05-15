@@ -434,8 +434,17 @@ function registerRoutes(app, examData, stats) {
       alreadyUnlocked,
     }})}\n\n`);
     const optionText = Object.entries(options).map(([k,v]) => `${k}. ${v}`).join('\n');
-    const wrongNote = user_answer && user_answer !== answer
-      ? `考生選了 ${user_answer}，但正確答案是 ${answer}。` : '';
+    // Detect multichoice format: question lists ①②③④/1234 statements, options are combos
+    const isMultiStatement = /[①②③④⑤⑥⑦]/.test(question) ||
+      Object.values(options).some(v => /^[①②③④⑤⑥⑦\d]{2,3}$/.test(String(v).trim()));
+    const multiNote = isMultiStatement
+      ? '【題型】此為多選/組合題：題幹列出多個陳述（①②③…），選項為其組合。請逐一判斷每個陳述對錯，再對照答案組合。'
+      : '';
+    // Targeted wrong-answer analysis — when user picked wrong, the most useful
+    // bit is *why* their pick was tempting and what specifically distinguishes it.
+    const wrongNote = user_answer && user_answer !== answer && options[user_answer]
+      ? `考生選了 ${user_answer}（${String(options[user_answer]).slice(0,80)}），但正確答案是 ${answer}。在「排除其他選項」段落，請特別針對 ${user_answer} 解釋常見誤解原因，並指出與 ${answer} 的關鍵差異。`
+      : '';
 
     const examMeta = examData[exam] || examData.doctor1;
     const examName = examMeta.metadata?.category || '醫師國考';
@@ -487,10 +496,12 @@ ${ragContext}
 【作答原則】
 1. 以題幹線索為核心：題目給的資訊（數據、病史、條文、案例）優先使用，不要憑空加細節。
 2. 台灣考試標準：以台灣現行法規、官方指引、學會共識為準（醫學題用台灣醫學會指引/健保；法律題用台灣現行法）。
-3. 不確定的精確數值（劑量、年限、金額、百分比、cutoff）要標「約」或「依指引」，不要編造具體數字。
+3. 不確定的精確數值（劑量、年限、金額、百分比、cutoff、條號）要標「約」或「依指引」，**寧可不寫具體數字，也不要編造**。
 4. 若知識點冷門或題幹資訊不足，誠實說「題幹資訊有限，常見答案是 X」，不要硬掰機制。
 5. 避免無翻譯的艱澀外文；專有名詞中英並列。
+6. **每段不重複資訊**：「為什麼答案是 X」講核心機制；「排除其他選項」只比較差異點，不要重述相同概念。
 ${extraRulesBlock}
+${multiNote}
 ${noteBlock}
 科目：${subject_name}
 題目：${question}

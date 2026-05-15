@@ -39,7 +39,6 @@ const EXAM_FILES = {
   police4: 'questions-police4.json',
   'driver-car': 'questions-driver-car.json',
   'driver-moto': 'questions-driver-moto.json',
-  'driver-moto-hazard': 'questions-driver-moto-hazard.json',
   gsat: 'questions-gsat.json',
   ast: 'questions-ast.json',
   rt: 'questions-rt.json',

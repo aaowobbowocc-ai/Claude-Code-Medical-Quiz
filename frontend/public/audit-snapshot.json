@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-15T16:59:23.593Z",
+  "generatedAt": "2026-05-15T17:25:35.348Z",
   "total": {
-    "exams": 30,
+    "exams": 29,
     "shared": 9,
     "totalQ": 193915,
     "incomplete": 93,
@@ -357,38 +357,12 @@
       "yearCoverage": {},
       "sessionCoverage": {},
       "subjectCoverage": {
-        "汽車法規": 1107,
-        "汽車標誌標線號誌": 240
-      }
-    },
-    {
-      "file": "driver-moto-hazard",
-      "total": 126,
-      "incomplete": 0,
-      "incompleteByType": {},
-      "disputed": 0,
-      "visionUncertain": 0,
-      "issues": {
-        "missing_answer": 0,
-        "invalid_answer": 0,
-        "empty_options": 0,
-        "short_question": 0,
-        "duplicate_id": 0,
-        "pollution": 0,
-        "answer_not_in_options": 0,
-        "options_lt_4": 126,
-        "option_too_long": 0,
-        "multi_answer_disputed_missing": 0
-      },
-      "yearCoverage": {},
-      "sessionCoverage": {},
-      "subjectCoverage": {
-        "機車危險感知": 126
+        "汽車駕照筆試": 1347
       }
     },
     {
       "file": "driver-moto",
-      "total": 930,
+      "total": 1056,
       "incomplete": 0,
       "incompleteByType": {},
       "disputed": 0,
@@ -401,7 +375,7 @@
         "duplicate_id": 0,
         "pollution": 0,
         "answer_not_in_options": 0,
-        "options_lt_4": 908,
+        "options_lt_4": 1034,
         "option_too_long": 0,
         "multi_answer_disputed_missing": 0
       },
@@ -409,7 +383,8 @@
       "sessionCoverage": {},
       "subjectCoverage": {
         "機車法規": 804,
-        "危險感知": 126
+        "危險感知": 126,
+        "機車危險感知": 126
       }
     },
     {

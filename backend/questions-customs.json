@@ -3571,12 +3571,12 @@
       "subject_name": "法學知識",
       "stage_id": 0,
       "number": 34,
-      "question": "下列關於著作人之敘述,何者正確?  受雇人於職務上完成之著作,得以契約約定以雇用人為著作人 ",
+      "question": "下列關於著作人之敘述，何者正確？",
       "options": {
-        "A": "受雇人於職務上完成之著作,如未有約定,應以受雇人為著作人,其著作財產權亦歸受雇人享有 ",
-        "B": "出資聘請他人完成之著作,應以該出資人為著作人 ",
-        "C": "出資聘請他人完成之著作,以受聘人為著作人且未約定著作財產權之歸屬者,其著作財產權歸出資人",
-        "D": "享有"
+        "A": "受雇人於職務上完成之著作，如未有約定，應以受雇人為著作人，其著作財產權亦歸受雇人享有",
+        "B": "出資聘請他人完成之著作，應以該出資人為著作人",
+        "C": "出資聘請他人完成之著作，以受聘人為著作人且未約定著作財產權之歸屬者，其著作財產權歸出資人享有",
+        "D": "受雇人於職務上完成之著作，得以契約約定以雇用人為著作人"
       },
       "answer": "D",
       "explanation": ""
@@ -4059,7 +4059,8 @@
         "D": "interaction"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "empty_question"
     },
     {
       "id": 818,
@@ -4079,7 +4080,8 @@
         "D": "pit"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "empty_question"
     },
     {
       "id": 819,
@@ -4119,7 +4121,8 @@
         "D": "They"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "empty_question"
     },
     {
       "id": 821,
@@ -4139,7 +4142,8 @@
         "D": "exceptional"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "empty_question"
     },
     {
       "id": 822,
@@ -4159,7 +4163,8 @@
         "D": "Treatment"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "empty_question"
     },
     {
       "id": 823,
@@ -4179,7 +4184,8 @@
         "D": "To supplement this"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "empty_question"
     },
     {
       "id": 824,
@@ -4219,7 +4225,8 @@
         "D": "permanently"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "empty_question"
     },
     {
       "id": 826,
@@ -4239,7 +4246,8 @@
         "D": "suspicious of"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "empty_question"
     },
     {
       "id": 827,
@@ -4259,7 +4267,8 @@
         "D": "Legendarily"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "empty_question"
     },
     {
       "id": 828,
@@ -4279,7 +4288,8 @@
         "D": "wear away"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "empty_question"
     },
     {
       "id": 829,
@@ -9791,12 +9801,12 @@
       "subject_name": "法學知識",
       "stage_id": 0,
       "number": 6,
-      "question": "依司法院大法官解釋，關於「副總統可否兼任行政院院長」，下列敘述何 者正確？ 憲法對此未明文禁止，然副總統職位與行政院院長職位並不相容，故不 允許",
+      "question": "依司法院大法官解釋，關於「副總統可否兼任行政院院長」，下列敘述何者正確？",
       "options": {
-        "A": "憲法對此未明文禁止，依此更可貫徹總統的施政意志而屬允許",
-        "B": "憲法對此未明文規範，由總統依其人事任用權而決定",
-        "C": "憲法對此未明文規範，然副總統如兼任行政院院長，有減損繼任「雙重",
-        "D": "保險機制」之疑慮"
+        "A": "憲法對此未明文禁止，然副總統職位與行政院院長職位並不相容，故不允許",
+        "B": "憲法對此未明文禁止，依此更可貫徹總統的施政意志而屬允許",
+        "C": "憲法對此未明文規範，由總統依其人事任用權而決定",
+        "D": "憲法對此未明文規範，然副總統如兼任行政院院長，有減損繼任「雙重保險機制」之疑慮"
       },
       "answer": "D",
       "explanation": ""

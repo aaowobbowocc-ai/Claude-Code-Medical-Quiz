@@ -492,7 +492,7 @@ https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx
 
 | 項目 | 狀況 | 備注 |
 |------|------|------|
-| 缺圖題（image-dep）3 題 | 116/119 題已補齊（2026-05-15 重審）| 剩 3 題無圖：pharma1 113090 #75、nutrition 115030 #50、radiology 103020 #63。原 119 題大半已抽圖補入 `image_url` |
+| 缺圖題（image-dep）5 題 | 114/119 題已補齊（2026-05-16 重審）| 剩 5 題全在 rt（呼吸治療儀器/圖型題），PDF 無嵌圖且 image_url=空、images[]=空，已標 `incomplete:'image_options'` 排除出題池 |
 | disputed flag 審計（殘 3,641 無法驗證）| 11 false disputed 已清（2026-05-15）| `scripts/audit-disputed.js --apply` 解析 M PDF 備註區。3,641 因無對應 M PDF 在 cache 無法自動驗證；如需深查需先批次下載 M PDF |
 
 ### ✅ 已修復

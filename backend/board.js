@@ -71,8 +71,9 @@ function registerRoutes(app) {
 
   // DELETE /board/:id — admin delete
   app.delete('/board/:id', async (req, res) => {
-    const ADMIN_KEY = process.env.FEEDBACK_ADMIN_KEY || 'med-king-admin-2026';
-    if (req.query.key !== ADMIN_KEY) {
+    const ADMIN_KEY = process.env.FEEDBACK_ADMIN_KEY;
+    // Hardcoded fallback removed — public GitHub repo would have leaked it.
+    if (!ADMIN_KEY || req.query.key !== ADMIN_KEY) {
       return res.status(403).json({ error: 'unauthorized' });
     }
     if (!supabase) return res.json({ ok: true });

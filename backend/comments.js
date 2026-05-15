@@ -73,6 +73,10 @@ function registerRoutes(app) {
   app.post('/comments', (req, res) => {
     const { target, name, avatar, text, userId } = req.body;
     if (!target || !text?.trim()) return res.status(400).json({ error: 'target and text required' });
+    // target must be a plain key (avoid prototype pollution + invalid keys)
+    if (typeof target !== 'string' || !/^[A-Za-z0-9_-]+$/.test(target) || target.length > 80) {
+      return res.status(400).json({ error: 'invalid target' });
+    }
     if (text.trim().length > 500) return res.status(400).json({ error: 'text too long (max 500)' });
 
     if (!comments[target]) comments[target] = [];

@@ -33,6 +33,19 @@ function registerRoutes(app) {
       if (typeof score !== 'number' || typeof max_score !== 'number' || max_score <= 0) {
         return res.status(400).json({ error: 'invalid score' })
       }
+      // Sanity — prevent fake-score injection
+      if (score < 0 || score > max_score || max_score > 100000) {
+        return res.status(400).json({ error: 'score out of range' })
+      }
+      const tq = Number(total_questions) || 0
+      const cq = Number(correct_questions) || 0
+      if (tq < 0 || tq > 500 || cq < 0 || cq > tq) {
+        return res.status(400).json({ error: 'invalid question counts' })
+      }
+      const dur = Number(duration_seconds) || 0
+      if (dur < 0 || dur > 86400) {
+        return res.status(400).json({ error: 'duration out of range' })
+      }
 
       const cleanUserId = typeof user_id === 'string' && UUID_RE.test(user_id) ? user_id : null
 

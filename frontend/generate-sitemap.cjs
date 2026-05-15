@@ -45,6 +45,10 @@ const GUIDES = [
   '/guides/tcm-vs-post-tcm/',
   '/guides/moto-license-2026-reform/',
   '/guides/medical-careers-comparison/',
+  '/guides/doctor1-pastexam-guide/',
+  '/guides/vet-pastexam-guide/',
+  '/guides/ot-pastexam-guide/',
+  '/guides/driver-car-license-guide/',
 ]
 
 function loadExamIds() {

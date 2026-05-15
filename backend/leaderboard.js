@@ -163,11 +163,22 @@ function registerRoutes(app) {
     if (!name || typeof correct !== 'number' || typeof total !== 'number') {
       return res.status(400).json({ error: 'invalid' });
     }
+    // Sanity checks — prevent leaderboard manipulation via crafted payloads.
+    if (!Number.isInteger(correct) || !Number.isInteger(total)) {
+      return res.status(400).json({ error: 'non-integer score' });
+    }
+    if (correct < 0 || total <= 0 || correct > total) {
+      return res.status(400).json({ error: 'invalid score range' });
+    }
+    if (total > 200) {
+      // Largest exam is 200 Qs (medical 一階). Anything bigger is fabricated.
+      return res.status(400).json({ error: 'total exceeds max' });
+    }
     await recordScore(
       name.slice(0, 20),
       correct,
       total,
-      typeof level === 'number' ? level : undefined,
+      typeof level === 'number' && level >= 0 && level <= 999 ? level : undefined,
       typeof examId === 'string' ? examId.slice(0, 40) : undefined,
       typeof userId === 'string' ? userId : undefined,
     );

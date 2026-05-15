@@ -285,8 +285,11 @@ function registerRoutes(app, examData, examConfigs) {
 
   // GET /reports?key=xxx — admin views question reports
   app.get('/reports', async (req, res) => {
-    const ADMIN_KEY = process.env.FEEDBACK_ADMIN_KEY || 'med-king-admin-2026';
-    if (req.query.key !== ADMIN_KEY) {
+    const ADMIN_KEY = process.env.FEEDBACK_ADMIN_KEY;
+    // Refuse to authorize if no key is configured server-side. The previous
+    // hardcoded fallback ('med-king-admin-2026') was publicly readable in
+    // GitHub so anyone could query reports/feedback with that string.
+    if (!ADMIN_KEY || req.query.key !== ADMIN_KEY) {
       return res.status(403).json({ error: 'unauthorized' });
     }
     if (!supabase) return res.json([]);
@@ -301,8 +304,11 @@ function registerRoutes(app, examData, examConfigs) {
 
   // GET /feedback?key=xxx — admin views feedback
   app.get('/feedback', async (req, res) => {
-    const ADMIN_KEY = process.env.FEEDBACK_ADMIN_KEY || 'med-king-admin-2026';
-    if (req.query.key !== ADMIN_KEY) {
+    const ADMIN_KEY = process.env.FEEDBACK_ADMIN_KEY;
+    // Refuse to authorize if no key is configured server-side. The previous
+    // hardcoded fallback ('med-king-admin-2026') was publicly readable in
+    // GitHub so anyone could query reports/feedback with that string.
+    if (!ADMIN_KEY || req.query.key !== ADMIN_KEY) {
       return res.status(403).json({ error: 'unauthorized' });
     }
     if (!supabase) return res.json([]);

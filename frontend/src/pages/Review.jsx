@@ -183,8 +183,8 @@ export default function Review() {
           {questions.length > 0 && (
             <button
               onClick={() => setShowAll(v => !v)}
-              className="ml-auto text-xs text-white/60 border border-white/20 px-3 py-1.5 rounded-xl">
-              {showAll ? '只看錯題' : '看全部'}
+              className="ml-auto text-xs font-bold bg-white text-medical-blue px-3 py-1.5 rounded-xl shadow active:scale-95">
+              {showAll ? '只看錯題' : '👀 看全部作答'}
             </button>
           )}
         </div>

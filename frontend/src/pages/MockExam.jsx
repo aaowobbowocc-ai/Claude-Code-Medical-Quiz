@@ -813,12 +813,23 @@ function ExamResults({ papers, navigate }) {
       </div>
 
       <div className="bg-white rounded-t-3xl px-5 pt-5 pb-10 flex flex-col gap-3">
-        {wrongQuestions.length > 0 && (
-          <button onClick={() => navigate('/review', { state: { questions: wrongQuestions, stage: isFullExam ? '完整模擬考' : papers[0].paperName } })}
-            className="w-full py-4 rounded-2xl font-bold text-lg border-2 active:scale-95 transition-transform flex items-center justify-center gap-2"
-            style={{ borderColor: '#EF4444', color: '#EF4444', background: '#FFF5F5' }}>
-            📋 錯題檢討（{wrongQuestions.length} 題）
-          </button>
+        {(() => {
+          // 5/15 使用者回饋：考完只能看錯題、不能看全部作答狀況
+          // 改成傳「全部題目（含答對 + 答錯）」給 Review，Review 預設只顯示錯題、但有「看全部」切換
+          const allQs = allQuestions.map((q, i) => {
+            const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
+            const qIdx = pIdx === 0 ? i : i - papers[0].questions.length
+            const myAnswer = papers[pIdx]?.answers[qIdx] || null
+            return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer) }
+          })
+          return (
+            <button onClick={() => navigate('/review', { state: { questions: allQs, stage: isFullExam ? '完整模擬考' : papers[0].paperName } })}
+              className="w-full py-4 rounded-2xl font-bold text-lg border-2 active:scale-95 transition-transform flex items-center justify-center gap-2"
+              style={{ borderColor: '#EF4444', color: '#EF4444', background: '#FFF5F5' }}>
+              📋 檢討作答（錯 {wrongQuestions.length} 題 / 共 {allQs.length} 題）
+            </button>
+          )
+        })()}
         )}
         <button onClick={() => navigate('/mock-exam')}
           className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform grad-cta">

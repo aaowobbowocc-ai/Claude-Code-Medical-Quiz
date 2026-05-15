@@ -75,7 +75,7 @@ for (const [fp, fixes] of Object.entries(byFile)) {
     if (!q) { console.log('NOT FOUND:', fp, fix.question.slice(0, 30)); continue }
     q.question = fix.question
     if (!fix.keepOptions) q.options = fix.options
-    q.disputed = true
+    // disputed reserved for 考選部 official corrections only — don't set on parser repair
     fixed++
   }
   fs.writeFileSync(fp, JSON.stringify(data, null, 2))

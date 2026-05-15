@@ -114,7 +114,9 @@ async function main() {
       if (optLens.some(L => L > 250 || L < 1)) continue
       q.question = parsed.question
       q.options = parsed.options
-      q.disputed = true
+      // NOTE: do not set q.disputed=true — disputed is reserved for 考選部 official
+      // corrections (per memory feedback_official_corrections). Parser repairs
+      // do not constitute disputes.
       fixed++
     }
     if (fixed > 0) {

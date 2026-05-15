@@ -36,6 +36,23 @@ const examFilter = args.indexOf('--exam') >= 0 ? args[args.indexOf('--exam') + 1
 const limit = args.indexOf('--limit') >= 0 ? parseInt(args[args.indexOf('--limit') + 1]) : 0
 const apply = args.includes('--apply')
 
+const EXPECTED_KLASS = {
+  doctor1: '醫師', doctor2: '醫師',
+  dental1: '牙醫師', dental2: '牙醫師',
+  pharma1: '藥師', pharma2: '藥師',
+  medlab: '醫事檢驗師', radiology: '醫事放射師',
+  pt: '物理治療師', ot: '職能治療師',
+  nursing: '護理師', nutrition: '營養師',
+  tcm1: '中醫師', tcm2: '中醫師',
+  vet: '獸醫師',
+  audiologist: '聽力師',
+  'speech-therapist': '語言治療師',
+  rt: '呼吸治療師',
+  'social-worker': '社會工作師',
+  customs: '關務', police: '警察', police4: '警察',
+  judicial: '司法', 'civil-senior': '高考', lawyer1: '律師',
+}
+
 const EXAM_FILES = {
   doctor1: 'questions.json', doctor2: 'questions-doctor2.json',
   dental1: 'questions-dental1.json', dental2: 'questions-dental2.json',
@@ -72,20 +89,45 @@ function findAnswerPdf(exam_code, c, s) {
 }
 
 // 從合併答案 PDF 抽出 { subject: { qnum: answer } } 字典
-async function visionExtractCombined(pdfPath) {
+// expectedKlass: 期待的類科名稱（如 "醫師"），若 PDF 首頁類科不符整份跳過
+async function visionExtractCombined(pdfPath, expectedKlass) {
   const mupdf = await getMupdf()
   const buf = fs.readFileSync(pdfPath)
   const doc = mupdf.Document.openDocument(new Uint8Array(buf), 'application/pdf')
   const n = doc.countPages()
-  const subjectAnswers = {}  // subject (主科目+編號) → { qnum: answer }
+  const subjectAnswers = {}
+
+  // 先檢查所有 page 的類科 — 若沒有任一 page 提到 expectedKlass，整份跳過
+  if (expectedKlass) {
+    let anyMatch = false
+    for (let i = 0; i < n; i++) {
+      const t = doc.loadPage(i).toStructuredText('preserve-whitespace').asText().normalize('NFKC')
+      const klass = t.match(/類\s*科[：:名稱]*\s*([^\s\n（(]{2,15})/)?.[1] || ''
+      if (klass.includes(expectedKlass)) { anyMatch = true; break }
+    }
+    if (!anyMatch) return {}
+  }
 
   for (let i = 0; i < n; i++) {
     const page = doc.loadPage(i)
     const text = page.toStructuredText('preserve-whitespace').asText().normalize('NFKC')
-    // 抓該頁科目
-    const subjMatch = text.match(/科\s*目\s*名稱[：:\s]*\n?\s*([^\n（(]+[（(][^）)]+[）)])/)
-    const subj = subjMatch ? subjMatch[1].trim() : ''
-    if (!subj) continue
+    // 該頁類科要符合期待
+    const pageKlass = text.match(/類\s*科[：:名稱]*\s*([^\s\n（(]{2,15})/)?.[1] || ''
+    if (expectedKlass && !pageKlass.includes(expectedKlass)) continue
+    // 抓該頁科目 — 跳過 NFKC 後的全形括號，直接抓「主科目+編號括號」
+    // PDF 文字: "科目名稱:醫學(一)(包括解剖學...)" → 抓 "醫學(一)"
+    let subj = ''
+    // 優先抓「主科目+(一/二/三/四/五/六/七/八)」
+    const ordinalMatch = text.match(/科\s*目\s*名稱[：:\s]*\n?\s*([^\s\n]+?[(（][一二三四五六七八九十][)）])/)
+    if (ordinalMatch) {
+      subj = ordinalMatch[1].trim()
+    } else {
+      // 沒有 ordinal 的科目（如「呼吸疾病學」、「公共衛生營養學」）
+      // 抓 「科目名稱:」 後到「(」前
+      const plain = text.match(/科\s*目\s*名稱[：:\s]*\n?\s*([^\n(（]+?)(?:[(（]|每\s*題|題\s*數|\n)/)
+      if (plain) subj = plain[1].trim()
+    }
+    if (!subj || subj.length < 2) continue
     // 渲染為 PNG + Vision 抽答案
     const px = page.toPixmap(mupdf.Matrix.scale(2.0, 2.0), mupdf.ColorSpace.DeviceRGB, false, true)
     const png = Buffer.from(px.asPNG())
@@ -197,19 +239,24 @@ async function processExam(exam) {
     const ansPdf = pdf.path
 
     process.stdout.write(`  ${path.basename(ansPdf)}: `)
-    const subjectAnswers = await visionExtractCombined(ansPdf)  // { subject: { qnum: ans } }
+    const subjectAnswers = await visionExtractCombined(ansPdf, EXPECTED_KLASS[exam])
     visionCalls += Object.keys(subjectAnswers).length
     process.stdout.write(`${Object.keys(subjectAnswers).length} subjects, `)
 
     let pdfMismatch = 0
     let pdfChecked = 0
     for (const [pdfSubj, ans] of Object.entries(subjectAnswers)) {
-      // 找對應的 questions：q.exam_code 對得上 + q.subject 跟 pdfSubj 匹配
+      // 嚴格 subject 匹配：normalize 後完全相同（or 一方為另一方前綴且夠長）
       const matched = arr.filter(q => {
         if (q.exam_code !== pdf.exam_code) return false
         const qS = norm(q.subject)
         const pS = norm(pdfSubj)
-        return qS && (pS === qS || pS.startsWith(qS) || qS.startsWith(pS.split(/[（(]/)[0]) && Math.min(qS.length, pS.length) >= 4)
+        if (!qS || !pS) return false
+        if (qS === pS) return true
+        // 允許 q.subject 是 pdfSubj 的後綴（少數 PDF 帶前綴）
+        if (qS.length >= 4 && pS.endsWith(qS)) return true
+        if (pS.length >= 4 && qS.endsWith(pS)) return true
+        return false
       })
       if (matched.length === 0) continue
       for (const q of matched) {

@@ -45,47 +45,58 @@ function audit(fp, prefix = '') {
   }
   for (const q of arr) {
     const tag = `${prefix}${fp}#${q.id || 'noid'}`
+    // Skip questions already flagged incomplete — they're excluded from quiz pool
+    // (still report duplicate_id since that's a structural issue regardless)
+    const isIncomplete = !!q.incomplete
+    // Skip true-false questions for option-count and short-question checks
+    const isTF = q.type === 'tf'
     // missing answer
     if (!q.answer || String(q.answer).trim() === '') {
-      issues.missing_answer.push(tag); continue
+      if (!isIncomplete) issues.missing_answer.push(tag)
+      continue
     }
-    // invalid answer format
+    // invalid answer format (allow "E" only for 5-option gsat/ast)
     if (!isAnswerValid(q.answer)) {
       issues.invalid_answer.push(`${tag} ans="${q.answer}"`)
     }
     // empty options
     if (!q.options || typeof q.options !== 'object') {
-      issues.empty_options.push(tag); continue
+      if (!isIncomplete) issues.empty_options.push(tag)
+      continue
     }
     const optKeys = Object.keys(q.options)
-    if (optKeys.length < 4) {
+    if (optKeys.length < 4 && !isTF && !isIncomplete) {
       issues.options_lt_4.push(`${tag} keys=${optKeys.join(',')}`)
     }
-    for (const k of optKeys) {
-      if (!q.options[k] || String(q.options[k]).trim() === '') {
-        issues.empty_options.push(`${tag} opt_${k}_empty`)
+    if (!isIncomplete) {
+      for (const k of optKeys) {
+        if (!q.options[k] || String(q.options[k]).trim() === '') {
+          if (!isTF || (k !== 'C' && k !== 'D')) {
+            issues.empty_options.push(`${tag} opt_${k}_empty`)
+          }
+        }
+        if (q.options[k] && String(q.options[k]).length > 400) {
+          issues.option_too_long.push(`${tag} opt_${k}_${q.options[k].length}ch`)
+        }
       }
-      if (q.options[k] && String(q.options[k]).length > 400) {
-        issues.option_too_long.push(`${tag} opt_${k}_${q.options[k].length}ch`)
+      // answer letter not in options
+      if (/^[A-D]$/.test(q.answer) && !q.options[q.answer]) {
+        issues.answer_not_in_options.push(`${tag} ans=${q.answer}`)
       }
-    }
-    // answer letter not in options
-    if (/^[A-D]$/.test(q.answer) && !q.options[q.answer]) {
-      issues.answer_not_in_options.push(`${tag} ans=${q.answer}`)
-    }
-    // short question (<5 char)
-    if (q.question && q.question.length < 5) {
-      issues.short_question.push(`${tag} len=${q.question.length}`)
-    }
-    // pollution
-    if (checkPollution(q)) {
-      issues.pollution.push(tag)
+      // short question (<5 char) — skip 是非題 (legitimate short stem like "岔路")
+      if (q.question && q.question.length < 5 && !isTF) {
+        issues.short_question.push(`${tag} len=${q.question.length}`)
+      }
+      // pollution
+      if (checkPollution(q)) {
+        issues.pollution.push(tag)
+      }
     }
     // multi-letter answer without disputed flag
     if (/^[A-D],[A-D]/.test(q.answer) && !q.disputed) {
       issues.multi_answer_disputed_missing.push(`${tag} ans=${q.answer}`)
     }
-    // duplicate ID
+    // duplicate ID (always check)
     if (q.id && idCount[q.id] > 1) {
       issues.duplicate_id.push(tag)
     }

@@ -12,8 +12,18 @@ function save(arr) {
   try { localStorage.setItem(KEY, JSON.stringify(arr)) } catch {}
 }
 
+// Key for wrongBank dedup. Prefer `id`, but for legacy numeric IDs (used by
+// audiologist/speech pre-2026-05-15 before ID regen), the underlying question
+// may have shifted to a structured ID. Fall back to (exam_code, number) or
+// question text so existing wrong-bank entries don't orphan after ID migration.
 function qKey(q) {
-  return q?.id || q?.question?.slice(0, 80) || ''
+  if (!q) return ''
+  // Modern structured IDs (e.g. "audiologist_101070_p1_6") — trust them
+  if (q.id && /^[a-z]/i.test(String(q.id))) return String(q.id)
+  // Legacy numeric IDs may have been regenerated server-side → use a stable
+  // composite key from exam metadata
+  if (q.exam_code && q.number != null) return `${q.exam_code}_${q.subject_tag || q.subject || ''}_${q.number}`
+  return q.id || q.question?.slice(0, 80) || ''
 }
 
 // 加入錯題（陣列）。每題含原 question 物件 + myAnswer + addedAt。已存在的更新 addedAt 排到最前面。

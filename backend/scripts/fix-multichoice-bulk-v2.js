@@ -101,11 +101,19 @@ async function main() {
         if (!txt) continue
         const p = parseFromPdf(txt, q.number)
         if (!p) continue
-        // Validate: parsed.question's first 10 chars should match current q.question prefix
-        const qPrefix = q.question.slice(0, 15).replace(/\s+/g, '')
-        const pPrefix = p.question.slice(0, 15).replace(/\s+/g, '')
-        if (qPrefix.length < 5 || pPrefix.length < 5) continue
-        if (!qPrefix.includes(pPrefix.slice(0, 8)) && !pPrefix.includes(qPrefix.slice(0, 8))) continue
+        // Validate match: stricter — require ≥12 char common prefix AND
+        // exclude generic stems like "下列何者" which match many questions.
+        const qPrefix = q.question.slice(0, 25).replace(/\s+/g, '')
+        const pPrefix = p.question.slice(0, 25).replace(/\s+/g, '')
+        if (qPrefix.length < 12 || pPrefix.length < 12) continue
+        const probe = pPrefix.slice(0, 12)
+        // Reject if probe is a near-universal stem (would over-match)
+        if (/^(下列何者|下列那一|下列敘述|下列關於|關於下列)/.test(probe)) {
+          // Need a longer/deeper match for generic stems
+          if (!qPrefix.slice(0, 20).includes(pPrefix.slice(8, 20))) continue
+        } else {
+          if (!qPrefix.includes(probe) && !pPrefix.includes(qPrefix.slice(0, 12))) continue
+        }
         parsed = p
         break
       }

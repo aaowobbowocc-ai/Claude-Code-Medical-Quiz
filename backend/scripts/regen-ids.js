@@ -5,6 +5,9 @@
 const fs = require('fs')
 
 // Paper order matches each exam's typical paper list. paperIdx is 1-based.
+// CRITICAL: this list must be FROZEN — if a subject is reordered or removed,
+// existing IDs (and any caches referencing them) break. New subjects must be
+// appended to keep prior indices stable.
 const PAPERS = {
   'questions-audiologist.json': {
     prefix: 'audiologist',
@@ -12,21 +15,20 @@ const PAPERS = {
   },
   'questions-speech-therapist.json': {
     prefix: 'speech',
-    papers: null, // discover from data
+    // FROZEN — initial regen used [...seen].sort() output. Keep this list intact.
+    papers: ['兒童語言障礙','嗓音與吞嚥障礙','基礎言語科學','構音與語暢障礙','神經性溝通障礙學','聽力學與輔助溝通系統（包括專業倫理）'],
   },
 }
 
 for (const [fp, cfg] of Object.entries(PAPERS)) {
   const data = JSON.parse(fs.readFileSync(fp, 'utf-8'))
   const arr = data.questions || data
-  // discover paper list if not specified
-  if (!cfg.papers) {
-    const seen = new Set()
-    for (const q of arr) if (q.subject) seen.add(q.subject)
-    cfg.papers = [...seen].sort()
-    console.log(fp, 'discovered papers:', cfg.papers)
-  }
   const paperIdx = Object.fromEntries(cfg.papers.map((p, i) => [p, i + 1]))
+  // Sanity: ensure all subjects in data are in the frozen list (catches drift)
+  const subjects = new Set(arr.map(q => q.subject).filter(Boolean))
+  for (const s of subjects) {
+    if (!paperIdx[s]) console.warn(`  ⚠ subject not in frozen paper list: ${s} (file=${fp})`)
+  }
   let renamed = 0
   for (const q of arr) {
     if (!q.id) continue

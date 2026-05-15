@@ -4972,7 +4972,8 @@
       "parent_id": null,
       "case_context": null,
       "is_deprecated": false,
-      "deprecated_reason": null
+      "deprecated_reason": null,
+      "incomplete": "truncated_options"
     },
     {
       "id": "common_admin_studies-106-civil-senior-8",
@@ -6599,10 +6600,10 @@
       "number": 20,
       "question": "理性的決策至少包括下列四個步驟，依其先後順序，下列何者正確？①蒐集論據 ②做出決策 ③執行決策 ④找出問題",
       "options": {
-        "A": "④①②③",
-        "B": "①②③④",
-        "C": "②①③④",
-        "D": "③④①②"
+        "A": "①②③④",
+        "B": "②①③④",
+        "C": "④①②③",
+        "D": "②④③①"
       },
       "answer": "C",
       "level": "senior",

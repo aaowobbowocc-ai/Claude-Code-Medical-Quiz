@@ -106,15 +106,22 @@ async function fix(filePath, sMap, cMap, prefix) {
       const txt = await readText(fs.readFileSync(found.path))
       const ans = parseAnswers(txt)
       if (ans.length < 20) { console.log('  too few ans', key, 'got', ans.length, 'from', found.sCode); continue }
-      let groupFixed = 0
+      let groupFixed = 0, skippedNoOpt = 0
       for (const q of qs) {
         const a = ans[q.number - 1]
         if (!a || a === '#') continue
+        // Sanity: parsed answer letter must correspond to an actual option
+        if (q.options && !q.options[a]) {
+          skippedNoOpt++
+          console.log('    ⚠ skip', q.id, '#'+q.number, 'parsed ans='+a+' but options has no key', a)
+          continue
+        }
         q.answer = a
         groupFixed++
         totalFixed++
       }
-      console.log('  ', key, '→', groupFixed, '/', qs.length, '(' + found.sCode + ', total ans=' + ans.length + ')')
+      const note = skippedNoOpt ? ` [skipped ${skippedNoOpt} sanity-fail]` : ''
+      console.log('  ', key, '→', groupFixed, '/', qs.length, '(' + found.sCode + ', total ans=' + ans.length + ')' + note)
     } catch (e) { console.log('  ERR', key, e.message) }
   }
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2))

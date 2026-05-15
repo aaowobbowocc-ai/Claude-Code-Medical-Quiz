@@ -52,17 +52,13 @@ async function findPdfForId(id, examPrefix, exam_code) {
   if (code !== exam_code) return null  // 防範 ID 跨年份
 
   // 嘗試多種 PDF 命名
-  const candidates = [
-    `Q_${code}_c102_s${ss}.pdf`,
-    `Q_${code}_c104_s${ss}.pdf`,
-    `Q_${code}_c106_s${ss}.pdf`,
-    `Q_${code}_c109_s${ss}.pdf`,
-    `Q_${code}_c110_s${ss}.pdf`,
-    `${examPrefix}_${code}_c102_s${ss}.pdf`,
-    `${examPrefix}_${code}_c104_s${ss}.pdf`,
-    `${examPrefix}_${code}_c109_s${ss}.pdf`,
-    `${examPrefix}_${code}_c110_s${ss}.pdf`,
-  ]
+  const cCodes = ['102','103','104','105','106','107','108','109','110','301','305','306','307','308','309','311','312','313']
+  const candidates = []
+  for (const c of cCodes) {
+    candidates.push(`Q_${code}_c${c}_s${ss}.pdf`)
+    candidates.push(`${examPrefix}_${code}_c${c}_s${ss}.pdf`)
+    candidates.push(`${examPrefix}_${code}_c${c}_s${ss}_Q.pdf`)
+  }
   for (const f of candidates) {
     const fp = path.join(PDF_CACHE, f)
     if (fs.existsSync(fp)) return { fp, num: parseInt(num) }

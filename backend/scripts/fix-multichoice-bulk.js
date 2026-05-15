@@ -48,10 +48,25 @@ function parseFromPdf(txt, num) {
   const body = m[1].trim()
   const qm = body.match(/^([\s\S]+?[?？])\s*\n+/)
   if (!qm) return null
-  const question = qm[1].replace(/\s+/g, ' ').trim()
+  let question = qm[1].replace(/\s+/g, ' ').trim()
   const rest = body.slice(qm[0].length)
-  const optBlocks = rest.split(/\n+/).map(s => s.trim()).filter(s => s.length > 0 && !/^代號|^頁次|^\d+\s*$/.test(s))
-  if (optBlocks.length < 4) return null
+  const allBlocks = rest.split(/\n+/).map(s => s.trim()).filter(s => s.length > 0 && !/^代號|^頁次|^\d+\s*$/.test(s))
+  if (allBlocks.length < 4) return null
+
+  // 多選題偵測：若題幹含 ①②③④/12345... statements，最後 4 block 是 options (e.g. "13"/"14"/"23"/"24")
+  const hasMultiStatements = /[①②③④⑤]/.test(body) || /\s+[1-7]\s+[一-鿿]/.test(body)
+  let optBlocks
+  if (hasMultiStatements && allBlocks.length >= 5) {
+    // 取最後 4 個短 block 當 options
+    optBlocks = allBlocks.slice(-4)
+    // 中間的 statements 併回 question
+    const statements = allBlocks.slice(0, -4)
+    if (statements.length > 0) {
+      question = (question + ' ' + statements.join(' ')).replace(/\s+/g, ' ').trim()
+    }
+  } else {
+    optBlocks = allBlocks.slice(0, 4)
+  }
   return {
     question,
     options: { A: optBlocks[0], B: optBlocks[1], C: optBlocks[2], D: optBlocks[3] },

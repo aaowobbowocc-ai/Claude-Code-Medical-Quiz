@@ -89476,12 +89476,12 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 27,
-      "question": "下列何者是體內合成磷脂絲胺酸（phosphatidylserine）之前質？ 磷脂醯乙醇胺（phosphatidylethanolamine）磷脂醯肌醇（phosphatidylinositol）",
+      "question": "下列何者是體內合成磷脂絲胺酸(phosphatidylserine)之前質?",
       "options": {
-        "A": "磷脂醯乙醇胺（phosphatidylethanolamine）",
-        "B": "磷脂醯肌醇（phosphatidylinositol）",
-        "C": "-二醯甘油（CDP-diacylglycerol）",
-        "D": "心磷脂（cardiolipin）"
+        "A": "磷脂醯乙醇胺(phosphatidylethanolamine)",
+        "B": "磷脂醯肌醇(phosphatidylinositol)",
+        "C": "CDP",
+        "D": ""
       },
       "answer": "C",
       "explanation": "",
@@ -89638,15 +89638,16 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 35,
-      "question": "有關一氧化氮（nitric oxide, NO）與其訊號傳遞（signal transduction）機制之敘述，下列何者正確？一氧化氮（nitric oxide, NO）是一種氣體非自由基之訊號分子",
+      "question": "有關一氧化氮(nitric oxide, NO)與其訊號傳遞(signal transduction)機制之敘述,下列何者正確?",
       "options": {
-        "A": "一氧化氮（nitric oxide, NO）可刺激鳥苷酸環化酶（guanylate cyclase）活性",
-        "B": "一氧化氮合成酶（nitric oxide synthase, NOS）需要鉀離子活化後，合成一氧化氮（nitric oxide,",
-        "C": "NO）",
-        "D": "一氧化氮經由訊號傳遞路徑後，可刺激血管收縮"
+        "A": "一氧化氮(nitric oxide, NO)是一種氣體非自由基之訊號分子",
+        "B": "一氧化氮(nitric oxide, NO)可刺激鳥苷酸環化酶(guanylate cyclase)活性",
+        "C": "一氧化氮合成酶(nitric oxide synthase, NOS)需要鉀離子活化後,合成一氧化氮(nitric oxide,",
+        "D": "NO)"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3493,
@@ -89778,15 +89779,16 @@
       "subject_name": "食品衛生安全",
       "stage_id": 6,
       "number": 2,
-      "question": "依據食品良好衛生規範準則，冷藏真空包裝即食食品保存期限可大於10 日，其應具備之保存條 件何者錯誤？ 添加亞硝酸鹽或硝酸鹽水活性在0.94 以上",
+      "question": "依據食品良好衛生規範準則,冷藏真空包裝即食食品保存期限可大於10 日,其應具備之保存條 件何者錯誤?",
       "options": {
-        "A": "添加亞硝酸鹽或硝酸鹽",
-        "B": "水活性在0.94 以上",
-        "C": "＜4.6",
-        "D": "具有可抑制肉毒桿菌生長之條件"
+        "A": "添加亞硝酸鹽或硝酸鹽",
+        "B": "水活性在0.94 以上",
+        "C": "pH",
+        "D": ""
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3648,
@@ -91481,15 +91483,16 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 7,
-      "question": "有關造成肥胖的原因，下列敘述何者錯誤？leptin具抑制食慾的效果，研究發現多數肥胖者血清中的leptin 濃度通常較低",
+      "question": "有關造成肥胖的原因,下列敘述何者錯誤?",
       "options": {
-        "A": "leptin具抑制食慾的效果，研究發現多數肥胖者血清中的leptin 濃度通常較低",
-        "B": "Obesogens被認為可能會影響食慾和飽足感的調控，可能造成脂肪堆積而肥胖",
-        "C": "當腸道厚壁菌叢（Firmicutes）數量多於擬桿菌叢（Bacteroidetes）時可能造成肥胖",
-        "D": "慢性壓力會使血液cortisol 濃度上升，進而促進食慾，因此可能造成肥胖"
+        "A": "leptin",
+        "B": "",
+        "C": "具抑制食慾的效果,研究發現多數肥胖者血清中的leptin 濃度通常較低",
+        "D": "Obesogens"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3544,
@@ -91881,15 +91884,16 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 27,
-      "question": "有關血脂代謝之敘述，何者正確？LDL、HDL 或VLDL 升高，皆屬於血脂異常（Dyslipidemia）",
+      "question": "有關血脂代謝之敘述,何者正確?",
       "options": {
-        "A": "LDL、HDL 或VLDL 升高，皆屬於血脂異常（Dyslipidemia）",
-        "B": "Chylomicron主要是運送飲食攝取而來的油脂",
-        "C": "LDL顆粒較大者，相較於顆粒小者，更容易刺激發炎反應與促進Atherosclerosis",
-        "D": "飯後2 小時抽血測到的三酸甘油酯>150 mg/dL，屬於血脂異常（Dyslipidemia）"
+        "A": "LDL",
+        "B": "",
+        "C": "、HDL 或VLDL 升高,皆屬於血脂異常(Dyslipidemia)",
+        "D": "Chylomicron"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3564,
@@ -92381,15 +92385,16 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 12,
-      "question": "有關消化道的三種脂解酶特性，下列何者正確？不論lingual lipase、gastric lipase 或pancreatic lipase 之作用皆需膽鹽參與",
+      "question": "有關消化道的三種脂解酶特性,下列何者正確?",
       "options": {
-        "A": "不論lingual lipase、gastric lipase 或pancreatic lipase 之作用皆需膽鹽參與",
-        "B": "lingual lipase、gastric lipase 或pancreatic lipase 皆適於中性作用",
-        "C": "乳脂肪的短（或中）鏈脂肪酸常位於三酸甘油酯的sn-2 位置",
-        "D": "lingual lipase與gastric lipase 偏好水解含短（或中）鏈脂肪酸之三酸甘油酯"
+        "A": "不論lingual lipase、gastric lipase 或pancreatic lipase 之作用皆需膽鹽參與",
+        "B": "lingual lipase",
+        "C": "",
+        "D": "、gastric lipase 或pancreatic lipase 皆適於中性作用"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3510,

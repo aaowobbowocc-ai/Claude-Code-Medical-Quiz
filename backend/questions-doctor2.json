@@ -195058,7 +195058,8 @@
         "/question-images/doctor2_102110_0104_42_0.webp",
         "/question-images/doctor2_102110_0104_42_1.webp"
       ],
-      "image_dependent": true
+      "image_dependent": true,
+      "image_url": "/question-images/doctor2_102110_p4_q42.webp"
     },
     {
       "id": "102110_0104_43",
@@ -195789,15 +195790,16 @@
       "subject_name": "婦產科",
       "stage_id": 1,
       "number": 53,
-      "question": "超音波下，下列何者不是惡性卵巢腫瘤的表現？ 多房性 有腹水",
+      "question": "超音波下，下列何者不是惡性卵巢腫瘤的表現？",
       "options": {
-        "A": "阻力指數（",
-        "B": "resistance index",
-        "C": "）較高",
-        "D": "邊緣不規則"
+        "A": "多房性",
+        "B": "有腹水",
+        "C": "阻力指數（resistance index）較高",
+        "D": "邊緣不規則"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": "102110_0106_54",

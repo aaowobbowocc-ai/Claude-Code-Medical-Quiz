@@ -103,9 +103,16 @@ export async function syncUnlocksToServer(userId) {
   syncInflight = (async () => {
     const local = [...loadUnlocks()]
     try {
+      // Pass auth token so backend can verify userId belongs to caller —
+      // unauthenticated sync would let anyone unlock any user's questions.
+      const session = await supabase?.auth.getSession().then(r => r?.data?.session).catch(() => null)
+      if (!session?.access_token) { syncInflight = null; return }
       const res = await fetch(`${BACKEND}/ai/unlocks/sync`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${session.access_token}`,
+        },
         body: JSON.stringify({ userId, questionIds: local }),
       })
       if (res.ok) {

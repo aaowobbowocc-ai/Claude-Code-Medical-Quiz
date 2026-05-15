@@ -60,6 +60,12 @@ app.use('/comments', apiLimiter);
 app.use('/community-notes', apiLimiter);
 app.use('/board', rateLimit({ windowMs: 60 * 1000, max: 30, standardHeaders: true, legacyHeaders: false }));
 app.use('/api/coins', rateLimit({ windowMs: 60 * 1000, max: 60, standardHeaders: true, legacyHeaders: false }));
+// /ai/vote: per-IP cap blocks mass device-ID rotation that would otherwise game
+// the verified/retracted state machine to flip paid explanations to free or
+// wipe the cache. Vote dedup at DB level is by (cache_key, device_id), so the
+// IP-level limit complements that.
+app.use('/ai/vote', rateLimit({ windowMs: 60 * 1000, max: 10, standardHeaders: true, legacyHeaders: false }));
+app.use('/ai/unlocks/sync', rateLimit({ windowMs: 60 * 1000, max: 5, standardHeaders: true, legacyHeaders: false }));
 
 const server = http.createServer(app);
 const io = new Server(server, {

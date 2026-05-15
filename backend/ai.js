@@ -544,10 +544,24 @@ ${wrongNote}
   // POST /ai/unlocks/sync — Bulk import unlocks from a device's localStorage
   // when a user logs in. Returns the merged set so the client can update its
   // local cache. Body: { userId, questionIds: string[] }.
+  // SECURITY: require auth header + verify userId matches token, otherwise any
+  // attacker can mark all 193K questions as unlocked for any user_id and bypass
+  // explanation paywall completely.
   app.post('/ai/unlocks/sync', async (req, res) => {
     if (!supabase) return res.json({ unlocks: [] });
     const { userId, questionIds } = req.body || {};
     if (!userId) return res.status(400).json({ error: 'missing userId' });
+    // Verify userId via Bearer token — refuse if no token or mismatch
+    const token = req.headers.authorization?.replace('Bearer ', '');
+    if (!token) return res.status(401).json({ error: 'missing auth' });
+    try {
+      const { data: { user }, error: authErr } = await supabase.auth.getUser(token);
+      if (authErr || !user || user.id !== userId) {
+        return res.status(403).json({ error: 'userId does not match token' });
+      }
+    } catch {
+      return res.status(401).json({ error: 'invalid token' });
+    }
     const localList = Array.isArray(questionIds) ? questionIds.filter(Boolean).map(String).slice(0, 5000) : [];
 
     try {

@@ -1,0 +1,1731 @@
+{
+  "generatedAt": "2026-05-15T16:29:46.283Z",
+  "total": {
+    "exams": 30,
+    "shared": 9,
+    "totalQ": 193915,
+    "incomplete": 93,
+    "disputed": 3647,
+    "visionUncertain": 0,
+    "issues": {
+      "missing_answer": 0,
+      "invalid_answer": 0,
+      "empty_options": 118,
+      "short_question": 5,
+      "duplicate_id": 0,
+      "pollution": 1,
+      "answer_not_in_options": 0,
+      "options_lt_4": 1473,
+      "option_too_long": 104,
+      "multi_answer_disputed_missing": 0
+    }
+  },
+  "exams": [
+    {
+      "file": "ast",
+      "total": 525,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 8,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "111": 118,
+        "112": 136,
+        "113": 131,
+        "114": 140
+      },
+      "sessionCoverage": {
+        "第一次": 525
+      },
+      "subjectCoverage": {
+        "歷史": 132,
+        "地理": 139,
+        "公民與社會": 139,
+        "物理": 34,
+        "生物": 68,
+        "化學": 13
+      }
+    },
+    {
+      "file": "audiologist",
+      "total": 7200,
+      "incomplete": 2,
+      "incompleteByType": {
+        "empty_question": 2
+      },
+      "disputed": 51,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 2,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 1,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 960,
+        "101": 960,
+        "102": 960,
+        "103": 480,
+        "104": 480,
+        "105": 480,
+        "106": 480,
+        "107": 300,
+        "108": 300,
+        "109": 300,
+        "110": 300,
+        "111": 300,
+        "112": 300,
+        "113": 300,
+        "114": 300
+      },
+      "sessionCoverage": {
+        "第一次": 5760,
+        "第二次": 1440
+      },
+      "subjectCoverage": {
+        "行為聽力學": 1200,
+        "基礎聽力科學": 1200,
+        "電生理聽力學": 1200,
+        "聽語溝通障礙學（包括專業倫理）": 1200,
+        "聽覺與平衡系統之創健與復健學": 1200,
+        "聽覺輔具原理與實務學": 1200
+      }
+    },
+    {
+      "file": "civil-senior",
+      "total": 990,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "106": 110,
+        "107": 110,
+        "108": 110,
+        "109": 110,
+        "110": 110,
+        "111": 110,
+        "112": 110,
+        "113": 110,
+        "114": 110
+      },
+      "sessionCoverage": {
+        "第一次": 990
+      },
+      "subjectCoverage": {
+        "法學知識與英文": 450,
+        "國文（測驗）": 90,
+        "行政學": 225,
+        "行政法": 225
+      }
+    },
+    {
+      "file": "customs",
+      "total": 884,
+      "incomplete": 10,
+      "incompleteByType": {
+        "empty_question": 10
+      },
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "105": 85,
+        "106": 60,
+        "107": 85,
+        "108": 85,
+        "109": 85,
+        "110": 84,
+        "111": 85,
+        "112": 85,
+        "113": 60,
+        "114": 85,
+        "115": 85
+      },
+      "sessionCoverage": {
+        "第一次": 879,
+        "關務特考": 5
+      },
+      "subjectCoverage": {
+        "法學知識": 550,
+        "英文": 235,
+        "國文（測驗）": 99
+      }
+    },
+    {
+      "file": "dental1",
+      "total": 4960,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 25,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 320,
+        "101": 320,
+        "102": 320,
+        "103": 320,
+        "104": 320,
+        "105": 320,
+        "106": 320,
+        "107": 320,
+        "108": 320,
+        "109": 320,
+        "110": 320,
+        "111": 320,
+        "112": 320,
+        "113": 320,
+        "114": 320,
+        "115": 160
+      },
+      "sessionCoverage": {
+        "第一次": 2560,
+        "第二次": 2400
+      },
+      "subjectCoverage": {
+        "卷一": 2480,
+        "卷二": 2480
+      }
+    },
+    {
+      "file": "dental2",
+      "total": 9920,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 41,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 640,
+        "101": 640,
+        "102": 640,
+        "103": 640,
+        "104": 640,
+        "105": 640,
+        "106": 640,
+        "107": 640,
+        "108": 640,
+        "109": 640,
+        "110": 640,
+        "111": 640,
+        "112": 640,
+        "113": 640,
+        "114": 640,
+        "115": 320
+      },
+      "sessionCoverage": {
+        "第一次": 5120,
+        "第二次": 4800
+      },
+      "subjectCoverage": {
+        "卷一": 2480,
+        "卷二": 2480,
+        "卷三": 2480,
+        "卷四": 2480
+      }
+    },
+    {
+      "file": "doctor2",
+      "total": 9920,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 360,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 1,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 640,
+        "101": 640,
+        "102": 640,
+        "103": 640,
+        "104": 640,
+        "105": 640,
+        "106": 640,
+        "107": 640,
+        "108": 640,
+        "109": 640,
+        "110": 640,
+        "111": 640,
+        "112": 640,
+        "113": 640,
+        "114": 640,
+        "115": 320
+      },
+      "sessionCoverage": {
+        "第一次": 5120,
+        "第二次": 4800
+      },
+      "subjectCoverage": {
+        "醫學(三)": 2480,
+        "醫學(四)": 2480,
+        "醫學(五)": 2480,
+        "醫學(六)": 2480
+      }
+    },
+    {
+      "file": "driver-car",
+      "total": 1347,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 17,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 431,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {},
+      "sessionCoverage": {},
+      "subjectCoverage": {
+        "汽車法規": 1107,
+        "汽車標誌標線號誌": 240
+      }
+    },
+    {
+      "file": "driver-moto-hazard",
+      "total": 126,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 126,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {},
+      "sessionCoverage": {},
+      "subjectCoverage": {
+        "機車危險感知": 126
+      }
+    },
+    {
+      "file": "driver-moto",
+      "total": 930,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 22,
+        "short_question": 5,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 908,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {},
+      "sessionCoverage": {},
+      "subjectCoverage": {
+        "機車法規": 804,
+        "危險感知": 126
+      }
+    },
+    {
+      "file": "gsat",
+      "total": 2562,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 85,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 153,
+        "101": 166,
+        "102": 144,
+        "103": 156,
+        "104": 160,
+        "105": 164,
+        "106": 159,
+        "107": 180,
+        "108": 174,
+        "109": 173,
+        "110": 175,
+        "111": 133,
+        "112": 137,
+        "113": 127,
+        "114": 126,
+        "115": 129,
+        "ref": 106
+      },
+      "sessionCoverage": {
+        "第一次": 2456,
+        "參考試卷": 106
+      },
+      "subjectCoverage": {
+        "自然": 427,
+        "社會": 1064,
+        "英文": 694,
+        "國文": 377
+      }
+    },
+    {
+      "file": "judicial",
+      "total": 450,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "106": 50,
+        "107": 50,
+        "108": 50,
+        "109": 50,
+        "110": 50,
+        "111": 50,
+        "112": 50,
+        "113": 50,
+        "114": 50
+      },
+      "sessionCoverage": {
+        "第一次": 450
+      },
+      "subjectCoverage": {
+        "法學知識與英文": 450
+      }
+    },
+    {
+      "file": "lawyer1",
+      "total": 2968,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "105": 284,
+        "106": 284,
+        "107": 300,
+        "108": 300,
+        "109": 300,
+        "110": 300,
+        "111": 300,
+        "112": 300,
+        "113": 300,
+        "114": 300
+      },
+      "sessionCoverage": {
+        "第一次": 2968
+      },
+      "subjectCoverage": {
+        "綜合法學（憲法、行政法、國際公法、國際私法）": 740,
+        "綜合法學（民法、民事訴訟法）": 788,
+        "綜合法學（公司法、保險法、票據法、證券交易法、強制執行法、法學英文）": 700,
+        "綜合法學（刑法、刑事訴訟法、法律倫理）": 740
+      }
+    },
+    {
+      "file": "medlab",
+      "total": 14880,
+      "incomplete": 2,
+      "incompleteByType": {
+        "empty_question": 2
+      },
+      "disputed": 115,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 1,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 2,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 960,
+        "101": 960,
+        "102": 960,
+        "103": 960,
+        "104": 960,
+        "105": 960,
+        "106": 960,
+        "107": 960,
+        "108": 960,
+        "109": 960,
+        "110": 960,
+        "111": 960,
+        "112": 960,
+        "113": 960,
+        "114": 960,
+        "115": 480
+      },
+      "sessionCoverage": {
+        "第一次": 7680,
+        "第二次": 7200
+      },
+      "subjectCoverage": {
+        "生物化學與臨床生化學": 2480,
+        "微生物學與臨床微生物學": 2480,
+        "臨床生理學與病理學": 2480,
+        "臨床血液學與血庫學": 2480,
+        "臨床血清免疫學與臨床病毒學": 2480,
+        "醫學分子檢驗學與臨床鏡檢學": 2480
+      }
+    },
+    {
+      "file": "nursing",
+      "total": 11141,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 439,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 800,
+        "101": 800,
+        "102": 633,
+        "103": 800,
+        "104": 800,
+        "105": 800,
+        "106": 800,
+        "107": 799,
+        "108": 800,
+        "109": 799,
+        "110": 800,
+        "111": 770,
+        "112": 740,
+        "113": 250,
+        "114": 500,
+        "115": 250
+      },
+      "sessionCoverage": {
+        "第一次": 5837,
+        "第二次": 5304
+      },
+      "subjectCoverage": {
+        "內外科護理學": 2280,
+        "基本護理學與護理行政": 2278,
+        "基礎醫學": 2029,
+        "產兒科護理學": 2279,
+        "精神科與社區衛生護理學": 2275
+      }
+    },
+    {
+      "file": "nutrition",
+      "total": 7640,
+      "incomplete": 1,
+      "incompleteByType": {
+        "image_options": 1
+      },
+      "disputed": 270,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 480,
+        "101": 480,
+        "102": 480,
+        "103": 480,
+        "104": 480,
+        "105": 480,
+        "106": 480,
+        "107": 480,
+        "108": 480,
+        "109": 480,
+        "110": 480,
+        "111": 480,
+        "112": 480,
+        "113": 560,
+        "114": 560,
+        "115": 280
+      },
+      "sessionCoverage": {
+        "第一次": 3960,
+        "第二次": 3680
+      },
+      "subjectCoverage": {
+        "公共衛生營養學": 1290,
+        "生理學與生物化學": 1290,
+        "食品衛生與安全": 1290,
+        "團體膳食設計與管理": 1240,
+        "膳食療養學": 1240,
+        "營養學": 1290
+      }
+    },
+    {
+      "file": "ot",
+      "total": 12000,
+      "incomplete": 2,
+      "incompleteByType": {
+        "image_options": 1,
+        "empty_question": 1
+      },
+      "disputed": 46,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 960,
+        "101": 960,
+        "102": 960,
+        "103": 960,
+        "104": 960,
+        "105": 960,
+        "106": 960,
+        "107": 960,
+        "108": 960,
+        "109": 960,
+        "110": 480,
+        "111": 480,
+        "112": 480,
+        "113": 480,
+        "114": 480
+      },
+      "sessionCoverage": {
+        "第二次": 7200,
+        "第一次": 4800
+      },
+      "subjectCoverage": {
+        "解剖學與生理學": 2000,
+        "職能治療學概論": 2000,
+        "生理疾病職能治療學": 2000,
+        "心理疾病職能治療學": 2000,
+        "小兒疾病職能治療學": 2000,
+        "職能治療技術學": 2000
+      }
+    },
+    {
+      "file": "pharma1",
+      "total": 7440,
+      "incomplete": 1,
+      "incompleteByType": {
+        "image_options": 1
+      },
+      "disputed": 503,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 1,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 480,
+        "101": 480,
+        "102": 480,
+        "103": 480,
+        "104": 480,
+        "105": 480,
+        "106": 480,
+        "107": 480,
+        "108": 480,
+        "109": 480,
+        "110": 480,
+        "111": 480,
+        "112": 480,
+        "113": 480,
+        "114": 480,
+        "115": 240
+      },
+      "sessionCoverage": {
+        "第一次": 3840,
+        "第二次": 3600
+      },
+      "subjectCoverage": {
+        "卷一": 2480,
+        "卷二": 2480,
+        "卷三": 2480
+      }
+    },
+    {
+      "file": "pharma2",
+      "total": 6510,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 26,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 420,
+        "101": 420,
+        "102": 420,
+        "103": 420,
+        "104": 420,
+        "105": 420,
+        "106": 420,
+        "107": 420,
+        "108": 420,
+        "109": 420,
+        "110": 420,
+        "111": 420,
+        "112": 420,
+        "113": 420,
+        "114": 420,
+        "115": 210
+      },
+      "sessionCoverage": {
+        "第一次": 3360,
+        "第二次": 3150
+      },
+      "subjectCoverage": {
+        "法規": 1550,
+        "調劑與臨床": 2480,
+        "藥物治療": 2480
+      }
+    },
+    {
+      "file": "police",
+      "total": 935,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "105": 76,
+        "106": 69,
+        "107": 97,
+        "108": 63,
+        "109": 100,
+        "110": 100,
+        "111": 110,
+        "112": 110,
+        "113": 100,
+        "114": 110
+      },
+      "sessionCoverage": {
+        "第一次": 935
+      },
+      "subjectCoverage": {
+        "行政法": 250,
+        "行政學": 238,
+        "法學知識與英文": 377,
+        "國文": 70
+      }
+    },
+    {
+      "file": "police4",
+      "total": 1475,
+      "incomplete": 3,
+      "incompleteByType": {
+        "empty_question": 3
+      },
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "105": 185,
+        "106": 185,
+        "107": 160,
+        "108": 135,
+        "109": 135,
+        "110": 135,
+        "111": 135,
+        "112": 135,
+        "113": 135,
+        "114": 135
+      },
+      "sessionCoverage": {
+        "第一次": 1475
+      },
+      "subjectCoverage": {
+        "中華民國憲法概要": 100,
+        "行政法概要": 50,
+        "法學緒論": 100,
+        "英文": 500,
+        "國文": 100,
+        "刑法概要": 200,
+        "法學知識": 400,
+        "警察法規概要": 25
+      }
+    },
+    {
+      "file": "pt",
+      "total": 14880,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 72,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 1,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 960,
+        "101": 960,
+        "102": 960,
+        "103": 960,
+        "104": 960,
+        "105": 960,
+        "106": 960,
+        "107": 960,
+        "108": 960,
+        "109": 960,
+        "110": 960,
+        "111": 960,
+        "112": 960,
+        "113": 960,
+        "114": 960,
+        "115": 480
+      },
+      "sessionCoverage": {
+        "第一次": 7680,
+        "第二次": 7200
+      },
+      "subjectCoverage": {
+        "心肺疾病與小兒疾病物理治療學": 2480,
+        "物理治療技術學": 2480,
+        "物理治療基礎學": 2480,
+        "物理治療學概論": 2480,
+        "神經疾病物理治療學": 2480,
+        "骨科疾病物理治療學": 2480
+      }
+    },
+    {
+      "file": "radiology",
+      "total": 14880,
+      "incomplete": 2,
+      "incompleteByType": {
+        "image_options": 2
+      },
+      "disputed": 29,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 3,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 960,
+        "101": 960,
+        "102": 960,
+        "103": 960,
+        "104": 960,
+        "105": 960,
+        "106": 960,
+        "107": 960,
+        "108": 960,
+        "109": 960,
+        "110": 960,
+        "111": 960,
+        "112": 960,
+        "113": 960,
+        "114": 960,
+        "115": 480
+      },
+      "sessionCoverage": {
+        "第一次": 7680,
+        "第二次": 7200
+      },
+      "subjectCoverage": {
+        "放射線治療原理與技術學": 2480,
+        "放射線診斷原理與技術學": 2480,
+        "放射線器材學（包括磁振學與超音波學）": 2480,
+        "核子醫學診療原理與技術學": 2480,
+        "基礎醫學（包括解剖學、生理學與病理學）": 2480,
+        "醫學物理學與輻射安全": 2480
+      }
+    },
+    {
+      "file": "rt",
+      "total": 12000,
+      "incomplete": 5,
+      "incompleteByType": {
+        "image_options": 5
+      },
+      "disputed": 12,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 4,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 1,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 960,
+        "101": 960,
+        "102": 960,
+        "103": 960,
+        "104": 960,
+        "105": 960,
+        "106": 960,
+        "107": 960,
+        "108": 960,
+        "109": 960,
+        "110": 480,
+        "111": 480,
+        "112": 480,
+        "113": 480,
+        "114": 480
+      },
+      "sessionCoverage": {
+        "第一次": 4800,
+        "第二次": 7200
+      },
+      "subjectCoverage": {
+        "心肺基礎醫學": 2000,
+        "基礎呼吸治療學": 2000,
+        "呼吸治療儀器設備學": 2000,
+        "呼吸器原理及應用": 2000,
+        "重症呼吸治療學": 2000,
+        "呼吸疾病學": 2000
+      }
+    },
+    {
+      "file": "social-worker",
+      "total": 2760,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 139,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "104": 240,
+        "105": 240,
+        "106": 240,
+        "107": 240,
+        "108": 240,
+        "109": 240,
+        "110": 240,
+        "111": 240,
+        "112": 240,
+        "113": 240,
+        "114": 240,
+        "115": 120
+      },
+      "sessionCoverage": {
+        "第一次": 1440,
+        "第二次": 1320
+      },
+      "subjectCoverage": {
+        "社會工作": 920,
+        "社會工作直接服務": 920,
+        "社會工作管理": 920
+      }
+    },
+    {
+      "file": "speech-therapist",
+      "total": 7200,
+      "incomplete": 1,
+      "incompleteByType": {
+        "empty_question": 1
+      },
+      "disputed": 358,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 1,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 960,
+        "101": 960,
+        "102": 960,
+        "103": 480,
+        "104": 480,
+        "105": 480,
+        "106": 480,
+        "107": 300,
+        "108": 300,
+        "109": 300,
+        "110": 300,
+        "111": 300,
+        "112": 300,
+        "113": 300,
+        "114": 300
+      },
+      "sessionCoverage": {
+        "第一次": 5760,
+        "第二次": 1440
+      },
+      "subjectCoverage": {
+        "兒童語言障礙": 1200,
+        "神經性溝通障礙學": 1200,
+        "基礎言語科學": 1200,
+        "嗓音與吞嚥障礙": 1200,
+        "構音與語暢障礙": 1200,
+        "聽力學與輔助溝通系統（包括專業倫理）": 1200
+      }
+    },
+    {
+      "file": "tcm1",
+      "total": 4960,
+      "incomplete": 12,
+      "incompleteByType": {
+        "image_options": 12
+      },
+      "disputed": 330,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 320,
+        "101": 320,
+        "102": 320,
+        "103": 320,
+        "104": 320,
+        "105": 320,
+        "106": 320,
+        "107": 320,
+        "108": 320,
+        "109": 320,
+        "110": 320,
+        "111": 320,
+        "112": 320,
+        "113": 320,
+        "114": 320,
+        "115": 160
+      },
+      "sessionCoverage": {
+        "第一次": 2560,
+        "第二次": 2400
+      },
+      "subjectCoverage": {
+        "中醫基礎醫學(一)": 2480,
+        "中醫基礎醫學(二)": 2480
+      }
+    },
+    {
+      "file": "tcm2",
+      "total": 9920,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 256,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 640,
+        "101": 640,
+        "102": 640,
+        "103": 640,
+        "104": 640,
+        "105": 640,
+        "106": 640,
+        "107": 640,
+        "108": 640,
+        "109": 640,
+        "110": 640,
+        "111": 640,
+        "112": 640,
+        "113": 640,
+        "114": 640,
+        "115": 320
+      },
+      "sessionCoverage": {
+        "第一次": 5120,
+        "第二次": 4800
+      },
+      "subjectCoverage": {
+        "中醫臨床醫學(一)": 2480,
+        "中醫臨床醫學(二)": 2480,
+        "中醫臨床醫學(三)": 2480,
+        "中醫臨床醫學(四)": 2480
+      }
+    },
+    {
+      "file": "vet",
+      "total": 12000,
+      "incomplete": 1,
+      "incompleteByType": {
+        "image_options": 1
+      },
+      "disputed": 46,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 960,
+        "101": 960,
+        "102": 960,
+        "103": 960,
+        "104": 960,
+        "105": 960,
+        "106": 960,
+        "107": 960,
+        "108": 960,
+        "109": 960,
+        "110": 480,
+        "111": 480,
+        "112": 480,
+        "113": 480,
+        "114": 480
+      },
+      "sessionCoverage": {
+        "第一次": 4800,
+        "第二次": 7200
+      },
+      "subjectCoverage": {
+        "獸醫公共衛生學": 2000,
+        "獸醫病理學": 2000,
+        "獸醫普通疾病學": 2000,
+        "獸醫傳染病學": 2000,
+        "獸醫實驗診斷學": 2000,
+        "獸醫藥理學": 2000
+      }
+    },
+    {
+      "file": "doctor1",
+      "total": 6200,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 529,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 1,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "100": 400,
+        "101": 400,
+        "102": 400,
+        "103": 400,
+        "104": 400,
+        "105": 400,
+        "106": 400,
+        "107": 400,
+        "108": 400,
+        "109": 400,
+        "110": 400,
+        "111": 400,
+        "112": 400,
+        "113": 400,
+        "114": 400,
+        "115": 200
+      },
+      "sessionCoverage": {
+        "第一次": 3200,
+        "第二次": 3000
+      },
+      "subjectCoverage": {
+        "醫學(一)": 3100,
+        "醫學(二)": 3100
+      }
+    }
+  ],
+  "shared": [
+    {
+      "file": "shared/common_admin_law",
+      "total": 300,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "106": 25,
+        "107": 25,
+        "108": 25,
+        "109": 50,
+        "110": 25,
+        "111": 25,
+        "112": 25,
+        "113": 50,
+        "114": 50
+      },
+      "sessionCoverage": {
+        "第一次": 300
+      },
+      "subjectCoverage": {
+        "行政法": 300
+      }
+    },
+    {
+      "file": "shared/common_admin_law_junior",
+      "total": 449,
+      "incomplete": 3,
+      "incompleteByType": {
+        "truncated_options": 3
+      },
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 3,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "106": 49,
+        "107": 50,
+        "108": 50,
+        "109": 50,
+        "110": 50,
+        "111": 50,
+        "112": 50,
+        "113": 50,
+        "114": 50
+      },
+      "sessionCoverage": {
+        "第一次": 449
+      },
+      "subjectCoverage": {
+        "行政法概要": 449
+      }
+    },
+    {
+      "file": "shared/common_admin_studies",
+      "total": 386,
+      "incomplete": 1,
+      "incompleteByType": {
+        "truncated_options": 1
+      },
+      "disputed": 2,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 1,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "106": 23,
+        "107": 24,
+        "108": 48,
+        "109": 49,
+        "110": 49,
+        "111": 47,
+        "112": 48,
+        "113": 50,
+        "114": 48
+      },
+      "sessionCoverage": {
+        "第一次": 386
+      },
+      "subjectCoverage": {
+        "行政學": 386
+      }
+    },
+    {
+      "file": "shared/common_admin_studies_junior",
+      "total": 449,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 5,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "106": 50,
+        "107": 50,
+        "108": 50,
+        "109": 50,
+        "110": 50,
+        "111": 49,
+        "112": 50,
+        "113": 50,
+        "114": 50
+      },
+      "sessionCoverage": {
+        "第一次": 449
+      },
+      "subjectCoverage": {
+        "行政學概要": 449
+      }
+    },
+    {
+      "file": "shared/common_chinese",
+      "total": 167,
+      "incomplete": 0,
+      "incompleteByType": {},
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "106": 10,
+        "107": 10,
+        "108": 19,
+        "109": 20,
+        "110": 18,
+        "111": 20,
+        "112": 20,
+        "113": 20,
+        "114": 20,
+        "115": 10
+      },
+      "sessionCoverage": {
+        "第一次": 167
+      },
+      "subjectCoverage": {
+        "國文（測驗）": 167
+      }
+    },
+    {
+      "file": "shared/common_constitution",
+      "total": 466,
+      "incomplete": 8,
+      "incompleteByType": {
+        "truncated_options": 8
+      },
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 16,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "106": 30,
+        "107": 30,
+        "108": 55,
+        "109": 54,
+        "110": 54,
+        "111": 55,
+        "112": 55,
+        "113": 55,
+        "114": 55,
+        "115": 23
+      },
+      "sessionCoverage": {
+        "第一次": 465,
+        "關務特考": 1
+      },
+      "subjectCoverage": {
+        "法學知識與英文": 268,
+        "法學知識": 198
+      }
+    },
+    {
+      "file": "shared/common_english",
+      "total": 573,
+      "incomplete": 34,
+      "incompleteByType": {
+        "short_question": 24,
+        "truncated_options": 10
+      },
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 41,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "106": 42,
+        "107": 41,
+        "108": 62,
+        "109": 66,
+        "110": 65,
+        "111": 68,
+        "112": 77,
+        "113": 50,
+        "114": 77,
+        "115": 25
+      },
+      "sessionCoverage": {
+        "第一次": 573
+      },
+      "subjectCoverage": {
+        "行政學": 14,
+        "法學知識與英文": 388,
+        "英文": 171
+      }
+    },
+    {
+      "file": "shared/common_law_basics",
+      "total": 884,
+      "incomplete": 4,
+      "incompleteByType": {
+        "truncated_options": 4
+      },
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 14,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "106": 80,
+        "107": 80,
+        "108": 105,
+        "109": 100,
+        "110": 104,
+        "111": 105,
+        "112": 95,
+        "113": 95,
+        "114": 95,
+        "115": 25
+      },
+      "sessionCoverage": {
+        "第一次": 880,
+        "關務特考": 4
+      },
+      "subjectCoverage": {
+        "法學大意": 450,
+        "法學知識與英文": 236,
+        "法學知識": 198
+      }
+    },
+    {
+      "file": "shared/common_law_knowledge",
+      "total": 638,
+      "incomplete": 1,
+      "incompleteByType": {
+        "truncated_options": 1
+      },
+      "disputed": 0,
+      "visionUncertain": 0,
+      "issues": {
+        "missing_answer": 0,
+        "invalid_answer": 0,
+        "empty_options": 0,
+        "short_question": 0,
+        "duplicate_id": 0,
+        "pollution": 0,
+        "answer_not_in_options": 0,
+        "options_lt_4": 0,
+        "option_too_long": 0,
+        "multi_answer_disputed_missing": 0
+      },
+      "yearCoverage": {
+        "106": 44,
+        "107": 40,
+        "108": 44,
+        "109": 45,
+        "110": 39,
+        "111": 44,
+        "112": 86,
+        "113": 89,
+        "114": 207
+      },
+      "sessionCoverage": {
+        "第一次": 638
+      },
+      "subjectCoverage": {
+        "法學知識與英文（包括中華民國憲法、法學緒論、英文）": 638
+      }
+    }
+  ]
+}

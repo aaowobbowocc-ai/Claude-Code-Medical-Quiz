@@ -41472,15 +41472,16 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 37,
-      "question": "關於cytochrome 的敘述，下列何者錯誤？cytochrome c和cytochrome b 的氧化態在波長420 nm 吸光值較還原態低若抑制劑存在時，光譜吸光值型態有所變動",
+      "question": "關於cytochrome 的敘述,下列何者錯誤?",
       "options": {
-        "A": "cytochrome c 和 cytochrome b 的氧化態在波長 420 nm 吸光值較還原態低",
-        "B": "cytochrome",
-        "C": "為含血基質的蛋白質",
-        "D": "antimycin A 會抑制電子由 cytochrome c 往 b 流動"
+        "A": "cytochrome c",
+        "B": "",
+        "C": "和cytochrome b 的氧化態在波長420 nm 吸光值較還原態低",
+        "D": "若抑制劑存在時,光譜吸光值型態有所變動"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115093,
@@ -74343,15 +74344,16 @@
       "subject_name": "公共衛生營養",
       "stage_id": 5,
       "number": 31,
-      "question": "社區營養計畫的內容，有關「訂定目標」的敘述，下列何者錯誤？依達成程度可分為三個層次：最高目標（goal）、直接目標（objectives）、工作達成目標（targets）",
+      "question": "社區營養計畫的內容,有關「訂定目標」的敘述,下列何者錯誤?",
       "options": {
-        "A": "最高目標（goal）是一種理想和宗旨，無法測量，只能透過推行直接目標（objectives）來朝最高",
-        "B": "目標前進",
-        "C": "「全民達到均衡營養」是直接目標（objectives）",
-        "D": "「二年內將兒童肥胖率降低20%」是工作達成目標（targets）"
+        "A": "依達成程度可分為三個層次:最高目標(goal)、直接目標(objectives)、工作達成目標(targets)",
+        "B": "最高目標(goal)是一種理想和宗旨,無法測量,只能透過推行直接目標(objectives)來朝最高",
+        "C": "目標前進",
+        "D": "「全民達到均衡營養」是直接目標(objectives)"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2942,
@@ -76848,15 +76850,16 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 36,
-      "question": "「自主衛生檢查」是指團膳業者應自動建立一套符合自己機構需求的檢查制度，以確保餐廳廚房的最佳衛生狀態，則下列敘述何者錯誤？對於調理用膳等場所衛生，加熱保溫食品不得低於65℃對於餐盒業衛生管理中「調理」項目，熱藏溫度在60℃以上，並有溫度指示裝置",
+      "question": "「自主衛生檢查」是指團膳業者應自動建立一套符合自己機構需求的檢查制度,以確保餐廳廚房 的最佳衛生狀態,則下列敘述何者錯誤?",
       "options": {
-        "A": "對於調理用膳等場所衛生，應有足夠而清潔之冷凍、冷藏設備，溫度須保持冷藏溫度在0～10℃",
-        "B": "以上；冷凍－18℃以上",
-        "C": "對於餐盒業衛生管理中「調理」項目，冷藏溫度在0～7℃以上；冷凍溫度在－18℃以下；並",
-        "D": "有溫度指示裝置"
+        "A": "對於調理用膳等場所衛生,加熱保溫食品不得低於65°C",
+        "B": "對於餐盒業衛生管理中「調理」項目,熱藏溫度在60°C以上,並有溫度指示裝置",
+        "C": "對於調理用膳等場所衛生,應有足夠而清潔之冷凍、冷藏設備,溫度須保持冷藏溫度在0~10°C",
+        "D": "以上;冷凍-18°C以上"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2908,
@@ -79350,15 +79353,16 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 1,
-      "question": "下列何者可以透過肝臟的葡萄糖新生作用（gluconeogenesis）轉化成葡萄糖？ 脂肪酸（fatty acid）  肝醣（glucagon）",
+      "question": "下列何者可以透過肝臟的葡萄糖新生作用(gluconeogenesis)轉化成葡萄糖?",
       "options": {
-        "A": "脂肪酸（fatty acid）",
-        "B": "肝醣（glucagon）",
-        "C": "甘油（glycerol）",
+        "A": "脂肪酸(fatty acid)",
+        "B": "肝醣(glucagon)",
+        "C": "甘油(glycerol)",
         "D": "ATP"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2992,
@@ -83111,15 +83115,16 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 29,
-      "question": "有關影響微量礦物質在腸道吸收的敘述，下列何者錯誤？ 攝食過多的鋅，不利於銅的吸收 制酸劑不利於鐵、鋅及鉻的吸收",
+      "question": "有關影響微量礦物質在腸道吸收的敘述,下列何者錯誤?",
       "options": {
-        "A": "攝食過多的鋅，不利於銅的吸收",
-        "B": "制酸劑不利於鐵、鋅及鉻的吸收",
-        "C": "A 有助於鐵與銅的吸收",
-        "D": "攝食過多的銅，不利於鋅的吸收"
+        "A": "攝食過多的鋅,不利於銅的吸收",
+        "B": "制酸劑不利於鐵、鋅及鉻的吸收",
+        "C": "Vitamin",
+        "D": ""
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3059,

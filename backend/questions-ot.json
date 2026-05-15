@@ -223254,15 +223254,16 @@
       "subject_name": "生理疾病職能治療",
       "stage_id": 3,
       "number": 17,
-      "question": " 下表為四種不同材料特性的副木材料，較建議新手治療師先運用何種材料練習？ 材料名稱 Orthoplast Aquaplast-T Orfit-Classic Orfit Soft-Fit 記憶性 無 有 有 無 彈性 有 無 有（不顯著） 無 懸垂性 無 有（不顯著） 有（不顯著） 有 自黏性 有 有（需刮除表 面） 有（需刮除表 面） 有（需刮除 表面）",
+      "question": "下表為四種不同材料特性的副木材料,較建議新手治療師先運用何種材料練習?",
       "options": {
-        "A": "Orthoplast",
-        "B": "Aquaplast-T",
-        "C": "Orfit-Classic",
-        "D": "Orfit Soft-Fit"
+        "A": "材料名稱",
+        "B": "Orthoplast",
+        "C": "Aquaplast-T",
+        "D": "Orfit-Classic"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 11144,

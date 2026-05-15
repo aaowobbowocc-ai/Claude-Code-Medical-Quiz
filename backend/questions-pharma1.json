@@ -43236,15 +43236,16 @@
       "subject_name": "生物藥劑學",
       "stage_id": 6,
       "number": 50,
-      "question": "已知下列藥品相關資訊如下表所示： 判斷下列對藥品肝臟排除的主要機轉之敘述，何者錯誤？ Propranolol Meperidine Tolbutamide Theophylline 抽提率 0.6~0.8 0.6~0.95     0.02 0.09 血中蛋白質結合率（%） 93 60 98 59",
+      "question": "已知下列藥品相關資訊如下表所示: 判斷下列對藥品肝臟排除的主要機轉之敘述,何者錯誤?",
       "options": {
-        "A": "Propranolol在肝臟的排除主要受肝血流影響，也會因血漿蛋白結合率改變而改變",
-        "B": "Meperidine在肝臟的排除主要受肝血流影響，但血漿蛋白結合率改變則影響不大",
-        "C": "Tolbutamide在肝臟的排除會受酵素固生性清除率的影響，也會因血漿蛋白結合率改變而 改變",
-        "D": "Theophylline在肝臟的排除會受酵素固生性清除率的影響，但血漿蛋白結合率改變則影響 不大"
+        "A": "Propranolol Meperidine Tolbutamide Theophylline",
+        "B": "抽提率",
+        "C": "0.6~0.8",
+        "D": "0.6~0.95"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115022081,
@@ -51244,15 +51245,16 @@
       "subject_name": "藥物分析",
       "stage_id": 3,
       "number": 36,
-      "question": "以毛細管區帶電泳（CZE）分析Voriconazole、Naphthalene及Aspirin三個藥物，在正常電 極模式（normal polarity）下其遷移時間由短至長之順序為何（背景緩衝液pH=5.0）？ Voriconazole                    Naphthalene                 Aspirin (pKa 1.8, 5.0, and 11.5)                                                 (pKa 3.5)",
+      "question": "以毛細管區帶電泳(CZE)分析Voriconazole、Naphthalene及Aspirin三個藥物,在正常電 極模式(normal polarity)下其遷移時間由短至長之順序為何(背景緩衝液pH=5.0)? Voriconazole Naphthalene Aspirin (pKa 1.8, 5.0, and 11.5) (pKa 3.5)",
       "options": {
-        "A": "Voriconazole＜Naphthalene＜Aspirin",
-        "B": "Voriconazole＜Aspirin＜Naphthalene",
-        "C": "Aspirin＜Naphthalene＜Voriconazole",
-        "D": "Aspirin＜Voriconazole＜Naphthalene"
+        "A": "A.Voriconazole<Naphthalene<Aspirin",
+        "B": "B.Voriconazole<Aspirin<Naphthalene",
+        "C": "C.Aspirin<Naphthalene<Voriconazole",
+        "D": "D.Aspirin<Voriconazole<Naphthalene"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 115023127,

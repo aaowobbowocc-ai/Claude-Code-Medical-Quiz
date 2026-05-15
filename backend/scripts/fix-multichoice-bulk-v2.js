@@ -1,7 +1,10 @@
 #!/usr/bin/env node
+// 通用多選題污染修：loose parser (不要求 ? 後 \n+)，對每個 polluted q
+// 掃 cache 所有 exam_code 相符的 PDF 嘗試 parse
 const fs = require('fs')
 const path = require('path')
 const PDF_CACHE = path.join(__dirname, '..', '_tmp', 'pdf-cache')
+
 let mupdfMod
 async function getMupdf() { if (!mupdfMod) mupdfMod = await import('mupdf'); return mupdfMod }
 async function readText(buf) {
@@ -37,6 +40,7 @@ function parseFromPdf(txt, num) {
 
 function isPolluted(q) {
   if (!q.question || !q.options) return false
+  if (q.subject && /英文|英語/.test(q.subject)) return false
   const m = q.question.match(/[?？]\s*([\s\S]+)$/)
   if (!m) return false
   const trailing = m[1].trim()
@@ -47,52 +51,64 @@ function isPolluted(q) {
   return optA.slice(0, 10) === trH.slice(0, 10) || trH.includes(optA.slice(0, 10))
 }
 
-const TARGETS = [
-  // nutrition 109030 c=103
-  { file: 'questions-nutrition.json', code: '109030', sMap: {
-    '生理學與生物化學': '0201',
-    '營養學': '0202',
-    '膳食療養學': '0203',
-    '團體膳食設計與管理': '0204',
-    '公共衛生營養學': '0205',
-    '食品衛生與安全': '0206',
-  }, c: '103' },
-  // tcm2 中醫臨床(一)(二)(三)(四) c=102 s=0103-0106
-  { file: 'questions-tcm2.json', code: '108110', sMap: {
-    '中醫臨床醫學(一)': '0103',
-    '中醫臨床醫學(二)': '0104',
-    '中醫臨床醫學(三)': '0105',
-    '中醫臨床醫學(四)': '0106',
-  }, c: '102' },
-  { file: 'questions-tcm2.json', code: '106030', sMap: {
-    '中醫臨床醫學(一)': '0103',
-    '中醫臨床醫學(二)': '0104',
-    '中醫臨床醫學(三)': '0105',
-    '中醫臨床醫學(四)': '0106',
-  }, c: '102' },
+const FILES = [
+  'questions.json','questions-doctor2.json','questions-dental1.json','questions-dental2.json',
+  'questions-pharma1.json','questions-pharma2.json','questions-tcm1.json','questions-tcm2.json',
+  'questions-nursing.json','questions-nutrition.json','questions-medlab.json','questions-pt.json',
+  'questions-ot.json','questions-radiology.json','questions-vet.json','questions-social-worker.json',
+  'questions-audiologist.json','questions-speech-therapist.json','questions-rt.json',
 ]
 
 async function main() {
-  let totalFixed = 0
-  for (const t of TARGETS) {
-    if (!t.c) continue
-    const fp = path.join(__dirname, '..', t.file)
+  // Build code → PDF list
+  const allFiles = fs.readdirSync(PDF_CACHE).filter(f => f.endsWith('.pdf') &&
+    !f.startsWith('A_') && !f.startsWith('M_') && !f.startsWith('S_') && !f.startsWith('T'))
+  const codePdfs = {}
+  for (const f of allFiles) {
+    const m = f.match(/_(\d{5,6})_c\w+_s\w+/)
+    if (!m) continue
+    if (!codePdfs[m[1]]) codePdfs[m[1]] = []
+    codePdfs[m[1]].push(f)
+  }
+  console.log('Codes:', Object.keys(codePdfs).length)
+
+  // Cache parsed PDFs (lazy)
+  const pdfTextCache = {}
+  async function getText(f) {
+    if (pdfTextCache[f] !== undefined) return pdfTextCache[f]
+    try {
+      const buf = fs.readFileSync(path.join(PDF_CACHE, f))
+      const txt = await readText(buf)
+      pdfTextCache[f] = txt
+      return txt
+    } catch { pdfTextCache[f] = null; return null }
+  }
+
+  let total = 0
+  for (const fp of FILES) {
+    if (!fs.existsSync(fp)) continue
     const data = JSON.parse(fs.readFileSync(fp, 'utf-8'))
     const arr = data.questions || data
-    const pdfs = {}
-    for (const [subj, s] of Object.entries(t.sMap)) {
-      const f = path.join(PDF_CACHE, `Q_${t.code}_c${t.c}_s${s}.pdf`)
-      if (!fs.existsSync(f)) continue
-      const buf = fs.readFileSync(f)
-      pdfs[subj] = await readText(buf)
-    }
     let fixed = 0
     for (const q of arr) {
-      if (q.exam_code !== t.code) continue
       if (!isPolluted(q)) continue
-      const pdfTxt = pdfs[q.subject]
-      if (!pdfTxt) continue
-      const parsed = parseFromPdf(pdfTxt, q.number)
+      const pdfList = codePdfs[q.exam_code]
+      if (!pdfList) continue
+      // Try each PDF in this code, prefer match by subject in filename hash or just try all
+      let parsed = null
+      for (const f of pdfList) {
+        const txt = await getText(f)
+        if (!txt) continue
+        const p = parseFromPdf(txt, q.number)
+        if (!p) continue
+        // Validate: parsed.question's first 10 chars should match current q.question prefix
+        const qPrefix = q.question.slice(0, 15).replace(/\s+/g, '')
+        const pPrefix = p.question.slice(0, 15).replace(/\s+/g, '')
+        if (qPrefix.length < 5 || pPrefix.length < 5) continue
+        if (!qPrefix.includes(pPrefix.slice(0, 8)) && !pPrefix.includes(qPrefix.slice(0, 8))) continue
+        parsed = p
+        break
+      }
       if (!parsed) continue
       const optLens = Object.values(parsed.options).map(v => v.length)
       if (optLens.some(L => L > 250 || L < 1)) continue
@@ -103,11 +119,11 @@ async function main() {
     }
     if (fixed > 0) {
       fs.writeFileSync(fp, JSON.stringify(data, null, 2))
-      console.log(t.file, t.code, ':', fixed)
-      totalFixed += fixed
+      console.log(fp, ':', fixed)
+      total += fixed
     }
   }
-  console.log('Total:', totalFixed)
+  console.log('TOTAL:', total)
 }
 
 main().catch(e => { console.error(e); process.exit(1) })

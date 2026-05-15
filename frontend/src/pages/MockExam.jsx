@@ -12,6 +12,7 @@ import { supabase } from '../lib/supabase'
 import { getExamYears, getHistoricalPaper, getRandomPaper, isExamSupportedByCDN } from '../lib/cdnQuestions'
 import { isAnswerCorrect } from '../utils/scoring'
 import { addWrong } from '../lib/wrongBank'
+import { saveSession, getSession, clearSession, describeSession } from '../lib/mockExamSession'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -104,7 +105,7 @@ function getSingleExamFee(paper) {
   return paper.count * 5
 }
 
-function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
+function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins, onResume }) {
   const examType = usePlayerStore(s => s.exam) || 'doctor1'
   const { examId, papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, examName, isWeighted, uniformPointsPerQ } = getExamConfig(examType)
   const fullCfg = getFullExamConfig(examType)
@@ -115,6 +116,14 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
   const [examYears, setExamYears] = useState([])
   const [loadingYears, setLoadingYears] = useState(true)
   const [selectedExam, setSelectedExam] = useState(null) // { roc_year, session, papers }
+  const [resumeSession, setResumeSession] = useState(null)
+
+  useEffect(() => {
+    const s = getSession()
+    // 只在 examType 相符時提供恢復（避免別考試的進度跑出來）
+    if (s && s.examType === examType) setResumeSession(s)
+    else setResumeSession(null)
+  }, [examType])
 
   useEffect(() => {
     const examType = usePlayerStore.getState().exam || 'doctor1'
@@ -165,6 +174,31 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
       </div>
 
       <div className="flex-1 px-4 py-4 flex flex-col gap-3 overflow-y-auto">
+        {/* 繼續未完成的考試（中斷自動保存） */}
+        {resumeSession && (
+          <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 shadow-sm">
+            <div className="flex items-start gap-3 mb-3">
+              <span className="text-3xl">📝</span>
+              <div className="flex-1">
+                <p className="font-bold text-amber-900 text-sm">你有未完成的考試</p>
+                <p className="text-xs text-amber-700 mt-0.5">{describeSession(resumeSession)}</p>
+                <p className="text-[11px] text-amber-600/70 mt-0.5">最後暫停於 {new Date(resumeSession.pausedAt).toLocaleString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</p>
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <button onClick={() => onResume(resumeSession)}
+                className="flex-1 py-2.5 rounded-xl font-bold text-sm text-white active:scale-95 transition-transform"
+                style={{ background: '#F59E0B' }}>
+                ▶ 繼續寫
+              </button>
+              <button onClick={() => { if (confirm('確定放棄這份進度？金幣不退')) { clearSession(); setResumeSession(null) } }}
+                className="px-4 py-2.5 rounded-xl text-xs text-gray-500 bg-white border border-gray-200 active:scale-95">
+                放棄
+              </button>
+            </div>
+          </div>
+        )}
+
         {tab === 'historical' ? (
           /* ── Historical exam selection ── */
           selectedExam ? (
@@ -347,15 +381,20 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins }) {
 }
 
 // ── Exam in progress ─────────────────────────────────────────────
-function ExamInProgress({ paper, questions, onFinish, onBack }) {
-  const [answers, setAnswers] = useState({})
-  const [qIdx, setQIdx] = useState(0)
-  const [timeLeft, setTimeLeft] = useState(getPaperTimeLimit(paper))
+function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSaveSnapshot }) {
+  const [answers, setAnswers] = useState(initialState?.answers || {})
+  const [qIdx, setQIdx] = useState(initialState?.qIdx || 0)
+  const [timeLeft, setTimeLeft] = useState(initialState?.timeLeft ?? getPaperTimeLimit(paper))
   const [showNav, setShowNav] = useState(false)
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false)
   const timerRef = useRef(null)
   const answersRef = useRef(answers)
   answersRef.current = answers
+
+  // 每次 answers / qIdx / timeLeft 變動 → 保存快照（含 paper context）
+  useEffect(() => {
+    onSaveSnapshot?.({ answers, qIdx, timeLeft })
+  }, [answers, qIdx, timeLeft])
 
   useEffect(() => {
     timerRef.current = setInterval(() => {
@@ -821,6 +860,43 @@ export default function MockExam() {
 
   const [historicalExam, setHistoricalExam] = useState(null)
 
+  // Resume：載入 ExamInProgress 時帶入的 snapshot（answers/qIdx/timeLeft）
+  const [resumeSnapshot, setResumeSnapshot] = useState(null)
+
+  // 接收 ExamInProgress 每次變動的快照、寫入 localStorage
+  const handleExamSnapshot = (snap) => {
+    if (phase !== 'exam' || !currentPaper || !questions.length) return
+    saveSession({
+      examType,
+      isFullExam,
+      historicalExam,
+      paperResults,
+      currentPaperIdx,
+      currentPaper,
+      questions,
+      answers: snap.answers,
+      qIdx: snap.qIdx,
+      timeLeft: snap.timeLeft,
+    })
+  }
+
+  // 從 saved session 恢復進行中考試
+  const handleResume = (session) => {
+    setIsFullExam(session.isFullExam)
+    setHistoricalExam(session.historicalExam)
+    setPaperResults(session.paperResults || [])
+    setCurrentPaperIdx(session.currentPaperIdx || 0)
+    setCurrentPaper(session.currentPaper)
+    setQuestions(session.questions)
+    setResumeSnapshot({
+      answers: session.answers || {},
+      qIdx: session.qIdx || 0,
+      timeLeft: session.timeLeft ?? getPaperTimeLimit(session.currentPaper),
+    })
+    startTime.current = Date.now()  // 重新計時起點
+    setPhase('exam')
+  }
+
   const loadQuestions = async (paper) => {
     const et = usePlayerStore.getState().exam || 'doctor1'
     // CDN path: pure mode random pick (no shared banks here)
@@ -949,6 +1025,7 @@ export default function MockExam() {
       // More papers to go → show intermission
       setPhase('intermission')
     } else {
+      clearSession()  // 考完整批 → 清掉保存的進度
       setPhase('results')
     }
   }
@@ -963,11 +1040,19 @@ export default function MockExam() {
   // View current results only (stop early)
   const handleFinishSingle = () => {
     setIsFullExam(false)
+    clearSession()
     setPhase('results')
   }
 
   if (phase === 'setup') {
-    return <ExamSetup onStart={handleStartSingle} onStartFull={handleStartFull} onStartHistorical={handleStartHistorical} onBack={() => navigate('/')} coins={coins} />
+    return <ExamSetup
+      onStart={handleStartSingle}
+      onStartFull={handleStartFull}
+      onStartHistorical={handleStartHistorical}
+      onBack={() => navigate('/')}
+      coins={coins}
+      onResume={handleResume}
+    />
   }
 
   if (phase === 'loading' || phase === 'loading2') {
@@ -982,7 +1067,14 @@ export default function MockExam() {
   }
 
   if (phase === 'exam') {
-    return <ExamInProgress paper={currentPaper} questions={questions} onFinish={handleFinishPaper} onBack={() => setPhase('setup')} />
+    return <ExamInProgress
+      paper={currentPaper}
+      questions={questions}
+      onFinish={handleFinishPaper}
+      onBack={() => { /* 邊滑離開時保留 session 讓使用者下次回來 */ setPhase('setup') }}
+      initialState={resumeSnapshot}
+      onSaveSnapshot={handleExamSnapshot}
+    />
   }
 
   if (phase === 'intermission') {

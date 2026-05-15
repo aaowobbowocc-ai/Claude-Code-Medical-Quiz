@@ -70050,15 +70050,16 @@
       "subject_name": "生理學",
       "stage_id": 2,
       "number": 22,
-      "question": "就精原母細胞（ spermatogonium ）到精子（ sperm ）的過程，下列那一項之順序最佳？ Spermatogonium→primary spermatocyte→first meiosis→secondary spermatocyte→second meiosis→ spermatid→sperm Spermatogonium→first meiosis→primary spermatocyte→second meiosis→secondary spermatocyte→ spermatid→sperm",
+      "question": "就精原母細胞（spermatogonium）到精子（sperm）的過程，下列那一項之順序最佳？",
       "options": {
-        "A": "Spermatogonium→primary spermatocyte→first meiosis→secondary spermatocyte→spermatid→second",
-        "B": "meiosis→sperm",
-        "C": "Spermatogonium→primary spermatocyte→secondary spermatocyte→first meiosis→spermatid→second",
-        "D": "meiosis→sperm"
+        "A": "Spermatogonium→primary spermatocyte→first meiosis→secondary spermatocyte→second meiosis→spermatid→sperm",
+        "B": "Spermatogonium→first meiosis→primary spermatocyte→second meiosis→secondary spermatocyte→spermatid→sperm",
+        "C": "Spermatogonium→primary spermatocyte→first meiosis→secondary spermatocyte→spermatid→second meiosis→sperm",
+        "D": "Spermatogonium→primary spermatocyte→secondary spermatocyte→first meiosis→spermatid→second meiosis→sperm"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 1150203411,

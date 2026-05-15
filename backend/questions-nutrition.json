@@ -84837,15 +84837,16 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 35,
-      "question": "有關兒茶酚胺（catecholamines）與其訊息傳遞（signal transduction）機制之敘述，下列何者正確？兒茶酚胺（catecholamines）在人體僅有一種接受器（receptor）兒茶酚胺（catecholamines）訊息傳遞（signal transduction）路徑可透過蛋白C（protein C）活化腺苷酸環化酶（adenylate cyclase）",
+      "question": "有關兒茶酚胺（catecholamines）與其訊息傳遞（signal transduction）機制之敘述，下列何者正確？",
       "options": {
-        "A": "兒茶酚胺（catecholamines）訊息傳遞（signal transduction）路徑可透過環狀腺苷單磷酸（cyclic",
-        "B": "AMP, cAMP）為次級訊息傳遞者（second messenger）",
-        "C": "兒茶酚胺（catecholamines）訊息傳遞（signal transduction）路徑可透過活化磷酯酶C（phospholipase",
-        "D": "C）終止訊息傳遞"
+        "A": "兒茶酚胺（catecholamines）在人體僅有一種接受器（receptor）",
+        "B": "兒茶酚胺（catecholamines）訊息傳遞（signal transduction）路徑可透過蛋白C（protein C）活化腺苷酸環化酶（adenylate cyclase）",
+        "C": "兒茶酚胺（catecholamines）訊息傳遞（signal transduction）路徑可透過環狀腺苷單磷酸（cyclic AMP, cAMP）為次級訊息傳遞者（second messenger）",
+        "D": "兒茶酚胺（catecholamines）訊息傳遞（signal transduction）路徑可透過活化磷酯酶C（phospholipase C）終止訊息傳遞"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3261,
@@ -90966,7 +90967,7 @@
       "subject_name": "團體膳食設計",
       "stage_id": 0,
       "number": 21,
-      "question": "長期攝取含汞金屬濃度高的魚肉會出現的症狀，下列敘述何者正確？\n(A)噁心、嘔吐、腹痛及四肢軀幹疼痛等是痛痛病\n(B)四肢麻痺、腦損傷、走路說話困難等，又稱為水俣病\n(C)中樞神經系統麻痺、呼吸困難，嚴重者會猝死，即是克山症\n(D)周邊神經病變、貧血、白血病及四肢壞死，稱為烏腳病",
+      "question": "長期攝取含汞金屬濃度高的魚肉會出現的症狀，下列敘述何者正確？",
       "options": {
         "A": "噁心、嘔吐、腹痛及四肢軀幹疼痛等是痛痛病",
         "B": "四肢麻痺、腦損傷、走路說話困難等，又稱為水俣病",
@@ -90974,7 +90975,8 @@
         "D": "周邊神經病變、貧血、白血病及四肢壞死，稱為烏腳病"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 116752,

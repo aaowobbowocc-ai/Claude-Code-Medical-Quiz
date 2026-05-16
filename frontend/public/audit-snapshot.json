@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-16T06:27:04.907Z",
+  "generatedAt": "2026-05-16T06:55:33.593Z",
   "total": {
     "exams": 29,
     "shared": 9,
     "totalQ": 193915,
-    "incomplete": 82,
+    "incomplete": 72,
     "disputed": 3647,
     "visionUncertain": 0,
     "issues": {
@@ -112,10 +112,8 @@
     {
       "file": "civil-senior",
       "total": 990,
-      "incomplete": 2,
-      "incompleteByType": {
-        "truncated_options": 2
-      },
+      "incomplete": 0,
+      "incompleteByType": {},
       "disputed": 0,
       "visionUncertain": 0,
       "issues": {
@@ -910,10 +908,8 @@
     {
       "file": "pt",
       "total": 14880,
-      "incomplete": 1,
-      "incompleteByType": {
-        "truncated_options": 1
-      },
+      "incomplete": 0,
+      "incompleteByType": {},
       "disputed": 72,
       "visionUncertain": 0,
       "issues": {
@@ -1391,9 +1387,9 @@
     {
       "file": "shared/common_admin_law_junior",
       "total": 449,
-      "incomplete": 3,
+      "incomplete": 1,
       "incompleteByType": {
-        "truncated_options": 3
+        "truncated_options": 1
       },
       "disputed": 0,
       "visionUncertain": 0,
@@ -1430,10 +1426,8 @@
     {
       "file": "shared/common_admin_studies",
       "total": 386,
-      "incomplete": 3,
-      "incompleteByType": {
-        "truncated_options": 3
-      },
+      "incomplete": 0,
+      "incompleteByType": {},
       "disputed": 2,
       "visionUncertain": 0,
       "issues": {
@@ -1469,10 +1463,8 @@
     {
       "file": "shared/common_admin_studies_junior",
       "total": 449,
-      "incomplete": 1,
-      "incompleteByType": {
-        "truncated_options": 1
-      },
+      "incomplete": 0,
+      "incompleteByType": {},
       "disputed": 0,
       "visionUncertain": 0,
       "issues": {
@@ -1670,10 +1662,8 @@
     {
       "file": "shared/common_law_knowledge",
       "total": 638,
-      "incomplete": 1,
-      "incompleteByType": {
-        "truncated_options": 1
-      },
+      "incomplete": 0,
+      "incompleteByType": {},
       "disputed": 0,
       "visionUncertain": 0,
       "issues": {

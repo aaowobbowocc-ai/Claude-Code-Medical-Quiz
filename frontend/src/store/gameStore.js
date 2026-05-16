@@ -161,22 +161,29 @@ export const usePlayerStore = create(
       toggleSoundMuted: () => set((s) => ({ soundMuted: !s.soundMuted })),
       lastDailyBonus: '',
       loginStreak: 0,
-      claimDailyBonus: () => {
+      // Daily login bonus — server-authoritative (backend owns last_daily_bonus
+      // date check + streak). Async; callers must await.
+      claimDailyBonus: async () => {
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
         if (get().lastDailyBonus === today) return false
-
-        // Check if yesterday was claimed → streak continues
-        const yesterday = new Date(Date.now() - 86400000).toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
-        const wasYesterday = get().lastDailyBonus === yesterday
-        const newStreak = wasYesterday ? get().loginStreak + 1 : 1
-
-        // Streak bonus: Day2:+50, Day3-4:+100, Day5-6:+150, Day7+:+200
-        const streakBonus = newStreak >= 7 ? 200 : newStreak >= 5 ? 150 : newStreak >= 3 ? 100 : newStreak >= 2 ? 50 : 0
-        const totalBonus = 300 + streakBonus
-
-        set((s) => ({ coins: s.coins + totalBonus, lastDailyBonus: today, loginStreak: newStreak }))
-        persistCoinDelta(totalBonus)
-        return totalBonus
+        let token = null
+        try {
+          const { data } = await supabase?.auth.getSession() || {}
+          token = data?.session?.access_token || null
+        } catch {}
+        if (!token) return false
+        try {
+          const res = await fetch(`${BACKEND}/api/rewards/daily`, {
+            method: 'POST', headers: { Authorization: `Bearer ${token}` },
+          })
+          const json = await res.json()
+          if (typeof json.coins === 'number') {
+            set({ coins: json.coins, lastDailyBonus: today, loginStreak: json.streak || get().loginStreak })
+          } else {
+            set({ lastDailyBonus: today })
+          }
+          return json.claimed ? (json.reward || 0) : false
+        } catch { return false }
       },
       addCoins: (n) => {
         set((s) => ({ coins: s.coins + n }))

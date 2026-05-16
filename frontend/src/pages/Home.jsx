@@ -270,8 +270,10 @@ export default function Home() {
   const [showTour, setShowTour] = useState(false)
 
   useEffect(() => {
-    const amount = claimDailyBonus()
-    if (amount) { setDailyClaimed(true); setDailyAmount(amount) }
+    // claimDailyBonus is now async (server-authoritative)
+    claimDailyBonus().then(amount => {
+      if (amount) { setDailyClaimed(true); setDailyAmount(amount) }
+    })
     // Auto-open reward ad sheet if navigated with ?reward=1
     const params = new URLSearchParams(window.location.search)
     if (params.get('reward') === '1') {

@@ -66,6 +66,10 @@ app.use('/api/coins', rateLimit({ windowMs: 60 * 1000, max: 60, standardHeaders:
 // IP-level limit complements that.
 app.use('/ai/vote', rateLimit({ windowMs: 60 * 1000, max: 10, standardHeaders: true, legacyHeaders: false }));
 app.use('/ai/unlocks/sync', rateLimit({ windowMs: 60 * 1000, max: 5, standardHeaders: true, legacyHeaders: false }));
+// Reward + grant endpoints: idempotent server-side, but cap request rate to
+// blunt brute-force retry storms against the coin economy.
+app.use('/api/rewards', rateLimit({ windowMs: 60 * 1000, max: 20, standardHeaders: true, legacyHeaders: false }));
+app.use('/api/grants', rateLimit({ windowMs: 60 * 1000, max: 20, standardHeaders: true, legacyHeaders: false }));
 
 const server = http.createServer(app);
 const io = new Server(server, {

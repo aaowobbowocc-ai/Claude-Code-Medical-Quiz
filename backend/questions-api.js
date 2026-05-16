@@ -258,9 +258,13 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     if (!stats.questionStats) stats.questionStats = {};
     let tracked = 0;
     for (const r of arr.slice(0, 200)) {
-      const id = r.id || r.questionId;
-      if (!id) continue;
-      if (!stats.questionStats[id]) stats.questionStats[id] = { correct: 0, wrong: 0 };
+      const id = String(r.id || r.questionId || '');
+      // Validate id shape — reject prototype-pollution keys and garbage that
+      // would bloat the persisted stats object unboundedly.
+      if (!id || id.length > 60 || !/^[A-Za-z0-9_-]+$/.test(id)) continue;
+      if (!Object.prototype.hasOwnProperty.call(stats.questionStats, id)) {
+        stats.questionStats[id] = { correct: 0, wrong: 0 };
+      }
       stats.questionStats[id][r.correct ? 'correct' : 'wrong']++;
       tracked++;
     }

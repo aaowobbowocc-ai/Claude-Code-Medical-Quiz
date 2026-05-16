@@ -114,7 +114,7 @@ export function useAdReward() {
         setPhase('playing')
         const rewarded = await showAdSenseRewarded()
         if (rewarded) {
-          const result = claimAdReward()
+          const result = await claimAdReward()
           if (result.success) { setPhase('success'); refreshInfo(); return true }
           setPhase(result.reason === 'cooldown' ? 'cooldown' : 'exhausted')
           return false
@@ -155,12 +155,12 @@ export function useAdReward() {
       const startMs = Date.now()
       const totalMs = totalSec * 1000
       return new Promise(resolve => {
-        const tick = () => {
+        const tick = async () => {
           const remaining = Math.max(0, Math.ceil((totalMs - (Date.now() - startMs)) / 1000))
           setCountdown(remaining)
           if (remaining <= 0) {
             clearInterval(timerRef.current)
-            const result = claimAdReward()
+            const result = await claimAdReward()
             if (result.success) {
               setPhase('success')
               refreshInfo()

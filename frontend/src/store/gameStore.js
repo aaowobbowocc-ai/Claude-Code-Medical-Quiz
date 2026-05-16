@@ -195,26 +195,51 @@ export const usePlayerStore = create(
       bindRewardClaimed: false,
       claimedRewards: [],
       addClaimedReward: (id) => set(s => ({ claimedRewards: [...(s.claimedRewards || []), id] })),
-      claimBindReward: () => {
+      // Bind reward — server-authoritative (backend owns bind_reward_claimed
+      // flag, atomically grants 3000 coins). Async; callers must await.
+      claimBindReward: async () => {
         if (get().bindRewardClaimed) return false
-        set((s) => ({ coins: s.coins + 3000, bindRewardClaimed: true }))
-        persistCoinDelta(3000)
-        return 3000
+        let token = null
+        try {
+          const { data } = await supabase?.auth.getSession() || {}
+          token = data?.session?.access_token || null
+        } catch {}
+        if (!token) return false
+        try {
+          const res = await fetch(`${BACKEND}/api/rewards/bind`, {
+            method: 'POST', headers: { Authorization: `Bearer ${token}` },
+          })
+          const json = await res.json()
+          // Sync server state regardless of claimed/already-claimed
+          if (typeof json.coins === 'number') set({ coins: json.coins, bindRewardClaimed: true })
+          else set({ bindRewardClaimed: true })
+          return json.claimed ? (json.reward || 3000) : false
+        } catch { return false }
       },
-      claimAdReward: () => {
+      // Ad reward — server owns daily counter. Async; callers must await.
+      claimAdReward: async () => {
+        let token = null
+        try {
+          const { data } = await supabase?.auth.getSession() || {}
+          token = data?.session?.access_token || null
+        } catch {}
+        if (!token) return { success: false, reason: 'no_auth' }
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
-        const s = get()
-        const count = s.lastAdDate === today ? s.adRewardToday : 0
-        if (count >= 10) return { success: false, reason: 'exhausted' }
-        const newCount = count + 1
-        set((st) => ({
-          coins: st.coins + 300,
-          adRewardToday: newCount,
-          lastAdWatch: new Date().toISOString(),
-          lastAdDate: today,
-        }))
-        persistCoinDelta(300)
-        return { success: true, coins: 300, remaining: 10 - newCount }
+        try {
+          const res = await fetch(`${BACKEND}/api/rewards/ad`, {
+            method: 'POST', headers: { Authorization: `Bearer ${token}` },
+          })
+          const json = await res.json()
+          if (json.claimed) {
+            set({ coins: json.coins, adRewardToday: json.count, lastAdDate: today, lastAdWatch: new Date().toISOString() })
+            return { success: true, coins: 300, remaining: 10 - json.count }
+          }
+          if (json.reason === 'exhausted') {
+            set({ adRewardToday: json.count, lastAdDate: today })
+            return { success: false, reason: 'exhausted' }
+          }
+          return { success: false, reason: json.reason || 'error' }
+        } catch { return { success: false, reason: 'network' } }
       },
       getAdRewardInfo: () => {
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })

@@ -845,6 +845,91 @@ app.post('/api/coins/delta', async (req, res) => {
   }
 })
 
+// ── Bind reward (Google 綁定獎勵 3000 幣) — server-authoritative ─────────
+// Previously claimed client-side via persistCoinDelta with a client-controlled
+// `bindRewardClaimed` flag → user could reset the flag in DevTools and re-claim
+// 3000 coins unlimited times. Now the flag check + coin grant happen atomically
+// server-side: the UPDATE is guarded by `bind_reward_claimed = false`, so a
+// concurrent or repeat request matches 0 rows.
+app.post('/api/rewards/bind', async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: 'Supabase not configured' })
+  const token = req.headers.authorization?.replace('Bearer ', '')
+  if (!token) return res.status(401).json({ error: 'Unauthorized' })
+  try {
+    const { data: { user }, error: authErr } = await supabase.auth.getUser(token)
+    if (authErr || !user) return res.status(401).json({ error: 'Invalid token' })
+    const { data: profile, error: fErr } = await supabase
+      .from('profiles').select('coins, bind_reward_claimed').eq('user_id', user.id).single()
+    if (fErr) return res.status(500).json({ error: fErr.message })
+    if (profile.bind_reward_claimed) {
+      return res.json({ claimed: false, reason: 'already_claimed', coins: profile.coins || 0 })
+    }
+    const newCoins = (profile.coins || 0) + 3000
+    // Guarded update — only applies if flag still false (race-safe idempotency)
+    const { data: updated, error: uErr } = await supabase
+      .from('profiles')
+      .update({ coins: newCoins, bind_reward_claimed: true })
+      .eq('user_id', user.id)
+      .eq('bind_reward_claimed', false)
+      .select('coins')
+    if (uErr) return res.status(500).json({ error: uErr.message })
+    if (!updated || updated.length === 0) {
+      // Lost the race — another request already claimed
+      const { data: p2 } = await supabase.from('profiles').select('coins').eq('user_id', user.id).single()
+      return res.json({ claimed: false, reason: 'already_claimed', coins: p2?.coins || 0 })
+    }
+    res.json({ claimed: true, reward: 3000, coins: updated[0].coins })
+  } catch (e) {
+    res.status(500).json({ error: e.message })
+  }
+})
+
+// ── Ad reward (看廣告獎勵 300 幣/次, 每日上限 10) — server-authoritative ──
+// `ad_reward_today` + `last_ad_date` previously client-controlled. Server now
+// owns the daily counter; optimistic-concurrency guard on the old count value
+// prevents two parallel requests both incrementing from the same base.
+app.post('/api/rewards/ad', async (req, res) => {
+  if (!supabase) return res.status(503).json({ error: 'Supabase not configured' })
+  const token = req.headers.authorization?.replace('Bearer ', '')
+  if (!token) return res.status(401).json({ error: 'Unauthorized' })
+  try {
+    const { data: { user }, error: authErr } = await supabase.auth.getUser(token)
+    if (authErr || !user) return res.status(401).json({ error: 'Invalid token' })
+    const { data: profile, error: fErr } = await supabase
+      .from('profiles').select('coins, ad_reward_today, last_ad_date').eq('user_id', user.id).single()
+    if (fErr) return res.status(500).json({ error: fErr.message })
+    const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
+    const sameDay = profile.last_ad_date === today
+    const oldCount = sameDay ? (profile.ad_reward_today || 0) : 0
+    if (oldCount >= 10) {
+      return res.json({ claimed: false, reason: 'exhausted', count: oldCount, coins: profile.coins || 0 })
+    }
+    const newCount = oldCount + 1
+    const newCoins = (profile.coins || 0) + 300
+    // Optimistic-concurrency guard. Same-day: guard on (last_ad_date=today,
+    // ad_reward_today=oldCount) so a parallel request can't double-increment
+    // from the same base. First-of-day: guard on last_ad_date != today via
+    // matching the stale value — if another request already rolled the day
+    // over, this matches 0 rows.
+    let query = supabase.from('profiles')
+      .update({ coins: newCoins, ad_reward_today: newCount, last_ad_date: today })
+      .eq('user_id', user.id)
+    if (sameDay) {
+      query = query.eq('last_ad_date', today).eq('ad_reward_today', oldCount)
+    } else if (profile.last_ad_date) {
+      query = query.eq('last_ad_date', profile.last_ad_date)
+    }
+    const { data: updated, error: uErr } = await query.select('coins, ad_reward_today')
+    if (uErr) return res.status(500).json({ error: uErr.message })
+    if (!updated || updated.length === 0) {
+      return res.status(409).json({ claimed: false, reason: 'race_retry' })
+    }
+    res.json({ claimed: true, reward: 300, count: updated[0].ad_reward_today, coins: updated[0].coins })
+  } catch (e) {
+    res.status(500).json({ error: e.message })
+  }
+})
+
 // 領 grant — 原子化操作（避免 fire-and-forget 失敗導致 3000 金幣消失 bug）
 app.post('/api/grants/claim', async (req, res) => {
   if (!supabase) return res.status(503).json({ error: 'Supabase not configured' })

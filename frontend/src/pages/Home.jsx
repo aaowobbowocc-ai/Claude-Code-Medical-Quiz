@@ -683,8 +683,8 @@ export default function Home() {
       {/* Bind reward banner — visible only when Google linked & not yet claimed */}
       {linkedIdentity && !bindRewardClaimed && (
         <button
-          onClick={() => {
-            const got = claimBindReward()
+          onClick={async () => {
+            const got = await claimBindReward()
             if (got) { setBindRewardToast(got); setTimeout(() => setBindRewardToast(0), 2500) }
           }}
           className="w-full px-4 py-3 flex items-center gap-3 active:scale-[0.98] transition-transform"
@@ -950,8 +950,8 @@ export default function Home() {
                   </div>
                   {!bindRewardClaimed && (
                     <button
-                      onClick={() => {
-                        const got = claimBindReward()
+                      onClick={async () => {
+                        const got = await claimBindReward()
                         if (got) { setBindRewardToast(got); setTimeout(() => setBindRewardToast(0), 2500) }
                       }}
                       className="mt-3 w-full py-3 rounded-2xl font-bold text-sm text-white flex items-center justify-center gap-2 active:scale-95 shadow-md"

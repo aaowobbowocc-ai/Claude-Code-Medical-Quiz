@@ -7376,11 +7376,12 @@
         "admin_law"
       ],
       "number": 35,
-      "question": "下列何者非屬行政程序法所稱之行政程序？",
+      "question": "下列何者非屬行政程序法所稱之行政程序?",
       "options": {
-        "A": "公路監理機關與汽車修理廠締結汽車委託檢驗契約",
-        "B": "警察機關於轄區內進行巡邏",
-        "C": "建築主管機關處理人民對拆除違建疏失提出之舉發"
+        "A": "考試院修正專門職業及技術人員考試總成績計算規則",
+        "B": "公路監理機關與汽車修理廠締結汽車委託檢驗契約",
+        "C": "警察機關於轄區內進行巡邏",
+        "D": "建築主管機關處理人民對拆除違建疏失提出之舉發"
       },
       "answer": "D",
       "level": "junior",
@@ -7388,8 +7389,7 @@
       "parent_id": null,
       "case_context": null,
       "is_deprecated": false,
-      "deprecated_reason": null,
-      "incomplete": "truncated_options"
+      "deprecated_reason": null
     },
     {
       "id": "common_admin_law_junior-110-civil-junior-36",
@@ -8130,11 +8130,12 @@
         "admin_law"
       ],
       "number": 14,
-      "question": "下列何者非公務員服務法規定之公務員？",
+      "question": "下列何者非公務員服務法規定之公務員?",
       "options": {
-        "A": "國立大學教授",
-        "B": "交通部臺灣鐵路管理局局長",
-        "C": "臺北市市長"
+        "A": "國立大學教授",
+        "B": "考試委員",
+        "C": "交通部臺灣鐵路管理局局長",
+        "D": "臺北市市長"
       },
       "answer": "D",
       "level": "junior",
@@ -8142,8 +8143,7 @@
       "parent_id": null,
       "case_context": null,
       "is_deprecated": false,
-      "deprecated_reason": null,
-      "incomplete": "truncated_options"
+      "deprecated_reason": null
     },
     {
       "id": "common_admin_law_junior-111-civil-junior-15",

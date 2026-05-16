@@ -2153,12 +2153,12 @@
         "law_knowledge_combined"
       ],
       "number": 3,
-      "question": "依司法院大法官相關解釋，下列何者不屬於憲法財產權保障範圍？",
+      "question": "依司法院大法官相關解釋,下列何者不屬於憲法財產權保障範圍? 保險醫事服務機構向保險人申報其所提供醫療服務之點數,行使本於全民健康保險法有關規定所生之 公法上請求權 都市更新範圍內,其土地及合法建築物所有權",
       "options": {
-        "A": "保險醫事服務機構向保險人申報其所提供醫療服務之點數，行使本於全民健康保險法有關規定所生之公法上請求權",
-        "B": "都市更新範圍內，其土地及合法建築物所有權",
-        "C": "",
-        "D": "政府採購得標廠未進用一定比例原住民所繳之代金"
+        "A": "921",
+        "B": "",
+        "C": "緊急命令中的緊急慰助之給付",
+        "D": "政府採購得標廠未進用一定比例原住民所繳之代金"
       },
       "answer": "C",
       "level": "junior",
@@ -2166,8 +2166,7 @@
       "parent_id": null,
       "case_context": null,
       "is_deprecated": false,
-      "deprecated_reason": null,
-      "incomplete": "truncated_options"
+      "deprecated_reason": null
     },
     {
       "id": "common_law_knowledge-106-civil-junior-general-4",

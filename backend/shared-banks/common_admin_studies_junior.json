@@ -4801,12 +4801,12 @@
         "admin_studies"
       ],
       "number": 35,
-      "question": "將下列事項依馬斯洛（ Maslow）的需求層次理論（ hierarchy of needs ），由最低到高層級排列：①好相處",
+      "question": "將下列事項依馬斯洛(Maslow)的需求層次理論(hierarchy of needs),由最低到高層級排列:1好相處 的同事 2適當的薪水 3當選模範員工 4免費健康檢查",
       "options": {
-        "A": "的同事  ②適當的薪水  ③當選模範員工  ④免費健康檢查",
-        "B": "①①①①",
-        "C": "①①①①",
-        "D": "①①①①"
+        "A": "1111",
+        "B": "1111",
+        "C": "1111",
+        "D": "1111"
       },
       "answer": "C",
       "level": "junior",
@@ -4814,8 +4814,7 @@
       "parent_id": null,
       "case_context": null,
       "is_deprecated": false,
-      "deprecated_reason": null,
-      "incomplete": "truncated_options"
+      "deprecated_reason": null
     },
     {
       "id": "common_admin_studies_junior-108-civil-junior-36",

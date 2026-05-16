@@ -903,12 +903,12 @@
         "admin_studies"
       ],
       "number": 12,
-      "question": "下列何者是由公務人員保障暨培訓委員會辦理的訓練？①公務人員專業訓練  ②行政中立訓練",
+      "question": "下列何者是由公務人員保障暨培訓委員會辦理的訓練?1公務人員專業訓練 2行政中立訓練 3一般管理訓練 4升官等訓練",
       "options": {
-        "A": "③一般管理訓練  ④升官等訓練",
-        "B": "②④",
-        "C": "①②",
-        "D": "③④"
+        "A": "24",
+        "B": "12",
+        "C": "34",
+        "D": "13"
       },
       "answer": "A",
       "level": "senior",
@@ -916,8 +916,7 @@
       "parent_id": null,
       "case_context": null,
       "is_deprecated": false,
-      "deprecated_reason": null,
-      "incomplete": "truncated_options"
+      "deprecated_reason": null
     },
     {
       "id": "common_admin_studies-113-civil-senior-13",
@@ -4232,12 +4231,12 @@
         "admin_studies"
       ],
       "number": 1,
-      "question": "下列何者屬於激勵理論的「過程理論學派」？①公平理論",
+      "question": "下列何者屬於激勵理論的「過程理論學派」?1公平理論 2期望理論 3ERG 理論 4增強理論",
       "options": {
-        "A": "②期望理論③ERG理論④增強理論",
-        "B": "①②",
-        "C": "②③",
-        "D": "①②③"
+        "A": "12",
+        "B": "23",
+        "C": "123",
+        "D": "124"
       },
       "answer": "A",
       "level": "senior",
@@ -4245,8 +4244,7 @@
       "parent_id": null,
       "case_context": null,
       "is_deprecated": false,
-      "deprecated_reason": null,
-      "incomplete": "truncated_options"
+      "deprecated_reason": null
     },
     {
       "id": "common_admin_studies-107-civil-senior-2",
@@ -4961,12 +4959,12 @@
         "admin_studies"
       ],
       "number": 7,
-      "question": "根據雪恩（E. H. Schein）對文化的看法，下列敘述何者錯誤？",
+      "question": "根據雪恩(E. H. Schein)對文化的看法,下列敘述何者錯誤?",
       "options": {
-        "A": "文化具有器物、價值、基本假定三種層次性器物層次是文化中最容易看見的層次",
-        "B": "價值層次的信念若再透過社會確認的過程，即能形成團體共識基本假定層次日久會成為外顯的、前意識的前提",
-        "C": "",
-        "D": ""
+        "A": "文化具有器物、價值、基本假定三種層次性",
+        "B": "器物層次是文化中最容易看見的層次",
+        "C": "價值層次的信念若再透過社會確認的過程,即能形成團體共識",
+        "D": "基本假定層次日久會成為外顯的、前意識的前提"
       },
       "answer": "D",
       "level": "senior",
@@ -4974,8 +4972,7 @@
       "parent_id": null,
       "case_context": null,
       "is_deprecated": false,
-      "deprecated_reason": null,
-      "incomplete": "truncated_options"
+      "deprecated_reason": null
     },
     {
       "id": "common_admin_studies-106-civil-senior-8",

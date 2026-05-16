@@ -199,8 +199,12 @@ function getExamData(exam) {
 
 function getQuestionsByStage(stageId, exam) {
   const data = getExamData(exam);
-  // PvP/practice: only single-answer questions (exclude multi-answer & voided)
-  const valid = data.questions.filter(q => q.answer && q.answer.length === 1 && q.options[q.answer]);
+  // PvP/practice: only single-answer questions (exclude multi-answer, voided,
+  // and incomplete — image-only/empty-option/truncated questions can't be
+  // answered fairly in a timed PvP round)
+  const valid = data.questions.filter(q =>
+    q.answer && q.answer.length === 1 && q.options[q.answer] && !q.incomplete
+  );
   if (stageId === 0) return valid;
   return valid.filter(q => q.stage_id === stageId);
 }
@@ -286,6 +290,8 @@ function startQuestion(room) {
     question: q.question,
     options: q.options,
     image_url: q.image_url || null,
+    images: q.images || null,
+    incomplete: q.incomplete || null,
     roc_year: q.roc_year,
     session: q.session,
     subject_name: q.subject_name,

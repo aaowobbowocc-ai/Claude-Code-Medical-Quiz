@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-16T06:55:33.593Z",
+  "generatedAt": "2026-05-16T07:15:40.706Z",
   "total": {
     "exams": 29,
     "shared": 9,
     "totalQ": 193915,
-    "incomplete": 72,
+    "incomplete": 55,
     "disputed": 3647,
     "visionUncertain": 0,
     "issues": {
@@ -1387,10 +1387,8 @@
     {
       "file": "shared/common_admin_law_junior",
       "total": 449,
-      "incomplete": 1,
-      "incompleteByType": {
-        "truncated_options": 1
-      },
+      "incomplete": 0,
+      "incompleteByType": {},
       "disputed": 0,
       "visionUncertain": 0,
       "issues": {
@@ -1578,10 +1576,10 @@
     {
       "file": "shared/common_english",
       "total": 573,
-      "incomplete": 34,
+      "incomplete": 18,
       "incompleteByType": {
-        "short_question": 24,
-        "truncated_options": 10
+        "short_question": 16,
+        "truncated_options": 2
       },
       "disputed": 0,
       "visionUncertain": 0,

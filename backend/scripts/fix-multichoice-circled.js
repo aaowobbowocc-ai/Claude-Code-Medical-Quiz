@@ -68,11 +68,10 @@ function isPolluted(q) {
   const opts = Object.values(q.options).map(v => String(v || '').trim())
   const cleanCombo = o => /^[①②③④⑤⑥⑦0-9]{1,6}$/.test(o.replace(/\s/g, ''))
   const cleanCount = opts.filter(cleanCombo).length
-  const pol = opts.filter(o => {
-    const segs = o.match(/[①②③④⑤][^①②③④⑤]{3,}/g)
-    return segs && segs.length >= 2
-  })
-  return pol.length > 0 && cleanCount >= 1
+  // Relaxed: an option that carries circled-number + CJK text (a leaked
+  // statement, even a single one) while ≥2 other options are clean combos.
+  const pol = opts.filter(o => /[①②③④⑤⑥][一-鿿]{3,}/.test(o) && !cleanCombo(o))
+  return pol.length > 0 && cleanCount >= 2
 }
 
 function buildPdfIndex() {

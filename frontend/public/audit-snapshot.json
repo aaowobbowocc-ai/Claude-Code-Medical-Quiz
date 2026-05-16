@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-16T06:06:25.160Z",
+  "generatedAt": "2026-05-16T06:27:04.907Z",
   "total": {
     "exams": 29,
     "shared": 9,
     "totalQ": 193915,
-    "incomplete": 100,
+    "incomplete": 82,
     "disputed": 3647,
     "visionUncertain": 0,
     "issues": {
@@ -154,9 +154,9 @@
     {
       "file": "customs",
       "total": 884,
-      "incomplete": 10,
+      "incomplete": 4,
       "incompleteByType": {
-        "empty_question": 10
+        "empty_question": 4
       },
       "disputed": 0,
       "visionUncertain": 0,
@@ -1546,10 +1546,8 @@
     {
       "file": "shared/common_constitution",
       "total": 466,
-      "incomplete": 8,
-      "incompleteByType": {
-        "truncated_options": 8
-      },
+      "incomplete": 0,
+      "incompleteByType": {},
       "disputed": 0,
       "visionUncertain": 0,
       "issues": {
@@ -1631,10 +1629,8 @@
     {
       "file": "shared/common_law_basics",
       "total": 884,
-      "incomplete": 4,
-      "incompleteByType": {
-        "truncated_options": 4
-      },
+      "incomplete": 0,
+      "incompleteByType": {},
       "disputed": 0,
       "visionUncertain": 0,
       "issues": {

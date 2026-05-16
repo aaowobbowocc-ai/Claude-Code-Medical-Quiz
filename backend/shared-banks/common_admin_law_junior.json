@@ -4205,10 +4205,12 @@
         "admin_law"
       ],
       "number": 13,
-      "question": "行政處分違反土地管轄之規定者，如無行政程序法第 111條第6款規定之情形，該行政處分之效力為何？",
+      "question": "行政處分違反土地管轄之規定者,如無行政程序法第111 條第6 款規定之情形,該行政處分之效力為何?",
       "options": {
-        "A": "得轉換得補正效力未定",
-        "B": "有管轄權之機關如就該事件仍應為相同之處分時，原處分無須撤銷"
+        "A": "得轉換",
+        "B": "得補正",
+        "C": "效力未定",
+        "D": "有管轄權之機關如就該事件仍應為相同之處分時,原處分無須撤銷"
       },
       "answer": "D",
       "level": "junior",
@@ -4216,8 +4218,7 @@
       "parent_id": null,
       "case_context": null,
       "is_deprecated": false,
-      "deprecated_reason": null,
-      "incomplete": "truncated_options"
+      "deprecated_reason": null
     },
     {
       "id": "common_admin_law_junior-108-civil-junior-14",

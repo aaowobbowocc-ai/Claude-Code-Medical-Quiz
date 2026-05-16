@@ -22,6 +22,7 @@ const PDF = {
   'common_admin_studies|113': 'userpdf_113080_c301_s0303.pdf',
   'common_admin_studies|107': 'userpdf_107090_c301_s0607.pdf',
   'common_admin_studies|106': 'userpdf_106090_c201_s0504.pdf',
+  'common_admin_law_junior|108': 'userpdf_108090_c401_s0804.pdf',
   'common_admin_law_junior|110': 'userpdf_110090_c401_s0606.pdf',
   'common_admin_law_junior|111': 'userpdf_111090_c401_s0406.pdf',
   'common_admin_studies_junior|108': 'userpdf_108090_c401_s0608.pdf',

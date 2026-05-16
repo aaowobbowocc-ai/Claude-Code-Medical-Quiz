@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-15T17:25:35.348Z",
+  "generatedAt": "2026-05-16T06:06:25.160Z",
   "total": {
     "exams": 29,
     "shared": 9,
     "totalQ": 193915,
-    "incomplete": 93,
+    "incomplete": 100,
     "disputed": 3647,
     "visionUncertain": 0,
     "issues": {
@@ -112,8 +112,10 @@
     {
       "file": "civil-senior",
       "total": 990,
-      "incomplete": 0,
-      "incompleteByType": {},
+      "incomplete": 2,
+      "incompleteByType": {
+        "truncated_options": 2
+      },
       "disputed": 0,
       "visionUncertain": 0,
       "issues": {
@@ -290,8 +292,10 @@
     {
       "file": "doctor2",
       "total": 9920,
-      "incomplete": 0,
-      "incompleteByType": {},
+      "incomplete": 1,
+      "incompleteByType": {
+        "image_options": 1
+      },
       "disputed": 360,
       "visionUncertain": 0,
       "issues": {
@@ -906,8 +910,10 @@
     {
       "file": "pt",
       "total": 14880,
-      "incomplete": 0,
-      "incompleteByType": {},
+      "incomplete": 1,
+      "incompleteByType": {
+        "truncated_options": 1
+      },
       "disputed": 72,
       "visionUncertain": 0,
       "issues": {
@@ -1424,9 +1430,9 @@
     {
       "file": "shared/common_admin_studies",
       "total": 386,
-      "incomplete": 1,
+      "incomplete": 3,
       "incompleteByType": {
-        "truncated_options": 1
+        "truncated_options": 3
       },
       "disputed": 2,
       "visionUncertain": 0,
@@ -1463,8 +1469,10 @@
     {
       "file": "shared/common_admin_studies_junior",
       "total": 449,
-      "incomplete": 0,
-      "incompleteByType": {},
+      "incomplete": 1,
+      "incompleteByType": {
+        "truncated_options": 1
+      },
       "disputed": 0,
       "visionUncertain": 0,
       "issues": {

@@ -91,16 +91,20 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
   app.get('/questions', ...(browseCache ? [browseCache] : []), (req, res) => {
     const examId = resolveExamId(req);
     const mode = resolveMode(req, examId);
-    const { year, session, subject_tag, q, page = 1, limit = 20 } = req.query;
+    const { year, session, subject_tag, q } = req.query;
+    // Clamp pagination — uncapped limit would let one request serialize a whole
+    // 14k-question exam; negative/NaN page would break slice math.
+    const page = Math.max(1, parseInt(req.query.page) || 1);
+    const limit = Math.min(100, Math.max(1, parseInt(req.query.limit) || 20));
     let list = loadExamQuestions(examId, { mode });
     if (year)        list = list.filter(x => x.roc_year === year);
     if (session)     list = list.filter(x => x.session === session);
     if (subject_tag) list = list.filter(x => x.subject_tag === subject_tag && doctor1PaperOK(x, subject_tag, examId));
-    if (q)           list = list.filter(x => x.question.includes(q) || Object.values(x.options).some(o => o.includes(q)));
+    if (q)           list = list.filter(x => x.question.includes(q) || Object.values(x.options || {}).some(o => o.includes(q)));
     const total = list.length;
-    const start = (parseInt(page) - 1) * parseInt(limit);
+    const start = (page - 1) * limit;
     res.set('Cache-Control', 'public, max-age=300, stale-while-revalidate=60');
-    res.json({ total, page: parseInt(page), limit: parseInt(limit), mode, questions: list.slice(start, start + parseInt(limit)) });
+    res.json({ total, page, limit, mode, questions: list.slice(start, start + limit) });
   });
 
   // GET /questions/random (practice & PvP — never cached, must be different each time)
@@ -129,7 +133,9 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
         && doctor1PaperOK(q, tag, examId)
       );
     }
-    const target = parseInt(limit != null ? limit : count) || 50;
+    // Cap target — a mock exam is at most 200 Qs; bigger requests just waste
+    // bandwidth shuffling/serializing the whole pool.
+    const target = Math.min(200, Math.max(1, parseInt(limit != null ? limit : count) || 50));
     const shuffled = shuffle(pool);
     const off = Math.max(0, parseInt(offset) || 0);
     const picked = shuffled.slice(off, off + target);

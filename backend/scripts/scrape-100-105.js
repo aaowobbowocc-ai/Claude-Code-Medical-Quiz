@@ -224,16 +224,22 @@ function buildTargets(filterExam, filterYear) {
   // 100140 第二次: c=106 (both tcm1 and tcm2 share same class code, s codes same as 101030)
   add('tcm1', 'questions-tcm1.json', '100', '100140', '第二次', '106', tcm1Subs101)
   add('tcm2', 'questions-tcm2.json', '100', '100140', '第二次', '106', tcm2Subs101)
-  // Years 102-103: c=109 for tcm1, c=110 for tcm2 (yr103 tcm2 splits across two class codes)
-  add('tcm1', 'questions-tcm1.json', '102', '102030', '第一次', '109', tcm1Subs101)
-  add('tcm1', 'questions-tcm1.json', '103', '103030', '第一次', '109', tcm1Subs101)
-  const tcm2Subs102 = [
-    { s: '0601', subject: '中醫臨床醫學(一)', tag: 'tcm_clinical_1', name: '中醫臨床醫學(一)' },
-    { s: '0602', subject: '中醫臨床醫學(二)', tag: 'tcm_clinical_2', name: '中醫臨床醫學(二)' },
-    { s: '0603', subject: '中醫臨床醫學(三)', tag: 'tcm_clinical_3', name: '中醫臨床醫學(三)' },
-    { s: '0604', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
+  // Years 102-103 第一次 — c codes 修正（2026-05-17 PDF probe）。
+  // 原 tcm1 c109 / tcm2 c110 指到醫檢師/護理師/社工師，是污染來源。
+  // 正解：tcm1 第一試用 s0201/0202，tcm2 第二試用 s0203-0206，c 每年不同。
+  const tcm1Subs0201 = [
+    { s: '0201', subject: '中醫基礎醫學(一)', tag: 'tcm_basic_1', name: '中醫基礎醫學(一)' },
+    { s: '0202', subject: '中醫基礎醫學(二)', tag: 'tcm_basic_2', name: '中醫基礎醫學(二)' },
   ]
-  add('tcm2', 'questions-tcm2.json', '102', '102030', '第一次', '110', tcm2Subs102)
+  const tcm2Subs0203 = [
+    { s: '0203', subject: '中醫臨床醫學(一)', tag: 'tcm_clinical_1', name: '中醫臨床醫學(一)' },
+    { s: '0204', subject: '中醫臨床醫學(二)', tag: 'tcm_clinical_2', name: '中醫臨床醫學(二)' },
+    { s: '0205', subject: '中醫臨床醫學(三)', tag: 'tcm_clinical_3', name: '中醫臨床醫學(三)' },
+    { s: '0206', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
+  ]
+  add('tcm1', 'questions-tcm1.json', '102', '102030', '第一次', '104', tcm1Subs0201)
+  add('tcm1', 'questions-tcm1.json', '103', '103030', '第一次', '103', tcm1Subs0201)
+  add('tcm2', 'questions-tcm2.json', '102', '102030', '第一次', '105', tcm2Subs0203)
   // 102110 第二次: c=105 tcm2 (s=0203-0206)
   add('tcm2', 'questions-tcm2.json', '102', '102110', '第二次', '105', [
     { s: '0203', subject: '中醫臨床醫學(一)', tag: 'tcm_clinical_1', name: '中醫臨床醫學(一)' },
@@ -241,16 +247,8 @@ function buildTargets(filterExam, filterYear) {
     { s: '0205', subject: '中醫臨床醫學(三)', tag: 'tcm_clinical_3', name: '中醫臨床醫學(三)' },
     { s: '0206', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
   ])
-  // TCM2 yr103 — split: c=110 has subjects 0601-0603, c=109 has 0503-0504
-  add('tcm2', 'questions-tcm2.json', '103', '103030', '第一次', '110', [
-    { s: '0601', subject: '中醫臨床醫學(一)', tag: 'tcm_clinical_1', name: '中醫臨床醫學(一)' },
-    { s: '0602', subject: '中醫臨床醫學(二)', tag: 'tcm_clinical_2', name: '中醫臨床醫學(二)' },
-    { s: '0603', subject: '中醫臨床醫學(三)', tag: 'tcm_clinical_3', name: '中醫臨床醫學(三)' },
-  ])
-  add('tcm2', 'questions-tcm2.json', '103', '103030', '第一次', '109', [
-    { s: '0503', subject: '中醫臨床醫學(三)', tag: 'tcm_clinical_3', name: '中醫臨床醫學(三)' },
-    { s: '0504', subject: '中醫臨床醫學(四)', tag: 'tcm_clinical_4', name: '中醫臨床醫學(四)' },
-  ])
+  // TCM2 yr103-1 — c=104 s0203-0206（2026-05-17 PDF probe 修正；原 c110/c109 指到社工師/護理師）
+  add('tcm2', 'questions-tcm2.json', '103', '103030', '第一次', '104', tcm2Subs0203)
   // tcm2 100-2: code=100090 c=101 returns "(not found)" — PDF on MoEX but no exam name, skipped by validator
   // TCM 103-2: code=103100; tcm1 uses c=103 (s=0201,0202), tcm2 uses c=104 (s=0203-0206)
   add('tcm1', 'questions-tcm1.json', '103', '103100', '第二次', '103', [
@@ -311,9 +309,25 @@ function buildTargets(filterExam, filterYear) {
     { s: '0403', subject: '產兒科護理學', tag: 'obs_ped', name: '產兒科護理學' },
     { s: '0404', subject: '精神科與社區衛生護理學', tag: 'psych_community', name: '精神科與社區衛生護理學' },
   ]
-  add('nursing', 'questions-nursing.json', '102', '102030', '第一次', '107', nursingSubs102)
-  add('nursing', 'questions-nursing.json', '103', '103030', '第一次', '107', nursingSubs102)
-  add('nursing', 'questions-nursing.json', '103', '103100', '第二次', '107', nursingSubs102)
+  // 102-103 護理師 c 代碼修正（2026-05-17 PDF probe）。原 c=107 指到臨床心理師，
+  // 是污染來源。正解 102030→c110、103030/103100→c109，且含 5 卷（補回基礎醫學）。
+  const nursingSubs102030 = [
+    { s: '0108', subject: '基礎醫學', tag: 'basic_medicine', name: '基礎醫學' },
+    { s: '0601', subject: '基本護理學與護理行政', tag: 'basic_nursing', name: '基本護理學與護理行政' },
+    { s: '0602', subject: '內外科護理學', tag: 'med_surg', name: '內外科護理學' },
+    { s: '0603', subject: '產兒科護理學', tag: 'obs_ped', name: '產兒科護理學' },
+    { s: '0604', subject: '精神科與社區衛生護理學', tag: 'psych_community', name: '精神科與社區衛生護理學' },
+  ]
+  const nursingSubs103 = [
+    { s: '0107', subject: '基礎醫學', tag: 'basic_medicine', name: '基礎醫學' },
+    { s: '0501', subject: '基本護理學與護理行政', tag: 'basic_nursing', name: '基本護理學與護理行政' },
+    { s: '0502', subject: '內外科護理學', tag: 'med_surg', name: '內外科護理學' },
+    { s: '0503', subject: '產兒科護理學', tag: 'obs_ped', name: '產兒科護理學' },
+    { s: '0504', subject: '精神科與社區衛生護理學', tag: 'psych_community', name: '精神科與社區衛生護理學' },
+  ]
+  add('nursing', 'questions-nursing.json', '102', '102030', '第一次', '110', nursingSubs102030)
+  add('nursing', 'questions-nursing.json', '103', '103030', '第一次', '109', nursingSubs103)
+  add('nursing', 'questions-nursing.json', '103', '103100', '第二次', '109', nursingSubs103)
   const nursingSubs104 = [
     { s: '0501', subject: '基礎醫學', tag: 'basic_medicine', name: '基礎醫學' },
     { s: '0502', subject: '基本護理學與護理行政', tag: 'basic_nursing', name: '基本護理學與護理行政' },
@@ -927,4 +941,8 @@ async function main() {
   console.log(`\n${dryRun ? '[DRY RUN] ' : ''}總計新增: ${totalNew} questions`)
 }
 
-main().catch(e => { console.error(e); process.exit(1) })
+if (require.main === module) {
+  main().catch(e => { console.error(e); process.exit(1) })
+}
+
+module.exports = { buildTargets, EXPECTED_EXAM_NAMES }

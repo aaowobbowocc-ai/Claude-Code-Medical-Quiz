@@ -84110,13 +84110,19 @@
     "number": 35,
     "question": "下列何種細胞最可能是Faggot cell？",
     "options": {
-      "A": "前髓細胞 (Promyelocyte)",
-      "B": "髓芽細胞 (Myeloblast)",
-      "C": "淋巴芽細胞 (Lymphoblast)",
-      "D": "髓細胞 (Myelocyte)"
+      "A": "(圖)",
+      "B": "(圖)",
+      "C": "(圖)",
+      "D": "(圖)"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "option_images": {
+      "A": "/question-images/medlab_104020_q35_A.webp",
+      "B": "/question-images/medlab_104020_q35_B.webp",
+      "C": "/question-images/medlab_104020_q35_C.webp",
+      "D": "/question-images/medlab_104020_q35_D.webp"
+    }
   },
   {
     "id": 11625,

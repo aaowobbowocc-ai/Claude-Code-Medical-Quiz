@@ -60,7 +60,12 @@ const DIFFICULTIES = [
   { id: 'custom', label: '自訂',   icon: '⚙️', desc: '5-120秒可選・自選題數・無AI對手', time: 20, ai: false, custom: true },
 ]
 
-const CUSTOM_FEE_PER_Q = 4
+// 練習一律收虛擬成本 FEE_PER_Q/題；結算依成績分級退幣，全對才剛好打平。
+const FEE_PER_Q = 4
+// 結算退幣費率（幣/題），不疊加、取最高級。全對 4 = FEE_PER_Q → 打平。
+function rewardRatePerQ(pct) {
+  return pct >= 100 ? 4 : pct >= 80 ? 3 : pct >= 60 ? 2 : 1
+}
 const CUSTOM_TIME_MIN = 5
 const CUSTOM_TIME_MAX = 120
 const CUSTOM_COUNT_MIN = 5
@@ -127,7 +132,7 @@ function SetupScreen({ onStart, onBack }) {
   const [customCount, setCustomCount] = useState(last.customCount ?? 15)
   const isCustom = diff === 'custom'
   const effectiveCount = isCustom ? customCount : count
-  const customFee = customCount * CUSTOM_FEE_PER_Q
+  const practiceFee = effectiveCount * FEE_PER_Q
   const hasSharedBanks = examHasSharedBanks(examType)
   const [sourceMode, setSourceMode] = useState(() => getSourceMode(examType))
   const [meta, setMeta] = useState(() => cachedMeta || null)
@@ -306,7 +311,7 @@ function SetupScreen({ onStart, onBack }) {
           <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-4 border-2 border-amber-200 shadow-sm">
             <div className="flex items-center justify-between mb-3">
               <p className="text-xs font-bold text-amber-700 uppercase tracking-widest">自訂參數</p>
-              <span className="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full">🪙 {customFee}</span>
+              <span className="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full">🪙 {practiceFee}</span>
             </div>
 
             <div className="mb-4">
@@ -340,7 +345,7 @@ function SetupScreen({ onStart, onBack }) {
             </div>
 
             <p className="text-[11px] text-amber-700/80 mt-3 leading-snug">
-              🪙 一題 {CUSTOM_FEE_PER_Q} 金幣 · {customCount} 題共 {customFee} 金幣 · 純練習無 AI 對手
+              🪙 一題 {FEE_PER_Q} 金幣 · {customCount} 題共 {practiceFee} 金幣 · 全對可全額賺回 · 純練習無 AI 對手
             </p>
           </div>
         )}
@@ -374,12 +379,10 @@ function SetupScreen({ onStart, onBack }) {
       <div className="px-4 pb-10">
         <button
           onClick={() => {
-            if (isCustom) {
-              const { spendCoins } = usePlayerStore.getState()
-              if (!spendCoins(customFee)) {
-                if (confirm(`金幣不足！自訂模式需要 ${customFee} 金幣（${customCount} 題 × ${CUSTOM_FEE_PER_Q}），目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
-                return
-              }
+            const { spendCoins } = usePlayerStore.getState()
+            if (!spendCoins(practiceFee)) {
+              if (confirm(`金幣不足！本次練習需要 ${practiceFee} 金幣（${effectiveCount} 題 × ${FEE_PER_Q}，全對可全額賺回），目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
+              return
             }
             saveLastConfig({ stage, diff, count, customTime, customCount })
             const s = stages.find(s => s.id === stage)
@@ -394,7 +397,7 @@ function SetupScreen({ onStart, onBack }) {
           }}
           className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform grad-cta"
         >
-          {isCustom ? `🚀 開始練習（扣 ${customFee} 🪙）` : '🚀 開始練習'}
+          {`🚀 開始練習（扣 ${practiceFee} 🪙）`}
         </button>
       </div>
     </div>
@@ -828,16 +831,10 @@ function PracticeResults({ result, config, onRestart, onHome }) {
 
   useEffect(() => {
     play(won ? 'victory' : 'defeat')
-    // Tiered rewards so casual players get something every round, but not
-    // enough to farm. Custom practice costs 4/Q so base must be lower.
-    //   base: 1 coin / question answered
-    //   pct ≥ 60 (及格): +20
-    //   pct ≥ 80 (優秀): +30 (stacked with 及格 → total +50)
-    //   won vs AI opponent: +20 (only when diffConfig.ai)
-    let reward = total * 1
-    if (pct >= 60) reward += 20
-    if (pct >= 80) reward += 30
-    if (diffConfig.ai && won) reward += 20
+    // 練習收 FEE_PER_Q(4)/題 虛擬成本（開始時扣）。結算依成績分級退幣，
+    // 級距「不疊加、取最高」：基礎 1／及格(≥60%) 2／優秀(≥80%) 3／全對 4（幣/題）。
+    // 退幣 = 總題數 × 級距費率，只有全對 4/題 才能打平，其餘淨虧。
+    const reward = total * rewardRatePerQ(pct)
     addCoins(reward)
     addExp(correct * 10)
     // 整理錯題（含 myAnswer）供歷史紀錄檢討 + 錯題夾
@@ -920,12 +917,14 @@ function PracticeResults({ result, config, onRestart, onHome }) {
 
         <p className="text-white/60 text-sm text-center">
           {(() => {
-            let r = total
-            const parts = [`完成 ${total} 題 +${total}`]
-            if (pct >= 60) { r += 20; parts.push('及格 +20') }
-            if (pct >= 80) { r += 30; parts.push('優秀 +30') }
-            if (diffConfig.ai && won) { r += 20; parts.push('🏆 勝 AI +20') }
-            return `🪙 +${r}：${parts.join(' · ')}`
+            const cost = total * FEE_PER_Q
+            const rate = rewardRatePerQ(pct)
+            const back = total * rate
+            const loss = cost - back
+            const tier = rate === 4 ? '全對' : rate === 3 ? '優秀' : rate === 2 ? '及格' : '基礎'
+            return loss === 0
+              ? `🪙 ${tier}！每題 ${rate} 幣 ×${total} = ${back}，剛好打平 ✅`
+              : `🪙 ${tier}：每題 ${rate} 幣 = ${back} / 成本 ${cost}，淨虧 ${loss}`
           })()}
         </p>
 

@@ -50,19 +50,25 @@ for (const p of CSV_PATHS) {
 const rows = allRows
 console.log(`合計：${rows.length} 筆`)
 
-// 去重 by 短連結
-const seen = new Set()
-const products = []
+// 追加合併：保留現有店家，用短連結去重，只加新的
+let existing = []
+try {
+  const prev = JSON.parse(fs.readFileSync(JSON_PATH, 'utf8'))
+  existing = prev.sections?.[0]?.products || []
+} catch { /* 檔案不存在 → 從空開始 */ }
+
+const seen = new Set(existing.map(p => p.shopUrl))
+const added = []
 for (const r of rows) {
   const name = r[0].trim()
   const shopUrl = r[4].trim()
   if (!name || !shopUrl || seen.has(shopUrl)) continue
   seen.add(shopUrl)
-  products.push({ name, blurb: '', shopUrl, ctaText: '進入店家頁面' })
+  added.push({ name, blurb: '', shopUrl, ctaText: '進入店家頁面' })
 }
-console.log(`去重後：${products.length} 家`)
+const products = existing.concat(added)
+console.log(`現有 ${existing.length} 家 + 新增 ${added.length} 家 = ${products.length} 家`)
 
-// 直接覆寫：原本 6 家不用了，整個 pool 就是這 200 家
 const data = {
   intro: '',
   sections: [

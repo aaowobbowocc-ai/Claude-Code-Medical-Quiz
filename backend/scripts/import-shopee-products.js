@@ -96,8 +96,15 @@ if (urlIdx < 0) {
   process.exit(1)
 }
 
-const seen = new Set()
-const products = []
+// 追加合併：保留現有商品，用短連結去重，只加新的
+let existing = []
+try {
+  const prev = JSON.parse(fs.readFileSync(JSON_PATH, 'utf8'))
+  existing = prev.sections?.[0]?.products || []
+} catch { /* 檔案不存在 → 從空開始 */ }
+
+const seen = new Set(existing.map(p => p.shopUrl))
+const added = []
 for (const r of allRows) {
   const name = (r[nameIdx] || '').trim()
   const shopUrl = (r[urlIdx] || '').trim()
@@ -109,9 +116,10 @@ for (const r of allRows) {
     const raw = r[priceIdx].trim()
     item.price = /^[\d,]+$/.test(raw) ? `NT$${raw}` : raw
   }
-  products.push(item)
+  added.push(item)
 }
-console.log(`去重後：${products.length} 個商品`)
+const products = existing.concat(added)
+console.log(`現有 ${existing.length} 個 + 新增 ${added.length} 個 = ${products.length} 個商品`)
 
 const data = {
   intro: '',

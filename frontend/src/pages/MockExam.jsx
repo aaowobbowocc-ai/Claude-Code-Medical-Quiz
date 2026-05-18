@@ -601,7 +601,7 @@ function Intermission({ paper1Result, onContinue, onFinishSingle, nextPaperName,
         </button>
         <button onClick={onFinishSingle}
           className="w-full py-4 rounded-2xl font-bold text-lg bg-white text-gray-500 border border-gray-200 active:scale-95 transition-transform">
-          先看目前的結果
+          先看目前成績（稍後可回來續考）
         </button>
       </div>
     </div>
@@ -893,6 +893,15 @@ export default function MockExam() {
 
   // 從 saved session 恢復進行中考試
   const handleResume = (session) => {
+    // 中場 session：完整模考考完某卷後離開 → 回到中場畫面接續下一卷
+    if (session.atIntermission) {
+      setIsFullExam(true)
+      setHistoricalExam(session.historicalExam || null)
+      setPaperResults(session.paperResults || [])
+      setCurrentPaperIdx((session.paperResults || []).length)
+      setPhase('intermission')
+      return
+    }
     setIsFullExam(session.isFullExam)
     setHistoricalExam(session.historicalExam)
     setPaperResults(session.paperResults || [])
@@ -1033,7 +1042,14 @@ export default function MockExam() {
     setPaperResults(newResults)
 
     if (isFullExam && newResults.length < PAPERS.length) {
-      // More papers to go → show intermission
+      // More papers to go → 保存中場進度（讓使用者離開後仍可續考、不重複扣費）
+      saveSession({
+        atIntermission: true,
+        examType,
+        isFullExam: true,
+        historicalExam,
+        paperResults: newResults,
+      })
       setPhase('intermission')
     } else {
       clearSession()  // 考完整批 → 清掉保存的進度
@@ -1048,10 +1064,9 @@ export default function MockExam() {
     await startPaper(nextPaper, nextIdx, historicalExam ? { historical: historicalExam } : {})
   }
 
-  // View current results only (stop early)
+  // View current results only (stop early) — 保留中場 session，使用者看完成績仍可續考
   const handleFinishSingle = () => {
     setIsFullExam(false)
-    clearSession()
     setPhase('results')
   }
 

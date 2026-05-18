@@ -5,7 +5,8 @@ const KEY = 'mock-exam-session'
 const MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000  // 7 天
 
 export function saveSession(state) {
-  if (!state || !state.questions?.length) return
+  // atIntermission：完整模考卷別之間的中場狀態，沒有進行中的題目，仍須保存
+  if (!state || (!state.questions?.length && !state.atIntermission)) return
   try {
     const payload = {
       ...state,
@@ -25,7 +26,7 @@ export function getSession() {
       localStorage.removeItem(KEY)
       return null
     }
-    if (!s.questions?.length || !s.currentPaper) {
+    if (!s.atIntermission && (!s.questions?.length || !s.currentPaper)) {
       localStorage.removeItem(KEY)
       return null
     }
@@ -45,6 +46,10 @@ export function hasSession() {
 export function describeSession(s) {
   if (!s) return ''
   const parts = []
+  if (s.atIntermission) {
+    const done = (s.paperResults || []).length
+    return `完整模擬考 · 已完成 ${done} 卷 · 可續考下一卷`
+  }
   if (s.isFullExam) parts.push('完整模擬考')
   else parts.push(s.currentPaper?.name || '單科')
   if (s.historicalExam) parts.push(`${s.historicalExam.year}年${s.historicalExam.session}`)

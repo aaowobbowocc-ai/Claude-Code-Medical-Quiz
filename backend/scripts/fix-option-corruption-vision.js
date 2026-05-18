@@ -102,6 +102,24 @@ async function discoverPdf(exam, exam_code, subject, allArr) {
   return null
 }
 
+// 直接用題幹在所有同場次 PDF 裡找該題（題幹通常未損壞，比 subject 比對可靠）
+async function findQuestionByStem(exam_code, stem) {
+  const want = norm(stem).slice(0, 16)
+  if (want.length < 10) return null
+  for (const dir of PDF_CACHE_DIRS) {
+    if (!fs.existsSync(dir)) continue
+    for (const f of fs.readdirSync(dir)) {
+      if (!f.endsWith('.pdf') || /^(TM|TS|A|M|S)_/.test(f)) continue
+      if (!f.includes(`_${exam_code}_c`)) continue
+      const { pages, mupdf } = await loadPdf(path.join(dir, f))
+      for (let i = 0; i < pages.length; i++) {
+        if (norm(pages[i].text).includes(want)) return { pages, mupdf, pageIdx: i }
+      }
+    }
+  }
+  return null
+}
+
 function findQuestionPage(pages, qnum) {
   const res = [
     new RegExp(`(?:^|\\n)\\s*${qnum}[.、．]`),
@@ -173,9 +191,14 @@ async function main() {
       const q = targets[i]
       total++
       process.stdout.write(`  [${i + 1}/${targets.length}] #${q.number} ${q.exam_code} ${q.subject}... `)
-      const found = await discoverPdf(examId, q.exam_code, q.subject, arr)
+      // 先用 subject 比對找 PDF；找不到再用題幹直接在同場次 PDF 裡搜
+      let found = await discoverPdf(examId, q.exam_code, q.subject, arr)
+      let pageIdx = found ? findQuestionPage(found.pages, q.number) : -1
+      if (!found || pageIdx < 0) {
+        const byStem = await findQuestionByStem(q.exam_code, q.question)
+        if (byStem) { found = byStem; pageIdx = byStem.pageIdx }
+      }
       if (!found) { console.log('無 PDF'); noPdf++; continue }
-      const pageIdx = findQuestionPage(found.pages, q.number)
       if (pageIdx < 0) { console.log('找不到頁'); noPage++; continue }
       const png = await pageToPng(found.pages[pageIdx].page, found.mupdf)
       const ocr = await visionExtract(png, PROMPT.replace(/__QNUM__/g, q.number))

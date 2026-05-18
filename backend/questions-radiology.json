@@ -121282,9 +121282,9 @@
       "question": "下例何者最適合用於評估電腦斷層影像的Z軸解析度？",
       "options": {
         "A": "pixel size",
-        "B": "slice sensitivity profile（SSP）",
-        "C": "omputed tomography dose index（CTDI）",
-        "D": "computed tomography dose index（CTDI）"
+        "B": "slice sensitivity profile(SSP)",
+        "C": "low-contrast detectability(LCD)",
+        "D": "computed tomography dose index(CTDI)"
       },
       "answer": "B",
       "explanation": ""
@@ -121571,10 +121571,10 @@
       "number": 8,
       "question": "40 keV X-ray最容易與下列何者發生K緣吸收（K-edge absorption）作用？（Eb為K-shell electron binding energy）",
       "options": {
-        "A": "luminum（Eb＝1.6 keV）",
-        "B": "molybdenum（Eb＝19 keV）",
-        "C": "calcium（Eb＝4 keV）",
-        "D": "aluminum（Eb＝1.6 keV）"
+        "A": "barium(Eb=37 keV)",
+        "B": "molybdenum(Eb=19 keV)",
+        "C": "calcium(Eb=4 keV)",
+        "D": "aluminum(Eb=1.6 keV)"
       },
       "answer": "A",
       "explanation": ""
@@ -132668,10 +132668,10 @@
       "number": 77,
       "question": "下列有關偵檢器之敘述，何者錯誤？",
       "options": {
-        "A": "crystal厚度愈厚，其靈敏度（sensitivity）愈差",
+        "A": "crystal厚度愈厚,其靈敏度(sensitivity)愈差",
         "B": "crystal是將光子轉換成可見光",
-        "C": "rystal厚度愈薄，其解析度（resolution）愈佳",
-        "D": "crystal厚度愈薄，其解析度（resolution）愈佳"
+        "C": "PMT是將可見光轉換成電子",
+        "D": "crystal厚度愈薄,其解析度(resolution)愈佳"
       },
       "answer": "A",
       "explanation": ""
@@ -133248,7 +133248,7 @@
       "number": 26,
       "question": "下列何種藥物可作為 201 Tl-TlCl心肌灌注造影的壓力試驗（stress test）？",
       "options": {
-        "A": "minophylline",
+        "A": "dipyridamole",
         "B": "furosemide",
         "C": "aminophylline",
         "D": "Lugol solution"
@@ -138082,7 +138082,7 @@
       "number": 26,
       "question": "附圖為不同能量電子從空氣進入水中散射角度之差異，下列有關A、B兩圖之敘述何者錯誤？",
       "options": {
-        "A": "圖電子之百分表面劑量較高",
+        "A": "A圖之電子能量較低",
         "B": "A圖電子之百分表面劑量較高",
         "C": "B圖電子之射程較遠",
         "D": "B圖電子之X光污染較高"
@@ -139892,7 +139892,7 @@
       "question": "一位肝腫瘤患者，施行電腦斷層動態攝影（dynamic scan），在注射造影劑後，可邊打造影劑邊偵測主動脈 CT number變化，以決定動態掃描時機，此技術為下列何者？",
       "options": {
         "A": "fixed delay",
-        "B": "olus-tracking",
+        "B": "manual mode",
         "C": "bolus-tracking",
         "D": "drip infusion"
       },
@@ -140881,7 +140881,7 @@
       "number": 4,
       "question": "對乳房攝影（mammography）而言，線擴散函數（line spread function）寬度最小的影像接收器（image receptor）為何？",
       "options": {
-        "A": "morphous selenium + TFT",
+        "A": "screen-film",
         "B": "CsI + a-Si + TFT",
         "C": "photostimulable phosphor",
         "D": "amorphous selenium + TFT"
@@ -140981,10 +140981,10 @@
       "number": 9,
       "question": "若採用影像增強管（image-intensifier tube）進行數位透視攝影（digital fluoroscopy），則下列何者適合與影 像增強管作搭配？",
       "options": {
-        "A": "morphous-selenium＋TFT",
-        "B": "a-Si＋TFT",
+        "A": "CsI+a-Si+TFT",
+        "B": "a-Si+TFT",
         "C": "charge-coupled device",
-        "D": "amorphous-selenium＋TFT"
+        "D": "amorphous-selenium+TFT"
       },
       "answer": "C",
       "explanation": ""
@@ -141041,7 +141041,7 @@
       "number": 12,
       "question": "下列何種檢查不屬於介入性放射檢查（interventional radiology）？",
       "options": {
-        "A": "rteriography",
+        "A": "angiography",
         "B": "arteriography",
         "C": "cardiac catheterization",
         "D": "xeroradiography"
@@ -145272,7 +145272,7 @@
       "number": 62,
       "question": "痲瘋桿菌可以用那種特別染色鑑定？",
       "options": {
-        "A": "cid-fast stain",
+        "A": "Gram stain",
         "B": "acid-fast stain",
         "C": "silver stain",
         "D": "Periodic acid-Schiff stain"
@@ -146386,9 +146386,9 @@
       "number": 37,
       "question": "有關微灌流磁振造影（perfusion MRI）的敘述，下列何者錯誤？",
       "options": {
-        "A": "SL（arterial spin labeling）無需注射顯影劑",
-        "B": "可注射Gd顯影劑，並使用T2*WI觀察",
-        "C": "ASL（arterial spin labeling）無需注射顯影劑",
+        "A": "可注射Gd顯影劑,並使用T1WI觀察",
+        "B": "可注射Gd顯影劑,並使用T2*WI觀察",
+        "C": "ASL(arterial spin labeling)無需注射顯影劑",
         "D": "效果與磁場大小無關"
       },
       "answer": "D",
@@ -148678,7 +148678,7 @@
       "options": {
         "A": "3D CRT的PTV圈選",
         "B": "SRS 的幾何準確性評估",
-        "C": "T Simulator的線性度評估",
+        "C": "IMRT的劑量準確性評估",
         "D": "CT Simulator的線性度評估"
       },
       "answer": "B",
@@ -150568,7 +150568,7 @@
       "options": {
         "A": "photostimulable phosphor",
         "B": "amorphous selenium",
-        "C": "harge-coupled device",
+        "C": "CsI",
         "D": "charge-coupled device"
       },
       "answer": "D",
@@ -150608,7 +150608,7 @@
       "options": {
         "A": "full wave",
         "B": "half wave",
-        "C": "apacitor discharge generator",
+        "C": "3 phases 6 pulses",
         "D": "capacitor discharge generator"
       },
       "answer": "D",
@@ -151289,7 +151289,7 @@
       "number": 39,
       "question": "進行磁振造影檢查時，如有非線性之梯度磁場產生，影像會產生下列那種假影？",
       "options": {
-        "A": "liasing artifact",
+        "A": "zipper artifact",
         "B": "geometric distortion",
         "C": "chemical shift artifact",
         "D": "aliasing artifact"
@@ -151692,10 +151692,10 @@
       "number": 59,
       "question": "就核種發射光子能量的敘述，何者錯誤？",
       "options": {
-        "A": "u-198光子能量：0.136～1.06 MeV，平均：0.412 MeV",
-        "B": "Rn-222光子能量：0.047～2.45 MeV，平均：0.83 MeV",
-        "C": "Ir-192光子能量：0.136～1.06 MeV，平均：0.38 MeV",
-        "D": "Au-198光子能量：0.136～1.06 MeV，平均：0.412 MeV"
+        "A": "Ra-226光子能量:0.047~2.45 MeV,平均:0.83 MeV",
+        "B": "Rn-222光子能量:0.047~2.45 MeV,平均:0.83 MeV",
+        "C": "Ir-192光子能量:0.136~1.06 MeV,平均:0.38 MeV",
+        "D": "Au-198光子能量:0.136~1.06 MeV,平均:0.412 MeV"
       },
       "answer": "D",
       "explanation": ""
@@ -152555,7 +152555,7 @@
       "number": 22,
       "question": "病患進行壓力相心肌灌注檢查而給予dipyridamole（Persantine），出現頭痛、低血壓症狀時，為了改善此狀 況，下列何者為最適合給予的藥物？",
       "options": {
-        "A": "minophylline",
+        "A": "Adenosine",
         "B": "Aminophylline",
         "C": "Inderal",
         "D": "Dobutamine"
@@ -152955,10 +152955,10 @@
       "number": 42,
       "question": "有關使用核醫造影技術應用在診斷腎原性高血壓（renal vascular hypertension）敘述，下列何者錯誤？",
       "options": {
-        "A": "angiotensin-converting enzyme inhibition（ACEI）renography（Captopril test）為主要方法",
-        "B": "Aangiotensin-converting enzyme inhibition（ACEI）renography（Captopril test）為主要方法",
+        "A": "可使用 99m Tc-MAG3藥劑造影,但是檢查前避免先喝水吃東西影響影像品質",
+        "B": "Aangiotensin-converting enzyme inhibition(ACEI)renography(Captopril test)為主要方法",
         "C": "目的是偵測病患本身的腎動脈狹窄是否是導致高血壓的原因",
-        "D": "給予Aangiotensin-converting enzyme inhibition（ACEI）和放射藥物前，都應該要監測並記錄血壓和脈搏 數值，之後每隔5～15分鐘也需要監測並記錄血壓和脈搏數值，直到檢查結束為止"
+        "D": "給予Aangiotensin-converting enzyme inhibition(ACEI)和放射藥物前,都應該要監測並記錄血壓和脈搏 數值,之後每隔5~15分鐘也需要監測並記錄血壓和脈搏數值,直到檢查結束為止"
       },
       "answer": "A",
       "explanation": ""
@@ -155885,10 +155885,10 @@
       "number": 28,
       "question": "為了讓核醫攝影所使用的偵檢器可以區分能量，則經過放大器所產生的電壓脈衝必須經過下列何種設備加以 分析？",
       "options": {
-        "A": "nalog-to-digital converter（ADC）",
-        "B": "analog-to-digital converter（ADC）",
-        "C": "time-to-amplitude converter（TAC）",
-        "D": "pulse-height analyzer（PHA）"
+        "A": "photomultiplier tube(PMT)",
+        "B": "analog-to-digital converter(ADC)",
+        "C": "time-to-amplitude converter(TAC)",
+        "D": "pulse-height analyzer(PHA)"
       },
       "answer": "D",
       "explanation": ""
@@ -157668,7 +157668,7 @@
       "number": 37,
       "question": "目前AAPM建議評估近接治療之射源強度，為下列何者？",
       "options": {
-        "A": "ir-kerma strength",
+        "A": "Ci/g",
         "B": "mCi",
         "C": "air-kerma strength",
         "D": "MBq"
@@ -159245,9 +159245,9 @@
       "question": "在直徑20公分的均勻水假體中心畫出一個ROI（region of interest）量測其平均值，是在進行下列何項電腦斷 層攝影品質保證？",
       "options": {
         "A": "CT雜訊",
-        "B": "CT均勻度（uniformity）",
-        "C": "T值的線性度（linearity）",
-        "D": "CT值的線性度（linearity）"
+        "B": "CT均勻度(uniformity)",
+        "C": "水的CT值準確度",
+        "D": "CT值的線性度(linearity)"
       },
       "answer": "C",
       "explanation": ""
@@ -159637,7 +159637,7 @@
       "options": {
         "A": "echo planar imaging",
         "B": "diffusion weighted imaging",
-        "C": "onstructive interference in steady state",
+        "C": "fluid attenuated inversion recovery",
         "D": "constructive interference in steady state"
       },
       "answer": "D",
@@ -165629,8 +165629,8 @@
       "options": {
         "A": "CZT具有較好的能量解析度",
         "B": "CZT具有較好的空間解析度",
-        "C": "ZT本質效率（intrinsic efficiency）較低",
-        "D": "CZT本質效率（intrinsic efficiency）較低"
+        "C": "CZT不需光電倍增管即可將光子訊號轉換成電子訊號",
+        "D": "CZT本質效率(intrinsic efficiency)較低"
       },
       "answer": "D",
       "explanation": ""
@@ -167796,7 +167796,7 @@
       "question": "放射治療計畫劑量運算模式中，不包括下列何種方法？",
       "options": {
         "A": "correction-based method",
-        "B": "ack projection algorithm",
+        "B": "model-based method",
         "C": "direct Monte Carlo method",
         "D": "back projection algorithm"
       },
@@ -168562,7 +168562,7 @@
       "number": 16,
       "question": "下列何者不屬於血管介入性手術？",
       "options": {
-        "A": "ortic stent placement",
+        "A": "nephrostomy",
         "B": "thrombectomy",
         "C": "aortic stent placement",
         "D": "hepatoma embolization"
@@ -168865,7 +168865,7 @@
       "number": 31,
       "question": "下列有關電腦斷層攝影劑量的敘述，何者正確？",
       "options": {
-        "A": "EC主要經由調控管電壓來達到更好的劑量指標",
+        "A": "減少曝露劑量會使影像雜訊減少",
         "B": "CTDI表示CT所能輸出的最大劑量指標",
         "C": "DLP為CTDI乘以掃描範圍後的劑量指標",
         "D": "AEC主要經由調控管電壓來達到更好的劑量指標"
@@ -169105,7 +169105,7 @@
       "number": 43,
       "question": "附圖中，當X光旋轉至病人前後端位置時，管電流輸出會自動降低，旋轉至病人左右端位置時，管電流輸出 會自動變高，請問這屬於自動管電流調控（automatic tube current modulation）技術中的那種調控方式？",
       "options": {
-        "A": "ngular longitudinal tube current modulation",
+        "A": "longitudinal tube current modulation",
         "B": "vertical tube current modulation",
         "C": "angular tube current modulation",
         "D": "angular longitudinal tube current modulation"
@@ -169168,7 +169168,7 @@
       "number": 46,
       "question": "有關T2 shine through的敘述，下列何者錯誤？",
       "options": {
-        "A": "DC map 中顯示高訊號",
+        "A": "在DWI顯示高訊號",
         "B": "T2 decay time很短",
         "C": "不代表組織中水分子擴散受限制",
         "D": "ADC map 中顯示高訊號"
@@ -169710,7 +169710,7 @@
       "number": 72,
       "question": "在超音波影像中，膽結石後方最常出現的假影為下列何者？",
       "options": {
-        "A": "coustic shadow",
+        "A": "Gibb's ringing",
         "B": "mirror image",
         "C": "range ambiguity",
         "D": "acoustic shadow"
@@ -178250,7 +178250,7 @@
       "options": {
         "A": "femoral artery",
         "B": "brachial artery",
-        "C": "oronary artery",
+        "C": "radial artery",
         "D": "coronary artery"
       },
       "answer": "D",
@@ -179048,7 +179048,7 @@
       "options": {
         "A": "CTA",
         "B": "TOF-MRA",
-        "C": "onventional angiography",
+        "C": "DSA",
         "D": "conventional angiography"
       },
       "answer": "B",
@@ -179635,7 +179635,7 @@
       "number": 3,
       "question": "在電腦放射攝影（computed radiography, CR）中偵測光刺激發光的訊號上，首選是使用那種偵檢器？",
       "options": {
-        "A": "morphous selenium",
+        "A": "photodiode",
         "B": "CCD",
         "C": "TFT",
         "D": "amorphous selenium"

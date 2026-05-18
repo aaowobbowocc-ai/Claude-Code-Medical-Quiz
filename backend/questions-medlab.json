@@ -120544,9 +120544,9 @@
     "question": "有關結核菌培養，痰檢體之去污染劑與消化劑敘述，下列何者錯誤？",
     "options": {
       "A": "2% NaOH具有去污染與消化作用之能力",
-      "B": "enzalkonium chloride為去污染劑，可促進結核菌之生長",
+      "B": "N-acetyl-L-cysteine為液化劑,具有消化作用之能力",
       "C": "5% oxalic acid對Pseudomonas aeruginosa具有去污染作用之能力",
-      "D": "benzalkonium chloride為去污染劑，可促進結核菌之生長"
+      "D": "benzalkonium chloride為去污染劑,可促進結核菌之生長"
     },
     "answer": "D",
     "explanation": ""
@@ -120703,9 +120703,9 @@
     "number": 25,
     "question": "有關cholera toxin之敘述，下列何者正確？",
     "options": {
-      "A": "2 subunit促使A1 subunit進入細胞",
+      "A": "包含5個toxic A subunits",
       "B": "包含2個binding B subunits",
-      "C": "A subunits bind to GM1-ganglioside接受器",
+      "C": "A subunits bind to GM 1 -ganglioside接受器",
       "D": "A2 subunit促使A1 subunit進入細胞"
     },
     "answer": "D",
@@ -120863,8 +120863,8 @@
     "number": 33,
     "question": "下列何者不是Alcaligenes faecalis的特性？",
     "options": {
-      "A": "cetamide agar不會生長",
-      "B": "motility (＋)",
+      "A": "oxidase (+)",
+      "B": "motility (+)",
       "C": "MacConkey agar會生長",
       "D": "acetamide agar不會生長"
     },
@@ -121730,10 +121730,10 @@
     "number": 76,
     "question": "下列病原菌與其檢體來源部位配對，何者錯誤？",
     "options": {
-      "A": "Microsporum gypseum－urine",
-      "B": "Trichophyton mentagrophytes－hair",
-      "C": "ampylobacter spp.－stool",
-      "D": "Campylobacter spp.－stool"
+      "A": "Microsporum gypseum-urine",
+      "B": "Trichophyton mentagrophytes-hair",
+      "C": "Aeromonas spp.-wound",
+      "D": "Campylobacter spp.-stool"
     },
     "answer": "A",
     "explanation": ""
@@ -122400,10 +122400,10 @@
     "number": 29,
     "question": "下列何者用來表示受檢者肺活量（VC）及一秒量（FEV1）氣體容積的方式？",
     "options": {
-      "A": "Ambient temperature and pressure, saturated with water vapor（ATPS）",
-      "B": "ody temperature and pressure, saturated with water vapor（BTPS）",
-      "C": "Body temperature and pressure, saturated with water vapor（BTPS）",
-      "D": "Ambient temperature and pressure, dry（ATPD）"
+      "A": "Ambient temperature and pressure, saturated with water vapor(ATPS)",
+      "B": "Standard temperature and pressure, dry(STPD)",
+      "C": "Body temperature and pressure, saturated with water vapor(BTPS)",
+      "D": "Ambient temperature and pressure, dry(ATPD)"
     },
     "answer": "C",
     "explanation": ""
@@ -124231,7 +124231,7 @@
     "number": 40,
     "question": "下列何者與靜脈栓塞的產生較無關聯？",
     "options": {
-      "A": "ntithrombin III deficiency",
+      "A": "Factor V Leiden",
       "B": "Prothrombin G20210A mutation",
       "C": "Antithrombin III deficiency",
       "D": "Hypofibrinogenemia"
@@ -124577,8 +124577,8 @@
     "number": 57,
     "question": "下列關於接觸因子（contact factors）缺乏的檢驗結果，何者正確？",
     "options": {
-      "A": "PTT延長",
-      "B": "leeding time延長",
+      "A": "PT延長",
+      "B": "APTT延長",
       "C": "Thrombin time延長",
       "D": "Bleeding time延長"
     },
@@ -124637,7 +124637,7 @@
     "number": 60,
     "question": "以aggregometry分析血小板凝集反應曲線時，下列何者會造成延遲期曲線（lag phase）？",
     "options": {
-      "A": "rachidonic acid",
+      "A": "Collagen",
       "B": "ADP",
       "C": "Epinephrine",
       "D": "Arachidonic acid"
@@ -125777,7 +125777,7 @@
     "number": 36,
     "question": "下列何種急性期蛋白（acute phase proteins）可活化補體？",
     "options": {
-      "A": "lpha 1-antitrypsin",
+      "A": "fibrinogen",
       "B": "albumin",
       "C": "mannose-binding lectin",
       "D": "Alpha 1-antitrypsin"
@@ -126037,10 +126037,10 @@
     "number": 49,
     "question": "下列何種病毒抗體比較不具保護作用？",
     "options": {
-      "A": "型肝炎病毒（hepatitis A virus）",
-      "B": "天花病毒（variola virus）",
-      "C": "A型肝炎病毒（hepatitis A virus）",
-      "D": "C型肝炎病毒（hepatitis C virus）"
+      "A": "麻疹病毒(measles virus)",
+      "B": "天花病毒(variola virus)",
+      "C": "A型肝炎病毒(hepatitis A virus)",
+      "D": "C型肝炎病毒(hepatitis C virus)"
     },
     "answer": "D",
     "explanation": ""
@@ -126476,9 +126476,9 @@
     "number": 71,
     "question": "關於B型流感病毒的描述，下列何者錯誤？",
     "options": {
-      "A": "mantadine無法抑制B型流感病毒",
-      "B": "可以用Madin-Darby canine kidney（MDCK）細胞培養",
-      "C": "與C型流感病毒類似，都帶有7個片段RNA基因組",
+      "A": "與A型流感同屬於正黏液病毒科",
+      "B": "可以用Madin-Darby canine kidney(MDCK)細胞培養",
+      "C": "與C型流感病毒類似,都帶有7個片段RNA基因組",
       "D": "amantadine無法抑制B型流感病毒"
     },
     "answer": "C",
@@ -130773,7 +130773,7 @@
     "options": {
       "A": "Clostridium ramosum",
       "B": "Clostridium septicum",
-      "C": "lostridium perfringens",
+      "C": "Clostridium difficile",
       "D": "Clostridium perfringens"
     },
     "answer": "B",
@@ -130893,7 +130893,7 @@
     "options": {
       "A": "germ tube test",
       "B": "urease test",
-      "C": "arbohydrate utilization",
+      "C": "phenoloxidase test",
       "D": "carbohydrate utilization"
     },
     "answer": "A",
@@ -133232,7 +133232,7 @@
     "number": 7,
     "question": "Reticulocytosis出現於下列何種情況？",
     "options": {
-      "A": "utoimmune hemolytic anemia",
+      "A": "refractory anemia",
       "B": "iron deficiency anemia",
       "C": "aplastic anemia",
       "D": "autoimmune hemolytic anemia"
@@ -133634,7 +133634,7 @@
     "options": {
       "A": "CD56",
       "B": "CD38",
-      "C": "ytoplasmic light chain",
+      "C": "CD138",
       "D": "cytoplasmic light chain"
     },
     "answer": "A",
@@ -134054,7 +134054,7 @@
     "question": "下列關於血小板疾病的敘述，何者正確？",
     "options": {
       "A": "Glanzmann thrombasthenia是因為缺乏GPIb",
-      "B": "ernard Soulier syndrome病人的血小板會明顯比正常大",
+      "B": "Bernard Soulier syndrome是因為缺乏GPIIb",
       "C": "Glanzmann thrombasthenia又稱為「gray platelet syndrome」",
       "D": "Bernard Soulier syndrome病人的血小板會明顯比正常大"
     },
@@ -134413,10 +134413,10 @@
     "number": 66,
     "question": "有關冷型抗體anti-IH與不同血球反應結果，下列何者最符合？",
     "options": {
-      "A": "dult O cells（4＋）、adult A cells（＋）、O type cord cells（4＋）",
-      "B": "adult O cells（＋）、adult A cells（＋）、O type cord cells（3＋）",
-      "C": "adult O cells（4＋）、adult A cells（4＋）、O type cord cells（＋）",
-      "D": "adult O cells（4＋）、adult A cells（＋）、O type cord cells（4＋）"
+      "A": "adult O cells(4+)、adult A cells(+)、O type cord cells(+)",
+      "B": "adult O cells(+)、adult A cells(+)、O type cord cells(3+)",
+      "C": "adult O cells(4+)、adult A cells(4+)、O type cord cells(+)",
+      "D": "adult O cells(4+)、adult A cells(+)、O type cord cells(4+)"
     },
     "answer": "A",
     "explanation": ""
@@ -135478,7 +135478,7 @@
     "number": 39,
     "question": "下列何者不是傳染性單核球增多症（Infectious mononucleosis）急性期的實驗室數據？",
     "options": {
-      "A": "nti-EBNA IgG抗體效價上升",
+      "A": "嗜異性抗體試驗陽性",
       "B": "Anti-VCA IgM抗體效價上升",
       "C": "Anti-EBNA IgG抗體效價上升",
       "D": "非典型淋巴球計數增加"
@@ -136178,9 +136178,9 @@
     "number": 74,
     "question": "下列關於SARS冠狀病毒（SARS coronavirus）之敘述，何者錯誤？",
     "options": {
-      "A": "ngiotensin-converting enzyme 2（ACE-2）為受體",
-      "B": "引發感染病人高燒（＞38°C）",
-      "C": "angiotensin-converting enzyme 2（ACE-2）為受體",
+      "A": "具有套膜、正性單股RNA病毒",
+      "B": "引發感染病人高燒(>38°C)",
+      "C": "angiotensin-converting enzyme 2(ACE-2)為受體",
       "D": "只能由呼吸道檢體測出"
     },
     "answer": "D",
@@ -136399,7 +136399,7 @@
     "question": "利用尿液試紙法檢測尿蛋白時，係針對下列何者較敏感？",
     "options": {
       "A": "albumin",
-      "B": "ence-Jones protein",
+      "B": "globulin",
       "C": "Bence-Jones protein",
       "D": "mucoprotein"
     },
@@ -136600,7 +136600,7 @@
     "options": {
       "A": "支氣管圓柱體",
       "B": "支氣管石",
-      "C": "urschmann氏螺旋體",
+      "C": "Dittrich氏栓子",
       "D": "Curschmann氏螺旋體"
     },
     "answer": "A",
@@ -137078,7 +137078,7 @@
     "number": 39,
     "question": "下圖是尿沉渣之何種成份？",
     "options": {
-      "A": "mmonium biurate crystal",
+      "A": "calcium oxalate crystal",
       "B": "uric acid crystal",
       "C": "cholesterol crystal",
       "D": "ammonium biurate crystal"
@@ -139325,7 +139325,7 @@
     "number": 71,
     "question": "下列情況中，何者其尿液的銅含量會大幅增加？",
     "options": {
-      "A": "crodermatitis enteropathica",
+      "A": "dietary deprivation",
       "B": "Acrodermatitis enteropathica",
       "C": "Wilson disease",
       "D": "Keshan disease"
@@ -139507,7 +139507,7 @@
     "options": {
       "A": "Warfarin",
       "B": "Isoniazid",
-      "C": "arbamazepine",
+      "C": "Abacavir",
       "D": "Carbamazepine"
     },
     "answer": "A",
@@ -139547,7 +139547,7 @@
     "options": {
       "A": "Burkholderia pseudomallei",
       "B": "Francisella tularensis",
-      "C": "lostridium botulinum",
+      "C": "Mycobacterium bovis",
       "D": "Clostridium botulinum"
     },
     "answer": "D",
@@ -139645,7 +139645,7 @@
     "number": 7,
     "question": "下列何種細菌不需依賴宿主細胞進行複製？",
     "options": {
-      "A": "naplasmataceae",
+      "A": "Rickettsiaceae",
       "B": "Anaplasmataceae",
       "C": "Mycoplasmataceae",
       "D": "Chlamydiaceae"
@@ -139786,7 +139786,7 @@
     "question": "以optochin disk對某α-溶血鏈球菌作感受性試驗，形成抑制圈，可配合下列何種試驗以確認其是否為 Streptococcus pneumoniae？",
     "options": {
       "A": "growth on brain heart infusion agar with 6.5% NaCl",
-      "B": "ile solubility test",
+      "B": "bile esculin agar",
       "C": "bile solubility test",
       "D": "β-D-glucuronidase test"
     },
@@ -140086,7 +140086,7 @@
     "options": {
       "A": "屬於球菌",
       "B": "形成孢子",
-      "C": "ampylobacter coli尿素酶陽性",
+      "C": "培養較久後,易呈現球桿菌",
       "D": "Campylobacter coli尿素酶陽性"
     },
     "answer": "C",
@@ -140562,9 +140562,9 @@
     "number": 53,
     "question": "下列關於macrolides類抗生素之敘述，何者錯誤？",
     "options": {
-      "A": "zythromycin屬於macrolide類之抗生素",
-      "B": "與合成細胞壁的酵素結合，造成細胞壁合成功能受損",
-      "C": "是屬於抑菌（bacteriostatic）性質的抗生素",
+      "A": "與細菌50S核糖體次單元結合,抑制胜肽的延長",
+      "B": "與合成細胞壁的酵素結合,造成細胞壁合成功能受損",
+      "C": "是屬於抑菌(bacteriostatic)性質的抗生素",
       "D": "azythromycin屬於macrolide類之抗生素"
     },
     "answer": "B",
@@ -140602,9 +140602,9 @@
     "number": 55,
     "question": "下列關於各種抗黴菌藥物之敘述，何者錯誤？",
     "options": {
-      "A": "mphotericin B常用於全身性黴菌感染之治療，對人體無副作用",
-      "B": "amphotericin B常用於全身性黴菌感染之治療，對人體無副作用",
-      "C": "imidazoles服用時可能影響病人肝功能，長期服用需定期檢查肝功能",
+      "A": "nystatin由於不易被腸胃吸收,因此可經由口服治療腸胃道黴菌感染",
+      "B": "amphotericin B常用於全身性黴菌感染之治療,對人體無副作用",
+      "C": "imidazoles服用時可能影響病人肝功能,長期服用需定期檢查肝功能",
       "D": "terbinafine是目前唯一真正具有殺菌效果之口服抗黴菌藥物"
     },
     "answer": "B",
@@ -140802,7 +140802,7 @@
     "number": 65,
     "question": "下列何者是黴菌？",
     "options": {
-      "A": "ctinomyces spp.",
+      "A": "Nocardia spp.",
       "B": "Actinomyces spp.",
       "C": "Rhodotorula spp.",
       "D": "Mycoplasma spp."
@@ -140842,7 +140842,7 @@
     "number": 67,
     "question": "下列何種抗黴菌藥物的機制是抑制麥角醇（ergosterol）合成之squalene epoxidase活性？",
     "options": {
-      "A": "mphotericin B",
+      "A": "terbinafine",
       "B": "ketoconazole",
       "C": "amphotericin B",
       "D": "griseofulvin"
@@ -142239,7 +142239,7 @@
     "options": {
       "A": "CD4+T-cells",
       "B": "CD8+T-cells",
-      "C": "D21+dendritic cells",
+      "C": "CD68+T-cells",
       "D": "CD21+dendritic cells"
     },
     "answer": "A",
@@ -142557,7 +142557,7 @@
     "number": 72,
     "question": "下列何種疾病較少因三核苷酸重複片段擴增突變（trinucleotide repeat expansion mutations）所引起？",
     "options": {
-      "A": "myotrophic lateral sclerosis",
+      "A": "Huntington disease",
       "B": "Amyotrophic lateral sclerosis",
       "C": "Spinocerebellar ataxia",
       "D": "Friedreich ataxia"
@@ -142637,10 +142637,10 @@
     "number": 76,
     "question": "化膿性骨髓炎（pyogenic osteomyelitis）最常見之致病菌為下列何者？",
     "options": {
-      "A": "金黃色葡萄球菌（Staphylococcus aureus）",
-      "B": "群鏈球菌（group B Streptococcus）",
-      "C": "B群鏈球菌（group B Streptococcus）",
-      "D": "沙門氏菌（Salmonella）"
+      "A": "金黃色葡萄球菌(Staphylococcus aureus)",
+      "B": "大腸桿菌(Escherichia coli)",
+      "C": "B群鏈球菌(group B Streptococcus)",
+      "D": "沙門氏菌(Salmonella)"
     },
     "answer": "A",
     "explanation": ""
@@ -143325,7 +143325,7 @@
     "number": 30,
     "question": "Kostmann's syndrome 最常因下列何基因的突變所造成？",
     "options": {
-      "A": "cid phosphatase",
+      "A": "myeloperoxidase",
       "B": "collagenase",
       "C": "elastase",
       "D": "acid phosphatase"
@@ -143406,7 +143406,7 @@
     "question": "下列何種疾病在FAB分類為ALL L3，而在WHO分類中是屬於mature B-cell neoplasm？",
     "options": {
       "A": "aggressive NK cell leukemia",
-      "B": "urkitt leukemia/lymphoma",
+      "B": "follicular lymphoma",
       "C": "mantle cell lymphoma",
       "D": "Burkitt leukemia/lymphoma"
     },
@@ -143549,7 +143549,7 @@
     "number": 41,
     "question": "一位46歲的男性病患，因脾臟腫大與不明原因的出血症狀來醫院檢查，CBC檢查發現RBC=4.7×10 12 /L、 WBC=15×10 9 /L、Platelet=650×10 9 /L；血液抹片如圖①（thrombocytosis with anisocytosis）；骨髓抹片如 圖②（低倍顯微鏡， megakaryocytes增生現象）、圖③（高倍顯微鏡，megakaryocytes廣泛分葉現象），則 此病患最可能是下列何種疾病？ 圖① 圖② 圖③",
     "options": {
-      "A": "cute erythroid leukemia",
+      "A": "hairy cell leukemia",
       "B": "acute monoblastic leukemia",
       "C": "acute erythroid leukemia",
       "D": "essential thrombocythemia"
@@ -143732,7 +143732,7 @@
     "number": 50,
     "question": "下列何者為thrombotic thrombocytopenic purpura（TTP）的主要病因？",
     "options": {
-      "A": "DAMTS 13酵素功能缺陷",
+      "A": "鏈球菌感染導致血小板數目下降",
       "B": "血小板表面缺乏GPIIb/IIIa",
       "C": "ADAMTS 13酵素功能缺陷",
       "D": "vWF合成減少"
@@ -144035,7 +144035,7 @@
     "number": 65,
     "question": "23歲女性，因出血問題就診，檢驗結果如下：血色素14.6 g/dL、血小板200,000/µL、PT 13.8秒（參考值 11.3～14.6秒）、PTT 29秒（參考值25～34秒）、Factor VIII活性48%（參考值50～158%）、ristocetin cofactor assay 40%，則最可能之診斷為何？",
     "options": {
-      "A": "cquired Hemophilia",
+      "A": "Hemophilia A, mild",
       "B": "Hemophilia A, severe",
       "C": "vWD",
       "D": "Acquired Hemophilia"
@@ -146892,7 +146892,7 @@
     "options": {
       "A": "Down syndrome",
       "B": "Glucose 6-phosphate dehydrogenase deficiency",
-      "C": "hronic myelocytic leukemia",
+      "C": "Fragile X syndrome",
       "D": "Chronic myelocytic leukemia"
     },
     "answer": "C",
@@ -147529,10 +147529,10 @@
     "number": 80,
     "question": "承上題，下列何種檢驗方法不適合用在篩檢該基因突變的位點？",
     "options": {
-      "A": "mplified created restriction sites（ACRS）",
+      "A": "dHPLC",
       "B": "High-resolution melting analysis (HRM)",
-      "C": "Amplified created restriction sites（ACRS）",
-      "D": "Multiplex ligation-dependent probe amplification（MLPA）"
+      "C": "Amplified created restriction sites(ACRS)",
+      "D": "Multiplex ligation-dependent probe amplification(MLPA)"
     },
     "answer": "C",
     "explanation": "",
@@ -148430,7 +148430,7 @@
     "number": 45,
     "question": "參與細胞內膽固醇酯化的酵素為：",
     "options": {
-      "A": "cyl-CoA synthetase",
+      "A": "ACAT",
       "B": "LCAT",
       "C": "HMG-CoA reductase",
       "D": "acyl-CoA synthetase"
@@ -149156,7 +149156,7 @@
     "options": {
       "A": "safranin O",
       "B": "carbolfuchsin",
-      "C": "rystal violet",
+      "C": "iodine",
       "D": "crystal violet"
     },
     "answer": "A",
@@ -149353,7 +149353,7 @@
     "number": 11,
     "question": "Lockjaw病症是由下列何菌所引起？",
     "options": {
-      "A": "ctinomyces viscosus",
+      "A": "Veillonella parvula",
       "B": "Actinomyces viscosus",
       "C": "Clostridium tetani",
       "D": "Fusobacterium nucleatum"
@@ -149776,7 +149776,7 @@
     "options": {
       "A": "vancomycin",
       "B": "colistin",
-      "C": "ephalosporins",
+      "C": "nystatin",
       "D": "cephalosporins"
     },
     "answer": "D",
@@ -150235,7 +150235,7 @@
     "options": {
       "A": "penicillin",
       "B": "kanamycin",
-      "C": "iprofloxacin",
+      "C": "rifampin",
       "D": "ciprofloxacin"
     },
     "answer": "A",
@@ -150255,7 +150255,7 @@
     "options": {
       "A": "ceftazidime",
       "B": "erythromycin",
-      "C": "iprofloxacin",
+      "C": "tetracycline",
       "D": "ciprofloxacin"
     },
     "answer": "A",
@@ -152640,9 +152640,9 @@
     "number": 15,
     "question": "下列針對成人急性骨髓性白血病（AML）與急性淋巴性白血病（ALL）鑑別診斷方法的敘述，何者最正確？",
     "options": {
-      "A": "cid phosphatase stain 陽性則可能為T-ALL或AML（M3）",
+      "A": "Myeloperoxidase stain 陽性則可能為急性淋巴性白血病",
       "B": "Sudan black stain 陽性則可能為急性淋巴性白血病",
-      "C": "Acid phosphatase stain 陽性則可能為T-ALL或AML（M3）",
+      "C": "Acid phosphatase stain 陽性則可能為T-ALL或AML(M3)",
       "D": "Non-specific esterase stain 陽性則可能為急性淋巴性白血病"
     },
     "answer": "C",
@@ -152880,7 +152880,7 @@
     "number": 27,
     "question": "有關heparin resistance病人的相關敘述，下列何者錯誤？",
     "options": {
-      "A": "nti-factor Xa assay可以監測heparin療效",
+      "A": "病人血漿factor VIII濃度上升",
       "B": "病人血漿之heparin結合蛋白濃度上升",
       "C": "APTT可以反應heparin療效",
       "D": "Anti-factor Xa assay可以監測heparin療效"
@@ -153080,7 +153080,7 @@
     "number": 37,
     "question": "下列何者不是血栓的實驗室篩檢項目？",
     "options": {
-      "A": "ctivated protein S resistance test",
+      "A": "Protein C功能分析",
       "B": "Anticardiolipin antibody",
       "C": "Activated protein S resistance test",
       "D": "D-dimer"
@@ -154180,7 +154180,7 @@
     "number": 12,
     "question": "注射老鼠的單株抗體治療病人腫瘤最可能引起下列何種疾病？",
     "options": {
-      "A": "rthus reaction",
+      "A": "anaphylaxis",
       "B": "Arthus reaction",
       "C": "serum sickness",
       "D": "systemic lupus erythematosus"
@@ -158446,10 +158446,10 @@
     "number": 65,
     "question": "多發性骨髓瘤（Multiple myeloma）是一種漿細胞不正常增生的一種惡性疾病。下列何者最適用於偵測多發 性骨髓瘤？",
     "options": {
-      "A": "攝護腺組織的特異性抗原（Prostate-specific antigen, PSA）",
-      "B": "β2微球蛋白（β2-Microglobulin）",
-      "C": "-胜肽（C-peptide）",
-      "D": "C-胜肽（C-peptide）"
+      "A": "攝護腺組織的特異性抗原(Prostate-specific antigen, PSA)",
+      "B": "β2微球蛋白(β2-Microglobulin)",
+      "C": "HER-2/neu",
+      "D": "C-胜肽(C-peptide)"
     },
     "answer": "B",
     "explanation": ""
@@ -158846,7 +158846,7 @@
     "number": 5,
     "question": "Urea breath test主要用於診斷下列何種細菌之感染？",
     "options": {
-      "A": "eromonas hydrophila",
+      "A": "Campylobacter coli",
       "B": "Helicobacter pylori",
       "C": "Arcobacter butzleri",
       "D": "Aeromonas hydrophila"
@@ -159655,10 +159655,10 @@
     "number": 45,
     "question": "以下厭氧菌與其選擇性培養基的配對，何者錯誤？",
     "options": {
-      "A": "Clostridium difficile－CCFA",
-      "B": "Bacteroides fragilis group－BBE",
-      "C": "lostridium perfringens－LD-egg yolk",
-      "D": "Clostridium perfringens－LD-egg yolk"
+      "A": "Clostridium difficile-CCFA",
+      "B": "Bacteroides fragilis group-BBE",
+      "C": "Porphyromonas spp.-KVLB",
+      "D": "Clostridium perfringens-LD-egg yolk"
     },
     "answer": "C",
     "explanation": ""
@@ -159677,7 +159677,7 @@
     "options": {
       "A": "Actinomyces israelii",
       "B": "Propionibacterium acnes",
-      "C": "lostridium perfringens",
+      "C": "Clostridium difficile",
       "D": "Clostridium perfringens"
     },
     "answer": "A",
@@ -160197,7 +160197,7 @@
     "options": {
       "A": "Candida tropicalis",
       "B": "Cryptococcus neoformans",
-      "C": "andida parapsilosis",
+      "C": "Candida glabrata",
       "D": "Candida parapsilosis"
     },
     "answer": "B",
@@ -160297,7 +160297,7 @@
     "options": {
       "A": "Clostridium difficile",
       "B": "Salmonella spp.",
-      "C": "ampylobacter spp.",
+      "C": "Shigella spp.",
       "D": "Campylobacter spp."
     },
     "answer": "A",
@@ -160317,7 +160317,7 @@
     "options": {
       "A": "LD presumpto agar",
       "B": "KVLB agar",
-      "C": "hocolate agar",
+      "C": "BBE agar",
       "D": "chocolate agar"
     },
     "answer": "A",
@@ -162804,10 +162804,10 @@
     "number": 42,
     "question": "下列兩張圖的重點分別為何？",
     "options": {
-      "A": "cute promyelocytic leukemia (Liu’s stain)，Leukemic blasts (Peroxidase stain)",
-      "B": "Dyserythropoiesis (Liu’s stain)，Sideroblasts (Iron stain)",
-      "C": "Acute promyelocytic leukemia (Liu’s stain)，Leukemic blasts (Peroxidase stain)",
-      "D": "Megaloblastic anemia (Liu’s stain)，Megaloblasts (Peroxidase stain)"
+      "A": "Plasmacytosis (Liu’s stain),Sideroblasts (Iron stain)",
+      "B": "Dyserythropoiesis (Liu’s stain),Sideroblasts (Iron stain)",
+      "C": "Acute promyelocytic leukemia (Liu’s stain),Leukemic blasts (Peroxidase stain)",
+      "D": "Megaloblastic anemia (Liu’s stain),Megaloblasts (Peroxidase stain)"
     },
     "answer": "B",
     "explanation": ""
@@ -162944,7 +162944,7 @@
     "number": 49,
     "question": "下列何者為新生兒溶血性疾病（hemolytic disease of newborn）引起的貧血？",
     "options": {
-      "A": "cquired alloimmune hemolytic anemia",
+      "A": "Hereditary hemolytic anemia",
       "B": "Acquired autoimmune hemolytic anemia",
       "C": "Acquired non-immune hemolytic anemia",
       "D": "Acquired alloimmune hemolytic anemia"
@@ -163504,7 +163504,7 @@
     "number": 77,
     "question": "小章最近臉色蒼白，醫師發現他血中白血球超標（過高），血液抹片如下圖。 下列何者是最可能的診斷？",
     "options": {
-      "A": "cute promyelocytic leukemia",
+      "A": "Burkitt lymphoma",
       "B": "Hairy cell leukemia",
       "C": "Chronic lymphocytic leukemia",
       "D": "Acute promyelocytic leukemia"
@@ -164245,10 +164245,10 @@
     "number": 33,
     "question": "自體免疫疾病與常見自體抗體的配對，下列何者正確？",
     "options": {
-      "A": "nti-Glutamic acid decarboxylase (GAD) antibody；僵直性脊椎炎（Ankylosing Spondylitis）",
-      "B": "Anti-DNA antibody；乳糜瀉（Celiac Disease）",
-      "C": "Anti-thyroglobulin antibody；第⼀型糖尿病（Type 1 diabetes mellitus）",
-      "D": "Anti-Glutamic acid decarboxylase (GAD) antibody；僵直性脊椎炎（Ankylosing Spondylitis）"
+      "A": "Anti-acetylcholine receptor antibody;重症肌無力(Myasthenia Gravis)",
+      "B": "Anti-DNA antibody;乳糜瀉(Celiac Disease)",
+      "C": "Anti-thyroglobulin antibody;第一型糖尿病(Type 1 diabetes mellitus)",
+      "D": "Anti-Glutamic acid decarboxylase (GAD) antibody;僵直性脊椎炎(Ankylosing Spondylitis)"
     },
     "answer": "A",
     "explanation": ""
@@ -164265,7 +164265,7 @@
     "number": 34,
     "question": "下列何者最能作為藥物誘導型狼瘡（drug-induced lupus）的診斷參考？",
     "options": {
-      "A": "nti-SS-A和Anti-SS-B抗體",
+      "A": "Anti-Histone抗體",
       "B": "Anti-Smith抗體",
       "C": "Anti-SS-A和Anti-SS-B抗體",
       "D": "Rheumatoid factor"
@@ -164285,10 +164285,10 @@
     "number": 35,
     "question": "下列那些最可能出現於全身性紅斑性狼瘡（SLE）患者？",
     "options": {
-      "A": "nti-cyclic citrullinated peptide（CCP）陽性",
-      "B": "補體C3，C4增加",
-      "C": "Anti-cyclic citrullinated peptide（CCP）陽性",
-      "D": "無法使用非類固醇類抗發炎藥物（NSAID）治療"
+      "A": "anti-ribosomal P protein antibody陽性",
+      "B": "補體C3,C4增加",
+      "C": "Anti-cyclic citrullinated peptide(CCP)陽性",
+      "D": "無法使用非類固醇類抗發炎藥物(NSAID)治療"
     },
     "answer": "A",
     "explanation": ""
@@ -164645,10 +164645,10 @@
     "number": 53,
     "question": "下列何種病毒，在分類上與其它三者屬不同科？",
     "options": {
-      "A": "腮腺炎病毒（mumps virus）",
-      "B": "黃熱病毒（yellow fever virus）",
-      "C": "型肝炎病毒（hepatitis C virus）",
-      "D": "C型肝炎病毒（hepatitis C virus）"
+      "A": "腮腺炎病毒(mumps virus)",
+      "B": "黃熱病毒(yellow fever virus)",
+      "C": "登革病毒(dengue virus)",
+      "D": "C型肝炎病毒(hepatitis C virus)"
     },
     "answer": "A",
     "explanation": ""
@@ -165162,10 +165162,10 @@
     "number": 79,
     "question": "下列病毒與傳染途徑之載體配對，何者錯誤？",
     "options": {
-      "A": "Chikungunya virus：tick",
-      "B": "unyamwera virus：mosquito",
-      "C": "Zika virus：mosquito",
-      "D": "Bunyamwera virus：mosquito"
+      "A": "Chikungunya virus:tick",
+      "B": "Hantaan virus:rodent",
+      "C": "Zika virus:mosquito",
+      "D": "Bunyamwera virus:mosquito"
     },
     "answer": "A",
     "explanation": ""
@@ -165503,7 +165503,7 @@
     "number": 16,
     "question": "下列何者最常用於檢驗痰液肺癌細胞的細胞學檢查？",
     "options": {
-      "A": "uramine-Rhodamine stain",
+      "A": "Papanicolaou stain",
       "B": "Wright-Giemsa stain",
       "C": "Auramine-Rhodamine stain",
       "D": "India ink stain"
@@ -165643,7 +165643,7 @@
     "number": 23,
     "question": "下列何者可確認關節液血鐵質的存在？",
     "options": {
-      "A": "cid-fast stain",
+      "A": "Wright stain",
       "B": "Gram stain",
       "C": "Prussian blue stain",
       "D": "acid-fast stain"
@@ -165923,7 +165923,7 @@
     "number": 37,
     "question": "下列何者不屬於腹水之檢查項目？",
     "options": {
-      "A": "denosine deaminase",
+      "A": "amylase",
       "B": "creatine kinase",
       "C": "glucose",
       "D": "adenosine deaminase"
@@ -165963,7 +165963,7 @@
     "number": 39,
     "question": "下圖是尿沉渣中之何種有形成份？",
     "options": {
-      "A": "mmonium biurate crystal",
+      "A": "calcium oxalate crystal",
       "B": "uric acid crystal",
       "C": "triple phosphate crystal",
       "D": "ammonium biurate crystal"
@@ -166510,7 +166510,7 @@
     "number": 66,
     "question": "下列何種分枝桿菌分子分型法是利用spacer序列作為國際編碼的依據？",
     "options": {
-      "A": "mplified fragment length polymorphism",
+      "A": "Ribotyping",
       "B": "Amplified fragment length polymorphism",
       "C": "Plasmid DNA profile",
       "D": "Spoligotyping"
@@ -167012,7 +167012,7 @@
     "options": {
       "A": "Prosthetic group可與Apoenzyme組成Holoenzyme",
       "B": "Prosthetic group為酵素之Inorganic cofactor",
-      "C": "oenzyme為酵素之Organic cofactor",
+      "C": "Coenzyme本身具酵素活性",
       "D": "Coenzyme為酵素之Organic cofactor"
     },
     "answer": "C",
@@ -167950,8 +167950,8 @@
     "question": "下列何種心血管疾病標誌較適合用來檢測嚴重的充血性心力衰竭（Congestive heart failure, CHF）？",
     "options": {
       "A": "Troponin",
-      "B": "-type natriuretic peptide（BNP）",
-      "C": "B-type natriuretic peptide（BNP）",
+      "B": "CK-2",
+      "C": "B-type natriuretic peptide(BNP)",
       "D": "Myoglobin"
     },
     "answer": "C",
@@ -168966,10 +168966,10 @@
     "number": 29,
     "question": "鑑定Streptococcus pneumoniae之特性，下列何者錯誤？",
     "options": {
-      "A": "optochin（sensitive）",
-      "B": "ile solubility（positive）",
-      "C": "SXT（resistant）",
-      "D": "bile solubility（positive）"
+      "A": "optochin(sensitive)",
+      "B": "bile-esculin(negative)",
+      "C": "SXT(resistant)",
+      "D": "bile solubility(positive)"
     },
     "answer": "C",
     "explanation": ""
@@ -168986,10 +168986,10 @@
     "number": 30,
     "question": "關於streptolysin O 之敘述，下列何者錯誤？",
     "options": {
-      "A": "SO（antistreptolyin O）test 可用於偵測A群鏈球菌感染",
+      "A": "對氧不穩定",
       "B": "可溶解白血球",
-      "C": "不具抗原性（antigenic）",
-      "D": "ASO（antistreptolyin O）test 可用於偵測A群鏈球菌感染"
+      "C": "不具抗原性(antigenic)",
+      "D": "ASO(antistreptolyin O)test 可用於偵測A群鏈球菌感染"
     },
     "answer": "C",
     "explanation": ""
@@ -169386,10 +169386,10 @@
     "number": 50,
     "question": "下列厭氧菌及其染色形態配對，何者錯誤？",
     "options": {
-      "A": "Peptostreptococcus anaerobius－GPC",
-      "B": "acteroides fragilis group－GNB",
-      "C": "Bacteroides fragilis group－GNB",
-      "D": "Prophyromonas spp.－GNC"
+      "A": "Peptostreptococcus anaerobius-GPC",
+      "B": "Clostridium difficile-GPB",
+      "C": "Bacteroides fragilis group-GNB",
+      "D": "Prophyromonas spp.-GNC"
     },
     "answer": "D",
     "explanation": ""
@@ -169746,7 +169746,7 @@
     "question": "傳統分類法將真菌分為四門，引起人類疾病的真菌大部分為那一類？",
     "options": {
       "A": "Zygomycota",
-      "B": "asidiomycota",
+      "B": "Ascomycota",
       "C": "Basidiomycota",
       "D": "Fungi Imperfecti"
     },
@@ -171875,7 +171875,7 @@
     "options": {
       "A": "CD13、CD33、CD117",
       "B": "CD2、cyt CD3、CD7",
-      "C": "D11b、CD14、CD16",
+      "C": "CD19、CD20、CD22",
       "D": "CD11b、CD14、CD16"
     },
     "answer": "B",
@@ -172121,7 +172121,7 @@
     "question": "下列有關immune thrombocytopenic purpura（ITP）的臨床血液檢查結果，何者錯誤？",
     "options": {
       "A": "PT及APTT大致正常",
-      "B": "leeding time會出現異常",
+      "B": "周邊血液抹片會出現血小板凝集現象",
       "C": "Bleeding time會出現異常",
       "D": "骨髓中的megakaryocyte數目常會增加"
     },
@@ -172160,9 +172160,9 @@
     "number": 28,
     "question": "下列何種疾病最常見到血小板減少？",
     "options": {
-      "A": "型血友病",
-      "B": "ernard Soulier syndrome",
-      "C": "壞血症（scurvy）",
+      "A": "VWD",
+      "B": "A型血友病",
+      "C": "壞血症(scurvy)",
       "D": "Bernard Soulier syndrome"
     },
     "answer": "D",
@@ -172260,7 +172260,7 @@
     "number": 33,
     "question": "某3歲男孩因出血問題就診，檢驗結果：血色素12.2 g/dL、血小板170,000/μL、PT 13.8秒（參考值11.3～14.6 秒）、APTT 99秒（參考值25～34秒）、bleeding time正常、APTT mixing test 34秒、dRVVT 32秒（參考值 29.6～42.9秒）、第八因子78%、第九因子8%，則最可能之診斷為何？",
     "options": {
-      "A": "cquired hemophilia A",
+      "A": "Hemophilia A",
       "B": "Hemophilia B",
       "C": "Acquired hemophilia A",
       "D": "Lupus anticoagulant相關疾病"
@@ -172280,7 +172280,7 @@
     "number": 34,
     "question": "監測低分子量heparin療效，應使用下列何種檢驗最為適當？",
     "options": {
-      "A": "nti-Factor Xa assay",
+      "A": "Thrombin time",
       "B": "APTT混合試驗",
       "C": "Anti-Factor Xa assay",
       "D": "Reptilase time"
@@ -174424,7 +174424,7 @@
     "number": 61,
     "question": "下列何者是可能導致呼吸道感染症狀的DNA病毒？",
     "options": {
-      "A": "denovirus type 7",
+      "A": "rotavirus",
       "B": "influenza A virus",
       "C": "adenovirus type 7",
       "D": "rubella virus"
@@ -177368,10 +177368,10 @@
     "number": 48,
     "question": "下列何者不是嚴重肝硬化病人的血液檢測結果？",
     "options": {
-      "A": "ST／ALT ratio ＜1",
+      "A": "血小板數目減少",
       "B": "PT延長",
-      "C": "Albumin／Globulin ratio ＜1",
-      "D": "AST／ALT ratio ＜1"
+      "C": "Albumin/Globulin ratio <1",
+      "D": "AST/ALT ratio <1"
     },
     "answer": "D",
     "explanation": ""
@@ -177429,8 +177429,8 @@
     "question": "常使用於蛋白質電泳將蛋白帶染成藍色的染料為：",
     "options": {
       "A": "Trypan blue",
-      "B": "rilliant cresyl blue",
-      "C": "oomassie Brilliant Blue",
+      "B": "Methylene blue",
+      "C": "Brilliant cresyl blue",
       "D": "Coomassie Brilliant Blue"
     },
     "answer": "D",
@@ -177987,7 +177987,7 @@
     "options": {
       "A": "Thyroxine-binding globulin",
       "B": "Thyroglobulin",
-      "C": "arcinoembryonic antigen",
+      "C": "Procalcitonin",
       "D": "Carcinoembryonic antigen"
     },
     "answer": "B",
@@ -178166,7 +178166,7 @@
     "number": 8,
     "question": "咽喉檢體經直接螢光抗體技術染色後，發現鏈狀螢光球菌，最有可能為下列何種感染症？",
     "options": {
-      "A": "cute streptococcal pharyngitis",
+      "A": "diphtheria",
       "B": "acute streptococcal pharyngitis",
       "C": "Vincent's disease",
       "D": "tuberculosis pulmonary mycosis"
@@ -178507,7 +178507,7 @@
     "options": {
       "A": "food poisoning",
       "B": "arthropod bite",
-      "C": "ontaminated aerosol",
+      "C": "intoxication",
       "D": "contaminated aerosol"
     },
     "answer": "D",
@@ -178605,7 +178605,7 @@
     "number": 30,
     "question": "下列何種細菌須在含NaCl之培養基才能生長？",
     "options": {
-      "A": "eromonas hydrophila",
+      "A": "Vibrio cholerae",
       "B": "Aeromonas hydrophila",
       "C": "Plesiomonas shigelloides",
       "D": "Vibrio vulnificus"
@@ -178887,7 +178887,7 @@
     "options": {
       "A": "Chlamydophila pneumoniae",
       "B": "Chlamydophila psittaci",
-      "C": "hlamydia trachomatis",
+      "C": "Chlamydia felis",
       "D": "Chlamydia trachomatis"
     },
     "answer": "D",
@@ -179085,7 +179085,7 @@
     "question": "下列微生物中，何者最常導致院內感染？",
     "options": {
       "A": "Candida albicans",
-      "B": "ifidobacterium dentium",
+      "B": "Lactobacillus casei",
       "C": "Propionibacterium acnes",
       "D": "Bifidobacterium dentium"
     },
@@ -179204,7 +179204,7 @@
     "number": 60,
     "question": "下列何種方法是結核桿菌藥敏試驗之gold standard？",
     "options": {
-      "A": "bsolute concentration method",
+      "A": "resistance ratio method",
       "B": "absolute concentration method",
       "C": "proportion method",
       "D": "radiometric method"
@@ -179510,10 +179510,10 @@
     "number": 75,
     "question": "有關細菌與其適當之選擇性培養基配對，下列何者錯誤？",
     "options": {
-      "A": "eromonas spp.－thiosulfate citrate-bile salts sucrose agar",
-      "B": "Aeromonas spp.－thiosulfate citrate-bile salts sucrose agar",
-      "C": "E. coli O157:H7－MacConkey sorbitol agar",
-      "D": "Legionella spp.－buffered charcoal-yeast extract agar"
+      "A": "Gardnerella vaginalis-human blood bilayer Tween agar",
+      "B": "Aeromonas spp.-thiosulfate citrate-bile salts sucrose agar",
+      "C": "E. coli O157:H7-MacConkey sorbitol agar",
+      "D": "Legionella spp.-buffered charcoal-yeast extract agar"
     },
     "answer": "B",
     "explanation": ""
@@ -179611,7 +179611,7 @@
     "question": "在野外被植物刺入皮膚，在傷口處形成癤瘤狀硬塊，之後經由淋巴管擴散至其他組織。自患者潰瘍處取得 biopsy，染色看到許多長條型酵母細胞呈雪茄狀（cigar form）。於室溫培養3至5天，鏡檢時菌絲之側邊或頂 端有排列成小花狀的圓形孢子，其感染原為何？",
     "options": {
       "A": "Exophiala jeanselmei",
-      "B": "lastomyces dermatitidis",
+      "B": "Sporothrix schenckii",
       "C": "Cladophialophora carrionii",
       "D": "Blastomyces dermatitidis"
     },
@@ -182909,10 +182909,10 @@
     "number": 4,
     "question": "下列何者是T細胞表面上最常見的附屬分子（accessory molecules）？",
     "options": {
-      "A": "CD2（LFA-2）",
-      "B": "CD54（ICAM-1）",
-      "C": "D80（B7.1）／CD86（B7.2）",
-      "D": "CD80（B7.1）／CD86（B7.2）"
+      "A": "CD2(LFA-2)",
+      "B": "CD54(ICAM-1)",
+      "C": "CD58(LFA-3)",
+      "D": "CD80(B7.1)/CD86(B7.2)"
     },
     "answer": "A",
     "explanation": ""
@@ -183068,7 +183068,7 @@
     "number": 12,
     "question": "下列何種抗體最常出現在硬皮症病患的血清中？",
     "options": {
-      "A": "nti-islet cell",
+      "A": "anti-Scl-70",
       "B": "anti-GBM",
       "C": "anti-myelin",
       "D": "anti-islet cell"
@@ -183288,10 +183288,10 @@
     "number": 23,
     "question": "下列何者是急性C型肝炎最早可測得的標誌？",
     "options": {
-      "A": "LT（Alanine aminotransferase）",
+      "A": "Anti-HBc",
       "B": "HCV-RNA",
       "C": "Anti-HCV",
-      "D": "ALT（Alanine aminotransferase）"
+      "D": "ALT(Alanine aminotransferase)"
     },
     "answer": "B",
     "explanation": ""
@@ -183509,7 +183509,7 @@
     "number": 34,
     "question": "一位婦女有蛋白尿、無菌性腦膜炎、皮膚有圓盤型隆起、對紫外線敏感及臉頰兩側有跨過鼻樑的紅斑，她做 下列何種檢查最可能出現陽性結果？",
     "options": {
-      "A": "nti-glutamic acid decarboxylase (GAD) autoantibody",
+      "A": "Anti-acetylcholine receptor autoantibody",
       "B": "Anti-dsDNA autoantibody",
       "C": "Anti-thyroglobulin autoantibody",
       "D": "Anti-glutamic acid decarboxylase (GAD) autoantibody"
@@ -183674,7 +183674,7 @@
     "number": 42,
     "question": "免疫螢光染色時，常使用下列何者作細胞的背景染色？",
     "options": {
-      "A": "cridine orange",
+      "A": "Evans blue",
       "B": "fluorescein",
       "C": "rhodamine",
       "D": "acridine orange"
@@ -183734,10 +183734,10 @@
     "number": 45,
     "question": "下列何者常用來治療巨細胞病毒（human cytomegalovirus）感染？",
     "options": {
-      "A": "zidothymidine（AZT）",
-      "B": "ganciclovir（GCV）",
+      "A": "acyclovir(ACV)",
+      "B": "ganciclovir(GCV)",
       "C": "nonoxynol-9",
-      "D": "azidothymidine（AZT）"
+      "D": "azidothymidine(AZT)"
     },
     "answer": "B",
     "explanation": ""
@@ -184573,7 +184573,7 @@
     "number": 7,
     "question": "以尿液試紙法檢測酮體時，主要是針對下列何者反應？",
     "options": {
-      "A": "cetoacetic acid",
+      "A": "acetone",
       "B": "acetoacetic acid",
       "C": "β-hydroxybutyric acid",
       "D": "bilirubin"

@@ -295709,7 +295709,7 @@
     "number": 5,
     "question": "心肌梗塞的病理性 Q 波與正常 q波的不同",
     "options": {
-      "A": "病理性 Q 波深度至少大於 R波高度的",
+      "A": "病理性Q波深度至少大於R波高度的1/4",
       "B": "病理性 Q 波時間大於 0.04 秒",
       "C": "通常心肌壞死後大部分人 Q波會持續存在",
       "D": "病理性 Q 波只出現在單一誘導"
@@ -295727,12 +295727,12 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 6,
-    "question": "下列心電圖的敘述何者正確 ？",
+    "question": "下列心電圖的敘述何者正確？",
     "options": {
-      "A": "trial fibrillation",
-      "B": "沒有看到明顯的 P 波，是心房顫動 （",
-      "C": "心跳規律，是竇性頻脈 （ sinus tachycardia",
-      "D": "心跳規律，是上心室頻脈 （ supraventricular tachycardia"
+      "A": "沒有看到明顯的P波，是心室頻脈（ventricular tachycardia）",
+      "B": "沒有看到明顯的P波，是心房顫動（atrial fibrillation）",
+      "C": "心跳規律，是竇性頻脈（sinus tachycardia）",
+      "D": "心跳規律，是上心室頻脈（supraventricular tachycardia）"
     },
     "answer": "D",
     "explanation": "",
@@ -295754,10 +295754,10 @@
     "number": 7,
     "question": "下列何者不是心電圖紙上的標示?",
     "options": {
-      "A": "有細線和粗線,細線構成1×1 mm 的格",
-      "B": "橫軸表示時間,一個大格的時間為0.",
-      "C": "縱軸代表電壓,一個小格的距離代表",
-      "D": "標準心電圖記錄的速度為25 mm/s 示。此時正平面(frontal plane),QRS 向量軸 同,不包括下列何者? 1/4 存在 ventricular tachycardia) atrial fibrillation) ycardia) tricular tachycardia) 格子,粗線構成5×5 mm 的格子 1 秒"
+      "A": "有細線和粗線，細線構成1×1 mm的格子，粗線構成5×5 mm的格子",
+      "B": "橫軸表示時間，一個大格的時間為0.1秒",
+      "C": "縱軸代表電壓，一個小格的距離代表0.1 mV",
+      "D": "標準心電圖記錄的速度為25 mm/s"
     },
     "answer": "B",
     "explanation": ""
@@ -295792,7 +295792,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 9,
-    "question": "一位 45歲男性之常規心電圖呈現下列現象 波波幅 ＝ 39 mm、PR＝0.13 秒。此心電圖最可能診斷為何",
+    "question": "一位45歲男性之常規心電圖呈現下列現象：心軸為-28°、V6的R波波幅＝28 mm、V1的S波波幅＋V5的R波波幅＝39 mm、PR＝0.13秒。此心電圖最可能診斷為何？",
     "options": {
       "A": "WPW 症候群",
       "B": "左心室肥大",
@@ -295834,10 +295834,10 @@
     "number": 11,
     "question": "下列心電圖的判讀何者錯誤 ？",
     "options": {
-      "A": "心跳每分鐘小於 50 下",
+      "A": "心跳每分鐘小於50下",
       "B": "心律為竇性緩脈",
-      "C": "aVF 有 ST 段上升",
-      "D": "aVL 有 ST 段下降 歲男性之常規心電圖呈現下列現象 ：心軸為 -28°、V6 的 R 波波幅 ＝ 28 mm、V1的 此心電圖最可能診斷為何 ？ 產生於心電圖的那部分 ？ 的S 波波幅 ＋ V5 的 R"
+      "C": "aVF有ST段上升",
+      "D": "aVL有ST段下降"
     },
     "answer": "B",
     "explanation": "",

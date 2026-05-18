@@ -55865,7 +55865,7 @@
       "number": 7,
       "question": "甲繳納全民健康保險費，因病至A醫院看診，取得處方箋，至B藥局調劑取藥，B藥局再向中央健康保險署申請 藥事服務費及藥費，依據全民健康保險法之規定，下列關係何者正確？",
       "options": {
-        "A": "醫院為藥事服務費及藥費之申請支付機構",
+        "A": "甲為保險人",
         "B": "中央健康保險署為被保險人",
         "C": "A醫院為藥事服務費及藥費之申請支付機構",
         "D": "B藥局為保險醫事服務機構"
@@ -57764,10 +57764,10 @@
       "number": 52,
       "question": "有關NSAIDs之過敏反應，下列敘述何者錯誤？",
       "options": {
-        "A": "spirin過敏的病人，80%會出現血管性水腫（angioedema）",
-        "B": "aspirin過敏的病人，80%會出現血管性水腫（angioedema）",
-        "C": "出現呼吸道過敏反應之病人，常為氣喘或鼻息肉（nasal polyps）之族群",
-        "D": "對傳統NSAIDs過敏者，使用COX2-selective NSAIDs仍可能出現過敏反應"
+        "A": "對aspirin過敏者,通常可以使用acetaminophen",
+        "B": "aspirin過敏的病人,80%會出現血管性水腫(angioedema)",
+        "C": "C·出現呼吸道過敏反應之病人,常為氣喘或鼻息肉(nasal polyps)之族群",
+        "D": "對傳統NSAIDs過敏者,使用COX2-selective NSAIDs仍可能出現過敏反應"
       },
       "answer": "B",
       "explanation": ""
@@ -58688,9 +58688,9 @@
       "number": 18,
       "question": "有關藥品引發氣喘之敘述，下列何者正確？",
       "options": {
-        "A": "β-blockers在氣喘病人中引發氣喘的比例很高，不論non-selective或β 1 -selective blockers均為氣喘病人之絕 對禁忌症",
-        "B": "氣喘病人有aspirin過敏的比例在30%以下，所以NIH建議只有確知aspirin過敏史的氣喘病人須避免使用此類 藥品",
-        "C": "OX-2 selective NSAIDs不可使用在aspirin過敏的氣喘病人",
+        "A": "β-blockers在氣喘病人中引發氣喘的比例很高，不論non-selective或β₁-selective blockers均為氣喘病人之絕對禁忌症",
+        "B": "氣喘病人有aspirin過敏的比例在30%以下，所以NIH建議只有確知aspirin過敏史的氣喘病人須避免使用此類藥品",
+        "C": "β-blocker眼藥水不會引起氣喘病人的發作",
         "D": "COX-2 selective NSAIDs不可使用在aspirin過敏的氣喘病人"
       },
       "answer": "B",
@@ -58728,10 +58728,10 @@
       "number": 20,
       "question": "下列何者最適合做為急性氣喘的緩解藥品？",
       "options": {
-        "A": "lbuterol inhalation",
-        "B": "tiotropium inhalation",
-        "C": "salmeterol inhalation",
-        "D": "albuterol inhalation"
+        "A": "A-bambuterol PO",
+        "B": "B-tiotropium inhalation",
+        "C": "C-salmeterol inhalation",
+        "D": "D-albuterol inhalation"
       },
       "answer": "D",
       "explanation": ""
@@ -59208,10 +59208,10 @@
       "number": 44,
       "question": "治療失眠時，alprazolam與zolpidem的差異在於：",
       "options": {
-        "A": "lprazolam在老年人須降低起始劑量，但zolpidem不須調降劑量",
+        "A": "alprazolam有成癮性,但zolpidem沒有成癮性",
         "B": "alprazolam干擾睡眠周期的程度比zolpidem嚴重",
-        "C": "alprazolam與zolpidem均選擇性抑制GABA受器，但alprazolam是omega-1受器，zolpidem是omega-2受器",
-        "D": "alprazolam在老年人須降低起始劑量，但zolpidem不須調降劑量"
+        "C": "alprazolam與zolpidem均選擇性抑制GABA受器,但alprazolam是omega-1受器,zolpidem是omega-2受器",
+        "D": "alprazolam在老年人須降低起始劑量,但zolpidem不須調降劑量"
       },
       "answer": "B",
       "explanation": ""
@@ -59448,10 +59448,10 @@
       "number": 56,
       "question": "18歲男性，目前服用選項中之藥品。因不明原因曬傷，懷疑是藥品引起之光敏感（photosensitivity），下列何 者為最可能之誘發原因？",
       "options": {
-        "A": "cetaminophen 500 mg tablet prn",
+        "A": "doxycycline 100 mg capsule bid",
         "B": "benzoyl peroxide 5% gel bid",
         "C": "acetaminophen 500 mg tablet prn",
-        "D": "fexofenadine HCl 60 mg tablet bid"
+        "D": "fexofenadine HCI 60 mg tablet bid"
       },
       "answer": "A",
       "explanation": ""
@@ -59468,10 +59468,10 @@
       "number": 57,
       "question": "有關使用nonsteroidal anti-inflammatory drugs（NSAIDs）與disease-modifying antirheumatic drugs （DMARDs）治療風濕性關節炎（RA）的敘述，下列何者正確？",
       "options": {
-        "A": "cetaminophen與NSAIDs皆可有效控制RA的關節疼痛，為第一線治療藥品",
-        "B": "acetaminophen與NSAIDs皆可有效控制RA的關節疼痛，為第一線治療藥品",
-        "C": "只有生物製劑DMARDs才能減緩RA對關節的破壞，傳統DMARDs則否",
-        "D": "一般而言，生物製劑DMARDs產生療效的時間（onset）比傳統DMARDs快"
+        "A": "若病人服用NSAIDs即可控制疼痛,應儘量不要使用DMARDs",
+        "B": "acetaminophen與NSAIDs皆可有效控制RA的關節疼痛,為第一線治療藥品",
+        "C": "只有生物製劑DMARDs才能減緩RA對關節的破壞,傳統DMARDs則否",
+        "D": "一般而言,生物製劑DMARDs產生療效的時間(onset)比傳統DMARDs快"
       },
       "answer": "D",
       "explanation": ""
@@ -59510,7 +59510,7 @@
       "options": {
         "A": "calcium carbonate",
         "B": "calcium citrate",
-        "C": "alcium chloride",
+        "C": "calcium lactate",
         "D": "calcium chloride"
       },
       "answer": "A",
@@ -59608,10 +59608,10 @@
       "number": 64,
       "question": "有關血液腫瘤的治療目標，下列敘述何者正確且完整？",
       "options": {
-        "A": "cute leukemia：快速達到完全緩解（complete remission）",
-        "B": "non-Hodgkin lymphoma：減輕症狀、儘量避免治療相關副作用",
-        "C": "acute leukemia：快速達到完全緩解（complete remission）",
-        "D": "chronic leukemia：減輕症狀、降低治療相關副作用、提高生活品質"
+        "A": "Hodgkin lymphoma:提高治癒率、降低短期與長期的治療相關副作用",
+        "B": "non-Hodgkin lymphoma:減輕症狀、儘量避免治療相關副作用",
+        "C": "acute leukemia:快速達到完全緩解(complete remission)",
+        "D": "chronic leukemia:減輕症狀、降低治療相關副作用、提高生活品質"
       },
       "answer": "A",
       "explanation": ""
@@ -59788,7 +59788,7 @@
       "number": 73,
       "question": "劉先生高血壓15年，且患有痛風、高血脂、心律不整及糖尿病，長期使用insulin。最近半年開始出現疲倦、乾 咳、運動時會喘、呼吸急促以及發燒等症狀，入院診斷懷疑是藥品引起之肺纖維化（pulmonary fibrosis）， 下列劉先生其他長期用藥中何者最可能造成肺臟毒性？",
       "options": {
-        "A": "miodarone 400 mg qd",
+        "A": "benazepril 40 mg qd",
         "B": "nicardipine 20 mg tid",
         "C": "atorvastatin 10 mg qd",
         "D": "amiodarone 400 mg qd"
@@ -61350,7 +61350,7 @@
       "number": 21,
       "question": "下列何者在哺乳的婦女禁止使用？",
       "options": {
-        "A": "cetaminophen",
+        "A": "amoxicillin",
         "B": "lithium",
         "C": "acetaminophen",
         "D": "codeine"
@@ -61451,7 +61451,7 @@
       "question": "下列何者並非用於緩解鼻炎或鼻塞之症狀？",
       "options": {
         "A": "oxymetazoline nasal spray",
-        "B": "eclomethasone nasal spray",
+        "B": "desmopressin nasal spray",
         "C": "beclomethasone nasal spray",
         "D": "azelastine nasal spray"
       },
@@ -61850,7 +61850,7 @@
       "number": 46,
       "question": "醫院使用bar code system增加病人辨識，主要是針對下列那個藥品使用與管理步驟之防誤措施？",
       "options": {
-        "A": "dministering",
+        "A": "prescribing",
         "B": "administering",
         "C": "procurement",
         "D": "storage"
@@ -62414,10 +62414,10 @@
       "number": 74,
       "question": "與下列何者併用時，warfarin之抗凝血作用會增強？",
       "options": {
-        "A": "barbiturates",
-        "B": "carbamazepine",
-        "C": "holestyramine",
-        "D": "cholestyramine"
+        "A": "[選項未顯示]",
+        "B": "[選項未顯示]",
+        "C": "[選項未顯示]",
+        "D": "[選項未顯示]"
       },
       "answer": "C",
       "explanation": ""
@@ -62636,7 +62636,7 @@
       "number": 5,
       "question": "下列何種抗生素最容易通過血腦屏障，達治療濃度？",
       "options": {
-        "A": "mphotericin B",
+        "A": "linezolid",
         "B": "cefazolin",
         "C": "amikacin",
         "D": "amphotericin B"
@@ -70712,7 +70712,7 @@
       "options": {
         "A": "葡萄柚汁",
         "B": "貫葉連翹（St. John's wort）",
-        "C": "holestyramine",
+        "C": "制酸劑",
         "D": "cholestyramine"
       },
       "answer": "A",
@@ -70732,7 +70732,7 @@
       "options": {
         "A": "levofloxacin",
         "B": "erythromycin",
-        "C": "iprofloxacin",
+        "C": "azithromycin",
         "D": "ciprofloxacin"
       },
       "answer": "B",
@@ -71112,10 +71112,10 @@
       "number": 8,
       "question": "IV注射抗生素與可以達到治療濃度之部位，下列配對何者錯誤？",
       "options": {
-        "A": "vancomycin－腸胃道",
-        "B": "metronidazole－腸胃道",
-        "C": "iprofloxacin－前列腺",
-        "D": "ciprofloxacin－前列腺"
+        "A": "vancomycin - 腸胃道",
+        "B": "metronidazole - 腸胃道",
+        "C": "ceftriaxone - 腦脊髓液",
+        "D": "ciprofloxacin - 前列腺"
       },
       "answer": "A",
       "explanation": ""
@@ -73639,7 +73639,7 @@
       "options": {
         "A": "hydrofluoroamines",
         "B": "hydrofluoroalkanes",
-        "C": "hlorofluoroalkanes",
+        "C": "chlorofluoroamines",
         "D": "chlorofluoroalkanes"
       },
       "answer": "B",
@@ -74097,7 +74097,7 @@
       "question": "若需監測protease inhibitors或non-nucleoside reverse transcriptase inhibitors之血中濃度時，建議監測下列何者最 適當？",
       "options": {
         "A": "peak concentration",
-        "B": "oth peak and trough concentration",
+        "B": "trough concentration",
         "C": "both peak and trough concentration",
         "D": "給藥30分鐘後濃度"
       },
@@ -74156,7 +74156,7 @@
       "number": 30,
       "question": "Neuromuscular blocking agents與下列藥品併用時，會增加神經肌肉阻斷作用，何者除外？",
       "options": {
-        "A": "mphotericin B",
+        "A": "theophylline",
         "B": "clindamycin",
         "C": "furosemide",
         "D": "amphotericin B"
@@ -74197,7 +74197,7 @@
       "question": "有關眼用製劑副作用之敘述，下列何者錯誤？",
       "options": {
         "A": "pilocarpine可能引起低血糖",
-        "B": "etaxolol可能引起視力模糊",
+        "B": "timolol可能引起心搏變慢",
         "C": "adrenaline可能引起血壓升高",
         "D": "betaxolol可能引起視力模糊"
       },
@@ -75161,7 +75161,7 @@
       "question": "承上題，為避免發生上述狀況，下列建議何者適當？",
       "options": {
         "A": "mefenamic acid和hydrotalcite服藥時間應間隔至少2小時",
-        "B": "isacodyl和hydrotalcite服藥時間應間隔至少2小時",
+        "B": "將mefenamic acid換成diclofenac",
         "C": "bisacodyl和hydrotalcite服藥時間應間隔至少2小時",
         "D": "將hydrotalcite換成aluminum silicate"
       },
@@ -75301,7 +75301,7 @@
       "number": 7,
       "question": "有關糖尿病足部感染（diabetic foot infections）之敘述，下列何者正確？",
       "options": {
-        "A": "moxicillin/clavulanate可做為輕微感染的經驗性治療",
+        "A": "大多數須住院治療之嚴重感染者，都是由於單一菌種所致",
         "B": "amoxicillin/clavulanate可做為輕微感染的經驗性治療",
         "C": "只有小於10%的病人可能併發骨髓炎",
         "D": "如併發骨髓炎，應使用抗生素治療3週"
@@ -76022,7 +76022,7 @@
       "question": "下列何者適應症為癌症病人突發性疼痛（breakthrough pain）之處置？",
       "options": {
         "A": "fentanyl transdermal patch",
-        "B": "uprenorphine sublingual tablet",
+        "B": "fentanyl buccal film",
         "C": "buprenorphine transdermal patch",
         "D": "buprenorphine sublingual tablet"
       },
@@ -76301,7 +76301,7 @@
       "number": 57,
       "question": "有關痛經（dysmenorrhea）之治療，下列何者錯誤？",
       "options": {
-        "A": "cetaminophen為止痛藥之首選",
+        "A": "熱敷可減緩疼痛程度",
         "B": "瑜珈運動可減緩疼痛程度",
         "C": "口服避孕藥可減緩疼痛程度",
         "D": "acetaminophen為止痛藥之首選"
@@ -76361,8 +76361,8 @@
       "number": 60,
       "question": "有關糖尿病治療，下列何者正確？",
       "options": {
-        "A": "lbiglutide常見用法為30 mg PO QD",
-        "B": "若單一口服降血糖藥無法達到療效，應加入insulin，不可併用兩種口服降血糖藥",
+        "A": "口服降血糖藥適用於所有糖尿病病人的初期治療",
+        "B": "若單一口服降血糖藥無法達到療效,應加入insulin,不可併用兩種口服降血糖藥",
         "C": "UTI是canaglifzolin常見的副作用",
         "D": "albiglutide常見用法為30 mg PO QD"
       },
@@ -77984,7 +77984,7 @@
       "question": "下列何種藥品之eye drops使用phosphate buffer以維持適當pH值？",
       "options": {
         "A": "neomycin",
-        "B": "enzylpenicillin",
+        "B": "chloramphenicol",
         "C": "benzylpenicillin",
         "D": "idoxuridine"
       },
@@ -78183,10 +78183,10 @@
       "number": 21,
       "question": "有關抗癌藥品之敘述，下列何者正確？",
       "options": {
-        "A": "lbumin-bound paclitaxel與paclitaxel相比，較不易產生過敏反應，可以等劑量直接替換",
-        "B": "albumin-bound paclitaxel與paclitaxel相比，較不易產生過敏反應，可以等劑量直接替換",
-        "C": "bortezomib可靜脈注射或皮下注射給藥，而靜脈注射可大幅減少周邊神經毒性的發生",
-        "D": "bevacizumab可能造成proteinuria，嚴重可能造成腎病徵候群"
+        "A": "doxorubicin與bleomycin均因為心臟毒性的關係,都須注意累積劑量",
+        "B": "albumin-bound paclitaxel與paclitaxel相比,較不易產生過敏反應,可以等劑量直接替換",
+        "C": "bortezomib可靜脈注射或皮下注射給藥,而靜脈注射可大幅減少周邊神經毒性的發生",
+        "D": "bevacizumab可能造成proteinuria,嚴重可能造成腎病徵候群"
       },
       "answer": "D",
       "explanation": ""
@@ -78343,7 +78343,7 @@
       "number": 29,
       "question": "下列何種藥品是以fat emulsion形式輸注？",
       "options": {
-        "A": "mphotericin B deoxycholate",
+        "A": "liposomal irinotecan",
         "B": "albumin-bound paclitaxel",
         "C": "amphotericin B deoxycholate",
         "D": "propofol"
@@ -78902,7 +78902,7 @@
       "number": 57,
       "question": "下列何者不屬於一級藥品資訊來源（primary drug information sources）？",
       "options": {
-        "A": "dverse Drug Reactions Bulletin",
+        "A": "Pharmacoeconomics",
         "B": "American Journal of Pharmaceutical Education",
         "C": "Annals of Pharmacotherapy",
         "D": "Adverse Drug Reactions Bulletin"
@@ -78922,7 +78922,7 @@
       "number": 58,
       "question": "Vytorin ® tab是由下列那兩個藥品所組成之複方產品？",
       "options": {
-        "A": "mlodipine + atorvastatin",
+        "A": "ezetimibe + simvastatin",
         "B": "amlodipine + atorvastatin",
         "C": "valsartan + hydrochlorothiazide",
         "D": "felodipine + enalapril"
@@ -80003,7 +80003,7 @@
       "number": 32,
       "question": "有關藥品引發肝傷害之敘述，下列何者錯誤？",
       "options": {
-        "A": "cetaminophen引起之急性肝衰竭鮮少需要進行肝臟移植",
+        "A": "急性肝炎約有10%~20%為藥品引起",
         "B": "acetaminophen引起之急性肝衰竭鮮少需要進行肝臟移植",
         "C": "監測藥品引發肝傷害須針對不同藥品與病人的風險因子調整",
         "D": "膽汁鬱積型肝傷害serum bilirubin通常會升高"
@@ -80023,7 +80023,7 @@
       "number": 33,
       "question": "有關緩解噁心嘔吐（N&V）藥品之敘述，下列何者正確？",
       "options": {
-        "A": "ntihistamines、anticholinergics用於預防動暈引起的N&V",
+        "A": "antacids可以處理簡單的N&V,對慢性腎臟疾病者最有效",
         "B": "antihistamines、anticholinergics用於預防動暈引起的N&V",
         "C": "benzodiazepines通常用於化學治療引起的急性與延遲性N&V",
         "D": "corticosteroids最適合用於預防化學治療所引起的預期性嘔吐"
@@ -80542,7 +80542,7 @@
       "number": 59,
       "question": "下列何者為SJS/TEN（Stevens-Johnson syndrome/toxic epidermal necrolysis）引發高燒之退燒首選？",
       "options": {
-        "A": "cetaminophen",
+        "A": "aspirin",
         "B": "diclofenac",
         "C": "acetaminophen",
         "D": "ibuprofen"
@@ -80802,10 +80802,10 @@
       "number": 72,
       "question": "下列何者不適用於治療急性antibody-mediated rejection？",
       "options": {
-        "A": "ntithymocyte globulin（ATG）",
-        "B": "antithymocyte globulin（ATG）",
+        "A": "azathioprine",
+        "B": "antithymocyte globulin (ATG)",
         "C": "corticosteroid",
-        "D": "intravenous immunoglobulin（IVIG）"
+        "D": "intravenous immunoglobulin (IVIG)"
       },
       "answer": "A",
       "explanation": ""

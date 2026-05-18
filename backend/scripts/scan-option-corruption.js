@@ -29,7 +29,9 @@ for (const file of files) {
     const o = keys.map(k => String(q.options[k] ?? '').trim())
     let reason = null
     for (let x = 0; x < 4 && !reason; x++) for (let y = 0; y < 4 && !reason; y++) {
-      if (x !== y && o[x].length >= MIN_LEN && o[y].length === o[x].length + 1 && o[y].slice(1) === o[x])
+      // 排除否定詞前綴（「具有」vs「不具有」是正常選項，非解析損壞）
+      if (x !== y && o[x].length >= MIN_LEN && o[y].length === o[x].length + 1 && o[y].slice(1) === o[x]
+          && !'不非未無'.includes(o[y][0]))
         reason = `${keys[x]} = ${keys[y]} 去首字「${o[y][0]}」`
     }
     if (!reason) for (let i = 0; i < 4 && !reason; i++) for (let j = i + 1; j < 4 && !reason; j++) {

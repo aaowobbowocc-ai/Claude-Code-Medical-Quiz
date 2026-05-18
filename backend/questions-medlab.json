@@ -13567,10 +13567,10 @@
     "number": 22,
     "question": "已知某人之動脈血中之酸鹼值為7.1，則下列敘述何者最正確？",
     "options": {
-      "A": "此人為酸中毒，且其血漿[HCO3",
-      "B": "－]/[H2CO3]比值為10",
-      "C": "此人為酸中毒，且其血漿[HCO3",
-      "D": "－]/[H2CO3]比值為1"
+      "A": "此人為酸中毒,且其血漿[HCO3¯]/[H2CO3]比值為10",
+      "B": "此人為酸中毒,且其血漿[HCO3¯]/[H2CO3]比值為1",
+      "C": "此人為鹼中毒,且其血漿[HCO3¯]/[H2CO3]比值為10",
+      "D": "此人為鹼中毒,且其血漿[HCO3¯]/[H2CO3]比值為1"
     },
     "answer": "A",
     "explanation": ""
@@ -134855,10 +134855,10 @@
     "number": 8,
     "question": "下列有關dinitrophenol（DNP）的性質敘述，何者正確？",
     "options": {
-      "A": "具有免疫性（immunogenicity）和抗原性（antigenicity）",
-      "B": "不具有免疫性（immunogenicity）和抗原性（antigenicity）",
-      "C": "只具有免疫性（immunogenicity）",
-      "D": "只具有抗原性（antigenicity）"
+      "A": "具有免疫性(immunogenicity)和抗原性(antigenicity)",
+      "B": "不具有免疫性(immunogenicity)和抗原性(antigenicity)",
+      "C": "C·只具有免疫性(immunogenicity)",
+      "D": "只具有抗原性(antigenicity)"
     },
     "answer": "D",
     "explanation": ""
@@ -162645,7 +162645,7 @@
     "number": 34,
     "question": "輸⾎前檢驗結果如下：anti-A（4＋）、anti-B（0）、A1 cell（1＋）、B cell（4＋），抗體篩檢陰性，疑為 ABO亞⾎型，則⽤下列何種試劑加做檢驗最合理？",
     "options": {
-      "A": "rachis hypogaea",
+      "A": "Ulex europaeus",
       "B": "Dolichos biflorus",
       "C": "Arachis hypogaea",
       "D": "Glycine soja"
@@ -259449,10 +259449,10 @@
     "number": 46,
     "question": "有關 vitamin K-dependent（VKD）凝血相關因子的敘述",
     "options": {
-      "A": "參與凝血與抗凝血作用者皆為serine protease",
-      "B": "其 glutamic acid 轉變為γ-carboxyglutamic acid",
-      "C": "其 glutamic acid 轉變為γ-carboxyglutamic acid",
-      "D": "其 glutamic acid 轉變為γ-carboxyglutamic acid"
+      "A": "參與凝血與抗凝血作用者皆為 serine protease",
+      "B": "其glutamic acid轉變為y-carboxyglutamic acid 主要是藉由y-glutamyl hydroxylase 的催化",
+      "C": "其glutamic acid轉變為y-carboxyglutamic acid 可增加與鈣離子的親和力",
+      "D": "其glutamic acid轉變為y-carboxyglutamic acid 需要氧化態維生素K作為輔酶"
     },
     "answer": "C",
     "explanation": ""
@@ -272458,10 +272458,10 @@
     "number": 51,
     "question": " 下列何種高通量基因定序平台，在文庫建構（library construction）之後，不需要用到聚合酶連鎖反應 （polymerase chain reaction, PCR）大量增幅（amplification）？",
     "options": {
-      "A": "MiSeq（Illumina）",
-      "B": "iSeq（Illumina）",
-      "C": "Sequel（PacBio）",
-      "D": "Ion Torrent（ThermoFisher）"
+      "A": "MiSeq (Illumina)",
+      "B": "iSeq (Illumina)",
+      "C": "Sequel (PacBio)",
+      "D": "Ion Torrent (ThermoFisher)"
     },
     "answer": "C",
     "explanation": ""

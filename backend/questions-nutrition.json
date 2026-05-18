@@ -8203,10 +8203,10 @@
       "number": 2,
       "question": "下列計算身體質量指數（body mass index）的公式何者正確？",
       "options": {
-        "A": "體重（公斤）÷ 身高（公分）",
-        "B": "體重（公斤）÷ 身高（公分）",
-        "C": "2",
-        "D": "體重（公斤）"
+        "A": "體重(公斤)÷身高(公分)",
+        "B": "體重(公斤)÷身高(公分)²",
+        "C": "體重(公斤)²÷身高(公尺)",
+        "D": "體重(公斤)÷身高(公尺)²"
       },
       "answer": "D",
       "explanation": ""
@@ -34894,9 +34894,9 @@
       "question": "關於國民飲食指標（100 年）之建議，下列何者正確？",
       "options": {
         "A": "少素多葷少精緻，新鮮粗食少加工",
-        "B": "少素多葷少精緻，新鮮粗食少加工",
+        "B": "來源標示要注意，衛生安全才能吃",
         "C": "若要飲酒不過量，哺乳絕對不喝酒",
-        "D": "來源標示要注意，衛生安全才能吃"
+        "D": "過季在地好食材，多樣選食保健康"
       },
       "answer": "B",
       "explanation": ""
@@ -35483,9 +35483,9 @@
       "question": "社區問題確認後，需提出解決方案，以彼此不認識、不同層級、不同專業或經驗的人為小組成員討論社區營養問題，所有人逐一寫下意見及解決方案，方案歸類編號後，由成員對各方案評分，選出最後解決方案，屬於下列何種方法？",
       "options": {
         "A": "delphi technique",
-        "B": "delphi technique",
+        "B": "focus group interview",
         "C": "in-depth interview",
-        "D": "focus group interview"
+        "D": "nominal group"
       },
       "answer": "D",
       "explanation": ""
@@ -35609,9 +35609,9 @@
       "question": "關於「糧食安全」概念架構中，「食物攝取」和「健康狀況」的直接原因，下列敘述何者錯誤？",
       "options": {
         "A": "「照護能量」為「食物攝取」的直接原因",
-        "B": "「照護能量」為「食物攝取」的直接原因",
+        "B": "「衛生服務」為「健康狀況」的直接原因",
         "C": "「環境狀況」為「健康狀況」的直接原因",
-        "D": "「衛生服務」為「健康狀況」的直接原因"
+        "D": "「環境狀況」為「食物攝取」的直接原因"
       },
       "answer": "A",
       "explanation": ""
@@ -35715,9 +35715,9 @@
       "question": "下列何者是用餐時胰液分泌增加的原因？",
       "options": {
         "A": "食物的味道刺激副交感神經作用",
-        "B": "食物的味道刺激副交感神經作用",
+        "B": "食物進入胃需要胰液幫助蛋白質分解",
         "C": "十二指腸的鹼性增加需要中和",
-        "D": "食物進入胃需要胰液幫助蛋白質分解"
+        "D": "膽囊收縮刺激胰臟製造分泌胰液"
       },
       "answer": "A",
       "explanation": ""
@@ -36094,9 +36094,9 @@
       "question": "下列何種酵素其所催化之反應需要 thiamine pyrophosphate 作為輔酶?",
       "options": {
         "A": "lactate dehydrogenase",
-        "B": "lactate dehydrogenase",
+        "B": "transaldolase",
         "C": "glycerol kinase",
-        "D": "transaldolase"
+        "D": "transketolase"
       },
       "answer": "D",
       "explanation": ""
@@ -36115,9 +36115,9 @@
       "question": "下列何者為紅血球細胞糖解反應（glycolysis）之中間產物，其存在可降低血紅蛋白（hemoglobin）與氧氣之親和力？",
       "options": {
         "A": "2,3-bisphosphoglycerate",
-        "B": "2,3-bisphosphoglycerate",
+        "B": "1,3-bisphosphoglycerate",
         "C": "glyceraldehyde-3-phosphate",
-        "D": "1,3-bisphosphoglycerate"
+        "D": "fructose-2,6-bisphosphate"
       },
       "answer": "A",
       "explanation": ""
@@ -36557,9 +36557,9 @@
       "question": "依據食品良好衛生規範，食品業者設置建築與設施時，洗手消毒設施之設計，應於明顯之位置懸掛下列何種標示？",
       "options": {
         "A": "簡明易懂的洗手方法之標示",
-        "B": "簡明易懂的洗手方法之標示",
+        "B": "提醒如廁後應洗手之標示",
         "C": "提醒使用消毒設施之標示",
-        "D": "提醒如廁後應洗手之標示"
+        "D": "清潔劑使用方法之標示"
       },
       "answer": "A",
       "explanation": ""
@@ -36578,9 +36578,9 @@
       "question": "健康食品之許可證於有效期間內，如有下列何種事由者，中央主管機關不需對已經許可之健康食品重新評估？",
       "options": {
         "A": "科學研究對該產品之功效發生疑義時",
-        "B": "科學研究對該產品之功效發生疑義時",
+        "B": "產品之成分、配方或生產方式受到質疑時",
         "C": "經食品衛生主管機關認定有必要時",
-        "D": "產品之成分、配方或生產方式受到質疑時"
+        "D": "原料之原產地有疑義時"
       },
       "answer": "D",
       "explanation": ""
@@ -36725,9 +36725,9 @@
       "question": "以實驗動物進行致畸胎性實驗所獲得的評估結果，對人類健康具有下列何種意義？",
       "options": {
         "A": "可做進一步實驗或評估的重要參考依據",
-        "B": "可做進一步實驗或評估的重要參考依據",
-        "C": "可據以推算人類之每日最高攝入量（ADI）",
-        "D": "可以直接判定對人類也有完全相同的情形"
+        "B": "可以直接判定對人類也有完全相同的情形",
+        "C": "可據以推算人類之每日最高攝入量(ADI)",
+        "D": "所獲得之結果即為半數致死劑量"
       },
       "answer": "A",
       "explanation": ""
@@ -37061,9 +37061,9 @@
       "question": "有關仙人掌桿菌之敘述，下列何者錯誤？",
       "options": {
         "A": "是米飯及馬鈴薯等澱粉性食物常見之中毒菌",
-        "B": "是米飯及馬鈴薯等澱粉性食物常見之中毒菌",
+        "B": "被污染的食物不包括肉類及牛乳",
         "C": "可能會分泌毒素",
-        "D": "被污染的食物不包括肉類及牛乳"
+        "D": "會產生孢子"
       },
       "answer": "B",
       "explanation": ""
@@ -37124,9 +37124,9 @@
       "question": "下列何者為產生腎臟病變之黃變米毒素？",
       "options": {
         "A": "citerovirdin",
-        "B": "citerovirdin",
+        "B": "citrinin",
         "C": "trichothecene",
-        "D": "citrinin"
+        "D": "luteoskyrin"
       },
       "answer": "D",
       "explanation": ""
@@ -37166,9 +37166,9 @@
       "question": "有關餐飲業廢棄物的分類處理，下列敘述何者錯誤？",
       "options": {
         "A": "盛裝酸、鹼、漂白水的容器是屬於有害廢棄物",
-        "B": "盛裝酸、鹼、漂白水的容器是屬於有害廢棄物",
+        "B": "衛生筷屬於可回收廢棄物",
         "C": "玻璃瓶屬於可回收廢棄物",
-        "D": "衛生筷屬於可回收廢棄物"
+        "D": "塑膠瓶與塑膠袋屬於不可回收廢棄物"
       },
       "answer": "B",
       "explanation": ""
@@ -38113,9 +38113,9 @@
       "question": "供膳員工的工作衛生習慣管理，下列何種行為是不被允許？",
       "options": {
         "A": "同一塊砧板切熟食與生食前需要清洗",
-        "B": "同一塊砧板切熟食與生食前需要清洗",
+        "B": "不可用手直接接觸食品",
         "C": "所有的熟食必須蓋好",
-        "D": "不可用手直接接觸食品"
+        "D": "工作時不用手抓、摸頭髮"
       },
       "answer": "A",
       "explanation": ""
@@ -38302,9 +38302,9 @@
       "question": "下列何者不是選擇管灌食插管方式的考慮因素？",
       "options": {
         "A": "需要使用管灌食的時間長短",
-        "B": "需要使用管灌食的時間長短",
+        "B": "患者是否能插管",
         "C": "患者發生肺吸入(aspiration)的危險性",
-        "D": "患者是否能插管"
+        "D": "患者的營養需要"
       },
       "answer": "D",
       "explanation": ""
@@ -38344,9 +38344,9 @@
       "question": "提供蛋白質、脂肪或醣類等單一營養素的配方，可用來改變配方組成者稱為：",
       "options": {
         "A": "polymeric formula",
-        "B": "polymeric formula",
+        "B": "monomeric formula",
         "C": "modular formula",
-        "D": "monomeric formula"
+        "D": "blenderized diet formula"
       },
       "answer": "C",
       "explanation": ""
@@ -38575,9 +38575,9 @@
       "question": "醫生建議李先生服用口服降血糖藥物控制血糖值，若要監測其後3 個月中血糖控制狀況，下列何者為最適合之參考指標？",
       "options": {
         "A": "fasting blood glucose",
-        "B": "fasting blood glucose",
+        "B": "postprandial blood glucose",
         "C": "A1c",
-        "D": "postprandial blood glucose"
+        "D": "OGTT"
       },
       "answer": "C",
       "explanation": ""
@@ -38806,9 +38806,9 @@
       "question": "根據 2009 SCCM & ASPEN guidelines, 建議不可添加下列何者在重症患者的灌食配方中?",
       "options": {
         "A": "insoluble fiber",
-        "B": "insoluble fiber",
+        "B": "vitamin C",
         "C": "vitamin A",
-        "D": "vitamin C"
+        "D": "zinc"
       },
       "answer": "A",
       "explanation": ""
@@ -38827,9 +38827,9 @@
       "question": "對於下列何種病人，以營養支持療法維持瘦體組織（lean body mass）之效果最差？",
       "options": {
         "A": "因慢性疾病而引起的營養不良患者",
-        "B": "因慢性疾病而引起的營養不良患者",
+        "B": "腸胃道手術之後的患者",
         "C": "罹患全身性發炎症候群或多重器官衰竭的患者",
-        "D": "腸胃道手術之後的患者"
+        "D": "由於飢餓引發營養不良的個體"
       },
       "answer": "C",
       "explanation": ""
@@ -38953,9 +38953,9 @@
       "question": "對於造血細胞移植（hematopoietic cell transplantation）病患在治療上的建議，下列敘述何者錯誤？",
       "options": {
         "A": "需注意藥物、飲食改變和避免感染等問題",
-        "B": "需注意藥物、飲食改變和避免感染等問題",
+        "B": "安全上特別要留意食物是否受到污染",
         "C": "食物的儲存建議在 10℃ 以下",
-        "D": "安全上特別要留意食物是否受到污染"
+        "D": "避免生食"
       },
       "answer": "C",
       "explanation": ""
@@ -39015,10 +39015,10 @@
       "number": 40,
       "question": "老年人的葉酸營養狀況與下列何種疾病發生的危險性較無關聯？",
       "options": {
-        "A": "軟骨症（osteomalacia）",
-        "B": "軟骨症（osteomalacia）",
-        "C": "粥狀動脈栓塞（atherothrombosis）",
-        "D": "阿茲海默氏（Alzheimer's）症"
+        "A": "軟骨症 (osteomalacia)",
+        "B": "阿茲海默氏 (Alzheimer's) 症",
+        "C": "粥狀動脈栓塞 (atherothrombosis)",
+        "D": "帕金森氏 (Parkinson's) 症"
       },
       "answer": "A",
       "explanation": ""
@@ -39479,9 +39479,9 @@
       "question": "下列何者是在視網膜中與視紫蛋白結合而產生視覺的維生素 A 衍生物?",
       "options": {
         "A": "11-cis-retinal",
-        "B": "11-cis-retinal",
+        "B": "11-trans-retinol",
         "C": "11-cis-retinol",
-        "D": "11-trans-retinol"
+        "D": "11-trans-retinal"
       },
       "answer": "A",
       "explanation": ""
@@ -39751,10 +39751,10 @@
       "number": 35,
       "question": "關於 sports anemia 的敘述,下列何者正確?",
       "options": {
-        "A": "並非真正的「iron-deficient」anemia",
-        "B": "並非真正的「iron-deficient」anemia",
+        "A": "並非真正的「iron-deficient」 anemia",
+        "B": "必需長時間、給與高劑量鐵的治療",
         "C": "主要是因高溫下大量流汗導致鐵的流失所造成的",
-        "D": "必需長時間、給與高劑量鐵的治療"
+        "D": "各類型的運動選手都會發生"
       },
       "answer": "A",
       "explanation": ""
@@ -39857,9 +39857,9 @@
       "question": "下列有關基礎代謝率（basal metabolic rate）的敘述，何者錯誤？",
       "options": {
         "A": "休息狀態下維持生命所需的基本能量",
-        "B": "休息狀態下維持生命所需的基本能量",
+        "B": "男性的基礎代謝率高於女性",
         "C": "飢餓狀態下的基礎代謝率會增加",
-        "D": "男性的基礎代謝率高於女性"
+        "D": "懷孕期間的基礎代謝率會增加"
       },
       "answer": "C",
       "explanation": ""
@@ -41139,9 +41139,9 @@
       "question": "轉酮基酶（transketolase）在戊醣磷酸途徑中參與二碳基團之轉移，其所需之輔酶為何？",
       "options": {
         "A": "pyridoxal phosphate",
-        "B": "pyridoxal phosphate",
+        "B": "biotin",
         "C": "thiamine pyrophosphate",
-        "D": "biotin"
+        "D": "flavin adenine dinucleotide"
       },
       "answer": "C",
       "explanation": ""
@@ -41202,9 +41202,9 @@
       "question": "下列何者為同質多醣（homopolysaccharide）？",
       "options": {
         "A": "chondrotin sulfate",
-        "B": "chondrotin sulfate",
+        "B": "chitin",
         "C": "hyaluronic acid",
-        "D": "chitin"
+        "D": "keratan sulfate"
       },
       "answer": "B",
       "explanation": ""
@@ -44168,9 +44168,9 @@
       "question": "當體內大量產生下列何種物質時會造成 nitrogen loss?",
       "options": {
         "A": "Oxyhemoglobin",
-        "B": "Oxyhemoglobin",
-        "C": "Interleukin-6",
-        "D": "DNA"
+        "B": "Interleukin-6",
+        "C": "DNA",
+        "D": "Transferrin"
       },
       "answer": "B",
       "explanation": ""
@@ -44273,9 +44273,9 @@
       "question": "下列何者為前列腺素 (prostaglandins) 合成酵素之一,且其活性會受到 aspirin 或 acetaminophen 的抑制?",
       "options": {
         "A": "adenylate cyclase",
-        "B": "adenylate cyclase",
-        "C": "phospholipase A2",
-        "D": "cyclooxygenase"
+        "B": "phospholipase A₂",
+        "C": "cyclooxygenase",
+        "D": "lipoxygenase"
       },
       "answer": "C",
       "explanation": ""
@@ -44672,9 +44672,9 @@
       "question": "評估老年人的蛋白質狀態，下列何項指標最合適？",
       "options": {
         "A": "Serum albumin",
-        "B": "Serum albumin",
-        "C": "Serum transferrin",
-        "D": "Plasma prealbumin"
+        "B": "Serum transferrin",
+        "C": "Plasma prealbumin",
+        "D": "Plasma total protein"
       },
       "answer": "A",
       "explanation": ""
@@ -44861,9 +44861,9 @@
       "question": "葉綠素（chlorophyll）經一般烹調加熱處理後之產物為何？",
       "options": {
         "A": "chlorin purpurins",
-        "B": "chlorin purpurins",
-        "C": "pheophytin",
-        "D": "pheophorbide"
+        "B": "pheophytin",
+        "C": "pheophorbide",
+        "D": "methyl chlorophyllide"
       },
       "answer": "B",
       "explanation": ""
@@ -50986,10 +50986,10 @@
       "number": 24,
       "question": "在運動中骨骼肌因糖解反應（glycolysis）所產生之NADH會被下列何種脫氫酶所氧化？ lactate dehydrogenase succinate dehydrogenase",
       "options": {
-        "A": "isocitrate",
-        "B": "dehydrogenase",
-        "C": "pyruvate",
-        "D": "dehydrogenase"
+        "A": "lactate dehydrogenase",
+        "B": "succinate dehydrogenase",
+        "C": "isocitrate dehydrogenase",
+        "D": "pyruvate dehydrogenase"
       },
       "answer": "A",
       "explanation": ""
@@ -51567,9 +51567,9 @@
       "question": "欲研究胚胎形成的過程中因化學物質之誘發，而可能導致胎兒在構造上或功能上之改變，下列何者為可進行之安全性評估試驗？",
       "options": {
         "A": "genotoxicity test",
-        "B": "genotoxicity test",
+        "B": "carcinogenicity test",
         "C": "teratogenicity test",
-        "D": "carcinogenicity test"
+        "D": "reproduction test"
       },
       "answer": "C",
       "explanation": ""
@@ -53048,9 +53048,9 @@
       "question": "長期營養不良患者，給予積極營養支持後出現低血鉀與低血磷的症狀時，可能是發生：",
       "options": {
         "A": "refeeding syndrome",
-        "B": "refeeding syndrome",
+        "B": "aspiration",
         "C": "bacterial translocation",
-        "D": "aspiration"
+        "D": "dumping syndrome"
       },
       "answer": "A",
       "explanation": ""
@@ -57753,9 +57753,9 @@
       "question": "下列何者屬於內生性的抗氧化物指標？",
       "options": {
         "A": "ascorbic acid",
-        "B": "ascorbic acid",
+        "B": "tocopherols",
         "C": "carotenoids",
-        "D": "tocopherols"
+        "D": "glutathione"
       },
       "answer": "D",
       "explanation": ""
@@ -63435,10 +63435,10 @@
       "number": 6,
       "question": "下列何者可將pepsinogen 活化成pepsin？",
       "options": {
-        "A": "下列何者可將pepsinogen",
-        "B": "Gastric acid",
-        "C": "Gastric acid",
-        "D": "Coenzyme A"
+        "A": "Gastric acid",
+        "B": "Coenzyme A",
+        "C": "Trypsin",
+        "D": "Enterokinase"
       },
       "answer": "A",
       "explanation": ""
@@ -70025,10 +70025,10 @@
       "number": 15,
       "question": "下列何者是病毒感染的細胞被毒殺型T 淋巴細胞（T lymphocyte）辨識時所必需？",
       "options": {
-        "A": "Major histocompatibility complex I",
-        "B": "（MHC I）/CD4",
-        "C": "Major histocompatibility complex I",
-        "D": "（MHC I）/CD8"
+        "A": "Major histocompatibility complex I (MHC I) /CD4",
+        "B": "Major histocompatibility complex I (MHC I) /CD8",
+        "C": "Major histocompatibility complex II (MHC II) /CD4",
+        "D": "Major histocompatibility complex II (MHC II) /CD8"
       },
       "answer": "B",
       "explanation": ""
@@ -70226,9 +70226,9 @@
       "question": "下列何者是陸地上動物細胞膜中，不飽和度最高的主要脂肪酸？",
       "options": {
         "A": "linoleic acid",
-        "B": "linoleic acid",
-        "C": "-linolenic acid",
-        "D": "arachidonic acid"
+        "B": "alpha-linolenic acid",
+        "C": "arachidonic acid",
+        "D": "eicosapentaenoic acid"
       },
       "answer": "C",
       "explanation": ""
@@ -70385,10 +70385,10 @@
       "number": 33,
       "question": "維生素K 缺乏時，成骨細胞中osteocalcin 的glutamate 殘基無法進行下列何種反應？",
       "options": {
-        "A": "維生素K缺乏時，成骨細胞中",
-        "B": "phosphorylation",
-        "C": "的glutamate殘基無法進行下列何種反應？",
-        "D": "phosphorylation"
+        "A": "phosphorylation",
+        "B": "acetylation",
+        "C": "hydroxylation",
+        "D": "gamma-carboxylation"
       },
       "answer": "D",
       "explanation": ""
@@ -73546,10 +73546,10 @@
       "number": 31,
       "question": "下列基因突變相關的疾病與礦物質代謝異常的關聯，何者正確？",
       "options": {
-        "A": "Menkes disease",
-        "B": "與copper toxicity",
-        "C": "與copper toxicity",
-        "D": "與iron deficiency"
+        "A": "Menkes disease 與 copper toxicity",
+        "B": "Hemochromatosis 與 iron deficiency",
+        "C": "Wilson disease 與 copper deficiency",
+        "D": "Acrodermatitis enteropathica 與 zinc deficiency"
       },
       "answer": "D",
       "explanation": ""
@@ -73727,9 +73727,9 @@
       "question": "大豆中含有下列何種植化素，具有類雌激素的作用？",
       "options": {
         "A": "phenolic acid",
-        "B": "phenolic acid",
+        "B": "phytosterol",
         "C": "isoflavones",
-        "D": "phytosterol"
+        "D": "isothiocyanate"
       },
       "answer": "C",
       "explanation": ""
@@ -79636,10 +79636,10 @@
       "number": 15,
       "question": "抗原呈現細胞（antigen presenting cells）活化輔助型T 細胞（helper T cell）的過程中需要那些因 子的參與？",
       "options": {
-        "A": "Major histocompatibility complex I",
-        "B": "（MHC I）/CD4/細胞激素",
-        "C": "Major histocompatibility complex I",
-        "D": "（MHC I）/CD8/干擾素"
+        "A": "Major histocompatibility complex I (MHC I)/CD4/細胞激素",
+        "B": "Major histocompatibility complex I (MHC I)/CD8/干擾素",
+        "C": "Major histocompatibility complex II (MHC II)/CD4/細胞激素",
+        "D": "Major histocompatibility complex II (MHC II)/CD8/干擾素"
       },
       "answer": "C",
       "explanation": ""
@@ -79839,7 +79839,7 @@
         "A": "triglyceride",
         "B": "sphingomyelin",
         "C": "phosphatidylcholine",
-        "D": "phosphatidylcholine"
+        "D": "cholesterol"
       },
       "answer": "A",
       "explanation": ""
@@ -90449,7 +90449,7 @@
       "question": "TQF 即時餐食工廠專則之規範，要求清潔作業區落菌數應在多少以下？",
       "options": {
         "A": "30 CFU/5 min",
-        "B": "30 CFU/5 min",
+        "B": "50 CFU/5 min",
         "C": "100 CFU/10 min",
         "D": "150 CFU/10 min"
       },
@@ -91854,9 +91854,9 @@
       "question": "下列賀爾蒙何者與腎臟調節血壓無關？",
       "options": {
         "A": "renin",
-        "B": "agiotension II",
+        "B": "angiotensin II",
         "C": "aldosterone",
-        "D": "agiotension II"
+        "D": "erythropoietin"
       },
       "answer": "D",
       "explanation": ""

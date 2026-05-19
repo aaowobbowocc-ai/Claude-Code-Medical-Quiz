@@ -34,6 +34,7 @@ const EXAM_FILES = {
   'clinical-psychology': 'questions-clinical-psychology.json',
   'counseling-psychology': 'questions-counseling-psychology.json',
   'public-health': 'questions-public-health.json',
+  'dental-tech': 'questions-dental-tech.json',
   optometrist: 'questions-optometrist.json',
   'optometrist-junior': 'questions-optometrist-junior.json',
   'civil-senior': 'questions-civil-senior.json',

@@ -1,0 +1,76 @@
+{
+  "id": "dental-tech",
+  "name": "牙體技術師",
+  "short": "牙體技術",
+  "icon": "🦷",
+  "category": "medical",
+  "questionsFile": "questions-dental-tech.json",
+  "totalQ": 1574,
+  "passScore": 120,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "牙體技術學(一)",
+      "subject": "牙體技術學(一)",
+      "subjects": "口腔解剖生理學、牙體形態學、牙科材料學",
+      "count": 50
+    },
+    {
+      "id": "paper2",
+      "name": "牙體技術學(二)",
+      "subject": "牙體技術學(二)",
+      "subjects": "固定義齒技術學",
+      "count": 50
+    },
+    {
+      "id": "paper3",
+      "name": "牙體技術學(三)",
+      "subject": "牙體技術學(三)",
+      "subjects": "全口活動義齒技術學、活動局部義齒技術學",
+      "count": 50
+    },
+    {
+      "id": "paper4",
+      "name": "牙體技術學(四)",
+      "subject": "牙體技術學(四)",
+      "subjects": "牙科矯正技術學、兒童牙科技術學、牙技法規與倫理",
+      "count": 50
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" },
+    { "id": 1, "tag": "dt_basic", "name": "牙體技術學(一)" },
+    { "id": 2, "tag": "dt_fixed", "name": "牙體技術學(二)" },
+    { "id": 3, "tag": "dt_removable", "name": "牙體技術學(三)" },
+    { "id": 4, "tag": "dt_ortho", "name": "牙體技術學(四)" }
+  ],
+  "ui": {
+    "tagNames": {
+      "dt_basic": "牙體技術學(一)",
+      "dt_fixed": "牙體技術學(二)",
+      "dt_removable": "牙體技術學(三)",
+      "dt_ortho": "牙體技術學(四)"
+    },
+    "stageStyles": {
+      "dt_basic": { "icon": "🦷", "color": "#3B82F6" },
+      "dt_fixed": { "icon": "🔩", "color": "#10B981" },
+      "dt_removable": { "icon": "🪥", "color": "#F97316" },
+      "dt_ortho": { "icon": "📐", "color": "#8B5CF6" }
+    },
+    "subjectColors": {}
+  },
+  "seo": {
+    "platformName": "國考知識王 — 牙體技術師題庫練習平台",
+    "title": "牙體技術師國考練習",
+    "fullName": "牙體技術師",
+    "shortName": "牙體技術師",
+    "studentType": "牙體技術師高考應考生、牙體技術系學生",
+    "years": "107 起",
+    "totalQ": 1574,
+    "examDesc": "牙體技術師考試（專技人員高等考試），共 4 科筆試（另有實作科目，本平台僅收錄筆試單選題），每科 50 題。",
+    "paperDesc": "共 4 科筆試：牙體技術學(一)(二)(三)(四)，涵蓋口腔解剖、固定義齒、活動義齒、牙科矯正等技術學。",
+    "subjects": "口腔解剖生理學、牙體形態學、牙科材料學、固定義齒技術學、活動義齒技術學、牙科矯正技術學",
+    "mockDesc": "牙體技術師模擬考"
+  }
+}

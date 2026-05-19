@@ -69751,12 +69751,12 @@
       "subject_name": "解剖學",
       "stage_id": 1,
       "number": 99,
-      "question": "某種疾病的篩選方法研究結果如下表，則下列那一個是假陽性率（false positivity）？疾病篩檢",
+      "question": "某種疾病的篩選方法研究結果如下表（疾病「有／無」×篩檢「陽性／陰性」）：篩檢陽性者，疾病有＝a、疾病無＝c；篩檢陰性者，疾病有＝b、疾病無＝d。則下列哪一個是假陽性率（false positivity）？",
       "options": {
-        "A": "有",
-        "B": "無",
-        "C": "陽性",
-        "D": "a"
+        "A": "a/(a+b)",
+        "B": "a/(a+c)",
+        "C": "d/(b+d)",
+        "D": "c/(c+d)"
       },
       "answer": "D",
       "explanation": ""

@@ -32,6 +32,7 @@ const EXAM_FILES = {
   audiologist: 'questions-audiologist.json',
   'speech-therapist': 'questions-speech-therapist.json',
   'clinical-psychology': 'questions-clinical-psychology.json',
+  'counseling-psychology': 'questions-counseling-psychology.json',
   'civil-senior': 'questions-civil-senior.json',
   customs: 'questions-customs.json',
   judicial: 'questions-judicial.json',

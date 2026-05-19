@@ -1,0 +1,66 @@
+{
+  "id": "optometrist-junior",
+  "name": "驗光生",
+  "short": "驗光生",
+  "icon": "🕶️",
+  "category": "medical",
+  "questionsFile": "questions-optometrist-junior.json",
+  "totalQ": 1290,
+  "passScore": 90,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "眼球構造與倫理法規概要",
+      "subject": "眼球構造與倫理法規概要",
+      "subjects": "眼球構造、眼生理概要、專業倫理與法規",
+      "count": 50
+    },
+    {
+      "id": "paper2",
+      "name": "驗光學概要",
+      "subject": "驗光學概要",
+      "subjects": "屈光不正、驗光程序、視覺功能檢查概要",
+      "count": 50
+    },
+    {
+      "id": "paper3",
+      "name": "隱形眼鏡學概要",
+      "subject": "隱形眼鏡學概要",
+      "subjects": "隱形眼鏡驗配、鏡片保養、配鏡概要",
+      "count": 50
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" },
+    { "id": 1, "tag": "optj_anatomy", "name": "眼球構造與法規" },
+    { "id": 2, "tag": "optj_optometry", "name": "驗光學概要" },
+    { "id": 3, "tag": "optj_contact_lens", "name": "隱形眼鏡學概要" }
+  ],
+  "ui": {
+    "tagNames": {
+      "optj_anatomy": "眼球構造與法規",
+      "optj_optometry": "驗光學概要",
+      "optj_contact_lens": "隱形眼鏡學概要"
+    },
+    "stageStyles": {
+      "optj_anatomy": { "icon": "👁️", "color": "#3B82F6" },
+      "optj_optometry": { "icon": "📐", "color": "#F97316" },
+      "optj_contact_lens": { "icon": "🕶️", "color": "#8B5CF6" }
+    },
+    "subjectColors": {}
+  },
+  "seo": {
+    "platformName": "國考知識王 — 驗光生題庫練習平台",
+    "title": "驗光生國考練習",
+    "fullName": "驗光生",
+    "shortName": "驗光生",
+    "studentType": "驗光生普考應考生、視光科學生",
+    "years": "106 起",
+    "totalQ": 1290,
+    "examDesc": "驗光生考試（專技人員普通考試），每年舉辦，共 3 科單選題，每科 50 題、每題 2 分。",
+    "paperDesc": "共 3 科：眼球構造與倫理法規概要、驗光學概要、隱形眼鏡學概要。",
+    "subjects": "眼球構造、驗光學概要、隱形眼鏡學概要",
+    "mockDesc": "驗光生模擬考"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "optometrist",
+  "name": "驗光師",
+  "short": "驗光師",
+  "icon": "👓",
+  "category": "medical",
+  "questionsFile": "questions-optometrist.json",
+  "totalQ": 2078,
+  "passScore": 150,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "眼球解剖生理學與倫理法規",
+      "subject": "眼球解剖生理學與倫理法規",
+      "subjects": "眼球解剖、眼生理、視覺神經、專業倫理與法規",
+      "count": 50
+    },
+    {
+      "id": "paper2",
+      "name": "視覺光學",
+      "subject": "視覺光學",
+      "subjects": "幾何光學、物理光學、屈光原理",
+      "count": 50
+    },
+    {
+      "id": "paper3",
+      "name": "視光學",
+      "subject": "視光學",
+      "subjects": "屈光不正、驗光程序、視覺功能檢查",
+      "count": 50
+    },
+    {
+      "id": "paper4",
+      "name": "隱形眼鏡學與配鏡學",
+      "subject": "隱形眼鏡學與配鏡學",
+      "subjects": "隱形眼鏡驗配、鏡片鏡架、配鏡學",
+      "count": 50
+    },
+    {
+      "id": "paper5",
+      "name": "低視力學",
+      "subject": "低視力學",
+      "subjects": "低視力評估、輔具、視覺重建",
+      "count": 50
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" },
+    { "id": 1, "tag": "opt_anatomy", "name": "眼解剖生理與法規" },
+    { "id": 2, "tag": "opt_visual_optics", "name": "視覺光學" },
+    { "id": 3, "tag": "opt_optometry", "name": "視光學" },
+    { "id": 4, "tag": "opt_contact_lens", "name": "隱形眼鏡與配鏡" },
+    { "id": 5, "tag": "opt_low_vision", "name": "低視力學" }
+  ],
+  "ui": {
+    "tagNames": {
+      "opt_anatomy": "眼解剖生理與法規",
+      "opt_visual_optics": "視覺光學",
+      "opt_optometry": "視光學",
+      "opt_contact_lens": "隱形眼鏡與配鏡",
+      "opt_low_vision": "低視力學"
+    },
+    "stageStyles": {
+      "opt_anatomy": { "icon": "👁️", "color": "#3B82F6" },
+      "opt_visual_optics": { "icon": "🔬", "color": "#10B981" },
+      "opt_optometry": { "icon": "📐", "color": "#F97316" },
+      "opt_contact_lens": { "icon": "👓", "color": "#8B5CF6" },
+      "opt_low_vision": { "icon": "🔆", "color": "#EF4444" }
+    },
+    "subjectColors": {}
+  },
+  "seo": {
+    "platformName": "國考知識王 — 驗光師題庫練習平台",
+    "title": "驗光師國考練習",
+    "fullName": "驗光師",
+    "shortName": "驗光師",
+    "studentType": "驗光師高考應考生、視光系學生",
+    "years": "106 起",
+    "totalQ": 2078,
+    "examDesc": "驗光師考試（專技人員高等考試），每年舉辦，共 5 科單選題，每科 50 題、每題 2 分。",
+    "paperDesc": "共 5 科：眼球解剖生理學與倫理法規、視覺光學、視光學、隱形眼鏡學與配鏡學、低視力學。",
+    "subjects": "眼球解剖生理、視覺光學、視光學、隱形眼鏡學、配鏡學、低視力學",
+    "mockDesc": "驗光師模擬考"
+  }
+}

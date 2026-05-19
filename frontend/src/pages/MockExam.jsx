@@ -12,7 +12,7 @@ import { supabase } from '../lib/supabase'
 import { getExamYears, getHistoricalPaper, getRandomPaper, isExamSupportedByCDN } from '../lib/cdnQuestions'
 import { isAnswerCorrect } from '../utils/scoring'
 import { addWrong } from '../lib/wrongBank'
-import { saveSession, getSession, clearSession, describeSession } from '../lib/mockExamSession'
+import { saveSession, getSessions, clearSession, describeSession } from '../lib/mockExamSession'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -116,13 +116,11 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins, onR
   const [examYears, setExamYears] = useState([])
   const [loadingYears, setLoadingYears] = useState(true)
   const [selectedExam, setSelectedExam] = useState(null) // { roc_year, session, papers }
-  const [resumeSession, setResumeSession] = useState(null)
+  const [resumeSessions, setResumeSessions] = useState([])
 
   useEffect(() => {
-    const s = getSession()
-    // 只在 examType 相符時提供恢復（避免別考試的進度跑出來）
-    if (s && s.examType === examType) setResumeSession(s)
-    else setResumeSession(null)
+    // 只列出此考試的未完成 session（避免別考試的進度跑出來）
+    setResumeSessions(getSessions(examType))
   }, [examType])
 
   useEffect(() => {
@@ -174,27 +172,30 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins, onR
       </div>
 
       <div className="flex-1 px-4 py-4 flex flex-col gap-3 overflow-y-auto">
-        {/* 繼續未完成的考試（中斷自動保存） */}
-        {resumeSession && (
+        {/* 繼續未完成的考試（中斷自動保存，可同時保存多份） */}
+        {resumeSessions.length > 0 && (
           <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 shadow-sm">
-            <div className="flex items-start gap-3 mb-3">
-              <span className="text-3xl">📝</span>
-              <div className="flex-1">
-                <p className="font-bold text-amber-900 text-sm">你有未完成的考試</p>
-                <p className="text-xs text-amber-700 mt-0.5">{describeSession(resumeSession)}</p>
-                <p className="text-[11px] text-amber-600/70 mt-0.5">最後暫停於 {new Date(resumeSession.pausedAt).toLocaleString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</p>
-              </div>
-            </div>
-            <div className="flex gap-2">
-              <button onClick={() => onResume(resumeSession)}
-                className="flex-1 py-2.5 rounded-xl font-bold text-sm text-white active:scale-95 transition-transform"
-                style={{ background: '#F59E0B' }}>
-                ▶ 繼續寫
-              </button>
-              <button onClick={() => { if (confirm('確定放棄這份進度？金幣不退')) { clearSession(); setResumeSession(null) } }}
-                className="px-4 py-2.5 rounded-xl text-xs text-gray-500 bg-white border border-gray-200 active:scale-95">
-                放棄
-              </button>
+            <p className="font-bold text-amber-900 text-sm mb-2">
+              📝 你有 {resumeSessions.length} 份未完成的考試
+            </p>
+            <div className="flex flex-col gap-2">
+              {resumeSessions.map(s => (
+                <div key={s.sessionId} className="bg-white/70 rounded-xl p-2.5">
+                  <p className="text-xs text-amber-800 font-medium">{describeSession(s)}</p>
+                  <p className="text-[11px] text-amber-600/70 mt-0.5">最後暫停於 {new Date(s.pausedAt).toLocaleString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</p>
+                  <div className="flex gap-2 mt-2">
+                    <button onClick={() => onResume(s)}
+                      className="flex-1 py-2 rounded-lg font-bold text-sm text-white active:scale-95 transition-transform"
+                      style={{ background: '#F59E0B' }}>
+                      ▶ 繼續寫
+                    </button>
+                    <button onClick={() => { if (confirm('確定放棄這份進度？金幣不退')) { clearSession(s.sessionId); setResumeSessions(rs => rs.filter(x => x.sessionId !== s.sessionId)) } }}
+                      className="px-4 py-2 rounded-lg text-xs text-gray-500 bg-white border border-gray-200 active:scale-95">
+                      放棄
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         )}
@@ -873,11 +874,19 @@ export default function MockExam() {
 
   // Resume：載入 ExamInProgress 時帶入的 snapshot（answers/qIdx/timeLeft）
   const [resumeSnapshot, setResumeSnapshot] = useState(null)
+  // 本場考試的 session id（多槽位保存用）— 開考時產生、續考時沿用
+  const sessionId = useRef(null)
+  function newSessionId() {
+    sessionId.current = `me-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`
+    return sessionId.current
+  }
 
   // 接收 ExamInProgress 每次變動的快照、寫入 localStorage
   const handleExamSnapshot = (snap) => {
     if (phase !== 'exam' || !currentPaper || !questions.length) return
+    if (!sessionId.current) newSessionId()
     saveSession({
+      sessionId: sessionId.current,
       examType,
       isFullExam,
       historicalExam,
@@ -893,6 +902,7 @@ export default function MockExam() {
 
   // 從 saved session 恢復進行中考試
   const handleResume = (session) => {
+    sessionId.current = session.sessionId || newSessionId()
     // 中場 session：完整模考考完某卷後離開 → 回到中場畫面接續下一卷
     if (session.atIntermission) {
       setIsFullExam(true)
@@ -982,6 +992,7 @@ export default function MockExam() {
       if (confirm(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
       return
     }
+    newSessionId()
     setIsFullExam(false)
     setHistoricalExam(null)
     setPaperResults([])
@@ -994,6 +1005,7 @@ export default function MockExam() {
       if (confirm(`金幣不足！需要 ${FULL_EXAM_FEE} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
       return
     }
+    newSessionId()
     setIsFullExam(true)
     setHistoricalExam(null)
     setPaperResults([])
@@ -1008,6 +1020,7 @@ export default function MockExam() {
       if (confirm(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
       return
     }
+    newSessionId()
     setIsFullExam(isFull)
     setHistoricalExam({ year, session })
     setPaperResults([])
@@ -1043,7 +1056,9 @@ export default function MockExam() {
 
     if (isFullExam && newResults.length < PAPERS.length) {
       // More papers to go → 保存中場進度（讓使用者離開後仍可續考、不重複扣費）
+      if (!sessionId.current) newSessionId()
       saveSession({
+        sessionId: sessionId.current,
         atIntermission: true,
         examType,
         isFullExam: true,
@@ -1052,7 +1067,7 @@ export default function MockExam() {
       })
       setPhase('intermission')
     } else {
-      clearSession()  // 考完整批 → 清掉保存的進度
+      clearSession(sessionId.current)  // 考完整批 → 清掉這份保存的進度
       setPhase('results')
     }
   }

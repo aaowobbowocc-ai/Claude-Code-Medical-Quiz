@@ -1,55 +1,73 @@
-// 模擬考進度保存：中斷時自動保存當前狀態，下次回來可繼續寫。
-// 同一時間只有一場進行中（單一 session），7 天內未完成自動失效。
+// 模擬考進度保存（多槽位）：可同時保存多份未完成的模考，各以 sessionId 區隔。
+// 中斷時自動保存當前狀態，下次回來在「繼續未完成的考試」清單看到全部、可逐一接續。
+// 7 天內未完成自動失效。
 
-const KEY = 'mock-exam-session'
-const MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000  // 7 天
+const KEY = 'mock-exam-sessions'        // 多槽位（陣列）
+const OLD_KEY = 'mock-exam-session'     // 舊單槽位 key，讀取時自動遷移
+const MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000
+const MAX_SESSIONS = 12
 
-export function saveSession(state) {
-  // atIntermission：完整模考卷別之間的中場狀態，沒有進行中的題目，仍須保存
-  if (!state || (!state.questions?.length && !state.atIntermission)) return
+function readAll() {
+  let list = []
   try {
-    const payload = {
-      ...state,
-      pausedAt: Date.now(),
+    const raw = JSON.parse(localStorage.getItem(KEY) || '[]')
+    if (Array.isArray(raw)) list = raw
+  } catch {}
+  // 遷移舊單槽位 session（上一版只能存一份）
+  try {
+    const old = JSON.parse(localStorage.getItem(OLD_KEY) || 'null')
+    if (old && old.pausedAt) {
+      if (!old.sessionId) old.sessionId = 'legacy-' + old.pausedAt
+      if (!list.some(s => s && s.sessionId === old.sessionId)) list.push(old)
+      localStorage.removeItem(OLD_KEY)
+      localStorage.setItem(KEY, JSON.stringify(list))
     }
-    localStorage.setItem(KEY, JSON.stringify(payload))
+  } catch {}
+  return list.filter(s => s && s.pausedAt && s.sessionId &&
+    Date.now() - s.pausedAt <= MAX_AGE_MS &&
+    (s.questions?.length || s.atIntermission))
+}
+
+// 寫入／更新一份 session（依 sessionId upsert）
+export function saveSession(state) {
+  if (!state || !state.sessionId) return
+  if (!state.questions?.length && !state.atIntermission) return
+  try {
+    let list = readAll().filter(s => s.sessionId !== state.sessionId)
+    list.push({ ...state, pausedAt: Date.now() })
+    list.sort((a, b) => a.pausedAt - b.pausedAt)
+    localStorage.setItem(KEY, JSON.stringify(list.slice(-MAX_SESSIONS)))
   } catch {}
 }
 
-export function getSession() {
-  try {
-    const raw = localStorage.getItem(KEY)
-    if (!raw) return null
-    const s = JSON.parse(raw)
-    // 過期或無效 → 清除
-    if (!s || !s.pausedAt || Date.now() - s.pausedAt > MAX_AGE_MS) {
-      localStorage.removeItem(KEY)
-      return null
-    }
-    if (!s.atIntermission && (!s.questions?.length || !s.currentPaper)) {
-      localStorage.removeItem(KEY)
-      return null
-    }
-    return s
-  } catch { return null }
+// 取得所有未完成 session（可選依 examType 過濾），最近暫停的排前面
+export function getSessions(examType) {
+  let list = readAll()
+  if (examType) list = list.filter(s => s.examType === examType)
+  return list.sort((a, b) => b.pausedAt - a.pausedAt)
 }
 
-export function clearSession() {
-  try { localStorage.removeItem(KEY) } catch {}
+// 清除指定 session；不給 sessionId 則清空全部（相容舊呼叫）
+export function clearSession(sessionId) {
+  try {
+    if (!sessionId) { localStorage.removeItem(KEY); localStorage.removeItem(OLD_KEY); return }
+    const list = readAll().filter(s => s.sessionId !== sessionId)
+    localStorage.setItem(KEY, JSON.stringify(list))
+  } catch {}
 }
 
 export function hasSession() {
-  return !!getSession()
+  return readAll().length > 0
 }
 
 // 概要描述（顯示在「繼續未完成的考試」橫幅）
 export function describeSession(s) {
   if (!s) return ''
-  const parts = []
   if (s.atIntermission) {
     const done = (s.paperResults || []).length
     return `完整模擬考 · 已完成 ${done} 卷 · 可續考下一卷`
   }
+  const parts = []
   if (s.isFullExam) parts.push('完整模擬考')
   else parts.push(s.currentPaper?.name || '單科')
   if (s.historicalExam) parts.push(`${s.historicalExam.year}年${s.historicalExam.session}`)

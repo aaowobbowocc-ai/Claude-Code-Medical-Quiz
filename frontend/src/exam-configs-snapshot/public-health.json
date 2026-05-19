@@ -1,0 +1,96 @@
+{
+  "id": "public-health",
+  "name": "公共衛生師",
+  "short": "公衛師",
+  "icon": "📊",
+  "category": "medical",
+  "questionsFile": "questions-public-health.json",
+  "totalQ": 957,
+  "passScore": 144,
+  "passRate": 0.6,
+  "papers": [
+    {
+      "id": "paper1",
+      "name": "衛生法規及倫理",
+      "subject": "衛生法規及倫理",
+      "subjects": "公共衛生法規、醫事法規、專業倫理",
+      "count": 40
+    },
+    {
+      "id": "paper2",
+      "name": "生物統計學",
+      "subject": "生物統計學",
+      "subjects": "統計推論、研究設計、資料分析",
+      "count": 40
+    },
+    {
+      "id": "paper3",
+      "name": "流行病學",
+      "subject": "流行病學",
+      "subjects": "疾病分布、研究方法、傳染病防治",
+      "count": 40
+    },
+    {
+      "id": "paper4",
+      "name": "衛生行政與管理",
+      "subject": "衛生行政與管理",
+      "subjects": "衛生政策、健康照護體系、計畫管理",
+      "count": 40
+    },
+    {
+      "id": "paper5",
+      "name": "環境與職業衛生",
+      "subject": "環境與職業衛生",
+      "subjects": "環境衛生、職業安全衛生、暴露評估",
+      "count": 40
+    },
+    {
+      "id": "paper6",
+      "name": "健康社會行為學",
+      "subject": "健康社會行為學",
+      "subjects": "健康行為理論、健康促進、社會決定因素",
+      "count": 40
+    }
+  ],
+  "stages": [
+    { "id": 0, "tag": "all", "name": "全部" },
+    { "id": 1, "tag": "ph_law", "name": "衛生法規及倫理" },
+    { "id": 2, "tag": "ph_biostat", "name": "生物統計學" },
+    { "id": 3, "tag": "ph_epidemiology", "name": "流行病學" },
+    { "id": 4, "tag": "ph_admin", "name": "衛生行政與管理" },
+    { "id": 5, "tag": "ph_env_occ", "name": "環境與職業衛生" },
+    { "id": 6, "tag": "ph_social_behavior", "name": "健康社會行為學" }
+  ],
+  "ui": {
+    "tagNames": {
+      "ph_law": "衛生法規及倫理",
+      "ph_biostat": "生物統計學",
+      "ph_epidemiology": "流行病學",
+      "ph_admin": "衛生行政與管理",
+      "ph_env_occ": "環境與職業衛生",
+      "ph_social_behavior": "健康社會行為學"
+    },
+    "stageStyles": {
+      "ph_law": { "icon": "⚖️", "color": "#3B82F6" },
+      "ph_biostat": { "icon": "📈", "color": "#10B981" },
+      "ph_epidemiology": { "icon": "🦠", "color": "#F97316" },
+      "ph_admin": { "icon": "🏛️", "color": "#8B5CF6" },
+      "ph_env_occ": { "icon": "🏭", "color": "#EF4444" },
+      "ph_social_behavior": { "icon": "👥", "color": "#14B8A6" }
+    },
+    "subjectColors": {}
+  },
+  "seo": {
+    "platformName": "國考知識王 — 公共衛生師題庫練習平台",
+    "title": "公共衛生師國考練習",
+    "fullName": "公共衛生師",
+    "shortName": "公共衛生師",
+    "studentType": "公共衛生師高考應考生、公衛系所學生",
+    "years": "111 起",
+    "totalQ": 957,
+    "examDesc": "公共衛生師考試（專技人員高等考試），111 年起舉辦，共 6 科，每科含申論題與測驗題；本平台收錄測驗題（單選題）部分，每科 40 題。",
+    "paperDesc": "共 6 科：衛生法規及倫理、生物統計學、流行病學、衛生行政與管理、環境與職業衛生、健康社會行為學。",
+    "subjects": "衛生法規、生物統計學、流行病學、衛生行政與管理、環境與職業衛生、健康社會行為學",
+    "mockDesc": "公共衛生師模擬考"
+  }
+}

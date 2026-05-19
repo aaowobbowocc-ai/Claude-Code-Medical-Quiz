@@ -13167,12 +13167,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 3,
-    "question": "腎小管細胞的重碳酸氫根（HCO3",
+    "question": "腎小管細胞的重碳酸氫根（HCO3）重吸收過程，常伴隨下列何種現象發生？",
     "options": {
-      "A": "腎小管細胞的氫離子分泌",
-      "B": " 腎小管細胞的磷酸根吸收",
-      "C": " 腎小管細胞的鈉離子與葡萄糖的協同性運輸（Sodium-glucose co-transport）",
-      "D": "腎小管細胞的鈉離子與胺基酸的協同性運輸（Sodium-amino acids co-transport）"
+      "A": "腎小管細胞的氫離子分泌",
+      "B": "腎小管細胞的磷酸根吸收",
+      "C": "腎小管細胞的鈉離子與葡萄糖的協同性運輸（Sodium-glucose co-transport）",
+      "D": "腎小管細胞的鈉離子與胺基酸的協同性運輸（Sodium-amino acids co-transport）"
     },
     "answer": "A",
     "explanation": ""
@@ -32891,9 +32891,9 @@
     "question": "左右手誘導相反錯置時，何種誘導波形會倒置？",
     "options": {
       "A": "aVF",
-      "B": "V",
-      "C": "1",
-      "D": "Lead I"
+      "B": "V1",
+      "C": "Lead I",
+      "D": "V6"
     },
     "answer": "C",
     "explanation": ""
@@ -43167,7 +43167,7 @@
     "answer": "C",
     "explanation": "",
     "images": [
-      "/question-images/medlab_14339_0.webp"
+      "/question-images/medlab_14337_0.webp"
     ]
   },
   {
@@ -248057,8 +248057,8 @@
     "number": 40,
     "question": "下列何種情況不會刺激呼吸中樞，使得呼吸次數變快？",
     "options": {
-      "A": "缺氧，血液氣體分析中的下降",
-      "B": "血液氣體分析中的下降",
+      "A": "缺氧，血液氣體分析中的PO2下降",
+      "B": "血液氣體分析中的PCO2下降",
       "C": "血液氣體分析中的pH下降",
       "D": "發燒"
     },

@@ -5,7 +5,7 @@
   "icon": "🧠",
   "category": "medical",
   "questionsFile": "questions-clinical-psychology.json",
-  "totalQ": 479,
+  "totalQ": 2628,
   "passScore": 144,
   "passRate": 0.6,
   "papers": [
@@ -53,13 +53,41 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" },
-    { "id": 1, "tag": "cp_basic", "name": "臨床心理學基礎" },
-    { "id": 2, "tag": "cp_general_1", "name": "總論(一)" },
-    { "id": 3, "tag": "cp_general_2", "name": "總論(二)" },
-    { "id": 4, "tag": "cp_special_1", "name": "特論(一)" },
-    { "id": 5, "tag": "cp_special_2", "name": "特論(二)" },
-    { "id": 6, "tag": "cp_special_3", "name": "特論(三)" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    },
+    {
+      "id": 1,
+      "tag": "cp_basic",
+      "name": "臨床心理學基礎"
+    },
+    {
+      "id": 2,
+      "tag": "cp_general_1",
+      "name": "總論(一)"
+    },
+    {
+      "id": 3,
+      "tag": "cp_general_2",
+      "name": "總論(二)"
+    },
+    {
+      "id": 4,
+      "tag": "cp_special_1",
+      "name": "特論(一)"
+    },
+    {
+      "id": 5,
+      "tag": "cp_special_2",
+      "name": "特論(二)"
+    },
+    {
+      "id": 6,
+      "tag": "cp_special_3",
+      "name": "特論(三)"
+    }
   ],
   "ui": {
     "tagNames": {
@@ -71,12 +99,30 @@
       "cp_special_3": "特論(三)"
     },
     "stageStyles": {
-      "cp_basic": { "icon": "📘", "color": "#3B82F6" },
-      "cp_general_1": { "icon": "🧩", "color": "#10B981" },
-      "cp_general_2": { "icon": "🩺", "color": "#F97316" },
-      "cp_special_1": { "icon": "🆘", "color": "#EF4444" },
-      "cp_special_2": { "icon": "🧠", "color": "#8B5CF6" },
-      "cp_special_3": { "icon": "👨‍👩‍👧", "color": "#14B8A6" }
+      "cp_basic": {
+        "icon": "📘",
+        "color": "#3B82F6"
+      },
+      "cp_general_1": {
+        "icon": "🧩",
+        "color": "#10B981"
+      },
+      "cp_general_2": {
+        "icon": "🩺",
+        "color": "#F97316"
+      },
+      "cp_special_1": {
+        "icon": "🆘",
+        "color": "#EF4444"
+      },
+      "cp_special_2": {
+        "icon": "🧠",
+        "color": "#8B5CF6"
+      },
+      "cp_special_3": {
+        "icon": "👨‍👩‍👧",
+        "color": "#14B8A6"
+      }
     },
     "subjectColors": {}
   },
@@ -86,8 +132,8 @@
     "fullName": "臨床心理師",
     "shortName": "臨床心理師",
     "studentType": "臨床心理師高考應考生、心理所學生",
-    "years": "113 起",
-    "totalQ": 479,
+    "years": "106 起",
+    "totalQ": 2628,
     "examDesc": "臨床心理師考試（專技人員高等考試），每年舉辦，共 6 科，每科含申論題與測驗題；本平台收錄測驗題（單選題）部分，每科 40 題。",
     "paperDesc": "共 6 科：臨床心理學基礎、臨床心理學總論(一)(二)、臨床心理學特論(一)(二)(三)。",
     "subjects": "臨床心理學基礎、臨床心理學總論、臨床心理學特論、心理衡鑑、心理治療",

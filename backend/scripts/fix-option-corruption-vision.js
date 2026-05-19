@@ -39,6 +39,8 @@ const EXAM_FILES = {
   judicial: 'questions-judicial.json', lawyer1: 'questions-lawyer1.json', 'civil-senior': 'questions-civil-senior.json',
   police: 'questions-police.json', police4: 'questions-police4.json', audiologist: 'questions-audiologist.json',
   'speech-therapist': 'questions-speech-therapist.json', rt: 'questions-rt.json',
+  'clinical-psychology': 'questions-clinical-psychology.json',
+  'counseling-psychology': 'questions-counseling-psychology.json',
 }
 
 // ─── 損壞偵測 ───

@@ -5,7 +5,7 @@
   "icon": "📊",
   "category": "medical",
   "questionsFile": "questions-public-health.json",
-  "totalQ": 957,
+  "totalQ": 1195,
   "passScore": 144,
   "passRate": 0.6,
   "papers": [
@@ -53,13 +53,41 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" },
-    { "id": 1, "tag": "ph_law", "name": "衛生法規及倫理" },
-    { "id": 2, "tag": "ph_biostat", "name": "生物統計學" },
-    { "id": 3, "tag": "ph_epidemiology", "name": "流行病學" },
-    { "id": 4, "tag": "ph_admin", "name": "衛生行政與管理" },
-    { "id": 5, "tag": "ph_env_occ", "name": "環境與職業衛生" },
-    { "id": 6, "tag": "ph_social_behavior", "name": "健康社會行為學" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    },
+    {
+      "id": 1,
+      "tag": "ph_law",
+      "name": "衛生法規及倫理"
+    },
+    {
+      "id": 2,
+      "tag": "ph_biostat",
+      "name": "生物統計學"
+    },
+    {
+      "id": 3,
+      "tag": "ph_epidemiology",
+      "name": "流行病學"
+    },
+    {
+      "id": 4,
+      "tag": "ph_admin",
+      "name": "衛生行政與管理"
+    },
+    {
+      "id": 5,
+      "tag": "ph_env_occ",
+      "name": "環境與職業衛生"
+    },
+    {
+      "id": 6,
+      "tag": "ph_social_behavior",
+      "name": "健康社會行為學"
+    }
   ],
   "ui": {
     "tagNames": {
@@ -71,12 +99,30 @@
       "ph_social_behavior": "健康社會行為學"
     },
     "stageStyles": {
-      "ph_law": { "icon": "⚖️", "color": "#3B82F6" },
-      "ph_biostat": { "icon": "📈", "color": "#10B981" },
-      "ph_epidemiology": { "icon": "🦠", "color": "#F97316" },
-      "ph_admin": { "icon": "🏛️", "color": "#8B5CF6" },
-      "ph_env_occ": { "icon": "🏭", "color": "#EF4444" },
-      "ph_social_behavior": { "icon": "👥", "color": "#14B8A6" }
+      "ph_law": {
+        "icon": "⚖️",
+        "color": "#3B82F6"
+      },
+      "ph_biostat": {
+        "icon": "📈",
+        "color": "#10B981"
+      },
+      "ph_epidemiology": {
+        "icon": "🦠",
+        "color": "#F97316"
+      },
+      "ph_admin": {
+        "icon": "🏛️",
+        "color": "#8B5CF6"
+      },
+      "ph_env_occ": {
+        "icon": "🏭",
+        "color": "#EF4444"
+      },
+      "ph_social_behavior": {
+        "icon": "👥",
+        "color": "#14B8A6"
+      }
     },
     "subjectColors": {}
   },
@@ -86,9 +132,9 @@
     "fullName": "公共衛生師",
     "shortName": "公共衛生師",
     "studentType": "公共衛生師高考應考生、公衛系所學生",
-    "years": "111 起",
-    "totalQ": 957,
-    "examDesc": "公共衛生師考試（專技人員高等考試），111 年起舉辦，共 6 科，每科含申論題與測驗題；本平台收錄測驗題（單選題）部分，每科 40 題。",
+    "years": "110 起",
+    "totalQ": 1195,
+    "examDesc": "公共衛生師考試（專技人員高等考試），110 年首屆舉辦，每年一試，共 6 科，每科含申論題與測驗題；本平台收錄測驗題（單選題）部分，每科 40 題。",
     "paperDesc": "共 6 科：衛生法規及倫理、生物統計學、流行病學、衛生行政與管理、環境與職業衛生、健康社會行為學。",
     "subjects": "衛生法規、生物統計學、流行病學、衛生行政與管理、環境與職業衛生、健康社會行為學",
     "mockDesc": "公共衛生師模擬考"

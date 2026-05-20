@@ -1,7 +1,7 @@
 {
-  "id": "civil-junior-general",
-  "name": "普考 一般行政",
-  "short": "普考行政",
+  "id": "civil-junior-civil-affairs",
+  "name": "普考 一般民政",
+  "short": "普考民政",
   "icon": "🏛️",
   "category": "civil-service",
   "subCategory": "普考",
@@ -20,7 +20,7 @@
     "common_admin_law_junior",
     "common_admin_studies_junior",
     "common_politics",
-    "common_public_mgmt"
+    "common_local_gov"
   ],
   "sharedScope": "level_4_common",
   "uxHints": {
@@ -28,7 +28,7 @@
     "longText": true
   },
   "questionsFile": null,
-  "totalQ": 2347,
+  "totalQ": 2422,
   "passScore": 0,
   "passRate": 0,
   "papers": [
@@ -68,10 +68,10 @@
       "count": 0
     },
     {
-      "id": "public_mgmt",
-      "name": "公共管理概要",
-      "subject": "公共管理概要",
-      "subjects": "組織管理、人力資源管理、績效管理",
+      "id": "local_gov",
+      "name": "地方自治概要",
+      "subject": "地方自治概要",
+      "subjects": "地方制度法、地方財政、府際關係",
       "count": 0
     }
   ],
@@ -88,16 +88,16 @@
     "subjectColors": {}
   },
   "seo": {
-    "platformName": "國考知識王 — 普考一般行政題庫練習平台",
+    "platformName": "國考知識王 — 普考一般民政題庫練習平台",
     "title": "國考知識王",
-    "fullName": "普通考試 一般行政",
+    "fullName": "普通考試 一般民政",
     "shortName": "普考",
     "studentType": "公職應屆考生、轉職應考者",
     "years": "102 起",
-    "totalQ": 2347,
-    "examDesc": "公務人員普通考試一般行政類科，由考選部舉辦，採名額制錄取。",
-    "paperDesc": "共同科目（國文、法學知識與英文）+ 專業科目（行政法概要、行政學概要、政治學概要）。",
-    "subjects": "憲法、法學緒論、國文、英文、行政法概要、行政學概要、政治學概要",
-    "mockDesc": "普考一般行政模擬考（拓荒中）"
+    "totalQ": 2422,
+    "examDesc": "公務人員普通考試一般民政類科，由考選部舉辦，採名額制錄取，主要從事地方自治與民政相關行政工作。",
+    "paperDesc": "共同科目（國文、法學知識與英文）+ 專業科目（行政法概要、行政學概要、政治學概要、地方自治概要）。",
+    "subjects": "憲法、法學緒論、國文、英文、行政法概要、行政學概要、政治學概要、地方自治概要",
+    "mockDesc": "普考一般民政模擬考（拓荒中）"
   }
 }

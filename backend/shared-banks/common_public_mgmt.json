@@ -1,0 +1,6512 @@
+{
+  "bankId": "common_public_mgmt",
+  "name": "公共管理概要",
+  "description": "公務人員普通考試（四等）一般行政「公共管理概要」測驗題部分，103–112 年（113 起停考）。",
+  "bankVersion": 12,
+  "last_synced_at": "2026-05-20T02:09:20.982Z",
+  "levels": [
+    "junior"
+  ],
+  "questions": [
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-1",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 1,
+      "question": "下列何者是公共管理的主要特質？",
+      "options": {
+        "A": "完全等於政府管理，但強調其與私部門、非營利組織之間的公私夥伴關係",
+        "B": "主要在運用市場機制，並將公共服務完全市場化，以追求經濟效率",
+        "C": "是將企業管理手段運用於公部門，並改變公部門的主體性",
+        "D": "重視與外部環境的關係，強調最高管理者的策略設計"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-2",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 2,
+      "question": "以下那一項不是公共選擇理論（public choice theory）對於傳統公共官僚組織的批評之一？",
+      "options": {
+        "A": "官僚組織欠缺競爭性",
+        "B": "官僚追求預算極大化",
+        "C": "官僚時常創造風險",
+        "D": "政府功能擴張產生尋租行為"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-3",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 3,
+      "question": "下列何項描述比較符合企業精神政府的原則？",
+      "options": {
+        "A": "增加政府對於經濟活動的管制",
+        "B": "採取扁平式的組織結構設計",
+        "C": "強調公共服務的公平與正義",
+        "D": "推動社會福利的公共化"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-4",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 4,
+      "question": "公共管理者常須分析組織內部情況與外部環境，亦即進行SWOT 分析，其中之「O」代表？",
+      "options": {
+        "A": "組織（Organization）",
+        "B": "運作（Operation）",
+        "C": "觀察（Observation）",
+        "D": "機會（Opportunity）"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-5",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 5,
+      "question": "根據治理的理論觀點，網絡式的治理結構中，網絡成員之間是以何者作為其最主要運作機制？",
+      "options": {
+        "A": "命令",
+        "B": "誘因",
+        "C": "交易",
+        "D": "信任"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-6",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 6,
+      "question": "有關全面品質管理的概念中，下列何者錯誤？",
+      "options": {
+        "A": "只強調滿足顧客的實質需求為焦點",
+        "B": "強調工作與人性整合的管理哲學",
+        "C": "以不斷持續改進為目標",
+        "D": "強調以團隊合作為基礎的全面參與"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-7",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 7,
+      "question": "下列何者不是倡導全面品質管理的重要學者？",
+      "options": {
+        "A": "戴明（W. Deming）",
+        "B": "寇斯比（P. Crosby）",
+        "C": "朱朗（J. Juran）",
+        "D": "卡斯特（F. Kast）"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-8",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 8,
+      "question": "下列何者不是團隊的特點？",
+      "options": {
+        "A": "團隊的整體績效即每一成員個體績效之總和",
+        "B": "有共同而明確的團隊目標",
+        "C": "團隊成員應具備互不重疊的異質性功能",
+        "D": "個人目標與團隊目標合而為一"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-9",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 9,
+      "question": "戶政事務所提供便民措施，例如：網路預約服務，是一種什麼樣的管理表現？",
+      "options": {
+        "A": "顧客導向管理",
+        "B": "標竿學習",
+        "C": "目標管理",
+        "D": "團隊管理（請接背面）全一張"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-10",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 10,
+      "question": "在危機管理過程中，危機情境監測系統是屬於下列那一個階段的活動？",
+      "options": {
+        "A": "危機爆發前",
+        "B": "危機發生時",
+        "C": "危機潛伏時",
+        "D": "危機結束後"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-11",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 11,
+      "question": "美國聯邦危機管理局建立的整合性危機管理系統，將整個危機過程分為下列何種先後階段？",
+      "options": {
+        "A": "回應、準備、紓緩、復原",
+        "B": "紓緩、準備、回應、復原",
+        "C": "準備、回應、復原、紓緩",
+        "D": "復原、準備、回應、紓緩"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-12",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 12,
+      "question": "參與管理的原始起源為何？",
+      "options": {
+        "A": "家庭民主",
+        "B": "女權運動",
+        "C": "政治民主的參與",
+        "D": "企業營利"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-13",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 13,
+      "question": "有關「團隊」的意涵，下列何者正確？",
+      "options": {
+        "A": "強調個人責任",
+        "B": "藉共識做決策",
+        "C": "領導權被指定",
+        "D": "成員獨立作業"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-14",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 14,
+      "question": "目標管理過程四個階段之概念為：①行動計畫 ②定期考核 ③自我控制 ④目標設定，其排序為何？",
+      "options": {
+        "A": "①②③④",
+        "B": "④①③②",
+        "C": "①④③②",
+        "D": "①④②③"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-15",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 15,
+      "question": "標竿學習的流程順序為何？①觀察 ②分析 ③規劃 ④適用 ⑤探尋",
+      "options": {
+        "A": "①②③④⑤",
+        "B": "①③②④⑤",
+        "C": "③②①⑤④",
+        "D": "③⑤①②④"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-16",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 16,
+      "question": "有關非營利組織之敘述，下列何者正確？非營利組織多係指國際性或非某一特定國家之公益組織 非營利部門亦被稱為「第三部門」",
+      "options": {
+        "A": "非營利組織是法律名詞，",
+        "B": "非學術概念",
+        "C": "非營利組織係專指一國國",
+        "D": "內之公益組織"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-17",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 17,
+      "question": "知識管理的構成要素為何？①知識 ②競爭 ③分享 ④人員 ⑤權威 ⑥科技",
+      "options": {
+        "A": "①③④⑥",
+        "B": "①②④⑤",
+        "C": "①③④⑤",
+        "D": "①②③⑥"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-18",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 18,
+      "question": "有關公私部門績效管理的差異，下列何者錯誤？",
+      "options": {
+        "A": "公部門具政治責任；私部門不具政治責任",
+        "B": "公部門的所有權明確；私部門的所有權模糊",
+        "C": "公部門不具交易制度；私部門具交易制度",
+        "D": "公部門競爭程度低；私部門競爭程度高"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-19",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 19,
+      "question": "由於開發中國家人民接觸電腦與網路的管道比已開發國家人民少，因此加重了富有國家和窮困國家在電子化政府推動上的差異。這樣的現象最常被稱為：",
+      "options": {
+        "A": "數位分流",
+        "B": "數位割裂",
+        "C": "數位分層",
+        "D": "數位落差"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-20",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 20,
+      "question": "美國學者奧斯本（D. Osborne）和蓋伯勒（T. Gaebler）提出新公共管理十項原則，下列何者不包括在其中？",
+      "options": {
+        "A": "強調任務導向",
+        "B": "注重過程取向",
+        "C": "運用成效分析",
+        "D": "運用企業投資觀念"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-21",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 21,
+      "question": "如果公營事業以出售官股的方式來完成民營化，則符合何種民營化類型？",
+      "options": {
+        "A": "替代",
+        "B": "委託",
+        "C": "撤資",
+        "D": "無償移轉"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-22",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 22,
+      "question": "下列何者是臺灣實施BOT 的案例？",
+      "options": {
+        "A": "中華電信",
+        "B": "臺灣高鐵",
+        "C": "故宮博物院",
+        "D": "木柵動物園"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-23",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 23,
+      "question": "下列何者不屬於知識管理中構成知識地圖的三大元素？",
+      "options": {
+        "A": "知識社群",
+        "B": "知識專家",
+        "C": "知識庫",
+        "D": "知識盤點"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-24",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 24,
+      "question": "人類在有限理性的制約下，追求設計最佳的政策與選擇最適的政策工具，最需要依賴那一種方式來補救？",
+      "options": {
+        "A": "團體討論",
+        "B": "政策學習",
+        "C": "組織變革",
+        "D": "教育訓練"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-103-civil-junior-general-25",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 25,
+      "question": "我國政府建立與民間機構的合夥關係，將傳統由政府自辦的公共建設，開放民間投資興建，並給予一定營運期間的主要法源依據為何？",
+      "options": {
+        "A": "獎勵民間參與交通建設條例",
+        "B": "促進民間參與公共建設法",
+        "C": "政府採購法",
+        "D": "獎勵投資條例"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-1",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 1,
+      "question": "下列那一項不屬於公共管理的3P 原則？",
+      "options": {
+        "A": "參與（Participation）",
+        "B": "民營化（Privatization）",
+        "C": "公私協力（Partnership）",
+        "D": "公共化（Publicizing）"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-2",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 2,
+      "question": "依據學者凱特（Kettl）的看法，公共政策學派途徑（P 途徑）的公共管理，有下列那一項特徵？",
+      "options": {
+        "A": "融合傳統式的公共行政及政策執行研究",
+        "B": "偏向於回溯性的與規範性的理論研究",
+        "C": "著眼於中階主管效能的過程研究",
+        "D": "透過個案研究發展所需的知識"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-3",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 3,
+      "question": "在策略管理的系統中，下列何者最為抽象？",
+      "options": {
+        "A": "目標（goal）",
+        "B": "目的（objectives）",
+        "C": "使命（mission）",
+        "D": "行動計畫（action plan）"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-4",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 4,
+      "question": "「行政人員為維持公眾的信任，以公共利益為目的，用以獎優汰劣的一套系統，讓行政人員能夠確實負責」，此概念稱為：",
+      "options": {
+        "A": "信任",
+        "B": "社會資本",
+        "C": "公益",
+        "D": "課責"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-5",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 5,
+      "question": "相較於企業管理，下列何者不屬於公共行政所強調的價值？",
+      "options": {
+        "A": "追求利潤",
+        "B": "分權制衡",
+        "C": "公共利益",
+        "D": "代表性"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-6",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 6,
+      "question": "首先於1954 年提出目標管理概念的學者是：",
+      "options": {
+        "A": "戴明（Deming）",
+        "B": "朱朗（Juran）",
+        "C": "寇斯比（Crosby）",
+        "D": "杜魯克（Drucker）"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-7",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 7,
+      "question": "下列何者是企業管理學派（B 途徑）的公共管理之特徵？",
+      "options": {
+        "A": "偏好於運用官僚體制設計組織",
+        "B": "嚴格區分公、私部門的差異",
+        "C": "重視組織設計的過程取向之研究",
+        "D": "以質化研究的實地觀察為主要研究方法"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-8",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 8,
+      "question": "卡爾森（Garson）與歐曼（Overman）提出以「PAFHRIER」取代「POSDCORB」，來表示行政管理主要功能，其中「ER」代表那一項功能？",
+      "options": {
+        "A": "對外關係（External Relations）",
+        "B": "對外授能（External Empowerment）",
+        "C": "企業關係（Entrepreneurial Relations）",
+        "D": "外部再造（External Reenginering）"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-9",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 9,
+      "question": "根據新公共服務精神的觀點，政府提供公共服務的對象是：",
+      "options": {
+        "A": "納稅人",
+        "B": "委託者",
+        "C": "顧客",
+        "D": "公民"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-10",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 10,
+      "question": "新古典經濟理論極力主張建立那一種類型的政府？",
+      "options": {
+        "A": "適中化政府",
+        "B": "彈性化政府",
+        "C": "最大化政府",
+        "D": "最小化政府（請接背面）全一張"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-11",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 11,
+      "question": "政府應多以「導航」替代「操槳」，其最主要乃主張：",
+      "options": {
+        "A": "政府應積極推動福利國概念",
+        "B": "減少契約外包以免圖利他人",
+        "C": "嚴格管制市場機制",
+        "D": "政府不必大有為"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-12",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 12,
+      "question": "新公共管理曾遭受許多批評，有人稱其是修正之新泰勒主義，其意指新公共管理是何種學派的復活？",
+      "options": {
+        "A": "人群關係學派",
+        "B": "行政管理學派",
+        "C": "科學管理學派",
+        "D": "人性需求學派"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-13",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 13,
+      "question": "下列何者屬於知識管理的基石？",
+      "options": {
+        "A": "績效考核",
+        "B": "行政課責",
+        "C": "員額精簡",
+        "D": "組織學習"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-14",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 14,
+      "question": "探究古巴飛彈危機，認為分析國際危機管理，可藉由理性抉擇模式、組織過程模式、政府政治模式等加以了解的學者是：",
+      "options": {
+        "A": "艾里遜（Graham Allison）",
+        "B": "林布隆（Charles Lindblom）",
+        "C": "唐恩（William Dunn）",
+        "D": "賽蒙（Herbert Simon）"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-15",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 15,
+      "question": "近年來十分風行的「情緒商數」（EQ, emotion quotient）是管理者何種技能的一項衡量指標？",
+      "options": {
+        "A": "技術性技能",
+        "B": "資訊技能",
+        "C": "人際間技能",
+        "D": "概念化技能"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-16",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 16,
+      "question": "「又稱為結果導向預算或支出控制預算，其主要意涵是指進行預算決策時，以『結果』而非『投入』為專注的目標。」以上這段話所描述的是下列何種預算制度？",
+      "options": {
+        "A": "行政預算制度",
+        "B": "零基預算制度",
+        "C": "設計計畫預算制度",
+        "D": "企業化預算制度"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-17",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 17,
+      "question": "下列何者為新公共管理的核心主張？",
+      "options": {
+        "A": "福利國家",
+        "B": "公民社會",
+        "C": "大有為政府",
+        "D": "市場機制"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-18",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 18,
+      "question": "政策要獲得多數民眾的支持，必須致力於行銷工作，就市場行銷的「四P」原則而言，除了產品（product）、價格（price）和推銷（promotion）外，還有那一項？",
+      "options": {
+        "A": "通路（place）",
+        "B": "流程（process）",
+        "C": "計畫（plan）",
+        "D": "績效（performance）"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-19",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 19,
+      "question": "Peter Senge（1990）在其所著的「第五項修練：學習型組織的藝術與實務」一書中，認為學習型組織必須具備五項修練，包括：改善心智模式、自我超越、共同願景、系統思考，以及：",
+      "options": {
+        "A": "官僚體制",
+        "B": "績效評估",
+        "C": "團隊學習",
+        "D": "品質管理"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-20",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 20,
+      "question": "下列關於政策行銷的論述，何者錯誤？",
+      "options": {
+        "A": "政策行銷不只是一種組織管理的作為，也是管理公共議程的專業",
+        "B": "政策行銷是一種創造公共價值的政治管理",
+        "C": "政策行銷最核心的目的是充分掌控媒體使其為政治目的服務",
+        "D": "政策行銷是建構政策支持社群的活動"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-21",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 21,
+      "question": "政府部門的人力資源管理，強調以成績、能力及績效，作為公務人員任用、俸給、升遷的標準，實行用人唯賢的原則，而非用人唯親，不以親疏、黨派、個人或家庭背景等因素來評價公務人員，此種稱為：",
+      "options": {
+        "A": "獨裁主義",
+        "B": "功績主義",
+        "C": "政治任命",
+        "D": "保守主義"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-22",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 22,
+      "question": "下列關於利益團體影響民意的敘述何者錯誤？",
+      "options": {
+        "A": "對相關議題政府機關表達關切",
+        "B": "試圖對民意代表施加壓力",
+        "C": "傾向直接取得決策權力",
+        "D": "與其他相關利益團體結盟"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-23",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 23,
+      "question": "從府際關係的角度，政府與部門之間的關係構成完整的分工體系，行政院與高雄市政府之間的組織關係屬於下列那一種？",
+      "options": {
+        "A": "部際水平關係",
+        "B": "部際垂直關係",
+        "C": "府際平行關係",
+        "D": "府際垂直關係"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-24",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 24,
+      "question": "若希望促進政府與第三部門的協調合作，下列何者不是優先發展的事項？",
+      "options": {
+        "A": "建立資訊交換系統",
+        "B": "發展多元競爭的關係",
+        "C": "建立問題解決機制",
+        "D": "建立責信評量制度"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-104-civil-junior-general-25",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 25,
+      "question": "下列有關「審慎思辯民調」的敘述，何者錯誤？",
+      "options": {
+        "A": "重視平等參與",
+        "B": "減少決策程序成本",
+        "C": "減少理性無知",
+        "D": "直接民主"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-1",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 1,
+      "question": "根據學者胡德（ Christopher Hood）的看法，下列何者不適合列為公共管理的特質？",
+      "options": {
+        "A": "著重分權的觀念",
+        "B": "沿襲政治與行政二分的傳統",
+        "C": "學習企業重視節約成本",
+        "D": "引進競爭的機制"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-2",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 2,
+      "question": "下列何者較不屬於公共管理者的職責？",
+      "options": {
+        "A": "增強行政與立法部門之間的信任",
+        "B": "學習企業家的精神將之轉化於公共治理",
+        "C": "以科學的績效指標取代個人倫理修為",
+        "D": "激勵公民參與公共事務達成公共目標"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-3",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 3,
+      "question": "下列針對公共管理之基本概念，何者正確？",
+      "options": {
+        "A": "比起傳統公共行政，公共管理並不重視公平、正義等議題",
+        "B": "公共管理的著重對象主要包含公私部門",
+        "C": "公共管理截然不同於行政學的古典原理",
+        "D": "公共管理不受到政治權威的影響"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-4",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 4,
+      "question": "下列那一項政策工具比較符合企業型政府的精神？",
+      "options": {
+        "A": "成立國營事業",
+        "B": "強調管制政策",
+        "C": "增加稅賦",
+        "D": "強調使用者付費"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-5",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 5,
+      "question": "下列何者不是新公共管理的重要主張？",
+      "options": {
+        "A": "以結果為導向",
+        "B": "引進市場機制",
+        "C": "強化一元領導",
+        "D": "著重成本刪減"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-6",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 6,
+      "question": "各國政府再造雖有些微差異，但整體而言，再造「目的」基本上脫離不了：",
+      "options": {
+        "A": "提高政府效能，創建大有為政府",
+        "B": "建立積極回應性，強固文官永業化",
+        "C": "強化國家體制，控制市場運作",
+        "D": "撙節施政成本，提高政府效能"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-7",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 7,
+      "question": "下列何者不是「企業型政府」的核心特質？",
+      "options": {
+        "A": "強調操槳而非領航",
+        "B": "屬於顧客導向的政府",
+        "C": "鼓勵參與式管理",
+        "D": "強調市場機制"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-8",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 8,
+      "question": "在高效率的團隊中，同仁很樂意投入團隊工作，而且每位成員都以身為團隊一員為榮，此最符合高績效團隊的那 一項特質？",
+      "options": {
+        "A": "良好關係與溝通",
+        "B": "高度士氣",
+        "C": "對目標與價值有共識",
+        "D": "主管的肯定與讚賞"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-9",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 9,
+      "question": "下列何者不是組織參與管理在組織設計的要項？",
+      "options": {
+        "A": "溝通系統的建立",
+        "B": "重視長期的夥伴關係",
+        "C": "法規與權力的集中化",
+        "D": "團隊之建立"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-10",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 10,
+      "question": "參與管理理論的精神內涵與下列什麼理論相近？",
+      "options": {
+        "A": "Ｙ理論",
+        "B": "Ｘ理論",
+        "C": "歸因理論",
+        "D": "官僚理論（請接背面）全一張"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-11",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 11,
+      "question": "有關「標竿學習」主要的立論基礎敘述，下列何者較不適當？",
+      "options": {
+        "A": "全面品質觀點",
+        "B": "流程觀點",
+        "C": "學習觀點",
+        "D": "自主管理觀點"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-12",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 12,
+      "question": "針對國際標準化組織（International Organization for Standardization，簡稱ISO），下列敘述何者錯誤？",
+      "options": {
+        "A": "ISO 認證的對象不是一項產品、流程或財貨，而是一個組織的管理系統",
+        "B": "經過ISO 認證的組織，其產品在國際市場的競爭力能夠提高",
+        "C": "一個組織所生產的產品不同，其管理系統的標準便會因而不同",
+        "D": "它是一個專門為公私組織進行品質管理認證的系統"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-13",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 13,
+      "question": "將顧客導向觀念運用在政府機關的公務運作中，下列有關政府部門顧客的敘述何者錯誤？",
+      "options": {
+        "A": "政府機關的顧客比較著重於規範性定義，而非經濟性定義",
+        "B": "享受政府公共服務者是顧客，受罰受刑的犯罪者也是顧客",
+        "C": "顧客的範圍應同時包含內部顧客與外部顧客",
+        "D": "政府部門中顧客的概念較企業部門具體而明確"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-14",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 14,
+      "question": "下列何者不符合「高績效團隊」所具備的特質？",
+      "options": {
+        "A": "團隊成員藉彼此的協調、合作以高效率地完成任務或目標",
+        "B": "團隊的領導者固定由資深成員擔任，成員對領導者全力支持",
+        "C": "團隊成員培養出良好互動關係與承諾支持",
+        "D": "高績效團隊可創造出獨特的魅力，加強成員的凝聚力"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-15",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 15,
+      "question": "以相等或較少的資源能產生較大產量的能力，是指下列何種績效的指標?",
+      "options": {
+        "A": "品質",
+        "B": "創新性",
+        "C": "效率",
+        "D": "顧客化"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-16",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 16,
+      "question": "策略規劃流程的步驟有：①擬定實施策略，②釐清組織任務，③分析內外環境，④考核執行成效，⑤執行具體作法，下列何種順序最為正確?",
+      "options": {
+        "A": "①①①①①",
+        "B": "①①①①①",
+        "C": "①①①①①",
+        "D": "①①①①①"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-17",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 17,
+      "question": "下列對於社會企業的敘述，何者錯誤？",
+      "options": {
+        "A": "兼具公益與私利的企業類型",
+        "B": "非營利組織的新典範",
+        "C": "盈餘不得全數分配給股東",
+        "D": "從事資本密集的經營活動"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-18",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 18,
+      "question": "下列何者非屬於知識經濟的核心概念？",
+      "options": {
+        "A": "速度決定成敗",
+        "B": "企業家精神",
+        "C": "摩爾定律",
+        "D": "強調國家自主權"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-19",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 19,
+      "question": "一般縣市政府的首長信箱是屬於下列那一種電子化政府的服務類型？",
+      "options": {
+        "A": "政府對公務員（G2E）",
+        "B": "政府對民眾（G2C）",
+        "C": "政府對企業（G2B）",
+        "D": "政府對政府（G2G）"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-20",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 20,
+      "question": "非營利組織藉由揭露政府不良的政策，引發社會輿論的爭議，並提出本身的對策以說服社會大眾，此種影響策略屬於下列敘述那一種類型？",
+      "options": {
+        "A": "遲滯策略",
+        "B": "資訊策略",
+        "C": "選區壓力策略",
+        "D": "困窘策略"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-21",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 21,
+      "question": "關於污染者付費原則的概念敘述，下列何者錯誤？",
+      "options": {
+        "A": "屬於一種經濟誘因型的管理方式",
+        "B": "又稱為三R 原則（Reduce、Reuse、Recycle）",
+        "C": "係建立在被管制者「自願行動」的基礎上",
+        "D": "有助於降低污染管制成本"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-22",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 22,
+      "question": "下列何者不是公私合作網絡常見的方式？",
+      "options": {
+        "A": "公營事業",
+        "B": "特許經營權",
+        "C": "簽約外包",
+        "D": "財政補助"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-23",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 23,
+      "question": "比較而言，公共管理者進行政府公關行銷及形象塑造何者是最強的社會公器？",
+      "options": {
+        "A": "傳播媒體",
+        "B": "非營利組織",
+        "C": "社區組織",
+        "D": "利益團體"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-24",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 24,
+      "question": "根據科特勒（P. Kotler）的說法，有關政府行銷管理的步驟，不包括下列何者？",
+      "options": {
+        "A": "制定有效價格、誘因與罰則",
+        "B": "發展最適化通路",
+        "C": "創造與維持品牌",
+        "D": "大量使用平面媒體廣告"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-105-civil-junior-general-25",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 25,
+      "question": "關於跨域治理特質之敘述，下列何者錯誤？",
+      "options": {
+        "A": "跨域治理蘊含系統性的理念",
+        "B": "跨域治理特別強調層級節制的監督",
+        "C": "跨域治理兼具微觀與宏觀兩種層次",
+        "D": "跨域治理的參與者兼具相依性"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-1",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 1,
+      "question": "下列何者是新公共管理途徑所強調之公共管理者的主要課責型態？",
+      "options": {
+        "A": "重視以良知為核心的內控型態",
+        "B": "重視可量化指標為標準的外控型態",
+        "C": "重視公民參與對話的外控型態",
+        "D": "重視憲法和法律為基準的內控型態"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-2",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 2,
+      "question": "下列何者屬於20世紀晚期興起的新公共管理所蘊含之意識型態？",
+      "options": {
+        "A": "重視計畫經濟帶動國家成長",
+        "B": "重商主義復興強調市場機制",
+        "C": "以社會福利實現顧客導向",
+        "D": "新右派崛起拒斥官僚集權"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-3",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 3,
+      "question": "下列何者是新公共管理運動的主要理論基礎？",
+      "options": {
+        "A": "滿意決策理論",
+        "B": "需求層次理論",
+        "C": "權力依賴理論",
+        "D": "公共選擇理論"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-4",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 4,
+      "question": "下列那一項政府再造計畫發生於美國？",
+      "options": {
+        "A": "續階計畫",
+        "B": "國家績效評估",
+        "C": "新操控模式",
+        "D": "公民標誌"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-5",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 5,
+      "question": "危機管理的首要條件為何？",
+      "options": {
+        "A": "危機意識",
+        "B": "危機評估",
+        "C": "危機處理",
+        "D": "危機復原"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-6",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 6,
+      "question": "當代主要國家對於政府再造的趨勢，皆以何者為考量項目？",
+      "options": {
+        "A": "效率、責任、回應",
+        "B": "課責、廉政、回應",
+        "C": "廉政、透明、回應",
+        "D": "廉政、透明、課責"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-7",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 7,
+      "question": "採用TQM與商議決策模式增進公共利益與公務員參與度，並希望消除傳統的科層體制，以力求扁平化的組織型 態的政府形式稱為：",
+      "options": {
+        "A": "解制式政府",
+        "B": "參與式政府",
+        "C": "市場式政府",
+        "D": "前瞻式政府"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-8",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 8,
+      "question": "危機決策時容易導致決策思維的同質性，不容許有異議，導致決策品質不佳，這是屬於下列何種現象？",
+      "options": {
+        "A": "本位主義",
+        "B": "例外管理",
+        "C": "缺乏授權",
+        "D": "團體盲思"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-9",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 9,
+      "question": "實施參與管理，為達有效溝通，在設計溝通系統時應考慮下列那些條件？①建立眾所皆知的溝通管道  ②溝通管",
+      "options": {
+        "A": "道是直接而迅速的  ③作為溝通中心者必須是足以勝任的  ④重視權威領導",
+        "B": "①②③",
+        "C": "①②④",
+        "D": "①③④"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-10",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 10,
+      "question": "學者彼得斯（G. Peters）認為當代政府的新治理模式有四種，下列何者不在其中？",
+      "options": {
+        "A": "市場式政府",
+        "B": "彈性化政府",
+        "C": "管制式政府",
+        "D": "參與式政府（請接背面）全一張"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-11",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 11,
+      "question": "下列有關PDCA 模式的敘述何者錯誤？",
+      "options": {
+        "A": "P（Plan）：計畫",
+        "B": "D（Decide）：決定",
+        "C": "C（Check）：檢查",
+        "D": "Ａ（Act）：行動"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-12",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 12,
+      "question": "標竿學習依比較的對象可分為四種類型，若與相同產業與技術產業的非競爭者，從事學習、觀摩、比較，是屬於何種類型？",
+      "options": {
+        "A": "競爭標竿",
+        "B": "功能標竿",
+        "C": "通用標竿",
+        "D": "策略標竿"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-13",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 13,
+      "question": "從顧客滿意經營的角度而言，一個成功的抱怨處理機制應該能夠：",
+      "options": {
+        "A": "將顧客忠誠度降到最低、顧客留住率降到最低",
+        "B": "將顧客忠誠度降到最低、顧客留住率提至最高",
+        "C": "將顧客忠誠度提至最高、顧客留住率降到最低",
+        "D": "將顧客忠誠度提至最高、顧客留住率提至最高"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-14",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 14,
+      "question": "根據危機管理專家芬可(Steven Fink)的「危機發展階段論」，危機的產生必經過以下的過程，①後遺症期 ②潛伏期 ③解決期 ④爆發期。以上過程其正確的階段順序為何？",
+      "options": {
+        "A": "②①④③",
+        "B": "②④③①",
+        "C": "②④①③",
+        "D": "④②①③"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-15",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 15,
+      "question": "有關結果導向型的公共管理策略之陳述，下列何者錯誤？",
+      "options": {
+        "A": "不可為達目的不擇手段",
+        "B": "不可背離民主價值的追求",
+        "C": "不可違背經濟主導一切的原則",
+        "D": "不可忽視民意的引入"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-16",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 16,
+      "question": "投入與產出之比例或投入轉化為產出的比率，屬下列何種績效指標？",
+      "options": {
+        "A": "經濟",
+        "B": "效率",
+        "C": "效能",
+        "D": "公平"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-17",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 17,
+      "question": "公部門推動電子化政府建設所期望提供的功能，不包含下列那一項？",
+      "options": {
+        "A": "增進行政效率",
+        "B": "加速個人隱私資訊散播的便利",
+        "C": "促進顧客服務",
+        "D": "建立公民對政府的信任"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-18",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 18,
+      "question": "針對知識管理重要元素之描述公式：KM=(P+I)s，下列那一項說法錯誤？",
+      "options": {
+        "A": "P 是指人（People），即知識載運者",
+        "B": "I 是指資訊（Information），即知識的基礎",
+        "C": "S 是指系統（System），即提供知識文件分享的系統平台",
+        "D": "+號是指科技（Technology），即透過資訊科技來協助知識管理的建構"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-19",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 19,
+      "question": "為建立知識型組織，必須設置下列何種職務？",
+      "options": {
+        "A": "執行長（CEO）",
+        "B": "知識長（CKO）",
+        "C": "財務長（CFO）",
+        "D": "資訊長（CIO）"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-20",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 20,
+      "question": "根據聖吉（P. Senge）的說法，單位主管反思過往一言堂方式，接納異議，是屬於下列學習型組織的那一項修練？",
+      "options": {
+        "A": "自我超越",
+        "B": "改善心智模式",
+        "C": "團隊學習",
+        "D": "系統思維"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-21",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 21,
+      "question": "一位稱職的公共管理者最須具備何種管理技能，才能策略性地針對政策主題內涵予以增強，以建立在民眾心中的形象？",
+      "options": {
+        "A": "管理政策發展",
+        "B": "危機處理",
+        "C": "策略傳播",
+        "D": "談判"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-22",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 22,
+      "question": "我國政府部門逐漸在Facebook、Twitter 等開設官方帳號或粉絲專頁，此現象主要是因應下列那一項網際網路發展的趨勢？",
+      "options": {
+        "A": "Web 1.0",
+        "B": "Web 2.0",
+        "C": "CIS",
+        "D": "GIS"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-23",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 23,
+      "question": "有關「要勸導青少年不要夜遊不歸，選擇青少年聚集最多的地點─西門町」之敘述，最符合下列那一項政策行銷的核心概念？",
+      "options": {
+        "A": "通路",
+        "B": "夥伴",
+        "C": "推銷",
+        "D": "產品"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-24",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 24,
+      "question": "關於使用者付費的概念敘述，下列何者錯誤？",
+      "options": {
+        "A": "主要基於權利分享和責任負擔的對稱關係",
+        "B": "如免費提供服務，可能產生搭便車的心理",
+        "C": "圖書資訊系統的「查詢費」是使用者付費的一種",
+        "D": "無法成為挹注政府財政收入的主要工具"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-106-civil-junior-general-25",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "106 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 25,
+      "question": "根據G. Peters and J. Pierre（1998）的觀察，關於治理與新公共管理的相似之處，下列敘述何者錯誤？",
+      "options": {
+        "A": "發展新的控制工具與課責性",
+        "B": "強調公私部門二分觀點的重要性",
+        "C": "強調競爭",
+        "D": "強調產出控制而非輸入控制"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-1",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 1,
+      "question": "有關公共管理的意涵，下列何者正確？",
+      "options": {
+        "A": "公共管理與科學管理的傳統無關，是一種應用性的社會科學",
+        "B": "公共管理的重點，是將公共行政視為一種專業",
+        "C": "公共管理重視組織內部運作程序，不重視組織與外部環境的關係",
+        "D": "公共管理的領域，不包含非營利組織（或稱為第三部門）"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-2",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 2,
+      "question": "英國首相布萊爾（ Tony  Blair）所主張的公共管理改革模式，力主讓個別工會涉入政黨事務，此種主張被稱為何 種主義的政經模式？",
+      "options": {
+        "A": "團體競合主義",
+        "B": "自由放任主義",
+        "C": "利害關係人主義",
+        "D": "社會統合主義"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-3",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 3,
+      "question": "「新公共行政」與「新公共管理」的差異在於：",
+      "options": {
+        "A": "前者回應對象特別著重公民，後者回應對象特別著重顧客",
+        "B": "前者重視提供服務流程與標準設計，後者重視公共行政倫理",
+        "C": "前者採取完全理性，後者強調政治權威",
+        "D": "前者認為政府是導航者，後者則認為政府是操槳者"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-4",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 4,
+      "question": "一般認為，全面品質管理的重要學者，下列何者錯誤？",
+      "options": {
+        "A": "朱朗（J. Juran）",
+        "B": "克勞斯比（P. Crosby）",
+        "C": "戴明（W. E. Deming）",
+        "D": "聖吉（P. Senge）"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-5",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 5,
+      "question": "下列何者不是公共管理 P研究途徑的特徵？",
+      "options": {
+        "A": "透過個案研究來發展所需之知識",
+        "B": "偏向於前瞻性與規範性的理論研究",
+        "C": "著眼於高層管理者所制定之策略的研究",
+        "D": "接受以公共行政學科為中心的政策執行研究"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-6",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 6,
+      "question": "有關新公共管理風潮下的政府再造之敘述，下列何者錯誤？",
+      "options": {
+        "A": "目的在建立一個成本最少、做得最好的企業型政府",
+        "B": "所謂再造強調的是對組織過程的澈底再思考",
+        "C": "重視高階管理者創造價值的全面性連接過程",
+        "D": "政府再造與組織精簡二者內容有別"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-7",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 7,
+      "question": "對於政府服務品質不滿意的公民，會產生何種擴張效應？",
+      "options": {
+        "A": "顧客乘數效應",
+        "B": "追隨者乘數效應",
+        "C": "顧客連鎖效應",
+        "D": "顧客忠誠效應"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-8",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 8,
+      "question": "有關全面品質管理的核心概念，下列敘述何者錯誤？",
+      "options": {
+        "A": "以不斷持續改進為目標",
+        "B": "不強調人員和效率的整合",
+        "C": "以滿足顧客潛在需求為焦點的品質概念",
+        "D": "強調團隊工作的全員參與為管理原則"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-9",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 9,
+      "question": "在學習時，當組織因應的方法只是改變行動但未改變價值時，屬於下列何種學習類型？",
+      "options": {
+        "A": "雙圈回饋學習",
+        "B": "創新性學習",
+        "C": "單圈回饋學習",
+        "D": "再學習"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-10",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 10,
+      "question": "下列何者是新公共管理主張政府應該引進市場機制的主要原因？",
+      "options": {
+        "A": "政府應該扮演划槳者的角色",
+        "B": "可以為生產者帶來較高利潤",
+        "C": "市場係以消費者為導向",
+        "D": "重視生產過程的技術改造"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-11",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 11,
+      "question": "依據B. Andersen& P. Pettersen 之見解，就比較標的區分標竿學習的種類，下列何者錯誤？",
+      "options": {
+        "A": "功能標竿",
+        "B": "績效標竿",
+        "C": "策略標竿",
+        "D": "流程標竿"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-12",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 12,
+      "question": "顧客導向的執行方式與經營策略中，下列何種組合較為正確？①有效處理顧客抱怨 ②第一次服務就零缺點 ③找出顧客的期望與偏好 ④回應最有影響力的顧客 ⑤依法行政善用行政裁量 ⑥異業學習企業標竿",
+      "options": {
+        "A": "①②③⑥",
+        "B": "①②③⑤",
+        "C": "②③④⑥",
+        "D": "③④⑤⑥"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-13",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 13,
+      "question": "下列何者並非20 世紀後期新公共管理改革浪潮出現的原因？",
+      "options": {
+        "A": "出現於後冷戰時期新的世界局勢",
+        "B": "新興國家民主轉型的治理需求",
+        "C": "全球化之下國家間競爭日趨激烈",
+        "D": "金融海嘯所需要的跨國合作機制"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-14",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 14,
+      "question": "依據管理學者布拉克（R. Blake）與莫頓（J. Mouton）所提出的管理格道理論，下列何者是「團隊式管理」所具備的特質？",
+      "options": {
+        "A": "對生產關切的程度低，對員工關切的程度低",
+        "B": "對生產關切的程度高，對員工關切的程度高",
+        "C": "對生產關切的程度低，對員工關切的程度高",
+        "D": "對生產關切的程度高，對員工關切的程度低"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-15",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 15,
+      "question": "美國政府績效與成果法案（Government Performance and Results Act, GPRA）是在下列何者擔任總統時所推動的法案？",
+      "options": {
+        "A": "雷根",
+        "B": "柯林頓",
+        "C": "歐巴馬",
+        "D": "老布希"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-16",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 16,
+      "question": "一項服務對於接受者所產生的衝擊或影響程度，係指下列何種績效指標？",
+      "options": {
+        "A": "投入指標",
+        "B": "過程指標",
+        "C": "回饋指標",
+        "D": "結果指標"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-17",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 17,
+      "question": "下列何者不是非營利組織自律規範中的重要原則？",
+      "options": {
+        "A": "誠信募款",
+        "B": "訂定服務目標及流程評估",
+        "C": "財務資訊保護",
+        "D": "利益迴避"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-18",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 18,
+      "question": "老手與新手之間的經驗傳承，其知識屬性最屬於下列何者？",
+      "options": {
+        "A": "內隱知識",
+        "B": "內隱知識與外顯知識的綜合",
+        "C": "外顯知識",
+        "D": "有時內隱知識，有時外顯知識"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-19",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 19,
+      "question": "有關知識地圖的主要元素，不包含下列那一項？",
+      "options": {
+        "A": "知識社群",
+        "B": "知識執行長",
+        "C": "知識專家",
+        "D": "知識庫"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-20",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 20,
+      "question": "下列何者不是電子化政府發展趨勢所面臨的困境？",
+      "options": {
+        "A": "過度浪費與未具效益的問題",
+        "B": "步調不一的電子化過程",
+        "C": "資料庫的累積與整合問題",
+        "D": "高層管理者過度重視資訊科技知識與策略"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-21",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 21,
+      "question": "下列何者不是非營利組織的特徵？",
+      "options": {
+        "A": "非利益的分配",
+        "B": "非正式組織",
+        "C": "服務取向、行動取向",
+        "D": "組織收入依賴募款能力，而非組織績效"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-22",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 22,
+      "question": "下列何者不是成功行銷的關鍵要素組合？",
+      "options": {
+        "A": "組織應採取「多做少說」的原則",
+        "B": "組織的基本目的在於滿足顧客的需要",
+        "C": "要滿足顧客需要，整個組織必須同心協力",
+        "D": "組織應強調長期的掌握顧客"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-23",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 23,
+      "question": "英國政府自1970 年代末期，發展出一套協力規劃的執行策略，下列何者並非是此執行策略的主要作法？",
+      "options": {
+        "A": "市場式協調規劃",
+        "B": "聯合規劃",
+        "C": "聯合財政",
+        "D": "結構塑能與法律授權"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-24",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 24,
+      "question": "政府業務委託民間辦理包括四大模式，下列何者屬於「機關內部業務委外」的類型？",
+      "options": {
+        "A": "消防安全檢查委外",
+        "B": "訓練業務委外",
+        "C": "違規車輛拖吊業務委外",
+        "D": "宜蘭傳藝中心民營"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-107-civil-junior-general-25",
+      "roc_year": "107",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "107 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 25,
+      "question": "某民間廠商投資6,000 萬元，與某縣市政府簽約擴建某國小現有的游泳池設備，並增建25 公尺室內溫水訓練池，廠商取得營運權一定期間後，再將營運權歸還政府。此民間機構參與公共建設的方式，稱為：",
+      "options": {
+        "A": "ROT",
+        "B": "BOO",
+        "C": "OT",
+        "D": "BOT"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-1",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 1,
+      "question": "有關傳統公共行政與新公共管理的不同處，下列敘述何者正確？",
+      "options": {
+        "A": "傳統公共行政較強調官僚與民主的社會價值與衝突",
+        "B": "傳統公共行政較主張經濟、效率與效果的工具標準",
+        "C": "新公共管理與法學與社會學保持較為密切的關係",
+        "D": "新公共管理較堅持公私分立的兩元論主張"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-2",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 2,
+      "question": "下列針對公共管理之基本概念，何者錯誤？",
+      "options": {
+        "A": "公共管理是一種學科專業與管理實務",
+        "B": "公共管理不等於公共行政，而是對傳統公共行政的修正",
+        "C": "公共管理的研究範圍包含財務管理、人力資源管理等",
+        "D": "公共管理只是一種意識形態與政治文化的展現"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-3",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 3,
+      "question": "B. Bozeman 提出的P 途徑與B 途徑當中，下列何者正確？",
+      "options": {
+        "A": "P 途徑強調量化取向",
+        "B": "P 途徑偏向於前瞻性、規範性的理論研究",
+        "C": "B 途徑對公私部門之間的差異做出規範性的區隔",
+        "D": "B 途徑主要採取質化研究"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-4",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 4,
+      "question": "對於公共管理相關學派之論述，下列何者錯誤？",
+      "options": {
+        "A": "公共管理採取個案研究途徑，強調實務與理論並重的研究觀念",
+        "B": "新公共行政認為高階文官應主動扮演糾正分贓政治之惡的重大角色",
+        "C": "公共選擇學派認為政府應當逐漸減少自己承擔的角色，將公共服務交給更有效率市場機制進行",
+        "D": "公共管理起於1887 年威爾遜先生撰寫的 The Study of Administration 一文，並藉此提出政治行政二分的概念"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-5",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 5,
+      "question": "ISO 9000 最重要的理論基礎為何？",
+      "options": {
+        "A": "顧客導向",
+        "B": "全面品質管理",
+        "C": "組織再造",
+        "D": "標竿學習"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-6",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 6,
+      "question": "標竿學習的發展沿革與階段中，何者是最初的階段，且重點為產品製造技術的分析方法？",
+      "options": {
+        "A": "改變製程標竿學習",
+        "B": "策略標竿學習",
+        "C": "流程標竿學習",
+        "D": "網絡標竿學習"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-7",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 7,
+      "question": "風險的評估當中，主要是從那兩個內涵進行乘積分析？",
+      "options": {
+        "A": "成本×效益",
+        "B": "技術×溝通",
+        "C": "時間×成本",
+        "D": "發生機率×損害"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-8",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 8,
+      "question": "就追求全面品質管理的組織而言，下列何者不是由下而上所採用的團隊型態？",
+      "options": {
+        "A": "品管圈",
+        "B": "品質改進團隊",
+        "C": "跨功能團隊",
+        "D": "產值督導團隊"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-9",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 9,
+      "question": "有關目標管理與共同願景的關連性，下列敘述何者錯誤？",
+      "options": {
+        "A": "目標往往流於瑣碎，無法表現出組織的整體期望，因此應建立共同願景進行整合",
+        "B": "為實施目標管理，應創造組織成員彼此一體、休戚與共的歸屬感",
+        "C": "透過共同願景，目標管理的實施更能獲得成功",
+        "D": "建立願景與目標管理無關"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-10",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 10,
+      "question": "根據標竿學習輪的概念，下列那一階段之主要目的是為了瞭解組織本身、學習標竿與流程之間所產生的績效落差？",
+      "options": {
+        "A": "規劃",
+        "B": "分析",
+        "C": "觀察",
+        "D": "適用"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-11",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 11,
+      "question": "依我國災害防救體系，下列何者是災害防救組織中的最高單位？",
+      "options": {
+        "A": "中央災害防救委員會",
+        "B": "中央災害應變中心",
+        "C": "中央災害防救會報",
+        "D": "國家災害防救科技中心"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-12",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 12,
+      "question": "針對異質性的工作隊伍從事組織本身的變革，以建立一個將自我潛能發揮極大化的工作環境，稱之為：",
+      "options": {
+        "A": "組織再造工程",
+        "B": "變革管理",
+        "C": "多元化管理",
+        "D": "目標管理"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-13",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 13,
+      "question": "行政機關必須對一般社會大眾、新聞媒體、相關非營利組織，以及其他利害關係人說明爭議性的政策決定，此種課責的方式稱為：",
+      "options": {
+        "A": "行政課責",
+        "B": "管理課責",
+        "C": "網絡課責",
+        "D": "法治課責"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-14",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 14,
+      "question": "有關「績效管理」的敘述，下列何者錯誤？",
+      "options": {
+        "A": "組織內首長、幕僚與基層全體參與",
+        "B": "設定績效目標",
+        "C": "績效成果的回饋",
+        "D": "重視抽象與多元的指標"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-15",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 15,
+      "question": "有關電子化民主所帶來主要的正面功能，下列那一項為正確組合？①遞增的服務 ②單位成本的降低 ③網路領袖的塑造 ④促進組織創新",
+      "options": {
+        "A": "①②③",
+        "B": "①②④",
+        "C": "②③④",
+        "D": "①③④"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-16",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 16,
+      "question": "有關公共管理特質之敘述，下列何者錯誤？",
+      "options": {
+        "A": "將私部門的管理手段運用於公部門",
+        "B": "將公共服務完全市場化",
+        "C": "重視與外部環境的關係",
+        "D": "與政策分析有密切關係"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-17",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 17,
+      "question": "根據E. M. Rogers 的說法，組織創新的過程依序可以分為五個階段，下列排列順序何者正確？",
+      "options": {
+        "A": "配對、議題設定、清楚闡釋、重新架構、常規化",
+        "B": "常規化、重新架構、議題設定、清楚闡釋、配對",
+        "C": "清楚闡釋、議題設定、常規化、重新架構、配對",
+        "D": "議題設定、配對、重新架構、清楚闡釋、常規化"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-18",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 18,
+      "question": "根據威爾遜（J. Q. Wilson）的說法，「政策執行成本由少數廠商負擔，但利益卻由全民均霑，如環保管制與消費者保護措施」，這一段話最符合那一種政治型態？",
+      "options": {
+        "A": "客戶政治型態",
+        "B": "企業政治型態",
+        "C": "利益團體政治型態",
+        "D": "多數決政治型態"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-19",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 19,
+      "question": "下列何種職務之設立是專責用來掌管組織所有知識管理相關工作？",
+      "options": {
+        "A": "總務長",
+        "B": "財務長",
+        "C": "知識長",
+        "D": "人資長"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-20",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 20,
+      "question": "下列何者最不屬於公私協力興起的發展背景？",
+      "options": {
+        "A": "公民參與的興起",
+        "B": "民營化風潮的衝擊",
+        "C": "公共管理型態的改變",
+        "D": "代議民主的積弊"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-21",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 21,
+      "question": "根據6 Perri 的說法，下列何者非屬於全局治理下所欲整合的四大治理活動？",
+      "options": {
+        "A": "規章",
+        "B": "授權",
+        "C": "服務",
+        "D": "政策"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-22",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 22,
+      "question": "今日政府重視公關與行銷的原因，主要來自於三項再造需求，下列何者錯誤？",
+      "options": {
+        "A": "價值再造",
+        "B": "形象再造",
+        "C": "網絡再造",
+        "D": "功能再造"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-23",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 23,
+      "question": "下列何者是政府行銷管理的第一步驟？",
+      "options": {
+        "A": "發展最適化通路",
+        "B": "創造與維持品牌",
+        "C": "發展民意導向的公共計畫與服務",
+        "D": "改善顧客服務與滿意度"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-24",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 24,
+      "question": "根據P. G. Joyce 的觀點，績效預算具有幾項的功能，下列何者錯誤？",
+      "options": {
+        "A": "協助預算資源的合理配置",
+        "B": "機關內部資源的有效管理",
+        "C": "民選首長進行財務報告的基礎",
+        "D": "重視預算投入及執行過程"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-108-civil-junior-general-25",
+      "roc_year": "108",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "108 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 25,
+      "question": "下列敘述何者不符合公共管理者為妥善處理民意代表關係所需的政治溝通原則？",
+      "options": {
+        "A": "迅速回應民意代表的要求與問題",
+        "B": "對民意代表的幕僚維持被動的聯繫",
+        "C": "與民意代表建立信任關係",
+        "D": "提供民意代表真實的資訊"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-1",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 1,
+      "question": "平衡計分卡（Balanced Scorecard）的四大衡量構面為：",
+      "options": {
+        "A": "生產力、顧客、效用、學習及成長",
+        "B": "財務、人力、內部流程、學習及成長",
+        "C": "生產力、人力、內部流程、效用",
+        "D": "財務、顧客、內部流程、學習及成長"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-2",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 2,
+      "question": "以公共政策為取向的公共管理研究途徑，下列敘述何者錯誤？",
+      "options": {
+        "A": "透過管理者的親身經歷或個案研究來發展所需之知識",
+        "B": "偏向前瞻性、規範性的理論研究",
+        "C": "拒絕傳統的公共行政研究成果",
+        "D": "將基層人員的執行成果視為政府的績效關鍵"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-3",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 3,
+      "question": "有關治理的敘述，下列何者正確？",
+      "options": {
+        "A": "科層與權威即將被完全取代",
+        "B": "完全排除非營利組織的涉入",
+        "C": "網絡治理是治理機制的一種樣貌",
+        "D": "治理機制的轉變僅需要民眾參與"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-4",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 4,
+      "question": "關於公部門與私部門管理的比較，下列敘述何者正確？",
+      "options": {
+        "A": "公私部門管理者所需要的管理知識、技能及工具是完全不同的",
+        "B": "公私部門的權利與責任分配不同，公部門是分散的，私部門是集中的",
+        "C": "公私部門管理者皆須同樣面對急迫性問題及受到各方利益的干擾",
+        "D": "公私部門的管理都必須攤在陽光下，同受公眾監督"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-5",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 5,
+      "question": "下列敘述何者不是為推動行政革新，所建構之企業型政府的特質？",
+      "options": {
+        "A": "為解決國家債務危機及政府預算赤字，應重視成本效益關係",
+        "B": "為使政府產出極大化、資源利用最適化，應重視績效結果評估",
+        "C": "為保證行政人員達成工作目標，應制定一套清晰的績效標準，並加強控制",
+        "D": "為滿足民眾對公共服務的需求，應提供民眾多元選擇機會，並強調競爭的手段"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-6",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 6,
+      "question": "強調理想性、價值面的公民精神，符合下列何種理論？",
+      "options": {
+        "A": "傳統公共行政",
+        "B": "交易成本理論",
+        "C": "新公共服務",
+        "D": "策略管理"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-7",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 7,
+      "question": "有關行政院組織改造方案所涉及之法律，規範行政院機關組織數量，係屬下列何者？",
+      "options": {
+        "A": "中央行政機關組織基準法",
+        "B": "行政院功能業務與組織調整暫行條例",
+        "C": "行政法人法",
+        "D": "中央政府機關總員額法"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-8",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 8,
+      "question": "下列敘述何者是公部門採行全面品質管理的限制？",
+      "options": {
+        "A": "提升員工士氣",
+        "B": "提高工作品質及降低生產成本",
+        "C": "提高顧客滿意度",
+        "D": "強調依法行政"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-9",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 9,
+      "question": "標竿學習著重由他人經驗中看清自己，其目的最符合下列何者？",
+      "options": {
+        "A": "瞭解自己，避免陷入盲目地模仿",
+        "B": "熟悉對方，可以加快經驗複製",
+        "C": "瞭解自己，避免針鋒相對",
+        "D": "熟悉對方，伺機超越"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-10",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 10,
+      "question": "有關顧客導向的特質，下列敘述何者錯誤？",
+      "options": {
+        "A": "由外而內改造",
+        "B": "顧客永遠優先",
+        "C": "雙重課責要求",
+        "D": "法令規章至上"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-11",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 11,
+      "question": "府際管理乃期待透過非層級節制的網絡行政，以協商談判與化解衝突來達成特定政策目標。下列敘述何者錯誤？",
+      "options": {
+        "A": "問題焦點與行動導向",
+        "B": "體制變遷與工具導向",
+        "C": "發展網絡與溝通導向",
+        "D": "官僚機制與管制導向"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-12",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 12,
+      "question": "下列敘述何者不是危機的「時間有限性」？",
+      "options": {
+        "A": "危機突然發生，無法依照標準作業程序處理",
+        "B": "具有時間壓力與資訊不足的情況",
+        "C": "重視組織層級參與決策",
+        "D": "決策者必須立即對於情境做出適當反應"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-13",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 13,
+      "question": "下列敘述何者不屬於公部門人力資源管理之特色？",
+      "options": {
+        "A": "深受法律規章和規則程序限制",
+        "B": "行政績效容易衡量",
+        "C": "受到政治因素的影響甚深",
+        "D": "行政目標追求大且廣泛的公共利益"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-14",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 14,
+      "question": "關於360度績效評估的敘述，下列何者正確？",
+      "options": {
+        "A": "資料來源方式為由上而下",
+        "B": "各效標之間的區辨大",
+        "C": "過去取向且重視成果",
+        "D": "由管理者單獨完成"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-15",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 15,
+      "question": "下列敘述何者可用質化途徑衡量政府的績效？",
+      "options": {
+        "A": "生產的單位成本",
+        "B": "設備的使用率",
+        "C": "服務對象的滿意態度",
+        "D": "公文辦理天數"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-16",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 16,
+      "question": "政府與非營利組織分享共同的價值目標，以及達成目標的手段，係屬下列那一種互動模式？",
+      "options": {
+        "A": "合作模式",
+        "B": "競逐模式",
+        "C": "臣屬模式",
+        "D": "衝突模式"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-17",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 17,
+      "question": "就公部門培育知識管理人才而言，下列敘述何者最不適當？",
+      "options": {
+        "A": "堅守標準作業程序",
+        "B": "培養跨組織協調溝通能力",
+        "C": "強調資訊系統的運用技巧",
+        "D": "容忍犯錯的學習環境"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-18",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 18,
+      "question": "關於BOT（Build-Operate-Transfer）和PFI（Private Finance Initiative）的敘述，下列敘述何者正確？",
+      "options": {
+        "A": "BOT的收入來源來自政府給付服務的對價",
+        "B": "在PFI模式中，政府無法直接監控民間業者的服務收益",
+        "C": "BOT的服務定價由私部門全權決定",
+        "D": "在PFI模式中，政府可以直接監控民間業者的服務品質"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-19",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 19,
+      "question": "下列敘述何者較屬於形塑具備企業精神的行政環境所應採行的措施？",
+      "options": {
+        "A": "重視績效而低度容忍錯誤",
+        "B": "設計新組織結構以加強控制",
+        "C": "高階管理者願意承擔較多風險",
+        "D": "賦予執行者更多課責及較少裁量權"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-20",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 20,
+      "question": "資訊科技進入公共管理領域最初是以電子化政府（e-government）的概念出現，後續演變成電子治理（e-governance）概念主要是因為加入那一個元素？",
+      "options": {
+        "A": "電子參與",
+        "B": "客製化服務",
+        "C": "大數據分析",
+        "D": "政府開放資料"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-21",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 21,
+      "question": "有關民意特性，下列敘述何者錯誤？",
+      "options": {
+        "A": "複雜性",
+        "B": "多變性",
+        "C": "不一致性",
+        "D": "絕對性"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-22",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 22,
+      "question": "政府為減少因「鄰避情結」（NIMBY）而引發自力救濟活動，下列敘述何者錯誤？",
+      "options": {
+        "A": "讓標的人口適當參與政策運作過程",
+        "B": "讓政策運作過程參與者適切互動",
+        "C": "政策以達成政府目標為主要考量",
+        "D": "慎選政策方案，使其內容周延可行"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-23",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 23,
+      "question": "「不同層次或轄區的政府間，在處理相同公共問題時，應採取超越府際藩籬的觀念，納入同一組織網絡當中」之主張，是指跨域治理的何種特質？",
+      "options": {
+        "A": "系統層次的意涵",
+        "B": "微觀層次的意涵",
+        "C": "宏觀層次的意涵",
+        "D": "參與者具相依性"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-24",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 24,
+      "question": "下列敘述何者不是行政機關進行政策溝通時，促使標的團體政策順服的策略？",
+      "options": {
+        "A": "教育與說服",
+        "B": "設立獎懲機制",
+        "C": "政策宣傳與督導",
+        "D": "選擇單一媒體管道"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-109-civil-junior-general-25",
+      "roc_year": "109",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "109 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 25,
+      "question": "參與式預算是一種民主審議與決策過程，給予公民有關公共資金將如何使用的實質決策權力，下列敘述何者不是其成功的要素？",
+      "options": {
+        "A": "政府首長的大力支持",
+        "B": "標準作業流程的設計",
+        "C": "與基層社區資源結合",
+        "D": "所有政府支出預算均採用"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-1",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 1,
+      "question": "下列何者不是公共管理的非營利特性？",
+      "options": {
+        "A": "排除專家意見而做決策",
+        "B": "具有服務性組織的特質",
+        "C": "欠缺衡量利潤的機制",
+        "D": "有目標設定及策略選擇的限制"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-2",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 2,
+      "question": "美國政府的政府績效與成果法，係以何種標準為基礎的績效評估制度？",
+      "options": {
+        "A": "職權導向",
+        "B": "投入導向",
+        "C": "信任導向",
+        "D": "結果導向"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-3",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 3,
+      "question": "若接受公共服務者的身分是委託者與選民，最符合下列何種理論的主張？",
+      "options": {
+        "A": "新公共行政",
+        "B": "傳統公共服務",
+        "C": "新公共服務",
+        "D": "傳統公共行政"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-4",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 4,
+      "question": "下列何者最不屬於新公共管理發展的原因？",
+      "options": {
+        "A": "新右派的出現",
+        "B": "新古典經濟理論的崛起",
+        "C": "社會貧富差距的影響",
+        "D": "全球化的挑戰"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-5",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 5,
+      "question": "下列何者不屬於政府再造的核心特質？",
+      "options": {
+        "A": "生產力",
+        "B": "市場化",
+        "C": "社會化",
+        "D": "分權化"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-6",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 6,
+      "question": "有關新公共管理的哲學基礎，下列敘述何者錯誤？",
+      "options": {
+        "A": "基於人類的自利動機，追求個人利益極大化的理性選擇理論",
+        "B": "基於契約過程中人類完全理性的交易成本理論",
+        "C": "基於社會分工及契約關係的代理人理論",
+        "D": "基於造成官僚體系及政府組織規模極大化現象的公共選擇理論"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-7",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 7,
+      "question": "在全面品質管理（Total Quality Management）的管理哲學下，下列何者最符合員工教育訓練的意涵？",
+      "options": {
+        "A": "價值與投資",
+        "B": "成本與財產",
+        "C": "代價與機會",
+        "D": "利潤與回饋"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-8",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 8,
+      "question": "關於政府策略管理的特性，下列何者錯誤？",
+      "options": {
+        "A": "未來導向",
+        "B": "全方位的思考",
+        "C": "強調市場性",
+        "D": "持續性與循環性的流程"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-9",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 9,
+      "question": "透過比較、分析、瞭解本機關與其他機關在績效、服務品質、運作程序和策略上之差異，藉以獲取新的觀念，主要目的在於提升本組織績效，最符合下列何者？",
+      "options": {
+        "A": "顧客學習",
+        "B": "標竿學習",
+        "C": "品質學習",
+        "D": "組織學習"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-10",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 10,
+      "question": "管理者本身必須參與比他自己高一層級的部門目標之發展，係屬下列何者？",
+      "options": {
+        "A": "目標設定",
+        "B": "目標管理",
+        "C": "目標預測",
+        "D": "目標追蹤"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-11",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 11,
+      "question": "關於危機之敘述，下列何者正確？",
+      "options": {
+        "A": "人類對於危機具有精準的預測能力",
+        "B": "危機僅會個別發生",
+        "C": "妥善的復原工作可以降低危機的損害程度",
+        "D": "組織文化並不會影響危機的發生"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-12",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 12,
+      "question": "邀請專家或民眾依其專業知識來判斷風險，係屬下列何者？",
+      "options": {
+        "A": "客觀風險",
+        "B": "主觀風險",
+        "C": "社會風險",
+        "D": "自然風險"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-13",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 13,
+      "question": "下列何者先於策略資源盤點，並可作為策略排序的依據？",
+      "options": {
+        "A": "流程管理",
+        "B": "人流管理",
+        "C": "策略管理",
+        "D": "物流管理"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-14",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 14,
+      "question": "下列何者對效率型指標的敘述最適當？",
+      "options": {
+        "A": "投入與產出的比例",
+        "B": "結果與外溢效果程度",
+        "C": "不同投入資源的比較",
+        "D": "達到公平的最佳方法"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-15",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 15,
+      "question": "政府推動績效管理的目的，下列敘述何者錯誤？",
+      "options": {
+        "A": "對於民選首長而言，可以強化對文官系統的政治控制力",
+        "B": "對於民代而言，可以確立民主體制的課責機制",
+        "C": "對於文官而言，可以強化指揮命令系統",
+        "D": "對於民眾而言，可以瞭解政府的施政規劃與成效"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-16",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 16,
+      "question": "「非營利且不得分配盈餘」是構成「非營利組織」的特點之一，下列敘述何者最正確？",
+      "options": {
+        "A": "非營利組織不能獲取任何利益",
+        "B": "非營利組織可以獲取利益，但必須運用在組織宗旨限定的任務",
+        "C": "非營利組織可以獲取利益，但不能作為員工獎金",
+        "D": "非營利組織可以獲取利益，但必須全數捐出做公益"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-17",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 17,
+      "question": "關於組織推動知識管理的目的，下列敘述何者最正確？",
+      "options": {
+        "A": "讓資深員工的外顯知識內化成為組織的默會知識",
+        "B": "拉長員工學習曲線，以利深度學習產生效益",
+        "C": "增加員工重複犯錯機率，俾使「創新」得以發生",
+        "D": "提升組織成員潛能與創意，改善績效及競爭力"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-18",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 18,
+      "question": "組織學習的基本單位為何？",
+      "options": {
+        "A": "個人學習",
+        "B": "團隊學習",
+        "C": "冥想獨處",
+        "D": "個人內心修練"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-19",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 19,
+      "question": "民間車廠協助政府代驗汽車，係屬下列何種公私協力模式？",
+      "options": {
+        "A": "機關內部業務委外",
+        "B": "公共設施服務委託經營",
+        "C": "補助民間機構提供服務",
+        "D": "行政檢查業務委外辦理"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-20",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 20,
+      "question": "電子化政府作為公共管理的改革工具，下列敘述何者錯誤？",
+      "options": {
+        "A": "資訊透明化，便於個人資料流通與應用",
+        "B": "簡化工作流程，促進行政效率",
+        "C": "民眾直接參與政策過程",
+        "D": "增進民眾與政府的互動"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-21",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 21,
+      "question": "有關公民參與，下列敘述何者錯誤？",
+      "options": {
+        "A": "新公共服務（New Public Service）強調民眾回應性以及公民參與的過程",
+        "B": "公民社會是由一群具有社群意識、情感與共同意見的公民所組成",
+        "C": "新公共管理（New Public Management）強調公民精神勝於企業家精神",
+        "D": "參與式預算是一種公民參與的途徑"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-22",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 22,
+      "question": "政府推動審議式民主，與下列何者最為無關？",
+      "options": {
+        "A": "強調利害關係人間彼此對話",
+        "B": "強調個人觀點價值中立",
+        "C": "重視不同利害關係人觀點間的詮釋與協調",
+        "D": "重視分配正義"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-23",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 23,
+      "question": "下列何者是實施目標管理的首要步驟？",
+      "options": {
+        "A": "執行計畫之擬定",
+        "B": "定期評鑑",
+        "C": "自我控制",
+        "D": "目標設定"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-24",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 24,
+      "question": "有關政府行銷管理，下列敘述何者錯誤？",
+      "options": {
+        "A": "政府行銷管理的作用，消極面可以澄清誤會，積極面可以爭取民眾認同",
+        "B": "政府行銷是將明確的訊息傳遞給民眾，僅是一種單向的溝通行為",
+        "C": "政府行銷的價格有金錢性誘因與金錢性懲罰兩種類型",
+        "D": "政府行銷的目的是希望改變民眾的價值觀與態度"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-110-civil-junior-general-25",
+      "roc_year": "110",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "110 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 25,
+      "question": "公共建設的設計、興建、營運與資金調度權均委由民間機構完成，同時在建設與營運期間屆滿後，並不將所有權移交給政府。此種公私協力的做法稱為：",
+      "options": {
+        "A": "民間融資提案（Private Finance Initiative, PFI）",
+        "B": "興建-移轉-營運模式（Build-Transfer-Operate, BTO）",
+        "C": "興建-營運-移轉模式（Build-Operate-Transfer, BOT）",
+        "D": "興建-擁有-營運模式（Build-Own-Operate, BOO）"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-1",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 1,
+      "question": "下列何者不屬於公共選擇理論的主要概念？",
+      "options": {
+        "A": "不可能定理（Arrow’s Impossible Theorem）",
+        "B": "多數決矛盾（Majority Voting Paradox）",
+        "C": "統合主義（Corporatism）",
+        "D": "中位數選民定理（Median Voter Theorem）"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-2",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 2,
+      "question": "針對公民治理的實踐意涵，下列敘述何者錯誤？",
+      "options": {
+        "A": "公民為共治者",
+        "B": "公共官僚即積極負責的公民",
+        "C": "公民僅追求經濟利益",
+        "D": "公共利益即共享價值"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-3",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 3,
+      "question": "有關公私部門管理特性差異的說明，下列何者最正確？",
+      "options": {
+        "A": "私部門面對的法令規範較公部門來得多",
+        "B": "公部門較私部門的績效衡量來得簡易",
+        "C": "公部門目標單一又高度相容",
+        "D": "公私部門受公眾監督的程度不同"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-4",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 4,
+      "question": "下列何者不屬於企業型政府的特質？",
+      "options": {
+        "A": "重視成本效益關係",
+        "B": "強調社會公平正義",
+        "C": "重視績效評估",
+        "D": "主張法令鬆綁"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-5",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 5,
+      "question": "為改善公共組織的結構惰性例如既得利益團體和歷史包袱等，並提升公共組織績效，其最重要的手段是下列何者？",
+      "options": {
+        "A": "於媒體建立組織受歡迎的形象",
+        "B": "推翻現有的政治和制度的障礙",
+        "C": "鼓勵公務員個人勇於創新突破",
+        "D": "組織對公務人員施以教育訓練"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-6",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 6,
+      "question": "1980 年代以來全球盛行的新公共管理風潮，其組織及協調機制是以下列何者為核心理念？",
+      "options": {
+        "A": "講求效率的市場機制",
+        "B": "追求信任共善的社群組織",
+        "C": "培養具代表性功能的政府官僚",
+        "D": "建構重視權威的層級節制組織"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-7",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 7,
+      "question": "關於全面品質管理（Total Quality Management）的敘述，下列何者最不適當？",
+      "options": {
+        "A": "真正的成本除了生產產品本身的成本外，還要加上處理顧客抱怨的時間及成本",
+        "B": "顧客滿意是推動組織的力量",
+        "C": "以價格為競爭的主軸",
+        "D": "將持續的改進視為常態"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-8",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 8,
+      "question": "下列何者不屬於標竿學習的功能？",
+      "options": {
+        "A": "促使組織持續改進",
+        "B": "改進工作流程",
+        "C": "提升組織本位主義",
+        "D": "維持競爭力"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-9",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 9,
+      "question": "落實顧客導向服務理念，首重提供顧客的選擇權，下列何者可彰顯其主要理念？",
+      "options": {
+        "A": "人民對於行政人員選擇性執法的容忍",
+        "B": "人民可以選擇守法的上限",
+        "C": "人民可以忍受執政者的政策反覆",
+        "D": "人民可依個人偏好選擇行政服務"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-10",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 10,
+      "question": "關於組織內部決策制定影響力之分享以及責任與心力的共同分擔，係指下列何種管理？",
+      "options": {
+        "A": "市場管理",
+        "B": "參與管理",
+        "C": "電子化管理",
+        "D": "跨域管理"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-11",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 11,
+      "question": "下列何者不是危機爆發時，危機指揮中心所應設置的單位？",
+      "options": {
+        "A": "危機決策者及其幕僚",
+        "B": "危機知識管理者",
+        "C": "危機處理小組",
+        "D": "危機處理專家"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-12",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 12,
+      "question": "管理對象著重於未來的不確定性與潛在威脅，係屬下列何種管理？",
+      "options": {
+        "A": "知識管理",
+        "B": "績效管理",
+        "C": "風險管理",
+        "D": "組織管理"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-13",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 13,
+      "question": "關於策略管理演變各時期的發展情況，下列何者最正確？",
+      "options": {
+        "A": "1950 年代長期規劃時期，開始注意外部環境的變遷和激烈的競爭情勢",
+        "B": "1960 年代企業策略規劃時期，僅著重分配組織中不同部門的責任",
+        "C": "1970 年代企業總體的策略規劃時期，首次出現使命及環境掃描或分析的概念",
+        "D": "1980 年代策略管理時期取代策略規劃的概念，有助於組織回溯到一般與每天的管理過程"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-14",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 14,
+      "question": "若以某大學製作畢業證書單位為例，下列何者屬於衡量該單位「效能」面的績效指標？",
+      "options": {
+        "A": "證書製作的總支出金額",
+        "B": "每份證書的製作時間",
+        "C": "證書製作的正確率",
+        "D": "證書申請流程的一致性"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-15",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 15,
+      "question": "關於政策指標與社會指標的區別，下列敘述何者錯誤？",
+      "options": {
+        "A": "社會指標反映整體社會的變遷趨勢，故有些社會指標並不具政策意涵",
+        "B": "政策指標經常需納入倫理性與規範性價值",
+        "C": "社會指標的設立是為了達成某一政策目標，政策指標的設立是為了引導社會目標效益",
+        "D": "政策指標不僅是政策目標取向，同時也隱含著可能的政策干預"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-16",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 16,
+      "question": "非營利組織的產生是因為政府有多數暴政、競租等問題，而無法透過政府正式制度解決公共問題，係屬下列何種觀點？",
+      "options": {
+        "A": "市場失靈論",
+        "B": "政府失靈論",
+        "C": "第三者政府論",
+        "D": "利他主義論"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-17",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 17,
+      "question": "探討知識管理應先區分資料（data）、資訊（information）與知識（knowledge）間的差別，下列何者不是資料？",
+      "options": {
+        "A": "警察巡邏車目前所在位置分布點",
+        "B": "目前那裡需要巡邏",
+        "C": "巡邏車上的員警人數",
+        "D": "巡邏車的數量"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-18",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 18,
+      "question": "對於知識類型的敘述，下列何者最正確？",
+      "options": {
+        "A": "外顯知識主觀且為經驗的知識",
+        "B": "內隱知識是理性的知識",
+        "C": "默會知識是一種數位型態的知識",
+        "D": "外顯知識常是組織良好的知識來源"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-19",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 19,
+      "question": "根據薩維斯（Savas, E. S.）的定義，抵用券歸屬於那一種民營化的類型？",
+      "options": {
+        "A": "撤資",
+        "B": "委託",
+        "C": "替代",
+        "D": "特許"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-20",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 20,
+      "question": "許多國家都在政府內部設置資訊長（chief Information officer, CIO）負責電子化政府的推動。我國政府現行的資訊長設置為：",
+      "options": {
+        "A": "專任、三級制",
+        "B": "兼任、二級制",
+        "C": "由國家發展委員會主任委員兼任",
+        "D": "委員會推派"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-21",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 21,
+      "question": "下列何者不是公民參與應具備的特質？參與主體為公民個人，不包括團體人民對政府的行動及政策能掌握充分的資訊社會上應存在健全的參與管道人民常以感情、知識、意志及行動的付出做為參與的意思表示22 「不要建在我家後院」（Not In MyBackYard；NIMBY）的心理與政策訴求，指的是學理上的那個現象？",
+      "options": {
+        "A": "理性決策",
+        "B": "鄰避情結",
+        "C": "用腳投票",
+        "D": "滾木立法"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-22",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 22,
+      "question": "「不要建在我家後院」（ Not In My Back Yard；NIMBY）的心理與政策訴求，指的是學理上的那個現象？",
+      "options": {
+        "A": "理性決策",
+        "B": "鄰避情結",
+        "C": "用腳投票",
+        "D": "滾木立法"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-23",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 23,
+      "question": "有關推動跨域治理與合作時，可能遭遇的阻礙及問題根源，下列何者錯誤？",
+      "options": {
+        "A": "地方主義與本位主義作祟",
+        "B": "相關法律配套措施不完備",
+        "C": "參與對象眾多，需要花費更多協商成本",
+        "D": "過度強調層級節制"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-24",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 24,
+      "question": "跨域治理主要是在三個概念主張下發展出來，下列何者不在其中？",
+      "options": {
+        "A": "傳統區域合併主義",
+        "B": "公共選擇",
+        "C": "新區域主義",
+        "D": "地緣政治學"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-111-civil-junior-general-25",
+      "roc_year": "111",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "111 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 25,
+      "question": "下列那一項管理措施最不符合多元化管理（Diversity Management）精神？",
+      "options": {
+        "A": "彈性工時",
+        "B": "生產線科學化管理",
+        "C": "員工育嬰假",
+        "D": "遠距辦公"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-1",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 1,
+      "question": "有關公民治理的實踐意涵之敘述，下列何者錯誤？",
+      "options": {
+        "A": "公共治理過程應強調積極負責的公民參與",
+        "B": "公共官僚的核心技能應重視專業技術而非公民意識",
+        "C": "治理過程中的公共利益即共享價值",
+        "D": "著重公民、官僚與政治精英的合作夥伴關係"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-2",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 2,
+      "question": "關於公共管理的興起背景，下列敘述何者正確？",
+      "options": {
+        "A": "最早從學者倡議企業管理方法來轉換政府職能開始",
+        "B": "初始是為了解決美國社會因追求小而美政府導致的行政效率低落問題",
+        "C": "核心學理深受主張大規模政府存在必要性學說的影響",
+        "D": "理論內容源自學者對於新左派意識形態出現與計畫經濟理論的批判"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-3",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 3,
+      "question": "對社會科學領域典範（paradigm）概念的敘述，下列何者錯誤？",
+      "options": {
+        "A": "典範是指某一時期、某一個社群共同持有的信念系統（belief system）",
+        "B": "社會科學的典範通常具有不可共量性（incommensurability）",
+        "C": "在某一典範下累積及形成的知識及概念稱為常態科學（normal science）",
+        "D": "當碰到既有知識體系難以解釋的現象時稱為異例（anomalies）"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-4",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 4,
+      "question": "下列何者不適合用於解釋政府失靈的成因？",
+      "options": {
+        "A": "官僚不法尋租",
+        "B": "公民自決",
+        "C": "部門本位主義",
+        "D": "政策失誤"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-5",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 5,
+      "question": "下列何者不是組織推動知識管理的發展趨勢？",
+      "options": {
+        "A": "重視知識管理的哲學面向",
+        "B": "強調組織核心能力的建立",
+        "C": "確立高階主管的組織地位",
+        "D": "營造組織創新的可能性"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-6",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 6,
+      "question": "下列何者不是公部門運用績效管理之限制？",
+      "options": {
+        "A": "機關首長對績效管理的重視",
+        "B": "目標設定無法一致",
+        "C": "績效指標難以量化",
+        "D": "資訊掌握的不實與不完整"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-7",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 7,
+      "question": "下列何者不是透過開放資料，希望達到實踐開放政府的主要原則？",
+      "options": {
+        "A": "公民參與合作",
+        "B": "資訊加值創新",
+        "C": "深化公私協作",
+        "D": "集權化管理"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-8",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 8,
+      "question": "某機關為提升績效，首長要求以「標竿學習」方式進行，下列何者不符合標竿學習的精神？",
+      "options": {
+        "A": "要求全機關都進行標竿學習",
+        "B": "事先評估自身組織的需求",
+        "C": "僅以外國政府組織作為標竿學習對象",
+        "D": "建立種子團隊"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-9",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 9,
+      "question": "有關公部門運用全面品質管理的敘述，下列何者正確？",
+      "options": {
+        "A": "公部門服務品質與成本的關係，較私人企業單純",
+        "B": "公部門所提供的服務會比私部門提供的商品來得更容易掌握品質",
+        "C": "對公部門而言，顧客的概念比對私部門來得明確",
+        "D": "公部門與私部門一樣可以進行滿意度調查，以了解實施成效"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-10",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 10,
+      "question": "近年來，越來越常看到政府機關找網紅（internet celebrity）來拍攝宣導短片，這樣的作法最符合公共服務行銷4P組合中的何種面向？",
+      "options": {
+        "A": "價格（price）",
+        "B": "產品（product）",
+        "C": "促銷（promotion）",
+        "D": "通路（place）"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-11",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 11,
+      "question": "學者以IDRM來表示顧客關係管理的核心概念，有關IDRM內涵的敘述，下列何者正確？",
+      "options": {
+        "A": "I（Interactive）代表顧客互動，意指組織可從與顧客互動過程中瞭解顧客明示或暗示的需求",
+        "B": "D（Defence）代表顧客防衛，意指組織需保護經營的知識（Know-how），以免遭顧客洩漏給競爭者",
+        "C": "R（Responsible）代表顧客責任，意指公部門的顧客有配合行政的責任",
+        "D": "M（Measure）代表顧客測量，意指組織需測量或調查顧客的需求"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-12",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 12,
+      "question": "有關危機管理的敘述，下列何者錯誤？",
+      "options": {
+        "A": "藉由不斷學習和反饋，可以降低危機情境帶來的威脅",
+        "B": "災難管理必然屬於危機管理",
+        "C": "災難管理是緊急狀態下的特殊管理型態",
+        "D": "危機處理範圍較大，危機管理是危機處理的一個核心階段"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-13",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 13,
+      "question": "若退休公務員領到的給付，是服務期間每月按薪資固定百分比與政府共同提撥的基金與其利息，此政府年金管理方式稱為：",
+      "options": {
+        "A": "確定提撥制",
+        "B": "確定給付制",
+        "C": "固定比例制",
+        "D": "浮動比例制"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-14",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 14,
+      "question": "下列何者為某縣政府推行觀光政策時SWOT 分析之威脅條件（threat）？",
+      "options": {
+        "A": "觀光資源缺乏",
+        "B": "欠缺觀光行銷專業人才",
+        "C": "天然災害發生頻率不低",
+        "D": "大眾運輸系統不完備"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-15",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 15,
+      "question": "政府推動績效管理，最主要在於培養何種組織文化？",
+      "options": {
+        "A": "互信與自主的文化：依照願景衍生的績效體系相互協助、自力自主達成指標",
+        "B": "控制的文化：依照指標體系，透過層級節制地完成指標事項，俾使考核有據、獎懲有本",
+        "C": "回應的文化：依照全民參與的指標建構，透過滾動檢討修訂以回應人民需求",
+        "D": "競爭的文化：透過指標介入個人績效，促進成員彼此競爭，迅速完成效率型指標"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-16",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 16,
+      "question": "某甲地方政府請某乙公司經營其公共自行車系統，是屬於下列何種作法？",
+      "options": {
+        "A": "企業化",
+        "B": "任務化",
+        "C": "委外化",
+        "D": "民營化"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-17",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 17,
+      "question": "政府公關與行銷是社會行銷的一種形式，有關策略性社會行銷，下列何者為第一個步驟？",
+      "options": {
+        "A": "傾聽",
+        "B": "監控",
+        "C": "訂定計畫",
+        "D": "籌編組織"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-18",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 18,
+      "question": "知識管理領域中，下列何者不屬於知識地圖的主要元素？",
+      "options": {
+        "A": "知識程式",
+        "B": "知識庫",
+        "C": "知識社群",
+        "D": "知識專家"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-19",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 19,
+      "question": "電子化政府的重要基礎之一：公共鑰匙基礎建設（PKI），下列何者非屬其必須具備的特色？",
+      "options": {
+        "A": "認證的確實性",
+        "B": "隱私性",
+        "C": "非拒絕性",
+        "D": "資料的分散性"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-20",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 20,
+      "question": "下列何者並非組織學習的層次？",
+      "options": {
+        "A": "個人學習",
+        "B": "科技學習",
+        "C": "團體學習",
+        "D": "組織學習"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-21",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 21,
+      "question": "政府從事政策行銷和公共關係有許多功能重疊之處，下列何者為政策行銷獨有的功能？",
+      "options": {
+        "A": "建立良好公共形象",
+        "B": "增加溝通對象的好感",
+        "C": "維護政府聲譽",
+        "D": "讓民眾贊同政策"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-22",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 22,
+      "question": "面對全球化的趨勢影響，政府應思考創新改革與跨域合作，下列何者並非其方法？",
+      "options": {
+        "A": "委託民間機構辦理",
+        "B": "尋求國際交流合作",
+        "C": "增加中央政府職責",
+        "D": "委託地方政府治理"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-23",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 23,
+      "question": "組織以虛假偽造的訊息欺瞞公眾，違背下列何種公共關係的原則？",
+      "options": {
+        "A": "信任原則",
+        "B": "誠實原則",
+        "C": "言行一致原則",
+        "D": "溝通原則"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-24",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 24,
+      "question": "關於社會行銷的意義，下列敘述何者錯誤？",
+      "options": {
+        "A": "從事社會行銷者應儘量避免訴諸法律途徑促進行銷成效",
+        "B": "行銷對象的行為是自願發生而非經濟脅迫",
+        "C": "銷售的產品是一種行為的改變，如社區參與、環境保護",
+        "D": "行銷的結果只對行銷者與顧客有利"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_public_mgmt-112-civil-junior-general-25",
+      "roc_year": "112",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "112 年普通考試一般行政",
+      "subject": "公共管理概要",
+      "subject_tags": [
+        "public_management"
+      ],
+      "number": 25,
+      "question": "下列何者為全球化對於公共部門的影響趨勢？",
+      "options": {
+        "A": "從分權轉為控制",
+        "B": "從政府轉為治理",
+        "C": "大有為政府",
+        "D": "非政府組織逐漸沒落"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_public_mgmt",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    }
+  ]
+}

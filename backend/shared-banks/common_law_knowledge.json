@@ -2,8 +2,8 @@
   "bankId": "common_law_knowledge",
   "name": "法學知識與英文",
   "description": "高考三等／普考共通科目：法學知識與英文（含中華民國憲法、法學緒論、英文）",
-  "bankVersion": 26,
-  "last_synced_at": "2026-04-21T03:59:11.689Z",
+  "bankVersion": 30,
+  "last_synced_at": "2026-05-20T09:31:51.173Z",
   "levels": [
     "senior",
     "junior",
@@ -16592,6 +16592,3906 @@
       },
       "answer": "B",
       "level": "senior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-1",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 1,
+      "question": "下列何國屬於總統制國家？",
+      "options": {
+        "A": "英國",
+        "B": "美國",
+        "C": "日本",
+        "D": "德國"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-2",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 2,
+      "question": "憲法增修條文第10 條規定，國家應依據何者保障原住民族之地位及政治參與？",
+      "options": {
+        "A": "公民自決",
+        "B": "全民投票",
+        "C": "自治條款",
+        "D": "民族意願"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-3",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 3,
+      "question": "憲法基本國策中有關國民經濟、社會安全等規定係主要基於憲法何項原則而定？",
+      "options": {
+        "A": "租稅國原則",
+        "B": "社會福利國",
+        "C": "民主原則",
+        "D": "聯邦國原則"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-4",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 4,
+      "question": "依憲法本文之規定，有關人身自由之敘述，下列何者正確？除現行犯外，非經司法或警察機關依法定程序，不得逮捕拘禁人民",
+      "options": {
+        "A": "依層級化法律保留之原理，人身自由只能以憲法限制",
+        "B": "之，不得以法律限制之",
+        "C": "除刑法上之犯罪外，法",
+        "D": "院一律不得拘束人身自由"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-5",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 5,
+      "question": "行政程序法第6 條規定：「行政行為，非有正當理由，不得為差別待遇。」係何種基本權利的表現？",
+      "options": {
+        "A": "生存權",
+        "B": "參政權",
+        "C": "平等權",
+        "D": "訴訟權"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-7",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 7,
+      "question": "下列何者為憲法上未明文的一般平等要求？",
+      "options": {
+        "A": "不分宗教在法律上一律平等",
+        "B": "不分黨派在法律上一律平等",
+        "C": "不分男女在法律上一律平等",
+        "D": "不分學歷在法律上一律平等"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-8",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 8,
+      "question": "依憲法第131 條之規定，各種選舉之候選人，如何競選？",
+      "options": {
+        "A": "公開競選",
+        "B": "不得拜票",
+        "C": "以不實事實攻擊其他候選人",
+        "D": "不得在媒體上發表政見"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-9",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 9,
+      "question": "依憲法增修條文第2 條之規定，總統、副總統之罷免案，須經全體立法委員至少何比例之提議？",
+      "options": {
+        "A": "二分之一",
+        "B": "三分之一",
+        "C": "四分之一",
+        "D": "五分之一"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-11",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 11,
+      "question": "立法委員之言論免責權不及於下列何者？",
+      "options": {
+        "A": "立法院院會",
+        "B": "立法院委員會",
+        "C": "立法院院內公聽會",
+        "D": "立法院院內記者會"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-12",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 12,
+      "question": "依憲法之規定，各級法院之組織，應以下列那一種方式定之？",
+      "options": {
+        "A": "法規命令",
+        "B": "行政處分",
+        "C": "法律",
+        "D": "行政規則"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-13",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 13,
+      "question": "下列有關立法院立法委員自第七屆起之敘述，何者錯誤？",
+      "options": {
+        "A": "總額為一百三十一人",
+        "B": "任期四年，連選得連任",
+        "C": "每縣市至少一人",
+        "D": "自由地區平地原住民及山地原住民各三人"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-14",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 14,
+      "question": "下列那個機關有審理彈劾總統案之職權？",
+      "options": {
+        "A": "監察院",
+        "B": "考試院",
+        "C": "司法院",
+        "D": "行政院"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-15",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 15,
+      "question": "依憲法增修條文之規定，監察院為國家最高監察機關，除行使彈劾與審計權外，尚行使下列何種職權？",
+      "options": {
+        "A": "同意權",
+        "B": "質詢權",
+        "C": "銓審權",
+        "D": "糾舉權"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-16",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 16,
+      "question": "法律和道德，最大的差異點在於何處？",
+      "options": {
+        "A": "可以透過國家強制力加以實現",
+        "B": "具有維持社會秩序的作用",
+        "C": "具有增進社會公益的功能",
+        "D": "是以正義為其存在的基礎"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-17",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 17,
+      "question": "有關行政機關適用法律之敘述，下列何者錯誤？",
+      "options": {
+        "A": "依法行政原則",
+        "B": "不受上級機關之指揮監督",
+        "C": "得為合義務性之裁量",
+        "D": "有依法訂定行政命令之權"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-18",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 18,
+      "question": "所謂完全法條，除了要有構成要件外，還要有下列何者？",
+      "options": {
+        "A": "法律效果",
+        "B": "立法程序",
+        "C": "司法審查",
+        "D": "行政執行"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-19",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 19,
+      "question": "關於消費借貸契約之敘述，下列何者正確？",
+      "options": {
+        "A": "為物權契約",
+        "B": "為諾成契約",
+        "C": "為要式契約",
+        "D": "為要物契約"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-21",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 21,
+      "question": "違法之授益行政處分經撤銷後，行政機關於特定條件下應補償受益人財產上之損失，與下列何種原則有關？",
+      "options": {
+        "A": "法律保留原則",
+        "B": "信賴保護原則",
+        "C": "明確性原則",
+        "D": "不當連結禁止原則"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-22",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 22,
+      "question": "下列何種財產不為法定財產制剩餘財產分配之標的？",
+      "options": {
+        "A": "繼承所獲得之財產",
+        "B": "婚後工作所得之薪資",
+        "C": "婚前所得贈與財產於婚後所生之孳息",
+        "D": "婚後身體受傷所獲得財產上之損害賠償"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-23",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 23,
+      "question": "依司法院大法官解釋，法院於必要時，得裁定令經常逃學或逃家之虞犯少年收容於少年觀護所，係違反下列何種原則？",
+      "options": {
+        "A": "恣意禁止原則",
+        "B": "比例原則",
+        "C": "不當連結禁止原則",
+        "D": "公益原則"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-24",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 24,
+      "question": "甲對乙有貨款債權五十萬元，甲將對乙之五十萬元債權讓與於丙。關於甲和丙之債權讓與契約之敘述，下列何者正確？",
+      "options": {
+        "A": "因未經乙事前同意，故不生效力",
+        "B": "須經乙事後同意，方生效力",
+        "C": "不論乙是否同意，均為無效",
+        "D": "甲和丙合意時，即生效力，但非通知乙，對乙不生效"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-25",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 25,
+      "question": "對於行為後法律有變更的情形，我國刑法第2 條第1 項採取何種處理原則？",
+      "options": {
+        "A": "從新原則",
+        "B": "從重原則",
+        "C": "從舊從輕原則",
+        "D": "從新從重原則"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-26",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 26,
+      "question": "下列關於故意犯罪行為階段與未遂犯之敘述，何者正確？",
+      "options": {
+        "A": "我國刑法不處罰陰謀犯",
+        "B": "形式（附屬）預備犯係非類型化犯罪",
+        "C": "我國刑法以處罰未遂犯為原則，不處罰為例外",
+        "D": "我國刑法對於未遂犯採取必減制"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-27",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 27,
+      "question": "民法第265 條規定：「當事人之一方，應向他方先為給付者，如他方之財產，於訂約後顯形減少，有難為對待給付之虞時，如他方未為對待給付或提出擔保前，得拒絕自己之給付。」此種權利稱為：",
+      "options": {
+        "A": "不安抗辯權",
+        "B": "同時履行抗辯權",
+        "C": "過失相抵抗辯權",
+        "D": "先訴抗辯權"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-28",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 28,
+      "question": "勞工保險條例的被保險人，其父母、配偶死亡時，按其平均月投保薪資，發給幾個月的喪葬津貼？",
+      "options": {
+        "A": "一個月",
+        "B": "兩個月",
+        "C": "三個月",
+        "D": "六個月"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-29",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 29,
+      "question": "全民健康保險法規定私立學校教職員及其眷屬之保險費，應由被保險人自付保險費的百分比為何？",
+      "options": {
+        "A": "30%",
+        "B": "40%",
+        "C": "50%",
+        "D": "60%"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-31",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 31,
+      "question": "Where Darwin had traced man’s animal ancestry, Freud revealed the animal drives which still       hisbehaviour.",
+      "options": {
+        "A": "classified",
+        "B": "governed",
+        "C": "hijacked",
+        "D": "lamented"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-32",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 32,
+      "question": "Online courses are       higher education, creating new opportunities for the best and huge problems for the rest.",
+      "options": {
+        "A": "denouncing",
+        "B": "humiliating",
+        "C": "legitimating",
+        "D": "transforming"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-33",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 33,
+      "question": "Due to global warming and deforestation, many animals and plants are on the brink of       .",
+      "options": {
+        "A": "instruction",
+        "B": "distinction",
+        "C": "extinction",
+        "D": "tension"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-34",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 34,
+      "question": "Every employee in the company has the rights to use the       inside, including gym and library.",
+      "options": {
+        "A": "faculty",
+        "B": "facilities",
+        "C": "factories",
+        "D": "fraternity"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-35",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 35,
+      "question": "Be careful when moving the       porcelain vase, or you may break it.",
+      "options": {
+        "A": "delicate",
+        "B": "sophisticated",
+        "C": "complicated",
+        "D": "definite"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-41",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 41,
+      "question": "What is this passage mainly about?",
+      "options": {
+        "A": "The history of soccer.",
+        "B": "Ken Aston’s career and contribution.",
+        "C": "How Aston got the idea for the card system.",
+        "D": "The meaning of a red or yellow card in soccer."
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-45",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 45,
+      "question": "Which of the following best explains the phrase “disciplinary calls” in this passage?",
+      "options": {
+        "A": "Informative remarks.",
+        "B": "Encouraging phone calls.",
+        "C": "Strange but interesting calls.",
+        "D": "Corrective or punishing rulings."
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-46",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 46,
+      "question": "What is this passage mainly about?",
+      "options": {
+        "A": "The reasons why women wear high heels.",
+        "B": "Fashions of shoe styles in different countries.",
+        "C": "The history of high heels.",
+        "D": "The defense for men who wear high heels."
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-47",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 47,
+      "question": "What did a pair of heeled shoes suggest in the sixteenth-century Europe?",
+      "options": {
+        "A": "High education.",
+        "B": "Respectable ancestry.",
+        "C": "Outstanding taste.",
+        "D": "Great wealth."
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-48",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 48,
+      "question": "According to this passage, where can we find the earliest appearance of shoes in human history?",
+      "options": {
+        "A": "Egypt.",
+        "B": "France.",
+        "C": "Italy.",
+        "D": "China."
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-49",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 49,
+      "question": "When did women start to wear high heels?",
+      "options": {
+        "A": "As soon as heels were invented.",
+        "B": "After a noble wedding in Paris.",
+        "C": "After the French Revolution.",
+        "D": "After the late nineteenth century."
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-2",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 2,
+      "question": "地方制度法第2 條第5 款規定：「下級政府或機關間就其得全權處理之業務，依法完成法定效力後，陳報上級政府或主管機關知悉」，係指下列何者？",
+      "options": {
+        "A": "核定",
+        "B": "委任",
+        "C": "備查",
+        "D": "委辦"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-3",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 3,
+      "question": "下列何者屬於中央對於地方自治之事前監督？",
+      "options": {
+        "A": "核定",
+        "B": "撤銷",
+        "C": "備查",
+        "D": "函告無效"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-4",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 4,
+      "question": "依憲法規定，下列關於考試院之敘述，何者錯誤？",
+      "options": {
+        "A": "考試院為國家最高考試機關",
+        "B": "考試委員須超出黨派以外，依據法律獨立行使職權",
+        "C": "考試委員在院內所為之言論及表決，對院外不負責任",
+        "D": "考試院關於所掌事項，得向立法院提出法律案"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-5",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 5,
+      "question": "下列何者為監察院之職權？",
+      "options": {
+        "A": "彈劾正副總統",
+        "B": "彈劾監察院人員",
+        "C": "糾舉立法委員",
+        "D": "糾正考試委員"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-6",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 6,
+      "question": "關於司法權之敘述，下列何者正確？",
+      "options": {
+        "A": "本於司法官身分獨立保障，我國大法官係屬終身職",
+        "B": "憲法法庭所得處理之事項，包括正副總統之彈劾與政黨違憲之解散事項",
+        "C": "大法官違憲審查之標的，不包含判例",
+        "D": "司法院所提之年度司法概算，係直接送立法院進行審議"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-7",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 7,
+      "question": "依憲法本文及增修條文之規定，下列何項職位不須經立法院同意？",
+      "options": {
+        "A": "監察院副院長",
+        "B": "司法院大法官",
+        "C": "行政院副院長",
+        "D": "審計長"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-8",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 8,
+      "question": "依憲法本文之規定，行政院會議之主席，原則上為下列何者？",
+      "options": {
+        "A": "行政院秘書長",
+        "B": "總統",
+        "C": "每次開會時，由出席人員互推一人",
+        "D": "行政院院長"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-9",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 9,
+      "question": "下列人員，何者得依法罷免之？",
+      "options": {
+        "A": "臺北市副市長",
+        "B": "不分區立法委員",
+        "C": "地方法院法官",
+        "D": "縣市首長"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-10",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 10,
+      "question": "下列何者，非公民投票法所規定公民投票之類型？",
+      "options": {
+        "A": "法律之創制",
+        "B": "法律之複決",
+        "C": "重大政策之創制",
+        "D": "重大政策之複決"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-11",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 11,
+      "question": "刑法第235 條規定禁止散布、播送、販賣、公然陳列猥褻之資訊或物品。依據司法院釋字第617 號解釋，下列敘述何者正確？",
+      "options": {
+        "A": "性言論之表現與性資訊之流通，不受憲法對言論自由之保障",
+        "B": "國家應對少數性文化族群依其性道德感情與對社會風化之認知而形諸為性言論表現或性資訊流通者，予以保障",
+        "C": "刑法第235 條規定對於性言論之表現為過度之限制",
+        "D": "刑法第235 條規定中之「猥褻」概念，違反法律明確性原則"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-12",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 12,
+      "question": "依司法院釋字第535 號解釋意旨，警察實施臨檢勤務時，須遵守何項憲法原則？",
+      "options": {
+        "A": "比例原則",
+        "B": "信賴保護原則",
+        "C": "誠實信用原則",
+        "D": "禁止不當聯結原則"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-13",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 13,
+      "question": "職業駕駛人若涉及特定犯罪，將吊銷其駕照，並限制其於一定期間內不得再行請領駕照。其中有關一定期間內不得請領駕照之限制，主要涉及下列何種基本權利？",
+      "options": {
+        "A": "財產權",
+        "B": "職業自由",
+        "C": "結社自由",
+        "D": "生存權"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-14",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 14,
+      "question": "依司法院大法官解釋，有關土地徵收的要件，下列敘述何者正確？",
+      "options": {
+        "A": "徵收人民土地的各項要件，應授權由行政機關以行政命令詳加規定",
+        "B": "為了公益，得徵收非公共設施用地的私有土地，不須變更都市計畫",
+        "C": "土地被徵收是因社會公益而特別犧牲，對所有權人應給予相當補償",
+        "D": "土地徵收補償費之發給，得考量國家財政收入實際狀況而延遲發給"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-15",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 15,
+      "question": "下列何者與現行憲法增修條文第10 條規定之意旨不符？",
+      "options": {
+        "A": "國家應重視醫療保健、福利服務等社會福利工作",
+        "B": "社會救助和國民就業等救濟性支出應優先編列",
+        "C": "教育科學文化經費中，國民教育之經費應優先編列",
+        "D": "中央政府教育科學文化之經費不得少於預算總額百分之十五"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-16",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 16,
+      "question": "行政程序法第2 條「本法所稱行政機關，係指代表國家、地方自治團體或其他行政主體表示意思，從事公共事務，具有單獨法定地位之組織」，此種情形在法律解釋上稱為：",
+      "options": {
+        "A": "司法解釋",
+        "B": "立法解釋",
+        "C": "行政解釋",
+        "D": "擬制"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-17",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 17,
+      "question": "依據司法院釋字第364 號解釋，人民得請求接近使用媒體，係屬於憲法保障之下列何種權利？",
+      "options": {
+        "A": "言論自由權",
+        "B": "隱私權",
+        "C": "人格權",
+        "D": "工作權"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-18",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 18,
+      "question": "下列何種情形，人民不得主張信賴保護原則？",
+      "options": {
+        "A": "甲提供正確資料申請農地農用證明書，後因不可抗力無法繼續耕種而遭廢止證明書",
+        "B": "乙明知不符合醫師考試應考資格之規定，而報名參加考試，及格後被發覺而被撤銷考試及格資格",
+        "C": "軍人丙因相信行政機關「轉任公務員併計算年資」函釋，經參加轉任考試及格錄取後，行政機關廢止該函釋",
+        "D": "遊民丁交代其財產所得，主管機關不察發給救助金，稍後發現，丁拒絕退還救助"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-19",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 19,
+      "question": "下列何者是定著物？",
+      "options": {
+        "A": "還長在土地裡的地瓜",
+        "B": "固定在土地上的高鐵軌道",
+        "C": "挖掘的池塘",
+        "D": "廟前臨時搭架的歌仔戲臺"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-20",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 20,
+      "question": "下列何者違反物權法定主義？",
+      "options": {
+        "A": "甲設定不移轉質物占有的質權於乙",
+        "B": "甲設定不移轉抵押物占有的抵押權於乙",
+        "C": "甲為擔保將來發生的債權，設定最高限額抵押權於乙",
+        "D": "甲在自己土地上方空間，設定地上權於乙"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-21",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 21,
+      "question": "關於承攬之瑕疵擔保，下列敘述何者錯誤？",
+      "options": {
+        "A": "承攬工作物有瑕疵時，承攬人絕對不能拒絕修補",
+        "B": "修補費過鉅時，承攬人得拒絕修補",
+        "C": "定作人定期限要求承攬人修補，而承攬人不於期限內修補，且修補費用並非過鉅時，定作人得自行修補",
+        "D": "工作之瑕疵，如係因定作人指示不當而引起時，原則上定作人無瑕疵擔保請求權"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-22",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 22,
+      "question": "於法定財產制，下列在婚姻關係存續中所取得之財產，何者為剩餘財產分配之標的？",
+      "options": {
+        "A": "慰撫金",
+        "B": "受贈之古董",
+        "C": "繼承所得之房屋",
+        "D": "婚前投資之股票於婚後所生之股利"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-23",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 23,
+      "question": "無人承認之繼承，應由何人以遺產負責清償繼承債務？",
+      "options": {
+        "A": "遺囑見證人",
+        "B": "遺囑保管人",
+        "C": "遺囑執行人",
+        "D": "遺產管理人"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-24",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 24,
+      "question": "下列何者不屬於沒收的範圍？",
+      "options": {
+        "A": "第三人合法所有、犯罪行為人違禁持有之違禁物",
+        "B": "犯罪行為人所有，供犯罪所用之物",
+        "C": "犯罪行為人所有，因犯罪所得之物",
+        "D": "犯罪行為人所有，因犯罪所生之物"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-25",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 25,
+      "question": "下列何者不屬於從刑？",
+      "options": {
+        "A": "褫奪公權",
+        "B": "沒收",
+        "C": "追徵",
+        "D": "保安處分"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-26",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 26,
+      "question": "下列關於消費者保護法所定調解之敘述，何者錯誤？",
+      "options": {
+        "A": "消費者與企業經營者均得申請調解",
+        "B": "限於消費爭議案件始得申請調解",
+        "C": "申請調解之案件，須業經申訴，而未獲妥適之處理者",
+        "D": "申請調解，應向直轄市或縣（市）消費爭議調解委員會申請"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-27",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 27,
+      "question": "甲創作樂曲一首，乙以樂器彈奏表演該樂曲。下列敘述何者錯誤？",
+      "options": {
+        "A": "乙於表演前，應得甲之同意",
+        "B": "乙之表演應以獨立著作保護",
+        "C": "丙以錄音設備錄製乙之表演，僅須得乙之同意",
+        "D": "丁以錄音設備播放丙之錄音，無須得乙之同意"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-28",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 28,
+      "question": "依勞動基準法第11 條之規定，有關雇主須預告始得終止勞動契約情形，下列何者錯誤？",
+      "options": {
+        "A": "歇業或轉讓時",
+        "B": "不可抗力暫停工作在一個月以上時",
+        "C": "勞工對於所擔任之工作確不能勝任時",
+        "D": "勞工違反勞動契約或工作規則，情節重大者"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-29",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 29,
+      "question": "事業單位違反勞工法令規定時，下列敘述何者錯誤？",
+      "options": {
+        "A": "勞工得向雇主、主管機關或檢查機構申訴",
+        "B": "勞工得向雇主、主管機關或檢查機構申訴，但向檢察機關申訴者以工會為限",
+        "C": "雇主不得因勞工為申訴而予解僱、調職或其他不利之處分",
+        "D": "雇主因勞工為申訴而予解僱、調職或其他不利之處分，主管機關得予處罰"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-30",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 30,
+      "question": "勞工甲因雇主乙將其調動職務，使其須於較不健康之環境內工作，甲因而告知雇主其懷孕之情形，並拒絕更不適合妊娠勞工之職務，乙於得知甲拒絕後隔日，即以人事精簡為由，終止與甲之勞動契約，下列敘述何者正確？",
+      "options": {
+        "A": "乙因人事精簡得隨意終止與甲之勞動契約",
+        "B": "乙將甲調職時，並不知她已懷孕，如甲拒絕，乙自得終止勞動契約",
+        "C": "妊娠勞工均不得加以調職",
+        "D": "甲得知乙懷孕後，應先調整其至較適合妊娠勞工之工作，而非終止勞動契約"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-31",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 31,
+      "question": "The landlord asked for an NT$10,000       on the apartment to let, and it will be returned to the tenant eventually.",
+      "options": {
+        "A": "savings",
+        "B": "budget",
+        "C": "allowance",
+        "D": "deposit"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-32",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 32,
+      "question": "John is not a brilliant student who can only make       progress at school.",
+      "options": {
+        "A": "holistic",
+        "B": "graphic",
+        "C": "gradual",
+        "D": "abrupt"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-33",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 33,
+      "question": "Monica’s ambition is to become a doctor one day;       , she is determined to pass the exam so that she can studyin a medical school.",
+      "options": {
+        "A": "however",
+        "B": "moreover",
+        "C": "besides",
+        "D": "therefore"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-34",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 34,
+      "question": "these employees can get their pay raised, they will still go on strikes.",
+      "options": {
+        "A": "Whereas",
+        "B": "As if",
+        "C": "Unless",
+        "D": "Once"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-35",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 35,
+      "question": "The book features the extraordinary       of how a 12-year-old girl saves her village.",
+      "options": {
+        "A": "anecdote",
+        "B": "eclipse",
+        "C": "infant",
+        "D": "offspring"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-36",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 36,
+      "question": "Alice is such a passionate person that she is always       advice, even when you don’t want it.",
+      "options": {
+        "A": "throwing away",
+        "B": "dishing out",
+        "C": "breaking down",
+        "D": "counting on"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-46",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 46,
+      "question": "What is the first paragraph mainly about?",
+      "options": {
+        "A": "What Hello Kitty might symbolize.",
+        "B": "Why and how Hello Kitty was invented.",
+        "C": "When and how Hello Kitty got her name.",
+        "D": "How popular Hello Kitty has been."
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-47",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 47,
+      "question": "According to the passage, which of the following is true about Hello Kitty?",
+      "options": {
+        "A": "She is Yuko Shimizu’s brainchild.",
+        "B": "She first appeared on women’s shoes.",
+        "C": "She was created and designed by Tsuji.",
+        "D": "She smiles with a big mouth."
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-48",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 48,
+      "question": "Which of the following is a reason for people to believe that Hello Kitty should be given a mouth?",
+      "options": {
+        "A": "To help display her posture more vividly.",
+        "B": "To create the image of being a good listener.",
+        "C": "To send out the message that she is a real cat.",
+        "D": "To reveal that she can speak out what she thinks."
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-49",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 49,
+      "question": "What is the writer’s purpose in writing this passage?",
+      "options": {
+        "A": "To express disapproval towards Hello Kitty characters.",
+        "B": "To show appreciation to Hello Kitty fans.",
+        "C": "To introduce Hello Kitty and her design.",
+        "D": "To predict the future sale of Hello Kitty products."
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-50",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 50,
+      "question": "Which of the following is true about the last paragraph?",
+      "options": {
+        "A": "Hello Kitty is perceived mainly as a kids’ brand in Asia.",
+        "B": "Hello Kitty is the first tourism ambassador in Japanese history.",
+        "C": "Hello Kitty has been better received in Hong Kong than in China.",
+        "D": "Hello Kitty was appointed tourism ambassador for her popularity."
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-2",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 2,
+      "question": "依憲法第143 條第1 項之規定，人民依法取得之土地所有權，應受下列何種規範之保障與限制？",
+      "options": {
+        "A": "行政規則",
+        "B": "法規命令",
+        "C": "法律",
+        "D": "自治條例"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-3",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 3,
+      "question": "依憲法第137 條第2 項規定，國防組織應以下列何種名稱定之？",
+      "options": {
+        "A": "指令",
+        "B": "法律",
+        "C": "命令",
+        "D": "規則"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-4",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 4,
+      "question": "下列有關「宗教自由」保障之敘述，何者錯誤？",
+      "options": {
+        "A": "人民有不信仰宗教之自由",
+        "B": "人民有同時信仰二個以上宗教之自由",
+        "C": "為促進宗教自由，國家應設立國教",
+        "D": "基於宗教自由，國家應嚴守中立原則"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-5",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 5,
+      "question": "依司法院大法官解釋，下列何者非屬平等原則之意涵？",
+      "options": {
+        "A": "等者等之，不等者不等之",
+        "B": "因性別而為之差別規定，即已帶有性別之歧視，絕對係憲法所不許",
+        "C": "平等原則強調的是實質平等",
+        "D": "對於大陸地區人民之應考試、服公職予以一定之限制，尚難謂違反實質平等之保障"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-6",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 6,
+      "question": "依司法院大法官有關言論自由之解釋意旨，下列敘述何者錯誤？",
+      "options": {
+        "A": "言論自由包括保障意見之自由流通，使人民有取得充分資訊之機會",
+        "B": "言論自由所保障之言論，包括政治、學術、宗教及商業言論等，依不同性質而有不同程度之保護",
+        "C": "言論自由所保障之言論，如與國民健康有重大關係者，基於公共利益之維護，應受較嚴格之限制",
+        "D": "商品標示僅為提供商品客觀資訊之方式，自始即不受言論自由之保障"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-7",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 7,
+      "question": "依司法院釋字第603 號解釋，隱私權係屬憲法何種權利？",
+      "options": {
+        "A": "憲法第8 條之人身自由",
+        "B": "憲法第10 條之遷徙自由",
+        "C": "憲法第15 條之生存權",
+        "D": "憲法第22 條之權利"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-8",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 8,
+      "question": "依司法院釋字第380 號解釋意旨，學術自由係源自於憲法第11 條之何種自由？",
+      "options": {
+        "A": "言論自由",
+        "B": "講學自由",
+        "C": "著作自由",
+        "D": "出版自由"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-9",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 9,
+      "question": "行政院應於會計年度結束後幾個月內，提出決算於監察院？",
+      "options": {
+        "A": "1 個月",
+        "B": "2 個月",
+        "C": "3 個月",
+        "D": "4 個月"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-10",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 10,
+      "question": "下列有關立法委員選舉制度之敘述，何者錯誤？",
+      "options": {
+        "A": "原住民立法委員共有六人",
+        "B": "當選之立法委員名單中婦女不得低於二分之一",
+        "C": "僑居國外國民可透過全國不分區席次當選立法委員",
+        "D": "選舉人有二票，一票圈選候選人，一票圈選政黨"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-11",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 11,
+      "question": "關於總統之職權，下列敘述何者錯誤？",
+      "options": {
+        "A": "任命檢察總長，無須經行政院院長之副署",
+        "B": "解散立法院之命令，無須經行政院院長之副署",
+        "C": "總統依法公布法律，須經行政院院長之副署",
+        "D": "任命審計長，無須經行政院院長之副署"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-12",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 12,
+      "question": "下列何項法規範，並非我國違憲審查制度之法規依據？",
+      "options": {
+        "A": "憲法本文",
+        "B": "法院組織法",
+        "C": "憲法增修條文",
+        "D": "司法院大法官審理案件法"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-13",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 13,
+      "question": "依據憲法規定，考試院之組織，以下列何者定之？",
+      "options": {
+        "A": "法律",
+        "B": "職權命令",
+        "C": "法規命令",
+        "D": "行政規則"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-14",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 14,
+      "question": "下列何項措施與司法獨立之維護無關？",
+      "options": {
+        "A": "法官為終身職",
+        "B": "法官不得參與社團",
+        "C": "非依據法律不得將法官免職",
+        "D": "司法院所提出之年度司法概算，行政院不得刪減"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-15",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 15,
+      "question": "在目前憲法體制上，下列何者非屬民意機關？",
+      "options": {
+        "A": "臺北市議會",
+        "B": "立法院",
+        "C": "新竹縣議會",
+        "D": "監察院"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-16",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 16,
+      "question": "甲法規與乙法規就某一事項均設有規定，其中甲法規為新法、普通法，乙法規為舊法、特別法。此一情形應適用何法規？",
+      "options": {
+        "A": "甲法規",
+        "B": "乙法規",
+        "C": "優先適用甲法規，但乙法規有利於當事人者，適用乙法規",
+        "D": "優先適用乙法規，但甲法規有利於當事人者，適用甲法規"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-17",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 17,
+      "question": "依地方制度法第26 條規定，稱「直轄市法規」者，其性質係指？",
+      "options": {
+        "A": "自治條例",
+        "B": "自治規則",
+        "C": "委辦規則",
+        "D": "自律規則"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-18",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 18,
+      "question": "法律解釋應探求立法者本意及參酌立法原件，係屬下列何項法律解釋方法？",
+      "options": {
+        "A": "歷史解釋",
+        "B": "文義解釋",
+        "C": "類推解釋",
+        "D": "目的解釋"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-19",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 19,
+      "question": "依中央法規標準法規定，以下何者並非行政機關發布命令所應使用之名稱？",
+      "options": {
+        "A": "辦法",
+        "B": "要點",
+        "C": "標準",
+        "D": "規則"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-20",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 20,
+      "question": "行政機關之下列何種行為，違反比例原則？",
+      "options": {
+        "A": "對初次違規之業者，不論違規情形之輕重，均處以最高罰鍰",
+        "B": "作成之行政處分，其裁量效果雖未違反內部規定，但違反行政慣行",
+        "C": "作成行政處分，僅列法律依據但不具理由，且於事後未予以補正",
+        "D": "對於人民具體申請之案件，雖經人民陳情，仍超過法定處理期間，未予處理"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-21",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 21,
+      "question": "法律規定行政機關對於罰鍰享有裁量權時，該機關應如何行使裁量權？",
+      "options": {
+        "A": "應為合義務之裁量",
+        "B": "得不行使裁量",
+        "C": "一律依最高額裁罰",
+        "D": "得便宜裁量"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-22",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 22,
+      "question": "下列何者為行政處分之概念特徵？",
+      "options": {
+        "A": "一種單方行政行為",
+        "B": "只有發生事實效果",
+        "C": "包括私法行政行為",
+        "D": "代替具體認知表示"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-23",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 23,
+      "question": "下列何者不為抵押權效力所及？",
+      "options": {
+        "A": "抵押物的從物",
+        "B": "抵押物滅失的殘餘物",
+        "C": "抵押物扣押前已分離之天然孳息",
+        "D": "抵押物的成分"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-24",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 24,
+      "question": "在婚姻關係存續期間，甲夫向乙妻借新臺幣100 萬元，雖然經過15 年，但乙於雙方離婚後1 年內，尚得請求甲返還借款，是因為下列何種制度？",
+      "options": {
+        "A": "時效中斷",
+        "B": "時效不完成",
+        "C": "時效進行停止",
+        "D": "時效重行起算"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-25",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 25,
+      "question": "下列何種事由的發生，普通保證人的責任不全部消滅？",
+      "options": {
+        "A": "保證契約所擔保的主債務已因時效消滅",
+        "B": "債權人拋棄擔保物權時，保證人就債權人所拋棄之權利限度內免其責任",
+        "C": "定期保證者，債權人於該期間內對於保證人未為審判外之請求",
+        "D": "當主債務人死亡時"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-26",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 26,
+      "question": "下列理論，何者與因果及歸責關聯的判斷無關？",
+      "options": {
+        "A": "條件理論",
+        "B": "相當理論",
+        "C": "客觀歸屬（歸責）理論",
+        "D": "客觀未遂理論"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-27",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 27,
+      "question": "關於累犯之敘述，下列何者錯誤？",
+      "options": {
+        "A": "受徒刑之執行完畢，或一部之執行而赦免後，五年以內故意再犯有期徒刑以上之罪者，為累犯",
+        "B": "累犯加重本刑至二分之一",
+        "C": "緩刑期滿而緩刑之宣告未經撤銷者，嗣後縱然再犯，不發生累犯之問題",
+        "D": "於受強制工作之保安處分執行完畢後，五年以內故意再犯有期徒刑以上之罪者，並非累犯"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-28",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 28,
+      "question": "關於緩刑宣告撤銷之敘述，下列何者錯誤？",
+      "options": {
+        "A": "緩刑期內因故意犯他罪，而在緩刑期內受逾六月有期徒刑之宣告確定者，撤銷其宣告",
+        "B": "緩刑前因故意犯他罪，而在緩刑期內受逾六月有期徒刑之宣告確定者，撤銷其宣告",
+        "C": "緩刑宣告撤銷之聲請，於判決確定後一年內均得為之",
+        "D": "撤銷緩刑，須於緩刑期內為之"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-29",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 29,
+      "question": "依性別工作平等法第34 條第l 項之規定，受僱者發現雇主違反性別工作平等法中有關禁止性別歧視之規定，向地方主管機關申訴後，雇主、受僱者或求職者對於地方主管機關之處分有異議時，得向下列何者提出審議之申請？",
+      "options": {
+        "A": "10 日內向地方法院申請審議",
+        "B": "10 日內向目的事業主管機關申請審議",
+        "C": "10 日內向地方主管機關性別工作平等會申請審議",
+        "D": "10 日內向中央主管機關性別工作平等會申請審議"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-30",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 30,
+      "question": "依勞動基準法之規定，勞工工作年資自何時起算？",
+      "options": {
+        "A": "自受僱之當月一日起算",
+        "B": "自受僱之當月十五日起算",
+        "C": "自受僱之日起算",
+        "D": "自發薪之日起算"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-31",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 31,
+      "question": "Don’t ____ your voice when talking in the office.",
+      "options": {
+        "A": "exhume",
+        "B": "raise",
+        "C": "arise",
+        "D": "arouse"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-32",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 32,
+      "question": "There is a big cut on your hand. You need medical _____ immediately.",
+      "options": {
+        "A": "treatment",
+        "B": "involvement",
+        "C": "treasure",
+        "D": "medium"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-33",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 33,
+      "question": "Each country was requested to send a _____ to join the APEC convention.",
+      "options": {
+        "A": "designation",
+        "B": "illustration",
+        "C": "denotation",
+        "D": "delegation"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-34",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 34,
+      "question": "Parkinson's disease is a progressive disorder of the nervous system that ______ movement.",
+      "options": {
+        "A": "affects",
+        "B": "effects",
+        "C": "offends",
+        "D": "defends"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-35",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 35,
+      "question": "Hundreds of people are dead as the worst Ebola _____ outbreak in history sweeps through West Africa.",
+      "options": {
+        "A": "agent",
+        "B": "code",
+        "C": "formula",
+        "D": "virus"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-36",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 36,
+      "question": "Although the period in which he lived represents the sunset of the Renaissance, Bernini possessed a ______comparable to that of Leonardo or Michelangelo.",
+      "options": {
+        "A": "chagrin",
+        "B": "gusto",
+        "C": "penchant",
+        "D": "virtuosity"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-46",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 46,
+      "question": "What is the passage mainly about?",
+      "options": {
+        "A": "Different types of physical barrier.",
+        "B": "Barrier signals on social occasions.",
+        "C": "Functions of the body-cross movement.",
+        "D": "Dominant actions in a social encounter."
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-47",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 47,
+      "question": "What is the second paragraph mainly about?",
+      "options": {
+        "A": "The need for body-cross language in a social setting.",
+        "B": "The unconscious performance of body-cross movements.",
+        "C": "A comparison of body-cross language of males and females.",
+        "D": "Different types of body-cross movements in a social setting ."
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-48",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 48,
+      "question": "What is the main idea of the third paragraph?",
+      "options": {
+        "A": "The invading greeter always performs the body-cross movement first in a social setting.",
+        "B": "The home-based greeter performs less body-cross movement in a social encounter.",
+        "C": "The greeter and the greeted rarely both perform the body-cross movement towards each other.",
+        "D": "The greeters perform the body-cross movement if they are subordinate to the greeted."
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-49",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 49,
+      "question": "According to the passage, which of the following statements is true?",
+      "options": {
+        "A": "People feel an urge to perform body-crossing on a worrying social occasion.",
+        "B": "People use the body-cross to impress their greeters.",
+        "C": "Males often use clothing-adjustment consciously to disguise their anxiety.",
+        "D": "People perform less body-crossing in a formal social event than in other situations."
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-50",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 50,
+      "question": "What does it in the second paragraph refer to?",
+      "options": {
+        "A": "occasion",
+        "B": "action",
+        "C": "barrier",
+        "D": "companion"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-6",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 6,
+      "question": "我國生存權之相關立法的敘述,下列何者錯誤?",
+      "options": {
+        "A": "司法院解釋之態度歷來皆認為死刑違憲",
+        "B": "對於罹患醫學上不治之症之患者,醫師即便得其承諾,亦不得用藥物合法幫助患者自殺",
+        "C": "懷孕婦女經診斷患有礙優生之傳染性疾病者,得自願施行人工流產",
+        "D": "國家為改良農民之生活,增進其生產技能,應制定保護農民之法律,實施保護農民之政策"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-10",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 10,
+      "question": "依憲法本文及增修條文之規定,有關總統、副總統之選舉,以下何者正確?",
+      "options": {
+        "A": "中華民國國民,年滿四十歲得被選為總統、副總統",
+        "B": "總統、副總統係分別選舉,分別印製選票",
+        "C": "得票率未過半,應舉行第二輪投票",
+        "D": "任期四年,連選得連任二次"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-20",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 20,
+      "question": "民國99年7月30日司法院釋字第680號解釋宣告懲治走私條例第2條第1項之規定違憲,自解釋公布之日起,至遲於屆滿二年時,失其效力。則懲治走私條例第2條第1項之規定,何時失效?",
+      "options": {
+        "A": "由立法院通過,總統公布後,本項規定始廢止失效",
+        "B": "由法務部發布,並公告於新聞紙後,本項規定始廢止失效",
+        "C": "至民國101年7月30日,本項規定如未修正,則自動失效",
+        "D": "自應失效日算至第三日起失效,即於民國101年8月1日失效"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-30",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 30,
+      "question": "下列關於侵害著作權民事責任之敘述,何者錯誤?",
+      "options": {
+        "A": "著作權人得請求排除侵害",
+        "B": "對於著作財產權之侵害,著作財產權人得請求賠償損害",
+        "C": "被害人得請求由侵害人負擔費用,將判決書內容之一部或全部刊載於新聞紙、雜誌",
+        "D": "對於著作人格權之侵害,著作權人僅得請求精神上之損害賠償"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-36",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 36,
+      "question": "The speech of every group of people has developed differently. One reason for this is that each group often lived in isolation. Another reason is that each language grew up ____ under different conditions. Gradually, over many centuries, some groups came in contact with other groups. When this happened, their languages grew more and more 37. In other cases, however, a group would break apart, and new languages would grow from the original one. The new languages, though distinct in many ways, would 38 similarities to one another. There are many different countries in the world today. One might conclude that each country has its own language and that languages are only as numerous as countries. Actually, there are many more languages than there are countries. 39 in the United States, we have considered English the one language of the people. Yet at one time, on the Great Plains alone, more than 22 native American languages were spoken. In addition, a single language may have two or more dialects, or varieties. 40 is estimated that there are several thousand languages and dialects spoken in the world today.",
+      "options": {
+        "A": "similarly",
+        "B": "seemingly",
+        "C": "frequently",
+        "D": "separately"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-37",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 37,
+      "question": "The speech of every group of people has developed differently. One reason for this is that each group often lived in isolation. Another reason is that each language grew up 36 under different conditions. Gradually, over many centuries, some groups came in contact with other groups. When this happened, their languages grew more and more ____. In other cases, however, a group would break apart, and new languages would grow from the original one. The new languages, though distinct in many ways, would 38 similarities to one another. There are many different countries in the world today. One might conclude that each country has its own language and that languages are only as numerous as countries. Actually, there are many more languages than there are countries. 39 in the United States, we have considered English the one language of the people. Yet at one time, on the Great Plains alone, more than 22 native American languages were spoken. In addition, a single language may have two or more dialects, or varieties. 40 is estimated that there are several thousand languages and dialects spoken in the world today.",
+      "options": {
+        "A": "alike",
+        "B": "likable",
+        "C": "likely",
+        "D": "unlike"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-38",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 38,
+      "question": "The speech of every group of people has developed differently. One reason for this is that each group often lived in isolation. Another reason is that each language grew up 36 under different conditions. Gradually, over many centuries, some groups came in contact with other groups. When this happened, their languages grew more and more 37. In other cases, however, a group would break apart, and new languages would grow from the original one. The new languages, though distinct in many ways, would ____ similarities to one another. There are many different countries in the world today. One might conclude that each country has its own language and that languages are only as numerous as countries. Actually, there are many more languages than there are countries. 39 in the United States, we have considered English the one language of the people. Yet at one time, on the Great Plains alone, more than 22 native American languages were spoken. In addition, a single language may have two or more dialects, or varieties. 40 is estimated that there are several thousand languages and dialects spoken in the world today.",
+      "options": {
+        "A": "attain",
+        "B": "obtain",
+        "C": "maintain",
+        "D": "detain"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-39",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 39,
+      "question": "The speech of every group of people has developed differently. One reason for this is that each group often lived in isolation. Another reason is that each language grew up 36 under different conditions. Gradually, over many centuries, some groups came in contact with other groups. When this happened, their languages grew more and more 37. In other cases, however, a group would break apart, and new languages would grow from the original one. The new languages, though distinct in many ways, would 38 similarities to one another. There are many different countries in the world today. One might conclude that each country has its own language and that languages are only as numerous as countries. Actually, there are many more languages than there are countries. ____ in the United States, we have considered English the one language of the people. Yet at one time, on the Great Plains alone, more than 22 native American languages were spoken. In addition, a single language may have two or more dialects, or varieties. 40 is estimated that there are several thousand languages and dialects spoken in the world today.",
+      "options": {
+        "A": "On the contrary",
+        "B": "For example",
+        "C": "By degrees",
+        "D": "On the spot"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-40",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 40,
+      "question": "The speech of every group of people has developed differently. One reason for this is that each group often lived in isolation. Another reason is that each language grew up 36 under different conditions. Gradually, over many centuries, some groups came in contact with other groups. When this happened, their languages grew more and more 37. In other cases, however, a group would break apart, and new languages would grow from the original one. The new languages, though distinct in many ways, would 38 similarities to one another. There are many different countries in the world today. One might conclude that each country has its own language and that languages are only as numerous as countries. Actually, there are many more languages than there are countries. 39 in the United States, we have considered English the one language of the people. Yet at one time, on the Great Plains alone, more than 22 native American languages were spoken. In addition, a single language may have two or more dialects, or varieties. ____ is estimated that there are several thousand languages and dialects spoken in the world today.",
+      "options": {
+        "A": "There",
+        "B": "It",
+        "C": "That",
+        "D": "What"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-42",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 42,
+      "question": "The red and yellow cards used in soccer games today were invented by Ken Aston, an English referee. The idea came to him in 1966 during the World Cup quarter-final match between England and Argentina. The game was very rough, and the referee had difficulty controlling the players. After the game, Aston was driving home when he stopped at a traffic light. He saw the red and yellow lights and immediately thought of a way to communicate with players without language barriers. He proposed the idea to FIFA, and it was adopted for the 1970 World Cup in Mexico. The cards were an instant success and are now used universally. Today all soccer players understand the meaning of the cards.\nWhich of the following statements about Ken Aston is true?",
+      "options": {
+        "A": "He used to be a famous soccer player in England.",
+        "B": "He became a referee when he was about thirty years old.",
+        "C": "He designed the white uniform with black trim for referees.",
+        "D": "He created the card system to avoid language problems in soccer games."
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-43",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 43,
+      "question": "The red and yellow cards used in soccer games today were invented by Ken Aston, an English referee. The idea came to him in 1966 during the World Cup quarter-final match between England and Argentina. The game was very rough, and the referee had difficulty controlling the players. After the game, Aston was driving home when he stopped at a traffic light. He saw the red and yellow lights and immediately thought of a way to communicate with players without language barriers. He proposed the idea to FIFA, and it was adopted for the 1970 World Cup in Mexico. The cards were an instant success and are now used universally. Today all soccer players understand the meaning of the cards.\nWhich of the following statements about the card system in soccer is true?",
+      "options": {
+        "A": "It was invented at the 1970 World Cup finals.",
+        "B": "It was first used by a German-speaking referee.",
+        "C": "It was created by Aston while he was observing the traffic signal.",
+        "D": "It was used as an international language to replace English."
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-44",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 44,
+      "question": "The red and yellow cards used in soccer games today were invented by Ken Aston, an English referee. The idea came to him in 1966 during the World Cup quarter-final match between England and Argentina. The game was very rough, and the referee had difficulty controlling the players. After the game, Aston was driving home when he stopped at a traffic light. He saw the red and yellow lights and immediately thought of a way to communicate with players without language barriers. He proposed the idea to FIFA, and it was adopted for the 1970 World Cup in Mexico. The cards were an instant success and are now used universally. Today all soccer players understand the meaning of the cards.\nWhy did Aston push for the card system in soccer games?",
+      "options": {
+        "A": "It could avoid soccer players' confusion over the calls by referees.",
+        "B": "He could make a lot of money by inventing the system.",
+        "C": "He wanted to become a well-known soccer referee.",
+        "D": "It was one of his dreams as a young boy."
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-103-civil-junior-general-50",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "103 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 50,
+      "question": "請依下文回答第46題至第50題:\nOwning closets of shoes may seem superficial, but in reality women are merely paying homage to the bricklayers of modern civilization. The history of shoes dates back to 4000 B.C. when they appeared on the walls of Egyptian temples and tombs. While women today fancy a pair of stylish heels, in 1500, it was men, descendants of European nobility, who began to wear heeled shoes. Since then \"well heeled\" suggests being wealthy or able to afford costly shoes. In 1533, the wedding of an Italian lady with a French nobleman brought high heels in vogue for women. The bride insisted on having heels made for her wedding, which set the rage for the new shoes in Paris. High heels stayed in style until the late 18th century, as during the French Revolution, it was considered in bad taste to show any sign of wealth. Finally, high heels emerged again in Europe in the late 19th century and continued to spread their enchantment around the world.\nWhich of the following statements is true?",
+      "options": {
+        "A": "The author thinks women's craze for heels is superficial.",
+        "B": "A French nobleman designed a pair of heels for his bride.",
+        "C": "The first pair of heels for women did not gain much attention.",
+        "D": "Heels fell out of favor during the French Revolution."
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-1",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 1,
+      "question": "依憲法第111條規定,有關中央與地方剩餘權之爭議,由何機關解決之?",
+      "options": {
+        "A": "行政院",
+        "B": "立法院",
+        "C": "司法院",
+        "D": "監察院"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-37",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 37,
+      "question": "Just as the roles and responsibilities of men and women are changing in society, so are the shopping habits of the two genders. The electronics industry (computers, cellphones, digital cameras, etc.) is one place where gender 37 in purchasing are rapidly changing. 38 the electronics market consisted mostly of men. Today, however, women are some of the biggest consumers of cellphones and other electronic products. With more and more women working and in control of their own and their family's money, women now want to have a say in the type of electronics that they have in their homes. Some experts report that women are actually buying more electronics than men. A recent study also reports another interesting development. It states that almost a third of the new and more 39 electronics are sold to women. So, not only are women becoming more interested in electronics purchases in general, but they are also increasingly willing to try the 40 products.",
+      "options": {
+        "A": "agreements",
+        "B": "differences",
+        "C": "interactions",
+        "D": "relationships"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-38",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 38,
+      "question": "Just as the roles and responsibilities of men and women are changing in society, so are the shopping habits of the two genders. The electronics industry (computers, cellphones, digital cameras, etc.) is one place where gender 37 in purchasing are rapidly changing. 38 the electronics market consisted mostly of men. Today, however, women are some of the biggest consumers of cellphones and other electronic products. With more and more women working and in control of their own and their family's money, women now want to have a say in the type of electronics that they have in their homes. Some experts report that women are actually buying more electronics than men. A recent study also reports another interesting development. It states that almost a third of the new and more 39 electronics are sold to women. So, not only are women becoming more interested in electronics purchases in general, but they are also increasingly willing to try the 40 products.",
+      "options": {
+        "A": "At this moment",
+        "B": "From time to time",
+        "C": "In the past few days",
+        "D": "Until very recently"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-39",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 39,
+      "question": "Just as the roles and responsibilities of men and women are changing in society, so are the shopping habits of the two genders. The electronics industry (computers, cellphones, digital cameras, etc.) is one place where gender 37 in purchasing are rapidly changing. 38 the electronics market consisted mostly of men. Today, however, women are some of the biggest consumers of cellphones and other electronic products. With more and more women working and in control of their own and their family's money, women now want to have a say in the type of electronics that they have in their homes. Some experts report that women are actually buying more electronics than men. A recent study also reports another interesting development. It states that almost a third of the new and more 39 electronics are sold to women. So, not only are women becoming more interested in electronics purchases in general, but they are also increasingly willing to try the 40 products.",
+      "options": {
+        "A": "decorative",
+        "B": "excessive",
+        "C": "innovative",
+        "D": "productive"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-40",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 40,
+      "question": "Just as the roles and responsibilities of men and women are changing in society, so are the shopping habits of the two genders. The electronics industry (computers, cellphones, digital cameras, etc.) is one place where gender 37 in purchasing are rapidly changing. 38 the electronics market consisted mostly of men. Today, however, women are some of the biggest consumers of cellphones and other electronic products. With more and more women working and in control of their own and their family's money, women now want to have a say in the type of electronics that they have in their homes. Some experts report that women are actually buying more electronics than men. A recent study also reports another interesting development. It states that almost a third of the new and more 39 electronics are sold to women. So, not only are women becoming more interested in electronics purchases in general, but they are also increasingly willing to try the 40 products.",
+      "options": {
+        "A": "broadest",
+        "B": "latest",
+        "C": "farthest",
+        "D": "remotest"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-41",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 41,
+      "question": "Seasonal affective disorder is a depression experienced by people particularly during the winter. This kind of depression occurs more frequently on people who live in those parts of world where there is less or little 41 to sunlight. People who have this kind of depression will experience a change in their mood when the seasons change. This experience of mood change is most apparent when the winter 42 with less daylight. When contracting this disease, people will have such symptoms as sleeping too much, having little energy, and feeling depressed. But these symptoms can be resolved 43 people receive treatment. One such a treatment includes a light therapy which enables people to receive daylight or sunlight 44 modern technology. For instance, people can sit before a light box and get as much light as they need for curing their disease. Nowadays scientists have made great efforts to discover different ways of reducing the discomfort this depression may cause to people. Although this kind of disease may be hard to be avoided to some people, it can be 45 and even cured to allow patients to have a normal life.",
+      "options": {
+        "A": "display",
+        "B": "tendency",
+        "C": "exposure",
+        "D": "objection"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-42",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 42,
+      "question": "Seasonal affective disorder is a depression experienced by people particularly during the winter. This kind of depression occurs more frequently on people who live in those parts of world where there is less or little 41 to sunlight. People who have this kind of depression will experience a change in their mood when the seasons change. This experience of mood change is most apparent when the winter 42 with less daylight. When contracting this disease, people will have such symptoms as sleeping too much, having little energy, and feeling depressed. But these symptoms can be resolved 43 people receive treatment. One such a treatment includes a light therapy which enables people to receive daylight or sunlight 44 modern technology. For instance, people can sit before a light box and get as much light as they need for curing their disease. Nowadays scientists have made great efforts to discover different ways of reducing the discomfort this depression may cause to people. Although this kind of disease may be hard to be avoided to some people, it can be 45 and even cured to allow patients to have a normal life.",
+      "options": {
+        "A": "approaches",
+        "B": "liberates",
+        "C": "qualifies",
+        "D": "bounces"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-43",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 43,
+      "question": "Seasonal affective disorder is a depression experienced by people particularly during the winter. This kind of depression occurs more frequently on people who live in those parts of world where there is less or little 41 to sunlight. People who have this kind of depression will experience a change in their mood when the seasons change. This experience of mood change is most apparent when the winter 42 with less daylight. When contracting this disease, people will have such symptoms as sleeping too much, having little energy, and feeling depressed. But these symptoms can be resolved 43 people receive treatment. One such a treatment includes a light therapy which enables people to receive daylight or sunlight 44 modern technology. For instance, people can sit before a light box and get as much light as they need for curing their disease. Nowadays scientists have made great efforts to discover different ways of reducing the discomfort this depression may cause to people. Although this kind of disease may be hard to be avoided to some people, it can be 45 and even cured to allow patients to have a normal life.",
+      "options": {
+        "A": "in order that",
+        "B": "so that",
+        "C": "as long as",
+        "D": "as though"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-44",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 44,
+      "question": "Seasonal affective disorder is a depression experienced by people particularly during the winter. This kind of depression occurs more frequently on people who live in those parts of world where there is less or little 41 to sunlight. People who have this kind of depression will experience a change in their mood when the seasons change. This experience of mood change is most apparent when the winter 42 with less daylight. When contracting this disease, people will have such symptoms as sleeping too much, having little energy, and feeling depressed. But these symptoms can be resolved 43 people receive treatment. One such a treatment includes a light therapy which enables people to receive daylight or sunlight 44 modern technology. For instance, people can sit before a light box and get as much light as they need for curing their disease. Nowadays scientists have made great efforts to discover different ways of reducing the discomfort this depression may cause to people. Although this kind of disease may be hard to be avoided to some people, it can be 45 and even cured to allow patients to have a normal life.",
+      "options": {
+        "A": "with regard to",
+        "B": "in comparison to",
+        "C": "by means of",
+        "D": "in spite of"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-104-civil-junior-general-45",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "104 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 45,
+      "question": "Seasonal affective disorder is a depression experienced by people particularly during the winter. This kind of depression occurs more frequently on people who live in those parts of world where there is less or little 41 to sunlight. People who have this kind of depression will experience a change in their mood when the seasons change. This experience of mood change is most apparent when the winter 42 with less daylight. When contracting this disease, people will have such symptoms as sleeping too much, having little energy, and feeling depressed. But these symptoms can be resolved 43 people receive treatment. One such a treatment includes a light therapy which enables people to receive daylight or sunlight 44 modern technology. For instance, people can sit before a light box and get as much light as they need for curing their disease. Nowadays scientists have made great efforts to discover different ways of reducing the discomfort this depression may cause to people. Although this kind of disease may be hard to be avoided to some people, it can be 45 and even cured to allow patients to have a normal life.",
+      "options": {
+        "A": "raged",
+        "B": "eased",
+        "C": "gazed",
+        "D": "scared"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-1",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 1,
+      "question": "依司法院釋字第499號解釋之見解,有關修憲代表之敘述,下列何者正確?",
+      "options": {
+        "A": "修憲代表應定期改選,絕無例外",
+        "B": "修憲代表之任期,由修憲代表以修憲方式自我延長,法理上並無不妥之處",
+        "C": "修憲代表行使職權之正當性在於遵守與選民之約定",
+        "D": "修憲代表不得由政黨比例代表產生"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-37",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 37,
+      "question": "請依下文回答第37題至第40題\nThe loss of a child through \"sudden infant death syndrome,\" also known as SIDS or crib death—the sudden and ____ death of an apparently healthy, sleeping infant—is an especially ____ experience. Parents often develop feelings of guilt and ____ thinking that they somehow caused the child's death. To ____ such feelings, organizations have been established to help parents accept the fact that they did not cause the death.",
+      "options": {
+        "A": "unexplainable",
+        "B": "obvious",
+        "C": "reasonable",
+        "D": "persuasive"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-38",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 38,
+      "question": "請依下文回答第37題至第40題\nThe loss of a child through \"sudden infant death syndrome,\" also known as SIDS or crib death—the sudden and ____ death of an apparently healthy, sleeping infant—is an especially ____ experience. Parents often develop feelings of guilt and ____ thinking that they somehow caused the child's death. To ____ such feelings, organizations have been established to help parents accept the fact that they did not cause the death.",
+      "options": {
+        "A": "inevitable",
+        "B": "suspicious",
+        "C": "traumatic",
+        "D": "artificial"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-39",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 39,
+      "question": "請依下文回答第37題至第40題\nThe loss of a child through \"sudden infant death syndrome,\" also known as SIDS or crib death—the sudden and ____ death of an apparently healthy, sleeping infant—is an especially ____ experience. Parents often develop feelings of guilt and ____ thinking that they somehow caused the child's death. To ____ such feelings, organizations have been established to help parents accept the fact that they did not cause the death.",
+      "options": {
+        "A": "observation",
+        "B": "depression",
+        "C": "compassion",
+        "D": "appreciation"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-40",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 40,
+      "question": "請依下文回答第37題至第40題\nThe loss of a child through \"sudden infant death syndrome,\" also known as SIDS or crib death—the sudden and ____ death of an apparently healthy, sleeping infant—is an especially ____ experience. Parents often develop feelings of guilt and ____ thinking that they somehow caused the child's death. To ____ such feelings, organizations have been established to help parents accept the fact that they did not cause the death.",
+      "options": {
+        "A": "alleviate",
+        "B": "accelerate",
+        "C": "elaborate",
+        "D": "substantiate"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-41",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 41,
+      "question": "請依下文回答第41題至第45題\nI like any game of chance, but I most enjoy taking part in a lottery. The lottery is ____ an unchanging religious ceremony, and it is perhaps this ritual quality of the lottery ____ people enjoy. Unlike other games of chance, a lottery does not require a great deal of paraphernalia. The only equipment ____ is a bowl filled with slips of paper. I enjoy the excitement of watching the official pick the winning number. The moment before the drawing is very serious. The judge gravely approaches the bowl and looks at the crowd soberly. The crowd is quiet ____ the low murmur of excitement. Suddenly the winner is selected. After the lottery is over, everyone but the winner throws away his or her piece of paper, and the ____ slips are soon blown away by the wind. People begin to disengage themselves from the crowd and the lottery is over.",
+      "options": {
+        "A": "engaged in",
+        "B": "used by",
+        "C": "for",
+        "D": "like"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-42",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 42,
+      "question": "請依下文回答第41題至第45題\nI like any game of chance, but I most enjoy taking part in a lottery. The lottery is ____ an unchanging religious ceremony, and it is perhaps this ritual quality of the lottery ____ people enjoy. Unlike other games of chance, a lottery does not require a great deal of paraphernalia. The only equipment ____ is a bowl filled with slips of paper. I enjoy the excitement of watching the official pick the winning number. The moment before the drawing is very serious. The judge gravely approaches the bowl and looks at the crowd soberly. The crowd is quiet ____ the low murmur of excitement. Suddenly the winner is selected. After the lottery is over, everyone but the winner throws away his or her piece of paper, and the ____ slips are soon blown away by the wind. People begin to disengage themselves from the crowd and the lottery is over.",
+      "options": {
+        "A": "so",
+        "B": "that",
+        "C": "how",
+        "D": "what"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-43",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 43,
+      "question": "請依下文回答第41題至第45題\nI like any game of chance, but I most enjoy taking part in a lottery. The lottery is ____ an unchanging religious ceremony, and it is perhaps this ritual quality of the lottery ____ people enjoy. Unlike other games of chance, a lottery does not require a great deal of paraphernalia. The only equipment ____ is a bowl filled with slips of paper. I enjoy the excitement of watching the official pick the winning number. The moment before the drawing is very serious. The judge gravely approaches the bowl and looks at the crowd soberly. The crowd is quiet ____ the low murmur of excitement. Suddenly the winner is selected. After the lottery is over, everyone but the winner throws away his or her piece of paper, and the ____ slips are soon blown away by the wind. People begin to disengage themselves from the crowd and the lottery is over.",
+      "options": {
+        "A": "requiring",
+        "B": "intended",
+        "C": "needed",
+        "D": "forming"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-44",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 44,
+      "question": "請依下文回答第41題至第45題\nI like any game of chance, but I most enjoy taking part in a lottery. The lottery is ____ an unchanging religious ceremony, and it is perhaps this ritual quality of the lottery ____ people enjoy. Unlike other games of chance, a lottery does not require a great deal of paraphernalia. The only equipment ____ is a bowl filled with slips of paper. I enjoy the excitement of watching the official pick the winning number. The moment before the drawing is very serious. The judge gravely approaches the bowl and looks at the crowd soberly. The crowd is quiet ____ the low murmur of excitement. Suddenly the winner is selected. After the lottery is over, everyone but the winner throws away his or her piece of paper, and the ____ slips are soon blown away by the wind. People begin to disengage themselves from the crowd and the lottery is over.",
+      "options": {
+        "A": "dealing with",
+        "B": "anxious about",
+        "C": "in search of",
+        "D": "except for"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_law_knowledge",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_law_knowledge-105-civil-junior-general-45",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "法學知識與英文（包括中華民國憲法、法學緒論、英文）",
+      "subject_tags": [
+        "law_knowledge_combined"
+      ],
+      "number": 45,
+      "question": "請依下文回答第41題至第45題\nI like any game of chance, but I most enjoy taking part in a lottery. The lottery is ____ an unchanging religious ceremony, and it is perhaps this ritual quality of the lottery ____ people enjoy. Unlike other games of chance, a lottery does not require a great deal of paraphernalia. The only equipment ____ is a bowl filled with slips of paper. I enjoy the excitement of watching the official pick the winning number. The moment before the drawing is very serious. The judge gravely approaches the bowl and looks at the crowd soberly. The crowd is quiet ____ the low murmur of excitement. Suddenly the winner is selected. After the lottery is over, everyone but the winner throws away his or her piece of paper, and the ____ slips are soon blown away by the wind. People begin to disengage themselves from the crowd and the lottery is over.",
+      "options": {
+        "A": "discarded",
+        "B": "reflecting",
+        "C": "transparent",
+        "D": "useful"
+      },
+      "answer": "D",
+      "level": "junior",
       "shared_bank": "common_law_knowledge",
       "parent_id": null,
       "case_context": null,

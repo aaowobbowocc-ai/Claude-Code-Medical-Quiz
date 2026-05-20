@@ -4,42 +4,49 @@ import Footer from '../components/Footer'
 
 const API = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
-// 考試分類（顯示用分組）
+// 考試分類（與首頁字卡一致：examRegistry.CATEGORY_META + 各 config.category）
 const CATEGORIES = [
   {
     id: 'medical',
-    name: '醫療專技',
+    name: '醫事人員',
     icon: '🏥',
     exams: [
-      'doctor1', 'doctor2', 'dental1', 'dental2',
-      'pharma1', 'pharma2', 'tcm1', 'tcm2',
-      'nursing', 'nutrition', 'medlab',
-      'pt', 'ot', 'rt', 'radiology',
+      'doctor1', 'doctor2', 'dental1', 'dental2', 'pharma1', 'pharma2',
+      'tcm1', 'tcm2', 'vet',
+      'nursing', 'nutrition', 'social-worker',
+      'pt', 'ot', 'rt', 'medlab', 'radiology',
       'audiologist', 'speech-therapist',
-      'social-worker', 'vet',
+      'clinical-psychology', 'counseling-psychology',
+      'public-health', 'optometrist', 'optometrist-junior', 'dental-tech',
     ],
   },
   {
-    id: 'legal-civil',
-    name: '法律 / 公職',
+    id: 'law-professional',
+    name: '法律與司法',
     icon: '⚖️',
+    exams: ['lawyer1'],
+  },
+  {
+    id: 'civil-service',
+    name: '公職人員',
+    icon: '🏛️',
     exams: [
-      'lawyer1', 'judicial', 'customs', 'police', 'police4',
-      'civil-senior', 'civil-senior-general',
-      'civil-junior-general', 'civil-elementary-general',
+      'judicial', 'customs', 'police', 'police4',
+      'civil-senior',
+      'civil-senior-general', 'civil-junior-general', 'civil-junior-civil-affairs', 'civil-elementary-general',
     ],
   },
   {
-    id: 'education',
-    name: '升學考試',
-    icon: '🎓',
-    exams: ['gsat', 'ast'],
-  },
-  {
-    id: 'driver',
-    name: '駕照',
+    id: 'independent',
+    name: '駕照考試',
     icon: '🚗',
     exams: ['driver-car', 'driver-moto'],
+  },
+  {
+    id: 'college-entrance',
+    name: '大學入學',
+    icon: '🎓',
+    exams: ['gsat', 'ast'],
   },
 ]
 const EXAM_ORDER = CATEGORIES.flatMap(c => c.exams)
@@ -71,6 +78,31 @@ const NOT_HELD = {
   },
   'social-worker': {
     '100': ['s1','s2'], '101': ['s1','s2'], '102': ['s1','s2'], '103': ['s1','s2'],
+  },
+  // 以下 6 個新增專技考試皆一年一試（考選部只辦第二次，第一次未舉辦）
+  'public-health': {
+    '110': ['s1'], '111': ['s1'], '112': ['s1'], '113': ['s1'], '114': ['s1'], '115': ['s1'],
+  },
+  optometrist: {
+    '106': ['s1'], '107': ['s1'], '108': ['s1'], '109': ['s1'],
+    '110': ['s1'], '111': ['s1'], '112': ['s1'], '113': ['s1'], '114': ['s1'], '115': ['s1'],
+  },
+  'optometrist-junior': {
+    '106': ['s1'], '107': ['s1'], '108': ['s1'], '109': ['s1'],
+    '110': ['s1'], '111': ['s1'], '112': ['s1'], '113': ['s1'], '114': ['s1'], '115': ['s1'],
+  },
+  'dental-tech': {
+    '107': ['s1'], '108': ['s1'], '109': ['s1'],
+    '110': ['s1'], '111': ['s1'], '112': ['s1'], '113': ['s1'], '114': ['s1'], '115': ['s1'],
+  },
+  // 心理師 100-105 / 110+ 只辦第二次；106-109 兩場齊；111-112 缺資料（未確認是否舉辦，先當缺口）
+  'clinical-psychology': {
+    '100': ['s1'], '101': ['s1'], '102': ['s1'], '103': ['s1'], '104': ['s1'], '105': ['s1'],
+    '110': ['s1'], '113': ['s1'], '114': ['s1'], '115': ['s1'],
+  },
+  'counseling-psychology': {
+    '100': ['s1'], '101': ['s1'], '102': ['s1'], '103': ['s1'], '104': ['s1'], '105': ['s1'],
+    '110': ['s1'], '113': ['s1'], '114': ['s1'], '115': ['s1'],
   },
 }
 function isNotHeld(examId, yr, sess) {

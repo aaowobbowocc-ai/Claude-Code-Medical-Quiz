@@ -25,7 +25,7 @@ if (!GEMINI_KEY) {
 // stored text regardless of which model originally produced it.
 const GEMINI_EXAMS = new Set([
   'vet', 'social-worker', 'lawyer1', 'judicial', 'customs', 'police',
-  'civil-senior', 'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
+  'civil-senior', 'civil-senior-general', 'civil-junior-general', 'civil-junior-civil-affairs', 'civil-elementary-general',
   'driver-car', 'driver-moto',
 ]);
 
@@ -37,7 +37,7 @@ const MEDICAL_EXAMS = new Set([
 ]);
 const LEGAL_EXAMS = new Set([
   'lawyer1','judicial','civil-senior','civil-senior-general',
-  'civil-junior-general','civil-elementary-general',
+  'civil-junior-general','civil-junior-civil-affairs','civil-elementary-general',
   'customs','police','police4','social-worker'
 ]);
 const RAG_ENABLED = new Set([...MEDICAL_EXAMS, ...LEGAL_EXAMS, 'driver-car','driver-moto']);

@@ -26,7 +26,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v18: 心理師補齊 100-114（臨床 5095/諮商 3827）+ 新增 驗光師/驗光生
 // v19: 新增 公共衛生師 public-health 考試（111-114 年，957 題）
 // v20: 新增 牙體技術師 dental-tech 考試（107-114 年，1574 題）
-const CACHE_KEY = 'exam-registry-v20'
+// v21: 新增 普考一般民政 civil-junior-civil-affairs（共用 bank + 地方自治概要，1822 題）
+const CACHE_KEY = 'exam-registry-v21'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache
@@ -93,7 +94,7 @@ const EXAM_ORDER = [
   'nursing', 'nutrition', 'social-worker', 'pt', 'ot', 'medlab', 'radiology', 'audiologist', 'speech-therapist', 'clinical-psychology', 'counseling-psychology', 'public-health', 'optometrist', 'optometrist-junior', 'dental-tech',
   'lawyer1', 'judicial',
   'civil-senior', 'customs', 'police', 'police4',
-  'civil-senior-general', 'civil-junior-general', 'civil-elementary-general',
+  'civil-senior-general', 'civil-junior-general', 'civil-junior-civil-affairs', 'civil-elementary-general',
   'driver-car', 'driver-moto',
   'gsat', 'ast',
 ]

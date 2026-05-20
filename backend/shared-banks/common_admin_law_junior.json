@@ -2,8 +2,8 @@
   "bankId": "common_admin_law_junior",
   "name": "普通考試 行政法概要",
   "description": "公務人員普通考試（四等）行政法概要，106–114 年，每年 50 題選擇題。",
-  "bankVersion": "1",
-  "last_synced_at": "2026-04-22T17:45:11.842Z",
+  "bankVersion": 12,
+  "last_synced_at": "2026-05-20T02:11:42.609Z",
   "levels": [
     "junior"
   ],
@@ -11670,6 +11670,1306 @@
         "B": "行政機關於訂定裁罰基準後，即不得於個案裁處時再為裁量",
         "C": "法規授予行政機關裁量時，法院即不得審查該裁量決定",
         "D": "法規授予行政機關裁量時，上級機關亦不得訂定統一之裁量基準"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-1",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 1,
+      "question": "下列敘述何者屬於比例原則之內涵？",
+      "options": {
+        "A": "採取之手段所造成之損害不得與欲達成目的之利益顯失均衡",
+        "B": "法律在規範內容上須明確，以資受規範之人民得以事前得知何者事項將受何等之規範以及產生如何之法律效果",
+        "C": "人民如因信賴公權力措施之存續，而已為一定之行為並產生信賴利益，該利益應受保護",
+        "D": "公權力之行使，不得將不具事理關聯性之事項與其所欲採取之措施或決定相互連結"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-2",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 2,
+      "question": "下列關於依法行政原則之敘述何者錯誤？",
+      "options": {
+        "A": "所謂依法行政之「法」，僅指成文法",
+        "B": "法律優越原則稱為消極的依法行政原則",
+        "C": "法律保留原則稱為積極的依法行政原則",
+        "D": "行政機關行使職權，不應僅以組織法，更應以行為法之授權為依據"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-3",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 3,
+      "question": "下列何者在公務員懲戒法中並非「懲戒處分」？",
+      "options": {
+        "A": "申誡",
+        "B": "休職",
+        "C": "停職",
+        "D": "降級"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-4",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 4,
+      "question": "交通部民用航空局花蓮航空站的組織型態為：",
+      "options": {
+        "A": "公營造物",
+        "B": "公物",
+        "C": "行政法人",
+        "D": "民用航空局之內部單位"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-5",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 5,
+      "question": "臺灣省自來水公司與臺北市自來水事業處均提供供水服務，下列敘述何者錯誤？",
+      "options": {
+        "A": "臺灣省自來水公司與用戶之間的供水服務僅能為私法關係",
+        "B": "臺北市自來水事業處與用戶之間的供水服務僅能為公法關係",
+        "C": "無論是臺灣省自來水公司或是臺北市自來水事業處，其水價之訂定與調整，均受自來水法之限制",
+        "D": "無論是臺灣省自來水公司或是臺北市自來水事業處，在其供水區域內，對於申請供水者，非有正當理由，不得拒絕"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-6",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 6,
+      "question": "行政訴訟法規定之訴訟類型為：",
+      "options": {
+        "A": "撤銷訴訟、家事訴訟及給付訴訟",
+        "B": "職權訴訟、確認訴訟及給付訴訟",
+        "C": "撤銷訴訟、確認訴訟及給付訴訟",
+        "D": "撤銷訴訟、確認訴訟及家事訴訟"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-7",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 7,
+      "question": "關於公權力行政及私經濟行政之敘述，下列何者錯誤？",
+      "options": {
+        "A": "只有公權力行政才受到憲法基本權利條款之拘束，但私經濟行政則完全不受到基本權利之拘束",
+        "B": "只有公權力行政行為才有行政程序法之適用",
+        "C": "公權力行政與私經濟行政造成人民權利受損害時，人民請求賠償之法律途徑不同",
+        "D": "行政機關與人民間因私經濟行政而產生之義務不履行，並無行政執行法之適用"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-8",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 8,
+      "question": "行政機關對行政處分有廢止權時，應自廢止原因發生後幾年內為之？",
+      "options": {
+        "A": "7 年",
+        "B": "5 年",
+        "C": "3 年",
+        "D": "2 年"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-9",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 9,
+      "question": "有關行政法傳統學說上「特別權力關係」理論，下列敘述何者錯誤？",
+      "options": {
+        "A": "原則上發生在軍人、公務員、學生、受刑人特殊身分之國民與國家之間",
+        "B": "有法治國家原則的適用，亦普遍地容許當事人進行救濟",
+        "C": "通常有特別規則規範國家與此等國民間的權利義務關係",
+        "D": "「特別權力關係」並無直接憲法條文之依據"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-10",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 10,
+      "question": "依行政罰之規定，關於行政罰之責任條件，採何種立法原則？",
+      "options": {
+        "A": "故意責任",
+        "B": "過失責任",
+        "C": "推定過失責任",
+        "D": "無過失責任"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-11",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 11,
+      "question": "公務員如受休職處分，其期間至少多久以上？",
+      "options": {
+        "A": "3 個月",
+        "B": "6 個月",
+        "C": "1 年",
+        "D": "2 年"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-12",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 12,
+      "question": "行政處分應以證書方式作成而未給予證書者，其效力如何？",
+      "options": {
+        "A": "一部有效，一部無效",
+        "B": "有效",
+        "C": "無效",
+        "D": "經補正後有效"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-13",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 13,
+      "question": "依公務員懲戒法規定，公務員當然停職事由，不包括下列何者？",
+      "options": {
+        "A": "依刑事訴訟程序被拘提者",
+        "B": "依刑事確定判決，受褫奪公權之宣告者",
+        "C": "依刑事確定判決，受徒刑之宣告，在執行中者",
+        "D": "依刑事訴訟程序被羈押者"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-14",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 14,
+      "question": "既成道路之公用地役關係，係基於下列何種行為而成立？",
+      "options": {
+        "A": "事實行為",
+        "B": "法律行為",
+        "C": "行政處分",
+        "D": "行政契約"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-15",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 15,
+      "question": "公務人員之考績不包括下列何者？",
+      "options": {
+        "A": "專案考績",
+        "B": "專業考績",
+        "C": "另予考績",
+        "D": "年終考績"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-16",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 16,
+      "question": "關於多階段行政處分之敘述，下列何者正確？",
+      "options": {
+        "A": "前階段之行為一律不發生法律效果",
+        "B": "各階段之行為，皆屬行政處分",
+        "C": "提起行政爭訟時，以對外生效之行政處分作為審查對象，但不及於前階段之行為",
+        "D": "前階段之機關未參與而作成最後階段之行政處分者，此項程序欠缺得予補正"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-17",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 17,
+      "question": "關於行政罰法之敘述，下列何者正確？",
+      "options": {
+        "A": "行政罰之責任係屬無過失責任",
+        "B": "公務人員遵守長官監督範圍內所發命令之行為，一概不罰",
+        "C": "若違反行政法上義務之行為人不知法規而其情可憫，得敘明理由減輕或免除其處罰",
+        "D": "行為人違反行政法上義務之行為係屬防衛過當者，仍得阻卻違法"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-18",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 18,
+      "question": "下列有關行政程序法消滅時效與除斥期間之敘述，何者錯誤？",
+      "options": {
+        "A": "公法上之請求權，於請求權人為人民時，除法律另有規定外，因2 年間不行使而消滅",
+        "B": "原處分機關於知有撤銷原因時起2 年後，即不得依職權撤銷違法行政處分",
+        "C": "原處分機關於廢止原因發生後2 年內，得依職權廢止授予利益之合法行政處分",
+        "D": "公法上之請求權，於請求權人為行政機關時，除法律另有規定外，因5 年間不行使而消滅"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-19",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 19,
+      "question": "下列何者非屬行政契約？",
+      "options": {
+        "A": "有關國家賠償之協議",
+        "B": "行政機關向廠商購買文具之契約",
+        "C": "具保人與檢察官間之保證契約",
+        "D": "土地徵收補償費之協議"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-20",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 20,
+      "question": "依行政罰法之規定，下列何者非行政罰之種類？",
+      "options": {
+        "A": "罰鍰",
+        "B": "沒入",
+        "C": "命令歇業",
+        "D": "怠金"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-21",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 21,
+      "question": "行政機關依職權決定是否撤銷違法之行政處分，毋須考慮下列那一項因素？",
+      "options": {
+        "A": "處分相對人之企業規模",
+        "B": "撤銷對公益有無重大危害",
+        "C": "受益人之信賴利益是否值得保護",
+        "D": "信賴利益有無顯然大於撤銷所欲維護之公益"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-22",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 22,
+      "question": "下列關於行政契約之敘述，何者錯誤？",
+      "options": {
+        "A": "行政契約當事人之一方為人民者，行政機關為防止或除去對公益之重大危害，得於必要範圍內調整契約內容",
+        "B": "行政契約締結後，因有重大情事變更非締約時所能預料，若依照原約定顯失公平者，當事人之一方得請求他方調整契約內容",
+        "C": "行政契約之締結，應以書面為之。但法規另有其他方式之規定者，從其規定",
+        "D": "契約內容若有侵害第三人時，於該第三人陳述意見後，該行政契約即可生效"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-23",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 23,
+      "question": "關於行政契約，行政程序法未規定者，應準用何種法規？",
+      "options": {
+        "A": "民法",
+        "B": "刑法",
+        "C": "行政訴訟法",
+        "D": "公司法"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-24",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 24,
+      "question": "下列何者不屬於行政執行之方法？",
+      "options": {
+        "A": "查封義務人之不動產",
+        "B": "管收義務人",
+        "C": "沒收",
+        "D": "對於義務人連續處以怠金"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-25",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 25,
+      "question": "關於行政罰責任之敘述，下列何者正確？",
+      "options": {
+        "A": "未滿14 歲人之行為，不予處罰",
+        "B": "滿80 歲人之行為，不予處罰",
+        "C": "過失之行為，減輕處罰",
+        "D": "消極不作為，減輕處罰"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-26",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 26,
+      "question": "行政罰之裁處權，因幾年期間之經過而消滅？",
+      "options": {
+        "A": "6 個月",
+        "B": "1 年",
+        "C": "2 年",
+        "D": "3 年"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-27",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 27,
+      "question": "下列關於甲超速駕駛之行為，何者應受行政處罰？",
+      "options": {
+        "A": "機關首長要求該機關之公務車司機甲超速駕駛，甲明知該職務命令違法，已向機關首長陳述意見，但機關首長以書面回覆堅持甲必須服從該職務命令，甲只好超速駕駛公務車",
+        "B": "甲駕駛消防車前往火災現場救災，超越法定行車速度之限制",
+        "C": "甲駕駛自用小客車，同車友人突然陷入昏迷，甲欲快速將友人送抵醫院急救而超速行駛",
+        "D": "甲參加喜宴，飲酒過度而超速駕駛"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-28",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 28,
+      "question": "下列何者得以代履行手段強制執行？",
+      "options": {
+        "A": "罰鍰處分",
+        "B": "勒令停工處分",
+        "C": "命自行拆除違章建築之處分",
+        "D": "對於違法集會命令解散之處分"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-29",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 29,
+      "question": "人民對於執行機關合法即時強制而受到生命、身體或財產之損失時，可以獲得救濟。下列相關敘述何者錯誤？",
+      "options": {
+        "A": "所受損失可以請求補償",
+        "B": "可以依照國家賠償法，向執行機關要求金錢賠償",
+        "C": "對於損失補償有所不服者，尚可提起訴願及行政訴訟",
+        "D": "自損失發生後經過5 年者不得為損失補償之請求"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-30",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 30,
+      "question": "依行政執行法之管收規定，下列何者非屬對於義務人不得管收之原因？",
+      "options": {
+        "A": "因管收而其事業有難以維持之虞",
+        "B": "懷胎5 月以上",
+        "C": "因管收而其一家生計有難以維持之虞",
+        "D": "現罹疾病，恐因管收而不能治療"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-31",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 31,
+      "question": "人民因執行機關依法實施即時強制，致其生命、身體或財產遭受特別損失時，得請求補償。前述損失補償，應自知有損失後，至遲多久期間內向執行機關請求之？",
+      "options": {
+        "A": "2 個月",
+        "B": "6 個月",
+        "C": "1 年",
+        "D": "2 年"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-32",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 32,
+      "question": "下列何者係屬行政執行法上之間接強制方法？",
+      "options": {
+        "A": "扣留",
+        "B": "註銷證照",
+        "C": "進入住宅",
+        "D": "怠金"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-33",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 33,
+      "question": "行政程序法有關行政程序所生費用之規定，下列敘述何者錯誤？",
+      "options": {
+        "A": "證人得向行政機關請求法定之日費及旅費",
+        "B": "鑑定人得向行政機關請求相當之報酬",
+        "C": "行政機關負擔專為利害關係人利益所支出之費用",
+        "D": "鑑定人得請求行政機關預行酌給法定之日費"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-34",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 34,
+      "question": "市府辦晚會，封鎖街道，摩托車騎士甲強行騎車進入，被警察以強制力驅離現場，其性質為何？",
+      "options": {
+        "A": "甲違反特定行政上義務，且直接被以強制力排除其以機動車輛進入會場，故屬直接強制",
+        "B": "此驅離行為係為間接實現市府封閉道路辦理晚會為目的，故為間接強制",
+        "C": "因當時情形急迫，屬即時強制",
+        "D": "甲違反不得騎機車進入會場之義務，故屬公法上課予給付義務之強制執行"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-35",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 35,
+      "question": "行政執行法關於義務人或利害關係人聲明異議之規定，下列敘述何者正確？",
+      "options": {
+        "A": "向執行機關的直接上級機關聲明異議",
+        "B": "執行程序終結後，得聲明異議",
+        "C": "執行機關認其聲明異議無理由者，逕予駁回",
+        "D": "行政執行，原則上不因聲明異議而停止執行"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-36",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 36,
+      "question": "公法上金錢給付義務之強制執行，應以何機關為執行機關？",
+      "options": {
+        "A": "法務部行政執行署所屬各分署",
+        "B": "原行政處分機關",
+        "C": "該管行政機關",
+        "D": "原行政處分機關之上級機關"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-37",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 37,
+      "question": "下列何者不屬於行政程序法所適用之事證調查原則？",
+      "options": {
+        "A": "職權調查證據主義",
+        "B": "自由心證主義",
+        "C": "有利與不利兼顧原則",
+        "D": "嚴格證據主義"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-38",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 38,
+      "question": "行政機關就公法上具體事件所為之決定或其他公權力措施而對外直接發生法律效果之單方行政行為，其性質為：",
+      "options": {
+        "A": "行政處分",
+        "B": "行政命令",
+        "C": "行政計畫",
+        "D": "行政指導"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-39",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 39,
+      "question": "有關行政規則，下列敘述何者錯誤？",
+      "options": {
+        "A": "指上級機關對下級機關，或長官對屬官，依其權限或職權為規範機關內部秩序及運作，所為非直接對外發生法規範效力之一般、抽象之規定",
+        "B": "其中包含解釋性規定、認定事實之基準及裁量基準",
+        "C": "皆須下達並由首長簽署發布始生效力",
+        "D": "不須法律授權"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-40",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 40,
+      "question": "以刊登政府公報或新聞紙進行公示送達者，原則上，自最後刊登之日起，經過多久發生效力？",
+      "options": {
+        "A": "3 日",
+        "B": "10 日",
+        "C": "15 日",
+        "D": "20 日"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-41",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 41,
+      "question": "有關訴願審議委員會之敘述，下列何者正確？",
+      "options": {
+        "A": "訴願審議委員會具有機關之地位",
+        "B": "遴聘社會公正人士、學者、專家人數不得少於二分之一",
+        "C": "訴願決定之決議，以委員過半數之出席，出席委員三分之二之同意行之",
+        "D": "訴願管轄機關之長官，得逕自變更訴願審議之決定"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-42",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 42,
+      "question": "下列書面行政處分，何者於未經撤銷、廢止或未因其他事由而失效前，其行政處分之效力繼續存在？",
+      "options": {
+        "A": "該書面行政處分未載明處分機關者",
+        "B": "處分內容違背公序良俗或構成犯罪者",
+        "C": "處分未經合法送達者",
+        "D": "處分之作成缺乏專屬管轄以外之其他土地管轄權限者"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-43",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 43,
+      "question": "下列何者不得為行政訴訟之訴訟代理人？",
+      "options": {
+        "A": "於土地行政事件中之律師",
+        "B": "於專利行政事件中之專利師",
+        "C": "於建築行政事件中之建築師",
+        "D": "於稅捐行政事件中之會計師"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-44",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 44,
+      "question": "有關案件管轄權之爭議，下列敘述何者錯誤？",
+      "options": {
+        "A": "案件若向行政法院起訴，行政法院認為無受理訴訟權限者，應依職權裁定將本案移送普通法院",
+        "B": "案件若向普通法院起訴，普通法院認為無受理訴訟權限者，應依職權裁定將本案移送行政法院",
+        "C": "案件若向普通法院起訴，普通法院認為無受理訴訟權限者，應以無管轄權為理由裁定駁回",
+        "D": "案件若向普通法院起訴，普通法院認為無受理訴訟權限者，於依職權裁定將本案移送行政法院，而該行政法院認為亦無受理訴訟權限者，應以裁定停止訴訟，聲請司法院大法官解釋"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-45",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 45,
+      "question": "行政訴訟中，原告已證明受有損害但一時不能計算其數額，行政法院應為如何之裁判？",
+      "options": {
+        "A": "依所得心證定其數額",
+        "B": "判決駁回原告之訴",
+        "C": "裁定不受理",
+        "D": "判命原告與被告進行協商"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-46",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 46,
+      "question": "關於行政訴訟之簡易訴訟程序，下列敘述何者錯誤？",
+      "options": {
+        "A": "交通裁決事件不以言詞辯論為必要",
+        "B": "起訴得以言詞為之",
+        "C": "其審判以法官3 人合議行之",
+        "D": "對簡易案件判決提起上訴，應主張判決違背法令"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-47",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 47,
+      "question": "現行行政訴訟之審級制為何？",
+      "options": {
+        "A": "三級三審",
+        "B": "三級二審",
+        "C": "二級三審",
+        "D": "二級二審"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-48",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 48,
+      "question": "下列何者為有瑕疵，但仍屬有效之法規命令？",
+      "options": {
+        "A": "法規命令草案公告後未給予適當時間供人民表示意見",
+        "B": "法規應經其他機關核准，未經核准即行發布",
+        "C": "無法律授權而限制人民權利",
+        "D": "內容牴觸憲法"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-49",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 49,
+      "question": "甲所有之土地自日據時期起即供公共通行，迄今未被徵收，為維持公共通行，由公路總局管理維護。日前因路面維護不當，導致機車騎士嚴重摔傷，下列敘述何者正確？",
+      "options": {
+        "A": "甲應依民法侵權行為規定負責",
+        "B": "甲應與公路總局共同負民事共同侵權行為之損害賠償責任",
+        "C": "由公路總局負國家賠償責任",
+        "D": "民事（侵權行為）及國家賠償之請求權，由受害之騎士自由選擇"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_law_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law_junior-105-civil-junior-general-50",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "105 年普通考試一般行政",
+      "subject": "行政法概要",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 50,
+      "question": "依據公務員服務法規定，公務員奉派出差，至遲應於多久之內出發？",
+      "options": {
+        "A": "1 個月內",
+        "B": "1 星期內",
+        "C": "5 日內",
+        "D": "3 日內"
       },
       "answer": "B",
       "level": "junior",

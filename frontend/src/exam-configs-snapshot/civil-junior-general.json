@@ -16,7 +16,11 @@
     "common_constitution",
     "common_law_basics",
     "common_english",
-    "common_chinese"
+    "common_chinese",
+    "common_admin_law_junior",
+    "common_admin_studies_junior",
+    "common_politics",
+    "common_public_mgmt"
   ],
   "sharedScope": "level_4_common",
   "uxHints": {
@@ -24,7 +28,7 @@
     "longText": true
   },
   "questionsFile": null,
-  "totalQ": 0,
+  "totalQ": 2347,
   "passScore": 0,
   "passRate": 0,
   "papers": [
@@ -55,6 +59,20 @@
       "subject": "行政學概要",
       "subjects": "公共行政基礎、組織行為",
       "count": 0
+    },
+    {
+      "id": "politics",
+      "name": "政治學概要",
+      "subject": "政治學概要",
+      "subjects": "政治學理論、政府體制、選舉與政黨",
+      "count": 0
+    },
+    {
+      "id": "public_mgmt",
+      "name": "公共管理概要",
+      "subject": "公共管理概要",
+      "subjects": "組織管理、人力資源管理、績效管理",
+      "count": 0
     }
   ],
   "stages": [
@@ -75,11 +93,11 @@
     "fullName": "普通考試 一般行政",
     "shortName": "普考",
     "studentType": "公職應屆考生、轉職應考者",
-    "years": "106 起",
-    "totalQ": 3545,
+    "years": "102 起",
+    "totalQ": 2347,
     "examDesc": "公務人員普通考試一般行政類科，由考選部舉辦，採名額制錄取。",
-    "paperDesc": "共同科目（國文、法學知識與英文）+ 專業科目（行政法概要、行政學概要等）。",
-    "subjects": "憲法、法學緒論、國文、英文、行政法概要、行政學概要等",
-    "mockDesc": "普考一般行政模擬考"
+    "paperDesc": "共同科目（國文、法學知識與英文）+ 專業科目（行政法概要、行政學概要、政治學概要）。",
+    "subjects": "憲法、法學緒論、國文、英文、行政法概要、行政學概要、政治學概要",
+    "mockDesc": "普考一般行政模擬考（拓荒中）"
   }
 }

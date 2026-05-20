@@ -628,7 +628,7 @@ async function scrapeSharedBank(opts) {
     byId.set(nq.id, nq)
   }
   bank.questions = Array.from(byId.values())
-  bank.bankVersion = (bank.bankVersion || 0) + 1
+  bank.bankVersion = (Number(bank.bankVersion) || 0) + 1
   bank.last_synced_at = new Date().toISOString()
   if (!bank.levels.includes(level)) bank.levels.push(level)
 

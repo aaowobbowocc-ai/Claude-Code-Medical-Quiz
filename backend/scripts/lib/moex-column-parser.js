@@ -297,6 +297,7 @@ async function parseColumnAware(buf) {
 
 function parseAnswersText(text) {
   const ans = {}
+  // Full-width "答案ＣＡＡＣＢ…" (106+ era)
   const fw = /答案\s*([ＡＢＣＤ]+)/g
   let m, n = 1
   while ((m = fw.exec(text)) !== null) {
@@ -306,6 +307,16 @@ function parseAnswersText(text) {
     }
   }
   if (Object.keys(ans).length >= 20) return ans
+  // Half-width "答案CCADACAD…" (102-era 公職測驗式答案 PDF, 連續 ABCD)
+  if (Object.keys(ans).length === 0) {
+    n = 1
+    const hwFlat = /答案\s*([A-D]{5,})/g
+    while ((m = hwFlat.exec(text)) !== null) {
+      for (const ch of m[1]) ans[n++] = ch
+    }
+    if (Object.keys(ans).length >= 20) return ans
+  }
+  // Line-numbered "1. C 2. A …" (older 醫事 era)
   const hw = /(\d{1,2})\s*[.\s、．:：]\s*([A-Da-d])/g
   while ((m = hw.exec(text)) !== null) {
     const num = parseInt(m[1])

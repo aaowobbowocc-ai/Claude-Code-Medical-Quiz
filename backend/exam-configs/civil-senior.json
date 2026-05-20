@@ -17,7 +17,7 @@
     "longText": true
   },
   "questionsFile": "questions-civil-senior.json",
-  "totalQ": 990,
+  "totalQ": 1188,
   "passScore": null,
   "passRate": null,
   "papers": [
@@ -28,9 +28,18 @@
       "subjects": "中華民國憲法、法學緒論、英文",
       "count": 50,
       "breakdown": [
-        { "subject": "憲法", "count": 15 },
-        { "subject": "法學緒論", "count": 15 },
-        { "subject": "英文", "count": 20 }
+        {
+          "subject": "憲法",
+          "count": 15
+        },
+        {
+          "subject": "法學緒論",
+          "count": 15
+        },
+        {
+          "subject": "英文",
+          "count": 20
+        }
       ],
       "breakdownNote": "依歷屆題分布估計",
       "timeLimit": 60
@@ -61,7 +70,11 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {
@@ -71,11 +84,26 @@
       "admin_law": "行政法"
     },
     "stageStyles": {
-      "all": { "icon": "🎲", "color": "#64748B" },
-      "law_knowledge_english": { "icon": "⚖️", "color": "#6366F1" },
-      "chinese": { "icon": "📝", "color": "#F59E0B" },
-      "admin_studies": { "icon": "🏢", "color": "#10B981" },
-      "admin_law": { "icon": "📜", "color": "#8B5CF6" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "law_knowledge_english": {
+        "icon": "⚖️",
+        "color": "#6366F1"
+      },
+      "chinese": {
+        "icon": "📝",
+        "color": "#F59E0B"
+      },
+      "admin_studies": {
+        "icon": "🏢",
+        "color": "#10B981"
+      },
+      "admin_law": {
+        "icon": "📜",
+        "color": "#8B5CF6"
+      }
     },
     "subjectColors": {
       "法學知識與英文": "#6366F1",
@@ -91,16 +119,28 @@
     "shortName": "高考三等",
     "studentType": "公職考生",
     "years": "106-114",
-    "totalQ": 990,
+    "totalQ": 1188,
     "examDesc": "公務人員高等考試三級考試，為我國公職考試中規模最大的一類。共同科目法學知識與英文 50 題、國文測驗 10 題，專業科目行政學 25 題、行政法 25 題，共 110 題選擇題。",
     "paperDesc": "共同科目：法學知識與英文 50 題、國文 10 題。專業科目（選擇題部分）：行政學 25 題、行政法 25 題。",
     "subjects": "法學知識與英文、國文（測驗）、行政學、行政法",
     "mockDesc": "模擬高考三等一般行政選擇題 110 題",
     "subjectDetails": [
-      ["法學知識與英文", "涵蓋中華民國憲法、法學緒論、英文三大部分。"],
-      ["國文（測驗）", "作文與測驗的測驗部分，10 題選擇題。"],
-      ["行政學", "行政學選擇題部分，25 題。"],
-      ["行政法", "行政法選擇題部分，25 題。"]
+      [
+        "法學知識與英文",
+        "涵蓋中華民國憲法、法學緒論、英文三大部分。"
+      ],
+      [
+        "國文（測驗）",
+        "作文與測驗的測驗部分，10 題選擇題。"
+      ],
+      [
+        "行政學",
+        "行政學選擇題部分，25 題。"
+      ],
+      [
+        "行政法",
+        "行政法選擇題部分，25 題。"
+      ]
     ]
   }
 }

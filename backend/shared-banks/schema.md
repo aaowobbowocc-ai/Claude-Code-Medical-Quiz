@@ -60,6 +60,8 @@
 - politics
 - sociology
 - psychology
+- local_gov
+- public_management
 
 ### 司法 / 律師專業科目
 
@@ -98,6 +100,8 @@
 | `politics` | 政治學、政治 |
 | `sociology` | 社會學 |
 | `psychology` | 心理學 |
+| `local_gov` | 地方自治、地方政府與政治、地方政府 |
+| `public_management` | 公共管理、公共管理概要 |
 | `jurisprudence` | 法理學、法律倫理 |
 | `legal_history` | 法制史、中國法制史 |
 | `evidence_law` | 證據法 |
@@ -143,6 +147,9 @@
 | `common_civil_law` | `civil_law` |
 | `common_criminal_law` | `criminal_law` |
 | `common_law_knowledge` | `law_knowledge_combined` |
+| `common_politics` | `politics` |
+| `common_local_gov` | `local_gov` |
+| `common_public_mgmt` | `public_management` |
 
 合併邏輯：bank 收 tag X → 任何 `subject_tags` 含 X 的題都會進這個 bank。所以一題「憲法與法學緒論」會同時出現在 `common_constitution` 與 `common_law_basics` 兩個 bank 的 reservoir 結果中（若 exam 同時宣告兩個 bank）。
 

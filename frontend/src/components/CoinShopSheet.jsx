@@ -203,17 +203,13 @@ export default function CoinShopSheet({ onClose }) {
               </div>
             </div>
 
-            <div className="bg-white border-2 border-gray-100 rounded-2xl px-4 py-3 mb-5 flex items-center gap-3">
+            <div className="bg-white border-2 border-gray-100 rounded-2xl px-4 py-3.5 mb-5 flex items-center gap-3">
               <img
-                src="https://www.jkos.com/img/jkopay-logo.svg"
-                alt="街口支付"
-                className="h-7 object-contain"
-                onError={e => { e.target.style.display = 'none' }}
+                src="/jkopay-logo.png"
+                alt="街口支付 JKOPAY"
+                className="h-10 object-contain"
               />
-              <div>
-                <p className="text-sm font-bold text-gray-700">街口支付</p>
-                <p className="text-xs text-gray-400">安全加密付款</p>
-              </div>
+              <span className="text-xs text-gray-400 ml-auto">安全加密付款</span>
             </div>
 
             <p className="text-[11px] text-gray-400 text-center mb-4 leading-relaxed">

@@ -121,6 +121,10 @@ async function createJkosOrder({ order_id, amount_twd, valid_seconds = 1200 }) {
     currency: 'TWD',
     total_price: amount_twd,
     final_price: amount_twd,
+    // 街口幣不可折抵金額。一般商品帶 0（不限制折抵）；該欄位是給「法規不可行銷
+    // 商品」（如香菸）限制街口幣回饋用。⚠️ 街口驗測腳本要求務必帶 0，設錯會影響
+    // 用戶街口幣回饋。
+    unredeem: 0,
     result_url: `${backendBase}/payment/jkos/callback`,
     result_display_url: `${frontendBase}/coin-shop/return?order=${order_id}`,
     payment_type: 'onetime',

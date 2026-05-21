@@ -38,7 +38,6 @@ const EXAM_FILES = {
   optometrist: 'questions-optometrist.json',
   'optometrist-junior': 'questions-optometrist-junior.json',
   customs: 'questions-customs.json',
-  judicial: 'questions-judicial.json',
   lawyer1: 'questions-lawyer1.json',
   police: 'questions-police.json',
   police4: 'questions-police4.json',

@@ -29,7 +29,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v21: 新增 普考一般民政 civil-junior-civil-affairs（共用 bank + 地方自治概要，1822 題）
 // v22: 新增 國營事業聯招 4 考試 state-mgmt/hr/finance/it（109-114 年，1198 題 + 英文共用 240）
 // v23: civil-senior 改 shell（高考三等一般行政），重爬修正舊 pdfjs 切錯選項的污染題庫
-const CACHE_KEY = 'exam-registry-v23'
+// v24: judicial 改 shell（司法特考三等），重爬法學知識與英文修正污染
+const CACHE_KEY = 'exam-registry-v24'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache

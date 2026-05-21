@@ -213,4 +213,12 @@ common_accounting（會計學）★新   財稅行政/會計
 
 ---
 
-*狀態：P1 完成（盤點 + meta + civil-senior 收斂含污染修復）。下一步 P2（拆 judicial/customs）。*
+### 9.4 P2 — judicial 已完成；customs 待專案
+
+**judicial（已完成）：** 同 civil-senior 發現選項位移污染（~72/450 題）。`rebuild-judicial-banks.js` 用 parseColumnAware 重爬 法學知識與英文 106-114 → `common_law_knowledge`（407 題乾淨，英文段殘 43 待 vision）。清除 constitution/law_basics/english 的舊誤拆 rows。judicial config 改 shell（sharedBanks:[common_law_knowledge]、level_3_common、totalQ 908）。刪 questions-judicial.json、移除 ingest/cdnQuestions 引用。
+
+**customs（待專案）：** 同樣有污染（~175/959 題）。但 customs 較雜：① 12 年（104-115），scrape-customs.js 只有 108-115 代碼，104-107 需 probe ② 法學知識為憲法+法緒合卷、英文/國文獨立卷，bank 歸屬需斟酌 ③ 國文卷為無標記題型。→ customs 重爬獨立一個工項，未在本回合執行。
+
+---
+
+*狀態：P1 完成；P2 judicial 完成、customs 待專案。*

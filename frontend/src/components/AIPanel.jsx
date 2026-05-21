@@ -46,7 +46,7 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, remaining, explanation, cost = 100, questionId, questionText, rocYear, session, number, disputed, visionUncertain, subjectTags, sourceBankId, meta, onVote }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, error, remaining, explanation, cost = 100, questionId, questionText, rocYear, session, number, disputed, visionUncertain, subjectTags, sourceBankId, meta, onVote }) {
   const [showAI, setShowAI] = useState(false)
   const [reportSent, setReportSent] = useState(false)
   const [showReportForm, setShowReportForm] = useState(false)
@@ -392,6 +392,15 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
               <p className="text-2xl mb-2">😴</p>
               <p className="text-sm font-semibold text-amber-700">今日解說已達上限</p>
               <p className="text-xs text-amber-500 mt-1">個人每天 20 次，明天 00:00 重置</p>
+            </div>
+          ) : error ? (
+            <div className="bg-rose-50 border border-rose-200 rounded-2xl p-4 text-center">
+              <p className="text-2xl mb-2">⚠️</p>
+              <p className="text-sm font-semibold text-rose-700 leading-relaxed">{error}</p>
+              <button
+                onClick={() => { if (!loading) onRequest() }}
+                className="mt-3 text-xs font-medium px-4 py-2 rounded-xl border-2 border-rose-300 text-rose-600 bg-white active:scale-95 transition-transform"
+              >🔄 再試一次</button>
             </div>
           ) : (
             <div className={`rounded-2xl p-4 border ${

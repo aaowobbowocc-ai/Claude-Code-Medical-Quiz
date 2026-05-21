@@ -120,7 +120,7 @@ function QuestionCard({ q, stageMap, readingStyle, readingPrefs, updateReadingPr
   const tagName  = !localTag || localTag === 'unknown'
     ? (q.subject_name || q.subject || '未分類')
     : (stageMeta?.name || q.subject_name || SUBJECTS.find(s => s.tag === localTag)?.name || q.subject || '未分類')
-  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, notEnoughCoins: explainNoCoins, explain, remaining: explainRemaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
+  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, notEnoughCoins: explainNoCoins, error: explainError, explain, remaining: explainRemaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
 
   const handleVoteDone = (tag) => {
     if (tag) setLocalTag(tag)  // optimistic update if classified
@@ -265,6 +265,7 @@ function QuestionCard({ q, stageMap, readingStyle, readingPrefs, updateReadingPr
               loading={explainLoading}
               limitHit={explainLimitHit}
               notEnoughCoins={explainNoCoins}
+              error={explainError}
               remaining={explainRemaining}
               cost={explainCost}
               requested={explainReq}

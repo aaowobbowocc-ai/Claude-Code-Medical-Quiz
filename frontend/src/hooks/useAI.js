@@ -167,6 +167,10 @@ async function streamPost(url, body, onChunk, onDone, onError, signal, onMeta) {
         if (raw === '[DONE]') { onDone?.(); return }
         try {
           const parsed = JSON.parse(raw)
+          // Mid-stream error frame — backend hit an LLM error after the SSE
+          // headers were already sent. Surface it; otherwise the stream just
+          // ends silently and the user sees a blank panel.
+          if (parsed.error) { onError?.(parsed.error); onDone?.(); return }
           if (parsed.meta) onMeta?.(parsed.meta)
           if (parsed.text) onChunk(parsed.text)
         } catch {}
@@ -185,6 +189,9 @@ export function useExplain() {
   const [loading, setLoading]   = useState(false)
   const [limitHit, setLimitHit] = useState(false)
   const [notEnoughCoins, setNotEnoughCoins] = useState(false)
+  // Generation failure (transient LLM error / empty response) — distinct from
+  // limitHit (quota) so the UI can show a retry-able error instead of a blank.
+  const [error, setError]       = useState(null)
   // Meta from the first SSE frame — drives the pending/verified badge + vote UI
   const [meta, setMeta]         = useState(null) // { cacheKey, status, upvotes, downvotes, price }
   // Track the question id this hook is currently streaming for, so stale chunks
@@ -239,11 +246,26 @@ export function useExplain() {
 
     setText('')
     setMeta(null)
+    setError(null)
     setLimitHit(false)
     setNotEnoughCoins(false)
     setLoading(true)
-    // Quota is only burned for *real* paid generations — verified hits (price=0)
-    // and previously-unlocked questions both bypass it (set in onMeta).
+
+    // Per-stream closure state — lets onDone/onError decide whether to commit
+    // the upfront coin charge or reverse it, based on how the stream ended.
+    let effectivePrice = null   // resolved from the meta frame
+    let serverUnlocked = false
+    let receivedText = false
+    let settled = false         // guards the terminal callbacks running twice
+
+    // Refund whatever the user is still out of pocket. Before the meta frame
+    // the full EXPLAIN_COST is reserved; after it, only effectivePrice remains.
+    const refundCharge = () => {
+      if (alreadyUnlocked) return
+      const owed = effectivePrice == null ? EXPLAIN_COST : effectivePrice
+      if (owed > 0) addCoins(owed)
+    }
+
     try {
       await streamPost(
         `${BACKEND}/explain`,
@@ -256,42 +278,63 @@ export function useExplain() {
           user_id: userId },
         (chunk) => {
           if (activeQidRef.current !== qid) return
+          receivedText = true
           setText(t => t + chunk)
         },
-        () => {
-          if (activeQidRef.current === qid) setLoading(false)
+        () => {  // onDone
+          if (settled || activeQidRef.current !== qid) return
+          settled = true
+          setLoading(false)
+          if (receivedText) {
+            // Success — commit the charge: burn quota for real paid gens and
+            // record the unlock so future views are free for this device.
+            if (effectivePrice > 0) incrementQuota()
+            if ((effectivePrice > 0 || serverUnlocked) && q?.id != null) recordUnlock(q.id)
+          } else {
+            // Stream ended with no text and no error frame (e.g. the
+            // connection dropped) — treat as a failure: refund and tell the user.
+            refundCharge()
+            setError('AI 解說沒有產生內容，金幣已退還，請再試一次。')
+          }
         },
-        (msg) => {
-          if (activeQidRef.current !== qid) return
-          setLimitHit(true); setText(msg)
+        (msg) => {  // onError
+          if (settled || activeQidRef.current !== qid) return
+          settled = true
+          setLoading(false)
+          // A real daily-limit message routes to the quota UI; anything else is
+          // a transient generation failure — refund and show a retry-able error.
+          if (/上限/.test(String(msg || ''))) {
+            setLimitHit(true)
+          } else {
+            refundCharge()
+            setError('AI 解說暫時無法產生，金幣已退還，請稍後再試一次。')
+          }
         },
         ctrl.signal,
-        (m) => {
+        (m) => {  // onMeta
           if (activeQidRef.current !== qid) return
           // Resolve the effective price. The server may report alreadyUnlocked
           // (cross-device unlock from another login) — in that case treat as
           // free and mirror to localStorage so future calls go via fast path.
-          const serverUnlocked = !!m?.alreadyUnlocked
+          serverUnlocked = !!m?.alreadyUnlocked
           const isUnlocked = alreadyUnlocked || serverUnlocked
-          const effectivePrice = isUnlocked ? 0 : (Number.isFinite(m?.price) ? m.price : EXPLAIN_COST)
+          effectivePrice = isUnlocked ? 0 : (Number.isFinite(m?.price) ? m.price : EXPLAIN_COST)
           setMeta({ ...m, price: effectivePrice, alreadyUnlocked: isUnlocked })
-          // Refund overage if we reserved EXPLAIN_COST.
+          // Refund the overage on the pessimistic upfront charge now; the
+          // remaining effectivePrice is committed on success / refunded on fail.
           if (!alreadyUnlocked) {
-            const refund = EXPLAIN_COST - effectivePrice
-            if (refund > 0) addCoins(refund)
+            const overage = EXPLAIN_COST - effectivePrice
+            if (overage > 0) addCoins(overage)
           }
-          // Burn quota only for real paid generations. Verified hits and
-          // previously-unlocked questions don't count — they cost nothing on
-          // the server side and shouldn't penalise the user.
-          if (effectivePrice > 0) incrementQuota()
-          // Record unlock locally when user actually paid OR server says
-          // already unlocked (cross-device sync). Backend already wrote the
-          // unlock row in both cases.
-          if ((effectivePrice > 0 || serverUnlocked) && q?.id != null) recordUnlock(q.id)
         },
       )
     } catch {
-      if (activeQidRef.current === qid) setLoading(false)
+      if (!settled && activeQidRef.current === qid) {
+        settled = true
+        setLoading(false)
+        refundCharge()
+        setError('AI 解說發生錯誤，金幣已退還，請稍後再試一次。')
+      }
     }
   }, [])
 
@@ -335,9 +378,10 @@ export function useExplain() {
     setLoading(false)
     setLimitHit(false)
     setNotEnoughCoins(false)
+    setError(null)
   }, [])
 
-  return { text, loading, limitHit, notEnoughCoins, explain, reset, vote, meta, remaining: getPersonalQuotaRemaining(), cost: EXPLAIN_COST }
+  return { text, loading, limitHit, notEnoughCoins, error, explain, reset, vote, meta, remaining: getPersonalQuotaRemaining(), cost: EXPLAIN_COST }
 }
 
 // Hook: review a full session

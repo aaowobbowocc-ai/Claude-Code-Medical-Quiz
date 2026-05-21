@@ -17,7 +17,7 @@ function ReviewCard({ q, index }) {
   const [showFolderPick, setShowFolderPick] = useState(false)
   const { isBookmarked, getFolder, folders, addToFolder, removeBookmark, getFolderQuestions, MAX_PER_FOLDER } = useBookmarks()
   const bookmarked = isBookmarked(q)
-  const { text: explainText, loading: explainLoading, limitHit, notEnoughCoins, explain, remaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
+  const { text: explainText, loading: explainLoading, limitHit, notEnoughCoins, error: explainError, explain, remaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
 
   const answerColor = '#10B981'   // green for correct
   const wrongColor  = '#EF4444'   // red for wrong
@@ -117,6 +117,7 @@ function ReviewCard({ q, index }) {
               loading={explainLoading}
               limitHit={limitHit}
               notEnoughCoins={notEnoughCoins}
+              error={explainError}
               remaining={remaining}
               cost={explainCost}
               requested={explainReq}

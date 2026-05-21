@@ -436,7 +436,7 @@ function PracticeGame({ config, onFinish, onExit }) {
   const { isBookmarked, getFolder, folders, addToFolder, removeBookmark, getFolderQuestions, MAX_PER_FOLDER } = useBookmarks()
   const sessionLog = useRef([])   // track every q+answer for review
 
-  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, notEnoughCoins: explainNoCoins, explain, reset: resetExplain, remaining: explainRemaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
+  const { text: explainText, loading: explainLoading, limitHit: explainLimitHit, notEnoughCoins: explainNoCoins, error: explainError, explain, reset: resetExplain, remaining: explainRemaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
 
   // Load questions — prefer CDN (pure mode); fall back to backend for reservoir mode
   // or unsupported exams. CDN cuts Render egress to ~0.
@@ -775,6 +775,7 @@ function PracticeGame({ config, onFinish, onExit }) {
               loading={explainLoading}
               limitHit={explainLimitHit}
               notEnoughCoins={explainNoCoins}
+              error={explainError}
               remaining={explainRemaining}
               cost={explainCost}
               requested={explainRequested}

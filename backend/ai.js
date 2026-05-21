@@ -257,24 +257,45 @@ function sseHeaders(res) {
 
 async function streamAnthropic(res, prompt, maxTokens = 600, onComplete) {
   let fullText = '';
-  try {
-    const stream = await anthropic.messages.stream({
-      model: EXPLAIN_MODEL,
-      max_tokens: maxTokens,
-      messages: [{ role: 'user', content: prompt }],
-    });
-    for await (const chunk of stream) {
-      if (chunk.type === 'content_block_delta' && chunk.delta?.text) {
-        fullText += chunk.delta.text;
-        res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`);
+  // Retry transient failures (Haiku 529 overloaded / 429 / 5xx) — these are the
+  // usual cause of intermittent "no AI response" reports. A retry is only safe
+  // while nothing has been written to the response yet (fullText empty).
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const stream = await anthropic.messages.stream({
+        model: EXPLAIN_MODEL,
+        max_tokens: maxTokens,
+        messages: [{ role: 'user', content: prompt }],
+      });
+      for await (const chunk of stream) {
+        if (chunk.type === 'content_block_delta' && chunk.delta?.text) {
+          fullText += chunk.delta.text;
+          res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`);
+        }
       }
+      // Empty completion (model returned no text) is a failure from the user's
+      // POV — signal it as an error frame, not a silent [DONE].
+      if (!fullText) {
+        res.write(`data: ${JSON.stringify({ error: 'empty_response' })}\n\n`);
+        res.end();
+        return;
+      }
+      res.write('data: [DONE]\n\n');
+      res.end();
+      if (onComplete) onComplete(fullText);
+      return;
+    } catch (e) {
+      const transient = !e.status || [429, 500, 502, 503, 529].includes(e.status);
+      // Mid-stream failure (text already sent) or non-transient or out of
+      // attempts → give up and surface the error.
+      if (fullText || attempt >= 3 || !transient) {
+        console.warn('[explain] anthropic stream failed:', e.message);
+        res.write(`data: ${JSON.stringify({ error: e.message || 'stream_failed' })}\n\n`);
+        res.end();
+        return;
+      }
+      await new Promise(r => setTimeout(r, attempt * 400));
     }
-    res.write('data: [DONE]\n\n');
-    res.end();
-    if (onComplete && fullText) onComplete(fullText);
-  } catch (e) {
-    res.write(`data: ${JSON.stringify({ error: e.message })}\n\n`);
-    res.end();
   }
 }
 
@@ -328,9 +349,17 @@ function streamGemini(res, prompt, maxTokens = 600, onComplete) {
         }
       });
       gRes.on('end', () => {
+        // Empty completion (safety block / token exhaustion on thinking) —
+        // signal an error frame so the frontend shows a failure, not a blank.
+        if (!fullText) {
+          res.write(`data: ${JSON.stringify({ error: 'empty_response' })}\n\n`);
+          res.end();
+          resolve();
+          return;
+        }
         res.write('data: [DONE]\n\n');
         res.end();
-        if (onComplete && fullText) onComplete(fullText);
+        if (onComplete) onComplete(fullText);
         resolve();
       });
       gRes.on('error', (e) => {

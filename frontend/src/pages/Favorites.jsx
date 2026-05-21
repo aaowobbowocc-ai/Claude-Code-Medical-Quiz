@@ -12,7 +12,7 @@ import CommentSection from '../components/CommentSection'
 function FavCard({ q, index, onRemove }) {
   const [open, setOpen] = useState(false)
   const [explainReq, setExplainReq] = useState(false)
-  const { text: explainText, loading: explainLoading, limitHit, notEnoughCoins, explain, remaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
+  const { text: explainText, loading: explainLoading, limitHit, notEnoughCoins, error: explainError, explain, remaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
 
   const tagName = q.subject_name || q.subject || '未分類'
   const tagColor = getSubjectColor(tagName)
@@ -59,6 +59,7 @@ function FavCard({ q, index, onRemove }) {
               loading={explainLoading}
               limitHit={limitHit}
               notEnoughCoins={notEnoughCoins}
+              error={explainError}
               remaining={remaining}
               cost={explainCost}
               requested={explainReq}

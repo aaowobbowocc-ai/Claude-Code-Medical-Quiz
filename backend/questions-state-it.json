@@ -5,8 +5,2991 @@
     "scraped_at": "2026-05-21T04:39:54.008Z",
     "source": "taipower.com.tw"
   },
-  "total": 590,
+  "total": 739,
   "questions": [
+    {
+      "id": "state-it-100-1",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 1,
+      "question": "圖書館可分為國家圖書館、公共圖書館、專門圖書館、中小學圖書館、大專院校圖書館等類型，是基於何種因素？",
+      "options": {
+        "A": "圖書館規模大小",
+        "B": "館員的專業能力",
+        "C": "服務對象與宗旨",
+        "D": "設置地點"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-2",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 2,
+      "question": "出版社將擬出版的圖書，先送到國家圖書館予以分類編目，並於書上印出書目資料，以減少圖書館編目的負擔，請問這措施稱為什麼？",
+      "options": {
+        "A": "ISO",
+        "B": "ISRC",
+        "C": "ISBD",
+        "D": "CIP"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-3",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 3,
+      "question": "有關文獻傳遞服務，下列何者敘述錯誤？",
+      "options": {
+        "A": "通常是免費服務",
+        "B": "提供期刊複印及館際互借圖書",
+        "C": "通常無法複印全份學校碩博士論文全文",
+        "D": "透過文獻傳遞服務取得國內外圖書或資料單位的資料"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-4",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 4,
+      "question": "有關圖書館的經營，下列何者敘述是不正確的？",
+      "options": {
+        "A": "每一所圖書館都具有其設立的宗旨及經營目標",
+        "B": "各類型的圖書館規模、宗旨、經營各異，但圖書館都用中國圖書分類法分類",
+        "C": "館藏發展的內容包含館藏發展政策的訂定、選擇、採訪、館藏評鑑、館藏淘汰等",
+        "D": "強調「個人化圖書館服務」已成為現代圖書館所標榜的功能"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-5",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 5,
+      "question": "圖書館的組織設計若採集中的設計，下列有哪一項不是集中制的優點？",
+      "options": {
+        "A": "資源與服務集中",
+        "B": "避免重複購置、人力的浪費",
+        "C": "方便跨學科性和科際性研究需要",
+        "D": "增加組織間的協調的困難度"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-6",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 6,
+      "question": "全國學術資訊資源共享聯盟(CONCERT)主要提供的服務是",
+      "options": {
+        "A": "館際互借",
+        "B": "引進電子資料庫",
+        "C": "文獻傳遞",
+        "D": "合作編目"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-7",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 7,
+      "question": "我國「圖書館法」中所謂的中央主管機關是指下列何者？",
+      "options": {
+        "A": "研考會",
+        "B": "教育部",
+        "C": "行政院文化建設委員會",
+        "D": "國家圖書館"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-8",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 8,
+      "question": "下列有關圖書館法規定，何者是錯誤的？",
+      "options": {
+        "A": "為完整保存國家圖書文獻，國家圖書館為全國出版品之法定送存機關",
+        "B": "出版人違反第十五條第二項規定，經國家圖書館通知限期寄送，屆期仍不寄送者，由國家圖書館處該出版品定價十倍之罰鍰",
+        "C": "政府機關（構）、學校、個人、法人、團體或出版機構發行第二條第二項之出版品，出版人應於發行時須送存國家圖書館二份",
+        "D": "於90年1月17日發布"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-9",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 9,
+      "question": "有關無線射頻識別 RFID (Radio Frequence Identification)，下列哪一項是錯誤的？",
+      "options": {
+        "A": "RFID 需將掃瞄器準確接觸圖書條碼，逐筆進行掃瞄",
+        "B": "可用來取代傳統條碼系統",
+        "C": "RFID 可用於圖書流通、盤點和防竊",
+        "D": "RFID 可提供資料讀寫"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-10",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 10,
+      "question": "有關館藏發展，下列何項敘述是正確的？",
+      "options": {
+        "A": "圖書館積極邀請讀者選擇圖書，也有可能衍生少數讀者推薦而造成館藏偏頗問題",
+        "B": "圖書館只要做好選書工作，達到「每本書皆有其讀者」的地步，就不需要作館藏淘汰了",
+        "C": "專門圖書館由於特定的服務對象，選書時不須特別依賴讀者的需求及意見",
+        "D": "受贈圖書應全部列入館藏，並去函致謝"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-11",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 11,
+      "question": "下列有關灰色文獻的敘述，下列各項何者錯誤？",
+      "options": {
+        "A": "灰色文獻出版消息難以取得，不易徵集",
+        "B": "技術規範與標準、非商業性翻譯、技術與商業文件等都屬於灰色文獻",
+        "C": "灰色文獻可以透過特殊管道獲得，但完全是免費的",
+        "D": "具發行數量有限、有特殊限定的使用者、書目資料不完整等特色"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-12",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 12,
+      "question": "有關一次文獻、二次文獻之敘述，何者不正確？",
+      "options": {
+        "A": "一次文獻新穎度最高、內容較深入、完整",
+        "B": "博碩士論文及專利都屬於一次文獻",
+        "C": "百科全書屬於二次文獻",
+        "D": "期刊所發表文章多半為二手資料，內容公正客觀，為二次文獻"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-13",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 13,
+      "question": "我國立法院國會圖書館是屬於下列哪一類圖書館？",
+      "options": {
+        "A": "國家圖書館",
+        "B": "公共圖書館",
+        "C": "專門圖書館",
+        "D": "學校圖書館"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-14",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 14,
+      "question": "有關一人圖書館員所面臨的問題，下列哪一項敘述是錯誤的？",
+      "options": {
+        "A": "館員自由度很高，工作很輕鬆",
+        "B": "工作普遍缺乏人力支援",
+        "C": "經常需要同時處理多項業務",
+        "D": "工作中缺乏討論的對象"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-15",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 15,
+      "question": "有關下列各項敘述何者是正確的？",
+      "options": {
+        "A": "館員拒絕提供讀者使用資料的訊息給第三者是基於維護智慧財產權",
+        "B": "圖書館將購買有版權的音樂 CD 轉錄成 MP3，分送給同仁欣賞只要不公開播放不算違法",
+        "C": "圖書館已合法訂購的電子全文資料庫應鼓勵讀者連續大量下載以充分利用",
+        "D": "圖書館重製碩博士論文之摘要並不違反著作權法之行為"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-16",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 16,
+      "question": "個人使用未經授權之電腦軟體，可能觸犯以下何者？",
+      "options": {
+        "A": "著作權法",
+        "B": "電腦處理個人資料保護法",
+        "C": "公平交易法",
+        "D": "政府資訊公開法"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-17",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 17,
+      "question": "根據我國著作權法規定，圖書館應讀者個人研究要求，重製已公開發表著作之一部份、或期刊之單篇著作，每人應以幾份為限？",
+      "options": {
+        "A": "四份",
+        "B": "二份",
+        "C": "一份",
+        "D": "非經著作人同意不可任意重製"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-18",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 18,
+      "question": "下列哪一項為著作權保護的出版品？",
+      "options": {
+        "A": "單純為傳達事實之新聞報導所作成之語文著作",
+        "B": "依法令舉行之各類考試試題及其備用試題",
+        "C": "公務員於職務上草擬之講稿、新聞稿",
+        "D": "經濟部智慧財產局所發行之「智慧財產權統計季刊」"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-19",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 19,
+      "question": "下列有關電腦病毒的敘述何者是正確的？",
+      "options": {
+        "A": "購買防毒軟體即可刪除所有病毒",
+        "B": "只要不儲存網頁資料即不會感染病毒",
+        "C": "用即時通訊軟體如 skype、MSN 聊天是不會中電腦病毒的",
+        "D": "電腦病毒對檔案及硬體皆可能造成損害"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-20",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 20,
+      "question": "有關社交工程的敘述，下列哪一項錯誤？",
+      "options": {
+        "A": "為避免感染病毒，應關閉電子郵件預覽窗格功能",
+        "B": "駭客寄夾帶程式上有弱點的附件檔如.exe檔，藉以啟動安裝木馬程式，但一般來說若是附件檔為.pdf就沒有問題，可以放心打開",
+        "C": "電子郵件社交工程的攻擊有假冒寄件者、寄送收件者感興趣的主旨與內文",
+        "D": "不開啟陌生人電子郵件是好的資安習慣"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-21",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 21,
+      "question": "依據讀者的借閱行為的相似性來推薦圖書，主要是利用哪一種技術？",
+      "options": {
+        "A": "資訊檢索",
+        "B": "自動分類",
+        "C": "資料探勘",
+        "D": "資訊架構"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-22",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 22,
+      "question": "下列何項數位物件編碼系統亦強調出版社電子商務及電子版權之管理機制？",
+      "options": {
+        "A": "DOI",
+        "B": "ISO 2907",
+        "C": "URN",
+        "D": "LCC"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-23",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列對 Fuzzy Search 的敘述，哪一項是正確的？",
+      "options": {
+        "A": "檢索結果相當精確",
+        "B": "沒有容錯能力",
+        "C": "能夠檢索近似字串",
+        "D": "目前國內的 OPAC (Online Public Access Catalog) 都具備此功能"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-24",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 24,
+      "question": "下列哪一種檢索敘述運用的是「切截」功能？",
+      "options": {
+        "A": "“virtual server”",
+        "B": "virtual or server",
+        "C": "comput?",
+        "D": "power adj plant"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-25",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 25,
+      "question": "資訊檢索時使用布林邏輯哪一種算元，可增加檢索結果筆數？",
+      "options": {
+        "A": "AND",
+        "B": "OR",
+        "C": "NOT",
+        "D": "NEAR"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-26",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 26,
+      "question": "下列有關數位版權管理 (DRM) 的敘述，何者錯誤？",
+      "options": {
+        "A": "涵蓋記錄、識別、交易、保護及各種版權利用情況的監測與追蹤",
+        "B": "其目的在保障版權所有者的權益",
+        "C": "透過認證的合法使用者，才可使用其數位內容",
+        "D": "通常若是內容與閱讀器整合在同一個檔案，其檔案本身及內容均可被複製散布"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-27",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 27,
+      "question": "下列哪一項有關 OpenURL 的敘述是正確的？",
+      "options": {
+        "A": "一種資訊資源與查詢服務之通信協定標準",
+        "B": "一種自動索引法技術",
+        "C": "一種資訊檢索服務協定",
+        "D": "一種標示語言"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-28",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 28,
+      "question": "一種分散式查詢系統，其目的是訂定客戶端與伺服器端資料庫查詢檢索服務及語法之標準，是為",
+      "options": {
+        "A": "OAI 協定",
+        "B": "LSP",
+        "C": "OpenURL",
+        "D": "Z39.50"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-29",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 29,
+      "question": "以下哪一項是檢索圖書資訊學文獻的資料庫系統？",
+      "options": {
+        "A": "ABI/INFORM",
+        "B": "COMPENDEX",
+        "C": "LISA",
+        "D": "INSPEC"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-30",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 30,
+      "question": "下列有關 XML 的描述，何者正確？",
+      "options": {
+        "A": "是一種以 SGML 為基礎的程式語言",
+        "B": "是 HTML 的簡化版",
+        "C": "是一種用來描述網頁呈現效果的語言",
+        "D": "是一種描述性標誌語言"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-31",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 31,
+      "question": "有關 RSS (Really Simple Syndication) 的敘述，下列何者是正確的？",
+      "options": {
+        "A": "訂閱 RSS 時需留下個人基本資料，如地址等",
+        "B": "用來分發與匯集網頁內容的 XML 格式",
+        "C": "使用者訂閱後仍須主動到各網站搜尋和閱讀資訊",
+        "D": "目前國內圖書館還沒有運用 RSS 提供讀者服務的實例"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-32",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 32,
+      "question": "欲檢索 2005年以後發表的「風力發電」之期刊論文,可從檢索出所有「風力發電」之期刊論文後,再以何種方式檢索?",
+      "options": {
+        "A": "全文檢索",
+        "B": "欄位檢索",
+        "C": "限制檢索",
+        "D": "布林邏輯檢索"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-33",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 33,
+      "question": "國家圖書館NBINet提供書目資訊交換,主要是合作館皆採用哪一種標準?",
+      "options": {
+        "A": "SGML",
+        "B": "MARC",
+        "C": "XML",
+        "D": "Dublin Core"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-34",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 34,
+      "question": "何謂「停用字」(stop word)?下列敘述何者正確?",
+      "options": {
+        "A": "資訊檢索時,系統不使用的字",
+        "B": "索引典採用的控制詞彙",
+        "C": "索引典製作中,具檢索價值之詞彙",
+        "D": "決定斷詞使用的詞彙"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-35",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 35,
+      "question": "詮釋資料 Metadata已發展多種,請問下列何者非詮釋資料?",
+      "options": {
+        "A": "Dublin Core",
+        "B": "DOI",
+        "C": "US MARC",
+        "D": "EAD"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-36",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 36,
+      "question": "A機構典藏共享平台可有效地統整學術研究成果,請指出下列哪一項不是機構共享平台?",
+      "options": {
+        "A": "Irn",
+        "B": "OAIster",
+        "C": "JAIRO",
+        "D": "TAIR"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-37",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 37,
+      "question": "下列哪一項不是機構典藏所使用的軟體系統?",
+      "options": {
+        "A": "Bepress",
+        "B": "Dspace",
+        "C": "E-prints",
+        "D": "OpenDOAR"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-38",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 38,
+      "question": "圖書館員進行電子資料庫檢索時,有四個步驟:①建立檢索策略②選擇資料庫③檢索晤談④進行檢索其順利下列那一項答案是正確的?",
+      "options": {
+        "A": "③②①④",
+        "B": "①②③④",
+        "C": "②③①④",
+        "D": "④③②①"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-39",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 39,
+      "question": "有關「控制詞彙索引法」的敘述何者是正確的?",
+      "options": {
+        "A": "索引人員的訓練較自然語言索引容易",
+        "B": "可以表達較新穎的概念",
+        "C": "不須定期更新索引的工具",
+        "D": "索引的一致性高"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-40",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 40,
+      "question": "下列那一種資料組織方法具有提供資料分析,表現知識內容等功能?",
+      "options": {
+        "A": "摘要",
+        "B": "索引",
+        "C": "分類",
+        "D": "編目"
+      },
+      "answer": "A",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-it-100-41",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 41,
+      "question": "印度學者阮甘納桑(Ranganathan, Shiyali Ramamrita)提出的「圖書館學五律」,迄今仍受各圖書館界奉為經營管理的圭臬。請問下列哪一項不是?",
+      "options": {
+        "A": "圖書館是一個成長的有機體",
+        "B": "圖書館為全人類服務",
+        "C": "圖書為使用而生",
+        "D": "節省讀者的時間"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-42",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 42,
+      "question": "我國著作權法所規範的「合理使用」(Fair Use)指的是?",
+      "options": {
+        "A": "使用著作權法所保護之資料,必須徵求著作權人的同意,且付給合理的版權費",
+        "B": "凡使用著作權法所保護之資料,必須徵求著作權人的同意才可使用",
+        "C": "允許他人在一定的規範下合理使用該著作,而不需徵求著作權人的同意",
+        "D": "使用著作權法所保護之資料,若未事先徵求著作權人的同意,事後需繳交雙倍版權費"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-43",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 43,
+      "question": "有關「全國文獻傳遞服務系統」的描述,下列敘述何者正確?",
+      "options": {
+        "A": "提供查詢國內外400餘所圖書館之館藏",
+        "B": "該系統限制「中華圖書資訊館際合作協會」會員使用",
+        "C": "無須考慮著作權的問題",
+        "D": "可線上提出申請資料複印及圖書借閱等服務,且可選擇傳遞的方式"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-44",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 44,
+      "question": "下列何者是正確的敍述?",
+      "options": {
+        "A": "圖書館館藏使用情形,符合80/20原則,是指大約20%的使用率常集中在80%的館藏",
+        "B": "Books in Print其類型為圖書館的目錄",
+        "C": "Reserved book指的是「預約書」",
+        "D": "SDI 是一種新知服務"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-45",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 45,
+      "question": "下列有關專門圖書館特色的敘述，何者是不適當的？",
+      "options": {
+        "A": "指由政府機關（構）、個人、法人或團體所設立",
+        "B": "專門圖書館的讀者多為其母機構的工作人員，其讀者較少且不固定",
+        "C": "蒐集並提供特定主題或類型圖書資訊",
+        "D": "專門圖書館的讀者所需資料比較專深"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-46",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 46,
+      "question": "下列有關圖書分類編目的敘述，哪一項是錯誤的？",
+      "options": {
+        "A": "一本書的索書號如為 494.2/8386，其中 8386 代表「著者號」",
+        "B": "主要著錄來源所記載與正題名不同語文之其他題名是指並列題名",
+        "C": "圖書館所用的 LCC 分類法，其大類「S」代表科學類",
+        "D": "當書有不同的版本及題名，依編目規則擇定一個一致的題名稱為劃一題名"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-47",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 47,
+      "question": "下列有關政府出版品的敘述，何者錯誤？",
+      "options": {
+        "A": "政府出版品係指以政府機關及其所屬機構、學校之經費或名義出版或發行之圖書、連續性出版品、電子出版品及其他非書資料",
+        "B": "依據「政府出版品管理辦法」辦理",
+        "C": "可向國家圖書館申請 GPN 編號",
+        "D": "管理政府出版品的中央政府機構是行政院新聞局"
+      },
+      "answer": "C",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-it-100-48",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 48,
+      "question": "下列有關公務出國報告的敘述，何者錯誤？",
+      "options": {
+        "A": "公務出國報告資訊網係政府各機關及學校因公出國人員返國後依規定所繳交的報告書",
+        "B": "已建線上查詢系統公開提供民眾查詢",
+        "C": "由國家圖書館負責建置維護",
+        "D": "於返國後 3 個月內提出出國報告"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-100-49",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 49,
+      "question": "關於「個人資料保護法」的敘述，下列何者錯誤？",
+      "options": {
+        "A": "個人資料之蒐集、處理或利用，應尊重當事人權益....不得逾越特定目的的必要範圍",
+        "B": "圖書館蒐集保有個人資料檔案，應指定專人辦理維護事項",
+        "C": "個人資料保護法共分六章 56 條",
+        "D": "「個人資料保護法」及「個人資料保護法施行細則」已於 99 年公布"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-1",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 1,
+      "question": "二進位數的「10110110」和「10001000」作 XOR 運算後，其結果以十六進位表示為何？",
+      "options": {
+        "A": "BE",
+        "B": "3E",
+        "C": "B6",
+        "D": "30"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-2",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 2,
+      "question": "(10010.11)₂轉換為以 10 為基底的數字系統為下列何者？",
+      "options": {
+        "A": "(18.11)₁₀",
+        "B": "(36.75)₁₀",
+        "C": "(18.75)₁₀",
+        "D": "(36.11)₁₀"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-3",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 3,
+      "question": "(1100100)₂的 2's 補數(Complement)為下列何者？",
+      "options": {
+        "A": "0011100",
+        "B": "0000100",
+        "C": "0001100",
+        "D": "0111100"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-4",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 4,
+      "question": "組合電路是由眾多邏輯閘組合而成，它的輸出是直接由輸入訊號決定，並可用布林函數來表示，如果 有 n 個輸入變數，輸出變數最多有幾種組合？",
+      "options": {
+        "A": "n",
+        "B": "n²",
+        "C": "2ⁿ",
+        "D": "n!"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-5",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 5,
+      "question": "積體電路(IC)上的晶體密度從 IC 發明以來，每兩年增加一倍。這後來修正為每 18 個月，資料的儲存容量或計算速度就增加一倍。吾人稱之為下列何者？",
+      "options": {
+        "A": "狄摩根定理(Demorgan's theorem)",
+        "B": "摩爾定律(Moore's Law)",
+        "C": "螺旋型模型(Spiral)",
+        "D": "費馬定理(Fermat Theory)"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-6",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 6,
+      "question": "下列何者的位元組順序(byte order)並非是 Big-endian？",
+      "options": {
+        "A": "IBM370 系列",
+        "B": "Sun SPARC",
+        "C": "Intel 80x86",
+        "D": "RS6000"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-7",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 7,
+      "question": "下列何者不是電腦記憶體採用分層架構(memory hierarchy)的原因？",
+      "options": {
+        "A": "利用程式執行時之時間區域性(temporal locality)",
+        "B": "提升效能價格比",
+        "C": "利用程式執行時之空間區域性(spatial locality)",
+        "D": "容易管理"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-8",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 8,
+      "question": "記憶體空間有限，在置換分頁到磁碟機時，因寫入磁碟機(disk)時間較久，一般採用哪種寫入處理方式？",
+      "options": {
+        "A": "一次寫回(Write Through)",
+        "B": "分批寫回(Write Back)",
+        "C": "不處理",
+        "D": "跳躍寫回(Jump Back)"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-9",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 9,
+      "question": "CPU 運作機器週期(Machine Cycle)中，不包含下列何者步驟？",
+      "options": {
+        "A": "解碼(Decode)",
+        "B": "擷取(Fetch)",
+        "C": "執行(Execute)",
+        "D": "編碼(Encode)"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-10",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 10,
+      "question": "依照磁碟的結構,各種單元(磁叢Cluster、磁軌 Track、磁區 Sector、磁柱 Cylinder)所佔空間大小,由大到小依序為",
+      "options": {
+        "A": "磁柱>磁叢>磁區>磁軌",
+        "B": "磁柱>磁軌>磁叢>磁區",
+        "C": "磁叢>磁柱>磁軌>磁區",
+        "D": "磁軌>磁柱>磁區>磁叢"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-11",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 11,
+      "question": "在1位元加法器(1-bit adder)中如右【圖1】,a、b為輸入值,CarryIn 為由次低位元來的進位,CarryOut 表示準備進到較高位元的進位,Sum表示a、b以及 CarryIn 加總後結果。當a=1、b=0、CarryIn=1,下列何者正確?",
+      "options": {
+        "A": "Sum=1, CarryOut = 0",
+        "B": "Sum=1, CarryOut = 1",
+        "C": "Sum=0, CarryOut = 1",
+        "D": "Sum=0, CarryOut =0"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-12",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 12,
+      "question": "對於RISC和CISC指令架構之描述,何者為非?",
+      "options": {
+        "A": "RISC提供的定址模式較少",
+        "B": "CISC的中央控制單元控制電路較複雜",
+        "C": "管路技術 pipeline 執行較佳的是CISC",
+        "D": "RISC可供利用的通用暫存器數目較多"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-13",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 13,
+      "question": "下列何者不是CPU行程(process)的狀態(state)?",
+      "options": {
+        "A": "waiting",
+        "B": "ready",
+        "C": "open",
+        "D": "running"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-14",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 14,
+      "question": "下列哪一種行程排程演算法常會發生護送效應(Convoy effect)現象?",
+      "options": {
+        "A": "先到先服務法(First-Come First-Served)",
+        "B": "輪流法(Round Robin)",
+        "C": "最短優先法(Shortest Job First)",
+        "D": "優先權排班法(Priority Scheduling)"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-15",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 15,
+      "question": "在Unix及Linux作業系統中,存取權利之十進位表示法值為6時,表示其有下列何種權限?",
+      "options": {
+        "A": "寫、執行",
+        "B": "讀、執行",
+        "C": "讀、寫",
+        "D": "執行"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-16",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 16,
+      "question": "下列何者不是作業系統發生死結的必要條件?",
+      "options": {
+        "A": "互斥(mutual exclusion)",
+        "B": "佔用並等候(hold and wait)",
+        "C": "強奪(preemption)",
+        "D": "循環式等候(circular wait)"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-17",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 17,
+      "question": "1+2-3*4/5*6/7-8/9的後序表示法為何?(先乘除後加減)",
+      "options": {
+        "A": "+12-34*5/6*7/8-9/",
+        "B": "--+12*3/4*5/67/89",
+        "C": "12+34567/*/*-89/-",
+        "D": "12+3-4*5/6*7/8-9/"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-18",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 18,
+      "question": "用雜湊法(hash method)將「108、193、315、16、202、579、470」七個數字存放在(0), (1), (2), (3), (4), (5), (6)的七個位置。請問在(3)的位置裡,為何數字?(以除法fo(x)=x%7為Hash Function)",
+      "options": {
+        "A": "315",
+        "B": "16",
+        "C": "579",
+        "D": "108"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-19",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 19,
+      "question": "將高階程式語言翻譯成組合語言程式之系統程式稱為?",
+      "options": {
+        "A": "Assembler",
+        "B": "Compiler",
+        "C": "Linker",
+        "D": "Loader"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-20",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 20,
+      "question": "下列何者並非物件導向(Object-Oriented)程式語言?",
+      "options": {
+        "A": "SmallTalk",
+        "B": "C++",
+        "C": "PASCAL",
+        "D": "Java"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-21",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 21,
+      "question": "以下何種網路拓樸(Topology)其可靠度最高?",
+      "options": {
+        "A": "星型(star)",
+        "B": "匯流排(Bus)",
+        "C": "環狀(Ring)",
+        "D": "網狀(Mesh)"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-22",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 22,
+      "question": "以下網路設備何者主要負責OSI七層網路通訊協定中,網路層的運作?",
+      "options": {
+        "A": "路由器(Router)",
+        "B": "集線器(Hub)",
+        "C": "增益器(repeater)",
+        "D": "橋接器(Bridge)"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-23",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列所述有關有線網路和無線網路的比較,何者不正確?",
+      "options": {
+        "A": "無線網路機動性較高",
+        "B": "有線網路安全性較高",
+        "C": "有線網路不受地形影響通訊品質",
+        "D": "無線網路傳輸速度較快"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-24",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 24,
+      "question": "下列所述有關第四代行動通訊(4G)WiMAX和LTE的比較,何者不正確?",
+      "options": {
+        "A": "WiMAX使用的是全新IEEE技術標準,向下相容較難",
+        "B": "LTE只需在現有3G系統基礎建設上,增加器材即可使用",
+        "C": "傳統電訊商較偏好選擇使用 WiMAX技術",
+        "D": "LTE使用3GPP標準,向下兼容較無問題"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-25",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 25,
+      "question": "IPv6即第六版的IP規範(Internet Protocol version 6),IPv6位址共有幾位元?",
+      "options": {
+        "A": "64",
+        "B": "128",
+        "C": "32",
+        "D": "256"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-26",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 26,
+      "question": "IPv6和 IPv4存在不相通的問題,下列何者並非解決的主流技術?",
+      "options": {
+        "A": "IPv6/IPv4雙協定",
+        "B": "IPv6/IPv4 協定轉換(Translation)",
+        "C": "虛擬網路橋接(VLAN Bridge)",
+        "D": "IPv6 隧道服務(IPv6 Tunneling)"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-27",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 27,
+      "question": "IP 位址 140.175.1.64為何種等級的位址,若其子網路遮罩為該等級預設值,則其網段位址為何?",
+      "options": {
+        "A": "A class,網段位址140.175.0.0",
+        "B": "B class,網段位址140.0.0.0",
+        "C": "C class,網段位址140.175.1.0",
+        "D": "B class,網段位址140.175.0.0"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-28",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 28,
+      "question": "承前題,如果要將所在的網段分為4個相同大小的子網路,則子網路遮罩要設為何者?",
+      "options": {
+        "A": "255.255.192.0",
+        "B": "255.255.128.0",
+        "C": "255.255.255.0",
+        "D": "255.255.224.0"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-29",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 29,
+      "question": "下列有關網路存取控制方法及協定之說明,何者不正確?",
+      "options": {
+        "A": "高速網路常使用 CSMA/CD協定,避免CSMA/CA的傳輸延遲",
+        "B": "Token Ring協定係使用分散控制(Distributed Control)方法",
+        "C": "較低速的無線網路較常使用CSMA/CA,避免碰撞偵測困難",
+        "D": "CSMA/CD 協定是從CSMA/CA協定改良而來"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-30",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 30,
+      "question": "TCP 是採用三向握手式連絡法(Three-way handshake)來實現「建立連線」管理。下列何者不是三向握手式建立連線的訊號?",
+      "options": {
+        "A": "SYN",
+        "B": "SYN & ACK",
+        "C": "PSH",
+        "D": "ACK"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-31",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 31,
+      "question": "下列有關網路服務及常用的傳輸協定及埠號(Port),何者不正確?",
+      "options": {
+        "A": "ftp服務,TCP,port 21 FTP 資料傳輸,Port 20 FTP 控制",
+        "B": "telnet 服務,TCP,Port 23",
+        "C": "http服務,TCP,Port 80",
+        "D": "domain 服務,UDP,Port 53"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-32",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 32,
+      "question": "下列何者可以自動設定使用者電腦的IP Address?",
+      "options": {
+        "A": "RIP",
+        "B": "OSPF",
+        "C": "DHCP",
+        "D": "IPX/SPX"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-33",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 33,
+      "question": "負責將IP位址轉換成硬體MAC位址的是下列何者?",
+      "options": {
+        "A": "DHCP(Dynamic Host Configuration Protocol)",
+        "B": "ARP(Address Resolution Protocol)",
+        "C": "PPP(Point to Point Protocol)",
+        "D": "DNS(Domain Name Server)"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-34",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 34,
+      "question": "VPN(Virtual Private Network)虛擬私人網路可在公眾網路 Internet上建立私有網路通道,具有下列各項特點,何者不正確?",
+      "options": {
+        "A": "保密",
+        "B": "認證",
+        "C": "透過IPSec安全協定達成(屬TCP/UDP協定層次)",
+        "D": "保持封包傳送之完整性"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-35",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 35,
+      "question": "Cookies 是一種協助網路使用者更方便瀏覽網站內容的工具,下列何者不正確?",
+      "options": {
+        "A": "Cookies 是使用者透過瀏覽器存放於網站伺服器中的一小段資訊",
+        "B": "Cookies 可儲存進入某特定網站的密碼,就不必每次瀏覽網站要重複輸入密碼",
+        "C": "不良的Cookies存檔,可能造成個人資安的危害",
+        "D": "透過 Cookies可以追蹤使用者曾經到訪過的網站"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-36",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 36,
+      "question": "下列關於IPv6網路通訊協定的描述,何者正確?",
+      "options": {
+        "A": "升級IPv6只和網路設備汰換有關,網路程式不用修改",
+        "B": "DNS 對 IPv6位址支援可以設定AAA紀錄之功能",
+        "C": "IPv6 通訊協定內建SSL/TLS加密機制,強化網路安全",
+        "D": "IPv6具有 Qos(Quality of Service)機制強化,有效支援即時傳輸"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-37",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 37,
+      "question": "若要使用非對稱金鑰加密法(Asymmetric Key Encryption)送發一封只有收信者能解密的信,則發信者需用下列何者加密?",
+      "options": {
+        "A": "收信者的私密金鑰",
+        "B": "發信者的私密金鑰",
+        "C": "收信者的公開金鑰",
+        "D": "發信者的公開金鑰"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-38",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 38,
+      "question": "SET(Secure Electronic Transaction)是一個用來保護持卡人在網際網路消費的開放式安全電子交易規格。下列何者不是SET所主要提供的功能?",
+      "options": {
+        "A": "輸入資料的私密性",
+        "B": "訊息傳送的即時性",
+        "C": "交易雙方的真實性",
+        "D": "訊息傳送的完整性"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-39",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 39,
+      "question": "下列對於常見的網路攻擊種類之描述,何者不正確?",
+      "options": {
+        "A": "阻斷攻擊(Denial of Service)是指攻擊者會導致受攻擊的一方無法正常提供網路服務或當機",
+        "B": "網路監聽(sniffing)是比暴力入侵法(brute force attacks)更有效率的入侵法,利用網路實體層的廣播特性,監聽他人資料。",
+        "C": "主機掃瞄(Host Scanning)是入侵者發動攻擊後的工作,常常在攻擊結束前執行",
+        "D": "主機假冒(Spoofing)是攻擊者假冒合法的主機,以欺騙受攻擊的一方,取得資源或權限"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-40",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 40,
+      "question": "下列何者不是防火牆(Firewall)的主要功能?",
+      "options": {
+        "A": "過濾進出的封包",
+        "B": "網路位置轉譯(NAT)",
+        "C": "防止外部對內網的攻擊",
+        "D": "核發電子簽章"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-41",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 41,
+      "question": "利用布林代數定理簡化下列的布林函數,結果為何者?W=XYZ+XY'Z + XYZ' + XY'Z'",
+      "options": {
+        "A": "Y",
+        "B": "X",
+        "C": "Z",
+        "D": "X'"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-42",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 42,
+      "question": "如下【圖2】布林函數F的結果為下列何者?",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "A+B",
+        "D": "A'+B'"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-43",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 43,
+      "question": "右【圖3】為電腦硬軟體示意圖。如B為作業系統,下列何者最有可能為C?",
+      "options": {
+        "A": "SAP R3 ERP",
+        "B": "Internet Explorer 瀏覽器",
+        "C": "Hard Drive 驅動程式",
+        "D": "趨勢防毒軟體."
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-44",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 44,
+      "question": "電腦的電源在關機後,下列何種記憶體之內容不會消失?",
+      "options": {
+        "A": "主要記憶體(DRAM)",
+        "B": "快取記憶體(SRAM)",
+        "C": "BIOS(ROM)",
+        "D": "雙倍速記憶體(DDR RAM)"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-45",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 45,
+      "question": "磁碟陣列(RAID)具有讀寫效率高,具容錯能力,資料可靠度高,成本低等特點。下列哪一種空間利用率最差。",
+      "options": {
+        "A": "RAID1",
+        "B": "RAID5",
+        "C": "RAIDO",
+        "D": "RAID3"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-46",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 46,
+      "question": "有一程式設計師在某一系統中插入一段程式,只要他個人資料從員工人事資料檔案刪除,則該程式會將公司整個人事檔案破壞掉,這種電腦犯罪行為屬於:",
+      "options": {
+        "A": "資料調包(Data Diddling)",
+        "B": "分散式阻斷攻擊(DDOS)",
+        "C": "間諜軟體(spyware)",
+        "D": "邏輯炸彈(Logic Bomb)"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-47",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 47,
+      "question": "作業系統必須負責系統保護,防止使用者不當使用電腦,導致電腦發生錯誤。下列何者不是保護的方法?",
+      "options": {
+        "A": "系統支援双模式運作(Dual-mode operation)",
+        "B": "I/O Commands 皆設為非特權指令",
+        "C": "利用暫存器保護記憶體空間不被覆蓋",
+        "D": "利用計時器來保護CPU使用權"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-48",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 48,
+      "question": "當作業系統CPU行程如果沒有配置足夠的實體記憶體欄位(frames)時,將產生極高的分頁錯誤率(page fault rate),這種高頻率的分頁置出/置入(SWAP-IN/SWAP-OUT)稱之為?",
+      "options": {
+        "A": "內部碎裂",
+        "B": "外部碎裂",
+        "C": "輾轉現象(Thrashing)",
+        "D": "動態繫結(Dynamic Linking)"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-49",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 49,
+      "question": "陣列的資料結構經常儲存大量資料,如傳遞全部資料將耗時可觀,為節省時間,幾乎大部分的程式語言都用何者方式,來傳送陣列參數(array parameter)?",
+      "options": {
+        "A": "呼值(Call by Value)",
+        "B": "呼址(Call by Address)",
+        "C": "多型(Polymorphism)",
+        "D": "事件(Event)"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-101-50",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 50,
+      "question": "下列為何種排序法的程式碼?\nVoid Func(int K[], int n){\nint flag;\nfor (i=1; i<n;i++){\nint flag=False;\nfor(j=1;j<=n-i;j++)\nif(k[j+1]<k[j]){\nSWAP(k[j],k[j+1]);\nflag=True;\n}\nif(!flag) exit(1);\n}\n}",
+      "options": {
+        "A": "插入排序(Insertion sort)",
+        "B": "選擇排序(Selection Sort)",
+        "C": "氣泡排序(Bubble Sort)",
+        "D": "快速排序(Quick Sort)"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-1",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 1,
+      "question": "現在的電腦將程式及資料同時儲存在記憶體內，此觀念係遵循下列哪一種模型或機器概念？",
+      "options": {
+        "A": "Turing Machine",
+        "B": "Von Neumann",
+        "C": "Mark I",
+        "D": "ENIAC"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-2",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 2,
+      "question": "將八進位數(13.7)₈轉換為十六進位數，則下列何者為其正確的十六進位數？",
+      "options": {
+        "A": "(A.D)₁₆",
+        "B": "(A.E)₁₆",
+        "C": "(B.D)₁₆",
+        "D": "(B.E)₁₆"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-3",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 3,
+      "question": "下列數字系統(number system)的表示方法中何者有誤？",
+      "options": {
+        "A": "(0110.111)₂",
+        "B": "(453.77)₈",
+        "C": "(747.59)₈",
+        "D": "(53BD.11)₁₆"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-4",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 4,
+      "question": "以一個配置 4 位元(4-bit)有號 2 補數表示法而言，5 加 5 會產生下列哪一個結果？",
+      "options": {
+        "A": "-6",
+        "B": "-5",
+        "C": "10",
+        "D": "-10"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-5",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 5,
+      "question": "一部電腦有 64 MB(百萬位元組)記憶體，若每一字組(word)是 4 個位元組(byte)，請問需要多少個位元以便定址記憶體中每一個字組？",
+      "options": {
+        "A": "8",
+        "B": "16",
+        "C": "24",
+        "D": "32"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-6",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 6,
+      "question": "在 CPU 與輸入/輸出設備溝通的方法中，下列哪一種方法會造成 CPU 忙碌等待的情形？",
+      "options": {
+        "A": "輪詢",
+        "B": "中斷式",
+        "C": "直接記憶體(DMA)",
+        "D": "隔離式"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-7",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 7,
+      "question": "下列哪一種程式語言支援記憶體垃圾收集(garbage collection)的功能？",
+      "options": {
+        "A": "C",
+        "B": "COBOL",
+        "C": "C#",
+        "D": "PASCAL"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-8",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 8,
+      "question": "下列何者不是 UNIX 作業系統使用的指令介面(shell)？",
+      "options": {
+        "A": "Bourne shell",
+        "B": "C shell",
+        "C": "Korn shell",
+        "D": "Wizard shell"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-9",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 9,
+      "question": "處於下列哪一種狀態的行程，可以移到就緒、等待、終止等 3 種狀態中的任意 1 種狀態？",
+      "options": {
+        "A": "保留",
+        "B": "執行",
+        "C": "建立",
+        "D": "同步"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-10",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 10,
+      "question": "使用 SSL(Secure Sockets Layer)的方式與網站進行安全性連線時，使用下列哪一項資訊進行網站身分識別？",
+      "options": {
+        "A": "數位憑證",
+        "B": "電子郵件帳號",
+        "C": "電腦名稱",
+        "D": "IP 位址"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-11",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 11,
+      "question": "下列哪一種程式語言是屬於物件導向程式語言？",
+      "options": {
+        "A": "LISP",
+        "B": "PROLOG",
+        "C": "Scheme",
+        "D": "Smalltalk"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-12",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 12,
+      "question": "下列何者屬於動態網頁的伺服器端技術？",
+      "options": {
+        "A": "JSP",
+        "B": "Java Applet",
+        "C": "JavaScript",
+        "D": "Flash"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-13",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 13,
+      "question": "乃指未經使用者同意的情況下，進行廣告、收集私人資訊或修改電腦設定的網路攻擊手法，屬於下列哪一種網路攻擊？",
+      "options": {
+        "A": "服務阻斷",
+        "B": "邏輯炸彈",
+        "C": "間諜軟體",
+        "D": "主機掃描"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-14",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 14,
+      "question": "下列哪一種雜湊法不會產生碰撞的情況？",
+      "options": {
+        "A": "直接(direct)",
+        "B": "取餘數除法(division remainder)",
+        "C": "模數除法(modulo division)",
+        "D": "數字抽取(digit extraction)"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-15",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 15,
+      "question": "在關聯式資料庫關聯運算中，下列哪一種屬於一元運算(被應用於1個單獨的關聯)？",
+      "options": {
+        "A": "差異(difference)",
+        "B": "交集(intersection)",
+        "C": "映射(project)",
+        "D": "聯集(union)"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-16",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 16,
+      "question": "下列排序法中，何者具有最小的平均時間複雜度？",
+      "options": {
+        "A": "插入",
+        "B": "選擇",
+        "C": "氣泡",
+        "D": "基數(radix)"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-17",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 17,
+      "question": "二元樹拜訪順序中，根節點一定要在子樹之前拜訪的是下列哪一種拜訪法？",
+      "options": {
+        "A": "隨意法",
+        "B": "前序法",
+        "C": "中序法",
+        "D": "後序法"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-18",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 18,
+      "question": "下列哪一種攻擊手法主要目的是威脅可用性？",
+      "options": {
+        "A": "欺騙",
+        "B": "否認",
+        "C": "修改",
+        "D": "服務阻斷"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-19",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 19,
+      "question": "智慧型手機及個人數位助理(PDA)使用的作業系統，屬於下列哪一種作業系統？",
+      "options": {
+        "A": "即時性",
+        "B": "分散式",
+        "C": "手持式",
+        "D": "分時"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-20",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 20,
+      "question": "下列何者是使用電容的電壓來儲存資料的記憶體？",
+      "options": {
+        "A": "DRAM",
+        "B": "ROM",
+        "C": "SRAM",
+        "D": "快閃(flash)記憶體"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-21",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 21,
+      "question": "下列哪一種網路設備主要是用來克服訊號衰減導致網路長度上限的問題？",
+      "options": {
+        "A": "中繼器(repeater)",
+        "B": "橋接器(bridge)",
+        "C": "路由器(router)",
+        "D": "交換器(switch)"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-22",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 22,
+      "question": "下列何者屬於第四代行動通訊標準？",
+      "options": {
+        "A": "GSM",
+        "B": "WCDMA",
+        "C": "LTE",
+        "D": "GPRS"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-23",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列何者不是加強網路安全機密性的演算法？",
+      "options": {
+        "A": "DES",
+        "B": "RSA",
+        "C": "AES",
+        "D": "SHA-1"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-24",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 24,
+      "question": "下列導引式傳輸媒體中，何者具有「重量輕且訊號衰減率較低」的特性？",
+      "options": {
+        "A": "雙絞線",
+        "B": "同軸電纜",
+        "C": "光纖",
+        "D": "電力線"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-25",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 25,
+      "question": "下列何者不屬於TCP/IP協定組合(TCP/IP Protocol Suite)所定義的5層級範圍？",
+      "options": {
+        "A": "資料鏈結層",
+        "B": "表達層",
+        "C": "實體層",
+        "D": "應用層"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-26",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 26,
+      "question": "網路設備收到IP位址後，一般會先找出其等級再套用標準遮罩。請問當收到位址「(11000001 10000011 00011011 11111111)₂」時，以分級定址而言屬於哪一等級？",
+      "options": {
+        "A": "A級",
+        "B": "B級",
+        "C": "C級",
+        "D": "D級"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-27",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 27,
+      "question": "下列何種訊號傳輸模式的特性為「線路上的訊號可以做雙向傳送，但無法同時進行傳送」？",
+      "options": {
+        "A": "半雙工",
+        "B": "全雙工",
+        "C": "多工",
+        "D": "單工"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-28",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 28,
+      "question": "下列演算法何者不具備錯誤修正能力？",
+      "options": {
+        "A": "漢明碼",
+        "B": "二元迴旋碼",
+        "C": "低密度同位元檢查",
+        "D": "循環冗餘檢查"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-29",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 29,
+      "question": "下列何者屬於5層級TCP/IP協定組合之網路層的功能？",
+      "options": {
+        "A": "壓縮",
+        "B": "邏輯定址",
+        "C": "分段與重組",
+        "D": "連線控制"
+      },
+      "answer": "B",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-it-102-30",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 30,
+      "question": "下列哪一種伺服器提供網域名稱與IP位址的對照服務？",
+      "options": {
+        "A": "DNS",
+        "B": "DHCP",
+        "C": "SMTP",
+        "D": "NAT"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-31",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 31,
+      "question": "5 層級 TCP/IP 協定組合之網路層通訊協定中，下列哪一項可用來檢查並回報錯誤？",
+      "options": {
+        "A": "IP",
+        "B": "ARP",
+        "C": "IGMP",
+        "D": "ICMP"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-32",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 32,
+      "question": "下列何者為類比多工(Multiplexing)技術，常見於 AM 及 FM 廣播？",
+      "options": {
+        "A": "分時多工(TDM)",
+        "B": "分碼多工(CDM)",
+        "C": "傳碼調變(PCM)",
+        "D": "分頻多工(FDM)"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-33",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 33,
+      "question": "HTTPS 使用下列哪一個預設埠號？",
+      "options": {
+        "A": "443",
+        "B": "80",
+        "C": "53",
+        "D": "21"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-34",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 34,
+      "question": "自動取得 IP 的 DHCP 使用下列哪一個通訊協定？",
+      "options": {
+        "A": "TCP",
+        "B": "UDP",
+        "C": "HTTP",
+        "D": "FTP"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-35",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 35,
+      "question": "在非對稱式加密技術中，如某甲傳送資料給某乙時，其操作程序為「取得乙的公開金鑰→加密資料並傳送→乙用自己的私密金鑰解密」，在沒有其它資料(如訊息摘要等)處理前提下，下列何者正確？",
+      "options": {
+        "A": "無風險",
+        "B": "有完整性風險",
+        "C": "有可用性風險",
+        "D": "有機密性風險"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-36",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 36,
+      "question": "有關橋接器的特性下列何者有誤？",
+      "options": {
+        "A": "可連接不同網路區段",
+        "B": "屬於資料鏈結層設備",
+        "C": "有訊框篩選功能",
+        "D": "轉送時會改變封包的實體位址"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-37",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 37,
+      "question": "網路雙絞線兩對絞的主要目的為何？",
+      "options": {
+        "A": "易於辨識",
+        "B": "防止斷裂",
+        "C": "防止電磁干擾",
+        "D": "延長傳輸距離"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-38",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 38,
+      "question": "5 層級 TCP/IP 協定組合中，負責實體定址並以訊框(frame)為處理單位的為下列何者？",
+      "options": {
+        "A": "網路層",
+        "B": "實體層",
+        "C": "資料鏈結層",
+        "D": "傳輸層"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-39",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 39,
+      "question": "下列哪一項協定能讓不同路由器自治系統(AS)皆能彼此認知並提供資訊？",
+      "options": {
+        "A": "BGP",
+        "B": "RIP",
+        "C": "OSPF",
+        "D": "IGRP"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-40",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 40,
+      "question": "有關媒體介取控制，假設主機 X 要傳輸資料給主機 Y，觀察其行為是「偵測媒體後，發現媒體閒置，經隨機訊框間隔時間後送出 RTS 訊號，等待主機 Y 回傳 CTS 訊號後，再經過短訊框間隔時間才開始傳輸。」，請問使用下列哪一種協定？",
+      "options": {
+        "A": "ALOHA",
+        "B": "CSMA",
+        "C": "CSMA/CD",
+        "D": "CSMA/CA"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-41",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 41,
+      "question": "演算法的時間複雜度表示法中，下列何者代表理論下界(lower bound)符號？",
+      "options": {
+        "A": "O(big-O)",
+        "B": "Ω(omega)",
+        "C": "T(tera)",
+        "D": "Θ(theta)"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-42",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 42,
+      "question": "使用較短的代碼來表示出現頻率較高的符號，而用較長的代碼來表示出現頻率較低的符號，請問是下列哪一種資料壓縮編碼方法？",
+      "options": {
+        "A": "霍夫曼(Huffman)",
+        "B": "Lempel Ziv",
+        "C": "MP3",
+        "D": "重複次數(run-length)"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-43",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 43,
+      "question": "作業系統使用下列哪一個元件，來保護系統監督程式使用的記憶體空間？",
+      "options": {
+        "A": "指令暫存器",
+        "B": "資料暫存器",
+        "C": "限制(limit)暫存器",
+        "D": "程式計數器"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-44",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 44,
+      "question": "電腦時脈速度(clock rate)為 100 MHz，執行 10⁸ 個指令需要 2.5 秒，則此電腦執行每個指令需要多少時脈週期(clock cycle)？",
+      "options": {
+        "A": "25",
+        "B": "2.5",
+        "C": "0.25",
+        "D": "0.025"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-45",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 45,
+      "question": "下列哪一種資訊安全服務類別要求系統必須保護資料不被竊聽及不被監控流量？",
+      "options": {
+        "A": "機密性",
+        "B": "認證",
+        "C": "存取控制",
+        "D": "完整性"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-46",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 46,
+      "question": "在行程排程時，如果造成有許多程式必須等待某個大程式執行完成後，才能繼續工作的現象，此現象稱為下列哪一種效應？",
+      "options": {
+        "A": "蝴蝶效應",
+        "B": "護送(convoy)效應",
+        "C": "變老(aging)效應",
+        "D": "漣漪效應"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-47",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 47,
+      "question": "使用演算法解決問題時,在反覆的過程中,不斷取用最大值或最小值來進行處理的技巧,是屬於下列哪一種技巧?",
+      "options": {
+        "A": "貪婪法(greedy method)",
+        "B": "個個擊破法(divide and conquer)",
+        "C": "動態規劃法(dynamic programming)",
+        "D": "回溯法(backtracking)"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-48",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 48,
+      "question": "軟體系統模組化設計時,有關模組的耦合性與凝聚性,下列何者是正確追求的目標?",
+      "options": {
+        "A": "耦合高、凝聚小",
+        "B": "耦合低、凝聚小",
+        "C": "耦合高、凝聚大",
+        "D": "耦合低、凝聚大"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-49",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 49,
+      "question": "演算法的時間複雜度 O(n!)、O(n²)、O(nlog2n)、O(2ⁿ)中,何者效率最佳?",
+      "options": {
+        "A": "O(n!)",
+        "B": "O(n²)",
+        "C": "O(nlog2n)",
+        "D": "O(2ⁿ)"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-it-102-50",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_it",
+      "subject_name": "計算機原理、網路概論",
+      "stage_id": 0,
+      "number": 50,
+      "question": "使用對稱式金鑰密碼加密法,n個人彼此間要互相聯絡,總共需要協商多少密鑰(secret key)?",
+      "options": {
+        "A": "n",
+        "B": "2n",
+        "C": "n (n - 1)",
+        "D": "n (n - 1)/2"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
     {
       "id": "state-it-103-1",
       "roc_year": "103",

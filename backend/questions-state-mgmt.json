@@ -5,8 +5,2978 @@
     "scraped_at": "2026-05-21T04:39:15.821Z",
     "source": "taipower.com.tw"
   },
-  "total": 588,
+  "total": 736,
   "questions": [
+    {
+      "id": "state-mgmt-100-1",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 1,
+      "question": "當企業資源有限時，以不爭取整個市場而決定一個或少數幾個市場為目標，此種市場區隔策略稱為：",
+      "options": {
+        "A": "無差異市場策略",
+        "B": "分散性市場策略",
+        "C": "集中性市場策略",
+        "D": "差異性市場策略"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-2",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 2,
+      "question": "組織可藉由投資入股等方式獲得投入資源（生產要素）的控制權，此種策略稱為：",
+      "options": {
+        "A": "向前水平整合",
+        "B": "向前垂直整合",
+        "C": "向後水平整合",
+        "D": "向後垂直整合"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-3",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 3,
+      "question": "演唱會或表演常常可以看到前、中及後排座位的票價不同，此種訂價策略稱為：",
+      "options": {
+        "A": "比較（追隨）訂價法",
+        "B": "邊際成本訂價法",
+        "C": "差別訂價法",
+        "D": "成本加成訂價法"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-4",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 4,
+      "question": "可口可樂公司於全世界使用相同產品設計與行銷策略，此種策略稱為：",
+      "options": {
+        "A": "多國化",
+        "B": "全球化",
+        "C": "當地化",
+        "D": "集中化"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-5",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 5,
+      "question": "甘特圖（Gantt Chart）的主要用途為何？",
+      "options": {
+        "A": "進度控制",
+        "B": "存貨管理",
+        "C": "決策分析",
+        "D": "策略規劃"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-6",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 6,
+      "question": "企業必須全力達成下列哪項目標才具有「行銷觀念（Marketing Concept）」？",
+      "options": {
+        "A": "比競爭者做更多的廣告與促銷活動",
+        "B": "將產品全部賣光",
+        "C": "以最低成本生產產品",
+        "D": "同時滿足顧客與獲得利潤"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-7",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 7,
+      "question": "依據安索夫（Ansoff）的產品/市場擴張矩陣(product/market expansion grid)，以現有產品進入現有市場的行銷策略為何？",
+      "options": {
+        "A": "市場開發策略",
+        "B": "市場滲透策略",
+        "C": "產品開發策略",
+        "D": "多角化策略"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-8",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 8,
+      "question": "將企業經營理念及企業精神文化，透過設計之文字、圖案、顏色或整體造形，傳達給企業內外大眾，稱為：",
+      "options": {
+        "A": "理念識別",
+        "B": "企業識別",
+        "C": "活動識別",
+        "D": "視覺識別"
+      },
+      "answer": "B",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-mgmt-100-9",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 9,
+      "question": "群體成員以匿名且不互碰面的方式填寫問卷，各自表達意見，經整合後再請成員提出解決方法，反覆而得到共識與結論，此種方法稱為：",
+      "options": {
+        "A": "腦力激盪法",
+        "B": "名義群體技術法",
+        "C": "德爾菲法",
+        "D": "魔鬼辯證法"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-10",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 10,
+      "question": "陳德勒（Chandler）提出之「結構追隨策略（Structure follows strategy）」意謂：",
+      "options": {
+        "A": "組織的長期目標決定的組織設計",
+        "B": "組織設計影響管理者如何制定策略",
+        "C": "組織的技術型態決定的組織設計",
+        "D": "管理者的價值觀影響組織設計"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-11",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 11,
+      "question": "有關「ABC存量控制方法」的敘述，下列何者錯誤？",
+      "options": {
+        "A": "又稱為重點式的物料管理方法",
+        "B": "A類是存貨項目少，但價值高的物料",
+        "C": "B類存貨數量與價值均佔其次，須稍加控制",
+        "D": "C類是價值低但項目多的物料，是控制的重點"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-12",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 12,
+      "question": "在SWOT分析中，下列何者屬於內部企業環境的分析？",
+      "options": {
+        "A": "Strength, Opportunity",
+        "B": "Threat, Weakness",
+        "C": "Strength, Weakness",
+        "D": "Opportunity, Threat"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-13",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 13,
+      "question": "熊彼得(Schumpeter)認為決定廠商生產的重要要素，除了土地、勞力、資本外，還有哪一要素？",
+      "options": {
+        "A": "物流系統",
+        "B": "企業家精神",
+        "C": "產業條件",
+        "D": "國際金融"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-14",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 14,
+      "question": "企業在進行品質管理時，常以「六個標準差(6σ)」作為品質目標，此6σ是要求產品的不良率或製造過程中的錯誤率不能超過：",
+      "options": {
+        "A": "十萬分之3.4",
+        "B": "十萬分之6",
+        "C": "百萬分之3.4",
+        "D": "百萬分之6"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-15",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 15,
+      "question": "「衣食足然後知榮辱」是屬於下列何種激勵理論的論述？",
+      "options": {
+        "A": "公平理論",
+        "B": "期望理論",
+        "C": "增強理論",
+        "D": "需求層級理論"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-16",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 16,
+      "question": "依據麥可波特(Michael Porter)提出的一般性競爭策略，下列哪兩種方法可增加企業的競爭優勢：",
+      "options": {
+        "A": "創新與差異化",
+        "B": "特別訂價與差異化",
+        "C": "低成本與差異化",
+        "D": "低成本與效率"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-17",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 17,
+      "question": "企業同時經營不同產品線或市場時，所獲得的利益會超過分開經營這些產品線或市場所獲得利益的總和，此種現象稱為：",
+      "options": {
+        "A": "綜效",
+        "B": "規模經濟",
+        "C": "範疇經濟",
+        "D": "多角化"
+      },
+      "answer": "A",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-mgmt-100-18",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 18,
+      "question": "企業常以筆試的方式來招募所需要之人才，惟試題應具有足夠的信度與效度，有關效度之敘述，下列何者正確？",
+      "options": {
+        "A": "過去員工的試題分數與員工的績效表現之間具有高度的正相關",
+        "B": "試題彼此之間具有一致性",
+        "C": "試題彼此之間具有穩定性",
+        "D": "測試問題所得到的答案，彼此間沒有顯著的差異"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-19",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 19,
+      "question": "麥肯錫(McKinsey)顧問公司提出組織構成的七個要素(7S模式)是以何種架構加以區分？",
+      "options": {
+        "A": "策略與結構",
+        "B": "硬體與軟體",
+        "C": "系統與人員",
+        "D": "正式與非正式組織"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-20",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 20,
+      "question": "企業環境分為一般環境(General Environment)與任務環境(Task Environment)，下列何者屬於任務環境：",
+      "options": {
+        "A": "政治情勢",
+        "B": "社會文化",
+        "C": "經濟環境",
+        "D": "供應商"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-21",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 21,
+      "question": "證人保護法於民國89年2月9日經總統公布施行，該法第23條第1項明文規定：「本法自公布日施行」。試問該法自何日起發生效力？",
+      "options": {
+        "A": "民國89年2月9日",
+        "B": "民國89年2月10日",
+        "C": "民國89年2月11日",
+        "D": "民國89年2月12日"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-22",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 22,
+      "question": "依憲法本文規定，法律與憲法牴觸者無效。試問當法律與憲法有無牴觸發生疑義時，係由下列何者解釋之？",
+      "options": {
+        "A": "立法院",
+        "B": "普通法院",
+        "C": "行政法院",
+        "D": "司法院"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-23",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 23,
+      "question": "限制役男出境，依司法院大法官之解釋，係對下列何種自由所為之限制？",
+      "options": {
+        "A": "集會自由",
+        "B": "遷徙自由",
+        "C": "表現自由",
+        "D": "信仰宗教自由"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-24",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 24,
+      "question": "下列人員中，不得主張言論免責權者為：",
+      "options": {
+        "A": "鄉(鎮、市)民代表",
+        "B": "立法委員",
+        "C": "考試委員",
+        "D": "市議員"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-25",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 25,
+      "question": "依憲法本文規定，下列職位何者為終身職？",
+      "options": {
+        "A": "考試委員",
+        "B": "法官",
+        "C": "司法院院長",
+        "D": "書記官"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-26",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 26,
+      "question": "下列何者並無赴立法院備詢之義務？",
+      "options": {
+        "A": "司法院秘書長",
+        "B": "銓敘部部長",
+        "C": "監察院秘書長",
+        "D": "最高法院院長"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-27",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 27,
+      "question": "依憲法第144條規定，公用事業及其他有獨占性之企業，應以何種方式經營為原則？",
+      "options": {
+        "A": "民營",
+        "B": "公營",
+        "C": "公辦民營",
+        "D": "國家與人民共同經營"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-28",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 28,
+      "question": "依據我國刑法，除有特別規定者外，關於自首之法律效果為何？",
+      "options": {
+        "A": "得減輕其刑",
+        "B": "得免除其刑",
+        "C": "應減輕其刑",
+        "D": "應減輕或免除其刑"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-29",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 29,
+      "question": "下列有關未遂犯之敘述，何者有誤？",
+      "options": {
+        "A": "行為不能發生犯罪之結果，又無危險者，不罰",
+        "B": "已著手於犯罪行為之實行，而因己意中止或防止其結果之發生者，不罰",
+        "C": "未遂犯之處罰，得按既遂犯之刑減輕之",
+        "D": "未遂犯之處罰，得按既遂犯之刑減輕之"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-30",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 30,
+      "question": "某甲某日突然察覺其鄰居乙之屋內有濃厚的瓦斯味，甲為救人起見，立即持磚塊將乙之窗戶打破讓新鮮空氣流入，甲之行為：",
+      "options": {
+        "A": "仍構成毀損罪，但應減輕其刑",
+        "B": "構成「正當防衛」而阻卻違法",
+        "C": "構成「緊急避難」而阻卻違法",
+        "D": "構成「業務上正當行為」而阻卻違法"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-31",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 31,
+      "question": "依我國刑法規定，受拘役或罰金之宣告，而犯罪動機在公益或道義上顯可宥恕者，得：",
+      "options": {
+        "A": "易服勞役",
+        "B": "易以拘留",
+        "C": "易以訓誡",
+        "D": "易科罰金"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-32",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 32,
+      "question": "租賃期限屆滿後，承租人仍為租賃物之使用，出租人不即為反對之表示者，其法律效果為何？",
+      "options": {
+        "A": "租賃契約依照原租賃契約之期限重新起算",
+        "B": "承租人無繼續使用租賃物之權利",
+        "C": "租賃契約視為定期限之租賃",
+        "D": "租賃契約視為不定期限之租賃"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-33",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 33,
+      "question": "甲出售 A 屋予乙並完成交付後，現正由乙占有使用中，甲又出售 A 屋且移轉其所有權於善意之丙。試問乙對丙可主張何種權利？",
+      "options": {
+        "A": "乙得主張不當得利",
+        "B": "乙得行使撤銷權",
+        "C": "乙得行使代位權",
+        "D": "乙無法主張任何權利"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-34",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 34,
+      "question": "依我國刑法規定，結婚雖有公開儀式但未向戶政機關為結婚之登記者，其法律效果為何？",
+      "options": {
+        "A": "結婚有效",
+        "B": "結婚無效",
+        "C": "結婚得撤銷",
+        "D": "結婚效力未定"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-35",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 35,
+      "question": "依我國刑法規定，遺產繼承人除配偶外，應依順序定之：①父母；②祖父母；③兄弟姊妹；④直系血親卑親屬",
+      "options": {
+        "A": "④①③②",
+        "B": "①④②③",
+        "C": "④③①②",
+        "D": "②①③④"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-36",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 36,
+      "question": "甲遺失名錶一支，乙拾得後將其送給不知情之丙，試問甲至遲在多大期間內得向何人請求回復其物？",
+      "options": {
+        "A": "1 年內向乙請求",
+        "B": "2 年內向乙請求",
+        "C": "1 年內向丙請求",
+        "D": "2 年內向丙請求"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-37",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 37,
+      "question": "未婚媽媽與其非婚生子女之關係為何？",
+      "options": {
+        "A": "直系血親",
+        "B": "直系姻親",
+        "C": "無親屬關係",
+        "D": "視生父有無認領而定"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-38",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 38,
+      "question": "被繼承人之配偶與直系血親卑親屬為遺產繼承人時，其應繼分應如何而定？",
+      "options": {
+        "A": "平均",
+        "B": "配偶二分之一，其餘繼承人平均",
+        "C": "配偶三分之一，其餘繼承人平均",
+        "D": "法無明文規定"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-39",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 39,
+      "question": "下列何者非屬我國民法所定之夫妻財產制？",
+      "options": {
+        "A": "法定財產制",
+        "B": "統一財產制",
+        "C": "共同財產制",
+        "D": "分別財產制"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-40",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 40,
+      "question": "依我國民法規定，下列何者非屬消滅時效中斷之事由？",
+      "options": {
+        "A": "起訴",
+        "B": "請求",
+        "C": "承認",
+        "D": "放棄"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-41",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 41,
+      "question": "某公司欲推出單價 120 元的產品，需投入 100 萬元的總固定成本，生產該產品之單位變動成本為 60 元，則至少要銷售多少單位的產品，才能達到 20 萬元的目標利潤：",
+      "options": {
+        "A": "15,000 單位",
+        "B": "18,000 單位",
+        "C": "20,000 單位",
+        "D": "22,000 單位"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-42",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 42,
+      "question": "有關組織結構的敘述，下列何者錯誤？",
+      "options": {
+        "A": "組織結構越趨向扁平化時，應增加授權的程度",
+        "B": "矩陣式組織易有指揮不統一、權責混淆的問題",
+        "C": "組織結構越扁平時，控制幅度愈小",
+        "D": "若環境越穩定時，組織結構適合採用機械式組織"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-43",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 43,
+      "question": "企業進入國際市場的模式（或稱策略）可分為①合資②加盟授權③直接投資④出口，請以投資的金額、風險與控制的程度由低而高排序，下列何者正確？",
+      "options": {
+        "A": "④②＜①＜③",
+        "B": "③①＜②＜④",
+        "C": "④①＜②＜③",
+        "D": "②④＜①＜③"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-44",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 44,
+      "question": "有關激勵理論與其主張學者之配對，下列何者錯誤？",
+      "options": {
+        "A": "Atkinson & McClelland 的三需求理論",
+        "B": "Porter & Lawler 的組織行為調適理論",
+        "C": "Adams 的公平理論",
+        "D": "Alderfer 的 ERG 理論"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-45",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 45,
+      "question": "在不確定的情況下，就各種可行方案中，將較不利的方案選出來，再就所選出的方案中選出最有利的一種，係屬於下列何種決策法則：",
+      "options": {
+        "A": "機會損失最小法則",
+        "B": "樂觀法則",
+        "C": "悲觀法則",
+        "D": "Laplace法則"
+      },
+      "answer": "A",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-mgmt-100-46",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 46,
+      "question": "下列何者非全面品質管理(TQM)的重心：",
+      "options": {
+        "A": "重視結果",
+        "B": "持續改善",
+        "C": "全體參與",
+        "D": "顧客滿意"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-47",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 47,
+      "question": "拉克(Locke)的目標設定理論(Goal-Setting Theory)認為何種目標可導致員工產生較高的工作績效？",
+      "options": {
+        "A": "由員工充分自行決定的目標",
+        "B": "管理者與員工共同參與決定的目標",
+        "C": "困難度高但能激發員工士氣的目標",
+        "D": "困難度高但被員工接受的目標"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-48",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 48,
+      "question": "卡特(Kotler)認為影響消費者購買行為的主要因素是：",
+      "options": {
+        "A": "社會階層、次文化、參考群體及生活型態",
+        "B": "產品、價格、通路及促銷",
+        "C": "文化、參考群體、家庭及人格",
+        "D": "社會、文化、個人及心理因素"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-49",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 49,
+      "question": "計劃評核術(PERT)須對各活動的完成時間進行評估，假設完成活動的樂觀時間是 6 天，悲觀時間是 14 天，而最可能時間是 10 天，則估計平均的完成時間是：",
+      "options": {
+        "A": "10 天",
+        "B": "9 天",
+        "C": "15 天",
+        "D": "12 天"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-100-50",
+      "roc_year": "100",
+      "session": "第一次",
+      "exam_code": "taipower-100",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 50,
+      "question": "將工作垂直化擴張，讓員工有更多的責任與自主權，這種工作設計的觀念是：",
+      "options": {
+        "A": "工作擴大化",
+        "B": "工作豐富化",
+        "C": "工作有機化",
+        "D": "工作輪調化"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-1",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 1,
+      "question": "某公司的綠茶飲料分含糖及無糖,請問是指下列何項產品組合?",
+      "options": {
+        "A": "廣度",
+        "B": "深度",
+        "C": "長度",
+        "D": "複雜度"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-2",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 2,
+      "question": "下列何者為消費市場區隔的心理統計變數?",
+      "options": {
+        "A": "利益",
+        "B": "忠誠度",
+        "C": "人格",
+        "D": "態度"
+      },
+      "answer": "C",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-mgmt-101-3",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 3,
+      "question": "當商品位於產品生命週期的成長期時,其行銷策略下列何者為非?",
+      "options": {
+        "A": "延伸產品、服務",
+        "B": "採滲透定價",
+        "C": "建立密集式配銷",
+        "D": "強調品牌差異性與利益"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-4",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 4,
+      "question": "一罐可樂在便利商店賣25元,而在觀光飯店卻要賣50元,請問此為下列何種定價法?",
+      "options": {
+        "A": "價值定價法",
+        "B": "認知定價法",
+        "C": "習慣定價法",
+        "D": "需求回溯定價法"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-5",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 5,
+      "question": "下列何者不是群體決策的缺點?",
+      "options": {
+        "A": "效率較差",
+        "B": "決策是妥協的產物",
+        "C": "易有「群體思考症」",
+        "D": "透過集思廣益,有廣泛的知識和資訊"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-6",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 6,
+      "question": "Katz 認為高階管理者相對於其他階層而言最需具備的能力為何?",
+      "options": {
+        "A": "人際關係能力",
+        "B": "概念化能力",
+        "C": "技術能力",
+        "D": "適應能力"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-7",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 7,
+      "question": "柯林斯(Jim Collins)在他的「A到A+」(Good to Great)一書中提到,激發下屬熱情追求清楚而動人的願景和更高的績效標準,請問這是第幾級的領導人?",
+      "options": {
+        "A": "第二級",
+        "B": "第三級",
+        "C": "第四級",
+        "D": "第五級"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-8",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 8,
+      "question": "組織的各部分往往是優劣不齊的,但劣勢部分卻決定組織整體的水準,以上現象為:",
+      "options": {
+        "A": "彼得定律",
+        "B": "80/20定律",
+        "C": "木桶定律",
+        "D": "手錶定律"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-9",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 9,
+      "question": "在分析問題成因上最常被使用,且常與腦力激盪法並用之工具為何?",
+      "options": {
+        "A": "柏拉圖",
+        "B": "特性要因圖",
+        "C": "甘特圖",
+        "D": "流程圖"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-10",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 10,
+      "question": "因為害怕酒駕被罰,所以才遵守交通規則不敢酒駕,稱之為?",
+      "options": {
+        "A": "正增強",
+        "B": "負增強",
+        "C": "懲罰",
+        "D": "連續性增強"
+      },
+      "answer": "B",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-mgmt-101-11",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 11,
+      "question": "請問下列哪一項不是波特(Porter)價值鏈(value chain)的支援活動?",
+      "options": {
+        "A": "人力資源",
+        "B": "技術研究發展",
+        "C": "採購",
+        "D": "出貨後勤"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-12",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 12,
+      "question": "請問統一企業將飲料送至統一超商,再賣給消費者,稱之為幾階通路?",
+      "options": {
+        "A": "零階通路",
+        "B": "一階通路",
+        "C": "二階通路",
+        "D": "三階通路"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-13",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 13,
+      "question": "下列哪部著作不是管理大師彼得·杜拉克（Peter Drucker）之遺作？",
+      "options": {
+        "A": "企業的概念",
+        "B": "創新的兩難",
+        "C": "創新和企業精神",
+        "D": "有效的管理者"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-14",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 14,
+      "question": "企業在法律規範下，滿足其經濟責任時，稱為：",
+      "options": {
+        "A": "社會義務",
+        "B": "社會責任",
+        "C": "社會回應",
+        "D": "社會貢獻"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-15",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 15,
+      "question": "請問下列預測方法中何者為模擬法？",
+      "options": {
+        "A": "市場研究",
+        "B": "草根法(grass root)",
+        "C": "迴歸分析法",
+        "D": "焦點預測法"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-16",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 16,
+      "question": "國際化策略中，地方需求回應高且成本高的策略型態為何？",
+      "options": {
+        "A": "全球策略",
+        "B": "多國策略",
+        "C": "跨國策略",
+        "D": "國際策略"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-17",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 17,
+      "question": "企業於面試時以各種狀況詢問應徵者應如何處理，此種面試方式稱為？",
+      "options": {
+        "A": "非引導性面談",
+        "B": "結構化面談",
+        "C": "情境式面談",
+        "D": "行為描述面談"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-18",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 18,
+      "question": "產品生產過程中，其長期平均單位成本隨著企業累計產出的提高而逐步下降的趨勢，稱為：",
+      "options": {
+        "A": "學習曲線",
+        "B": "經驗曲線",
+        "C": "ABC 曲線",
+        "D": "柏拉圖曲線"
+      },
+      "answer": "A",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-mgmt-101-19",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 19,
+      "question": "Atkinson & McClelland 所提出的三需求理論認為，所有人的需求結構皆由三種需求混合而成，請問下列何者為非？",
+      "options": {
+        "A": "攻喜馬拉雅山頂峰",
+        "B": "有保障的工作",
+        "C": "加入社團",
+        "D": "當上總經理"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-20",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 20,
+      "question": "企業資源規劃(ERP)的導入會影響到企業哪方面的改變？",
+      "options": {
+        "A": "人力配置",
+        "B": "資訊系統",
+        "C": "工作流程",
+        "D": "以上皆是"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-21",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 21,
+      "question": "我國法源以成文法為主，不成文法退居次要地位，基本上屬於：",
+      "options": {
+        "A": "印度法系",
+        "B": "社會主義法系",
+        "C": "英美法系",
+        "D": "大陸法系"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-22",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 22,
+      "question": "依消費者保護法之規定，定型化契約中之條款有下列何種情形，推定其顯失公平？",
+      "options": {
+        "A": "違反平等互惠原則者",
+        "B": "條款與其所排除不適用之任意規定之立法意旨顯相矛盾者",
+        "C": "契約之主要權利或義務，因受條款之限制，致契約之目的難以達成者",
+        "D": "以上皆是"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-23",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列關於個人資料保護法之敘述，何者錯誤？",
+      "options": {
+        "A": "規範個人資料之蒐集、處理及利用",
+        "B": "該法施行前非由當事人提供之個人資料，應向當事人完成告知後再利用該資料",
+        "C": "個人資料之利用，不得逾越特定目的之必要範圍，並應與蒐集之目的的具有正當合理之關聯",
+        "D": "經濟部所屬事業機構皆屬個人資料保護法所稱之公務機關"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-24",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 24,
+      "question": "債權人就金錢請求或得易為金錢請求之請求，欲保全強制執行者，得聲請：",
+      "options": {
+        "A": "假扣押",
+        "B": "假處分",
+        "C": "假執行",
+        "D": "定暫時狀態之處分"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-25",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 25,
+      "question": "下列何者非票據法所稱之「票據」？",
+      "options": {
+        "A": "支票",
+        "B": "匯票",
+        "C": "股票",
+        "D": "本票"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-26",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 26,
+      "question": "依勞動基準法之規定，原則上勞工年滿幾歲者，雇主得強制其退休？",
+      "options": {
+        "A": "50 歲",
+        "B": "55 歲",
+        "C": "60 歲",
+        "D": "65 歲"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-27",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 27,
+      "question": "勞動基準法中對於童工之定義為：",
+      "options": {
+        "A": "15 歲以上未滿 16 歲者",
+        "B": "14 歲以上未滿 16 歲者",
+        "C": "15 歲以上未滿 18 歲者",
+        "D": "16 歲以上未滿 20 歲者"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-28",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 28,
+      "question": "依憲法第 23 條之規定觀之，國家欲限制人民之自由及權利，除為防止妨礙他人自由，避免緊急危難，維持社會秩序，或增進公共利益所必要者外，不得以法律限制之。此種規定即為：",
+      "options": {
+        "A": "法律優位原則",
+        "B": "法律保留原則",
+        "C": "憲法優位原則",
+        "D": "比例原則"
+      },
+      "answer": "B",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-mgmt-101-29",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 29,
+      "question": "依憲法第2條之規定，中華民國之主權屬於何者？",
+      "options": {
+        "A": "總統",
+        "B": "立法院",
+        "C": "中華民國政府",
+        "D": "國民全體"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-30",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 30,
+      "question": "土地徵收制度主要係補償國家對於人民何種權利予以剝奪之措施？",
+      "options": {
+        "A": "財產權",
+        "B": "宗教自由",
+        "C": "工作權",
+        "D": "言論自由"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-31",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 31,
+      "question": "法律條文之中之任意規定，係以下列何種文字表示？",
+      "options": {
+        "A": "得",
+        "B": "不得",
+        "C": "應",
+        "D": "須"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-32",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 32,
+      "question": "下列何者之法律效果為：權利人行使該權利後，會讓契約效力溯及消滅，並應回復原狀？",
+      "options": {
+        "A": "解除契約",
+        "B": "終止契約",
+        "C": "中止契約",
+        "D": "簽訂契約"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-33",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 33,
+      "question": "下列何者不屬於國家賠償法之賠償義務機關？",
+      "options": {
+        "A": "臺北市政府",
+        "B": "經濟部",
+        "C": "彰化縣政府",
+        "D": "台電公司"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-34",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 34,
+      "question": "行政行為有多種同樣能達成目的之方法時，應選擇對人民權益損害最少者，稱為行政法上之",
+      "options": {
+        "A": "平等原則",
+        "B": "比例原則",
+        "C": "誠信原則",
+        "D": "信賴保護原則"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-35",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 35,
+      "question": "在他人土地之上有建築物或其他工作物為目的而有使用其土地之權，稱之為：",
+      "options": {
+        "A": "抵押權",
+        "B": "地上權",
+        "C": "永佃權",
+        "D": "地役權"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-37",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 37,
+      "question": "下列何者屬程序法？",
+      "options": {
+        "A": "民法",
+        "B": "刑法",
+        "C": "公司法",
+        "D": "行政訴訟法"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-38",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 38,
+      "question": "刑法規定之有期徒刑，其最高上限為幾年？",
+      "options": {
+        "A": "30 年",
+        "B": "25 年",
+        "C": "20 年",
+        "D": "10 年"
+      },
+      "answer": "A",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-mgmt-101-39",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 39,
+      "question": "依消費者保護法第 19 條第 1 項之規定，郵購或訪問買賣之消費者，對所收受之商品不願買受時，得於收受商品後幾日內退回商品？",
+      "options": {
+        "A": "7 日",
+        "B": "10 日",
+        "C": "14 日",
+        "D": "21 日"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-40",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 40,
+      "question": "因犯罪而受損害之人，為回復其損害，得於刑事訴訟程序對於被告提起：",
+      "options": {
+        "A": "非常上訴",
+        "B": "再審",
+        "C": "附帶民事訴訟",
+        "D": "抗告"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-41",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 41,
+      "question": "請問在 BCG 模式中，問題事業可採何種策略成為明日之星？",
+      "options": {
+        "A": "持有(holding)策略",
+        "B": "獲取(gaining)策略",
+        "C": "收割(harvesting)策略",
+        "D": "撤資(divesting)策略"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-42",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 42,
+      "question": "人們在觀賞廣告後常會記得藝人所拍的廣告，卻忘記他所代言的品牌，此種現象稱為？",
+      "options": {
+        "A": "selective attention",
+        "B": "selective distortion",
+        "C": "selective retention",
+        "D": "stereotype"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-43",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 43,
+      "question": "某一工廠每年需 80,000 片晶片，每片單價 500 元。訂購成本為 15,000 元，年存貨持有成本為產品價格的 25%，試求訂購週期(四捨五入至整數，1 年以 365 天計)：",
+      "options": {
+        "A": "20 天",
+        "B": "30 天",
+        "C": "40 天",
+        "D": "50 天"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-44",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 44,
+      "question": "有關波特與勞勒(Porter & Lawler)所整合出之「動機作用理論」，不包含下列何項理論？",
+      "options": {
+        "A": "期望理論",
+        "B": "兩因素理論",
+        "C": "公平理論",
+        "D": "增強理論"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-45",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 45,
+      "question": "根據 Mintzberg 所提出的構型理論(Configuration Theory)中教會是屬於哪種組織？",
+      "options": {
+        "A": "簡單式組織",
+        "B": "扁平式組織",
+        "C": "專業科層組織",
+        "D": "傳導式組織"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-46",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 46,
+      "question": "台灣紡織業外移，造成許多相關從業人員失業，請問這是哪種倫理決策原則的結果？",
+      "options": {
+        "A": "utilitarian rule",
+        "B": "moral rights rule",
+        "C": "justice rule",
+        "D": "practical rule"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-47",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 47,
+      "question": "請問消費者涉入程度高，品牌間差異不大的產品，雖產品單價不一定很高，但隱含社會性風險大時，此為下述何種購買決策？",
+      "options": {
+        "A": "複雜型決策",
+        "B": "有限型決策",
+        "C": "品牌忠誠型決策",
+        "D": "遲鈍型決策"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-48",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 48,
+      "question": "有 Alderfer 的 ERG 理論與 Maslow 的需求階層理論下列何者為非？",
+      "options": {
+        "A": "ERG 理論一次可追求多種需求",
+        "B": "需求階層理論一次只能追求一種需求",
+        "C": "ERG 理論需求挫敗會退縮",
+        "D": "需求階層理論需求挫敗會退縮"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-49",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 49,
+      "question": "在工作特性模式(JCM)中，哪個工作核心構面會讓員工對工作結果負責？",
+      "options": {
+        "A": "技能變化性",
+        "B": "工作重要性",
+        "C": "自主性",
+        "D": "任務完整性"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-101-50",
+      "roc_year": "101",
+      "session": "第一次",
+      "exam_code": "taipower-101",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 50,
+      "question": "有些廠商為了與對手競爭，強調洗衣機可以產生臭氧泡泡，以達到殺菌功能，請問其產品的概念為何？",
+      "options": {
+        "A": "基本產品",
+        "B": "期望產品",
+        "C": "擴大產品",
+        "D": "潛在產品"
+      },
+      "answer": "B",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-mgmt-102-1",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 1,
+      "question": "下列何者不是行銷溝通組合(Marketing Communication Mix)之要素?",
+      "options": {
+        "A": "廣告",
+        "B": "公共關係",
+        "C": "品牌",
+        "D": "人員銷售"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-2",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 2,
+      "question": "根據 Hersey 與 Blanchard的領導生命循環理論(Life Cycle Theory of Leadership),下列何者正確?",
+      "options": {
+        "A": "高任務與高關係導向應採取參與型領導",
+        "B": "低任務與低關係導向應採取推銷型領導",
+        "C": "高任務與低關係導向應採取命令型領導",
+        "D": "低任務與高關係導向應採取推銷型領導"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-3",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 3,
+      "question": "根據 Anderson的「長尾理論(Long Tail Theory)」,透過互聯互享之特性,使網路發揮篩選功能,而將商機從熱門商品轉至利基商品的力量為何?",
+      "options": {
+        "A": "生產工具大眾化",
+        "B": "連結供給與需求",
+        "C": "配銷工具大眾化",
+        "D": "行銷工具客製化"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-4",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 4,
+      "question": "日劇「半澤直樹」當中,一位銀行業的主管提到:『部下的功勞歸長官,長官的過失部下扛!』,此種現象稱為:",
+      "options": {
+        "A": "自利偏差(Self-Serving Bias)",
+        "B": "投射效果(Projection Effect)",
+        "C": "對比效果(Contrast Effect)",
+        "D": "基本歸因謬論(Fundamental Attribution Error)"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-5",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 5,
+      "question": "根據資源基礎理論,何者不是核心資源應具備的特性?",
+      "options": {
+        "A": "價值性",
+        "B": "獨特性",
+        "C": "稀有性",
+        "D": "互補性"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-6",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 6,
+      "question": "根據 Kim 與 Mauborgne「藍海策略(Blue Ocean Strategy)」之主張,下列敘述何者有誤?",
+      "options": {
+        "A": "企業可同時追求差異化與低成本策略",
+        "B": "企業應重新定義產業疆界",
+        "C": "以價值創新為核心概念",
+        "D": "打造高度競爭的市場空間"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-7",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 7,
+      "question": "「組織價值聚焦於高度風險承擔、具活力幹勁與創造力之特徵者」,其屬於何種文化類型?",
+      "options": {
+        "A": "市場文化",
+        "B": "宗族文化",
+        "C": "企業家文化",
+        "D": "科層文化"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-8",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 8,
+      "question": "廠商以開發新產品,進入尚未開發的新市場,此為Ansoff「產品/市場擴展矩陣」的何種策略?",
+      "options": {
+        "A": "多角化策略",
+        "B": "市場滲透策略",
+        "C": "產品開發策略",
+        "D": "市場開發策略"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-9",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 9,
+      "question": "關於理性決策模式與準理性決策模式之敘述,下列何者正確?",
+      "options": {
+        "A": "準理性決策模式追求長期績效",
+        "B": "理性決策模式缺乏彈性應變能力",
+        "C": "準理性決策模式追求最佳解",
+        "D": "理性決策模式會發生系統性偏差"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-10",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 10,
+      "question": "下列何者不是目標管理(Management By Objectives, MBO)的特質?",
+      "options": {
+        "A": "強調集權",
+        "B": "目標特定性",
+        "C": "部屬參與決策",
+        "D": "明確達成時間"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-11",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 11,
+      "question": "根據 Katz 的觀點,管理者要了解公司內各業務間錯綜複雜的關係,須具備何種管理技能?",
+      "options": {
+        "A": "人際關係技能",
+        "B": "觀念性技能",
+        "C": "技術性技能",
+        "D": "規劃性技能"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-12",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 12,
+      "question": "主管將份內工作分配給部屬,並提供完成活動所需之工具與訓練,此管理程序稱為:",
+      "options": {
+        "A": "授權(Delegation)",
+        "B": "集權(Centralization)",
+        "C": "賦權(Empowerment)",
+        "D": "分權(Decentralization)"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-13",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 13,
+      "question": "品質管理的七大手法(Q7)中,下列何種技術可用來鑑別品質問題之潛在起因?",
+      "options": {
+        "A": "柏瑞托(Pareto)圖",
+        "B": "魚骨(Fishbone)圖",
+        "C": "管制(Control)圖",
+        "D": "流程(Flow)圖"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-14",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 14,
+      "question": "下列何者不是改善工作團體「社會賦閒(Social Loafing)」問題之方法?",
+      "options": {
+        "A": "強化個人績效評估的明確性",
+        "B": "加強組織成敗與個人貢獻的關聯",
+        "C": "團體增加特別優秀的人才",
+        "D": "盡可能減少團體人數"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-16",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 16,
+      "question": "某員工素來工作表現良好,但今年卻在上司打考績期間犯錯,而獲得較低的考績。請問該上司犯了何種績效考評的問題?",
+      "options": {
+        "A": "趨中傾向",
+        "B": "近期偏差",
+        "C": "刻版印象",
+        "D": "月暈效果"
+      },
+      "answer": "B",
+      "explanation": "",
+      "disputed": true
+    },
+    {
+      "id": "state-mgmt-102-17",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 17,
+      "question": "根據 Steiner的整體規劃模型(Integrated Planning Model),下列何者不是主要步驟?",
+      "options": {
+        "A": "規劃",
+        "B": "執行與檢討",
+        "C": "可行性測試",
+        "D": "前提"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-18",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 18,
+      "question": "某公司員工發現,即使工作表現再好,也無法獲得應有的報酬,因而產生較低的工作驅動力(motivation),此為何種激勵理論的觀點?",
+      "options": {
+        "A": "雙因子理論",
+        "B": "三需求理論",
+        "C": "需求層級理論",
+        "D": "期望理論"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-19",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 19,
+      "question": "市場消費需求發生變動,造成上游廠商波動加劇的現象,稱為:",
+      "options": {
+        "A": "帕金森定律",
+        "B": "煮蛙理論",
+        "C": "木桶定律",
+        "D": "長鞭效應"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-20",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 20,
+      "question": "根據 Mintzberg對管理者角色的分類,談判者(Negotiator)屬於何種角色?",
+      "options": {
+        "A": "人際角色",
+        "B": "資訊角色",
+        "C": "決策角色",
+        "D": "協商角色"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-21",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 21,
+      "question": "法律命令當事人應為某種行為的規定,稱為:",
+      "options": {
+        "A": "強制規定",
+        "B": "禁止規定",
+        "C": "解釋規定",
+        "D": "補充規定"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-22",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 22,
+      "question": "權利人單方的意思表示而能直接創設、改變或消滅某一法律關係的權利,稱為:",
+      "options": {
+        "A": "請求權",
+        "B": "抗辯權",
+        "C": "形成權",
+        "D": "支配權"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-23",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 23,
+      "question": "依民法規定,合會會員須經何者同意,方得將自己之會份轉讓於他人?",
+      "options": {
+        "A": "僅會首同意",
+        "B": "僅會員全體同意",
+        "C": "會首及會員過半數同意",
+        "D": "會首及會員全體同意"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-24",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 24,
+      "question": "基於公益上之需要,對於某種事實之存在或不存在,依據法的政策而為之擬定,縱與真的事實相反,亦不容許舉反證推翻者,稱為:",
+      "options": {
+        "A": "推定",
+        "B": "推論",
+        "C": "解釋",
+        "D": "視為"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-25",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 25,
+      "question": "有關民法消滅時效的規定,下列何者正確?",
+      "options": {
+        "A": "僱用人對人事保證人之請求權為2年",
+        "B": "律師報酬為15年",
+        "C": "承攬人報酬為5年",
+        "D": "贍養費為15年"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-26",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 26,
+      "question": "甲因財務糾紛,被乙打傷,憤而到地檢署按鈴申告,請問「按鈴申告」屬於何種讓檢察官知悉犯罪並加以偵查之管道?",
+      "options": {
+        "A": "自首",
+        "B": "訴願",
+        "C": "申請",
+        "D": "告訴"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-27",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 27,
+      "question": "依消費者保護法規定,企業經營者與消費者訂立定型化契約前,消費者應有幾日以內之合理審閱期間?",
+      "options": {
+        "A": "10日以內",
+        "B": "15日以內",
+        "C": "20日以內",
+        "D": "30日以內"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-28",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 28,
+      "question": "依憲法增修條文規定,司法院大法官的任期為幾年?",
+      "options": {
+        "A": "4年",
+        "B": "6年",
+        "C": "8年",
+        "D": "終身制"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-29",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 29,
+      "question": "刑法所規定的刑罰分為「主刑」與「從刑」兩種，下列何者屬於主刑？",
+      "options": {
+        "A": "罰金",
+        "B": "罰鍰",
+        "C": "沒收",
+        "D": "追繳或抵償"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-30",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 30,
+      "question": "依民法規定，對話人為意思表示者，其意思表示於何時發生效力？",
+      "options": {
+        "A": "相對人了解意思表示時",
+        "B": "意思表示發出時",
+        "C": "意思表示公告時",
+        "D": "意思表示達到相對人時"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-31",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 31,
+      "question": "甲委任乙代為買車，且乙受有報酬，乙應負何種程度之注意義務？",
+      "options": {
+        "A": "除有故意外，乙不負損害賠償責任",
+        "B": "除有重大過失外，乙不負損害賠償責任",
+        "C": "乙應與處理自己事務為同一之注意",
+        "D": "乙應以善良管理人之注意為之"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-32",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 32,
+      "question": "依勞動基準法規定，特定性定期契約期限逾3年者，於屆滿3年後，勞工得終止契約，但應於幾日前預告雇主？",
+      "options": {
+        "A": "7日前",
+        "B": "10日前",
+        "C": "20日前",
+        "D": "30日前"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-33",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 33,
+      "question": "依行政程序法規定，公法上之請求權，於請求權人為人民時，除法律另有規定外，因幾年間不行使而消滅？",
+      "options": {
+        "A": "5年間",
+        "B": "10年間",
+        "C": "15年間",
+        "D": "20年間"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-34",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 34,
+      "question": "依民法規定，約定利率超過週年百分之幾，債權人對於超過部分的利息，無請求權？",
+      "options": {
+        "A": "百分之十",
+        "B": "百分之二十",
+        "C": "百分之三十",
+        "D": "百分之四十"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-35",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 35,
+      "question": "依憲法本文之規定，解釋憲法之機關為：",
+      "options": {
+        "A": "國民大會",
+        "B": "行政院",
+        "C": "立法院",
+        "D": "司法院"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-36",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 36,
+      "question": "下列何者不屬於行政程序法所規定「陳情」之內容？",
+      "options": {
+        "A": "行政訴訟之提起",
+        "B": "行政興革之建議",
+        "C": "行政法令之查詢",
+        "D": "行政違失之舉發"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-37",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 37,
+      "question": "依民法規定，提存拍賣及出賣之費用，由何人負擔？",
+      "options": {
+        "A": "債權人",
+        "B": "債務人",
+        "C": "法院",
+        "D": "債權人與債務人平均分擔"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-38",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 38,
+      "question": "行為人對於犯罪事實之發生，按其情節應注意並能注意而不注意者，稱為：",
+      "options": {
+        "A": "故意",
+        "B": "錯誤",
+        "C": "過失",
+        "D": "意外"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-39",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 39,
+      "question": "下列何者非屬擔保物權？",
+      "options": {
+        "A": "不動產役權",
+        "B": "最高限額抵押權",
+        "C": "留置權",
+        "D": "權利質權"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-40",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 40,
+      "question": "對於犯罪結果之發生，法律上有防止之義務，能防止而不防止者，與因積極行為發生結果者同，稱為：",
+      "options": {
+        "A": "作為犯",
+        "B": "不作為犯",
+        "C": "既遂犯",
+        "D": "未遂犯"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-41",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 41,
+      "question": "關於關係行銷(Relationship Marketing)，下列敘述何者有誤？",
+      "options": {
+        "A": "著眼於顧客關係",
+        "B": "著眼長期利潤",
+        "C": "採推銷式銷售方法",
+        "D": "焦點在顧客"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-42",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 42,
+      "question": "A公司產品經理擬定4種產品策略(A1-A4)，同時得知B公司在相同市場也推出3種產品策略(B1-B3)，並做出獲利矩陣如右表。假設4項產品策略的成功機率無法獲得，而採「機會損失準則」進行決策，則A公司產品經理會選擇何種策略？",
+      "options": {
+        "A": "A1",
+        "B": "A2",
+        "C": "A3",
+        "D": "A4"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-43",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 43,
+      "question": "企業為吸引現有顧客，採行多角化進入新產業領域，但所用技術卻與原經營範疇無關，此為何種多角化策略？",
+      "options": {
+        "A": "水平式多角化",
+        "B": "集中式多角化",
+        "C": "複合式多角化",
+        "D": "垂直式多角化"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-44",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 44,
+      "question": "一項會議討論出結果後，不斷加入新成員再進行討論，此為何種團體決策缺失的改善方法？",
+      "options": {
+        "A": "名目團體技術",
+        "B": "逐步領袖法",
+        "C": "魔鬼辯證法",
+        "D": "辯證質詢法"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-45",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 45,
+      "question": "有關公司治理(Corporate Governance)的基本精神，下列敘述何者有誤？",
+      "options": {
+        "A": "獨立董事擁有多數股權並協助企業經營",
+        "B": "強化董事會運作",
+        "C": "追求股東利潤最大化",
+        "D": "加強經營資訊透明化"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-46",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 46,
+      "question": "常見的人格特質測驗模式中，何者不是 Myers-Briggs 型態指示法(MBTI)的組成構面？",
+      "options": {
+        "A": "資料收集",
+        "B": "決策",
+        "C": "活力",
+        "D": "價值觀"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-47",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 47,
+      "question": "BCG 矩陣各事業，與產品生命週期及公司層級策略之間的關係，下列敘述何者有誤？",
+      "options": {
+        "A": "明星事業位於成長期",
+        "B": "問題兒童事業應採取縮減策略",
+        "C": "狗事業位於衰退期",
+        "D": "金牛事業應採取穩定策略"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-48",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 48,
+      "question": "根據產品-產量分析(P-Q Aanlysis)，下列敘述何者正確？",
+      "options": {
+        "A": "A 類產品適用批量生產方式",
+        "B": "A、B 類之間的產品適用群組生產方式",
+        "C": "B 類產品可採產品式佈置方法",
+        "D": "A、B 類之間的產品適用大量生產方式"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-49",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 49,
+      "question": "智慧型手機在某市場之年需求量為 10,000 隻，每隻智慧型手機售價 16,000 元，A 公司在該市場之市占率為 80%，每次訂購成本 12,000 元，其每隻手機庫存成本為產品售價 30%，則 A 公司之經濟訂購量(EOQ)與年採購次數為何？(計算至整數，以下四捨五入)",
+      "options": {
+        "A": "224 隻、45 次",
+        "B": "200 隻、50 次",
+        "C": "224 隻、40 次",
+        "D": "200 隻、40 次"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "state-mgmt-102-50",
+      "roc_year": "102",
+      "session": "第一次",
+      "exam_code": "taipower-102",
+      "subject": "專業科目",
+      "subject_tag": "state_mgmt",
+      "subject_name": "企業概論、法學緒論",
+      "stage_id": 0,
+      "number": 50,
+      "question": "組織以相同作業流程中的最佳者為標竿，稱為：",
+      "options": {
+        "A": "競爭標竿管理",
+        "B": "內部標竿管理",
+        "C": "功能標竿管理",
+        "D": "外部標竿管理"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
     {
       "id": "state-mgmt-103-1",
       "roc_year": "103",

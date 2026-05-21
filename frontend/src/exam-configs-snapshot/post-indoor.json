@@ -1,0 +1,105 @@
+{
+  "id": "post-indoor",
+  "name": "郵局招考 內勤",
+  "short": "郵局內勤",
+  "icon": "📮",
+  "category": "state-enterprise",
+  "subCategory": "中華郵政專業職(二)",
+  "selectionType": "quota",
+  "persona": [
+    "career-changer"
+  ],
+  "questionsFile": "questions-post-indoor.json",
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "reservoir",
+    "longText": true
+  },
+  "totalQ": 668,
+  "passScore": 0,
+  "passRate": 0,
+  "papers": [
+    {
+      "id": "mgmt",
+      "name": "企業管理大意",
+      "subject": "企業管理大意",
+      "subjects": "企業管理大意",
+      "count": 60
+    },
+    {
+      "id": "law",
+      "name": "郵政三法大意",
+      "subject": "郵政三法大意",
+      "subjects": "郵政法、郵政儲金匯兌法、簡易人壽保險法",
+      "count": 50
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    },
+    {
+      "id": 1,
+      "tag": "post_mgmt",
+      "name": "企業管理大意"
+    },
+    {
+      "id": 2,
+      "tag": "post_law",
+      "name": "郵政三法大意"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "post_mgmt": "企業管理大意",
+      "post_law": "郵政三法大意"
+    },
+    "stageStyles": {
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "post_mgmt": {
+        "icon": "📊",
+        "color": "#0EA5E9"
+      },
+      "post_law": {
+        "icon": "📮",
+        "color": "#EF4444"
+      }
+    },
+    "subjectColors": {
+      "企業管理大意": "#0EA5E9",
+      "郵政三法大意": "#EF4444"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 郵局招考內勤題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "中華郵政股份有限公司職階人員甄試 — 專業職(二)內勤",
+    "shortName": "郵局內勤",
+    "studentType": "轉職應考者、高中職畢業生",
+    "years": "104-114",
+    "totalQ": 668,
+    "examDesc": "中華郵政專業職(二)內勤（櫃台業務、郵務處理等類科）甄試，採名額制錄取，每年舉辦。專業科目為企業管理大意、郵政三法大意（111 年起加考洗錢防制法大意、金融科技知識），全為單選測驗題。收錄 104-114 年歷屆試題。",
+    "paperDesc": "企業管理大意、郵政三法大意（含郵政法、郵政儲金匯兌法、簡易人壽保險法）兩科，皆為單選題，共 668 題。",
+    "subjects": "企業管理大意、郵政三法大意",
+    "mockDesc": "郵局招考內勤模擬考（104-114 年歷屆試題）",
+    "subjectDetails": [
+      [
+        "企業管理大意",
+        "管理功能、組織、行銷、人資、財務等企業管理基礎概念。"
+      ],
+      [
+        "郵政三法大意",
+        "郵政法、郵政儲金匯兌法、簡易人壽保險法三法重點。"
+      ]
+    ]
+  },
+  "meta": {
+    "officialSystem": "中華郵政"
+  }
+}

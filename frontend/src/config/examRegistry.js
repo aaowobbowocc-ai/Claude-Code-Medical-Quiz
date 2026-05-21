@@ -30,7 +30,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v22: 新增 國營事業聯招 4 考試 state-mgmt/hr/finance/it（109-114 年，1198 題 + 英文共用 240）
 // v23: civil-senior 改 shell（高考三等一般行政），重爬修正舊 pdfjs 切錯選項的污染題庫
 // v24: judicial 改 shell（司法特考三等），重爬法學知識與英文修正污染
-const CACHE_KEY = 'exam-registry-v24'
+// v25: 新增 中華郵政 post-indoor/post-outdoor 考試（專業職二內外勤，104-114 年，1098 題）
+const CACHE_KEY = 'exam-registry-v25'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache
@@ -99,6 +100,7 @@ const EXAM_ORDER = [
   'civil-senior', 'customs', 'police', 'police4',
   'civil-senior-general', 'civil-junior-general', 'civil-junior-civil-affairs', 'civil-elementary-general',
   'state-mgmt', 'state-hr', 'state-finance', 'state-it',
+  'post-indoor', 'post-outdoor',
   'driver-car', 'driver-moto',
   'gsat', 'ast',
 ]

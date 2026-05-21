@@ -50,6 +50,8 @@ const EXAM_FILES = {
   'state-hr': 'questions-state-hr.json',
   'state-finance': 'questions-state-finance.json',
   'state-it': 'questions-state-it.json',
+  'post-indoor': 'questions-post-indoor.json',
+  'post-outdoor': 'questions-post-outdoor.json',
 }
 
 // In-memory cache (per page-load)

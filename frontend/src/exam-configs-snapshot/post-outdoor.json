@@ -1,0 +1,105 @@
+{
+  "id": "post-outdoor",
+  "name": "郵局招考 外勤",
+  "short": "郵局外勤",
+  "icon": "🛵",
+  "category": "state-enterprise",
+  "subCategory": "中華郵政專業職(二)",
+  "selectionType": "quota",
+  "persona": [
+    "career-changer"
+  ],
+  "questionsFile": "questions-post-outdoor.json",
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "reservoir",
+    "longText": true
+  },
+  "totalQ": 430,
+  "passScore": 0,
+  "passRate": 0,
+  "papers": [
+    {
+      "id": "mgmt",
+      "name": "企業管理大意",
+      "subject": "企業管理大意",
+      "subjects": "企業管理大意",
+      "count": 60
+    },
+    {
+      "id": "law",
+      "name": "郵政法大意及交通安全常識",
+      "subject": "郵政法大意及交通安全常識",
+      "subjects": "郵政法、交通安全常識",
+      "count": 50
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    },
+    {
+      "id": 1,
+      "tag": "post_mgmt",
+      "name": "企業管理大意"
+    },
+    {
+      "id": 2,
+      "tag": "post_law",
+      "name": "郵政法大意及交通安全常識"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "post_mgmt": "企業管理大意",
+      "post_law": "郵政法大意及交通安全常識"
+    },
+    "stageStyles": {
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "post_mgmt": {
+        "icon": "📊",
+        "color": "#0EA5E9"
+      },
+      "post_law": {
+        "icon": "🛵",
+        "color": "#EF4444"
+      }
+    },
+    "subjectColors": {
+      "企業管理大意": "#0EA5E9",
+      "郵政法大意及交通安全常識": "#EF4444"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 郵局招考外勤題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "中華郵政股份有限公司職階人員甄試 — 專業職(二)外勤",
+    "shortName": "郵局外勤",
+    "studentType": "轉職應考者、高中職畢業生",
+    "years": "104-114",
+    "totalQ": 430,
+    "examDesc": "中華郵政專業職(二)外勤（郵遞業務、運輸業務等類科）甄試，採名額制錄取，每年舉辦。專業科目涵蓋企業管理大意（104-107 年）與郵政法規大意及交通安全常識，全為單選測驗題。收錄 104-114 年歷屆試題。",
+    "paperDesc": "企業管理大意、郵政法規大意及交通安全常識，皆為單選題，共 430 題。",
+    "subjects": "企業管理大意、郵政法大意及交通安全常識",
+    "mockDesc": "郵局招考外勤模擬考（104-114 年歷屆試題）",
+    "subjectDetails": [
+      [
+        "企業管理大意",
+        "管理功能、組織、行銷、人資、財務等企業管理基礎概念。"
+      ],
+      [
+        "郵政法大意及交通安全常識",
+        "郵政法重點，以及外勤投遞所需之道路交通安全規則與常識。"
+      ]
+    ]
+  },
+  "meta": {
+    "officialSystem": "中華郵政"
+  }
+}

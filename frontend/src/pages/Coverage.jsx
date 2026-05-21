@@ -40,7 +40,7 @@ const CATEGORIES = [
     id: 'state-enterprise',
     name: '國營事業',
     icon: '⚡',
-    exams: ['state-mgmt', 'state-hr', 'state-finance', 'state-it'],
+    exams: ['state-mgmt', 'state-hr', 'state-finance', 'state-it', 'post-indoor', 'post-outdoor'],
   },
   {
     id: 'independent',

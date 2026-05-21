@@ -6,6 +6,7 @@
 const https = require('https')
 const fs = require('fs')
 const path = require('path')
+const crypto = require('crypto')
 const { execSync } = require('child_process')
 
 const DEFAULT_USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
@@ -142,8 +143,10 @@ async function cachedFetch(url, cacheDir, opts = {}) {
     fs.mkdirSync(cacheDir, { recursive: true })
   }
 
-  // Generate cache key from URL (use safe filename)
-  const cacheKey = Buffer.from(url).toString('base64').replace(/[/+=]/g, '_').substring(0, 60)
+  // Generate cache key from a hash of the FULL URL.
+  // (Previously: base64(url).substring(0,60) — collided when URLs shared a long
+  //  common prefix, e.g. 3people 考古題 PDFs under the same year/職階 folder.)
+  const cacheKey = crypto.createHash('md5').update(url).digest('hex')
   const cachePath = path.join(cacheDir, `${cacheKey}.pdf`)
 
   // Return from cache if exists

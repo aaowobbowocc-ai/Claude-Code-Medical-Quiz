@@ -499,6 +499,12 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
           <p className="text-xs text-gray-400 mb-2">
             第 {qIdx + 1} / {questions.length} 題{q.subject_name ? `　·　${q.subject_name}` : ''}
           </p>
+          {q.case_context && (
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 mb-2">
+              <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full mb-1.5 inline-block">案例</span>
+              <p className="text-sm text-gray-700 leading-relaxed">{q.case_context}</p>
+            </div>
+          )}
           <p className="text-gray-800 font-medium leading-relaxed text-sm">{q.question}</p>
           <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
           <HazardVideo src={q.video_url} sourceUrl={q.source_url} />

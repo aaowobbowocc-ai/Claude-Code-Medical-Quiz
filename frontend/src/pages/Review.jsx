@@ -68,6 +68,12 @@ function ReviewCard({ q, index }) {
 
       {/* Question text */}
       <div className="px-4 pb-3">
+        {q.case_context && (
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 mb-2">
+            <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full mb-1.5 inline-block">案例</span>
+            <p className="text-sm text-gray-700 leading-relaxed">{q.case_context}</p>
+          </div>
+        )}
         <p className="text-sm text-gray-800 leading-relaxed">{q.question}</p>
         <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
         <HazardVideo src={q.video_url} sourceUrl={q.source_url} />

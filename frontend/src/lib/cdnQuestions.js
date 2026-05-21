@@ -265,11 +265,16 @@ export async function getHistoricalPaper(examId, { year, session, subject } = {}
 }
 
 // Replace `/questions/exam?exam=X&count=N&subject=S` (random mode without stages)
-//   Returns N random single-answer questions, optionally filtered to a paper subject.
-export async function getRandomPaper(examId, { count = 100, subject } = {}) {
+//   Returns N random single-answer questions, optionally filtered to a paper subject
+//   and/or a set of ROC years (years: string[] — empty/undefined = all years).
+export async function getRandomPaper(examId, { count = 100, subject, years } = {}) {
   const pool = await loadExamQuestions(examId)
   let valid = pool.filter(isSingleAnswer)
   if (subject) valid = valid.filter(q => q.subject === subject)
+  if (Array.isArray(years) && years.length) {
+    const yset = new Set(years.map(String))
+    valid = valid.filter(q => yset.has(q.roc_year))
+  }
   const target = parseInt(count) || 100
   const picked = shuffle(valid).slice(0, target)
   return { total: picked.length, questions: picked, mode: 'random' }

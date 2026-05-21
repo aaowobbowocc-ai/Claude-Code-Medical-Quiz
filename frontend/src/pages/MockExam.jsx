@@ -110,6 +110,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins, onR
   const { examId, papers: PAPERS, totalPass: TOTAL_PASS, totalPoints: TOTAL_POINTS, examName, isWeighted, uniformPointsPerQ } = getExamConfig(examType)
   const fullCfg = getFullExamConfig(examType)
   const isFixedBank = fullCfg?.uxHints?.fixedBank || fullCfg?.uxHints?.noYearFilter
+  const isMedical = fullCfg?.category === 'medical'   // 年份題庫選擇器目前僅醫事考試開放
   const extraRules = getExtraPassRules(examId)
   const FULL_EXAM_FEE = getFullExamFee(PAPERS)
   const [tab, setTab] = useState(isFixedBank ? 'random' : 'historical') // 'historical' | 'random'
@@ -117,6 +118,10 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins, onR
   const [loadingYears, setLoadingYears] = useState(true)
   const [selectedExam, setSelectedExam] = useState(null) // { roc_year, session, papers }
   const [resumeSessions, setResumeSessions] = useState([])
+  // 隨機模考的年份題庫篩選（空陣列 = 全部年份）
+  const [selectedYears, setSelectedYears] = useState([])
+  const availableYears = [...new Set(examYears.map(e => e.roc_year))].filter(Boolean).sort((a, b) => b.localeCompare(a))
+  const toggleYear = (y) => setSelectedYears(prev => prev.includes(y) ? prev.filter(x => x !== y) : [...prev, y])
 
   useEffect(() => {
     // 只列出此考試的未完成 session（避免別考試的進度跑出來）
@@ -296,10 +301,36 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins, onR
             <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 text-center">
               <p className="text-2xl mb-1">🎲</p>
               <p className="font-bold text-medical-dark">{isFixedBank ? '模擬筆試' : '隨機模擬考'}</p>
-              <p className="text-gray-400 text-xs mt-1">{isFixedBank ? `從 ${fullCfg?.totalQ || ''} 題題庫隨機抽題` : '從所有年份題庫隨機抽題，按照國考各科比例出題'}</p>
+              <p className="text-gray-400 text-xs mt-1">{isFixedBank
+                ? `從 ${fullCfg?.totalQ || ''} 題題庫隨機抽題`
+                : selectedYears.length
+                  ? `從 ${[...selectedYears].sort().join('、')} 年題庫隨機抽題，按國考各科比例出題`
+                  : '從所有年份題庫隨機抽題，按照國考各科比例出題'}</p>
             </div>
 
-            <button onClick={onStartFull}
+            {/* 年份題庫篩選（目前僅醫事考試開放；至少 2 個年份才顯示）*/}
+            {isMedical && !isFixedBank && availableYears.length > 1 && (
+              <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                <p className="text-sm font-bold text-gray-700">📅 年份題庫</p>
+                <p className="text-gray-400 text-xs mt-0.5 mb-2">
+                  {selectedYears.length === 0 ? '目前用全部年份出題，可只挑特定年份' : `已選 ${selectedYears.length} 個年份`}
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  <button onClick={() => setSelectedYears([])}
+                    className={`px-3 py-1 rounded-full text-xs font-bold border transition-all ${selectedYears.length === 0 ? 'bg-medical-blue text-white border-medical-blue' : 'bg-gray-50 text-gray-500 border-gray-200'}`}>
+                    全部
+                  </button>
+                  {availableYears.map(y => (
+                    <button key={y} onClick={() => toggleYear(y)}
+                      className={`px-3 py-1 rounded-full text-xs font-bold border transition-all ${selectedYears.includes(y) ? 'bg-medical-blue text-white border-medical-blue' : 'bg-gray-50 text-gray-500 border-gray-200'}`}>
+                      {y}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <button onClick={() => onStartFull(selectedYears)}
               className={`w-full text-left rounded-2xl px-5 py-5 border-2 shadow transition-all active:scale-[0.97] ${coins >= FULL_EXAM_FEE ? 'border-medical-blue bg-blue-50' : 'border-gray-200 bg-gray-50 opacity-60'}`}>
               <div className="flex items-center gap-3">
                 <span className="text-3xl">📋</span>
@@ -330,7 +361,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins, onR
                 {PAPERS.map(p => {
                   const singleFee = getSingleExamFee(p)
                   return (
-                  <button key={p.id} onClick={() => onStart(p)}
+                  <button key={p.id} onClick={() => onStart(p, selectedYears)}
                     className={`w-full text-left rounded-2xl px-5 py-4 border-2 transition-all active:scale-[0.97] ${coins >= singleFee ? 'border-gray-100 bg-white' : 'border-gray-100 bg-gray-50 opacity-60'}`}>
                     <div className="flex items-center justify-between">
                       <div>
@@ -831,7 +862,6 @@ function ExamResults({ papers, navigate }) {
             </button>
           )
         })()}
-        )}
         <button onClick={() => navigate('/mock-exam')}
           className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform grad-cta">
           🔄 再考一次
@@ -880,6 +910,8 @@ export default function MockExam() {
     sessionId.current = `me-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`
     return sessionId.current
   }
+  // 隨機模考選定的年份題庫（陣列，null/空 = 全部年份）— 完整模考整份共用
+  const mockYears = useRef(null)
 
   // 接收 ExamInProgress 每次變動的快照、寫入 localStorage
   const handleExamSnapshot = (snap) => {
@@ -890,6 +922,7 @@ export default function MockExam() {
       examType,
       isFullExam,
       historicalExam,
+      mockYears: mockYears.current,
       paperResults,
       currentPaperIdx,
       currentPaper,
@@ -903,6 +936,7 @@ export default function MockExam() {
   // 從 saved session 恢復進行中考試
   const handleResume = (session) => {
     sessionId.current = session.sessionId || newSessionId()
+    mockYears.current = session.mockYears || null   // 還原年份題庫篩選，續考各卷一致
     // 中場 session：完整模考考完某卷後離開 → 回到中場畫面接續下一卷
     if (session.atIntermission) {
       setIsFullExam(true)
@@ -929,20 +963,22 @@ export default function MockExam() {
 
   const loadQuestions = async (paper) => {
     const et = usePlayerStore.getState().exam || 'doctor1'
+    // 隨機模考選定的年份題庫（null = 全部年份）；整份完整模考各卷共用
+    const years = mockYears.current && mockYears.current.length ? mockYears.current : null
     // CDN path: pure mode random pick (no shared banks here)
     if (isExamSupportedByCDN(et)) {
       try {
         const data = await getRandomPaper(et, {
           count: paper.count || 80,
           subject: paper.mixed ? undefined : (paper.subject || paper.name),
+          years,
         })
         if (data.questions.length >= 10) return data.questions
       } catch (e) { console.warn('CDN loadQuestions failed:', e) }
     }
-    const base = `count=${paper.count || 80}&exam=${et}`
-    const params = paper.mixed
-      ? base
-      : `${base}&subject=${encodeURIComponent(paper.subject || paper.name)}`
+    let params = `count=${paper.count || 80}&exam=${et}`
+    if (!paper.mixed) params += `&subject=${encodeURIComponent(paper.subject || paper.name)}`
+    if (years) params += `&years=${years.join(',')}`
     const res = await fetch(`${BACKEND}/questions/exam?${params}`)
     const data = await res.json()
     if (data.questions.length < 10) throw new Error('not enough')
@@ -986,13 +1022,14 @@ export default function MockExam() {
   const FULL_EXAM_FEE = getFullExamFee(PAPERS)
 
   // Start single paper (random)
-  const handleStartSingle = async (paper) => {
+  const handleStartSingle = async (paper, years) => {
     const fee = getSingleExamFee(paper)
     if (!spendCoins(fee)) {
       if (confirm(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
       return
     }
     newSessionId()
+    mockYears.current = (years && years.length) ? years : null
     setIsFullExam(false)
     setHistoricalExam(null)
     setPaperResults([])
@@ -1000,12 +1037,13 @@ export default function MockExam() {
   }
 
   // Start full exam (all papers sequentially)
-  const handleStartFull = async () => {
+  const handleStartFull = async (years) => {
     if (!spendCoins(FULL_EXAM_FEE)) {
       if (confirm(`金幣不足！需要 ${FULL_EXAM_FEE} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
       return
     }
     newSessionId()
+    mockYears.current = (years && years.length) ? years : null
     setIsFullExam(true)
     setHistoricalExam(null)
     setPaperResults([])
@@ -1021,6 +1059,7 @@ export default function MockExam() {
       return
     }
     newSessionId()
+    mockYears.current = null   // 歷屆模式不套用年份題庫篩選
     setIsFullExam(isFull)
     setHistoricalExam({ year, session })
     setPaperResults([])
@@ -1063,6 +1102,7 @@ export default function MockExam() {
         examType,
         isFullExam: true,
         historicalExam,
+        mockYears: mockYears.current,
         paperResults: newResults,
       })
       setPhase('intermission')

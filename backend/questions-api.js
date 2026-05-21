@@ -188,7 +188,7 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     const mode = isQuota ? 'pure' : resolveMode(req, examId);
     const questionsData = examData[examId] || examData.doctor1;
     const pool = loadExamQuestions(examId, { mode });
-    const { stages, count = 100, year, session, subject } = req.query;
+    const { stages, count = 100, year, session, subject, years } = req.query;
 
     // Historical mode: return ALL questions (including multi-answer & voided) for authentic exam simulation.
     // Sort by question number to preserve original order — critical for 承上題 (carryover)
@@ -203,12 +203,17 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     }
 
     // Random mode — pick from all questions (single-answer only for random mock)
-    // If subject is given (without year), filter to that paper's questions
+    // If subject is given (without year), filter to that paper's questions.
+    // If years is given (comma-separated ROC years), restrict the pool to those years.
     if (!stages) {
       const target = parseInt(count);
       let valid = pool.filter(isSingleAnswer);
       if (subject) {
         valid = valid.filter(q => q.subject === subject);
+      }
+      if (years) {
+        const yset = new Set(String(years).split(',').map(s => s.trim()).filter(Boolean));
+        if (yset.size) valid = valid.filter(q => yset.has(q.roc_year));
       }
       const picked = shuffle(valid).slice(0, target);
       return res.json({ total: picked.length, questions: picked, mode: 'random' });

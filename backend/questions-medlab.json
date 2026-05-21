@@ -13356,12 +13356,12 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 12,
-    "question": "下列何者是這張心電圖的最佳診斷？右側枝傳導阻斷",
+    "question": "下列何者是這張心電圖的最佳診斷？（此題含圖）",
     "options": {
-      "A": "I",
-      "B": "aVR",
-      "C": "V1",
-      "D": "V4"
+      "A": "右側枝傳導阻斷",
+      "B": "左側枝傳導阻斷",
+      "C": "急性前壁心肌梗塞",
+      "D": "高血鉀症"
     },
     "answer": "A",
     "explanation": "",
@@ -14188,12 +14188,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 52,
-    "question": "petigo）是由何",
+    "question": "膿疱瘡(Impetigo)是由何種致病菌造成?",
     "options": {
-      "A": "？",
-      "B": "桿菌",
-      "C": "金黃葡萄球菌",
-      "D": "霍亂弧菌"
+      "A": "鏈球菌",
+      "B": "大腸桿菌",
+      "C": "金黃葡萄球菌",
+      "D": "霍亂弧菌"
     },
     "answer": "C",
     "explanation": ""
@@ -30139,12 +30139,12 @@
     "subject_name": "生物化學",
     "stage_id": 8,
     "number": 32,
-    "question": "下列有關維生素缺乏所引起的疾病之敘述，何者最為錯誤？",
+    "question": "下列有關維生素缺乏所引起的疾病之敘述,何者最為錯誤?",
     "options": {
-      "A": "缺少菸鹹酸引起癩皮病",
-      "B": "缺少維生素B",
-      "C": "B6",
-      "D": "B引起惡性貧血"
+      "A": "缺少菸鹹酸引起癩皮病",
+      "B": "缺少維生素B₆引起惡性貧血",
+      "C": "缺少維生素B₁引起腳氣病",
+      "D": "缺少維生素A引起乾眼症"
     },
     "answer": "B",
     "explanation": ""
@@ -120321,12 +120321,12 @@
     "subject_name": "微生物學",
     "stage_id": 7,
     "number": 6,
-    "question": "糞便培養時，關於致病菌與最佳培養條件之配對，下列何者錯誤？",
+    "question": "糞便培養時,關於致病菌與最佳培養條件之配對,下列何者錯誤?",
     "options": {
-      "A": "Shigella boydii–35°C，有氧培養箱",
-      "B": "Vibrio cholerae–35°C，有氧培養箱",
-      "C": "lostridium difficile–35°C，有氧培養箱",
-      "D": "Clostridium difficile–35℃，有氧培養箱"
+      "A": "Shigella boydii-35℃,有氧培養箱",
+      "B": "Vibrio cholerae-35℃,有氧培養箱",
+      "C": "Campylobacter jejuni-42℃,微需氧培養箱",
+      "D": "Clostridium difficile-35℃,有氧培養箱"
     },
     "answer": "D",
     "explanation": ""
@@ -135256,10 +135256,10 @@
     "subject_name": "臨床血清免疫學",
     "stage_id": 10,
     "number": 28,
-    "question": "下列何者屬於非活性疫苗（killed vaccine）？",
+    "question": "下列何者屬於非活性疫苗(killed vaccine)?",
     "options": {
-      "A": "型肝炎疫苗",
-      "B": "型肝炎疫苗",
+      "A": "A型肝炎疫苗",
+      "B": "B型肝炎疫苗",
       "C": "麻疹疫苗",
       "D": "沙賓疫苗"
     },
@@ -155562,11 +155562,11 @@
     "subject_name": "臨床鏡檢學",
     "stage_id": 5,
     "number": 1,
-    "question": "關於顯微鏡物鏡的刻度，下列何者表示可以不使用蓋玻片來觀察檢體？",
+    "question": "關於顯微鏡物鏡的刻度,下列何者表示可以不使用蓋玻片來觀察檢體?",
     "options": {
-      "A": "po 40",
+      "A": "160/-",
       "B": "0.65",
-      "C": "160／0.17",
+      "C": "160/0.17",
       "D": "Apo 40"
     },
     "answer": "A",

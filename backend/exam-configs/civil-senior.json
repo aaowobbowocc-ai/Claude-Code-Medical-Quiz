@@ -1,6 +1,6 @@
 {
   "id": "civil-senior",
-  "name": "高考三等",
+  "name": "高考三等 一般行政",
   "short": "高考",
   "icon": "🏛️",
   "category": "civil-service",
@@ -10,63 +10,52 @@
   "persona": [
     "civil-exam-prep"
   ],
-  "sharedBanks": [],
-  "sharedScope": "none",
+  "sharedBanks": [
+    "common_law_knowledge",
+    "common_constitution",
+    "common_law_basics",
+    "common_english",
+    "common_chinese",
+    "common_admin_studies",
+    "common_admin_law"
+  ],
+  "sharedScope": "level_3_common",
   "uxHints": {
-    "defaultMode": "pure",
+    "defaultMode": "reservoir",
     "longText": true
   },
-  "questionsFile": "questions-civil-senior.json",
-  "totalQ": 1188,
-  "passScore": null,
-  "passRate": null,
+  "questionsFile": null,
+  "totalQ": 2475,
+  "passScore": 0,
+  "passRate": 0,
   "papers": [
     {
-      "id": "paper1",
+      "id": "law_knowledge",
       "name": "法學知識與英文",
       "subject": "法學知識與英文",
-      "subjects": "中華民國憲法、法學緒論、英文",
-      "count": 50,
-      "breakdown": [
-        {
-          "subject": "憲法",
-          "count": 15
-        },
-        {
-          "subject": "法學緒論",
-          "count": 15
-        },
-        {
-          "subject": "英文",
-          "count": 20
-        }
-      ],
-      "breakdownNote": "依歷屆題分布估計",
-      "timeLimit": 60
+      "subjects": "中華民國憲法、法學緒論、英文（合卷）",
+      "count": 0
     },
     {
-      "id": "paper2",
+      "id": "chinese",
       "name": "國文（測驗）",
-      "subject": "國文（測驗）",
-      "subjects": "作文與測驗之測驗部分",
-      "count": 10,
-      "timeLimit": null
+      "subject": "國文",
+      "subjects": "公文、閱讀測驗",
+      "count": 0
     },
     {
-      "id": "paper3",
-      "name": "行政學",
-      "subject": "行政學",
-      "subjects": "行政學（選擇題部分）",
-      "count": 25,
-      "timeLimit": null
-    },
-    {
-      "id": "paper4",
+      "id": "admin_law",
       "name": "行政法",
       "subject": "行政法",
-      "subjects": "行政法（選擇題部分）",
-      "count": 25,
-      "timeLimit": null
+      "subjects": "行政程序法、行政罰法、行政救濟",
+      "count": 0
+    },
+    {
+      "id": "public_admin",
+      "name": "行政學",
+      "subject": "行政學",
+      "subjects": "行政學理論、組織、人事行政",
+      "count": 0
     }
   ],
   "stages": [
@@ -77,70 +66,24 @@
     }
   ],
   "ui": {
-    "tagNames": {
-      "law_knowledge_english": "法學知識與英文",
-      "chinese": "國文（測驗）",
-      "admin_studies": "行政學",
-      "admin_law": "行政法"
-    },
-    "stageStyles": {
-      "all": {
-        "icon": "🎲",
-        "color": "#64748B"
-      },
-      "law_knowledge_english": {
-        "icon": "⚖️",
-        "color": "#6366F1"
-      },
-      "chinese": {
-        "icon": "📝",
-        "color": "#F59E0B"
-      },
-      "admin_studies": {
-        "icon": "🏢",
-        "color": "#10B981"
-      },
-      "admin_law": {
-        "icon": "📜",
-        "color": "#8B5CF6"
-      }
-    },
-    "subjectColors": {
-      "法學知識與英文": "#6366F1",
-      "國文（測驗）": "#F59E0B",
-      "行政學": "#10B981",
-      "行政法": "#8B5CF6"
-    }
+    "tagNames": {},
+    "stageStyles": {},
+    "subjectColors": {}
   },
   "seo": {
-    "platformName": "國考知識王 — 高考三等題庫練習平台",
+    "platformName": "國考知識王 — 高考三等一般行政題庫練習平台",
     "title": "國考知識王",
-    "fullName": "高考三等（公務人員高等考試三級）",
+    "fullName": "高考三等 一般行政（公務人員高等考試三級）",
     "shortName": "高考三等",
-    "studentType": "公職考生",
-    "years": "106-114",
-    "totalQ": 1188,
-    "examDesc": "公務人員高等考試三級考試，為我國公職考試中規模最大的一類。共同科目法學知識與英文 50 題、國文測驗 10 題，專業科目行政學 25 題、行政法 25 題，共 110 題選擇題。",
-    "paperDesc": "共同科目：法學知識與英文 50 題、國文 10 題。專業科目（選擇題部分）：行政學 25 題、行政法 25 題。",
-    "subjects": "法學知識與英文、國文（測驗）、行政學、行政法",
-    "mockDesc": "模擬高考三等一般行政選擇題 110 題",
-    "subjectDetails": [
-      [
-        "法學知識與英文",
-        "涵蓋中華民國憲法、法學緒論、英文三大部分。"
-      ],
-      [
-        "國文（測驗）",
-        "作文與測驗的測驗部分，10 題選擇題。"
-      ],
-      [
-        "行政學",
-        "行政學選擇題部分，25 題。"
-      ],
-      [
-        "行政法",
-        "行政法選擇題部分，25 題。"
-      ]
-    ]
+    "studentType": "公職考生、轉職應考者",
+    "years": "103 起",
+    "totalQ": 2475,
+    "examDesc": "公務人員高等考試三級考試一般行政類科，為我國公職考試中規模最大的一類，由考選部舉辦、採名額制錄取。",
+    "paperDesc": "共同科目（國文、法學知識與英文）+ 專業科目（行政法、行政學等）。",
+    "subjects": "憲法、法學緒論、國文、英文、行政法、行政學等",
+    "mockDesc": "高考三等一般行政模擬考"
+  },
+  "meta": {
+    "officialSystem": "公務高普考"
   }
 }

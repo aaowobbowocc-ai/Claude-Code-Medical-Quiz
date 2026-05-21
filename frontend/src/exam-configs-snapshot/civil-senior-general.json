@@ -26,7 +26,7 @@
     "longText": true
   },
   "questionsFile": null,
-  "totalQ": 0,
+  "totalQ": 2475,
   "passScore": 0,
   "passRate": 0,
   "papers": [
@@ -78,10 +78,13 @@
     "shortName": "高考三等",
     "studentType": "公職應屆考生、轉職應考者",
     "years": "106 起",
-    "totalQ": 3328,
+    "totalQ": 2475,
     "examDesc": "公務人員高等考試三級考試（高考三等）一般行政類科，由考選部舉辦，採名額制錄取。",
     "paperDesc": "共同科目（國文、法學知識與英文）+ 專業科目（行政法、行政學、政治學等）。",
     "subjects": "憲法、法學緒論、國文、英文、行政法、行政學等",
-    "mockDesc": "高考三等一般行政模擬考"
+    "mockDesc": "高考三等一般行政模擬考（拓荒中）"
+  },
+  "meta": {
+    "officialSystem": "公務高普考"
   }
 }

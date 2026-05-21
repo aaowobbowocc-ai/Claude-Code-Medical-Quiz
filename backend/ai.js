@@ -27,6 +27,7 @@ const GEMINI_EXAMS = new Set([
   'vet', 'social-worker', 'lawyer1', 'judicial', 'customs', 'police',
   'civil-senior', 'civil-senior-general', 'civil-junior-general', 'civil-junior-civil-affairs', 'civil-elementary-general',
   'driver-car', 'driver-moto',
+  'state-mgmt', 'state-hr', 'state-finance', 'state-it',
 ]);
 
 // RAG context retrieval scope — medical exams use wikipedia_zh/en corpus,

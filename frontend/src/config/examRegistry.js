@@ -27,7 +27,9 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v19: 新增 公共衛生師 public-health 考試（111-114 年，957 題）
 // v20: 新增 牙體技術師 dental-tech 考試（107-114 年，1574 題）
 // v21: 新增 普考一般民政 civil-junior-civil-affairs（共用 bank + 地方自治概要，1822 題）
-const CACHE_KEY = 'exam-registry-v21'
+// v22: 新增 國營事業聯招 4 考試 state-mgmt/hr/finance/it（109-114 年，1198 題 + 英文共用 240）
+// v23: civil-senior 改 shell（高考三等一般行政），重爬修正舊 pdfjs 切錯選項的污染題庫
+const CACHE_KEY = 'exam-registry-v23'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache
@@ -95,6 +97,7 @@ const EXAM_ORDER = [
   'lawyer1', 'judicial',
   'civil-senior', 'customs', 'police', 'police4',
   'civil-senior-general', 'civil-junior-general', 'civil-junior-civil-affairs', 'civil-elementary-general',
+  'state-mgmt', 'state-hr', 'state-finance', 'state-it',
   'driver-car', 'driver-moto',
   'gsat', 'ast',
 ]
@@ -122,26 +125,33 @@ const CATEGORY_META = {
     description: '高普考、初考、各類特考',
     order: 3,
   },
+  'state-enterprise': {
+    id: 'state-enterprise',
+    icon: '⚡',
+    name: '國營事業',
+    description: '台電、中油、台水、台糖聯合招考',
+    order: 4,
+  },
   'common-subjects': {
     id: 'common-subjects',
     icon: '📚',
     name: '共同科目',
     description: '憲法、法緒、國文、英文（水庫練習）',
-    order: 4,
+    order: 5,
   },
   independent: {
     id: 'independent',
     icon: '🚗',
     name: '駕照考試',
     description: '汽車駕照、機車駕照',
-    order: 5,
+    order: 6,
   },
   'college-entrance': {
     id: 'college-entrance',
     icon: '🎓',
     name: '大學入學',
     description: '學科能力測驗（學測）、分科測驗',
-    order: 6,
+    order: 7,
   },
 }
 

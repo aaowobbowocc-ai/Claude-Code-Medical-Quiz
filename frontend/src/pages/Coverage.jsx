@@ -37,6 +37,12 @@ const CATEGORIES = [
     ],
   },
   {
+    id: 'state-enterprise',
+    name: '國營事業',
+    icon: '⚡',
+    exams: ['state-mgmt', 'state-hr', 'state-finance', 'state-it'],
+  },
+  {
     id: 'independent',
     name: '駕照考試',
     icon: '🚗',

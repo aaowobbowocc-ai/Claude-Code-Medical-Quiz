@@ -37,7 +37,6 @@ const EXAM_FILES = {
   'dental-tech': 'questions-dental-tech.json',
   optometrist: 'questions-optometrist.json',
   'optometrist-junior': 'questions-optometrist-junior.json',
-  'civil-senior': 'questions-civil-senior.json',
   customs: 'questions-customs.json',
   judicial: 'questions-judicial.json',
   lawyer1: 'questions-lawyer1.json',
@@ -48,6 +47,10 @@ const EXAM_FILES = {
   gsat: 'questions-gsat.json',
   ast: 'questions-ast.json',
   rt: 'questions-rt.json',
+  'state-mgmt': 'questions-state-mgmt.json',
+  'state-hr': 'questions-state-hr.json',
+  'state-finance': 'questions-state-finance.json',
+  'state-it': 'questions-state-it.json',
 }
 
 // In-memory cache (per page-load)

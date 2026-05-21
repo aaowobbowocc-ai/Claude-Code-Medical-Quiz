@@ -10,7 +10,11 @@
   "persona": [
     "civil-exam-prep"
   ],
-  "sharedBanks": ["common_chinese", "common_english", "common_law_knowledge"],
+  "sharedBanks": [
+    "common_chinese",
+    "common_english",
+    "common_law_knowledge"
+  ],
   "sharedScope": "level_3_common",
   "uxHints": {
     "defaultMode": "pure",
@@ -87,7 +91,11 @@
     }
   ],
   "stages": [
-    { "id": 0, "tag": "all", "name": "全部" }
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
   ],
   "ui": {
     "tagNames": {
@@ -101,15 +109,42 @@
       "police_regulations": "警察法規概要"
     },
     "stageStyles": {
-      "all": { "icon": "🎲", "color": "#64748B" },
-      "chinese": { "icon": "📝", "color": "#EF4444" },
-      "english": { "icon": "🔤", "color": "#3B82F6" },
-      "law_knowledge": { "icon": "⚖️", "color": "#8B5CF6" },
-      "criminal_law": { "icon": "🔒", "color": "#DC2626" },
-      "constitutional_law": { "icon": "📜", "color": "#7C3AED" },
-      "jurisprudence": { "icon": "📚", "color": "#A855F7" },
-      "administrative_law": { "icon": "🏛️", "color": "#9333EA" },
-      "police_regulations": { "icon": "🚓", "color": "#EA580C" }
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "chinese": {
+        "icon": "📝",
+        "color": "#EF4444"
+      },
+      "english": {
+        "icon": "🔤",
+        "color": "#3B82F6"
+      },
+      "law_knowledge": {
+        "icon": "⚖️",
+        "color": "#8B5CF6"
+      },
+      "criminal_law": {
+        "icon": "🔒",
+        "color": "#DC2626"
+      },
+      "constitutional_law": {
+        "icon": "📜",
+        "color": "#7C3AED"
+      },
+      "jurisprudence": {
+        "icon": "📚",
+        "color": "#A855F7"
+      },
+      "administrative_law": {
+        "icon": "🏛️",
+        "color": "#9333EA"
+      },
+      "police_regulations": {
+        "icon": "🚓",
+        "color": "#EA580C"
+      }
     },
     "subjectColors": {
       "國文": "#EF4444",
@@ -135,10 +170,25 @@
     "subjects": "國文、英文、法學知識、刑法概要、中華民國憲法概要、法學緒論、行政法概要、警察法規概要",
     "mockDesc": "模擬一般警察特考四等選擇題",
     "subjectDetails": [
-      ["國文", "國文選擇題部分，每年 10 題（原卷含作文+公文+測驗）。"],
-      ["英文", "英文單選題，每年 50 題。"],
-      ["法學知識", "含中華民國憲法概要與法學緒論，每年 50 題。"],
-      ["刑法概要", "刑法概要選擇題部分，每年 25 題（原卷含申論+選擇）。"]
+      [
+        "國文",
+        "國文選擇題部分，每年 10 題（原卷含作文+公文+測驗）。"
+      ],
+      [
+        "英文",
+        "英文單選題，每年 50 題。"
+      ],
+      [
+        "法學知識",
+        "含中華民國憲法概要與法學緒論，每年 50 題。"
+      ],
+      [
+        "刑法概要",
+        "刑法概要選擇題部分，每年 25 題（原卷含申論+選擇）。"
+      ]
     ]
+  },
+  "meta": {
+    "officialSystem": "警察特考"
   }
 }

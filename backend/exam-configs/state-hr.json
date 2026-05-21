@@ -1,0 +1,73 @@
+{
+  "id": "state-hr",
+  "name": "國營聯招 人資",
+  "short": "國營人資",
+  "icon": "👥",
+  "category": "state-enterprise",
+  "subCategory": "新進職員甄試",
+  "selectionType": "quota",
+  "persona": [
+    "career-changer"
+  ],
+  "questionsFile": "questions-state-hr.json",
+  "sharedBanks": [
+    "common_state_english"
+  ],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "reservoir",
+    "longText": true
+  },
+  "totalQ": 588,
+  "passScore": 0,
+  "passRate": 0,
+  "papers": [
+    {
+      "id": "professional",
+      "name": "專業科目A",
+      "subject": "專業科目",
+      "subjects": "企業管理、法學緒論",
+      "count": 50
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "state_hr": "人資專業",
+      "state_english": "英文"
+    },
+    "stageStyles": {
+      "state_hr": {
+        "icon": "👥",
+        "color": "#0EA5E9"
+      },
+      "state_english": {
+        "icon": "🔤",
+        "color": "#8B5CF6"
+      }
+    },
+    "subjectColors": {}
+  },
+  "seo": {
+    "platformName": "國考知識王 — 國營聯招人資題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "經濟部國營事業聯合招考 人資類",
+    "shortName": "國營人資",
+    "studentType": "轉職應考者、人力資源與管理科系畢業生",
+    "years": "103 起",
+    "totalQ": 588,
+    "examDesc": "經濟部所屬事業機構（台電、中油、台水、台糖）新進職員聯合甄試人資類，由台灣電力公司統一命題，採名額制錄取。",
+    "paperDesc": "專業科目A（企業管理、法學緒論）共 50 題單選，另收錄共同科目英文題庫。",
+    "subjects": "企業管理、法學緒論、英文",
+    "mockDesc": "國營聯招人資模擬考（103-114 年歷屆試題）"
+  },
+  "meta": {
+    "officialSystem": "國營聯招"
+  }
+}

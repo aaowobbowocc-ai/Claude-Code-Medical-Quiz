@@ -41,14 +41,8 @@ const SOURCES = [
     split: { chinese: [1,100] } },
   { file: 'questions-judicial.json', exam: 'judicial', level: 'senior', subject: '法學知識與英文',
     split: { constitution: [1,15], law_basics: [16,30], english: [31,50] } },
-  { file: 'questions-civil-senior.json', exam: 'civil-senior', level: 'senior', subject: '法學知識與英文',
-    split: { constitution: [1,15], law_basics: [16,30], english: [31,50] } },
-  { file: 'questions-civil-senior.json', exam: 'civil-senior', level: 'senior', subject: '國文（測驗）',
-    split: { chinese: [1,100] } },
-  { file: 'questions-civil-senior.json', exam: 'civil-senior', level: 'senior', subject: '行政學',
-    split: { admin_studies: [1,200] } },
-  { file: 'questions-civil-senior.json', exam: 'civil-senior', level: 'senior', subject: '行政法',
-    split: { admin_law: [1,200] } },
+  // civil-senior 已改由 scripts/rebuild-civil-senior-banks.js（parseColumnAware）重建，
+  // 不再從 questions-civil-senior.json 匯入（該檔為舊 pdfjs scraper 切錯選項的污染資料）。
   { file: 'questions-police.json', exam: 'police', level: 'senior', subject: '行政學',
     split: { admin_studies: [1,200] } },
   { file: 'questions-police.json', exam: 'police', level: 'senior', subject: '行政法',

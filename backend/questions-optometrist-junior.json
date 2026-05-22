@@ -26779,6 +26779,226 @@
       },
       "answer": "D",
       "explanation": ""
+    },
+    {
+      "id": 51,
+      "roc_year": "107",
+      "session": "第二次",
+      "exam_code": "107110",
+      "subject": "眼球構造與倫理法規概要",
+      "subject_tag": "optj_anatomy",
+      "subject_name": "眼球構造與倫理法規概要",
+      "stage_id": 0,
+      "number": 16,
+      "question": "有關人類視網膜感光細胞之敘述,下列何者錯誤?",
+      "options": {
+        "A": "中心小凹(foveola)僅有錐細胞分布,無桿細胞",
+        "B": "錐細胞數目多於桿細胞",
+        "C": "錐細胞與亮視覺和彩色視覺有關",
+        "D": "桿細胞較錐細胞細長"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 52,
+      "roc_year": "107",
+      "session": "第二次",
+      "exam_code": "107110",
+      "subject": "驗光學概要",
+      "subject_tag": "optj_optometry",
+      "subject_name": "驗光學概要",
+      "stage_id": 0,
+      "number": 28,
+      "question": "有一鏡片,它的度數為-6.00DS/-2.00DC×030,此鏡片和下列那個鏡片是同一度數?",
+      "options": {
+        "A": "-8.00DS/-2.00DC×120",
+        "B": "+8.00DS/+2.00DC×120",
+        "C": "-8.00DS/+2.00DC×030",
+        "D": "-8.00DS/+2.00DC×120"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 53,
+      "roc_year": "107",
+      "session": "第二次",
+      "exam_code": "107110",
+      "subject": "隱形眼鏡學概要",
+      "subject_tag": "optj_contact_lens",
+      "subject_name": "隱形眼鏡學概要",
+      "stage_id": 0,
+      "number": 11,
+      "question": "下列那一種隱形眼鏡的製造方式，品質較穩定且製造較簡單，常用來大量生產每日拋軟式隱形眼鏡？",
+      "options": {
+        "A": "車削法(lathe cutting)",
+        "B": "旋模法(spin casting)",
+        "C": "鑄模法(cast molding)",
+        "D": "混合法(combination)"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 54,
+      "roc_year": "107",
+      "session": "第二次",
+      "exam_code": "107110",
+      "subject": "隱形眼鏡學概要",
+      "subject_tag": "optj_contact_lens",
+      "subject_name": "隱形眼鏡學概要",
+      "stage_id": 0,
+      "number": 25,
+      "question": "配戴者眼睛度數-4.25DS/-1.00DC×180, 軟式散光隱形眼鏡試戴片在眼睛中轉動偏位逆時針 10 度, 鏡片度數應該換為?",
+      "options": {
+        "A": "-4.00DS/-1.00DC×010",
+        "B": "-4.00DS/-1.00DC×170",
+        "C": "-4.25DS/-1.00DC×180",
+        "D": "-4.00DS/-1.00DC×180"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 55,
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "驗光學概要",
+      "subject_tag": "optj_optometry",
+      "subject_name": "驗光學概要",
+      "stage_id": 0,
+      "number": 12,
+      "question": "使用魏氏四點(Worth four-dot)進行檢查時,請患者右眼戴上紅色濾鏡,左眼戴上綠色濾鏡並觀看燈筒,若患者此時發生左眼抑制,他將看到幾個光點?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 56,
+      "roc_year": "113",
+      "session": "第二次",
+      "exam_code": "113100",
+      "subject": "驗光學概要",
+      "subject_tag": "optj_optometry",
+      "subject_name": "驗光學概要",
+      "stage_id": 0,
+      "number": 32,
+      "question": "若患者的角膜弧度儀(Keratometry)量測值為:OD:43.25@005/44.50@115; OS: 42.50@180/44.25@085,且雙眼 VA皆為0.8,下列何種散光檢查的方式較適合幫助此患者確認其散光度數及最佳矯正視力(MPMVA)?",
+      "options": {
+        "A": "鐘面圖(clock dial test)",
+        "B": "傑克森交叉圓柱鏡(Jackson's cross-cylinder lens test)",
+        "C": "裂孔板(Stenopaic Silt)",
+        "D": "扇形圖(Fan Chart)"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 57,
+      "roc_year": "114",
+      "session": "第二次",
+      "exam_code": "114100",
+      "subject": "眼球構造與倫理法規概要",
+      "subject_tag": "optj_anatomy",
+      "subject_name": "眼球構造與倫理法規概要",
+      "stage_id": 0,
+      "number": 20,
+      "question": "人類視覺的感受器（receptor）為何？",
+      "options": {
+        "A": "桿狀細胞和錐狀細胞（rod cells and cone cells）",
+        "B": "視網膜色素上皮細胞（retinal pigment epithelial cells）",
+        "C": "梅氏小體（Meissner's corpuscles）",
+        "D": "毛細胞（hair cells）"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 58,
+      "roc_year": "108",
+      "session": "第二次",
+      "exam_code": "108110",
+      "subject": "驗光學概要",
+      "subject_tag": "optj_optometry",
+      "subject_name": "驗光學概要",
+      "stage_id": 0,
+      "number": 7,
+      "question": "當光線穿透一塊標示 3Δ 的稜鏡，會在其後方 3 m 處產生多少偏折?",
+      "options": {
+        "A": "3 cm",
+        "B": "3 mm",
+        "C": "9 mm",
+        "D": "9 cm"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 59,
+      "roc_year": "108",
+      "session": "第二次",
+      "exam_code": "108110",
+      "subject": "驗光學概要",
+      "subject_tag": "optj_optometry",
+      "subject_name": "驗光學概要",
+      "stage_id": 0,
+      "number": 27,
+      "question": "鏡片驗度儀上,在 60 度的位置上取得鏡片的度數為-1.00 D,在 150 度的位置上取得鏡片的度數為-2.00 D,則此鏡片的度數為何?",
+      "options": {
+        "A": "-1.00DS/-2.00DC × 150",
+        "B": "-1.00DS/-2.00DC × 060",
+        "C": "-1.00DS/-1.00DC × 060",
+        "D": "-1.00DS/-1.00DC × 150"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 60,
+      "roc_year": "108",
+      "session": "第二次",
+      "exam_code": "108110",
+      "subject": "驗光學概要",
+      "subject_tag": "optj_optometry",
+      "subject_name": "驗光學概要",
+      "stage_id": 0,
+      "number": 28,
+      "question": "靜態視網膜檢影法中,檢測時未加入工作輔助鏡片,檢測距離患者67cm,得到患者水平方向屈光度為-4.00D, 垂直方向屈光度為-2.00D,則患者之屈光異常為何?",
+      "options": {
+        "A": "-3.50DS/-2.00DC×090",
+        "B": "-3.50DS/-5.50DC× 090",
+        "C": "-5.50DS/-3.50DC × 090",
+        "D": "-2.00DS/-2.00DC × 090"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 61,
+      "roc_year": "108",
+      "session": "第二次",
+      "exam_code": "108110",
+      "subject": "隱形眼鏡學概要",
+      "subject_tag": "optj_contact_lens",
+      "subject_name": "隱形眼鏡學概要",
+      "stage_id": 0,
+      "number": 26,
+      "question": "一個屈光度為-4.50 DS 的人,下列何者為其最理想的硬式隱形眼鏡之螢光圖?",
+      "options": {
+        "A": "螢光圖 (A)",
+        "B": "螢光圖 (B)",
+        "C": "螢光圖 (C)",
+        "D": "螢光圖 (D)"
+      },
+      "answer": "A",
+      "explanation": ""
     }
   ],
   "total": 1339

@@ -303,6 +303,12 @@ try {
   }
 } catch (e) { /* ignore */ }
 
+// 驗光師/驗光生：從 _probe-optom.json 併入 URL 對照（key = code|subject）
+try {
+  const op = JSON.parse(fs.readFileSync(path.join(__dirname, '..', '_tmp', '_probe-optom.json'), 'utf8'))
+  for (const e of op) URL_LOOKUP[`${e.code}|${e.subject}`] = { c: e.c, s: e.s }
+} catch (e) { /* ignore */ }
+
 // ─── Exam config: expected question counts ─────────────────────────────────────
 const EXAM_FILES = {
   'nursing':       { file: 'questions-nursing.json',       config: 'exam-configs/nursing.json' },
@@ -321,6 +327,8 @@ const EXAM_FILES = {
   'pt':            { file: 'questions-pt.json',            config: 'exam-configs/pt.json' },
   'dental1':       { file: 'questions-dental1.json',       config: 'exam-configs/dental1.json' },
   'dental2':       { file: 'questions-dental2.json',       config: 'exam-configs/dental2.json' },
+  'optometrist':        { file: 'questions-optometrist.json',        config: 'exam-configs/optometrist.json' },
+  'optometrist-junior': { file: 'questions-optometrist-junior.json', config: 'exam-configs/optometrist-junior.json' },
 }
 
 function getExpectedCount(cfg, subject) {
@@ -333,7 +341,7 @@ function getExpectedCount(cfg, subject) {
 
 // For these exams every question is a 選擇題 — use cross-year max to detect missing
 // second-column questions (e.g. nursing 102/103 where parser only got Q1-40 of an 80-Q paper)
-const PURE_SELECTION_EXAMS = new Set(['nursing','tcm1','tcm2','doctor2','medlab','radiology','pt','dental1','dental2','pharma1','pharma2'])
+const PURE_SELECTION_EXAMS = new Set(['nursing','tcm1','tcm2','doctor2','medlab','radiology','pt','dental1','dental2','pharma1','pharma2','optometrist','optometrist-junior'])
 
 // Exam format changes: when papers shrank in later years, cap expected count by new max
 // to avoid false "missing Q51-80" for 50-question papers

@@ -23899,6 +23899,106 @@
       },
       "answer": "A",
       "explanation": ""
+    },
+    {
+      "id": 41,
+      "roc_year": "111",
+      "session": "第二次",
+      "exam_code": "111110",
+      "subject": "環境與職業衛生",
+      "subject_tag": "ph_env_occ",
+      "subject_name": "環境與職業衛生",
+      "stage_id": 0,
+      "number": 18,
+      "question": "LD50為5 mg/kg的物質比 LC50為多少mg/m³的物質毒性更大?",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "不可直接比較"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 42,
+      "roc_year": "112",
+      "session": "第二次",
+      "exam_code": "112110",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 34,
+      "question": "請問其標準誤分別為何？標準誤 = 標準差 / √樣本大小",
+      "options": {
+        "A": "0.94 對 0.50",
+        "B": "0.50 對 0.94",
+        "C": "7.88 對 4.06",
+        "D": "4.06 對 7.88"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 43,
+      "roc_year": "112",
+      "session": "第二次",
+      "exam_code": "112110",
+      "subject": "衛生行政與管理",
+      "subject_tag": "ph_admin",
+      "subject_name": "衛生行政與管理",
+      "stage_id": 0,
+      "number": 32,
+      "question": "下列那一個選項的圖型是屬於「農村型」的人口金字塔圖?",
+      "options": {
+        "A": "(A)",
+        "B": "(B)",
+        "C": "(C)",
+        "D": "(D)"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 44,
+      "roc_year": "110",
+      "session": "第二次",
+      "exam_code": "110180",
+      "subject": "衛生行政與管理",
+      "subject_tag": "ph_admin",
+      "subject_name": "衛生行政與管理",
+      "stage_id": 0,
+      "number": 4,
+      "question": "「毒品及其他物質成癮防治政策之規劃、推動及相關法規之研訂」業務是屬於衛生福利部轄下的那一個業務單位?",
+      "options": {
+        "A": "醫事司",
+        "B": "護理及健康照護司",
+        "C": "心理及口腔健康司",
+        "D": "保護服務司"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 45,
+      "roc_year": "110",
+      "session": "第二次",
+      "exam_code": "110180",
+      "subject": "環境與職業衛生",
+      "subject_tag": "ph_env_occ",
+      "subject_name": "環境與職業衛生",
+      "stage_id": 0,
+      "number": 13,
+      "question": "「食品良好衛生規範準則」(GHP)係依「食品安全衛生管理法」第8條第4項規定訂定,該準則從四大面向要求各類食品相關業者均須符合相關規定。下列關於GHP的規範,何者正確?",
+      "options": {
+        "A": "食品業者之從業人員、作業場所、設施衛生管理及其品保制度,均應符合食品之良好衛生規範準則",
+        "B": "GHP 規範的食品業者不包括塑膠類食品器具、食品容器或包裝製造業",
+        "C": "GHP 規範的食品業者場區及環境範圍不包括員工宿舍",
+        "D": "冷凍食品之品溫應在攝氏負10度以下"
+      },
+      "answer": "A",
+      "explanation": ""
     }
   ],
   "total": 1195

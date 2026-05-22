@@ -309,6 +309,12 @@ try {
   for (const e of op) URL_LOOKUP[`${e.code}|${e.subject}`] = { c: e.c, s: e.s }
 } catch (e) { /* ignore */ }
 
+// 公衛師：6 科固定順序，c 與 s 前綴依年度（s 流水號 1-6）
+const PH_SUBJECTS = ['衛生法規及倫理', '生物統計學', '流行病學', '衛生行政與管理', '環境與職業衛生', '健康社會行為學']
+for (const [phCode, phC, phSp] of [['110180','401','14'],['111110','110','09'],['112110','108','08'],['113100','108','08'],['114100','108','08']]) {
+  PH_SUBJECTS.forEach((subj, i) => { URL_LOOKUP[`${phCode}|${subj}`] = { c: phC, s: `${phSp}0${i + 1}` } })
+}
+
 // ─── Exam config: expected question counts ─────────────────────────────────────
 const EXAM_FILES = {
   'nursing':       { file: 'questions-nursing.json',       config: 'exam-configs/nursing.json' },
@@ -329,6 +335,7 @@ const EXAM_FILES = {
   'dental2':       { file: 'questions-dental2.json',       config: 'exam-configs/dental2.json' },
   'optometrist':        { file: 'questions-optometrist.json',        config: 'exam-configs/optometrist.json' },
   'optometrist-junior': { file: 'questions-optometrist-junior.json', config: 'exam-configs/optometrist-junior.json' },
+  'public-health':      { file: 'questions-public-health.json',      config: 'exam-configs/public-health.json' },
 }
 
 function getExpectedCount(cfg, subject) {
@@ -341,7 +348,7 @@ function getExpectedCount(cfg, subject) {
 
 // For these exams every question is a 選擇題 — use cross-year max to detect missing
 // second-column questions (e.g. nursing 102/103 where parser only got Q1-40 of an 80-Q paper)
-const PURE_SELECTION_EXAMS = new Set(['nursing','tcm1','tcm2','doctor2','medlab','radiology','pt','dental1','dental2','pharma1','pharma2','optometrist','optometrist-junior'])
+const PURE_SELECTION_EXAMS = new Set(['nursing','tcm1','tcm2','doctor2','medlab','radiology','pt','dental1','dental2','pharma1','pharma2','optometrist','optometrist-junior','public-health'])
 
 // Exam format changes: when papers shrank in later years, cap expected count by new max
 // to avoid false "missing Q51-80" for 50-question papers

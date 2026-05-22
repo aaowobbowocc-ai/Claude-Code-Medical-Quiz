@@ -31,7 +31,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v23: civil-senior 改 shell（高考三等一般行政），重爬修正舊 pdfjs 切錯選項的污染題庫
 // v24: judicial 改 shell（司法特考三等），重爬法學知識與英文修正污染
 // v25: 新增 中華郵政 post-indoor/post-outdoor 考試（專業職二內外勤，104-114 年，1098 題）
-const CACHE_KEY = 'exam-registry-v25'
+// v26: judicial 改歸「法律與司法」類別；移除空的「共同科目」身分類別
+const CACHE_KEY = 'exam-registry-v26'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache
@@ -135,26 +136,21 @@ const CATEGORY_META = {
     description: '台電、中油、台水、台糖聯合招考',
     order: 4,
   },
-  'common-subjects': {
-    id: 'common-subjects',
-    icon: '📚',
-    name: '共同科目',
-    description: '憲法、法緒、國文、英文（水庫練習）',
-    order: 5,
-  },
+  // 共同科目不是「身分」、底下也無考試 → 不列入身分選單。
+  // 共同科練習仍由各考試的 sharedBanks（🌊 共同科題庫）提供。
   independent: {
     id: 'independent',
     icon: '🚗',
     name: '駕照考試',
     description: '汽車駕照、機車駕照',
-    order: 6,
+    order: 5,
   },
   'college-entrance': {
     id: 'college-entrance',
     icon: '🎓',
     name: '大學入學',
     description: '學科能力測驗（學測）、分科測驗',
-    order: 7,
+    order: 6,
   },
 }
 

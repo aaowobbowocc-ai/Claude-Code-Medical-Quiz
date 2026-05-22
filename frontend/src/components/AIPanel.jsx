@@ -542,8 +542,8 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
         </p>
       )}
 
-      {/* 推薦參考書（博客來策略聯盟，僅在使用者展開解析後顯示） */}
-      {(showAI || hasExplanation) && <BookRecommendations examId={examId} />}
+      {/* 推薦參考書（博客來策略聯盟）— 作答後解析區底部，不需開 AI 解說即顯示 */}
+      <BookRecommendations examId={examId} />
     </div>
   )
 }

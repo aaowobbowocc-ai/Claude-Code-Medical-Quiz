@@ -154,5 +154,37 @@
       { "id": "0010954219", "title": "教師資格考 教育理念與實務 歷屆試題分類解析" },
       { "id": "0011008965", "title": "教師資格考試：專業科目建構反應素養導向試題作答祕笈" }
     ]
-  }
+  },
+  "_shared": {
+    "_note": "共享清單。考試項目用 {\"use\":\"<key>\"} 引用。",
+    "medical_humanities": {
+      "label": "醫療人文 課外選讀",
+      "books": [
+        { "id": "0010968153", "title": "大醫院小醫師（侯文詠）" },
+        { "id": "0010796447", "title": "凝視死亡：一位外科醫師對衰老與死亡的思索（葛文德）" },
+        { "id": "0010890560", "title": "當呼吸化為空氣（保羅‧卡拉尼提）" },
+        { "id": "0010795411", "title": "急診室的一堂課（陳志華）" },
+        { "id": "0010815895", "title": "醫生好忙！詼諧又真實的醫界人生" }
+      ]
+    }
+  },
+  "doctor1": { "use": "medical_humanities" },
+  "doctor2": { "use": "medical_humanities" },
+  "dental1": { "use": "medical_humanities" },
+  "dental2": { "use": "medical_humanities" },
+  "pharma2": { "use": "medical_humanities" },
+  "tcm1": { "use": "medical_humanities" },
+  "tcm2": { "use": "medical_humanities" },
+  "vet": { "use": "medical_humanities" },
+  "pt": { "use": "medical_humanities" },
+  "ot": { "use": "medical_humanities" },
+  "rt": { "use": "medical_humanities" },
+  "audiologist": { "use": "medical_humanities" },
+  "speech-therapist": { "use": "medical_humanities" },
+  "clinical-psychology": { "use": "medical_humanities" },
+  "counseling-psychology": { "use": "medical_humanities" },
+  "public-health": { "use": "medical_humanities" },
+  "optometrist": { "use": "medical_humanities" },
+  "optometrist-junior": { "use": "medical_humanities" },
+  "dental-tech": { "use": "medical_humanities" }
 }

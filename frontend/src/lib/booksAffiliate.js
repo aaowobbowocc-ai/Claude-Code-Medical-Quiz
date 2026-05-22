@@ -31,7 +31,9 @@ export function buildBooksLink(itemId) {
  */
 export function getBookSection(examId) {
   if (!examId) return null
-  const entry = bookData[examId]
+  let entry = bookData[examId]
+  // {"use":"<key>"} → 指向 _shared 共享清單（醫事考試共用的人文選書）
+  if (entry && entry.use) entry = (bookData._shared || {})[entry.use]
   if (!entry || !Array.isArray(entry.books)) return null
   const books = entry.books
     .map(b => ({ ...b, url: buildBooksLink(b.id) }))

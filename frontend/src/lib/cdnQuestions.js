@@ -52,6 +52,8 @@ const EXAM_FILES = {
   'state-it': 'questions-state-it.json',
   'post-indoor': 'questions-post-indoor.json',
   'post-outdoor': 'questions-post-outdoor.json',
+  'railway-transport': 'questions-railway-transport.json',
+  'railway-admin': 'questions-railway-admin.json',
 }
 
 // In-memory cache (per page-load)

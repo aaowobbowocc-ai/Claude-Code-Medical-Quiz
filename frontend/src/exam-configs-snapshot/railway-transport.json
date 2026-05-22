@@ -1,0 +1,133 @@
+{
+  "id": "railway-transport",
+  "name": "台鐵招考 運輸營業",
+  "short": "台鐵運輸",
+  "icon": "🚆",
+  "category": "state-enterprise",
+  "subCategory": "台鐵招考",
+  "selectionType": "quota",
+  "persona": [
+    "career-changer"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": false
+  },
+  "questionsFile": "questions-railway-transport.json",
+  "totalQ": 2352,
+  "passScore": null,
+  "passRate": null,
+  "papers": [
+    {
+      "id": "chinese",
+      "name": "國文",
+      "subject": "國文",
+      "subjects": "國文（包括公文格式用語）",
+      "count": 35,
+      "timeLimit": null
+    },
+    {
+      "id": "civics_english",
+      "name": "公民與英文",
+      "subject": "公民與英文",
+      "subjects": "公民（70%）、英文（30%）",
+      "count": 50,
+      "timeLimit": null
+    },
+    {
+      "id": "business_mgmt",
+      "name": "企業管理大意",
+      "subject": "企業管理大意",
+      "subjects": "企業管理大意",
+      "count": 50,
+      "timeLimit": null
+    },
+    {
+      "id": "transport_studies",
+      "name": "鐵路運輸學大意",
+      "subject": "鐵路運輸學大意",
+      "subjects": "鐵路運輸學大意",
+      "count": 50,
+      "timeLimit": null
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "chinese": "國文",
+      "civics_english": "公民與英文",
+      "business_mgmt": "企業管理大意",
+      "transport_studies": "鐵路運輸學大意"
+    },
+    "stageStyles": {
+      "all": {
+        "icon": "🎲",
+        "color": "#64748B"
+      },
+      "chinese": {
+        "icon": "📝",
+        "color": "#F59E0B"
+      },
+      "civics_english": {
+        "icon": "🌐",
+        "color": "#3B82F6"
+      },
+      "business_mgmt": {
+        "icon": "📊",
+        "color": "#0EA5E9"
+      },
+      "transport_studies": {
+        "icon": "🚆",
+        "color": "#10B981"
+      }
+    },
+    "subjectColors": {
+      "國文": "#F59E0B",
+      "公民與英文": "#3B82F6",
+      "企業管理大意": "#0EA5E9",
+      "鐵路運輸學大意": "#10B981"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 台鐵招考運輸營業題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "台鐵招考佐級 運輸營業（鐵路特考佐級運輸營業）",
+    "shortName": "台鐵運輸營業",
+    "studentType": "台鐵招考考生、轉職應考者",
+    "years": "100-112",
+    "totalQ": 2352,
+    "examDesc": "台鐵運輸營業佐級職缺主要辦理車站售票、列車服務、運務及客貨運業務。本題庫收錄鐵路特考佐級運輸營業類科 100-112 年歷屆試題，鐵路特考於 112 年後因台鐵公司化停辦，現由台鐵公司自辦招考，考試科目與佐級高度相同，歷屆試題仍是最佳練習教材。",
+    "paperDesc": "共同科目國文（含公文格式用語）、公民與英文；專業科目企業管理大意、鐵路運輸學大意。全為單選測驗題（國文複選題不納入題庫）。",
+    "subjects": "國文、公民與英文、企業管理大意、鐵路運輸學大意",
+    "mockDesc": "台鐵招考運輸營業模擬考（鐵路特考佐級 100-112 年歷屆試題）",
+    "subjectDetails": [
+      [
+        "國文",
+        "國文測驗題，含公文格式用語。"
+      ],
+      [
+        "公民與英文",
+        "公民佔 70%、英文佔 30%，合卷 50 題。"
+      ],
+      [
+        "企業管理大意",
+        "企業管理基本概念與實務。"
+      ],
+      [
+        "鐵路運輸學大意",
+        "鐵路運輸理論、行車規則與運務知識。"
+      ]
+    ]
+  },
+  "meta": {
+    "officialSystem": "鐵路特考"
+  }
+}

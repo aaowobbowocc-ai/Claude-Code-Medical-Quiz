@@ -32,7 +32,8 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v24: judicial 改 shell（司法特考三等），重爬法學知識與英文修正污染
 // v25: 新增 中華郵政 post-indoor/post-outdoor 考試（專業職二內外勤，104-114 年，1098 題）
 // v26: judicial 改歸「法律與司法」類別；移除空的「共同科目」身分類別
-const CACHE_KEY = 'exam-registry-v26'
+// v27: 新增 台鐵招考 railway-transport/railway-admin 考試（鐵路特考佐級運輸營業/事務管理，100-112 年，4,730 題）
+const CACHE_KEY = 'exam-registry-v27'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache
@@ -102,6 +103,7 @@ const EXAM_ORDER = [
   'civil-senior-general', 'civil-junior-general', 'civil-junior-civil-affairs', 'civil-elementary-general',
   'state-mgmt', 'state-hr', 'state-finance', 'state-it',
   'post-indoor', 'post-outdoor',
+  'railway-transport', 'railway-admin',
   'driver-car', 'driver-moto',
   'gsat', 'ast',
 ]
@@ -133,7 +135,7 @@ const CATEGORY_META = {
     id: 'state-enterprise',
     icon: '⚡',
     name: '國營事業',
-    description: '台電、中油、台水、台糖聯合招考',
+    description: '台電、中油、台水、台糖聯合招考、中華郵政、台鐵招考',
     order: 4,
   },
   // 共同科目不是「身分」、底下也無考試 → 不列入身分選單。

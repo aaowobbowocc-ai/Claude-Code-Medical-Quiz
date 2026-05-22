@@ -284,6 +284,7 @@ function QuestionCard({ q, stageMap, readingStyle, readingPrefs, updateReadingPr
               sourceBankId={q.sourceBankId}
               meta={explainMeta}
               onVote={explainVote}
+              examId={examType}
             />
             {q.id && <CommentSection targetId={`q_${q.id}`} />}
           </div>

@@ -797,6 +797,7 @@ function PracticeGame({ config, onFinish, onExit }) {
               sourceBankId={q?.sourceBankId}
               meta={explainMeta}
               onVote={explainVote}
+              examId={examType}
             />
             {q?.id && <CommentSection targetId={`q_${q.id}`} />}
           </div>

@@ -4,8 +4,40 @@ import { usePlayerStore } from '../store/gameStore'
 import { hasLegalSubjectTag } from '../config/examRegistry'
 import { supabase, readAuthFromStorage } from '../lib/supabase'
 import { isExplainUnlocked } from '../hooks/useAI'
+import { getBookSection } from '../lib/booksAffiliate'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+
+/** 推薦參考書卡片（博客來策略聯盟）— 解析面板底部，低干擾版位 */
+function BookRecommendations({ examId }) {
+  const section = getBookSection(examId)
+  if (!section) return null
+  return (
+    <div className="bg-[#f3f8f0] border border-[#cfe3c4] rounded-2xl p-3.5">
+      <div className="flex items-center gap-1.5 mb-2">
+        <span className="text-base">📚</span>
+        <span className="font-bold text-[#4a7a2e] text-sm">{section.label}</span>
+      </div>
+      <div className="flex flex-col gap-1.5">
+        {section.books.map(b => (
+          <a
+            key={b.id}
+            href={b.url}
+            target="_blank"
+            rel="sponsored noopener noreferrer"
+            className="flex items-center justify-between gap-2 bg-white border border-[#dce8d4] rounded-xl px-3 py-2 active:bg-[#eef5e9] transition-colors"
+          >
+            <span className="text-xs text-gray-700 leading-snug">{b.title}</span>
+            <span className="shrink-0 text-[11px] font-medium text-white bg-[#6ba539] rounded-lg px-2 py-1">博客來 ›</span>
+          </a>
+        ))}
+      </div>
+      <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
+        本卡片為博客來策略聯盟連結，透過連結購買本站可獲少量回饋，不影響你的售價。資料由博客來提供。
+      </p>
+    </div>
+  )
+}
 
 function NotEnoughCoinsBox({ label }) {
   const navigate = useNavigate()
@@ -46,7 +78,7 @@ function renderText(text) {
 }
 
 /* Explain panel — shown below a question after reveal */
-export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, error, remaining, explanation, cost = 100, questionId, questionText, rocYear, session, number, disputed, visionUncertain, subjectTags, sourceBankId, meta, onVote }) {
+export function ExplainPanel({ text, loading, onRequest, requested, answer, options, limitHit, notEnoughCoins, error, remaining, explanation, cost = 100, questionId, questionText, rocYear, session, number, disputed, visionUncertain, subjectTags, sourceBankId, meta, onVote, examId }) {
   const [showAI, setShowAI] = useState(false)
   const [reportSent, setReportSent] = useState(false)
   const [showReportForm, setShowReportForm] = useState(false)
@@ -509,6 +541,9 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
           ⚠️ 解析僅供參考,法律條文可能隨時間修正,請以最新全國法規資料庫為準。
         </p>
       )}
+
+      {/* 推薦參考書（博客來策略聯盟，僅在使用者展開解析後顯示） */}
+      {(showAI || hasExplanation) && <BookRecommendations examId={examId} />}
     </div>
   )
 }

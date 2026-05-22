@@ -92,11 +92,28 @@ async function extractPdfImages(pdfPath, mupdf) {
   const ensure = n => (byQ[n] = byQ[n] || { raster: [], vector: null })
   let lastQ = null
 
+  // 預掃：判定 PDF 是新格式（題號「12.」）或舊格式（題號自成一行純數字）。
+  // 只有舊格式才啟用「左欄純數字」題號偵測 — 否則科學記號 10⁹ 的「10」
+  // 之類會被誤判成題號、搶走圖片歸屬。
+  const sts = []
+  let dotCount = 0
+  for (let p = 0; p < doc.countPages(); p++) {
+    const st = JSON.parse(doc.loadPage(p).toStructuredText('preserve-images').asJSON())
+    sts.push(st)
+    for (const b of (st.blocks || [])) {
+      if (b.type !== 'text') continue
+      for (const l of (b.lines || [])) {
+        if (/^\d{1,3}\s*[.．、]/.test((l.text || '').trim())) dotCount++
+      }
+    }
+  }
+  const oldFormat = dotCount < 20
+
   for (let p = 0; p < doc.countPages(); p++) {
     const page = doc.loadPage(p)
     const bounds = page.getBounds()
     const pageW = bounds[2], pageBottom = bounds[3]
-    const st = JSON.parse(page.toStructuredText('preserve-images').asJSON())
+    const st = sts[p]
     const blocks = st.blocks || []
 
     // 題號行
@@ -111,7 +128,7 @@ async function extractPdfImages(pdfPath, mupdf) {
         // 新格式「12.題幹」；舊格式（100-102 年）題號自成一行純數字、
         // 位於左欄（x<68），題幹在右側另一行。
         let m = t.match(/^(\d{1,3})\s*[.．、]/)
-        if (!m && l.bbox.x < 68) m = t.match(/^(\d{1,3})$/)
+        if (!m && oldFormat && l.bbox.x < 68) m = t.match(/^(\d{1,3})$/)
         if (m) { const n = parseInt(m[1]); if (n >= 1 && n <= 200) qlines.push({ n, y: y0, y1 }) }
       }
     }
@@ -192,6 +209,7 @@ async function extractPdfImages(pdfPath, mupdf) {
     }
 
     if (qlines.length) lastQ = qlines[qlines.length - 1].n
+    if (process.env.DBG) console.error(`  [p${p}] qlines=[${qlines.map(q => q.n).join(',')}] rasters=${rasters.length} imgs=${rasters.map(g => 'y' + Math.round(g.y0)).join(',')}`)
   }
   return byQ
 }
@@ -200,7 +218,8 @@ function buildPdfMatcher(index) {
   return (examCode, subject) => {
     const want = subjKey(subject)
     const cands = index.filter(r => {
-      const m = r.file.match(/medlab_(\d+)_/)
+      // 須以 medlab_ 開頭 — 排除 A_medlab_… 等重複/異常前綴檔
+      const m = r.file.match(/^medlab_(\d+)_/)
       return m && m[1] === String(examCode)
     })
     const hit = cands.find(r => subjKey(r.subject) === want)
@@ -277,7 +296,9 @@ async function main() {
       }
       if (!bufs) {
         noImg++
-        console.log(`  ⚠ ${key} 第${q.number}題(id ${q.id}) 找不到圖`)
+        const near = Object.keys(byQ).map(Number).filter(k => Math.abs(k - q.number) <= 4)
+          .sort((a, b) => a - b).map(k => `${k}(${byQ[k].raster.length}r${byQ[k].vector ? '+v' : ''})`)
+        console.log(`  ⚠ ${key} 第${q.number}題(id ${q.id}) 找不到圖  [附近byQ:${near.join(',') || '空'}]`)
         continue
       }
       if (kind === 'raster') gotRaster++; else if (kind === 'vector') gotVector++; else gotCarry++

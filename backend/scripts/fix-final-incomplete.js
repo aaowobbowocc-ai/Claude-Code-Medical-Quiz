@@ -18,7 +18,11 @@ const IMG_OUT = path.join(BACKEND, '..', 'frontend', 'public', 'question-images'
 const SCALE = 4
 const VERTEX_PROJECT = 'gen-lang-client-0502672630'
 const VERTEX_REGION = 'us-central1'
-const VERTEX_MODEL = 'gemini-2.5-pro'
+// MODEL: gemini-2.5-flash (changed 2026-05-23 from gemini-2.5-pro)
+//   OCR / Vision 任務不需要 Pro 推理；Flash 同準確度但便宜 ~17-33 倍。
+//   5/22 batch 跑 Pro thinking 一次燒 $200+，Flash 同 batch 約 $5-10。
+//   若特殊題目 Flash 結果不佳，再針對該批改回 'gemini-2.5-pro'。
+const VERTEX_MODEL = 'gemini-2.5-flash'
 const auth = new GoogleAuth({ scopes: ['https://www.googleapis.com/auth/cloud-platform'] })
 
 const stripPUA = s => s.replace(/[-]/g, '').normalize('NFKC')

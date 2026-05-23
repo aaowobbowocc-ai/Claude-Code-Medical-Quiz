@@ -42,7 +42,7 @@ async function findQuestionPage(pdfPath, qnum) {
 async function visionExtract(pngs, qnum) {
   const tk = await auth.getAccessToken()
   const tokenStr = (typeof tk === 'string') ? tk : tk.token
-  const url = `https://us-central1-aiplatform.googleapis.com/v1/projects/gen-lang-client-0502672630/locations/us-central1/publishers/google/models/gemini-2.5-pro:generateContent`
+  const url = `https://us-central1-aiplatform.googleapis.com/v1/projects/gen-lang-client-0502672630/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent`
   const parts = pngs.map(b => ({ inlineData: { data: b.toString('base64'), mimeType: 'image/png' } }))
   parts.push({ text: `請從圖中找出第 ${qnum} 題，輸出純 JSON：{"number":${qnum},"question":"完整題幹","options":{"A":"...","B":"...","C":"...","D":"..."}}` })
   const ctrl = new AbortController()

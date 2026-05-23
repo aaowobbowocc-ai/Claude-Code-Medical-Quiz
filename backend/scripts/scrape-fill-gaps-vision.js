@@ -30,7 +30,10 @@ if (!fs.existsSync(CACHE)) fs.mkdirSync(CACHE, { recursive: true })
 
 const VERTEX_PROJECT = 'gen-lang-client-0502672630'
 const VERTEX_REGION  = 'us-central1'
-const VERTEX_MODEL   = 'gemini-2.5-pro'
+// gemini-2.5-flash is plenty for OCR (image→text transcription) and ~17-33x
+// cheaper than pro. 5/22 batch run on 2.5-pro thinking burned $200+ for a
+// task flash can do indistinguishably. Switch made 2026-05-23.
+const VERTEX_MODEL   = 'gemini-2.5-flash'
 const vertexAuth = new GoogleAuth({ scopes: ['https://www.googleapis.com/auth/cloud-platform'] })
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 

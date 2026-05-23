@@ -329,10 +329,11 @@ async function streamVertexGemini(res, prompt, maxTokens = 600, onComplete, opts
   }
 
   // Google Search Grounding (opts.grounding=true): adds tools:[{googleSearch:{}}].
-  // Costs an extra "LLM Grounding with Google Search tool" SKU (~$0.035/req)
-  // but that SKU is covered by the "Trial credit for GenAI App Builder" credit,
-  // so grounded calls effectively reduce to base Gemini cost (which is small
-  // for gemini-2.5-flash). The model returns groundingMetadata with citation
+  // Costs an extra ~$0.035/grounded request. Whether this SKU is covered by
+  // the "Trial credit for GenAI App Builder" credit depends on which family
+  // Google bills it under (Discovery Engine vs base Vertex AI) — verify in
+  // GCP Billing SKU breakdown after a few days of real traffic before
+  // assuming it's free. The model returns groundingMetadata with citation
   // URLs we forward to the client via a meta frame before [DONE].
   const useGrounding = !!opts.grounding;
 
@@ -630,9 +631,12 @@ ${wrongNote}
 
     // Enable Google Search grounding for fact-heavy exams where citation-backed
     // answers materially improve accuracy (drug doses, statute numbers, latest
-    // guidelines, traffic rules). The grounding add-on SKU is covered by the
-    // "Trial credit for GenAI App Builder" credit, so this is essentially free
-    // until the credit expires (2027-05-04).
+    // guidelines, traffic rules). Billed at ~$35/1k grounded requests; whether
+    // the "GenAI App Builder" trial credit covers this SKU depends on how
+    // Google maps the request internally (Discovery Engine vs Vertex AI). We
+    // accept the risk because /explain has a high cache hit rate — at ~10
+    // new explanations/day (post initial backfill), grounding cost is ~$10/mo
+    // worst case. Re-verify after a few days of billing data.
     const useGrounding = MEDICAL_EXAMS.has(exam) || LEGAL_EXAMS.has(exam) || DRIVER_EXAMS.has(exam);
 
     await streamVertexGemini(res, prompt, 600, (fullText) => {
@@ -865,13 +869,14 @@ ${wrongSummary || '（全部答對！）'}
 - 直接輸出文字，不要任何格式標籤或前綴`;
 
     // Stream via Vertex Gemini; cache the full text for the rest of the day.
-    // Grounding is enabled so the daily message can occasionally reference
-    // recent medical news / exam policy updates. The grounding SKU is covered
-    // by the GenAI App Builder credit, and /daily-message fires at most once
-    // per user per day (cached) so the extra cost is negligible regardless.
+    // Grounding intentionally NOT enabled — 70-character 暖心小語 doesn't need
+    // real-time news lookup, and Grounding with Google Search is billed
+    // separately (~$35/1k requests, NOT covered by the GenAI App Builder
+    // credit which only covers Vertex AI Search SKUs). At ~50 unique levels/day
+    // that would have been ~$50/month for cosmetic value. Disabled 2026-05-24.
     await streamVertexGemini(res, prompt, 180, (fullText) => {
       if (fullText) dailyMsgCache.set(cacheKey, fullText);
-    }, { grounding: true });
+    });
   });
 }
 

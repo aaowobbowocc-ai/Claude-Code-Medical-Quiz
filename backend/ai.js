@@ -317,7 +317,7 @@ async function streamAnthropic(res, prompt, maxTokens = 600, onComplete) {
 // retrying with the same prompt usually succeeds on the next attempt. If it
 // keeps coming back empty after 3 tries, that's a real safety block — surface
 // the error so the frontend can show "失敗請重試" and refund the coin.
-async function streamVertexGemini(res, prompt, maxTokens = 600, onComplete) {
+async function streamVertexGemini(res, prompt, maxTokens = 600, onComplete, opts = {}) {
   let token;
   try {
     token = await vertexAuth.getAccessToken();
@@ -328,19 +328,35 @@ async function streamVertexGemini(res, prompt, maxTokens = 600, onComplete) {
     return;
   }
 
+  // Google Search Grounding (opts.grounding=true): adds tools:[{googleSearch:{}}].
+  // Costs an extra "LLM Grounding with Google Search tool" SKU (~$0.035/req)
+  // but that SKU is covered by the "Trial credit for GenAI App Builder" credit,
+  // so grounded calls effectively reduce to base Gemini cost (which is small
+  // for gemini-2.5-flash). The model returns groundingMetadata with citation
+  // URLs we forward to the client via a meta frame before [DONE].
+  const useGrounding = !!opts.grounding;
+
   // One attempt = one HTTPS round-trip. Returns 'done' on success or terminal
   // failure (error frame already written), or 'retry' if caller should try
   // again (no bytes written to client yet).
   function attempt() {
     return new Promise((resolve) => {
       let fullText = '';
-      const body = JSON.stringify({
+      // Merged groundingMetadata across stream chunks. Vertex sends chunks
+      // (sometimes interleaved with text deltas); the final chunk contains
+      // the full citation list, but to be safe we accumulate every chunk
+      // that includes groundingChunks and dedupe by uri.
+      const citations = [];
+      const seenUris = new Set();
+      const reqBody = {
         contents: [{ role: 'user', parts: [{ text: prompt }] }],
         generationConfig: {
           maxOutputTokens: maxTokens,
           thinkingConfig: { thinkingBudget: 0 },
         },
-      });
+      };
+      if (useGrounding) reqBody.tools = [{ googleSearch: {} }];
+      const body = JSON.stringify(reqBody);
       const req = https.request({
         hostname: `${VERTEX_REGION}-aiplatform.googleapis.com`,
         path: `/v1/projects/${VERTEX_PROJECT}/locations/${VERTEX_REGION}/publishers/google/models/${GEMINI_MODEL}:streamGenerateContent?alt=sse`,
@@ -376,19 +392,37 @@ async function streamVertexGemini(res, prompt, maxTokens = 600, onComplete) {
             if (!raw) continue;
             try {
               const parsed = JSON.parse(raw);
-              const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
+              const cand = parsed.candidates?.[0];
+              const text = cand?.content?.parts?.[0]?.text;
               if (text) {
                 fullText += text;
                 res.write(`data: ${JSON.stringify({ text })}\n\n`);
+              }
+              const chunks = cand?.groundingMetadata?.groundingChunks;
+              if (Array.isArray(chunks)) {
+                for (const c of chunks) {
+                  const web = c.web || c.retrievedContext;
+                  const uri = web?.uri;
+                  if (uri && !seenUris.has(uri)) {
+                    seenUris.add(uri);
+                    citations.push({ uri, title: web?.title || uri });
+                  }
+                }
               }
             } catch { /* partial JSON frame, ignore */ }
           }
         });
         gRes.on('end', () => {
           if (!fullText) return resolve({ status: 'retry', reason: 'empty' });
+          // Send citations as a meta frame before [DONE] — frontend's
+          // streamPost calls onMeta with {citations:[...]}. The hook merges
+          // it into the existing meta state (price/cacheKey from earlier).
+          if (citations.length) {
+            res.write(`data: ${JSON.stringify({ meta: { citations } })}\n\n`);
+          }
           res.write('data: [DONE]\n\n');
           res.end();
-          if (onComplete) onComplete(fullText);
+          if (onComplete) onComplete(fullText, { citations });
           resolve({ status: 'done' });
         });
         gRes.on('error', (e) => {
@@ -594,15 +628,24 @@ ${wrongNote}
 **${cat.applicationLabel}**
 （${cat.applicationDesc}）`;
 
-    // All exams stream from Vertex Gemini (see provider note at top of file).
+    // Enable Google Search grounding for fact-heavy exams where citation-backed
+    // answers materially improve accuracy (drug doses, statute numbers, latest
+    // guidelines, traffic rules). The grounding add-on SKU is covered by the
+    // "Trial credit for GenAI App Builder" credit, so this is essentially free
+    // until the credit expires (2027-05-04).
+    const useGrounding = MEDICAL_EXAMS.has(exam) || LEGAL_EXAMS.has(exam) || DRIVER_EXAMS.has(exam);
+
     await streamVertexGemini(res, prompt, 600, (fullText) => {
+      // Citations are surfaced live via the meta frame; we don't persist them
+      // to the cache row yet (ai_explanations has no citations column —
+      // adding one is a separate schema migration). Cache hits therefore
+      // serve text without sources, which is acceptable degradation: the
+      // explanation itself is the value, citations are nice-to-have.
       saveCachedExplanation(cacheKey, fullText, GEMINI_MODEL);
-      // Fresh paid generation — record the unlock so the user gets it free
-      // next time on any device they're logged into.
       if (!alreadyUnlocked && user_id && question_id) {
         recordUnlock(user_id, question_id, exam, EXPLAIN_PRICE_FULL).catch(() => {});
       }
-    });
+    }, { grounding: useGrounding });
   });
 
   // POST /ai/unlocks/sync — Bulk import unlocks from a device's localStorage
@@ -822,9 +865,13 @@ ${wrongSummary || '（全部答對！）'}
 - 直接輸出文字，不要任何格式標籤或前綴`;
 
     // Stream via Vertex Gemini; cache the full text for the rest of the day.
+    // Grounding is enabled so the daily message can occasionally reference
+    // recent medical news / exam policy updates. The grounding SKU is covered
+    // by the GenAI App Builder credit, and /daily-message fires at most once
+    // per user per day (cached) so the extra cost is negligible regardless.
     await streamVertexGemini(res, prompt, 180, (fullText) => {
       if (fullText) dailyMsgCache.set(cacheKey, fullText);
-    });
+    }, { grounding: true });
   });
 }
 

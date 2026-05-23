@@ -311,20 +311,24 @@ export function useExplain() {
           }
         },
         ctrl.signal,
-        (m) => {  // onMeta
+        (m) => {  // onMeta — fires for EVERY meta frame. Backend may send
+          // multiple: the first carries pricing/cache info; a later one (when
+          // Google Search grounding is on) carries citation URLs. Merge into
+          // state so a later citations-only frame doesn't wipe cacheKey etc.
           if (activeQidRef.current !== qid) return
-          // Resolve the effective price. The server may report alreadyUnlocked
-          // (cross-device unlock from another login) — in that case treat as
-          // free and mirror to localStorage so future calls go via fast path.
-          serverUnlocked = !!m?.alreadyUnlocked
-          const isUnlocked = alreadyUnlocked || serverUnlocked
-          effectivePrice = isUnlocked ? 0 : (Number.isFinite(m?.price) ? m.price : EXPLAIN_COST)
-          setMeta({ ...m, price: effectivePrice, alreadyUnlocked: isUnlocked })
-          // Refund the overage on the pessimistic upfront charge now; the
-          // remaining effectivePrice is committed on success / refunded on fail.
-          if (!alreadyUnlocked) {
-            const overage = EXPLAIN_COST - effectivePrice
-            if (overage > 0) addCoins(overage)
+          setMeta(prev => ({ ...(prev || {}), ...m }))
+          // Only resolve pricing on the frame that actually contains price /
+          // alreadyUnlocked fields — citation-only frames have neither.
+          const hasPricing = m?.price != null || m?.alreadyUnlocked != null || m?.cacheKey
+          if (effectivePrice == null && hasPricing) {
+            serverUnlocked = !!m?.alreadyUnlocked
+            const isUnlocked = alreadyUnlocked || serverUnlocked
+            effectivePrice = isUnlocked ? 0 : (Number.isFinite(m?.price) ? m.price : EXPLAIN_COST)
+            setMeta(prev => ({ ...(prev || {}), price: effectivePrice, alreadyUnlocked: isUnlocked }))
+            if (!alreadyUnlocked) {
+              const overage = EXPLAIN_COST - effectivePrice
+              if (overage > 0) addCoins(overage)
+            }
           }
         },
       )

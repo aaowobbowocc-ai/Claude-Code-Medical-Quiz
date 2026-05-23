@@ -478,6 +478,29 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                   ⚠️ AI 解析僅供參考,法律條文可能隨時間修正,請以最新全國法規資料庫為準。
                 </p>
               )}
+              {/* Citations — appear only when backend's Google Search grounding
+                  returned source URLs. Cache hits don't include citations (the
+                  ai_explanations row has no column to persist them yet), so
+                  this only shows up for fresh paid generations. */}
+              {!loading && Array.isArray(meta?.citations) && meta.citations.length > 0 && (
+                <div className="mt-3 pt-2 border-t border-blue-100">
+                  <p className="text-[11px] text-gray-500 mb-1.5">📚 來源（Google Search）</p>
+                  <ul className="space-y-1">
+                    {meta.citations.slice(0, 5).map((c, i) => (
+                      <li key={i} className="text-[11px] leading-snug">
+                        <a
+                          href={c.uri}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-medical-blue hover:underline break-all"
+                        >
+                          {i + 1}. {c.title || c.uri}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               {/* Voting row — appears once the stream finishes and we have a cacheKey */}
               {!loading && meta?.cacheKey && onVote && (
                 <div className="mt-3 pt-3 border-t border-blue-100 flex items-center gap-2">

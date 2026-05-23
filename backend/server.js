@@ -207,9 +207,20 @@ function getQuestionsByStage(stageId, exam) {
   // PvP/practice: only single-answer questions (exclude multi-answer, voided,
   // and incomplete — image-only/empty-option/truncated questions can't be
   // answered fairly in a timed PvP round)
-  const valid = data.questions.filter(q =>
-    q.answer && q.answer.length === 1 && q.options[q.answer] && !q.incomplete
-  );
+  // Stricter than the inline comment above suggests — garfield reported
+  // (2026-05-23) seeing 題目缺漏 / 答案缺漏 in rooms, getting penalized: some
+  // questions slip through with empty 題幹 or one of the 4 options being an
+  // empty string, even though `incomplete` wasn't flagged. Filter those too.
+  const valid = data.questions.filter(q => {
+    if (q.incomplete) return false;
+    if (!q.answer || q.answer.length !== 1) return false;
+    if (!q.options || !q.options[q.answer]) return false;
+    if (!q.question || !String(q.question).trim()) return false;
+    for (const k of ['A', 'B', 'C', 'D']) {
+      if (!q.options[k] || !String(q.options[k]).trim()) return false;
+    }
+    return true;
+  });
   if (stageId === 0) return valid;
   return valid.filter(q => q.stage_id === stageId);
 }

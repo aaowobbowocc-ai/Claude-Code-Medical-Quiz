@@ -44,6 +44,14 @@ export default function Leaderboard() {
   }, [currentExam])
   const [category, setCategory] = useState(defaultCategory)
 
+  const [refreshedAt, setRefreshedAt] = useState(null)
+
+  // garfield 2026-05-23 回報「做完題目後看排行版時常沒有更新」— root cause is
+  // a race between fire-and-forget /leaderboard/submit on Results/Practice and
+  // the user immediately tapping 排行榜. By the time this page mounts, the
+  // Supabase write often hasn't committed. Two layered fixes:
+  //   (1) cache: 'no-store' so the browser never serves a stale JSON response
+  //   (2) auto-refetch when the tab regains focus / becomes visible
   const fetchLB = (w, cat) => {
     setLoading(true)
     const params = new URLSearchParams()
@@ -51,14 +59,40 @@ export default function Leaderboard() {
     if (cat) params.set('category', cat)
     const qs = params.toString()
     const url = qs ? `${BACKEND}/leaderboard?${qs}` : `${BACKEND}/leaderboard`
-    fetch(url).then(r => r.json()).then(d => {
+    fetch(url, { cache: 'no-store' }).then(r => r.json()).then(d => {
       setData(d)
       setWeek(d.week)
       setLoading(false)
+      setRefreshedAt(new Date())
     }).catch(() => setLoading(false))
   }
 
   useEffect(() => { fetchLB(null, category) }, [category])
+
+  // Race-window cushion: if the user just finished a game on this tab and tapped
+  // 排行榜 immediately, /leaderboard/submit (fire-and-forget on Results.jsx /
+  // Practice.jsx) is often still in flight when we make the initial GET. Do a
+  // single silent refetch ~1.5s later — by then Supabase has typically committed.
+  useEffect(() => {
+    const t = setTimeout(() => fetchLB(null, category), 1500)
+    return () => clearTimeout(t)
+    // Only run on first mount per category change
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [category])
+
+  // Auto-refresh: listen for tab focus + visibility change. If the user just
+  // finished a game and came back to this tab/page, refetch silently.
+  useEffect(() => {
+    const onFocus = () => fetchLB(week || null, category)
+    const onVis = () => { if (document.visibilityState === 'visible') fetchLB(week || null, category) }
+    window.addEventListener('focus', onFocus)
+    document.addEventListener('visibilitychange', onVis)
+    return () => {
+      window.removeEventListener('focus', onFocus)
+      document.removeEventListener('visibilitychange', onVis)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [week, category])
 
   // When the user-selected category's cohort is entirely quota-based, swap the
   // main score column from raw points to PR percentile — name-by-level exams
@@ -73,6 +107,14 @@ export default function Leaderboard() {
         <div className="flex items-center gap-3 mb-2">
           <button onClick={() => navigate(-1)} className="text-white/60 text-2xl leading-none">‹</button>
           <h1 className="text-white font-bold text-xl flex-1">🏆 每週排行榜</h1>
+          <button
+            onClick={() => fetchLB(week || null, category)}
+            disabled={loading}
+            title={refreshedAt ? `上次更新 ${refreshedAt.toLocaleTimeString('zh-TW')}` : '重新整理'}
+            className="text-white/80 text-sm px-2 py-1 rounded-lg bg-white/15 active:bg-white/30 disabled:opacity-50"
+          >
+            {loading ? '⟳…' : '🔄'}
+          </button>
         </div>
 
         {/* Category filter chips */}

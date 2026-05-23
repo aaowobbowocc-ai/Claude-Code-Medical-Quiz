@@ -21,6 +21,7 @@ const path = require('path');
 
 const leaderboard = require('./leaderboard');
 const ai = require('./ai');
+const search = require('./search');
 const questionsApi = require('./questions-api');
 const feedback = require('./feedback');
 const board = require('./board');
@@ -817,6 +818,7 @@ leaderboard.configureExams(examConfigs);
 leaderboard.registerRoutes(app);
 questionsApi.registerRoutes(app, examData, stats, examConfigs, { staticCache, browseCache });
 ai.registerRoutes(app, examData, stats);
+search.registerSearchRoutes(app, examData);
 commentsApi.registerRoutes(app);
 communityNotes.registerRoutes(app);
 feedback.registerRoutes(app, examData, examConfigs);

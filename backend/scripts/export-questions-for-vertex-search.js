@@ -31,24 +31,31 @@ for (const f of fs.readdirSync(CONFIG_DIR)) {
   examNames[c.id] = c.name
 }
 
-// Build a flat search document for one question.
-//   - id: globally unique (exam-id + numeric id)
-//   - content: the searchable text (stem + options) — what semantic search
-//     embeds and ranks on
-//   - structData: filterable / displayable metadata
+// Build a Vertex AI Search "structured data store" document. Schema:
+//   - id:       globally unique (exam-id + numeric id) — required at top level
+//   - structData: every searchable / filterable / displayable field lives here
+//
+// The "content" field inside structData is the primary search target (question
+// stem + options joined). Vertex AI Search auto-indexes all string fields in
+// structData for keyword search; semantic ranking on `content` can be enabled
+// after the data store is created (via the schema editor, marking `content`
+// as semanticSearchable). Top-level `content` is a separate concept used only
+// for UNSTRUCTURED data stores (file/URI based) — putting plain text there
+// would be silently ignored by a Structured data store.
 function toDoc(q, examId) {
   const opts = q.options || {}
   const optionsText = ['A', 'B', 'C', 'D']
     .map(k => opts[k] ? `${k}. ${opts[k]}` : '')
     .filter(Boolean)
     .join('\n')
-  // Search corpus = stem + options. The answer letter goes into structData (not
-  // content) so retrieval matches on question semantics, not the answer letter.
   const content = `${q.question || ''}\n${optionsText}`.trim()
   return {
     id: `${examId}_${q.id}`,
-    content,
     structData: {
+      // Primary search field — question stem + 4 options. Answer letter
+      // intentionally NOT here so retrieval matches on semantics, not "B".
+      content,
+      // Display + filter metadata
       exam_id: examId,
       exam_name: examNames[examId] || examId,
       question_id: String(q.id),

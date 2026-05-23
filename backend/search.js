@@ -87,12 +87,21 @@ async function searchRaw(query, opts = {}) {
 }
 
 // Reshape Vertex AI Search response into a thin frontend-friendly array.
+//
+// Snippet fallback: Vertex AI Search sometimes returns the literal string
+// "No snippet is available for this page." for short structured docs. In that
+// case (or when no snippet at all) we cut the first ~160 chars of the stored
+// content field so the UI always has something to render.
 function shapeHits(resp) {
   return (resp.results || []).map(r => {
     const struct = r.document?.structData || {}
-    const snippet = r.document?.derivedStructData?.snippets?.[0]?.snippet
+    let snippet = r.document?.derivedStructData?.snippets?.[0]?.snippet
       || r.document?.derivedStructData?.snippet
       || ''
+    if (!snippet || /^No snippet is available/i.test(snippet)) {
+      const c = String(struct.content || '').replace(/\s+/g, ' ').trim()
+      snippet = c.length > 160 ? c.slice(0, 160) + '…' : c
+    }
     return {
       id: r.document?.id,
       exam_id: struct.exam_id,

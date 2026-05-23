@@ -587,6 +587,7 @@ export default function Home() {
               ['📊','弱點分析','各科正確率','/weakness'],
               ['⭐','收藏題目','分類收藏複習','/favorites'],
               ['📚','備考攻略','考試重點整理','/guides'],
+              ['🔍','全題庫搜尋','跨 52 考試 21 萬題','/search'],
               ['🏆','排行榜','每週排名','/leaderboard'],
               ['💬','留言板','交流備考心得','/board']].map(([icon,title,sub,path]) => (
               <button key={path} onClick={() => navigate(path)}
@@ -877,6 +878,7 @@ export default function Home() {
             ['📊','弱點分析','各科正確率','/weakness'],
             ['⭐','收藏題目','分類收藏複習','/favorites'],
             ['📚','備考攻略','考試重點整理','/guides'],
+            ['🔍','全題庫搜尋','跨 52 考試 21 萬題','/search'],
             ['🏆','排行榜','每週排名','/leaderboard'],
             ['💬','留言板','交流備考心得','/board']].map(([icon,title,sub,path]) => (
             <button key={path} onClick={() => navigate(path)}

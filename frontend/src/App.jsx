@@ -44,6 +44,7 @@ const Guides         = lazy(() => import('./pages/Guides'))
 const GuideDetail    = lazy(() => import('./pages/GuideDetail'))
 const BreakLounge    = lazy(() => import('./pages/BreakLounge'))
 const AdminAudit     = lazy(() => import('./pages/AdminAudit'))
+const Search         = lazy(() => import('./pages/Search'))
 
 // Path-based exam landing route. Rendered for URLs like /doctor1/ or
 // /civil-senior-general/ served from prerendered HTML shells (see
@@ -256,6 +257,7 @@ function AppRoutes() {
           <Route path="/contact"    element={<Contact />} />
           <Route path="/changelog"  element={<Changelog />} />
           <Route path="/coverage"   element={<Coverage />} />
+          <Route path="/search"     element={<Search />} />
           <Route path="/guides"          element={<Guides />} />
           <Route path="/guides/:slug"    element={<GuideDetail />} />
           <Route path="/break"           element={<BreakLounge />} />

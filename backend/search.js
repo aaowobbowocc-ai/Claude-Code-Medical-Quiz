@@ -112,6 +112,9 @@ function shapeHits(resp) {
       subject_name: struct.subject_name,
       number: struct.number,
       answer: struct.answer,
+      // Full question stem + options (joined). Lets the search page render
+      // the question detail inline without a second round-trip to /meta.
+      content: String(struct.content || ''),
       snippet,
     }
   })

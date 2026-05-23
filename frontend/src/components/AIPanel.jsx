@@ -5,8 +5,133 @@ import { hasLegalSubjectTag } from '../config/examRegistry'
 import { supabase, readAuthFromStorage } from '../lib/supabase'
 import { isExplainUnlocked } from '../hooks/useAI'
 import { getBookSection } from '../lib/booksAffiliate'
+import { formatYearSession } from '../utils/sessionLabel'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+
+/**
+ * 找類似題 sheet — 用 Vertex AI Search /search/similar 找 5 道語意相近的題目。
+ * 用 question 自己的題幹當 query，filter 同一考試。
+ * 免費：吃 GenAI App Builder 抵免額。
+ */
+function SimilarQuestionsSheet({ open, onClose, examId, questionId, examName }) {
+  const [hits, setHits] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    if (!open || !examId || !questionId) return
+    let cancelled = false
+    setLoading(true)
+    setError(null)
+    setHits([])
+    ;(async () => {
+      try {
+        const r = await fetch(`${BACKEND}/search/similar`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ exam_id: examId, question_id: String(questionId), limit: 5 }),
+        })
+        const data = await r.json()
+        if (cancelled) return
+        if (!r.ok) {
+          setError(data?.error === 'search_not_configured'
+            ? '找類似題功能還沒上線'
+            : data?.detail || data?.error || '找類似題失敗')
+        } else {
+          setHits(data.hits || [])
+        }
+      } catch (e) {
+        if (!cancelled) setError('連線失敗：' + e.message)
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    })()
+    return () => { cancelled = true }
+  }, [open, examId, questionId])
+
+  if (!open) return null
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50"
+         onClick={onClose}>
+      <div className="w-full max-w-[430px] bg-white rounded-t-3xl px-5 pb-8 pt-2 max-h-[85dvh] flex flex-col"
+           onClick={e => e.stopPropagation()}>
+        <div className="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-3" />
+        <div className="flex items-center mb-3">
+          <div>
+            <p className="font-bold text-medical-dark">🔁 類似題練習</p>
+            <p className="text-[11px] text-gray-400 mt-0.5">語意相近的{examName || '本考試'}題目</p>
+          </div>
+          <button onClick={onClose}
+                  className="ml-auto text-gray-400 text-xl active:opacity-60">✕</button>
+        </div>
+
+        <div className="flex-1 overflow-y-auto space-y-2">
+          {loading && (
+            <div className="space-y-2">
+              {[0,1,2].map(i => (
+                <div key={i} className="bg-gray-50 rounded-2xl p-3 animate-pulse">
+                  <div className="h-3 bg-gray-200 rounded w-1/3 mb-2" />
+                  <div className="h-3 bg-gray-200 rounded w-full mb-1" />
+                  <div className="h-3 bg-gray-200 rounded w-5/6" />
+                </div>
+              ))}
+            </div>
+          )}
+          {error && (
+            <p className="text-xs text-red-500 text-center py-4">{error}</p>
+          )}
+          {!loading && !error && hits.length === 0 && (
+            <p className="text-xs text-gray-400 text-center py-6">沒有找到類似題</p>
+          )}
+          {hits.map(h => {
+            const lines = (h.content || '').split('\n').filter(Boolean)
+            const stem = lines[0] || h.snippet || ''
+            const opts = lines.slice(1)
+            return (
+              <div key={h.id}
+                   className="bg-gray-50 rounded-2xl p-3 border border-gray-100">
+                <div className="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                  <span className="text-[10px] text-gray-500">
+                    {formatYearSession({ roc_year: h.roc_year, session: h.session })}
+                  </span>
+                  {h.subject_name && (
+                    <span className="text-[10px] bg-white border border-gray-200 text-gray-600 px-1.5 py-0.5 rounded">
+                      {h.subject_name}
+                    </span>
+                  )}
+                  <span className="text-[10px] font-mono text-gray-400 ml-auto">#{h.number}</span>
+                </div>
+                <p className="text-sm text-gray-800 leading-relaxed">{stem}</p>
+                {opts.length > 0 && (
+                  <div className="mt-2 space-y-0.5">
+                    {opts.map((opt, i) => {
+                      const letter = opt.match(/^([A-D])\./)?.[1]
+                      const isCorrect = letter && letter === h.answer
+                      return (
+                        <p key={i}
+                           className={`text-xs leading-relaxed ${
+                             isCorrect ? 'text-emerald-700 font-semibold' : 'text-gray-600'
+                           }`}>
+                          {opt}{isCorrect && ' ✓'}
+                        </p>
+                      )
+                    })}
+                  </div>
+                )}
+              </div>
+            )
+          })}
+        </div>
+
+        <p className="text-[10px] text-gray-300 text-center mt-3">
+          類似題由語意搜尋找出，僅供延伸練習參考
+        </p>
+      </div>
+    </div>
+  )
+}
 
 /** 推薦參考書卡片（博客來策略聯盟）— 解析面板底部，低干擾版位 */
 function BookRecommendations({ examId }) {
@@ -88,6 +213,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
   const [showDownvoteReason, setShowDownvoteReason] = useState(false)
   const [downvoteReason, setDownvoteReason] = useState('')
   const [downvoteSent, setDownvoteSent] = useState(false)
+  const [showSimilar, setShowSimilar] = useState(false)
 
   // D.6 deprecation report — separate from the generic /report channel.
   // Writes directly to Supabase `deprecation_reports` so admin can flip
@@ -110,6 +236,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
     setShowDownvoteReason(false)
     setDownvoteReason('')
     setDownvoteSent(false)
+    setShowSimilar(false)
     setShowDepForm(false)
     setDepReason('')
     setDepNewAnswer('')
@@ -370,6 +497,18 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
         </div>
       )}
 
+      {/* 找類似題按鈕 — 一直可見（不被 AI 展開/收合影響） */}
+      {questionId && examId && (
+        <button
+          onClick={() => setShowSimilar(true)}
+          className="w-full flex items-center justify-center gap-2 py-2 rounded-xl border border-medical-teal/40 bg-teal-50 text-medical-teal text-sm font-medium active:scale-[0.98] transition-transform"
+        >
+          <span className="text-base">🔁</span>
+          找 5 道類似題
+          <span className="text-[10px] text-medical-teal/70">語意搜尋</span>
+        </button>
+      )}
+
       {/* AI 解說按鈕（可選） */}
       {!showAI && !requested && (
         <button
@@ -567,6 +706,14 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
 
       {/* 推薦參考書（博客來策略聯盟）— 作答後解析區底部，不需開 AI 解說即顯示 */}
       <BookRecommendations examId={examId} />
+
+      {/* 找類似題 sheet — 由上方按鈕觸發 */}
+      <SimilarQuestionsSheet
+        open={showSimilar}
+        onClose={() => setShowSimilar(false)}
+        examId={examId}
+        questionId={questionId}
+      />
     </div>
   )
 }

@@ -1,4 +1,10 @@
 #!/usr/bin/env node
+// ⚠️  DEPRECATED 2026-05-23 ─ uses paid generativelanguage.googleapis.com
+//     No credit coverage. New Vision/text work must go via Vertex:
+//       scripts/scrape-fill-gaps-vision.js   (Vision OCR — already on Vertex)
+//       scripts/pregen-explanations.js       (text gen   — already on Vertex)
+//     This script is kept only for historical reference. Running it costs real money.
+
 /**
  * Fill doctor1 incomplete questions using Gemini 2.5 Flash vision API (free tier)
  *

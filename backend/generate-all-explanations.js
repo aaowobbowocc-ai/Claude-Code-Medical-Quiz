@@ -1,22 +1,24 @@
 /**
  * generate-all-explanations.js
- * 為全部 5 個考試題庫生成參考解答（使用 Google Gemini Flash — 免費）
+ * 為全部 5 個考試題庫生成參考解答（Vertex AI Gemini Flash via ADC）
  * 用法: node generate-all-explanations.js
+ *
+ * Migrated 2026-05-23 from generativelanguage.googleapis.com (paid Gemini API,
+ * no credit coverage) to Vertex AI Gemini (billed under "Vertex API - Gemini
+ * 2.x SKUs"). ADC auth — no API key needed; relies on the same GoogleAuth
+ * setup as ai.js / pregen-explanations.js.
  */
 require("dotenv").config();
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const https = require("https");
 const fs = require("fs");
 const path = require("path");
+const { GoogleAuth } = require("google-auth-library");
 
-const API_KEY = process.env.GEMINI_API_KEY;
-if (!API_KEY) {
-  console.error("Missing GEMINI_API_KEY in .env");
-  process.exit(1);
-}
-
-const genAI = new GoogleGenerativeAI(API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-const CONCURRENCY = 1; // Gemini free tier: sequential to avoid rate limits
+const VERTEX_PROJECT = process.env.VERTEX_PROJECT || "gen-lang-client-0502672630";
+const VERTEX_REGION = process.env.VERTEX_REGION || "us-central1";
+const VERTEX_MODEL = "gemini-2.0-flash";
+const vertexAuth = new GoogleAuth({ scopes: ["https://www.googleapis.com/auth/cloud-platform"] });
+const CONCURRENCY = 1; // sequential to keep rate gentle
 const SAVE_EVERY = 25;
 
 const EXAM_FILES = [
@@ -70,13 +72,51 @@ ${opts}
 注意：用繁體中文、內容要正確專業、直接開始寫不要重複題目`;
 }
 
+function vertexGenerate(prompt) {
+  return new Promise(async (resolve, reject) => {
+    let token;
+    try { token = await vertexAuth.getAccessToken(); }
+    catch (e) { return reject(Object.assign(new Error("auth: " + e.message), { status: 401 })); }
+    const body = JSON.stringify({
+      contents: [{ role: "user", parts: [{ text: prompt }] }],
+      generationConfig: { maxOutputTokens: 600, temperature: 0.3 },
+    });
+    const req = https.request({
+      hostname: `${VERTEX_REGION}-aiplatform.googleapis.com`,
+      path: `/v1/projects/${VERTEX_PROJECT}/locations/${VERTEX_REGION}/publishers/google/models/${VERTEX_MODEL}:generateContent`,
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Content-Length": Buffer.byteLength(body),
+        Authorization: `Bearer ${token}`,
+      },
+    }, (res) => {
+      let data = "";
+      res.on("data", (c) => (data += c));
+      res.on("end", () => {
+        if (res.statusCode !== 200) {
+          return reject(Object.assign(new Error(`HTTP ${res.statusCode}: ${data.slice(0, 200)}`), { status: res.statusCode }));
+        }
+        try {
+          const parsed = JSON.parse(data);
+          const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
+          if (!text) return reject(new Error("empty response"));
+          resolve(text);
+        } catch (e) { reject(e); }
+      });
+    });
+    req.on("error", reject);
+    req.write(body);
+    req.end();
+  });
+}
+
 async function generateOne(question, examContext) {
   const prompt = buildPrompt(question, examContext);
 
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
-      const result = await model.generateContent(prompt);
-      const text = result.response.text().trim();
+      const text = (await vertexGenerate(prompt)).trim();
       if (text.length > 50) return text;
       return null;
     } catch (err) {
@@ -160,7 +200,7 @@ async function processExam(filename) {
 
 async function main() {
   console.log(`Starting at ${new Date().toLocaleString("zh-TW")}`);
-  console.log(`Model: gemini-2.0-flash (FREE), Concurrency: ${CONCURRENCY}`);
+  console.log(`Model: Vertex ${VERTEX_MODEL} (ADC), Concurrency: ${CONCURRENCY}`);
   console.log(`Files: ${EXAM_FILES.length} exams`);
 
   const totals = { generated: 0, failed: 0 };

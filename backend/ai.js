@@ -11,13 +11,16 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const EXPLAIN_MODEL = 'claude-haiku-4-5-20251001';
 const GEMINI_MODEL = 'gemini-2.5-flash';
 
-// Gemini key: env var takes precedence (prod/Render); local dev falls back to
-// backend/.gemini-key (gitignored). Absence is fine — GEMINI_EXAMS just route
-// back to Claude Haiku.
-let GEMINI_KEY = process.env.GEMINI_API_KEY || '';
-if (!GEMINI_KEY) {
-  try { GEMINI_KEY = fs.readFileSync(path.join(__dirname, '.gemini-key'), 'utf8').trim(); } catch {}
-}
+// ── Active text-generation provider: Vertex AI Gemini ──────────────────────
+// /explain and /daily-message run exclusively on Vertex Gemini via ADC.
+// The legacy generativelanguage.googleapis.com path (API key) was removed
+// 2026-05-23 — it was billing-account-tier paid with no credit coverage and
+// only existed as dead code. The Anthropic Claude path remains as a fallback
+// for prompts that need stronger reasoning.
+const { GoogleAuth } = require('google-auth-library');
+const VERTEX_PROJECT = 'gen-lang-client-0502672630';
+const VERTEX_REGION = 'us-central1';
+const vertexAuth = new GoogleAuth({ scopes: ['https://www.googleapis.com/auth/cloud-platform'] });
 
 // Cold / low-cache exams. Fresh Haiku calls for these never amortise through
 // the shared Supabase cache the way hot medical exams do, so we serve first
@@ -299,87 +302,122 @@ async function streamAnthropic(res, prompt, maxTokens = 600, onComplete) {
   }
 }
 
-// Streaming Gemini via REST SSE. No SDK — uses built-in https to avoid adding
-// a dep for one call site. `thinkingBudget: 0` is required; otherwise 2.5-flash
-// silently burns maxOutputTokens on thinking and returns empty text.
-function streamGemini(res, prompt, maxTokens = 600, onComplete) {
-  return new Promise((resolve) => {
-    let fullText = '';
-    const body = JSON.stringify({
-      contents: [{ role: 'user', parts: [{ text: prompt }] }],
-      generationConfig: {
-        maxOutputTokens: maxTokens,
-        thinkingConfig: { thinkingBudget: 0 },
-      },
-    });
-    const req = https.request({
-      hostname: 'generativelanguage.googleapis.com',
-      path: `/v1beta/models/${GEMINI_MODEL}:streamGenerateContent?alt=sse&key=${GEMINI_KEY}`,
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) },
-    }, (gRes) => {
-      if (gRes.statusCode !== 200) {
-        let errBody = '';
-        gRes.on('data', d => { errBody += d.toString(); });
-        gRes.on('end', () => {
-          res.write(`data: ${JSON.stringify({ error: `gemini_${gRes.statusCode}` })}\n\n`);
-          res.end();
-          console.warn(`[gemini] HTTP ${gRes.statusCode}: ${errBody.slice(0, 200)}`);
-          resolve();
-        });
-        return;
-      }
-      let buf = '';
-      gRes.on('data', (chunk) => {
-        buf += chunk.toString('utf8');
-        const lines = buf.split('\n');
-        buf = lines.pop();
-        for (const line of lines) {
-          if (!line.startsWith('data: ')) continue;
-          const raw = line.slice(6).trim();
-          if (!raw) continue;
-          try {
-            const parsed = JSON.parse(raw);
-            const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
-            if (text) {
-              fullText += text;
-              res.write(`data: ${JSON.stringify({ text })}\n\n`);
-            }
-          } catch { /* partial JSON frame, ignore */ }
-        }
+// Streaming Gemini via Vertex AI SSE. Auth is ADC (no API key) — same path as
+// rag.js embeddings. Output protocol matches streamAnthropic:
+// `data: {text}` frames, a final `data: [DONE]`, or `data: {error}` on failure.
+//
+// Retry policy mirrors streamAnthropic: transient pre-stream failures
+// (429/500/502/503 or empty completion before any token streamed) get up to
+// 3 attempts with linear backoff. Once a single token has been written to the
+// client, a mid-stream failure is surfaced immediately — retrying would
+// concatenate two partial answers into the user's view.
+//
+// Empty completion is included in the transient set because gemini-2.5-flash
+// occasionally returns 0 tokens when safety filters flag the prompt mid-stream;
+// retrying with the same prompt usually succeeds on the next attempt. If it
+// keeps coming back empty after 3 tries, that's a real safety block — surface
+// the error so the frontend can show "失敗請重試" and refund the coin.
+async function streamVertexGemini(res, prompt, maxTokens = 600, onComplete) {
+  let token;
+  try {
+    token = await vertexAuth.getAccessToken();
+  } catch (e) {
+    console.warn('[vertex] auth failed:', e.message);
+    res.write(`data: ${JSON.stringify({ error: 'vertex_auth_failed' })}\n\n`);
+    res.end();
+    return;
+  }
+
+  // One attempt = one HTTPS round-trip. Returns 'done' on success or terminal
+  // failure (error frame already written), or 'retry' if caller should try
+  // again (no bytes written to client yet).
+  function attempt() {
+    return new Promise((resolve) => {
+      let fullText = '';
+      const body = JSON.stringify({
+        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        generationConfig: {
+          maxOutputTokens: maxTokens,
+          thinkingConfig: { thinkingBudget: 0 },
+        },
       });
-      gRes.on('end', () => {
-        // Empty completion (safety block / token exhaustion on thinking) —
-        // signal an error frame so the frontend shows a failure, not a blank.
-        if (!fullText) {
-          res.write(`data: ${JSON.stringify({ error: 'empty_response' })}\n\n`);
-          res.end();
-          resolve();
+      const req = https.request({
+        hostname: `${VERTEX_REGION}-aiplatform.googleapis.com`,
+        path: `/v1/projects/${VERTEX_PROJECT}/locations/${VERTEX_REGION}/publishers/google/models/${GEMINI_MODEL}:streamGenerateContent?alt=sse`,
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Content-Length': Buffer.byteLength(body),
+          Authorization: `Bearer ${token}`,
+        },
+      }, (gRes) => {
+        if (gRes.statusCode !== 200) {
+          let errBody = '';
+          gRes.on('data', d => { errBody += d.toString(); });
+          gRes.on('end', () => {
+            const status = gRes.statusCode;
+            const transient = [429, 500, 502, 503].includes(status);
+            console.warn(`[vertex] HTTP ${status}${transient ? ' (transient)' : ''}: ${errBody.slice(0, 200)}`);
+            if (transient) return resolve({ status: 'retry' });
+            res.write(`data: ${JSON.stringify({ error: `vertex_${status}` })}\n\n`);
+            res.end();
+            resolve({ status: 'done' });
+          });
           return;
         }
-        res.write('data: [DONE]\n\n');
-        res.end();
-        if (onComplete) onComplete(fullText);
-        resolve();
+        let buf = '';
+        gRes.on('data', (chunk) => {
+          buf += chunk.toString('utf8');
+          const lines = buf.split('\n');
+          buf = lines.pop();
+          for (const line of lines) {
+            if (!line.startsWith('data: ')) continue;
+            const raw = line.slice(6).trim();
+            if (!raw) continue;
+            try {
+              const parsed = JSON.parse(raw);
+              const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
+              if (text) {
+                fullText += text;
+                res.write(`data: ${JSON.stringify({ text })}\n\n`);
+              }
+            } catch { /* partial JSON frame, ignore */ }
+          }
+        });
+        gRes.on('end', () => {
+          if (!fullText) return resolve({ status: 'retry', reason: 'empty' });
+          res.write('data: [DONE]\n\n');
+          res.end();
+          if (onComplete) onComplete(fullText);
+          resolve({ status: 'done' });
+        });
+        gRes.on('error', (e) => {
+          if (!fullText) return resolve({ status: 'retry', reason: 'gres_error', error: e });
+          // mid-stream — partial answer already on the wire, can't retry
+          res.write(`data: ${JSON.stringify({ error: e.message })}\n\n`);
+          res.end();
+          resolve({ status: 'done' });
+        });
       });
-      gRes.on('error', (e) => {
-        res.write(`data: ${JSON.stringify({ error: e.message })}\n\n`);
-        res.end();
-        resolve();
-      });
+      req.on('error', (e) => resolve({ status: 'retry', reason: 'req_error', error: e }));
+      req.write(body);
+      req.end();
     });
-    req.on('error', (e) => {
-      res.write(`data: ${JSON.stringify({ error: e.message })}\n\n`);
-      res.end();
-      resolve();
-    });
-    req.write(body);
-    req.end();
-  });
+  }
+
+  for (let i = 1; i <= 3; i++) {
+    const result = await attempt();
+    if (result.status === 'done') return;
+    if (i < 3) await new Promise(r => setTimeout(r, i * 400));
+  }
+  // Out of retries — every attempt was transient (e.g. persistent 503 or
+  // safety-blocked empty). Tell the frontend so the coin gets refunded.
+  res.write(`data: ${JSON.stringify({ error: 'vertex_retry_exhausted' })}\n\n`);
+  res.end();
 }
 
 function registerRoutes(app, examData, stats) {
-  console.log(`[ai] explain model: Haiku default, Gemini fallback ${GEMINI_KEY ? 'enabled' : 'DISABLED (no key)'} for ${GEMINI_EXAMS.size} exams`);
+  console.log(`[ai] explain model: Vertex Gemini (${GEMINI_MODEL}) — generativelanguage path removed 2026-05-23`);
 
   // POST /explain
   app.post('/explain', async (req, res) => {
@@ -556,13 +594,9 @@ ${wrongNote}
 **${cat.applicationLabel}**
 （${cat.applicationDesc}）`;
 
-    // Route cold exams to Gemini Flash (free tier) when a key is available;
-    // otherwise everything falls through to Claude Haiku.
-    const useGemini = GEMINI_KEY && GEMINI_EXAMS.has(exam);
-    const modelUsed = useGemini ? GEMINI_MODEL : EXPLAIN_MODEL;
-    const streamer = useGemini ? streamGemini : streamAnthropic;
-    await streamer(res, prompt, 600, (fullText) => {
-      saveCachedExplanation(cacheKey, fullText, modelUsed);
+    // All exams stream from Vertex Gemini (see provider note at top of file).
+    await streamVertexGemini(res, prompt, 600, (fullText) => {
+      saveCachedExplanation(cacheKey, fullText, GEMINI_MODEL);
       // Fresh paid generation — record the unlock so the user gets it free
       // next time on any device they're logged into.
       if (!alreadyUnlocked && user_id && question_id) {
@@ -787,27 +821,10 @@ ${wrongSummary || '（全部答對！）'}
 - 繁體中文，台灣語感，不要英文
 - 直接輸出文字，不要任何格式標籤或前綴`;
 
-    // Stream and collect response for caching
-    let fullText = '';
-    try {
-      const stream = await anthropic.messages.stream({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 180,
-        messages: [{ role: 'user', content: prompt }],
-      });
-      for await (const chunk of stream) {
-        if (chunk.type === 'content_block_delta' && chunk.delta?.text) {
-          fullText += chunk.delta.text;
-          res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`);
-        }
-      }
+    // Stream via Vertex Gemini; cache the full text for the rest of the day.
+    await streamVertexGemini(res, prompt, 180, (fullText) => {
       if (fullText) dailyMsgCache.set(cacheKey, fullText);
-      res.write('data: [DONE]\n\n');
-      res.end();
-    } catch (e) {
-      res.write(`data: ${JSON.stringify({ error: e.message })}\n\n`);
-      res.end();
-    }
+    });
   });
 }
 

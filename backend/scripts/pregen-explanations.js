@@ -19,11 +19,16 @@ require('dotenv').config()
 const fs = require('fs')
 const path = require('path')
 const https = require('https')
+const { GoogleAuth } = require('google-auth-library')
 const supabase = require('../supabase')
 
-const GEMINI_KEY = process.env.GEMINI_API_KEY ||
-  (() => { try { return fs.readFileSync(path.join(__dirname, '..', '.gemini-key'), 'utf8').trim() } catch { return '' } })()
-const GEMINI_MODEL = 'gemini-2.5-flash-lite' // cheapest variant, $0.10/$0.40 per M
+// Vertex AI Gemini via ADC — generativelanguage.googleapis.com path retired
+// 2026-05-23 (paid SKU, no credit coverage). gemini-2.5-flash-lite remains the
+// cheapest model in Vertex too, billed under "Vertex API - Gemini 2.x SKUs".
+const GEMINI_MODEL = 'gemini-2.5-flash-lite'
+const VERTEX_PROJECT = process.env.VERTEX_PROJECT || 'gen-lang-client-0502672630'
+const VERTEX_REGION = process.env.VERTEX_REGION || 'us-central1'
+const vertexAuth = new GoogleAuth({ scopes: ['https://www.googleapis.com/auth/cloud-platform'] })
 
 const args = process.argv.slice(2)
 const getArg = (name, def) => {
@@ -39,10 +44,6 @@ const CONCURRENCY = 1
 const DELAY_MS = 5000
 const RECENT_YEARS = new Set(['113', '114', '115']) // prioritize recent
 
-if (!GEMINI_KEY) {
-  console.error('Missing GEMINI_API_KEY (env or backend/.gemini-key)')
-  process.exit(1)
-}
 if (!supabase && !DRY_RUN) {
   console.error('Missing Supabase. Add SUPABASE_URL + SUPABASE_KEY (service_role) to backend/.env')
   console.error('  Get service_role from Supabase dashboard → Project Settings → API')
@@ -83,17 +84,22 @@ ${optionText}
 （一句話說明這個知識點在臨床上的意義）`
 }
 
-function callGemini(prompt) {
+async function callGemini(prompt) {
+  const token = await vertexAuth.getAccessToken()
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
       contents: [{ role: 'user', parts: [{ text: prompt }] }],
       generationConfig: { maxOutputTokens: 600, temperature: 0.3 },
     })
     const req = https.request({
-      hostname: 'generativelanguage.googleapis.com',
-      path: `/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_KEY}`,
+      hostname: `${VERTEX_REGION}-aiplatform.googleapis.com`,
+      path: `/v1/projects/${VERTEX_PROJECT}/locations/${VERTEX_REGION}/publishers/google/models/${GEMINI_MODEL}:generateContent`,
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) },
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(body),
+        Authorization: `Bearer ${token}`,
+      },
     }, (res) => {
       let data = ''
       res.on('data', c => { data += c })

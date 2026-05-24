@@ -54,6 +54,11 @@ const EXAM_FILES = {
   'post-outdoor': 'questions-post-outdoor.json',
   'railway-transport': 'questions-railway-transport.json',
   'railway-admin': 'questions-railway-admin.json',
+  'teacher-secondary': 'questions-teacher-secondary.json',
+  'teacher-elementary': 'questions-teacher-elementary.json',
+  'teacher-kindergarten': 'questions-teacher-kindergarten.json',
+  'teacher-special': 'questions-teacher-special.json',
+  'teacher-special-gifted': 'questions-teacher-special-gifted.json',
 }
 
 // In-memory cache (per page-load)

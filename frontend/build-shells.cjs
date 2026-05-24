@@ -39,6 +39,8 @@ const CATEGORY_LABEL = {
   medical: '醫事人員國考',
   'law-professional': '法律專技國考',
   'civil-service': '公職國考',
+  'state-enterprise': '國營事業招考',
+  education: '教師資格考試',
   'common-subjects': '共同科目題庫',
   independent: '駕照筆試題庫',
   'college-entrance': '大學入學考試',

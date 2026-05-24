@@ -43,6 +43,12 @@ const CATEGORIES = [
     exams: ['state-mgmt', 'state-hr', 'state-finance', 'state-it', 'post-indoor', 'post-outdoor', 'railway-transport', 'railway-admin'],
   },
   {
+    id: 'education',
+    name: '教師資格考試',
+    icon: '🍎',
+    exams: ['teacher-secondary', 'teacher-elementary', 'teacher-kindergarten', 'teacher-special', 'teacher-special-gifted'],
+  },
+  {
     id: 'independent',
     name: '駕照考試',
     icon: '🚗',

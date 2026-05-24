@@ -33,7 +33,10 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v25: 新增 中華郵政 post-indoor/post-outdoor 考試（專業職二內外勤，104-114 年，1098 題）
 // v26: judicial 改歸「法律與司法」類別；移除空的「共同科目」身分類別
 // v27: 新增 台鐵招考 railway-transport/railway-admin 考試（鐵路特考佐級運輸營業/事務管理，100-112 年，4,730 題）
-const CACHE_KEY = 'exam-registry-v27'
+// v28: 新增 教師資格考試 teacher-secondary（中等學校教檢，110-114 年，500 題）+ 新增「教師資格考試」身分類別
+// v29: 教師資格考試補齊 teacher-elementary/kindergarten/special（國小/幼兒園/特教教檢，各 500 題）
+// v30: 教師資格考試新增 teacher-special-gifted（特教資優組教檢，500 題）
+const CACHE_KEY = 'exam-registry-v30'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache
@@ -97,13 +100,14 @@ export function getExamIds() {
 const EXAM_ORDER = [
   'doctor1', 'doctor2', 'dental1', 'dental2', 'pharma1', 'pharma2',
   'tcm1', 'tcm2', 'vet',
-  'nursing', 'nutrition', 'social-worker', 'pt', 'ot', 'medlab', 'radiology', 'audiologist', 'speech-therapist', 'clinical-psychology', 'counseling-psychology', 'public-health', 'optometrist', 'optometrist-junior', 'dental-tech',
+  'nursing', 'nutrition', 'social-worker', 'pt', 'ot', 'rt', 'medlab', 'radiology', 'audiologist', 'speech-therapist', 'clinical-psychology', 'counseling-psychology', 'public-health', 'optometrist', 'optometrist-junior', 'dental-tech',
   'lawyer1', 'judicial',
   'civil-senior', 'customs', 'police', 'police4',
   'civil-senior-general', 'civil-junior-general', 'civil-junior-civil-affairs', 'civil-elementary-general',
   'state-mgmt', 'state-hr', 'state-finance', 'state-it',
   'post-indoor', 'post-outdoor',
   'railway-transport', 'railway-admin',
+  'teacher-secondary', 'teacher-elementary', 'teacher-kindergarten', 'teacher-special', 'teacher-special-gifted',
   'driver-car', 'driver-moto',
   'gsat', 'ast',
 ]
@@ -131,12 +135,19 @@ const CATEGORY_META = {
     description: '高普考、初考、各類特考',
     order: 3,
   },
+  education: {
+    id: 'education',
+    icon: '🍎',
+    name: '教師資格考試',
+    description: '中等學校教師檢定（教檢）',
+    order: 4,
+  },
   'state-enterprise': {
     id: 'state-enterprise',
     icon: '⚡',
     name: '國營事業',
     description: '台電、中油、台水、台糖聯合招考、中華郵政、台鐵招考',
-    order: 4,
+    order: 5,
   },
   // 共同科目不是「身分」、底下也無考試 → 不列入身分選單。
   // 共同科練習仍由各考試的 sharedBanks（🌊 共同科題庫）提供。
@@ -145,14 +156,14 @@ const CATEGORY_META = {
     icon: '🚗',
     name: '駕照考試',
     description: '汽車駕照、機車駕照',
-    order: 5,
+    order: 6,
   },
   'college-entrance': {
     id: 'college-entrance',
     icon: '🎓',
     name: '大學入學',
     description: '學科能力測驗（學測）、分科測驗',
-    order: 6,
+    order: 7,
   },
 }
 

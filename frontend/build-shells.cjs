@@ -136,8 +136,28 @@ function buildShell(tpl, cfg) {
     ? `題庫收錄 ${totalQ} 題，年度範圍 100-115 年。即時對戰、AI 解說、歷屆模擬考、弱點分析。`
     : `題庫收錄歷屆考古題，年度範圍 100-115 年。即時對戰、AI 解說、歷屆模擬考、弱點分析。`
 
+  // ─── 2026-05-24 新增深度 SEO 內容（為 AdSense「缺乏內容」拒絕補強）─────
+  // articleIntro / subjectDeepDive / studyStrategy / faqs 由 Vertex Gemini 草擬
+  // (gen-seo-content.js)，per-exam unique。bake 進 prerender HTML 讓 Googlebot
+  // 不用跑 JS 就讀得到。同時 ExamArticle 元件 runtime 也會 render 同份內容。
+  const articleIntroHtml = seo.articleIntro
+    ? `<h2 style="font-size:1.2rem;margin-top:1.5rem">${esc(seo.shortName || cfg.short || cfg.name)}深度介紹</h2>\n${seo.articleIntro.split(/\n\n+/).map(p => `        <p>${esc(p.trim())}</p>`).join('\n')}`
+    : ''
+  const subjectDeepHtml = Array.isArray(seo.subjectDeepDive) && seo.subjectDeepDive.length
+    ? `<h2 style="font-size:1.2rem;margin-top:1.5rem">各科考點深度解析</h2>\n${seo.subjectDeepDive.map(s => `        <p><strong>${esc(s.name)}</strong>：${esc(s.desc)}</p>`).join('\n')}`
+    : ''
+  const studyStrategyHtml = seo.studyStrategy
+    ? `<h2 style="font-size:1.2rem;margin-top:1.5rem">備考策略與時程規劃</h2>\n${seo.studyStrategy.split(/\n\n+/).map(p => `        <p>${esc(p.trim()).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')}</p>`).join('\n')}`
+    : ''
+  const faqsHtml = Array.isArray(seo.faqs) && seo.faqs.length
+    ? `<h2 style="font-size:1.2rem;margin-top:1.5rem">常見問答</h2>\n${seo.faqs.map(f => `        <p><strong>Q：${esc(f.q)}</strong></p>\n        <p>A：${esc(f.a)}</p>`).join('\n')}`
+    : ''
+  // FAQPage JSON-LD for Google rich snippet
+  const faqLdJson = Array.isArray(seo.faqs) && seo.faqs.length
+    ? `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: seo.faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })}</script>`
+    : ''
+
   // Build exam-specific crawlable content block (shared by #root and <noscript>).
-  // Structure per SEO spec: H1 → 400字 intro → 考試科目 → 統計 → 相關資源.
   const staticBody = `
       <div style="max-width:720px;margin:40px auto;padding:20px;font-family:'Noto Sans TC',sans-serif;color:#333;line-height:1.7">
         <h1 style="font-size:1.6rem;color:#1A6B9A">${esc(fullName)} 線上題庫與模擬考</h1>
@@ -148,6 +168,11 @@ ${paperListHtml}
         </ul>
         <h2 style="font-size:1.2rem;margin-top:1.5rem">統計</h2>
         <p>${esc(statsSentence)}</p>
+        ${articleIntroHtml}
+        ${subjectDeepHtml}
+        ${studyStrategyHtml}
+        ${faqsHtml}
+        ${faqLdJson}
         <h2 style="font-size:1.2rem;margin-top:1.5rem">相關資源</h2>
         <ul>
           <li><a href="/practice">練習模式</a></li>

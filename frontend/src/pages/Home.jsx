@@ -203,6 +203,57 @@ function ExamArticle({ exam }) {
         <li><strong><Link to="/leaderboard" className="text-medical-blue underline">排行榜</Link>：</strong>查看全台{c.studentType}的答題表現排名，激勵持續進步。</li>
       </ul>
 
+      {/* AI 草擬深度內容（2026-05-24 為 AdSense「缺乏內容」拒絕補強）：
+          articleIntro / subjectDeepDive / studyStrategy / faqs 都是 per-exam unique。 */}
+      {c.articleIntro && (
+        <>
+          <h3 className="font-bold text-medical-dark">{c.shortName}深度介紹</h3>
+          {c.articleIntro.split(/\n\n+/).map((p, i) => <p key={i}>{p}</p>)}
+        </>
+      )}
+
+      {Array.isArray(c.subjectDeepDive) && c.subjectDeepDive.length > 0 && (
+        <>
+          <h3 className="font-bold text-medical-dark">各科考點深度解析</h3>
+          {c.subjectDeepDive.map((s, i) => (
+            <div key={i}>
+              <p><strong>{s.name}</strong>：{s.desc}</p>
+            </div>
+          ))}
+        </>
+      )}
+
+      {c.studyStrategy && (
+        <>
+          <h3 className="font-bold text-medical-dark">備考策略與時程規劃</h3>
+          {c.studyStrategy.split(/\n\n+/).map((p, i) => (
+            <p key={i} dangerouslySetInnerHTML={{ __html: p.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>') }} />
+          ))}
+        </>
+      )}
+
+      {Array.isArray(c.faqs) && c.faqs.length > 0 && (
+        <>
+          <h3 className="font-bold text-medical-dark">常見問答</h3>
+          {/* FAQPage JSON-LD — 讓 Google 顯示 FAQ rich snippet */}
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: c.faqs.map(f => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          }) }} />
+          {c.faqs.map((f, i) => (
+            <div key={i}>
+              <p><strong>Q：{f.q}</strong></p>
+              <p>A：{f.a}</p>
+            </div>
+          ))}
+        </>
+      )}
+
       <h3 className="font-bold text-medical-dark">題目來源與免責聲明</h3>
       <p>
         本平台所有試題均來自考選部歷年公開之{c.shortName}國考試題與標準答案，版權歸考選部所有。

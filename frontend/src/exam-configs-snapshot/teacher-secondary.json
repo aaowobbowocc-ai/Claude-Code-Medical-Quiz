@@ -1,0 +1,106 @@
+{
+  "id": "teacher-secondary",
+  "name": "中等學校教師資格考試",
+  "short": "中等教檢",
+  "icon": "👨‍🏫",
+  "category": "education",
+  "subCategory": "教師資格考試",
+  "selectionType": "license",
+  "persona": [
+    "teacher-student"
+  ],
+  "sharedBanks": [],
+  "sharedScope": "none",
+  "uxHints": {
+    "defaultMode": "pure",
+    "longText": true
+  },
+  "questionsFile": "questions-teacher-secondary.json",
+  "totalQ": 500,
+  "passScore": null,
+  "passRate": null,
+  "papers": [
+    {
+      "id": "chinese",
+      "name": "國語文能力測驗",
+      "subject": "國語文能力測驗",
+      "subjects": "閱讀理解、語文應用、寫作（本題庫收錄選擇題閱讀測驗）",
+      "count": 25,
+      "timeLimit": 100
+    },
+    {
+      "id": "edu_principles",
+      "name": "教育理念與實務",
+      "subject": "教育理念與實務",
+      "subjects": "教育哲學、教育社會學、教育行政與制度、教育法規",
+      "count": 25,
+      "timeLimit": 80
+    },
+    {
+      "id": "learner_dev",
+      "name": "學習者發展與適性輔導",
+      "subject": "學習者發展與適性輔導",
+      "subjects": "發展心理學、學習心理學、輔導與諮商、適性教育",
+      "count": 25,
+      "timeLimit": 80
+    },
+    {
+      "id": "curriculum",
+      "name": "課程教學與評量",
+      "subject": "課程教學與評量",
+      "subjects": "課程設計、教學原理與方法、學習評量",
+      "count": 25,
+      "timeLimit": 80
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "tag": "all",
+      "name": "全部"
+    }
+  ],
+  "ui": {
+    "tagNames": {
+      "chinese": "國語文能力測驗",
+      "edu_principles": "教育理念與實務",
+      "learner_dev": "學習者發展與適性輔導",
+      "curriculum": "課程教學與評量"
+    },
+    "stageStyles": {
+      "all": { "icon": "🎲", "color": "#64748B" },
+      "chinese": { "icon": "📖", "color": "#F59E0B" },
+      "edu_principles": { "icon": "🏛️", "color": "#6366F1" },
+      "learner_dev": { "icon": "🧠", "color": "#10B981" },
+      "curriculum": { "icon": "📐", "color": "#3B82F6" }
+    },
+    "subjectColors": {
+      "國語文能力測驗": "#F59E0B",
+      "教育理念與實務": "#6366F1",
+      "學習者發展與適性輔導": "#10B981",
+      "課程教學與評量": "#3B82F6"
+    }
+  },
+  "seo": {
+    "platformName": "國考知識王 — 中等學校教師資格考試（中等教檢）題庫練習平台",
+    "title": "國考知識王",
+    "fullName": "中等學校教師資格考試（中等教檢）",
+    "shortName": "中等教檢",
+    "studentType": "中等學校師資生、教師資格考試考生",
+    "years": "110-114",
+    "totalQ": 500,
+    "examDesc": "中等學校教師資格考試（教檢）由教育部主辦，是取得高級中等以下學校教師證書的資格門檻。本題庫收錄 110-114 年教師資格考試中等學校類科歷屆試題的選擇題，涵蓋國語文能力測驗、教育理念與實務、學習者發展與適性輔導、課程教學與評量四科。教師資格考試於 110 年由原「教師資格檢定考試」改制，每年舉辦一次。",
+    "paperDesc": "中等學校類科考四科：國語文能力測驗（全類科共同科目，含閱讀測驗）、教育理念與實務、學習者發展與適性輔導、課程教學與評量。各科均為選擇題＋非選擇題混合卷，本題庫收錄各科選擇題（每科 25 題單選，非選擇題與寫作不納入）。",
+    "subjects": "國語文能力測驗、教育理念與實務、學習者發展與適性輔導、課程教學與評量",
+    "mockDesc": "中等學校教師資格考試模擬考（教檢中等 110-114 年歷屆試題）",
+    "subjectDetails": [
+      ["國語文能力測驗", "全類科共同科目，以閱讀測驗為主，測驗閱讀理解與語文應用能力。"],
+      ["教育理念與實務", "教育哲學、教育社會學、教育行政與制度、教育法規等教育專業知識。"],
+      ["學習者發展與適性輔導", "發展心理學、學習心理學、輔導與諮商、適性教育與特殊需求學生支持。"],
+      ["課程教學與評量", "課程設計與發展、教學原理與方法、學習評量的設計與運用。"]
+    ]
+  },
+  "meta": {
+    "officialSystem": "教師資格考試"
+  }
+}

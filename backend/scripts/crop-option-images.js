@@ -138,7 +138,7 @@ async function detectOptionBoxes(pngBuf, qnum) {
         headers: { Authorization: `Bearer ${tokenStr}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{ role: 'user', parts }],
-          generationConfig: { temperature: 0.1, maxOutputTokens: 8192 }
+          generationConfig: { temperature: 0.1, maxOutputTokens: 8192, thinkingConfig: { thinkingBudget: 0 } }
         }),
         signal: ctrl.signal,
       })

@@ -164,7 +164,7 @@ async function vision(pngB64, qnum) {
             { inlineData: { data: pngB64, mimeType: 'image/png' } },
             { text: prompt },
           ]}],
-          generationConfig: { temperature: 0.1, maxOutputTokens: 4096 },
+          generationConfig: { temperature: 0.1, maxOutputTokens: 4096, thinkingConfig: { thinkingBudget: 0 } },
         }),
       })
       const data = await resp.json()

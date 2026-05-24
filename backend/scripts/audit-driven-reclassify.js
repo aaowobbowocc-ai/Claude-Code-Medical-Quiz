@@ -93,7 +93,7 @@ async function callGemini(prompt) {
         headers: { Authorization: `Bearer ${tokenStr}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{ role: 'user', parts: [{ text: prompt }] }],
-          generationConfig: { temperature: 0.0, maxOutputTokens: 50, thinkingConfig: { thinkingBudget: 128 } },
+          generationConfig: { temperature: 0.0, maxOutputTokens: 50, thinkingConfig: { thinkingBudget: 0 } },
         }),
       })
       if (resp.status === 429) {

@@ -52,7 +52,7 @@ async function visionExtract(pngs, qnum) {
       const resp = await fetch(url, {
         method: 'POST',
         headers: { Authorization: `Bearer ${tokenStr}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contents: [{ role: 'user', parts }], generationConfig: { temperature: 0.1, maxOutputTokens: 4096 } }),
+        body: JSON.stringify({ contents: [{ role: 'user', parts }], generationConfig: { temperature: 0.1, maxOutputTokens: 4096, thinkingConfig: { thinkingBudget: 0 } } }),
         signal: ctrl.signal,
       })
       const data = await resp.json()

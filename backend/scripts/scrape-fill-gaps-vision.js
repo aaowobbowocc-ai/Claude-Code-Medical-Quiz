@@ -489,7 +489,7 @@ async function visionExtract(pngBuf, prompt, pageNum) {
           { inlineData: { data: base64, mimeType: 'image/png' } },
           { text: prompt },
         ]}],
-        generationConfig: { temperature: 0.1, maxOutputTokens: 8192 },
+        generationConfig: { temperature: 0.1, maxOutputTokens: 8192, thinkingConfig: { thinkingBudget: 0 } },
       }
       const resp = await fetch(url, {
         method: 'POST',

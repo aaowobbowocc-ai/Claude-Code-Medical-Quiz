@@ -401,7 +401,7 @@ async function visionOnePage(png) {
         headers: { Authorization: `Bearer ${tokenStr}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{ role: 'user', parts }],
-          generationConfig: { temperature: 0.0, maxOutputTokens: 4000, thinkingConfig: { thinkingBudget: 256 } },
+          generationConfig: { temperature: 0.0, maxOutputTokens: 4000, thinkingConfig: { thinkingBudget: 0 } },
         }),
       })
       if (resp.status === 429) {

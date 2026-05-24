@@ -93,7 +93,7 @@ async function visionExtractPage(pngBuf, missingNums) {
             { inlineData: { data: pngBuf.toString('base64'), mimeType: 'image/png' } },
             { text: prompt },
           ] }],
-          generationConfig: { temperature: 0.0, maxOutputTokens: 8000, thinkingConfig: { thinkingBudget: 512 } },
+          generationConfig: { temperature: 0.0, maxOutputTokens: 8000, thinkingConfig: { thinkingBudget: 0 } },
         }),
       })
       if (resp.status === 429) { await new Promise(r => setTimeout(r, 3000 * 2 ** attempt)); continue }

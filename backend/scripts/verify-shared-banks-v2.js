@@ -112,7 +112,7 @@ async function visionOnePage(png) {
             { inlineData: { data: png.toString('base64'), mimeType: 'image/png' } },
             { text: prompt },
           ] }],
-          generationConfig: { temperature: 0.0, maxOutputTokens: 4000, thinkingConfig: { thinkingBudget: 256 } },
+          generationConfig: { temperature: 0.0, maxOutputTokens: 4000, thinkingConfig: { thinkingBudget: 0 } },
         }),
       })
       if (resp.status === 429) { await new Promise(r => setTimeout(r, 3000 * 2 ** attempt)); continue }

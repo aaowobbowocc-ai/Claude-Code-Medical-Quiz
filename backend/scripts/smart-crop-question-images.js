@@ -174,7 +174,7 @@ async function findQuestionYViaVision(pngBuf, qnums) {
       { inlineData: { data: pngBuf.toString('base64'), mimeType: 'image/png' } },
       { text: prompt },
     ]}],
-    generationConfig: { temperature: 0.0, maxOutputTokens: 200, thinkingConfig: { thinkingBudget: 128 } },
+    generationConfig: { temperature: 0.0, maxOutputTokens: 200, thinkingConfig: { thinkingBudget: 0 } },
   }
   for (let attempt = 0; attempt < 4; attempt++) {
     try {

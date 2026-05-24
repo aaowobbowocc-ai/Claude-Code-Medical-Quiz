@@ -89,7 +89,7 @@ async function callGemini(prompt) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
       contents: [{ role: 'user', parts: [{ text: prompt }] }],
-      generationConfig: { maxOutputTokens: 600, temperature: 0.3 },
+      generationConfig: { maxOutputTokens: 600, temperature: 0.3, thinkingConfig: { thinkingBudget: 0 } },
     })
     const req = https.request({
       hostname: `${VERTEX_REGION}-aiplatform.googleapis.com`,

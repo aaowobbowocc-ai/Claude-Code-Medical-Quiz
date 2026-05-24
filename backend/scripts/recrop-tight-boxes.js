@@ -124,7 +124,7 @@ bbox 格式：[ymin, xmin, ymax, xmax]，**標準化到 0-1000**（左上 0,0；
       const resp = await fetch(url, {
         method: 'POST',
         headers: { Authorization: `Bearer ${tokenStr}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contents: [{ role: 'user', parts }], generationConfig: { temperature: 0.05, maxOutputTokens: 8192 } }),
+        body: JSON.stringify({ contents: [{ role: 'user', parts }], generationConfig: { temperature: 0.05, maxOutputTokens: 8192, thinkingConfig: { thinkingBudget: 0 } } }),
         signal: ctrl.signal,
       })
       if (resp.status === 429) { await new Promise(r => setTimeout(r, 5000 * (attempt + 1))); continue }

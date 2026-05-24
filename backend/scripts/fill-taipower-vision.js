@@ -126,7 +126,7 @@ Rules:
       { inline_data: { mime_type: 'image/png', data: png.toString('base64') } },
       { text: prompt },
     ] }],
-    generationConfig: { temperature: 0, responseMimeType: 'application/json' },
+    generationConfig: { temperature: 0, responseMimeType: 'application/json', thinkingConfig: { thinkingBudget: 0 } },
   }
   const resp = await geminiRequest(body)
   const raw = (resp.candidates?.[0]?.content?.parts || []).map(p => p.text || '').join('')
@@ -162,7 +162,7 @@ Extract the answer for every question visible. Return STRICT JSON array (no pros
         { inline_data: { mime_type: 'image/png', data: png.toString('base64') } },
         { text: prompt },
       ] }],
-      generationConfig: { temperature: 0, responseMimeType: 'application/json' },
+      generationConfig: { temperature: 0, responseMimeType: 'application/json', thinkingConfig: { thinkingBudget: 0 } },
     })
     const raw = (resp.candidates?.[0]?.content?.parts || []).map(p => p.text || '').join('')
     const cleaned = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim()

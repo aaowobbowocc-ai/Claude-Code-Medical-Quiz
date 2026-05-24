@@ -139,7 +139,7 @@ async function classifyQuestion(pngBuf1, pngBuf2, qnum, qStem) {
       const resp = await fetch(url, {
         method: 'POST',
         headers: { Authorization: `Bearer ${tokenStr}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contents: [{ role: 'user', parts }], generationConfig: { temperature: 0.1, maxOutputTokens: 8192 } }),
+        body: JSON.stringify({ contents: [{ role: 'user', parts }], generationConfig: { temperature: 0.1, maxOutputTokens: 8192, thinkingConfig: { thinkingBudget: 0 } } }),
         signal: ctrl.signal,
       })
       if (resp.status === 429) { await new Promise(r => setTimeout(r, 5000 * (attempt + 1))); continue }

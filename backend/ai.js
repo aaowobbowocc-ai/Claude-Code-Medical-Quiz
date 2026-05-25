@@ -824,7 +824,9 @@ ${wrongSummary || '（全部答對！）'}
 **🗓️ 建議複習計畫**
 （給3個具體可執行的複習建議）`;
 
-    await streamAnthropic(res, prompt, 800);
+    // 2026-05-25 改：原本走 streamAnthropic，但 Anthropic credit 已耗盡會回
+    // 400 「credit balance too low」。改走 streamVertexGemini 跟 /explain 同源。
+    await streamVertexGemini(res, prompt, 800);
   });
 
   // POST /daily-message (cached per day+level)

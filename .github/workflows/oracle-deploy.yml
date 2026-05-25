@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Deploy to Oracle VM
         uses: appleboy/ssh-action@v1.0.3
+        env:
+          GCP_SERVICE_ACCOUNT_JSON: ${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}
         with:
           host: ${{ secrets.ORACLE_HOST }}
           username: ubuntu
@@ -29,6 +31,7 @@ jobs:
           port: 22
           timeout: 60s
           command_timeout: 5m
+          envs: GCP_SERVICE_ACCOUNT_JSON
           script: |
             set -e
             cd /home/ubuntu/app
@@ -55,8 +58,26 @@ jobs:
             sync_env VERTEX_SEARCH_DATASTORE_ID quiz-questions_1779552554869
             sync_env VERTEX_SEARCH_ENGINE_ID  quiz-search_1779552716508
             sync_env VERTEX_SEARCH_LOCATION   global
+            sync_env GOOGLE_APPLICATION_CREDENTIALS /home/ubuntu/app/backend/.gcp-key.json
+            # === GCP service account key — write JSON to .gcp-key.json ===
+            # GoogleAuth 預設讀 GOOGLE_APPLICATION_CREDENTIALS 指向的檔案
+            # 把 GitHub Secret 的 JSON 內容寫成檔案（chmod 600 限本人讀寫）
+            if [ -n "$GCP_SERVICE_ACCOUNT_JSON" ]; then
+              echo "$GCP_SERVICE_ACCOUNT_JSON" > .gcp-key.json
+              chmod 600 .gcp-key.json
+              # 簡單 sanity check：合法 JSON 且包含 client_email
+              if grep -q '"client_email"' .gcp-key.json; then
+                echo "✓ .gcp-key.json synced ($(wc -c < .gcp-key.json) bytes)"
+              else
+                echo "✗ .gcp-key.json doesn't look like a service account JSON!"
+                head -c 200 .gcp-key.json
+                exit 1
+              fi
+            else
+              echo "⚠ GCP_SERVICE_ACCOUNT_JSON secret not set — Vertex APIs will fail"
+            fi
             echo "=== .env Vertex Search lines ==="
-            grep '^VERTEX_SEARCH_' .env || echo "(none — sync failed)"
+            grep '^VERTEX_SEARCH_\|^GOOGLE_APPLICATION' .env || echo "(none — sync failed)"
             echo "=== restart backend ==="
             sudo systemctl restart examking-backend
             sudo systemctl status examking-backend --no-pager | head -10

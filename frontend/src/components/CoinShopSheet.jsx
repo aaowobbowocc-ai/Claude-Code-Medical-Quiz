@@ -125,11 +125,30 @@ export default function CoinShopSheet({ onClose }) {
           <>
             <div className="text-center mb-5">
               <div className="text-5xl mb-3">🪙</div>
-              <h2 className="text-xl font-bold text-medical-dark">贊助國考知識王</h2>
+              <h2 className="text-xl font-bold text-medical-dark">
+                贊助國考知識王
+                <span className="ml-2 align-middle text-[11px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full">測試中</span>
+              </h2>
               <p className="text-gray-400 text-sm mt-2 leading-relaxed">
                 這是一個由醫學生維護的免費考古題平台。<br />
                 贊助將用於伺服器與 AI 解析功能維護。
               </p>
+            </div>
+
+            {/* 2026-05-27: 街口支付串接還在測試，使用者付款後無法自動入帳金幣。
+                先在這提醒，並提供綠界正式管道讓真的想贊助的人可以走。
+                正式開放後此警語可移除（grep TODO: coin-shop-launch）。 */}
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 mb-4 text-xs text-amber-800 leading-relaxed">
+              <p className="font-bold mb-1">⚠️ 金幣商店尚未正式開放</p>
+              <p>下方付款流程仍在測試，付款可能不會自動入帳金幣。如果現在想贊助，請改走綠界（金幣會手動補發）：</p>
+              <a
+                href="https://p.ecpay.com.tw/E11DBDD"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mt-2 text-center bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold py-2 rounded-xl active:scale-95 transition-transform"
+              >
+                ☕ 用綠界贊助（信用卡 / ATM / 超商）
+              </a>
             </div>
 
             <div className="bg-blue-50 rounded-2xl px-4 py-3 mb-5 text-xs text-blue-700 leading-relaxed space-y-1">

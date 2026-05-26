@@ -830,8 +830,13 @@ ${wrongSummary || '（全部答對！）'}
   });
 
   // POST /daily-message (cached per day+level)
+  //
+  // ⚠️ 2026-05-27 bug 修正：name 不再帶進 prompt。
+  // 之前 cacheKey 只用 (today|level) 但 prompt 含 ${name} → 第一個請求者的
+  // 名字被焊進當日 cache，同等級其他使用者都看到那個名字（anita 案例）。
+  // 改成完全通用語氣（用「你」），cache 安全，UX 也沒明顯差別。
   app.post('/daily-message', async (req, res) => {
-    const { name = '學員', level = 1 } = req.body;
+    const { level = 1 } = req.body;
 
     const today = new Date().toLocaleDateString('zh-TW', {
       timeZone: 'Asia/Taipei', year: 'numeric', month: 'long', day: 'numeric', weekday: 'long',
@@ -860,10 +865,11 @@ ${wrongSummary || '（全部答對！）'}
     sseHeaders(res);
 
     const prompt = `你是國考知識王的AI導師。今天是${today}。
-請為正在備考醫師一階國考的醫學生「${name}」（遊戲等級 Lv.${level}）寫一段今日寄語。
+請為正在備考醫師一階國考的醫學生（遊戲等級 Lv.${level}）寫一段今日寄語。
 
 要求：
 - 70字以內
+- 用「你」稱呼讀者，不要編造或使用任何人名
 - 語氣像過來人的前輩醫師：溫暖、真實、不說教
 - 融入真實備考情感（疲憊、堅持、那個還沒放棄的自己）
 - 可以用人體或醫學作隱喻，讓文字有質感

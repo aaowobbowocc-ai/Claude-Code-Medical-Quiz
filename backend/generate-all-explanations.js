@@ -79,7 +79,7 @@ function vertexGenerate(prompt) {
     catch (e) { return reject(Object.assign(new Error("auth: " + e.message), { status: 401 })); }
     const body = JSON.stringify({
       contents: [{ role: "user", parts: [{ text: prompt }] }],
-      generationConfig: { maxOutputTokens: 600, temperature: 0.3 },
+      generationConfig: { maxOutputTokens: 600, temperature: 0.3, thinkingConfig: { thinkingBudget: 0 } },
     });
     const req = https.request({
       hostname: `${VERTEX_REGION}-aiplatform.googleapis.com`,

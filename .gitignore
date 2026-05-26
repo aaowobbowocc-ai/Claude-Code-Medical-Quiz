@@ -41,3 +41,13 @@ backend/*.traineddata
 # Historical / one-off scripts (not in active rotation)
 backend/scripts/historical/
 backend/fix_batch_*.py
+
+# Android (Capacitor) — exclude build artifacts, keep source
+frontend/android/.gradle/
+frontend/android/local.properties
+frontend/android/app/build/
+frontend/android/build/
+frontend/android/captures/
+frontend/android/.idea/
+frontend/android/app/src/main/assets/public/
+frontend/android/app/release/

@@ -1,0 +1,13 @@
+{
+  "appId": "tw.examking.app",
+  "appName": "國考知識王",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "buildOptions": {
+      "releaseType": "AAB"
+    }
+  }
+}

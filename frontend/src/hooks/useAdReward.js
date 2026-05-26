@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { usePlayerStore } from '../store/gameStore'
+import { isNativeApp, showRewarded as showAdMobRewarded } from '../lib/admob'
 
 // ── Config ──────────────────────────────────────────
 // Set VITE_REWARDED_AD_SLOT in Vercel env vars after AdSense H5 approval
@@ -95,6 +96,8 @@ export function useAdReward() {
   // Called synchronously in the click handler BEFORE any async logic so
   // the browser still considers it a user gesture (popup blocker bypass).
   const getAdUrl = useCallback(() => {
+    // Native App 走 AdMob，廣告在 App 內顯示，不需要預開 window
+    if (isNativeApp()) return null
     if (REWARDED_AD_SLOT || !MONETAG_DIRECT_LINK) return null
     const preCheck = getAdRewardInfo()
     if (preCheck.remaining <= 0 || preCheck.cooldownMs > 0) return null
@@ -107,6 +110,29 @@ export function useAdReward() {
     if (preCheck.cooldownMs > 0) { setPhase('cooldown'); setCooldownSec(Math.ceil(preCheck.cooldownMs / 1000)); return false }
 
     setPhase('loading')
+
+    // ── Native (Android/iOS) App: 走 AdMob Rewarded Video ────────────────
+    // CPM 比 Monetag Direct Link 高 30-50 倍。先檢查避免 Web 版誤跑 native code。
+    if (isNativeApp()) {
+      try {
+        setPhase('playing')
+        const rewarded = await showAdMobRewarded()
+        if (rewarded) {
+          const result = await claimAdReward()
+          if (result.success) { setPhase('success'); refreshInfo(); return true }
+          setPhase(result.reason === 'cooldown' ? 'cooldown' : 'exhausted')
+          return false
+        }
+        // 使用者中途關掉廣告 — 不發獎勵
+        setPhase('idle')
+        refreshInfo()
+        return false
+      } catch (e) {
+        console.warn('[admob] showRewarded failed:', e.message)
+        setPhase('error')
+        return false
+      }
+    }
 
     // If we have a real rewarded ad slot, use AdSense H5 via GPT
     if (REWARDED_AD_SLOT) {

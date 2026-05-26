@@ -19,7 +19,7 @@ export default function Privacy() {
 
       <div className="flex-1 px-5 py-6">
         <div className="bg-white rounded-2xl shadow-sm p-6 text-sm text-gray-700 leading-relaxed space-y-5">
-          <p className="text-xs text-gray-400">最後更新日期：2026 年 4 月 23 日</p>
+          <p className="text-xs text-gray-400">最後更新日期：2026 年 5 月 27 日</p>
 
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">一、總則</h2>
@@ -44,7 +44,8 @@ export default function Privacy() {
             <h2 className="font-bold text-base text-medical-dark mb-2">三、Cookie 與廣告技術</h2>
             <p>本平台使用以下技術：</p>
             <ul className="list-disc pl-5 space-y-1.5 mt-2">
-              <li><strong>Google AdSense：</strong>我們透過 Google AdSense 展示廣告。Google 可能會使用 Cookie 根據您先前造訪本網站或其他網站的記錄，向您放送合適的廣告。</li>
+              <li><strong>Google AdSense（網頁版）：</strong>我們透過 Google AdSense 展示廣告。Google 可能會使用 Cookie 根據您先前造訪本網站或其他網站的記錄，向您放送合適的廣告。</li>
+              <li><strong>Google AdMob（Android App 版）：</strong>Android App 使用 Google AdMob SDK 展示獎勵影片廣告（看完可獲得遊戲金幣）。AdMob 可能蒐集裝置識別碼（Advertising ID）、IP 位址、廣告互動事件等資訊以投放相關廣告。您可在 Android 系統設定中重設或刪除 Advertising ID。</li>
               <li><strong>Google Analytics：</strong>用於分析網站流量與使用行為，所蒐集的資料皆為匿名且無法識別個人身分。</li>
               <li><strong>必要 Cookie：</strong>用於維持您的遊戲狀態與偏好設定（如深色模式、暱稱）。</li>
             </ul>
@@ -76,15 +77,16 @@ export default function Privacy() {
             <h2 className="font-bold text-base text-medical-dark mb-2">六、第三方服務</h2>
             <p>本平台使用以下第三方服務，各服務有其隱私權政策：</p>
             <ul className="list-disc pl-5 space-y-1.5 mt-2">
-              <li>Google AdSense（廣告）</li>
+              <li>Google AdSense（網頁版廣告）</li>
+              <li>Google AdMob（Android App 版獎勵影片廣告）</li>
               <li>Google Analytics（流量分析）</li>
               <li>Google Search Console（搜尋引擎檢索狀態）</li>
               <li>Google OAuth（可選：綁定 Google 帳號同步資料）</li>
               <li>Supabase（帳號資料同步：暱稱、金幣、跨裝置記錄；選擇綁定後才啟用）</li>
               <li>Vercel（網站託管）</li>
-              <li>Render（後端伺服器託管）</li>
-              <li>Anthropic Claude API（AI 題目解說功能）</li>
-              <li>Google Gemini API（部分考試的 AI 解說；冷門考試降低成本）</li>
+              <li>Oracle Cloud（後端伺服器託管）</li>
+              <li>Google Vertex AI Gemini（AI 題目解說、今日寄語）</li>
+              <li>Google Vertex AI Search（題庫搜尋、找類似題）</li>
             </ul>
           </section>
 

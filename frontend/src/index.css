@@ -208,3 +208,19 @@ html.dark ::-webkit-scrollbar-thumb { background: #504430; border-radius: 4px; }
 .animate-fadeout {
   animation: fadeout 3s ease-in-out forwards;
 }
+
+/* ── 2026-05-27 Native App safe-area-inset support ──
+   iOS notch / Android edge-to-edge / Capacitor 沉浸式 status bar 都需要
+   讓最外層 body 留出系統 UI 的位置。phone-frame 已經 max-w-[430px]，所以
+   只需要 top/bottom 兩端的內距。*/
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* FixedBottomAd 廣告條要黏在 safe area 之上，不要被瀏海/手勢列遮住 */
+.fixed-bottom-safe {
+  bottom: env(safe-area-inset-bottom, 0);
+}

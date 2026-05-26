@@ -3,8 +3,15 @@ import Sheet from './Sheet'
 import { usePlayerStore } from '../store/gameStore'
 import { supabase } from '../lib/supabase'
 import { getDeviceId } from '../hooks/useAI'
+import { isNativeApp } from '../lib/admob'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+
+// 2026-05-27: Android App 版完全隱藏付費入口避 Google Play Policy 退件。
+// （Google Play 對「數位內容外部金流」嚴格管控，所有 App 內購買的虛擬貨幣
+//  原則上必須走 Play Billing 抽 15-30%。我們現階段選擇純廣告賺幣，付費
+//  贊助僅在 web 版開放。）
+const IS_NATIVE = isNativeApp()
 
 const TIERS = [
   {
@@ -115,6 +122,47 @@ export default function CoinShopSheet({ onClose }) {
     setOrderId(null)
     setErrorMsg('')
     onClose()
+  }
+
+  // Android App 版：完全不顯示付費 tier，改成引導使用者用免費方式拿金幣
+  if (IS_NATIVE) {
+    return (
+      <Sheet onClose={handleClose}>
+        <div className="text-center mb-5">
+          <div className="text-5xl mb-3">🪙</div>
+          <h2 className="text-xl font-bold text-medical-dark">取得金幣</h2>
+          <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+            金幣可用於 AI 解析等進階功能
+          </p>
+        </div>
+
+        <div className="bg-blue-50 rounded-2xl px-4 py-4 mb-4 text-sm text-blue-800 leading-relaxed space-y-2">
+          <p className="font-bold">✨ App 內取得金幣的方式：</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>每日簽到（連續登入加倍）</li>
+            <li>看獎勵廣告（每天最多 10 次，每次 300 幣）</li>
+            <li>答對題目累積經驗值升等獎勵</li>
+            <li>邀請朋友加入</li>
+          </ul>
+        </div>
+
+        <div className="bg-gray-50 rounded-2xl px-4 py-3 mb-4 text-xs text-gray-500 leading-relaxed">
+          <p>📱 想直接贊助平台？</p>
+          <p className="mt-1">
+            請開電腦或瀏覽器版本進入：<br />
+            <span className="font-mono text-medical-blue">examking.tw</span>
+          </p>
+          <p className="mt-2 text-gray-400">App 版本目前不支援站內付費，是為了讓你免費使用所有功能。</p>
+        </div>
+
+        <button
+          onClick={handleClose}
+          className="w-full py-3 rounded-2xl font-bold text-medical-dark border-2 border-gray-200 active:scale-95 transition-transform"
+        >
+          知道了
+        </button>
+      </Sheet>
+    )
   }
 
   return (

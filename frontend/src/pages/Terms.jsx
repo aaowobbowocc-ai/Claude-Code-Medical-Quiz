@@ -19,7 +19,7 @@ export default function Terms() {
 
       <div className="flex-1 px-5 py-6">
         <div className="bg-white rounded-2xl shadow-sm p-6 text-sm text-gray-700 leading-relaxed space-y-5">
-          <p className="text-xs text-gray-400">最後更新日期：2026 年 4 月 23 日</p>
+          <p className="text-xs text-gray-400">最後更新日期：2026 年 5 月 27 日</p>
 
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">一、服務說明</h2>
@@ -34,7 +34,7 @@ export default function Terms() {
             <ul className="list-disc pl-5 space-y-1.5">
               <li>本平台所使用之題目來源為中華民國<strong>考選部</strong>歷年公開之國家考試考古題（醫事、法律、公職類，100–115 年度）。</li>
               <li>考選部歷年試題屬政府公開資訊，本平台依合理使用原則提供練習使用。</li>
-              <li>題目之 AI 解說由 Anthropic Claude 人工智慧生成，僅供參考，不代表官方標準答案或醫學專業意見。</li>
+              <li>題目之 AI 解說由 Google Vertex AI Gemini 人工智慧生成，僅供參考，不代表官方標準答案或醫學專業意見。</li>
               <li>若您發現題目或答案有誤，歡迎透過意見回饋功能回報，我們會盡速修正。</li>
             </ul>
           </section>
@@ -79,9 +79,20 @@ export default function Terms() {
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">七、廣告</h2>
             <p>
-              本平台透過 Google AdSense 展示廣告以維持免費營運。廣告內容由 Google 根據使用者興趣自動投放，
-              不代表本平台立場或推薦。如需了解更多，請參閱我們的<a href="/privacy" className="text-medical-blue underline">隱私權政策</a>。
+              本平台透過 Google AdSense（網頁版）與 Google AdMob（Android App 版）展示廣告以維持免費營運。
+              廣告內容由 Google 根據使用者興趣自動投放，不代表本平台立場或推薦。
+              Android App 版主要使用「獎勵影片廣告」：使用者可選擇是否觀看廣告以獲得遊戲金幣，純自願性質。
+              如需了解更多，請參閱我們的<a href="/privacy" className="text-medical-blue underline">隱私權政策</a>。
             </p>
+          </section>
+
+          <section>
+            <h2 className="font-bold text-base text-medical-dark mb-2">八、App 版本付費說明</h2>
+            <ul className="list-disc pl-5 space-y-1.5">
+              <li>Android App 版本<strong>不提供站內付費功能</strong>，所有功能完全免費。</li>
+              <li>App 內的金幣僅可透過簽到、看獎勵廣告、升等、邀請朋友等方式免費獲得。</li>
+              <li>如有意願贊助平台維運，請從電腦或瀏覽器版本（examking.tw）操作，App 內不開放付費入口。</li>
+            </ul>
           </section>
 
           <section>

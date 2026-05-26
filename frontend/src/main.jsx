@@ -5,6 +5,10 @@ import * as Sentry from '@sentry/react'
 import App from './App'
 import './index.css'
 import { usePlayerStore } from './store/gameStore'
+import { initCapacitor } from './lib/capacitor-init'
+
+// Native App 啟動初始化（Web 版 no-op）
+initCapacitor()
 
 // Sentry — production-only error tracking. No-op if VITE_SENTRY_DSN unset
 // (e.g. local dev or before user provisions the project).

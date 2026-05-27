@@ -211,14 +211,31 @@ function getQuestionsByStage(stageId, exam) {
   // (2026-05-23) seeing 題目缺漏 / 答案缺漏 in rooms, getting penalized: some
   // questions slip through with empty 題幹 or one of the 4 options being an
   // empty string, even though `incomplete` wasn't flagged. Filter those too.
+  //
+  // 2026-05-27: garfield 再次回報，加更精準的「截斷偵測」：
+  //   - 題幹 trim 後 < 12 字（「下列敘述何者錯誤」9 字勉強，孤立短句多半截斷）
+  //     但**若有 case_context / image_url / images 就放行**（題組共用題幹合法情境）
+  //   - 選項長度差異 ≥ 5 倍 且 最短 < 3 字 → 視為截斷
+  //     這可以擋掉「在脾臟，經F / γ receptor移除 / 長文 / 長文」這種被希臘字母切碎的，
+  //     同時不誤殺學測「甲/乙/丙/丁」這種長度均勻的正常選項格式
   const valid = data.questions.filter(q => {
     if (q.incomplete) return false;
     if (!q.answer || q.answer.length !== 1) return false;
     if (!q.options || !q.options[q.answer]) return false;
-    if (!q.question || !String(q.question).trim()) return false;
-    for (const k of ['A', 'B', 'C', 'D']) {
-      if (!q.options[k] || !String(q.options[k]).trim()) return false;
-    }
+    const stem = q.question && String(q.question).trim();
+    if (!stem) return false;
+    // 題幹過短：除非有題組 case_context 或圖片，否則視為截斷
+    if (stem.length < 12 && !q.case_context && !q.image_url && !q.images) return false;
+    const opts = ['A', 'B', 'C', 'D'].map(k => {
+      const v = q.options[k] && String(q.options[k]).trim();
+      return v || null;
+    });
+    if (opts.some(o => o === null)) return false;
+    const lens = opts.map(o => o.length).sort((a, b) => a - b);
+    // 截斷偵測：最短 < 3 字 且 最長 - 最短 ≥ 10 字
+    // → 擋「甲/乙/丙/丁+黏住題組長文」這種 OCR 黏連
+    // → 放行「甲/乙/丙/丁」純短選項（lens=[1,1,1,1]）跟生物科「離層酸（ABA）」(lens=[2,3,3,10])
+    if (lens[0] < 3 && lens[3] - lens[0] >= 10) return false;
     return true;
   });
   if (stageId === 0) return valid;

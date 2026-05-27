@@ -34,11 +34,11 @@
                 android:resource="@xml/file_paths"></meta-data>
         </provider>
 
-        <!-- AdMob App ID（必填）— 目前用 Google 官方測試 ID，正式版要換成
-             AdMob console 拿到的 ca-app-pub-XXX~YYY -->
+        <!-- AdMob App ID — 國考知識王 Android App
+             AdMob console: https://admob.google.com/v2/apps/2078058521 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-3134321405509741~2078058521"/>
     </application>
 
     <!-- AdMob needs network state to detect connectivity -->

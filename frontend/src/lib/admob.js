@@ -19,6 +19,12 @@ const TEST_AD_UNITS = {
   ios: 'ca-app-pub-3940256099942544/1712485313',
 }
 
+// 正式 Ad Unit ID（從 AdMob console 申請來，bundle 進 APK 是公開資訊）
+const PROD_AD_UNITS = {
+  android: 'ca-app-pub-3134321405509741/7221058627',
+  ios: null, // iOS 之後再申請
+}
+
 let initPromise = null
 let AdMobModule = null
 
@@ -40,15 +46,17 @@ async function ensureInit() {
   return initPromise
 }
 
-/** Get the right Ad Unit ID for current platform (test if not configured). */
+/** Get the right Ad Unit ID for current platform.
+ *  - DEV mode: 用 Google 官方測試 ID（不會被偵測為 invalid click，安全測試用）
+ *  - PROD mode: 用真實 Ad Unit ID（可被 .env 覆寫，預設用 PROD_AD_UNITS） */
 function getRewardedAdUnitId() {
   const platform = Capacitor.getPlatform()
   if (import.meta.env.DEV) return TEST_AD_UNITS[platform] || TEST_AD_UNITS.android
   if (platform === 'android') {
-    return import.meta.env.VITE_ADMOB_ANDROID_REWARDED || TEST_AD_UNITS.android
+    return import.meta.env.VITE_ADMOB_ANDROID_REWARDED || PROD_AD_UNITS.android
   }
   if (platform === 'ios') {
-    return import.meta.env.VITE_ADMOB_IOS_REWARDED || TEST_AD_UNITS.ios
+    return import.meta.env.VITE_ADMOB_IOS_REWARDED || PROD_AD_UNITS.ios || TEST_AD_UNITS.ios
   }
   return null
 }

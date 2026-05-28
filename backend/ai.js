@@ -478,21 +478,48 @@ function registerRoutes(app, examData, stats) {
     // across devices. Looked up by Supabase auth user_id (anonymous + Google
     // linked share the same id post-link). Race against a 600ms timeout so a
     // slow Supabase response doesn't keep the user staring at a loading dot.
+    //
+    // 2026-05-28：新增「AI 無限包」短路檢查——若 ai_unlimited_until > now()，
+    // 視同 already unlocked，整題免費。原本的 unlock check 一併查同個 profile
+    // row 省一次 RTT。Feature flag 由 backend env FEATURE_AI_UNLIMITED 控制：
+    // 沒開 → ai_unlimited_until 欄位不查，行為與舊版一致。
     let alreadyUnlocked = false;
+    let aiUnlimitedActive = false;
     if (user_id && question_id && supabase) {
       try {
-        const checkPromise = supabase
-          .from('user_explanation_unlocks')
-          .select('user_id')
-          .eq('user_id', user_id)
-          .eq('question_id', String(question_id))
-          .maybeSingle()
-          .then(({ data }) => !!data)
-          .catch(() => false);
-        const timeoutPromise = new Promise(resolve => setTimeout(() => resolve(false), 600));
-        alreadyUnlocked = await Promise.race([checkPromise, timeoutPromise]);
+        const aiUnlimitedFlag = process.env.FEATURE_AI_UNLIMITED === '1';
+        // 兩個 query 並行：unlock check + (optional) ai_unlimited_until
+        const queries = [
+          supabase
+            .from('user_explanation_unlocks')
+            .select('user_id')
+            .eq('user_id', user_id)
+            .eq('question_id', String(question_id))
+            .maybeSingle()
+            .then(({ data }) => !!data)
+            .catch(() => false),
+        ];
+        if (aiUnlimitedFlag) {
+          queries.push(
+            supabase
+              .from('profiles')
+              .select('ai_unlimited_until')
+              .eq('user_id', user_id)
+              .single()
+              .then(({ data }) => data?.ai_unlimited_until && new Date(data.ai_unlimited_until) > new Date())
+              .catch(() => false),
+          );
+        }
+        const timeoutPromise = new Promise(resolve => setTimeout(() => resolve(null), 600));
+        const results = await Promise.race([Promise.all(queries), timeoutPromise]);
+        if (Array.isArray(results)) {
+          alreadyUnlocked = !!results[0];
+          aiUnlimitedActive = !!results[1];
+        }
       } catch { /* swallow — no unlock check, pay normal price */ }
     }
+    // 有無限包 → 視同已解鎖（免費）
+    if (aiUnlimitedActive) alreadyUnlocked = true;
 
     // Tier 2: Supabase cache (shared keys are reused cross-exam)
     const cacheKey = buildCacheKey({ shared_bank, exam, question_id });

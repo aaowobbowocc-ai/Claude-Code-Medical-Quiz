@@ -1,0 +1,133 @@
+/**
+ * 邊框 (Frame) 樣式 — 排行榜/個人 profile/對戰房間 可裝飾。
+ * Class 名稱對應 backend frames table 的 css_class 欄位。
+ *
+ * 用法：<div class="frame-wrapper frame-gold"><img src=avatar></div>
+ */
+
+/* 共用基底 — 所有 frame 都要這個 wrapper */
+.frame-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 3px;
+  box-sizing: border-box;
+  transition: transform 0.2s;
+}
+
+.frame-wrapper > img,
+.frame-wrapper > .frame-inner {
+  display: block;
+  border-radius: 50%;
+  background: white;
+}
+
+/* ── 無邊框 (free) ─────────────────────────────────────────── */
+.frame-none {
+  padding: 0;
+  background: transparent;
+}
+
+/* ── 青銅 (common) ─────────────────────────────────────────── */
+.frame-bronze {
+  background: linear-gradient(135deg, #cd7f32 0%, #8b4513 50%, #cd7f32 100%);
+  box-shadow: 0 0 4px rgba(205, 127, 50, 0.5);
+}
+
+/* ── 白銀 (common) ─────────────────────────────────────────── */
+.frame-silver {
+  background: linear-gradient(135deg, #e6e6e6 0%, #a0a0a0 50%, #e6e6e6 100%);
+  box-shadow: 0 0 6px rgba(192, 192, 192, 0.6), inset 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+/* ── 黃金 (rare) ──────────────────────────────────────────── */
+.frame-gold {
+  background: linear-gradient(135deg, #ffd700 0%, #b8860b 30%, #ffd700 60%, #ffec8b 100%);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.7), inset 0 0 6px rgba(255, 255, 255, 0.5);
+  padding: 4px;
+}
+
+/* ── 鑽石 (epic) ──────────────────────────────────────────── */
+.frame-diamond {
+  background: linear-gradient(135deg, #b0e0e6 0%, #f0f8ff 25%, #87ceeb 50%, #fff 75%, #00ced1 100%);
+  background-size: 200% 200%;
+  box-shadow:
+    0 0 12px rgba(0, 206, 209, 0.8),
+    inset 0 0 8px rgba(255, 255, 255, 0.7);
+  padding: 4px;
+  animation: diamond-shine 4s ease-in-out infinite;
+}
+
+@keyframes diamond-shine {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ── 彩虹動畫 (legendary, NT$ 限定) ─────────────────────────── */
+.frame-rainbow {
+  background: linear-gradient(
+    45deg,
+    #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff, #ff0000
+  );
+  background-size: 400% 400%;
+  box-shadow: 0 0 14px rgba(255, 100, 255, 0.6);
+  padding: 4px;
+  animation: rainbow-rotate 3s linear infinite;
+}
+
+@keyframes rainbow-rotate {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+
+/* ── 新年限定 2027 (limited, event only) ───────────────────── */
+.frame-lunar2027 {
+  background: linear-gradient(
+    135deg,
+    #d4af37 0%, #ff0000 25%, #d4af37 50%, #ff4500 75%, #d4af37 100%
+  );
+  background-size: 200% 200%;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6), inset 0 0 6px rgba(255, 215, 0, 0.6);
+  padding: 4px;
+  animation: lunar-glow 2s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes lunar-glow {
+  0%, 100% { background-position: 0% 50%; box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+  50% { background-position: 100% 50%; box-shadow: 0 0 18px rgba(255, 100, 0, 0.8); }
+}
+
+/* ── 微縮尺寸（排行榜列表用） ──────────────────────────────── */
+.frame-wrapper.frame-sm {
+  padding: 2px;
+}
+
+.frame-wrapper.frame-sm > img,
+.frame-wrapper.frame-sm > .frame-inner {
+  width: 36px;
+  height: 36px;
+}
+
+/* ── 中尺寸（對戰房間用）────────────────────────────────── */
+.frame-wrapper.frame-md > img,
+.frame-wrapper.frame-md > .frame-inner {
+  width: 56px;
+  height: 56px;
+}
+
+/* ── 大尺寸（個人 profile 用）────────────────────────────── */
+.frame-wrapper.frame-lg {
+  padding: 5px;
+}
+
+.frame-wrapper.frame-lg > img,
+.frame-wrapper.frame-lg > .frame-inner {
+  width: 80px;
+  height: 80px;
+}
+
+/* ── 互動效果 ────────────────────────────────────────────── */
+.frame-wrapper:hover {
+  transform: scale(1.05);
+}

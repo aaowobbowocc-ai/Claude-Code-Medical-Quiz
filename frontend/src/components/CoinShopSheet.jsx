@@ -183,66 +183,35 @@ export default function CoinShopSheet({ onClose }) {
               </p>
             </div>
 
-            {/* 2026-05-27: 街口支付串接還在測試，使用者付款後無法自動入帳金幣。
-                先在這提醒，並提供綠界正式管道讓真的想贊助的人可以走。
-                正式開放後此警語可移除（grep TODO: coin-shop-launch）。 */}
-            <div className="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 mb-4 text-xs text-amber-800 leading-relaxed">
-              <p className="font-bold mb-1">⚠️ 金幣商店尚未正式開放</p>
-              <p>下方付款流程仍在測試，付款可能不會自動入帳金幣。如果現在想贊助，請改走綠界（金幣會手動補發）：</p>
+            {/* 2026-05-28: 街口支付串接暫停（自動入帳流程未完成 + Google Play
+                Policy 對外部金流嚴格）。整個 JKOPay 流程隱藏，使用者只能走綠界。
+                未來金幣商店正式開放時，移除這段 + 把下方 TIERS UI 加回（grep TODO: coin-shop-launch） */}
+            <div className="bg-blue-50 border border-blue-200 rounded-2xl px-4 py-4 mb-4 text-sm text-blue-800 leading-relaxed">
+              <p className="font-bold mb-2">☕ 感謝你想支持平台</p>
+              <p className="mb-3">目前金幣商店暫停線上付款，請改走綠界贊助（信用卡 / ATM / 超商）。任何金額贊助後，金幣會在 1-2 天內手動補發到你帳號。</p>
               <a
                 href="https://p.ecpay.com.tw/E11DBDD"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block mt-2 text-center bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold py-2 rounded-xl active:scale-95 transition-transform"
+                className="block text-center bg-medical-blue hover:bg-medical-blue/90 text-white font-bold py-3 rounded-xl active:scale-95 transition-transform"
               >
-                ☕ 用綠界贊助（信用卡 / ATM / 超商）
+                前往綠界贊助 →
               </a>
+              <p className="text-[11px] text-blue-600 mt-2 text-center">贊助金額對照（參考）：NT$15 ≈ 2,000 金幣 · NT$50 ≈ 8,000 金幣 · NT$150 ≈ 28,000 金幣</p>
             </div>
 
-            <div className="bg-blue-50 rounded-2xl px-4 py-3 mb-5 text-xs text-blue-700 leading-relaxed space-y-1">
+            <div className="bg-gray-50 rounded-2xl px-4 py-3 mb-3 text-xs text-gray-500 leading-relaxed space-y-1">
+              <p className="font-semibold text-gray-700 mb-1">贊助會用在：</p>
               <p>🖥️ 伺服器費用，讓大家隨時連得到</p>
               <p>🤖 AI 解說功能，看懂每一道考題</p>
               <p>📚 題庫持續更新，緊跟最新考試</p>
             </div>
 
-            <p className="text-xs text-gray-400 mb-3 text-center">作為感謝，贊助可獲得以下金幣用於 AI 解析等功能</p>
-
-            <div className="flex flex-col gap-3 mb-5">
-              {TIERS.map(t => (
-                <button
-                  key={t.id}
-                  onClick={() => setSelected(t.id)}
-                  className={`relative w-full flex items-center justify-between px-4 py-3.5 rounded-2xl border-2 transition-all active:scale-[0.98] text-left ${
-                    selected === t.id
-                      ? 'border-medical-blue bg-blue-50'
-                      : 'border-gray-200 bg-white'
-                  }`}
-                >
-                  {t.tag && (
-                    <span className="absolute -top-2.5 right-3 bg-medical-blue text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
-                      {t.tag}
-                    </span>
-                  )}
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl">{t.emoji}</span>
-                    <div>
-                      <p className="font-bold text-medical-dark text-sm">{t.label}</p>
-                      <p className="text-amber-600 text-xs font-semibold">🪙 {t.coins.toLocaleString()} 金幣</p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <p className="font-bold text-medical-dark text-lg">NT${t.price}</p>
-                  </div>
-                </button>
-              ))}
-            </div>
-
             <button
-              onClick={() => selected && setStep('confirm')}
-              disabled={!selected}
-              className="w-full py-4 rounded-2xl font-bold text-lg text-white active:scale-95 transition-transform disabled:opacity-30 grad-cta"
+              onClick={handleClose}
+              className="w-full py-3 rounded-2xl font-bold text-medical-dark border-2 border-gray-200 active:scale-95 transition-transform"
             >
-              下一步
+              關閉
             </button>
           </>
         )}

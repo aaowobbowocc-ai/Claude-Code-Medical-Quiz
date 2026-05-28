@@ -853,6 +853,8 @@ feedback.registerRoutes(app, examData, examConfigs);
 board.registerRoutes(app);
 paymentJkos.registerJkosRoutes(app, supabase);
 mockScores.registerRoutes(app);
+const monetization = require('./monetization');
+monetization.registerMonetizationRoutes(app);
 
 // ── Coins delta endpoint ─────────────────────────────────────────────────
 // Accepts { delta: number } via JWT-authenticated POST.

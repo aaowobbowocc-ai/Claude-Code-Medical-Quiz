@@ -3,12 +3,17 @@
   "appName": "國考知識王",
   "webDir": "dist",
   "server": {
-    "androidScheme": "https"
+    "androidScheme": "https",
+    "iosScheme": "capacitor"
   },
   "android": {
     "buildOptions": {
       "releaseType": "AAB"
     }
+  },
+  "ios": {
+    "contentInset": "always",
+    "scheme": "examking"
   },
   "plugins": {
     "SplashScreen": {

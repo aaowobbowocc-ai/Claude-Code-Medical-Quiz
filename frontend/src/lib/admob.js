@@ -19,11 +19,15 @@ const TEST_AD_UNITS = {
   ios: 'ca-app-pub-3940256099942544/1712485313',
 }
 
-// 正式 Ad Unit ID（從 AdMob console 申請來，bundle 進 APK 是公開資訊）
+// 正式 Ad Unit ID（從 AdMob console 申請來，bundle 進 APK/IPA 是公開資訊）
 const PROD_AD_UNITS = {
   android: 'ca-app-pub-3134321405509741/7221058627',
-  ios: null, // iOS 之後再申請
+  ios: 'ca-app-pub-3134321405509741/5674824070',
 }
+
+// iOS App ID（要寫進 Info.plist 的 GADApplicationIdentifier）
+// Android App ID 在 AndroidManifest.xml 已設好
+export const IOS_ADMOB_APP_ID = 'ca-app-pub-3134321405509741~8300987419'
 
 let initPromise = null
 let AdMobModule = null

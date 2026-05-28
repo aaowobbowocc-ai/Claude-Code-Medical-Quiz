@@ -13,6 +13,7 @@ import SupportBar from '../components/SupportBar'
 import CumulativeStatsBar from '../components/CumulativeStatsBar'
 import SupportSheets from '../components/SupportSheets'
 import RewardAdSheet from '../components/RewardAdSheet'
+import { FEATURE_FRAMES, FEATURE_AVATARS, FEATURE_AI_UNLIMITED, FEATURE_SPONSORS } from '../config/featureFlags'
 import WelcomeTour, { shouldShowWelcomeTour } from '../components/WelcomeTour'
 import CoinShopSheet from '../components/CoinShopSheet'
 import { supabase, linkOrSignInGoogle, switchGoogleAccount, getLinkedIdentity } from '../lib/supabase'
@@ -640,7 +641,10 @@ export default function Home() {
               ['📚','備考攻略','考試重點整理','/guides'],
               ['🔍','全題庫搜尋','跨 52 考試 21 萬題','/search'],
               ['🏆','排行榜','每週排名','/leaderboard'],
-              ['💬','留言板','交流備考心得','/board']].map(([icon,title,sub,path]) => (
+              ['💬','留言板','交流備考心得','/board'],
+              ...((FEATURE_FRAMES || FEATURE_AVATARS || FEATURE_AI_UNLIMITED) ? [['🛒','商店','邊框/頭像/AI 無限','/shop']] : []),
+              ...(FEATURE_SPONSORS ? [['🙏','感謝榜','贊助平台維運','/sponsors']] : []),
+            ].map(([icon,title,sub,path]) => (
               <button key={path} onClick={() => navigate(path)}
                       className="rounded-2xl py-4 flex flex-col items-center gap-1.5 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">
                 <div className="w-11 h-11 rounded-xl bg-medical-ice flex items-center justify-center text-2xl">{icon}</div>

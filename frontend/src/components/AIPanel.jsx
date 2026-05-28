@@ -6,6 +6,7 @@ import { supabase, readAuthFromStorage } from '../lib/supabase'
 import { isExplainUnlocked } from '../hooks/useAI'
 import { getBookSection } from '../lib/booksAffiliate'
 import { formatYearSession } from '../utils/sessionLabel'
+import { FEATURE_AI_UNLIMITED } from '../config/featureFlags'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -173,8 +174,14 @@ function NotEnoughCoinsBox({ label }) {
       <p className="text-xs text-amber-500 mt-1">{label}</p>
       <button onClick={() => navigate('/?reward=1')}
         className="mt-2 text-xs font-bold text-white bg-amber-400 px-3 py-1.5 rounded-lg active:scale-95 transition-transform">
-        🎬 看廣告賺金幣（即將開放）
+        🎬 看廣告賺金幣
       </button>
+      {FEATURE_AI_UNLIMITED && (
+        <button onClick={() => navigate('/shop?tab=ai')}
+          className="mt-2 ml-2 text-xs font-bold text-white bg-medical-blue px-3 py-1.5 rounded-lg active:scale-95 transition-transform">
+          ⚡ 升級 AI 無限
+        </button>
+      )}
     </div>
   )
 }

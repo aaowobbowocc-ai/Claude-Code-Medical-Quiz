@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getLevelTitle, usePlayerStore } from '../store/gameStore'
+import AvatarWithFrame from '../components/AvatarWithFrame'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { getExamConfig, getCategoryMeta } from '../config/examRegistry'
 
@@ -184,6 +185,13 @@ export default function Leaderboard() {
               <span className="text-2xl w-8 text-center shrink-0">
                 {MEDALS[i] || <span className="text-sm font-bold text-gray-400">{i + 1}</span>}
               </span>
+              {/* Avatar + 邊框（FEATURE_FRAMES OFF 時 AvatarWithFrame 自動退化成純 emoji） */}
+              <AvatarWithFrame
+                emoji={p.avatar || '👤'}
+                frameId={p.frameId}
+                size="sm"
+                className="shrink-0"
+              />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5 flex-wrap">
                   {badge && (

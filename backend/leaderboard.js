@@ -91,6 +91,7 @@ function registerRoutes(app) {
     // rather than 500-ing the entire leaderboard.
     const userIds = [...new Set(raw.map(d => d.user_id).filter(Boolean))];
     const achievementsByUser = {};
+    const profileByUser = {};  // avatar + equipped_frame_id 一併撈
     if (userIds.length > 0) {
       try {
         const { data: ach } = await supabase
@@ -104,11 +105,23 @@ function registerRoutes(app) {
       } catch (e) {
         // table missing or RLS blocking — degrade gracefully
       }
+      // 2026-05-28：撈 avatar + equipped_frame_id 給排行榜顯示頭像 + 邊框
+      // 失敗（migration 014 還沒跑）→ 退化成 null，不影響排行榜
+      try {
+        const { data: profs } = await supabase
+          .from('profiles')
+          .select('user_id, avatar, equipped_frame_id')
+          .in('user_id', userIds);
+        for (const p of profs || []) {
+          profileByUser[p.user_id] = { avatar: p.avatar, frameId: p.equipped_frame_id };
+        }
+      } catch (e) { /* 014 not run yet — fine */ }
     }
 
     const enriched = raw.map(d => {
       const cat = d.exam_id ? (examIdToCategory[d.exam_id] || null) : null;
       const selection = d.exam_id ? (examIdToSelectionType[d.exam_id] || 'license') : 'license';
+      const prof = d.user_id ? profileByUser[d.user_id] : null;
       return {
         name: d.name,
         played: d.played,
@@ -121,6 +134,8 @@ function registerRoutes(app) {
         category: cat,
         selectionType: selection,
         achievements: d.user_id ? (achievementsByUser[d.user_id] || {}) : {},
+        avatar: prof?.avatar || null,
+        frameId: prof?.frameId || null,
       };
     });
 

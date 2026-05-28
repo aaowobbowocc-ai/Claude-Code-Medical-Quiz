@@ -32,6 +32,19 @@ function gateFlag(flag, res) {
 // 邊框 / Frames
 // ═════════════════════════════════════════════════════════════════════
 
+// GET /api/profile — 回登入使用者的 profile (避免讓 frontend 直接打 supabase)
+function registerProfileRoute(app) {
+  app.get('/api/profile', async (req, res) => {
+    const user = await getUser(req, res); if (!user) return
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('user_id, name, avatar, coins, level, equipped_frame_id, ai_unlimited_until')
+      .eq('user_id', user.id).single()
+    if (error) return res.status(500).json({ error: error.message })
+    res.json(data)
+  })
+}
+
 function registerFrameRoutes(app) {
   // GET /api/frames/catalog — 所有可購買邊框
   app.get('/api/frames/catalog', async (req, res) => {
@@ -235,6 +248,7 @@ function registerSponsorRoutes(app) {
 // ═════════════════════════════════════════════════════════════════════
 
 function registerMonetizationRoutes(app) {
+  registerProfileRoute(app)
   registerFrameRoutes(app)
   registerAiUnlimitedRoutes(app)
   registerAvatarRoutes(app)

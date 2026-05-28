@@ -111,6 +111,14 @@ export function useAdReward() {
 
     setPhase('loading')
 
+    // 2026-05-28: server claim 失敗時更精確分類，避免「沒登入」「網路炸」也顯示「上限到」誤導
+    // 只有 exhausted 才用 exhausted UI；其餘走 error UI（顯示「廣告載入失敗」）。
+    function handleClaimFailure(result) {
+      if (result.reason === 'cooldown') setPhase('cooldown')
+      else if (result.reason === 'exhausted') { setPhase('exhausted'); refreshInfo() }
+      else setPhase('error')
+    }
+
     // ── Native (Android/iOS) App: 走 AdMob Rewarded Video ────────────────
     // CPM 比 Monetag Direct Link 高 30-50 倍。先檢查避免 Web 版誤跑 native code。
     if (isNativeApp()) {
@@ -120,7 +128,7 @@ export function useAdReward() {
         if (rewarded) {
           const result = await claimAdReward()
           if (result.success) { setPhase('success'); refreshInfo(); return true }
-          setPhase(result.reason === 'cooldown' ? 'cooldown' : 'exhausted')
+          handleClaimFailure(result)
           return false
         }
         // 使用者中途關掉廣告 — 不發獎勵
@@ -142,7 +150,7 @@ export function useAdReward() {
         if (rewarded) {
           const result = await claimAdReward()
           if (result.success) { setPhase('success'); refreshInfo(); return true }
-          setPhase(result.reason === 'cooldown' ? 'cooldown' : 'exhausted')
+          handleClaimFailure(result)
           return false
         }
         setPhase('error')
@@ -192,7 +200,7 @@ export function useAdReward() {
               refreshInfo()
               resolve(true)
             } else {
-              setPhase(result.reason === 'cooldown' ? 'cooldown' : 'exhausted')
+              handleClaimFailure(result)
               resolve(false)
             }
           }

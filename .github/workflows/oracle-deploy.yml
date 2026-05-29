@@ -59,6 +59,12 @@ jobs:
             sync_env VERTEX_SEARCH_ENGINE_ID  quiz-search_1779552716508
             sync_env VERTEX_SEARCH_LOCATION   global
             sync_env GOOGLE_APPLICATION_CREDENTIALS /home/ubuntu/app/backend/.gcp-key.json
+            # === Phase 1 monetization feature flags ===
+            # 想開啟哪個功能就改成 1（記得 Vercel env 也要同步開 VITE_FEATURE_*）
+            sync_env FEATURE_AVATARS 1
+            sync_env FEATURE_FRAMES 0
+            sync_env FEATURE_AI_UNLIMITED 0
+            sync_env FEATURE_SPONSORS 0
             # === GCP service account key — write JSON to .gcp-key.json ===
             # GoogleAuth 預設讀 GOOGLE_APPLICATION_CREDENTIALS 指向的檔案
             # 把 GitHub Secret 的 JSON 內容寫成檔案（chmod 600 限本人讀寫）

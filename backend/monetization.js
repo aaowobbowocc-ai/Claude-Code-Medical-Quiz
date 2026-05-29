@@ -84,10 +84,16 @@ function registerFrameRoutes(app) {
     if ((profile.coins || 0) < frame.price_coins) return res.status(402).json({ error: 'insufficient_coins', need: frame.price_coins, have: profile.coins || 0 })
 
     // 扣金幣 + insert ownership（沒有 transaction，但 idempotency check 已有）
-    const { error: e1 } = await supabase.from('profiles')
+    // BUG-7 fix: profiles.coins is nullable — .eq('coins', 0) does NOT match NULL
+    // in PostgreSQL. Use .is(null) when coins is null, .eq(N) otherwise.
+    // .select() returns updated rows; empty array = race condition (coins changed).
+    let updateQ = supabase.from('profiles')
       .update({ coins: (profile.coins || 0) - frame.price_coins })
-      .eq('user_id', user.id).eq('coins', profile.coins || 0)  // optimistic concurrency
+      .eq('user_id', user.id)
+    updateQ = profile.coins == null ? updateQ.is('coins', null) : updateQ.eq('coins', profile.coins)
+    const { data: d1, error: e1 } = await updateQ.select('user_id')
     if (e1) return res.status(500).json({ error: e1.message })
+    if (!d1 || d1.length === 0) return res.status(409).json({ error: 'coins_changed', hint: 'retry' })
     const { error: e2 } = await supabase.from('user_frames').insert({
       user_id: user.id, frame_id, source: 'coins',
     })
@@ -198,10 +204,14 @@ function registerAvatarRoutes(app) {
       return res.status(402).json({ error: 'insufficient_coins', need: avatar.price_coins, have: profile.coins || 0 })
     }
     // 扣金幣 + insert ownership — 與 frames purchase 同模式做 rollback
-    const { error: e1 } = await supabase.from('profiles')
+    // BUG-7 fix: handle NULL coins for optimistic concurrency (see frame purchase)
+    let updateQ = supabase.from('profiles')
       .update({ coins: (profile.coins || 0) - avatar.price_coins })
-      .eq('user_id', user.id).eq('coins', profile.coins || 0)
+      .eq('user_id', user.id)
+    updateQ = profile.coins == null ? updateQ.is('coins', null) : updateQ.eq('coins', profile.coins)
+    const { data: d1, error: e1 } = await updateQ.select('user_id')
     if (e1) return res.status(500).json({ error: e1.message })
+    if (!d1 || d1.length === 0) return res.status(409).json({ error: 'coins_changed', hint: 'retry' })
     const { error: e2 } = await supabase.from('user_avatars').insert({
       user_id: user.id, avatar_id, source: 'coins',
     })

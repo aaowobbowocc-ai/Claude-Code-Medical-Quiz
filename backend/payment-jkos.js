@@ -226,6 +226,19 @@ function registerJkosRoutes(app, supabase) {
   // app.post('/payment/jkos/confirm', ...)
 
   // POST /payment/jkos/callback — result_url webhook (街口付款後通知)
+  //
+  // ⚠️ SECURITY TODO (bug-scan 2026-05-29): callback handler does NOT verify
+  // HMAC signature from JKOPay. Currently we rely on inquireJkosOrder() as
+  // defense-in-depth (line 251), which catches forged callbacks IF the inquiry
+  // API is healthy. But if JKOPay's /inquiry has 5xx, `verified` is null and
+  // `isPaid = (status === STATUS.SUCCESS)` reads attacker-controlled body → grant.
+  //
+  // To fix properly before reactivating JKOPay path: call verifyHmac() with the
+  // raw request body + correct header (check JKOPay docs for header name — may
+  // be 'Digest', 'X-Signature', or in body field). Don't guess the header.
+  //
+  // For now (5/28 onwards) the JKOPay flow is hidden from UI; only reachable
+  // if attacker hits the route directly while inquiry is failing.
   app.post('/payment/jkos/callback', async (req, res) => {
     try {
       const tx = req.body?.transaction

@@ -302,7 +302,10 @@ export default function Shop() {
   const navigate = useNavigate()
   const [params, setParams] = useSearchParams()
   const [coins, setCoins] = useState(usePlayerStore.getState().coins || 0)
-  const setStoreCoins = usePlayerStore(s => s.setCoins) || ((c) => usePlayerStore.setState({ coins: c }))
+  // setCoins action doesn't exist on store — set directly. Backend already
+  // deducted; this reflects server's authoritative value (refreshProfile after
+  // purchase syncs from cloud as well).
+  const setStoreCoins = (c) => usePlayerStore.setState({ coins: c })
 
   // Tab 由 URL ?tab= 控制
   const allTabs = [

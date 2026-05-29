@@ -84,7 +84,7 @@ function registerRoutes(app) {
     const comment = {
       id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
       name: (name || '匿名').slice(0, 20),
-      avatar: avatar || '👤',
+      avatar: (avatar || '👤').slice(0, 8),
       text: text.trim().slice(0, 500),
       userId: userId || 'anon',
       likes: [],

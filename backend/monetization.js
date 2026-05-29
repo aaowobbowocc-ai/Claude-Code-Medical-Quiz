@@ -78,6 +78,7 @@ function registerFrameRoutes(app) {
       supabase.from('user_frames').select('frame_id').eq('user_id', user.id).eq('frame_id', frame_id).maybeSingle(),
     ])
     if (!frame) return res.status(404).json({ error: 'frame_not_found' })
+    if (!profile) return res.status(404).json({ error: 'profile_not_found' })
     if (owned) return res.status(409).json({ error: 'already_owned' })
     if (!frame.price_coins) return res.status(400).json({ error: 'not_purchasable_by_coins' })
     if ((profile.coins || 0) < frame.price_coins) return res.status(402).json({ error: 'insufficient_coins', need: frame.price_coins, have: profile.coins || 0 })
@@ -190,14 +191,24 @@ function registerAvatarRoutes(app) {
       supabase.from('user_avatars').select('avatar_id').eq('user_id', user.id).eq('avatar_id', avatar_id).maybeSingle(),
     ])
     if (!avatar) return res.status(404).json({ error: 'avatar_not_found' })
+    if (!profile) return res.status(404).json({ error: 'profile_not_found' })
     if (owned) return res.status(409).json({ error: 'already_owned' })
     if (!avatar.price_coins) return res.status(400).json({ error: 'not_purchasable_by_coins' })
     if ((profile.coins || 0) < avatar.price_coins) {
       return res.status(402).json({ error: 'insufficient_coins', need: avatar.price_coins, have: profile.coins || 0 })
     }
-    await supabase.from('profiles').update({ coins: (profile.coins || 0) - avatar.price_coins })
+    // 扣金幣 + insert ownership — 與 frames purchase 同模式做 rollback
+    const { error: e1 } = await supabase.from('profiles')
+      .update({ coins: (profile.coins || 0) - avatar.price_coins })
       .eq('user_id', user.id).eq('coins', profile.coins || 0)
-    await supabase.from('user_avatars').insert({ user_id: user.id, avatar_id, source: 'coins' })
+    if (e1) return res.status(500).json({ error: e1.message })
+    const { error: e2 } = await supabase.from('user_avatars').insert({
+      user_id: user.id, avatar_id, source: 'coins',
+    })
+    if (e2) {
+      await supabase.from('profiles').update({ coins: profile.coins }).eq('user_id', user.id)
+      return res.status(500).json({ error: e2.message })
+    }
     res.json({ ok: true, coins_left: (profile.coins || 0) - avatar.price_coins })
   })
 

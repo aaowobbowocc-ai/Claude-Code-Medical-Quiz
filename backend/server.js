@@ -555,7 +555,7 @@ io.on('connection', (socket) => {
     for (const p of room.players.values()) { p.score = 0; }
 
     io.to(room.code).emit('game_starting', {
-      stageName: questionsData.stages.find(s => s.id === room.stage)?.name || '隨機',
+      stageName: (examData[room.exam] || questionsData).stages.find(s => s.id === room.stage)?.name || '隨機',
       questionCount: room.questions.length,
     });
 
@@ -825,13 +825,9 @@ async function saveStatsToSupabase() {
 setInterval(saveStatsToFile, 60_000);
 setInterval(saveStatsToSupabase, 5 * 60_000);
 
-// Also flush on graceful shutdown
-process.on('SIGTERM', async () => {
-  console.log('[stats] SIGTERM — flushing stats');
-  saveStatsToFile();
-  await saveStatsToSupabase();
-  process.exit(0);
-});
+// SIGTERM/SIGINT flush handlers are at the bottom of this file (after all
+// modules initialized). They flush stats + comments + community notes + Supabase
+// stats together so partial state isn't lost on graceful shutdown.
 
 function trackDailyVisit() {
   const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' });
@@ -1202,7 +1198,7 @@ app.get('/rooms', (_, res) => {
     list.push({
       code,
       playerCount: humanPlayers.length,
-      stageName: questionsData.stages.find(s => s.id === room.stage)?.name || '隨機混合',
+      stageName: (examData[room.exam] || questionsData).stages.find(s => s.id === room.stage)?.name || '隨機混合',
       stageIcon: STAGE_ICONS[room.stage] || '🎲',
       hostName: humanPlayers[0]?.name || '未知',
       hasPassword: !!room.password,
@@ -1299,8 +1295,18 @@ if (Sentry) {
 
 // Save stats on shutdown — use saveStatsToFile (saveStats was renamed long
 // ago but SIGTERM handlers were not updated; Sentry caught this 2026-05-08).
-process.on('SIGTERM', () => { saveStatsToFile(); commentsApi.saveComments(); communityNotes.saveNotes(); process.exit(0); });
-process.on('SIGINT',  () => { saveStatsToFile(); commentsApi.saveComments(); communityNotes.saveNotes(); process.exit(0); });
+// Async: also flushes Supabase stats before exit (was a separate SIGTERM handler
+// above, but two handlers on same signal raced — sync exit killed the async one).
+async function gracefulShutdown(signal) {
+  console.log(`[shutdown] ${signal} — flushing all state`);
+  saveStatsToFile();
+  commentsApi.saveComments();
+  communityNotes.saveNotes();
+  try { await saveStatsToSupabase(); } catch (e) { console.warn('[shutdown] supabase flush failed:', e.message); }
+  process.exit(0);
+}
+process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
+process.on('SIGINT',  () => gracefulShutdown('SIGINT'));
 
 const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));

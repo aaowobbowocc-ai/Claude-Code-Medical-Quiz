@@ -122155,7 +122155,11 @@
       "D": "心室頻脈"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "images": [
+      "/question-images/medlab_106020_p0_18_0.webp",
+      "/question-images/medlab_106020_p0_18_1.webp"
+    ]
   },
   {
     "id": 5298,
@@ -201337,7 +201341,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 45,
-    "question": "下列那些凝血因子是國人深部靜脈栓塞常見之遺傳性危險因子？①Labile factor deficiency ②Stable factor",
+    "question": "下列那些凝血因子是國人深部靜脈栓塞常見之遺傳性危險因子？①Labile factor deficiency ②Stable factor deficiency ③Protein C deficiency ④Antithrombin deficiency",
     "options": {
       "A": "①②",
       "B": "③④",

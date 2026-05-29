@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-quiz-v2'
+const CACHE_NAME = 'medical-quiz-v3-2026-05-29'
 const SHARED_BANKS_CACHE = 'shared-banks-v1'
 const PRECACHE = [
   '/',

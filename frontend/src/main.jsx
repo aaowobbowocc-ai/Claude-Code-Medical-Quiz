@@ -87,9 +87,27 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </Sentry.ErrorBoundary>
 )
 
-// Register service worker for PWA offline support
+// Register service worker for PWA offline support — 主動觸發 update 確保
+// 使用者不會卡在舊 SW（之前 /shop 載入 bug 修復卡在舊 cache 1+ 天）
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {})
+    navigator.serviceWorker.register('/sw.js').then(reg => {
+      // 每次頁面載入時主動檢查 SW 更新
+      reg.update().catch(() => {})
+      // 新 SW 安裝完並啟用後，自動 reload 一次拿全新 bundle
+      reg.addEventListener('updatefound', () => {
+        const nw = reg.installing
+        if (!nw) return
+        nw.addEventListener('statechange', () => {
+          if (nw.state === 'activated' && navigator.serviceWorker.controller) {
+            // 只在「已有舊 SW 控制中」時 reload，避免首次安裝重複 reload
+            if (!sessionStorage.getItem('sw-reloaded-once')) {
+              sessionStorage.setItem('sw-reloaded-once', '1')
+              window.location.reload()
+            }
+          }
+        })
+      })
+    }).catch(() => {})
   })
 }

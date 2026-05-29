@@ -26,10 +26,21 @@ const TIER_META = {
 }
 
 async function authHeaders() {
+  // Fast path：直接從 localStorage 讀（同步、永不卡）。supabase.auth.getSession()
+  // 在某些 OAuth pending / lock 狀態下會永遠不 resolve → 整個 Promise.all 卡住 →
+  // 商店「載入中」永遠不解（2026-05-29 實測 catalog 成功但 user/avatars 完全沒發）。
+  const { token } = readAuthFromStorage()
+  if (token) return { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' }
+  // Backup：如果 localStorage 沒拿到，給 supabase 3 秒機會（剛 login 還沒寫完 localStorage 的 race）
   try {
-    const { data } = await supabase?.auth.getSession() || {}
-    const token = data?.session?.access_token
-    if (token) return { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' }
+    const sessionPromise = supabase?.auth.getSession()
+    if (!sessionPromise) return { 'Content-Type': 'application/json' }
+    const { data } = await Promise.race([
+      sessionPromise,
+      new Promise(resolve => setTimeout(() => resolve({}), 3000)),
+    ])
+    const t = data?.session?.access_token
+    if (t) return { Authorization: `Bearer ${t}`, 'Content-Type': 'application/json' }
   } catch {}
   return { 'Content-Type': 'application/json' }
 }

@@ -200,6 +200,11 @@ export default function Leaderboard() {
                     </span>
                   )}
                   <p className="font-bold text-gray-800 text-sm truncate">{p.name}</p>
+                  {p.badgeIcon && (
+                    <span title={p.badgeName || ''} className="text-base leading-none">
+                      {p.badgeIcon}
+                    </span>
+                  )}
                   {p.achievements && Object.entries(p.achievements).map(([aid, cnt]) => {
                     const def = ACHIEVEMENT_BADGES[aid]
                     if (!def || !cnt) return null

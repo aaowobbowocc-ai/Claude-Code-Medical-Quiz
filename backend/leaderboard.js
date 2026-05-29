@@ -106,14 +106,30 @@ function registerRoutes(app) {
         // table missing or RLS blocking — degrade gracefully
       }
       // 2026-05-28：撈 avatar + equipped_frame_id 給排行榜顯示頭像 + 邊框
-      // 失敗（migration 014 還沒跑）→ 退化成 null，不影響排行榜
+      // 2026-05-29：補上 equipped_badge_id（migration 017）+ badge icon join
+      // 失敗（migration 014/017 還沒跑）→ 退化成 null，不影響排行榜
       try {
         const { data: profs } = await supabase
           .from('profiles')
-          .select('user_id, avatar, equipped_frame_id')
+          .select('user_id, avatar, equipped_frame_id, equipped_badge_id')
           .in('user_id', userIds);
+        const badgeIds = [...new Set((profs || []).map(p => p.equipped_badge_id).filter(Boolean))];
+        const badgeMap = {};
+        if (badgeIds.length) {
+          try {
+            const { data: bs } = await supabase.from('badges')
+              .select('id, icon, name').in('id', badgeIds);
+            for (const b of bs || []) badgeMap[b.id] = { icon: b.icon, name: b.name };
+          } catch (e) { /* 017 not run yet */ }
+        }
         for (const p of profs || []) {
-          profileByUser[p.user_id] = { avatar: p.avatar, frameId: p.equipped_frame_id };
+          const b = p.equipped_badge_id ? badgeMap[p.equipped_badge_id] : null;
+          profileByUser[p.user_id] = {
+            avatar: p.avatar,
+            frameId: p.equipped_frame_id,
+            badgeIcon: b?.icon || null,
+            badgeName: b?.name || null,
+          };
         }
       } catch (e) { /* 014 not run yet — fine */ }
     }
@@ -136,6 +152,8 @@ function registerRoutes(app) {
         achievements: d.user_id ? (achievementsByUser[d.user_id] || {}) : {},
         avatar: prof?.avatar || null,
         frameId: prof?.frameId || null,
+        badgeIcon: prof?.badgeIcon || null,
+        badgeName: prof?.badgeName || null,
       };
     });
 

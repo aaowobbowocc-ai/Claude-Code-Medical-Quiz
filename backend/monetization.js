@@ -11,6 +11,7 @@ const FLAGS = {
   AI_UNLIMITED:  process.env.FEATURE_AI_UNLIMITED === '1',
   AVATARS:       process.env.FEATURE_AVATARS === '1',
   SPONSORS:      process.env.FEATURE_SPONSORS === '1',
+  BADGES:        process.env.FEATURE_BADGES === '1',
 }
 
 // ─── auth helper ───────────────────────────────────────────────────────
@@ -38,7 +39,7 @@ function registerProfileRoute(app) {
     const user = await getUser(req, res); if (!user) return
     const { data, error } = await supabase
       .from('profiles')
-      .select('user_id, name, avatar, coins, level, equipped_frame_id, ai_unlimited_until')
+      .select('user_id, name, avatar, coins, level, equipped_frame_id, equipped_badge_id, ai_unlimited_until')
       .eq('user_id', user.id).single()
     if (error) return res.status(500).json({ error: error.message })
     res.json(data)
@@ -242,6 +243,86 @@ function registerAvatarRoutes(app) {
 }
 
 // ═════════════════════════════════════════════════════════════════════
+// 徽章 / Badges — 單一 equip，顯示在名字旁
+// ═════════════════════════════════════════════════════════════════════
+
+function registerBadgeRoutes(app) {
+  // GET /api/badges/catalog — 公開徽章列表
+  app.get('/api/badges/catalog', async (req, res) => {
+    if (!gateFlag(FLAGS.BADGES, res)) return
+    const { data, error } = await supabase
+      .from('badges').select('*').eq('enabled', true).order('sort_order')
+    if (error) return res.status(500).json({ error: error.message })
+    res.json({ badges: data || [] })
+  })
+
+  // GET /api/user/badges — 我擁有的徽章
+  app.get('/api/user/badges', async (req, res) => {
+    if (!gateFlag(FLAGS.BADGES, res)) return
+    const user = await getUser(req, res); if (!user) return
+    const { data, error } = await supabase
+      .from('user_badges').select('badge_id, source, acquired_at').eq('user_id', user.id)
+    if (error) return res.status(500).json({ error: error.message })
+    res.json({ owned: data || [] })
+  })
+
+  // POST /api/user/badges/purchase
+  app.post('/api/user/badges/purchase', async (req, res) => {
+    if (!gateFlag(FLAGS.BADGES, res)) return
+    const user = await getUser(req, res); if (!user) return
+    const { badge_id } = req.body || {}
+    if (!badge_id) return res.status(400).json({ error: 'missing_badge_id' })
+    const [{ data: badge }, { data: profile }, { data: owned }] = await Promise.all([
+      supabase.from('badges').select('*').eq('id', badge_id).single(),
+      supabase.from('profiles').select('coins').eq('user_id', user.id).single(),
+      supabase.from('user_badges').select('badge_id').eq('user_id', user.id).eq('badge_id', badge_id).maybeSingle(),
+    ])
+    if (!badge) return res.status(404).json({ error: 'badge_not_found' })
+    if (!profile) return res.status(404).json({ error: 'profile_not_found' })
+    if (owned) return res.status(409).json({ error: 'already_owned' })
+    if (badge.unlock_type !== 'coins' || !badge.price_coins) {
+      return res.status(400).json({ error: 'not_purchasable_by_coins' })
+    }
+    if ((profile.coins || 0) < badge.price_coins) {
+      return res.status(402).json({ error: 'insufficient_coins', need: badge.price_coins, have: profile.coins || 0 })
+    }
+    // 同 frame/avatar 模式：NULL-safe optimistic concurrency
+    let updateQ = supabase.from('profiles')
+      .update({ coins: (profile.coins || 0) - badge.price_coins })
+      .eq('user_id', user.id)
+    updateQ = profile.coins == null ? updateQ.is('coins', null) : updateQ.eq('coins', profile.coins)
+    const { data: d1, error: e1 } = await updateQ.select('user_id')
+    if (e1) return res.status(500).json({ error: e1.message })
+    if (!d1 || d1.length === 0) return res.status(409).json({ error: 'coins_changed', hint: 'retry' })
+    const { error: e2 } = await supabase.from('user_badges').insert({
+      user_id: user.id, badge_id, source: 'purchase',
+    })
+    if (e2) {
+      await supabase.from('profiles').update({ coins: profile.coins }).eq('user_id', user.id)
+      return res.status(500).json({ error: e2.message })
+    }
+    res.json({ ok: true, coins_left: (profile.coins || 0) - badge.price_coins })
+  })
+
+  // POST /api/user/badges/equip — 裝備（單一）；badge_id='none' 卸下
+  app.post('/api/user/badges/equip', async (req, res) => {
+    if (!gateFlag(FLAGS.BADGES, res)) return
+    const user = await getUser(req, res); if (!user) return
+    const { badge_id } = req.body || {}
+    if (!badge_id || badge_id === 'none') {
+      await supabase.from('profiles').update({ equipped_badge_id: null }).eq('user_id', user.id)
+      return res.json({ ok: true, equipped: null })
+    }
+    // 確認擁有
+    const { data: owned } = await supabase
+      .from('user_badges').select('badge_id').eq('user_id', user.id).eq('badge_id', badge_id).maybeSingle()
+    if (!owned) return res.status(403).json({ error: 'not_owned' })
+    await supabase.from('profiles').update({ equipped_badge_id: badge_id }).eq('user_id', user.id)
+    res.json({ ok: true, equipped: badge_id })
+  })
+}
+
+// ═════════════════════════════════════════════════════════════════════
 // 感謝榜 / Sponsors
 // ═════════════════════════════════════════════════════════════════════
 
@@ -273,6 +354,7 @@ function registerMonetizationRoutes(app) {
   registerFrameRoutes(app)
   registerAiUnlimitedRoutes(app)
   registerAvatarRoutes(app)
+  registerBadgeRoutes(app)
   registerSponsorRoutes(app)
 
   console.log(`[monetization] flags:`, FLAGS)

@@ -30,3 +30,6 @@ export const FEATURE_AVATARS = envFlag('AVATARS')
 
 // 感謝榜：贊助者永久展示頁面
 export const FEATURE_SPONSORS = envFlag('SPONSORS')
+
+// 徽章系統：金幣解鎖、單一裝備、顯示在 Leaderboard/PvP 名字旁
+export const FEATURE_BADGES = envFlag('BADGES')

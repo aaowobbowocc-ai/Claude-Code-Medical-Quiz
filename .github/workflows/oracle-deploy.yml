@@ -62,6 +62,7 @@ jobs:
             # === Phase 1 monetization feature flags ===
             # 想開啟哪個功能就改成 1（記得 Vercel env 也要同步開 VITE_FEATURE_*）
             sync_env FEATURE_AVATARS 1
+            sync_env FEATURE_BADGES 1
             sync_env FEATURE_FRAMES 0
             sync_env FEATURE_AI_UNLIMITED 0
             sync_env FEATURE_SPONSORS 0

@@ -9,7 +9,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase, readAuthFromStorage } from '../lib/supabase'
 import { usePlayerStore } from '../store/gameStore'
 import AvatarWithFrame from '../components/AvatarWithFrame'
-import { FEATURE_FRAMES, FEATURE_AVATARS, FEATURE_AI_UNLIMITED } from '../config/featureFlags'
+import { FEATURE_FRAMES, FEATURE_AVATARS, FEATURE_AI_UNLIMITED, FEATURE_BADGES } from '../config/featureFlags'
 import Footer from '../components/Footer'
 import '../styles/frames.css'
 
@@ -297,6 +297,110 @@ function AiUnlimitedTab() {
   )
 }
 
+// ── 徽章 Tab ──────────────────────────────────────────────────────────
+function BadgesTab({ coins, onCoinsChange, refreshProfile }) {
+  const [catalog, setCatalog] = useState([])
+  const [owned, setOwned] = useState(new Set())
+  const [equipped, setEquipped] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [busy, setBusy] = useState(null)
+  const [msg, setMsg] = useState(null)
+
+  useEffect(() => {
+    Promise.all([
+      fetch(`${BACKEND}/api/badges/catalog`).then(r => r.json()).catch(() => ({ badges: [] })),
+      authHeaders().then(h => fetch(`${BACKEND}/api/user/badges`, { headers: h }).then(r => r.json()).catch(() => ({ owned: [] }))),
+      authHeaders().then(h => fetch(`${BACKEND}/api/profile`, { headers: h }).then(r => r.json()).catch(() => ({}))),
+    ]).then(([cat, my, prof]) => {
+      setCatalog(cat.badges || [])
+      setOwned(new Set((my.owned || []).map(o => o.badge_id)))
+      setEquipped(prof.equipped_badge_id || null)
+      setLoading(false)
+    })
+  }, [])
+
+  const buy = async (badge) => {
+    setBusy(badge.id); setMsg(null)
+    const headers = await authHeaders()
+    try {
+      const r = await fetch(`${BACKEND}/api/user/badges/purchase`, {
+        method: 'POST', headers, body: JSON.stringify({ badge_id: badge.id }),
+      })
+      const d = await r.json()
+      if (!r.ok) {
+        if (d.error === 'insufficient_coins') setMsg(`金幣不足，差 ${d.need - d.have} 個`)
+        else setMsg(d.error || '購買失敗')
+      } else {
+        setOwned(prev => new Set([...prev, badge.id]))
+        onCoinsChange(d.coins_left)
+        setMsg(`✓ ${badge.name} 解鎖成功`)
+      }
+    } finally { setBusy(null) }
+  }
+
+  const equip = async (badge_id) => {
+    setBusy('equip-' + badge_id)
+    const headers = await authHeaders()
+    const r = await fetch(`${BACKEND}/api/user/badges/equip`, {
+      method: 'POST', headers, body: JSON.stringify({ badge_id }),
+    })
+    if (r.ok) {
+      setEquipped(badge_id === 'none' ? null : badge_id)
+      setMsg(`✓ 已裝備：${badge_id === 'none' ? '無徽章' : catalog.find(b => b.id === badge_id)?.name}`)
+      refreshProfile?.()
+    }
+    setBusy(null)
+  }
+
+  if (loading) return <div className="text-center py-10 text-gray-400">載入中…</div>
+
+  return (
+    <div className="space-y-4">
+      {msg && <div className="bg-amber-50 border border-amber-200 rounded-xl px-3 py-2 text-xs text-amber-800">{msg}</div>}
+      <p className="text-xs text-gray-500 leading-relaxed">
+        徽章顯示在排行榜、對戰房間的名字旁，一次只能裝備 1 個。
+      </p>
+      {equipped && (
+        <button onClick={() => equip('none')}
+          className="w-full text-xs text-gray-500 underline py-1">
+          卸下徽章
+        </button>
+      )}
+      <div className="grid grid-cols-2 gap-3">
+        {catalog.map(b => {
+          const isOwned = owned.has(b.id)
+          const isEquipped = equipped === b.id
+          const tier = TIER_META[b.tier] || TIER_META.common
+          return (
+            <div key={b.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 flex flex-col items-center">
+              <div className="text-4xl mb-1">{b.icon}</div>
+              <p className="text-sm font-bold text-medical-dark text-center">{b.name}</p>
+              <p className="text-[10px] text-gray-400 text-center mt-0.5 mb-2 leading-tight min-h-[28px]">{b.description}</p>
+              <span className={`text-[9px] font-bold ${tier.color} px-1.5 py-0.5 rounded-full mb-2`}>{tier.label}</span>
+              {isEquipped ? (
+                <div className="w-full text-center text-xs font-bold text-emerald-600 py-1.5 border-2 border-emerald-200 rounded-xl bg-emerald-50">
+                  ✓ 裝備中
+                </div>
+              ) : isOwned ? (
+                <button onClick={() => equip(b.id)} disabled={busy} className="w-full py-1.5 rounded-xl text-xs font-bold text-medical-blue border-2 border-medical-blue active:scale-95 disabled:opacity-50">
+                  裝備
+                </button>
+              ) : b.unlock_type === 'coins' && b.price_coins > 0 ? (
+                <button onClick={() => buy(b)} disabled={busy === b.id || coins < b.price_coins}
+                  className="w-full py-1.5 rounded-xl text-xs font-bold text-white grad-cta active:scale-95 disabled:opacity-30">
+                  🪙 {b.price_coins.toLocaleString()}
+                </button>
+              ) : (
+                <div className="text-center text-[11px] text-gray-400 py-1.5">活動限定</div>
+              )}
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
 // ── 主元件 ────────────────────────────────────────────────────────────
 export default function Shop() {
   const navigate = useNavigate()
@@ -311,6 +415,7 @@ export default function Shop() {
   const allTabs = [
     { id: 'frames',   label: '邊框',     enabled: FEATURE_FRAMES },
     { id: 'avatars',  label: '頭像',     enabled: FEATURE_AVATARS },
+    { id: 'badges',   label: '徽章',     enabled: FEATURE_BADGES },
     { id: 'ai',       label: 'AI 無限', enabled: FEATURE_AI_UNLIMITED },
   ].filter(t => t.enabled)
 
@@ -365,6 +470,9 @@ export default function Shop() {
         )}
         {tab === 'avatars' && FEATURE_AVATARS && (
           <AvatarsTab coins={coins} onCoinsChange={handleCoinsChange} refreshProfile={refreshProfile} />
+        )}
+        {tab === 'badges' && FEATURE_BADGES && (
+          <BadgesTab coins={coins} onCoinsChange={handleCoinsChange} refreshProfile={refreshProfile} />
         )}
         {tab === 'ai' && FEATURE_AI_UNLIMITED && (
           <AiUnlimitedTab />

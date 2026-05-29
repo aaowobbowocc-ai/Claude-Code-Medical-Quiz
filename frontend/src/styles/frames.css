@@ -19,7 +19,7 @@
 .frame-wrapper > .frame-inner {
   display: block;
   border-radius: 50%;
-  background: white;
+  /* 不強制白底 — 讓 PNG transparent 真的透出，emoji 直接落在 UI 背景上 */
 }
 
 /* ── 無邊框 (free) ─────────────────────────────────────────── */

@@ -34,6 +34,9 @@ async function authHeaders() {
   return { 'Content-Type': 'application/json' }
 }
 
+// 強制 bypass cache — 之前發現 catalog API 偶爾 304 + 空 body 讓 r.json() 失敗
+const NO_CACHE = { cache: 'no-store' }
+
 // ── 邊框 Tab ──────────────────────────────────────────────────────────
 function FramesTab({ coins, onCoinsChange, refreshProfile }) {
   const [catalog, setCatalog] = useState([])
@@ -46,9 +49,9 @@ function FramesTab({ coins, onCoinsChange, refreshProfile }) {
 
   useEffect(() => {
     Promise.all([
-      fetch(`${BACKEND}/api/frames/catalog`).then(r => r.json()).catch(() => ({ frames: [] })),
-      authHeaders().then(h => fetch(`${BACKEND}/api/user/frames`, { headers: h }).then(r => r.json()).catch(() => ({ owned: [] }))),
-      authHeaders().then(h => fetch(`${BACKEND}/api/profile`, { headers: h }).then(r => r.json()).catch(() => ({}))),
+      fetch(`${BACKEND}/api/frames/catalog`, NO_CACHE).then(r => r.json()).catch(() => ({ frames: [] })),
+      authHeaders().then(h => fetch(`${BACKEND}/api/user/frames`, { headers: h, cache: 'no-store' }).then(r => r.json()).catch(() => ({ owned: [] }))),
+      authHeaders().then(h => fetch(`${BACKEND}/api/profile`, { headers: h, cache: 'no-store' }).then(r => r.json()).catch(() => ({}))),
     ]).then(([cat, my, prof]) => {
       setCatalog(cat.frames || [])
       setOwned(new Set((my.owned || []).map(o => o.frame_id)))
@@ -152,8 +155,8 @@ function AvatarsTab({ coins, onCoinsChange, refreshProfile }) {
 
   useEffect(() => {
     Promise.all([
-      fetch(`${BACKEND}/api/avatars/catalog`).then(r => r.json()).catch(() => ({ avatars: [] })),
-      authHeaders().then(h => fetch(`${BACKEND}/api/user/avatars`, { headers: h }).then(r => r.json()).catch(() => ({ owned: [] }))),
+      fetch(`${BACKEND}/api/avatars/catalog`, NO_CACHE).then(r => r.json()).catch(() => ({ avatars: [] })),
+      authHeaders().then(h => fetch(`${BACKEND}/api/user/avatars`, { headers: h, cache: 'no-store' }).then(r => r.json()).catch(() => ({ owned: [] }))),
     ]).then(([cat, my]) => {
       setCatalog(cat.avatars || [])
       const ownedSet = new Set((my.owned || []).map(o => o.avatar_id))
@@ -244,7 +247,7 @@ function AiUnlimitedTab() {
 
   useEffect(() => {
     authHeaders().then(h =>
-      fetch(`${BACKEND}/api/ai-unlimited/status`, { headers: h })
+      fetch(`${BACKEND}/api/ai-unlimited/status`, { headers: h, cache: 'no-store' })
         .then(r => r.json()).catch(() => ({}))
     ).then(d => { setStatus(d) })
       .catch(e => console.error('[ai-unlimited] load failed', e))
@@ -310,9 +313,9 @@ function BadgesTab({ coins, onCoinsChange, refreshProfile }) {
 
   useEffect(() => {
     Promise.all([
-      fetch(`${BACKEND}/api/badges/catalog`).then(r => r.json()).catch(() => ({ badges: [] })),
-      authHeaders().then(h => fetch(`${BACKEND}/api/user/badges`, { headers: h }).then(r => r.json()).catch(() => ({ owned: [] }))),
-      authHeaders().then(h => fetch(`${BACKEND}/api/profile`, { headers: h }).then(r => r.json()).catch(() => ({}))),
+      fetch(`${BACKEND}/api/badges/catalog`, NO_CACHE).then(r => r.json()).catch(() => ({ badges: [] })),
+      authHeaders().then(h => fetch(`${BACKEND}/api/user/badges`, { headers: h, cache: 'no-store' }).then(r => r.json()).catch(() => ({ owned: [] }))),
+      authHeaders().then(h => fetch(`${BACKEND}/api/profile`, { headers: h, cache: 'no-store' }).then(r => r.json()).catch(() => ({}))),
     ]).then(([cat, my, prof]) => {
       setCatalog(cat.badges || [])
       setOwned(new Set((my.owned || []).map(o => o.badge_id)))

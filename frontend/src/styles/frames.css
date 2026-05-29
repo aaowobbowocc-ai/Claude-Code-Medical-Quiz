@@ -19,7 +19,15 @@
 .frame-wrapper > .frame-inner {
   display: block;
   border-radius: 50%;
-  /* 不強制白底 — 讓 PNG transparent 真的透出，emoji 直接落在 UI 背景上 */
+  /* 淡灰 backdrop + 細邊：給頭像視覺容器感，深淺背景都能看清楚輪廓 */
+  background: rgba(243, 244, 246, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* emoji 渲染時用 flex 居中；font baseline 偏移用 padding-bottom 抵 */
+.frame-wrapper > .frame-inner {
+  padding-bottom: 1px; /* 部分 emoji descender 太重，往上推一點看起來更居中 */
 }
 
 /* ── 無邊框 (free) ─────────────────────────────────────────── */

@@ -53,8 +53,8 @@ function FramesTab({ coins, onCoinsChange, refreshProfile }) {
       setCatalog(cat.frames || [])
       setOwned(new Set((my.owned || []).map(o => o.frame_id)))
       setEquipped(prof.equipped_frame_id || null)
-      setLoading(false)
-    })
+    }).catch(e => console.error('[frames] load failed', e))
+      .finally(() => setLoading(false))
   }, [])
 
   const buy = async (frame) => {
@@ -159,8 +159,8 @@ function AvatarsTab({ coins, onCoinsChange, refreshProfile }) {
       const ownedSet = new Set((my.owned || []).map(o => o.avatar_id))
       ;(cat.avatars || []).forEach(a => { if (a.tier === 'free') ownedSet.add(a.id) })
       setOwned(ownedSet)
-      setLoading(false)
-    })
+    }).catch(e => console.error('[avatars] load failed', e))
+      .finally(() => setLoading(false))
   }, [])
 
   const buy = async (avatar) => {
@@ -246,7 +246,9 @@ function AiUnlimitedTab() {
     authHeaders().then(h =>
       fetch(`${BACKEND}/api/ai-unlimited/status`, { headers: h })
         .then(r => r.json()).catch(() => ({}))
-    ).then(d => { setStatus(d); setLoading(false) })
+    ).then(d => { setStatus(d) })
+      .catch(e => console.error('[ai-unlimited] load failed', e))
+      .finally(() => setLoading(false))
   }, [])
 
   if (loading) return <div className="text-center py-10 text-gray-400">載入中…</div>
@@ -315,8 +317,8 @@ function BadgesTab({ coins, onCoinsChange, refreshProfile }) {
       setCatalog(cat.badges || [])
       setOwned(new Set((my.owned || []).map(o => o.badge_id)))
       setEquipped(prof.equipped_badge_id || null)
-      setLoading(false)
-    })
+    }).catch(e => console.error('[badges] load failed', e))
+      .finally(() => setLoading(false))
   }, [])
 
   const buy = async (badge) => {
@@ -442,7 +444,7 @@ export default function Shop() {
     <div className="flex flex-col min-h-dvh bg-medical-ice">
       {/* Header */}
       <div className="grad-header px-4 pt-5 pb-4">
-        <button onClick={() => navigate(-1)} className="text-white/80 text-sm mb-2 active:opacity-70">‹ 返回</button>
+        <button onClick={() => navigate('/')} className="text-white/80 text-sm mb-2 active:opacity-70">‹ 返回</button>
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-bold text-white">🛒 商店</h1>
           <div className="bg-white/15 px-3 py-1 rounded-full">
@@ -454,7 +456,7 @@ export default function Shop() {
       {/* Tabs */}
       <div className="bg-white border-b border-gray-100 flex">
         {allTabs.map(t => (
-          <button key={t.id} onClick={() => setParams({ tab: t.id })}
+          <button key={t.id} onClick={() => setParams({ tab: t.id }, { replace: true })}
             className={`flex-1 py-3 text-sm font-bold border-b-2 transition-colors ${
               tab === t.id ? 'text-medical-blue border-medical-blue' : 'text-gray-400 border-transparent'
             }`}>

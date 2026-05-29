@@ -25,10 +25,23 @@ export default function AvatarWithFrame({ emoji, image, frameId, size = 'sm', cl
   // emoji size 對應 wrapper size — 略小才不會超出邊框
   const emojiSize = size === 'sm' ? '1.5rem' : size === 'md' ? '2rem' : '2.75rem'
 
+  // Auto-detect：emoji 欄位若是 URL（/ 或 http 開頭）也視為 image。
+  // 後端 profiles.avatar 對 PNG 頭像會存 URL（如 /avatars/png/animal-otter.png），
+  // 排行榜直接傳給 AvatarWithFrame 不會主動分流 → 這邊偵測一下避免渲染成 URL 文字。
+  const resolvedImage = image || (typeof emoji === 'string' && /^(\/|https?:\/\/)/.test(emoji) ? emoji : null)
+
   return (
     <span className={`frame-wrapper ${frameClass} ${sizeClass} ${className}`}>
-      {image ? (
-        <img src={image} alt="avatar" />
+      {resolvedImage ? (
+        <img
+          src={resolvedImage}
+          alt="avatar"
+          style={{
+            width: size === 'sm' ? '36px' : size === 'md' ? '56px' : '80px',
+            height: size === 'sm' ? '36px' : size === 'md' ? '56px' : '80px',
+            objectFit: 'contain',
+          }}
+        />
       ) : (
         <span
           className="frame-inner flex items-center justify-center"

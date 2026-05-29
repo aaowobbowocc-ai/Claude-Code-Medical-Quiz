@@ -226,7 +226,11 @@ function AvatarsTab({ coins, onCoinsChange, refreshProfile }) {
           const tier = TIER_META[a.tier] || TIER_META.common
           return (
             <div key={a.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 flex flex-col items-center">
-              <div className="text-5xl mb-1">{a.icon}</div>
+              {a.is_image ? (
+                <img src={a.icon} alt={a.name} className="w-16 h-16 object-contain mb-1" />
+              ) : (
+                <div className="text-5xl mb-1">{a.icon}</div>
+              )}
               <p className="text-[10px] font-bold text-medical-dark text-center mb-1">{a.name}</p>
               <span className={`text-[9px] font-bold ${tier.color} px-1.5 py-0.5 rounded-full mb-2`}>{tier.label}</span>
               {isEquipped ? (

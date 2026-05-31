@@ -5195,7 +5195,7 @@
         "D": "colony-stimulating factors"
       },
       "answer": "C",
-      "explanation": "**✅ 為什麼答案是 C**\nB細胞無法形成漿細胞的疾病，與B細胞的活化和增殖有關。IL-2（白細胞介素2）是一種促進T細胞活化和增殖的細胞激素，而不是直接促進B細胞的活化和形成漿細胞。因此，缺乏IL-2最有可能導致B細胞無法形成漿細胞。\n\n**❌ 排除其他選項**\nA. type 1 interferons：主要涉及抗病毒和抗腫瘤免疫。 \nB. type 2 interferons：主要涉及抗寄生蟲和抗腫瘤免疫。 \nD. colony-stimulating factors：主要涉及血細胞生成和增殖。\n\n**🧠 記憶關鍵字**\n「IL-2與T細胞有關，B細胞形成漿細胞的關鍵是IL-5」。\n\n**🏥 臨床應用**\n這種疾病的臨床表現可能包括免疫缺陷、感染和腫瘤的易感性。"
+      "explanation": "**✅ 為什麼答案是 C**\n在四個選項中，IL-2 是與 B 細胞分化最相關的細胞激素。IL-2 可促進 B 細胞活化與增殖，並透過輔助型 T 細胞（Th）間接驅動 B 細胞向漿細胞分化。其他三個選項與 B 細胞→漿細胞分化的關聯薄弱。\n\n**❌ 排除其他選項**\nA. type 1 interferons（IFN-α/β）：主要為抗病毒的先天免疫，與 B 細胞漿化無直接關係。\nB. type 2 interferons（IFN-γ）：主要由 Th1 分泌、促進細胞免疫，對漿細胞形成非主要驅動。\nD. colony-stimulating factors（CSF）：主要促進骨髓造血前驅細胞增殖，非 B 細胞分化信號。\n\n**🧠 記憶關鍵字**\nB 細胞→漿細胞分化的關鍵 cytokine 為 IL-6 與 IL-21；本題選項不含這兩者，IL-2 為相對最接近 B 細胞功能的答案。\n\n**🏥 臨床應用**\n臨床上 B 細胞無法分化為漿細胞會導致抗體製造不足（hypogammaglobulinemia），增加細菌感染易感性，常見於 common variable immunodeficiency (CVID)。"
     },
     {
       "id": "111020_1_59",
@@ -9179,7 +9179,7 @@
         "D": "負重越重時，收縮時需要產生的張力就要越大"
       },
       "answer": "C",
-      "explanation": "**✅ 為什麼答案是 C**\n負重越重時，肌肉收縮的能量需求增加，肌肉需要更長的時間來產生足夠的力氣，從而延長收縮期間（twitch duration）。而其他選項的敘述與負重的變化關係不大。\n\n**❌ 排除其他選項**\nA. 負重越重時，收縮潛伏期（latent period）其實會越短，因為肌肉需要更快地準備好來應對重大的負重。\nB. 負重越重時，收縮速度（shortening velocity）其實會越快，因為肌肉需要更快地產生力氣來克服重大的負重。\nD. 負重越重時，收縮時需要產生的張力其實會越大，因為肌肉需要產生足夠的力氣來克服重大的負重。\n\n**🧠 記憶關鍵字**\n「負重越重，收縮越快，但收縮期間越長」。\n\n**🏥 臨床應用**\n了解負重與收縮的關係對於評估肌肉功能和診斷肌肉疾病非常重要，例如在評估肌肉萎縮或肌肉疾病的程度時。"
+      "explanation": "**✅ 為什麼答案是 C**\n等張單次收縮（isotonic twitch）中，肌肉必須先在等長期累積到能克服負重的張力後才開始縮短。負重越重時，可縮短的距離越小、縮短期相對較短，整體 twitch duration 不會延長，反而會縮短。選項 C 稱「twitch duration 越長」是錯誤的敘述。\n\n**❌ 排除其他選項（均為正確敘述）**\nA. 負重越重，latent period 延長 — 肌肉需更長時間累積足以克服負重的張力才能開始縮短。\nB. 負重越重，shortening velocity 減慢 — 符合 Hill 方程式：力量↑則速度↓。\nD. 負重越重，肌肉產生的張力越大 — 等張收縮中肌肉內部張力 ≈ 外部負重。\n\n**🧠 記憶關鍵字**\nHill 方程式：load↑ → velocity↓；等張重負重下縮短距離小、收縮期短。\n\n**🏥 臨床應用**\nHill 力速關係是評估肌肉功能（如心室收縮力 contractility）的基礎，臨床上以 dP/dt max 等指標衡量。"
     },
     {
       "id": "111100_1_56",
@@ -87150,15 +87150,14 @@
       "number": 3,
       "question": "陳先生得了無精症（azoospermia）。他身材不高、體型稍胖、皮膚細白、體毛較少，乳房較為凸出（gynecomastia）、臉上沒有鬍渣。外陰部檢查，發現兩側睪丸很小，兩側輸精管都摸得到，陰莖發育也還好，染色體分析發現其性染色體為XXY。下列激素分析的結果何者較可能是陳先生的報告？（註：正常值：FSH：1～8 mIU/mL；LH：2～12 mIU/mL；testosterone：3～10.7 ng/mL）",
       "options": {
-        "A": "FSH",
-        "B": "FSH",
-        "C": "FSH",
-        "D": "FSH"
+        "A": "FSH：25 mIU/mL；LH：35 mIU/mL；testosterone：2.5 ng/mL",
+        "B": "FSH：3 mIU/mL；LH：2.5 mIU/mL；testosterone：5.5 ng/mL",
+        "C": "FSH：2.5 mIU/mL；LH：2.5 mIU/mL；testosterone：5.5 ng/mL",
+        "D": "FSH：0.1 mIU/mL；LH：0.1 mIU/mL；testosterone：0.3 ng/mL"
       },
       "answer": "A",
-      "explanation": "",
+      "explanation": "**✅ 為什麼答案是 A**\n陳先生有 XXY 性染色體 → Klinefelter syndrome → 原發性性腺功能低下（primary hypogonadism）。睪丸無法製造足夠睪固酮，因 negative feedback 喪失，腦下垂體前葉持續分泌 FSH 與 LH 試圖刺激睪丸 → **FSH↑、LH↑、testosterone↓**。\n\n選項 A：FSH 25（高）、LH 35（高）、T 2.5（低）→ 完全符合原發性性腺功能低下的內分泌特徵。\n\n**❌ 排除其他選項**\nB. 三者皆正常範圍 — 不符 Klinefelter 表現。\nC. 三者皆正常範圍 — 不符 Klinefelter 表現。\nD. FSH、LH、T 全部極低 — 屬於繼發性（secondary/hypogonadotropic）性腺功能低下，常見原因為下視丘或腦下垂體病變（如 Kallmann syndrome），與 XXY 不符。\n\n**🧠 記憶關鍵字**\nPrimary hypogonadism（睪丸壞）→ FSH/LH 高代償、T 低；Secondary（下視丘/腦下垂體壞）→ 三者皆低。\n\n**🏥 臨床應用**\nKlinefelter 是男性最常見的性染色體異常（約 1/500–1/1000），典型表現包含高瘦體型、男性女乳症、小睪丸、無精症、體毛稀少。內分泌治療常給予睪固酮補充。",
       "vision_uncertain": false,
-      "disputed": true,
       "_original_number": 24
     },
     {

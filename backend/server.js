@@ -274,12 +274,44 @@ function makeRoomCode() {
   return code;
 }
 
+// Badge catalog cache — id → {icon, name}. Resolved once at startup so
+// PvP room broadcasts don't pay a Supabase round-trip per join.
+let badgeCatalogCache = null;
+async function loadBadgeCatalog() {
+  try {
+    const sb = require('./supabase');
+    if (!sb) { badgeCatalogCache = new Map(); return; }
+    const { data, error } = await sb.from('badges').select('id, icon, name');
+    if (error || !data) { badgeCatalogCache = new Map(); return; }
+    badgeCatalogCache = new Map(data.map(b => [b.id, { icon: b.icon, name: b.name }]));
+    console.log(`[badges] catalog loaded: ${badgeCatalogCache.size} entries`);
+  } catch (e) {
+    badgeCatalogCache = new Map();
+    console.warn('[badges] catalog load failed:', e.message);
+  }
+}
+loadBadgeCatalog();
+
+// Sanitizers — match the id pattern used by migration 017 (badges) / 014 (frames).
+function cleanBadgeId(v) {
+  return (typeof v === 'string' && /^[a-z0-9_]{1,40}$/.test(v)) ? v : null;
+}
+function cleanFrameId(v) {
+  return (typeof v === 'string' && /^[a-z0-9_-]{1,40}$/.test(v)) ? v : null;
+}
+
 function getRoomPlayers(room, includeAnswer = false) {
-  return Array.from(room.players.entries()).map(([id, p]) => ({
-    id, name: p.name, avatar: p.avatar || '👨‍⚕️', score: p.score, ready: p.ready,
-    isAI: p.isAI || false,
-    ...(includeAnswer ? { lastAnswer: p.lastAnswer, answered: p.answered } : {}),
-  }));
+  return Array.from(room.players.entries()).map(([id, p]) => {
+    const b = (badgeCatalogCache && p.badgeId) ? badgeCatalogCache.get(p.badgeId) : null;
+    return {
+      id, name: p.name, avatar: p.avatar || '👨‍⚕️', score: p.score, ready: p.ready,
+      isAI: p.isAI || false,
+      frameId: p.frameId || null,
+      badgeIcon: b?.icon || null,
+      badgeName: b?.name || null,
+      ...(includeAnswer ? { lastAnswer: p.lastAnswer, answered: p.answered } : {}),
+    };
+  });
 }
 
 function broadcastRoomState(room) {
@@ -414,18 +446,20 @@ io.on('connection', (socket) => {
   if (concurrent > stats.peakConcurrent) stats.peakConcurrent = concurrent;
 
   // Create room
-  socket.on('create_room', ({ playerName, playerAvatar, isPublic = false, password = null, exam = 'doctor1' }) => {
+  socket.on('create_room', ({ playerName, playerAvatar, equippedBadgeId, equippedFrameId, isPublic = false, password = null, exam = 'doctor1' }) => {
     // Sanitize player-controlled strings — playerName goes into chat/leaderboard,
     // password goes into room config, exam into questions query.
     const cleanName = (typeof playerName === 'string' ? playerName : '').slice(0, 30).trim() || '匿名';
     const cleanAvatar = (typeof playerAvatar === 'string' ? playerAvatar : '').slice(0, 8) || '👨‍⚕️';
     const cleanPw = typeof password === 'string' && password.length <= 30 ? password : null;
     const cleanExam = typeof exam === 'string' && /^[a-z0-9-]+$/.test(exam) ? exam.slice(0, 40) : 'doctor1';
+    const badgeId = cleanBadgeId(equippedBadgeId);
+    const frameId = cleanFrameId(equippedFrameId);
     const code = makeRoomCode();
     const room = {
       code,
       hostId: socket.id,
-      players: new Map([[socket.id, { name: cleanName, avatar: cleanAvatar, score: 0, ready: false, answered: false }]]),
+      players: new Map([[socket.id, { name: cleanName, avatar: cleanAvatar, badgeId, frameId, score: 0, ready: false, answered: false }]]),
       stage: 0,
       timerMode: 'auto',
       questions: [],
@@ -445,7 +479,7 @@ io.on('connection', (socket) => {
   });
 
   // Join room
-  socket.on('join_room', ({ code, playerName, playerAvatar, password }) => {
+  socket.on('join_room', ({ code, playerName, playerAvatar, equippedBadgeId, equippedFrameId, password }) => {
     const upper = code.toUpperCase();
     const room = rooms.get(upper);
     if (!room) {
@@ -479,7 +513,9 @@ io.on('connection', (socket) => {
     }
     const cleanName = (typeof playerName === 'string' ? playerName : '').slice(0, 30).trim() || '匿名';
     const cleanAvatar = (typeof playerAvatar === 'string' ? playerAvatar : '').slice(0, 8) || '👨‍⚕️';
-    room.players.set(socket.id, { name: cleanName, avatar: cleanAvatar, score: 0, ready: false, answered: false });
+    const badgeId = cleanBadgeId(equippedBadgeId);
+    const frameId = cleanFrameId(equippedFrameId);
+    room.players.set(socket.id, { name: cleanName, avatar: cleanAvatar, badgeId, frameId, score: 0, ready: false, answered: false });
     room.lastActivity = Date.now();
     socket.join(code.toUpperCase());
     socket.data.roomCode = code.toUpperCase();
@@ -488,7 +524,7 @@ io.on('connection', (socket) => {
   });
 
   // Rejoin room after reconnect
-  socket.on('rejoin_room', ({ code, playerName, playerAvatar }) => {
+  socket.on('rejoin_room', ({ code, playerName, playerAvatar, equippedBadgeId, equippedFrameId }) => {
     const room = rooms.get(code);
     if (!room) { socket.emit('error', { message: '房間已關閉' }); return; }
     // If player was already in room (by name), replace their entry
@@ -499,16 +535,24 @@ io.on('connection', (socket) => {
         break;
       }
     }
+    const badgeId = cleanBadgeId(equippedBadgeId);
+    const frameId = cleanFrameId(equippedFrameId);
     if (existingId) {
       const old = room.players.get(existingId);
       room.players.delete(existingId);
-      room.players.set(socket.id, { ...old, avatar: playerAvatar || old.avatar });
+      room.players.set(socket.id, {
+        ...old,
+        avatar: playerAvatar || old.avatar,
+        // Refresh badge/frame on rejoin in case user equipped a new one before reconnecting
+        badgeId: badgeId !== null ? badgeId : (old.badgeId || null),
+        frameId: frameId !== null ? frameId : (old.frameId || null),
+      });
       // Transfer host if needed
       if (room.hostId === existingId) room.hostId = socket.id;
     } else if (!room.players.has(socket.id)) {
       // New join (room still has space)
       if (room.players.size >= 4) { socket.emit('error', { message: '房間已滿' }); return; }
-      room.players.set(socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', score: 0, ready: false, answered: false });
+      room.players.set(socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', badgeId, frameId, score: 0, ready: false, answered: false });
     }
     socket.join(code);
     socket.data.roomCode = code;

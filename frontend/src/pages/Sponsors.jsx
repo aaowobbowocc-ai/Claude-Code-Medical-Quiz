@@ -1,21 +1,85 @@
 /**
- * 感謝榜 — 公開展示所有贊助者，依金額排序。
+ * 感謝榜 — 進士金榜風格（Imperial Scholar Gold List）
  *
+ * 視覺：燙金 + 朱印 + 宣紙底，刻意營造「上榜」的儀式感。
  * 由 FEATURE_SPONSORS feature flag 控制，OFF 時整頁回首頁。
  */
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FEATURE_SPONSORS } from '../config/featureFlags'
 import Footer from '../components/Footer'
+import '../styles/sponsors.css'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+const ECPAY_URL = 'https://p.ecpay.com.tw/14E6254'
 
-const TIER_BADGE = {
-  coffee:  { emoji: '☕',  label: '小杯咖啡', range: 'NT$50+',    color: 'bg-amber-50 text-amber-700 border-amber-200' },
-  meal:    { emoji: '🍱',  label: '一個便當', range: 'NT$150+',   color: 'bg-blue-50 text-blue-700 border-blue-200' },
-  dinner:  { emoji: '🍷',  label: '一頓晚餐', range: 'NT$500+',   color: 'bg-purple-50 text-purple-700 border-purple-200' },
-  gold:    { emoji: '🏆',  label: '黃金贊助', range: 'NT$1000+',  color: 'bg-yellow-50 text-yellow-700 border-yellow-300' },
-  diamond: { emoji: '💎',  label: '鑽石贊助', range: 'NT$3000+',  color: 'bg-cyan-50 text-cyan-700 border-cyan-300' },
+const TIER_META = {
+  diamond: { emoji: '🦚', label: '鴻名贊助', range: 'NT$3,000 +',  cardClass: 'diamond-card' },
+  gold:    { emoji: '🏆', label: '鴻儒贊助', range: 'NT$1,000 +',  cardClass: 'gold-card' },
+  dinner:  { emoji: '🏮', label: '厚意贊助', range: 'NT$500 +',    cardClass: 'dinner-card' },
+  meal:    { emoji: '🌾', label: '心意贊助', range: 'NT$150 +',    cardClass: 'meal-card' },
+  coffee:  { emoji: '🍵', label: '結緣贊助', range: 'NT$50 +',     cardClass: 'coffee-card' },
+}
+
+const TIER_ORDER = ['diamond', 'gold', 'dinner', 'meal', 'coffee']
+
+/* ── 贊助卡片 — 同一份資料，依 tier 套不同外殼 ────────────── */
+function SponsorCard({ sponsor, tier }) {
+  const meta = TIER_META[tier]
+  const isDiamond = tier === 'diamond'
+  const isGold = tier === 'gold'
+  const wrapClass = meta.cardClass
+
+  const inner = (
+    <div className="flex items-center gap-3 relative">
+      <span className={`shrink-0 ${isDiamond ? 'text-3xl' : isGold ? 'text-2xl' : 'text-xl'}`}>
+        {meta.emoji}
+      </span>
+      <div className="flex-1 min-w-0">
+        <p className={`font-imperial font-bold truncate ${
+          isDiamond ? 'text-lg text-stone-800' :
+          isGold ? 'text-base text-stone-800' :
+          'text-sm text-stone-700'
+        }`}>
+          {sponsor.display_name}
+        </p>
+        {sponsor.message && (
+          <p className={`italic mt-0.5 truncate text-stone-500 ${
+            isDiamond ? 'text-sm' : 'text-xs'
+          }`}>
+            「{sponsor.message}」
+          </p>
+        )}
+      </div>
+    </div>
+  )
+
+  if (isDiamond) {
+    return (
+      <div className={wrapClass}>
+        <div className="diamond-card-inner">{inner}</div>
+      </div>
+    )
+  }
+  if (isGold) {
+    return (
+      <div className={wrapClass}>
+        <div className="gold-card-inner">{inner}</div>
+      </div>
+    )
+  }
+  return <div className={wrapClass}>{inner}</div>
+}
+
+/* ── tier 分隔線 ──────────────────────────────────────────── */
+function TierDivider({ meta, count }) {
+  return (
+    <div className="imperial-divider">
+      <span className="imperial-divider-content">
+        {meta.emoji} {meta.label} {count > 0 && <span className="opacity-60">· {count} 位</span>}
+      </span>
+    </div>
+  )
 }
 
 export default function Sponsors() {
@@ -29,98 +93,150 @@ export default function Sponsors() {
     fetch(`${BACKEND}/api/sponsors`)
       .then(r => r.json())
       .then(d => {
-        if (d.error) setErr(d.error)
+        if (d.error) setErr('榜單敬載中 · 暫時無法顯示')
         else setSponsors(d.sponsors || [])
       })
-      .catch(() => setErr('連線失敗'))
+      .catch(() => setErr('連線失敗，請稍後再試'))
       .finally(() => setLoading(false))
   }, [])
 
   if (!FEATURE_SPONSORS) return null
 
-  // 依 tier 分組
   const byTier = sponsors.reduce((acc, s) => {
     (acc[s.tier] = acc[s.tier] || []).push(s)
     return acc
   }, {})
-  const tierOrder = ['diamond', 'gold', 'dinner', 'meal', 'coffee']
 
   return (
-    <div className="flex flex-col min-h-dvh bg-medical-ice">
-      <div className="grad-header px-4 pt-5 pb-5">
-        <button onClick={() => navigate(-1)} className="text-white/80 text-sm mb-2 active:opacity-70">‹ 返回</button>
-        <h1 className="text-2xl font-bold text-white">🙏 感謝榜</h1>
-        <p className="text-white/70 text-xs mt-1">感謝以下贊助者支持平台維運，讓國考知識王持續免費為大家服務</p>
+    <div className="flex flex-col min-h-dvh sponsors-page">
+
+      {/* ── Hero 牌匾 ─────────────────────────────────────── */}
+      <div className="relative px-4 pt-5 pb-2">
+        <button
+          onClick={() => navigate(-1)}
+          className="text-amber-900/70 text-sm mb-3 active:opacity-70 font-imperial font-bold relative z-10"
+        >
+          ‹ 返回
+        </button>
+
+        <div className="relative max-w-sm mx-auto">
+          {/* Hero gold scroll image — 中心橢圓正好放標題 */}
+          <img
+            src="/sponsors/hero-sponsors.png"
+            alt=""
+            aria-hidden
+            className="w-full block select-none pointer-events-none"
+            draggable={false}
+          />
+
+          {/* 品牌朱印 — 蓋在 hero 圖 AI 生成的假印上 */}
+          <div className="brand-seal" aria-hidden>
+            <span>醫</span>
+            <span>路</span>
+            <span>相</span>
+            <span>挺</span>
+          </div>
+
+          {/* 標題 overlay 對齊圖中橢圓 */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <p className="font-imperial text-[9px] tracking-[0.6em] text-amber-900/55 mb-1">
+              ─ 共 立 鴻 名 ─
+            </p>
+            <h1 className="font-imperial font-black text-5xl gold-text leading-none">
+              感謝榜
+            </h1>
+            <p className="font-imperial text-[11px] text-amber-900/65 mt-2">
+              諸君 · 同立此榜
+            </p>
+          </div>
+        </div>
+
+        <p className="text-center text-stone-600 text-xs font-imperial mt-3 leading-relaxed px-4">
+          感謝以下諸君慷慨襄助<br />
+          讓平台得以持續維運<br />
+          為後來者點亮一盞燈
+        </p>
       </div>
 
-      <div className="px-4 py-4 flex-1">
-        {loading && <p className="text-center text-gray-400 py-10">載入中…</p>}
-        {err && <p className="text-center text-red-500 py-10">{err}</p>}
+      {/* ── 主內容 ────────────────────────────────────────── */}
+      <div className="px-4 py-2 flex-1">
+        {loading && (
+          <p className="text-center text-stone-400 py-12 font-imperial">榜上敬載中…</p>
+        )}
+
+        {err && (
+          <p className="text-center text-red-700 py-10 font-imperial">{err}</p>
+        )}
 
         {!loading && !err && sponsors.length === 0 && (
-          <div className="bg-white rounded-2xl shadow-sm p-6 text-center">
-            <div className="text-5xl mb-3">🌱</div>
-            <p className="text-medical-dark font-bold">尚未有贊助紀錄</p>
-            <p className="text-gray-400 text-sm mt-2">成為第一位贊助者，留下你的名字在這裡！</p>
-            <a
-              href="https://p.ecpay.com.tw/E11DBDD"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-4 px-6 py-2.5 rounded-xl bg-medical-blue text-white font-bold text-sm active:scale-95"
-            >
-              ☕ 用綠界贊助
-            </a>
+          <div className="relative my-6 mx-auto max-w-md">
+            <div className="diamond-card">
+              <div className="diamond-card-inner py-8 text-center relative z-10">
+                <div className="text-5xl mb-3">🌅</div>
+                <p className="font-imperial text-xl font-bold gold-text mb-2">
+                  首位上榜 · 等你揭幕
+                </p>
+                <p className="text-sm text-stone-600 mb-5 leading-relaxed font-imperial">
+                  凡有心人皆可上榜<br />
+                  匿名或具名 一份心意便足
+                </p>
+                <a
+                  href={ECPAY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="gold-cta"
+                >
+                  ☕ 立刻贊助上榜
+                </a>
+              </div>
+            </div>
           </div>
         )}
 
-        {!loading && !err && tierOrder.map(t => {
-          const list = byTier[t]
-          if (!list || list.length === 0) return null
-          const meta = TIER_BADGE[t]
-          return (
-            <div key={t} className="mb-5">
-              <div className={`px-3 py-1.5 rounded-full inline-flex items-center gap-2 border ${meta.color} mb-2`}>
-                <span>{meta.emoji}</span>
-                <span className="font-bold text-xs">{meta.label}</span>
-                <span className="text-[10px] opacity-70">{meta.range}</span>
-              </div>
-              <div className="space-y-2">
-                {list.map((s, i) => (
-                  <div key={i} className="bg-white rounded-2xl shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-between">
-                    <div className="flex items-center gap-3 flex-1 min-w-0">
-                      <span className="text-2xl shrink-0">{meta.emoji}</span>
-                      <div className="flex-1 min-w-0">
-                        <p className="font-bold text-medical-dark text-sm truncate">{s.display_name}</p>
-                        {s.message && (
-                          <p className="text-xs text-gray-500 truncate mt-0.5">"{s.message}"</p>
-                        )}
-                      </div>
-                    </div>
-                    <div className="text-right shrink-0 ml-3">
-                      <p className="text-xs text-gray-400">NT${s.amount_ntd}</p>
-                    </div>
+        {!loading && !err && sponsors.length > 0 && (
+          <>
+            {TIER_ORDER.map(t => {
+              const list = byTier[t]
+              if (!list || list.length === 0) return null
+              const meta = TIER_META[t]
+              return (
+                <section key={t}>
+                  <TierDivider meta={meta} count={list.length} />
+                  <div className="space-y-2.5">
+                    {list.map((s, i) => (
+                      <SponsorCard key={`${t}-${i}`} sponsor={s} tier={t} />
+                    ))}
                   </div>
-                ))}
+                </section>
+              )
+            })}
+
+            {/* 底部 CTA */}
+            <div className="mt-10 mb-4">
+              <div className="diamond-card">
+                <div className="diamond-card-inner py-6 px-5 text-center relative z-10">
+                  <p className="font-imperial text-lg font-bold gold-text mb-1">
+                    你也想留名此榜？
+                  </p>
+                  <p className="text-xs text-stone-600 mb-4 leading-relaxed font-imperial">
+                    贊助任意金額皆可<br />
+                    1-2 天內由站長親自將芳名敬錄此榜
+                  </p>
+                  <a
+                    href={ECPAY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="gold-cta"
+                  >
+                    ☕ 用綠界贊助 ›
+                  </a>
+                  <p className="text-[10px] text-stone-400 mt-3 font-imperial">
+                    自訂顯示名稱 或 匿名
+                  </p>
+                </div>
               </div>
             </div>
-          )
-        })}
-
-        {!loading && !err && sponsors.length > 0 && (
-          <div className="bg-blue-50 rounded-2xl p-4 mt-6 text-sm text-blue-800">
-            <p className="font-bold mb-1">也想留名感謝榜？</p>
-            <p className="text-xs leading-relaxed mb-3">
-              透過綠界贊助任何金額，1-2 天內會手動加上你的名字。可選擇匿名或自訂顯示名稱。
-            </p>
-            <a
-              href="https://p.ecpay.com.tw/E11DBDD"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center bg-medical-blue text-white font-bold py-2.5 rounded-xl active:scale-95"
-            >
-              ☕ 用綠界贊助
-            </a>
-          </div>
+          </>
         )}
       </div>
 

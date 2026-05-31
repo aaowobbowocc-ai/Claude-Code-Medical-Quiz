@@ -1,0 +1,239 @@
+/**
+ * 感謝榜 — 進士金榜風格 (Imperial Scholar Gold List aesthetic)
+ *
+ * 主色：朱紅 (#8b1818) + 燙金漸層 (#b8860b → #ffd700 → #d4a017) + 宣紙米 (#fef9ef)
+ * 字體：Noto Serif TC（楷書感）+ 系統 serif fallback
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&display=swap');
+
+.sponsors-page {
+  /* 宣紙底色 + 雙層淡金徑向漸層模擬纖維光感 */
+  background-color: #fef9ef;
+  background-image:
+    radial-gradient(circle at 18% 28%, rgba(212, 160, 23, 0.06) 0%, transparent 55%),
+    radial-gradient(circle at 82% 72%, rgba(184, 134, 11, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 50% 95%, rgba(139, 24, 24, 0.025) 0%, transparent 40%);
+  font-family: 'Noto Serif TC', ui-serif, Georgia, 'DFKai-SB', 'BiauKai', serif;
+}
+
+/* 楷書 / 標題用 */
+.font-imperial {
+  font-family: 'Noto Serif TC', ui-serif, Georgia, 'DFKai-SB', 'BiauKai', serif;
+  font-feature-settings: 'palt';
+}
+
+/* 燙金漸層文字（流動光） */
+.gold-text {
+  background: linear-gradient(
+    135deg,
+    #8b6914 0%,
+    #b8860b 15%,
+    #d4a017 30%,
+    #ffd700 50%,
+    #d4a017 70%,
+    #b8860b 85%,
+    #8b6914 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: gold-flow 5s linear infinite;
+  filter: drop-shadow(0 1px 1px rgba(139, 105, 20, 0.25));
+}
+
+@keyframes gold-flow {
+  to { background-position: 200% center; }
+}
+
+/* 鑽石卡片 — 雙層金邊 + 內光暈 + 緩慢橫掃微光 */
+.diamond-card {
+  position: relative;
+  background: linear-gradient(135deg, #b8860b 0%, #ffd700 35%, #f5d76e 50%, #ffd700 65%, #b8860b 100%);
+  padding: 3px;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 16px rgba(212, 160, 23, 0.28),
+    0 1px 3px rgba(139, 24, 24, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.diamond-card-inner {
+  background: linear-gradient(135deg, #fef9ef 0%, #fef3c7 100%);
+  border-radius: 13px;
+  padding: 14px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.diamond-card-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 70%
+  );
+  background-size: 250% 100%;
+  background-position: 250% 0;
+  animation: diamond-sweep 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes diamond-sweep {
+  0% { background-position: 250% 0; }
+  60%, 100% { background-position: -150% 0; }
+}
+
+/* 黃金卡片 — 單層金邊 */
+.gold-card {
+  position: relative;
+  background: linear-gradient(135deg, #d4a017, #ffd700, #d4a017);
+  padding: 2px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(212, 160, 23, 0.2);
+}
+
+.gold-card-inner {
+  background: #fefbf3;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+/* 晚餐 / 便當 / 咖啡 tier — 漸減精緻度 */
+.dinner-card {
+  background: #fef9ef;
+  border: 1.5px solid #d4a017;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 1px 4px rgba(139, 24, 24, 0.08);
+}
+
+.meal-card {
+  background: #fefbf3;
+  border: 1px solid rgba(212, 160, 23, 0.5);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.coffee-card {
+  background: #fefbf3;
+  border: 1px solid rgba(212, 160, 23, 0.25);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+/* 朱印 印章效果（純 CSS，無圖檔） */
+.vermillion-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #8b1818;
+  color: #fef3c7;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: -1.5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  box-shadow:
+    0 2px 4px rgba(139, 24, 24, 0.4),
+    inset 0 0 0 1.5px #fef3c7,
+    inset 0 0 0 3px #8b1818,
+    inset 0 0 0 4px rgba(254, 243, 199, 0.4);
+  transform: rotate(-6deg);
+  text-align: center;
+  line-height: 1;
+}
+
+/* 品牌朱印 — 2x2 4 字（覆蓋 hero 圖右上角 AI 假印） */
+.brand-seal {
+  position: absolute;
+  top: 4.5%;
+  right: 3.5%;
+  width: clamp(64px, 22%, 88px);
+  aspect-ratio: 1 / 1;
+  background: #8b1818;
+  color: #fef3c7;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+  font-size: clamp(15px, 4.8vw, 22px);
+  border-radius: 4px;
+  padding: 5px;
+  gap: 1px;
+  box-shadow:
+    0 2px 6px rgba(139, 24, 24, 0.55),
+    inset 0 0 0 2px #fef3c7,
+    inset 0 0 0 4px #8b1818;
+  transform: rotate(-4deg);
+  line-height: 1;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* tier 分隔線 — 古典金線 */
+.imperial-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0 14px;
+}
+
+.imperial-divider::before,
+.imperial-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(212, 160, 23, 0.45),
+    transparent
+  );
+}
+
+.imperial-divider-content {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #6b4423;
+  padding: 4px 14px;
+  background: rgba(254, 243, 199, 0.7);
+  border: 1px solid rgba(212, 160, 23, 0.35);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* CTA 主按鈕 — 立體燙金 */
+.gold-cta {
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(180deg, #d4a017 0%, #b8860b 50%, #8b6914 100%);
+  color: #fef9ef;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+  box-shadow:
+    0 4px 12px rgba(139, 105, 20, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s;
+}
+
+.gold-cta:active {
+  transform: scale(0.97);
+  box-shadow:
+    0 2px 6px rgba(139, 105, 20, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}

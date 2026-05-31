@@ -129,8 +129,14 @@ export function useSocket() {
       // Auto-rejoin room after reconnect
       const { roomCode } = useGameStore.getState()
       if (roomCode) {
-        const { name, avatar } = usePlayerStore.getState()
-        socket.emit('rejoin_room', { code: roomCode, playerName: name, playerAvatar: avatar })
+        const { name, avatar, equippedBadgeId, equippedFrameId } = usePlayerStore.getState()
+        socket.emit('rejoin_room', {
+          code: roomCode,
+          playerName: name,
+          playerAvatar: avatar,
+          equippedBadgeId: equippedBadgeId || null,
+          equippedFrameId: equippedFrameId || null,
+        })
       }
     }
     socket.on('disconnect', onDisconnect)

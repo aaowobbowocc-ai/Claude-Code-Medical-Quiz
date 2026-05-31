@@ -13,7 +13,10 @@ import SupportBar from '../components/SupportBar'
 import CumulativeStatsBar from '../components/CumulativeStatsBar'
 import SupportSheets from '../components/SupportSheets'
 import RewardAdSheet from '../components/RewardAdSheet'
-import { FEATURE_FRAMES, FEATURE_AVATARS, FEATURE_AI_UNLIMITED, FEATURE_SPONSORS } from '../config/featureFlags'
+import { FEATURE_FRAMES, FEATURE_AVATARS, FEATURE_AI_UNLIMITED, FEATURE_SPONSORS, FEATURE_BADGES } from '../config/featureFlags'
+
+// 站長雜貨抽獎 — 暫時關閉，要開回來改成 true
+const SHOW_LUCKY_DRAW = false
 import WelcomeTour, { shouldShowWelcomeTour } from '../components/WelcomeTour'
 import CoinShopSheet from '../components/CoinShopSheet'
 import { supabase, linkOrSignInGoogle, switchGoogleAccount, getLinkedIdentity } from '../lib/supabase'
@@ -369,6 +372,8 @@ export default function Home() {
     })
   }
   const av = usePlayerStore(s => s.avatar) || '👨‍⚕️'
+  const equippedBadgeId = usePlayerStore(s => s.equippedBadgeId) || null
+  const equippedFrameId = usePlayerStore(s => s.equippedFrameId) || null
   const setAvatar = usePlayerStore(s => s.setAvatar)
   const socket = getSocket()
 
@@ -461,7 +466,7 @@ export default function Home() {
   const doCreate = (nameToUse, { isPublic = false, password = null } = {}) => {
     setConnecting(true)
     socket.connect()
-    socket.emit('create_room', { playerName: nameToUse, playerAvatar: av, isPublic, password, exam })
+    socket.emit('create_room', { playerName: nameToUse, playerAvatar: av, equippedBadgeId, equippedFrameId, isPublic, password, exam })
   }
 
   const doJoin = (nameToUse) => {
@@ -470,7 +475,7 @@ export default function Home() {
     setConnecting(true)
     setJoinError('')
     socket.connect()
-    socket.emit('join_room', { code: joinCode.trim().toUpperCase(), playerName: nameToUse, playerAvatar: av, password: joinPwd || undefined })
+    socket.emit('join_room', { code: joinCode.trim().toUpperCase(), playerName: nameToUse, playerAvatar: av, equippedBadgeId, equippedFrameId, password: joinPwd || undefined })
   }
 
   const handleCreate = () => {
@@ -590,15 +595,17 @@ export default function Home() {
           {authMsg && <p className="text-xs text-red-500 text-center -mt-1">{authMsg}</p>}
 
           {/* Action buttons — card style matching logged-in view */}
-          <button onClick={() => navigate('/break')}
-                  className="w-full rounded-2xl py-3.5 px-4 flex items-center gap-3 bg-gradient-to-r from-amber-50 via-orange-50 to-pink-50 border-2 border-amber-200 active:scale-[0.97] transition-transform">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-300 to-orange-400 flex items-center justify-center text-xl shrink-0">🎰</div>
-            <div className="flex-1 text-left">
-              <p className="text-medical-dark font-bold text-sm">站長雜貨抽獎</p>
-              <p className="text-gray-500 text-xs">讀書讀累了，抽個東西來逛逛？</p>
-            </div>
-            <span className="text-amber-600">›</span>
-          </button>
+          {SHOW_LUCKY_DRAW && (
+            <button onClick={() => navigate('/break')}
+                    className="w-full rounded-2xl py-3.5 px-4 flex items-center gap-3 bg-gradient-to-r from-amber-50 via-orange-50 to-pink-50 border-2 border-amber-200 active:scale-[0.97] transition-transform">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-300 to-orange-400 flex items-center justify-center text-xl shrink-0">🎰</div>
+              <div className="flex-1 text-left">
+                <p className="text-medical-dark font-bold text-sm">站長雜貨抽獎</p>
+                <p className="text-gray-500 text-xs">讀書讀累了，抽個東西來逛逛？</p>
+              </div>
+              <span className="text-amber-600">›</span>
+            </button>
+          )}
 
           <button
             onClick={handleCreate}
@@ -642,7 +649,7 @@ export default function Home() {
               ['🔍','全題庫搜尋','跨 52 考試 21 萬題','/search'],
               ['🏆','排行榜','每週排名','/leaderboard'],
               ['💬','留言板','交流備考心得','/board'],
-              ...((FEATURE_FRAMES || FEATURE_AVATARS || FEATURE_AI_UNLIMITED) ? [['🛒','商店','邊框/頭像/AI 無限','/shop']] : []),
+              ...((FEATURE_FRAMES || FEATURE_AVATARS || FEATURE_AI_UNLIMITED || FEATURE_BADGES) ? [['🛒','商店','頭像/徽章/邊框/AI 無限','/shop']] : []),
               ...(FEATURE_SPONSORS ? [['🙏','感謝榜','贊助平台維運','/sponsors']] : []),
             ].map(([icon,title,sub,path]) => (
               <button key={path} onClick={() => navigate(path)}
@@ -935,7 +942,10 @@ export default function Home() {
             ['📚','備考攻略','考試重點整理','/guides'],
             ['🔍','全題庫搜尋','跨 52 考試 21 萬題','/search'],
             ['🏆','排行榜','每週排名','/leaderboard'],
-            ['💬','留言板','交流備考心得','/board']].map(([icon,title,sub,path]) => (
+            ['💬','留言板','交流備考心得','/board'],
+            ...((FEATURE_FRAMES || FEATURE_AVATARS || FEATURE_AI_UNLIMITED || FEATURE_BADGES) ? [['🛒','商店','頭像/徽章/邊框/AI 無限','/shop']] : []),
+            ...(FEATURE_SPONSORS ? [['🙏','感謝榜','贊助平台維運','/sponsors']] : []),
+          ].map(([icon,title,sub,path]) => (
             <button key={path} onClick={() => navigate(path)}
                     className="rounded-2xl py-4 flex flex-col items-center gap-1.5 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">
               <div className="w-11 h-11 rounded-xl bg-medical-ice flex items-center justify-center text-2xl">{icon}</div>

@@ -168,7 +168,13 @@ function AppRoutes() {
     if (state.name) {
       const s = getSocket()
       try { s.connect() } catch {}
-      s.emit('join_room', { code: normalized, playerName: state.name, playerAvatar: state.avatar })
+      s.emit('join_room', {
+        code: normalized,
+        playerName: state.name,
+        playerAvatar: state.avatar,
+        equippedBadgeId: state.equippedBadgeId || null,
+        equippedFrameId: state.equippedFrameId || null,
+      })
       try { sessionStorage.removeItem('pending-join-room') } catch {}
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -186,7 +192,13 @@ function AppRoutes() {
     const state = usePlayerStore.getState()
     const s = getSocket()
     try { s.connect() } catch {}
-    s.emit('join_room', { code: pending, playerName: state.name, playerAvatar: state.avatar })
+    s.emit('join_room', {
+      code: pending,
+      playerName: state.name,
+      playerAvatar: state.avatar,
+      equippedBadgeId: state.equippedBadgeId || null,
+      equippedFrameId: state.equippedFrameId || null,
+    })
     try { sessionStorage.removeItem('pending-join-room') } catch {}
   }, [name])
 

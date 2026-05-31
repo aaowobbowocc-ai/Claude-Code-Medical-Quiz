@@ -39,6 +39,8 @@ const FIELD_MAP = {
   lastAdDate: 'last_ad_date',
   bindRewardClaimed: 'bind_reward_claimed',
   claimedRewards: 'claimed_rewards',
+  equippedBadgeId: 'equipped_badge_id',
+  equippedFrameId: 'equipped_frame_id',
 }
 
 function storeToDb(state) {
@@ -84,6 +86,8 @@ export const usePlayerStore = create(
     (set, get) => ({
       name: '',
       avatar: '👨‍⚕️',
+      equippedBadgeId: null,
+      equippedFrameId: null,
       coins: 500,
       level: 1,
       exp: 0,
@@ -368,6 +372,8 @@ if (import.meta.env.DEV && typeof window !== 'undefined') {
   window.dev = {
     addCoins: (n) => { usePlayerStore.getState().addCoins(n); console.log(`+${n} coins → ${usePlayerStore.getState().coins}`) },
     setCoins: (n) => { usePlayerStore.setState({ coins: n }); console.log(`coins = ${n}`) },
+    setBadge: (id) => { usePlayerStore.setState({ equippedBadgeId: id }); console.log(`badge = ${id}`) },
+    setFrame: (id) => { usePlayerStore.setState({ equippedFrameId: id }); console.log(`frame = ${id}`) },
     getState: () => usePlayerStore.getState(),
   }
 }

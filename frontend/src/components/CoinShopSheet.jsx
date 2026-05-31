@@ -190,7 +190,7 @@ export default function CoinShopSheet({ onClose }) {
               <p className="font-bold mb-2">☕ 感謝你想支持平台</p>
               <p className="mb-3">目前金幣商店暫停線上付款，請改走綠界贊助（信用卡 / ATM / 超商）。任何金額贊助後，金幣會在 1-2 天內手動補發到你帳號。</p>
               <a
-                href="https://p.ecpay.com.tw/E11DBDD"
+                href="https://p.ecpay.com.tw/14E6254"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-center bg-medical-blue hover:bg-medical-blue/90 text-white font-bold py-3 rounded-xl active:scale-95 transition-transform"

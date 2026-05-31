@@ -5,7 +5,7 @@ const AD_SLOT = '1093265050'
 const AD_CLIENT = 'ca-pub-3134321405509741'
 
 // Pages where fixed bottom ad should NOT show
-const HIDDEN_ROUTES = ['/game', '/lobby', '/board', '/privacy', '/tos', '/contact', '/practice', '/mock-exam', '/weakness']
+const HIDDEN_ROUTES = ['/game', '/lobby', '/board', '/privacy', '/tos', '/contact', '/practice', '/mock-exam', '/weakness', '/sponsors']
 
 export default function FixedBottomAd() {
   const { pathname } = useLocation()
@@ -70,7 +70,7 @@ export default function FixedBottomAd() {
                 <p className="text-[10px] text-gray-400 truncate">你的支持讓所有考生都能免費使用</p>
               </div>
               <a
-                href="https://p.ecpay.com.tw/E11DBDD"
+                href="https://p.ecpay.com.tw/14E6254"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shrink-0 px-3 py-1.5 rounded-full text-[11px] font-bold text-white active:scale-95 transition-transform shadow-sm"

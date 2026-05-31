@@ -25,8 +25,13 @@
   box-sizing: border-box;
 }
 
-/* emoji 渲染時用 flex 居中；font baseline 偏移用 padding-bottom 抵 */
+/* emoji 渲染時用 flex 居中（覆寫上面 .frame-wrapper > .frame-inner 的 display:block，
+   否則 Tailwind 的 .flex 因 specificity 較低無法生效）；
+   font baseline 偏移用 padding-bottom 抵。 */
 .frame-wrapper > .frame-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 1px; /* 部分 emoji descender 太重，往上推一點看起來更居中 */
 }
 

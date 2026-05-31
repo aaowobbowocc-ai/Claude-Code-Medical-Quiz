@@ -65,7 +65,7 @@ export default function SupportSheets({ sheet, setSheet }) {
           </div>
 
           <a
-            href="https://p.ecpay.com.tw/E11DBDD"
+            href="https://p.ecpay.com.tw/14E6254"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full py-4 rounded-2xl text-center mb-3 font-bold text-lg text-white active:scale-95 transition-transform grad-cta shadow-md"

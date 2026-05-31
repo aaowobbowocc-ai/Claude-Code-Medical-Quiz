@@ -100,8 +100,12 @@ function FramesTab({ coins, onCoinsChange, refreshProfile }) {
       method: 'POST', headers, body: JSON.stringify({ frame_id }),
     })
     if (r.ok) {
-      setEquipped(frame_id === 'none' ? null : frame_id)
-      setMsg(`✓ 已裝備：${frame_id === 'none' ? '無邊框' : catalog.find(f => f.id === frame_id)?.name}`)
+      const next = frame_id === 'none' ? null : frame_id
+      setEquipped(next)
+      // Mirror to playerStore so PvP room broadcast picks it up (dbToStore drops nulls,
+      // so refreshProfile alone can't clear an un-equip).
+      usePlayerStore.setState({ equippedFrameId: next })
+      setMsg(`✓ 已裝備：${next === null ? '無邊框' : catalog.find(f => f.id === frame_id)?.name}`)
       refreshProfile?.()
     }
     setBusy(null)
@@ -116,7 +120,7 @@ function FramesTab({ coins, onCoinsChange, refreshProfile }) {
         邊框會顯示在排行榜、對戰房間、留言板的頭像周圍。
       </p>
       <div className="grid grid-cols-2 gap-3">
-        {catalog.map(f => {
+        {catalog.filter(f => f.tier !== 'limited' || owned.has(f.id)).map(f => {
           const isOwned = owned.has(f.id) || f.id === 'none'
           const isEquipped = equipped === f.id || (!equipped && f.id === 'none')
           const tier = TIER_META[f.tier] || TIER_META.common
@@ -140,9 +144,7 @@ function FramesTab({ coins, onCoinsChange, refreshProfile }) {
                     🪙 {f.price_coins.toLocaleString()}
                   </button>
                 ) : f.price_ntd > 0 ? (
-                  <div className="text-center text-xs text-amber-700 py-2 border-2 border-amber-200 rounded-xl bg-amber-50">
-                    NT${f.price_ntd}（請走綠界贊助）
-                  </div>
+                  <div className="text-center text-xs text-gray-400 py-2">敬請期待</div>
                 ) : (
                   <div className="text-center text-xs text-gray-400 py-2">活動限定</div>
                 )}
@@ -220,7 +222,7 @@ function AvatarsTab({ coins, onCoinsChange, refreshProfile }) {
         頭像會顯示在排行榜、留言板、對戰房間。免費的可直接套用，付費限定的需先解鎖。
       </p>
       <div className="grid grid-cols-3 gap-3">
-        {catalog.map(a => {
+        {catalog.filter(a => a.tier !== 'limited' || owned.has(a.id)).map(a => {
           const isOwned = owned.has(a.id)
           const isEquipped = playerAvatar === a.icon
           const tier = TIER_META[a.tier] || TIER_META.common
@@ -245,7 +247,7 @@ function AvatarsTab({ coins, onCoinsChange, refreshProfile }) {
                   🪙 {a.price_coins.toLocaleString()}
                 </button>
               ) : (
-                <div className="text-[10px] text-gray-400">NT${a.price_ntd || '—'}</div>
+                <div className="text-[10px] text-gray-400">敬請期待</div>
               )}
             </div>
           )
@@ -307,7 +309,7 @@ function AiUnlimitedTab() {
                 </div>
               </div>
               <div className="bg-amber-50 border border-amber-200 rounded-xl px-3 py-2 text-[11px] text-amber-700 leading-relaxed">
-                ⚠️ 線上付款功能尚未開放。如需購買，請走<a href="https://p.ecpay.com.tw/E11DBDD" target="_blank" rel="noopener noreferrer" className="underline font-bold">綠界贊助</a>對應金額後聯絡客服，會手動開啟無限包。
+                ⚠️ 線上付款功能尚未開放。如需購買，請走<a href="https://p.ecpay.com.tw/14E6254" target="_blank" rel="noopener noreferrer" className="underline font-bold">綠界贊助</a>對應金額後聯絡客服，會手動開啟無限包。
               </div>
             </div>
           )
@@ -365,8 +367,10 @@ function BadgesTab({ coins, onCoinsChange, refreshProfile }) {
       method: 'POST', headers, body: JSON.stringify({ badge_id }),
     })
     if (r.ok) {
-      setEquipped(badge_id === 'none' ? null : badge_id)
-      setMsg(`✓ 已裝備：${badge_id === 'none' ? '無徽章' : catalog.find(b => b.id === badge_id)?.name}`)
+      const next = badge_id === 'none' ? null : badge_id
+      setEquipped(next)
+      usePlayerStore.setState({ equippedBadgeId: next })
+      setMsg(`✓ 已裝備：${next === null ? '無徽章' : catalog.find(b => b.id === badge_id)?.name}`)
       refreshProfile?.()
     }
     setBusy(null)
@@ -387,7 +391,7 @@ function BadgesTab({ coins, onCoinsChange, refreshProfile }) {
         </button>
       )}
       <div className="grid grid-cols-2 gap-3">
-        {catalog.map(b => {
+        {catalog.filter(b => b.tier !== 'limited' || owned.has(b.id)).map(b => {
           const isOwned = owned.has(b.id)
           const isEquipped = equipped === b.id
           const tier = TIER_META[b.tier] || TIER_META.common

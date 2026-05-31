@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useGameStore, usePlayerStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import ConnectionStatus from '../components/ConnectionStatus'
+import AvatarWithFrame from '../components/AvatarWithFrame'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -164,12 +165,20 @@ export default function Lobby() {
           {players.map((p, i) => (
             <div key={p.id}
                  className="bg-white rounded-2xl px-4 py-3.5 flex items-center gap-3 shadow-sm border border-gray-100">
-              <div className="w-12 h-12 rounded-xl bg-medical-ice flex items-center justify-center text-2xl">
-                {avatarOf(p)}
-              </div>
-              <div className="flex-1">
-                <p className="font-bold text-medical-dark text-base">{p.name}</p>
-                <p className="text-gray-400 text-xs">{i === 0 ? '房主' : '玩家'}</p>
+              <AvatarWithFrame emoji={avatarOf(p)} frameId={p.frameId} size="md" className="shrink-0" />
+              <div className="flex-1 min-w-0">
+                <p className="font-bold text-medical-dark text-base truncate">{p.name}</p>
+                <p className="text-gray-400 text-xs mt-0.5">{i === 0 ? '房主' : '玩家'}</p>
+                {p.badgeIcon && (
+                  <div className="mt-1">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200">
+                      <span className="text-sm leading-none">{p.badgeIcon}</span>
+                      {p.badgeName && (
+                        <span className="text-[11px] text-amber-700 font-semibold truncate max-w-[120px]">{p.badgeName}</span>
+                      )}
+                    </span>
+                  </div>
+                )}
               </div>
               {i === 0 && !p.isAI && (
                 <span className="text-xs bg-medical-gold text-white px-2.5 py-1 rounded-full font-semibold">

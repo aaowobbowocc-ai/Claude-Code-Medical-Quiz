@@ -34,6 +34,45 @@ const TIERS = {
   large:  { price: 150, coins: 28000 },
 }
 
+// 街口 callback 來源 IP allowlist（2026-05-21 街口 Leona 提供，UAT 與正式共用）
+// 文件未提及 callback HMAC signature，安全模型靠：
+//   1. 來源 IP 白名單（這份）
+//   2. 商家反向 /inquiry 查證（必須成功才能放行）
+//   3. amount / status 自驗
+// 街口可能未來加新 IP，環境變數 JKOS_EXTRA_IPS 可加（逗號分隔）作快速補丁。
+const JKOS_IP_ALLOWLIST = new Set([
+  '125.227.158.50',
+  '125.227.158.49',
+  '220.133.77.56',
+  '59.124.107.103',
+  '35.194.172.6',
+  '35.244.159.28',
+  '175.99.130.66',
+  '175.99.130.82',
+  '35.187.144.191',
+])
+
+function getExtraIps() {
+  return (process.env.JKOS_EXTRA_IPS || '').split(',').map(s => s.trim()).filter(Boolean)
+}
+
+// Express + Oracle Cloud LB → 取得真實 client IP（信任 X-Forwarded-For 最右一個非自身的）
+function getClientIp(req) {
+  const xff = req.headers['x-forwarded-for']
+  if (typeof xff === 'string' && xff.length) {
+    const parts = xff.split(',').map(s => s.trim()).filter(Boolean)
+    if (parts.length) return parts[0]  // leftmost = original client
+  }
+  return req.ip || req.connection?.remoteAddress || ''
+}
+
+function isJkosSourceIp(ip) {
+  if (!ip) return false
+  // IPv4-mapped IPv6 → 去 prefix
+  const normalized = ip.startsWith('::ffff:') ? ip.slice(7) : ip
+  return JKOS_IP_ALLOWLIST.has(normalized) || getExtraIps().includes(normalized)
+}
+
 // 訂單狀態碼（依文件）
 const STATUS = {
   SUCCESS: 0,
@@ -227,24 +266,26 @@ function registerJkosRoutes(app, supabase) {
 
   // POST /payment/jkos/callback — result_url webhook (街口付款後通知)
   //
-  // ⚠️ SECURITY TODO (bug-scan 2026-05-29): callback handler does NOT verify
-  // HMAC signature from JKOPay. Currently we rely on inquireJkosOrder() as
-  // defense-in-depth (line 251), which catches forged callbacks IF the inquiry
-  // API is healthy. But if JKOPay's /inquiry has 5xx, `verified` is null and
-  // `isPaid = (status === STATUS.SUCCESS)` reads attacker-controlled body → grant.
+  // 安全模型（依街口 open-doc.jkos.com 文件，callback 無 HMAC signature header）：
+  //   1. 來源 IP allowlist（JKOS_IP_ALLOWLIST）— 拒絕非街口 IP 的 POST
+  //   2. /inquiry 反向查證必須回 SUCCESS — 失敗 / 5xx 一律拒絕（不信 body）
+  //   3. callback body 與 inquiry 的 final_price 都要等於 order.amount_twd
   //
-  // To fix properly before reactivating JKOPay path: call verifyHmac() with the
-  // raw request body + correct header (check JKOPay docs for header name — may
-  // be 'Digest', 'X-Signature', or in body field). Don't guess the header.
-  //
-  // For now (5/28 onwards) the JKOPay flow is hidden from UI; only reachable
-  // if attacker hits the route directly while inquiry is failing.
+  // 街口 retry 規則：失敗會重送，每 2^n 秒間隔最多 12 次（~2 小時）。
+  // 所以 inquiry 暫時 5xx 時拒絕 callback、回非 200 是安全的，街口會 retry。
   app.post('/payment/jkos/callback', async (req, res) => {
     try {
+      // ── 防護 1：來源 IP allowlist ────────────────────────────
+      const clientIp = getClientIp(req)
+      if (!isJkosSourceIp(clientIp)) {
+        console.warn('JKOPay callback rejected: source IP not in allowlist', clientIp)
+        return res.status(403).json({ error: 'forbidden' })
+      }
+
       const tx = req.body?.transaction
       if (!tx?.platform_order_id) return res.status(400).json({ error: 'missing transaction' })
 
-      const { platform_order_id, status, tradeNo, final_price, debit_amount } = tx
+      const { platform_order_id, status, tradeNo, final_price } = tx
 
       // Look up our order
       const { data: order, error } = await supabase
@@ -256,33 +297,53 @@ function registerJkosRoutes(app, supabase) {
 
       // Idempotent — already processed
       if (order.status !== 'pending') {
-        return res.status(200).send('OK')  // 街口要求 HTTP 200
+        return res.status(200).send('OK')
       }
 
-      // Verify by calling /inquiry (defense in depth — webhook source not auth'd by signature in body)
-      let verified = null
-      try { verified = await inquireJkosOrder(platform_order_id) } catch (e) {
-        console.warn('inquiry verification failed', e.message)
+      // ── 防護 2：/inquiry 反向查證必須成功 ───────────────────
+      let verified
+      try {
+        verified = await inquireJkosOrder(platform_order_id)
+      } catch (e) {
+        // /inquiry 5xx → 拒絕，回 503 讓街口 retry（不信 body）
+        console.error('JKOPay callback rejected: inquiry failed', platform_order_id, e.message)
+        return res.status(503).json({ error: 'inquiry unavailable, retry later' })
+      }
+      if (!verified || verified.status !== STATUS.SUCCESS) {
+        // /inquiry 回非 SUCCESS → 訂單本身有問題（未付款、退款中、不存在）
+        console.warn('JKOPay callback: inquiry says not paid', platform_order_id, verified?.status)
+        await supabase.from('coin_orders').update({
+          status: 'failed',
+          provider_order_id: tradeNo,
+          raw_callback: req.body,
+        }).eq('order_id', platform_order_id)
+        return res.status(200).send('OK')
       }
 
-      const isPaid = (status === STATUS.SUCCESS) ||
-                     (verified && verified.status === STATUS.SUCCESS)
-
-      // Sanity check amount matches
-      const amountOk = Number(final_price) === order.amount_twd
-      if (isPaid && !amountOk) {
-        console.error('JKOPay callback amount mismatch', platform_order_id, final_price, 'vs', order.amount_twd)
+      // ── 防護 3：金額一致（body + inquiry 都要等於原始訂單）──
+      const bodyAmountOk = Number(final_price) === order.amount_twd
+      const inquiryAmountOk = Number(verified.final_price) === order.amount_twd
+      if (!bodyAmountOk || !inquiryAmountOk) {
+        console.error('JKOPay callback rejected: amount mismatch',
+          platform_order_id, 'order=', order.amount_twd,
+          'body=', final_price, 'inquiry=', verified.final_price)
+        await supabase.from('coin_orders').update({
+          status: 'failed',
+          provider_order_id: tradeNo,
+          raw_callback: req.body,
+        }).eq('order_id', platform_order_id)
+        return res.status(200).send('OK')
       }
 
+      // 三道防護全過 → 入帳
       await supabase.from('coin_orders').update({
-        status: (isPaid && amountOk) ? 'paid' : 'failed',
+        status: 'paid',
         provider_order_id: tradeNo,
-        paid_at: isPaid ? new Date().toISOString() : null,
+        paid_at: new Date().toISOString(),
         raw_callback: req.body,
       }).eq('order_id', platform_order_id)
 
-      // If paid, create user_coin_grant for redemption
-      if (isPaid && amountOk && order.user_id) {
+      if (order.user_id) {
         await supabase.from('user_coin_grants').insert({
           user_id: order.user_id,
           coins: order.coins,

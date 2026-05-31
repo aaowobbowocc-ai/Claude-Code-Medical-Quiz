@@ -41,6 +41,9 @@ const dayCache     = createCache(86400_000);  // 24hr — exam configs never cha
 const browseCache  = createCache(300_000);    // 5min — paginated browse queries
 
 const app = express();
+// Oracle deploy 走 Nginx → Node，信任 1 hop reverse proxy 才能正確取到 X-Forwarded-For
+// 真實 client IP（街口 callback IP 白名單檢查用）。本機 dev 沒 proxy 也安全（XFF 沒就回 socket IP）。
+app.set('trust proxy', 1);
 app.use(compression());
 app.use(cors({
   origin: (origin, cb) => cb(null, true), // allow all origins (Vercel + localhost)

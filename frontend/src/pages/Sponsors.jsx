@@ -37,14 +37,14 @@ function SponsorCard({ sponsor, tier }) {
       </span>
       <div className="flex-1 min-w-0">
         <p className={`font-imperial font-bold truncate ${
-          isDiamond ? 'text-lg text-stone-800' :
-          isGold ? 'text-base text-stone-800' :
-          'text-sm text-stone-700'
+          isDiamond ? 'text-lg text-stone-900' :
+          isGold ? 'text-base text-stone-900' :
+          'text-sm text-stone-900'
         }`}>
           {sponsor.display_name}
         </p>
         {sponsor.message && (
-          <p className={`italic mt-0.5 truncate text-stone-500 ${
+          <p className={`italic mt-0.5 truncate text-stone-700 ${
             isDiamond ? 'text-sm' : 'text-xs'
           }`}>
             「{sponsor.message}」
@@ -114,7 +114,7 @@ export default function Sponsors() {
       <div className="relative px-4 pt-5 pb-2">
         <button
           onClick={() => navigate(-1)}
-          className="text-amber-900/70 text-sm mb-3 active:opacity-70 font-imperial font-bold relative z-10"
+          className="text-amber-900 text-sm mb-3 active:opacity-70 font-imperial font-bold relative z-10"
         >
           ‹ 返回
         </button>
@@ -139,19 +139,19 @@ export default function Sponsors() {
 
           {/* 標題 overlay 對齊圖中橢圓 */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <p className="font-imperial text-[9px] tracking-[0.6em] text-amber-900/55 mb-1">
+            <p className="font-imperial text-[9px] tracking-[0.6em] text-amber-900/85 mb-1">
               ─ 共 立 鴻 名 ─
             </p>
             <h1 className="font-imperial font-black text-5xl gold-text leading-none">
               感謝榜
             </h1>
-            <p className="font-imperial text-[11px] text-amber-900/65 mt-2">
+            <p className="font-imperial text-[11px] text-amber-900/95 mt-2">
               諸君 · 同立此榜
             </p>
           </div>
         </div>
 
-        <p className="text-center text-stone-600 text-xs font-imperial mt-3 leading-relaxed px-4">
+        <p className="text-center text-stone-800 text-xs font-imperial mt-3 leading-relaxed px-4">
           感謝以下諸君慷慨襄助<br />
           讓平台得以持續維運<br />
           為後來者點亮一盞燈
@@ -176,7 +176,7 @@ export default function Sponsors() {
                 <p className="font-imperial text-xl font-bold gold-text mb-2">
                   首位上榜 · 等你揭幕
                 </p>
-                <p className="text-sm text-stone-600 mb-5 leading-relaxed font-imperial">
+                <p className="text-sm text-stone-800 mb-5 leading-relaxed font-imperial">
                   凡有心人皆可上榜<br />
                   匿名或具名 一份心意便足
                 </p>
@@ -218,7 +218,7 @@ export default function Sponsors() {
                   <p className="font-imperial text-lg font-bold gold-text mb-1">
                     你也想留名此榜？
                   </p>
-                  <p className="text-xs text-stone-600 mb-4 leading-relaxed font-imperial">
+                  <p className="text-xs text-stone-800 mb-4 leading-relaxed font-imperial">
                     贊助任意金額皆可<br />
                     1-2 天內由站長親自將芳名敬錄此榜
                   </p>
@@ -230,7 +230,7 @@ export default function Sponsors() {
                   >
                     ☕ 用綠界贊助 ›
                   </a>
-                  <p className="text-[10px] text-stone-400 mt-3 font-imperial">
+                  <p className="text-[10px] text-stone-600 mt-3 font-imperial">
                     自訂顯示名稱 或 匿名
                   </p>
                 </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { usePlayerStore } from '../store/gameStore'
+import AvatarText from './AvatarText'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -130,7 +131,7 @@ export default function CommentSection({ targetId }) {
                 ) : (
                   <>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-base">{c.avatar}</span>
+                      <AvatarText avatar={c.avatar} size={18} className="text-base" />
                       <span className="text-xs font-bold text-gray-700">{c.name}</span>
                       <span className="text-xs text-gray-300 ml-auto">{timeAgo(c.createdAt)}</span>
                     </div>

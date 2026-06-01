@@ -8,6 +8,7 @@ import ShareChallengeButton from '../components/ShareChallengeButton'
 import { getExamConfig } from '../config/examRegistry'
 import { supabase } from '../lib/supabase'
 import { addWrong } from '../lib/wrongBank'
+import AvatarText from '../components/AvatarText'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const HISTORY_KEY = 'battle-history'
@@ -151,7 +152,7 @@ export default function Results() {
                 <span className="text-3xl w-8 text-center">{medals[i] || '🎖️'}</span>
                 <div className="flex-1">
                   <p className={`font-bold text-lg ${isMe ? 'text-medical-blue' : 'text-medical-dark'}`}>
-                    {p.avatar && <span className="mr-1">{p.avatar}</span>}
+                    <AvatarText avatar={p.avatar} size={22} className="mr-1" />
                     {p.name} {isMe && <span className="text-xs text-gray-400">(你)</span>}
                   </p>
                 </div>

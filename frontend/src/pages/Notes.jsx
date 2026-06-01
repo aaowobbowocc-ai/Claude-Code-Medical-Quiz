@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import CommentSection from '../components/CommentSection'
+import AvatarText from '../components/AvatarText'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -590,7 +591,7 @@ function CommunityCard({ note, exam, subject, onDelete, onLikeUpdate }) {
     <div className="w-full text-left bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
       <button onClick={() => setExpanded(!expanded)}
         className="w-full text-left px-4 py-3 flex items-center gap-3 active:scale-[0.98] transition-all">
-        <span className="text-lg">{note.avatar}</span>
+        <AvatarText avatar={note.avatar} size={20} className="text-lg" />
         <div className="flex-1 min-w-0">
           <p className="font-bold text-sm text-medical-dark truncate">{note.title}</p>
           <p className="text-xs text-gray-400">{note.name} · {timeAgo(note.createdAt)}</p>

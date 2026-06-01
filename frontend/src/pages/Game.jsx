@@ -8,6 +8,7 @@ import { getSubjectColor } from '../utils/subjectColors'
 import QuestionImages from '../components/QuestionImages'
 import HazardVideo from '../components/HazardVideo'
 import OptionContent from '../components/OptionContent'
+import AvatarText from '../components/AvatarText'
 
 const OPTION_COLORS = {
   A: { base: 'bg-blue-50  border-blue-300  text-blue-800',  active: 'bg-blue-500  border-blue-500  text-white' },
@@ -275,7 +276,7 @@ export default function Game() {
                 {extraPlayers.map(p => (
                   <div key={p.id}
                        className="text-[10px] text-white/50 text-center truncate max-w-[60px]">
-                    {p.avatar} {p.score}
+                    <AvatarText avatar={p.avatar} size={12} /> {p.score}
                   </div>
                 ))}
               </div>

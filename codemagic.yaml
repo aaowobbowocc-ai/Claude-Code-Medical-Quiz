@@ -1,10 +1,11 @@
-# Codemagic CI/CD — iOS build pipeline for Capacitor + Vite
+# Codemagic CI/CD — Capacitor + Vite (iOS + Android)
 #
-# 目前用途：驗證 iOS build pipeline 可走通（unsigned archive）。
-# 確認能 build 成功後再付 Apple Developer $99，加上簽名 + TestFlight 上傳。
+# Workflows:
+#   ios-unsigned    — iOS .xcarchive (unsigned)，驗 iOS pipeline + 之後加簽名上 TestFlight
+#   android-aab     — Android .aab (unsigned)，丟 Play Console 上架/封閉測試
 #
-# 觸發：手動觸發（Codemagic Dashboard 點 "Start new build"）。
-#       之後可改 trigger: push + branch_patterns 自動跑。
+# 觸發：push to master 自動跑 (Codemagic 預設行為)。
+#       手動可在 Dashboard "Start new build" 選 workflow。
 
 workflows:
   ios-unsigned:
@@ -71,6 +72,56 @@ workflows:
     artifacts:
       - $CM_BUILD_DIR/build/App.xcarchive
       - $CM_BUILD_DIR/build/*.log
+
+    publishing:
+      email:
+        recipients:
+          - aaowobbowocc@gmail.com
+        notify:
+          success: true
+          failure: true
+
+  # ════════════════════════════════════════════════════════════════════
+  # Android AAB — 給 Play Console 內部測試 / 封閉測試 / 正式版上傳
+  # ════════════════════════════════════════════════════════════════════
+  android-aab:
+    name: Android Unsigned AAB (validation)
+    instance_type: linux_x2
+    max_build_duration: 60
+    working_directory: frontend
+    environment:
+      node: 22.14.0
+      # Capacitor 7 要 Java 21 (capacitor.build.gradle sourceCompatibility 21)
+      java: 21
+    cache:
+      cache_paths:
+        - $HOME/.npm
+        - frontend/node_modules
+        - $HOME/.gradle/caches
+        - $HOME/.gradle/wrapper
+        - frontend/android/.gradle
+    scripts:
+      - name: Install npm dependencies
+        script: |
+          npm ci --no-audit --no-fund
+
+      - name: Build web assets (vite)
+        script: |
+          npm run build
+
+      - name: Sync Capacitor → Android
+        script: |
+          npx cap sync android
+
+      - name: Build unsigned release AAB
+        script: |
+          cd android
+          chmod +x ./gradlew
+          ./gradlew bundleRelease --no-daemon --stacktrace
+
+    artifacts:
+      - frontend/android/app/build/outputs/bundle/release/*.aab
+      - frontend/android/app/build/outputs/apk/release/*.apk
 
     publishing:
       email:

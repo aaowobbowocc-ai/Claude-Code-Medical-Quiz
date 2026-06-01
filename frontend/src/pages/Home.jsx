@@ -58,7 +58,7 @@ function ExamPickerContent({ exam, setExam, closeSheet }) {
         <h2 className="text-xl font-bold text-medical-dark text-center mb-1">選擇身分領域</h2>
         <p className="text-center text-gray-400 text-sm mb-4">先選你的備考身分，再挑具體考試</p>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {categories.map(cat => {
             const meta = getCategoryMeta(cat.id) || cat
             const isEmpty = meta.examCount === 0
@@ -116,7 +116,7 @@ function ExamPickerContent({ exam, setExam, closeSheet }) {
           此分類題庫拓荒中，請稍候
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-2.5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5">
           {exams.map(e => (
             <button key={e.id}
               onClick={() => {
@@ -669,7 +669,7 @@ export default function Home() {
             <div className="flex-1 h-px bg-gray-200" />
           </div>
 
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
             {[['📝','模擬考','歷屆/隨機模擬','/mock-exam'],
               ['📒','精華筆記',`${currentExam.papers?.length || 2}卷高頻考點`,'/notes'],
               ['🎯','自主練習','練習含AI對手','/practice'],

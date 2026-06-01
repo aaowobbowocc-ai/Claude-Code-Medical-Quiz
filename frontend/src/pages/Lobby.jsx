@@ -273,7 +273,7 @@ export default function Lobby() {
 
         {/* Stage grid */}
         {showStages && isHost && (
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
             {STAGES.map(s => (
               <button key={s.id} onClick={() => handleStageChange(s.id)}
                       className={`flex items-center gap-2.5 px-3 py-3 rounded-xl text-sm font-medium transition-all active:scale-95

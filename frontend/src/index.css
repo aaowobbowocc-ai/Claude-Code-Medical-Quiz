@@ -20,6 +20,9 @@ html, body {
 
 .phone-frame {
   width: 100%;
+  /* Mobile-first: 手機 430px;平板/桌機漸進放寬避免左右大片空白。
+     用 CSS clamp() 取代 media query — 隨 viewport 平滑縮放,
+     不會在斷點突然變寬。基準: 100vw, 上限隨螢幕變大。 */
   max-width: 430px;
   min-height: 100dvh;
   display: flex;
@@ -27,6 +30,21 @@ html, body {
   background: #F0F4F8;
   position: relative;
   overflow-x: hidden;
+}
+
+/* 平板直立 (sm/md): 拓寬到 640-720px */
+@media (min-width: 640px) {
+  .phone-frame { max-width: 600px; }
+}
+@media (min-width: 768px) {
+  .phone-frame { max-width: 720px; }
+}
+/* 平板橫向 / 桌機: 拓寬到 960px,夠寬讓 2-col grid 自然 */
+@media (min-width: 1024px) {
+  .phone-frame { max-width: 960px; }
+}
+@media (min-width: 1280px) {
+  .phone-frame { max-width: 1100px; }
 }
 
 .sheet-overlay {
@@ -45,6 +63,17 @@ html, body {
   overflow-y: auto;
   overscroll-behavior: contain;
   animation: slideUp 0.28s cubic-bezier(0.32,0.72,0,1);
+}
+
+/* sheet 也跟著放寬 (略小於 phone-frame,維持 modal 感) */
+@media (min-width: 640px) {
+  .sheet-panel { max-width: 560px; }
+}
+@media (min-width: 768px) {
+  .sheet-panel { max-width: 640px; }
+}
+@media (min-width: 1024px) {
+  .sheet-panel { max-width: 720px; }
 }
 
 @keyframes slideUp {

@@ -49,33 +49,27 @@ workflows:
         script: |
           npx cap sync ios
 
-      - name: Pin GoogleUserMessagingPlatform Pod to v2.x
+      - name: Strip CapacitorCommunityAdmob from iOS Podfile
         script: |
-          # @capacitor-community/admob ^6.2.0 ConsentExecutor.swift uses legacy
-          # UMP* class names (UMPConsentStatus / UMPConsentInformation / etc.).
-          # CocoaPods pulls latest GoogleUserMessagingPlatform v3+ which renamed
-          # everything (drop UMP prefix). Pin to 2.7.x to keep compatibility
-          # until we upgrade Capacitor major to 7.
-          #
-          # 用 Ruby 精準匹配 target block 內的 `capacitor_pods` 呼叫 (有縮排),
-          # 跳過頂層的 `def capacitor_pods` 函式定義 (沒縮排),避免把 pod 加進
-          # 函式定義裡造成依賴解析錯亂。
+          # @capacitor-community/admob ^6.2.0 內部 GMA SDK 升到 UMP 3.x 但
+          # ConsentExecutor.swift 還用舊 UMP* API → CocoaPods 無解。
+          # 在升 Capacitor 7 之前,iOS build 完全跳過 admob plugin
+          # (Android build 不受影響, iOS Phase 1 不靠 admob 賺錢)。
+          # 同時刪除 Podfile.lock 強制重新解析。
           ruby <<'RUBY'
           path = 'ios/App/Podfile'
           src = File.read(path)
-          # 匹配「至少 1 空白 + capacitor_pods + 行尾」,保留原縮排
-          patched = src.sub(
-            /^(\s+)capacitor_pods\s*$/,
-            "\\1capacitor_pods\n\\1pod 'GoogleUserMessagingPlatform', '~> 2.7.0'"
-          )
+          # 移除 CapacitorCommunityAdmob 那行 (含尾巴 newline)
+          patched = src.gsub(/^\s*pod\s+['"]CapacitorCommunityAdmob['"].*\n/, '')
           if patched == src
-            warn "[pin-ump] could not find indented capacitor_pods call — Podfile structure changed?"
+            warn "[strip-admob] CapacitorCommunityAdmob line not found — Podfile structure changed?"
             exit 1
           end
           File.write(path, patched)
-          puts "--- Patched Podfile ---"
+          puts "--- Patched Podfile (admob stripped) ---"
           puts patched
           RUBY
+          rm -f ios/App/Podfile.lock
 
       - name: Install CocoaPods
         script: |

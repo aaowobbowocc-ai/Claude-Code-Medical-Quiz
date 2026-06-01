@@ -71022,12 +71022,13 @@
       "options": {
         "A": "Ketamine",
         "B": "Thiopental",
-        "C": "Propofol",
+        "C": "Nitrous oxide",
         "D": "Halothane"
       },
-      "answer": "A",
-      "explanation": "",
-      "incomplete": false
+      "answer": "B",
+      "explanation": "Thiopental (barbiturate) 強烈抑制呼吸中樞並顯著降低對二氧化碳的敏感性。Ketamine (A) 反而是少數能保留呼吸驅力的全身麻醉劑,常用於不能讓使用者暫停呼吸的情境。Nitrous oxide (C) 對呼吸抑制相對輕微,Halothane (D) 為吸入性麻醉劑,呼吸抑制較弱於 thiopental。原 OCR 將 Nitrous oxide 誤判為 Propofol,且答案 A 標錯,已修正。",
+      "incomplete": false,
+      "disputed": true
     },
     {
       "id": 1150203451,

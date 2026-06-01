@@ -34,7 +34,8 @@ workflows:
       - name: Add iOS platform (if missing)
         script: |
           if [ ! -d "ios" ]; then
-            echo "iOS platform not found, adding…"
+            echo "iOS platform not found, installing @capacitor/ios and adding…"
+            npm install @capacitor/ios@^6.2.1 --no-save --no-audit --no-fund
             npx cap add ios
           else
             echo "iOS platform already exists"

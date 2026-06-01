@@ -19,6 +19,7 @@ import { FEATURE_FRAMES, FEATURE_AVATARS, FEATURE_AI_UNLIMITED, FEATURE_SPONSORS
 const SHOW_LUCKY_DRAW = false
 import WelcomeTour, { shouldShowWelcomeTour } from '../components/WelcomeTour'
 import CoinShopSheet from '../components/CoinShopSheet'
+import AvatarText from '../components/AvatarText'
 import { supabase, linkOrSignInGoogle, switchGoogleAccount, getLinkedIdentity } from '../lib/supabase'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
@@ -815,7 +816,7 @@ export default function Home() {
           {/* Avatar — tap to edit name */}
           <button onClick={() => { setInputName(name); setSheet('editname') }}
                   className="relative w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center text-3xl active:scale-90 transition-transform shadow-lg">
-            {av}
+            <AvatarText avatar={av} size={40} className="text-3xl" />
             <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-white/20 border border-white/30 flex items-center justify-center">
               <span className="text-white text-xs">✎</span>
             </div>
@@ -825,7 +826,7 @@ export default function Home() {
         {/* Profile card */}
         <div className="relative bg-white/10 border border-white/15 rounded-2xl px-4 py-3.5">
           <div className="flex items-center gap-3 mb-2.5">
-            <span className="text-3xl">{av}</span>
+            <AvatarText avatar={av} size={32} className="text-3xl" />
             <div className="flex-1">
               <p className="text-white font-bold text-xl leading-tight">{name}</p>
               <p className="text-white/40 text-xs">Lv.{level} {getLevelTitle(level).icon} {getLevelTitle(level).title}</p>

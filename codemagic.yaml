@@ -14,9 +14,9 @@ workflows:
     working_directory: frontend
     environment:
       node: 22.14.0
-      # Pin Xcode 16.4：Codemagic 預設用最新（26.x）會跑 Swift 6 嚴格 concurrency,
-      # @capacitor-community/admob ^6.2.0 還是 Swift 5 程式碼，編不過。
-      # 16.4 是 admob 已驗過的最後一個穩定 Xcode (iOS 18 SDK)。
+      # Pin Xcode 16.4：Capacitor 7 + admob 7.2 配 iOS 18 SDK 穩定組合,
+      # 不用 Xcode 26 是因為它預設啟 Swift 6 嚴格 concurrency,
+      # 第三方 plugin 還沒全部跟上。
       xcode: 16.4
       vars:
         XCODE_WORKSPACE: "ios/App/App.xcworkspace"
@@ -38,8 +38,7 @@ workflows:
       - name: Add iOS platform (if missing)
         script: |
           if [ ! -d "ios" ]; then
-            echo "iOS platform not found, installing @capacitor/ios and adding…"
-            npm install @capacitor/ios@^6.2.1 --no-save --no-audit --no-fund
+            echo "iOS platform not found, adding…"
             npx cap add ios
           else
             echo "iOS platform already exists"
@@ -49,31 +48,10 @@ workflows:
         script: |
           npx cap sync ios
 
-      - name: Strip CapacitorCommunityAdmob from iOS Podfile
-        script: |
-          # @capacitor-community/admob ^6.2.0 內部 GMA SDK 升到 UMP 3.x 但
-          # ConsentExecutor.swift 還用舊 UMP* API → CocoaPods 無解。
-          # 在升 Capacitor 7 之前,iOS build 完全跳過 admob plugin
-          # (Android build 不受影響, iOS Phase 1 不靠 admob 賺錢)。
-          # 同時刪除 Podfile.lock 強制重新解析。
-          ruby <<'RUBY'
-          path = 'ios/App/Podfile'
-          src = File.read(path)
-          # 移除 CapacitorCommunityAdmob 那行 (含尾巴 newline)
-          patched = src.gsub(/^\s*pod\s+['"]CapacitorCommunityAdmob['"].*\n/, '')
-          if patched == src
-            warn "[strip-admob] CapacitorCommunityAdmob line not found — Podfile structure changed?"
-            exit 1
-          end
-          File.write(path, patched)
-          puts "--- Patched Podfile (admob stripped) ---"
-          puts patched
-          RUBY
-          rm -f ios/App/Podfile.lock
-
       - name: Install CocoaPods
         script: |
           cd ios/App
+          # 確保拿最新 podspec (Capacitor 7 + admob 7 配套已自帶相容 UMP 3.x)
           pod install --repo-update
 
       - name: Build unsigned iOS archive

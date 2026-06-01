@@ -17,6 +17,11 @@
   font-family: 'Noto Serif TC', ui-serif, Georgia, 'DFKai-SB', 'BiauKai', serif;
 }
 
+/* Noto Serif TC 在米紙底上 weight 400 太細 → sponsors-page 內字體最低拉 500 */
+.sponsors-page .font-imperial {
+  font-weight: 500;
+}
+
 /* 楷書 / 標題用 */
 .font-imperial {
   font-family: 'Noto Serif TC', ui-serif, Georgia, 'DFKai-SB', 'BiauKai', serif;

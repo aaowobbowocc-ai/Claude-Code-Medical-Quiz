@@ -38,6 +38,7 @@ const Notes          = lazy(() => import('./pages/Notes'))
 const Privacy        = lazy(() => import('./pages/Privacy'))
 const Terms          = lazy(() => import('./pages/Terms'))
 const Contact        = lazy(() => import('./pages/Contact'))
+const AccountDeletion = lazy(() => import('./pages/AccountDeletion'))
 const Changelog      = lazy(() => import('./pages/Changelog'))
 const Coverage       = lazy(() => import('./pages/Coverage'))
 const Guides         = lazy(() => import('./pages/Guides'))
@@ -269,6 +270,7 @@ function AppRoutes() {
           <Route path="/privacy"    element={<Privacy />} />
           <Route path="/tos"        element={<Terms />} />
           <Route path="/contact"    element={<Contact />} />
+          <Route path="/account-deletion" element={<AccountDeletion />} />
           <Route path="/changelog"  element={<Changelog />} />
           <Route path="/coverage"   element={<Coverage />} />
           <Route path="/search"     element={<Search />} />

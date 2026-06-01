@@ -14,6 +14,10 @@ workflows:
     working_directory: frontend
     environment:
       node: 22.14.0
+      # Pin Xcode 16.4：Codemagic 預設用最新（26.x）會跑 Swift 6 嚴格 concurrency,
+      # @capacitor-community/admob ^6.2.0 還是 Swift 5 程式碼，編不過。
+      # 16.4 是 admob 已驗過的最後一個穩定 Xcode (iOS 18 SDK)。
+      xcode: 16.4
       vars:
         XCODE_WORKSPACE: "ios/App/App.xcworkspace"
         XCODE_SCHEME: "App"

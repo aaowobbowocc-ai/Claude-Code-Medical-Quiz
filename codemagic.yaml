@@ -49,6 +49,18 @@ workflows:
         script: |
           npx cap sync ios
 
+      - name: Pin GoogleUserMessagingPlatform Pod to v2.x
+        script: |
+          # @capacitor-community/admob ^6.2.0 ConsentExecutor.swift uses legacy
+          # UMP* class names (UMPConsentStatus / UMPConsentInformation / etc.).
+          # CocoaPods pulls latest GoogleUserMessagingPlatform v3+ which renamed
+          # everything (drop UMP prefix). Pin to 2.7.x to keep compatibility
+          # until we upgrade Capacitor major to 7.
+          sed -i.bak "/capacitor_pods/a\\
+            pod 'GoogleUserMessagingPlatform', '~> 2.7.0'
+          " ios/App/Podfile
+          cat ios/App/Podfile
+
       - name: Install CocoaPods
         script: |
           cd ios/App

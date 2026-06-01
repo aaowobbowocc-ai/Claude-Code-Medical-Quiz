@@ -899,6 +899,9 @@ mockScores.registerRoutes(app);
 const monetization = require('./monetization');
 monetization.registerMonetizationRoutes(app);
 
+const account = require('./account');
+account.registerAccountRoutes(app);
+
 // ── Coins delta endpoint ─────────────────────────────────────────────────
 // Accepts { delta: number } via JWT-authenticated POST.
 // Never trusts a client-supplied absolute coins value — only applies a delta

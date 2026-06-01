@@ -447,6 +447,36 @@ export default function Home() {
     // On switching, browser redirects — no UI to update
   }
 
+  // ─── Delete account (GDPR / Play Store 政策要求) ──────────────────────
+  const [deleteOpen, setDeleteOpen] = useState(false)
+  const [deleteText, setDeleteText] = useState('')
+  const [deleteBusy, setDeleteBusy] = useState(false)
+  const [deleteMsg, setDeleteMsg] = useState('')
+  const handleDeleteAccount = async () => {
+    if (deleteText !== '刪除') { setDeleteMsg('請輸入「刪除」二字確認'); return }
+    setDeleteBusy(true); setDeleteMsg('')
+    try {
+      const { data: { session } } = await supabase.auth.getSession()
+      const token = session?.access_token
+      if (!token) { setDeleteMsg('未登入，無法刪除'); setDeleteBusy(false); return }
+      const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+      const r = await fetch(`${BACKEND}/api/account/delete`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      const j = await r.json().catch(() => ({}))
+      if (!r.ok && !j.ok) { setDeleteMsg('刪除失敗：' + (j.error || r.statusText)); setDeleteBusy(false); return }
+      // 成功：登出 + 清 localStorage + 跳首頁
+      await supabase.auth.signOut().catch(() => {})
+      try { localStorage.clear() } catch {}
+      try { sessionStorage.clear() } catch {}
+      window.location.replace('/')
+    } catch (e) {
+      setDeleteMsg('刪除失敗：' + (e.message || '網路錯誤'))
+      setDeleteBusy(false)
+    }
+  }
+
   useEffect(() => {
     const s = socket
     const onErr = ({ message }) => {
@@ -1051,6 +1081,51 @@ export default function Home() {
                 </>
               )}
               {authMsg && <p className="text-xs text-red-500 text-center mt-2">{authMsg}</p>}
+
+              {/* ── 刪除帳號 (GDPR / Play 政策) ─────────────────────── */}
+              {linkedIdentity && (
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  {!deleteOpen ? (
+                    <button
+                      onClick={() => { setDeleteOpen(true); setDeleteText(''); setDeleteMsg('') }}
+                      className="w-full text-[11px] text-gray-400 underline active:text-red-500 py-1">
+                      刪除帳號
+                    </button>
+                  ) : (
+                    <div className="bg-red-50 border border-red-200 rounded-2xl p-4">
+                      <p className="text-sm font-bold text-red-700 mb-2">⚠️ 永久刪除帳號</p>
+                      <p className="text-xs text-red-600 mb-3 leading-relaxed">
+                        此動作不可復原：你的個人資料、金幣、頭像、徽章、解鎖紀錄等都會被清除。
+                        排行榜分數將匿名保留。
+                      </p>
+                      <p className="text-xs text-gray-600 mb-2">請輸入「<b>刪除</b>」二字確認：</p>
+                      <input
+                        type="text"
+                        value={deleteText}
+                        onChange={e => { setDeleteText(e.target.value); setDeleteMsg('') }}
+                        className="w-full border-2 border-red-300 rounded-xl px-3 py-2 text-sm outline-none focus:border-red-500 mb-2"
+                        placeholder="刪除"
+                        disabled={deleteBusy}
+                      />
+                      {deleteMsg && <p className="text-xs text-red-600 mb-2">{deleteMsg}</p>}
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => { setDeleteOpen(false); setDeleteText(''); setDeleteMsg('') }}
+                          disabled={deleteBusy}
+                          className="flex-1 py-2 rounded-xl text-sm bg-white border border-gray-300 text-gray-600 active:scale-95 disabled:opacity-50">
+                          取消
+                        </button>
+                        <button
+                          onClick={handleDeleteAccount}
+                          disabled={deleteBusy || deleteText !== '刪除'}
+                          className="flex-1 py-2 rounded-xl text-sm bg-red-600 text-white font-bold active:scale-95 disabled:opacity-50">
+                          {deleteBusy ? '刪除中…' : '永久刪除'}
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
         </Sheet>

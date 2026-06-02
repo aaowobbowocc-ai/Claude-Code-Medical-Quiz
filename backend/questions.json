@@ -71284,14 +71284,15 @@
       "number": 76,
       "question": "解剖病例在基底核發現Alzheimer 第二型星狀細胞，病人多半是罹患了：",
       "options": {
-        "A": "威爾森氏病",
-        "B": "Alzheimer",
-        "C": "氏病",
-        "D": "腦脫疝"
+        "A": "Alzheimer 氏病",
+        "B": "腦脫疝",
+        "C": "肝性昏迷",
+        "D": "Prion 引發的疾病"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": false
+      "explanation": "Alzheimer type II astrocyte (大空泡核 + 顯著核仁) 是慢性肝衰竭/高血氨症的特徵性病變,反映 chronic hepatic encephalopathy。雖然以 Alzheimer 命名 (同一位 Alois Alzheimer 同時描述了失智症與此星狀細胞變化),但與失智 Alzheimer 病無直接病理關聯。原 OCR 把 4 個選項打散成 5 段、誤建「威爾森氏病」選項,已對證考選部原 PDF + Yamol 修復。",
+      "incomplete": false,
+      "disputed": true
     },
     {
       "id": 1150203464,
@@ -71406,13 +71407,14 @@
       "question": "一名25 歲女性，抱怨最近進行性行為時會有疼痛的情形發生。檢查發現右側小陰唇的後側方有局部紅腫的現象，且在觸診時有明顯壓痛情形。手術切除了一個3 公分大小、內部充滿膿液的囊腫。下列何者是最可能的診斷？",
       "options": {
         "A": "表皮囊腫",
-        "B": "Bartholin’s gland cyst",
-        "C": "斯基恩氏腺囊腫",
+        "B": "Bartholin's gland cyst",
+        "C": "乳頭狀汗腺腺瘤 (Papillary hidradenoma)",
         "D": "Gartner duct cyst"
       },
-      "answer": "A",
-      "explanation": "",
-      "incomplete": false
+      "answer": "B",
+      "explanation": "巴氏腺 (Bartholin's gland) 位於陰道口後外側 (4 與 8 點鐘方向),正對應「右側小陰唇後側方」病灶位置。性交疼痛 + 觸痛 + 內含膿液的囊腫 = 經典 Bartholin's gland cyst/abscess。原 OCR 把 C 選項誤判為「斯基恩氏腺囊腫」(Skene's gland 位於尿道周圍,前側,不在小陰唇後側方),已對證考選部原 PDF 改為「乳頭狀汗腺腺瘤」(Papillary hidradenoma)。原答案 A (表皮囊腫) 為錯誤標註,已修正為 B。",
+      "incomplete": false,
+      "disputed": true
     },
     {
       "id": 1150203470,

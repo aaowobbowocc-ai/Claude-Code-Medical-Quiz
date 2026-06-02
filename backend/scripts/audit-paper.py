@@ -21,7 +21,16 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent.parent
 TMP = BASE / '_tmp' / 'audit-sweep'
-BULLET_RE = re.compile('[-]')
+# 考選部 PDF 的 4 個選項 bullet 是 PUA 字元 U+E18C~U+E18F（A/B/C/D 各一）。
+# 用顯式跳脫避免被 cp950 等編碼存檔時吃掉（曾退化成只剩 hyphen 導致 parse 全失敗）。
+BULLET_RE = re.compile('[\ue18c-\ue18f]')
+
+# Windows cp950 console 無法輸出 ❌/⚠ 等字元，強制 UTF-8 避免 print 崩潰。
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
 
 
 def norm(s):

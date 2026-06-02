@@ -119,18 +119,44 @@ def realign(year, session, code, data, apply=False):
         t_used[ti] = True; p_used[pi] = True
         assign[ti] = (pi, sc)
 
-    # 補空位：PDF 某題解析失敗 → 該官方 (subject, number) 沒有 target。
-    # 把「多餘未指派」的 pool 題，依現有 subject 填進該科目唯一缺號的空位。
+    # 第二趟：用「題幹相似度」救回選項被 OCR 弄爛的孤兒（跨科目）。
+    # 官方 PDF 即使選項解析失敗，題幹通常正常 → 仍可建立 target stem。
+    STEM_TH = 0.6
+    stem_targets = {}  # (subject, number) -> stem
+    for s_param, subj in [('0101', '醫學(一)'), ('0102', '醫學(二)')]:
+        for n, pq in fetch_and_parse(code, s_param).items():
+            stem_targets[(subj, n)] = pq.get('q', '')
     assigned_slots = {(targets[ti]['subject'], targets[ti]['number']) for ti in assign}
-    extra = {}  # pi -> (subject, number)  人工補的空位
+    extra = {}  # pi -> (subject, number)
+    miss_slots = [k for k in stem_targets if k not in assigned_slots]
+    leftover = [pi for pi in range(len(pool)) if not p_used[pi]]
+    spairs = []
+    for k in miss_slots:
+        st = norm(stem_targets[k])
+        if not st:
+            continue
+        for pi in leftover:
+            ss = SequenceMatcher(None, st, norm(pool[pi].get('question', ''))).ratio()
+            if ss >= STEM_TH:
+                spairs.append((ss, k, pi))
+    spairs.sort(reverse=True)
+    slot_used = set(); pl_used = set()
+    for ss, k, pi in spairs:
+        if k in slot_used or pi in pl_used:
+            continue
+        slot_used.add(k); pl_used.add(pi); p_used[pi] = True
+        extra[pi] = k
+
+    # 第三趟：同科目唯一空位填補（救官方+JSON 都解析失敗、stem 也對不上的單一殘餘，
+    # 如單字選項題 #23）。僅在該科目剛好 1 缺槽對 1 殘餘時才填。
+    filled_slots = assigned_slots | set(extra.values())
     for subj in ('醫學(一)', '醫學(二)'):
-        miss = [n for n in range(1, 101) if (subj, n) not in assigned_slots]
-        leftover = [pi for pi in range(len(pool))
-                    if not p_used[pi] and pool[pi].get('subject') == subj]
-        if len(miss) == len(leftover) and miss:
-            for n, pi in zip(miss, leftover):
-                p_used[pi] = True
-                extra[pi] = (subj, n)
+        miss = [(subj, n) for n in range(1, 101) if (subj, n) not in filled_slots]
+        left = [pi for pi in range(len(pool)) if not p_used[pi] and pool[pi].get('subject') == subj]
+        if len(miss) == 1 and len(left) == 1:
+            p_used[left[0]] = True
+            extra[left[0]] = miss[0]
+            filled_slots.add(miss[0])
     self_extra = extra
 
     hi = sum(1 for ti, (pi, sc) in assign.items() if sc >= THRESH)

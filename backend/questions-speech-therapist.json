@@ -10,12 +10,12 @@
     "paper_id": "paper3",
     "stage_id": 0,
     "number": 1,
-    "question": "媽媽告訴兒童:「幫媽媽把奇異果拿來。」兒童看看桌上有他認識的蘋果、芒果和另一種不知道名",
+    "question": "媽媽告訴兒童：「幫媽媽把奇異果拿來。」兒童看看桌上有他認識的蘋果、芒果和另一種不知道名字，看起來毛毛的水果，兒童想這個毛毛的東西一定就是奇異果，就將它拿給媽媽。請問該兒童使用了何種語言學習策略？",
     "options": {
-      "A": "字,看起來毛毛的水果,兒童想這個毛毛的東西一定就是奇異果,就將它拿給媽媽。請問該兒童使",
-      "B": "用了何種語言學習策略?",
-      "C": "使用立即情境線索",
-      "D": "快速連配策略(fast mapping) 假設測試(hypothesis testing) 語意促發(semantic bootstrapping)"
+      "A": "使用立即情境線索",
+      "B": "快速連配策略（fast mapping）",
+      "C": "假設測試（hypothesis testing）",
+      "D": "語意促發（semantic bootstrapping）"
     },
     "answer": "B",
     "explanation": "",
@@ -33,12 +33,12 @@
     "paper_id": "paper3",
     "stage_id": 0,
     "number": 2,
-    "question": "以下那些是說話者對話過程中所呈現的「副語言訊息」(paralinguistic codes):1臉部表情 2說",
+    "question": "以下那些是說話者對話過程中所呈現的「副語言訊息」（paralinguistic codes）：①臉部表情 ②說話速度與節奏 ③用字遣詞 ④肢體動作 ⑤句型 ⑥說話時的抑揚頓挫",
     "options": {
-      "A": "①③④",
-      "B": "②⑥",
-      "C": "②③④",
-      "D": "①②④"
+      "A": "①③⑤",
+      "B": "②④⑥",
+      "C": "①④",
+      "D": "②⑥"
     },
     "answer": "D",
     "explanation": "",
@@ -26441,7 +26441,9 @@
     "explanation": "",
     "exam_type": "special_high",
     "image_url": "/question-images/speech-therapist_101070_q33_patrol.webp",
-    "_legacy_id": 30000938
+    "_legacy_id": 30000938,
+    "incomplete": true,
+    "gap_reason": "missing_image_dep"
   },
   {
     "id": "speech_101070_p3_34",
@@ -27881,12 +27883,12 @@
     "paper_id": "paper4",
     "stage_id": 0,
     "number": 16,
-    "question": "學者Verdolini 提出的Resonant voice therapy(RVT)的治療重點包括:1聽覺訓練 2口腔共鳴",
+    "question": "學者Verdolini 提出的Resonant voice therapy（RVT）的治療重點包括：①聽覺訓練 ②口腔共鳴 ③鼻音共鳴 ④神經與認知結合，請問下列選項何者正確？",
     "options": {
-      "A": "3鼻音共鳴 4神經與認知結合,請問下列選項何者正確?",
-      "B": "123",
-      "C": "234",
-      "D": "134 124"
+      "A": "①②③",
+      "B": "②③④",
+      "C": "①③④",
+      "D": "①②④"
     },
     "answer": "D",
     "explanation": "",
@@ -32834,14 +32836,14 @@
     "paper_id": "paper6",
     "stage_id": 0,
     "number": 72,
-    "question": "語言治療師進入學童上課的教室,與教師一同觀察、評估學童的語言能力,以及在課堂上的學習狀",
+    "question": "語言治療師進入學童上課的教室，與教師一同觀察、評估學童的語言能力，以及在課堂上的學習狀況，並與老師討論可行的教學策略，同時給予示範教學，但之後仍由老師執行教學。請問這是屬於那一種服務模式？",
     "options": {
-      "A": "況,並與老師討論可行的教學策略,同時給予示範教學,但之後仍由老師執行教學。請問這是屬於",
-      "B": "那一種服務模式?",
-      "C": "教室本位直接服務模式",
-      "D": "教室本位合作模式 教室本位專家諮詢模式 教室本位協同教學"
+      "A": "教室本位直接服務模式",
+      "B": "教室本位合作模式",
+      "C": "教室本位專家諮詢模式",
+      "D": "教室本位協同教學"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": "",
     "exam_type": "special_high",
     "_legacy_id": 30001358
@@ -80468,7 +80470,9 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30001382
+    "_legacy_id": 30001382,
+    "incomplete": true,
+    "gap_reason": "missing_image_dep"
   },
   {
     "id": "speech_104100_p3_16",
@@ -92388,7 +92392,9 @@
     },
     "answer": "A",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "incomplete": true,
+    "gap_reason": "missing_image_dep"
   },
   {
     "id": "speech_105090_s0801_64",
@@ -92409,7 +92415,9 @@
     },
     "answer": "D",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "incomplete": true,
+    "gap_reason": "missing_image_dep"
   },
   {
     "id": "speech_105090_s0801_65",
@@ -135705,7 +135713,9 @@
     },
     "answer": "D",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "incomplete": true,
+    "gap_reason": "missing_image_dep"
   },
   {
     "id": "speech_111110_s0601_6",

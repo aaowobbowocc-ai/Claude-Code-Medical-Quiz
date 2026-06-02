@@ -1,11 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
+import { isNativeApp } from '../lib/admob'
 
 const AD_SLOT = '1093265050'
 const AD_CLIENT = 'ca-pub-3134321405509741'
 
 // Pages where fixed bottom ad should NOT show
 const HIDDEN_ROUTES = ['/game', '/lobby', '/board', '/privacy', '/tos', '/contact', '/practice', '/mock-exam', '/weakness', '/sponsors']
+
+// Native App (Android/iOS) 完全不顯示這個橫幅：
+//  1. ECPay 外部金流連結違反 Google Play Payments Policy
+//  2. AdSense fallback 本身在 native WebView 無法載入
+//  3. Native 走 AdMob Rewarded（在 RewardAdSheet）取代廣告變現
+const IS_NATIVE = isNativeApp()
 
 export default function FixedBottomAd() {
   const { pathname } = useLocation()
@@ -16,7 +23,7 @@ export default function FixedBottomAd() {
   const adRef = useRef(null)
   const pushedRef = useRef(false)
 
-  const hidden = HIDDEN_ROUTES.includes(pathname)
+  const hidden = IS_NATIVE || HIDDEN_ROUTES.includes(pathname)
 
   useEffect(() => {
     if (hidden || adFailed || !AD_CLIENT || pushedRef.current) return

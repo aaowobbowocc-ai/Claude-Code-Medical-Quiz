@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { isNativeApp } from '../lib/admob'
 
 const AD_SLOT = '1093265050'
 const AD_CLIENT = 'ca-pub-3134321405509741'
+
+// Native App 不顯示：贊助按鈕含外部金流字眼，Play / App Store 政策地雷。
+const IS_NATIVE = isNativeApp()
 
 export default function SmartBanner() {
   const [dismissed, setDismissed] = useState(false)
@@ -41,7 +45,7 @@ export default function SmartBanner() {
     return () => { clearTimeout(timer); clearTimeout(check) }
   }, [adFailed])
 
-  if (dismissed) return null
+  if (dismissed || IS_NATIVE) return null
 
   return (
     <div className="relative w-full mt-4 mb-2">

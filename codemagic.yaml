@@ -22,6 +22,9 @@ workflows:
       vars:
         XCODE_WORKSPACE: "ios/App/App.xcworkspace"
         XCODE_SCHEME: "App"
+        # Vite 在 build 時把 import.meta.env.VITE_* inline 進 bundle。
+        # 不設這個 App 內所有 BACKEND 呼叫都會打 localhost:3001 → 全炸。
+        VITE_BACKEND_URL: "https://api.examking.tw"
     cache:
       cache_paths:
         - $HOME/.npm
@@ -97,6 +100,10 @@ workflows:
       java: 21
       android_signing:
         - examking_keystore
+      vars:
+        # Vite 在 build 時把 import.meta.env.VITE_* inline 進 bundle。
+        # 不設這個 App 內所有 BACKEND 呼叫都會打 localhost:3001 → 全炸。
+        VITE_BACKEND_URL: "https://api.examking.tw"
     cache:
       cache_paths:
         - $HOME/.npm

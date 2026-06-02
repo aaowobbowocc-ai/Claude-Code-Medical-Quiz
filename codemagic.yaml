@@ -117,15 +117,16 @@ workflows:
         script: |
           npx cap sync android
 
-      - name: Build unsigned release AAB
+      - name: Build signed release AAB
         script: |
           cd android
           chmod +x ./gradlew
           ./gradlew bundleRelease --no-daemon --stacktrace
 
     artifacts:
-      - frontend/android/app/build/outputs/bundle/release/*.aab
-      - frontend/android/app/build/outputs/apk/release/*.apk
+      # 路徑相對 working_directory (frontend/)，不要再加 frontend/ 前綴
+      - android/app/build/outputs/bundle/release/*.aab
+      - android/app/build/outputs/apk/release/*.apk
 
     publishing:
       email:

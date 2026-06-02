@@ -85,7 +85,7 @@ workflows:
   # Android AAB — 給 Play Console 內部測試 / 封閉測試 / 正式版上傳
   # ════════════════════════════════════════════════════════════════════
   android-aab:
-    name: Android Unsigned AAB (validation)
+    name: Android Signed AAB (Play Console)
     # mac_mini_m2 是 Codemagic 免費方案唯一可用 instance (500 min/月)，
     # linux_x2 / windows_x2 都要付費。Mac 跑 Gradle bundleRelease 沒問題。
     instance_type: mac_mini_m2
@@ -95,6 +95,8 @@ workflows:
       node: 22.14.0
       # Capacitor 7 要 Java 21 (capacitor.build.gradle sourceCompatibility 21)
       java: 21
+      android_signing:
+        - examking_keystore
     cache:
       cache_paths:
         - $HOME/.npm

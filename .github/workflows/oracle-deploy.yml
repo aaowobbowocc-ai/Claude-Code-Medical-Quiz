@@ -41,6 +41,10 @@ jobs:
           script: |
             set -e
             cd /home/ubuntu/app
+            echo "=== discard runtime-written files before pull ==="
+            # backend 跑起來會持續寫這幾個檔 (stats/cache 類)，每次都跟 git pull 衝突。
+            # 真正的根治是把它們從 git 移除 + .gitignore，但暫時先粗暴 discard。
+            git checkout -- backend/stats.json 2>/dev/null || true
             echo "=== git pull ==="
             git pull origin master
             cd backend

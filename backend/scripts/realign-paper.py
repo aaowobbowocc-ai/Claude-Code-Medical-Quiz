@@ -37,12 +37,19 @@ ap = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(ap)
 THRESH = 0.85   # 對齊信心門檻
 TMP = BASE / '_tmp' / 'audit-sweep'
 
+# (year, session, code, c, s_醫一, s_醫二)
+# 104-2 起 MoEX 參數改為 c=301、醫一 s=55 / 醫二 s=66（PDF 也改字母標記格式）。
 BATCH = [
-    ('101', '第一次', '101030'), ('101', '第二次', '101110'),
-    ('102', '第一次', '102030'), ('102', '第二次', '102110'),
-    ('103', '第一次', '103030'), ('103', '第二次', '103100'),
-    ('104', '第一次', '104030'), ('104', '第二次', '104090'),
-    ('105', '第一次', '105020'), ('105', '第二次', '105100'),
+    ('101', '第一次', '101030', '101', '0101', '0102'),
+    ('101', '第二次', '101110', '101', '0101', '0102'),
+    ('102', '第一次', '102030', '101', '0101', '0102'),
+    ('102', '第二次', '102110', '101', '0101', '0102'),
+    ('103', '第一次', '103030', '101', '0101', '0102'),
+    ('103', '第二次', '103100', '101', '0101', '0102'),
+    ('104', '第一次', '104030', '101', '0101', '0102'),
+    ('104', '第二次', '104090', '301', '55', '66'),
+    ('105', '第一次', '105020', '301', '55', '66'),
+    ('105', '第二次', '105100', '301', '55', '66'),
 ]
 
 
@@ -62,10 +69,10 @@ def score(pdf_q, jq):
     return 0.7 * osim + 0.3 * ssim
 
 
-def fetch_and_parse(code, s_param):
+def fetch_and_parse(code, s_param, c_param='101'):
     paper_dir = TMP / f'{code}-{s_param}'
     q_pdf = paper_dir / 'q.pdf'
-    ap.fetch_pdf(f'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=Q&code={code}&c=101&s={s_param}&q=1', q_pdf)
+    ap.fetch_pdf(f'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=Q&code={code}&c={c_param}&s={s_param}&q=1', q_pdf)
     return ap.parse_questions(q_pdf)
 
 
@@ -84,18 +91,19 @@ def collect_pool(data, year, session):
     return pool
 
 
-def realign(year, session, code, data, apply=False):
-    print(f'\n══ {year}-{session} (code={code}) ══')
+def realign(year, session, code, data, apply=False, c='101', s1='0101', s2='0102'):
+    print(f'\n══ {year}-{session} (code={code} c={c} s={s1}/{s2}) ══')
     pool = collect_pool(data, year, session)
     before = {}
     for q in pool:
         before[q.get('subject')] = before.get(q.get('subject'), 0) + 1
     print(f'  JSON pool={len(pool)}  current split={before}')
 
+    subj_params = [(s1, '醫學(一)'), (s2, '醫學(二)')]
     # 建立官方目標 (subject, number, parsed)
     targets = []
-    for s_param, subj in [('0101', '醫學(一)'), ('0102', '醫學(二)')]:
-        qs = fetch_and_parse(code, s_param)
+    for s_param, subj in subj_params:
+        qs = fetch_and_parse(code, s_param, c)
         for n in range(1, 101):
             pq = qs.get(n, {})
             if len(pq.get('opts', [])) == 4:
@@ -123,8 +131,8 @@ def realign(year, session, code, data, apply=False):
     # 官方 PDF 即使選項解析失敗，題幹通常正常 → 仍可建立 target stem。
     STEM_TH = 0.6
     stem_targets = {}  # (subject, number) -> stem
-    for s_param, subj in [('0101', '醫學(一)'), ('0102', '醫學(二)')]:
-        for n, pq in fetch_and_parse(code, s_param).items():
+    for s_param, subj in subj_params:
+        for n, pq in fetch_and_parse(code, s_param, c).items():
             stem_targets[(subj, n)] = pq.get('q', '')
     assigned_slots = {(targets[ti]['subject'], targets[ti]['number']) for ti in assign}
     extra = {}  # pi -> (subject, number)
@@ -223,15 +231,19 @@ def realign(year, session, code, data, apply=False):
 def main():
     apx = argparse.ArgumentParser()
     apx.add_argument('--year'); apx.add_argument('--session'); apx.add_argument('--code')
+    apx.add_argument('--c', default='101'); apx.add_argument('--s1', default='0101'); apx.add_argument('--s2', default='0102')
     apx.add_argument('--batch', choices=['doctor1'])
     apx.add_argument('--apply', action='store_true')
     args = apx.parse_args()
 
     data = json.load(open(BASE / 'questions.json', encoding='utf-8'))
     total = 0
-    jobs = BATCH if args.batch == 'doctor1' else [(args.year, args.session, args.code)]
-    for (y, s, c) in jobs:
-        total += realign(y, s, c, data, apply=args.apply)
+    if args.batch == 'doctor1':
+        jobs = BATCH
+    else:
+        jobs = [(args.year, args.session, args.code, args.c, args.s1, args.s2)]
+    for (y, ses, code, c, s1, s2) in jobs:
+        total += realign(y, ses, code, data, apply=args.apply, c=c, s1=s1, s2=s2)
 
     if args.apply:
         json.dump(data, open(BASE / 'questions.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=2)

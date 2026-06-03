@@ -106,12 +106,48 @@ def extract_options(text):
     return clean(question), opts
 
 
+def parse_questions_letter(full):
+    """新版格式（104-2/105 起）：題號 'N.'、選項 'A./B./C./D.' 字母標記，無 PUA bullet。"""
+    full = re.sub(r'代\s*號[：:][^\n]*', '', full)
+    full = re.sub(r'頁\s*次[：:][^\n]*', '', full)
+    out = {}
+    cur = None
+    field = None
+    for ln in full.split('\n'):
+        s = ln.strip()
+        if not s:
+            continue
+        mq = re.match(r'^(\d{1,3})[.．]\s*(.*)$', s)
+        mo = re.match(r'^([A-D])[.．]\s*(.*)$', s)
+        if mq and 1 <= int(mq.group(1)) <= 100 and (cur is None or int(mq.group(1)) == cur + 1):
+            cur = int(mq.group(1)); out[cur] = {'q': mq.group(2), 'opts': {}}; field = 'q'; continue
+        if mo and cur and mo.group(1) not in out[cur]['opts']:
+            out[cur]['opts'][mo.group(1)] = mo.group(2); field = mo.group(1); continue
+        if cur:
+            if field == 'q':
+                out[cur]['q'] += ln
+            elif field in 'ABCD':
+                out[cur]['opts'][field] += ln
+    questions = {}
+    for n, q in out.items():
+        opts = [re.sub(r'\s+', ' ', q['opts'].get(k, '')).strip() for k in 'ABCD']
+        if all(opts) and len(q['opts']) == 4:
+            questions[n] = {'q': re.sub(r'\s+', ' ', q['q']).strip(), 'opts': opts}
+        else:
+            questions[n] = {'q': '', 'opts': []}
+    return questions
+
+
 def parse_questions(pdf_path):
     doc = fitz.open(pdf_path)
     full = ''
     for p in doc:
         full += p.get_text()
     full = re.sub(r'代號[：:]\s*\d+\s*頁次[：:]\s*\d+－\d+', '', full)
+
+    # 格式偵測：有 PUA bullet 走舊解析；否則走字母標記解析。
+    if not any(chr(c) in full for c in range(0xe18c, 0xe190)):
+        return parse_questions_letter(full)
 
     lines = full.split('\n')
     blocks = {}
@@ -181,13 +217,13 @@ def load_current(year, session, subject):
     return cur
 
 
-def audit_paper(year, session, code, subject, s_param, apply=False):
-    print(f'\n══ {year}-{session} {subject} (code={code} s={s_param}) ══')
+def audit_paper(year, session, code, subject, s_param, apply=False, c_param='101'):
+    print(f'\n══ {year}-{session} {subject} (code={code} c={c_param} s={s_param}) ══')
     paper_dir = TMP / f'{code}-{s_param}'
     q_pdf = paper_dir / 'q.pdf'
     a_pdf = paper_dir / 'a.pdf'
-    fetch_pdf(f'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=Q&code={code}&c=101&s={s_param}&q=1', q_pdf)
-    fetch_pdf(f'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=A&code={code}&c=101&s={s_param}&q=1', a_pdf)
+    fetch_pdf(f'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=Q&code={code}&c={c_param}&s={s_param}&q=1', q_pdf)
+    fetch_pdf(f'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=A&code={code}&c={c_param}&s={s_param}&q=1', a_pdf)
 
     try:
         qs = parse_questions(q_pdf)
@@ -286,32 +322,33 @@ def apply_fixes(issues, year, session, subject):
 
 
 # 預定義批次: 醫師一階 100-105
+# (year, session, code, subject, s_param, c_param)
+# 注意：104-2 起 MoEX 參數改為 c=301、醫一 s=55 / 醫二 s=66，且 PDF 改用字母標記格式。
 DOCTOR1_BATCH = [
-    # (year, session, code, subject, s_param)
-    ('100', '第一次', '100030', '醫學(一)', '0101'),
-    ('100', '第一次', '100030', '醫學(二)', '0102'),
-    ('100', '第二次', '100140', '醫學(一)', '0101'),
-    ('100', '第二次', '100140', '醫學(二)', '0102'),
-    ('101', '第一次', '101030', '醫學(一)', '0101'),
-    ('101', '第一次', '101030', '醫學(二)', '0102'),
-    ('101', '第二次', '101110', '醫學(一)', '0101'),
-    ('101', '第二次', '101110', '醫學(二)', '0102'),
-    ('102', '第一次', '102030', '醫學(一)', '0101'),
-    ('102', '第一次', '102030', '醫學(二)', '0102'),
-    ('102', '第二次', '102110', '醫學(一)', '0101'),
-    ('102', '第二次', '102110', '醫學(二)', '0102'),
-    ('103', '第一次', '103030', '醫學(一)', '0101'),
-    ('103', '第一次', '103030', '醫學(二)', '0102'),
-    ('103', '第二次', '103100', '醫學(一)', '0101'),
-    ('103', '第二次', '103100', '醫學(二)', '0102'),
-    ('104', '第一次', '104030', '醫學(一)', '0101'),
-    ('104', '第一次', '104030', '醫學(二)', '0102'),
-    ('104', '第二次', '104090', '醫學(一)', '0101'),
-    ('104', '第二次', '104090', '醫學(二)', '0102'),
-    ('105', '第一次', '105020', '醫學(一)', '0101'),
-    ('105', '第一次', '105020', '醫學(二)', '0102'),
-    ('105', '第二次', '105100', '醫學(一)', '0101'),
-    ('105', '第二次', '105100', '醫學(二)', '0102'),
+    ('100', '第一次', '100030', '醫學(一)', '0101', '101'),
+    ('100', '第一次', '100030', '醫學(二)', '0102', '101'),
+    ('100', '第二次', '100140', '醫學(一)', '0101', '101'),
+    ('100', '第二次', '100140', '醫學(二)', '0102', '101'),
+    ('101', '第一次', '101030', '醫學(一)', '0101', '101'),
+    ('101', '第一次', '101030', '醫學(二)', '0102', '101'),
+    ('101', '第二次', '101110', '醫學(一)', '0101', '101'),
+    ('101', '第二次', '101110', '醫學(二)', '0102', '101'),
+    ('102', '第一次', '102030', '醫學(一)', '0101', '101'),
+    ('102', '第一次', '102030', '醫學(二)', '0102', '101'),
+    ('102', '第二次', '102110', '醫學(一)', '0101', '101'),
+    ('102', '第二次', '102110', '醫學(二)', '0102', '101'),
+    ('103', '第一次', '103030', '醫學(一)', '0101', '101'),
+    ('103', '第一次', '103030', '醫學(二)', '0102', '101'),
+    ('103', '第二次', '103100', '醫學(一)', '0101', '101'),
+    ('103', '第二次', '103100', '醫學(二)', '0102', '101'),
+    ('104', '第一次', '104030', '醫學(一)', '0101', '101'),
+    ('104', '第一次', '104030', '醫學(二)', '0102', '101'),
+    ('104', '第二次', '104090', '醫學(一)', '55', '301'),
+    ('104', '第二次', '104090', '醫學(二)', '66', '301'),
+    ('105', '第一次', '105020', '醫學(一)', '55', '301'),
+    ('105', '第一次', '105020', '醫學(二)', '66', '301'),
+    ('105', '第二次', '105100', '醫學(一)', '55', '301'),
+    ('105', '第二次', '105100', '醫學(二)', '66', '301'),
 ]
 
 
@@ -323,17 +360,18 @@ def main():
     ap.add_argument('--code')
     ap.add_argument('--subject')
     ap.add_argument('--s')
+    ap.add_argument('--c', default='101')
     ap.add_argument('--apply', action='store_true')
     args = ap.parse_args()
 
     if args.batch == 'doctor1':
-        for tup in DOCTOR1_BATCH:
+        for (y, ses, code, subj, s_param, c_param) in DOCTOR1_BATCH:
             try:
-                audit_paper(*tup, apply=args.apply)
+                audit_paper(y, ses, code, subj, s_param, apply=args.apply, c_param=c_param)
             except Exception as e:
                 print(f'  ❌ error: {e}')
     elif args.year:
-        audit_paper(args.year, args.session, args.code, args.subject, args.s, args.apply)
+        audit_paper(args.year, args.session, args.code, args.subject, args.s, args.apply, c_param=args.c)
 
 
 if __name__ == '__main__':

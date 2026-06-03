@@ -280,9 +280,17 @@ def audit_paper(year, session, code, subject, s_param, apply=False, c_param='101
         cur_opts = [cq['options'][k] for k in 'ABCD']
         cur_answer = cq['answer']
 
-        sims = [(i, similar(pdf_correct, co)) for i, co in enumerate(cur_opts)]
-        best_idx, best_sim = max(sims, key=lambda x: x[1])
-        best_letter = 'ABCD'[best_idx]
+        # Hybrid：若 JSON 在 official 位置的選項本來就對得上 PDF[official] → 直接用 official 字母
+        # （避免選項文字相近時 content-match 配到錯的選項造成假陽性）。
+        # 只有當該位置對不上（真的重排/缺）才退回全選項 content-match。
+        direct_idx = ord(official) - ord('A')
+        direct_sim = similar(pdf_correct, cur_opts[direct_idx])
+        if direct_sim >= 0.85:
+            best_letter, best_sim = official, direct_sim
+        else:
+            sims = [(i, similar(pdf_correct, co)) for i, co in enumerate(cur_opts)]
+            best_idx, best_sim = max(sims, key=lambda x: x[1])
+            best_letter = 'ABCD'[best_idx]
 
         if best_sim < 0.5:
             issues.append({

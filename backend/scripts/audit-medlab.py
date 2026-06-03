@@ -65,6 +65,52 @@ def subject_of(pdf_bytes):
 CONV = {SUBJECTS[i]: str(i + 1) * 2 for i in range(6)}  # 生理:11 血液:22 分子:33 微生物:44 生化:55 血清:66
 
 
+OLD_S = {  # c=104(100/101) 舊格式可靠對映（分子/微生物 s 不規則，暫缺）
+    '臨床生理學與病理學': '0107', '臨床血液學與血庫學': '0301',
+    '生物化學與臨床生化學': '0304', '臨床血清免疫學與臨床病毒學': '0305',
+}
+
+
+def get_daihao(q_pdf_path):
+    import fitz, unicodedata
+    t = unicodedata.normalize('NFKC', fitz.open(q_pdf_path)[0].get_text())
+    m = re.search(r'代\s*號\s*[：:]\s*(\d{3,4})', t)
+    return m.group(1) if m else None
+
+
+def parse_answers_old(a_pdf_path, daihao, nq=80):
+    """舊格式答案卷（12 頁合卷、科目名變體字）：用『代號』數字當錨點，
+    取代號到下一個四位代號之間的答案列，按 x 對齊題段。"""
+    import fitz, statistics
+    if not daihao:
+        return None
+    doc = fitz.open(a_pdf_path)
+    for pg in doc:
+        words = pg.get_text('words')
+        codes = [w for w in words if w[4] == daihao]
+        if not codes:
+            continue
+        cy = codes[0][1]
+        nexts = [w[1] for w in words if re.fullmatch(r'\d{4}', w[4]) and w[1] > cy + 5]
+        yend = min(nexts) if nexts else cy + 400
+        hdr = {}
+        for w in words:
+            if re.fullmatch(r'(01|11|21|31|41|51|61|71|81|91)', w[4]) and cy < w[1] < yend + 30:
+                hdr.setdefault((int(w[4]) - 1) // 10, []).append(w[0])
+        if len(hdr) < 6:
+            continue
+        colx = {i: statistics.median(xs) for i, xs in hdr.items()}
+        rows = [w for w in words if re.fullmatch(r'[ABCD#]{10}', w[4]) and cy < w[1] < yend]
+        ans = {}
+        for w in rows:
+            ci = min(colx, key=lambda i: abs(w[0] - colx[i]))
+            for j, ch in enumerate(w[4]):
+                ans[ci * 10 + j + 1] = None if ch == '#' else ch
+        if len([v for v in ans.values() if v]) >= 10:
+            return ans
+    return None
+
+
 def resolve_c(year, session):
     """依年份/場次決定 classCode（依資料實證的規律）。"""
     y = int(year)
@@ -80,17 +126,13 @@ def discover(year, session, code):
     c = resolve_c(year, session)
     if c in ('308', '311'):
         return c, dict(CONV)
-    # c=104 舊格式：逐一探測 s（讀科目名稱對應）
+    # c=104 舊格式：用已知可靠對映（讀科目名稱驗證；分子/微生物 s 不規則暫缺）
     mapping = {}
-    for s in ['0107', '0207', '0301', '0302', '0401', '0402', '0501', '0502',
-              '0601', '0602', '0102', '0103', '0104', '0105', '0106', '0201', '0202']:
+    for sub, s in OLD_S.items():
         d = fetch('Q', code, c, s)
-        if not d:
-            continue
-        sub = subject_of(d)
-        if sub and sub not in mapping:
+        if d and subject_of(d) == sub:
             mapping[sub] = s
-    return (c, mapping) if len(mapping) >= 5 else (None, {})
+    return (c, mapping) if mapping else (None, {})
 
 
 def load_medlab_current(data, year, session, subject):
@@ -115,37 +157,43 @@ def audit_one(data_json, year, session, code, c, subject, s, apply, nq=80):
     qpath = TMP / f'Q_{code}_c{c}_s{s}.pdf'
     apath = TMP / f'A_{code}_c{c}_s{s}.pdf'
     qs = ap.parse_questions(qpath)
-    ans = ap.parse_answers_for_subject(apath, subject)
+    if c == '104':
+        ans = parse_answers_old(apath, get_daihao(qpath), nq)
+    else:
+        ans = ap.parse_answers_for_subject(apath, subject)
     if not ans:
         return ('NO_ANS', 0, 0)
     cur = load_medlab_current(data_json, year, session, subject)
     if not cur:
         return ('NO_JSON', 0, 0)
+    # medlab 題號與選項順序都跟官方對齊，但 JSON 選項文字是改寫過的（跟 PDF 措辭不同），
+    # 所以 text-match 不可靠（會假陽性）。改用「純字母比對」：官方答案字母 off vs 現答案，
+    # 不同才改。pdf_correct 文字只用來寫 explanation（盡量取，取不到就不寫文字）。
     fixes = []
     issues = Counter()
     for n in range(1, nq + 1):
         official = ans.get(n)
         if official is None:
-            continue
-        q = qs.get(n, {})
-        if len(q.get('opts', [])) != 4:
-            issues['PDF_PARSE_FAIL'] += 1; continue
+            continue  # 送分，跳過
         if n not in cur:
             issues['NOT_IN_JSON'] += 1; continue
-        pdf_correct = q['opts'][ord(official) - 65]
         cq = cur[n]
-        sims = [(k, SequenceMatcher(None, ap.norm(pdf_correct), ap.norm(cq['options'][k])).ratio()) for k in 'ABCD']
-        bk, bs = max(sims, key=lambda x: x[1])
-        if bs < 0.5:
-            issues['OPT_MISSING'] += 1; continue
-        if bk != cq['answer']:
-            fixes.append((cq, bk, pdf_correct))
+        if official != cq['answer']:
+            q = qs.get(n, {})
+            # 題幹 guard：JSON 題幹須與官方該題題幹相符才改（避免改到誤分類/錯位題，
+            # 例如 DLCO 題被誤歸到血液 #27 而與官方嗜酸性球題撞號）。
+            stem_sim = SequenceMatcher(None, ap.norm(q.get('q', '')), ap.norm(cq.get('question', ''))).ratio()
+            if stem_sim < 0.55:
+                issues['STEM_MISMATCH'] += 1; continue
+            pdf_correct = q['opts'][ord(official) - 65] if len(q.get('opts', [])) == 4 else ''
+            fixes.append((cq, official, pdf_correct))
             issues['ANSWER_WRONG'] += 1
     if apply:
-        for cq, bk, pdf_correct in fixes:
-            cq['answer'] = bk
+        for cq, off, pdf_correct in fixes:
+            cq['answer'] = off
             cq['disputed'] = True
-            cq['explanation'] = f'依考選部官方答案,本題正解為 {bk} ({pdf_correct.strip()[:70]})。原答案標註錯誤,已修正。'
+            tail = f'（{pdf_correct.strip()[:70]}）' if pdf_correct else ''
+            cq['explanation'] = f'依考選部官方答案,本題正解為 {off}{tail}。原答案標註錯誤,已修正。'
     return (dict(issues), len(fixes), len(cur))
 
 

@@ -4,6 +4,15 @@
 
 * { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
 
+/* Twemoji — useTwemoji() 把 emoji 文字換成這些 <img.twemoji> */
+img.twemoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 0.05em 0 0.1em;
+  vertical-align: -0.1em;
+  display: inline-block;
+}
+
 html, body {
   overscroll-behavior: none;
   font-family: 'Noto Sans TC', system-ui, sans-serif;

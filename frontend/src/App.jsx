@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, useNavigate, useLocation, useParams } from 're
 import Home from './pages/Home'
 import { useSocket, getSocket } from './hooks/useSocket'
 import { useDocumentMeta } from './hooks/useDocumentMeta'
+import { useTwemoji } from './hooks/useTwemoji'
 import { supabase, consumeOAuthReturnPath } from './lib/supabase'
 import { usePlayerStore, useGameStore } from './store/gameStore'
 import SplashScreen from './components/SplashScreen'
@@ -87,6 +88,7 @@ function PageLoader() {
 function AppRoutes() {
   useSocket() // Mount socket listener globally
   useDocumentMeta() // Sync <title>/<meta>/<canonical> with active exam
+  useTwemoji()   // 把 emoji 換成 Twemoji SVG — 修舊 Android (Y9 2019 等) 破豆腐問題
   const navigate = useNavigate()
   const location = useLocation()
 

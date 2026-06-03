@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { supabase, ensureSession } from '../lib/supabase'
+import { supabase, ensureSession, readAuthFromStorage } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -9,11 +9,13 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 async function persistCoinDelta(delta) {
   if (!supabase) return
   try {
-    const { data: { session } } = await supabase.auth.getSession()
-    if (!session?.access_token) return
+    // 不用 await supabase.auth.getSession() — 在 Capacitor Native (App) 會 hang/回空。
+    // 改 sync 讀 localStorage。詳見 [[feedback_supabase_no_getsession]] 5/29 Shop 載入卡死事件。
+    const { token } = readAuthFromStorage()
+    if (!token) return
     fetch(`${BACKEND}/api/coins/delta`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${session.access_token}` },
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
       body: JSON.stringify({ delta }),
     }).catch(() => {})
   } catch {}
@@ -170,11 +172,8 @@ export const usePlayerStore = create(
       claimDailyBonus: async () => {
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
         if (get().lastDailyBonus === today) return false
-        let token = null
-        try {
-          const { data } = await supabase?.auth.getSession() || {}
-          token = data?.session?.access_token || null
-        } catch {}
+        // sync 讀，避免 Capacitor Native getSession hang
+        const { token } = readAuthFromStorage()
         if (!token) return false
         try {
           const res = await fetch(`${BACKEND}/api/rewards/daily`, {
@@ -210,11 +209,8 @@ export const usePlayerStore = create(
       // flag, atomically grants 3000 coins). Async; callers must await.
       claimBindReward: async () => {
         if (get().bindRewardClaimed) return false
-        let token = null
-        try {
-          const { data } = await supabase?.auth.getSession() || {}
-          token = data?.session?.access_token || null
-        } catch {}
+        // sync 讀，避免 Capacitor Native getSession hang
+        const { token } = readAuthFromStorage()
         if (!token) return false
         try {
           const res = await fetch(`${BACKEND}/api/rewards/bind`, {
@@ -229,11 +225,9 @@ export const usePlayerStore = create(
       },
       // Ad reward — server owns daily counter. Async; callers must await.
       claimAdReward: async () => {
-        let token = null
-        try {
-          const { data } = await supabase?.auth.getSession() || {}
-          token = data?.session?.access_token || null
-        } catch {}
+        // sync 讀，避免 Capacitor Native getSession hang。這條路線是 6/3 v1.0.1
+        // 看廣告領金幣後一直顯示「廣告載入失敗」的真因 — getSession 回空 token。
+        const { token } = readAuthFromStorage()
         if (!token) return { success: false, reason: 'no_auth' }
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
         try {
@@ -293,9 +287,10 @@ usePlayerStore.subscribe((state, prevState) => {
   clearTimeout(saveTimer)
   saveTimer = setTimeout(async () => {
     try {
-      const { data: { session } } = await supabase.auth.getSession()
-      const user = session?.user
-      if (!user) return
+      // sync 讀，避免 Capacitor Native getSession hang
+      const { user_id } = readAuthFromStorage()
+      if (!user_id) return
+      const user = { id: user_id }
       const payload = storeToDb(usePlayerStore.getState())
       delete payload.coins  // never overwrite coins via write-through; use persistCoinDelta instead
       payload.updated_at = new Date().toISOString()

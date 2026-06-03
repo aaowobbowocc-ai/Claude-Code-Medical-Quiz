@@ -71166,13 +71166,13 @@
       "number": 68,
       "question": "下列敘述何者正確？",
       "options": {
-        "A": "血管收縮素轉換酶抑制劑(ACEI)治療高血壓時，常見副作用為心搏過緩",
-        "B": "氣喘發作時，應該選擇β2-adrenergic receptor活化劑，如timolol，以便即時擴張氣管",
-        "C": "高血壓病人服用非選擇性β-blocker可能會加重氣喘症狀",
-        "D": "身心遇緊急狀況時，因會興奮迷走神經，故導致心跳加速，瞳孔縮小"
+        "A": "Ipratropium 減少呼吸道腺體分泌及氣管平滑肌收縮，可改善肺氣腫（emphysema）症狀",
+        "B": "氣喘發作時，應該選擇β2-adrenergic receptor活化劑，如timolol，以便即時擴張氣管",
+        "C": "Scopolamine 因能活化 muscarinic ACh 受體，故可減輕暈車、暈船等中樞神經系統引起之嘔吐",
+        "D": "身心遇緊急狀況時，因會興奮迷走神經，故導致心跳加速，瞳孔縮小"
       },
-      "answer": "D",
-      "explanation": "依考選部官方答案,本題正解為 D (身心遇緊急狀況時，因會興奮迷走神經，故導致心跳加速，瞳孔縮小)。原 OCR 答案標註錯誤,已修正。",
+      "answer": "A",
+      "explanation": "依考選部官方答案，本題正解為 A。原選項因 OCR 截斷且答案標註錯誤，已對照考選部原卷還原並修正。",
       "incomplete": false,
       "disputed": true
     },
@@ -77920,15 +77920,15 @@
       "subject_name": "寄生蟲學",
       "stage_id": 6,
       "number": 80,
-      "question": "下列有關痢疾阿米巴（Entamoeba histolytica）的敘述，那些正確？①肝膿瘍（liver abscess）多發生於右葉肝 ②其滋養體（trophozoites）會吞噬紅血球 ③metronidazole 可用以治療其引起之腸道及轉移病症 ④其囊體中的類染色體（chromatoidal bars）之成分為DNA",
+      "question": "下列有關痢疾阿米巴（Entamoeba histolytica）的敘述，那些正確？①肝膿瘍（liver abscess）多發生於右葉肝 ②其滋養體（trophozoites）會吞噬紅血球 ③metronidazole 可用以治療其引起之腸道及轉移病症 ④其囊體中的類染色體（chromatoidal bars）之成分為 DNA",
       "options": {
         "A": "①②③",
         "B": "①②④",
         "C": "①③④",
         "D": "②③④"
       },
-      "answer": "B",
-      "explanation": "依考選部官方答案,本題正解為 B (①②④)。原 OCR 答案標註錯誤,已修正。",
+      "answer": "A",
+      "explanation": "依考選部官方答案，本題正解為 A。原選項因 OCR 截斷且答案標註錯誤，已對照考選部原卷還原並修正。",
       "_original_number": 80,
       "disputed": true
     },
@@ -83176,13 +83176,13 @@
       "number": 23,
       "question": "下列何者負責接受鈣離子訊息，進而啟動骨骼肌細胞收縮？",
       "options": {
-        "A": "肌鈣蛋白",
-        "B": "myosin",
-        "C": "原肌凝蛋白",
-        "D": "actin"
+        "A": "myosin",
+        "B": "actin",
+        "C": "tropomyosin",
+        "D": "troponin"
       },
-      "answer": "B",
-      "explanation": "依考選部官方答案,本題正解為 B (tropomyosin)。原 OCR 答案標註錯誤,已修正。",
+      "answer": "D",
+      "explanation": "依考選部官方答案，本題正解為 D。原選項因 OCR 截斷且答案標註錯誤，已對照考選部原卷還原並修正。",
       "_original_number": 23,
       "disputed": true
     },
@@ -84380,19 +84380,20 @@
       "number": 79,
       "question": "56 歲女性，因肺腺癌接受化學治療。上腹悶痛前來就醫。內視鏡檢查發現十二指腸有一直徑約 0.5 公分不規則形潰瘍，病理切片檢查如圖所示。最可能的診斷為： 巨細胞病毒（ cytomegalovirus ）感染 轉移性肺腺癌",
       "options": {
-        "A": "十二指腸腺癌",
-        "B": "單純疱疹病毒（",
-        "C": "herpes simplex virus",
-        "D": "）感染"
+        "A": "巨細胞病毒（cytomegalovirus）感染",
+        "B": "轉移性肺腺癌",
+        "C": "十二指腸腺癌",
+        "D": "單純疱疹病毒（herpes simplex virus）感染"
       },
-      "answer": "C",
-      "explanation": "依考選部官方答案,本題正解為 C (單純疱疹病毒（herpes simplex virus）感染)。原 OCR 答案標註錯誤,已修正。",
+      "answer": "A",
+      "explanation": "依考選部官方答案，本題正解為 A。原選項因 OCR 截斷且答案標註錯誤，已對照考選部原卷還原並修正。",
       "images": [
         "/question-images/doctor1_1150204064_0.webp"
       ],
       "image_dependent": true,
       "_original_number": 79,
-      "disputed": true
+      "disputed": true,
+      "image_url": "/question-images/doctor1_103030_q79.webp"
     },
     {
       "id": 1150204065,
@@ -86260,13 +86261,13 @@
       "number": 63,
       "question": "下列何者為補體（complement）的三種活化路徑之最初會合點？",
       "options": {
-        "A": "Membrane Attack Complex (MAC)",
-        "B": "ClqClrCls complex",
-        "C": "C3b",
-        "D": "C4b"
+        "A": "C1qC1rC1s complex",
+        "B": "C4b",
+        "C": "C3 convertase",
+        "D": "C5 convertase"
       },
-      "answer": "D",
-      "explanation": "依考選部官方答案,本題正解為 D (C4b)。原 OCR 答案標註錯誤,已修正。",
+      "answer": "C",
+      "explanation": "依考選部官方答案，本題正解為 C。原選項因 OCR 截斷且答案標註錯誤，已對照考選部原卷還原並修正。",
       "_original_number": 63,
       "disputed": true
     },
@@ -87805,13 +87806,13 @@
       "number": 33,
       "question": "下列那一組的胺基酸的成員最有可能扮演DNA－蛋白質辨認（DNA-protein recognition）的角色？",
       "options": {
-        "A": "Arg,",
-        "B": "Gln, Leu",
-        "C": "Asn,",
-        "D": "Gln, Trp"
+        "A": "Arg, Gln, Leu",
+        "B": "Asn, Gln, Trp",
+        "C": "Asn, Glu, Lys",
+        "D": "Glu, Lys, Pro"
       },
-      "answer": "D",
-      "explanation": "依考選部官方答案,本題正解為 D (Gln, Trp \nAsn,)。原 OCR 答案標註錯誤,已修正。",
+      "answer": "C",
+      "explanation": "依考選部官方答案，本題正解為 C（Asn, Glu, Lys）。此三者皆為能與 DNA 鹼基形成氫鍵／電荷作用的極性或帶電胺基酸，適合擔任 DNA－蛋白質辨認角色；A 含 Leu、B 含 Trp、D 含 Pro 皆非理想的鹼基辨認殘基。原選項因 OCR 截斷且答案標註錯誤，已還原並修正。",
       "vision_uncertain": false,
       "disputed": true,
       "_original_number": 33
@@ -88055,13 +88056,13 @@
       "number": 44,
       "question": "胺基酸代謝須進行轉氨反應，此反應最常需要那一種維生素參與？",
       "options": {
-        "A": "Vitamin B",
-        "B": "1（Thiamine）",
-        "C": "Vitamin B",
-        "D": "2（Riboflavine）"
+        "A": "Vitamin B1（Thiamine）",
+        "B": "Vitamin B2（Riboflavine）",
+        "C": "Vitamin B6（Pyridoxine）",
+        "D": "Vitamin B12（Cobalamin）"
       },
-      "answer": "D",
-      "explanation": "依考選部官方答案,本題正解為 D (6（Pyridoxine）)。原 OCR 答案標註錯誤,已修正。",
+      "answer": "C",
+      "explanation": "依考選部官方答案，本題正解為 C。原選項因 OCR 截斷且答案標註錯誤，已對照考選部原卷還原並修正。",
       "vision_uncertain": false,
       "disputed": true,
       "_original_number": 44
@@ -88371,13 +88372,13 @@
       "number": 58,
       "question": "下列何項藥物用於治療Thrombocytopenia 患者？",
       "options": {
-        "A": "Interleukin",
-        "B": "-11（Oprelvekin）",
-        "C": "Erythropoietin",
-        "D": "-CSF（Filgrastim）"
+        "A": "Interleukin-11（Oprelvekin）",
+        "B": "Erythropoietin",
+        "C": "G-CSF（Filgrastim）",
+        "D": "GM-CSF（Sargramostim）"
       },
-      "answer": "B",
-      "explanation": "依考選部官方答案,本題正解為 B (Interleukin -11（Oprelvekin） Erythropoietin)。原 OCR 答案標註錯誤,已修正。",
+      "answer": "A",
+      "explanation": "依考選部官方答案，本題正解為 A。原選項因 OCR 截斷且答案標註錯誤，已對照考選部原卷還原並修正。",
       "vision_uncertain": false,
       "disputed": true,
       "_original_number": 58
@@ -92352,13 +92353,13 @@
       "number": 35,
       "question": "CRP（cAMP receptor protein）是lac operon 基因表現的一個主要調控因子，下列何者是CRP 最適的描述？",
       "options": {
-        "A": "CRP",
-        "B": "CRP 與lac operon 的結合只能在葡萄糖存在下進行",
-        "C": "CRP 與lac operon 的結合可防止lac-抑制子（lac-repressor）與operator 的結合",
-        "D": "CRP 與lac-抑制子（lac-repressor）競爭operator"
+        "A": "CRP 協助 RNA 聚合酶（RNA polymerase）與 lac-啟動子（lac-promoter）的結合",
+        "B": "CRP 與 lac operon 的結合只能在葡萄糖存在下進行",
+        "C": "CRP 與 lac operon 的結合可防止 lac-抑制子（lac-repressor）與 operator 的結合",
+        "D": "CRP 與 lac-抑制子（lac-repressor）競爭 operator"
       },
-      "answer": "B",
-      "explanation": "依考選部官方答案,本題正解為 B (CRP 與lac operon 的結合只能在葡萄糖存在下進行)。原 OCR 答案標註錯誤,已修正。",
+      "answer": "A",
+      "explanation": "依考選部官方答案，本題正解為 A。原選項因 OCR 截斷且答案標註錯誤，已對照考選部原卷還原並修正。",
       "vision_uncertain": false,
       "disputed": true,
       "_original_number": 35
@@ -108237,13 +108238,13 @@
       "number": 79,
       "question": "何種絛蟲的幼蟲可以在人體小腸的絨毛內發育？多房性包生絛蟲（Echinococcus multilocularis） 短小包膜絛蟲（Hymenolepis nana）",
       "options": {
-        "A": "廣節裂頭絛蟲（Diphyllobothrium",
-        "B": "latum）",
-        "C": "犬複殖器絛蟲（Dipylidium",
-        "D": "caninum）"
+        "A": "多房性包生條蟲（Echinococcus multilocularis）",
+        "B": "短小包膜條蟲（Hymenolepis nana）",
+        "C": "廣節裂頭條蟲（Diphyllobothrium latum）",
+        "D": "犬複殖器條蟲（Dipylidium caninum）"
       },
-      "answer": "A",
-      "explanation": "依考選部官方答案,本題正解為 A (廣節裂頭絛蟲（Diphyllobothrium latum）)。原 OCR 答案標註錯誤,已修正。",
+      "answer": "B",
+      "explanation": "依考選部官方答案，本題正解為 B。原選項因 OCR 截斷且答案標註錯誤，已對照考選部原卷還原並修正。",
       "_original_number": 79,
       "disputed": true
     },

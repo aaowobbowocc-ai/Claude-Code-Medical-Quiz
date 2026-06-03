@@ -172,7 +172,10 @@ def parse_questions(pdf_path):
     for n, txt in blocks.items():
         q, opts = extract_options(txt)
         if opts is None:
-            questions[n] = {'q': '', 'opts': []}
+            # 即使選項解析失敗，仍保留題幹（第一個 bullet 前的文字），供 realign stem 比對用。
+            stem = BULLET_RE.split(txt)[0]
+            stem = re.sub(r'\s+', ' ', stem).strip()
+            questions[n] = {'q': stem, 'opts': []}
         else:
             questions[n] = {'q': q, 'opts': opts}
     return questions

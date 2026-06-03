@@ -91,7 +91,7 @@ def collect_pool(data, year, session):
     return pool
 
 
-def realign(year, session, code, data, apply=False, c='101', s1='0101', s2='0102'):
+def realign(year, session, code, data, apply=False, c='101', s1='0101', s2='0102', force=False):
     print(f'\n══ {year}-{session} (code={code} c={c} s={s1}/{s2}) ══')
     pool = collect_pool(data, year, session)
     before = {}
@@ -129,34 +129,44 @@ def realign(year, session, code, data, apply=False, c='101', s1='0101', s2='0102
 
     # 第二趟：用「題幹相似度」救回選項被 OCR 弄爛的孤兒（跨科目）。
     # 官方 PDF 即使選項解析失敗，題幹通常正常 → 仍可建立 target stem。
-    STEM_TH = 0.6
+    STEM_TH = 0.6      # 高信心 stem
+    STEM_FLOOR = 0.30  # force 模式下強制補完的最低 stem（低於此視為污染/外來題）
     stem_targets = {}  # (subject, number) -> stem
     for s_param, subj in subj_params:
         for n, pq in fetch_and_parse(code, s_param, c).items():
             stem_targets[(subj, n)] = pq.get('q', '')
+    all_slots = [(subj, n) for _s, subj in subj_params for n in range(1, 101)]
     assigned_slots = {(targets[ti]['subject'], targets[ti]['number']) for ti in assign}
     extra = {}  # pi -> (subject, number)
-    miss_slots = [k for k in stem_targets if k not in assigned_slots]
-    leftover = [pi for pi in range(len(pool)) if not p_used[pi]]
-    spairs = []
-    for k in miss_slots:
-        st = norm(stem_targets[k])
-        if not st:
-            continue
-        for pi in leftover:
-            ss = SequenceMatcher(None, st, norm(pool[pi].get('question', ''))).ratio()
-            if ss >= STEM_TH:
-                spairs.append((ss, k, pi))
-    spairs.sort(reverse=True)
-    slot_used = set(); pl_used = set()
-    for ss, k, pi in spairs:
-        if k in slot_used or pi in pl_used:
-            continue
-        slot_used.add(k); pl_used.add(pi); p_used[pi] = True
-        extra[pi] = k
 
-    # 第三趟：同科目唯一空位填補（救官方+JSON 都解析失敗、stem 也對不上的單一殘餘，
-    # 如單字選項題 #23）。僅在該科目剛好 1 缺槽對 1 殘餘時才填。
+    def stem_pass(threshold):
+        miss = [k for k in all_slots
+                if k not in assigned_slots and k not in extra.values() and norm(stem_targets.get(k, ''))]
+        left = [pi for pi in range(len(pool)) if not p_used[pi]]
+        sp = []
+        for k in miss:
+            st = norm(stem_targets[k])
+            for pi in left:
+                pj = norm(pool[pi].get('question', ''))
+                ss = SequenceMatcher(None, st, pj).ratio()
+                # 含資料表/多選題：JSON 題幹常是官方題幹的前綴/子字串 → ratio 會偏低，
+                # 用 substring 包含判斷補強（避免把這類真題誤判為污染）。
+                if len(st) >= 12 and len(pj) >= 12 and (pj[:26] in st or st[:26] in pj):
+                    ss = max(ss, 0.9)
+                if ss >= threshold:
+                    sp.append((ss, k, pi))
+        sp.sort(reverse=True)
+        su = set(); pu = set()
+        for ss, k, pi in sp:
+            if k in su or pi in pu:
+                continue
+            su.add(k); pu.add(pi); p_used[pi] = True; extra[pi] = k
+
+    stem_pass(STEM_TH)
+    if force:                 # --force：把剩餘殘餘用較低門檻補完整 bijection
+        stem_pass(STEM_FLOOR)
+
+    # 同科目唯一空位填補（無 stem 的解析失敗槽，如單字選項題 #23）。
     filled_slots = assigned_slots | set(extra.values())
     for subj in ('醫學(一)', '醫學(二)'):
         miss = [(subj, n) for n in range(1, 101) if (subj, n) not in filled_slots]
@@ -192,6 +202,12 @@ def realign(year, session, code, data, apply=False, c='101', s1='0101', s2='0102
     for pi, (subj, n) in self_extra.items():
         jq = pool[pi]
         new_subj[id(jq)] = subj; new_num[id(jq)] = n
+    still_unmatched = [pi for pi in range(len(pool)) if not p_used[pi]]
+    # force 模式：仍未指派者視為污染/外來題 → 隔離到 number 900+（不佔 1-100），標 incomplete
+    quarantine = still_unmatched if force else []
+    for idx, pi in enumerate(quarantine):
+        new_num[id(pool[pi])] = 900 + idx
+
     dup = {}
     for jq in pool:
         key = (new_subj[id(jq)], new_num[id(jq)])
@@ -199,24 +215,20 @@ def realign(year, session, code, data, apply=False, c='101', s1='0101', s2='0102
     collisions = {k: c for k, c in dup.items() if c > 1}
 
     print(f'  將修正 number/subject: {len(changes)} 題（其中低信心 {len(low_pairs)} 題）')
-    for jq, t, sc in changes[:4]:
+    for jq, t, sc in changes[:3]:
         print(f'    [{jq.get("subject")} #{jq.get("number")}] -> [{t["subject"]} #{t["number"]}] sim={sc:.2f}  {jq.get("question","")[:22]}')
-    if low_pairs:
-        for t, jq, sc in low_pairs:
-            print(f'    ⚠ 低信心 sim={sc:.2f} -> [{t["subject"]} #{t["number"]}]  {jq.get("question","")[:30]}')
     for pi, (subj, n) in self_extra.items():
-        jq = pool[pi]
-        print(f'    ↪ 補空位: [{jq.get("subject")} #{jq.get("number")}] -> [{subj} #{n}] (PDF 該題解析失敗)  {jq.get("question","")[:22]}')
-    still_unmatched = [pi for pi in range(len(pool)) if not p_used[pi]]
-    if still_unmatched:
+        print(f'    ↪ 補空位: [{pool[pi].get("subject")} #{pool[pi].get("number")}] -> [{subj} #{n}]  {pool[pi].get("question","")[:22]}')
+    for pi in quarantine:
+        print(f'    🚧 隔離(疑污染): [{pool[pi].get("subject")} #{pool[pi].get("number")}]  {pool[pi].get("question","")[:30]}')
+    if still_unmatched and not force:
         for pi in still_unmatched:
-            jq = pool[pi]
-            print(f'    ⚠ pool 仍未指派: [{jq.get("subject")} #{jq.get("number")}]  {jq.get("question","")[:30]}')
+            print(f'    ⚠ pool 仍未指派: [{pool[pi].get("subject")} #{pool[pi].get("number")}]  {pool[pi].get("question","")[:30]}')
     if collisions:
         print(f'  ❌ 題號碰撞 {len(collisions)} 處（不可 apply）: {list(collisions)[:6]}')
 
     if apply:
-        if collisions or still_unmatched:
+        if collisions or (still_unmatched and not force):
             print('  ⏭ 因碰撞/未指派跳過此卷，未寫入')
             return 0
         for ti, (pi, sc) in assign.items():
@@ -224,7 +236,11 @@ def realign(year, session, code, data, apply=False, c='101', s1='0101', s2='0102
             jq['number'] = t['number']; jq['subject'] = t['subject']
         for pi, (subj, n) in self_extra.items():
             pool[pi]['number'] = n; pool[pi]['subject'] = subj
-        return len(changes) + len(self_extra)
+        for idx, pi in enumerate(quarantine):
+            pool[pi]['number'] = 900 + idx
+            pool[pi]['incomplete'] = True
+            pool[pi]['gap_reason'] = 'realign_unmatched'
+        return len(changes) + len(self_extra) + len(quarantine)
     return 0
 
 
@@ -234,6 +250,7 @@ def main():
     apx.add_argument('--c', default='101'); apx.add_argument('--s1', default='0101'); apx.add_argument('--s2', default='0102')
     apx.add_argument('--batch', choices=['doctor1'])
     apx.add_argument('--apply', action='store_true')
+    apx.add_argument('--force', action='store_true', help='強制補完 bijection，殘餘題隔離（僅用於已確認無污染的卷）')
     args = apx.parse_args()
 
     data = json.load(open(BASE / 'questions.json', encoding='utf-8'))
@@ -243,7 +260,7 @@ def main():
     else:
         jobs = [(args.year, args.session, args.code, args.c, args.s1, args.s2)]
     for (y, ses, code, c, s1, s2) in jobs:
-        total += realign(y, ses, code, data, apply=args.apply, c=c, s1=s1, s2=s2)
+        total += realign(y, ses, code, data, apply=args.apply, c=c, s1=s1, s2=s2, force=args.force)
 
     if args.apply:
         json.dump(data, open(BASE / 'questions.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=2)

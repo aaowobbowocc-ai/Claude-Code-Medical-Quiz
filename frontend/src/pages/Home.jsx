@@ -21,6 +21,11 @@ import WelcomeTour, { shouldShowWelcomeTour } from '../components/WelcomeTour'
 import CoinShopSheet from '../components/CoinShopSheet'
 import AvatarText from '../components/AvatarText'
 import { supabase, linkOrSignInGoogle, switchGoogleAccount, getLinkedIdentity } from '../lib/supabase'
+import { isNativeApp } from '../lib/admob'
+
+// Web 點 ➕ 直接開金幣商店（看廣告等 App 上線）；Native App 才開看廣告 sheet。
+const IS_NATIVE = isNativeApp()
+const COIN_PLUS_SHEET = IS_NATIVE ? 'reward-ad' : 'coin-shop'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
 
@@ -333,7 +338,7 @@ export default function Home() {
     // Auto-open reward ad sheet if navigated with ?reward=1
     const params = new URLSearchParams(window.location.search)
     if (params.get('reward') === '1') {
-      setSheet('reward-ad')
+      setSheet(COIN_PLUS_SHEET)
       window.history.replaceState({}, '', window.location.pathname)
       return
     }
@@ -865,7 +870,7 @@ export default function Home() {
               <p className="text-white/40 text-xs">金幣</p>
               <div className="flex items-center gap-1.5">
                 <p className="text-white font-bold text-lg">🪙 {coins}</p>
-                <button onClick={() => setSheet('reward-ad')}
+                <button onClick={() => setSheet(COIN_PLUS_SHEET)}
                   className="text-xs bg-amber-400/30 text-amber-200 px-1.5 py-0.5 rounded-lg font-bold active:scale-90 transition-transform">
                   ➕
                 </button>

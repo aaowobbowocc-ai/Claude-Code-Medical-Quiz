@@ -7,8 +7,11 @@ import { isExplainUnlocked } from '../hooks/useAI'
 import { getBookSection } from '../lib/booksAffiliate'
 import { formatYearSession } from '../utils/sessionLabel'
 import { FEATURE_AI_UNLIMITED } from '../config/featureFlags'
+import { isNativeApp } from '../lib/admob'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+// Web 端不開放看廣告（等 App 上線）；Native App 才顯示看廣告入口。
+const IS_NATIVE = isNativeApp()
 
 /**
  * 找類似題 sheet — 用 Vertex AI Search /search/similar 找 5 道語意相近的題目。
@@ -174,7 +177,7 @@ function NotEnoughCoinsBox({ label }) {
       <p className="text-xs text-amber-500 mt-1">{label}</p>
       <button onClick={() => navigate('/?reward=1')}
         className="mt-2 text-xs font-bold text-white bg-amber-400 px-3 py-1.5 rounded-lg active:scale-95 transition-transform">
-        🎬 看廣告賺金幣
+        {IS_NATIVE ? '🎬 看廣告賺金幣' : '🪙 前往金幣商店'}
       </button>
       {FEATURE_AI_UNLIMITED && (
         <button onClick={() => navigate('/shop?tab=ai')}

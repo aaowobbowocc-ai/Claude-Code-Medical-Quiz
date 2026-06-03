@@ -4,8 +4,11 @@ import { useGameStore, usePlayerStore } from '../store/gameStore'
 import { getSocket } from '../hooks/useSocket'
 import ConnectionStatus from '../components/ConnectionStatus'
 import AvatarWithFrame from '../components/AvatarWithFrame'
+import { isNativeApp } from '../lib/admob'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+// Web 端不開放看廣告（等 App 上線），缺金幣導去金幣商店；Native 才提看廣告。
+const IS_NATIVE = isNativeApp()
 
 import { getStageStyle } from '../config/examRegistry'
 import { getMeta, getMetaSync } from '../config/metaCache'
@@ -77,7 +80,7 @@ export default function Lobby() {
 
   const handleStart = () => {
     if (betAmount > 0 && coins < betAmount) {
-      if (confirm(`金幣不足！需要 ${betAmount} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
+      if (confirm(`金幣不足！需要 ${betAmount} 金幣\n\n要去${IS_NATIVE ? '看廣告賺金幣' : '金幣商店'}嗎？`)) navigate('/?reward=1')
       return
     }
     if (betAmount > 0) {

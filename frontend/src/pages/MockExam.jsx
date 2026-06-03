@@ -13,8 +13,11 @@ import { getExamYears, getHistoricalPaper, getRandomPaper, isExamSupportedByCDN 
 import { isAnswerCorrect } from '../utils/scoring'
 import { addWrong } from '../lib/wrongBank'
 import { saveSession, getSessions, clearSession, describeSession } from '../lib/mockExamSession'
+import { isNativeApp } from '../lib/admob'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+// Web 端不開放看廣告（等 App 上線），缺金幣導去金幣商店；Native 才提看廣告。
+const IS_NATIVE = isNativeApp()
 
 // TAG_NAMES is now loaded from exam-configs via getAllTagNames()
 
@@ -1031,7 +1034,7 @@ export default function MockExam() {
   const handleStartSingle = async (paper, years) => {
     const fee = getSingleExamFee(paper)
     if (!spendCoins(fee)) {
-      if (confirm(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
+      if (confirm(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣\n\n要去${IS_NATIVE ? '看廣告賺金幣' : '金幣商店'}嗎？`)) navigate('/?reward=1')
       return
     }
     newSessionId()
@@ -1045,7 +1048,7 @@ export default function MockExam() {
   // Start full exam (all papers sequentially)
   const handleStartFull = async (years) => {
     if (!spendCoins(FULL_EXAM_FEE)) {
-      if (confirm(`金幣不足！需要 ${FULL_EXAM_FEE} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
+      if (confirm(`金幣不足！需要 ${FULL_EXAM_FEE} 金幣，目前只有 ${coins} 金幣\n\n要去${IS_NATIVE ? '看廣告賺金幣' : '金幣商店'}嗎？`)) navigate('/?reward=1')
       return
     }
     newSessionId()
@@ -1061,7 +1064,7 @@ export default function MockExam() {
     const targetPaper = paper || PAPERS[0]
     const fee = isFull ? FULL_EXAM_FEE : getSingleExamFee(targetPaper)
     if (!spendCoins(fee)) {
-      if (confirm(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
+      if (confirm(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣\n\n要去${IS_NATIVE ? '看廣告賺金幣' : '金幣商店'}嗎？`)) navigate('/?reward=1')
       return
     }
     newSessionId()

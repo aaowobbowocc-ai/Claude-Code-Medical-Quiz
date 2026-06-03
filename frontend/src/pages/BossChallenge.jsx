@@ -7,9 +7,12 @@ import OptionContent from '../components/OptionContent'
 import ShareChallengeButton from '../components/ShareChallengeButton'
 import { getExamConfig } from '../config/examRegistry'
 import { supabase } from '../lib/supabase'
+import { isNativeApp } from '../lib/admob'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const BOSS_FEE = 50
+// Web 端不開放看廣告（等 App 上線）；Native App 才顯示看廣告入口。
+const IS_NATIVE = isNativeApp()
 const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444' }
 
 function BossCard({ q, index, onAnswer, answered }) {
@@ -162,7 +165,7 @@ export default function BossChallenge() {
             <div className="flex gap-2 mt-2">
               <button onClick={() => navigate('/?reward=1')}
                 className="px-5 py-3 rounded-2xl font-bold text-white text-sm active:scale-95 bg-amber-500">
-                🎬 看廣告賺 300 幣
+                {IS_NATIVE ? '🎬 看廣告賺 300 幣' : '🪙 前往金幣商店'}
               </button>
               <button onClick={() => navigate('/')}
                 className="px-5 py-3 rounded-2xl font-bold text-white text-sm active:scale-95 grad-cta">

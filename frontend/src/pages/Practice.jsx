@@ -19,8 +19,11 @@ import ReadingModePopover, { useReadingMode } from '../components/ReadingModePop
 import { getRandomQuestions, isExamSupportedByCDN } from '../lib/cdnQuestions'
 import { supabase } from '../lib/supabase'
 import { addWrong } from '../lib/wrongBank'
+import { isNativeApp } from '../lib/admob'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+// Web 端不開放看廣告（等 App 上線），缺金幣導去金幣商店；Native 才提看廣告。
+const IS_NATIVE = isNativeApp()
 
 import { getStageStyle as getStageStyleFromRegistry, getExamConfig, hasLegalSubjectTag } from '../config/examRegistry'
 import { getMeta, getMetaSync } from '../config/metaCache'
@@ -381,7 +384,7 @@ function SetupScreen({ onStart, onBack }) {
           onClick={() => {
             const { spendCoins } = usePlayerStore.getState()
             if (!spendCoins(practiceFee)) {
-              if (confirm(`金幣不足！本次練習需要 ${practiceFee} 金幣（${effectiveCount} 題 × ${FEE_PER_Q}，全對可全額賺回），目前只有 ${coins} 金幣\n\n要去看廣告賺金幣嗎？`)) navigate('/?reward=1')
+              if (confirm(`金幣不足！本次練習需要 ${practiceFee} 金幣（${effectiveCount} 題 × ${FEE_PER_Q}，全對可全額賺回），目前只有 ${coins} 金幣\n\n要去${IS_NATIVE ? '看廣告賺金幣' : '金幣商店'}嗎？`)) navigate('/?reward=1')
               return
             }
             saveLastConfig({ stage, diff, count, customTime, customCount })

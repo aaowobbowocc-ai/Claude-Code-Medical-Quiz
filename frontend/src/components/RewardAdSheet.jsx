@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Sheet from './Sheet'
 import CoinAnimation from './CoinAnimation'
 import { useAdReward } from '../hooks/useAdReward'
+import { isNativeApp } from '../lib/admob'
 
 function formatCooldown(sec) {
   const m = Math.floor(sec / 60)
@@ -13,9 +14,42 @@ function formatCooldown(sec) {
 // Enabled via Monetag Direct Link (15-sec countdown, 300 coins/view, 10/day).
 const AD_REWARD_ENABLED = true
 
+// Web 端暫不開放 Monetag/AdSense 看廣告領金幣 — 2026-06-03 決定等 App 上線
+// 一起推。Native (Android/iOS App) 仍走 AdMob Rewarded 正常運作。
+const IS_NATIVE = isNativeApp()
+
 export default function RewardAdSheet({ onClose, onOpenShop }) {
   const { phase, setPhase, countdown, cooldownSec, info, showAd, getAdUrl, refreshInfo, rewardCoins, isSimulation } = useAdReward()
   const [showCoinAnim, setShowCoinAnim] = useState(false)
+
+  // Web 端預告：等 App 上線時開放 (Android 內測中、iOS Apple Developer 審核中)
+  if (!IS_NATIVE) {
+    return (
+      <Sheet onClose={onClose}>
+        <div className="text-center py-4">
+          <div className="text-5xl mb-3">📱</div>
+          <h2 className="text-xl font-bold text-medical-dark">觀看廣告領金幣</h2>
+          <p className="text-gray-400 text-sm mt-3 leading-relaxed">
+            此功能將在 App 版上線時一起開放！
+          </p>
+          <div className="bg-amber-50 rounded-2xl px-4 py-4 mt-4 mb-4">
+            <p className="text-amber-700 text-sm font-medium">🎬 Android / iOS App 即將推出</p>
+            <p className="text-amber-500 text-xs mt-1">每次觀看可獲得 300 金幣，每日最多 10 次</p>
+          </div>
+          {onOpenShop && (
+            <button onClick={() => { onClose(); onOpenShop() }}
+              className="w-full py-3 rounded-2xl font-bold text-sm text-amber-700 bg-amber-50 border border-amber-200 active:scale-95 mb-2">
+              ☕ 想立即取得金幣？前往金幣商店
+            </button>
+          )}
+          <button onClick={onClose}
+            className="w-full py-3 rounded-2xl font-bold text-gray-500 border border-gray-200 active:scale-95">
+            知道了
+          </button>
+        </div>
+      </Sheet>
+    )
+  }
 
   // Open the ad window SYNCHRONOUSLY inside the click handler so the browser
   // still treats it as a user gesture (avoids desktop popup blocker).

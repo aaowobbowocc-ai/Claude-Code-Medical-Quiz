@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { supabase } from '../lib/supabase'
+import { supabase, readAuthFromStorage } from '../lib/supabase'
 import { usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
@@ -13,13 +13,15 @@ export default function CoinGrantModal() {
     if (!supabase || !hydrated) return
     let cancelled = false
     ;(async () => {
-      const { data: { session } } = await supabase.auth.getSession()
-      const user = session?.user
-      if (!user || user.is_anonymous) return
+      // sync 讀 auth，避免 await supabase.auth.getSession() 在 Capacitor Native /
+      // 某些 Supabase v2 cache 狀態下 hang/回空。詳見
+      // [[feedback_supabase_no_getsession]]。
+      const { user_id } = readAuthFromStorage()
+      if (!user_id) return
       const { data, error } = await supabase
         .from('user_coin_grants')
         .select('id, coins, reason, from_name, created_at')
-        .eq('user_id', user.id)
+        .eq('user_id', user_id)
         .is('claimed_at', null)
         .order('created_at', { ascending: true })
         .limit(1)
@@ -34,12 +36,12 @@ export default function CoinGrantModal() {
     if (!grant || claiming) return
     setClaiming(true)
     try {
-      // Atomic server-side claim — 避免 fire-and-forget 導致金幣丟失 bug
-      const { data: { session } } = await supabase.auth.getSession()
-      if (!session?.access_token) throw new Error('No session')
+      // sync 讀 token，同上理由不用 getSession
+      const { token } = readAuthFromStorage()
+      if (!token) throw new Error('No session')
       const res = await fetch(`${BACKEND}/api/grants/claim`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${session.access_token}` },
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ grant_id: grant.id }),
       })
       if (!res.ok) {

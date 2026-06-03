@@ -351,19 +351,47 @@ function registerJkosRoutes(app, supabase) {
       }
 
       // 三道防護全過 → 入帳
-      await supabase.from('coin_orders').update({
-        status: 'paid',
-        provider_order_id: tradeNo,
-        paid_at: new Date().toISOString(),
-        raw_callback: req.body,
-      }).eq('order_id', platform_order_id)
+      // Optimistic concurrency guard: 只在 status='pending' 時 update 並回傳 row。
+      // 街口 callback 可能 retry 重送 (2^n 秒最多 12 次)，第一次成功後 status
+      // 已是 paid，第二次此 update 影響 0 rows，下面入帳邏輯就 skip。
+      const { data: claimedRows, error: claimErr } = await supabase
+        .from('coin_orders')
+        .update({
+          status: 'paid',
+          provider_order_id: tradeNo,
+          paid_at: new Date().toISOString(),
+          raw_callback: req.body,
+        })
+        .eq('order_id', platform_order_id)
+        .eq('status', 'pending')
+        .select('order_id, user_id, coins, tier, amount_twd')
 
-      if (order.user_id) {
+      if (claimErr) {
+        console.error('coin_orders update failed', claimErr)
+        return res.status(500).json({ error: 'db error' })
+      }
+      if (!claimedRows || claimedRows.length === 0) {
+        // 已被 retry 的另一個 callback 領走，安全 noop
+        return res.status(200).send('OK')
+      }
+      const claimed = claimedRows[0]
+
+      // 自動入帳：直接加 profiles.coins (匿名訂單 user_id 為空就 skip)。
+      // grant 同時 insert 作 audit 紀錄，但 claimed_at 立即填好 = 不會觸發
+      // CoinGrantModal 的「未領取」popup，使用者體驗就是「付完馬上有錢」。
+      if (claimed.user_id) {
+        const { data: profile } = await supabase
+          .from('profiles').select('coins').eq('user_id', claimed.user_id).single()
+        const newCoins = (profile?.coins || 0) + claimed.coins
+        await supabase.from('profiles')
+          .update({ coins: newCoins })
+          .eq('user_id', claimed.user_id)
         await supabase.from('user_coin_grants').insert({
-          user_id: order.user_id,
-          coins: order.coins,
-          reason: `付費充值 (${order.tier} 方案 NT$${order.amount_twd})`,
+          user_id: claimed.user_id,
+          coins: claimed.coins,
+          reason: `付費充值 (${claimed.tier} 方案 NT$${claimed.amount_twd})`,
           from_name: '街口支付',
+          claimed_at: new Date().toISOString(),
         })
       }
 

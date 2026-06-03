@@ -270,12 +270,20 @@ export default function CoinShopSheet({ onClose }) {
             >
               確認付款 NT${tier.price}
             </button>
-            <button
-              onClick={() => setStep('select')}
-              className="w-full py-2.5 rounded-2xl text-sm text-gray-400 active:bg-gray-50"
-            >
-              返回修改
-            </button>
+            <div className="flex gap-2">
+              <button
+                onClick={() => setStep('select')}
+                className="flex-1 py-2.5 rounded-2xl text-sm text-gray-500 border border-gray-200 active:bg-gray-50"
+              >
+                返回修改
+              </button>
+              <button
+                onClick={handleClose}
+                className="flex-1 py-2.5 rounded-2xl text-sm text-gray-400 active:bg-gray-50"
+              >
+                不買了
+              </button>
+            </div>
           </>
         )}
 
@@ -319,15 +327,15 @@ export default function CoinShopSheet({ onClose }) {
             </p>
             <div className="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-4 mb-5">
               <p className="text-amber-700 font-bold text-lg">
-                🪙 +{tier.coins.toLocaleString()} 金幣已準備好
+                🪙 +{tier.coins.toLocaleString()} 金幣已自動入帳
               </p>
               <p className="text-amber-600 text-xs mt-2">
-                點下方按鈕領取，自動入帳到你的金幣餘額。
+                感謝你的支持，繼續加油！
               </p>
             </div>
             <button onClick={() => { handleClose(); window.location.reload() }}
               className="px-10 py-3 rounded-2xl font-bold text-white active:scale-95 grad-cta">
-              領取金幣 →
+              繼續練習
             </button>
           </div>
         )}

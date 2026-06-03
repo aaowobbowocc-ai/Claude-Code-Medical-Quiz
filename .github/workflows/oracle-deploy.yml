@@ -24,6 +24,12 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         env:
           GCP_SERVICE_ACCOUNT_JSON: ${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}
+          # 街口正式環境憑證 (2026-06-03 Leona 提供)。值放 GitHub Secrets 不入 git。
+          # 4 個都要設才會 sync 到 .env；任一缺漏就跳過 JKOS 區段（保留現有 .env 值）。
+          JKOS_API_HOST: ${{ secrets.JKOS_API_HOST }}
+          JKOS_API_KEY: ${{ secrets.JKOS_API_KEY }}
+          JKOS_SECRET_KEY: ${{ secrets.JKOS_SECRET_KEY }}
+          JKOS_STORE_ID: ${{ secrets.JKOS_STORE_ID }}
         with:
           host: ${{ secrets.ORACLE_HOST }}
           username: ubuntu
@@ -31,7 +37,7 @@ jobs:
           port: 22
           timeout: 60s
           command_timeout: 5m
-          envs: GCP_SERVICE_ACCOUNT_JSON
+          envs: GCP_SERVICE_ACCOUNT_JSON,JKOS_API_HOST,JKOS_API_KEY,JKOS_SECRET_KEY,JKOS_STORE_ID
           script: |
             set -e
             cd /home/ubuntu/app
@@ -59,6 +65,17 @@ jobs:
             sync_env VERTEX_SEARCH_ENGINE_ID  quiz-search_1779552716508
             sync_env VERTEX_SEARCH_LOCATION   global
             sync_env GOOGLE_APPLICATION_CREDENTIALS /home/ubuntu/app/backend/.gcp-key.json
+            # === 街口支付正式環境 ===
+            # 4 個 secret 都設才 sync，避免空值蓋掉現有正確值。
+            if [ -n "$JKOS_API_HOST" ] && [ -n "$JKOS_API_KEY" ] && [ -n "$JKOS_SECRET_KEY" ] && [ -n "$JKOS_STORE_ID" ]; then
+              sync_env JKOS_API_HOST    "$JKOS_API_HOST"
+              sync_env JKOS_API_KEY     "$JKOS_API_KEY"
+              sync_env JKOS_SECRET_KEY  "$JKOS_SECRET_KEY"
+              sync_env JKOS_STORE_ID    "$JKOS_STORE_ID"
+              echo "✓ JKOS env synced (host=$JKOS_API_HOST, store=$JKOS_STORE_ID)"
+            else
+              echo "⚠ JKOS secrets not all set in GitHub — skipping sync (keep current .env values)"
+            fi
             # === Phase 1 monetization feature flags ===
             # 想開啟哪個功能就改成 1（記得 Vercel env 也要同步開 VITE_FEATURE_*）
             sync_env FEATURE_AVATARS 1

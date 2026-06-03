@@ -978,8 +978,11 @@ app.post('/api/rewards/ad', async (req, res) => {
     const { data: { user }, error: authErr } = await supabase.auth.getUser(token)
     if (authErr || !user) return res.status(401).json({ error: 'Invalid token' })
     const { data: profile, error: fErr } = await supabase
-      .from('profiles').select('coins, ad_reward_today, last_ad_date').eq('user_id', user.id).single()
+      .from('profiles').select('coins, ad_reward_today, last_ad_date').eq('user_id', user.id).maybeSingle()
     if (fErr) return res.status(500).json({ error: fErr.message })
+    // 沒有 profile 列（前端 upsert 補建應已處理；此為防禦）— 回軟性 reason 而非
+    // 500，避免前端把它誤報成「廣告載入失敗」。
+    if (!profile) return res.json({ claimed: false, reason: 'no_profile' })
     const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
     const sameDay = profile.last_ad_date === today
     const oldCount = sameDay ? (profile.ad_reward_today || 0) : 0

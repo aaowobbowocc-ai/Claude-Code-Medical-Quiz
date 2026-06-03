@@ -19,7 +19,7 @@ const AD_REWARD_ENABLED = true
 const IS_NATIVE = isNativeApp()
 
 export default function RewardAdSheet({ onClose, onOpenShop }) {
-  const { phase, setPhase, countdown, cooldownSec, info, showAd, getAdUrl, refreshInfo, rewardCoins, isSimulation } = useAdReward()
+  const { phase, setPhase, failReason, countdown, cooldownSec, info, showAd, getAdUrl, refreshInfo, rewardCoins, isSimulation } = useAdReward()
   const [showCoinAnim, setShowCoinAnim] = useState(false)
 
   // Web 端預告：等 App 上線時開放 (Android 內測中、iOS Apple Developer 審核中)
@@ -187,20 +187,29 @@ export default function RewardAdSheet({ onClose, onOpenShop }) {
           </div>
         )}
 
-        {phase === 'error' && (
-          <div className="text-center">
-            <div className="w-full py-4 rounded-2xl bg-red-50 border border-red-200 mb-3">
-              <p className="text-red-600 font-bold">廣告載入失敗</p>
-              <p className="text-red-400 text-sm mt-1">
-                可能是瀏覽器擋彈出視窗，請允許後再試
-              </p>
+        {phase === 'error' && (() => {
+          // 依失敗原因給對的訊息，不要把「沒登入/網路/同步」全講成「廣告載入失敗」
+          const msg = {
+            no_auth:    { title: '請先登入', body: '登入後才能領取金幣，你的進度與金幣也會一起保存' },
+            no_profile: { title: '帳號資料同步中', body: '請稍候幾秒再按重試' },
+            network:    { title: '網路連線有問題', body: '請檢查網路後再試一次' },
+          }[failReason] || {
+            title: '廣告載入失敗',
+            body: IS_NATIVE ? '請稍後再試一次' : '可能是瀏覽器擋彈出視窗，請允許後再試',
+          }
+          return (
+            <div className="text-center">
+              <div className="w-full py-4 rounded-2xl bg-red-50 border border-red-200 mb-3">
+                <p className="text-red-600 font-bold">{msg.title}</p>
+                <p className="text-red-400 text-sm mt-1">{msg.body}</p>
+              </div>
+              <button onClick={() => { setPhase('idle'); refreshInfo() }}
+                className="mt-2 px-6 py-2 rounded-xl text-sm font-bold text-gray-500 bg-gray-100 active:scale-95">
+                重試
+              </button>
             </div>
-            <button onClick={() => { setPhase('idle'); refreshInfo() }}
-              className="mt-2 px-6 py-2 rounded-xl text-sm font-bold text-gray-500 bg-gray-100 active:scale-95">
-              重試
-            </button>
-          </div>
-        )}
+          )
+        })()}
 
         <p className="text-center text-xs text-gray-300 mt-4">
           廣告收益將全數用於維護伺服器與題庫更新

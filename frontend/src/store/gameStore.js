@@ -227,8 +227,20 @@ export const usePlayerStore = create(
       claimAdReward: async () => {
         // sync 讀，避免 Capacitor Native getSession hang。這條路線是 6/3 v1.0.1
         // 看廣告領金幣後一直顯示「廣告載入失敗」的真因 — getSession 回空 token。
-        const { token } = readAuthFromStorage()
+        const { token, user_id } = readAuthFromStorage()
         if (!token) return { success: false, reason: 'no_auth' }
+        // 確保雲端有 profile 列再領獎。原生 App hydrate 失敗的訪客（getSession hang）
+        // 可能還沒同步出 profile，後端領獎 .single() 找不到列會回失敗 → 影片白看。
+        // ignoreDuplicates upsert：缺列才用本機狀態補建（保住既有金幣）、已有列完全
+        // 不動，避免 cloud 覆蓋本機。詳見 [[feedback_supabase_no_getsession]]。
+        if (user_id) {
+          try {
+            await supabase.from('profiles').upsert(
+              { user_id, ...storeToDb(get()) },
+              { onConflict: 'user_id', ignoreDuplicates: true }
+            )
+          } catch (e) { console.warn('[ad] ensure profile failed:', e?.message) }
+        }
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
         try {
           const res = await fetch(`${BACKEND}/api/rewards/ad`, {

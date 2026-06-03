@@ -56,6 +56,7 @@ export function useAdReward() {
   const getAdRewardInfo = usePlayerStore(s => s.getAdRewardInfo)
 
   const [phase, setPhase] = useState('idle') // idle | loading | playing | success | error | cooldown | exhausted
+  const [failReason, setFailReason] = useState(null) // 'no_auth' | 'no_profile' | 'network' | null(真的廣告失敗)
   const [countdown, setCountdown] = useState(0)
   const [cooldownSec, setCooldownSec] = useState(0)
   const [info, setInfo] = useState({ watched: 0, remaining: 10, cooldownMs: 0 })
@@ -109,6 +110,7 @@ export function useAdReward() {
     if (preCheck.remaining <= 0) { setPhase('exhausted'); return false }
     if (preCheck.cooldownMs > 0) { setPhase('cooldown'); setCooldownSec(Math.ceil(preCheck.cooldownMs / 1000)); return false }
 
+    setFailReason(null)
     setPhase('loading')
 
     // 2026-05-28: server claim 失敗時更精確分類，避免「沒登入」「網路炸」也顯示「上限到」誤導
@@ -116,7 +118,7 @@ export function useAdReward() {
     function handleClaimFailure(result) {
       if (result.reason === 'cooldown') setPhase('cooldown')
       else if (result.reason === 'exhausted') { setPhase('exhausted'); refreshInfo() }
-      else setPhase('error')
+      else { setFailReason(result.reason || null); setPhase('error') }
     }
 
     // ── Native (Android/iOS) App: 走 AdMob Rewarded Video ────────────────
@@ -215,6 +217,7 @@ export function useAdReward() {
 
   return {
     phase, setPhase,
+    failReason,       // 領獎失敗原因：no_auth / no_profile / network / null
     countdown,        // simulation countdown seconds
     cooldownSec,      // cooldown remaining seconds
     info,             // { watched, remaining, cooldownMs }

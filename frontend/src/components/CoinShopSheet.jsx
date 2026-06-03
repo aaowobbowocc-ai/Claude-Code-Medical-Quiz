@@ -319,15 +319,15 @@ export default function CoinShopSheet({ onClose }) {
             </p>
             <div className="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-4 mb-5">
               <p className="text-amber-700 font-bold text-lg">
-                🪙 +{tier.coins.toLocaleString()} 金幣 grant 已建立
+                🪙 +{tier.coins.toLocaleString()} 金幣已準備好
               </p>
               <p className="text-amber-600 text-xs mt-2">
-                請至首頁【通知】領取，才會計入金幣餘額。
+                點下方按鈕領取，自動入帳到你的金幣餘額。
               </p>
             </div>
-            <button onClick={handleClose}
+            <button onClick={() => { handleClose(); window.location.reload() }}
               className="px-10 py-3 rounded-2xl font-bold text-white active:scale-95 grad-cta">
-              繼續練習
+              領取金幣 →
             </button>
           </div>
         )}

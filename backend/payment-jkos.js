@@ -34,13 +34,21 @@ const TIERS = {
   large:  { price: 150, coins: 28000 },
 }
 
-// 街口 callback 來源 IP allowlist（2026-05-21 街口 Leona 提供，UAT 與正式共用）
+// 街口 callback 來源 IP allowlist
 // 文件未提及 callback HMAC signature，安全模型靠：
 //   1. 來源 IP 白名單（這份）
 //   2. 商家反向 /inquiry 查證（必須成功才能放行）
 //   3. amount / status 自驗
 // 街口可能未來加新 IP，環境變數 JKOS_EXTRA_IPS 可加（逗號分隔）作快速補丁。
 const JKOS_IP_ALLOWLIST = new Set([
+  // 2026-06-03 Leona 提供正式環境 callback 來源 IPs
+  '210.17.19.154',
+  '210.17.19.129',
+  '210.17.103.201',
+  '124.108.142.123',
+  '34.81.95.170',
+  '35.187.144.191',
+  // 2026-05-21 UAT 環境舊白名單 — 上線後若 UAT 不再用可移除
   '125.227.158.50',
   '125.227.158.49',
   '220.133.77.56',
@@ -49,19 +57,26 @@ const JKOS_IP_ALLOWLIST = new Set([
   '35.244.159.28',
   '175.99.130.66',
   '175.99.130.82',
-  '35.187.144.191',
 ])
 
 function getExtraIps() {
   return (process.env.JKOS_EXTRA_IPS || '').split(',').map(s => s.trim()).filter(Boolean)
 }
 
-// Express + Oracle Cloud LB → 取得真實 client IP（信任 X-Forwarded-For 最右一個非自身的）
+// 取得 callback 來源 IP。重要：取「最右」XFF (LB 自己 append 的值)，不是最左。
+//
+// Oracle Cloud LB 收到請求時會 append 真實 TCP 源到 X-Forwarded-For 後面：
+//   client → LB → Express，XFF = "<client-supplied>, <real-tcp-source-from-LB>"
+//
+// 攻擊者可任意 set 自己 POST 的 X-Forwarded-For（例如假成街口 IP），但 LB
+// append 的那個值 (XFF 最右) 是 LB 親眼看到的 TCP 源，無法偽造。
+//
+// 之前用 parts[0] (最左) = 拿攻擊者自填的值 → 被任意繞過 IP allowlist。
 function getClientIp(req) {
   const xff = req.headers['x-forwarded-for']
   if (typeof xff === 'string' && xff.length) {
     const parts = xff.split(',').map(s => s.trim()).filter(Boolean)
-    if (parts.length) return parts[0]  // leftmost = original client
+    if (parts.length) return parts[parts.length - 1]  // rightmost = trusted LB hop
   }
   return req.ip || req.connection?.remoteAddress || ''
 }

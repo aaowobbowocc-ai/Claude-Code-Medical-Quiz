@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { assetUrl } from '../lib/assetUrl'
 
 export default function QuestionImages({ images, imageUrl, incomplete }) {
   const [expanded, setExpanded] = useState(null)
 
-  // Support both images array and single image_url string
-  const imgList = images?.length ? images : imageUrl ? [imageUrl] : []
+  // Support both images array and single image_url string.
+  // assetUrl(): 原生 App 把題目圖改成從 web host 載入（這些圖沒打包進 APK，見 assetUrl.js）
+  const imgList = (images?.length ? images : imageUrl ? [imageUrl] : []).map(assetUrl)
 
   // Show warning for incomplete questions (missing image or image-only options)
   if (incomplete === 'missing_image' && imgList.length === 0) {

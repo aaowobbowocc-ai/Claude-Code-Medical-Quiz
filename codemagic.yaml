@@ -52,6 +52,13 @@ workflows:
         script: |
           npx cap sync ios
 
+      - name: Strip bundled question images (load from web instead)
+        script: |
+          # 同 Android：question-images + signs 改從 examking.tw 載入，不打包進 IPA。
+          rm -rf ios/App/App/public/question-images
+          rm -rf ios/App/App/public/signs
+          echo "Stripped question-images + signs from iOS assets"
+
       - name: Install CocoaPods
         script: |
           cd ios/App
@@ -123,6 +130,15 @@ workflows:
       - name: Sync Capacitor → Android
         script: |
           npx cap sync android
+
+      - name: Strip bundled question images (load from web instead)
+        script: |
+          # question-images (~261MB) + signs (~14MB) 改從 examking.tw 載入
+          # （見 frontend/src/lib/assetUrl.js）。不打包進 APK → App 從 ~345MB
+          # 瘦到 ~70MB。strip 必須在 cap sync 之後、bundleRelease 之前。
+          rm -rf android/app/src/main/assets/public/question-images
+          rm -rf android/app/src/main/assets/public/signs
+          echo "Stripped question-images + signs from Android assets"
 
       - name: Build signed release AAB
         script: |

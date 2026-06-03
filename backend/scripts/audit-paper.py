@@ -182,26 +182,40 @@ def parse_questions(pdf_path):
 
 
 def parse_answers_for_subject(ans_pdf, subject):
-    """從 answer PDF 找指定 subject 的答案 row。"""
+    """座標式解析：答案 PDF 是多科目同頁的雙欄表格，linear 文字會把題段順序打亂、
+    且含 '#'（送分/答X或Y）的列會被舊 [ABCD]{10} regex 跳掉導致整片錯位。
+    改用座標：以 '科目名稱：{subject}' 為錨點，取其下方最近的答案 block，
+    每列用 x 對齊題段標頭（01/11/.../91）定位。'#' 回傳 None（送分，不 audit）。"""
+    import statistics
     doc = fitz.open(ans_pdf)
-    full = ''
-    for p in doc: full += p.get_text() + '\n'
-
-    idx = full.find(f'科目名稱：{subject}')
-    if idx < 0:
-        # try alt patterns
-        idx = full.find(subject)
-    if idx < 0:
-        return None
-    seg = full[idx:idx + 2500]
-    answer_strs = re.findall(r'\b([ABCD]{10})\b', seg)
-    if len(answer_strs) < 10:
-        return None
-    answers = {}
-    for i, s in enumerate(answer_strs[:10]):
-        for j, ch in enumerate(s):
-            answers[i*10 + j + 1] = ch
-    return answers
+    for pg in doc:
+        rects = pg.search_for(f'科目名稱：{subject}')
+        if not rects:
+            continue
+        ay = rects[0].y0
+        words = pg.get_text('words')  # (x0,y0,x1,y1,text,...)
+        # 題段標頭 01/11/.../91 → x（每個 range index 的欄位 x）
+        hdr = {}
+        for w in words:
+            if re.fullmatch(r'(01|11|21|31|41|51|61|71|81|91)', w[4]):
+                hdr.setdefault((int(w[4]) - 1) // 10, []).append(w[0])
+        if len(hdr) < 10:
+            continue
+        colx = {i: statistics.median(xs) for i, xs in hdr.items()}
+        # 答案列（10 字 ABCD#）且在錨點下方 → 取最近的 block
+        rows = [w for w in words if re.fullmatch(r'[ABCD#]{10}', w[4]) and w[1] > ay]
+        if not rows:
+            continue
+        by = min(w[1] for w in rows)
+        block = [w for w in rows if abs(w[1] - by) < 10]
+        answers = {}
+        for w in block:
+            ci = min(colx, key=lambda i: abs(w[0] - colx[i]))
+            for j, ch in enumerate(w[4]):
+                answers[ci * 10 + j + 1] = None if ch == '#' else ch
+        if len([v for v in answers.values() if v]) >= 10:
+            return answers
+    return None
 
 
 def load_current(year, session, subject):

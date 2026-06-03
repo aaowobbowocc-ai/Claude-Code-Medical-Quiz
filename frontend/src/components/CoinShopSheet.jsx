@@ -183,21 +183,32 @@ export default function CoinShopSheet({ onClose }) {
               </p>
             </div>
 
-            {/* 2026-05-28: 街口支付串接暫停（自動入帳流程未完成 + Google Play
-                Policy 對外部金流嚴格）。整個 JKOPay 流程隱藏，使用者只能走綠界。
-                未來金幣商店正式開放時，移除這段 + 把下方 TIERS UI 加回（grep TODO: coin-shop-launch） */}
-            <div className="bg-blue-50 border border-blue-200 rounded-2xl px-4 py-4 mb-4 text-sm text-blue-800 leading-relaxed">
-              <p className="font-bold mb-2">☕ 感謝你想支持平台</p>
-              <p className="mb-3">目前金幣商店暫停線上付款，請改走綠界贊助（信用卡 / ATM / 超商）。任何金額贊助後，金幣會在 1-2 天內手動補發到你帳號。</p>
-              <a
-                href="https://p.ecpay.com.tw/14E6254"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center bg-medical-blue hover:bg-medical-blue/90 text-white font-bold py-3 rounded-xl active:scale-95 transition-transform"
-              >
-                前往綠界贊助 →
-              </a>
-              <p className="text-[11px] text-blue-600 mt-2 text-center">贊助金額對照（參考）：NT$15 ≈ 2,000 金幣 · NT$50 ≈ 8,000 金幣 · NT$150 ≈ 28,000 金幣</p>
+            {/* 2026-06-03: 街口支付正式環境上線 (Leona 開通) — 恢復 3 個方案選擇
+                Web only (IS_NATIVE 上方 return 已擋 App)。流程：選方案 → confirm →
+                processing → success（金幣以 user_coin_grants 入帳，需到通知領取） */}
+            <div className="grid gap-3 mb-4">
+              {TIERS.map(t => (
+                <button
+                  key={t.id}
+                  onClick={() => { setSelected(t.id); setStep('confirm') }}
+                  className="relative w-full rounded-2xl px-4 py-4 bg-white border-2 border-gray-200 active:scale-[0.98] transition-transform text-left flex items-center gap-4 hover:border-amber-300"
+                >
+                  {t.tag && (
+                    <span className="absolute -top-2 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">
+                      {t.tag}
+                    </span>
+                  )}
+                  <div className="text-3xl shrink-0">{t.emoji}</div>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-bold text-medical-dark">{t.label}</p>
+                    <p className="text-xs text-amber-600 mt-0.5">🪙 {t.coins.toLocaleString()} 金幣</p>
+                  </div>
+                  <div className="text-right shrink-0">
+                    <p className="font-bold text-medical-dark text-lg">NT${t.price}</p>
+                    <p className="text-[10px] text-gray-400">街口支付</p>
+                  </div>
+                </button>
+              ))}
             </div>
 
             <div className="bg-gray-50 rounded-2xl px-4 py-3 mb-3 text-xs text-gray-500 leading-relaxed space-y-1">

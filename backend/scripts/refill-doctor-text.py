@@ -49,9 +49,9 @@ def doctor2_jobs(data):
     for (y, ses), code in sorted(papers.items()):
         yi = int(y)
         if yi >= 105 or (yi == 104 and ses == '第二次'):
-            c = '301'; ss = ['33', '44', '55', '66']
+            c = '302'; ss = ['11', '22', '33', '44']   # 醫學三四五六
         else:
-            c = '101'; ss = ['0103', '0104', '0105', '0106']
+            c = '102'; ss = ['0103', '0104', '0105', '0106']
         for subj, s in zip(DOCTOR2_SUBJ, ss):
             jobs.append((y, ses, code, subj, s, c))
     return jobs

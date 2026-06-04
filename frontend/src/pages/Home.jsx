@@ -684,7 +684,7 @@ export default function Home() {
               ['📚','備考攻略','考試重點整理','/guides'],
               ['🔍','全題庫搜尋','跨 52 考試 21 萬題','/search'],
               ['🏆','排行榜','每週排名','/leaderboard'],
-              ['💬','留言板','交流備考心得','/board'],
+              ['📊','我的數據','你的學習報告','/stats'],
               ...((FEATURE_FRAMES || FEATURE_AVATARS || FEATURE_AI_UNLIMITED || FEATURE_BADGES) ? [['🛒','商店','頭像/徽章/邊框/AI 無限','/shop']] : []),
               ...(FEATURE_SPONSORS ? [['🙏','感謝榜','贊助平台維運','/sponsors']] : []),
             ].map(([icon,title,sub,path]) => (

@@ -35,6 +35,7 @@ const Leaderboard  = lazy(() => import('./pages/Leaderboard'))
 const Weakness = lazy(() => import('./pages/Weakness'))
 const MockExam       = lazy(() => import('./pages/MockExam'))
 const Board          = lazy(() => import('./pages/Board'))
+const Stats          = lazy(() => import('./pages/Stats'))
 const Notes          = lazy(() => import('./pages/Notes'))
 const Privacy        = lazy(() => import('./pages/Privacy'))
 const Terms          = lazy(() => import('./pages/Terms'))
@@ -268,6 +269,7 @@ function AppRoutes() {
           <Route path="/weakness"     element={<Weakness />} />
           <Route path="/mock-exam"    element={<MockExam />} />
           <Route path="/board"       element={<Board />} />
+          <Route path="/stats"       element={<Stats />} />
           <Route path="/notes"      element={<Notes />} />
           <Route path="/privacy"    element={<Privacy />} />
           <Route path="/tos"        element={<Terms />} />

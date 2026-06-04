@@ -201,8 +201,10 @@ export default function Leaderboard() {
                   )}
                   <p className="font-bold text-gray-800 text-sm truncate">{p.name}</p>
                   {p.badgeIcon && (
-                    <span title={p.badgeName || ''} className="text-base leading-none">
-                      {p.badgeIcon}
+                    <span title={p.badgeName || ''}
+                      className="inline-flex items-center gap-1 shrink-0 leading-none text-[10px] font-bold px-2 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700">
+                      <span className="text-xs leading-none">{p.badgeIcon}</span>
+                      {p.badgeName && <span className="truncate max-w-[6rem]">{p.badgeName}</span>}
                     </span>
                   )}
                   {p.achievements && Object.entries(p.achievements).map(([aid, cnt]) => {

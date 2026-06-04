@@ -21,6 +21,53 @@ function rateColor(rate) {
   return { bar: '#ef4444', text: 'text-red-500', bg: 'bg-red-50' }                              // 弱
 }
 
+/* ── 各科正確率雷達圖（純 SVG）──────────────────────────
+ * 取作答最多的前 8 科避免太擠；rate 對應半徑，紅黃綠依整體弱強上色。 */
+function RadarChart({ subjects }) {
+  const pts = subjects.slice(0, 8)
+  const n = pts.length
+  if (n < 3) return null // 少於 3 科畫不出有意義的多邊形
+  const cx = 110, cy = 105, R = 78
+  const angle = i => (Math.PI * 2 * i) / n - Math.PI / 2
+  const at = (i, r) => [cx + r * Math.cos(angle(i)), cy + r * Math.sin(angle(i))]
+  const rings = [0.25, 0.5, 0.75, 1]
+  const dataPoly = pts.map((s, i) => at(i, R * s.rate).join(',')).join(' ')
+  const avgRate = pts.reduce((a, s) => a + s.rate, 0) / n
+  const stroke = avgRate >= 0.8 ? '#10b981' : avgRate >= 0.6 ? '#f59e0b' : '#ef4444'
+
+  return (
+    <svg viewBox="0 0 220 215" className="w-full max-w-xs mx-auto block">
+      {/* 同心多邊形格線 */}
+      {rings.map((rg, ri) => (
+        <polygon key={ri}
+          points={pts.map((_, i) => at(i, R * rg).join(',')).join(' ')}
+          fill="none" stroke="#e5e7eb" strokeWidth="1" />
+      ))}
+      {/* 軸線 + 標籤 */}
+      {pts.map((s, i) => {
+        const [ax, ay] = at(i, R)
+        const [lx, ly] = at(i, R + 14)
+        return (
+          <g key={i}>
+            <line x1={cx} y1={cy} x2={ax} y2={ay} stroke="#e5e7eb" strokeWidth="1" />
+            <text x={lx} y={ly} fontSize="8" fontWeight="600" fill="#6b7280"
+              textAnchor={Math.abs(lx - cx) < 5 ? 'middle' : lx > cx ? 'start' : 'end'}
+              dominantBaseline="middle">
+              {s.tag.length > 5 ? s.tag.slice(0, 5) : s.tag}
+            </text>
+          </g>
+        )
+      })}
+      {/* 資料區塊 */}
+      <polygon points={dataPoly} fill={stroke} fillOpacity="0.18" stroke={stroke} strokeWidth="2" />
+      {pts.map((s, i) => {
+        const [px, py] = at(i, R * s.rate)
+        return <circle key={i} cx={px} cy={py} r="2.5" fill={stroke} />
+      })}
+    </svg>
+  )
+}
+
 function StatCard({ value, label, sub }) {
   return (
     <div className="bg-white rounded-2xl border border-gray-100 px-3 py-3 text-center">
@@ -61,6 +108,12 @@ export default function Stats() {
   const totalAnswered = totalCorrect + totalWrong
   const overallRate = totalAnswered ? Math.round((totalCorrect / totalAnswered) * 100) : 0
   const weakest = answered.filter(s => s.total >= 5).slice(0, 3) // 弱→強，取前 3 弱
+  const radarSubjects = [...answered].sort((a, b) => b.total - a.total) // 雷達圖取作答最多的
+  const masteredSubjects = answered.filter(s => s.rate >= 0.8 && s.total >= 5).length
+  const ANSWER_TIERS = [100, 500, 1000, 3000, 10000]
+  const nextAnswerTier = ANSWER_TIERS.find(t => totalAnswered < t) || ANSWER_TIERS[ANSWER_TIERS.length - 1]
+  const STREAK_TIERS = [3, 7, 14, 30, 100]
+  const nextStreakTier = STREAK_TIERS.find(t => (loginStreak || 0) < t) || STREAK_TIERS[STREAK_TIERS.length - 1]
   const title = getLevelTitle(level)
   const examName = getExamConfig(exam)?.name || ''
   const expPct = Math.min(100, Math.round((exp / EXP_PER_LEVEL) * 100))
@@ -133,10 +186,47 @@ export default function Stats() {
               </div>
             )}
 
-            {/* ── 各科正確率 ── */}
+            {/* ── 里程碑（本機資料）── */}
+            <div className="bg-white rounded-2xl border border-gray-100 mt-4 p-4">
+              <p className="font-bold text-medical-dark mb-2.5">🏅 里程碑</p>
+              <div className="grid grid-cols-3 gap-2.5">
+                <div className="text-center">
+                  <div className="text-xl font-extrabold text-medical-dark">{masteredSubjects}</div>
+                  <div className="text-[10px] text-gray-500 mt-0.5">精通科目<br />(≥80%)</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl font-extrabold text-medical-dark">Lv.{level}</div>
+                  <div className="text-[10px] text-gray-500 mt-0.5">目前等級</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl font-extrabold text-medical-dark">{loginStreak || 0}<span className="text-xs font-bold text-gray-400">/{nextStreakTier}</span></div>
+                  <div className="text-[10px] text-gray-500 mt-0.5">連續登入<br />下個目標</div>
+                </div>
+              </div>
+              <div className="mt-3 pt-3 border-t border-gray-50">
+                <div className="flex items-baseline justify-between mb-1">
+                  <span className="text-xs font-semibold text-gray-500">累計答題里程碑</span>
+                  <span className="text-xs font-bold text-medical-blue">{totalAnswered} / {nextAnswerTier}</span>
+                </div>
+                <div className="h-2 rounded-full bg-gray-100 overflow-hidden">
+                  <div className="h-full rounded-full bg-medical-blue transition-all duration-500"
+                       style={{ width: `${Math.min(100, Math.round((totalAnswered / nextAnswerTier) * 100))}%` }} />
+                </div>
+              </div>
+            </div>
+
+            {/* ── 各科正確率（雷達圖 + 明細）── */}
             <div className="bg-white rounded-2xl border border-gray-100 mt-4 p-4">
               <p className="font-bold text-medical-dark mb-1">各科正確率</p>
-              <p className="text-[11px] text-gray-400 mb-2">由弱到強排序 · 紅&lt;60% 黃60-80% 綠&gt;80%</p>
+              {radarSubjects.length >= 3 && (
+                <>
+                  <RadarChart subjects={radarSubjects} />
+                  {radarSubjects.length > 8 && (
+                    <p className="text-center text-[10px] text-gray-400 -mt-1 mb-1">雷達圖顯示作答最多的 8 科</p>
+                  )}
+                </>
+              )}
+              <p className="text-[11px] text-gray-400 mt-2 mb-1">明細（由弱到強）· 紅&lt;60% 黃60-80% 綠&gt;80%</p>
               <div className="divide-y divide-gray-50">
                 {answered.map(s => <SubjectBar key={s.tag} s={s} />)}
               </div>

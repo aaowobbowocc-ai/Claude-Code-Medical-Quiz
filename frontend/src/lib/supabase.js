@@ -1,4 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
+import { Capacitor } from '@capacitor/core'
+import { App as CapApp } from '@capacitor/app'
+import { Browser } from '@capacitor/browser'
 
 const url = import.meta.env.VITE_SUPABASE_URL
 const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
@@ -7,16 +10,63 @@ if (!url || !anonKey) {
   console.warn('[supabase] VITE_SUPABASE_URL or VITE_SUPABASE_ANON_KEY missing — auth disabled')
 }
 
+const NATIVE = Capacitor.isNativePlatform()
+
+// 原生 App 的 Capacitor webview 上 navigator.locks 會把 Supabase 的 auth lock 卡死
+// → getSession / getUser / signInWithOAuth 全部 hang（這正是匿名 session 建不起來、
+// Google 登入一直「連線中…」的根因）。原生改用 pass-through lock 關掉鎖；web 維持
+// 預設（跨分頁鎖）。詳見 [[feedback_supabase_no_getsession]]。
+const passThroughLock = async (_name, _acquireTimeout, fn) => fn()
+
 export const supabase = url && anonKey ? createClient(url, anonKey, {
   auth: {
     persistSession: true,
     autoRefreshToken: true,
     detectSessionInUrl: true,
     storageKey: 'medking-auth',
+    ...(NATIVE ? { lock: passThroughLock } : {}),
   },
 }) : null
 
 export const isAuthEnabled = !!supabase
+
+// ─────────────────────────────────────────────────────────────────────────
+// 原生 App 的 Google OAuth（deep-link 版）
+// web 的 redirectTo=origin 在原生回不來（origin 是 https://localhost）。改用自訂
+// scheme：登完 Supabase 轉址到 tw.examking.app://auth-callback，OS 經 AndroidManifest
+// intent-filter / iOS URL scheme 把 App 叫回前景，appUrlOpen 觸發 → 換 session。
+// ─────────────────────────────────────────────────────────────────────────
+export const NATIVE_OAUTH_REDIRECT = 'tw.examking.app://auth-callback'
+
+async function completeNativeOAuth(rawUrl) {
+  try {
+    const u = new URL(rawUrl)
+    const code = u.searchParams.get('code')
+    if (code) {
+      await supabase.auth.exchangeCodeForSession(code)
+    } else if (u.hash && u.hash.includes('access_token')) {
+      const p = new URLSearchParams(u.hash.replace(/^#/, ''))
+      const access_token = p.get('access_token')
+      const refresh_token = p.get('refresh_token')
+      if (access_token && refresh_token) {
+        await supabase.auth.setSession({ access_token, refresh_token })
+      }
+    }
+    try { sessionStorage.removeItem(OAUTH_PENDING_KEY) } catch {}
+  } catch (e) {
+    console.error('[supabase] native OAuth callback failed:', e?.message)
+  } finally {
+    try { await Browser.close() } catch {}
+  }
+}
+
+if (NATIVE && supabase) {
+  CapApp.addListener('appUrlOpen', ({ url: openedUrl }) => {
+    if (openedUrl && openedUrl.startsWith(NATIVE_OAUTH_REDIRECT)) {
+      completeNativeOAuth(openedUrl)
+    }
+  })
+}
 
 /**
  * Ensure the user has a session. If none exists, sign in anonymously.
@@ -141,13 +191,22 @@ export async function linkOrSignInGoogle() {
   // wait for the real session instead of racing into signInAnonymously
   sessionStorage.setItem(OAUTH_PENDING_KEY, '1')
 
-  const { error } = await supabase.auth.signInWithOAuth({
+  const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
-    options: { redirectTo: window.location.origin },
+    options: {
+      redirectTo: NATIVE ? NATIVE_OAUTH_REDIRECT : window.location.origin,
+      skipBrowserRedirect: NATIVE,
+    },
   })
   if (error) {
     sessionStorage.removeItem(OAUTH_PENDING_KEY)
     return { error: error.message }
+  }
+  // 原生：signInWithOAuth 不會自己跳轉，拿 data.url 用系統瀏覽器開；登完 deep-link
+  // 回 appUrlOpen → completeNativeOAuth 換 session。
+  if (NATIVE && data?.url) {
+    try { await Browser.open({ url: data.url }) }
+    catch (e) { sessionStorage.removeItem(OAUTH_PENDING_KEY); return { error: e?.message || 'browser open failed' } }
   }
   return { signingIn: true }
 }
@@ -162,16 +221,21 @@ export async function switchGoogleAccount() {
     sessionStorage.setItem(OAUTH_RETURN_PATH_KEY, window.location.pathname + window.location.search)
   } catch {}
   sessionStorage.setItem(OAUTH_PENDING_KEY, '1')
-  const { error } = await supabase.auth.signInWithOAuth({
+  const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: {
-      redirectTo: window.location.origin,
+      redirectTo: NATIVE ? NATIVE_OAUTH_REDIRECT : window.location.origin,
+      skipBrowserRedirect: NATIVE,
       queryParams: { prompt: 'select_account' }, // force account picker even if already signed in
     },
   })
   if (error) {
     sessionStorage.removeItem(OAUTH_PENDING_KEY)
     return { error: error.message }
+  }
+  if (NATIVE && data?.url) {
+    try { await Browser.open({ url: data.url }) }
+    catch (e) { sessionStorage.removeItem(OAUTH_PENDING_KEY); return { error: e?.message || 'browser open failed' } }
   }
   return { switching: true }
 }

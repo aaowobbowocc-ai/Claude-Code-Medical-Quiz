@@ -39,17 +39,20 @@ export const isAuthEnabled = !!supabase
 export const NATIVE_OAUTH_REDIRECT = 'tw.examking.app://auth-callback'
 
 async function completeNativeOAuth(rawUrl) {
+  let ok = false
   try {
     const u = new URL(rawUrl)
     const code = u.searchParams.get('code')
     if (code) {
       await supabase.auth.exchangeCodeForSession(code)
+      ok = true
     } else if (u.hash && u.hash.includes('access_token')) {
       const p = new URLSearchParams(u.hash.replace(/^#/, ''))
       const access_token = p.get('access_token')
       const refresh_token = p.get('refresh_token')
       if (access_token && refresh_token) {
         await supabase.auth.setSession({ access_token, refresh_token })
+        ok = true
       }
     }
     try { sessionStorage.removeItem(OAUTH_PENDING_KEY) } catch {}
@@ -57,6 +60,12 @@ async function completeNativeOAuth(rawUrl) {
     console.error('[supabase] native OAuth callback failed:', e?.message)
   } finally {
     try { await Browser.close() } catch {}
+  }
+  // 登入成功後強制重整：native deep-link 回來時 onAuthStateChange 不一定能即時讓
+  // 名字/頭像/金幣更新（要手動重整才會）。重整後 App 用新 session 重新 hydrate →
+  // 立即顯示綁定帳號的資料。session 已 persist 到 localStorage，重整不會掉。
+  if (ok) {
+    setTimeout(() => { try { window.location.reload() } catch {} }, 200)
   }
 }
 

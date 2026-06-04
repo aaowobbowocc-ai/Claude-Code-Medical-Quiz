@@ -86,7 +86,7 @@ jobs:
             sync_env FEATURE_BADGES 1
             sync_env FEATURE_FRAMES 0
             sync_env FEATURE_AI_UNLIMITED 0
-            sync_env FEATURE_SPONSORS 0
+            sync_env FEATURE_SPONSORS 1
             # === GCP service account key — write JSON to .gcp-key.json ===
             # GoogleAuth 預設讀 GOOGLE_APPLICATION_CREDENTIALS 指向的檔案
             # 把 GitHub Secret 的 JSON 內容寫成檔案（chmod 600 限本人讀寫）

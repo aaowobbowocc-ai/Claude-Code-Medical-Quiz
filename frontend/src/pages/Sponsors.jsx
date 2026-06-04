@@ -151,7 +151,7 @@ export default function Sponsors() {
           </div>
         </div>
 
-        <p className="text-center text-stone-900 text-xs font-imperial font-semibold mt-3 leading-relaxed px-4">
+        <p className="text-center text-stone-900 text-sm font-imperial font-bold mt-3 leading-relaxed px-4">
           感謝以下諸君慷慨襄助<br />
           讓平台得以持續維運<br />
           為後來者點亮一盞燈
@@ -216,11 +216,11 @@ export default function Sponsors() {
               <div className="diamond-card">
                 <div className="diamond-card-inner py-6 px-5 text-center relative z-10">
                   <p className="font-imperial text-lg font-bold gold-text mb-1">
-                    你也想留名此榜？
+                    願邀你 一同點亮這盞燈
                   </p>
-                  <p className="text-xs text-stone-900 font-semibold mb-4 leading-relaxed font-imperial">
-                    贊助任意金額皆可<br />
-                    1-2 天內由站長親自將芳名敬錄此榜
+                  <p className="text-sm text-stone-900 font-bold mb-4 leading-relaxed font-imperial">
+                    無論金額多寡，都是支撐平台走下去的力量。<br />
+                    站長會在 1–2 天內，親手將你的芳名敬錄於此榜。
                   </p>
                   <a
                     href={ECPAY_URL}
@@ -230,8 +230,8 @@ export default function Sponsors() {
                   >
                     ☕ 用綠界贊助 ›
                   </a>
-                  <p className="text-[10px] text-stone-800 font-medium mt-3 font-imperial">
-                    自訂顯示名稱 或 匿名
+                  <p className="text-xs text-stone-900 font-semibold mt-3 font-imperial">
+                    可自訂顯示名稱，或選擇匿名
                   </p>
                 </div>
               </div>

@@ -209,7 +209,7 @@ function ExamArticle({ exam }) {
         <li><strong>AI 智慧解說：</strong>每道題目提供 AI 生成的詳細解析，包含答案說明、選項排除、記憶口訣與臨床應用。</li>
         <li><strong>錯題複習：</strong>自動追蹤答錯題目，利用間隔重複原理安排複習時機，有效鞏固弱項。</li>
         <li><strong><Link to="/browse" className="text-medical-blue underline">題庫瀏覽</Link>：</strong>可依科目、年度自由篩選練習範圍，針對弱科重點加強。</li>
-        <li><strong><Link to="/board" className="text-medical-blue underline">留言板</Link>：</strong>與其他{c.studentType}交流備考心得、分享讀書方法，互相鼓勵打氣。</li>
+        <li><strong><Link to="/stats" className="text-medical-blue underline">我的數據</Link>：</strong>查看你的等級、各科正確率、弱科分析與學習里程碑，掌握備考進度。</li>
         <li><strong><Link to="/leaderboard" className="text-medical-blue underline">排行榜</Link>：</strong>查看全台{c.studentType}的答題表現排名，激勵持續進步。</li>
       </ul>
 
@@ -980,7 +980,7 @@ export default function Home() {
             ['📚','備考攻略','考試重點整理','/guides'],
             ['🔍','全題庫搜尋','跨 52 考試 21 萬題','/search'],
             ['🏆','排行榜','每週排名','/leaderboard'],
-            ['💬','留言板','交流備考心得','/board'],
+            ['📊','我的數據','你的學習報告','/stats'],
             ...((FEATURE_FRAMES || FEATURE_AVATARS || FEATURE_AI_UNLIMITED || FEATURE_BADGES) ? [['🛒','商店','頭像/徽章/邊框/AI 無限','/shop']] : []),
             ...(FEATURE_SPONSORS ? [['🙏','感謝榜','贊助平台維運','/sponsors']] : []),
           ].map(([icon,title,sub,path]) => (

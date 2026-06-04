@@ -39,6 +39,15 @@ if (SENTRY_DSN && import.meta.env.PROD) {
       /Lock/i,             // 任何含 "Lock" 的訊息（Supabase 內建機制，永遠是雜訊）
       /AbortError/i,       // Supabase 取消請求觸發
       /stolen|steal/i,     // lock stealing 系列
+      // 第三方 App 內建瀏覽器(FB/LINE/Messenger 等)注入的效能記錄腳本，在其 WebView
+      // Java 橋接銷毀時報的錯，與本站程式無關、不影響使用者。
+      /Java object is gone/i,
+      /Java bridge/i,
+    ],
+    // 忽略來自第三方 in-app browser 注入腳本的錯誤（不是我們的程式碼）
+    denyUrls: [
+      /iabjs:/i,
+      /navigation_performance_logger/i,
     ],
   })
 }

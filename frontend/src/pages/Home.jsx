@@ -1028,6 +1028,12 @@ export default function Home() {
               </button>
             ))}
           </div>
+          {FEATURE_AVATARS && (
+            <button onClick={() => { setSheet(null); navigate('/shop?tab=avatars') }}
+                    className="w-full py-2.5 mb-4 rounded-xl font-bold text-sm text-medical-blue bg-medical-ice border border-medical-blue/30 active:scale-95 transition-transform flex items-center justify-center gap-1.5">
+              🛒 去商店挑更多頭像
+            </button>
+          )}
           <input autoFocus
                  className="w-full border-2 border-medical-blue rounded-xl px-4 py-3.5 text-lg text-center outline-none focus:border-medical-accent mb-4 font-medium"
                  value={inputName} onChange={e => setInputName(e.target.value)}

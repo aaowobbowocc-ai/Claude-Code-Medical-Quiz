@@ -122,19 +122,24 @@ export const usePlayerStore = create(
             return candidate ? candidate.slice(0, 12) : ''
           }
           if (row) {
-            // Cloud wins — overwrite local
-            set({ ...dbToStore(row), hydrated: true })
+            // Cloud wins — overwrite local.
+            // ⚠️ dbToStore 會「跳過 null 欄位」，所以 name/avatar 一定要在這裡明確設定，
+            // 否則雲端帳號這兩欄為 null 時，綁定前的匿名 name/avatar 會「漏」下來，
+            // 還會被下面 800ms 的 write-through 寫回雲端（造成綁定後名字/頭像沒換）。
+            const cloudName = row.name || deriveGoogleName() || ''
+            set({
+              ...dbToStore(row),
+              name: cloudName,
+              avatar: row.avatar || '👨‍⚕️',
+              hydrated: true,
+            })
             console.log('[profile] hydrated from cloud')
-            // If this row has empty name but user just linked Google, backfill from Google profile
-            if (!get().name) {
-              const filled = deriveGoogleName()
-              if (filled) {
-                set({ name: filled })
-                supabase.from('profiles').update({ name: filled }).eq('user_id', user.id).then(({ error: upErr }) => {
-                  if (upErr) console.warn('[profile] backfill name failed:', upErr.message)
-                  else console.log('[profile] backfilled name from Google:', filled)
-                })
-              }
+            // 雲端 name 原本為空、但有 Google 身分名 → 補寫回雲端讓它持久化
+            if (!row.name && cloudName) {
+              supabase.from('profiles').update({ name: cloudName }).eq('user_id', user.id).then(({ error: upErr }) => {
+                if (upErr) console.warn('[profile] backfill name failed:', upErr.message)
+                else console.log('[profile] backfilled name from Google:', cloudName)
+              })
             }
           } else {
             // First time on this user — upload current local state (handles migration).

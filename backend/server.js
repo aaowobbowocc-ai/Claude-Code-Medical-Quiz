@@ -438,6 +438,41 @@ function endGame(room) {
 
   const players = getRoomPlayers(room).sort((a, b) => b.score - a.score);
   io.to(room.code).emit('game_over', { players });
+  recordGameResults(room); // fire-and-forget，記錄有帳號玩家的戰績
+}
+
+// socket handshake.auth 帶來的 user_id（前端 getSocket 注入）。粗略驗 uuid 樣式。
+function getSocketUserId(socket) {
+  const uid = socket?.handshake?.auth?.userId;
+  return (typeof uid === 'string' && /^[0-9a-fA-F-]{16,40}$/.test(uid)) ? uid : null;
+}
+
+// 對戰結束寫 game_results：每個有 user_id 的玩家一列（AI/訪客跳過）。
+// 只記「至少 2 人(含 AI)」的場次，避免單人練習被當對戰。表不存在時 insert 會
+// 失敗 → catch 靜默（建表前不影響遊戲）。
+async function recordGameResults(room) {
+  if (!supabase) return;
+  try {
+    const all = [...room.players.values()].sort((a, b) => b.score - a.score);
+    if (all.length < 2) return;
+    const topScore = all[0]?.score ?? 0;
+    const total = all.length;
+    const rows = all
+      .map((p, i) => ({ p, rank: i + 1 }))
+      .filter(x => x.p.userId)
+      .map(({ p, rank }) => ({
+        user_id: p.userId,
+        room_code: room.code,
+        exam: room.exam,
+        score: p.score | 0,
+        rank,
+        total_players: total,
+        won: topScore > 0 && p.score === topScore,
+      }));
+    if (rows.length) await supabase.from('game_results').insert(rows);
+  } catch (e) {
+    console.warn('[game_results] record failed:', e.message);
+  }
 }
 
 // ── Socket events ────────────────────────────────────────────────────────
@@ -462,7 +497,7 @@ io.on('connection', (socket) => {
     const room = {
       code,
       hostId: socket.id,
-      players: new Map([[socket.id, { name: cleanName, avatar: cleanAvatar, badgeId, frameId, score: 0, ready: false, answered: false }]]),
+      players: new Map([[socket.id, { name: cleanName, avatar: cleanAvatar, badgeId, frameId, userId: getSocketUserId(socket), score: 0, ready: false, answered: false }]]),
       stage: 0,
       timerMode: 'auto',
       questions: [],
@@ -518,7 +553,7 @@ io.on('connection', (socket) => {
     const cleanAvatar = (typeof playerAvatar === 'string' ? playerAvatar : '').slice(0, 8) || '👨‍⚕️';
     const badgeId = cleanBadgeId(equippedBadgeId);
     const frameId = cleanFrameId(equippedFrameId);
-    room.players.set(socket.id, { name: cleanName, avatar: cleanAvatar, badgeId, frameId, score: 0, ready: false, answered: false });
+    room.players.set(socket.id, { name: cleanName, avatar: cleanAvatar, badgeId, frameId, userId: getSocketUserId(socket), score: 0, ready: false, answered: false });
     room.lastActivity = Date.now();
     socket.join(code.toUpperCase());
     socket.data.roomCode = code.toUpperCase();
@@ -555,7 +590,7 @@ io.on('connection', (socket) => {
     } else if (!room.players.has(socket.id)) {
       // New join (room still has space)
       if (room.players.size >= 4) { socket.emit('error', { message: '房間已滿' }); return; }
-      room.players.set(socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', badgeId, frameId, score: 0, ready: false, answered: false });
+      room.players.set(socket.id, { name: playerName, avatar: playerAvatar || '👨‍⚕️', badgeId, frameId, userId: getSocketUserId(socket), score: 0, ready: false, answered: false });
     }
     socket.join(code);
     socket.data.roomCode = code;

@@ -3,6 +3,7 @@ import { io } from 'socket.io-client'
 import { useNavigate } from 'react-router-dom'
 import { useGameStore, usePlayerStore } from '../store/gameStore'
 import { useAccuracyStore } from '../store/accuracyStore'
+import { readAuthFromStorage } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -18,6 +19,13 @@ export function getSocket() {
       reconnectionDelayMax: 5000,
       // websocket-only — avoids long-polling XHR pings that prevent backend sleep
       transports: ['websocket'],
+      // 帶 user_id 給後端記對戰戰績（game_results）。函式形式 → 每次連線即時讀，
+      // 同步讀 localStorage 不會 hang。沒登入就是 null（訪客戰績不記）。
+      auth: (cb) => {
+        let userId = null
+        try { userId = readAuthFromStorage().user_id || null } catch {}
+        cb({ userId })
+      },
     })
   }
   return socketInstance

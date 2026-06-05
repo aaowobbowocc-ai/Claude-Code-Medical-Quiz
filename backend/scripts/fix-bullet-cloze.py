@@ -171,19 +171,23 @@ def main():
                                  and not v.lstrip(''.join(chr(x) for x in range(BUL_LO, BUL_HI + 1)) + ' 　').strip() for v in vals)
                     if not broken: return
                     n = o.get('number'); pq = q.get(n)
-                    if not pq or not all(pq['opts'].get(k) for k in 'ABCD'):
+                    # cloze 才做 options-only 救援（2col 法學選項長易誤判，維持嚴格 stem 驗證）
+                    clean4 = pq and all(pq['opts'].get(k) for k in 'ABCD') and (layout != 'cloze' and True or len(set(pq['opts'].values())) == 4)
+                    if not pq or not all(pq['opts'].get(k) for k in 'ABCD') or not clean4:
                         skip += 1; return
                     op = norm(o.get('question', '')); pp = norm(pq['stem'])
-                    if not pp or not (op.startswith(pp[:24]) or pp.startswith(op[:24])):
-                        skip += 1; return
+                    stem_ok = pp and (op.startswith(pp[:24]) or pp.startswith(op[:24]))
+                    if not stem_ok and layout != 'cloze':
+                        skip += 1; return                 # 法學非 cloze：stem 不符就跳過
                     off = a.get(n)
-                    if apply:
-                        o['question'] = pq['stem']; o['options'] = dict(pq['opts'])
-                        if off:
-                            if off != o.get('answer'): nonlocal_change()
-                            o['answer'] = off
-                    if off and off != o.get('answer') and not apply:
+                    if off and off != o.get('answer'):
                         changed += 1
+                    if apply:
+                        o['options'] = dict(pq['opts'])
+                        if stem_ok:
+                            o['question'] = pq['stem']
+                        if off:
+                            o['answer'] = off
                     fixed += 1
                 else:
                     for v in o.values(): walk(v)

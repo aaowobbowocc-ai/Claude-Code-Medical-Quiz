@@ -122,14 +122,17 @@ def main():
                 if not broken:
                     return
                 n = o.get('number'); pq = q.get(n)
-                if not pq or len(pq['opts']) < 4 or not all(pq['opts'].get(k) for k in 'ABCD'):
+                clean4 = pq and all(pq['opts'].get(k) for k in 'ABCD') and len(set(pq['opts'].values())) == 4
+                if not clean4:
                     skip += 1; novalid.append(('NOPARSE', n, pq, o['options'], o.get('answer'), a.get(n))); return
-                # 驗證：重抽的乾淨題幹應為原（亂）題幹的前綴（原題幹＝乾淨+洩漏選項）
+                # 題幹驗證：重抽乾淨題幹為原（亂）題幹前綴 → 整題修；
+                # 文章內挖空型題幹抓到內文（STEM≠）但 4 選項乾淨 → 只補選項+答案、保留原題幹
                 op = norm(o.get('question', '')); pp = norm(pq['stem'])
-                if not pp or not (op.startswith(pp[:30]) or pp.startswith(op[:30])):
-                    skip += 1; novalid.append(('STEM≠', n, pq, o['options'], o.get('answer'), a.get(n))); return
+                stem_ok = pp and (op.startswith(pp[:30]) or pp.startswith(op[:30]))
                 if apply:
-                    o['question'] = pq['stem']; o['options'] = dict(pq['opts'])
+                    o['options'] = dict(pq['opts'])
+                    if stem_ok:
+                        o['question'] = pq['stem']
                     if a.get(n):
                         o['answer'] = a[n]
                 fixed += 1

@@ -180,7 +180,8 @@ export default function Leaderboard() {
           // PR mode: display PR percentile as the primary metric; raw score → sub-line.
           // Score mode: display score as primary; correct/total → sub-line.
           const quotaRow = showPR && (p.selectionType === 'quota' || !p.selectionType)
-          const tier = FEATURE_RANK_FRAMES ? tierOfRank(p.globalRank) : 'none'
+          // 段位依「全站當週名次」globalRank；後端未提供時退回畫面名次 i+1（'all' 視圖等同）
+          const tier = FEATURE_RANK_FRAMES ? tierOfRank(p.globalRank ?? i + 1) : 'none'
           const framed = tier !== 'none'
           const rowKey = `${p.name}-${p.examId || ''}`
           const body = (

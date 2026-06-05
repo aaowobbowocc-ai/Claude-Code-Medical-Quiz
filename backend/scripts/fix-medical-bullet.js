@@ -8,9 +8,14 @@ const fs = require('path') && require('fs')
 const { fetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher')
 const { parseColumnAware, parseAnswersColumnAware } = require('./lib/moex-column-parser')
 
-// {file, code, c, s, tags:[subject_tag...]}  — s 對應的實體卷，tags 為該卷涵蓋的細分類
+// {file, code, c, s}  — 不需 tags：靠 concat 防呆，跨卷錯題不會通過串接比對
 const JOBS = [
-  { file: 'questions-nursing.json', code: '104030', c: '109', s: '0107', tags: ['microimmun', 'pharmacology', 'physiology'] },
+  { file: 'questions-nursing.json', code: '104030', c: '109', s: '0107' },
+  { file: 'questions-nursing.json', code: '107030', c: '106', s: '0503' },
+  { file: 'questions-nursing.json', code: '107030', c: '106', s: '0505' },
+  { file: 'questions-nursing.json', code: '108020', c: '106', s: '0503' },
+  { file: 'questions-nursing.json', code: '108110', c: '106', s: '0502' },
+  { file: 'questions-nursing.json', code: '108110', c: '106', s: '0505' },
 ]
 
 const UA = 'Mozilla/5.0'
@@ -43,7 +48,7 @@ async function main() {
     const arr = Array.isArray(data) ? data : data.questions
     let fix = 0, change = 0, skip = 0
     for (const o of arr) {
-      if (String(o.exam_code) !== job.code || !job.tags.includes(o.subject_tag)) continue
+      if (String(o.exam_code) !== job.code) continue
       if (!o.options || typeof o.options !== 'object') continue
       const vals = ['A', 'B', 'C', 'D'].map(k => o.options[k])
       if (!vals.some(isBulLead)) continue                       // 非壞題
@@ -60,7 +65,7 @@ async function main() {
       } else if (off && off !== o.answer) change++
       fix++
     }
-    console.log(`${job.code} s=${job.s} ${job.tags.join('/')}: 修 ${fix} (答案變 ${change}) 跳過 ${skip}`)
+    console.log(`${job.code} c=${job.c} s=${job.s}: 修 ${fix} (答案變 ${change}) 跳過 ${skip}`)
     grandFix += fix; grandChange += change; grandSkip += skip
   }
   if (APPLY) {

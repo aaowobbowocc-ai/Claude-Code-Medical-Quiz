@@ -34,15 +34,6 @@ function cornerMarkup(t) {
   if (t.corner === 'simpleGem') return gemCorner(t.m, t.g, true)
   return gemCorner(t.m, t.g, false)
 }
-function rosetteMarkup(m, g) {
-  return `<g transform="translate(13,13)" class="rf-gemtwinkle">
-    ${[...Array(8)].map((_, k) => `<circle cx="0" cy="-10" r="1.2" fill="url(#${m})" transform="rotate(${k * 45})"/>`).join('')}
-    <circle r="8" fill="none" stroke="url(#${m})" stroke-width="2.4"/>
-    <circle r="8" fill="none" stroke="#fff" stroke-width=".5" opacity=".4"/>
-    <polygon points="0,-6 4.2,-4.2 6,0 4.2,4.2 0,6 -4.2,4.2 -6,0 -4.2,-4.2" fill="${g}" stroke="#fff" stroke-width=".6" stroke-opacity=".7"/>
-    <polygon points="0,-6 4.2,-4.2 0,0 -4.2,-4.2" fill="#fff" opacity=".5"/>
-  </g>`
-}
 function wingEmblemMarkup(m, g) {
   return `<g fill="url(#${m})" stroke="#7a4d00" stroke-width=".8">
       <path d="M30 18 q-10 -10 -26 -9 q6 5 4 9 q8 -3 13 1 q-7 0 -10 4 q9 -2 19 -6 Z"/>
@@ -52,16 +43,6 @@ function wingEmblemMarkup(m, g) {
     <polygon points="36,4 42,16 36,16 30,16" fill="#fff" opacity=".5"/>
     <circle cx="36" cy="16" r="1.5" fill="#fff"/>`
 }
-function vineURI(c1, c2, gem) {
-  const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='30' height='18' viewBox='0 0 30 18'>
-    <defs><linearGradient id='v' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='${c2}'/><stop offset='1' stop-color='${c1}'/></linearGradient></defs>
-    <path d='M0 11 q7 -9 15 0 q8 9 15 0' fill='none' stroke='url(#v)' stroke-width='2.2' stroke-linecap='round'/>
-    <path d='M15 4 q-3 -4 -7 -3 q3 4 7 3 Z' fill='${c1}'/><path d='M15 4 q3 -4 7 -3 q-3 4 -7 3 Z' fill='${c1}'/>
-    <circle cx='15' cy='3.4' r='1.5' fill='${gem}'/><circle cx='2' cy='10.4' r='1' fill='${c2}'/><circle cx='28' cy='10.4' r='1' fill='${c2}'/>
-  </svg>`
-  return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`
-}
-
 const Corner = ({ pos, html }) => (
   <svg className={`rf-corner ${pos}`} viewBox="0 0 40 40" dangerouslySetInnerHTML={{ __html: html }} />
 )
@@ -70,7 +51,6 @@ export default function RankFrame({ tier, className = '', children }) {
   const t = CFG[tier]
   if (!t) return <div className={className}>{children}</div>
   const cm = cornerMarkup(t)
-  const vbg = t.vine ? vineURI(...t.vine) : null
   return (
     <div className={`rankframe rf-${tier} ${t.pat ? 'rf-pat' : ''} ${className}`}>
       {t.emblem && (
@@ -80,14 +60,8 @@ export default function RankFrame({ tier, className = '', children }) {
       {['tl', 'tr', 'bl', 'br'].map((p) => <Corner key={p} pos={p} html={cm} />)}
       {t.mid && (
         <>
-          <svg className="rf-mid top" viewBox="0 0 26 26" dangerouslySetInnerHTML={{ __html: rosetteMarkup(t.m, t.g) }} />
-          <svg className="rf-mid bot" viewBox="0 0 26 26" dangerouslySetInnerHTML={{ __html: rosetteMarkup(t.m, t.g) }} />
-        </>
-      )}
-      {vbg && (
-        <>
-          <div className="rf-edge top" style={{ backgroundImage: vbg }} />
-          <div className="rf-edge bot" style={{ backgroundImage: vbg }} />
+          <div className="rf-edge top" />
+          <div className="rf-edge bot" />
         </>
       )}
       <div className="rf-inner">{children}</div>

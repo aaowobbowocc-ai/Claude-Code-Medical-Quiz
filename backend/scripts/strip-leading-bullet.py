@@ -20,7 +20,7 @@ def fix_val(v):
     while i < len(v) and (ord(v[i]) in BUL or ord(v[i]) in SPACE):
         i += 1
     nv = v[i:]
-    if len(nv.strip()) < 2:               # 剝完幾乎沒東西 → 不動
+    if not nv.strip():                    # 剝完「完全空」才跳過（單字選項如 甲/乙/縣/省 要保留）
         return v, False
     return nv, (nv != v)
 

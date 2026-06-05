@@ -13,14 +13,10 @@ BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
 TMP = Path('_tmp/bullet-cloze'); TMP.mkdir(parents=True, exist_ok=True)
 BUL_LO, BUL_HI = 0xE18C, 0xE18F
 
-# (json, code, c, s, subject_tag)
+# (json, code, c, s, subject_tag, layout)  layout: 'cloze'(英文4欄/1欄) | '2col'(法學2欄)
 JOBS = [
-    ('questions-customs.json',  '107050', '101', '0312', 'law_knowledge'),
-    ('questions-customs.json',  '105050', '101', 'probe', 'english'),
-    ('questions-police.json',   '107070', '401', 'probe', 'law_knowledge'),
-    ('questions-police.json',   '112070', '401', 'probe', 'law_knowledge'),
-    ('questions-police.json',   '107070', '401', 'probe', 'admin_law'),
-    ('questions-police.json',   '112070', '401', 'probe', 'admin_law'),
+    ('questions-customs.json',  '107050', '101', '0312', 'law_knowledge', '2col'),
+    ('questions-customs.json',  '105050', '101', '0202', 'english',       'cloze'),
 ]
 PROBE_S = ['0312', '0605', '0606', '0506', '0202', '0203', '0204', '0201', '0103', '0102',
            '0902', '0904', '0803', '0301', '0401', '0501', '0601']
@@ -85,6 +81,35 @@ def parse_questions(pdf, maxq=60):
     return res
 
 
+def parse_2col(pdf, maxq=60):
+    """2欄×2列版型（法學長選項）：依選項文字位置列主序 A=左上 B=右上 C=左下 D=右下。"""
+    doc = fitz.open(pdf); res = {}
+    for pg in doc:
+        words = [w for w in pg.get_text('words') if w[4].strip()]
+        qn = sorted([(int(w[4]), w[1]) for w in words
+                     if re.fullmatch(r'\d{1,2}', w[4]) and 1 <= int(w[4]) <= maxq and w[0] < 58], key=lambda t: t[1])
+        seq = []; last = -1
+        for n, y in qn:
+            if n > last: seq.append((n, y)); last = n
+        for k, (n, y0) in enumerate(seq):
+            y1 = seq[k + 1][1] if k + 1 < len(seq) else 1e9
+            region = [w for w in words if y0 <= w[1] < y1 and not is_bul(w[4])
+                      and not (re.fullmatch(r'\d{1,2}', w[4]) and w[0] < 58)]
+            rows = {}
+            for w in region: rows.setdefault(round(w[1] / 3), []).append(w)
+            # 選項列：同列同時有左欄(x<150)與右欄(305<x<365)起始字
+            optrows = [kk for kk in sorted(rows)
+                       if any(w[0] < 150 for w in rows[kk]) and any(305 < w[0] < 365 for w in rows[kk])]
+            if len(optrows) < 2: continue
+            r1, r2 = optrows[0], optrows[1]
+            cell = lambda rw, lo, hi: join_words([w for w in rw if lo <= w[0] < hi])
+            opts = {'A': cell(rows[r1], 55, 300), 'B': cell(rows[r1], 300, 480),
+                    'C': cell(rows[r2], 55, 300), 'D': cell(rows[r2], 300, 480)}
+            sw = [w for w in region if round(w[1] / 3) < r1]
+            res[n] = {'stem': re.sub(r'\s+', ' ', join_rows(sw)).strip(), 'opts': opts}
+    return res
+
+
 def parse_answers(pdf):
     pg = fitz.open(pdf)[0]; words = pg.get_text('words')
     labels = []; letters = []
@@ -123,14 +148,14 @@ def main():
     if '--only' in sys.argv: only = sys.argv[sys.argv.index('--only') + 1]
     grand_fix = grand_change = 0
     cache = {}
-    for jf, code, c, s, tag in JOBS:
+    for jf, code, c, s, tag, layout in JOBS:
         if only and code != only: continue
         if s == 'probe':
             s = probe_s(code, c, tag)
             if not s: print(f'⚠ {code}/{tag}: probe s 失敗'); continue
         qf = fetch('Q', code, c, s); af = fetch('S', code, c, s)
         if not qf or not af: print(f'⚠ {code} c={c} s={s}: PDF 失敗'); continue
-        q = parse_questions(qf); a = parse_answers(af)
+        q = (parse_2col(qf) if layout == '2col' else parse_questions(qf)); a = parse_answers(af)
         if jf not in cache:
             cache[jf] = json.load(open(jf, encoding='utf-8'))
         d = cache[jf]; qs = d if isinstance(d, list) else d.get('questions', d)

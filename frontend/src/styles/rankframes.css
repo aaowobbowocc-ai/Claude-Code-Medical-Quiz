@@ -1,0 +1,76 @@
+/**
+ * 排行榜段位框（長方形列框）。整列依段位變華麗框。
+ * 由 RankFrame.jsx 套用；class 來自 frames-preview-row.html v5 定稿。
+ * 段位：rf-bronze / rf-silver / rf-gold / rf-diamond / rf-king（rf-none 不套框）。
+ */
+
+.rankframe { position: relative; border-radius: 16px; padding: 3px; isolation: isolate; margin-top: 12px; }
+/* 王者頂徽較高，留更多空間 */
+.rankframe.rf-king { margin-top: 18px; }
+.rankframe .rf-inner {
+  position: relative; display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 13px; z-index: 1; overflow: hidden;
+}
+/* 內襯菱格暗紋（gold+ 才加 .rf-pat） */
+.rankframe.rf-pat .rf-inner::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; opacity: .5;
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 11px, rgba(255,255,255,.03) 11px 12px),
+    repeating-linear-gradient(-45deg, transparent 0 11px, rgba(255,255,255,.03) 11px 12px);
+}
+
+/* 角飾 / 邊條 / 中央玫瑰飾 / 頂徽 定位 */
+.rf-corner { position: absolute; width: 40px; height: 40px; z-index: 4; pointer-events: none; overflow: visible; }
+.rf-corner.tl { top: -8px; left: -8px; }
+.rf-corner.tr { top: -8px; right: -8px; transform: scaleX(-1); }
+.rf-corner.bl { bottom: -8px; left: -8px; transform: scaleY(-1); }
+.rf-corner.br { bottom: -8px; right: -8px; transform: scale(-1, -1); }
+.rf-edge { position: absolute; left: 32px; right: 32px; height: 18px; z-index: 3; pointer-events: none;
+  background-repeat: repeat-x; background-position: center; background-size: auto 100%; }
+.rf-edge.top { top: -9px; }
+.rf-edge.bot { bottom: -9px; transform: scaleY(-1); }
+.rf-mid { position: absolute; left: 50%; width: 26px; height: 26px; z-index: 5; pointer-events: none; }
+.rf-mid.top { top: -13px; transform: translateX(-50%); }
+.rf-mid.bot { bottom: -13px; transform: translateX(-50%); }
+.rf-emblem { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); z-index: 7;
+  filter: drop-shadow(0 0 5px #ffd24a); }
+
+.rf-gemtwinkle { animation: rf-tw 2.4s ease-in-out infinite; }
+@keyframes rf-tw { 0%,100%{opacity:.85} 50%{opacity:1; filter:brightness(1.35)} }
+
+/* ── 段位主題 ───────────────────────────────────────────────── */
+.rf-bronze { background: linear-gradient(135deg,#e8a76a,#8b4513 50%,#cd7f32); }
+.rf-bronze .rf-inner { background: linear-gradient(135deg,#2c1c10,#1a120b); }
+.rf-silver { background: linear-gradient(135deg,#fff,#9aa3ab 50%,#d7dde2); box-shadow: 0 0 8px #cbd5e155; }
+.rf-silver .rf-inner { background: linear-gradient(135deg,#1f2733,#141a22); }
+.rf-gold { background: linear-gradient(135deg,#fff3b0,#e0a516 45%,#a9760b);
+  box-shadow: 0 0 12px #f5c84a66, inset 0 0 6px #fff6; animation: rf-goldpulse 3s ease-in-out infinite; }
+@keyframes rf-goldpulse { 0%,100%{box-shadow:0 0 10px #f5c84a55} 50%{box-shadow:0 0 18px #f5c84a99} }
+.rf-gold .rf-inner { background: linear-gradient(135deg,#2a2008,#1c1605); }
+.rf-diamond { background: linear-gradient(115deg,#eafdff,#56cfe1 40%,#3a86ff 70%,#eafdff); background-size: 250% 250%;
+  box-shadow: 0 0 14px #56cfe177, inset 0 0 6px #fff7; animation: rf-diaflow 4s linear infinite; }
+@keyframes rf-diaflow { 0%{background-position:0% 50%} 100%{background-position:250% 50%} }
+.rf-diamond .rf-inner { background: linear-gradient(135deg,#0f2233,#0a1722); }
+.rf-king { background: linear-gradient(115deg,#fff0a8,#ff5e5e 35%,#a020f0 70%,#fff0a8); background-size: 300% 300%;
+  box-shadow: 0 0 22px #ff7bf088, 0 0 8px #ffd24a66; animation: rf-kingflow 3s linear infinite; }
+@keyframes rf-kingflow { 0%{background-position:0% 50%} 100%{background-position:300% 50%} }
+.rf-king .rf-inner { background: linear-gradient(135deg,#1a1030,#0d0820); }
+.rf-king .rf-inner::after {
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(105deg, transparent 40%, #ffffff55 50%, transparent 60%);
+  transform: translateX(-120%); animation: rf-sweep 3.2s ease-in-out infinite;
+}
+.rf-king .rf-inner > * { position: relative; z-index: 1; }
+@keyframes rf-sweep { 0%,55%{transform:translateX(-120%)} 100%{transform:translateX(120%)} }
+
+/* 框內文字（深色珠寶內襯 → 淺色字） */
+.rankframe .rf-name { color: #f1f5f9; }
+.rankframe .rf-sub { color: #94a3b8; }
+.rankframe .rf-score { color: #fff; }
+.rf-king .rf-name { color: #ffd9f6; text-shadow: 0 0 6px #ff7bf088; }
+.rf-diamond .rf-name { color: #aef0ff; }
+.rf-gold .rf-name { color: #ffe48a; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rf-gold, .rf-diamond, .rf-king, .rf-king .rf-inner::after { animation: none; }
+}

@@ -134,7 +134,9 @@ function registerRoutes(app) {
       } catch (e) { /* 014 not run yet — fine */ }
     }
 
-    const enriched = raw.map(d => {
+    // raw 已照 score 全域排序 → idx+1 即「全站當週名次」，用於段位框（全站總段位）。
+    // 即使之後套 category filter / slice，每位玩家仍帶著自己的 globalRank。
+    const enriched = raw.map((d, idx) => {
       const cat = d.exam_id ? (examIdToCategory[d.exam_id] || null) : null;
       const selection = d.exam_id ? (examIdToSelectionType[d.exam_id] || 'license') : 'license';
       const prof = d.user_id ? profileByUser[d.user_id] : null;
@@ -149,6 +151,7 @@ function registerRoutes(app) {
         examId: d.exam_id || null,
         category: cat,
         selectionType: selection,
+        globalRank: idx + 1,
         achievements: d.user_id ? (achievementsByUser[d.user_id] || {}) : {},
         avatar: prof?.avatar || null,
         frameId: prof?.frameId || null,

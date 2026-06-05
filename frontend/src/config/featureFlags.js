@@ -33,3 +33,7 @@ export const FEATURE_SPONSORS = envFlag('SPONSORS')
 
 // 徽章系統：金幣解鎖、單一裝備、顯示在 Leaderboard/PvP 名字旁
 export const FEATURE_BADGES = envFlag('BADGES')
+
+// 段位框：排行榜整列依當週名次套華麗段位框（王者/鑽石/黃金/白銀）+ 精緻名次獎牌
+// Phase 1＝即時段位視覺（依 globalRank）；預設 OFF，VITE_FEATURE_RANK_FRAMES=1 開啟
+export const FEATURE_RANK_FRAMES = envFlag('RANK_FRAMES')

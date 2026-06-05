@@ -2,6 +2,11 @@ import React, { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getLevelTitle, usePlayerStore } from '../store/gameStore'
 import AvatarWithFrame from '../components/AvatarWithFrame'
+import RankFrame from '../components/RankFrame'
+import RankMedal from '../components/RankMedal'
+import RankDefs from '../components/RankDefs'
+import { tierOfRank } from '../lib/rankTier'
+import { FEATURE_RANK_FRAMES } from '../config/featureFlags'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { getExamConfig, getCategoryMeta } from '../config/examRegistry'
 
@@ -151,6 +156,7 @@ export default function Leaderboard() {
 
       {/* List */}
       <div className="flex-1 px-4 py-4 flex flex-col gap-2.5">
+        {FEATURE_RANK_FRAMES && <RankDefs />}
         {loading && (
           <div className="flex items-center justify-center py-20">
             <span className="text-4xl animate-bounce">⚕️</span>
@@ -174,16 +180,15 @@ export default function Leaderboard() {
           // PR mode: display PR percentile as the primary metric; raw score → sub-line.
           // Score mode: display score as primary; correct/total → sub-line.
           const quotaRow = showPR && (p.selectionType === 'quota' || !p.selectionType)
-          return (
-            <div key={`${p.name}-${p.examId || ''}`}
-                 className={`flex items-center gap-3 px-4 py-3.5 rounded-2xl shadow-sm border ${
-                   i === 0 ? 'bg-amber-50 border-amber-200' :
-                   i === 1 ? 'bg-gray-50 border-gray-200' :
-                   i === 2 ? 'bg-orange-50 border-orange-200' :
-                   'bg-white border-gray-100'
-                 }`}>
-              <span className="text-2xl w-8 text-center shrink-0">
-                {MEDALS[i] || <span className="text-sm font-bold text-gray-400">{i + 1}</span>}
+          const tier = FEATURE_RANK_FRAMES ? tierOfRank(p.globalRank) : 'none'
+          const framed = tier !== 'none'
+          const rowKey = `${p.name}-${p.examId || ''}`
+          const body = (
+            <>
+              <span className="w-8 shrink-0 flex items-center justify-center text-2xl">
+                {framed
+                  ? <RankMedal rank={i + 1} />
+                  : (MEDALS[i] || <span className="text-sm font-bold text-gray-400">{i + 1}</span>)}
               </span>
               {/* Avatar + 邊框（FEATURE_FRAMES OFF 時 AvatarWithFrame 自動退化成純 emoji） */}
               <AvatarWithFrame
@@ -199,7 +204,7 @@ export default function Leaderboard() {
                       {badge.icon}{examShort || badge.label}
                     </span>
                   )}
-                  <p className="font-bold text-gray-800 text-sm truncate">{p.name}</p>
+                  <p className={`font-bold text-sm truncate ${framed ? 'rf-name' : 'text-gray-800'}`}>{p.name}</p>
                   {p.badgeIcon && (
                     <span title={p.badgeName || ''}
                       className="inline-flex items-center gap-1 shrink-0 leading-none text-[10px] font-bold px-2 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700">
@@ -219,25 +224,38 @@ export default function Leaderboard() {
                     )
                   })}
                 </div>
-                <p className="text-xs text-gray-400 mt-0.5">
+                <p className={`text-xs mt-0.5 ${framed ? 'rf-sub' : 'text-gray-400'}`}>
                   {p.level ? `${getLevelTitle(p.level).icon} ${getLevelTitle(p.level).title} · ` : ''}{p.played} 場 · 正確率 {p.pct}%
                 </p>
               </div>
               <div className="text-right shrink-0">
                 {quotaRow ? (
                   <>
-                    <p className="font-bold text-lg text-gray-800">PR {p.pr}</p>
-                    <p className="text-[10px] text-gray-400">{p.score} 分</p>
+                    <p className={`font-bold text-lg ${framed ? 'rf-score' : 'text-gray-800'}`}>PR {p.pr}</p>
+                    <p className={`text-[10px] ${framed ? 'rf-sub' : 'text-gray-400'}`}>{p.score} 分</p>
                   </>
                 ) : (
                   <>
-                    <p className="font-bold text-lg text-gray-800">{p.score}</p>
-                    <p className="text-[10px] text-gray-400">{p.correct}/{p.total}</p>
+                    <p className={`font-bold text-lg ${framed ? 'rf-score' : 'text-gray-800'}`}>{p.score}</p>
+                    <p className={`text-[10px] ${framed ? 'rf-sub' : 'text-gray-400'}`}>{p.correct}/{p.total}</p>
                   </>
                 )}
               </div>
-            </div>
+            </>
           )
+          return framed
+            ? <RankFrame key={rowKey} tier={tier}>{body}</RankFrame>
+            : (
+              <div key={rowKey}
+                   className={`flex items-center gap-3 px-4 py-3.5 rounded-2xl shadow-sm border ${
+                     i === 0 ? 'bg-amber-50 border-amber-200' :
+                     i === 1 ? 'bg-gray-50 border-gray-200' :
+                     i === 2 ? 'bg-orange-50 border-orange-200' :
+                     'bg-white border-gray-100'
+                   }`}>
+                {body}
+              </div>
+            )
         })}
       </div>
     </div>

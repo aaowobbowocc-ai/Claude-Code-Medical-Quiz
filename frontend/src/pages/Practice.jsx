@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { usePlayerStore } from '../store/gameStore'
 import { useSound } from '../hooks/useSound'
 import { useExplain, useReview } from '../hooks/useAI'
@@ -18,7 +18,7 @@ import ShareChallengeButton from '../components/ShareChallengeButton'
 import ReadingModePopover, { useReadingMode } from '../components/ReadingModePopover'
 import { getRandomQuestions, isExamSupportedByCDN } from '../lib/cdnQuestions'
 import { supabase } from '../lib/supabase'
-import { addWrong } from '../lib/wrongBank'
+import { addWrong, removeWrong } from '../lib/wrongBank'
 import { isNativeApp } from '../lib/admob'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
@@ -456,6 +456,15 @@ function PracticeGame({ config, onFinish, onExit }) {
     }
 
     async function load() {
+      // 錯題練習：直接用帶入的題組，不打 API
+      if (Array.isArray(config.presetQuestions) && config.presetQuestions.length > 0) {
+        if (!cancelled) {
+          setQuestions(config.presetQuestions)
+          setLoading(false)
+          setTimerActive(true)
+        }
+        return
+      }
       try {
         const data = useCDN
           ? await getRandomQuestions(exam, { stageId: config.stage, count: config.count, stages })
@@ -839,14 +848,19 @@ function PracticeResults({ result, config, onRestart, onHome }) {
     // 練習收 FEE_PER_Q(4)/題 虛擬成本（開始時扣）。結算依成績分級退幣，
     // 級距「不疊加、取最高」：基礎 1／及格(≥60%) 2／優秀(≥80%) 3／全對 4（幣/題）。
     // 退幣 = 總題數 × 級距費率，只有全對 4/題 才能打平，其餘淨虧。
-    const reward = total * rewardRatePerQ(pct)
-    addCoins(reward)
+    // 錯題練習未收費 → 不發金幣（避免免費刷幣）；一般練習照發
+    const reward = config.wrongMode ? 0 : total * rewardRatePerQ(pct)
+    if (reward) addCoins(reward)
     addExp(correct * 10)
     // 整理錯題（含 myAnswer）供歷史紀錄檢討 + 錯題夾
     const wrongQuestions = (result.log || []).filter(q => q && !isAnswerCorrect(q.user_answer, q.answer)).map(q => ({
       ...q, myAnswer: q.user_answer, correct: false,
     }))
     addWrong(wrongQuestions)
+    // 錯題練習：這次答對的題目 → 從錯題夾移除（精熟即消）
+    if (config.wrongMode) {
+      (result.log || []).forEach(q => { if (q && isAnswerCorrect(q.user_answer, q.answer)) removeWrong(q) })
+    }
     savePracticeRecord({
       stage: config.stage, diff: config.diff, count: config.count,
       correct, total, myScore: result.myScore, aiScore: result.aiScore,
@@ -921,16 +935,18 @@ function PracticeResults({ result, config, onRestart, onHome }) {
         )}
 
         <p className="text-white/60 text-sm text-center">
-          {(() => {
-            const cost = total * FEE_PER_Q
-            const rate = rewardRatePerQ(pct)
-            const back = total * rate
-            const loss = cost - back
-            const tier = rate === 4 ? '全對' : rate === 3 ? '優秀' : rate === 2 ? '及格' : '基礎'
-            return loss === 0
-              ? `🪙 ${tier}！每題 ${rate} 幣 ×${total} = ${back}，剛好打平 ✅`
-              : `🪙 ${tier}：每題 ${rate} 幣 = ${back} / 成本 ${cost}，淨虧 ${loss}`
-          })()}
+          {config.wrongMode
+            ? `✍️ 錯題練習：答對 ${correct} 題已從錯題夾移除，還有 ${total - correct} 題待加強`
+            : (() => {
+              const cost = total * FEE_PER_Q
+              const rate = rewardRatePerQ(pct)
+              const back = total * rate
+              const loss = cost - back
+              const tier = rate === 4 ? '全對' : rate === 3 ? '優秀' : rate === 2 ? '及格' : '基礎'
+              return loss === 0
+                ? `🪙 ${tier}！每題 ${rate} 幣 ×${total} = ${back}，剛好打平 ✅`
+                : `🪙 ${tier}：每題 ${rate} 幣 = ${back} / 成本 ${cost}，淨虧 ${loss}`
+            })()}
         </p>
 
         {/* Share challenge — Web Share API → clipboard fallback, deep-links receiver */}
@@ -977,8 +993,13 @@ function PracticeResults({ result, config, onRestart, onHome }) {
 /* ── Page entry ───────────────────────────────────────────────── */
 export default function Practice() {
   const navigate = useNavigate()
-  const [phase, setPhase]   = useState('setup')  // setup | game | results
-  const [config, setConfig] = useState(null)
+  const location = useLocation()
+  // 錯題練習：從錯題夾帶入題組 → 跳過設定頁直接作答
+  const wrongQs = Array.isArray(location.state?.wrongPractice) ? location.state.wrongPractice : null
+  const [phase, setPhase]   = useState(wrongQs?.length ? 'game' : 'setup')  // setup | game | results
+  const [config, setConfig] = useState(wrongQs?.length
+    ? { presetQuestions: wrongQs, stage: 0, count: wrongQs.length, diff: 'easy', wrongMode: true }
+    : null)
   const [result, setResult] = useState(null)
   const examId = usePlayerStore(s => s.exam) || 'doctor1'
   const examCfg = getExamConfig(examId)

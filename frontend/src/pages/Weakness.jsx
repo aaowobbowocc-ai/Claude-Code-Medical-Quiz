@@ -241,11 +241,16 @@ export default function Weakness() {
             </div>
           ) : (
             <>
+              <button onClick={() => navigate('/practice', { state: { wrongPractice: wrongQuestions } })}
+                className="w-full py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95 mb-2"
+                style={{ background: 'linear-gradient(135deg,#f97316,#ef4444)' }}>
+                ✍️ 練習錯題（重新作答 {wrongQuestions.length} 題）
+              </button>
               <div className="flex items-center gap-2 mb-3">
                 <button onClick={() => navigate('/review', { state: { questions: wrongQuestions, stage: '錯題夾' } })}
                   className="flex-1 py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95"
                   style={{ background: '#EF4444' }}>
-                  📋 一鍵檢討全部（{wrongQuestions.length} 題）
+                  📋 檢討（看答案解析）
                 </button>
                 <button onClick={() => {
                     if (confirm(`確定清空錯題夾？目前累積 ${wrongQuestions.length} 題`)) {

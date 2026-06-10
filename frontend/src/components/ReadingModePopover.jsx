@@ -15,8 +15,8 @@ import React, { useState, useRef, useEffect } from 'react'
 const STORAGE_PREFIX = 'reading-mode:'
 
 const LINE_HEIGHTS  = [1.5, 1.75, 2.0]
-const FONT_SIZES    = ['S', 'M', 'L']
-const FONT_PX       = { S: [14, 15], M: [16, 17], L: [18, 19] } // [desktop, mobile]
+const FONT_SIZES    = ['S', 'M', 'L', 'XL', 'XXL']
+const FONT_PX       = { S: [14, 15], M: [16, 17], L: [18, 19], XL: [20, 22], XXL: [23, 26] } // [desktop, mobile]
 const PARA_GAPS     = ['tight', 'loose']
 
 const DEFAULT_MEDICAL = { lineHeight: 1.75, fontSize: 'M', paraGap: 'loose' }
@@ -81,18 +81,15 @@ export default function ReadingModePopover({ examId, prominent = false, prefs, o
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className={`flex items-center justify-center rounded-lg transition-all active:scale-90
+        className={`flex items-end justify-center gap-px rounded-lg transition-all active:scale-90 leading-none
           ${prominent
-            ? 'w-8 h-8 bg-gray-100 hover:bg-gray-200 text-gray-500'
-            : 'w-6 h-6 text-gray-300 hover:text-gray-500'}`}
-        title="閱讀設定"
-        aria-label="閱讀設定"
+            ? 'px-2 h-8 bg-gray-100 hover:bg-gray-200 text-gray-600'
+            : 'px-1.5 h-7 text-gray-500 hover:text-medical-blue'}`}
+        title="字級／閱讀設定"
+        aria-label="字級／閱讀設定"
       >
-        <svg width={prominent ? 18 : 14} height={prominent ? 18 : 14} viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-        </svg>
+        <span className="font-bold" style={{ fontSize: prominent ? 17 : 16 }}>A</span>
+        <span className="font-bold" style={{ fontSize: prominent ? 11 : 10 }}>A</span>
       </button>
 
       {open && (

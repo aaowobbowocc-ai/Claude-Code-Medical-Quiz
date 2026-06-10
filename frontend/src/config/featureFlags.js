@@ -35,5 +35,6 @@ export const FEATURE_SPONSORS = envFlag('SPONSORS')
 export const FEATURE_BADGES = envFlag('BADGES')
 
 // 段位框：排行榜整列依當週名次套華麗段位框（王者/鑽石/黃金/白銀）+ 精緻名次獎牌
-// Phase 1＝即時段位視覺（依 globalRank）；預設 OFF，VITE_FEATURE_RANK_FRAMES=1 開啟
-export const FEATURE_RANK_FRAMES = envFlag('RANK_FRAMES')
+// 2026-06-10 正式上線（依 globalRank 即時段位視覺）。預設 ON；要關用 VITE_FEATURE_RANK_FRAMES=0
+export const FEATURE_RANK_FRAMES =
+  import.meta.env.VITE_FEATURE_RANK_FRAMES !== '0' && import.meta.env.VITE_FEATURE_RANK_FRAMES !== 'false'

@@ -5,6 +5,7 @@ import { useAccuracyStore } from '../store/accuracyStore'
 import { getExamConfig, getAllTagNames, getStageStyle } from '../config/examRegistry'
 import { getSubjectColor } from '../utils/subjectColors'
 import { getWrong, removeWrong, clearWrong, WRONG_BANK_MAX } from '../lib/wrongBank'
+import { rehydrateWrong } from '../lib/cdnQuestions'
 
 const MIN_ANSWERS = 5
 
@@ -79,6 +80,7 @@ export default function Weakness() {
   const [showReset, setShowReset] = useState(false)
   const [tab, setTab] = useState('stats')   // 'stats' | 'wrong'
   const [wrongVer, setWrongVer] = useState(0)
+  const [rehydrating, setRehydrating] = useState(false)
 
   const examConfig = getExamConfig(examType)
   const tagNames = getAllTagNames()
@@ -241,14 +243,26 @@ export default function Weakness() {
             </div>
           ) : (
             <>
-              <button onClick={() => navigate('/practice', { state: { wrongPractice: wrongQuestions } })}
-                className="w-full py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95 mb-2"
+              <button disabled={rehydrating}
+                onClick={async () => {
+                  setRehydrating(true)
+                  const fresh = await rehydrateWrong(wrongQuestions, examType).catch(() => wrongQuestions)
+                  setRehydrating(false)
+                  navigate('/practice', { state: { wrongPractice: fresh } })
+                }}
+                className="w-full py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95 mb-2 disabled:opacity-60"
                 style={{ background: 'linear-gradient(135deg,#f97316,#ef4444)' }}>
-                ✍️ 練習錯題（重新作答 {wrongQuestions.length} 題）
+                {rehydrating ? '載入最新題目…' : `✍️ 練習錯題（重新作答 ${wrongQuestions.length} 題）`}
               </button>
               <div className="flex items-center gap-2 mb-3">
-                <button onClick={() => navigate('/review', { state: { questions: wrongQuestions, stage: '錯題夾' } })}
-                  className="flex-1 py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95"
+                <button disabled={rehydrating}
+                  onClick={async () => {
+                    setRehydrating(true)
+                    const fresh = await rehydrateWrong(wrongQuestions, examType).catch(() => wrongQuestions)
+                    setRehydrating(false)
+                    navigate('/review', { state: { questions: fresh, stage: '錯題夾' } })
+                  }}
+                  className="flex-1 py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95 disabled:opacity-60"
                   style={{ background: '#EF4444' }}>
                   📋 檢討（看答案解析）
                 </button>

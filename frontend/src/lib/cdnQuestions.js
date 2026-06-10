@@ -168,6 +168,32 @@ export async function loadExamQuestions(examId) {
   return questions
 }
 
+// 錯題夾 re-hydrate：用最新題庫（依 id）覆蓋本地存的舊題目副本，避免顯示已修正前的壞版本。
+// 保留錯題夾本身的欄位（myAnswer/addedAt/examId）。examId 取自題目 stamp，缺則用 fallbackExamId。
+export async function rehydrateWrong(wrongQs, fallbackExamId) {
+  if (!Array.isArray(wrongQs) || wrongQs.length === 0) return wrongQs || []
+  const examIds = new Set()
+  for (const q of wrongQs) {
+    const e = (q && q.examId) || fallbackExamId
+    if (e && EXAM_FILES[e]) examIds.add(e)
+  }
+  if (examIds.size === 0) return wrongQs
+  const byId = new Map()
+  await Promise.all([...examIds].map(async (e) => {
+    try {
+      const list = await loadExamQuestions(e)
+      for (const q of list) if (q && q.id != null) byId.set(String(q.id), q)
+    } catch {}
+  }))
+  if (byId.size === 0) return wrongQs
+  return wrongQs.map(wq => {
+    const fresh = wq && wq.id != null ? byId.get(String(wq.id)) : null
+    return fresh
+      ? { ...wq, ...fresh, myAnswer: wq.myAnswer, addedAt: wq.addedAt, examId: wq.examId || fallbackExamId }
+      : wq
+  })
+}
+
 // ── Filter / sort helpers (mirror backend questions-api.js logic) ──────────
 
 function isSingleAnswer(q) {

@@ -82,7 +82,7 @@ export default function Results() {
       questionResults,
     })
     // 對戰答錯的也加入錯題夾
-    addWrong(questionResults.filter(q => !q.correct))
+    addWrong(questionResults.filter(q => !q.correct), usePlayerStore.getState().exam)
     // Submit to leaderboard — attach userId so achievements can be joined back.
     if (name && questionResults.length > 0) {
       const correct = questionResults.filter(q => q.correct).length

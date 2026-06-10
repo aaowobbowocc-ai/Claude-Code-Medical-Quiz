@@ -713,7 +713,7 @@ function ExamResults({ papers, navigate }) {
       localStorage.setItem(key, JSON.stringify(prev.slice(0, 20)))
     } catch {}
     // 自動加入錯題夾
-    addWrong(wrongQuestions)
+    addWrong(wrongQuestions, usePlayerStore.getState().exam)
     // Submit per-question stats
     const stats = allQuestions.filter(q => q.id).map((q, i) => {
       const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1

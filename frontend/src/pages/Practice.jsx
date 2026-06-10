@@ -856,7 +856,7 @@ function PracticeResults({ result, config, onRestart, onHome }) {
     const wrongQuestions = (result.log || []).filter(q => q && !isAnswerCorrect(q.user_answer, q.answer)).map(q => ({
       ...q, myAnswer: q.user_answer, correct: false,
     }))
-    addWrong(wrongQuestions)
+    addWrong(wrongQuestions, usePlayerStore.getState().exam)
     // 錯題練習：這次答對的題目 → 從錯題夾移除（精熟即消）
     if (config.wrongMode) {
       (result.log || []).forEach(q => { if (q && isAnswerCorrect(q.user_answer, q.answer)) removeWrong(q) })

@@ -26,8 +26,9 @@ function qKey(q) {
   return q.id || q.question?.slice(0, 80) || ''
 }
 
-// 加入錯題（陣列）。每題含原 question 物件 + myAnswer + addedAt。已存在的更新 addedAt 排到最前面。
-export function addWrong(wrongQs) {
+// 加入錯題（陣列）。每題含原 question 物件 + myAnswer + addedAt + examId（供日後 re-hydrate 取最新版）。
+// 已存在的更新 addedAt 排到最前面。
+export function addWrong(wrongQs, examId) {
   if (!Array.isArray(wrongQs) || wrongQs.length === 0) return
   const now = Date.now()
   const existing = load()
@@ -35,8 +36,8 @@ export function addWrong(wrongQs) {
   for (const wq of wrongQs) {
     const k = qKey(wq)
     if (!k) continue
-    // 重複錯題：保留 + 更新 addedAt
-    byKey.set(k, { ...wq, addedAt: now })
+    // 重複錯題：保留 + 更新 addedAt；蓋上 examId 方便之後用最新題庫覆蓋舊副本
+    byKey.set(k, { ...wq, examId: wq.examId || examId, addedAt: now })
   }
   // 依 addedAt 排序新→舊，cap 在 MAX
   const next = [...byKey.values()].sort((a, b) => (b.addedAt || 0) - (a.addedAt || 0)).slice(0, MAX)

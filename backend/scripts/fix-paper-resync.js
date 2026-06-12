@@ -8,6 +8,8 @@ const { fetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher')
 const { parseColumnAware, parseAnswersColumnAware } = require('./lib/moex-column-parser')
 const [file, code, c, s, tag] = process.argv.slice(2)
 const APPLY = process.argv.includes('--apply')
+// --no-answer：只修選項、不動答案（用於答案卷 parser 對該卷欄位錯位、原答案可信時）
+const NO_ANSWER = process.argv.includes('--no-answer')
 const UA = 'Mozilla/5.0', REF = 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx'
 const norm = x => (x || '').replace(/[-]/g, '').replace(/\s/g, '')
 
@@ -41,7 +43,7 @@ async function main() {
     const newCat = norm(['A','B','C','D'].map(k => p.options[k]).join('|'))
     const optDiff = curCat !== newCat
     // 現答案含逗號＝送分/雙答（如「A,D」），保留不覆蓋
-    const ansDiff = off && /^[ABCD]$/.test(off) && off !== o.answer && !/[,，]/.test(o.answer || '')
+    const ansDiff = !NO_ANSWER && off && /^[ABCD]$/.test(off) && off !== o.answer && !/[,，]/.test(o.answer || '')
     if (!optDiff && !ansDiff) { ok++; continue }
     if (optDiff) optFix++
     if (ansDiff) ansFix++

@@ -134,15 +134,16 @@ async function fetchWithTimeout(url, ms = 8000) {
 
 // Return full questions array for an exam. Caches in memory + IDB for 24h.
 // Throws if exam unknown or fetch fails (caller should fall back to backend).
-export async function loadExamQuestions(examId) {
-  if (memCache.has(examId)) return memCache.get(examId)
+export async function loadExamQuestions(examId, { forceFresh = false } = {}) {
+  if (!forceFresh && memCache.has(examId)) return memCache.get(examId)
 
   const file = EXAM_FILES[examId]
   if (!file) throw new Error(`No CDN file mapped for exam ${examId}`)
 
   const cacheKey = `${examId}:v${CACHE_VERSION}`
-  // Try IDB cache (silent on any failure)
-  try {
+  // Try IDB cache (silent on any failure). forceFresh 跳過快取讀取，直接抓網路最新版
+  // （用於錯題夾 re-hydrate：題目修正後同版本快取仍是舊的，必須繞過）。
+  if (!forceFresh) try {
     const cached = await idbGet(cacheKey)
     if (cached && cached.questions && Date.now() - cached.ts < CACHE_TTL_MS) {
       memCache.set(examId, cached.questions)
@@ -152,7 +153,8 @@ export async function loadExamQuestions(examId) {
 
   // Cache-bust query string forces jsDelivr edge to fetch fresh from GitHub
   // when @master ref is updated. CACHE_VERSION bump invalidates this batch.
-  const url = `${CDN_BASE}/${file}?v=${CACHE_VERSION}`
+  // forceFresh 另加時戳，連瀏覽器 HTTP 快取一起繞過（題目修正後同版本 URL 仍可能命中瀏覽器快取）。
+  const url = `${CDN_BASE}/${file}?v=${CACHE_VERSION}${forceFresh ? `&_=${Date.now()}` : ''}`
   const r = await fetchWithTimeout(url, 8000)
   if (!r.ok) throw new Error(`CDN fetch failed: ${r.status}`)
   const data = await r.json()
@@ -182,7 +184,8 @@ export async function rehydrateWrong(wrongQs, fallbackExamId) {
   const byId = new Map()
   await Promise.all([...examIds].map(async (e) => {
     try {
-      const list = await loadExamQuestions(e)
+      // forceFresh：繞過同版本的舊快取，確保抓到題目修正後的最新版
+      const list = await loadExamQuestions(e, { forceFresh: true })
       for (const q of list) if (q && q.id != null) byId.set(String(q.id), q)
     } catch {}
   }))

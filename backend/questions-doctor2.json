@@ -142219,14 +142219,17 @@
       "number": 31,
       "question": "35 歲男性從泰國旅遊回來一個月後出現腹瀉、右上腹疼痛和發燒，其糞便檢查（圖一）、腹部電腦斷層（圖二）如下，下列何項藥物是最適當的治療？",
       "options": {
-        "A": "圖一",
-        "B": "圖二",
-        "C": "ciprofloxacin",
-        "D": "teicoplanin"
+        "A": "ciprofloxacin",
+        "B": "teicoplanin",
+        "C": "vancomycin",
+        "D": "metronidazole"
       },
       "answer": "D",
       "explanation": "",
-      "image_dependent": true
+      "image_dependent": true,
+      "images": [
+        "/question-images/doctor2_115025524_0.webp"
+      ]
     },
     {
       "id": 115025525,

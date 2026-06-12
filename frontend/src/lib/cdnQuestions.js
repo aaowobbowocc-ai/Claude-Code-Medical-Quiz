@@ -8,7 +8,8 @@ const CDN_BASE = 'https://cdn.jsdelivr.net/gh/aaowobbowocc-ai/Claude-Code-Medica
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000  // 24h
 // v3 (2026-05-15): doctor2/tcm/nursing 102 大量題幹+選項重抽，強制刷新 jsDelivr + IndexedDB cache
 // v4 (2026-06-08): 護理112精神社區整卷校正、speech/audio位移、PUA/答案修正等大量更新，強制刷新
-const CACHE_VERSION = 4
+// v5 (2026-06-11): 補齊護理師 112/113/114 年第三次國考（746 題），強制刷新讓新場次顯示
+const CACHE_VERSION = 5
 const DB_NAME = 'questions-cache'
 const DB_STORE = 'exams'
 

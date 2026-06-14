@@ -247086,6 +247086,26 @@
     "explanation": ""
   },
   {
+    "id": "114170_obs_ped_7",
+    "roc_year": "114",
+    "session": "第三次",
+    "exam_code": "114170",
+    "subject": "產兒科護理學",
+    "subject_tag": "obstetric_nursing",
+    "subject_name": "產科護理學",
+    "stage_id": 10,
+    "number": 7,
+    "question": "陳女士，懷孕12 週又3 天，過去曾經在9 週時自然流產一次，家裡有3 個孩子，分別是40 週出生的女兒1 個、35 週出生的雙胞胎2 個，以孕產史記錄法，其產次應為？",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
     "id": "114170_obs_ped_8",
     "roc_year": "114",
     "session": "第三次",
@@ -248943,6 +248963,66 @@
       "D": "已完成治療的乳癌病人"
     },
     "answer": "C",
+    "explanation": ""
+  },
+  {
+    "id": "112180_basic_nursing_8",
+    "roc_year": "112",
+    "session": "第三次",
+    "exam_code": "112180",
+    "subject": "基礎醫學",
+    "subject_tag": "fundamental_nursing",
+    "subject_name": "解剖學",
+    "stage_id": 6,
+    "number": 8,
+    "question": "病人下肢水腫2+，醫囑「Lasix® 20 mg/tab 1# P.O. PC QD」，下列措施何者不適當？",
+    "options": {
+      "A": "請病人於早餐飯後服用",
+      "B": "衛教病人避免攝取含鉀之食物",
+      "C": "注意病人電解質的檢驗報告",
+      "D": "評估病人的攝入排出量"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "id": "114170_basic_medicine_43",
+    "roc_year": "114",
+    "session": "第三次",
+    "exam_code": "114170",
+    "subject": "基礎醫學",
+    "subject_tag": "microimmuno",
+    "subject_name": "解剖學",
+    "stage_id": 5,
+    "number": 43,
+    "question": "面對胞外細菌感染時，下列那種效應CD4+ T 細胞對強化嗜中性球驅化反應貢獻較大？",
+    "options": {
+      "A": "TH1",
+      "B": "TH2",
+      "C": "TH17",
+      "D": "Treg"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "id": "114170_basic_nursing_11",
+    "roc_year": "114",
+    "session": "第三次",
+    "exam_code": "114170",
+    "subject": "基礎醫學",
+    "subject_tag": "fundamental_nursing",
+    "subject_name": "解剖學",
+    "stage_id": 6,
+    "number": 11,
+    "question": "醫囑為「Digoxin 0.5# PO QOD」，下列敘述何者最適當？",
+    "options": {
+      "A": "每次藥物劑量為0.5 mg",
+      "B": "給藥途徑是舌下含服",
+      "C": "早晚給藥各一次",
+      "D": "兩天給藥一次"
+    },
+    "answer": "D",
     "explanation": ""
   }
 ]

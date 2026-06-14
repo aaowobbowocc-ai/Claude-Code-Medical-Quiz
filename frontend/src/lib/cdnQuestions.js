@@ -10,7 +10,8 @@ const CACHE_TTL_MS = 24 * 60 * 60 * 1000  // 24h
 // v4 (2026-06-08): 護理112精神社區整卷校正、speech/audio位移、PUA/答案修正等大量更新，強制刷新
 // v5 (2026-06-11): 補齊護理師 112/113/114 年第三次國考（746 題），強制刷新讓新場次顯示
 // v6 (2026-06-12): 強制失效 stale 的 nursing v5 快取（部分使用者在 propagation 窗口抓到舊內容→第三次/修正不顯示）
-const CACHE_VERSION = 6
+// v7 (2026-06-14): 全平台 1648 題「承上題」併入題組情境，隨機練習可單獨作答，強制刷新
+const CACHE_VERSION = 7
 const DB_NAME = 'questions-cache'
 const DB_STORE = 'exams'
 

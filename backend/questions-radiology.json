@@ -1561,7 +1561,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 78,
-      "question": "承上題， p53 的活化（ activation ）會導致下列何種現象發生？",
+      "question": "【題組情境】正常情況下，人體的腫瘤抑制基因（ tumor suppressor ） p53 會被 mdm2 所抑制。如果受到不正常 的刺激（如：游離輻射）時，則 p53 的活化（ activation ）會直接導致下列何基因表現之活化？\n\n承上題， p53 的活化（ activation ）會導致下列何種現象發生？",
       "options": {
         "A": "G 1 arrest",
         "B": "在 M 期之細胞數快速增加",
@@ -1602,7 +1602,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": "承上題，將補償器如此擺置的主要用意是下列何者？",
+      "question": "【題組情境】在放射治療中，補償器至少須放置在距離病人多遠處？\n\n承上題，將補償器如此擺置的主要用意是下列何者？",
       "options": {
         "A": "增加表面劑量",
         "B": "可以達到皮膚免除（ sparing ）效應",
@@ -14705,7 +14705,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 80,
-      "question": " 承上題，圖中甲和乙的功能分別為何？",
+      "question": "【題組情境】附圖屬於何種偵檢器？\n\n承上題，圖中甲和乙的功能分別為何？",
       "options": {
         "A": "除去散射光子；將可見光轉換成電子訊號",
         "B": "將可見光轉換成電子訊號；將加馬光子轉換成可見光",
@@ -14714,7 +14714,10 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/radiology_100130_p2_79_0.webp"
+      "image_url": "/question-images/radiology_100130_p2_79_0.webp",
+      "images": [
+        "/question-images/radiology_119761_0.webp"
+      ]
     },
     {
       "id": 119923,
@@ -16386,7 +16389,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 80,
-      "question": " 承上題，臨床上，在體內法（ in vivo technique ） 99m Tc 標幟紅血球的過程中，受檢者注射完 stannous pyrophosphate （ Sn-PYP ）之後，約多久再注射 99m Tc 較為適宜？",
+      "question": "【題組情境】在用 99m Tc 來標幟紅血球（體內法； in vivo technique ）的過程中，需加入 stannous pyrophosphate （ Sn-PYP ），其主要的作用是當作：\n\n承上題，臨床上，在體內法（ in vivo technique ） 99m Tc 標幟紅血球的過程中，受檢者注射完 stannous pyrophosphate （ Sn-PYP ）之後，約多久再注射 99m Tc 較為適宜？",
       "options": {
         "A": "5 － 10 分鐘",
         "B": "20 － 30 分鐘",
@@ -17646,7 +17649,7 @@
       "subject_name": "基礎醫學",
       "stage_id": 1,
       "number": 60,
-      "question": " 承上題，其心輸出量（ Cardiac output ）為每分鐘多少 mL ？",
+      "question": "【題組情境】某一位男性工程師 40 歲，體重 70 公斤，身高 170 公分，動脈血壓（ Arterial blood pressure ） 140/90 mmHg 。經心臟超音波（ Echocardiography ）檢測換算得知其心臟舒張末期容積為 140 mL ，心臟收縮末期容積為 80 mL ，第二肢導（ Lead II ）心電圖之數據如下表。則其心跳 （ beats/min ）為何？\n\n承上題，其心輸出量（ Cardiac output ）為每分鐘多少 mL ？",
       "options": {
         "A": "7200",
         "B": "6000",
@@ -18912,7 +18915,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 40,
-      "question": " 承上題， 74 Ge 之能量比 74 As 能量低多少 MeV ？",
+      "question": "【題組情境】附圖中， 74 As 可經由何種衰變達到穩定態 74 Se ？\n\n承上題， 74 Ge 之能量比 74 As 能量低多少 MeV ？",
       "options": {
         "A": "0.596",
         "B": "0.94",
@@ -18920,7 +18923,10 @@
         "D": "2.56"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/radiology_119641_0.webp"
+      ]
     },
     {
       "id": 119643,
@@ -21355,7 +21361,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": "承上題，下列敘述何者錯誤？",
+      "question": "【題組情境】如圖所示，此穿透輻射可能由何種器材造成？\n\n承上題，下列敘述何者錯誤？",
       "options": {
         "A": "此現象稱為 tongue and groove effect",
         "B": "穿透輻射平均約為 2%",
@@ -31029,7 +31035,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": "承上題， ABCD 四點何者容許較大的劑量誤差但較小的空間誤差？",
+      "question": "【題組情境】如圖所示，這種劑量與空間的關係圖稱為：\n\n承上題， ABCD 四點何者容許較大的劑量誤差但較小的空間誤差？",
       "options": {
         "A": "A",
         "B": "B",
@@ -32635,7 +32641,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 78,
-      "question": "承上題，這個病人下一步該做何種檢查才能正確診斷及適當治療？",
+      "question": "【題組情境】18 歲男性，熬夜打電玩後，突然劇烈頭痛，右側肢體無力，根據此 CT 影像，最正確的診斷為下列何者？\n\n承上題，這個病人下一步該做何種檢查才能正確診斷及適當治療？",
       "options": {
         "A": "數位贅減血管攝影（ digital subtraction angiography ， DSA ）",
         "B": "CT- 血管攝影（ CT-angiography ， CTA ）",
@@ -32676,7 +32682,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 80,
-      "question": "承上題，請問此檢查的特異性（ specificity ）是多少？",
+      "question": "【題組情境】某家醫院共做了 210 例的乳房攝影檢查，判讀結果是 20 例是陽性，其中 4 例是偽陽性， 5 例是偽陰性。請問 此檢查的靈敏度（ sensitivity ）是多少？\n\n承上題，請問此檢查的特異性（ specificity ）是多少？",
       "options": {
         "A": "95.7 ％",
         "B": "76.2 ％",
@@ -37064,7 +37070,7 @@
       "subject_name": "基礎醫學",
       "stage_id": 1,
       "number": 58,
-      "question": "承上題，其全身血管阻力是肺血管阻力的幾倍？",
+      "question": "【題組情境】一位居住於雲林海邊之漁民年過 50 歲，體重 60 公斤，身高 160 公分。經 X 光檢查發覺一異常黑影位於胸 腺。經診斷確定為初期胸腺腫瘤，須進行開胸手術予以切除。切除後立即偵測各項壓力參數。其數值如 下，則其平均肺動脈壓（ mmHg ）為何？\n\n承上題，其全身血管阻力是肺血管阻力的幾倍？",
       "options": {
         "A": "5.8",
         "B": "3.9",
@@ -37105,7 +37111,7 @@
       "subject_name": "基礎醫學",
       "stage_id": 1,
       "number": 60,
-      "question": "承上題，推測此患者微血管內膠體滲透壓（ Oncotic pressure ）（ mmHg ）最接近下列何者？",
+      "question": "【題組情境】一位 19 歲大專生，體重 70 公斤，身高 160 公分。因被恥笑而立志減肥。使用減肥祕方達一個月後，某一天 清晨起床時，眼瞼及顏面部位出現明顯浮腫，下肢也出現腫脹的現象，伴有頻尿、腰酸等症狀。經急診住 院檢查結果顯示體動脈壓（ Systemic arterial pressure ） 150/90 mmHg ，心跳 100 beats/min ，尿液檢查發 覺蛋白尿，血尿等現象，胸部 X 光檢查一切正常。根據以上参數，推測此患者微血管內動脈端壓力 （ mmHg ）最接近下列何者？\n\n承上題，推測此患者微血管內膠體滲透壓（ Oncotic pressure ）（ mmHg ）最接近下列何者？",
       "options": {
         "A": "18",
         "B": "28",
@@ -40744,7 +40750,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": "承上題，欲達成讓一定空間內劑量均勻的目的，需要讓一群不同條件的粒子組合起來，下列條件 何者正確？",
+      "question": "【題組情境】如圖所示，這種讓一定空間內劑量均勻的技術稱為：\n\n承上題，欲達成讓一定空間內劑量均勻的目的，需要讓一群不同條件的粒子組合起來，下列條件 何者正確？",
       "options": {
         "A": "能量不變，改變強度（ intensity ）",
         "B": "強度（ intensity ）不變，改變能量",
@@ -42349,7 +42355,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 78,
-      "question": "承上題，此時如果做 MRI ，此血塊呈現：",
+      "question": "【題組情境】急性期的腦內血塊在 CT 是 hyperdense 的，在三十天左右時，血塊在 CT 會是什麼呈現？\n\n承上題，此時如果做 MRI ，此血塊呈現：",
       "options": {
         "A": "T1WI 呈現 hyperintense",
         "B": "T2WI 呈現 hypointense",
@@ -42393,7 +42399,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 80,
-      "question": "承上題，病人灰階超音波圖中，箭頭所指為何？",
+      "question": "【題組情境】40 歲男性病人腎移植後腎功能變差，穿刺檢查後有血尿，灰階及彩色超音波掃描如圖，箭號所指為何？\n\n承上題，病人灰階超音波圖中，箭頭所指為何？",
       "options": {
         "A": "腎錐體（ pyramid ）",
         "B": "腎皮質（ cortex ）",
@@ -50396,7 +50402,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 78,
-      "question": "承上題，乙區所使用的材料，需要的條件為何？",
+      "question": "【題組情境】附圖為直線加速器光子射束的行進剖面圖，請問圖中甲區名稱為何，其功能為何？\n\n承上題，乙區所使用的材料，需要的條件為何？",
       "options": {
         "A": "低原子序導熱度高",
         "B": "低原子序導熱度低",
@@ -50443,7 +50449,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": "承上題，若 ABCD 四條曲線代表危急器官（ OAR ）的治療效果，其中何者最佳？",
+      "question": "【題組情境】如圖所示，這種劑量與體積的關係圖稱為：\n\n承上題，若 ABCD 四條曲線代表危急器官（ OAR ）的治療效果，其中何者最佳？",
       "options": {
         "A": "A",
         "B": "B",
@@ -52078,7 +52084,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 80,
-      "question": "承上題，箭號所指的解剖位置是由下列何者供應血液？",
+      "question": "【題組情境】下圖磁振造影是使用何種成像序列（ sequence ）？\n\n承上題，箭號所指的解剖位置是由下列何者供應血液？",
       "options": {
         "A": "大腦中動脈（ middle cerebral artery ）",
         "B": "大腦後動脈（ posterior cerebral artery ）",
@@ -58505,7 +58511,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 80,
-      "question": "承上題，在不超過法規限值下，這一年內該工作人員還能接受多少的全身均勻 γ 體外曝露劑量？",
+      "question": "【題組情境】設在一年內，一名工作人員受到沉積在肺中的 α 粒子授予的體內吸收劑量 8 mGy ，甲狀腺中的 β 粒 子所致劑量 180 mGy 以及體外全身均勻 γ 曝露 14 mGy ，則此工作人員的有效劑量為多少 mSv ？ （組織加權因數分別為肺： 0.12 ，甲狀腺： 0.05 ，紅骨髓： 0.12 ）\n\n承上題，在不超過法規限值下，這一年內該工作人員還能接受多少的全身均勻 γ 體外曝露劑量？",
       "options": {
         "A": "36 mGy",
         "B": "28 mGy",
@@ -60126,7 +60132,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": "承上題，請問劑量半影區（ P 20~80% ）是多大？",
+      "question": "【題組情境】某一正方形光子照野，在最大劑量深度處的劑量是 100 cGy ，在此深度下量測偏離中軸 x 公分時的 劑量 D cGy ，測得的結果 (x, D) 分別為 (0, 100), (5.0, 90), (5.2, 80), (5.5, 50), (5.8, 20), (6.0, 10) 。 在此深度的物理照野（ physical field size ）是多少公分？\n\n承上題，請問劑量半影區（ P 20~80% ）是多大？",
       "options": {
         "A": "0.2 cm",
         "B": "0.3 cm",
@@ -61742,7 +61748,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 78,
-      "question": "承上題，這張影像的TR及TE最可能是：",
+      "question": "【題組情境】下圖為MRI腦部影像，可知是何種影像？\n\n承上題，這張影像的TR及TE最可能是：",
       "options": {
         "A": "TR ： 4000msec 、 TE ： 120msec",
         "B": "TR：500msec、TE：20msec",
@@ -61787,7 +61793,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 80,
-      "question": "承上題，箭號 2 所指的是：",
+      "question": "【題組情境】頭頸部CT檢查通常要注射含碘對比劑，否則頸部太多圓形構造難以區分，對照左、右圖，箭號1 所指的是：\n\n承上題，箭號 2 所指的是：",
       "options": {
         "A": "頸動脈",
         "B": "淋巴結",
@@ -65010,7 +65016,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 80,
-      "question": "承上題，該正子斷層影像檢查所使用正子藥物為：",
+      "question": "【題組情境】某病患於兩年前診斷出甲狀腺癌，雖經手術切除並且經碘 -131 治療後仍然有血中甲狀腺球蛋白 （ thyroglobulin ）偏高情形，核醫檢查其碘 -131 影像無明顯異常發現，但正子斷層影像有異常發 現（圖像分別如下），下列何者敘述錯誤？\n\n承上題，該正子斷層影像檢查所使用正子藥物為：",
       "options": {
         "A": "18 F-fluorodeoxyglucose （ FDG ）",
         "B": "124 I-NaI",
@@ -68237,7 +68243,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 80,
-      "question": "承上題，那一條線是同重素線？",
+      "question": "【題組情境】下圖中那一條線代表同位素線？\n\n承上題，那一條線是同重素線？",
       "options": {
         "A": "1",
         "B": "2",
@@ -69811,7 +69817,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 78,
-      "question": "承上題，若MLC位於離射源50公分處，穿透率測量於離射源100公分處，請問MLC葉片的真實寬度 應為多少公分？",
+      "question": "【題組情境】如圖所示，下列關於A, B兩點光子射束穿透MLC之後穿透率的敘述，何者正確？\n\n承上題，若MLC位於離射源50公分處，穿透率測量於離射源100公分處，請問MLC葉片的真實寬度 應為多少公分？",
       "options": {
         "A": "0.5",
         "B": "1.0",
@@ -69855,7 +69861,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": "承上題，直徑10 cm的照野，鉛合金擋塊中空處直徑應為：",
+      "question": "【題組情境】假設模擬定位片的放大率為1.4倍，對SAD=100 cm的機器，鉛合金擋塊被放置在距射源65 cm處， 則切割Styrofoam時，SFD（source-to-film distance）的距離為：\n\n承上題，直徑10 cm的照野，鉛合金擋塊中空處直徑應為：",
       "options": {
         "A": "4.5",
         "B": "5.5",
@@ -71445,7 +71451,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 78,
-      "question": "承上題，血管攝影圖中未呈現下列那一條血管？",
+      "question": "【題組情境】腦部傳統血管攝影檢查如下圖中影像是由那條血管注射對比劑？\n\n承上題，血管攝影圖中未呈現下列那一條血管？",
       "options": {
         "A": "右椎動脈",
         "B": "左椎動脈",
@@ -71493,7 +71499,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 80,
-      "question": "承上題，這樣的病人下一步應再做何種檢查最適當？",
+      "question": "【題組情境】61歲男性，突然發生劇烈頭痛，意識逐漸不清，下圖是急診CT的影像，下列何者為最正確的診 斷？\n\n承上題，這樣的病人下一步應再做何種檢查最適當？",
       "options": {
         "A": "數位化血管攝影（DSA）",
         "B": "CT-血管攝影（CTA）",
@@ -74726,7 +74732,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 80,
-      "question": "承上題，治療後 131 I檢查之時機，下列何者較為適當？",
+      "question": "【題組情境】該核醫 131 I檢查，下列何種情形或藥品使用不會造成 131 I攝取之降低？\n\n承上題，治療後 131 I檢查之時機，下列何者較為適當？",
       "options": {
         "A": "治療後1～2天",
         "B": "治療後3～12天",
@@ -75927,7 +75933,7 @@
       "subject_name": "基礎醫學",
       "stage_id": 1,
       "number": 60,
-      "question": "承上題，腸道吸收之物質經那條血管進入此器官？",
+      "question": "【題組情境】物質從腸道吸收後在進入體循環前先進入那一個器官？\n\n承上題，腸道吸收之物質經那條血管進入此器官？",
       "options": {
         "A": "肝門靜脈",
         "B": "下腔靜脈",
@@ -90968,7 +90974,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 77,
-      "question": " 承上題，靜脈相（venous phase）通常於開始注射（2～4 ml /秒）造影劑後幾秒進行掃描？",
+      "question": "【題組情境】腹部電腦斷層動態顯影，下圖中左圖通常取像與注射造影劑的時間相差：\n\n承上題，靜脈相（venous phase）通常於開始注射（2～4 ml /秒）造影劑後幾秒進行掃描？",
       "options": {
         "A": "0～8",
         "B": "17～25",
@@ -90976,7 +90982,10 @@
         "D": "102～115"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/radiology_119358_0.webp"
+      ]
     },
     {
       "id": 119360,
@@ -96915,7 +96924,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 38,
-      "question": " 承上題，該掃描模式，若床前進距離改為4 mm，其他條件不變，下列敘述何者正確？",
+      "question": "【題組情境】今有一病人接受16列電腦斷層儀檢查，使用螺旋掃描模式，X光管旋轉一圈後，床前進的距離為12 mm，若在偵檢器全開，每列偵檢器大小為0.5 mm的條件下，試問螺距比（pitch）為 何？\n\n承上題，該掃描模式，若床前進距離改為4 mm，其他條件不變，下列敘述何者正確？",
       "options": {
         "A": "掃描時間會縮短",
         "B": "病人會接受較多劑量",
@@ -99499,7 +99508,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": " 承上題，若射束穿過1.0 cm的緻密骨時，在相同的評估點。下列敘述，何者正確？",
+      "question": "【題組情境】在相同照野下，對於使用不同的射束Co-60與10 MV兩射束。當射束穿過正常的肺部組織， 在中心軸上肺部組織後方2.0 cm處為劑量點L，其劑量變化與穿過均質的正常組織在相同的 深度時，此劑量點為W。下列敘述，何者正確？\n\n承上題，若射束穿過1.0 cm的緻密骨時，在相同的評估點。下列敘述，何者正確？",
       "options": {
         "A": "點L劑量較點W高，且Co-60射束較10 MV劑量增加的百分比更多",
         "B": "點L劑量較點W高，且10 MV射束較Co-60劑量增加的百分比更多",
@@ -107881,7 +107890,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 76,
-      "question": " 承上題，其於注入人體後之生物半衰期為4天，其加總反應後於人體度量時所測得的有效半 衰期之特性曲線為何？",
+      "question": "【題組情境】下圖所示，某放射核種之物理半衰期為2.5天，其隨時間蛻變之曲線為圖中之那一條線？\n\n承上題，其於注入人體後之生物半衰期為4天，其加總反應後於人體度量時所測得的有效半 衰期之特性曲線為何？",
       "options": {
         "A": "1",
         "B": "2",
@@ -107889,7 +107898,14 @@
         "D": "4"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/radiology_118238_0.webp",
+        "/question-images/radiology_118238_1.webp",
+        "/question-images/radiology_118238_2.webp",
+        "/question-images/radiology_118238_3.webp",
+        "/question-images/radiology_118238_4.webp"
+      ]
     },
     {
       "id": 118240,
@@ -107926,7 +107942,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 78,
-      "question": " 承上題，下列何者敘述正確？①大部分的α-decay 能量為5.6 MeV ②大部分的α-decay能量 為4.4 MeV ③少部分α-decay能量為1.2 MeV ④γ-decay能量為1.2 MeV ⑤有3%的內轉 換電子 ⑥有7%的內轉換電子",
+      "question": "【題組情境】下圖中Q1、Q2、Q3的能階分別為5.6、1.2、0.0 MeV，A%、B%、C%分別為90%、10%、 7% ，則α-decay 所產生α粒子的能量為多少？\n\n承上題，下列何者敘述正確？①大部分的α-decay 能量為5.6 MeV ②大部分的α-decay能量 為4.4 MeV ③少部分α-decay能量為1.2 MeV ④γ-decay能量為1.2 MeV ⑤有3%的內轉 換電子 ⑥有7%的內轉換電子",
       "options": {
         "A": "①③⑤",
         "B": "②③⑥",
@@ -107934,7 +107950,10 @@
         "D": "①④⑤"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/radiology_118240_0.webp"
+      ]
     },
     {
       "id": 118242,
@@ -107971,7 +107990,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 80,
-      "question": " 承上題，圖中A、B分別代表下列何者？",
+      "question": "【題組情境】下圖為X光機結構屏蔽示意圖，圖中S為X光管，被封在防護管套內且照射方向不變，P為病 人，試問圖中I、II、III分別代表何種輻射？\n\n承上題，圖中A、B分別代表下列何者？",
       "options": {
         "A": "次結構屏蔽牆、主結構屏蔽牆",
         "B": "主結構屏蔽牆、次結構屏蔽牆",
@@ -107980,7 +107999,10 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/radiology_105020_p1_78_0.webp"
+      "image_url": "/question-images/radiology_105020_p1_78_0.webp",
+      "images": [
+        "/question-images/radiology_118242_0.webp"
+      ]
     },
     {
       "id": 118883,
@@ -111387,7 +111409,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 80,
-      "question": " 承上題，為何不會被顯影為高密度？",
+      "question": "【題組情境】做腦部CT，注射對比劑後，下列何者最不會因顯影增強成為高密度？\n\n承上題，為何不會被顯影為高密度？",
       "options": {
         "A": "因有腦血管障壁（blood brain barrier，BBB）",
         "B": "因對比劑注射量不足",
@@ -114767,7 +114789,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 80,
-      "question": " 承上題，該核醫甲狀腺檢查之相關敘述何者錯誤？",
+      "question": "【題組情境】某女性32歲因心悸求診，其病史發現體重減輕，近半年月經量明顯減少，理學檢查發現其左頸部有腫塊，兩手振顫不明顯，血 液發現TSH＜0.03 microIU/mL，游離態T 4 2.06 ng/dL（最小／最大安全值：TSH: 0.3～5.0 microIU/mL,游離態T4: 0.2～2.0 ng/dL）核醫檢查其甲狀腺影像如下，放射碘吸收值（24 HR，35%；參考值：10～30%），下列敘述何者正確？\n\n承上題，該核醫甲狀腺檢查之相關敘述何者錯誤？",
       "options": {
         "A": "檢查進行前需停止服用乙型阻斷劑",
         "B": "檢查使用之核種藥物為 131 I-NaI或 123 I-NaI",
@@ -121405,7 +121427,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 80,
-      "question": "承上題，這樣的病人下一步應再做何種檢查才能做適當治療？",
+      "question": "【題組情境】下圖為56歲女性之電腦斷層影像，平時有高血壓，突然發生半身無力，意識障礙，則最正確的診斷為下列何者？\n\n承上題，這樣的病人下一步應再做何種檢查才能做適當治療？",
       "options": {
         "A": "數位贅減血管攝影（digital subtraction angiography，DSA）",
         "B": "CT-血管攝影（CT-angiography，CTA）",
@@ -127022,7 +127044,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 39,
-      "question": "承上題，當管電壓降至100 kVp時，肌肉與水的直線衰減係數分別為0.237與0.206 cm -1 ，試問與管電壓為125 kVp相比，電腦 斷層值（CT number）的差異為多少HU？",
+      "question": "【題組情境】在一腹部電腦斷層檢查時，使用管電壓125 kVp，肌肉的直線衰減係數為0.208 cm -1 ，水的衰減係數為0.180 cm -1 ，試計算肌 肉的電腦斷層值（CT number）為多少HU？\n\n承上題，當管電壓降至100 kVp時，肌肉與水的直線衰減係數分別為0.237與0.206 cm -1 ，試問與管電壓為125 kVp相比，電腦 斷層值（CT number）的差異為多少HU？",
       "options": {
         "A": "24.8",
         "B": "5.1",
@@ -127043,7 +127065,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 40,
-      "question": "承上題，當管電壓降至100 kVp，注射含碘對比劑後進行掃描，在影像上量測到腹主動脈的電腦斷層值為420 HU，肌肉的雜訊 值為15 HU，試計算主動脈與肌肉的對比雜訊比為何？",
+      "question": "【題組情境】【題組情境】在一腹部電腦斷層檢查時，使用管電壓125 kVp，肌肉的直線衰減係數為0.208 cm -1 ，水的衰減係數為0.180 cm -1 ，試計算肌 肉的電腦斷層值（CT number）為多少HU？\n\n承上題，當管電壓降至100 kVp時，肌肉與水的直線衰減係數分別為0.237與0.206 cm -1 ，試問與管電壓為125 kVp相比，電腦 斷層值（CT number）的差異為多少HU？\n\n承上題，當管電壓降至100 kVp，注射含碘對比劑後進行掃描，在影像上量測到腹主動脈的電腦斷層值為420 HU，肌肉的雜訊 值為15 HU，試計算主動脈與肌肉的對比雜訊比為何？",
       "options": {
         "A": "18.0",
         "B": "36.7",
@@ -131107,7 +131129,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 80,
-      "question": "承上題，下一步應做什麼？",
+      "question": "【題組情境】56歲肺癌男性，最近兩天頭痛，肢體無力，CT顯示右側腦部白質（white matter）一片低密度區域，請問這低 密度區域所指主要為何？\n\n承上題，下一步應做什麼？",
       "options": {
         "A": "注射含碘對比劑CT",
         "B": "再以2 mm細切，重做CT",
@@ -139162,7 +139184,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": "承上題，在SSD=120 cm，S",
+      "question": "【題組情境】某4 MV之直線加速器在最大劑量的參考深度1 cm處，SSD=100 cm，照野=10×10 cm 2 時，輸出劑量率為1\n\n承上題，在SSD=120 cm，S",
       "options": {
         "A": "122",
         "B": "222",
@@ -168239,7 +168261,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": "承上題，將補償器如此擺置的主要用意是下列何者？",
+      "question": "【題組情境】在放射治療中，補償器至少須放置在距離病人體表約多遠處？\n\n承上題，將補償器如此擺置的主要用意是下列何者？",
       "options": {
         "A": "增加表面劑量",
         "B": "可以達到皮膚免除（skin-sparing）效應",
@@ -173093,7 +173115,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 80,
-      "question": "承上題，射源距離準直儀5公分處，空間解析度的比較，下列何者最小（mm）？",
+      "question": "【題組情境】附圖為系統靈敏度、空間解析度與射源至準直儀距離的關係圖。（I）藍色表示針孔準直儀，（II）綠色表示 收斂準直儀，（III）紫色表示高解析平行孔準直儀，（IV）紅色表示全功能平行孔準直儀。假設射源距離準 直儀5公分，則系統靈敏度的比較，下列何者正確？\n\n承上題，射源距離準直儀5公分處，空間解析度的比較，下列何者最小（mm）？",
       "options": {
         "A": "I",
         "B": "IV",
@@ -175509,7 +175531,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 40,
-      "question": "承上題，應如何避免產生此種假影？",
+      "question": "【題組情境】某病患的腎臟超音波影像如下圖，請問箭頭處的假影為何？\n\n承上題，應如何避免產生此種假影？",
       "options": {
         "A": "遇到強烈的反射體，回音成像後產生錯置",
         "B": "透過衰減補償減縮各個反射體的差異",
@@ -181189,7 +181211,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 80,
-      "question": "承上題，若未衰減修正前之射源濃度為1 μCi/mm 3 ，且每個投影角度都經過100 mm距離的衰減，則利用CT進 行衰減校正後其射源濃度為多少μCi/mm 3 ？（設點射源之加馬能譜與CT能譜相同，並忽略散射的影響）",
+      "question": "【題組情境】設有一半徑為100 mm之聚乙烯球體，圓心為一個極小點射源（示意圖如下），將假體置入SPECT/CT掃描， 測得球體之平均CT值為-100，則聚乙烯球的平均衰減係數為何？（設在此CT掃描條件下，水之衰減係數為 0.19 cm -1 ）\n\n承上題，若未衰減修正前之射源濃度為1 μCi/mm 3 ，且每個投影角度都經過100 mm距離的衰減，則利用CT進 行衰減校正後其射源濃度為多少μCi/mm 3 ？（設點射源之加馬能譜與CT能譜相同，並忽略散射的影響）",
       "options": {
         "A": "0.7",
         "B": "1.0",
@@ -190880,7 +190902,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 80,
-      "question": "承上題，若此加馬攝影機之大小為43 cm×43 cm，當裝置平行孔準直儀，放大率設為1.0時，依奈奎斯特取樣 理論（Nyquist sampling theorem）計算，為了不失真，矩陣大小最小應設為多少？",
+      "question": "【題組情境】將一線射源置放於旋轉中心軸，量測SPECT之解析度，測得之profile數據如下表，像素（pixel）大小為 2 mm，計算其FWHM為何（mm）？\n\n承上題，若此加馬攝影機之大小為43 cm×43 cm，當裝置平行孔準直儀，放大率設為1.0時，依奈奎斯特取樣 理論（Nyquist sampling theorem）計算，為了不失真，矩陣大小最小應設為多少？",
       "options": {
         "A": "64×64",
         "B": "128×128",
@@ -192496,7 +192518,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 80,
-      "question": "承上題，該檢查結果之甲狀腺放射吸收：",
+      "question": "【題組情境】男性19歲因頸部接近舌下腫塊求診，該病患自幼因輕微甲狀腺功能不足長期接受甲狀腺素補充治療，經核醫 檢查其甲狀腺（如圖），下列敘述何者錯誤？\n\n承上題，該檢查結果之甲狀腺放射吸收：",
       "options": {
         "A": "正常",
         "B": "偏高",
@@ -193223,7 +193245,7 @@
       "subject_name": "基礎醫學",
       "stage_id": 1,
       "number": 36,
-      "question": "承上題，下列何者與甲的功能最相關？",
+      "question": "【題組情境】如附圖所示，左方為腎元（nephron）的部分示意圖，右方為其組織切片染色圖。若乙是入絲球小動脈\n\n承上題，下列何者與甲的功能最相關？",
       "options": {
         "A": "興奮時會使血壓下降",
         "B": "控制尿中血糖值",
@@ -195716,7 +195738,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 80,
-      "question": "承上題， 21 Sc轉換至 20",
+      "question": "【題組情境】同重素線A＝44有 23 V, 22 Ti, 21 Sc, 20\n\n承上題， 21 Sc轉換至 20",
       "options": {
         "A": "β -",
         "B": "β +",
@@ -200501,7 +200523,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 76,
-      "question": "承上題，其主要原因為何？",
+      "question": "【題組情境】進行胸部診斷攝影時，若病人擺位許可，陰極應擺放在圖中那一側較為適當？\n\n承上題，其主要原因為何？",
       "options": {
         "A": "管電壓不均勻",
         "B": "X光管內部真空不均勻",
@@ -200545,7 +200567,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 78,
-      "question": "承上題，下列何者為使用延長洗片處理技術的主要優點？",
+      "question": "【題組情境】在洗片技術上，延長洗片處理（extended processing）可應用在乳房攝影上，此技術主要延長下列那個步驟的 洗片程序？\n\n承上題，下列何者為使用延長洗片處理技術的主要優點？",
       "options": {
         "A": "增加空間解析度",
         "B": "降低病人接受的劑量",
@@ -200586,7 +200608,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 80,
-      "question": "承上題，在快速自旋回訊（fast spin echo）磁振造影中的ESP（echo spacing）不等於下列何者？",
+      "question": "【題組情境】在快速自旋回訊（fast spin echo）磁振造影中的ETL（echo train length）不等於下列何者？\n\n承上題，在快速自旋回訊（fast spin echo）磁振造影中的ESP（echo spacing）不等於下列何者？",
       "options": {
         "A": "90度RF激發與其後激發的180度RF的時間差的二倍",
         "B": "二次180度RF激發的時間差",
@@ -203399,7 +203421,7 @@
       "subject_name": "基礎醫學",
       "stage_id": 1,
       "number": 60,
-      "question": "承上題，這種消化道細胞受損後，何種功能最易出問題？",
+      "question": "【題組情境】癌症病人進行放射線治療時，消化道的那類細胞易受損，其原因為何？\n\n承上題，這種消化道細胞受損後，何種功能最易出問題？",
       "options": {
         "A": "分泌和屏障功能",
         "B": "分泌和蠕動功能",
@@ -210279,7 +210301,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 80,
-      "question": "承上題，已知圖中軟片的動態範圍約為100，則圖中軟片與CR系統之動態範圍比值約為多少？",
+      "question": "【題組情境】比較下圖中軟片（S/F 400-speed）之特性曲線與CR影像接收器之反應函數，關於兩者之特性差異，下列敘述 何者正確？\n\n承上題，已知圖中軟片的動態範圍約為100，則圖中軟片與CR系統之動態範圍比值約為多少？",
       "options": {
         "A": "2:1",
         "B": "10:1",
@@ -211918,7 +211940,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 80,
-      "question": "承上題，其標準偏差（standard deviation）大約是多少cpm？",
+      "question": "【題組情境】在一個2分鐘的放射樣本測量中，樣品總計數為 8,000，背景計數為 2,000，其淨計數率為多少cpm（計數每分 鐘）？\n\n承上題，其標準偏差（standard deviation）大約是多少cpm？",
       "options": {
         "A": "100",
         "B": "60",
@@ -215123,7 +215145,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 80,
-      "question": "承上題，此NaI偵檢器在相同偵測環境下，1.274 MeV比在0.511 MeV處所得之偵測效率值為何？",
+      "question": "【題組情境】NaI偵檢器度量某核種發射之兩條加馬射線，其能量分別為0.511 MeV、1.274 MeV。此核種每秒發射出0.511 MeV之加馬射線為3000個，而度量20分鐘後，偵檢器取得總計數值為25000 counts，則其偵測效率為何？\n\n承上題，此NaI偵檢器在相同偵測環境下，1.274 MeV比在0.511 MeV處所得之偵測效率值為何？",
       "options": {
         "A": "1.274 MeV較高",
         "B": "1.274 MeV較低",
@@ -223518,7 +223540,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 15,
-      "question": "承上題，若欲探查皮下15.4 cm深處之結構，在不產生範圍模糊假影（range ambiguity artifacts）的前提下，儀 器可輸出之最高畫面更新率（frame rate）降低為多少Hz？",
+      "question": "【題組情境】使用脈衝重複頻率（pulse repetition frequency, PRF）為10 kHz、單聚焦點（single focus）之超音波進行掃描， 若每畫面掃描線數（lines per frame）為50，則儀器可輸出最高畫面更新率（frame rate）為多少Hz？\n\n承上題，若欲探查皮下15.4 cm深處之結構，在不產生範圍模糊假影（range ambiguity artifacts）的前提下，儀 器可輸出之最高畫面更新率（frame rate）降低為多少Hz？",
       "options": {
         "A": "15",
         "B": "30",
@@ -234062,7 +234084,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 58,
-      "question": "承上題，則什一值層（TVL）約為多少mm？",
+      "question": "【題組情境】一X-ray射束經2 mm的鉛衰減後，其空氣克馬由10 mGy/h降低至1.25 mGy/h，則其半值層（HVL）為多少 mm？\n\n承上題，則什一值層（TVL）約為多少mm？",
       "options": {
         "A": "1.33",
         "B": "2.12",
@@ -245106,7 +245128,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 44,
-      "question": "承上題，子宮頸癌腔內近接放射治療中，置入體腔內的applicator套件包括有那些？",
+      "question": "【題組情境】在子宮頸癌腔內近接放射治療中，依據曼徹斯特系統所定義的point A，如圖中A R 及A L 二點的位置是定義在何 處？\n\n承上題，子宮頸癌腔內近接放射治療中，置入體腔內的applicator套件包括有那些？",
       "options": {
         "A": "2 支 ovoids， 1 支 tandem",
         "B": "1 支 ovoid，2 支 tandems",
@@ -250182,7 +250204,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 54,
-      "question": "承上題，若考慮扣除身體背景值，背景區域占89個像素，其計數為9,134，則在標準化扣除背景值後之左心室 射出率（EF）約為多少%？",
+      "question": "【題組情境】當進行閘控血池掃描，其舒張末期（ED）目標區域占586個像素，其計數為89,485，而在收縮末期（ES）目 標區域占416個像素，其計數為56,375，在不考慮身體背景值的情況下，左心室射出率（EF）約為多少%？\n\n承上題，若考慮扣除身體背景值，背景區域占89個像素，其計數為9,134，則在標準化扣除背景值後之左心室 射出率（EF）約為多少%？",
       "options": {
         "A": "24",
         "B": "37",
@@ -250444,7 +250466,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 67,
-      "question": "承上題，核醫專家依據該公式估算人體注射 99m Tc雙磷酸鹽藥物後，產生吸收劑量較高的器官除骨骼外，還有 下列何者？",
+      "question": "【題組情境】美國核醫學會Stabin and Siegel（2003）建議計算放射核種藥物在人體內之吸收劑量計算公式如下，其中Ns可 以藉由下列何者定量核醫影像作為估算？ D T = ΣN s ×DF（T←S） D T 代表標的器官或區域所受輻射之吸收劑量（dose to target region） N S 代表聚集該核種藥物之區域輻射源所發生之核衰變量（nuclear transition） DF（T←S）代表聚集該核種藥物之區域輻射源照射至標的器官或區域之劑量因子（dose factor）\n\n承上題，核醫專家依據該公式估算人體注射 99m Tc雙磷酸鹽藥物後，產生吸收劑量較高的器官除骨骼外，還有 下列何者？",
       "options": {
         "A": "大腸",
         "B": "腎臟",
@@ -254623,7 +254645,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 35,
-      "question": "承上題，若機器校正點非為等中心點，且SCD=102 cm，則所需MU為何？",
+      "question": "【題組情境】有一10 MV直線加速器，在水假體中的最大劑量深度處校正為1 cGy/MU、SCD=100 cm、校正照野為10 × 10 cm 2 。欲給予等中心處照野大小為12 × 20 cm 2 、SAD=100 cm、深度10 cm的腫瘤250 cGy劑量，則所需MU為 何？ 【已知S c (15 × 15)=1.030，S p (15 × 15)=1.008，且TMR(10, 15 × 15)=0.866。】\n\n承上題，若機器校正點非為等中心點，且SCD=102 cm，則所需MU為何？",
       "options": {
         "A": "210",
         "B": "233",
@@ -266939,7 +266961,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 5,
-      "question": "承上題，使用該攝影條件最主要原因為何？",
+      "question": "【題組情境】有一婦女進行乳房攝影檢查，發現壓迫乳房後該婦女乳房厚度約為8公分且乳房緻密度約為80%，其最適合使 用的攝影條件為何（靶／濾片）？\n\n承上題，使用該攝影條件最主要原因為何？",
       "options": {
         "A": "在低能量（<20 keV）區域得到較多特性輻射",
         "B": "在高能量（>20 keV）區域得到較多特性輻射",
@@ -267026,7 +267048,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 9,
-      "question": "承上題，甲（實線）及乙（虛線）兩條曲線變化，最有可能是利用下列何者影像後處理方法？（WL：window level，WW：window width）",
+      "question": "【題組情境】如圖為CT的影像後處理過程，橫軸為CT值範圍，縱軸為對應的灰階值變化，甲系統（實線）最少要用多少位 元去儲存一個像素的灰階值？\n\n承上題，甲（實線）及乙（虛線）兩條曲線變化，最有可能是利用下列何者影像後處理方法？（WL：window level，WW：window width）",
       "options": {
         "A": "固定WL下，甲設定較小WW，乙設定較大WW",
         "B": "固定WW下，甲設定較小WL，乙設定較大WL",
@@ -268459,7 +268481,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 79,
-      "question": "承上題，影像收集後經過衰減校正的真實計數率為多少cps？",
+      "question": "【題組情境】正子電腦斷層掃描機獲得空白掃描計數率（blank scan）50,000 cps，同一部位的穿透掃描計數率 （transmission scan）為12,500 cps，儀器收集到病患本身發射掃描計數率（emission scan）為20,000 cps。其衰減校正因子（ACF）為多少？\n\n承上題，影像收集後經過衰減校正的真實計數率為多少cps？",
       "options": {
         "A": "80,000",
         "B": "60,000",
@@ -270038,7 +270060,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 77,
-      "question": "承上題，R的標準偏差（standard deviation）是多少cpm？",
+      "question": "【題組情境】在一個3分鐘的放射樣本測量中，測得計數（counts）為8,100，平均計數率R為多少cpm？\n\n承上題，R的標準偏差（standard deviation）是多少cpm？",
       "options": {
         "A": "270",
         "B": "240",
@@ -279509,7 +279531,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 67,
-      "question": "承上題， 90 Y與 177 Lu-octreotide進行臨床核醫標靶治療，下列敘述何者錯誤？",
+      "question": "【題組情境】90 Y與 177 Lu作為核醫標靶治療藥物之放射源，其物理特性：①半衰期： 90 Y（64小時）， 177 Lu（160.8 小時）②ß 射線能量： 90 Y（2.27 MeV）， 177 Lu（0.47 MeV）③γ射線能量： 90 Y（無）， 177 Lu（208 KeV）④身體組織內穿透距離（最大）： 90 Y（12 mm）， 177 Lu（2 mm），下列敘述何者最適當？\n\n承上題， 90 Y與 177 Lu-octreotide進行臨床核醫標靶治療，下列敘述何者錯誤？",
       "options": {
         "A": "兩者皆可經血管注射施與，能夠針對患者體內神經內分泌腫瘤為標的做選擇性治療",
         "B": "兩者之治療原理皆經由輻射抑制腫瘤體抑素分泌而控制腫瘤生長",
@@ -287811,7 +287833,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 77,
-      "question": "承上題，若射源距離 collimator 5 cm，其 sensitivity 的比較，下列何者最高？",
+      "question": "【題組情境】下圖為 system sensitivity，spatial resolution 與 source to collimator distance 的關係圖，藍色表示 pinhole collimator，綠色表示 converging collimator，紫色表示 high resolution parallel hole collimator，紅色表示 general purpose parallel hole collimator。若射源距離 collimator 5 cm 處，其 spatial resolution 的比較，下列何者最差？\n\n承上題，若射源距離 collimator 5 cm，其 sensitivity 的比較，下列何者最高？",
       "options": {
         "A": "pinhole collimator",
         "B": "converging collimator",
@@ -295275,7 +295297,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 46,
-      "question": "承上題，下列何者非適當的進一步檢查？",
+      "question": "【題組情境】下圖箭號所指出血位置為何？\n\n承上題，下列何者非適當的進一步檢查？",
       "options": {
         "A": "CT angiography",
         "B": "MR angiography",
@@ -299285,7 +299307,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 80,
-      "question": "承上題，標準偏差（standard deviation）為何？",
+      "question": "【題組情境】在放射樣本計數（counts）測量中，樣品總計數為 14,400，背景計數為 2,500，則淨計數為下列何者？\n\n承上題，標準偏差（standard deviation）為何？",
       "options": {
         "A": "169",
         "B": "130",

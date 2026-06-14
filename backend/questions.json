@@ -92534,15 +92534,15 @@
       "number": 43,
       "question": "下列那一種胺基酸無法代謝時會導致甲基丙二酸血症（methylmalonic acidemia）？",
       "options": {
-        "A": "valine",
-        "B": "alanine",
-        "C": "glycine",
-        "D": "isoleucine"
+        "A": "alanine",
+        "B": "glycine",
+        "C": "isoleucine",
+        "D": "histidine"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "依考選部官方答案,本題正解為 D (isoleucine)。原 OCR 答案標註錯誤,已修正。",
       "vision_uncertain": false,
-      "disputed": true,
+      "disputed": false,
       "_original_number": 43
     },
     {

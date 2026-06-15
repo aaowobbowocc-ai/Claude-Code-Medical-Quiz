@@ -21,8 +21,9 @@ workflows:
       node: 22.14.0
       # Pin Xcode 16.4：Capacitor 7 + admob 7.2 配 iOS 18 SDK 穩定組合。
       xcode: 16.4
-      # 不用 managed ios_signing（只會抓現有 profile、第一次沒有就炸）。
-      # 改在 script 用 app-store-connect fetch-signing-files --create 自動建憑證+描述檔。
+      # 簽章改在下面 script 用 xcodebuild 自動簽章 + App Store Connect API key 做。
+      # managed ios_signing / xcode-project use-profiles 對 Capacitor 專案套不上 profile
+      # （archive 用 Manual 卻沒 PROVISIONING_PROFILE_SPECIFIER → 失敗），已試過。
       vars:
         # Vite build 時 inline VITE_*；不設 BACKEND 會打 localhost:3001 全炸。
         VITE_BACKEND_URL: "https://api.examking.tw"
@@ -88,25 +89,36 @@ workflows:
           agvtool new-version -all "$NEW" || echo "agvtool skipped (build $NEW)"
           echo "Build number = $NEW"
 
-      - name: Set up code signing (fetch / create cert + profile)
+      - name: Prepare distribution certificate in keychain
         script: |
           keychain initialize
-          # 第一次沒有發佈憑證/描述檔 → --create 自動建立（用 examking_appstore API key）
-          app-store-connect fetch-signing-files "tw.examking.app" \
-            --type IOS_APP_STORE \
-            --create
+          # 確保發佈憑證(含私鑰)在 keychain；已存在就抓現成的，沒有才 --create。
+          # 描述檔交給下面 xcodebuild automatic + API key 自動解析/建立。
+          app-store-connect fetch-signing-files "tw.examking.app" --type IOS_APP_STORE --create
           keychain add-certificates
-          xcode-project use-profiles
 
-      - name: Build signed IPA
+      - name: Build signed IPA (xcodebuild automatic + API key)
         script: |
-          xcode-project build-ipa \
-            --workspace "ios/App/App.xcworkspace" \
-            --scheme "App"
+          set -e
+          # 把 App Store Connect API key 寫成檔給 xcodebuild（integration 已注入 env）。
+          KEY_FILE=/tmp/AuthKey.p8
+          printf '%s' "$APP_STORE_CONNECT_PRIVATE_KEY" > "$KEY_FILE"
+          AUTH="-authenticationKeyPath $KEY_FILE -authenticationKeyID $APP_STORE_CONNECT_KEY_IDENTIFIER -authenticationKeyIssuerID $APP_STORE_CONNECT_ISSUER_ID -allowProvisioningUpdates"
+          cd ios/App
+          # 自動簽章：keychain 已有發佈憑證，xcodebuild 用 API key 自動解析/建 App Store 描述檔。
+          xcodebuild -workspace App.xcworkspace -scheme App \
+            -configuration Release -sdk iphoneos -destination "generic/platform=iOS" \
+            -archivePath "$CM_BUILD_DIR/build/App.xcarchive" archive \
+            $AUTH DEVELOPMENT_TEAM=FS8L95V9R5 CODE_SIGN_STYLE=Automatic
+          # 匯出 App Store IPA
+          printf '%s' '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict><key>method</key><string>app-store-connect</string><key>teamID</key><string>FS8L95V9R5</string><key>signingStyle</key><string>automatic</string><key>destination</key><string>export</string></dict></plist>' > /tmp/ExportOptions.plist
+          xcodebuild -exportArchive \
+            -archivePath "$CM_BUILD_DIR/build/App.xcarchive" \
+            -exportPath "$CM_BUILD_DIR/build/ios/ipa" \
+            -exportOptionsPlist /tmp/ExportOptions.plist $AUTH
 
     artifacts:
-      - build/ios/ipa/*.ipa
-      - /tmp/xcodebuild_logs/*.log
+      - $CM_BUILD_DIR/build/ios/ipa/*.ipa
 
     publishing:
       app_store_connect:

@@ -53,6 +53,15 @@ export function removeWrong(q) {
 
 export function clearWrong() { save([]) }
 
+// 用 re-hydrate 後的最新題目覆寫錯題夾（依 qKey 對應、保留 addedAt 排序），讓修正永久生效。
+export function persistRehydrated(freshArr) {
+  if (!Array.isArray(freshArr) || freshArr.length === 0) return
+  const cur = load()
+  const byKey = new Map(freshArr.map(q => [qKey(q), q]))
+  const next = cur.map(old => byKey.get(qKey(old)) || old)
+  save(next)
+}
+
 export function wrongCount() { return load().length }
 
 export const WRONG_BANK_MAX = MAX

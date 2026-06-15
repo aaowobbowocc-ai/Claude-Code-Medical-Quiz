@@ -4,7 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import { useAccuracyStore } from '../store/accuracyStore'
 import { getExamConfig, getAllTagNames, getStageStyle } from '../config/examRegistry'
 import { getSubjectColor } from '../utils/subjectColors'
-import { getWrong, removeWrong, clearWrong, WRONG_BANK_MAX } from '../lib/wrongBank'
+import { getWrong, removeWrong, clearWrong, WRONG_BANK_MAX, persistRehydrated } from '../lib/wrongBank'
 import { rehydrateWrong } from '../lib/cdnQuestions'
 
 const MIN_ANSWERS = 5
@@ -247,6 +247,7 @@ export default function Weakness() {
                 onClick={async () => {
                   setRehydrating(true)
                   const fresh = await rehydrateWrong(wrongQuestions, examType).catch(() => wrongQuestions)
+                  persistRehydrated(fresh)
                   setRehydrating(false)
                   navigate('/practice', { state: { wrongPractice: fresh } })
                 }}
@@ -259,6 +260,7 @@ export default function Weakness() {
                   onClick={async () => {
                     setRehydrating(true)
                     const fresh = await rehydrateWrong(wrongQuestions, examType).catch(() => wrongQuestions)
+                    persistRehydrated(fresh)
                     setRehydrating(false)
                     navigate('/review', { state: { questions: fresh, stage: '錯題夾' } })
                   }}

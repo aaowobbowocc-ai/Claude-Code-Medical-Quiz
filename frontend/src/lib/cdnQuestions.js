@@ -5,6 +5,9 @@
 // Cache key includes a version stamp; bump CACHE_VERSION to force re-download.
 
 const CDN_BASE = 'https://cdn.jsdelivr.net/gh/aaowobbowocc-ai/Claude-Code-Medical-Quiz@master/backend'
+// GitHub raw 永遠是最新（無 jsDelivr 的 ~12h edge 快取）。forceFresh（錯題夾 re-hydrate）改用此來源，
+// 確保題目修正後立即拿到最新版，不受 jsDelivr edge 快取/purge 傳播延遲影響。
+const RAW_BASE = 'https://raw.githubusercontent.com/aaowobbowocc-ai/Claude-Code-Medical-Quiz/master/backend'
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000  // 24h
 // v3 (2026-05-15): doctor2/tcm/nursing 102 大量題幹+選項重抽，強制刷新 jsDelivr + IndexedDB cache
 // v4 (2026-06-08): 護理112精神社區整卷校正、speech/audio位移、PUA/答案修正等大量更新，強制刷新
@@ -156,7 +159,9 @@ export async function loadExamQuestions(examId, { forceFresh = false } = {}) {
   // Cache-bust query string forces jsDelivr edge to fetch fresh from GitHub
   // when @master ref is updated. CACHE_VERSION bump invalidates this batch.
   // forceFresh 另加時戳，連瀏覽器 HTTP 快取一起繞過（題目修正後同版本 URL 仍可能命中瀏覽器快取）。
-  const url = `${CDN_BASE}/${file}?v=${CACHE_VERSION}${forceFresh ? `&_=${Date.now()}` : ''}`
+  const url = forceFresh
+    ? `${RAW_BASE}/${file}?_=${Date.now()}`            // 永遠最新（GitHub raw）
+    : `${CDN_BASE}/${file}?v=${CACHE_VERSION}`
   const r = await fetchWithTimeout(url, 8000)
   if (!r.ok) throw new Error(`CDN fetch failed: ${r.status}`)
   const data = await r.json()

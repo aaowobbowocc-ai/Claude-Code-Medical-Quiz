@@ -1,30 +1,35 @@
 # Codemagic CI/CD — Capacitor + Vite (iOS + Android)
 #
 # Workflows:
-#   ios-unsigned    — iOS .xcarchive (unsigned)，驗 iOS pipeline + 之後加簽名上 TestFlight
-#   android-aab     — Android .aab (unsigned)，丟 Play Console 上架/封閉測試
+#   ios-release     — iOS 簽章 IPA → 自動上傳 TestFlight（用 examking_appstore API key）
+#   android-aab     — Android signed .aab，丟 Play Console 上架/封閉測試
 #
 # 觸發：push to master 自動跑 (Codemagic 預設行為)。
 #       手動可在 Dashboard "Start new build" 選 workflow。
 
 workflows:
-  ios-unsigned:
-    name: iOS Unsigned Archive (validation)
+  ios-release:
+    name: iOS Release (signed → TestFlight)
     instance_type: mac_mini_m2
     max_build_duration: 60
     working_directory: frontend
+    # App Store Connect API key（Codemagic Integrations → Developer Portal 設的）
+    # → 自動產發佈憑證 + 描述檔 + 上傳 TestFlight，不用手動弄 cert/profile。
+    integrations:
+      app_store_connect: examking_appstore
     environment:
       node: 22.14.0
-      # Pin Xcode 16.4：Capacitor 7 + admob 7.2 配 iOS 18 SDK 穩定組合,
-      # 不用 Xcode 26 是因為它預設啟 Swift 6 嚴格 concurrency,
-      # 第三方 plugin 還沒全部跟上。
+      # Pin Xcode 16.4：Capacitor 7 + admob 7.2 配 iOS 18 SDK 穩定組合。
       xcode: 16.4
+      # 自動簽章（App Store 發佈）。Codemagic 用上面的 API key 自動產憑證/描述檔。
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: tw.examking.app
       vars:
-        XCODE_WORKSPACE: "ios/App/App.xcworkspace"
-        XCODE_SCHEME: "App"
-        # Vite 在 build 時把 import.meta.env.VITE_* inline 進 bundle。
-        # 不設這個 App 內所有 BACKEND 呼叫都會打 localhost:3001 → 全炸。
+        # Vite build 時 inline VITE_*；不設 BACKEND 會打 localhost:3001 全炸。
         VITE_BACKEND_URL: "https://api.examking.tw"
+        # App Store Connect 數字 App ID（用來查/遞增 TestFlight build number）。
+        APP_STORE_APP_ID: 6780595877
     cache:
       cache_paths:
         - $HOME/.npm
@@ -41,12 +46,7 @@ workflows:
 
       - name: Add iOS platform (if missing)
         script: |
-          if [ ! -d "ios" ]; then
-            echo "iOS platform not found, adding…"
-            npx cap add ios
-          else
-            echo "iOS platform already exists"
-          fi
+          if [ ! -d "ios" ]; then npx cap add ios; fi
 
       - name: Sync Capacitor → iOS
         script: |
@@ -59,31 +59,55 @@ workflows:
           rm -rf ios/App/App/public/signs
           echo "Stripped question-images + signs from iOS assets"
 
+      - name: Inject Info.plist keys (OAuth scheme + AdMob + ATT)
+        script: |
+          PLIST="ios/App/App/Info.plist"
+          PB=/usr/libexec/PlistBuddy
+          # ① Google 登入 deep-link：tw.examking.app:// 註冊在 CFBundleURLTypes，
+          #    否則 iOS appUrlOpen 不觸發、登入轉不回 App（Android 已用 manifest 做）。
+          $PB -c "Add :CFBundleURLTypes array" "$PLIST" 2>/dev/null || true
+          $PB -c "Add :CFBundleURLTypes:0 dict" "$PLIST" 2>/dev/null || true
+          $PB -c "Add :CFBundleURLTypes:0:CFBundleURLName string tw.examking.app" "$PLIST" 2>/dev/null || true
+          $PB -c "Add :CFBundleURLTypes:0:CFBundleURLSchemes array" "$PLIST" 2>/dev/null || true
+          $PB -c "Add :CFBundleURLTypes:0:CFBundleURLSchemes:0 string tw.examking.app" "$PLIST" 2>/dev/null || true
+          # ② AdMob iOS App ID（admob.js IOS_ADMOB_APP_ID）— 缺這個看廣告會閃退/初始化失敗。
+          $PB -c "Add :GADApplicationIdentifier string ca-app-pub-3134321405509741~8300987419" "$PLIST" 2>/dev/null \
+            || $PB -c "Set :GADApplicationIdentifier ca-app-pub-3134321405509741~8300987419" "$PLIST"
+          # ③ App 追蹤透明度說明（iOS 14+ 廣告個人化/過審用）。
+          $PB -c "Add :NSUserTrackingUsageDescription string 本應用程式會使用識別碼來提供更相關的廣告。" "$PLIST" 2>/dev/null || true
+          echo "=== Info.plist 注入結果 ==="; $PB -c "Print :CFBundleURLTypes" "$PLIST" || true; $PB -c "Print :GADApplicationIdentifier" "$PLIST" || true
+
       - name: Install CocoaPods
         script: |
           cd ios/App
-          # 確保拿最新 podspec (Capacitor 7 + admob 7 配套已自帶相容 UMP 3.x)
           pod install --repo-update
 
-      - name: Build unsigned iOS archive
+      - name: Auto-increment build number from TestFlight
         script: |
           cd ios/App
-          xcodebuild \
-            -workspace App.xcworkspace \
-            -scheme App \
-            -configuration Release \
-            -sdk iphoneos \
-            -archivePath $CM_BUILD_DIR/build/App.xcarchive \
-            archive \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO
+          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID" 2>/dev/null || echo 0)
+          NEW=$(($LATEST + 1))
+          agvtool new-version -all "$NEW" || echo "agvtool skipped (build $NEW)"
+          echo "Build number = $NEW"
+
+      - name: Set up code signing
+        script: |
+          xcode-project use-profiles
+
+      - name: Build signed IPA
+        script: |
+          xcode-project build-ipa \
+            --workspace "ios/App/App.xcworkspace" \
+            --scheme "App"
 
     artifacts:
-      - $CM_BUILD_DIR/build/App.xcarchive
-      - $CM_BUILD_DIR/build/*.log
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
 
     publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
       email:
         recipients:
           - aaowobbowocc@gmail.com

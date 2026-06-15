@@ -18,6 +18,9 @@ workflows:
     integrations:
       app_store_connect: examking_appstore
     environment:
+      # CERTIFICATE_PRIVATE_KEY（發佈憑證私鑰）放這個 group，要在 Codemagic UI 手動加。
+      groups:
+        - appstore_signing
       node: 22.14.0
       # Pin Xcode 16.4：Capacitor 7 + admob 7.2 配 iOS 18 SDK 穩定組合。
       xcode: 16.4
@@ -92,14 +95,12 @@ workflows:
       - name: Prepare distribution certificate in keychain
         script: |
           keychain initialize
-          # 撤銷帳號裡現有的發佈憑證（CI 之前建的私鑰遺失成孤兒，且占用 2 張上限）。
-          for cid in $(app-store-connect certificates list --type IOS_DISTRIBUTION --json 2>/dev/null | jq -r '.[].id // empty' 2>/dev/null); do
-            echo "Revoking stranded cert $cid"
-            app-store-connect certificates delete "$cid" 2>/dev/null || true
-          done
-          # 撤銷後帳號沒有現成憑證 → fetch-signing-files --create 會自動產私鑰、
-          # 建新發佈憑證 + 建 App Store 描述檔，並存本機讓 keychain 取用。
-          app-store-connect fetch-signing-files "tw.examking.app" --type IOS_APP_STORE --create
+          # fetch-signing-files 自己不產私鑰，必須提供一把。用 Codemagic env var
+          # CERTIFICATE_PRIVATE_KEY（固定私鑰）→ 憑證固定重用、不會變孤兒、不卡 2 張上限。
+          app-store-connect fetch-signing-files "tw.examking.app" \
+            --type IOS_APP_STORE \
+            --certificate-key "@env:CERTIFICATE_PRIVATE_KEY" \
+            --create
           keychain add-certificates
 
       - name: Build signed IPA (xcodebuild automatic + API key)

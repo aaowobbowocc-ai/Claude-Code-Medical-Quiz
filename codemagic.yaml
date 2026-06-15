@@ -21,10 +21,8 @@ workflows:
       node: 22.14.0
       # Pin Xcode 16.4：Capacitor 7 + admob 7.2 配 iOS 18 SDK 穩定組合。
       xcode: 16.4
-      # 自動簽章（App Store 發佈）。Codemagic 用上面的 API key 自動產憑證/描述檔。
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: tw.examking.app
+      # 不用 managed ios_signing（只會抓現有 profile、第一次沒有就炸）。
+      # 改在 script 用 app-store-connect fetch-signing-files --create 自動建憑證+描述檔。
       vars:
         # Vite build 時 inline VITE_*；不設 BACKEND 會打 localhost:3001 全炸。
         VITE_BACKEND_URL: "https://api.examking.tw"
@@ -90,8 +88,14 @@ workflows:
           agvtool new-version -all "$NEW" || echo "agvtool skipped (build $NEW)"
           echo "Build number = $NEW"
 
-      - name: Set up code signing
+      - name: Set up code signing (fetch / create cert + profile)
         script: |
+          keychain initialize
+          # 第一次沒有發佈憑證/描述檔 → --create 自動建立（用 examking_appstore API key）
+          app-store-connect fetch-signing-files "tw.examking.app" \
+            --type IOS_APP_STORE \
+            --create
+          keychain add-certificates
           xcode-project use-profiles
 
       - name: Build signed IPA

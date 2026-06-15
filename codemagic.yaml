@@ -92,8 +92,13 @@ workflows:
       - name: Prepare distribution certificate in keychain
         script: |
           keychain initialize
-          # 確保發佈憑證(含私鑰)在 keychain；已存在就抓現成的，沒有才 --create。
-          # 描述檔交給下面 xcodebuild automatic + API key 自動解析/建立。
+          # 撤銷帳號裡現有的發佈憑證（CI 之前建的私鑰遺失成孤兒，且占用 2 張上限）。
+          for cid in $(app-store-connect certificates list --type IOS_DISTRIBUTION --json 2>/dev/null | jq -r '.[].id // empty' 2>/dev/null); do
+            echo "Revoking stranded cert $cid"
+            app-store-connect certificates delete "$cid" 2>/dev/null || true
+          done
+          # 撤銷後帳號沒有現成憑證 → fetch-signing-files --create 會自動產私鑰、
+          # 建新發佈憑證 + 建 App Store 描述檔，並存本機讓 keychain 取用。
           app-store-connect fetch-signing-files "tw.examking.app" --type IOS_APP_STORE --create
           keychain add-certificates
 

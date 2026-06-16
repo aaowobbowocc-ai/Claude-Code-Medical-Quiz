@@ -102,29 +102,18 @@ workflows:
             --certificate-key "@env:CERTIFICATE_PRIVATE_KEY" \
             --create
           keychain add-certificates
+          # 把下載好的描述檔套到 Xcode 專案（憑證+描述檔現在都有效，能正確套上）。
+          xcode-project use-profiles
 
-      - name: Build signed IPA (xcodebuild automatic + API key)
+      - name: Build signed IPA
         script: |
-          set -e
-          # 把 App Store Connect API key 寫成檔給 xcodebuild（integration 已注入 env）。
-          KEY_FILE=/tmp/AuthKey.p8
-          printf '%s' "$APP_STORE_CONNECT_PRIVATE_KEY" > "$KEY_FILE"
-          AUTH="-authenticationKeyPath $KEY_FILE -authenticationKeyID $APP_STORE_CONNECT_KEY_IDENTIFIER -authenticationKeyIssuerID $APP_STORE_CONNECT_ISSUER_ID -allowProvisioningUpdates"
-          cd ios/App
-          # 自動簽章：keychain 已有發佈憑證，xcodebuild 用 API key 自動解析/建 App Store 描述檔。
-          xcodebuild -workspace App.xcworkspace -scheme App \
-            -configuration Release -sdk iphoneos -destination "generic/platform=iOS" \
-            -archivePath "$CM_BUILD_DIR/build/App.xcarchive" archive \
-            $AUTH DEVELOPMENT_TEAM=FS8L95V9R5 CODE_SIGN_STYLE=Automatic
-          # 匯出 App Store IPA
-          printf '%s' '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict><key>method</key><string>app-store-connect</string><key>teamID</key><string>FS8L95V9R5</string><key>signingStyle</key><string>automatic</string><key>destination</key><string>export</string></dict></plist>' > /tmp/ExportOptions.plist
-          xcodebuild -exportArchive \
-            -archivePath "$CM_BUILD_DIR/build/App.xcarchive" \
-            -exportPath "$CM_BUILD_DIR/build/ios/ipa" \
-            -exportOptionsPlist /tmp/ExportOptions.plist $AUTH
+          # 標準手動簽章打包：use-profiles 已把描述檔套上，憑證在 keychain。
+          xcode-project build-ipa \
+            --workspace "ios/App/App.xcworkspace" \
+            --scheme "App"
 
     artifacts:
-      - $CM_BUILD_DIR/build/ios/ipa/*.ipa
+      - build/ios/ipa/*.ipa
 
     publishing:
       app_store_connect:

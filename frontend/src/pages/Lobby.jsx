@@ -337,8 +337,8 @@ export default function Lobby() {
         )}
       </div>
 
-      {/* ── Bet setting ───────────────────────────────────────── */}
-      {isHost && (
+      {/* ── Bet setting（App 版隱藏：賭注金幣＝模擬賭博，會把 App Store 分級拉到 17+）─ */}
+      {isHost && !IS_NATIVE && (
         <div className="px-4 mt-5">
           <div className="flex items-center justify-between mb-3">
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">賭注金幣</p>

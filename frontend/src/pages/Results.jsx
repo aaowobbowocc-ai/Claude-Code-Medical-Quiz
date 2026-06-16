@@ -8,6 +8,7 @@ import ShareChallengeButton from '../components/ShareChallengeButton'
 import { getExamConfig } from '../config/examRegistry'
 import { supabase } from '../lib/supabase'
 import { addWrong } from '../lib/wrongBank'
+import { isNativeApp } from '../lib/admob'
 import AvatarText from '../components/AvatarText'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
@@ -56,7 +57,8 @@ export default function Results() {
   const correctCount = questionResults.filter(q => q.correct).length
   const accuracyPct = questionResults.length > 0 ? correctCount / questionResults.length : 0
   const meetsThreshold = accuracyPct >= 0.7
-  const betWinnings = isWinner && betAmount > 0 ? betAmount * 2 : 0
+  // App 版隱藏賭注（模擬賭博分級）；跨平台房間若房主在網頁設了賭注，App 端不顯示「賭注」字樣
+  const betWinnings = !isNativeApp() && isWinner && betAmount > 0 ? betAmount * 2 : 0
   const baseReward = meetsThreshold ? (isWinner ? 120 : 30) : 0
   const totalReward = baseReward + betWinnings
 

@@ -78,6 +78,9 @@ workflows:
             || $PB -c "Set :GADApplicationIdentifier ca-app-pub-3134321405509741~8300987419" "$PLIST"
           # ③ App 追蹤透明度說明（iOS 14+ 廣告個人化/過審用）。
           $PB -c "Add :NSUserTrackingUsageDescription string 本應用程式會使用識別碼來提供更相關的廣告。" "$PLIST" 2>/dev/null || true
+          # ④ 出口合規：只用 HTTPS(豁免加密) → 宣告不含非豁免加密，省去每次 TestFlight 的加密聲明框。
+          $PB -c "Add :ITSAppUsesNonExemptEncryption bool false" "$PLIST" 2>/dev/null \
+            || $PB -c "Set :ITSAppUsesNonExemptEncryption false" "$PLIST"
           echo "=== Info.plist 注入結果 ==="; $PB -c "Print :CFBundleURLTypes" "$PLIST" || true; $PB -c "Print :GADApplicationIdentifier" "$PLIST" || true
 
       - name: Install CocoaPods

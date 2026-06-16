@@ -22,8 +22,9 @@ workflows:
       groups:
         - appstore_signing
       node: 22.14.0
-      # Pin Xcode 16.4：Capacitor 7 + admob 7.2 配 iOS 18 SDK 穩定組合。
-      xcode: 16.4
+      # Apple 強制要 iOS 26 SDK (Xcode 26+) 才能上傳 App Store Connect，
+      # 用 latest 取最新穩定 Xcode（16.4=iOS18.5 SDK 會被退件）。
+      xcode: latest
       # 簽章改在下面 script 用 xcodebuild 自動簽章 + App Store Connect API key 做。
       # managed ios_signing / xcode-project use-profiles 對 Capacitor 專案套不上 profile
       # （archive 用 Manual 卻沒 PROVISIONING_PROFILE_SPECIFIER → 失敗），已試過。

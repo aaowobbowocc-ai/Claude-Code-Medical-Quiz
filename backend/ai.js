@@ -656,15 +656,13 @@ ${wrongNote}
 **${cat.applicationLabel}**
 （${cat.applicationDesc}）`;
 
-    // Enable Google Search grounding for fact-heavy exams where citation-backed
-    // answers materially improve accuracy (drug doses, statute numbers, latest
-    // guidelines, traffic rules). Billed at ~$35/1k grounded requests; whether
-    // the "GenAI App Builder" trial credit covers this SKU depends on how
-    // Google maps the request internally (Discovery Engine vs Vertex AI). We
-    // accept the risk because /explain has a high cache hit rate — at ~10
-    // new explanations/day (post initial backfill), grounding cost is ~$10/mo
-    // worst case. Re-verify after a few days of billing data.
-    const useGrounding = MEDICAL_EXAMS.has(exam) || LEGAL_EXAMS.has(exam) || DRIVER_EXAMS.has(exam);
+    // Google Search grounding 已全面關閉（2026-06-16）。
+    // 原因：grounding 開啟會強制 Gemini 2.5 啟用 thinking（推理），使 generationConfig
+    // 的 thinkingBudget:0 失效；2026/6 帳單顯示「Thinking Text Output」單一 SKU 就 $94/月
+    // （佔 Vertex 帳單 61%），遠超原註解預估的 ~$10/月。關閉後 thinkingBudget:0 生效、
+    // 思考 token 歸零，帳單預估砍約六成。代價：解說不再附即時搜尋引用（模型本身知識足夠）。
+    // 若日後要對特定考試重開，把該 exam 加進下面條件即可。
+    const useGrounding = false;
 
     await streamVertexGemini(res, prompt, 600, (fullText) => {
       // Citations are surfaced live via the meta frame; we don't persist them

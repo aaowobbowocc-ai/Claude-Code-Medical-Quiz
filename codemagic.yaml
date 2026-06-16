@@ -31,6 +31,15 @@ workflows:
       vars:
         # Vite build 時 inline VITE_*；不設 BACKEND 會打 localhost:3001 全炸。
         VITE_BACKEND_URL: "https://api.examking.tw"
+        # Supabase（anon key 是公開金鑰，本來就打包進前端）。沒設 → supabase=null
+        # → Google 登入/帳號綁定整個被關掉。.env.local 沒 commit，CI 必須在這補。
+        VITE_SUPABASE_URL: "https://qgysdulvntuesoacdszo.supabase.co"
+        VITE_SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFneXNkdWx2bnR1ZXNvYWNkc3pvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzOTk1OTcsImV4cCI6MjA5MDk3NTU5N30.o5gxEWUheE3I7g7qg7xCUrLy18CadbzWpdg_e7mGjSU"
+        # Phase 1 功能旗標：對齊網頁正式版（Vercel）— 頭像/感謝榜/徽章已開放；
+        # 邊框/AI無限尚未正式放（不設＝OFF）。RANK_FRAMES 預設 ON 不用設。
+        VITE_FEATURE_AVATARS: "1"
+        VITE_FEATURE_SPONSORS: "1"
+        VITE_FEATURE_BADGES: "1"
         # App Store Connect 數字 App ID（用來查/遞增 TestFlight build number）。
         APP_STORE_APP_ID: 6780595877
     cache:
@@ -150,6 +159,13 @@ workflows:
         # Vite 在 build 時把 import.meta.env.VITE_* inline 進 bundle。
         # 不設這個 App 內所有 BACKEND 呼叫都會打 localhost:3001 → 全炸。
         VITE_BACKEND_URL: "https://api.examking.tw"
+        # Supabase（anon key 公開）。沒設 → 登入/綁定被關掉。.env.local 沒 commit。
+        VITE_SUPABASE_URL: "https://qgysdulvntuesoacdszo.supabase.co"
+        VITE_SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFneXNkdWx2bnR1ZXNvYWNkc3pvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzOTk1OTcsImV4cCI6MjA5MDk3NTU5N30.o5gxEWUheE3I7g7qg7xCUrLy18CadbzWpdg_e7mGjSU"
+        # Phase 1 功能旗標：對齊網頁正式版（頭像/感謝榜/徽章開；邊框/AI無限不設＝OFF）。
+        VITE_FEATURE_AVATARS: "1"
+        VITE_FEATURE_SPONSORS: "1"
+        VITE_FEATURE_BADGES: "1"
     cache:
       cache_paths:
         - $HOME/.npm

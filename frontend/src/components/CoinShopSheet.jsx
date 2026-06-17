@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Sheet from './Sheet'
 import { usePlayerStore } from '../store/gameStore'
-import { supabase } from '../lib/supabase'
+import { readAuthFromStorage } from '../lib/supabase'
 import { getDeviceId } from '../hooks/useAI'
 import { isNativeApp } from '../lib/admob'
 
@@ -53,14 +53,9 @@ export default function CoinShopSheet({ onClose }) {
   const handleConfirm = async () => {
     setStep('processing')
     setErrorMsg('')
-    // 先在「使用者點擊」這個手勢內同步開一個空白分頁——若等 await 建單後才 window.open，
-    // 會脫離手勢被瀏覽器當彈窗擋掉（街口付款頁開不了）。建單完成再把它導向街口 URL。
-    // 注意：不能帶 noopener，否則 window.open 回傳 null、拿不到分頁參考無法導向。
-    const payWin = window.open('about:blank', '_blank')
     try {
-      // Get current Supabase user (must be logged in to receive coins)
-      const { data: { session } } = await supabase.auth.getSession()
-      const user_id = session?.user?.id
+      // 直接從 localStorage 讀登入狀態：supabase.auth.getSession() 可能 hang 卡住付款流程。
+      const { user_id } = readAuthFromStorage()
       if (!user_id) {
         setErrorMsg('請先登入帳號才能領取金幣')
         setStep('error')
@@ -68,7 +63,7 @@ export default function CoinShopSheet({ onClose }) {
       }
       const device_id = getDeviceId()
 
-      // Create order on backend → returns JKOPay payment URL
+      // 後端建單 → 回傳街口付款頁 URL
       const r = await fetch(`${BACKEND}/payment/jkos/create-order`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -78,41 +73,13 @@ export default function CoinShopSheet({ onClose }) {
         const j = await r.json().catch(() => ({}))
         throw new Error(j.error || j.detail || `HTTP ${r.status}`)
       }
-      const { order_id, payment_url } = await r.json()
-      setOrderId(order_id)
-      setPayUrl(payment_url)
+      const { payment_url } = await r.json()
 
-      // 把先前同步開好的分頁導向街口付款頁；若分頁被擋(payWin 為 null)或被關，
-      // 使用者可改點「等待付款」畫面上的手動連結（該點擊本身在手勢內、不會被擋）。
-      if (payWin && !payWin.closed) payWin.location.href = payment_url
-
-      // Poll status every 3s until paid/failed (max 10 min)
-      let attempts = 0
-      const maxAttempts = 200
-      pollRef.current = setInterval(async () => {
-        attempts++
-        try {
-          const sr = await fetch(`${BACKEND}/payment/jkos/status/${order_id}`)
-          if (!sr.ok) return
-          const status = await sr.json()
-          if (status.status === 'paid') {
-            clearInterval(pollRef.current)
-            setStep('success')
-          } else if (status.status === 'failed' || status.status === 'expired') {
-            clearInterval(pollRef.current)
-            setErrorMsg(status.status === 'expired' ? '訂單已過期' : '付款失敗')
-            setStep('error')
-          }
-        } catch {}
-        if (attempts >= maxAttempts) {
-          clearInterval(pollRef.current)
-          setErrorMsg('付款逾時，若已扣款請聯絡客服')
-          setStep('error')
-        }
-      }, 3000)
+      // 同分頁直接前往街口付款頁（不開新視窗 → 不會被彈窗攔截）。
+      // 付款完成後街口會把瀏覽器導回 /coin-shop/return?order=xxx 顯示結果。
+      window.location.href = payment_url
     } catch (e) {
       console.error('create-order failed', e)
-      if (payWin && !payWin.closed) payWin.close() // 建單失敗→關掉空白分頁
       setErrorMsg(e.message || '建立訂單失敗')
       setStep('error')
     }
@@ -295,22 +262,14 @@ export default function CoinShopSheet({ onClose }) {
           </>
         )}
 
-        {/* ── 步驟 3：處理中 ── */}
+        {/* ── 步驟 3：處理中（建單後同分頁前往街口，畫面短暫顯示後即跳轉）── */}
         {step === 'processing' && (
           <div className="text-center py-8">
             <div className="text-5xl mb-4 animate-pulse">⏳</div>
-            <p className="font-bold text-medical-dark text-lg">等待付款完成</p>
+            <p className="font-bold text-medical-dark text-lg">前往街口付款…</p>
             <p className="text-gray-400 text-sm mt-2 leading-relaxed">
-              已開啟街口付款頁。<br />付款完成後此頁會自動更新。
+              正在開啟街口付款頁，請稍候。
             </p>
-            {payUrl && (
-              <button
-                onClick={() => window.open(payUrl, '_blank')}
-                className="mt-4 text-sm font-semibold text-medical-blue underline active:opacity-70"
-              >
-                付款頁沒有自動開啟？點此開啟 →
-              </button>
-            )}
           </div>
         )}
 

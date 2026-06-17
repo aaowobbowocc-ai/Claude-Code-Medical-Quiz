@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useState, useEffect, useLayoutEffect } from 'react'
 import { Routes, Route, Navigate, useNavigate, useLocation, useParams } from 'react-router-dom'
 import Home from './pages/Home'
+import CoinShopReturn from './pages/CoinShopReturn'
 import { useSocket, getSocket } from './hooks/useSocket'
 import { useDocumentMeta } from './hooks/useDocumentMeta'
 import { useTwemoji } from './hooks/useTwemoji'
@@ -279,6 +280,7 @@ function AppRoutes() {
           <Route path="/coverage"   element={<Coverage />} />
           <Route path="/search"     element={<Search />} />
           <Route path="/shop"       element={<Shop />} />
+          <Route path="/coin-shop/return" element={<CoinShopReturn />} />
           <Route path="/sponsors"   element={<Sponsors />} />
           <Route path="/guides"          element={<Guides />} />
           <Route path="/guides/:slug"    element={<GuideDetail />} />

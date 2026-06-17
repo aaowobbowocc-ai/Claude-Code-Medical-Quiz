@@ -53,10 +53,16 @@ export default function CoinShopSheet({ onClose }) {
   const handleConfirm = async () => {
     setStep('processing')
     setErrorMsg('')
+    // 在「使用者點擊」這個手勢內同步先開一個空白分頁——這樣不會被瀏覽器當彈窗擋掉。
+    // （若等 await 建單後才 window.open，會脫離手勢被擋。）建單後再把它導向街口付款頁，
+    // 主畫面留在原地輪詢狀態，使用者付完回來這頁會自動顯示成功。
+    // 注意：不能帶 noopener，否則回傳 null 拿不到分頁參考無法導向。
+    const payWin = window.open('about:blank', '_blank')
     try {
       // 直接從 localStorage 讀登入狀態：supabase.auth.getSession() 可能 hang 卡住付款流程。
       const { user_id } = readAuthFromStorage()
       if (!user_id) {
+        if (payWin && !payWin.closed) payWin.close()
         setErrorMsg('請先登入帳號才能領取金幣')
         setStep('error')
         return
@@ -73,13 +79,41 @@ export default function CoinShopSheet({ onClose }) {
         const j = await r.json().catch(() => ({}))
         throw new Error(j.error || j.detail || `HTTP ${r.status}`)
       }
-      const { payment_url } = await r.json()
+      const { order_id, payment_url } = await r.json()
+      setOrderId(order_id)
+      setPayUrl(payment_url)
 
-      // 同分頁直接前往街口付款頁（不開新視窗 → 不會被彈窗攔截）。
-      // 付款完成後街口會把瀏覽器導回 /coin-shop/return?order=xxx 顯示結果。
-      window.location.href = payment_url
+      // 把先前同步開好的分頁導向街口付款頁；若被擋(payWin 為 null)使用者可點下方手動連結。
+      if (payWin && !payWin.closed) payWin.location.href = payment_url
+
+      // 主畫面每 3 秒輪詢交易狀態（最多 10 分鐘），付款完成自動顯示成功
+      let attempts = 0
+      const maxAttempts = 200
+      pollRef.current = setInterval(async () => {
+        attempts++
+        try {
+          const sr = await fetch(`${BACKEND}/payment/jkos/status/${order_id}`)
+          if (sr.ok) {
+            const status = await sr.json()
+            if (status.status === 'paid') {
+              clearInterval(pollRef.current); setStep('success'); return
+            }
+            if (status.status === 'failed' || status.status === 'expired') {
+              clearInterval(pollRef.current)
+              setErrorMsg(status.status === 'expired' ? '訂單已過期' : '付款失敗')
+              setStep('error'); return
+            }
+          }
+        } catch {}
+        if (attempts >= maxAttempts) {
+          clearInterval(pollRef.current)
+          setErrorMsg('付款逾時，若已扣款金幣會自動入帳')
+          setStep('error')
+        }
+      }, 3000)
     } catch (e) {
       console.error('create-order failed', e)
+      if (payWin && !payWin.closed) payWin.close()
       setErrorMsg(e.message || '建立訂單失敗')
       setStep('error')
     }
@@ -262,14 +296,22 @@ export default function CoinShopSheet({ onClose }) {
           </>
         )}
 
-        {/* ── 步驟 3：處理中（建單後同分頁前往街口，畫面短暫顯示後即跳轉）── */}
+        {/* ── 步驟 3：處理中（新分頁開街口付款頁，主畫面輪詢狀態）── */}
         {step === 'processing' && (
           <div className="text-center py-8">
             <div className="text-5xl mb-4 animate-pulse">⏳</div>
-            <p className="font-bold text-medical-dark text-lg">前往街口付款…</p>
+            <p className="font-bold text-medical-dark text-lg">等待付款完成</p>
             <p className="text-gray-400 text-sm mt-2 leading-relaxed">
-              正在開啟街口付款頁，請稍候。
+              已於新分頁開啟街口付款頁。<br />付款完成後此頁會自動更新。
             </p>
+            {payUrl && (
+              <button
+                onClick={() => window.open(payUrl, '_blank')}
+                className="mt-4 text-sm font-semibold text-medical-blue underline active:opacity-70"
+              >
+                付款頁沒有自動開啟？點此開啟 →
+              </button>
+            )}
           </div>
         )}
 

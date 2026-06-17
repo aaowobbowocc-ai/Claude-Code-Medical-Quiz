@@ -307,11 +307,17 @@ export default function CoinShopSheet({ onClose }) {
             {payUrl && (
               <button
                 onClick={() => window.open(payUrl, '_blank')}
-                className="mt-4 text-sm font-semibold text-medical-blue underline active:opacity-70"
+                className="mt-4 block mx-auto text-sm font-semibold text-medical-blue underline active:opacity-70"
               >
                 付款頁沒有自動開啟？點此開啟 →
               </button>
             )}
+            <button
+              onClick={handleClose}
+              className="mt-5 block mx-auto px-8 py-2.5 rounded-xl font-semibold text-gray-500 bg-gray-100 active:scale-95"
+            >
+              取消，我不付了
+            </button>
           </div>
         )}
 

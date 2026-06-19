@@ -71,6 +71,16 @@ workflows:
           rm -rf ios/App/App/public/signs
           echo "Stripped question-images + signs from iOS assets"
 
+      - name: Inject real app icon (修 2.3.8：覆蓋 Capacitor 佔位 icon)
+        script: |
+          ICONSET="ios/App/App/Assets.xcassets/AppIcon.appiconset"
+          echo "Before:"; ls "$ICONSET"
+          rm -f "$ICONSET"/*.png
+          cp resources/icon-1024.png "$ICONSET/icon-1024.png"
+          # 單一 universal 1024 icon（Xcode 14+ 支援）→ 確定用到真 logo。
+          printf '%s' '{"images":[{"filename":"icon-1024.png","idiom":"universal","platform":"ios","size":"1024x1024"}],"info":{"author":"xcode","version":1}}' > "$ICONSET/Contents.json"
+          echo "After:"; ls "$ICONSET"
+
       - name: Inject Info.plist keys (OAuth scheme + AdMob + ATT)
         script: |
           PLIST="ios/App/App/Info.plist"

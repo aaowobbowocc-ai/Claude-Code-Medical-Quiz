@@ -221,6 +221,42 @@ export async function linkOrSignInGoogle() {
 }
 
 /**
+ * Sign in / link with Apple（App Store Guideline 4.8：有 Google 就必須提供等效的
+ * Sign in with Apple）。沿用與 Google 完全相同的 deep-link OAuth 基礎建設，只差
+ * provider='apple'。Supabase 後台需啟用 Apple provider。
+ */
+export async function signInWithApple() {
+  if (!supabase) return { error: 'auth-disabled' }
+  const { data: { user } } = await supabase.auth.getUser()
+  if (user?.identities?.some(i => i.provider === 'apple')) {
+    return { alreadyLinked: true }
+  }
+  if (user) {
+    await supabase.auth.signOut({ scope: 'local' })
+  }
+  try {
+    sessionStorage.setItem(OAUTH_RETURN_PATH_KEY, window.location.pathname + window.location.search)
+  } catch {}
+  sessionStorage.setItem(OAUTH_PENDING_KEY, '1')
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: 'apple',
+    options: {
+      redirectTo: NATIVE ? NATIVE_OAUTH_REDIRECT : window.location.origin,
+      skipBrowserRedirect: NATIVE,
+    },
+  })
+  if (error) {
+    sessionStorage.removeItem(OAUTH_PENDING_KEY)
+    return { error: error.message }
+  }
+  if (NATIVE && data?.url) {
+    try { await Browser.open({ url: data.url }) }
+    catch (e) { sessionStorage.removeItem(OAUTH_PENDING_KEY); return { error: e?.message || 'browser open failed' } }
+  }
+  return { signingIn: true }
+}
+
+/**
  * Force a Google account picker and switch to whichever account the user picks.
  * Used by the "換綁 Google" button — replaces current session entirely.
  */

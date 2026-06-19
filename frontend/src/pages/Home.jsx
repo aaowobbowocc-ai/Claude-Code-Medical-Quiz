@@ -637,6 +637,14 @@ export default function Home() {
               {authBusy ? '連線中…' : '用 Google 登入立即送 3000 🪙'}
             </button>
           )}
+          {/* Sign in with Apple — iOS 才顯示，與 Google 同等顯眼（Guideline 4.8）*/}
+          {supabase && IS_IOS && (
+            <button onClick={handleSignInApple} disabled={authBusy}
+              className="w-full py-3 rounded-2xl text-sm font-bold bg-black text-white flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50 -mt-1">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.9 2.37-4.3 2.48-4.36-1.35-1.98-3.46-2.25-4.21-2.28-1.79-.18-3.5 1.05-4.41 1.05-.91 0-2.31-1.03-3.8-1-1.96.03-3.77 1.14-4.78 2.9-2.04 3.54-.52 8.78 1.46 11.65.97 1.41 2.13 2.99 3.65 2.93 1.47-.06 2.02-.95 3.79-.95 1.77 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.54-2.85 1.12-1.63 1.58-3.21 1.6-3.29-.04-.02-3.07-1.18-3.1-4.67zM14.13 4.5c.81-.98 1.36-2.35 1.21-3.71-1.17.05-2.59.78-3.43 1.76-.75.87-1.41 2.26-1.23 3.59 1.31.1 2.64-.66 3.45-1.64z"/></svg>
+              {authBusy ? '連線中…' : '透過 Apple 登入'}
+            </button>
+          )}
           {authMsg && <p className="text-xs text-red-500 text-center -mt-1">{authMsg}</p>}
 
           {/* Action buttons — card style matching logged-in view */}

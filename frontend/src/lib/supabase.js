@@ -352,7 +352,8 @@ export function readAuthFromStorage() {
 /** Get current user's email + provider info, or null if anon. */
 export function getLinkedIdentity(user) {
   if (!user) return null
-  const google = user.identities?.find(i => i.provider === 'google')
-  if (google) return { provider: 'google', email: user.email || google.identity_data?.email }
+  // 認 Google 與 Apple（兩種登入都算已綁定 → 同享綁定獎勵）
+  const ident = user.identities?.find(i => i.provider === 'google' || i.provider === 'apple')
+  if (ident) return { provider: ident.provider, email: user.email || ident.identity_data?.email }
   return null
 }

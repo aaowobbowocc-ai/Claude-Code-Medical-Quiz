@@ -825,7 +825,7 @@ export default function Home() {
           style={{ background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)' }}>
           <span className="text-2xl shrink-0">🎁</span>
           <div className="flex-1 text-left min-w-0">
-            <p className="text-white font-bold text-sm leading-tight">綁定 Google 立即送 3000 🪙</p>
+            <p className="text-white font-bold text-sm leading-tight">綁定帳號立即送 3000 🪙</p>
             <p className="text-white/85 text-[11px] mt-0.5">同步跨裝置進度，換手機也不怕資料消失</p>
           </div>
           <span className="shrink-0 bg-white text-amber-700 text-xs font-bold px-3 py-1.5 rounded-lg">
@@ -1070,7 +1070,7 @@ export default function Home() {
                   <div className="bg-emerald-50 border border-emerald-200 rounded-2xl px-4 py-3 flex items-center gap-3">
                     <span className="text-2xl">✅</span>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-bold text-emerald-700">已綁定 Google</p>
+                      <p className="text-sm font-bold text-emerald-700">已綁定 {linkedIdentity.provider === 'apple' ? 'Apple' : 'Google'}</p>
                       <p className="text-xs text-emerald-600 truncate">{linkedIdentity.email || '已連結'}</p>
                     </div>
                     <button onClick={handleSwitchGoogle} disabled={authBusy}

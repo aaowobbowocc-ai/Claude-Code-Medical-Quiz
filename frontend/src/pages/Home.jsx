@@ -629,21 +629,23 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Google sign-in shortcut — recovers cross-device data */}
+          {/* 登入入口：標題寫獎勵（Apple 按鈕本身不能加行銷字 → 放標題），下面 Google + Apple */}
           {supabase && (
-            <button onClick={handleLinkGoogle} disabled={authBusy}
-              className="w-full py-3 rounded-2xl text-sm font-bold bg-white border-2 border-amber-300 text-amber-700 flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50 -mt-1">
-              <span className="text-lg">🎁</span>
-              {authBusy ? '連線中…' : '用 Google 登入立即送 3000 🪙'}
-            </button>
-          )}
-          {/* Sign in with Apple — iOS 才顯示，與 Google 同等顯眼（Guideline 4.8）*/}
-          {supabase && IS_IOS && (
-            <button onClick={handleSignInApple} disabled={authBusy}
-              className="w-full py-3 rounded-2xl text-sm font-bold bg-black text-white flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50 -mt-1">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.9 2.37-4.3 2.48-4.36-1.35-1.98-3.46-2.25-4.21-2.28-1.79-.18-3.5 1.05-4.41 1.05-.91 0-2.31-1.03-3.8-1-1.96.03-3.77 1.14-4.78 2.9-2.04 3.54-.52 8.78 1.46 11.65.97 1.41 2.13 2.99 3.65 2.93 1.47-.06 2.02-.95 3.79-.95 1.77 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.54-2.85 1.12-1.63 1.58-3.21 1.6-3.29-.04-.02-3.07-1.18-3.1-4.67zM14.13 4.5c.81-.98 1.36-2.35 1.21-3.71-1.17.05-2.59.78-3.43 1.76-.75.87-1.41 2.26-1.23 3.59 1.31.1 2.64-.66 3.45-1.64z"/></svg>
-              {authBusy ? '連線中…' : '透過 Apple 登入'}
-            </button>
+            <div className="space-y-2 -mt-1">
+              <p className="text-center text-xs font-bold text-amber-600">🎁 登入帳號立即送 3000 🪙 · 跨裝置同步進度</p>
+              <button onClick={handleLinkGoogle} disabled={authBusy}
+                className="w-full py-3 rounded-2xl text-sm font-bold bg-white border-2 border-amber-300 text-amber-700 flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50">
+                <svg viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                {authBusy ? '連線中…' : '用 Google 登入'}
+              </button>
+              {IS_IOS && (
+                <button onClick={handleSignInApple} disabled={authBusy}
+                  className="w-full py-3 rounded-2xl text-sm font-bold bg-black text-white flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.9 2.37-4.3 2.48-4.36-1.35-1.98-3.46-2.25-4.21-2.28-1.79-.18-3.5 1.05-4.41 1.05-.91 0-2.31-1.03-3.8-1-1.96.03-3.77 1.14-4.78 2.9-2.04 3.54-.52 8.78 1.46 11.65.97 1.41 2.13 2.99 3.65 2.93 1.47-.06 2.02-.95 3.79-.95 1.77 0 2.27.95 3.82.92 1.58-.03 2.58-1.43 3.54-2.85 1.12-1.63 1.58-3.21 1.6-3.29-.04-.02-3.07-1.18-3.1-4.67zM14.13 4.5c.81-.98 1.36-2.35 1.21-3.71-1.17.05-2.59.78-3.43 1.76-.75.87-1.41 2.26-1.23 3.59 1.31.1 2.64-.66 3.45-1.64z"/></svg>
+                  {authBusy ? '連線中…' : '透過 Apple 登入'}
+                </button>
+              )}
+            </div>
           )}
           {authMsg && <p className="text-xs text-red-500 text-center -mt-1">{authMsg}</p>}
 

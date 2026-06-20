@@ -118,3 +118,22 @@ export async function showRewarded() {
 export function isNativeApp() {
   return Capacitor.isNativePlatform()
 }
+
+/**
+ * iOS App Tracking Transparency：請求追蹤授權（彈出系統「允許追蹤」對話框）。
+ * App Store Guideline 2.1 要求：宣告用 ATT 就必須在收集追蹤資料前真的跳這個彈窗。
+ * 只在 iOS 跑；status 為 notDetermined（首次）才會真的彈，之後呼叫只回傳結果不重彈。
+ * 必須在 App 進入 active 狀態後呼叫，否則彈窗不會出現（由 capacitor-init 延遲呼叫）。
+ */
+export async function requestATT() {
+  if (!Capacitor.isNativePlatform() || Capacitor.getPlatform() !== 'ios') return
+  try {
+    const mod = await import('@capacitor-community/admob')
+    const res = await mod.AdMob.trackingAuthorizationStatus()
+    if (res?.status === 'notDetermined') {
+      await mod.AdMob.requestTrackingAuthorization()
+    }
+  } catch (e) {
+    console.warn('[admob] ATT request failed:', e?.message)
+  }
+}

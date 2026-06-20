@@ -36,6 +36,19 @@ export async function initCapacitor() {
       console.warn('[capacitor] SplashScreen hide failed:', e.message)
     }
 
+    // iOS App Tracking Transparency：啟動後跳「允許追蹤」彈窗（Guideline 2.1 要求，
+    // 在任何廣告追蹤資料收集前）。延遲到 App 進 active 狀態才彈，否則系統不顯示。
+    if (Capacitor.getPlatform() === 'ios') {
+      setTimeout(async () => {
+        try {
+          const { requestATT } = await import('./admob')
+          await requestATT()
+        } catch (e) {
+          console.warn('[capacitor] ATT request failed:', e.message)
+        }
+      }, 1500)
+    }
+
     // Android 返回鍵：root 頁面按返回 → 縮小 App 而不是退出
     try {
       App.addListener('backButton', ({ canGoBack }) => {

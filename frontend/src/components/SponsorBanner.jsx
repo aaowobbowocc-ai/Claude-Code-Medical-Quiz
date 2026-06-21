@@ -48,11 +48,11 @@ export default function SponsorBanner() {
       <span className="sponsor-banner-sheen" aria-hidden="true" />
       <div className="relative px-4 pt-2.5 pb-3">
         <div className="flex items-center justify-between mb-2">
-          <span className="flex items-center gap-1.5 text-white font-black text-sm tracking-wide"
-                style={{ textShadow: '0 1px 4px rgba(90,45,0,.55)' }}>
-            <span className="text-lg">👑</span>
+          <span className="flex items-center gap-1.5 text-white font-black text-sm tracking-wide rounded-full border border-amber-100/70 bg-black/20 px-2.5 py-1 backdrop-blur-sm shadow-[inset_0_1px_0_rgba(255,255,255,.25)]"
+                style={{ textShadow: '0 1px 4px rgba(90,45,0,.6)' }}>
+            <span className="text-base">👑</span>
             感謝榜
-            <span className="text-[10px] font-bold text-amber-50/80 ml-0.5">贊助維運的大大們</span>
+            <span className="text-[10px] font-bold text-amber-50/85 ml-0.5">贊助維運的大大們</span>
           </span>
           <span className="text-amber-50 text-[11px] font-bold opacity-90">查看全部 ›</span>
         </div>

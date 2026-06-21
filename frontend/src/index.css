@@ -228,22 +228,20 @@ html.dark .grad-cta-green {
   background: linear-gradient(135deg, #3a5030, #2a3820) !important;
 }
 
-/* ── 首頁感謝榜橫幅：深金漸層 + 頂部光暈 + 流光掃過 + 名字無縫跑馬燈 ── */
-.sponsor-banner {
-  background:
-    linear-gradient(135deg, #7a4f16 0%, #c9962f 24%, #ffe6a0 49%, #d9a843 63%, #8a5a1a 82%, #6b4513 100%);
-  border: 1.5px solid rgba(255, 236, 170, 0.7);
-  box-shadow: 0 8px 22px -8px rgba(120, 70, 10, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+/* ── 首頁感謝榜：套段位 gold 金框雕花，內襯改深金底配白字 ───────── */
+.rankframe.sponsor-rankframe { margin-top: 10px; }
+.rankframe.sponsor-rankframe .rf-inner {
+  display: block;
+  padding: 9px 14px 10px;
+  color: #fff;
+  background: linear-gradient(135deg, #7a4f16 0%, #c9962f 26%, #ffe6a0 50%, #d9a843 64%, #8a5a1a 82%, #6b4513 100%);
 }
-.sponsor-banner-glow {
-  position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(70% 90% at 16% -10%, rgba(255,255,255,.45), transparent 55%),
-    radial-gradient(50% 70% at 92% 120%, rgba(255,210,120,.4), transparent 60%);
-}
-.sponsor-banner-sheen {
-  position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(105deg, transparent 38%, rgba(255,255,255,.6) 50%, transparent 62%);
+/* 隱藏淺色用的菱格暗紋（深底看不到、避免雜訊）*/
+.rankframe.sponsor-rankframe .rf-inner::before { opacity: 0 !important; }
+/* 金框內流光掃過 */
+.sponsor-sheen {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,.45) 50%, transparent 60%);
   transform: translateX(-130%);
   animation: sponsorSheen 4.2s ease-in-out infinite;
 }

@@ -59,7 +59,7 @@ export default function Results() {
   const meetsThreshold = accuracyPct >= 0.7
   // App 版隱藏賭注（模擬賭博分級）；跨平台房間若房主在網頁設了賭注，App 端不顯示「賭注」字樣
   const betWinnings = !isNativeApp() && isWinner && betAmount > 0 ? betAmount * 2 : 0
-  const baseReward = meetsThreshold ? (isWinner ? 120 : 30) : 0
+  const baseReward = meetsThreshold ? (isWinner ? 30 : 10) : 0
   const totalReward = baseReward + betWinnings
 
   useEffect(() => {

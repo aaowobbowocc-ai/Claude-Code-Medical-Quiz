@@ -19,7 +19,7 @@ const TIERS = [
     label: '小額贊助',
     emoji: '☕',
     price: 15,
-    coins: 2000,
+    coins: 2500,
     tag: null,
   },
   {
@@ -27,7 +27,7 @@ const TIERS = [
     label: '一般贊助',
     emoji: '🙏',
     price: 50,
-    coins: 8000,
+    coins: 10000,
     tag: '最受歡迎',
   },
   {
@@ -35,7 +35,7 @@ const TIERS = [
     label: '大力贊助',
     emoji: '🏆',
     price: 150,
-    coins: 28000,
+    coins: 35000,
     tag: '超值',
   },
 ]

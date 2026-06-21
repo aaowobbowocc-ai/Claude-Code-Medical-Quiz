@@ -29,9 +29,9 @@ const crypto = require('crypto')
 const { randomUUID } = require('crypto')
 
 const TIERS = {
-  small:  { price: 15,  coins: 2000 },
-  medium: { price: 50,  coins: 8000 },
-  large:  { price: 150, coins: 28000 },
+  small:  { price: 15,  coins: 2500 },
+  medium: { price: 50,  coins: 10000 },
+  large:  { price: 150, coins: 35000 },
 }
 
 // 街口 callback 來源 IP allowlist

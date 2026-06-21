@@ -52,20 +52,19 @@ export default function SponsorBanner() {
   return (
     <button
       onClick={() => navigate('/sponsors')}
-      className="sponsor-imperial block w-full text-left active:scale-[0.99] transition-transform">
-      <div className="flex items-center justify-between mb-0.5">
-        <span className="flex items-baseline gap-1.5">
-          <span className="text-base leading-none">👑</span>
-          <span className="sponsor-gold-text font-black text-base tracking-wider">感謝榜</span>
-          <span className="text-[10px] font-bold" style={{ color: '#8b1818' }}>贊助維運的大大們</span>
-        </span>
-        <span className="text-[11px] font-bold" style={{ color: '#8b1818' }}>查看全部 ›</span>
+      className="sponsor-imperial block w-full active:scale-[0.99] transition-transform">
+      <div className="flex items-center justify-center gap-2 mb-0.5">
+        <span className="text-2xl leading-none">👑</span>
+        <span className="sponsor-gold-text font-black text-2xl tracking-[0.25em]">感謝榜</span>
       </div>
       <div className="sponsor-rotate-wrap">
-        <span key={idx} className="sponsor-rotate-item text-xs font-bold whitespace-nowrap" style={{ color: '#7a2018' }}>
+        <span key={idx} className="sponsor-rotate-item text-sm font-bold whitespace-nowrap" style={{ color: '#7a2018' }}>
           <span className="mr-1">{TIER_ICON[s.tier] || '💛'}</span>
           {pre}<b className="sponsor-gold-text">{s.display_name}</b>{suf}
         </span>
+      </div>
+      <div className="text-center text-[10px] font-bold mt-0.5" style={{ color: '#8b1818', opacity: 0.7 }}>
+        查看完整感謝榜 ›
       </div>
     </button>
   )

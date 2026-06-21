@@ -248,7 +248,7 @@ html.dark .grad-cta-green {
 @keyframes sponsorGold { to { background-position: 200% center; } }
 /* 單句輪播：一次一整句，由下往上滑入，停留數秒換下一句 */
 .sponsor-rotate-wrap {
-  height: 1.3rem;
+  height: 1.55rem;
   overflow: hidden;
   display: flex; align-items: center; justify-content: center;
 }

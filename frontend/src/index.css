@@ -228,6 +228,26 @@ html.dark .grad-cta-green {
   background: linear-gradient(135deg, #3a5030, #2a3820) !important;
 }
 
+/* ── 首頁感謝榜橫幅：金色漸層 + 流光掃過 + 名字跑馬燈 ───────── */
+.sponsor-banner {
+  background: linear-gradient(135deg, #6b4a16 0%, #b8860b 28%, #f6d27a 50%, #b8860b 72%, #5c3a14 100%);
+  border: 1px solid rgba(255, 235, 170, 0.5);
+}
+.sponsor-banner-sheen {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(110deg, transparent 35%, rgba(255,255,255,.5) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: sponsorSheen 4.5s ease-in-out infinite;
+}
+@keyframes sponsorSheen { 0%, 55% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+.sponsor-marquee-wrap {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+.sponsor-marquee { width: max-content; animation: sponsorMarquee 20s linear infinite; }
+@keyframes sponsorMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
 /* Shadows — softer in dark mode */
 html.dark .shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.5) !important; }
 html.dark .shadow { box-shadow: 0 2px 6px rgba(0,0,0,0.5) !important; }

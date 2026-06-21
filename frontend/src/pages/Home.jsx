@@ -20,6 +20,7 @@ const SHOW_LUCKY_DRAW = false
 import WelcomeTour, { shouldShowWelcomeTour } from '../components/WelcomeTour'
 import CoinShopSheet from '../components/CoinShopSheet'
 import AvatarText from '../components/AvatarText'
+import SponsorBanner from '../components/SponsorBanner'
 import { supabase, linkOrSignInGoogle, switchGoogleAccount, signInWithApple, getLinkedIdentity } from '../lib/supabase'
 import { isNativeApp } from '../lib/admob'
 import { Capacitor } from '@capacitor/core'
@@ -662,6 +663,9 @@ export default function Home() {
             </button>
           )}
 
+          {/* 感謝榜橫幅 — 大乾爹擺最顯眼，建立房間上方 */}
+          <SponsorBanner />
+
           <button
             onClick={handleCreate}
             disabled={connecting}
@@ -705,7 +709,7 @@ export default function Home() {
               ['🏆','排行榜','每週排名','/leaderboard'],
               ['📊','我的數據','你的學習報告','/stats'],
               ...((FEATURE_FRAMES || FEATURE_AVATARS || FEATURE_AI_UNLIMITED || FEATURE_BADGES) ? [['🛒','商店','頭像/徽章/邊框/AI 無限','/shop']] : []),
-              ...(FEATURE_SPONSORS ? [['🙏','感謝榜','贊助平台維運','/sponsors']] : []),
+              // 感謝榜已移到首頁上方華麗橫幅（SponsorBanner），不放在選單格子
             ].map(([icon,title,sub,path]) => (
               <button key={path} onClick={() => navigate(path)}
                       className="rounded-2xl py-4 flex flex-col items-center gap-1.5 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">
@@ -943,6 +947,9 @@ export default function Home() {
           </button>
         )}
 
+        {/* 感謝榜橫幅 — 大乾爹擺最顯眼，建立房間上方 */}
+        <SponsorBanner />
+
         <button onClick={handleCreate} disabled={connecting}
                 className="w-full rounded-2xl py-5 flex items-center px-5 gap-4 shadow-lg active:scale-[0.97] transition-transform disabled:opacity-60 grad-cta">
           <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-2xl shrink-0">🏠</div>
@@ -1001,7 +1008,7 @@ export default function Home() {
             ['🏆','排行榜','每週排名','/leaderboard'],
             ['📊','我的數據','你的學習報告','/stats'],
             ...((FEATURE_FRAMES || FEATURE_AVATARS || FEATURE_AI_UNLIMITED || FEATURE_BADGES) ? [['🛒','商店','頭像/徽章/邊框/AI 無限','/shop']] : []),
-            ...(FEATURE_SPONSORS ? [['🙏','感謝榜','贊助平台維運','/sponsors']] : []),
+            // 感謝榜已移到首頁上方華麗橫幅（SponsorBanner），不放在選單格子
           ].map(([icon,title,sub,path]) => (
             <button key={path} onClick={() => navigate(path)}
                     className="rounded-2xl py-4 flex flex-col items-center gap-1.5 bg-white shadow-sm border border-gray-100 active:scale-[0.97] transition-transform">

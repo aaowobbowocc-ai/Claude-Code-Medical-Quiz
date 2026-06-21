@@ -248,13 +248,20 @@ html.dark .grad-cta-green {
   animation: sponsorSheen 4.2s ease-in-out infinite;
 }
 @keyframes sponsorSheen { 0%, 52% { transform: translateX(-130%); } 100% { transform: translateX(130%); } }
-.sponsor-marquee-wrap {
+/* 單句輪播：一次一整句，由下往上滑入，停留數秒換下一句 */
+.sponsor-rotate-wrap {
+  height: 1.4rem;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  display: flex; align-items: center; justify-content: center;
 }
-.sponsor-marquee { animation: sponsorMarquee linear infinite; }
-@keyframes sponsorMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.sponsor-rotate-item {
+  display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis;
+  animation: sponsorRotateIn 0.55s cubic-bezier(.2, .85, .25, 1);
+}
+@keyframes sponsorRotateIn {
+  from { opacity: 0; transform: translateY(115%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* Shadows — softer in dark mode */
 html.dark .shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.5) !important; }

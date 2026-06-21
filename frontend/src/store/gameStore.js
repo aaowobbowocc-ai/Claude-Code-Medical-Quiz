@@ -185,10 +185,11 @@ export const usePlayerStore = create(
             method: 'POST', headers: { Authorization: `Bearer ${token}` },
           })
           const json = await res.json()
+          // 只有後端確實回傳餘額(成功發放 or 伺服器確認今天已領)才標記今天已領。
+          // 若回錯誤(401/500/無 coins 欄位)就「不要」標記，讓使用者下次能重領，
+          // 否則一次暫時性失敗會害使用者整天領不到金幣。
           if (typeof json.coins === 'number') {
             set({ coins: json.coins, lastDailyBonus: today, loginStreak: json.streak || get().loginStreak })
-          } else {
-            set({ lastDailyBonus: today })
           }
           return json.claimed ? (json.reward || 0) : false
         } catch { return false }

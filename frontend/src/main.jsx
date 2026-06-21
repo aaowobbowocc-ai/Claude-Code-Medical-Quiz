@@ -34,6 +34,12 @@ if (SENTRY_DSN && import.meta.env.PROD) {
       'ResizeObserver loop limit exceeded',
       'Non-Error promise rejection captured',
       /Network request failed/,
+      // fetch / 動態 chunk 載入失敗的通用訊息：手機網路瞬斷或使用者中途離開頁面
+      // 時 fetch 被中止觸發，與程式邏輯無關、無法修，純雜訊。
+      /Load failed/i,        // Safari
+      /Failed to fetch/i,    // Chrome / Edge
+      /Importing a module script failed/i,  // Safari 動態 import chunk 失敗
+      /error loading dynamically imported module/i, // Chrome 同類
       // Supabase auth multi-tab lock contention — benign, fires when another
       // browser tab refreshes the session token concurrently. 各種訊息變體都過濾。
       /Lock/i,             // 任何含 "Lock" 的訊息（Supabase 內建機制，永遠是雜訊）

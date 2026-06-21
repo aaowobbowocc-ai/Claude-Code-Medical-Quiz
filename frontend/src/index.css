@@ -228,24 +228,32 @@ html.dark .grad-cta-green {
   background: linear-gradient(135deg, #3a5030, #2a3820) !important;
 }
 
-/* ── 首頁感謝榜橫幅：金色漸層 + 流光掃過 + 名字跑馬燈 ───────── */
+/* ── 首頁感謝榜橫幅：深金漸層 + 頂部光暈 + 流光掃過 + 名字無縫跑馬燈 ── */
 .sponsor-banner {
-  background: linear-gradient(135deg, #6b4a16 0%, #b8860b 28%, #f6d27a 50%, #b8860b 72%, #5c3a14 100%);
-  border: 1px solid rgba(255, 235, 170, 0.5);
+  background:
+    linear-gradient(135deg, #7a4f16 0%, #c9962f 24%, #ffe6a0 49%, #d9a843 63%, #8a5a1a 82%, #6b4513 100%);
+  border: 1.5px solid rgba(255, 236, 170, 0.7);
+  box-shadow: 0 8px 22px -8px rgba(120, 70, 10, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+.sponsor-banner-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(70% 90% at 16% -10%, rgba(255,255,255,.45), transparent 55%),
+    radial-gradient(50% 70% at 92% 120%, rgba(255,210,120,.4), transparent 60%);
 }
 .sponsor-banner-sheen {
   position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(110deg, transparent 35%, rgba(255,255,255,.5) 50%, transparent 65%);
-  transform: translateX(-120%);
-  animation: sponsorSheen 4.5s ease-in-out infinite;
+  background: linear-gradient(105deg, transparent 38%, rgba(255,255,255,.6) 50%, transparent 62%);
+  transform: translateX(-130%);
+  animation: sponsorSheen 4.2s ease-in-out infinite;
 }
-@keyframes sponsorSheen { 0%, 55% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+@keyframes sponsorSheen { 0%, 52% { transform: translateX(-130%); } 100% { transform: translateX(130%); } }
 .sponsor-marquee-wrap {
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
 }
-.sponsor-marquee { width: max-content; animation: sponsorMarquee 20s linear infinite; }
+.sponsor-marquee { animation: sponsorMarquee linear infinite; }
 @keyframes sponsorMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* Shadows — softer in dark mode */

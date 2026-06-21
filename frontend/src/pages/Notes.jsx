@@ -31,6 +31,19 @@ function timeAgo(dateStr) {
 const NOTES = {
   doctor1: [
     {
+      id: 'mnemonics', icon: '🧠', name: '記憶口訣速記', color: '#EC4899',
+      cards: [
+        { title: '🦴 解剖記憶口訣', content: '顱神經名稱(I-XII)：\n「Oh Oh Oh To Touch And Feel Very Good Velvet AH」\n嗅 視 動眼 滑車 三叉 外旋 顏面 聽 舌咽 迷走 副 舌下\n\n顱神經 感覺/運動/兩者：\n「Some Say Marry Money But My Brother Says Big Brains Matter Most」\nS=感覺 M=運動 B=兩者\n\n臂神經叢分段：「Randy Travis Drinks Cold Beer」\nRoots → Trunks → Divisions → Cords → Branches\n\n腕骨8塊：「She Looks Too Pretty, Try To Catch Her」\n舟 月 三角 豆 / 大多角 小多角 頭狀 鉤\n\n正中神經支配手部肌肉：「LOAF」\nLumbricals 1-2、Opponens、Abductor pollicis brevis、Flexor pollicis brevis\n\n腹膜後器官：「SAD PUCKER」\nSuprarenal、Aorta/IVC、Duodenum、Pancreas、Ureters、Colon、Kidneys、Esophagus、Rectum' },
+        { title: '🧬 生化・營養記憶口訣', content: '必需胺基酸：「PVT TIM HaLL」\nPhe Val Thr Trp Ile Met His Arg Leu Lys\n(Arg、His 為兒童必需)\n\n脂溶性維生素：「ADEK」\n\n糖解三個不可逆(限速)酵素：\nHexokinase / PFK-1(限速關鍵) / Pyruvate kinase\n\n餓→糖質新生(肝)，飽→糖解\n\n酮體：肝「製造」、肝外「使用」\n\n膠原蛋白羥化需 Vit C，缺→壞血病' },
+        { title: '🦠 微生物・免疫記憶口訣', content: '過敏反應 Type I-IV：「ACID」\nAnaphylactic(IgE) / Cytotoxic(IgG,IgM) / Immune complex / Delayed(T cell)\n\n先天感染：「TORCH」\nToxoplasma、Other(梅毒/VZV/parvo B19)、Rubella、CMV、HSV/HIV\n\nMHC：I→CD8、II→CD4\n記法：MHC1×CD8=8、MHC2×CD4=8\n\nTh1=IFN-γ(細胞內病原)、Th2=IL-4,5,13(過敏/寄生蟲)' },
+        { title: '💊 藥理記憶口訣', content: '蛋白質合成抑制：「Buy AT 30, CCELl at 50」\n30S：Aminoglycosides、Tetracyclines\n50S：Chloramphenicol、Clindamycin、Macrolide、Linezolid\n\nACEI 副作用：「CAPTOPRIL」\nCough、Angioedema、Proteinuria、Taste改變、hyperKalemia、孕婦禁用\n\n有機磷(膽鹼性)中毒：「DUMBELS」\nDiarrhea、Urination、Miosis、Bradycardia、Emesis、Lacrimation、Salivation\n解毒：Atropine + Pralidoxime\n\n抗膽鹼中毒：紅如甜菜、乾如骨、熱如兔、盲如蝠、瘋如帽' },
+        { title: '🔬 病理・壞死記憶口訣', content: '壞死類型對應：\nCoagulative→心肌梗塞(最常見)\nLiquefactive→腦梗塞、膿瘍\nCaseous→結核\nFat→急性胰臟炎\nFibrinoid→血管炎\nGangrenous→肢端/腸\n\n肉芽腫：\nCaseating(乾酪)→TB、黴菌\nNon-caseating→Sarcoidosis、Crohn\n\nApoptosis：caspase、無發炎、程式性死亡' },
+        { title: '⚡ 生理・腎臟記憶口訣', content: '氧解離曲線「右移」(放氧↑)：「CADET, face Right!」\nCO₂↑、Acid(H⁺)↑、2,3-DPG↑、Exercise、Temperature↑\n\n腎元再吸收：\nPCT→大部分(Na/水/全部glucose,AA)\nLoop升枝→Na K 2Cl(furosemide)\nDCT→Na Cl(thiazide)、PTH→Ca\nCD→ADH(水)、aldosterone(Na↑K↓)\n\nRAAS：腎素→Ang I→(ACE)→Ang II→aldosterone' },
+        { title: '🚨 急症・中毒記憶口訣', content: 'High Anion Gap 代酸：「MUDPILES」\nMethanol、Uremia、DKA、Propylene glycol、INH/Iron、Lactic acid、Ethylene glycol、Salicylates\n\n解毒劑配對：\nOpioid→Naloxone\nBenzodiazepine→Flumazenil\nAcetaminophen→N-acetylcysteine\nWarfarin→Vit K/FFP\nHeparin→Protamine\nCO→100% O₂/高壓氧\n有機磷→Atropine+Pralidoxime' },
+        { title: '🩸 血液・腫瘤標記記憶口訣', content: '腫瘤標記：\nAFP→肝細胞癌、卵黃囊瘤\nCEA→大腸癌(追蹤)\nCA-125→卵巢癌\nCA19-9→胰臟癌\nPSA→攝護腺癌\nβ-hCG→絨毛膜癌、睪丸癌\nS-100→黑色素瘤\n\n小球性貧血(MCV↓)：缺鐵、地中海、慢性病\n大球性(MCV↑)：B12/葉酸缺、肝病、酒精\n\nDIC：PT/APTT↑、fibrinogen↓、D-dimer↑、schistocytes' },
+      ]
+    },
+    {
       id: 'anatomy', icon: '🦴', name: '解剖學', color: '#3B82F6',
       cards: [
         { title: '臂神經叢 Brachial Plexus', content: 'Roots → Trunks → Divisions → Cords → Branches\n口訣：「Robert Taylor Drinks Cold Beer」\nC5-T1，上幹(C5-6)、中幹(C7)、下幹(C8-T1)\n常考：Erb-Duchenne palsy (C5-6上幹)、Klumpke palsy (C8-T1下幹)' },

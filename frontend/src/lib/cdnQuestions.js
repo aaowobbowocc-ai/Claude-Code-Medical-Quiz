@@ -178,8 +178,11 @@ export async function loadExamQuestions(examId, { forceFresh = false } = {}) {
   return questions
 }
 
-// 錯題夾 re-hydrate：用最新題庫（依 id）覆蓋本地存的舊題目副本，避免顯示已修正前的壞版本。
-// 保留錯題夾本身的欄位（myAnswer/addedAt/examId）。examId 取自題目 stamp，缺則用 fallbackExamId。
+// 錯題夾 re-hydrate：用最新題庫覆蓋本地存的舊題目副本，避免顯示已修正前的壞版本。
+// ⚠️ 必須「依 (考試, id) 對應」——不同考試的題目 id 會撞號（醫學/法律/英文同 id 不同題），
+// 若用全域 id map 會把某科錯題換成別科同 id 的題目（已造成錯題夾汙染，2026-06-21 修）。
+// 改為每個考試各自一份 id map，每題只在「它自己的考試」(examId 或 fallback) 裡查。
+// 保留錯題夾欄位（myAnswer/addedAt/examId）。examId 缺則用 fallbackExamId。
 export async function rehydrateWrong(wrongQs, fallbackExamId) {
   if (!Array.isArray(wrongQs) || wrongQs.length === 0) return wrongQs || []
   const examIds = new Set()
@@ -188,19 +191,21 @@ export async function rehydrateWrong(wrongQs, fallbackExamId) {
     if (e && EXAM_FILES[e]) examIds.add(e)
   }
   if (examIds.size === 0) return wrongQs
-  const byId = new Map()
+  const byExam = {} // examId -> Map(id -> question)，各考試獨立、不混淆
   await Promise.all([...examIds].map(async (e) => {
     try {
       // forceFresh：繞過同版本的舊快取，確保抓到題目修正後的最新版
       const list = await loadExamQuestions(e, { forceFresh: true })
-      for (const q of list) if (q && q.id != null) byId.set(String(q.id), q)
+      const m = new Map()
+      for (const q of list) if (q && q.id != null) m.set(String(q.id), q)
+      byExam[e] = m
     } catch {}
   }))
-  if (byId.size === 0) return wrongQs
   return wrongQs.map(wq => {
-    const fresh = wq && wq.id != null ? byId.get(String(wq.id)) : null
+    const e = (wq && wq.examId) || fallbackExamId
+    const fresh = (e && byExam[e] && wq && wq.id != null) ? byExam[e].get(String(wq.id)) : null
     return fresh
-      ? { ...wq, ...fresh, myAnswer: wq.myAnswer, addedAt: wq.addedAt, examId: wq.examId || fallbackExamId }
+      ? { ...wq, ...fresh, myAnswer: wq.myAnswer, addedAt: wq.addedAt, examId: e }
       : wq
   })
 }

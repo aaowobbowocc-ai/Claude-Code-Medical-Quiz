@@ -83434,12 +83434,12 @@
       "subject_name": "生物化學",
       "stage_id": 3,
       "number": 35,
-      "question": "請在下列各原核細胞RNA 聚合酶（RNA polymerase）次單元（subunit）中配對出其專一的功能？",
+      "question": "請在下列各原核細胞 RNA 聚合酶（RNA polymerase）次單元（subunit）中配對出其專一的功能？\n【次單元】a. α　b. β　c. σ\n【功能】I. 具啟動子序列的專一辨識能力　II. 生合成的延伸（elongation）作用，並能與調控蛋白互動（interaction）　III. 負責生合成的起始（initiation）與延伸（elongation）作用",
       "options": {
-        "A": "次單元",
-        "B": "功能",
-        "C": "a.  α",
-        "D": "I 具啟動子序列的專一辨識能力"
+        "A": "a-I, b-II, c-III",
+        "B": "a-III, b-II, c-I",
+        "C": "a-III, b-I, c-II",
+        "D": "a-II, b-III, c-I"
       },
       "answer": "D",
       "explanation": "",

@@ -8,10 +8,13 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FEATURE_SPONSORS } from '../config/featureFlags'
 import Footer from '../components/Footer'
+import { isNativeApp } from '../lib/admob'
 import '../styles/sponsors.css'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const ECPAY_URL = 'https://p.ecpay.com.tw/14E6254'
+// iOS/Android App 隱藏外部金流贊助鈕（App Store Guideline 3.1.1：捐贊須走 IAP，否則移除）
+const IS_NATIVE = isNativeApp()
 
 const TIER_META = {
   diamond: { emoji: '🦚', label: '鴻名贊助', range: 'NT$3,000 +',  cardClass: 'diamond-card' },
@@ -180,14 +183,16 @@ export default function Sponsors() {
                   凡有心人皆可上榜<br />
                   匿名或具名 一份心意便足
                 </p>
-                <a
-                  href={ECPAY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="gold-cta"
-                >
-                  ☕ 立刻贊助上榜
-                </a>
+                {!IS_NATIVE && (
+                  <a
+                    href={ECPAY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="gold-cta"
+                  >
+                    ☕ 立刻贊助上榜
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -211,7 +216,8 @@ export default function Sponsors() {
               )
             })}
 
-            {/* 底部 CTA */}
+            {/* 底部 CTA — App 版隱藏（3.1.1：不可有外部金流贊助鈕）*/}
+            {!IS_NATIVE && (
             <div className="mt-10 mb-4">
               <div className="diamond-card">
                 <div className="diamond-card-inner py-6 px-5 text-center relative z-10">
@@ -236,6 +242,7 @@ export default function Sponsors() {
                 </div>
               </div>
             </div>
+            )}
           </>
         )}
       </div>

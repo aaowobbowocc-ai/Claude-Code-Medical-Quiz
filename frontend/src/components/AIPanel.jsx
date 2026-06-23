@@ -4,7 +4,6 @@ import { usePlayerStore } from '../store/gameStore'
 import { hasLegalSubjectTag } from '../config/examRegistry'
 import { supabase, readAuthFromStorage } from '../lib/supabase'
 import { isExplainUnlocked } from '../hooks/useAI'
-import { getBookSection } from '../lib/booksAffiliate'
 import { formatYearSession } from '../utils/sessionLabel'
 import { FEATURE_AI_UNLIMITED } from '../config/featureFlags'
 import { isNativeApp } from '../lib/admob'
@@ -133,37 +132,6 @@ function SimilarQuestionsSheet({ open, onClose, examId, questionId, examName }) 
           類似題由語意搜尋找出，僅供延伸練習參考
         </p>
       </div>
-    </div>
-  )
-}
-
-/** 推薦參考書卡片（博客來策略聯盟）— 解析面板底部，低干擾版位 */
-function BookRecommendations({ examId }) {
-  const section = getBookSection(examId)
-  if (!section) return null
-  return (
-    <div className="bg-[#f3f8f0] border border-[#cfe3c4] rounded-2xl p-3.5">
-      <div className="flex items-center gap-1.5 mb-2">
-        <span className="text-base">📚</span>
-        <span className="font-bold text-[#4a7a2e] text-sm">{section.label}</span>
-      </div>
-      <div className="flex flex-col gap-1.5">
-        {section.books.map(b => (
-          <a
-            key={b.id}
-            href={b.url}
-            target="_blank"
-            rel="sponsored noopener noreferrer"
-            className="flex items-center justify-between gap-2 bg-white border border-[#dce8d4] rounded-xl px-3 py-2 active:bg-[#eef5e9] transition-colors"
-          >
-            <span className="text-xs text-gray-700 leading-snug">{b.title}</span>
-            <span className="shrink-0 text-[11px] font-medium text-white bg-[#6ba539] rounded-lg px-2 py-1">博客來 ›</span>
-          </a>
-        ))}
-      </div>
-      <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
-        本卡片為博客來策略聯盟連結，透過連結購買本站可獲少量回饋，不影響你的售價。資料由博客來提供。
-      </p>
     </div>
   )
 }
@@ -713,9 +681,6 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
           ⚠️ 解析僅供參考,法律條文可能隨時間修正,請以最新全國法規資料庫為準。
         </p>
       )}
-
-      {/* 推薦參考書（博客來策略聯盟）— 作答後解析區底部，不需開 AI 解說即顯示 */}
-      <BookRecommendations examId={examId} />
 
       {/* 找類似題 sheet — 由上方按鈕觸發 */}
       <SimilarQuestionsSheet

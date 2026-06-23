@@ -22755,12 +22755,12 @@
       "subject_name": "寄生蟲學",
       "stage_id": 6,
       "number": 32,
-      "question": "水生植物可當何種寄生蟲之中間宿主？ћ牛羊肝吸蟲（Fasciola hepatica） ќ薑片蟲（Fasciolopsis buski） ѝ中華肝吸蟲（Clonorchis sinensis） ў槍狀肝吸蟲（Dicrocoelium dendriticum）",
+      "question": "水生植物可當何種寄生蟲之中間宿主？①牛羊肝吸蟲（Fasciola hepatica）②薑片蟲（Fasciolopsis buski）③中華肝吸蟲（Clonorchis sinensis）④槍狀肝吸蟲（Dicrocoelium dendriticum）",
       "options": {
-        "A": "ћќ",
-        "B": "ѝў",
-        "C": "ћѝ",
-        "D": "ќў"
+        "A": "①②",
+        "B": "③④",
+        "C": "①③",
+        "D": "②④"
       },
       "answer": "A"
     },
@@ -62086,7 +62086,7 @@
       "subject_name": "微生物與免疫",
       "stage_id": 5,
       "number": 19,
-      "question": "模式辨識受體（pattern recognition receptors, PRRs）是先天免疫系統用來識別病原相關分子模式（pathogen-",
+      "question": "模式辨識受體（pattern recognition receptors, PRRs）是先天免疫系統用來識別病原相關分子模式（pathogen-associated molecular patterns, PAMPs）的抗原受體，在所有先天免疫細胞都會表現。有關模式辨識受體的敘述何者錯誤？",
       "options": {
         "A": "模式辨識受體中的類鐸受體（Toll-like receptors）是演化上古老而保守的病原辨識受體，即便在無脊椎動物 也有表現",
         "B": "類鐸受體（Toll-like receptors）中TLR3和TLR7分別辨識源自於病毒的雙股及單股RNA",
@@ -86936,12 +86936,11 @@
         "A": "睡眠剝奪",
         "B": "工作特點",
         "C": "心理困擾",
-        "D": "A型行為人格"
+        "D": "B型行為人格"
       },
       "answer": "D",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true,
       "_original_number": 94
     },
     {

@@ -419,22 +419,25 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins, onR
 function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSaveSnapshot }) {
   const [answers, setAnswers] = useState(initialState?.answers || {})
   const [qIdx, setQIdx] = useState(initialState?.qIdx || 0)
+  const [flagged, setFlagged] = useState(initialState?.flagged || {})
   const [timeLeft, setTimeLeft] = useState(initialState?.timeLeft ?? getPaperTimeLimit(paper))
   const [showNav, setShowNav] = useState(false)
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false)
   const timerRef = useRef(null)
   const answersRef = useRef(answers)
   answersRef.current = answers
+  const flaggedRef = useRef(flagged)
+  flaggedRef.current = flagged
 
-  // 每次 answers / qIdx / timeLeft 變動 → 保存快照（含 paper context）
+  // 每次 answers / qIdx / timeLeft / flagged 變動 → 保存快照（含 paper context）
   useEffect(() => {
-    onSaveSnapshot?.({ answers, qIdx, timeLeft })
-  }, [answers, qIdx, timeLeft])
+    onSaveSnapshot?.({ answers, qIdx, timeLeft, flagged })
+  }, [answers, qIdx, timeLeft, flagged])
 
   useEffect(() => {
     timerRef.current = setInterval(() => {
       setTimeLeft(t => {
-        if (t <= 1) { clearInterval(timerRef.current); onFinish(answersRef.current); return 0 }
+        if (t <= 1) { clearInterval(timerRef.current); onFinish(answersRef.current, flaggedRef.current); return 0 }
         return t - 1
       })
     }, 1000)
@@ -464,6 +467,16 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
     setAnswers(prev => ({ ...prev, [qIdx]: letter }))
   }
 
+  const toggleFlag = () => {
+    navigator.vibrate?.(15)
+    setFlagged(prev => {
+      const next = { ...prev }
+      if (next[qIdx]) delete next[qIdx]
+      else next[qIdx] = true
+      return next
+    })
+  }
+
   const answeredCount = Object.keys(answers).length
   const q = questions[qIdx]
   const mm = Math.floor(timeLeft / 60)
@@ -476,7 +489,7 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
   }
   const confirmSubmit = () => {
     clearInterval(timerRef.current)
-    onFinish(answers)
+    onFinish(answers, flagged)
   }
 
   return (
@@ -499,9 +512,16 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
 
       <div className="flex-1 overflow-y-auto px-4 py-4">
         <div className="bg-white rounded-2xl p-4 mb-4 shadow-sm">
-          <p className="text-xs text-gray-400 mb-2">
-            第 {qIdx + 1} / {questions.length} 題{q.subject_name ? `　·　${q.subject_name}` : ''}
-          </p>
+          <div className="flex items-center gap-2 mb-2">
+            <p className="text-xs text-gray-400 flex-1">
+              第 {qIdx + 1} / {questions.length} 題{q.subject_name ? `　·　${q.subject_name}` : ''}
+            </p>
+            <button onClick={toggleFlag}
+              className={`text-xs font-bold px-2.5 py-1 rounded-full border active:scale-95 transition-all shrink-0
+                ${flagged[qIdx] ? 'bg-amber-100 text-amber-700 border-amber-300' : 'bg-gray-50 text-gray-400 border-gray-200'}`}>
+              {flagged[qIdx] ? '🚩 已標記' : '🏳️ 標記不確定'}
+            </button>
+          </div>
           {q.case_context && (
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 mb-2">
               <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full mb-1.5 inline-block">案例</span>
@@ -562,13 +582,17 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
             <div className="grid grid-cols-10 gap-1.5">
               {questions.map((_, i) => (
                 <button key={i} onClick={() => { setQIdx(i); setShowNav(false) }}
-                  className={`w-full aspect-square rounded-lg text-xs font-bold flex items-center justify-center transition-all
+                  className={`relative w-full aspect-square rounded-lg text-xs font-bold flex items-center justify-center transition-all
                     ${i === qIdx ? 'ring-2 ring-medical-blue' : ''}
                     ${answers[i] ? 'bg-medical-blue text-white' : 'bg-gray-100 text-gray-400'}`}>
                   {i + 1}
+                  {flagged[i] && <span className="absolute -top-1.5 -right-1 text-[10px] leading-none">🚩</span>}
                 </button>
               ))}
             </div>
+            {Object.keys(flagged).length > 0 && (
+              <p className="text-[11px] text-amber-600 mt-2.5">🚩 {Object.keys(flagged).length} 題標記為不確定 · 交卷後可在檢討頁篩選</p>
+            )}
           </div>
         </div>
       )}
@@ -861,7 +885,7 @@ function ExamResults({ papers, navigate }) {
             const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
             const qIdx = pIdx === 0 ? i : i - papers[0].questions.length
             const myAnswer = papers[pIdx]?.answers[qIdx] || null
-            return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer) }
+            return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer), flagged: !!papers[pIdx]?.flagged?.[qIdx] }
           })
           return (
             <button onClick={() => navigate('/review', { state: { questions: allQs, stage: isFullExam ? '完整模擬考' : papers[0].paperName } })}
@@ -939,6 +963,7 @@ export default function MockExam() {
       answers: snap.answers,
       qIdx: snap.qIdx,
       timeLeft: snap.timeLeft,
+      flagged: snap.flagged,
     })
   }
 
@@ -965,6 +990,7 @@ export default function MockExam() {
       answers: session.answers || {},
       qIdx: session.qIdx || 0,
       timeLeft: session.timeLeft ?? getPaperTimeLimit(session.currentPaper),
+      flagged: session.flagged || {},
     })
     startTime.current = Date.now()  // 重新計時起點
     setPhase('exam')
@@ -1075,13 +1101,14 @@ export default function MockExam() {
     await startPaper(targetPaper, 0, { historical: { year, session }, refund: fee })
   }
 
-  const handleFinishPaper = (answers) => {
+  const handleFinishPaper = (answers, flagged = {}) => {
     const timeUsed = Math.floor((Date.now() - startTime.current) / 1000)
     const correct = questions.filter((q, i) => isAnswerCorrect(answers[i], q.answer)).length
     const result = {
       paperName: currentPaper.name,
       questions: [...questions],
       answers: { ...answers },
+      flagged: { ...flagged },
       correct,
       total: questions.length,
       timeUsed,

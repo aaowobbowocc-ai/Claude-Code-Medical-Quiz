@@ -32,6 +32,9 @@ function ReviewCard({ q, index }) {
           {q.correct ? '✓ 答對' : '✗ 答錯'}
         </span>
         <span className="text-xs text-gray-400">第 {index + 1} 題</span>
+        {q.flagged && (
+          <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">🚩 不確定</span>
+        )}
         {q.subject_name && (
           <span className="text-xs font-semibold text-white px-1.5 py-0.5 rounded-full"
                 style={{ background: getSubjectColor(q.subject_name) }}>
@@ -154,7 +157,7 @@ function ReviewCard({ q, index }) {
 export default function Review() {
   const navigate = useNavigate()
   const { state } = useLocation()
-  const [showAll, setShowAll] = useState(false)
+  const [filter, setFilter] = useState('wrong')   // 'wrong' | 'all' | 'flagged'
   if (!state?.questions) {
     navigate('/')
     return null
@@ -163,7 +166,10 @@ export default function Review() {
   const questions = state?.questions || []
   const stage = state?.stage || '收藏題目'
   const wrong = questions.filter(q => !q.correct)
-  const displayed = showAll ? questions : wrong
+  const flaggedCount = questions.filter(q => q.flagged).length
+  const displayed = filter === 'all' ? questions
+    : filter === 'flagged' ? questions.filter(q => q.flagged)
+    : wrong
 
   return (
     <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
@@ -187,12 +193,27 @@ export default function Review() {
             <p className="text-white font-bold text-lg leading-none">{questions.length}</p>
             <p className="text-white/50 text-xs">總題</p>
           </div>
+          {flaggedCount > 0 && (
+            <div className="bg-amber-400/25 rounded-xl px-3 py-1.5 text-center">
+              <p className="text-amber-100 font-bold text-lg leading-none">{flaggedCount}</p>
+              <p className="text-amber-100/70 text-xs">🚩 標記</p>
+            </div>
+          )}
           {questions.length > 0 && (
-            <button
-              onClick={() => setShowAll(v => !v)}
-              className="ml-auto text-xs font-bold bg-white text-medical-blue px-3 py-1.5 rounded-xl shadow active:scale-95">
-              {showAll ? '只看錯題' : '👀 看全部作答'}
-            </button>
+            <div className="ml-auto flex gap-1.5">
+              {flaggedCount > 0 && (
+                <button
+                  onClick={() => setFilter(f => f === 'flagged' ? 'wrong' : 'flagged')}
+                  className={`text-xs font-bold px-3 py-1.5 rounded-xl shadow active:scale-95 ${filter === 'flagged' ? 'bg-amber-400 text-white' : 'bg-white text-amber-600'}`}>
+                  🚩 標記
+                </button>
+              )}
+              <button
+                onClick={() => setFilter(f => f === 'all' ? 'wrong' : 'all')}
+                className={`text-xs font-bold px-3 py-1.5 rounded-xl shadow active:scale-95 ${filter === 'all' ? 'bg-medical-blue text-white' : 'bg-white text-medical-blue'}`}>
+                {filter === 'all' ? '只看錯題' : '👀 全部'}
+              </button>
+            </div>
           )}
         </div>
         <p className="text-white/35 text-xs mt-2">每道 AI 解說使用共用的每日配額（100次/天）</p>

@@ -245,6 +245,13 @@ export default function Weakness() {
             <>
               <button disabled={rehydrating}
                 onClick={async () => {
+                  // 錯題練習收費：一題 2 金幣（鞏固弱點的付費練習）
+                  const cost = wrongQuestions.length * 2
+                  const { spendCoins, coins } = usePlayerStore.getState()
+                  if (!spendCoins(cost)) {
+                    if (confirm(`金幣不足！練習錯題需要 ${cost} 金幣（${wrongQuestions.length} 題 × 2 🪙），目前只有 ${coins} 金幣\n\n要去賺金幣嗎？`)) navigate('/?reward=1')
+                    return
+                  }
                   setRehydrating(true)
                   const fresh = await rehydrateWrong(wrongQuestions, examType).catch(() => wrongQuestions)
                   persistRehydrated(fresh)
@@ -253,7 +260,7 @@ export default function Weakness() {
                 }}
                 className="w-full py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95 mb-2 disabled:opacity-60"
                 style={{ background: 'linear-gradient(135deg,#f97316,#ef4444)' }}>
-                {rehydrating ? '載入最新題目…' : `✍️ 練習錯題（重新作答 ${wrongQuestions.length} 題）`}
+                {rehydrating ? '載入最新題目…' : `✍️ 練習錯題（${wrongQuestions.length} 題 · 扣 ${wrongQuestions.length * 2} 🪙）`}
               </button>
               <div className="flex items-center gap-2 mb-3">
                 <button disabled={rehydrating}

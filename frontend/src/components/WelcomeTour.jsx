@@ -1,5 +1,6 @@
 ﻿import { useState, useEffect, useRef } from 'react'
 import { usePlayerStore } from '../store/gameStore'
+import { isNativeApp } from '../lib/admob'
 
 const TOUR_SEEN_KEY = 'welcome-tour-seen-v1'
 
@@ -181,8 +182,10 @@ export default function WelcomeTour({ onClose }) {
   const [idx, setIdx] = useState(0)
   const startX = useRef(0)
   const darkMode = usePlayerStore(s => s.darkMode)
-  const slide = SLIDES[idx]
-  const isLast = idx === SLIDES.length - 1
+  // 「安裝到主畫面」對原生 App 沒意義（已從商店安裝）→ App 內隱藏該步驟
+  const slides = isNativeApp() ? SLIDES.filter(s => s.title !== '安裝到主畫面') : SLIDES
+  const slide = slides[idx]
+  const isLast = idx === slides.length - 1
 
   const finish = () => {
     try { localStorage.setItem(TOUR_SEEN_KEY, '1') } catch {}
@@ -257,7 +260,7 @@ export default function WelcomeTour({ onClose }) {
             ← 上一步
           </button>
           <div className="flex gap-1">
-            {SLIDES.map((_, i) => (
+            {slides.map((_, i) => (
               <span key={i}
                 className={`w-1.5 h-1.5 rounded-full transition-colors ${i === idx ? (darkMode ? 'bg-sky-400' : 'bg-medical-blue') : dotInactive}`} />
             ))}

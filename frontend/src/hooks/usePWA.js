@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import { isNativeApp } from '../lib/admob'
 
 export function usePWA() {
   const [installPrompt, setInstallPrompt] = useState(null)
@@ -48,7 +49,8 @@ export function usePWA() {
 
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
   const isSafari = isIOS && !navigator.userAgent.includes('CriOS') && !navigator.userAgent.includes('FxiOS')
-  const showBanner = !isInstalled && !dismissed
+  // 原生 App（Capacitor）已從商店安裝，不需「加入主畫面」提示
+  const showBanner = !isNativeApp() && !isInstalled && !dismissed
 
   return { isInstalled, installPrompt, install, dismiss, showBanner, isIOS, isSafari }
 }

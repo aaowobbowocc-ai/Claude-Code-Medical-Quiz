@@ -1,15 +1,15 @@
 /**
- * 商店頁面 — 邊框 / 頭像 / AI 無限包 三個分頁。
+ * 商店頁面 — 頭像 / 徽章 兩個分頁（2026-06 簡化，原邊框 / AI 無限已移除）。
  *
- * 由 feature flag FEATURE_FRAMES / FEATURE_AVATARS / FEATURE_AI_UNLIMITED 控制
- * 是否顯示對應 tab。全部 OFF 時整個 /shop 頁面回 404。
+ * 由 feature flag FEATURE_AVATARS / FEATURE_BADGES 控制是否顯示對應 tab。
+ * 全部 OFF 時整個 /shop 頁面回 404。
  */
 import { useState, useEffect } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase, readAuthFromStorage } from '../lib/supabase'
 import { usePlayerStore } from '../store/gameStore'
 import AvatarWithFrame from '../components/AvatarWithFrame'
-import { FEATURE_FRAMES, FEATURE_AVATARS, FEATURE_AI_UNLIMITED, FEATURE_BADGES } from '../config/featureFlags'
+import { FEATURE_AVATARS, FEATURE_BADGES } from '../config/featureFlags'
 import Footer from '../components/Footer'
 import '../styles/frames.css'
 
@@ -436,11 +436,10 @@ export default function Shop() {
   const setStoreCoins = (c) => usePlayerStore.setState({ coins: c })
 
   // Tab 由 URL ?tab= 控制
+  // 2026-06 簡化商店：只保留頭像 + 徽章（邊框 / AI 無限 已移除）
   const allTabs = [
-    { id: 'frames',   label: '邊框',     enabled: FEATURE_FRAMES },
     { id: 'avatars',  label: '頭像',     enabled: FEATURE_AVATARS },
     { id: 'badges',   label: '徽章',     enabled: FEATURE_BADGES },
-    { id: 'ai',       label: 'AI 無限', enabled: FEATURE_AI_UNLIMITED },
   ].filter(t => t.enabled)
 
   // 全部 flag OFF → 跳回首頁
@@ -448,7 +447,9 @@ export default function Shop() {
     if (allTabs.length === 0) navigate('/', { replace: true })
   }, [])
 
-  const tab = params.get('tab') || allTabs[0]?.id || 'frames'
+  // 舊連結 ?tab=frames / ?tab=ai 已移除 → 回退到第一個有效分頁
+  const requested = params.get('tab')
+  const tab = allTabs.some(t => t.id === requested) ? requested : (allTabs[0]?.id || 'avatars')
 
   const handleCoinsChange = (newCoins) => {
     setCoins(newCoins)
@@ -489,17 +490,11 @@ export default function Shop() {
 
       {/* Content */}
       <div className="flex-1 p-4">
-        {tab === 'frames' && FEATURE_FRAMES && (
-          <FramesTab coins={coins} onCoinsChange={handleCoinsChange} refreshProfile={refreshProfile} />
-        )}
         {tab === 'avatars' && FEATURE_AVATARS && (
           <AvatarsTab coins={coins} onCoinsChange={handleCoinsChange} refreshProfile={refreshProfile} />
         )}
         {tab === 'badges' && FEATURE_BADGES && (
           <BadgesTab coins={coins} onCoinsChange={handleCoinsChange} refreshProfile={refreshProfile} />
-        )}
-        {tab === 'ai' && FEATURE_AI_UNLIMITED && (
-          <AiUnlimitedTab />
         )}
       </div>
 

@@ -100,7 +100,13 @@ workflows:
           # ④ 出口合規：只用 HTTPS(豁免加密) → 宣告不含非豁免加密，省去每次 TestFlight 的加密聲明框。
           $PB -c "Add :ITSAppUsesNonExemptEncryption bool false" "$PLIST" 2>/dev/null \
             || $PB -c "Set :ITSAppUsesNonExemptEncryption false" "$PLIST"
-          echo "=== Info.plist 注入結果 ==="; $PB -c "Print :CFBundleURLTypes" "$PLIST" || true; $PB -c "Print :GADApplicationIdentifier" "$PLIST" || true
+          # ⑤ 繁體中文在地化：App Store 商品頁「語言」欄是依 binary 宣告的語言顯示，
+          #    Capacitor 預設開發語言=en → 顯示 English。改成 zh-Hant + 宣告支援繁中。
+          $PB -c "Set :CFBundleDevelopmentRegion zh-Hant" "$PLIST" 2>/dev/null \
+            || $PB -c "Add :CFBundleDevelopmentRegion string zh-Hant" "$PLIST"
+          $PB -c "Add :CFBundleLocalizations array" "$PLIST" 2>/dev/null || true
+          $PB -c "Add :CFBundleLocalizations:0 string zh-Hant" "$PLIST" 2>/dev/null || true
+          echo "=== Info.plist 注入結果 ==="; $PB -c "Print :CFBundleURLTypes" "$PLIST" || true; $PB -c "Print :GADApplicationIdentifier" "$PLIST" || true; $PB -c "Print :CFBundleDevelopmentRegion" "$PLIST" || true
 
       - name: Install CocoaPods
         script: |
@@ -113,7 +119,10 @@ workflows:
           LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID" 2>/dev/null || echo 0)
           NEW=$(($LATEST + 1))
           agvtool new-version -all "$NEW" || echo "agvtool skipped (build $NEW)"
-          echo "Build number = $NEW"
+          # 行銷版本號（CFBundleShortVersionString）= App Store 顯示的版本。
+          # 1.0 已核准、train 關閉，必須升版才能上傳。每次更新手動 +1。
+          agvtool new-marketing-version 1.0.1 || echo "marketing version skipped (1.0.1)"
+          echo "Build number = $NEW, Marketing = 1.0.1"
 
       - name: Prepare distribution certificate in keychain
         script: |

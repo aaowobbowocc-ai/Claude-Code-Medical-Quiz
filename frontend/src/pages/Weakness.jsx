@@ -5,6 +5,7 @@ import { useAccuracyStore } from '../store/accuracyStore'
 import { getExamConfig, getAllTagNames, getStageStyle } from '../config/examRegistry'
 import { getSubjectColor } from '../utils/subjectColors'
 import { getWrong, removeWrong, clearWrong, WRONG_BANK_MAX, persistRehydrated } from '../lib/wrongBank'
+import { getFlags, removeFlag, clearFlags } from '../lib/flagBank'
 import { rehydrateWrong } from '../lib/cdnQuestions'
 
 const MIN_ANSWERS = 5
@@ -78,8 +79,9 @@ export default function Weakness() {
   const weakest = useAccuracyStore(s => s.getWeakest(examType, MIN_ANSWERS))
   const resetExam = useAccuracyStore(s => s.resetExam)
   const [showReset, setShowReset] = useState(false)
-  const [tab, setTab] = useState('stats')   // 'stats' | 'wrong'
+  const [tab, setTab] = useState('stats')   // 'stats' | 'wrong' | 'flag'
   const [wrongVer, setWrongVer] = useState(0)
+  const [flagVer, setFlagVer] = useState(0)
   const [rehydrating, setRehydrating] = useState(false)
 
   const examConfig = getExamConfig(examType)
@@ -87,6 +89,7 @@ export default function Weakness() {
   const examName = examConfig?.name || '考試'
 
   const wrongQuestions = getWrong()
+  const flagQuestions = (flagVer, getFlags())   // flagVer 觸發重讀
 
   const totalAnswered = allSubjects.reduce((s, e) => s + e.total, 0)
   const totalCorrect = allSubjects.reduce((s, e) => s + e.correct, 0)
@@ -112,17 +115,23 @@ export default function Weakness() {
         </button>
         <h1 className="text-white font-bold text-2xl">弱點分析</h1>
         <p className="text-white/60 text-sm mt-1">
-          {tab === 'stats' ? `${examName} — 各科正確率一覽` : '答錯的題目自動累積，可隨時複習'}
+          {tab === 'stats' ? `${examName} — 各科正確率一覽`
+            : tab === 'wrong' ? '答錯的題目自動累積，可隨時複習'
+            : '考試中標記🚩的題目永久保存，可隨時回顧'}
         </p>
         {/* Tabs */}
         <div className="flex gap-2 mt-3">
           <button onClick={() => setTab('stats')}
-            className={`flex-1 py-2 rounded-xl text-sm font-bold transition-all active:scale-95 ${tab === 'stats' ? 'bg-white text-medical-blue shadow' : 'bg-white/15 text-white/60'}`}>
-            📊 科目統計
+            className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all active:scale-95 ${tab === 'stats' ? 'bg-white text-medical-blue shadow' : 'bg-white/15 text-white/60'}`}>
+            📊 統計
           </button>
           <button onClick={() => setTab('wrong')}
-            className={`flex-1 py-2 rounded-xl text-sm font-bold transition-all active:scale-95 ${tab === 'wrong' ? 'bg-white text-red-500 shadow' : 'bg-white/15 text-white/60'}`}>
-            🔥 錯題夾 ({wrongQuestions.length})
+            className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all active:scale-95 ${tab === 'wrong' ? 'bg-white text-red-500 shadow' : 'bg-white/15 text-white/60'}`}>
+            🔥 錯題 ({wrongQuestions.length})
+          </button>
+          <button onClick={() => setTab('flag')}
+            className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all active:scale-95 ${tab === 'flag' ? 'bg-white text-amber-500 shadow' : 'bg-white/15 text-white/60'}`}>
+            🚩 標記 ({flagQuestions.length})
           </button>
         </div>
       </div>
@@ -303,6 +312,66 @@ export default function Weakness() {
                       <span className="flex-1" />
                       <button onClick={() => { removeWrong(q); setWrongVer(v => v + 1) }}
                         className="text-xs text-gray-300 active:text-red-400" title="從錯題夾移除">✕</button>
+                    </div>
+                    <p className="text-sm text-gray-700 line-clamp-2">{q.question}</p>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      )}
+
+      {/* ── 標記夾 tab ─────────────────── */}
+      {tab === 'flag' && (
+        <div className="flex-1 px-4 pt-4 pb-8 overflow-y-auto">
+          {flagQuestions.length === 0 ? (
+            <div className="flex flex-col items-center justify-center gap-3 py-20">
+              <span className="text-6xl">🏳️</span>
+              <p className="text-gray-500 font-bold">還沒有標記題</p>
+              <p className="text-gray-400 text-sm text-center leading-relaxed">
+                模擬考作答時點「🏳️ 標記不確定」<br/>交卷後就會永久收進這裡
+              </p>
+            </div>
+          ) : (
+            <>
+              <button
+                onClick={() => navigate('/review', { state: { questions: flagQuestions, stage: '標記夾' } })}
+                className="w-full py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95 mb-2"
+                style={{ background: 'linear-gradient(135deg,#f59e0b,#d97706)' }}>
+                📋 檢討標記題（看答案解析 · {flagQuestions.length} 題）
+              </button>
+              <div className="flex items-center justify-end mb-3">
+                <button onClick={() => {
+                    if (confirm(`確定清空標記夾？目前 ${flagQuestions.length} 題`)) {
+                      clearFlags(); setFlagVer(v => v + 1)
+                    }
+                  }}
+                  className="px-3 py-2 rounded-2xl text-xs text-gray-400 bg-white border border-gray-200 active:scale-95">
+                  清空
+                </button>
+              </div>
+              <p className="text-xs text-gray-400 mb-3">
+                你手動標記的題目（不論對錯），最多保留 200 題
+              </p>
+              <div className="flex flex-col gap-2">
+                {flagQuestions.map((q, i) => (
+                  <div key={q.id || i} className="bg-white rounded-2xl border border-amber-100 px-4 py-3 shadow-sm">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      {q.subject_name && (
+                        <span className="text-[10px] font-semibold text-white px-2 py-0.5 rounded-full"
+                              style={{ background: getSubjectColor(q.subject_name) }}>
+                          {q.subject_name}
+                        </span>
+                      )}
+                      {q.correct === true && <span className="text-[10px] text-green-600 font-bold">✓ 當時答對</span>}
+                      {q.correct === false && <span className="text-[10px] text-red-500 font-bold">✗ 當時答錯</span>}
+                      {q.roc_year && (
+                        <span className="text-[10px] text-gray-400">{q.roc_year}年{q.session || ''}</span>
+                      )}
+                      <span className="flex-1" />
+                      <button onClick={() => { removeFlag(q); setFlagVer(v => v + 1) }}
+                        className="text-xs text-gray-300 active:text-red-400" title="從標記夾移除">✕</button>
                     </div>
                     <p className="text-sm text-gray-700 line-clamp-2">{q.question}</p>
                   </div>

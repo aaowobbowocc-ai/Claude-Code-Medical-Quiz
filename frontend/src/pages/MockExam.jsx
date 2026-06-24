@@ -12,6 +12,7 @@ import { supabase } from '../lib/supabase'
 import { getExamYears, getHistoricalPaper, getRandomPaper, isExamSupportedByCDN } from '../lib/cdnQuestions'
 import { isAnswerCorrect } from '../utils/scoring'
 import { addWrong } from '../lib/wrongBank'
+import { addFlags } from '../lib/flagBank'
 import { saveSession, getSessions, clearSession, describeSession } from '../lib/mockExamSession'
 import { isNativeApp } from '../lib/admob'
 
@@ -716,6 +717,12 @@ function ExamResults({ papers, navigate }) {
     return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer) }
   }).filter(q => !q.correct)
 
+  // 手動 🚩 標記題（不論對錯）→ 存進標記夾(flagBank)供日後永久回顧
+  const flaggedQuestions = allQuestions.map((q, i) => {
+    const myAnswer = allAnswers[i] || null
+    return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer) }
+  }).filter((q, i) => allFlagged[i])
+
   useEffect(() => {
     if (saved) return
     setSaved(true)
@@ -742,6 +749,8 @@ function ExamResults({ papers, navigate }) {
     } catch {}
     // 自動加入錯題夾
     addWrong(wrongQuestions, usePlayerStore.getState().exam)
+    // 手動標記題加入標記夾（永久保存，旗標離開檢討頁不再消失）
+    addFlags(flaggedQuestions, usePlayerStore.getState().exam)
     // Submit per-question stats
     const stats = allQuestions.map((q, i) => ({
       questionId: q.id, correct: isAnswerCorrect(allAnswers[i], q.answer),

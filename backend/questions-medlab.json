@@ -101864,7 +101864,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 7,
-    "question": " 此張心電圖的心跳速率最接近每分鐘幾次？",
+    "question": "此張心電圖的心跳速率最接近每分鐘幾次？",
     "options": {
       "A": "100",
       "B": "185",
@@ -101872,7 +101872,8 @@
       "D": "60"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "image_url": "/question-images/medlab_105020_physio_q7_0.webp"
   },
   {
     "id": 11997,
@@ -164054,10 +164055,10 @@
     "number": 25,
     "question": "有關肝炎（Hepatitis）之敘述，下列何者錯誤？",
     "options": {
-      "A": "型肝炎主要經由糞－口為傳染途徑",
+      "A": "A型肝炎主要經由糞－口為傳染途徑",
       "B": "完整的D型肝炎病毒為Dane particle",
-      "C": "型肝炎可以經由針頭傳染或非針頭傳染方式感染",
-      "D": "型肝炎病毒之傳染需要B型肝炎病毒之協助"
+      "C": "C型肝炎可以經由針頭傳染或非針頭傳染方式感染",
+      "D": "D型肝炎病毒之傳染需要B型肝炎病毒之協助"
     },
     "answer": "B",
     "explanation": ""

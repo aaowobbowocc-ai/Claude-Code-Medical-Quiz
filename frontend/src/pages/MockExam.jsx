@@ -700,15 +700,19 @@ function ExamResults({ papers, navigate }) {
     acc._offset += p.questions.length
     return acc
   }, { _offset: 0 })
+  // 旗標也用同樣的跨卷位移對應（支援任意份數試卷，不再寫死 2 份）
+  const allFlagged = papers.reduce((acc, p) => {
+    p.questions.forEach((_, qi) => { acc[acc._offset + qi] = !!p.flagged?.[qi] })
+    acc._offset += p.questions.length
+    return acc
+  }, { _offset: 0 })
 
   // 提前算 wrongQuestions（含 myAnswer 與 correct 標記），用於：
   //   1. 儲存到 mock-exam-history 供日後再次檢討
   //   2. 自動加入錯題夾（wrongBank）
   //   3. 結果頁底部「檢討錯題」按鈕
   const wrongQuestions = allQuestions.map((q, i) => {
-    const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
-    const qIdx = pIdx === 0 ? i : i - papers[0].questions.length
-    const myAnswer = papers[pIdx]?.answers[qIdx] || null
+    const myAnswer = allAnswers[i] || null
     return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer) }
   }).filter(q => !q.correct)
 
@@ -739,11 +743,9 @@ function ExamResults({ papers, navigate }) {
     // 自動加入錯題夾
     addWrong(wrongQuestions, usePlayerStore.getState().exam)
     // Submit per-question stats
-    const stats = allQuestions.filter(q => q.id).map((q, i) => {
-      const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
-      const qIdx = pIdx === 0 ? i : i - papers[0].questions.length
-      return { questionId: q.id, correct: isAnswerCorrect(papers[pIdx]?.answers[qIdx], q.answer) }
-    })
+    const stats = allQuestions.map((q, i) => ({
+      questionId: q.id, correct: isAnswerCorrect(allAnswers[i], q.answer),
+    })).filter(s => s.questionId)
     if (stats.length > 0) {
       fetch(`${BACKEND}/questions/track`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -882,10 +884,8 @@ function ExamResults({ papers, navigate }) {
           // 5/15 使用者回饋：考完只能看錯題、不能看全部作答狀況
           // 改成傳「全部題目（含答對 + 答錯）」給 Review，Review 預設只顯示錯題、但有「看全部」切換
           const allQs = allQuestions.map((q, i) => {
-            const pIdx = i < (papers[0]?.questions.length || 0) ? 0 : 1
-            const qIdx = pIdx === 0 ? i : i - papers[0].questions.length
-            const myAnswer = papers[pIdx]?.answers[qIdx] || null
-            return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer), flagged: !!papers[pIdx]?.flagged?.[qIdx] }
+            const myAnswer = allAnswers[i] || null
+            return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer), flagged: !!allFlagged[i] }
           })
           return (
             <button onClick={() => navigate('/review', { state: { questions: allQs, stage: isFullExam ? '完整模擬考' : papers[0].paperName } })}

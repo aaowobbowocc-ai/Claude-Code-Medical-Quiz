@@ -11,8 +11,8 @@
 require('dotenv/config')
 const supabase = require('../supabase')
 
-const COINS = 1000
-const REASON = '🎁 感謝大家的支持與回饋！這 1000 金幣請收下～\n\n最近有不少更新（AI 解說機制大改、公職/司法考試補回 1,400+ 題、修正多個錯題），\n以後更新都會發在【公告】，有空可以去看看 📢'
+const COINS = 2000
+const REASON = '🎉 國考知識王正式上架 App Store + Google Play！\n習慣用網頁的朋友無須更動，網站一樣即時更新。\n覺得好用歡迎推薦給學弟妹並到商店留下評論 🙏\n這 2000 金幣請收下，祝大家國考順利、金榜題名！'
 const FROM_NAME = '平台團隊'
 const CHUNK = 500
 

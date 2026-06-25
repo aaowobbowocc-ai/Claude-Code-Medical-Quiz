@@ -131502,14 +131502,13 @@
     "number": 2,
     "question": "下列何者屬於心電圖的雙極導（bipolar lead）？",
     "options": {
-      "A": "VR",
+      "A": "V4",
       "B": "lead II",
       "C": "aVF",
       "D": "aVR"
     },
     "answer": "B",
-    "explanation": "",
-    "image_url": "/question-images/medlab_106100_p0_5_0.webp"
+    "explanation": ""
   },
   {
     "id": 5760,
@@ -151180,7 +151179,7 @@
     "number": 23,
     "question": "依據心電圖判讀，下列何者不是右心室肥大的診斷依據？",
     "options": {
-      "A": "VL的R值大於11mm",
+      "A": "心軸右偏",
       "B": "V 1 的R波大於S波",
       "C": "V 5 或V 6 出現較大S波",
       "D": "aVL的R值大於11mm"
@@ -172009,7 +172008,7 @@
     "question": "箭頭所指的細胞最有可能是下列何者？",
     "options": {
       "A": "Myeloblast",
-      "B": "asophil",
+      "B": "Basophil",
       "C": "Eosinophil",
       "D": "Promyelocyte"
     },
@@ -208930,10 +208929,10 @@
     "number": 22,
     "question": "一位健康女性和朋友吵架後，持續呼吸過快30分鐘，因胸悶及肢體麻木被送往急診，其血氧飽和度（SO 2 ） 為94%，動脈血液氣體分析結果為pH 7.52。有關其他可能的抽血結果，下列何者最合理？",
     "options": {
-      "A": "28 mmHg",
-      "B": "58 mmHg",
-      "C": "HCO 3 - 17 mmol/L",
-      "D": "40 mmHg"
+      "A": "PCO₂ 28 mmHg",
+      "B": "PCO₂ 58 mmHg",
+      "C": "HCO₃⁻ 17 mmol/L",
+      "D": "PO₂ 40 mmHg"
     },
     "answer": "A",
     "explanation": ""
@@ -211785,8 +211784,8 @@
     "roc_year": "110",
     "session": "第二次",
     "exam_code": "110100",
-    "subject": "臨床血清免疫學與臨床病毒學",
-    "subject_tag": "serology",
+    "subject": "臨床生理學與病理學",
+    "subject_tag": "clinical_physiology",
     "subject_name": "臨床血清免疫學",
     "stage_id": 10,
     "number": 4,
@@ -211797,7 +211796,7 @@
       "C": "完全房室傳導阻斷",
       "D": "伍爾夫－巴金森－懷特症候群（Wolff–Parkinson–White syndrome）"
     },
-    "answer": "C",
+    "answer": "A",
     "explanation": "",
     "images": [
       "/question-images/medlab_2324_0.webp"

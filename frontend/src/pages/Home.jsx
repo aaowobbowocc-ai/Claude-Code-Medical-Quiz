@@ -788,7 +788,7 @@ export default function Home() {
           <span className="text-2xl shrink-0">📲</span>
           <div className="flex-1 min-w-0">
             <p className="text-xs leading-snug font-bold">國考知識王 App 已上架！</p>
-            <p className="text-[11px] leading-snug text-white/80">下載 App 體驗更流暢、可離線練習</p>
+            <p className="text-[11px] leading-snug text-white/80">下載 App 體驗更流暢，還能看廣告免費領金幣</p>
           </div>
           {!/Android/i.test(navigator.userAgent) && (
             <a href={APPSTORE_URL} target="_blank" rel="noopener noreferrer"

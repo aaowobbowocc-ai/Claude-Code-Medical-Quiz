@@ -81,8 +81,26 @@ async function sendReportDiscord(entry) {
 //
 // If exact ID lookup fails, falls back to rocYear + number (useful when ID format
 // is corrupted or mismatched).
-function locateQuestion(examData, examConfigs, questionId, questionText, rocYear, number) {
+function locateQuestion(examData, examConfigs, questionId, questionText, rocYear, number, preferredExamId) {
   if (!examData || !questionId) return null;
+
+  // Round 0: client told us which exam — trust it. Scopes the lookup to that
+  // exam so cross-exam id collisions (same id in many exams) resolve correctly.
+  if (preferredExamId && examData[preferredExamId]?.questions) {
+    const examName = examConfigs?.[preferredExamId]?.name || preferredExamId;
+    const list = examData[preferredExamId].questions;
+    const byId = list.find(x => String(x.id) === String(questionId));
+    if (byId) return { examId: preferredExamId, examName, question: byId };
+    if (rocYear && number) {
+      const byYr = list.find(x => String(x.roc_year) === String(rocYear) &&
+        (x.number == number || Number(x.number) === Number(number)));
+      if (byYr) return { examId: preferredExamId, examName, question: byYr };
+    }
+    // exam known but question not found in it → still return name-only so the
+    // Discord locator carries the exam; question enrichment falls through null.
+    return { examId: preferredExamId, examName, question: null };
+  }
+
   const matches = [];
 
   // Round 1: Try exact ID match
@@ -211,7 +229,7 @@ function registerRoutes(app, examData, examConfigs) {
 
   // POST /report — user reports a question error
   app.post('/report', async (req, res) => {
-    const { questionId, questionText, rocYear, session, number, message, name, user_id: bodyUserId } = req.body;
+    const { questionId, questionText, examId: bodyExamId, rocYear, session, number, message, name, user_id: bodyUserId } = req.body;
     if (!questionId) {
       return res.status(400).json({ error: 'questionId is required' });
     }
@@ -239,12 +257,17 @@ function registerRoutes(app, examData, examConfigs) {
     // exam/paper/year/number so the Discord report always has a precise
     // locator like 「醫師一階 110年第一次 醫學(一) 第15題」.
     // If exact ID lookup fails, falls back to rocYear + number matching.
-    const found = locateQuestion(examData, examConfigs, questionId, questionText, rocYear, number);
+    const found = locateQuestion(examData, examConfigs, questionId, questionText, rocYear, number, bodyExamId);
     const q = found?.question;
+    // Exam name precedence: located exam → client-supplied examId (authoritative,
+    // the user IS taking that exam) → raw id. The client hint fixes cross-exam id
+    // collisions (e.g. 113100_3_12 exists in many exams) where pure id/text lookup
+    // can't disambiguate. Reported 2026-06-25.
+    const clientExamName = bodyExamId && examConfigs?.[bodyExamId]?.name;
     const entry = {
       questionId,
       questionText: (questionText || q?.question || '').slice(0, 300),
-      examName: found?.examName || '',
+      examName: found?.examName || clientExamName || bodyExamId || '',
       subject: q?.subject_name || q?.subject || '',
       rocYear: q?.roc_year || rocYear || '',
       session: q?.session || session || '',

@@ -259,6 +259,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
         body: JSON.stringify({
           questionId: questionId || '未知',
           questionText: questionText || '',
+          examId: examId || usePlayerStore.getState().exam || '',
           rocYear: rocYear || '',
           session: session || '',
           number: number || '',
@@ -399,6 +400,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
                         body: JSON.stringify({
                           questionId: questionId || '未知',
                           questionText: questionText || '',
+                          examId: examId || usePlayerStore.getState().exam || '',
                           rocYear: rocYear || '',
                           session: session || '',
                           number: number || '',

@@ -135,6 +135,7 @@ function ReviewCard({ q, index }) {
               options={q.options}
               explanation={q.explanation}
               questionId={q.id}
+              examId={q.examId}
               questionText={q.question}
               rocYear={q.roc_year}
               session={q.session}

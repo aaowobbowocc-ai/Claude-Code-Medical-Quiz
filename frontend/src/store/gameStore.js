@@ -127,12 +127,25 @@ export const usePlayerStore = create(
             // 否則雲端帳號這兩欄為 null 時，綁定前的匿名 name/avatar 會「漏」下來，
             // 還會被下面 800ms 的 write-through 寫回雲端（造成綁定後名字/頭像沒換）。
             const cloudName = row.name || deriveGoogleName() || ''
-            set({
+            const merged = {
               ...dbToStore(row),
               name: cloudName,
               avatar: row.avatar || '👨‍⚕️',
               hydrated: true,
-            })
+            }
+            // ⚠️ 進度防倒退：level/exp 是只增不減的。強制重抓（force）可能在 800ms
+            // write-through 還沒把剛升的等級寫回雲端前就跑，讀到較舊的雲端值蓋掉本地，
+            // 導致 Lv「跳來跳去」（回報 2026-06-25）。改取「本地 vs 雲端」進度較高者，
+            // 確保等級永不因同步而倒退；隨後的 write-through 會把較高值補回雲端收斂。
+            const localTotal = (get().level || 1) * 300 + (get().exp || 0)
+            const cloudTotal = (merged.level ?? 1) * 300 + (merged.exp ?? 0)
+            if (localTotal > cloudTotal) {
+              merged.level = get().level
+              merged.exp = get().exp
+            }
+            // 已解鎖關卡同為單調遞增 → 取聯集，避免本地已解鎖的被雲端舊值收回。
+            merged.unlockedStages = [...new Set([...(get().unlockedStages || []), ...(merged.unlockedStages || [])])]
+            set(merged)
             console.log('[profile] hydrated from cloud')
             // 雲端 name 原本為空、但有 Google 身分名 → 補寫回雲端讓它持久化
             if (!row.name && cloudName) {

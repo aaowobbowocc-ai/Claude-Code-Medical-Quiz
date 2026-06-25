@@ -133803,7 +133803,8 @@
       "D": "normoblast"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "image_url": "/question-images/medlab_106100_blood_q36_0.webp"
   },
   {
     "id": 5873,
@@ -228298,10 +228299,10 @@
     "number": 22,
     "question": "血液氣體分析試驗之密封檢體若於室溫下未立即檢測分析，會導致下列何種結果？",
     "options": {
-      "A": "pH↑、↓",
-      "B": "pH↓、↑",
-      "C": "pH↓、↑",
-      "D": "pH↑、↓"
+      "A": "pH↑、PCO₂↓",
+      "B": "pH↓、PO₂↑",
+      "C": "pH↓、PCO₂↑",
+      "D": "pH↑、PO₂↓"
     },
     "answer": "C",
     "explanation": ""
@@ -237964,7 +237965,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 23,
-    "question": "一位糖尿病患者腹痛數日，血液氣體分析結果為 mmol/L，下列診斷結果何者最合理？",
+    "question": "一位糖尿病患者腹痛數日，血液氣體分析結果為 pH 7.26、PCO₂ 28.6 mmHg、PO₂ 90 mmHg、HCO₃⁻ 11.0 mmol/L，下列診斷結果何者最合理？",
     "options": {
       "A": "慢性呼吸性酸中毒",
       "B": "慢性代謝性鹼中毒",
@@ -237984,7 +237985,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 24,
-    "question": "【題組情境】一位糖尿病患者腹痛數日，血液氣體分析結果為 mmol/L，下列診斷結果何者最合理？\n\n承上題，其酸鹼障礙的可能原因，下列何者最不可能？",
+    "question": "【情境】一位糖尿病患者腹痛數日，血液氣體分析結果為 pH 7.26、PCO₂ 28.6 mmHg、PO₂ 90 mmHg、HCO₃⁻ 11.0 mmol/L。\n\n承上題，其酸鹼障礙的可能原因，下列何者最不可能？",
     "options": {
       "A": "可能持續嘔吐造成",
       "B": "可能有吃metformin而乳酸中毒",

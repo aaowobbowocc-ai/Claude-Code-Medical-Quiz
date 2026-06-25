@@ -168802,12 +168802,12 @@
     "subject_name": "外科護理學",
     "stage_id": 9,
     "number": 64,
-    "question": "王先生的動脈血液氣體分析判讀結果為未代償性呼吸性酸中毒，下列敘述何者正確？ - 25 mmHg、PaO2 80 mmHg pH 7.27、PaCO2 50 mmHg、HCO3 - 30 mmHg、PaO2 81 mmHg pH 7.30、PaCO2 52 mmHg、HCO3",
+    "question": "王先生的動脈血液氣體分析判讀結果為未代償性呼吸性酸中毒，下列敘述何者正確？",
     "options": {
-      "A": "pH 7.27、PaCO2 50 mmHg、HCO3",
-      "B": "- 25 mmHg、PaO2 80 mmHg",
-      "C": "pH 7.30、PaCO2 52 mmHg、HCO3",
-      "D": "- 30 mmHg、PaO2 81 mmHg"
+      "A": "pH 7.27、PaCO2 50 mmHg、HCO3- 25 mmHg、PaO2 80 mmHg",
+      "B": "pH 7.30、PaCO2 52 mmHg、HCO3- 30 mmHg、PaO2 81 mmHg",
+      "C": "pH 7.39、PaCO2 48 mmHg、HCO3- 32 mmHg、PaO2 89 mmHg",
+      "D": "pH 7.37、PaCO2 47 mmHg、HCO3- 31 mmHg、PaO2 81 mmHg"
     },
     "answer": "A",
     "explanation": ""
@@ -236584,7 +236584,8 @@
       "D": "45%"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "disputed": true
   },
   {
     "id": "112180_med_surg_30",
@@ -236604,7 +236605,8 @@
       "D": "4,160 mL"
     },
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "disputed": true
   },
   {
     "id": "112180_med_surg_31",

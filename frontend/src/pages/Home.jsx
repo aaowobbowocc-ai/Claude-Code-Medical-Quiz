@@ -30,6 +30,9 @@ const IS_NATIVE = isNativeApp()
 // iOS 才顯示 Sign in with Apple（Guideline 4.8 要求；Android/web 不顯示避免怪字）
 const IS_IOS = Capacitor.getPlatform() === 'ios'
 const COIN_PLUS_SHEET = IS_NATIVE ? 'reward-ad' : 'coin-shop'
+// App 商店連結（網站版橫幅引導下載原生 App）
+const APPSTORE_URL = 'https://apps.apple.com/app/id6780595877'
+const PLAY_URL = 'https://play.google.com/store/apps/details?id=tw.examking.app'
 
 const AVATARS = ['👨‍⚕️','👩‍⚕️','🧑‍⚕️','👨‍🔬','👩‍🔬','🧬','🩺','💉']
 
@@ -358,7 +361,7 @@ export default function Home() {
     }
   }, [])
 
-  const { showBanner, isIOS, install, installPrompt, dismiss } = usePWA()
+  const { showBanner, isIOS, dismiss } = usePWA()
   const { getDueCount } = useBookmarks()
   const dueCount = getDueCount()
   const [devTaps, setDevTaps] = useState(0)
@@ -779,26 +782,25 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
 
-      {/* PWA Install Banner */}
+      {/* App 下載推薦 Banner（網站版：原 PWA「加入主畫面」位置改為推薦下載原生 App）*/}
       {showBanner && (
         <div className={`text-white px-4 py-3 flex items-center gap-3 ${darkMode ? 'bg-[#2d2d2d]' : 'bg-gradient-to-r from-medical-blue to-medical-teal'}`}>
           <span className="text-2xl shrink-0">📲</span>
           <div className="flex-1 min-w-0">
-            {isIOS ? (
-              <p className="text-xs leading-snug">
-                點擊 Safari 底部 <span className="inline-block bg-white/20 rounded px-1 mx-0.5">⬆</span> 分享按鈕，再選「<strong>加入主畫面</strong>」即可安裝
-              </p>
-            ) : installPrompt ? (
-              <p className="text-xs leading-snug">安裝到桌面，更快開啟、更好體驗</p>
-            ) : (
-              <p className="text-xs leading-snug">使用瀏覽器選單「加入主畫面」安裝 App</p>
-            )}
+            <p className="text-xs leading-snug font-bold">國考知識王 App 已上架！</p>
+            <p className="text-[11px] leading-snug text-white/80">下載 App 體驗更流暢、可離線練習</p>
           </div>
-          {installPrompt && !isIOS && (
-            <button onClick={install}
+          {!/Android/i.test(navigator.userAgent) && (
+            <a href={APPSTORE_URL} target="_blank" rel="noopener noreferrer"
               className="shrink-0 bg-white text-medical-blue text-xs font-bold px-3 py-1.5 rounded-lg active:scale-95">
-              安裝
-            </button>
+              App Store
+            </a>
+          )}
+          {!isIOS && (
+            <a href={PLAY_URL} target="_blank" rel="noopener noreferrer"
+              className="shrink-0 bg-white text-medical-blue text-xs font-bold px-3 py-1.5 rounded-lg active:scale-95">
+              Google Play
+            </a>
           )}
           <button onClick={dismiss} className="shrink-0 text-white/60 text-lg leading-none">&times;</button>
         </div>

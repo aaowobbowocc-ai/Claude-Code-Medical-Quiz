@@ -97,6 +97,18 @@ workflows:
             || $PB -c "Set :GADApplicationIdentifier ca-app-pub-3134321405509741~8300987419" "$PLIST"
           # ③ App 追蹤透明度說明（iOS 14+ 廣告個人化/過審用）。
           $PB -c "Add :NSUserTrackingUsageDescription string 本應用程式會使用識別碼來提供更相關的廣告。" "$PLIST" 2>/dev/null || true
+          # ③-2 SKAdNetworkItems（iOS 14.5+ 廣告歸因）— 缺這個 AdMob 在 iOS 填充率/收益會大幅下降。
+          #     清單為 Google Mobile Ads SDK 官方建議的 SKAdNetwork ID（Google 自家 cstr6suwn9 為首）。
+          $PB -c "Delete :SKAdNetworkItems" "$PLIST" 2>/dev/null || true
+          $PB -c "Add :SKAdNetworkItems array" "$PLIST" 2>/dev/null || true
+          SKAN_IDS="cstr6suwn9 4fzdc2evr5 2u9pt9hc89 8s468mfl3y klf5c3l5u5 ppxm28t8ap v72qych5uu ludvb6z3bs cp8zw746q7 3sh42y64q3 c6k4g5qg8m s39g8k73mm 3qy4746246 f38h382jlk hs6bdukanm v4nxqhlyqp wzmmz9fp6w yclnxrl5pm t38b2kh725 7ug5zh24hu 9rd848q2bz n6fk4nfna4 kbd757ywx3 9t245vhmpl 4468km3ulz 2fnua5tdw4 ydx93a7ass 5a6flpkh64 p78axxw29g v9wttpbfk9 n38lu8286q"
+          i=0
+          for id in $SKAN_IDS; do
+            $PB -c "Add :SKAdNetworkItems:$i dict" "$PLIST" 2>/dev/null || true
+            $PB -c "Add :SKAdNetworkItems:$i:SKAdNetworkIdentifier string ${id}.skadnetwork" "$PLIST" 2>/dev/null || true
+            i=$((i+1))
+          done
+          echo "Injected $i SKAdNetwork IDs"
           # ④ 出口合規：只用 HTTPS(豁免加密) → 宣告不含非豁免加密，省去每次 TestFlight 的加密聲明框。
           $PB -c "Add :ITSAppUsesNonExemptEncryption bool false" "$PLIST" 2>/dev/null \
             || $PB -c "Set :ITSAppUsesNonExemptEncryption false" "$PLIST"

@@ -85480,7 +85480,8 @@
     "explanation": "",
     "images": [
       "/question-images/medlab_104020_immuno_q23_0.webp"
-    ]
+    ],
+    "image_url": "/question-images/medlab_104020_serology_q23_0.webp"
   },
   {
     "id": 11933,
@@ -208950,10 +208951,10 @@
     "number": 23,
     "question": "代謝性酸中毒的病人，通常有下列何種代償作用？",
     "options": {
-      "A": "血中HCO 3 - 濃度下降",
-      "B": "血中下降",
-      "C": "血中HCO 3 - 濃度上升",
-      "D": "血中上升"
+      "A": "血中HCO₃⁻濃度下降",
+      "B": "血中PCO₂下降",
+      "C": "血中HCO₃⁻濃度上升",
+      "D": "血中PCO₂上升"
     },
     "answer": "B",
     "explanation": ""

@@ -890,6 +890,17 @@ export default function Home() {
             <div className="flex-1">
               <p className="text-white font-bold text-xl leading-tight">{name}</p>
               <p className="text-white/40 text-xs">Lv.{level} {getLevelTitle(level).icon} {getLevelTitle(level).title}</p>
+              {/* 登入狀態 — 讓使用者一眼看出自己是訪客還是已登入（回饋：分不清有沒有登入、3000沒拿到） */}
+              {supabase && (linkedIdentity ? (
+                <span className="inline-flex items-center gap-1 mt-1 text-[11px] font-bold text-emerald-300 bg-emerald-400/15 px-2 py-0.5 rounded-full">
+                  ✓ 已登入 · {linkedIdentity.provider === 'apple' ? 'Apple' : 'Google'}
+                </span>
+              ) : (
+                <button onClick={(e) => { e.stopPropagation(); handleLinkGoogle() }} disabled={authBusy}
+                  className="inline-flex items-center gap-1 mt-1 text-[11px] font-bold text-amber-200 bg-amber-400/25 px-2 py-0.5 rounded-full active:scale-95 disabled:opacity-50">
+                  👤 訪客模式 · 點此登入領 3000 🪙
+                </button>
+              ))}
             </div>
             <div className="text-right">
               <p className="text-white/40 text-xs">金幣</p>

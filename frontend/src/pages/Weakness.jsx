@@ -83,6 +83,7 @@ export default function Weakness() {
   const [wrongVer, setWrongVer] = useState(0)
   const [flagVer, setFlagVer] = useState(0)
   const [rehydrating, setRehydrating] = useState(false)
+  const [practiceCount, setPracticeCount] = useState(0)   // 0 = 全部；否則本次只練前 N 題（最舊優先）
 
   const examConfig = getExamConfig(examType)
   const tagNames = getAllTagNames()
@@ -252,24 +253,45 @@ export default function Weakness() {
             </div>
           ) : (
             <>
+              {/* 本次訂正題數選擇（回饋：一次全部訂正太累，可分批）— 從最舊的題目開始 */}
+              {wrongQuestions.length > 20 && (
+                <div className="mb-2">
+                  <p className="text-xs text-gray-400 mb-1.5">本次要練習幾題？（從最早的錯題開始）</p>
+                  <div className="flex gap-1.5 flex-wrap">
+                    {[20, 50, 100].filter(n => n < wrongQuestions.length).map(n => (
+                      <button key={n} onClick={() => setPracticeCount(n)}
+                        className={`px-3 py-1.5 rounded-xl text-xs font-bold border active:scale-95 transition-all ${practiceCount === n ? 'bg-orange-500 text-white border-orange-500' : 'bg-white text-gray-600 border-gray-200'}`}>
+                        {n} 題
+                      </button>
+                    ))}
+                    <button onClick={() => setPracticeCount(0)}
+                      className={`px-3 py-1.5 rounded-xl text-xs font-bold border active:scale-95 transition-all ${practiceCount === 0 ? 'bg-orange-500 text-white border-orange-500' : 'bg-white text-gray-600 border-gray-200'}`}>
+                      全部 ({wrongQuestions.length})
+                    </button>
+                  </div>
+                </div>
+              )}
               <button disabled={rehydrating}
                 onClick={async () => {
+                  // 本次練習題數：選了 N 就取最舊 N 題，否則全部
+                  const n = practiceCount > 0 ? Math.min(practiceCount, wrongQuestions.length) : wrongQuestions.length
+                  const batch = wrongQuestions.slice(0, n)
                   // 錯題練習收費：一題 2 金幣（鞏固弱點的付費練習）
-                  const cost = wrongQuestions.length * 2
+                  const cost = n * 2
                   const { spendCoins, coins } = usePlayerStore.getState()
                   if (!spendCoins(cost)) {
-                    if (confirm(`金幣不足！練習錯題需要 ${cost} 金幣（${wrongQuestions.length} 題 × 2 🪙），目前只有 ${coins} 金幣\n\n要去賺金幣嗎？`)) navigate('/?reward=1')
+                    if (confirm(`金幣不足！練習錯題需要 ${cost} 金幣（${n} 題 × 2 🪙），目前只有 ${coins} 金幣\n\n要去賺金幣嗎？`)) navigate('/?reward=1')
                     return
                   }
                   setRehydrating(true)
-                  const fresh = await rehydrateWrong(wrongQuestions, examType).catch(() => wrongQuestions)
+                  const fresh = await rehydrateWrong(batch, examType).catch(() => batch)
                   persistRehydrated(fresh)
                   setRehydrating(false)
                   navigate('/practice', { state: { wrongPractice: fresh } })
                 }}
                 className="w-full py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95 mb-2 disabled:opacity-60"
                 style={{ background: 'linear-gradient(135deg,#f97316,#ef4444)' }}>
-                {rehydrating ? '載入最新題目…' : `✍️ 練習錯題（${wrongQuestions.length} 題 · 扣 ${wrongQuestions.length * 2} 🪙）`}
+                {rehydrating ? '載入最新題目…' : (() => { const n = practiceCount > 0 ? Math.min(practiceCount, wrongQuestions.length) : wrongQuestions.length; return `✍️ 練習錯題（${n} 題 · 扣 ${n * 2} 🪙）` })()}
               </button>
               <div className="flex items-center gap-2 mb-3">
                 <button disabled={rehydrating}

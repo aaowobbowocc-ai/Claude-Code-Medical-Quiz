@@ -235,6 +235,12 @@ export default function Review() {
 
         {/* 底部廣告 / 贊助橫幅 */}
         <SmartBanner />
+
+        {/* 回饋：檢討完滑到最底，提供快速回主頁入口 */}
+        <button onClick={() => navigate('/')}
+          className="w-full py-4 rounded-2xl font-bold text-medical-blue bg-white border-2 border-medical-blue active:scale-95 transition-transform mt-1">
+          🏠 回到主頁
+        </button>
       </div>
     </div>
   )

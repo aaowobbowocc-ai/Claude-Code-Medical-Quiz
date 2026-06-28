@@ -318,6 +318,36 @@ export default function Weakness() {
               <p className="text-xs text-gray-400 mb-3">
                 自動累積（最多 {WRONG_BANK_MAX} 題，超過會移除最舊的）
               </p>
+
+              {/* 錯題科目分布（回饋：讓使用者知道常錯哪些主題）*/}
+              {(() => {
+                const dist = {}
+                for (const q of wrongQuestions) {
+                  const k = q.subject_name || q.subject || '未分類'
+                  dist[k] = (dist[k] || 0) + 1
+                }
+                const rows = Object.entries(dist).sort((a, b) => b[1] - a[1])
+                if (rows.length < 2) return null   // 只有一科就不用分布圖
+                const max = rows[0][1]
+                return (
+                  <div className="bg-white rounded-2xl border border-gray-100 px-4 py-3 shadow-sm mb-3">
+                    <p className="text-sm font-bold text-medical-dark mb-2.5">📊 錯題科目分布</p>
+                    <div className="flex flex-col gap-2">
+                      {rows.map(([name, n]) => (
+                        <div key={name} className="flex items-center gap-2">
+                          <span className="text-xs text-gray-600 w-20 shrink-0 truncate text-right">{name}</span>
+                          <div className="flex-1 h-4 bg-gray-100 rounded-full overflow-hidden">
+                            <div className="h-full rounded-full transition-all" style={{ width: `${(n / max) * 100}%`, background: getSubjectColor(name) }} />
+                          </div>
+                          <span className="text-xs font-bold text-gray-500 w-6 shrink-0">{n}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-[11px] text-gray-400 mt-2.5">最常錯：<span className="font-bold text-red-500">{rows[0][0]}</span>（{rows[0][1]} 題）— 建議優先加強</p>
+                  </div>
+                )
+              })()}
+
               <div className="flex flex-col gap-2">
                 {wrongQuestions.map((q, i) => (
                   <div key={q.id || i} className="bg-white rounded-2xl border border-red-100 px-4 py-3 shadow-sm">

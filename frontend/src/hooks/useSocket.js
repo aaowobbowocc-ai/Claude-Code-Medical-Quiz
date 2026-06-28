@@ -48,7 +48,7 @@ export function useSocket() {
   const navigate = useNavigate()
   const socket = getSocket()
   const {
-    setRoom, setPhase, setPlayers, setStage, setTimerMode,
+    setRoom, setPhase, setPlayers, setStage, setStages, setTimerMode,
     setQuestion, setTimeRemaining, setMyAnswer,
     setCorrectAnswer, setExplanation, setMyScore, setFinalPlayers, setStageName, addChatMessage,
   } = useGameStore()
@@ -65,9 +65,10 @@ export function useSocket() {
         setRoom(code, false, socket.id)
         navigate('/lobby')
       },
-      room_state: ({ players, stage, phase, timerMode }) => {
+      room_state: ({ players, stage, stages, phase, timerMode }) => {
         setPlayers(players)
         setStage(stage)
+        setStages(stages || [stage])
         setPhase(phase)
         if (timerMode) setTimerMode(timerMode)
         // Host pressed 再玩一局 → server reset phase to 'lobby'. Pull

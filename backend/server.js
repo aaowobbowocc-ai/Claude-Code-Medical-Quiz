@@ -241,8 +241,11 @@ function getQuestionsByStage(stageId, exam) {
     if (lens[0] < 3 && lens[3] - lens[0] >= 10) return false;
     return true;
   });
-  if (stageId === 0) return valid;
-  return valid.filter(q => q.stage_id === stageId);
+  // stageId 可為單一 id（向下相容）或 id 陣列（多科複選，合在一起隨機抽）
+  const ids = Array.isArray(stageId) ? stageId : [stageId];
+  if (ids.length === 0 || ids.includes(0)) return valid;   // 含「隨機混合(0)」= 全部
+  const set = new Set(ids);
+  return valid.filter(q => set.has(q.stage_id));
 }
 
 const { shuffle } = require('./questions-api');
@@ -322,6 +325,7 @@ function broadcastRoomState(room) {
     code: room.code,
     players: getRoomPlayers(room),
     stage: room.stage,
+    stages: room.stages || [room.stage],
     phase: room.phase,
     hostId: room.hostId,
     timerMode: room.timerMode || 'auto',
@@ -600,10 +604,16 @@ io.on('connection', (socket) => {
   });
 
   // Select stage (host only)
-  socket.on('select_stage', ({ stageId }) => {
+  socket.on('select_stage', ({ stageId, stageIds }) => {
     const room = rooms.get(socket.data.roomCode);
     if (!room || room.hostId !== socket.id) return;
-    room.stage = stageId;
+    // 新格式 stageIds[]（多科複選）；舊格式 stageId（單科，向下相容）
+    if (Array.isArray(stageIds) && stageIds.length > 0) {
+      room.stages = stageIds.includes(0) ? [0] : [...new Set(stageIds)];
+    } else {
+      room.stages = [stageId];
+    }
+    room.stage = room.stages[0];   // 保留單一欄位給舊版 App 顯示
     broadcastRoomState(room);
   });
 
@@ -624,9 +634,10 @@ io.on('connection', (socket) => {
       return;
     }
 
-    const pool = getQuestionsByStage(room.stage, room.exam);
+    const stages = (room.stages && room.stages.length) ? room.stages : [room.stage || 0];
+    const pool = getQuestionsByStage(stages, room.exam);
     if (pool.length < QUESTIONS_PER_GAME) {
-      socket.emit('error', { message: `此關卡題目不足（${pool.length}題），請換關卡` });
+      socket.emit('error', { message: `所選科目題目不足（${pool.length}題），請增加科目或改選` });
       return;
     }
 
@@ -636,8 +647,12 @@ io.on('connection', (socket) => {
     room.lastActivity = Date.now();
     for (const p of room.players.values()) { p.score = 0; }
 
+    const stageObjs = (examData[room.exam] || questionsData).stages;
+    const stageName = stages.includes(0)
+      ? '隨機混合'
+      : (stages.map(id => stageObjs.find(s => s.id === id)?.name).filter(Boolean).join('、') || '隨機');
     io.to(room.code).emit('game_starting', {
-      stageName: (examData[room.exam] || questionsData).stages.find(s => s.id === room.stage)?.name || '隨機',
+      stageName,
       questionCount: room.questions.length,
     });
 
@@ -1286,7 +1301,13 @@ app.get('/rooms', (_, res) => {
     list.push({
       code,
       playerCount: humanPlayers.length,
-      stageName: (examData[room.exam] || questionsData).stages.find(s => s.id === room.stage)?.name || '隨機混合',
+      stageName: (() => {
+        const so = (examData[room.exam] || questionsData).stages;
+        const ids = (room.stages && room.stages.length) ? room.stages : [room.stage];
+        if (ids.includes(0) || ids.length === 0) return '隨機混合';
+        const names = ids.map(id => so.find(s => s.id === id)?.name).filter(Boolean);
+        return names.length > 1 ? `${names[0]} 等 ${names.length} 科` : (names[0] || '隨機混合');
+      })(),
       stageIcon: STAGE_ICONS[room.stage] || '🎲',
       hostName: humanPlayers[0]?.name || '未知',
       hasPassword: !!room.password,

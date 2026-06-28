@@ -29,7 +29,7 @@ function PulseDot() {
 export default function Lobby() {
   const navigate = useNavigate()
   const socket = getSocket()
-  const { roomCode, isHost, myId, players, stage, timerMode, betAmount, setBetAmount } = useGameStore()
+  const { roomCode, isHost, myId, players, stage, stages, timerMode, betAmount, setBetAmount } = useGameStore()
   const { name, coins, exam } = usePlayerStore()
   const [copied, setCopied] = useState(false)   // share msg
   const [codeCopied, setCodeCopied] = useState(false) // code only
@@ -57,7 +57,16 @@ export default function Lobby() {
     return () => { cancelled = true }
   }, [exam])
 
-  const selectedStage = STAGES.find(s => s.id === stage) || STAGES[0]
+  const curStages = (stages && stages.length) ? stages : [stage]
+  const isMixed = curStages.includes(0) || curStages.length === 0
+  const selectedStageObjs = isMixed ? [] : STAGES.filter(s => curStages.includes(s.id))
+  const selectedStage = STAGES.find(s => s.id === stage) || STAGES[0]   // 代表色/icon（取第一個）
+  const stageSummaryName = isMixed ? '隨機混合'
+    : selectedStageObjs.length === 1 ? selectedStageObjs[0].name
+    : `${selectedStageObjs[0]?.name || ''} 等 ${selectedStageObjs.length} 科`
+  const stageSummaryCount = isMixed
+    ? (STAGES.find(s => s.id === 0)?.count || STAGES.reduce((a, s) => a + (s.id !== 0 ? (s.count || 0) : 0), 0))
+    : selectedStageObjs.reduce((a, s) => a + (s.count || 0), 0)
 
   const handleCopyCode = async () => {
     await navigator.clipboard?.writeText(roomCode).catch(() => {})
@@ -88,7 +97,19 @@ export default function Lobby() {
     }
     socket.emit('start_game', { betAmount })
   }
-  const handleStageChange = (id) => { socket.emit('select_stage', { stageId: id }); setShowStages(false) }
+  // 多科複選：選「隨機混合(0)」=只選它；選具體科目會自動取消混合；全取消則回到混合
+  const handleStageToggle = (id) => {
+    const cur = (stages && stages.length) ? stages : [0]
+    let next
+    if (id === 0) {
+      next = [0]
+    } else {
+      const base = cur.filter(x => x !== 0)
+      next = base.includes(id) ? base.filter(x => x !== id) : [...base, id]
+      if (next.length === 0) next = [0]
+    }
+    socket.emit('select_stage', { stageIds: next })
+  }
   const handleAddAI = (diff) => { socket.emit('add_ai_player', { difficulty: diff }); setShowAIDiff(false) }
   const handleRemoveAI = () => socket.emit('remove_ai_player')
   const handleKick = (targetId, targetName) => {
@@ -267,29 +288,40 @@ export default function Lobby() {
               {selectedStage.icon}
             </div>
             <div className="flex-1">
-              <p className="font-bold text-medical-dark">{selectedStage.name}</p>
-              <p className="text-xs text-gray-400">{selectedStage.count} 題可用</p>
+              <p className="font-bold text-medical-dark">{stageSummaryName}</p>
+              <p className="text-xs text-gray-400">{stageSummaryCount} 題可用{!isMixed && selectedStageObjs.length > 1 ? '（合併隨機抽）' : ''}</p>
             </div>
             <div className="w-2 h-2 rounded-full" style={{ background: selectedStage.color }} />
           </div>
         )}
 
-        {/* Stage grid */}
+        {/* Stage grid — 多科複選（合併隨機抽）*/}
         {showStages && isHost && (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-            {STAGES.map(s => (
-              <button key={s.id} onClick={() => handleStageChange(s.id)}
-                      className={`flex items-center gap-2.5 px-3 py-3 rounded-xl text-sm font-medium transition-all active:scale-95
-                        ${stage === s.id ? 'text-white shadow-md scale-105' : 'bg-white text-medical-dark border border-gray-100 shadow-sm'}`}
-                      style={stage === s.id ? { background: s.color } : {}}>
-                <span className="text-xl">{s.icon}</span>
-                <div className="text-left">
-                  <p className="font-semibold leading-tight text-xs">{s.name}</p>
-                  <p className="opacity-60 text-xs">{s.count}題</p>
-                </div>
-              </button>
-            ))}
-          </div>
+          <>
+            <p className="text-xs text-gray-400 mb-2 px-1">可複選多個科目，題目會合在一起隨機出（選「隨機混合」則涵蓋全部）</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+              {STAGES.map(s => {
+                const on = isMixed ? s.id === 0 : curStages.includes(s.id)
+                return (
+                  <button key={s.id} onClick={() => handleStageToggle(s.id)}
+                          className={`relative flex items-center gap-2.5 px-3 py-3 rounded-xl text-sm font-medium transition-all active:scale-95
+                            ${on ? 'text-white shadow-md scale-105' : 'bg-white text-medical-dark border border-gray-100 shadow-sm'}`}
+                          style={on ? { background: s.color } : {}}>
+                    <span className="text-xl">{s.icon}</span>
+                    <div className="text-left">
+                      <p className="font-semibold leading-tight text-xs">{s.name}</p>
+                      <p className="opacity-60 text-xs">{s.count}題</p>
+                    </div>
+                    {on && s.id !== 0 && <span className="absolute top-1 right-1.5 text-xs">✓</span>}
+                  </button>
+                )
+              })}
+            </div>
+            <button onClick={() => setShowStages(false)}
+              className="w-full mt-2 py-2.5 rounded-xl font-bold text-sm bg-medical-blue text-white active:scale-95">
+              完成選擇（{isMixed ? '隨機混合' : selectedStageObjs.length + ' 科'}）
+            </button>
+          </>
         )}
       </div>
 

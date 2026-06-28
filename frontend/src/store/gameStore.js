@@ -341,6 +341,7 @@ export const useGameStore = create((set) => ({
   phase: 'lobby', // lobby | playing | ended
   players: [],
   stage: 0,
+  stages: [0],
   currentQuestion: null,
   questionIndex: 0,
   totalQuestions: 0,
@@ -364,6 +365,7 @@ export const useGameStore = create((set) => ({
   setPhase: (phase) => set({ phase }),
   setPlayers: (players) => set({ players }),
   setStage: (stage) => set({ stage }),
+  setStages: (stages) => set({ stages: Array.isArray(stages) && stages.length ? stages : [0] }),
   setQuestion: (q, index, total, timeLimit = 15) => set({
     currentQuestion: q,
     questionIndex: index,

@@ -58888,9 +58888,9 @@
     "question": "下列那些分子診斷方法用於檢測乙型海洋性貧血？①增幅限制酶切位點（ Amplified created restriction site; ACRS ） ② 增幅阻礙突變系統（ Amplification refractory mutation system; ARMS ） ③ DNA 定序（ Sequencing ）",
     "options": {
       "A": "僅①③",
-      "B": "僅 ①②",
-      "C": "僅 ②③",
-      "D": "①②③①孕婦年齡大"
+      "B": "僅①②",
+      "C": "僅②③",
+      "D": "①②③"
     },
     "answer": "D",
     "explanation": ""
@@ -289274,9 +289274,10 @@
       "D": "AID能夠啟動免疫球蛋白之類別轉換（class switch recombination）"
     },
     "answer": "C",
-    "explanation": "",
+    "explanation": "考選部一律給分（送分）：本題「何者錯誤」中，A（「只有」生發中心 B 細胞表現 AID 過於絕對）與 C（AID 僅作用於單股 DNA，「單股及雙股」有誤）皆有爭議，故官方一律給分。原標準答案為 C。",
     "original_answer": "C",
-    "correction_note": "第10題更正為 A,C（原答案 C）"
+    "correction_note": "第10題更正為 A,C（原答案 C）",
+    "disputed": true
   },
   {
     "id": 1370,

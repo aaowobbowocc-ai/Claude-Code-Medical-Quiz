@@ -9,6 +9,8 @@ import QuestionImages from '../components/QuestionImages'
 import HazardVideo from '../components/HazardVideo'
 import OptionContent from '../components/OptionContent'
 import CommentSection from '../components/CommentSection'
+import { useAccuracyStore } from '../store/accuracyStore'
+import { usePlayerStore } from '../store/gameStore'
 
 /* ── Single question review card ───────────────────────────── */
 function ReviewCard({ q, index }) {
@@ -159,6 +161,7 @@ export default function Review() {
   const navigate = useNavigate()
   const { state } = useLocation()
   const [filter, setFilter] = useState('wrong')   // 'wrong' | 'all' | 'flagged'
+  const [sortBySubject, setSortBySubject] = useState(false)   // 依弱科排序（回饋）
   if (!state?.questions) {
     navigate('/')
     return null
@@ -168,9 +171,20 @@ export default function Review() {
   const stage = state?.stage || '收藏題目'
   const wrong = questions.filter(q => !q.correct)
   const flaggedCount = questions.filter(q => q.flagged).length
-  const displayed = filter === 'all' ? questions
+  let displayed = filter === 'all' ? questions
     : filter === 'flagged' ? questions.filter(q => q.flagged)
     : wrong
+  // 依弱科排序：用各科正確率（弱→強）排，同科內依科目名分群
+  if (sortBySubject) {
+    const exam = usePlayerStore.getState().exam || 'doctor1'
+    const ranked = useAccuracyStore.getState().getAllSubjects?.(exam) || []
+    const rank = {}; ranked.forEach((s, i) => { rank[s.tag] = i })
+    displayed = [...displayed].sort((a, b) => {
+      const ra = rank[a.subject_tag] ?? 999, rb = rank[b.subject_tag] ?? 999
+      if (ra !== rb) return ra - rb
+      return String(a.subject_name || a.subject_tag || '').localeCompare(String(b.subject_name || b.subject_tag || ''))
+    })
+  }
 
   return (
     <div className="flex flex-col min-h-dvh no-select bg-medical-ice">
@@ -214,10 +228,15 @@ export default function Review() {
                 className={`text-xs font-bold px-3 py-1.5 rounded-xl shadow active:scale-95 ${filter === 'all' ? 'bg-medical-blue text-white' : 'bg-white text-medical-blue'}`}>
                 {filter === 'all' ? '只看錯題' : '👀 全部'}
               </button>
+              <button
+                onClick={() => setSortBySubject(v => !v)}
+                className={`text-xs font-bold px-3 py-1.5 rounded-xl shadow active:scale-95 ${sortBySubject ? 'bg-orange-500 text-white' : 'bg-white text-orange-600'}`}>
+                {sortBySubject ? '✓ 依弱科' : '📚 依弱科排序'}
+              </button>
             </div>
           )}
         </div>
-        <p className="text-white/35 text-xs mt-2">每道 AI 解說使用共用的每日配額（100次/天）</p>
+        <p className="text-white/35 text-xs mt-2">每道 AI 解說使用共用的每日配額（100次/天）{sortBySubject ? ' · 已依最弱科目優先排序' : ''}</p>
       </div>
 
       {/* Question list */}

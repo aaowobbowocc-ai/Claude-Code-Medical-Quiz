@@ -16,7 +16,7 @@ import { useAccuracyStore } from '../store/accuracyStore'
 import { usePageMeta } from '../hooks/usePageMeta'
 import ShareChallengeButton from '../components/ShareChallengeButton'
 import ReadingModePopover, { useReadingMode } from '../components/ReadingModePopover'
-import { getRandomQuestions, isExamSupportedByCDN } from '../lib/cdnQuestions'
+import { getRandomQuestions, isExamSupportedByCDN, getExamYears } from '../lib/cdnQuestions'
 import { supabase } from '../lib/supabase'
 import { addWrong, removeWrong } from '../lib/wrongBank'
 import { isNativeApp } from '../lib/admob'
@@ -140,6 +140,8 @@ function SetupScreen({ onStart, onBack }) {
   const [sourceMode, setSourceMode] = useState(() => getSourceMode(examType))
   const [meta, setMeta] = useState(() => cachedMeta || null)
   const [showModeInfo, setShowModeInfo] = useState(false)
+  const [year, setYear] = useState(last.year ?? '')   // '' = 全部年份
+  const [availYears, setAvailYears] = useState([])
   const [online, setOnline] = useState(() => (typeof navigator !== 'undefined' ? navigator.onLine : true))
 
   useEffect(() => {
@@ -160,6 +162,19 @@ function SetupScreen({ onStart, onBack }) {
       if (data?.stages) setStages(formatStages(data.stages))
       setMeta(data)
     }).catch(() => {})
+    return () => { cancelled = true }
+  }, [examType])
+
+  // 載入可選年份（自主練習年份篩選）— 換考試時重置選擇
+  useEffect(() => {
+    let cancelled = false
+    setYear('')
+    getExamYears(examType).then(list => {
+      if (cancelled) return
+      const ys = [...new Set((list || []).map(e => e.roc_year).filter(Boolean))]
+        .sort((a, b) => String(b).localeCompare(String(a)))   // 新→舊
+      setAvailYears(ys)
+    }).catch(() => setAvailYears([]))
     return () => { cancelled = true }
   }, [examType])
 
@@ -274,6 +289,27 @@ function SetupScreen({ onStart, onBack }) {
           </div>
         </div>
 
+        {/* Year filter（自主練習分年份，回饋） */}
+        {availYears.length > 0 && (
+          <div>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2.5">年份（可選）</p>
+            <div className="flex flex-wrap gap-2">
+              <button onClick={() => setYear('')}
+                      className={`px-3 py-2 rounded-xl text-sm font-bold border transition-all active:scale-95
+                        ${year === '' ? 'bg-medical-blue text-white border-medical-blue shadow' : 'bg-white text-gray-600 border-gray-100 shadow-sm'}`}>
+                全部
+              </button>
+              {availYears.map(y => (
+                <button key={y} onClick={() => setYear(String(y))}
+                        className={`px-3 py-2 rounded-xl text-sm font-bold border transition-all active:scale-95
+                          ${year === String(y) ? 'bg-medical-blue text-white border-medical-blue shadow' : 'bg-white text-gray-600 border-gray-100 shadow-sm'}`}>
+                  {y}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Difficulty */}
         <div>
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2.5">難度</p>
@@ -387,7 +423,7 @@ function SetupScreen({ onStart, onBack }) {
               if (confirm(`金幣不足！本次練習需要 ${practiceFee} 金幣（${effectiveCount} 題 × ${FEE_PER_Q}，全對可全額賺回），目前只有 ${coins} 金幣\n\n要去${IS_NATIVE ? '看廣告賺金幣' : '金幣商店'}嗎？`)) navigate('/?reward=1')
               return
             }
-            saveLastConfig({ stage, diff, count, customTime, customCount })
+            saveLastConfig({ stage, diff, count, customTime, customCount, year })
             const s = stages.find(s => s.id === stage)
             onStart({
               stage,
@@ -396,6 +432,7 @@ function SetupScreen({ onStart, onBack }) {
               customTime: isCustom ? customTime : null,
               stageName: s?.name || '練習',
               sourceMode,
+              year,
             })
           }}
           className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform grad-cta"
@@ -446,7 +483,7 @@ function PracticeGame({ config, onFinish, onExit }) {
   useEffect(() => {
     let cancelled = false
     const exam = usePlayerStore.getState().exam || 'doctor1'
-    const backendUrl = `${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}&exam=${exam}${config.sourceMode ? `&mode=${config.sourceMode}` : ''}`
+    const backendUrl = `${BACKEND}/questions/random?stage_id=${config.stage}&count=${config.count}&exam=${exam}${config.sourceMode ? `&mode=${config.sourceMode}` : ''}${config.year ? `&year=${config.year}` : ''}`
     const useCDN = isExamSupportedByCDN(exam) && config.sourceMode !== 'reservoir'
 
     async function fetchBackend() {
@@ -467,7 +504,7 @@ function PracticeGame({ config, onFinish, onExit }) {
       }
       try {
         const data = useCDN
-          ? await getRandomQuestions(exam, { stageId: config.stage, count: config.count, stages })
+          ? await getRandomQuestions(exam, { stageId: config.stage, count: config.count, stages, year: config.year })
           : await fetchBackend()
         if (!cancelled && Array.isArray(data?.questions) && data.questions.length > 0) {
           setQuestions(data.questions)

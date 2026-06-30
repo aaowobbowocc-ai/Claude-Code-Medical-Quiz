@@ -113,7 +113,7 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     const examId = resolveExamId(req);
     const mode = resolveMode(req, examId);
     const data = examData[examId] || examData.doctor1;
-    const { stage_id, count = 10, limit, offset } = req.query;
+    const { stage_id, count = 10, limit, offset, year } = req.query;
     // stage_id may be numeric (doctor1 classification stages) or a string paper id
     // (e.g. "paper1" for nursing/pharma/etc — see server.js stages fallback).
     // Compare as strings so both shapes resolve. '0' / falsy = no filter.
@@ -133,6 +133,8 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
         && doctor1PaperOK(q, tag, examId)
       );
     }
+    // 自主練習年份篩選（回饋）：year 為民國年字串，空=全部年份
+    if (year) pool = pool.filter(q => String(q.roc_year) === String(year));
     // Cap target — a mock exam is at most 200 Qs; bigger requests just waste
     // bandwidth shuffling/serializing the whole pool.
     const target = Math.min(200, Math.max(1, parseInt(limit != null ? limit : count) || 50));

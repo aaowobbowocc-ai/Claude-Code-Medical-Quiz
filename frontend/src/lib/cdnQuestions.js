@@ -243,7 +243,7 @@ function shuffle(arr) {
 // Replace `/questions/random?stage_id=N&count=10&exam=X[&mode=reservoir]`
 //   stages: array from exam config (id+tag)
 //   sharedQuestions: optional array merged in for mode=reservoir
-export async function getRandomQuestions(examId, { stageId, count = 50, stages = [], sharedQuestions = [] } = {}) {
+export async function getRandomQuestions(examId, { stageId, count = 50, stages = [], sharedQuestions = [], year = '' } = {}) {
   const own = await loadExamQuestions(examId)
   let pool = sharedQuestions.length > 0 ? [...own, ...sharedQuestions] : own
   pool = pool.filter(isSingleAnswer)
@@ -260,6 +260,9 @@ export async function getRandomQuestions(examId, { stageId, count = 50, stages =
       && doctor1PaperOK(q, tag, examId)
     )
   }
+
+  // 自主練習年份篩選（回饋）：year 為民國年字串，空=全部
+  if (year) pool = pool.filter(q => String(q.roc_year) === String(year))
 
   const target = parseInt(count) || 50
   const picked = shuffle(pool).slice(0, target)

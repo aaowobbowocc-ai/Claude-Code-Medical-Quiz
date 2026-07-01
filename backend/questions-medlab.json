@@ -23579,10 +23579,10 @@
     "number": 27,
     "question": "下列何種指標為呼吸性鹼中毒？",
     "options": {
-      "A": "HCO3",
-      "B": "-減少，且pH 值下降",
-      "C": "HCO3",
-      "D": "-增加，且pH 值升高"
+      "A": "HCO3⁻減少，且pH值下降",
+      "B": "HCO3⁻增加，且pH值升高",
+      "C": "PaCO2升高，且pH值下降",
+      "D": "PaCO2減少，且pH值升高"
     },
     "answer": "D",
     "explanation": ""
@@ -32977,10 +32977,10 @@
     "number": 8,
     "question": "下列何種指標為呼吸性酸中毒？",
     "options": {
-      "A": "HCO3",
-      "B": "－減少，且pH值下降",
-      "C": "HCO",
-      "D": "3"
+      "A": "HCO3⁻減少，且pH值下降",
+      "B": "HCO3⁻增加，且pH值升高",
+      "C": "PaCO2升高，且pH值下降",
+      "D": "PaCO2減少，且pH值升高"
     },
     "answer": "C",
     "explanation": ""
@@ -33435,10 +33435,10 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 30,
-    "question": "二氧化碳（CO2）在血液中以多種方式運輸，最主要型式為：直接以溶質方式溶於血液中",
+    "question": "二氧化碳（CO2）在血液中以多種方式運輸，最主要型式為：",
     "options": {
-      "A": "以重碳酸離子（HCO3",
-      "B": "-）溶於血液",
+      "A": "直接以溶質方式溶於血液中",
+      "B": "以重碳酸離子（HCO3⁻）溶於血液",
       "C": "與血紅素或其他血漿蛋白形成碳醯胺基化合物（carbamino compound）帶至肺部",
       "D": "與白血球結合帶至肺部"
     },
@@ -170090,7 +170090,7 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_108100_p0_6_0.webp"
+    "image_url": "/question-images/medlab_108100_6_0_v2.webp"
   },
   {
     "id": 7635,

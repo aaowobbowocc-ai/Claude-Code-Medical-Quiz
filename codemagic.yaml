@@ -133,8 +133,8 @@ workflows:
           agvtool new-version -all "$NEW" || echo "agvtool skipped (build $NEW)"
           # 行銷版本號（CFBundleShortVersionString）= App Store 顯示的版本。
           # 1.0 已核准、train 關閉，必須升版才能上傳。每次更新手動 +1。
-          agvtool new-marketing-version 1.0.2 || echo "marketing version skipped (1.0.2)"
-          echo "Build number = $NEW, Marketing = 1.0.2"
+          agvtool new-marketing-version 1.0.3 || echo "marketing version skipped (1.0.3)"
+          echo "Build number = $NEW, Marketing = 1.0.3"
 
       - name: Prepare distribution certificate in keychain
         script: |

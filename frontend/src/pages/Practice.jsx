@@ -894,8 +894,8 @@ function PracticeResults({ result, config, onRestart, onHome }) {
       ...q, myAnswer: q.user_answer, correct: false,
     }))
     addWrong(wrongQuestions, usePlayerStore.getState().exam)
-    // 錯題練習：這次答對的題目 → 從錯題夾移除（精熟即消）
-    if (config.wrongMode) {
+    // 錯題練習：這次答對的題目 → 從錯題夾移除（精熟即消）；keepOnCorrect 時保留供反覆複習
+    if (config.wrongMode && !config.keepOnCorrect) {
       (result.log || []).forEach(q => { if (q && isAnswerCorrect(q.user_answer, q.answer)) removeWrong(q) })
     }
     savePracticeRecord({
@@ -973,7 +973,9 @@ function PracticeResults({ result, config, onRestart, onHome }) {
 
         <p className="text-white/60 text-sm text-center">
           {config.wrongMode
-            ? `✍️ 錯題練習：答對 ${correct} 題已從錯題夾移除，還有 ${total - correct} 題待加強`
+            ? (config.keepOnCorrect
+                ? `✍️ 錯題複習：答對 ${correct} 題（已保留於錯題夾，可反覆複習），還有 ${total - correct} 題待加強`
+                : `✍️ 錯題練習：答對 ${correct} 題已從錯題夾移除，還有 ${total - correct} 題待加強`)
             : (() => {
               const cost = total * FEE_PER_Q
               const rate = rewardRatePerQ(pct)
@@ -1035,7 +1037,7 @@ export default function Practice() {
   const wrongQs = Array.isArray(location.state?.wrongPractice) ? location.state.wrongPractice : null
   const [phase, setPhase]   = useState(wrongQs?.length ? 'game' : 'setup')  // setup | game | results
   const [config, setConfig] = useState(wrongQs?.length
-    ? { presetQuestions: wrongQs, stage: 0, count: wrongQs.length, diff: 'easy', wrongMode: true }
+    ? { presetQuestions: wrongQs, stage: 0, count: wrongQs.length, diff: 'easy', wrongMode: true, keepOnCorrect: !!location.state?.keepOnCorrect }
     : null)
   const [result, setResult] = useState(null)
   const examId = usePlayerStore(s => s.exam) || 'doctor1'

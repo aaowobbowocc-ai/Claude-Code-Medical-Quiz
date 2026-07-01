@@ -84,6 +84,7 @@ export default function Weakness() {
   const [flagVer, setFlagVer] = useState(0)
   const [rehydrating, setRehydrating] = useState(false)
   const [practiceCount, setPracticeCount] = useState(0)   // 0 = 全部；否則本次只練前 N 題（最舊優先）
+  const [keepOnCorrect, setKeepOnCorrect] = useState(false)   // 答對後保留錯題（回饋：想反覆複習）
 
   const examConfig = getExamConfig(examType)
   const tagNames = getAllTagNames()
@@ -287,11 +288,17 @@ export default function Weakness() {
                   const fresh = await rehydrateWrong(batch, examType).catch(() => batch)
                   persistRehydrated(fresh)
                   setRehydrating(false)
-                  navigate('/practice', { state: { wrongPractice: fresh } })
+                  navigate('/practice', { state: { wrongPractice: fresh, keepOnCorrect } })
                 }}
                 className="w-full py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95 mb-2 disabled:opacity-60"
                 style={{ background: 'linear-gradient(135deg,#f97316,#ef4444)' }}>
                 {rehydrating ? '載入最新題目…' : (() => { const n = practiceCount > 0 ? Math.min(practiceCount, wrongQuestions.length) : wrongQuestions.length; return `✍️ 練習錯題（${n} 題 · 扣 ${n * 2} 🪙）` })()}
+              </button>
+              {/* 答對後保留錯題（回饋：想反覆複習同一批錯題）*/}
+              <button onClick={() => setKeepOnCorrect(v => !v)}
+                className="w-full flex items-center justify-center gap-2 mb-2 text-xs font-semibold text-gray-500 active:scale-95">
+                <span className={`w-4 h-4 rounded flex items-center justify-center border ${keepOnCorrect ? 'bg-orange-500 border-orange-500 text-white' : 'bg-white border-gray-300'}`}>{keepOnCorrect ? '✓' : ''}</span>
+                答對後保留錯題（方便反覆複習，不自動移除）
               </button>
               <div className="flex items-center gap-2 mb-3">
                 <button disabled={rehydrating}

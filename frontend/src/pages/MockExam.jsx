@@ -422,6 +422,7 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
   const [qIdx, setQIdx] = useState(initialState?.qIdx || 0)
   const [flagged, setFlagged] = useState(initialState?.flagged || {})
   const [timeLeft, setTimeLeft] = useState(initialState?.timeLeft ?? getPaperTimeLimit(paper))
+  const [paused, setPaused] = useState(false)   // 暫停計時（回饋：讓使用者自行決定是否限時）
   const [showNav, setShowNav] = useState(false)
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false)
   const timerRef = useRef(null)
@@ -436,6 +437,7 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
   }, [answers, qIdx, timeLeft, flagged])
 
   useEffect(() => {
+    if (paused) return   // 暫停時凍結倒數
     timerRef.current = setInterval(() => {
       setTimeLeft(t => {
         if (t <= 1) { clearInterval(timerRef.current); onFinish(answersRef.current, flaggedRef.current); return 0 }
@@ -443,7 +445,7 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
       })
     }, 1000)
     return () => clearInterval(timerRef.current)
-  }, [])
+  }, [paused])
 
   // 防誤觸 edge-swipe / 上一頁手勢：先 push 一個守門 state，pop 時跳 confirm
   // 修復 5/14 使用者回饋（習慣阿摩往左滑回上一題，誤觸後金幣被扣兩次）
@@ -500,7 +502,12 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
           <button onClick={() => { if (confirm('確定要離開考試嗎？本卷進度將不會保存。')) { clearInterval(timerRef.current); onBack() } }}
             className="text-white/60 text-lg leading-none mr-2">‹</button>
           <span className="flex-1">{paper.name}</span>
-          <span className={timeUrgent ? 'text-red-300 font-bold animate-pulse' : ''}>{timeStr}</span>
+          <button onClick={() => setPaused(p => !p)}
+            className={`flex items-center gap-1 px-2 py-0.5 rounded-full font-bold active:scale-95 transition-all ${paused ? 'bg-white/25 text-white' : timeUrgent ? 'text-red-300 animate-pulse' : 'text-white'}`}
+            title={paused ? '繼續計時' : '暫停計時'}>
+            <span>{paused ? '▶' : '⏸'}</span>
+            <span>{paused ? '已暫停' : timeStr}</span>
+          </button>
         </div>
         <div className="flex items-center gap-3">
           <div className="flex-1 h-2 bg-white/20 rounded-full overflow-hidden">
@@ -510,6 +517,18 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
           <span className="text-white text-xs font-bold">{answeredCount}/{questions.length}</span>
         </div>
       </div>
+
+      {paused && (
+        <div className="fixed inset-0 z-30 bg-medical-ice/95 backdrop-blur-sm flex flex-col items-center justify-center px-8 text-center">
+          <div className="text-6xl mb-4">⏸️</div>
+          <p className="text-lg font-bold text-medical-dark mb-1">計時已暫停</p>
+          <p className="text-sm text-gray-500 mb-6">休息一下，題目與作答皆已隱藏</p>
+          <button onClick={() => setPaused(false)}
+            className="px-8 py-3 rounded-2xl font-bold text-white shadow-lg active:scale-95 grad-cta">
+            ▶ 繼續作答
+          </button>
+        </div>
+      )}
 
       <div className="flex-1 overflow-y-auto px-4 py-4">
         <div className="bg-white rounded-2xl p-4 mb-4 shadow-sm">

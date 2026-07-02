@@ -179567,9 +179567,9 @@
     "number": 79,
     "question": "下列何種細菌為最常見之院內感染菌？",
     "options": {
-      "A": "cinetobacter baumannii",
+      "A": "Acinetobacter baumannii",
       "B": "Streptococcus pyogenes",
-      "C": "ampylobacter jejuni",
+      "C": "Campylobacter jejuni",
       "D": "Haemophilus influenzae"
     },
     "answer": "A",
@@ -180278,7 +180278,8 @@
       "D": "膽囊結石（gallbladder stone）"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "image_url": "/question-images/medlab_109020_physio_q34_0.webp"
   },
   {
     "id": 8132,
@@ -222631,9 +222632,9 @@
     "number": 61,
     "question": "下列有關Cellular prion protein（PrPc）及Scrapie-like prion protein（PrPsc）的比較，何者正確？",
     "options": {
-      "A": "PrP sc 結構是Multimeric",
-      "B": "PrP sc 對protease處理是 sensitive",
-      "C": "快（代謝時間短）",
+      "A": "PrPsc結構是Multimeric",
+      "B": "PrPsc對protease處理是sensitive",
+      "C": "PrPsc位於plasma membrane",
       "D": "PrPsc代謝比PrPc快（代謝時間短）"
     },
     "answer": "A",

@@ -132139,9 +132139,9 @@
     "number": 33,
     "question": "臨床一般應用於腹部、乳腺、眼科、婦產科之超音波為：",
     "options": {
-      "A": "-mode",
-      "B": "-mode",
-      "C": "-mode",
+      "A": "A-mode",
+      "B": "B-mode",
+      "C": "C-mode",
       "D": "M-mode"
     },
     "answer": "B",
@@ -135127,7 +135127,7 @@
     "number": 22,
     "question": "骨髓移植最常用的方式是：",
     "options": {
-      "A": "utograft",
+      "A": "isograft",
       "B": "autograft",
       "C": "xenograft",
       "D": "syngraft"
@@ -163047,7 +163047,7 @@
     "question": "在臺灣，下列那一種免疫型惡性淋巴瘤的比例最高？",
     "options": {
       "A": "T cell",
-      "B": "cell",
+      "B": "B cell",
       "C": "NK cell",
       "D": "Plasma cell"
     },
@@ -188827,10 +188827,10 @@
     "number": 61,
     "question": "一般需氧菌以培養液稀釋法（broth dilution test）進行抗生素藥敏試驗時，接種菌量為何？",
     "options": {
-      "A": "5 × 10 4",
-      "B": "5 × 10 5",
-      "C": "FU/mL",
-      "D": "5 × 10 7"
+      "A": "5 × 10⁴ CFU/mL",
+      "B": "5 × 10⁵ CFU/mL",
+      "C": "5 × 10⁶ CFU/mL",
+      "D": "5 × 10⁷ CFU/mL"
     },
     "answer": "B",
     "explanation": ""
@@ -297846,7 +297846,7 @@
     "subject_name": "臨床血液學",
     "stage_id": 3,
     "number": 35,
-    "question": "某白血病病患的骨髓抹片如圖所示，經流式細胞儀分析，其 blast之細胞表面標記的結果為 CD33(+)、",
+    "question": "某白血病病患的骨髓抹片如圖所示，經流式細胞儀分析，其blast之細胞表面標記的結果為CD33(+)、CD117(+)，則此病人最有可能罹患下列何種疾病？",
     "options": {
       "A": "acute lymphoblastic leukemia（ALL ）",
       "B": "chronic lymphocytic leukemia（CLL ）",
@@ -297857,7 +297857,8 @@
     "explanation": "",
     "images": [
       "/question-images/medlab_115020_blood_q35_0.webp"
-    ]
+    ],
+    "image_url": "/question-images/medlab_115020_blood_q35_0.webp"
   },
   {
     "id": 595,
@@ -300533,7 +300534,8 @@
       "D": "感冒"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "image_url": "/question-images/medlab_115020_urine_q8_0.webp"
   },
   {
     "id": 648,

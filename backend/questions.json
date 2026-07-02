@@ -87896,15 +87896,15 @@
       "number": 37,
       "question": "有關調控肝臟之肝醣（glycogen）代謝的敍述，下列何者正確？",
       "options": {
-        "A": "Cyclic AMP",
-        "B": "促進glycogen phosphorylase 之磷酸化並活化其活性",
-        "C": "Glucagon",
-        "D": "促進glycogen synthase 之活性"
+        "A": "Cyclic AMP 促進glycogen phosphorylase 之磷酸化並活化其活性",
+        "B": "Glucagon 促進glycogen synthase 之活性",
+        "C": "Insulin 活化glycogen phosphorylase 之活性",
+        "D": "高血糖同時活化glycogen phosphorylase 和glycogen synthase"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true,
+      "disputed": false,
       "_original_number": 37
     },
     {
@@ -90270,7 +90270,7 @@
       "answer": "C",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true,
+      "disputed": false,
       "_original_number": 42
     },
     {
@@ -92881,7 +92881,7 @@
       "answer": "C",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true,
+      "disputed": false,
       "_original_number": 58
     },
     {
@@ -92986,15 +92986,15 @@
       "number": 63,
       "question": "那一種因基因異常引起之心律不整病人服用mexiletine 最易誘發心律不整之產生？",
       "options": {
-        "A": "LQT",
-        "B": "-3 病人",
-        "C": "Brugada Syndrome 病人",
-        "D": "Familial atrial fibrillation 病人"
+        "A": "LQT-3 病人",
+        "B": "Brugada Syndrome 病人",
+        "C": "Familial atrial fibrillation 病人",
+        "D": "LQT-2 病人"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true,
+      "disputed": false,
       "_original_number": 63
     },
     {

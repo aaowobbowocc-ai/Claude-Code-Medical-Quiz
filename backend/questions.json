@@ -76857,15 +76857,15 @@
       "number": 31,
       "question": "下列關於肝臟（liver）發育之敘述，何者正確？",
       "options": {
-        "A": "由中腸（midgut）衍生而來",
-        "B": "肝索（hepatic cord）由中胚層衍生而來",
-        "C": "庫弗氏細胞（Kupffer cell）",
-        "D": "由內胚層衍生而來 胚胎發育第六週開始有造血活動"
+        "A": "由中腸（midgut）衍生而來",
+        "B": "肝索（hepatic cord）由中胚層衍生而來",
+        "C": "庫弗氏細胞（Kupffer cell）由內胚層衍生而來",
+        "D": "胚胎發育第六週開始有造血活動"
       },
       "answer": "D",
       "explanation": "",
       "_original_number": 31,
-      "disputed": true
+      "disputed": false
     },
     {
       "id": 1150203718,
@@ -88234,15 +88234,15 @@
       "number": 52,
       "question": "下列有關藥物效應之敘述，何者正確？",
       "options": {
-        "A": "治療指數（therapeutic index；T.I.）= ED50/LD50",
-        "B": "ED",
-        "C": "LD",
+        "A": "治療指數（therapeutic index；T.I.）= ED₅₀/LD₅₀",
+        "B": "ED₅₀ 之定義為使半數實驗動物死亡所需要的劑量",
+        "C": "LD₅₀ 之定義為使半數實驗動物產生藥效所需的劑量",
         "D": "治療指數（therapeutic index；T.I.）比值越大表示該藥物的毒性越小"
       },
       "answer": "D",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true,
+      "disputed": false,
       "_original_number": 52
     },
     {

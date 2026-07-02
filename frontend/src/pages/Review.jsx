@@ -43,6 +43,11 @@ function ReviewCard({ q, index }) {
             {q.subject_name}
           </span>
         )}
+        {q.roc_year && (
+          <span className="text-xs font-semibold text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded-full">
+            {q.roc_year}{q.session ? `(${q.exam_type === 'special_high' ? '特' : q.session === '第一次' ? '一' : '二'})` : ''}{q.number ? `-${q.number}` : ''}
+          </span>
+        )}
         <span className="flex-1" />
         <button onClick={() => bookmarked ? removeBookmark(q) : setShowFolderPick(!showFolderPick)}
                 className="text-sm mr-1" title={bookmarked ? `已收藏（${getFolder(q)}）` : '收藏題目'}>

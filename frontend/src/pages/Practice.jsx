@@ -579,7 +579,7 @@ function PracticeGame({ config, onFinish, onExit }) {
     // Skip deprecated questions so stale legal items don't pollute weakness/progress.
     const tag = q?.subject_tag || q?.subject_tags?.[0] || q?.subject_name
     const bankId = q?.isSharedBank ? q.sourceBankId : null
-    if (tag && !q?.is_deprecated) useAccuracyStore.getState().record(examType, tag, isCorrect, bankId)
+    if (tag && !q?.is_deprecated) useAccuracyStore.getState().record(examType, tag, isCorrect, bankId, q?.id)
 
     // Log for review
     sessionLog.current.push({

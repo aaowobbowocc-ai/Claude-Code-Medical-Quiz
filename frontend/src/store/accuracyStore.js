@@ -29,6 +29,31 @@ function addEntry(bucket, tag, isCorrect, now) {
   }
 }
 
+// 同題只算一次（回饋 CZY）：首答計入對/總；重練不加總，只在對錯改變時
+// 以最新一次為準調整該題原科目的 correct/wrong。qid 缺失時退回舊行為（每次都計）。
+function applyEntry(bucket, seenMap, qid, tag, isCorrect, now) {
+  if (!qid) { addEntry(bucket, tag, isCorrect, now); return }
+  const key = String(qid)
+  const prev = seenMap[key]
+  if (!prev) {
+    addEntry(bucket, tag, isCorrect, now)
+    seenMap[key] = { tag, correct: !!isCorrect }
+    return
+  }
+  const t = prev.tag || tag
+  if (prev.correct !== !!isCorrect) {
+    const e = bucket[t] || { correct: 0, wrong: 0, lastSeen: 0 }
+    bucket[t] = {
+      correct: Math.max(0, e.correct + (isCorrect ? 1 : -1)),
+      wrong:   Math.max(0, e.wrong   + (isCorrect ? -1 : 1)),
+      lastSeen: now,
+    }
+    seenMap[key] = { tag: t, correct: !!isCorrect }
+  } else if (bucket[t]) {
+    bucket[t] = { ...bucket[t], lastSeen: now }
+  }
+}
+
 function mergeInto(acc, bucket) {
   for (const [tag, e] of Object.entries(bucket)) {
     const prev = acc[tag]
@@ -63,52 +88,70 @@ export const useAccuracyStore = create(
     (set, get) => ({
       data: {},
       sharedData: {},
+      seen: {},          // { [exam]: { [qid]: {tag, correct} } } — 同題只算一次
+      seenShared: {},    // { [bankId]: { [qid]: {tag, correct} } }
 
       /** Record a single question result. `sharedBankId` routes the write
-       *  to the cross-exam pool when the question came from a shared bank. */
-      record(exam, tag, isCorrect, sharedBankId = null) {
+       *  to the cross-exam pool when the question came from a shared bank.
+       *  `qid` 讓同一題只計一次（重練以最新對錯為準）。 */
+      record(exam, tag, isCorrect, sharedBankId = null, qid = null) {
         if (!tag) return
         if (!sharedBankId && !exam) return
         set(s => {
           const now = Date.now()
           if (sharedBankId) {
             const bank = { ...(s.sharedData?.[sharedBankId] || {}) }
-            addEntry(bank, tag, isCorrect, now)
-            return { sharedData: { ...(s.sharedData || {}), [sharedBankId]: bank } }
+            const seenMap = { ...((s.seenShared || {})[sharedBankId] || {}) }
+            applyEntry(bank, seenMap, qid, tag, isCorrect, now)
+            return {
+              sharedData: { ...(s.sharedData || {}), [sharedBankId]: bank },
+              seenShared: { ...(s.seenShared || {}), [sharedBankId]: seenMap },
+            }
           }
           const examBucket = { ...(s.data[exam] || {}) }
-          addEntry(examBucket, tag, isCorrect, now)
-          return { data: { ...s.data, [exam]: examBucket } }
+          const seenMap = { ...((s.seen || {})[exam] || {}) }
+          applyEntry(examBucket, seenMap, qid, tag, isCorrect, now)
+          return {
+            data: { ...s.data, [exam]: examBucket },
+            seen: { ...(s.seen || {}), [exam]: seenMap },
+          }
         })
       },
 
-      /** Batch record (for mock exams) — results: [{ tag, isCorrect, sharedBankId? }] */
+      /** Batch record (for mock exams) — results: [{ tag, isCorrect, sharedBankId?, qid? }] */
       recordBatch(exam, results) {
         if (!results?.length) return
         set(s => {
           const now = Date.now()
           const nextData = { ...s.data }
           const nextShared = { ...(s.sharedData || {}) }
+          const nextSeen = { ...(s.seen || {}) }
+          const nextSeenShared = { ...(s.seenShared || {}) }
           const examBucket = { ...(nextData[exam] || {}) }
+          const examSeen = { ...(nextSeen[exam] || {}) }
           let examTouched = false
           const sharedTouched = new Set()
 
-          for (const { tag, isCorrect, sharedBankId } of results) {
+          for (const { tag, isCorrect, sharedBankId, qid } of results) {
             if (!tag) continue
             if (sharedBankId) {
               const bank = { ...(nextShared[sharedBankId] || {}) }
-              addEntry(bank, tag, isCorrect, now)
+              const bankSeen = { ...(nextSeenShared[sharedBankId] || {}) }
+              applyEntry(bank, bankSeen, qid, tag, isCorrect, now)
               nextShared[sharedBankId] = bank
+              nextSeenShared[sharedBankId] = bankSeen
               sharedTouched.add(sharedBankId)
             } else if (exam) {
-              addEntry(examBucket, tag, isCorrect, now)
+              applyEntry(examBucket, examSeen, qid, tag, isCorrect, now)
               examTouched = true
             }
           }
-          if (examTouched) nextData[exam] = examBucket
+          if (examTouched) { nextData[exam] = examBucket; nextSeen[exam] = examSeen }
           return {
             data: examTouched ? nextData : s.data,
             sharedData: sharedTouched.size > 0 ? nextShared : s.sharedData,
+            seen: examTouched ? nextSeen : s.seen,
+            seenShared: sharedTouched.size > 0 ? nextSeenShared : s.seenShared,
           }
         })
       },
@@ -150,7 +193,8 @@ export const useAccuracyStore = create(
       resetExam(exam) {
         set(s => {
           const { [exam]: _, ...rest } = s.data
-          return { data: rest }
+          const { [exam]: __, ...restSeen } = (s.seen || {})
+          return { data: rest, seen: restSeen }
         })
       },
     }),

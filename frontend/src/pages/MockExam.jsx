@@ -1149,6 +1149,7 @@ export default function MockExam() {
         tag: q.subject_tag || q.subject_tags?.[0] || q.subject_name,
         isCorrect: isAnswerCorrect(answers[i], q.answer),
         sharedBankId: q.isSharedBank ? q.sourceBankId : null,
+        qid: q.id,
         isDeprecated: !!q.is_deprecated,
       }))
       .filter(r => !r.isDeprecated)

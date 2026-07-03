@@ -142,7 +142,7 @@ function ReviewCard({ q, index }) {
               options={q.options}
               explanation={q.explanation}
               questionId={q.id}
-              examId={q.examId}
+              examId={q.examId || usePlayerStore.getState().exam}
               questionText={q.question}
               rocYear={q.roc_year}
               session={q.session}

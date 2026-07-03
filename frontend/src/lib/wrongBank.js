@@ -8,9 +8,20 @@ function load() {
   try { return JSON.parse(localStorage.getItem(KEY) || '[]') }
   catch { return [] }
 }
-function save(arr) {
+function save(arr, silent) {
   try { localStorage.setItem(KEY, JSON.stringify(arr)) } catch {}
+  // 通知 cloudSync 有變更（跨裝置同步）；silent=從雲端合併寫回時不再回推，避免迴圈
+  if (!silent) { try { window.dispatchEvent(new Event('wrongbank-changed')) } catch {} }
 }
+
+// 用雲端合併後的完整陣列覆寫本機（不觸發回推事件）
+export function replaceWrong(arr) {
+  if (!Array.isArray(arr)) return
+  const next = [...arr].sort((a, b) => (b.addedAt || 0) - (a.addedAt || 0)).slice(0, MAX)
+  save(next, true)
+}
+// 供 cloudSync 合併用（穩定 key）
+export const wrongKey = qKey
 
 // Key for wrongBank dedup. Prefer `id`, but for legacy numeric IDs (used by
 // audiologist/speech pre-2026-05-15 before ID regen), the underlying question

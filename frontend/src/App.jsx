@@ -225,6 +225,11 @@ function AppRoutes() {
         const { syncUnlocksToServer } = await import('./hooks/useAI')
         await syncUnlocksToServer(user.id)
       } catch {}
+      // 跨裝置同步：登入後拉雲端錯題夾/收藏、與本機聯集
+      try {
+        const { syncOnLogin } = await import('./lib/cloudSync')
+        await syncOnLogin()
+      } catch {}
       const returnPath = consumeOAuthReturnPath()
       if (returnPath) {
         const current = location.pathname + location.search
@@ -247,6 +252,19 @@ function AppRoutes() {
         if (cancelled || !session?.user?.id) return
         const { syncUnlocksToServer } = await import('./hooks/useAI')
         await syncUnlocksToServer(session.user.id)
+      } catch {}
+    })()
+    return () => { cancelled = true }
+  }, [])
+
+  // 跨裝置同步：開機註冊變更回推 + 若已登入先拉雲端合併（用 storage token，不 await getSession）
+  useEffect(() => {
+    let cancelled = false
+    ;(async () => {
+      try {
+        const { initCloudSync, syncOnLogin } = await import('./lib/cloudSync')
+        initCloudSync()
+        if (!cancelled) await syncOnLogin()
       } catch {}
     })()
     return () => { cancelled = true }

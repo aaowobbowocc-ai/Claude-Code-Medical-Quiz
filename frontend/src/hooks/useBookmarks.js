@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 
 const KEY = 'bookmarked-questions-v2'
 const MAX_PER_FOLDER = 100
@@ -36,8 +36,17 @@ function load() {
   } catch { return { folders: DEFAULT_FOLDERS, questions: { [DEFAULT_FOLDERS[0]]: [], [DEFAULT_FOLDERS[1]]: [] } } }
 }
 
-function save(data) {
+function save(data, silent) {
   localStorage.setItem(KEY, JSON.stringify(data))
+  if (!silent) { try { window.dispatchEvent(new Event('bookmarks-changed')) } catch {} }
+}
+
+// 供 cloudSync 讀取/覆寫（跨裝置同步）
+export function loadBookmarks() { return load() }
+export function replaceBookmarks(data) {
+  if (!data || !data.folders) return
+  save(data, true)
+  try { window.dispatchEvent(new Event('bookmarks-reload')) } catch {} // 讓已掛載的 hook 重讀
 }
 
 function qKey(q) {
@@ -46,6 +55,13 @@ function qKey(q) {
 
 export function useBookmarks() {
   const [data, setData] = useState(load)
+
+  // 雲端同步合併後重讀本機（跨裝置）
+  useEffect(() => {
+    const reload = () => setData(load())
+    window.addEventListener('bookmarks-reload', reload)
+    return () => window.removeEventListener('bookmarks-reload', reload)
+  }, [])
 
   const folders = data.folders
 

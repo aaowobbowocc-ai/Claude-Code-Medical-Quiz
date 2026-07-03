@@ -17,7 +17,7 @@ const IS_NATIVE = isNativeApp()
  * 用 question 自己的題幹當 query，filter 同一考試。
  * 免費：吃 GenAI App Builder 抵免額。
  */
-function SimilarQuestionsSheet({ open, onClose, examId, questionId, examName }) {
+function SimilarQuestionsSheet({ open, onClose, examId, questionId, questionText, examName }) {
   const [hits, setHits] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -33,7 +33,7 @@ function SimilarQuestionsSheet({ open, onClose, examId, questionId, examName }) 
         const r = await fetch(`${BACKEND}/search/similar`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ exam_id: examId, question_id: String(questionId), limit: 5 }),
+          body: JSON.stringify({ exam_id: examId, question_id: String(questionId), query_text: questionText || '', limit: 5 }),
         })
         const data = await r.json()
         if (cancelled) return
@@ -690,6 +690,7 @@ export function ExplainPanel({ text, loading, onRequest, requested, answer, opti
         onClose={() => setShowSimilar(false)}
         examId={examId}
         questionId={questionId}
+        questionText={questionText}
       />
     </div>
   )

@@ -163,13 +163,14 @@ function registerSearchRoutes(app, examData) {
   // with that as the query, and filters out the source question itself.
   app.post('/search/similar', async (req, res) => {
     if (!CONFIGURED) return res.status(503).json({ error: 'search_not_configured' })
-    const { question_id, exam_id, limit } = req.body || {}
+    const { question_id, exam_id, limit, query_text } = req.body || {}
     if (!question_id || !exam_id) return res.status(400).json({ error: 'missing_fields' })
     const bank = examData[exam_id]
-    if (!bank?.questions) return res.status(404).json({ error: 'exam_not_found' })
-    const q = bank.questions.find(x => String(x.id) === String(question_id))
-    if (!q) return res.status(404).json({ error: 'question_not_found' })
-    const queryText = (q.question || '').slice(0, 500)
+    // 優先用後端題庫的題幹；找不到題目時(跨考試/題庫更新/舊 id)退回前端傳來的 query_text，
+    // 避免錯題練習點「找類似題」時因 id 對不上而回 question_not_found。
+    const q = bank?.questions?.find(x => String(x.id) === String(question_id))
+    const queryText = ((q?.question || query_text || '')).slice(0, 500)
+    if (!queryText) return res.status(404).json({ error: 'question_not_found' })
     try {
       const resp = await searchRaw(queryText, {
         pageSize: (Math.min(Math.max(parseInt(limit) || 5, 1), 10)) + 1, // +1 to drop self

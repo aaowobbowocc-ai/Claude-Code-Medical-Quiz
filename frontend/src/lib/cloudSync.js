@@ -3,7 +3,7 @@
 // 跟金幣同模式），不打後端。合併策略＝聯集（union），衝突取較新的 timestamp。
 import { supabase } from './supabase'
 import { readAuthFromStorage } from './supabase'
-import { getWrong, replaceWrong, wrongKey } from './wrongBank'
+import { getWrong, replaceWrong, wrongKey, getRemoved, replaceRemoved } from './wrongBank'
 import { loadBookmarks, replaceBookmarks } from '../hooks/useBookmarks'
 
 const WRONG_MAX = 200
@@ -11,15 +11,31 @@ const BM_MAX_PER_FOLDER = 100
 
 function bmKey(q) { return q?.id || q?.question?.slice(0, 60) || '' }
 
-// 錯題夾聯集：同 key 取 addedAt 較新者
-function mergeWrong(localArr, cloudArr) {
+// 雲端 wrong_bank 欄位相容：舊格式=陣列；新格式={q:[...], rm:{key:ts}}
+function unpackWrong(v) {
+  if (Array.isArray(v)) return { q: v, rm: {} }
+  if (v && typeof v === 'object') return { q: Array.isArray(v.q) ? v.q : [], rm: v.rm || {} }
+  return { q: [], rm: {} }
+}
+// tombstone 聯集：同 key 取較新 removedAt
+function mergeRemoved(a, b) {
+  const out = { ...(a || {}) }
+  for (const [k, ts] of Object.entries(b || {})) out[k] = Math.max(out[k] || 0, ts || 0)
+  return out
+}
+// 錯題夾聯集：同 key 取 addedAt 較新者；再用 tombstone 濾掉「移除時間 >= 加入時間」的題
+function mergeWrong(localArr, cloudArr, removed) {
   const byKey = new Map()
   for (const q of [...(cloudArr || []), ...(localArr || [])]) {
     const k = wrongKey(q); if (!k) continue
     const prev = byKey.get(k)
     if (!prev || (q.addedAt || 0) >= (prev.addedAt || 0)) byKey.set(k, q)
   }
-  return [...byKey.values()].sort((a, b) => (b.addedAt || 0) - (a.addedAt || 0)).slice(0, WRONG_MAX)
+  const present = [...byKey.values()].filter(q => {
+    const rm = removed[wrongKey(q)] || 0
+    return (q.addedAt || 0) > rm   // 加入時間比移除時間新才保留（又答錯會更新 addedAt）
+  })
+  return present.sort((a, b) => (b.addedAt || 0) - (a.addedAt || 0)).slice(0, WRONG_MAX)
 }
 
 // 收藏聯集：資料夾清單聯集；每夾內同 key 取 bookmarkedAt 較新者
@@ -48,7 +64,7 @@ async function pushNow() {
   try {
     await supabase.from('user_sync').upsert({
       user_id,
-      wrong_bank: getWrong(),
+      wrong_bank: { q: getWrong(), rm: getRemoved() },   // 含 tombstone
       bookmarks: loadBookmarks(),
       updated_at: new Date().toISOString(),
     }, { onConflict: 'user_id' })
@@ -71,7 +87,10 @@ export async function syncOnLogin() {
     const { data, error } = await supabase
       .from('user_sync').select('wrong_bank, bookmarks').eq('user_id', user_id).maybeSingle()
     if (error && error.code !== 'PGRST116') return
-    const mergedWrong = mergeWrong(getWrong(), data?.wrong_bank)
+    const cloud = unpackWrong(data?.wrong_bank)
+    const mergedRemoved = mergeRemoved(getRemoved(), cloud.rm)
+    replaceRemoved(mergedRemoved)
+    const mergedWrong = mergeWrong(getWrong(), cloud.q, mergedRemoved)
     replaceWrong(mergedWrong)
     const mergedBm = mergeBookmarks(loadBookmarks(), data?.bookmarks)
     replaceBookmarks(mergedBm)

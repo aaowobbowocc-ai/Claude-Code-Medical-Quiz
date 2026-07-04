@@ -2,12 +2,24 @@
 // 跨「對戰紀錄看不到錯題」「錯題複習功能」「練習收藏錯題」3 個回饋的共用儲存
 
 const KEY = 'wrong-questions-bank'
+const RM_KEY = 'wrong-questions-removed'   // tombstone：{ qKey: removedAt }，讓跨裝置合併能反映「已練掉/移除」
 const MAX = 200
 
 function load() {
   try { return JSON.parse(localStorage.getItem(KEY) || '[]') }
   catch { return [] }
 }
+function loadRemoved() {
+  try { return JSON.parse(localStorage.getItem(RM_KEY) || '{}') }
+  catch { return {} }
+}
+function saveRemoved(map, silent) {
+  try { localStorage.setItem(RM_KEY, JSON.stringify(map)) } catch {}
+  if (!silent) { try { window.dispatchEvent(new Event('wrongbank-changed')) } catch {} }
+}
+// 供 cloudSync 取用/覆寫 tombstone
+export function getRemoved() { return loadRemoved() }
+export function replaceRemoved(map) { if (map && typeof map === 'object') saveRemoved(map, true) }
 function save(arr, silent) {
   try { localStorage.setItem(KEY, JSON.stringify(arr)) } catch {}
   // 通知 cloudSync 有變更（跨裝置同步）；silent=從雲端合併寫回時不再回推，避免迴圈
@@ -44,14 +56,19 @@ export function addWrong(wrongQs, examId) {
   const now = Date.now()
   const existing = load()
   const byKey = new Map(existing.map(q => [qKey(q), q]))
+  const removed = loadRemoved()
+  let rmChanged = false
   for (const wq of wrongQs) {
     const k = qKey(wq)
     if (!k) continue
     // 重複錯題：保留 + 更新 addedAt；蓋上 examId 方便之後用最新題庫覆蓋舊副本
     byKey.set(k, { ...wq, examId: wq.examId || examId, addedAt: now })
+    // 又答錯了 → 清掉 tombstone（讓它合法回到錯題夾）
+    if (removed[k]) { delete removed[k]; rmChanged = true }
   }
   // 依 addedAt 排序新→舊，cap 在 MAX
   const next = [...byKey.values()].sort((a, b) => (b.addedAt || 0) - (a.addedAt || 0)).slice(0, MAX)
+  if (rmChanged) saveRemoved(removed, true)
   save(next)
 }
 
@@ -59,10 +76,17 @@ export function getWrong() { return load() }
 
 export function removeWrong(q) {
   const k = qKey(q); if (!k) return
+  const removed = loadRemoved(); removed[k] = Date.now(); saveRemoved(removed, true)  // 記 tombstone
   save(load().filter(x => qKey(x) !== k))
 }
 
-export function clearWrong() { save([]) }
+export function clearWrong() {
+  // 全清：把目前每題都記成 tombstone，避免下次同步又被雲端灌回來
+  const now = Date.now(); const removed = loadRemoved()
+  for (const q of load()) { const k = qKey(q); if (k) removed[k] = now }
+  saveRemoved(removed, true)
+  save([])
+}
 
 // 用 re-hydrate 後的最新題目覆寫錯題夾（依 qKey 對應、保留 addedAt 排序），讓修正永久生效。
 export function persistRehydrated(freshArr) {

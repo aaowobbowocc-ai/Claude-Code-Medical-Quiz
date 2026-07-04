@@ -72,10 +72,14 @@ def is_corrupt(opts):
     o = [str(v).strip() for v in opts.values()]
     if len(o) < 4: return True
     if len(set(o)) != len(o): return True
+    lens = [len(x) for x in o]
     for x in o:
-        if len(x) < 2: return True
-        if re.search(r'[？。]$', x): return True
-        if re.search(r'此測驗之名稱|何者正確[？?]?$|下列那些[^，。]{0,4}[？?]$', x): return True
+        if len(x) < 1: return True
+        if re.search(r'[？?。]$', x): return True                 # 選項以問號/句號結尾＝題幹洩漏
+        if re.search(r'此測驗之名稱|何者正確|下列那些', x): return True
+        if re.search(r'[0-9①-⑩]\s+[0-9①-⑩]', x): return True     # 圈碼/數字間有空格＝combo 合併損壞
+    # 長度極不均（某選項比最短長很多）＝題幹碎片洩漏
+    if max(lens) > min(lens) * 3 + 25: return True
     return False
 
 def clean(opts):

@@ -29,7 +29,12 @@ def find_cs(code, subj):
         h = http(f'{BASE}/wFrmExamQandASearch.aspx?y={y}&e={code}')
         _cs[key] = h.decode('utf-8', 'replace').replace('&amp;', '&') if h else ''
     h = _cs[key]
-    stem = re.split(r'[（(]', str(subj))[0].strip()
+    # 科目別名：我們的「聽力學與輔助溝通系統（包括專業倫理）」= 官方「溝通障礙總論(包括專業倫理)」
+    subj_s = str(subj)
+    if '聽力學與輔助溝通' in subj_s or '輔助溝通系統' in subj_s:
+        stem = '溝通障礙總論'
+    else:
+        stem = re.split(r'[（(]', subj_s)[0].strip()
     for r in re.split(r'<tr', h):
         m = re.search(rf't=Q&code={code}&c=(\d+)&s=(\w+)', r)
         if m and stem and stem in ' '.join(re.sub(r'<[^>]+>', '', r).split()):
@@ -47,7 +52,8 @@ def parse_answers(code, c, s, subj, fn):
     p = getpdf('A', code, c, s, fn + 'A')
     if not p: return {}
     full = '\n'.join(pg.get_text() for pg in fitz.open(p))
-    stem = re.split(r'[（(]', str(subj))[0].strip()
+    subj_s = str(subj)
+    stem = '溝通障礙總論' if ('聽力學與輔助溝通' in subj_s or '輔助溝通系統' in subj_s) else re.split(r'[（(]', subj_s)[0].strip()
     idxs = [m.start() for m in re.finditer('科目名稱', full)]
     block = None
     for k, st in enumerate(idxs):

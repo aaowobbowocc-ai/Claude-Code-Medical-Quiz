@@ -239667,14 +239667,14 @@
     "subject_name": "臨床血液學",
     "stage_id": 3,
     "number": 27,
-    "question": "下列何種姿勢下的一氧化碳肺瀰散量（DLCO）最大？",
+    "question": "有關嗜酸性球（eosinophil）之特性，下列敘述何者最適當？",
     "options": {
-      "A": "坐姿",
-      "B": "站姿",
-      "C": "平躺",
-      "D": "側躺"
+      "A": "初級顆粒主要含有酸性蛋白質",
+      "B": "次級顆粒主要含有Charcot-Leyden結晶蛋白質",
+      "C": "骨髓中的嗜酸性球，多屬髓前（promyelocytic）細胞期",
+      "D": "成熟的嗜酸性球，細胞核常為雙葉（bilobed）型"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": "依考選部官方答案，本題正解為 C（平躺）。DLCO（一氧化碳肺瀰散量）在平躺姿勢最大：平躺時肺血容量增加、肺微血管招募增多，瀰散量上升，故平躺＞坐姿＞站姿。（註：本題實為臨床生理學範圍，被誤歸到臨床血液學）",
     "disputed": true
   },
@@ -258516,15 +258516,16 @@
     "subject_name": "臨床血液學",
     "stage_id": 3,
     "number": 3,
-    "question": "葉酸以下列何種形式於血液中輸送至細胞",
+    "question": "葉酸以下列何種形式於血液中輸送至細胞？",
     "options": {
-      "A": "plastic anemia, AA） paroxysmal nocturnal hemoglobinuria, PNH） paroxysmal cold hemoglobinuria, PCH） 下列何者會明顯出現於病人周邊血液抹片的紅血球內？ 葉酸以下列何種形式於血液中輸送至細胞？ 年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考 年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考 年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考 物理治療師考試 物理治療師考試物理治療師考試 物理治療師考試 ：： ：___________ ______________________ ___________ 血液中沒有發現對抗紅血球 則此病人最可能罹患下列何種疾病？",
-      "B": "Tetrahydrofolate 年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考 年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考 年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考 醫事檢驗師 醫事檢驗師醫事檢驗師 醫事檢驗師、 、、 、醫事放射師 醫事放射師醫事放射師 醫事放射師、 、、 、物理治療師考試 物理治療師考試物理治療師考試 物理治療師考試 臨床血液學與血庫學 臨床血液學與血庫學臨床血液學與血庫學 臨床血液學與血庫學 請選出一個正確或最適當答案 請選出一個正確或最適當答案請選出一個正確或最適當答案 請選出一個正確或最適當答案。 。。 。 某病人這幾年健檢都被發現泛血球減少，而且好像越來愈厲害，尤其是貧血。血液中沒有發現對抗紅血球 但周邊血液用流式細胞儀檢查結果如圖示。則此病人最可能罹患下列何種疾病",
+      "A": "Dihydrofolate",
+      "B": "Tetrahydrofolate",
       "C": "Methyl tetrahydrofolate",
       "D": "Methylene tetrahydrofolate"
     },
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "disputed": true
   },
   {
     "id": 4402,
@@ -259285,7 +259286,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 41,
-    "question": "此病例的骨髓細胞最有可能有下列那種染色體轉位？",
+    "question": "某病人血液檢驗結果為 WBC 40.6×10⁹/L、RBC 2.05×10¹²/L、Hb 6.2 g/dL、PLT 2×10⁹/L，骨髓抹片可見大量前骨髓細胞（promyelocyte）。此病例的骨髓細胞最有可能有下列那種染色體轉位？",
     "options": {
       "A": "t(9;22)",
       "B": "t(12;21)",
@@ -259305,7 +259306,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 42,
-    "question": "下列那種藥物最適合用於此病例？",
+    "question": "某病人血液檢驗結果為 WBC 40.6×10⁹/L、RBC 2.05×10¹²/L、Hb 6.2 g/dL、PLT 2×10⁹/L，骨髓抹片可見大量前骨髓細胞（promyelocyte）。下列那種藥物最適合用於此病例？",
     "options": {
       "A": "Cytosine arabinoside",
       "B": "ATRA（all-trans retinoic acid）",
@@ -259325,15 +259326,16 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 43,
-    "question": "下列四種口服抗凝血劑，何者主要不是抑制活化型第十凝血因子",
+    "question": "下列四種口服抗凝血劑，何者主要不是抑制活化型第十凝血因子（activated factor X）？",
     "options": {
       "A": "Dabigatran",
       "B": "Rivaroxaban",
-      "C": "BC檢驗結果為 WBC 40.6×10 9 /L、RBC 2.05×10 12 /L 依序回答下列3 題。此病人應是罹患下列那種疾病？ 此病例的骨髓細胞最有可能有下列那種染色體轉位？ ） Gleevec） 何者主要不是抑制活化型第十凝血因子？ /L、Hb 6.2g/dL、PLT 2× ？",
+      "C": "Apixaban",
       "D": "Edoxaban"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "disputed": true
   },
   {
     "id": 4442,

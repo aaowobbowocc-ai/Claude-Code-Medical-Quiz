@@ -14350,12 +14350,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 60,
-    "question": "細胞間橋（Interc",
+    "question": "那一種肺癌在顯微鏡高倍視野下可見細胞間橋（Intercellular bridge）？",
     "options": {
-      "A": "（Adenocarcinoma）",
-      "B": "arge cell car",
-      "C": "行的乘客",
-      "D": "低下的人 婦女 的人 最不常侵犯之部位？"
+      "A": "鱗狀上皮細胞癌（Squamous cell carcinoma）",
+      "B": "腺癌（Adenocarcinoma）",
+      "C": "小細胞癌（Small cell carcinoma）",
+      "D": "大細胞癌（Large cell carcinoma）"
     },
     "answer": "A",
     "explanation": ""
@@ -257310,7 +257310,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 23,
-    "question": " 一位急性病患的血液氣體分析結果如下：pH 7.19、：20.7 mmHg、：88 mmHg、HCO 3 - ：8.8 mmol/L，判讀結果最可能是下列何者？",
+    "question": "一位急性病患的血液氣體分析結果如下：pH 7.19、PaCO₂：20.7 mmHg、PaO₂：88 mmHg、HCO₃⁻：8.8 mmol/L，判讀結果最可能是下列何者？",
     "options": {
       "A": "呼吸性酸中毒",
       "B": "代謝性鹼中毒",
@@ -259427,10 +259427,10 @@
     "number": 48,
     "question": "箭號所指的為何種細胞，而其細胞核特別之處為何？",
     "options": {
-      "A": "PTT正常、PT 延長的現象 是目前臨床上唯一可以檢測factor XIII 的方法 5 M Urea溶液中反應，應在 2 小時內溶解 1% monochloroacetic acid或 2% acetic acid 進行 clot 溶解試驗 而其細胞核特別之處為何？ 核內染色體為雙套體（2N） 核內染色體為多套體（通常為 4N～64N） 染色體為非整倍體異常（aneuploid）",
+      "A": "Megakaryocyte，核內染色體為雙套體（2N）",
       "B": "Megakaryocyte，核內染色體為多套體（通常為4N～64N）",
-      "C": "arboxyglutamic acid需要氧化態維生素 K作為輔酶 下列何者最適當？",
-      "D": "NA copy number之異常 下列何者是他們生下凝血功能正 glutamyl hydroxylase的催化 作為輔酶"
+      "C": "Myeloma cell，染色體為非整倍體異常（aneuploid）",
+      "D": "Histiocyte，染色體常有DNA copy number之異常"
     },
     "answer": "B",
     "explanation": "",
@@ -260008,7 +260008,8 @@
     "explanation": "",
     "images": [
       "/question-images/medlab_113020_blood_q76_0.webp"
-    ]
+    ],
+    "image_url": "/question-images/medlab_113020_blood_q76_0.webp"
   },
   {
     "id": 4475,
@@ -269251,10 +269252,11 @@
       "C": "③",
       "D": "④"
     },
-    "answer": "D",
+    "answer": "B,C,D",
     "explanation": "",
     "original_answer": "D",
-    "correction_note": "第55題更正為 B,C,D（原答案 D）"
+    "correction_note": "第55題更正為 B,C,D（原答案 D）",
+    "disputed": true
   },
   {
     "id": 4930,
@@ -298844,10 +298846,10 @@
     "number": 4,
     "question": "未成熟的T 細胞稱為胸腺細胞（thymocyte），下列有關早期胸腺細胞發育過程的敘述何者錯誤？",
     "options": {
-      "A": "Notch訊息傳遞是決定造血幹細胞走向 T 細胞系列的關鍵訊息",
-      "B": "double negative（DN）的胸腺細胞大部分是αβ T 細胞，只有少部分γδ T 細胞",
-      "C": "D8 -",
-      "D": "DN1～DN4  胸腺細胞可由c-kit、CD25及 CD44分子來辨別"
+      "A": "Notch訊息傳遞是決定造血幹細胞走向T細胞系列的關鍵訊息",
+      "B": "double negative（DN）的胸腺細胞大部分是αβ T細胞，只有少部分γδ T細胞",
+      "C": "double negative（DN）的胸腺細胞表型皆為CD3+CD4-CD8-",
+      "D": "DN1～DN4胸腺細胞可由c-kit、CD25及CD44分子來辨別"
     },
     "answer": "C",
     "explanation": ""

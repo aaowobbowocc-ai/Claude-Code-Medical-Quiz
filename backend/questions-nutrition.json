@@ -4421,10 +4421,10 @@
       "number": 21,
       "question": "水溶性維生素中B 群共有8 種，但唯一含有胺基（amine）是指：",
       "options": {
-        "A": "維生素B",
-        "B": "維生素B6",
+        "A": "維生素B B2",
+        "B": "維生素B6 B",
         "C": "維生素B",
-        "D": "維生素B1"
+        "D": "B12 維生素B1 B"
       },
       "answer": "D",
       "explanation": ""
@@ -15212,10 +15212,10 @@
       "number": 27,
       "question": "色胺酸負荷試驗（tryptophan loading test）是檢測下列何種維生素的營養狀況？",
       "options": {
-        "A": "B",
-        "B": "B1",
-        "C": "B2",
-        "D": "B"
+        "A": "B B1",
+        "B": "B2 B",
+        "C": "B B6",
+        "D": "B12 B"
       },
       "answer": "C",
       "explanation": ""
@@ -39878,9 +39878,9 @@
       "question": "20 歲至 50 歲年齡層中,女性的何種營養素每日建議攝取量高於同年齡層之男性?",
       "options": {
         "A": "calcium",
-        "B": "calcium",
+        "B": "iodine",
         "C": "iron",
-        "D": "iodine"
+        "D": "zinc"
       },
       "answer": "C",
       "explanation": ""
@@ -40236,9 +40236,9 @@
       "question": "攝取蛋白質達 65 公克,其攝入氮量為多少公克?",
       "options": {
         "A": "10.4",
-        "B": "10.4",
+        "B": "16.3",
         "C": "32.5",
-        "D": "16.3"
+        "D": "130"
       },
       "answer": "A",
       "explanation": ""
@@ -40635,9 +40635,9 @@
       "question": "2012 年 WHO 出版「成人與兒童之鈉攝取指引」,建議成人(≥16 歲)每日鈉的攝取量最好能低於多少克,以降低血壓與心血管疾病、中風和冠狀動脈心臟疾病的風險?",
       "options": {
         "A": "2",
-        "B": "2",
+        "B": "4",
         "C": "5",
-        "D": "4"
+        "D": "6"
       },
       "answer": "A",
       "explanation": ""
@@ -40677,9 +40677,9 @@
       "question": "某班級有 50 人，每學期會調查該班級學生視力狀況，結果顯示：民國 101 年 9 月有 23 人近視，民國 102 年 2 月有 26 人近視，民國 102 年 9 月有 28 人近視，則 101 學年該班級的近視發生率為多少%？",
       "options": {
         "A": "11.1",
-        "B": "11.1",
+        "B": "18.5",
         "C": "21.0",
-        "D": "18.5"
+        "D": "52.0"
       },
       "answer": "B",
       "explanation": ""
@@ -41328,9 +41328,9 @@
       "question": "在 urea cycle 中,產生 arginine 之酵素反應,同時也可以產生下列何者?",
       "options": {
         "A": "urea",
-        "B": "urea",
-        "C": "fumarate",
-        "D": "ornithine"
+        "B": "ornithine",
+        "C": "fumarat",
+        "D": "e \ncitrulline"
       },
       "answer": "C",
       "explanation": ""
@@ -41349,9 +41349,9 @@
       "question": "分析血液樣品中之酵素含量可以診斷多種疾病的進展,檢驗 creatine kinase 可以用於診斷下列何種疾病?",
       "options": {
         "A": "cancer",
-        "B": "cancer",
+        "B": "heart attack",
         "C": "rickets",
-        "D": "heart attack"
+        "D": "hepatitis"
       },
       "answer": "B",
       "explanation": ""
@@ -42023,9 +42023,9 @@
       "question": "下列何者不屬於蕈類毒素？",
       "options": {
         "A": "amatoxins",
-        "B": "amatoxins",
+        "B": "phallotoxins",
         "C": "bufotenin",
-        "D": "phallotoxins"
+        "D": "luteoskyrin"
       },
       "answer": "D",
       "explanation": ""
@@ -42191,9 +42191,9 @@
       "question": "皇帝豆（lima bean）和樹薯（cassava）中所含的產氰醣苷（cyanogenic glycosides）是：",
       "options": {
         "A": "taxiphyllin",
-        "B": "taxiphyllin",
+        "B": "dhurrin",
         "C": "amygdalin",
-        "D": "dhurrin"
+        "D": "linamarin"
       },
       "answer": "D",
       "explanation": ""
@@ -42233,9 +42233,9 @@
       "question": "飲用水水質標準規定，若以多管發酵法檢測時，大腸桿菌群（coliform group）之最大限值應為多少？",
       "options": {
         "A": "6 CFU/1 mL",
-        "B": "6 CFU/1 mL",
+        "B": "6 CFU/100 mL",
         "C": "6 MPN/1 mL",
-        "D": "6 CFU/100 mL"
+        "D": "6 MPN/100 mL"
       },
       "answer": "D",
       "explanation": ""
@@ -42296,9 +42296,9 @@
       "question": "餐具在完成洗、刷、沖與消毒後，若於多少小時內未予使用，應重新洗滌？",
       "options": {
         "A": "12",
-        "B": "12",
+        "B": "24",
         "C": "48",
-        "D": "24"
+        "D": "72"
       },
       "answer": "D",
       "explanation": ""
@@ -42359,9 +42359,9 @@
       "question": "我國衛生法規規定,咖啡飲料如標示為「低咖啡因」者,其咖啡因含量應不得超過多少 ppm?",
       "options": {
         "A": "5",
-        "B": "5",
+        "B": "10",
         "C": "20",
-        "D": "10"
+        "D": "50"
       },
       "answer": "C",
       "explanation": ""
@@ -42929,9 +42929,9 @@
       "question": "倉庫之貯藏物品距離牆壁需至少在幾公分以上，以利空氣流通及物品之搬運？",
       "options": {
         "A": "5",
-        "B": "5",
-        "C": "10",
-        "D": "15"
+        "B": "10",
+        "C": "15",
+        "D": "20"
       },
       "answer": "A",
       "explanation": ""
@@ -42992,9 +42992,9 @@
       "question": "伊利西餐廳其6 月份用餐人次為2,500 人次，平均每人消費400 元；該餐廳的固定成本為279,930 元，6 月份的變動成本為535,000 元，則該餐廳6 月份的損益平衡點的顧客人數約為多少人？",
       "options": {
         "A": "1,505",
-        "B": "1,505",
-        "C": "1,605",
-        "D": "1,705"
+        "B": "1,605",
+        "C": "1,705",
+        "D": "1,805"
       },
       "answer": "A",
       "explanation": ""
@@ -43013,9 +43013,9 @@
       "question": "青菜每台斤 60 元,每人份量 100 公克,製作成燙青菜,食物材料占成本 40%,則其售價應為多少元?",
       "options": {
         "A": "25",
-        "B": "25",
-        "C": "20",
-        "D": "15"
+        "B": "20",
+        "C": "15",
+        "D": "10"
       },
       "answer": "A",
       "explanation": ""
@@ -43139,9 +43139,9 @@
       "question": "依據「食品安全衛生管理法」，當醫療機構診治病人時發現有疑似食品中毒之情形，應於幾小時內向當地主管機關報告？",
       "options": {
         "A": "24",
-        "B": "24",
+        "B": "36",
         "C": "48",
-        "D": "36"
+        "D": "60"
       },
       "answer": "A",
       "explanation": ""
@@ -43832,9 +43832,9 @@
       "question": "下列何種脂蛋白，主要運送飲食中的三酸甘油酯？",
       "options": {
         "A": "chylomicron",
-        "B": "chylomicron",
-        "C": "VLDL",
-        "D": "LDL"
+        "B": "VLDL",
+        "C": "LDL",
+        "D": "HDL"
       },
       "answer": "A",
       "explanation": ""
@@ -43916,9 +43916,9 @@
       "question": "重症患者在嚴重損傷（injury）後立即產生的代謝反應期稱為：",
       "options": {
         "A": "ebb phase",
-        "B": "ebb phase",
-        "C": "flow phase",
-        "D": "acute response phase"
+        "B": "flow phase",
+        "C": "acute response phase",
+        "D": "adaptive response phase"
       },
       "answer": "A",
       "explanation": ""
@@ -44126,9 +44126,9 @@
       "question": "大豆容易在食用後產生脹氣的原因與下列何種成分關係最密切？",
       "options": {
         "A": "raffinose",
-        "B": "raffinose",
-        "C": "amylose",
-        "D": "amylopectin"
+        "B": "amylose",
+        "C": "amylopectin",
+        "D": "triglycerides"
       },
       "answer": "A",
       "explanation": ""
@@ -44231,9 +44231,9 @@
       "question": "志明的蛋白質攝取量為 100 公克，熱量攝取為 2000 仟卡，則志明的蛋白質攝取量約佔總熱量的多少%?",
       "options": {
         "A": "10",
-        "B": "10",
-        "C": "15",
-        "D": "20"
+        "B": "15",
+        "C": "20",
+        "D": "25"
       },
       "answer": "C",
       "explanation": ""
@@ -44315,9 +44315,9 @@
       "question": "下列何者不是身體內膽固醇的衍生物？",
       "options": {
         "A": "bile acids",
-        "B": "bile acids",
-        "C": "prostaglandins",
-        "D": "vitamin D"
+        "B": "prostaglandins",
+        "C": "vitamin D",
+        "D": "cortisone"
       },
       "answer": "B",
       "explanation": ""
@@ -47344,10 +47344,10 @@
       "number": 2,
       "question": "一般健康成年人早、午、晚三餐熱量之分配比例，下列何者為宜？",
       "options": {
-        "A": "：3：3",
-        "B": "2",
-        "C": "：4：5",
-        "D": "2"
+        "A": "2 ：3：3 2",
+        "B": "：4：5 1",
+        "C": "：2：3",
+        "D": "1 ：2：1"
       },
       "answer": "A",
       "explanation": ""
@@ -47404,10 +47404,10 @@
       "number": 5,
       "question": "下列何種雞肉的價格最便宜？",
       "options": {
-        "A": "公斤100 元",
-        "B": "1",
-        "C": "台兩8 元",
-        "D": "1"
+        "A": "1 公斤100 元 1",
+        "B": "台兩8 元 1",
+        "C": "台斤70 元",
+        "D": "1 磅50 元"
       },
       "answer": "A",
       "explanation": ""
@@ -47724,10 +47724,10 @@
       "number": 21,
       "question": "一般工作檯的大小為下列何者？ 120 公分 ×75 公分 ×80 公分 180 公分 ×60 公分 ×90 公分 180 公分 ×75 公分 ×80 公分 180 公分",
       "options": {
-        "A": "×90",
-        "B": "公分",
-        "C": "×90",
-        "D": "公分"
+        "A": "120 公分×75 公分×80 公分 180",
+        "B": "公分×60 公分×90 公分 180",
+        "C": "公分×75 公分×80 公分",
+        "D": "180 公分×90 公分×90 公分"
       },
       "answer": "C",
       "explanation": ""
@@ -49806,9 +49806,9 @@
       "question": "臺灣國民小學販售之每份飲品或點心，鈉含量應在多少毫克（mg）以下？",
       "options": {
         "A": "300",
-        "B": "300",
+        "B": "350",
         "C": "400",
-        "D": "350"
+        "D": "450"
       },
       "answer": "C",
       "explanation": ""
@@ -50425,10 +50425,10 @@
       "number": 36,
       "question": "臺灣地區從那一次營養調查開始，國人飲食營養攝取量依性別、年齡層分別呈現？ 民國69～70年國民營養調查 民國75～77年國民營養調查",
       "options": {
-        "A": "NAHSIT",
-        "B": "1993～1996年",
-        "C": "NAHSIT",
-        "D": "1999～2000年"
+        "A": "民國69～70 年國民營養調查",
+        "B": "民國75～77 年國民營養調查 NAHSIT 1993",
+        "C": "～1996 年",
+        "D": "NAHSIT 1999 ～2000 年"
       },
       "answer": "C",
       "explanation": ""
@@ -51087,9 +51087,9 @@
       "question": "肝臟可以利用 amino acid oxidase 將 amino acids 轉變成對應的 keto acid,該酵素反應亦會產生下列何種產物?",
       "options": {
         "A": "ATP",
-        "B": "ATP",
-        "C": "O2",
-        "D": "H"
+        "B": "H",
+        "C": "2O2 \nO",
+        "D": "2 \nNADH"
       },
       "answer": "B",
       "explanation": ""
@@ -51187,9 +51187,9 @@
       "question": "下列何種 RNA 分子會出現於剪接體 (spliceosome) ?",
       "options": {
         "A": "snRNA",
-        "B": "snRNA",
-        "C": "tRNA",
-        "D": "triple-stranded RNA"
+        "B": "tRNA rRNA",
+        "C": "triple",
+        "D": "-stranded RNA"
       },
       "answer": "A",
       "explanation": ""
@@ -65678,10 +65678,10 @@
       "number": 38,
       "question": "丙酮酸氧化為乙醯輔酶A 時，氧化硫辛酸（lipoic acid）首先需要下列那一個分子的輔助？",
       "options": {
-        "A": "NADP",
-        "B": "＋",
-        "C": "NAD",
-        "D": "＋"
+        "A": "NADP ＋",
+        "B": "NAD ＋",
+        "C": "FAD",
+        "D": "FMN"
       },
       "answer": "C",
       "explanation": ""
@@ -71565,10 +71565,10 @@
       "number": 12,
       "question": "驗收300 公克的日本花菇，最不適當的磅秤為：",
       "options": {
-        "A": "公斤磅秤",
-        "B": "1",
+        "A": "1 公斤磅秤 3",
+        "B": "公斤磅秤 5",
         "C": "公斤磅秤",
-        "D": "3"
+        "D": "10 公斤磅秤"
       },
       "answer": "D",
       "explanation": ""
@@ -79396,10 +79396,10 @@
       "number": 3,
       "question": "胃分泌氫離子要靠下列何種運輸蛋白？",
       "options": {
-        "A": "++",
-        "B": "++",
-        "C": "+ / K+- ATPase",
-        "D": "+-"
+        "A": "H + / K+- ATPase Na",
+        "B": "+ / K+- ATPase Na",
+        "C": "+ / Cl- - ATPase",
+        "D": "H + / Cl- - ATPase"
       },
       "answer": "A",
       "explanation": ""
@@ -88187,7 +88187,7 @@
         "A": "5",
         "B": "10",
         "C": "15",
-        "D": "10"
+        "D": "20"
       },
       "answer": "B",
       "explanation": ""
@@ -89868,10 +89868,10 @@
       "number": 6,
       "question": "依據食品良好衛生規範準則，食品從業人員罹患或感染特定之疾病期間，不得從事與食品接觸之 工作，下列何者不是本準則所規範的疾病種類？",
       "options": {
-        "A": "B型肝炎",
+        "A": "B 型肝炎",
         "B": "膿瘡",
-        "C": "型肝炎",
-        "D": "膿瘡"
+        "C": "結核病",
+        "D": "傷寒"
       },
       "answer": "A",
       "explanation": ""
@@ -90408,10 +90408,10 @@
       "number": 33,
       "question": "餐飲業使用地下水源，應與污染源（化糞池、廢棄物堆置場等）保持幾公尺以上，以防污染？",
       "options": {
-        "A": "公尺",
-        "B": "3",
-        "C": "公尺",
-        "D": "5"
+        "A": "3 公尺 5",
+        "B": "公尺 10",
+        "C": "公尺 15",
+        "D": "公尺"
       },
       "answer": "D",
       "explanation": ""
@@ -90590,9 +90590,9 @@
       "question": "一般上班族的便當，建議蛋白質含量占熱量比，下列何者最適宜？",
       "options": {
         "A": "10%",
-        "B": "10%",
+        "B": "16%",
         "C": "22%",
-        "D": "16%"
+        "D": "30%"
       },
       "answer": "B",
       "explanation": ""
@@ -90709,10 +90709,10 @@
       "number": 8,
       "question": "油菜生廢棄率為10%，每公斤30 元，1 人份生品可食量90 公克，則供應1,000 人份炒油菜，油菜的食材成本為多少？",
       "options": {
-        "A": ",700 元",
-        "B": "2",
-        "C": ",970 元",
-        "D": "2"
+        "A": "2 ,700 元 2",
+        "B": ",970 元 3",
+        "C": ",000 元",
+        "D": "3 ,300 元"
       },
       "answer": "C",
       "explanation": ""
@@ -92835,10 +92835,10 @@
       "number": 34,
       "question": "腦部發育到幾歲時約已完成90%？",
       "options": {
-        "A": "歲",
-        "B": "1",
-        "C": "歲",
-        "D": "3"
+        "A": "1",
+        "B": "歲\n3",
+        "C": "歲\n5",
+        "D": "歲\n7"
       },
       "answer": "C",
       "explanation": ""
@@ -92936,7 +92936,7 @@
       "question": "豬肉經加熱處理後，肌紅蛋白質發生變性（鐵離子發生氧化）所生成之褐色素為何？",
       "options": {
         "A": "hemochrome",
-        "B": "hemochrome",
+        "B": "hemichrome",
         "C": "hemin",
         "D": "tetrapyrroles"
       },

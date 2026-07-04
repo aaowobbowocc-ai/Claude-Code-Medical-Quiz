@@ -21,29 +21,53 @@ def _clean(s):
     s = re.sub(r'\s+', ' ', s).strip()
     return s
 
+def _last_line(s):
+    """取一段文字最後一個非空「行」——用於『選項在標記之前』的複選版型。"""
+    parts = [p.strip() for p in s.split('\n') if p.strip()]
+    return parts[-1] if parts else ''
+
 def parse_speech_pdf(path):
     doc = fitz.open(path)
     full = '\n'.join(pg.get_text() for pg in doc)
     # 統一 PUA → 佔位符，方便正則
     t = full.replace(A, '\x01').replace(B, '\x02').replace(C, '\x03').replace(D, '\x04')
-    # 每題：行首題號 + 題幹 + Ⓐ..Ⓓ 四選項；Ⓓ 到下一題題號(或檔尾)
-    # 題號後緊跟題幹，題幹到第一個 \x01(Ⓐ) 為止
-    pat = re.compile(
-        r'(?:^|\n)\s*(\d{1,3})\s*\n'      # 題號
-        r'(.*?)'                           # 題幹
-        r'\x01(.*?)'                       # Ⓐ
-        r'\x02(.*?)'                       # Ⓑ
-        r'\x03(.*?)'                       # Ⓒ
-        r'\x04(.*?)'                       # Ⓓ
-        r'(?=\n\s*\d{1,3}\s*\n.*?\x01|\Z)',  # 下一題(有Ⓐ)或檔尾
+    # 每題塊：行首題號 → 下一題號(且該塊含四標記)。塊內再判斷標記在文字前或後。
+    blocks = re.compile(
+        r'(?:^|\n)\s*(\d{1,3})\s*\n(.*?)(?=\n\s*\d{1,3}\s*\n[^\x01\x02\x03\x04]*?\x01|\Z)',
         re.S)
     out = {}
-    for m in pat.finditer(t):
+    for m in blocks.finditer(t):
         num = int(m.group(1))
-        stem = _clean(m.group(2))
-        opts = [_clean(m.group(i)) for i in (3, 4, 5, 6)]
-        # 基本健全性：題幹非空、四選項皆非空
-        if not stem or any(not o for o in opts):
+        body = m.group(2)
+        pa, pb, pc, pd = (body.find(x) for x in ('\x01', '\x02', '\x03', '\x04'))
+        if not (0 <= pa < pb < pc < pd):
+            continue
+        # 版型一（標記在前）：Ⓐtext … 取標記之後到下一標記
+        after = [body[pa+1:pb], body[pb+1:pc], body[pc+1:pd], body[pd+1:]]
+        after_o = [_clean(x) for x in after]
+        # 版型二（選項在標記之前，常見於圈碼複選）：取每個標記「之前」那一行
+        before_o = [
+            _last_line(body[:pa]),          # Ⓐ 之前
+            _last_line(body[pa+1:pb]),      # Ⓑ 之前（在 Ⓐ、Ⓑ 之間）
+            _last_line(body[pb+1:pc]),
+            _last_line(body[pc+1:pd]),
+        ]
+        before_o = [_clean(x) for x in before_o]
+
+        def good(o):
+            return all(x and len(x) >= 1 for x in o) and len(set(o)) == 4
+
+        if good(after_o):
+            opts = after_o
+            stem = _clean(body[:pa])
+        elif good(before_o):
+            opts = before_o
+            # 題幹＝Ⓐ選項那行「之前」的所有文字
+            head = body[:pa]
+            stem = _clean(head[:head.rfind('\n')] if '\n' in head else head)
+        else:
+            continue
+        if not stem:
             continue
         out[num] = {'q': stem, 'opts': opts}
     return out

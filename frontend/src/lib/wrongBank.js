@@ -20,8 +20,22 @@ function saveRemoved(map, silent) {
 // 供 cloudSync 取用/覆寫 tombstone
 export function getRemoved() { return loadRemoved() }
 export function replaceRemoved(map) { if (map && typeof map === 'object') saveRemoved(map, true) }
+// 依 qKey 去重（同 key 保留 addedAt 較新者）— 防禦性，避免任何路徑塞入重複而「一直累積」
+function dedupByKey(arr) {
+  if (!Array.isArray(arr)) return []
+  const byKey = new Map()
+  for (const q of arr) {
+    const k = qKey(q)
+    if (!k) continue
+    const prev = byKey.get(k)
+    if (!prev || (q.addedAt || 0) >= (prev.addedAt || 0)) byKey.set(k, q)
+  }
+  return [...byKey.values()].sort((a, b) => (b.addedAt || 0) - (a.addedAt || 0))
+}
+
 function save(arr, silent) {
-  try { localStorage.setItem(KEY, JSON.stringify(arr)) } catch {}
+  const clean = dedupByKey(arr).slice(0, MAX)   // 存進去前一律去重
+  try { localStorage.setItem(KEY, JSON.stringify(clean)) } catch {}
   // 通知 cloudSync 有變更（跨裝置同步）；silent=從雲端合併寫回時不再回推，避免迴圈
   if (!silent) { try { window.dispatchEvent(new Event('wrongbank-changed')) } catch {} }
 }
@@ -72,7 +86,7 @@ export function addWrong(wrongQs, examId) {
   save(next)
 }
 
-export function getWrong() { return load() }
+export function getWrong() { return dedupByKey(load()) }
 
 export function removeWrong(q) {
   const k = qKey(q); if (!k) return

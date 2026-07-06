@@ -6,7 +6,7 @@ import { readAuthFromStorage } from './supabase'
 import { getWrong, replaceWrong, wrongKey, getRemoved, replaceRemoved } from './wrongBank'
 import { loadBookmarks, replaceBookmarks } from '../hooks/useBookmarks'
 
-const WRONG_MAX = 200
+const WRONG_MAX = 500   // 與 wrongBank MAX 一致
 const BM_MAX_PER_FOLDER = 100
 
 function bmKey(q) { return q?.id || q?.question?.slice(0, 60) || '' }

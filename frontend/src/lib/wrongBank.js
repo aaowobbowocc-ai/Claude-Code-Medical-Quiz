@@ -3,7 +3,7 @@
 
 const KEY = 'wrong-questions-bank'
 const RM_KEY = 'wrong-questions-removed'   // tombstone：{ qKey: removedAt }，讓跨裝置合併能反映「已練掉/移除」
-const MAX = 200
+const MAX = 500   // 錯題夾上限（2026-07 由 200 放寬，避免大量模考後舊錯題被擠掉）
 
 function load() {
   try { return JSON.parse(localStorage.getItem(KEY) || '[]') }

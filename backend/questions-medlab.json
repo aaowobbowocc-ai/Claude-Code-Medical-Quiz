@@ -7937,12 +7937,12 @@
     "subject_name": "臨床病毒學",
     "stage_id": 11,
     "number": 71,
-    "question": "下列那些病毒在懷孕期間感染，容易造成嬰兒先天性缺陷？Cytomegalovirus HSV AdenovirusRubella virus",
+    "question": "下列那些病毒在懷孕期間感染，容易造成嬰兒先天性缺陷？①Cytomegalovirus ②HSV ③Adenovirus ④Rubella virus",
     "options": {
-      "A": "此選項可能包含了Cytomegalovirus和Adenovirus。其中，Cytomegalovirus（巨細胞病毒）是已知的致畸病毒，可能導致聽力喪失、發育遲緩、小頭症等先天性缺陷。然而，Adenovirus（腺病毒）一般不被認為是懷孕期間感染會導致嬰兒先天性缺陷的病毒。因此，此組合不完全正確。",
-      "B": "此選項可能包含了Cytomegalovirus（巨細胞病毒）、HSV（單純疱疹病毒）和Rubella virus（德國麻疹病毒）。這三種病毒在懷孕期間感染孕婦，都可能導致嬰兒先天性缺陷：\n1.  **Cytomegalovirus (CMV, 巨細胞病毒)**：是常見的先天性感染原因，可能導致嬰兒聽力喪失、神經發育遲緩、小頭症、視網膜炎等。是重要的致畸原。\n2.  **HSV (Herpes Simplex Virus, 單純疱疹病毒)**：雖然圍產期傳播（分娩時傳染）導致新生兒皰疹更為常見且嚴重，但子宮內感染（先天性HSV感染）雖然罕見，也可能導致嬰兒皮膚病變、眼部缺損（如小眼畸形、視網膜脈絡膜炎）、小頭症、水腦症等先天性缺陷。\n3.  **Rubella virus (德國麻疹病毒)**：是經典且廣為人知的致畸病毒。若在懷孕早期感染，極易導致先天性德國麻疹症候群（CRS），其主要特徵包括耳聾、白內障、青光眼、心臟缺陷（如開放性動脈導管、肺動脈狹窄）、小頭症、智能障礙等。因此，此組合正確地列出了會導致先天性缺陷的病毒。",
-      "C": "此選項可能包含了HSV和Adenovirus。如前所述，HSV可能導致先天性缺陷，但Adenovirus一般不與先天性缺陷相關。因此，此組合不完全正確。",
-      "D": "此選項可能包含了Rubella virus和Adenovirus。Rubella virus是已知的致畸病毒，但Adenovirus一般不被認為是會導致先天性缺陷的病毒。因此，此組合不完全正確。"
+      "A": "①②③",
+      "B": "①②④",
+      "C": "②③④",
+      "D": "①③④"
     },
     "answer": "B",
     "explanation": "",
@@ -102145,13 +102145,14 @@
     "number": 20,
     "question": " 有關呼吸性酸中毒病人血液氣體之變化，下列何者正確？",
     "options": {
-      "A": "↑、pH↓",
-      "B": "↓、pH↑",
-      "C": "↑、pH↑",
-      "D": "↓、pH↓"
+      "A": "PaCO₂↑、pH↓",
+      "B": "PaCO₂↓、pH↑",
+      "C": "PaCO₂↑、pH↑",
+      "D": "PaCO₂↓、pH↓"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "disputed": true
   },
   {
     "id": 12010,
@@ -114924,10 +114925,10 @@
     "number": 66,
     "question": " 國人的P血型系統中，下列何種表現型最常見？",
     "options": {
-      "A": "P 1",
-      "B": "P2k",
-      "C": "P 1 k",
-      "D": "P 2 k"
+      "A": "P1",
+      "B": "P2",
+      "C": "P1k",
+      "D": "P2k"
     },
     "answer": "B",
     "explanation": ""
@@ -170816,10 +170817,11 @@
       "A": "前列腺素（prostaglandin）",
       "B": "血小板凝集素（thromboxane）",
       "C": "白三烯素（leukotrienes）",
-      "D": "脂氧素（lipoxins）injury）的特徵？①鈣化（calcification）②細胞腫脹（cellular"
+      "D": "脂氧素（lipoxins）"
     },
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "disputed": true
   },
   {
     "id": 7671,
@@ -191809,7 +191811,8 @@
       "D": "病人合血可用預溫法合血，避免溫型抗體之干擾"
     },
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "image_url": "/question-images/medlab_109100_blood_q48_0.webp"
   },
   {
     "id": 8695,

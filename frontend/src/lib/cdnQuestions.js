@@ -249,16 +249,19 @@ export async function getRandomQuestions(examId, { stageId, count = 50, stages =
   let pool = sharedQuestions.length > 0 ? [...own, ...sharedQuestions] : own
   pool = pool.filter(isSingleAnswer)
 
-  const sidStr = stageId != null ? String(stageId) : ''
-  const tag = sidStr && sidStr !== '0'
-    ? stages.find(s => String(s.id) === sidStr)?.tag
-    : null
-  if (tag && tag !== 'all') {
+  // stageId 可為單科 "3" 或多科複選 "3,5,7"（回饋：練習區科目複選）
+  const sids = String(stageId ?? '').split(',').map(s => s.trim()).filter(s => s && s !== '0')
+  const tags = sids
+    .map(sid => stages.find(s => String(s.id) === sid)?.tag)
+    .filter(t => t && t !== 'all')
+  if (tags.length > 0 && !sids.includes('0')) {
     pool = pool.filter(q =>
-      (q.paper_id === tag ||
-       q.subject_tag === tag ||
-       (Array.isArray(q.subject_tags) && q.subject_tags.includes(tag)))
-      && doctor1PaperOK(q, tag, examId)
+      tags.some(tag =>
+        (q.paper_id === tag ||
+         q.subject_tag === tag ||
+         (Array.isArray(q.subject_tags) && q.subject_tags.includes(tag)))
+        && doctor1PaperOK(q, tag, examId)
+      )
     )
   }
 

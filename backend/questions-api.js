@@ -117,20 +117,22 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     // stage_id may be numeric (doctor1 classification stages) or a string paper id
     // (e.g. "paper1" for nursing/pharma/etc — see server.js stages fallback).
     // Compare as strings so both shapes resolve. '0' / falsy = no filter.
+    // stage_id 可為單科 "3" 或多科複選 "3,5,7"（回饋：練習區科目複選）
     const sidStr = stage_id != null ? String(stage_id) : '';
-    const tag = sidStr && sidStr !== '0'
-      ? data.stages.find(s => String(s.id) === sidStr)?.tag
-      : null;
+    const sids = sidStr.split(',').map(s => s.trim()).filter(s => s && s !== '0');
+    const tags = sids
+      .map(sid => data.stages.find(s => String(s.id) === sid)?.tag)
+      .filter(t => t && t !== 'all');
     let pool = loadExamQuestions(examId, { mode }).filter(isSingleAnswer);
-    if (tag && tag !== 'all') {
-      // Filter by paper_id (exams with paper-derived stages) OR subject_tag
-      // (doctor1 / pharma etc with classification stages) OR subject_tags array
-      // (shared bank questions).
+    // 若有選科目（且非「全部」），保留符合任一 tag 的題（paper_id / subject_tag / subject_tags）
+    if (tags.length > 0 && !sids.includes('0')) {
       pool = pool.filter(q =>
-        (q.paper_id === tag ||
-         q.subject_tag === tag ||
-         (Array.isArray(q.subject_tags) && q.subject_tags.includes(tag)))
-        && doctor1PaperOK(q, tag, examId)
+        tags.some(tag =>
+          (q.paper_id === tag ||
+           q.subject_tag === tag ||
+           (Array.isArray(q.subject_tags) && q.subject_tags.includes(tag)))
+          && doctor1PaperOK(q, tag, examId)
+        )
       );
     }
     // 自主練習年份篩選（回饋）：year 為民國年字串，空=全部年份

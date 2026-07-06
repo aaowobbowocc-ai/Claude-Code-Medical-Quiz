@@ -10,6 +10,7 @@ import { usePlayerStore, useGameStore } from './store/gameStore'
 import SplashScreen from './components/SplashScreen'
 import ErrorBoundary from './components/ErrorBoundary'
 import FixedBottomAd from './components/FixedBottomAd'
+import UpdateBanner from './components/UpdateBanner'
 import CoinGrantModal from './components/CoinGrantModal'
 import { initRegistry, getRegistry, getExamConfig, syncSharedBankVersions } from './config/examRegistry'
 import { prefetchMeta } from './config/metaCache'
@@ -272,6 +273,7 @@ function AppRoutes() {
 
   return (
     <div className="phone-frame shadow-2xl">
+      <UpdateBanner />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/"          element={<Home />} />

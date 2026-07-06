@@ -128,7 +128,18 @@ function SetupScreen({ onStart, onBack }) {
     cachedMeta?.stages ? formatStages(cachedMeta.stages) : [{ id: 0, name: '全部題目', icon: '🎲', color: '#64748B' }]
   )
   const last = getLastConfig()
-  const [stage, setStage]     = useState(last.stage ?? 0)
+  // 科目複選（回饋 garfield）：sel 為已選 stage id 陣列；[0] = 全部
+  const [sel, setSel] = useState(() => {
+    const s = last.stage
+    if (Array.isArray(s)) return s.length ? s : [0]
+    return (s != null && s !== 0) ? [s] : [0]
+  })
+  const toggleStage = (id) => setSel(prev => {
+    if (id === 0) return [0]                              // 點「全部」→ 只留全部
+    const next = prev.filter(x => x !== 0)               // 選具體科目 → 移除「全部」
+    return next.includes(id) ? (next.filter(x => x !== id).length ? next.filter(x => x !== id) : [0])
+                             : [...next, id]
+  })
   const [diff, setDiff]       = useState(last.diff ?? 'medium')
   const [count, setCount]     = useState(last.count ?? 10)
   const [customTime, setCustomTime]   = useState(last.customTime ?? 20)
@@ -273,19 +284,22 @@ function SetupScreen({ onStart, onBack }) {
           </div>
         )}
 
-        {/* Subject */}
+        {/* Subject（可複選）*/}
         <div>
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2.5">選擇科目</p>
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2.5">選擇科目<span className="text-gray-300 normal-case tracking-normal">（可複選）</span></p>
           <div className={`grid gap-2 ${stages.length > 6 ? 'grid-cols-3' : 'grid-cols-2'}`}>
-            {stages.map(s => (
-              <button key={s.id} onClick={() => setStage(s.id)}
+            {stages.map(s => {
+              const on = sel.includes(s.id)
+              return (
+              <button key={s.id} onClick={() => toggleStage(s.id)}
                       className={`flex items-center gap-2 px-2.5 py-2.5 rounded-xl text-sm font-medium transition-all active:scale-95 border
-                        ${stage === s.id ? 'text-white border-transparent shadow' : 'bg-white text-gray-700 border-gray-100 shadow-sm'}`}
-                      style={stage === s.id ? { background: s.color } : {}}>
-                <span className="text-lg shrink-0">{s.icon}</span>
+                        ${on ? 'text-white border-transparent shadow' : 'bg-white text-gray-700 border-gray-100 shadow-sm'}`}
+                      style={on ? { background: s.color } : {}}>
+                <span className="text-lg shrink-0">{on && s.id !== 0 ? '✓' : s.icon}</span>
                 <span className="text-left leading-tight text-[11px]">{s.name}</span>
               </button>
-            ))}
+              )
+            })}
           </div>
         </div>
 
@@ -423,14 +437,19 @@ function SetupScreen({ onStart, onBack }) {
               if (confirm(`金幣不足！本次練習需要 ${practiceFee} 金幣（${effectiveCount} 題 × ${FEE_PER_Q}，全對可全額賺回），目前只有 ${coins} 金幣\n\n要去${IS_NATIVE ? '看廣告賺金幣' : '金幣商店'}嗎？`)) navigate('/?reward=1')
               return
             }
-            saveLastConfig({ stage, diff, count, customTime, customCount, year })
-            const s = stages.find(s => s.id === stage)
+            // sel=[0] → 全部；否則多科以逗號串接給後端/CDN
+            const stageParam = sel.includes(0) ? 0 : sel.join(',')
+            const picked = stages.filter(s => sel.includes(s.id) && s.id !== 0)
+            const stageName = sel.includes(0) || picked.length === 0
+              ? '全部科目'
+              : picked.length === 1 ? picked[0].name : `${picked[0].name} 等 ${picked.length} 科`
+            saveLastConfig({ stage: sel, diff, count, customTime, customCount, year })
             onStart({
-              stage,
+              stage: stageParam,
               diff,
               count: effectiveCount,
               customTime: isCustom ? customTime : null,
-              stageName: s?.name || '練習',
+              stageName,
               sourceMode,
               year,
             })

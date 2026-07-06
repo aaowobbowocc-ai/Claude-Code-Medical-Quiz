@@ -17,6 +17,19 @@ function ReviewCard({ q, index }) {
   const [open, setOpen] = useState(!q.correct)  // auto-open wrong ones
   const [explainReq, setExplainReq] = useState(false)
   const [showFolderPick, setShowFolderPick] = useState(false)
+  const [copied, setCopied] = useState(false)
+  // 複製題目（回饋：想貼去搜尋）— 題幹 + 四選項 + 答案
+  const copyQuestion = () => {
+    const opts = Object.entries(q.options || {}).map(([k, v]) => `(${k}) ${v}`).join('\n')
+    const text = `${q.question}\n${opts}${q.answer ? `\n答案：${q.answer}` : ''}`
+    try {
+      navigator.clipboard.writeText(text)
+    } catch {
+      const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select()
+      try { document.execCommand('copy') } catch {}; document.body.removeChild(ta)
+    }
+    setCopied(true); setTimeout(() => setCopied(false), 1500)
+  }
   const { isBookmarked, getFolder, folders, addToFolder, removeBookmark, getFolderQuestions, MAX_PER_FOLDER } = useBookmarks()
   const bookmarked = isBookmarked(q)
   const { text: explainText, loading: explainLoading, limitHit, notEnoughCoins, error: explainError, explain, remaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
@@ -84,7 +97,13 @@ function ReviewCard({ q, index }) {
             <p className="text-sm text-gray-700 leading-relaxed">{q.case_context}</p>
           </div>
         )}
-        <p className="text-sm text-gray-800 leading-relaxed">{q.question}</p>
+        <div className="flex items-start gap-2">
+          <p className="text-sm text-gray-800 leading-relaxed flex-1">{q.question}</p>
+          <button onClick={copyQuestion} title="複製題目"
+                  className={`shrink-0 text-xs font-semibold px-2 py-1 rounded-lg border active:scale-95 transition-all ${copied ? 'bg-green-100 text-green-700 border-green-300' : 'bg-gray-50 text-gray-500 border-gray-200'}`}>
+            {copied ? '✓ 已複製' : '📋 複製'}
+          </button>
+        </div>
         <QuestionImages images={q.images} imageUrl={q.image_url} incomplete={q.incomplete} />
         <HazardVideo src={q.video_url} sourceUrl={q.source_url} />
       </div>

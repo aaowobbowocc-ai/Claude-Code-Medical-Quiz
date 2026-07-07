@@ -85,6 +85,7 @@ export default function Weakness() {
   const [rehydrating, setRehydrating] = useState(false)
   const [practiceCount, setPracticeCount] = useState(0)   // 0 = 全部；否則本次只練前 N 題（最舊優先）
   const [keepOnCorrect, setKeepOnCorrect] = useState(false)   // 答對後保留錯題（回饋：想反覆複習）
+  const [groupBySubj, setGroupBySubj] = useState(false)   // 錯題依科目分組（回饋 CZY）
 
   const examConfig = getExamConfig(examType)
   const tagNames = getAllTagNames()
@@ -355,11 +356,18 @@ export default function Weakness() {
                 )
               })()}
 
-              <div className="flex flex-col gap-2">
-                {wrongQuestions.map((q, i) => (
+              {/* 依科目分組切換（回饋 CZY）*/}
+              <div className="flex items-center justify-end mb-2">
+                <button onClick={() => setGroupBySubj(v => !v)}
+                  className={`text-xs font-bold px-3 py-1.5 rounded-xl border active:scale-95 transition-all ${groupBySubj ? 'bg-medical-blue text-white border-medical-blue' : 'bg-white text-medical-blue border-medical-blue/40'}`}>
+                  {groupBySubj ? '✓ 依科目分組' : '📁 依科目分組'}
+                </button>
+              </div>
+              {(() => {
+                const card = (q, i) => (
                   <div key={q.id || i} className="bg-white rounded-2xl border border-red-100 px-4 py-3 shadow-sm">
                     <div className="flex items-center gap-2 mb-1.5">
-                      {q.subject_name && (
+                      {!groupBySubj && q.subject_name && (
                         <span className="text-[10px] font-semibold text-white px-2 py-0.5 rounded-full"
                               style={{ background: getSubjectColor(q.subject_name) }}>
                           {q.subject_name}
@@ -374,8 +382,32 @@ export default function Weakness() {
                     </div>
                     <p className="text-sm text-gray-700 line-clamp-2">{q.question}</p>
                   </div>
-                ))}
-              </div>
+                )
+                if (!groupBySubj) {
+                  return <div className="flex flex-col gap-2">{wrongQuestions.map(card)}</div>
+                }
+                // 依科目分組：組內維持原順序，組別依題數多→少
+                const groups = {}
+                for (const q of wrongQuestions) {
+                  const k = q.subject_name || q.subject || '未分類'
+                  ;(groups[k] = groups[k] || []).push(q)
+                }
+                const ordered = Object.entries(groups).sort((a, b) => b[1].length - a[1].length)
+                return (
+                  <div className="flex flex-col gap-4">
+                    {ordered.map(([name, qs]) => (
+                      <div key={name}>
+                        <div className="flex items-center gap-2 mb-1.5 px-1">
+                          <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: getSubjectColor(name) }} />
+                          <span className="text-sm font-bold text-medical-dark">{name}</span>
+                          <span className="text-xs text-gray-400">（{qs.length}）</span>
+                        </div>
+                        <div className="flex flex-col gap-2">{qs.map(card)}</div>
+                      </div>
+                    ))}
+                  </div>
+                )
+              })()}
             </>
           )}
         </div>

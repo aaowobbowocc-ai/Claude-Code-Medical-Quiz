@@ -13814,10 +13814,10 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 34,
-    "question": "器在掃描時經過下",
+    "question": "超音波儀器在掃描時經過下列那一種物質，其音波傳導速度會最快？",
     "options": {
-      "A": "其音波傳",
-      "B": "會最快？",
+      "A": "空氣",
+      "B": "脂肪",
       "C": "水",
       "D": "骨骼"
     },
@@ -262580,10 +262580,13 @@
       "C": "UGC＞UGA",
       "D": "AGA＞AGG"
     },
-    "answer": "C",
+    "answer": "C,D",
     "explanation": "",
     "original_answer": "C",
-    "correction_note": "第44題更正為 C,D（原答案 C）"
+    "correction_note": "第44題更正為 C,D（原答案 C）",
+    "orig_answer": "C",
+    "disputed": true,
+    "disputed_note": "原公告答案 C；考選部更正：第44題答 C 或 D 或 CD 者均給分。"
   },
   {
     "id": 4523,

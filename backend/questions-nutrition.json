@@ -105093,9 +105093,10 @@
         "C": "200",
         "D": "250"
       },
-      "answer": "A,C,D",
+      "answer": "D",
       "explanation": "",
-      "disputed": true
+      "disputed": false,
+      "orig_answer": "A,C,D"
     },
     {
       "id": 932,
@@ -105154,8 +105155,10 @@
         "C": "夾雜物總計0.2%",
         "D": "被害粒及白粉質粒10%"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "D",
+      "explanation": "",
+      "orig_answer": "C",
+      "disputed": false
     },
     {
       "id": 935,

@@ -11,6 +11,7 @@ import OptionContent from '../components/OptionContent'
 import CommentSection from '../components/CommentSection'
 import { useAccuracyStore } from '../store/accuracyStore'
 import { usePlayerStore } from '../store/gameStore'
+import { getNote, setNote } from '../lib/questionNotes'
 
 /* ── Single question review card ───────────────────────────── */
 function ReviewCard({ q, index }) {
@@ -18,6 +19,8 @@ function ReviewCard({ q, index }) {
   const [explainReq, setExplainReq] = useState(false)
   const [showFolderPick, setShowFolderPick] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [noteOpen, setNoteOpen] = useState(false)
+  const [note, setNoteState] = useState(() => getNote(q))   // 個人筆記（回饋 胖呆）
   // 複製題目（回饋：想貼去搜尋）— 題幹 + 四選項 + 答案
   const copyQuestion = () => {
     const opts = Object.entries(q.options || {}).map(([k, v]) => `(${k}) ${v}`).join('\n')
@@ -62,6 +65,11 @@ function ReviewCard({ q, index }) {
           </span>
         )}
         <span className="flex-1" />
+        <button onClick={() => setNoteOpen(o => !o)}
+                className={`text-sm mr-1 ${note ? '' : 'opacity-60'}`}
+                title={note ? '已有筆記' : '新增個人筆記'}>
+          {note ? '📝' : '📄'}
+        </button>
         <button onClick={() => bookmarked ? removeBookmark(q) : setShowFolderPick(!showFolderPick)}
                 className="text-sm mr-1" title={bookmarked ? `已收藏（${getFolder(q)}）` : '收藏題目'}>
           {bookmarked ? '⭐' : '☆'}
@@ -72,6 +80,19 @@ function ReviewCard({ q, index }) {
           <span className={`transition-transform ${open ? 'rotate-180' : ''}`}>▾</span>
         </button>
       </div>
+
+      {noteOpen && (
+        <div className="px-4 pb-2">
+          <textarea
+            value={note}
+            onChange={e => setNoteState(e.target.value)}
+            onBlur={() => setNote(q, note)}
+            placeholder="寫下訂正重點、易錯陷阱或複習心得…（僅自己可見，本機儲存）"
+            rows={3}
+            className="w-full text-sm rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 leading-relaxed focus:outline-none focus:border-orange-300 resize-y" />
+          <p className="text-[11px] text-gray-400 mt-0.5 px-1">📝 個人筆記僅存在此裝置、僅你可見</p>
+        </div>
+      )}
 
       {showFolderPick && !bookmarked && (
         <div className="px-4 pb-2 flex gap-2">
@@ -301,6 +322,25 @@ export default function Review() {
             </div>
           ))
         })()}
+
+        {/* 回饋（胖呆）：只練本回錯題 — 不必重做整卷或切到錯題區 */}
+        {wrong.length > 0 && (
+          <button
+            onClick={() => {
+              const n = wrong.length
+              const cost = n * 2
+              const { spendCoins, coins } = usePlayerStore.getState()
+              if (!spendCoins(cost)) {
+                if (confirm(`金幣不足！練習這 ${n} 題錯題需要 ${cost} 金幣（${n} × 2 🪙），目前只有 ${coins} 金幣\n\n要去賺金幣嗎？`)) navigate('/?reward=1')
+                return
+              }
+              navigate('/practice', { state: { wrongPractice: wrong, keepOnCorrect: true } })
+            }}
+            className="w-full py-3.5 rounded-2xl font-bold text-white text-sm shadow active:scale-95 transition-transform"
+            style={{ background: 'linear-gradient(135deg,#f97316,#ef4444)' }}>
+            ✍️ 只練本回錯題（{wrong.length} 題 · 扣 {wrong.length * 2} 🪙）
+          </button>
+        )}
 
         {/* 底部廣告 / 贊助橫幅 */}
         <SmartBanner />

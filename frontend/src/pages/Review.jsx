@@ -186,6 +186,7 @@ export default function Review() {
   const { state } = useLocation()
   const [filter, setFilter] = useState('wrong')   // 'wrong' | 'all' | 'flagged'
   const [sortBySubject, setSortBySubject] = useState(false)   // 依弱科排序（回饋）
+  const [groupBySubj, setGroupBySubj] = useState(false)   // 依科目分組（回饋 CZY）
   if (!state?.questions) {
     navigate('/')
     return null
@@ -257,6 +258,11 @@ export default function Review() {
                 className={`text-xs font-bold px-3 py-1.5 rounded-xl shadow active:scale-95 ${sortBySubject ? 'bg-orange-500 text-white' : 'bg-white text-orange-600'}`}>
                 {sortBySubject ? '✓ 依弱科' : '📚 依弱科排序'}
               </button>
+              <button
+                onClick={() => setGroupBySubj(v => !v)}
+                className={`text-xs font-bold px-3 py-1.5 rounded-xl shadow active:scale-95 ${groupBySubj ? 'bg-teal-500 text-white' : 'bg-white text-teal-600'}`}>
+                {groupBySubj ? '✓ 分科目' : '📁 分科目'}
+              </button>
             </div>
           )}
         </div>
@@ -271,10 +277,30 @@ export default function Review() {
             <p className="text-gray-400 text-sm font-medium">全部答對！太厲害了！</p>
           </div>
         )}
-        {displayed.map((q, i) => (
+        {!groupBySubj && displayed.map((q, i) => (
           <ReviewCard key={q.id || i} q={q}
             index={questions.indexOf(q)} />
         ))}
+        {groupBySubj && (() => {
+          const groups = {}
+          displayed.forEach(q => {
+            const k = q.subject_name || q.subject || '未分類'
+            ;(groups[k] = groups[k] || []).push(q)
+          })
+          const ordered = Object.entries(groups).sort((a, b) => b[1].length - a[1].length)
+          return ordered.map(([name, qs]) => (
+            <div key={name} className="flex flex-col gap-3">
+              <div className="flex items-center gap-2 mt-1 px-1">
+                <span className="w-2.5 h-2.5 rounded-full" style={{ background: getSubjectColor(name) }} />
+                <span className="font-bold text-gray-700 text-sm">{name}</span>
+                <span className="text-gray-400 text-xs">{qs.length} 題</span>
+              </div>
+              {qs.map((q, i) => (
+                <ReviewCard key={q.id || i} q={q} index={questions.indexOf(q)} />
+              ))}
+            </div>
+          ))
+        })()}
 
         {/* 底部廣告 / 贊助橫幅 */}
         <SmartBanner />

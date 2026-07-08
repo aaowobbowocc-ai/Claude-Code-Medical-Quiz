@@ -166,7 +166,7 @@ function ReviewCard({ q, index }) {
               rocYear={q.roc_year}
               session={q.session}
               number={q.number}
-              disputed={q.disputed}
+              disputed={q.disputed_note || q.disputed}
               visionUncertain={q.vision_uncertain}
               subjectTags={q.subject_tags}
               meta={explainMeta}

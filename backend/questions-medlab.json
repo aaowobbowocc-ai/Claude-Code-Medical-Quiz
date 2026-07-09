@@ -262878,18 +262878,22 @@
     "subject_name": "醫學分子檢驗學",
     "stage_id": 6,
     "number": 59,
-    "question": "與子宮頸癌最相關之人類乳突病毒（HPV）為： �①HPV6 ②HPV11   ③HPV16   ④HPV18",
+    "question": "NPM1基因的變異常出現在血液腫瘤中，其中最常見的是在第十二外顯子（exon 12）有4 bp的插入（insertion）突變。假設野生型的序列為GCTATTCAAGATCTCTG▼GCAGTGGAGGAAGTCTCTT，▼表示突變插入處。若以傳統的聚合酶連鎖反應配合桑格定序（Sanger sequencing），則最有可能有插入突變的定序圖為何？",
     "options": {
-      "A": "①②",
-      "B": "①③",
-      "C": "②④",
-      "D": "③④"
+      "A": "",
+      "B": "",
+      "C": "",
+      "D": ""
     },
     "answer": "C",
     "explanation": "",
-    "images": [
-      "/question-images/medlab_113020_molmicro_q59_0.webp"
-    ]
+    "images": [],
+    "option_images": {
+      "A": "/question-images/medlab_113020_molmicro_q59_A.webp",
+      "B": "/question-images/medlab_113020_molmicro_q59_B.webp",
+      "C": "/question-images/medlab_113020_molmicro_q59_C.webp",
+      "D": "/question-images/medlab_113020_molmicro_q59_D.webp"
+    }
   },
   {
     "id": 4538,

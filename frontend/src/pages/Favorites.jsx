@@ -5,6 +5,7 @@ import { useExplain } from '../hooks/useAI'
 import { ExplainPanel } from '../components/AIPanel'
 import { getSubjectColor } from '../utils/subjectColors'
 import { formatYearSession } from '../utils/sessionLabel'
+import { usePlayerStore } from '../store/gameStore'
 import QuestionImages from '../components/QuestionImages'
 import HazardVideo from '../components/HazardVideo'
 import CommentSection from '../components/CommentSection'
@@ -12,10 +13,24 @@ import CommentSection from '../components/CommentSection'
 function FavCard({ q, index, onRemove }) {
   const [open, setOpen] = useState(false)
   const [explainReq, setExplainReq] = useState(false)
+  const [copied, setCopied] = useState(false)
   const { text: explainText, loading: explainLoading, limitHit, notEnoughCoins, error: explainError, explain, remaining, cost: explainCost, meta: explainMeta, vote: explainVote } = useExplain()
 
   const tagName = q.subject_name || q.subject || '未分類'
   const tagColor = getSubjectColor(tagName)
+
+  // 複製題目（回饋 胖呆）— 題幹 + 四選項 + 答案
+  const copyQuestion = () => {
+    const opts = Object.entries(q.options || {}).map(([k, v]) => `(${k}) ${v}`).join('\n')
+    const text = `${q.question}\n${opts}${q.answer ? `\n答案：${q.answer}` : ''}`
+    try {
+      navigator.clipboard.writeText(text)
+    } catch {
+      const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select()
+      try { document.execCommand('copy') } catch {}; document.body.removeChild(ta)
+    }
+    setCopied(true); setTimeout(() => setCopied(false), 1500)
+  }
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
@@ -26,6 +41,9 @@ function FavCard({ q, index, onRemove }) {
         <span className="text-xs text-gray-400">{formatYearSession(q)}</span>
         <span className="text-xs font-mono font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-lg">#{q.number}</span>
         <span className="flex-1" />
+        <button onClick={copyQuestion} className="text-xs mr-1 active:scale-90 transition-transform" title="複製題目">
+          {copied ? '✓' : '📋'}
+        </button>
         <button onClick={() => onRemove(q)} className="text-sm active:scale-90 transition-transform" title="取消收藏">⭐</button>
         <button onClick={() => setOpen(o => !o)} className="text-xs text-gray-400 flex items-center gap-0.5">
           {open ? '收起' : '展開'}
@@ -74,11 +92,12 @@ function FavCard({ q, index, onRemove }) {
               options={q.options}
               explanation={q.explanation}
               questionId={q.id}
+              examId={q.examId || usePlayerStore.getState().exam}
               questionText={q.question}
               rocYear={q.roc_year}
               session={q.session}
               number={q.number}
-              disputed={q.disputed}
+              disputed={q.disputed_note || q.disputed}
               visionUncertain={q.vision_uncertain}
               subjectTags={q.subject_tags}
               meta={explainMeta}
@@ -98,6 +117,7 @@ export default function Favorites() {
   const [activeTab, setActiveTab] = useState(folders[0])
   const [editing, setEditing] = useState(null) // folder name being edited
   const [editValue, setEditValue] = useState('')
+  const [groupBySubj, setGroupBySubj] = useState(false)   // 收藏依科目分組（回饋 胖呆）
 
   const questions = getFolderQuestions(activeTab)
 
@@ -156,13 +176,37 @@ export default function Favorites() {
           </div>
         ) : (
           <>
-            <div className="flex justify-end">
+            <div className="flex justify-between items-center">
+              <button onClick={() => setGroupBySubj(v => !v)}
+                className={`text-xs font-bold px-3 py-1.5 rounded-xl border active:scale-95 transition-all ${groupBySubj ? 'bg-teal-500 text-white border-teal-500' : 'bg-white text-teal-600 border-teal-200'}`}>
+                {groupBySubj ? '✓ 分科目' : '📁 分科目'}
+              </button>
               <button onClick={() => { if (confirm(`確定清空「${activeTab}」的所有題目？`)) clearFolder(activeTab) }}
                 className="text-xs text-red-400 active:scale-95">清空此收藏夾</button>
             </div>
-            {questions.map((q, i) => (
+            {!groupBySubj && questions.map((q, i) => (
               <FavCard key={q.id || i} q={q} index={i} onRemove={removeBookmark} />
             ))}
+            {groupBySubj && (() => {
+              const groups = {}
+              questions.forEach(q => {
+                const k = q.subject_name || q.subject || '未分類'
+                ;(groups[k] = groups[k] || []).push(q)
+              })
+              const ordered = Object.entries(groups).sort((a, b) => b[1].length - a[1].length)
+              return ordered.map(([name, qs]) => (
+                <div key={name} className="flex flex-col gap-3">
+                  <div className="flex items-center gap-2 mt-1 px-1">
+                    <span className="w-2.5 h-2.5 rounded-full" style={{ background: getSubjectColor(name) }} />
+                    <span className="font-bold text-gray-700 text-sm">{name}</span>
+                    <span className="text-gray-400 text-xs">{qs.length} 題</span>
+                  </div>
+                  {qs.map((q, i) => (
+                    <FavCard key={q.id || i} q={q} index={i} onRemove={removeBookmark} />
+                  ))}
+                </div>
+              ))
+            })()}
           </>
         )}
       </div>

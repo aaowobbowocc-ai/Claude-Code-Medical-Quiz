@@ -70085,9 +70085,11 @@
       "C": "cortisol",
       "D": "dihydroxyphenylalanine"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "orig_answer": "B",
+    "disputed_note": "考選部更正：第57題答 B 或 C 者均給分。"
   },
   {
     "id": 11407,
@@ -239615,7 +239617,7 @@
     "subject_name": "臨床血液學",
     "stage_id": 3,
     "number": 24,
-    "question": "下列何種疾病在臨床上最不會出現paraproteinemia 缺乏症病人在急性感染且發生血管內溶血時，下列那一種檢驗結果最不可能出現 如圖箭號所示的白血球是下列何種血球？ T lymphocytes的細胞標記（cell markers），下列何者正確",
+    "question": "下列何種疾病在臨床上最不會出現paraproteinemia？",
     "options": {
       "A": "Acute myeloid leukemia",
       "B": "Chronic lymphocytic leukemia",
@@ -253263,8 +253265,8 @@
     "options": {
       "A": "抗凝劑heparin會抑制PCR反應",
       "B": "血色素會抑制PCR反應",
-      "C": "時，建議在4小時內進行核酸萃取",
-      "D": "當檢測標的物為RNA，檢體放置在2～8oC時，建議在4小時內進行核酸萃取"
+      "C": "當檢測標的物為DNA，檢體放置在2～8°C時，建議在1個月內進行核酸萃取",
+      "D": "當檢測標的物為RNA，檢體放置在2～8°C時，建議在4小時內進行核酸萃取"
     },
     "answer": "C",
     "explanation": ""

@@ -71312,12 +71312,12 @@
       "subject_name": "藥理學",
       "stage_id": 7,
       "number": 75,
-      "question": "下列何種藥物為一種選擇性高之",
+      "question": "下列何種藥物為一種選擇性高之 antithrombin-dependent factor Xa 抑制劑？",
       "options": {
-        "A": "antithrombin-dependent factor Xa",
-        "B": "抑制劑？",
-        "C": "Heparin Clopidogrel",
-        "D": "Fondaparinux Aspirin"
+        "A": "Heparin",
+        "B": "Clopidogrel",
+        "C": "Fondaparinux",
+        "D": "Aspirin"
       },
       "answer": "C",
       "explanation": ""
@@ -74007,7 +74007,7 @@
       "subject_name": "公共衛生",
       "stage_id": 9,
       "number": 100,
-      "question": "依下表數據計算下列各指標，下列何者錯誤？疾病真實狀況有無Total疾病有68674診斷結無12114126果Total80120200",
+      "question": "依下表數據計算下列各指標，下列何者錯誤？\n（單位：人）\n　　　　　疾病有　疾病無　合計\n診斷陽性　　68　　　 6　　　74\n診斷陰性　　12　　　114　　126\n合計　　　　80　　　120　　200",
       "options": {
         "A": "敏感度為85%",
         "B": "特異度為95%",
@@ -76120,22 +76120,20 @@
       "subject_name": "病理學",
       "stage_id": 8,
       "number": 98,
-      "question": "睪丸病理切片結果如圖示，請問下列診斷何者最正確？",
+      "question": "下列資料代表 6 個接受髖關節置換手術病人的住院天數（天）：4, 3, 3, 5, 4, 和 20，那一個集中趨勢統計量最適合描述此資料？",
       "options": {
-        "A": "發炎性睪丸炎及纖維化",
-        "B": "生殖細胞瘤",
-        "C": "結核病",
-        "D": "老年性萎縮"
+        "A": "平均值",
+        "B": "全距",
+        "C": "眾數",
+        "D": "中位數"
       },
       "answer": "D",
       "explanation": "",
-      "images": [
-        "/question-images/doctor1_1150203684_0.webp"
-      ],
+      "images": [],
       "image_dependent": true,
       "image_url": "/question-images/doctor1_101030_p1_98_v2.webp",
       "_original_number": 98,
-      "disputed": true
+      "disputed": false
     },
     {
       "id": 1150203685,
@@ -92737,15 +92735,17 @@
       "number": 52,
       "question": "有關藥物交互作用，何者錯誤？",
       "options": {
-        "A": "Griseofulvin",
-        "B": "會加強warfarin 代謝",
-        "C": "Phenytoin 會加強alprazolam 代謝",
-        "D": "Ritonavir 會加強midazolam 代謝"
+        "A": "Griseofulvin 會加強 warfarin 代謝",
+        "B": "Phenytoin 會加強 alprazolam 代謝",
+        "C": "Ritonavir 會加強 midazolam 代謝",
+        "D": "Carbamazepine 會加強 itraconazole 代謝"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "考選部本題送分（答B或C者均給分），標示為其中一個可接受答案。",
       "disputed": true,
-      "_original_number": 52
+      "_original_number": 52,
+      "orig_answer": "C",
+      "disputed_note": "考選部更正：第52題一律給分。"
     },
     {
       "id": 1150204437,

@@ -152738,9 +152738,9 @@
       "question": "有關前列腺癌的診斷，下列何者效果不佳 ？",
       "options": {
         "A": "血清前列腺特異性抗原（PSA）測定",
-        "B": "111 In-capromab pendetide SPECT",
-        "C": "-choline PET",
-        "D": "11"
+        "B": "¹¹¹In-capromab pendetide SPECT",
+        "C": "¹⁸F-FDG PET",
+        "D": "¹¹C-choline PET"
       },
       "answer": "C",
       "explanation": ""
@@ -211126,25 +211126,22 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 41,
-      "question": "核醫藥物99mTc-DTPA 可用於測量腎絲球過濾率，DTPA 的分子結構為下列何者？ A. B. C. D.",
+      "question": "核醫藥物 99mTc-DTPA 可用於測量腎絲球過濾率，DTPA 的分子結構為下列何者？",
       "options": {
-        "A": "42.嗜鉻細胞瘤（Pheochromocytoma）患者",
-        "B": "者的",
-        "C": "131I-MIBG 及",
-        "D": "18F-FDG 全身造影影像如圖所"
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
       },
       "answer": "D",
       "explanation": "",
-      "images": [
-        "/question-images/radiology_2281_0.webp",
-        "/question-images/radiology_2281_1.webp",
-        "/question-images/radiology_2281_2.webp",
-        "/question-images/radiology_2281_3.webp",
-        "/question-images/radiology_2281_4.webp",
-        "/question-images/radiology_2281_5.webp",
-        "/question-images/radiology_2281_6.webp",
-        "/question-images/radiology_2281_7.webp"
-      ]
+      "images": [],
+      "option_images": {
+        "A": "/question-images/radiology_110100_q41_A.webp",
+        "B": "/question-images/radiology_110100_q41_B.webp",
+        "C": "/question-images/radiology_110100_q41_C.webp",
+        "D": "/question-images/radiology_110100_q41_D.webp"
+      }
     },
     {
       "id": 2282,

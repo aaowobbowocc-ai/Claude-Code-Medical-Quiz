@@ -16,8 +16,8 @@ const CACHE_TTL_MS = 24 * 60 * 60 * 1000  // 24h
 // v7 (2026-06-14): 全平台 1648 題「承上題」併入題組情境，隨機練習可單獨作答，強制刷新
 // v8 (2026-06-28): 本季大量題目修正（含護理產兒科整卷答案校正、律師複選、多份含圖題補圖等），強制刷新讓舊快取使用者收到
 // v9 (2026-07-05): 語言治療師 ~1044 題選項還原、營養師 163 題選項重複修正、醫檢/醫師大量答案與補圖，強制刷新
-// v18 (2026-07-11): 批次修16題(醫師#75/#52/#100/#98、護理Disulfiram/#13/#3/#25/genogram、醫檢#57/#61/#24)
-const CACHE_VERSION = 18
+// v19 (2026-07-12): 批次修17題(護理103-1 3題答案/Alzheimer/Ibuprofen/承上/ECG補圖、醫檢CRP/anion gap/NREM2送分、放射prostate/DTPA補圖、醫師gastritis/承15題)
+const CACHE_VERSION = 19
 const DB_NAME = 'questions-cache'
 const DB_STORE = 'exams'
 

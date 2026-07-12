@@ -43449,12 +43449,12 @@
     "paper_id": "paper1",
     "stage_id": 3,
     "number": 47,
-    "question": "下列何種疾病有腦皮質萎縮且顯微鏡觀察下有神經斑塊（plaques）及神經纖維糾結（neurofibrillary tangles）",
+    "question": "下列何種疾病有腦皮質萎縮且顯微鏡觀察下有神經斑塊（plaques）及神經纖維糾結（neurofibrillary tangles）的病理變化？",
     "options": {
-      "A": "的病理變化？",
-      "B": "巴金森氏病（Parkinson’s disease）",
-      "C": "阿茲海默症（Alzheimer disease）",
-      "D": "亨丁頓舞蹈症（Huntington disease） 運動神經元疾病（motor neuron disease）"
+      "A": "巴金森氏病（Parkinson’s disease）",
+      "B": "阿茲海默症（Alzheimer disease）",
+      "C": "亨丁頓舞蹈症（Huntington disease）",
+      "D": "運動神經元疾病（motor neuron disease）"
     },
     "answer": "B",
     "explanation": ""
@@ -58042,12 +58042,12 @@
     "subject_name": "基本護理學",
     "stage_id": 6,
     "number": 22,
-    "question": "魏小弟，5歲，醫囑「Ibuprofen 10 mg/tab 0.5 #",
+    "question": "魏小弟，5歲，醫囑「Ibuprofen 10 mg/tab 0.5# p.o. t.i.d.」。Ibuprofen 用於2～7歲孩童的安全劑量為10～15 mg/day，須分次給予。關於此醫囑之執行，下列敘述何者最適當？",
     "options": {
-      "A": "p.o. t.i.d.」。 Ibuprofen 用於2～7歲孩童的安全劑量",
-      "B": "為10～15 mg/day，須分次給予。關於此醫囑之執行，下列敘述何者最適當？",
-      "C": "醫囑沒問題，依醫囑給藥 對於單次給藥之劑量提出質疑",
-      "D": "對於每日給藥之總劑量提出質疑 拒絕給藥，因為劑量未納入體重因素"
+      "A": "醫囑沒問題，依醫囑給藥",
+      "B": "對於單次給藥之劑量提出質疑",
+      "C": "對於每日給藥之總劑量提出質疑",
+      "D": "拒絕給藥，因為劑量未納入體重因素"
     },
     "answer": "A",
     "explanation": ""
@@ -90870,7 +90870,7 @@
     "subject_name": "護理行政",
     "stage_id": 7,
     "number": 60,
-    "question": "主任上述之建議是屬於下列何種建立護理專業形象之作為？",
+    "question": "【情況題】某醫院護理部主任拿著早報進辦公室，指著一則新聞報導：「南部某縣市整條檳榔街的檳榔西施有一半竟然都穿著護理師制服」。主任主張要求護理師護士公會利用護師節邀請總統或衛生福利部部長出席勉勵護理師，並廣邀媒體報導之。主任上述之建議是屬於下列何種建立護理專業形象之作為？",
     "options": {
       "A": "提升護理專業文化素養",
       "B": "鼓勵護理師進修，培養專業能力",
@@ -226170,8 +226170,9 @@
       "C": "持續按時服用肺結核藥物達6個月",
       "D": "連續2次皮膚試驗(PPD)為陽性反應"
     },
-    "answer": "C",
-    "explanation": ""
+    "answer": "B",
+    "explanation": "",
+    "orig_answer": "C"
   },
   {
     "id": 114100021691,
@@ -227271,8 +227272,9 @@
       "C": "認知行為治療是培養個案有效的自我管理技巧,不斷的在生活裡學習",
       "D": "認知行為的改變需要反覆練習"
     },
-    "answer": "C",
-    "explanation": ""
+    "answer": "B",
+    "explanation": "",
+    "orig_answer": "C"
   },
   {
     "id": 114100021746,
@@ -227311,8 +227313,9 @@
       "C": "最近生物學發現腦部與暴力行為相關,尤其是枕葉",
       "D": "病房活動暴力的產生通常是在結構較彈性的病房"
     },
-    "answer": "A",
-    "explanation": ""
+    "answer": "B",
+    "explanation": "",
+    "orig_answer": "A"
   },
   {
     "id": 114100021748,
@@ -239355,7 +239358,10 @@
       "D": "104"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "images": [
+      "/question-images/nursing_113180_basicmed_q17_0.webp"
+    ]
   },
   {
     "id": "113180_basic_medicine_18",

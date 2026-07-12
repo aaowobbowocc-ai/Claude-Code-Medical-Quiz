@@ -21239,10 +21239,10 @@
     "number": 70,
     "question": "下列有關陰離子差（anion gap）的敘述，何者錯誤？",
     "options": {
-      "A": "公式是Na++K+-(Cl-+HCO3",
-      "B": "-)",
-      "C": "可用來評估代謝性鹼中毒",
-      "D": "可用來做電解質測定之品管"
+      "A": "公式是Na⁺＋K⁺－(Cl⁻＋HCO₃⁻)",
+      "B": "可用來評估代謝性鹼中毒",
+      "C": "可用來做電解質測定之品管",
+      "D": "腎衰竭時上升"
     },
     "answer": "B",
     "explanation": ""
@@ -164034,8 +164034,8 @@
     "options": {
       "A": "α1-抗胰蛋白酶（α1-Antitrypsin）",
       "B": "纖維蛋白原（Fibrinogen）",
-      "C": "反應蛋白（C-reactive protein）",
-      "D": "C反應蛋⽩（C-reactive protein）"
+      "C": "補體3（C3）",
+      "D": "C反應蛋白（C-reactive protein）"
     },
     "answer": "D",
     "explanation": ""
@@ -266789,10 +266789,13 @@
       "C": "α波消失，腦波背景波呈現θ慢波，頭頂中央位置出現頭頂銳波，睡眠紡錘波和K複合波",
       "D": "每30秒的腦波出現20～50％的δ慢波，K複合波和部分的睡眠紡錘波"
     },
-    "answer": "C",
+    "answer": "送分",
     "explanation": "",
     "original_answer": "C",
-    "correction_note": "第12題更正為 A,B,D（原答案 C）"
+    "correction_note": "第12題更正為 A,B,D（原答案 C）",
+    "orig_answer": "C",
+    "disputed": true,
+    "disputed_note": "考選部更正：第12題一律給分。"
   },
   {
     "id": 4807,

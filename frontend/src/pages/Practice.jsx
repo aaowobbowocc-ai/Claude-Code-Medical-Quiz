@@ -1054,9 +1054,12 @@ export default function Practice() {
   const location = useLocation()
   // 錯題練習：從錯題夾帶入題組 → 跳過設定頁直接作答
   const wrongQs = Array.isArray(location.state?.wrongPractice) ? location.state.wrongPractice : null
-  const [phase, setPhase]   = useState(wrongQs?.length ? 'game' : 'setup')  // setup | game | results
-  const [config, setConfig] = useState(wrongQs?.length
-    ? { presetQuestions: wrongQs, stage: 0, count: wrongQs.length, diff: 'easy', wrongMode: true, keepOnCorrect: !!location.state?.keepOnCorrect }
+  // 關鍵字/搜尋出題：帶入題組直接作答（非錯題模式）
+  const presetQs = Array.isArray(location.state?.presetPractice) ? location.state.presetPractice : null
+  const initQs = wrongQs || presetQs
+  const [phase, setPhase]   = useState(initQs?.length ? 'game' : 'setup')  // setup | game | results
+  const [config, setConfig] = useState(initQs?.length
+    ? { presetQuestions: initQs, stage: 0, count: initQs.length, diff: 'easy', wrongMode: !!wrongQs, keepOnCorrect: !!location.state?.keepOnCorrect }
     : null)
   const [result, setResult] = useState(null)
   const examId = usePlayerStore(s => s.exam) || 'doctor1'

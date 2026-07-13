@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { getRegistry } from '../config/examRegistry'
 import Footer from '../components/Footer'
 import { formatYearSession } from '../utils/sessionLabel'
+import { usePlayerStore } from '../store/gameStore'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -26,6 +27,7 @@ export default function Search() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [expanded, setExpanded] = useState(new Set())
+  const [practiceCount, setPracticeCount] = useState(10)   // 智慧出題題數（回饋 胖呆）
   const reqIdRef = useRef(0)
   const inputRef = useRef(null)
 
@@ -119,6 +121,32 @@ export default function Search() {
     navigate(`/${examId}/`)
   }
 
+  // 智慧出題：把搜尋結果組成一份練習卷（回饋 胖呆）
+  const parseHit = (h) => {
+    const lines = (h.content || '').split('\n').filter(Boolean)
+    const stem = lines[0] || ''
+    const options = {}
+    for (const l of lines.slice(1)) {
+      const m = l.match(/^\s*([A-D])[.．、]\s*(.*)$/)
+      if (m) options[m[1]] = m[2].trim()
+    }
+    return {
+      id: h.id, question: stem, options, answer: h.answer,
+      subject_name: h.subject_name, subject: h.subject_name,
+      roc_year: h.roc_year, session: h.session, number: h.number, examId: h.exam_id,
+    }
+  }
+  const startKeywordPractice = () => {
+    const qs = hits.slice(0, practiceCount).map(parseHit)
+      .filter(q => Object.keys(q.options).length >= 2 && q.answer)
+    if (!qs.length) return
+    const exam = examFilter || hits[0]?.exam_id
+    if (exam) usePlayerStore.getState().setExam?.(exam)
+    navigate('/practice', { state: { presetPractice: qs, presetLabel: `「${debounced}」練習` } })
+  }
+  const practiceable = hits.filter(h => h.answer).length
+  const usable = Math.min(practiceCount, practiceable)
+
   return (
     <div className="flex flex-col min-h-dvh bg-medical-ice">
       {/* Header */}
@@ -176,6 +204,31 @@ export default function Search() {
         )}
         {error && <p className="text-red-500">{error}</p>}
       </div>
+
+      {/* 智慧出題：把搜尋結果組成練習卷（回饋 胖呆）*/}
+      {!loading && practiceable > 0 && (
+        <div className="mx-4 mb-2 p-3 rounded-2xl bg-medical-blue/5 border border-medical-blue/20">
+          <p className="text-xs font-bold text-medical-blue mb-2">🎯 用這些題目出一份練習卷</p>
+          <div className="flex items-center gap-2">
+            <div className="flex gap-1.5">
+              {[10, 20, 30].map(n => {
+                const disabled = n > practiceable && n !== 10
+                return (
+                  <button key={n} onClick={() => setPracticeCount(n)} disabled={disabled}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold border active:scale-95 transition-all ${practiceCount === n ? 'bg-medical-blue text-white border-medical-blue' : 'bg-white text-gray-600 border-gray-200'} ${disabled ? 'opacity-30' : ''}`}>
+                    {n} 題
+                  </button>
+                )
+              })}
+            </div>
+            <button onClick={startKeywordPractice}
+              className="ml-auto px-4 py-2 rounded-xl bg-medical-blue text-white text-xs font-bold shadow active:scale-95">
+              開始練習（{usable} 題）
+            </button>
+          </div>
+          <p className="text-[10px] text-gray-400 mt-1.5">依目前搜尋條件（含年度篩選）取前 {usable} 題作答，完成後可看答對率與錯題</p>
+        </div>
+      )}
 
       {/* Results */}
       <div className="px-4 pb-6 space-y-2 flex-1">

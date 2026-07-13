@@ -4,6 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import { useAccuracyStore } from '../store/accuracyStore'
 import { getExamConfig, getAllTagNames, getStageStyle } from '../config/examRegistry'
 import { getSubjectColor } from '../utils/subjectColors'
+import { classifySystem, systemColor } from '../utils/systemTopics'
 import { getWrong, removeWrong, clearWrong, WRONG_BANK_MAX, persistRehydrated } from '../lib/wrongBank'
 import { getFlags, removeFlag, clearFlags } from '../lib/flagBank'
 import { rehydrateWrong } from '../lib/cdnQuestions'
@@ -352,6 +353,37 @@ export default function Weakness() {
                       ))}
                     </div>
                     <p className="text-[11px] text-gray-400 mt-2.5">最常錯：<span className="font-bold text-red-500">{rows[0][0]}</span>（{rows[0][1]} 題）— 建議優先加強</p>
+                  </div>
+                )
+              })()}
+
+              {/* 系統/主題錯誤分布（回饋 胖呆）*/}
+              {(() => {
+                const dist = {}
+                for (const q of wrongQuestions) {
+                  const s = classifySystem(q)
+                  if (!s) continue
+                  dist[s.key] = (dist[s.key] || 0) + 1
+                }
+                const rows = Object.entries(dist).sort((a, b) => b[1] - a[1])
+                if (rows.length < 2) return null
+                const max = rows[0][1]
+                const classified = rows.reduce((a, [, n]) => a + n, 0)
+                return (
+                  <div className="bg-white rounded-2xl border border-gray-100 px-4 py-3 shadow-sm mb-3">
+                    <p className="text-sm font-bold text-medical-dark mb-2.5">🧠 系統／主題錯誤分布</p>
+                    <div className="flex flex-col gap-2">
+                      {rows.map(([name, n]) => (
+                        <div key={name} className="flex items-center gap-2">
+                          <span className="text-xs text-gray-600 w-20 shrink-0 truncate text-right">{name}</span>
+                          <div className="flex-1 h-4 bg-gray-100 rounded-full overflow-hidden">
+                            <div className="h-full rounded-full transition-all" style={{ width: `${(n / max) * 100}%`, background: systemColor(name) }} />
+                          </div>
+                          <span className="text-xs font-bold text-gray-500 w-6 shrink-0">{n}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-[11px] text-gray-400 mt-2.5">最常錯的主題是 <span className="font-bold text-red-500">{rows[0][0]}</span>（依題幹關鍵字自動歸類，僅供參考）</p>
                   </div>
                 )
               })()}

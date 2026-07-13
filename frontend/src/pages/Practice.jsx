@@ -904,8 +904,8 @@ function PracticeResults({ result, config, onRestart, onHome }) {
     // 練習收 FEE_PER_Q(4)/題 虛擬成本（開始時扣）。結算依成績分級退幣，
     // 級距「不疊加、取最高」：基礎 1／及格(≥60%) 2／優秀(≥80%) 3／全對 4（幣/題）。
     // 退幣 = 總題數 × 級距費率，只有全對 4/題 才能打平，其餘淨虧。
-    // 錯題練習未收費 → 不發金幣（避免免費刷幣）；一般練習照發
-    const reward = config.wrongMode ? 0 : total * rewardRatePerQ(pct)
+    // 錯題練習/關鍵字出題未收費 → 不發金幣（避免免費刷幣）；一般練習照發
+    const reward = (config.wrongMode || config.noReward) ? 0 : total * rewardRatePerQ(pct)
     if (reward) addCoins(reward)
     addExp(correct * 10)
     // 整理錯題（含 myAnswer）供歷史紀錄檢討 + 錯題夾
@@ -1059,7 +1059,7 @@ export default function Practice() {
   const initQs = wrongQs || presetQs
   const [phase, setPhase]   = useState(initQs?.length ? 'game' : 'setup')  // setup | game | results
   const [config, setConfig] = useState(initQs?.length
-    ? { presetQuestions: initQs, stage: 0, count: initQs.length, diff: 'easy', wrongMode: !!wrongQs, keepOnCorrect: !!location.state?.keepOnCorrect }
+    ? { presetQuestions: initQs, stage: 0, count: initQs.length, diff: 'easy', wrongMode: !!wrongQs, keepOnCorrect: !!location.state?.keepOnCorrect, noReward: !!presetQs }
     : null)
   const [result, setResult] = useState(null)
   const examId = usePlayerStore(s => s.exam) || 'doctor1'

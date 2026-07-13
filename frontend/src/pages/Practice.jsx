@@ -1059,7 +1059,7 @@ export default function Practice() {
   const initQs = wrongQs || presetQs
   const [phase, setPhase]   = useState(initQs?.length ? 'game' : 'setup')  // setup | game | results
   const [config, setConfig] = useState(initQs?.length
-    ? { presetQuestions: initQs, stage: 0, count: initQs.length, diff: 'easy', wrongMode: !!wrongQs, keepOnCorrect: !!location.state?.keepOnCorrect, noReward: !!presetQs }
+    ? { presetQuestions: initQs, stage: 0, count: initQs.length, diff: 'easy', wrongMode: !!wrongQs, keepOnCorrect: !!location.state?.keepOnCorrect }
     : null)
   const [result, setResult] = useState(null)
   const examId = usePlayerStore(s => s.exam) || 'doctor1'

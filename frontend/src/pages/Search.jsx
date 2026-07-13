@@ -140,6 +140,14 @@ export default function Search() {
     const qs = hits.slice(0, practiceCount).map(parseHit)
       .filter(q => Object.keys(q.options).length >= 2 && q.answer)
     if (!qs.length) return
+    // 與自主練習一致：開始扣 4🪙/題（依成績退幣，全對可全額賺回）
+    const FEE_PER_Q = 4
+    const fee = qs.length * FEE_PER_Q
+    const { spendCoins, coins } = usePlayerStore.getState()
+    if (!spendCoins(fee)) {
+      if (confirm(`金幣不足！本次練習需要 ${fee} 金幣（${qs.length} 題 × ${FEE_PER_Q}，全對可全額賺回），目前只有 ${coins} 金幣\n\n要去賺金幣嗎？`)) navigate('/?reward=1')
+      return
+    }
     const exam = examFilter || hits[0]?.exam_id
     if (exam) usePlayerStore.getState().setExam?.(exam)
     navigate('/practice', { state: { presetPractice: qs, presetLabel: `「${debounced}」練習` } })
@@ -223,10 +231,10 @@ export default function Search() {
             </div>
             <button onClick={startKeywordPractice}
               className="ml-auto px-4 py-2 rounded-xl bg-medical-blue text-white text-xs font-bold shadow active:scale-95">
-              開始練習（{usable} 題）
+              開始練習（{usable} 題 · 扣 {usable * 4} 🪙）
             </button>
           </div>
-          <p className="text-[10px] text-gray-400 mt-1.5">依目前搜尋條件（含年度篩選）取前 {usable} 題作答，完成後可看答對率與錯題</p>
+          <p className="text-[10px] text-gray-400 mt-1.5">依目前搜尋條件（含年度篩選）取前 {usable} 題作答，扣 4🪙/題、依成績退幣（全對全額賺回），完成後可看答對率與錯題</p>
         </div>
       )}
 

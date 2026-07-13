@@ -121,6 +121,20 @@ export default function Favorites() {
 
   const questions = getFolderQuestions(activeTab)
 
+  // 練習此收藏夾（回饋 楊迪欣：現在點開就看到答案，想能作答）— 對齊自主練習計費
+  const startFolderPractice = () => {
+    const qs = questions.filter(q => q.options && Object.keys(q.options).length >= 2 && q.answer)
+    if (!qs.length) return
+    const FEE_PER_Q = 4
+    const fee = qs.length * FEE_PER_Q
+    const { spendCoins, coins } = usePlayerStore.getState()
+    if (!spendCoins(fee)) {
+      if (confirm(`金幣不足！練習此收藏夾需要 ${fee} 金幣（${qs.length} 題 × ${FEE_PER_Q}，全對可全額賺回），目前只有 ${coins} 金幣\n\n要去賺金幣嗎？`)) navigate('/?reward=1')
+      return
+    }
+    navigate('/practice', { state: { presetPractice: qs, presetLabel: `收藏「${activeTab}」練習` } })
+  }
+
   const handleRename = () => {
     if (editValue.trim() && editValue.trim() !== editing) {
       renameFolder(editing, editValue.trim())
@@ -176,6 +190,11 @@ export default function Favorites() {
           </div>
         ) : (
           <>
+            <button onClick={startFolderPractice}
+              className="w-full py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95"
+              style={{ background: 'linear-gradient(135deg,#3b82f6,#2563eb)' }}>
+              ✍️ 練習此收藏夾（{questions.length} 題 · 扣 {questions.length * 4} 🪙）
+            </button>
             <div className="flex justify-between items-center">
               <button onClick={() => setGroupBySubj(v => !v)}
                 className={`text-xs font-bold px-3 py-1.5 rounded-xl border active:scale-95 transition-all ${groupBySubj ? 'bg-teal-500 text-white border-teal-500' : 'bg-white text-teal-600 border-teal-200'}`}>

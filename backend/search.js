@@ -145,7 +145,12 @@ function registerSearchRoutes(app, examData) {
     }
     const filters = []
     if (examFilter) filters.push(`exam_id:ANY("${String(examFilter).replace(/"/g, '')}")`)
-    if (yearFilter) filters.push(`roc_year:ANY("${String(yearFilter).replace(/"/g, '')}")`)
+    if (yearFilter) {
+      // 支援單一年份或年份陣列（前端年份範圍複選 → roc_year:ANY("110","111",...)）
+      const years = (Array.isArray(yearFilter) ? yearFilter : [yearFilter])
+        .map(y => `"${String(y).replace(/"/g, '')}"`).filter(Boolean)
+      if (years.length) filters.push(`roc_year:ANY(${years.join(',')})`)
+    }
     try {
       const resp = await searchRaw(q.trim().slice(0, 500), {
         pageSize: Math.min(Math.max(parseInt(limit) || 20, 1), 50),

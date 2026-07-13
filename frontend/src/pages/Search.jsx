@@ -21,7 +21,16 @@ export default function Search() {
   const [query, setQuery] = useState('')
   const [debounced, setDebounced] = useState('')
   const [examFilter, setExamFilter] = useState('')
-  const [yearFilter, setYearFilter] = useState('')
+  const [yearFrom, setYearFrom] = useState('')   // 年份範圍（回饋 胖呆：複選 110-115）
+  const [yearTo, setYearTo] = useState('')
+  const yearList = useMemo(() => {
+    if (!yearFrom && !yearTo) return null
+    const a = parseInt(yearFrom || yearTo, 10), b = parseInt(yearTo || yearFrom, 10)
+    const lo = Math.min(a, b), hi = Math.max(a, b)
+    const arr = []
+    for (let y = lo; y <= hi; y++) arr.push(String(y))
+    return arr.length ? arr : null
+  }, [yearFrom, yearTo])
   const [hits, setHits] = useState([])
   const [totalSize, setTotalSize] = useState(0)
   const [loading, setLoading] = useState(false)
@@ -80,7 +89,7 @@ export default function Search() {
             q: debounced,
             limit: 30,
             examFilter: examFilter || undefined,
-            yearFilter: yearFilter || undefined,
+            yearFilter: yearList || undefined,
           }),
         })
         const data = await r.json()
@@ -104,7 +113,7 @@ export default function Search() {
         if (myReqId === reqIdRef.current) setLoading(false)
       }
     })()
-  }, [debounced, examFilter, yearFilter])
+  }, [debounced, examFilter, yearList])
 
   // Auto-focus input on mount for instant typing
   useEffect(() => { inputRef.current?.focus() }, [])
@@ -185,13 +194,28 @@ export default function Search() {
               <option key={e.id} value={e.id}>{e.name}</option>
             ))}
           </select>
-          <select value={yearFilter} onChange={e => setYearFilter(e.target.value)}
-                  className="w-28 px-3 py-2 rounded-xl border border-gray-200 bg-white text-xs">
-            <option value="">所有年度</option>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-gray-400 shrink-0">年度範圍</span>
+          <select value={yearFrom} onChange={e => setYearFrom(e.target.value)}
+                  className="flex-1 px-3 py-2 rounded-xl border border-gray-200 bg-white text-xs">
+            <option value="">起始年</option>
             {Array.from({ length: 16 }, (_, i) => 100 + i).map(y => (
               <option key={y} value={y}>民國 {y}</option>
             ))}
           </select>
+          <span className="text-xs text-gray-400">～</span>
+          <select value={yearTo} onChange={e => setYearTo(e.target.value)}
+                  className="flex-1 px-3 py-2 rounded-xl border border-gray-200 bg-white text-xs">
+            <option value="">結束年</option>
+            {Array.from({ length: 16 }, (_, i) => 100 + i).map(y => (
+              <option key={y} value={y}>民國 {y}</option>
+            ))}
+          </select>
+          {(yearFrom || yearTo) && (
+            <button onClick={() => { setYearFrom(''); setYearTo('') }}
+                    className="text-xs text-gray-400 shrink-0 active:scale-95">清除</button>
+          )}
         </div>
       </div>
 

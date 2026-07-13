@@ -118,12 +118,14 @@ export default function Favorites() {
   const [editing, setEditing] = useState(null) // folder name being edited
   const [editValue, setEditValue] = useState('')
   const [groupBySubj, setGroupBySubj] = useState(false)   // 收藏依科目分組（回饋 胖呆）
+  const [practiceCount, setPracticeCount] = useState(0)   // 練習題數，0=全部（回饋 胖呆）
 
   const questions = getFolderQuestions(activeTab)
 
   // 練習此收藏夾（回饋 楊迪欣：現在點開就看到答案，想能作答）— 對齊自主練習計費
   const startFolderPractice = () => {
-    const qs = questions.filter(q => q.options && Object.keys(q.options).length >= 2 && q.answer)
+    let qs = questions.filter(q => q.options && Object.keys(q.options).length >= 2 && q.answer)
+    if (practiceCount > 0) qs = qs.slice(0, practiceCount)
     if (!qs.length) return
     const FEE_PER_Q = 4
     const fee = qs.length * FEE_PER_Q
@@ -190,11 +192,31 @@ export default function Favorites() {
           </div>
         ) : (
           <>
-            <button onClick={startFolderPractice}
-              className="w-full py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95"
-              style={{ background: 'linear-gradient(135deg,#3b82f6,#2563eb)' }}>
-              ✍️ 練習此收藏夾（{questions.length} 題 · 扣 {questions.length * 4} 🪙）
-            </button>
+            {questions.length > 10 && (
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <span className="text-xs text-gray-400 mr-0.5">題數</span>
+                {[10, 30, 50, 100].filter(n => n < questions.length).map(n => (
+                  <button key={n} onClick={() => setPracticeCount(n)}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-bold border active:scale-95 ${practiceCount === n ? 'bg-medical-blue text-white border-medical-blue' : 'bg-white text-gray-600 border-gray-200'}`}>
+                    {n}
+                  </button>
+                ))}
+                <button onClick={() => setPracticeCount(0)}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-bold border active:scale-95 ${practiceCount === 0 ? 'bg-medical-blue text-white border-medical-blue' : 'bg-white text-gray-600 border-gray-200'}`}>
+                  全部 ({questions.length})
+                </button>
+              </div>
+            )}
+            {(() => {
+              const n = practiceCount > 0 ? Math.min(practiceCount, questions.length) : questions.length
+              return (
+                <button onClick={startFolderPractice}
+                  className="w-full py-3 rounded-2xl font-bold text-white text-sm shadow active:scale-95"
+                  style={{ background: 'linear-gradient(135deg,#3b82f6,#2563eb)' }}>
+                  ✍️ 練習此收藏夾（{n} 題 · 扣 {n * 4} 🪙）
+                </button>
+              )
+            })()}
             <div className="flex justify-between items-center">
               <button onClick={() => setGroupBySubj(v => !v)}
                 className={`text-xs font-bold px-3 py-1.5 rounded-xl border active:scale-95 transition-all ${groupBySubj ? 'bg-teal-500 text-white border-teal-500' : 'bg-white text-teal-600 border-teal-200'}`}>

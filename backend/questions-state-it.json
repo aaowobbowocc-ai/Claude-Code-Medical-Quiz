@@ -9960,7 +9960,7 @@
       "subject_name": "計算機原理、網路概論",
       "stage_id": 0,
       "number": 9,
-      "question": "代數函數X=A � B � +AB為下列 何種邏輯閘(Gate)？",
+      "question": "代數函數X=A' B' +AB為下列 何種邏輯閘(Gate)？",
       "options": {
         "A": "NAND",
         "B": "NOR",
@@ -10000,10 +10000,10 @@
       "subject_name": "計算機原理、網路概論",
       "stage_id": 0,
       "number": 11,
-      "question": "下列何者為布林函數ABC+A � BC+ABC � +A � BC � +B � 簡化之結果？",
+      "question": "下列何者為布林函數ABC+A' BC+ABC' +A' BC' +B' 簡化之結果？",
       "options": {
         "A": "1",
-        "B": "A � C+B",
+        "B": "A' C+B",
         "C": "B",
         "D": "C"
       },

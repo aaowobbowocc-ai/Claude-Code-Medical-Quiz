@@ -32167,15 +32167,18 @@
     "subject_name": "社區護理學",
     "stage_id": 13,
     "number": 50,
-    "question": "下表為幸福社區某年的年中人口資料：",
+    "question": "下表為幸福社區某年的年中人口資料（詳見下圖）。遷入8、遷出12、出生9、死亡5、活產8。該社區之依賴人口指數（Dependent Index）是：",
     "options": {
-      "A": "總計（人數）",
-      "B": "男（人數）",
-      "C": "女（人數）",
-      "D": "0-4 歲"
+      "A": "17.75%",
+      "B": "20.89%",
+      "C": "34.05%",
+      "D": "36.94%"
     },
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "images": [
+      "/question-images/nursing_101110_q50_0.webp"
+    ]
   },
   {
     "id": 117685,
@@ -43912,10 +43915,10 @@
     "number": 69,
     "question": "下列何者並非後天性免疫（adaptive immunity）的功能？",
     "options": {
-      "A": "毒殺型T 淋巴細胞（cytotoxic T lymphocyte）以穿孔素（perforin）及granzymes 攻擊標的細胞（target cell）",
-      "B": "抗體透過中和反應（neutralization）、調理作用（opsonization），以及補體活化（complement activation）",
-      "C": "來對抗微生物",
-      "D": "輔助型T 細胞（helper T lymphocyte）分泌細胞激素，刺激巨噬細胞以增加細胞內毒殺被吞噬之微生物的 活性 自然殺手細胞辨識無MHC class I 之標的細胞並予以毒殺"
+      "A": "毒殺型T淋巴細胞（cytotoxic T lymphocyte）以穿孔素（perforin）及granzymes攻擊標的細胞（target cell）",
+      "B": "抗體透過中和反應（neutralization）、調理作用（opsonization）以及補體活化（complement activation）來對抗微生物",
+      "C": "輔助型T細胞（helper T lymphocyte）分泌細胞激素，刺激巨噬細胞以增加細胞內毒殺被吞噬之微生物的活性",
+      "D": "自然殺手細胞辨識無MHC class I之標的細胞並予以毒殺"
     },
     "answer": "D",
     "explanation": ""
@@ -225612,8 +225615,9 @@
       "C": "內科無菌並不適用於肺結核或腸病毒患者之照護",
       "D": "替患者灌腸或擦澡時,不宜採用內科無菌技術"
     },
-    "answer": "C",
-    "explanation": ""
+    "answer": "A",
+    "explanation": "",
+    "orig_answer": "C"
   },
   {
     "id": 114100021663,

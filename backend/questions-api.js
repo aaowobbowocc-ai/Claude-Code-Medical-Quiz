@@ -135,8 +135,11 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
         )
       );
     }
-    // 自主練習年份篩選（回饋）：year 為民國年字串，空=全部年份
-    if (year) pool = pool.filter(q => String(q.roc_year) === String(year));
+    // 自主練習年份篩選（回饋）：year 可為單一或逗號多年份（複選），空=全部年份
+    if (year) {
+      const ys = String(year).split(',').map(s => s.trim()).filter(Boolean);
+      if (ys.length) pool = pool.filter(q => ys.includes(String(q.roc_year)));
+    }
     // Cap target — a mock exam is at most 200 Qs; bigger requests just waste
     // bandwidth shuffling/serializing the whole pool.
     const target = Math.min(200, Math.max(1, parseInt(limit != null ? limit : count) || 50));

@@ -266,8 +266,11 @@ export async function getRandomQuestions(examId, { stageId, count = 50, stages =
     )
   }
 
-  // 自主練習年份篩選（回饋）：year 為民國年字串，空=全部
-  if (year) pool = pool.filter(q => String(q.roc_year) === String(year))
+  // 自主練習年份篩選（回饋）：year 可為單一或逗號多年份字串（複選），空=全部
+  if (year) {
+    const ys = String(year).split(',').map(s => s.trim()).filter(Boolean)
+    if (ys.length) pool = pool.filter(q => ys.includes(String(q.roc_year)))
+  }
 
   const target = parseInt(count) || 50
   const picked = shuffle(pool).slice(0, target)

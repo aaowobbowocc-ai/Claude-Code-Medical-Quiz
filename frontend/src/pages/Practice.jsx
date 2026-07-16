@@ -151,7 +151,11 @@ function SetupScreen({ onStart, onBack }) {
   const [sourceMode, setSourceMode] = useState(() => getSourceMode(examType))
   const [meta, setMeta] = useState(() => cachedMeta || null)
   const [showModeInfo, setShowModeInfo] = useState(false)
-  const [year, setYear] = useState(last.year ?? '')   // '' = 全部年份
+  const [years, setYears] = useState(Array.isArray(last.years) ? last.years : (last.year ? [String(last.year)] : []))   // [] = 全部年份（複選，回饋 胖呆）
+  const toggleYear = (y) => {
+    const s = String(y)
+    setYears(prev => prev.includes(s) ? prev.filter(x => x !== s) : [...prev, s])
+  }
   const [availYears, setAvailYears] = useState([])
   const [online, setOnline] = useState(() => (typeof navigator !== 'undefined' ? navigator.onLine : true))
 
@@ -179,7 +183,7 @@ function SetupScreen({ onStart, onBack }) {
   // 載入可選年份（自主練習年份篩選）— 換考試時重置選擇
   useEffect(() => {
     let cancelled = false
-    setYear('')
+    setYears([])
     getExamYears(examType).then(list => {
       if (cancelled) return
       const ys = [...new Set((list || []).map(e => e.roc_year).filter(Boolean))]
@@ -306,17 +310,17 @@ function SetupScreen({ onStart, onBack }) {
         {/* Year filter（自主練習分年份，回饋） */}
         {availYears.length > 0 && (
           <div>
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2.5">年份（可選）</p>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2.5">年份（可複選）</p>
             <div className="flex flex-wrap gap-2">
-              <button onClick={() => setYear('')}
+              <button onClick={() => setYears([])}
                       className={`px-3 py-2 rounded-xl text-sm font-bold border transition-all active:scale-95
-                        ${year === '' ? 'bg-medical-blue text-white border-medical-blue shadow' : 'bg-white text-gray-600 border-gray-100 shadow-sm'}`}>
+                        ${years.length === 0 ? 'bg-medical-blue text-white border-medical-blue shadow' : 'bg-white text-gray-600 border-gray-100 shadow-sm'}`}>
                 全部
               </button>
               {availYears.map(y => (
-                <button key={y} onClick={() => setYear(String(y))}
+                <button key={y} onClick={() => toggleYear(y)}
                         className={`px-3 py-2 rounded-xl text-sm font-bold border transition-all active:scale-95
-                          ${year === String(y) ? 'bg-medical-blue text-white border-medical-blue shadow' : 'bg-white text-gray-600 border-gray-100 shadow-sm'}`}>
+                          ${years.includes(String(y)) ? 'bg-medical-blue text-white border-medical-blue shadow' : 'bg-white text-gray-600 border-gray-100 shadow-sm'}`}>
                   {y}
                 </button>
               ))}
@@ -443,7 +447,7 @@ function SetupScreen({ onStart, onBack }) {
             const stageName = sel.includes(0) || picked.length === 0
               ? '全部科目'
               : picked.length === 1 ? picked[0].name : `${picked[0].name} 等 ${picked.length} 科`
-            saveLastConfig({ stage: sel, diff, count, customTime, customCount, year })
+            saveLastConfig({ stage: sel, diff, count, customTime, customCount, years })
             onStart({
               stage: stageParam,
               diff,
@@ -451,7 +455,7 @@ function SetupScreen({ onStart, onBack }) {
               customTime: isCustom ? customTime : null,
               stageName,
               sourceMode,
-              year,
+              year: years.join(','),
             })
           }}
           className="w-full py-5 rounded-2xl font-bold text-xl text-white shadow-lg active:scale-95 transition-transform grad-cta"

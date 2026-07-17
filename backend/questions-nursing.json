@@ -6994,7 +6994,7 @@
     "subject_name": "精神科護理學",
     "stage_id": 12,
     "number": 30,
-    "question": "根據王小弟母親的描述，王小弟可能罹患下列那一種兒童精神疾病？",
+    "question": "【情況】王小弟今年4歲，母親帶至門診求治，表示王小弟從出生至今語言發展遲緩、不太會說話，且從不和別的小朋友玩耍，經常喜歡一個人旋轉，有時會無故一直搥打自己的頭或以頭撞牆，造成頭部、額頭多處傷痕及淤傷。根據王小弟母親的描述，王小弟可能罹患下列那一種兒童精神疾病？",
     "options": {
       "A": "注意力缺陷過動症（ADHD）",
       "B": "行為障礙（conduct disorder）",
@@ -21957,16 +21957,19 @@
     "subject_name": "產科護理學",
     "stage_id": 10,
     "number": 38,
-    "question": "吳女士接受 meperidine 注射 2 小時後,子宮頸口開 5 公分,TPR:36.6、90、16,BP:110/70 mmHg,胎心音監控 30 分鐘結果均如下圖示,仍安靜休息中,下列護理處置何者最恰當?",
+    "question": "吳女士接受 meperidine 注射2小時後，子宮頸口開5公分，TPR：36.6、90、16，BP：110/70 mmHg，胎心音監控30分鐘結果均如下圖示，仍安靜休息中，下列護理處置何者最恰當？",
     "options": {
-      "A": "200",
-      "B": "200",
-      "C": "180",
-      "D": "180"
+      "A": "胎兒有早期減速（early deceleration）現象，宜調低 meperidine 劑量，並協助產婦左側臥",
+      "B": "胎兒有晚期減速（late deceleration）現象，宜協助產婦左側臥",
+      "C": "胎兒有變異性減速（variable deceleration）現象，宜協助產婦左側臥及給氧",
+      "D": "胎兒心跳變化皆在正常範圍，無須提供額外處置措施"
     },
     "answer": "D",
     "explanation": "",
-    "image_url": "/question-images/nursing_101030_q38_patrol.webp"
+    "image_url": "/question-images/nursing_101030_q38_patrol.webp",
+    "images": [
+      "/question-images/nursing_101030_q38_0.webp"
+    ]
   },
   {
     "id": 114373,
@@ -71620,12 +71623,12 @@
     "subject_name": "社區護理學",
     "stage_id": 13,
     "number": 59,
-    "question": "有關空氣污染的敘述,下列何者正確?①空氣污染指標值(PSI)是以二氧化碳污染物濃度來換算 ②空氣污染指標值超過50即表示空氣品質不良 ③空氣污染物主要經由呼吸道侵入影響人體健康, 易誘發慢性阻塞性肺部疾患 ④汽車排放的廢氣中,造成空氣污染的成分有一氧化碳、氮氧化物等",
+    "question": "有關空氣污染的敘述，下列何者正確？①空氣污染指標值（PSI）是以二氧化碳污染物濃度來換算 ②空氣污染指標值超過50即表示空氣品質不良 ③空氣污染物主要經由呼吸道侵入影響人體健康，易誘發慢性阻塞性肺部疾患 ④汽車排放的廢氣中，造成空氣污染的成分有一氧化碳、氮氧化物等",
     "options": {
-      "A": "①①",
-      "B": "①①",
-      "C": "①①",
-      "D": "①①"
+      "A": "①②",
+      "B": "②③",
+      "C": "③④",
+      "D": "①④"
     },
     "answer": "C",
     "explanation": ""
@@ -104241,12 +104244,12 @@
     "subject_name": "內科護理學",
     "stage_id": 8,
     "number": 8,
-    "question": "有關肌無力症病人發生疑似膽鹼性危象(cholinergic crisis)時的處置,下列何者適當? 1增加抗膽 鹼酯酶藥物 2停止使用Pyridostigmine(Mestinon) 3由靜脈注射atropine 4由靜脈注射類固醇 13  14 ",
+    "question": "有關肌無力症病人發生疑似膽鹼性危象（cholinergic crisis）時的處置，下列何者適當？①增加抗膽鹼酯酶藥物 ②停止使用Pyridostigmine（Mestinon） ③由靜脈注射atropine ④由靜脈注射類固醇",
     "options": {
-      "A": "23",
-      "B": "",
-      "C": "24",
-      "D": ""
+      "A": "①③",
+      "B": "①④",
+      "C": "②③",
+      "D": "②④"
     },
     "answer": "C",
     "explanation": "",
@@ -226056,8 +226059,9 @@
       "C": "注射白血球刺激素(G-CSF)可增強免疫力與減少感染",
       "D": "教導病人避免做閉氣用力的動作"
     },
-    "answer": "D",
-    "explanation": ""
+    "answer": "B",
+    "explanation": "",
+    "orig_answer": "D"
   },
   {
     "id": 114100021685,

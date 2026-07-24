@@ -43500,9 +43500,9 @@
     "question": "胰島素受體（insulin receptor）是屬於下列何種受體家族？",
     "options": {
       "A": "配體調控離子通道（Ligand-gated ion channels）",
-      "B": "G",
-      "C": "",
-      "D": "蛋白耦合受體（G-protein-coupled receptors） 酵素連結受體（Enzyme-linked receptors） 細胞內受體（Intracellular receptors）"
+      "B": "G蛋白耦合受體（G-protein-coupled receptors）",
+      "C": "酵素連結受體（Enzyme-linked receptors）",
+      "D": "細胞內受體（Intracellular receptors）"
     },
     "answer": "C",
     "explanation": ""
@@ -45414,9 +45414,9 @@
     "question": "小強, 12 歲, 診斷為氣喘, 居家長期監測尖峰呼氣流量 (peak expiratory flow rate, PEFR), 其自我監測的個人最佳值為 250 L/min。某日清晨, 其 PEFR 為 180 L/min, 到傍晚上升為 220 L/min, 估算小強目前 PEFR 的變異度 (variance) 為何?",
     "options": {
       "A": "10%",
-      "B": "10%",
+      "B": "16%",
       "C": "20%",
-      "D": "16%"
+      "D": "32%"
     },
     "answer": "C",
     "explanation": ""
@@ -57449,10 +57449,10 @@
     "number": 72,
     "question": "有關高滲透壓高血糖狀態（HHS）之敘述，下列何者錯誤？",
     "options": {
-      "A": "血糖值可能大於 800 mg/dL",
-      "B": "血糖值可能大於800 mg/dL",
+      "A": "血糖值可能大於800 mg/dL",
+      "B": "病人會出現呼吸加速且深度增加",
       "C": "可能因為血中滲透壓上升引起休克",
-      "D": "病人會出現呼吸加速且深度增加"
+      "D": "檢驗血中呈現無或微量酮體"
     },
     "answer": "B",
     "explanation": ""
@@ -62424,12 +62424,12 @@
     "subject_name": "兒科護理學",
     "stage_id": 11,
     "number": 80,
-    "question": "陳小弟，5歲，頭部創傷後，合併無菌性腦膜炎（virus meningitis），作腰椎穿刺，有關其腦脊髓液 檢查之結果，不會呈現下列何者？ 壓力為60 mmH 2 O 淋巴球100個/mm 3",
+    "question": "陳小弟，5歲，頭部創傷後，合併無菌性腦膜炎（virus meningitis），作腰椎穿刺，有關其腦脊髓液檢查之結果，不會呈現下列何者？",
     "options": {
-      "A": "蛋白質50",
-      "B": "mg/dL",
-      "C": "葡萄糖30",
-      "D": "mg/dL"
+      "A": "壓力為60 mmH₂O",
+      "B": "淋巴球100個/mm³",
+      "C": "蛋白質50 mg/dL",
+      "D": "葡萄糖30 mg/dL"
     },
     "answer": "D",
     "explanation": ""

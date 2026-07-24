@@ -5229,16 +5229,18 @@
       "subject_name": "呼吸器原理及應用",
       "stage_id": 0,
       "number": 9,
-      "question": "下列圖中的流體控制元件（ fluidic element ），那一種屬於“ proportional amplifier ”？",
+      "question": "下列圖中的流體控制元件（fluidic element），那一種屬於「proportional amplifier」？（4 個選項圖見下圖）",
       "options": {
-        "A": "",
-        "B": "",
-        "C": "",
-        "D": ""
+        "A": "（見圖 A）",
+        "B": "（見圖 B）",
+        "C": "（見圖 C）",
+        "D": "（見圖 D）"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options"
+      "images": [
+        "/question-images/rt_100020_q9_0.webp"
+      ]
     },
     {
       "id": 250,

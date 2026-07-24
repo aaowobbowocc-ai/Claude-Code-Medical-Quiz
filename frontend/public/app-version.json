@@ -1,7 +1,7 @@
 {
   "_comment": "App 最新版本設定。發新版時把 ios/android 版號更新為已上架的最新版；App 端會比對執行中的版本，較舊時顯示更新提示。",
   "ios": "1.0.7",
-  "android": "1.0.13",
+  "android": "1.0.15",
   "iosUrl": "https://apps.apple.com/app/id6780595877",
   "androidUrl": "https://play.google.com/store/apps/details?id=tw.examking.app"
 }

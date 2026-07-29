@@ -66134,15 +66134,15 @@
     "subject_tag": "audio_behavioral",
     "subject_name": "行為聽力學",
     "stage_id": 2,
-    "number": 3,
-    "question": "歲兒童，適合他的測試材料何者為佳？HINT",
+    "number": 29,
+    "question": "兒童語音聽辨率在整體聽力評估項目中，可以了解兒童聽閾值之上（supra-threshold）的知覺表現，如果測試3歲兒童，適合他的測試材料何者為佳？HINT",
     "options": {
       "A": "PBK",
       "B": "WIPI",
       "C": "NU",
       "D": "-CHIPS"
     },
-    "answer": "A",
+    "answer": "D",
     "explanation": "",
     "exam_type": "high"
   },
@@ -66325,15 +66325,15 @@
     "subject_tag": "audio_behavioral",
     "subject_name": "行為聽力學",
     "stage_id": 2,
-    "number": 12,
-    "question": "歲兒童，在學校因課業表現不佳，老師建議家長帶去做完整聽力評估，評估結果如下：純音聽力接近正常（但反應不一致），在噪音下的言語知覺表現很差，OAE正常，無鐙骨肌反射，多數APD（auditory processing disorders）評估顯示不正常。綜合以上報告，下列診斷何者最為適當？APD",
+    "number": 28,
+    "question": "個案是12歲兒童，在學校因課業表現不佳，老師建議家長帶去做完整聽力評估，評估結果如下：純音聽力接近正常（但反應不一致），在噪音下的言語知覺表現很差，OAE正常，無鐙骨肌反射，多數APD（auditory processing disorders）評估顯示不正常。綜合以上報告，下列診斷何者最為適當？APD",
     "options": {
       "A": "（聽覺處理障礙）Nonorganic hearing loss",
       "B": "（非器質性聽損）GJB2",
       "C": "基因突變AN/AD",
       "D": "（聽神經病變）"
     },
-    "answer": "A",
+    "answer": "D",
     "explanation": "",
     "exam_type": "high"
   },
@@ -66663,52 +66663,6 @@
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006846
-  },
-  {
-    "id": "audiologist_103100_p2_28",
-    "roc_year": "103",
-    "session": "第一次",
-    "exam_code": "103100",
-    "subject": "行為聽力學",
-    "subject_tag": "paper2",
-    "subject_name": "行為聽力學",
-    "paper_id": "paper2",
-    "stage_id": 0,
-    "number": 28,
-    "question": "個案是12 歲兒童,在學校因課業表現不佳,老師建議家長帶去做完整聽力評估,評估結果如下:純",
-    "options": {
-      "A": "音聽力接近正常(但反應不一致),在噪音下的言語知覺表現很差,OAE 正常,無鐙骨肌反射,多",
-      "B": "數APD(auditory processing disorders)評估顯示不正常。綜合以上報告,下列診斷何者最為適當?",
-      "C": "APD",
-      "D": "(聽覺處理障礙) Nonorganic hearing loss (非器質性聽損) GJB2 基因突變 AN/AD (聽神經病變)"
-    },
-    "answer": "D",
-    "exam_type": "high",
-    "explanation": "",
-    "_legacy_id": 30006847
-  },
-  {
-    "id": "audiologist_103100_p2_29",
-    "roc_year": "103",
-    "session": "第一次",
-    "exam_code": "103100",
-    "subject": "行為聽力學",
-    "subject_tag": "paper2",
-    "subject_name": "行為聽力學",
-    "paper_id": "paper2",
-    "stage_id": 0,
-    "number": 29,
-    "question": "兒童語音聽辨率在整體聽力評估項目中，可以了解兒童聽閾值之上（supra-threshold）的知覺表現，如果測試3 歲兒童，適合他的測試材料何者為佳？",
-    "options": {
-      "A": "HINT",
-      "B": "PBK",
-      "C": "WIPI",
-      "D": "NU"
-    },
-    "answer": "D",
-    "exam_type": "high",
-    "explanation": "",
-    "_legacy_id": 30006848
   },
   {
     "id": "audiologist_103100_s0902_30",
@@ -70497,15 +70451,15 @@
     "subject_tag": "audio_electro",
     "subject_name": "電生理聽力學",
     "stage_id": 3,
-    "number": 45,
-    "question": "歲男性主訴昏眩，耳鳴半年。聽力圖如下，鼓室圖兩側都是type  A。聽反射閾值（acoustic  reflexthreshold）與反射衰減（reflex decay）結果如下表。該患者最可能的聽力學診斷是下列何者？",
+    "number": 69,
+    "question": "45歲男性主訴昏眩，耳鳴半年。聽力圖如下，鼓室圖兩側都是type  A。聽反射閾值（acoustic  reflexthreshold）與反射衰減（reflex decay）結果如下表。該患者最可能的聽力學診斷是下列何者？",
     "options": {
       "A": "兩側聽神經瘤（acoustic neuroma）",
       "B": "腦幹中風（brainstem infarction）",
       "C": "兩側老年性聽障（presbycusis）",
       "D": "兩側面神經麻痺（facial paralysis）Acoustic Reflex Threshold（dB HL）ARDecay500 Hz 1000 Hz 2000 Hz 500 HzRightContralateral110                 115                  125                 PositiveLeftContralateral110                 120                  NR                 PositiveRightIpsilateral80                   80                    85                   NegativeLeftIpsilateral80                   80                    85                   NegativeNR, no response; AR, acoustic reflex代號：3113頁次：12－11"
     },
-    "answer": "A",
+    "answer": "B",
     "explanation": "",
     "exam_type": "high"
   },
@@ -71009,29 +70963,6 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high"
-  },
-  {
-    "id": "audiologist_103100_p3_69",
-    "roc_year": "103",
-    "session": "第一次",
-    "exam_code": "103100",
-    "subject": "電生理聽力學",
-    "subject_tag": "paper3",
-    "subject_name": "電生理聽力學",
-    "paper_id": "paper3",
-    "stage_id": 0,
-    "number": 69,
-    "question": "45 歲男性主訴昏眩,耳鳴半年。聽力圖如下,鼓室圖兩側都是type A。聽反射閾值(acoustic reflex",
-    "options": {
-      "A": "threshold)與反射衰減(reflex decay)結果如下表。該患者最可能的聽力學診斷是下列何者?",
-      "B": "兩側聽神經瘤(acoustic neuroma)",
-      "C": "腦幹中風(brainstem infarction)",
-      "D": "兩側老年性聽障(presbycusis) 兩側面神經麻痺(facial paralysis) Acoustic Reflex Threshold (dB HL) AR Decay 500 Hz 1000 Hz 2000 Hz 500 Hz Right Contralateral 110 115 125 Positive Left Contralateral 110 120 NR Positive Right Ipsilateral"
-    },
-    "answer": "B",
-    "exam_type": "high",
-    "explanation": "",
-    "_legacy_id": 30006959
   },
   {
     "id": "audiologist_103100_s0903_70",
@@ -79948,15 +79879,15 @@
     "subject_tag": "audio_electro",
     "subject_name": "電生理聽力學",
     "stage_id": 3,
-    "number": 3,
-    "question": "歲兒童被轉介聽力檢查，結果如下：無法取得行為聽閾，鼓室圖為type B，通過DPOAE screeningmode，下列敘述何者正確？",
+    "number": 71,
+    "question": "3歲兒童被轉介聽力檢查，結果如下：無法取得行為聽閾，鼓室圖為type B，通過DPOAE screeningmode，下列敘述何者正確？",
     "options": {
       "A": "可以確定沒有感音性聽損",
       "B": "可以確定有顯著的傳導性聽損成分",
       "C": "需要再安排行為聽檢追蹤",
       "D": "馬上加做聽反射檢查"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": "",
     "exam_type": "high"
   },
@@ -81415,30 +81346,6 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
-  },
-  {
-    "id": "audiologist_104100_p3_71",
-    "roc_year": "104",
-    "session": "第一次",
-    "exam_code": "104100",
-    "subject": "電生理聽力學",
-    "subject_tag": "paper3",
-    "subject_name": "電生理聽力學",
-    "paper_id": "paper3",
-    "stage_id": 0,
-    "number": 71,
-    "question": "3 歲兒童被轉介聽力檢查,結果如下:無法取得行為聽閾,鼓室圖為type B,通過DPOAE screening",
-    "options": {
-      "A": "mode,下列敘述何者正確?",
-      "B": "可以確定沒有感音性聽損",
-      "C": "可以確定有顯著的傳導性聽損成分",
-      "D": "需要再安排行為聽檢追蹤 馬上加做聽反射檢查"
-    },
-    "answer": "C",
-    "explanation": "",
-    "exam_type": "high",
-    "vision_uncertain": false,
-    "_legacy_id": 30003459
   },
   {
     "id": "audiologist_104100_s0903_72",
@@ -83682,29 +83589,6 @@
     "exam_type": "high"
   },
   {
-    "id": "audiologist_104100_p5_14",
-    "roc_year": "104",
-    "session": "第一次",
-    "exam_code": "104100",
-    "subject": "聽覺與平衡系統之創健與復健學",
-    "subject_tag": "audio_rehab",
-    "subject_name": "聽覺與平衡系統之創健與復健學",
-    "paper_id": "paper5",
-    "stage_id": 0,
-    "number": 14,
-    "question": "72 歲的張先生,雙耳佩戴耳內型助聽器,但張太太常抱怨跟他說話時必須要重複說。針對此種情形,",
-    "options": {
-      "A": "下列建議何者適當?1關掉背景噪音 2放慢說話速度 3說話前先注視對方 4確認談話主題",
-      "B": "5調高助聽器音量",
-      "C": "僅12",
-      "D": "僅123 345 1234"
-    },
-    "answer": "D",
-    "explanation": "",
-    "exam_type": "high",
-    "_legacy_id": 30003554
-  },
-  {
     "id": "audiologist_104100_s0905_15",
     "roc_year": "104",
     "session": "第一次",
@@ -84038,15 +83922,15 @@
     "subject_tag": "audio_rehab",
     "subject_name": "聽覺與平衡系統之創健與復健學",
     "stage_id": 5,
-    "number": 30,
-    "question": "歲，為中度聽障的後天失聰者，下列何者對她的聽能復健最有幫助？",
+    "number": 53,
+    "question": "春梅今年30歲，為中度聽障的後天失聰者，下列何者對她的聽能復健最有幫助？",
     "options": {
       "A": "讀唇訓練",
       "B": "植入人工電子耳",
       "C": "佩戴助聽器",
       "D": "構音訓練"
     },
-    "answer": "D",
+    "answer": "C",
     "explanation": "",
     "exam_type": "high"
   },
@@ -84170,15 +84054,15 @@
     "subject_tag": "audio_rehab",
     "subject_name": "聽覺與平衡系統之創健與復健學",
     "stage_id": 5,
-    "number": 36,
-    "question": "歲男性自前一天清晨起眩暈開始發作，沒有聽力減低及耳鳴，目前主訴眩暈略有緩解，理學檢查發現自發性向右眼振。此病患最有可能為：",
+    "number": 75,
+    "question": "某36歲男性自前一天清晨起眩暈開始發作，沒有聽力減低及耳鳴，目前主訴眩暈略有緩解，理學檢查發現自發性向右眼振。此病患最有可能為：",
     "options": {
       "A": "梅尼爾氏症",
       "B": "良性陣發性眩暈",
       "C": "前庭神經炎",
       "D": "腦幹中風"
     },
-    "answer": "A",
+    "answer": "C",
     "explanation": "",
     "exam_type": "high"
   },
@@ -84517,29 +84401,6 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
-  },
-  {
-    "id": "audiologist_104100_p5_53",
-    "roc_year": "104",
-    "session": "第一次",
-    "exam_code": "104100",
-    "subject": "聽覺與平衡系統之創健與復健學",
-    "subject_tag": "audio_rehab",
-    "subject_name": "聽覺與平衡系統之創健與復健學",
-    "paper_id": "paper5",
-    "stage_id": 0,
-    "number": 53,
-    "question": "春梅今年30 歲,為中度聽障的後天失聰者,下列何者對她的聽能復健最有幫助?",
-    "options": {
-      "A": "讀唇訓練",
-      "B": "植入人工電子耳",
-      "C": "佩戴助聽器",
-      "D": "構音訓練"
-    },
-    "answer": "C",
-    "explanation": "",
-    "exam_type": "high",
-    "_legacy_id": 30003592
   },
   {
     "id": "audiologist_104100_s0905_54",
@@ -84938,8 +84799,8 @@
     "subject_tag": "audio_rehab",
     "subject_name": "聽覺與平衡系統之創健與復健學",
     "stage_id": 5,
-    "number": 72,
-    "question": "歲的張先生，雙耳佩戴耳內型助聽器，但張太太常抱怨跟他說話時必須要重複說。針對此種情形，下列建議何者適當？①關掉背景噪音  ②放慢說話速度  ③說話前先注視對方  ④確認談話主題⑤調高助聽器音量",
+    "number": 14,
+    "question": "72歲的張先生，雙耳佩戴耳內型助聽器，但張太太常抱怨跟他說話時必須要重複說。針對此種情形，下列建議何者適當？①關掉背景噪音  ②放慢說話速度  ③說話前先注視對方  ④確認談話主題⑤調高助聽器音量",
     "options": {
       "A": "僅①②",
       "B": "僅①②③",
@@ -84991,31 +84852,6 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high"
-  },
-  {
-    "id": "audiologist_104100_p5_75",
-    "roc_year": "104",
-    "session": "第一次",
-    "exam_code": "104100",
-    "subject": "聽覺與平衡系統之創健與復健學",
-    "subject_tag": "paper5",
-    "subject_name": "聽覺與平衡系統之創健與復健學",
-    "paper_id": "paper5",
-    "stage_id": 0,
-    "number": 75,
-    "question": "某36 歲男性自前一天清晨起眩暈開始發作,沒有聽力減低及耳鳴,目前主訴眩暈略有緩解,理學檢",
-    "options": {
-      "A": "查發現自發性向右眼振。此病患最有可能為:",
-      "B": "梅尼爾氏症",
-      "C": "良性陣發性眩暈",
-      "D": "前庭神經炎 腦幹中風"
-    },
-    "answer": "C",
-    "explanation": "",
-    "exam_type": "high",
-    "disputed": true,
-    "answer_source": "vision-recheck-v2:audiologist_104100_c110_s0905_S.pdf",
-    "_legacy_id": 30003614
   },
   {
     "id": "audiologist_104100_s0905_76",
@@ -153424,8 +153260,8 @@
     "subject_tag": "audio_electro",
     "subject_name": "電生理聽力學",
     "stage_id": 3,
-    "number": 4,
-    "question": "歲男孩來診所求診，他的母親說他偶爾會因為不適而拉耳朵，並且懷疑聽力變差。平常身體健康，其他方面發展正常。耳鏡檢查顯示雙側鼓膜輕微內縮。下列聽力測試何者最為適當？",
+    "number": 50,
+    "question": "4歲男孩來診所求診，他的母親說他偶爾會因為不適而拉耳朵，並且懷疑聽力變差。平常身體健康，其他方面發展正常。耳鏡檢查顯示雙側鼓膜輕微內縮。下列聽力測試何者最為適當？",
     "options": {
       "A": "語音聽力檢查",
       "B": "耳聲傳射檢查",
@@ -154055,8 +153891,8 @@
     "subject_tag": "audio_electro",
     "subject_name": "電生理聽力學",
     "stage_id": 3,
-    "number": 34,
-    "question": "歲男性主訴右耳聽力不佳，未曾接受過任何耳科手術，鼓室檢查結果如下圖，其右耳最有可能為：",
+    "number": 4,
+    "question": "34歲男性主訴右耳聽力不佳，未曾接受過任何耳科手術，鼓室檢查結果如下圖，其右耳最有可能為：",
     "options": {
       "A": "耳硬化症（otosclerosis）",
       "B": "急性中耳炎（acute otitis media）",
@@ -154383,27 +154219,6 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high"
-  },
-  {
-    "id": "audiologist_114100_p3_50",
-    "roc_year": "114",
-    "session": "第一次",
-    "exam_code": "114100",
-    "subject": "電生理聽力學",
-    "subject_tag": "paper3",
-    "subject_name": "電生理聽力學",
-    "stage_id": 0,
-    "number": 50,
-    "question": "4歲男孩來診所求診,他的母親說他偶爾會因為不適而拉耳朵,並且懷疑聽力變差。平常身體健 康,其他方面發展正常。耳鏡檢查顯示雙側鼓膜輕微內縮。下列聽力測試何者最為適當?",
-    "options": {
-      "A": "語音聽力檢查",
-      "B": "耳聲傳射檢查",
-      "C": "鼓室圖",
-      "D": "聽性腦幹反應檢查"
-    },
-    "answer": "C",
-    "explanation": "",
-    "_legacy_id": 114100060706
   },
   {
     "id": "audiologist_114100_s0606_1",
@@ -155590,15 +155405,15 @@
     "subject_tag": "audio_rehab",
     "subject_name": "聽覺與平衡系統之創健與復健學",
     "stage_id": 5,
-    "number": 7,
-    "question": "歲的小明抱怨玩電動或看電影時會引發頭暈，經小兒神經科檢查無異常，因此醫師轉介執行前庭復健。詢問病史時個案表示看書時不會暈，但快速移動的視覺目標容易引發症狀，下列處置何者最不適當？",
+    "number": 47,
+    "question": "7歲的小明抱怨玩電動或看電影時會引發頭暈，經小兒神經科檢查無異常，因此醫師轉介執行前庭復健。詢問病史時個案表示看書時不會暈，但快速移動的視覺目標容易引發症狀，下列處置何者最不適當？",
     "options": {
       "A": "若作迪克斯－霍爾派克測試（Dix-Hallpike test）時誘發眼震，則優先考慮先依不同位置執行耳石復位術",
       "B": "若作迪克斯－霍爾派克測試（Dix-Hallpike test）時沒有誘發眼震，則考慮執行前庭習慣化治療（habituation training）",
       "C": "執行前庭習慣化治療（habituation training）在家可玩電動和觀看電影動作片來訓練",
       "D": "為個案安排執行反覆引發頭暈的動作，應該誘發到眩暈完全發作"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": "",
     "exam_type": "high"
   },
@@ -156420,27 +156235,6 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high"
-  },
-  {
-    "id": "audiologist_114100_p5_47",
-    "roc_year": "114",
-    "session": "第一次",
-    "exam_code": "114100",
-    "subject": "聽覺與平衡系統之創健與復健學",
-    "subject_tag": "audio_rehab",
-    "subject_name": "聽覺與平衡系統之創健與復健學",
-    "stage_id": 0,
-    "number": 47,
-    "question": "7歲的小明抱怨玩電動或看電影時會引發頭暈,經小兒神經科檢查無異常,因此醫師轉介執行前庭 復健。詢問病史時個案表示看書時不會暈,但快速移動的視覺目標容易引發症狀,下列處置何者最 不適當?",
-    "options": {
-      "A": "若作迪克斯-霍爾派克測試(DixHallpike test)時誘發眼震,則優先考慮先依不同位置執行耳 石復位術",
-      "B": "若作迪克斯-霍爾派克測試(DixHallpike test)時沒有誘發眼震,則考慮執行前庭習慣化治療 (habituation training)",
-      "C": "執行前庭習慣化治療(habituation training)在家可玩電動和觀看電影動作片來訓練",
-      "D": "為個案安排執行反覆引發頭暈的動作,應該誘發到眩暈完全發作"
-    },
-    "answer": "D",
-    "explanation": "",
-    "_legacy_id": 114100060707
   },
   {
     "id": "audiologist_114100_s0605_48",

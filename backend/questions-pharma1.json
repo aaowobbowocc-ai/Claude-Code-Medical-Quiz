@@ -35787,13 +35787,19 @@
       "number": 79,
       "question": "Apomorphine可用來治療後期的帕金森氏症 ( late-stage Parkinson's disease ) ,其結構為何?",
       "options": {
-        "A": "A.",
-        "B": "B.",
-        "C": "C.",
-        "D": "D."
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "option_images": {
+        "A": "/question-images/pharma1_103090_q79_A.webp",
+        "B": "/question-images/pharma1_103090_q79_B.webp",
+        "C": "/question-images/pharma1_103090_q79_C.webp",
+        "D": "/question-images/pharma1_103090_q79_D.webp"
+      }
     },
     {
       "id": 115021710,

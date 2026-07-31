@@ -193,6 +193,7 @@ export default function RewardAdSheet({ onClose, onOpenShop }) {
             no_auth:    { title: '請先登入', body: '登入後才能領取金幣，你的進度與金幣也會一起保存' },
             no_profile: { title: '帳號資料同步中', body: '請稍候幾秒再按重試' },
             network:    { title: '網路連線有問題', body: '請檢查網路後再試一次' },
+            ad_incomplete: { title: '廣告未看完', body: '需完整看完整支廣告（約 15～30 秒）才能獲得金幣，請再試一次' },
           }[failReason] || {
             title: '廣告載入失敗',
             body: IS_NATIVE ? '請稍後再試一次' : '可能是瀏覽器擋彈出視窗，請允許後再試',

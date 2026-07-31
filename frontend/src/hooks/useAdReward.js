@@ -133,8 +133,10 @@ export function useAdReward() {
           handleClaimFailure(result)
           return false
         }
-        // 使用者中途關掉廣告 — 不發獎勵
-        setPhase('idle')
+        // 廣告未觸發 Rewarded 完成事件（多半是沒看完就關掉）— 給明確提示，
+        // 不要靜默回 idle，否則使用者「看了卻沒發生任何事」會誤以為系統壞掉。
+        setFailReason('ad_incomplete')
+        setPhase('error')
         refreshInfo()
         return false
       } catch (e) {

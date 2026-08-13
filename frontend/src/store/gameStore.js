@@ -191,8 +191,19 @@ export const usePlayerStore = create(
         const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
         if (get().lastDailyBonus === today) return false
         // sync 讀，避免 Capacitor Native getSession hang
-        const { token } = readAuthFromStorage()
+        const { token, user_id } = readAuthFromStorage()
         if (!token) return false
+        // 確保雲端有 profile 列再領獎。原生 App hydrate 失敗的訪客可能還沒同步出 profile，
+        // 後端每日獎勵 .single() 找不到列會失敗 → 整天領不到金幣（多筆「沒領到每日登入金幣」回報主因）。
+        // 同 claimAdReward：ignoreDuplicates upsert 缺列才補建、已有列不動。見 [[feedback_supabase_no_getsession]]。
+        if (user_id) {
+          try {
+            await supabase.from('profiles').upsert(
+              { user_id, ...storeToDb(get()) },
+              { onConflict: 'user_id', ignoreDuplicates: true }
+            )
+          } catch (e) { console.warn('[daily] ensure profile failed:', e?.message) }
+        }
         try {
           const res = await fetch(`${BACKEND}/api/rewards/daily`, {
             method: 'POST', headers: { Authorization: `Bearer ${token}` },
@@ -229,8 +240,18 @@ export const usePlayerStore = create(
       claimBindReward: async () => {
         if (get().bindRewardClaimed) return false
         // sync 讀，避免 Capacitor Native getSession hang
-        const { token } = readAuthFromStorage()
+        const { token, user_id } = readAuthFromStorage()
         if (!token) return false
+        // 確保雲端有 profile 列再領 3000 綁定獎勵（同 claimAdReward/claimDailyBonus，
+        // 避免剛登入 profile 未同步→後端 .single() 失敗→「登入送3000金幣卻拿不到」）。
+        if (user_id) {
+          try {
+            await supabase.from('profiles').upsert(
+              { user_id, ...storeToDb(get()) },
+              { onConflict: 'user_id', ignoreDuplicates: true }
+            )
+          } catch (e) { console.warn('[bind] ensure profile failed:', e?.message) }
+        }
         try {
           const res = await fetch(`${BACKEND}/api/rewards/bind`, {
             method: 'POST', headers: { Authorization: `Bearer ${token}` },

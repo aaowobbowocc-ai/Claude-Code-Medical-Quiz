@@ -991,8 +991,10 @@ app.post('/api/rewards/bind', async (req, res) => {
     const { data: { user }, error: authErr } = await supabase.auth.getUser(token)
     if (authErr || !user) return res.status(401).json({ error: 'Invalid token' })
     const { data: profile, error: fErr } = await supabase
-      .from('profiles').select('coins, bind_reward_claimed').eq('user_id', user.id).single()
+      .from('profiles').select('coins, bind_reward_claimed').eq('user_id', user.id).maybeSingle()
     if (fErr) return res.status(500).json({ error: fErr.message })
+    // 沒有 profile 列（前端 upsert 補建應已處理；防禦回軟性 reason 而非 500）
+    if (!profile) return res.json({ claimed: false, reason: 'no_profile', coins: 0 })
     if (profile.bind_reward_claimed) {
       return res.json({ claimed: false, reason: 'already_claimed', coins: profile.coins || 0 })
     }
@@ -1007,7 +1009,7 @@ app.post('/api/rewards/bind', async (req, res) => {
     if (uErr) return res.status(500).json({ error: uErr.message })
     if (!updated || updated.length === 0) {
       // Lost the race — another request already claimed
-      const { data: p2 } = await supabase.from('profiles').select('coins').eq('user_id', user.id).single()
+      const { data: p2 } = await supabase.from('profiles').select('coins').eq('user_id', user.id).maybeSingle()
       return res.json({ claimed: false, reason: 'already_claimed', coins: p2?.coins || 0 })
     }
     res.json({ claimed: true, reward: 3000, coins: updated[0].coins })
@@ -1077,8 +1079,11 @@ app.post('/api/rewards/daily', async (req, res) => {
     const { data: { user }, error: authErr } = await supabase.auth.getUser(token)
     if (authErr || !user) return res.status(401).json({ error: 'Invalid token' })
     const { data: profile, error: fErr } = await supabase
-      .from('profiles').select('coins, last_daily_bonus, login_streak').eq('user_id', user.id).single()
+      .from('profiles').select('coins, last_daily_bonus, login_streak').eq('user_id', user.id).maybeSingle()
     if (fErr) return res.status(500).json({ error: fErr.message })
+    // 沒有 profile 列（前端 upsert 補建應已處理；此為防禦，回軟性 reason 而非 500，
+    // 避免使用者整天領不到每日金幣）。
+    if (!profile) return res.json({ claimed: false, reason: 'no_profile', coins: 0, streak: 0 })
     const today = new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei' })
     if (profile.last_daily_bonus === today) {
       return res.json({ claimed: false, reason: 'already_today', coins: profile.coins || 0, streak: profile.login_streak || 0 })

@@ -13,7 +13,7 @@ import SupportBar from '../components/SupportBar'
 import CumulativeStatsBar from '../components/CumulativeStatsBar'
 import SupportSheets from '../components/SupportSheets'
 import RewardAdSheet from '../components/RewardAdSheet'
-import { FEATURE_FRAMES, FEATURE_AVATARS, FEATURE_AI_UNLIMITED, FEATURE_SPONSORS, FEATURE_BADGES } from '../config/featureFlags'
+import { FEATURE_AVATARS, FEATURE_SPONSORS, FEATURE_BADGES } from '../config/featureFlags'
 
 // 站長雜貨抽獎 — 暫時關閉，要開回來改成 true
 const SHOW_LUCKY_DRAW = false
@@ -711,7 +711,7 @@ export default function Home() {
               ['🔍','全題庫搜尋','跨 52 考試 21 萬題','/search'],
               ['🏆','排行榜','每週排名','/leaderboard'],
               ['📊','我的數據','你的學習報告','/stats'],
-              ...((FEATURE_FRAMES || FEATURE_AVATARS || FEATURE_AI_UNLIMITED || FEATURE_BADGES) ? [['🛒','商店','頭像/徽章/邊框/AI 無限','/shop']] : []),
+              ...((FEATURE_AVATARS || FEATURE_BADGES) ? [['🛒','商店','頭像/徽章','/shop']] : []),
               // 感謝榜已移到首頁上方華麗橫幅（SponsorBanner），不放在選單格子
             ].map(([icon,title,sub,path]) => (
               <button key={path} onClick={() => navigate(path)}
@@ -1020,7 +1020,7 @@ export default function Home() {
             ['🔍','全題庫搜尋','跨 52 考試 21 萬題','/search'],
             ['🏆','排行榜','每週排名','/leaderboard'],
             ['📊','我的數據','你的學習報告','/stats'],
-            ...((FEATURE_FRAMES || FEATURE_AVATARS || FEATURE_AI_UNLIMITED || FEATURE_BADGES) ? [['🛒','商店','頭像/徽章/邊框/AI 無限','/shop']] : []),
+            ...((FEATURE_AVATARS || FEATURE_BADGES) ? [['🛒','商店','頭像/徽章','/shop']] : []),
             // 感謝榜已移到首頁上方華麗橫幅（SponsorBanner），不放在選單格子
           ].map(([icon,title,sub,path]) => (
             <button key={path} onClick={() => navigate(path)}

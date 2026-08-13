@@ -261,14 +261,30 @@ function AppRoutes() {
   // 跨裝置同步：開機註冊變更回推 + 若已登入先拉雲端合併（用 storage token，不 await getSession）
   useEffect(() => {
     let cancelled = false
+    let lastSync = 0
+    const doSync = async () => {
+      try {
+        const { syncOnLogin } = await import('./lib/cloudSync')
+        if (!cancelled) { lastSync = Date.now(); await syncOnLogin() }
+      } catch {}
+    }
     ;(async () => {
       try {
-        const { initCloudSync, syncOnLogin } = await import('./lib/cloudSync')
+        const { initCloudSync } = await import('./lib/cloudSync')
         initCloudSync()
-        if (!cancelled) await syncOnLogin()
+        await doSync()
       } catch {}
     })()
-    return () => { cancelled = true }
+    // 切回前景時重新拉雲端合併——手機↔平板切換時，背景的 App 回前景不會重新掛載，
+    // 只靠開機那次 syncOnLogin 會導致「另一台的錯題/收藏沒同步過來」（CZY 多次回報）。
+    // 節流 30 秒，避免頻繁前後景切換狂拉。
+    const onVisible = () => {
+      if (document.visibilityState !== 'visible') return
+      if (Date.now() - lastSync < 30000) return
+      doSync()
+    }
+    document.addEventListener('visibilitychange', onVisible)
+    return () => { cancelled = true; document.removeEventListener('visibilitychange', onVisible) }
   }, [])
 
   return (

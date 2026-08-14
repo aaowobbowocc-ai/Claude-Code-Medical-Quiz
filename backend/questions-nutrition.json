@@ -3399,12 +3399,12 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 10,
-      "question": "有關治療風濕性關節炎的藥物作用機制，下列何者錯誤？aspirin與NSAIDs用藥可抑制前列腺素（PGE2）生合成以達免疫調節作用",
+      "question": "有關治療風濕性關節炎的藥物作用機制，下列何者錯誤？",
       "options": {
-        "A": "methotrexate為免疫抑制劑並且為維生素B",
-        "B": "B6的拮抗劑",
-        "C": "低劑量steroids 具抗發炎作用，但將導致異化作用",
-        "D": "gold salt therapy 或D-penicillamine 可緩和癥狀，但可能導致蛋白尿"
+        "A": "aspirin與NSAIDs用藥可抑制前列腺素（PGE）生合成以達免疫調節作用2",
+        "B": "methotrexate為免疫抑制劑並且為維生素B的拮抗劑B6",
+        "C": "低劑量steroids具抗發炎作用，但將導致異化作用",
+        "D": "gold salt therapy或D-penicillamine可緩和癥狀，但可能導致蛋白尿"
       },
       "answer": "B",
       "explanation": ""
@@ -41472,12 +41472,12 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 37,
-      "question": "關於cytochrome 的敘述,下列何者錯誤?",
+      "question": "關於cytochrome的敘述，下列何者錯誤？",
       "options": {
-        "A": "cytochrome c",
-        "B": "",
-        "C": "和cytochrome b 的氧化態在波長420 nm 吸光值較還原態低",
-        "D": "若抑制劑存在時,光譜吸光值型態有所變動"
+        "A": "cytochrome c和cytochrome b的氧化態在波長420 nm吸光值較還原態低",
+        "B": "若抑制劑存在時，光譜吸光值型態有所變動",
+        "C": "cytochrome為含血基質的蛋白質",
+        "D": "antimycin A會抑制電子由cytochrome c往b流動"
       },
       "answer": "D",
       "explanation": "",
@@ -83115,12 +83115,12 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 29,
-      "question": "有關影響微量礦物質在腸道吸收的敘述,下列何者錯誤?",
+      "question": "有關影響微量礦物質在腸道吸收的敘述，下列何者錯誤？",
       "options": {
-        "A": "攝食過多的鋅,不利於銅的吸收",
+        "A": "攝食過多的鋅，不利於銅的吸收",
         "B": "制酸劑不利於鐵、鋅及鉻的吸收",
-        "C": "Vitamin",
-        "D": ""
+        "C": "Vitamin A有助於鐵與銅的吸收",
+        "D": "攝食過多的銅，不利於鋅的吸收"
       },
       "answer": "C",
       "explanation": "",
@@ -89482,17 +89482,18 @@
       "subject_name": "生理生化",
       "stage_id": 3,
       "number": 27,
-      "question": "下列何者是體內合成磷脂絲胺酸(phosphatidylserine)之前質?",
+      "question": "下列何者是體內合成磷脂絲胺酸（phosphatidylserine）之前質？",
       "options": {
-        "A": "磷脂醯乙醇胺(phosphatidylethanolamine)",
-        "B": "磷脂醯肌醇(phosphatidylinositol)",
-        "C": "CDP",
-        "D": ""
+        "A": "磷脂醯乙醇胺（phosphatidylethanolamine）",
+        "B": "磷脂醯肌醇（phosphatidylinositol）",
+        "C": "CDP-二醯甘油（CDP-diacylglycerol）",
+        "D": "心磷脂（cardiolipin）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:TS_109030_c103_s0201.pdf"
+      "answer_source": "vision-recheck-v2:TS_109030_c103_s0201.pdf",
+      "disputed_note": "考選部一律給分"
     },
     {
       "id": 3486,
@@ -89785,12 +89786,12 @@
       "subject_name": "食品衛生安全",
       "stage_id": 6,
       "number": 2,
-      "question": "依據食品良好衛生規範準則,冷藏真空包裝即食食品保存期限可大於10 日,其應具備之保存條 件何者錯誤?",
+      "question": "依據食品良好衛生規範準則，冷藏真空包裝即食食品保存期限可大於10日，其應具備之保存條件何者錯誤？",
       "options": {
         "A": "添加亞硝酸鹽或硝酸鹽",
-        "B": "水活性在0.94 以上",
-        "C": "pH",
-        "D": ""
+        "B": "水活性在0.94以上",
+        "C": "pH＜4.6",
+        "D": "具有可抑制肉毒桿菌生長之條件"
       },
       "answer": "B",
       "explanation": "",
@@ -91490,12 +91491,12 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 7,
-      "question": "有關造成肥胖的原因,下列敘述何者錯誤?",
+      "question": "有關造成肥胖的原因，下列敘述何者錯誤？",
       "options": {
-        "A": "leptin",
-        "B": "",
-        "C": "具抑制食慾的效果,研究發現多數肥胖者血清中的leptin 濃度通常較低",
-        "D": "Obesogens"
+        "A": "leptin具抑制食慾的效果，研究發現多數肥胖者血清中的leptin濃度通常較低",
+        "B": "Obesogens被認為可能會影響食慾和飽足感的調控，可能造成脂肪堆積而肥胖",
+        "C": "當腸道厚壁菌叢（Firmicutes）數量多於擬桿菌叢（Bacteroidetes）時可能造成肥胖",
+        "D": "慢性壓力會使血液cortisol濃度上升，進而促進食慾，因此可能造成肥胖"
       },
       "answer": "A",
       "explanation": "",
@@ -91891,12 +91892,12 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 27,
-      "question": "有關血脂代謝之敘述,何者正確?",
+      "question": "有關血脂代謝之敘述，何者正確？",
       "options": {
-        "A": "LDL",
-        "B": "",
-        "C": "、HDL 或VLDL 升高,皆屬於血脂異常(Dyslipidemia)",
-        "D": "Chylomicron"
+        "A": "LDL、HDL或VLDL升高，皆屬於血脂異常（Dyslipidemia）",
+        "B": "Chylomicron主要是運送飲食攝取而來的油脂",
+        "C": "LDL顆粒較大者，相較於顆粒小者，更容易刺激發炎反應與促進Atherosclerosis",
+        "D": "飯後2小時抽血測到的三酸甘油酯>150mg/dL，屬於血脂異常（Dyslipidemia）"
       },
       "answer": "B",
       "explanation": "",
@@ -92392,12 +92393,12 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 12,
-      "question": "有關消化道的三種脂解酶特性,下列何者正確?",
+      "question": "有關消化道的三種脂解酶特性，下列何者正確？",
       "options": {
-        "A": "不論lingual lipase、gastric lipase 或pancreatic lipase 之作用皆需膽鹽參與",
-        "B": "lingual lipase",
-        "C": "",
-        "D": "、gastric lipase 或pancreatic lipase 皆適於中性作用"
+        "A": "不論lingual lipase、gastriclipase或pancreaticlipase之作用皆需膽鹽參與",
+        "B": "lingual lipase、gastric lipase或pancreaticlipase皆適於中性作用",
+        "C": "乳脂肪的短（或中）鏈脂肪酸常位於三酸甘油酯的sn-2位置",
+        "D": "lingual lipase與gastriclipase偏好水解含短（或中）鏈脂肪酸之三酸甘油酯"
       },
       "answer": "D",
       "explanation": "",

@@ -119359,10 +119359,10 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 59,
-      "question": "下圖為一位肺癌病人接受三度空間順形治療計畫之劑量體積直方圖（dose volume histogram），curve A與curve B分別為A與",
+      "question": "下圖為一位肺癌病人接受三度空間順形治療計畫之劑量體積直方圖（dose volume histogram），curve A與curve B分別為A與B計畫中肺之劑量體積直方圖，假設A與B計畫的V20與mean lung dose值皆相同，請問那一種計畫對病人的肺較為安全？",
       "options": {
-        "A": "計畫",
-        "B": "計畫",
+        "A": "A計畫",
+        "B": "B計畫",
         "C": "相同安全",
         "D": "無法評估"
       },
@@ -121773,10 +121773,10 @@
       "number": 17,
       "question": "X光乳房攝影的craniocaudal view，如下圖，若病人擺位許可，陰極應擺放在那一側較為適當？",
       "options": {
-        "A": "側",
-        "B": "側",
-        "C": "側",
-        "D": "側"
+        "A": "A側",
+        "B": "B側",
+        "C": "C側",
+        "D": "D側"
       },
       "answer": "C",
       "explanation": "",
@@ -121934,12 +121934,12 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 25,
-      "question": "超音波都卜勒偏移（Doppler shift, kHz, f",
+      "question": "超音波都卜勒偏移（Doppler shift, kHz, f d），源頻率（source frequency, kHz, f 0），反射速度（reflector speed, cm/s, v），聲傳遞速度（propagation sound speed, cm/s, c），公式是：",
       "options": {
-        "A": "f",
-        "B": "f",
-        "C": "f",
-        "D": "＝4 × f 0 × c / v"
+        "A": "f d ＝2×f 0×v / c",
+        "B": "f d ＝2×f 0×c / v",
+        "C": "f d ＝4×f 0×v / c",
+        "D": "f d ＝4×f 0×c / v"
       },
       "answer": "A",
       "explanation": ""
@@ -132708,12 +132708,12 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 78,
-      "question": "在PET造影中常使用的放射元素 11",
+      "question": "在PET造影中常使用的放射元素11C、13N、15O、18F，其半衰期（half-life）的大小排列順序為何？",
       "options": {
-        "A": "11",
-        "B": "15 O > 11",
-        "C": "< 18 F < 13 N < 15 O",
-        "D": "11"
+        "A": "11C > 13N > 15O > 18F",
+        "B": "15O > 11C > 13N > 18F",
+        "C": "15O < 13N < 11C < 18F",
+        "D": "11C < 18F < 13N < 15O"
       },
       "answer": "C",
       "explanation": ""
@@ -137355,10 +137355,10 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 69,
-      "question": "假設A元素的原子序為13，B元素的原子序為78，試問A、B元素與高能光子發生成對發生反應的機率，何者為 高？約高幾倍？",
+      "question": "假設A元素的原子序為13，B元素的原子序為78，試問A、B元素與高能光子發生成對發生反應的機率，何者為高？約高幾倍？",
       "options": {
-        "A": "較高、高36倍",
-        "B": "較高、高36倍",
+        "A": "A較高、高6倍",
+        "B": "B較高、高6倍",
         "C": "A較高、高36倍",
         "D": "B較高、高36倍"
       },
@@ -152797,10 +152797,10 @@
       "number": 33,
       "question": "下列何者可作為心臟及腫瘤造影劑？",
       "options": {
-        "A": "11",
-        "B": "18 F-FET",
-        "C": "-methionine",
-        "D": "11"
+        "A": "11C-acetate",
+        "B": "18F-FET",
+        "C": "18F-NaF",
+        "D": "11C-methionine"
       },
       "answer": "A",
       "explanation": ""
@@ -184855,10 +184855,10 @@
       "number": 21,
       "question": "下列對近接治療用射源平均光子能量的敘述，何者正確？",
       "options": {
-        "A": "60",
-        "B": "60",
-        "C": "s",
-        "D": "192 Ir > 103 Pd > 60"
+        "A": "60Co > 137Cs > 192Ir > 103Pd",
+        "B": "60Co > 192Ir > 103Pd > 137Cs",
+        "C": "137Cs> 192Ir > 60Co > 103Pd",
+        "D": "192Ir > 103Pd > 60Co > 137Cs"
       },
       "answer": "A",
       "explanation": ""
@@ -191571,10 +191571,10 @@
       "number": 33,
       "question": "下列何者最可能是利用腫瘤脂質合成（lipid synthesis）特性的腫瘤造影劑？",
       "options": {
-        "A": "11",
+        "A": "11 C-acetate",
         "B": "18 F-FET",
-        "C": "-methionine",
-        "D": "11"
+        "C": "18 F-FDOPA",
+        "D": "11 C-methionine"
       },
       "answer": "A",
       "explanation": ""

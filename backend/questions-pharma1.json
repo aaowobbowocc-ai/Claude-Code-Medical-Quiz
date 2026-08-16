@@ -10749,12 +10749,12 @@
       "subject_name": "藥物化學",
       "stage_id": 2,
       "number": 45,
-      "question": "Aminophylline 是茶鹼和下列那個化合物所形成的複合物？",
+      "question": "Aminophylline是茶鹼和下列那個化合物所形成的複合物？",
       "options": {
-        "A": "(OCH -NH",
-        "B": "2",
-        "C": "2)",
-        "D": "2"
+        "A": "(OCH -NH )",
+        "B": "H N-CH OH",
+        "C": "N(CH OH)",
+        "D": "(CH -NH ) 2 2 2 2 2 2 3 2 2 2"
       },
       "answer": "D",
       "explanation": ""
@@ -12134,12 +12134,12 @@
       "subject_name": "藥物分析",
       "stage_id": 3,
       "number": 34,
-      "question": "以 silica gel TLC 片分析下圖 3 個 NSAIDs，並以 chloroform/acetone (4:1) 為移動相，則其 Rf 值由小到大的順序應為何?\n\n[圖]\n\ndiclofenac\n\nmefenamic acid\n\nibuprofen",
+      "question": "以silica gel TLC片分析下圖3個NSAIDs，並以chloroform/acetone（4:1）為移動相，則其Rf值由小到大的順序應為何？H 3 C CH COOH COOH CH 2 COOH Cl NH NH Cl H C CH CH CH(CH ) 3 3 2 3 2 diclofenac mefenamic acid ibuprofen",
       "options": {
-        "A": "Cl",
-        "B": "COOHCH2COOH",
-        "C": "NH",
-        "D": "NH"
+        "A": "diclofenac/mefenamic acid/ibuprofen",
+        "B": "diclofenac/ibuprofen/mefenamic acid",
+        "C": "ibuprofen/diclofenac/mefenamic acid",
+        "D": "ibuprofen/mefenamic acid/diclofenac"
       },
       "answer": "A",
       "explanation": "",
@@ -121137,12 +121137,12 @@
       "subject_name": "生物藥劑學",
       "stage_id": 6,
       "number": 49,
-      "question": "有關藥物連續多次給藥後,可正確預測濃度與時間關係之敘述,下列何者錯誤?",
+      "question": "",
       "options": {
-        "A": "基於藥物mass balance原理",
-        "B": "基於藥物符合superposition原理",
-        "C": "藥物第一次投藥的    等於穩定狀態投藥間隔的",
-        "D": "藥物第一次投藥的   等於穩定狀態投藥間隔的"
+        "A": "圖Ａ是矯正後牙齒白斑；圖Ｂ是充填後變色",
+        "B": "圖Ａ是氟斑齒；圖Ｂ是充填後變色",
+        "C": "圖Ａ是氟斑齒；圖Ｂ是創傷後牙髓壞死",
+        "D": "圖Ａ是矯正後牙齒白斑；圖Ｂ是創傷後牙髓壞死"
       },
       "answer": "D"
     },

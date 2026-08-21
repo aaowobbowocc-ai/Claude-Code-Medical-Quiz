@@ -47,6 +47,19 @@ const LEGAL_EXAMS = new Set([
 const RAG_ENABLED = new Set([...MEDICAL_EXAMS, ...LEGAL_EXAMS, 'driver-car','driver-moto']);
 
 const DRIVER_EXAMS = new Set(['driver-car', 'driver-moto']);
+// 心理師：非純生物醫學，重理論取向／衡鑑工具／治療技術。
+const PSYCH_EXAMS = new Set(['clinical-psychology', 'counseling-psychology']);
+// 專業醫事（非醫師級）：聽力/語言治療/驗光/牙體技術/公衛——臨床實務導向，
+// 但別套「公職法規/公文」那組指引（原本錯落到 fallback）。
+const ALLIED_HEALTH_EXAMS = new Set([
+  'audiologist', 'speech-therapist', 'optometrist', 'optometrist-junior',
+  'dental-tech', 'public-health',
+]);
+// 教師資格考（教檢）：重教育學理論、學者對應、教學法、發展階段。
+const TEACHER_EXAMS = new Set([
+  'teacher-secondary', 'teacher-elementary', 'teacher-kindergarten',
+  'teacher-special', 'teacher-special-gifted',
+]);
 
 // Category-specific guidance injected into /explain prompt. Tailors emphasis
 // to the discipline (mechanism vs articles vs safety principles) and adapts
@@ -81,6 +94,39 @@ function getCategoryGuidance(examId) {
       ],
       applicationLabel: '🏥 臨床應用',
       applicationDesc: '一句話說明這個知識點在臨床上的意義',
+    };
+  }
+  if (PSYCH_EXAMS.has(examId)) {
+    return {
+      extraRules: [
+        '先辨識題目屬於哪個理論取向／學派（精神分析、認知行為、人本、家族系統…）與代表學者，答案常取決於此。',
+        '衡鑑題要分清工具用途（智力/人格/神經心理/症狀量表）、信效度概念與適用對象；治療題對應技術與其理論依據。',
+        '涉及《心理師法》、倫理守則或通報義務時，依台灣現行規定與專業倫理作答。',
+      ],
+      applicationLabel: '🧩 衡鑑／治療應用',
+      applicationDesc: '一句話說明此概念在心理衡鑑或治療實務上怎麼用',
+    };
+  }
+  if (ALLIED_HEALTH_EXAMS.has(examId)) {
+    return {
+      extraRules: [
+        '以專業實務為核心：先講原理/解剖生理或評估邏輯，再連到操作、判讀或處置，別只背名詞。',
+        '涉及數值（正常值、cutoff、參數設定、屈光度、劑量）時務必謹慎，不確定就標「約／依標準」。',
+        '若涉及該職類法規或執業倫理，依台灣現行規定作答。',
+      ],
+      applicationLabel: '🩺 專業實務應用',
+      applicationDesc: '一句話說明這個知識點在實際執業/評估上的意義',
+    };
+  }
+  if (TEACHER_EXAMS.has(examId)) {
+    return {
+      extraRules: [
+        '教育題先對應理論／學者（如 Piaget、Vygotsky、Bloom、Erikson…）或課綱／法規依據，答案常取決於此。',
+        '區分相近概念（發展階段、學習理論、評量方式、班級經營策略）的關鍵差異，並扣回教學現場情境。',
+        '涉及《特殊教育法》、108 課綱或教師專業倫理時，依台灣現行規定作答。',
+      ],
+      applicationLabel: '🍎 教學現場應用',
+      applicationDesc: '一句話說明這個考點在實際教學/班級經營怎麼用',
     };
   }
   // Civil-service / generic fallback
@@ -619,7 +665,7 @@ function registerRoutes(app, examData, stats) {
     const noteBlock = notes.length ? '\n' + notes.join('\n') + '\n' : '';
 
     const cat = getCategoryGuidance(exam);
-    const extraRulesBlock = cat.extraRules.map((r, i) => `${6 + i}. ${r}`).join('\n');
+    const extraRulesBlock = cat.extraRules.map((r, i) => `${7 + i}. ${r}`).join('\n');
 
     const prompt = `你是一位臺灣${examName}的解題老師，用繁體中文回答。
 ${ragContext}
@@ -628,7 +674,7 @@ ${ragContext}
 2. 台灣考試標準：以台灣現行法規、官方指引、學會共識為準（醫學題用台灣醫學會指引/健保；法律題用台灣現行法）。
 3. 不確定的精確數值（劑量、年限、金額、百分比、cutoff、條號）要標「約」或「依指引」，**寧可不寫具體數字，也不要編造**。
 4. 若知識點冷門或題幹資訊不足，誠實說「題幹資訊有限，常見答案是 X」，不要硬掰機制。
-5. 避免無翻譯的艱澀外文；專有名詞中英並列。
+5. **白話優先**：抽象或艱澀的概念，先用一句大白話或生活化比喻點破，再帶專業術語；避免無翻譯的外文，專有名詞中英並列，讓看完的人真的懂、而不是更混亂。
 6. **每段不重複資訊**：「為什麼答案是 X」講核心機制；「排除其他選項」只比較差異點，不要重述相同概念。
 ${extraRulesBlock}
 ${multiNote}
@@ -651,7 +697,7 @@ ${wrongNote}
 （每個錯誤選項一句話說明為何不對）
 
 **🧠 記憶關鍵字**
-（給一個好記的口訣或記憶技巧）
+（給一個好記的口訣或記憶技巧；若沒有自然好記的口訣，就用一句話點出「這題最該記住的一個重點」，不要硬湊）
 
 **${cat.applicationLabel}**
 （${cat.applicationDesc}）`;

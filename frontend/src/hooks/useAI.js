@@ -403,10 +403,11 @@ export function useReview() {
     setText('')
     setNotEnoughCoins(false)
     setLoading(true)
+    const exam = usePlayerStore.getState().exam || 'doctor1'
     try {
       await streamPost(
         `${BACKEND}/review`,
-        { questions, mode },
+        { questions, mode, exam },
         (chunk) => setText(t => t + chunk),
         () => setLoading(false),
       )

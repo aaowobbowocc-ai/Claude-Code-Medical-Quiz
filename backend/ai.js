@@ -848,7 +848,7 @@ ${wrongNote}
 
   // POST /review
   app.post('/review', async (req, res) => {
-    const { questions, mode = 'practice' } = req.body;
+    const { questions, mode = 'practice', exam } = req.body;
     if (!questions?.length) return res.status(400).json({ error: 'no questions' });
 
     sseHeaders(res);
@@ -870,13 +870,20 @@ ${wrongNote}
       .map(([s,v]) => `${s}: ${v.total - v.wrong}/${v.total}`)
       .join('、');
 
-    const prompt = `你是一位臺灣醫師國考（一階）的家教老師，用繁體中文給學生檢討報告。
+    const reviewMeta = examData[exam] || examData.doctor1;
+    const reviewExamName = reviewMeta.metadata?.category || '醫師國考';
+    const rcat = getCategoryGuidance(exam || 'doctor1');
+
+    const prompt = `你是一位臺灣${reviewExamName}的家教老師，用繁體中文給學生檢討報告。
 
 本次${mode === 'battle' ? '對戰' : '練習'}成績：答對 ${correct}/${total} 題
 各科表現：${statText}
 
 答錯的題目（前8題）：
 ${wrongSummary || '（全部答對！）'}
+
+【檢討重點】${rcat.extraRules[0]}
+建議複習計畫請扣住此考試的性質（${rcat.applicationDesc}），給的複習方向要對得上${reviewExamName}的考科與題型。
 
 請用以下格式給出**個人化學習建議**：
 

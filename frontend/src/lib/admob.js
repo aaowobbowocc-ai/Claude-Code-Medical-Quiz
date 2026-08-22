@@ -84,33 +84,37 @@ export async function showRewarded() {
   })
 
   // Show + wait for either Rewarded event (success) or Dismissed (skip).
-  // The SDK fires events; we wrap in a Promise.
+  //
+  // ⚠️ Capacitor 6/7 的 AdMob.addListener 回傳的是 Promise<PluginListenerHandle>，
+  // 不是同步 handle。舊寫法把 Promise 直接 push、且在 listener 尚未真正掛上前就
+  // 呼叫 showRewardVideoAd()，若 Rewarded/Dismissed 早於掛載觸發就會整個漏接，
+  // 造成「看完卻沒發獎勵、Promise 永遠 pending」。修法：先 await 三個 listener 都
+  // 掛好，再 show；並用 settled 旗標防重複結算、cleanup 對已解析的 handle 生效。
   return new Promise((resolve, reject) => {
     let rewarded = false
-    let listeners = []
-
+    let settled = false
+    const handles = []
     const cleanup = () => {
-      for (const l of listeners) {
-        try { l.remove() } catch {}
-      }
+      for (const h of handles) { try { h.remove() } catch {} }
+    }
+    const settle = (fn, val) => {
+      if (settled) return
+      settled = true
+      cleanup()
+      fn(val)
     }
 
-    listeners.push(mod.AdMob.addListener(mod.RewardAdPluginEvents.Rewarded, () => {
-      rewarded = true
-    }))
-    listeners.push(mod.AdMob.addListener(mod.RewardAdPluginEvents.Dismissed, () => {
-      cleanup()
-      resolve(rewarded)
-    }))
-    listeners.push(mod.AdMob.addListener(mod.RewardAdPluginEvents.FailedToShow, (err) => {
-      cleanup()
-      reject(new Error(`AdMob FailedToShow: ${err?.message || err?.code || 'unknown'}`))
-    }))
-
-    mod.AdMob.showRewardVideoAd().catch(err => {
-      cleanup()
-      reject(err)
-    })
+    Promise.all([
+      mod.AdMob.addListener(mod.RewardAdPluginEvents.Rewarded, () => { rewarded = true }),
+      mod.AdMob.addListener(mod.RewardAdPluginEvents.Dismissed, () => settle(resolve, rewarded)),
+      mod.AdMob.addListener(mod.RewardAdPluginEvents.FailedToShow, (err) =>
+        settle(reject, new Error(`AdMob FailedToShow: ${err?.message || err?.code || 'unknown'}`))),
+    ])
+      .then((ls) => {
+        handles.push(...ls)
+        return mod.AdMob.showRewardVideoAd()
+      })
+      .catch((err) => settle(reject, err instanceof Error ? err : new Error(String(err?.message || err))))
   })
 }
 

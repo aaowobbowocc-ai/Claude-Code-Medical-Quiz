@@ -945,6 +945,7 @@ communityNotes.registerRoutes(app);
 feedback.registerRoutes(app, examData, examConfigs);
 board.registerRoutes(app);
 paymentJkos.registerJkosRoutes(app, supabase);
+require('./payment-iap').registerIapRoutes(app, supabase);
 mockScores.registerRoutes(app);
 const monetization = require('./monetization');
 monetization.registerMonetizationRoutes(app);

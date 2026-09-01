@@ -111499,7 +111499,4570 @@
       },
       "answer": "D",
       "explanation": ""
+    },
+    {
+      "id": "115100_0_1",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 1,
+      "question": "心理學家H. Ebbinghaus對記憶研究的主要貢獻為何？",
+      "options": {
+        "A": "他證實有些早期記憶被存入到潛意識層次",
+        "B": "他對感覺記憶和短期記憶的不同表現提供了神經層次的證據",
+        "C": "他證實適度的獎懲方法對增進記憶是有效的",
+        "D": "他對短期記憶和長期記憶的不同表現提供了行為證據"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_0_2",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 2,
+      "question": "在探索心智運作的機制時，需要如何設計研究，最有可能降低安慰劑效果（Placebo effect）的影響？",
+      "options": {
+        "A": "研究進行前，研究資料收集者不能知道研究的假設",
+        "B": "需要有研究變項的操作型定義，來降低安慰劑效果",
+        "C": "使用控制組和實驗組進行研究，可以降低安慰劑效果對結果解釋的影響",
+        "D": "需要以統計方式處理資料，以降低研究者過於主觀的解釋研究結果"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_0_3",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 3,
+      "question": "一個研究想比較開車時以手持聽筒對話與酒駕的風險，於是在駕駛模擬器中，讓一半的參與者第一天邊開車邊以手持聽筒對話，第二天則喝酒後再開車；另一半參與者進行的順序則相反。此研究是屬於下列何種實驗設計？",
+      "options": {
+        "A": "受試者間（between-subject）",
+        "B": "受試者內（within-subject）",
+        "C": "縱斷式（longitudinal）",
+        "D": "直接觀察"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_0_4",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 4,
+      "question": "關於大腦各區域分工，下列敘述何者錯誤？",
+      "options": {
+        "A": "杏仁核（amygdala）受損的病人，情緒控制出現問題，常常會脾氣暴躁",
+        "B": "我們辨識其他人臉部的情緒表情，例如悲傷的情緒時，會使用到杏仁核（amygdala）這個腦區",
+        "C": "下視丘（hypothalamus）對於生理平衡狀態的調控，扮演了重要的角色",
+        "D": "基底核（basal ganglia）對於身體的動作協調扮演了重要的角色"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_5",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 5,
+      "question": "關於神經訊號傳遞，下列敘述何者錯誤？",
+      "options": {
+        "A": "活動電位（action potential）是神經元訊號的一種傳遞形式",
+        "B": "活動電位（action potential）抵達軸突（axon）末端的突觸（synapse）之後，神經元訊號以鈉離子的形式傳給下一個神經元",
+        "C": "接收訊號的神經元在樹突（dendrite）的細胞膜上面有許多接受器（receptor）",
+        "D": "某些樹突（dendrite）上的接受器（receptor），負責調控離子通道"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_0_6",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 6,
+      "question": "關於大腦區域與功能的研究，下列敘述何者錯誤？",
+      "options": {
+        "A": "穿顱磁刺激（transcranial magnetic stimulation, TMS）技術可以讓我們看到那一塊大腦皮質區域有較高的神經活性",
+        "B": "大腦皮質布洛卡區域（Broca's area）受損的人，其語言表達能力受影響",
+        "C": "早期對大腦各區域分工狀況的了解，有很大一部分奠基於對腦傷病人所做的研究",
+        "D": "使用動物來做實驗的好處之一是可以使用侵入式的方式，例如電燒、神經毒素破壞等，精準地在特定大腦區域中造成損傷以進行研究"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_7",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 7,
+      "question": "心理學著名個案Phineas Gage腦受傷的部位是：",
+      "options": {
+        "A": "初級視覺皮質區（primary visual cortex）",
+        "B": "大腦額葉（frontal lobe）",
+        "C": "大腦頂葉（parietal lobe）",
+        "D": "初級體感覺皮質區（primary somatosensory cortex）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_0_8",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 8,
+      "question": "茉莉在獸醫系擔任研究助理，某天要火化實驗室剛死的小狗屍體時，突然覺得狗肉和其他動物的肉沒有什麼不同，應該都可以食用，於是割下一塊肉帶回家煮了吃。一般人聽到此故事後，大多會立即覺得噁心，對故事主角提出道德譴責，但又無法明確指出她所犯的錯，因為小狗的死亡不是她造成。下列理論何者最能解釋上述一般人所出現的反應？",
+      "options": {
+        "A": "Jean Piaget的道德自律論",
+        "B": "Lawrence Kohlberg的道德推理論",
+        "C": "Carol Gilligan的道德關愛論",
+        "D": "Jonathan Haidt的社會直覺論"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_0_9",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 9,
+      "question": "心理學家皮亞傑（J. Piaget）認為兒童會建立新基模（schema）來理解新經驗，下列何者最適合用來描述此歷程？",
+      "options": {
+        "A": "同化（assimilation）",
+        "B": "去習慣化（dishabituation）",
+        "C": "模組化（modularization）",
+        "D": "調適（accommodation）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_0_10",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 10,
+      "question": "有關嬰兒導向式語言（infant-directed speech）的特徵，下列何者錯誤？",
+      "options": {
+        "A": "提高音調、誇張語氣",
+        "B": "說話速度較慢",
+        "C": "使用較短的句子",
+        "D": "西方文化才具有嬰兒導向式語言"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_0_11",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 11,
+      "question": "下列何者最適合說明遺傳與環境兩者間之交互作用對發展的影響？",
+      "options": {
+        "A": "思覺失調症父母的同卵雙生小孩自幼被親生父母與領養父母分開扶養，長大後，其罹患思覺失調症的機率皆相當高",
+        "B": "唐氏症（Down Syndrome）是染色體分裂不平均（第21號染色體有3條）所引起",
+        "C": "所有的嬰兒約在6個月前能區辨所有語言的語音音素（phoneme），之後此能力漸漸侷限於母語的音素範圍",
+        "D": "嬰兒的依附類型（types of attachment）通常反映出他們從主要照顧者獲得的看護品質，而與個人氣質的關連性較小"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_0_12",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 12,
+      "question": "兩台不同品牌的螢幕使用不同材料或波長的紅、綠、藍像素，但經過顯色校正後，觀者仍會覺得兩台螢幕顯示的顏色相同。這種現象最能體現下列何種色彩知覺理論的核心觀點？",
+      "options": {
+        "A": "三原色論（trichromatic theory）",
+        "B": "拮抗歷程論（opponent-process theory）",
+        "C": "加法混色（additive color mixture）",
+        "D": "減法混色（subtractive color mixture）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_13",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 13,
+      "question": "偽陰性（false negative）指的是訊號偵測理論（signal detection theory）的何種項目？",
+      "options": {
+        "A": "命中（hit）",
+        "B": "失誤（miss）",
+        "C": "假警報（false alarm）",
+        "D": "正確拒絕（correct rejection）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_0_14",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 14,
+      "question": "有關Biederman對於物體辨識歷程的敘述，下列何者錯誤？",
+      "options": {
+        "A": "組成物體的最小單位為幾何子（geon）",
+        "B": "見樹方見林",
+        "C": "整體優先於局部處理",
+        "D": "強調非偶發性（non-accidental）特徵對於物體辨識的重要性"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_0_15",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 15,
+      "question": "人類可以聽到的頻率範圍為：",
+      "options": {
+        "A": "20～20,000 Hz",
+        "B": "4,000～50,000 Hz",
+        "C": "5～60,000 Hz",
+        "D": "500～50,000 Hz"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_16",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 16,
+      "question": "依據意識層級的分類，腦波活動主要屬於何種層級的歷程？",
+      "options": {
+        "A": "非意識（nonconscious）",
+        "B": "前意識（preconscious）",
+        "C": "潛意識（subconscious）",
+        "D": "無意識（unconscious）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_17",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 17,
+      "question": "小朋友在半夜睡夢中突然尖叫、出冷汗，父母試圖安撫但小朋友難以被叫醒，隔天完全不記得這件事。此現象最符合下列何種睡眠障礙？",
+      "options": {
+        "A": "夢魘（nightmare）",
+        "B": "夜驚（night terrors）",
+        "C": "失眠（insomnia）",
+        "D": "夢遊（sleepwalking）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_0_18",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 18,
+      "question": "以古典制約（classical conditioning）的觀點，經常性的吸毒同伴或環境會成為制約刺激（conditioned stimulus, CS），而身體則會形成預期的補償反應（compensatory response），即為制約反應（conditioned response, CR）。以上述概念解釋毒品成癮者的相關行為時，下列敘述何者錯誤？",
+      "options": {
+        "A": "此機制可解釋，針頭也可以成為制約刺激",
+        "B": "此機制可解釋在同樣環境中吸毒，耐受度（tolerance）會提高",
+        "C": "此機制可解釋毒癮者用藥過量致死的原因，是因為改變環境時補償反應會提高",
+        "D": "此機制可解釋戒毒者常常因為回到原朋友圈而又開始吸毒"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_0_19",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 19,
+      "question": "根據行為學派，當小朋友考試考很好，媽媽為了鼓勵他，跟他說：「今天晚飯後，不用倒垃圾了」，此為：",
+      "options": {
+        "A": "正增強",
+        "B": "負增強",
+        "C": "正懲罰",
+        "D": "負懲罰"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_0_20",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 20,
+      "question": "一位兒童的衡鑑結果顯示，其在魏氏兒童智力量表（WISC）的「詞彙」與「常識」等分測驗上表現不佳，但在「圖形設計」與「物形配對」等非語言操作項目上表現良好。若以Anderson的智力理論來解釋此情況，下列何者是最恰當的分析？",
+      "options": {
+        "A": "該兒童的七種多元智力發展不均衡，特別是在語言智力上較弱",
+        "B": "該兒童的分析智力較弱，但在實用智力與創造智力上具有潛力",
+        "C": "該兒童在語言相關模組發展狀況不佳，但其基本處理機制應無異常",
+        "D": "該兒童的結晶智力發展遲緩，但流體智力表現優異"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_0_21",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 21,
+      "question": "假設抑制是害羞性格的重要成分，在編製害羞量表時，我們以某一抑制量表檢驗其與害羞量表之間的相關，下列何者最能代表此相關的意涵？",
+      "options": {
+        "A": "輻合效度（convergent validity）",
+        "B": "內容效度（content validity）",
+        "C": "區辨效度（discriminant validity）",
+        "D": "預測效度（predictive validity）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_22",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 22,
+      "question": "根據社會學習理論，讓青少年幼童觀看暴力電視影集，會導致什麼後果？",
+      "options": {
+        "A": "可以讓青少年幼童紓壓，降低暴戾之氣",
+        "B": "會導致更多的攻擊行為",
+        "C": "會誘發精神疾患",
+        "D": "無任何影響"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_0_23",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 23,
+      "question": "在非聯結學習中，同一刺激多次出現後，有時會導致反應越來越弱，有時會導致反應越來越強。這兩種現象，依序分別稱為：",
+      "options": {
+        "A": "習慣化，敏感化",
+        "B": "習慣化，制約學習",
+        "C": "制約學習，敏感化",
+        "D": "敏感化，習慣化"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_24",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 24,
+      "question": "George Sperling基於何種現象，推論感官儲存的容量很大，但僅能保存短暫的時間？",
+      "options": {
+        "A": "當參與者僅需要做部分回報（partial report）的時候，記憶表現比起完整回報（whole report）的時候好",
+        "B": "當需要記憶的資訊，是視覺上比較明顯的時候，記憶表現會較佳",
+        "C": "當需要記憶的資訊能夠被組織為有意義的字串時，記憶表現會較佳",
+        "D": "利用再認（recognition）的時候，記憶表現會優於使用自由回憶（free recall）時"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_25",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 25,
+      "question": "在Eich和Metcalfe（2009）的研究中，他們讓剛跑完馬拉松以及跑完馬拉松一至三天的選手進行外顯記憶（explicit memory）測驗，以及內隱記憶（implicit memory）測驗，下列何者是他們的發現與解釋？",
+      "options": {
+        "A": "剛跑完馬拉松的選手外顯記憶較差，因為身體的勞累與比賽的壓力使得選手難以對訊息作深度的處理",
+        "B": "剛跑完馬拉松的選手外顯記憶較好，因為外顯記憶不需要編碼與提取的配合",
+        "C": "跑完馬拉松一至三天的選手內隱記憶較好，因為內隱記憶的促發（priming）效果可維持相當長一段時間",
+        "D": "跑完馬拉松一至三天的選手內隱記憶較好，因為適當的休息有助於內隱記憶的複誦（rehearsal）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_26",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 26,
+      "question": "在一個收留特定傳染病的醫院中，有200位受到感染的病人。若A藥物會造成90％的人存活、B藥物會造成20人的死亡。即便兩者造成可能的傷害是沒有差異的，卻有比較多人會傾向選擇使用A藥物，主要的原因為何？",
+      "options": {
+        "A": "人們有損失迴避（loss aversion）的行為傾向",
+        "B": "人們喜歡用機率呈現的選項",
+        "C": "人們誤以為10％的人死亡＜20人死亡，就認為A藥物造成的傷害，比起B藥物少",
+        "D": "人們覺得在等級的排序上，A是優於B的，所以會認為A藥物比較好"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_27",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 27,
+      "question": "要解決河內塔（Tower of Hanoi）的議題時，要使用下列何種問題解決的方法？",
+      "options": {
+        "A": "設定子目標（subgoal），先不用急著把所有的東西，從一根柱子移到另一個柱子，而是先思考如何把最下面的東西，移到最後要擺放的柱子，然後再循序移動其他的東西",
+        "B": "用類比法（analogy），觀察如何把一個箱子從A地點移動到B地點，仿造用最短的距離來移動柱子上的東西",
+        "C": "避免功能性固著（functional fixedness）的現象，不要認為柱子就是會限制東西的移動",
+        "D": "重新解構（reconstruct）這個問題，其實只要把東西移動到另一個柱子就可以，小的東西不需要放在最上面"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_28",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 28,
+      "question": "下列何者最能同時說明不同成就動機（achievement motivation）的兒童，在套圈圈遊戲中的典型站位？",
+      "options": {
+        "A": "低成就動機者站得非常近或非常遠；高成就動機者站得距離適中",
+        "B": "低成就動機者站得距離適中；高成就動機者站得非常近或非常遠",
+        "C": "低成就動機者站得非常近；高成就動機者站得非常遠",
+        "D": "低成就動機者站得非常遠；高成就動機者站得非常近"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_0_29",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 29,
+      "question": "根據馬斯洛的需求階層理論，除了最底層的生理需求和最高層的自我實現需求之外，其他三層依底層至高層的排列順序為：",
+      "options": {
+        "A": "愛與歸屬需求－自尊需求－安全需求",
+        "B": "自尊需求－愛與歸屬需求－安全需求",
+        "C": "安全需求－自尊需求－愛與歸屬需求",
+        "D": "安全需求－愛與歸屬需求－自尊需求"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_0_30",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 30,
+      "question": "下列何者不屬於六種基本的情緒類型？",
+      "options": {
+        "A": "憂傷",
+        "B": "生氣",
+        "C": "嫉妒",
+        "D": "驚訝"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_0_31",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 31,
+      "question": "下列有關智力測驗和認知表現的描述何者錯誤？",
+      "options": {
+        "A": "智力測驗得分與簡單記憶廣度測驗相關不高",
+        "B": "智力測驗得分高者在反應時間測驗作答較為快速",
+        "C": "目檢時間（inspection time）較短者，智力測驗得分較高",
+        "D": "前額葉受損，結晶智力的表現變差"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_0_32",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 32,
+      "question": "如果一個測驗被判斷為有效度時，下列何者是最有可能的推論？",
+      "options": {
+        "A": "此測驗為公平的",
+        "B": "此測驗可以適用於各種族群",
+        "C": "此測驗可以適用於各種用途",
+        "D": "此測驗具有信度"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_0_33",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 33,
+      "question": "八歲的小明得到鋼琴比賽冠軍，並獲得音樂神童之稱，此狀況可由下列何種理論來說明？",
+      "options": {
+        "A": "Spearman的一般因素論（intelligence as a general factor）",
+        "B": "Anderson的智力與認知發展論（theory of intelligence and cognitive development）",
+        "C": "Gardner的多元智能理論（theory of multiple intelligences）",
+        "D": "Sternberg的智力三元論（triarchic theory of intelligence）"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_0_34",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 34,
+      "question": "根據Walter Mischel與Yuichi Shoda所提出的「認知情感處理系統（cognitive-affective processing system, CAPS）」觀點，下列何者最能描述人格與情境之交互作用？",
+      "options": {
+        "A": "人格決定行為，因此相同的人在所有情境中都會展現高度一致的反應",
+        "B": "行為完全由情境決定，人格差異對行為的預測力極低",
+        "C": "在相似情境下，人們會呈現由人格可預測的穩定個體差異行為模式",
+        "D": "強情境（strong situations）通常顯現更多人格差異，而弱情境（weak situations）則會掩蓋個體差異"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_0_35",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 35,
+      "question": "關於人格發展的研究發現，下列何者最為正確？",
+      "options": {
+        "A": "人格特質在一生中完全穩定，不會隨年齡或經驗而改變",
+        "B": "排名穩定性（rank-order stability）指的是整體人格傾向的提升，例如大多數人隨年齡變得更為嚴謹",
+        "C": "平均水準變化（mean-level change）指的是群體整體特質平均值隨時間變化的現象，即使個體間的相對排序仍可能保持穩定",
+        "D": "研究顯示，人格變化主要出現在青少年期，成年後便停止發展"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_0_36",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 36,
+      "question": "關於自尊（self-esteem）的研究，下列敘述何者正確？",
+      "options": {
+        "A": "自尊完全取決於個人對自我特質的客觀評價，與他人看法無關",
+        "B": "反映評價（reflected appraisal）指人們從他人眼中學習如何看待自己，進而內化他人對自我的價值與信念",
+        "C": "自尊在整個生命歷程中保持穩定，沒有顯著變化",
+        "D": "跨文化研究顯示，自尊的年齡變化軌跡在不同文明社會的差異甚高"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_0_37",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 37,
+      "question": "Milgram（1974）的電擊順從實驗及Zimbardo的史丹佛監獄實驗（1973）皆顯示了：",
+      "options": {
+        "A": "善有善報及惡有惡報的公平世界信念",
+        "B": "我們過度相信人性本善的信念",
+        "C": "確認了只有壞人才會做壞事的信念",
+        "D": "我們低估了情境對行為的影響"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_0_38",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 38,
+      "question": "根據基本歸因謬誤（fundamental attribution error）的解釋，人們在對他人的行為歸因時，通常會出現下列何種狀況？",
+      "options": {
+        "A": "低估個人特質的影響；高估環境的影響",
+        "B": "低估情境的影響；高估來自他人的影響",
+        "C": "低估情境的影響；高估性格的影響",
+        "D": "低估個人習慣的影響；高估性格的影響"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_0_39",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 39,
+      "question": "有關從眾的研究發現，下列敘述何者錯誤？",
+      "options": {
+        "A": "我們之所以從眾，可能是因為覺得其他人比我們更瞭解情況、有更多資訊",
+        "B": "我們之所以從眾，是希望不會因為跟他人有所不同而招致排斥",
+        "C": "在集體主義文化與在個人主義文化下的個體，在Asch從眾典範的相關研究中並未出現顯著差異",
+        "D": "自覺社會地位較低的個體較易從眾"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_0_40",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學基礎",
+      "subject_tag": "cp_basic",
+      "subject_name": "臨床心理學基礎",
+      "stage_id": 0,
+      "number": 40,
+      "question": "態度的研究指出，我們所喜歡的人會對我們有著較大的說服力。此時的說服效果是透過下列何種途徑達成？",
+      "options": {
+        "A": "中央途徑（central route）",
+        "B": "平衡途徑（balanced route）",
+        "C": "邊緣途徑（peripheral route）",
+        "D": "頓悟途徑（insight route）"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_1",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 1,
+      "question": "「以焦慮症為例，會對畏懼症中的焦慮強度和頻率，依據0到4的量尺進行評分，其中1代表輕度或偶發症狀，4代表持續且嚴重的症狀」，顯示DSM-5較DSM-IV增加了對特定障礙症（specific disorder）嚴重程度之何方面的評估？",
+      "options": {
+        "A": "類別評估",
+        "B": "質化評估",
+        "C": "層級評估",
+        "D": "向度評估"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_2",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 2,
+      "question": "相較於之前的版本，關於DSM-5與DSM-5-TR的優點，下列敘述何者錯誤？",
+      "options": {
+        "A": "對症狀有更具體詳細的描述",
+        "B": "減少診斷數量使更加精簡",
+        "C": "與ICD系統儘量一致",
+        "D": "依據共病與共有病因做分類"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_3",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 3,
+      "question": "根據DSM-5的定義，下列何種狀態不能稱之為精神疾病（mental disorders）？",
+      "options": {
+        "A": "有顯著的認知缺損（cognitive impairment）",
+        "B": "承受顯著的痛苦（significant distress）",
+        "C": "無法維持重要活動（important activities）",
+        "D": "出現社會衝突行為（deviant behavior）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_4",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 4,
+      "question": "沒有單一要件可以充分描述心理疾病，但有些特徵可用以共同定義之，下列敘述何項最不合適？",
+      "options": {
+        "A": "造成個人顯著的痛苦",
+        "B": "影響社會與職業功能",
+        "C": "違反一般社會常規",
+        "D": "群體中出現比例極低"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_5",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 5,
+      "question": "當過去研究對同一議題出現了許多不一致的結果時，下列何種科學方法最適合用來解決這個問題？",
+      "options": {
+        "A": "後設分析（meta-analysis）",
+        "B": "類實驗設計（analogue experiment）",
+        "C": "隨機對照試驗（randomized controlled trials）",
+        "D": "交叉驗證（cross-validation）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_6",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 6,
+      "question": "下列何者為單一受試者實驗設計（single-case experimental design）最常需要考量的倫理議題？",
+      "options": {
+        "A": "選用此研究法之受試者經常為易受傷族群",
+        "B": "會有撤除（withdraw）有效治療的操弄階段",
+        "C": "缺乏外在效度（external validity）",
+        "D": "可以重複進行欺瞞（deception）操弄"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_7",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 7,
+      "question": "關於個案研究法（case study method），下列敘述何者正確？",
+      "options": {
+        "A": "無法對普遍被接受的理論提出反證",
+        "B": "可以提供足夠且強力證據來支持某項理論",
+        "C": "可以透過罕見個案的資訊來產生新假設",
+        "D": "有助於治療方式與其療效之普遍推廣"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_8",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 8,
+      "question": "A與B的相關係數為.78指的是：",
+      "options": {
+        "A": "A與B沒有關係",
+        "B": "可能有因果關係，A導致B的發生",
+        "C": "A與B之間有低的正相關",
+        "D": "A與B之間有高的正相關"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_9",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 9,
+      "question": "雙盲設計（double-blind design）的主要目的為：",
+      "options": {
+        "A": "達到隨機分配（random assignment）效果",
+        "B": "達到安慰劑效應（placebo effect）",
+        "C": "減少練習效果（practice effect）的影響",
+        "D": "減少實驗者和研究參與者的偏見（experimenter and participant biases）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_10",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 10,
+      "question": "關於相關研究法（correlational method），下列敘述何者錯誤？",
+      "options": {
+        "A": "常可用來探討不同變項之間的關聯性，例如：心理狀態與生理功能指標",
+        "B": "在進行研究時，常須將受試者隨機分派到特定的組別中，以利後續分析",
+        "C": "無法用來直接推論變項間的因果關係",
+        "D": "常可能存在「第三變項問題（third-variable problem）」"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_11",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 11,
+      "question": "下列何者為「單一受試者實驗設計」最主要的缺點？",
+      "options": {
+        "A": "缺乏外在效度（external validity）",
+        "B": "缺乏內在效度（internal validity）",
+        "C": "僅能當做後續大規模研究的參考",
+        "D": "僅能用在「治療效果」的研究中"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_12",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 12,
+      "question": "跨世代效應（cross-generational effect）最容易發生在下列何者的研究設計中？",
+      "options": {
+        "A": "橫斷法（cross-sectional designs）",
+        "B": "縱貫法（longitudinal designs）",
+        "C": "系列法（sequential design）",
+        "D": "回溯法（retrospective method）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_13",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 13,
+      "question": "下列何者不是文化概念化晤談（cultural formulation interview, CFI）的適用情境與時機？",
+      "options": {
+        "A": "臨床專業人員對文化差異具有良好的敏感度",
+        "B": "臨床專業人員與案主因文化差異導致診斷困難",
+        "C": "案主與臨床專業人員對症狀與治療期望持有不同觀點",
+        "D": "案主因創傷或壓迫歷史對醫療體系不信任"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_14",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 14,
+      "question": "實驗心理學取向中，若研究憂鬱治療效果，單純「統計顯著」而無「臨床顯著」改善，臨床意涵是：",
+      "options": {
+        "A": "闡釋結果時，應將統計顯著視為有效治療之依據",
+        "B": "治療效果不足以改善患者日常功能",
+        "C": "持續治療必然可以改善患者日常功能",
+        "D": "依人體研究倫理，研究者應停止此研究"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_15",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 15,
+      "question": "在DSM-5關於苦惱（distress）之文化概念的描述中，Susto是一種歸因於可怕事件的疾病，這種事件會導致靈魂離開身體，帶來不快樂和疾病，以及難以發揮社會角色功能的一種疾病。上述文化概念容易出現在何種文化背景下？",
+      "options": {
+        "A": "北美、中美和南美等拉丁裔文化背景",
+        "B": "西班牙、義大利等歐洲文化地區",
+        "C": "越南、印尼、菲律賓等東南亞文化背景",
+        "D": "中國、香港、澳門等亞洲文化地區"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_16",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 16,
+      "question": "在貝克理論（Beck's Theory）中，導致憂鬱的認知偏差的形式是過度關注下列何者？",
+      "options": {
+        "A": "過去事件（the past）",
+        "B": "全面性災難（the global disasters）",
+        "C": "童年時期的創傷經驗（traumatic experiences in childhood）",
+        "D": "負向回饋（negative feedback）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_17",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 17,
+      "question": "依據DSM-5-TR，關於強迫症及相關障礙症（obsessive-compulsive and related disorders）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "二分之一以上的摳皮症（excoriation disorder）病患為男性",
+        "B": "儲物症狀（hoarding symptoms）在65歲以上成人的盛行率高於40歲以下成人",
+        "C": "強迫症（obsessive-compulsive disorder）男性病患的發病年齡較女性病患為早",
+        "D": "身體臆形症（body dysmorphic disorder）的女性病患比男性病患更容易與飲食障礙症共病"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_18",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 18,
+      "question": "根據DSM-5，關於物質相關及成癮障礙症（substance-related and addictive disorders）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "在每次飲用相同的酒精量後，女性血液中的酒精濃度比男性更容易升高",
+        "B": "男性和女性錯誤使用鎮靜、安眠或抗焦慮等處方用藥的風險一樣高",
+        "C": "男性安非他命使用者較女性使用者更常利用靜脈注射的方式",
+        "D": "嗜賭症（gambling disorder）的終生盛行率男性高於女性"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_19",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 19,
+      "question": "根據Harvey等人（2004），下列何者在跨診斷（transdiagnostic）取向的認知歷程（processes）缺損討論中，較少被提及？",
+      "options": {
+        "A": "持續性注意力（sustained attention）",
+        "B": "情緒推理（emotional reasoning）",
+        "C": "選擇性注意力（selective attention）",
+        "D": "外顯選擇性記憶（explicit selective memory）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_20",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 20,
+      "question": "張同學在半年前的入學考試失利，最近一個月他時常因為自己腦中一再反覆出現「為什麼當時是自己考不好？而不是他人？」的想法所苦惱，關於張同學苦惱的敘述，下列何者錯誤？",
+      "options": {
+        "A": "這是一種反芻性思考（rumination）",
+        "B": "張同學較常使用Why-type問題來思考",
+        "C": "張同學較常使用How-type問題來思考",
+        "D": "張同學的思考模式與憂鬱症患者類似"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_21",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 21,
+      "question": "依據Ingram & Price（2010）一書，從發展路徑探討人格障礙症時，下列何種人格障礙症對世界抱持敵對、懷疑的觀點？",
+      "options": {
+        "A": "自戀型人格障礙症",
+        "B": "反社會型人格障礙症",
+        "C": "妄想型人格障礙症",
+        "D": "逃避型人格障礙症"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_22",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 22,
+      "question": "下列何者不是思覺失調症的前驅特徵（prodromal features）？",
+      "options": {
+        "A": "表情平淡",
+        "B": "社會退縮",
+        "C": "思考跳躍",
+        "D": "關係意念"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_23",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 23,
+      "question": "研究發現，同樣遭遇重大壓力事件的個體中，血清素轉運體基因5-HTT為兩條短的對偶基因（allele）者，較易罹患憂鬱症。依據前述，下列何者正確？",
+      "options": {
+        "A": "血清素轉運體基因的多形性構成個體易憂鬱的素質",
+        "B": "具有兩條長的對偶基因的個體，即便遭遇多件重大壓力事件也不會罹患憂鬱症",
+        "C": "重大壓力事件可被視為個體易罹患憂鬱症的素質",
+        "D": "此結果支持5-HTT是憂鬱症的致病基因"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_24",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 24,
+      "question": "下列何者是自閉症類群障礙症患者常發現有異常的腦區？",
+      "options": {
+        "A": "次級視覺處理區",
+        "B": "頂葉",
+        "C": "視丘",
+        "D": "小腦"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_25",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 25,
+      "question": "Sapolsky（1990, 2000）研究肯亞（Kenya）自然保護區中狒狒的cortisol濃度，發現社會階層低下的狒狒，有下列何種情形？①腦下垂體對corticotropin-releasing factor（CRF）的敏感度上升②腦下垂體對corticotropin-releasing factor（CRF）的敏感度下降③較能有效關閉下視丘－腦下垂體－腎上腺皮質軸壓力反應④較難有效關閉下視丘－腦下垂體－腎上腺皮質軸壓力反應",
+      "options": {
+        "A": "①③",
+        "B": "①④",
+        "C": "②③",
+        "D": "②④"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_26",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 26,
+      "question": "腦側裂（lateral fissure）主要將那兩個區域分隔開來？",
+      "options": {
+        "A": "額葉、頂葉",
+        "B": "頂葉、枕葉",
+        "C": "額葉、顳葉",
+        "D": "顳葉、枕葉"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_27",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 27,
+      "question": "依據神經生物研究，有關焦慮症患者的病理因素，下列何者正確？",
+      "options": {
+        "A": "面對驚訝臉孔時，杏仁核呈現較高活動量",
+        "B": "較高正腎上腺素（norepinephrine）",
+        "C": "腦部造影研究顯示較高的前額葉活動量",
+        "D": "尚缺乏神經生物學上的證據"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_28",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 28,
+      "question": "下列何者不屬於邊緣系統（limbic system）？",
+      "options": {
+        "A": "腦島前處（anterior portion of insula）",
+        "B": "顳葉頂端處（temporal pole）",
+        "C": "海馬迴（hippocampal formation）",
+        "D": "殼核（putamen）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_29",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 29,
+      "question": "與飲食疾患相關之動物研究上的發現，下列何者正確？",
+      "options": {
+        "A": "破壞下視丘（hypothalamus）會造成食慾改變",
+        "B": "破壞視丘（thalamus）會造成無節制的暴食",
+        "C": "破壞基底核會造成過度肥胖",
+        "D": "破壞黑質（substantia nigra）會造成體重減輕"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_30",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 30,
+      "question": "關於憂鬱個體的歸因風格（attributional style）之描述，下列何者錯誤？",
+      "options": {
+        "A": "個體將負面事件歸咎於個人錯誤，如「都是我的錯」",
+        "B": "即使某個負面事件已過去，「其他壞事永遠都是我的錯」的歸因依然存在",
+        "C": "憂鬱歸因風格會發生在正向事件中",
+        "D": "憂鬱歸因風格僅發生在負向事件中"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_31",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 31,
+      "question": "依據Barlow所提出之triple vulnerability theory，邊緣型人格障礙症（borderline personality disorder, BPD）的第一層脆弱性（first vulnerability）是指下列何者？",
+      "options": {
+        "A": "早期教養環境經驗造成的創傷或虐待",
+        "B": "大腦涉及情緒經驗和調控區域的功能性連結缺失",
+        "C": "對威脅性事件的過度反應",
+        "D": "缺乏有效的人際技巧與支持網絡"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_32",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 32,
+      "question": "根據DSM-5，對一般人格障礙症的診斷敘述，下列何者錯誤？",
+      "options": {
+        "A": "患者的性格模式在不同情境下是穩定的",
+        "B": "患者的性格特質缺乏彈性",
+        "C": "患者的性格特徵始見於成年期之後",
+        "D": "患者的性格特質會造成顯著功能減損或主觀痛苦"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_33",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 33,
+      "question": "有關心理病態（psychopathy）的性格特徵，不包括下列何者？",
+      "options": {
+        "A": "大膽",
+        "B": "缺乏情感",
+        "C": "衝動",
+        "D": "焦慮"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_34",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 34,
+      "question": "下列何種人格特質與強迫型人格疾患的相關較高？",
+      "options": {
+        "A": "完美主義（perfectionism）",
+        "B": "盡責性（conscientiousness）",
+        "C": "衝動性（impulsivity）",
+        "D": "神經質（neuroticism）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_35",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 35,
+      "question": "依據DSM-5，對於依賴型人格障礙症的病理發展，下列敘述何者正確？",
+      "options": {
+        "A": "患者多為性侵的受害者",
+        "B": "患者的父母多有焦慮症的病史",
+        "C": "患者年紀小時多有長期照顧家中生病的父母或長輩的經驗",
+        "D": "患者與主要照顧者有依附關係的問題"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_36",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 36,
+      "question": "少女戀慕父親，甚至想取代母親的角色，可用精神分析理論中的何種現象指稱？",
+      "options": {
+        "A": "negative oedipus complex",
+        "B": "electra complex",
+        "C": "identification",
+        "D": "displacement"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_37",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 37,
+      "question": "關於Aaron Beck針對憂鬱症提出的認知理論，下列敘述何者最不適當？",
+      "options": {
+        "A": "憂鬱症患者傾向對自我、世界及未來抱持負向觀點",
+        "B": "憂鬱症患者通常在兒童期，藉由經歷過生活中的壓力事件，而形成負向的基模（schema），傾向對外在世界採負向的看法",
+        "C": "憂鬱症患者強烈意識到自己的認知基模對其經驗的解釋造成影響，但也無能為力",
+        "D": "憂鬱症患者有可能出現任意推論（arbitrary inference）、選擇性抽取（selective abstraction）及過度類化（overgeneralization）等認知偏誤（cognitive biases）"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_38",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 38,
+      "question": "下列何種壓力事件不分年齡，最容易誘發憂鬱？",
+      "options": {
+        "A": "失去重要他人或自我價值感",
+        "B": "遭受性侵或家暴",
+        "C": "低社經地位或貧困",
+        "D": "遭逢重大天災或人禍"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_39",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 39,
+      "question": "根據DSM-5，下列何種心理疾患，出現的年齡普遍是在嬰幼兒時期？",
+      "options": {
+        "A": "注意力不足／過動症（ADHD）、語言障礙症（speech and language disorders）",
+        "B": "自閉症類群障礙症（autism spectrum disorder）、迴避／節制型攝食症（avoidant/restrictive food intake disorder）",
+        "C": "自閉症類群障礙症（autism spectrum disorder）、對立反抗症（oppositional defiant disorder）",
+        "D": "智能發展障礙症（intellectual developmental disorder）、焦慮症（anxiety disorder）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_40",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(一)",
+      "subject_tag": "cp_general_1",
+      "subject_name": "臨床心理學總論(一)",
+      "stage_id": 0,
+      "number": 40,
+      "question": "在素質－壓力模式（diathesis-stress paradigm）中，有關「心理素質」的描述，下列何者錯誤？",
+      "options": {
+        "A": "容易鑽牛角尖與傾向負向思考，有較高機率罹患鬱症",
+        "B": "對於變胖充滿害怕與擔心，有較高機率罹患飲食疾患",
+        "C": "較容易被催眠的個體，有較高機率罹患解離性身分疾患",
+        "D": "從小罹患慢性疾病，有較高機率罹患焦慮症"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_1",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 1,
+      "question": "心理衡鑑是一個概念化、問題解決的歷程，其核心目的為何？",
+      "options": {
+        "A": "研究個體的問題行為如何形成",
+        "B": "運用心理測驗，測量個體表現",
+        "C": "評估個體的適應表現與內部能力的強弱勢",
+        "D": "收集相關資訊並進行假設驗證，做出有利個案的決定"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_2",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 2,
+      "question": "關於Personality Assessment Inventory（PAI），下列敘述何者正確？",
+      "options": {
+        "A": "題型為是／否選項",
+        "B": "僅能用於個別施測",
+        "C": "該測驗有青少年版本，適用於12～18歲青少年",
+        "D": "完整量表有三個量尺，包括效度量尺、臨床量尺及病態人格量尺"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_2_3",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 3,
+      "question": "有關會談策略的運用，下列敘述何者錯誤？",
+      "options": {
+        "A": "在會談初期宜採取開放性問句與個案互動",
+        "B": "可多使用「為什麼」的問句澄清個案的問題",
+        "C": "可多使用非口語的表達方式鼓勵個案延續談話的內容",
+        "D": "若晤談關係良好可適度使用面質的策略"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_4",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 4,
+      "question": "關於魏氏兒童智力測驗，下列敘述何者錯誤？",
+      "options": {
+        "A": "若兒童的強項能力非反應速度，可能會低估智能",
+        "B": "智商分數和創造力之間有高度正相關",
+        "C": "魏氏智力測驗並非評估智能的唯一工具",
+        "D": "智商分數高的兒童，其學業表現不見得同樣突出"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_5",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 5,
+      "question": "關於心理衡鑑報告的要求，下列敘述何者正確？",
+      "options": {
+        "A": "心理衡鑑的報告長度越長越專業",
+        "B": "報告應多使用專業術語以突顯專業性",
+        "C": "報告必須回應轉介問題",
+        "D": "報告包含的主題是固定的"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_2_6",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 6,
+      "question": "關於心理測驗工具的選用，下列何者不是重要的評估面向？",
+      "options": {
+        "A": "是否理解測驗的理論取向與概念架構",
+        "B": "測驗資料的收集分析是否能電腦化處理",
+        "C": "該測驗的常模建立與施測程序是否標準化",
+        "D": "該測驗是否具良好信效度"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_2_7",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 7,
+      "question": "在法律情境中，若要評估性侵再犯風險，下列何者是比較常用且具代表性的評估工具？",
+      "options": {
+        "A": "米隆行為健康量表（Millon Behavioral Health Inventory）",
+        "B": "羅吉斯犯罪責任量尺（Rogers Criminal Responsibility Scales）",
+        "C": "過去史臨床風險-20（Historical Clinical Risk-20）",
+        "D": "靜態99（Static 99）"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_2_8",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 8,
+      "question": "在推估腦部受損成人患者的病前智商時，使用的一種方式是魏氏成人智力測驗中較不受神經損傷影響的三個分測驗分數。這三個分測驗包括下列那三項？①詞彙分測驗②常識分測驗③理解分測驗④圖形設計分測驗⑤圖畫補充分測驗",
+      "options": {
+        "A": "①②③",
+        "B": "②④⑤",
+        "C": "①②⑤",
+        "D": "②③⑤"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_9",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 9,
+      "question": "關於精神分析治療中詮釋（interpretation）的治療技巧，下列敘述何者正確？",
+      "options": {
+        "A": "協助個案覺察意識層面上的內在動力經驗和關係模式",
+        "B": "試圖去傳達個案可以覺察到的訊息",
+        "C": "不需要考量時機與深度，只需要考量精確度",
+        "D": "若治療關係的信任程度不足，會影響詮釋的效果"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_10",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 10,
+      "question": "根據Wedding and Corsini（2019），關於心理治療初期須建立的治療同盟關係（therapeutic alliance），下列敘述何者正確？",
+      "options": {
+        "A": "此概念並非來自於早期精神分析理論",
+        "B": "Freud覺得與患者建立關係是不重要的",
+        "C": "同盟關係類似於移情關係，建立於患者對於治療者非理性與扭曲的知覺印象",
+        "D": "同盟關係的強度奠基於治療者與患者對於治療目標的同意程度，以及兩人關係的品質"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_2_11",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 11,
+      "question": "有關客體關係學者Margaret Mahler提出不同發展階段障礙對應的心理疾病，下列敘述何者正確？",
+      "options": {
+        "A": "共生（symbiosis）階段障礙：嚴重分離焦慮症",
+        "B": "正常嬰兒自閉（normal infantile autism）階段障礙：自戀型人格障礙症",
+        "C": "分離－個體化（separation-individuation）階段障礙：邊緣型人格障礙症",
+        "D": "共生（symbiosis）階段障礙：自戀型人格障礙症"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_2_12",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 12,
+      "question": "下列何種情況臨床心理師違反對當事人的心理治療資料之保密原則？",
+      "options": {
+        "A": "申訴案成立後，提供給審核委員參考",
+        "B": "個案自己要求公開其資料給第三人",
+        "C": "學校命令心理師提供相關資料",
+        "D": "監護人同意提供相關資料"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_2_13",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 13,
+      "question": "下列何種情境最能說明增益效度的概念？",
+      "options": {
+        "A": "某成就測驗A與智力測驗的相關係數高於0.9",
+        "B": "在會談後增加某量表施測更能有效區辨憂鬱與焦慮個案",
+        "C": "同一測驗在兩週內重複施測，兩者得分相似",
+        "D": "兩位評分者對人格測驗的解釋達到一致結論"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_2_14",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 14,
+      "question": "當心理衡鑑結果與個案原本的期待不同時，下列何者給予回饋的方式最為適當？",
+      "options": {
+        "A": "直接說明個案認知錯誤部分並積極做心理教育",
+        "B": "以逐步引導的方式，從符合個案期待的部分開始，再逐步修正偏離的部分",
+        "C": "列舉實證研究資料，以說明測驗結果的精確性",
+        "D": "保留不一致的部分，以避免直接衝突"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_2_15",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 15,
+      "question": "關於生物心理社會模式（Biopsychosocial Model），下列敘述何者錯誤？",
+      "options": {
+        "A": "此模式一開始是針對功能性醫療相關情況而發展",
+        "B": "此模式主張要優先建立診斷，再進行介入",
+        "C": "此模式強調疾病源自生物、心理、或社會眾多因素的交互作用",
+        "D": "此模式認為文化會影響症狀的表現、理解與應對方式"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_2_16",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 16,
+      "question": "關於神經心理功能領域和該領域常用評估方法的配對（功能領域－評估方法），下列何者錯誤？",
+      "options": {
+        "A": "視覺空間領域－Stroop文字顏色辨識測驗",
+        "B": "記憶領域－Rey聽覺語文學習測驗",
+        "C": "執行功能領域－會談",
+        "D": "注意力領域－記憶廣度測驗"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_17",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 17,
+      "question": "關於貝克憂鬱量表第二版，下列敘述何者錯誤？",
+      "options": {
+        "A": "適用於青少年與成人族群；填寫者須至少具備國小五至六年級的閱讀能力",
+        "B": "用於篩檢青少年族群的憂鬱症狀與嚴重程度時，建議切截分數最好高於21分",
+        "C": "再測信度會因再測時距與受測族群而有所變動",
+        "D": "能有效地區辨憂鬱和焦慮"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_2_18",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 18,
+      "question": "下列何項生理心理測量的原理是基於情緒會增加交感神經系統的運作，進而提高汗腺活動？",
+      "options": {
+        "A": "Electroencephalogram activities",
+        "B": "Electrodermal activities",
+        "C": "Electromyography activities",
+        "D": "Electrocardiogram activities"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_2_19",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 19,
+      "question": "根據羅夏克墨漬測驗Exner's Comprehensive System，若受試者呈現過度使用不尋常反應部位時，下列何種對受試者之假設成立的可能性較低？",
+      "options": {
+        "A": "可能具有嚴重的心理疾患問題，例如思覺失調症或是強迫症",
+        "B": "窄化對於外在環境的知覺",
+        "C": "試圖從外在環境中抽離或是退縮至自己的世界裡",
+        "D": "過度重視具體且明確的情境，忽略模糊的情境"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_2_20",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 20,
+      "question": "某個案被轉介心理衡鑑的目的是排除思覺失調症診斷，該疾患之盛行率約1％；臨床心理師使用某測驗進行評估，該測驗資料顯示對思覺失調症有90％準確辨識率，但有5％偽陽性（false positive）與5％偽陰性（false negative）的可能，測驗結果顯示「其有思覺失調症」。根據以上資料數據，該個案「真的有思覺失調症」最可能之機率為何？",
+      "options": {
+        "A": "小於90％",
+        "B": "90～95％",
+        "C": "95～99％",
+        "D": "大於99％"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_2_21",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 21,
+      "question": "個案在魏氏智力量表的逆序背誦記憶廣度顯著低於順序背誦記憶廣度，表示個案可能在下列何項功能有困難？",
+      "options": {
+        "A": "延宕記憶",
+        "B": "長期記憶",
+        "C": "工作記憶",
+        "D": "程序記憶"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_2_22",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 22,
+      "question": "臨床心理師在不同衡鑑轉介情境中的做法，下列何者最適當？",
+      "options": {
+        "A": "在教育情境中，對於在一般課堂學習落後的孩童，衡鑑的建議以讓孩童儘早接受特殊教育為優先，更有助於孩童的學習",
+        "B": "在法律情境中，評估受刑人暴力再犯風險時，最好進行非正式的臨床晤談，不要使用測驗，可減低受刑人戒心且避免受刑人亂填答測驗",
+        "C": "在一般醫療情境中，神經心理狀態的衡鑑重點，越來越聚焦於患者神經缺損與其行為障礙之間的關聯性，以協助擬定後續的治療計畫",
+        "D": "在精神科病房的情境中，最好依據精神科醫師的轉介單內容，進行制式標準化的衡鑑，不要評估轉介單內容沒提到的其他議題"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_2_23",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 23,
+      "question": "下列何者主張，心理治療應該聚焦於個案的力量與資源，致力於提供一種獨特的個案－治療者關係，讓關係中的個體發現自己有能力改變並因此成長？",
+      "options": {
+        "A": "B. F. Skinner",
+        "B": "Aaron T. Beck",
+        "C": "Sigmund Freud",
+        "D": "Carl Rogers"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_2_24",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 24,
+      "question": "下列何者最不可能是個案心理治療初次會談的主要目的？",
+      "options": {
+        "A": "建立關係",
+        "B": "評估症狀",
+        "C": "提供治療的相關訊息",
+        "D": "建立會談者的信度"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_25",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 25,
+      "question": "關於存在主義取向心理治療的運用，下列敘述何者正確？",
+      "options": {
+        "A": "非技巧導向",
+        "B": "會儘可能避免使用其他治療取向的技術",
+        "C": "會先診斷再予以治療",
+        "D": "不強調描述、理解、探索個案主觀真實"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_26",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 26,
+      "question": "根據Corey（2017），行為治療取向所界定之「行為」，下列何者正確？①可觀察之外顯行為②個人內在運作歷程如認知、信念、情緒③可被操作性界定",
+      "options": {
+        "A": "僅②③",
+        "B": "僅①②",
+        "C": "僅①③",
+        "D": "①②③"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_2_27",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 27,
+      "question": "下列何者不是家庭系統理論的治療目標？",
+      "options": {
+        "A": "減少家庭失功能的症狀",
+        "B": "修正家庭的互動交流法則",
+        "C": "發展更適當的家庭成員關係界線",
+        "D": "家庭成員學習訓練個案新的適應行為"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_2_28",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 28,
+      "question": "小明主動與大寶打招呼，大寶卻沒有回應。小明就認定「我一定是什麼地方得罪他了，他才不理我」，是屬於何種認知扭曲？",
+      "options": {
+        "A": "二分法思考（dichotomous thinking）",
+        "B": "過度類化（overgeneralization）",
+        "C": "個人化（personalization）",
+        "D": "標籤化和錯誤標籤（labeling and mislabeling）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_29",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 29,
+      "question": "下列何者不是榮格（C. Jung）所提出的概念？",
+      "options": {
+        "A": "個體化（individuation）",
+        "B": "人格面具（persona）",
+        "C": "陰影（shadow）",
+        "D": "共生（symbiosis）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_2_30",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 30,
+      "question": "有關社交焦慮症（social anxiety disorders, SAD）治療，下列敘述何者錯誤？",
+      "options": {
+        "A": "因為藥物治療對SAD的效果不佳，故臨床指引（例如英國）多建議以心理治療為第一線治療方式",
+        "B": "社交技巧訓練中，包含維持眼神接觸與恰當控制音量等基礎的行為訓練",
+        "C": "直接暴露法包含進行角色扮演訓練，例如直接演練面試情境",
+        "D": "漸進式肌肉放鬆訓練搭配漸進式情境暴露，對SAD是有效的"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_31",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 31,
+      "question": "有關強迫症相關疾患心理治療的敘述，下列何者錯誤？",
+      "options": {
+        "A": "身體臆形症的暴露治療需要讓個案有系統的面對會引起他「外觀焦慮」的刺激",
+        "B": "拔毛症的認知行為治療成分中包含「刺激控制」",
+        "C": "摳皮症的認知行為治療認為需要改變個案原來對摳皮的「正向認知」",
+        "D": "儲物症的認知行為治療聚焦於有關「擁有物品之重要性」的失功能信念"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_2_32",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 32,
+      "question": "有關「認知行為治療–飲食障礙（CBT-E）」的敘述，下列何者錯誤？",
+      "options": {
+        "A": "主要是依據飲食障礙病理，而非飲食障礙診斷來設計的治療法",
+        "B": "原設計為個別治療，後亦有團體治療的設計",
+        "C": "主要分為「聚焦」與「廣泛」兩個版本",
+        "D": "治療療程通常少於8次"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_2_33",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 33,
+      "question": "關於治療創傷後壓力症的延長暴露療法，下列敘述何者錯誤？",
+      "options": {
+        "A": "比放鬆療法更能緩解創傷後壓力症的症狀",
+        "B": "療效可以持續5年",
+        "C": "需要建立情境的恐懼階層",
+        "D": "虛擬實境技術的長期效果比想像式暴露法佳"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_34",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 34,
+      "question": "有關失智症的心理治療，下列何者敘述錯誤？",
+      "options": {
+        "A": "行為取向可以協助初期患者因應記憶喪失",
+        "B": "行為活化涉及增加愉快且吸引人的活動",
+        "C": "有氧運動、健康飲食和減重計畫，對任何階段的失智症患者都有幫助",
+        "D": "教導後設認知技巧，有助於幫助患者類化已習得的技巧"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_2_35",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 35,
+      "question": "關於思覺失調症的治療，下列敘述何者錯誤？",
+      "options": {
+        "A": "在急性階段主要以藥物控制正性症狀",
+        "B": "最佳治療方式為藥物治療合併心理社會介入",
+        "C": "認知行為治療會將患者的症狀常態化以降低疏離感",
+        "D": "單靠認知行為治療能有效地降低症狀嚴重度"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_2_36",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 36,
+      "question": "有關心理衡鑑的知情同意程序，下列敘述何者正確？",
+      "options": {
+        "A": "臨床心理師只需要向個案說明進行流程與使用的心理測驗",
+        "B": "只適用心理治療，心理衡鑑無需進行知情同意程序",
+        "C": "臨床心理師不需要說明保密原則與保密例外",
+        "D": "臨床心理師必須使用個案可以理解的語言進行知情同意說明"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_2_37",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 37,
+      "question": "有關臨床心理師倫理規範之「專業關係」，下列敘述何者錯誤？",
+      "options": {
+        "A": "在與家暴兒童或青少年進行心理治療時可以擔任他的領養人",
+        "B": "不得涉入當事人在心理治療關係之外的財務問題",
+        "C": "不得和有親密關係的人建立心理治療關係",
+        "D": "在心理治療關係結束後兩年內，不得與當事人發生專業關係以外之情感或性關係"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_2_38",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 38,
+      "question": "某個結構化臨床晤談能夠正確的在住院病人中辨認出90％思覺失調症患者，但是有30％的思覺失調症患者可能被錯誤歸類到正常或其他診斷。對該結構化臨床晤談的評價，下列何者正確？",
+      "options": {
+        "A": "具有良好的診斷準確度（diagnostic accuracy）",
+        "B": "具有良好的預測效度（predictive validity）",
+        "C": "具有良好的敏感度（sensitivity）",
+        "D": "具有良好的特異性（specificity）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_2_39",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 39,
+      "question": "下列何者不是評估再測信度（test-retest reliability）的指標？",
+      "options": {
+        "A": "Kendall's coefficient of concordance",
+        "B": "Pearson's correlation",
+        "C": "Intraclass correlation",
+        "D": "Fleiss's kappa"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_2_40",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學總論(二)",
+      "subject_tag": "cp_general_2",
+      "subject_name": "臨床心理學總論(二)",
+      "stage_id": 0,
+      "number": 40,
+      "question": "個案在羅夏克墨漬測驗結果顯示，有5個PER反應。此種測驗結果，須留意個案的何種心理特性？",
+      "options": {
+        "A": "認知功能缺損",
+        "B": "改變動機不足",
+        "C": "傾向討好他人",
+        "D": "防衛型的權威"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_1",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 1,
+      "question": "合作取向自殺危機處理（collaborative assessment and management of suicidality, CAMS）的穩定計畫中（stabilization plan），首要需要討論的是管理自我傷害風險，下列何者不屬於這個任務的做法？",
+      "options": {
+        "A": "必要時尋求人際支持以及專業求助",
+        "B": "幫助個案解決生活急切的問題（例如：快被學校當掉了）",
+        "C": "移除自殺工具（如：交出已經買好的木炭，或者把木炭交給家人）",
+        "D": "列出可以使用且快速有效的自我撫慰（soothing coping，如：吃愛吃的食物、聽舒服的音樂）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_2",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 2,
+      "question": "大三的曉華有邊緣型人格障礙症以及重鬱症的診斷，因為①感情問題前來求助，但初次訪談評估時治療者發現曉華也有②網路成癮的問題，並且有③重複自殺自傷的行為，治療者欲以辯證行為治療（dialectical behavioral therapy, DBT）來進行接下來的療程，然而，④他治療常常遲到，甚至忘了請假；請問，在單次治療中DBT建議要列入討論的優先順序是下列何者：",
+      "options": {
+        "A": "①④②③",
+        "B": "③④①②",
+        "C": "依照曉華在意的優先次序進行",
+        "D": "①②③④"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_3",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 3,
+      "question": "下列何者不是大學校園自殺防治的策略？",
+      "options": {
+        "A": "透過講座或演講宣導自殺防治資訊",
+        "B": "新生入學時實施自殺危險因子評估，並進行後續的追蹤關懷",
+        "C": "確保校園死角、女兒牆高度等等的安全性",
+        "D": "發現新生篩檢中顯示有自殺意念者，需知會家長"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_4",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 4,
+      "question": "王伯伯75歲，患有多重慢性病，自老伴過世後獨居，近期因白內障惡化導致行動受限。社區關懷據點發現王伯伯開始將珍藏的古董轉贈他人，並對志工表示：「老了沒路用，不要浪費社會資源。」根據衛生福利部《全國自殺防治策略手冊》與高齡者自傷防治原則，下列敘述何者錯誤？",
+      "options": {
+        "A": "警訊辨識：王伯伯轉贈財務及自貶言論，屬於自殺防治中的「行為」與「言語」警訊，應立即啟動介入",
+        "B": "致命性評估：高齡者相較於青少年，其自殺企圖的「致命性」通常較高，且往往具有堅決的求死意圖",
+        "C": "防治策略：對於國內常用自殺方式之防治，限制劇毒農藥、高樓防墜及高風險藥物管理，對高齡族群具顯著減災成效",
+        "D": "三級預防應用：社區志工定期登門拜訪王伯伯並提供情緒支持，在三級預防架構下屬於「處置性」的「三級預防」措施"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_5",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 5,
+      "question": "小萱19歲，大學新生，近一年多以來在情緒極度焦慮或憤怒時，會用刀片在手臂上割傷自己。個案表示：「我不是想死，只是割完之後覺得情緒比較平靜。」這些行為平均每月發生2～3次，導致可見疤痕。臨床訪談中個案否認有持續的自殺意圖，但表示在割傷前常感到情緒難以控制與空虛。根據DSM-5-TR對「非自殺性自我傷害症（nonsuicidal self-injury disorder, NSSI）」的準則，下列何項判斷正確？",
+      "options": {
+        "A": "只有當自傷造成嚴重醫療損害時，才可考慮診斷為NSSI",
+        "B": "小萱的行為屬於邊緣型人格障礙的表現，不能單獨診斷為NSSI",
+        "C": "小萱的行為符合NSSI的核心準則，因其在過去一年內反覆進行自我傷害以調節情緒，而非為求死亡",
+        "D": "小萱的行為不構成任何診斷，因其無自殺意圖"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_6",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 6,
+      "question": "個案34歲，已確診雙相情緒障礙症五年；近期出現明顯的情緒低落、精力減退、罪惡感與絕望感。他告訴臨床心理師：「我覺得自己是家人的負擔，若消失會比較好。」過去一年中曾因躁期衝動過度消費與冒險行為入院，現階段未出現明顯躁症徵象。根據DSM-5-TR對雙相情緒障礙症的診斷準則，下列何項判斷最符合臨床理解？",
+      "options": {
+        "A": "憂鬱期自殺風險相對較低，主要關注躁期的危險行為即可",
+        "B": "因躁期未出現，當前的自殺言語屬情緒誇大表現，非臨床危險訊號",
+        "C": "個案言語顯示有消極自殺意念，考量其雙相情緒障礙症病史，應立即評估自殺風險",
+        "D": "自殺風險僅存在於快速循環型雙相情緒障礙症患者，非本案例情況"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_7",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 7,
+      "question": "根據Barlow等人（2021）在《Clinical Handbook of Psychological Disorders: A Step-by-Step Treatment Manual》中的看法，在合併有焦慮議題的自殺個案，針對自殺議題的治療過程中：",
+      "options": {
+        "A": "應定期檢視自殺風險，因治療聚焦於自殺，故不需評估焦慮狀況",
+        "B": "以DSM結構式臨床會談確定診斷並評估自殺風險、檢視焦慮狀況之變化",
+        "C": "因需追蹤自殺風險與焦慮在治療中之變化，應定期檢視自殺風險，並以簡短自陳式量表定期檢視焦慮狀況之變化",
+        "D": "因此類個案經常對「被檢視」較為敏感，為避免引發不適感受，僅需在治療前與結案時進行自殺風險與焦慮狀況之評估"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_8",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 8,
+      "question": "心理師在幫門診轉介之25歲病患做衡鑑智力及情緒評估時，發現病患在上週有發生過度服藥的自殺行為，目前沒有立即性的危機，下列何者不是恰當的介入策略？",
+      "options": {
+        "A": "將病患之自殺風險情況告知主治醫師",
+        "B": "依照自殺防治法進行通報",
+        "C": "通知病患家屬",
+        "D": "與病患討論生活中的危機事件並提供相關因應的建議"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_9",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 9,
+      "question": "根據Chiles（2019）自殺風險評估中的顯著前置因子（foreground factors）不包括：",
+      "options": {
+        "A": "個案近期被公司裁員、失業中",
+        "B": "個案被診斷末期胰臟癌",
+        "C": "目前飲酒或使用藥物",
+        "D": "家族的自殺行為史"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_10",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 10,
+      "question": "越戰時期曾發生過為了抗議政府，和尚自焚自殺的案例，此類自殺行為被Durkheim學者歸為何種自殺行為？",
+      "options": {
+        "A": "利己型自殺",
+        "B": "利他型自殺",
+        "C": "異常性自殺",
+        "D": "宿命性自殺"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_11",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 11,
+      "question": "Bonta與Andrews（2024）認為保護因子（protective factors）對犯罪行為的影響機制是：",
+      "options": {
+        "A": "去除危險因子的影響",
+        "B": "改變個體的遺傳基因表現",
+        "C": "減弱或緩衝危險因子的負面效應",
+        "D": "增強個體的犯罪動機和能力"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_12",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 12,
+      "question": "根據DSM-5-TR，下列何者是妄想型人格障礙症（paranoid personality disorder）的診斷特徵？",
+      "options": {
+        "A": "具有疏離的人際關係，以及侷限的情感表達",
+        "B": "習慣於在別人的善意舉動或言語中解讀出貶抑或威脅",
+        "C": "依附於重要的人際關係，並且相當順從",
+        "D": "具有古怪的信念與神奇的思考並且影響其行為"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_13",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 13,
+      "question": "依RNR（risk-need-responsivity）模式（Bartol & Bartol, 2024）的觀點，下列敘述何者錯誤？",
+      "options": {
+        "A": "低再犯風險的性侵害加害人比較需要的是回歸社會，像是找工作或社交訓練",
+        "B": "低再犯風險的加害人並非以心理治療為最佳標的",
+        "C": "應依據風險等級給予相對強度的治療介入",
+        "D": "低再犯風險的個案往往自認不會再犯而不願意配合"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_14",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 14,
+      "question": "阿明從小常打架、違反校規，高中時因聚眾鬥毆被送入矯正機構，但成年後回到社區後努力工作，熱心公益，未再違法。根據Moffitt（1993）的犯罪發展理論，阿明最可能屬於下列何者？",
+      "options": {
+        "A": "偶發型犯罪者（occasional offender）",
+        "B": "青少年限期型犯罪者（adolescence-limited offender）",
+        "C": "社會模仿型犯罪者（social mimicry offender）",
+        "D": "機會型犯罪者（opportunistic offender）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_15",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 15,
+      "question": "某中學輔導室針對經校內機制指標化辨識之高風險學生，開設以「自我認同」與「生涯規劃」為主題之小型團體輔導。此介入最符合下列何種預防層級？",
+      "options": {
+        "A": "初級預防",
+        "B": "次級預防",
+        "C": "三級預防",
+        "D": "政策預防"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_16",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 16,
+      "question": "根據犯因需求（criminogenic needs）理論，最有效的治療介入應該為下列何者？",
+      "options": {
+        "A": "改善犯罪者的生活條件和環境",
+        "B": "針對與犯罪行為直接相關的動態危險因子",
+        "C": "優先處理犯罪者的精神健康問題",
+        "D": "強化對犯罪者的監控和懲罰措施"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_17",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 17,
+      "question": "針對物質相關與成癮障礙症（substance-related and addictive disorders）及衝動控制障礙症的治療與挑戰，下列敘述何者最為正確？①對於鴉片類藥物依賴，美沙酮（Methadone）和丁丙諾啡（Buprenorphine）等藥物屬於拮抗劑（antagonist）替代療法，其作用是透過阻斷鴉片類藥物在腦中的欣快感，以減少成癮行為②嗜賭症（gambling disorder）患者在治療上面臨的挑戰是多方面的，包括他們傾向否認問題、行為衝動，以及持續抱持「一次大勝就能彌補所有損失」的過度樂觀心態，這些特徵嚴重干擾了有效治療③在物質使用障礙症的治療中，「後果管理（contingency management）」透過提供現金代金券等獎勵來鼓勵戒斷，研究顯示此方法在多數情況下比認知行為療法（CBT）更為有效④「嫌惡療法（aversive treatment）」如使用安特速（Antabuse）治療酒精使用疾患，雖然使飲酒變得極不愉快，但由於患者對這種不適反應具有強烈動機持續服藥，因此該療法成功率極高",
+      "options": {
+        "A": "僅①",
+        "B": "①②④",
+        "C": "②③",
+        "D": "僅②"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_18",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 18,
+      "question": "關於青少年犯罪問題，造成其違犯的發展風險因子，下列何者錯誤？",
+      "options": {
+        "A": "父母親的不當教養風格",
+        "B": "認知與語言有缺陷",
+        "C": "與反社會同儕的交往",
+        "D": "欠缺認知向度的同理心"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_19",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 19,
+      "question": "依據DSM-5-TR，有關妄想症之erotomanic type的敘述，下列何者正確？",
+      "options": {
+        "A": "為雙相情緒及其相關障礙症的一種",
+        "B": "有很高比例會自傷和傷害他人",
+        "C": "與強迫症及相關障礙症的共病比例很高",
+        "D": "妄想著有某個人深愛著自己"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_20",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 20,
+      "question": "當以Good Lives Model針對性侵害加害者進行處遇時，下列敘述何者最符合其處遇方式？",
+      "options": {
+        "A": "探索與引發性侵害有關的風險因子，並學習因應策略",
+        "B": "探索與收集早期經驗，將目前的性侵害行為與過去經驗做連結",
+        "C": "了解加害者的正向特質與能力，建立具適應性的生活型態，以降低再次出現犯罪行為",
+        "D": "透過功能分析方式，找到引發性侵害行為之起因、標的行為和後果之關聯性"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_21",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 21,
+      "question": "有關戀童癖，Araji和Finkelhor（1985）所提出的Preconditions Model之相關因子，不包括下列何者？",
+      "options": {
+        "A": "對兒童有性亢奮的反應（sexual arousal），如：對兒童色情圖片有偏好",
+        "B": "與成年女性之社交接觸受到阻礙（blockage），如：社交技巧問題",
+        "C": "人格問題（personality problem），如：反社會人格傾向",
+        "D": "行為去抑制（disinhibition），如：飲酒"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_22",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 22,
+      "question": "有關社會學習理論探討犯罪行為形成之優點，下列敘述何者正確？",
+      "options": {
+        "A": "能解釋為何犯罪行為在接受處罰後仍會重複出現的原因",
+        "B": "整合了生物遺傳不同領域資料進行犯罪行為的預測",
+        "C": "以一般行為的學習歷程來說明犯罪行為的形成",
+        "D": "強調早期經驗對犯罪行為的重要影響"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_23",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 23,
+      "question": "根據Lipsey（2009）整理有關青少年犯罪之RNR（risk-need-responsivity）取向的處遇效果，下列敘述何者錯誤？",
+      "options": {
+        "A": "社區治療（therapeutic intervention）相對於機構強制處遇，前者降低再犯的效果較佳",
+        "B": "在監受刑的青少年犯罪者相對於在社區者，前者接受治療降低再犯的效果較佳",
+        "C": "青少年再犯者風險等級與治療療效有關",
+        "D": "認知行為治療方案比單純行為治療的效果更佳"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_24",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 24,
+      "question": "下列何者最不符合預防復發（relapse prevention, RP）介入的觀點？",
+      "options": {
+        "A": "教導辨識即將復發之徵兆",
+        "B": "避免討論復發的可能性",
+        "C": "強調因應abstinence violation effect（AVE）的產生",
+        "D": "聯繫可提供協助的人"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_25",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 25,
+      "question": "在DSM-5-TR中，關於酒精使用障礙症之生理和基因風險因子的討論，下列相關敘述何者錯誤？",
+      "options": {
+        "A": "若近親中有人罹患酒精使用障礙症，此個體的發生率會高出三到四倍",
+        "B": "酒精使用障礙症患者的子女自出生後即被收養，且養父母沒有此障礙症，這些子女的風險會降低",
+        "C": "在有酒精使用障礙症患者的同卵雙胞胎中，該障礙症的發生率顯著高於異卵雙胞胎",
+        "D": "酒精使用障礙症約有40％～60％的風險變異可由遺傳因素解釋"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_26",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 26,
+      "question": "在David H. Barlow等人（2021）編撰的心理障礙症臨床手冊《Clinical Handbook of Psychological Disorders: A Step-by-Step Treatment Manual》中，臨床晤談是評估飲酒的工具之一，除了透過臨床晤談之外，也可以使用結構式晤談工具，下列何種結構式晤談工具被設計用來評估治療前，一段特定時間內每天的飲酒與藥物使用行為？",
+      "options": {
+        "A": "時間軸回溯晤談（Timeline Follow-Back Interview）",
+        "B": "DSM-5結構式臨床晤談（the alcohol and drug sections of the Structured Clinical Interview for DSM-5）",
+        "C": "飲酒者後果量表（Drinker Inventory of Consequences）",
+        "D": "簡式問題量表（Short Inventory of Problems）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_3_27",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 27,
+      "question": "根據DSM-5-TR，若要符合「嗜賭症（gambling disorder）」中度之診斷，在十二個月期間，導致臨床上顯著苦惱或減損的持續與重複適應不良的賭博行為，須至少出現幾項？",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_28",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 28,
+      "question": "物質使用障礙症患者通常重視立即的愉悅與酬賞。以延宕折扣作業（delay discounting task）進行的研究證據顯示，重視立即酬賞與下列那些腦區的活化（activation）有關？①杏仁核（amygdala）②前額葉皮質（prefrontal cortex）③伏隔核（nucleus accumbens）④眶額皮質（orbitofrontal cortex）",
+      "options": {
+        "A": "①③",
+        "B": "①④",
+        "C": "②③",
+        "D": "②④"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_3_29",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 29,
+      "question": "教育部訂定網路成癮學生輔導作業流程中分成三級輔導與五層次預防模式，下列何者不是三級輔導之分級？",
+      "options": {
+        "A": "發展性輔導",
+        "B": "介入性輔導",
+        "C": "處遇性輔導",
+        "D": "強制性輔導"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_30",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 30,
+      "question": "承上題，下列有關各級處理重點的敘述，何者錯誤？",
+      "options": {
+        "A": "初級預防層次中，在於提升教師網路成癮辨識與輔導知能，以及培養學生健全的生活、學習態度與能力",
+        "B": "次級預防層次上，諮商中心或輔導室應建立轉介、開案、分案的個管流程，針對網路成癮高風險學生訂定個別化輔導措施",
+        "C": "諮商中心或輔導室應積極評估學生狀況，對於網路成癮的確定案主優先由醫療層面介入",
+        "D": "諮商中心或輔導室建立一套網路成癮狀況之篩檢系統，積極進行評估，篩檢網路成癮高風險學生"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_31",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 31,
+      "question": "有關DSM-5-TR的物質相關及成癮障礙症（substance-related & addictive disorders）之診斷敘述，下列何者錯誤？",
+      "options": {
+        "A": "DSM-5-TR不再將濫用（abuse）與依賴（dependence）分成不同疾病",
+        "B": "維持緩解（sustained remission）指的是先前完全符合物質使用障礙症準則後，在半年的期間不再符合此準則",
+        "C": "物質使用障礙症的病程在控制的環境下，需特別註記",
+        "D": "分成十種不同的物質相關障礙症"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_32",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 32,
+      "question": "關於酒癮戒治，下列何項不是後果管理（contingency management）治療的內容？",
+      "options": {
+        "A": "教導個案增強與飲酒不一致的行為",
+        "B": "教導個案找工作及社交技巧",
+        "C": "鼓勵個案檢討飲酒的酒精成分",
+        "D": "鼓勵個案從事正當娛樂"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_33",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 33,
+      "question": "下列何項成癮性物質之歸類錯誤？",
+      "options": {
+        "A": "中樞神經抑制劑：鴉片、海洛因、巴比妥酸鹽類",
+        "B": "中樞神經興奮劑：安非他命、古柯鹼、尼古丁、咖啡因、酒精",
+        "C": "中樞神經迷幻劑：大麻、LSD（搖腳丸）",
+        "D": "吸入性濫用物質：強力膠、氧化亞氮（nitrous oxide，笑氣）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_3_34",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 34,
+      "question": "下列何者不是屬於酒精戒斷（alcohol withdrawal）症狀之一？",
+      "options": {
+        "A": "失眠（insomnia）",
+        "B": "短暫的視覺、觸覺或聽覺之幻覺（transient visual, tactile, or auditory hallucinations）",
+        "C": "泛發性強直－陣攣癲癇（generalized tonic-clonic seizures）",
+        "D": "眼球震顫（nystagmus）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_35",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 35,
+      "question": "搖頭丸（MDMA）主要作用在下列何種系統？",
+      "options": {
+        "A": "dopamine",
+        "B": "GABA",
+        "C": "serotonin",
+        "D": "glutamate"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_36",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 36,
+      "question": "對於自戀型人格障礙症（narcissistic personality disorder）患者的臨床特徵、病理，以及治療的描述，下列何者正確？",
+      "options": {
+        "A": "自戀型人格障礙症患者通常有很強的治療動機，因此治療效果良好",
+        "B": "自戀型人格障礙症患者認為自己是獨特、完美的，因此對人際互動表現出多疑且退縮的樣態",
+        "C": "自戀型人格障礙症的成因可能涉及遺傳脆弱性與教養環境的交互影響，童年時期的過度讚美或是過度嚴苛的批評，都可能導致他們的脆弱自尊",
+        "D": "自戀型人格障礙症患者擅長欺詐與操弄他人以得到他人的讚美與肯定"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_3_37",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 37,
+      "question": "下列何者與反社會型人格障礙症的發展之關係相對較弱？",
+      "options": {
+        "A": "出生序",
+        "B": "基因與遺傳",
+        "C": "低社經地位或貧窮",
+        "D": "兒少時期的攻擊性"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_3_38",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 38,
+      "question": "DSM診斷系統將人格障礙症（personality disorders）分為三個類群（A群、B群、C群人格障礙症）。有關這些不同類群特徵的描述，下列何者正確？",
+      "options": {
+        "A": "C群的特徵是戲劇化與情緒化",
+        "B": "B群的特徵是焦慮與恐懼",
+        "C": "B群的特徵是強迫行為與逃避行為",
+        "D": "A群的特徵是古怪與乖僻"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_3_39",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 39,
+      "question": "根據DSM-5-TR診斷系統，人格障礙症的替代模式，下列那些是邊緣型人格障礙症與反社會型人格障礙症共同都可能會得高分的病態人格特質？①emotional lability②hostility③manipulativeness④impulsivity⑤risk taking",
+      "options": {
+        "A": "②④⑤",
+        "B": "③④⑤",
+        "C": "①③④",
+        "D": "①②③"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_3_40",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(一)",
+      "subject_tag": "cp_special_1",
+      "subject_name": "臨床心理學特論(一)",
+      "stage_id": 0,
+      "number": 40,
+      "question": "有關人格障礙症的敘述，下列何者正確？",
+      "options": {
+        "A": "正常人並不會有類似於人格障礙症患者的行為、思考與感覺習慣",
+        "B": "隨著時間的變化，人格障礙症患者的診斷通常不會再改變",
+        "C": "大約有一半的人格障礙症患者仍然會符合其他人格障礙症的診斷標準",
+        "D": "無論是那一類人格障礙症，女性患者比例都較高"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_1",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 1,
+      "question": "下列何項最能區分major neurocognitive disorder與mild neurocognitive disorder？",
+      "options": {
+        "A": "神經認知檢測是否顯示記憶功能下降",
+        "B": "認知缺損是否僅出現在譫妄情境",
+        "C": "對日常活動獨立性之影響",
+        "D": "是否伴隨行為困擾（behavioral disturbance）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_2",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 2,
+      "question": "下列何者是neurocognitive disorders最不可能出現的精神病症狀（psychotic symptoms）？",
+      "options": {
+        "A": "paranoia",
+        "B": "visual hallucinations",
+        "C": "persecutory delusions",
+        "D": "disorganized behavior"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_3",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 3,
+      "question": "下列何者不是major or mild neurocognitive disorder due to HIV infection常見症狀？",
+      "options": {
+        "A": "naming difficulty",
+        "B": "procedural learning deficits",
+        "C": "mental slowing",
+        "D": "motor dysfunction"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_4_4",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 4,
+      "question": "下列那些因素會影響神經認知障礙症盛行率的估計值？①性別②年齡③病因④收案來源⑤診斷準則⑥病理解剖",
+      "options": {
+        "A": "僅①②⑥",
+        "B": "僅②③⑤",
+        "C": "僅①②③④⑤",
+        "D": "①②③④⑤⑥"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_4_5",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 5,
+      "question": "關於譫妄流行病學和預後之敘述，下列何者正確？",
+      "options": {
+        "A": "不論何種年齡層，譫妄僅少數恢復良好",
+        "B": "女性較常出現affective lability",
+        "C": "聽覺功能受損可能增加譫妄發生的風險",
+        "D": "普通病房住院病患的盛行率高於加護病房病患"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_6",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 6,
+      "question": "有關老年人的問題，下列敘述何者正確？",
+      "options": {
+        "A": "阿茲海默病（Alzheimer's disease）屬於一種家族性遺傳疾病，是最常見引起失智症的病因之一",
+        "B": "血管型失智症（vascular dementia）算是最常見的其中一種，其比例超過失智患者之半數",
+        "C": "血管型失智症（vascular dementia）與早期阿茲海默病（Alzheimer's disease）都可能與憂鬱現象共病",
+        "D": "睡眠抱怨是造成譫妄的最主要因素"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_7",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 7,
+      "question": "一位中年男子來到神經科門診。在問診的過程中他有些恍神，經詢問後發現他有長期酗酒的問題。因為最近沒錢，已經好幾天沒喝酒了，精神愈來愈不集中，記憶力愈來愈不好，才來看診。他最不可能是下列何種症候群？",
+      "options": {
+        "A": "失智",
+        "B": "譫妄",
+        "C": "失憶症",
+        "D": "解離型疾患"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_8",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 8,
+      "question": "患者中風後變得聽不懂聊天內容，但是可以重複別人的話，此情況最像何種失語症候群？",
+      "options": {
+        "A": "布氏型失語症（Broca's aphasia）",
+        "B": "威尼克失語症（Wernicke's aphasia）",
+        "C": "傳導性失語症（conductive aphasia）",
+        "D": "跨皮質感覺型失語症（transcortical sensory aphasia）"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_9",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 9,
+      "question": "陳先生由於腦血管破裂緊急接受腦部手術治療。術後，陳先生明顯變得做事缺乏動力、喪失主動性，必須給予明確指導才有所行動。陳先生最有可能是那條血管破裂？",
+      "options": {
+        "A": "後大腦動脈",
+        "B": "中大腦動脈的中央分支（central branches）",
+        "C": "中大腦動脈的前頂葉分支（anterior parietal branches）",
+        "D": "前大腦動脈"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_4_10",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 10,
+      "question": "對具對立反抗症（oppositional defiant disorder）兒童之父母進行父母處理訓練（parent management training, PMT）時，最可能遇到的困難為何？",
+      "options": {
+        "A": "父母可能認為療程中所教導的父母教養技巧過於簡單，因此終止療程",
+        "B": "父母可能無法意識到改變自己是教養子女行為的必要性",
+        "C": "療程中所教導的父母教養技巧對父母而言可能過於困難，以致父母無法理解",
+        "D": "父母可能會因療程為期數年，而逐漸失去參與療程的興趣"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_11",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 11,
+      "question": "關於唐氏症的敘述，下列何者正確？",
+      "options": {
+        "A": "在過去這20年，其盛行率維持穩定不變",
+        "B": "身體缺陷上常出現的是呼吸道感染及先天性心臟疾病",
+        "C": "唐氏症主要是父親與母親的第21對染色體減數分裂均未成功",
+        "D": "唐氏症的第21對染色體具有4個染色體"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_12",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 12,
+      "question": "有關思覺失調症患者家庭情緒表露（expressed emotion）與思覺失調症的敘述，下列何者錯誤？",
+      "options": {
+        "A": "家庭情緒表露的高低可預測思覺失調症是否會再復發",
+        "B": "家庭情緒表露的高低有文化差異",
+        "C": "高家庭情緒表露是導致思覺失調症的病因",
+        "D": "家庭情緒表露的研究有助於指引大眾該如何對待患者"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_13",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 13,
+      "question": "關於淡漠（apathy）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "輕度的淡漠常被誤認為憂鬱",
+        "B": "常見於progressive supranuclear palsy（PSP）與Parkinson's disease的患者",
+        "C": "阿茲海默型失智症患者不會出現淡漠症狀",
+        "D": "動作不能性緘默（akinetic mutism）可視為淡漠的極端現象"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_4_14",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 14,
+      "question": "下列那一類型的中樞神經病變患者併發執行功能障礙的可能性最低？",
+      "options": {
+        "A": "酒精濫用或腦部缺氧致邊緣系統（limbic system）受損的患者",
+        "B": "巴金森氏失智症（Parkinson's disease dementia）患者",
+        "C": "額葉皮質區血管病變患者",
+        "D": "頂葉穿透性腦傷（penetrating brain injury）患者"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_15",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 15,
+      "question": "關於盲視（blindsight）的敘述，下列何者正確？",
+      "options": {
+        "A": "患者的視網膜受損，但卻能看見任何視覺刺激",
+        "B": "有一部分視覺刺激透過其他路徑投射到視覺聯合區域（association area）",
+        "C": "患者的視覺問題是心因性（psychogenic）",
+        "D": "患者的典型症狀是會否認自己看不到（denial of blindness）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_16",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 16,
+      "question": "相對而言，下列何者不是神經心理檢查的主要功能？",
+      "options": {
+        "A": "鑑別假性神經疾患",
+        "B": "偵測早期或輕微腦功能異常",
+        "C": "評估腦部病變患者治療的效果",
+        "D": "確認腦部病變患者之病因是否為遺傳性質"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_17",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 17,
+      "question": "王先生在接受神經心理衡鑑時，臨床心理師發現以右手為慣用手的他，當聽到指令請他以「右手做一個再見的動作時」，王先生是可以做得到；然而，請他以「左手做一個再見的動作時」，他卻無法完成。很有可能他是屬於單側肢體失用症（unilateral limb apraxia）的患者。這類患者最有可能在下列何處腦區受損？",
+      "options": {
+        "A": "後胼胝體（posterior part of corpus callosum）",
+        "B": "前胼胝體（anterior part of corpus callosum）",
+        "C": "左側頂葉（left-sided parietal lobe）",
+        "D": "右側頂葉（right-sided parietal lobe）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_4_18",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 18,
+      "question": "具反社會性／攻擊性問題的兒童，若以其在社會－認知能力缺陷的角度來看，在社交情境中，有關他們的想法與行為的特徵，下列何者錯誤？",
+      "options": {
+        "A": "解決人際情況的問題時，在採取行動之前，較少尋找及使用與該事件有關的線索來幫助其做決定",
+        "B": "對於模糊的社交事件較會做內在歸因",
+        "C": "有較差的社會知識，用來處理社會訊息及引導自身行為，以從事問題解決",
+        "D": "較可能會選擇以攻擊行為來做問題解決"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_4_19",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 19,
+      "question": "大腦神經傳導物質中，下列何者的分泌有助於抑制攻擊反應，在調節兒童面對威脅事件時的行為反應上，發揮關鍵作用？",
+      "options": {
+        "A": "腦內啡（endorphins）",
+        "B": "血清素（serotonin）",
+        "C": "多巴胺（dopamine）",
+        "D": "單胺氧化酶A（monoamine oxidase A, MAOA）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_4_20",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 20,
+      "question": "根據DSM-5，關於注意力不足／過動症（ADHD）過動／衝動主顯型兒童的敘述，下列何者正確？",
+      "options": {
+        "A": "占ADHD兒童中較少部分",
+        "B": "患者被診斷的年齡上通常較大，較少在學齡前時被診斷",
+        "C": "可與ADHD其他主顯型做清楚區分",
+        "D": "為ADHD患者就診個案中，最為常見的個案"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_21",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 21,
+      "question": "關於自閉症類群障礙症（autism spectrum disorder, ASD）的病理，下列敘述何者正確？",
+      "options": {
+        "A": "ASD的換位思考能力弱勢不僅是換位思考認知差異，也可能反映出缺乏轉換視角的動機",
+        "B": "心智理論（theory of mind）能力缺損是專屬於ASD的認知缺陷",
+        "C": "雙胞胎的研究顯示，ASD有高程度的遺傳性成分，與共同環境因素關係甚微",
+        "D": "MMR疫苗與ASD相關研究存在許多爭議，目前較少認為ASD是由MMR疫苗引起"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_22",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 22,
+      "question": "語言障礙症（language disorder）相關的缺損，不包括下列何者？",
+      "options": {
+        "A": "有限的詞彙",
+        "B": "通常出現第一個詞彙的年齡比較晚",
+        "C": "有語用上的困難",
+        "D": "有文法上的侷限"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_23",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 23,
+      "question": "有關特定學習障礙（specific learning disorder, SLD）的行為情緒問題，下列何者錯誤？",
+      "options": {
+        "A": "SLD的行為問題在青少年時期才出現",
+        "B": "多數的SLD有顯著的社會技巧缺損",
+        "C": "SLD在辨識細微的社會互動訊息有困難",
+        "D": "SLD的學業問題會使得行為問題更加嚴重"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_24",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 24,
+      "question": "有學者提出極端男性大腦理論（extreme male brain theory），解釋下列何種兒童障礙症？",
+      "options": {
+        "A": "注意力不足／過動症",
+        "B": "自閉症類群障礙症",
+        "C": "行為規範障礙症",
+        "D": "對立反抗症"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_25",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 25,
+      "question": "對於反應性依附障礙症（reactive attachment disorder, RAD）與失抑制社會交往症（disinhibited social engagement disorder, DSED）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "RAD與DSED都與兒童忽略有關",
+        "B": "RAD的孩子在遇到挫折時不會尋求照顧者安撫",
+        "C": "DSED的孩子對於陌生成人會主動接近",
+        "D": "DSED的發展年齡為至少18個月以上"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_26",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 26,
+      "question": "下列何種憂鬱症介入原理與方向的敘述錯誤？",
+      "options": {
+        "A": "adolescents coping with depression program（CWD-A; Clarke et al., 2001）：動力導向；協助青少年覺察悲觀、負向思考，再教導他們因應與改變思考型式",
+        "B": "primary and secondary control enhancement training（PASCENT; Weisz et al., 2003）：認知行為導向；學習與練習「行動（ACT）」與「思考（THINK）」技巧",
+        "C": "the ACTION program（Stark et al., 2012）：認知行為導向；介入對象包括孩子與父母雙方，協助找出正向經驗",
+        "D": "interpersonal psychotherapy for adolescent depression（IPT-A; Young & Mufson, 2008）：人際導向；關注維持憂鬱症之家庭與人際互動的處理"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_4_27",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 27,
+      "question": "根據DSM-5，關於兒童期憂鬱症的表現，下列敘述何者正確？",
+      "options": {
+        "A": "前期較不容易出現易怒情緒",
+        "B": "前期較容易出現無望感和無助感",
+        "C": "後期較容易出現低自尊、自我貶低",
+        "D": "後期較容易出現分離焦慮"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_4_28",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 28,
+      "question": "根據DSM-5，選擇性不語症的臨床表現常與下列何種症狀最接近？",
+      "options": {
+        "A": "分離焦慮症",
+        "B": "廣泛焦慮症",
+        "C": "特定對象恐懼症",
+        "D": "社交焦慮症"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_4_29",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 29,
+      "question": "安非他命精神病間接支持了思覺失調症的那個理論？",
+      "options": {
+        "A": "多巴胺理論",
+        "B": "麩胺酸理論",
+        "C": "血清素理論",
+        "D": "皮質醇理論"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_4_30",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 30,
+      "question": "抗精神病藥物的副作用中，下列何者不是錐體外徑（extrapyramidal）副作用的症狀？",
+      "options": {
+        "A": "視力模糊",
+        "B": "臉部肌肉持續性抽搐",
+        "C": "反覆跺腳及抖腳",
+        "D": "動作遲緩"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_31",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 31,
+      "question": "K他命（ketamine）會引發精神病（psychotic）症狀的原因，與下列何者的關聯較為密切？",
+      "options": {
+        "A": "促進第二型多巴胺（dopamine2, D2）受體的作用",
+        "B": "促進第一型多巴胺（dopamine1, D1）受體的作用",
+        "C": "阻斷第二型血清素（serotonin2, 5HT2）受體的作用",
+        "D": "阻斷N－甲基－D－天門冬胺酸（N-methyl-D-aspartate acid, NMDA）受體的作用"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_32",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 32,
+      "question": "根據Kring, Johnson, Davidson, & Neale（2022），有關思覺失調症患者常有腦室（ventricles）擴大現象的敘述，下列何者錯誤？",
+      "options": {
+        "A": "此現象應與大腦皮質萎縮有關",
+        "B": "此現象應來自於基因遺傳",
+        "C": "此現象在側腦室（lateral ventricles）的部位尤其明顯",
+        "D": "此現象均可見於大腦顯影與死後解剖（postmortem）的研究"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_33",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 33,
+      "question": "根據Kring等人（2022），思覺失調症患者之前額葉與顳葉有皮質萎縮的現象，主要與下列何者的減少有關？",
+      "options": {
+        "A": "神經膠質細胞（glia）",
+        "B": "樹突背脊（dendritic spines）",
+        "C": "軸突（axon）",
+        "D": "神經元（neuron）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_4_34",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 34,
+      "question": "關於雙相情緒障礙症（bipolar disorder）的臨床診斷與治療，下列敘述何者正確？",
+      "options": {
+        "A": "診斷第一型雙相情緒障礙症時，至少需要一次重鬱發作與一次輕躁症發作",
+        "B": "第一型雙相情緒障礙症的治療以選擇性血清素回收抑制劑（SSRIs）單方治療為首選",
+        "C": "雙相情緒障礙症的心理衡鑑常需區辨躁症與藥物使用所引起的情緒變化",
+        "D": "第二型雙相情緒障礙症相較於第一型，更常出現精神病性症狀"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_4_35",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 35,
+      "question": "對雙相情緒障礙症進行鑑別診斷時，下列何種狀況最需要優先排除？",
+      "options": {
+        "A": "持續兩週以上的情緒低落與快感缺失",
+        "B": "甲狀腺機能亢進（hyperthyroidism）引起的情緒改變",
+        "C": "慢性人際關係衝突與情緒不穩定，常伴隨自我傷害威脅",
+        "D": "反覆侵入性思考導致焦慮，並造成日常生活功能顯著受損"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_36",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 36,
+      "question": "關於雙相情緒障礙症（bipolar disorder）的各項疾病特徵，下列敘述何者錯誤？",
+      "options": {
+        "A": "多數患者的第一個情緒發作是鬱症，而非躁症",
+        "B": "青少年期的亞臨床（subclinical）躁症表現可能是之後發展成雙相情緒障礙症的風險因子",
+        "C": "童年創傷與壓力事件與雙相情緒障礙症的病程惡化有顯著相關",
+        "D": "雙相情緒障礙症的發展主要由社會壓力決定，與遺傳因素較無關"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_4_37",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 37,
+      "question": "關於雙相情緒障礙症與憂鬱症的病因，下列敘述何者正確？",
+      "options": {
+        "A": "反芻思考與絕望感主要與憂鬱發作的持續與惡化有關",
+        "B": "認知偏差僅出現在躁症發作時，與憂鬱發作幾乎無關",
+        "C": "雙相情緒障礙症的人際壓力主要用來解釋躁症病程，對憂鬱發作的影響有限",
+        "D": "認知偏差的影響主要存在於疾病早期階段，隨著病程時間發展會逐漸消失"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_4_38",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 38,
+      "question": "季節型發作特徵（seasonal pattern）不適用於下列何種障礙症？",
+      "options": {
+        "A": "第一型雙相情緒障礙症（bipolarⅠdisorder）",
+        "B": "第二型雙相情緒障礙症（bipolar Ⅱ disorder）",
+        "C": "循環型情緒障礙症（cyclothymic disorder）",
+        "D": "鬱症－復發型（major depressive disorder, recurrent）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_4_39",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 39,
+      "question": "大寶首次被診斷為思覺失調症，在急性病房住院期間，大寶經常維持固定姿勢，例如坐在病床邊拿著水杯，即使醫護人員將其水杯拿走，他仍維持同樣的姿勢許久。關於醫療的診斷與處置，下列何者正確？",
+      "options": {
+        "A": "會另外給他僵直症（catatonia）的獨立診斷，與思覺失調症共病",
+        "B": "醫療團隊需要多注意大寶可能會有疲勞、營養不良等風險",
+        "C": "會直接在思覺失調症的診斷中註明僵直症，不必先排除其他身體病況",
+        "D": "因為僵直症是思覺失調症常見的症狀，故不必特別在診斷中註明"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_4_40",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(二)",
+      "subject_tag": "cp_special_2",
+      "subject_name": "臨床心理學特論(二)",
+      "stage_id": 0,
+      "number": 40,
+      "question": "檢視患者病史，過去8個月，患者先有明顯的聽幻覺及被害妄想達3個月，之後開始鬱症發作而兩者同時持續5個月。然後患者從鬱症發作完全恢復，但精神病症狀持續1個月才消失。根據DSM-5-TR，此患者的診斷最可能為下列何者？",
+      "options": {
+        "A": "思覺失調症",
+        "B": "情感思覺失調症",
+        "C": "鬱症，精神病特徵",
+        "D": "思覺失調症，憂鬱型"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_1",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 1,
+      "question": "下列何者不是暴食症（bulimia nervosa）的常見致病因子？",
+      "options": {
+        "A": "社會文化對纖瘦的推崇",
+        "B": "情緒調節困難",
+        "C": "遺傳及神經化學異常",
+        "D": "高血糖導致的食慾增加"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_2",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 2,
+      "question": "根據目前的實徵研究結果，下列對於憂鬱症與焦慮疾患之臨床特徵的比較，何者正確？",
+      "options": {
+        "A": "憂鬱症患者普遍僅有血清素功能異常，而焦慮疾患則僅與多巴胺系統失調有關",
+        "B": "憂鬱症患者具有負向歸因偏誤，而焦慮疾患並未發現有穩定的認知偏誤模式",
+        "C": "憂鬱症患者與焦慮症患者皆呈現前額葉皮質活性降低，杏仁核過度活化",
+        "D": "憂鬱症患者常有慢性失眠困擾，而焦慮患者則通常沒有任何睡眠障礙"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_3",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 3,
+      "question": "依據DSM-5-TR，關於鬱症（major depressive disorder）的盛行率，女性明顯高於男性的比例約在何時達到高點並趨於穩定？",
+      "options": {
+        "A": "學齡期",
+        "B": "青少年期",
+        "C": "成年早期",
+        "D": "成年晚期"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_5_4",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 4,
+      "question": "下列何關鍵因素可協助鑑別診斷腿部不寧症候群（restless legs syndrome）與長時間保持同姿勢的腳麻？",
+      "options": {
+        "A": "移動腳後是否可緩解",
+        "B": "不適症狀的程度差異",
+        "C": "對睡姿的影響",
+        "D": "症狀表現有日夜差異"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_5_5",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 5,
+      "question": "有關使用認知行為治療處理性偏好行為問題之敘述，下列何者錯誤？",
+      "options": {
+        "A": "減少認知扭曲的認知介入",
+        "B": "增加性衝動控制的介入",
+        "C": "感覺焦點練習（sensate focus exercise）",
+        "D": "復發預防策略（relapse prevention）"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_6",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 6,
+      "question": "根據計畫行為理論，影響行為意圖的因子包含下列何者？①關於行為的態度②主觀常模③覺知的行為控制",
+      "options": {
+        "A": "僅①②",
+        "B": "僅②③",
+        "C": "僅①③",
+        "D": "①②③"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_7",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 7,
+      "question": "根據Sarafino和Smith（2022）的回顧，促進健康行為的管理方法，不包括下列何項？",
+      "options": {
+        "A": "提供健康訊息",
+        "B": "訴諸恐懼的訊息",
+        "C": "完全戒絕法",
+        "D": "自我管理"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_8",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 8,
+      "question": "下列何者不是Schaie成人認知發展階段論（stages of adult cognitive development）中的階段？",
+      "options": {
+        "A": "Reorganization",
+        "B": "Responsible",
+        "C": "Reacquisition",
+        "D": "Reintegrative"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_9",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 9,
+      "question": "下列何種神經傳導物質或激素與飲食障礙症的關係最弱？",
+      "options": {
+        "A": "血清素（serotonin）",
+        "B": "皮質醇（cortisol）",
+        "C": "多巴胺（dopamine）",
+        "D": "血管加壓素（vasopressin）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_5_10",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 10,
+      "question": "有關下視丘功能異常與厭食症（anorexia nervosa）關係的敘述，下列何者正確？",
+      "options": {
+        "A": "沒有任何研究發現厭食症個案有下視丘功能異常的現象",
+        "B": "下視丘所控制的荷爾蒙異常，是厭食症發生的主因",
+        "C": "下視丘受損的動物會感到飢餓，但無法進食",
+        "D": "下視丘受損無法解釋厭食症個案的身體意象扭曲"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_11",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 11,
+      "question": "與焦慮症相關的認知因素不包含下列何者？",
+      "options": {
+        "A": "無望",
+        "B": "持續對未來的負向信念",
+        "C": "無法容忍不確定性",
+        "D": "知覺缺乏控制力"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_12",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 12,
+      "question": "對下列何者的恐懼反應，最不可能是人類經由先備學習（prepared learning）而產生的？",
+      "options": {
+        "A": "生氣的人",
+        "B": "鮮血",
+        "C": "高度",
+        "D": "槍砲彈藥"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_13",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 13,
+      "question": "依據DSM-5-TR，恐慌發作（panic attack）具有預期性與非預期性兩種性質，下列對於兩種性質的敘述何者最恰當？",
+      "options": {
+        "A": "預期性恐慌發作是在有明顯的線索或觸發點的情況下發作",
+        "B": "預期性與非預期性恐慌發作都是在有明顯的線索或觸發點的情況下發作",
+        "C": "非預期性恐慌發作是在沒有明顯的線索或觸發點的情況下發作，且未曾在類似的線索或觸發點出現過焦慮反應",
+        "D": "預期性與非預期性恐慌發作都是在沒有明顯的線索或觸發點的情況下發作"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_5_14",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 14,
+      "question": "有關廣泛性焦慮症（generalized anxiety disorder, GAD）心理病理的敘述，下列何者錯誤？",
+      "options": {
+        "A": "藉由憂慮，患者將可以逃避更強烈的不愉快情緒",
+        "B": "無法忍受不確定的情境是患者重要的認知特徵",
+        "C": "生活壓力提高，會增加患者的憂慮嚴重度",
+        "D": "患者時常災難化錯誤解釋自己的身體感受"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_15",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 15,
+      "question": "下列何者不是Mowrer的two-factor model在解釋特定畏懼症（specific phobia）成因上，可能的問題？",
+      "options": {
+        "A": "有部分病患並沒有被恐懼對象傷害的創傷經驗",
+        "B": "有些刺激很容易成為病患常見的恐懼對象，但是有些刺激卻不然",
+        "C": "病患的逃避行為時常會干擾他們對恐懼對象的習慣化",
+        "D": "當面對同樣的創傷經驗時，有些人並不會形成特定畏懼症"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_16",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 16,
+      "question": "社交焦慮症的初發年齡最常是在下列何階段？",
+      "options": {
+        "A": "兒童時期",
+        "B": "青少年時期",
+        "C": "成年早期",
+        "D": "中年期"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_17",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 17,
+      "question": "研究指出，某些氣質特質會增加強迫症的發展風險。下列何項最可能與強迫症相關？",
+      "options": {
+        "A": "高新奇追求（novelty seeking）",
+        "B": "高行為抑制（behavioral inhibition）",
+        "C": "低嚴謹性（low conscientiousness）",
+        "D": "高外向性（extraversion）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_5_18",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 18,
+      "question": "下列對強迫症類別診斷（包含強迫症、身體臆形症與儲物症）進行暴露與反應預防（exposure and response prevention, ERP）治療的敘述，何者錯誤？",
+      "options": {
+        "A": "ERP應用於強迫症的效益大於其他兩類診斷",
+        "B": "身體臆形症使用ERP搭配決策與組織能力訓練時，成效會更佳",
+        "C": "儲物症進行ERP前，先採動機策略提升頓悟，成效會更佳",
+        "D": "相較於單純強迫症患者，身體臆形症與儲物症在接受ERP後更常有殘餘的症狀"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_5_19",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 19,
+      "question": "下列關於強迫症的敘述，何者錯誤？",
+      "options": {
+        "A": "從Dollard與Miller（1950）的觀點，強迫症患者以主動逃避（active avoidance）來消除心理痛苦",
+        "B": "根據Salkovskis的觀點，強迫症患者的信念之核心議題為誇大的責任感與自責",
+        "C": "因為強迫思考具有侵入性（intrusive）的特色，因此患者難以避開會引發強迫思考的情境",
+        "D": "當患者清楚知道自己也不希望有不好的後果發生時，就比較不會自責"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_5_20",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 20,
+      "question": "使用包含暴露（exposure）之認知行為治療來治療強迫症（obsessive-compulsive disorder, OCD）的臨床心理師，對於強迫症之心理病理核心觀點較可能包含下列何者？①因為小時候的排便訓練過早或過於嚴格，形成肛門滯留人格（anal retentiveness）②對條件刺激（conditioned stimulus）形成過度的焦慮反應③學會用某些行為來減少過度的焦慮反應④對於強迫意念（obsession）之出現有過強的責任感或罪惡感，覺得自己不該讓這種想法發生⑤有失功能的恐懼網絡（fear network）⑥幼時對於過於嚴厲、甚至是有不當教養行為的教養者（如父母），產生高度攻擊性，但無法外化而形成不恰當的防衛機轉",
+      "options": {
+        "A": "①②⑤⑥",
+        "B": "①③④⑥",
+        "C": "②③④⑤",
+        "D": "僅②③④"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_21",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 21,
+      "question": "根據DSM-5-TR診斷準則，下列關於區分急性壓力症（acute stress disorder, ASD）與創傷後壓力症（posttraumatic stress disorder, PTSD）的敘述，何者最適當？",
+      "options": {
+        "A": "ASD的症狀僅限於侵入性症狀，而PTSD涵蓋四大群組（侵入、迴避、認知與情緒改變、過度覺醒）",
+        "B": "ASD與PTSD的主要差別在於病程長短，ASD症狀持續3日至1個月，而PTSD症狀持續至少1個月",
+        "C": "只要個體在創傷當下或數日內出現解離症狀，即可診斷為ASD，而PTSD不包含解離症狀",
+        "D": "PTSD的診斷不需要有明確的創傷暴露，而ASD必須有明確的創傷事件"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_22",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 22,
+      "question": "有關創傷後壓力症（posttraumatic stress disorder, PTSD）之臨床治療的敘述，下列何者正確？",
+      "options": {
+        "A": "為避免再度創傷，臨床上應避免讓患者回憶或討論創傷細節，故支持性治療被視為黃金標準",
+        "B": "PTSD的治療效果主要依賴症狀自然消退，因此介入的必要性與成效並不特別明顯",
+        "C": "藥物治療可作為PTSD的治療選項之一，但單獨使用時效果有限，宜與心理治療併用以維持長期成效",
+        "D": "認知行為取向治療因過於聚焦於症狀緩解，對於長期復原與功能恢復的貢獻相當有限"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_23",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 23,
+      "question": "依據DSM-5-TR對創傷後壓力症（posttraumatic stress disorder, PTSD）的診斷準則，在符合創傷的診斷之外，還必須符合幾大類症狀達一個月以上？",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_24",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 24,
+      "question": "針對身體症狀及相關障礙症的治療，下列敘述何者最不適當？",
+      "options": {
+        "A": "基層醫師可提供溫暖與再保證",
+        "B": "協助病人減少重複醫療檢測，減少其焦慮",
+        "C": "向病人強調身體症狀為心理因素，而非生理因素",
+        "D": "協助病人改變關於身體症狀的認知"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_25",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 25,
+      "question": "有關轉化症（conversion disorder）的流行病學，下列敘述何者錯誤？",
+      "options": {
+        "A": "常伴隨有解離症狀",
+        "B": "盛行率小於1％",
+        "C": "常以神經系統症狀來表現，例如癲癇發作或癱瘓等",
+        "D": "對生活壓力適應不良者，不會增加罹病風險"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_26",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 26,
+      "question": "下列DSM-5-TR對解離性身分障礙症（dissociative identity disorder, DID）的診斷準則，何者正確？",
+      "options": {
+        "A": "同時出現兩種或兩種以上截然不同的人格（personalities）",
+        "B": "出現無法以一般遺忘解釋的記憶斷層",
+        "C": "DID這些徵兆和症狀必須被其他人觀察到",
+        "D": "DID這些症狀不見得會導致嚴重的痛苦，或其他功能上的問題"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_5_27",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 27,
+      "question": "張先生目睹一場重大車禍，雖然他完全沒有受傷，但之後卻無法回想起車禍發生前以及車禍本身的經過。張先生最符合下列何種情況？",
+      "options": {
+        "A": "解離性遁走（dissociative fugue）",
+        "B": "器質性失憶（organic amnesia）",
+        "C": "選擇性失憶（selective amnesia）",
+        "D": "廣泛性失憶（generalized amnesia）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_5_28",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 28,
+      "question": "鬱症（major depressive disorder）與雙相情緒障礙症（bipolar disorder）的鑑別診斷之敘述，下列何者正確？",
+      "options": {
+        "A": "若患者曾有躁症病史，即便目前只有憂鬱發作，診斷應為雙相情緒障礙症",
+        "B": "若患者目前只有憂鬱症狀，臨床上可先不考慮其病史，僅依現有症狀診斷為鬱症",
+        "C": "鬱症患者若在壓力下僅出現持續1～2天的情緒高漲或精力增加，必須重新診斷為雙相情緒障礙症",
+        "D": "若患者曾有輕躁症病史，即使無憂鬱發作，仍可診斷為第二型雙相情緒障礙症（bipolar Ⅱ disorder）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_5_29",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 29,
+      "question": "根據DSM-5-TR的標準，下列何者不是鬱症（major depressive disorder, MDD）的診斷準則？",
+      "options": {
+        "A": "對特定領域的活動失去興趣或愉悅感",
+        "B": "幾乎每天有失眠或嗜睡等睡眠障礙",
+        "C": "喪親後若出現持續的憂鬱情緒與功能損害，仍可考慮診斷為MDD",
+        "D": "幾乎每天有顯著的疲倦感或精力不足"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_5_30",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 30,
+      "question": "失眠患者相較於好眠者有較高強度的皮質激發，展現在入睡和非快速動眼階段，其睡眠腦波何種頻段能量較高？",
+      "options": {
+        "A": "高頻腦波",
+        "B": "中頻腦波",
+        "C": "低頻腦波",
+        "D": "超低頻腦波"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_31",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 31,
+      "question": "針對夜驚（sleep terrors）疾病特性的敘述，下列何者錯誤？",
+      "options": {
+        "A": "較常發生在下半夜",
+        "B": "隔天詢問患者往往對症狀發生沒有印象",
+        "C": "學齡前兒童的發生率遠高於成年人",
+        "D": "兒童時期，男性發生率高於女性"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_32",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 32,
+      "question": "下列何者並非良好的睡眠衛生習慣？",
+      "options": {
+        "A": "建立睡前固定輕鬆的行為習慣，例如可以提早30分鐘上床，看書、聽輕鬆的音樂之後關燈入睡",
+        "B": "規律的運動，每週至少三次",
+        "C": "建立規律的就寢與起床的時間",
+        "D": "增加白天照到自然光線的機會，強化晝夜節律生理時鐘的運作"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_33",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 33,
+      "question": "坊間常聽到的藥物威而剛（Viagra），主要是用來治療何種性功能障礙症？",
+      "options": {
+        "A": "勃起障礙（erectile disorder）",
+        "B": "男性性慾低下障礙症（male hypoactive sexual desire disorder）",
+        "C": "早發性射精（premature ejaculation）",
+        "D": "延遲性射精（delayed ejaculation）"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_5_34",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 34,
+      "question": "關於心理神經免疫學中，良好的心理社會因素對免疫功能有利的研究結果，下列敘述何者錯誤？",
+      "options": {
+        "A": "樂觀與良好的因應策略與自然殺手細胞的細胞毒殺能力（natural killer cell cytotoxicity）較低有關（Segerstrom et al., 1998）",
+        "B": "老年人的研究發現，放鬆訓練組在介入後，其自然殺手細胞活性明顯高於介入前（Kiecolt-Glaser et al., 1985）",
+        "C": "低個人控制感（personal control）、覺得自己無法因應壓力事件的人，其循環系統中的B細胞（circulating B cells）濃度較低（Zautra et al., 1989）",
+        "D": "悲觀與逃避因應策略與T細胞數量（T cells counts）較少有關（Segerstrom et al., 1998）"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_5_35",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 35,
+      "question": "在經驗長時間的壓力下，何類體內分泌的物質會減損免疫系統的作用？",
+      "options": {
+        "A": "corticosteroids",
+        "B": "endorphins",
+        "C": "dopamine",
+        "D": "cytokines"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_36",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 36,
+      "question": "下列何者屬於疾病表述常識模式（commonsense model of illness）所包含的概念？①疾病的標定（identity）或標籤（label）②疾病的原因（cause）③疾病的時間歷程（time line）④疾病的控制／治癒方式（control/cure）⑤情緒表徵（emotional representation）",
+      "options": {
+        "A": "僅①②③",
+        "B": "僅①②③④",
+        "C": "僅①②④⑤",
+        "D": "①②③④⑤"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_5_37",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 37,
+      "question": "下列何位學者提出面對慢性壓力的一般適應症狀（general adaptation syndrome）反應模式？",
+      "options": {
+        "A": "Hans Selye",
+        "B": "Walter Cannon",
+        "C": "Richard Lazarus",
+        "D": "Thomas Holmes and Richard Rahe"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_5_38",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 38,
+      "question": "目前許多壓力相關研究均採用Lazarus與Folkman將壓力視為一種歷程（process）的看法，下列有關此壓力歷程模式的敘述，何者最不恰當？",
+      "options": {
+        "A": "此模式中不包含壓力源（stressors）和張力反應（strains），重視的是人與環境之間的交流（transactions）",
+        "B": "認知評估（cognitive appraisal）包含初級（primary）與次級（secondary）兩類",
+        "C": "在此模式中，個人會有壓力是因為覺知到情境的要求（demands）和個人的資源（resources）間有差異（discrepancy）",
+        "D": "不論差異是客觀真實的，或僅是個人的認定（belief），均可能造成壓力"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_5_39",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 39,
+      "question": "所謂的D型性格（Type D personality）之心理概念包含下列何者？",
+      "options": {
+        "A": "高度強調人際競爭之表現",
+        "B": "高度強調社會期許之符合",
+        "C": "高度抑制社交場合之情緒表達",
+        "D": "高度要求社交場合之尊嚴地位"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_5_40",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "臨床心理學特論(三)",
+      "subject_tag": "cp_special_3",
+      "subject_name": "臨床心理學特論(三)",
+      "stage_id": 0,
+      "number": 40,
+      "question": "在面對臨終的過程中，Kübler-Ross（1969）認為個體會出現五個階段的心理反應。當個體問道：「那些症狀比我更嚴重、健康習慣比我還糟糕的人都沒事，為什麼是我？」這屬於何種階段的反應？",
+      "options": {
+        "A": "否認（denial）",
+        "B": "憤怒（anger）",
+        "C": "討價還價（bargaining）",
+        "D": "憂鬱（depression）"
+      },
+      "answer": "C"
     }
   ],
-  "total": 5575
+  "total": 5815,
+  "metadata": {
+    "last_updated": "2026-09-01T09:06:58.037901"
+  }
 }

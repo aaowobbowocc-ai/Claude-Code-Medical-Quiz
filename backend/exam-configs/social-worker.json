@@ -42,6 +42,27 @@
       "subject": "社會工作管理",
       "subjects": "社會工作行政、方案規劃、組織管理",
       "count": 40
+    },
+    {
+      "id": "social_policy",
+      "name": "社會政策與社會立法",
+      "subject": "社會政策與社會立法",
+      "subjects": "社會政策、社會立法、福利法規",
+      "count": 40
+    },
+    {
+      "id": "human_behavior",
+      "name": "人類行為與社會環境",
+      "subject": "人類行為與社會環境",
+      "subjects": "人類發展、社會環境、行為理論",
+      "count": 40
+    },
+    {
+      "id": "research_method",
+      "name": "社會工作研究方法",
+      "subject": "社會工作研究方法",
+      "subjects": "量化研究、質性研究、研究設計",
+      "count": 40
     }
   ],
   "stages": [
@@ -64,13 +85,31 @@
       "id": 3,
       "tag": "social_work_mgmt",
       "name": "社會工作管理"
+    },
+    {
+      "id": 4,
+      "tag": "social_policy",
+      "name": "社會政策與社會立法"
+    },
+    {
+      "id": 5,
+      "tag": "human_behavior",
+      "name": "人類行為與社會環境"
+    },
+    {
+      "id": 6,
+      "tag": "research_method",
+      "name": "社會工作研究方法"
     }
   ],
   "ui": {
     "tagNames": {
       "social_work": "社會工作",
       "social_work_direct": "直接服務",
-      "social_work_mgmt": "管理"
+      "social_work_mgmt": "管理",
+      "social_policy": "政策立法",
+      "human_behavior": "人類行為",
+      "research_method": "研究方法"
     },
     "stageStyles": {
       "social_work": {
@@ -84,12 +123,27 @@
       "social_work_mgmt": {
         "icon": "📋",
         "color": "#10B981"
+      },
+      "social_policy": {
+        "icon": "⚖️",
+        "color": "#EF4444"
+      },
+      "human_behavior": {
+        "icon": "🧠",
+        "color": "#8B5CF6"
+      },
+      "research_method": {
+        "icon": "🔬",
+        "color": "#0EA5E9"
       }
     },
     "subjectColors": {
       "social_work": "#6366F1",
       "social_work_direct": "#F59E0B",
-      "social_work_mgmt": "#10B981"
+      "social_work_mgmt": "#10B981",
+      "social_policy": "#EF4444",
+      "human_behavior": "#8B5CF6",
+      "research_method": "#0EA5E9"
     }
   },
   "seo": {

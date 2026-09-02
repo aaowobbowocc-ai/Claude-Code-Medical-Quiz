@@ -275,6 +275,11 @@ function AppRoutes() {
         await doSync()
       } catch {}
     })()
+    // 開機首次 syncOnLogin 可能搶在 supabase session 就緒前跑 → RLS 擋掉 SELECT
+    // 拉到空（墨蓮 2026-09-01：iOS 已上傳 86 錯題但電腦拉不到）。補幾次延遲重試，
+    // 等 session 建好再拉一次；union merge 冪等，重覆拉無害。
+    const retry1 = setTimeout(doSync, 4000)
+    const retry2 = setTimeout(doSync, 12000)
     // 切回前景時重新拉雲端合併——手機↔平板切換時，背景的 App 回前景不會重新掛載，
     // 只靠開機那次 syncOnLogin 會導致「另一台的錯題/收藏沒同步過來」（CZY 多次回報）。
     // 節流 30 秒，避免頻繁前後景切換狂拉。
@@ -284,7 +289,11 @@ function AppRoutes() {
       doSync()
     }
     document.addEventListener('visibilitychange', onVisible)
-    return () => { cancelled = true; document.removeEventListener('visibilitychange', onVisible) }
+    return () => {
+      cancelled = true
+      clearTimeout(retry1); clearTimeout(retry2)
+      document.removeEventListener('visibilitychange', onVisible)
+    }
   }, [])
 
   return (

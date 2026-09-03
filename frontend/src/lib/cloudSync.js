@@ -5,6 +5,14 @@ import { supabase } from './supabase'
 import { readAuthFromStorage } from './supabase'
 import { getWrong, replaceWrong, wrongKey, getRemoved, replaceRemoved } from './wrongBank'
 import { loadBookmarks, replaceBookmarks } from '../hooks/useBookmarks'
+import { useAccuracyStore } from '../store/accuracyStore'
+
+// 練習記錄（各科正確率）快照 / 併入。欄位 accuracy 需 migration 019；未套用前
+// 讀寫會拋錯 → 各自 try/catch 靜默略過，不影響錯題/收藏同步。
+function accuracySnapshot() {
+  const s = useAccuracyStore.getState()
+  return { data: s.data, sharedData: s.sharedData, seen: s.seen, seenShared: s.seenShared }
+}
 
 const WRONG_MAX = 500   // 與 wrongBank MAX 一致
 const BM_MAX_PER_FOLDER = 100
@@ -69,6 +77,12 @@ async function pushNow() {
       updated_at: new Date().toISOString(),
     }, { onConflict: 'user_id' })
   } catch (e) { /* 靜默：同步失敗不影響本機使用 */ }
+  // 練習記錄：獨立 upsert（欄位未加時靜默失敗，不拖累上面）
+  try {
+    await supabase.from('user_sync').upsert({
+      user_id, accuracy: accuracySnapshot(), updated_at: new Date().toISOString(),
+    }, { onConflict: 'user_id' })
+  } catch (e) { /* accuracy 欄位未套用 migration 019 → 略過 */ }
 }
 
 let pushTimer = null
@@ -94,6 +108,12 @@ export async function syncOnLogin() {
     replaceWrong(mergedWrong)
     const mergedBm = mergeBookmarks(loadBookmarks(), data?.bookmarks)
     replaceBookmarks(mergedBm)
+    // 練習記錄：獨立拉取 + max-merge 併入本機（欄位未加時靜默略過）
+    try {
+      const { data: accRow } = await supabase
+        .from('user_sync').select('accuracy').eq('user_id', user_id).maybeSingle()
+      if (accRow?.accuracy) useAccuracyStore.getState().mergeCloud(accRow.accuracy)
+    } catch (e) { /* accuracy 欄位未套用 migration 019 → 略過 */ }
     await pushNow() // 把合併結果推回，讓另一台也拿到
   } catch (e) { /* 靜默 */ }
 }
@@ -105,4 +125,6 @@ export function initCloudSync() {
   inited = true
   window.addEventListener('wrongbank-changed', schedulePush)
   window.addEventListener('bookmarks-changed', schedulePush)
+  // 練習記錄變更（作答後 accuracyStore 更新）→ 防抖回推
+  try { useAccuracyStore.subscribe(schedulePush) } catch {}
 }

@@ -188,6 +188,46 @@ export const useAccuracyStore = create(
           .sort((a, b) => a.rate - b.rate)
       },
 
+      /** 跨裝置同步：把雲端練習記錄併入本機（max-merge，單調不倒退）。
+       *  data/sharedData 每個 (exam/bank, tag) 取 correct/wrong 較大者；
+       *  seen/seenShared 以 qid 聯集（衝突保留本機）。用於 cloudSync.syncOnLogin。*/
+      mergeCloud(cloud) {
+        if (!cloud || typeof cloud !== 'object') return
+        const mergeBuckets = (localB, cloudB) => {
+          const L = localB || {}, C = cloudB || {}
+          const out = {}
+          for (const k of new Set([...Object.keys(L), ...Object.keys(C)])) {
+            const l = L[k] || {}, c = C[k] || {}
+            const m = {}
+            for (const t of new Set([...Object.keys(l), ...Object.keys(c)])) {
+              const le = l[t] || { correct: 0, wrong: 0, lastSeen: 0 }
+              const ce = c[t] || { correct: 0, wrong: 0, lastSeen: 0 }
+              m[t] = {
+                correct: Math.max(le.correct || 0, ce.correct || 0),
+                wrong: Math.max(le.wrong || 0, ce.wrong || 0),
+                lastSeen: Math.max(le.lastSeen || 0, ce.lastSeen || 0),
+              }
+            }
+            out[k] = m
+          }
+          return out
+        }
+        const mergeSeen = (localS, cloudS) => {
+          const L = localS || {}, C = cloudS || {}
+          const out = {}
+          for (const k of new Set([...Object.keys(L), ...Object.keys(C)])) {
+            out[k] = { ...(C[k] || {}), ...(L[k] || {}) } // 衝突保留本機
+          }
+          return out
+        }
+        set(s => ({
+          data: mergeBuckets(s.data, cloud.data),
+          sharedData: mergeBuckets(s.sharedData, cloud.sharedData),
+          seen: mergeSeen(s.seen, cloud.seen),
+          seenShared: mergeSeen(s.seenShared, cloud.seenShared),
+        }))
+      },
+
       /** Reset data for a specific exam. Does NOT clear sharedData — other
        *  exams that share the same bank still rely on those entries. */
       resetExam(exam) {

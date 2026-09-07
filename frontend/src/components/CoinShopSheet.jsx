@@ -4,6 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import { readAuthFromStorage } from '../lib/supabase'
 import { getDeviceId } from '../hooks/useAI'
 import { isNativeApp } from '../lib/admob'
+import { getCoinPackages, buyCoinPackage, isUserCancelled } from '../lib/iap'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -40,6 +41,13 @@ const TIERS = [
   },
 ]
 
+// App 版 IAP 幣包顯示資訊（對照 RevenueCat 商品 productId）
+const COIN_META = {
+  coins_2500:  { label: '小額金幣', emoji: '☕', coins: 2500,  tag: null },
+  coins_10000: { label: '一般金幣', emoji: '🙏', coins: 10000, tag: '最受歡迎' },
+  coins_35000: { label: '大包金幣', emoji: '🏆', coins: 35000, tag: '超值' },
+}
+
 export default function CoinShopSheet({ onClose }) {
   const [step, setStep] = useState('select') // select | confirm | processing | success | error
   const [selected, setSelected] = useState(null)
@@ -47,6 +55,23 @@ export default function CoinShopSheet({ onClose }) {
   const [orderId, setOrderId] = useState(null)
   const [payUrl, setPayUrl] = useState('')
   const pollRef = useRef(null)
+
+  // ── Native App 內購（IAP）狀態 ──
+  const [iapPkgs, setIapPkgs] = useState(null)      // null=載入中, []=尚未開放, [...]=幣包清單
+  const [iapStep, setIapStep] = useState('select')  // select | processing | success | error
+  const [iapErr, setIapErr] = useState('')
+  const [iapGain, setIapGain] = useState(0)
+
+  // App 版進畫面時抓幣包（Web 不跑）
+  useEffect(() => {
+    if (!IS_NATIVE) return
+    let cancelled = false
+    const { user_id } = readAuthFromStorage()
+    getCoinPackages(user_id)
+      .then(list => { if (!cancelled) setIapPkgs(list || []) })
+      .catch(() => { if (!cancelled) setIapPkgs([]) })
+    return () => { cancelled = true }
+  }, [])
 
   const tier = TIERS.find(t => t.id === selected)
 
@@ -133,43 +158,102 @@ export default function CoinShopSheet({ onClose }) {
     onClose()
   }
 
-  // Android App 版：完全不顯示付費 tier，改成引導使用者用免費方式拿金幣
+  // ── App 版：IAP 幣店（RevenueCat；金幣由 webhook 入帳，前端輪詢餘額）──
   if (IS_NATIVE) {
+    const onBuy = async (item) => {
+      const { user_id } = readAuthFromStorage()
+      if (!user_id) { setIapErr('請先登入帳號才能購買金幣'); setIapStep('error'); return }
+      setIapStep('processing'); setIapErr('')
+      const before = usePlayerStore.getState().coins
+      try {
+        await buyCoinPackage(item.pkg, user_id)   // Apple/Google 收款
+        setIapGain(COIN_META[item.productId]?.coins || 0)
+        // 收款成功 → webhook 幾秒內寫進 profiles.coins；輪詢餘額增加
+        let tries = 0
+        const poll = async () => {
+          tries++
+          try { await usePlayerStore.getState().hydrateFromCloud(true) } catch {}
+          if (usePlayerStore.getState().coins > before) { setIapStep('success'); return }
+          if (tries < 12) setTimeout(poll, 2000)
+          else setIapStep('success')  // 逾時也顯示成功（入帳可能稍慢，重開 App 會看到）
+        }
+        poll()
+      } catch (e) {
+        if (isUserCancelled(e)) { setIapStep('select'); return }   // 使用者取消：不算失敗
+        setIapErr('購買失敗，若已扣款金幣會自動入帳'); setIapStep('error')
+      }
+    }
     return (
-      <Sheet onClose={handleClose}>
+      <Sheet onClose={iapStep === 'processing' ? undefined : handleClose}>
         <div className="text-center mb-5">
           <div className="text-5xl mb-3">🪙</div>
-          <h2 className="text-xl font-bold text-medical-dark">取得金幣</h2>
-          <p className="text-gray-400 text-sm mt-2 leading-relaxed">
-            金幣可用於 AI 解析等進階功能
-          </p>
+          <h2 className="text-xl font-bold text-medical-dark">購買金幣</h2>
+          <p className="text-gray-400 text-sm mt-2 leading-relaxed">金幣可用於 AI 解析等進階功能</p>
         </div>
 
-        <div className="bg-blue-50 rounded-2xl px-4 py-4 mb-4 text-sm text-blue-800 leading-relaxed space-y-2">
-          <p className="font-bold">✨ App 內取得金幣的方式：</p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>每日簽到（連續登入加倍）</li>
-            <li>看獎勵廣告（每天最多 10 次，每次 300 幣）</li>
-            <li>答對題目累積經驗值升等獎勵</li>
-            <li>邀請朋友加入</li>
-          </ul>
-        </div>
+        {iapStep === 'select' && (
+          <>
+            {iapPkgs === null && <div className="text-center py-10 text-gray-400">載入中…</div>}
+            {iapPkgs && iapPkgs.length === 0 && (
+              <div className="bg-blue-50 rounded-2xl px-4 py-4 mb-4 text-sm text-blue-800 leading-relaxed">
+                <p className="font-bold mb-1">目前無法購買</p>
+                <p>金幣商品尚未開放，請稍後再試。你也可以用每日簽到、看獎勵廣告免費獲得金幣。</p>
+              </div>
+            )}
+            {iapPkgs && iapPkgs.length > 0 && (
+              <div className="grid gap-3 mb-4">
+                {iapPkgs.map(item => {
+                  const meta = COIN_META[item.productId] || {}
+                  return (
+                    <button key={item.id} onClick={() => onBuy(item)}
+                      className="relative w-full rounded-2xl px-4 py-4 bg-white border-2 border-gray-200 active:scale-[0.98] transition-transform text-left flex items-center gap-4 hover:border-amber-300">
+                      {meta.tag && <span className="absolute -top-2 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">{meta.tag}</span>}
+                      <div className="text-3xl shrink-0">{meta.emoji || '🪙'}</div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-bold text-medical-dark">{meta.label || item.title}</p>
+                        {meta.coins && <p className="text-xs text-amber-600 mt-0.5">🪙 {meta.coins.toLocaleString()} 金幣</p>}
+                      </div>
+                      <div className="text-right shrink-0">
+                        <p className="font-bold text-medical-dark text-lg">{item.priceString}</p>
+                      </div>
+                    </button>
+                  )
+                })}
+              </div>
+            )}
+            <button onClick={handleClose} className="w-full py-3 rounded-2xl font-bold text-medical-dark border-2 border-gray-200 active:scale-95 transition-transform">關閉</button>
+          </>
+        )}
 
-        <div className="bg-gray-50 rounded-2xl px-4 py-3 mb-4 text-xs text-gray-500 leading-relaxed">
-          <p>📱 想直接贊助平台？</p>
-          <p className="mt-1">
-            請開電腦或瀏覽器版本進入：<br />
-            <span className="font-mono text-medical-blue">examking.tw</span>
-          </p>
-          <p className="mt-2 text-gray-400">App 版本目前不支援站內付費，是為了讓你免費使用所有功能。</p>
-        </div>
+        {iapStep === 'processing' && (
+          <div className="text-center py-8">
+            <div className="text-5xl mb-4 animate-pulse">⏳</div>
+            <p className="font-bold text-medical-dark text-lg">處理中</p>
+            <p className="text-gray-400 text-sm mt-2 leading-relaxed">付款完成後金幣會自動入帳，請稍候…</p>
+          </div>
+        )}
 
-        <button
-          onClick={handleClose}
-          className="w-full py-3 rounded-2xl font-bold text-medical-dark border-2 border-gray-200 active:scale-95 transition-transform"
-        >
-          知道了
-        </button>
+        {iapStep === 'success' && (
+          <div className="text-center py-4">
+            <div className="text-5xl mb-3">🎉</div>
+            <h2 className="text-xl font-bold text-medical-dark mb-1">購買成功！</h2>
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-4 my-5">
+              <p className="text-amber-700 font-bold text-lg">🪙 {iapGain ? `+${iapGain.toLocaleString()} ` : ''}金幣已入帳</p>
+              <p className="text-amber-600 text-xs mt-2">感謝你的支持！</p>
+            </div>
+            <button onClick={() => { handleClose() }} className="px-10 py-3 rounded-2xl font-bold text-white active:scale-95 grad-cta">繼續練習</button>
+          </div>
+        )}
+
+        {iapStep === 'error' && (
+          <div className="text-center py-6">
+            <div className="text-5xl mb-3">⚠️</div>
+            <h2 className="text-xl font-bold text-medical-dark mb-2">購買未完成</h2>
+            <p className="text-gray-500 text-sm mb-5 leading-relaxed">{iapErr || '請稍後再試'}</p>
+            <button onClick={() => { setIapStep('select'); setIapErr('') }} className="w-full py-3 rounded-2xl font-bold text-white grad-cta active:scale-95 mb-2">返回</button>
+            <button onClick={handleClose} className="w-full py-2.5 rounded-2xl text-sm text-gray-400 active:bg-gray-50">關閉</button>
+          </div>
+        )}
       </Sheet>
     )
   }

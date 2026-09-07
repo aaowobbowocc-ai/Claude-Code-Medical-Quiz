@@ -231,6 +231,11 @@ function AppRoutes() {
         const { syncOnLogin } = await import('./lib/cloudSync')
         await syncOnLogin()
       } catch {}
+      // App 內購：把 RevenueCat 帳號設為 supabase user_id，webhook 才發到正確帳號
+      try {
+        const { setIapUser } = await import('./lib/iap')
+        await setIapUser(user.id)
+      } catch {}
       const returnPath = consumeOAuthReturnPath()
       if (returnPath) {
         const current = location.pathname + location.search
@@ -253,6 +258,7 @@ function AppRoutes() {
         if (cancelled || !session?.user?.id) return
         const { syncUnlocksToServer } = await import('./hooks/useAI')
         await syncUnlocksToServer(session.user.id)
+        try { const { setIapUser } = await import('./lib/iap'); await setIapUser(session.user.id) } catch {}
       } catch {}
     })()
     return () => { cancelled = true }

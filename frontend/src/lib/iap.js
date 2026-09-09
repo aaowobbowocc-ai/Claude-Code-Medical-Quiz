@@ -68,6 +68,11 @@ export async function getCoinPackages(appUserId) {
 /** 購買。成功＝Apple/Google 已收款；金幣由 webhook 幾秒內入帳。使用者取消會 throw。 */
 export async function buyCoinPackage(pkg, appUserId) {
   await ensureInit(appUserId)
+  // ensureInit 是 idempotent，第二次以後不會重帶 appUserID；購買前再 logIn 一次，
+  // 確保這筆掛在 supabase user_id 底下（掛成匿名 ID 的話 webhook 發不了幣）。
+  if (appUserId) {
+    try { await Purchases.logIn({ appUserID: appUserId }) } catch { /* 已是同一帳號 */ }
+  }
   return await Purchases.purchasePackage({ aPackage: pkg })
 }
 

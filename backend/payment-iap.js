@@ -40,6 +40,21 @@ function getProductCoins() {
   return map;
 }
 
+// Play Console 新版一次性商品另有「購買選項 ID」(只能小寫/數字/連字號 → coins-2500)，
+// RevenueCat 可能把 product_id 送成 `coins_2500:coins-2500` 或連字號版。
+// 正規化成底線版再查表，免得對得到錢卻對不到幣。
+function normalizeProductId(raw) {
+  return String(raw || '').split(':')[0].trim().replace(/-/g, '_');
+}
+
+function lookupCoins(rawProductId) {
+  const map = getProductCoins();
+  if (map[rawProductId]) return map[rawProductId];
+  return map[normalizeProductId(rawProductId)];
+}
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
 // 這些事件型別代表「一次性/消耗型購買成功」→ 該發幣。
 // NON_RENEWING_PURCHASE = 消耗型/非續訂（金幣就是這種）。
 // INITIAL_PURCHASE 理論上是訂閱首購，這裡一併容忍（若日後有非消耗型商品）。
@@ -89,7 +104,7 @@ function registerIapRoutes(app, supabase) {
       }
 
       // ── 發幣事件 ───────────────────────────────────────────────
-      const coins = getProductCoins()[product_id];
+      const coins = lookupCoins(product_id);
       if (!coins) {
         // 未知 product_id → 記一筆 failed 供排查，但回 200（別 retry；要先補對照）。
         console.error('[iap] unknown product_id, no coins mapping:', product_id);
@@ -98,6 +113,14 @@ function registerIapRoutes(app, supabase) {
       if (!app_user_id) {
         console.error('[iap] missing app_user_id for', orderId);
         return res.status(200).json({ ok: false, reason: 'no_user' });
+      }
+      // app_user_id 必須是 supabase uuid。若是 RevenueCat 匿名 ID($RCAnonymousID:…)，
+      // 代表前端購買時沒掛上帳號 → 之後的 insert 會因型別錯誤被當成 dup 靜默吞掉。
+      // 這裡先擋下並大聲 log，方便對帳補發。
+      if (!UUID_RE.test(app_user_id)) {
+        console.error('[iap] app_user_id 不是 supabase uuid(疑似匿名購買，需人工補幣):',
+          app_user_id, orderId, product_id);
+        return res.status(200).json({ ok: false, reason: 'anonymous_user', app_user_id });
       }
 
       // ── 防護 2：idempotent（transaction_id 去重）───────────────

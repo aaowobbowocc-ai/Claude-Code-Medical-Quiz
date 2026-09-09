@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Sheet from './Sheet'
 import { usePlayerStore } from '../store/gameStore'
-import { readAuthFromStorage } from '../lib/supabase'
+import { readAuthFromStorage, linkOrSignInGoogle, signInWithApple } from '../lib/supabase'
 import { getDeviceId } from '../hooks/useAI'
 import { isNativeApp } from '../lib/admob'
 import { getCoinPackages, buyCoinPackage, isUserCancelled } from '../lib/iap'
@@ -13,6 +13,7 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 //  原則上必須走 Play Billing 抽 15-30%。我們現階段選擇純廣告賺幣，付費
 //  贊助僅在 web 版開放。）
 const IS_NATIVE = isNativeApp()
+const IS_IOS = IS_NATIVE && typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent)
 
 const TIERS = [
   {
@@ -62,6 +63,18 @@ export default function CoinShopSheet({ onClose }) {
   const [iapErr, setIapErr] = useState('')
   const [iapGain, setIapGain] = useState(0)
 
+  // ── 匿名帳號擋購買 ──
+  // 匿名帳號(signInAnonymously)也有 user_id，付款會成功、金幣也會寫進那個 user_id，
+  // 但重裝 App 或之後綁定 Google 就會換成另一個帳號 → 買的幣看不到（2026-09-09 實測踩到，
+  // 兩筆真錢購買都落在拋棄式匿名帳號上）。所以付費入口一律要求先綁定。
+  const [isAnon, setIsAnon] = useState(false)
+  const [bindBusy, setBindBusy] = useState(false)
+  const [bindErr, setBindErr] = useState('')
+  useEffect(() => {
+    const { user_id, is_anonymous } = readAuthFromStorage()
+    setIsAnon(!user_id || is_anonymous)
+  }, [])
+
   // App 版進畫面時抓幣包（Web 不跑）
   useEffect(() => {
     if (!IS_NATIVE) return
@@ -85,9 +98,11 @@ export default function CoinShopSheet({ onClose }) {
     const payWin = window.open('about:blank', '_blank')
     try {
       // 直接從 localStorage 讀登入狀態：supabase.auth.getSession() 可能 hang 卡住付款流程。
-      const { user_id } = readAuthFromStorage()
-      if (!user_id) {
+      const { user_id, is_anonymous } = readAuthFromStorage()
+      if (!user_id || is_anonymous) {
         if (payWin && !payWin.closed) payWin.close()
+        // 訪客身分付款 → 金幣會綁在拋棄式帳號上，重裝/綁定後就消失，直接擋下
+        if (is_anonymous) { setIsAnon(true); setStep('select'); return }
         setErrorMsg('請先登入帳號才能領取金幣')
         setStep('error')
         return
@@ -158,11 +173,49 @@ export default function CoinShopSheet({ onClose }) {
     onClose()
   }
 
+  // ── 匿名帳號：先綁定再買，否則錢會花在拋棄式帳號上 ──
+  if (isAnon) {
+    const doBind = async (fn) => {
+      setBindBusy(true); setBindErr('')
+      const r = await fn()
+      if (r?.error) { setBindErr('連線失敗：' + r.error); setBindBusy(false) }
+      // 成功會跳轉外部登入頁，不需要更新 UI
+    }
+    return (
+      <Sheet onClose={onClose}>
+        <div className="p-6 text-center">
+          <div className="text-5xl mb-3">🔐</div>
+          <h2 className="text-xl font-bold text-medical-dark mb-2">購買前請先綁定帳號</h2>
+          <p className="text-gray-500 text-sm leading-relaxed mb-5">
+            你目前是訪客身分。訪客帳號在重新安裝 App 或換裝置後會重新產生，
+            <span className="font-bold text-gray-700">買到的金幣會跟著消失</span>。
+            綁定後金幣才會永久保存、跨裝置同步。
+          </p>
+          <div className="space-y-2">
+            <button onClick={() => doBind(linkOrSignInGoogle)} disabled={bindBusy}
+              className="w-full py-3 rounded-xl bg-white border-2 border-gray-200 font-bold text-gray-700 active:scale-95 transition-transform disabled:opacity-50">
+              使用 Google 綁定
+            </button>
+            {IS_IOS && (
+              <button onClick={() => doBind(signInWithApple)} disabled={bindBusy}
+                className="w-full py-3 rounded-xl bg-black text-white font-bold active:scale-95 transition-transform disabled:opacity-50">
+                 使用 Apple 綁定
+              </button>
+            )}
+          </div>
+          {bindErr && <p className="text-red-500 text-xs mt-3">{bindErr}</p>}
+          <p className="text-gray-400 text-xs mt-4">綁定完成後回到金幣商店即可購買</p>
+        </div>
+      </Sheet>
+    )
+  }
+
   // ── App 版：IAP 幣店（RevenueCat；金幣由 webhook 入帳，前端輪詢餘額）──
   if (IS_NATIVE) {
     const onBuy = async (item) => {
-      const { user_id } = readAuthFromStorage()
+      const { user_id, is_anonymous } = readAuthFromStorage()
       if (!user_id) { setIapErr('請先登入帳號才能購買金幣'); setIapStep('error'); return }
+      if (is_anonymous) { setIsAnon(true); return }   // 保險：面板開著時才變成匿名
       setIapStep('processing'); setIapErr('')
       const before = usePlayerStore.getState().coins
       try {

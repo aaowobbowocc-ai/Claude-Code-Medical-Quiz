@@ -302,6 +302,9 @@ export async function switchGoogleAccount() {
 export function readAuthFromStorage() {
   let user_id = null
   let token = null
+  // 匿名帳號(signInAnonymously)也有 user_id，但那是拋棄式的：重裝或綁定 Google 後
+  // 就換成另一個 user_id，掛在上面的金幣會看不到。付費流程必須擋掉，所以這裡一併回傳。
+  let is_anonymous = null
   try {
     const raw = localStorage.getItem('medking-auth')
     if (raw) {
@@ -309,6 +312,7 @@ export function readAuthFromStorage() {
       const session = parsed?.currentSession || parsed
       user_id = session?.user?.id || null
       token = session?.access_token || null
+      if (typeof session?.user?.is_anonymous === 'boolean') is_anonymous = session.user.is_anonymous
     }
   } catch {}
   if (!user_id) {
@@ -317,14 +321,17 @@ export function readAuthFromStorage() {
       if (userRaw) {
         const parsed = JSON.parse(userRaw)
         user_id = parsed?.user?.id || parsed?.id || null
+        const u = parsed?.user || parsed
+        if (is_anonymous === null && typeof u?.is_anonymous === 'boolean') is_anonymous = u.is_anonymous
       }
     } catch {}
   }
-  // Last resort: decode JWT sub claim from token
-  if (!user_id && token) {
+  // Last resort: decode JWT sub claim from token（順便讀 is_anonymous claim）
+  if ((!user_id || is_anonymous === null) && token) {
     try {
       const payload = JSON.parse(atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')))
-      user_id = payload?.sub || null
+      if (!user_id) user_id = payload?.sub || null
+      if (is_anonymous === null && typeof payload?.is_anonymous === 'boolean') is_anonymous = payload.is_anonymous
     } catch {}
   }
   // Last-last resort: scan all localStorage keys for sb-*-auth-token (default key pattern)
@@ -341,12 +348,15 @@ export function readAuthFromStorage() {
           const s = p?.currentSession || p
           if (!user_id) user_id = s?.user?.id || p?.user?.id || null
           if (!token) token = s?.access_token || p?.access_token || null
+          const su = s?.user || p?.user
+          if (is_anonymous === null && typeof su?.is_anonymous === 'boolean') is_anonymous = su.is_anonymous
           if (user_id && token) break
         } catch {}
       }
     } catch {}
   }
-  return { user_id, token }
+  // 讀不到 is_anonymous 就當作「非匿名」，寧可放行也不要誤擋到真的付費使用者。
+  return { user_id, token, is_anonymous: is_anonymous === true }
 }
 
 /** Get current user's email + provider info, or null if anon. */

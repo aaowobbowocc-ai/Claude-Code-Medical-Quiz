@@ -40,6 +40,9 @@ workflows:
         VITE_FEATURE_AVATARS: "1"
         VITE_FEATURE_SPONSORS: "1"
         VITE_FEATURE_BADGES: "1"
+        # RevenueCat 公鑰（嵌進 App，非機密）— App 內購金幣用
+        VITE_RC_IOS_KEY: "appl_YMscgtNBdOEdQJxXRkjSNWRIofB"
+        VITE_RC_ANDROID_KEY: "goog_yTmzkvNTiXNXxRsDrvSlGYQtaes"
         # App Store Connect 數字 App ID（用來查/遞增 TestFlight build number）。
         APP_STORE_APP_ID: 6780595877
     cache:
@@ -198,6 +201,9 @@ workflows:
         VITE_FEATURE_AVATARS: "1"
         VITE_FEATURE_SPONSORS: "1"
         VITE_FEATURE_BADGES: "1"
+        # RevenueCat 公鑰（嵌進 App，非機密）— App 內購金幣用
+        VITE_RC_IOS_KEY: "appl_YMscgtNBdOEdQJxXRkjSNWRIofB"
+        VITE_RC_ANDROID_KEY: "goog_yTmzkvNTiXNXxRsDrvSlGYQtaes"
     cache:
       cache_paths:
         - $HOME/.npm

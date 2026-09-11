@@ -72825,10 +72825,10 @@
       "number": 3,
       "question": "對於非運動員的一般族群，人體儲存在肌肉及肝臟的肝醣共約多少克？",
       "options": {
-        "A": "200～400                              500",
-        "B": "～800                              900",
-        "C": "～1200                            1300",
-        "D": "～1600"
+        "A": "200～400",
+        "B": "500～800",
+        "C": "900～1200",
+        "D": "1300～1600"
       },
       "answer": "A",
       "explanation": ""
@@ -72845,14 +72845,13 @@
       "number": 4,
       "question": "下列有關膳食纖維的敘述，何者正確？",
       "options": {
-        "A": "50歲以上的需要量大於",
-        "B": "50歲以下",
-        "C": "歲以上的需要量大於50 歲以下",
-        "D": "女性需要量大於男性"
+        "A": "50歲以上的需要量大於50 歲以下",
+        "B": "女性需要量大於男性",
+        "C": "每日建議攝取量是14 g/1000 kcal",
+        "D": "所有膳食纖維都是碳水化合物"
       },
       "answer": "C",
-      "explanation": "",
-      "vision_uncertain": true
+      "explanation": ""
     },
     {
       "id": 2565,
@@ -72927,10 +72926,10 @@
       "number": 8,
       "question": "下列何種蛋白質在免疫系統中扮演重要角色？",
       "options": {
-        "A": "albumin                                beta",
-        "B": "-transferrin                      gamma",
-        "C": "-globin",
-        "D": "-transferrin"
+        "A": "albumin",
+        "B": "beta-transferrin",
+        "C": "gamma-globin",
+        "D": "myoglobin"
       },
       "answer": "C",
       "explanation": ""
@@ -72947,10 +72946,10 @@
       "number": 9,
       "question": "當飲食中缺乏醣類或當脂肪分解代謝增加時，可能會導致酮酸中毒。主要是因為下列何種物質的含量不 足，使TCA 循環無法順利進行，而導致酮體的產生？",
       "options": {
-        "A": "Acetyl-CoA                          Pyruvate",
-        "B": "Acetyl",
-        "C": "Oxaloacetate",
-        "D": "Acetoacetyl-CoA"
+        "A": "Acetyl",
+        "B": "-CoA",
+        "C": "Pyruvate",
+        "D": "Oxaloacetate"
       },
       "answer": "C",
       "explanation": ""
@@ -72987,9 +72986,9 @@
       "number": 11,
       "question": "ω-6 與ω-3 脂肪酸的比較，下列何者正確？",
       "options": {
-        "A": "-3 脂肪酸可以代謝成arachidonic acid，藉此促進發炎反應",
-        "B": "-6 脂肪酸可以代謝成docosahexaenoic acid，藉此促進發炎反應",
-        "C": "-6 與ω-3 脂肪酸的命名，是指從脂肪酸的羧基端（COOH）算起的第一個雙鍵的位置",
+        "A": "ω-3 脂肪酸可以代謝成arachidonic acid，藉此促進發炎反應",
+        "B": "ω-6 脂肪酸可以代謝成docosahexaenoic acid，藉此促進發炎反應",
+        "C": "ω-6 與ω-3 脂肪酸的命名，是指從脂肪酸的羧基端（COOH）算起的第一個雙鍵的位置",
         "D": "一般飲食中，ω-6 脂肪酸含量通常高於ω-3 脂肪酸"
       },
       "answer": "D",
@@ -73127,10 +73126,10 @@
       "number": 18,
       "question": "下列何種維生素不具vitamin antagonist？",
       "options": {
-        "A": "下列何種維生素不具",
-        "B": "vitamin antagonist？",
-        "C": "Pantothenic acid",
-        "D": "Folate                                    Pyridoxine"
+        "A": "Pantothenic acid",
+        "B": "Folate",
+        "C": "Pyridoxine",
+        "D": "Menaquinone"
       },
       "answer": "A",
       "explanation": ""
@@ -73167,10 +73166,10 @@
       "number": 20,
       "question": "人體中主要的活化維生素D 形式為：",
       "options": {
-        "A": "人體中主要的活化維生素",
-        "B": "calcitriol",
-        "C": "calcitriol                               ergocalciferol",
-        "D": "ergocalciferol"
+        "A": "calcitriol",
+        "B": "ergocalciferol",
+        "C": "cholecalciferol",
+        "D": "tocopherol"
       },
       "answer": "A",
       "explanation": ""
@@ -73267,10 +73266,10 @@
       "number": 25,
       "question": "下列何者是在腎臟中活化形成1,25(OH)2D3 的酵素？",
       "options": {
-        "A": "下列何者是在腎臟中活化形成",
-        "B": "1,25(OH)2D3的酵素？",
-        "C": "25-hydroxylase                     1",
-        "D": "α-hydroxylase                     25"
+        "A": "25-hydroxylase",
+        "B": "1α-hydroxylase",
+        "C": "25-dehydroxylase",
+        "D": "1α-dehydroxylase"
       },
       "answer": "B",
       "explanation": ""
@@ -73287,10 +73286,10 @@
       "number": 26,
       "question": "體重75 公斤的男性成年人，體內約含有多少公斤的水？",
       "options": {
-        "A": "60                                          45",
-        "B": "60",
-        "C": "30",
-        "D": "45"
+        "A": "60",
+        "B": "45",
+        "C": "35",
+        "D": "30"
       },
       "answer": "B",
       "explanation": ""
@@ -73387,10 +73386,10 @@
       "number": 31,
       "question": "下列基因突變相關的疾病與礦物質代謝異常的關聯，何者正確？",
       "options": {
-        "A": "Menkes disease 與 copper toxicity",
-        "B": "Hemochromatosis 與 iron deficiency",
-        "C": "Wilson disease 與 copper deficiency",
-        "D": "Acrodermatitis enteropathica 與 zinc deficiency"
+        "A": "Menkes disease",
+        "B": "與copper toxicity",
+        "C": "Hemochromatosis",
+        "D": "與iron deficiency"
       },
       "answer": "D",
       "explanation": ""
@@ -73447,10 +73446,10 @@
       "number": 34,
       "question": "攝取足夠營養的正常體重孕婦懷單胞胎時，其胎兒、胎盤及羊水總重應占孕期體重增加總量的多少百分 比？",
       "options": {
-        "A": "<50                                       50",
-        "B": "～59                                  60",
-        "C": "～69                                  >70",
-        "D": "50"
+        "A": "<50",
+        "B": "50～59",
+        "C": "60～69",
+        "D": ">70"
       },
       "answer": "A",
       "explanation": ""
@@ -73467,10 +73466,10 @@
       "number": 35,
       "question": "根據2010 年的「臺灣營養健康狀況變遷調查」，國中生肥胖盛行率約為多少？",
       "options": {
-        "A": "10%                                      15%",
-        "B": "10%",
-        "C": "25%",
-        "D": "15%"
+        "A": "10%",
+        "B": "15%",
+        "C": "20%",
+        "D": "25%"
       },
       "answer": "B",
       "explanation": ""
@@ -88765,9 +88764,9 @@
       "question": "口腔分泌的唾液中不含下列何種物質？ -",
       "options": {
         "A": "HCO3",
-        "B": "蛋白質（protein）澱粉酶（amylase）脂肪酸（fatty acid）",
-        "C": "-",
-        "D": "蛋白質（protein）"
+        "B": "蛋白質（protein）",
+        "C": "澱粉酶（amylase）",
+        "D": "脂肪酸（fatty acid）"
       },
       "answer": "D",
       "explanation": ""
@@ -88804,14 +88803,13 @@
       "number": 5,
       "question": "某人靜脈血漿的肌酸酐濃度為0.75 mg/ml，尿液之肌酸酐濃度為120 mg/ml，24 小時的總尿量為 720 ml，則此人之腎絲球濾過率（GFR）約為多少ml/min？",
       "options": {
-        "A": "某人靜脈血漿的肌酸酐濃度為",
-        "B": "0.75 mg/ml",
-        "C": "，尿液之肌酸酐濃度為",
-        "D": "120 mg/ml"
+        "A": "70",
+        "B": "80",
+        "C": "95",
+        "D": "125"
       },
       "answer": "B",
-      "explanation": "",
-      "vision_uncertain": true
+      "explanation": ""
     },
     {
       "id": 3465,
@@ -88945,10 +88943,10 @@
       "number": 12,
       "question": "下列何者不屬於纖維蛋白溶解系統（fibrinolytic system）？",
       "options": {
-        "A": "下列何者不屬於纖維蛋白溶解系統（",
-        "B": "fibrinolytic system）？",
-        "C": "Plasminogen",
-        "D": "Thrombin"
+        "A": "Plasminogen",
+        "B": "Thrombin",
+        "C": "Fibrin",
+        "D": "Plasmin"
       },
       "answer": "B",
       "explanation": ""
@@ -88985,10 +88983,10 @@
       "number": 14,
       "question": "輔助型T 細胞（helper T cell）需要與下列何者結合才能被活化，進而啟動後天性免疫反應 （adaptive immunity）？",
       "options": {
-        "A": "輔助型T細胞（",
-        "B": "helper  T  cell）需要與下列何者結合才能被活化，進而啟動後天性免疫反應",
-        "C": "（adaptive immunity",
-        "D": "干擾素"
+        "A": "CD8",
+        "B": "腎上腺素",
+        "C": "干擾素",
+        "D": "Major histocompatibility complex II"
       },
       "answer": "D",
       "explanation": ""
@@ -89065,10 +89063,10 @@
       "number": 18,
       "question": "某人接受肺功能測試，其潮氣容積（tidal volume）為450 ml/breath，呼吸頻率為14 breaths/min， 假設其解剖無效腔（anatomical dead space）為150 ml，則其每分鐘通氣量（minute ventilation） 及肺泡通氣量（alveolar ventilation）各為多少公升？",
       "options": {
-        "A": "某人接受肺功能測試，其潮氣容積（",
-        "B": "tidal volume",
-        "C": "）為450 ml/breath",
-        "D": "，呼吸頻率為"
+        "A": "8.4、6.3",
+        "B": "8.4、4.2",
+        "C": "6.3、8.4",
+        "D": "6.3、4.2"
       },
       "answer": "D",
       "explanation": ""
@@ -89145,10 +89143,10 @@
       "number": 22,
       "question": "2 分子丙酮酸經糖質新生作用生成1 分子葡萄糖，需消耗多少分子ATP？",
       "options": {
-        "A": "2分子丙酮酸經糖質新生作用生成",
-        "B": "1分子葡萄糖，需消耗多少分子",
-        "C": "ATP？",
-        "D": "3"
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6"
       },
       "answer": "D",
       "explanation": ""
@@ -89185,10 +89183,10 @@
       "number": 24,
       "question": "酵母菌進行無氧醣解作用（anaerobic glycolysis），此時丙酮酸會轉成下列何種化合物？",
       "options": {
-        "A": "酵母菌進行無氧醣解作用（",
-        "B": "anaerobic glycolysis），此時丙酮酸會轉成下列何種化合物？",
-        "C": "lactate",
-        "D": "ethanol"
+        "A": "lactate",
+        "B": "ethanol",
+        "C": "acetate",
+        "D": "acetyl-CoA"
       },
       "answer": "B",
       "explanation": ""
@@ -89205,10 +89203,10 @@
       "number": 25,
       "question": "細胞膜中主要的脂質成分有phospholipids, cholesterol 和下列何者？",
       "options": {
-        "A": "細胞膜中主要的脂質成分有",
-        "B": "phospholipids, cholesterol和下列何者？",
-        "C": "free fatty acids",
-        "D": "triacylglycerols"
+        "A": "free fatty acids",
+        "B": "triacylglycerols",
+        "C": "sphingolipids",
+        "D": "wax"
       },
       "answer": "C",
       "explanation": ""
@@ -89348,10 +89346,10 @@
       "number": 32,
       "question": "下列何種胺基酸沒有不對稱碳原子（asymmetric carbon atom）？",
       "options": {
-        "A": "下列何種胺基酸沒有不對稱碳原子（",
-        "B": "asymmetric carbon atom）？",
-        "C": "serine",
-        "D": "glycine"
+        "A": "serine",
+        "B": "glycine",
+        "C": "glutamine",
+        "D": "leucine"
       },
       "answer": "B",
       "explanation": ""
@@ -89489,10 +89487,10 @@
       "number": 39,
       "question": "異檸檬酸去氫酶（isocitrate dehydrogenase）催化產生β-keto group 中間產物，以進行去羧作用 （decarboxylation），需要下列那一個分子的輔助？",
       "options": {
-        "A": "異檸檬酸去氫酶（",
-        "B": "isocitrate  dehydrogenase",
-        "C": "）催化產生",
-        "D": "β-keto group"
+        "A": "thiamine pyrophosphate",
+        "B": "NAD+",
+        "C": "lipoic acid",
+        "D": "FAD"
       },
       "answer": "B",
       "explanation": ""

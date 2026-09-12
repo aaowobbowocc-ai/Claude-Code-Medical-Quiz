@@ -152568,10 +152568,10 @@
       "number": 25,
       "question": "臨床上，常給予子癎前症的患者硫酸鎂（MgSO4）來預防抽搐（seizure attack）。此時血液中最適當的鎂離子治療濃度為多少meq/L？",
       "options": {
-        "A": "～3.9 meq/L",
-        "B": "2",
-        "C": "～7 meq/L",
-        "D": "4"
+        "A": "2～3.9 meq/L",
+        "B": "4～7 meq/L",
+        "C": "7.1～10 meq/L",
+        "D": "大於10 meq/L"
       },
       "answer": "B",
       "explanation": ""
@@ -153035,8 +153035,8 @@
       "options": {
         "A": "抗膽鹼藥物（anticholinergic medications）",
         "B": "行為治療（behavioral modification）",
-        "C": "-agonist medications",
-        "D": "α"
+        "C": "α-agonist medications",
+        "D": "經陰道電刺激法（electric stimulation）"
       },
       "answer": "A,B",
       "explanation": "",
@@ -159893,13 +159893,12 @@
       "question": "對持續性妊娠滋養層細胞腫瘤（persistent gestational trophoblastic tumor）在選擇化學治療時所採用的WHO prognostic scoring system，所謂高度危險是指score：",
       "options": {
         "A": "＜ 2",
-        "B": "～4",
-        "C": "2",
-        "D": "～7"
+        "B": "2～4",
+        "C": "5～7",
+        "D": "≧8"
       },
       "answer": "D",
       "explanation": "",
-      "vision_uncertain": false,
       "disputed": true
     },
     {
@@ -195713,8 +195712,8 @@
       "question": "有關產前胎兒健康評估的生物生理計分法(biophysical profile)之敘述,下列何者錯誤?",
       "options": {
         "A": "胎兒生物物理指標最高分為12 分",
-        "B": "胎兒生物物理指標若為0 分,代表有意義的胎兒酸血症(fetal acidosis)",
-        "C": "若分數從原本的2 或4 分變成0 分,表示可更準確的預測不正常的結果",
+        "B": "胎兒生物物理指標若為0 分，代表有意義的胎兒酸血症（fetal acidosis）",
+        "C": "若分數從原本的2 或4 分變成0 分，表示可更準確的預測不正常的結果",
         "D": "分數10 分不一定表示胎兒血液pH 值正常"
       },
       "answer": "A",

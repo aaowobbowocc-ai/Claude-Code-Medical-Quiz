@@ -101,8 +101,13 @@ for (const p of targets) {
   const file = `questions-${p.exam}.json`;
   const j = JSON.parse(fs.readFileSync(path.join(DIR, file), 'utf8'));
   const arr = Array.isArray(j) ? j : j.questions;
-  const sample = arr.find(q => String(q.exam_code) === p.code && q.subject === p.subject);
-  if (!sample) { noMatch++; continue; }
+  // 同一卷可能有兩個 subject_tag（聽力/語言治療的 p/s 雙 id 互補），
+  // 只取第一個會讓另一半的題永遠沒被處理。
+  const tags = [...new Set(arr
+    .filter(q => String(q.exam_code) === p.code && q.subject === p.subject)
+    .map(q => q.subject_tag))];
+  if (!tags.length) { noMatch++; continue; }
+  const sample = { subject_tag: tags[0] };
 
   const codes = probeCodes(p.code, p.year, cache);
   if (!codes.length) { noCode++; continue; }
@@ -131,18 +136,19 @@ for (const p of targets) {
 
   let best = null;
   for (const cand of tryList) {
-    const r = runFixer(file, p.code, cand.c, cand.s, sample.subject_tag, false);
-    if (!best || r.rebuilt > best.r.rebuilt) best = { cand, r };
-    if (r.rebuilt > 0) break;   // 對到就好，不用試完
+    let n = 0;
+    for (const tag of tags) n += runFixer(file, p.code, cand.c, cand.s, tag, false).rebuilt;
+    if (!best || n > best.n) best = { cand, n };
+    if (n > 0) break;   // 對到就好，不用試完
   }
-  if (!best || best.r.rebuilt === 0) {
+  if (!best || best.n === 0) {
     console.log(`· ${p.exam} ${p.code} ${p.subject}：無可重建（疑似誤判 ${p.n} 題）`);
     continue;
   }
 
-  console.log(`✔ ${p.exam} ${p.code} ${p.subject}  c=${best.cand.c} s=${best.cand.s}  重建 ${best.r.rebuilt} 題`);
-  if (APPLY) runFixer(file, p.code, best.cand.c, best.cand.s, sample.subject_tag, true);
-  totalFixed += best.r.rebuilt;
+  console.log(`✔ ${p.exam} ${p.code} ${p.subject}  c=${best.cand.c} s=${best.cand.s}  重建 ${best.n} 題${tags.length > 1 ? `（${tags.length} 個 tag）` : ''}`);
+  if (APPLY) for (const tag of tags) runFixer(file, p.code, best.cand.c, best.cand.s, tag, true);
+  totalFixed += best.n;
 }
 
 console.log(`\n總計重建 ${totalFixed} 題`);

@@ -169,12 +169,23 @@ function cellsFromLines(lines) {
     // 重建後仍以接續符號開頭 ＝ 還是碎片，整題放棄（寧可不修也不要寫進爛資料）
     if (cells.some(t => /^[，,〜~～、。）)]/.test(t.trim()))) { skipped++; continue; }
 
-    // 只改「掃描器判定為破損」的題。否則像英文克漏字那種題號內嵌在文章裡的版型，
-    // 區塊切分會錯位，把別題的選項整組搬過來（2026-09-12 抽驗抓到關務英文
-    // 「Cure/Diet/Evidence」被換成「but/still/yet」），而那些題原本根本沒壞。
-    if (!diagnose(q)) { skipped++; continue; }
-
     const now = ['A', 'B', 'C', 'D'].map(k => String((q.options || {})[k] || ''));
+
+    // 沒被掃描器判定破損的題，只允許「安全清理」：重建結果必須是原文的
+    // 標點等價或前綴（例：移除黏在選項尾巴的「代號：1109頁次：6－3」）。
+    // 內容被整組換掉一律擋下——英文克漏字那種題號內嵌在文章裡的版型，區塊切分
+    // 會錯位，把別題的選項搬過來（2026-09-12 抓到關務英文「Cure/Diet/Evidence」
+    // 被換成「but/still/yet」，而那些題原本根本沒壞）。
+    if (!diagnose(q)) {
+      const skel = (t) => String(t).normalize('NFC')
+        .replace(/[　\s]/g, '')
+        .replace(/[（）()［］\[\]【】、，,。．.：:；;？?！!"'`~～－\-—–_]/g, '');
+      const safe = cells.every((t, i) => {
+        const a = skel(now[i]), b = skel(t);
+        return a === b || (b.length > 0 && a.startsWith(b));
+      });
+      if (!safe) { skipped++; continue; }
+    }
 
     // 複選組合題（選項是「①②③」這種圈號序列）版型最脆弱：圈號在部分卷裡是 PUA 造字，
     // 位置也常被拆到別的格子，重建容易「少吃掉幾個圈號」而使答案語意整個改變。

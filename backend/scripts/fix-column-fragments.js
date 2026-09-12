@@ -23,6 +23,8 @@ const fs = require('fs');
 const path = require('path');
 const { fetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher');
 
+const { diagnose } = require('./scan-broken-options.js');
+
 const [file, code, c, s, tag] = process.argv.slice(2);
 const APPLY = process.argv.includes('--apply');
 if (!file || !code || !c || !s || !tag) {
@@ -108,7 +110,9 @@ function cellsFromLines(lines) {
     // 只剝掉「開頭那一個」選項標記造字。不能貪婪剝除，也不能剝結尾——
     // 有些卷的圈號數字（①②③…）本身就是 PUA 造字，貪婪剝除會把選項內容吃掉
     // （2026-09-12 抽驗抓到：「①④⑤」被改成「④⑤」）。
-    .map(c => c.t.replace(/^[-�]?\s*/, '').trim())
+    // PDF 夾帶 CJK 相容表意文字（U+F900-U+FAFF，字形同但碼位不同，會讓搜尋失效）
+    // → 統一正規化成 NFC。不用 NFKC，以免全形標點被改掉、失去原卷排版。
+    .map(c => c.t.normalize('NFC').replace(/^[-�]?\s*/, '').trim())
     // 希臘字母（ω-3、α-hydroxylase…）常被 PDF 當成另一個 run 畫在行尾，
     // 依 x 排序就被接到字尾。特徵是「開頭是連字號、結尾是孤立希臘字母」→ 搬回開頭。
     // 首字元（數字或希臘字母）常被 PDF 另外畫在行尾，依 x 排序就被接到字尾。
@@ -164,6 +168,11 @@ function cellsFromLines(lines) {
     if (cells.some(t => norm(t).length < 1)) { skipped++; continue; }
     // 重建後仍以接續符號開頭 ＝ 還是碎片，整題放棄（寧可不修也不要寫進爛資料）
     if (cells.some(t => /^[，,〜~～、。）)]/.test(t.trim()))) { skipped++; continue; }
+
+    // 只改「掃描器判定為破損」的題。否則像英文克漏字那種題號內嵌在文章裡的版型，
+    // 區塊切分會錯位，把別題的選項整組搬過來（2026-09-12 抽驗抓到關務英文
+    // 「Cure/Diet/Evidence」被換成「but/still/yet」），而那些題原本根本沒壞。
+    if (!diagnose(q)) { skipped++; continue; }
 
     const now = ['A', 'B', 'C', 'D'].map(k => String((q.options || {})[k] || ''));
 

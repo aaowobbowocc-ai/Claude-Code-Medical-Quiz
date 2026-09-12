@@ -40,11 +40,18 @@ function diagnose(q) {
   if (opts.some(o => fragHead(o.trim()))) return 'frag-head';
   if (opts.some(o => fragTail(o.trim()))) return 'frag-tail';
 
+  // 複選組合題的選項本來就長成「123」「僅23」「①③④」，不是碎片，要先排除
+  const combo = (o) => /^[僅只有以上下列\d①-⑳、,，和與及]+$/.test(norm(o));
+  if (opts.every(combo)) return null;
+
   const tiny = opts.filter(o => norm(o).length <= 4);
   if (tiny.length >= 2 && tiny.some(o => /^[\d.]+$/.test(norm(o))) &&
       tiny.some(o => !/^[\d.]+$/.test(norm(o)))) return 'tiny-pair';
   return null;
 }
+
+module.exports = { diagnose };
+if (require.main !== module) return;
 
 const args = process.argv.slice(2);
 

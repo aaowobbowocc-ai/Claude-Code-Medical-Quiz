@@ -85,6 +85,8 @@ for (const line of scan.split('\n')) {
   const [, n, exam, code, year, session, subject, why] = m;
   if (SKIP_EXAMS.has(exam)) continue;
   if (/no-stem/.test(why)) continue;          // 題幹遺失，這支修不了
+  // 英文卷多半是克漏字/閱讀測驗：題號內嵌在文章裡，區塊切分不可靠 → 整卷跳過
+  if (/英文|English/.test(subject)) continue;
   if (onlyExam && exam !== onlyExam) continue;
   papers.push({ n: +n, exam, code, year, session, subject: subject.trim(), why });
 }
@@ -105,15 +107,30 @@ for (const p of targets) {
   const codes = probeCodes(p.code, p.year, cache);
   if (!codes.length) { noCode++; continue; }
 
-  // 科目名對得起來的候選（同名可能跨多個類科，逐一試，靠題幹比對自然淘汰）
-  const cands = codes.filter(x => x.subject === p.subject || x.subject.startsWith(p.subject));
-  if (!cands.length) {
-    console.log(`⨯ ${p.exam} ${p.code} ${p.subject}：反查不到同名科目`);
-    noMatch++; continue;
+  // 科目名對得起來的候選（同名可能跨多個類科，逐一試，靠題幹比對自然淘汰）。
+  // 比對前要正規化：我們的科目名與考選部常差在全形/半形括號、空白、頓號，
+  // 例如「臨床心理學特論(一)」vs「臨床心理學特論（一）（包括…）」直接比會對不上。
+  const key = (t) => String(t).replace(/[（）()【】\[\]、，,。．.\s]/g, '');
+  const pk = key(p.subject);
+  const cands = codes.filter(x => {
+    const xk = key(x.subject);
+    return xk === pk || xk.startsWith(pk) || pk.startsWith(xk);
+  });
+  // 名稱完全對不上時（例如 dental2 存成「卷一~卷四」、考選部叫「牙醫學(三)~(六)」），
+  // 不要硬猜對照表——直接把該場次所有科目都當候選試一遍。
+  // fix-column-fragments 會用題幹前綴比對，對不上的卷會整卷跳過，不會改錯。
+  let tryList = cands;
+  if (!tryList.length) {
+    if (!args.includes('--brute')) {
+      console.log(`⨯ ${p.exam} ${p.code} ${p.subject}：科目名對不上（加 --brute 可全試，但很慢）`);
+      noMatch++; continue;
+    }
+    tryList = codes.slice(0, 40);
+    console.log(`? ${p.exam} ${p.code} ${p.subject}：科目名對不上，改試全部 ${tryList.length} 個候選`);
   }
 
   let best = null;
-  for (const cand of cands) {
+  for (const cand of tryList) {
     const r = runFixer(file, p.code, cand.c, cand.s, sample.subject_tag, false);
     if (!best || r.rebuilt > best.r.rebuilt) best = { cand, r };
     if (r.rebuilt > 0) break;   // 對到就好，不用試完

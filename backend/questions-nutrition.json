@@ -51087,9 +51087,9 @@
       "question": "肝臟可以利用 amino acid oxidase 將 amino acids 轉變成對應的 keto acid,該酵素反應亦會產生下列何種產物?",
       "options": {
         "A": "ATP",
-        "B": "H",
-        "C": "2O2 \nO",
-        "D": "2 \nNADH"
+        "B": "H2O2",
+        "C": "O2",
+        "D": "NADH"
       },
       "answer": "B",
       "explanation": ""
@@ -51107,9 +51107,9 @@
       "question": "在 pH=13 的鹼性溶液中, glycine 的主要型式為下列何者?",
       "options": {
         "A": "NH2-CH2-COOH",
-        "B": "NH",
-        "C": "2-CH2-COOH",
-        "D": "NH3⁺-CH2-COO⁻"
+        "B": "NH2-CH2-COO-",
+        "C": "NH3+-CH2-COOH",
+        "D": "NH3+-CH2-COO-"
       },
       "answer": "B",
       "explanation": ""
@@ -51187,9 +51187,9 @@
       "question": "下列何種 RNA 分子會出現於剪接體 (spliceosome) ?",
       "options": {
         "A": "snRNA",
-        "B": "tRNA rRNA",
-        "C": "triple",
-        "D": "-stranded RNA"
+        "B": "tRNA",
+        "C": "rRNA",
+        "D": "triple-stranded RNA"
       },
       "answer": "A",
       "explanation": ""
@@ -51267,8 +51267,8 @@
       "question": "下列何者是電子於粒線體電子傳遞系統的正確流程？",
       "options": {
         "A": "NADH→FAD→FeS center→FMN→FeS center",
-        "B": "NAD",
-        "C": "H→FAD→FeS center→FMN→FeS center",
+        "B": "FAD→FeS center→CoQ→Cyt a→Cyt c",
+        "C": "FMN→NADH→FeS center→CoQ→FeS center",
         "D": "FAD→FeS center→CoQ→Cyt b→Cyt c"
       },
       "answer": "D",
@@ -51309,7 +51309,7 @@
         "A": "蘋果酸去氫酶（malate dehydrogenase）",
         "B": "檸檬酸合成酶（citrate synthase）",
         "C": "異檸檬酸去氫酶（isocitrate dehydrogenase）",
-        "D": "-酮戊二酸去氫酶（α-ketoglutarate dehydrogenase）"
+        "D": "α-酮戊二酸去氫酶（α-ketoglutarate dehydrogenase）"
       },
       "answer": "A",
       "explanation": ""
@@ -70145,10 +70145,10 @@
       "number": 22,
       "question": "下列何者不是酵母菌利用葡萄糖進行酒精發酵作用（alcoholic fermentation）之產物？",
       "options": {
-        "A": "下列何者不是酵母菌利用葡萄糖進行酒精發酵作用（",
-        "B": "alcoholic fermentation）之產物？",
-        "C": "+",
-        "D": "alcohol                                  CO"
+        "A": "alcohol",
+        "B": "CO2",
+        "C": "lactic acid",
+        "D": "NAD+"
       },
       "answer": "C",
       "explanation": ""
@@ -70225,10 +70225,10 @@
       "number": 26,
       "question": "受胰島素調控之葡萄糖運送蛋白中，位於脂肪細胞或肌肉細胞的是：",
       "options": {
-        "A": "GLUT 1                                GLUT                                2",
-        "B": "GLUT                                 3",
-        "C": "GLUT                                4",
-        "D": "GLUT 2"
+        "A": "GLUT 1",
+        "B": "GLUT 2",
+        "C": "GLUT 3",
+        "D": "GLUT 4"
       },
       "answer": "D",
       "explanation": ""
@@ -79135,9 +79135,9 @@
       "number": 1,
       "question": "下列何者可以透過肝臟的葡萄糖新生作用(gluconeogenesis)轉化成葡萄糖?",
       "options": {
-        "A": "脂肪酸(fatty acid)",
-        "B": "肝醣(glucagon)",
-        "C": "甘油(glycerol)",
+        "A": "脂肪酸（fatty acid）",
+        "B": "肝醣（glucagon）",
+        "C": "甘油（glycerol）",
         "D": "ATP"
       },
       "answer": "C",
@@ -79176,10 +79176,10 @@
       "number": 3,
       "question": "胃分泌氫離子要靠下列何種運輸蛋白？",
       "options": {
-        "A": "H + / K+- ATPase Na",
-        "B": "+ / K+- ATPase Na",
-        "C": "+ / Cl- - ATPase",
-        "D": "H + / Cl- - ATPase"
+        "A": "H+ / K+- ATPase",
+        "B": "Na+ / K+- ATPase",
+        "C": "Na+ / Cl- - ATPase",
+        "D": "H+ / Cl- - ATPase"
       },
       "answer": "A",
       "explanation": ""
@@ -79397,9 +79397,9 @@
       "question": "免疫系統中何種細胞會攻擊並清除被病毒感染的細胞？",
       "options": {
         "A": "輔助型T 細胞（helper T lymphocyte）",
-        "B": "） B淋巴球（B lymphocyte",
-        "C": "B",
-        "D": "淋巴球（B lymphocyte）"
+        "B": "B淋巴球（B lymphocyte）",
+        "C": "漿細胞（plasma cell）",
+        "D": "殺手型淋巴球（cytotoxic lymphocyte）"
       },
       "answer": "D",
       "explanation": ""
@@ -79576,10 +79576,10 @@
       "number": 23,
       "question": "下列何者為糖解（glycolysis）與糖質新生（gluconeogenesis）可共用之酵素？",
       "options": {
-        "A": "下列何者為糖解（",
-        "B": "glycolysis）與糖質新生（",
-        "C": "gluconeogenesis",
-        "D": "phosphohexose isomerase"
+        "A": "hexokinase",
+        "B": "phosphohexose isomerase",
+        "C": "phosphofructokinase",
+        "D": "pyruvate kinase"
       },
       "answer": "B",
       "explanation": ""
@@ -79596,10 +79596,10 @@
       "number": 24,
       "question": "Pyruvate carboxylase 可催化糖質新生作用（gluconeogenesis）之起始反應，此酵素需下列何種化 合物作為輔酶？",
       "options": {
-        "A": "Pyruvate  carboxylase",
-        "B": "thiamine pyrophosphate",
-        "C": "gluconeogenesis",
-        "D": "pyridoxal phosphate"
+        "A": "thiamine pyrophosphate",
+        "B": "pyridoxal phosphate",
+        "C": "flavin adenine dinucleotide",
+        "D": "biotin"
       },
       "answer": "D",
       "explanation": ""
@@ -79656,10 +79656,10 @@
       "number": 27,
       "question": "磷脂質合成過程常需要下列何者作為雙酸甘油酯（diacylglycerol）之活化載體？",
       "options": {
-        "A": "磷脂質合成過程常需要下列何者作為雙酸甘油酯（",
-        "B": "diacylglycerol）之活化載體？",
-        "C": "ATP                                  UTP",
-        "D": "UTP"
+        "A": "ATP",
+        "B": "UTP",
+        "C": "CTP",
+        "D": "TTP"
       },
       "answer": "C",
       "explanation": ""
@@ -79716,10 +79716,10 @@
       "number": 30,
       "question": "下列胺基酸何者不具有芳香族側鏈（aromatic side-chain）？",
       "options": {
-        "A": "下列胺基酸何者不具有芳香族側鏈（",
-        "B": "aromatic side-chain）？",
-        "C": "proline                              tryptophan",
-        "D": "tryptophan"
+        "A": "proline",
+        "B": "tryptophan",
+        "C": "tyrosine",
+        "D": "phenylalanine"
       },
       "answer": "A",
       "explanation": ""
@@ -79736,10 +79736,10 @@
       "number": 31,
       "question": "下列化合物中，何者會抑制哺乳類glutamate dehydrogenase 之活性？",
       "options": {
-        "A": "下列化合物中，何者會抑制哺乳類",
-        "B": "glutamate dehydrogenase之活性？",
-        "C": "GTP",
-        "D": "pyridoxal                              phosphate"
+        "A": "GTP",
+        "B": "pyridoxal phosphate",
+        "C": "ADP",
+        "D": "NAD+"
       },
       "answer": "A",
       "explanation": ""
@@ -79757,9 +79757,9 @@
       "question": "進行胺基酸序列分析蛋白質一級構造時，使用carboxypeptidase 可以確認蛋白質之下列何種特性？",
       "options": {
         "A": "肽鍵數目",
-        "B": "-端胺基酸",
-        "C": "N",
-        "D": "胺基酸的種類與數量"
+        "B": "-端胺基酸N",
+        "C": "胺基酸的種類與數量",
+        "D": "-端胺基酸C"
       },
       "answer": "D",
       "explanation": ""
@@ -82476,10 +82476,10 @@
       "number": 9,
       "question": "根據2015 年美國最新的飲食指南，建議飽和脂肪酸及精緻糖之攝取量分別占每日飲食總熱量之 多少百分比？",
       "options": {
-        "A": "<5%，<5%                       <10%",
-        "B": "，<5%                     <10%",
-        "C": "，<10%                   <15%",
-        "D": "，<10%"
+        "A": "<5%，<5%",
+        "B": "<10%，<5%",
+        "C": "<10%，<10%",
+        "D": "<15%，<10%"
       },
       "answer": "C",
       "explanation": ""
@@ -82576,10 +82576,10 @@
       "number": 14,
       "question": "臺灣成年人的身體質量指數（BMI）在下列那一個區間，其死亡率相對最低？",
       "options": {
-        "A": "臺灣成年人的身體質量指數（",
-        "B": "BMI）在下列那一個區間，其死亡率相對最低？",
-        "C": "<18.5                                18.5",
-        "D": "至<25                        25"
+        "A": "<18.5",
+        "B": "18.5至<25",
+        "C": "25至<30",
+        "D": "30至<35"
       },
       "answer": "B",
       "explanation": ""
@@ -82736,10 +82736,10 @@
       "number": 22,
       "question": "下列何者的血漿濃度可用於評估體內維生素D 的營養狀態？",
       "options": {
-        "A": "下列何者的血漿濃度可用於評估體內維生素",
-        "B": "D的營養狀態？",
-        "C": "1-OH D3",
-        "D": "25-OH D3"
+        "A": "1-OH D3",
+        "B": "25-OH D3",
+        "C": "1,25(OH)2D3",
+        "D": "7-OH D3"
       },
       "answer": "B",
       "explanation": ""
@@ -82977,10 +82977,10 @@
       "number": 34,
       "question": "根據我國第七版「國人膳食營養素參考攝取量」，哺乳期的婦女較一般同年齡婦女，應增加下列 何種礦物質的攝取？",
       "options": {
-        "A": "Ca F",
-        "B": "Ca",
-        "C": "Zn",
-        "D": "F"
+        "A": "Ca",
+        "B": "F",
+        "C": "Mg",
+        "D": "Zn"
       },
       "answer": "D",
       "explanation": ""
@@ -90409,10 +90409,10 @@
       "number": 5,
       "question": "1 份學童午餐熱量630 大卡，醣類提供55～60%熱量，菜單提供蔬菜1.5 份、水果1 份、肉類2 份、油脂2.5 份之外，全穀根莖類食物應該提供幾份？",
       "options": {
-        "A": "1份學童午餐熱量",
-        "B": "630大卡，醣類提供",
-        "C": "55～60%熱量，菜單提供蔬菜",
-        "D": "1.5份、水果1份、肉類2份、"
+        "A": "2.5～3 份",
+        "B": "3.2～3.5 份",
+        "C": "4.3～4.8 份",
+        "D": "6～6.5 份"
       },
       "answer": "C",
       "explanation": ""
@@ -90449,10 +90449,10 @@
       "number": 7,
       "question": "欲供應400 人份、每份90 公克的菠菜，其生廢棄率為10%，收縮率為30%，至少需採購多少 公斤？",
       "options": {
-        "A": "欲供應400人份、每份",
-        "B": "90公克的菠菜，其生廢棄率為",
-        "C": "10%，收縮率為",
-        "D": "30%，至少需採購多少"
+        "A": "52",
+        "B": "56",
+        "C": "58",
+        "D": "60"
       },
       "answer": "C",
       "explanation": ""
@@ -90469,10 +90469,10 @@
       "number": 8,
       "question": "油菜生廢棄率為10%，每公斤30 元，1 人份生品可食量90 公克，則供應1,000 人份炒油菜，油菜的食材成本為多少？",
       "options": {
-        "A": "2 ,700 元 2",
-        "B": ",970 元 3",
-        "C": ",000 元",
-        "D": "3 ,300 元"
+        "A": "2,700 元",
+        "B": "2,970 元",
+        "C": "3,000 元",
+        "D": "3,300 元"
       },
       "answer": "C",
       "explanation": ""
@@ -90689,10 +90689,10 @@
       "number": 19,
       "question": "5S 品質管理運動，把需要的物品以定位與定量的方式擺放並標示的方法稱為：",
       "options": {
-        "A": "整理 (Seiri)",
-        "B": "整頓 (Sieton)",
-        "C": "清掃 (Seiso)",
-        "D": "紀律 (Shitsuke)"
+        "A": "整理（Seiri）",
+        "B": "整頓（Sieton）",
+        "C": "清掃（Seiso）",
+        "D": "紀律（Shitsuke）"
       },
       "answer": "B",
       "explanation": ""
@@ -90750,7 +90750,7 @@
       "number": 22,
       "question": "發芽的馬鈴薯芽眼含有那一種天然毒素，攝食後易致頭暈、腹痛？",
       "options": {
-        "A": "含氰配醣體",
+        "A": "含氰配糖體",
         "B": "秋水仙素",
         "C": "硫酸銅",
         "D": "茄靈"
@@ -90892,9 +90892,9 @@
       "question": "下列何者屬於食物危險溫度帶？",
       "options": {
         "A": "＜5℃",
-        "B": "～65℃",
-        "C": "5",
-        "D": "＞65℃"
+        "B": "5～65℃",
+        "C": "＞65℃",
+        "D": "－18℃"
       },
       "answer": "B",
       "explanation": ""
@@ -90991,10 +90991,10 @@
       "number": 34,
       "question": "某工廠需設置廚房，預估廚房從業人員有10 人，設備及機器等排列面積需100 平方公尺，則需 預留廚房面積約多少平方公尺？",
       "options": {
-        "A": "某工廠需設置廚房，預估廚房從業人員有",
-        "B": "10人，設備及機器等排列面積需",
-        "C": "100平方公尺，則需",
-        "D": "預留廚房面積約多少平方公尺？"
+        "A": "120",
+        "B": "150",
+        "C": "180",
+        "D": "210"
       },
       "answer": "A",
       "explanation": ""
@@ -91071,10 +91071,10 @@
       "number": 38,
       "question": "某餐廳3 月份用餐為3,200 人次，平均每人消費300 元；固定成本為248,600 元，變動成本為 480,000 元，則其損益平衡點顧客人數約為多少人？",
       "options": {
-        "A": "某餐廳3月份用餐為",
-        "B": "3,200人次，平均每人消費",
-        "C": "300元；固定成本為",
-        "D": "248,600元，變動成本為"
+        "A": "772人",
+        "B": "1,544 人",
+        "C": "1,658 人",
+        "D": "2,429 人"
       },
       "answer": "C",
       "explanation": ""
@@ -91934,10 +91934,10 @@
       "number": 1,
       "question": "組成乳糖的兩個單糖是下列何種醣化鍵（glycosidic bond）結合？",
       "options": {
-        "A": "組成乳糖的兩個單糖是下列何種醣化鍵（",
-        "B": "glycosidic bond）結合？",
-        "C": "α 1-4 glycosidic bond",
-        "D": "β 1-4 glycosidic bond"
+        "A": "α 1-4 glycosidic bond",
+        "B": "β 1-4 glycosidic bond",
+        "C": "γ 1-4 glycosidic bond",
+        "D": "1-4 glycosidic bondδ"
       },
       "answer": "B",
       "explanation": ""
@@ -91994,10 +91994,10 @@
       "number": 4,
       "question": "纖維素（cellulose）是以何種型式的醣化鍵（glycosidic bond）聚合而成的多醣？",
       "options": {
-        "A": "纖維素（cellulose）是以何種型式的醣化鍵（",
-        "B": "glycosidic bond",
-        "C": "-4 glycosidic bond",
-        "D": "α 1-4 glycosidic bond"
+        "A": "α 1-4 glycosidic bond",
+        "B": "β 1-4 glycosidic bond",
+        "C": "α 1-6 glycosidic bond",
+        "D": "β 1-6 glycosidic bond"
       },
       "answer": "B",
       "explanation": ""
@@ -92335,10 +92335,10 @@
       "number": 21,
       "question": "在禁食時，下列何種酵素的主要功能為分解（cleave）脂肪組織的三酸甘油酯，而進一步釋放游 離脂肪酸至血液中？",
       "options": {
-        "A": "在禁食時，下列何種酵素的主要功能為分解（",
-        "B": "cleave）脂肪組織的三酸甘油酯，而進一步釋放游",
-        "C": "spholipase C",
-        "D": "phospholipase C"
+        "A": "phospholipase C",
+        "B": "hormone sensitive lipase",
+        "C": "lipoprotein lipase",
+        "D": "co lipase"
       },
       "answer": "B",
       "explanation": ""
@@ -92595,10 +92595,10 @@
       "number": 34,
       "question": "腦部發育到幾歲時約已完成90%？",
       "options": {
-        "A": "1",
-        "B": "歲\n3",
-        "C": "歲\n5",
-        "D": "歲\n7"
+        "A": "歲1",
+        "B": "歲3",
+        "C": "歲5",
+        "D": "歲7"
       },
       "answer": "C",
       "explanation": ""
@@ -92715,10 +92715,10 @@
       "number": 40,
       "question": "具化學性傷害保肝功效的樟芝，主要有效成分為：",
       "options": {
-        "A": "-聚葡萄糖（β-glucan）",
-        "B": "β",
-        "C": "-生育醇（α-tocophenol）",
-        "D": "α"
+        "A": "β-聚葡萄糖（β-glucan）",
+        "B": "α-生育醇（α-tocophenol）",
+        "C": "三萜類（terpenoids）",
+        "D": "木酚素（lignans）"
       },
       "answer": "C",
       "explanation": ""

@@ -70,6 +70,15 @@ async function readLines(buf) {
   return out;
 }
 
+/** PDF 偶爾把同一段文字畫兩次，接起來會變成「整頓頓（Sieton）」→ 去掉重疊的部分 */
+function dropOverlap(prev, next) {
+  const max = Math.min(6, prev.length, next.length);
+  for (let k = max; k > 0; k--) {
+    if (prev.slice(-k) === next.slice(0, k)) return next.slice(k);
+  }
+  return next;
+}
+
 /** 把選項行依 (列, 欄) 收成格子，同格碎片黏起來，回傳依閱讀順序排好的字串陣列 */
 function cellsFromLines(lines) {
   // 分列
@@ -87,7 +96,7 @@ function cellsFromLines(lines) {
     row.items.sort((a, b) => a.x - b.x);
     let cur = null;
     for (const it of row.items) {
-      if (cur && it.x - cur.startX <= GAP) { cur.t += it.t; }
+      if (cur && it.x - cur.startX <= GAP) { cur.t += dropOverlap(cur.t, it.t); }
       else { cur = { x: it.x, startX: it.x, t: it.t, row: ri }; cells.push(cur); }
     }
   });
@@ -96,10 +105,15 @@ function cellsFromLines(lines) {
   // 選項標記（Ⓐ Ⓑ…）在 PDF 裡是 PUA 造字，trim() 清不掉，會變成選項開頭的豆腐字。
   // 注意只剝「開頭」，因為 ①②③④ 在選項內容裡是合法字元（複選題常用）。
   return cells
-    .map(c => c.t.replace(/^[-�\s]+/, '').replace(/[-�\s]+$/, '').trim())
+    // 只剝掉「開頭那一個」選項標記造字。不能貪婪剝除，也不能剝結尾——
+    // 有些卷的圈號數字（①②③…）本身就是 PUA 造字，貪婪剝除會把選項內容吃掉
+    // （2026-09-12 抽驗抓到：「①④⑤」被改成「④⑤」）。
+    .map(c => c.t.replace(/^[-�]?\s*/, '').trim())
     // 希臘字母（ω-3、α-hydroxylase…）常被 PDF 當成另一個 run 畫在行尾，
     // 依 x 排序就被接到字尾。特徵是「開頭是連字號、結尾是孤立希臘字母」→ 搬回開頭。
-    .map(t => t.replace(/^([-－].*?)([α-ωΑ-Ω])$/u, '$2$1'))
+    // 首字元（數字或希臘字母）常被 PDF 另外畫在行尾，依 x 排序就被接到字尾。
+    // 特徵是「開頭是接續符號、結尾是孤立數字/希臘字母」→ 搬回開頭。
+    .map(t => t.replace(/^([-－，,〜~～].*?)([0-9α-ωΑ-Ω])$/u, '$2$1'))
     .filter(Boolean);
 }
 
@@ -148,8 +162,18 @@ function cellsFromLines(lines) {
     if (cells.length !== 4) { skipped++; continue; }
     if (new Set(cells.map(norm)).size !== 4) { skipped++; continue; }
     if (cells.some(t => norm(t).length < 1)) { skipped++; continue; }
+    // 重建後仍以接續符號開頭 ＝ 還是碎片，整題放棄（寧可不修也不要寫進爛資料）
+    if (cells.some(t => /^[，,〜~～、。）)]/.test(t.trim()))) { skipped++; continue; }
 
     const now = ['A', 'B', 'C', 'D'].map(k => String((q.options || {})[k] || ''));
+
+    // 複選組合題（選項是「①②③」這種圈號序列）版型最脆弱：圈號在部分卷裡是 PUA 造字，
+    // 位置也常被拆到別的格子，重建容易「少吃掉幾個圈號」而使答案語意整個改變。
+    // 規則：重建後圈號總數只要比原本少，就整題放棄（2026-09-12 抽驗抓到 ②③⑤⑦ → ②③⑤）。
+    const circles = (t) => (String(t).match(/[①-⑳㉑-㊿]/g) || []).length;
+    const beforeCircles = now.reduce((n, t) => n + circles(t), 0);
+    const afterCircles = cells.reduce((n, t) => n + circles(t), 0);
+    if (beforeCircles > afterCircles) { skipped++; continue; }
     if (now.map(norm).join('|') === cells.map(norm).join('|')) continue;
 
     report.push({ num: q.number, id: q.id, before: now, after: cells });

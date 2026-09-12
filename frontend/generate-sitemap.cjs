@@ -33,23 +33,14 @@ const STATIC_ROUTES = [
   { path: '/contact', priority: 0.3, changefreq: 'yearly' },
 ]
 
-const GUIDES = [
-  '/guides/',
-  '/guides/doctor1-vs-doctor2/',
-  '/guides/medlab-six-subjects-guide/',
-  '/guides/nursing-50q-strategy/',
-  '/guides/pharma2-reform-110/',
-  '/guides/ai-practice-best-practices/',
-  '/guides/doctor1-prep-timeline/',
-  '/guides/nursing-fresh-vs-retake/',
-  '/guides/tcm-vs-post-tcm/',
-  '/guides/moto-license-2026-reform/',
-  '/guides/medical-careers-comparison/',
-  '/guides/doctor1-pastexam-guide/',
-  '/guides/vet-pastexam-guide/',
-  '/guides/ot-pastexam-guide/',
-  '/guides/driver-car-license-guide/',
-]
+// 直接讀 guides.json，不要寫死清單——寫死的話新增攻略不會進 sitemap，
+// SEO 等於白做（2026-09-12 新增 4 篇時發現漏了 4 條）。
+const GUIDES = (() => {
+  const guides = JSON.parse(
+    fs.readFileSync(path.join(__dirname, 'src/guides.json'), 'utf-8')
+  ).guides
+  return ['/guides/', ...guides.map(g => `/guides/${g.slug}/`)]
+})()
 
 function loadExamIds() {
   if (!fs.existsSync(SNAPSHOT)) return []

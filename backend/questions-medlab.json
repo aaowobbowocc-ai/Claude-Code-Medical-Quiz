@@ -4909,13 +4909,12 @@
     "question": "正常成人每日約製造多少個RBC？",
     "options": {
       "A": "108",
-      "B": "1010",
+      "B": "10",
       "C": "1012",
       "D": "1014"
     },
     "answer": "C",
     "explanation": "",
-    "vision_uncertain": false,
     "disputed": true
   },
   {
@@ -102049,7 +102048,7 @@
       "A": "睡眠",
       "B": "眼球運動",
       "C": "流汗",
-      "D": "咬牙10Hz左右的"
+      "D": "咬牙"
     },
     "answer": "A",
     "explanation": ""
@@ -102239,7 +102238,7 @@
       "A": "代謝性酸中毒",
       "B": "代謝性鹼中毒",
       "C": "呼吸性酸中毒",
-      "D": "呼吸性鹼中毒1大氣壓（760mmHg）下吸氣，此時咽氣管開口端之氮氣分壓最接近多少mmHg？"
+      "D": "呼吸性鹼中毒"
     },
     "answer": "A",
     "explanation": ""
@@ -103544,7 +103543,7 @@
       "A": "2,3-DPG與血紅素形成1：1的複合體",
       "B": "2,3-DPG與血紅素的β鏈相連",
       "C": "當2,3-DPG濃度增高，氧分子由血紅素中釋出的量會下降",
-      "D": "2,3-DPG是Luebering-Rapoportshunt的反應產物hemoglobinoxygendissociationcurve之P50上升？"
+      "D": "2,3-DPG 是Luebering-Rapoport shunt 的反應產物"
     },
     "answer": "C",
     "explanation": ""
@@ -114110,7 +114109,7 @@
       "A": "t(9;11)(p22;q23)",
       "B": "inv(16)(p13;q22)",
       "C": "t(15;17)(q22;q22)",
-      "D": "t(8;21)(q22;q22)T"
+      "D": "t(8;21)(q22;q22)"
     },
     "answer": "B",
     "explanation": ""
@@ -122404,10 +122403,10 @@
     "number": 29,
     "question": "下列何者用來表示受檢者肺活量（VC）及一秒量（FEV1）氣體容積的方式？",
     "options": {
-      "A": "Ambient temperature and pressure, saturated with water vapor(ATPS)",
-      "B": "Standard temperature and pressure, dry(STPD)",
-      "C": "Body temperature and pressure, saturated with water vapor(BTPS)",
-      "D": "Ambient temperature and pressure, dry(ATPD)"
+      "A": "Ambient temperature and pressure, saturated with water vapor（ATPS）",
+      "B": "Standard temperature and pressure, dry（STPD）",
+      "C": "Body temperature and pressure, saturated with water vapor（BTPS）",
+      "D": "Ambient temperature and pressure, dry（ATPD）"
     },
     "answer": "C",
     "explanation": ""
@@ -122628,7 +122627,7 @@
     "question": "有關影響神經傳導檢查的因素，下列敘述何者正確？",
     "options": {
       "A": "正常人體溫增加時傳導速度減慢",
-      "B": "剛出生的嬰兒神經傳導速度大約是成人的一半9～10歲時，才會接近成人的傳導速度",
+      "B": "剛出生的嬰兒神經傳導速度大約是成人的一半",
       "C": "兒童約長至 9～10歲時，才會接近成人的傳導速度",
       "D": "老年人感覺神經動作電位的振幅跟年輕人差不多"
     },
@@ -140008,7 +140007,7 @@
     "number": 25,
     "question": "下列何者是Legionella pneumophila最主要感染途徑？",
     "options": {
-      "A": "ir condition spread",
+      "A": "air condition spread",
       "B": "person-to-person spread",
       "C": "ingestion of contaminated food",
       "D": "fecal-to-oral route"
@@ -140089,7 +140088,7 @@
     "options": {
       "A": "屬於球菌",
       "B": "形成孢子",
-      "C": "培養較久後,易呈現球桿菌",
+      "C": "培養較久後，易呈現球桿菌",
       "D": "Campylobacter coli尿素酶陽性"
     },
     "answer": "C",
@@ -140348,7 +140347,7 @@
     "options": {
       "A": "Leptospira interrogans",
       "B": "Spirillum minus",
-      "C": "hlamydophila psittaci",
+      "C": "Chlamydophila psittaci",
       "D": "Francisella tularensis"
     },
     "answer": "B",
@@ -140366,7 +140365,7 @@
     "number": 43,
     "question": "下列何種試驗最適合區分Bacteroides ureolyticus和Campylobacter gracilis？",
     "options": {
-      "A": "gar pitting",
+      "A": "agar pitting",
       "B": "motility",
       "C": "urease",
       "D": "nitrate reduction"
@@ -140565,9 +140564,9 @@
     "number": 53,
     "question": "下列關於macrolides類抗生素之敘述，何者錯誤？",
     "options": {
-      "A": "與細菌50S核糖體次單元結合,抑制胜肽的延長",
-      "B": "與合成細胞壁的酵素結合,造成細胞壁合成功能受損",
-      "C": "是屬於抑菌(bacteriostatic)性質的抗生素",
+      "A": "與細菌50S核糖體次單元結合，抑制胜肽的延長",
+      "B": "與合成細胞壁的酵素結合，造成細胞壁合成功能受損",
+      "C": "是屬於抑菌（bacteriostatic）性質的抗生素",
       "D": "azythromycin屬於macrolide類之抗生素"
     },
     "answer": "B",
@@ -147328,7 +147327,7 @@
     "options": {
       "A": "α-fetoprotein",
       "B": "PSA",
-      "C": "alcitonin",
+      "C": "Calcitonin",
       "D": "NSE"
     },
     "answer": "C",
@@ -152359,7 +152358,7 @@
     "options": {
       "A": "脾臟腫大",
       "B": "心臟併發症",
-      "C": "型肝炎感染",
+      "C": "C型肝炎感染",
       "D": "病理性骨折"
     },
     "answer": "B",
@@ -152937,8 +152936,8 @@
     "number": 30,
     "question": "下列何種篩檢試驗的組合最能幫忙診斷VWD？",
     "options": {
-      "A": "PTT、thrombin time、dilute Russell viper venom time",
-      "B": "leeding time、VWF:Ag、血小板計數",
+      "A": "APTT、thrombin time、dilute Russell viper venom time",
+      "B": "Bleeding time、VWF:Ag、血小板計數",
       "C": "PT、bleeding time、thrombin time",
       "D": "VWF:Ag、dilute Russell viper venom time、血小板計數"
     },
@@ -153000,7 +152999,7 @@
       "A": "血漿電泳可以發現有ultra-large multimer VWF",
       "B": "血液抹片常有破碎之紅血球（fragmented red cells）",
       "C": "PT及APTT通常正常",
-      "D": "irect anti-globulin test（DAT）通常為陽性"
+      "D": "Direct anti-globulin test（DAT）通常為陽性"
     },
     "answer": "D",
     "explanation": ""
@@ -162800,10 +162799,10 @@
     "number": 42,
     "question": "下列兩張圖的重點分別為何？",
     "options": {
-      "A": "Plasmacytosis (Liu’s stain),Sideroblasts (Iron stain)",
-      "B": "Dyserythropoiesis (Liu’s stain),Sideroblasts (Iron stain)",
-      "C": "Acute promyelocytic leukemia (Liu’s stain),Leukemic blasts (Peroxidase stain)",
-      "D": "Megaloblastic anemia (Liu’s stain),Megaloblasts (Peroxidase stain)"
+      "A": "Plasmacytosis (Liu’s stain)，Sideroblasts (Iron stain)",
+      "B": "Dyserythropoiesis (Liu’s stain)，Sideroblasts (Iron stain)",
+      "C": "Acute promyelocytic leukemia (Liu’s stain)，Leukemic blasts (Peroxidase stain)",
+      "D": "Megaloblastic anemia (Liu’s stain)，Megaloblasts (Peroxidase stain)"
     },
     "answer": "B",
     "explanation": ""
@@ -178460,9 +178459,9 @@
     "number": 23,
     "question": "下列何者不是Escherichiacoli的生化反應特性？(－)",
     "options": {
-      "A": "H 2 S (－)",
+      "A": "H2S (－)",
       "B": "indole (＋)",
-      "C": "itrate (＋)",
+      "C": "citrate (＋)",
       "D": "VP (－)"
     },
     "answer": "C",
@@ -178682,8 +178681,8 @@
     "options": {
       "A": "phenylalanine deaminase (＋)",
       "B": "ornithine decarboxylase (－)",
-      "C": "itrate (＋)",
-      "D": "H 2 S (＋)"
+      "C": "citrate (＋)",
+      "D": "H2S (＋)"
     },
     "answer": "A",
     "explanation": ""
@@ -178861,7 +178860,7 @@
     "question": "雅司病（yaws）是由下列何種細菌所造成？",
     "options": {
       "A": "Treponema pallidum",
-      "B": "orrelia recurrentis",
+      "B": "Borrelia recurrentis",
       "C": "Leptospira interrogans",
       "D": "Spirillum minus"
     },
@@ -179041,7 +179040,7 @@
     "options": {
       "A": "nalidixic acid",
       "B": "trimethoprim",
-      "C": "iprofloxacin",
+      "C": "ciprofloxacin",
       "D": "polymyxin"
     },
     "answer": "D",
@@ -179301,7 +179300,7 @@
     "options": {
       "A": "Phialophora verrucosa",
       "B": "Trichophyton rubrum",
-      "C": "andida albicans",
+      "C": "Candida albicans",
       "D": "Rhizopus spp."
     },
     "answer": "A",
@@ -179486,7 +179485,7 @@
     "question": "下列何者通常不是生物恐怖戰劑的致病微生物？",
     "options": {
       "A": "Francisella tularensis",
-      "B": "acillus anthracis",
+      "B": "Bacillus anthracis",
       "C": "Yersinia pestis",
       "D": "Salmonella Typhi"
     },
@@ -296062,8 +296061,8 @@
     "number": 25,
     "question": "氧氣（O2）從空氣進入血液後，主要是以何種形式來運輸（transport）？",
     "options": {
-      "A": "溶解（dissolved）於血漿",
-      "B": "轉換成重碳酸離子（bicarbonate, HCO3 - ）",
+      "A": "溶解（dissolved）於血漿-）",
+      "B": "轉換成重碳酸離子（bicarbonate, HCO3",
       "C": "形成碳胺基化合物（carbamino compounds）",
       "D": "和血紅素（hemoglobin）結合"
     },
@@ -297247,7 +297246,7 @@
     "number": 4,
     "question": "有關惡性貧血（pernicious anemia）的敘述，下列何者正確？",
     "options": {
-      "A": "anti-proton pump H + /K + ‐ATPase 自體抗體陽性，則可以作為惡性貧血的專一性診斷",
+      "A": "anti-proton pump H",
       "B": "罹患惡性貧血的比率男多於女",
       "C": "惡性貧血主因是嚴重缺乏葉酸",
       "D": "幽門螺旋桿菌（H. pylori）是引起老年人惡性貧血的原因之一"

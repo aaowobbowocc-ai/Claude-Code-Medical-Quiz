@@ -84,7 +84,7 @@ const APPLY = args.includes('--apply');
 const only = args.includes('--file') ? args[args.indexOf('--file') + 1] : null;
 
 const files = fs.readdirSync(DIR)
-  .filter(f => /^questions-.*\.json$/.test(f) && !/\.bak/.test(f))
+  .filter(f => /^questions(-.*)?\.json$/.test(f) && !/\.bak/.test(f))
   .filter(f => !only || f === `questions-${only}.json`);
 
 let totalQ = 0, totalField = 0;
@@ -125,7 +125,7 @@ for (const file of files) {
 
   if (changedQ) {
     totalQ += changedQ;
-    console.log(`${file.replace('questions-', '').replace('.json', '').padEnd(22)} ${changedQ} 題`);
+    console.log(`${file.replace('questions-', '').replace('questions.json', 'doctor1').replace('.json', '').padEnd(22)} ${changedQ} 題`);
     if (APPLY) fs.writeFileSync(path.join(DIR, file), JSON.stringify(json, null, 2), 'utf8');
   }
 }
@@ -135,7 +135,7 @@ console.log(`\n總計：${totalQ} 題 / ${totalField} 個欄位`);
 if (preview.length) {
   console.log('\n─── 修改樣本 ───');
   for (const p of preview) {
-    console.log(`[${p.file.replace('questions-', '').replace('.json', '')} ${p.id} ${p.where}]`);
+    console.log(`[${p.file.replace('questions-', '').replace('questions.json', 'doctor1').replace('.json', '')} ${p.id} ${p.where}]`);
     for (const [k, a, b] of p.diffs) {
       console.log(`  ${k}  ${JSON.stringify(a)}`);
       console.log(`  ${' '.repeat(k.length)}→ ${JSON.stringify(b)}`);

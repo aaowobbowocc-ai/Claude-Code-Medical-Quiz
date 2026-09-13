@@ -71,7 +71,7 @@ if (args[0] === '--list') {
 }
 
 const papers = new Map();
-for (const file of fs.readdirSync(DIR).filter(f => /^questions-.*\.json$/.test(f) && !/\.bak/.test(f))) {
+for (const file of fs.readdirSync(DIR).filter(f => /^questions(-.*)?\.json$/.test(f) && !/\.bak/.test(f))) {
   let j;
   try { j = JSON.parse(fs.readFileSync(path.join(DIR, file), 'utf8')); } catch { continue; }
   const arr = Array.isArray(j) ? j : j.questions;
@@ -93,7 +93,7 @@ console.log('題數  考試'.padEnd(26) + '場次碼   年度      科目       
 const LIMIT = args.includes('--limit') ? +args[args.indexOf('--limit') + 1] : 40;
 for (const [key, rec] of rows.slice(0, LIMIT)) {
   const [file, code, tag, year, session, subject] = key.split('\t');
-  const exam = file.replace('questions-', '').replace('.json', '');
+  const exam = file.replace('questions-', '').replace('questions.json', 'doctor1').replace('.json', '');
   const why = Object.entries(rec.why).map(([k, v]) => `${k}:${v}`).join(' ');
   console.log(
     String(rec.n).padStart(4) + '  ' +

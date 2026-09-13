@@ -98,7 +98,8 @@ const cache = loadCache();
 let totalFixed = 0, noCode = 0, noMatch = 0;
 
 for (const p of targets) {
-  const file = `questions-${p.exam}.json`;
+  // 醫師一階的檔名是 questions.json（沒有 -doctor1 後綴），掃描器輸出會顯示成 doctor1
+  const file = p.exam === 'doctor1' ? 'questions.json' : `questions-${p.exam}.json`;
   const j = JSON.parse(fs.readFileSync(path.join(DIR, file), 'utf8'));
   const arr = Array.isArray(j) ? j : j.questions;
   // 同一卷可能有兩個 subject_tag（聽力/語言治療的 p/s 雙 id 互補），

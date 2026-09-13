@@ -30,7 +30,7 @@ const COMPAT = /[豈-﫿]/g;
 let totalChars = 0, totalFields = 0, totalQ = 0;
 const per = {};
 
-for (const file of fs.readdirSync(DIR).filter(f => /^questions-.*\.json$/.test(f) && !/\.bak/.test(f))) {
+for (const file of fs.readdirSync(DIR).filter(f => /^questions(-.*)?\.json$/.test(f) && !/\.bak/.test(f))) {
   let json;
   try { json = JSON.parse(fs.readFileSync(path.join(DIR, file), 'utf8')); } catch { continue; }
   const arr = Array.isArray(json) ? json : json.questions;
@@ -55,7 +55,7 @@ for (const file of fs.readdirSync(DIR).filter(f => /^questions-.*\.json$/.test(f
   }
 
   if (qs) {
-    per[file.replace('questions-', '').replace('.json', '')] = { qs, chars };
+    per[file.replace('questions-', '').replace('questions.json', 'doctor1').replace('.json', '')] = { qs, chars };
     totalQ += qs; totalFields += fields; totalChars += chars;
     if (APPLY) fs.writeFileSync(path.join(DIR, file), JSON.stringify(json, null, 2), 'utf8');
   }

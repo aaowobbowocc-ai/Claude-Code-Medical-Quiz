@@ -118,7 +118,7 @@ function classifyQuestion(q) {
 }
 
 function main() {
-  const files = fs.readdirSync(BACKEND).filter(f => /^questions-.*\.json$/.test(f) || f === 'questions.json')
+  const files = fs.readdirSync(BACKEND).filter(f => /^questions(-.*)?\.json$/.test(f) || f === 'questions.json')
   const include = files.filter(f => !SKIP.has(f) && !f.endsWith('.bak') && !f.endsWith('.bak2') && !f.endsWith('.bak3'))
 
   const summary = {

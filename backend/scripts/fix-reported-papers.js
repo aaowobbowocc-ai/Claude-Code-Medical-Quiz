@@ -27,7 +27,7 @@ fs.readFileSync(path.join(DIR, '.env'), 'utf-8').split('\n').forEach(l => {
 });
 const supabase = require(path.join(DIR, 'supabase'));
 
-const FILES = fs.readdirSync(DIR).filter(f => /^questions-.*\.json$/.test(f) && !/\.bak/.test(f));
+const FILES = fs.readdirSync(DIR).filter(f => /^questions(-.*)?\.json$/.test(f) && !/\.bak/.test(f));
 
 // 題幹 -> 該題所屬的卷
 const byText = new Map();
@@ -100,7 +100,7 @@ const keyName = (t) => String(t).replace(/[（）()【】\[\]、，,。．.\s]/g
     }
     if (!best || !best.n) continue;
 
-    console.log(`✔ ${p.file.replace('questions-', '').replace('.json', '')} ${p.code} ${p.subject}（${p.reports} 筆回報）c=${best.cand.c} s=${best.cand.s} → 重建 ${best.n} 題`);
+    console.log(`✔ ${p.file.replace('questions-', '').replace('questions.json', 'doctor1').replace('.json', '')} ${p.code} ${p.subject}（${p.reports} 筆回報）c=${best.cand.c} s=${best.cand.s} → 重建 ${best.n} 題`);
     total += best.n;
     if (APPLY) {
       const args = [path.join(__dirname, 'fix-column-fragments.js'), p.file, p.code, best.cand.c, best.cand.s, p.tag, '--apply'];

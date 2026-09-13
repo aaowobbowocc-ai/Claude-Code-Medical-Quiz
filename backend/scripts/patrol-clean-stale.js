@@ -70,7 +70,7 @@ function processFile(fp) {
 
 function main() {
   const files = fs.readdirSync(BACKEND).filter(f =>
-    (f === 'questions.json' || /^questions-.*\.json$/.test(f))
+    (f === 'questions.json' || /^questions(-.*)?\.json$/.test(f))
     && !SKIP.has(f) && !/\.bak/.test(f)
   )
   let total = 0

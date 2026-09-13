@@ -75,10 +75,12 @@ async function getAnswerPdf(code, c, s) {
 
   // 題幹 -> 題目（拿 exam_code / subject_tag / number / answer）
   const byText = new Map();
+  const allQuestions = [];
   for (const f of fs.readdirSync(DIR).filter(x => /^questions(-.*)?\.json$/.test(x) && !/\.bak/.test(x))) {
     const j = JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8'));
     for (const q of (Array.isArray(j) ? j : j.questions) || []) {
       byText.set(norm(q.question), { file: f, q });
+      allQuestions.push(q);
     }
   }
 
@@ -88,7 +90,10 @@ async function getAnswerPdf(code, c, s) {
     const hit = byText.get(norm(r.question_text));
     if (!hit) continue;
     const q = hit.q;
-    const k = `${hit.file}|${q.exam_code}|${q.subject_tag}`;
+    // 一定要用 subject（卷別）分組，不能用 subject_tag —— tag 是「主題分類」，
+    // 同一卷裡會有多種 tag，用 tag 分組會把不同卷的題混進同一組，
+    // 抓到的答案卷對不上題號就會產生假的「答案不符」（2026-09-13 誤報 2 題）。
+    const k = `${hit.file}|${q.exam_code}|${q.subject}`;
     if (!papers.has(k)) papers.set(k, { file: hit.file, code: String(q.exam_code), tag: q.subject_tag, subject: q.subject, year: q.roc_year, items: [] });
     papers.get(k).items.push({ r, q });
   }
@@ -113,6 +118,24 @@ async function getAnswerPdf(code, c, s) {
       } catch { /* 換下一個候選 */ }
     }
     if (!A || !Object.keys(A).length) { noParse += p.items.length; continue; }
+
+    // ⚠️ 先驗「整卷對齊」再比對個別題。抓錯卷時題號照樣對得上，只是答案全亂，
+    // 會產生一堆假的「答案不符」（2026-09-13 誤報：106020 醫學(二) 96 題有 63 題
+    // 不一致，其實是抓到別卷；而 105100 醫學(二) 100 題只有 4 題不一致，那 4 題
+    // 才是真的錯）。同卷一致率低於 85% 就當作抓錯卷，整卷跳過。
+    const wholePaper = allQuestions.filter(q => String(q.exam_code) === p.code && q.subject === p.subject);
+    let agree = 0, total = 0;
+    for (const q of wholePaper) {
+      const o = A[q.number];
+      if (!o) continue;
+      total++;
+      if (String(o).trim() === String(q.answer).trim()) agree++;
+    }
+    if (total >= 10 && agree / total < 0.85) {
+      console.log(`⨯ ${p.subject} ${p.code}：整卷一致率僅 ${(agree / total * 100).toFixed(0)}%（${agree}/${total}），判定抓錯卷，跳過`);
+      noParse += p.items.length;
+      continue;
+    }
 
     for (const { r, q } of p.items) {
       const official = A[q.number] ?? A[String(q.number)];

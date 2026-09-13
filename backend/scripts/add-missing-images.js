@@ -340,6 +340,11 @@ const EXAM_REGISTRY = {
   tcm1:      { file: 'questions-tcm1.json',      classCodes: ['317','101','103','106','107'], examName: '中醫師(一)' },
   tcm2:      { file: 'questions-tcm2.json',      classCodes: ['318','102','103','104','105','106','107'], examName: '中醫師(二)' },
   radiology: { file: 'questions-radiology.json', classCodes: ['309','308'], examName: '醫事放射師' },
+  // 牙體技術師原本不在 registry 裡，所以從來沒被補過圖（2026-09-13 盤點：41 題
+  // 提到圖卻沒圖，使用者回報 17 筆）。類科碼逐年不同：107-109 年 c=111、
+  // 111 年 c=109、112-113 年 c=107，全列進來讓 probe 自己試，
+  // pdfExamName() 會擋掉抓錯卷的情況。
+  'dental-tech': { file: 'questions-dental-tech.json', classCodes: ['107','109','111','108','110'], examName: '牙體技術師' },
 }
 
 // Read the 類科 line from the first page of a PDF buffer. Returns null on

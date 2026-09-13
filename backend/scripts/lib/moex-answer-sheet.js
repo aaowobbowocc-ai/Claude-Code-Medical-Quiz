@@ -41,17 +41,24 @@ async function parseAnswerSheet(buf) {
     rows.sort((a, b) => a.y - b.y);
 
     const label = (row) => (row.items[0] ? row.items[0].t.replace(/\s/g, '') : '');
+    // 有些卷的答案是全形字母（Ａ Ｂ Ｃ Ｄ），要轉回半形才比得出來
+    const halfWidth = (t) => String(t).replace(/[Ａ-Ｚ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0));
+
     for (let i = 0; i < rows.length; i++) {
-      if (!/^題號$/.test(label(rows[i]))) continue;
-      // 往下找最近的「答案」列
+      if (!/^題號/.test(label(rows[i]))) continue;
+      // 往下找最近的「答案」列。注意：標籤有時跟第一個答案黏在同一個 text run
+      // （"答案Ａ"），所以不能用 /^答案$/ 精確比對。
       let ansRow = null;
       for (let j = i + 1; j < Math.min(i + 4, rows.length); j++) {
-        if (/^答案$/.test(label(rows[j]))) { ansRow = rows[j]; break; }
+        if (/^答案/.test(label(rows[j]))) { ansRow = rows[j]; break; }
       }
       if (!ansRow) continue;
 
       const nums = rows[i].items.slice(1).filter(x => /^\d{1,3}$/.test(x.t));
-      const ans = ansRow.items.slice(1);
+      const ans = ansRow.items.slice(1).map(a => ({ ...a, t: halfWidth(a.t) }));
+      // 「答案Ａ」這種黏在一起的，把後面那截當成該 x 位置的答案補回去
+      const glued = halfWidth(ansRow.items[0].t).replace(/^答案\s*/, '');
+      if (glued) ans.unshift({ x: ansRow.items[0].x + 34, t: glued });
       for (const n of nums) {
         // 取 x 最接近的答案格
         let best = null;

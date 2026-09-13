@@ -88,4 +88,30 @@ console.log(`題庫索引：完整 ${exact.size} 題、前綴 ${prefix.size} 組
   fs.writeFileSync(path.join(DIR, '_tmp', 'lost-reports.json'),
     JSON.stringify(buckets.lost, null, 2), 'utf8');
   console.log('\n疑似遺失清單已寫出 _tmp/lost-reports.json');
+
+  // 「題還在原位、題幹完全相同」= 回報後完全沒動過，這批最需要人看
+  fs.writeFileSync(path.join(DIR, '_tmp', 'untouched-reports.json'),
+    JSON.stringify(buckets.found.map(x => ({ ...x.r, loc: x.hit })), null, 2), 'utf8');
+
+  const classify = (m) => {
+    m = String(m || '');
+    if (/答案|應為|應該是|給分|選錯/.test(m)) return '答案爭議';
+    if (/圖|照片|影片/.test(m)) return '缺圖/影片';
+    if (/亂碼|問號/.test(m)) return '亂碼';
+    if (/選項/.test(m)) return '選項問題';
+    if (/題目|題幹|承上/.test(m)) return '題幹問題';
+    if (!m.trim()) return '未填說明';
+    return '其他';
+  };
+  const byType = {};
+  for (const x of buckets.found) {
+    const t = classify(x.r.message);
+    (byType[t] = byType[t] || []).push(x);
+  }
+  console.log('\n=== 「回報後完全沒動過」' + buckets.found.length + ' 筆的類型 ===');
+  for (const [k, v] of Object.entries(byType).sort((a, b) => b[1].length - a[1].length)) {
+    console.log('  ' + k.padEnd(12) + v.length);
+  }
+  console.log('\n清單已寫出 _tmp/untouched-reports.json');
+
 })();

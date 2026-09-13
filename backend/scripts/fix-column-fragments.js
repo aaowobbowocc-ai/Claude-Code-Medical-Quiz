@@ -176,8 +176,14 @@ function parseLabeled(lines) {
     // 標記式版型不需要題號行，但仍要用題幹比對確認對到同一題（避免抓錯卷）
     if (lab) {
       const a = norm(lab.question), b = norm(q.question);
-      const head = b.slice(0, Math.min(12, b.length));
-      if (!a.startsWith(head) && !b.startsWith(a.slice(0, Math.min(12, a.length)))) { skipped++; continue; }
+      // 題幹空白的題沒得比對，但那正是最該修的（使用者無法作答）。
+      // 這種情況直接採用 PDF 解析出的題幹，靠題號定位。
+      if (!b) {
+        if (a.length >= 6) { q.question = lab.question; }
+      } else {
+        const head = b.slice(0, Math.min(12, b.length));
+        if (!a.startsWith(head) && !b.startsWith(a.slice(0, Math.min(12, a.length)))) { skipped++; continue; }
+      }
     }
     const mi = marks.findIndex(m => m.num === +q.number);
     if (mi < 0 && !lab) continue;
@@ -199,9 +205,20 @@ function parseLabeled(lines) {
       skipped++; continue;
     }
 
-    const cells = lab
+    let cells = lab
       ? lab.options.map(t => t.normalize('NFC').trim())
       : cellsFromLines(block.slice(cut));
+
+    // 題幹空白的題：切題幹的迴圈會立刻結束（0 >= 0），題幹行留在區塊裡被當成
+    // 多出來的選項格。改用「最後 4 格是選項、前面全是題幹」還原。
+    const wasEmptyStem = !norm(q.question);
+    let rebuiltStem = null;
+    if (wasEmptyStem && !lab && cells.length > 4) {
+      const stemCells = cells.slice(0, cells.length - 4);
+      cells = cells.slice(-4);
+      const s2 = stemCells.join('').trim();
+      if (s2.length >= 6) rebuiltStem = s2;
+    }
     if (DBG) console.log('DBG 重建格子', cells.length, JSON.stringify(cells));
     if (cells.length !== 4) { skipped++; continue; }
     if (new Set(cells.map(norm)).size !== 4) { skipped++; continue; }
@@ -216,7 +233,9 @@ function parseLabeled(lines) {
     // 內容被整組換掉一律擋下——英文克漏字那種題號內嵌在文章裡的版型，區塊切分
     // 會錯位，把別題的選項搬過來（2026-09-12 抓到關務英文「Cure/Diet/Evidence」
     // 被換成「but/still/yet」，而那些題原本根本沒壞）。
-    if (!diagnose(q)) {
+    // 原本就是空白題幹＝確定破損，直接允許完整重建（不能用 diagnose 判，
+    // 因為題幹補回去之後它就不算破損了）
+    if (!wasEmptyStem && !diagnose(q)) {
       const skel = (t) => String(t).normalize('NFC')
         .replace(/[　\s]/g, '')
         .replace(/[（）()［］\[\]【】、，,。．.：:；;？?！!"'`~～－\-—–_]/g, '');
@@ -245,6 +264,7 @@ function parseLabeled(lines) {
     report.push({ num: q.number, id: q.id, before: now, after: cells });
     if (APPLY) {
       q.options = { A: cells[0], B: cells[1], C: cells[2], D: cells[3] };
+      if (rebuiltStem) q.question = rebuiltStem;
       delete q.vision_uncertain;
     }
     fixed++;

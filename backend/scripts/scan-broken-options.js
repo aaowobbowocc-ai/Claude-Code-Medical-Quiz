@@ -22,6 +22,9 @@ const norm = (x) => String(x || '').replace(/\s+/g, '');
 
 function diagnose(q) {
   const opts = ['A', 'B', 'C', 'D'].map(k => String((q.options || {})[k] || ''));
+  // 題幹整個空白 = 使用者根本無法作答，最嚴重。
+  // 例外：機車標誌題本來就以圖為題（有 image_url），那是設計如此。
+  if (!norm(q.question) && !q.image_url && !(q.images && q.images.length)) return 'empty-stem';
   if (opts.some(o => !o)) return null;
   const stem = norm(q.question);
 

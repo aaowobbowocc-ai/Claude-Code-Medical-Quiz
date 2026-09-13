@@ -345,6 +345,12 @@ const EXAM_REGISTRY = {
   // 111 年 c=109、112-113 年 c=107，全列進來讓 probe 自己試，
   // pdfExamName() 會擋掉抓錯卷的情況。
   'dental-tech': { file: 'questions-dental-tech.json', classCodes: ['107','109','111','108','110'], examName: '牙體技術師' },
+  // 以下三個考試缺圖最多（呼吸治療 254、語言治療 188、聽力師 149），原本都不在
+  // registry 裡所以從沒被補過圖。類科碼逐年變動很大，這裡是從 _tmp/moex-codes.json
+  // 探碼快取推導出來的實際值；pdfExamName() 會擋掉抓錯卷的情況。
+  rt:        { file: 'questions-rt.json',        classCodes: ['313','306','315','310'], examName: '呼吸治療師' },
+  'speech-therapist': { file: 'questions-speech-therapist.json', classCodes: ['109','110','111','112','113','114','108','107','106','105','301'], examName: '語言治療師' },
+  audiologist: { file: 'questions-audiologist.json', classCodes: ['110','112','113','111','108','106','301'], examName: '聽力師' },
 }
 
 // Read the 類科 line from the first page of a PDF buffer. Returns null on

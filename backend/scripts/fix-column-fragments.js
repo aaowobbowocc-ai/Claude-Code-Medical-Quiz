@@ -121,9 +121,40 @@ function cellsFromLines(lines) {
     .filter(Boolean);
 }
 
+/**
+ * 版型二「標記式」：題號內嵌在題幹（`74.下列何者…`），選項有明確字母標記（`B.Bacillus anthracis`），
+ * 每個選項自己一行。這種版型舊解析器完全認不得（它只找獨立的題號行），整卷會被跳過。
+ * 醫檢師/放射師等多份卷都是這種，而且正是「選項首字被當成標記吃掉」的來源
+ * （`B.Bacillus anthracis` 被存成 `acillus anthracis`）。
+ * 回傳 Map<題號, {question, options:[4]}>，解析不出 4 個選項的題直接不放進來。
+ */
+function parseLabeled(lines) {
+  const out = new Map();
+  let cur = null;
+  const push = () => {
+    if (cur && cur.opts.length === 4) out.set(cur.num, { question: cur.q.trim(), options: cur.opts.map(t => t.trim()) });
+    cur = null;
+  };
+  for (const l of lines) {
+    const mq = l.t.match(/^(\d{1,3})\s*[.．、]\s*(.*)$/);
+    const mo = l.t.match(/^([A-D])\s*[.．、]\s*(.*)$/);
+    if (mq && !mo) { push(); cur = { num: +mq[1], q: mq[2], opts: [], inOpt: false }; continue; }
+    if (!cur) continue;
+    if (mo) { cur.opts.push(mo[2]); cur.inOpt = true; continue; }
+    // 沒有標記的行＝上一個選項或題幹的續行
+    if (cur.inOpt && cur.opts.length) cur.opts[cur.opts.length - 1] += l.t;
+    else cur.q += l.t;
+  }
+  push();
+  return out;
+}
+
 (async () => {
   const buf = await getPdf();
   const lines = await readLines(buf);
+  // 先試標記式版型；解析得出來的題之後直接用它的結果，省得走幾何重建
+  const labeled = parseLabeled(lines);
+  if (labeled.size) console.log(`（標記式版型：解析出 ${labeled.size} 題）`);
 
   // 題號行：x < 55 且純數字
   const marks = [];
@@ -141,10 +172,17 @@ function cellsFromLines(lines) {
   const report = [];
 
   for (const q of paper) {
+    const lab = labeled.get(+q.number);
+    // 標記式版型不需要題號行，但仍要用題幹比對確認對到同一題（避免抓錯卷）
+    if (lab) {
+      const a = norm(lab.question), b = norm(q.question);
+      const head = b.slice(0, Math.min(12, b.length));
+      if (!a.startsWith(head) && !b.startsWith(a.slice(0, Math.min(12, a.length)))) { skipped++; continue; }
+    }
     const mi = marks.findIndex(m => m.num === +q.number);
-    if (mi < 0) continue;
-    const from = marks[mi].i + 1;
-    const to = mi + 1 < marks.length ? marks[mi + 1].i : lines.length;
+    if (mi < 0 && !lab) continue;
+    const from = mi >= 0 ? marks[mi].i + 1 : 0;
+    const to = mi >= 0 ? (mi + 1 < marks.length ? marks[mi + 1].i : lines.length) : 0;
     const block = lines.slice(from, to);
 
     // 切掉題幹：逐行吃掉，直到累積文字已覆蓋題幹
@@ -156,12 +194,14 @@ function cellsFromLines(lines) {
     }
     const DBG = process.env.ONLY && +process.env.ONLY === +q.number;
     if (DBG) console.log('DBG #' + q.number, '區塊行數', block.length, '題幹吃掉', cut, '行');
-    if (!norm(acc).startsWith(stem.slice(0, Math.min(12, stem.length)))) {
+    if (!lab && !norm(acc).startsWith(stem.slice(0, Math.min(12, stem.length)))) {
       if (DBG) console.log('DBG 題幹比對失敗 acc=', JSON.stringify(norm(acc).slice(0, 40)), ' stem=', JSON.stringify(stem.slice(0, 40)));
       skipped++; continue;
     }
 
-    const cells = cellsFromLines(block.slice(cut));
+    const cells = lab
+      ? lab.options.map(t => t.normalize('NFC').trim())
+      : cellsFromLines(block.slice(cut));
     if (DBG) console.log('DBG 重建格子', cells.length, JSON.stringify(cells));
     if (cells.length !== 4) { skipped++; continue; }
     if (new Set(cells.map(norm)).size !== 4) { skipped++; continue; }
@@ -182,7 +222,13 @@ function cellsFromLines(lines) {
         .replace(/[（）()［］\[\]【】、，,。．.：:；;？?！!"'`~～－\-—–_]/g, '');
       const safe = cells.every((t, i) => {
         const a = skel(now[i]), b = skel(t);
-        return a === b || (b.length > 0 && a.startsWith(b));
+        if (a === b) return true;
+        // 現況是重建結果的前綴 → 重建移除了尾巴垃圾（頁尾文字等）
+        if (b.length > 0 && a.startsWith(b)) return true;
+        // 現況是重建結果的後綴、且只差幾個字 → 重建補回被吃掉的首字
+        // （使用者回報「B選項 Bacillus anthracite」，資料裡是 "acillus anthracis"，B 不見了）
+        if (a.length > 0 && b.endsWith(a) && b.length - a.length <= 5) return true;
+        return false;
       });
       if (!safe) { skipped++; continue; }
     }

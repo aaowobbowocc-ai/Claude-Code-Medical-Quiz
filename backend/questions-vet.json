@@ -27587,8 +27587,8 @@
       "question": "血液氣體和電解質測定時，Henderson-Hasselbach之計算程式，下列何者不包含在內？",
       "options": {
         "A": "pH",
-        "B": "PaCO2",
-        "C": "HCO3-",
+        "B": "PaCO2-",
+        "C": "HCO3",
         "D": "PaO2"
       },
       "answer": "D",
@@ -189186,10 +189186,10 @@
       "number": 59,
       "question": "動脈壓力測量為手術中必須監控的生理數值。其中平均動脈壓（P m ）是由收縮壓（P s ）及舒張壓（P",
       "options": {
-        "A": "P m = P",
-        "B": "P m = 1/2 (P s + P",
-        "C": "P m = P s + 1/3 (P s + P",
-        "D": ")"
+        "A": "Pm = Pd + 1/3 (Ps - Pd)",
+        "B": "Pm = 1/2 (Ps + Pd)",
+        "C": "Pm= Ps + 1/3 (Ps + Pd)",
+        "D": "Pm= Pd +1/3 (Ps + Pd)"
       },
       "answer": "A",
       "explanation": ""

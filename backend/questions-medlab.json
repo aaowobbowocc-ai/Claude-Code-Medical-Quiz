@@ -58528,10 +58528,10 @@
     "number": 42,
     "question": "真核與原核生物蛋白質轉譯之比較，下列何者正確？",
     "options": {
-      "A": "二者的核醣體均是直接與mRNA的5'cap作用tRNA均是接上N-formylmethionine",
-      "B": "二者的起始 tRNA 均是接上 N-formyl methionine",
-      "C": "真核生物是藉由起始因子 eIF4 與 mRNA 結合，原核生物則是以起始因子 IF2 與 mRNA 結合",
-      "D": "真核生物的tRNA與mRNA先後與核醣體結合，原核生物則是tRNA和mRNA同時與核醣體結合nonsense-mediatedmRNAdecay？"
+      "A": "二者的核醣體均是直接與 mRNA 的 5' cap作用",
+      "B": "二者的起始 tRNA均是接上N-formyl methionine",
+      "C": "真核生物是藉由起始因子 eIF4 與mRNA結合，原核生物則是以起始因子 IF2 與mRNA結合",
+      "D": "真核生物的 tRNA與mRNA先後與核醣體結合，原核生物則是tRNA和mRNA同時與核醣體結合"
     },
     "answer": "D",
     "explanation": ""
@@ -58948,10 +58948,10 @@
     "number": 63,
     "question": "病患擁有下列何種基因或染色體異常，對於 acute lymphocytic leukemia （ ALL ）標準的化學治療 有較好的預後？",
     "options": {
-      "A": "Hyperdiploidy （ >50 chromosomes ）或 t(12; 21)",
-      "B": "Hypodiploidy （ <44 chromosomes ）或 t(12; 21)",
-      "C": "Hyperdiploidy （ >50 chromosomes ）或 t(9; 22)",
-      "D": "Hypodiploidy（<44chromosomes）或t(9;22)t(11;14)可以診斷下列何種淋巴瘤（Lymphoma）？"
+      "A": "Hyperdiploidy（>50 chromosomes）或 t(12; 21)",
+      "B": "Hypodiploidy（<44 chromosomes）或 t(12; 21)",
+      "C": "Hyperdiploidy（>50 chromosomes）或 t(9; 22)",
+      "D": "Hypodiploidy（<44 chromosomes）或 t(9; 22)"
     },
     "answer": "A",
     "explanation": ""
@@ -73101,7 +73101,7 @@
     "options": {
       "A": "囊性纖維化病（cystic fibrosis）",
       "B": "地中海貧血症（Thalassemia）",
-      "C": "家族性高膽固醇血症（familialhypercholesterolemia）Leberhereditaryopticneuropathy",
+      "C": "家族性高膽固醇血症（familial hypercholesterolemia）",
       "D": "粒線體疾病，如 Leber hereditary optic neuropathy"
     },
     "answer": "D",
@@ -80046,10 +80046,10 @@
     "number": 73,
     "question": "尿中出現黃尿酸（xanthurenic acid）是缺乏下列何種維生素的表徵？",
     "options": {
-      "A": "B 1",
-      "B": "B 2",
-      "C": "B 6",
-      "D": "B12gentamycin的排除係數（eliminationconstant;ke）為0.13/h，則該藥的半衰期"
+      "A": "B1",
+      "B": "B2",
+      "C": "B6",
+      "D": "B12"
     },
     "answer": "C",
     "explanation": ""
@@ -101127,10 +101127,10 @@
     "number": 52,
     "question": " 以試管稀釋法（broth macrodilution test）測定MIC時，最後接種濃度應達多少CFU/ml？",
     "options": {
-      "A": "1.5 × 10 8",
-      "B": "1×109105",
-      "C": "5 × 10 5",
-      "D": "1 × 10 4"
+      "A": "1.5 × 108",
+      "B": "1 × 109",
+      "C": "5 × 105",
+      "D": "1 × 104"
     },
     "answer": "C",
     "explanation": ""
@@ -105704,10 +105704,10 @@
     "number": 28,
     "question": "HIV-1感染之患者在下列何種情況下易發生伺機性感染？cells/mm3）",
     "options": {
-      "A": "血液中HIV-1 RNA增加，CD4 T細胞數目下降（＜200 cells/mm 3 ）",
-      "B": "血液中HIV-1 RNA（－），CD4 T細胞數目下降（＜200 cells/mm 3 ）",
-      "C": "血液中HIV-1RNA增加，CD4T細胞數目正常cells/mm3）",
-      "D": "血液中HIV-1 RNA（－），CD8 T細胞數目下降（＜200 cells/mm 3 ）"
+      "A": "血液中HIV-1 RNA增加，CD4 T細胞數目下降（＜200 cells/mm3）",
+      "B": "血液中HIV-1 RNA（－），CD4 T細胞數目下降（＜200 cells/mm3）",
+      "C": "血液中HIV-1 RNA增加，CD4 T細胞數目正常",
+      "D": "血液中HIV-1 RNA（－），CD8 T細胞數目下降（＜200 cells/mm3）"
     },
     "answer": "A",
     "explanation": ""
@@ -117868,7 +117868,7 @@
     "question": " 關於真核生物蛋白質轉譯的調控，下列敘述何者正確？",
     "options": {
       "A": "eIF2α 磷酸化會增加轉譯作用的速率，使蛋白質合成增加",
-      "B": "Maskin可連結eIF4E和CPEB形成複合物而增加轉譯作用mTor4E-BP",
+      "B": "Maskin可連結 eIF4E 和 CPEB 形成複合物而增加轉譯作用",
       "C": "蛋白質激酶 mTor 可使 4E-BP 磷酸化而增加轉譯作用",
       "D": "在鐵存在的情況下，iron regulatory protein（IRP）會和 iron regulatory element（IRE）結合，增加 ferritin 的合成"
     },
@@ -119003,8 +119003,8 @@
     "question": "假設一酵素反應遵循Michaelis-Mentenkinetics，則下列有關此酵素的反應速率常數kcat的敘述，何者錯誤？",
     "options": {
       "A": "其概念為一個酵素分子在一定時間內可將受質轉變為產物的受質數量",
-      "B": "即為轉換數（turnovernumber）cat的單位是秒分之一（sec-1）",
-      "C": "at 的單位是秒分之一（sec -1 ）",
+      "B": "即為轉換數（turnover number）",
+      "C": "k cat的單位是秒分之一（sec-1）",
       "D": "會隨著酵素濃度而改變"
     },
     "answer": "D",
@@ -120043,10 +120043,10 @@
     "number": 72,
     "question": "溶血檢體對下列何者造成的檢測誤差最大？",
     "options": {
-      "A": "Na +",
-      "B": "K +",
-      "C": "Cl-",
-      "D": "HCO3 -"
+      "A": "Na+",
+      "B": "K+",
+      "C": "Cl--",
+      "D": "HCO3"
     },
     "answer": "B",
     "explanation": ""
@@ -120544,9 +120544,9 @@
     "question": "有關結核菌培養，痰檢體之去污染劑與消化劑敘述，下列何者錯誤？",
     "options": {
       "A": "2% NaOH具有去污染與消化作用之能力",
-      "B": "N-acetyl-L-cysteine為液化劑,具有消化作用之能力",
+      "B": "N-acetyl-L-cysteine為液化劑，具有消化作用之能力",
       "C": "5% oxalic acid對Pseudomonas aeruginosa具有去污染作用之能力",
-      "D": "benzalkonium chloride為去污染劑,可促進結核菌之生長"
+      "D": "benzalkonium chloride為去污染劑，可促進結核菌之生長"
     },
     "answer": "D",
     "explanation": ""
@@ -137208,7 +137208,7 @@
     "number": 45,
     "question": "下列何種酵素可藉由修飾 RNA polymerase II，進而影響 RNA polymerase II 所調控的RNA elongation？",
     "options": {
-      "A": "cetyltransferase",
+      "A": "Acetyltransferase",
       "B": "Glycosylase",
       "C": "Methyltransferase",
       "D": "Protein kinase"
@@ -142640,10 +142640,10 @@
     "number": 76,
     "question": "化膿性骨髓炎（pyogenic osteomyelitis）最常見之致病菌為下列何者？",
     "options": {
-      "A": "金黃色葡萄球菌(Staphylococcus aureus)",
-      "B": "大腸桿菌(Escherichia coli)",
-      "C": "B群鏈球菌(group B Streptococcus)",
-      "D": "沙門氏菌(Salmonella)"
+      "A": "金黃色葡萄球菌（Staphylococcus aureus）",
+      "B": "大腸桿菌（Escherichia coli）",
+      "C": "B群鏈球菌（group B Streptococcus）",
+      "D": "沙門氏菌（Salmonella）"
     },
     "answer": "A",
     "explanation": ""
@@ -148952,7 +148952,7 @@
     "question": "下列B群維生素中，何者不參與甲硫胺酸／同半胱胺酸循環代謝？",
     "options": {
       "A": "B3",
-      "B": "12",
+      "B": "B6",
       "C": "B12",
       "D": "folic acid"
     },
@@ -156080,9 +156080,9 @@
     "number": 27,
     "question": "檢測下列何者，對於檢體是否為精液最具特異性？",
     "options": {
-      "A": "cid phosphatase",
+      "A": "acid phosphatase",
       "B": "zinc",
-      "C": "itric acid",
+      "C": "citric acid",
       "D": "glucose"
     },
     "answer": "A",
@@ -156539,10 +156539,10 @@
     "number": 50,
     "question": "下列何種分子診斷技術，最適合用來快速分析東南亞型的甲型海洋性貧血帶因者？",
     "options": {
-      "A": "RMS",
+      "A": "ARMS",
       "B": "Gap-PCR",
       "C": "南方墨點法",
-      "D": "NA定序"
+      "D": "DNA定序"
     },
     "answer": "B",
     "explanation": ""
@@ -164181,7 +164181,7 @@
     "options": {
       "A": "Venereal Disease Research Laboratory（VDRL）",
       "B": "Rapid plasma reagin（RPR）",
-      "C": "Agglutinationabsorption（FTA-ABS）",
+      "C": "Agglutination",
       "D": "Fluorescent treponemal antibody absorption（FTA-ABS）"
     },
     "answer": "D",
@@ -164958,7 +164958,7 @@
     "question": "下列何種病毒造成progressive multifocal leukoencephalopathy？",
     "options": {
       "A": "papillomavirus",
-      "B": "K virus",
+      "B": "BK virus",
       "C": "JC virus",
       "D": "Molluscum contagiosum virus"
     },
@@ -165156,10 +165156,10 @@
     "number": 79,
     "question": "下列病毒與傳染途徑之載體配對，何者錯誤？virus：tick",
     "options": {
-      "A": "Chikungunya virus:tick",
-      "B": "Hantaan virus:rodent",
-      "C": "Zika virus:mosquito",
-      "D": "Bunyamwera virus:mosquito"
+      "A": "Chikungunya virus：tick",
+      "B": "Hantaan virus：rodent",
+      "C": "Zika virus：mosquito",
+      "D": "Bunyamwera virus：mosquito"
     },
     "answer": "A",
     "explanation": ""
@@ -167945,7 +167945,7 @@
     "options": {
       "A": "Troponin",
       "B": "CK-2",
-      "C": "B-type natriuretic peptide(BNP)",
+      "C": "B-type natriuretic peptide（BNP）",
       "D": "Myoglobin"
     },
     "answer": "C",
@@ -170601,10 +170601,10 @@
     "number": 31,
     "question": "下列何者屬於連續波式超音波（continuous echo）？",
     "options": {
-      "A": "-mode",
-      "B": "-mode",
+      "A": "A-mode",
+      "B": "B-mode",
       "C": "M-mode",
-      "D": "oppler echo"
+      "D": "Doppler echo"
     },
     "answer": "D",
     "explanation": ""
@@ -171089,7 +171089,7 @@
     "question": "下列何種細胞不屬於原生性免疫系統（innate immunity）？",
     "options": {
       "A": "樹枝狀細胞（dendritic cell）",
-      "B": "淋巴細胞（B lymphocyte）",
+      "B": "B淋巴細胞（B lymphocyte）",
       "C": "單核球（monocyte）",
       "D": "皮膚表皮細胞"
     },
@@ -174999,7 +174999,7 @@
     "number": 10,
     "question": "糞便潛血試驗中，下列何種方法利用氫氧化鈉以檢測血紅素的抗鹼性？",
     "options": {
-      "A": "PT test",
+      "A": "APT test",
       "B": "HemeQuant",
       "C": "Hemoccult II",
       "D": "HemeSelect"
@@ -176225,7 +176225,7 @@
     "question": "下列何種基因變異的分子檢驗最適合用於篩檢乳癌病人家族成員是乳癌高危險族群與否？",
     "options": {
       "A": "TP53基因",
-      "B": "RCA1基因",
+      "B": "BRCA1基因",
       "C": "KRAS基因",
       "D": "MET基因"
     },
@@ -176366,7 +176366,7 @@
       "A": "須使用不同濃度的品管物質進行定量試驗",
       "B": "定性試驗須包含positive與negative control組",
       "C": "須使用不同濃度的酵素進行定量試驗",
-      "D": "NA／RNA萃取過程須使用品管物質測定萃取過程的誤差"
+      "D": "DNA／RNA萃取過程須使用品管物質測定萃取過程的誤差"
     },
     "answer": "C",
     "explanation": ""
@@ -184487,7 +184487,7 @@
     "number": 3,
     "question": "下列何者不能用來檢測尿蛋白？",
     "options": {
-      "A": "cetic acid",
+      "A": "acetic acid",
       "B": "tetrabromophenol blue",
       "C": "sulfosalicylic acid",
       "D": "nitroprusside"
@@ -184828,7 +184828,7 @@
     "options": {
       "A": "髓鞘蛋白（myelin-basic protein）",
       "B": "乳酸",
-      "C": "-反應蛋白（C-reactive protein）",
+      "C": "C-反應蛋白（C-reactive protein）",
       "D": "葡萄糖"
     },
     "answer": "A",
@@ -185228,7 +185228,7 @@
     "options": {
       "A": "synovial lining cells",
       "B": "RA cells",
-      "C": "artilage cells",
+      "C": "cartilage cells",
       "D": "LE cells"
     },
     "answer": "A",
@@ -185605,7 +185605,7 @@
     "number": 59,
     "question": "下列何種分子檢測法不適用於檢測細菌的抗藥性基因？",
     "options": {
-      "A": "rbitrarily primed PCR",
+      "A": "Arbitrarily primed PCR",
       "B": "Pyrosequencing",
       "C": "PCR-SSCP (single-strand conformation polymorphism)",
       "D": "Microarray analysis"
@@ -185928,7 +185928,7 @@
       "A": "螢光原位雜交（FISH）",
       "B": "RNA反轉錄後進行聚合酶連鎖反應（RT-PCR）",
       "C": "免疫組織化學染色法（IHC）",
-      "D": "NA桑格定序法（Sanger sequencing）"
+      "D": "DNA桑格定序法（Sanger sequencing）"
     },
     "answer": "D",
     "explanation": ""
@@ -308725,8 +308725,8 @@
     "options": {
       "A": "極低密度脂蛋白（VLDL）",
       "B": "低密度脂蛋白（LDL）",
-      "C": "高密度脂蛋白2（HDL）2",
-      "D": "高密度脂蛋白3（HDL）3"
+      "C": "高密度脂蛋白2（HDL2）",
+      "D": "高密度脂蛋白3（HDL3）"
     },
     "answer": "C"
   },

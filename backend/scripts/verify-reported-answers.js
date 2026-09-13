@@ -19,6 +19,17 @@ const path = require('path');
 const { execFileSync } = require('child_process');
 const { fetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher');
 const { parseAnswerSheet } = require('./lib/moex-answer-sheet');
+
+async function pdfText(buf) {
+  const mupdf = await import('mupdf');
+  const doc = mupdf.Document.openDocument(buf, 'application/pdf');
+  let all = '';
+  for (let p = 0; p < doc.countPages(); p++) {
+    const st = JSON.parse(doc.loadPage(p).toStructuredText('preserve-whitespace').asJSON());
+    for (const b of st.blocks || []) for (const l of b.lines || []) all += (l.text || '').trim() + ' ';
+  }
+  return all;
+}
 const { parseAnswersColumnAware } = require('./lib/moex-column-parser');
 
 // 不同年度的答案卷版型不一樣：新式是「題號/答案」兩列對齊的表格，舊式是欄位式。
@@ -58,13 +69,35 @@ function probeCodes(code, year) {
   return codeCache[code];
 }
 
+// ⚠️ 一定要優先抓「更正答案卷」(t=M)，不能只看標準答案卷 (t=S)。
+// 考選部常在事後發更正，備註寫「第4題答Ｂ、Ｃ給分」這種多答案給分。
+// 只看 S 會把我們存的（更正後）答案誤判成錯誤 —— 2026-09-13 差點據此改掉
+// 4 個正確答案（105100 醫學(二) #4/#16/#19/#58 全都在更正給分範圍內）。
 async function getAnswerPdf(code, c, s) {
-  const p = path.join(PDF_DIR, `S_${code}_${c}_${s}.pdf`);
-  if (fs.existsSync(p) && fs.statSync(p).size > 1000) return fs.readFileSync(p);
   fs.mkdirSync(PDF_DIR, { recursive: true });
-  const buf = await fetchPdf(buildMoexUrl('S', code, c, s), { userAgent: UA, referer: REF });
-  fs.writeFileSync(p, buf);
-  return buf;
+  for (const t of ['M', 'S']) {
+    const p = path.join(PDF_DIR, `${t}_${code}_${c}_${s}.pdf`);
+    if (fs.existsSync(p) && fs.statSync(p).size > 1000) return { buf: fs.readFileSync(p), type: t };
+    try {
+      const buf = await fetchPdf(buildMoexUrl(t, code, c, s), { userAgent: UA, referer: REF });
+      if (buf && buf.length > 1000) { fs.writeFileSync(p, buf); return { buf, type: t }; }
+    } catch { /* 沒有更正卷就退回標準卷 */ }
+  }
+  throw new Error('no answer pdf');
+}
+
+/** 從更正卷備註解析「第N題答X、Y給分」/「第N題一律給分」 */
+function parseCorrections(text) {
+  const out = {};
+  const body = text.slice(text.indexOf('備'));
+  for (const m of body.matchAll(/第\s*(\d{1,3})\s*題\s*(一律給分|答([ＡＢＣＤA-D、，,或\s]+)給分)/g)) {
+    const n = +m[1];
+    if (m[2] === '一律給分') { out[n] = '送分'; continue; }
+    const letters = (m[3].match(/[ＡＢＣＤA-D]/g) || [])
+      .map(c => c.charCodeAt(0) > 0xFF00 ? String.fromCharCode(c.charCodeAt(0) - 0xFEE0) : c);
+    if (letters.length) out[n] = [...new Set(letters)].join(',');
+  }
+  return out;
 }
 
 (async () => {
@@ -112,8 +145,13 @@ async function getAnswerPdf(code, c, s) {
     let A = null;
     for (const cand of cands) {
       try {
-        const buf = await getAnswerPdf(p.code, cand.c, cand.s);
-        A = await parseAny(buf);
+        const got = await getAnswerPdf(p.code, cand.c, cand.s);
+        A = await parseAny(got.buf);
+        if (A && got.type === 'M') {
+          // 更正卷的 ＃ 只代表「有更正」，真正內容在備註，要覆蓋回去
+          const txt = await pdfText(got.buf);
+          Object.assign(A, parseCorrections(txt));
+        }
         if (A && Object.keys(A).length) break;
       } catch { /* 換下一個候選 */ }
     }

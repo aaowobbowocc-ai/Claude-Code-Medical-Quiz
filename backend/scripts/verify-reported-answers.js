@@ -18,7 +18,19 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const { fetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher');
+const { parseAnswerSheet } = require('./lib/moex-answer-sheet');
 const { parseAnswersColumnAware } = require('./lib/moex-column-parser');
+
+// 不同年度的答案卷版型不一樣：新式是「題號/答案」兩列對齊的表格，舊式是欄位式。
+// 兩支都試，取解析出題數較多的那個。
+async function parseAny(buf) {
+  const results = [];
+  for (const fn of [parseAnswerSheet, parseAnswersColumnAware]) {
+    try { const r = await fn(buf); if (r && Object.keys(r).length) results.push(r); } catch {}
+  }
+  if (!results.length) return null;
+  return results.sort((a, b) => Object.keys(b).length - Object.keys(a).length)[0];
+}
 
 const DIR = path.join(__dirname, '..');
 const CACHE = path.join(DIR, '_tmp', 'moex-codes.json');
@@ -96,7 +108,7 @@ async function getAnswerPdf(code, c, s) {
     for (const cand of cands) {
       try {
         const buf = await getAnswerPdf(p.code, cand.c, cand.s);
-        A = await parseAnswersColumnAware(buf);
+        A = await parseAny(buf);
         if (A && Object.keys(A).length) break;
       } catch { /* 換下一個候選 */ }
     }

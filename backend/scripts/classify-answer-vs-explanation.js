@@ -23,6 +23,34 @@ const { execFileSync } = require('child_process');
 const { fetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher');
 const { parseAnswerSheet } = require('./lib/moex-answer-sheet');
 
+/** 更正卷備註：「第N題答Ｘ、Ｙ給分」/「答Ｘ或Ｙ或Ｚ者給分」/「第N題一律給分」
+ *  ⚠️ 字元類別一定要含「者」「均」——考選部有「答Ａ或Ｂ或Ｃ或Ｄ**者**給分」這種寫法，
+ *  漏掉就整筆比對不到，又會把正確答案判成錯誤（2026-09-15 第四次踩到）。 */
+function parseCorrections(text) {
+  const out = {};
+  const i = text.indexOf('備');
+  const body = i >= 0 ? text.slice(i) : text;
+  for (const m of body.matchAll(/第\s*(\d{1,3})\s*題\s*(一律給分|除未作答者不給分外[^，。]*|答([ＡＢＣＤA-D、，,或者均\s]+?)[者均]?給分)/g)) {
+    const n = +m[1];
+    if (!m[3]) { out[n] = '送分'; continue; }
+    const letters = (m[3].match(/[ＡＢＣＤA-D]/g) || [])
+      .map(c => c.charCodeAt(0) > 0xFF00 ? String.fromCharCode(c.charCodeAt(0) - 0xFEE0) : c);
+    if (letters.length) out[n] = [...new Set(letters)];
+  }
+  return out;
+}
+
+async function pdfText(buf) {
+  const mupdf = await import('mupdf');
+  const doc = mupdf.Document.openDocument(buf, 'application/pdf');
+  let all = '';
+  for (let p = 0; p < doc.countPages(); p++) {
+    const st = JSON.parse(doc.loadPage(p).toStructuredText('preserve-whitespace').asJSON());
+    for (const b of st.blocks || []) for (const l of b.lines || []) all += (l.text || '').trim() + ' ';
+  }
+  return all;
+}
+
 const DIR = path.join(__dirname, '..');
 const CACHE = path.join(DIR, '_tmp', 'moex-codes.json');
 const PDF_DIR = path.join(DIR, '_tmp', 'bullet-cloze');
@@ -92,6 +120,39 @@ async function pdfOptions(buf) {
     if (cur.opts.length) cur.opts[cur.opts.length - 1] += l.t;
   }
   if (cur && cur.opts.length === 4) out.set(cur.num, cur.opts.slice());
+  if (out.size) return out;
+
+  // 標記式抓不到 → 改用幾何版型：題號獨立一行（x<55 純數字），選項無字母標記，
+  // 靠 y 分列、x 分欄還原成格子，取每題的最後 4 格當選項。
+  const marks = [];
+  lines.forEach((l, i) => { if (l.x < 55 && /^\d{1,3}$/.test(l.t)) marks.push({ num: +l.t, i }); });
+  const GAP = 45, ROW_TOL = 8;
+  for (let mi = 0; mi < marks.length; mi++) {
+    const from = marks[mi].i + 1;
+    const to = mi + 1 < marks.length ? marks[mi + 1].i : lines.length;
+    const block = lines.slice(from, to);
+    const rows = [];
+    for (const l of block) {
+      let r = rows.find(x => x.p === l.p && Math.abs(x.y - l.y) <= ROW_TOL);
+      if (!r) { r = { p: l.p, y: l.y, items: [] }; rows.push(r); }
+      r.items.push(l);
+    }
+    rows.sort((a, b) => a.p - b.p || a.y - b.y);
+    const cells = [];
+    rows.forEach((row, ri) => {
+      row.items.sort((a, b) => a.x - b.x);
+      let cur2 = null;
+      for (const it of row.items) {
+        if (cur2 && it.x - cur2.startX <= GAP) cur2.t += it.t;
+        else { cur2 = { x: it.x, startX: it.x, t: it.t, row: ri }; cells.push(cur2); }
+      }
+    });
+    cells.sort((a, b) => a.row - b.row || a.x - b.x);
+    const texts = cells
+      .map(c => c.t.normalize('NFC').replace(/^[-�]?\s*/, '').trim())
+      .filter(Boolean);
+    if (texts.length >= 4) out.set(marks[mi].num, texts.slice(-4));
+  }
   return out;
 }
 
@@ -125,13 +186,16 @@ async function pdfOptions(buf) {
     });
     if (!cands.length) { res.undetermined += p.items.length; continue; }
 
-    let A = null, O = null;
+    // 標準卷(S)拿字母，更正卷(M)只拿備註的「答X、Y給分」。
+    // 不能只抓 M —— 它的答案欄是「＃」不是字母，會讓幾乎所有題都變成無法判定。
+    let A = null, corr = {}, O = null;
     for (const cand of cands) {
       try {
-        for (const t of ['M', 'S']) {
-          try { A = await parseAnswerSheet(await getPdf(t, p.code, cand.c, cand.s)); } catch {}
-          if (A && Object.keys(A).length) break;
-        }
+        try { A = await parseAnswerSheet(await getPdf('S', p.code, cand.c, cand.s)); } catch {}
+        try {
+          const mbuf = await getPdf('M', p.code, cand.c, cand.s);
+          corr = parseCorrections(await pdfText(mbuf));
+        } catch {}
         O = await pdfOptions(await getPdf('Q', p.code, cand.c, cand.s));
         if (A && Object.keys(A).length && O.size) break;
       } catch {}
@@ -140,7 +204,17 @@ async function pdfOptions(buf) {
 
     for (const { b, q } of p.items) {
       done++;
-      const off = A[q.number];
+      // 有更正就以更正為準：多答案或送分時，我們的答案只要在給分範圍內就算對
+      const c2 = corr[q.number];
+      if (c2) {
+        if (c2 === '送分' || (Array.isArray(c2) && String(q.answer).split(/[,、\s]+/).filter(Boolean).every(x => c2.includes(x)))) {
+          res.answerOk.push({ exam: p.exam, where: `${q.roc_year}${q.session} #${q.number}`, ours: q.answer, official: '更正給分', key: b.key });
+        } else {
+          res.answerWrong.push({ exam: p.exam, where: `${q.roc_year}${q.session} #${q.number}`, ours: q.answer, official: Array.isArray(c2) ? c2.join(',') : c2, key: b.key });
+        }
+        continue;
+      }
+      const off = A && A[q.number];
       const opts = O.get(+q.number);
       if (!off || !opts || !/^[A-D]$/.test(String(off).trim())) { res.undetermined++; continue; }
       const officialText = skel(opts['ABCD'.indexOf(String(off).trim())] || '');

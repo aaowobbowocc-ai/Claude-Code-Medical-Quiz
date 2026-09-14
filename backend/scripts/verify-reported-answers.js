@@ -90,7 +90,7 @@ async function getAnswerPdf(code, c, s) {
 function parseCorrections(text) {
   const out = {};
   const body = text.slice(text.indexOf('備'));
-  for (const m of body.matchAll(/第\s*(\d{1,3})\s*題\s*(一律給分|答([ＡＢＣＤA-D、，,或\s]+)給分)/g)) {
+  for (const m of body.matchAll(/第\s*(\d{1,3})\s*題\s*(一律給分|答([ＡＢＣＤA-D、，,或者均\s]+?)[者均]?給分)/g)) {
     const n = +m[1];
     if (m[2] === '一律給分') { out[n] = '送分'; continue; }
     const letters = (m[3].match(/[ＡＢＣＤA-D]/g) || [])

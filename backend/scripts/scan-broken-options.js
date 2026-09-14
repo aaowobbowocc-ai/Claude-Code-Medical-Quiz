@@ -40,6 +40,15 @@ function diagnose(q) {
   const fragHead = (o) => /^[～~，,）)、。]/.test(o) || (/^[-－]/.test(o) && !/^[-－]\s*[\d.]/.test(o));
   // 結尾的 - 可能是離子價數（HCO3-、Cl-），只在前面不是英數時才算碎片
   const fragTail = (o) => /[～~（(，,]$/.test(o) || (/[-－]$/.test(o) && !/[A-Za-z0-9)]\s*[-－]$/.test(o));
+  // 註解位移：原卷是「Nonorganic hearing loss（非器質性聽損）」這種「英文＋中文註解」，
+  // 抽字時中文註解被推到**下一個**選項開頭，變成
+  //   A （聽覺處理障礙）Nonorganic hearing loss
+  //   B （非器質性聽損）GJB2
+  // 每個選項都帶著上一個選項的註解，最後一個選項只剩註解。
+  // 特徵：選項以全形括號的中文註解開頭。要求 ≥2 個選項符合，避免誤判「（一）…」這種編號。
+  const glossHead = (o) => /^[（(][一-鿿][^）)]{1,20}[）)]/.test(o.trim());
+  if (opts.filter(glossHead).length >= 2) return 'gloss-shift';
+
   if (opts.some(o => fragHead(o.trim()))) return 'frag-head';
   if (opts.some(o => fragTail(o.trim()))) return 'frag-tail';
 

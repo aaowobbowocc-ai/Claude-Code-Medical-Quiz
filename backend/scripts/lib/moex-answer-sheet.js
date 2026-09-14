@@ -45,7 +45,10 @@ async function parseAnswerSheet(buf) {
     const halfWidth = (t) => String(t).replace(/[Ａ-Ｚ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0));
 
     for (let i = 0; i < rows.length; i++) {
-      if (!/^題號/.test(label(rows[i]))) continue;
+      // ⚠️ 標準答案卷的表頭是「題號」，更正答案卷是「題序」——只認「題號」會讓
+      // 更正卷永遠解析失敗、一路退回標準卷，備註裡的「答Ｘ、Ｙ給分」就永遠用不到。
+      // 2026-09-14 連續三次把正確答案誤判成錯誤，根因都是這一行。
+      if (!/^題(號|序)/.test(label(rows[i]))) continue;
       // 往下找最近的「答案」列。注意：標籤有時跟第一個答案黏在同一個 text run
       // （"答案Ａ"），所以不能用 /^答案$/ 精確比對。
       let ansRow = null;

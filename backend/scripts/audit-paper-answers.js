@@ -32,7 +32,7 @@ const REF = 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx';
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i >= 0 ? process.argv[i + 1] : d; };
 const EXAM = arg('--exam', 'doctor1');
 const MIN = +arg('--min', '0.85');
-const keyName = (t) => String(t).replace(/[（）()【】\[\]、，,。．.\s]/g, '');
+const { nameKey: keyName, sameName } = require('./lib/moex-normalize');
 
 const codeCache = (() => { try { return JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch { return {}; } })();
 function probeCodes(code, year) {

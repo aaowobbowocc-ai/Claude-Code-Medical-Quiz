@@ -58,9 +58,7 @@ const UA = 'Mozilla/5.0';
 const REF = 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx';
 const LIMIT = process.argv.includes('--limit') ? +process.argv[process.argv.indexOf('--limit') + 1] : 40;
 
-const norm = (t) => String(t || '').normalize('NFC').replace(/\s+/g, '');
-const skel = (t) => norm(t).replace(/[（）()［］\[\]【】、，,。．.：:；;？?！!"'`~～－\-—–_]/g, '');
-const keyName = (t) => String(t).replace(/[（）()【】\[\]、，,。．.\s]/g, '');
+const { normText: norm, skeleton: skel, nameKey: keyName, sameName } = require('./lib/moex-normalize');
 
 const codeCache = (() => { try { return JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch { return {}; } })();
 function probeCodes(code, year) {

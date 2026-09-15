@@ -15,7 +15,7 @@ const fs = require('fs');
 const path = require('path');
 
 const DIR = path.join(__dirname, '..');
-const norm = (t) => String(t).normalize('NFC').replace(/\s+/g, '');
+const { normText: norm } = require('./lib/moex-normalize');
 
 fs.readFileSync(path.join(DIR, '.env'), 'utf-8').split('\n').forEach(l => {
   const i = l.indexOf('=');

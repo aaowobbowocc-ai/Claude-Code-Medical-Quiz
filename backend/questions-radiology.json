@@ -4,7 +4,7 @@
     "label": "醫事放射師",
     "scraped_at": "2026-04-15T14:34:05.454Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-08-31T12:13:32.623585"
+    "last_updated": "2026-09-15T10:07:08.808Z"
   },
   "total": 15359,
   "questions": [
@@ -228084,7 +228084,14 @@
       "answer": "A",
       "explanation": "",
       "incomplete": "image_options",
-      "image_url": "/question-images/radiology_111100_q77_full.webp"
+      "image_url": "/question-images/radiology_111100_q77_full.webp",
+      "images": [
+        "/question-images/radiology_3106_0.webp",
+        "/question-images/radiology_3106_1.webp",
+        "/question-images/radiology_3106_2.webp",
+        "/question-images/radiology_3106_3.webp",
+        "/question-images/radiology_3106_4.webp"
+      ]
     },
     {
       "id": 3107,
@@ -304678,7 +304685,14 @@
         "C": "β+ decay",
         "D": "n decay"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/radiology_115090_1_29_0.webp",
+        "/question-images/radiology_115090_1_29_1.webp",
+        "/question-images/radiology_115090_1_29_2.webp",
+        "/question-images/radiology_115090_1_29_3.webp",
+        "/question-images/radiology_115090_1_29_4.webp"
+      ]
     },
     {
       "id": "115090_1_30",
@@ -305990,7 +306004,14 @@
         "C": "maximum intensity projection（MIP）",
         "D": "minimum intensity projection（MinIP）"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/radiology_115090_2_18_0.webp",
+        "/question-images/radiology_115090_2_18_1.webp",
+        "/question-images/radiology_115090_2_18_2.webp",
+        "/question-images/radiology_115090_2_18_3.webp",
+        "/question-images/radiology_115090_2_18_4.webp"
+      ]
     },
     {
       "id": "115090_2_19",
@@ -306275,7 +306296,22 @@
         "C": "亮度均勻度",
         "D": "低對比度評估"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/radiology_115090_2_33_0.webp",
+        "/question-images/radiology_115090_2_33_1.webp",
+        "/question-images/radiology_115090_2_33_2.webp",
+        "/question-images/radiology_115090_2_33_3.webp",
+        "/question-images/radiology_115090_2_33_4.webp",
+        "/question-images/radiology_115090_2_33_5.webp",
+        "/question-images/radiology_115090_2_33_6.webp",
+        "/question-images/radiology_115090_2_33_7.webp",
+        "/question-images/radiology_115090_2_33_8.webp",
+        "/question-images/radiology_115090_2_33_9.webp",
+        "/question-images/radiology_115090_2_33_10.webp",
+        "/question-images/radiology_115090_2_33_11.webp",
+        "/question-images/radiology_115090_2_33_12.webp"
+      ]
     },
     {
       "id": "115090_2_34",
@@ -306313,7 +306349,14 @@
         "C": "甲：偵檢器、乙：高壓產生器、丙：X光球管",
         "D": "甲：偵檢器、乙：X光球管、丙：高壓產生器"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/radiology_115090_2_35_0.webp",
+        "/question-images/radiology_115090_2_35_1.webp",
+        "/question-images/radiology_115090_2_35_2.webp",
+        "/question-images/radiology_115090_2_35_3.webp",
+        "/question-images/radiology_115090_2_35_4.webp"
+      ]
     },
     {
       "id": "115090_2_36",
@@ -306769,7 +306812,13 @@
         "C": "CyberKnife",
         "D": "Gamma Knife"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/radiology_115090_2_60_0.webp",
+        "/question-images/radiology_115090_2_60_1.webp",
+        "/question-images/radiology_115090_2_60_2.webp",
+        "/question-images/radiology_115090_2_60_3.webp"
+      ]
     },
     {
       "id": "115090_2_61",
@@ -306959,7 +307008,11 @@
         "C": "IMRT肝癌治療",
         "D": "加馬刀腦癌治療"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/radiology_115090_2_70_0.webp",
+        "/question-images/radiology_115090_2_70_1.webp"
+      ]
     },
     {
       "id": "115090_2_71",
@@ -307036,7 +307089,18 @@
         "C": "水",
         "D": "骨頭"
       },
-      "answer": "D"
+      "answer": "D",
+      "images": [
+        "/question-images/radiology_115090_2_74_0.webp",
+        "/question-images/radiology_115090_2_74_1.webp",
+        "/question-images/radiology_115090_2_74_2.webp",
+        "/question-images/radiology_115090_2_74_3.webp",
+        "/question-images/radiology_115090_2_74_4.webp",
+        "/question-images/radiology_115090_2_74_5.webp",
+        "/question-images/radiology_115090_2_74_6.webp",
+        "/question-images/radiology_115090_2_74_7.webp",
+        "/question-images/radiology_115090_2_74_8.webp"
+      ]
     },
     {
       "id": "115090_2_75",
@@ -307436,7 +307500,13 @@
         "C": "肝動脈",
         "D": "十二指腸靜脈"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/radiology_115090_3_15_0.webp",
+        "/question-images/radiology_115090_3_15_1.webp",
+        "/question-images/radiology_115090_3_15_2.webp",
+        "/question-images/radiology_115090_3_15_3.webp"
+      ]
     },
     {
       "id": "115090_3_16",
@@ -307607,7 +307677,14 @@
         "C": "神經性膀胱",
         "D": "游離腎"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/radiology_115090_3_24_0.webp",
+        "/question-images/radiology_115090_3_24_1.webp",
+        "/question-images/radiology_115090_3_24_2.webp",
+        "/question-images/radiology_115090_3_24_3.webp",
+        "/question-images/radiology_115090_3_24_4.webp"
+      ]
     },
     {
       "id": "115090_3_25",
@@ -307626,7 +307703,10 @@
         "C": "hypervascular tumor",
         "D": "arteriovenous malformation"
       },
-      "answer": "D"
+      "answer": "D",
+      "images": [
+        "/question-images/radiology_115090_3_25_0.webp"
+      ]
     },
     {
       "id": "115090_3_26",
@@ -307873,7 +307953,15 @@
         "C": "shaded surface display（SSD）",
         "D": "multiplanar reformation（MPR）"
       },
-      "answer": "D"
+      "answer": "D",
+      "images": [
+        "/question-images/radiology_115090_3_38_0.webp",
+        "/question-images/radiology_115090_3_38_1.webp",
+        "/question-images/radiology_115090_3_38_2.webp",
+        "/question-images/radiology_115090_3_38_3.webp",
+        "/question-images/radiology_115090_3_38_4.webp",
+        "/question-images/radiology_115090_3_38_5.webp"
+      ]
     },
     {
       "id": "115090_3_39",
@@ -307911,7 +307999,17 @@
         "C": "內頸動靜脈畸形（internal carotid artery arteriovenous malformation）",
         "D": "顳葉動脈動靜脈畸形（temporal cerebral artery arteriovenous malformation）"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/radiology_115090_3_40_0.webp",
+        "/question-images/radiology_115090_3_40_1.webp",
+        "/question-images/radiology_115090_3_40_2.webp",
+        "/question-images/radiology_115090_3_40_3.webp",
+        "/question-images/radiology_115090_3_40_4.webp",
+        "/question-images/radiology_115090_3_40_5.webp",
+        "/question-images/radiology_115090_3_40_6.webp",
+        "/question-images/radiology_115090_3_40_7.webp"
+      ]
     },
     {
       "id": "115090_3_41",
@@ -308006,7 +308104,11 @@
         "C": "phase-contrast MR venography of cerebral vein",
         "D": "cardiac MRI"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/radiology_115090_3_45_0.webp",
+        "/question-images/radiology_115090_3_45_1.webp"
+      ]
     },
     {
       "id": "115090_3_46",
@@ -308025,7 +308127,15 @@
         "C": "大腸癌",
         "D": "腸套疊"
       },
-      "answer": "D"
+      "answer": "D",
+      "images": [
+        "/question-images/radiology_115090_3_46_0.webp",
+        "/question-images/radiology_115090_3_46_1.webp",
+        "/question-images/radiology_115090_3_46_2.webp",
+        "/question-images/radiology_115090_3_46_3.webp",
+        "/question-images/radiology_115090_3_46_4.webp",
+        "/question-images/radiology_115090_3_46_5.webp"
+      ]
     },
     {
       "id": "115090_3_47",
@@ -308291,7 +308401,27 @@
         "C": "截斷假影（truncation artifact）",
         "D": "反摺假影（flow aliasing artifact）"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/radiology_115090_3_60_0.webp",
+        "/question-images/radiology_115090_3_60_1.webp",
+        "/question-images/radiology_115090_3_60_2.webp",
+        "/question-images/radiology_115090_3_60_3.webp",
+        "/question-images/radiology_115090_3_60_4.webp",
+        "/question-images/radiology_115090_3_60_5.webp",
+        "/question-images/radiology_115090_3_60_6.webp",
+        "/question-images/radiology_115090_3_60_7.webp",
+        "/question-images/radiology_115090_3_60_8.webp",
+        "/question-images/radiology_115090_3_60_9.webp",
+        "/question-images/radiology_115090_3_60_10.webp",
+        "/question-images/radiology_115090_3_60_11.webp",
+        "/question-images/radiology_115090_3_60_12.webp",
+        "/question-images/radiology_115090_3_60_13.webp",
+        "/question-images/radiology_115090_3_60_14.webp",
+        "/question-images/radiology_115090_3_60_15.webp",
+        "/question-images/radiology_115090_3_60_16.webp",
+        "/question-images/radiology_115090_3_60_17.webp"
+      ]
     },
     {
       "id": "115090_3_61",
@@ -308329,7 +308459,18 @@
         "C": "adrenal pheochromocytoma",
         "D": "lymph node metastasis"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/radiology_115090_3_62_0.webp",
+        "/question-images/radiology_115090_3_62_1.webp",
+        "/question-images/radiology_115090_3_62_2.webp",
+        "/question-images/radiology_115090_3_62_3.webp",
+        "/question-images/radiology_115090_3_62_4.webp",
+        "/question-images/radiology_115090_3_62_5.webp",
+        "/question-images/radiology_115090_3_62_6.webp",
+        "/question-images/radiology_115090_3_62_7.webp",
+        "/question-images/radiology_115090_3_62_8.webp"
+      ]
     },
     {
       "id": "115090_3_63",
@@ -308424,7 +308565,17 @@
         "C": "門靜脈",
         "D": "總膽管"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/radiology_115090_3_67_0.webp",
+        "/question-images/radiology_115090_3_67_1.webp",
+        "/question-images/radiology_115090_3_67_2.webp",
+        "/question-images/radiology_115090_3_67_3.webp",
+        "/question-images/radiology_115090_3_67_4.webp",
+        "/question-images/radiology_115090_3_67_5.webp",
+        "/question-images/radiology_115090_3_67_6.webp",
+        "/question-images/radiology_115090_3_67_7.webp"
+      ]
     },
     {
       "id": "115090_3_68",
@@ -308443,7 +308594,13 @@
         "C": "腎囊腫",
         "D": "腎膿瘍"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/radiology_115090_3_68_0.webp",
+        "/question-images/radiology_115090_3_68_1.webp",
+        "/question-images/radiology_115090_3_68_2.webp",
+        "/question-images/radiology_115090_3_68_3.webp"
+      ]
     },
     {
       "id": "115090_3_69",
@@ -308462,7 +308619,13 @@
         "C": "胃癌",
         "D": "腎上腺腫瘤"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/radiology_115090_3_69_0.webp",
+        "/question-images/radiology_115090_3_69_1.webp",
+        "/question-images/radiology_115090_3_69_2.webp",
+        "/question-images/radiology_115090_3_69_3.webp"
+      ]
     },
     {
       "id": "115090_3_70",
@@ -308481,7 +308644,14 @@
         "C": "前列腺",
         "D": "睪丸"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/radiology_115090_3_70_0.webp",
+        "/question-images/radiology_115090_3_70_1.webp",
+        "/question-images/radiology_115090_3_70_2.webp",
+        "/question-images/radiology_115090_3_70_3.webp",
+        "/question-images/radiology_115090_3_70_4.webp"
+      ]
     },
     {
       "id": "115090_3_71",
@@ -308500,7 +308670,14 @@
         "C": "子宮內膜腔積水",
         "D": "子宮肌瘤"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/radiology_115090_3_71_0.webp",
+        "/question-images/radiology_115090_3_71_1.webp",
+        "/question-images/radiology_115090_3_71_2.webp",
+        "/question-images/radiology_115090_3_71_3.webp",
+        "/question-images/radiology_115090_3_71_4.webp"
+      ]
     },
     {
       "id": "115090_3_72",
@@ -308519,7 +308696,14 @@
         "C": "肝動脈、肝靜脈、下腔靜脈",
         "D": "門靜脈、肝動脈、腹主動脈"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/radiology_115090_3_72_0.webp",
+        "/question-images/radiology_115090_3_72_1.webp",
+        "/question-images/radiology_115090_3_72_2.webp",
+        "/question-images/radiology_115090_3_72_3.webp",
+        "/question-images/radiology_115090_3_72_4.webp"
+      ]
     },
     {
       "id": "115090_3_73",
@@ -309336,7 +309520,10 @@
         "C": "50",
         "D": "100"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/radiology_115090_4_35_0.webp"
+      ]
     },
     {
       "id": "115090_4_36",
@@ -311522,7 +311709,16 @@
         "C": "21％",
         "D": "28％"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/radiology_115090_5_70_0.webp",
+        "/question-images/radiology_115090_5_70_1.webp",
+        "/question-images/radiology_115090_5_70_2.webp",
+        "/question-images/radiology_115090_5_70_3.webp",
+        "/question-images/radiology_115090_5_70_4.webp",
+        "/question-images/radiology_115090_5_70_5.webp",
+        "/question-images/radiology_115090_5_70_6.webp"
+      ]
     },
     {
       "id": "115090_5_71",
@@ -311541,7 +311737,12 @@
         "C": "縮短準直儀與病人的間距可提升靈敏度",
         "D": "縮短準直儀與病人的間距可提升空間解析度"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/radiology_115090_5_71_0.webp",
+        "/question-images/radiology_115090_5_71_1.webp",
+        "/question-images/radiology_115090_5_71_2.webp"
+      ]
     },
     {
       "id": "115090_5_72",

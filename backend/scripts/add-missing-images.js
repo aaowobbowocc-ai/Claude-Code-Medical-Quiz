@@ -366,9 +366,29 @@ async function pdfExamName(buf) {
     const doc = mupdf.Document.openDocument(new Uint8Array(buf), 'application/pdf')
     const parsed = JSON.parse(doc.loadPage(0).toStructuredText('preserve-images').asJSON())
     let txt = ''
+    // ⚠️ 不能照 PDF 區塊順序直接串接。考選部把「類科」兩個字拆成兩個 text run，
+    // 且 baseline 差 1px（類 y=142 x=46、科 y=141 x=90），照原順序串會變成
+    // 「科：語言治療師類」，regex 永遠比對不到 → 那個考試整個 probe 不到卷。
+    // 必須先按 y 分列（容差 4）、列內按 x 排序再串。
+    // （2026-09-15 語言治療師補圖恆為 0 的真因）
+    const __items = []
     for (const b of parsed.blocks || []) {
       if (b.type !== 'text') continue
-      for (const ln of (b.lines || [])) txt += (ln.text || '') + '\n'
+      for (const ln of (b.lines || [])) {
+        const t = ln.text || ''
+        if (!t.trim()) continue
+        __items.push({ y: Math.round(ln.bbox.y), x: Math.round(ln.bbox.x), t })
+      }
+    }
+    const __rows = []
+    for (const it of __items.sort((a, b) => a.y - b.y || a.x - b.x)) {
+      const r = __rows.find(r => Math.abs(r.y - it.y) <= 4)
+      if (r) r.items.push(it)
+      else __rows.push({ y: it.y, items: [it] })
+    }
+    for (const r of __rows) {
+      r.items.sort((a, b) => a.x - b.x)
+      txt += r.items.map(i => i.t).join('') + '\n'
     }
     // Match across line breaks. Two layouts exist on moex:
     //   old: "類　科：護理師"        → strips to 類科：護理師
@@ -389,9 +409,29 @@ async function pdfSubjectName(buf) {
     const doc = mupdf.Document.openDocument(new Uint8Array(buf), 'application/pdf')
     const parsed = JSON.parse(doc.loadPage(0).toStructuredText('preserve-images').asJSON())
     let txt = ''
+    // ⚠️ 不能照 PDF 區塊順序直接串接。考選部把「類科」兩個字拆成兩個 text run，
+    // 且 baseline 差 1px（類 y=142 x=46、科 y=141 x=90），照原順序串會變成
+    // 「科：語言治療師類」，regex 永遠比對不到 → 那個考試整個 probe 不到卷。
+    // 必須先按 y 分列（容差 4）、列內按 x 排序再串。
+    // （2026-09-15 語言治療師補圖恆為 0 的真因）
+    const __items = []
     for (const b of parsed.blocks || []) {
       if (b.type !== 'text') continue
-      for (const ln of (b.lines || [])) txt += (ln.text || '') + '\n'
+      for (const ln of (b.lines || [])) {
+        const t = ln.text || ''
+        if (!t.trim()) continue
+        __items.push({ y: Math.round(ln.bbox.y), x: Math.round(ln.bbox.x), t })
+      }
+    }
+    const __rows = []
+    for (const it of __items.sort((a, b) => a.y - b.y || a.x - b.x)) {
+      const r = __rows.find(r => Math.abs(r.y - it.y) <= 4)
+      if (r) r.items.push(it)
+      else __rows.push({ y: it.y, items: [it] })
+    }
+    for (const r of __rows) {
+      r.items.sort((a, b) => a.x - b.x)
+      txt += r.items.map(i => i.t).join('') + '\n'
     }
     const compact = txt.replace(/[\uE000-\uF8FF]/g, '').replace(/\s+/g, '').normalize('NFKC')
     const m = compact.match(/科目[：:]([\u4e00-\u9fff()（）一二三四五六七八九十]{2,30})/)

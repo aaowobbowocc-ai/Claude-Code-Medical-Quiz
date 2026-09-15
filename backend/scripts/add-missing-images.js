@@ -356,6 +356,22 @@ const EXAM_REGISTRY = {
   rt:        { file: 'questions-rt.json',        classCodes: ['313','306','315','310'], examName: '呼吸治療師' },
   'speech-therapist': { file: 'questions-speech-therapist.json', classCodes: ['109','110','111','112','114','113','108','107','106','105','301'], examName: '語言治療師' },
   audiologist: { file: 'questions-audiologist.json', classCodes: ['110','112','113','111','109','114','108','106','301'], examName: '聽力師' },
+  // 以下 11 個考試原本不在 registry，補圖工具從沒跑過它們（2026-09-15 由
+  // coverage-guard 的 registry 涵蓋檢查一次列出）。類科碼從 _tmp/moex-codes.json
+  // 探碼快取推導，括號內是「卷別對到率」。
+  // 不加的：post-*（金研院題源）、teacher-*（tqa）、state-*（台電聯招）、
+  // lawyer1（快取無對應待查）、gsat/ast（大考中心）、driver-*（公路局）——題源都不是考選部。
+  police:       { file: 'questions-police.json',       classCodes: ['131','201','301'], examName: '警察' },              // 40/40
+  police4:      { file: 'questions-police4.json',      classCodes: ['131','137','201','301','401'], examName: '警察' },  // 43/43
+  customs:      { file: 'questions-customs.json',      classCodes: ['101','151'], examName: '關務' },                    // 23/35
+  'railway-admin':     { file: 'questions-railway-admin.json',     classCodes: ['131','201','301','702','703','705','901'], examName: '鐵路' }, // 52/52
+  'railway-transport': { file: 'questions-railway-transport.json', classCodes: ['131','201','301','701','702','901','903'], examName: '鐵路' }, // 46/52
+  'public-health':     { file: 'questions-public-health.json',     classCodes: ['108','110','401'], examName: '公共衛生師' },  // 36/36
+  'clinical-psychology':   { file: 'questions-clinical-psychology.json',   classCodes: ['104','106','107','108','109','111','315'], examName: '臨床心理師' }, // 146/146
+  'counseling-psychology': { file: 'questions-counseling-psychology.json', classCodes: ['105','107','108','109','110','112','316'], examName: '諮商心理師' }, // 126/130
+  optometrist:         { file: 'questions-optometrist.json',        classCodes: ['109','111','112'], examName: '驗光師' },     // 50/50
+  'optometrist-junior':{ file: 'questions-optometrist-junior.json', classCodes: ['110','112','113'], examName: '驗光生' },     // 30/30
+  'social-worker':     { file: 'questions-social-worker.json',      classCodes: ['103','105','107','110'], examName: '社會工作師' }, // 74/74
 }
 
 // Read the 類科 line from the first page of a PDF buffer. Returns null on

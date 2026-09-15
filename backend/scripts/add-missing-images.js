@@ -645,7 +645,12 @@ async function processExamCode(examTag, code, opts) {
       // directly. Only fires when the question actually has an image anchor.
       if (!hit && q.number && q.subject) {
         for (const pdf of pdfs) {
-          if (pdf.paperSubject !== q.subject) continue
+          // 不能用嚴格相等：我們存「中醫臨床醫學(四)」，PDF 寫
+          // 「中醫臨床醫學（四）（包括針灸科學）」——全形括號與 (包括…) 後綴都會讓它不等。
+          // 這是「名稱比對」家族的老問題，一律先正規化再做前綴比對。
+          const nk = t => String(t || '').replace(/[（）()【】\[\]、，,。．.\s]/g, '')
+          const a = nk(pdf.paperSubject), b = nk(q.subject)
+          if (!(a === b || a.startsWith(b) || b.startsWith(a))) continue
           if (pdf.imagesPerNum[q.number]?.length) { hit = { pdf, num: q.number }; break }
         }
       }

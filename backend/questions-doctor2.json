@@ -197140,7 +197140,10 @@
       "answer": "A",
       "explanation": "",
       "image_dependent": true,
-      "image_url": "/question-images/doctor2_102110_q55_patrol.webp"
+      "image_url": "/question-images/doctor2_102110_q55_patrol.webp",
+      "images": [
+        "/question-images/doctor2_115028072_0.webp"
+      ]
     },
     {
       "id": 115028073,
@@ -197162,7 +197165,10 @@
       "answer": "C",
       "explanation": "",
       "case_context": "第 55 題：附圖為描述糖尿病發病過程的一些生理變化，甲、乙及丙三條曲線分別描述那些變化？甲乙丙",
-      "grouped": true
+      "grouped": true,
+      "images": [
+        "/question-images/doctor2_115028073_0.webp"
+      ]
     },
     {
       "id": 115028074,
@@ -201239,7 +201245,14 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/doctor2_101030_q35_patrol.webp"
+      "image_url": "/question-images/doctor2_101030_q35_patrol.webp",
+      "images": [
+        "/question-images/doctor2_115028271_0.webp",
+        "/question-images/doctor2_115028271_1.webp",
+        "/question-images/doctor2_115028271_2.webp",
+        "/question-images/doctor2_115028271_3.webp",
+        "/question-images/doctor2_115028271_4.webp"
+      ]
     },
     {
       "id": 115028272,
@@ -201665,7 +201678,10 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/doctor2_103100_q76_patrol.webp"
+      "image_url": "/question-images/doctor2_103100_q76_patrol.webp",
+      "images": [
+        "/question-images/doctor2_115028292_0.webp"
+      ]
     },
     {
       "id": 115028293,
@@ -201746,7 +201762,13 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/doctor2_100140_q30_patrol.webp"
+      "image_url": "/question-images/doctor2_100140_q30_patrol.webp",
+      "images": [
+        "/question-images/doctor2_115028296_0.webp",
+        "/question-images/doctor2_115028296_1.webp",
+        "/question-images/doctor2_115028296_2.webp",
+        "/question-images/doctor2_115028296_3.webp"
+      ]
     },
     {
       "id": 115028297,
@@ -201847,7 +201869,10 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/doctor2_102110_q2_patrol.webp"
+      "image_url": "/question-images/doctor2_102110_q2_patrol.webp",
+      "images": [
+        "/question-images/doctor2_115028301_0.webp"
+      ]
     },
     {
       "id": 115028302,
@@ -208122,6 +208147,6 @@
   ],
   "total": 10239,
   "metadata": {
-    "last_updated": "2026-09-15T10:07:40.133Z"
+    "last_updated": "2026-09-15T13:41:05.765Z"
   }
 }

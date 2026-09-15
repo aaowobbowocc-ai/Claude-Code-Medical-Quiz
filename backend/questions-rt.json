@@ -3,7 +3,7 @@
     "exam": "rt",
     "name": "呼吸治療師",
     "scraped_at": null,
-    "last_updated": "2026-09-13T17:14:09.960Z"
+    "last_updated": "2026-09-15T13:40:56.151Z"
   },
   "total": 12480,
   "questions": [
@@ -37127,7 +37127,10 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/rt_101100_q80_patrol.webp"
+      "image_url": "/question-images/rt_101100_q80_patrol.webp",
+      "images": [
+        "/question-images/rt_1760_0.webp"
+      ]
     },
     {
       "id": 1761,
@@ -38824,7 +38827,10 @@
         "D": "換置新氣管內管"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/rt_1840_0.webp"
+      ]
     },
     {
       "id": 1841,
@@ -180312,7 +180318,12 @@
         "D": "給予鎮靜劑"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/rt_109020_55_80_0.webp",
+        "/question-images/rt_109020_55_80_1.webp",
+        "/question-images/rt_109020_55_80_2.webp"
+      ]
     },
     {
       "id": "109020_66_1",

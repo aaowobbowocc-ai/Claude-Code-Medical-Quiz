@@ -349,8 +349,8 @@ const EXAM_REGISTRY = {
   // registry 裡所以從沒被補過圖。類科碼逐年變動很大，這裡是從 _tmp/moex-codes.json
   // 探碼快取推導出來的實際值；pdfExamName() 會擋掉抓錯卷的情況。
   rt:        { file: 'questions-rt.json',        classCodes: ['313','306','315','310'], examName: '呼吸治療師' },
-  'speech-therapist': { file: 'questions-speech-therapist.json', classCodes: ['109','110','111','112','113','114','108','107','106','105','301'], examName: '語言治療師' },
-  audiologist: { file: 'questions-audiologist.json', classCodes: ['110','112','113','111','108','106','301'], examName: '聽力師' },
+  'speech-therapist': { file: 'questions-speech-therapist.json', classCodes: ['109','110','111','112','114','113','108','107','106','105','301'], examName: '語言治療師' },
+  audiologist: { file: 'questions-audiologist.json', classCodes: ['110','112','113','111','109','114','108','106','301'], examName: '聽力師' },
 }
 
 // Read the 類科 line from the first page of a PDF buffer. Returns null on

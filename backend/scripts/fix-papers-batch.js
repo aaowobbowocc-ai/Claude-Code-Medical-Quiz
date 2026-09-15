@@ -18,6 +18,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+const { warnZero, summary } = require('./lib/coverage-guard');
 
 const DIR = path.join(__dirname, '..');
 const CACHE = path.join(DIR, '_tmp', 'moex-codes.json');
@@ -155,4 +156,6 @@ for (const p of targets) {
 console.log(`\n總計重建 ${totalFixed} 題`);
 if (noCode) console.log(`反查失敗 ${noCode} 卷`);
 if (noMatch) console.log(`科目對不上 ${noMatch} 卷`);
+warnZero('批次重建', totalFixed, '掃描器沒標記到任何卷，或科目名全部對不上考選部命名');
 console.log(APPLY ? '✅ 已寫入' : '(dry-run，加 --apply 才會寫入)');
+process.exitCode = summary();

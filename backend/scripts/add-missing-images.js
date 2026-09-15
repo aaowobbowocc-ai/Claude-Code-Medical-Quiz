@@ -31,6 +31,7 @@ const STRICT = /附圖|如圖|圖示|下圖|上圖|圖中|圖為|如下圖|如�
 // this self-contained, this script duplicates the small parsing helpers and
 // then re-uses the WebP cropper logic.
 
+const { warnZero, checkRegistryCoverage, summary } = require('./lib/coverage-guard')
 const https = require('https')
 const sharp = require('sharp')
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
@@ -109,8 +110,10 @@ async function probeSubjectCodes(exam, code, classCode) {
       if (buf && buf.length > 100000) found.push(s)
     } catch {}
   }
-  probeCache[k] = found
-  saveProbeCache()
+  // 探測不到就不要寫進快取。先前把空陣列快取起來，導致後來補了類科碼/subject code
+  // 也完全沒效果（2026-09-15 語言治療師、聽力師都踩到）。
+  if (found.length) { probeCache[k] = found; saveProbeCache() }
+  else console.warn(`   ⚠️ ${k}: 探測不到任何科目卷（不寫入快取，下次會重試）`)
   return found
 }
 
@@ -671,6 +674,10 @@ async function processExamCode(examTag, code, opts) {
 }
 
 async function main() {
+  // 題庫檔存在卻不在 registry 的考試 = 會被整個靜默跳過（醫師一階/牙體技術師/
+  // 呼吸治療師都是這樣漏掉的），先喊出來
+  checkRegistryCoverage(Object.keys(EXAM_REGISTRY), path.join(__dirname, '..'))
+
   const args = process.argv.slice(2)
   const dryRun = args.includes('--dry-run')
   const verbose = args.includes('--verbose')
@@ -716,6 +723,9 @@ async function main() {
     } catch (e) { console.error(`  error: ${e.message}`) }
   }
   console.log(`\nTotal: added=${totalAdded} skipped=${totalSkipped}`)
+  warnZero((filterExam || '全考試') + ' 補圖', totalAdded,
+    'registry 缺該考試、類科碼清單沒涵蓋到該年度、或 CANDIDATE_SUBJECT_CODES 漏了該區段（例如 09xx）')
+  process.exitCode = summary()
 }
 
 if (require.main === module) main().catch(e => { console.error(e); process.exit(1) })

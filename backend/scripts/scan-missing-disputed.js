@@ -19,6 +19,7 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const { fetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher');
+const { warnZero, summary } = require('./lib/coverage-guard');
 
 const DIR = path.join(__dirname, '..');
 const CACHE = path.join(DIR, '_tmp', 'moex-codes.json');
@@ -130,6 +131,7 @@ async function getCorrections(code, c, s) {
   console.log(`  已標 disputed: ${already}`);
   console.log(`  ⚠️ 未標 disputed: ${missing}`);
   console.log(`  （${noSheet} 卷沒有更正卷或反查不到科目）`);
+  warnZero(`${EXAM} 更正答案掃描`, corrected, '反查不到科目、或更正卷 parser 失敗（檢查表頭是「題號」還是「題序」）');
   for (const x of list.slice(0, 12)) {
     console.log(`  ${x.code} ${x.subject} #${x.n}  我們=${x.ours}  官方：${x.rule}`);
   }

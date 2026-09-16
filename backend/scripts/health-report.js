@@ -66,7 +66,10 @@ for (const f of files) {
     // 放射師的「10 -4 / 10 -2 / 10 2 / 10 4」（10⁻⁴、10⁻²、10²、10⁴）
     // 會全部變成 "104"，460 題裡絕大多數是這樣誤判出來的。
     // 這裡只做 NFC＋去空白，保留所有符號。
-    const nonEmpty = vals.filter(v => v.trim()).map(v => normText(v))
+    // 選項是圖的題（中藥材辨識、血球圖、化學結構式），options 文字就是
+    // 「(圖)(圖)(圖)(圖)」，前端靠 option_images 顯示。那不是重複，是正常資料。
+    const optImg = q.option_images && Object.keys(q.option_images).length >= 4
+    const nonEmpty = optImg ? [] : vals.filter(v => v.trim()).map(v => normText(v))
     if (nonEmpty.length >= 2 && new Set(nonEmpty).size < nonEmpty.length) bump('visible', '選項重複', exam)
     if (IMAGE_REF.test(stem) && !q.images && !q.image && !q.no_image_in_source) bump('visible', '提到圖但沒有圖', exam)
 

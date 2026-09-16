@@ -47,6 +47,8 @@ function diagnose(q) {
   const n = filled.filter(Boolean).length
   if (n < 2) return '可選項不足兩個'
   if (filled.slice(0, n).some(x => !x)) return '選項中間有空洞'
+  // 選項是圖的題不要當成壞題：options 文字是「(圖)」，真正的內容在 option_images
+  if (q.option_images && Object.keys(q.option_images).length >= 4) return null
   const ne = vals.filter(v => v.trim()).map(normText)
   if (new Set(ne).size < ne.length) return '選項重複'
   if (!String(q.question || '').trim() && !hasImg) return '題幹空白且無圖'

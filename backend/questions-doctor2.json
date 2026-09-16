@@ -190558,7 +190558,12 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/doctor2_115027837_optA.webp",
+        "B": "/question-images/doctor2_115027837_optB.webp",
+        "C": "/question-images/doctor2_115027837_optC.webp",
+        "D": "/question-images/doctor2_115027837_optD.webp"
+      }
     },
     {
       "id": 115027838,
@@ -208194,6 +208199,6 @@
   ],
   "total": 10239,
   "metadata": {
-    "last_updated": "2026-09-16T15:28:35.884Z"
+    "last_updated": "2026-09-16T17:09:13.742Z"
   }
 }

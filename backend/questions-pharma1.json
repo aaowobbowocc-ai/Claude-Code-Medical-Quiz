@@ -3528,14 +3528,13 @@
       "number": 16,
       "question": "下列有關乳劑乳析（creaming）之敘述，何者錯誤？往上之乳析易發生於內相之比重比外相大之乳劑 內外相比重差減小，可減少乳析",
       "options": {
-        "A": "外相黏度增加，",
-        "B": "可減少乳析",
-        "C": "內相液滴變小，",
-        "D": "可減少乳析"
+        "A": "往上之乳析易發生於內相之比重比外相大之乳劑",
+        "B": "內外相比重差減小，可減少乳析",
+        "C": "外相黏度增加，可減少乳析",
+        "D": "內相液滴變小，可減少乳析"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 115021329,
@@ -4351,14 +4350,13 @@
       "number": 57,
       "question": "在反覆口服投藥控制中，若將每次的投予劑量從原先的500 mg 減為300 mg，給藥間隔不變，則該藥",
       "options": {
-        "A": "(",
-        "B": ")",
-        "C": "(",
-        "D": ")"
+        "A": "C∞max 增高、C∞min 增高",
+        "B": "C∞max 降低、C∞min 降低",
+        "C": "C∞max 增高、C∞min 降低",
+        "D": "C∞max 降低、C∞min 增高"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 115021370,
@@ -7048,14 +7046,13 @@
       "number": 26,
       "question": "紫外光光譜分析可用於測定某化合物之 pKa 值，A 代表該化合物於已知 pH 值緩衝液所測得之吸光度；Ai 代表該化合物完全離子化型之吸光值；Au 代表該化合物非離子化型之吸光值，則下列何式可測定化合物之 pKa 值？",
       "options": {
-        "A": "pKa = pH + log (A - Ai) / (Ai - Au)",
-        "B": "−",
-        "C": "Ai",
-        "D": "Ai"
+        "A": "pKa = pH + log[(A－Ai)/(Ai－Au)]",
+        "B": "pKa = pH + log[(Ai－A)/(A－Au)]",
+        "C": "pKa = pH + log[(Ai－A)/(Au－A)]",
+        "D": "pKa = pH + log[(A－Ai)/(A－Au)]"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 115023834,
@@ -10763,7 +10760,7 @@
         "C": "/question-images/pharma1_101030_q44_opt_C.webp",
         "D": "/question-images/pharma1_101030_q44_opt_D.webp"
       },
-      "incomplete": "broken_options"
+      "incomplete": "image_options"
     },
     {
       "id": 115021437,
@@ -25745,7 +25742,7 @@
         "C": "/question-images/pharma1_102100_q57_opt_C.webp",
         "D": "/question-images/pharma1_102100_q57_opt_D.webp"
       },
-      "incomplete": "broken_options"
+      "incomplete": "image_options"
     },
     {
       "id": 115022408,
@@ -35844,7 +35841,7 @@
         "C": "/question-images/pharma1_103090_q79_C.webp",
         "D": "/question-images/pharma1_103090_q79_D.webp"
       },
-      "incomplete": "broken_options"
+      "incomplete": "image_options"
     },
     {
       "id": 115021710,
@@ -50056,7 +50053,7 @@
         "C": "/question-images/pharma1_105020_q53_opt_C.webp",
         "D": "/question-images/pharma1_105020_q53_opt_D.webp"
       },
-      "incomplete": "broken_options"
+      "incomplete": "image_options"
     },
     {
       "id": 115023064,
@@ -154253,6 +154250,6 @@
   ],
   "total": 7673,
   "metadata": {
-    "last_updated": "2026-09-16T15:28:36.884Z"
+    "last_updated": "2026-09-16T16:21:05.312Z"
   }
 }

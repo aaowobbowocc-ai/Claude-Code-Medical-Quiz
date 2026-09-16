@@ -49,11 +49,21 @@ if (SENTRY_DSN && import.meta.env.PROD) {
       // Java 橋接銷毀時報的錯，與本站程式無關、不影響使用者。
       /Java object is gone/i,
       /Java bridge/i,
+      // AdSense 的 RUM 腳本 (rum_fy2021.js) 丟的 "Error: int64"。整條 stack 都在
+      // Google 的程式裡，我們碰不到也修不了，純雜訊。
+      /^int64$/,
     ],
     // 忽略來自第三方 in-app browser 注入腳本的錯誤（不是我們的程式碼）
     denyUrls: [
       /iabjs:/i,
       /navigation_performance_logger/i,
+      // Google 廣告腳本（AdSense / Ad Manager / DoubleClick）。
+      // 它們自己的錯誤會被 Sentry 的 addEventListener 攔截器撈進來，
+      // 但堆疊從頭到尾都在 Google 的檔案裡，不是我們的程式。
+      /\/pagead\//i,
+      /googlesyndication\.com/i,
+      /doubleclick\.net/i,
+      /googletagservices\.com/i,
     ],
   })
 }

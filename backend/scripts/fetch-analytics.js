@@ -262,8 +262,21 @@ function summarizeGA4(d) {
     console.log(`  ${r.dimensionValues[0].value.padEnd(20)} ${r.metricValues[0].value} users`)
   })
 
+  // (not set) 不是「這些頁面忘了設 content_group」，而是 GA4 加強型評估的
+  // 「根據瀏覽器記錄事件變更網頁」在 SPA 每次路由變更時自己發了一個 page_view。
+  // index.html 的 send_page_view:false 只擋得掉初次載入那一發，擋不掉 history 那一發，
+  // 於是站內每次導航都被記兩次：一次有 content_group（我們發的）、一次沒有（GA4 發的）。
+  // 證據：(not set) 集中在 /mock-exam /browse /practice 這些「站內導航才會到」的頁，
+  // 而外部直接進入的 /nursing/ 只有 95 次。
+  // 列進排行會讓真正的熱門考試整個失真，所以排除掉並單獨說明。
+  const rawExams = d.exams.rows || []
+  const notSet = rawExams.find(r => (r.dimensionValues[0].value || '') === '(not set)')
+  const examRows = rawExams.filter(r => {
+    const v = r.dimensionValues[0].value || ''
+    return v !== '(not set)' && v !== '(none)'
+  })
   console.log('\n★ Exam (content_group) traffic — 撇除首頁的真實熱門考試:')
-  ;(d.exams.rows || []).slice(0, 20).forEach((r, i) => {
+  examRows.slice(0, 20).forEach((r, i) => {
     const cg = r.dimensionValues[0].value || '(none)'
     const views = r.metricValues[0].value
     const users = r.metricValues[1].value
@@ -272,6 +285,12 @@ function summarizeGA4(d) {
     const minPerUser = users > 0 ? (eng / users / 60).toFixed(1) : '-'
     console.log(`  ${(i + 1).toString().padStart(2)} ${cg.padEnd(20).slice(0, 20)} | ${views.toString().padStart(5)} views | ${users.toString().padStart(4)} users | ER ${er}% | ${minPerUser} min/user`)
   })
+  if (notSet) {
+    console.log(`\n  ⓘ 另有 ${notSet.metricValues[0].value} 次 page_view 沒有 content_group，已排除在上表外。`)
+    console.log('     那是 GA4「加強型評估 → 根據瀏覽器記錄事件變更網頁」在 SPA 導航時自己發的，')
+    console.log('     與我們自己發的那一發重複計數。到 GA4 資料串流設定關掉該項即可；')
+    console.log('     關掉之前，所有 page_view 相關數字都偏高約一倍。')
+  }
 
   console.log('\nDevice:')
   ;(d.device.rows || []).forEach(r => {

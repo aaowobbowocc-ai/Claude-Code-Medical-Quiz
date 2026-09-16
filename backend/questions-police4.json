@@ -12726,7 +12726,7 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "empty_question"
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": 835,
@@ -12808,7 +12808,8 @@
         "D": "請依下文回答第36題至第40題"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": 945,
@@ -12908,7 +12909,8 @@
         "D": "請依下文回答第41題至第45題"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": 42,
@@ -23609,7 +23611,8 @@
         "D": "請依下文回答第36題至第40題"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": 862,
@@ -23709,7 +23712,8 @@
         "D": "請依下文回答第41題至第45題"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": 526,

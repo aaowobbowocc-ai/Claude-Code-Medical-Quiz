@@ -4,7 +4,7 @@
     "label": "中醫師(一)",
     "scraped_at": "2026-04-14T11:34:33.968Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-15T14:19:57.693Z",
+    "last_updated": "2026-09-16T13:37:44.738Z",
     "total": 4955
   },
   "total": 5120,
@@ -93187,7 +93187,8 @@
         "D": "溫脾湯"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": "102110_0202_7",
@@ -93670,7 +93671,8 @@
         "D": "溫脾湯"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": "102110_0202_65",

@@ -3,7 +3,7 @@
     "exam": "rt",
     "name": "呼吸治療師",
     "scraped_at": null,
-    "last_updated": "2026-09-15T14:21:12.784Z"
+    "last_updated": "2026-09-16T13:37:44.507Z"
   },
   "total": 12480,
   "questions": [
@@ -116796,7 +116796,8 @@
       "explanation": "",
       "images": [
         "/question-images/rt_106020_44_19_0.webp"
-      ]
+      ],
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": "106020_44_20",
@@ -116820,7 +116821,8 @@
       "explanation": "",
       "images": [
         "/question-images/rt_106020_44_20_0.webp"
-      ]
+      ],
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": "106020_44_21",

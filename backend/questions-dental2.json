@@ -29737,7 +29737,8 @@
       "explanation": "",
       "images": [
         "/question-images/dental2_115023888_0.webp"
-      ]
+      ],
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": 115023889,
@@ -29760,7 +29761,8 @@
       "explanation": "",
       "images": [
         "/question-images/dental2_115023889_0.webp"
-      ]
+      ],
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": 115023890,
@@ -143572,7 +143574,8 @@
         "C": "Enterococcus faecalis可以生存在長期無氧與無養份的環境下，存活至適當時機再行繁殖",
         "D": "Enterococcus faecalis可以在多菌種感染的環境下繁殖"
       },
-      "answer": "C"
+      "answer": "C",
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": "111020_73",
@@ -145104,7 +145107,8 @@
         "C": "Enterococcus faecalis可以生存在長期無氧與無養份的環境下,存活至適當時機再行繁殖",
         "D": "Enterococcus faecalis可以在多菌種感染的環境下繁殖"
       },
-      "answer": "C"
+      "answer": "C",
+      "incomplete": "cloze_parse_failed"
     },
     {
       "id": "111020_29",
@@ -205121,6 +205125,6 @@
   ],
   "total": 10240,
   "metadata": {
-    "last_updated": "2026-09-15T14:30:44.059Z"
+    "last_updated": "2026-09-16T13:37:43.102Z"
   }
 }

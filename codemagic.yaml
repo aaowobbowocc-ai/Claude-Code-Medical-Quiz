@@ -123,6 +123,16 @@ workflows:
           $PB -c "Add :CFBundleLocalizations:0 string zh-Hant" "$PLIST" 2>/dev/null || true
           echo "=== Info.plist 注入結果 ==="; $PB -c "Print :CFBundleURLTypes" "$PLIST" || true; $PB -c "Print :GADApplicationIdentifier" "$PLIST" || true; $PB -c "Print :CFBundleDevelopmentRegion" "$PLIST" || true
 
+      - name: Raise iOS deployment target to 15.0
+        script: |
+          # Capacitor 產生的專案預設 iOS 14.0，上傳時 App Store Connect 會回 90068：
+          # 2027 春季起 MinimumOSVersion 低於 15.0 一律不收。現在改掉零成本。
+          # Podfile 與 pbxproj 兩邊都要改，只改一邊 pod install 會被覆寫回去。
+          sed -i '' "s/platform :ios, '[0-9.]*'/platform :ios, '15.0'/" ios/App/Podfile
+          sed -i '' "s/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]*;/IPHONEOS_DEPLOYMENT_TARGET = 15.0;/g" ios/App/App.xcodeproj/project.pbxproj
+          grep -n "platform :ios" ios/App/Podfile
+          grep -c "IPHONEOS_DEPLOYMENT_TARGET = 15.0;" ios/App/App.xcodeproj/project.pbxproj
+
       - name: Install CocoaPods
         script: |
           cd ios/App
@@ -131,8 +141,17 @@ workflows:
       - name: Auto-increment build number from TestFlight
         script: |
           cd ios/App
-          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID" 2>/dev/null || echo 0)
-          NEW=$(($LATEST + 1))
+          # 取不到就退回 0 是很危險的預設：NEW 會變成 1，而 TestFlight 早就有 build 1，
+          # 上傳直接被判重複而失敗（錯誤還出現在 log 尾巴，很難看出真因）。
+          # 取不到時改用 Codemagic 自己的 $BUILD_NUMBER，並取兩者較大值。
+          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID" 2>/dev/null || echo "")
+          if echo "$LATEST" | grep -qE '^[0-9]+$'; then
+            NEW=$((LATEST + 1))
+          else
+            echo "⚠️ 取不到 TestFlight 最新 build number，改用 CI 建置序號"
+            NEW=${BUILD_NUMBER:-1}
+          fi
+          if [ -n "$BUILD_NUMBER" ] && [ "$BUILD_NUMBER" -gt "$NEW" ]; then NEW=$BUILD_NUMBER; fi
           agvtool new-version -all "$NEW" || echo "agvtool skipped (build $NEW)"
           # 行銷版本號（CFBundleShortVersionString）= App Store 顯示的版本。
           # 1.0.8 = 本次（自主練習年份複選/看廣告未看完提示/精華筆記擴充 9 考試）。

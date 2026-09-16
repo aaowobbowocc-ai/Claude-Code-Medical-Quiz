@@ -230,4 +230,8 @@ async function main() {
     }
   }
 }
-main().catch(e => { console.error(e); process.exit(1) })
+// 解析器給其他補卷腳本共用（例如 fix-pharma1-vol1-duplicates.js），
+// 不要再各自複製一份 pdfjs 幾何解析。
+module.exports = { parseQuestionsAny, parseAnswersAny, extractPositionedText }
+
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1) })

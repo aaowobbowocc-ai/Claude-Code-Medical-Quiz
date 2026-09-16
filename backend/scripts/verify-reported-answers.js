@@ -16,7 +16,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execFileSync } = require('child_process');
 const { fetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher');
 const { parseAnswerSheet } = require('./lib/moex-answer-sheet');
 
@@ -44,30 +43,13 @@ async function parseAny(buf) {
 }
 
 const DIR = path.join(__dirname, '..');
-const CACHE = path.join(DIR, '_tmp', 'moex-codes.json');
 const PDF_DIR = path.join(DIR, '_tmp', 'bullet-cloze');
 const UA = 'Mozilla/5.0';
 const REF = 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx';
 
-const norm = (t) => String(t).normalize('NFC').replace(/\s+/g, '');
-const keyName = (t) => String(t).replace(/[（）()【】\[\]、，,。．.\s]/g, '');
-
-const codeCache = (() => { try { return JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch { return {}; } })();
-function probeCodes(code, year) {
-  if (codeCache[code]) return codeCache[code];
-  try {
-    const out = execFileSync('python', [path.join(__dirname, 'probe-moex-codes.py'), String(+year + 1911), code],
-      { encoding: 'utf8', timeout: 180000, env: { ...process.env, PYTHONIOENCODING: 'utf-8' } });
-    const list = [];
-    for (const line of out.split('\n')) {
-      const m = line.match(/c=(\d+)\s+s=(\w+)\s+(.+)/);
-      if (m) list.push({ c: m[1], s: m[2], subject: m[3].replace(/試題|答案|更正答案/g, '').trim() });
-    }
-    codeCache[code] = list;
-  } catch { codeCache[code] = []; }
-  fs.writeFileSync(CACHE, JSON.stringify(codeCache, null, 2), 'utf8');
-  return codeCache[code];
-}
+const { normText: norm, nameKey: keyName } = require('./lib/moex-normalize');
+const { parseCorrections: sharedParseCorrections } = require('./lib/moex-pdf-parse');
+const { probeCodes } = require('./lib/moex-paper-resolve');
 
 // ⚠️ 一定要優先抓「更正答案卷」(t=M)，不能只看標準答案卷 (t=S)。
 // 考選部常在事後發更正，備註寫「第4題答Ｂ、Ｃ給分」這種多答案給分。
@@ -86,19 +68,20 @@ async function getAnswerPdf(code, c, s) {
   throw new Error('no answer pdf');
 }
 
-/** 從更正卷備註解析「第N題答X、Y給分」/「第N題一律給分」 */
+/**
+ * 更正備註解析走共用 lib（lib/moex-pdf-parse）。
+ * 這裡原本自帶一份，漏了「除未作答者不給分外…」那種寫法，
+ * 而且同一支 regex 在四支腳本各有一份、內容還不一樣——就是連續誤判的根源。
+ * 本檔下游把多答案當成 'A,B' 字串處理，所以在這裡轉一次格式。
+ */
 function parseCorrections(text) {
   const out = {};
-  const body = text.slice(text.indexOf('備'));
-  for (const m of body.matchAll(/第\s*(\d{1,3})\s*題\s*(一律給分|答([ＡＢＣＤA-D、，,或者均\s]+?)[者均]?給分)/g)) {
-    const n = +m[1];
-    if (m[2] === '一律給分') { out[n] = '送分'; continue; }
-    const letters = (m[3].match(/[ＡＢＣＤA-D]/g) || [])
-      .map(c => c.charCodeAt(0) > 0xFF00 ? String.fromCharCode(c.charCodeAt(0) - 0xFEE0) : c);
-    if (letters.length) out[n] = [...new Set(letters)].join(',');
+  for (const [n, v] of Object.entries(sharedParseCorrections(text))) {
+    out[n] = Array.isArray(v) ? v.join(',') : v;
   }
   return out;
 }
+
 
 (async () => {
   const reports = JSON.parse(fs.readFileSync(path.join(DIR, '_tmp', 'untouched-reports.json'), 'utf8'))

@@ -17,7 +17,6 @@ const path = require('path');
 const { execFileSync } = require('child_process');
 
 const DIR = path.join(__dirname, '..');
-const CACHE = path.join(DIR, '_tmp', 'moex-codes.json');
 const APPLY = process.argv.includes('--apply');
 const norm = (t) => String(t).normalize('NFC').replace(/\s+/g, '');
 
@@ -41,25 +40,10 @@ for (const f of FILES) {
   }
 }
 
-const cache = (() => { try { return JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch { return {}; } })();
-function probeCodes(code, year) {
-  if (cache[code]) return cache[code];
-  try {
-    const out = execFileSync('python', [path.join(__dirname, 'probe-moex-codes.py'), String(+year + 1911), code],
-      { encoding: 'utf8', timeout: 180000, env: { ...process.env, PYTHONIOENCODING: 'utf-8' } });
-    const list = [];
-    for (const line of out.split('\n')) {
-      const m = line.match(/c=(\d+)\s+s=(\w+)\s+(.+)/);
-      if (m) list.push({ c: m[1], s: m[2], subject: m[3].replace(/試題|答案|更正答案/g, '').trim() });
-    }
-    cache[code] = list;
-  } catch { cache[code] = []; }
-  fs.mkdirSync(path.dirname(CACHE), { recursive: true });
-  fs.writeFileSync(CACHE, JSON.stringify(cache, null, 2), 'utf8');
-  return cache[code];
-}
-
-const keyName = (t) => String(t).replace(/[（）()【】\[\]、，,。．.\s]/g, '');
+// 類科反查與名稱正規化都走共用 lib：各腳本各寫一份 keyName/probeCodes
+// 是這個專案最常見的事故來源（名字比對不到就整卷靜默跳過）。
+const { nameKey: keyName } = require('./lib/moex-normalize');
+const { probeCodes, nameCandidates } = require('./lib/moex-paper-resolve');
 
 (async () => {
   const { data, error } = await supabase
@@ -81,11 +65,9 @@ const keyName = (t) => String(t).replace(/[（）()【】\[\]、，,。．.\s]/g
 
   let total = 0, noCode = 0;
   for (const p of [...papers.values()].sort((a, b) => b.reports - a.reports)) {
-    const codes = probeCodes(p.code, p.year);
-    const cands = codes.filter(x => {
-      const xk = keyName(x.subject), pk = keyName(p.subject);
-      return xk === pk || xk.startsWith(pk) || pk.startsWith(xk);
-    });
+    // nameCandidates 有四層放寬（含「卷一」這類別名），比單純字串比對涵蓋得多
+    const exam = p.file === 'questions.json' ? 'doctor1' : p.file.replace('questions-', '').replace('.json', '');
+    const { list: cands } = nameCandidates(exam, p.subject, probeCodes(p.code, p.year));
     if (!cands.length) { noCode++; continue; }
 
     let best = null;

@@ -19,7 +19,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execFileSync } = require('child_process');
 const { fetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher');
 const { parseAnswerSheet } = require('./lib/moex-answer-sheet');
 
@@ -52,30 +51,13 @@ async function pdfText(buf) {
 }
 
 const DIR = path.join(__dirname, '..');
-const CACHE = path.join(DIR, '_tmp', 'moex-codes.json');
 const PDF_DIR = path.join(DIR, '_tmp', 'bullet-cloze');
 const UA = 'Mozilla/5.0';
 const REF = 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx';
 const LIMIT = process.argv.includes('--limit') ? +process.argv[process.argv.indexOf('--limit') + 1] : 40;
 
-const { normText: norm, skeleton: skel, nameKey: keyName, sameName } = require('./lib/moex-normalize');
-
-const codeCache = (() => { try { return JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch { return {}; } })();
-function probeCodes(code, year) {
-  if (codeCache[code]) return codeCache[code];
-  try {
-    const out = execFileSync('python', [path.join(__dirname, 'probe-moex-codes.py'), String(+year + 1911), code],
-      { encoding: 'utf8', timeout: 180000, env: { ...process.env, PYTHONIOENCODING: 'utf-8' } });
-    const list = [];
-    for (const line of out.split('\n')) {
-      const m = line.match(/c=(\d+)\s+s=(\w+)\s+(.+)/);
-      if (m) list.push({ c: m[1], s: m[2], subject: m[3].replace(/試題|答案|更正答案/g, '').trim() });
-    }
-    codeCache[code] = list;
-  } catch { codeCache[code] = []; }
-  fs.writeFileSync(CACHE, JSON.stringify(codeCache, null, 2), 'utf8');
-  return codeCache[code];
-}
+const { normText: norm, skeleton: skel } = require('./lib/moex-normalize');
+const { resolvePaper } = require('./lib/moex-paper-resolve');
 
 async function getPdf(type, code, c, s) {
   const p = path.join(PDF_DIR, `${type}_${code}_${c}_${s}.pdf`);
@@ -178,11 +160,15 @@ async function pdfOptions(buf) {
   let done = 0;
   for (const p of papers.values()) {
     if (done >= LIMIT) break;
-    const cands = probeCodes(p.code, p.year).filter(x => {
-      const xk = keyName(x.subject), pk = keyName(p.subject);
-      return xk === pk || xk.startsWith(pk) || pk.startsWith(xk);
-    });
-    if (!cands.length) { res.undetermined += p.items.length; continue; }
+    // 一定要用 resolvePaper 而不是「名字對得上就用」：同一場次常有多個類科開同名科目
+    // （獸醫師 c=314 / 獸醫佐 c=307），名字比對會抓到別人的卷，於是整卷的選項都對不上，
+    // 被誤判成「答案錯」。2026-09-15 首輪 37 筆「答案錯」裡有 26 筆是這樣來的。
+    const cand = await resolvePaper({ ...p, items: p.items.map(x => x.q) });
+    if (!cand) { res.undetermined += p.items.length; continue; }
+    // 名稱對得上、但卷裡一題都找不到我們的題幹（hitRate 0）＝那份 PDF 根本是別的考試。
+    // 例如獸醫 104090 c=314 抓回來的是藥師的卷。硬比下去會整卷被判成「答案錯」。
+    if (cand.unverified && !cand.hitRate) { res.undetermined += p.items.length; continue; }
+    const cands = [cand];
 
     // 標準卷(S)拿字母，更正卷(M)只拿備註的「答X、Y給分」。
     // 不能只抓 M —— 它的答案欄是「＃」不是字母，會讓幾乎所有題都變成無法判定。

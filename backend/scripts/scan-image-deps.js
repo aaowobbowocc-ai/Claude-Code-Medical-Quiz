@@ -3,10 +3,13 @@ const fs = require('fs')
 const path = require('path')
 const dir = path.join(__dirname, '..')
 
-// Heuristics that strongly imply an image is required to answer.
-const RX_IMG = /(如圖|下圖|附圖|圖示|圖中|示意圖|箭頭所指|箭頭|下列圖|圖譜|血球如|此圖|箭號)/
+// 判定共用 lib/image-ref.js —— 這支與 add-missing-images.js 必須用同一份名單，
+// 否則會出現「盤點說缺 75 題、補圖工具卻說 0 個候選」的假象。
+const { IMAGE_REF: RX_IMG } = require('./lib/image-ref')
 
-const files = fs.readdirSync(dir).filter(f => f.startsWith('questions-') && f.endsWith('.json'))
+// 不能只認 questions-*.json：醫師一階存成 questions.json（沒有 dash），
+// 這個 glob 曾讓它 6,297 題完全不在盤點範圍內。
+const files = fs.readdirSync(dir).filter(f => /^questions(-.*)?\.json$/.test(f) && !/\.bak/.test(f))
 const groups = {}
 let total = 0
 for (const f of files) {

@@ -17,37 +17,14 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execFileSync } = require('child_process');
-const { fetchPdf, buildMoexUrl } = require('./lib/pdf-fetcher');
 const { warnZero, summary } = require('./lib/coverage-guard');
 
 const DIR = path.join(__dirname, '..');
-const CACHE = path.join(DIR, '_tmp', 'moex-codes.json');
-const PDF_DIR = path.join(DIR, '_tmp', 'bullet-cloze');
-const UA = 'Mozilla/5.0';
-const REF = 'https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx';
 
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i >= 0 ? process.argv[i + 1] : d; };
 const EXAM = arg('--exam', 'doctor1');
 const APPLY = process.argv.includes('--apply');
-const { nameKey: keyName, sameName } = require('./lib/moex-normalize');
-
-const codeCache = (() => { try { return JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch { return {}; } })();
-function probeCodes(code, year) {
-  if (codeCache[code]) return codeCache[code];
-  try {
-    const out = execFileSync('python', [path.join(__dirname, 'probe-moex-codes.py'), String(+year + 1911), code],
-      { encoding: 'utf8', timeout: 180000, env: { ...process.env, PYTHONIOENCODING: 'utf-8' } });
-    const list = [];
-    for (const line of out.split('\n')) {
-      const m = line.match(/c=(\d+)\s+s=(\w+)\s+(.+)/);
-      if (m) list.push({ c: m[1], s: m[2], subject: m[3].replace(/試題|答案|更正答案/g, '').trim() });
-    }
-    codeCache[code] = list;
-  } catch { codeCache[code] = []; }
-  fs.writeFileSync(CACHE, JSON.stringify(codeCache, null, 2), 'utf8');
-  return codeCache[code];
-}
+const { resolvePaper, fetchSheet, pdfText } = require('./lib/moex-paper-resolve');
 
 /** 更正備註四種寫法都要涵蓋，字元類別務必含「者」「均」 */
 function parseCorrections(text) {
@@ -64,28 +41,8 @@ function parseCorrections(text) {
   return out;
 }
 
-async function pdfText(buf) {
-  const mupdf = await import('mupdf');
-  const doc = mupdf.Document.openDocument(buf, 'application/pdf');
-  let all = '';
-  for (let p = 0; p < doc.countPages(); p++) {
-    const st = JSON.parse(doc.loadPage(p).toStructuredText('preserve-whitespace').asJSON());
-    for (const b of st.blocks || []) for (const l of b.lines || []) all += (l.text || '').trim() + ' ';
-  }
-  return all;
-}
-
 async function getCorrections(code, c, s) {
-  const p = path.join(PDF_DIR, `M_${code}_${c}_${s}.pdf`);
-  let buf = null;
-  if (fs.existsSync(p) && fs.statSync(p).size > 1000) buf = fs.readFileSync(p);
-  else {
-    try {
-      buf = await fetchPdf(buildMoexUrl('M', code, c, s), { userAgent: UA, referer: REF });
-      if (buf && buf.length > 1000) { fs.mkdirSync(PDF_DIR, { recursive: true }); fs.writeFileSync(p, buf); }
-      else buf = null;
-    } catch { buf = null; }
-  }
+  const buf = await fetchSheet('M', code, c, s);
   if (!buf) return null;
   try { return parseCorrections(await pdfText(buf)); } catch { return null; }
 }
@@ -99,21 +56,19 @@ async function getCorrections(code, c, s) {
   for (const q of arr) {
     if (!q.exam_code || !q.subject) continue;
     const k = `${q.exam_code}|${q.subject}`;
-    if (!papers.has(k)) papers.set(k, { code: String(q.exam_code), subject: q.subject, year: q.roc_year, items: [] });
+    if (!papers.has(k)) papers.set(k, { exam: EXAM, code: String(q.exam_code), subject: q.subject, year: q.roc_year, items: [] });
     papers.get(k).items.push(q);
   }
 
-  let corrected = 0, missing = 0, already = 0, noSheet = 0;
+  let corrected = 0, missing = 0, already = 0, noSheet = 0, noResolve = 0;
   const list = [];
   for (const p of papers.values()) {
-    const cands = probeCodes(p.code, p.year).filter(x => {
-      const xk = keyName(x.subject), pk = keyName(p.subject);
-      return xk === pk || xk.startsWith(pk) || pk.startsWith(xk);
-    });
-    if (!cands.length) { noSheet++; continue; }
+    // 一定要用 resolvePaper：同一場次可能有兩個類科開同名科目（牙醫學(三)~(六)
+    // 在 c=302 與 c=303 各一份），只比名字會抓到別人的更正卷，把不該標的題標成爭議題。
+    const cand = await resolvePaper(p);
+    if (!cand) { noSheet++; noResolve++; continue; }
 
-    let corr = null;
-    for (const cand of cands) { corr = await getCorrections(p.code, cand.c, cand.s); if (corr && Object.keys(corr).length) break; }
+    const corr = await getCorrections(p.code, cand.c, cand.s);
     if (!corr || !Object.keys(corr).length) { noSheet++; continue; }
 
     for (const q of p.items) {
@@ -130,7 +85,7 @@ async function getCorrections(code, c, s) {
   console.log(`${EXAM}：有更正答案的題 ${corrected} 筆`);
   console.log(`  已標 disputed: ${already}`);
   console.log(`  ⚠️ 未標 disputed: ${missing}`);
-  console.log(`  （${noSheet} 卷沒有更正卷或反查不到科目）`);
+  console.log(`  （${noSheet} 卷沒有更正卷或反查不到科目，其中 ${noResolve} 卷是反查不到）`);
   warnZero(`${EXAM} 更正答案掃描`, corrected, '反查不到科目、或更正卷 parser 失敗（檢查表頭是「題號」還是「題序」）');
   for (const x of list.slice(0, 12)) {
     console.log(`  ${x.code} ${x.subject} #${x.n}  我們=${x.ours}  官方：${x.rule}`);

@@ -23,7 +23,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const STRICT = /附圖|如圖|圖示|下圖|上圖|圖中|圖為|如下圖|如上圖|根據圖|見圖|圖所示/
+const { IMAGE_REF: STRICT } = require('./lib/image-ref')
 
 // We reach into fix-images.js by re-requiring its module after monkey-patching.
 // Easiest: copy the helpers we need here. Avoid duplicating code by exporting
@@ -43,6 +43,8 @@ const IMG_OUT = path.join(__dirname, '..', '..', 'frontend', 'public', 'question
 const PROBE_CACHE_FILE = path.join(__dirname, '..', '_tmp', 'probe-results.json')
 const RENDER_SCALE = 2
 const MIN_IMG_DIM = 30
+// 向量圖偵測門檻（pt）。正常行距 3~5pt，圖區空白實測 90~280pt，60 很安全。
+const VECTOR_GAP_MIN = 60
 const MARGIN = 2
 
 fs.mkdirSync(PDF_CACHE, { recursive: true })
@@ -282,10 +284,47 @@ async function parsePdfFull(buf) {
       if (bb.w < MIN_IMG_DIM || bb.h < MIN_IMG_DIM) continue
       images.push({ bbox: bb })
     }
-    pages.push({ pageNum: i + 1, anchors: uniqAnchors, images, mupdfPage: pg })
+    const textLines = []
+    for (const b of parsed.blocks) {
+      if (b.type !== 'text') continue
+      for (const ln of (b.lines || [])) {
+        if (!(ln.text || '').trim()) continue
+        textLines.push({ y: ln.bbox.y, h: ln.bbox.h, x: ln.bbox.x, w: ln.bbox.w })
+      }
+    }
+    const bounds = pg.getBounds()
+    pages.push({ pageNum: i + 1, anchors: uniqAnchors, images, textLines, mupdfPage: pg,
+      pageW: bounds[2] - bounds[0], pageH: bounds[3] - bounds[1] })
   }
   const textIndex = parseQuestions(fullText)
   return { textIndex, pages, doc, mupdf }
+}
+
+/**
+ * 向量圖區塊：兩行文字之間異常大的空白 = 圖。
+ *
+ * 為什麼需要：呼吸治療、物理治療這類考科的波形圖／曲線圖在 PDF 裡是**向量繪圖**，
+ * 不是內嵌點陣圖，所以 toStructuredText 的 image block 一個都抓不到
+ * （rt 102020 呼吸器原理及應用整卷 imageBlocks=2，圖卻有十幾張）。
+ * 既有流程只認 image block，於是這些卷「題幹對得到、圖永遠補不到」。
+ *
+ * 判法：同一頁內相鄰兩行文字的垂直間距 ≥ VECTOR_GAP_MIN，中間那塊就是圖。
+ * 實測 rt 的圖區間距是 143~280pt，正常行距 3~5pt，分得很開。
+ * 誤判防線：裁切後會再用像素統計擋掉整片空白的區塊（見 cropImage）。
+ */
+function vectorRegions(page) {
+  const lines = [...(page.textLines || [])].sort((a, b) => a.y - b.y)
+  if (lines.length < 2) return []
+  const left = Math.min(...lines.map(l => l.x))
+  const right = Math.max(...lines.map(l => l.x + l.w))
+  const out = []
+  for (let i = 1; i < lines.length; i++) {
+    const prevBottom = lines[i - 1].y + lines[i - 1].h
+    const gap = lines[i].y - prevBottom
+    if (gap < VECTOR_GAP_MIN) continue
+    out.push({ bbox: { x: left, y: prevBottom + 2, w: Math.max(right - left, 100), h: gap - 4 }, vector: true })
+  }
+  return out
 }
 
 function matchImageToPdfNum(img, page, prevPages) {
@@ -299,7 +338,7 @@ function matchImageToPdfNum(img, page, prevPages) {
   return null
 }
 
-async function cropImage(mupdf, page, bbox, outPath) {
+async function cropImage(mupdf, page, bbox, outPath, opts = {}) {
   const m = mupdf.Matrix.scale(RENDER_SCALE, RENDER_SCALE)
   const pixmap = page.toPixmap(m, mupdf.ColorSpace.DeviceRGB, false)
   const png = Buffer.from(pixmap.asPNG())
@@ -312,10 +351,16 @@ async function cropImage(mupdf, page, bbox, outPath) {
   const width = right - left
   const height = bottom - top
   if (width < 10 || height < 10) return false
-  await sharp(png)
-    .extract({ left, top, width, height })
-    .webp({ quality: 82 })
-    .toFile(outPath)
+  const region = sharp(png).extract({ left, top, width, height })
+  // 向量圖是靠「空白間距」推出來的，必須驗證裁出來真的有東西：
+  // 整塊接近純白（各通道標準差都極小）就丟掉，否則會塞一堆空白圖給使用者。
+  if (opts.requireContent) {
+    try {
+      const st = await region.clone().stats()
+      if (st.channels.every(c => c.stdev < 3)) return false
+    } catch { return false }
+  }
+  await region.webp({ quality: 82 }).toFile(outPath)
   return true
 }
 
@@ -620,6 +665,7 @@ async function processExamCode(examTag, code, opts) {
   // Build {pdfNum: [imageBboxes]} for each PDF
   for (const pdf of pdfs) {
     pdf.imagesPerNum = {}
+    pdf.vectorPerNum = {}
     for (let pi = 0; pi < pdf.pages.length; pi++) {
       const page = pdf.pages[pi]
       const prev = pdf.pages.slice(0, pi)
@@ -628,6 +674,13 @@ async function processExamCode(examTag, code, opts) {
         if (num == null) continue
         if (!pdf.imagesPerNum[num]) pdf.imagesPerNum[num] = []
         pdf.imagesPerNum[num].push({ page: page.mupdfPage, bbox: img.bbox })
+      }
+      // 向量圖另存一份：點陣圖優先，抓不到才退而用空白區塊
+      for (const reg of vectorRegions(page)) {
+        const num = matchImageToPdfNum(reg, page, prev)
+        if (num == null) continue
+        if (!pdf.vectorPerNum[num]) pdf.vectorPerNum[num] = []
+        pdf.vectorPerNum[num].push({ page: page.mupdfPage, bbox: reg.bbox, vector: true })
       }
     }
   }
@@ -654,15 +707,25 @@ async function processExamCode(examTag, code, opts) {
           if (pdf.imagesPerNum[q.number]?.length) { hit = { pdf, num: q.number }; break }
         }
       }
-      if (!hit) { skipped++; continue }
-      const pdfImgs = hit.pdf.imagesPerNum[hit.num] || []
-      if (!pdfImgs.length) { skipped++; continue }
+      if (!hit) {
+        skipped++
+        if (opts.verbose) console.log(`  - ${q.id} #${q.number} ${q.subject}: 題幹對不到任何卷`)
+        continue
+      }
+      let pdfImgs = hit.pdf.imagesPerNum[hit.num] || []
+      if (!pdfImgs.length) pdfImgs = hit.pdf.vectorPerNum[hit.num] || []   // 向量圖 fallback
+      if (!pdfImgs.length) {
+        skipped++
+        if (opts.verbose) console.log(`  - ${q.id} #${q.number}: 對到 s=${hit.pdf.s} #${hit.num}，但該題在 PDF 裡沒抓到圖`)
+        continue
+      }
       const newPaths = []
       for (let i = 0; i < pdfImgs.length; i++) {
         const fname = `${examTag}_${q.id}_${i}.webp`
         const outPath = path.join(IMG_OUT, fname)
         if (!opts.dryRun) {
-          const ok = await cropImage(hit.pdf.mupdf, pdfImgs[i].page, pdfImgs[i].bbox, outPath)
+          const ok = await cropImage(hit.pdf.mupdf, pdfImgs[i].page, pdfImgs[i].bbox, outPath,
+            { requireContent: !!pdfImgs[i].vector })
           if (!ok) continue
         }
         newPaths.push('/question-images/' + fname)

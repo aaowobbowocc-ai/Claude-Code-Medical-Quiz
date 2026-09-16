@@ -21,7 +21,6 @@ const { execFileSync } = require('child_process');
 const { warnZero, summary } = require('./lib/coverage-guard');
 
 const DIR = path.join(__dirname, '..');
-const CACHE = path.join(DIR, '_tmp', 'moex-codes.json');
 const SKIP_EXAMS = new Set(['gsat']);   // 非考選部題源
 
 const args = process.argv.slice(2);
@@ -30,37 +29,9 @@ const arg = (k) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : nu
 const onlyExam = arg('--exam');
 const top = arg('--top') ? +arg('--top') : null;
 
-function loadCache() {
-  try { return JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch { return {}; }
-}
-function saveCache(c) {
-  fs.mkdirSync(path.dirname(CACHE), { recursive: true });
-  fs.writeFileSync(CACHE, JSON.stringify(c, null, 2), 'utf8');
-}
-
-/** 向考選部反查某場次的 (c, s, 科目名) 清單，結果快取 */
-function probeCodes(examCode, rocYear, cache) {
-  if (cache[examCode]) return cache[examCode];
-  const ad = String(+rocYear + 1911);
-  let out = '';
-  try {
-    out = execFileSync('python', [path.join(__dirname, 'probe-moex-codes.py'), ad, examCode],
-      { encoding: 'utf8', timeout: 180000, env: { ...process.env, PYTHONIOENCODING: 'utf-8' } });
-  } catch (e) {
-    console.log(`   ⚠️ 反查 ${examCode} 失敗: ${String(e.message).slice(0, 80)}`);
-    cache[examCode] = [];
-    saveCache(cache);
-    return [];
-  }
-  const list = [];
-  for (const line of out.split('\n')) {
-    const m = line.match(/c=(\d+)\s+s=(\w+)\s+(.+)/);
-    if (m) list.push({ c: m[1], s: m[2], subject: m[3].replace(/試題|答案|更正答案/g, '').trim() });
-  }
-  cache[examCode] = list;
-  saveCache(cache);
-  return list;
-}
+// 類科反查、名稱比對都走共用 lib。原本這裡自帶一份 probeCodes 與 key()，
+// 反查失敗時還會把空陣列寫進快取，之後補了類科碼也永遠不會重試。
+const { probeCodes, nameCandidates } = require('./lib/moex-paper-resolve');
 
 /** 跑重建腳本，回傳 {rebuilt, skipped, output} */
 function runFixer(file, code, c, s, tag, apply) {
@@ -95,7 +66,6 @@ for (const line of scan.split('\n')) {
 const targets = top ? papers.slice(0, top) : papers;
 console.log(`目標 ${targets.length} 卷（${targets.reduce((s, p) => s + p.n, 0)} 題疑似破損）\n`);
 
-const cache = loadCache();
 let totalFixed = 0, noCode = 0, noMatch = 0;
 
 for (const p of targets) {
@@ -111,18 +81,13 @@ for (const p of targets) {
   if (!tags.length) { noMatch++; continue; }
   const sample = { subject_tag: tags[0] };
 
-  const codes = probeCodes(p.code, p.year, cache);
+  const codes = probeCodes(p.code, p.year);
   if (!codes.length) { noCode++; continue; }
 
   // 科目名對得起來的候選（同名可能跨多個類科，逐一試，靠題幹比對自然淘汰）。
-  // 比對前要正規化：我們的科目名與考選部常差在全形/半形括號、空白、頓號，
-  // 例如「臨床心理學特論(一)」vs「臨床心理學特論（一）（包括…）」直接比會對不上。
-  const key = (t) => String(t).replace(/[（）()【】\[\]、，,。．.\s]/g, '');
-  const pk = key(p.subject);
-  const cands = codes.filter(x => {
-    const xk = key(x.subject);
-    return xk === pk || xk.startsWith(pk) || pk.startsWith(xk);
-  });
+  // nameCandidates 由嚴到寬四層：直接比 → 去序數括號 → 去所有括號 → 手工別名表，
+  // 涵蓋「臨床心理學特論(一)」vs「…（一）（包括…）」與「卷一」這類完全改名的情況。
+  const { list: cands } = nameCandidates(p.exam, p.subject, codes);
   // 名稱完全對不上時（例如 dental2 存成「卷一~卷四」、考選部叫「牙醫學(三)~(六)」），
   // 不要硬猜對照表——直接把該場次所有科目都當候選試一遍。
   // fix-column-fragments 會用題幹前綴比對，對不上的卷會整卷跳過，不會改錯。

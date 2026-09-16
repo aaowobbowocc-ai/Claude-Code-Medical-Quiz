@@ -27,7 +27,9 @@ const CACHE_TTL_MS = 24 * 60 * 60 * 1000  // 24h
 // v81 (2026-09-16): 社工師補上缺的三科(社會政策與社會立法/人類行為與社會環境/
 //   社會工作研究方法)共 2,483 題,2,960→5,443;臨床心理 105090 與社工 115030
 //   科目改名;中醫二階/聽力師/語言治療再補 233 題的圖
-const CACHE_VERSION = 81
+// v82 (2026-09-16): 清 PUA 豆腐字 804 個(警察/關務/鐵路/教檢等)、
+//   壞選項從原卷重修 98 題、無法修復的 184 題改標 incomplete 隱藏
+const CACHE_VERSION = 82
 const DB_NAME = 'questions-cache'
 const DB_STORE = 'exams'
 

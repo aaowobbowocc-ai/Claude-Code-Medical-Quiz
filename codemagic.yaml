@@ -154,10 +154,14 @@ workflows:
           if [ -n "$BUILD_NUMBER" ] && [ "$BUILD_NUMBER" -gt "$NEW" ]; then NEW=$BUILD_NUMBER; fi
           agvtool new-version -all "$NEW" || echo "agvtool skipped (build $NEW)"
           # 行銷版本號（CFBundleShortVersionString）= App Store 顯示的版本。
-          # 1.0.8 = 本次（自主練習年份複選/看廣告未看完提示/精華筆記擴充 9 考試）。
-          # 下次改版手動 +1。
-          agvtool new-marketing-version 1.0.8 || echo "marketing version skipped"
-          echo "Build number = $NEW, Marketing = 1.0.8"
+          # 一定要從 Android 的 versionName 讀，不要寫死：
+          # 寫死的 1.0.8 上架核准後沒人記得改，再上傳就被 Apple 擋兩個錯——
+          # 90062（版本號沒高於已核准版本）+ 90186（該版本的 train 已關閉）。
+          # 兩平台共用同一個版本號，改一處就好。
+          MARKETING=$(grep -m1 'versionName "' ../../android/app/build.gradle | cut -d'"' -f2)
+          if [ -z "$MARKETING" ]; then echo "✗ 讀不到 Android versionName"; exit 1; fi
+          agvtool new-marketing-version "$MARKETING" || echo "marketing version skipped"
+          echo "Build number = $NEW, Marketing = $MARKETING"
 
       - name: Prepare distribution certificate in keychain
         script: |

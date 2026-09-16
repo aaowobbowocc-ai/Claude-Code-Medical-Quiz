@@ -4,7 +4,7 @@
     "label": "中醫師(一)",
     "scraped_at": "2026-04-14T11:34:33.968Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-08-31T12:13:33.612113",
+    "last_updated": "2026-09-15T14:19:57.693Z",
     "total": 4955
   },
   "total": 5120,
@@ -85956,9 +85956,10 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "gap_reason": "missing_image_dep",
-      "image_url": "/question-images/tcm1_100140_q33_full.webp"
+      "image_url": "/question-images/tcm1_100140_q33_full.webp",
+      "images": [
+        "/question-images/tcm1_4577_0.webp"
+      ]
     },
     {
       "id": 4578,
@@ -86501,7 +86502,10 @@
         "D": "如圖所示"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/tcm1_4604_0.webp"
+      ]
     },
     {
       "id": 4605,
@@ -86890,7 +86894,10 @@
         "D": "如圖(D)所示"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/tcm1_4623_0.webp"
+      ]
     },
     {
       "id": 4624,

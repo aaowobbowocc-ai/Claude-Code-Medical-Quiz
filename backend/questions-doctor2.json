@@ -37139,7 +37139,10 @@
       },
       "answer": "B",
       "image_dependent": true,
-      "image_url": "/question-images/doctor2_115020_p3_73_0.webp"
+      "image_url": "/question-images/doctor2_115020_p3_73_0.webp",
+      "images": [
+        "/question-images/doctor2_115020_3_73_0.webp"
+      ]
     },
     {
       "id": "115020_3_74",
@@ -40431,7 +40434,11 @@
         "D": "靜脈竇栓塞（venous sinus thrombosis）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/doctor2_115020535_0.webp",
+        "/question-images/doctor2_115020535_1.webp"
+      ]
     },
     {
       "id": 115020536,
@@ -78631,7 +78638,10 @@
       "answer": "A",
       "explanation": "",
       "image_url": "/question-images/doctor2_106080_p1_35_0.webp",
-      "image_dependent": true
+      "image_dependent": true,
+      "images": [
+        "/question-images/doctor2_115022411_0.webp"
+      ]
     },
     {
       "id": 115022412,
@@ -80031,7 +80041,10 @@
       "answer": "B",
       "explanation": "",
       "image_url": "/question-images/doctor2_106080_p2_10_0.webp",
-      "image_dependent": true
+      "image_dependent": true,
+      "images": [
+        "/question-images/doctor2_115022479_0.webp"
+      ]
     },
     {
       "id": 115022480,
@@ -130364,7 +130377,11 @@
         "D": "Howell-Jolly body"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/doctor2_115024945_0.webp",
+        "/question-images/doctor2_115024945_1.webp"
+      ]
     },
     {
       "id": 115024946,
@@ -152977,7 +152994,10 @@
         "D": "輸卵管卵巢膿瘍（tubo-ovarian abscess）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/doctor2_115026045_0.webp"
+      ]
     },
     {
       "id": 115026046,
@@ -168998,7 +169018,10 @@
       "answer": "A",
       "explanation": "",
       "image_url": "/question-images/doctor2_105020_p1_1_0.webp",
-      "image_dependent": true
+      "image_dependent": true,
+      "images": [
+        "/question-images/doctor2_115026810_0.webp"
+      ]
     },
     {
       "id": 115026811,
@@ -194467,7 +194490,13 @@
       "answer": "A",
       "explanation": "",
       "image_dependent": true,
-      "image_url": "/question-images/doctor2_101110_p3_72_0.webp"
+      "image_url": "/question-images/doctor2_101110_p3_72_0.webp",
+      "images": [
+        "/question-images/doctor2_115028022_0.webp",
+        "/question-images/doctor2_115028022_1.webp",
+        "/question-images/doctor2_115028022_2.webp",
+        "/question-images/doctor2_115028022_3.webp"
+      ]
     },
     {
       "id": 115028023,
@@ -208147,6 +208176,6 @@
   ],
   "total": 10239,
   "metadata": {
-    "last_updated": "2026-09-15T13:41:05.765Z"
+    "last_updated": "2026-09-15T14:15:49.468Z"
   }
 }

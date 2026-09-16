@@ -4,7 +4,7 @@
     "label": "職能治療師",
     "scraped_at": "2026-04-10T01:53:48.896Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-08-31T12:17:17.307444"
+    "last_updated": "2026-09-15T14:19:11.476Z"
   },
   "total": 12480,
   "questions": [
@@ -7562,7 +7562,8 @@
       "answer": "D",
       "explanation": "",
       "original_answer": "D",
-      "correction_note": "第57題一律給分（原答案 D）"
+      "correction_note": "第57題一律給分（原答案 D）",
+      "disputed": true
     },
     {
       "id": 378,
@@ -7744,7 +7745,8 @@
       "answer": "C",
       "explanation": "",
       "original_answer": "C",
-      "correction_note": "第66題一律給分（原答案 C）"
+      "correction_note": "第66題一律給分（原答案 C）",
+      "disputed": true
     },
     {
       "id": 387,
@@ -37752,7 +37754,10 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/ot_112100_p5_41_0.webp"
+      "image_url": "/question-images/ot_112100_p5_41_0.webp",
+      "images": [
+        "/question-images/ot_1881_0.webp"
+      ]
     },
     {
       "id": 1882,
@@ -42564,7 +42569,8 @@
       "answer": "C",
       "explanation": "",
       "original_answer": "C",
-      "correction_note": "第41題更正為 B,C（原答案 C）"
+      "correction_note": "第41題更正為 B,C（原答案 C）",
+      "disputed": true
     },
     {
       "id": 2122,
@@ -45146,7 +45152,8 @@
       "answer": "B",
       "explanation": "",
       "original_answer": "B",
-      "correction_note": "第12題更正為 B,C（原答案 B）"
+      "correction_note": "第12題更正為 B,C（原答案 B）",
+      "disputed": true
     },
     {
       "id": 2251,
@@ -45688,7 +45695,8 @@
       "answer": "C",
       "explanation": "",
       "original_answer": "C",
-      "correction_note": "第39題更正為 A,C（原答案 C）"
+      "correction_note": "第39題更正為 A,C（原答案 C）",
+      "disputed": true
     },
     {
       "id": 2278,
@@ -48722,7 +48730,10 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/ot_106020_p0_28_0.webp"
+      "image_url": "/question-images/ot_106020_p0_28_0.webp",
+      "images": [
+        "/question-images/ot_2428_0.webp"
+      ]
     },
     {
       "id": 2429,
@@ -52402,7 +52413,8 @@
         "D": "副木製作原則，將肘關節擺位於屈曲30°"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2613,
@@ -55344,7 +55356,8 @@
         "D": "將按鍵敏感度降低"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2760,
@@ -55424,7 +55437,8 @@
         "D": "評估（evaluation）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 2764,
@@ -61211,7 +61225,8 @@
         "D": "是藉由觀察病人ADL的表現，用以評估病人損傷（impairment）的狀況"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3053,
@@ -61611,7 +61626,8 @@
         "D": "掌指關節及指間關節皆保持稍微彎曲"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3073,
@@ -61691,7 +61707,8 @@
         "D": "paresthesia：痛覺完全喪失"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3077,
@@ -61751,7 +61768,8 @@
         "D": "掌指關節半脫垂（MCP joint subluxation）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3080,
@@ -62091,7 +62109,8 @@
         "D": "僅②③"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3097,
@@ -64071,7 +64090,8 @@
         "D": "患者通常有幻覺"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3196,
@@ -64491,7 +64511,8 @@
         "D": "促進教學的參考架構（frame of reference to enhance teaching-learning）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3217,
@@ -64891,7 +64912,8 @@
         "D": "④①③②"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3237,
@@ -65231,7 +65253,8 @@
         "D": "目標性且個別介入"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 3254,
@@ -67018,7 +67041,10 @@
         "D": "Trigger finger"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/ot_3342_0.webp"
+      ]
     },
     {
       "id": 3343,
@@ -84316,7 +84342,8 @@
         "D": "問題解決"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4207,
@@ -84656,7 +84683,8 @@
         "D": "焦慮症患者常同時符合自閉症（autism）的診斷標準"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 4224,
@@ -85017,7 +85045,10 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/ot_107100_p5_11_0.webp"
+      "image_url": "/question-images/ot_107100_p5_11_0.webp",
+      "images": [
+        "/question-images/ot_4241_0.webp"
+      ]
     },
     {
       "id": 4242,
@@ -86977,7 +87008,11 @@
         "D": "黑色箭頭所指是覆膜（tectorial membrane）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/ot_4339_0.webp",
+        "/question-images/ot_4339_1.webp"
+      ]
     },
     {
       "id": 4340,
@@ -119277,7 +119312,8 @@
         "D": "生物力學模式（Biomechanical model）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 5952,
@@ -122938,7 +122974,8 @@
         "D": "問題解決（problem solving）困難"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 6135,
@@ -122978,7 +123015,8 @@
         "D": "GMFCS 第四級，MACS 第四級"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 6137,
@@ -128641,7 +128679,8 @@
         "D": "分散性（ divided ）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 6420,
@@ -131624,7 +131663,8 @@
         "D": "再認（ recognition ）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 6569,
@@ -134485,7 +134525,10 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/ot_101010_p5_70_0.webp"
+      "image_url": "/question-images/ot_101010_p5_70_0.webp",
+      "images": [
+        "/question-images/ot_6711_0.webp"
+      ]
     },
     {
       "id": 6712,
@@ -149937,7 +149980,8 @@
         "D": "合作團體（ cooperative groups ）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 7484,
@@ -150017,7 +150061,8 @@
         "D": "Linehan 辯證策略（ dialectical strategy ）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 7488,
@@ -150217,7 +150262,8 @@
         "D": "職能治療綜合評量表"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 7498,
@@ -150798,7 +150844,8 @@
         "D": "2 ～ 3 歲"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 7527,
@@ -151078,7 +151125,8 @@
         "D": "針對個案的適應努力（ coping effort ）做出適切反應"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 7541,
@@ -151998,7 +152046,8 @@
         "D": "不應要求孩童連續重複做同樣的活動許多次"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 7587,
@@ -152278,7 +152327,8 @@
         "D": "加強認知功能"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 7601,
@@ -152899,7 +152949,10 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/ot_102020_p5_30_0.webp"
+      "image_url": "/question-images/ot_102020_p5_30_0.webp",
+      "images": [
+        "/question-images/ot_7631_0.webp"
+      ]
     },
     {
       "id": 7632,
@@ -157262,7 +157315,8 @@
         "D": "自我餵食→移位→穿衣"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 7850,
@@ -157982,7 +158036,8 @@
         "D": "千萬不可以浸泡熱水，因為水腫部位的皮膚很脆弱，容易燙傷"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 7886,
@@ -158202,7 +158257,8 @@
         "D": "憂鬱不會造成記憶力下降"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 7897,
@@ -158442,7 +158498,8 @@
         "D": "搬運重的家具"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 7909,
@@ -169228,7 +169285,8 @@
         "D": "③→②→①"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 8454,
@@ -175233,7 +175291,8 @@
         "D": "靜止時與運動後心跳速率差距可達30bpm"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 8754,
@@ -175713,7 +175772,8 @@
         "D": "惡性腫瘤"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 8778,
@@ -176554,7 +176614,8 @@
         "D": "溝通/互動技巧"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 8820,
@@ -176694,7 +176755,8 @@
         "D": "發展參考架構（development）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 8827,
@@ -177274,7 +177336,8 @@
         "D": "自信"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 8856,
@@ -178635,7 +178698,8 @@
         "D": "變化比例的間歇性增強"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 8924,
@@ -178895,7 +178959,8 @@
         "D": "物體在指間移動"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 8937,
@@ -179015,7 +179080,8 @@
         "D": "介入時，強調旋轉的前庭刺激"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 8943,
@@ -185222,7 +185288,8 @@
         "D": "布朗－斯圭症候群（Brown-Sequard syndrome）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 9253,
@@ -186782,7 +186849,8 @@
         "D": "VI"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 9331,
@@ -187523,7 +187591,8 @@
         "D": "5"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 9368,
@@ -188203,7 +188272,8 @@
         "D": "促進教學的參考架構"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 9402,
@@ -206400,7 +206470,8 @@
         "D": "舒茲（Schutz）的團體發展模式是：操控（control）→包容（inclusion）→投入情感 （affection）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 10311,
@@ -207520,7 +207591,8 @@
         "D": "將日常作息適度的分段，可促進孩童在學校工作與生產職能的表現"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 10367,
@@ -214513,7 +214585,8 @@
         "D": "克蘭貝爾日常生活活動量表（Klein-Bell ADL Scale）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 10716,
@@ -214953,7 +215026,8 @@
         "D": "層級0"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 10738,
@@ -214973,7 +215047,8 @@
         "D": "職能表現領域"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 10739,
@@ -215193,7 +215268,8 @@
         "D": "權力共享（sharing power）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 10750,
@@ -226590,7 +226666,8 @@
         "D": "對於類別困難度高（high nominal difficulty）的任務，應即時頻繁提供練習的結果回饋 （knowledge of results）最為有效，且效果的保留愈佳"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 11302,
@@ -226821,7 +226898,8 @@
         "D": "下顎（lower jaw）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 11313,
@@ -227451,7 +227529,8 @@
         "D": "認知改變策略"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 11343,
@@ -236382,7 +236461,8 @@
         "D": "9 個月"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "disputed": true
     },
     {
       "id": 11768,
@@ -238504,7 +238584,10 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/ot_100130_p5_22_0.webp"
+      "image_url": "/question-images/ot_100130_p5_22_0.webp",
+      "images": [
+        "/question-images/ot_11868_0.webp"
+      ]
     },
     {
       "id": 11869,
@@ -245759,7 +245842,8 @@
         "C": "術後三個月可大約恢復正常作息，可不需要再避免前期之禁忌動作",
         "D": "手術採有補骨泥（cemented prosthesis）者其較無骨泥者可較早嘗試承重"
       },
-      "answer": "D"
+      "answer": "D",
+      "disputed": true
     },
     {
       "id": "115090_2_74",
@@ -247602,7 +247686,8 @@
         "C": "若發生在胸椎或腰椎，其下肢肌肉通常會出現痙攣",
         "D": "大部分患者智力不會受到影響"
       },
-      "answer": "B"
+      "answer": "B",
+      "disputed": true
     },
     {
       "id": "115090_4_11",
@@ -247811,7 +247896,8 @@
         "C": "較冰冷的溫度可以促進肌肉張力下降",
         "D": "情緒波動大會使肌肉張力下降"
       },
-      "answer": "B"
+      "answer": "B",
+      "disputed": true
     },
     {
       "id": "115090_4_22",

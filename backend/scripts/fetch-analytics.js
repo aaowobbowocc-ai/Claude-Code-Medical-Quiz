@@ -21,6 +21,11 @@ const SCOPES = [
 
 const KEY_PATH = path.join(__dirname, '..', 'gcp-oauth.json')
 const TOKEN_PATH = path.join(__dirname, '..', 'gcp-token.json')
+// 服務帳戶金鑰（優先）。用它就不必開瀏覽器登入，也才能放到 Oracle 上排程跑。
+// 環境變數 GOOGLE_APPLICATION_CREDENTIALS 也認（Vertex 那組 ADC 就是走這個）。
+const SA_PATH = process.env.ANALYTICS_SA_KEY
+  || process.env.GOOGLE_APPLICATION_CREDENTIALS
+  || path.join(__dirname, '..', 'gcp-sa.json')
 
 const args = process.argv.slice(2)
 const getArg = name => {
@@ -29,6 +34,29 @@ const getArg = name => {
 }
 
 async function loadAuth() {
+  // ── 1. 服務帳戶（推薦）─────────────────────────────────────────
+  // 前提：要把這個服務帳戶的 email 分別加進
+  //   GA4  → 管理 → 資源存取管理 → 新增使用者（檢視者即可）
+  //   GSC  → 設定 → 使用者和權限 → 新增使用者（完整/受限皆可）
+  // 沒加權限的話 API 會回 403，而不是「找不到資源」，看到 403 先檢查這裡。
+  if (fs.existsSync(SA_PATH)) {
+    const sa = JSON.parse(fs.readFileSync(SA_PATH, 'utf-8'))
+    if (sa.type === 'service_account') {
+      console.log(`🔑 使用服務帳戶 ${sa.client_email}`)
+      return new google.auth.GoogleAuth({ keyFile: SA_PATH, scopes: SCOPES }).getClient()
+    }
+  }
+
+  // ── 2. OAuth 桌面流程（需要人在電腦前按一次授權）────────────────
+  if (!fs.existsSync(KEY_PATH)) {
+    console.error('✗ 找不到憑證。二選一：')
+    console.error('  (a) 服務帳戶：下載金鑰存成 backend/gcp-sa.json，')
+    console.error('      並把該服務帳戶 email 加進 GA4 與 Search Console 的使用者權限')
+    console.error('  (b) OAuth：GCP Console → API 和服務 → 憑證 → OAuth 用戶端 ID')
+    console.error('      → 桌面應用程式 → 下載 JSON 存成 backend/gcp-oauth.json')
+    console.error('  兩者都需要先啟用 Google Analytics Data API 與 Search Console API')
+    process.exit(1)
+  }
   if (fs.existsSync(TOKEN_PATH)) {
     const credentials = JSON.parse(fs.readFileSync(TOKEN_PATH, 'utf-8'))
     const keyFile = JSON.parse(fs.readFileSync(KEY_PATH, 'utf-8'))

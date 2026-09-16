@@ -12487,7 +12487,8 @@
         "C": "低血容積性休克(hypovolemic shock)",
         "D": "心包膜填塞(pericardial tamponade)引起休克"
       },
-      "answer": "C"
+      "answer": "C",
+      "no_image_in_source": true
     },
     {
       "id": "112020_4",
@@ -24743,7 +24744,8 @@
         "C": "戴隱形眼鏡後出現眼瞼紅且有黏液",
         "D": "甲醇中毒病人,除造成急性視力減 ng of beads)擴張及狹窄 現影像中箭號所指處有結腸肝彎處腫瘤阻塞, otitis)會造成顱底骨髓炎(skull base os )指數上升可確診 不適當? 或罹患精神疾病的成人 狀 使用鼻滴劑潤滑,並儘快取出電池 發現,如懷疑可考慮照X 光輔助診斷 確? w-out fracture)的位置是在眼窩的上壁(upp titis)造成的角膜傷害,可使用局部睫狀肌麻 膿性分泌物時,使用紅黴素是最適合的眼藥膏 損或喪失外,會引發嚴重眼睛疼痛 合併右側卵巢多囊性腫瘤, teomyelitis),下列敘述何 per wall)部位 麻痺劑(cycloplegics)及 膏"
       },
-      "answer": "B"
+      "answer": "B",
+      "no_image_in_source": true
     },
     {
       "id": "113020_3_78",
@@ -40518,7 +40520,8 @@
         "D": "僅①②③"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 115020540,
@@ -43927,7 +43930,8 @@
         "D": "65歲男性出現運動後氣促，長期使用乙型交感神經阻斷劑（beta blocker），毛地黃（digoxin）及硝酸鹽 （nitrate）類藥物"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 115020708,
@@ -66009,7 +66013,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/doctor2_113070_p1_45_0.webp"
+      "image_url": "/question-images/doctor2_113070_p1_45_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115021794,
@@ -78964,7 +78969,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "no_image_in_source": true
     },
     {
       "id": 115022427,
@@ -90065,7 +90071,8 @@
       "answer": "B",
       "explanation": "",
       "image_dependent": true,
-      "image_url": "/question-images/doctor2_107080_p0_39_0.webp"
+      "image_url": "/question-images/doctor2_107080_p0_39_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115022971,
@@ -112937,7 +112944,8 @@
         "D": "QRS shortening"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 115024093,
@@ -136272,7 +136280,8 @@
       "answer": "D",
       "explanation": "",
       "image_dependent": true,
-      "image_url": "/question-images/doctor2_102030_p0_54_0.webp"
+      "image_url": "/question-images/doctor2_102030_p0_54_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115025230,
@@ -136454,7 +136463,8 @@
       "answer": "A",
       "explanation": "",
       "image_dependent": true,
-      "image_url": "/question-images/doctor2_102030_p0_63_0.webp"
+      "image_url": "/question-images/doctor2_102030_p0_63_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115025239,
@@ -136534,7 +136544,8 @@
         "D": "頸動脈竇按摩"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 115025243,
@@ -136576,7 +136587,8 @@
       "answer": "D",
       "explanation": "",
       "image_dependent": true,
-      "image_url": "/question-images/doctor2_102030_p0_69_0.webp"
+      "image_url": "/question-images/doctor2_102030_p0_69_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115025245,
@@ -136598,7 +136610,8 @@
       "answer": "A",
       "explanation": "",
       "image_dependent": true,
-      "image_url": "/question-images/doctor2_102030_p0_70_0.webp"
+      "image_url": "/question-images/doctor2_102030_p0_70_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115025246,
@@ -143184,7 +143197,8 @@
       "answer": "B",
       "explanation": "",
       "image_dependent": true,
-      "image_url": "/question-images/doctor2_103030_p0_77_0.webp"
+      "image_url": "/question-images/doctor2_103030_p0_77_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115025566,
@@ -192273,10 +192287,10 @@
       "number": 49,
       "question": "根據AJCC-TNM（第6 版）系統以及Modified Astler-Coller的分期，一個T4N0M0，stage IIB的大腸直腸B癌相當於後者的那一期？",
       "options": {
-        "A": "B",
-        "B": "B4",
-        "C": "B3",
-        "D": "B"
+        "A": "BB4",
+        "B": "B3",
+        "C": "BB2",
+        "D": "B1"
       },
       "answer": "B",
       "explanation": ""
@@ -195841,7 +195855,8 @@
       "images": [
         "/question-images/doctor2_102110_0106_22_0.webp"
       ],
-      "image_dependent": true
+      "image_dependent": true,
+      "incomplete": "broken_options"
     },
     {
       "id": "102110_0106_24",
@@ -196248,7 +196263,8 @@
       "images": [
         "/question-images/doctor2_102110_0106_66_0.webp"
       ],
-      "image_dependent": true
+      "image_dependent": true,
+      "incomplete": "broken_options"
     },
     {
       "id": "102110_0106_67",
@@ -201462,7 +201478,8 @@
         "D": "左肺動脈栓塞（left pulmonary artery embolism）"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 115028281,
@@ -201482,7 +201499,8 @@
         "D": "急性胃炎（acute gastritis）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 115028282,
@@ -208176,6 +208194,6 @@
   ],
   "total": 10239,
   "metadata": {
-    "last_updated": "2026-09-15T14:15:49.468Z"
+    "last_updated": "2026-09-16T14:53:50.664Z"
   }
 }

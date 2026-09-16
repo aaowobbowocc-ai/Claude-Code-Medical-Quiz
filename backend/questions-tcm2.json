@@ -4,7 +4,7 @@
     "label": "中醫師(二)",
     "scraped_at": "2026-04-14T11:34:53.579Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-16T13:58:00.818Z"
+    "last_updated": "2026-09-16T14:53:53.870Z"
   },
   "total": 10236,
   "questions": [
@@ -4509,7 +4509,8 @@
         "/question-images/tcm2_6260_1.webp",
         "/question-images/tcm2_6260_2.webp",
         "/question-images/tcm2_6260_3.webp"
-      ]
+      ],
+      "incomplete": "broken_options"
     },
     {
       "id": 6261,
@@ -11213,7 +11214,8 @@
         "B": "/question-images/tcm2_100140_q62_opt_B.webp",
         "C": "/question-images/tcm2_100140_q62_opt_C.webp",
         "D": "/question-images/tcm2_100140_q62_opt_D.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": 9133,
@@ -24354,7 +24356,8 @@
         "B": "/question-images/tcm2_101110_q56_opt_B.webp",
         "C": "/question-images/tcm2_101110_q56_opt_C.webp",
         "D": "/question-images/tcm2_101110_q56_opt_D.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": 9473,
@@ -95866,7 +95869,8 @@
         "D": "韌帶1 為盂肱韌帶"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 4664,
@@ -118017,7 +118021,8 @@
         "B": "/question-images/tcm2_110030_q21_opt_B.webp",
         "C": "/question-images/tcm2_110030_q21_opt_C.webp",
         "D": "/question-images/tcm2_110030_q21_opt_D.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": 1942,
@@ -137722,7 +137727,8 @@
         "D": "頁次：8－5"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 2909,

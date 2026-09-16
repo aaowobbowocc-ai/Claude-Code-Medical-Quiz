@@ -8,7 +8,7 @@
     "description": "醫師國考第一階段文字題題庫（已過濾圖片題）",
     "scraped_at": "2026-04-01",
     "total_questions": 2000,
-    "last_updated": "2026-09-16T13:58:11.392Z"
+    "last_updated": "2026-09-16T14:53:54.190Z"
   },
   "total": 6360,
   "questions": [
@@ -9219,7 +9219,8 @@
         "D": "ST interval對應於心室動作電位之高原期（plateau）"
       },
       "answer": "A",
-      "explanation": "**✅ 為什麼答案是 A**\nP波反映心房收縮期的再極化，但不是再極化。心房再極化是指心房電位恢復到正常的休息電位狀態，這是心房收縮期後的過程，而不是收縮期本身。\n\n**❌ 排除其他選項**\nB選項正確，T波反映心室再極化。C選項正確，QRS複合體對應於心室動作電位的初生期。D選項正確，ST間隔對應於心室動作電位的高原期。\n\n**🧠 記憶關鍵字**\n「P波是收縮期，T波是再極化」。\n\n**🏥 臨床應用**\n了解心電圖波形與波間距離的生理現象對於診斷心臟疾病，如心房心室顫動、心肌梗塞等，具有重要的臨床意義。"
+      "explanation": "**✅ 為什麼答案是 A**\nP波反映心房收縮期的再極化，但不是再極化。心房再極化是指心房電位恢復到正常的休息電位狀態，這是心房收縮期後的過程，而不是收縮期本身。\n\n**❌ 排除其他選項**\nB選項正確，T波反映心室再極化。C選項正確，QRS複合體對應於心室動作電位的初生期。D選項正確，ST間隔對應於心室動作電位的高原期。\n\n**🧠 記憶關鍵字**\n「P波是收縮期，T波是再極化」。\n\n**🏥 臨床應用**\n了解心電圖波形與波間距離的生理現象對於診斷心臟疾病，如心房心室顫動、心肌梗塞等，具有重要的臨床意義。",
+      "no_image_in_source": true
     },
     {
       "id": "111100_1_58",
@@ -45320,10 +45321,10 @@
       "number": 75,
       "question": "酵素反應在受質濃度極低時，所測得的初始反應速率會與受質濃度成正比，此反應速率常數應為下列何者？",
       "options": {
-        "A": "k",
-        "B": "k",
-        "C": "V max /K m",
-        "D": "1/K m"
+        "A": "k cat",
+        "B": "k cat×Km",
+        "C": "V max/Km",
+        "D": "1/Km"
       },
       "answer": "C",
       "explanation": "",
@@ -71749,13 +71750,13 @@
       "question": "在66 歲男性解剖病例中發現病人心臟瓣膜上有許多小粒的贅生物(vegetations)黏附其上,贅生物 純粹為血栓成分並且沒有造成瓣膜發炎或損傷,顯微鏡檢視贅生物也沒有發現其中含有微生物。患 者生前並無任何自體免疫疾病的病史。下列何情況最常與這種贅生物的產生有關?",
       "options": {
         "A": "Debilitated patients such as those with cancer or sepsis",
-        "B": "",
+        "B": "",
         "C": "Intravenous drug",
-        "D": ""
+        "D": ""
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": false,
+      "incomplete": "broken_options",
       "disputed": true
     },
     {
@@ -86447,9 +86448,9 @@
       "number": 72,
       "question": "缺乏下列那種細胞激素，可能會引起發炎性腸道疾病（inflammatory bowel disease）？",
       "options": {
-        "A": "-α ",
-        "B": "IL-10 ",
-        "C": "IL-1 ",
+        "A": "-α",
+        "B": "IL-10",
+        "C": "IL-1",
         "D": "IFN-γ"
       },
       "answer": "D",
@@ -86559,9 +86560,9 @@
       "number": 77,
       "question": "下列寄生蟲與其中間宿主之配對，共有幾項正確？①中華肝吸蟲（Clonorchis sinensis）--淡水魚②衛氏肺吸蟲（Paragonimus westermani）--毛蟹 ③薑片蟲（Fasciolopsis buski）--菱角 ④槍狀肝吸蟲（Dicrocoelium dendriticum）--螞蟻",
       "options": {
-        "A": "項 ",
-        "B": "2 項 ",
-        "C": "3 項 ",
+        "A": "項",
+        "B": "2 項",
+        "C": "3 項",
         "D": "4 項"
       },
       "answer": "C",
@@ -88115,7 +88116,8 @@
       "explanation": "",
       "vision_uncertain": false,
       "disputed": true,
-      "_original_number": 46
+      "_original_number": 46,
+      "incomplete": "broken_options"
     },
     {
       "id": 1150204231,
@@ -88158,7 +88160,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "_original_number": 48
+      "_original_number": 48,
+      "incomplete": "broken_options"
     },
     {
       "id": 1150204233,
@@ -105257,10 +105260,10 @@
       "number": 45,
       "question": "一名3 個月大男嬰的血清中，苯丙胺酸（Phenylalanine）與苯丙酮酸（Phenylpyruvate）的濃度較高。若是苯酮尿症（Phenylketonuria），最可能會再出現下列那個檢驗數據？苯丙胺酸羥化酶（Phenylalanine hydroxylase）活性降低血清中的黑尿酸（Homogentisic acid）濃度偏高",
       "options": {
-        "A": "血清中的維生素B",
-        "B": "B12濃度偏低",
-        "C": "血清中的維生素B",
-        "D": "B6濃度偏低"
+        "A": "苯丙胺酸羥化酶（Phenylalanine hydroxylase）活性降低",
+        "B": "血清中的黑尿酸（Homogentisic acid）濃度偏高",
+        "C": "血清中的維生素BB12濃度偏低",
+        "D": "血清中的維生素BB6濃度偏低"
       },
       "answer": "A",
       "explanation": ""
@@ -110445,7 +110448,8 @@
       "explanation": "",
       "image_dependent": true,
       "image_url": "/question-images/doctor1_101110_p1_76_0.webp",
-      "_original_number": 76
+      "_original_number": 76,
+      "no_image_in_source": true
     },
     {
       "id": 1150205420,

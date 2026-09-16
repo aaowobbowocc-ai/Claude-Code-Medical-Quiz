@@ -3341,7 +3341,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_100030_p0_7_0.webp"
+    "image_url": "/question-images/medlab_100030_p0_7_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 9126,
@@ -10054,10 +10055,10 @@
     "number": 15,
     "question": "鈷（Co）為人體必需之微量元素，就目前所知，其唯一參與下列那種維生素之組成？",
     "options": {
-      "A": "B",
-      "B": "B1",
-      "C": "B2",
-      "D": "B"
+      "A": "BB1",
+      "B": "B2",
+      "C": "BB6",
+      "D": "B12"
     },
     "answer": "D",
     "explanation": ""
@@ -13378,10 +13379,10 @@
     "number": 13,
     "question": "述何者正確？",
     "options": {
-      "A": "加",
-      "B": "加",
-      "C": "變",
-      "D": "基本波週期變快，振幅變小"
+      "A": "基本波週期變快，振幅稍微增",
+      "B": "基本波週期不變，振幅劇烈增變",
+      "C": "基本波週期變快，振幅變小",
+      "D": "基本波週期變慢，振幅不"
     },
     "answer": "A",
     "explanation": ""
@@ -13420,8 +13421,8 @@
     "question": "後背基底腦波出現之棘波（Spike wave）其週期為：",
     "options": {
       "A": "< 8 ms",
-      "B": "< 8 ms",
-      "C": "80 ms",
+      "B": "> 8 ms",
+      "C": "< 80 ms",
       "D": "> 80 ms"
     },
     "answer": "C",
@@ -30369,7 +30370,8 @@
       "D": "E"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "incomplete": "broken_options"
   },
   {
     "id": 14214,
@@ -33371,7 +33373,8 @@
       "D": "lead I = lead II = lead III"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": 13883,
@@ -35460,7 +35463,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_101110_p1_45_0.webp"
+    "image_url": "/question-images/medlab_101110_p1_45_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 13981,
@@ -35482,7 +35486,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_101110_p1_45_0.webp"
+    "image_url": "/question-images/medlab_101110_p1_45_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 13982,
@@ -35983,9 +35988,9 @@
     "question": "一袋分離術血小板至少需含多少個血小板才合乎品質管制標準？",
     "options": {
       "A": "5×10",
-      "B": "11",
-      "C": "4×10",
-      "D": "11"
+      "B": "4×10",
+      "C": "3×10",
+      "D": "2×1011111111"
     },
     "answer": "C",
     "explanation": ""
@@ -46031,7 +46036,8 @@
       "D": "Pk"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "incomplete": "broken_options"
   },
   {
     "id": 14472,
@@ -53009,7 +53015,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_102100_p0_7_0.webp"
+    "image_url": "/question-images/medlab_102100_p0_7_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 10077,
@@ -53216,7 +53223,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "image_url": "/question-images/medlab_102100_p0_8_0.webp"
+    "image_url": "/question-images/medlab_102100_p0_8_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 10087,
@@ -59655,7 +59663,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_103020_p4_16_0.webp"
+    "image_url": "/question-images/medlab_103020_p4_16_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 10886,
@@ -62661,7 +62670,8 @@
       "D": "很適合用於外科開刀房"
     },
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": 10557,
@@ -72284,7 +72294,8 @@
     },
     "answer": "A",
     "explanation": "",
-    "image_url": "/question-images/medlab_103090_p0_3_0.webp"
+    "image_url": "/question-images/medlab_103090_p0_3_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 11034,
@@ -84149,7 +84160,8 @@
     },
     "answer": "A",
     "explanation": "",
-    "image_url": "/question-images/medlab_104020_q34_0.webp"
+    "image_url": "/question-images/medlab_104020_q34_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 11624,
@@ -84175,7 +84187,8 @@
       "B": "/question-images/medlab_104020_q35_B.webp",
       "C": "/question-images/medlab_104020_q35_C.webp",
       "D": "/question-images/medlab_104020_q35_D.webp"
-    }
+    },
+    "incomplete": "broken_options"
   },
   {
     "id": 11625,
@@ -88623,7 +88636,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_104090_p4_15_0.webp"
+    "image_url": "/question-images/medlab_104090_p4_15_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 13285,
@@ -91697,7 +91711,8 @@
     },
     "answer": "A",
     "explanation": "",
-    "image_url": "/question-images/medlab_104090_p0_1_0.webp"
+    "image_url": "/question-images/medlab_104090_p0_1_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 12951,
@@ -91740,7 +91755,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_104090_p0_3_0.webp"
+    "image_url": "/question-images/medlab_104090_p0_3_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 12953,
@@ -101826,7 +101842,8 @@
       "D": "U波"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": 11991,
@@ -111997,7 +112014,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_105100_p0_6_0.webp"
+    "image_url": "/question-images/medlab_105100_p0_6_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 12473,
@@ -114245,7 +114263,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "image_url": "/question-images/medlab_105100_p2_q29.webp"
+    "image_url": "/question-images/medlab_105100_p2_q29.webp",
+    "no_image_in_source": true
   },
   {
     "id": 12579,
@@ -118579,7 +118598,8 @@
       "D": "ABO血型typing"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": 12704,
@@ -122083,7 +122103,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_106020_p0_7_0.webp"
+    "image_url": "/question-images/medlab_106020_p0_7_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 5288,
@@ -123329,8 +123350,8 @@
     "question": "下列何者不是肝細胞癌的危險因子？",
     "options": {
       "A": "黃麴毒素",
-      "B": "型肝炎病毒",
-      "C": "型肝炎病毒",
+      "B": "B型肝炎病毒",
+      "C": "C型肝炎病毒",
       "D": "中華肝吸蟲"
     },
     "answer": "D",
@@ -131608,7 +131629,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_106100_p0_5_0.webp"
+    "image_url": "/question-images/medlab_106100_p0_5_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 5759,
@@ -131755,7 +131777,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_106100_p0_6_0.webp"
+    "image_url": "/question-images/medlab_106100_p0_6_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 5766,
@@ -133911,7 +133934,8 @@
     },
     "answer": "A",
     "explanation": "",
-    "image_url": "/question-images/medlab_106100_p1_35_0.webp"
+    "image_url": "/question-images/medlab_106100_p1_35_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 5872,
@@ -133932,7 +133956,8 @@
     },
     "answer": "A",
     "explanation": "",
-    "image_url": "/question-images/medlab_106100_blood_q36_0.webp"
+    "image_url": "/question-images/medlab_106100_blood_q36_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 5873,
@@ -139794,7 +139819,8 @@
       "D": "L. monocytogenes與S. agalactiae菌落相鄰處，出現足球形（football）加強溶血區"
     },
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": 6472,
@@ -141523,7 +141549,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_107020_p0_7_0.webp"
+    "image_url": "/question-images/medlab_107020_p0_7_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 6246,
@@ -143289,7 +143316,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_107020_p1_22_0.webp"
+    "image_url": "/question-images/medlab_107020_p1_22_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 6333,
@@ -145354,10 +145382,10 @@
     "number": 45,
     "question": "血液中的肝炎病毒，何者最常與非常低密度脂蛋白（VLDL）在肝臟之分泌有關？",
     "options": {
-      "A": "型肝炎病毒",
-      "B": "型肝炎病毒",
-      "C": "型肝炎病毒",
-      "D": "型肝炎病毒"
+      "A": "A型肝炎病毒",
+      "B": "B型肝炎病毒",
+      "C": "C型肝炎病毒",
+      "D": "D型肝炎病毒"
     },
     "answer": "C",
     "explanation": ""
@@ -151375,7 +151403,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_107100_p0_20_0.webp"
+    "image_url": "/question-images/medlab_107100_p0_20_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 6718,
@@ -151569,8 +151598,8 @@
     "number": 35,
     "question": "下列那一種超音波模式目前已很少使用？",
     "options": {
-      "A": "mode",
-      "B": "mode",
+      "A": "A mode",
+      "B": "B mode",
       "C": "M mode",
       "D": "real time mode"
     },
@@ -160921,7 +160950,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_108030_p0_21_0.webp"
+    "image_url": "/question-images/medlab_108030_p0_21_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 7183,
@@ -170145,7 +170175,8 @@
       "D": "左腳對右腳的電位差"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": 7630,
@@ -179955,7 +179986,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_109020_p0_10_0.webp"
+    "image_url": "/question-images/medlab_109020_p0_10_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 8108,
@@ -190167,7 +190199,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_109100_p0_37_0.webp"
+    "image_url": "/question-images/medlab_109100_p0_37_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 8605,
@@ -197739,7 +197772,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_110020_p3_15_0.webp"
+    "image_url": "/question-images/medlab_110020_p3_15_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 1695,
@@ -204898,7 +204932,8 @@
       "/question-images/medlab_100140117_2.webp",
       "/question-images/medlab_100140117_3.webp",
       "/question-images/medlab_100140117_4.webp"
-    ]
+    ],
+    "incomplete": "broken_options"
   },
   {
     "id": 1651,
@@ -209459,7 +209494,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_110100_p0_33_0.webp"
+    "image_url": "/question-images/medlab_110100_p0_33_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 1958,
@@ -218503,7 +218539,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_111020_p0_2_0.webp"
+    "image_url": "/question-images/medlab_111020_p0_2_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 2406,
@@ -224664,7 +224701,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "image_url": "/question-images/medlab_111020_p2_62_0.webp"
+    "image_url": "/question-images/medlab_111020_p2_62_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 2632,
@@ -228197,7 +228235,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "image_url": "/question-images/medlab_111100_p0_3_0.webp"
+    "image_url": "/question-images/medlab_111100_p0_3_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 2887,
@@ -228262,7 +228301,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_111100_p0_3_0.webp"
+    "image_url": "/question-images/medlab_111100_p0_3_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 2890,
@@ -228426,7 +228466,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_111100_p0_11_0.webp"
+    "image_url": "/question-images/medlab_111100_p0_11_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 2898,
@@ -237790,7 +237831,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "image_url": "/question-images/medlab_112020_p0_3_0.webp"
+    "image_url": "/question-images/medlab_112020_p0_3_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 3364,
@@ -237871,7 +237913,8 @@
     },
     "answer": "A",
     "explanation": "",
-    "image_url": "/question-images/medlab_112020_p0_3_0.webp"
+    "image_url": "/question-images/medlab_112020_p0_3_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 3368,
@@ -237994,7 +238037,8 @@
       "D": "三個月大的嬰兒，其睡眠圖譜以動態睡眠為主"
     },
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": 3374,
@@ -242374,7 +242418,8 @@
       "/question-images/medlab_112020_immuno_q71_1.webp",
       "/question-images/medlab_112020_immuno_q71_2.webp",
       "/question-images/medlab_112020_immuno_q71_3.webp"
-    ]
+    ],
+    "incomplete": "broken_options"
   },
   {
     "id": 3831,
@@ -257192,7 +257237,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "image_url": "/question-images/medlab_113020_p0_5_0.webp"
+    "image_url": "/question-images/medlab_113020_p0_5_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 4327,
@@ -263086,7 +263132,8 @@
       "B": "/question-images/medlab_113020_molmicro_q59_B.webp",
       "C": "/question-images/medlab_113020_molmicro_q59_C.webp",
       "D": "/question-images/medlab_113020_molmicro_q59_D.webp"
-    }
+    },
+    "incomplete": "broken_options"
   },
   {
     "id": 4538,
@@ -263314,7 +263361,8 @@
     },
     "answer": "A",
     "explanation": "",
-    "image_url": "/question-images/medlab_113020_p2_60_0.webp"
+    "image_url": "/question-images/medlab_113020_p2_60_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 4549,

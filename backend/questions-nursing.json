@@ -27547,7 +27547,8 @@
       "D": "計畫評核術"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": 117466,
@@ -28347,7 +28348,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/nursing_101110_p0_27_0.webp"
+    "image_url": "/question-images/nursing_101110_p0_27_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 117345,
@@ -42258,7 +42260,8 @@
       "D": "67.2"
     },
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "incomplete": "broken_options"
   },
   {
     "id": 116633,
@@ -55650,7 +55653,8 @@
     "answer": "C",
     "explanation": "",
     "vision_uncertain": false,
-    "disputed": true
+    "disputed": true,
+    "no_image_in_source": true
   },
   {
     "id": 114875,
@@ -60192,10 +60196,10 @@
     "number": 48,
     "question": "有一婦女呈現手部多個關節僵硬變形，無法打麻將，她最有可能罹患何種疾病？ 骨關節炎（osteoarthritis） 類風濕性關節炎（rheumatoid arthritis）",
     "options": {
-      "A": "化膿性關節炎（pyogenic",
-      "B": "arthritis）",
-      "C": "結核性關節炎（tuberculous",
-      "D": "arthritis）"
+      "A": "骨關節炎（osteoarthritis）",
+      "B": "類風濕性關節炎（rheumatoid arthritis）",
+      "C": "化膿性關節炎（pyogenic arthritis）",
+      "D": "結核性關節炎（tuberculous arthritis）"
     },
     "answer": "B",
     "explanation": ""
@@ -61000,9 +61004,9 @@
     "question": "李女士，妊娠28 週，有1 個女兒及1 對雙胞胎，曾於妊娠8 週自然流產1 次，孕產史的紀錄為：",
     "options": {
       "A": "G4P2A1",
-      "B": "G4P2A1",
-      "C": "G3P2A1",
-      "D": "G3P3A1"
+      "B": "G3P3A1",
+      "C": "G4P3A1",
+      "D": "G3P2A1"
     },
     "answer": "A",
     "explanation": "",
@@ -61363,10 +61367,10 @@
     "number": 26,
     "question": "吳女士產後第3天，主動學習新生兒沐浴的技術，依據魯賓（Rubin）對產後婦女行為態度之研究結 果判斷，她此時的心理狀態是處於： 接受期（Taking-in phase） 緊執期（Taking-hold phase）",
     "options": {
-      "A": "放手期（Letting-go",
-      "B": "phase）",
-      "C": "恢復期（Recovery",
-      "D": "phase）"
+      "A": "接受期（Taking-in phase）",
+      "B": "緊執期（Taking-hold phase）",
+      "C": "放手期（Letting-go phase）",
+      "D": "恢復期（Recovery phase）"
     },
     "answer": "B",
     "explanation": ""
@@ -64028,9 +64032,9 @@
     "number": 79,
     "question": "成年人當骨質密度（Ｔ值，T-score）大於等於多少時，表示其骨質正常？",
     "options": {
-      "A": "1 ",
-      "B": "0 ",
-      "C": "-1 ",
+      "A": "1",
+      "B": "0",
+      "C": "-1",
       "D": "5-2."
     },
     "answer": "C",
@@ -70689,7 +70693,8 @@
     "answer": "B",
     "explanation": "",
     "image_url": "/question-images/nursing_105090_p4_11_0.webp",
-    "disputed": true
+    "disputed": true,
+    "no_image_in_source": true
   },
   {
     "id": 115621,
@@ -83828,7 +83833,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/nursing_106110_p0_27_0.webp"
+    "image_url": "/question-images/nursing_106110_p0_27_0.webp",
+    "no_image_in_source": true
   },
   {
     "id": 1300,
@@ -210488,7 +210494,8 @@
       "D": "APGAR 家庭功能評估表"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": 114100020940,
@@ -218596,7 +218603,8 @@
       "D": "APGAR 家庭功能評估表"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": 114100021326,
@@ -223305,7 +223313,8 @@
       "D": "胎心率變異性減速"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": 114100021550,
@@ -233943,10 +233952,10 @@
     "number": 73,
     "question": "下列何種致病菌不是經由呼吸道感染人體？",
     "options": {
-      "A": "腦膜炎雙球菌（Neisseria meningitidis",
-      "B": "）",
-      "C": "肺炎雙球菌（Streptococcus pneumoniae",
-      "D": "）"
+      "A": "腦膜炎雙球菌（Neisseria meningitidis）",
+      "B": "肺炎雙球菌（Streptococcus pneumoniae）",
+      "C": "炭疽桿菌（Bacillus anthracis）",
+      "D": "臘腸毒桿菌（Clostridium botulinum）"
     },
     "answer": "D",
     "explanation": ""
@@ -233963,10 +233972,10 @@
     "number": 74,
     "question": "下列那一種土壤性傳播蠕蟲不是經由幼蟲穿過皮膚而感染？",
     "options": {
-      "A": "十二指腸鉤蟲（Ancylostoma duodenale",
-      "B": "）",
-      "C": "美洲鉤蟲（Necator americanus",
-      "D": "）"
+      "A": "十二指腸鉤蟲（Ancylostoma duodenale）",
+      "B": "美洲鉤蟲（Necator americanus）",
+      "C": "鞭蟲（Trichuris trichiura）",
+      "D": "糞小桿線蟲（Strongyloides stercoralis）"
     },
     "answer": "C",
     "explanation": ""
@@ -247658,7 +247667,8 @@
       "D": "無意義的線條筆畫"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "no_image_in_source": true
   },
   {
     "id": "114170_obs_ped_32",

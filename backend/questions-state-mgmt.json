@@ -3,7 +3,8 @@
     "exam": "state-mgmt",
     "label": "國營聯招 企管",
     "scraped_at": "2026-05-21T04:39:15.821Z",
-    "source": "taipower.com.tw"
+    "source": "taipower.com.tw",
+    "last_updated": "2026-09-16T14:53:53.556Z"
   },
   "total": 736,
   "questions": [
@@ -587,7 +588,8 @@
         "D": "未遂犯之處罰，得按既遂犯之刑減輕之"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "state-mgmt-100-30",

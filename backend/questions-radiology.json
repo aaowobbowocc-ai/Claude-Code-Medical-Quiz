@@ -4,7 +4,7 @@
     "label": "醫事放射師",
     "scraped_at": "2026-04-15T14:34:05.454Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-15T14:20:55.255Z"
+    "last_updated": "2026-09-16T14:53:52.992Z"
   },
   "total": 15359,
   "questions": [
@@ -22917,7 +22917,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/radiology_101010_p3_67_0.webp"
+      "image_url": "/question-images/radiology_101010_p3_67_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 114882,
@@ -58084,7 +58085,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/radiology_102100_p1_42_0.webp"
+      "image_url": "/question-images/radiology_102100_p1_42_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 116143,
@@ -67764,7 +67766,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/radiology_103020_p1_41_0.webp"
+      "image_url": "/question-images/radiology_103020_p1_41_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 116620,
@@ -79098,7 +79101,8 @@
         "B": "/question-images/radiology_104020_q54_opt_B.webp",
         "C": "/question-images/radiology_104020_q54_opt_C.webp",
         "D": "/question-images/radiology_104020_q54_opt_D.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": 117820,
@@ -82637,7 +82641,8 @@
         "D": "（密度：19.3 g/cm 3 ）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 117674,
@@ -91060,7 +91065,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/radiology_104090_p3_76_0.webp"
+      "image_url": "/question-images/radiology_104090_p3_76_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 119361,
@@ -91082,7 +91088,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/radiology_104090_p3_76_0.webp"
+      "image_url": "/question-images/radiology_104090_p3_76_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 119362,
@@ -91104,7 +91111,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/radiology_104090_p3_76_0.webp"
+      "image_url": "/question-images/radiology_104090_p3_76_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 119203,
@@ -97035,7 +97043,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/radiology_104090_p1_40_0.webp"
+      "image_url": "/question-images/radiology_104090_p1_40_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 119163,
@@ -100662,7 +100671,8 @@
         "D": "和訊雜比無關"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 118374,
@@ -101247,7 +101257,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/radiology_105020_p3_70_0.webp"
+      "image_url": "/question-images/radiology_105020_p3_70_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 118401,
@@ -101269,7 +101280,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/radiology_105020_p3_70_0.webp"
+      "image_url": "/question-images/radiology_105020_p3_70_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 118402,
@@ -101291,7 +101303,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/radiology_105020_p3_70_0.webp"
+      "image_url": "/question-images/radiology_105020_p3_70_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 114090010483,
@@ -110811,7 +110824,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/radiology_105100_p3_48_0.webp"
+      "image_url": "/question-images/radiology_105100_p3_48_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 118852,
@@ -125678,7 +125692,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/radiology_106020_p0_35_0.webp"
+      "image_url": "/question-images/radiology_106020_p0_35_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 5237,
@@ -127181,10 +127196,10 @@
       "number": 42,
       "question": "某核種之物理半衰期TP很長，而在人體內之生物半衰期TB很短，則其有效半衰期TE為：",
       "options": {
-        "A": "T E T",
-        "B": "TETP",
-        "C": "T E T",
-        "D": "T E T P"
+        "A": "TETBTP",
+        "B": "TETB",
+        "C": "TE",
+        "D": "TETP"
       },
       "answer": "C",
       "explanation": ""
@@ -136879,7 +136894,8 @@
         "D": "圖4"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 5789,
@@ -137863,7 +137879,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/radiology_107020_p4_17_0.webp"
+      "image_url": "/question-images/radiology_107020_p4_17_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 6472,
@@ -140225,7 +140242,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/radiology_107020_p3_47_0.webp"
+      "image_url": "/question-images/radiology_107020_p3_47_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 6431,
@@ -142264,7 +142282,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/radiology_107020_p2_66_0.webp"
+      "image_url": "/question-images/radiology_107020_p2_66_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 6372,
@@ -149731,7 +149750,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/radiology_107100_p3_37_0.webp"
+      "image_url": "/question-images/radiology_107100_p3_37_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 6897,
@@ -155708,7 +155728,8 @@
         "D": "water ＝D med ×(    /ρ) water /(    /ρ) med"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 6714,
@@ -163099,7 +163120,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/radiology_108030_p5_58_0.webp"
+      "image_url": "/question-images/radiology_108030_p5_58_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 7555,
@@ -180290,7 +180312,8 @@
         "D": "視彩色圖譜而定"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 8241,
@@ -185289,7 +185312,8 @@
         "D": "倍"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 8170,
@@ -209297,7 +209321,8 @@
         "D": "換能器的聲場寬度決定系統的側向解析度"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 2026,
@@ -211256,7 +211281,8 @@
         "B": "/question-images/radiology_110100_q41_B.webp",
         "C": "/question-images/radiology_110100_q41_C.webp",
         "D": "/question-images/radiology_110100_q41_D.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": 2282,
@@ -215891,7 +215917,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/radiology_111020_p4_27_0.webp"
+      "image_url": "/question-images/radiology_111020_p4_27_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 2672,
@@ -216511,7 +216538,8 @@
         "D": "因可以完全忽略散射效應，所以無須使用防散射柵板"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 2703,
@@ -264965,7 +264993,8 @@
         "D": "最大靶劑量（maximum target dose）是指治療靶體積內的最高劑量範圍至少要有2 cm 2"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 5089,
@@ -268569,7 +268598,8 @@
         "B": "/question-images/radiology_113090_q76_opt_B.webp",
         "C": "/question-images/radiology_113090_q76_opt_C.webp",
         "D": "/question-images/radiology_113090_q76_opt_D.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": 4946,

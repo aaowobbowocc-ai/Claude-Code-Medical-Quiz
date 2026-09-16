@@ -215,8 +215,22 @@ async function resolvePaper(p, opts = {}) {
       // 第 1 層又只有一個候選時，命中率低多半是「那張卷是掃描檔／表格多，抽不出文字」，
       // 不是抓錯卷——沒有第二張卷可混淆，就信名稱比對。硬卡掉會讓整批卷靜默消失。
       // 第 2~4 層是放寬猜的，沒驗過就不能用。
-      else if (tier === 1 && cands.length === 1) picked = { ...cands[0], hitRate: best ? +best.rate.toFixed(2) : 0, unverified: true };
-      else picked = null;
+      else {
+        // 名字完全對得上、內容卻一題都對不到 → 多半是「同名不同卷」：
+        // 關務的英文存成「英文」，官方那一科卻叫「外國文(英文)」，
+        // 而同場次另一個類科剛好有一張真的叫「英文」，就被它搶走了。
+        // 這時把該場次所有卷都當候選再驗一次，讓內容決定，不要讓名字說了算。
+        let wide = null;
+        for (const cand of codes) {
+          if (cands.find(c => c.c === cand.c && c.s === cand.s)) continue;
+          const rate = await stemHitRate(p.code, cand.c, cand.s, stems);
+          if (!wide || rate > wide.rate) wide = { cand, rate };
+          if (rate >= 0.8) break;
+        }
+        if (wide && wide.rate >= MIN_HIT_RATE) picked = { ...wide.cand, hitRate: +wide.rate.toFixed(2), widened: true };
+        else if (tier === 1 && cands.length === 1) picked = { ...cands[0], hitRate: best ? +best.rate.toFixed(2) : 0, unverified: true };
+        else picked = null;
+      }
     }
   }
 

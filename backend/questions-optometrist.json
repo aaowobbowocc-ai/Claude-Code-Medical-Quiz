@@ -6882,7 +6882,8 @@
         "D": "①③"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "107110_3_1",
@@ -32954,7 +32955,8 @@
         "D": "如果角膜散光大於1.0D，螢光染色會呈現啞鈴型，螢光液會堆積在角膜較平的軸線"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "113100_4_16",
@@ -38439,10 +38441,10 @@
       "number": 41,
       "question": "使用鏡片驗度儀測量眼鏡鏡片度數呈現下圖時（圖A 為-2.00 D，圖B 為-4.00 D），則該鏡片度數為何？",
       "options": {
-        "A": "90",
-        "B": "90",
-        "C": "0",
-        "D": "0"
+        "A": "-2.00DS/-4.00DC×135",
+        "B": "-2.00DS/-4.00DC×045",
+        "C": "-2.00DS/-2.00DC×135",
+        "D": "-2.00DS/-2.00DC×045"
       },
       "answer": "C",
       "explanation": "",
@@ -49815,6 +49817,6 @@
   ],
   "total": 2500,
   "metadata": {
-    "last_updated": "2026-09-16T14:04:48.044Z"
+    "last_updated": "2026-09-16T14:53:51.572Z"
   }
 }

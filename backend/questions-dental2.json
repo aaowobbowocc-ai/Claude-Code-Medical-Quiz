@@ -75230,7 +75230,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/dental2_105100_q63_patrol.webp"
+      "image_url": "/question-images/dental2_105100_q63_patrol.webp",
+      "no_image_in_source": true
     },
     {
       "id": "105100_44_64",
@@ -75579,7 +75580,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/dental2_105100_q79_patrol.webp"
+      "image_url": "/question-images/dental2_105100_q79_patrol.webp",
+      "no_image_in_source": true
     },
     {
       "id": "105100_44_80",
@@ -81502,7 +81504,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/dental2_106020_p1_53_0.webp"
+      "image_url": "/question-images/dental2_106020_p1_53_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115020834,
@@ -94443,7 +94446,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/dental2_107020_q53_full.webp"
+      "image_url": "/question-images/dental2_107020_q53_full.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115021473,
@@ -96189,8 +96193,8 @@
       "number": 59,
       "question": "牙齒比色時，將眼睛瞇起來，是為了正確判斷 CIELab color system中的何項參數？",
       "options": {
-        "A": "值",
-        "B": "值",
+        "A": "a值",
+        "B": "b值",
         "C": "L值",
         "D": "V值"
       },
@@ -98863,9 +98867,9 @@
       "number": 31,
       "question": "某些牙齒在局部麻醉或電髓測試無反應的情況下仍有疼痛反應，其主要原因為下列何種神經纖維（fiber）被 刺激所導致？",
       "options": {
-        "A": "-δfiber",
-        "B": "fiber",
-        "C": "fiber",
+        "A": "A-δfiber",
+        "B": "B fiber",
+        "C": "C fiber",
         "D": "parasympathetic nerve fiber（副交感神經纖維）"
       },
       "answer": "C",
@@ -107911,7 +107915,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/dental2_108030_p1_78_0.webp"
+      "image_url": "/question-images/dental2_108030_p1_78_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115022136,
@@ -107932,7 +107937,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/dental2_108030_p1_78_0.webp"
+      "image_url": "/question-images/dental2_108030_p1_78_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115022137,
@@ -139982,7 +139988,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/dental2_110100_p1_78_0.webp"
+      "image_url": "/question-images/dental2_110100_p1_78_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115020540,
@@ -140003,7 +140010,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/dental2_110100_p1_78_0.webp"
+      "image_url": "/question-images/dental2_110100_p1_78_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115020541,
@@ -154708,7 +154716,8 @@
         "D": "ascending ramus"
       },
       "answer": "B",
-      "image_url": "/question-images/dental2_111100_p3_37_0.webp"
+      "image_url": "/question-images/dental2_111100_p3_37_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "111100_1_78",
@@ -154728,7 +154737,8 @@
         "D": "副甲狀腺機能過旺(hyperparathyroidism)"
       },
       "answer": "A",
-      "image_url": "/question-images/dental2_111100_p3_38_0.webp"
+      "image_url": "/question-images/dental2_111100_p3_38_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "111100_1_79",
@@ -205140,6 +205150,6 @@
   ],
   "total": 10240,
   "metadata": {
-    "last_updated": "2026-09-16T13:58:27.455Z"
+    "last_updated": "2026-09-16T14:53:50.524Z"
   }
 }

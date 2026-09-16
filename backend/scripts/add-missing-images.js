@@ -704,7 +704,7 @@ async function processExamCode(examTag, code, opts) {
     }
   }
 
-  let added = 0, skipped = 0
+  let added = 0, skipped = 0, verified = 0
   try {
     for (const q of candidates) {
       let hit = null
@@ -751,7 +751,7 @@ async function processExamCode(examTag, code, opts) {
         // 多半是 IMAGE_REF 的假陽性:「心電圖中」「二氧化碳描計述圖中」「品管圖中」
         // 都會命中「圖中」。記下來，缺圖盤點才不會每次都把它們算進待辦，
         // 也不用每次重跑都重新下載 PDF 驗一遍。
-        if (!opts.dryRun) q.no_image_in_source = true
+        if (!opts.dryRun) { q.no_image_in_source = true; verified++ }
         continue
       }
       const newPaths = []
@@ -784,11 +784,13 @@ async function processExamCode(examTag, code, opts) {
     }
   }
 
-  if (!opts.dryRun && added > 0) {
+  // ⚠️ 不能只在 added > 0 時寫檔：no_image_in_source 的標記也是要保存的成果，
+  // 否則「驗證過原卷確實沒有圖」這件事每次都白做一遍，缺圖數字也永遠降不下來。
+  if (!opts.dryRun && (added > 0 || verified > 0)) {
     if (raw.metadata) raw.metadata.last_updated = new Date().toISOString()
     fs.writeFileSync(file, JSON.stringify(raw, null, 2))
   }
-  console.log(`  ${examTag} ${code}: added=${added} skipped=${skipped}`)
+  console.log(`  ${examTag} ${code}: added=${added} skipped=${skipped}` + (verified ? ` (其中 ${verified} 題確認原卷無圖)` : ''))
   return { added, skipped }
 }
 

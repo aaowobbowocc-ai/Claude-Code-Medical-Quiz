@@ -2700,7 +2700,8 @@
         "D": "生態評量的資料蒐集來源包括語言、非口語反應、書寫、文件、與實務工作者的臨場觀察等"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 2394,
@@ -2800,7 +2801,8 @@
         "D": "的治療環境不受時間限制、也無需與現實中的角色成就相連，當問題減輕時，即可結束治療"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 2399,
@@ -18054,7 +18056,8 @@
         "D": "①④⑤"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 890,
@@ -22755,7 +22758,8 @@
         "D": "是一種可以呈現社會工作者處遇活動的圖示方法"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 1123,
@@ -39101,10 +39105,10 @@
       "number": 19,
       "question": "有關優勢觀點的實務原則與策略之說明，下列何者正確？①以專家的角色教育服務使用者  ②協",
       "options": {
-        "A": "③④",
-        "B": "①②",
-        "C": "③④",
-        "D": "①③"
+        "A": "①②",
+        "B": "③④",
+        "C": "①③",
+        "D": "②④"
       },
       "answer": "D",
       "explanation": ""
@@ -51773,7 +51777,8 @@
         "D": "圖以異性關係為原則，同性關係需註記"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 3028,
@@ -54427,10 +54432,10 @@
       "number": 22,
       "question": "有關處遇性團體進入中間階段的團體動力，下列何者正確？①成員對於越來越深入的自我揭露都",
       "options": {
-        "A": "②③",
-        "B": "④",
-        "C": "①②",
-        "D": "②③"
+        "A": "①②",
+        "B": "②③",
+        "C": "③④",
+        "D": "②④"
       },
       "answer": "A",
       "explanation": ""
@@ -59299,7 +59304,8 @@
         "C": "研究架構",
         "D": "備忘錄"
       },
-      "answer": "C"
+      "answer": "C",
+      "no_image_in_source": true
     },
     {
       "id": "115100_4_36",
@@ -60574,7 +60580,8 @@
         "D": "家系圖"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 3296,
@@ -65914,7 +65921,8 @@
         "D": "備忘錄"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 3563,
@@ -66714,7 +66722,8 @@
         "D": "②①②"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 3603,
@@ -76374,7 +76383,8 @@
         "D": "社會訊息、自我反應、第三人"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 4086,
@@ -76874,7 +76884,8 @@
         "D": "沒有箭頭的線條表示兩端的變項沒有關係情況：睡眠對健康至關重要。但研究發現，多數大學生睡眠品質不佳。葉教授想了解影響大學生睡眠品質的因素，他從自己任教的大學裡，以系級名單隨機抽取20 個班級，到這些班級發放問卷，請全班同學填寫。問卷中，睡眠品質以「匹茲堡睡眠品質量表」（是由7 題，每題4 點尺度的李克特（Likert）量表所構成，分數越高代表睡眠品質越差）來測量，其他變項包括受訪者性別、每週運動時數、每天上網時數等。請依照上述資料，回答下列第5 題至第8 題。"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 4111,
@@ -81714,7 +81725,8 @@
         "D": "調節變項"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 4353,
@@ -84094,7 +84106,8 @@
         "D": "外衍變項"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 4472,
@@ -102294,7 +102307,8 @@
         "D": "①③④"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 5382,
@@ -110414,7 +110428,10 @@
         "D": "語意差別量表法"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/social-worker_5787_0.webp"
+      ]
     },
     {
       "id": 5788,
@@ -112578,6 +112595,6 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-09-16T14:40:13.364Z"
+    "last_updated": "2026-09-16T14:53:53.412Z"
   }
 }

@@ -32302,7 +32302,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/pharma2_103090_q71_patrol.webp"
+      "image_url": "/question-images/pharma2_103090_q71_patrol.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115023261,
@@ -36290,7 +36291,8 @@
         "D": "此頁面無此題"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 115023459,
@@ -36717,7 +36719,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 79 題：已知phenobarbital之藥動參數如下： 今在一洗腎病患上，得到下列數據：引血流到血液透析儀之血流速率為350 mL/min。藥品濃 度分析顯示：phenobarbital進與出透析儀之濃度分別為：30及24 mg/L。請估算 phenobarbital在此血液透析儀的透析清除率（dialysance，dialysis clearance）？ 藥品 擬似分布體積（L） 清除率（mL/min） phenobarbital                50              5"
+      "case_context": "第 79 題：已知phenobarbital之藥動參數如下： 今在一洗腎病患上，得到下列數據：引血流到血液透析儀之血流速率為350 mL/min。藥品濃 度分析顯示：phenobarbital進與出透析儀之濃度分別為：30及24 mg/L。請估算 phenobarbital在此血液透析儀的透析清除率（dialysance，dialysis clearance）？ 藥品 擬似分布體積（L） 清除率（mL/min） phenobarbital                50              5",
+      "incomplete": "broken_options"
     },
     {
       "id": 115023480,
@@ -62451,10 +62454,10 @@
       "number": 74,
       "question": "與下列何者併用時，warfarin之抗凝血作用會增強？",
       "options": {
-        "A": "[選項未顯示]",
-        "B": "[選項未顯示]",
-        "C": "[選項未顯示]",
-        "D": "[選項未顯示]"
+        "A": "barbiturates",
+        "B": "carbamazepine",
+        "C": "cefoperazone",
+        "D": "cholestyramine"
       },
       "answer": "C",
       "explanation": ""
@@ -133802,6 +133805,6 @@
   ],
   "total": 6719,
   "metadata": {
-    "last_updated": "2026-09-15T14:17:06.008Z"
+    "last_updated": "2026-09-16T14:53:52.086Z"
   }
 }

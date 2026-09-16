@@ -29354,10 +29354,10 @@
       "number": 30,
       "question": "在一個研究中，甲被形容為「聰明、勤奮、合作、固執、情緒不穩、易怒」的人；乙是「固執、情緒不穩、易怒，聰明、勤奮、合作」的人，你認為那一個人會受到較高的評價？為什麼？乙，因為分歧性歸因（actor-observer effect） 甲，因為初始效應（primacy effect）",
       "options": {
-        "A": "乙，因為對比效應（contrast",
-        "B": "effect）",
-        "C": "甲，因為新近效應（recency",
-        "D": "effect）"
+        "A": "情緒不穩、易怒，聰明、勤奮、合作」的人，你認為那一個人會受到較高的評價？為什麼？",
+        "B": "乙，因為分歧性歸因（actor-observer effect） 甲，因為初始效應（primacy effect）",
+        "C": "乙，因為對比效應（contrast effect）",
+        "D": "甲，因為新近效應（recency effect）"
       },
       "answer": "B",
       "explanation": ""
@@ -41369,7 +41369,8 @@
         "D": "使用輔助道具如圖卡、娃娃等"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "109030_4_40",
@@ -62286,7 +62287,8 @@
         "D": "%"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "104030_1_5",
@@ -96256,7 +96258,8 @@
         "D": "僅①①"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 662,
@@ -103585,6 +103588,6 @@
   ],
   "total": 5187,
   "metadata": {
-    "last_updated": "2026-09-15T12:27:18.576Z"
+    "last_updated": "2026-09-16T14:53:50.106Z"
   }
 }

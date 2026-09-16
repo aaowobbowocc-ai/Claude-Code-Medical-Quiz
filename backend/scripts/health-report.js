@@ -10,7 +10,7 @@
  */
 const fs = require('fs')
 const path = require('path')
-const { skeleton } = require('./lib/moex-normalize')
+const { skeleton, normText } = require('./lib/moex-normalize')
 const { IMAGE_REF } = require('./lib/image-ref')
 
 const DIR = path.join(__dirname, '..')
@@ -42,10 +42,13 @@ for (const f of files) {
     const vals = ['A', 'B', 'C', 'D'].map(k => String(opts[k] ?? ''))
     const stem = String(q.question ?? '')
 
-    if (!stem.trim()) bump('visible', '題幹空白', exam)
+    // 標誌辨識題的題幹本來就是空的——題目就是那張標誌圖，選項是它的含義。
+    // 駕照 127+100 題都是這種，把它們算成壞題會讓數字虛胖。有圖就不算。
+    const hasImg = !!(q.image_url || q.image || (q.images && q.images.length))
+    if (!stem.trim()) { if (!hasImg) bump('visible', '題幹空白且無圖', exam) }
     // 題幹短不一定壞：「汽車油箱加油時：」就是完整的題目。
-    // 真正壞的是短到不成句、而且選項也撐不住語意的（例如只剩 "lasted"）。
-    else if (skeleton(stem).length < 5) bump('visible', '題幹殘缺(<5字)', exam)
+    // 真正壞的是短到不成句、選項也撐不住語意的（例如只剩 "lasted"）。
+    else if (skeleton(stem).length < 5 && !hasImg) bump('visible', '題幹殘缺(<5字)', exam)
     // 選項數量不是一律 4 個：駕照是非題只有 ○/✕ 兩個、部分選擇題只有三個。
     // 一律要求 ABCD 齊全會把 2,405 題正常的駕照題算成壞題。
     // 真正的壞是「可選的選項少於兩個」或「中間有洞」（A、C 有但 B 空）。
@@ -59,7 +62,11 @@ for (const f of files) {
     const ansRaw = String(q.answer ?? '').trim()
     const ansOk = /^[A-E](\s*[,、]\s*[A-E])*$/.test(ansRaw) || /^[○✕]/.test(ansRaw)
     if (!ansOk && !q.disputed) bump('visible', '答案格式無法辨識', exam)
-    const nonEmpty = vals.filter(v => v.trim()).map(v => skeleton(v))
+    // 比選項是否重複不能用 skeleton：它會連減號一起去掉，
+    // 放射師的「10 -4 / 10 -2 / 10 2 / 10 4」（10⁻⁴、10⁻²、10²、10⁴）
+    // 會全部變成 "104"，460 題裡絕大多數是這樣誤判出來的。
+    // 這裡只做 NFC＋去空白，保留所有符號。
+    const nonEmpty = vals.filter(v => v.trim()).map(v => normText(v))
     if (nonEmpty.length >= 2 && new Set(nonEmpty).size < nonEmpty.length) bump('visible', '選項重複', exam)
     if (IMAGE_REF.test(stem) && !q.images && !q.image && !q.no_image_in_source) bump('visible', '提到圖但沒有圖', exam)
 

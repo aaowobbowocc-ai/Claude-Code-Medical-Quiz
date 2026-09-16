@@ -12019,7 +12019,8 @@
         "D": "①①①"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "106030_4_3",
@@ -12681,7 +12682,8 @@
         "D": "①①①"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "106030_4_36",
@@ -15424,7 +15426,8 @@
         "D": "和人本（humanistic）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "106110_2_14",
@@ -17486,7 +17489,8 @@
         "D": ", intimacy"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "106110_4_37",
@@ -17927,7 +17931,8 @@
         "D": "LCP"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "106110_5_20",
@@ -22252,7 +22257,8 @@
         "D": "偷竊犯"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "107030_4_38",
@@ -29735,7 +29741,8 @@
         "D": "跨不同情境之多重基準線設計"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "108020_2_14",
@@ -57346,7 +57353,8 @@
         "D": "大腦內側前額葉涉及情緒記憶的歷程"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "100140_1_40",
@@ -88127,7 +88135,8 @@
         "D": "人類基因圖譜已解析海洛因成癮原因"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "103100_4_27",
@@ -94675,10 +94684,10 @@
       "number": 34,
       "question": "圖一和圖二分別說明那種社會支持對健康影響效果的假設？",
       "options": {
-        "A": "高",
-        "B": "高",
-        "C": "低社會支持",
-        "D": "低社會支持"
+        "A": "緩衝假設；直接效果假設",
+        "B": "直接效果假設；緩衝假設",
+        "C": "緩衝假設；緩衝假設",
+        "D": "直接效果假設；直接效果假設"
       },
       "answer": "A",
       "explanation": ""
@@ -98065,7 +98074,8 @@
         "D": "dementia）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "104100_5_5",
@@ -99647,7 +99657,8 @@
         "D": "僅①①①"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "105090_1_4",
@@ -99707,7 +99718,8 @@
         "D": "僅①①"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "105090_1_7",
@@ -100387,7 +100399,8 @@
         "D": "①②"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "105090_2_2",
@@ -101529,7 +101542,8 @@
         "D": "①①①①"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "105090_3_19",
@@ -116145,6 +116159,6 @@
   ],
   "total": 5815,
   "metadata": {
-    "last_updated": "2026-09-16T13:51:11.595Z"
+    "last_updated": "2026-09-16T14:53:49.989Z"
   }
 }

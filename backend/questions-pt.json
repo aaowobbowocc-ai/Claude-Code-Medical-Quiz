@@ -4,7 +4,7 @@
     "label": "物理治療師",
     "scraped_at": "2026-04-10T01:55:58.342Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-16T14:00:01.857Z"
+    "last_updated": "2026-09-16T14:53:52.619Z"
   },
   "total": 15360,
   "questions": [
@@ -1011,7 +1011,8 @@
         "D": "±"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 9570,
@@ -11456,7 +11457,8 @@
         "D": "馬偕氏問卷（ Mckay Questionnaire ）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 14567,
@@ -62180,7 +62182,8 @@
         "D": "/C lactate"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 11555,
@@ -92184,7 +92187,8 @@
         "D": "應變速度（strain rate）加快，應力應變圖中彈性區的曲線斜率將更陡峭"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 13999,
@@ -126382,7 +126386,8 @@
         "D": "紀錄法"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 5404,
@@ -144270,8 +144275,8 @@
       "question": "下列那一條肌肉之走向在踝關節橫向軸（transverse axis）的後方？",
       "options": {
         "A": "脛前肌",
-        "B": "腓骨長肌",
-        "C": "伸 趾長肌",
+        "B": "腓骨長肌趾長肌",
+        "C": "伸",
         "D": "伸趾長肌"
       },
       "answer": "B",
@@ -182640,7 +182645,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/pt_109020_p3_30_0.webp"
+      "image_url": "/question-images/pt_109020_p3_30_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 8204,
@@ -183903,7 +183909,8 @@
         "D": "評估一位30歲右腳內側足弓疼痛的女性患者時，發現病患在腳踝弓步測試（ankle lunge test）中，右足足尖至"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 8267,
@@ -208199,7 +208206,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/pt_110101_p0_33_0.webp"
+      "image_url": "/question-images/pt_110101_p0_33_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 2192,
@@ -274473,7 +274481,8 @@
         "B": "/question-images/pt_446_1.webp",
         "C": "/question-images/pt_446_2.webp",
         "D": "/question-images/pt_446_3.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": 447,
@@ -276740,7 +276749,8 @@
         "D": "肌腱韌帶在拉伸（load-elongation）材料測試中，應力－應變關係圖中的屈服點（yield point） 位置在破壞點（failure point）右側"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 318,
@@ -277744,7 +277754,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/pt_114020_p1_49_0.webp"
+      "image_url": "/question-images/pt_114020_p1_49_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 368,
@@ -294417,7 +294428,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/pt_115020_p2_76_0.webp"
+      "image_url": "/question-images/pt_115020_p2_76_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 955,

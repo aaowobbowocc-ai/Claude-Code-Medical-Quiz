@@ -4,7 +4,7 @@
     "label": "營養師",
     "scraped_at": "2026-04-12T11:15:21.109Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-15T14:17:53.211Z",
+    "last_updated": "2026-09-16T14:53:51.490Z",
     "total": 1111
   },
   "total": 7903,
@@ -1569,7 +1569,8 @@
         "D": "35.0"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "100030_0701_39",
@@ -36428,9 +36429,9 @@
       "question": "依據P/O ratio 理論，各2 分子的NADH 和FADH2 共可生成幾個ATP？",
       "options": {
         "A": "10",
-        "B": "10",
+        "B": "8",
         "C": "6",
-        "D": "8"
+        "D": "4"
       },
       "answer": "B",
       "explanation": ""
@@ -39478,10 +39479,10 @@
       "number": 21,
       "question": "有關胡蘿蔔素的敘述，下列何者錯誤？",
       "options": {
-        "A": "胡蘿蔔素是維生素A的先質",
-        "B": "胡蘿蔔素是維生素A 的先質",
+        "A": "胡蘿蔔素是維生素A 的先質",
+        "B": "動植物均可合成胡蘿蔔素",
         "C": "胡蘿蔔素的利用率受到脂質存在的影響",
-        "D": "動植物均可合成胡蘿蔔素"
+        "D": "胡蘿蔔素主要儲存在皮下脂肪"
       },
       "answer": "B",
       "explanation": ""
@@ -41607,7 +41608,8 @@
         "D": "7"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 115258,
@@ -41650,7 +41652,8 @@
         "D": "5"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 115260,
@@ -47872,7 +47875,8 @@
         "D": "動線方向圖，可以不同顏色線條、箭頭表示處理不同類食物的動向"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 114485,
@@ -102032,10 +102036,10 @@
       "number": 23,
       "question": "有關pantothenic acid 的敘述，下列何者錯誤？是輔酶A 的重要成分，與能量產生有關可將膽素轉變為乙醯膽鹼，是重要神經傳導物質",
       "options": {
-        "A": "參與肝醣的合成",
-        "B": "合成膽固醇",
-        "C": "代號：10320",
-        "D": "頁次：3－3"
+        "A": "是輔酶A 的重要成分，與能量產生有關",
+        "B": "可將膽素轉變為乙醯膽鹼，是重要神經傳導物質",
+        "C": "參與肝醣的合成",
+        "D": "合成膽固醇"
       },
       "answer": "C",
       "explanation": ""
@@ -139032,7 +139036,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/nutrition_114030_p2_21_0.webp"
+      "image_url": "/question-images/nutrition_114030_p2_21_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 97,

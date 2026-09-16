@@ -1981,10 +1981,10 @@
       "number": 19,
       "question": "下圖是何者之氫譜？（訊號上的數目是peak area 積分比）",
       "options": {
-        "A": "1",
-        "B": "1",
-        "C": "7",
-        "D": "6"
+        "A": "Dimethyl ether",
+        "B": "Ethyl acetate",
+        "C": "Ethyl alcohol",
+        "D": "Methyl acetate"
       },
       "answer": "D",
       "explanation": "",
@@ -3534,7 +3534,8 @@
         "D": "可減少乳析"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 115021329,
@@ -4356,7 +4357,8 @@
         "D": ")"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 115021370,
@@ -5866,10 +5868,10 @@
       "number": 50,
       "question": "下列兩化合物相較，則下列敘述何者正確？",
       "options": {
-        "A": "S",
-        "B": "S",
-        "C": "N",
-        "D": "Cl"
+        "A": "Ⅰ的抗精神病活性較強",
+        "B": "Ⅰ的鎮靜作用較強",
+        "C": "Ⅰ的extrapyramidal 副作用較強",
+        "D": "Ⅱ的hypotensive 副作用較強"
       },
       "answer": "B",
       "explanation": ""
@@ -7052,7 +7054,8 @@
         "D": "Ai"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 115023834,
@@ -10759,7 +10762,8 @@
         "B": "/question-images/pharma1_101030_q44_opt_B.webp",
         "C": "/question-images/pharma1_101030_q44_opt_C.webp",
         "D": "/question-images/pharma1_101030_q44_opt_D.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": 115021437,
@@ -10940,7 +10944,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/pharma1_101030_q53_patrol.webp"
+      "image_url": "/question-images/pharma1_101030_q53_patrol.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115021446,
@@ -12165,7 +12170,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/pharma1_101030_q34_patrol.webp"
+      "image_url": "/question-images/pharma1_101030_q34_patrol.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115021505,
@@ -12205,7 +12211,8 @@
         "D": "Rs＝2.4"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 115021507,
@@ -18395,7 +18402,8 @@
         "D": "通過原點的直線"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 115024144,
@@ -20756,7 +20764,8 @@
         "D": "The chemical structure of Tramadol:\n\n*   A cyclohexanol ring (a six-membered carbon ring with an alcohol group, -OH).\n*   Attached to one carbon of the cyclohexanol ring is a 3-methoxyphenyl group (a benzene ring with a methoxy group -OCH3 at the meta position).\n*   Attached to an adjacent carbon of the cyclohexanol ring is a dimethylaminomethyl group (-CH2-N(CH3)2).\n*   The specific stereochemistry is typically (1R,2R) or (1S,2S) for the two chiral centers on the cyclohexanol ring, but the core connectivity is as described above."
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 115022161,
@@ -25735,7 +25744,8 @@
         "B": "/question-images/pharma1_102100_q57_opt_B.webp",
         "C": "/question-images/pharma1_102100_q57_opt_C.webp",
         "D": "/question-images/pharma1_102100_q57_opt_D.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": 115022408,
@@ -31476,7 +31486,8 @@
         "D": "可用於釐清複雜 UV 光譜中的化合物吸收峰"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 115022694,
@@ -35832,7 +35843,8 @@
         "B": "/question-images/pharma1_103090_q79_B.webp",
         "C": "/question-images/pharma1_103090_q79_C.webp",
         "D": "/question-images/pharma1_103090_q79_D.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": 115021710,
@@ -38879,7 +38891,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/pharma1_103090_p2_71_0.webp"
+      "image_url": "/question-images/pharma1_103090_p2_71_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115021862,
@@ -40441,7 +40454,8 @@
         "D": "[Image of a chemical structure]"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 115021939,
@@ -43904,7 +43918,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 79 題：已知phenobarbital之藥動參數如下： 今在一洗腎病患上，得到下列數據：引血流到血液透析儀之血流速率為350 mL/min。藥品濃 度分析顯示：phenobarbital進與出透析儀之濃度分別為：30及24 mg/L。請估算 phenobarbital在此血液透析儀的透析清除率（dialysance，dialysis clearance）？ 藥品 擬似分布體積（L） 清除率（mL/min） phenobarbital                50              5"
+      "case_context": "第 79 題：已知phenobarbital之藥動參數如下： 今在一洗腎病患上，得到下列數據：引血流到血液透析儀之血流速率為350 mL/min。藥品濃 度分析顯示：phenobarbital進與出透析儀之濃度分別為：30及24 mg/L。請估算 phenobarbital在此血液透析儀的透析清除率（dialysance，dialysis clearance）？ 藥品 擬似分布體積（L） 清除率（mL/min） phenobarbital                50              5",
+      "incomplete": "broken_options"
     },
     {
       "id": 115023491,
@@ -46225,7 +46240,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/pharma1_104090_p1_30_0.webp"
+      "image_url": "/question-images/pharma1_104090_p1_30_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115023601,
@@ -50039,7 +50055,8 @@
         "B": "/question-images/pharma1_105020_q53_opt_B.webp",
         "C": "/question-images/pharma1_105020_q53_opt_C.webp",
         "D": "/question-images/pharma1_105020_q53_opt_D.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": 115023064,
@@ -55698,7 +55715,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/pharma1_105100_p1_14_0.webp"
+      "image_url": "/question-images/pharma1_105100_p1_14_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115023345,
@@ -55939,7 +55957,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/pharma1_105100_p1_26_0.webp"
+      "image_url": "/question-images/pharma1_105100_p1_26_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115023357,
@@ -58025,7 +58044,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/pharma1_105100_p2_48_0.webp"
+      "image_url": "/question-images/pharma1_105100_p2_48_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115023461,
@@ -60012,7 +60032,8 @@
         "D": "NHCH3"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 115020585,
@@ -60819,7 +60840,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/pharma1_106020_p1_21_0.webp"
+      "image_url": "/question-images/pharma1_106020_p1_21_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "106020_s22_26",
@@ -75562,7 +75584,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/pharma1_107100_p1_28_0.webp"
+      "image_url": "/question-images/pharma1_107100_p1_28_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "107100_s22_28",
@@ -80364,7 +80387,8 @@
         "D": "決定藥品之多形性"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "108030_s22_23",
@@ -80445,7 +80469,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/pharma1_108030_p1_23_0.webp"
+      "image_url": "/question-images/pharma1_108030_p1_23_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "108030_s22_27",
@@ -81706,7 +81731,8 @@
         "D": "Gibbs adsorption equation"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "108030_s33_10",
@@ -85333,7 +85359,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/pharma1_108100_p1_22_0.webp"
+      "image_url": "/question-images/pharma1_108100_p1_22_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "108100_s22_26",
@@ -95396,7 +95423,8 @@
       "answer": "A",
       "explanation": "",
       "image_url": "/question-images/pharma1_109100_p1_45_0.webp",
-      "disputed": true
+      "disputed": true,
+      "no_image_in_source": true
     },
     {
       "id": "109100_s22_37",
@@ -99773,7 +99801,8 @@
         "D": "碳與氫經多鍵鍵結之關聯"
       },
       "answer": "A",
-      "image_url": "/question-images/pharma1_110020_p1_12_0.webp"
+      "image_url": "/question-images/pharma1_110020_p1_12_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "110020_1_17",
@@ -99914,7 +99943,8 @@
         "D": "24:1"
       },
       "answer": "C",
-      "image_url": "/question-images/pharma1_110020_p1_12_0.webp"
+      "image_url": "/question-images/pharma1_110020_p1_12_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "110020_1_24",
@@ -120962,7 +120992,8 @@
         "C": "圖Ａ是氟斑齒；圖Ｂ是創傷後牙髓壞死",
         "D": "圖Ａ是矯正後牙齒白斑；圖Ｂ是創傷後牙髓壞死"
       },
-      "answer": "D"
+      "answer": "D",
+      "incomplete": "broken_options"
     },
     {
       "id": "112020_2_50",
@@ -128082,7 +128113,8 @@
         "D": "CH3-CH2-CHBr(C1)的-CH3上三個氫之屬性為homotopic"
       },
       "answer": "A",
-      "image_url": "/question-images/pharma1_113020_p1_14_0.webp"
+      "image_url": "/question-images/pharma1_113020_p1_14_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "113020_1_15",
@@ -128466,7 +128498,8 @@
         "D": "Rs=1.18(t2-t1)/(W2(0.5)+W1(0.5))"
       },
       "answer": "D",
-      "image_url": "/question-images/pharma1_113020_p1_33_0.webp"
+      "image_url": "/question-images/pharma1_113020_p1_33_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "113020_1_35",
@@ -137374,7 +137407,8 @@
         "C": "與磁場強度無關",
         "D": "與取代基的種類有關"
       },
-      "answer": "A"
+      "answer": "A",
+      "no_image_in_source": true
     },
     {
       "id": "114020_1_12",
@@ -137545,7 +137579,8 @@
         "C": "甲苯",
         "D": "苯甲酸"
       },
-      "answer": "D"
+      "answer": "D",
+      "no_image_in_source": true
     },
     {
       "id": "114020_1_21",
@@ -146853,7 +146888,8 @@
         "C": "3~5",
         "D": "1~2"
       },
-      "answer": "A"
+      "answer": "A",
+      "no_image_in_source": true
     },
     {
       "id": "115020_1_14",
@@ -147009,7 +147045,8 @@
         "C": "每個脈衝波中間需有讓激發的氫核回到基態的緩解時間",
         "D": "用脈衝波所測得的圖譜不能使用氘代溶劑當內標"
       },
-      "answer": "C"
+      "answer": "C",
+      "no_image_in_source": true
     },
     {
       "id": "115020_1_22",
@@ -151428,7 +151465,8 @@
         "C": "混合物的指紋圖譜分析",
         "D": "鑑定原料藥之結構"
       },
-      "answer": "A"
+      "answer": "A",
+      "no_image_in_source": true
     },
     {
       "id": "115090_1_16",
@@ -151565,7 +151603,8 @@
         "C": "所測得的訊號有可能比待測物的分子量大",
         "D": "所得的訊號越多可能表示待測物不穩定"
       },
-      "answer": "B"
+      "answer": "B",
+      "no_image_in_source": true
     },
     {
       "id": "115090_1_23",
@@ -154214,6 +154253,6 @@
   ],
   "total": 7673,
   "metadata": {
-    "last_updated": "2026-09-16T13:58:39.810Z"
+    "last_updated": "2026-09-16T14:53:52.024Z"
   }
 }

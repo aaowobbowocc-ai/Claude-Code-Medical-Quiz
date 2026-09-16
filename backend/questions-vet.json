@@ -4,7 +4,7 @@
     "label": "獸醫師",
     "scraped_at": "2026-04-16T07:06:47.940Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-16T05:00:49.552Z"
+    "last_updated": "2026-09-16T14:53:54.015Z"
   },
   "total": 12480,
   "questions": [
@@ -56279,7 +56279,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/vet_102100_p2_32_0.webp"
+      "image_url": "/question-images/vet_102100_p2_32_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "102100_33_33",
@@ -56300,7 +56301,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/vet_102100_p2_33_0.webp"
+      "image_url": "/question-images/vet_102100_p2_33_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "102100_33_34",
@@ -65992,7 +65994,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/vet_103020_p2_35_0.webp"
+      "image_url": "/question-images/vet_103020_p2_35_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "103020_33_36",
@@ -66133,7 +66136,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/vet_103020_p2_42_0.webp"
+      "image_url": "/question-images/vet_103020_p2_42_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "103020_33_43",
@@ -72082,7 +72086,8 @@
         "D": "此選項無內容。"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "103090_44_19",
@@ -95027,7 +95032,8 @@
         "D": "由多細胞來源之免疫球蛋白所致"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "104090_33_37",
@@ -110179,7 +110185,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/vet_105100_p0_68_0.webp"
+      "image_url": "/question-images/vet_105100_p0_68_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "105100_11_69",
@@ -114580,7 +114587,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/vet_105100_p2_45_0.webp"
+      "image_url": "/question-images/vet_105100_p2_45_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": "105100_33_46",
@@ -144427,7 +144435,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/vet_107020_p1_1_0.webp"
+      "image_url": "/question-images/vet_107020_p1_1_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 1042,
@@ -198723,7 +198732,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/vet_110100_p3_32_0.webp"
+      "image_url": "/question-images/vet_110100_p3_32_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 4125,
@@ -221292,7 +221302,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/vet_112100_p2_27_0.webp"
+      "image_url": "/question-images/vet_112100_p2_27_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 5001,
@@ -240855,7 +240866,8 @@
         "D": "ALT（alanine aminotransferase）上升"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": 5969,

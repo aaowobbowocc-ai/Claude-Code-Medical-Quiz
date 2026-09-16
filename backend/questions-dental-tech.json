@@ -5660,7 +5660,8 @@
         "D": "→③→②"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": "108110_2_39",
@@ -7166,7 +7167,8 @@
         "D": "擴張螺旋應緊密貼住腭部組織（palatal tissue）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "108110_4_14",
@@ -23825,7 +23827,8 @@
         "D": "腭描繪圖為觀察發音時唇及腭部發音狀態的方法，用於掌握發音動態"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "113100_1_7",
@@ -26769,7 +26772,8 @@
         "B": "/question-images/dentaltech_113100_4_q4_B.webp",
         "C": "/question-images/dentaltech_113100_4_q4_C.webp",
         "D": "/question-images/dentaltech_113100_4_q4_D.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": "113100_4_5",
@@ -28331,10 +28335,10 @@
       "number": 34,
       "question": "在藻膠印模材要灌製石膏模型前，應進行何種消毒處理？因藻膠印模材不會傳染病源，不需消毒因藻膠印模材的尺寸穩定性不佳，可以清水浸泡消毒",
       "options": {
-        "A": "可以1%",
-        "B": "雙氧水浸泡消毒",
-        "C": "可以1%",
-        "D": "次氯酸鈉浸泡消毒"
+        "A": "因藻膠印模材不會傳染病源，不需消毒",
+        "B": "因藻膠印模材的尺寸穩定性不佳，可以清水浸泡消毒",
+        "C": "可以1%雙氧水浸泡消毒",
+        "D": "可以1%次氯酸鈉浸泡消毒"
       },
       "answer": "D",
       "explanation": ""
@@ -30019,10 +30023,10 @@
       "number": 19,
       "question": "下圖為上下顎全口活動義齒的人工牙所出現的咬合小面，下列敘述何者正確？",
       "options": {
-        "A": "後方咬合小面",
-        "B": "平衡咬合小面",
-        "C": "前方咬合小面",
-        "D": "前方咬合小面"
+        "A": "後方咬合小面平衡咬合小面前方咬合小面",
+        "B": "前方咬合小面平衡咬合小面後方咬合小面",
+        "C": "平衡咬合小面後方咬合小面前方咬合小面",
+        "D": "前方咬合小面後方咬合小面平衡咬合小面"
       },
       "answer": "B",
       "explanation": "",
@@ -30918,7 +30922,8 @@
         "D": "上緣"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "114100_4_14",
@@ -31185,7 +31190,8 @@
         "D": "Schwarz 鈎對臉頰部位容易有異物感"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "114100_4_27",
@@ -33058,7 +33064,7 @@
       "options": {
         "A": "瓷的融點必須低於金屬的融點",
         "B": "瓷與金屬的融點差異不可大於150℃",
-        "C": "瓷與金屬的熱膨脹係數差異不可大於110-6/℃",
+        "C": "瓷與金屬的熱膨脹係數差異不可大於1×10-6/℃",
         "D": "瓷的熱膨脹係數要小於金屬的熱膨脹係數"
       },
       "answer": "D"
@@ -34580,7 +34586,7 @@
       "subject_name": "牙體技術學(四)",
       "stage_id": 0,
       "number": 3,
-      "question": "同為0.0180.025英吋的矯正線材料性質測試，下列何種材料的矯正線剛性值（wirestiffnessnumbers）最大？",
+      "question": "同為0.018×0.025英吋的矯正線材料性質測試，下列何種材料的矯正線剛性值（wirestiffnessnumbers）最大？",
       "options": {
         "A": "不鏽鋼",
         "B": "鈦鉬合金線（TMA）",
@@ -34682,7 +34688,8 @@
         "C": "口蓋上緣方向",
         "D": "口蓋側緣方向"
       },
-      "answer": "B"
+      "answer": "B",
+      "no_image_in_source": true
     },
     {
       "id": "115100_3_9",
@@ -35491,6 +35498,6 @@
   ],
   "total": 1774,
   "metadata": {
-    "last_updated": "2026-09-16T14:01:36.288Z"
+    "last_updated": "2026-09-16T14:53:50.390Z"
   }
 }

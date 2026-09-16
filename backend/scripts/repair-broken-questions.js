@@ -28,6 +28,7 @@ const arg = (k, d) => { const i = process.argv.indexOf(k); return i >= 0 ? proce
 const EXAM = arg('--exam')
 const ALL = process.argv.includes('--all')
 const APPLY = process.argv.includes('--apply')
+const RETRY = process.argv.includes('--retry')
 if (!EXAM && !ALL) { console.error('需要 --exam 或 --all'); process.exit(1) }
 
 const DIR = path.join(__dirname, '..')
@@ -35,7 +36,10 @@ const HEADER = /^(代號|頁次|座號|等別|類科名稱|科目名稱|考試�
 
 /** 這題壞在哪裡？回傳原因字串，沒壞回傳 null。 */
 function diagnose(q) {
-  if (q.incomplete) return null
+  // --retry：解析器補強之後，再拿上次修不了、標成 broken_options 的題試一次。
+  // 這個標記是我們自己蓋的，不是「原始資料就這樣」，所以可以重來。
+  if (q.incomplete === 'broken_options' && RETRY) { /* 往下重新診斷 */ }
+  else if (q.incomplete) return null
   const vals = ['A', 'B', 'C', 'D'].map(k => String((q.options || {})[k] ?? ''))
   const hasImg = !!(q.image_url || q.image || (q.images && q.images.length))
   if (vals.some(v => HEADER.test(v))) return '選項是頁首頁尾'
@@ -102,7 +106,7 @@ function diagnose(q) {
           new Set(['A', 'B', 'C', 'D'].map(x => normText(opts[x]))).size === 4
         if (same && clean) {
           console.log(`  ✔ ${exam} ${code} ${subject} #${q.number} (${why}) → 已從原卷重解`)
-          if (APPLY) q.options = opts
+          if (APPLY) { q.options = opts; if (q.incomplete === 'broken_options') delete q.incomplete }
           repaired++; touched++
         } else {
           console.log(`  ✖ ${exam} ${code} ${subject} #${q.number} (${why}) → 原卷也修不了，標 incomplete`)

@@ -256,14 +256,18 @@ async function pdfQuestions(buf) {
     // 各家卷用的碼位不同）。有標記就用標記切,不要猜——「最後四行＝選項」
     // 碰到選項自己跨行就會把上一個選項的後半段當成一個選項,
     // 而續行是沒有標記的,用標記切自然就把它接回去了。
-    const isMark = (t) => /^[-Ⓐ-ⓩ①-⑳]/.test(t);
+    // ⚠️ 只有 ⒶⒷⒸⒹ(U+24B6~) 與 PUA 造字算選項標記。
+    // ①②③(U+2460~) 不算——它是選項**內容**的一部分：「僅①②」「①→②→③」
+    // 這種題型很常見，把它當標記會把選項切成「①」「①」「①」這種碎片
+    // （臨床心理 106030 整批壞掉就是這樣來的）。
+    const isMark = (t) => /^[-Ⓐ-ⓩ]/.test(t);
     const markIdx = block.map((t, i) => (isMark(t) ? i : -1)).filter(i => i >= 0);
     let stem, opts;
     if (markIdx.length === 4 && markIdx[0] > 0) {
       stem = block.slice(0, markIdx[0]).join('');
       opts = markIdx.map((mi, oi) => {
         const end = oi + 1 < markIdx.length ? markIdx[oi + 1] : block.length;
-        return block.slice(mi, end).join('').replace(/^[-Ⓐ-ⓩ①-⑳]\s*/, '');
+        return block.slice(mi, end).join('').replace(/^[-Ⓐ-ⓩ]\s*/, '');
       });
     } else {
       // 沒有標記可用,只能假設最後四行是選項。這個假設在選項跨行時會破,

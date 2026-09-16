@@ -70,7 +70,42 @@ async function pdfStems(buf) {
     if (cur) cur.txt += l.t;
   }
   if (cur) out.set(cur.num, skeleton(cur.txt));
-  return out;
+  if (out.size >= 10) return out;
+
+  // ── 幾何版型 fallback ────────────────────────────────────────────
+  // 護理師、中醫、聽力師等不少卷的題號是**獨立一行的純數字**（沒有「.」），
+  // 選項也沒有 A./B./C./D. 標記，只靠縮排區分：
+  //     x52 "9"
+  //     x69 "林先生是初診斷為糖尿病的病人，下列護理工作何者…"
+  //     x69 "告訴林先生糖尿病飲食的重要性…"
+  // 上面那套標記式解析對這種卷回傳 0~1 題，於是整個考試在對齊體檢裡變成
+  // 「原卷解析不足無法判斷」——護理師 161 卷、中醫二階 96 卷都卡在這。
+  // 判法：題號那一行的 x 會明顯小於內文的 x（縮排差 ~17pt），用眾數抓內文 x。
+  const xs = {};
+  for (const l of lines) xs[l.x] = (xs[l.x] || 0) + 1;
+  const bodyX = +Object.entries(xs).sort((a, b) => b[1] - a[1])[0]?.[0];
+  if (!Number.isFinite(bodyX)) return out;
+
+  const marks = [];
+  lines.forEach((l, i) => {
+    if (l.x >= bodyX - 6) return;                 // 沒有縮排，不是題號
+    const m = l.t.match(/^(\d{1,3})$/);           // 純數字才算
+    if (!m) return;
+    const n = +m[1];
+    if (n < 1 || n > 200) return;
+    marks.push({ num: n, i });
+  });
+  if (marks.length < 10) return out;
+
+  const geo = new Map();
+  for (let k = 0; k < marks.length; k++) {
+    const from = marks[k].i + 1;
+    const to = k + 1 < marks.length ? marks[k].i === marks[k + 1].i ? from : marks[k + 1].i : lines.length;
+    const txt = lines.slice(from, to).map(l => l.t).join('');
+    // 題號可能重複出現（跨頁頁首、答案卷），保留第一次
+    if (!geo.has(marks[k].num) && txt) geo.set(marks[k].num, skeleton(txt));
+  }
+  return geo.size > out.size ? geo : out;
 }
 
 /** 題號 → 四個選項文字。標記式（A.選項）與幾何版型都試。 */

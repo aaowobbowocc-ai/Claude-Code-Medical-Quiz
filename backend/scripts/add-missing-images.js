@@ -32,6 +32,7 @@ const { IMAGE_REF: STRICT } = require('./lib/image-ref')
 // then re-uses the WebP cropper logic.
 
 const { warnZero, checkRegistryCoverage, summary } = require('./lib/coverage-guard')
+const { resolvePaper } = require('./lib/moex-paper-resolve')
 const https = require('https')
 const sharp = require('sharp')
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
@@ -604,9 +605,20 @@ async function processExamCode(examTag, code, opts) {
   // ambiguous 類科 names (e.g. tcm1/tcm2 both show "中醫師") are resolved by
   // matching the PDF 科目 against actual JSON subjects.
   const jsonSubjects = [...new Set(qs.filter(q => q.exam_code === code).map(q => q.subject).filter(Boolean))]
-  const classCode = await pickClassCode(examTag, code, def.classCodes, jsonSubjects)
+  let classCode = await pickClassCode(examTag, code, def.classCodes, jsonSubjects)
   if (!classCode) {
-    console.log(`  ${examTag} ${code}: no working class code from ${def.classCodes.join('/')}`)
+    // registry 的 classCodes 是手工維護的靜態清單，逐年變動的考試一定會漏
+    // （語言治療師大半場次都卡在這，補圖恆為 0）。改用 lib/moex-paper-resolve
+    // 向考選部動態反查，它會自己試名稱四層比對＋題幹驗證。
+    const year = qs.find(q => q.exam_code === code)?.roc_year
+    for (const subj of jsonSubjects) {
+      const items = qs.filter(q => q.exam_code === code && q.subject === subj)
+      const cand = await resolvePaper({ exam: examTag, code, year, subject: subj, items })
+      if (cand) { classCode = cand.c; console.log(`  ${examTag} ${code}: registry 沒有可用類科碼，動態反查到 c=${classCode}`); break }
+    }
+  }
+  if (!classCode) {
+    console.log(`  ${examTag} ${code}: no working class code from ${def.classCodes.join('/')}（動態反查也失敗）`)
     return { added: 0, skipped: 0 }
   }
 

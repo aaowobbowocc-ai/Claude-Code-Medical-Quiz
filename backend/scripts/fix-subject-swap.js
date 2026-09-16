@@ -24,7 +24,7 @@ const fs = require('fs')
 const path = require('path')
 const { probeCodes, nameCandidates, fetchSheet } = require('./lib/moex-paper-resolve')
 const { pdfStems } = require('./lib/moex-pdf-parse')
-const { skeleton, sameName } = require('./lib/moex-normalize')
+const { skeleton, sameName, nameKey } = require('./lib/moex-normalize')
 const { warnZero, summary } = require('./lib/coverage-guard')
 
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i >= 0 ? process.argv[i + 1] : d }
@@ -38,15 +38,18 @@ const FILE = path.join(__dirname, '..', EXAM === 'doctor1' ? 'questions.json' : 
 
 const key = q => skeleton(q.question).replace(/^【題組情境】/, '').slice(0, 18)
 
-async function fixSession(arr, code) {
+async function fixSession(arr, code, allSubjects, tagBySubject) {
   const rows = arr.filter(q => String(q.exam_code) === code)
   const subjects = [...new Set(rows.map(q => q.subject).filter(Boolean))]
   if (subjects.length < 2) return 0
 
-  // 該場次所有可能相關的官方卷（用我們的科目名去撈候選，聯集起來）
+  // 候選官方卷：用**整個考試**的科目名去撈，不是只用這個場次現有的。
+  // 臨床心理師 105090 把特論(一)(二)(三) 存成基礎/總論(一)/總論(二)，
+  // 只用場次內的名字去撈，撈到的是「基礎」那張卷——我們的題根本不在上面，
+  // 命中率 0，整場被判定為無法處理。
   const codes = probeCodes(code, code.slice(0, 3))
   const papers = new Map()
-  for (const sub of subjects) {
+  for (const sub of allSubjects) {
     const { list } = nameCandidates(EXAM, sub, codes)
     for (const c of list) {
       const k = `${c.c}|${c.s}`
@@ -57,7 +60,7 @@ async function fixSession(arr, code) {
     try { const b = await fetchSheet('Q', code, p.c, p.s); if (b) p.stems = await pdfStems(b) } catch {}
   }
   const usable = [...papers.values()].filter(p => p.stems && p.stems.size)
-  if (usable.length < subjects.length) { console.log(`  ${code}: 只取到 ${usable.length}/${subjects.length} 張官方卷，跳過`); return 0 }
+  if (usable.length < subjects.length) { console.log(`  ${code}: 只取到 ${usable.length} 張官方卷（少於 ${subjects.length} 個科目），跳過`); return 0 }
 
   // 每個科目 → 同題號命中率最高的官方卷
   const best = new Map()
@@ -83,19 +86,23 @@ async function fixSession(arr, code) {
   const used = new Set([...best.values()].map(v => `${v.p.c}|${v.p.s}`))
   if (used.size !== subjects.length) { console.log(`  ${code}: 科目與官方卷不是一對一，整場跳過`); return 0 }
 
-  // 官方卷 → 應該用的「我們的科目名」
+  // 官方卷 → 應該用的「我們的科目名」。
+  // 比對範圍是**整個考試**的科目集合，不是只有這個場次——臨床心理師 105090 把
+  // 特論(一)(二)(三) 存成了基礎/總論(一)/總論(二)，正確的名稱根本不在該場次裡，
+  // 只看場次內就永遠對不到。
+  // ⚠️ 不能直接取第一個 sameName——它含前綴比對，官方的「社會工作直接服務」
+  // 會對到我們的「社會工作」（因為後者是前者的前綴），結果兩個科目都被改成
+  // 同一個名字。先找完全相等，找不到才退而取「最長（最具體）」的那個。
   const officialToOurs = new Map()
   for (const p of usable) {
-    const match = subjects.find(s => sameName(p.subject, s))
+    const exact = allSubjects.find(s => nameKey(p.subject) === nameKey(s))
+    const loose = allSubjects.filter(s => sameName(p.subject, s))
+      .sort((a, b) => nameKey(b).length - nameKey(a).length)[0]
+    const match = exact || loose
     if (match) officialToOurs.set(`${p.c}|${p.s}`, match)
   }
 
-  // 每個科目的標籤組（一個科目一組固定值，取第一筆即可）
-  const tagOf = new Map()
-  for (const sub of subjects) {
-    const q = rows.find(x => x.subject === sub)
-    tagOf.set(sub, { subject: sub, subject_tag: q.subject_tag, subject_name: q.subject_name })
-  }
+  const tagOf = tagBySubject
 
   let changed = 0
   const plan = []
@@ -105,6 +112,12 @@ async function fixSession(arr, code) {
     plan.push({ from: sub, to: realName, n: rows.filter(q => q.subject === sub).length })
   }
   if (!plan.length) return 0
+  // 改完之後科目名必須仍然唯一：曾經因為前綴比對，兩個科目被改成同一個名字。
+  const after = subjects.map(s => (plan.find(p => p.from === s) || { to: s }).to)
+  if (new Set(after).size !== after.length) {
+    console.log(`  ${code}: 改完會有兩個科目同名（${after.join('、')}），整場跳過`)
+    return 0
+  }
 
   for (const p of plan) {
     const t = tagOf.get(p.to)
@@ -132,6 +145,14 @@ async function fixSession(arr, code) {
 ;(async () => {
   const j = JSON.parse(fs.readFileSync(FILE, 'utf8'))
   const arr = j.questions || j
+  // 每個科目的標籤組（一個科目一組固定值）。用全考試範圍建，理由同上。
+  const allSubjects = [...new Set(arr.map(q => q.subject).filter(Boolean))]
+  const tagBySubject = new Map()
+  for (const sub of allSubjects) {
+    const q = arr.find(x => x.subject === sub && x.subject_tag)
+    if (q) tagBySubject.set(sub, { subject: sub, subject_tag: q.subject_tag, subject_name: q.subject_name })
+  }
+
   let codes = [CODE]
   if (ALL) {
     // 用 alignment 體檢的結果決定要處理哪些場次
@@ -142,7 +163,7 @@ async function fixSession(arr, code) {
   }
 
   let total = 0
-  for (const c of codes) total += await fixSession(arr, c)
+  for (const c of codes) total += await fixSession(arr, c, allSubjects, tagBySubject)
   console.log(`\n共 ${total} 題的科目標籤${APPLY ? '已修正' : '待修正（dry-run）'}`)
   warnZero(`${EXAM} 科目標籤修正`, total, '標籤本來就對，或命中率不足以判定')
   if (APPLY && total) {

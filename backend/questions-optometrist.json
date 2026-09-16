@@ -25889,7 +25889,10 @@
         "D": "+3.00 D"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/optometrist_112110_2_10_0.webp"
+      ]
     },
     {
       "id": "112110_2_11",
@@ -26270,7 +26273,10 @@
         "D": "+2.00DS/-1.00DC×180 或-1.00DS/+2.00DC×090"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/optometrist_112110_2_29_0.webp"
+      ]
     },
     {
       "id": "112110_2_30",
@@ -27871,7 +27877,12 @@
         "D": "一樣設計的試片，選擇不同基弧，用於此角膜上之最佳螢光圖形為下圖"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/optometrist_112110_4_9_0.webp",
+        "/question-images/optometrist_112110_4_9_1.webp",
+        "/question-images/optometrist_112110_4_9_2.webp"
+      ]
     },
     {
       "id": "112110_4_10",
@@ -27991,7 +28002,10 @@
         "D": "中心旁區沒有螢光液堆積的區域，是角膜塑型片將角膜上皮壓平的設計"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/optometrist_112110_4_15_0.webp"
+      ]
     },
     {
       "id": "112110_4_16",
@@ -28011,7 +28025,10 @@
         "D": "中心螢光染色較少區（central fluorescein thinning）若小於4 mm，代表鏡片的矢深（sagittal depth）太淺"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/optometrist_112110_4_16_0.webp"
+      ]
     },
     {
       "id": "112110_4_17",
@@ -35721,7 +35738,10 @@
         "D": "逆散光，複合性遠視性散光"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/optometrist_114100_2_5_0.webp"
+      ]
     },
     {
       "id": "114100_2_6",
@@ -38425,7 +38445,10 @@
         "D": "0"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/optometrist_114100_4_41_0.webp"
+      ]
     },
     {
       "id": "114100_4_42",
@@ -46762,7 +46785,10 @@
         "C": "+1.50DS/-2.50DC×090",
         "D": "+3.00DS/-2.50DC×180"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/optometrist_115100_1_41_0.webp"
+      ]
     },
     {
       "id": "115100_1_42",
@@ -49789,6 +49815,6 @@
   ],
   "total": 2500,
   "metadata": {
-    "last_updated": "2026-09-01T09:02:49.282040"
+    "last_updated": "2026-09-16T14:04:48.044Z"
   }
 }

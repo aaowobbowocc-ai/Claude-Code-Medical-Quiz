@@ -1379,7 +1379,10 @@
         "D": "標準治療（standard treatment）的中位數存活時間在150 天以上"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_111110_2_29_0.webp"
+      ]
     },
     {
       "id": "111110_2_30",
@@ -1599,7 +1602,10 @@
         "D": "A 的決定係數較低，但迴歸係數比B 高"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_111110_2_40_0.webp"
+      ]
     },
     {
       "id": "111110_3_1",
@@ -2179,7 +2185,10 @@
         "D": "暴露Ｃ在中介因子M 之前發生，也在疾病D 之前發生"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_111110_3_29_0.webp"
+      ]
     },
     {
       "id": "111110_3_30",
@@ -2479,7 +2488,8 @@
         "D": "①負②負"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "111110_4_5",
@@ -5621,7 +5631,12 @@
         "D": "中風者之年齡中位數小於無中風者"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_112110_2_2_0.webp",
+        "/question-images/public-health_112110_2_2_1.webp",
+        "/question-images/public-health_112110_2_2_2.webp"
+      ]
     },
     {
       "id": "112110_2_3",
@@ -10389,7 +10404,10 @@
         "D": "國文的最小值最小，英文的IQR 最大"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_113100_2_1_0.webp"
+      ]
     },
     {
       "id": "113100_2_2",
@@ -10910,7 +10928,11 @@
         "D": "0.0"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_113100_2_27_0.webp",
+        "/question-images/public-health_113100_2_27_1.webp"
+      ]
     },
     {
       "id": "113100_2_28",
@@ -11334,7 +11356,10 @@
         "D": "35%"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_113100_3_8_0.webp"
+      ]
     },
     {
       "id": "113100_3_9",
@@ -16659,7 +16684,10 @@
         "D": "「未測量因子」是含糖飲料習慣與糖尿病的干擾因素"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_114100_3_34_0.webp"
+      ]
     },
     {
       "id": "114100_3_35",
@@ -24710,7 +24738,8 @@
         "C": "菸品屬合法商品，基於商業言論自由，業者得自行決定健康警示內容與呈現方式",
         "D": "菸品包裝警示已涉及對財產權與言論自由之限制，因此主管機關不得強制要求特定警示圖文之使用"
       },
-      "answer": "A"
+      "answer": "A",
+      "no_image_in_source": true
     },
     {
       "id": "115100_0_36",
@@ -25318,7 +25347,10 @@
         "C": "傳播型流行（Propagatedoutbreak）",
         "D": "地方性流行（Endemic）"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/public-health_115100_2_26_0.webp"
+      ]
     },
     {
       "id": "115100_2_27",
@@ -26498,7 +26530,10 @@
         "C": "①沉砂池、②曝氣池、③初沉污泥、④濃縮、⑤消化、⑥脫水",
         "D": "①沉砂池、②消毒池、③過濾污泥、④濃縮、⑤脫水、⑥調理"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/public-health_115100_4_8_0.webp"
+      ]
     },
     {
       "id": "115100_4_9",
@@ -26897,7 +26932,13 @@
         "C": "腐蝕/刺激皮膚物質、氧化性液體、禁水性物質、致癌物質",
         "D": "自反應物質、氧化性液體、爆炸物、皮膚過敏物質"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/public-health_115100_4_29_0.webp",
+        "/question-images/public-health_115100_4_29_1.webp",
+        "/question-images/public-health_115100_4_29_2.webp",
+        "/question-images/public-health_115100_4_29_3.webp"
+      ]
     },
     {
       "id": "115100_4_30",
@@ -27871,6 +27912,6 @@
   ],
   "total": 1401,
   "metadata": {
-    "last_updated": "2026-09-01T09:06:58.238371"
+    "last_updated": "2026-09-16T14:04:01.988Z"
   }
 }

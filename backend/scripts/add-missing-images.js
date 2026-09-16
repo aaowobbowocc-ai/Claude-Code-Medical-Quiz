@@ -33,6 +33,8 @@ const { IMAGE_REF: STRICT } = require('./lib/image-ref')
 
 const { warnZero, checkRegistryCoverage, summary } = require('./lib/coverage-guard')
 const { resolvePaper } = require('./lib/moex-paper-resolve')
+const { pdfStems } = require('./lib/moex-pdf-parse')
+const { skeleton } = require('./lib/moex-normalize')
 const https = require('https')
 const sharp = require('sharp')
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
@@ -648,6 +650,11 @@ async function processExamCode(examTag, code, opts) {
       const buf = await cachedPdf(examTag, code, classCode, s)
       if (buf.length < 2000) continue
       const parsed = await parsePdfFull(buf)
+      // 另建一份 lib/moex-pdf-parse 的題幹索引當備援：本檔自己的 parseQuestions
+      // 只認標記式版型，中醫二階、聽力師那種「題號獨立一行、選項無 ABCD」的卷
+      // 會整卷對不到題（tcm2 81 題全卡在「題幹對不到任何卷」）。
+      let stemIndex = null
+      try { stemIndex = await pdfStems(buf) } catch {}
       const subjName = await pdfSubjectName(buf)
       // Match PDF 科目 to JSON subject by ≥4-char CJK common prefix. Handles
       // cases like PDF "中醫臨床醫學(包括傷寒論...)" ⟷ JSON "中醫臨床醫學(一)".
@@ -669,7 +676,7 @@ async function processExamCode(examTag, code, opts) {
         }
         if (bestCommon >= 4) paperSubject = best
       }
-      pdfs.push({ s, classCode, subjectName: subjName, paperSubject, ...parsed })
+      pdfs.push({ s, classCode, subjectName: subjName, paperSubject, stemIndex, ...parsed })
     } catch (e) { console.error(`    parse ${s} failed: ${e.message}`) }
   }
   if (!pdfs.length) return { added: 0, skipped: 0 }
@@ -719,6 +726,17 @@ async function processExamCode(examTag, code, opts) {
           if (pdf.imagesPerNum[q.number]?.length) { hit = { pdf, num: q.number }; break }
         }
       }
+      // 備援：用共用 lib 的題幹索引（含幾何版型 fallback）再試一次
+      if (!hit) {
+        const s2 = skeleton(q.question).replace(/^【題組情境】/, '').slice(0, 18)
+        if (s2.length >= 14) {
+          for (const pdf of pdfs) {
+            if (!pdf.stemIndex) continue
+            for (const [num, t] of pdf.stemIndex) if (t.includes(s2)) { hit = { pdf, num }; break }
+            if (hit) break
+          }
+        }
+      }
       if (!hit) {
         skipped++
         if (opts.verbose) console.log(`  - ${q.id} #${q.number} ${q.subject}: 題幹對不到任何卷`)
@@ -729,6 +747,11 @@ async function processExamCode(examTag, code, opts) {
       if (!pdfImgs.length) {
         skipped++
         if (opts.verbose) console.log(`  - ${q.id} #${q.number}: 對到 s=${hit.pdf.s} #${hit.num}，但該題在 PDF 裡沒抓到圖`)
+        // 題幹對到了原卷、原卷那題確實沒有圖 → 這題本來就不需要圖。
+        // 多半是 IMAGE_REF 的假陽性:「心電圖中」「二氧化碳描計述圖中」「品管圖中」
+        // 都會命中「圖中」。記下來，缺圖盤點才不會每次都把它們算進待辦，
+        // 也不用每次重跑都重新下載 PDF 驗一遍。
+        if (!opts.dryRun) q.no_image_in_source = true
         continue
       }
       const newPaths = []

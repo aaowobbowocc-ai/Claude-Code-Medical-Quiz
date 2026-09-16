@@ -191,7 +191,13 @@ async function pdfQuestions(buf) {
     const st = JSON.parse(doc.loadPage(p).toStructuredText('preserve-whitespace').asJSON());
     for (const b of st.blocks || []) for (const l of b.lines || []) {
       const t = (l.text || '').trim();
-      if (t) lines.push({ p, y: Math.round(l.bbox.y), x: Math.round(l.bbox.x), t: t.normalize('NFC') });
+      // 頁首／頁尾一定要在這裡濾掉。幾何版型是靠「題塊的最後四行＝選項」切的，
+      // 跨頁時「代號：11040」「頁次：4－2」會落在題塊尾端，直接變成選項 C、D。
+      // （2026-09-16 補社工師時實際發生，198 題的選項變成頁首。）
+      const tn = t.normalize('NFC');
+      if (/^(代號|頁次|座號|等別|類科名稱|科目名稱|考試時間|考試名稱)\s*[：:]/.test(tn)) continue;
+      if (/^※/.test(tn)) continue;
+      lines.push({ p, y: Math.round(l.bbox.y), x: Math.round(l.bbox.x), t: tn });
     }
   }
   lines.sort((a, b) => a.p - b.p || a.y - b.y || a.x - b.x);
@@ -213,7 +219,53 @@ async function pdfQuestions(buf) {
     else cur.stem += l.t;                                        // 題幹換行接續
   }
   flush();
-  return out;
+  if (out.size >= 10) return out;
+
+  // ── 幾何版型 fallback ────────────────────────────────────────────
+  // 社工師、護理師等不少卷長這樣（題號獨立一行、選項沒有 A./B./C./D.）：
+  //     x40 "8"
+  //     x58 "1980 年我國通過社會福利三項立法，有關其立法背景及內容之敘述，下列何者錯誤？"
+  //     x58 "其目的在轉移1970 年代之政治民主化的抗爭"     ← 選項 A
+  //     x58 …（共四行選項）
+  // 題幹與選項的 x 相同，分不出來，只能靠「題塊的最後四行是選項、其餘是題幹」。
+  // 這個規則在選項自己跨行時會切錯，所以下面加了長度一致性檢查，
+  // 切不乾淨的題寧可不回傳，讓呼叫端當成解析失敗而不是寫進錯資料。
+  const xs = {};
+  for (const l of lines) xs[l.x] = (xs[l.x] || 0) + 1;
+  const bodyX = +Object.entries(xs).sort((a, b) => b[1] - a[1])[0]?.[0];
+  if (!Number.isFinite(bodyX)) return out;
+
+  const marks = [];
+  lines.forEach((l, i) => {
+    if (l.x >= bodyX - 6) return;
+    const m = l.t.match(/^(\d{1,3})$/);
+    if (!m) return;
+    const n = +m[1];
+    if (n >= 1 && n <= 200) marks.push({ num: n, i });
+  });
+  if (marks.length < 10) return out;
+
+  const geo = new Map();
+  for (let k = 0; k < marks.length; k++) {
+    const from = marks[k].i + 1;
+    const to = k + 1 < marks.length ? marks[k + 1].i : lines.length;
+    const block = lines.slice(from, to).map(l => l.t.trim()).filter(Boolean);
+    if (block.length < 5) continue;                    // 至少 1 行題幹 + 4 行選項
+    const opts = block.slice(-4);
+    const stem = block.slice(0, -4).join('');
+    if (!stem || opts.some(o => !o)) continue;
+    // 幾何版型沒有 A./B./C./D. 標記，只能假設「最後四行＝四個選項」。
+    // 但選項自己跨行時這個假設就破了——會把上一個選項的後半段當成一個選項，
+    // 四段的長度立刻變得很不平均。門檻要抓緊，不合格的整題不收：
+    // 補卷是在新增資料，塞進壞選項比少收幾題嚴重得多。
+    const lens = opts.map(o => o.length).sort((a, b) => a - b);
+    if (lens[3] > lens[0] * 4 || lens[3] - lens[0] > 60) continue;
+    // 選項不該以句中標點開頭，那是被切斷的延續行
+    if (opts.some(o => /^[，、。；：）」]/.test(o))) continue;
+    if (geo.has(marks[k].num)) continue;               // 跨頁頁首重複，保留第一次
+    geo.set(marks[k].num, { stem, options: opts });
+  }
+  return geo.size > out.size ? geo : out;
 }
 
 module.exports = { pdfText, parseCorrections, pdfStems, pdfOptions, pdfQuestions };

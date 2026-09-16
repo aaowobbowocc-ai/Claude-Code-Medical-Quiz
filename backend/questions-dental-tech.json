@@ -2688,7 +2688,10 @@
         "D": "①④⑤"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/dental-tech_107110_3_38_0.webp"
+      ]
     },
     {
       "id": "107110_3_39",
@@ -14397,7 +14400,10 @@
         "D": "錐形工具"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/dental-tech_110111_3_30_0.webp"
+      ]
     },
     {
       "id": "110111_3_31",
@@ -15404,7 +15410,8 @@
         "D": "4 個"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "110111_4_31",
@@ -15824,7 +15831,10 @@
         "D": "眼神經（ophthalmic nerve）"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/dental-tech_111110_1_2_0.webp"
+      ]
     },
     {
       "id": "111110_1_3",
@@ -16827,7 +16837,10 @@
         "D": "①③④"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/dental-tech_111110_2_3_0.webp"
+      ]
     },
     {
       "id": "111110_2_4",
@@ -17127,7 +17140,11 @@
         "D": "D"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/dental-tech_111110_2_19_0.webp",
+        "/question-images/dental-tech_111110_2_19_1.webp"
+      ]
     },
     {
       "id": "111110_2_20",
@@ -17987,7 +18004,8 @@
         "D": "描繪完成的弧形箭頭頂端即是所謂的中心關係（centric relation）位置"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "no_image_in_source": true
     },
     {
       "id": "111110_3_13",
@@ -18028,7 +18046,10 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/dentaltech_111110_3_q14_0.webp"
+      "image_url": "/question-images/dentaltech_111110_3_q14_0.webp",
+      "images": [
+        "/question-images/dental-tech_111110_3_14_0.webp"
+      ]
     },
     {
       "id": "111110_3_15",
@@ -18211,7 +18232,13 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/dentaltech_111110_3_q23_0.webp"
+      "image_url": "/question-images/dentaltech_111110_3_q23_0.webp",
+      "images": [
+        "/question-images/dental-tech_111110_3_23_0.webp",
+        "/question-images/dental-tech_111110_3_23_1.webp",
+        "/question-images/dental-tech_111110_3_23_2.webp",
+        "/question-images/dental-tech_111110_3_23_3.webp"
+      ]
     },
     {
       "id": "111110_3_24",
@@ -18291,7 +18318,10 @@
         "D": "Kennedy class IV"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/dental-tech_111110_3_27_0.webp"
+      ]
     },
     {
       "id": "111110_3_28",
@@ -35461,6 +35491,6 @@
   ],
   "total": 1774,
   "metadata": {
-    "last_updated": "2026-09-15T14:21:00.710Z"
+    "last_updated": "2026-09-16T14:01:36.288Z"
   }
 }

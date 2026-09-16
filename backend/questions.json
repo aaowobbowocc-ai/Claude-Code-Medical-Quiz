@@ -8,7 +8,7 @@
     "description": "醫師國考第一階段文字題題庫（已過濾圖片題）",
     "scraped_at": "2026-04-01",
     "total_questions": 2000,
-    "last_updated": "2026-09-15T14:15:31.203Z"
+    "last_updated": "2026-09-16T13:58:11.392Z"
   },
   "total": 6360,
   "questions": [
@@ -93661,7 +93661,10 @@
       "image_url": "/question-images/doctor1_104030_p1_92_0.webp",
       "vision_uncertain": false,
       "disputed": true,
-      "_original_number": 92
+      "_original_number": 92,
+      "images": [
+        "/question-images/doctor1_1150204476_0.webp"
+      ]
     },
     {
       "id": 1150204477,
@@ -124322,7 +124325,10 @@
       "image_url": "/question-images/doctor1_105100_p1_95_0.webp",
       "image_dependent": true,
       "_original_number": 95,
-      "disputed": true
+      "disputed": true,
+      "images": [
+        "/question-images/doctor1_1150206034_0.webp"
+      ]
     },
     {
       "id": 1150206035,

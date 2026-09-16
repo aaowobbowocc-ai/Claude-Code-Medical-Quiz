@@ -21,7 +21,8 @@
     "explanation": "",
     "exam_type": "special_high",
     "image_url": "/question-images/audiologist_100090_q1_patrol.webp",
-    "_legacy_id": 30001912
+    "_legacy_id": 30001912,
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_100090_p2_2",
@@ -45,7 +46,8 @@
     "explanation": "",
     "exam_type": "special_high",
     "image_url": "/question-images/audiologist_100090_q2_patrol.webp",
-    "_legacy_id": 30001913
+    "_legacy_id": 30001913,
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_100090_p2_3",
@@ -69,7 +71,8 @@
     "explanation": "",
     "exam_type": "special_high",
     "image_url": "/question-images/audiologist_100090_q3_patrol.webp",
-    "_legacy_id": 30001914
+    "_legacy_id": 30001914,
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_100090_p2_4",
@@ -116,7 +119,10 @@
     "explanation": "",
     "exam_type": "special_high",
     "image_url": "/question-images/audiologist_100090_q5_patrol.webp",
-    "_legacy_id": 30001916
+    "_legacy_id": 30001916,
+    "images": [
+      "/question-images/audiologist_audiologist_100090_p2_5_0.webp"
+    ]
   },
   {
     "id": "audiologist_100090_p2_6",
@@ -5067,7 +5073,8 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "special_high",
-    "_legacy_id": 30002047
+    "_legacy_id": 30002047,
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_100090_p3_62",
@@ -5327,7 +5334,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "_legacy_id": 114100060744
+    "_legacy_id": 114100060744,
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_100090_p3_73",
@@ -5454,7 +5462,10 @@
     "explanation": "",
     "exam_type": "special_high",
     "image_url": "/question-images/audiologist_100090_q77_patrol.webp",
-    "_legacy_id": 30002060
+    "_legacy_id": 30002060,
+    "images": [
+      "/question-images/audiologist_audiologist_100090_p3_77_0.webp"
+    ]
   },
   {
     "id": "audiologist_100090_p3_78",
@@ -36908,7 +36919,11 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q6_patrol.webp",
-    "_legacy_id": 30002932
+    "_legacy_id": 30002932,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p3_6_0.webp",
+      "/question-images/audiologist_audiologist_101110_p3_6_1.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p3_7",
@@ -36932,7 +36947,12 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q7_patrol.webp",
-    "_legacy_id": 30002933
+    "_legacy_id": 30002933,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p3_7_0.webp",
+      "/question-images/audiologist_audiologist_101110_p3_7_1.webp",
+      "/question-images/audiologist_audiologist_101110_p3_7_2.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p3_8",
@@ -37485,7 +37505,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q31_patrol.webp",
-    "_legacy_id": 30002957
+    "_legacy_id": 30002957,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p3_31_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p3_32",
@@ -37509,7 +37532,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q32_patrol.webp",
-    "_legacy_id": 30002958
+    "_legacy_id": 30002958,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p3_32_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p3_33",
@@ -37557,7 +37583,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q34_patrol.webp",
-    "_legacy_id": 30002960
+    "_legacy_id": 30002960,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p3_34_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p3_35",
@@ -37830,7 +37859,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q46_patrol.webp",
-    "_legacy_id": 30002970
+    "_legacy_id": 30002970,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p3_46_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p3_47",
@@ -37854,7 +37886,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q47_patrol.webp",
-    "_legacy_id": 30002971
+    "_legacy_id": 30002971,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p3_47_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p3_48",
@@ -38405,7 +38440,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q71_patrol.webp",
-    "_legacy_id": 30002994
+    "_legacy_id": 30002994,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p3_71_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p3_72",
@@ -40820,7 +40858,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q16_patrol.webp",
-    "_legacy_id": 30003095
+    "_legacy_id": 30003095,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_16_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_17",
@@ -41760,7 +41801,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q57_patrol.webp",
-    "_legacy_id": 30003134
+    "_legacy_id": 30003134,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_57_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_58",
@@ -41804,7 +41848,10 @@
     },
     "answer": "D",
     "explanation": "",
-    "_legacy_id": 114100060783
+    "_legacy_id": 114100060783,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_59_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_60",
@@ -41828,7 +41875,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q60_patrol.webp",
-    "_legacy_id": 30003136
+    "_legacy_id": 30003136,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_60_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_61",
@@ -41921,7 +41971,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q64_patrol.webp",
-    "_legacy_id": 30003140
+    "_legacy_id": 30003140,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_64_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_65",
@@ -41991,7 +42044,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_101110_q67_patrol.webp",
-    "_legacy_id": 30003143
+    "_legacy_id": 30003143,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_67_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_68",
@@ -42058,7 +42114,10 @@
     },
     "answer": "B",
     "explanation": "",
-    "_legacy_id": 114100060784
+    "_legacy_id": 114100060784,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_70_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_71",
@@ -44576,7 +44635,10 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30004238
+    "_legacy_id": 30004238,
+    "images": [
+      "/question-images/audiologist_audiologist_102030_p2_20_0.webp"
+    ]
   },
   {
     "id": "audiologist_102030_p2_21",
@@ -48227,7 +48289,10 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30004314
+    "_legacy_id": 30004314,
+    "images": [
+      "/question-images/audiologist_audiologist_102030_p3_19_0.webp"
+    ]
   },
   {
     "id": "audiologist_102030_p3_20",
@@ -48480,7 +48545,10 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30004325
+    "_legacy_id": 30004325,
+    "images": [
+      "/question-images/audiologist_audiologist_102030_p3_30_0.webp"
+    ]
   },
   {
     "id": "audiologist_102030_p3_31",
@@ -48526,7 +48594,10 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30004327
+    "_legacy_id": 30004327,
+    "images": [
+      "/question-images/audiologist_audiologist_102030_p3_32_0.webp"
+    ]
   },
   {
     "id": "audiologist_102030_p3_33",
@@ -63824,7 +63895,10 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/audiologist_102110_q59_patrol.webp",
-    "_legacy_id": 30004963
+    "_legacy_id": 30004963,
+    "images": [
+      "/question-images/audiologist_audiologist_102110_p5_59_0.webp"
+    ]
   },
   {
     "id": "audiologist_102110_p5_60",
@@ -67754,7 +67828,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_103100_s0902_78",
@@ -69596,7 +69671,10 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high",
-    "image_url": "/question-images/audiologist_103100_q2_patrol.webp"
+    "image_url": "/question-images/audiologist_103100_q2_patrol.webp",
+    "images": [
+      "/question-images/audiologist_audiologist_103100_s0903_2_0.webp"
+    ]
   },
   {
     "id": "audiologist_103100_s0903_3",
@@ -69875,7 +69953,10 @@
     },
     "answer": "A",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/audiologist_audiologist_103100_s0903_15_0.webp"
+    ]
   },
   {
     "id": "audiologist_103100_s0903_16",
@@ -70089,7 +70170,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_103100_s0903_26",
@@ -70950,7 +71032,8 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high",
-    "image_url": "/question-images/audiologist_103100_q64_patrol.webp"
+    "image_url": "/question-images/audiologist_103100_q64_patrol.webp",
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_103100_s0903_65",
@@ -74944,7 +75027,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_103100_s0904_13",
@@ -75240,7 +75324,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_103100_s0904_27",

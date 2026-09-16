@@ -4,7 +4,7 @@
     "label": "職能治療師",
     "scraped_at": "2026-04-10T01:53:48.896Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-15T14:19:11.476Z"
+    "last_updated": "2026-09-16T14:00:17.776Z"
   },
   "total": 12480,
   "questions": [
@@ -241566,7 +241566,16 @@
         "C": "松果腺（pineal gland）",
         "D": "穹窿（fornix）"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/ot_115090_0_8_0.webp",
+        "/question-images/ot_115090_0_8_1.webp",
+        "/question-images/ot_115090_0_8_2.webp",
+        "/question-images/ot_115090_0_8_3.webp",
+        "/question-images/ot_115090_0_8_4.webp",
+        "/question-images/ot_115090_0_8_5.webp",
+        "/question-images/ot_115090_0_8_6.webp"
+      ]
     },
     {
       "id": "115090_0_9",
@@ -244702,7 +244711,14 @@
         "C": "③",
         "D": "④"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/ot_115090_2_13_0.webp",
+        "/question-images/ot_115090_2_13_1.webp",
+        "/question-images/ot_115090_2_13_2.webp",
+        "/question-images/ot_115090_2_13_3.webp",
+        "/question-images/ot_115090_2_13_4.webp"
+      ]
     },
     {
       "id": "115090_2_14",
@@ -249322,7 +249338,8 @@
         "C": "手臂加速期",
         "D": "擊球後期"
       },
-      "answer": "B"
+      "answer": "B",
+      "no_image_in_source": true
     },
     {
       "id": "115090_5_17",
@@ -250045,7 +250062,12 @@
         "C": "屈指淺肌（flexor digitorum superficialis）",
         "D": "屈指深肌（flexor digitorum profundus）"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/ot_115090_5_54_0.webp",
+        "/question-images/ot_115090_5_54_1.webp",
+        "/question-images/ot_115090_5_54_2.webp"
+      ]
     },
     {
       "id": "115090_5_55",
@@ -250178,7 +250200,14 @@
         "C": "常會出現踮腳尖走路（tiptoe walking）",
         "D": "可以測量兩腳內踝間距（intermalleolar distance）來看嚴重程度"
       },
-      "answer": "C"
+      "answer": "C",
+      "images": [
+        "/question-images/ot_115090_5_61_0.webp",
+        "/question-images/ot_115090_5_61_1.webp",
+        "/question-images/ot_115090_5_61_2.webp",
+        "/question-images/ot_115090_5_61_3.webp",
+        "/question-images/ot_115090_5_61_4.webp"
+      ]
     },
     {
       "id": "115090_5_62",

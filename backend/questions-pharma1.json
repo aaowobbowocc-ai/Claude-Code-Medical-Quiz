@@ -1100,7 +1100,13 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/pharma1_100030_q55_patrol.webp"
+      "image_url": "/question-images/pharma1_100030_q55_patrol.webp",
+      "images": [
+        "/question-images/pharma1_115021208_0.webp",
+        "/question-images/pharma1_115021208_1.webp",
+        "/question-images/pharma1_115021208_2.webp",
+        "/question-images/pharma1_115021208_3.webp"
+      ]
     },
     {
       "id": 115021209,
@@ -1982,7 +1988,10 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/pharma1_100030_p1_19_0.webp"
+      "image_url": "/question-images/pharma1_100030_p1_19_0.webp",
+      "images": [
+        "/question-images/pharma1_115021252_0.webp"
+      ]
     },
     {
       "id": 115021253,
@@ -4788,7 +4797,10 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/pharma1_100030_p2_79_0.webp"
+      "image_url": "/question-images/pharma1_100030_p2_79_0.webp",
+      "images": [
+        "/question-images/pharma1_115021391_0.webp"
+      ]
     },
     {
       "id": 115021392,
@@ -6595,7 +6607,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/pharma1_100140_p1_5_0.webp"
+      "image_url": "/question-images/pharma1_100140_p1_5_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115023815,
@@ -6701,7 +6714,10 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/pharma1_100140_q10_patrol.webp"
+      "image_url": "/question-images/pharma1_100140_q10_patrol.webp",
+      "images": [
+        "/question-images/pharma1_115023819_0.webp"
+      ]
     },
     {
       "id": 115023820,
@@ -7247,7 +7263,8 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/pharma1_100140_p1_36_0.webp"
+      "image_url": "/question-images/pharma1_100140_p1_36_0.webp",
+      "no_image_in_source": true
     },
     {
       "id": 115023844,
@@ -154197,6 +154214,6 @@
   ],
   "total": 7673,
   "metadata": {
-    "last_updated": "2026-09-15T14:32:59.299Z"
+    "last_updated": "2026-09-16T13:58:39.810Z"
   }
 }

@@ -22,6 +22,8 @@ for (const f of files) {
     if (!q.question) continue
     if (!RX_IMG.test(q.question)) continue
     if (q.image || q.images || q.image_url) continue
+    // 已經拿原卷驗證過「那題本來就沒有圖」的，不要再算成待辦
+    if (q.no_image_in_source) continue
     const k = `${f}|${q.subject}`
     groups[k] = (groups[k] || 0) + 1
     total++

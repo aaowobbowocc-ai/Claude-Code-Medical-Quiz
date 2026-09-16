@@ -251,17 +251,36 @@ async function pdfQuestions(buf) {
     const to = k + 1 < marks.length ? marks[k + 1].i : lines.length;
     const block = lines.slice(from, to).map(l => l.t.trim()).filter(Boolean);
     if (block.length < 5) continue;                    // 至少 1 行題幹 + 4 行選項
-    const opts = block.slice(-4);
-    const stem = block.slice(0, -4).join('');
+
+    // 這些卷其實有選項標記,只是印成 PUA 造字（U+E18C~U+E18F 就是 ⒶⒷⒸⒹ,
+    // 各家卷用的碼位不同）。有標記就用標記切,不要猜——「最後四行＝選項」
+    // 碰到選項自己跨行就會把上一個選項的後半段當成一個選項,
+    // 而續行是沒有標記的,用標記切自然就把它接回去了。
+    const isMark = (t) => /^[-Ⓐ-ⓩ①-⑳]/.test(t);
+    const markIdx = block.map((t, i) => (isMark(t) ? i : -1)).filter(i => i >= 0);
+    let stem, opts;
+    if (markIdx.length === 4 && markIdx[0] > 0) {
+      stem = block.slice(0, markIdx[0]).join('');
+      opts = markIdx.map((mi, oi) => {
+        const end = oi + 1 < markIdx.length ? markIdx[oi + 1] : block.length;
+        return block.slice(mi, end).join('').replace(/^[-Ⓐ-ⓩ①-⑳]\s*/, '');
+      });
+    } else {
+      // 沒有標記可用,只能假設最後四行是選項。這個假設在選項跨行時會破,
+      // 所以下面用長度一致性把切不乾淨的整題擋掉。
+      opts = block.slice(-4);
+      stem = block.slice(0, -4).join('');
+      const lens = opts.map(o => o.length).sort((a, b) => a - b);
+      if (lens[3] > lens[0] * 4 || lens[3] - lens[0] > 60) continue;
+      if (opts.some(o => /^[，、。；：）」]/.test(o))) continue;
+    }
     if (!stem || opts.some(o => !o)) continue;
-    // 幾何版型沒有 A./B./C./D. 標記，只能假設「最後四行＝四個選項」。
-    // 但選項自己跨行時這個假設就破了——會把上一個選項的後半段當成一個選項，
-    // 四段的長度立刻變得很不平均。門檻要抓緊，不合格的整題不收：
-    // 補卷是在新增資料，塞進壞選項比少收幾題嚴重得多。
-    const lens = opts.map(o => o.length).sort((a, b) => a - b);
-    if (lens[3] > lens[0] * 4 || lens[3] - lens[0] > 60) continue;
-    // 選項不該以句中標點開頭，那是被切斷的延續行
-    if (opts.some(o => /^[，、。；：）」]/.test(o))) continue;
+    // PUA 造字不能留在題庫裡,前端會顯示成豆腐字
+    const clean = (t) => t.replace(/[-]/g, '').trim();
+    stem = clean(stem);
+    opts = opts.map(clean);
+    if (!stem || opts.some(o => !o)) continue;
+
     if (geo.has(marks[k].num)) continue;               // 跨頁頁首重複，保留第一次
     geo.set(marks[k].num, { stem, options: opts });
   }

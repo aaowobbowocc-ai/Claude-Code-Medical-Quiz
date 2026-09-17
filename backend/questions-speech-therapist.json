@@ -4609,7 +4609,8 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "special_high",
-    "_legacy_id": 30000037
+    "_legacy_id": 30000037,
+    "no_image_in_source": true
   },
   {
     "id": "speech_100090_p3_41",
@@ -4990,7 +4991,10 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "special_high",
-    "_legacy_id": 30000051
+    "_legacy_id": 30000051,
+    "images": [
+      "/question-images/speech-therapist_speech_100090_p3_56_0.webp"
+    ]
   },
   {
     "id": "speech_100090_p3_57",
@@ -16537,7 +16541,8 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30000514
+    "_legacy_id": 30000514,
+    "no_image_in_source": true
   },
   {
     "id": "speech_100140_p3_80",
@@ -24544,7 +24549,8 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "special_high",
-    "_legacy_id": 30001012
+    "_legacy_id": 30001012,
+    "no_image_in_source": true
   },
   {
     "id": "speech_101070_p5_28",
@@ -24978,7 +24984,10 @@
     "explanation": "",
     "exam_type": "special_high",
     "image_url": "/question-images/speech-therapist_101070_q46_patrol.webp",
-    "_legacy_id": 30001029
+    "_legacy_id": 30001029,
+    "images": [
+      "/question-images/speech-therapist_speech_101070_p5_46_0.webp"
+    ]
   },
   {
     "id": "speech_101070_p5_47",
@@ -25280,7 +25289,8 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "special_high",
-    "_legacy_id": 30001042
+    "_legacy_id": 30001042,
+    "no_image_in_source": true
   },
   {
     "id": "speech_101070_p5_60",
@@ -46428,7 +46438,8 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30001452
+    "_legacy_id": 30001452,
+    "no_image_in_source": true
   },
   {
     "id": "speech_102030_p5_18",
@@ -46570,7 +46581,8 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30001458
+    "_legacy_id": 30001458,
+    "no_image_in_source": true
   },
   {
     "id": "speech_102030_p5_24",
@@ -47261,7 +47273,8 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30001487
+    "_legacy_id": 30001487,
+    "no_image_in_source": true
   },
   {
     "id": "speech_102030_p5_54",
@@ -47398,7 +47411,8 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30001492
+    "_legacy_id": 30001492,
+    "no_image_in_source": true
   },
   {
     "id": "speech_102030_p5_60",
@@ -59064,7 +59078,8 @@
     "explanation": "",
     "exam_type": "high",
     "image_url": "/question-images/speech-therapist_102110_q6_patrol.webp",
-    "_legacy_id": 30001815
+    "_legacy_id": 30001815,
+    "no_image_in_source": true
   },
   {
     "id": "speech_102110_p3_7",
@@ -92529,7 +92544,10 @@
     },
     "answer": "C",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/speech-therapist_speech_105090_s0801_61_0.webp"
+    ]
   },
   {
     "id": "speech_105090_p3_62",
@@ -92668,7 +92686,10 @@
     },
     "answer": "C",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/speech-therapist_speech_105090_s0801_67_0.webp"
+    ]
   },
   {
     "id": "speech_105090_s0801_68",
@@ -92713,7 +92734,10 @@
     },
     "answer": "C",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/speech-therapist_speech_105090_s0801_69_0.webp"
+    ]
   },
   {
     "id": "speech_105090_s0801_70",
@@ -92758,7 +92782,10 @@
     },
     "answer": "D",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/speech-therapist_speech_105090_s0801_71_0.webp"
+    ]
   },
   {
     "id": "speech_105090_s0801_72",
@@ -116535,7 +116562,8 @@
     },
     "answer": "A",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "no_image_in_source": true
   },
   {
     "id": "speech_108110_s0802_46",
@@ -128412,7 +128440,8 @@
     "explanation": "",
     "exam_type": "high",
     "vision_uncertain": false,
-    "disputed": true
+    "disputed": true,
+    "no_image_in_source": true
   },
   {
     "id": "speech_110111_s0802_4",
@@ -129118,7 +129147,8 @@
     "explanation": "",
     "exam_type": "high",
     "vision_uncertain": false,
-    "disputed": true
+    "disputed": true,
+    "no_image_in_source": true
   },
   {
     "id": "speech_110111_s0802_35",
@@ -136123,7 +136153,8 @@
     },
     "answer": "C",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "no_image_in_source": true
   },
   {
     "id": "speech_111110_s0601_9",

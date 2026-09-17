@@ -4,7 +4,7 @@
     "label": "物理治療師",
     "scraped_at": "2026-04-10T01:55:58.342Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-16T15:28:37.222Z"
+    "last_updated": "2026-09-17T12:47:04.523Z"
   },
   "total": 15360,
   "questions": [
@@ -1005,14 +1005,13 @@
       "number": 50,
       "question": "若知個案之發展商數為x，某測驗之發展商數測量標準誤（SEM）之值為y，常模原始分數之平均數（mean）為z，則下列那個公式可正確計算個案發展商數的95%信賴區間？",
       "options": {
-        "A": "±",
-        "B": "x ±",
-        "C": "±",
-        "D": "±"
+        "A": "x ± 1.96y",
+        "B": "x ± y",
+        "C": "y ± 1.96x",
+        "D": "x ± 1.96 × (z/y)"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 9570,

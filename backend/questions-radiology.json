@@ -4,7 +4,7 @@
     "label": "醫事放射師",
     "scraped_at": "2026-04-15T14:34:05.454Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-16T15:28:37.546Z"
+    "last_updated": "2026-09-17T12:47:37.087Z"
   },
   "total": 15359,
   "questions": [
@@ -82634,14 +82634,13 @@
       "number": 68,
       "question": "針對   所發射的光子而言，在相同的結構之下，使用下列何種材質，其準直效果最好？",
       "options": {
-        "A": "（密度：8.96 g/cm 3 ）",
-        "B": "（密度：11.4 g/cm 3 ）",
-        "C": "（密度：19.3 g/cm 3 ）",
-        "D": "（密度：19.3 g/cm 3 ）"
+        "A": "⁶³₂₉Cu（密度：8.96 g/cm³）",
+        "B": "²⁰⁷₈₂Pb（密度：11.4 g/cm³）",
+        "C": "¹⁸⁴₇₄W（密度：19.3 g/cm³）",
+        "D": "¹⁹⁷₇₉Au（密度：19.3 g/cm³）"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 117674,

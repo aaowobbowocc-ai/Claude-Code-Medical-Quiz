@@ -1537,13 +1537,12 @@
       "question": "假設A 為血壓器測量顯示有高血壓症狀，A 則為血壓器測量顯示正常值（無高血壓症狀），B為測試者有高血壓，B 則為正常測試者（血壓值正常），請問此血壓器的特異度（specificity）是下列那一個條件機率？",
       "options": {
         "A": "P(A|B)",
-        "B": "P( A | B )",
+        "B": "P(Ā|B̄)",
         "C": "P(B|A)",
-        "D": "P( B | A )"
+        "D": "P(B̄|Ā)"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": "111110_2_38",
@@ -27914,6 +27913,6 @@
   ],
   "total": 1401,
   "metadata": {
-    "last_updated": "2026-09-16T15:28:37.314Z"
+    "last_updated": "2026-09-17T12:47:37.137Z"
   }
 }

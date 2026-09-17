@@ -5654,14 +5654,13 @@
       "number": 38,
       "question": "針對不同的橋體形態，自潔作用由難至易排列順序為下列何者？①嵴疊型（ridge lap type） ②板式（platetype） ③衛生型（sanitary type）",
       "options": {
-        "A": "①",
-        "B": "→②→③",
-        "C": "①",
-        "D": "→③→②"
+        "A": "①→②→③",
+        "B": "①→③→②",
+        "C": "③→②→①",
+        "D": "②→①→③"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": "108110_2_39",
@@ -35497,6 +35496,6 @@
   ],
   "total": 1774,
   "metadata": {
-    "last_updated": "2026-09-16T15:28:35.722Z"
+    "last_updated": "2026-09-17T12:45:54.315Z"
   }
 }

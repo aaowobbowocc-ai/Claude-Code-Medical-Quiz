@@ -8,7 +8,7 @@
     "description": "醫師國考第一階段文字題題庫（已過濾圖片題）",
     "scraped_at": "2026-04-01",
     "total_questions": 2000,
-    "last_updated": "2026-09-16T15:28:38.578Z"
+    "last_updated": "2026-09-17T12:48:00.013Z"
   },
   "total": 6360,
   "questions": [
@@ -71750,13 +71750,12 @@
       "question": "在66 歲男性解剖病例中發現病人心臟瓣膜上有許多小粒的贅生物(vegetations)黏附其上,贅生物 純粹為血栓成分並且沒有造成瓣膜發炎或損傷,顯微鏡檢視贅生物也沒有發現其中含有微生物。患 者生前並無任何自體免疫疾病的病史。下列何情況最常與這種贅生物的產生有關?",
       "options": {
         "A": "Debilitated patients such as those with cancer or sepsis",
-        "B": "",
-        "C": "Intravenous drug",
-        "D": ""
+        "B": "Intravenous drug-abusers",
+        "C": "Libman-Sacks disease",
+        "D": "Acute rheumatic endocarditis"
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "broken_options",
       "disputed": true
     },
     {
@@ -88108,16 +88107,15 @@
       "question": "下列何者為粒線體電子傳遞鏈Complex I 的electron donor？",
       "options": {
         "A": "NADH",
-        "B": "NADH",
-        "C": "FADH2",
-        "D": "Cytochrome"
+        "B": "Cytochrome c",
+        "C": "Coenzyme Q",
+        "D": "Succinate"
       },
       "answer": "A",
       "explanation": "",
       "vision_uncertain": false,
       "disputed": true,
-      "_original_number": 46,
-      "incomplete": "broken_options"
+      "_original_number": 46
     },
     {
       "id": 1150204231,
@@ -88153,15 +88151,14 @@
       "number": 48,
       "question": "Multiple Endocrine Neoplasia 2（MEN-2）是因為RET gene 發生突變所致。RET 是一種tyrosine kinasereceptor，當它與其Ligand 結合後，不會產生下列何種反應？Receptor 會dimerization",
       "options": {
-        "A": "Receptor kinase",
-        "B": "會磷酸化自己",
-        "C": "Receptor kinase",
-        "D": "會磷酸化其它蛋白質"
+        "A": "Receptor 會 dimerization",
+        "B": "Receptor kinase 會磷酸化自己",
+        "C": "Receptor kinase 會磷酸化其它蛋白質",
+        "D": "會造成細胞內 cAMP 上升"
       },
       "answer": "D",
       "explanation": "",
-      "_original_number": 48,
-      "incomplete": "broken_options"
+      "_original_number": 48
     },
     {
       "id": 1150204233,

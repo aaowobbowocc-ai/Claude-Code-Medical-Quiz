@@ -195850,9 +195850,9 @@
       "number": 22,
       "question": "一位 25 歲男性病人，住院前二天突然覺得右耳聽力減退和高頻耳鳴，沒有眩暈、耳漏或耳痛。純音 聽力檢查結果如圖示，而腦幹聽性反應檢查（ auditory brain-stem response ）顯示右耳刺激時，只出現 I波潛時值（ latency value ）異常，其他潛時值均正常，則此病人可能的病變部位是： 中耳 耳蝸",
       "options": {
-        "A": "聽神經",
-        "B": "神經",
-        "C": "腦幹",
+        "A": "中耳",
+        "B": "耳蝸",
+        "C": "聽神經",
         "D": "腦幹"
       },
       "answer": "B",
@@ -195860,8 +195860,7 @@
       "images": [
         "/question-images/doctor2_102110_0106_22_0.webp"
       ],
-      "image_dependent": true,
-      "incomplete": "broken_options"
+      "image_dependent": true
     },
     {
       "id": "102110_0106_24",
@@ -196258,9 +196257,9 @@
       "number": 66,
       "question": "下圖中兒童走路呈現出異常步態，其最可能的診斷是： 小兒麻痺症 脊髓肌肉萎縮症",
       "options": {
-        "A": "髖關節脫位",
-        "B": "髖關節脫位",
-        "C": "痙攣型腦性麻痺",
+        "A": "小兒麻痺症",
+        "B": "脊髓肌肉萎縮症",
+        "C": "髖關節脫位",
         "D": "痙攣型腦性麻痺"
       },
       "answer": "D",
@@ -196268,8 +196267,7 @@
       "images": [
         "/question-images/doctor2_102110_0106_66_0.webp"
       ],
-      "image_dependent": true,
-      "incomplete": "broken_options"
+      "image_dependent": true
     },
     {
       "id": "102110_0106_67",
@@ -208199,6 +208197,6 @@
   ],
   "total": 10239,
   "metadata": {
-    "last_updated": "2026-09-16T17:09:13.742Z"
+    "last_updated": "2026-09-17T12:45:54.351Z"
   }
 }

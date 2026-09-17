@@ -67,7 +67,10 @@ const key = q => skeleton(q.question).replace(/^【題組情境】/, '').slice(0
     if (!usable) continue
     const rate = inPaper / usable, numRate = atNumber / usable
     if (rate < MIN) broken.push({ ...p, rate, numRate, usable })
-    else if (numRate < rate - 0.25) shifted.push({ ...p, rate, numRate, usable })
+    // 「題號偏移」要原卷解析得夠完整才有意義：原卷只抽出 28 題、我們有 35 題時，
+    // 對不上的那幾題根本是原卷沒解析到，不是我們的題號錯（鐵路 110070 國文就是這樣）。
+    // 內容對不上(broken)不受影響——那是比對整卷文字，少幾題仍看得出來。
+    else if (numRate < rate - 0.25 && stems.size >= usable * 0.9) shifted.push({ ...p, rate, numRate, usable })
   }
 
   console.log(`${EXAM}：檢查 ${checked} 卷（${unresolved} 卷反查不到／抓不到試題卷，${unparsed} 卷原卷解析不足無法判斷）`)

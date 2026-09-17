@@ -22632,7 +22632,10 @@
       },
       "answer": "D",
       "case_context": "第 47 題：媽媽抱著1 歲半女童坐副駕駛座,爸爸因疲勞駕車自撞橋墩而被送至醫院急診,發現女童意識昏迷,對疼痛 刺激稍微會縮手,血壓65/23 mmHg,心跳153/min,呼吸24/min,體溫36.3°C,脈搏血氧飽和度90%,目測 體重約10 公斤,下列敘述何者錯誤?",
-      "grouped": true
+      "grouped": true,
+      "images": [
+        "/question-images/doctor2_113020_2_48_0.webp"
+      ]
     },
     {
       "id": "113020_2_49",
@@ -112967,7 +112970,8 @@
       "answer": "D",
       "explanation": "",
       "case_context": "第 49 題：一位洗腎病人血液中的鉀離子6.2 mmol/L，心電圖中會觀察到下列何種現象？",
-      "grouped": true
+      "grouped": true,
+      "no_image_in_source": true
     },
     {
       "id": 115024094,
@@ -208197,6 +208201,6 @@
   ],
   "total": 10239,
   "metadata": {
-    "last_updated": "2026-09-17T12:45:54.351Z"
+    "last_updated": "2026-09-17T17:06:05.955Z"
   }
 }

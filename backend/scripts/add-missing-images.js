@@ -33,7 +33,7 @@ const { IMAGE_REF: STRICT } = require('./lib/image-ref')
 
 const { warnZero, checkRegistryCoverage, summary } = require('./lib/coverage-guard')
 const { resolvePaper } = require('./lib/moex-paper-resolve')
-const { pdfStems } = require('./lib/moex-pdf-parse')
+const { pdfStems, pdfQuestions } = require('./lib/moex-pdf-parse')
 const { skeleton } = require('./lib/moex-normalize')
 const https = require('https')
 const sharp = require('sharp')
@@ -653,8 +653,11 @@ async function processExamCode(examTag, code, opts) {
       // 另建一份 lib/moex-pdf-parse 的題幹索引當備援：本檔自己的 parseQuestions
       // 只認標記式版型，中醫二階、聽力師那種「題號獨立一行、選項無 ABCD」的卷
       // 會整卷對不到題（tcm2 81 題全卡在「題幹對不到任何卷」）。
-      let stemIndex = null
+      let stemIndex = null, optIndex = null
       try { stemIndex = await pdfStems(buf) } catch {}
+      // 再備一份「題號 → 四個選項」：有些題的題幹被我們改寫過（承上題自足化、
+      // 下標修復、選項重建），比對不到原卷，但選項是逐題獨立的文字，對得上。
+      try { optIndex = await pdfQuestions(buf) } catch {}
       const subjName = await pdfSubjectName(buf)
       // Match PDF 科目 to JSON subject by ≥4-char CJK common prefix. Handles
       // cases like PDF "中醫臨床醫學(包括傷寒論...)" ⟷ JSON "中醫臨床醫學(一)".
@@ -676,7 +679,7 @@ async function processExamCode(examTag, code, opts) {
         }
         if (bestCommon >= 4) paperSubject = best
       }
-      pdfs.push({ s, classCode, subjectName: subjName, paperSubject, stemIndex, ...parsed })
+      pdfs.push({ s, classCode, subjectName: subjName, paperSubject, stemIndex, optIndex, ...parsed })
     } catch (e) { console.error(`    parse ${s} failed: ${e.message}`) }
   }
   if (!pdfs.length) return { added: 0, skipped: 0 }
@@ -733,6 +736,22 @@ async function processExamCode(examTag, code, opts) {
           for (const pdf of pdfs) {
             if (!pdf.stemIndex) continue
             for (const [num, t] of pdf.stemIndex) if (t.includes(s2)) { hit = { pdf, num }; break }
+            if (hit) break
+          }
+        }
+      }
+      // 再備援：用選項文字定位。四個選項對到兩個以上就幾乎不可能是別題。
+      if (!hit) {
+        const ours = ['A', 'B', 'C', 'D']
+          .map(k => skeleton(String((q.options || {})[k] ?? '')))
+          .filter(v => v.length >= 4)
+        if (ours.length >= 3) {
+          for (const pdf of pdfs) {
+            if (!pdf.optIndex) continue
+            for (const [num, o] of pdf.optIndex) {
+              const th = o.options.map(skeleton)
+              if (ours.filter(x => th.some(y => x === y || x.includes(y) || y.includes(x))).length >= 3) { hit = { pdf, num }; break }
+            }
             if (hit) break
           }
         }

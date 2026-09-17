@@ -6153,7 +6153,13 @@
         "D": "恆牙時期"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/dental2_100020060_0.webp",
+        "/question-images/dental2_100020060_1.webp",
+        "/question-images/dental2_100020060_2.webp",
+        "/question-images/dental2_100020060_3.webp"
+      ]
     },
     {
       "id": 1051006683,
@@ -75600,7 +75606,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "case_context": "第 79 題：下圖之X光影像最主要觀察那一解剖構造？"
+      "case_context": "第 79 題：下圖之X光影像最主要觀察那一解剖構造？",
+      "no_image_in_source": true
     },
     {
       "id": "105100_55_1",
@@ -94466,7 +94473,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 53 題：如下圖所示，一位9歲男童因左臉頰無痛性腫脹而來求診，依據此影像檢查的鑑別診斷，下列那一項最合 理？（請依序回答下列2題）"
+      "case_context": "第 53 題：如下圖所示，一位9歲男童因左臉頰無痛性腫脹而來求診，依據此影像檢查的鑑別診斷，下列那一項最合 理？（請依序回答下列2題）",
+      "no_image_in_source": true
     },
     {
       "id": 115021474,
@@ -205148,6 +205156,6 @@
   ],
   "total": 10240,
   "metadata": {
-    "last_updated": "2026-09-17T12:51:58.444Z"
+    "last_updated": "2026-09-17T17:06:13.073Z"
   }
 }

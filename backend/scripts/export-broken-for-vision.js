@@ -26,6 +26,8 @@ const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve')
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i >= 0 ? process.argv[i + 1] : d }
 const EXAM = arg('--exam')
 const LIMIT = +arg('--limit', '40')
+// 預設只匯出 broken_options；題組解析失敗的題要連題幹一起看，用 --mark 指定
+const MARK = arg('--mark', 'broken_options')
 const DIR = path.join(__dirname, '..')
 const OUT = path.join(DIR, '_tmp', 'vision-broken')
 const SCALE = 2.5
@@ -43,7 +45,7 @@ const SCALE = 2.5
     const raw = JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8'))
     const arr = Array.isArray(raw) ? raw : raw.questions
     if (!arr) continue
-    const targets = arr.filter(q => q.incomplete === 'broken_options')
+    const targets = arr.filter(q => q.incomplete === MARK)
     if (!targets.length) continue
 
     const byPaper = new Map()
@@ -101,7 +103,8 @@ const SCALE = 2.5
         if (height < 30) continue
         const name = `${exam}_${code}_${String(q.number).padStart(3, '0')}_${q.id}.png`
         await sharp(png).extract({ left: 0, top, width: px.getWidth(), height }).png().toFile(path.join(OUT, name))
-        manifest.push({ file: name, exam, id: String(q.id), code, subject, number: q.number, current: q.options })
+        manifest.push({ file: name, exam, id: String(q.id), code, subject, number: q.number,
+          current: q.options, currentQuestion: String(q.question || '').slice(0, 120) })
       }
     }
   }

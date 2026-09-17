@@ -208803,8 +208803,7 @@
       "D": "伍爾夫－巴金森－懷特症候群（Wolff–Parkinson–White syndrome）"
     },
     "answer": "A",
-    "explanation": "",
-    "incomplete": "cloze_parse_failed"
+    "explanation": ""
   },
   {
     "id": 1924,
@@ -212034,8 +212033,7 @@
     "explanation": "",
     "images": [
       "/question-images/medlab_2324_0.webp"
-    ],
-    "incomplete": "cloze_parse_failed"
+    ]
   },
   {
     "id": 2324,
@@ -263129,7 +263127,8 @@
       "B": "/question-images/medlab_113020_molmicro_q59_B.webp",
       "C": "/question-images/medlab_113020_molmicro_q59_C.webp",
       "D": "/question-images/medlab_113020_molmicro_q59_D.webp"
-    }
+    },
+    "incomplete": "broken_options"
   },
   {
     "id": 4538,

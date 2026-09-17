@@ -12747,7 +12747,8 @@
         "D": "for"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "broken_options"
     },
     {
       "id": 809,
@@ -23706,16 +23707,15 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 40,
-      "question": "which",
+      "question": "whichwherewhetherwhat請依下文回答第41 題至第45 題How do you lose weight in the first place?—Mostly, through breathing. While the concept of “burning” fat is notaltogether wrong, losing fat involves plenty of carbon dioxide leaving your body. As the Washington Post explains:Researchers found that to burn a pound of fat, a human needs to inhale about three pounds of oxygen and drink about apound of water. Water can exit the body in plenty of ways—poop, pee, sweat, saliva and any number of bodily fluids—but your lungs handle the brunt of the weight loss.Your fat “goes” into the atmosphere. (And no, it doesn’t contribute to global warming.) When it does go, you’re alsoreleasing the extra storage of vitamins and toxins along with it. That might not sound like a good thing, but in the longrun it’s far better to be rid of them. As Popular Science states, a kind of pesticides, among other pollutants, are known toget bound up in fat—they leak into our food supply: Bodies don’t seem to store enough of these to become toxic, but theconstant build-up leaves you vulnerable to exposure. And they do start to re-emerge when you lose weight.By losing weight at a healthy pace (1-2 pounds a week), the limited number of pollutants released will not overload yourbloodstream. Your urine will make quick work of them. Extreme dieting is a different story. The more weight you lose,the more of these toxins enter your bloodstream.",
       "options": {
-        "A": "where",
-        "B": "whether",
-        "C": "what",
-        "D": "請依下文回答第41題至第45題"
+        "A": "Since we no longer face the same problem as our ancestors—most of us don’t have to worry about whether or not we’ll",
+        "B": "eat tonight, or tomorrow—fat storage plays a different role in our bodies than previously. Many avoidable health",
+        "C": "problems are due to this excessive storage of energy, hormones and toxins. Some researchers claim 70 percent of our",
+        "D": "medical problems can be addressed through a healthier lifestyle, which includes eating better and moving more."
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": "cloze_parse_failed"
+      "explanation": ""
     },
     {
       "id": 526,

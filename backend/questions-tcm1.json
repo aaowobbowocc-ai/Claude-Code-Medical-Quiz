@@ -4,7 +4,7 @@
     "label": "中醫師(一)",
     "scraped_at": "2026-04-14T11:34:33.968Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-16T17:09:15.722Z",
+    "last_updated": "2026-09-17T12:52:00.921Z",
     "total": 4955
   },
   "total": 5120,
@@ -93230,8 +93230,7 @@
         "D": "溫脾湯"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": "cloze_parse_failed"
+      "explanation": ""
     },
     {
       "id": "102110_0202_7",
@@ -93785,7 +93784,8 @@
         "B": "/question-images/tcm1_102110_0202_78_optB.webp",
         "C": "/question-images/tcm1_102110_0202_78_optC.webp",
         "D": "/question-images/tcm1_102110_0202_78_optD.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": "102110_0202_79",
@@ -93834,7 +93834,8 @@
         "B": "/question-images/tcm1_102110_0202_80_optB.webp",
         "C": "/question-images/tcm1_102110_0202_80_optC.webp",
         "D": "/question-images/tcm1_102110_0202_80_optD.webp"
-      }
+      },
+      "incomplete": "broken_options"
     },
     {
       "id": "102110_0202_40",

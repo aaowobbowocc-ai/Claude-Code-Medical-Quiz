@@ -29752,8 +29752,7 @@
       "explanation": "",
       "images": [
         "/question-images/dental2_115023888_0.webp"
-      ],
-      "incomplete": "cloze_parse_failed"
+      ]
     },
     {
       "id": 115023889,
@@ -29776,8 +29775,7 @@
       "explanation": "",
       "images": [
         "/question-images/dental2_115023889_0.webp"
-      ],
-      "incomplete": "cloze_parse_failed"
+      ]
     },
     {
       "id": 115023890,
@@ -143590,15 +143588,15 @@
       "subject_name": "牙周病學",
       "stage_id": 2,
       "number": 72,
-      "question": "Enterococcus faecalis是根管治療失敗病例中，最常發現的致病菌種，因為其具有下列何項特殊的性質？",
+      "question": "下列那些材料製成的牙周再生膜須藉由二次手術移除？",
       "options": {
-        "A": "因為其低鹼耐受性，Enterococcus faecalis可以抵抗大部分根管沖洗溶液的化學清潔作用",
-        "B": "因為其質子對流系統（proton pump）可以自行調節內部至鹼性濃度",
-        "C": "Enterococcus faecalis可以生存在長期無氧與無養份的環境下，存活至適當時機再行繁殖",
-        "D": "Enterococcus faecalis可以在多菌種感染的環境下繁殖"
+        "A": "polyglycolic acid",
+        "B": "polylatic acid",
+        "C": "e-PTFE",
+        "D": "collagen"
       },
       "answer": "C",
-      "incomplete": "cloze_parse_failed"
+      "explanation": ""
     },
     {
       "id": "111020_73",
@@ -145123,15 +145121,15 @@
       "subject_name": "牙周病學",
       "stage_id": 5,
       "number": 20,
-      "question": "Enterococcus faecalis是根管治療失敗病例中,最常發現的致病菌種,因為其具有下列何項特殊的性質?",
+      "question": "Enterococcus faecalis是根管治療失敗病例中，最常發現的致病菌種，因為其具有下列何項特殊的性質？",
       "options": {
-        "A": "因為其低鹼耐受性,Enterococcus faecalis可以抵抗大部分根管沖洗溶液的化學清潔作用",
-        "B": "因為其質子對流系統(proton pump)可以自行調節內部至鹼性濃度",
-        "C": "Enterococcus faecalis可以生存在長期無氧與無養份的環境下,存活至適當時機再行繁殖",
+        "A": "因為其低鹼耐受性，Enterococcus faecalis可以抵抗大部分根管沖洗溶液的化學清潔作用",
+        "B": "因為其質子對流系統（proton pump）可以自行調節內部至鹼性濃度",
+        "C": "Enterococcus faecalis可以生存在長期無氧與無養份的環境下，存活至適當時機再行繁殖",
         "D": "Enterococcus faecalis可以在多菌種感染的環境下繁殖"
       },
       "answer": "C",
-      "incomplete": "cloze_parse_failed"
+      "explanation": ""
     },
     {
       "id": "111020_29",
@@ -205150,6 +205148,6 @@
   ],
   "total": 10240,
   "metadata": {
-    "last_updated": "2026-09-16T14:53:50.524Z"
+    "last_updated": "2026-09-17T12:51:58.444Z"
   }
 }

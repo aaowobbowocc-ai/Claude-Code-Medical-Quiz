@@ -21,6 +21,7 @@ const fs = require('fs')
 const path = require('path')
 const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve')
 const { pdfQuestions } = require('./lib/moex-pdf-parse')
+const { parseAnswerSheet } = require('./lib/moex-answer-sheet')
 const { skeleton, normText } = require('./lib/moex-normalize')
 const { warnZero, summary } = require('./lib/coverage-guard')
 
@@ -29,6 +30,10 @@ const EXAM = arg('--exam')
 const ALL = process.argv.includes('--all')
 const APPLY = process.argv.includes('--apply')
 const RETRY = process.argv.includes('--retry')
+// 題組解析失敗的題「題幹本身也是錯的」（整組被填成同一題），
+// 所以不能用題幹比對來確認身分，只能信任題號、連題幹一起從原卷覆寫。
+// 這比一般的 repair 激進，所以要獨立的旗標。
+const REBUILD_CLOZE = process.argv.includes('--rebuild-cloze')
 if (!EXAM && !ALL) { console.error('需要 --exam 或 --all'); process.exit(1) }
 
 const DIR = path.join(__dirname, '..')
@@ -39,6 +44,7 @@ function diagnose(q) {
   // --retry：解析器補強之後，再拿上次修不了、標成 broken_options 的題試一次。
   // 這個標記是我們自己蓋的，不是「原始資料就這樣」，所以可以重來。
   if (q.incomplete === 'broken_options' && RETRY) { /* 往下重新診斷 */ }
+  else if (q.incomplete === 'cloze_parse_failed' && REBUILD_CLOZE) return '題組解析失敗'
   else if (q.incomplete) return null
   const vals = ['A', 'B', 'C', 'D'].map(k => String((q.options || {})[k] ?? ''))
   const hasImg = !!(q.image_url || q.image || (q.images && q.images.length))
@@ -82,14 +88,49 @@ function diagnose(q) {
       const [code, subject] = k.split('|')
       if (!code || code === 'undefined') { unresolved += list.length; continue }
       const items = arr.filter(q => String(q.exam_code) === code && q.subject === subject)
-      let off = null
+      let off = null, official = {}
       try {
         const cand = await resolvePaper({ exam, code, year: items[0]?.roc_year, subject, items })
-        if (cand) { const b = await fetchSheet('Q', code, cand.c, cand.s); if (b) off = await pdfQuestions(b) }
+        if (cand) {
+          const b = await fetchSheet('Q', code, cand.c, cand.s)
+          if (b) off = await pdfQuestions(b)
+          // 題組重建會連題幹一起換掉，答案當然也要跟著換——
+          // 舊答案是照「錯的題目」存的，留著會變成「正確的題目配錯誤的答案」，
+          // 比原本整組重複還糟。
+          try { const sb = await fetchSheet('S', code, cand.c, cand.s); if (sb) official = await parseAnswerSheet(sb) } catch {}
+        }
       } catch {}
 
       for (const { q, why } of list) {
         let src = off && off.get(+q.number)
+
+        // ⚠️ 題組重建必須在「選項定位 fallback」之前處理。
+        // 那段 fallback 是拿我們的選項去原卷找同一題——但題組解析失敗的題
+        // 連選項都是壞的（整組被填成同一題的選項），比對只會一律指回那一題，
+        // 於是整組的題幹全被覆寫成同一個。這個坑踩過一次，別再把它移到下面。
+        if (why === '題組解析失敗') {
+          const opts0 = src ? { A: src.options[0], B: src.options[1], C: src.options[2], D: src.options[3] } : null
+          const clean0 = opts0 && ['A', 'B', 'C', 'D'].every(x => opts0[x] && opts0[x].trim() && !HEADER.test(opts0[x])) &&
+            new Set(['A', 'B', 'C', 'D'].map(x => normText(opts0[x]))).size === 4
+          const okStem = src && String(src.stem).trim().length >= 10
+          const ans = official[+q.number]
+          const okAns = ans && /^[A-D]$/.test(String(ans).trim())
+          if (okStem && clean0 && okAns) {
+            console.log(`  ✔ ${exam} ${code} ${subject} #${q.number} (${why}) → 題幹、選項、答案都從原卷重建`)
+            if (APPLY) {
+              q.question = String(src.stem).replace(/^[\s.．、]+/, '')
+              q.options = opts0
+              q.answer = String(ans).trim()
+              q.explanation = ''
+              delete q.incomplete
+            }
+            repaired++; touched++
+          } else {
+            console.log(`  ✖ ${exam} ${code} ${subject} #${q.number} (${why}) → 原卷讀不出來${okStem && clean0 && !okAns ? '（題目有、答案卷缺）' : ''}`)
+            marked++
+          }
+          continue
+        }
         // 一定要先確認是同一題再覆寫：題號對得上不代表內容對得上
         const key = skeleton(q.question || '').slice(0, 16)
         let same = !!(src && key && skeleton(src.stem).includes(key))

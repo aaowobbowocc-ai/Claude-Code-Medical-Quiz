@@ -4215,9 +4215,9 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 24,
-    "question": "請選出下圖中所指之正確答案： A",
+    "question": "請選出下圖中所指之正確答案：AB",
     "options": {
-      "A": "B A 是蝶骨，B 是犁骨",
+      "A": "A 是蝶骨，B 是犁骨",
       "B": "A 是篩骨，B 是犁骨",
       "C": "A 是蝶骨，B 是顎骨",
       "D": "A 是篩骨，B 是顎骨"
@@ -12614,12 +12614,12 @@
     "paper_id": "paper3",
     "stage_id": 0,
     "number": 69,
-    "question": "下列何者醫學診斷的病患,是中耳積水的高危險群:1唇腭裂 2X染色體脆折症 3唐氏症 4",
+    "question": "下列何者醫學診斷的病患，是中耳積水的高危險群：①唇腭裂 ②X染色體脆折症 ③唐氏症 ④威廉氏症",
     "options": {
-      "A": "威廉氏症",
-      "B": "僅34",
-      "C": "僅13",
-      "D": "123 僅14"
+      "A": "僅③④",
+      "B": "僅①③",
+      "C": "①②③",
+      "D": "僅①④"
     },
     "answer": "C",
     "explanation": "",
@@ -16469,7 +16469,9 @@
     "answer": "B",
     "explanation": "",
     "_legacy_id": 114100050813,
-    "no_image_in_source": true
+    "images": [
+      "/question-images/speech-therapist_speech_100140_p3_75_0.webp"
+    ]
   },
   {
     "id": "speech_100140_p3_77",
@@ -36862,16 +36864,17 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 2,
-    "question": "正常的大腦語言處理歷程中,下邊緣回 (supramarginal gyrus) 主要是協助那一項語言處理歷程?",
+    "question": "產生說話所需的最小呼吸支持的壓力量（minimal requirement of respiration for speech）為多少？",
     "options": {
-      "A": "音韻辨識",
-      "B": "語詞記憶",
-      "C": "口語表達",
-      "D": "語句分析"
+      "A": "聲門上壓3-5 cm H O",
+      "B": "聲門下壓3-5 cm H O22",
+      "C": "聲門上壓5-10 mmHg",
+      "D": "聲門下壓5-10 mmHg"
     },
     "answer": "B",
     "explanation": "",
-    "_legacy_id": 114100050751
+    "_legacy_id": 114100050751,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_101110_p3_3",
@@ -36930,16 +36933,17 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 5,
-    "question": "想要蒐集到有代表性的樣本,治療師必須對幼兒使用好的對話技巧,以下那一項作法最不符合「好的對話技巧」?",
+    "question": "下圖為由上往下觀（inferior view）的橫膈膜結構，何者為食道所經過的孔徑？12435",
     "options": {
-      "A": "傾聽孩子的對話內容",
-      "B": "從孩子的觀點思考施測情境",
-      "C": "尊重孩子的主導,維持孩子對話的主題和速度",
-      "D": "多問簡單的問題,例如:「你猜,我是男生還是女生?」"
+      "A": "2",
+      "B": "3",
+      "C": "5",
+      "D": "1"
     },
     "answer": "B",
     "explanation": "",
-    "_legacy_id": 114100050752
+    "_legacy_id": 114100050752,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_101110_p3_6",
@@ -37457,16 +37461,17 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 28,
-    "question": "當成人問兒童:「你今天做了什麼?」,下面那一段回應比較符合已具備基礎的心智理論(theory of mind)能力的兒童表現?",
+    "question": "依據下圖，下列各組合何者正確？",
     "options": {
-      "A": "兒童:玩這個",
-      "B": "兒童:玩那個玩具",
-      "C": "兒童:玩積木",
-      "D": "兒童:玩小黑"
+      "A": "①=嚼肌，④=翼內肌",
+      "B": "③=翼內肌，④=翼外肌",
+      "C": "②=顳肌，③=翼外肌",
+      "D": "①=顳肌，②=嚼肌"
     },
     "answer": "D",
     "explanation": "",
-    "_legacy_id": 114100050754
+    "_legacy_id": 114100050754,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_101110_p3_29",
@@ -37713,12 +37718,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 39,
-    "question": "以下何者是亞斯伯格症(Asperger syndrome)兒童的鑑定標準之一?",
+    "question": "承上題，此圖可清楚呈現下列那些訊息？①語音的諧波及其隨著時間的變化 ②聲帶每次開啟和閉合的變化 ③音高隨著時間的變化 ④共振峰頻率隨著時間的變化",
     "options": {
-      "A": "沒有明顯的社會互動能力缺陷",
-      "B": "有注意力缺陷或過動行為",
-      "C": "沒有臨床上顯著的語言或認知發展遲緩",
-      "D": "非語文智力優於語文智力"
+      "A": "①②",
+      "B": "③④",
+      "C": "①③",
+      "D": "②④"
     },
     "answer": "C",
     "explanation": "",
@@ -38494,7 +38499,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "_legacy_id": 114100050757
+    "_legacy_id": 114100050757,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_101110_p3_73",
@@ -38516,7 +38522,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "_legacy_id": 114100050758
+    "_legacy_id": 114100050758,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_101110_p3_74",
@@ -38564,7 +38571,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "_legacy_id": 114100050759
+    "_legacy_id": 114100050759,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_101110_p3_76",
@@ -38586,7 +38594,8 @@
     },
     "answer": "A",
     "explanation": "",
-    "_legacy_id": 114100050760
+    "_legacy_id": 114100050760,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_101110_p3_77",
@@ -38608,7 +38617,8 @@
     },
     "answer": "B",
     "explanation": "",
-    "_legacy_id": 114100050761
+    "_legacy_id": 114100050761,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_101110_p3_78",
@@ -39831,7 +39841,9 @@
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30001180,
-    "no_image_in_source": true
+    "images": [
+      "/question-images/speech-therapist_speech_101110_p2_49_0.webp"
+    ]
   },
   {
     "id": "speech_101110_p2_51",
@@ -46439,7 +46451,11 @@
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30001452,
-    "no_image_in_source": true
+    "images": [
+      "/question-images/speech-therapist_speech_102030_p5_16_0.webp",
+      "/question-images/speech-therapist_speech_102030_p5_16_1.webp",
+      "/question-images/speech-therapist_speech_102030_p5_16_2.webp"
+    ]
   },
   {
     "id": "speech_102030_p5_18",
@@ -47274,7 +47290,9 @@
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30001487,
-    "no_image_in_source": true
+    "images": [
+      "/question-images/speech-therapist_speech_102030_p5_52_0.webp"
+    ]
   },
   {
     "id": "speech_102030_p5_54",
@@ -47952,12 +47970,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 3,
-    "question": "說華語者對於華語語言規則所具有的潛在知識稱為：",
+    "question": "下列有關呼吸肌肉名稱及功能，何者屬於吸氣肌群？①內肋間肌 ②胸鎖乳突肌 ③外肋間肌④腹外斜肌",
     "options": {
-      "A": "語言表徵 (language representation)",
-      "B": "語言覺識 (language awareness)",
-      "C": "語言能力 (linguistic competence)",
-      "D": "語言表現 (linguistic performance)"
+      "A": "②③",
+      "B": "①②",
+      "C": "②④",
+      "D": "③④"
     },
     "answer": "A",
     "explanation": "",
@@ -48181,12 +48199,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 13,
-    "question": "在嬰幼兒的溝通發展中,下列那一個階段嬰兒開始出現溝通意圖(intentionality),可使用手勢及發出聲音達到不同的目的(如:取得想要的物品)?",
+    "question": "下列何者屬於呼氣肌群？①胸鎖乳突肌 ②內肋間肌 ③外肋間肌 ④腹外斜肌",
     "options": {
-      "A": "0-4個月",
-      "B": "4-8個月",
-      "C": "8-12個月",
-      "D": "12-14個月"
+      "A": "①③",
+      "B": "①④",
+      "C": "②③",
+      "D": "②④"
     },
     "answer": "D",
     "explanation": "",
@@ -48387,12 +48405,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 22,
-    "question": "幼兒習得詞彙時,他們認定一個東西只有一個名字,當大人說出一個詞彙名稱,所指的只有一樣東西,不會同時是兩樣東西,這是根據下列那一個原則?",
+    "question": "對於構成喉部的軟骨中，下列那幾種不是成對的？①環狀（cricoid）軟骨 ②甲狀（thyroid）軟骨③小角（corniculate）軟骨 ④杓狀（arytenoid）軟骨",
     "options": {
-      "A": "互斥假設原則(mutual exclusivity assumption)",
-      "B": "整體的假設(whole-object assumption)",
-      "C": "規約性假設(conventionality assumption)",
-      "D": "選擇性仿說(selective imitation)"
+      "A": "①③",
+      "B": "①②",
+      "C": "②④",
+      "D": "②③"
     },
     "answer": "B",
     "explanation": "",
@@ -48409,12 +48427,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 23,
-    "question": "個案說:「我小狗有一個」,語言治療師回應:「對,你有一隻小狗」。個案的目標與語言治療師使用的策略分別為何?",
+    "question": "下列的喉部軟骨中，那些軟骨直接與聲帶相連結？①會厭軟骨（epiglottic cartilage） ②甲狀軟骨（thyroid cartilage） ③環狀軟骨（cricoid cartilage） ④杓狀軟骨（arytenoid cartilage）",
     "options": {
-      "A": "語意(semantics)與擴展(expansion)",
-      "B": "語法(syntax)與仿說(imitation)",
-      "C": "語法(syntax)與重組(recast)",
-      "D": "構詞(morphology)與平行說話(parallel talk)"
+      "A": "①②③",
+      "B": "②④",
+      "C": "①③",
+      "D": "②③④"
     },
     "answer": "B",
     "explanation": "",
@@ -48569,12 +48587,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 30,
-    "question": "在臺灣的幾項研究調查中顯示,國內語言障礙兒童的出現率從2.64%至9.6%不等。造成這些研究調查結果不一致的原因,下列何者錯誤?",
+    "question": "下列對於構成喉部軟骨的敘述何者正確？①甲狀軟骨由兩片甲狀軟骨板形成O 型結構 ②杓狀軟骨是成對的 ③環狀軟骨（cricoid cartilage）只有一個呈O 型 ④會厭軟骨（epiglottic cartilage）只有一個呈葉片狀",
     "options": {
-      "A": "對「語言障礙」的界定標準不同",
-      "B": "鑑定工具與調查方法不同",
-      "C": "未能釐清言語(speech)及語言(language)障礙的差異",
-      "D": "人口統計學上的誤差"
+      "A": "①③",
+      "B": "①②",
+      "C": "①②④",
+      "D": "②③④"
     },
     "answer": "D",
     "explanation": "",
@@ -48706,16 +48724,17 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 36,
-    "question": "下列有關「失讀症(dyslexia)」的敘述,何者正確?",
+    "question": "下列喉部肌肉何者不是由喉返神經（recurrent laryngeal nerve）支配？①環甲肌 ②後環杓肌 ③杓間肌 ④側環杓肌",
     "options": {
-      "A": "失讀症起因於認知或情緒上的障礙,環境刺激不足亦為肇因之一",
-      "B": "失讀症個案最核心的問題是識字或解碼(decoding)能力缺損",
-      "C": "失讀症的個案能流暢地讀出文字,但無法理解所讀的內容",
-      "D": "研究發現失讀症的個案也有明顯的中樞視覺處理異常(visual processing disorders)"
+      "A": "③④",
+      "B": "①",
+      "C": "①④",
+      "D": "②③"
     },
     "answer": "A",
     "explanation": "",
-    "_legacy_id": 114100050767
+    "_legacy_id": 114100050767,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_102030_p3_37",
@@ -48797,12 +48816,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 40,
-    "question": "下列那一項障礙或疾病在X染色體脆折症(fragile X syndrome)個案身上發生的機率不會比一般人高?",
+    "question": "構音共鳴當產生華語有聲子音ㄇ時，下列的閥門何者是處於關閉狀態的？①腭咽閥門（velopharyngealvalve） ②唇閥門（labial valve） ③喉閥門（laryngeal valve） ④舌閥門（tongue valve）",
     "options": {
-      "A": "注意力缺失(ADHD)",
-      "B": "自閉症(autism)",
-      "C": "癲癇(seizure)",
-      "D": "腦性麻痺(cerebral palsy)"
+      "A": "①③",
+      "B": "③④",
+      "C": "②③",
+      "D": "①②"
     },
     "answer": "C",
     "explanation": "",
@@ -48911,12 +48930,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 45,
-    "question": "下列何者屬於「詳述兒童語言形式、內容及使用各方面能力之表現」的評量模式?",
+    "question": "在構音功能上，聲道可以看成是由構音器官形成許多道閥門（valve）來調節氣流，以產生語音。在產生母音/a/時，下列的閥門何者是處於關閉狀態的？①腭咽閥門（velopharyngeal valve） ②唇閥門（labial valve） ③喉閥門（laryngeal valve） ④舌閥門（tongue valve）",
     "options": {
-      "A": "類別模式(categorical model)",
-      "B": "描述-發展模式(descriptive-developmental model)",
-      "C": "心理計量模式(psychometric model)",
-      "D": "系統模式(system model)"
+      "A": "①③",
+      "B": "②④",
+      "C": "①④",
+      "D": "③④"
     },
     "answer": "A",
     "explanation": "",
@@ -49071,16 +49090,17 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 52,
-    "question": "下列那一項能力的測試可評估兒童的語法表達?",
+    "question": "下列何者不是母音構音的主要分類方式？①有聲與無聲 ②舌位高低 ③送氣與不送氣 ④舌位前後",
     "options": {
-      "A": "遵從指令",
-      "B": "句子仿說",
-      "C": "命名圖片",
-      "D": "指認圖片"
+      "A": "②④",
+      "B": "①③",
+      "C": "②③",
+      "D": "①④"
     },
     "answer": "B",
     "explanation": "",
-    "_legacy_id": 114100050770
+    "_legacy_id": 114100050770,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_102030_p3_53",
@@ -49162,16 +49182,17 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 56,
-    "question": "根據 Olswang 和 Bain (1996)的建議,下列那一種評量方式的設計,是由語言治療師「系統性地操弄語言情境的內容,以支持兒童的語言表現,並使兒童能達到他/她的最佳表現水準」?",
+    "question": "下列言語機能中何者屬於超音段（suprasegmental）？①持續時長（duration） ②重音（stress）③基礎頻率（fundamental frequency） ④語調（intonation）",
     "options": {
-      "A": "效標參照評量(criterion-referenced assessment)",
-      "B": "課程本位評量(curriculum-based assessment)",
-      "C": "動態評量(dynamic assessment)",
-      "D": "功能性評量(functional assessment)"
+      "A": "①③",
+      "B": "①②④",
+      "C": "②③",
+      "D": "②③④"
     },
     "answer": "B",
     "explanation": "",
-    "_legacy_id": 114100050771
+    "_legacy_id": 114100050771,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_102030_p3_57",
@@ -49184,12 +49205,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 57,
-    "question": "語言治療師(指著圖片):「哇!你看,動物園裡有好多可愛的動物呀!你看到什麼動物呢?」\n兒童:「黑熊。」\n語言治療師:「對耶!你看這隻黑熊在做什麼呢?」 兒童:「抓魚。」\n語言治療師:「是呀!牠在抓魚。這隻黑熊在池塘裡抓魚。」 兒童:「黑熊抓魚。」\n以上對話中,語言治療師使用何種擴展形式的治療技巧?",
+    "question": "下列子音構音機轉中，何者不會有口腔氣流完全阻斷的構音過程？①擦音 ②塞音 ③滑音 ④塞擦音",
     "options": {
-      "A": "腳本治療(script therapy)",
-      "B": "聚焦刺激法(focused stimulation)",
-      "C": "情境教學法(milieu teaching)",
-      "D": "垂直結構法(vertical structuring)"
+      "A": "①③",
+      "B": "①④",
+      "C": "②③④",
+      "D": "①③④"
     },
     "answer": "A",
     "explanation": "",
@@ -49560,7 +49581,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "_legacy_id": 114100050773
+    "_legacy_id": 114100050773,
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_102030_p3_74",
@@ -52413,9 +52435,9 @@
     "paper_id": "paper5",
     "stage_id": 0,
     "number": 37,
-    "question": "下圖為母音x-ray 的舌頭圖，圖中x、y 母音各為下列何者？ x",
+    "question": "下圖為母音x-ray 的舌頭圖，圖中x、y 母音各為下列何者？xy",
     "options": {
-      "A": "y /ɪ,ü/",
+      "A": "/ɪ,ü/",
       "B": "/ü,ʊ/",
       "C": "/ɪ,ʊ/",
       "D": "/ü,ɪ/"
@@ -55593,12 +55615,12 @@
     "paper_id": "paper3",
     "stage_id": 0,
     "number": 15,
-    "question": "1豆豆和迪迪一起到公園放風箏 2突然有一陣大風吹過來,他們的風箏就掉下來,卡在樹上 3",
+    "question": "①豆豆和迪迪一起到公園放風箏 ②突然有一陣大風吹過來，他們的風箏就掉下來，卡在樹上 ③豆豆和迪迪都很傷心 ④豆豆決定要爬到樹上去把風箏拿下來…。以上①②③④句的「故事文法」（story grammar）要素，依序為：",
     "options": {
-      "A": "豆豆和迪迪都很傷心 4豆豆決定要爬到樹上去把風箏拿下來...。以上1234句的「故事文法」",
-      "B": "(story grammar)要素,依序為:",
-      "C": "前言、背景、內心計畫、嘗試",
-      "D": "背景、引發事件、內心反應、內心計畫 引發事件、突發情節、內心反應、嘗試 背景、突發情節、內心計畫、內心反應"
+      "A": "前言、背景、內心計畫、嘗試",
+      "B": "背景、引發事件、內心反應、內心計畫",
+      "C": "引發事件、突發情節、內心反應、嘗試",
+      "D": "背景、突發情節、內心計畫、內心反應"
     },
     "answer": "B",
     "explanation": "",
@@ -68376,12 +68398,12 @@
     "subject_name": "神經性溝通障礙學",
     "stage_id": 2,
     "number": 18,
-    "question": "下列何者為下運動神經元損傷造成的徵狀？①muscle   weakness",
+    "question": "下列何者為下運動神經元損傷造成的徵狀？①muscle weakness②increased muscle tone③hypotonia ④fasciculations ⑤hyperactive reflexes ⑥hypokinesia",
     "options": {
-      "A": "②increased   muscle   tone",
-      "B": "③hypotonia",
-      "C": "④fasciculations",
-      "D": "⑤hyperactive reflexes"
+      "A": "①②⑤",
+      "B": "②④⑥",
+      "C": "①③④",
+      "D": "③④⑥"
     },
     "answer": "C",
     "explanation": "",
@@ -70813,7 +70835,7 @@
       "C": "發鼻音時如果口腔氣流阻斷是在雙唇位置則構音為 /n/",
       "D": "鼻音構音和塞擦音相似,構音器官不互相接觸不造成氣流阻斷"
     },
-    "answer": "D",
+    "answer": "A",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30007256
@@ -70835,7 +70857,7 @@
       "C": "②④",
       "D": "①③"
     },
-    "answer": "A",
+    "answer": "D",
     "explanation": "",
     "_legacy_id": 114100050862
   },
@@ -70943,7 +70965,7 @@
       "C": "3412",
       "D": "4213"
     },
-    "answer": "C",
+    "answer": "B",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30007261
@@ -71009,7 +71031,7 @@
       "C": "12",
       "D": "34"
     },
-    "answer": "C",
+    "answer": "B",
     "explanation": "",
     "_legacy_id": 114100050863
   },
@@ -71031,7 +71053,7 @@
       "C": "非週期性單純波",
       "D": "非週期性複合波"
     },
-    "answer": "A",
+    "answer": "D",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30007264
@@ -71272,7 +71294,7 @@
       "C": "冲直條的噪音能量",
       "D": "共振峰的轉折帶走向"
     },
-    "answer": "C",
+    "answer": "A",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30007275
@@ -71315,7 +71337,7 @@
       "C": "256",
       "D": "1024"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": "",
     "_legacy_id": 114100050864
   },
@@ -71406,7 +71428,7 @@
       "C": "與窄頻聲譜圖相比,寬頻聲譜圖具有較好的頻率解析度",
       "D": "與窄頻聲譜圖相比,寬頻聲譜圖具有較好的時間解析度"
     },
-    "answer": "A",
+    "answer": "D",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30007280
@@ -71452,7 +71474,7 @@
       "C": "第三共振峰頻率",
       "D": "第四共振峰頻率"
     },
-    "answer": "C",
+    "answer": "A",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30007282
@@ -116563,7 +116585,9 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high",
-    "no_image_in_source": true
+    "images": [
+      "/question-images/speech-therapist_speech_108110_s0802_44_0.webp"
+    ]
   },
   {
     "id": "speech_108110_s0802_46",
@@ -125944,7 +125968,7 @@
     "subject_name": "構音與語暢障礙",
     "stage_id": 5,
     "number": 39,
-    "question": "有關家族史對口吃的影響，下列敘述何者正確？代號：5109頁次：4－4",
+    "question": "有關家族史對口吃的影響，下列敘述何者正確？",
     "options": {
       "A": "口吃者一定有口吃家族史",
       "B": "小明家族中有人由口吃復原，其復原率不會比其他口吃者高",
@@ -128441,7 +128465,9 @@
     "exam_type": "high",
     "vision_uncertain": false,
     "disputed": true,
-    "no_image_in_source": true
+    "images": [
+      "/question-images/speech-therapist_speech_110111_s0802_2_0.webp"
+    ]
   },
   {
     "id": "speech_110111_s0802_4",
@@ -129148,7 +129174,9 @@
     "exam_type": "high",
     "vision_uncertain": false,
     "disputed": true,
-    "no_image_in_source": true
+    "images": [
+      "/question-images/speech-therapist_speech_110111_s0802_33_0.webp"
+    ]
   },
   {
     "id": "speech_110111_s0802_35",
@@ -136760,7 +136788,7 @@
     "question": "有關分貝（dB）的相關敘述，下列何者錯誤？",
     "options": {
       "A": "某個聲音的音強水準為0 dB IL，表示此聲音的音量與參考值10-12watt/m2 相當",
-      "B": "某個聲音的聲壓水準為0 dB SPL，表示此聲音的音量與參考值2×10-5Pa 相當",
+      "B": "某個聲音的聲壓水準為0 dB SPL，表示此聲音的音量與參考值2×10⁻⁵Pa 相當",
       "C": "某人的聽力水準為0 dB HL，表示此人與正常年輕人的平均聽閾相當",
       "D": "一個發出50 dB SPL 的音箱，增加到四個音箱時，音量約為56 dB SPL"
     },
@@ -158689,7 +158717,8 @@
     },
     "answer": "D",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "incomplete": "option_order_unverified"
   },
   {
     "id": "speech_114100_s0506_29",

@@ -1790,7 +1790,8 @@
         "D": "97 學年度"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "option_order_unverified"
     },
     {
       "id": "100030_0706_10",
@@ -36471,9 +36472,9 @@
       "question": "今有一個酵素甲的 Michaelis 常數 Km 為 7.9 × 10⁻³, 則加入競爭型可逆抑制劑後,下列何者可為調整後的 Michaelis 常數 Km 值?",
       "options": {
         "A": "1.5 x 10⁻²",
-        "B": "1.5 × 10-2",
+        "B": "1.5 ×10⁻²",
         "C": "7.9 x 10⁻³",
-        "D": "6.9 × 10-3"
+        "D": "6.9 ×10⁻³"
       },
       "answer": "A",
       "explanation": ""
@@ -39308,12 +39309,12 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 13,
-      "question": "有關紅血球生成素（erythropoietin）的分泌調控，下列敘述何者錯誤？",
+      "question": "下列敘述何者錯誤？",
       "options": {
-        "A": "紅血球生成素主要在腎臟合成分泌",
-        "B": "缺鐵時會造成紅血球生成素分泌減少",
-        "C": "紅血球生成素的主要作用是促進紅血球產生",
-        "D": "紅血球生成素為促進紅血球生成的重要因素之一"
+        "A": "腰臀比與心血管疾病的發生率具相關性",
+        "B": "老年人的腰圍與體內胰島素的敏感性密切相關",
+        "C": "可利用Deurenberg 公式預估體脂肪含量",
+        "D": "女性腰臀比大於0.5 會增加罹患心血管疾病的機率"
       },
       "answer": "D",
       "explanation": ""
@@ -81650,7 +81651,7 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 6,
-      "question": "靜脈營養輸液中，10%脂肪乳劑提供的熱量為多少kcal/mL？ 1.1",
+      "question": "靜脈營養輸液中，10%脂肪乳劑提供的熱量為多少kcal/mL？",
       "options": {
         "A": "1.1",
         "B": "2.0",
@@ -120623,12 +120624,12 @@
       "subject_name": "膳食療養學",
       "stage_id": 1,
       "number": 32,
-      "question": "足夠的蛋白質供應可提升重症病患的存活率，下列那些狀態應避免給予蛋白質至每公斤體重2.0",
+      "question": "足夠的蛋白質供應可提升重症病患的存活率，下列那些狀態應避免給予蛋白質至每公斤體重2.0～2.5 公克？①refractory hypotension②overwhelming sepsis③severe liver disease④acutekidney injury undergoing continuous renal replacement therapy（CRRT）",
       "options": {
-        "A": "～2.5 公克？①refractory hypotension",
-        "B": "②overwhelming sepsis",
-        "C": "③severe liver disease",
-        "D": "④acute"
+        "A": "僅①②③",
+        "B": "僅②③④",
+        "C": "僅①②④",
+        "D": "①②③④"
       },
       "answer": "A",
       "explanation": ""
@@ -121830,7 +121831,7 @@
         "C": "包裝飲用水",
         "D": "百分之百果（蔬菜）汁"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -121850,7 +121851,7 @@
         "C": "飲食頻率問卷，詢問發病前5年的飲食",
         "D": "24小時飲食回憶法，蒐集訪視前一天的飲食"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -121870,7 +121871,7 @@
         "C": "MNA（Mini Nutritional Assessment）以分數評估，包括一般評估、營養篩選與血液生化檢測三 部分",
         "D": "INA（Instant Nutritional Assessment）主觀性評估，無分數或血液檢測評估，由經訓練之專業人 員執行營養診斷"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -121890,7 +121891,7 @@
         "C": "Triceps skinfold thickness",
         "D": "Dual energy X-ray absorptiometry"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -121910,7 +121911,7 @@
         "C": "Edema",
         "D": "Anemia"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -121930,7 +121931,7 @@
         "C": "屬於非侵入性檢查",
         "D": "常用來篩選老人營養狀況"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -121950,7 +121951,7 @@
         "C": "口角炎與維生素B 2 缺乏有關",
         "D": "周邊神經炎與維生素B 6 缺乏有關"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -121970,7 +121971,7 @@
         "C": "飲食紀錄",
         "D": "飲食歷史"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -122010,7 +122011,7 @@
         "C": "內部一致性方法（internal-consistency method）是用來測試問卷題目的內容效度",
         "D": "建構效度是指問卷能夠測量到理論上的概念或特質之程度"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -122030,7 +122031,7 @@
         "C": "預測受試者未來表現",
         "D": "評估受試者達成學習目標的比例"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -122090,7 +122091,7 @@
         "C": "體重的改變",
         "D": "對喝白開水的態度的改變"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -122130,7 +122131,7 @@
         "C": "脈絡運作（networking）",
         "D": "轉介系統（referral system）"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -122170,7 +122171,7 @@
         "C": "定價（price）",
         "D": "產品（product）"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -122190,7 +122191,7 @@
         "C": "經濟評估",
         "D": "環境評估"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -122210,7 +122211,7 @@
         "C": "男性三次調查之高血糖盛行率皆高於女性",
         "D": "兩性高血糖盛行率有逐年升高趨勢"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -122230,7 +122231,7 @@
         "C": "採用多階段分層集束抽樣設計",
         "D": "調查對象排除懷孕、哺乳婦女、無自主意識者及機構照護之住民"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -122270,7 +122271,7 @@
         "C": "65歲以上",
         "D": "19～30歲"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -122290,7 +122291,7 @@
         "C": "甲狀腺觸診",
         "D": "血清T3-T4濃度"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -122310,7 +122311,7 @@
         "C": "安全性",
         "D": "足量性"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -122330,7 +122331,7 @@
         "C": "檢測出陽性的人，實際罹病的機率低",
         "D": "檢測出陰性的人，實際未罹病的機率低"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -122350,7 +122351,7 @@
         "C": "Randomized control trial",
         "D": "Cross-sectional study"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -122370,7 +122371,7 @@
         "C": "分層隨機抽樣",
         "D": "集束取樣"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -122390,7 +122391,7 @@
         "C": "膳食頻率問卷",
         "D": "24小時飲食回憶"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -122630,7 +122631,7 @@
         "C": "脂肪酸與白蛋白結合，提供神經組織代謝",
         "D": "脂肪酸轉換成酮酸，作為葡萄糖來源"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -122650,7 +122651,7 @@
         "C": "約100分鐘",
         "D": "約300分鐘"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -122670,7 +122671,7 @@
         "C": "正常狀況下，為排出身體所製造的代謝性廢物，每天最少須生成約400毫升尿液",
         "D": "嚴重脫水時，腎小管主要會利用主動運輸再吸收大部分過濾的水分"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -122690,7 +122691,7 @@
         "C": "益生菌無法存活於胃酸環境",
         "D": "益生菌會使牙齒酸化，造成齲齒"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -122710,7 +122711,7 @@
         "C": "甲狀腺促進激素（thyroid-stimulating hormone）分泌太少",
         "D": "糖皮質素（glucocorticoids）分泌太多"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -122730,7 +122731,7 @@
         "C": "生長激素（growth hormone）",
         "D": "胰島素（insulin）"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -122770,7 +122771,7 @@
         "C": "α運動神經元",
         "D": "β運動神經元"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -122850,7 +122851,7 @@
         "C": "酪胺酸（tyrosine）",
         "D": "蘇胺酸（threonine）"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -122870,7 +122871,7 @@
         "C": "Gly-Ala-Arg",
         "D": "Pro-Gly-Ala-Arg"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -122890,7 +122891,7 @@
         "C": "人體內具有酵素可將嘌呤環狀結構打開而形成中間產物尿囊素（allantoin）",
         "D": "人體內分解嘌呤之最終產物為尿素（urea）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -122910,7 +122911,7 @@
         "C": "mRNA的降解速率通常較mRNA合成速率至少慢1/10",
         "D": "mRNA分子上的二級結構可延緩被降解的速率"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -122930,7 +122931,7 @@
         "C": "琥珀酸（succinate）形成延胡索酸（fumarate）",
         "D": "蘋果酸（malate）形成草醯醋酸（oxaloacetate）"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -122950,7 +122951,7 @@
         "C": "②④",
         "D": "②⑤"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -122990,7 +122991,7 @@
         "C": "肌肉與肝臟中的肝醣，分解的最終產物均為葡萄糖，用以維持血糖濃度",
         "D": "經12~18小時的禁食後，肝臟中的肝醣幾乎耗盡"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -123010,7 +123011,7 @@
         "C": "β-羥基丁醯-輔酶A（β-hydroxybutyryl-CoA）",
         "D": "丙酮酸（pyruvic acid）"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -123050,7 +123051,7 @@
         "C": "β-3-ketoacyl-CoA transferase",
         "D": "thiolase"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -123070,7 +123071,7 @@
         "C": "當磷酸甘油酯經phosphatase轉換成phosphatidic  acid後，再加上膽鹼後可轉換成卵磷脂 （phosphatidylcholine）",
         "D": "當磷酸甘油酯經phosphatase轉換成phosphatidic acid後，再加上acyl-CoA可轉換成三酸甘油酯"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -123090,7 +123091,7 @@
         "C": "肝臟中三酸甘油酯可由VLDL運送到週邊組織利用",
         "D": "LDL與HDL運送的膽固醇回到肝臟後代謝為膽酸再利用"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -123110,7 +123111,7 @@
         "C": "amylase",
         "D": "lactase"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -123150,7 +123151,7 @@
         "C": "解螺旋酶（helicase）不需耗能即可鬆開（unwind）DNA雙股螺旋結構",
         "D": "DNA接合酶（DNA ligase）負責密封（seal）單股DNA缺口（nick）"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -123190,7 +123191,7 @@
         "C": "99.1 kcal/mol",
         "D": "-5.67 kcal/mol"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -123430,7 +123431,7 @@
         "C": "脫色",
         "D": "產色"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -123450,7 +123451,7 @@
         "C": "NOAEL",
         "D": "GRAS"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -123470,7 +123471,7 @@
         "C": "決定致癌性試驗劑量範圍設定的依據",
         "D": "推算出每日可攝取劑量（acceptable daily intake, ADI）"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -123490,7 +123491,7 @@
         "C": "試驗組發現的癌症型態是對照組所沒有的",
         "D": "試驗組腫瘤發生頻率與對照組沒有差異"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -123550,7 +123551,7 @@
         "C": "會降低魚類的繁殖能力",
         "D": "可添加在食品用洗潔劑中"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -123570,7 +123571,7 @@
         "C": "聚苯乙烯（polystyrene）",
         "D": "聚碳酸酯（polycarbonate）"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -123610,7 +123611,7 @@
         "C": "聚氯乙烯（PVC）",
         "D": "聚丙烯（PP）"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -123630,7 +123631,7 @@
         "C": "兩性界面活性劑",
         "D": "非離子界面活性劑"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -123650,7 +123651,7 @@
         "C": "蛔蟲",
         "D": "絛蟲"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -123690,7 +123691,7 @@
         "C": "因病原菌經由攝食進入人體後，於人體繁殖且產生毒素引起疾病",
         "D": "此類食品中毒菌包括腸炎弧菌（Vibrio parahaemolyticus）"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -123710,7 +123711,7 @@
         "C": "單氯丙二醇（3-monochloropropane-1,2-diol, 3-MCPD）",
         "D": "棉籽酚（gossypol）"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -123730,7 +123731,7 @@
         "C": "通常存在保存不當之澱粉類食品",
         "D": "產生之腹瀉型毒素較嘔吐型毒素耐熱"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -123790,7 +123791,7 @@
         "C": "嘴角發麻、目眩頭痛",
         "D": "肝腎細胞壞死"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -123810,7 +123811,7 @@
         "C": "還原糖",
         "D": "膳食纖維"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -123870,7 +123871,7 @@
         "C": "①③④⑤",
         "D": "②③④⑥"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -123890,7 +123891,7 @@
         "C": "冷凍豬肉包裝上有CAS標章僅代表肉品及其加工廠通過某些標準",
         "D": "食材管理應先進先出"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -123910,7 +123911,7 @@
         "C": "60～85%",
         "D": "75～90%"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -123930,7 +123931,7 @@
         "C": "冷凍肉品包裝內有許多堅硬的冰晶代表冷凍品質佳",
         "D": "溫體肉應無瘀血、表面無污染物及毛屑"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -123950,7 +123951,7 @@
         "C": "肝硬化",
         "D": "猛爆性肝衰竭"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -123970,7 +123971,7 @@
         "C": "轉殖基因來源的生物體必須不具有病原性",
         "D": "基因改造食品與原型食品雖符合「實質等同」評估原則，也需進行動物試驗確認安全性"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -123990,7 +123991,7 @@
         "C": "國內製造品的標示如兼用外文時，可以英文為主，中文為輔",
         "D": "輸入食品之原產地係依進口貨物原產地認定標準認定之"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -124251,7 +124252,7 @@
         "C": "鬆飯",
         "D": "燜飯"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -124291,7 +124292,7 @@
         "C": "去魚鱗的方向由魚頭往魚尾刮除",
         "D": "清除魚類內臟時不要弄破膽囊以免產生苦味"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -124311,7 +124312,7 @@
         "C": "70°C",
         "D": "80°C"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -124331,7 +124332,7 @@
         "C": "豬肉採順紋順切的切割方式",
         "D": "添加高濃度的鹽（5%以上）可嫩化肉質"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -124393,7 +124394,7 @@
         "C": "留樣檢體應緩慢降溫後才可放入冰箱儲存",
         "D": "採樣及保存作業皆需在準清潔區內進行"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -124413,7 +124414,7 @@
         "C": "食品從業人員達20人以上且資本額新臺幣一千萬以上者",
         "D": "食品從業人員達20人以上且資本額新臺幣三千萬以上者"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -124433,7 +124434,7 @@
         "C": "以管制圖設定方法再標準化",
         "D": "以魚骨圖設定方法再標準化"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -124453,7 +124454,7 @@
         "C": "食品添加物",
         "D": "食品包裝材料"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -124473,7 +124474,7 @@
         "C": "TQM強調的客戶指的是消費者而非員工",
         "D": "TQM是短期操作改變而非長期組織文化"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -124493,7 +124494,7 @@
         "C": "為節省空間主要通道就是工作通道",
         "D": "為方便彈性運用相同功能的設備需分散放置"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -124513,7 +124514,7 @@
         "C": "包裝作業區檯面為110米燭光以上",
         "D": "檢查作業區檯面為540米燭光以上"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -124533,7 +124534,7 @@
         "C": "人員出勤管理",
         "D": "加班管制"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -124553,7 +124554,7 @@
         "C": "新臺幣三萬元以上十五萬元以下",
         "D": "新臺幣五萬元以上二十五萬元以下"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -124573,7 +124574,7 @@
         "C": "行為性效標",
         "D": "結果性效標"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -124593,7 +124594,7 @@
         "C": "①②④",
         "D": "③④⑤"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -124633,7 +124634,7 @@
         "C": "房租為固定成本；加班費為變動成本",
         "D": "房租為變動成本；加班費為固定成本"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -124653,7 +124654,7 @@
         "C": "26",
         "D": "28"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -124673,7 +124674,7 @@
         "C": "緊急廣播機、緊急發電機、滅火毯、避難指示燈",
         "D": "煙霧偵測器、起重機、室內消防栓、緊急照明燈"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -124713,7 +124714,7 @@
         "C": "95，半年",
         "D": "95，1年"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -124754,7 +124755,7 @@
         "C": "③②⑤④①",
         "D": "④②③①⑤"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -124794,7 +124795,7 @@
         "C": "日本核災食品",
         "D": "三聚氰胺奶品"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -125034,7 +125035,7 @@
         "C": "macrocytic anemia—folate",
         "D": "parkinsonism—manganese"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -125074,7 +125075,7 @@
         "C": "hyperalbuminemia",
         "D": "hepatomegaly"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -125114,7 +125115,7 @@
         "C": "fatty acid",
         "D": "lactic acid"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -125134,7 +125135,7 @@
         "C": "嚴格的碳水化合物控制和使用無糖食物有助於改善血糖及健康",
         "D": "出現高血糖高滲透壓狀態時，要補充足夠水分"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -125174,7 +125175,7 @@
         "C": "增加非藥物治療的機率與成效",
         "D": "可降低胰島素反調節激素（counter-regulatory hormones）"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -125194,7 +125195,7 @@
         "C": "肝臟",
         "D": "腎臟"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -125214,7 +125215,7 @@
         "C": "豆腐等植物性蛋白質會增加腎臟負擔，病人應避免食用",
         "D": "血糖控制良好時容易發生低血鉀，飲食要注意補充鉀"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -125254,7 +125255,7 @@
         "C": "醣類",
         "D": "脂質"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -125274,7 +125275,7 @@
         "C": "每日蛋白質攝取量0.6 g/kg時，其中至少80%需來自high biological value protein",
         "D": "每日蛋白質攝取量0.75 g/kg時，其中至少50%需來自high biological value protein"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -125314,7 +125315,7 @@
         "C": "42.2公斤",
         "D": "48.5公斤"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -125334,7 +125335,7 @@
         "C": "每日鈣質建議量為800～1,000 mg",
         "D": "雌激素補充"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": "",
       "case_context": "第 26 題：陳女士62歲，因嚴重的心肌病變將進行心臟移植，入院評估時身高162公分、理想體重58 公斤。因食慾變差近兩個月體重從45公斤下降至40公斤，醫師認為陳女士的體重太輕，若 想降低術後的死亡率，則進行手術的最低建議體重為何？"
     },
@@ -125355,7 +125356,7 @@
         "C": "每週攝取≧30 g的堅果",
         "D": "每天紅肉類攝取＜1份（100～150 g/份）"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -125395,7 +125396,7 @@
         "C": "其熱量需求為11～14 kcal/kg ideal body weight",
         "D": "其蛋白質需求為2～2.5 g/kg ideal body weight"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -125415,7 +125416,7 @@
         "C": "肌肉蛋白質分解後的胺基酸的碳骨架用以進行glucose-alanine cycle與glutamine synthesis",
         "D": "組織蛋白質分解使得鉀、磷、鎂從尿中排除"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -125435,7 +125436,7 @@
         "C": "corticosteroid分泌促使體內蛋白質異化（proteolysis）增加",
         "D": "發炎反應促使細胞激素分泌使得胰島素阻抗增加"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": "",
       "case_context": "第 31 題：蔡先生是一位漁工，在船上進行收鋼纜作業時，因纜繩斷裂刷過大腿，使得右側大腿瞬間被 鋼纜切斷，被直升機緊急送到醫院，病人因敗血症與呼吸衰竭在急診急救後轉送外科加護病 房。在此階段，有關體內蛋白質代謝方式的敘述，下列何者錯誤？"
     },
@@ -125456,7 +125457,7 @@
         "C": "鈣",
         "D": "維生素K"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -125476,7 +125477,7 @@
         "C": "維生素K每日至少攝取1,000微克以達到最佳維生素K營養狀況",
         "D": "病人常有血鈉過高的問題，應特別注意避免鈉攝取過高"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -125496,7 +125497,7 @@
         "C": "主要腫瘤的種類",
         "D": "主要腫瘤轉移到幾個器官"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -125516,7 +125517,7 @@
         "C": "營養性甜味劑幾乎沒有提供能量，因為僅微量就可增甜",
         "D": "糖醇類，如：甘露醇、山梨糖醇和木糖醇等，是屬於非營養性甜味劑"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -125536,7 +125537,7 @@
         "C": "食慾增加",
         "D": "胃食道逆流"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -125838,7 +125839,7 @@
         "C": "LDL",
         "D": "HDL"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -125858,7 +125859,7 @@
         "C": "多食用富含飽和脂肪酸的食物",
         "D": "建議多食用富含n-3脂肪酸的魚類"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -125878,7 +125879,7 @@
         "C": "18：3 n-3,△=9, 12, 15",
         "D": "22：6 n-3,△=4, 7, 10, 13, 16, 19"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -125898,7 +125899,7 @@
         "C": "植物油與堅果種子",
         "D": "添加植物固醇（stanols）的機能性食品"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -125918,7 +125919,7 @@
         "C": "ribose",
         "D": "xylitol"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -125938,7 +125939,7 @@
         "C": "腦",
         "D": "肝臟"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -125958,7 +125959,7 @@
         "C": "病人一般伴隨有焦慮、憂鬱與無月經的現象",
         "D": "在相關疾病中，有最高的死亡率"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -125978,7 +125979,7 @@
         "C": "妊娠第二期時體重的增加主要是胎兒的體重增加",
         "D": "懷孕前體重過輕的婦女，妊娠時期的合理總體重增加應建議在12.5～18公斤"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -125998,7 +125999,7 @@
         "C": "麥片與紫米",
         "D": "玉米與魚翅"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -126018,7 +126019,7 @@
         "C": "牙齦出血（bleeding gums）",
         "D": "巨球性貧血（megaloblastic anemia）"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -126058,7 +126059,7 @@
         "C": "調節骨髓腔單核幹細胞分化為噬骨細胞（osteoclasts）",
         "D": "促進皮膚表皮細胞分化以降低乾癬（psoriasis）之角質細胞增生"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -126078,7 +126079,7 @@
         "C": "視網酸（retinoic acid）",
         "D": "視網素（retinolene）"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -126098,7 +126099,7 @@
         "C": "氣喘（asthma）",
         "D": "末期腎臟病（end stage renal disease）"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -126118,7 +126119,7 @@
         "C": "維生素E",
         "D": "維生素K"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -126158,7 +126159,7 @@
         "C": "鈉",
         "D": "硫"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -126178,7 +126179,7 @@
         "C": "碘",
         "D": "硒"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -126198,7 +126199,7 @@
         "C": "鋅缺乏為重要的健康問題，會造成嬰兒先天缺陷及高死亡率",
         "D": "幼兒、洗腎者、素食者、克隆氏症與腸病性肢皮炎（acrodermatitis enteropathica）患者為易缺乏 鋅的族群"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -126218,7 +126219,7 @@
         "C": "缺乏症多樣化，例如小球型低血色素貧血、毛髮異常、免疫力差、骨骼異常等",
         "D": "當缺乏時，會增加罹患神經系統疾病之風險，例如肌肉萎縮側索硬化症、巴金森氏症等"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -126238,7 +126239,7 @@
         "C": "以鐵劑補充之效果不佳",
         "D": "以輸血為最佳的治療方式"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -126258,7 +126259,7 @@
         "C": "代謝症候群",
         "D": "自體免疫疾病"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -126278,7 +126279,7 @@
         "C": "可幫助鐵從胃部蛋白質中釋放出來",
         "D": "可與鐵形成複合物，且幫助其從胃黏膜釋放出來"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -126298,7 +126299,7 @@
         "C": "青春期",
         "D": "成年期"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -126318,7 +126319,7 @@
         "C": "tocopherols",
         "D": "vitamin D"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -126358,7 +126359,7 @@
         "C": "降低脫水風險",
         "D": "體溫調節變差"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -126378,7 +126379,7 @@
         "C": "妊娠高血壓是指懷孕20週會出現高血壓合併蛋白尿及水腫的症狀",
         "D": "婦女在懷孕第三期時出現妊娠高血壓合併妊娠糖尿病的症狀稱為子癇症"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -157210,7 +157211,7 @@
       "subject_name": "營養學",
       "stage_id": 4,
       "number": 2,
-      "question": "長期每日攝取超過200毫克的維生素B，可能會發生下列何種問題？6",
+      "question": "長期每日攝取超過200毫克的維生素B6，可能會發生下列何種問題？",
       "options": {
         "A": "腕隧道症候群（carpal tunnel syndrome）",
         "B": "高同半胱胺酸血症（hyperhomocysteinemia）",
@@ -158464,12 +158465,12 @@
       "subject_name": "公共衛生營養",
       "stage_id": 5,
       "number": 18,
-      "question": "評估人體Vitamin B是否缺乏的生化指標，下列敘述何者錯誤？12",
+      "question": "評估人體Vitamin B12是否缺乏的生化指標，下列敘述何者錯誤？",
       "options": {
-        "A": "尿液Methylmalonic acid濃度越高，代表Vitamin B營養狀態越佳12",
-        "B": "血清Methylmalonic acid濃度越高，代表Vitamin B營養狀態越差12",
-        "C": "血漿Homocysteine濃度越高，代表Vitamin B營養狀態越差12",
-        "D": "Mean corpuscular volume值越高，代表Vitamin B營養狀態越差12"
+        "A": "尿液Methylmalonic acid濃度越高，代表Vitamin B12營養狀態越佳",
+        "B": "血清Methylmalonic acid濃度越高，代表Vitamin B12營養狀態越差",
+        "C": "血漿Homocysteine濃度越高，代表Vitamin B12營養狀態越差",
+        "D": "Mean corpuscular volume值越高，代表Vitamin B12營養狀態越差"
       },
       "answer": "A"
     },

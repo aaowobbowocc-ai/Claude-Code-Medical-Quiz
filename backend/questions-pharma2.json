@@ -11898,7 +11898,7 @@
         "A": "Leucovorin 可以降低methotrexate 之腎毒性",
         "B": "methotrexate 血中濃度過高時應調整methotrexate 輸注速率",
         "C": "methotrexate 血中濃度過高時應調高leucovorin 劑量",
-        "D": "Methotrexate的細胞毒性閾值為5×10-6M"
+        "D": "Methotrexate的細胞毒性閾值為5×10⁻⁶M"
       },
       "answer": "C",
       "explanation": ""
@@ -17193,7 +17193,8 @@
         "D": "再次感染心內膜炎的機率低，拔牙前後都不需吃抗生素，以避免抗藥性的發生"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 75 題：李先生 60 歲，患有僧帽瓣脫垂， 2 個月前拔除 2 顆智齒，兩週後開始感覺不適、發燒，經診斷為細菌性心內 膜炎，請依序回答下列三題。 下列何者不是細菌性心內膜炎的臨床特徵？"
     },
     {
       "id": 115024606,
@@ -29438,7 +29439,8 @@
         "D": "Nonselective β-blockers"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 57 題：王先生罹患酒精性肝硬化多年，近日因感覺疲倦、食慾下降且臉色蒼白而就醫，診斷為肝硬化併 發食道靜脈出血。請依序回答下列三題。 下列何種藥品最不適合用於治療食道靜脈出血？"
     },
     {
       "id": 115023118,
@@ -33760,7 +33762,8 @@
         "D": "Warfarin"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 61 題：王先生55歲，某天突然左側身體麻痺，說話口齒不清，且症狀持續了15至20分鐘後才緩解。 經醫師診斷為暫時性腦缺血發作（transient ischemia attacks，TIA）。由於TIA可能造成無 法回復的身體功能損傷，醫師處方aspirin以預防TIA復發。請依序回答下列三題。 下列用法何者最適當？"
     },
     {
       "id": 115023333,
@@ -34003,7 +34006,8 @@
         "D": "缺乏內在因子（intrinsic factor）"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 74 題：陳先生40歲，3年前因胃癌胃全切除，最近手指感覺麻麻的，對於震動的感覺比過去不敏 感，且常覺得肌肉無力。過去一年並未服用任何藥品，飲食正常，現在hemoglobin 11 g/dL、mean corpuscular volume（MCV）108 fL，請依序回答下列四題。 陳先生的貧血最可能是缺乏下列何者所引起？"
     },
     {
       "id": 115023345,
@@ -35115,12 +35119,12 @@
       "subject_name": "調劑學",
       "stage_id": 1,
       "number": 1,
-      "question": "在一單質子弱酸溶液（濃度0.2 M，K a =2×10 -5 ）中之氫離子濃度為何（M）？",
+      "question": "在一單質子弱酸溶液（濃度0.2 M，K a =2×10⁻⁵ ）中之氫離子濃度為何（M）？",
       "options": {
-        "A": "2×10 -3",
-        "B": "4×10 -3",
-        "C": "1×10 -4",
-        "D": "4×10 -6"
+        "A": "2×10⁻³",
+        "B": "4×10⁻³",
+        "C": "1×10⁻⁴",
+        "D": "4×10⁻⁶"
       },
       "answer": "A",
       "explanation": ""
@@ -35355,12 +35359,12 @@
       "subject_name": "調劑學",
       "stage_id": 1,
       "number": 13,
-      "question": "一球型粉末當其平均粒子直徑為5 μm時，根據Stokes'公式所求得之沉降速率為4×10 -4 cm/second，若其餘條件都不變，僅有粒子直徑減為0.25 μm時，此時的沉降速率為：",
+      "question": "一球型粉末當其平均粒子直徑為5 μm時，根據Stokes'公式所求得之沉降速率為4×10⁻⁴ cm/second，若其餘條件都不變，僅有粒子直徑減為0.25 μm時，此時的沉降速率為：",
       "options": {
-        "A": "1×10 -6 cm/second",
-        "B": "2×10 -5 cm/second",
-        "C": "8×10 -3 cm/second",
-        "D": "1.6×10 -1 cm/second"
+        "A": "1×10⁻⁶ cm/second",
+        "B": "2×10⁻⁵ cm/second",
+        "C": "8×10⁻³ cm/second",
+        "D": "1.6×10⁻¹ cm/second"
       },
       "answer": "A",
       "explanation": ""
@@ -36160,7 +36164,7 @@
       "subject_name": "臨床藥學",
       "stage_id": 2,
       "number": 53,
-      "question": "已知某抗生素具有下面特性： P app = Apparent Permeability,  f u : unbound fraction of drug 下面那一個原因最可能是抗生素盤（antibiotic disc assay）抑制區實驗在相同抗生素（總） 濃度下（10 μg/mL），配在pH=7.4緩衝溶液中（A）與在血清中（B），抑制區大小不同的 可能原因？ 抗生素U53107 solubility（mg/mL） f u （%） P app （x 10 -6 cm/sec） pH=7.4 buffer   1  - 5 serum 1.5 10 5",
+      "question": "已知某抗生素具有下面特性： P app = Apparent Permeability,  f u : unbound fraction of drug 下面那一個原因最可能是抗生素盤（antibiotic disc assay）抑制區實驗在相同抗生素（總） 濃度下（10 μg/mL），配在pH=7.4緩衝溶液中（A）與在血清中（B），抑制區大小不同的 可能原因？ 抗生素U53107 solubility（mg/mL） f u （%） P app （x10⁻⁶ cm/sec） pH=7.4 buffer   1  - 5 serum 1.5 10 5",
       "options": {
         "A": "本抗生素根據pH-partition theory比較喜歡分布至細胞內",
         "B": "本抗生素－蛋白質結合力，導致血清未結合藥品濃度比在緩衝液中小",
@@ -38326,7 +38330,8 @@
         "D": "Pseudomonas aeruginosa"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 78 題：林小姐45歲，因第三期乳癌接受化學治療後再進行手術切除，並於手術後接受六次的化學治 療，請依序回答下列三題。 林小姐的第一次化學治療，一般被稱為："
     },
     {
       "id": 115024190,
@@ -42402,7 +42407,8 @@
         "D": "iPTH（intact parathyroid hormone）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 63 題：王先生為透析病人，服用calcium acetate 667 mg/tab 2 tab tid ac以控制血磷，今測其血磷值 為6.6 mg/dL（透析病人目標值為3.5-5.5mg/dL）。依序回答下列四題。 下列處置何者最適當？"
     },
     {
       "id": 115024174,
@@ -42423,7 +42429,8 @@
         "D": "可降低血鈣的腎臟廓清率"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 63 題：王先生為透析病人，服用calcium acetate 667 mg/tab 2 tab tid ac以控制血磷，今測其血磷值 為6.6 mg/dL（透析病人目標值為3.5-5.5mg/dL）。依序回答下列四題。 下列處置何者最適當？"
     },
     {
       "id": 115024175,
@@ -42444,7 +42451,8 @@
         "D": "提高透析液之溫度"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 63 題：王先生為透析病人，服用calcium acetate 667 mg/tab 2 tab tid ac以控制血磷，今測其血磷值 為6.6 mg/dL（透析病人目標值為3.5-5.5mg/dL）。依序回答下列四題。 下列處置何者最適當？"
     },
     {
       "id": 115024176,
@@ -54536,7 +54544,7 @@
       "subject_name": "藥物治療學",
       "stage_id": 4,
       "number": 19,
-      "question": "陳女士85歲，體重55公斤，Cl",
+      "question": "陳女士85歲，體重55公斤，ClCr 12 mL/min，因非瓣膜性心律不整考慮使用抗凝血劑，下列何者為首選？",
       "options": {
         "A": "rivaroxaban 20 mg qd",
         "B": "rivaroxaban 15 mg qd",
@@ -55216,7 +55224,7 @@
       "subject_name": "藥物治療學",
       "stage_id": 4,
       "number": 53,
-      "question": "許先生68歲，有第二型糖尿病，無其他合併症。最近Cl",
+      "question": "許先生68歲，有第二型糖尿病，無其他合併症。最近ClCr為35 mL/min，下列何者最不適合用於治療許先生的糖尿病？",
       "options": {
         "A": "acarbose",
         "B": "glyburide",
@@ -59263,7 +59271,7 @@
       "subject_name": "藥物治療學",
       "stage_id": 4,
       "number": 45,
-      "question": "林女士29歲，經醫師評估後擬處方Li 2",
+      "question": "林女士29歲，經醫師評估後擬處方Li2CO3治療，用藥前宜先進行評估，下列何者較無急需？",
       "options": {
         "A": "肝功能",
         "B": "腎功能",
@@ -59732,7 +59740,8 @@
         "D": "cefepime IV"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 67 題：吳小姐46歲，罹患乳癌第二期，手術切除局部乳房，術後第一次化學治療（C/T）後第7天回診。病人體溫 38.6°C、WBC 900 cells/mm 3 、segs 20%、bands 10%、lymphocyte 15%；吳小姐並沒有任何低血壓及其他 感染症狀。依序回答下列三題。 病人現在的絕對嗜中性球數（absolute neutrophil count）為多少？"
     },
     {
       "id": 115020815,
@@ -64104,7 +64113,8 @@
         "D": "irrelevant to drug interactions"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 74 題：宋女士因躁鬱症長期使用鋰鹽，控制良好。近日因頭痛而使用ibuprofen，昨晚出現步態不穩、語意不清、手 部顫抖現象而緊急送醫，過程中並未喪失意識。依序回答下列三題。 如果推測是鋰鹽中毒，則其藥品血中濃度值最可能為何？"
     },
     {
       "id": 115021032,
@@ -70912,7 +70922,7 @@
       "subject_name": "治療學",
       "stage_id": 3,
       "number": 76,
-      "question": "謝先生40歲，因為感染住院，S",
+      "question": "謝先生40歲，因為感染住院，SCr 1.0 mg/dL，處方vancomycin 1,000 mg IV infusion over 60 minutesq12h。依序回答下列三題。Vancomycin最適當的谷濃度為多少mg/L？",
       "options": {
         "A": "10～20",
         "B": "5～9",
@@ -72416,7 +72426,7 @@
       "subject_name": "藥物治療學",
       "stage_id": 4,
       "number": 71,
-      "question": "李太太73歲，身高164公分、體重57公斤，因糖尿病引起慢性腎臟病，S",
+      "question": "李太太73歲，身高164公分、體重57公斤，因糖尿病引起慢性腎臟病，SCr 1.6 mg/dL。如腎功能穩定，則肌酸酐廓清率為多少mL/min？",
       "options": {
         "A": "28",
         "B": "33",
@@ -72586,7 +72596,8 @@
         "D": "每日2.5 mg"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 78 題：王小姐1年前診斷有風濕性關節炎，近日病情加劇，醫師決定開立methotrexate。依序回答下列三題。 下列敘述何者正確？"
     },
     {
       "id": 115021448,
@@ -75362,7 +75373,7 @@
       "subject_name": "藥物治療學",
       "stage_id": 4,
       "number": 8,
-      "question": "70歲王女士因心臟功能不佳入院。尿液檢查：＞10 5",
+      "question": "70歲王女士因心臟功能不佳入院。尿液檢查：＞105 bacteria/mL，無尿道感染症狀。下列敘述何者錯誤？",
       "options": {
         "A": "王女士目前為無症狀菌尿症（asymptomatic bacteriuria）",
         "B": "因王女士發展為感染症及其他併發症的機率極高，應立即開始抗生素治療",
@@ -79084,7 +79095,7 @@
       "subject_name": "治療學",
       "stage_id": 3,
       "number": 64,
-      "question": "病人Pseudomonas aeruginosa感染（MIC 2 μg/mL），CL",
+      "question": "病人Pseudomonas aeruginosa 感染（MIC 2 μg/mL），CLCr 90 mL/min，若使用gentamicin extended-intervaldosing治療，gentamicin建議血中濃度，下列何者最適當？",
       "options": {
         "A": "peak：40～50 mg/L",
         "B": "trough：2 μg/mL",
@@ -84782,7 +84793,8 @@
         "D": "Aspergillus niger"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 57 題：王先生55歲，因non-Hodgkin lymphoma已接受二次癌症化學治療，回診抱怨口腔與食道吞嚥時刺痛，檢查發 現口腔內潰瘍處有白色斑塊；目前用藥包括：prednisolone、pantoprazole及oral hypoglycemics。依序回答下列 三題。 下列何者不是口腔內潰瘍處產生白色斑塊的危險因子？"
     },
     {
       "id": 115022052,
@@ -85228,7 +85240,8 @@
         "D": "granisetron 1 mg PO BID for 3 days"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 78 題：王先生60歲，接受cisplatin 60 mg/m 2 與 paclitaxel治療。依序回答下列三題。 王先生最可能發生那些副作用？①骨髓抑制 ②過敏反應 ③心臟衰竭 ④感覺神經病變 ⑤出血性膀胱炎"
     },
     {
       "id": "110020_2_1",
@@ -93409,7 +93422,7 @@
       "subject_name": "藥物治療學",
       "stage_id": 4,
       "number": 78,
-      "question": "承上題，病人空腹血糖值205 mg/dL，Hb",
+      "question": "承上題，病人空腹血糖值205 mg/dL，HbA1C 8.8%，其降血糖藥應如何調整？",
       "options": {
         "A": "停用metformin，密切監測血糖",
         "B": "停用metformin，改為linagliptin 5 mg QD",
@@ -98971,7 +98984,8 @@
         "C": "腎細胞癌第四期",
         "D": "BMI"
       },
-      "answer": "A"
+      "answer": "A",
+      "case_context": "第 27 題：周先生70歲,BMI 22 kg/m2,eGFR 30 mL/min,罹患腎細胞癌第四期肝轉移,長期服用oxycodone extended release tablet 40 mg Q12H。今入院治療gastric ulcer,醫師希望可轉換為morphine IV PCA,依序回答下列3題。 下列PCA處方之basal rate 為若干mg/hour最適當?(已知on demand dose=1 mg,lockout interval=10 minutes; oral oxycodone 15~20 mg=oral morphine 30 mg=IV morphine 10 mg)"
     },
     {
       "id": "111100_29",
@@ -104491,7 +104505,8 @@
         "C": "下午3 點",
         "D": "下午1 點"
       },
-      "answer": "C"
+      "answer": "C",
+      "case_context": "第 24 題：陳先生罹患下肢深層靜脈血栓(DVT),上午8 點依標準heparin dosing nomogram 給與heparin,上午9 點凝血 監測指標為基礎值之4 倍,依序回答下列三題。 下列建議何者最適當?"
     },
     {
       "id": "112020_1_26",
@@ -109672,7 +109687,8 @@
         "D": "fulvestrant"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "case_context": "第 78 題：歐女士70歲,罹患乳癌第三B期。治療過程如下:docetaxel+ cisplatin(DC)× 4 cycles後,進行乳房切除手 術,之後接受doxorubicin + cyclophosphamide followed by docetaxel and trastuzumab(AC→TH);estrogen receptor (+)。依序回答下列三題。 歐女士所接受的DC藥品組合屬於下列何種治療?其目的為何?"
     },
     {
       "id": "113020_2_1",

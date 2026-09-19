@@ -32,7 +32,7 @@ const CACHE_TTL_MS = 24 * 60 * 60 * 1000  // 24h
 // v83 (2026-09-17): 讀圖還原約 90 題(臨床心理/聽力師/藥師/關務/警察等)、
 //   police 題組從原卷重建題幹+選項+答案 29 題、關務段落填空併入文章 7 題、
 //   48 題有選項圖卻被誤隱藏的題放出
-const CACHE_VERSION = 83
+const CACHE_VERSION = 85
 const DB_NAME = 'questions-cache'
 const DB_STORE = 'exams'
 

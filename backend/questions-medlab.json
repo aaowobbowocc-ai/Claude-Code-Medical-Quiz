@@ -45153,7 +45153,9 @@
     },
     "answer": "A",
     "explanation": "",
-    "no_image_in_source": true
+    "images": [
+      "/question-images/medlab_14428_0.webp"
+    ]
   },
   {
     "id": 14430,
@@ -53075,7 +53077,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 9,
-    "question": "下列有關垂直位心臟所記錄之正常aVR心電圖之敘述，何者錯誤？P",
+    "question": "下列有關垂直位心臟所記錄之正常aVR心電圖之敘述，何者錯誤？",
     "options": {
       "A": "負向 P 波",
       "B": "負向 QRS 波",
@@ -68274,11 +68276,11 @@
     "subject_name": "醫學分子檢驗學",
     "stage_id": 6,
     "number": 44,
-    "question": "下列關於RNA干擾（Interference）的敘述，何者正確？DNARNA",
+    "question": "下列關於RNA干擾（Interference）的敘述，何者正確？",
     "options": {
       "A": "通常會抑制 DNA 轉錄成 RNA",
-      "B": "通常造成 RNA 降解（ Degradation ）",
-      "C": "通常會干擾 DNA 複製時 RNA 引子（ Primer ）的功能",
+      "B": "通常造成 RNA降解（Degradation）",
+      "C": "通常會干擾DNA複製時RNA引子（Primer）的功能",
       "D": "一般不會影響基因表現量"
     },
     "answer": "B",
@@ -79027,7 +79029,7 @@
     "subject_name": "生物化學",
     "stage_id": 8,
     "number": 19,
-    "question": "催化反應 SP，其平衡常數（K eq ）＝2 × 10 -2 ，k 2 ＝0.01，則 k 1 為多少？",
+    "question": "催化反應 SP，其平衡常數（K eq ）＝2 ×10⁻² ，k 2 ＝0.01，則 k 1 為多少？",
     "options": {
       "A": "2",
       "B": "0.02",
@@ -97916,7 +97918,7 @@
     "subject_name": "醫學分子檢驗學",
     "stage_id": 6,
     "number": 55,
-    "question": "下列關於質體（Plasmid）的敘述，何者錯誤？selectionmarkers",
+    "question": "下列關於質體（Plasmid）的敘述，何者錯誤？",
     "options": {
       "A": "通常帶有一或兩個 selection markers",
       "B": "是基因轉殖最常用的工具",
@@ -105379,7 +105381,7 @@
     "subject_name": "臨床血清免疫學",
     "stage_id": 10,
     "number": 8,
-    "question": " 下列那些抗體可以活化補體？ ①IgG ②IgD ③IgE ④IgA ⑤IgM",
+    "question": "下列那些抗體可以活化補體？ ①IgG ②IgD ③IgE ④IgA ⑤IgM",
     "options": {
       "A": "①②",
       "B": "③④",
@@ -105823,7 +105825,7 @@
     "subject_name": "臨床血清免疫學",
     "stage_id": 10,
     "number": 29,
-    "question": " 下列何者為可誘導細胞增生的致癌基因？①abl ②neu ③K-ras ④NF1 ⑤WT1",
+    "question": "下列何者為可誘導細胞增生的致癌基因？①abl ②neu ③K-ras ④NF1 ⑤WT1",
     "options": {
       "A": "①②③",
       "B": "②③④",
@@ -108263,7 +108265,7 @@
     "subject_name": "醫學分子檢驗學",
     "stage_id": 6,
     "number": 65,
-    "question": " 下列那些技術常用於點突變的偵測？ ①dHPLC ②HRM ③Gap-PCR",
+    "question": "下列那些技術常用於點突變的偵測？ ①dHPLC ②HRM ③Gap-PCR",
     "options": {
       "A": "僅①②",
       "B": "僅②③",
@@ -109252,10 +109254,10 @@
     "number": 32,
     "question": " 下列有關relative centrifugal force（RCF）的計算，何者正確？",
     "options": {
-      "A": "1.118 × 10 -5 × r × rpm",
-      "B": "1.118 × 10 -5 × r × rpm 2",
-      "C": "1.118 × 10 -5 × r 2 × rpm",
-      "D": "1.118 × 10 -5 × r 2 × rpm 2"
+      "A": "1.118 ×10⁻⁵ × r × rpm",
+      "B": "1.118 ×10⁻⁵ × r × rpm 2",
+      "C": "1.118 ×10⁻⁵ × r 2 × rpm",
+      "D": "1.118 ×10⁻⁵ × r 2 × rpm 2"
     },
     "answer": "B",
     "explanation": ""
@@ -112889,7 +112891,7 @@
     "subject_name": "病理學",
     "stage_id": 2,
     "number": 44,
-    "question": " 下列何者為細胞週期（cell cycle）的先後順序？①G1 ②G2 ③S  ④M",
+    "question": "下列何者為細胞週期（cell cycle）的先後順序？①G1 ②G2 ③S  ④M",
     "options": {
       "A": "①②③④",
       "B": "①③②④",
@@ -134808,7 +134810,9 @@
     "answer": "A",
     "explanation": "",
     "case_context": "第 77 題：箭頭所指的細胞有非常明顯的vacuoles，常出現於下列何種疾病？",
-    "no_image_in_source": true
+    "images": [
+      "/question-images/medlab_5912_0.webp"
+    ]
   },
   {
     "id": 5914,
@@ -139774,12 +139778,12 @@
     "subject_name": "微生物學",
     "stage_id": 7,
     "number": 6,
-    "question": "0.5McFarland標準濁度近似下列何種菌落數？105",
+    "question": "0.5 McFarland標準濁度近似下列何種菌落數？",
     "options": {
-      "A": "1.5 × 10 5",
-      "B": "1.5 × 10 6",
-      "C": "FU/mL",
-      "D": "1.5 × 10 8"
+      "A": "1.5 × 105 CFU/mL",
+      "B": "1.5 × 106 CFU/mL",
+      "C": "1.5 × 107 CFU/mL",
+      "D": "1.5 × 108 CFU/mL"
     },
     "answer": "D",
     "explanation": ""
@@ -147391,7 +147395,8 @@
       "D": "Chromosome 18之IgH基因與chromosome 14之BCL2基因融合成IgH-BCL2 fusion protein"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "disputed": true
   },
   {
     "id": 6450,
@@ -161046,7 +161051,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 26,
-    "question": "一氧化碳肺功能擴散能力（DL",
+    "question": "一氧化碳肺功能擴散能力（DLCO）檢查中，受測者必須吸入CO與O2混合氣幾秒？",
     "options": {
       "A": "10",
       "B": "15",
@@ -164929,7 +164934,7 @@
     "subject_name": "臨床病毒學",
     "stage_id": 11,
     "number": 59,
-    "question": "下列那些病毒皆可在常規性細胞培養中分離出？virus及hepatitis",
+    "question": "下列那些病毒皆可在常規性細胞培養中分離出？",
     "options": {
       "A": "hepatitis B virus及hepatitis C virus",
       "B": "influenza A virus及cytomegalovirus",
@@ -165326,7 +165331,7 @@
     "subject_name": "臨床病毒學",
     "stage_id": 11,
     "number": 79,
-    "question": "下列病毒與傳染途徑之載體配對，何者錯誤？virus：tick",
+    "question": "下列病毒與傳染途徑之載體配對，何者錯誤？",
     "options": {
       "A": "Chikungunya virus：tick",
       "B": "Hantaan virus：rodent",
@@ -168537,8 +168542,8 @@
     "options": {
       "A": "0.03%",
       "B": "0.015%",
-      "C": "7×10 -9 %",
-      "D": "1.5×10 -8 %"
+      "C": "7×10⁻⁹ %",
+      "D": "1.5×10⁻⁸ %"
     },
     "answer": "A",
     "explanation": ""
@@ -170594,7 +170599,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 22,
-    "question": "正常人血液［HCO3 - ］/［H 2",
+    "question": "正常人血液［HCO3-］/［H2CO3］之比值為何？",
     "options": {
       "A": "20",
       "B": "30",
@@ -175757,7 +175762,7 @@
     "subject_name": "臨床鏡檢學",
     "stage_id": 5,
     "number": 39,
-    "question": "【承上題】承前一題尿沉渣圖示（主要為白血球）。此尿沉渣結果與下列何者檢驗結果陽性最有相關性？",
+    "question": "此尿沉渣結果與下列何者檢驗結果陽性最有相關性？",
     "options": {
       "A": "pH",
       "B": "occult blood",
@@ -175766,7 +175771,10 @@
     },
     "answer": "C",
     "explanation": "",
-    "no_image_in_source": true
+    "case_context": "第 38 題：請依據圖示，回答以下 3 題。（本題組共用上方尿沉渣圖示）",
+    "images": [
+      "/question-images/medlab_108100_molmicro_q38_0.webp"
+    ]
   },
   {
     "id": 7826,
@@ -175786,7 +175794,11 @@
       "D": "紫色透明"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "case_context": "第 38 題：請依據圖示，回答以下 3 題。（本題組共用上方尿沉渣圖示）",
+    "images": [
+      "/question-images/medlab_108100_molmicro_q38_0.webp"
+    ]
   },
   {
     "id": 7827,
@@ -183228,7 +183240,7 @@
     "subject_name": "臨床血清免疫學",
     "stage_id": 10,
     "number": 11,
-    "question": "anaphylatoxins是指下列那些分子： ①C2a②C3a③C4a④C5a",
+    "question": "anaphylatoxins是指下列那些分子：①C2a②C3a③C4a④C5a",
     "options": {
       "A": "①②",
       "B": "①④",
@@ -187291,10 +187303,10 @@
     "number": 54,
     "question": "酵素的單位有二種，即International unit（U）及Katal（kat），他們之間的關係為1U相當於多少kat？",
     "options": {
-      "A": "1.67×10 -8",
-      "B": "1.67×10 -9",
-      "C": "1.67×10 -10",
-      "D": "1.67×10 -11"
+      "A": "1.67×10⁻⁸",
+      "B": "1.67×10⁻⁹",
+      "C": "1.67×10⁻¹⁰",
+      "D": "1.67×10⁻¹¹"
     },
     "answer": "A",
     "explanation": ""
@@ -189815,10 +189827,10 @@
     "number": 19,
     "question": "正常血液pH值為7.4時，其氫離子濃度為多少mol/L？",
     "options": {
-      "A": "1×10 -9",
-      "B": "4×10 -8",
-      "C": "1×10 -7",
-      "D": "4×10 -7"
+      "A": "1×10⁻⁹",
+      "B": "4×10⁻⁸",
+      "C": "1×10⁻⁷",
+      "D": "4×10⁻⁷"
     },
     "answer": "B",
     "explanation": ""
@@ -204920,24 +204932,25 @@
     "subject_name": "醫學分子檢驗學",
     "stage_id": 6,
     "number": 51,
-    "question": "癌症患者的腫瘤組織可以藉由PCR放大一段 microsatellite repeat locus 的DNA片段，並由capillary electrophoresis 分析檢測是否具有 loss of heterozygosity (LOH)。正常組織的分析圖型如圖示：\n[Image]\n下列何種分析圖形出現時可以判斷為該腫瘤具LOH的現象？",
+    "question": "癌症患者的腫瘤組織可以藉由PCR放大一段 microsatellite repeat locus 的DNA片段，並由capillary electrophoresis 分析檢測是否具有 loss of heterozygosity (LOH)。正常組織的分析圖型如圖示：\n下列何種分析圖形出現時可以判斷為該腫瘤具LOH的現象？",
     "options": {
-      "A": "[Image]",
-      "B": "[Image]",
-      "C": "[Image]",
-      "D": "[Image]"
+      "A": "(圖)",
+      "B": "(圖)",
+      "C": "(圖)",
+      "D": "(圖)"
     },
     "answer": "C",
     "explanation": "",
-    "image_url": "/question-images/medlab_110020_q51_patrol.webp",
     "images": [
-      "/question-images/medlab_100140117_0.webp",
-      "/question-images/medlab_100140117_1.webp",
-      "/question-images/medlab_100140117_2.webp",
-      "/question-images/medlab_100140117_3.webp",
-      "/question-images/medlab_100140117_4.webp"
+      "/question-images/medlab_100140117_0.webp"
     ],
-    "incomplete": "broken_options"
+    "incomplete": "image_options",
+    "option_images": {
+      "A": "/question-images/medlab_100140117_1.webp",
+      "B": "/question-images/medlab_100140117_2.webp",
+      "C": "/question-images/medlab_100140117_3.webp",
+      "D": "/question-images/medlab_100140117_4.webp"
+    }
   },
   {
     "id": 1651,
@@ -240923,7 +240936,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 77,
-    "question": "Le基因產物的功能是將L-fucose鍵結至下列何者？①Le",
+    "question": "Le 基因產物的功能是將L-fucose 鍵結至下列何者？①Lea ②Leb ③Lec ④Led",
     "options": {
       "A": "①②",
       "B": "①③",
@@ -248084,7 +248097,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 32,
-    "question": "有關單次呼吸一氧化碳擴散能力（single breath DL",
+    "question": "有關單次呼吸一氧化碳擴散能力（single breath DLCO）測定的假設，下列何者最適當？",
     "options": {
       "A": "肺微血管內 CO分壓接近零",
       "B": "肺微血管內 Hb-CO接近零",
@@ -272626,14 +272639,14 @@
     "subject_name": "醫學分子檢驗學",
     "stage_id": 6,
     "number": 50,
-    "question": "有關體溫過高之敘述，下列何者錯誤？",
+    "question": "利用解離曲線分析法（melting curve analysis）進行單一核苷酸多型性（single nucleotidepolymorphism, SNP）的檢測；下圖中的何種曲線是C/T異型合子（heterozygote）樣本的檢驗結果？",
     "options": {
-      "A": "發燒（fever）是下視丘體溫調節中樞將體溫設定值調高",
-      "B": "中暑（heat stroke）是下視丘體溫調節中樞將體溫設定值調高",
-      "C": "中暑時體溫調節系統及散熱機能發生障礙，無法將體內多餘的熱散發出去",
-      "D": "中暑易發生於嬰幼兒、老年人、過度運動或體能操練及心臟血管病患"
+      "A": "僅A、B曲線",
+      "B": "僅B、C曲線",
+      "C": "僅A、C曲線",
+      "D": "A、B、C曲線"
     },
-    "answer": "B",
+    "answer": "D",
     "explanation": "",
     "images": [
       "/question-images/medlab_113090_molmicro_q50_0.webp"
@@ -298770,12 +298783,12 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 67,
-    "question": "有關急性呼吸窘迫症候群（acute respiratory distress syndrome, ARDS）的敘述，下列何者錯誤？",
+    "question": "有關白血球之輸血反應作用機轉，下列敘述何者錯誤？",
     "options": {
-      "A": "成因是急性瀰漫性肺泡損害，肺泡微血管通透性增加，造成肺水腫及呼吸窘迫",
-      "B": "臨床表現為呼吸衰竭、動脈血氣分壓過低",
-      "C": "造成的原因為休克、吸入胃酸、溺水、嚴重感染等",
-      "D": "病理觀察到的玻璃膜（hyaline membrane）主要堆積在肺微血管壁上"
+      "A": "受血者之白血球抗體對抗輸入之白血球，可導致非溶血性發熱式輸血反應（febrile nonhemolytictransfusion reaction）",
+      "B": "HLA 抗體異體免疫是受血者抗原呈現細胞（antigen presenting cell）造成HLA 致敏化的關鍵（HLAalloimmunization）",
+      "C": "輸入之淋巴球對抗受血者之反應，可導致輸血相關移植物抗宿主反應（transfusion associated graft vs.host reaction）",
+      "D": "輸入之顆粒球抗體與顆粒球結合，可導致輸血相關急性肺損傷（transfusion related acute lunginjury）"
     },
     "answer": "B",
     "explanation": ""
@@ -302884,10 +302897,10 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 33,
-    "question": "關於一氧化碳肺瀰散量測定（DL）的敘述，下列何者錯誤？CO",
+    "question": "關於一氧化碳肺瀰散量測定（DLCO）的敘述，下列何者錯誤？",
     "options": {
-      "A": "檢驗O於肺泡膜微血管的通透狀態2",
-      "B": "測試使用的吸入氣體中，CO濃度約為1％",
+      "A": "檢驗 O2於肺泡膜微血管的通透狀態",
+      "B": "測試使用的吸入氣體中，CO 濃度約為1％",
       "C": "須用血紅素數值來校正",
       "D": "坐姿測量值比平躺測量值低"
     },
@@ -309075,7 +309088,7 @@
     "subject_name": "生物化學",
     "stage_id": 8,
     "number": 37,
-    "question": "正常成人血液內糖化血色素（HbA）的參考值範圍，下列何者最適當？1c",
+    "question": "正常成人血液內糖化血色素（HbA1c）的參考值範圍，下列何者最適當？",
     "options": {
       "A": "4～6 mg/dL",
       "B": "2～3 mg/dL",
@@ -309380,12 +309393,12 @@
     "subject_name": "生物化學",
     "stage_id": 8,
     "number": 53,
-    "question": "遵循Michaelis-Menten動力學，當[S]＝2×10-5 μmol/L，v＝20 μmol/min，V ＝60 μmol/min，這個酵素max的K是多少μmol/L？m",
+    "question": "遵循Michaelis-Menten動力學，當[S]＝2×10⁻⁵ μmol/L，v＝20 μmol/min，V ＝60 μmol/min，這個酵素max的K是多少μmol/L？m",
     "options": {
-      "A": "1×10-5",
-      "B": "2×10-5",
-      "C": "4×10-5",
-      "D": "8×10-5"
+      "A": "1×10⁻⁵",
+      "B": "2×10⁻⁵",
+      "C": "4×10⁻⁵",
+      "D": "8×10⁻⁵"
     },
     "answer": "C"
   },

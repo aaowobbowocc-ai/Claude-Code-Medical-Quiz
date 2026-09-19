@@ -22,6 +22,7 @@ const fs = require('fs')
 const path = require('path')
 const sharp = require('sharp')
 const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve')
+const { IMAGE_REF } = require('./lib/image-ref')
 
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i >= 0 ? process.argv[i + 1] : d }
 const EXAM = arg('--exam')
@@ -45,7 +46,12 @@ const SCALE = 2.5
     const raw = JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8'))
     const arr = Array.isArray(raw) ? raw : raw.questions
     if (!arr) continue
-    const targets = arr.filter(q => q.incomplete === MARK)
+    // --mark missing-image 是虛擬標記：那些題沒有 incomplete，
+    // 它們的問題是「題幹提到圖、卻沒有圖」，得看版面才知道圖在哪
+    const targets = MARK === 'missing-image'
+      ? arr.filter(q => !q.incomplete && !q.no_image_in_source && !q.images && !q.image && !q.image_url &&
+          IMAGE_REF.test(String(q.question || '')))
+      : arr.filter(q => q.incomplete === MARK)
     if (!targets.length) continue
 
     const byPaper = new Map()

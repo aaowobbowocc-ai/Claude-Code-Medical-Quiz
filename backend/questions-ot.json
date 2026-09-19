@@ -31124,12 +31124,12 @@
       "subject_name": "職能治療學概論",
       "stage_id": 2,
       "number": 31,
-      "question": "下列何者是供應空腸（jejunum）遠端的主要動脈？",
+      "question": "有關情緒調節評估工具，下列那一項同時具有自填與觀察兩種評估方式？",
       "options": {
-        "A": "腹腔動脈幹（celiac trunk）",
-        "B": "胃十二指腸動脈（gastroduodenal artery）",
-        "C": "腸繫膜上動脈（superior mesenteric artery）",
-        "D": "腸繫膜下動脈（inferior mesenteric artery）"
+        "A": "早期適應量表（Early Coping Inventory）",
+        "B": "情緒狀態量表（Profile of Mood States）",
+        "C": "情緒調節困難量表（Difficulties in Emotion Regulation Scale）",
+        "D": "正負向情感量表（Positive and Negative Affect Schedule）"
       },
       "answer": "A",
       "explanation": ""
@@ -36034,12 +36034,12 @@
       "subject_name": "小兒疾病職能治療",
       "stage_id": 5,
       "number": 36,
-      "question": "下列何者屬於顱骨（cranial bone）？",
+      "question": "下列評估工具，何者不能用來評估手眼協調能力？",
       "options": {
-        "A": "下頜骨（manidible）",
-        "B": "篩骨（ethmoid bone）",
-        "C": "犁骨（vomer）",
-        "D": "淚骨（lacrimal bone）"
+        "A": "視知覺技巧測驗（Test of Visual-Perceptual Skill, TVPS-R）",
+        "B": "視知覺發展測驗（Developmental Test of Visual Perception, DTVP-3）",
+        "C": "視覺－動作整合發展測驗修訂版（Developmental Test of Visual-Motor Integration, revised, VMI）",
+        "D": "第二版布魯茵克斯－歐西瑞斯基動作精練度測驗（Bruininks-Oseretsky Test of Motor Proficiency 2nd edition,BOT-2）"
       },
       "answer": "A",
       "explanation": ""
@@ -42527,8 +42527,8 @@
       },
       "answer": "D",
       "explanation": "",
-      "image_url": "/question-images/ot_113090_p2_39_0.webp",
-      "no_image_in_source": true
+      "no_image_in_source": true,
+      "incomplete": "missing_image"
     },
     {
       "id": 2120,
@@ -116449,7 +116449,7 @@
       "subject_name": "解剖與生理",
       "stage_id": 1,
       "number": 66,
-      "question": "記錄單一吐氣的氮氣濃度曲線（single-breath N 2",
+      "question": "記錄單一吐氣的氮氣濃度曲線（single-breath N2 curve）並分析該氣體的濃度，可用來測量：",
       "options": {
         "A": "生理性死腔（physiologic dead space）",
         "B": "解剖性死腔（anatomic dead space）",
@@ -135655,8 +135655,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/ot_101100_p0_47_0.webp",
-      "no_image_in_source": true
+      "no_image_in_source": true,
+      "incomplete": "missing_image"
     },
     {
       "id": 6768,
@@ -241082,7 +241082,7 @@
         "C": "脊髓下丘腦（spinohypothalamic）",
         "D": "脊髓網狀束（spinoreticular）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -241102,7 +241102,7 @@
         "C": "找到內在驅力（find inner drive）",
         "D": "加入競爭（incorporating competition）"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -241122,7 +241122,7 @@
         "C": "Sensory Integration and Praxis Tests",
         "D": "Touch Inventory for Elementary School-Aged Children"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -241142,7 +241142,7 @@
         "C": "此療法所用的軟刷，即一般家裏的軟毛刷",
         "D": "此療法包含深壓覺與本體覺的應用"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -241162,7 +241162,7 @@
         "C": "孩童因發展遲緩而過度倚賴父母照顧",
         "D": "低收入家庭"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -241182,7 +241182,7 @@
         "C": "重鬱症的兒童後來都會發展成雙極性情感疾患",
         "D": "憂鬱症狀對其職能表現會有負向的影響"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -241202,7 +241202,7 @@
         "C": "建議家長有助於孩童的日常生活作息結構",
         "D": "建立權威形象，教導家長如何做"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -241222,7 +241222,7 @@
         "C": "打撲克牌",
         "D": "衝滑板"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -241302,7 +241302,7 @@
         "C": "NICU中的光線可調整成日夜循環（day-night cycle）的光線",
         "D": "針對NICU的早產兒，可使用皮膚互相接觸（skin-to-skin）的擁抱，並給予搖晃的前庭刺激"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -241322,7 +241322,7 @@
         "C": "社交（social）",
         "D": "策略（strategic）"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -241362,7 +241362,7 @@
         "C": "有助提升早產兒的動脈氧氣濃度",
         "D": "規律的非營養性吸吮有助於營養性吸吮的表現"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": "",
       "disputed": true
     },
@@ -241403,7 +241403,7 @@
         "C": "25～36個月",
         "D": "37～72個月"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {

@@ -57,7 +57,11 @@ async function pdfStems(buf) {
       if (t) lines.push({ p, y: Math.round(l.bbox.y), x: Math.round(l.bbox.x), t });
     }
   }
-  lines.sort((a, b) => a.p - b.p || a.y - b.y || a.x - b.x);
+  // 同一列的 text run 之間 y 可能差 1~2px（字級/上下標不同），直接用 y 排序會把
+  // 右側的選項排到左側之前 → 選項整組被轉一格。（102030 基礎言語科學 #22/#23 實測）
+  // 先把 y 分桶成列，再依 x 排，才是真正的閱讀順序。
+  const YB = 6;
+  lines.sort((a, b) => a.p - b.p || Math.round(a.y / YB) - Math.round(b.y / YB) || a.x - b.x);
   const out = new Map();
   let cur = null;
   for (const l of lines) {
@@ -126,7 +130,11 @@ async function pdfOptions(buf) {
       }
     }
   }
-  lines.sort((a, b) => a.p - b.p || a.y - b.y || a.x - b.x);
+  // 同一列的 text run 之間 y 可能差 1~2px（字級/上下標不同），直接用 y 排序會把
+  // 右側的選項排到左側之前 → 選項整組被轉一格。（102030 基礎言語科學 #22/#23 實測）
+  // 先把 y 分桶成列，再依 x 排，才是真正的閱讀順序。
+  const YB = 6;
+  lines.sort((a, b) => a.p - b.p || Math.round(a.y / YB) - Math.round(b.y / YB) || a.x - b.x);
 
   // 標記式：`12.題幹` + `A.選項`
   const out = new Map();
@@ -200,7 +208,11 @@ async function pdfQuestions(buf) {
       lines.push({ p, y: Math.round(l.bbox.y), x: Math.round(l.bbox.x), t: tn });
     }
   }
-  lines.sort((a, b) => a.p - b.p || a.y - b.y || a.x - b.x);
+  // 同一列的 text run 之間 y 可能差 1~2px（字級/上下標不同），直接用 y 排序會把
+  // 右側的選項排到左側之前 → 選項整組被轉一格。（102030 基礎言語科學 #22/#23 實測）
+  // 先把 y 分桶成列，再依 x 排，才是真正的閱讀順序。
+  const YB = 6;
+  lines.sort((a, b) => a.p - b.p || Math.round(a.y / YB) - Math.round(b.y / YB) || a.x - b.x);
 
   const out = new Map();
   let cur = null;

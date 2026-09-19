@@ -5257,17 +5257,15 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 18,
-      "question": "根據美國心臟學會(American Heart Association)於1997年之建議,為預防口腔手術可能引起 的細菌性心內膜炎,對penicillin過敏之病患,可於術前1小時給予下列何種藥物?",
+      "question": "Angle Class I bimaxillary dentoalveolar protrusion的咬合有何特點？",
       "options": {
-        "A": "clindamycin 2 gm",
-        "B": "clindamycin 600 mg",
-        "C": "erythromycin 2 gm",
-        "D": "erythromycin 600 mg"
+        "A": "distocclusion",
+        "B": "下顎門牙舌側傾斜",
+        "C": "hypodiversion的臉型",
+        "D": "inter-incisal angle較小"
       },
       "answer": "D",
-      "explanation": "",
-      "disputed": true,
-      "answer_source": "vision-recheck-v2:A_dental2_100020_c302_s66.pdf"
+      "explanation": ""
     },
     {
       "id": 100020019,
@@ -6171,17 +6169,16 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 61,
-      "question": "上顎咬合片(upper standard or cross-sectional maxillary occlusal film)的照法是以何角度由患 者上前方照向片子?",
+      "question": "根據附圖，那一個時期的幼兒或學童具有最高的齲齒率？",
       "options": {
-        "A": "35°",
-        "B": "45°",
-        "C": "65°",
-        "D": "85°"
+        "A": "乳牙時期",
+        "B": "早期混合齒列時期",
+        "C": "晚期混合齒列時期",
+        "D": "恆牙時期"
       },
       "answer": "B",
       "explanation": "",
-      "disputed": true,
-      "answer_source": "vision-recheck-v2:A_dental2_100020_c302_s66.pdf"
+      "incomplete": "missing_image"
     },
     {
       "id": 100020062,
@@ -6571,17 +6568,15 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 80,
-      "question": "鼻腭管囊腫(nasopalatine duct cyst)在X光下呈現心形的原因為何?",
+      "question": "下列關於牙醫診所「員工管理」的敘述，何者錯誤？",
       "options": {
-        "A": "兩側正中門齒的牙根較側門齒長",
-        "B": "在發育上,為兩側融合而成",
-        "C": "上顎唇側的骨板較腭側薄",
-        "D": "因照射到前鼻脊"
+        "A": "宜採工作輪調制，使人力應用靈活",
+        "B": "應多鼓勵讚賞員工，以激勵其自我成長",
+        "C": "薪資調整標準不宜公開",
+        "D": "聘用員工時，應考量其人格特性"
       },
       "answer": "C",
-      "explanation": "",
-      "disputed": true,
-      "answer_source": "vision-recheck-v2:A_dental2_100020_c302_s66.pdf"
+      "explanation": ""
     },
     {
       "id": 115025421,
@@ -24721,10 +24716,10 @@
       "number": 63,
       "question": "在瓷金屬牙冠牙橋中，金屬與瓷之熱膨脹系數應有何種差異？",
       "options": {
-        "A": "比瓷小 2 × 10 -6 / °C",
-        "B": "比瓷大 2 × 10 -6 / °C",
-        "C": "比瓷小 1 × 10 -6 / °C之內",
-        "D": "比瓷大 1 × 10 -6 / °C之內"
+        "A": "比瓷小 2 ×10⁻⁶ / °C",
+        "B": "比瓷大 2 ×10⁻⁶ / °C",
+        "C": "比瓷小 1 ×10⁻⁶ / °C之內",
+        "D": "比瓷大 1 ×10⁻⁶ / °C之內"
       },
       "answer": "D",
       "explanation": ""
@@ -25215,17 +25210,16 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 7,
-      "question": "下列何者不是Smith及Zarb於1989年所提之骨整合骨內植體(osseointegrated endosseous implants)成功的標準?",
+      "question": "患者為22歲女孩，口內照片如下圖，測顱分析中SNA 82度，SNB 80度，SN-MP 25度，上門牙角度（SN-upper incisor axis）110度，下門牙角度（LI-MP）100度。有關診斷之思考中，下列何者錯誤？",
       "options": {
-        "A": "使用第一年後,每年植體周(peri-implant)之垂直骨吸收不得大於0.5 mm",
-        "B": "植體周不能有放射可透性 (radiolucent)之陰影",
-        "C": "臨床上植體不能有動搖性",
-        "D": "五年之成功率要高於85%"
+        "A": "上下顎骨關係正常",
+        "B": "上門牙角度正常，下門牙角度略外斜（proclined）",
+        "C": "右側方咬合為安格氏二級咬合，左側方咬合為安格氏一級咬合",
+        "D": "顏面開展度過大（facial divergence）"
       },
       "answer": "D",
       "explanation": "",
-      "disputed": true,
-      "answer_source": "vision-recheck-v2:A_dental2_101100_c302_s66.pdf"
+      "incomplete": "missing_image"
     },
     {
       "id": 101100008,
@@ -25304,17 +25298,16 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 11,
-      "question": "矯正手術骨切開之固定方式有rigid及non-rigid fixation兩種,下列何者非rigid fixation的好處?",
+      "question": "下圖C為牙齒的抗力中心（center of resistance），假設A與B的距離為10 mm，B與C的距離為15mm，從牙冠唇側面施以力量Fb所產生的力矩為1200 gm-mm，試問Fb力量大小為多少？",
       "options": {
-        "A": "病人術後可立即開口,方便進食",
-        "B": "可較早接受術後矯正的治療",
-        "C": "可允許用elastic再做調整",
-        "D": "有較佳的穩定性"
+        "A": "48 gm",
+        "B": "80 gm",
+        "C": "120 gm",
+        "D": "240 gm"
       },
       "answer": "B",
       "explanation": "",
-      "disputed": true,
-      "answer_source": "vision-recheck-v2:A_dental2_101100_c302_s66.pdf"
+      "incomplete": "missing_image"
     },
     {
       "id": 101100012,
@@ -26318,15 +26311,16 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 59,
-      "question": "牙科用之X光機所產生的生物效應,主要屬下列何者?",
+      "question": "如下圖所示，因意外導致正中門牙之牙冠斷裂，牙髓暴露但仍有活性，請問如何處置？",
       "options": {
-        "A": "制動效應(bremsstrahlung)",
-        "B": "間接效應(indirect effect)",
-        "C": "直接效應(direct effect)",
-        "D": "光電效應(photoelectric effect)"
+        "A": "拔除該牙（extraction），再植人工牙根",
+        "B": "做冠髓切除術（pulpotomy）",
+        "C": "做牙髓切除術（pulpectomy）",
+        "D": "做牙根尖形成術（apexification）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "missing_image"
     },
     {
       "id": 101100060,
@@ -26758,12 +26752,12 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 80,
-      "question": "當愛滋病病人須做口內X光攝影時,下列何種處置最不適當?",
+      "question": "以「全人治療為目標，預防為導向，涵蓋口腔健康管理及照顧弱勢族群」為核心價值之牙醫專科是下列何者？",
       "options": {
-        "A": "若病情需要,做好感染控制後再進行檢查",
-        "B": "因為是愛滋病患,應拒絕其放射線檢查",
-        "C": "仍應說明照X光之必要性及風險性",
-        "D": "轉診至感染控制較完備的醫療院所"
+        "A": "社區牙醫學",
+        "B": "家庭牙醫學",
+        "C": "特殊牙醫學",
+        "D": "一般牙醫學"
       },
       "answer": "B",
       "explanation": ""
@@ -32069,17 +32063,16 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 21,
-      "question": "下列何者是頸部廓清術(radical neck dissection)的主要目的?",
+      "question": "此圖片為矯正病人口內右邊頰側照片，此咬合異常屬於：",
       "options": {
-        "A": "切除原發腫瘤(primary tumor)及周圍組織",
-        "B": "切除內頸靜脈(internal jugular vein)及周圍組織",
-        "C": "切除胸鎖乳突肌(sternocleidomastoid muscle)及以下組織",
-        "D": "切除已有轉移或可能有轉移癌的頸部淋巴組織"
+        "A": "Angle Class I malocclusion",
+        "B": "Angle Class II division 1 malocclusion",
+        "C": "Angle Class II division 2 malocclusion",
+        "D": "Angle Class III malocclusion"
       },
       "answer": "A",
       "explanation": "",
-      "disputed": true,
-      "answer_source": "vision-recheck-v2:A_dental2_102020_c302_s66.pdf"
+      "incomplete": "missing_image"
     },
     {
       "id": 102020022,
@@ -33309,12 +33302,12 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 80,
-      "question": "有關cone beam computerized tomography之敘述,下列何者錯誤?",
+      "question": "此研究之初步資料分析結果顯示吸菸（有吸菸相對於沒有吸菸）與口腔癌之粗勝算比（crudeodds ratio）為2.2，95%信賴區間為1.5~2.9，下列敘述何者正確？",
       "options": {
-        "A": "一次照射對患者輻射劑量介於52-1025 μSv",
-        "B": "一次照射對患者輻射劑量是4-77張數位環口攝影術(digital panoramic radiography)的劑量",
-        "C": "一次照射其輻射劑量等於在美國地區200天日照輻射劑量",
-        "D": "其輻射劑量是傳統頭部CT輻射劑量的51%~96%"
+        "A": "有口腔癌者和對照者的吸菸率沒有顯著差異",
+        "B": "吸菸與口腔癌之關係不可能受其他干擾因素（confounders）或偏差（bias）的影響",
+        "C": "吸菸與口腔癌之關係在統計上達顯著意義",
+        "D": "此結果足以證明「吸菸與口腔癌有因果關係存在」"
       },
       "answer": "C",
       "explanation": ""
@@ -44937,16 +44930,17 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 10,
-      "question": "有關預防拔錯牙與其處理,下列敘述何者錯誤?",
+      "question": "下圖所示，上顎第一大臼齒受到的力矩為多少gm-mm？",
       "options": {
-        "A": "拔牙前應再三與病人及助理確認身分與預拔牙齒之牙位,並確認該牙齒為何種原因必須被拔除",
-        "B": "當拔錯牙時,應盡早種回原位,並予以固定",
-        "C": "當拔錯牙後,如果牙齒在口外時間太長時,應考慮改為矯正、植牙或牙橋方式重建",
-        "D": "即使拔錯牙經過適當處理後,就可以隱瞞病人關於拔錯牙之情形"
+        "A": "1000",
+        "B": "2500",
+        "C": "5000",
+        "D": "6000"
       },
       "answer": "A",
       "explanation": "",
-      "vision_uncertain": false
+      "vision_uncertain": false,
+      "incomplete": "missing_image"
     },
     {
       "id": 103020011,
@@ -45189,12 +45183,12 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 22,
-      "question": "關於黏膜下前庭成形術(submucosal vestibuloplasty)的敘述,下列何者錯誤?",
+      "question": "在側面測顱X光片分析中，測量A-N perpendicular，其N perpendicular line是指下列何線？",
       "options": {
-        "A": "是將黏膜下組織切除或移位使頰側前庭的黏膜直接附著於骨膜上",
-        "B": "手術區必須要有足夠的黏膜,且術後不致改變唇部外觀",
-        "C": "必須將黏膜和黏膜下組織分離以建立黏膜下隧道",
-        "D": "需要用裂層(split-thickness)皮膚或腭黏膜移植"
+        "A": "第1條線，通過nasion點且垂直咬合面之線",
+        "B": "第2條線，通過nasion點且垂直Frankfort plane之線",
+        "C": "第3條線，通過nasion點且垂直S-N plane之線",
+        "D": "第4條線，通過nasion點且垂直地平面之線"
       },
       "answer": "B",
       "explanation": "",
@@ -45294,16 +45288,17 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 27,
-      "question": "根據美國癌症委員會的鱗狀細胞癌分期,下列舌癌的那一分期是為預防性頸部廓清術的適應症?",
+      "question": "8歲孩童的口內正面觀如下圖，對於這個病例正中門齒間隙（diastema）的敘述，下列何者錯誤？",
       "options": {
-        "A": "T2N0M0",
-        "B": "T3N0M0",
-        "C": "T2N1M0",
-        "D": "T3N2M0"
+        "A": "犬齒萌發時間隙可能會逐漸縮小",
+        "B": "須檢查是否有多生牙",
+        "C": "側門齒先天缺失可能導致門齒間隙",
+        "D": "由正中唇繫帶（labial frenum）造成"
       },
       "answer": "D",
       "explanation": "",
-      "vision_uncertain": false
+      "vision_uncertain": false,
+      "incomplete": "missing_image"
     },
     {
       "id": 103020028,
@@ -45798,12 +45793,12 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 51,
-      "question": "一個說話表達清楚但已知領有精神障礙證明的成年患者,因為牙痛獨自來門診求診,下列處置那 一個比較妥當?",
+      "question": "AIDS患者最常發生於口腔的併發惡性腫瘤是：",
       "options": {
-        "A": "如果是慢性牙髓炎,就先給予患者牙髓腔開擴術(open chamber)治療",
-        "B": "如果是已動搖很大,無法救治的牙周病牙齒,就先拔除掉並解決患者疼痛",
-        "C": "如果是牙齒周圍膿瘍(abscess formation),就先給予切開引流手術治療",
-        "D": "如果沒有家屬在場,先給予非侵入性牙齒治療"
+        "A": "Kaposi sarcoma",
+        "B": "Lymphoma",
+        "C": "Sarcoid",
+        "D": "Ewing's sarcoma"
       },
       "answer": "A",
       "explanation": "",
@@ -46134,16 +46129,17 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 67,
-      "question": "上顎第一大臼齒根叉骨破壞(furcation involvement)常因腭根(palatal root)之重疊使影像不 清,但若出現下列何種特殊影像即可確認此病變?",
+      "question": "根據美國疾病管制中心（Centers for Disease Control and Prevention，CDC）與美國各州及地區牙醫行政官員協會（Association of State and Territorial Dental Directors，ASTDD）於2003年聯合出版的基本篩檢調查方法（Basic Screening Survey），下圖案例箭頭所指部位應歸類為何？",
       "options": {
-        "A": "正立的J形",
-        "B": "倒立的J形",
-        "C": "正立的A形",
-        "D": "倒立的A形"
+        "A": "無須治療，因為還是乳牙",
+        "B": "一般牙醫處置",
+        "C": "急需治療",
+        "D": "無法判定"
       },
       "answer": "C",
       "explanation": "",
-      "vision_uncertain": false
+      "vision_uncertain": false,
+      "incomplete": "missing_image"
     },
     {
       "id": 103020068,
@@ -51672,17 +51668,16 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 19,
-      "question": "牙科植體與下顎管之間最小的安全距離為何?",
+      "question": "此圖片為十三歲男性矯正患者之口內右邊頰側照片及側面測顱放射線片，請問下列何者是最適切的咬合異常診斷？",
       "options": {
-        "A": "0.5 mm",
-        "B": "1 mm",
-        "C": "1.5 mm",
-        "D": "2 mm"
+        "A": "Angle Class I with anterior open bite",
+        "B": "Angle Class II with anterior open bite",
+        "C": "Angle Class I with anterior crossbite",
+        "D": "Angle Class II with anterior crossbite"
       },
       "answer": "A",
       "explanation": "",
-      "disputed": true,
-      "answer_source": "vision-recheck-v2:A_dental2_103090_c302_s66.pdf"
+      "incomplete": "missing_image"
     },
     {
       "id": 103090020,
@@ -52962,17 +52957,15 @@
       "subject_name": "卷四",
       "stage_id": 0,
       "number": 80,
-      "question": "接受放射線治療後病人容易產生齲齒,有關此類齲齒之敘述何者錯誤?",
+      "question": "依據醫療法第70條規定：醫院、診所之病歷，至少應保存幾年？",
       "options": {
-        "A": "牙齒受到輻射直接傷害,產生齲齒",
-        "B": "唾液腺受到輻射傷害,唾液減少,產生齲齒",
-        "C": "常見發生於多顆牙齒",
-        "D": "常見發生於齒頸部"
+        "A": "5年",
+        "B": "7年",
+        "C": "12年",
+        "D": "15年"
       },
       "answer": "B",
-      "explanation": "",
-      "disputed": true,
-      "answer_source": "vision-recheck-v2:A_dental2_103090_c302_s66.pdf"
+      "explanation": ""
     },
     {
       "id": 115024701,
@@ -57261,15 +57254,16 @@
       "subject_name": "牙科材料",
       "stage_id": 0,
       "number": 53,
-      "question": "下列何者不是發育源自dental follicle?",
+      "question": "在其他條件不變下，將牙橋連接體的矢狀切面（sagittal section）高度減半，牙橋的彎曲度（deflection）成為幾倍？",
       "options": {
-        "A": "Enamel and dentin",
-        "B": "Cementum",
-        "C": "Periodontal ligament",
-        "D": "Alveolar bone"
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "D",
+      "explanation": "",
+      "incomplete": "option_order_unverified"
     },
     {
       "id": "104020_55_54",
@@ -71135,15 +71129,16 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 0,
       "number": 20,
-      "question": "下列那一種微生物(microorganism)比較不常引起齒源性感染(odontogenic infection)?",
+      "question": "附圖為牙齒移動與矯正力間的相互關係，最適合的矯正力量（optimal force）為a～d中的那一點？",
       "options": {
-        "A": "Aerobic gram-positive cocci",
-        "B": "Aerobic gram-positive rods",
-        "C": "Anaerobic gram-positive cocci",
-        "D": "Anaerobic gram-negative rods"
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "option_order_unverified"
     },
     {
       "id": "105020_66_21",
@@ -94474,7 +94469,9 @@
       "answer": "C",
       "explanation": "",
       "case_context": "第 53 題：如下圖所示，一位9歲男童因左臉頰無痛性腫脹而來求診，依據此影像檢查的鑑別診斷，下列那一項最合 理？（請依序回答下列2題）",
-      "no_image_in_source": true
+      "images": [
+        "/question-images/dental2_107020_q53_full.webp"
+      ]
     },
     {
       "id": 115021474,
@@ -122569,7 +122566,7 @@
       "subject_name": "口腔診斷/影像",
       "stage_id": 0,
       "number": 4,
-      "question": "下圖表示上顎門齒牙冠承受舌側施力，M F 為力量施於牙齒後產生之力矩，M",
+      "question": "下圖表示上顎門齒牙冠承受舌側施力，MF為力量施於牙齒後產生之力矩，MC為力偶（couple）產生的抵消力矩（counterbalancing moment），下列何者屬於整體位移（bodily movement）？",
       "options": {
         "A": "圖A",
         "B": "圖B",
@@ -134638,10 +134635,10 @@
       "number": 52,
       "question": "在金屬瓷冠中,有關金屬與瓷之線性熱膨脹係數間,最佳的關係與瓷內部殘餘應力(residual stress)之敘 述,下列何者正確?",
       "options": {
-        "A": "金屬比瓷小0.5×10-6/°C,瓷內部呈抗張應力(tensile stress)狀態",
-        "B": "金屬比瓷大0.5×10-6/°C,瓷內部呈抗張應力(tensile stress)狀態",
-        "C": "金屬比瓷小0.5×10-6/°C之內,瓷內部呈壓縮應力(compressive stress)狀態",
-        "D": "金屬比瓷大0.5×10-6/°C之內,瓷內部呈壓縮應力(compressive stress)狀態"
+        "A": "金屬比瓷小0.5×10⁻⁶/°C,瓷內部呈抗張應力(tensile stress)狀態",
+        "B": "金屬比瓷大0.5×10⁻⁶/°C,瓷內部呈抗張應力(tensile stress)狀態",
+        "C": "金屬比瓷小0.5×10⁻⁶/°C之內,瓷內部呈壓縮應力(compressive stress)狀態",
+        "D": "金屬比瓷大0.5×10⁻⁶/°C之內,瓷內部呈壓縮應力(compressive stress)狀態"
       },
       "answer": "D"
     },
@@ -190546,7 +190543,8 @@
         "D": "探測出血（bleeding on probing）"
       },
       "answer": "D",
-      "disputed": true
+      "disputed": true,
+      "incomplete": "option_order_unverified"
     },
     {
       "id": "114090_2_57",
@@ -203197,10 +203195,10 @@
       "number": 63,
       "question": "瓷融合金屬冠的瓷與金屬間，應有相配合的熱膨脹係數，試問兩者間的係數差距應保持在多少以內？",
       "options": {
-        "A": "0.5×10-6/℃",
-        "B": "5×10-6/℃",
-        "C": "0.5×10-3/℃",
-        "D": "5×10-3/℃"
+        "A": "0.5×10⁻⁶/℃",
+        "B": "5×10⁻⁶/℃",
+        "C": "0.5×10⁻³/℃",
+        "D": "5×10⁻³/℃"
       },
       "answer": "A"
     },

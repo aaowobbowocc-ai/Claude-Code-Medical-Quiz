@@ -26988,7 +26988,9 @@
       },
       "answer": "D",
       "explanation": "",
-      "no_image_in_source": true
+      "images": [
+        "/question-images/rt_1278_0.webp"
+      ]
     },
     {
       "id": 1280,
@@ -69202,7 +69204,10 @@
         "D": "②③④"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/rt_3279_0.webp"
+      ]
     },
     {
       "id": 3281,
@@ -74798,7 +74803,7 @@
       "question": "關於 pH 與氫離子濃度的敘述，何者錯誤？",
       "options": {
         "A": "pH = -log 10 〔H + 〕，代表溶液中氫離子活性",
-        "B": "pH = 7.0 代表氫離子濃度為 1x 10 -7 nmol/L",
+        "B": "pH = 7.0 代表氫離子濃度為 1x10⁻⁷ nmol/L",
         "C": "pH 值降低代表氫離子濃度增加",
         "D": "pH = 7.40 代表〔H + 〕為 40 nmol/L"
       },
@@ -111091,7 +111096,7 @@
       "subject_name": "呼吸疾病學",
       "stage_id": 0,
       "number": 68,
-      "question": "給予一氧化氮吸入治療時，須監測下列那兩項參數？①N 2 ②NO ③N 2 O ④NO 2",
+      "question": "給予一氧化氮吸入治療時，須監測下列那兩項參數？①N2 ②NO ③N2O ④NO2",
       "options": {
         "A": "僅①②",
         "B": "僅①④",
@@ -118091,7 +118096,9 @@
       },
       "answer": "A",
       "explanation": "",
-      "no_image_in_source": true
+      "images": [
+        "/question-images/rt_106020_44_79_0.webp"
+      ]
     },
     {
       "id": "106020_55_1",
@@ -129893,7 +129900,10 @@
         "D": "①②③④"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/rt_106100_55_79_0.webp"
+      ]
     },
     {
       "id": "106100_66_1",
@@ -139999,7 +140009,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "no_image_in_source": true
+      "images": [
+        "/question-images/rt_107020_55_79_0.webp"
+      ]
     },
     {
       "id": "107020_66_1",
@@ -176439,7 +176451,7 @@
       "subject_name": "呼吸治療儀器設備學",
       "stage_id": 0,
       "number": 50,
-      "question": "二氧化碳對紅外線的吸收，主要受到何種氣體的干擾？①H2O②NO 2 ③N 2 O④O 2",
+      "question": "二氧化碳對紅外線的吸收，主要受到何種氣體的干擾？①H2O②NO2③N2O④O2",
       "options": {
         "A": "僅①②",
         "B": "僅①③",
@@ -188850,7 +188862,9 @@
       },
       "answer": "B",
       "explanation": "",
-      "no_image_in_source": true
+      "images": [
+        "/question-images/rt_109100_p0_76_0.webp"
+      ]
     },
     {
       "id": "109100_44_78",
@@ -192281,7 +192295,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "no_image_in_source": true
+      "images": [
+        "/question-images/rt_109100_66_79_0.webp"
+      ]
     },
     {
       "id": "110100_11_1",
@@ -192789,7 +192805,9 @@
       },
       "answer": "C",
       "explanation": "",
-      "no_image_in_source": true
+      "images": [
+        "/question-images/rt_110100_11_23_0.webp"
+      ]
     },
     {
       "id": "110100_11_25",
@@ -199044,7 +199062,10 @@
         "D": "調低吸氣時間"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/rt_110100_44_79_0.webp"
+      ]
     },
     {
       "id": "110100_55_1",
@@ -255894,7 +255915,7 @@
       "subject_name": "基礎呼吸治療學",
       "stage_id": 0,
       "number": 72,
-      "question": "關於吐氣末二氧化碳分壓（P CO）減少的原因，下列敘述何者錯誤？ET 2",
+      "question": "關於吐氣末二氧化碳分壓（PETCO2）減少的原因，下列敘述何者錯誤？",
       "options": {
         "A": "有效通氣增加",
         "B": "二氧化碳產生減少",
@@ -256483,7 +256504,7 @@
       "subject_name": "呼吸治療儀器設備學",
       "stage_id": 0,
       "number": 23,
-      "question": "血液氣體分析的PCO2電極常用下列那兩種濃度（％）的CO混合氣做低、高點校正？2",
+      "question": "血液氣體分析的PCO2電極常用下列那兩種濃度（％）的CO2混合氣做低、高點校正？",
       "options": {
         "A": "0、10",
         "B": "5、10",
@@ -256825,7 +256846,7 @@
       "subject_name": "呼吸治療儀器設備學",
       "stage_id": 0,
       "number": 41,
-      "question": "下列何者不是影響經皮血氧分壓（P O）監測結果的主要因素？tc 2",
+      "question": "下列何者不是影響經皮血氧分壓（PtcO2）監測結果的主要因素？",
       "options": {
         "A": "皮膚的色澤",
         "B": "皮膚的厚度",
@@ -256977,12 +256998,12 @@
       "subject_name": "呼吸治療儀器設備學",
       "stage_id": 0,
       "number": 49,
-      "question": "對於尖峰吸氣壓力（PIP）或高原壓力（P）的敘述，下列何者錯誤？plat",
+      "question": "對於尖峰吸氣壓力（PIP）或高原壓力（Pplat）的敘述，下列何者錯誤？",
       "options": {
         "A": "尖峰吸氣壓力（PIP）主要是克服呼吸系統所有阻力的總和",
         "B": "尖峰吸氣壓力（PIP）主要是維持肺泡擴張所需的彈性力（elastic force）",
-        "C": "監測高原壓力（P）有助於預防氣壓傷（barotrauma）plat",
-        "D": "尖峰吸氣壓力（PIP）和高原壓力（P）之間的壓力差，代表克服氣道阻力所需的壓力plat"
+        "C": "監測高原壓力（Pplat）有助於預防氣壓傷（barotrauma）",
+        "D": "尖峰吸氣壓力（PIP）和高原壓力（Pplat）之間的壓力差，代表克服氣道阻力所需的壓力"
       },
       "answer": "B"
     },
@@ -261672,7 +261693,7 @@
       "subject_name": "呼吸疾病學",
       "stage_id": 0,
       "number": 51,
-      "question": "下列何種情形會造成吐氣末二氧化碳（end tidal CO）突然上升？2",
+      "question": "下列何種情形會造成吐氣末二氧化碳（end tidal CO2）突然上升？",
       "options": {
         "A": "心輸出量（cardiac output）突然下降",
         "B": "突然換氣過度（sudden hyperventilation）",

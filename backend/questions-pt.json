@@ -63081,8 +63081,8 @@
       "options": {
         "A": "0.1",
         "B": "0.2",
-        "C": "2 × 10 -3",
-        "D": "4 × 10 -3"
+        "C": "2 ×10⁻³",
+        "D": "4 ×10⁻³"
       },
       "answer": "C",
       "explanation": "",
@@ -129270,7 +129270,8 @@
         "/question-images/pt_6186_1.webp",
         "/question-images/pt_6186_2.webp",
         "/question-images/pt_6186_3.webp"
-      ]
+      ],
+      "incomplete": "option_order_unverified"
     },
     {
       "id": 6187,
@@ -130310,7 +130311,8 @@
         "D": "在較吵雜的環境中觀察個案分心及維持注意力的表現，可以初步了解是否有注意力的損傷"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "option_order_unverified"
     },
     {
       "id": 6239,
@@ -157779,15 +157781,16 @@
       "subject_name": "心肺與小兒物理治療",
       "stage_id": 3,
       "number": 5,
-      "question": "下列何者是全身水療之心臟血管生理效應?①增加靜脈回流 ②增加心輸出量 ③減少靜脈回流 ④減少心輸出量 ⑤增加心臟容積",
+      "question": "下列何者最有可能是肺臟纖維化患者的流速－肺容積圖？",
       "options": {
-        "A": "僅①②⑤",
-        "B": "僅③④⑤",
-        "C": "僅①④",
-        "D": "僅②③"
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "option_order_unverified"
     },
     {
       "id": 7606,
@@ -159887,15 +159890,16 @@
       "subject_name": "神經疾病物理治療",
       "stage_id": 1,
       "number": 30,
-      "question": "張老太太是肺纖維化病人,其功能肺餘量(functional residual capacity)與正常人相比會如何變化?原因為何?",
+      "question": "脊髓損傷患者的右側肢體經評估結果如下表，其脊髓機能損傷等級為何？",
       "options": {
-        "A": "增加;肋膜間壓(intrapleural pressure)的壓力變小",
-        "B": "增加;肋膜間壓(intrapleural pressure)的壓力變大",
-        "C": "減少;肺泡壓(alveolar pressure)與肋膜間壓(intrapleural pressure)的壓力差變大",
-        "D": "減少;肺泡壓(alveolar pressure)與肋膜間壓(intrapleural pressure)的壓力差變小"
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "option_order_unverified"
     },
     {
       "id": 7471,
@@ -163094,12 +163098,12 @@
       "subject_name": "物理治療基礎學",
       "stage_id": 4,
       "number": 30,
-      "question": "張老太太是肺纖維化病人，其功能肺餘量（functional residual capacity）與正常人相比會如何變化？原因為 何？",
+      "question": "張老太太是肺纖維化病⼈，其功能肺餘量（functional residual capacity）與正常⼈相比會如何變化？原因為何？",
       "options": {
-        "A": "增加；肋膜間壓（intrapleural pressure）的壓力變小",
-        "B": "增加；肋膜間壓（intrapleural pressure）的壓力變大",
-        "C": "減少；肺泡壓（alveolar pressure）與肋膜間壓（intrapleural pressure）的壓力差變大",
-        "D": "減少；肺泡壓（alveolar pressure）與肋膜間壓（intrapleural pressure）的壓力差變小"
+        "A": "增加；肋膜間壓（intrapleural pressure）的壓⼒變⼩",
+        "B": "增加；肋膜間壓（intrapleural pressure）的壓⼒變⼤",
+        "C": "減少；肺泡壓（alveolar pressure）與肋膜間壓（intrapleural pressure）的壓⼒差變⼤",
+        "D": "減少；肺泡壓（alveolar pressure）與肋膜間壓（intrapleural pressure）的壓⼒差變⼩"
       },
       "answer": "C",
       "explanation": ""
@@ -166945,7 +166949,7 @@
       "subject_name": "物理治療技術學",
       "stage_id": 6,
       "number": 61,
-      "question": "執行拇指腕掌關節（1 st",
+      "question": "執行拇指腕掌關節（1st CMC）屈曲與伸直的活動度量測時，依據挪京氏（Norkin）建議的量測方法，下列敘述何者正確？",
       "options": {
         "A": "受測者採坐姿，前臂與手腕都放在正中位置",
         "B": "只需固定橈骨與尺骨",
@@ -177086,15 +177090,16 @@
       "subject_name": "心肺與小兒物理治療",
       "stage_id": 3,
       "number": 6,
-      "question": "王小姐被診斷出右肩沾黏性關節囊炎(adhesive capsulitis),物理治療師打算在執行牽拉運動前先提高肩部組織溫度,以避免軟組織在牽拉過程中受傷。下列何種物理因子最適合?",
+      "question": "下列何者最有可能是抽菸導致之慢性阻塞性肺疾病人的流速－肺容積圖？",
       "options": {
-        "A": "超音波",
-        "B": "鼓狀電極（drum electrode）短波",
-        "C": "片狀電極（pad electrodes）短波",
-        "D": "熱敷包"
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "option_order_unverified"
     },
     {
       "id": 8565,
@@ -208208,8 +208213,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/pt_110101_p0_33_0.webp",
-      "no_image_in_source": true
+      "no_image_in_source": true,
+      "incomplete": "missing_image"
     },
     {
       "id": 2192,
@@ -222937,7 +222942,7 @@
       "subject_name": "骨科疾病物理治療",
       "stage_id": 5,
       "number": 45,
-      "question": "某患者抱怨工作時大拇指底部疼痛，經評估發現第一腕掌關節（1 st",
+      "question": "某患者抱怨工作時大拇指底部疼痛，經評估發現第一腕掌關節（1st carpometacarpal joint）動作範圍受限且符合關節囊受限型態（capsular pattern）。針對其最嚴重的受限動作施予關節鬆動術，下列那個方向最恰當？",
       "options": {
         "A": "腹側滑動（volar glide）",
         "B": "背側滑動（dorsal glide）",
@@ -229616,7 +229621,6 @@
       },
       "answer": "B",
       "explanation": "",
-      "image_url": "/question-images/pt_111100_p1_55_0.webp",
       "images": [
         "/question-images/pt_3254_0.webp"
       ]
@@ -229641,7 +229645,9 @@
       "answer": "A",
       "explanation": "",
       "case_context": "第 56 題：根據下方家庭所得統計圖，此圖屬於何種分布？",
-      "image_url": "/question-images/pt_111100_p1_55_0.webp"
+      "images": [
+        "/question-images/pt_3254_0.webp"
+      ]
     },
     {
       "id": 3256,
@@ -267156,15 +267162,16 @@
       "subject_name": "物理治療學概論",
       "stage_id": 2,
       "number": 4,
-      "question": "人在虛擬實境的環境中，會隨著所感知到的環境變化而產生即時因應的動作。此種「感知－行動配對」（perception-action coupling）現象用下列那一種動作控制理論來解釋最為合適？",
+      "question": "有關國際身心健康功能與身心障礙分類系統（ICF）編碼系統的限定值（qualifier）所標明數字是「9」，意指下列何者？",
       "options": {
-        "A": "反射理論（reflex theory）",
-        "B": "系統理論（systems theory）",
-        "C": "動態系統理論（dynamical systems theory）",
-        "D": "生態學理論（ecological theory）"
+        "A": "沒有問題",
+        "B": "嚴重問題",
+        "C": "全部有問題",
+        "D": "不適用"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "option_order_unverified"
     },
     {
       "id": 5123,
@@ -268759,7 +268766,7 @@
       "subject_name": "神經疾病物理治療",
       "stage_id": 4,
       "number": 4,
-      "question": " 人在虛擬實境的環境中，會隨著所感知到的環境變化而產生即時因應的動作。此種「感知－行動配對」 （perception-action coupling）現象用下列那一種動作控制理論來解釋最為合適？",
+      "question": "人在虛擬實境的環境中，會隨著所感知到的環境變化而產生即時因應的動作。此種「感知－行動配對」（perception-action coupling）現象用下列那一種動作控制理論來解釋最為合適？",
       "options": {
         "A": "反射理論（reflex theory）",
         "B": "系統理論（systems theory）",
@@ -273397,15 +273404,16 @@
       "subject_name": "心肺與小兒物理治療",
       "stage_id": 6,
       "number": 75,
-      "question": "魏先生搭乘飛機返臺後，突然覺得頭暈無力，經送醫救治後，狀況快速惡化並送入加護病房，經診斷為基蘭－巴瑞氏症候群。對於該疾病的敘述，下列何者正確？",
+      "question": "關於兒童燒燙傷，下列敘述何者正確？",
       "options": {
-        "A": "此疾病發作前必定有前驅症狀可供察覺",
-        "B": "影響範圍僅限於肢端，不會損及顏面、口腔或呼吸功能",
-        "C": "開始發生症狀時，往往不會發燒，但回顧病史可能發現有類似感冒症狀",
-        "D": "若以肌電圖檢查評估該疾病個案，其測試結果大多正常"
+        "A": "全皮層（full-thickness）燒燙傷因神經末梢也被破壞，因此患者完全不會有疼痛問題",
+        "B": "一歲的幼兒因意外造成頭部前後側均燙傷，則其燙傷面積約占體表面積的9%",
+        "C": "兒童燒燙傷的處理原則及方法與成人完全相同，但介入活動需考量到兒童的發展狀況",
+        "D": "兒童的皮膚較薄，同樣的傷害事件對兒童造成的燒燙傷深度很可能比成人更深"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "option_order_unverified"
     },
     {
       "id": 234,
@@ -277755,8 +277763,8 @@
       },
       "answer": "A",
       "explanation": "",
-      "image_url": "/question-images/pt_114020_p1_49_0.webp",
-      "no_image_in_source": true
+      "no_image_in_source": true,
+      "incomplete": "missing_image"
     },
     {
       "id": 368,
@@ -279882,7 +279890,7 @@
       "subject_name": "神經疾病物理治療",
       "stage_id": 4,
       "number": 75,
-      "question": " 魏先生搭乘飛機返臺後，突然覺得頭暈無力，經送醫救治後，狀況快速惡化並送入加護病房，經診 斷為基蘭－巴瑞氏症候群。對於該疾病的敘述，下列何者正確？",
+      "question": "魏先生搭乘飛機返臺後，突然覺得頭暈無力，經送醫救治後，狀況快速惡化並送入加護病房，經診斷為基蘭－巴瑞氏症候群。對於該疾病的敘述，下列何者正確？",
       "options": {
         "A": "此疾病發作前必定有前驅症狀可供察覺",
         "B": "影響範圍僅限於肢端，不會損及顏面、口腔或呼吸功能",
@@ -280979,7 +280987,7 @@
       "subject_name": "骨科疾病物理治療",
       "stage_id": 5,
       "number": 49,
-      "question": "一位業餘高爾夫球運動員，苦於右髖外側疼痛，經診斷為大轉子滑囊炎（trochanteric",
+      "question": "一位業餘高爾夫球運動員，苦於右髖外側疼痛，經診斷為大轉子滑囊炎（trochantericbursitis）而接受物理治療，目前已進入回到功能（return to function）階段，下列處理原則和方法，何者錯誤？",
       "options": {
         "A": "應增加肌力離心收縮訓練和速度控制下的功能動作訓練",
         "B": "以漸進式閉鎖鏈、功能性訓練，強化平衡、神經肌肉控制和肌耐力",
@@ -282805,15 +282813,16 @@
       "subject_name": "心肺與小兒物理治療",
       "stage_id": 6,
       "number": 60,
-      "question": "小明的伯父被診斷為脊髓小腦萎縮症已經3年，下列敘述何者與此診斷無直接關係？",
+      "question": "一般而言，根據患有泛自閉症障礙症候群兒童常見的症狀，分析其在學校中的活動和參與問題，下列敘述何者正確？",
       "options": {
-        "A": "可維持睜眼的靜態站姿平衡超過30秒，但閉眼的靜態站姿平衡無法超過3秒",
-        "B": "可以自己走路，但是總是雙腳開開的，像企鵝一樣左搖右擺",
-        "C": "本體感覺測試時反應較慢，需要大動作變化才知道",
-        "D": "記性變得很差，總是忘記何時該吃甚麼藥"
+        "A": "全身性張力過高，使其在外行動出現問題",
+        "B": "動作模仿困難及重複性行為干擾，使其進行球類活動時，難以執行丟接球的複雜動作步驟",
+        "C": "感知覺能力受損，使其和同儕互動時出現過多的眼神接觸和指物等非口語行為",
+        "D": "對人的注意力高於物體，使其在團體生活中常出現衝動性的行為"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "option_order_unverified"
     },
     {
       "id": 1179,
@@ -289248,7 +289257,7 @@
       "subject_name": "神經疾病物理治療",
       "stage_id": 4,
       "number": 60,
-      "question": " 小明的伯父被診斷為脊髓小腦萎縮症已經3年，下列敘述何者與此診斷無直接關係？",
+      "question": "小明的伯父被診斷為脊髓小腦萎縮症已經3年，下列敘述何者與此診斷無直接關係？",
       "options": {
         "A": "可維持睜眼的靜態站姿平衡超過30秒，但閉眼的靜態站姿平衡無法超過3秒",
         "B": "可以自己走路，但是總是雙腳開開的，像企鵝一樣左搖右擺",
@@ -294429,8 +294438,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "image_url": "/question-images/pt_115020_p2_76_0.webp",
-      "no_image_in_source": true
+      "no_image_in_source": true,
+      "incomplete": "missing_image"
     },
     {
       "id": 955,
@@ -304504,7 +304513,7 @@
       "subject_name": "心肺與小兒物理治療",
       "stage_id": 6,
       "number": 21,
-      "question": "檢視患者第一秒用力吐氣體積與用力吐氣肺活量比值（FEV/FVC）的目的為何？1",
+      "question": "檢視患者第一秒用力吐氣體積與用力吐氣肺活量比值（FEV1/FVC）的目的為何？",
       "options": {
         "A": "評估呼吸系統的最大負荷",
         "B": "評估氣道阻塞的程度",

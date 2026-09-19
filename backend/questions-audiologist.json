@@ -5290,7 +5290,10 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "special_high",
-    "_legacy_id": 30002054
+    "_legacy_id": 30002054,
+    "images": [
+      "/question-images/audiologist_audiologist_100090_p3_69_0.webp"
+    ]
   },
   {
     "id": "audiologist_100090_p3_71",
@@ -12184,7 +12187,9 @@
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30002424,
-    "no_image_in_source": true
+    "images": [
+      "/question-images/audiologist_audiologist_100140_p2_48_0.webp"
+    ]
   },
   {
     "id": "audiologist_100140_p2_50",
@@ -12207,7 +12212,10 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30002425
+    "_legacy_id": 30002425,
+    "images": [
+      "/question-images/audiologist_audiologist_100140_p2_48_0.webp"
+    ]
   },
   {
     "id": "audiologist_100140_p2_51",
@@ -13561,9 +13569,9 @@
     "question": "我們通常用一個國際標準dB SPL(sound pressure level)來表示聲音的測量值,若一聲音為60 dB SPL,",
     "options": {
       "A": "則此聲音之聲壓為:",
-      "B": "2×10-2 Newton/m2",
-      "C": "2×10-3 Newton/m2",
-      "D": "2×10-4 Newton/m2 2×10-5 Newton/m2"
+      "B": "2×10⁻² Newton/m2",
+      "C": "2×10⁻³ Newton/m2",
+      "D": "2×10⁻⁴ Newton/m2 2×10⁻⁵ Newton/m2"
     },
     "answer": "A",
     "explanation": "",
@@ -37652,7 +37660,7 @@
     "subject_name": "電生理聽力學",
     "stage_id": 0,
     "number": 37,
-    "question": "新生兒聽篩通常使用那些工具?①ASSR ②Automatic ABR ③ART ④OAE",
+    "question": "新生兒聽篩通常使用那些工具？①ASSR ②Automatic ABR ③ART ④OAE",
     "options": {
       "A": "①③",
       "B": "②④",
@@ -41910,7 +41918,9 @@
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003137,
-    "no_image_in_source": true
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_60_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_62",
@@ -42006,7 +42016,10 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30003141
+    "_legacy_id": 30003141,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_64_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_66",
@@ -42080,7 +42093,9 @@
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003144,
-    "no_image_in_source": true
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_67_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_69",
@@ -42151,7 +42166,10 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30003146
+    "_legacy_id": 30003146,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_70_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_72",
@@ -59482,7 +59500,9 @@
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30004781,
-    "no_image_in_source": true
+    "images": [
+      "/question-images/audiologist_102110_q25_patrol.webp"
+    ]
   },
   {
     "id": "audiologist_102110_p3_27",
@@ -63940,7 +63960,10 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30004964
+    "_legacy_id": 30004964,
+    "images": [
+      "/question-images/audiologist_audiologist_102110_p5_59_0.webp"
+    ]
   },
   {
     "id": "audiologist_102110_p5_61",
@@ -64413,12 +64436,12 @@
     "paper_id": "paper4",
     "stage_id": 0,
     "number": 1,
-    "question": "分別提供聽損嬰幼兒和成人不同目標值的選配公式為何?1FIG6",
+    "question": "分別提供聽損嬰幼兒和成人不同目標值的選配公式為何？①FIG6②DSL[i/o]③DSLm[i/o]④NAL-NL1 ⑤NAL-NL2",
     "options": {
-      "A": "2DSL[i/o]",
-      "B": "3DSLm[i/o]",
-      "C": "4NAL-NL1 5NAL-NL2",
-      "D": "125"
+      "A": "①②⑤",
+      "B": "③⑤",
+      "C": "①③⑤",
+      "D": "②④"
     },
     "answer": "B",
     "explanation": "",
@@ -68201,7 +68224,7 @@
       "C": "閾值比MAF 閾值大約多6~10 dB",
       "D": "MAP 測的是單耳的閾值,MAF 測的是兩耳的閾值 MAP 與MAF 閾值差異是由於聲場背景噪音的緣故 MAP 閾值是以耳機測得,MAF 閾值是在聲場測得"
     },
-    "answer": "B",
+    "answer": "C",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006756
@@ -68683,7 +68706,7 @@
       "C": "1 %",
       "D": "2.5 % 5.5 % 7.5 %"
     },
-    "answer": "B",
+    "answer": "C",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006778
@@ -68706,7 +68729,7 @@
       "C": "Spectrum analyzer",
       "D": "Frequency counter"
     },
-    "answer": "D",
+    "answer": "B",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006779
@@ -68729,7 +68752,7 @@
       "C": "3 and 4 cm3",
       "D": "2 cm 3 and 6 cm3 6 cm 3 and 4 cm3 6 cm 3 and 2 cm3"
     },
-    "answer": "A",
+    "answer": "D",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006780
@@ -68752,7 +68775,7 @@
       "C": "2000 Hz",
       "D": "8000 Hz"
     },
-    "answer": "B",
+    "answer": "A",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006781
@@ -68880,7 +68903,7 @@
       "C": "dB A",
       "D": "dB SL dB SPL"
     },
-    "answer": "C",
+    "answer": "A",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006787
@@ -68903,7 +68926,7 @@
       "C": "+5 dB",
       "D": "+10 dB"
     },
-    "answer": "C",
+    "answer": "A",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006788
@@ -69158,7 +69181,7 @@
       "C": "點鐘7",
       "D": "11點鐘"
     },
-    "answer": "C",
+    "answer": "B",
     "explanation": "",
     "_legacy_id": 114100060830
   },
@@ -69473,7 +69496,7 @@
       "C": "20:1",
       "D": "17:1"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": "",
     "_legacy_id": 114100060832
   },
@@ -69558,7 +69581,7 @@
       "C": "-volley theory",
       "D": "resonance place theory traveling wave theory temporal theory"
     },
-    "answer": "A",
+    "answer": "B",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006815
@@ -69581,7 +69604,7 @@
       "C": "Cochlear nuclei",
       "D": "Inferior colliculus"
     },
-    "answer": "A",
+    "answer": "C",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006816
@@ -70825,7 +70848,10 @@
     },
     "answer": "B",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/audiologist_audiologist_103100_s0903_53_0.webp"
+    ]
   },
   {
     "id": "audiologist_103100_s0903_55",
@@ -82006,7 +82032,7 @@
       "C": "自我壓抑",
       "D": "唇腭裂兒童出現中耳疾病的機率比一般人高,可能影響言語發展但不影響語言發展 唇腭裂個案常因腭咽閉鎖不全而有共鳴異常的現象,評估腭咽機能最可靠的方式是使用鼻流計 (nasometer) 唇腭裂個案是構音異常的高危險群,也可能出現代償性的構音錯誤如喉塞音(glottal stop)"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003631
@@ -82626,7 +82652,7 @@
       "C": "小莉早上起床後一陣頭暈、耳脹,當天左耳低頻聽閾變差30 dB,這個情況之前發生過,左耳聽閾",
       "D": "起起伏伏 小葉中午感到右耳有很嚴重的耳鳴,當天右耳聽閾變差50 dB,這個情況之前從未發生過 小梅左耳高頻聽損60 dB HL,左耳聽性腦幹反應第III、V 波潛時均明顯延長"
     },
-    "answer": "A",
+    "answer": "C",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003659
@@ -82670,7 +82696,7 @@
       "C": "聽反射檢查",
       "D": "耳聲傳射檢查 語音聽力檢查 純音聽力檢查"
     },
-    "answer": "D",
+    "answer": "B",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003661
@@ -82693,7 +82719,7 @@
       "C": "個案的ABR 各波消失不出現,CAPD 個案的ABR 各波消失不出現",
       "D": "AD 個案的ABR 各波消失不出現,CAPD 個案的ABR 各波潛時在正常範圍內 AD 個案的ABR 各波潛時在正常範圍內,CAPD 個案的ABR 各波消失不出現 AD 個案的ABR 各波潛時在正常範圍內,CAPD 個案的ABR 各波潛時在正常範圍內"
     },
-    "answer": "C",
+    "answer": "B",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003662
@@ -82737,7 +82763,7 @@
       "C": "自足式方案",
       "D": "融合方案 合作/諮詢模式"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003664
@@ -82760,7 +82786,7 @@
       "C": "命名不能型失語症",
       "D": "傳導型失語症 經皮質感覺型失語症"
     },
-    "answer": "B",
+    "answer": "A",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003665
@@ -82804,7 +82830,7 @@
       "C": "基底神經節(basal ganglia)",
       "D": "運動皮質(motor cortex) 錐體束(pyramidal tract)"
     },
-    "answer": "C",
+    "answer": "B",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003667
@@ -82892,7 +82918,7 @@
       "C": "2若學童沒有回應時,停下來看著他,以目觸方式促請其提出要求",
       "D": "3如果學童仍然未使用目標語言或溝通行為提出要求時,則使用問題提示他 4當學童可以使用目標語言或溝通行為提出要求時,給予其所需要的協助 5如果學童還是沒有回應,說出目標語言結構,要求兒童仿說 1→2→3→4→5 4→1→2→5→3 1→4→2→3→5 4→3→1→2→5"
     },
-    "answer": "D",
+    "answer": "C",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003671
@@ -82936,7 +82962,7 @@
       "C": "專業倫理二:聽語人員與執照",
       "D": "專業倫理三:聽語人員與社會 專業倫理四:聽語人員與共同工作者"
     },
-    "answer": "A",
+    "answer": "D",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003673
@@ -82959,7 +82985,7 @@
       "C": "其發生之速度極為快速,罹患此疾病者會經歷所有的症狀",
       "D": "其發生率大約是每10 萬人有10 至20 人"
     },
-    "answer": "B",
+    "answer": "A",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003674
@@ -82982,7 +83008,7 @@
       "C": "英語中有5 個是有聲的擦音(fricative)",
       "D": "滑音(glides)是英語中唯一不在口腔中發聲,而是以振動鼻腔中聲波所發出的音"
     },
-    "answer": "D",
+    "answer": "A",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003675
@@ -83005,7 +83031,7 @@
       "C": "24 dB HL 以上",
       "D": "25 dB HL 以上"
     },
-    "answer": "A",
+    "answer": "B",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003676
@@ -83027,7 +83053,7 @@
       "C": "24 dB HL 以上",
       "D": "25 dB HL 以上"
     },
-    "answer": "B",
+    "answer": "D",
     "explanation": "",
     "_legacy_id": 114100060840
   },
@@ -83049,7 +83075,7 @@
       "C": "小雄經常罹患中耳炎,父母每次都帶他至醫院接受治療,但中耳炎還是反覆發生",
       "D": "小安的哥哥曾經被診斷為音韻障礙,經過6 個月的語言治療後終於跟上同儕的發展 小靜的家境不錯,父母都是忙碌的白領階級,總是輪流加班,很少有一起準時下班回家陪她的機會"
     },
-    "answer": "C",
+    "answer": "A",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003677
@@ -83095,7 +83121,7 @@
       "C": "在臺灣擔任手語翻譯員必須通過屬於國家級的證照考試",
       "D": "手語翻譯員為能維持聾人之專注力,在穿著方面宜選擇較華麗、色彩鮮明之衣服"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003679
@@ -83206,7 +83232,7 @@
       "C": "「仿說(imitation)」的技巧",
       "D": "一般典型發展兒童都是由「說」來發展語言知識 降低語句的複雜度可以幫助語言障礙兒童將注意力放在目標上"
     },
-    "answer": "A",
+    "answer": "D",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003684
@@ -83229,7 +83255,7 @@
       "C": "對於無法遵循說話輪替規則,不斷說話的兒童,教師應將話題設限",
       "D": "教師可利用情境圖卡向學生解釋間接請求的溝通意圖"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003685
@@ -83298,7 +83324,7 @@
       "C": "Hz、1,000 Hz、2,000 Hz",
       "D": "500 Hz、800 Hz、1,000 Hz 250 Hz、500 Hz、1,000 Hz 250 Hz、500 Hz、800 Hz"
     },
-    "answer": "B",
+    "answer": "A",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003688
@@ -83341,7 +83367,7 @@
       "C": "4,000~7,000 Hz",
       "D": "5,000~8,000 Hz"
     },
-    "answer": "A",
+    "answer": "B",
     "explanation": "",
     "_legacy_id": 114100060841
   },
@@ -83512,7 +83538,7 @@
       "C": "語言發展檢查",
       "D": "感覺統合檢查 構音檢查"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003697
@@ -85602,7 +85628,10 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30003484
+    "_legacy_id": 30003484,
+    "images": [
+      "/question-images/audiologist_104100_q19_patrol.webp"
+    ]
   },
   {
     "id": "audiologist_104100_s0904_21",
@@ -97164,7 +97193,9 @@
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30007290,
-    "no_image_in_source": true
+    "images": [
+      "/question-images/audiologist_audiologist_106110_s0902_7_0.webp"
+    ]
   },
   {
     "id": "audiologist_106110_p2_9",
@@ -107278,7 +107309,10 @@
     },
     "answer": "B",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/audiologist_audiologist_107110_s0902_6_0.webp"
+    ]
   },
   {
     "id": "audiologist_107110_s0902_8",
@@ -109750,7 +109784,9 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high",
-    "no_image_in_source": true
+    "images": [
+      "/question-images/audiologist_audiologist_107110_s0903_23_0.webp"
+    ]
   },
   {
     "id": "audiologist_107110_s0903_25",
@@ -110586,7 +110622,7 @@
       "C": "將社會參與性及環境因素納入考量",
       "D": "將障礙程度標準化"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": "",
     "_legacy_id": 114100060708
   },
@@ -110838,7 +110874,7 @@
       "C": "②③",
       "D": "②④"
     },
-    "answer": "C",
+    "answer": "B",
     "explanation": "",
     "_legacy_id": 114100060709
   },
@@ -111048,7 +111084,7 @@
       "C": "①②③",
       "D": "②③④"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": "",
     "_legacy_id": 114100060711
   },
@@ -111069,7 +111105,7 @@
       "C": "②③",
       "D": "③④"
     },
-    "answer": "B",
+    "answer": "A",
     "explanation": "",
     "_legacy_id": 114100060712
   },
@@ -111090,7 +111126,7 @@
       "C": "②④",
       "D": "②③④"
     },
-    "answer": "D",
+    "answer": "C",
     "explanation": "",
     "_legacy_id": 114100060713
   },
@@ -111174,7 +111210,7 @@
       "C": "①②③",
       "D": "①②④"
     },
-    "answer": "B",
+    "answer": "D",
     "explanation": "",
     "_legacy_id": 114100060714
   },
@@ -114176,7 +114212,9 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high",
-    "no_image_in_source": true
+    "images": [
+      "/question-images/audiologist_audiologist_108110_p2_32_0.webp"
+    ]
   },
   {
     "id": "audiologist_108110_s0902_34",
@@ -125164,7 +125202,9 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high",
-    "no_image_in_source": true
+    "images": [
+      "/question-images/audiologist_audiologist_109110_s0904_4_0.webp"
+    ]
   },
   {
     "id": "audiologist_109110_s0904_6",
@@ -135613,7 +135653,11 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high",
-    "no_image_in_source": true
+    "images": [
+      "/question-images/audiologist_audiologist_111110_p3_49_0.webp",
+      "/question-images/audiologist_audiologist_111110_p3_49_1.webp",
+      "/question-images/audiologist_audiologist_111110_p3_49_2.webp"
+    ]
   },
   {
     "id": "audiologist_111110_s0706_1",
@@ -139821,7 +139865,11 @@
     },
     "answer": "C",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/audiologist_audiologist_112110_s0602_49_0.webp",
+      "/question-images/audiologist_audiologist_112110_s0602_49_1.webp"
+    ]
   },
   {
     "id": "audiologist_112110_s0601_1",
@@ -146159,7 +146207,9 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high",
-    "no_image_in_source": true
+    "images": [
+      "/question-images/audiologist_audiologist_113100_p2_49_0.webp"
+    ]
   },
   {
     "id": "audiologist_113100_s0601_1",
@@ -152503,7 +152553,9 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "high",
-    "no_image_in_source": true
+    "images": [
+      "/question-images/audiologist_audiologist_114100_s0602_49_0.webp"
+    ]
   },
   {
     "id": "audiologist_114100_s0601_1",
@@ -159718,7 +159770,7 @@
     "subject_name": "電生理聽力學",
     "stage_id": 0,
     "number": 4,
-    "question": "下列何種情況最有可能出現A型的鼓室圖測量結果？D",
+    "question": "下列何種情況最有可能出現AD型的鼓室圖測量結果？",
     "options": {
       "A": "聽小骨鏈斷裂",
       "B": "中耳積液",

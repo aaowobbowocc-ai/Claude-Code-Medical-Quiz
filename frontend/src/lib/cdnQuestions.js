@@ -5,6 +5,10 @@
 // Cache key includes a version stamp; bump CACHE_VERSION to force re-download.
 
 const CDN_BASE = 'https://cdn.jsdelivr.net/gh/aaowobbowocc-ai/Claude-Code-Medical-Quiz@master/backend'
+// ⚠️ jsDelivr 把「@master → 哪個 commit」快取約 12h，push 完不主動清的話使用者會拿到舊題庫
+//（2026-09-19 實測 61 分鐘後仍是舊資料）。改題庫 push 後一律跑：
+//   node backend/scripts/purge-jsdelivr.js --commit=<sha>
+// 才不用靠硬 bump CACHE_VERSION 去繞，也避免 App 把舊資料寫進新版本的快取 key。
 // GitHub raw 永遠是最新（無 jsDelivr 的 ~12h edge 快取）。forceFresh（錯題夾 re-hydrate）改用此來源，
 // 確保題目修正後立即拿到最新版，不受 jsDelivr edge 快取/purge 傳播延遲影響。
 const RAW_BASE = 'https://raw.githubusercontent.com/aaowobbowocc-ai/Claude-Code-Medical-Quiz/master/backend'

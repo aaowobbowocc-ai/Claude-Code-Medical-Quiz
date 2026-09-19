@@ -9826,7 +9826,7 @@
         "A": "A 藥",
         "B": "B 藥",
         "C": "C 藥",
-        "D": "D 藥"
+        "D": "D 藥某抗生素之排除速率常數為0.1155 hr-1，其維持劑量為每6 小時給予250 mg，今欲使其血中濃度能"
       },
       "answer": "C",
       "explanation": ""
@@ -12242,10 +12242,10 @@
       "number": 38,
       "question": "使用適當氣相層析條件進行分析時，則下面三個分析物在極性管柱carbowax column 的沖提順序（由先到後）應為何？",
       "options": {
-        "A": "O",
-        "B": "OH",
-        "C": "OCOCH3",
-        "D": "Menthone"
+        "A": "Menthone－Menthol－Menthyl acetate",
+        "B": "Menthol－Menthyl acetate－Menthone",
+        "C": "Menthyl acetate－Menthol－Menthone",
+        "D": "Menthone－Menthyl acetate－Menthol"
       },
       "answer": "D",
       "explanation": ""
@@ -97909,7 +97909,8 @@
         "D": "180"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "missing_image"
     },
     {
       "id": "109100_s33_72",
@@ -117237,8 +117238,7 @@
         "C": "factor IV",
         "D": "factor IIa"
       },
-      "answer": "A",
-      "incomplete": "option_order_unverified"
+      "answer": "A"
     },
     {
       "id": "112020_11",
@@ -118347,8 +118347,7 @@
         "C": "L-triiodothyronine（T3）",
         "D": "L-thyroxine（T4）"
       },
-      "answer": "D",
-      "incomplete": "option_order_unverified"
+      "answer": "D"
     },
     {
       "id": "112020_66",
@@ -120403,8 +120402,7 @@
         "C": "77.1",
         "D": "78.9"
       },
-      "answer": "D",
-      "incomplete": "option_order_unverified"
+      "answer": "D"
     },
     {
       "id": "112020_2_11",
@@ -123207,8 +123205,7 @@
         "C": "double-stranded RNA",
         "D": "poly-L-lysine"
       },
-      "answer": "C",
-      "incomplete": "option_order_unverified"
+      "answer": "C"
     },
     {
       "id": "112100_74",

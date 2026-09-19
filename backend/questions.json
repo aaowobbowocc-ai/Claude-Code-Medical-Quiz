@@ -47542,7 +47542,7 @@
       "subject_name": "病理學",
       "stage_id": 8,
       "number": 83,
-      "question": "60歲男性因喉嚨疼痛與潰瘍在就醫時被發現血中白血球增加（50×10 3 /μL；參考區間為4.8-10.8×10 3 /μL）， 紅血球、血小板數目減少。骨髓切片顯示骨髓中細胞佔70-80%，大部分都是中等大小原始細胞（blast",
+      "question": "60歲男性因喉嚨疼痛與潰瘍在就醫時被發現血中白血球增加（50×10³/µL；參考區間為4.8-10.8×10³/µL），紅血球、血小板數目減少。骨髓切片顯示骨髓中細胞佔70-80%，大部分都是中等大小原始細胞（blast cells），細胞質中有非常多火紅顆粒及針狀小體。染色體檢查發現有t（15;17）的染色體轉位。下列何者為最可能的診斷？",
       "options": {
         "A": "骨髓化生不良症候群（myelodysplastic syndrome）",
         "B": "蘭格罕組織球增生症（Langerhans cell histiocytosis）",
@@ -78301,12 +78301,12 @@
       "number": 97,
       "question": "依附表所列，近年來新生兒胎次男女比例，可以發現胎次愈高男女比值愈大，其可能的原因為何？",
       "options": {
-        "A": "年份",
-        "B": "第一胎",
-        "C": "第二胎",
-        "D": "第三胎"
+        "A": "胎次愈高可能是人工受孕結果",
+        "B": "重男輕女的現象還是存在",
+        "C": "男嬰比女嬰存活高",
+        "D": "幾年下來都一樣表示是自然反應"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": "考選部本題送分（答A或B者均給分），標示為其中一個可接受答案。",
       "disputed": true,
       "_original_number": 97
@@ -78560,12 +78560,12 @@
       "subject_name": "生理學",
       "stage_id": 2,
       "number": 10,
-      "question": "一個肺炎病人使用50%氧氣所測得之動脈血氣檢查結果如下：",
+      "question": "一個肺炎病人使用50%氧氣所測得之動脈血氣檢查結果如下：pH:7.36，PaCO2:33 mmHg，PaO2:55 mmHg，HCO3-:18 mEq/L，BE:-5 mEq/L（假設respiratory exchangeratio(R) = 0.8, water vapor pressure = 47 mmHg, alveolar CO2 = arterial CO2），請問肺泡氧分壓為多少mmHg（最正確或誤差最小）？",
       "options": {
-        "A": "pH:7.36，PaCO2:33 mmHg，PaO2:55 mmHg，HCO3",
-        "B": "-:18 mEq/L，BE:-5 mEq/L（假設respiratory exchange",
-        "C": "ratio(R) = 0.8, water vapor pressure = 47 mmHg, alveolar CO2 = arterial CO2），請問肺泡氧分壓為多少",
-        "D": "mmHg（最正確或誤差最小）？"
+        "A": "356",
+        "B": "319",
+        "C": "275",
+        "D": "225"
       },
       "answer": "B",
       "explanation": "",

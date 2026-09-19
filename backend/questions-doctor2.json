@@ -136788,12 +136788,12 @@
       "subject_name": "內科",
       "stage_id": 0,
       "number": 79,
-      "question": "某社區有1000 位男性重度抽菸者（每天2 包菸以上），分成兩組追蹤十年。結果如下表：",
+      "question": "某社區有1000 位男性重度抽菸者（每天2 包菸以上），分成兩組追蹤十年。結果如下表：肺癌個案從診斷後平均存活時間第一組（實驗組）490 人每年照一次胸部X 光37 人14 個月第二組（對照組）510 人沒有每年照胸部X 光39 人8 個月下列敘述，何者正確？",
       "options": {
-        "A": "肺癌個案",
-        "B": "從診斷後平均存活時間",
-        "C": "第一組（實驗組）",
-        "D": "490 人每年照一次胸部X 光"
+        "A": "胸部X 光篩檢可以改善肺癌的存活時間",
+        "B": "所有抽菸者均應考慮每年胸部X 光檢查",
+        "C": "此一結果應該是lead-time bias",
+        "D": "此一結果應該是length-time bias"
       },
       "answer": "C",
       "explanation": ""
@@ -137412,10 +137412,10 @@
       "number": 30,
       "question": "一位6 歲女童持續發燒、咳嗽8 天，因為突然意識不清並有持續16 分鐘的全身性抽搐住院。住院時雙側呼吸音有細囉音（fine crackles），頸部與大腿有境界不清的紅色丘疹如圖一所示，胸部X光如圖二所示。周邊血液白血球計數12,100/mm3（segment 76%；lymphocyte 15%；monocyte 9%）。腦脊髓液protein 145.2 mg/dL，glucose 82 mg/dL（blood sugar 102 mg/dL），白血球14/mm3（mononuclearcell:polymorphonuclear cell = 12:2），腦部電腦斷層影像無明顯異常，下列那一種病原的可能性最高？",
       "options": {
-        "A": "圖一",
-        "B": "圖二",
-        "C": "Japanese encephalitis virus",
-        "D": "Salmonella typhi"
+        "A": "Japanese encephalitis virus",
+        "B": "Salmonella typhi",
+        "C": "Streptococcus pneumoniae",
+        "D": "Mycoplasma pneumoniae"
       },
       "answer": "D",
       "explanation": "",
@@ -137539,10 +137539,10 @@
       "number": 35,
       "question": "一位30 歲男性，職業為農，大腿處皮膚出現病灶有5 年之久，如圖一。皮膚病理切片H&E 染色，如圖二。此患者的正確診斷為：",
       "options": {
-        "A": "圖一",
-        "B": "圖二",
-        "C": "foreign body granuloma",
-        "D": "tuberculosis verrucosa cutis"
+        "A": "foreign body granuloma",
+        "B": "tuberculosis verrucosa cutis",
+        "C": "chromomycosis",
+        "D": "sporotrichosis"
       },
       "answer": "C",
       "explanation": "",
@@ -137588,10 +137588,10 @@
       "number": 37,
       "question": "一位20 歲男性，為HIV 帶原者，自一年前陸續在臉上及軀幹長出多個如圖A 的無症狀紫色至褐色的皮膚結節，皮膚切片如圖B，可見許多紡錘狀細胞（spindle cell）增生，及許多類似血管腔的構造。Polymerase chain reaction（PCR）發現病變有human herpes virus 8（HHV-8）的DNA。最可能的診斷為：",
       "options": {
-        "A": "圖A",
-        "B": "圖B",
-        "C": "黑色素細胞瘤（melanoma）",
-        "D": "微血管性血管瘤（capillary hemangioma）"
+        "A": "黑色素細胞瘤（melanoma）",
+        "B": "微血管性血管瘤（capillary hemangioma）",
+        "C": "卡波西氏肉瘤（Kaposi sarcoma）",
+        "D": "基底細胞瘤（basal cell carcinoma）"
       },
       "answer": "C",
       "explanation": "",
@@ -137637,10 +137637,10 @@
       "number": 39,
       "question": "一位65 歲男性，自六個月前在頭部、軀幹、四肢出現許多如圖A、B 的紅色斑塊，合併糜爛（erosion）、痂皮（crust）、脫屑，口腔內並無病變，皮膚切片如圖C，直接免疫螢光檢查，發現IgG 在表皮細胞間沈積如圖D，此患者最可能的診斷為：",
       "options": {
-        "A": "圖A",
-        "B": "圖B",
-        "C": "圖C",
-        "D": "圖D"
+        "A": "疱疹樣皮膚炎（dermatitis herpetiformis）",
+        "B": "尋常性天疱瘡（pemphigus vulgaris）",
+        "C": "類天疱瘡（bullous pemphigoid）",
+        "D": "落葉性天疱瘡（pemphigus foliaceus）"
       },
       "answer": "D",
       "explanation": "",
@@ -139905,10 +139905,10 @@
       "number": 72,
       "question": "17 歲男性，頭部外傷，緊急做的CT 影像發現顱底有一骨折（如圖A 箭頭所指處），則在圖B，箭頭所指的是顱內：",
       "options": {
-        "A": "圖A",
-        "B": "圖B",
-        "C": "CSF leakage",
-        "D": "Traumatic pneumocephalus"
+        "A": "CSF leakage",
+        "B": "Traumatic pneumocephalus",
+        "C": "Fat embolism",
+        "D": "Traumatic subarachnoid hemorrhage（SAH）"
       },
       "answer": "B",
       "explanation": "",
@@ -142652,12 +142652,12 @@
       "subject_name": "內科",
       "stage_id": 0,
       "number": 46,
-      "question": "一名60 歲婦女因意識不清和倦怠而住院，病人有糖尿病長期服用metformin，去年被診斷罹患肺小細胞癌目前仍治療中。身體診查：血壓136/80 mmHg，脈搏每分鐘76 次，呼吸每分鐘14 次，頸靜脈平坦，胸腹部無異常，四肢無水腫，神經學檢查無運動缺陷，唯deep tendon reflexes 對稱性減弱。實驗室",
+      "question": "一名60 歲婦女因意識不清和倦怠而住院，病人有糖尿病長期服用metformin，去年被診斷罹患肺小細胞癌目前仍治療中。身體診查：血壓136/80 mmHg，脈搏每分鐘76 次，呼吸每分鐘14 次，頸靜脈平坦，胸腹部無異常，四肢無水腫，神經學檢查無運動缺陷，唯deep tendon reflexes 對稱性減弱。實驗室檢查：血鈉108 mmol/L，鉀3.8 mmol/L，HCO3- 24 mEq/L，尿素氮5 mg/dL，肌酸酐0.5 mg/dL，血清滲透壓220 mOsmol/kg H2O，尿滲透壓400 mOsmol/kg H2O。若太快校正此病人之電解質異常，最擔心發生下列何種併發症？",
       "options": {
-        "A": "檢查：血鈉108 mmol/L，鉀3.8 mmol/L，HCO3",
-        "B": "- 24 mEq/L，尿素氮5 mg/dL，肌酸酐0.5 mg/dL，血",
-        "C": "清滲透壓220 mOsmol/kg H2O，尿滲透壓400 mOsmol/kg H2O。若太快校正此病人之電解質異常，最",
-        "D": "擔心發生下列何種併發症？"
+        "A": "反彈性高血糖（rebound hyperglycemia）",
+        "B": "滲透性大腦去髓鞘症候群（osmotic cerebral demyelination）",
+        "C": "肺水腫（pulmonary edema）",
+        "D": "腦水腫（brain edema）"
       },
       "answer": "B",
       "explanation": ""
@@ -150552,12 +150552,12 @@
       "subject_name": "精神科",
       "stage_id": 0,
       "number": 79,
-      "question": "在那些情況下，醫療人員的保密義務可以有例外？①總統因為急症入院，媒體詢問總統病情時②警察要求醫療人員提供嫌疑犯之病歷與檢驗資料以協助破案③憂鬱症病患自殺身亡後，其精神",
+      "question": "在那些情況下，醫療人員的保密義務可以有例外？",
       "options": {
-        "A": "科醫師使用其詳細病史來呼籲自殺防治",
-        "B": "④病人同意他的資訊可以被揭露",
-        "C": "①②③④",
-        "D": "僅①②④"
+        "A": "①②③④",
+        "B": "僅①②④",
+        "C": "僅②④",
+        "D": "僅④"
       },
       "answer": "D",
       "explanation": ""
@@ -154386,9 +154386,9 @@
       "question": "左心室的填充速度和心臟的舒張功能有關，左心室的硬度也影響了心室的填充速度而可能引起心臟舒張功能的改變，如下圖的左心室壓力體積圖（pressure-volume curve），實線代表正常的左心室功能，虛線代表舒張功能（diastolic function）出現異常的左心室，下列那一個圖形代表左心室的chamberdilation？",
       "options": {
         "A": "圖A",
-        "B": "圖BLeft ventricular pressure",
+        "B": "圖B",
         "C": "圖C",
-        "D": "圖DLeft ventricular volume"
+        "D": "圖D"
       },
       "answer": "D",
       "explanation": "",
@@ -156129,10 +156129,10 @@
       "number": 30,
       "question": "一位9 歲女孩主訴常有心悸；2 年前曾因靜脈竇（sinus venosus）型的心房中隔缺損接受外科手術。心電圖如下圖。下列何者為最可能的診斷？",
       "options": {
-        "A": "I",
-        "B": "aVR",
-        "C": "V1",
-        "D": "V4"
+        "A": "心房顫動（atrial fibrillation）",
+        "B": "心房撲動（atrial flutter）",
+        "C": "房室間迴旋頻脈（AVRT）",
+        "D": "房室結迴旋頻脈（AVNRT）"
       },
       "answer": "B",
       "explanation": "",
@@ -157351,10 +157351,10 @@
       "number": 10,
       "question": "心因性休克（cardiogenic shock）是下列那一個情形？",
       "options": {
-        "A": "中心靜脈壓",
-        "B": "動脈壓",
-        "C": "心輸出量",
-        "D": "混合靜脈血氧飽和度"
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
       },
       "answer": "B",
       "explanation": "",
@@ -181099,12 +181099,12 @@
       "subject_name": "內科",
       "stage_id": 0,
       "number": 2,
-      "question": "王先生78 歲，患高血壓多年，藥物調控一直不好，今天門診血壓為170/70 mmHg，心跳80/分，BUN49.2 mg/dL、Creatinine 4.1 mg/dL、uric acid 7.2 mg/dL、K+ 6.1 mEq/L，下列那一組藥物最適合王先生的",
+      "question": "王先生78 歲，患高血壓多年，藥物調控一直不好，今天門診血壓為170/70 mmHg，心跳80/分，BUN49.2 mg/dL、Creatinine 4.1 mg/dL、uric acid 7.2 mg/dL、K+ 6.1 mEq/L，下列那一組藥物最適合王先生的治療：",
       "options": {
-        "A": "治療：①loop diuretics",
-        "B": "②angiotensin-converting enzyme inhibitor",
-        "C": "③angiotensin receptor blocker",
-        "D": "④dihydropyridine calcium channel blocker"
+        "A": "①②",
+        "B": "②③",
+        "C": "③④",
+        "D": "①④"
       },
       "answer": "D",
       "explanation": ""
@@ -183507,12 +183507,12 @@
       "subject_name": "皮膚科",
       "stage_id": 0,
       "number": 36,
-      "question": "一位70 歲男性，三個月來在軀幹、四肢出現如圖A 的繃緊水疱（tense bullae），合併糜爛（erosion）及痂皮（crust）的形成。醫師取水疱做皮膚切片如圖B，同時做直接免疫螢光檢查（directimmunofluorescence test）發現在真皮表皮交界處（dermo-epidermal junction）有linear IgG 及C3deposition 如圖C。最可能的診斷為：圖A",
+      "question": "一位70 歲男性，三個月來在軀幹、四肢出現如圖A 的繃緊水疱（tense bullae），合併糜爛（erosion）及痂皮（crust）的形成。醫師取水疱做皮膚切片如圖B，同時做直接免疫螢光檢查（directimmunofluorescence test）發現在真皮表皮交界處（dermo-epidermal junction）有linear IgG 及C3deposition 如圖C。最可能的診斷為：",
       "options": {
-        "A": "圖B",
-        "B": "圖C",
-        "C": "尋常性天疱瘡（pemphigus vulgaris）",
-        "D": "疱疹樣皮膚炎（dermatitis herpetiformis）"
+        "A": "尋常性天疱瘡（pemphigus vulgaris）",
+        "B": "疱疹樣皮膚炎（dermatitis herpetiformis）",
+        "C": "類天疱瘡（bullous pemphigoid）",
+        "D": "落葉性天疱瘡（pemphigus foliaceus）"
       },
       "answer": "C",
       "explanation": "",
@@ -190144,12 +190144,12 @@
       "subject_name": "小兒科",
       "stage_id": 0,
       "number": 29,
-      "question": "一位12 歲女孩，主訴有心雜音及體力較差。身體理學檢查呈現右心搏動明顯（right ventricular heave），聽診如圖示（問號之箭頭方向）。女孩最有可能是下列何種先天心臟病？}EXP121",
+      "question": "一位12 歲女孩，主訴有心雜音及體力較差。身體理學檢查呈現右心搏動明顯（right ventricular heave），聽診如圖示（問號之箭頭方向）。女孩最有可能是下列何種先天心臟病？}EXP121APNormalINSP121AP}EXP112AP？",
       "options": {
-        "A": "AP",
-        "B": "NormalINSP",
-        "C": "1",
-        "D": "2"
+        "A": "心室中隔缺損",
+        "B": "開放性動脈導管",
+        "C": "心房中隔缺損",
+        "D": "肺動脈狹窄"
       },
       "answer": "C",
       "explanation": "",
@@ -190327,10 +190327,10 @@
       "number": 37,
       "question": "一位35 歲女性，是來自印尼的新住民，從三個月前發現在臉及上肢長出如圖A 的無症狀環狀紅色斑塊，醫師取其皮屑檢查未發現黴菌菌絲。神經學檢查發現：病變中央的皮膚對觸覺的敏感度變差；做皮膚切片發現如圖B，發現真皮出現類表皮細胞（epithelioid cells）和giant cell 的浸潤形成肉芽腫（granuloma）；神經組織周圍也可見發炎細胞的浸潤；胸部X 光檢查、抽血驗VDRL 結果都為正常。最可能診斷為：",
       "options": {
-        "A": "圖A",
-        "B": "圖B",
-        "C": "漢生病（leprosy; Hansen’s disease）",
-        "D": "二期梅毒（secondary syphilis）"
+        "A": "漢生病（leprosy; Hansen’s disease）",
+        "B": "二期梅毒（secondary syphilis）",
+        "C": "類肉瘤（sarcoidosis）",
+        "D": "孢子絲菌病（sporotrichosis）"
       },
       "answer": "A",
       "explanation": "",

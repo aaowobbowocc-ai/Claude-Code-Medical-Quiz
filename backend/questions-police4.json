@@ -4942,7 +4942,7 @@
         "C": "司法上權益之維護",
         "D": "行政違失之舉發"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -4962,7 +4962,7 @@
         "C": "封閉住宅",
         "D": "註銷證照"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -4982,7 +4982,7 @@
         "C": "於請求權人為人民時,十年",
         "D": "於請求權人為人民時,三年"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -5002,7 +5002,7 @@
         "C": "避免急迫之危險",
         "D": "經間接強制仍不能達成執行目的"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -5022,7 +5022,7 @@
         "C": "過失違反行政法義務之行為",
         "D": "出於防衛自己權利之正當防衛行為"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -5062,7 +5062,7 @@
         "C": "行政處分已不存在者",
         "D": "對已撤回之訴願事件重行提起訴願者"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -5082,7 +5082,7 @@
         "C": "給付訴訟",
         "D": "公益訴訟"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -5102,7 +5102,7 @@
         "C": "訴願有理由者，受理訴願機關撤銷原處分時，得發回原處分機關另為處分",
         "D": "訴願無理由者，受理訴願機關得為更不利之處分"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -5122,7 +5122,7 @@
         "C": "公務所所在地",
         "D": "機關所在地"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -5162,7 +5162,7 @@
         "C": "訴訟標的",
         "D": "原因事實"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -5182,7 +5182,7 @@
         "C": "自損害發生時起，逾五年而消滅",
         "D": "自損害發生時起，逾十年而消滅"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -5202,7 +5202,507 @@
         "C": "應先訴訟請求撤銷造成損害之行為",
         "D": "應先經第三公正人士調解"
       },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_26",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 26,
+      "question": "人民認為經濟部智慧財產局專利審查案件有疏失造成損害，應向那個法院起訴請求國家賠償？",
+      "options": {
+        "A": "地方法院",
+        "B": "智慧財產法院",
+        "C": "高等法院",
+        "D": "高等行政法院"
+      },
       "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_27",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 27,
+      "question": "下列何者並非行政法上之一般法律原則？",
+      "options": {
+        "A": "依法行政",
+        "B": "罪刑法定",
+        "C": "禁止恣意",
+        "D": "信賴保護"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_28",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 28,
+      "question": "違法之授益行政處分，原處分機關不得任意撤銷，以免違反下列何種一般法律原則？",
+      "options": {
+        "A": "明確性原則",
+        "B": "法律保留原則",
+        "C": "公益原則",
+        "D": "信賴保護原則"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_29",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 29,
+      "question": "關於聽證，下列敘述何者錯誤？",
+      "options": {
+        "A": "聽證，除法律另有規定外，應公開以言詞為之",
+        "B": "經聽證作成之行政處分，相對人若有不服，仍應依一般訴願程序進行救濟",
+        "C": "由行政機關首長或其指定人員為主持人，必要時得由律師在場協助之",
+        "D": "除法規別有規定外，行政機關作成經聽證之行政處分時，應斟酌全部聽證之結果"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_30",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 30,
+      "question": "下列何者並非書面行政處分得不記明理由之情形？",
+      "options": {
+        "A": "處分涉及之金額在新臺幣5,000 元以下者",
+        "B": "未限制人民之權益者",
+        "C": "一般處分經公告或刊登政府公報或新聞紙者",
+        "D": "依法律規定無須記明理由者"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_31",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 31,
+      "question": "外國人依國籍法申請歸化獲准後，主管機關於二年後發現當初申請時並不符合歸化要件，得為何種處理方式？",
+      "options": {
+        "A": "得廢止其歸化許可，因事後發現違法事由",
+        "B": "得撤銷其歸化許可，因其為外國人，不受中華民國法律保護",
+        "C": "不得撤銷或廢止其歸化許可，因為國籍涉及國民身分，非行政機關所得廢棄",
+        "D": "得撤銷其歸化許可，因作成處分時即屬違法"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_32",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 32,
+      "question": "依社會秩序維護法所課處之罰鍰，相對人若逾期不繳交，由何者強制執行？",
+      "options": {
+        "A": "由作成罰鍰處分之原警察機關逕行強制執行",
+        "B": "移送普通法院強制執行",
+        "C": "移送行政執行分署強制執行",
+        "D": "聲請司法院解釋後強制執行"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_33",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 33,
+      "question": "下列何者屬於行政執行法上之「即時強制」？",
+      "options": {
+        "A": "交通警察對違規右轉之車輛攔停開立罰單",
+        "B": "警察人員對於在街頭持球棒亂打之人予以管束",
+        "C": "警察人員收到報案，即刻登記處理",
+        "D": "行政院駐衛警員對於進入之人員，請求出示證件"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_34",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 34,
+      "question": "下列何種行政決定，無須法律具體明確授權？",
+      "options": {
+        "A": "國立大學將成績不合格之學生依校規退學",
+        "B": "限制役男出境",
+        "C": "對於違法之廣播電台作成停播處分",
+        "D": "將遭懲戒之會計師除名並廢止其會計師證書"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_35",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 35,
+      "question": "關於行政契約，下列敘述何者正確？",
+      "options": {
+        "A": "非有法律具體明確授權，行政機關不得與人民締結行政契約",
+        "B": "行政契約係指其內容為設定、發生或變更公法上法律關係之契約",
+        "C": "行政契約以口頭締結為原則",
+        "D": "行政契約準用民法規定之結果為無效者，行政契約效力未定"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_36",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 36,
+      "question": "關於給付行政之法律保留，下列何者正確？",
+      "options": {
+        "A": "給付行政並未侵害、限制人民權利，無須適用法律保留原則，行政機關得逕行為之",
+        "B": "給付行政仍屬國家高權行政，仍應全面適用法律保留原則，無法律不得為之",
+        "C": "給付行政受法律規範之密度，較限制人民權益者寬鬆，但若涉及公共利益之重大事項者，仍應有法律依據",
+        "D": "給付行政措施若經行政院院會通過，則無須法律依據"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_37",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 37,
+      "question": "違反行政法上義務，其情節輕微者，應受法定最高額在何種金額以下者之罰鍰，得免予處罰？",
+      "options": {
+        "A": "新臺幣3,000 元",
+        "B": "新臺幣5,000 元",
+        "C": "新臺幣1,000 元",
+        "D": "是否免罰，與法定處罰金額無關"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_38",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 38,
+      "question": "行政罰法規定，行政罰之裁處權，因幾年期間之經過而消滅？",
+      "options": {
+        "A": "五年",
+        "B": "三年",
+        "C": "十年",
+        "D": "十五年"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_39",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 39,
+      "question": "對於國家發展委員會所屬之檔案管理局所為之行政處分，若有不服，應向何者提起訴願？",
+      "options": {
+        "A": "檔案管理局",
+        "B": "國家發展委員會",
+        "C": "行政院",
+        "D": "行政院訴願審議委員會"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_40",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 40,
+      "question": "在行政訴訟，確定終局判決所適用之命令，經司法院大法官依當事人之聲請解釋為牴觸憲法者，聲請人如何救濟？",
+      "options": {
+        "A": "聲請人得提起再審之訴",
+        "B": "聲請人得提起非常上訴",
+        "C": "聲請人得請求大法官補充解釋，作成有利於聲請人之諭示",
+        "D": "聲請人得重新向高等行政法院起訴"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_41",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 41,
+      "question": "原行政處分所憑理由雖屬不當，但依其他理由認為正當者，訴願受理機關應如何處理？",
+      "options": {
+        "A": "應決定不受理",
+        "B": "認定訴願無理由並予駁回",
+        "C": "認定訴願有理由，但不撤銷原處分",
+        "D": "認定訴願有理由，並撤銷原處分"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_42",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 42,
+      "question": "確認行政處分無效之訴訟，應如何提起？",
+      "options": {
+        "A": "逕行向行政法院提起確認訴訟",
+        "B": "先提起訴願而不服其決定後，向行政法院提起撤銷訴訟",
+        "C": "先向原處分機關請求確認其無效未被允許，或經請求後於三十日內不為確答者，向行政法院提起確認訴訟",
+        "D": "逕行向行政法院提起給付訴訟"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_43",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 43,
+      "question": "警察人員因甲欲跳樓自殺，急迫之下破壞甲樓上乙的房門，從乙的窗戶垂吊下去救了甲。若警察人員之行為均屬合法，則乙對於所受之財產損失，得請求何種救濟？",
+      "options": {
+        "A": "請求國家賠償",
+        "B": "請求社會救助",
+        "C": "請求損失補償",
+        "D": "不能請求任何救濟"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_44",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 44,
+      "question": "下列何種行為無須由法院事前核准，即可為之？",
+      "options": {
+        "A": "社會秩序維護法之拘留",
+        "B": "行政執行法之管收",
+        "C": "入出國及移民法之暫予收容",
+        "D": "刑事訴訟法之羈押"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_45",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 45,
+      "question": "關於行政罰之責任條件，何者正確？",
+      "options": {
+        "A": "違反行政法上義務之行為，出於故意或過失者，均可處罰",
+        "B": "違反行政法上義務之行為，除法律有規定處罰過失者外，僅處罰出於故意者",
+        "C": "行政罰係採無過失責任",
+        "D": "行政罰僅處罰故意行為，但違反保護他人之法律者，推定其有故意"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_46",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 46,
+      "question": "公務員違法侵害人民權利而致國家賠償時，公務員所屬機關得否向該違法之公務員求償？",
+      "options": {
+        "A": "不可求償，以免造成公務員畏縮不敢勇於任事",
+        "B": "若公務員有故意或重大過失，則可求償",
+        "C": "若公務員自認違法，則可求償",
+        "D": "不問公務員是否有過失均可求償，因國家賠償僅屬代位責任"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_47",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 47,
+      "question": "行政院大陸委員會委託財團法人海峽交流基金會處理兩岸文書認證事務，若財團法人海峽交流基金會違法侵害人民權利，人民應以何者為國家賠償訴訟之被告？",
+      "options": {
+        "A": "行政院大陸委員會",
+        "B": "行政院",
+        "C": "財團法人海峽交流基金會",
+        "D": "本案為民事糾紛，不得提起國家賠償訴訟"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_48",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 48,
+      "question": "行政院大陸委員會委託財團法人海峽交流基金會處理兩岸文書認證事務，若財團法人海峽交流基金會受託作成處分時，違法侵害人民權利，人民欲提起行政爭訟，應以何者為行政訴訟之被告？",
+      "options": {
+        "A": "財團法人海峽交流基金會",
+        "B": "行政院",
+        "C": "行政院大陸委員會",
+        "D": "總統"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_49",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 49,
+      "question": "國家賠償應以回復原狀或金錢賠償為優先？",
+      "options": {
+        "A": "國家賠償僅能以金錢賠償為之",
+        "B": "國家賠償除法律另有規定外，僅能回復原狀",
+        "C": "國家賠償與民事賠償相同，以回復原狀為原則；無法回復原狀者則以金錢賠償之",
+        "D": "國家賠償以金錢賠償為原則。但以回復原狀為適當者，得依請求，回復損害發生前原狀"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "106070_administrative_law_50",
+      "roc_year": "106",
+      "session": "第一次",
+      "exam_code": "106070",
+      "subject": "行政法概要",
+      "subject_tag": "administrative_law",
+      "subject_name": "行政法概要",
+      "stage_id": 0,
+      "number": 50,
+      "question": "下列何者不適用公務人員保障法？",
+      "options": {
+        "A": "教育部專門委員",
+        "B": "內政部常務次長",
+        "C": "國立中山大學簡任秘書",
+        "D": "國家通訊傳播委員會委員"
+      },
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -7643,7 +8143,7 @@
         "C": "甲湮滅關係自己刑事被告案件之證據",
         "D": "甲意圖犯藏匿乙之罪而頂替乙"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -7663,7 +8163,7 @@
         "C": "丙向公務員誣告他人犯罪,主觀上須有使他人受刑事或懲戒處分之意圖",
         "D": "丁於所虛偽陳述之案件,在裁判確定前自白,丁所犯之偽證罪,減輕或免除其刑"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -7683,7 +8183,7 @@
         "C": "房東甲代收房客乙之信件後隱匿該信件,不構成犯罪",
         "D": "房東甲販賣其側錄房客乙於套房內更衣之光碟,構成犯罪"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -7703,7 +8203,7 @@
         "C": "丙刪除機場內供人使用之電腦內之應用程式",
         "D": "丁植入木馬程式取得他人電腦內之信用卡帳號及密碼"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -7723,7 +8223,7 @@
         "C": "乙的行為構成行賄罪,如在偵查或審判中自白犯行,依刑法規定,得減輕其刑",
         "D": "甲的行為除了構成收受賄賂罪,還可能成立公務員洩漏國防以外秘密罪"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -7743,7 +8243,7 @@
         "C": "刑法第138 條的隱匿公務員職務上掌管之文書罪",
         "D": "刑法第310 條第1 項的誹謗罪"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -7783,7 +8283,7 @@
         "C": "乙在翻牆離開監獄時遭圍捕,未能成功脫逃,甲的縱放行為雖屬於未遂,仍應加以處罰",
         "D": "甲縱放具有親屬關係之堂哥乙,屬人之常情,依法得減輕其刑"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -7803,7 +8303,7 @@
         "C": "警方並未同時測定甲的血液中酒精濃度,因此無法證明甲的身體酒精濃度確實有超標",
         "D": "甲的行為構成酒駕公共危險罪及肇事逃逸罪,應從一重論以肇事逃逸罪"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -7823,7 +8323,7 @@
         "C": "恐嚇取財罪",
         "D": "搶奪罪"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -7863,7 +8363,7 @@
         "C": "已著手於犯罪行為之實行,而因己意中止或防止其結果之發生,不罰",
         "D": "行為不能發生犯罪之結果,又無危險者,得減輕或免除其刑"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -7883,7 +8383,7 @@
         "C": "丙因精神疲勞致不能安全駕駛,肇事後致人受傷而逃逸",
         "D": "丁服用毒品致不能安全駕駛"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -7903,7 +8403,7 @@
         "C": "未滿14 歲人之行為,不罰",
         "D": "過失行為之處罰,以有特別規定者為限"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -11938,12 +12438,12 @@
       "subject_name": "法學知識",
       "stage_id": 0,
       "number": 42,
-      "question": "甲為受輔助宣告之人，於其父死亡後，未經輔助人同意，與其兄弟姊妹訂立遺產分割之協議契約。試問：",
+      "question": "甲為受輔助宣告之人，於其父死亡後，未經輔助人同意，與其兄弟姊妹訂立遺產分割之協議契約。試問：甲訂立協議契約之行為，效力如何？",
       "options": {
-        "A": "甲訂立協議契約之行為，效力如何？",
-        "B": "有效",
-        "C": "無效",
-        "D": "得撤銷"
+        "A": "有效",
+        "B": "無效",
+        "C": "得撤銷",
+        "D": "效力未定"
       },
       "answer": "D",
       "explanation": ""
@@ -13765,12 +14265,12 @@
       "subject_name": "刑法概要",
       "stage_id": 0,
       "number": 23,
-      "question": "甲與乙因行車糾紛而爭吵，乙坦承有過失但不願賠償，甲便對乙大聲揚言：「我一定告死你，等",
+      "question": "甲與乙因行車糾紛而爭吵，乙坦承有過失但不願賠償，甲便對乙大聲揚言：「我一定告死你，等著跑法院吧」等語，甲是否構成恐嚇危害安全罪？",
       "options": {
-        "A": "著跑法院吧」等語，甲是否構成恐嚇危害安全罪？",
-        "B": "會，因為「告死你」係以加害乙生命之事恐嚇乙",
-        "C": "會，因為以一般人的角度判斷，乙會擔心害怕",
-        "D": "不會，因為甲之意思是要提出告訴之意思，係法律賦予其行使之救濟權利"
+        "A": "會，因為「告死你」係以加害乙生命之事恐嚇乙",
+        "B": "會，因為以一般人的角度判斷，乙會擔心害怕",
+        "C": "不會，因為甲之意思是要提出告訴之意思，係法律賦予其行使之救濟權利",
+        "D": "不會，因為乙已坦承有過失"
       },
       "answer": "C",
       "explanation": ""
@@ -14685,12 +15185,12 @@
       "subject_name": "法學知識",
       "stage_id": 0,
       "number": 44,
-      "question": "甲對乙表示：「現贈與你",
+      "question": "甲對乙表示：「現贈與你A 車一部，做為你明年考上大學代步之用，如果明年你考不上大學，則應返還A 車與我。」此一贈與契約，附有何種約款？",
       "options": {
-        "A": "A車一部，做為你明年考上大學代步之用，如果明年你考不上大學，則應返還",
-        "B": "A車與我。」此一贈與契約，附有何種約款？",
-        "C": "附停止條件之贈與",
-        "D": "附解除條件之贈與"
+        "A": "附停止條件之贈與",
+        "B": "附解除條件之贈與",
+        "C": "附始期之贈與",
+        "D": "附終期之贈與"
       },
       "answer": "B",
       "explanation": ""
@@ -14945,12 +15445,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 7,
-      "question": "Scholars from more than twenty countries will attend an international",
+      "question": "Scholars from more than twenty countries will attend an internationalon environmental issues to discussnew clean energy projects.",
       "options": {
-        "A": "on environmental issues to discuss",
-        "B": "new clean energy projects.",
-        "C": "conference",
-        "D": "emergency"
+        "A": "conference",
+        "B": "emergency",
+        "C": "objective",
+        "D": "restriction"
       },
       "answer": "A",
       "explanation": ""
@@ -14965,12 +15465,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 8,
-      "question": "Guided  relaxation  helps  to  deeply  calm  the  mind  and  body,  and  it  directly  prevents  reactions  that  increase",
+      "question": "Guided relaxation helps to deeply calm the mind and body, and it directly prevents reactions that increasedistress,and pain.",
       "options": {
-        "A": "distress,and pain.",
-        "B": "delight",
-        "C": "leisure",
-        "D": "relief"
+        "A": "delight",
+        "B": "leisure",
+        "C": "relief",
+        "D": "tension"
       },
       "answer": "D",
       "explanation": ""
@@ -15005,12 +15505,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 10,
-      "question": "More than half of diarrhea deaths in the developing world result from unsafe drinking water, poor",
+      "question": "More than half of diarrhea deaths in the developing world result from unsafe drinking water, poorof theenvironment, and unhygienic practices.",
       "options": {
-        "A": "of the",
-        "B": "environment, and unhygienic practices.",
-        "C": "emergency",
-        "D": "ornament"
+        "A": "emergency",
+        "B": "ornament",
+        "C": "terminal",
+        "D": "sanitation"
       },
       "answer": "D",
       "explanation": ""
@@ -15045,12 +15545,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 12,
-      "question": "It is a pity the T-shirt of my size is out of",
+      "question": "It is a pity the T-shirt of my size is out ofnow.",
       "options": {
-        "A": "now.",
-        "B": "stork",
-        "C": "stick",
-        "D": "stock"
+        "A": "stork",
+        "B": "stick",
+        "C": "stock",
+        "D": "strike"
       },
       "answer": "C",
       "explanation": ""
@@ -15085,12 +15585,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 14,
-      "question": "Thebroke into the house, shone his flashlight around, and opened the safe, only to find there was nothing",
+      "question": "Thebroke into the house, shone his flashlight around, and opened the safe, only to find there was nothingvaluable to steal.",
       "options": {
-        "A": "valuable to steal.",
-        "B": "calendar",
-        "C": "magnifier",
-        "D": "burglar"
+        "A": "calendar",
+        "B": "magnifier",
+        "C": "burglar",
+        "D": "skyscraper"
       },
       "answer": "C",
       "explanation": ""
@@ -15145,12 +15645,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 17,
-      "question": "At Christmas, many houses and gardens are glowing and twinkling in seasonal",
+      "question": "At Christmas, many houses and gardens are glowing and twinkling in seasonalthat is made by hand.",
       "options": {
-        "A": "that is made by hand.",
-        "B": "declaration",
-        "C": "decoration",
-        "D": "definition"
+        "A": "declaration",
+        "B": "decoration",
+        "C": "definition",
+        "D": "destination"
       },
       "answer": "B",
       "explanation": ""
@@ -15165,12 +15665,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 18,
-      "question": "Encircled by native bush and lake scenes, building materials of the retreat have been carefully chosen to",
+      "question": "Encircled by native bush and lake scenes, building materials of the retreat have been carefully chosen towithnature.",
       "options": {
-        "A": "with",
-        "B": "nature.",
-        "C": "blend",
-        "D": "expand"
+        "A": "blend",
+        "B": "expand",
+        "C": "prompt",
+        "D": "split"
       },
       "answer": "A",
       "explanation": ""
@@ -15185,12 +15685,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 19,
-      "question": "During the Christmas holiday, the park is always",
+      "question": "During the Christmas holiday, the park is alwaysbeautifully by lights of various colors.",
       "options": {
-        "A": "beautifully by lights of various colors.",
-        "B": "illustrated",
-        "C": "illuminated",
-        "D": "contaminated"
+        "A": "illustrated",
+        "B": "illuminated",
+        "C": "contaminated",
+        "D": "terminated"
       },
       "answer": "B",
       "explanation": ""
@@ -15426,12 +15926,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 31,
-      "question": "Many fraternities have impossible initiation traditions, such as drinking",
+      "question": "Many fraternities have impossible initiation traditions, such as drinkingamount of alcohol in ten minutes.",
       "options": {
-        "A": "amount of alcohol in ten minutes.",
-        "B": "enormous",
-        "C": "mischievous",
-        "D": "humorous"
+        "A": "enormous",
+        "B": "mischievous",
+        "C": "humorous",
+        "D": "ambiguous"
       },
       "answer": "A",
       "explanation": ""
@@ -15546,12 +16046,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 37,
-      "question": "If one day there were no oil or electricity anymore, what would",
+      "question": "If one day there were no oil or electricity anymore, what wouldhuman beings?",
       "options": {
-        "A": "human beings?",
-        "B": "stem from",
-        "C": "attend to",
-        "D": "originate from"
+        "A": "stem from",
+        "B": "attend to",
+        "C": "originate from",
+        "D": "become of"
       },
       "answer": "D",
       "explanation": ""
@@ -15706,12 +16206,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 45,
-      "question": "What does the word siblings refer to in “Caregivers must also learn to be assertive and ask for help from others,",
+      "question": "What does the word siblings refer to in “Caregivers must also learn to be assertive and ask for help from others,especially siblings?",
       "options": {
-        "A": "especially siblings?”",
-        "B": "Husband and wife.",
-        "C": "Brothers and sisters.",
-        "D": "Spouse and relatives."
+        "A": "Husband and wife.",
+        "B": "Brothers and sisters.",
+        "C": "Spouse and relatives.",
+        "D": "Friends and neighbors."
       },
       "answer": "B",
       "explanation": ""
@@ -15766,12 +16266,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 48,
-      "question": "In many Asian countries, speaking about death on the New Year Day is",
+      "question": "In many Asian countries, speaking about death on the New Year Day is, because people believe it maybring bad luck for the entire year.",
       "options": {
-        "A": ", because people believe it may",
-        "B": "bring bad luck for the entire year.",
-        "C": "concealed",
-        "D": "prohibited"
+        "A": "concealed",
+        "B": "prohibited",
+        "C": "rejected",
+        "D": "suspended"
       },
       "answer": "B",
       "explanation": ""
@@ -15786,12 +16286,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 49,
-      "question": "Since job interviews are formal occasions, it is important that we dress",
+      "question": "Since job interviews are formal occasions, it is important that we dress; for men, for example, suit and tieis a must.",
       "options": {
-        "A": "; for men, for example, suit and tie",
-        "B": "is a must.",
-        "C": "accordingly",
-        "D": "functionally"
+        "A": "accordingly",
+        "B": "functionally",
+        "C": "eventually",
+        "D": "thoroughly"
       },
       "answer": "A",
       "explanation": ""
@@ -15806,12 +16306,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 50,
-      "question": "After receiving a bomb warning, the security guards checked every corner of the football stadium but did not",
+      "question": "After receiving a bomb warning, the security guards checked every corner of the football stadium but did notfinddevices.",
       "options": {
-        "A": "finddevices.",
-        "B": "dynamic",
-        "C": "admirable",
-        "D": "permanent"
+        "A": "dynamic",
+        "B": "admirable",
+        "C": "permanent",
+        "D": "explosive"
       },
       "answer": "D",
       "explanation": ""
@@ -15866,12 +16366,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 3,
-      "question": "曾子曰：「可以託六尺之孤，可以寄百里之命，臨大節而不可奪也。君子人與？君",
+      "question": "曾子曰：「可以託六尺之孤，可以寄百里之命，臨大節而不可奪也。君子人與？君子人也！」（《論語．泰伯》）本文所述之君子品格，不包括下列那一項？",
       "options": {
-        "A": "子人也！」（《論語．泰伯》）",
-        "B": "本文所述之君子品格，不包括下列那一項？",
-        "C": "可以受命輔佐幼主",
-        "D": "可以承命執掌政權"
+        "A": "可以受命輔佐幼主",
+        "B": "可以承命執掌政權",
+        "C": "面對生死存亡，先聲奪人",
+        "D": "面臨危急存亡，堅定不屈"
       },
       "answer": "C",
       "explanation": ""
@@ -15966,12 +16466,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 8,
-      "question": "柳宗元〈始得西山宴遊記〉：「其高下之勢，岈然、窪然，若垤、若穴，尺寸千里，",
+      "question": "柳宗元〈始得西山宴遊記〉：「其高下之勢，岈然、窪然，若垤、若穴，尺寸千里，攢蹙累積，莫得遯隱；縈青繚白，外與天際，四望如一。然後知是山之特出，不與培塿爲類。悠悠乎與灝氣俱而莫得其涯，洋洋乎與造物者遊而不知其所窮。」此段寫作的用意是：",
       "options": {
-        "A": "攢蹙累積，莫得遯隱；縈青繚白，外與天際，四望如一。然後知是山之特出，不與",
-        "B": "培塿爲類。悠悠乎與灝氣俱而莫得其涯，洋洋乎與造物者遊而不知其所窮。」此段",
-        "C": "寫作的用意是：",
-        "D": "說明西山的奇特出眾，以歌頌創造萬物的主宰"
+        "A": "說明西山的奇特出眾，以歌頌創造萬物的主宰",
+        "B": "說明西山的悠悠洋洋，以寄託隱居終老的心志",
+        "C": "描寫西山的高低不平，以暗喻現實社會的齷齪",
+        "D": "描寫西山的特出不凡，以象徵自己人格的高超"
       },
       "answer": "D",
       "explanation": ""
@@ -15986,12 +16486,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 9,
-      "question": "「如果人類為了製造小兒麻痺疫苗而在一隻猿猴身上刺了好幾針，依猿猴的智慧， 牠是不可能知道牠為何受苦的。同樣的，以人類目前的智慧也無法了解人類為何要 受苦，為何要受病痛與死亡的折磨。猿猴的受苦是為了奉獻人類，病人受苦的意義 有一小部分是為了奉獻給往後受同樣病痛折磨的人類，但牠終極的意義是甚麼？」",
+      "question": "「如果人類為了製造小兒麻痺疫苗而在一隻猿猴身上刺了好幾針，依猿猴的智慧，牠是不可能知道牠為何受苦的。同樣的，以人類目前的智慧也無法了解人類為何要受苦，為何要受病痛與死亡的折磨。猿猴的受苦是為了奉獻人類，病人受苦的意義有一小部分是為了奉獻給往後受同樣病痛折磨的人類，但牠終極的意義是甚麼？」根據上文，下列選項何者符合其旨意？",
       "options": {
-        "A": "根據上文，下列選項何者符合其旨意？",
-        "B": "要理解痛苦的真相需要更高明的智慧",
-        "C": "所有的痛苦都能因為「奉獻」而昇華",
-        "D": "生命間的相互支援成就了世間的大愛"
+        "A": "要理解痛苦的真相需要更高明的智慧",
+        "B": "所有的痛苦都能因為「奉獻」而昇華",
+        "C": "生命間的相互支援成就了世間的大愛",
+        "D": "不知原因的犧牲反而帶來意外的成就"
       },
       "answer": "A",
       "explanation": ""
@@ -19006,12 +19506,12 @@
       "subject_name": "刑法概要",
       "stage_id": 0,
       "number": 15,
-      "question": "甲騎機車違規左轉，遭警員乙攔停開單舉發時，甲因其無錢繳納，氣憤下對警員乙說出：「王八",
+      "question": "甲騎機車違規左轉，遭警員乙攔停開單舉發時，甲因其無錢繳納，氣憤下對警員乙說出：「王八蛋」、「警察都是王八蛋、人渣、敗類」等語，甲的行為可能構成下列何種犯罪？",
       "options": {
-        "A": "蛋」、「警察都是王八蛋、人渣、敗類」等語，甲的行為可能構成下列何種犯罪？",
-        "B": "刑法第313條第1項妨害信用罪",
-        "C": "刑法第305條恐嚇危安罪",
-        "D": "刑法第310條第1項誹謗罪"
+        "A": "刑法第313 條第1 項妨害信用罪",
+        "B": "刑法第305 條恐嚇危安罪",
+        "C": "刑法第310 條第1 項誹謗罪",
+        "D": "刑法第140 條侮辱公務員罪"
       },
       "answer": "D",
       "explanation": ""
@@ -19206,12 +19706,12 @@
       "subject_name": "刑法概要",
       "stage_id": 0,
       "number": 25,
-      "question": "刑法第358條規定：「無故輸入他人帳號密碼、破解使用電腦之保護措施或利用電腦系統之漏",
+      "question": "刑法第358 條規定：「無故輸入他人帳號密碼、破解使用電腦之保護措施或利用電腦系統之漏洞，而入侵他人之電腦或其相關設備……」，下列何者不構成上開罪名？",
       "options": {
-        "A": "洞，而入侵他人之電腦或其相關設備......」，下列何者不構成上開罪名？",
-        "B": "甲無意中窺得公務員乙之帳號密碼，再以之登入公務電腦讀取資料",
-        "C": "甲利用區公所防火牆之系統漏洞而進入內部網站上傳自己之個人照",
-        "D": "甲將乙交付保管之隨身碟置於強力磁鐵旁，打算藉此刪除其中之電子檔"
+        "A": "甲無意中窺得公務員乙之帳號密碼，再以之登入公務電腦讀取資料",
+        "B": "甲利用區公所防火牆之系統漏洞而進入內部網站上傳自己之個人照",
+        "C": "甲將乙交付保管之隨身碟置於強力磁鐵旁，打算藉此刪除其中之電子檔",
+        "D": "甲使用破解軟體而進入役政機關之網站更改首頁"
       },
       "answer": "C",
       "explanation": ""
@@ -19406,12 +19906,12 @@
       "subject_name": "法學知識",
       "stage_id": 0,
       "number": 10,
-      "question": "甲得其妻乙同意，於甲之臉書上公開乙泡湯時所拍攝之上半身裸照，並註明：「老婆，妳最美」。請",
+      "question": "甲得其妻乙同意，於甲之臉書上公開乙泡湯時所拍攝之上半身裸照，並註明：「老婆，妳最美」。請問本例不涉及下列何項人民基本權利？",
       "options": {
-        "A": "問本例不涉及下列何項人民基本權利？",
-        "B": "乙之人格自由",
-        "C": "乙之資訊隱私權",
-        "D": "甲之言論自由"
+        "A": "乙之人格自由",
+        "B": "乙之資訊隱私權",
+        "C": "甲之言論自由",
+        "D": "乙之身體自由"
       },
       "answer": "D",
       "explanation": ""
@@ -20226,12 +20726,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 1,
-      "question": "During the summer there is always a shortage of cheap",
+      "question": "During the summer there is always a shortage of cheapin Kenting area, so you’d better make a reservationfor the room you want in advance.",
       "options": {
-        "A": "in Kenting area, so you’d better make a reservation",
-        "B": "for the room you want in advance.",
-        "C": "affluence",
-        "D": "accommodation"
+        "A": "affluence",
+        "B": "accommodation",
+        "C": "attraction",
+        "D": "adaptation"
       },
       "answer": "B",
       "explanation": ""
@@ -20266,12 +20766,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 3,
-      "question": "Even though the rent for the apartment was quite low, I found that the cost of its",
+      "question": "Even though the rent for the apartment was quite low, I found that the cost of itswas high.",
       "options": {
-        "A": "was high.",
-        "B": "integrities",
-        "C": "privileges",
-        "D": "statements"
+        "A": "integrities",
+        "B": "privileges",
+        "C": "statements",
+        "D": "utilities"
       },
       "answer": "D",
       "explanation": ""
@@ -20346,12 +20846,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 7,
-      "question": "The way to improve ourselves is to start from having a",
+      "question": "The way to improve ourselves is to start from having aon the mistakes that we have made in the past.",
       "options": {
-        "A": "on the mistakes that we have made in the past.",
-        "B": "restriction",
-        "C": "reference",
-        "D": "reflection"
+        "A": "restriction",
+        "B": "reference",
+        "C": "reflection",
+        "D": "preparation"
       },
       "answer": "C",
       "explanation": ""
@@ -20366,12 +20866,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 8,
-      "question": "The company is well-known for its best pension",
+      "question": "The company is well-known for its best pensionin the industry, which meets most employees’ needs.",
       "options": {
-        "A": "in the industry, which meets most employees’ needs.",
-        "B": "outfit",
-        "C": "scheme",
-        "D": "principal"
+        "A": "outfit",
+        "B": "scheme",
+        "C": "principal",
+        "D": "reduction"
       },
       "answer": "B",
       "explanation": ""
@@ -20386,12 +20886,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 9,
-      "question": "Having failed to pay the rent for his apartment for several months, Mark now faces",
+      "question": "Having failed to pay the rent for his apartment for several months, Mark now facesfrom this apartment.",
       "options": {
-        "A": "from this apartment.",
-        "B": "eviction",
-        "C": "expenditure",
-        "D": "excursion"
+        "A": "eviction",
+        "B": "expenditure",
+        "C": "excursion",
+        "D": "exposure"
       },
       "answer": "A",
       "explanation": ""
@@ -20766,12 +21266,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 28,
-      "question": "Many western countries consider a close embrace and kiss a normal greeting, whereas greetings in other countries",
+      "question": "Many western countries consider a close embrace and kiss a normal greeting, whereas greetings in other countriesmay nottouching at all.",
       "options": {
-        "A": "may nottouching at all.",
-        "B": "acquaint",
-        "C": "undermine",
-        "D": "outlaw"
+        "A": "acquaint",
+        "B": "undermine",
+        "C": "outlaw",
+        "D": "involve"
       },
       "answer": "D",
       "explanation": ""
@@ -20806,12 +21306,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 30,
-      "question": "After a severe heart attack, the politician abandoned his",
+      "question": "After a severe heart attack, the politician abandoned histo run for the position of prime minister.",
       "options": {
-        "A": "to run for the position of prime minister.",
-        "B": "adoption",
-        "C": "ambition",
-        "D": "demotion"
+        "A": "adoption",
+        "B": "ambition",
+        "C": "demotion",
+        "D": "detention"
       },
       "answer": "B",
       "explanation": ""
@@ -20826,12 +21326,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 31,
-      "question": "Many workers complained that their supervisors didn’t know how to",
+      "question": "Many workers complained that their supervisors didn’t know how tothem to do their best work.",
       "options": {
-        "A": "them to do their best work.",
-        "B": "motivate",
-        "C": "comply",
-        "D": "ignore"
+        "A": "motivate",
+        "B": "comply",
+        "C": "ignore",
+        "D": "announce"
       },
       "answer": "A",
       "explanation": ""
@@ -20846,12 +21346,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 32,
-      "question": "The fire in the chemical factory set off a series of powerful",
+      "question": "The fire in the chemical factory set off a series of powerfulthat killed hundreds of people.",
       "options": {
-        "A": "that killed hundreds of people.",
-        "B": "exploration",
-        "C": "explosion",
-        "D": "exclusion"
+        "A": "exploration",
+        "B": "explosion",
+        "C": "exclusion",
+        "D": "combination"
       },
       "answer": "B",
       "explanation": ""
@@ -20966,12 +21466,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 38,
-      "question": "What does the phrase “",
+      "question": "What does the phrase “biting off more than what you can chew” in the passage most likely mean?",
       "options": {
-        "A": "biting off more than what you can chew” in the passage most likely mean?",
-        "B": "Talking about something embarrassing.",
-        "C": "Thinking twice before doing something.",
-        "D": "Taking an extra job to get more income."
+        "A": "Talking about something embarrassing.",
+        "B": "Thinking twice before doing something.",
+        "C": "Taking an extra job to get more income.",
+        "D": "Trying to do something beyond one’s capacity."
       },
       "answer": "D",
       "explanation": ""
@@ -21026,12 +21526,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 41,
-      "question": "India  is  building  massive  solar  stations,  helping  to  drive  a  global  revolution  in",
+      "question": "India is building massive solar stations, helping to drive a global revolution inenergy to reduce itsdependence on fossil fuels.",
       "options": {
-        "A": "energy  to  reduce  its",
-        "B": "dependence on fossil fuels.",
-        "C": "imperial",
-        "D": "obstinate"
+        "A": "imperial",
+        "B": "obstinate",
+        "C": "renewable",
+        "D": "comprehensible"
       },
       "answer": "C",
       "explanation": ""
@@ -21046,12 +21546,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 42,
-      "question": "Under the leadership of the current president, our school seems more",
+      "question": "Under the leadership of the current president, our school seems morethan united.",
       "options": {
-        "A": "than united.",
-        "B": "decided",
-        "C": "devoted",
-        "D": "degraded"
+        "A": "decided",
+        "B": "devoted",
+        "C": "degraded",
+        "D": "divided"
       },
       "answer": "D",
       "explanation": ""
@@ -21066,12 +21566,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 43,
-      "question": "It may come off as annoying if your colleague",
+      "question": "It may come off as annoying if your colleaguewithout thinking of a resolution for the issues.",
       "options": {
-        "A": "without thinking of a resolution for the issues.",
-        "B": "whirls",
-        "C": "whisks",
-        "D": "whines"
+        "A": "whirls",
+        "B": "whisks",
+        "C": "whines",
+        "D": "withers"
       },
       "answer": "C",
       "explanation": ""
@@ -21106,12 +21606,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 45,
-      "question": "Jennifer is very nervous about her new job because she has a",
+      "question": "Jennifer is very nervous about her new job because she has aperiod of two months before her contract ismade permanent.",
       "options": {
-        "A": "period of two months before her contract is",
-        "B": "made permanent.",
-        "C": "professional",
-        "D": "progressive"
+        "A": "professional",
+        "B": "progressive",
+        "C": "probationary",
+        "D": "preparatory"
       },
       "answer": "C",
       "explanation": ""
@@ -21146,12 +21646,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 47,
-      "question": "The architect has drawn a(n)",
+      "question": "The architect has drawn a(n)to show us what the building will look like when it’s finished.",
       "options": {
-        "A": "to show us what the building will look like when it’s finished.",
-        "B": "industry",
-        "C": "despair",
-        "D": "impact"
+        "A": "industry",
+        "B": "despair",
+        "C": "impact",
+        "D": "sketch"
       },
       "answer": "D",
       "explanation": ""
@@ -21166,12 +21666,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 48,
-      "question": "Sammy is a(n)",
+      "question": "Sammy is a(n)boy; he does whatever his mother tells him to do.",
       "options": {
-        "A": "boy; he does whatever his mother tells him to do.",
-        "B": "decisive",
-        "C": "rebellious",
-        "D": "obedient"
+        "A": "decisive",
+        "B": "rebellious",
+        "C": "obedient",
+        "D": "independent"
       },
       "answer": "C",
       "explanation": ""
@@ -21186,12 +21686,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 49,
-      "question": "According to the advertisement, applying eye cream daily can",
+      "question": "According to the advertisement, applying eye cream daily canwrinkles around the eyes.",
       "options": {
-        "A": "wrinkles around the eyes.",
-        "B": "allow",
-        "C": "prevent",
-        "D": "protect"
+        "A": "allow",
+        "B": "prevent",
+        "C": "protect",
+        "D": "attack"
       },
       "answer": "B",
       "explanation": ""
@@ -21286,12 +21786,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 4,
-      "question": "「有位太太請了個油漆匠到家裡粉刷牆壁。油漆匠一走進門，看到她的丈夫雙目失 明，頓時露出憐憫的眼光。可是男主人一向開朗樂觀，所以油漆匠在那裡工作了幾 天，他們談得很投機；油漆匠也從未提起男主人的缺憾。工作完畢，油漆匠取出帳 單，那位太太發現比談妥的價錢打了一個很大的折扣。她問油漆匠：『怎麼少算這",
+      "question": "「有位太太請了個油漆匠到家裡粉刷牆壁。油漆匠一走進門，看到她的丈夫雙目失明，頓時露出憐憫的眼光。可是男主人一向開朗樂觀，所以油漆匠在那裡工作了幾天，他們談得很投機；油漆匠也從未提起男主人的缺憾。工作完畢，油漆匠取出帳單，那位太太發現比談妥的價錢打了一個很大的折扣。她問油漆匠：『怎麼少算這麼多呢？』他回答說：『我跟妳先生在一起覺得很快樂，他對人生的態度，使我覺得自己的境況還不算最壞。所以減去的那一部分，就算我對他表示一點謝意，因為他使我不會把工作看得太苦。』油漆匠對她丈夫的推崇，使她淌下眼淚，因為這位慷慨的油漆匠，只有一隻手！」上文所述，其旨趣與下列何者最為接近？",
       "options": {
-        "A": "麼多呢？』他回答說：『我跟妳先生在一起覺得很快樂，他對人生的態度，使我覺",
-        "B": "得自己的境況還不算最壞。所以減去的那一部分，就算我對他表示一點謝意，因為",
-        "C": "他使我不會把工作看得太苦。』油漆匠對她丈夫的推崇，使她淌下眼淚，因為這位",
-        "D": "慷慨的油漆匠，只有一隻手！」"
+        "A": "把握自己，活在當下",
+        "B": "心存感激，才是真正的幸福",
+        "C": "改變你的想法，就會改變你的世界",
+        "D": "不與別人盲目攀比，自己就會悠然自得60110-6051080110-80510"
       },
       "answer": "C",
       "explanation": ""
@@ -21306,12 +21806,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 5,
-      "question": "「想像一下一群人要決定去那家餐廳吃飯，我們可能會先收集大家的意見，形成『共 識』，這個想法是：最大的快樂平均值來自最多人喜歡的選擇。團體智慧在找出最",
+      "question": "「想像一下一群人要決定去那家餐廳吃飯，我們可能會先收集大家的意見，形成『共識』，這個想法是：最大的快樂平均值來自最多人喜歡的選擇。團體智慧在找出最多人偏好的選項時行得通。」根據上文，最適合共識決定的選項是：",
       "options": {
-        "A": "多人偏好的選項時行得通。」根據上文，最適合共識決定的選項是：",
-        "B": "公共運輸的票價",
-        "C": "處方名稱與劑量",
-        "D": "新商品的接受度"
+        "A": "公共運輸的票價",
+        "B": "處方名稱與劑量",
+        "C": "新商品的接受度",
+        "D": "食安的抽驗品項"
       },
       "answer": "C",
       "explanation": ""
@@ -21346,12 +21846,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 7,
-      "question": "「食品的加工，就是肥胖普遍流行背後的藏鏡人，要逆轉這個情況，代表我們的消 費習慣與食品業的生產與經營方式，都需要有重大的改變。一位食品業執行長說：",
+      "question": "「食品的加工，就是肥胖普遍流行背後的藏鏡人，要逆轉這個情況，代表我們的消費習慣與食品業的生產與經營方式，都需要有重大的改變。一位食品業執行長說：『我們能改變，但是有兩個附帶條件：第一，我們不會單獨改變，第二，我們不能賠錢。』」根據上文，下列敘述何者錯誤？",
       "options": {
-        "A": "『我們能改變，但是有兩個附帶條件：第一，我們不會單獨改變，第二，我們不能",
-        "B": "賠錢。』」",
-        "C": "根據上文，下列敘述何者錯誤？",
-        "D": "如偏好加工食物將會讓人容易變胖"
+        "A": "如偏好加工食物將會讓人容易變胖",
+        "B": "食品業者暗示拿掉添加物將無法產製",
+        "C": "食品業者擔心同行不配合則自家吃虧",
+        "D": "食品業者認為獲利是經營的重要考量60110-6051080110-80510"
       },
       "answer": "B",
       "explanation": ""
@@ -21386,12 +21886,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 9,
-      "question": "「很多很多的孩子，在操場上等候上課的第一聲鈴響。小小的手，圈在爸爸的、媽 媽的手心裡，怯怯的眼神，打量著周遭。他們是幼稚園的畢業生，但是他們還不知 道一個定律：一件事情的畢業，永遠是另一件事情的開啟。所謂父母子女一場，只",
+      "question": "「很多很多的孩子，在操場上等候上課的第一聲鈴響。小小的手，圈在爸爸的、媽媽的手心裡，怯怯的眼神，打量著周遭。他們是幼稚園的畢業生，但是他們還不知道一個定律：一件事情的畢業，永遠是另一件事情的開啟。所謂父母子女一場，只不過意味著，你和他的緣分就是今生今世不斷地在目送他的背影漸行漸遠。你站立在小路的這一端，看著他逐漸消失在小路轉彎的地方，而且，他用背影默默告訴你：不必追。」根據上文，下列選項最符合文意的是：",
       "options": {
-        "A": "不過意味著，你和他的緣分就是今生今世不斷地在目送他的背影漸行漸遠。你站立",
-        "B": "在小路的這一端，看著他逐漸消失在小路轉彎的地方，而且，他用背影默默告訴你：",
-        "C": "根據上文，下列選項最符合文意的是：",
-        "D": "勸誡世間子女要及時行孝，以免有風木含悲之憾"
+        "A": "勸誡世間子女要及時行孝，以免有風木含悲之憾",
+        "B": "以期待子女有所成就之心情，取代離去時之悲傷",
+        "C": "親子分離是人生必經之宿命，要能適時有所領悟",
+        "D": "父母應尊重子女的生涯選擇，不宜有過多之干涉"
       },
       "answer": "C",
       "explanation": ""
@@ -21406,12 +21906,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 10,
-      "question": "「我會走上寫作之路，並被定位為『旅遊作家』和『美食作家』，完全是無心插柳 柳成蔭。不過在進入文壇十五年，在海峽兩岸出版了二十幾本暢銷書後，常有後進 艷羨的請教我成功之道。我總告訴他們：『寫自己最擅長最熟悉的東西』，並強調：",
+      "question": "「我會走上寫作之路，並被定位為『旅遊作家』和『美食作家』，完全是無心插柳柳成蔭。不過在進入文壇十五年，在海峽兩岸出版了二十幾本暢銷書後，常有後進艷羨的請教我成功之道。我總告訴他們：『寫自己最擅長最熟悉的東西』，並強調：『如果你是匹千里馬，一定會有伯樂出現』，每個人聽了都大樂。」下列選項，何者與上文敘述最不符合？",
       "options": {
-        "A": "『如果你是匹千里馬，一定會有伯樂出現』，每個人聽了都大樂。」",
-        "B": "下列選項，何者與上文敘述最不符合？",
-        "C": "作者當初的志向不是寫作",
-        "D": "作者的寫作之路經歷過一番波折"
+        "A": "作者當初的志向不是寫作",
+        "B": "作者的寫作之路經歷過一番波折",
+        "C": "作者擅長處理美食與旅行這方面的題材",
+        "D": "作者認為如真有寫作之才必有賞識之人"
       },
       "answer": "B",
       "explanation": ""
@@ -22926,12 +23426,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 1,
-      "question": "Many experts agree that the secret to a happy life is keeping a",
+      "question": "Many experts agree that the secret to a happy life is keeping abetween work and play.",
       "options": {
-        "A": "between work and play.",
-        "B": "balance",
-        "C": "deficit",
-        "D": "passage"
+        "A": "balance",
+        "B": "deficit",
+        "C": "passage",
+        "D": "diary"
       },
       "answer": "A",
       "explanation": ""
@@ -23046,12 +23546,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 7,
-      "question": "In this age of knowledge explosion, we need to",
+      "question": "In this age of knowledge explosion, we need tofacts from opinions.",
       "options": {
-        "A": "facts from opinions.",
-        "B": "distinguish",
-        "C": "extinguish",
-        "D": "distract"
+        "A": "distinguish",
+        "B": "extinguish",
+        "C": "distract",
+        "D": "exterminate"
       },
       "answer": "A",
       "explanation": ""
@@ -23086,12 +23586,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 9,
-      "question": "It may not be a good idea to start a new business",
+      "question": "It may not be a good idea to start a new businessduring a pandemic.",
       "options": {
-        "A": "during a pandemic.",
-        "B": "gesture",
-        "C": "venture",
-        "D": "texture"
+        "A": "gesture",
+        "B": "venture",
+        "C": "texture",
+        "D": "fracture"
       },
       "answer": "B",
       "explanation": ""
@@ -23166,12 +23666,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 13,
-      "question": "Due to the economic recession, the nation declared that it would",
+      "question": "Due to the economic recession, the nation declared that it wouldstudent loan payments until further notice.",
       "options": {
-        "A": "student loan payments until further notice.",
-        "B": "sustain",
-        "C": "submit",
-        "D": "suspend"
+        "A": "sustain",
+        "B": "submit",
+        "C": "suspend",
+        "D": "suppress"
       },
       "answer": "C",
       "explanation": ""
@@ -23246,12 +23746,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 17,
-      "question": "In recent weeks, hundreds of passengers go on daylong",
+      "question": "In recent weeks, hundreds of passengers go on daylongto learn about the history, culture, economy andenvironment of this attraction.",
       "options": {
-        "A": "to learn about the history, culture, economy and",
-        "B": "environment of this attraction.",
-        "C": "dedications",
-        "D": "devotions"
+        "A": "dedications",
+        "B": "devotions",
+        "C": "escalations",
+        "D": "excursions"
       },
       "answer": "D",
       "explanation": ""
@@ -23306,12 +23806,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 20,
-      "question": "Bedtime procrastination is the phenomenon of deliberately",
+      "question": "Bedtime procrastination is the phenomenon of deliberatelysleep even though there's nothing compellingyou to stay awake.",
       "options": {
-        "A": "sleep even though there's nothing compelling",
-        "B": "you to stay awake.",
-        "C": "taking off",
-        "D": "putting off"
+        "A": "taking off",
+        "B": "putting off",
+        "C": "turning off",
+        "D": "getting off"
       },
       "answer": "B",
       "explanation": ""
@@ -23326,12 +23826,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 21,
-      "question": "What you have been working on is ready for the next",
+      "question": "What you have been working on is ready for the nextof your life.",
       "options": {
-        "A": "of your life.",
-        "B": "phrase",
-        "C": "lace",
-        "D": "phase"
+        "A": "phrase",
+        "B": "lace",
+        "C": "phase",
+        "D": "face"
       },
       "answer": "C",
       "explanation": ""
@@ -23406,12 +23906,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 25,
-      "question": "I don’t have a ticket to the concert but my friend who works there could",
+      "question": "I don’t have a ticket to the concert but my friend who works there couldme in.",
       "options": {
-        "A": "me in.",
-        "B": "settle",
-        "C": "share",
-        "D": "sneak"
+        "A": "settle",
+        "B": "share",
+        "C": "sneak",
+        "D": "sweep"
       },
       "answer": "C",
       "explanation": ""
@@ -23466,12 +23966,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 28,
-      "question": "You should be aware that taking too much sugar or salt would",
+      "question": "You should be aware that taking too much sugar or salt wouldyour health.",
       "options": {
-        "A": "your health.",
-        "B": "jeopardize",
-        "C": "justify",
-        "D": "juxtapose"
+        "A": "jeopardize",
+        "B": "justify",
+        "C": "juxtapose",
+        "D": "jabber"
       },
       "answer": "A",
       "explanation": ""
@@ -24007,12 +24507,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 5,
-      "question": "一份電腦的「使用手冊」，應具備該電腦軟硬體設備規格的「規格說明」，並須有 具體的「使用方法」；另有維護廠商利益的「版權說明」、「免責聲明」；以及維 護使用者安全的「安全說明」、「注意事項」等等。擷取一頁部分內文如下：「在",
+      "question": "一份電腦的「使用手冊」，應具備該電腦軟硬體設備規格的「規格說明」，並須有具體的「使用方法」；另有維護廠商利益的「版權說明」、「免責聲明」；以及維護使用者安全的「安全說明」、「注意事項」等等。擷取一頁部分內文如下：「在法律允許的範圍內，本公司就本使用手冊，不提供任何明示或默示的擔保及保證，包括但不限於商業適銷性、特定目的之適用性、未侵害任何他人權利及任何得使用本使用手冊或無法使用本使用手冊的保證，且本公司對因使用本使用手冊而獲取的結果或透過本使用手冊所獲得任何資訊之準確性或可靠性不提供擔保。……當下列兩種情況發生時，本產品將不再受到本公司之保固及服務：（1）本產品曾經過非授權之維修、規格更改、零件替換或其他未經過本公司授權的行為。（2）本產品序號模糊不清或喪失。」上述內容最可能出現在「使用手冊」的那一部分？",
       "options": {
-        "A": "法律允許的範圍內，本公司就本使用手冊，不提供任何明示或默示的擔保及保證，",
-        "B": "包括但不限於商業適銷性、特定目的之適用性、未侵害任何他人權利及任何得使用",
-        "C": "本使用手冊或無法使用本使用手冊的保證，且本公司對因使用本使用手冊而獲取的",
-        "D": "結果或透過本使用手冊所獲得任何資訊之準確性或可靠性不提供擔保。......當下列"
+        "A": "使用方法",
+        "B": "版權說明",
+        "C": "免責說明",
+        "D": "安全說明"
       },
       "answer": "C",
       "explanation": ""
@@ -24027,12 +24527,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 6,
-      "question": "「第一堂課，濟之師就提出一個問題：『在一片草坪上，如何尋找一枚小球？』同",
+      "question": "「第一堂課，濟之師就提出一個問題：『在一片草坪上，如何尋找一枚小球？』同學們誰也不敢出聲。他老人家慢條斯理的自己回答：『在草坪上，畫上一條一條的平行直線，沿線一條一條的走過，低頭仔細看，走完整個草坪，一定會找到這個小球。』他的這一段話，毋寧為學生指示了學術研究與處世治事的基本原則：按照最笨最累的辦法，卻是最有把握找到問題的癥結所在。」下列選項，何者最切合上文所揭櫫的觀念？",
       "options": {
-        "A": "學們誰也不敢出聲。他老人家慢條斯理的自己回答：『在草坪上，畫上一條一條的",
-        "B": "平行直線，沿線一條一條的走過，低頭仔細看，走完整個草坪，一定會找到這個小",
-        "C": "球。』他的這一段話，毋寧為學生指示了學術研究與處世治事的基本原則：按照最",
-        "D": "笨最累的辦法，卻是最有把握找到問題的癥結所在。」"
+        "A": "鉅細靡遺，無所疏漏",
+        "B": "按部就班，照表操課",
+        "C": "凡事豫則立，不豫則廢",
+        "D": "不以規矩，不能成方圓"
       },
       "answer": "A",
       "explanation": ""
@@ -24047,12 +24547,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 7,
-      "question": "田納西．威廉斯說：「我的作品記錄了我各個時期的情感。它們與我的真實人生沒",
+      "question": "田納西．威廉斯說：「我的作品記錄了我各個時期的情感。它們與我的真實人生沒有任何關聯，但卻能反映我各階段的情緒。我試著要自己天天寫作，因為除了寫作之外，我沒有任何慰藉。當你處於低潮時——戀情不順、痛失親人，或生活中出現其他失序狀況——除了寫作之外，你無處可逃。」根據上文，最貼近本文旨意的選項是：",
       "options": {
-        "A": "有任何關聯，但卻能反映我各階段的情緒。我試著要自己天天寫作，因為除了寫作",
-        "B": "之外，我沒有任何慰藉。當你處於低潮時",
-        "C": "——戀情不順、痛失親人，或生活中出現",
-        "D": "其他失序狀況"
+        "A": "寫作的前提是痛苦經歷",
+        "B": "寫作的當下是充滿回憶",
+        "C": "寫作的歷程是一種療癒",
+        "D": "寫作的結果是完成傳記"
       },
       "answer": "C",
       "explanation": ""
@@ -24067,12 +24567,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 8,
-      "question": "「在經過漫長的乾旱季後，雨水落在乾燥土壤上時，混雜新鮮泥土與青草的氣味， 這股聞起來令人愉悅舒爽的初雨清香，就叫 ——『潮土油』。潮土油一詞首次出現 在1964年的《自然》期刊中，由兩位澳洲的研究人員創造。該單字是由兩個希臘 字所組成：一個為『岩石、石頭』，另一個則為希臘神話中『神的血液』。科學家",
+      "question": "「在經過漫長的乾旱季後，雨水落在乾燥土壤上時，混雜新鮮泥土與青草的氣味，這股聞起來令人愉悅舒爽的初雨清香，就叫——『潮土油』。潮土油一詞首次出現在1964 年的《自然》期刊中，由兩位澳洲的研究人員創造。該單字是由兩個希臘字所組成：一個為『岩石、石頭』，另一個則為希臘神話中『神的血液』。科學家進步一分析研究，構成『潮土油』的元素有：被大地吸收的植物分泌油脂，還有土壤中的細菌，更有臭氧。」下列選項，何者最符合詩人可以聞到「潮土油」的情境？",
       "options": {
-        "A": "進步一分析研究，構成『潮土油』的元素有：被大地吸收的植物分泌油脂，還有土",
-        "B": "壤中的細菌，更有臭氧。」",
-        "C": "下列選項，何者最符合詩人可以聞到「潮土油」的情境？",
-        "D": "天街小雨潤如酥，草色遙看近卻無"
+        "A": "天街小雨潤如酥，草色遙看近卻無",
+        "B": "停車坐愛楓林晚，霜葉紅於二月花",
+        "C": "雨裡雞鳴一兩家，竹溪村路板橋斜",
+        "D": "半畝方塘一鑑開，天光雲影共徘徊60110-6051080110-8071014110-14410"
       },
       "answer": "A",
       "explanation": ""
@@ -24087,12 +24587,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 9,
-      "question": "「當人們說到『文學殿堂』時，有時會有嘲諷之意；但想到文學館，我認為它在教 化的功能上應有殿堂的莊嚴涵義，這個館應該有一個進去就吸引人的明亮的中心， 如大教堂的正廳穹蒼圓頂，或現代的展示核心，用種種聲光色電的技術，日新月異 地說明文學是什麼？圍繞著它的是臺灣文學的成績與現況，世界文學的成績與現",
+      "question": "「當人們說到『文學殿堂』時，有時會有嘲諷之意；但想到文學館，我認為它在教化的功能上應有殿堂的莊嚴涵義，這個館應該有一個進去就吸引人的明亮的中心，如大教堂的正廳穹蒼圓頂，或現代的展示核心，用種種聲光色電的技術，日新月異地說明文學是什麼？圍繞著它的是臺灣文學的成績與現況，世界文學的成績與現況，在後面是收藏、展示。它不是一個死的收藏所，而是一個活的對話！進此門來能有一些啟發、激盪或更多的思索，至少不空心出去。」下列選項，最符合本文意旨的是：",
       "options": {
-        "A": "況，在後面是收藏、展示。它不是一個死的收藏所，而是一個活的對話！進此門來",
-        "B": "能有一些啟發、激盪或更多的思索，至少不空心出去。」",
-        "C": "下列選項，最符合本文意旨的是：",
-        "D": "文學館應包含收藏展示，以及在地與國際的對話"
+        "A": "文學館應包含收藏展示，以及在地與國際的對話",
+        "B": "文學館的建築設計，務必要如殿堂般的富麗堂皇",
+        "C": "唯有聲光色電的技術，能完整呈現文學的日新月異",
+        "D": "「文學殿堂」一詞意義明確，單指文學的教化功能"
       },
       "answer": "A",
       "explanation": ""
@@ -25067,12 +25567,12 @@
       "subject_name": "法學知識",
       "stage_id": 0,
       "number": 23,
-      "question": "依司法院釋字第775號解釋，刑法第48條前段規定：「裁判確定後，發覺為累犯者，依前條之規定更定",
+      "question": "依司法院釋字第775 號解釋，刑法第48 條前段規定：「裁判確定後，發覺為累犯者，依前條之規定更定其刑。」與憲法何原則有違？",
       "options": {
-        "A": "其刑。」與憲法何原則有違？",
-        "B": "信賴保護原則",
-        "C": "法律不溯及既往原則",
-        "D": "一事不再理原則"
+        "A": "信賴保護原則",
+        "B": "法律不溯及既往原則",
+        "C": "一事不再理原則",
+        "D": "法律明確性原則"
       },
       "answer": "C",
       "explanation": ""
@@ -25187,12 +25687,12 @@
       "subject_name": "法學知識",
       "stage_id": 0,
       "number": 29,
-      "question": "已廢止之九二一震災重建暫行條例第 75條第1項規定：「本條例自公布日施行，施行期間自生效日起算",
+      "question": "已廢止之九二一震災重建暫行條例第75 條第1 項規定：「本條例自公布日施行，施行期間自生效日起算五年。」該暫行條例於民國89 年2 月3 日公布。依上開規定，該暫行條例施行至何時？",
       "options": {
-        "A": "五年。」該暫行條例於民國",
-        "B": "89年2月3日公布。依上開規定，該暫行條例施行至何時？",
-        "C": "民國94年2月2日",
-        "D": "民國94年2月4日"
+        "A": "民國94 年2 月2 日",
+        "B": "民國94 年2 月4 日",
+        "C": "主管機關公布廢止之日",
+        "D": "主管機關公布廢止之日起算至第3 日起失效"
       },
       "answer": "B",
       "explanation": ""
@@ -26687,12 +27187,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 4,
-      "question": "「心理學家愛德華．桑代克曾透過『迷箱實驗』，提出工具性制約理論。實驗中他 將空腹的貓放入以細繩或踏板控制門開閉的箱子中，並在箱前放食物。想走出箱子 拿取食物的貓不斷嘗試各種方法，在偶然情況下拉到繩子或踩到踏板，最後吃到食 物。反覆嘗試數次後，脫困時間逐漸縮短。這便是『試行錯誤學習』，桑代克據此 提出連結學習三定律 ——練習律：練習次數會影響個體和刺激之間連結的強弱。準",
+      "question": "「心理學家愛德華．桑代克曾透過『迷箱實驗』，提出工具性制約理論。實驗中他將空腹的貓放入以細繩或踏板控制門開閉的箱子中，並在箱前放食物。想走出箱子拿取食物的貓不斷嘗試各種方法，在偶然情況下拉到繩子或踩到踏板，最後吃到食物。反覆嘗試數次後，脫困時間逐漸縮短。這便是『試行錯誤學習』，桑代克據此提出連結學習三定律——練習律：練習次數會影響個體和刺激之間連結的強弱。準備律：刺激與反應之間的連結和個體本身的身心狀態有關。效果律：反應後獲得的結果將會強化或弱化往後是否做出相同反應的機會。」根據上文，下列選項何者正確？",
       "options": {
-        "A": "備律：刺激與反應之間的連結和個體本身的身心狀態有關。效果律：反應後獲得的",
-        "B": "結果將會強化或弱化往後是否做出相同反應的機會。」",
-        "C": "根據上文，下列選項何者正確？",
-        "D": "「試行錯誤學習」是依據效果律的原理進行"
+        "A": "「試行錯誤學習」是依據效果律的原理進行",
+        "B": "由「迷箱實驗」可知，貓咪的智商高於人類",
+        "C": "上述實驗拿掉作為工具的箱子並不影響結果",
+        "D": "滿足學習者需求以提高學習成效屬於練習律60110-6051090110"
       },
       "answer": "A",
       "explanation": ""
@@ -26767,12 +27267,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 8,
-      "question": "小說家海明威曾經提出冰山原則的寫作理論，他說：「講故事要像冰山一樣，只講",
+      "question": "小說家海明威曾經提出冰山原則的寫作理論，他說：「講故事要像冰山一樣，只講露出海面的八分之一，海面下的八分之七留給讀者想像。」下列選項，何者不符合文意？",
       "options": {
-        "A": "露出海面的八分之一，海面下的八分之七留給讀者想像。」",
-        "B": "下列選項，何者不符合文意？",
-        "C": "講故事的過程如果過於淺白直接，就會導致讀者缺乏想像的空間",
-        "D": "講故事的過程應該留下想像的空間，使讀者發揮抽象聯想的功力"
+        "A": "講故事的過程如果過於淺白直接，就會導致讀者缺乏想像的空間",
+        "B": "講故事的過程應該留下想像的空間，使讀者發揮抽象聯想的功力",
+        "C": "讀者在故事開頭的八分之一，就判斷是否要繼續讀後面八分之七",
+        "D": "讀者能從海面上的八分之一冰山，想像海面下那八分之七的世界"
       },
       "answer": "C",
       "explanation": ""
@@ -27247,12 +27747,12 @@
       "subject_name": "刑法概要",
       "stage_id": 0,
       "number": 22,
-      "question": "詐欺集團成員A打電話向多名被害人詐稱：你的網購設定有誤，重複扣款，你去",
+      "question": "詐欺集團成員A 打電話向多名被害人詐稱：你的網購設定有誤，重複扣款，你去ATM 操作，我們可以還你重複扣的錢等語，使被害人陷於錯誤，前往ATM 處，依A 指示輸入金額，匯入詐欺集團控制的帳戶內。隨即詐欺集團成員B 將提款卡交給甲，甲明知該款項是詐騙所得，仍前往超商ATM 提款，並依約定留下款項1%當作報酬後，將餘款交給另一名詐欺集團成員C 帶走。依實務見解，甲應如何論罪？",
       "options": {
-        "A": "ATM操作，我",
-        "B": "們可以還你重複扣的錢等語，使被害人陷於錯誤，前往",
-        "C": "ATM處，依A指示輸入金額，匯入詐欺",
-        "D": "集團控制的帳戶內。隨即詐欺集團成員"
+        "A": "幫助犯刑法第339 條第1 項詐欺取財罪",
+        "B": "幫助犯刑法第339 條之4 第1 項第2 款三人以上共同詐欺取財罪",
+        "C": "刑法第339 條第1 項詐欺取財罪",
+        "D": "刑法第339 條之4 第1 項第2 款三人以上共同詐欺取財罪"
       },
       "answer": "D",
       "explanation": ""
@@ -28348,12 +28848,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 2,
-      "question": "Ice cracked at the lake’s edges at first, thereby",
+      "question": "Ice cracked at the lake’s edges at first, therebysome melted snow beneath.",
       "options": {
-        "A": "some melted snow beneath.",
-        "B": "appealing",
-        "C": "concealing",
-        "D": "fulfilling"
+        "A": "appealing",
+        "B": "concealing",
+        "C": "fulfilling",
+        "D": "revealing"
       },
       "answer": "D",
       "explanation": ""
@@ -28388,12 +28888,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 4,
-      "question": "Some people believe one day it will be possible to",
+      "question": "Some people believe one day it will be possible torockets to the moon from their backyard.",
       "options": {
-        "A": "rockets to the moon from their backyard.",
-        "B": "dismiss",
-        "C": "launch",
-        "D": "reward"
+        "A": "dismiss",
+        "B": "launch",
+        "C": "reward",
+        "D": "shovel"
       },
       "answer": "B",
       "explanation": ""
@@ -28428,12 +28928,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 6,
-      "question": "Music is usually considered a(n)",
+      "question": "Music is usually considered a(n)language.",
       "options": {
-        "A": "language.",
-        "B": "unionized",
-        "C": "unidentified",
-        "D": "unexpected"
+        "A": "unionized",
+        "B": "unidentified",
+        "C": "unexpected",
+        "D": "universal"
       },
       "answer": "D",
       "explanation": ""
@@ -28548,12 +29048,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 12,
-      "question": "Students suffered only minor injuries in the bus crash yesterday, but the driver was unconscious and in",
+      "question": "Students suffered only minor injuries in the bus crash yesterday, but the driver was unconscious and incondition.",
       "options": {
-        "A": "condition.",
-        "B": "critical",
-        "C": "ethical",
-        "D": "identical"
+        "A": "critical",
+        "B": "ethical",
+        "C": "identical",
+        "D": "formal"
       },
       "answer": "A",
       "explanation": ""
@@ -28568,12 +29068,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 13,
-      "question": "A study found that when people consumed caffeine even six hours prior to bedtime, it significantly",
+      "question": "A study found that when people consumed caffeine even six hours prior to bedtime, it significantlytheirsleep.",
       "options": {
-        "A": "their",
-        "B": "sleep.",
-        "C": "disturbed",
-        "D": "disconnected"
+        "A": "disturbed",
+        "B": "disconnected",
+        "C": "extended",
+        "D": "erased"
       },
       "answer": "A",
       "explanation": ""
@@ -28588,12 +29088,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 14,
-      "question": "We should not be limited by our own age or gender for we all have more",
+      "question": "We should not be limited by our own age or gender for we all have morethan we think.",
       "options": {
-        "A": "than we think.",
-        "B": "criticism",
-        "C": "geography",
-        "D": "imitation"
+        "A": "criticism",
+        "B": "geography",
+        "C": "imitation",
+        "D": "potential"
       },
       "answer": "D",
       "explanation": ""
@@ -28708,12 +29208,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 20,
-      "question": "The international conventions try to establish legal standards for",
+      "question": "The international conventions try to establish legal standards fortreatment in war.",
       "options": {
-        "A": "treatment in war.",
-        "B": "humpbacked",
-        "C": "humanitarian",
-        "D": "humorous"
+        "A": "humpbacked",
+        "B": "humanitarian",
+        "C": "humorous",
+        "D": "humiliating"
       },
       "answer": "B",
       "explanation": ""
@@ -28768,12 +29268,12 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 23,
-      "question": "We decided not to undertake the project because of the",
+      "question": "We decided not to undertake the project because of thecosts involved.",
       "options": {
-        "A": "costs involved.",
-        "B": "affordable",
-        "C": "enormous",
-        "D": "marginal"
+        "A": "affordable",
+        "B": "enormous",
+        "C": "marginal",
+        "D": "reasonable"
       },
       "answer": "B",
       "explanation": ""
@@ -28875,7 +29375,7 @@
         "C": "attended",
         "D": "attained"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -28895,7 +29395,7 @@
         "C": "misfortunes",
         "D": "possessions"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -28935,7 +29435,7 @@
         "C": "potentially",
         "D": "hypothetically"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -28995,7 +29495,7 @@
         "C": "opposition",
         "D": "recession"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -29035,7 +29535,7 @@
         "C": "adequate",
         "D": "eligible"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -29055,7 +29555,7 @@
         "C": "jury",
         "D": "lord"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -29115,7 +29615,7 @@
         "C": "elevator",
         "D": "obstacle"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": ""
     },
     {
@@ -29135,7 +29635,7 @@
         "C": "scarce",
         "D": "virgin"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -29155,7 +29655,7 @@
         "C": "dropped",
         "D": "risen"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -29175,7 +29675,7 @@
         "C": "distribution",
         "D": "facilitation"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -29235,7 +29735,7 @@
         "C": "To analyze the way Morris Chang persuaded leading companies to buy chips made by TSMC.",
         "D": "To outline the impacts of Morris Chang's retirement on TSMC and other technological companies."
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": ""
     },
     {
@@ -29255,7 +29755,7 @@
         "C": "MediaTek.",
         "D": "Qualcomm."
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -29275,7 +29775,7 @@
         "C": "Extremely modern and with all the advanced features.",
         "D": "Happening by chance instead of following a definite plan."
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": ""
     },
     {
@@ -29509,12 +30009,12 @@
       "subject_name": "國文",
       "stage_id": 0,
       "number": 10,
-      "question": "「元宇宙基於網際網路而生。隨著各種數位技術的成熟和商用的普及，元宇宙所要 構建的是一個囊括使用者、網路和各種終端設備的永續虛擬實境系統。這個系統與 現實世界相互聯通、平行存在，使用者可以借助虛擬身分進行娛樂、社交等活動， 並利用平臺資源來創作，將作品轉化為虛擬資產，真正的沉浸體驗一切。」 甲：「雖然元宇宙並非真實，但卻具備無窮商機，能提供人們另一種生活的體驗。」",
+      "question": "「元宇宙基於網際網路而生。隨著各種數位技術的成熟和商用的普及，元宇宙所要構建的是一個囊括使用者、網路和各種終端設備的永續虛擬實境系統。這個系統與現實世界相互聯通、平行存在，使用者可以借助虛擬身分進行娛樂、社交等活動，並利用平臺資源來創作，將作品轉化為虛擬資產，真正的沉浸體驗一切。」甲：「雖然元宇宙並非真實，但卻具備無窮商機，能提供人們另一種生活的體驗。」乙：「元宇宙的發展日趨成熟，但是否有明確的規範來保障個人權益，仍有待研議。」根據上文，下列關於甲、乙對元宇宙的評述，何者正確？",
       "options": {
-        "A": "乙：「元宇宙的發展日趨成熟，但是否有明確的規範來保障個人權益，仍有待研議。」",
-        "B": "根據上文，下列關於甲、乙對元宇宙的評述，何者正確？",
-        "C": "甲認同文中對於元宇宙前景所述",
-        "D": "乙反對文中對於現實環境的主張"
+        "A": "甲認同文中對於元宇宙前景所述",
+        "B": "乙反對文中對於現實環境的主張",
+        "C": "兩人對於元宇宙都著重在商用層面",
+        "D": "兩人對於元宇宙功能都沒表示看法"
       },
       "answer": "A",
       "explanation": ""

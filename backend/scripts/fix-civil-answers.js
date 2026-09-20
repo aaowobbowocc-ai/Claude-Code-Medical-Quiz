@@ -21,7 +21,7 @@ const APPLY = process.argv.includes('--apply');
 const EXAMS = ['police', 'police4', 'customs'];
 
 (async () => {
-  let tChanged = 0, tSame = 0, tSkip = 0, papers = 0;
+  let tChanged = 0, tSame = 0, tSkip = 0, papers = 0, errs = 0;
   for (const exam of EXAMS) {
     const f = `questions-${exam}.json`;
     const j = JSON.parse(fs.readFileSync(path.join(BK, f), 'utf8'));
@@ -33,11 +33,15 @@ const EXAMS = ['police', 'police4', 'customs'];
       const [code, ...rest] = k.split('|'); const subject = rest.join('|');
       const items = g[k];
       let p;
-      try { p = await resolvePaper({ exam, code, subject, year: String(code).slice(0, 3), items }); } catch (e) { continue; }
+      try { p = await resolvePaper({ exam, code, subject, year: String(code).slice(0, 3), items }); }
+      catch (e) { errs++; console.error(`  ! ${exam} ${code} ${subject}: resolve ${String(e.message).slice(0,50)}`); continue; }
       if (!p) continue;
       let qs, am;
       try { qs = await paperQuestions(code, p.c, p.s); am = await answerMap(code, p.c, p.s, Math.max(items.length, qs.size), p.subject); }
-      catch (e) { continue; }
+      catch (e) {
+        // 批次跑到後段 mupdf 會資源耗盡，只 continue 會讓整批無聲消失
+        errs++; console.error(`  ! ${exam} ${code} ${subject}: ${String(e.message).slice(0,50)}`); continue;
+      }
       if (!qs.size || !am || !am.map.size) continue;
       let hit = 0, tot = 0;
       for (const it of items) { const s = qs.get(+it.number); if (!s) continue; tot++; if (skeleton(it.question).slice(0, 20) === skeleton(s.stem).slice(0, 20)) hit++; }

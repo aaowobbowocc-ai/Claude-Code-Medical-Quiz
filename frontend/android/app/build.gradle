@@ -7,8 +7,8 @@ android {
         applicationId "tw.examking.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 26
-        versionName "1.0.25"
+        versionCode 27
+        versionName "1.0.26"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -29,8 +29,12 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // Play Console 的「DEX 程式碼最佳化」要求模糊化 ≥25%，預設關閉時只有 2%。
+            // 用 -optimize 版的預設規則（比 proguard-android.txt 多做最佳化）。
+            // shrinkResources 先不開：Capacitor 的 assets 是動態載入的，先只開 minify
+            // 確認真機沒問題再考慮。
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             // 只在 Codemagic 環境下套用簽章 (本機 build debug 不會卡)
             if (System.getenv("CM_KEYSTORE_PATH")) {
                 signingConfig signingConfigs.release

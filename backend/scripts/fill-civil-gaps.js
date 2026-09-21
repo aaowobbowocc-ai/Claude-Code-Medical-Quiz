@@ -60,6 +60,37 @@ async function paperQuestions(code, c, s) {
     else cur.stem += l.t.trim();
   }
   if (cur && cur.n && Object.keys(cur.options).length === 4) out.set(cur.n, cur);
+  return out.size ? out : streamParse(lines);
+}
+
+/**
+ * 備用版型：標記黏在**前一行的結尾**，而不是自己那行的開頭。
+ *   x=47 "36 "
+ *   x=72 "His father was ___ and put in jail as a result of his crime. Ⓐ"
+ *   x=86 "arrested Ⓑ"   x=201 "cheated Ⓒ"   …
+ * 上面那個逐行看開頭的解析法在這種卷一題都認不到（鐵路特考「公民與英文」實測）。
+ * 這裡改成把整題的文字接成一條字串再依標記切：標記之前是題幹，Ⓐ 之後是選項 A，以此類推。
+ * 只在嚴格版一題都沒抓到時才用，避免動到已經解析正確的卷。
+ */
+function streamParse(lines) {
+  const out = new Map();
+  let cur = null;
+  const flush = () => {
+    if (!cur) return;
+    const parts = cur.buf.split(/([-])/);
+    const q = { n: cur.n, stem: parts[0].trim(), options: {}, last: null };
+    for (let i = 1; i < parts.length; i += 2) {
+      const k = MARK[parts[i]];
+      if (k) q.options[k] = (parts[i + 1] || '').trim();
+    }
+    if (Object.keys(q.options).length === 4 && q.stem) out.set(q.n, q);
+  };
+  for (const l of lines) {
+    const numM = /^(\d{1,3})\s*$/.exec(l.t.trim());
+    if (numM && l.x < 80) { flush(); cur = { n: +numM[1], buf: '' }; continue; }
+    if (cur) cur.buf += ' ' + l.t;
+  }
+  flush();
   return out;
 }
 

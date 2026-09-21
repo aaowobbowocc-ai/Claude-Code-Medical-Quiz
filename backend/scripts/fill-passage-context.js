@@ -57,7 +57,17 @@ function passages(lines) {
       if (DECL.test(L.t)) break;                            // 碰到下一段文章宣告
       buf.push(L.t);
     }
-    const passage = buf.join('').replace(/[-]/g, '').replace(/\s+/g, ' ').trim();
+    // 有些卷的行文字不帶行尾空白，直接串接會黏成「familymembers」「becomes16their」，
+    // 克漏字的空格（裸露的題號）就不再是獨立 token，整段都標不出空格位置（customs 110050 實測）。
+    // 換行處補一個空白；真正被斷字的會以「-」結尾，那種才去掉連字號直接接上。
+    const joined = buf.reduce((acc, t, i) => {
+      if (i === 0) return t;
+      return /[-‐-]$/.test(acc) ? acc.replace(/[-‐-]$/, '') + t : acc + ' ' + t;
+    }, '');
+    const passage = joined.replace(/[-]/g, '')
+      // 文章跨頁時，頁首的「代號：11250」會被切成獨立一格，殘留成「| 11250」夾在句子中間
+      .replace(/\|\s*\d{4,6}\s*/g, ' ')
+      .replace(/\s+/g, ' ').trim();
     if (passage.length >= 40) out.push({ from, to, passage });
   }
   return out;

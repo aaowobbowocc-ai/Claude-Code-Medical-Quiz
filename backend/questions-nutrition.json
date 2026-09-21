@@ -64187,12 +64187,12 @@
       "subject_name": "公共衛生營養",
       "stage_id": 5,
       "number": 2,
-      "question": "下列有關中醫外科開刀法之敘述何者錯誤？",
+      "question": "國人膳食營養素參考攝取量（DRIs）的各項數值中，下列那些數值會高於健康人群的營養素平均需要量？①EAR（estimated average requirement） ②UL（tolerable upper intake levels） ③AI（adequate intakes）④RDA（recommended dietary allowances）",
       "options": {
-        "A": "腫瘍成膿之後，且膿腫中央也有透膿之點，此時切開最有利",
-        "B": "膿淺而深切，則內膿雖出，而好肉受傷",
-        "C": "一般瘡瘍，宜循經直開，刀頭向上，免傷血絡",
-        "D": "膿腫範圍大，肌肉豐厚而膿腔深者，切口宜小"
+        "A": "①②",
+        "B": "①③",
+        "C": "②④",
+        "D": "③④"
       },
       "answer": "C",
       "explanation": ""
@@ -69026,7 +69026,8 @@
         "D": "氣腫"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "wrong_source_paper"
     },
     {
       "id": 2682,
@@ -71366,7 +71367,8 @@
         "D": "當歸、熟地"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "wrong_source_paper"
     },
     {
       "id": 2641,
@@ -71426,7 +71428,8 @@
         "D": "激烈運動"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "wrong_source_paper"
     },
     {
       "id": 2645,
@@ -71698,12 +71701,12 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 20,
-      "question": "關於「臌脹」的敘述，下列何者錯誤？",
+      "question": "下列何者不是供膳人員體檢的必要項目？",
       "options": {
-        "A": "本病病位主要在肝、脾、腎三臟",
-        "B": "治療原則晚期以攻邪去實為主",
-        "C": "屬中醫四大頑證之一",
-        "D": "病機關鍵為氣、血、水互結於腹中"
+        "A": "胸部X 光",
+        "B": "A型肝炎",
+        "C": "B型肝炎",
+        "D": "傷寒"
       },
       "answer": "C",
       "explanation": ""
@@ -71846,7 +71849,8 @@
         "D": "治療本病時亦需遵循涼血活血，清熱解毒"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "wrong_source_paper"
     },
     {
       "id": 2668,
@@ -71866,7 +71870,8 @@
         "D": "行痹"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "wrong_source_paper"
     },
     {
       "id": 2669,
@@ -71986,7 +71991,8 @@
         "D": "可配合活血化甀藥使用"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "wrong_source_paper"
     },
     {
       "id": 2676,

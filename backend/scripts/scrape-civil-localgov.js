@@ -71,4 +71,7 @@ async function main() {
   console.log(`\n✅ Done: ${ok} ok, ${fail} failed`)
 }
 
-main().catch(e => { console.error(e); process.exit(1) })
+// 卷別表（年份→場次代號、c/s）是修復腳本唯一的權威來源，匯出共用，不要再各抄一份。
+module.exports = { SESSIONS }
+
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1) })

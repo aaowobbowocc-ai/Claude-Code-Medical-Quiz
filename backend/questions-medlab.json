@@ -7496,7 +7496,7 @@
     "subject_name": "臨床病毒學",
     "stage_id": 11,
     "number": 49,
-    "question": "下列那些感染是藉由老鼠傳染的？砂粒病毒（Arenavirus） 漢他病毒（Hantavirus） 西尼羅病毒（West Nile virus）",
+    "question": "下列那些感染是藉由老鼠傳染的？",
     "options": {
       "A": "砂粒病毒（Arenavirus）及漢他病毒（Hantavirus）",
       "B": "砂粒病毒（Arenavirus）及西尼羅病毒（West Nile virus）",
@@ -29738,10 +29738,10 @@
     "number": 13,
     "question": "下列何者為棕櫚酸（palmitic acid）的化學式？",
     "options": {
-      "A": "CH",
-      "B": "B3",
-      "C": "B(CH",
-      "D": "B2"
+      "A": "CHB3B(CHB2B)B10BCOOH",
+      "B": "CHB3B(CHB2B)B12BCOOH",
+      "C": "CHB3B(CHB2B)B14BCOOH",
+      "D": "CHB3B(CHB2B)B16BCOOH"
     },
     "answer": "C",
     "explanation": ""
@@ -29924,12 +29924,12 @@
     "subject_name": "生物化學",
     "stage_id": 8,
     "number": 22,
-    "question": "有關酵素之競爭型（competitive）抑制劑和非競爭型（noncompetitive）抑制劑之比較，下列敘述何者最正確？當受質濃度較抑制劑濃度高很多時，兩種抑制劑之作用皆會下降這兩種抑制劑之作用皆屬可逆（reversible）抑制作用",
+    "question": "有關酵素之競爭型（competitive）抑制劑和非競爭型（noncompetitive）抑制劑之比較，下列敘述何者最正確？",
     "options": {
-      "A": "競爭型抑制劑會使最大反應速率（V",
-      "B": "Bmax",
-      "C": "B）之值下降，非競爭型抑制劑則否",
-      "D": "非競爭型抑制劑會使K"
+      "A": "當受質濃度較抑制劑濃度高很多時，兩種抑制劑之作用皆會下降",
+      "B": "這兩種抑制劑之作用皆屬可逆（reversible）抑制作用",
+      "C": "競爭型抑制劑會使最大反應速率（VB）之值下降，非競爭型抑制劑則否Bmax",
+      "D": "非競爭型抑制劑會使KB （Michaelis-Menten常數）值上升，競爭型抑制劑則否Bm"
     },
     "answer": "B",
     "explanation": ""
@@ -37328,12 +37328,12 @@
     "subject_name": "臨床病毒學",
     "stage_id": 11,
     "number": 54,
-    "question": "下列何種方法最常用來做鼻病毒（Rhinovirus）之分型？補體固定試驗（Complement fixation test）血球凝集抑制試驗（Hemagglutination inhibition test）",
+    "question": "下列何種方法最常用來做鼻病毒（Rhinovirus）之分型？",
     "options": {
-      "A": "中和試驗（Neutralization",
-      "B": "test）",
-      "C": "西方墨點法（Western",
-      "D": "blot）"
+      "A": "補體固定試驗（Complement fixation test）",
+      "B": "血球凝集抑制試驗（Hemagglutination inhibition test）",
+      "C": "中和試驗（Neutralization test）",
+      "D": "西方墨點法（Western blot）"
     },
     "answer": "C",
     "explanation": ""

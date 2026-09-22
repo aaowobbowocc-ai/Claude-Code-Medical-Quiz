@@ -322,4 +322,7 @@ async function main() {
   console.log(`\n✅ +${added} → bank now ${bank.questions.length} total`)
 }
 
-main().catch(e => { console.error(e); process.exit(1) })
+// CONFIGS 裡的 (year, code, c, s) 是這些共用題庫唯一的卷別來源，匯出給稽核腳本共用
+module.exports = { CONFIGS }
+
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1) })

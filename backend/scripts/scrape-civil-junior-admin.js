@@ -401,4 +401,8 @@ async function main() {
   console.log(`   admin_studies_junior: ${banks.admin_studies.questions.length} q`)
 }
 
-main().catch(e => { console.error(e); process.exit(1) })
+// 年份→場次代號、科目→c/s 這兩張表是後續修復腳本唯一的權威來源，
+// 匯出來共用（見 repair-paren-split-options.js），不要再各抄一份。
+module.exports = { SESSIONS, SUBJECTS, BANK_META }
+
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1) })

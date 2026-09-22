@@ -22,6 +22,31 @@ const APPLY = process.argv.includes('--apply');
 const only = (process.argv.find(a => a.startsWith('--exam=')) || '').split('=')[1];
 const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
 
+/**
+ * 把一個 text run 接到已累積的字串後面。
+ *
+ * 兩件事不能靠 `+= l.t.trim()` 硬接：
+ * - **英文填空題的空格是兩個 run 之間的水平間隙**（關務 115 英文 #8：
+ *   "She was" 結束在 x=99，下一個 run 從 x=141 開始）。trim 掉就變成
+ *   「She wasfor the scholarship」，使用者看不出要填哪裡。間隙夠大就還原成 `_____`。
+ * - **換行處**硬接會黏成「extracurricularactivities」。但中文不能補空白
+ *   （中文是在詞中間斷行的，補了會變成「中文 文字」），所以只在前後都是英數時補。
+ */
+function appendRun(acc, l, prev) {
+  const t = l.t.trim();
+  if (!t) return acc;
+  if (!acc) return t;
+  let sep = '';
+  if (prev && prev.p === l.p && Math.abs(prev.y - l.y) <= 3) {
+    const gap = l.x - (prev.x + prev.w);
+    if (gap > 12) sep = ' _____ ';
+    else if (gap > 2) sep = ' ';
+  } else if (/[A-Za-z0-9]$/.test(acc) && /^[A-Za-z0-9]/.test(t)) {
+    sep = ' ';
+  }
+  return acc + sep + t;
+}
+
 async function paperQuestions(code, c, s) {
   const buf = await fetchSheet('Q', code, c, s);
   const mupdf = await import('mupdf');
@@ -44,6 +69,7 @@ async function paperQuestions(code, c, s) {
 
   const out = new Map();
   let cur = null;
+  let prev = null;                 // 上一個被接進題幹／選項的 run，用來判斷間隙
   for (const l of lines) {
     const mark = MARK[l.t[0]];
     // 題號是**獨立一行**（只有數字，x≈64），題幹在右邊另一行（x≈85）。
@@ -52,13 +78,15 @@ async function paperQuestions(code, c, s) {
     if (!mark && numM && l.x < 80) {
       if (cur && cur.n && Object.keys(cur.options).length === 4) out.set(cur.n, cur);
       cur = { n: +numM[1], stem: '', options: {}, last: null };
+      prev = null;
       continue;
     }
     if (!cur) continue;
-    if (mark) { cur.options[mark] = l.t.slice(1).trim(); cur.last = mark; continue; }
+    if (mark) { cur.options[mark] = l.t.slice(1).trim(); cur.last = mark; prev = l; continue; }
     // 沒有標記 → 接續前一個選項，或還沒開始選項就接續題幹
-    if (cur.last) cur.options[cur.last] += l.t.trim();
-    else cur.stem += l.t.trim();
+    if (cur.last) cur.options[cur.last] = appendRun(cur.options[cur.last], l, prev);
+    else cur.stem = appendRun(cur.stem, l, prev);
+    prev = l;
   }
   if (cur && cur.n && Object.keys(cur.options).length === 4) out.set(cur.n, cur);
   if (out.size) return out;

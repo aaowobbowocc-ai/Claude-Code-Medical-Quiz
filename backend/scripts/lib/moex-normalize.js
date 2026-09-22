@@ -78,4 +78,17 @@ function linesByLayout(items, rowTolerance = 4) {
   return rows.map(r => r.items.sort((a, b) => a.x - b.x).map(i => i.t).join(''));
 }
 
-module.exports = { normText, skeleton, nameKey, sameName, toHalfWidth, linesByLayout };
+/**
+ * 判斷「兩個選項是不是同一個選項」用的鍵。
+ *
+ * 不要拿 skeleton() 做這件事——它把標點整個刪掉，於是「3.44 cm」與「344 cm」
+ * 變成同一個鍵，好好的題被當成選項重複的壞題（audiologist 100090 #15 實測，
+ * 一口氣誤判 267 題）。
+ * 這裡只折疊全形／半形與空白：全形逗號 ， 會被 NFKC 折成 ,，
+ * 所以「兩個選項只差一個全形逗號」那種真重複仍然抓得到，小數點則保留。
+ */
+function optionKey(t) {
+  return String(t ?? '').normalize('NFKC').replace(/[\s　]/g, '');
+}
+
+module.exports = { normText, skeleton, nameKey, sameName, toHalfWidth, linesByLayout, optionKey };

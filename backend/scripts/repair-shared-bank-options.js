@@ -19,7 +19,7 @@ const fs = require('fs');
 const path = require('path');
 const { paperQuestions } = require('./fill-civil-gaps');
 const { sheetMap } = require('./lib/moex-answer-geo');
-const { skeleton } = require('./lib/moex-normalize');
+const { skeleton, optionKey } = require('./lib/moex-normalize');
 const { atomicWriteJson } = require('./lib/atomic-write');
 const { buildPapers } = require('./audit-shared-bank-answers');
 
@@ -33,7 +33,7 @@ const optsOf = o => ['A', 'B', 'C', 'D'].map(k => String(o[k] || '').trim());
 // （「不僅及於」vs「不僅及於」中間的，與,），用原字串比會判成不同，
 // 結果把一組實際重複的選項複製到共用題庫。那種題寧可不修，留著等另外處理。
 const usable = a => a.length === 4 && a.every(t => t)
-  && new Set(a.map(t => skeleton(t))).size === 4 && !a.some(t => PUA.test(t));
+  && new Set(a.map(t => optionKey(t))).size === 4 && !a.some(t => PUA.test(t));
 const key = (year, n, stem) => `${year}|${n}|${skeleton(stem).slice(0, 24)}`;
 
 (async () => {

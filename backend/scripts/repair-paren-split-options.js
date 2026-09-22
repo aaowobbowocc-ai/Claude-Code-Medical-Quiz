@@ -10,8 +10,8 @@
  * 原卷其實是四個完整選項。使用者回報 #937（普考 107 行政學概要 #37）就是這型，
  * 而且因為選項錯位，存的答案字母（D）也指到錯的地方（官方是 C）。
  *
- * 判準：某個選項只剩右括號、左右括號數不相等、選項空白，或兩個選項實質重複
- * （用 skeleton 比，有些只差一個全形／半形逗號）。這幾種都是同一批版型問題的不同面孔。
+ * 判準：某個選項只剩右括號、左右括號數不相等、選項空白，或兩個選項實質重複。
+ * 這幾種都是同一批版型問題的不同面孔。
  * 修法：整組選項改用原卷的，答案改用考選部標準答案卷——選項位置都變了，舊字母不可信。
  * 題幹原則上不動，只有在「原卷題幹是我們題幹的延伸、且延伸的那段不是選項文字」時才補。
  *
@@ -22,7 +22,7 @@ const path = require('path');
 const { resolvePaper } = require('./lib/moex-paper-resolve');
 const { paperQuestions } = require('./fill-civil-gaps');
 const { sheetMap } = require('./lib/moex-answer-geo');
-const { skeleton } = require('./lib/moex-normalize');
+const { skeleton, optionKey } = require('./lib/moex-normalize');
 const { atomicWriteJson } = require('./lib/atomic-write');
 // 普考行政學／行政法的年份→場次代號與 c/s，權威在爬蟲那支
 const { SESSIONS, SUBJECTS } = require('./scrape-civil-junior-admin');
@@ -34,15 +34,16 @@ const PUA = /[-]/;
 
 const optsOf = o => ['A', 'B', 'C', 'D'].map(k => String(o[k] || '').trim());
 const balanced = t => (t.match(/[（(]/g) || []).length === (t.match(/[）)]/g) || []).length;
-const usable = a => a.length === 4 && a.every(t => t) && new Set(a.map(t => skeleton(t))).size === 4
+const usable = a => a.length === 4 && a.every(t => t) && new Set(a.map(t => optionKey(t))).size === 4
   && !a.some(t => PUA.test(t)) && a.every(balanced);
 /**
  * 這一題的選項是不是壞的。原本只看括號被切開，後來發現「選項重複／空白」
  * 是同一批版型問題的另一個面孔，修法與防呆完全一樣，就一起收進來。
- * 重複要用 skeleton 比——有些題的兩個選項只差一個全形／半形逗號。
+ * 判重複要用 optionKey（只折疊全形半形），不能用 skeleton——skeleton 連標點都刪，
+ * 會把「3.44 cm」和「344 cm」判成重複，一口氣誤判 267 題好題。
  */
 const brokenOptions = a => a.some(t => /^[）)]$/.test(t)) || a.some(t => !balanced(t))
-  || a.some(t => !t) || new Set(a.map(t => skeleton(t))).size !== 4;
+  || a.some(t => !t) || new Set(a.map(t => optionKey(t))).size !== 4;
 
 /** 普考共用題庫的一筆 → 該卷的 {code,c,s}；對不到回 null */
 function juniorPaper(q, bankKey) {

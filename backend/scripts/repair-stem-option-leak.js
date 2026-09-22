@@ -22,9 +22,17 @@ const { atomicWriteJson } = require('./lib/atomic-write');
 const BK = path.join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
 
+// 選項標記 ⒶⒷⒸⒹ。漏進題幹時使用者看到的是豆腐字，而且會讓下面的前綴比對失敗
+// （common_constitution 115 #24 的題幹尾巴開頭就是 U+E18C，skeleton 不會移除它）。
+// 只清這四個已知的標記，其他 PUA 可能是造字（ast/gsat 的數學符號），不要動。
+// 兩個版本：帶 g 的用來取代，不帶 g 的用來判斷。
+// 帶 g 的 regex 用 .test() 會記住 lastIndex，連續呼叫會每隔一次回傳 false。
+const OPT_MARK = /[-]/g;
+const HAS_MARK = /[-]/;
+
 /** 題幹尾巴是不是選項 A 的內容；是的話回傳截斷後的題幹 */
 function trimLeak(q) {
-  const stem = String(q.question || '');
+  const stem = String(q.question || '').replace(OPT_MARK, '');
   const optA = String((q.options || {}).A || '');
   if (!stem || !optA) return null;
   const skA = skeleton(optA);
@@ -60,6 +68,11 @@ for (const p of files) {
   if (!arr) continue;
   banks[p] = { raw, dirty: false };
   for (const q of arr) {
+    // 沒有漏選項、但題幹殘留選項標記的，也順手清掉（使用者看到的是豆腐字）
+    if (HAS_MARK.test(String(q.question || ''))) {
+      const cleaned = String(q.question).replace(OPT_MARK, '').replace(/\s{2,}/g, ' ').trim();
+      if (cleaned.length >= 12 && APPLY) { q.question = cleaned; banks[p].dirty = true; }
+    }
     const cut = trimLeak(q);
     if (!cut || cut.length < 12) continue;
     plan.push({ file: path.basename(p), id: q.id, n: q.number,

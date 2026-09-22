@@ -153475,7 +153475,7 @@
       "options": {
         "A": "RIA所使用的多半是連續型的γ計數器，其 NaI(Tl)晶體是以穿孔（through-hole）型為主",
         "B": "井型計數器（well counter）之計數幾何（counting geometry）為2π",
-        "C": "ompton scattering）",
+        "C": "RIA之125I在γ計數器進行偵測時，是利用125I的35 keV的γ ray撞擊到 NaI(Tl)晶體產生康普吞散射（Compton scattering）",
         "D": "一般RIA之γ計數器所測檢體之體積約5～10 ml"
       },
       "answer": "A",
@@ -164557,10 +164557,10 @@
       "number": 50,
       "question": "下列何者在血液中的變化最能刺激中樞化學接受器（central chemoreceptors）而增加通氣量 （ventilation）？",
       "options": {
-        "A": "cid）生成增加",
-        "B": "動脈血氧分壓下降",
-        "C": "動脈血氫離子濃度增加",
-        "D": "動脈血二氧化碳分壓增加"
+        "A": "與⼆氧化碳無關的酸（non-CO2 acid）⽣成增加",
+        "B": "動脈⾎氧分壓下降",
+        "C": "動脈⾎氫離⼦濃度增加",
+        "D": "動脈⾎⼆氧化碳分壓增加"
       },
       "answer": "D",
       "explanation": ""
@@ -174167,7 +174167,7 @@
       "question": "下列何類藥物不適合用於治療心臟衰竭（heart failure）？",
       "options": {
         "A": "利尿劑",
-        "B": "鈣離子通道阻斷劑（Ca 2+",
+        "B": "鈣離子通道阻斷劑（Ca2+ channel blockers）",
         "C": "血管舒張劑（vasodilator）",
         "D": "β-腎上腺素受體（β-adrenergic receptor）阻斷劑"
       },
@@ -174845,10 +174845,10 @@
       "number": 80,
       "question": "有關神經元退化疾病（neurodegenerative disorder）之敘述，下列何者錯誤？",
       "options": {
-        "A": "帕金森氏病（idiopathic Parkinson disease）之病理變化是腦幹中黑質（substantial nigra）及藍斑（locus",
+        "A": "帕金森氏病（idiopathic Parkinson disease）之病理變化是腦幹中黑質（substantial nigra）及藍斑（locuscereus）的神經元黑色素消失或減少",
         "B": "肌萎縮性側索硬化症（amyotrophic lateral sclerosis）病理變化為脊髓後角運動神經元退化",
-        "C": "亨丁頓氏舞蹈症（Huntington chorea）之病理變化是大腦內基底核的尾核（caudate nuclei）、殼腦 （putamen）和蒼白球（globus pallidus）內的神經元持續退化",
-        "D": "阿茲海默病（Alzheimer disease）病理變化為大腦皮質萎縮，顯微鏡下可見神經細纖維纏結（neurofibrillary tangles）、老化神經斑塊（senile neuritic plaque）、類澱粉血管病（amyloid angiopathy）"
+        "C": "亨丁頓氏舞蹈症（Huntington chorea）之病理變化是大腦內基底核的尾核（caudate nuclei）、殼腦（putamen）和蒼白球（globus pallidus）內的神經元持續退化",
+        "D": "阿茲海默病（Alzheimer disease）病理變化為大腦皮質萎縮，顯微鏡下可見神經細纖維纏結（neurofibrillarytangles）、老化神經斑塊（senile neuritic plaque）、類澱粉血管病（amyloid angiopathy）"
       },
       "answer": "B",
       "explanation": ""
@@ -191418,10 +191418,10 @@
       "number": 19,
       "question": "有關核醫心肌灌注檢查因軟組織造成的衰減（attenuation）的敘述，下列何者正確？",
       "options": {
-        "A": "ttenuation）",
+        "A": "與女性比較，男性較常在左心室心肌前壁發生衰減假影（attenuation artifact）",
         "B": "與男性比較，女性較常在左心室心肌下壁發生衰減假影（attenuation artifact）",
-        "C": "使用 201 Tl-TlCl進行心肌灌注檢查通常比起使用 99m Tc-sestamibi較不會有衰減假影的問題",
-        "D": "病人以趴著（prone）的姿勢造影比起以平躺（supine）的姿勢造影較會減少橫膈衰減（diaphragmatic"
+        "C": "使用201Tl-TlCl進行心肌灌注檢查通常比起使用99mTc-sestamibi較不會有衰減假影的問題",
+        "D": "病人以趴著（prone）的姿勢造影比起以平躺（supine）的姿勢造影較會減少橫膈衰減（diaphragmaticattenuation）"
       },
       "answer": "D",
       "explanation": ""
@@ -193564,7 +193564,7 @@
       "number": 45,
       "question": "下列有關交感神經系統活化對心肌細胞收縮影響的敘述，何者錯誤？",
       "options": {
-        "A": "細胞膜上鈣離子通道（Ca 2+",
+        "A": "細胞膜上鈣離子通道（Ca2+ channels）通透性增加",
         "B": "細胞內鈣離子濃度增加",
         "C": "收縮力增加",
         "D": "收縮週期增長"
@@ -193604,10 +193604,10 @@
       "number": 47,
       "question": "下列何者並未參與竇房結（SA node）自發性產生動作電位（action potential）的過程？",
       "options": {
-        "A": "電壓依賴型鈉離子通道（voltage-gated Na +",
-        "B": "F型鈉離子通道（F-type Na +",
-        "C": "hannels）",
-        "D": "鉀離子通道（K +"
+        "A": "電壓依賴型鈉離子通道（voltage-gated Na+ channels）",
+        "B": "F型鈉離子通道（F-type Na+ channels）",
+        "C": "L型鈣離子通道（L-type Ca2+ channels）",
+        "D": "鉀離子通道（K+ channels）"
       },
       "answer": "A",
       "explanation": ""
@@ -205232,9 +205232,9 @@
       "question": "水分子受X射線照射後產生的輻射分解產物，下列何者在有氧的狀態下對生物組織傷害的時間會延長？",
       "options": {
         "A": "OH•",
-        "B": "H2O -",
+        "B": "H2O-",
         "C": "H2O2",
-        "D": "H2O"
+        "D": "HO2"
       },
       "answer": "A",
       "explanation": ""
@@ -209274,10 +209274,10 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 23,
-      "question": "利用超音波系統測量腫瘤大小通常會有誤差",
+      "question": "利用超音波系統測量腫瘤大小通常會有誤差，其主要原因為何？",
       "options": {
         "A": "系統假設不同組織皆為相同聲速",
-        "B": "腫瘤在影像上的訊雜比（signal-to- noise ratio",
+        "B": "腫瘤在影像上的訊雜比（signal-to-noise ratio）較差",
         "C": "腫瘤的高衰減特性所造成",
         "D": "系統本身雜訊所影響"
       },
@@ -209299,7 +209299,7 @@
         "A": "材料性質必須無毒無害",
         "B": "對比劑粒子大小可以通過微血管",
         "C": "可以在血管中產生強回音以增強超音波影像對比",
-        "D": "是組織諧波影像（tissue harmonic imaging"
+        "D": "是組織諧波影像（tissue harmonic imaging）的主要成像原理"
       },
       "answer": "D",
       "explanation": ""
@@ -209316,7 +209316,7 @@
       "number": 25,
       "question": "有關超音波之敘述，下列何者錯誤？",
       "options": {
-        "A": "換能器所產生聲場可分為近場、聚焦區 的技術 下列敘述何者正確？ 決定 的電流來調整X光管（X-ray tube）的電流 500 mA film mammography）影像，軟片上某一點的X光穿透率為 二部電腦斷層掃描設備之調制轉換函數（MTF）與空間頻率的關係如附圖所示（E 有較高的對比解析度 有較低的對比解析度 有較高的空間解析度 有較高的空間解析度 image intensifier tube）使用縮小增益（minification gain ），則下列敘述何者錯誤？ 有較高的調制轉換函數（MTF） 之優點？ 利用超音波系統測量腫瘤大小通常會有誤差，其主要原因為何？ noise ratio）較差 下列何者錯誤？ 可以在血管中產生強回音以增強超音波影像對比 tissue harmonic imaging）的主要成像原理 ？ 聚焦區、遠場 光穿透率為2.5%，其光密度（OD） E－橘色、F－藍色），下列 minification gain）模式，欲得到相同的",
+        "A": "換能器所產生聲場可分為近場、聚焦區、遠場",
         "B": "對於超音波單陣元探頭來說，頻率增加，則近場長度變短",
         "C": "換能器的壓電晶體孔徑增加，則近場長度增加",
         "D": "換能器的聲場寬度決定系統的側向解析度"
@@ -211386,8 +211386,8 @@
       "options": {
         "A": "甲狀腺機能低下（hypothyroidism）",
         "B": "格雷夫茲症（Graves' disease）",
-        "C": "多結節性甲狀腺腫（multinodular goiter",
-        "D": "乳突狀細胞甲狀腺癌（papillary thyroid cancer"
+        "C": "多結節性甲狀腺腫（multinodular goiter）",
+        "D": "乳突狀細胞甲狀腺癌（papillary thyroid cancer）"
       },
       "answer": "C",
       "explanation": "",
@@ -211486,12 +211486,12 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 51,
-      "question": "以 99m Tc-DTPA氣霧（aerosol）進行肺通氣掃描",
+      "question": "以99mTc-DTPA 氣霧（aerosol）進行肺通氣掃描，與133Xe 相較之敘述，下列何者錯誤？",
       "options": {
-        "A": "滯留在肺部的生物半衰期（biological half life",
-        "B": "可以更容易觀察肺泡上皮清除速率（",
-        "C": "更適合在同一次檢查進行多相位造影",
-        "D": "較容易於嚴重慢性阻塞性肺疾病病人發生中央氣道凝結"
+        "A": "滯留在肺部的生物半衰期（biological half life）比較短",
+        "B": "可以更容易觀察肺泡上皮清除速率（alveolar epithelial clearance）",
+        "C": "更適合在同一次檢查進行多相位造影（multiple-view imaging）",
+        "D": "較容易於嚴重慢性阻塞性肺疾病病人發生中央氣道凝結（central clumping）"
       },
       "answer": "A",
       "explanation": ""
@@ -211526,12 +211526,12 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 53,
-      "question": "有關 99m Tc-MAA肺灌注檢查的敘述，",
+      "question": "有關99mTc-MAA 肺灌注檢查的敘述，下列何者正確？",
       "options": {
-        "A": "檢查前須禁食6小時 multinodular goiter） papillary thyroid cancer） intraparenchymal lesion），應使用下列何種放射性示蹤劑造影 下列敘述何者正確？ 放射性製劑是用何種方式給藥？ 腫瘤掃描，其腫瘤攝取 18 F-FDG之量為何？ 進行肺通氣掃描，與 133 Xe相較之敘述，下列何者錯誤 biological half life）比較短 （alveolar epithelial clearance） 更適合在同一次檢查進行多相位造影（multiple-view imaging） 較容易於嚴重慢性阻塞性肺疾病病人發生中央氣道凝結（central clumping） 下列何者可用來偵測並區分精索扭轉或急性副睪炎？ ，下列何者正確？ 應使用下列何種放射性示蹤劑造影？ 下列何者錯誤？",
-        "B": "在正常肺灌注影像中， 99m Tc-MAA會均勻分布於肺底以及肺尖處",
-        "C": "肺栓塞患者的 99m Tc-MAA肺灌注影像顯示正常",
-        "D": "有重度右到左側心血管分流（right to left cardiac shunt）的病人或幼兒， 99m Tc-MAA注射量應減低"
+        "A": "檢查前須禁食6 小時",
+        "B": "在正常肺灌注影像中，99mTc-MAA 會均勻分布於肺底以及肺尖處",
+        "C": "肺栓塞患者的99mTc-MAA 肺灌注影像顯示正常",
+        "D": "有重度右到左側心血管分流（right to left cardiac shunt）的病人或幼兒，99mTc-MAA 注射量應減低"
       },
       "answer": "D",
       "explanation": ""
@@ -211930,8 +211930,8 @@
       "options": {
         "A": "一致性（constancy）為每日校驗項目",
         "B": "準確性（accuracy）為年度校驗項目",
-        "C": "若改變抽藥針筒體積，應重新評估幾何",
-        "D": "常使用 99m Tc作為一致性（constancy"
+        "C": "若改變抽藥針筒體積，應重新評估幾何（geometry）因子",
+        "D": "常使用99mTc 作為一致性（constancy）校驗之校正射源"
       },
       "answer": "D",
       "explanation": ""
@@ -220984,8 +220984,8 @@
       "options": {
         "A": "針孔式準直儀（pinhole collimator）",
         "B": "散焦式準直儀（diverging collimator）",
-        "C": "平行多孔式準直儀（parallel multihole collimator",
-        "D": "聚合式準直儀（converging collimator"
+        "C": "平行多孔式準直儀（parallel multihole collimator）",
+        "D": "聚合式準直儀（converging collimator）"
       },
       "answer": "A",
       "explanation": "",
@@ -230751,10 +230751,10 @@
       "number": 44,
       "question": "臨床以99mTc-MAG3 進行核醫腎臟造影如下圖所示,下列何種狀況最為可能?",
       "options": {
-        "A": "右側正常集尿系統（normal right collecting system （upper pole obstruction）",
-        "B": "右側雙套集尿系統（duplicated right collecting system 塞（upper pole obstruction）",
+        "A": "右側正常集尿系統（normal right collecting system），下端實質部逆流（lower pole reflux）及上端實質部阻塞（upper pole obstruction）",
+        "B": "右側雙套集尿系統（duplicated rightcollecting system），下端實質部逆流（lower pole reflux）及上端實質部阻塞（upper pole obstruction）",
         "C": "正常腎臟影像",
-        "D": "左側雙套集尿系統（duplicated right collecting system 塞（upper pole obstruction）"
+        "D": "左側雙套集尿系統（duplicated rightcollecting system），下端實質部逆流（lower pole reflux）及上端實質部阻塞（upper pole obstruction）"
       },
       "answer": "B",
       "explanation": "",
@@ -230833,9 +230833,9 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 48,
-      "question": "唾液腺 99m Tc-pertechnetate掃描，在注射後",
+      "question": "唾液腺99mTc-pertechnetate 掃描，在注射後20～30 分鐘之間要病患口含維生素C、酸梅或檸檬汁，其目的為何？",
       "options": {
-        "A": "看唾液腺放射活性是否上升 right collecting system），下端實質部逆流（lower pole reflux duplicated right collecting system），下端實質部逆流（lower pole reflux duplicated right collecting system），下端實質部逆流（lower pole reflux 5 mCi的 99m Tc-pertechnetate，並使用針孔準直儀分別進行影像擷取 ，剩餘的活度為下列何種組織之影像？ 下列何種放射藥物適用於副甲狀腺造影？ 下列敘述何者錯誤？ 腎移植後之病患造影時通常需要改成骨盆腔前位像照法 renal perfusion phase 製劑蛋白質結合率強，不適合用來評估腎移植功能 在注射後20～30分鐘之間要病患口含維生素C、酸梅或檸檬汁 lower pole reflux）及上端實質部阻塞 lower pole reflux）及上端實質部阻 lower pole reflux）及上端實質部阻 並使用針孔準直儀分別進行影像擷取，當 201 Tl- 不適合用來評估腎移植功能 酸梅或檸檬汁，其目的為何？",
+        "A": "看唾液腺放射活性是否上升",
         "B": "看放射活性是否由唾液腺分泌出",
         "C": "讓病患排出不具放射活性之唾液",
         "D": "確認唾液腺的位置"
@@ -235302,7 +235302,7 @@
         "A": "僅①",
         "B": "僅②③",
         "C": "僅①②",
-        "D": "①②③ 2，PDD (8, 15 × 15, 100) =76.53，Sp(15.23 ×"
+        "D": "①②③"
       },
       "answer": "D",
       "explanation": ""
@@ -239365,12 +239365,12 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 71,
-      "question": "關於半導體偵檢器（semiconductor detector",
+      "question": "關於半導體偵檢器（semiconductor detector）的特性，下列敘述何者錯誤？",
       "options": {
-        "A": "採用順向偏壓可以增大空乏區（depletion region",
-        "B": "硼可作為p型半導體的受體（acceptor",
-        "C": "磷可作為n型半導體的施體（donor",
-        "D": "空乏區的游離電子往n型半導體移動"
+        "A": "採用順向偏壓可以增大空乏區（depletion region）",
+        "B": "硼可作為p 型半導體的受體（acceptor）",
+        "C": "磷可作為n 型半導體的施體（donor）",
+        "D": "空乏區的游離電子往n 型半導體移動"
       },
       "answer": "A",
       "explanation": ""
@@ -241134,10 +241134,10 @@
       "number": 78,
       "question": "下圖中 111 In核種係進行何種衰變？",
       "options": {
-        "A": "電子捕獲及β + projections），每張投影收集20秒且計數為52,000，合計約收集多少計數和總收集 分鐘內計測到6,400個計數（count），此樣本計測結果可以下列何者表示 標幟藥物注射到病人體內，在1小時後採血，得到計數值為 4,800 Bq/mL，已知注射前之血液樣品的計數值為200 Bq/mL 合計約收集多少計數和總收集 此樣本計測結果可以下列何者表示 得到計數值為8,000 Bq/mL；3小時後再 200 Bq/mL，則 131 I標幟藥物的生",
-        "B": "β + 及γ",
+        "A": "電子捕獲及β+",
+        "B": "β+及γ",
         "C": "電子捕獲及γ",
-        "D": "β - 及γ"
+        "D": "β-及γ"
       },
       "answer": "C",
       "explanation": "",
@@ -243121,10 +243121,10 @@
       "number": 17,
       "question": "下圖顯示之假體CT影像無法用於下列何項評估",
       "options": {
-        "A": "水CT值準確性（CT number accuracy",
+        "A": "水CT 值準確性（CT number accuracy）",
         "B": "影像雜訊（image noise）",
-        "C": "空間距離準確性（spatial distance accuracy",
-        "D": "低對比解析度（low-contrast resolution"
+        "C": "空間距離準確性（spatial distance accuracy）",
+        "D": "低對比解析度（low-contrast resolution）"
       },
       "answer": "D",
       "explanation": "",

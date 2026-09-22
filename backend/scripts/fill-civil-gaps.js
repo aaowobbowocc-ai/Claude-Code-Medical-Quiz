@@ -34,7 +34,8 @@ async function paperQuestions(code, c, s) {
       if (!raw.trim()) continue;
       const t = raw.normalize('NFC');
       if (/^(代號|頁次|座號|等別|類科|科目|考試時間|考試別|考試名稱)\s*[：:]/.test(t.trim())) continue;
-      lines.push({ p, y: Math.round(l.bbox.y), x: Math.round(l.bbox.x), t });
+      // w 給 labelParse 判斷兩個 run 是否水平重疊（重疊處的字會重複）
+      lines.push({ p, y: Math.round(l.bbox.y), x: Math.round(l.bbox.x), w: Math.round(l.bbox.w), t });
     }
   }
   // 同列的 run y 會差 1~2px，先分桶成列再依 x 排，否則同一列的四個選項會亂序
@@ -60,7 +61,9 @@ async function paperQuestions(code, c, s) {
     else cur.stem += l.t.trim();
   }
   if (cur && cur.n && Object.keys(cur.options).length === 4) out.set(cur.n, cur);
-  return out.size ? out : streamParse(lines);
+  if (out.size) return out;
+  const viaStream = streamParse(lines);
+  return viaStream.size ? viaStream : labelParse(lines);
 }
 
 /**
@@ -89,6 +92,84 @@ function streamParse(lines) {
     const numM = /^(\d{1,3})\s*$/.exec(l.t.trim());
     if (numM && l.x < 80) { flush(); cur = { n: +numM[1], buf: '' }; continue; }
     if (cur) cur.buf += ' ' + l.t;
+  }
+  flush();
+  return out;
+}
+
+/**
+ * 把同一列的 text run 依 x 接起來。
+ *
+ * 這種版型的 run 會**水平重疊**，而且後一個 run 的開頭重複了前一個 run 的結尾字：
+ *   x=28  w=189  "40.有關利尿劑腎臟造影（diuretic renogra"
+ *   x=212 w=154  "aphy）的敘述，下列何者錯誤？"      ← 28+189=217 > 212，'a' 重複了
+ * 直接接會得到 renogra+aphy = "renograaphy"、"同時或"+"或後給與" = "同時或或後給與"。
+ * 只有在兩個 run 真的重疊時才去掉重複字，避免砍掉「剛好疊字」的正常文字。
+ */
+function joinRuns(runs) {
+  let out = '';
+  let prev = null;
+  for (const r of runs) {
+    const t = r.t.trim();
+    if (!t) continue;
+    if (prev && r.x < prev.x + prev.w) {
+      for (let k = 3; k >= 1; k--) {
+        if (out.length >= k && t.length >= k && out.slice(-k) === t.slice(0, k)) {
+          out += t.slice(k);
+          prev = r;
+          break;
+        }
+        if (k === 1) { out += t; prev = r; }
+      }
+    } else { out += t; prev = r; }
+  }
+  return out;
+}
+
+/**
+ * 第三種版型：沒有 PUA 標記，改用明示的「9.」「A.」「B.」標籤（醫事類各卷都是這種）。
+ *   x=31 y=60  "9."
+ *   x=39 y=59  "62Cu、"   x=67 "64Cu 與"   x=101 "67Cu 同位素之比較，下列何者正確？"
+ *   x=39 y=90  "B."       x=48 y=89 "67Cu 半衰期最長，為2.6 天"
+ * 注意標籤與它的內容被切成不同的 text run，而且 y 還差 1px，所以要先把同一列併起來。
+ *
+ * 這種卷用 `pdfText` 看會是「110 110 110 110 年…」——整份文字重複四遍（PDF 把字畫了四次），
+ * 所以不要用扁平文字判斷這類卷解析不了，toStructuredText 出來是乾淨的。
+ */
+function labelParse(lines) {
+  // 同一列的 run y 差 1~2px，要先併成一列再依 x 接起來。
+  // 不能用「y 除以桶寬取整」——桶的邊界會從中間切開同一列：
+  // 實測 "C.美國FDA 已核准"(y=105) 與它後半 "64Cu-ATSM…"(y=104) 落在不同桶，
+  // 於是後半被接到上一個選項去。改成依 y 排序後做鄰近聚類。
+  const sorted = lines.slice().sort((a, b) => a.p - b.p || a.y - b.y || a.x - b.x);
+  const rows = [];
+  for (const l of sorted) {
+    const last = rows[rows.length - 1];
+    if (last && last[0].p === l.p && Math.abs(l.y - last[0].y) <= 3) last.push(l);
+    else rows.push([l]);
+  }
+  const ordered = rows.map(runs => joinRuns(runs.slice().sort((u, v) => u.x - v.x)));
+
+  const out = new Map();
+  let cur = null;
+  const flush = () => {
+    if (cur && cur.n && Object.keys(cur.options).length === 4 && cur.stem) out.set(cur.n, cur);
+  };
+  for (const row of ordered) {
+    const t = row.trim();
+    if (!t) continue;
+    const numM = /^(\d{1,3})[.、](.*)$/.exec(t);
+    // 題號後面若直接接 A. 就不是題號行（例如小數點）
+    if (numM && !/^[A-D][.、]/.test(numM[2].trim())) {
+      flush();
+      cur = { n: +numM[1], stem: numM[2].trim(), options: {}, last: null };
+      continue;
+    }
+    if (!cur) continue;
+    const optM = /^([A-D])[.、](.*)$/.exec(t);
+    if (optM) { cur.options[optM[1]] = optM[2].trim(); cur.last = optM[1]; continue; }
+    if (cur.last) cur.options[cur.last] += t;
+    else cur.stem += t;
   }
   flush();
   return out;

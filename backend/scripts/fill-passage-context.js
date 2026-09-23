@@ -18,9 +18,19 @@ const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve');
 const BK = path.join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
 const only = (process.argv.find(a => a.startsWith('--exam=')) || '').split('=')[1];
-// 宣告用語有兩種：有冒號（警察）與沒冒號（關務），冒號後面也可能先接一段說明。
-// 只要求「第X題至第Y題」，冒號改為可選，否則關務整批抓不到。
-const DECL = /(?:請)?依下[文列]回答第\s*(\d{1,3})\s*題至第\s*(\d{1,3})\s*題([^：:]{0,40})[：:]?/;
+// 宣告用語有三種：
+//   「請依下文回答第X題至第Y題：」   有冒號（警察）
+//   「依下文回答第X題至第Y題」       沒冒號（關務）——所以冒號要可選，否則關務整批抓不到
+//   「第X題至第Y題為篇章結構題組，各題請依文意…：」  題號在前（司法特考 108 法學知識與英文實測）
+const DECL = new RegExp(
+  '(?:請)?依下[文列]回答第\\s*(\\d{1,3})\\s*題至第\\s*(\\d{1,3})\\s*題([^：:]{0,40})[：:]?'
+  + '|第\\s*(\\d{1,3})\\s*題至第\\s*(\\d{1,3})\\s*題為[^：:]{0,30}題組[^：:]{0,40}[：:]'
+);
+
+/** DECL 有兩組括號（兩種語序），取出 [from, to] */
+function declRange(m) {
+  return m[1] ? [+m[1], +m[2]] : [+m[4], +m[5]];
+}
 
 async function paperLines(code, c, s) {
   const buf = await fetchSheet('Q', code, c, s);
@@ -46,7 +56,7 @@ function passages(lines) {
   for (let i = 0; i < lines.length; i++) {
     const m = DECL.exec(lines[i].t);
     if (!m) continue;
-    const from = +m[1], to = +m[2];
+    const [from, to] = declRange(m);
     // 宣告行本身在冒號之後可能就接了文章開頭
     const after = lines[i].t.slice(lines[i].t.indexOf(m[0]) + m[0].length);
     const buf = [after];

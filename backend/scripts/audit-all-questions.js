@@ -16,16 +16,20 @@ const issues = {
   options_lt_4: [], option_too_long: [], multi_answer_disputed_missing: [],
 }
 
-function isAnswerValid(ans) {
+function isAnswerValid(ans, optCount) {
   if (!ans) return false
   if (ans === '送分') return true
-  // single letter A-D, or multi like "A,B" or "B,C,D"
-  return /^[A-D](,[A-D])*$/.test(ans)
+  // 五個選項的卷（學測／分科的 E、律師一試的複選題）答案可以到 E
+  const last = optCount >= 5 ? 'E' : 'D'
+  return new RegExp(`^[A-${last}](,[A-${last}])*$`).test(ans)
 }
 
 function checkPollution(q) {
   if (!q.question || !q.options) return false
   if (q.subject && /英文|英語/.test(q.subject)) return false
+  // 題組情境／承上題已內嵌的題，題幹本來就是「情境 + 這一問」，
+  // 第二段自然會和選項用字重疊，不是選項漏進題幹（見 project_followup_questions）
+  if (/【題組情境】|承上題|承上圖|承前一題/.test(q.question)) return false
   const m = q.question.match(/[?？]\s*([\s\S]+)$/)
   if (!m) return false
   const trailing = m[1].trim()
@@ -55,17 +59,20 @@ function audit(fp, prefix = '') {
       if (!isIncomplete) issues.missing_answer.push(tag)
       continue
     }
-    // invalid answer format (allow "E" only for 5-option gsat/ast)
-    if (!isAnswerValid(q.answer)) {
-      issues.invalid_answer.push(`${tag} ans="${q.answer}"`)
-    }
     // empty options
     if (!q.options || typeof q.options !== 'object') {
       if (!isIncomplete) issues.empty_options.push(tag)
       continue
     }
     const optKeys = Object.keys(q.options)
-    if (optKeys.length < 4 && !isTF && !isIncomplete) {
+    // invalid answer format（選項到 E 的卷，答案就可以是 E）
+    if (!isAnswerValid(q.answer, optKeys.length)) {
+      issues.invalid_answer.push(`${tag} ans="${q.answer}"`)
+    }
+    // 駕照筆試的法規選擇題本來就是三選一（type='choice'），不是缺了一個選項。
+    // 不排除的話這裡會固定報 1,465 題雜訊，真正的問題反而被蓋掉。
+    const isDriverChoice = q.type === 'choice' && optKeys.length === 3
+    if (optKeys.length < 4 && !isTF && !isDriverChoice && !isIncomplete) {
       issues.options_lt_4.push(`${tag} keys=${optKeys.join(',')}`)
     }
     if (!isIncomplete) {
@@ -84,7 +91,9 @@ function audit(fp, prefix = '') {
         issues.answer_not_in_options.push(`${tag} ans=${q.answer}`)
       }
       // short question (<5 char) — skip 是非題 (legitimate short stem like "岔路")
-      if (q.question && q.question.length < 5 && !isTF) {
+      // 駕照筆試的選擇題是「題幹(1)…(2)…(3)…。」的填空格式，
+      // 題幹短到「機車」「騎車時應」是原本就這樣（公路局題庫原文已核對），不是被截斷。
+      if (q.question && q.question.length < 5 && !isTF && q.type !== 'choice') {
         issues.short_question.push(`${tag} len=${q.question.length}`)
       }
       // pollution
@@ -93,7 +102,10 @@ function audit(fp, prefix = '') {
       }
     }
     // multi-letter answer without disputed flag
-    if (/^[A-D],[A-D]/.test(q.answer) && !q.disputed) {
+    // 五個選項的卷有真正的**複選題**（律師一試綜合法學第 61 題以後），
+    // 那種多重答案是題型本身，不是官方更正，不該要求 disputed。
+    const isMultiChoiceQ = Object.keys(q.options || {}).length >= 5
+    if (/^[A-E],[A-E]/.test(q.answer) && !q.disputed && !isMultiChoiceQ) {
       issues.multi_answer_disputed_missing.push(`${tag} ans=${q.answer}`)
     }
     // duplicate ID (always check)

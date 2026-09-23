@@ -10,8 +10,7 @@
     "options": {
       "A": "頭部",
       "B": "肩部",
-      "C": "腰部",
-      "D": ""
+      "C": "腰部"
     },
     "answer": "B",
     "type": "choice"
@@ -332,8 +331,7 @@
     "options": {
       "A": "不變",
       "B": "愈小",
-      "C": "愈長",
-      "D": ""
+      "C": "愈長"
     },
     "answer": "C",
     "type": "choice"
@@ -925,8 +923,7 @@
     "options": {
       "A": "呼吸",
       "B": "脈搏",
-      "C": "意識",
-      "D": ""
+      "C": "意識"
     },
     "answer": "B",
     "type": "choice"
@@ -2454,8 +2451,7 @@
     "options": {
       "A": "紅色",
       "B": "橙色",
-      "C": "黃色",
-      "D": ""
+      "C": "黃色"
     },
     "answer": "A",
     "type": "choice"
@@ -2519,8 +2515,7 @@
     "options": {
       "A": "紅色",
       "B": "黃色",
-      "C": "橙色",
-      "D": ""
+      "C": "橙色"
     },
     "answer": "C",
     "type": "choice"
@@ -2712,8 +2707,7 @@
     "options": {
       "A": "每季",
       "B": "每週",
-      "C": "每月",
-      "D": ""
+      "C": "每月"
     },
     "answer": "B",
     "type": "choice"
@@ -2857,8 +2851,7 @@
     "options": {
       "A": "油漆",
       "B": "黃油",
-      "C": "柏油",
-      "D": ""
+      "C": "柏油"
     },
     "answer": "B",
     "type": "choice"
@@ -3806,8 +3799,7 @@
     "options": {
       "A": "2倍",
       "B": "4倍",
-      "C": "8倍",
-      "D": ""
+      "C": "8倍"
     },
     "answer": "B",
     "type": "choice"
@@ -3983,8 +3975,7 @@
     "options": {
       "A": "愈大",
       "B": "愈小",
-      "C": "不變",
-      "D": ""
+      "C": "不變"
     },
     "answer": "A",
     "type": "choice"
@@ -4048,8 +4039,7 @@
     "options": {
       "A": "四肢",
       "B": "頭部",
-      "C": "背部",
-      "D": ""
+      "C": "背部"
     },
     "answer": "B",
     "type": "choice"
@@ -4465,8 +4455,7 @@
     "options": {
       "A": "1人",
       "B": "2人",
-      "C": "3人",
-      "D": ""
+      "C": "3人"
     },
     "answer": "A",
     "type": "choice"
@@ -4594,8 +4583,7 @@
     "options": {
       "A": "潮汐",
       "B": "降雨",
-      "C": "氣溫",
-      "D": ""
+      "C": "氣溫"
     },
     "answer": "B",
     "type": "choice"
@@ -5395,8 +5383,7 @@
     "options": {
       "A": "1年",
       "B": "2年",
-      "C": "3年",
-      "D": ""
+      "C": "3年"
     },
     "answer": "C",
     "type": "choice"
@@ -5444,8 +5431,7 @@
     "options": {
       "A": "過戶",
       "B": "停駛",
-      "C": "報廢",
-      "D": ""
+      "C": "報廢"
     },
     "answer": "C",
     "type": "choice"
@@ -5461,8 +5447,7 @@
     "options": {
       "A": "過戶",
       "B": "停駛",
-      "C": "報廢",
-      "D": ""
+      "C": "報廢"
     },
     "answer": "A",
     "type": "choice"
@@ -5878,8 +5863,7 @@
     "options": {
       "A": "視覺",
       "B": "聽覺",
-      "C": "觸覺",
-      "D": ""
+      "C": "觸覺"
     },
     "answer": "A",
     "type": "choice"
@@ -6520,8 +6504,7 @@
     "options": {
       "A": "狹路",
       "B": "隧道",
-      "C": "狹橋",
-      "D": ""
+      "C": "狹橋"
     },
     "answer": "B",
     "type": "choice",
@@ -7827,8 +7810,7 @@
     "options": {
       "A": "1點",
       "B": "2點",
-      "C": "3點",
-      "D": ""
+      "C": "3點"
     },
     "answer": "C",
     "type": "choice"
@@ -9054,8 +9036,7 @@
     "options": {
       "A": "愈小",
       "B": "愈大",
-      "C": "不變",
-      "D": ""
+      "C": "不變"
     },
     "answer": "B",
     "type": "choice"
@@ -9965,8 +9946,7 @@
     "options": {
       "A": "愈小",
       "B": "愈大",
-      "C": "不變",
-      "D": ""
+      "C": "不變"
     },
     "answer": "B",
     "type": "choice"
@@ -10602,11 +10582,11 @@
     "subject_name": "機車法規",
     "stage_id": 0,
     "number": 656,
-    "question": "車道專供",
+    "question": "車道專供＿＿＿＿通行之道路。",
     "options": {
       "A": "行人",
       "B": "車輛",
-      "C": "行人與車輛 通行之道路"
+      "C": "行人與車輛"
     },
     "answer": "B",
     "type": "choice"
@@ -10958,8 +10938,7 @@
     "options": {
       "A": "愈長",
       "B": "愈短",
-      "C": "不變",
-      "D": ""
+      "C": "不變"
     },
     "answer": "A",
     "type": "choice"
@@ -11023,8 +11002,7 @@
     "options": {
       "A": "變長",
       "B": "變短",
-      "C": "不變",
-      "D": ""
+      "C": "不變"
     },
     "answer": "A",
     "type": "choice"
@@ -15567,7 +15545,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-2",
@@ -15583,7 +15562,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-3",
@@ -15599,7 +15579,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-4",
@@ -15615,7 +15596,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-5",
@@ -15631,7 +15613,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-6",
@@ -15647,7 +15630,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-7",
@@ -15663,7 +15647,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-8",
@@ -15679,7 +15664,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-9",
@@ -15695,7 +15681,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-10",
@@ -15711,7 +15698,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-11",
@@ -15727,7 +15715,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-12",
@@ -15743,7 +15732,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-13",
@@ -15759,7 +15749,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-14",
@@ -15775,7 +15766,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-15",
@@ -15791,7 +15783,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-16",
@@ -15807,7 +15800,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-17",
@@ -15823,7 +15817,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-18",
@@ -15839,7 +15834,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-19",
@@ -15855,7 +15851,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-20",
@@ -15871,7 +15868,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-21",
@@ -15887,7 +15885,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-22",
@@ -15903,7 +15902,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-23",
@@ -15919,7 +15919,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-24",
@@ -15935,7 +15936,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-25",
@@ -15951,7 +15953,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-26",
@@ -15967,7 +15970,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-27",
@@ -15983,7 +15987,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-28",
@@ -15999,7 +16004,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-29",
@@ -16015,7 +16021,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-30",
@@ -16031,7 +16038,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-31",
@@ -16047,7 +16055,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-32",
@@ -16063,7 +16072,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-33",
@@ -16079,7 +16089,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-34",
@@ -16095,7 +16106,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-35",
@@ -16111,7 +16123,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-36",
@@ -16127,7 +16140,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-37",
@@ -16143,7 +16157,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-38",
@@ -16159,7 +16174,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-39",
@@ -16175,7 +16191,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-40",
@@ -16191,7 +16208,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-41",
@@ -16207,7 +16225,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-42",
@@ -16223,7 +16242,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-43",
@@ -16239,7 +16259,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-44",
@@ -16255,7 +16276,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-45",
@@ -16271,7 +16293,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-46",
@@ -16287,7 +16310,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-47",
@@ -16303,7 +16327,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-48",
@@ -16319,7 +16344,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-49",
@@ -16335,7 +16361,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-50",
@@ -16351,7 +16378,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-51",
@@ -16367,7 +16395,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-52",
@@ -16383,7 +16412,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-53",
@@ -16399,7 +16429,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-54",
@@ -16415,7 +16446,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-55",
@@ -16431,7 +16463,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-56",
@@ -16447,7 +16480,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-57",
@@ -16463,7 +16497,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-58",
@@ -16479,7 +16514,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-59",
@@ -16495,7 +16531,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-60",
@@ -16511,7 +16548,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-61",
@@ -16527,7 +16565,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-62",
@@ -16543,7 +16582,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-63",
@@ -16559,7 +16599,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-64",
@@ -16575,7 +16616,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-65",
@@ -16591,7 +16633,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-66",
@@ -16607,7 +16650,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-67",
@@ -16623,7 +16667,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-68",
@@ -16639,7 +16684,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-69",
@@ -16655,7 +16701,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-70",
@@ -16671,7 +16718,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-71",
@@ -16687,7 +16735,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-72",
@@ -16703,7 +16752,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-73",
@@ -16719,7 +16769,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-74",
@@ -16735,7 +16786,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-75",
@@ -16751,7 +16803,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-76",
@@ -16767,7 +16820,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-77",
@@ -16783,7 +16837,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-78",
@@ -16799,7 +16854,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-79",
@@ -16815,7 +16871,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-80",
@@ -16831,7 +16888,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-81",
@@ -16847,7 +16905,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-82",
@@ -16863,7 +16922,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-83",
@@ -16879,7 +16939,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-84",
@@ -16895,7 +16956,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-85",
@@ -16911,7 +16973,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-86",
@@ -16927,7 +16990,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-87",
@@ -16943,7 +17007,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-88",
@@ -16959,7 +17024,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-89",
@@ -16975,7 +17041,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-90",
@@ -16991,7 +17058,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-91",
@@ -17007,7 +17075,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-92",
@@ -17023,7 +17092,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-93",
@@ -17039,7 +17109,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-94",
@@ -17055,7 +17126,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-95",
@@ -17071,7 +17143,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-96",
@@ -17087,7 +17160,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-97",
@@ -17103,7 +17177,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-98",
@@ -17119,7 +17194,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-99",
@@ -17135,7 +17211,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-100",
@@ -17151,7 +17228,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-101",
@@ -17167,7 +17245,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-102",
@@ -17183,7 +17262,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-103",
@@ -17199,7 +17279,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-104",
@@ -17215,7 +17296,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-105",
@@ -17231,7 +17313,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-106",
@@ -17247,7 +17330,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-107",
@@ -17263,7 +17347,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-108",
@@ -17279,7 +17364,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-109",
@@ -17295,7 +17381,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-110",
@@ -17311,7 +17398,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-111",
@@ -17327,7 +17415,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-112",
@@ -17343,7 +17432,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-113",
@@ -17359,7 +17449,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-114",
@@ -17375,7 +17466,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-115",
@@ -17391,7 +17483,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-116",
@@ -17407,7 +17500,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-117",
@@ -17423,7 +17517,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-118",
@@ -17439,7 +17534,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-119",
@@ -17455,7 +17551,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-120",
@@ -17471,7 +17568,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-121",
@@ -17487,7 +17585,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-122",
@@ -17503,7 +17602,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-123",
@@ -17519,7 +17619,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-124",
@@ -17535,7 +17636,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-125",
@@ -17551,7 +17653,8 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   },
   {
     "id": "driver-moto-hazard-126",
@@ -17567,6 +17670,7 @@
     "subject": "機車危險感知",
     "subject_tag": "hazard_perception",
     "subject_name": "機車危險感知",
-    "stage_id": 0
+    "stage_id": 0,
+    "type": "choice"
   }
 ]

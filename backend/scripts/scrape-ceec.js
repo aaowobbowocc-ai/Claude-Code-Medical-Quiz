@@ -401,4 +401,7 @@ async function main() {
   }
 }
 
-main().catch(e => { console.error(e); process.exit(1); });
+// REGISTRY（各年度各科目的試題／答案 PDF 網址）是補圖腳本唯一的來源，匯出共用
+module.exports = { REGISTRY, BASE };
+
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1); });

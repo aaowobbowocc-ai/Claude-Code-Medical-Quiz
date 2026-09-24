@@ -200,7 +200,14 @@ async function pdfFor(exam, year, tag) {
           // 這種情況不要硬裁，讓它退回下面兩種模式。
           if (h >= 50) { box = { left, top, height: h, page: cap.pg }; mode = '圖說定位'; }
         }
-        if (!box && rightLines.length >= 2) {
+        // ⚠️ 沒有圖說就不要補。
+        // 「裁這題 y 範圍裡右欄的東西」看似合理，實測是把**隔壁題的圖**掛上來：
+        //   ast 114 地理 #21 問「表1」→ 裁出一張世界地圖
+        //   gsat 104 自然 #8 問「哪種容器」→ 裁出別題的「圖2」流程圖
+        // 錯的圖比沒有圖更糟（使用者會照著錯圖作答），所以這兩種退路都關掉，
+        // 只留最可靠的圖說定位。程式碼保留是為了記著「試過、不行」。
+        if (!box) { bump(refN ? '題幹指名的圖說找不到' : '沒有圖說可定位'); continue; }
+        if (false && rightLines.length >= 2) {
           // 圖在右欄：裁右半邊，y 取該題範圍
           const top = Math.min(...rightLines.map(l => l.y));
           const bot = Math.max(...rightLines.map(l => l.y + (l.h || 10)));

@@ -30,6 +30,9 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
   for (const f of files) {
     const exam = f.replace('questions-', '').replace('questions.json', 'doctor1').replace('.json', '');
     if (only && exam !== only) continue;
+    // 學測／分科不是考選部的卷，resolvePaper 一定找不到（會灌水成 237 筆「對不到官方卷」）。
+    // 它們走 extract-ceec-figures.js。
+    if (exam === 'gsat' || exam === 'ast') continue;
     const j = JSON.parse(fs.readFileSync(path.join(BK, f), 'utf8'));
     const arr = Array.isArray(j) ? j : j.questions; if (!arr) continue;
     const targets = arr.filter(q => !(q.images && q.images.length) && !q.image_url && !q.option_images
@@ -53,9 +56,12 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
         const st = JSON.parse(doc.loadPage(pg).toStructuredText('preserve-whitespace').asJSON());
         for (const b of st.blocks || []) for (const l of b.lines || []) {
           const t = (l.text || '').normalize('NFC'); if (!t.trim()) continue;
-          const num = /^(\d{1,3})\s*$/.exec(t.trim());
+          // 題號有兩種排法：獨立一行的「12」（公職卷），以及「9.」後面直接接題幹（醫事類）。
+          // 只認前者會讓醫事類整批「定位不到題號」（實測 89 題）。
+          const num = /^(\d{1,3})\s*$/.exec(t.trim()) || /^(\d{1,3})\s*[.、]/.exec(t.trim());
           if (num) marks.push({ pg, y: l.bbox.y, h: l.bbox.h, kind: 'num', n: +num[1], x: l.bbox.x });
-          else if (MARK[t[0]]) marks.push({ pg, y: l.bbox.y, h: l.bbox.h, kind: 'opt' });
+          // 選項標記同樣有兩種：PUA 的 ⒶⒷⒸⒹ，與醫事類明示的「A.」
+          else if (MARK[t[0]] || /^[A-D]\s*[.、]/.test(t.trim())) marks.push({ pg, y: l.bbox.y, h: l.bbox.h, kind: 'opt' });
           else marks.push({ pg, y: l.bbox.y, h: l.bbox.h, kind: 'text' });
         }
       }

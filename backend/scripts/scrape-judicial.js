@@ -256,19 +256,23 @@ function atomicWrite(p, obj) {
   fs.renameSync(tmp, p)
 }
 
+
+// 年份→場次代號與法學知識與英文的 s 碼。修復腳本要用，放模組層並匯出。
+const SESSIONS = [
+  { year: '106', code: '106130', session: '第一次', sLaw: '0415' },
+  { year: '107', code: '107130', session: '第一次', sLaw: '0414' },
+  { year: '108', code: '108130', session: '第一次', sLaw: '0414' },
+  { year: '109', code: '109130', session: '第一次', sLaw: '0412' },
+  { year: '110', code: '110130', session: '第一次', sLaw: '0315' },
+  { year: '111', code: '111130', session: '第一次', sLaw: '0315' },
+  { year: '112', code: '112130', session: '第一次', sLaw: '0313' },
+  { year: '113', code: '113120', session: '第一次', sLaw: '0309' },
+  { year: '114', code: '114120', session: '第一次', sLaw: '0309' },
+]
+
 async function main() {
   // s code for 法學知識與英文 shifts each year; 130 series for 106-112, 120 series for 113-114
-  const SESSIONS = [
-    { year: '106', code: '106130', session: '第一次', sLaw: '0415' },
-    { year: '107', code: '107130', session: '第一次', sLaw: '0414' },
-    { year: '108', code: '108130', session: '第一次', sLaw: '0414' },
-    { year: '109', code: '109130', session: '第一次', sLaw: '0412' },
-    { year: '110', code: '110130', session: '第一次', sLaw: '0315' },
-    { year: '111', code: '111130', session: '第一次', sLaw: '0315' },
-    { year: '112', code: '112130', session: '第一次', sLaw: '0313' },
-    { year: '113', code: '113120', session: '第一次', sLaw: '0309' },
-    { year: '114', code: '114120', session: '第一次', sLaw: '0309' },
-  ]
+
   const file = path.join(__dirname, '..', 'questions-judicial.json')
 
   let data
@@ -340,4 +344,6 @@ async function main() {
   console.log(`\n✅ +${added.length} questions → ${data.questions.length} total`)
 }
 
-main().catch(e => { console.error(e); process.exit(1) })
+module.exports = { SESSIONS }
+
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1) })

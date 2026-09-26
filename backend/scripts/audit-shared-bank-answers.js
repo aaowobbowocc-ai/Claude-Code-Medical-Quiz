@@ -31,6 +31,8 @@ const sharedBanks = require('./scrape-civil-shared-banks');
 const old100 = require('./scrape-civil-junior-100-105');
 const puagaps = require('./fill-civil-junior-puagaps');
 const juniorAdmin = require('./scrape-civil-junior-admin');
+const senior = require('./scrape-civil-senior');
+const judicial = require('./scrape-judicial');
 
 const BK = path.join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
@@ -52,6 +54,20 @@ function buildPapers() {
       const sub = juniorAdmin.SUBJECTS.find(x => x.bank === bankKey && (!x.onlyYears || x.onlyYears.includes(ses.year)));
       if (sub) out.push({ bank, year: ses.year, code: ses.code, c: sub.c, s: sub.s });
     }
+  // 高考三等（civil-senior 來源）：法學知識與英文、國文、行政學、行政法
+  const SENIOR_BANK = {
+    law_knowledge_english: 'common_law_knowledge', chinese: 'common_chinese',
+    admin_studies: 'common_admin_studies', admin_law: 'common_admin_law',
+  };
+  for (const ses of senior.SESSIONS)
+    for (const sub of senior.SUBJECTS) {
+      if (sub.onlyYears && !sub.onlyYears.includes(ses.year)) continue;
+      const bank = SENIOR_BANK[sub.tag];
+      if (bank) out.push({ bank, year: ses.year, code: ses.code, c: sub.c, s: sub.s, sourceCode: 'civil-senior' });
+    }
+  // 司法特考（judicial 來源）：法學知識與英文
+  for (const ses of judicial.SESSIONS)
+    out.push({ bank: 'common_law_knowledge', year: ses.year, code: ses.code, c: '101', s: ses.sLaw, sourceCode: 'judicial' });
   // 補題腳本的 CONFIGS 補上其餘卷別（公共管理概要等）
   for (const [bank, cfg] of Object.entries(puagaps.CONFIGS))
     for (const t of cfg.targets || []) out.push({ bank, year: t.year, code: t.code, c: t.c, s: t.s, sourceCode: cfg.sourceCode });

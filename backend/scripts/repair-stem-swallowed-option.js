@@ -32,18 +32,28 @@ const PUA = /[-]/;
 // 最後一個選項後面常常緊接著下一段題組的宣告，會被一起收進選項 D
 // （customs 105050 英文 #5 的 D 變成「substitute請依下文回答第6題至第10題」）
 const DECL_TAIL = /(?:請)?依下[文列]回答第\s*\d{1,3}\s*題.*$|第\s*\d{1,3}\s*題至第\s*\d{1,3}\s*題.*$/;
-const optsOf = o => ['A', 'B', 'C', 'D'].map(k => String(o[k] || '').replace(DECL_TAIL, '').trim());
+// 中文結尾後面孤零零跟著數字，那是頁碼被捲進來
+//（common_admin_law 112 #10 的 D 變成「…或新聞紙31」）
+const PAGE_TAIL = /([一-鿿）)])\s*\d{1,3}$/;
+const optsOf = o => ['A', 'B', 'C', 'D'].map(k =>
+  String(o[k] || '').replace(DECL_TAIL, '').replace(PAGE_TAIL, '$1').trim());
 const usable = a => a.length === 4 && a.every(t => t)
   && new Set(a.map(optionKey)).size === 4 && !a.some(t => PUA.test(t));
 
-const rows = JSON.parse(fs.readFileSync(path.join(BK, '_tmp', 'stem-tail-suspect.json'), 'utf8'))
-  .filter(r => !r.f.startsWith('shared-banks'));   // 共用題庫走 sync-shared-bank-stems.js
+const { buildPapers } = require('./audit-shared-bank-answers');
+const rows = JSON.parse(fs.readFileSync(path.join(BK, '_tmp', 'stem-tail-suspect.json'), 'utf8'));
 
+// 共用題庫也要一起修：它的卷別要靠 buildPapers()（年份＋來源卷），
+// 不能像主題庫那樣用 exam_code 去 resolvePaper。
 const groups = {};
-for (const r of rows) (groups[`${r.exam}|${r.code}|${r.subject}`] = groups[`${r.exam}|${r.code}|${r.subject}`] || { file: r.f, items: [] }).items.push(r);
+for (const r of rows) {
+  const key = r.shared ? `${r.exam}|${r.code}|${r.src || ''}` : `${r.exam}|${r.code}|${r.subject}`;
+  (groups[key] = groups[key] || { file: r.f, shared: !!r.shared, items: [] }).items.push(r);
+}
 
 (async () => {
   const banks = {}, fixed = [], skip = [];
+  const papers = buildPapers();
   let errs = 0, done = 0;
   const keys = Object.keys(groups);
   console.log(`要查 ${keys.length} 張卷、${rows.length} 題\n`);
@@ -56,13 +66,26 @@ for (const r of rows) (groups[`${r.exam}|${r.code}|${r.subject}`] = groups[`${r.
       const raw = JSON.parse(fs.readFileSync(file, 'utf8'));
       banks[file] = { raw, arr: Array.isArray(raw) ? raw : raw.questions, dirty: false };
     }
-    const all = banks[file].arr.filter(q => String(q.exam_code) === code && q.subject === subject);
+    const shared = groups[k].shared;
+    const all = shared
+      ? banks[file].arr.filter(q => String(q.roc_year) === code && (!subject || q.source_exam_code === subject))
+      : banks[file].arr.filter(q => String(q.exam_code) === code && q.subject === subject);
     let src, ans;
     try {
-      const p = await resolvePaper({ exam, code, subject, year: String(code).slice(0, 3), items: all });
-      if (!p) { groups[k].items.forEach(r => skip.push({ k, n: r.n, why: '對不到官方卷' })); continue; }
-      src = await paperQuestions(code, p.c, p.s);
-      ans = (await sheetMap(code, p.c, p.s, all.length)).map;
+      let pr;
+      if (shared) {
+        // 共用題庫：卷別要用 buildPapers()（bank + 年份 + 來源卷），沒有 exam_code 可查
+        const cand = papers.find(p => p.bank === exam && String(p.year) === code
+          && (!subject || !p.sourceCode || p.sourceCode === subject));
+        if (!cand) { groups[k].items.forEach(r => skip.push({ k, n: r.n, why: '共用題庫沒有這張卷的 code/c/s' })); continue; }
+        pr = cand;
+      } else {
+        const p = await resolvePaper({ exam, code, subject, year: String(code).slice(0, 3), items: all });
+        if (!p) { groups[k].items.forEach(r => skip.push({ k, n: r.n, why: '對不到官方卷' })); continue; }
+        pr = { code, c: p.c, s: p.s };
+      }
+      src = await paperQuestions(pr.code, pr.c, pr.s);
+      ans = (await sheetMap(pr.code, pr.c, pr.s, Math.max(all.length, 50))).map;
     } catch (e) {
       errs++; groups[k].items.forEach(r => skip.push({ k, n: r.n, why: '原卷處理失敗: ' + e.message.slice(0, 40) }));
       continue;

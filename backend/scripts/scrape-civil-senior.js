@@ -279,52 +279,57 @@ function atomicWrite(p, obj) {
   fs.renameSync(tmp, p)
 }
 
+
+// 年份→場次代號、科目→c/s。修復腳本（audit-shared-bank-answers 等）要用，
+// 所以放在模組層並匯出，不要再搬回 main() 裡面。
+const SESSIONS = [
+  { year: '106', code: '106090', session: '第一次' },
+  { year: '107', code: '107090', session: '第一次' },
+  { year: '108', code: '108090', session: '第一次' },
+  { year: '109', code: '109090', session: '第一次' },
+  { year: '110', code: '110090', session: '第一次' },
+  { year: '111', code: '111090', session: '第一次' },
+  { year: '112', code: '112090', session: '第一次' },
+  { year: '113', code: '113080', session: '第一次' },
+  { year: '114', code: '114080', session: '第一次' },
+]
+// Subject codes vary per year. Each row uses onlyYears to limit scope.
+// 法學知識與英文: pure MCQ (50Q), no mixedEssay needed
+// 行政學/行政法: mixed 申論+MCQ papers, mixedEssay=true skips to 選擇題 section
+const SUBJECTS = [
+  // 法學知識與英文 (50Q MCQ)
+  { c: '201', s: '0210', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['106'] },
+  { c: '301', s: '0210', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['107'] },
+  { c: '201', s: '0213', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['108'] },
+  { c: '301', s: '0216', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['109'] },
+  { c: '301', s: '0105', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['110'] },
+  { c: '301', s: '0115', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['111'] },
+  { c: '301', s: '0118', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['112'] },
+  { c: '301', s: '0112', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['113'] },
+  { c: '201', s: '0401', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['114'] },
+  // 國文（測驗）(10Q in mixed paper): c varies by year
+  { c: '201', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['106','108','114'] },
+  { c: '301', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['107','109','110','111','112','113'] },
+  // 行政學 (25Q in mixed paper): s code changes each year
+  { c: '201', s: '0504', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['106'] },
+  { c: '301', s: '0607', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['107'] },
+  { c: '201', s: '0607', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['108'] },
+  { c: '301', s: '0604', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['109'] },
+  { c: '301', s: '0501', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['110'] },
+  { c: '301', s: '0301', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['111','112'] },
+  { c: '301', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['113'] },
+  { c: '201', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['114'] },
+  // 行政法 (25Q in mixed paper): s code changes each year
+  { c: '201', s: '0701', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['106'] },
+  { c: '301', s: '0801', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['107','109'] },
+  { c: '201', s: '0801', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['108'] },
+  { c: '301', s: '0603', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['110'] },
+  { c: '301', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['111','112','113'] },
+  { c: '201', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['114'] },
+]
+
 async function main() {
-  const SESSIONS = [
-    { year: '106', code: '106090', session: '第一次' },
-    { year: '107', code: '107090', session: '第一次' },
-    { year: '108', code: '108090', session: '第一次' },
-    { year: '109', code: '109090', session: '第一次' },
-    { year: '110', code: '110090', session: '第一次' },
-    { year: '111', code: '111090', session: '第一次' },
-    { year: '112', code: '112090', session: '第一次' },
-    { year: '113', code: '113080', session: '第一次' },
-    { year: '114', code: '114080', session: '第一次' },
-  ]
-  // Subject codes vary per year. Each row uses onlyYears to limit scope.
-  // 法學知識與英文: pure MCQ (50Q), no mixedEssay needed
-  // 行政學/行政法: mixed 申論+MCQ papers, mixedEssay=true skips to 選擇題 section
-  const SUBJECTS = [
-    // 法學知識與英文 (50Q MCQ)
-    { c: '201', s: '0210', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['106'] },
-    { c: '301', s: '0210', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['107'] },
-    { c: '201', s: '0213', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['108'] },
-    { c: '301', s: '0216', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['109'] },
-    { c: '301', s: '0105', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['110'] },
-    { c: '301', s: '0115', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['111'] },
-    { c: '301', s: '0118', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['112'] },
-    { c: '301', s: '0112', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['113'] },
-    { c: '201', s: '0401', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['114'] },
-    // 國文（測驗）(10Q in mixed paper): c varies by year
-    { c: '201', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['106','108','114'] },
-    { c: '301', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['107','109','110','111','112','113'] },
-    // 行政學 (25Q in mixed paper): s code changes each year
-    { c: '201', s: '0504', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['106'] },
-    { c: '301', s: '0607', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['107'] },
-    { c: '201', s: '0607', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['108'] },
-    { c: '301', s: '0604', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['109'] },
-    { c: '301', s: '0501', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['110'] },
-    { c: '301', s: '0301', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['111','112'] },
-    { c: '301', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['113'] },
-    { c: '201', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['114'] },
-    // 行政法 (25Q in mixed paper): s code changes each year
-    { c: '201', s: '0701', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['106'] },
-    { c: '301', s: '0801', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['107','109'] },
-    { c: '201', s: '0801', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['108'] },
-    { c: '301', s: '0603', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['110'] },
-    { c: '301', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['111','112','113'] },
-    { c: '201', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['114'] },
-  ]
+
   const file = path.join(__dirname, '..', 'questions-civil-senior.json')
 
   let data
@@ -397,4 +402,6 @@ async function main() {
   console.log(`\n✅ +${added.length} questions → ${data.questions.length} total`)
 }
 
-main().catch(e => { console.error(e); process.exit(1) })
+module.exports = { SESSIONS, SUBJECTS }
+
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1) })

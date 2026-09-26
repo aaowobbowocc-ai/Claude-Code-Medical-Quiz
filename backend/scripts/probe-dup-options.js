@@ -28,8 +28,11 @@ const SHARED = new Set(['common_admin_studies_junior', 'common_law_knowledge', '
     let pr = null;
     try {
       if (SHARED.has(r.ex)) {
-        const cand = papers.filter(p => p.bank === r.ex && String(p.year) === String(r.code));
-        if (!cand.length) { console.log('  → 共用題庫沒有這年的卷別表'); continue; }
+        // 同一年可能有好幾張來源卷（高考／司法特考／普考），一定要用 source_exam_code 挑，
+        // 拿 cand[0] 會比到別人的卷
+        const cand = papers.filter(p => p.bank === r.ex && String(p.year) === String(r.code)
+          && (!r.src || !p.sourceCode || p.sourceCode === r.src));
+        if (!cand.length) { console.log('  → 共用題庫沒有這年這個來源的卷別表'); continue; }
         pr = { code: cand[0].code, c: cand[0].c, s: cand[0].s };
       } else {
         const j = JSON.parse(fs.readFileSync(path.join(BK, FILE(r.ex)), 'utf8'));

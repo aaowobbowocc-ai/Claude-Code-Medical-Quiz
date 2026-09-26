@@ -178,6 +178,30 @@ async function pdfFor(exam, year, tag) {
           // 框只剩一條、裁出來只有圖的下緣（ast 111 物理 #5 實測）。
           const sideBySide = cap.x >= SPLIT_X;
           const colMin = sideBySide ? SPLIT_X - 40 : 0;
+          // 中文排版慣例：**圖的標題在下、表的標題在上**。
+          // 一律往上找會讓所有表格題算出很窄的框而被丟掉
+          //（ast 113 歷史 #17 的「表1」在 y=466，表身在它下面）。
+          if (cap.kind === '表') {
+            let bot = Infinity;
+            for (const l of pls) {
+              if (l.y <= cap.y + (cap.h || 12)) continue;
+              if (l.x + (l.w || 0) <= cap.x) continue;        // 沒擋在表的正下方
+              if (l.t.trim().length > 15) { bot = l.y - 4; break; }
+            }
+            if (nextHead && nextHead.pg === cap.pg) bot = Math.min(bot, nextHead.y - 4);
+            if (bot === Infinity) bot = cap.y + 320;
+            // 左界：先看這一帶有沒有貼著左邊界的題幹／選項，有就從它們的右緣起算。
+            // 只用 x >= colMin 會把表格最左邊的列標籤欄切掉（甲國乙國不見）；
+            // 只用「表格內短行的最小 x」又會把選項一起框進來（選項也是短行）。
+            const band = pls.filter(l => l.y >= cap.y && l.y <= bot);
+            const leftText = band.filter(l => l.x < 150);
+            const cells = band.filter(l => l.x >= 150 && l.t.trim().length <= 20);
+            const lf = leftText.length
+              ? Math.max(...leftText.map(l => l.x + (l.w || 0))) + 8
+              : (cells.length ? Math.max(0, Math.min(...cells.map(l => l.x)) - 12) : colMin);
+            const hh = bot - cap.y + 6;
+            if (hh >= 50) { box = { left: lf, top: cap.y - 6, height: hh, page: cap.pg }; mode = '表說定位'; }
+          } else {
           let top = 0;
           for (let i = pls.length - 1; i >= 0; i--) {
             const l = pls[i];
@@ -199,6 +223,7 @@ async function pdfFor(exam, year, tag) {
           // 圖說正上方就是正文時會算出很窄的框（圖其實在更上面或跨欄）。
           // 這種情況不要硬裁，讓它退回下面兩種模式。
           if (h >= 50) { box = { left, top, height: h, page: cap.pg }; mode = '圖說定位'; }
+          }
         }
         // ⚠️ 沒有圖說就不要補。
         // 「裁這題 y 範圍裡右欄的東西」看似合理，實測是把**隔壁題的圖**掛上來：

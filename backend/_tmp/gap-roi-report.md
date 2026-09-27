@@ -1,34 +1,36 @@
 # Gap ROI Report
 
-Generated: 2026-04-26T01:55:41.617Z
-Traffic data from: 2026-04-25
+Generated: 2026-09-27T17:13:29.429Z
+Traffic data from: 2026-09-16
 
 ## Top 10 ROI Gaps
 
 | Rank | Exam | Incomplete | Traffic % | Avg Difficulty | ROI Score |
 |------|------|-----------|-----------|-----------------|----------|
-| 1 | doctor1 | 86/6200 | 100.0% | 2.00 | **43.00** |
-| 2 | doctor2 | 105/9889 | 15.7% | 2.20 | **7.48** |
-| 3 | medlab | 126/14806 | 4.4% | 2.56 | **2.18** |
-| 4 | nursing | 63/11285 | 2.4% | 2.08 | **0.72** |
-| 5 | dental2 | 53/9419 | 3.0% | 2.57 | **0.61** |
-| 6 | vet | 71/11961 | 1.2% | 2.25 | **0.37** |
-| 7 | pharma1 | 131/7434 | 0.6% | 2.34 | **0.33** |
-| 8 | dental1 | 20/4959 | 3.3% | 2.30 | **0.28** |
-| 9 | pt | 53/14879 | 0.3% | 2.32 | **0.07** |
-| 10 | pharma2 | 9/6248 | 0.3% | 2.22 | **0.01** |
+| 1 | medlab | 6/15359 | 34.2% | 2.00 | **1.03** |
+| 2 | doctor1 | 1/6360 | 100.0% | 2.00 | **0.50** |
+| 3 | pt | 6/15360 | 15.2% | 2.00 | **0.45** |
+| 4 | nursing | 1/12549 | 81.7% | 2.00 | **0.41** |
+| 5 | nutrition | 8/7903 | 9.3% | 2.00 | **0.37** |
+| 6 | radiology | 6/15359 | 12.0% | 2.00 | **0.36** |
+| 7 | pharma1 | 9/7673 | 5.8% | 2.00 | **0.26** |
+| 8 | ot | 6/12480 | 3.4% | 2.00 | **0.10** |
+| 9 | vet | 3/12480 | 6.3% | 2.00 | **0.09** |
+| 10 | dental2 | 10/10240 | 1.4% | 2.00 | **0.07** |
 
 ## Full Rankings
 
 | Exam | Incomplete | Traffic % | Avg Difficulty | ROI Score | Gap Types |
 |------|-----------|-----------|-----------------|----------|----------|
-| doctor1 | 86/6200 | 100.0% | 2.00 | 43.00 | missing_unknown(23), missing_image(8), empty_options(55) |
-| doctor2 | 105/9889 | 15.7% | 2.20 | 7.48 | missing_image_dep(21), missing_unknown(5), empty_options(78), missing_image(1) |
-| medlab | 126/14806 | 4.4% | 2.56 | 2.18 | empty_options(28), missing_unknown(19), missing_image_dep(71), missing_image(8) |
-| nursing | 63/11285 | 2.4% | 2.08 | 0.72 | missing_image_dep(5), missing_unknown(37), empty_options(20), missing_image(1) |
-| dental2 | 53/9419 | 3.0% | 2.57 | 0.61 | empty_options(7), missing_image_dep(30), missing_image(9), missing_unknown(7) |
-| vet | 71/11961 | 1.2% | 2.25 | 0.37 | missing_image_dep(18), missing_unknown(18), empty_options(19), missing_image(16) |
-| pharma1 | 131/7434 | 0.6% | 2.34 | 0.33 | missing_image_dep(45), image_only_options(43), missing_unknown(32), empty_options(11) |
-| dental1 | 20/4959 | 3.3% | 2.30 | 0.28 | missing_image_dep(6), empty_options(7), missing_unknown(7) |
-| pt | 53/14879 | 0.3% | 2.32 | 0.07 | missing_image_dep(17), missing_unknown(18), empty_options(18) |
-| pharma2 | 9/6248 | 0.3% | 2.22 | 0.01 | empty_options(7), missing_image_dep(2) |
+| medlab | 6/15359 | 34.2% | 2.00 | 1.03 | missing_unknown(6) |
+| doctor1 | 1/6360 | 100.0% | 2.00 | 0.50 | missing_unknown(1) |
+| pt | 6/15360 | 15.2% | 2.00 | 0.45 | missing_unknown(6) |
+| nursing | 1/12549 | 81.7% | 2.00 | 0.41 | missing_unknown(1) |
+| nutrition | 8/7903 | 9.3% | 2.00 | 0.37 | missing_unknown(7), empty_options(1) |
+| radiology | 6/15359 | 12.0% | 2.00 | 0.36 | empty_options(1), missing_unknown(5) |
+| pharma1 | 9/7673 | 5.8% | 2.00 | 0.26 | missing_unknown(9) |
+| ot | 6/12480 | 3.4% | 2.00 | 0.10 | missing_unknown(5), missing_image(1) |
+| vet | 3/12480 | 6.3% | 2.00 | 0.09 | missing_unknown(3) |
+| dental2 | 10/10240 | 1.4% | 2.00 | 0.07 | missing_unknown(10) |
+| pharma2 | 2/6719 | 2.9% | 2.00 | 0.03 | missing_unknown(2) |
+| social-worker | 1/5619 | 1.3% | 2.00 | 0.01 | missing_unknown(1) |

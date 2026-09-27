@@ -158707,27 +158707,6 @@
     "exam_type": "high"
   },
   {
-    "id": "speech_114100_s0506_28",
-    "roc_year": "114",
-    "session": "第二次",
-    "exam_code": "114100",
-    "subject": "溝通障礙總論(包括專業倫理)",
-    "subject_tag": "speech_hearing",
-    "subject_name": "聽力學與輔助溝通系統（包括專業倫理）",
-    "stage_id": 6,
-    "number": 13,
-    "question": "28歲自閉症類群障礙個案伴隨複雜溝通需求（complex communication needs）只對特殊節慶有興趣，且會將自己認為相關的人、事、物連結在一起。語言治療師可以依據個案的認知與邏輯設計溝通版面。上述情形屬於下列何種版面設計？",
-    "options": {
-      "A": "主題式網格版面（activity grid displays）",
-      "B": "詞彙類別式網格版面（taxonomic grid displays）",
-      "C": "視覺場景式版面（visual scene displays）",
-      "D": "特殊網格版面（idiosyncratic grid displays）"
-    },
-    "answer": "D",
-    "explanation": "",
-    "exam_type": "high"
-  },
-  {
     "id": "speech_114100_s0506_29",
     "roc_year": "114",
     "session": "第一次",
@@ -163955,5 +163934,89 @@
       "D": "提升構音正確性"
     },
     "answer": "B"
+  },
+  {
+    "id": "speech_114100_p6_6",
+    "roc_year": "114",
+    "session": "第一次",
+    "exam_code": "114100",
+    "subject": "聽力學與輔助溝通系統（包括專業倫理）",
+    "subject_tag": "speech_hearing",
+    "subject_name": "聽力學與輔助溝通系統（包括專業倫理）",
+    "stage_id": 6,
+    "number": 6,
+    "question": "有關人工耳蝸進行電流圖（mapping）調整之敘述，下列何者正確？",
+    "options": {
+      "A": "調整設定出適當的電流動態範圍",
+      "B": "設定於植入體的語音處理器電流控制",
+      "C": "設定最大電流（M-level）可避免導致殘存聽力受損",
+      "D": "耳蝸底部電極是專為處理低頻率的聲音"
+    },
+    "answer": "A",
+    "explanation": "",
+    "exam_type": "high"
+  },
+  {
+    "id": "speech_114100_p6_28",
+    "roc_year": "114",
+    "session": "第一次",
+    "exam_code": "114100",
+    "subject": "聽力學與輔助溝通系統（包括專業倫理）",
+    "subject_tag": "speech_hearing",
+    "subject_name": "聽力學與輔助溝通系統（包括專業倫理）",
+    "stage_id": 6,
+    "number": 28,
+    "question": "依據Stair（1967）觀點，下列那些為成功諮詢者的特徵？①具自我揭露能力　②具同理心　③認為個案應符合專業人員的期待　④一視同仁、公平對待　⑤認為個案具獨特性，應提供個別化服務",
+    "options": {
+      "A": "①②④",
+      "B": "①②⑤",
+      "C": "②④⑤",
+      "D": "③④⑤"
+    },
+    "answer": "B",
+    "explanation": "",
+    "exam_type": "high"
+  },
+  {
+    "id": "103100_gapfill_嗓音與吞嚥障礙_40",
+    "roc_year": "103",
+    "session": "第一次",
+    "exam_code": "103100",
+    "subject": "嗓音與吞嚥障礙",
+    "subject_tag": "speech_voice",
+    "subject_name": "嗓音與吞嚥障礙",
+    "stage_id": 4,
+    "number": 40,
+    "question": "下列嗓音治療法中，何者不適用於喉部肌肉緊張造成的嗓音異常？",
+    "options": {
+      "A": "Confidential voice",
+      "B": "Chewing exercise",
+      "C": "Yawn-sign approach",
+      "D": "Digital manipulation"
+    },
+    "answer": "A",
+    "exam_type": "high",
+    "explanation": ""
+  },
+  {
+    "id": "103100_gapfill_嗓音與吞嚥障礙_80",
+    "roc_year": "103",
+    "session": "第一次",
+    "exam_code": "103100",
+    "subject": "嗓音與吞嚥障礙",
+    "subject_tag": "speech_voice",
+    "subject_name": "嗓音與吞嚥障礙",
+    "stage_id": 4,
+    "number": 80,
+    "question": "可用於檢查吞嚥障礙的各種儀器，其適應症的選擇何者正確？",
+    "options": {
+      "A": "評估吞嚥時舌頭的活動狀態可以使用超音波檢查（ultrasound）",
+      "B": "評估吞嚥反射啟動時是否有出現誤吸可以採用電視內視鏡檢查（videoendoscopy）",
+      "C": "從電視螢光吞嚥攝影檢查（videofluorography）可以判斷孟德生手法執行時的肌肉力量",
+      "D": "從表面肌電圖檢查（surface electromyography）中可以判斷咽部殘餘物的堆積量"
+    },
+    "answer": "A",
+    "exam_type": "high",
+    "explanation": ""
   }
 ]

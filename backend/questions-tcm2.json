@@ -4,9 +4,9 @@
     "label": "中醫師(二)",
     "scraped_at": "2026-04-14T11:34:53.579Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-17T17:08:26.582Z"
+    "last_updated": "2026-09-27T17:32:29.788Z"
   },
-  "total": 10236,
+  "total": 10249,
   "questions": [
     {
       "id": 6040,
@@ -207876,6 +207876,266 @@
         "D": "命門為督脈穴，培元補腎；關元氣海為任脈穴，補氣益元"
       },
       "answer": "A"
+    },
+    {
+      "id": 102110021322,
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 1,
+      "number": 47,
+      "question": "承上題，以下列何方治療最適宜？",
+      "options": {
+        "A": "苓桂朮甘湯",
+        "B": "實脾飲",
+        "C": "胃苓湯",
+        "D": "一貫煎合膈下逐瘀湯"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 102110021323,
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 1,
+      "number": 48,
+      "question": "心陽不足和心氣不足兩證型最主要的區別症狀為下列何者？",
+      "options": {
+        "A": "神疲無力",
+        "B": "舌淡苔白",
+        "C": "形寒肢冷，面色蒼白",
+        "D": "胸悶氣短"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 102110021324,
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(一)",
+      "subject_tag": "tcm_clinical_1",
+      "subject_name": "中醫臨床醫學(一)",
+      "stage_id": 1,
+      "number": 57,
+      "question": "有關耳鳴、耳聾的辨證，下列敘述何者錯誤？",
+      "options": {
+        "A": "暴聾多屬外感、痰熱",
+        "B": "耳鳴兼見面色白光白，屬腎虛",
+        "C": "耳鳴見頭痛發熱，耳內作癢者為風",
+        "D": "面色黧黑，耳聾閉塞，舌黯者屬瘀"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "102110_gapfill_中醫臨床醫學(二)_34",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 2,
+      "number": 34,
+      "question": "有關痰、飲、水、濕的敘述，下列何者正確？①津液為正常生理產物 ②痰飲水濕皆為不正常之病理產物 ③肺主運化水液，運化不利則水濕停聚而為痰飲 ④哮是一種反覆發作性疾病，發作期亦稱伏飲",
+      "options": {
+        "A": "①②③",
+        "B": "①②④",
+        "C": "②③④",
+        "D": "①②③④"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": "102110_gapfill_中醫臨床醫學(二)_35",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 2,
+      "number": 35,
+      "question": "下列有關癭病之敘述，何者錯誤？",
+      "options": {
+        "A": "好發於婦女，與衝任不調有密切關係",
+        "B": "日久引起血脈瘀阻，以致氣、痰、瘀三者合而為患",
+        "C": "氣滯痰凝壅結頸前是癭病的基本病機",
+        "D": "火熱傷陰，形成陰虛火旺之證，以心肝兩臟病變較為突出"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": "102110_gapfill_中醫臨床醫學(二)_48",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 2,
+      "number": 48,
+      "question": "一婦人罹患大腸癌，畏寒肢冷、四肢浮腫、下利清穀、五更泄瀉、舌大胖嫩、脈象沉遲，則下列何方劑最適宜？",
+      "options": {
+        "A": "小金丹",
+        "B": "補中益氣湯",
+        "C": "附子理中湯",
+        "D": "一貫煎"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "102110_gapfill_中醫臨床醫學(二)_52",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 2,
+      "number": 52,
+      "question": "28 歲患者以前並無經痛現象，近3 個月開始有嚴重經痛，熱敷無法改善，經來喝四物湯下腹更痛，經婦產科超音波檢查顯示有右側巧克力囊腫3 公分大，且抽血CA-125 值86（正常值為小於35）。其下腹痛症狀自月經前2 天持續至月經來第3 天，痛時拒按，經量正常但色鮮紅，察其脈象弦滑，苔白膩，質紅，則下列何項辨證最適當？",
+      "options": {
+        "A": "經痛多為寒證和虛證，證為胞宮虛寒",
+        "B": "喝四物湯無效，且痛時拒按故證屬氣滯血瘀",
+        "C": "證屬血熱妄行",
+        "D": "證屬濕熱下注"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "102110_gapfill_中醫臨床醫學(二)_54",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 2,
+      "number": 54,
+      "question": "關於導致肝腎不足型經閉之原因，下列何者正確？①產後感寒 ②先天腎氣不足 ③房勞",
+      "options": {
+        "A": "①②",
+        "B": "①③",
+        "C": "②③",
+        "D": "①②③"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "102110_gapfill_中醫臨床醫學(二)_57",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 2,
+      "number": 57,
+      "question": "女性患者主訴婚後育一子已3 歲，閉經不行已半年，致欲再懷第二胎未遂，醫者診斷為氣滯血瘀經閉，其最可能之病因病機為何？",
+      "options": {
+        "A": "飲食勞倦，損傷脾氣",
+        "B": "多產房勞，損及肝腎",
+        "C": "大病久病，或產後失血傷津",
+        "D": "經期產後血室正開，調攝失宜，外感寒邪，內傷生冷"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "102110_gapfill_中醫臨床醫學(二)_60",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 2,
+      "number": 60,
+      "question": "下列關於《達生篇》保產無憂方之敘述，正確的有幾項？①其組成含有艾葉、厚朴二藥 ②用羌活、荊芥之目的是欲升舉胎元 ③懷孕六、七月服之，能使胎氣安和 ④臨產服之，亦可催生",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": "102110_gapfill_中醫臨床醫學(二)_71",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 2,
+      "number": 71,
+      "question": "小兒腹脹，時有疼痛，夜臥不安，煩躁夜啼，嘔吐酸餿乳食，舌紅苔膩，脈象滑數，指紋紫滯，治以下列何方藥最適當？",
+      "options": {
+        "A": "全蠍觀音散",
+        "B": "健脾丸",
+        "C": "木香大安丸",
+        "D": "定吐丸"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "102110_gapfill_中醫臨床醫學(二)_74",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(二)",
+      "subject_tag": "tcm_clinical_2",
+      "subject_name": "中醫臨床醫學(二)",
+      "stage_id": 2,
+      "number": 74,
+      "question": "某5 歲男童，最初症狀為鼻塞，流清涕，無熱，2 天後起疹，疹有泡漿清亮，周圍紅暈，有癢感，不痛，3-4 天後見丘疹、疱疹癒後結痂，下列診斷何者正確？",
+      "options": {
+        "A": "幼兒急疹",
+        "B": "疱疹",
+        "C": "水痘",
+        "D": "奶麻"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": "102110_gapfill_中醫臨床醫學(三)_75",
+      "roc_year": "102",
+      "session": "第二次",
+      "exam_code": "102110",
+      "subject": "中醫臨床醫學(三)",
+      "subject_tag": "tcm_clinical_3",
+      "subject_name": "中醫臨床醫學(三)",
+      "stage_id": 3,
+      "number": 75,
+      "question": "鼻鼽，若因肺氣虛寒為主者，宜溫補肺臟，袪散風寒，可選用溫肺止流丹加減治療。其方中用以散結的是何藥？",
+      "options": {
+        "A": "桔梗",
+        "B": "人參",
+        "C": "訶子",
+        "D": "荊芥"
+      },
+      "answer": "A",
+      "explanation": ""
     }
   ]
 }

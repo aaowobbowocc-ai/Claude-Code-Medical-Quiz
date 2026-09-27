@@ -17,7 +17,12 @@ const path = require('path')
 
 const ROOT = path.join(__dirname, '..')
 const CONFIG_DIR = path.join(ROOT, 'exam-configs')
-const onlyExam = process.argv[2] || null
+const AS_JSON = process.argv.includes('--json')
+const onlyExam = process.argv.slice(2).find(a => !a.startsWith('--')) || null
+// --json 會把每一筆缺口寫成機器可讀的清單，給 verify-coverage-gaps.js 逐卷向
+// 考選部查證「本科目共N題」——鄰居年份推出來的預期題數會誤報（護理師 112
+// 第三次本來就是 50 題／科，夾在兩個 80 題的場次中間就被當成缺 120 題）。
+const gapRows = []
 
 const configs = {}
 for (const f of fs.readdirSync(CONFIG_DIR).filter(f => f.endsWith('.json'))) {
@@ -124,6 +129,7 @@ for (const examId of examIds) {
         if (expectN > 0) {
           lines.push(`     ${subj.padEnd(22)}  ${String(0).padStart(3)}/${String(expectN).padStart(3)}  ❌ paper missing`)
           sessionMissing += expectN
+          gapRows.push({ exam: examId, year: y, session: s, paper: subj, have: 0, expect: expectN, kind: 'paper_missing' })
         }
         continue
       }
@@ -138,6 +144,7 @@ for (const examId of examIds) {
           : `[${missingNums.slice(0, 6).join(',')},...+${missingNums.length - 6}]`
         lines.push(`     ${subj.padEnd(22)}  ${String(have).padStart(3)}/${String(expectN).padStart(3)}  ${showNums}`)
         sessionMissing += missingNums.length
+        gapRows.push({ exam: examId, year: y, session: s, paper: subj, have, expect: expectN, missing: missingNums, kind: 'mid_gap' })
       }
     }
 
@@ -164,6 +171,12 @@ if (totalMissing === 0) {
   console.log(`✓ GRAND TOTAL: ${totalSessions} sessions across ${examIds.length} exams, all complete`)
 } else {
   console.log(`GRAND TOTAL: ${totalMissing} missing across ${totalIncompleteSessions}/${totalSessions} sessions in ${examIds.length} exams`)
+}
+if (AS_JSON) {
+  const out = path.join(ROOT, '_tmp', 'coverage-gaps.json')
+  fs.mkdirSync(path.dirname(out), { recursive: true })
+  fs.writeFileSync(out, JSON.stringify(gapRows, null, 2))
+  console.log(`\n📄 缺口清單 → ${out}（${gapRows.length} 筆）`)
 }
 console.log(`\nNote: uses per-paper local-minimum detection. A session's count is only`)
 console.log(`flagged when it's strictly lower than both chronological non-zero neighbors`)

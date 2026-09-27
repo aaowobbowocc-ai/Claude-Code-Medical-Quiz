@@ -97,11 +97,37 @@ async function paperQuestions(code, c, s) {
     prev = l;
   }
   if (cur && cur.n && Object.keys(cur.options).length === 4) out.set(cur.n, cur);
-  if (out.size) return out;
+  if (out.size) return trimSectionTails(out);
   const viaStream = streamParse(lines);
-  if (viaStream.size) return viaStream;
+  if (viaStream.size) return trimSectionTails(viaStream);
   const viaLabel = labelParse(lines);
-  return viaLabel.size ? viaLabel : inlineNumParse(extract('preserve-images'));
+  return trimSectionTails(viaLabel.size ? viaLabel : inlineNumParse(extract('preserve-images')));
+}
+
+/**
+ * 一題的最後一個選項常常把**下一個題組的引文**整段吃進去
+ *   D: "whispered請依下文回答第31 題至第35 題One morning, a woman was buying…"
+ * 因為引文就接在選項後面，中間沒有任何可以判斷「選項到此為止」的訊號。
+ * 只認卷面上明確的段落標記，切不到就整段留著。
+ */
+const SECTION_TAIL = [
+  /請依下文/, /閱讀下文/, /依下文回答/,
+  /\d+\s*[至~～\-]\s*\d+\s*題?\s*為題組/,
+  /[一二三四五六]\s*、\s*(單|多|複)選題/,
+  /第\s*[壹貳參肆]\s*部分/,
+];
+function trimSectionTails(map) {
+  for (const o of map.values()) {
+    for (const k of Object.keys(o.options || {})) {
+      let t = String(o.options[k] || '');
+      for (const re of SECTION_TAIL) {
+        const m = re.exec(t);
+        if (m && m.index > 0) t = t.slice(0, m.index);
+      }
+      o.options[k] = t.trim();
+    }
+  }
+  return map;
 }
 
 /**
@@ -153,7 +179,19 @@ function inlineNumParse(lines) {
       continue;
     }
     if (!cur) continue;
-    if (mark) { cur.options[mark] = l.t.slice(1).trim(); cur.last = mark; prev = null; continue; }
+    if (mark) {
+      // 一個 run 裡可能塞了**兩個以上**的選項（警特 115 英文 #35：
+      // "Ⓑshouldn't have wasted Ⓒdidn't waste" 是同一個 run）。
+      // 只看開頭第一個標記的話，第二個選項會被併進第一個，後面整題錯位一格。
+      for (const seg of l.t.split(/(?=[-])/)) {
+        const m2 = MARK[seg[0]];
+        if (!m2) continue;
+        cur.options[m2] = seg.slice(1).trim();
+        cur.last = m2;
+      }
+      prev = null;
+      continue;
+    }
     if (cur.last) cur.options[cur.last] = appendRun(cur.options[cur.last], l, prev);
     else cur.stem = appendRun(cur.stem, l, prev);
     prev = l;

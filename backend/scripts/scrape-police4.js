@@ -302,7 +302,11 @@ async function main() {
     data = { total: 0, questions: [] }
   }
   const existingKey = new Set(data.questions.map(q => `${q.exam_code}_${q.number}_${q.subject_tag}`))
-  let nextId = data.questions.length > 0 ? Math.max(...data.questions.map(q => q.id || 0)) + 1 : 1
+  // ⚠️ 舊的補題腳本留下了字串 id（"105070_admin_studies_18"），
+  //    Math.max 碰到字串會變 NaN，NaN++ 還是 NaN，寫進 JSON 就成了 id: null
+  //    （115060 那批 175 題全中）。只拿數字 id 算。
+  const numericIds = data.questions.map(q => Number(q.id)).filter(Number.isFinite)
+  let nextId = numericIds.length ? Math.max(...numericIds) + 1 : 1
   const added = []
 
   for (const sess of SESSIONS) {

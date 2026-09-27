@@ -31,6 +31,9 @@ const CACHE_DIR = path.join(ROOT, '_tmp', 'taipower-cache')
 const REFERER = 'https://www.taipower.com.tw/2289/2544/2554/2556/'
 
 // 100–102 年試題為掃描圖檔（無文字層）→ 需 OCR，暫不收
+// 115：台電官網的年度篩選到 114 年度（q_attribute=4300）為止，115 年試題還沒放上去
+//（2026-09-27 查）。等官網出現「115年度」再把年份加進來，並補 probe-taipower.js
+// 的 YEAR_QATTR。
 const YEARS = ['103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114']
 
 const CATEGORIES = {

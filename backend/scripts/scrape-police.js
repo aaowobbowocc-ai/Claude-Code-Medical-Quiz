@@ -268,6 +268,7 @@ async function main() {
     // 060 series (一般警察 standalone from 113+)
     { year: '113', code: '113060', session: '第一次' },
     { year: '114', code: '114060', session: '第一次' },
+    { year: '115', code: '115060', session: '第一次' },
   ]
   const SUBJECTS = [
     // 行政學: s=0301 for 070 series (108-112) and 060/113, s=0304 for 060/114
@@ -276,6 +277,9 @@ async function main() {
     // 行政法: s=0402 for 109/070, s=0403 for 060 series (113-114)
     { c: '301', s: '0402', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['109'] },
     { c: '301', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['113','114'] },
+    // 115 年警察特考與一般警察特考合併同一場次，三等行政警察從 c=301 移到 c=401
+    { c: '401', s: '0301', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['115'] },
+    { c: '401', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['115'] },
   ]
   const file = path.join(__dirname, '..', 'questions-police.json')
 

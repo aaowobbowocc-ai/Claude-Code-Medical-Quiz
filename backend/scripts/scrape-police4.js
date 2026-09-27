@@ -266,7 +266,13 @@ const S_BY_YEAR = {
   '112': { chinese: '0102', english: '0203', law_knowledge: '0605', criminal_law: '0904' },
   '113': { chinese: '0103', english: '0203', law_knowledge: '0506', criminal_law: '0605' },
   '114': { chinese: '0103', english: '0203', law_knowledge: '0506', criminal_law: '0606' },
+  '115': { chinese: '0103', english: '0203', law_knowledge: '0506', criminal_law: '0605' },
 }
+
+// 類科碼也會換。115 年警察特考與一般警察特考合併成同一場次，四等從 401 移到 441
+// （401 在 115060 變成三等行政警察）。抓錯就會灌進三等的卷。
+const C_BY_YEAR = { '115': '441' }
+const DEFAULT_C = '401' // 行政警察四等（108-114）
 
 // Subject metadata (name, tag, MCQ position in PDF)
 const SUBJECTS = [
@@ -285,8 +291,8 @@ async function main() {
     { year: '112', code: '112070', session: '第一次' },
     { year: '113', code: '113060', session: '第一次' },
     { year: '114', code: '114060', session: '第一次' },
+    { year: '115', code: '115060', session: '第一次' },
   ]
-  const C = '401' // 行政警察四等
   const file = path.join(__dirname, '..', 'questions-police4.json')
 
   let data
@@ -307,6 +313,7 @@ async function main() {
     for (const sub of SUBJECTS) {
       const s = sMap[sub.key]
       if (!s) continue
+      const C = C_BY_YEAR[sess.year] || DEFAULT_C
       const qUrl = `${BASE}?t=Q&code=${sess.code}&c=${C}&s=${s}&q=1`
       const aUrl = `${BASE}?t=S&code=${sess.code}&c=${C}&s=${s}&q=1`
       let qBuf, aBuf

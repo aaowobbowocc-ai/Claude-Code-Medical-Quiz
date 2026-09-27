@@ -2,8 +2,8 @@
   "bankId": "common_admin_law",
   "name": "行政法",
   "description": "公職考試三等／特考共通科目：行政法（含行政程序法、行政救濟、訴願等）",
-  "bankVersion": 5,
-  "last_synced_at": "2026-05-21T04:40:37.799Z",
+  "bankVersion": 7,
+  "last_synced_at": "2026-09-27T10:49:06.478Z",
   "levels": [
     "senior"
   ],
@@ -1959,6 +1959,32 @@
       "deprecated_reason": null
     },
     {
+      "id": "common_admin_law-103-civil-senior-1",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "103 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 1,
+      "question": "關於行政程序法閱覽卷宗請求權之說明，下列何者正確？",
+      "options": {
+        "A": "閱覽卷宗請求權為任何人民於行政程序中皆享有之權利",
+        "B": "行政機關對於閱卷請求所為之決定為具有實體效力之行政處分",
+        "C": "請求閱覽卷宗，限於有利於申請人主張或維護法律利益",
+        "D": "閱覽卷宗如發現資料內容關於他人之記載有錯誤，得請求更正"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
       "id": "common_admin_law-103-civil-senior-2",
       "roc_year": "103",
       "session": "第一次",
@@ -2003,6 +2029,32 @@
         "D": "處分因程序重新進行而變更"
       },
       "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-103-civil-senior-4",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "103 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 4,
+      "question": "行政機關以距離學校過近的原因，廢止已核發之加油站設置許可。下列敘述何者正確？",
+      "options": {
+        "A": "行政機關作成授益處分後原則上即得廢止，故該廢止加油站設置許可之行為合法",
+        "B": "因加油站與學校間之距離為事實認定問題，故行政機關廢止權之行使為事實行為",
+        "C": "行政機關基於公益而廢止加油站設置許可，處分相對人不受信賴保護原則之保障",
+        "D": "加油站設置許可經廢止確定後，處分相對人負有繳回加油站設置許可執照之義務"
+      },
+      "answer": "D",
       "level": "senior",
       "shared_bank": "common_admin_law",
       "parent_id": null,
@@ -2133,6 +2185,32 @@
         "D": "行政院國家發展委員會（請接背面）"
       },
       "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-103-civil-senior-10",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "103 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 10,
+      "question": "某日警察臨檢一酒店，赫然發現行政院某部會首長甲、某縣縣長乙、該縣某公立國中教師丙及該縣政府建設局局長丁於酒店內 喝花酒，輿論譁然，要求究責。關於此四人之責任，下列敘述何者正確？",
+      "options": {
+        "A": "甲得依公務員懲戒法規定，由行政院長為記過之懲戒處分",
+        "B": "乙得依公務員懲戒法規定，由監察院作成降職之懲戒處分",
+        "C": "丙得依公務人員考績法規定，由校長為申誡處分，送銓敍部審定",
+        "D": "丁得依公務人員考績法規定，由機關為記過處分，送銓敍部審定"
+      },
+      "answer": "D",
       "level": "senior",
       "shared_bank": "common_admin_law",
       "parent_id": null,
@@ -2323,6 +2401,32 @@
       "deprecated_reason": null
     },
     {
+      "id": "common_admin_law-103-civil-senior-18",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "103 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 18,
+      "question": "依行政訴訟法之規定，有關交通罰鍰事件之救濟程序，下列敘述何者正確？",
+      "options": {
+        "A": "無須經過訴願程序，直接向地方法院行政訴訟庭提起行政訴訟",
+        "B": "無須經過訴願程序，直接向高等行政法院提起行政訴訟",
+        "C": "必須經過訴願程序，如有不服再向地方法院交通法庭提起行政訴訟",
+        "D": "必須經過訴願程序，如有不服再向高等行政法院提起行政訴訟"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
       "id": "common_admin_law-103-civil-senior-19",
       "roc_year": "103",
       "session": "第一次",
@@ -2393,6 +2497,32 @@
         "D": "法務部行政執行署臺北分署"
       },
       "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-103-civil-senior-22",
+      "roc_year": "103",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "103 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 22,
+      "question": "甲任職臺北市政府，擔任9 等科長，因涉違失行為而遭懲戒，則依公務員懲戒法之規定，下列敘述何者正確？",
+      "options": {
+        "A": "依其情節，主管長官如認以記一大過為適當時，該主管長官得立即行之",
+        "B": "依其情節，主管長官如認以降級為適當時，該主管長官得立即行之",
+        "C": "主管長官如認其情節重大，以撤職為適當時，該主管長官應立即行之",
+        "D": "主管長官如認其情節重大，以休職為適當時，該主管長官應立即行之"
+      },
+      "answer": "A",
       "level": "senior",
       "shared_bank": "common_admin_law",
       "parent_id": null,
@@ -2653,6 +2783,32 @@
         "D": "私經濟行政"
       },
       "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-104-civil-senior-8",
+      "roc_year": "104",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "104 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 8,
+      "question": "下列何者不屬於法律明確性原則之內涵？",
+      "options": {
+        "A": "構成要件以抽象概念表示者，其意義須非難以理解",
+        "B": "授權之目的、內容及範圍應具體明確",
+        "C": "一般受規範者得預見",
+        "D": "爭議時得由司法審查加以確認"
+      },
+      "answer": "B",
       "level": "senior",
       "shared_bank": "common_admin_law",
       "parent_id": null,
@@ -7871,12 +8027,12 @@
         "admin_law"
       ],
       "number": 10,
-      "question": "行政機關發布命令，禁止餐廳營業時間超過晚上9點。下列敘述何者錯誤？",
+      "question": "行政機關發布命令，禁止餐廳營業時間超過晚上9點。下列敘述何者錯誤？該命令須送立法院審查該命令之訂定須有法律授權該命令屬於行政規則該命令應刊登政府公報或新聞紙31550、31650",
       "options": {
-        "A": "該命令須送立法院審查",
-        "B": "該命令之訂定須有法律授權",
-        "C": "該命令屬於行政規則",
-        "D": "該命令應刊登政府公報或新聞紙31550、31650 32250、32950 33050 33250 - 33550 33850"
+        "A": "32250、32950",
+        "B": "33050",
+        "C": "33250 - 33550",
+        "D": "33850"
       },
       "answer": "C",
       "level": "senior",
@@ -9569,6 +9725,656 @@
         "D": "無法律則無徵收補償，若法律未有規定時，所有權人不得請求需用土地人向主管機關申請徵收"
       },
       "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-1",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 1,
+      "question": "關於法規發生變動之新舊法適用，下列敘述何者錯誤？",
+      "options": {
+        "A": "各機關受理人民聲請許可案件適用法規時，除依其性質應適用行為時之法規外，如在處理程序終結前，據以准許之法規有變更者，原則上適用新法規",
+        "B": "行為後法律有變更者，適用行政機關裁處時之法律。但裁處前之法律有利於受處罰者，適用最有利於受處罰者之規定",
+        "C": "於撤銷訴訟程序中發生法規變動者，行政法院原則上應適用行政處分作成時之法規，判斷系爭行政處分之合法性",
+        "D": "於課予義務訴訟程序中發生法規變動者，行政法院原則上應適用行政處分作成時之法規，判斷系爭請求權是否合法存在"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-2",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 2,
+      "question": "關於人民對行政之信賴與信賴保護原則之敘述，下列何者正確？",
+      "options": {
+        "A": "行政程序法立法目的不含增進人民對行政之信賴",
+        "B": "公務員自行迴避制度與人民對行政之信賴無關",
+        "C": "保留行政處分之廢止權者，事後廢止不生信賴保護問題",
+        "D": "處分機關所告知之救濟期間不符法定期間者，得於處分書送達後1 年內提起救濟"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-3",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 3,
+      "question": "下列何者非屬行政程序法規定應製作紀錄之事項？",
+      "options": {
+        "A": "預備聽證之程序經過",
+        "B": "公務員以電子通訊方式與當事人有程序外接觸",
+        "C": "行政機關調查事實證據之過程與結果",
+        "D": "當事人以言詞向行政機關提出申請"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-4",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 4,
+      "question": "有關行政組織個別組織型態之敘述，下列何者錯誤？",
+      "options": {
+        "A": "國家中山科學研究院為行政法人",
+        "B": "國家通訊傳播委員會為獨立機關",
+        "C": "行政院訴願審議委員會為行政機關",
+        "D": "公務人員退休撫卹基金管理局不具獨立之法人格地位"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-5",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 5,
+      "question": "下列何者非行政主體？",
+      "options": {
+        "A": "桃園市蘆竹區",
+        "B": "國家中山科學研究院",
+        "C": "南投縣仁愛鄉",
+        "D": "臺南市"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-6",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 6,
+      "question": "行政機關權限授予時，關於人民不服提起訴願之敘述，下列何者正確？",
+      "options": {
+        "A": "環境部依法委辦臺中市政府辦理水污染防治法管轄水區劃定，環境部視為處分機關",
+        "B": "勞動部依法委託經濟部產業園區管理局所屬勞動檢查中心執行加工出口區檢查業務，勞動部視為處分機關",
+        "C": "勞動部依法委託中華鍋爐協會辦理危險性機械及設備代行檢查業務，勞動部視為處分機關",
+        "D": "勞動部依法委任勞動部勞動力發展署辦理職業訓練師資格審定，勞動部視為處分機關31350、3145031850、3275032850、3305033250"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-7",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 7,
+      "question": "關於受委託行使公權力之敘述，下列何者錯誤？",
+      "options": {
+        "A": "民用航空機長依法於飛航中為緊急處置，無待行政機關授權",
+        "B": "私立大學將資格考核未通過之學生退學，乃以自己名義為行政處分",
+        "C": "交通部委託民營汽車修理廠代辦汽車檢驗，向交通部提起訴願",
+        "D": "臺北市委託民間業者開立臺北市停車繳費單，應將所委託事項刊登於政府公報"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-8",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 8,
+      "question": "關於公務員懲戒之敘述，下列何者正確？",
+      "options": {
+        "A": "公務員之懲戒案件，由懲戒法院下設職務法庭審理之",
+        "B": "懲戒法院審理公務員懲戒案件時，應設參審員為合議庭成員",
+        "C": "對於懲戒法庭第一審之判決不服者，得另行提起行政訴訟救濟之",
+        "D": "公務員所為同一行為已受刑罰或行政罰之處罰者，仍得予以懲戒"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-9",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 9,
+      "question": "關於公法上職務關係之敘述，下列何者錯誤？",
+      "options": {
+        "A": "公務人員與國家間存在相互之權利義務關係",
+        "B": "公務人員之服務義務應有法律依據",
+        "C": "對於公務人員權益之干預，仍有法律保留原則之適用",
+        "D": "公務人員權益受侵害時，僅得提起申訴與再申訴，不得提起司法救濟"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-10",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 10,
+      "question": "關於法規命令之敘述，下列何者正確？",
+      "options": {
+        "A": "法規命令以在網站上公告周知之方式發布，即可發生效力",
+        "B": "衛生福利部得於全民健康保險醫療辦法中，逕將高科技診療項目及審查程序委由中央健康保險署定之",
+        "C": "法律授權行政機關訂定法規命令者，該機關得以發布行政規則之方式為之",
+        "D": "行政法院之法官若認為法規命令違法，不得廢棄該命令，使其無效"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-11",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 11,
+      "question": "關於解釋性行政規則之敘述，下列何者錯誤？",
+      "options": {
+        "A": "函釋是法律解釋的形式之一，性質上非獨立之行政命令",
+        "B": "主管機關就行政法規之規範意旨所為解釋之函釋，係不直接對外發生法規範效力之組織性行政規則",
+        "C": "行政機關為闡明法規原意所作成之釋示，應自該法規生效之日起，有其適用",
+        "D": "當行政機關就同一法規先後作成函釋，而在後之函釋與在前之函釋不一致時，在前之函釋未必當然錯誤"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-12",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 12,
+      "question": "甲因主管機關認定欠稅達一定數額而遭限制出境，甲提起訴願與行政訴訟均遭駁回確定。下列敘述何者正確？",
+      "options": {
+        "A": "若甲於法院判決後始發現並提出已於爭訟前完納稅捐之證明，甲仍不得向行政法院提起再審",
+        "B": "若甲係因自己之重大過失而未能提出完稅證明，則甲不能向主管機關請求程序再開",
+        "C": "主管機關得採取封閉甲之公司的營業處所為手段，以達成命甲完納稅捐之義務",
+        "D": "主管機關如認甲顯有逃匿之虞得逕對其予以管收，以儘早實現國家之公法債權"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-13",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 13,
+      "question": "有關行政處分附款之敘述，下列何者正確？",
+      "options": {
+        "A": "主管機關對於建築工程給予許可，但附加要求不得在交通尖峰時段施工，屬於解除條件",
+        "B": "主管機關得附加停止條件，要求人民必須繳清罰鍰後始核發行車執照",
+        "C": "主管機關核發廢水之排放許可證時，聲明於未來有必要時，得要求增設防範水污染設備，此為附款類型當中的期限",
+        "D": "主管機關核發外籍勞工居留許可時，得附記未來若未受僱於特定雇主時，廢止該居留許可，此屬於廢止權之保留"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-14",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 14,
+      "question": "依實務見解，下列何者非屬行政處分？",
+      "options": {
+        "A": "直轄市政府對電子遊戲業之營業場所，所為應距離學校、醫院1,000 公尺以上之規定",
+        "B": "縣市政府指定某一棟古老建築為古蹟",
+        "C": "縣市政府於道路旁劃設禁止停車之禁制標線",
+        "D": "市場主管機關公告禁止市場內之攤商販售現宰活雞"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-15",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 15,
+      "question": "下列何者得由行政機關與人民締結行政契約？",
+      "options": {
+        "A": "公務人員依法退休後得領取之退休金",
+        "B": "依政府採購法辦理公開招標採購之決標",
+        "C": "行政機關約聘人員之年度考核",
+        "D": "地方政府提供公有空地讓業者興辦夜市"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-16",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 16,
+      "question": "交通部中央氣象署預測山區隨時可能發生土石流，為避免村莊遭土石掩埋，地方主管機關公告某範圍山區住戶應立即撤離，該地區之村長以擴音器宣布此消息，亦由警察陪同挨家挨戶通知。下列各行為之法律性質何者錯誤？",
+      "options": {
+        "A": "交通部中央氣象署之預測屬於資訊提供之行政事實行為",
+        "B": "地方主管機關之公告屬於一般處分",
+        "C": "村長以擴音器宣布及通知屬於送達行為",
+        "D": "警察陪同村長進行通知屬於職務協助行為31350、3145031850、3275032850、3305033250"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-17",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 17,
+      "question": "依行政罰法規定，關於行政罰之敘述，下列何者錯誤？",
+      "options": {
+        "A": "行為後法律或自治條例有變更者，適用行政機關裁處時之法律。但裁處前之法律有利於受處罰者，適用最有利於受處罰者之規定",
+        "B": "違反行政法上義務之處罰，以行為人主觀上有可非難性及可歸責性為前提，行為非出於故意或過失者，不予處罰",
+        "C": "一行為同時觸犯刑事法律及違反行政法上義務規定者，依刑事法律處罰之。但其行為應處以其他種類行政罰或得沒入之物而未經法院宣告沒收者，亦得裁處之",
+        "D": "沒入之客體，限於受處罰者所有之物"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-18",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 18,
+      "question": "關於行政執行之查封程序，下列敘述何者錯誤？",
+      "options": {
+        "A": "行政執行人員於執行查封前，發見義務人之財產業經其他行政執行機關予以查封，因同為行政執行，故可再行查封",
+        "B": "債務人對於行政執行機關之執行方法不服者，得聲明異議",
+        "C": "民事執行處已查封之財產，行政執行機關不得再行查封",
+        "D": "行政執行機關對義務人為公法上金錢債權之執行，得檢具證明文件，就民事執行處已查封之財產聲明參與分配"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-19",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 19,
+      "question": "關於行政程序法所定閱覽卷宗請求權之敘述，下列何者錯誤？",
+      "options": {
+        "A": "閱覽卷宗制度旨在落實行政程序上武器平等原則，使其得以適時主張或維護權利，為政府資訊公開法之特別規定",
+        "B": "閱覽卷宗請求權，係人民基於知的權利請求行政機關提供因職務所獲得資訊之權利，任何人均可提出申請",
+        "C": "行政機關以外人員對於機關學校會計月報公告事項有疑義而申請閱覽原始憑證時，主管機關應予駁回申請",
+        "D": "已終結行政程序或法定救濟期間已經過之當事人或利害關係人，仍可依政府資訊公開法向行政機關申請提供政府資訊"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-20",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 20,
+      "question": "原行政處分經訴願決定撤銷，原處分機關重為處分時，下列敘述何者正確？",
+      "options": {
+        "A": "原處分機關基於不同之事實基礎重為處分時，縱事實基礎已不同，仍受禁止不利益變更原則之限制",
+        "B": "原處分經救濟機關撤銷後，如原處分機關在同一事實基礎上重為處分時，得為較原來處分更不利之處分",
+        "C": "訴願法第81 條第1 項但書規定所拘束之對象係受理訴願機關，不及於原處分機關",
+        "D": "原行政處分因裁量濫用而為有利於處分相對人之裁量者，原行政處分機關重為處分時，不得為較原行政處分不利於處分相對人之裁量"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-21",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 21,
+      "question": "經濟部依據法規將其業務委由臺北市政府辦理。臺北市轄內A 公司不服臺北市政府就該業務所為之否准其處分。A 提起訴願之管轄機關為何？",
+      "options": {
+        "A": "經濟部",
+        "B": "行政院",
+        "C": "臺北市政府",
+        "D": "環境部"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-22",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 22,
+      "question": "依實務見解，下列行為何者得提起行政訴訟救濟？",
+      "options": {
+        "A": "司法院免除法官兼任庭長之決定",
+        "B": "監獄管理機關拒絕受刑人假釋之申請",
+        "C": "學校給予違規之國中生口頭警告",
+        "D": "對公務員請事假之申請不予核定"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-23",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 23,
+      "question": "關於行政訴訟繫屬後之停止執行，下列敘述何者錯誤？",
+      "options": {
+        "A": "行政法院為停止執行之裁定前，無須徵詢當事人之意見",
+        "B": "行政處分之執行，原則上不因提起行政訴訟而停止",
+        "C": "原處分之執行，即使有急迫之情事，但若損害之回復並無困難時，不得裁定停止執行",
+        "D": "行政法院亦得依職權裁定停止執行"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-24",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 24,
+      "question": "關於國家賠償，下列敘述何者正確？",
+      "options": {
+        "A": "立法者不得制定特別法規範",
+        "B": "因公立醫療院所就醫產生之醫療糾紛，適用國家賠償",
+        "C": "公務員撫卹規定為國家賠償法之特別法",
+        "D": "國家依法賠償人民後，得向有故意或重大過失之公務員求償"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_law",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_law-115-civil-senior-25",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政法",
+      "subject_tags": [
+        "admin_law"
+      ],
+      "number": 25,
+      "question": "下列何者並非國家賠償法所稱之行使公權力？",
+      "options": {
+        "A": "消防人員執行救火任務",
+        "B": "公部門垃圾車於指定地點收集垃圾",
+        "C": "公立醫院醫生之醫療行為",
+        "D": "公立學校老師處罰學生"
+      },
+      "answer": "C",
       "level": "senior",
       "shared_bank": "common_admin_law",
       "parent_id": null,

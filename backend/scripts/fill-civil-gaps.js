@@ -51,18 +51,26 @@ async function paperQuestions(code, c, s) {
   const buf = await fetchSheet('Q', code, c, s);
   const mupdf = await import('mupdf');
   const doc = mupdf.Document.openDocument(buf, 'application/pdf');
-  const lines = [];
-  for (let p = 0; p < doc.countPages(); p++) {
-    const st = JSON.parse(doc.loadPage(p).toStructuredText('preserve-whitespace').asJSON());
-    for (const b of st.blocks || []) for (const l of b.lines || []) {
-      const raw = (l.text || '');
-      if (!raw.trim()) continue;
-      const t = raw.normalize('NFC');
-      if (/^(代號|頁次|座號|等別|類科|科目|考試時間|考試別|考試名稱)\s*[：:]/.test(t.trim())) continue;
-      // w 給 labelParse 判斷兩個 run 是否水平重疊（重疊處的字會重複）
-      lines.push({ p, y: Math.round(l.bbox.y), x: Math.round(l.bbox.x), w: Math.round(l.bbox.w), t });
+  // ⚠️ 'preserve-whitespace' 會把**只有一個選項標記的那一行**整行丟掉
+  //   （115 高考「法學知識與英文」的 Ⓐ~Ⓓ 各自成行，用這個 flag 抽出來一個都不剩）。
+  //   'preserve-images' 抽得到標記，但英文填空題要靠 run 之間的空白還原底線。
+  //   兩種都留著，前三種解析法用前者，inlineNumParse 用後者。
+  const extract = (flag) => {
+    const acc = [];
+    for (let p = 0; p < doc.countPages(); p++) {
+      const st = JSON.parse(doc.loadPage(p).toStructuredText(flag).asJSON());
+      for (const b of st.blocks || []) for (const l of b.lines || []) {
+        const raw = (l.text || '');
+        if (!raw.trim()) continue;
+        const t = raw.normalize('NFC');
+        if (/^(代號|頁次|座號|等別|類科|科目|考試時間|考試別|考試名稱)\s*[：:]/.test(t.trim())) continue;
+        // w 給 labelParse 判斷兩個 run 是否水平重疊（重疊處的字會重複）
+        acc.push({ p, y: Math.round(l.bbox.y), x: Math.round(l.bbox.x), w: Math.round(l.bbox.w), t });
+      }
     }
-  }
+    return acc;
+  };
+  const lines = extract('preserve-whitespace');
   // 同列的 run y 會差 1~2px，先分桶成列再依 x 排，否則同一列的四個選項會亂序
   const YB = 6;
   lines.sort((a, b) => a.p - b.p || Math.round(a.y / YB) - Math.round(b.y / YB) || a.x - b.x);
@@ -91,7 +99,67 @@ async function paperQuestions(code, c, s) {
   if (cur && cur.n && Object.keys(cur.options).length === 4) out.set(cur.n, cur);
   if (out.size) return out;
   const viaStream = streamParse(lines);
-  return viaStream.size ? viaStream : labelParse(lines);
+  if (viaStream.size) return viaStream;
+  const viaLabel = labelParse(lines);
+  return viaLabel.size ? viaLabel : inlineNumParse(extract('preserve-images'));
+}
+
+/**
+ * 第四種版型：**題號黏在題幹開頭**，選項標記自己獨立一行。
+ *   x=41 y=185 "1 下列有關正當法律程序原則之敘述，依司法院大法官解釋之意旨，何者錯誤？"
+ *   x=58 y=198 "Ⓐ"            ← 標記單獨一行，比內容高 1~2px
+ *   x=69 y=200 "違警罰法因違反實質正當之法律程序遭…"
+ * 上面那個嚴格版要求題號是**只有數字的一行**，這種卷一題都認不到
+ * （115 年高考三級「法學知識與英文」實測 0/50，舊的 parseColumnAware 也是 0）。
+ *
+ * 題號行只認 x < 55：選項從 x≈58 起跳，不設這道界線，選項裡的「1 年以上」
+ * 會被當成第 1 題。
+ */
+function inlineNumParse(lines) {
+  const out = new Map();
+  let cur = null, prev = null;
+  const flush = () => {
+    if (cur && cur.n && Object.keys(cur.options).length === 4 && cur.stem) out.set(cur.n, cur);
+  };
+  // 標記與它的內容是不同的 run，y 差 1~2px；多欄版型一列會有三組
+  // （Ⓐ@x176 家長@x187 Ⓑ@x296 教師@x307 …）。先依鄰近 y 聚成一列再依 x 排，
+  // 直接照 y 排會變成「三個標記連在一起、三段內容連在一起」，選項全部錯位。
+  const sorted = lines.slice().sort((a, b) => a.p - b.p || a.y - b.y || a.x - b.x);
+  const rows = [];
+  for (const l of sorted) {
+    const last = rows[rows.length - 1];
+    if (last && last[0].p === l.p && Math.abs(l.y - last[0].y) <= 4) last.push(l);
+    else rows.push([l]);
+  }
+  const ordered = rows.flatMap(r => r.slice().sort((u, v) => u.x - v.x));
+
+  let lastN = 0;
+  for (const l of ordered) {
+    const mark = MARK[l.t[0]];
+    // 克漏字題的「題幹」只有題號（"44 " 單獨一個 run，選項就在同一列右邊），
+    // 所以題號後面可以沒有東西。放寬之後要用「題號必須接續」擋住誤判：
+    // 閱讀測驗的文章也在 x<55，只要有一行以數字開頭就會被當成新題。
+    const numM = /^(\d{1,3})[ 　]*(.*)$/.exec(l.t.trim());
+    const n = numM ? +numM[1] : 0;
+    // 題號必須接續（容許跳 1~2 題，某題沒解析出來時還能接回去）。
+    // 不能只要求「比上一題大」——閱讀測驗文章裡的 "2019, the election of…"
+    // 會被當成第 2019 題，後面整批就全毀了。
+    const ok = numM && l.x < 55 && n > lastN && n <= lastN + 3;
+    if (!mark && ok) {
+      flush();
+      cur = { n, stem: numM[2].trim(), options: {}, last: null };
+      lastN = n;
+      prev = null;
+      continue;
+    }
+    if (!cur) continue;
+    if (mark) { cur.options[mark] = l.t.slice(1).trim(); cur.last = mark; prev = null; continue; }
+    if (cur.last) cur.options[cur.last] = appendRun(cur.options[cur.last], l, prev);
+    else cur.stem = appendRun(cur.stem, l, prev);
+    prev = l;
+  }
+  flush();
+  return out;
 }
 
 /**

@@ -2,8 +2,8 @@
   "bankId": "common_admin_studies_junior",
   "name": "普通考試 行政學概要",
   "description": "公務人員普通考試（四等）行政學概要，106–114 年，每年 50 題選擇題。",
-  "bankVersion": 12,
-  "last_synced_at": "2026-05-20T02:11:34.408Z",
+  "bankVersion": 13,
+  "last_synced_at": "2026-09-27T10:51:25.346Z",
   "levels": [
     "junior"
   ],
@@ -16876,6 +16876,1306 @@
         "D": "支持小而美的政府機制"
       },
       "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-1",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 1,
+      "question": "戴伊（T. Dye）提出「政府選擇作為或不作為之行為」，係屬下列何者之定義？",
+      "options": {
+        "A": "政治",
+        "B": "法律",
+        "C": "公共政策",
+        "D": "管理"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-2",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 2,
+      "question": "公共管理與企業管理有許多不同之處，下列敘述何者錯誤？",
+      "options": {
+        "A": "經費來源不同",
+        "B": "目標明確性不同",
+        "C": "外部監督程度不同",
+        "D": "績效重視程度不同"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-3",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 3,
+      "question": "霍桑實驗（Hawthorne Experiments）對行政學的理論發展具有不少的貢獻，但下列何者不是此一實驗的重要研究發現？",
+      "options": {
+        "A": "尊重員工的人格有助於提高生產量",
+        "B": "員工的參與和情緒抒發可提高士氣",
+        "C": "組織與外在環境保持互動才能生存",
+        "D": "非正式組織會對成員產生拘束力"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-4",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 4,
+      "question": "修正理論時期（1930-1960）的行政學研究為組織與管理的研究開闢出新的途徑，對此一時期研究特色之敘述，下列何者錯誤？",
+      "options": {
+        "A": "深受行為科學的影響，重視實證的研究",
+        "B": "主張個人的利益與組織的利益相互平衡",
+        "C": "接受Y 理論的假定，強調激勵取代監督",
+        "D": "權力大小視職位高低而定，與部屬無關"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-5",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 5,
+      "question": "行政學領域中有關科學管理學派之核心主張，下列敘述何者錯誤？",
+      "options": {
+        "A": "重視層級節制的組織結構",
+        "B": "忽略外在環境對組織的影響",
+        "C": "主張公共組織應反映利益團體的價值",
+        "D": "強調效率行政"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-6",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 6,
+      "question": "下列何者為新公共行政的主要內容？",
+      "options": {
+        "A": "主張邏輯實證論",
+        "B": "力求創新和企業家行動",
+        "C": "適應動盪的環境",
+        "D": "加速官僚制度的解體"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-7",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 7,
+      "question": "有關新公共管理內涵，下列敘述何者正確？",
+      "options": {
+        "A": "強調法規鬆綁",
+        "B": "強調公平正義等社會價值",
+        "C": "強調上級長官權威之必要性",
+        "D": "強調大有為政府的運作，以維護公共利益"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-8",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 8,
+      "question": "政府得委託部分或全部的服務或生產活動給民間部門，下列何者非屬「委外」策略的一種？",
+      "options": {
+        "A": "重視管理的倫理",
+        "B": "重視文化的倫理",
+        "C": "遵循法律的倫理",
+        "D": "重視政治的倫理"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-9",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 9,
+      "question": "「強調公務體系應強化對外的回應力，且能即時回應外在的主要控制者」，是何種行政倫理的內涵？",
+      "options": {
+        "A": "重視管理的倫理",
+        "B": "重視文化的倫理",
+        "C": "遵循法律的倫理",
+        "D": "重視政治的倫理"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-10",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 10,
+      "question": "下列那一個概念最能描述「行政機關成為利益團體的代理人」的現象？",
+      "options": {
+        "A": "代表性官僚",
+        "B": "政策鐵三角",
+        "C": "俘虜性組織",
+        "D": "白京生定律"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-11",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 11,
+      "question": "政務官與事務官的合作關係中，下列何者並非兩者的衝突來源？",
+      "options": {
+        "A": "政務官注重政策目標的政治效益，事務官關注行政過程的程序正義與專業考量",
+        "B": "政務官關心人力資源的配置，事務官關心預算資源的配置",
+        "C": "政務官傾向短期政策效果，事務官則更專注於長期結構性改革的需求",
+        "D": "政務官期望事務官服從指令，事務官認為其專業判斷應獲充分尊重"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-12",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 12,
+      "question": "我國性騷擾防治法的中央主管機關為下列何者？",
+      "options": {
+        "A": "勞動部",
+        "B": "衛生福利部",
+        "C": "教育部",
+        "D": "行政院人事行政總處"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-13",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 13,
+      "question": "地方政府各區公所普遍設置民政課、經建課、社會課、兵役課等單位，這樣的分部化之基礎為何？",
+      "options": {
+        "A": "功能",
+        "B": "地域",
+        "C": "程序",
+        "D": "服務對象"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-14",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 14,
+      "question": "在政府組織再造的背景下，推動扁平化組織結構之主要目的為何？",
+      "options": {
+        "A": "強化行政層級的控制",
+        "B": "增加人員編制和預算",
+        "C": "增加決策速度和靈活性",
+        "D": "擴大組織整體職權"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-15",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 15,
+      "question": "組織變革時，既有文化容易使成員採取觀望態度，甚至產生「只要忍耐撐過，革新計畫最後有可能無疾而終」的心態，屬於下列何種組織病態理論？",
+      "options": {
+        "A": "邁爾斯定律",
+        "B": "不稀罕效應",
+        "C": "莫非定律",
+        "D": "白京生定律"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-16",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 16,
+      "question": "在組織中，比正式職位更有影響力的人，下列何者可能是其權力的來源？",
+      "options": {
+        "A": "專家權力",
+        "B": "合法權力",
+        "C": "獎賞權力",
+        "D": "懲處權力"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-17",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 17,
+      "question": "關於行政法人的組織和業務性質，下列敘述何者錯誤？",
+      "options": {
+        "A": "業務具有專業需求，或須強化成本效益及經營效能",
+        "B": "定位為私法人",
+        "C": "可減少政府會計與採購制度之限制",
+        "D": "所承擔業務僅涉及低度公權力之行使"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-18",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 18,
+      "question": "下列何者不屬於中央政府之二級機關？",
+      "options": {
+        "A": "衛生福利部",
+        "B": "中央銀行",
+        "C": "國立故宮博物院",
+        "D": "核能安全委員會"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-19",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 19,
+      "question": "來自不同地位、工作地點的人們，因為共同興趣、友誼及社會滿足感，或為了完成與組職無直接關係的功能而產生的非正式組織，屬達爾頓（M. Dalton）提出的那一種非正式組織？",
+      "options": {
+        "A": "垂直共棲集團（vertical cliques）",
+        "B": "水平防守集團（horizontal defensive clique）",
+        "C": "水平攻擊集團（horizontal aggressive clique）",
+        "D": "混合集團（mixed clique）"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-20",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 20,
+      "question": "相對於政治用人，下列何者不屬於功績用人的優點？",
+      "options": {
+        "A": "有助於促進公共行政的專業、中立化",
+        "B": "有助於維繫政府運作的持續、穩定",
+        "C": "有助於促進主管的人事管理裁量權",
+        "D": "有助於保障公務員的基本權利"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-21",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 21,
+      "question": "公務人員考試及格錄取受訓人員在實務訓練期間，不得請下列何種假別？",
+      "options": {
+        "A": "婚假",
+        "B": "娩假",
+        "C": "流產假",
+        "D": "侍親假"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-22",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 22,
+      "question": "有關我國公務人員的義務，下列敘述何者正確？",
+      "options": {
+        "A": "職務加給",
+        "B": "專業加給",
+        "C": "地域加給",
+        "D": "績效加給"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-23",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 23,
+      "question": "「甲多年前公務人員考試及格，目前於交通部中央氣象署玉山氣象站擔任主任一職，工作表現傑出」，依現 行法制，甲無法獲得下列何種「加給」？",
+      "options": {
+        "A": "職務加給",
+        "B": "專業加給",
+        "C": "地域加給",
+        "D": "績效加給"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-24",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 24,
+      "question": "機關非依公務人員法規，且以人事費以外經費自行進用之人員，稱為：",
+      "options": {
+        "A": "聘用人員",
+        "B": "約僱人員",
+        "C": "約用人員",
+        "D": "派用人員"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-25",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 25,
+      "question": "在政府的非賦稅收入中，下列何者不是實質收入？",
+      "options": {
+        "A": "企業收入",
+        "B": "公債收入",
+        "C": "行政收入",
+        "D": "財產收入"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-26",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 26,
+      "question": "行政院應編製「移轉性支付」報告並於政府網站公開，有關「移轉性支付」之敘述，下列何者正確？",
+      "options": {
+        "A": "係屬一種經濟性分類",
+        "B": "民間移轉資源給政府",
+        "C": "性質屬有償之支付",
+        "D": "政府可支配所得會增加"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-27",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 27,
+      "question": "行政院主計總處之首長為下列何者？",
+      "options": {
+        "A": "處長",
+        "B": "總處長",
+        "C": "主計總長",
+        "D": "主計長"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-28",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 28,
+      "question": "有關各國會計年度的起始日期的規定，下列何者正確？",
+      "options": {
+        "A": "均為1 月1 日",
+        "B": "非聯邦制國家為1 月1 日，聯邦制國家為10 月1 日",
+        "C": "總統制國家為1 月1 日，內閣制國家為4 月1 日",
+        "D": "各國各有各的規定，未必相同"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-29",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 29,
+      "question": "下列何者不是「計畫與績效預算制度」的優點或缺點？",
+      "options": {
+        "A": "優點：便利立法機關審議預算及掌握行政部門的施政計畫",
+        "B": "優點：可引入市場競爭精神，提升預算資源使用效率",
+        "C": "缺點：政府部門的績效有時難以量化，績效評估遭遇困難",
+        "D": "缺點：機關過度重視績效的呈現，可能會訂定較易有成果的計畫"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-30",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 30,
+      "question": "下列何種模式或活動不需要使用績效指標？",
+      "options": {
+        "A": "目標管理",
+        "B": "目標與關鍵成果（objectives and key results）",
+        "C": "SWOT 分析",
+        "D": "平衡計分卡"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-31",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 31,
+      "question": "組織管理者和部屬透過一定的過程來設定共同目標，以目標所要達成的結果來界定彼此的職責範圍，並做為各單位運作的指導方式，稱為：",
+      "options": {
+        "A": "行政指導（administrative guidance）",
+        "B": "組織發展（organizational development）",
+        "C": "精準行銷（target marketing）",
+        "D": "目標管理（management by objectives）"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-32",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 32,
+      "question": "轉換型領導強調主管與部屬之間相互影響關係的演變，下列敘述何者正確？",
+      "options": {
+        "A": "主要源自於魅力型領導和交易型領導這兩種理論觀點",
+        "B": "領導是一種管理技術的應用，與哲學觀念的實踐無關",
+        "C": "物質報酬與職務升遷是員工接受領導的主要交換條件",
+        "D": "依賴領導者的人格特質而非組織願景來爭取員工的支持"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-33",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 33,
+      "question": "有關組織溝通的方式，下列敘述何者錯誤？",
+      "options": {
+        "A": "透過傳聞與謠言等傳達訊息為一種非正式溝通",
+        "B": "由下而上傳達訊息給上級人員屬於上行溝通",
+        "C": "由組織內部向外界傳達訊息屬於斜行溝通",
+        "D": "只由一方傳達訊息給對方為單向溝通"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-34",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 34,
+      "question": "下列何者不是增強理論所主張可以強化或改變個人行為的途徑？",
+      "options": {
+        "A": "懲罰（punishment）",
+        "B": "削弱（extinction）",
+        "C": "迴避學習（avoidance learning）",
+        "D": "分享（sharing）"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-35",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 35,
+      "question": "危機情境監測系統係根據危機管理計畫指標進行監控，並回報給危機指揮中心，此一系統屬於危機管理那個階段的管理活動？",
+      "options": {
+        "A": "危機爆發前的預防階段",
+        "B": "危機爆發時的處理階段",
+        "C": "危機解除後的復原階段",
+        "D": "危機處理後的檢討階段"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-36",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 36,
+      "question": "目前我國政府資料開放平臺網站上，可自由下載的資料中，下列何者錯誤？",
+      "options": {
+        "A": "每日空氣品質預報資料",
+        "B": "各縣市人口統計資料",
+        "C": "中央政府各機關年度決算資料",
+        "D": "個人所得資料"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-37",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 37,
+      "question": "下列何者不是我國行政機關使用生成式AI（generative artificial intelligence）的正確作法？",
+      "options": {
+        "A": "生成式AI 產出之資訊，須由機關首長進行初步判斷",
+        "B": "製作機密文書應由業務承辦人親自撰寫，禁止使用生成式AI",
+        "C": "業務承辦人不得向生成式AI 詢問可能涉及機密業務的問題",
+        "D": "各機關不可完全信任生成式AI 產出之資訊"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-38",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 38,
+      "question": "下列何種財貨兼具有非敵對性（non-rival）和非排他性（non-excludable）？",
+      "options": {
+        "A": "純私人財",
+        "B": "俱樂部財",
+        "C": "共同財",
+        "D": "純公共財"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-39",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 39,
+      "question": "政府於新冠肺炎（COVID-19）疫情期間執行的「口罩實名制」的措施，係屬下列何種政策工具？",
+      "options": {
+        "A": "補助",
+        "B": "生產",
+        "C": "管制",
+        "D": "賦稅"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-40",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 40,
+      "question": "下列何者不是薩巴提爾（P. A. Sabatier）倡導聯盟架構（Advocacy Coalition Framework）運用的核心概念？",
+      "options": {
+        "A": "政策次級系統",
+        "B": "政策掮客",
+        "C": "問題流",
+        "D": "指導工具"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-41",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 41,
+      "question": "有關政策合法化階段及其相關理論，下列敘述何者正確？",
+      "options": {
+        "A": "鐵三角理論之鐵三角，係指國會、行政機關以及司法機關",
+        "B": "滾木立法係指國會議員以互惠的立法方式，相互支持對其個人有利的法案",
+        "C": "肉桶立法係指國會議員偏好以組成國會黨團方式增加勢力，以利提出的法案順利通過",
+        "D": "政策合法化乃在國會中進行，行政機關不會參與政策合法化"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-42",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 42,
+      "question": "推廣有益社會福祉的理念，透過民眾認知與行為的某些改變，以獲致社會改革的目標。此係指下列何者？",
+      "options": {
+        "A": "慈善制度化",
+        "B": "政治社會化",
+        "C": "企業行銷",
+        "D": "社會行銷"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-43",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 43,
+      "question": "下列有關中央統籌分配稅款之敘述，何者正確？",
+      "options": {
+        "A": "應依據各地方政府債務未償餘額之多寡分配之",
+        "B": "屬於中央政府對地方政府之計畫補助款",
+        "C": "稅款來源為地方稅",
+        "D": "受分配地方政府就分得部分，應列為當年度稅課收入"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-44",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 44,
+      "question": "有關廣義的跨域治理之敘述，下列何者錯誤？",
+      "options": {
+        "A": "跨域治理包括組織內部各局處的互動關係",
+        "B": "跨域治理包括不同地理區域的地方政府合作",
+        "C": "跨域治理的驅力包括公共政策的複雜多變特質",
+        "D": "跨域治理會深化本位主義的問題"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-45",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 45,
+      "question": "下列何者不包含在地方制度法的內容中？",
+      "options": {
+        "A": "地方自治機關",
+        "B": "地方自治選舉",
+        "C": "地方公民投票",
+        "D": "地方財政收支"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-46",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 46,
+      "question": "與「非營利部門」相類似的名詞甚多，下列何者特別強調其從事跨國性民間事務的國際性組織？",
+      "options": {
+        "A": "第二部門",
+        "B": "公益組織",
+        "C": "獨立部門",
+        "D": "非政府組織"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-47",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 47,
+      "question": "針對解釋非營利組織出現之緣由，不包含下列何種學理論點？",
+      "options": {
+        "A": "市場失靈",
+        "B": "政府失靈",
+        "C": "第三方政府理論",
+        "D": "利己主義"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-48",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 48,
+      "question": "下列何者為「興建—營運—移轉模式」（BOT）的運作特徵？",
+      "options": {
+        "A": "政府統籌負責興建任務",
+        "B": "民間業者為營運風險的主要承擔者",
+        "C": "推動過程不存在道德風險疑慮",
+        "D": "規劃階段付出的交易成本極低"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-49",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 49,
+      "question": "有關公私協力在運作上的限制，下列敘述何者錯誤？",
+      "options": {
+        "A": "公私部門對公共事務認知差距",
+        "B": "資訊不對稱，阻礙公私部門的溝通",
+        "C": "協力過程監督、審議過多，削弱競爭契機",
+        "D": "私部門層級複雜，難以配合政府機關"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_admin_studies_junior",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies_junior-115-civil-junior-50",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "civil-junior-general",
+      "subject": "行政學概要",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 50,
+      "question": "下列何者最無助於行政機關之間的協調合作？",
+      "options": {
+        "A": "成立跨機關的任務編組",
+        "B": "共同上級長官的介入",
+        "C": "明確化各行政機關的使命與任務",
+        "D": "建立業務對口人員之間的非正式關係"
+      },
+      "answer": "C",
       "level": "junior",
       "shared_bank": "common_admin_studies_junior",
       "parent_id": null,

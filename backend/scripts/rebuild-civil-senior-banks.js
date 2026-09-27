@@ -17,6 +17,8 @@ const fs = require('fs')
 const path = require('path')
 const { fetchPdf } = require('./lib/pdf-fetcher')
 const { parseColumnAware, parseAnswersColumnAware, parseAnswersText } = require('./lib/moex-column-parser')
+const { paperQuestions } = require('./fill-civil-gaps')
+const { sheetMap } = require('./lib/moex-answer-geo')
 
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
 const BANKS = path.join(__dirname, '..', 'shared-banks')
@@ -28,6 +30,7 @@ const SESSION = {
   '103': '103080', '104': '104080', '105': '105080', '106': '106090',
   '107': '107090', '108': '108090', '109': '109090', '110': '110090',
   '111': '111090', '112': '112090', '113': '113080', '114': '114080',
+  '115': '115080',
 }
 
 // subject → bank / tag
@@ -47,7 +50,7 @@ const CS = {
   '108.admin_studies': ['201', '0607'], '109.admin_studies': ['301', '0604'],
   '110.admin_studies': ['301', '0501'], '111.admin_studies': ['301', '0301'],
   '112.admin_studies': ['301', '0301'], '113.admin_studies': ['301', '0303'],
-  '114.admin_studies': ['201', '0303'],
+  '114.admin_studies': ['201', '0303'], '115.admin_studies': ['301', '0303'],
   // 行政法
   '103.admin_law': ['201', '0503'], '104.admin_law': ['201', '0503'],
   '105.admin_law': ['201', '0601'], '106.admin_law': ['201', '0701'],
@@ -55,12 +58,14 @@ const CS = {
   '109.admin_law': ['301', '0801'], '110.admin_law': ['301', '0603'],
   '111.admin_law': ['301', '0403'], '112.admin_law': ['301', '0403'],
   '113.admin_law': ['301', '0403'], '114.admin_law': ['201', '0403'],
+  '115.admin_law': ['301', '0403'],
   // 法學知識與英文（103/105 該卷為申論或查無，略）
   '104.law_knowledge': ['201', '0111'], '106.law_knowledge': ['201', '0210'],
   '107.law_knowledge': ['301', '0210'], '108.law_knowledge': ['201', '0213'],
   '109.law_knowledge': ['301', '0216'], '110.law_knowledge': ['301', '0105'],
   '111.law_knowledge': ['301', '0115'], '112.law_knowledge': ['301', '0118'],
   '113.law_knowledge': ['301', '0112'], '114.law_knowledge': ['201', '0401'],
+  '115.law_knowledge': ['301', '0401'],
 }
 
 function loadBank(id) {
@@ -109,12 +114,31 @@ async function main() {
 
       let parsed = {}
       try { parsed = await parseColumnAware(qbuf) } catch (e) { console.log(`  ✗ ${year} ${subj.name}: parse ${e.message}`); continue }
+      // parseColumnAware 認的是「題號單獨一行」；115 年高考的卷改成題號黏在題幹開頭，
+      // 它一題都抓不到。fill-civil-gaps 的 paperQuestions 有這個版型的解析法，
+      // 拿來補 parseColumnAware 沒抓到的題號（已抓到的不動，那條 parser 是驗過的）。
+      try {
+        const alt = await paperQuestions(code, c, s)
+        for (const [num, o] of alt) {
+          if (parsed[num]) continue
+          const opts = { A: o.options.A, B: o.options.B, C: o.options.C, D: o.options.D }
+          if (['A','B','C','D'].some(k => !String(opts[k] || '').trim())) continue
+          if (!String(o.stem || '').trim()) continue
+          parsed[num] = { question: String(o.stem).trim(), options: opts }
+        }
+      } catch {}
       let ans = {}
       if (abuf) {
         try { ans = await parseAnswersColumnAware(abuf) } catch {}
         if (Object.keys(ans).length < 10) {
           try { const pdfParse = require('pdf-parse'); ans = parseAnswersText((await pdfParse(abuf)).text) } catch {}
         }
+      }
+      if (Object.keys(ans).length < Object.keys(parsed).length) {
+        try {
+          const geo = await sheetMap(code, c, s, subjKey === 'law_knowledge' ? 50 : 25)
+          if (geo.map.size > Object.keys(ans).length) ans = Object.fromEntries(geo.map)
+        } catch {}
       }
       const bank = banks[subj.bank]
       const byId = new Map(bank.questions.map(q => [q.id, q]))

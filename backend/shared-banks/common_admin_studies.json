@@ -2,8 +2,8 @@
   "bankId": "common_admin_studies",
   "name": "行政學",
   "description": "公職考試三等／特考共通科目：行政學（含組織理論、人事、財務、政策等）",
-  "bankVersion": 5,
-  "last_synced_at": "2026-05-21T04:40:37.797Z",
+  "bankVersion": 7,
+  "last_synced_at": "2026-09-27T10:49:06.464Z",
   "levels": [
     "senior"
   ],
@@ -4810,7 +4810,7 @@
         "A": "職級",
         "B": "職門",
         "C": "職組",
-        "D": "職系（請接背面）"
+        "D": "職系（請接背面）20140、20240"
       },
       "answer": "D",
       "level": "senior",
@@ -5201,6 +5201,240 @@
         "B": "公共職責取向",
         "C": "市場取向",
         "D": "個人利益取向"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-105-civil-senior-1",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "105 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 1,
+      "question": "根據我國現行法律規定，中央一級機關應定期辦理組織評鑑，作為機關設立、調整或裁撤之依據。試問此種作法和下列那一個概念的內涵最為接近？",
+      "options": {
+        "A": "彼得原理（Peter principle）",
+        "B": "月暈效應（halo effect）",
+        "C": "日落立法（sunset legislation）",
+        "D": "陽光法（sunshine law）"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-105-civil-senior-2",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "105 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 2,
+      "question": "下列何者最接近跨域治理所蘊含的主要特質？",
+      "options": {
+        "A": "功能分化（differentiation）",
+        "B": "系統思維（system thinking）",
+        "C": "海量資料（big data）",
+        "D": "開放政府（open government）"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-105-civil-senior-3",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "105 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 3,
+      "question": "2008 年美國發生金融風暴，當時美國財政部長Henry Paulson 認為不應一味地紓困金融業者，否則政府無異在替業者承擔其不負責任行為的風險。試問Henry Paulson 此種觀點，是要防止金融業者出現下列那一種行為？",
+      "options": {
+        "A": "彼得定律（Peter principle）",
+        "B": "信用違約交換（credit default swap）",
+        "C": "團體迷思（group think）",
+        "D": "道德危險（moral hazard）"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-105-civil-senior-4",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "105 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 4,
+      "question": "關於團體動態學的研究，相較而言，下列敘述何者錯誤？",
+      "options": {
+        "A": "特別重視正式組織與制度性問題的探討",
+        "B": "注意到人員的行為、小團體、及組織的激勵性",
+        "C": "從「霍桑實驗」的發現獲得重要的啟發",
+        "D": "管理上尋求找回人性的尊嚴與人格的價值"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-105-civil-senior-5",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "105 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 5,
+      "question": "美國所謂的鐵三角（iron triangle）現象，是指那三者所形成的關係網絡？",
+      "options": {
+        "A": "行政部門、國會委員會、司法部門",
+        "B": "事務官、國會委員會、資本家",
+        "C": "政務官、事務官、利益團體",
+        "D": "行政部門、國會委員會、利益團體"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-105-civil-senior-6",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "105 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 6,
+      "question": "下列何者不是一個有效能的組織所具有的主要特徵？",
+      "options": {
+        "A": "建立願景",
+        "B": "良好的團隊精神",
+        "C": "不斷重組",
+        "D": "自我學習"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-105-civil-senior-7",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "105 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 7,
+      "question": "行政院院本部的組織架構中，下列何者為任務編組？",
+      "options": {
+        "A": "性別平等處",
+        "B": "綜合業務處",
+        "C": "消費者保護處",
+        "D": "東部聯合服務中心"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-105-civil-senior-8",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "105 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 8,
+      "question": "我國憲法第70 條規定，立法院對行政院所提預算案，不得為下列何者之提議？",
+      "options": {
+        "A": "減少支出",
+        "B": "增加支出",
+        "C": "減少收入",
+        "D": "增加收入"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-105-civil-senior-9",
+      "roc_year": "105",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "105 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 9,
+      "question": "依據現行預算法之規定，下列何種情況，不符合提出特別預算之條件？",
+      "options": {
+        "A": "重大災變",
+        "B": "依法律增加業務",
+        "C": "國防緊急設施或戰爭",
+        "D": "不定期或數年一次之重大政事（請接背面）20140|20240全一張20440105年公務人員高等考試三級考試試題20640（背面）22540|22640類 _____ 科： 一般行政、一般民政、客家事務行政、人事行政、法律廉政、財經廉政科 _____ 目： 行政學"
       },
       "answer": "B",
       "level": "senior",
@@ -5619,6 +5853,240 @@
         "D": "全面調降個人綜合所得稅稅率"
       },
       "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-106-civil-senior-1",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "106 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 1,
+      "question": "馬斯婁（A. H. Maslow）的需求層次理論中的「自我實現」需求，屬於何茲伯格（F. Herzberg）雙因理論中的那一項因素？",
+      "options": {
+        "A": "激勵因素",
+        "B": "保健因素",
+        "C": "目標因素",
+        "D": "手段因素"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-106-civil-senior-2",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "106 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 2,
+      "question": "「增強行政院院本部綜合規劃能力」乃是行政院組織改革所採取的策略之一，下列何者最能代表這項策略所欲實現的願景？",
+      "options": {
+        "A": "分權化",
+        "B": "去任務化",
+        "C": "委外化",
+        "D": "效能化"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-106-civil-senior-3",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "106 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 3,
+      "question": "雷格斯（F. W. Riggs）依國家發展的進程，提出三種比較行政模式，下列何者是高度開發國家的發展模式？",
+      "options": {
+        "A": "繞射模式（diffracted model）",
+        "B": "多元模式（polycentric model）",
+        "C": "鎔合模式（fused model）",
+        "D": "稜柱模式（prismatic model）"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-106-civil-senior-4",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "106 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 4,
+      "question": "新公共管理（new public management）可能化身不同的名稱，儘管名稱各異，基本上是指涉相同的概念，但不包括下列何者？",
+      "options": {
+        "A": "後官僚典範（post-bureaucratic paradigm）",
+        "B": "市場導向公共行政（market-based public administration）",
+        "C": "企業型政府（entrepreneurial government）",
+        "D": "新公共行政（new public administration）"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-106-civil-senior-5",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "106 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 5,
+      "question": "教育部劃分為綜合規劃司、高等教育司、終身教育司等部門，此一分部化之基礎為何？",
+      "options": {
+        "A": "功能",
+        "B": "地域",
+        "C": "程序",
+        "D": "產值"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-106-civil-senior-6",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "106 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 6,
+      "question": "下列何者不是行政機關存在「非正式組織」的主要價值？",
+      "options": {
+        "A": "提供工作團體滿足感與穩定性",
+        "B": "提供既得利益者接受變革的動力",
+        "C": "對於管理者產生制衡的作用",
+        "D": "便於組織成員迅速傳遞消息"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-106-civil-senior-7",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "106 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 7,
+      "question": "根據雪恩（E. H. Schein）對文化的看法，下列敘述何者錯誤？",
+      "options": {
+        "A": "文化具有器物、價值、基本假定三種層次性",
+        "B": "器物層次是文化中最容易看見的層次",
+        "C": "價值層次的信念若再透過社會確認的過程，即能形成團體共識",
+        "D": "基本假定層次日久會成為外顯的、前意識的前提"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-106-civil-senior-8",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "106 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 8,
+      "question": "各機關歲出分配預算，業務科目間辦理流用，以該科目原預算數額多少為限？",
+      "options": {
+        "A": "百分之五",
+        "B": "百分之十",
+        "C": "百分之十五",
+        "D": "百分之二十"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-106-civil-senior-9",
+      "roc_year": "106",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "106 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 9,
+      "question": "美國某些州允許各機關保留部分因創新而撙節的經費以彈性支用，此一制度稱為？",
+      "options": {
+        "A": "支出移轉（redirection）",
+        "B": "節流分享（gain-sharing）",
+        "C": "標竿學習（benchmark learning）",
+        "D": "總額控制（spending celling）（請接背面）20140－20340 全一張106年公務人員高等考試三級考試試題20540、22140 22240（背面）類 _____ 科：一般行政、一般民政、客家事務行政、人事行政、法律廉政、財經廉政科 _____ 目：行政學"
+      },
+      "answer": "B",
       "level": "senior",
       "shared_bank": "common_admin_studies",
       "parent_id": null,
@@ -10270,7 +10738,7 @@
         "A": "參與預算的提案審議過程耗費時間與精力",
         "B": "公民提案獲通過後，當年度預算可納入者，立即執行",
         "C": "當年度預算無法納入，但急迫者則動支預備金",
-        "D": "提案通過後，民眾主導預算的編列、審議與執行"
+        "D": "提案通過後，民眾主導預算的編列、審議與執行31740、32540"
       },
       "answer": "D",
       "level": "senior",
@@ -11157,6 +11625,656 @@
         "D": "1999 市民專線"
       },
       "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-1",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 1,
+      "question": "有關公共行政的本質所涉及之內涵，下列何者最不相關？",
+      "options": {
+        "A": "政治與行政關係",
+        "B": "管轄與隸屬關係",
+        "C": "領導與執行體系",
+        "D": "裁判與上訴程序"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-2",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 2,
+      "question": "某一非營利機構受市府委託設立社區公共托育中心，公告相關招生資訊，下列那一作法最符合公共利益？",
+      "options": {
+        "A": "僅限低收或中低收家庭始得申請",
+        "B": "僅限設籍該市之家庭始得申請",
+        "C": "僅限二胎以上家庭申請",
+        "D": "機構可適度保留名額供彈性運用"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-3",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 3,
+      "question": "泰勒（F. Taylor）提出科學化管理，其「科學」的意涵主要是強調：",
+      "options": {
+        "A": "薪資報酬的齊一性",
+        "B": "政治與行政的分立",
+        "C": "由專業經理人管理",
+        "D": "生產線的工作方式"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-4",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 4,
+      "question": "下列有關組織型態（organizational configuration）之敘述，何者錯誤？",
+      "options": {
+        "A": "新創公司採取創新型結構型態，以適應動態環境",
+        "B": "大學多採用金字塔型層級節制的機械式官僚型態",
+        "C": "醫院是專業組織多採取專業型官僚型態",
+        "D": "專案團隊是臨時任務編組，多採矩陣式組織型態"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-5",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 5,
+      "question": "某部會因應新興政策設立新組織。該項政策業務性質需公權力程度低、高度專業、需要用人彈性、服務對象明確分布全臺灣、需求異質性高且通常很緊急。下列何種組織型態最符合所需？",
+      "options": {
+        "A": "單位層級多，主管控制幅度小的行政法人",
+        "B": "單位層級少、主管控制幅度小的行政機關",
+        "C": "單位層級少、主管控制幅度小的行政法人",
+        "D": "單位層級多、主管控制幅度小的行政機關30540、3184032740"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-6",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 6,
+      "question": "在能夠產生領導作用的權力來源中，下列那一項在組織中最具強制力？",
+      "options": {
+        "A": "參照權力",
+        "B": "關聯權力",
+        "C": "合法權力",
+        "D": "資訊權力"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-7",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 7,
+      "question": "下列何者最符合Y 理論對人性假設與激勵措施之敘述？",
+      "options": {
+        "A": "人性厭惡工作，應採行嚴密監督與制裁",
+        "B": "人們在適當條件下願意尋求責任，應給予授權",
+        "C": "人們厭惡工作，報酬與成就僅是達成組織目標的函數",
+        "D": "僅提供高於生存水準的物質報酬，即可有效激發員工士氣"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-8",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 8,
+      "question": "有關行政院組織設計及運作之敘述，下列何者正確？",
+      "options": {
+        "A": "政務委員不得兼任部長或二級機關之主任委員",
+        "B": "「部」為機關，「委員會」為機構",
+        "C": "行政院院長為我國最高行政首長",
+        "D": "行政院院長對所屬機關有覆議權"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-9",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 9,
+      "question": "主管指示同仁不要與其他機關傳遞尚未經機關定案的政策內容，但員工甲發現另一相關機關承辦人乙是他的國中同學，甲認為如果先向乙徵詢意見之後再走正式溝通管道，可讓業務推動更順利。甲的這個感覺，主要來自於非正式溝通的那項特質？",
+      "options": {
+        "A": "解決跨機關業務衝突",
+        "B": "減少謠言傳播",
+        "C": "支持主管領導",
+        "D": "減少協調成本"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-10",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 10,
+      "question": "有關公務人力甄補之敘述，下列何者正確？",
+      "options": {
+        "A": "外補制較易帶入創新思維",
+        "B": "內升制的人才選擇範圍較大",
+        "C": "外補制對於職業永業制的追求較為有利",
+        "D": "內升制較易於達成同工同酬的理想"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-11",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 11,
+      "question": "某直轄市政府的一位副局長每兩週以休假方式返回母校，無償擔任大學部課程的「業師」，此事在議會中遭到議員們質詢：甲議員：你這項兼職應報經服務機關同意，你完成了嗎？乙議員：你這項兼職應報經服務機關備查，你完成了嗎？丙議員：你這項兼職免經上級機關備查，你知道嗎？丁議員：你這項兼職免經服務機關備查，你知道嗎？上述那位議員的說法最為正確？",
+      "options": {
+        "A": "甲議員",
+        "B": "乙議員",
+        "C": "丙議員",
+        "D": "丁議員"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-12",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 12,
+      "question": "所得稅是政府最重要的財政收入來源，惟各國政府基於不同的課徵理念而採行不同的所得稅制，關於所得稅制內涵之敘述，下列何者正確？",
+      "options": {
+        "A": "累進稅制（progressive system）對於所得層級較高者課以較低比例的稅金，對於所得層級較低者課以較高比例的稅金",
+        "B": "遞減稅制（regressive system）對於所得較高者課以較高比例的稅金，對於所得較低者課以較低比例的稅金",
+        "C": "平等稅制（equal system）根據法定稅率課徵所得稅，不因納稅人所得金額差異而有不同稅率",
+        "D": "混合稅制（mix system）根據性別、年齡、職業及家庭狀況區分課徵等級，同一等級採固定稅率課徵30540、3184032740"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-13",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 13,
+      "question": "有關柯漢（M. Cohen）等人所提出的垃圾桶決策模式的內容，下列何者錯誤？",
+      "options": {
+        "A": "整個決策系統呈現組織化無序狀態",
+        "B": "問題流、政策流與政治流交會後開啟政策窗",
+        "C": "決策是無數次會議與不同人參與的結果",
+        "D": "組織是一種理念鬆散的聚合體"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-14",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 14,
+      "question": "下列何者不是平衡計分卡所關注的構面？",
+      "options": {
+        "A": "策略溝通",
+        "B": "學習與成長",
+        "C": "內部流程",
+        "D": "財務"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-15",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 15,
+      "question": "POSDCORB 這個縮寫，指的是達成行政績效的幾項同等重要的關鍵性行政管理工作。早在1937年時就被提出，迄今仍是重要實務指引，一向也是公共行政學的學習題材。下列何項敘述，最適合說明該項概念的行政管理意涵？",
+      "options": {
+        "A": "最重要的是積極運用資訊科技改善工作流程",
+        "B": "處理好溝通協調，以及編製搭配計畫所需預算，都是重要工作",
+        "C": "全力完善業務規劃，並採取權變管理，必可達成工作績效",
+        "D": "做好人力資源管理的重要性，比不上如何設置機關內部單位"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-16",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 16,
+      "question": "某地方於重大災害發生後，湧入大量志工協助物資分送與環境清理。然而，現場出現人力分配不均、安全訓練不足、資訊未整合及後勤支援匱乏等問題。若地方政府希望建立完善的災害志工管理體系，以提升救災行動的整合效率與安全性，下列那一項作法最適當？",
+      "options": {
+        "A": "現場由指揮官即時分派任務，以確保人力調度靈活並提升應變效率",
+        "B": "強化志工動員與激勵措施，鼓勵民眾積極投入災區服務，凝聚社會參與和支援能量",
+        "C": "建置中央與地方共享平台，整合志工登錄、培訓、派遣及安全追蹤機制，提升協力效率",
+        "D": "志工集中支援主要災區，以發揮人力最大效能與救援整合效果"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-17",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 17,
+      "question": "有關公共關係在政府部門中的運作，下列敘述何者正確？",
+      "options": {
+        "A": "確保政府政策資訊的單向傳達，以維持施政穩定性",
+        "B": "促進政府與公眾之間的雙向溝通，協助政府適應環境變化",
+        "C": "著重於危機事件發生後的形象修復，以降低負面影響",
+        "D": "作為短期大型活動的宣傳工具，以提升民眾參與度"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-18",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 18,
+      "question": "有關政策評估之敘述，下列何者錯誤？",
+      "options": {
+        "A": "發展政策或方案的相關知識屬於政策評估積極目的",
+        "B": "規避責任屬於政策評估之消極目的",
+        "C": "政策評估的類型受限於政策問題的類型",
+        "D": "個案研究不屬於政策評估類型30540、3184032740"
+      },
+      "answer": "D",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-19",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 19,
+      "question": "有關利用網路輿情分析民意，下列敘述何者錯誤？",
+      "options": {
+        "A": "依賴網路上的情緒用語來分析民眾意見，可能與其真實的政策立場有所落差",
+        "B": "因具有普及性，故較傳統民調更能掌握民意",
+        "C": "容易被捏造，不易察覺「傾聽民意」與「操控民意」間的倫理界線",
+        "D": "進行分析時應注意潛藏的同溫層現象"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-20",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 20,
+      "question": "考試院可以向立法院提出那個領域的法律案？",
+      "options": {
+        "A": "公務人員任用法",
+        "B": "公職人員利益衝突迴避法",
+        "C": "約僱人員管理條例",
+        "D": "公務人員獎金條例"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-21",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 21,
+      "question": "下列何者是非營利組織和企業的共通之處？",
+      "options": {
+        "A": "得從事營利行為",
+        "B": "進行盈餘分配",
+        "C": "申請公益勸募",
+        "D": "享有免稅地位"
+      },
+      "answer": "A",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-22",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 22,
+      "question": "某中央部會將其辦公大樓地下一樓委由民間業者進駐開設員工餐廳，屬於下列何種政府業務委託民間辦理的模式？",
+      "options": {
+        "A": "委外興建公共設施",
+        "B": "機關內部業務委外",
+        "C": "行政檢查業務委外辦理",
+        "D": "行政助手"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-23",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 23,
+      "question": "乙鎮為了討論再生能源發展議題，舉辦一個公民大會。鎮長希望該會議能落實「知情參與」的理想，下列那一種設計較能夠達成？",
+      "options": {
+        "A": "透過隨機抽選的方式邀請來自不同里的參與者",
+        "B": "會前提供參與者和議題相關、正反並呈且淺顯易懂的影片",
+        "C": "提供線上和實體的參與管道，讓遠地的設籍者也能表達意見",
+        "D": "鎮長親自回應會議結論"
+      },
+      "answer": "B",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-24",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 24,
+      "question": "同仁甲過去認為工作的目的僅是養家活口，自從新主管上任後，開始可將組織目標當作個人目標。新主管賞罰分明，但真正讓人信服的，是他對同仁的真誠關心與肯定，沒有差別待遇；同時，新主管會讓部屬瞭解手上工作的意義，讓部屬看到服務對象的回饋和辛勞後的收穫，因此一起建構出來的願景不是口號，而是能帶來成長與扎實成就感的歷練。請問新主管的管理風格，最接近下列那一種領導理論？",
+      "options": {
+        "A": "交易型領導",
+        "B": "領導者-成員交換理論",
+        "C": "轉換型領導",
+        "D": "魅力型領導"
+      },
+      "answer": "C",
+      "level": "senior",
+      "shared_bank": "common_admin_studies",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_admin_studies-115-civil-senior-25",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-senior",
+      "source_exam_name": "115 年高考三等一般行政",
+      "subject": "行政學",
+      "subject_tags": [
+        "admin_studies"
+      ],
+      "number": 25,
+      "question": "有關公務員揭弊機制設計時考量之敘述，下列何者錯誤？",
+      "options": {
+        "A": "貪腐容忍度低卻不敢揭弊，原因之一係害怕遭受報復",
+        "B": "揭弊怕被貼標籤，故需組織機關與社會文化支持",
+        "C": "揭弊管道需顧及被揭弊者權益的保護，最好需明文立法保障",
+        "D": "我國公務人員行政中立法明訂揭弊者權益保護機制"
+      },
+      "answer": "D",
       "level": "senior",
       "shared_bank": "common_admin_studies",
       "parent_id": null,

@@ -26,6 +26,7 @@ const SESSIONS = [
   { year: '112', code: '112090', s: '0310' },
   { year: '113', code: '113080', s: '0307' },
   { year: '114', code: '114080', s: '0307' },
+  { year: '115', code: '115080', s: '0307' },
 ]
 
 function runScraper(scrapeArgs) {

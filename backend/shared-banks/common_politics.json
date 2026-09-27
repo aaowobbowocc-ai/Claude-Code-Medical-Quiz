@@ -2,8 +2,8 @@
   "bankId": "common_politics",
   "name": "政治學概要",
   "description": "公務人員普通考試（四等）一般行政「政治學概要」測驗題部分，102–114 年。",
-  "bankVersion": 20,
-  "last_synced_at": "2026-05-20T02:11:41.740Z",
+  "bankVersion": 31,
+  "last_synced_at": "2026-09-27T10:53:18.589Z",
   "levels": [
     "junior"
   ],
@@ -3817,10 +3817,10 @@
       "number": 22,
       "question": "公民對議題的看法，可以用各種不同的曲線圖來表示。下列何種曲線圖，顯示公民對此議題較不具爭議，社會具有高度的共識？",
       "options": {
-        "A": "W型曲線",
-        "B": "M型曲線",
-        "C": "U型曲線",
-        "D": "型曲線J"
+        "A": "W 型曲線",
+        "B": "M 型曲線",
+        "C": "U 型曲線",
+        "D": "J 型曲線"
       },
       "answer": "D",
       "level": "junior",
@@ -6233,12 +6233,12 @@
         "politics"
       ],
       "number": 15,
-      "question": "下列何種情況下，權力不具有正當性？",
+      "question": "下列何種情況下，權力不具有正當性？權力必須依照已確立的規則行使",
       "options": {
-        "A": "權力必須依照已確立的規則行使",
-        "B": "被統治者需表達同意",
-        "C": "統治者有權要求公民服從",
-        "D": "規則需要統治者與被統治者具備共享信念40220"
+        "A": "被統治者需表達同意",
+        "B": "統治者有權要求公民服從",
+        "C": "規則需要統治者與被統治者具備共享信念",
+        "D": "40220"
       },
       "answer": "C",
       "level": "junior",
@@ -8451,6 +8451,656 @@
         "D": "政治人才甄補"
       },
       "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-1",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 1,
+      "question": "有學者認為「人類是衝動的，容易受到迷思與刻板印象所控制，政治只是圖騰的操作而已」。該敘述是採何種觀點來解釋政治權力？",
+      "options": {
+        "A": "物理的",
+        "B": "理性的",
+        "C": "倫理的",
+        "D": "非理性的"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-2",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 2,
+      "question": "下列何者不是杭廷頓（Huntington）關於現代文明區的分類？",
+      "options": {
+        "A": "日本文明區",
+        "B": "大洋洲文明區",
+        "C": "伊斯蘭文明區",
+        "D": "拉丁美洲文明區"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-3",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 3,
+      "question": "對於量化研究方法的敘述，下列何者錯誤？",
+      "options": {
+        "A": "可以深入理解個案的意義",
+        "B": "可以分析大量個案",
+        "C": "可以找出一般化的趨勢",
+        "D": "可以釐清變項之間的關係"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-4",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 4,
+      "question": "我國行憲迄今多年，下列何者不是我國總統一職的特徵？",
+      "options": {
+        "A": "我國在民國83 年修憲後的總統任期4 年、連選得連任一次",
+        "B": "我國遷臺後的總統選舉曾仿效美國選舉人團的方式選出總統",
+        "C": "當總統無法行使職權時，由副總統代行職權",
+        "D": "我國總統的解職方式可包括罷免、彈劾與自行辭職"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-5",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 5,
+      "question": "下列那個民族至今未曾獨立成國家？",
+      "options": {
+        "A": "盎格魯薩克遜族",
+        "B": "庫德族",
+        "C": "日耳曼族",
+        "D": "突厥族"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-6",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 6,
+      "question": "對君主國與共和國的敘述，下列何者正確？",
+      "options": {
+        "A": "目前世界上多數國家是共和制",
+        "B": "共和國是指國家元首為世襲制",
+        "C": "共和國國家元首必定是君主",
+        "D": "君主國中的元首均具有實權"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-7",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 7,
+      "question": "關於色情出版品所涉及的基本自由權利，不包括下列何者？",
+      "options": {
+        "A": "出版自由",
+        "B": "身體自由",
+        "C": "居住自由",
+        "D": "工作自由"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-8",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 8,
+      "question": "對於現代自由主義（modern liberalism）的敘述，下列何者錯誤？",
+      "options": {
+        "A": "源自於工業資本主義所造成的不平等",
+        "B": "主張小而美的政府",
+        "C": "認為政府應該提供適度的社會福利",
+        "D": "經濟上可接受凱因斯主義"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-9",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 9,
+      "question": "民意代表既然受到選民的信任，就應該在其職位上自行運用其判斷能力，追求選民的真實利益。該敘述屬於那一種代議政治的模式？",
+      "options": {
+        "A": "全權委託說（trustee model）",
+        "B": "委任說（delegate model）",
+        "C": "託付說（mandate model）",
+        "D": "反映說（resemblance model）"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-10",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 10,
+      "question": "阿蒙（Almond）與佛巴（Verba）區分的政治文化之類型，下列何者不在其中？",
+      "options": {
+        "A": "地方型",
+        "B": "臣屬型",
+        "C": "傳統型",
+        "D": "參與型"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-11",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 11,
+      "question": "下列何者不是道爾（Dahl）提出的民主政體的條件？",
+      "options": {
+        "A": "普遍選舉權",
+        "B": "選舉過程自由且公平",
+        "C": "言論自由",
+        "D": "政府問責制"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-12",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 12,
+      "question": "衡量政治發展時，政治結構的專業化所指為何？",
+      "options": {
+        "A": "大多數權力集中在中央政府，人民同意政府有權分配公共價值",
+        "B": "個人主動承擔政治角色，並參與政治過程",
+        "C": "多數重要的政治功能交由有組織的政治制度執行",
+        "D": "政治系統能夠回應要求和取得支持"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-13",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 13,
+      "question": "下列何者是我國憲法規定的參政權？",
+      "options": {
+        "A": "請願",
+        "B": "結社",
+        "C": "彈劾",
+        "D": "創制"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-14",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 14,
+      "question": "目前我國現行憲法，有關覆議權的規定，下列敘述何者正確？",
+      "options": {
+        "A": "立法院須經出席立委2/3 才能維持原案",
+        "B": "立法院須經出席立委1/2 才能維持原案",
+        "C": "立法院須經全體立委1/2 才能維持原案",
+        "D": "立法院須經全體立委2/3 才能維持原案"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-15",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 15,
+      "question": "有關我國政府體制，下列敘述何者錯誤？",
+      "options": {
+        "A": "行政院院長由總統提名任命",
+        "B": "行政院院長對立法院負責",
+        "C": "立法院可對行政院院長提不信任案",
+        "D": "行政院院長可於倒閣後解散立法院"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-16",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 16,
+      "question": "在美國總統制中，下列何者不是國會對總統制衡的權力？",
+      "options": {
+        "A": "赦免權",
+        "B": "宣戰權",
+        "C": "人事同意權",
+        "D": "覆議權"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-17",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 17,
+      "question": "關於我國憲法目前對大法官的規定，下列何者錯誤？",
+      "options": {
+        "A": "大法官人選是由總統提名，經立法院同意任命",
+        "B": "任期8 年，得連任一次",
+        "C": "擔任司法院院長、副院長之大法官，不受任期保障",
+        "D": "解釋憲法和政黨違憲解散之審理等，皆屬大法官職權"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-18",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 18,
+      "question": "依據法律來源的劃分，若按遵循先例原則（stare decisis）的法律，意指下列何者？",
+      "options": {
+        "A": "普通法",
+        "B": "制定法",
+        "C": "自然法",
+        "D": "上位法"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-19",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 19,
+      "question": "下列何者不是用來形容文官體制特性？",
+      "options": {
+        "A": "永業化",
+        "B": "委任制",
+        "C": "科層制",
+        "D": "功績制"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-20",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 20,
+      "question": "甲國國會議員選舉實施比例代表制，選舉門檻為3%，該次選舉共有5 個政黨參與比例代表制選舉，A 黨得票率40%，B 黨得票率30%，C 黨得票率20%，D 黨得票率8%，E 黨得票率2%，甲國共有100 席比例代表制席次，A 黨可以得到多少席次（四捨五入）？",
+      "options": {
+        "A": "40",
+        "B": "41",
+        "C": "39",
+        "D": "42"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-21",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 21,
+      "question": "下列何者不是密西根學派所指影響選民投票行為的三大因素？",
+      "options": {
+        "A": "政黨認同",
+        "B": "政策議題",
+        "C": "社會階級",
+        "D": "候選人取向"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-22",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 22,
+      "question": "下列何者屬於非慣常的政治參與行為？",
+      "options": {
+        "A": "登記參選",
+        "B": "選舉時為特定政黨助選",
+        "C": "向民意代表表達政策意見",
+        "D": "參與靜坐抗議"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-23",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 23,
+      "question": "關於網路政治特性，下列何者正確？",
+      "options": {
+        "A": "網路政治所誘發的同溫層效應，對於推動審議式民主有益",
+        "B": "網路中的匿名性能讓使用者在網路發言時深思熟慮，避免民粹式發言",
+        "C": "網路政治崛起後，傳統媒體（電視、報紙、雜誌）的權威下降",
+        "D": "臺灣網路政治崛起後，網路介面從來沒有成功動員過任何一場政治或社會運動的參與"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-24",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 24,
+      "question": "下列何種民眾比較不會積極參與政治？",
+      "options": {
+        "A": "該項事務攸關個人利益",
+        "B": "公民責任感高者",
+        "C": "政治效能感低者",
+        "D": "非常認同某些政黨或政治人物者"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_politics",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_politics-115-civil-junior-general-25",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-general",
+      "source_exam_name": "115 年普通考試一般行政",
+      "subject": "政治學概要",
+      "subject_tags": [
+        "politics"
+      ],
+      "number": 25,
+      "question": "下列何項理論，主要以韓國和臺灣民主化之前為例，解釋國家的經濟成就？",
+      "options": {
+        "A": "發展型國家理論",
+        "B": "現代化理論",
+        "C": "依賴理論",
+        "D": "世界體系理論"
+      },
+      "answer": "A",
       "level": "junior",
       "shared_bank": "common_politics",
       "parent_id": null,

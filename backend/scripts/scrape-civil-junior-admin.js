@@ -36,6 +36,7 @@ const SESSIONS = [
   { year: '112', code: '112090', session: '第一次' },
   { year: '113', code: '113080', session: '第一次' },
   { year: '114', code: '114080', session: '第一次' },
+  { year: '115', code: '115080', session: '第一次' },
 ]
 
 // s-codes verified by probing MoEX 2026-04-23
@@ -46,12 +47,12 @@ const SUBJECTS = [
   { c: '401', s: '0605', bank: 'admin_studies', name: '行政學概要', tag: 'admin_studies', onlyYears: ['109'] },
   { c: '401', s: '0502', bank: 'admin_studies', name: '行政學概要', tag: 'admin_studies', onlyYears: ['110'] },
   { c: '401', s: '0302', bank: 'admin_studies', name: '行政學概要', tag: 'admin_studies', onlyYears: ['111', '112'] },
-  { c: '401', s: '0304', bank: 'admin_studies', name: '行政學概要', tag: 'admin_studies', onlyYears: ['113', '114'] },
+  { c: '401', s: '0304', bank: 'admin_studies', name: '行政學概要', tag: 'admin_studies', onlyYears: ['113', '114', '115'] },
   // 行政法概要 (50Q MCQ)
   { c: '401', s: '0705', bank: 'admin_law', name: '行政法概要', tag: 'admin_law', onlyYears: ['106'] },
   { c: '401', s: '0804', bank: 'admin_law', name: '行政法概要', tag: 'admin_law', onlyYears: ['107', '108', '109'] },
   { c: '401', s: '0606', bank: 'admin_law', name: '行政法概要', tag: 'admin_law', onlyYears: ['110'] },
-  { c: '401', s: '0406', bank: 'admin_law', name: '行政法概要', tag: 'admin_law', onlyYears: ['111', '112', '113', '114'] },
+  { c: '401', s: '0406', bank: 'admin_law', name: '行政法概要', tag: 'admin_law', onlyYears: ['111', '112', '113', '114', '115'] },
 ]
 
 const BANK_META = {

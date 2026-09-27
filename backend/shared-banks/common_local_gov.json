@@ -2,8 +2,8 @@
   "bankId": "common_local_gov",
   "name": "地方自治概要",
   "description": "公務人員普通考試（四等）一般民政「地方自治概要」測驗題部分，102–114 年。",
-  "bankVersion": 16,
-  "last_synced_at": "2026-05-20T02:09:20.390Z",
+  "bankVersion": 26,
+  "last_synced_at": "2026-09-27T10:39:19.248Z",
   "levels": [
     "junior"
   ],
@@ -8451,6 +8451,656 @@
         "D": "嘉義市與嘉義縣間，事權發生爭議時，由中央各該主管機關解決之"
       },
       "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-1",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 1,
+      "question": "有關我國地方政府體制之敘述，下列何者錯誤？",
+      "options": {
+        "A": "屬國家統治團體的一種類型",
+        "B": "管理之領域僅及於國家領土之一部",
+        "C": "地方政府在其轄區內通常有自治權限",
+        "D": "地方政府於其自治權限範圍內得排除中央政府一切形式之干涉"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-2",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 2,
+      "question": "關於行政院對直轄市自治條例之監督，下列敘述何者正確？",
+      "options": {
+        "A": "定有罰則之直轄市自治條例，應報行政院核定，行政院若未於1 個月內為核定與否之決定，視為不予核定",
+        "B": "定有罰則之直轄市自治條例，應報行政院核定，行政院若未於1 個月內為核定與否之決定，視為核定",
+        "C": "定有罰則之直轄市自治條例，應報行政院備查，行政院若未於1 個月內為備查與否之決定，視為不予備查",
+        "D": "定有罰則之直轄市自治條例，應報行政院備查，行政院若未於1 個月內為備查與否之決定，視為同意備查"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-3",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 3,
+      "question": "依地方制度法規定，關於鄉（鎮、市）之敘述，下列何者正確？",
+      "options": {
+        "A": "竹北市的上級地方政府為新竹市",
+        "B": "縣轄市以內之編組為鎮，鎮以內之編組為里",
+        "C": "太保市依法辦理自治事項，並執行嘉義縣政府委辦事項",
+        "D": "人口聚居達5 萬人且工商發達、自治財源充裕、交通便利及公共設施完全之地區，得設縣轄市"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-4",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 4,
+      "question": "地方自治團體是否設置特定之事業機構，原則上得由其立法機關及行政機關自行決定及執行。此為地方自治何種高權之展現？",
+      "options": {
+        "A": "立法高權",
+        "B": "組織高權",
+        "C": "人事高權",
+        "D": "財政高權"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-5",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 5,
+      "question": "彰化縣議會組織自治條例倘有部分條文修正，經送內政部核定後，應由何機關公布？",
+      "options": {
+        "A": "彰化縣議會",
+        "B": "彰化縣政府",
+        "C": "彰化縣政府會銜彰化縣議會",
+        "D": "彰化縣議會會銜彰化縣政府"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-6",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 6,
+      "question": "地方立法機關針對議會大會及委員會之議事或民眾旁聽等事項，訂有議會議事規則或議會旁聽規則，下列敘述何者錯誤？",
+      "options": {
+        "A": "該議會議事規則或議會旁聽規則之性質為自律規則，僅具有內部規範之效力",
+        "B": "鄉（鎮、市）議會訂定其議會議事規則後，須函請該鄉（鎮、市）公所發布，並報縣政府備查",
+        "C": "該議會議事規則及議會旁聽規則，應冠以地方自治團體名稱",
+        "D": "縣議員違反縣議會議事規則規定，可依行政訴訟法得提起行政訴訟，尋求權利救濟"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-7",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 7,
+      "question": "依地方制度法之規定，關於地方自治團體以訂定行政契約方式處理跨區域自治事務，下列敘述何者錯誤？",
+      "options": {
+        "A": "該行政契約應報共同上級業務主管機關備查",
+        "B": "該行政契約之訂定，涉及相關地方立法機關之職權者，應經其同意",
+        "C": "該行政契約之訂定，涉及管轄權限之移轉者，應經共同上級業務主管機關同意",
+        "D": "共同上級業務主管機關對該等跨區域合作事項，應優先給予補助或其他必要之協助"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-8",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 8,
+      "question": "依地方制度法之規定，關於中央對地方自治團體採取代行處理之監督措施，下列敘述何者正確？",
+      "options": {
+        "A": "地方自治團體違反法定作為或不作為義務，中央均得予以代行處理",
+        "B": "中央在代行處理事務範圍內，對人民所為之行政處分，應以代行處理機關之名義為之",
+        "C": "基於尊重地方自治之精神，在情況急迫時，中央亦不得未經告戒逕予代行處理",
+        "D": "代行處理所支出之費用，由代行處理機關與被代行處理機關共同分擔"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-9",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 9,
+      "question": "下列何者非屬地方自治團體居民權利事項？",
+      "options": {
+        "A": "請求公開地方政府資訊之權",
+        "B": "請求無償使用地方公共設施之權",
+        "C": "參與地方性公民投票之權",
+        "D": "依法享受地方照顧之權"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-10",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 10,
+      "question": "甲乙二人為A 鄉鄉長選舉之候選人，選舉結果，甲獲得最高票，乙獲得之票數次之。在選舉委員會公告當選名單前，甲不幸因病死亡。關於鄉長選舉案，下列敘述何者正確？",
+      "options": {
+        "A": "選舉委員會應公告甲為A 鄉鄉長選舉當選人，並自公告之日起3 個月內完成A 鄉鄉長重行選舉投票",
+        "B": "選舉委員會應公告甲為A 鄉鄉長選舉當選人，並由乙遞補成為A 鄉鄉長",
+        "C": "選舉委員會應公告乙為A 鄉鄉長選舉當選人",
+        "D": "選舉委員會應報請內政部指派專人擔任A 鄉鄉長"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-11",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 11,
+      "question": "下列職務，何者必須具有公務人員任用資格者始得擔任？",
+      "options": {
+        "A": "彰化縣政府秘書長",
+        "B": "屏東縣政府工務處處長",
+        "C": "花蓮縣政府財政處處長",
+        "D": "高雄市政府原住民事務委員會主任委員"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-12",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 12,
+      "question": "有關直轄市議會與縣（市）議會之議長、副議長，及鄉（鎮、市）民代表會主席、副主席之選舉，下列敘述何者錯誤？",
+      "options": {
+        "A": "應於宣誓就職典禮後即時舉行，並在當日選出",
+        "B": "由議員、代表互推一人主持，推選會議由最資深者主持，年資相同者由年長者主持",
+        "C": "第一輪投票需有過半數出席並獲得票數超過出席者半數為當選",
+        "D": "第一輪投票無人當選時需另安排時間進行第二輪投票，必要時另訂日期進行第三輪投票"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-13",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 13,
+      "question": "A 縣縣議會未在法定期限內完成A 縣縣政府民政處預算案之審議，A 縣縣政府報請內政部邀集有關機關協商，若在協商後1 個月內仍未能作成決定，A 縣縣政府民政處之預算案其結果如何？",
+      "options": {
+        "A": "視為審議通過",
+        "B": "視為未通過",
+        "C": "由內政部逕為決定",
+        "D": "由內政部報請行政院決定"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-14",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 14,
+      "question": "直轄市政府辦理委辦事項違背憲法或逾越權限時，下列何處置方式正確？",
+      "options": {
+        "A": "應經由司法訴訟進行判決",
+        "B": "由行政院逕行撤銷",
+        "C": "由中央各該主管機關報請行政院予以撤銷",
+        "D": "由立法院召集會議協商解決"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-15",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 15,
+      "question": "有關地方自治團體之敘述，下列何者正確？",
+      "options": {
+        "A": "我國地方自治團體之地位相當於聯邦國之邦",
+        "B": "直轄市山地原住民區亦屬地方自治團體",
+        "C": "村、里為受憲法保障之最基層地方自治團體",
+        "D": "鄉並非地方自治團體"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-16",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 16,
+      "question": "依地方制度法規定，關於地方法規之敘述，下列何者錯誤？",
+      "options": {
+        "A": "應經委辦機關核定之委辦規則，地方行政機關應於核定文送達後30 日內發布",
+        "B": "應經上級政府核定之自治條例，地方立法機關應於核定文送達後30 日內公布",
+        "C": "經委辦機關核定之委辦規則，地方行政機關未依限發布者，由核定機關代為發布",
+        "D": "直轄市自治規則原則上應於發布後函報行政院備查，並函送直轄市議會查照"
+      },
+      "answer": "B",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-17",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 17,
+      "question": "有關地方跨域治理概念之敘述，下列何者錯誤？",
+      "options": {
+        "A": "跨域治理過程應儘量引進企業及非營利組織之資源",
+        "B": "跨域治理之方式，涵蓋跨轄區、跨部門、跨政策領域之合作夥伴關係",
+        "C": "跨域合作之法制手段，僅限於設立組織經營合辦事業之範圍",
+        "D": "跨域治理需密切協商與談判，並以民意為基礎，以凝聚共識"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-18",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 18,
+      "question": "關於鄉轄區內村編組之調整，由下列何者定之？",
+      "options": {
+        "A": "縣政府",
+        "B": "鄉公所",
+        "C": "鄉民代表會",
+        "D": "內政部"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-19",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 19,
+      "question": "下列何者是經由審議式活動（deliberative activities）方式督促地方政府提升績效的具體作為？",
+      "options": {
+        "A": "公民參與",
+        "B": "首長信箱",
+        "C": "議員會勘",
+        "D": "網路大數據蒐集資料"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-20",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 20,
+      "question": "下列何者為鄉（鎮、市）自治事項？",
+      "options": {
+        "A": "鄉（鎮、市）勞工安全衛生",
+        "B": "鄉（鎮、市）自然保育",
+        "C": "鄉（鎮、市）稅捐",
+        "D": "鄉（鎮、市）戶籍行政"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-21",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 21,
+      "question": "地方制度法明列各級自治團體地方政府各款收入，其中縣（市）之收入較直轄市與鄉（鎮、市）多出「協助收入」名目，有關協助金之敘述，下列何者正確？",
+      "options": {
+        "A": "財力較優之鄉（鎮、市）對縣的財政支援",
+        "B": "縣對鄉（鎮、市）的財政補助",
+        "C": "縣與鄉（鎮、市）間的財政交換",
+        "D": "中央與縣（市）間的財政往來"
+      },
+      "answer": "A",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-22",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 22,
+      "question": "有關參與式預算之敘述，下列何者錯誤？",
+      "options": {
+        "A": "參與式預算是由公民來決定一部分公共預算支出的優先順序",
+        "B": "參與式預算是透過公民審議與溝通協調以有效合理分配政府公共資源的決策程序",
+        "C": "實務上僅直轄市之公共事務可採行參與式預算",
+        "D": "提案說明、住民大會、審議工作坊、公開展覽、網路投票等均是參與式預算的方法"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-23",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 23,
+      "question": "甲鄉長經法院判決當選無效確定，下列處理方式何者正確？",
+      "options": {
+        "A": "由縣政府報請內政部解除其職務",
+        "B": "所遺任期須不足1 年，始行補選",
+        "C": "鄉長去職者，由縣政府派員代理",
+        "D": "應自事實發生之日起2 個月內完成補選"
+      },
+      "answer": "C",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-24",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 24,
+      "question": "下列何者不具有公法人身分？",
+      "options": {
+        "A": "直轄市山地原住民區",
+        "B": "中央原住民族主管機關核定之原住民族部落",
+        "C": "依行政法人法設立之行政法人",
+        "D": "依農會法設立之各級農會"
+      },
+      "answer": "D",
+      "level": "junior",
+      "shared_bank": "common_local_gov",
+      "parent_id": null,
+      "case_context": null,
+      "is_deprecated": false,
+      "deprecated_reason": null
+    },
+    {
+      "id": "common_local_gov-115-civil-junior-civil-affairs-25",
+      "roc_year": "115",
+      "session": "第一次",
+      "source_exam_code": "civil-junior-civil-affairs",
+      "source_exam_name": "115 年普通考試一般民政",
+      "subject": "地方自治概要",
+      "subject_tags": [
+        "local_gov"
+      ],
+      "number": 25,
+      "question": "各級政府與原住民族自治間發生權限爭議時，應如何決定？",
+      "options": {
+        "A": "由立法院決定",
+        "B": "由行政院決定",
+        "C": "由總統府召開協商會議決定",
+        "D": "由內政部與原住民族委員會協商決定"
+      },
+      "answer": "C",
       "level": "junior",
       "shared_bank": "common_local_gov",
       "parent_id": null,

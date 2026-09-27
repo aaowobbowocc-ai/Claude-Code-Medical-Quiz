@@ -47,6 +47,7 @@ const LAW_KNOWLEDGE_SESSIONS = [
     sourceName: '113 年原住民族特考四等', sourceCode: 'civil-indigenous-junior' },
   { year: '114', code: '114080', c: '203', s: '0401', level: 'senior',
     sourceName: '114 年高考三等客家事務行政', sourceCode: 'civil-senior-hakka' },
+  { year: '115', code: '115080', c: '401', s: '0114' },
 ]
 
 // common_law_basics: 初等考試（五等）法學大意（一般行政等）c=501

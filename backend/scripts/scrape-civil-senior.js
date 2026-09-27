@@ -292,6 +292,7 @@ const SESSIONS = [
   { year: '112', code: '112090', session: '第一次' },
   { year: '113', code: '113080', session: '第一次' },
   { year: '114', code: '114080', session: '第一次' },
+  { year: '115', code: '115080', session: '第一次' },
 ]
 // Subject codes vary per year. Each row uses onlyYears to limit scope.
 // 法學知識與英文: pure MCQ (50Q), no mixedEssay needed
@@ -307,9 +308,10 @@ const SUBJECTS = [
   { c: '301', s: '0118', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['112'] },
   { c: '301', s: '0112', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['113'] },
   { c: '201', s: '0401', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['114'] },
+  { c: '301', s: '0401', name: '法學知識與英文', tag: 'law_knowledge_english', expectedQ: 50, onlyYears: ['115'] },
   // 國文（測驗）(10Q in mixed paper): c varies by year
   { c: '201', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['106','108','114'] },
-  { c: '301', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['107','109','110','111','112','113'] },
+  { c: '301', s: '0101', name: '國文（測驗）', tag: 'chinese', expectedQ: 10, mixedEssay: true, onlyYears: ['107','109','110','111','112','113','115'] },
   // 行政學 (25Q in mixed paper): s code changes each year
   { c: '201', s: '0504', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['106'] },
   { c: '301', s: '0607', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['107'] },
@@ -319,6 +321,7 @@ const SUBJECTS = [
   { c: '301', s: '0301', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['111','112'] },
   { c: '301', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['113'] },
   { c: '201', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['114'] },
+  { c: '301', s: '0303', name: '行政學', tag: 'admin_studies', expectedQ: 25, mixedEssay: true, onlyYears: ['115'] },
   // 行政法 (25Q in mixed paper): s code changes each year
   { c: '201', s: '0701', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['106'] },
   { c: '301', s: '0801', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['107','109'] },
@@ -326,6 +329,7 @@ const SUBJECTS = [
   { c: '301', s: '0603', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['110'] },
   { c: '301', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['111','112','113'] },
   { c: '201', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['114'] },
+  { c: '301', s: '0403', name: '行政法', tag: 'admin_law', expectedQ: 25, mixedEssay: true, onlyYears: ['115'] },
 ]
 
 async function main() {

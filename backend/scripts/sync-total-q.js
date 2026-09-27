@@ -17,12 +17,28 @@ const updates = []
 for (const file of fs.readdirSync(CONFIG_DIR).filter(f => f.endsWith('.json'))) {
   const cfgPath = path.join(CONFIG_DIR, file)
   const cfg = JSON.parse(fs.readFileSync(cfgPath, 'utf-8'))
-  if (!cfg.questionsFile) continue
-  const qPath = path.join(BACKEND, cfg.questionsFile)
-  if (!fs.existsSync(qPath)) continue
-  const data = JSON.parse(fs.readFileSync(qPath, 'utf-8'))
-  const actual = (data.questions || data).length
-  siteTotal += actual
+  let actual
+  if (cfg.questionsFile) {
+    const qPath = path.join(BACKEND, cfg.questionsFile)
+    if (!fs.existsSync(qPath)) continue
+    const data = JSON.parse(fs.readFileSync(qPath, 'utf-8'))
+    actual = (data.questions || data).length
+    siteTotal += actual
+  } else if ((cfg.sharedBanks || []).length) {
+    // 公職／司法的 shell 考試沒有自己的題庫檔，題目全部來自共用題庫。
+    // 這裡原本直接 continue，於是共用題庫補題之後那幾張卡的題數永遠停在舊值
+    //（civil-senior-general 停在 2475、judicial 停在 908）。
+    // 前端是依 level 篩共用題庫的，這裡用同一條件算。
+    const level = { level_3_common: 'senior', level_4_common: 'junior', level_5_common: 'elementary' }[cfg.sharedScope]
+    actual = 0
+    for (const b of cfg.sharedBanks) {
+      const p = path.join(BACKEND, 'shared-banks', b + '.json')
+      if (!fs.existsSync(p)) continue
+      const bank = JSON.parse(fs.readFileSync(p, 'utf-8'))
+      actual += (bank.questions || []).filter(q => !level || q.level === level).length
+    }
+    // 共用題庫會被好幾個考試共用，重複加進全站合計會灌水，所以不計入 siteTotal
+  } else continue
 
   let changed = false
   if (cfg.totalQ !== actual) {

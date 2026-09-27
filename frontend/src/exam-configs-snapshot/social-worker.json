@@ -17,7 +17,7 @@
     "longText": false
   },
   "questionsFile": "questions-social-worker.json",
-  "totalQ": 2760,
+  "totalQ": 5619,
   "passScore": 72,
   "passRate": 0.6,
   "timeLimit": 120,
@@ -42,6 +42,27 @@
       "subject": "社會工作管理",
       "subjects": "社會工作行政、方案規劃、組織管理",
       "count": 40
+    },
+    {
+      "id": "social_policy",
+      "name": "社會政策與社會立法",
+      "subject": "社會政策與社會立法",
+      "subjects": "社會政策、社會立法、福利法規",
+      "count": 40
+    },
+    {
+      "id": "human_behavior",
+      "name": "人類行為與社會環境",
+      "subject": "人類行為與社會環境",
+      "subjects": "人類發展、社會環境、行為理論",
+      "count": 40
+    },
+    {
+      "id": "research_method",
+      "name": "社會工作研究方法",
+      "subject": "社會工作研究方法",
+      "subjects": "量化研究、質性研究、研究設計",
+      "count": 40
     }
   ],
   "stages": [
@@ -64,13 +85,31 @@
       "id": 3,
       "tag": "social_work_mgmt",
       "name": "社會工作管理"
+    },
+    {
+      "id": 4,
+      "tag": "social_policy",
+      "name": "社會政策與社會立法"
+    },
+    {
+      "id": 5,
+      "tag": "human_behavior",
+      "name": "人類行為與社會環境"
+    },
+    {
+      "id": 6,
+      "tag": "research_method",
+      "name": "社會工作研究方法"
     }
   ],
   "ui": {
     "tagNames": {
       "social_work": "社會工作",
       "social_work_direct": "直接服務",
-      "social_work_mgmt": "管理"
+      "social_work_mgmt": "管理",
+      "social_policy": "政策立法",
+      "human_behavior": "人類行為",
+      "research_method": "研究方法"
     },
     "stageStyles": {
       "social_work": {
@@ -84,18 +123,33 @@
       "social_work_mgmt": {
         "icon": "📋",
         "color": "#10B981"
+      },
+      "social_policy": {
+        "icon": "⚖️",
+        "color": "#EF4444"
+      },
+      "human_behavior": {
+        "icon": "🧠",
+        "color": "#8B5CF6"
+      },
+      "research_method": {
+        "icon": "🔬",
+        "color": "#0EA5E9"
       }
     },
     "subjectColors": {
       "social_work": "#6366F1",
       "social_work_direct": "#F59E0B",
-      "social_work_mgmt": "#10B981"
+      "social_work_mgmt": "#10B981",
+      "social_policy": "#EF4444",
+      "human_behavior": "#8B5CF6",
+      "research_method": "#0EA5E9"
     }
   },
   "seo": {
     "fullName": "社會工作師國考",
     "examDesc": "社會工作師高等考試，考試科目包含社會工作、社會工作直接服務、社會工作管理。收錄 104-115 年考古題，共 2622 題選擇題。",
-    "totalQ": 2760,
+    "totalQ": 5619,
     "years": "104 至 115",
     "articleIntro": "社會工作師國考，簡稱「社工國考」，是台灣社會福利服務體系中，專業社工人員執業的重要門檻。這張證照不僅是對個人專業能力的肯定，更是確保服務品質、保障受服務對象權益的基石。在台灣社會變遷快速、福利需求日益多元的背景下，社會工作師的角色愈發重要，無論是兒少保護、老人照護、身心障礙服務、家庭暴力防治、精神醫療、社區發展，甚至是災害應變，都能看見社工的身影。考取社工師證照，代表具備了執行專業社會工作所需的理論知識、倫理素養與實務技能，是開啟專業職涯、累積實務經驗的敲門磚。  對於社會工作相關科系畢業生而言，這張證照是將學術知識轉化為專業實踐的關鍵一步，也是進入公私立社福機構、醫院、學校、政府部門等場域，從事專業社會工作服務的必要條件。即使是已在社福領域服務多年的工作者，透過國考取得證照，除了是對自身專業的肯定，也能提升在職場上的專業地位與發展機會。考取社工師證照後，不論是擔任直接服務的個案工作者、團體工作者、社區工作者，或是從事方案規劃、行政管理、政策倡議等間接服務，都能以更專業、更具備保障的方式投入服務。這不僅是個人的職涯發展，更是對台灣社會福利發展的貢獻。社工師國考的意義，在於建立一套專業標準，確保所有受服務對象都能獲得有品質、合乎倫理的專業協助，讓社會工作者在面對複雜的社會問題時，能更有底氣、更專業地發揮其助人角色。",
     "subjectDeepDive": [

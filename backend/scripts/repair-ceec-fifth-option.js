@@ -45,15 +45,13 @@ const JUNK = [
  * （104 自然 #22 的「密度（公斤/立方公尺） 深度︵公尺︶」出現三遍）。
  * 正常的選項不會把一段 12 字以上的文字再講一次，所以看到重複就從第二次那裡切。
  */
-function cutRepeat(t) {
-  const N = 12;
-  for (let i = 0; i + N <= t.length; i++) {
-    const chunk = t.slice(i, i + N);
-    const again = t.indexOf(chunk, i + N);
-    if (again > 0) return t.slice(0, again).trim();
-  }
-  return t;
-}
+// ⚠️ 試過兩條「看形狀」的規則，兩條都把好選項切壞了，已移除：
+//   「連續 4 組以上的數字當座標軸」→ 109 學測自然 #58 的
+//      「1.0×10⁻⁶ M」被削掉，四個選項變成兩兩重複；
+//      108 社會 #57 的「1707、1800 年的聯合法」也不見了。
+//   「同一段重複出現就切」→ 106 國文 #13 的「孔乙己還欠十九個錢呢！」
+//      原文就是講兩次；114 地理 #40 的「減去平日日間活動人數的欄位數值」也是。
+// 圖表座標軸的文字就留著，宁可少修。
 
 function cleanTail(t) {
   let out = t;
@@ -61,7 +59,6 @@ function cleanTail(t) {
     const m = re.exec(out);
     if (m && m.index > 0) out = out.slice(0, m.index);
   }
-  out = cutRepeat(out.trim());
   return out.trim();
 }
 

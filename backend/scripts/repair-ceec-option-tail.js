@@ -22,29 +22,28 @@ const FILES = ['questions-ast.json', 'questions-gsat.json'];
 
 const JUNK = [
   /\s*請記得在答題卷簽名欄位/,
-  /\s*\d+\s*[-－~～]\s*\d+\s*(為題組|題為題組)/,
+  // 題號中間可能夾空白（PDF 抽出來是 "7 1 - 7 2題為題組"）
+  /\s*\d(?:\s*\d)*\s*[-－~～]\s*\d(?:\s*\d)*\s*題?\s*為題組/,
   /\s*\d{2,3}\s*年\s*(分科|學測)/,
   /\s*第\s*\d+\s*頁/,
   /\s*共\s*\d+\s*頁/,
   /\s*第\s*[壹貳參肆]\s*部分/,
   /\s*閱讀\s*[一二三四五六七八]\s/,
+  /\s*[一二三四五六]\s*、\s*(單|多|複)選題/,
   /\s*說明\s*[：:︰]/,
   /\s*第\s*\d+\s*題至第\s*\d+\s*題/,
   /\s*◎/,
   // 圖號／照片號在尾巴才算殘渣，後面不能接「所示/中/的/之」
   /\s+(圖|表|照片)\s*[一二三四五六\d]+\s*(?![所中的之])/,
-  // 圖的座標軸：連續 4 組以上用空白隔開的數字，正常散文不會這樣寫
-  /(?:\s+\d{1,4}){4,}/,
 ];
 
-function cutRepeat(t) {
-  const N = 12;
-  for (let i = 0; i + N <= t.length; i++) {
-    const again = t.indexOf(t.slice(i, i + N), i + N);
-    if (again > 0) return t.slice(0, again).trim();
-  }
-  return t;
-}
+// ⚠️ 試過兩條「看形狀」的規則，兩條都把好選項切壞了，已移除：
+//   「連續 4 組以上的數字當座標軸」→ 109 學測自然 #58 的
+//      「1.0×10⁻⁶ M」被削掉，四個選項變成兩兩重複；
+//      108 社會 #57 的「1707、1800 年的聯合法」也不見了。
+//   「同一段重複出現就切」→ 106 國文 #13 的「孔乙己還欠十九個錢呢！」
+//      原文就是講兩次；114 地理 #40 的「減去平日日間活動人數的欄位數值」也是。
+// 圖表座標軸的文字就留著，宁可少修。
 
 function clean(t) {
   let out = t;
@@ -52,7 +51,7 @@ function clean(t) {
     const m = re.exec(out);
     if (m && m.index > 0) out = out.slice(0, m.index);
   }
-  return cutRepeat(out.trim()).trim();
+  return out.trim();
 }
 
 const changes = [];
@@ -64,10 +63,12 @@ for (const f of FILES) {
   for (const q of arr) {
     for (const k of Object.keys(q.options || {})) {
       const t = String(q.options[k] || '');
-      if (t.length < 60) continue;                   // 短選項不動
+      if (t.length < 14) continue;                   // 太短的不動
       const c = clean(t);
       if (c === t) continue;
-      if (!c || c.length < 4) continue;              // 切到只剩渣就不切
+      // 不能要求切完一定要有幾個字：「耶穌會」「丁」本來就是完整選項，
+      // 後面黏的是「二、多選題（占 12 分）」。只擋切成空字串。
+      if (!c) continue;
       changes.push({ f, q, k, from: t, to: c });
       if (APPLY) q.options[k] = c;
       n++;

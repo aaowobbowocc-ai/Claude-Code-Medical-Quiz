@@ -21,6 +21,7 @@ const path = require('path')
 const { probeCodes, nameCandidates, fetchSheet } = require('./lib/moex-paper-resolve')
 const { pdfQuestions } = require('./lib/moex-pdf-parse')
 const { parseAnswerSheet } = require('./lib/moex-answer-sheet')
+const { sheetMap } = require('./lib/moex-answer-geo')
 const { warnZero, summary } = require('./lib/coverage-guard')
 const { nameKey, skeleton } = require('./lib/moex-normalize')
 
@@ -33,6 +34,50 @@ if (!EXAM) { console.error('需要 --exam'); process.exit(1) }
 const DIR = path.join(__dirname, '..')
 const cfg = JSON.parse(fs.readFileSync(path.join(DIR, 'exam-configs', `${EXAM}.json`), 'utf8'))
 const FILE = path.join(DIR, cfg.questionsFile || (EXAM === 'doctor1' ? 'questions.json' : `questions-${EXAM}.json`))
+
+const { pdfText } = require('./lib/moex-pdf-parse')
+
+/** 從試題 PDF 開頭取「考試別」與「等別」。取不到回 null。 */
+async function paperIdentity(buf) {
+  try {
+    const t = (await pdfText(buf)).replace(/\s+/g, ' ').slice(0, 400).normalize('NFC')
+    const e = /考試別\s*[：:]\s*([^\s]{2,40}?)(?=\s*等\s*別|\s*類\s*科|$)/.exec(t)
+    const l = /等\s*別\s*[：:]\s*([^\s]{2,20}?)(?=\s*類\s*科|\s*科\s*目|$)/.exec(t)
+    if (!e && !l) return null
+    return { exam: e ? e[1] : '', level: l ? l[1] : '' }
+  } catch { return null }
+}
+
+/**
+ * 拿這個場次「我們已經有的科目」的卷當基準，取它的考試別／等別。
+ *
+ * ⚠️ 不能只靠科目名挑候選卷——同一個場次代碼底下，別的考試也有同名科目，
+ * 挑到第一個候選就可能是別人的卷（實測 police4 的 108070/110070/112070
+ * 基準被判成「退除役軍人轉任公務人員考試／三等考試」）。
+ * 要用內容確認：**這卷的題目必須與我們已存的該科題目對得上**，那才是我們的卷。
+ */
+async function baselineIdentity(exam, code, arr, probe) {
+  const have = [...new Set(arr.filter(q => String(q.exam_code) === code).map(q => q.subject))]
+  for (const subj of have) {
+    const mine = new Set(arr.filter(q => String(q.exam_code) === code && q.subject === subj)
+      .map(q => skeleton(q.question).slice(0, 25)).filter(s => s.length >= 15))
+    if (mine.size < 5) continue
+    const { list } = nameCandidates(exam, subj, probe)
+    for (const c of list.slice(0, 4)) {
+      try {
+        const buf = await fetchSheet('Q', code, c.c, c.s)
+        if (!buf) continue
+        const parsed = await pdfQuestions(buf)
+        if (!parsed.size) continue
+        const hit = [...parsed.values()].filter(o => mine.has(skeleton(o.stem).slice(0, 25))).length
+        if (hit < parsed.size * 0.5) continue          // 不是我們的卷
+        const id = await paperIdentity(buf)
+        if (id) return id
+      } catch {}
+    }
+  }
+  return null
+}
 
 ;(async () => {
   const raw = JSON.parse(fs.readFileSync(FILE, 'utf8'))
@@ -58,6 +103,9 @@ const FILE = path.join(DIR, cfg.questionsFile || (EXAM === 'doctor1' ? 'question
     if (!missing.length) continue
     const sample = arr.find(q => String(q.exam_code) === code)
     const probe = probeCodes(code, code.slice(0, 3))
+    // 用這個場次「我們已經有的科目」抓一張卷當基準，取它的考試別／等別
+    const baseline = await baselineIdentity(EXAM, code, arr, probe)
+    if (baseline) console.log(`  [${code}] 基準：${baseline.exam}／${baseline.level}`)
 
     for (const w of missing) {
       const { list } = nameCandidates(EXAM, w.subject, probe)
@@ -74,10 +122,28 @@ const FILE = path.join(DIR, cfg.questionsFile || (EXAM === 'doctor1' ? 'question
         try {
           const qb = await fetchSheet('Q', code, c.c, c.s)
           if (!qb) continue
+          // ⚠️ 同一個場次代碼底下會塞好幾個**不同考試／不同等別**的卷。
+          // 不驗這個就會灌進別的考試的題：
+          //   police4（一般警察四等）的「行政法概要」抓到「退除役軍人轉任公務人員考試」的卷
+          //   customs（關務三等）的「英文」抓到關務「五等」的卷
+          // 拿同場次已有的卷當基準，比對 PDF 開頭的「考試別／等別」。
+          const id = await paperIdentity(qb)
+          if (baseline && id && (id.exam !== baseline.exam || id.level !== baseline.level)) {
+            console.log(`  ${code} ${w.subject}: 抓到的是「${id.exam}／${id.level}」，與本考試（${baseline.exam}／${baseline.level}）不同，跳過`)
+            continue
+          }
           const parsed = await pdfQuestions(qb)
           if (parsed.size < 10) continue
           let ans = {}
           try { const sb = await fetchSheet('S', code, c.c, c.s); if (sb) ans = await parseAnswerSheet(sb) } catch {}
+          // parseAnswerSheet 在部分版型會少抓（警察法規概要 114060 只拿到 20/25），
+          // 座標配對的 sheetMap 抓得比較齊，抓到比較多就用它。
+          if (Object.keys(ans).length < parsed.size) {
+            try {
+              const geo = await sheetMap(code, c.c, c.s, parsed.size)
+              if (geo.map.size > Object.keys(ans).length) ans = Object.fromEntries(geo.map)
+            } catch {}
+          }
           picked = { c, parsed, ans }
           break
         } catch {}

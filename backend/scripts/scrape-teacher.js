@@ -36,7 +36,7 @@ const pdfParse = require('pdf-parse')
 
 const BASE = 'https://tqa.rcpet.edu.tw/TEA_Exam/'
 const PAGE = BASE + 'TEA03.aspx'
-const YEARS = ['110', '111', '112', '113', '114']
+const YEARS = ['110', '111', '112', '113', '114', '115']
 const SY = 'ctl00$ContentPlaceHolder1$schyy'
 const EX = 'ctl00$ContentPlaceHolder1$exid'
 const sleep = ms => new Promise(r => setTimeout(r, ms))
@@ -365,17 +365,32 @@ async function scrapeExam(examId, exam, years, dryRun) {
 
   if (dryRun) return report
 
-  allQuestions.sort((a, b) =>
-    a.roc_year.localeCompare(b.roc_year) ||
+  const outPath = path.join(__dirname, '..', `questions-${examId}.json`)
+  // ⚠️ 只跑某幾年時（--year 115）不可以整個覆蓋檔案——會把其他年份連同後來
+  //    人工修過的內容一起清掉（實測 --year 115 直接洗掉 110~114 的 500 題）。
+  //    沒重爬到的年份原封不動留著，只換掉這次真的重爬的年份。
+  const scraped = new Set(allQuestions.map(q => String(q.roc_year)))
+  let kept = []
+  if (fs.existsSync(outPath)) {
+    try {
+      const prev = JSON.parse(fs.readFileSync(outPath, 'utf-8'))
+      kept = (prev.questions || []).filter(q => !scraped.has(String(q.roc_year)))
+    } catch {}
+  }
+  if (kept.length) {
+    let nextId = Math.max(0, ...kept.map(q => Number(q.id)).filter(Number.isFinite)) + 1
+    for (const q of allQuestions) q.id = nextId++
+  }
+  const merged = kept.concat(allQuestions).sort((a, b) =>
+    String(a.roc_year).localeCompare(String(b.roc_year)) ||
     SUBJECTS.findIndex(s => s.id === a.subject_tag) - SUBJECTS.findIndex(s => s.id === b.subject_tag) ||
     a.number - b.number)
 
-  const outPath = path.join(__dirname, '..', `questions-${examId}.json`)
   fs.writeFileSync(outPath, JSON.stringify({
     metadata: { category: '教師資格考試', exam: examId, generated: new Date().toISOString() },
-    questions: allQuestions,
+    questions: merged,
   }, null, 2))
-  console.log(`📦 ${examId}: wrote ${allQuestions.length} questions → ${outPath}\n`)
+  console.log(`📦 ${examId}: ${merged.length} questions（重爬 ${allQuestions.length}，保留 ${kept.length}）→ ${outPath}\n`)
   return report
 }
 

@@ -55,3 +55,7 @@ frontend/android/app/release/
 
 # 上架素材(Play/App Store 截圖、主視覺、設計稿) — 本機保存不入庫
 store-assets/
+
+# 公職爬蟲的中間檔——正式資料在 shared-banks/，這支只是抓下來給 rebuild 用。
+# 它的選項是舊解析法切的（會切壞），不能讓 questions-*.json 的 glob 掃到。
+backend/questions-civil-senior.json

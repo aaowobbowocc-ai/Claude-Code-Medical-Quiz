@@ -146,6 +146,7 @@ async function main() {
     { year: '112', code: '112120', session: '第一次' },
     { year: '113', code: '113110', session: '第一次' },
     { year: '114', code: '114110', session: '第一次' },
+    { year: '115', code: '115110', session: '第一次' },
   ]
   const SUBJECTS = [
     { s: '0101', name: '綜合法學（憲法、行政法、國際公法、國際私法）', tag: 'comprehensive_law_1' },

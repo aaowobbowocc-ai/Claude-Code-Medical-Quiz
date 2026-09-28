@@ -6,22 +6,14 @@ import { isNativeApp, showRewarded as showAdMobRewarded } from '../lib/admob'
 // Set VITE_REWARDED_AD_SLOT in Vercel env vars after AdSense H5 approval
 const AD_CLIENT = 'ca-pub-3134321405509741'
 const REWARDED_AD_SLOT = import.meta.env.VITE_REWARDED_AD_SLOT || ''
-const MONETAG_DIRECT_LINK = import.meta.env.VITE_MONETAG_DIRECT_LINK || 'https://omg10.com/4/10909987'
-const SHOPEE_AFFILIATE_LINK = import.meta.env.VITE_SHOPEE_AFFILIATE_LINK || ''
+// 2026-09-28：Monetag Direct Link 與蝦皮分潤都已停用。
+// Web 端的「看廣告領幣」本來就在 2026-06-03 關掉了（RewardAdSheet 的 !IS_NATIVE
+// 直接顯示「App 上線時開放」），所以那條路徑其實從那天起就沒人走到。
+// 真正在發幣的只有 Native App 的 AdMob Rewarded Video。
+// 之後若要恢復網頁版，設 VITE_DIRECT_LINK_URL 即可，不要再寫死第三方網址。
+const DIRECT_LINK_URL = import.meta.env.VITE_DIRECT_LINK_URL || ''
 const DIRECT_LINK_COUNTDOWN_SEC = 15
 const REWARD_COINS = 300
-
-// 每天第一次看廣告導向蝦皮分潤，其餘走 Monetag
-function getDirectLinkUrl() {
-  if (!SHOPEE_AFFILIATE_LINK) return MONETAG_DIRECT_LINK
-  const today = new Date().toDateString()
-  const key = 'ad_first_url_date'
-  if (localStorage.getItem(key) !== today) {
-    localStorage.setItem(key, today)
-    return SHOPEE_AFFILIATE_LINK
-  }
-  return MONETAG_DIRECT_LINK
-}
 
 // ── Script loaders ──────────────────────────────────
 let adScriptLoaded = false
@@ -93,16 +85,16 @@ export function useAdReward() {
     return () => clearInterval(id)
   }, [phase, refreshInfo])
 
-  // Returns the URL to open (for Monetag path), or null if not applicable.
+  // Returns the URL to open (Direct Link path), or null if not applicable.
   // Called synchronously in the click handler BEFORE any async logic so
   // the browser still considers it a user gesture (popup blocker bypass).
   const getAdUrl = useCallback(() => {
     // Native App 走 AdMob，廣告在 App 內顯示，不需要預開 window
     if (isNativeApp()) return null
-    if (REWARDED_AD_SLOT || !MONETAG_DIRECT_LINK) return null
+    if (REWARDED_AD_SLOT || !DIRECT_LINK_URL) return null
     const preCheck = getAdRewardInfo()
     if (preCheck.remaining <= 0 || preCheck.cooldownMs > 0) return null
-    return getDirectLinkUrl()
+    return DIRECT_LINK_URL
   }, [getAdRewardInfo])
 
   const showAd = useCallback(async (windowAlreadyOpened = false) => {
@@ -122,7 +114,7 @@ export function useAdReward() {
     }
 
     // ── Native (Android/iOS) App: 走 AdMob Rewarded Video ────────────────
-    // CPM 比 Monetag Direct Link 高 30-50 倍。先檢查避免 Web 版誤跑 native code。
+    // CPM 比一般 Direct Link 高 30-50 倍。先檢查避免 Web 版誤跑 native code。
     if (isNativeApp()) {
       try {
         setPhase('playing')
@@ -165,13 +157,12 @@ export function useAdReward() {
       }
     }
 
-    // Monetag Direct Link: window should already be opened synchronously by
-    // the click handler (windowAlreadyOpened=true). Fall back to opening here
-    // if caller didn't (e.g. simulation mode or future callers).
-    if (MONETAG_DIRECT_LINK) {
+    // Direct Link（目前沒有設定，等同關閉）：分頁應該已經由點擊處理器同步開好
+    // （windowAlreadyOpened=true），呼叫端沒開才在這裡補開。
+    if (DIRECT_LINK_URL) {
       if (!windowAlreadyOpened) {
         try {
-          window.open(getDirectLinkUrl(), '_blank', 'noopener,noreferrer')
+          window.open(DIRECT_LINK_URL, '_blank', 'noopener,noreferrer')
         } catch {
           setPhase('error')
           return false
@@ -227,7 +218,7 @@ export function useAdReward() {
     getAdUrl,         // call synchronously in click handler to get URL before async
     refreshInfo,      // manually refresh
     rewardCoins: REWARD_COINS,
-    isSimulation: !REWARDED_AD_SLOT && !MONETAG_DIRECT_LINK,
+    isSimulation: !REWARDED_AD_SLOT && !DIRECT_LINK_URL,
   }
 }
 

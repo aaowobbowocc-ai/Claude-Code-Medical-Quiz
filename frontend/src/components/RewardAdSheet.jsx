@@ -11,10 +11,10 @@ function formatCooldown(sec) {
 }
 
 // Toggle the whole feature off without a code push by flipping this flag.
-// Enabled via Monetag Direct Link (15-sec countdown, 300 coins/view, 10/day).
+// Native App 走 AdMob Rewarded Video（300 coins/view, 10/day）。
 const AD_REWARD_ENABLED = true
 
-// Web 端暫不開放 Monetag/AdSense 看廣告領金幣 — 2026-06-03 決定等 App 上線
+// Web 端不開放看廣告領金幣 — 2026-06-03 決定等 App 上線；Monetag/AdSense 已於 2026-09-28 放棄
 // 一起推。Native (Android/iOS App) 仍走 AdMob Rewarded 正常運作。
 const IS_NATIVE = isNativeApp()
 

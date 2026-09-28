@@ -1,0 +1,26 @@
+{
+  "_comment": "沒有 API 可以自動抓的固定成本。金額填實付的台幣（外幣就填當時刷卡的台幣金額）。cycle: yearly | once | monthly。renews_on 是下次續約日，報表會在到期前 45 天提醒。",
+  "items": [
+    {
+      "name": "Apple Developer Program",
+      "amount_twd": 3200,
+      "cycle": "yearly",
+      "renews_on": "2027-09-01",
+      "note": "US$99/年。實際金額與續約日請依信用卡帳單修正"
+    },
+    {
+      "name": "Google Play Developer",
+      "amount_twd": 800,
+      "cycle": "once",
+      "paid_on": "2026-05-01",
+      "note": "US$25 一次性"
+    },
+    {
+      "name": "網域 examking.tw",
+      "amount_twd": 0,
+      "cycle": "yearly",
+      "renews_on": null,
+      "note": "請填年費與續約日"
+    }
+  ]
+}

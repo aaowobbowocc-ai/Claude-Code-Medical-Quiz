@@ -7453,12 +7453,12 @@
       "subject_name": "鐵路運輸學大意",
       "stage_id": 0,
       "number": 36,
-      "question": "下列那一項子系統不包括在目前鐵路列車自動控制系統（ ATC）之中？",
+      "question": "下列那一項子系統不包括在目前鐵路列車自動控制系統（ATC）之中？",
       "options": {
-        "A": "列車自動監督系統（",
-        "B": "ATS）",
-        "C": "列車自動防護系統（",
-        "D": "ATP）"
+        "A": "列車自動監督系統（ATS）",
+        "B": "列車自動防護系統（ATP）",
+        "C": "列車自動操作系統（ATO）",
+        "D": "列車先進交通管理系統"
       },
       "answer": "D",
       "explanation": ""
@@ -18097,10 +18097,10 @@
       "number": 21,
       "question": "臺灣地區汽車客運公司短途客運所採用之距離費率制為？",
       "options": {
-        "A": "標準距離費率制度（",
-        "B": "per-mile rate system",
-        "C": "）",
-        "D": "遞遠遞減費率制度（"
+        "A": "標準距離費率制度（per-mile rate system）",
+        "B": "遞遠遞減費率制度（tapering rate system）",
+        "C": "分組費率制度（group rate system）",
+        "D": "均一費率制度（flat rate system）"
       },
       "answer": "C",
       "explanation": ""
@@ -18257,10 +18257,10 @@
       "number": 30,
       "question": "監督軌道狀況及列車行駛速度，係下列那一種鐵路自動控制系統之功能？",
       "options": {
-        "A": "列車自動監督系統（",
-        "B": "ATS）",
-        "C": "列車自動防護系統（",
-        "D": "ATP）"
+        "A": "列車自動監督系統（ATS）",
+        "B": "列車自動防護系統（ATP）",
+        "C": "列車自動操作系統（ATO）",
+        "D": "中央號誌自動控制系統（CTC）"
       },
       "answer": "B",
       "explanation": ""
@@ -21275,12 +21275,12 @@
       "subject_name": "鐵路運輸學大意",
       "stage_id": 0,
       "number": 6,
-      "question": "鐵路行車控制之方法中，「採用區間閉塞控制方式，鐵路列車之行止完全受區間號誌之指示。凡經由此 系統之號誌允許行駛之列車，其優先權超過其他對向及隨後同向之列車。」此為：",
+      "question": "鐵路行車控制之方法中，「採用區間閉塞控制方式，鐵路列車之行止完全受區間號誌之指示。凡經由此系統之號誌允許行駛之列車，其優先權超過其他對向及隨後同向之列車。」此為：",
       "options": {
-        "A": "中央行車控制法（",
-        "B": "Centralized Traffic Control）",
-        "C": "自動行車控制法（",
-        "D": "Automatic Train Control）"
+        "A": "中央行車控制法（Centralized Traffic Control）",
+        "B": "自動行車控制法（Automatic Train Control）",
+        "C": "自動區間控制法（Automatic Block Signaling）",
+        "D": "電氣輔助人工區間控制法（Controlled Manual Block System）"
       },
       "answer": "A",
       "explanation": ""
@@ -22017,12 +22017,12 @@
       "subject_name": "鐵路運輸學大意",
       "stage_id": 0,
       "number": 44,
-      "question": "下列何者不屬於我國 ITS九大服務領域：",
+      "question": "下列何者不屬於我國ITS 九大服務領域：",
       "options": {
-        "A": "先進公共運輸系統（",
-        "B": "Advanced Public Transportation Systems, APTS）",
-        "C": "緊急救援管理服務（",
-        "D": "Emergency Management Services, EMS）"
+        "A": "先進公共運輸系統（Advanced Public Transportation Systems, APTS）",
+        "B": "緊急救援管理服務（Emergency Management Services, EMS）",
+        "C": "先進郊區運輸服務（Advanced Rural Transportation Services, ARTS）",
+        "D": "資訊管理服務（Information Management Services, IMS）"
       },
       "answer": "C",
       "explanation": ""

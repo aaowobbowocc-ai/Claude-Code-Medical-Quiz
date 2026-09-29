@@ -155,6 +155,12 @@ async function gcpCost() {
     GROUP BY month, service, currency
     ORDER BY month DESC, net_cost DESC`
   const [rows] = await bq.query({ query: sql })
+  // 表建好了但還沒有資料是正常的：Google 只匯出**啟用之後**產生的用量，
+  // 而且是每天批次寫一次。空表不等於設定失敗。
+  if (!rows.length) {
+    console.log('⏳ 帳單匯出的資料表已經建好，但還是空的（Google 只寫啟用之後的用量，每天批次一次）')
+    return null
+  }
   const byMonth = {}
   for (const r of rows) {
     const b = byMonth[r.month] || (byMonth[r.month] = { total: 0, byService: {}, currency: r.currency })

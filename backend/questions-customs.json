@@ -1391,14 +1391,14 @@
       "subject_name": "英文",
       "stage_id": 0,
       "number": 20,
-      "question": "Which of the following words means “endless duration or existence”? perpetuity compliance initiatives accolades 請依下文回答第21 題至第25 題 In the cooking show “MasterChef,” the audience remember the big smile that lit up Christine Ha’s face every time she impressed the judges with her bold flavors—and especially when her threecourse meal of Vietnamese comfort food won the “MasterChef ” title. What casual viewers may not have realized right away is that the amateur cook from Houston, Texas, is blind. In 2003, Ha was diagnosed with a rare neurological condition that deteriorates the optic nerves and spinal cord. By 2007, Ha had lost most of her vision. But she had regained her love of reading, with help from the National Library Service for the Blind and Physically Handicapped (NLS). “NLS reignited my love for literature. It was what kept me sane when I went through the challenging treatment,” says Ha. “When I went through some of my worst health issues—complete paralysis from my neck down due to spinal inflammation, and complete blindness—all I could do was lie in bed and listen to NLS audio books.” NLS, part of the Library of Congress, oversees a free reading program for U.S. residents and citizens living abroad who are blind, have low vision, or cannot hold a book because of a physical disability. NLS patrons may choose from tens of thousands of books and dozens of magazines in audio and braille—including dozens of cookbooks. NLS also loans the portable playback equipment",
+      "question": "Which of the following words means “endless duration or existence”?",
       "options": {
-        "A": "needed to read its audio books. Computer-savvy patrons may access books online through the NLS Braille and Audio",
-        "B": "Reading Download (BARD) service. Ha, who is pursuing a master of fine arts degree at the University of Houston,",
-        "C": "always has a book checked out from NLS. Recently she was reading Gail Caldwell’s Let’s Take the Long Way Home in",
-        "D": "braille. And she is currently working on her “MasterChef ” cookbook, which is set for a spring 2013 release."
+        "A": "perpetuity",
+        "B": "compliance",
+        "C": "initiatives",
+        "D": "accolades"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": ""
     },
     {
@@ -6880,11 +6880,11 @@
       "subject_name": "法學知識",
       "stage_id": 0,
       "number": 29,
-      "question": "關於法律之類別，下列敘述何者錯誤？ 凡對於一般的人、事、時、地均有適用者，為普通法",
+      "question": "關於法律之類別，下列敘述何者錯誤？",
       "options": {
-        "A": "凡須經當事人明示同意適用後，始發生效力者，為任意法",
-        "B": "凡可從人的本性、事物的本質、民族的歷史或立國精神推演其內容者，",
-        "C": "為自然法",
+        "A": "凡對於一般的人、事、時、地均有適用者，為普通法",
+        "B": "凡須經當事人明示同意適用後，始發生效力者，為任意法",
+        "C": "凡可從人的本性、事物的本質、民族的歷史或立國精神推演其內容者，為自然法",
         "D": "凡規定實現實體權利義務之程序者，為程序法"
       },
       "answer": "B",
@@ -7080,12 +7080,12 @@
       "subject_name": "法學知識",
       "stage_id": 0,
       "number": 39,
-      "question": "甲、乙為夫妻，收養 A為養女，其後甲、乙離婚，由甲行使A的親權，乙 並未終止收養 A；後來甲和丙再婚，丙收養A；甲又與已婚的丁生下一子 B，丁之配偶為戊，長年於海外擔任台籍主管；甲於丁坐月子期間，支付 新臺幣36萬元讓丁與B住在坐月子中心。下列敘述何者正確？",
+      "question": "甲、乙為夫妻，收養A 為養女，其後甲、乙離婚，由甲行使A 的親權，乙並未終止收養A；後來甲和丙再婚，丙收養A；甲又與已婚的丁生下一子B，丁之配偶為戊，長年於海外擔任台籍主管；甲於丁坐月子期間，支付新臺幣36 萬元讓丁與B 住在坐月子中心。下列敘述何者正確？",
       "options": {
-        "A": "甲若死亡，法定繼承人為丙、",
-        "B": "A、B",
-        "C": "乙若死亡，法定繼承人為甲和",
-        "D": "A"
+        "A": "甲若死亡，法定繼承人為丙、A、B",
+        "B": "乙若死亡，法定繼承人為甲和A",
+        "C": "丙若死亡，法定繼承人為甲和A",
+        "D": "丁若死亡，法定繼承人為戊和B"
       },
       "answer": "D",
       "explanation": ""
@@ -10145,9 +10145,9 @@
       "question": "有關我國違憲審查制度，下列敘述何者錯誤？",
       "options": {
         "A": "依司法院大法官解釋，最高法院之判例及決議尚非法律或命令，不得作為人民據以聲請解釋審查之對象",
-        "B": "大法官解釋就違憲法令所採取之宣告類型，包含立即失效、定期失效、",
-        "C": "單純確認違憲而未宣告失效、合憲但要求立法者應適時檢討改進",
-        "D": "依憲法訴訟法，現有總額四分之一以上之立法委員，就其行使職權，認法律位階法規範牴觸憲法者，得聲請憲法法庭判決"
+        "B": "大法官解釋就違憲法令所採取之宣告類型，包含立即失效、定期失效、單純確認違憲而未宣告失效、合憲但要求立法者應適時檢討改進",
+        "C": "依憲法訴訟法，現有總額四分之一以上之立法委員，就其行使職權，認法律位階法規範牴觸憲法者，得聲請憲法法庭判決",
+        "D": "各級法院之法官，對於裁判上所應適用之法律，依合理之確信認為有牴觸憲法之疑義時，均得以裁定停止訴訟程序，聲請憲法法庭判決"
       },
       "answer": "A",
       "explanation": ""

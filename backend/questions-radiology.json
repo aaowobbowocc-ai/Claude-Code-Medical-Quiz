@@ -259868,12 +259868,12 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 44,
-      "question": "神經內分泌腫瘤（neuroendocrine tumor 正確？（圖 a 為肝臟血管攝影，圖b 像）",
+      "question": "神經內分泌腫瘤（neuroendocrinetumor，NET）患者接受90Y-DOTATOC 治療後影像如圖所示，下列敘述何者正確？（圖a 為肝臟血管攝影，圖b 為90Y-DOTATOC 治療後的前側影像，圖c 為90Y-DOTATOC 治療後的後側影像）",
       "options": {
-        "A": "90 Y 可發射 alpha particles，可使用",
-        "B": "90 Y 發射的 gamma particles，可使用",
-        "C": "90 Y 發射的 proton particles 能量，",
-        "D": "90 Y 發射的 beta particles 能量，可使用"
+        "A": "90Y 可發射alpha particles，可使用gamma camera 作post-therapeutic bremsstrahlung imaging",
+        "B": "90Y 發射的gamma particles，可使用gamma camera 作post-therapeutic bremsstrahlung imaging",
+        "C": "90Y 發射的proton particles 能量，可使用gamma camera 作post-therapeuticbremsstrahlung imaging",
+        "D": "90Y 發射的beta particles 能量，可使用gamma camera 作post-therapeutic bremsstrahlung imaging"
       },
       "answer": "D",
       "explanation": ""

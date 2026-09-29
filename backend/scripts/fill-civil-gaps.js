@@ -39,8 +39,11 @@ function appendRun(acc, l, prev) {
   let sep = '';
   if (prev && prev.p === l.p && Math.abs(prev.y - l.y) <= 3) {
     const gap = l.x - (prev.x + prev.w);
+    // 中文之間的小間隙是排版造成的，補空白會變成「先前已經很 熟悉的訊號」。
+    // 只有英數之間才需要空白（那是單字邊界）；大間隙一律當成填空底線。
+    const cjk = /[㐀-鿿豈-﫿]$/.test(acc) && /^[㐀-鿿豈-﫿]/.test(t);
     if (gap > 12) sep = ' _____ ';
-    else if (gap > 2) sep = ' ';
+    else if (gap > 2 && !cjk) sep = ' ';
   } else if (/[A-Za-z0-9]$/.test(acc) && /^[A-Za-z0-9]/.test(t)) {
     sep = ' ';
   }
@@ -90,7 +93,20 @@ async function paperQuestions(code, c, s) {
       continue;
     }
     if (!cur) continue;
-    if (mark) { cur.options[mark] = l.t.slice(1).trim(); cur.last = mark; prev = l; continue; }
+    if (mark) {
+      // ⚠️ 一個 run 裡可能塞了**兩個以上**的選項：
+      //   牙體技術師 109110 #30 的「Ⓐ上、下顎第三大臼齒Ⓑ下顎第二小臼齒」是同一行。
+      //   只看開頭第一個標記的話，A 會變成「上、」、B 變成後面兩段黏在一起，
+      //   後面的選項整個錯位；嚴重一點的會少掉兩個選項（使用者根本選不到正解）。
+      for (const seg of l.t.split(/(?=[-])/)) {
+        const m2 = MARK[seg[0]];
+        if (!m2) continue;
+        cur.options[m2] = seg.slice(1).trim();
+        cur.last = m2;
+      }
+      prev = l;
+      continue;
+    }
     // 沒有標記 → 接續前一個選項，或還沒開始選項就接續題幹
     if (cur.last) cur.options[cur.last] = appendRun(cur.options[cur.last], l, prev);
     else cur.stem = appendRun(cur.stem, l, prev);

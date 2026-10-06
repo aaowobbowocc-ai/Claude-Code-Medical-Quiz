@@ -190,7 +190,9 @@ export default function RewardAdSheet({ onClose, onOpenShop }) {
         {phase === 'error' && (() => {
           // 依失敗原因給對的訊息，不要把「沒登入/網路/同步」全講成「廣告載入失敗」
           const msg = {
-            no_auth:    { title: '請先登入', body: '登入後才能領取金幣，你的進度與金幣也會一起保存' },
+            // 會走到這裡有兩種：根本沒登入，以及登入過期而且自動換發也失敗。
+            // 兩種對使用者來說的動作是一樣的：重新登入一次。
+            no_auth:    { title: '請重新登入', body: '登入狀態已失效，重新登入後即可領取金幣。你的進度與金幣都會保留' },
             no_profile: { title: '帳號資料同步中', body: '請稍候幾秒再按重試' },
             network:    { title: '網路連線有問題', body: '請檢查網路後再試一次' },
             ad_incomplete: { title: '廣告未看完', body: '需完整看完整支廣告（約 15～30 秒）才能獲得金幣，請再試一次' },

@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { supabase, ensureSession, readAuthFromStorage } from '../lib/supabase'
+import { supabase, ensureSession, readAuthFromStorage, getFreshToken } from '../lib/supabase'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -267,7 +267,12 @@ export const usePlayerStore = create(
       claimAdReward: async () => {
         // sync 讀，避免 Capacitor Native getSession hang。這條路線是 6/3 v1.0.1
         // 看廣告領金幣後一直顯示「廣告載入失敗」的真因 — getSession 回空 token。
-        const { token, user_id } = readAuthFromStorage()
+        //
+        // 但光是讀出來還不夠：access token 預設一小時到期，App 擺著一陣子再回來
+        // 看廣告，送出去的是過期 token → 後端 401 → 使用者看到「廣告載入失敗」，
+        // 其實廣告沒事、是登入過期了。getFreshToken 只在真的過期時才去換，
+        // 而且有逾時保護，換不到就退回原本那顆（最差等同舊行為）。
+        const { token, user_id } = await getFreshToken()
         if (!token) return { success: false, reason: 'no_auth' }
         // 確保雲端有 profile 列再領獎。原生 App hydrate 失敗的訪客（getSession hang）
         // 可能還沒同步出 profile，後端領獎 .single() 找不到列會回失敗 → 影片白看。
@@ -286,6 +291,10 @@ export const usePlayerStore = create(
           const res = await fetch(`${BACKEND}/api/rewards/ad`, {
             method: 'POST', headers: { Authorization: `Bearer ${token}` },
           })
+          // 401 的 body 是 { error: 'Unauthorized' } 沒有 reason 欄位，
+          // 原本會落到下面的 `json.reason || 'error'` 變成泛用錯誤，
+          // 使用者看到「廣告載入失敗」完全找不到方向。明確回 no_auth。
+          if (res.status === 401) return { success: false, reason: 'no_auth' }
           const json = await res.json()
           if (json.claimed) {
             set({ coins: json.coins, adRewardToday: json.count, lastAdDate: today, lastAdWatch: new Date().toISOString() })

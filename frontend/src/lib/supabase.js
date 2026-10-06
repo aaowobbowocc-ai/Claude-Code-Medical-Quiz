@@ -356,7 +356,46 @@ export function readAuthFromStorage() {
     } catch {}
   }
   // 讀不到 is_anonymous 就當作「非匿名」，寧可放行也不要誤擋到真的付費使用者。
-  return { user_id, token, is_anonymous: is_anonymous === true }
+  return { user_id, token, is_anonymous: is_anonymous === true, expired: isTokenExpired(token) }
+}
+
+/** JWT 的 exp 已過（或剩不到 60 秒）就算過期。解不開也當作沒過期，讓後端去判。 */
+function isTokenExpired(token) {
+  if (!token) return false
+  try {
+    const payload = JSON.parse(atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')))
+    if (!payload?.exp) return false
+    return payload.exp * 1000 - Date.now() < 60_000
+  } catch { return false }
+}
+
+/**
+ * 拿一個「現在可用」的 token。
+ *
+ * `readAuthFromStorage()` 只是把 localStorage 裡的東西讀出來，**不看有沒有過期**。
+ * Supabase 的 access token 預設一小時就到期，App 擺著一陣子再回來看廣告，
+ * 送出去的就是過期 token → 後端回 401 → 前端只拿得到 `reason: 'error'`，
+ * 使用者看到的是「廣告載入失敗」，實際上廣告好好的、是登入過期了
+ * （使用者回報「一下子跳登入一下子訪客模式」就是這個狀態在閃）。
+ *
+ * ⚠️ 不要用 `getSession()`——它在 Capacitor 原生端會 hang（見 feedback_supabase_no_getsession）。
+ * 這裡用 `refreshSession()` 並且**套上逾時**，逾時就退回原本那顆 token，
+ * 最差也只是回到現在的行為，不會把流程卡死。
+ */
+export async function getFreshToken(timeoutMs = 6000) {
+  const auth = readAuthFromStorage()
+  if (!auth.token || !auth.expired || !supabase) return auth
+  try {
+    const refreshed = await Promise.race([
+      supabase.auth.refreshSession(),
+      new Promise((_, rej) => setTimeout(() => rej(new Error('refresh timeout')), timeoutMs)),
+    ])
+    const t = refreshed?.data?.session?.access_token
+    if (t) return { ...readAuthFromStorage(), token: t, expired: false }
+  } catch (e) {
+    console.warn('[auth] refreshSession failed:', e?.message)
+  }
+  return auth
 }
 
 /** Get current user's email + provider info, or null if anon. */

@@ -76,6 +76,11 @@ export async function showRewarded() {
   const adId = getRewardedAdUnitId()
   if (!adId) throw new Error('No Rewarded Ad Unit ID configured')
 
+  // 上一次呼叫若卡住沒結算，它的 listener 會留著，然後把**這一次**的事件吃掉
+  // ——使用者回報「中途關掉廣告之後，下一次看完也領不到」就是這樣來的。
+  // 進場先把 AdMob 的 listener 清乾淨（這個外掛的 listener 只有這裡會註冊）。
+  try { await mod.AdMob.removeAllListeners() } catch {}
+
   // Prepare (loads the ad). If a previous prepared ad is still cached, this
   // is essentially a no-op.
   await mod.AdMob.prepareRewardVideoAd({
@@ -83,15 +88,17 @@ export async function showRewarded() {
     isTesting: import.meta.env.DEV,
   })
 
-  // Show + wait for either Rewarded event (success) or Dismissed (skip).
-  //
   // ⚠️ Capacitor 6/7 的 AdMob.addListener 回傳的是 Promise<PluginListenerHandle>，
-  // 不是同步 handle。舊寫法把 Promise 直接 push、且在 listener 尚未真正掛上前就
-  // 呼叫 showRewardVideoAd()，若 Rewarded/Dismissed 早於掛載觸發就會整個漏接，
-  // 造成「看完卻沒發獎勵、Promise 永遠 pending」。修法：先 await 三個 listener 都
-  // 掛好，再 show；並用 settled 旗標防重複結算、cleanup 對已解析的 handle 生效。
+  // 不是同步 handle。要先 await 三個 listener 都掛好再 show，否則早於掛載觸發的
+  // 事件會整個漏接。
+  //
+  // ⚠️ **結算點是 Rewarded，不是 Dismissed。**
+  // Rewarded（userDidEarnReward）才是 AdMob 認定「使用者已賺得獎勵」的權威訊號；
+  // Dismissed 只是廣告關閉。舊版等 Dismissed 才結算，於是在 iOS 上只要使用者
+  // 強制關掉、App 被切到背景、或廣告本身當掉，Dismissed 就不會來，
+  // 已經賺到的獎勵直接被丟掉（使用者實測：看完沒加幣、今日次數也沒加；
+  // 更怪的是重開 App 後才看到 +300，那是卡住的 Promise 被下一次的事件解開才送出的）。
   return new Promise((resolve, reject) => {
-    let rewarded = false
     let settled = false
     const handles = []
     const cleanup = () => {
@@ -100,13 +107,17 @@ export async function showRewarded() {
     const settle = (fn, val) => {
       if (settled) return
       settled = true
+      clearTimeout(timer)
       cleanup()
       fn(val)
     }
+    // 保險絲：任何事件都沒來也不能永遠 pending，否則 UI 卡在「播放中」，
+    // 而且 listener 會留到下一次去吃掉別人的事件。
+    const timer = setTimeout(() => settle(resolve, false), 5 * 60 * 1000)
 
     Promise.all([
-      mod.AdMob.addListener(mod.RewardAdPluginEvents.Rewarded, () => { rewarded = true }),
-      mod.AdMob.addListener(mod.RewardAdPluginEvents.Dismissed, () => settle(resolve, rewarded)),
+      mod.AdMob.addListener(mod.RewardAdPluginEvents.Rewarded, () => settle(resolve, true)),
+      mod.AdMob.addListener(mod.RewardAdPluginEvents.Dismissed, () => settle(resolve, false)),
       mod.AdMob.addListener(mod.RewardAdPluginEvents.FailedToShow, (err) =>
         settle(reject, new Error(`AdMob FailedToShow: ${err?.message || err?.code || 'unknown'}`))),
     ])

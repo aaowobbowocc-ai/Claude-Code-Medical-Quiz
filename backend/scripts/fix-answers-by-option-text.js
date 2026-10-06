@@ -43,6 +43,7 @@ const norm = t => String(t || '').normalize('NFKC').replace(/[\s　（）()，,�
 ;(async () => {
   const files = fs.readdirSync(BK).filter(f => /^questions(-[a-z0-9-]*)?\.json$/.test(f))
   const report = []
+  const mismatched = []
   let fixed = 0, skipped = 0, papers = 0, failed = 0
   for (const f of files) {
     const exam = EXAM(f)
@@ -78,7 +79,16 @@ const norm = t => String(t || '').normalize('NFKC').replace(/[\s　（）()，,�
         if (String(q.answer) === String(off)) continue
         const ours = ['A', 'B', 'C', 'D'].map(x => norm(q.options[x]))
         const offs = ['A', 'B', 'C', 'D'].map(x => norm(o.options[x]))
-        if (!ours.every(Boolean) || ours.join('|') !== offs.join('|')) { skipped++; continue }
+        if (!ours.every(Boolean) || ours.join('|') !== offs.join('|')) {
+          skipped++
+          // 這些是「答案不同、而且選項也對不起來」的題——多半是選項本身壞了。
+          // 記下來另案處理，不要在這裡改答案（改了只會蓋掉症狀）。
+          mismatched.push({ exam, code, subject, n: q.number, ours: q.answer, off: String(off),
+            ourOpts: ['A', 'B', 'C', 'D'].map(x => String(q.options[x] || '')),
+            offOpts: ['A', 'B', 'C', 'D'].map(x => String(o.options[x] || '')),
+            stem: String(q.question).replace(/\s+/g, ' ').slice(0, 60) })
+          continue
+        }
         report.push({ exam, code, subject, n: q.number, from: q.answer, to: String(off),
           stem: String(q.question).replace(/\s+/g, ' ').slice(0, 44) })
         if (APPLY) q.answer = String(off)
@@ -97,6 +107,9 @@ const norm = t => String(t || '').normalize('NFKC').replace(/[\s　（）()，,�
   fs.mkdirSync(path.dirname(out), { recursive: true })
   fs.writeFileSync(out, JSON.stringify(report, null, 2))
   console.log(`📄 ${out}`)
+  const out2 = path.join(BK, '_tmp', 'answer-diff-option-mismatch.json')
+  fs.writeFileSync(out2, JSON.stringify(mismatched, null, 2))
+  console.log(`📄 ${out2}（${mismatched.length} 題：答案不同且選項對不起來）`)
   for (const r of report.slice(0, 15)) {
     console.log(`  ${r.exam} ${r.code} ${r.subject.slice(0, 12)} #${r.n}  ${r.from}→${r.to}  ${r.stem}`)
   }

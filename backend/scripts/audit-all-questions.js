@@ -30,7 +30,10 @@ function checkPollution(q) {
   // 題組情境／承上題已內嵌的題，題幹本來就是「情境 + 這一問」，
   // 第二段自然會和選項用字重疊，不是選項漏進題幹（見 project_followup_questions）
   if (/【題組情境】|承上題|承上圖|承前一題/.test(q.question)) return false
-  const m = q.question.match(/[?？]\s*([\s\S]+)$/)
+  // ⚠️ 要抓**最後一個**問號，不是第一個。題幹裡引述別人的話時會夾問號
+  //（教檢幼兒園「…是不是因為超商裡沒有你想要買的玩具？」後面還有真正的提問），
+  // 抓第一個會把「剩下的題幹」當成漏進來的選項而誤報。
+  const m = q.question.match(/[\s\S]*[?？]\s*([\s\S]+)$/)
   if (!m) return false
   const trailing = m[1].trim()
   if (trailing.length < 20) return false

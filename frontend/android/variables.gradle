@@ -1,5 +1,8 @@
 ext {
-    minSdkVersion = 23
+    // Play 自動防護功能（Play Console 的強化保護）要求 minSdk >= 24，
+    // 23 會在上傳 .aab 時被擋下來。API 24 = Android 7.0（2016），
+    // 低於這個版本的裝置佔比已經很低。Capacitor 7 本身只要求 23。
+    minSdkVersion = 24
     compileSdkVersion = 36
     targetSdkVersion = 36
     androidxActivityVersion = '1.9.2'

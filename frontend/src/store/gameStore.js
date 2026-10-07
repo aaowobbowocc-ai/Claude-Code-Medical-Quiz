@@ -45,6 +45,14 @@ const FIELD_MAP = {
   equippedFrameId: 'equipped_frame_id',
 }
 
+// 剛領到獎勵的時間戳。hydrateFromCloud 可能在 claim 的 UPDATE 落地前就把
+// profiles 讀完，接著「雲端覆蓋本機」把剛加的金幣與次數整個蓋回舊值
+// ——使用者看到的就是「說有發放但是沒有，也沒有計次」（看廣告時螢幕關掉、
+// App 進背景再回來最容易踩到，因為 resume 會觸發重新 hydrate）。
+// 不持久化，重開 App 本來就該以雲端為準。
+let lastRewardAt = 0
+const REWARD_GRACE_MS = 15000
+
 function storeToDb(state) {
   const out = {}
   for (const [k, dbk] of Object.entries(FIELD_MAP)) {
@@ -145,6 +153,15 @@ export const usePlayerStore = create(
             }
             // 已解鎖關卡同為單調遞增 → 取聯集，避免本地已解鎖的被雲端舊值收回。
             merged.unlockedStages = [...new Set([...(get().unlockedStages || []), ...(merged.unlockedStages || [])])]
+            // 剛領過獎就不要用雲端值蓋掉金幣與廣告計數——這一讀很可能比 claim 的
+            // UPDATE 還早，蓋下去會讓剛發的獎勵消失（見 lastRewardAt 的註解）。
+            if (Date.now() - lastRewardAt < REWARD_GRACE_MS) {
+              delete merged.coins
+              delete merged.adRewardToday
+              delete merged.lastAdDate
+              delete merged.lastAdWatch
+              console.log('[profile] 剛領過獎，這次 hydrate 不覆蓋金幣與廣告計數')
+            }
             set(merged)
             console.log('[profile] hydrated from cloud')
             // 雲端 name 原本為空、但有 Google 身分名 → 補寫回雲端讓它持久化
@@ -297,6 +314,7 @@ export const usePlayerStore = create(
           if (res.status === 401) return { success: false, reason: 'no_auth' }
           const json = await res.json()
           if (json.claimed) {
+            lastRewardAt = Date.now()
             set({ coins: json.coins, adRewardToday: json.count, lastAdDate: today, lastAdWatch: new Date().toISOString() })
             return { success: true, coins: 300, remaining: 10 - json.count }
           }
@@ -354,6 +372,11 @@ usePlayerStore.subscribe((state, prevState) => {
       const user = { id: user_id }
       const payload = storeToDb(usePlayerStore.getState())
       delete payload.coins  // never overwrite coins via write-through; use persistCoinDelta instead
+      // 廣告的每日計數由後端 /api/rewards/ad 負責（它有樂觀鎖防重複累加）。
+      // 前端再推一次會把剛加的次數用本機舊值蓋回去，等於白看一支廣告。
+      delete payload.ad_reward_today
+      delete payload.last_ad_date
+      delete payload.last_ad_watch
       payload.updated_at = new Date().toISOString()
       const { error } = await supabase.from('profiles').update(payload).eq('user_id', user.id)
       if (error) console.error('[profile] save failed:', error.message)

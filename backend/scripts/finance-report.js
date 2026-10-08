@@ -35,19 +35,32 @@ const ONLY_MONTH = arg('--month')
 // ⚠️ 匯出只從啟用當下開始累積，不會回填歷史。
 const BILLING_DATASET = process.env.GCP_BILLING_DATASET || ''
 
+// 自己測試用的帳號。IAP 一定要用真錢跑一次才知道整條金流通不通，
+// 但那不是收入——不扣掉的話報表會把自己的測試當成業績
+// （2026-10 那三筆 NT$300/94/31 就是本人測 coins_35000/10000/2500）。
+const TEST_USER_IDS = new Set([
+  '0e727540-2fae-499a-bca2-3218cecc3600', // 開發者本人（AAO）
+])
+// 用環境變數比較好維護：FINANCE_TEST_USER_IDS=uuid1,uuid2
+for (const id of String(process.env.FINANCE_TEST_USER_IDS || '').split(',').map(s => s.trim()).filter(Boolean)) {
+  TEST_USER_IDS.add(id)
+}
+
 const money = n => (n < 0 ? '−NT$' : 'NT$') + Math.abs(Math.round(n)).toLocaleString('en-US')
 const ym = d => String(d).slice(0, 7)
 
 async function coinRevenue(sb) {
   const { data, error } = await sb
     .from('coin_orders')
-    .select('provider,amount_twd,status,paid_at,created_at')
+    .select('provider,amount_twd,status,paid_at,created_at,user_id')
     .range(0, 9999)   // PostgREST 預設只回 1000 列，要用 range 才拿得到更多
   if (error) throw new Error('coin_orders: ' + error.message)
   const byMonth = {}
+  let testTwd = 0, testN = 0
   for (const o of data) {
     // 只認真的付過錢的：paid 算收入，refunded 當月扣回去
     if (o.status !== 'paid' && o.status !== 'refunded') continue
+    if (TEST_USER_IDS.has(o.user_id)) { testTwd += Number(o.amount_twd || 0); testN++; continue }
     const m = ym(o.paid_at || o.created_at)
     const b = byMonth[m] || (byMonth[m] = { gross: 0, refund: 0, byProvider: {} })
     const amt = Number(o.amount_twd || 0)
@@ -56,8 +69,8 @@ async function coinRevenue(sb) {
   }
   // 沒付款的單子單獨算，拿來看結帳流失
   const abandoned = data.filter(o => o.status === 'pending').length
-  const paid = data.filter(o => o.status === 'paid').length
-  return { byMonth, abandoned, paid }
+  const paid = data.filter(o => o.status === 'paid' && !TEST_USER_IDS.has(o.user_id)).length
+  return { byMonth, abandoned, paid, testTwd, testN }
 }
 
 /**
@@ -245,6 +258,7 @@ function fixedCosts() {
   } else console.log(`雲端成本                        （未接上，見檔頭說明）`)
   console.log(`固定成本攤提                    ${money(fixed.monthly)}／月`)
   console.log(`結帳流失                        完成 ${rev.paid} 筆 / 未完成 ${rev.abandoned} 筆`)
+  if (rev.testN) console.log(`（已排除自己測試的 ${rev.testN} 筆 / ${money(rev.testTwd)}，那不是收入）`)
   if (fixed.warnings.length) {
     console.log('\n⚠️ ' + fixed.warnings.join('\n⚠️ '))
   }

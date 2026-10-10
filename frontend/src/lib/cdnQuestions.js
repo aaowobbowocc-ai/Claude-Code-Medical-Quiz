@@ -40,7 +40,7 @@ const CACHE_TTL_MS = 24 * 60 * 60 * 1000  // 24h
 //   對齊率看起來正常的卷裡的錯答案全部漏掉；改用「選項逐位相同」判準才抓到。
 //   警特四等 123、醫師二階 82、護理師 71、營養師 68…共 21 個考試。
 //   既有使用者的 IndexedDB 還留著錯答案，必須強制重抓。
-const CACHE_VERSION = 86
+const CACHE_VERSION = 87
 const DB_NAME = 'questions-cache'
 const DB_STORE = 'exams'
 

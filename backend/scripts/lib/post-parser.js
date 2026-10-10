@@ -20,6 +20,9 @@ const TAIL_BULLET_RE = new RegExp(`[${BULLETS}]+$`)
 
 const stripPUA = s => String(s || '').replace(PUA_RE, '')
 
+// 選項結尾不該是這些字 —— 切在半路的簽章（「各類郵件得交該管理服務人員或郵件收，」）
+const CUT_RE = /[、，,（(]$/
+
 // 清頭尾項目符號 / PUA / 多餘空白。題幹尾與選項頭常黏到隔壁的 bullet。
 function clean(s) {
   return stripPUA(s)
@@ -127,6 +130,52 @@ function splitByColumn(part, colXs) {
   ]
 }
 
+/**
+ * 依 x 縮排把一題的內容行切成「題幹續行 + 四個選項」。
+ *
+ * 郵局卷（svc.tabf / 三民）的選項**沒有 (A)(B)(C)(D) 標記**，只靠縮排：
+ *   x601 【3】14.依郵政法有關郵件投遞之規定，下列敘述何者錯誤？   ← 題幹，最左
+ *   x616 除另有約定外，各類郵件應按其表面所書收件人之地址投遞     ← 選項 A
+ *   x616 收件地址係地面層以外樓層…各類郵件得交該管理服務人員或郵件收
+ *   x626 發處收領                                              ← **續行，往右再縮排**
+ *   x616 收件地址係地面層以外樓層，地面層未設有…                 ← 選項 C
+ *
+ * 下面的 collectOptions() 是「取前四段」，選項一換行就整組錯位：續行被算成一個
+ * 選項，真正的第四個選項掉出去，題幹還會吃掉選項 A（post-outdoor 114 #14 實測）。
+ *
+ * ⚠️ 選項起始 x 要用**眾數**，不能用最小值。題幹換行時題幹續行才是最左的，
+ * 用最小值會把題幹續行當成選項 A（repair-post-options.js 的寫法有這個限制，
+ * 它只處理已知壞掉的題所以沒踩到）。四個選項一定對齊同一個 x，那個 x 的
+ * 出現次數必定 ≥4，續行與題幹續行都湊不到這個數。
+ *
+ * 湊不出剛好四個就回 null 交給舊路徑 —— 兩個選項被 mupdf 併成同一行的卷
+ * （splitByColumn 處理的那種）會走到那裡。
+ */
+function optionsByIndent(stemX, contentLines) {
+  if (contentLines.length < 4) return null
+  const sorted = [...contentLines].sort((a, b) => a.y - b.y || a.x - b.x)
+  const hist = new Map()
+  for (const l of sorted) hist.set(l.x, (hist.get(l.x) || 0) + 1)
+  const optX = [...hist.entries()].sort((a, b) => b[1] - a[1] || a[0] - b[0])[0][0]
+  if (hist.get(optX) < 4) return null
+  // 選項不會排在題號【的左邊。跨頁時補進來的「另一大欄」x 基準差很多，也在這裡擋掉。
+  if (optX < stemX - 4) return null
+  if (Math.max(...sorted.map(l => l.x)) - optX > 80) return null
+
+  const opts = []
+  let stemTail = ''
+  for (const l of sorted) {
+    if (Math.abs(l.x - optX) <= 4) opts.push(l.text)
+    else if (l.x > optX) {
+      if (!opts.length) return null                  // 選項還沒開始就先出現續行 → 判斷錯了
+      opts[opts.length - 1] += l.text
+    } else if (!opts.length) stemTail += l.text       // 還在題幹（題幹續行比選項更左）
+    else return null                                  // 選項開始後又跑出更左的行 → 判斷錯了
+  }
+  if (opts.length !== 4) return null
+  return { stemTail, opts }
+}
+
 // 從一組 rows（索引 start 起算為選項區）湊出 4 個選項 part；湊不齊回 null
 function collectOptions(rows, start, colXs) {
   let parts = rows.slice(start).flatMap(r => r.parts)
@@ -144,7 +193,17 @@ function collectOptions(rows, start, colXs) {
 }
 
 // 題塊（不含【X】num. 前綴的內容）→ { question, options } 或 null
-function buildQuestion(firstText, contentLines, colXs) {
+function buildQuestion(firstText, contentLines, colXs, stemX) {
+  // 先試 x 縮排（郵局卷的主要版面）；失敗才退回下面的 part 切法
+  const byIndent = optionsByIndent(stemX, contentLines)
+  if (byIndent) {
+    const opts = byIndent.opts.map(clean)
+    const question = clean(String(firstText || '') + byIndent.stemTail)
+    if (question && opts.every(Boolean) && new Set(opts).size === 4 && !opts.some(o => CUT_RE.test(o))) {
+      return { question, options: { A: opts[0], B: opts[1], C: opts[2], D: opts[3] } }
+    }
+  }
+
   const rows = groupRows([
     ...(firstText ? [{ y: -1, x: 0, w: 999, text: firstText }] : []),
     ...contentLines,
@@ -244,7 +303,7 @@ async function parsePostPdf(buf) {
       ).map(ln => ({ ...ln, y: ln.y + 100000 }))
       content = content.concat(tail)
     }
-    const q = buildQuestion(a.firstText, content, colXs)
+    const q = buildQuestion(a.firstText, content, colXs, a.x)
     if (!q) { out.push({ number: a.num, answer: a.answer, disputed: a.disputed, incomplete: true }); continue }
     out.push({
       number: a.num, answer: a.answer,

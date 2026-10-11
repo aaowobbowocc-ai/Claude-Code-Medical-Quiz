@@ -32,6 +32,7 @@ const fs = require('fs')
 const path = require('path')
 const { resolvePaper, fetchSheet, pdfText } = require('./lib/moex-paper-resolve')
 const { skeleton } = require('./lib/moex-normalize')
+const { pdfTextClean } = require('./lib/moex-run-overlap')
 const { paperQuestions } = require('./fill-civil-gaps')
 const { sheetMap } = require('./lib/moex-answer-geo')
 const { atomicWriteJson } = require('./lib/atomic-write')
@@ -60,11 +61,17 @@ const near = (a, b) => {
 // 多點取樣：題幹的開頭、1/4、中段各取 20 字，任一命中就算存在。
 // 刻意偏向「判定為非外來」——漏抓一題外來題，遠比毀掉一題好題便宜。
 const PROBE = 20
-function inPaper(stem, paperText) {
+// paperText 傳陣列：原始文字 + 消除 run 重疊後的文字，**任一命中就算在卷上**。
+// 有些卷的每一列是好幾個互相重疊一個字的 run，直接串會變成
+// 「一位266 歲服役中的的男性」，整卷題幹都對不上（醫師二階 103030 醫學(四)
+// 命中率 78%，消重疊後 93%）。但抽樣 46 卷只有這兩卷受益、還有一卷變差，
+// 所以不改共用的 pdfText，只在這裡當備援。見 lib/moex-run-overlap.js。
+function inPaper(stem, texts) {
   const k = skeleton(String(stem))
-  if (k.length < PROBE || !paperText) return true          // 比不動就當它在，不要亂動
+  const list = [].concat(texts).filter(Boolean)
+  if (k.length < PROBE || !list.length) return true        // 比不動就當它在，不要亂動
   const at = [0, Math.floor(k.length / 4), Math.floor(k.length / 2)]
-  return at.some(i => i + PROBE <= k.length && paperText.includes(k.slice(i, i + PROBE)))
+  return list.some(T => at.some(i => i + PROBE <= k.length && T.includes(k.slice(i, i + PROBE))))
 }
 
 
@@ -95,14 +102,15 @@ function inPaper(stem, paperText) {
     try {
       const p = await resolvePaper({ exam, code: String(code), subject, year: String(all[0]?.roc_year), items: all })
       if (!p) throw new Error('對不到原卷')
-      text = skeleton(await pdfText(await fetchSheet('Q', String(code), p.c, p.s)))
+      const qbuf = await fetchSheet('Q', String(code), p.c, p.s)
+      text = [skeleton(await pdfText(qbuf)), skeleton(await pdfTextClean(qbuf))]
       parsed = await paperQuestions(String(code), p.c, p.s)
       ans = (await sheetMap(String(code), p.c, p.s, Math.max(80, all.length))).map
     } catch (e) {
       for (const r of items) skipped.push({ ...r, why: '原卷取不到：' + e.message.slice(0, 30) })
       continue
     }
-    if (!text || text.length < 200) {
+    if (!text || !text[0] || text[0].length < 200) {
       for (const r of items) skipped.push({ ...r, why: '原卷文字層讀不出來' })
       continue
     }

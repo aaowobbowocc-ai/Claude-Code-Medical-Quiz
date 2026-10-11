@@ -24,6 +24,7 @@ const fs = require('fs')
 const path = require('path')
 const { resolvePaper, fetchSheet, pdfText } = require('./lib/moex-paper-resolve')
 const { skeleton } = require('./lib/moex-normalize')
+const { pdfTextClean } = require('./lib/moex-run-overlap')
 
 const BK = path.join(__dirname, '..')
 const only = (process.argv.find(a => a.startsWith('--exam=')) || '').split('=')[1]
@@ -55,11 +56,17 @@ const tooShort = t => skeleton(String(t)).length < MIN
 // 多點取樣：題幹的開頭、1/4、中段各取 20 字，任一命中就算存在。
 // 刻意偏向「判定為非外來」——漏抓一題外來題，遠比毀掉一題好題便宜。
 const PROBE = 20
-function inPaper(stem, paperText) {
+// paperText 傳陣列：原始文字 + 消除 run 重疊後的文字，**任一命中就算在卷上**。
+// 有些卷的每一列是好幾個互相重疊一個字的 run，直接串會變成
+// 「一位266 歲服役中的的男性」，整卷題幹都對不上（醫師二階 103030 醫學(四)
+// 命中率 78%，消重疊後 93%）。但抽樣 46 卷只有這兩卷受益、還有一卷變差，
+// 所以不改共用的 pdfText，只在這裡當備援。見 lib/moex-run-overlap.js。
+function inPaper(stem, texts) {
   const k = skeleton(String(stem))
-  if (k.length < PROBE || !paperText) return true          // 比不動就當它在，不要亂動
+  const list = [].concat(texts).filter(Boolean)
+  if (k.length < PROBE || !list.length) return true        // 比不動就當它在，不要亂動
   const at = [0, Math.floor(k.length / 4), Math.floor(k.length / 2)]
-  return at.some(i => i + PROBE <= k.length && paperText.includes(k.slice(i, i + PROBE)))
+  return list.some(T => at.some(i => i + PROBE <= k.length && T.includes(k.slice(i, i + PROBE))))
 }
 
 
@@ -96,9 +103,10 @@ function inPaper(stem, paperText) {
       try {
         const p = await resolvePaper({ exam, code: String(code), subject, year: String(items[0].roc_year), items })
         if (!p) throw new Error('no paper')
-        text = skeleton(await pdfText(await fetchSheet('Q', String(code), p.c, p.s)))
+        const buf = await fetchSheet('Q', String(code), p.c, p.s)
+        text = [skeleton(await pdfText(buf)), skeleton(await pdfTextClean(buf))]
       } catch { unresolved++; continue }
-      if (!text || text.length < 200) { unresolved++; continue }
+      if (!text || !text[0] || text[0].length < 200) { unresolved++; continue }
       const judged = items.filter(q => !tooShort(q.question))
       const foreign = judged.filter(q => !inPaper(q.question, text))
       // 自我檢查：這張卷如果連 60% 都對不上，多半是對到錯的卷或文字層壞掉，

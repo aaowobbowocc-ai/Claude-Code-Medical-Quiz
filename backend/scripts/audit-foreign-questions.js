@@ -108,7 +108,10 @@ const tooShort = t => skeleton(String(t)).length < MIN
     }
   }
 
-  const dest = path.join(BK, '_tmp', 'foreign-questions.json')
+  // ⚠️ 全站一口氣跑會壞：mupdf 的 document handle 不會釋放，跑到 600 多卷之後
+  // pdfStems 開始整批失敗（2,537/3,175 卷「解析不足」），最後在 fz_drop_page 崩掉。
+  // 要全站請用 run-foreign-audit.sh，每個考試開一個 process。
+  const dest = path.join(BK, '_tmp', only ? `foreign-questions-${only}.json` : 'foreign-questions.json')
   fs.mkdirSync(path.dirname(dest), { recursive: true })
   fs.writeFileSync(dest, JSON.stringify(report, null, 1))
   const strong = report.filter(r => r.sameCodeDonor.length).length

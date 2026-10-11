@@ -205416,7 +205416,9 @@
     "explanation": "",
     "images": [
       "/question-images/medlab_110020_molmicro_q74_0.webp"
-    ]
+    ],
+    "incomplete": true,
+    "incomplete_reason": "同場次同題號被 medlab 臨床生理學與病理學 #74 覆蓋，原卷選項解析不出來，暫時隱藏"
   },
   {
     "id": 1674,
@@ -215148,7 +215150,9 @@
       "/question-images/medlab_110100_molmicro_q77_0.webp",
       "/question-images/medlab_110100_molmicro_q77_1.webp",
       "/question-images/medlab_110100_molmicro_q77_2.webp"
-    ]
+    ],
+    "incomplete": true,
+    "incomplete_reason": "同場次同題號被 medlab 臨床生理學與病理學 #77 覆蓋，原卷選項解析不出來，暫時隱藏"
   },
   {
     "id": 2157,
@@ -218211,7 +218215,9 @@
     "explanation": "",
     "images": [
       "/question-images/medlab_111020_micro_q69_0.webp"
-    ]
+    ],
+    "incomplete": true,
+    "incomplete_reason": "同場次同題號被 medlab 臨床生理學與病理學 #69 覆蓋，原卷選項解析不出來，暫時隱藏"
   },
   {
     "id": 2709,
@@ -259459,14 +259465,14 @@
     "subject_name": "臨床血液學",
     "stage_id": 3,
     "number": 37,
-    "question": "當超音波的波長為0.8 mm，頻率為2 MHz，則傳導速度為何（m/s）？",
+    "question": "下列何者不是造成neutropenia 的原因？",
     "options": {
-      "A": "160",
-      "B": "320",
-      "C": "1,600",
-      "D": "3,200"
+      "A": "Fulminant bacterial infection（e.g. typhoid fever）",
+      "B": "Systemic lupus erythematosus",
+      "C": "Myelodysplastic syndrome",
+      "D": "Hyposplenism"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": ""
   },
   {

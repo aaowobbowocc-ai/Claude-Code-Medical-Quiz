@@ -22,8 +22,7 @@
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 const fs = require('fs')
 const path = require('path')
-const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve')
-const { pdfStems } = require('./lib/moex-pdf-parse')
+const { resolvePaper, fetchSheet, pdfText } = require('./lib/moex-paper-resolve')
 const { skeleton } = require('./lib/moex-normalize')
 
 const BK = path.join(__dirname, '..')
@@ -47,6 +46,22 @@ const near = (a, b) => {
 }
 /** 題幹太短就不判——比不動，硬比只會製造誤報。 */
 const tooShort = t => skeleton(String(t)).length < MIN
+
+// 「這題在這張卷上嗎」：**用整卷原始文字，不要用 pdfStems**。
+// pdfStems 會逐題切塊，公式與表格密集的題一切就壞（藥師一階卷三實測：
+// 題幹頭被吃掉、表格內容蓋掉問句），於是好題被誤判成外來題。
+// 2026-10-11 就是這樣把 pharma1 的 6 題好內容覆寫成更爛的解析，已回退。
+//
+// 多點取樣：題幹的開頭、1/4、中段各取 20 字，任一命中就算存在。
+// 刻意偏向「判定為非外來」——漏抓一題外來題，遠比毀掉一題好題便宜。
+const PROBE = 20
+function inPaper(stem, paperText) {
+  const k = skeleton(String(stem))
+  if (k.length < PROBE || !paperText) return true          // 比不動就當它在，不要亂動
+  const at = [0, Math.floor(k.length / 4), Math.floor(k.length / 2)]
+  return at.some(i => i + PROBE <= k.length && paperText.includes(k.slice(i, i + PROBE)))
+}
+
 
 ;(async () => {
   const files = fs.readdirSync(BK).filter(f => /^questions(-[a-z0-9-]*)?\.json$/.test(f))
@@ -77,16 +92,19 @@ const tooShort = t => skeleton(String(t)).length < MIN
     }
     for (const [k, items] of groups) {
       const [code, subject] = k.split('\u0000')
-      let stems = null
+      let text = null
       try {
         const p = await resolvePaper({ exam, code: String(code), subject, year: String(items[0].roc_year), items })
         if (!p) throw new Error('no paper')
-        stems = await pdfStems(await fetchSheet('Q', String(code), p.c, p.s))
+        text = skeleton(await pdfText(await fetchSheet('Q', String(code), p.c, p.s)))
       } catch { unresolved++; continue }
-      if (!stems || stems.size < items.length * 0.5) { unresolved++; continue }
+      if (!text || text.length < 200) { unresolved++; continue }
+      const judged = items.filter(q => !tooShort(q.question))
+      const foreign = judged.filter(q => !inPaper(q.question, text))
+      // 自我檢查：這張卷如果連 60% 都對不上，多半是對到錯的卷或文字層壞掉，
+      // 整卷不判，免得把一整卷好題列成外來題。
+      if (judged.length && (judged.length - foreign.length) / judged.length < 0.6) { unresolved++; continue }
       papers++
-      const all = [...stems.values()]
-      const foreign = items.filter(q => !tooShort(q.question) && !all.some(s => near(q.question, s)))
       if (!foreign.length) continue
       if (foreign.length > MAX) {
         wholePaper++

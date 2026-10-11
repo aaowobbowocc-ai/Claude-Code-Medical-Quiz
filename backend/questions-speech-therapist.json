@@ -37336,7 +37336,9 @@
     },
     "answer": "B",
     "explanation": "",
-    "_legacy_id": 114100050753
+    "_legacy_id": 114100050753,
+    "incomplete": true,
+    "incomplete_reason": "同場次同題號被 speech-therapist 兒童語言障礙 #22 覆蓋，原卷選項解析不出來，暫時隱藏"
   },
   {
     "id": "speech_101110_p3_23",
@@ -38457,7 +38459,9 @@
     },
     "answer": "B",
     "explanation": "",
-    "_legacy_id": 114100050756
+    "_legacy_id": 114100050756,
+    "incomplete": true,
+    "incomplete_reason": "同場次同題號被 speech-therapist 兒童語言障礙 #70 覆蓋，原卷選項解析不出來，暫時隱藏"
   },
   {
     "id": "speech_101110_p3_71",
@@ -49574,12 +49578,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 73,
-    "question": "丁丁今年 4 歲有語言發展遲緩，語言治療師評估過後發現丁丁的詞彙量不足，有詞彙尋取 (word finding) 的問題，請問下列那個活動較適合做為丁丁的介入活動？",
+    "question": "漢語語音「愛」和「傲」在聲紋圖上最明顯的差異是什麼？",
     "options": {
-      "A": "唸有押韻的童謠",
-      "B": "照樣造句",
-      "C": "製作語意網路 (semantic map)",
-      "D": "練習交談輪替 (turn taking)"
+      "A": "共振峰聲紋強度不同",
+      "B": "共振峰信號時長不同",
+      "C": "共振峰起始頻率不同",
+      "D": "共振峰轉折軌跡不同"
     },
     "answer": "D",
     "explanation": "",

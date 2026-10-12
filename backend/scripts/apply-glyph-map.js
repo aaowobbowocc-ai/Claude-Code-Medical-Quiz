@@ -49,6 +49,17 @@ Object.assign(MAP, {
   '葲': '參',  // 基準葲考線 / 葲與國際衛生組織 / 標準葲考點
   '豣': '切',  // 豣片證實 / 適豣的點頭
 })
+// 第三批（2026-10-13）。合法用法多的那幾個靠 PROTECT 擋住。
+Object.assign(MAP, {
+  '蛯': '女',  // 未婚蛯性 / 林蛯士 / 已婚蛯性（3 處）
+  '蚮': '兩',  // 蚮側睪丸 / 生產蚮次 / 蚮個ovoid / 生死蚮無憾 / 則蚮地大氣（5 處）
+  '蛉': '量',  // 劑蛉 / 量蛉表 / 攝氧蛉 / 容蛉 / 能蛉 / 音蛉（白蛉除外）
+  '蹊': '行',  // 執蹊 / 施蹊 / 進蹊 / 逆蹊性 / 平蹊 / 法律上蹊為（鼠蹊、成蹊除外）
+  '覄': '立',  // 覄即執行 / 直覄擺放 / 對覄假說（3 處）
+  '裶': '律',  // 具法裶上行為（1 處）
+  '蝇': '念',  // 照顧理蝇（1 處）
+  '谜': '刺',  // 性釋素谜激試驗 / 有棘谜（spur）（2 處）
+})
 
 /**
  * 混用的壞字只能做**詞組**取代，不能做字元取代：
@@ -60,6 +71,42 @@ const PHRASES = [
   ['赇蟾病', '糖尿病'],
   ['血赇', '血糖'],
   ['多赇體', '多醣體'],
+  // 第三批（2026-10-13）
+  ['家蹊鼠', '家鼷鼠'],   // Mus musculus 是家鼷鼠，不是「家行鼠」——蹊 在這裡不對到「行」
+  ['劑蛉膚', '劑量率'],   // 蛉→量、膚→率，但膚 只有這裡與下面一處是壞的
+  ['有效膚', '有效率'],
+  ['膳常', '異常'],       // 蛋白質膳常 / 感覺膳常 / 呼吸驅力膳常
+  ['差膳', '差異'],       // 無差膳假說 / 有差膳假說
+  ['膳位萌出', '異位萌出'],
+  // 第四批（2026-10-13）。這幾個壞字的合法用法太多，只能做詞組：
+  //   蟾（蟾蜍、蟾酥、金蟾丸都是中藥）、覆（覆蓋、顛覆、覆耳式耳機）、
+  //   距（距離、相距，4,427 處）、膚（皮膚、膚電）、西（西醫、西元）
+  ['輸蟾管', '輸尿管'],
+  ['蟾量', '尿量'],       // ③降低蟾量 ④降低心輸出量——高 PEEP 減少腎灌流
+  ['距射', '放射'],       // 放射劑量 / 放射防護屏蔽 / 放射出點（13 處）
+  ['覆子', '粒子'],       // 微覆子型樹脂（microfilled）/ 懸浮覆子（aerosol）（10 處）
+  ['存活膚', '存活率'],
+  ['西床', '臨床'],       // 臨床實務 / 臨床藥學服務 / 臨床診療指引（5 處）
+  // bigram 驗證擋下來的 3 處 甀。這些中醫搭配乾淨語料裡沒有，但確實是「瘀」：
+  ['聚甀', '聚瘀'],       // 寒留於分肉之間，聚瘀則為痛（靈樞）
+  ['甀痺', '瘀痺'],
+  ['停甀', '停瘀'],       // 氣血水停瘀腹中
+]
+
+/**
+ * 保護區：命中這些詞組的字不做任何取代。
+ *
+ * 第三批有三個字是**合法用法居多**，只有少數是壞的，不保護就會改爛好字：
+ *   膚 —— 4,472 處幾乎都是皮膚；180 處非皮膚的全是「膚電反應」
+ *          （electrodermal response，心理學正式術語），也是合法的
+ *   蹊 —— 108 處幾乎都是鼠蹊部；還有成語「下自成蹊」
+ *   膳 —— 514 處幾乎都是膳食、藥膳、《飲膳正要》
+ *   蛉 —— 「白蛉」是 sandfly（利什曼原蟲病媒）
+ */
+const PROTECT = [
+  /白蛉/g, /鼠蹊/g, /成蹊/g, /蹊徑/g, /蹊蹺/g,
+  /皮膚/g, /膚電/g, /膚色/g, /膚質/g, /肌膚/g, /體膚/g, /膚觸/g, /膚淺/g,
+  /膳食/g, /用膳/g, /藥膳/g, /飲膳/g, /團膳/g, /膳宿/g, /供膳/g, /配膳/g, /膳務/g,
 ]
 
 const SUS = new Set(Object.keys(MAP))
@@ -91,20 +138,46 @@ const SUS = new Set(Object.keys(MAP))
   const seen = (a, b) => fwd.get(a)?.has(b) || false
 
   /** 回傳 { out, changes:[{from,to,ctx,ok}] }。ok=false 的那一處不會被改。 */
+  /** 落在合法詞組裡的位置回 true，這些位置一律不動。 */
+  function maskOf(s) {
+    const safe = new Array(s.length).fill(false)
+    for (const re of PROTECT) {
+      re.lastIndex = 0
+      let m
+      while ((m = re.exec(s)) !== null) {
+        for (let j = m.index; j < m.index + m[0].length; j++) safe[j] = true
+        if (m.index === re.lastIndex) re.lastIndex++
+      }
+    }
+    return safe
+  }
+
   function fix(text) {
     let s = String(text)
     const phraseHits = []
+    // ⚠️ 詞組取代也要看保護區。第一版沒看，結果
+    //    「團膳常使用循環菜單」被改成「團異常使用」、
+    //    「醫院供膳常見問題」被改成「醫院供異常見」——
+    //    那是「團膳 + 常使用」「供膳 + 常見」，膳 字屬於前面的合法詞。
     for (const [a, b] of PHRASES) {
-      if (!s.includes(a)) continue
-      phraseHits.push({ from: a, to: b, n: s.split(a).length - 1 })
-      s = s.split(a).join(b)
+      let at = s.indexOf(a)
+      while (at >= 0) {
+        const mask = maskOf(s)
+        if (mask.slice(at, at + a.length).some(Boolean)) { at = s.indexOf(a, at + 1); continue }
+        s = s.slice(0, at) + b + s.slice(at + a.length)
+        const hit = phraseHits.find(h => h.from === a)
+        if (hit) hit.n++
+        else phraseHits.push({ from: a, to: b, n: 1 })
+        at = s.indexOf(a, at + b.length)
+      }
     }
     if (!s || (![...s].some(c => SUS.has(c)) && !phraseHits.length)) return null
     const chars = [...s]
+    const safe = maskOf(s)
     const changes = []
     for (let i = 0; i < chars.length; i++) {
       const c = chars[i]
-      if (!SUS.has(c)) continue
+      if (!SUS.has(c) || safe[i]) continue
       const Y = MAP[c]
       // 前後文取最近的 CJK（跳過空白與標點），用來驗 bigram
       let p = null, n = null

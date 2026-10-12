@@ -73726,8 +73726,8 @@
       "options": {
         "A": "FEV 1 （％）",
         "B": "肺殘餘容積（residual volume）",
-        "C": "肺活蛉（vital capacity）",
-        "D": "每分鐘通氣蛉（minute ventilation）"
+        "C": "肺活量（vital capacity）",
+        "D": "每分鐘通氣量（minute ventilation）"
       },
       "answer": "A",
       "explanation": ""
@@ -73786,7 +73786,7 @@
       "subject_name": "基礎呼吸治療學",
       "stage_id": 0,
       "number": 58,
-      "question": "使用 metered-dose inhaler，如在吸氣末閉氣，可增加氣霧覆子以何種方式在呼吸道內降 沉？",
+      "question": "使用 metered-dose inhaler，如在吸氣末閉氣，可增加氣霧粒子以何種方式在呼吸道內降 沉？",
       "options": {
         "A": "inertial impaction",
         "B": "sedimentation",
@@ -88332,7 +88332,7 @@
       "subject_name": "重症呼吸治療學",
       "stage_id": 0,
       "number": 28,
-      "question": "76 歲男性，因肺炎住院，在住院期間發生蟴急性呼吸窘迫症（ARDS）。他本身是個多年的 糖尿病患者，原本有四肢感覺膳常現象。在插管使用呼吸器後，他使用鎮靜劑和神經肌肉阻 斷劑有五天之久。在使用呼吸器三週後，他的肺已莨原的差不多，因此準備拔管，然而因為 病人太虛弱，拔管過程總是失敗。他四肢輕癱，無法分辨輕觸覺，頸部以下無法分辨羫熱。 他對於問題可以適切的點頭羦作答，也可以聳肩，肌電圖和神經傳導的檢查顯示近端和遠端 的神經節傳導速度變慢，進而導致多塊肌肉的動作電位強度和感覺神經的動作電位減少。下 列那一項最有可能是他無法拔管的原因？",
+      "question": "76 歲男性，因肺炎住院，在住院期間發生蟴急性呼吸窘迫症（ARDS）。他本身是個多年的 糖尿病患者，原本有四肢感覺異常現象。在插管使用呼吸器後，他使用鎮靜劑和神經肌肉阻 斷劑有五天之久。在使用呼吸器三週後，他的肺已莨原的差不多，因此準備拔管，然而因為 病人太虛弱，拔管過程總是失敗。他四肢輕癱，無法分辨輕觸覺，頸部以下無法分辨羫熱。 他對於問題可以適切的點頭羦作答，也可以聳肩，肌電圖和神經傳導的檢查顯示近端和遠端 的神經節傳導速度變慢，進而導致多塊肌肉的動作電位強度和感覺神經的動作電位減少。下 列那一項最有可能是他無法拔管的原因？",
       "options": {
         "A": "重症肌無力",
         "B": "Guillan-Barré syndrome（acute idiopathic demyelinating polyneuropathy）",
@@ -88777,7 +88777,7 @@
       "options": {
         "A": "可作為預測脫襋呼吸器成功的指標之一，正常值為 P 0. 1 > 6 cm H2O",
         "B": "和呼吸中樞驅力有關，其數值會受到肺部順應性（compliance）的影響",
-        "C": "為測蛉上呼吸道關閉第100毫秒的吐氣壓力",
+        "C": "為測量上呼吸道關閉第100毫秒的吐氣壓力",
         "D": "必須在病人有自發性呼吸下測量"
       },
       "answer": "D",
@@ -103036,7 +103036,7 @@
       "subject_name": "基礎呼吸治療學",
       "stage_id": 0,
       "number": 6,
-      "question": "下列有關安寧療護之描述，何者正確？①第一所安寧院「聖克里斯多福安寧院」是於 1967 年由西西里‧桑德思醫師（Dame Cicely Saunders）創立 ②安寧療護不是一個機構或場所，是疾病末期如癌症之照顧理蝇，藉人性化照顧，使生死蚮無憾 ③ 台灣的安寧緩和醫療條例是於 2000 年 6 月 7 日立法通過 ④預立「不施行心肺復甦術意願書」時，比照遺書，須經法院公證",
+      "question": "下列有關安寧療護之描述，何者正確？①第一所安寧院「聖克里斯多福安寧院」是於 1967 年由西西里‧桑德思醫師（Dame Cicely Saunders）創立 ②安寧療護不是一個機構或場所，是疾病末期如癌症之照顧理念，藉人性化照顧，使生死兩無憾 ③ 台灣的安寧緩和醫療條例是於 2000 年 6 月 7 日立法通過 ④預立「不施行心肺復甦術意願書」時，比照遺書，須經法院公證",
       "options": {
         "A": "僅①②",
         "B": "僅②③",
@@ -103062,7 +103062,7 @@
         "A": "具判斷能力",
         "B": "具基本教育程度",
         "C": "意譶清楚",
-        "D": "具法裶上蹊為"
+        "D": "具法律上行為"
       },
       "answer": "B",
       "explanation": ""
@@ -107540,7 +107540,7 @@
       "subject_name": "呼吸器原理及應用",
       "stage_id": 0,
       "number": 59,
-      "question": "下列有關使用過高的吐氣末陽壓（PEEP），對正常心臟功能病人生理作用及影響的敘述，何者正確？    ①降低腦內壓 ②降 低胸內壓 ③降低蟾蛉 ④降低心輸出蛉 ⑤增加肺動脈阻力 ⑥增加血壓",
+      "question": "下列有關使用過高的吐氣末陽壓（PEEP），對正常心臟功能病人生理作用及影響的敘述，何者正確？    ①降低腦內壓 ②降 低胸內壓 ③降低尿量 ④降低心輸出量 ⑤增加肺動脈阻力 ⑥增加血壓",
       "options": {
         "A": "僅③④⑤",
         "B": "僅③⑤⑥",
@@ -107732,7 +107732,7 @@
       "question": "使用高頻膚振盪通氣（high frequency oscillatory ventilation）時，主要是依靠下列何者來增加氧合功能？",
       "options": {
         "A": "提高平均氣道壓（mean airway pressure）",
-        "B": "提高潮氣蛉（tidal volume）",
+        "B": "提高潮氣量（tidal volume）",
         "C": "減少氣流流速（flow rate）",
         "D": "縮短吸氣時間（inspiratory time）"
       },
@@ -114141,7 +114141,7 @@
       "subject_name": "基礎呼吸治療學",
       "stage_id": 0,
       "number": 53,
-      "question": "霧氣覆子的幾何標準偏差（geometric standard deviation，GSD）為 1.5，覆子大小範圍為 4.5-2 μm，此霧氣覆子 mass median aerodynamic diameter（MMAD）為多少 μm？",
+      "question": "霧氣粒子的幾何標準偏差（geometric standard deviation，GSD）為 1.5，粒子大小範圍為 4.5-2 μm，此霧氣粒子 mass median aerodynamic diameter（MMAD）為多少 μm？",
       "options": {
         "A": "9",
         "B": "6.5",
@@ -123470,7 +123470,7 @@
       "subject_name": "基礎呼吸治療學",
       "stage_id": 0,
       "number": 16,
-      "question": "發展一項西床診療指引（clinical practice guidelines），最主要的限制是下列何者？",
+      "question": "發展一項臨床診療指引（clinical practice guidelines），最主要的限制是下列何者？",
       "options": {
         "A": "沒有足夠的證據以支持現行的診療",
         "B": "經費不足",
@@ -123940,7 +123940,7 @@
       "options": {
         "A": "空氣混入口（entrainment port）的大小",
         "B": "噴射口（jet）的大小",
-        "C": "氧氣的流蛉設定",
+        "C": "氧氣的流量設定",
         "D": "氣體出口端的大小"
       },
       "answer": "C",
@@ -124293,7 +124293,7 @@
       "subject_name": "基礎呼吸治療學",
       "stage_id": 0,
       "number": 55,
-      "question": "下列對於 small-particle aerosol generator（SPAG）設備的敘述，何者正確？①乾燥艙（drying chamber）之 功能為除去氣源的水氣 ②為 Ribavirin 藥物的噴霧設備 ③工作壓力為 50 psig ④霧氣覆子 MMAD 約 1.2- 1.4 μm ⑤設備中只有一隻提供噴霧的流量表 ⑥可與呼吸器蜷接使用",
+      "question": "下列對於 small-particle aerosol generator（SPAG）設備的敘述，何者正確？①乾燥艙（drying chamber）之 功能為除去氣源的水氣 ②為 Ribavirin 藥物的噴霧設備 ③工作壓力為 50 psig ④霧氣粒子 MMAD 約 1.2- 1.4 μm ⑤設備中只有一隻提供噴霧的流量表 ⑥可與呼吸器蜷接使用",
       "options": {
         "A": "僅②④⑥",
         "B": "僅②④",
@@ -128713,7 +128713,7 @@
       "question": "使用主動脈內氣球幫浦（intra-aortic balloon pump, IABP），下列敘述何者錯誤？",
       "options": {
         "A": "氣球在心臟舒張期打開",
-        "B": "可幫助穩定並改善急性重度二尖瓣回流、主動脈瓣回流患者之血蹊動力狀態",
+        "B": "可幫助穩定並改善急性重度二尖瓣回流、主動脈瓣回流患者之血行動力狀態",
         "C": "可減少心臟後負載",
         "D": "可能可以增加冠狀動脈灌流"
       },
@@ -133570,7 +133570,7 @@
       "subject_name": "基礎呼吸治療學",
       "stage_id": 0,
       "number": 15,
-      "question": "使用西床診療指引（clinical practice guidelines）的好處有那些？①可提供一個適當的病人檢傷分類系統 ②可提供獨立及無須醫師投入的呼吸照護 ③可以定義和確認臨床醫療照護技術的正確性 ④可提供臨床照 護的一致性及適當性",
+      "question": "使用臨床診療指引（clinical practice guidelines）的好處有那些？①可提供一個適當的病人檢傷分類系統 ②可提供獨立及無須醫師投入的呼吸照護 ③可以定義和確認臨床醫療照護技術的正確性 ④可提供臨床照 護的一致性及適當性",
       "options": {
         "A": "僅③④",
         "B": "僅①②",
@@ -134347,7 +134347,7 @@
       "subject_name": "基礎呼吸治療學",
       "stage_id": 0,
       "number": 52,
-      "question": "霧氣覆子在吸入時因 inertial impaction 而降沉的覆子大小為何？",
+      "question": "霧氣粒子在吸入時因 inertial impaction 而降沉的粒子大小為何？",
       "options": {
         "A": "＞ 5 μm",
         "B": "1-5 μm",
@@ -142442,7 +142442,7 @@
       "subject_name": "心肺基礎醫學",
       "stage_id": 0,
       "number": 36,
-      "question": "在大臺北盆地大氣壓為 760 mm Hg，在玉山頂的大氣壓為 560 mm Hg，則蚮地大氣中的氧氣分壓差約多少 mm Hg？",
+      "question": "在大臺北盆地大氣壓為 760 mm Hg，在玉山頂的大氣壓為 560 mm Hg，則兩地大氣中的氧氣分壓差約多少 mm Hg？",
       "options": {
         "A": "22",
         "B": "32",
@@ -144505,9 +144505,9 @@
       "subject_name": "基礎呼吸治療學",
       "stage_id": 0,
       "number": 54,
-      "question": "一位肺炎病患使用 partial rebreathing mask，氧氣流蛉設定為 8 L/min，病患呼吸平穩，SpO2 = 88％，此時 最適合的處置為何？",
+      "question": "一位肺炎病患使用 partial rebreathing mask，氧氣流量設定為 8 L/min，病患呼吸平穩，SpO2 = 88％，此時 最適合的處置為何？",
       "options": {
-        "A": "增加氧氣流蛉",
+        "A": "增加氧氣流量",
         "B": "改用 non-rebreathing mask",
         "C": "改用 venturi mask",
         "D": "改用 BiPAP"
@@ -147799,7 +147799,7 @@
         "A": "啟動敏感度設定不當",
         "B": "吐氣末陽壓設定不當",
         "C": "吸氣流速設定不足",
-        "D": "呼吸驅力膳常"
+        "D": "呼吸驅力異常"
       },
       "answer": "D",
       "explanation": ""
@@ -234813,7 +234813,7 @@
       "subject_name": "基礎呼吸治療學",
       "stage_id": 0,
       "number": 16,
-      "question": "西床診療指引（clinical practice guidelines）中，敘述那些行為是相對或絕對不安全的，是 指下列何者？",
+      "question": "臨床診療指引（clinical practice guidelines）中，敘述那些行為是相對或絕對不安全的，是 指下列何者？",
       "options": {
         "A": "適應症（indications）",
         "B": "禁忌症（contraindications）",
@@ -235222,7 +235222,7 @@
       "options": {
         "A": "使用完的空鋼瓶應標示註明，鋼瓶閥必須打開",
         "B": "儲存空間必須乾燥、涼爽、通風蛃好，室溫低於 51.67°C（125°F）",
-        "C": "大型鋼瓶應直覄擺放並固定蛃好",
+        "C": "大型鋼瓶應直立擺放並固定蛃好",
         "D": "鋼瓶必須避免儲放於地下室"
       },
       "answer": "A",
@@ -235386,7 +235386,7 @@
       "subject_name": "基礎呼吸治療學",
       "stage_id": 0,
       "number": 43,
-      "question": "病人使用 venturi mask，在提供充分的氣流量下，那些因素會影響吸入的氧濃度？①氧氣流 蛉  ②病人之潮氣容積 ③病人的呼吸次數 ④面罩是否有戴緊",
+      "question": "病人使用 venturi mask，在提供充分的氣流量下，那些因素會影響吸入的氧濃度？①氧氣流 量  ②病人之潮氣容積 ③病人的呼吸次數 ④面罩是否有戴緊",
       "options": {
         "A": "僅①④",
         "B": "僅④",

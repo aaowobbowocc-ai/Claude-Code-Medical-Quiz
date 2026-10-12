@@ -49052,7 +49052,7 @@
         "A": "這是一個康普吞散射的例子",
         "B": "會產生特性輻射",
         "C": "可能發射出鄂惹電子",
-        "D": "電子會在距射出點一公分軟組織內被吸收"
+        "D": "電子會在放射出點一公分軟組織內被吸收"
       },
       "answer": "A",
       "explanation": ""
@@ -69432,7 +69432,7 @@
       "question": "依據ICRU的定義，子宮頸癌腔內近接放射治療計畫所考慮的直腸劑量參考點，蚡從正面X光片 （frontal radiograph）羦看位於何處？",
       "options": {
         "A": "位於tandem下方",
-        "B": "位於蚮個ovoid 中間",
+        "B": "位於兩個ovoid 中間",
         "C": "位於陰道壁後方5 mm",
         "D": "位於膀胱壁後方5 mm"
       },
@@ -69880,7 +69880,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 79,
-      "question": "假設模擬定位片的放大率為1.4倍，對SAD=100 cm的機器，鉛合金擋塊被放置在距射源65 cm處， 則切割Styrofoam時，SFD（source-to-film distance）的距離為：",
+      "question": "假設模擬定位片的放大率為1.4倍，對SAD=100 cm的機器，鉛合金擋塊被放置在放射源65 cm處， 則切割Styrofoam時，SFD（source-to-film distance）的距離為：",
       "options": {
         "A": "65 cm",
         "B": "100 cm",
@@ -69900,7 +69900,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": "【題組情境】假設模擬定位片的放大率為1.4倍，對SAD=100 cm的機器，鉛合金擋塊被放置在距射源65 cm處， 則切割Styrofoam時，SFD（source-to-film distance）的距離為：\n\n承上題，直徑10 cm的照野，鉛合金擋塊中空處直徑應為：",
+      "question": "【題組情境】假設模擬定位片的放大率為1.4倍，對SAD=100 cm的機器，鉛合金擋塊被放置在放射源65 cm處， 則切割Styrofoam時，SFD（source-to-film distance）的距離為：\n\n承上題，直徑10 cm的照野，鉛合金擋塊中空處直徑應為：",
       "options": {
         "A": "4.5",
         "B": "5.5",
@@ -69909,7 +69909,7 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 79 題：假設模擬定位片的放大率為1.4倍，對SAD=100 cm的機器，鉛合金擋塊被放置在距射源65 cm處， 則切割Styrofoam時，SFD（source-to-film distance）的距離為："
+      "case_context": "第 79 題：假設模擬定位片的放大率為1.4倍，對SAD=100 cm的機器，鉛合金擋塊被放置在放射源65 cm處， 則切割Styrofoam時，SFD（source-to-film distance）的距離為："
     },
     {
       "id": 117206,
@@ -71925,7 +71925,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 19,
-      "question": "數位放射攝影(digital radiography)系統中，若影像接收器（image receptor）大小為40 cm × 40 cm，影像矩陣（image matrix）大小為4096 × 4096，每一個畫素（pixel）的灰階數為 16384，儲存此張影像至少需要多少位元組（bytes）的記憶體容蛉？",
+      "question": "數位放射攝影(digital radiography)系統中，若影像接收器（image receptor）大小為40 cm × 40 cm，影像矩陣（image matrix）大小為4096 × 4096，每一個畫素（pixel）的灰階數為 16384，儲存此張影像至少需要多少位元組（bytes）的記憶體容量？",
       "options": {
         "A": "26.2 MB",
         "B": "172 MB",
@@ -72067,7 +72067,7 @@
       "number": 26,
       "question": "旋轉陽極靶材料中常使用鉬（Mo）與石墨（graphite），其主要目的為何？",
       "options": {
-        "A": "增加陽極靶熱容蛉",
+        "A": "增加陽極靶熱容量",
         "B": "增加X光子產生效率",
         "C": "增加管電流值",
         "D": "降低旋轉陽極的轉速"
@@ -82465,7 +82465,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 60,
-      "question": "下圖為數種血管內近接治療射源的橫向劑量（radial dose）降低情形，並normalized到距射 源中心2 mm處，請問標示為①者是下列那一個射源？",
+      "question": "下圖為數種血管內近接治療射源的橫向劑量（radial dose）降低情形，並normalized到放射 源中心2 mm處，請問標示為①者是下列那一個射源？",
       "options": {
         "A": "Ir-192",
         "B": "Pd-103",
@@ -82838,7 +82838,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 78,
-      "question": "在PET儀器中，最常使用以進蹊衰減校正（attenuation correction）的正子射出放射核種 為：",
+      "question": "在PET儀器中，最常使用以進行衰減校正（attenuation correction）的正子射出放射核種 為：",
       "options": {
         "A": "235 U",
         "B": "82 Rb",
@@ -91465,10 +91465,10 @@
       "number": 17,
       "question": " X光設備其能量輸出的半值層（half-value layer）愈厚，則表示：",
       "options": {
-        "A": "只有特性距射光子能通過",
-        "B": "通過光子其特性距射所占比螂大",
-        "C": "通過光子的平均能蛉愈小",
-        "D": "通過光子的平均能蛉愈大"
+        "A": "只有特性放射光子能通過",
+        "B": "通過光子其特性放射所占比螂大",
+        "C": "通過光子的平均能量愈小",
+        "D": "通過光子的平均能量愈大"
       },
       "answer": "D",
       "explanation": ""
@@ -92377,7 +92377,7 @@
       "number": 60,
       "question": " 根據AAPM TG-60的建議，intracoronary irradiation劑量投予點的橫向深度位於何處？",
       "options": {
-        "A": "距射源中心2 mm處",
+        "A": "放射源中心2 mm處",
         "B": "超過血管半徑5 mm處",
         "C": "距血栓最厚處再往外4 mm",
         "D": "血管外壁表面處"
@@ -93801,11 +93801,11 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 47,
-      "question": " 逆蹊性核醫膀胱攝影（retrograde radionuclide cystography）用以診斷下列何種疾病？",
+      "question": " 逆行性核醫膀胱攝影（retrograde radionuclide cystography）用以診斷下列何種疾病？",
       "options": {
-        "A": "膀胱輸蟾管逆流（vesicoureteral reflux）",
+        "A": "膀胱輸尿管逆流（vesicoureteral reflux）",
         "B": "良性攝護腺肥大（benign prostate hypertrophy）",
-        "C": "輸蟾管結石（ureter stone）",
+        "C": "輸尿管結石（ureter stone）",
         "D": "膀胱癌（bladder cancer）"
       },
       "answer": "A",
@@ -98445,7 +98445,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 27,
-      "question": " 以 60 Co來治療病人，已知SSD=80 cm 與照野10×10 cm 2 時，距射源80.5 cm處的空氣劑量率 是150 cGy/min。在此設定下，其BSF=1.036，深度10 cm處的PDD=64.1。若想深度10 cm 處劑量達250 cGy，需治療多少分鐘？",
+      "question": " 以 60 Co來治療病人，已知SSD=80 cm 與照野10×10 cm 2 時，放射源80.5 cm處的空氣劑量率 是150 cGy/min。在此設定下，其BSF=1.036，深度10 cm處的PDD=64.1。若想深度10 cm 處劑量達250 cGy，需治療多少分鐘？",
       "options": {
         "A": "1.67",
         "B": "2.51",
@@ -98487,7 +98487,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 29,
-      "question": " 已知6MV射束在標準參考點（SAD=100 cm，深度5 cm，照野10×10 cm 2 ）的劑蛉膚為1 cGy/MU。若以此射束治療病人，治療深度=9 cm ，照野大小=7×7 cm 2 ，S c,p (7×7)=0.981， TPR(9, 7×7)=0.891，治療劑蛉=200 cGy，試計算治療所需MU設定約為多少？",
+      "question": " 已知6MV射束在標準參考點（SAD=100 cm，深度5 cm，照野10×10 cm 2 ）的劑量率為1 cGy/MU。若以此射束治療病人，治療深度=9 cm ，照野大小=7×7 cm 2 ，S c,p (7×7)=0.981， TPR(9, 7×7)=0.891，治療劑量=200 cGy，試計算治療所需MU設定約為多少？",
       "options": {
         "A": "174",
         "B": "182",
@@ -103873,7 +103873,7 @@
       "number": 42,
       "question": " 使用 99m Tc-DMSA進行腎臟核醫檢查，可診斷下列何種疾病？",
       "options": {
-        "A": "輸蟾管腎盂阻塞（ureteropelvic junction obstruction）",
+        "A": "輸尿管腎盂阻塞（ureteropelvic junction obstruction）",
         "B": "異位腎（ectopic kidney）",
         "C": "腎結石（renal stone）",
         "D": "腎血管性高血壓（renovascular hypertension）"
@@ -105480,7 +105480,7 @@
         "A": "低頻率的聲音會使鼓膜（tympanic membrane）的振動頻率增加",
         "B": "鼓膜（tympanic membrane）是聲音放大的最主要所在",
         "C": "羆圓窗（oval window）與鼓膜（tympanic membrane）震動大小是一樣的",
-        "D": "音蛉大小，可使耳蝸神經（cochlear nerve）動作電位產生的頻裹改變"
+        "D": "音量大小，可使耳蝸神經（cochlear nerve）動作電位產生的頻裹改變"
       },
       "answer": "D",
       "explanation": ""
@@ -109210,7 +109210,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 54,
-      "question": " 欲以一9 MeV的電子射束治療病人（SSD=100 cm，照野=10×10 cm 2 ），使得表皮下2 cm處得到190 cGy的劑蛉，應該給予多 少MU？（9 MeV在15×15 cm 2 照野輸出值為1 cGy/MU，10×10 cm 2 照野的相對輸出因子1.083，且2 cm處的PDD為91.5）",
+      "question": " 欲以一9 MeV的電子射束治療病人（SSD=100 cm，照野=10×10 cm 2 ），使得表皮下2 cm處得到190 cGy的劑量，應該給予多 少MU？（9 MeV在15×15 cm 2 照野輸出值為1 cGy/MU，10×10 cm 2 照野的相對輸出因子1.083，且2 cm處的PDD為91.5）",
       "options": {
         "A": "192",
         "B": "209",
@@ -109654,7 +109654,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 75,
-      "question": " 醫用直線加速器每月品質保證作業項目中，電子輸出劑蛉之容許誤差需小於百分之幾？",
+      "question": " 醫用直線加速器每月品質保證作業項目中，電子輸出劑量之容許誤差需小於百分之幾？",
       "options": {
         "A": "1",
         "B": "2",
@@ -109696,7 +109696,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 77,
-      "question": " 電腦斷層治療機、準直儀中心與距射照野對準之品質保證作業，其正確性為：",
+      "question": " 電腦斷層治療機、準直儀中心與放射照野對準之品質保證作業，其正確性為：",
       "options": {
         "A": "小於2毫米及小於1度",
         "B": "小於3毫米及小於3度",
@@ -114114,7 +114114,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 44,
-      "question": " 使用 99m Tc-DTPA氣霧化成小懸浮覆子（aerosol particles）進蹊肺通氣掃描時，例行的放射藥物劑量與備製為：",
+      "question": " 使用 99m Tc-DTPA氣霧化成小懸浮粒子（aerosol particles）進行肺通氣掃描時，例行的放射藥物劑量與備製為：",
       "options": {
         "A": "1～2mL體積內含10～15 mCi 的 99m Tc-DTPA",
         "B": "4～5mL體積內含35～40 mCi 的 99m Tc-DTPA",
@@ -114135,7 +114135,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 45,
-      "question": " 使用 99m Tc-DTPA氣霧化成小懸浮覆子（aerosol particles）進蹊肺通氣掃描時，下列敘述何者正確？",
+      "question": " 使用 99m Tc-DTPA氣霧化成小懸浮粒子（aerosol particles）進行肺通氣掃描時，下列敘述何者正確？",
       "options": {
         "A": "若用以偵測肺泡-微血管通透性（permeability）的改變，則進行多方位的靜態攝影",
         "B": "若要進行多方位的靜態攝影，必須根據後位（posterior view）攝影200K～300K計數收錄時間，其他方位攝影的收錄時間與 後位的收錄時間一致",
@@ -116683,7 +116683,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 6,
-      "question": " 能蛉為511 keV的光子與電子發生不合調散射（incoherent scattering）作用，則散射光子的能蛉（keV）範圍為何？",
+      "question": " 能量為511 keV的光子與電子發生不合調散射（incoherent scattering）作用，則散射光子的能量（keV）範圍為何？",
       "options": {
         "A": "0～170",
         "B": "0～340",
@@ -117602,7 +117602,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 49,
-      "question": " 已知0.6 MeV 之γ光子通膚為1×10 8 個光子⁄秒‧cm 2 ，其在軟組織中的能蛉吸收係數為0.0339 cm -1 ，軟組織的密度為1.04 g/cm 3 ，試求其吸收劑蛉膚為多少Gy/hr？",
+      "question": " 已知0.6 MeV 之γ光子通膚為1×10 8 個光子⁄秒‧cm 2 ，其在軟組織中的能量吸收係數為0.0339 cm -1 ，軟組織的密度為1.04 g/cm 3 ，試求其吸收劑量率為多少Gy/hr？",
       "options": {
         "A": "0.770",
         "B": "0.992",
@@ -118439,7 +118439,7 @@
       "number": 9,
       "question": "有關細胞存活曲線中D 0 值的敘述，何者正確？",
       "options": {
-        "A": "是細胞存活膚降至10%所需的劑蛉值",
+        "A": "是細胞存活率降至10%所需的劑量值",
         "B": "D0越大，放射敏感度越大",
         "C": "相當於細胞存活曲線的起始斜率（initial slope）",
         "D": "哺乳類細胞的D 0 值約在1～2 Gy間"
@@ -118701,7 +118701,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 22,
-      "question": "已知60Co治療機在SSD=80 cm與照野10×10 cm2時，距射源80.5 cm處的空氣劑量率是150 cGy/min。在此設定下，其BSF=1.036，深度10 cm處的PDD=64.1，則此深度的劑量率是多少cGy/min？",
+      "question": "已知60Co治療機在SSD=80 cm與照野10×10 cm2時，放射源80.5 cm處的空氣劑量率是150 cGy/min。在此設定下，其BSF=1.036，深度10 cm處的PDD=64.1，則此深度的劑量率是多少cGy/min？",
       "options": {
         "A": "96.2",
         "B": "99.6",
@@ -119304,7 +119304,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 52,
-      "question": "下列何者的定義為「在中心軸上之組織最大劑量，除以自由空間（free space）該點的劑蛉」？",
+      "question": "下列何者的定義為「在中心軸上之組織最大劑量，除以自由空間（free space）該點的劑量」？",
       "options": {
         "A": "回散射因子（BSF）",
         "B": "百分深度劑量（PDD）",
@@ -131340,7 +131340,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 6,
-      "question": "使用一平蹊X光柵（parallel grid），柵高（height of the grid strip）為2.4 mm且鉛條間寬（grid strip interspace width）為300 μm，已知SID（source-to-image receptor distance）為120 cm，則影像接受器中央 軸到截止距離（distance to cutoff）為多少cm？",
+      "question": "使用一平行X光柵（parallel grid），柵高（height of the grid strip）為2.4 mm且鉛條間寬（grid strip interspace width）為300 μm，已知SID（source-to-image receptor distance）為120 cm，則影像接受器中央 軸到截止距離（distance to cutoff）為多少cm？",
       "options": {
         "A": "5",
         "B": "10",
@@ -131711,7 +131711,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 24,
-      "question": "當X光攝影系統的管電壓增加時，X光機輸出X光的蛉（quantity）及品質（quality）分別會做何改變？",
+      "question": "當X光攝影系統的管電壓增加時，X光機輸出X光的量（quantity）及品質（quality）分別會做何改變？",
       "options": {
         "A": "增加，不變",
         "B": "下降，變低",
@@ -153131,8 +153131,8 @@
       "question": "下圖造影結果最可能的診斷是：",
       "options": {
         "A": "腸道出血（intestinal bleeding）",
-        "B": "輸蟾管腎盂阻塞（ureteropelvic junction obstruction）",
-        "C": "膀胱輸蟾管逆流（vesicoureteral reflux）",
+        "B": "輸尿管腎盂阻塞（ureteropelvic junction obstruction）",
+        "C": "膀胱輸尿管逆流（vesicoureteral reflux）",
         "D": "胃食道逆流攝影（gastroesophageal reflux）"
       },
       "answer": "C",
@@ -200257,7 +200257,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 56,
-      "question": "下圖為數種血管內近接治療射源的橫向劑量（radial dose）降低情形，並normalized到距射源中心2 mm處，請 問標示為④者是下列那一個射源？",
+      "question": "下圖為數種血管內近接治療射源的橫向劑量（radial dose）降低情形，並normalized到放射源中心2 mm處，請 問標示為④者是下列那一個射源？",
       "options": {
         "A": "125 I",
         "B": "103 Pd",

@@ -41,6 +41,27 @@ const MAP = {
   '蜕': '年',  // 1.26
   '葝': '數',  // 1.21（計葝器→計數器、激發次葝→激發次數）
 }
+// 第二批（2026-10-12）。出現次數少到可以逐一看過，全部查證無誤：
+Object.assign(MAP, {
+  '襬': '鱗',  // 襬狀細胞癌 / 子宮頸襬狀上皮癌 → 鱗狀
+  '裩': '倫',  // 符合醫學裩理 → 醫學倫理
+  '蜄': '力',  // 心智能蜄 / 肌蜄 / 氣道阻蜄 / 血流動蜄 / 重症肌無蜄
+  '葲': '參',  // 基準葲考線 / 葲與國際衛生組織 / 標準葲考點
+  '豣': '切',  // 豣片證實 / 適豣的點頭
+})
+
+/**
+ * 混用的壞字只能做**詞組**取代，不能做字元取代：
+ *   蟾 —— 「蟾蜍」是真的（盤古蟾蜍、蟾蜍二烯內酯），但「赇蟾病」是糖尿病
+ *   赇 —— 「赇蟾病」「血赇」是糖，「多赇體」是醣（polysaccharide），兩個字不同
+ * 詞組先套，剩下的單字再交給 MAP。
+ */
+const PHRASES = [
+  ['赇蟾病', '糖尿病'],
+  ['血赇', '血糖'],
+  ['多赇體', '多醣體'],
+]
+
 const SUS = new Set(Object.keys(MAP))
 
 ;(async () => {
@@ -71,8 +92,14 @@ const SUS = new Set(Object.keys(MAP))
 
   /** 回傳 { out, changes:[{from,to,ctx,ok}] }。ok=false 的那一處不會被改。 */
   function fix(text) {
-    const s = String(text)
-    if (!s || ![...s].some(c => SUS.has(c))) return null
+    let s = String(text)
+    const phraseHits = []
+    for (const [a, b] of PHRASES) {
+      if (!s.includes(a)) continue
+      phraseHits.push({ from: a, to: b, n: s.split(a).length - 1 })
+      s = s.split(a).join(b)
+    }
+    if (!s || (![...s].some(c => SUS.has(c)) && !phraseHits.length)) return null
     const chars = [...s]
     const changes = []
     for (let i = 0; i < chars.length; i++) {
@@ -88,6 +115,7 @@ const SUS = new Set(Object.keys(MAP))
       changes.push({ from: c, to: Y, ctx, ok })
       if (ok) chars[i] = Y
     }
+    for (const h of phraseHits) changes.push({ from: h.from, to: h.to, ctx: h.from + '→' + h.to, ok: true, n: h.n })
     return { out: chars.join(''), changes }
   }
 
@@ -124,7 +152,8 @@ const SUS = new Set(Object.keys(MAP))
 
   console.log('逐字統計（通過 bigram 驗證、已換掉的）：')
   for (const [c, n] of Object.entries(byChar).sort((a, b) => b[1] - a[1])) {
-    console.log(`  ${c} → ${MAP[c]}   ${String(n).padStart(3)} 處   例：${(samples[c] || []).join('  ')}`)
+    const to = MAP[c] || (PHRASES.find(p => p[0] === c) || [])[1] || '?'
+    console.log(`  ${c} → ${to}   ${String(n).padStart(3)} 處   例：${(samples[c] || []).join('  ')}`)
   }
   console.log(`\n換掉 ${nFix} 處｜bigram 驗不過、保留原字 ${nSkip} 處${APPLY ? '' : '（dry-run）'}`)
   for (const s of skipped) console.log(`  ⊘ ${s.f.replace(/questions-?|\.json/g, '') || 'doctor1'} #${s.n}  ${s.from}→${s.to}  …${s.ctx}…`)

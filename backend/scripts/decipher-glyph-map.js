@@ -36,86 +36,116 @@ const BK = path.join(__dirname, '..')
 const MINC = +((process.argv.find(a => a.startsWith('--min-count=')) || '').split('=')[1]) || 4
 const CJK = /[一-鿿]/
 
-/** lift 破百、幾乎只出現在損壞題幹裡的字。來自 audit-stem-corruption.js 的統計。 */
-const SUSPECT = [...'蜕菘蜻蠋甀葝败躏蹋褺蛉蚮蛯觑荊谜蒠装']
+/**
+ * 自動找可疑字：**一個字如果它的前後搭配幾乎從不出現在乾淨語料裡，它就可疑。**
+ *
+ * 第一版是把肉眼挑出來的字寫死在這裡。那會漏——修完第一批 13 個字之後，
+ * diff 裡馬上又看到 輸蟾管（尿）、襬狀上皮癌（鱗）、醫學裩理（倫）、
+ * 血流動蜄（力）、赇蟾病（糖尿）、葲考線（參）、豣片（切）。
+ * 壞字是一整批同時產生的，要靠統計一次抓完，不是一輪一輪用眼睛撿。
+ *
+ * 判準：這個字出現 >= MIN_OCC 次，而且其中 >= 85% 的出現處，
+ * 前後兩個 bigram 在乾淨語料裡**都沒見過**。正常用字不可能這樣。
+ */
+function findSuspects(all, fwdSeen, uniAll) {
+  const out = []
+  for (const [c, occ] of all) {
+    if (occ.length < MIN_OCC) continue
+    let orphan = 0
+    for (const { prev, next } of occ) {
+      const okP = prev && fwdSeen.get(prev)?.has(c)
+      const okN = next && fwdSeen.get(c)?.has(next)
+      if (!okP && !okN) orphan++
+    }
+    if (orphan / occ.length >= 0.85) out.push({ c, n: occ.length, orphan })
+  }
+  return out.sort((a, b) => b.n - a.n)
+}
+const MIN_OCC = 4
+const KNOWN_FIXED = [...'蜻蠋躏觑败蒠蹋菘装褺甀蜕葝']   // 上一輪已經修掉的
+const NEVER = [...'荊蛉']                              // 有合法用法，不要碰
 
 ;(async () => {
-  const suspect = new Set(SUSPECT)
   const files = fs.readdirSync(BK).filter(f => /^questions(-[a-z0-9-]*)?\.json$/.test(f))
-
-  // ── 1. 乾淨語料的 bigram ───────────────────────────────────────────
-  const fwd = new Map()   // prev → Map(next → n)
-  const bwd = new Map()   // next → Map(prev → n)
-  const uni = new Map()
-  const contexts = new Map()  // 可疑字 → [{prev,next}]
-  let cleanChars = 0
-
-  const bump = (m, a, b) => {
-    if (!m.has(a)) m.set(a, new Map())
-    const x = m.get(a)
-    x.set(b, (x.get(b) || 0) + 1)
-  }
-
+  const sents = []
   for (const f of files) {
     const arr = (j => j.questions || j)(JSON.parse(fs.readFileSync(path.join(BK, f), 'utf8')))
     if (!Array.isArray(arr)) continue
     for (const q of arr) {
-      const texts = [String(q.question || ''), ...['A', 'B', 'C', 'D'].map(k => String(q.options?.[k] || ''))]
-      for (const raw of texts) {
-        const s = raw.replace(/\s+/g, '')
-        const dirty = [...s].some(c => suspect.has(c))
-        for (let i = 0; i < s.length; i++) {
-          const c = s[i]
-          if (suspect.has(c)) {
-            // 前後文只取 CJK，標點與英數當作沒有
-            const prev = i > 0 && CJK.test(s[i - 1]) && !suspect.has(s[i - 1]) ? s[i - 1] : null
-            const next = i + 1 < s.length && CJK.test(s[i + 1]) && !suspect.has(s[i + 1]) ? s[i + 1] : null
-            if (prev || next) {
-              if (!contexts.has(c)) contexts.set(c, [])
-              contexts.get(c).push({ prev, next })
-            }
-            continue
-          }
-          if (dirty) continue                       // 髒句子不進乾淨語料
-          if (!CJK.test(c)) continue
-          cleanChars++
-          uni.set(c, (uni.get(c) || 0) + 1)
-          const nx = s[i + 1]
-          if (nx && CJK.test(nx) && !suspect.has(nx)) { bump(fwd, c, nx); bump(bwd, nx, c) }
-        }
+      for (const raw of [String(q.question || ''), ...['A', 'B', 'C', 'D'].map(k => String(q.options?.[k] || ''))]) {
+        const t = raw.replace(/\s+/g, '')
+        if (t) sents.push(t)
       }
     }
   }
-  console.log(`乾淨語料 ${cleanChars.toLocaleString()} 字，${uni.size} 個相異字\n`)
 
-  // ── 2. 逐字解 ────────────────────────────────────────────────────
+  // ── 全站字頻 ──────────────────────────────────────────────────
+  const uniAll = new Map()
+  for (const s of sents) for (const c of s) if (CJK.test(c)) uniAll.set(c, (uniAll.get(c) || 0) + 1)
+
+  // ── 「乾淨」bigram：排除所有罕用字（全站 < RARE 次）之後統計。
+  //    壞字全都是罕用字，排掉它們才不會讓「治蠋」這種壞搭配被當成合法。
+  const RARE = 50
+  const rare = c => (uniAll.get(c) || 0) < RARE
+  const fwdSeen = new Map()   // a → Set(b)
+  const fwd = new Map(), uni = new Map()
+  let cleanChars = 0
+  const bump = (m, a, b) => { if (!m.has(a)) m.set(a, new Map()); const x = m.get(a); x.set(b, (x.get(b) || 0) + 1) }
+  for (const s of sents) {
+    for (let i = 0; i < s.length; i++) {
+      const c = s[i]
+      if (!CJK.test(c) || rare(c)) continue
+      cleanChars++
+      uni.set(c, (uni.get(c) || 0) + 1)
+      const n = s[i + 1]
+      if (n && CJK.test(n) && !rare(n)) {
+        bump(fwd, c, n)
+        if (!fwdSeen.has(c)) fwdSeen.set(c, new Set())
+        fwdSeen.get(c).add(n)
+      }
+    }
+  }
+  console.log(`語料 ${sents.length.toLocaleString()} 句，排除罕用字後 ${cleanChars.toLocaleString()} 字、${uni.size} 個相異字\n`)
+
+  // ── 每個罕用字的出現前後文 ─────────────────────────────────────
+  const occ = new Map()
+  for (const s of sents) {
+    for (let i = 0; i < s.length; i++) {
+      const c = s[i]
+      if (!CJK.test(c) || !rare(c)) continue
+      const prev = i > 0 && CJK.test(s[i - 1]) && !rare(s[i - 1]) ? s[i - 1] : null
+      const next = i + 1 < s.length && CJK.test(s[i + 1]) && !rare(s[i + 1]) ? s[i + 1] : null
+      if (!prev && !next) continue
+      if (!occ.has(c)) occ.set(c, [])
+      occ.get(c).push({ prev, next })
+    }
+  }
+
+  const suspects = findSuspects(occ, fwdSeen, uniAll)
+    .filter(x => !NEVER.includes(x.c))
+  console.log(`自動偵測到 ${suspects.length} 個可疑字（出現 ≥${MIN_OCC} 次、≥85% 的前後搭配在語料裡沒見過）\n`)
+
+  // ── 逐字解 ──────────────────────────────────────────────────
   const SMOOTH = 0.4
-  const total = cleanChars || 1
   const cand = [...uni.entries()].filter(([, n]) => n >= 20).map(([c]) => c)
   const out = {}
-  for (const X of SUSPECT) {
-    const ctx = contexts.get(X) || []
-    if (ctx.length < MINC) continue
+  for (const { c: X, n } of suspects) {
+    const ctx = occ.get(X)
     const scores = []
     for (const Y of cand) {
       let s = 0
-      // ⚠️ 兩項都用 P(Y|context) 會把 Y 的先驗平方，「的」就永遠贏
-      //    （甀 本來是「瘀」、蛉 是「量」、褺 是「理」，全被判成「的」）。
-      //    正規的 bigram 鏈是 P(Y|prev) × P(next|Y)，只帶一次 Y 的先驗。
       const nY = (uni.get(Y) || 0) + SMOOTH * uni.size
       for (const { prev, next } of ctx) {
         if (prev) s += Math.log(((fwd.get(prev)?.get(Y) || 0) + SMOOTH) / ((uni.get(prev) || 1) + SMOOTH * uni.size))
         if (next) s += Math.log(((fwd.get(Y)?.get(next) || 0) + SMOOTH) / nY)
       }
-      // ⚠️ 不要加「偏好常用字」的先驗。試過 0.15 的權重，結果把 甀(瘀)、褺(理)、
-      //    蚮(兩) 全部拉成「的」——「的」太常見，先驗一加就淹掉 bigram 的訊號。
-      //    bigram 本身的鑑別力已經夠。
       scores.push({ Y, s })
     }
     scores.sort((a, b) => b.s - a.s)
     const [a, b] = scores
-    const margin = (a.s - b.s) / ctx.length              // 每次出現平均領先多少 log 單位
-    out[X] = { count: ctx.length, best: a.Y, top3: scores.slice(0, 3).map(x => x.Y), margin: +margin.toFixed(2) }
+    const margin = (a.s - b.s) / ctx.length
+    const done = KNOWN_FIXED.includes(X)
+    out[X] = { count: ctx.length, best: a.Y, top3: scores.slice(0, 3).map(x => x.Y), margin: +margin.toFixed(2), alreadyFixed: done }
     const flag = margin >= 1.5 ? '可信  ' : margin >= 0.7 ? '偏弱  ' : '不可信'
     const sample = ctx.slice(0, 4).map(c => `${c.prev || '·'}${X}${c.next || '·'}`).join(' ')
     console.log(`  ${X} → ${a.Y}  ${flag} ${String(ctx.length).padStart(3)}次 margin ${margin.toFixed(2).padStart(5)}  前三 ${scores.slice(0, 3).map(x => x.Y).join('')}   例：${sample}`)

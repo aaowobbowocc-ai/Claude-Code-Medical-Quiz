@@ -83,6 +83,7 @@ function inPaper(stem, texts) {
   console.log(`全站題幹索引 ${index.length} 題\n`)
 
   const report = []
+  const lowPaper = []
   let papers = 0, unresolved = 0, wholePaper = 0
   for (const f of files) {
     const exam = EXAM(f)
@@ -109,9 +110,15 @@ function inPaper(stem, texts) {
       if (!text || !text[0] || text[0].length < 200) { unresolved++; continue }
       const judged = items.filter(q => !tooShort(q.question))
       const foreign = judged.filter(q => !inPaper(q.question, text))
-      // 自我檢查：這張卷如果連 60% 都對不上，多半是對到錯的卷或文字層壞掉，
-      // 整卷不判，免得把一整卷好題列成外來題。
-      if (judged.length && (judged.length - foreign.length) / judged.length < 0.6) { unresolved++; continue }
+      // 自我檢查：這張卷如果連 60% 都對不上，可能是對到錯的卷，也可能是整卷真的壞了。
+      // ⚠️ 第一版在這裡直接 continue，於是把醫師一階 106020 整個漏掉——
+      //    那兩卷是「兩張卷被交錯合併」，命中率只有 53%/54%，被當成對到錯的卷跳過。
+      //    現在要報出來，讓人看一眼再決定。
+      if (judged.length && (judged.length - foreign.length) / judged.length < 0.6) {
+        lowPaper.push({ exam, code, subject, hit: judged.length - foreign.length, total: judged.length })
+        unresolved++
+        continue
+      }
       papers++
       if (!foreign.length) continue
       if (foreign.length > MAX) {

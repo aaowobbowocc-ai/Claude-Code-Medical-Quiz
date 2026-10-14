@@ -40072,7 +40072,7 @@
       "subject_name": "解剖學",
       "stage_id": 1,
       "number": 16,
-      "question": "若動眼神經完全麻痺，眼球會偏向何處？",
+      "question": "若動眼神經完全麻痺（complete oculomotor nerve palsy），但滑車神經（trochlear nerve）及外旋神經（abducent nerve）並未受損，則病患受影響的眼球瞳孔會朝向？",
       "options": {
         "A": "正上方",
         "B": "內上方",
@@ -44541,14 +44541,14 @@
       "subject_name": "病理學",
       "stage_id": 8,
       "number": 35,
-      "question": "成人中樞神經系統中，下列何者最常形成原發型腫瘤？",
+      "question": "下列何種節肢動物，主要以機械性傳播（mechanical transmission）方式媒介病原體？",
       "options": {
-        "A": "神經母細胞（neuroblasts）",
-        "B": "淋巴細胞（lymphocytes）",
-        "C": "纖維性星狀膠細胞（fibrous astrocytes）",
-        "D": "寡突神經膠質細胞（oligodendrocytes）"
+        "A": "蚊（mosquito）",
+        "B": "家蠅（house fly）",
+        "C": "跳蚤（flea）",
+        "D": "體蝨（body louse）"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "",
       "_original_number": 37
     },
@@ -46211,14 +46211,14 @@
       "subject_name": "生物化學",
       "stage_id": 3,
       "number": 20,
-      "question": "成熟的B細胞可以同時表現IgD與IgM兩種免疫球蛋白於細胞表面上，其主要的分子機制為何？",
+      "question": "當以食指穿入心包橫竇（transverse pericardial sinus），那些血管會位於食指之前？",
       "options": {
-        "A": "RNA多樣裁接（alternative splicing）",
-        "B": "對偶基因排除（allelic exclusion）",
-        "C": "V(D)J片段重組（recombination）",
-        "D": "基因轉換（gene conversion）"
+        "A": "肺動脈與下腔靜脈",
+        "B": "主動脈與上腔靜脈",
+        "C": "主動脈與肺動脈",
+        "D": "肺靜脈與上腔靜脈"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "",
       "_original_number": 19
     },
@@ -74650,7 +74650,7 @@
       "subject_name": "生物化學",
       "stage_id": 3,
       "number": 29,
-      "question": "去氧（deoxyuridylate, dUMP）轉變為胸（thymidylate, dTMP）之反應需要何種輔參與？",
+      "question": "去氧（deoxyuridylate, dUMP）轉變為胸（thymidylate, dTMP）之反應需要何種輔參與？",
       "options": {
         "A": "Coenzyme A",
         "B": "Biotin",
@@ -74659,8 +74659,7 @@
       },
       "answer": "D",
       "explanation": "",
-      "_original_number": 29,
-      "disputed": true
+      "_original_number": 29
     },
     {
       "id": 1150203617,
@@ -111571,7 +111570,7 @@
       "subject_name": "生物化學",
       "stage_id": 3,
       "number": 29,
-      "question": "下列維生素何者為輔A（coenzyme A）的結構成分？",
+      "question": "下列維生素何者為輔A（coenzyme A）的結構成分？",
       "options": {
         "A": "Pantothenic acid",
         "B": "Ascorbic acid",
@@ -111580,8 +111579,7 @@
       },
       "answer": "A",
       "explanation": "",
-      "_original_number": 29,
-      "disputed": true
+      "_original_number": 29
     },
     {
       "id": 1150205374,
@@ -130701,14 +130699,15 @@
       "subject_name": "解剖學",
       "stage_id": 1,
       "number": 71,
-      "question": "在飢餓數日之後，有關甲狀腺素（T、T、RT）分泌和功能所受之影響，下列敘述何者最適當？3 4 3",
+      "question": "在飢餓數日之後，有關甲狀腺素（T3、T4、RT3）分泌和功能所受之影響，下列敘述何者最適當？",
       "options": {
-        "A": "數日飢餓對血漿中T濃度的影響最為明顯4",
-        "B": "血漿中RT濃度最不會受到數日飢餓狀態所影響3",
-        "C": "在先經歷數日飢餓，而後再進食之狀態下，血漿中T濃度上升最為明顯3",
-        "D": "在先經歷數日飢餓，而後再進食之狀態下，血漿中T濃度上升最為明顯4"
+        "A": "數日飢餓對血漿中T4濃度的影響最為明顯",
+        "B": "血漿中RT3濃度最不會受到數日飢餓狀態所影響",
+        "C": "在先經歷數日飢餓，而後再進食之狀態下，血漿中T3濃度上升最為明顯",
+        "D": "在先經歷數日飢餓，而後再進食之狀態下，血漿中T4濃度上升最為明顯"
       },
-      "answer": "C"
+      "answer": "C",
+      "explanation": ""
     },
     {
       "id": "115090_0_72",

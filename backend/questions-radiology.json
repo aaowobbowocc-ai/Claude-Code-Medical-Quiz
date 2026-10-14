@@ -194352,12 +194352,12 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 4,
-      "question": "已知ta為平均壽命 (mean life)，A₀為初始活度，N₀為初始原子核數量。試問ta×A₀為何?",
+      "question": "已知ta為平均壽命（mean life），Ao為初始活度，No為初始原子核數量。試問ta×Ao為何？",
       "options": {
-        "A": "0.37N o",
-        "B": "0.5N o",
-        "C": "0.63N o",
-        "D": "N o"
+        "A": "0.37No",
+        "B": "0.5No",
+        "C": "0.63No",
+        "D": "No"
       },
       "answer": "D",
       "explanation": ""
@@ -307006,14 +307006,15 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 64,
-      "question": "混合物之有效原子序（Z）可由下列等式計算取得，則水（HO）的有效原子序約為多少？eff 2 Z ＝(aZ2.94＋aZ2.94＋aZ2.94＋…aZ2.94)1/2.94 eff 1 1 2 2 3 3 n n",
+      "question": "混合物之有效原子序（Zeff）可由下列等式計算取得，則水（H2O）的有效原子序約為多少？Zeff＝(a1Z12.94＋a2Z22.94＋a3Z32.94＋…anZn2.94)1/2.94",
       "options": {
         "A": "7.69",
         "B": "7.55",
         "C": "7.42",
         "D": "7.18"
       },
-      "answer": "C"
+      "answer": "C",
+      "explanation": ""
     },
     {
       "id": "115090_2_65",
@@ -309350,14 +309351,15 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 20,
-      "question": "若細胞週期中的G期較短，則下列何者對放射線最有抗性？1",
+      "question": "若細胞週期中的G1期較短，則下列何者對放射線最有抗性？",
       "options": {
         "A": "late S期",
-        "B": "G期1",
-        "C": "late G期2",
+        "B": "G1期",
+        "C": "late G2期",
         "D": "M期"
       },
-      "answer": "A"
+      "answer": "A",
+      "explanation": ""
     },
     {
       "id": "115090_4_21",
@@ -309388,14 +309390,15 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 22,
-      "question": "臨床射束中假體散射因子（S），可由下列那種方法間接計算得知？①S (r)＝S (r)－S (r) p p c,p c ②S (r)＝S (r)×S (r) ③S (r)＝S (r)/S (r) ④S (r)＝BSF(r)/BSF(r ) p c,p c p c,p c p o",
+      "question": "臨床射束中假體散射因子（Sp），可由下列那種方法間接計算得知？①Sp(r)＝Sc,p(r)－Sc(r)②Sp(r)＝Sc,p(r)×Sc(r)　③Sp(r)＝Sc,p(r)/Sc(r)　④Sp(r)＝BSF(r)/BSF(ro)",
       "options": {
         "A": "①②",
         "B": "①④",
         "C": "②③",
         "D": "③④"
       },
-      "answer": "D"
+      "answer": "D",
+      "explanation": ""
     },
     {
       "id": "115090_4_23",
@@ -309942,14 +309945,15 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 51,
-      "question": "臨床放射治療中，肺部V ≦多少％時，可顯著降低放射性肺炎的發生機率？20 Gy",
+      "question": "臨床放射治療中，肺部V20 Gy≦多少％時，可顯著降低放射性肺炎的發生機率？",
       "options": {
         "A": "10",
         "B": "20",
         "C": "5",
         "D": "40"
       },
-      "answer": "B"
+      "answer": "B",
+      "explanation": ""
     },
     {
       "id": "115090_4_52",
@@ -311443,7 +311447,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 50,
-      "question": "血漿中維生素B低於多少pg/mL時，則被視為低下？12",
+      "question": "血漿中維生素B12低於多少pg/mL 時，則被視為低下？",
       "options": {
         "A": "250",
         "B": "160",
@@ -311451,7 +311455,7 @@
         "D": "900"
       },
       "answer": "B",
-      "disputed": true
+      "explanation": ""
     },
     {
       "id": "115090_5_51",

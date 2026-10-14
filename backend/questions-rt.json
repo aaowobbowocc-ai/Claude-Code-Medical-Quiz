@@ -256795,14 +256795,15 @@
       "subject_name": "呼吸治療儀器設備學",
       "stage_id": 0,
       "number": 38,
-      "question": "吐氣末二氧化碳分壓（P CO）是顯示下列何者之數值？ET 2",
+      "question": "吐氣末二氧化碳分壓（PETCO2）是顯示下列何者之數值？",
       "options": {
         "A": "capnogram phase Ⅰ末期",
         "B": "capnogram phase Ⅱ末期",
         "C": "capnogram phase Ⅲ末期",
         "D": "capnogram phase Ⅳ末期"
       },
-      "answer": "C"
+      "answer": "C",
+      "explanation": ""
     },
     {
       "id": "115090_2_39",
@@ -258554,14 +258555,15 @@
       "subject_name": "呼吸器原理及應用",
       "stage_id": 0,
       "number": 47,
-      "question": "昏迷病人被送至急診，吸空氣下動脈血液氣體分析值為：PaO＝45 mm Hg，PaCO＝85 mm Hg，pH＝7.21，此2 2時病人需要下列何種治療？",
+      "question": "昏迷病人被送至急診，吸空氣下動脈血液氣體分析值為：PaO2＝45 mm Hg，PaCO2＝85 mm Hg，pH＝7.21，此時病人需要下列何種治療？",
       "options": {
         "A": "高流量氧氣鼻管",
         "B": "非侵襲性正壓呼吸器",
         "C": "不可重吸入型氧氣面罩",
         "D": "侵襲性正壓呼吸器"
       },
-      "answer": "D"
+      "answer": "D",
+      "explanation": ""
     },
     {
       "id": "115090_3_48",

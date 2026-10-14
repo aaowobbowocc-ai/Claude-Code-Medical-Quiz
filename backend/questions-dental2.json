@@ -144579,14 +144579,15 @@
       "subject_name": "齒顎矯正",
       "stage_id": 1,
       "number": 46,
-      "question": "Simplified papilla preservation flap於斜切（oblique incision）牙齦乳突的時候，應使刀片與牙齒長軸夾角約呈幾 度？",
+      "question": "患者的臨床分期（clinic staging）為下列何者？",
       "options": {
         "A": "stage I",
         "B": "stage II",
         "C": "stage III",
         "D": "stage IV"
       },
-      "answer": "C"
+      "answer": "C",
+      "explanation": ""
     },
     {
       "id": "111020_1_47",
@@ -145441,14 +145442,15 @@
       "subject_name": "口腔顎面外科",
       "stage_id": 7,
       "number": 44,
-      "question": "病人疑似罹患下顎骨骨髓炎，且有腎功能障礙，下列何項檢查可以偵測到早期骨髓炎之骨質變化？",
+      "question": "下列何者不可能是複合樹脂（composite resin）的內含物？",
       "options": {
-        "A": "bis-GMA(bisphenol A glycerolate dimethacrylate)",
+        "A": "bis-GMA（bisphenol A glycerolate dimethacrylate）",
         "B": "silicon dioxide",
         "C": "camphorquinone",
         "D": "acetone"
       },
-      "answer": "D"
+      "answer": "D",
+      "explanation": ""
     },
     {
       "id": "111020_45",
@@ -148553,14 +148555,15 @@
       "subject_name": "兒童牙科",
       "stage_id": 12,
       "number": 77,
-      "question": "下列何者不是兒童牙科局部麻醉(dental local anesthesia)施行時,用以注射的藥劑?",
+      "question": "圖中黑色箭頭所指的解剖位置為何？",
       "options": {
         "A": "right maxilla",
         "B": "left maxilla",
         "C": "right mandible",
         "D": "left mandible"
       },
-      "answer": "D"
+      "answer": "D",
+      "explanation": ""
     },
     {
       "id": "111020_1_78",
@@ -148572,14 +148575,15 @@
       "subject_name": "兒童牙科",
       "stage_id": 12,
       "number": 78,
-      "question": "關於窩溝封劑(pit and fissure sealants)的敘述,下列何者錯誤?",
+      "question": "圖中黑色箭頭所指的病變，最可能為下列何者？",
       "options": {
-        "A": "殘餘囊腫(residual cyst)",
-        "B": "根尖囊腫(radicular cyst)",
-        "C": "根尖牙骨質骨質發育不良症(periapical cemento-osseous dysplasia)",
-        "D": "外生贅骨(exostoses)"
+        "A": "殘餘囊腫（residual cyst）",
+        "B": "根尖囊腫（radicular cyst）",
+        "C": "根尖牙骨質骨質發育不良症（periapical cemento-osseous dysplasia）",
+        "D": "外生贅骨（exostoses）"
       },
-      "answer": "C"
+      "answer": "C",
+      "explanation": ""
     },
     {
       "id": "111020_1_79",
@@ -154598,14 +154602,15 @@
       "subject_name": "兒童牙科",
       "stage_id": 12,
       "number": 71,
-      "question": "對兒童看牙行為的的臨床分類，下列何者不是Wright（1975）所敘述的有潛力合作能力（potentially cooperative）型態？",
+      "question": "下列何者不是臨床上用來偵測齲齒之工具或方法？",
       "options": {
         "A": "extracellular matrix measurement",
         "B": "laser light fiberoptic transillumination",
         "C": "quantitative light-induced fluorescence",
         "D": "bitewing X-ray films"
       },
-      "answer": "A"
+      "answer": "A",
+      "explanation": ""
     },
     {
       "id": "111100_1_72",
@@ -166703,7 +166708,7 @@
       "subject_name": "兒童牙科",
       "stage_id": 12,
       "number": 61,
-      "question": "如圖所示，欲使用循序拔牙法時，應優先拔除何齒以解除上顎門牙區擁擠？",
+      "question": "下列那種拍攝方式，其condyle neck的影像最不清楚？",
       "options": {
         "A": "submentovertex projection",
         "B": "posteroanterior cephalometric projection",
@@ -166711,9 +166716,7 @@
         "D": "panoramic projection"
       },
       "answer": "A",
-      "images": [
-        "/question-images/dental2_112100_1_61_0.webp"
-      ]
+      "explanation": ""
     },
     {
       "id": "112100_1_62",
@@ -166725,14 +166728,15 @@
       "subject_name": "兒童牙科",
       "stage_id": 12,
       "number": 62,
-      "question": "使用活動式的裝置來做二級異常咬合之生長調控治療，如果孩童與家長堅持一天只願意配戴10小時，就治療 效果而言，下列何者為最佳的分配方式？",
+      "question": "下列那種拍攝方式，其眼眶（orbit）的影像最不清楚？",
       "options": {
         "A": "lateral cephalometric projection",
-        "B": "什麼時候戴都行，只要湊齊10小時即可",
+        "B": "Waters projection",
         "C": "posteroanterior cephalometric projection",
         "D": "reverse Towne projection"
       },
-      "answer": "D"
+      "answer": "D",
+      "explanation": ""
     },
     {
       "id": "112100_1_63",
@@ -168918,14 +168922,15 @@
       "subject_name": "牙體復形",
       "stage_id": 1,
       "number": 27,
-      "question": "硬腭黏膜與頰黏膜的不同處包含下列何者？①keratinized stratified squamous epithelium覆蓋 ②較為 偏紅色（redder） ③具明顯的epithelial ridges",
+      "question": "舌癌的病人，檢查結果顯示患者之腫瘤大小為6×5 公分，侵犯hyoglossus、genioglossus，且頸部淋巴結於同側疑似有兩顆淋巴結轉移，但其餘器官並未發現有癌細胞侵犯，此時癌症分期為下列何者？",
       "options": {
         "A": "cT3N2bM0",
         "B": "cT4aN2bM0",
         "C": "pT3N2bM0",
         "D": "pT4aN2bM0"
       },
-      "answer": "B"
+      "answer": "B",
+      "explanation": ""
     },
     {
       "id": "113020_1_28",
@@ -173121,17 +173126,15 @@
       "subject_name": "兒童牙科",
       "stage_id": 12,
       "number": 72,
-      "question": "關於兒童牙科約診安排，下列敘述何者錯誤？",
+      "question": "圖中之X 光影像為何種拍攝方式？",
       "options": {
         "A": "posteroanterior projection",
-        "B": "年齡相仿的患者可以約在同一個時段，有同儕群體可以做為彼此的榜樣",
+        "B": "Waters projection",
         "C": "reverse Towne projection",
-        "D": "約診的方式可依兒童年齡大小、身心障礙類別及麻醉方式來調整"
+        "D": "oblique lateral projection"
       },
       "answer": "C",
-      "images": [
-        "/question-images/dental2_113020_1_72_0.webp"
-      ]
+      "explanation": ""
     },
     {
       "id": "113020_1_73",
@@ -179036,14 +179039,15 @@
       "subject_name": "齒顎矯正",
       "stage_id": 12,
       "number": 59,
-      "question": "關於使用在混合齒列後期的快速腭弓擴張（rapid palatal expansion），下列敘述何者正確？",
+      "question": "X光片上物體影像之對比（contrast）與下列何者最有關？",
       "options": {
-        "A": "擴張速度大約每週0.5 mm",
-        "B": "擴張後會出現上顎前牙間隙（diastema）在維持期（retention period），該前牙間隙通常會維持不變",
-        "C": "腭正中骨縫（midpalatal suture）的擴張量是後方大於前方",
-        "D": "10週後得到的總擴張量與慢速腭弓擴張（slow palatal expansion）通常是一樣的"
+        "A": "kVp",
+        "B": "kVp與mA",
+        "C": "mA",
+        "D": "kVp、mA與曝光時間"
       },
-      "answer": "A"
+      "answer": "A",
+      "explanation": ""
     },
     {
       "id": "113090_1_60",
@@ -204160,14 +204164,15 @@
       "subject_name": "牙醫學(六)",
       "stage_id": 0,
       "number": 33,
-      "question": "臨床上使用適當濃度的NO-O來鎮靜時，其最常見副作用為下列何者？2 2",
+      "question": "臨床上使用適當濃度的N2O-O2來鎮靜時，其最常見副作用為下列何者？",
       "options": {
         "A": "氣管過敏",
         "B": "過度換氣",
         "C": "噁心、嘔吐",
         "D": "中樞神經抑制"
       },
-      "answer": "C"
+      "answer": "C",
+      "explanation": ""
     },
     {
       "id": "115090_3_34",

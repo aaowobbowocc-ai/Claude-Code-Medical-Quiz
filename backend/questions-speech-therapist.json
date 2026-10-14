@@ -81221,14 +81221,14 @@
     "subject_name": "基礎言語科學",
     "stage_id": 0,
     "number": 38,
-    "question": "Broca's area 位於何處?",
+    "question": "Broca’s area 位於何處？",
     "options": {
-      "A": "額葉(frontal lobe)",
-      "B": "頂葉(parietal lobe)",
-      "C": "顳葉(temporal lobe)",
-      "D": "枕葉(occipital lobe)"
+      "A": "額葉（frontal lobe）",
+      "B": "頂葉（parietal lobe）",
+      "C": "顳葉（temporal lobe）",
+      "D": "枕葉（occipital lobe）"
     },
-    "answer": "D",
+    "answer": "A",
     "explanation": "",
     "_legacy_id": 114100050870
   },
@@ -160036,14 +160036,15 @@
     "subject_name": "基礎言語科學",
     "stage_id": 0,
     "number": 45,
-    "question": "關於複合音（complex sounds）的的敘敘述述，下列何者正確？",
+    "question": "關於複合音（complex sounds）的敘述，下列何者正確？",
     "options": {
       "A": "複合音的平均頻率稱為基頻",
       "B": "複合音中諧波頻率是基頻的整數倍",
       "C": "複合音中所有諧波振幅均相同",
       "D": "所有的語音都是複合性週期性聲波所組成"
     },
-    "answer": "B"
+    "answer": "B",
+    "explanation": ""
   },
   {
     "id": "115100_0_46",

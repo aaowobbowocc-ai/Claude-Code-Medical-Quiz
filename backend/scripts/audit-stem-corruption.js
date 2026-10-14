@@ -43,15 +43,47 @@ const SKIP = new Set(['gsat', 'ast', 'driver-car', 'driver-moto', 'post-indoor',
   'teacher-elementary', 'teacher-kindergarten', 'teacher-secondary', 'teacher-special', 'teacher-special-gifted'])
 const EXAM = f => f.replace('questions-', '').replace('questions.json', 'doctor1').replace('.json', '')
 
+/**
+ * 原卷裡的 `�`（U+FFFD）要當**萬用字元**。
+ *
+ * 這些 PDF 的字型沒有合法 ToUnicode 對應，原卷那些位置抽出來就是 `�`
+ * （見 [[project_broken_glyphs]]）。題庫把字修對之後反而跟原卷對不上，
+ * 覆蓋率不升反降——稽核會懲罰正確的修復。實測 rt 103090 #55：
+ *     我們：下列那一種肺功能測試…噴霧治療的效應？
+ *     原卷：下�那一種肺功能測試…噴霧治�的效應
+ * 修好之後覆蓋率只有 74%，修之前反而更高。
+ *
+ * `�` 很少，所以先試完全比對，沒中才對每個 `�` 的位置試那幾種對齊。
+ */
+function makeMatcher(T) {
+  const holes = []
+  for (let i = 0; i < T.length; i++) if (T[i] === '�') holes.push(i)
+  return w => {
+    if (T.includes(w)) return true
+    for (const h of holes) {
+      for (let off = Math.max(0, h - w.length + 1); off <= h; off++) {
+        if (off + w.length > T.length) continue
+        let ok = true
+        for (let j = 0; j < w.length; j++) {
+          const c = T[off + j]
+          if (c !== '�' && c !== w[j]) { ok = false; break }
+        }
+        if (ok) return true
+      }
+    }
+    return false
+  }
+}
+
 /** 題幹的 N 字滑動視窗有多少比例出現在原卷文字裡（兩種抽法任一命中即可）。 */
-function cover(stem, texts) {
+function cover(stem, matchers) {
   const k = skeleton(String(stem))
   if (k.length < MIN_LEN) return null
   let hit = 0, tot = 0
   for (let i = 0; i + N <= k.length; i++) {
     tot++
     const w = k.slice(i, i + N)
-    if (texts.some(T => T.includes(w))) hit++
+    if (matchers.some(m => m(w))) hit++
   }
   return tot ? hit / tot : null
 }
@@ -75,14 +107,15 @@ function cover(stem, texts) {
     }
     for (const [k, items] of groups) {
       const [code, subject] = k.split('\u0000')
-      let texts
+      let texts, raw
       try {
         const p = await resolvePaper({ exam, code: String(code), subject, year: String(items[0].roc_year), items })
         if (!p) throw new Error('no paper')
         const buf = await fetchSheet('Q', String(code), p.c, p.s)
-        texts = [skeleton(await pdfText(buf)), skeleton(await pdfTextClean(buf))]
+        raw = [skeleton(await pdfText(buf)), skeleton(await pdfTextClean(buf))]
+        texts = raw.map(makeMatcher)
       } catch { unresolved++; continue }
-      if (!texts[0] || texts[0].length < 200) { unresolved++; continue }
+      if (!raw || !raw[0] || raw[0].length < 200) { unresolved++; continue }
 
       const scored = items.map(q => ({ q, c: cover(q.question, texts) })).filter(x => x.c !== null)
       if (!scored.length) { unresolved++; continue }

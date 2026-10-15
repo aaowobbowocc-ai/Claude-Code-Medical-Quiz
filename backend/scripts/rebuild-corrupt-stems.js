@@ -30,6 +30,7 @@ const path = require('path')
 const { resolvePaper, fetchSheet, pdfText } = require('./lib/moex-paper-resolve')
 const { pdfTextClean } = require('./lib/moex-run-overlap')
 const { paperQuestions } = require('./fill-civil-gaps')
+const { markerOptions } = require('./lib/moex-marker-options')
 const { sheetMap } = require('./lib/moex-answer-geo')
 const { skeleton } = require('./lib/moex-normalize')
 const { atomicWriteJson } = require('./lib/atomic-write')
@@ -96,20 +97,26 @@ function cover(stem, ms) {
     const j = cache[f] || (cache[f] = JSON.parse(fs.readFileSync(path.join(BK, f), 'utf8')))
     const arr = j.questions || j
     const all = arr.filter(q => String(q.exam_code) === String(code) && q.subject === subject)
-    let ms, parsed, ans
+    let ms, parsed, ans, marker = null
     try {
       const p = await resolvePaper({ exam, code: String(code), subject, year: String(all[0]?.roc_year), items: all })
       if (!p) throw new Error('對不到原卷')
-      const buf = await fetchSheet('Q', String(code), p.c, p.s)
-      ms = [skeleton(await pdfText(buf)), skeleton(await pdfTextClean(buf))].map(makeMatcher)
+      var qbuf = await fetchSheet('Q', String(code), p.c, p.s)
+      ms = [skeleton(await pdfText(qbuf)), skeleton(await pdfTextClean(qbuf))].map(makeMatcher)
       parsed = await paperQuestions(String(code), p.c, p.s)
       ans = (await sheetMap(String(code), p.c, p.s, Math.max(110, all.length))).map
+      // 後備解析：paperQuestions 在某些卷上四個選項全空（標記與文字不在同一個 y、
+      // 一列裡有兩到四個選項）。lib/moex-marker-options.js 靠標記的幾何位置重建。
+      try { marker = await markerOptions(qbuf) } catch { marker = null }
     } catch { for (const _ of items) bump('原卷取不到'); continue }
 
     for (const r of items) {
       const q = all.find(x => +x.number === +r.n)
-      const o = parsed.get(+r.n)
+      let o = parsed.get(+r.n)
       if (!q) { bump('題庫找不到'); continue }
+      const bare0 = t => String(t).replace(/[-​-‏﻿\s　]/g, '')
+      const ok = x => x && L.every(k => bare0(x.options[k])) && new Set(L.map(k => bare0(x.options[k]))).size === 4
+      if (!ok(o) && marker && ok(marker.get(+r.n))) o = marker.get(+r.n)   // 換後備解析
       if (!o) { bump('原卷解析不到該題號'); continue }
       const opts = L.map(x => String(o.options[x] || ''))
       // ⚠️ `!x.trim()` 擋不住塞著 PUA 或零寬字元的空格（見 apply-glyph-map.js 的同一個坑）
@@ -117,6 +124,21 @@ function cover(stem, ms) {
       if (opts.some(x => !bare(x)) || new Set(opts.map(bare)).size !== 4) { bump('原卷選項不乾淨'); continue }
       // 下標炸開的簽章：護理師 104030 #60 重建出「NaHCO3 3 _____ 2 _____」
       if (opts.some(x => /_{3,}/.test(x))) { bump('原卷選項下標炸開'); continue }
+      // 首位數字跑到尾巴（PDF 的老毛病）：
+      //   營養師 108020 #2「800 | ,0001 | ,2001 | ,4001」其實是 800/1,000/1,200/1,400
+      //   營養師 108020 #16「小時內6」其實是「6小時內」
+      if (opts.some(x => /^[,.，、]/.test(x.trim()))) { bump('原卷選項首位數字跑位'); continue }
+      const startsDigit = opts.filter(x => /^\d/.test(x.trim())).length
+      const endsDigit = opts.filter(x => /[一-鿿][0-9]+$/.test(x.trim())).length
+      if (startsDigit >= 2 && endsDigit >= 1) { bump('原卷選項首位數字跑位'); continue }
+      // 頁首黏進選項
+      if (opts.some(x => /代號[：:]|頁次[：:]|座號[：:]/.test(x))) { bump('原卷選項黏到頁首'); continue }
+      // 上下標符號炸開：醫檢師 101110 #34 的 total CO₂／HCO₃⁻ 變成
+      //   「HCOPB-P | HBCOB | COB gas | COPB-2PB3B2B3B2B3」，題幹尾巴還多一串 B2B2。
+      //   連續三組以上的「大寫字母＋數字」是簽章；H2O2、C6H12O6 這種真的化學式只有兩組，不會誤殺。
+      const subSup = /(?:[A-Z]\d){3,}/
+      if (opts.some(x => subSup.test(x)) || subSup.test(String(o.stem))) { bump('原卷上下標炸開'); continue }
+      if (/[A-Z]\d[A-Z]\d\s*$/.test(String(o.stem))) { bump('原卷題幹尾巴有上下標殘渣'); continue }
       // 含圖題沒有圖就不能作答，留給 extract-missing-figures.js 另案處理
       if (/[下附上右左]\s*[圖表]|如圖|圖示|編號\s*[①-⑩]/.test(String(o.stem))) { bump('重建出來是含圖題'); continue }
       const before = cover(q.question, ms), after = cover(o.stem, ms)

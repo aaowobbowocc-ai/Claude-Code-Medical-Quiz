@@ -18,7 +18,7 @@
   },
   "questionsFile": "questions-nursing.json",
   "totalQ": 12558,
-  "passScore": 150,
+  "passScore": 300,
   "passRate": 0.6,
   "papers": [
     {
@@ -50,7 +50,8 @@
         }
       ],
       "breakdownNote": "歷屆題實測 Q1-10 解剖 / Q11-20 生理 / Q21-30 病理 / Q31-40 藥理 / Q41-50 微免；舊制 80 題版均分為 16/16/16/16/16",
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 2
     },
     {
       "id": "paper2",
@@ -69,7 +70,8 @@
         }
       ],
       "breakdownNote": "依歷屆題分布估計",
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 2
     },
     {
       "id": "paper3",
@@ -90,7 +92,8 @@
         }
       ],
       "breakdownNote": "依歷屆題分布估計",
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 2
     },
     {
       "id": "paper4",
@@ -111,7 +114,8 @@
         }
       ],
       "breakdownNote": "依歷屆題分布估計",
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 2
     },
     {
       "id": "paper5",
@@ -131,7 +135,8 @@
         }
       ],
       "breakdownNote": "依歷屆題分布估計",
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 2
     }
   ],
   "stages": [

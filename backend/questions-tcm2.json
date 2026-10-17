@@ -4,7 +4,7 @@
     "label": "中醫師(二)",
     "scraped_at": "2026-04-14T11:34:53.579Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-27T17:32:29.788Z"
+    "last_updated": "2026-10-17T19:59:15.515Z"
   },
   "total": 10249,
   "questions": [
@@ -115549,16 +115549,21 @@
       "subject_name": "中醫臨床醫學(三)",
       "stage_id": 3,
       "number": 58,
-      "question": "有關肺氣鬱痺之喘證,下列選項何者正確?①喘促短氣,氣怯聲低 ②痰聲不著 ③突然呼吸短促,胸悶氣憋 ④咳而不爽,痰吐稠黏",
+      "question": "左髖關節脫位後，畸形姿勢不能改變，呈彈性固定，髖關節後上方脫位的畸形圖，下列何者正確？",
       "options": {
-        "A": "①②",
-        "B": "①④",
-        "C": "②③",
-        "D": "③④"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "option_order_unverified"
+      "option_images": {
+        "A": "/question-images/tcm2_5617_optA.webp",
+        "B": "/question-images/tcm2_5617_optB.webp",
+        "C": "/question-images/tcm2_5617_optC.webp",
+        "D": "/question-images/tcm2_5617_optD.webp"
+      }
     },
     {
       "id": 5618,

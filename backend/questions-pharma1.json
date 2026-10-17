@@ -104216,24 +104216,21 @@
       "subject_name": "藥物化學",
       "stage_id": 2,
       "number": 71,
-      "question": "下列清熱燥濕中藥，何者主含secoiridoid 配醣體成分？",
+      "question": "下列何者最不可能為prochlorperazine的代謝物？",
       "options": {
-        "A": "黃芩",
-        "B": "黃連",
-        "C": "苦參",
-        "D": "龍膽"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "disputed": true,
-      "images": [
-        "/question-images/pharma1_115020351_0.webp",
-        "/question-images/pharma1_115020351_1.webp",
-        "/question-images/pharma1_115020351_2.webp",
-        "/question-images/pharma1_115020351_3.webp"
-      ],
-      "incomplete": true,
-      "incomplete_reason": "同場次同題號被 pharma1 卷二 #71 覆蓋，原卷選項解析不出來，暫時隱藏"
+      "option_images": {
+        "A": "/question-images/pharma1_115020351_voptA.webp",
+        "B": "/question-images/pharma1_115020351_voptB.webp",
+        "C": "/question-images/pharma1_115020351_voptC.webp",
+        "D": "/question-images/pharma1_115020351_voptD.webp"
+      }
     },
     {
       "id": 115020352,
@@ -104860,24 +104857,16 @@
       "subject_name": "藥物分析",
       "stage_id": 3,
       "number": 22,
-      "question": "Organic nitrates用於治療心絞痛主要的藥理機制為何？",
+      "question": "在氫核磁共振譜中，下列標示的H何者的化學位移最大？",
       "options": {
-        "A": "經由抑制平滑肌細胞內cGMP代謝，擴張冠狀動脈以增加血流量",
-        "B": "擴張動脈血管，減少心臟後負荷，降低心臟壓力",
-        "C": "經由減少心臟前負荷，降低心輸出量，使心肌需氧量降低",
-        "D": "抑制血小板凝集，避免粥狀硬化區更加狹窄"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "disputed": true,
-      "images": [
-        "/question-images/pharma1_115020382_0.webp",
-        "/question-images/pharma1_115020382_1.webp",
-        "/question-images/pharma1_115020382_2.webp",
-        "/question-images/pharma1_115020382_3.webp"
-      ],
-      "incomplete": true,
-      "incomplete_reason": "同場次同題號被 pharma1 卷一 #22 覆蓋，原卷選項解析不出來，暫時隱藏"
+      "incomplete": "image_options"
     },
     {
       "id": 115020383,
@@ -104889,18 +104878,16 @@
       "subject_name": "藥物分析",
       "stage_id": 3,
       "number": 23,
-      "question": "下列那一類降血壓藥可能會增加血中renin及angiotensin II濃度，並可能減少aldosterone分泌？",
+      "question": "如在achiral D-solvent中測氫核磁共振譜，則下列標記的氫訊號何者為雙重峰（doublet）？",
       "options": {
-        "A": "aliskiren",
-        "B": "candesartan",
-        "C": "captopril",
-        "D": "propranolol"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "A",
       "explanation": "",
-      "disputed": true,
-      "incomplete": true,
-      "incomplete_reason": "同場次同題號被 pharma1 卷一 #23 覆蓋，原卷選項解析不出來，暫時隱藏"
+      "incomplete": "image_options"
     },
     {
       "id": 115020384,
@@ -107149,24 +107136,21 @@
       "subject_name": "生物藥劑學",
       "stage_id": 6,
       "number": 55,
-      "question": "Tiagabine（結構如下圖）的口服生體可用率，最接近下列何者？",
+      "question": "Metformin的腎清除主要是藉由腎小管主動分泌，假設不考慮腎絲球過濾，下列何圖可表示此藥排泄速率與血中濃度之相關性？",
       "options": {
-        "A": "20～25%",
-        "B": "50～55%",
-        "C": "70～75%",
-        "D": "90～95%"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "A",
       "explanation": "",
-      "disputed": true,
-      "images": [
-        "/question-images/pharma1_115020495_0.webp",
-        "/question-images/pharma1_115020495_1.webp",
-        "/question-images/pharma1_115020495_2.webp",
-        "/question-images/pharma1_115020495_3.webp"
-      ],
-      "incomplete": true,
-      "incomplete_reason": "同場次同題號被 pharma1 卷一 #55 覆蓋，原卷選項解析不出來，暫時隱藏"
+      "option_images": {
+        "A": "/question-images/pharma1_115020495_voptA.webp",
+        "B": "/question-images/pharma1_115020495_voptB.webp",
+        "C": "/question-images/pharma1_115020495_voptC.webp",
+        "D": "/question-images/pharma1_115020495_voptD.webp"
+      }
     },
     {
       "id": 115020496,
@@ -107578,24 +107562,21 @@
       "subject_name": "生物藥劑學",
       "stage_id": 6,
       "number": 76,
-      "question": "下列何者是eflornithine抑制ornithine decarboxylase的最重要基團？",
+      "question": "承上題，若將此藥以相同輸注速率從靜脈持續給與病人G和病人H後，則此藥品在兩位病人的血中濃度（C）經時關係趨勢，下列何者最適當？",
       "options": {
-        "A": "ester",
-        "B": "difluoromethyl",
-        "C": "nitro",
-        "D": "arsenic"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "A",
       "explanation": "",
-      "disputed": true,
-      "images": [
-        "/question-images/pharma1_115020516_0.webp",
-        "/question-images/pharma1_115020516_1.webp",
-        "/question-images/pharma1_115020516_2.webp",
-        "/question-images/pharma1_115020516_3.webp"
-      ],
-      "incomplete": true,
-      "incomplete_reason": "同場次同題號被 pharma1 卷一 #76 覆蓋，原卷選項解析不出來，暫時隱藏"
+      "option_images": {
+        "A": "/question-images/pharma1_115020516_voptA.webp",
+        "B": "/question-images/pharma1_115020516_voptB.webp",
+        "C": "/question-images/pharma1_115020516_voptC.webp",
+        "D": "/question-images/pharma1_115020516_voptD.webp"
+      }
     },
     {
       "id": 115020517,
@@ -154441,6 +154422,6 @@
   ],
   "total": 7673,
   "metadata": {
-    "last_updated": "2026-09-17T19:53:17.935Z"
+    "last_updated": "2026-10-17T19:59:27.469Z"
   }
 }

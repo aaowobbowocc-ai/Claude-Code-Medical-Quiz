@@ -34,6 +34,7 @@ const { resolvePaper, fetchSheet, pdfText } = require('./lib/moex-paper-resolve'
 const { skeleton } = require('./lib/moex-normalize')
 const { pdfTextClean } = require('./lib/moex-run-overlap')
 const { paperQuestions } = require('./fill-civil-gaps')
+const { markerOptions } = require('./lib/moex-marker-options')
 const { sheetMap } = require('./lib/moex-answer-geo')
 const { atomicWriteJson } = require('./lib/atomic-write')
 
@@ -91,14 +92,14 @@ function inPaper(stem, texts) {
     byPaper.get(k).push(r)
   }
 
-  let fixed = 0
+  let fixed = 0, imageOpt = 0
   const skipped = []
   const needFigure = []
   for (const [k, items] of byPaper) {
     const [exam, code, subject] = k.split('\u0000')
     const arr = (j => j.questions || j)(load(exam))
     const all = arr.filter(q => String(q.exam_code) === String(code) && q.subject === subject)
-    let text, parsed, ans
+    let text, parsed, ans, marker = null
     try {
       const p = await resolvePaper({ exam, code: String(code), subject, year: String(all[0]?.roc_year), items: all })
       if (!p) throw new Error('對不到原卷')
@@ -106,6 +107,9 @@ function inPaper(stem, texts) {
       text = [skeleton(await pdfText(qbuf)), skeleton(await pdfTextClean(qbuf))]
       parsed = await paperQuestions(String(code), p.c, p.s)
       ans = (await sheetMap(String(code), p.c, p.s, Math.max(80, all.length))).map
+      // 後備解析：paperQuestions 在某些卷上四個選項全空（標記與文字不在同一個 y、
+      // 一列裡有兩到四個選項）。見 lib/moex-marker-options.js。
+      try { marker = await markerOptions(qbuf) } catch { marker = null }
     } catch (e) {
       for (const r of items) skipped.push({ ...r, why: '原卷取不到：' + e.message.slice(0, 30) })
       continue
@@ -130,10 +134,41 @@ function inPaper(stem, texts) {
       }
       if (!from) { skipped.push({ ...r, why: '重驗時找不到覆蓋來源' }); continue }
 
-      const o = parsed.get(+r.n)
+      let o = parsed.get(+r.n)
       const off = ans.get(+r.n)
+      const bare0 = t => String(t).replace(/[-​-‏﻿\s　]/g, '')
+      const clean0 = x => x && L.every(k => bare0(x.options[k])) && new Set(L.map(k => bare0(x.options[k]))).size === 4
+      if (!clean0(o) && marker && clean0(marker.get(+r.n))) o = marker.get(+r.n)
       if (!o || !off || !/^[ABCD]$/.test(String(off))) { skipped.push({ ...r, why: '原卷解析不到或答案不明' }); continue }
       const opts = L.map(x => String(o.options[x] || ''))
+
+      // ── 選項本身是圖的題（化學結構式、定序圖譜、姿勢照片）──
+      // 文字解析必然抽到四個空格，不是解析壞掉。題幹是好的，所以照樣還原題幹，
+      // 選項標成 image_options 交給 crop-option-images-geometric.js 去裁圖
+      // （那支純用 mupdf 讀 PDF 內嵌圖片座標，零成本）。
+      const blank = opts.filter(x => !bare0(x)).length
+      if (blank >= 3 && String(o.stem || '').replace(/\s/g, '').length >= 12) {
+        console.log(`${exam} ${code} ${subject.slice(0, 16)} #${r.n}  ← ${from}  [選項是圖]`)
+        console.log(`  移除: ${String(q.question).replace(/\s+/g, ' ').slice(0, 52)}`)
+        console.log(`  還原: ${String(o.stem).replace(/\s+/g, ' ').slice(0, 52)}  (答${off})
+`)
+        if (APPLY) {
+          q.question = String(o.stem)
+          // 既有慣例是「(圖)」佔位，不是空字串——空字串會讓 audit-all-questions
+          // 報 empty_options / answer_not_in_options（2026-10-18 踩到）。
+          q.options = { A: '(圖)', B: '(圖)', C: '(圖)', D: '(圖)' }
+          q.answer = String(off)
+          q.explanation = ''
+          delete q.disputed
+          delete q.images
+          delete q.option_images
+          delete q.incomplete_reason
+          q.incomplete = 'image_options'
+        }
+        imageOpt++
+        continue
+      }
+
       // ⚠️ `!x.trim()` 擋不住「看起來空、其實塞著 PUA 或零寬字元」的格。
       // 語言治療師 101110 #70/#72/#75/#76/#77 就是這樣過關的：還原後選項變成
       // 「② | ④ |（空）|（空）」，比原本的壞內容還糟。先清掉不可見字元再判。
@@ -141,6 +176,9 @@ function inPaper(stem, texts) {
       if (opts.some(x => !bare(x)) || new Set(opts.map(bare)).size !== 4) { skipped.push({ ...r, why: '原卷選項不乾淨' }); continue }
       // 下標/上標炸開的簽章：護理師 104030 #60 還原成「NaHCO3 3 _____ 2 ___」。
       if (opts.some(x => /_{3,}/.test(x))) { skipped.push({ ...r, why: '原卷選項下標炸開' }); continue }
+      if (opts.some(x => /(?:[A-Z]\d){3,}/.test(x))) { skipped.push({ ...r, why: '原卷上下標炸開' }); continue }
+      if (opts.some(x => /代號[：:]|頁次[：:]|座號[：:]/.test(x))) { skipped.push({ ...r, why: '原卷選項黏到頁首' }); continue }
+      if (opts.some(x => /^[,.，、]/.test(x.trim()))) { skipped.push({ ...r, why: '原卷選項首位數字跑位' }); continue }
       // 題幹指向圖或圖上編號的，選項通常是「①②③④」而原卷解析撐不住，
       // 而且沒有圖就算還原了也不能作答。一律不還原，走隱藏。
       if (/[下附上右左]\s*[圖表]|如圖|圖示|編號\s*[①-⑩]|[①-⑩]\s*的/.test(String(o.stem))) {
@@ -181,20 +219,21 @@ function inPaper(stem, texts) {
 暫時隱藏 ${hidden} 題（標 incomplete）`)
   }
 
-  console.log(`還原 ${fixed} 題｜跳過 ${skipped.length}${APPLY ? '' : '（dry-run）'}`)
+  console.log(`還原 ${fixed} 題｜選項是圖、待裁圖 ${imageOpt} 題｜跳過 ${skipped.length}${APPLY ? '' : '（dry-run）'}`)
   const why = {}
   for (const s of skipped) why[s.why] = (why[s.why] || 0) + 1
   if (skipped.length) {
     console.log('跳過原因：' + JSON.stringify(why))
     for (const s of skipped) console.log(`  ⊘ ${s.exam} ${s.code} ${s.subject} #${s.n}：${s.why}`)
   }
-  if (APPLY && (fixed || hidden)) {
+  if (APPLY && (fixed || hidden || imageOpt)) {
     for (const [f, j] of Object.entries(cache)) {
       const arr = j.questions || j
       if (j.total !== undefined) j.total = arr.length
       atomicWriteJson(path.join(BK, f), j)
     }
     console.log('✅ 已寫回')
+    if (imageOpt) console.log(`⚠️ ${imageOpt} 題的選項是圖，接著跑：node scripts/crop-option-images-geometric.js --all --apply`)
     if (needFigure.length) {
       console.log(`⚠️ 還原的含圖題（${needFigure.length}）還沒有圖：${needFigure.join(', ')}`)
       console.log('   接著跑 node scripts/extract-missing-figures.js --exam=<exam> --apply')

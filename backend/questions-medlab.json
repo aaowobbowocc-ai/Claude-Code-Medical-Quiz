@@ -205405,20 +205405,21 @@
     "subject_name": "醫學分子檢驗學",
     "stage_id": 6,
     "number": 74,
-    "question": "關於神經退化性疾病的分子機轉之敘述，下列何者較不正確？",
+    "question": "DNA桑格定序法（Sanger sequencing）結果分別呈現如下列四選項，何者最可能是核苷酸插入（insertion）或刪去（deletion）突變所造成？",
     "options": {
-      "A": "Alzheimer disease的形成與Aβ及tau蛋白之異常堆積有關",
-      "B": "tau蛋白之基因突變可能造成frontotemporal lobar degeneration",
-      "C": "Parkinson disease之成因與α-synuclein形成之神經元內包涵體有關",
-      "D": "Huntington disease與TDP43基因之CAG trinucleotide重複序列之大幅縮短有關"
+      "A": "(圖)",
+      "B": "(圖)",
+      "C": "(圖)",
+      "D": "(圖)"
     },
     "answer": "D",
     "explanation": "",
-    "images": [
-      "/question-images/medlab_110020_molmicro_q74_0.webp"
-    ],
-    "incomplete": true,
-    "incomplete_reason": "同場次同題號被 medlab 臨床生理學與病理學 #74 覆蓋，原卷選項解析不出來，暫時隱藏"
+    "option_images": {
+      "A": "/question-images/medlab_1673_voptA.webp",
+      "B": "/question-images/medlab_1673_voptB.webp",
+      "C": "/question-images/medlab_1673_voptC.webp",
+      "D": "/question-images/medlab_1673_voptD.webp"
+    }
   },
   {
     "id": 1674,
@@ -215137,22 +215138,16 @@
     "subject_name": "醫學分子檢驗學",
     "stage_id": 6,
     "number": 77,
-    "question": "下列關於肌萎縮性側索硬化症（amyotrophic lateral sclerosis）的敘述，何者錯誤？",
+    "question": "某大腸癌病人的血液與腫瘤組織的 DNA 以 PCR 放大一個 microsatellite repeat locus 的片段。正常組織的分析圖型如圖示。而腫瘤組織的 PCR 產物經由 DNA sequencer 分析後，發現其有 microsatellite instability 的現象。下列何者是最有可能的分析圖型？",
     "options": {
-      "A": "影響大腦、腦幹及脊髓之運動神經元",
-      "B": "部分是因銅鋅超氧化歧化酶（copper-zinc superoxide dismutase, SOD1）基因突變造成",
-      "C": "有路易氏小體（Lewy bodies）堆積在運動神經元之中",
-      "D": "好發於中年人（40～50歲）"
+      "A": "(圖)",
+      "B": "(圖)",
+      "C": "(圖)",
+      "D": "(圖)"
     },
     "answer": "D",
     "explanation": "",
-    "images": [
-      "/question-images/medlab_110100_molmicro_q77_0.webp",
-      "/question-images/medlab_110100_molmicro_q77_1.webp",
-      "/question-images/medlab_110100_molmicro_q77_2.webp"
-    ],
-    "incomplete": true,
-    "incomplete_reason": "同場次同題號被 medlab 臨床生理學與病理學 #77 覆蓋，原卷選項解析不出來，暫時隱藏"
+    "incomplete": "image_options"
   },
   {
     "id": 2157,
@@ -218204,20 +218199,21 @@
     "subject_name": "微生物學",
     "stage_id": 7,
     "number": 69,
-    "question": "遺傳性非息肉大腸直腸癌（hereditary nonpolyposis colorectal cancer）又稱為林奇綜合症（Lynch syndrome），和大腸及多種器官的癌症有關，下列何種基因突變是致病的主因？",
+    "question": "下列何者為Trichophyton屬的大分生孢子形態？",
     "options": {
-      "A": "MSH2",
-      "B": "PTEN",
-      "C": "SMAD4",
-      "D": "TSC1"
+      "A": "(圖)",
+      "B": "(圖)",
+      "C": "(圖)",
+      "D": "(圖)"
     },
     "answer": "D",
     "explanation": "",
-    "images": [
-      "/question-images/medlab_111020_micro_q69_0.webp"
-    ],
-    "incomplete": true,
-    "incomplete_reason": "同場次同題號被 medlab 臨床生理學與病理學 #69 覆蓋，原卷選項解析不出來，暫時隱藏"
+    "option_images": {
+      "A": "/question-images/medlab_2708_voptA.webp",
+      "B": "/question-images/medlab_2708_voptB.webp",
+      "C": "/question-images/medlab_2708_voptC.webp",
+      "D": "/question-images/medlab_2708_voptD.webp"
+    }
   },
   {
     "id": 2709,
@@ -263136,10 +263132,10 @@
     "number": 59,
     "question": "NPM1基因的變異常出現在血液腫瘤中，其中最常見的是在第十二外顯子（exon 12）有4 bp的插入（insertion）突變。假設野生型的序列為GCTATTCAAGATCTCTG▼GCAGTGGAGGAAGTCTCTT，▼表示突變插入處。若以傳統的聚合酶連鎖反應配合桑格定序（Sanger sequencing），則最有可能有插入突變的定序圖為何？",
     "options": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
+      "A": "(圖)",
+      "B": "(圖)",
+      "C": "(圖)",
+      "D": "(圖)"
     },
     "answer": "C",
     "explanation": "",

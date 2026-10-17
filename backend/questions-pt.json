@@ -4,7 +4,7 @@
     "label": "物理治療師",
     "scraped_at": "2026-04-10T01:55:58.342Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-17T17:07:39.502Z"
+    "last_updated": "2026-10-17T19:59:32.318Z"
   },
   "total": 15360,
   "questions": [
@@ -128698,17 +128698,21 @@
       "subject_name": "物理治療技術學",
       "stage_id": 6,
       "number": 78,
-      "question": "有關頭部外傷(traumatic brain injury)兒童的敘述,下列何者錯誤?",
+      "question": "治療師要獨力將完全依賴的病患轉位，應該使用下列那種工具為宜？",
       "options": {
-        "A": "頭部外傷兒童的記憶力恢復快速,學習與記憶新的動作任務的連續步驟不受影響",
-        "B": "顳葉損傷常伴隨語言功能缺損,表達性或理解性語言功能有問題",
-        "C": "受傷後常發生躁動行為和混亂的心智狀態,因而影響治療過程中行為的持續性",
-        "D": "在較吵雜的環境中觀察個案分心及維持注意力的表現,可以初步了解是否有注意力的損傷"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": true,
-      "incomplete_reason": "同場次同題號被 pt 心肺疾病與小兒疾病物理治療學 #78 覆蓋，原卷選項解析不出來，暫時隱藏"
+      "option_images": {
+        "A": "/question-images/pt_5998_voptA.webp",
+        "B": "/question-images/pt_5998_voptB.webp",
+        "C": "/question-images/pt_5998_voptC.webp",
+        "D": "/question-images/pt_5998_voptD.webp"
+      }
     },
     {
       "id": 5999,
@@ -129260,23 +129264,21 @@
       "subject_name": "心肺與小兒物理治療",
       "stage_id": 3,
       "number": 26,
-      "question": "有關向量干擾波的適應症與治療目標之配對,下列何者正確?",
+      "question": "下列何種心電圖為進行運動訓練的絕對禁忌？",
       "options": {
-        "A": "周邊神經受損-使去神經支配之肌肉收縮,減少肌肉萎縮",
-        "B": "中風-使無法活動的肌肉收縮,達誘發動作的目的",
-        "C": "小兒麻痺-使無法活動的肌肉收縮,達肌力訓練的目的",
-        "D": "尿失禁-使骨盆底肌肌肉收縮,達神經肌肉再教育的目的"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "disputed": true,
-      "images": [
-        "/question-images/pt_6186_0.webp",
-        "/question-images/pt_6186_1.webp",
-        "/question-images/pt_6186_2.webp",
-        "/question-images/pt_6186_3.webp"
-      ],
-      "incomplete": "option_order_unverified"
+      "option_images": {
+        "A": "/question-images/pt_6186_voptA.webp",
+        "B": "/question-images/pt_6186_voptB.webp",
+        "C": "/question-images/pt_6186_voptC.webp",
+        "D": "/question-images/pt_6186_voptD.webp"
+      }
     },
     {
       "id": 6187,
@@ -197175,23 +197177,21 @@
       "subject_name": "物理治療技術學",
       "stage_id": 3,
       "number": 46,
-      "question": "創傷性腦傷患者原本會暴躁的把鼻胃管和尿袋扯掉，也不認得媽媽；現在可以自己刷牙，看到媽媽來還掉下了眼淚。下列何者為患者在瑞秋洛斯阿米哥斯認知功能程度量表（LOCF）的評分？",
+      "question": "一位雙下肢複雜性骨折術後一週的患者，不建議使用下列何種移位機？",
       "options": {
-        "A": "從I進步到III",
-        "B": "從II進步到IV",
-        "C": "從III進步到V",
-        "D": "從IV進步到VI"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "images": [
-        "/question-images/pt_1884_0.webp",
-        "/question-images/pt_1884_1.webp",
-        "/question-images/pt_1884_2.webp",
-        "/question-images/pt_1884_3.webp"
-      ],
-      "incomplete": true,
-      "incomplete_reason": "同場次同題號被 pt 神經疾病物理治療學 #46 覆蓋，原卷選項解析不出來，暫時隱藏"
+      "option_images": {
+        "A": "/question-images/pt_1884_voptA.webp",
+        "B": "/question-images/pt_1884_voptB.webp",
+        "C": "/question-images/pt_1884_voptC.webp",
+        "D": "/question-images/pt_1884_voptD.webp"
+      }
     },
     {
       "id": 1885,
@@ -259679,24 +259679,21 @@
       "subject_name": "神經疾病物理治療",
       "stage_id": 4,
       "number": 31,
-      "question": "有關肩關節跳動測試（jerk test），下列敘述何者正確？",
+      "question": "一位中風患者，左側上下肢皆為布朗斯壯第三期，第一天進行坐到站的訓練，下列那一個姿勢有利於訓練患者利用患側施力站起來？",
       "options": {
-        "A": "用以檢查肩關節前側不穩定",
-        "B": "患肩前屈、內轉、屈肘90度，檢查者沿上臂軸線施加向後的外力，同時被動將肩關節帶往水平內收後，再復位",
-        "C": "檢查過程若有重現肩關節前方疼痛，為陽性",
-        "D": "又稱水平內收測試，可同時檢查肩峰鎖骨關節問題"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "disputed": true,
-      "images": [
-        "/question-images/pt_4349_0.webp",
-        "/question-images/pt_4349_1.webp",
-        "/question-images/pt_4349_2.webp",
-        "/question-images/pt_4349_3.webp"
-      ],
-      "incomplete": true,
-      "incomplete_reason": "同場次同題號被 pt 骨科疾病物理治療學 #31 覆蓋，原卷選項解析不出來，暫時隱藏"
+      "option_images": {
+        "A": "/question-images/pt_4349_voptA.webp",
+        "B": "/question-images/pt_4349_voptB.webp",
+        "C": "/question-images/pt_4349_voptC.webp",
+        "D": "/question-images/pt_4349_voptD.webp"
+      }
     },
     {
       "id": 4350,
@@ -274509,23 +274506,21 @@
       "subject_name": "物理治療技術學",
       "stage_id": 3,
       "number": 49,
-      "question": "關於後髓症候群（posterior cord syndrome）之臨床症狀，下列敘述何者正確？",
+      "question": "某高中棒球投手抱怨投擲手抬高時伴隨肩痛，經評估其肩關節被動活動度為內轉40 度、外轉110 度及屈曲165 度，且主動肩外展80～130 度時，會伴隨疼痛發生，盂肱關節內動作（joint play）亦有受限情形。下列何者為最不適用此投手之肩關節鬆動術？",
       "options": {
-        "A": "受傷部位以下運動功能與痛覺喪失",
-        "B": "受傷部位以下本體感覺與運動覺喪失",
-        "C": "受傷部位以下運動覺良好，但溫覺與痛覺喪失",
-        "D": "通常有運動失調（ataxia）的後遺症"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "images": [
-        "/question-images/pt_447_0.webp",
-        "/question-images/pt_447_1.webp",
-        "/question-images/pt_447_2.webp",
-        "/question-images/pt_447_3.webp"
-      ],
-      "incomplete": true,
-      "incomplete_reason": "同場次同題號被 pt 神經疾病物理治療學 #49 覆蓋，原卷選項解析不出來，暫時隱藏"
+      "option_images": {
+        "A": "/question-images/pt_447_voptA.webp",
+        "B": "/question-images/pt_447_voptB.webp",
+        "C": "/question-images/pt_447_voptC.webp",
+        "D": "/question-images/pt_447_voptD.webp"
+      }
     },
     {
       "id": 448,

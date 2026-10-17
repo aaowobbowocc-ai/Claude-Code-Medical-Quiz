@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { rehydrateWrong } from '../lib/cdnQuestions'
+import { usePlayerStore } from '../store/gameStore'
 
 const TABS = [
   { key: 'battle', label: '⚔️ 對戰', storageKey: 'battle-history' },
@@ -121,6 +123,26 @@ function MockCard({ r, navigate }) {
   const ss = (r.timeUsed || 0) % 60
   const wrongCount = r.wrongQuestions?.length || 0
   const hasWrong = wrongCount > 0
+  // 整份考卷的檢討：歷史紀錄只存了輕量參照（id + 作答），題幹要現場還原。
+  // 舊紀錄沒有 allRefs，那時只存錯題——所以這顆按鈕只在新紀錄上出現。
+  const allRefs = Array.isArray(r.allRefs) ? r.allRefs : null
+  const flaggedCount = allRefs ? allRefs.filter(x => x.flagged).length : 0
+  const [loading, setLoading] = useState(null)   // null | 'all' | 'flag'
+
+  const openReview = async (which) => {
+    if (!allRefs || loading) return
+    const picked = which === 'flag' ? allRefs.filter(x => x.flagged) : allRefs
+    if (!picked.length) return
+    setLoading(which)
+    try {
+      const examId = picked[0]?.examId || usePlayerStore.getState().exam
+      const full = await rehydrateWrong(picked, examId).catch(() => picked)
+      // 還原不到題幹的（題庫已改版／換考試）就不送進檢討頁，免得出現空白卡
+      const usable = full.filter(q => q && q.question)
+      if (!usable.length) { setLoading(null); return }
+      navigate('/review', { state: { questions: usable, stage: `${r.paper}${which === 'flag' ? '（標記題）' : '（全部）'}` } })
+    } finally { setLoading(null) }
+  }
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden px-4 py-3">
@@ -152,6 +174,21 @@ function MockCard({ r, navigate }) {
           </button>
         )}
       </div>
+      {allRefs && (
+        <div className="flex items-center gap-2 mt-2">
+          {flaggedCount > 0 && (
+            <button onClick={() => openReview('flag')} disabled={!!loading}
+              className="flex-1 text-xs font-bold px-3 py-1.5 rounded-xl text-white active:scale-95 transition-transform disabled:opacity-50"
+              style={{ background: '#F59E0B' }}>
+              {loading === 'flag' ? '載入中…' : `🚩 標記題 ${flaggedCount}`}
+            </button>
+          )}
+          <button onClick={() => openReview('all')} disabled={!!loading}
+            className="flex-1 text-xs font-bold px-3 py-1.5 rounded-xl active:scale-95 transition-transform bg-gray-100 text-gray-600 disabled:opacity-50">
+            {loading === 'all' ? '載入中…' : `📖 看全部 ${allRefs.length} 題`}
+          </button>
+        </div>
+      )}
     </div>
   )
 }

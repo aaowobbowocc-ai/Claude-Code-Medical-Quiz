@@ -736,6 +736,18 @@ function ExamResults({ papers, navigate }) {
     return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer) }
   }).filter(q => !q.correct)
 
+  // 全部作答紀錄的**輕量參照**（回饋：想一直看到當初作答的所有題目，而不是只有剛交卷時）。
+  // 只存 id + 作答 + 對錯 + 是否標記；題幹與選項不存，檢討時再用 rehydrateWrong()
+  // 從題庫快取還原。存完整題目的話 250 題 × 20 筆歷史會把 localStorage 撐爆，
+  // 而且題目日後修正了也看不到新版。
+  const allRefs = allQuestions.map((q, i) => {
+    const myAnswer = allAnswers[i] || null
+    return {
+      id: q.id, examId: q.examId || usePlayerStore.getState().exam,
+      myAnswer, correct: isAnswerCorrect(myAnswer, q.answer), flagged: !!allFlagged[i],
+    }
+  }).filter(r => r.id != null)
+
   // 手動 🚩 標記題（不論對錯）→ 存進標記夾(flagBank)供日後永久回顧
   const flaggedQuestions = allQuestions.map((q, i) => {
     const myAnswer = allAnswers[i] || null
@@ -763,6 +775,7 @@ function ExamResults({ papers, navigate }) {
         total: isWeighted ? TOTAL_POINTS : totalQuestions,
         pct, passed, timeUsed: totalTime,
         wrongQuestions,   // 存錯題 → 之後可從歷史紀錄再次檢討
+        allRefs,          // 全部作答的輕量參照 → 歷史紀錄可檢討整份考卷
       })
       localStorage.setItem(key, JSON.stringify(prev.slice(0, 20)))
     } catch {}

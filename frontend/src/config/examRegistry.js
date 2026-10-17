@@ -38,7 +38,7 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 // v30: 教師資格考試新增 teacher-special-gifted（特教資優組教檢，500 題）
 // v31: 115 年題庫上線（律師一試/警特/高普考共同科目/分科測驗/教檢）+ 全站 totalQ
 //      同步至 229,862 題，公職 shell 考試的題數改依共用題庫實算
-const CACHE_KEY = 'exam-registry-v32'
+const CACHE_KEY = 'exam-registry-v33'
 const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
 
 let registry = null // in-memory cache

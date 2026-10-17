@@ -18,7 +18,7 @@
   },
   "questionsFile": "questions-rt.json",
   "totalQ": 12480,
-  "passScore": 288,
+  "passScore": 360,
   "passRate": 0.6,
   "papers": [
     {
@@ -27,7 +27,8 @@
       "subject": "心肺基礎醫學",
       "subjects": "解剖、生理、藥理、病生理",
       "count": 80,
-      "timeLimit": 90
+      "timeLimit": 90,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper2",
@@ -35,7 +36,8 @@
       "subject": "基礎呼吸治療學",
       "subjects": "氧氣治療、氣道管理、霧化治療",
       "count": 80,
-      "timeLimit": 90
+      "timeLimit": 90,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper3",
@@ -43,7 +45,8 @@
       "subject": "呼吸治療儀器設備學",
       "subjects": "呼吸器、監測儀器、氣體分析儀",
       "count": 80,
-      "timeLimit": 90
+      "timeLimit": 90,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper4",
@@ -51,7 +54,8 @@
       "subject": "呼吸器原理及應用",
       "subjects": "機械通氣模式、設定與調整、脫離訓練",
       "count": 80,
-      "timeLimit": 90
+      "timeLimit": 90,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper5",
@@ -59,7 +63,8 @@
       "subject": "重症呼吸治療學",
       "subjects": "ARDS、急性呼吸衰竭、ECMO",
       "count": 80,
-      "timeLimit": 90
+      "timeLimit": 90,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper6",
@@ -67,7 +72,8 @@
       "subject": "呼吸疾病學",
       "subjects": "氣喘、COPD、肺癌、胸腔疾病",
       "count": 80,
-      "timeLimit": 90
+      "timeLimit": 90,
+      "pointsPerQ": 1.25
     }
   ],
   "stages": [

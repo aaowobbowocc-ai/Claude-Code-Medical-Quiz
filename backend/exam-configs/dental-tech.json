@@ -6,7 +6,7 @@
   "category": "medical",
   "questionsFile": "questions-dental-tech.json",
   "totalQ": 1791,
-  "passScore": 120,
+  "passScore": 240,
   "passRate": 0.6,
   "papers": [
     {
@@ -14,28 +14,32 @@
       "name": "牙體技術學(一)",
       "subject": "牙體技術學(一)",
       "subjects": "口腔解剖生理學、牙體形態學、牙科材料學",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper2",
       "name": "牙體技術學(二)",
       "subject": "牙體技術學(二)",
       "subjects": "固定義齒技術學",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper3",
       "name": "牙體技術學(三)",
       "subject": "牙體技術學(三)",
       "subjects": "全口活動義齒技術學、活動局部義齒技術學",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper4",
       "name": "牙體技術學(四)",
       "subject": "牙體技術學(四)",
       "subjects": "牙科矯正技術學、兒童牙科技術學、牙技法規與倫理",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     }
   ],
   "stages": [

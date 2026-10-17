@@ -6,7 +6,7 @@
   "category": "medical",
   "questionsFile": "questions-speech-therapist.json",
   "totalQ": 7448,
-  "passScore": 180,
+  "passScore": 360,
   "passRate": 0.6,
   "papers": [
     {
@@ -14,42 +14,48 @@
       "name": "基礎言語科學",
       "subject": "基礎言語科學",
       "subjects": "解剖、生理、語音聲學與語音知覺",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper2",
       "name": "神經性溝通障礙學",
       "subject": "神經性溝通障礙學",
       "subjects": "失語症、運動言語障礙、認知溝通障礙",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper3",
       "name": "兒童語言障礙",
       "subject": "兒童語言障礙",
       "subjects": "語言發展遲緩、特定型語言障礙、自閉症",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper4",
       "name": "嗓音與吞嚥障礙",
       "subject": "嗓音與吞嚥障礙",
       "subjects": "嗓音障礙、吞嚥障礙評估與治療",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper5",
       "name": "構音與語暢障礙",
       "subject": "構音與語暢障礙",
       "subjects": "構音音韻障礙、口吃、迅吃",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper6",
       "name": "聽力學與輔助溝通系統（包括專業倫理）",
       "subject": "聽力學與輔助溝通系統（包括專業倫理）",
       "subjects": "聽力學基礎、AAC、專業倫理",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     }
   ],
   "stages": [

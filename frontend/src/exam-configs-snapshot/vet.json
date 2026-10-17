@@ -18,7 +18,7 @@
   },
   "questionsFile": "questions-vet.json",
   "totalQ": 12480,
-  "passScore": 288,
+  "passScore": 360,
   "passRate": 0.6,
   "papers": [
     {
@@ -27,7 +27,8 @@
       "subject": "獸醫病理學",
       "subjects": "獸醫病理學",
       "count": 80,
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper2",
@@ -35,7 +36,8 @@
       "subject": "獸醫藥理學",
       "subjects": "獸醫藥理學",
       "count": 80,
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper3",
@@ -43,7 +45,8 @@
       "subject": "獸醫實驗診斷學",
       "subjects": "獸醫實驗診斷學",
       "count": 80,
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper4",
@@ -51,7 +54,8 @@
       "subject": "獸醫普通疾病學",
       "subjects": "獸醫普通疾病學",
       "count": 80,
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper5",
@@ -59,7 +63,8 @@
       "subject": "獸醫傳染病學",
       "subjects": "獸醫傳染病學",
       "count": 80,
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper6",
@@ -67,7 +72,8 @@
       "subject": "獸醫公共衛生學",
       "subjects": "獸醫公共衛生學",
       "count": 80,
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     }
   ],
   "stages": [

@@ -6,7 +6,7 @@
   "category": "medical",
   "questionsFile": "questions-audiologist.json",
   "totalQ": 7496,
-  "passScore": 180,
+  "passScore": 360,
   "passRate": 0.6,
   "papers": [
     {
@@ -14,42 +14,48 @@
       "name": "基礎聽力科學",
       "subject": "基礎聽力科學",
       "subjects": "外耳中耳內耳解剖、聲學、聽覺神經傳導",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper2",
       "name": "行為聽力學",
       "subject": "行為聽力學",
       "subjects": "純音測聽、語音測聽、遮蔽",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper3",
       "name": "電生理聽力學",
       "subject": "電生理聽力學",
       "subjects": "ABR、ASSR、OAE、中耳功能檢查",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper4",
       "name": "聽覺輔具原理與實務學",
       "subject": "聽覺輔具原理與實務學",
       "subjects": "助聽器選配、人工電子耳、聽覺輔助科技",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper5",
       "name": "聽覺與平衡系統之創健與復健學",
       "subject": "聽覺與平衡系統之創健與復健學",
       "subjects": "聽能創健、前庭復健、兒童聽能訓練",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper6",
       "name": "聽語溝通障礙學（包括專業倫理）",
       "subject": "聽語溝通障礙學（包括專業倫理）",
       "subjects": "語言障礙、溝通策略、專業倫理",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     }
   ],
   "stages": [

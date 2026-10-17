@@ -6,7 +6,7 @@
   "category": "medical",
   "questionsFile": "questions-optometrist-junior.json",
   "totalQ": 1500,
-  "passScore": 90,
+  "passScore": 180,
   "passRate": 0.6,
   "papers": [
     {
@@ -14,21 +14,24 @@
       "name": "眼球構造與倫理法規概要",
       "subject": "眼球構造與倫理法規概要",
       "subjects": "眼球構造、眼生理概要、專業倫理與法規",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper2",
       "name": "驗光學概要",
       "subject": "驗光學概要",
       "subjects": "屈光不正、驗光程序、視覺功能檢查概要",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     },
     {
       "id": "paper3",
       "name": "隱形眼鏡學概要",
       "subject": "隱形眼鏡學概要",
       "subjects": "隱形眼鏡驗配、鏡片保養、配鏡概要",
-      "count": 50
+      "count": 50,
+      "pointsPerQ": 2
     }
   ],
   "stages": [

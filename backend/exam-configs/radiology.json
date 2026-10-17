@@ -18,7 +18,7 @@
   },
   "questionsFile": "questions-radiology.json",
   "totalQ": 15359,
-  "passScore": 288,
+  "passScore": 360,
   "passRate": 0.6,
   "papers": [
     {
@@ -42,7 +42,8 @@
         }
       ],
       "breakdownNote": "依歷屆題分布估計",
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper2",
@@ -61,7 +62,8 @@
         }
       ],
       "breakdownNote": "依歷屆題分布估計",
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper3",
@@ -84,7 +86,8 @@
         }
       ],
       "breakdownNote": "依歷屆題分布估計",
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper4",
@@ -103,7 +106,8 @@
         }
       ],
       "breakdownNote": "依歷屆題分布估計",
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper5",
@@ -122,7 +126,8 @@
         }
       ],
       "breakdownNote": "依歷屆題分布估計",
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     },
     {
       "id": "paper6",
@@ -141,7 +146,8 @@
         }
       ],
       "breakdownNote": "依歷屆題分布估計",
-      "timeLimit": 60
+      "timeLimit": 60,
+      "pointsPerQ": 1.25
     }
   ],
   "stages": [

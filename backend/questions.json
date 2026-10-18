@@ -29514,14 +29514,14 @@
       "subject_name": "生物化學",
       "stage_id": 3,
       "number": 77,
-      "question": "下列何者最可能為可逆性細胞核的變化？",
+      "question": "NAD+ 的化學結構應為下列何者？",
       "options": {
-        "A": "核溶解（karyolysis）",
-        "B": "細胞核碎裂（karyorrhexis）",
-        "C": "核濃縮（pyknosis）",
-        "D": "核質凝聚（chromatin clumping）"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
-      "answer": "送分",
+      "answer": "D",
       "explanation": "",
       "valid_answers": [
         "A",
@@ -29529,16 +29529,10 @@
         "C",
         "D"
       ],
-      "disputed": true,
       "original_answer": "D",
       "correction_note": "第77題一律給分（原答案 D）",
-      "images": [
-        "/question-images/doctor1_114020_p0_77_0.webp",
-        "/question-images/doctor1_114020_p0_77_1.webp",
-        "/question-images/doctor1_114020_p0_77_2.webp",
-        "/question-images/doctor1_114020_p0_77_3.webp"
-      ],
-      "image_url": "/question-images/doctor1_114020_p0_77_0.webp"
+      "image_url": "/question-images/doctor1_114020_p0_77_0.webp",
+      "incomplete": "image_options"
     },
     {
       "id": "114020_1_78",
@@ -100157,7 +100151,10 @@
       },
       "answer": "C",
       "explanation": "",
-      "_original_number": 96
+      "_original_number": 96,
+      "images": [
+        "/question-images/doctor1_106020_q92_fig.webp"
+      ]
     },
     {
       "id": 1150206234,

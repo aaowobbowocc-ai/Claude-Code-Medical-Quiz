@@ -4,7 +4,7 @@
     "label": "獸醫師",
     "scraped_at": "2026-04-16T07:06:47.940Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-17T17:07:52.895Z"
+    "last_updated": "2026-10-18T06:14:36.724Z"
   },
   "total": 12480,
   "questions": [
@@ -202646,7 +202646,12 @@
         "/question-images/vet_110100_p2_76_2.webp",
         "/question-images/vet_110100_p2_76_3.webp"
       ],
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/vet_4076_voptA.webp",
+        "B": "/question-images/vet_4076_voptB.webp",
+        "C": "/question-images/vet_4076_voptC.webp",
+        "D": "/question-images/vet_4076_voptD.webp"
+      }
     },
     {
       "id": 4077,

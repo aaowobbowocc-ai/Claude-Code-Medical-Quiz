@@ -7937,16 +7937,16 @@
     "subject_name": "臨床病毒學",
     "stage_id": 11,
     "number": 71,
-    "question": "下列那些病毒在懷孕期間感染，容易造成嬰兒先天性缺陷？①Cytomegalovirus ②HSV ③Adenovirus ④Rubella virus",
+    "question": "下列那些病毒在懷孕期間感染，容易造成嬰兒先天性缺陷？Cytomegalovirus HSV AdenovirusRubella virus",
     "options": {
-      "A": "①②③",
-      "B": "①②④",
-      "C": "②③④",
-      "D": "①③④"
+      "A": "(圖)",
+      "B": "(圖)",
+      "C": "(圖)",
+      "D": "(圖)"
     },
     "answer": "B",
     "explanation": "",
-    "incomplete": false
+    "incomplete": "image_options"
   },
   {
     "id": 9587,

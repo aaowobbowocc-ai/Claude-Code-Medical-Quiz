@@ -203292,21 +203292,16 @@
       "subject_name": "骨科疾病物理治療",
       "stage_id": 5,
       "number": 29,
-      "question": "下列何者不是中風後常見的步態缺失？",
+      "question": "下列那種牽張（stretch）方式適合用於後肩關節囊太緊的個案？",
       "options": {
-        "A": "自選和最大速度降低",
-        "B": "雙下肢關節角度彎曲／伸直的程度可能降低",
-        "C": "患側腳站立期結束時的髖伸直增加",
-        "D": "患側腳足踝推進及拉起時所產生的力量降低"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "images": [
-        "/question-images/pt_1547_0.webp",
-        "/question-images/pt_1547_1.webp",
-        "/question-images/pt_1547_2.webp",
-        "/question-images/pt_1547_3.webp"
-      ]
+      "incomplete": "image_options"
     },
     {
       "id": 1548,

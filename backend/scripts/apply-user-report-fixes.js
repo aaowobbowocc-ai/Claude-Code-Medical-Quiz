@@ -63,7 +63,10 @@ for (const [file, items] of grouped) {
     }
   }
   if (changed > 0) {
-    fs.writeFileSync(fp, JSON.stringify(data));
+    // ⚠️ 一定要帶縮排。沒帶的話整個 questions.json 會被寫成一行，
+    //    之後任何一筆改動的 diff 都會變成「132,467 行全刪重寫」，完全無法審閱。
+    //    （2026-10-19 踩到，當場還原格式。）
+    fs.writeFileSync(fp, JSON.stringify(data, null, 2) + String.fromCharCode(10));
     console.log(file, ':', changed, 'changes saved');
     totalChanged += changed;
   }

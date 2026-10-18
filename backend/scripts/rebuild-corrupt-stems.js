@@ -88,7 +88,7 @@ function cover(stem, ms) {
   }
 
   const cache = {}
-  let fixed = 0, noAns = 0
+  let fixed = 0, noAns = 0, imageOpt = 0
   const skip = {}
   const bump = k => { skip[k] = (skip[k] || 0) + 1 }
   for (const [key, items] of byPaper) {
@@ -119,6 +119,34 @@ function cover(stem, ms) {
       if (!ok(o) && marker && ok(marker.get(+r.n))) o = marker.get(+r.n)   // 換後備解析
       if (!o) { bump('原卷解析不到該題號'); continue }
       const opts = L.map(x => String(o.options[x] || ''))
+
+      // ── 選項本身是圖的題 ──
+      // 文字解析抽到四個空格不是解析壞掉，是那四個選項本來就是圖
+      // （化學結構式、定序圖譜、姿勢照片）。題幹是文字且是好的，照樣還原，
+      // 選項標成 image_options 交給 crop-option-images-{geometric,vector}.js 裁圖。
+      // 既有慣例是「(圖)」佔位，不能用空字串（會被 audit 報 empty_options）。
+      const bare1 = t => String(t).replace(/[-​-‏﻿\s　]/g, '')
+      const blank = opts.filter(x => !bare1(x)).length
+      if (blank >= 3) {
+        const before0 = cover(q.question, ms), after0 = cover(o.stem, ms)
+        if (before0 === null || after0 === null || after0 < HIGH || after0 - before0 < GAIN) { bump('選項是圖但題幹驗不過'); continue }
+        const a0 = ans.get(+r.n)
+        console.log(`${exam} ${code} ${subject.slice(0, 16)} #${r.n}  覆蓋 ${Math.round(before0 * 100)}% → ${Math.round(after0 * 100)}%  [選項是圖]`)
+        console.log(`  舊: ${String(q.question).replace(/\s+/g, ' ').slice(0, 54)}`)
+        console.log(`  新: ${String(o.stem).replace(/\s+/g, ' ').slice(0, 54)}
+`)
+        if (APPLY) {
+          q.question = String(o.stem)
+          q.options = { A: '(圖)', B: '(圖)', C: '(圖)', D: '(圖)' }
+          q.explanation = ''
+          delete q.disputed; delete q.images; delete q.option_images; delete q.incomplete_reason
+          if (a0 && /^[ABCD]$/.test(String(a0))) q.answer = String(a0)
+          q.incomplete = 'image_options'
+        }
+        imageOpt++
+        continue
+      }
+
       // ⚠️ `!x.trim()` 擋不住塞著 PUA 或零寬字元的空格（見 apply-glyph-map.js 的同一個坑）
       const bare = t => String(t).replace(/[-​-‏﻿\s　]/g, '')
       if (opts.some(x => !bare(x)) || new Set(opts.map(bare)).size !== 4) { bump('原卷選項不乾淨'); continue }
@@ -166,10 +194,11 @@ function cover(stem, ms) {
     }
   }
 
-  console.log(`重建 ${fixed} 題${noAns ? `（其中 ${noAns} 題無答案標隱藏）` : ''}${APPLY ? '' : '（dry-run）'}`)
+  console.log(`重建 ${fixed} 題｜選項是圖、待裁圖 ${imageOpt} 題${noAns ? `（其中 ${noAns} 題無答案標隱藏）` : ''}${APPLY ? '' : '（dry-run）'}`)
   if (Object.keys(skip).length) console.log('跳過：' + JSON.stringify(skip))
-  if (APPLY && fixed) {
+  if (APPLY && (fixed || imageOpt)) {
     for (const [f, j] of Object.entries(cache)) atomicWriteJson(path.join(BK, f), j)
     console.log('✅ 已寫回')
+    if (imageOpt) console.log('⚠️ 接著跑 crop-option-images-geometric.js --all --apply 與 crop-option-images-vector.js --exam=<exam> --apply')
   }
 })().catch(e => { console.error(e.stack); process.exit(1) })

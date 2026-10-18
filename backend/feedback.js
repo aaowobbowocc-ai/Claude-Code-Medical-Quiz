@@ -81,6 +81,15 @@ async function sendReportDiscord(entry) {
 //
 // If exact ID lookup fails, falls back to rocYear + number (useful when ID format
 // is corrupted or mismatched).
+/**
+ * ⚠️ id 有兩種形式。server.js 載入時會把每題的 id 改寫成 `<原id>_<paper.id>`，
+ * 但前端是從 CDN 拿**原始 JSON**，使用者回報時送回來的是改寫前的 id。
+ * 所以比對一定要兩種都認，否則會靜默退回「年份＋題號」比對、抓到同年同題號的
+ * 第一卷，Discord 的定位就標成別的科目（2026-10-19 查出近期 5 筆裡錯 3 筆）。
+ */
+const sameQid = (q, qid) =>
+  String(q.id) === String(qid) || (q._rawId != null && String(q._rawId) === String(qid));
+
 function locateQuestion(examData, examConfigs, questionId, questionText, rocYear, number, preferredExamId) {
   if (!examData || !questionId) return null;
 
@@ -89,7 +98,7 @@ function locateQuestion(examData, examConfigs, questionId, questionText, rocYear
   if (preferredExamId && examData[preferredExamId]?.questions) {
     const examName = examConfigs?.[preferredExamId]?.name || preferredExamId;
     const list = examData[preferredExamId].questions;
-    const byId = list.find(x => String(x.id) === String(questionId));
+    const byId = list.find(x => sameQid(x, questionId));
     if (byId) return { examId: preferredExamId, examName, question: byId };
     if (rocYear && number) {
       const byYr = list.find(x => String(x.roc_year) === String(rocYear) &&
@@ -105,7 +114,7 @@ function locateQuestion(examData, examConfigs, questionId, questionText, rocYear
 
   // Round 1: Try exact ID match
   for (const [examId, data] of Object.entries(examData)) {
-    const q = data.questions?.find(x => String(x.id) === String(questionId));
+    const q = data.questions?.find(x => sameQid(x, questionId));
     if (q) matches.push({ examId, examName: examConfigs?.[examId]?.name || examId, question: q });
   }
 

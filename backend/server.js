@@ -136,6 +136,11 @@ for (const [key, cfg] of Object.entries(examConfigs)) {
             q.subject_name = q.subject_name || paper.subjects;
             q.subject_tag = q.subject_tag || paper.id;
             if (!q._idFixed) {
+              // 留著原始 id：前端是從 CDN 拿**原始 JSON**，看到的是改寫前的 id。
+              // 題目回報送回來的就是那個 id，locateQuestion 要認得才找得到
+              // （不然會退回「年份＋題號」比對，抓到同年同題號的第一卷，
+              //  Discord 的定位就會標成別的科目——2026-10-19 查出 5 筆裡錯 3 筆）。
+              q._rawId = q.id;
               q.id = `${q.id}_${paper.id}`;
               q._idFixed = true;
             }
@@ -162,6 +167,7 @@ for (const [key, cfg] of Object.entries(examConfigs)) {
           q.subject_name = q.subject_name || paper.subjects;
           q.subject_tag = q.subject_tag || paper.id;
           if (!q._idFixed) {
+            q._rawId = q.id;
             q.id = `${q.id}_${paper.id}`;
             q._idFixed = true;
           }

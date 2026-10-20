@@ -81,6 +81,25 @@ async function sendReportDiscord(entry) {
 //
 // If exact ID lookup fails, falls back to rocYear + number (useful when ID format
 // is corrupted or mismatched).
+/** 題幹正規化後的前 40 字——比 id 精確得多，用來驗證 id 找到的是不是同一題。 */
+const stemKey = t => String(t || '').replace(/\s+/g, '').slice(0, 40);
+
+/** 在所有考試裡用題幹找。找到唯一一題才回傳。 */
+function findByStem(examData, examConfigs, questionText) {
+  const want = stemKey(questionText);
+  if (want.length < 12) return null;
+  const hits = [];
+  for (const [examId, data] of Object.entries(examData)) {
+    for (const q of data.questions || []) {
+      if (stemKey(q.question) === want) {
+        hits.push({ examId, examName: examConfigs?.[examId]?.name || examId, question: q });
+        if (hits.length > 1) return null;   // 不唯一就不猜
+      }
+    }
+  }
+  return hits[0] || null;
+}
+
 /**
  * ⚠️ id 有兩種形式。server.js 載入時會把每題的 id 改寫成 `<原id>_<paper.id>`，
  * 但前端是從 CDN 拿**原始 JSON**，使用者回報時送回來的是改寫前的 id。
@@ -99,6 +118,14 @@ function locateQuestion(examData, examConfigs, questionId, questionText, rocYear
     const examName = examConfigs?.[preferredExamId]?.name || preferredExamId;
     const list = examData[preferredExamId].questions;
     const byId = list.find(x => sameQid(x, questionId));
+    // ⚠️ id 命中還不夠，要跟題幹對得上才算數。937 筆歷史報錯裡有 146 筆
+    //    id 與題幹指向不同題（跨考試場次碼相同、純數字 id 撞號、題庫重建後位移），
+    //    只信 id 會把報錯掛到別題上。題幹比 id 精確得多，矛盾時以題幹為準。
+    if (byId && (!questionText || stemKey(byId.question) === stemKey(questionText))) {
+      return { examId: preferredExamId, examName, question: byId };
+    }
+    const byStem0 = findByStem(examData, examConfigs, questionText);
+    if (byStem0) return byStem0;
     if (byId) return { examId: preferredExamId, examName, question: byId };
     if (rocYear && number) {
       const byYr = list.find(x => String(x.roc_year) === String(rocYear) &&
@@ -120,13 +147,24 @@ function locateQuestion(examData, examConfigs, questionId, questionText, rocYear
 
   // If exact match found, use it
   if (matches.length > 0) {
-    if (matches.length > 1 && questionText) {
+    if (questionText) {
+      const want = stemKey(questionText);
+      const exact = matches.find(m => stemKey(m.question.question) === want);
+      if (exact) return exact;
       const hint = String(questionText).slice(0, 30);
       const preferred = matches.find(m => m.question.question && m.question.question.startsWith(hint));
       if (preferred) return preferred;
+      // id 命中但沒有一題的題幹對得上 → 全站用題幹再找一次
+      const byStem = findByStem(examData, examConfigs, questionText);
+      if (byStem) return byStem;
     }
     return matches[0];
   }
+
+  // Round 1.5：id 完全找不到時，先用題幹找，再退到年份+題號。
+  // 題幹唯一命中比「同年同題號的第一卷」可靠得多。
+  const byStemOnly = findByStem(examData, examConfigs, questionText);
+  if (byStemOnly) return byStemOnly;
 
   // Round 2: Fallback to rocYear + number if ID lookup failed
   // (e.g. ID format corrupted, frontend race-condition where questionId was "未知")

@@ -1097,9 +1097,26 @@ export default function MockExam() {
 
   const FULL_EXAM_FEE = getFullExamFee(PAPERS)
 
+  /**
+   * 開始前先確認要扣金幣。
+   *
+   * 回饋反覆出現同一件事：「希望點進去考題前可以有確定的選項，不然手滑點錯金幣
+   * 還不退很坑」「不小心按到第二場的隨機模擬考…又再被扣了一次1000金幣」
+   * 「習慣了阿摩的往左滑就會回到上一題…以至於被扣了兩次金幣」。
+   * 原本三個入口都是**點下去就直接扣**，完整模考一次 1000 金幣，沒有任何緩衝。
+   */
+  const confirmSpend = (fee, label) =>
+    confirm(`${label}
+
+將扣除 ${fee} 金幣（目前 ${coins} 金幣）。
+開始後中途離開不會退還。
+
+確定要開始嗎？`)
+
   // Start single paper (random)
   const handleStartSingle = async (paper, years) => {
     const fee = getSingleExamFee(paper)
+    if (coins >= fee && !confirmSpend(fee, `${paper.name}（${paper.count} 題）`)) return
     if (!spendCoins(fee)) {
       if (confirm(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣\n\n要去${IS_NATIVE ? '看廣告賺金幣' : '金幣商店'}嗎？`)) navigate('/?reward=1')
       return
@@ -1114,6 +1131,8 @@ export default function MockExam() {
 
   // Start full exam (all papers sequentially)
   const handleStartFull = async (years) => {
+    const totalQ = PAPERS.reduce((n, p) => n + p.count, 0)
+    if (coins >= FULL_EXAM_FEE && !confirmSpend(FULL_EXAM_FEE, `完整模擬考（${PAPERS.length} 科、共 ${totalQ} 題）`)) return
     if (!spendCoins(FULL_EXAM_FEE)) {
       if (confirm(`金幣不足！需要 ${FULL_EXAM_FEE} 金幣，目前只有 ${coins} 金幣\n\n要去${IS_NATIVE ? '看廣告賺金幣' : '金幣商店'}嗎？`)) navigate('/?reward=1')
       return
@@ -1130,6 +1149,8 @@ export default function MockExam() {
   const handleStartHistorical = async (year, session, isFull, paper) => {
     const targetPaper = paper || PAPERS[0]
     const fee = isFull ? FULL_EXAM_FEE : getSingleExamFee(targetPaper)
+    const label = isFull ? `${year}年${session} 完整模擬考` : `${year}年${session} ${targetPaper.name}`
+    if (coins >= fee && !confirmSpend(fee, label)) return
     if (!spendCoins(fee)) {
       if (confirm(`金幣不足！需要 ${fee} 金幣，目前只有 ${coins} 金幣\n\n要去${IS_NATIVE ? '看廣告賺金幣' : '金幣商店'}嗎？`)) navigate('/?reward=1')
       return

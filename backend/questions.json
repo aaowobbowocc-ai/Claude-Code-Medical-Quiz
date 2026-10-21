@@ -86755,12 +86755,12 @@
       "subject_name": "公共衛生",
       "stage_id": 9,
       "number": 86,
-      "question": "某研究想分析乳癌分期與病人年齡的關係，收集 100 位病人年齡（單位：歲）及其乳癌分期（一到四期）資料，經描述性分析發現年齡為右偏（right skewed）分配，下列何種統計方法最恰當？單一樣本t 檢定（One sample t-test）單一樣本z 檢定（One sample z-test）",
+      "question": "某研究想分析乳癌分期與病人年齡的關係，收集 100 位病人年齡（單位：歲）及其乳癌分期（一到 四期）資料，經描述性分析發現年齡為右偏（right skewed）分配，下列何種統計方法最恰當？",
       "options": {
-        "A": "Pearson",
-        "B": "相關係數（Pearson correlation coefficient）",
-        "C": "Spearm",
-        "D": "an 相關係數（Spearman correlation coefficient）"
+        "A": "單一樣本t 檢定（One sample t-test）",
+        "B": "單一樣本z 檢定（One sample z-test）",
+        "C": "Pearson  相關係數（Pearson correlation coefficient）",
+        "D": "Spearm an 相關係數（Spearman correlation coefficient）"
       },
       "answer": "D",
       "explanation": "",

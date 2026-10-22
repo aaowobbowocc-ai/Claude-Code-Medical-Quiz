@@ -33,6 +33,9 @@ const { atomicWriteJson } = require('./lib/atomic-write')
 const BK = path.join(__dirname, '..')
 const APPLY = process.argv.includes('--apply')
 const only = (process.argv.find(a => a.startsWith('--exam=')) || '').split('=')[1]
+// --all：不靠「選項 A 太短」的簽章，改掃每一題。判準一樣是文字守恆，
+// 所以能抓到所有方向的切錯（題幹尾巴掉進選項、選項被吃進題幹、選項之間錯開）。
+const ALL = process.argv.includes('--all')
 const L = ['A', 'B', 'C', 'D']
 const EXAM = f => f.replace('questions-', '').replace('questions.json', 'doctor1').replace('.json', '')
 const SKIP = new Set(['gsat', 'ast', 'driver-car', 'driver-moto', 'post-indoor', 'post-outdoor',
@@ -69,7 +72,7 @@ function looksSplit(q) {
     const j = JSON.parse(fs.readFileSync(path.join(BK, f), 'utf8'))
     const arr = j.questions || j
     if (!Array.isArray(arr)) continue
-    const cands = arr.filter(looksSplit)
+    const cands = ALL ? arr.filter(q => q.options && q.question) : arr.filter(looksSplit)
     if (!cands.length) continue
 
     const byPaper = new Map()

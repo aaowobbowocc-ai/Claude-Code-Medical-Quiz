@@ -85,12 +85,12 @@
     "paper_id": "paper2",
     "stage_id": 0,
     "number": 4,
-    "question": "下列聽力圖應在右耳做遮蔽檢查,結果Weber Test 導向左耳,請問右耳的聽力損失種類為何?",
+    "question": "下列聽力圖應在右耳做遮蔽檢查，結果Weber Test 導向左耳，請問右耳的聽力損失種類為何？Hearing Threshold Levels in Decibels (dB)(ANSI 3.6)",
     "options": {
-      "A": "Hearing Threshold Levels in Decibels (dB)",
-      "B": "(ANSI 3.6)",
-      "C": "傳導性聽力損失",
-      "D": "混合性聽力損失 感音神經性聽力損失 中樞聽覺異常"
+      "A": "傳導性聽力損失",
+      "B": "混合性聽力損失",
+      "C": "感音神經性聽力損失",
+      "D": "中樞聽覺異常"
     },
     "answer": "C",
     "explanation": "",
@@ -1323,12 +1323,12 @@
     "paper_id": "paper2",
     "stage_id": 0,
     "number": 58,
-    "question": "美國嬰兒聽覺聯合委員會(Joint Committee of Infant Hearing, JCIH)2007 年,提出導致聽力損失的危",
+    "question": "美國嬰兒聽覺聯合委員會（Joint Committee of Infant Hearing, JCIH）2007 年，提出導致聽力損失的危險因子，下列何者不正確？",
     "options": {
-      "A": "險因子,下列何者不正確?",
-      "B": "家庭中有成年期發生聽損的家族史",
-      "C": "出生前胎內感染(prenatal infection)",
-      "D": "出生後曾經感染與感覺神經性聽損相關的疾病 接受過化學治療(chemotherapy)"
+      "A": "家庭中有成年期發生聽損的家族史",
+      "B": "出生前胎內感染（prenatal infection）",
+      "C": "出生後曾經感染與感覺神經性聽損相關的疾病",
+      "D": "接受過化學治療（chemotherapy）"
     },
     "answer": "A",
     "explanation": "",
@@ -1369,12 +1369,12 @@
     "paper_id": "paper2",
     "stage_id": 0,
     "number": 60,
-    "question": "針對5 歲以下兒童,應先詢問個案史(case history),以便選擇適合的方法或材料來施行行為聽力檢",
+    "question": "針對5 歲以下兒童，應先詢問個案史（case history），以便選擇適合的方法或材料來施行行為聽力檢查，下列那一項較不重要？",
     "options": {
-      "A": "查,下列那一項較不重要?",
-      "B": "兒童的認知能力",
-      "C": "兒童的動作能力",
-      "D": "兒童的口語溝通能力 兒童的家庭功能"
+      "A": "兒童的認知能力",
+      "B": "兒童的動作能力",
+      "C": "兒童的口語溝通能力",
+      "D": "兒童的家庭功能"
     },
     "answer": "D",
     "explanation": "",
@@ -9711,12 +9711,12 @@
     "paper_id": "paper4",
     "stage_id": 0,
     "number": 22,
-    "question": "配戴非線性助聽器測試其置入增益(insertion gain)與功能增益(functional gain)其結果相同的情況",
+    "question": "配戴非線性助聽器測試其置入增益（insertion gain）與功能增益（functional gain）其結果相同的情況為何？",
     "options": {
-      "A": "為何?",
-      "B": "使用高音強的窄頻噪音為刺激音的情況",
-      "C": "使用高音強的語音為刺激音的情況",
-      "D": "使用高音強的輸入位階測量情況 使用相同的輸入位階測量的情況"
+      "A": "使用高音強的窄頻噪音為刺激音的情況",
+      "B": "使用高音強的語音為刺激音的情況",
+      "C": "使用高音強的輸入位階測量情況",
+      "D": "使用相同的輸入位階測量的情況"
     },
     "answer": "D",
     "explanation": "",
@@ -31619,12 +31619,12 @@
     "paper_id": "paper4",
     "stage_id": 0,
     "number": 15,
-    "question": "下列何項情況下,將導致數位噪音減低(digaital noise reduction, DNR)清楚區隔語音和噪音的功能",
+    "question": "下列何項情況下，將導致數位噪音減低（digaital noise reduction, DNR）清楚區隔語音和噪音的功能降低？",
     "options": {
-      "A": "降低?",
-      "B": "混響的溝通環境下",
-      "C": "噪音的頻譜偏向高頻",
-      "D": "說話者的音調平坦 訊噪比下降的情況下"
+      "A": "混響的溝通環境下",
+      "B": "噪音的頻譜偏向高頻",
+      "C": "說話者的音調平坦",
+      "D": "訊噪比下降的情況下"
     },
     "answer": "A",
     "explanation": "",
@@ -33321,10 +33321,10 @@
     "paper_id": "paper2",
     "stage_id": 0,
     "number": 9,
-    "question": "純音聽力檢查有傳導性聽力損失,經耳鏡檢查結果都是有正常外耳道、鼓膜、以及近似正常的中耳",
+    "question": "純音聽力檢查有傳導性聽力損失，經耳鏡檢查結果都是有正常外耳道、鼓膜、以及近似正常的中耳分析結果，下列那一種病變不符合前列之敘述？",
     "options": {
-      "A": "分析結果,下列那一種病變不符合前列之敘述?",
-      "B": "先天/後天聽小骨異常 耳硬化症",
+      "A": "先天/後天聽小骨異常",
+      "B": "耳硬化症",
       "C": "慢性中耳炎",
       "D": "Paget’s disease"
     },
@@ -39786,10 +39786,10 @@
     "paper_id": "paper6",
     "stage_id": 0,
     "number": 49,
-    "question": "根據Christensen(2000)指出:在目前的教育結構下,多元文化失聰學生的教育要達到平等與有品質是可能的,",
+    "question": "根據Christensen（2000）指出:在目前的教育結構下，多元文化失聰學生的教育要達到平等與有品質是可能的，要有效的做到這一點，教育者可以使用的方法之一，就是運用三語與三文化的觀點。請問下列何者不包括？",
     "options": {
-      "A": "要有效的做到這一點,教育者可以使用的方法之一,就是運用三語與三文化的觀點。請問下列何者不包括?",
-      "B": "社會語言與聾人的文化 家庭語言與文化",
+      "A": "社會語言與聾人的文化",
+      "B": "家庭語言與文化",
       "C": "學校語言與文化",
       "D": "視覺語言與聾人的文化"
     },
@@ -40592,12 +40592,12 @@
     "paper_id": "paper5",
     "stage_id": 0,
     "number": 4,
-    "question": "聽力師訓練聽者控制溝通變項,例如:聽損者練習如何有效使用對話修補策略(如:問問題或提出",
+    "question": "聽力師訓練聽者控制溝通變項，例如：聽損者練習如何有效使用對話修補策略（如：問問題或提出請求），使說話者可以重複或澄清一段話，此聽能訓練是屬於下列那一個方法？",
     "options": {
-      "A": "請求),使說話者可以重複或澄清一段話,此聽能訓練是屬於下列那一個方法?",
-      "B": "實用式(pragmatic) 分析式(analytic)",
-      "C": "綜合式(synthetic)",
-      "D": "折衷式(eclectic)"
+      "A": "實用式（pragmatic）",
+      "B": "分析式（analytic）",
+      "C": "綜合式（synthetic）",
+      "D": "折衷式（eclectic）"
     },
     "answer": "A",
     "explanation": "",
@@ -40638,12 +40638,12 @@
     "paper_id": "paper5",
     "stage_id": 0,
     "number": 6,
-    "question": "90%以上聽損兒童出生在聽常父母的家庭中,大部分父母對聽力損失甚少有經驗,當父母得知孩子被",
+    "question": "90%以上聽損兒童出生在聽常父母的家庭中，大部分父母對聽力損失甚少有經驗，當父母得知孩子被診斷出有聽力損失時，大都會歷經「悲傷循環（grief cycle）」階段，下列何者最接近悲傷循環階段的順序？",
     "options": {
-      "A": "診斷出有聽力損失時,大都會歷經「悲傷循環(grief cycle)」階段,下列何者最接近悲傷循環階段",
-      "B": "的順序?",
-      "C": "悲傷 → 內疚、生氣 → 震驚、否認 → 接受 悲傷 → 震驚、否認 → 內疚、生氣 → 接受",
-      "D": "震驚、否認 → 接受 → 內疚、生氣 → 悲傷 震驚、否認 → 悲傷 → 內疚、生氣 → 接受"
+      "A": "悲傷 → 內疚、生氣 → 震驚、否認 → 接受",
+      "B": "悲傷 → 震驚、否認 → 內疚、生氣 → 接受",
+      "C": "震驚、否認 → 接受 → 內疚、生氣 → 悲傷",
+      "D": "震驚、否認 → 悲傷 → 內疚、生氣 → 接受"
     },
     "answer": "D",
     "explanation": "",
@@ -66267,10 +66267,10 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 1,
-    "question": "有關Sensorineural Acuity Level（SAL）Test，下列敘述何者錯誤？SAL",
+    "question": "有關Sensorineural Acuity Level（SAL）Test，下列敘述何者錯誤？",
     "options": {
-      "A": "測試主要是使用氣傳導，不會有occlusion effects",
-      "B": "SAL是可以減少對側耳遮蔽的需要",
+      "A": "SAL 測試主要是使用氣傳導，不會有occlusion effects",
+      "B": "SAL 是可以減少對側耳遮蔽的需要",
       "C": "骨導閾值是將masked AC（air-conduction）threshold 減unmasked AC threshold 得到的差值",
       "D": "因為SAL 測試時間太長，所以沒有被臨床聽力師所用"
     },
@@ -66309,12 +66309,12 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 29,
-    "question": "兒童語音聽辨率在整體聽力評估項目中，可以了解兒童聽閾值之上（supra-threshold）的知覺表現，如果測試3歲兒童，適合他的測試材料何者為佳？HINT",
+    "question": "兒童語音聽辨率在整體聽力評估項目中，可以了解兒童聽閾值之上（supra-threshold）的知覺表現，如果測試3 歲兒童，適合他的測試材料何者為佳？",
     "options": {
-      "A": "PBK",
-      "B": "WIPI",
-      "C": "NU",
-      "D": "-CHIPS"
+      "A": "HINT",
+      "B": "PBK",
+      "C": "WIPI",
+      "D": "NU-CHIPS"
     },
     "answer": "D",
     "explanation": "",
@@ -66330,12 +66330,12 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 4,
-    "question": "假如母親在孕期前三個月得到某種感染，嬰兒出生後聽篩卻是通過。在二歲時卻被父母察覺有聽力損失，請問該母親最不可能得到下列那種感染？CMV",
+    "question": "假如母親在孕期前三個月得到某種感染，嬰兒出生後聽篩卻是通過。在二歲時卻被父母察覺有聽力損失，請問該母親最不可能得到下列那種感染？",
     "options": {
-      "A": "（巨細胞病毒）– Cytomegalovirus Rubella",
-      "B": "（德國麻疹病毒）HIV",
-      "C": "（人類免疫缺失病毒）Syphilis",
-      "D": "（梅毒）"
+      "A": "CMV（巨細胞病毒）– Cytomegalovirus",
+      "B": "Rubella（德國麻疹病毒）",
+      "C": "HIV（人類免疫缺失病毒）",
+      "D": "Syphilis（梅毒）"
     },
     "answer": "B",
     "explanation": "",
@@ -66458,9 +66458,9 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 10,
-    "question": "根據1991年美國ASHA及2000年英國NDCS（National Deaf Children’s Society）所發表的準則。主觀客觀嬰幼兒評量法中被認定是種可分頻率、耳朵、可信度很好的行為檢查法為下列何者？BOA",
+    "question": "根據1991 年美國ASHA 及2000 年英國NDCS（National Deaf Children’s Society）所發表的準則。主觀客觀嬰幼兒評量法中被認定是種可分頻率、耳朵、可信度很好的行為檢查法為下列何者？",
     "options": {
-      "A": "（Behavioral Oberservation Audiometry）",
+      "A": "BOA（Behavioral Oberservation Audiometry）",
       "B": "VRA（Visual Reinforcement Audiometry）",
       "C": "Distraction Test",
       "D": "APR（Auropalpebral Response）"
@@ -66500,12 +66500,12 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 28,
-    "question": "個案是12歲兒童，在學校因課業表現不佳，老師建議家長帶去做完整聽力評估，評估結果如下：純音聽力接近正常（但反應不一致），在噪音下的言語知覺表現很差，OAE正常，無鐙骨肌反射，多數APD（auditory processing disorders）評估顯示不正常。綜合以上報告，下列診斷何者最為適當？APD",
+    "question": "個案是12 歲兒童，在學校因課業表現不佳，老師建議家長帶去做完整聽力評估，評估結果如下：純音聽力接近正常（但反應不一致），在噪音下的言語知覺表現很差，OAE 正常，無鐙骨肌反射，多數APD（auditory processing disorders）評估顯示不正常。綜合以上報告，下列診斷何者最為適當？",
     "options": {
-      "A": "（聽覺處理障礙）Nonorganic hearing loss",
-      "B": "（非器質性聽損）GJB2",
-      "C": "基因突變AN/AD",
-      "D": "（聽神經病變）"
+      "A": "APD（聽覺處理障礙）",
+      "B": "Nonorganic hearing loss（非器質性聽損）",
+      "C": "GJB2 基因突變",
+      "D": "AN/AD（聽神經病變）"
     },
     "answer": "D",
     "explanation": "",
@@ -66649,12 +66649,12 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 19,
-    "question": "根據臨床實驗結果，ASHA 2005年建議純音聽力檢查給予刺激音的時間長度最好是下列何者？200 ms",
+    "question": "根據臨床實驗結果，ASHA 2005 年建議純音聽力檢查給予刺激音的時間長度最好是下列何者？",
     "options": {
-      "A": "500 ms",
-      "B": "800                               ms",
-      "C": "1000",
-      "D": "-2000 ms"
+      "A": "200 ms",
+      "B": "500 ms",
+      "C": "800 ms",
+      "D": "1000-2000 ms"
     },
     "answer": "D",
     "explanation": "",
@@ -66693,12 +66693,12 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 21,
-    "question": "當臨床純音聽力圖出現Carhart’s Notch時，最可能代表下列何種病理？Acoustic Trauma",
+    "question": "當臨床純音聽力圖出現Carhart’s Notch 時，最可能代表下列何種病理？",
     "options": {
-      "A": "（噪音聽損）Tympanic membrane perforation",
-      "B": "（鼓膜破裂）Cholesteatoma",
-      "C": "（膽脂瘤）Otosclerosis",
-      "D": "（耳骨硬化）"
+      "A": "Acoustic Trauma（噪音聽損）",
+      "B": "Tympanic membrane perforation（鼓膜破裂）",
+      "C": "Cholesteatoma（膽脂瘤）",
+      "D": "Otosclerosis（耳骨硬化）"
     },
     "answer": "D",
     "explanation": "",
@@ -66738,12 +66738,12 @@
     "paper_id": "paper2",
     "stage_id": 0,
     "number": 23,
-    "question": "有經驗的臨床聽力師,在評估一位2~3 歲的幼兒聽力,往往要求快速且平穩的進行,以保持他的注",
+    "question": "有經驗的臨床聽力師，在評估一位2~3 歲的幼兒聽力，往往要求快速且平穩的進行，以保持他的注意力及配合度。下列那一種檢查應該排在首位？",
     "options": {
-      "A": "意力及配合度。下列那一種檢查應該排在首位?",
-      "B": "Pure",
-      "C": "-tone audiometry",
-      "D": "Warble tone audiometry Narrow band noise audiometry Speech recognition threshold"
+      "A": "Pure-tone audiometry",
+      "B": "Warble tone audiometry",
+      "C": "Narrow band noise audiometry",
+      "D": "Speech recognition threshold"
     },
     "answer": "D",
     "exam_type": "high",
@@ -66781,12 +66781,12 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 25,
-    "question": "SRT（speech recognition threshold）和SDT（speech detection threshold）及PTA（pure-tone average）常見之關係，下列敘述何者錯誤？SDT < SRT < PTA",
+    "question": "SRT（speech recognition threshold）和SDT（speech detection threshold）及PTA（pure-tone average）常見之關係，下列敘述何者錯誤？",
     "options": {
-      "A": "SDT > SRT > PTA",
-      "B": "SRT",
-      "C": "可由500 Hz，1000 Hz，2000 Hz三個頻率預測",
-      "D": "假如聽力圖屬於高頻陡峭滑落型，則SRT大多比PTA小"
+      "A": "SDT < SRT < PTA",
+      "B": "SDT > SRT > PTA",
+      "C": "SRT 可由500 Hz，1000 Hz，2000 Hz 三個頻率預測",
+      "D": "假如聽力圖屬於高頻陡峭滑落型，則SRT 大多比PTA 小"
     },
     "answer": "B",
     "explanation": "",
@@ -67065,14 +67065,14 @@
     "paper_id": "paper2",
     "stage_id": 0,
     "number": 40,
-    "question": "定義語音閾值(SRT)是受測者能夠正確複誦超過50%雙音節詞的最小音量,下列敘述何者正確?",
+    "question": "定義語音閾值（SRT）是受測者能夠正確複誦超過50%雙音節詞的最小音量，下列敘述何者正確？（單位為dB HL）",
     "options": {
-      "A": "(單位為dB HL)",
-      "B": "at 30",
-      "C": ",可以連續正確複誦三個雙音節詞",
-      "D": "at 25 ,前二個雙音節詞正確,第三個錯誤,第四個正確 at 20 ,五個中有三個雙音節詞正確,兩個錯誤 at 15 ,六個中有兩個雙音節詞正確,四個錯誤"
+      "A": "at 30，可以連續正確複誦三個雙音節詞",
+      "B": "at 25，前二個雙音節詞正確，第三個錯誤，第四個正確",
+      "C": "at 20，五個中有三個雙音節詞正確，兩個錯誤",
+      "D": "at 15，六個中有兩個雙音節詞正確，四個錯誤"
     },
-    "answer": "A",
+    "answer": "C",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006859
@@ -67087,12 +67087,12 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 41,
-    "question": "執行語音閾值檢查時，聽力師若使用活語音（Live  voice）唸誦雙音節詞時，應該注意自己控制音量能平衡VU表指針不可偏離，下列敘述何者正確？VU",
+    "question": "執行語音閾值檢查時，聽力師若使用活語音（Live voice）唸誦雙音節詞時，應該注意自己控制音量能平衡VU 表指針不可偏離，下列敘述何者正確？",
     "options": {
-      "A": "指針在唸誦雙音節詞時，每音節的最大音量控制都要平衡在“0”dB 上",
-      "B": "VU指針在唸誦雙音節詞時，第一音節的重音音量控制要平衡在“0”dB 上",
-      "C": "VU指針在唸誦雙音節詞時，第二音節的重音音量控制要平衡在“0”dB 上",
-      "D": "VU指針在唸誦雙音節詞時，任何音量最大都不超過10 dB 即可"
+      "A": "VU 指針在唸誦雙音節詞時，每音節的最大音量控制都要平衡在“0”dB 上",
+      "B": "VU 指針在唸誦雙音節詞時，第一音節的重音音量控制要平衡在“0”dB 上",
+      "C": "VU 指針在唸誦雙音節詞時，第二音節的重音音量控制要平衡在“0”dB 上",
+      "D": "VU 指針在唸誦雙音節詞時，任何音量最大都不超過10 dB 即可"
     },
     "answer": "A",
     "explanation": "",
@@ -67108,12 +67108,12 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 42,
-    "question": "語音聽辨率的Performance-Intensity（PI），可作鑑別診斷耳蝸後病變的指標，亦即RI（Rollover Index）= PBmax - PBmin / PBmax，下列何者為有rollover？PBmax = 80%",
+    "question": "語音聽辨率的Performance-Intensity（PI），可作鑑別診斷耳蝸後病變的指標，亦即RI（Rollover Index）= PBmax - PBmin / PBmax，下列何者為有rollover？",
     "options": {
-      "A": "，PBmin = 70% PBmax = 76%",
-      "B": "，PBmin = 68%PBmax = 64%",
-      "C": "，PBmin = 38% PBmax = 40%",
-      "D": "，PBmin = 36%"
+      "A": "PBmax = 80%，PBmin = 70%",
+      "B": "PBmax = 76%，PBmin = 68%",
+      "C": "PBmax = 64%，PBmin = 38%",
+      "D": "PBmax = 40%，PBmin = 36%"
     },
     "answer": "C",
     "explanation": "",
@@ -67174,14 +67174,14 @@
     "paper_id": "paper2",
     "stage_id": 0,
     "number": 45,
-    "question": "85 歲的王老太太為下傾型(down sloping)高頻聽力損失,其純音平均閾值為50 dB HL。以下那一",
+    "question": "85 歲的王老太太為下傾型（down sloping）高頻聽力損失，其純音平均閾值為50 dB HL。以下那一項聽力學檢測結果最不符合老年性聽損（presbycusis）的診斷？",
     "options": {
-      "A": "項聽力學檢測結果最不符合老年性聽損(presbycusis)的診斷?",
-      "B": "ABR",
-      "C": "的第I 波在正常範圍、第V 波消失",
-      "D": "聲反射閾值在正常範圍 語音聽辨率70% 鼓室圖As 型"
+      "A": "ABR的第I 波在正常範圍、第V 波消失",
+      "B": "聲反射閾值在正常範圍",
+      "C": "語音聽辨率70%",
+      "D": "鼓室圖As 型"
     },
-    "answer": "B",
+    "answer": "A",
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006864
@@ -67366,12 +67366,12 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 54,
-    "question": "進行以下那一項測試之前，測驗題項（item）需要先熟悉化（familarization）？SRT",
+    "question": "進行以下那一項測試之前，測驗題項（item）需要先熟悉化（familarization）？",
     "options": {
-      "A": "WRS",
-      "B": "Hearing in Noise Test",
-      "C": "（HINT）Sound Effects Recognition Test",
-      "D": "（SERT）"
+      "A": "SRT",
+      "B": "WRS",
+      "C": "Hearing in Noise Test（HINT）",
+      "D": "Sound Effects Recognition Test（SERT）"
     },
     "answer": "A",
     "explanation": "",
@@ -68221,12 +68221,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 13,
-    "question": "關於最小可聽聲壓(minimum audible pressure, MAP)和最小可聽聲場(minimum audible field, MAF)",
+    "question": "關於最小可聽聲壓（minimum audible pressure, MAP）和最小可聽聲場（minimum audible field, MAF）所測得的閾值之敘述，下列何者錯誤?",
     "options": {
-      "A": "所測得的閾值之敘述,下列何者錯誤?",
-      "B": "MAP",
-      "C": "閾值比MAF 閾值大約多6~10 dB",
-      "D": "MAP 測的是單耳的閾值,MAF 測的是兩耳的閾值 MAP 與MAF 閾值差異是由於聲場背景噪音的緣故 MAP 閾值是以耳機測得,MAF 閾值是在聲場測得"
+      "A": "MAP閾值比MAF 閾值大約多6~10 dB",
+      "B": "MAP測的是單耳的閾值，MAF 測的是兩耳的閾值",
+      "C": "MAP與MAF 閾值差異是由於聲場背景噪音的緣故",
+      "D": "MAP閾值是以耳機測得，MAF 閾值是在聲場測得"
     },
     "answer": "C",
     "exam_type": "high",
@@ -68289,12 +68289,12 @@
     "subject_name": "基礎聽力科學",
     "stage_id": 1,
     "number": 16,
-    "question": "語音聽力計（speech audiometer）在做語音訊號校準時，所使用的參考音通常是下列何者？500",
+    "question": "語音聽力計（speech audiometer）在做語音訊號校準時，所使用的參考音通常是下列何者？",
     "options": {
-      "A": "Hz的純音1000",
-      "B": "Hz的純音2000",
-      "C": "Hz的純音4000",
-      "D": "Hz的純音"
+      "A": "500Hz 的純音",
+      "B": "1000Hz 的純音",
+      "C": "2000Hz 的純音",
+      "D": "4000Hz 的純音"
     },
     "answer": "B",
     "explanation": "",
@@ -68331,12 +68331,12 @@
     "subject_name": "基礎聽力科學",
     "stage_id": 1,
     "number": 18,
-    "question": "有關耳蝸麥克風（CM）電位效應，下列敘述何者錯誤？CM",
+    "question": "有關耳蝸麥克風（CM）電位效應，下列敘述何者錯誤？",
     "options": {
-      "A": "主要能量來源在外毛細胞CM",
-      "B": "是一種神經衝動，非毛細胞的放電反應CM",
-      "C": "與刺激音量成正比反應，但超過105 dB SPL，CM則反而有下降的趨勢",
-      "D": "有些因耳毒性傷害的病患CM會消失"
+      "A": "CM主要能量來源在外毛細胞",
+      "B": "CM是一種神經衝動，非毛細胞的放電反應",
+      "C": "CM與刺激音量成正比反應，但超過105 dB SPL，CM 則反而有下降的趨勢",
+      "D": "有些因耳毒性傷害的病患CM 會消失"
     },
     "answer": "B",
     "explanation": "",
@@ -68418,12 +68418,12 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 22,
-    "question": "在距離颶風警報3 英呎的地方測量,警報為115 dB SPL,請問在距離颶風警報300 英呎遠的地方,",
+    "question": "在距離颶風警報3 英呎的地方測量，警報為115 dB SPL，請問在距離颶風警報300 英呎遠的地方，音壓強度（sound-pressure level）為多少？",
     "options": {
-      "A": "音壓強度(sound-pressure level)為多少?",
-      "B": "40 dB SPL",
-      "C": "75 dB SPL",
-      "D": "20 dB SPL 95 dB SPL"
+      "A": "40 dB SPL",
+      "B": "75 dB SPL",
+      "C": "20 dB SPL",
+      "D": "95 dB SPL"
     },
     "answer": "B",
     "exam_type": "high",
@@ -69010,11 +69010,11 @@
     "subject_name": "基礎聽力科學",
     "stage_id": 1,
     "number": 49,
-    "question": "下列狀況下，何者為連續幾次增加非測試耳的噪音音量，卻不影響測試耳的閾值？Undermasking",
+    "question": "下列狀況下，何者為連續幾次增加非測試耳的噪音音量，卻不影響測試耳的閾值？",
     "options": {
-      "A": "（過少遮蔽）Overmasking",
-      "B": "（過多遮蔽）Plateau",
-      "C": "（高原）",
+      "A": "Undermasking（過少遮蔽）",
+      "B": "Overmasking（過多遮蔽）",
+      "C": "Plateau（高原）",
       "D": "Valley（谷底）"
     },
     "answer": "C",
@@ -69325,12 +69325,12 @@
     "subject_name": "基礎聽力科學",
     "stage_id": 1,
     "number": 64,
-    "question": "連結聽覺系統與平衡系統兩種迷路之間的構造是？Endolymphatic duct",
+    "question": "連結聽覺系統與平衡系統兩種迷路之間的構造是？",
     "options": {
-      "A": "Modiolus",
-      "B": "Limbus",
-      "C": "Ductus",
-      "D": "reuiens"
+      "A": "Endolymphatic duct",
+      "B": "Modiolus",
+      "C": "Limbus",
+      "D": "Ductusreuiens"
     },
     "answer": "D",
     "explanation": "",
@@ -69388,11 +69388,11 @@
     "subject_name": "基礎聽力科學",
     "stage_id": 1,
     "number": 67,
-    "question": "前庭構造的敘述中何者錯誤？Sacculi",
+    "question": "前庭構造的敘述中何者錯誤？",
     "options": {
-      "A": "的軸向與地面垂直Utricle",
-      "B": "的軸向與地面平行",
-      "C": "在otolith membrane上的硫酸納結晶稱之為otoliths",
+      "A": "Sacculi的軸向與地面垂直",
+      "B": "Utricle的軸向與地面平行",
+      "C": "在otolith membrane 上的硫酸納結晶稱之為otoliths",
       "D": "三個半規管各自所在平面是兩兩互相垂直的"
     },
     "answer": "C",
@@ -69430,12 +69430,12 @@
     "subject_name": "基礎聽力科學",
     "stage_id": 1,
     "number": 69,
-    "question": "人類聽覺系統陸續出現左右交叉到對側的現象，下列何者例外？Superior olivary nuclei",
+    "question": "人類聽覺系統陸續出現左右交叉到對側的現象，下列何者例外？",
     "options": {
-      "A": "Lateral   lemniscus",
-      "B": "Medial geniculate body",
-      "C": "Inferio",
-      "D": "r colliculus"
+      "A": "Superior olivary nuclei",
+      "B": "Lateral lemniscus",
+      "C": "Medial geniculate body",
+      "D": "Inferior colliculus"
     },
     "answer": "C",
     "explanation": "",
@@ -69451,12 +69451,12 @@
     "subject_name": "基礎聽力科學",
     "stage_id": 1,
     "number": 70,
-    "question": "所謂random noise指的是？1000 Hz",
+    "question": "所謂random noise 指的是？",
     "options": {
-      "A": "為中心的寬頻帶混音250                                     Hz",
-      "B": "為中心的窄頻混音",
-      "C": "又稱白色噪音2000",
-      "D": "-3000 Hz間的矩形頻帶混音"
+      "A": "1000 Hz 為中心的寬頻帶混音",
+      "B": "250 Hz 為中心的窄頻混音",
+      "C": "又稱白色噪音",
+      "D": "2000-3000 Hz 間的矩形頻帶混音"
     },
     "answer": "C",
     "explanation": "",
@@ -82915,12 +82915,12 @@
     "paper_id": "paper6",
     "stage_id": 0,
     "number": 52,
-    "question": "在使用仿說的語言教學過程中,介入目標的選擇需在自然的情境下建構適當的脈絡。語言治療師所",
+    "question": "在使用仿說的語言教學過程中，介入目標的選擇需在自然的情境下建構適當的脈絡。語言治療師所計劃的教學含下列五步驟，請問此五步驟進行的正確順序為何？①設定學童須提出要求的情境②若學童沒有回應時，停下來看著他，以目觸方式促請其提出要求③如果學童仍然未使用目標語言或溝通行為提出要求時，則使用問題提示他④當學童可以使用目標語言或溝通行為提出要求時，給予其所需要的協助⑤如果學童還是沒有回應，說出目標語言結構，要求兒童仿說",
     "options": {
-      "A": "計劃的教學含下列五步驟,請問此五步驟進行的正確順序為何?",
-      "B": "1設定學童須提出要求的情境",
-      "C": "2若學童沒有回應時,停下來看著他,以目觸方式促請其提出要求",
-      "D": "3如果學童仍然未使用目標語言或溝通行為提出要求時,則使用問題提示他 4當學童可以使用目標語言或溝通行為提出要求時,給予其所需要的協助 5如果學童還是沒有回應,說出目標語言結構,要求兒童仿說 1→2→3→4→5 4→1→2→5→3 1→4→2→3→5 4→3→1→2→5"
+      "A": "①→②→③→④→⑤",
+      "B": "④→①→②→⑤→③",
+      "C": "①→④→②→③→⑤",
+      "D": "④→③→①→②→⑤"
     },
     "answer": "C",
     "explanation": "",
@@ -83942,11 +83942,11 @@
     "paper_id": "paper5",
     "stage_id": 0,
     "number": 20,
-    "question": "參照正常聽力發展里程碑,某幼童患有先天性雙側中重度聽力損失,4 個月大已佩戴聽覺輔具並進入",
+    "question": "參照正常聽力發展里程碑，某幼童患有先天性雙側中重度聽力損失，4 個月大已佩戴聽覺輔具並進入早期聽能創健療育課程，下列何者可能不符合其16 個月大時的聽覺表現？",
     "options": {
-      "A": "早期聽能創健療育課程,下列何者可能不符合其16 個月大時的聽覺表現?",
-      "B": "可辨認出身體部位",
-      "C": "對自己的名字有回應 可望向聲源",
+      "A": "可辨認出身體部位",
+      "B": "對自己的名字有回應",
+      "C": "可望向聲源",
       "D": "可理解簡單字詞"
     },
     "answer": "A",
@@ -97401,12 +97401,12 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 18,
-    "question": "不舒適級值（uncomfortable level, UCL）、最舒適級值（most comfortable level, MCL）、最小反應級值（minimal response level, MRL）及語音辨識閾值（speech recognition threshold, SRT）。下列那一項結果代表的是動態範圍（dynamic range）？UC",
+    "question": "不舒適級值（uncomfortable level, UCL）、最舒適級值（most comfortable level, MCL）、最小反應級值（minimal response level, MRL）及語音辨識閾值（speech recognition threshold, SRT）。下列那一項結果代表的是動態範圍（dynamic range）？",
     "options": {
-      "A": "L - MCL                       MR",
-      "B": "L-SRT                         UC",
-      "C": "L - SRT                          MC",
-      "D": "L-SRT"
+      "A": "UCL-MCL",
+      "B": "MRL-SRT",
+      "C": "UCL-SRT",
+      "D": "MCL-SRT"
     },
     "answer": "C",
     "explanation": "",
@@ -97549,12 +97549,12 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 25,
-    "question": "關於遮蔽位階差異（MLD），下列敘述何者正確？MLD",
+    "question": "關於遮蔽位階差異（MLD），下列敘述何者正確？",
     "options": {
-      "A": "的數值會因為測試頻率不同而有差異，低頻率所測得的MLD 比較小",
-      "B": "MLD測量的是腦幹部位的功能，因此聽力損失的程度不會影響MLD 的數值",
+      "A": "MLD 的數值會因為測試頻率不同而有差異，低頻率所測得的MLD 比較小",
+      "B": "MLD 測量的是腦幹部位的功能，因此聽力損失的程度不會影響MLD 的數值",
       "C": "臨床MLD 測量都是以純音為信號",
-      "D": "MLD測量的是腦幹部位的功能，因此大腦皮質部位的損傷比較不會影響MLD 的數值"
+      "D": "MLD 測量的是腦幹部位的功能，因此大腦皮質部位的損傷比較不會影響MLD 的數值"
     },
     "answer": "D",
     "explanation": "",
@@ -98419,9 +98419,9 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 66,
-    "question": "兒童言語知覺測驗材料，可以分封閉式（close-set）與開放式（open-set）反應模式。下列供學齡前兒童使用的詞表，何者屬開放式材料？PB",
+    "question": "兒童言語知覺測驗材料，可以分封閉式（close-set）與開放式（open-set）反應模式。下列供學齡前兒童使用的詞表，何者屬開放式材料？",
     "options": {
-      "A": "-K（Haskin Lab 研發）",
+      "A": "PB-K（Haskin Lab 研發）",
       "B": "ANT（Erber 研發）",
       "C": "WIPI（Ross and Lerman 研發）",
       "D": "NU-CHIPS（Elliott and Katz 研發）"
@@ -98505,9 +98505,9 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 70,
-    "question": "多種和聽力損失有關的遺傳性疾病，下列何者屬於體染色體隱性遺傳造成的症候群？Alport",
+    "question": "多種和聽力損失有關的遺傳性疾病，下列何者屬於體染色體隱性遺傳造成的症候群？",
     "options": {
-      "A": "syndrome",
+      "A": "Alportsyndrome",
       "B": "Treacher Collins syndrome",
       "C": "Usher syndrome",
       "D": "Waardenburg syndrome"
@@ -103467,12 +103467,12 @@
     "subject_name": "聽語溝通障礙學（包括專業倫理）",
     "stage_id": 6,
     "number": 66,
-    "question": "下列有關美國手語（American Sign Language, ASL）與手語編碼英語（Manually coded English, MCE）之比較，何者錯誤？ASL",
+    "question": "下列有關美國手語（American Sign Language, ASL）與手語編碼英語（Manually coded English, MCE）之比較，何者錯誤？",
     "options": {
-      "A": "是自然語言，MCE是人造語言ASL",
-      "B": "被描述為概念式語言，自有其特殊文法規則ASL",
-      "C": "有助於整體學業成就，MCE有助於英文識字技巧MCE",
-      "D": "詞彙多數來自於ASL，MCE字詞順序與英語口語相同"
+      "A": "ASL 是自然語言，MCE 是人造語言",
+      "B": "ASL 被描述為概念式語言，自有其特殊文法規則",
+      "C": "ASL 有助於整體學業成就，MCE 有助於英文識字技巧",
+      "D": "MCE 詞彙多數來自於ASL，MCE 字詞順序與英語口語相同"
     },
     "answer": "C",
     "explanation": "",
@@ -103954,12 +103954,12 @@
     "subject_name": "聽覺與平衡系統之創健與復健學",
     "stage_id": 5,
     "number": 9,
-    "question": "根據Tye-Murray（2015）提出聽力損失嬰幼兒的聽覺創健服務，下列何種順序最適當？①聽覺創健策略發展  ②早期療育課程參與  ③聽覺輔具使用  ④父母諮詢輔導①",
+    "question": "根據Tye-Murray（2015）提出聽力損失嬰幼兒的聽覺創健服務，下列何種順序最適當？①聽覺創健策略發展 ②早期療育課程參與 ③聽覺輔具使用 ④父母諮詢輔導",
     "options": {
-      "A": "→②→③→④ ①",
-      "B": "→④→③→② ③",
-      "C": "→①→④→② ④",
-      "D": "→①→③→②"
+      "A": "①→②→③→④",
+      "B": "①→④→③→②",
+      "C": "③→①→④→②",
+      "D": "④→①→③→②"
     },
     "answer": "D",
     "explanation": "",
@@ -105834,9 +105834,9 @@
     "subject_name": "聽覺輔具原理與實務學",
     "stage_id": 4,
     "number": 18,
-    "question": "關於助聽器最大輸出值（OSPL90）的處方公式，下列敘述何者正確？NAL",
+    "question": "關於助聽器最大輸出值（OSPL90）的處方公式，下列敘述何者正確？",
     "options": {
-      "A": "-OSPL 處方公式係針對線性助聽器所發展",
+      "A": "NAL-OSPL 處方公式係針對線性助聽器所發展",
       "B": "NAL-OSPL 處方公式係針對非線性壓縮助聽器所發展",
       "C": "NAL-SSPL 處方公式係針對線性助聽器所發展",
       "D": "NAL-SSPL 處方公式係針對非線性壓縮助聽器所發展"
@@ -105960,11 +105960,11 @@
     "subject_name": "聽覺輔具原理與實務學",
     "stage_id": 4,
     "number": 24,
-    "question": "年幼兒童較適用透過真耳佩戴增益（REAG）的理由不包含下列何者？DSLm[i/o]",
+    "question": "年幼兒童較適用透過真耳佩戴增益（REAG）的理由不包含下列何者？",
     "options": {
-      "A": "可計算REAG目標音量",
+      "A": "DSLm[i/o]可計算REAG 目標音量",
       "B": "可以忽略其耳道共振，僅須注意容積差值",
-      "C": "測量較REIG容易",
+      "C": "測量較REIG 容易",
       "D": "與成人的平均耳道共振差異大"
     },
     "answer": "B",
@@ -106551,12 +106551,12 @@
     "subject_name": "聽覺輔具原理與實務學",
     "stage_id": 4,
     "number": 52,
-    "question": "以真耳測量驗證若採用NAL-NL2處方公式之助聽器，測試音為國際語音測試訊號（internationalspeech test signal, ISTS）。當測試音量為55 dB SPL時，下列何種測量結果最符合處方公式目標？REAR",
+    "question": "以真耳測量驗證若採用NAL-NL2 處方公式之助聽器，測試音為國際語音測試訊號（international speech test signal, ISTS）。當測試音量為55 dB SPL 時，下列何種測量結果最符合處方公式目標？",
     "options": {
-      "A": "數值全部小於聽力閾值",
-      "B": "REAR數值非常靠近UCL，但皆小於UCL",
-      "C": "REAR數值略大於聽力閾值",
-      "D": "REAR數值非常接近正常耳平均聽力閾值"
+      "A": "REAR 數值全部小於聽力閾值",
+      "B": "REAR 數值非常靠近UCL，但皆小於UCL",
+      "C": "REAR 數值略大於聽力閾值",
+      "D": "REAR 數值非常接近正常耳平均聽力閾值"
     },
     "answer": "C",
     "explanation": "",
@@ -106572,10 +106572,10 @@
     "subject_name": "聽覺輔具原理與實務學",
     "stage_id": 4,
     "number": 53,
-    "question": "以真耳測量驗證聽覺輔具效益時，若採用REM儀器內建的真耳轉換差異（real-ear  to  dial  difference,REDD）平均值，下列何種器材測量個案的裸耳聽力閾值，其誤差範圍最小？Etymotic ER",
+    "question": "以真耳測量驗證聽覺輔具效益時，若採用REM 儀器內建的真耳轉換差異（real-ear to dial difference,REDD）平均值，下列何種器材測量個案的裸耳聽力閾值，其誤差範圍最小？",
     "options": {
-      "A": "-3A耳機Telephonics TDH39",
-      "B": "耳機",
+      "A": "Etymotic ER-3A 耳機",
+      "B": "Telephonics TDH39 耳機",
       "C": "助聽器原位聽檢（in-situ audiometry）",
       "D": "不管以何種器材測得裸耳聽力閾值，誤差範圍都一樣"
     },
@@ -107086,9 +107086,9 @@
     "subject_name": "聽覺輔具原理與實務學",
     "stage_id": 4,
     "number": 77,
-    "question": "下列何項檢查，最適合單獨用來確認人工耳蝸植入後是否發生電極異常？AEV",
+    "question": "下列何項檢查，最適合單獨用來確認人工耳蝸植入後是否發生電極異常？",
     "options": {
-      "A": "（average electrode voltages）",
+      "A": "AEV（average electrode voltages）",
       "B": "EABR",
       "C": "ECAP",
       "D": "ESRT（electrically evoked stapedial reflex threshold）"
@@ -111270,12 +111270,12 @@
     "subject_name": "聽語溝通障礙學（包括專業倫理）",
     "stage_id": 6,
     "number": 44,
-    "question": "依據聽語學會專業倫理規範委員會，聽語人員若違反專業倫理規範，會依情節嚴重程度而審議不同的處置方法，依情節輕微至重大的排序，下列何者最適當？①停權  ②警告  ③送請相關機關處理  ④勸告②",
+    "question": "依據聽語學會專業倫理規範委員會，聽語人員若違反專業倫理規範，會依情節嚴重程度而審議不同的處置方法，依情節輕微至重大的排序，下列何者最適當？①停權 ②警告 ③送請相關機關處理 ④勸告",
     "options": {
-      "A": "→④→①→③ ②",
-      "B": "→④→③→① ④",
-      "C": "→②→①→③ ④",
-      "D": "→②→③→①"
+      "A": "②→④→①→③",
+      "B": "②→④→③→①",
+      "C": "④→②→①→③",
+      "D": "④→②→③→①"
     },
     "answer": "C",
     "explanation": "",
@@ -136870,12 +136870,12 @@
     "subject_name": "聽覺與平衡系統之創健與復健學",
     "stage_id": 5,
     "number": 8,
-    "question": "子音分類系統（classification system for consonants）被用來分析子音音素的混淆現象，其中常用的一項特徵是鼻音，若聽損者可聽到/m/和/n/的鼻音特徵（nasality feature），這表示他聽到了下列那一個頻率範圍的聲音？≦",
+    "question": "子音分類系統（classification system for consonants）被用來分析子音音素的混淆現象，其中常用的一項特徵是鼻音，若聽損者可聽到/m/和/n/的鼻音特徵（nasality feature），這表示他聽到了下列那一個頻率範圍的聲音？",
     "options": {
-      "A": "300 Hz",
+      "A": "≦300 Hz",
       "B": "500～800 Hz",
-      "C": "1000～1500 Hz≧",
-      "D": "2000 Hz"
+      "C": "1000～1500 Hz",
+      "D": "≧2000 Hz"
     },
     "answer": "A",
     "explanation": "",

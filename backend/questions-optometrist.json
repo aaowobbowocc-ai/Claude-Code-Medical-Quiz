@@ -570,12 +570,12 @@
       "subject_name": "眼球解剖生理學與倫理法規",
       "stage_id": 0,
       "number": 29,
-      "question": "淚液幫浦的生理機轉主要與下列何種肌肉協同作用有關？提上眼瞼肌（levator palpebrae superioris muscle） 眼瞼平滑肌（Müller muscle）",
+      "question": "淚液幫浦的生理機轉主要與下列何種肌肉協同作用有關？",
       "options": {
-        "A": "瞳孔放射肌（iris radial",
-        "B": "muscle）",
-        "C": "眼輪匝肌（orbicularis",
-        "D": "oculi muscle）"
+        "A": "提上眼瞼肌（levator palpebrae superioris muscle）",
+        "B": "眼瞼平滑肌（Müller muscle）",
+        "C": "瞳孔放射肌（iris radial muscle）",
+        "D": "眼輪匝肌（orbicularis oculi muscle）"
       },
       "answer": "D",
       "explanation": ""
@@ -2472,12 +2472,12 @@
       "subject_name": "視光學",
       "stage_id": 0,
       "number": 26,
-      "question": "在進行近點內聚（near point of convergence, NPC）測驗時，視標在離受測者前方15 公分的距離呈現複視（diplopia），這代表受測者最有可能有下列何種情況？受測者有內聚力不足（convergence insufficiency） 受測者有內聚力過度（convergence excess）",
+      "question": "在進行近點內聚（near point of convergence, NPC）測驗時，視標在離受測者前方15 公分的距離呈現複視（diplopia），這代表受測者最有可能有下列何種情況？",
       "options": {
-        "A": "受測者有開散力不足（divergence",
-        "B": "insufficiency）",
-        "C": "受測者有開散力過度（divergence",
-        "D": "excess）"
+        "A": "受測者有內聚力不足（convergence insufficiency）",
+        "B": "受測者有內聚力過度（convergence excess）",
+        "C": "受測者有開散力不足（divergence insufficiency）",
+        "D": "受測者有開散力過度（divergence excess）"
       },
       "answer": "A",
       "explanation": ""
@@ -9397,12 +9397,12 @@
       "subject_name": "低視力學",
       "stage_id": 0,
       "number": 30,
-      "question": "當老年人水晶體混濁嚴重時稱為白內障，其治療原則下列何者較適當？用藥物治療即可有效的預防或治療白內障的惡化 等到患者將要失明時才可以手術",
+      "question": "當老年人水晶體混濁嚴重時稱為白內障，其治療原則下列何者較適當？",
       "options": {
-        "A": "一般會影響病人之正常",
-        "B": "生活時需考慮手術",
-        "C": "發現白內障時應立即",
-        "D": "手術"
+        "A": "用藥物治療即可有效的預防或治療白內障的惡化",
+        "B": "等到患者將要失明時才可以手術",
+        "C": "一般會影響病人之正常生活時需考慮手術",
+        "D": "發現白內障時應立即手術"
       },
       "answer": "C",
       "explanation": ""
@@ -11737,12 +11737,12 @@
       "subject_name": "視覺光學",
       "stage_id": 0,
       "number": 48,
-      "question": "許多近視度數矯正不足的患者經常發現，如果將眼鏡傾斜一下會看得更清楚，這是因為什麼原理？球面像差（spherical aberration）導致度數增加徑向散光（radial astigmatism）導致度數增加",
+      "question": "許多近視度數矯正不足的患者經常發現，如果將眼鏡傾斜一下會看得更清楚，這是因為什麼原理？",
       "options": {
-        "A": "畸變（distortion）",
-        "B": "被消除",
-        "C": "影像落在帕茲瓦面（Petzval",
-        "D": "surface）"
+        "A": "球面像差（spherical aberration）導致度數增加",
+        "B": "徑向散光（radial astigmatism）導致度數增加",
+        "C": "畸變（distortion）被消除",
+        "D": "影像落在帕茲瓦面（Petzval surface）"
       },
       "answer": "B",
       "explanation": ""
@@ -25821,12 +25821,12 @@
       "subject_name": "視覺光學",
       "stage_id": 0,
       "number": 7,
-      "question": "下列敘述何者正確？遠視眼的前或第一焦點（anterior or first focal point）落在「眼球之後」",
+      "question": "下列敘述何者正確？",
       "options": {
-        "A": "遠視眼的遠點（far point）落在無限遠（infinity）處",
-        "B": "遠視眼的近點（near point）有可能會落在無限遠處",
-        "C": "近視眼的遠點（far point）落在無限遠處",
-        "D": "光在某材質之行進速度為2×108 m/s，此材質於水中單一面反射率為下列何者？（光在空氣中的行進速度"
+        "A": "遠視眼的前或第一焦點（anterior or first focal point）落在「眼球之後」",
+        "B": "遠視眼的遠點（far point）落在無限遠（infinity）處",
+        "C": "遠視眼的近點（near point）有可能會落在無限遠處",
+        "D": "近視眼的遠點（far point）落在無限遠處光在某材質之行進速度為2×108 m/s，此材質於水中單一面反射率為下列何者？（光在空氣中的行進速度"
       },
       "answer": "C",
       "explanation": ""
@@ -27629,12 +27629,12 @@
       "subject_name": "視光學",
       "stage_id": 0,
       "number": 47,
-      "question": "有關弱視的說明，何者錯誤？若眼睛沒有器質性的疾病（organic diseases），雙眼視力相差史奈倫視力表（Snellen chart）二行或以上，則視力差的眼睛可能有弱視",
+      "question": "有關弱視的說明，何者錯誤？",
       "options": {
-        "A": "弱視眼睛在閱讀時，看單一個字會比看一行字要來得吃力",
-        "B": "弱視眼通常為單側，但是偶而會有雙側弱視",
-        "C": "弱視治療一般越早開始，效果越顯著",
-        "D": "一孩童看遠方呈現30Δ 間歇性外斜視，看近物有15Δ 間歇性外斜視。經過單眼遮蔽1 小時後再測量，"
+        "A": "若眼睛沒有器質性的疾病（organic diseases），雙眼視力相差史奈倫視力表（Snellen chart）二行或以上，則視力差的眼睛可能有弱視",
+        "B": "弱視眼睛在閱讀時，看單一個字會比看一行字要來得吃力",
+        "C": "弱視眼通常為單側，但是偶而會有雙側弱視",
+        "D": "弱視治療一般越早開始，效果越顯著一孩童看遠方呈現30Δ 間歇性外斜視，看近物有15Δ 間歇性外斜視。經過單眼遮蔽1 小時後再測量，"
       },
       "answer": "B",
       "explanation": ""
@@ -32208,12 +32208,12 @@
       "subject_name": "視光學",
       "stage_id": 0,
       "number": 27,
-      "question": "在下列幾種調節反應的檢測方法中，何者可能測得較大之調節遲滯？單眼評估方法（monocular estimation method）擺鈴檢影鏡法（bell retinoscopy）",
+      "question": "在下列幾種調節反應的檢測方法中，何者可能測得較大之調節遲滯？",
       "options": {
-        "A": "諾特方法（Nott’s",
-        "B": "method）",
-        "C": "雙眼交叉圓柱鏡（binocular",
-        "D": "crossed-cylinder）"
+        "A": "單眼評估方法（monocular estimation method）",
+        "B": "擺鈴檢影鏡法（bell retinoscopy）",
+        "C": "諾特方法（Nott’s method）",
+        "D": "雙眼交叉圓柱鏡（binocular crossed-cylinder）"
       },
       "answer": "B",
       "explanation": ""
@@ -38745,12 +38745,12 @@
       "subject_name": "低視力學",
       "stage_id": 0,
       "number": 6,
-      "question": "常見的致盲眼疾對於視力視野的影響，下列敘述何者正確？老年性黃斑部病變通常先影響患眼周邊的視力青光眼首先影響患眼的中央視力",
+      "question": "常見的致盲眼疾對於視力視野的影響，下列敘述何者正確？",
       "options": {
-        "A": "糖尿病視網膜病變可",
-        "B": "影響中央或是周邊視力",
-        "C": "任何視力下降都不會",
-        "D": "影響深度知覺的能力"
+        "A": "老年性黃斑部病變通常先影響患眼周邊的視力",
+        "B": "青光眼首先影響患眼的中央視力",
+        "C": "糖尿病視網膜病變可影響中央或是周邊視力",
+        "D": "任何視力下降都不會影響深度知覺的能力"
       },
       "answer": "C",
       "explanation": ""

@@ -48,6 +48,87 @@ const MIN_OPT = 6     // 太短的選項（「甲」「①②」）在全文一�
 
 const bare = t => String(t).replace(/[-​-‏﻿\s　]/g, '')
 
+/**
+ * 原卷文字層的**排版與字形**往往比我們的題庫**差**。這六種「差異」不是內容錯，
+ * 照抄會讓題庫退步，而且退步後不會觸發任何告警：
+ *
+ *   1. PUA 豆腐字被塞回來 —— 原卷 U+E2C6/U+EEE7/U+EF08 夾在字中間
+ *      （藥師二階 101030 #31「非核酸<U+E2E6>反轉錄」）。全站早就清過，見 project_pua_cleanup
+ *   2. 零寬空格取代普通空白 —— U+200B，看不見但會害搜尋失效
+ *   3. 字元重排 —— 選項開頭的「A」被當成標記搬到尾端
+ *      （護理師 104100 #76「A、B、C型流行性感冒病毒」→「、B、C 型流行性感冒病毒A」）
+ *   4. 箭頭被吃掉 —— 排序題的「慢濾→沉澱→混凝→快濾」變成「慢濾沉澱混凝快濾」，
+ *      整題就沒有意義了（公衛師 115100 #6、#23）
+ *   5. 全形標點退化成半形、® 變成 ○R
+ *   6. **只差一個字** —— 這是壞字（project_broken_glyphs）的簽章，不是內容錯。
+ *      獸醫 102100 #42 家鼷鼠→家蹊鼠、營養師 103100 #40 鄰苯二甲酸酯→磷苯二甲酸酯
+ *      都是原卷字形壞掉而我們是對的。單字差異在這裡是擲銅板（實測 2 好 3 壞），
+ *      所以只有在**同一題還有另外兩個選項是多字差異**時才採信
+ *      ——那代表整組選項真的在重建，證據夠強。
+ */
+const INVIS = /[\uE000-\uF8FF\u200B-\u200F\uFEFF]/
+const WS = t => String(t).replace(/[\s\u3000]/g, '')
+const NF = t => WS(t).normalize('NFKC')
+const TYPO = /[®©™℃℉°±×÷→←↑↓⇒⇐⁻⁰¹²³⁴⁵⁶⁷⁸⁹₀₁₂₃₄₅₆₇₈₉αβγδεμπσω]/g
+const bag = t => [...NF(t)].sort().join('')
+const cnt = (t, re) => (String(t).match(re) || []).length
+
+/** 把 core 差異壓成編輯距離，用來認「只差一個字」。 */
+function dist(a, b) {
+  const A = [...a], B = [...b]
+  if (Math.abs(A.length - B.length) > 2) return 99
+  let prev = Array.from({ length: B.length + 1 }, (_, i) => i)
+  for (let i = 1; i <= A.length; i++) {
+    const cur = [i]
+    for (let j = 1; j <= B.length; j++)
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (A[i - 1] === B[j - 1] ? 0 : 1))
+    prev = cur
+  }
+  return prev[B.length]
+}
+
+/**
+ * 這個選項的差異是「內容不同」嗎？
+ * 回傳 'strong'（多字差異，證據夠）｜'weak'（只差一字，要同題佐證）｜false（排版退步）
+ */
+function substantive(mine, theirs) {
+  if (INVIS.test(theirs)) return false                             // 1 + 2
+  if (NF(mine) === NF(theirs)) return false
+  if (bag(mine) === bag(theirs)) return false                      // 3
+  if (/^[、，。）)\]}；;:：·…]/.test(theirs.trim())) return false
+  if (cnt(mine, TYPO) > cnt(theirs, TYPO)) return false            // 4 + 5
+  // ⚠️ 不要用「全形字變少」當閘。純粹的 ：→: 已經被上面的 NF 閘吃掉了，
+  //    而「我們的 AI 改寫版用了較多、。，原卷正確版用了較少」是常態
+  //    （醫師一階 103100 #82 的 C、D 就是這樣被擋掉，結果只換了 A、B，
+  //    留下一半官方一半 AI 的混搭 —— 比兩邊都糟）。
+  return dist(NF(mine), NF(theirs)) <= 1 ? 'weak' : 'strong'       // 6
+}
+
+/**
+ * ⚠️ 閘 3 對「含數字／上下標／公式」的選項是**結構性恆真**，不能用。
+ *
+ * ms 的兩個 matcher 都是從同一份 PDF 的文字層抽的，theirs 也是從那份 PDF 解析的，
+ * 所以 theirs 必然找得到。而我們題庫裡的 `1.6×10⁻²⁷ kg` 在文字層是獨立 run 的上標，
+ * 攤平成 `10-27`，mine 必然找不到 —— 於是閘 3 判「我們錯」，
+ * 把正確的上標版本覆蓋成攤平版本。
+ *
+ * 2026-10-25 全站跑過一次，303 題的字元對照表就是這個簽章：
+ *   103× ⁻→-   54× 0→D   44× .→0   42× D→C   32× C→×   29× D→S   22× 1→.
+ * 放射師／醫師一階／醫檢師／聽力師的數值選項被打亂。已整批 revert。
+ *
+ * 所以只收**純中文散文**的選項差異（tcm2 那批驗證乾淨的就是這種）。
+ */
+const RISKY = /[0-9０-９°²³¹⁰-₟０-９×÷±~∼%‰/＋+\-−–—]/
+const LATIN = /[A-Za-z]/
+function proseOnly(x) {
+  if (RISKY.test(x)) return false
+  // 零星的英文學名可以（「蛇串瘡（herpes zoster）」），但整段英文不行
+  const latin = (x.match(/[A-Za-z]/g) || []).length
+  const cjk = (x.match(/[一-鿿]/g) || []).length
+  if (LATIN.test(x) && latin > cjk) return false
+  return cjk >= 3
+}
+
 /** 原卷的 `�` 當萬用字元（字型沒有合法 ToUnicode 對應）。 */
 function makeMatcher(T) {
   const holes = []
@@ -119,8 +200,9 @@ function makeMatcher(T) {
         if (!(a === b || a.startsWith(b) || b.startsWith(a))) { bump('題幹對不上，不是同一題'); continue }
 
         // 閘 3：每一個不同的選項，我們的版本都要在原卷全文找不到
-        const diff = L.map((c, i) => ({ c, mine: String(q.options[c] || ''), theirs: oOpts[i] }))
-          .filter(x => skeleton(x.mine) !== skeleton(x.theirs))
+        let diff = L.map((c, i) => ({ c, mine: String(q.options[c] || ''), theirs: oOpts[i], lv: substantive(String(q.options[c] || ''), oOpts[i]) }))
+          .filter(x => skeleton(x.mine) !== skeleton(x.theirs) && x.lv)
+        if (diff.filter(x => x.lv === 'strong').length < 2) diff = diff.filter(x => x.lv === 'strong')
         if (!diff.length) continue
         if (diff.some(x => skeleton(x.mine).length < MIN_OPT)) { bump('選項太短，判不出來'); continue }
         // ⚠️ 互為子字串＝只是一方被截斷，不是內容不同。照改會弄丟文字
@@ -129,6 +211,8 @@ function makeMatcher(T) {
           const m = skeleton(x.mine), t = skeleton(x.theirs)
           return m.includes(t) || t.includes(m)
         })) { bump('互為子字串（截斷差異），不動'); continue }
+        // ⚠️ 見 proseOnly 註解：閘 3 對含數字／上下標的選項恆真，必須先擋掉
+        if (diff.some(x => !proseOnly(x.mine) || !proseOnly(x.theirs))) { bump('含數字／公式，判準不適用'); continue }
         if (diff.some(x => ms.some(m => m(skeleton(x.mine))))) { bump('我們的選項在原卷找得到，不敢斷定'); continue }
         if (diff.some(x => !ms.some(m => m(skeleton(x.theirs))))) { bump('原卷解析出的選項在全文也找不到'); continue }
 
@@ -150,7 +234,9 @@ function makeMatcher(T) {
         }
         console.log('')
         if (APPLY) {
-          q.options = { A: oOpts[0], B: oOpts[1], C: oOpts[2], D: oOpts[3] }
+          // 只換判定為「內容不同」的那幾個選項，排版較好的保留我們的
+          const pick = new Map(diff.map(x => [x.c, x.theirs]))
+          q.options = Object.fromEntries(L.map(c => [c, pick.has(c) ? pick.get(c) : String(q.options[c])]))
           q.answer = newAnswer
         }
         fixed++

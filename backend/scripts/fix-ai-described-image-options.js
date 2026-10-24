@@ -1,0 +1,98 @@
+#!/usr/bin/env node
+/**
+ * 把「含圖選項被 AI 描述」的題改回站內慣例。
+ *
+ * 這些題的四個選項在原卷上是圖（聽力圖、示意圖、血中濃度曲線、金字塔層級圖），
+ * 考選部的文字層就是空的：
+ *
+ *   醫師二階 107080 醫學(六) #22 原卷全文：
+ *     「22.承上題，此病人接受純音聽力檢查（puretoneaudiometry），最可能的結果為下列何者？A.B.C.D.」
+ *                                                                              ↑ 四個選項沒有任何文字
+ *
+ * 但題庫裡是 AI 編出來的描述（「顯示一個膜結合型抗體分子…」「圖示為溫度從0°C開始上升…」），
+ * 使用者會把編造的內容當成考題背。依 [[feedback_image_questions_verbatim]]
+ * 與站內既有慣例，一律改成 `(圖)`，等補圖。
+ *
+ * 進場用明列清單而不是簽章 —— 只有 9 題，每一筆都逐題核對過原卷，
+ * 不值得為這個數量做自動判定（判錯會把好選項抹成 `(圖)`）。
+ *
+ *   node scripts/fix-ai-described-image-options.js            # dry-run
+ *   node scripts/fix-ai-described-image-options.js --apply
+ */
+const fs = require('fs')
+const path = require('path')
+const { atomicWriteJson } = require('./lib/atomic-write')
+
+const BK = path.join(__dirname, '..')
+const APPLY = process.argv.includes('--apply')
+const L = ['A', 'B', 'C', 'D']
+const FILE = e => path.join(BK, e === 'doctor1' ? 'questions.json' : `questions-${e}.json`)
+
+/** 選項在原卷是圖 → 全部改成 (圖)。 */
+const TO_FIGURE = [
+  ['doctor2', '107080', '醫學(六)', 22, '原卷全文「22.承上題…最可能的結果為下列何者？A.B.C.D.」四選項無文字，是聽力圖'],
+  ['gsat', 'gsat_100', '自然', 29, '四選項都是加熱曲線圖，題庫是 AI 描述「圖示為溫度從0°C開始上升…」'],
+  ['medlab', '103020', '臨床血清免疫學與臨床病毒學', 8, '題幹問「下列何者是 T 細胞接受器分子構造的示意圖」，四選項是示意圖'],
+  ['medlab', '105020', '臨床血清免疫學與臨床病毒學', 35, '題幹問「下列何者是B細胞接受器分子構造的示意圖」'],
+  ['medlab', '107100', '臨床血清免疫學與臨床病毒學', 13, '題幹問「結果應是下列何種圖示型態」，四選項是螢光染色圖'],
+  ['nutrition', '109030', '團體膳食設計與管理', 27, '題幹問「各制度相互間的關係，下列圖示何者正確」，四選項是金字塔圖'],
+  ['pharma1', '106100', '卷三', 56, '題幹問「下列那一血中濃度－時間關係圖」，四選項是曲線圖'],
+  ['radiology', '100020', '放射線器材學（包括磁振學與超音波學）', 78, '題幹問「下列關於各種平衡的圖示何者正確」，四選項各含三張圖'],
+
+  // 第二批：逐題抓原卷文字層確認選項是空的
+  ['optometrist', '109110', '視覺光學', 35, '原卷「35若一眼之屈光屬於規則性散光，以下何種圖例屬於單純近視性（simplemyopic）散光？（註：左弧為眼表面…）」之後直接是代號／頁次與 #36，四選項無文字'],
+  ['pharma1', '100030', '卷三', 55, '原卷該題選項位置只有「CCCC」——四張圖的縱軸標籤'],
+  ['pharma1', '100140', '卷三', 58, '原卷該題選項位置只有「CCCC」'],
+  ['pharma1', '104020', '卷三', 56, '原卷「…關係圖之變化？A.B.C.D.」四選項無文字'],
+  ['pharma1', '101100', '卷一', 76, '原卷「76.Finasteride之結構為下列何者？A.B.C.D.」'],
+  ['pharma1', '101100', '卷二', 66, '原卷「66.下列何者為Thymol之構造？A.B.C.D.」'],
+  ['tcm1', '103030', '中醫基礎醫學(二)', 78, '原卷「78下列藥物中，何者常與破故紙，一木一火配合…？79…80…」三題連續完全沒有選項文字，選項是藥材照片'],
+  ['tcm1', '103030', '中醫基礎醫學(二)', 79, '同 #78'],
+  ['tcm1', '103030', '中醫基礎醫學(二)', 80, '同 #78'],
+]
+
+/** 選項其實有文字，但題庫那組是別題的 → 用原卷逐字覆寫。 */
+const TO_TEXT = [
+  ['doctor2', '104030', '醫學(六)', 33,
+    { A: 'positive', B: 'negative', C: 'reactive', D: 'nonreactive' }, 'C',
+    '原卷全文「33承上題，下列四者中最可能的檢查結果為何？positivenegativereactivenonreactive」；答案卷 C。題庫原本是「白血球計數正常，無貧血現象」等，整組是別題的'],
+]
+
+let n = 0
+const dirty = new Map()
+const load = e => {
+  if (!dirty.has(e)) {
+    const j = JSON.parse(fs.readFileSync(FILE(e), 'utf8'))
+    dirty.set(e, { j, arr: j.questions || j, touched: false })
+  }
+  return dirty.get(e)
+}
+const find = (e, code, sub, num) => load(e).arr.find(q =>
+  String(q.exam_code) === String(code) && q.subject === sub && +q.number === num)
+
+for (const [e, code, sub, num, why] of TO_FIGURE) {
+  const q = find(e, code, sub, num)
+  if (!q) { console.log(`✗ 找不到 ${e} ${code} ${sub} #${num}`); continue }
+  if (L.every(k => String(q.options?.[k]) === '(圖)')) { console.log(`－ ${e} ${code} #${num} 已經是 (圖)`); continue }
+  console.log(`${e} ${code} ${sub} #${num} 答${q.answer} → (圖)×4`)
+  console.log(`   依據: ${why}`)
+  console.log(`   抹掉: ${String(q.options.A).replace(/\s+/g, ' ').slice(0, 68)}…`)
+  if (APPLY) { q.options = { A: '(圖)', B: '(圖)', C: '(圖)', D: '(圖)' }; load(e).touched = true }
+  n++
+}
+
+for (const [e, code, sub, num, opts, ansLetter, why] of TO_TEXT) {
+  const q = find(e, code, sub, num)
+  if (!q) { console.log(`✗ 找不到 ${e} ${code} ${sub} #${num}`); continue }
+  console.log(`${e} ${code} ${sub} #${num} 答${q.answer}${String(q.answer) !== ansLetter ? '→' + ansLetter : ''}`)
+  console.log(`   依據: ${why}`)
+  for (const k of L) console.log(`   ${k} 舊「${String(q.options[k]).replace(/\s+/g, ' ').slice(0, 44)}」→ 新「${opts[k]}」`)
+  if (APPLY) { q.options = { ...opts }; q.answer = ansLetter; load(e).touched = true }
+  n++
+}
+
+console.log(`\n處理 ${n} 題${APPLY ? '' : '（dry-run）'}`)
+if (APPLY) {
+  for (const [e, v] of dirty) if (v.touched) atomicWriteJson(FILE(e), v.j)
+  console.log('✅ 已寫回')
+}

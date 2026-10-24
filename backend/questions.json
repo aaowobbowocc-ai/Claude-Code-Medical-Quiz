@@ -84872,10 +84872,10 @@
       "number": 1,
       "question": "下列有關初級視覺皮質之敘述，何者錯誤？",
       "options": {
-        "A": "初級視覺皮質是視覺訊息抵達大腦皮質的第一站，直接接受來自視丘外側膝狀核（LGN）的投射。",
-        "B": "初級視覺皮質具有視網膜拓樸結構（retinotopic organization），且包含處理方向、空間頻率等基本視覺特徵的功能性細胞。",
-        "C": "初級視覺皮質主要負責複雜物體的辨識與記憶，而不是對基本視覺元素（如線條、顏色）的初步分析。",
-        "D": "初級視覺皮質又稱紋狀皮質（striate cortex），其功能柱狀組織（columnar organization）是視覺處理的重要基礎。"
+        "A": "位於Brodmann area 17",
+        "B": "其傳入神經主要來自外膝狀體（lateral geniculate body）",
+        "C": "右側初級視覺皮質之傳入訊息主要來自左側眼球",
+        "D": "具有line of Gennari"
       },
       "answer": "C",
       "explanation": ""
@@ -85218,10 +85218,10 @@
       "number": 17,
       "question": "有關睪丸的血流，下列何者正確？",
       "options": {
-        "A": "右側睪丸靜脈直接注入下腔靜脈。",
-        "B": "左側睪丸靜脈直接注入下腔靜脈。",
-        "C": "左右兩側睪丸靜脈皆注入腎靜脈。",
-        "D": "睪丸動脈起源於內髂動脈。"
+        "A": "睪丸動脈（testicular artery）來自腹主動脈（abdominal aorta）",
+        "B": "左睪丸動脈（left testicular artery）起自腹主動脈（abdominal aorta），右睪丸動脈來自右腎動 脈（right renal artery）",
+        "C": "左右睪丸動脈（left and right testicular arteries）各源自同側的腎動脈（renal artery）",
+        "D": "來自同側的髂內動脈（internal iliac artery）"
       },
       "answer": "A",
       "explanation": "",
@@ -85716,10 +85716,10 @@
       "number": 39,
       "question": "有關腦下垂體（pituitary gland），下列敘述何項錯誤？",
       "options": {
-        "A": "腦下垂體後葉可自行製造抗利尿激素及催產素。",
-        "B": "腦下垂體位於蝶骨的蝶鞍內。",
-        "C": "腦下垂體前葉可分泌多種激素，如生長激素、甲狀腺刺激素等。",
-        "D": "腦下垂體被稱為內分泌系統的總司令，可調控其他腺體。"
+        "A": "胚胎發育過程中，腦下垂體前葉與後葉均源自於間腦（diencephalon）",
+        "B": "腦下垂體後葉分泌抗利尿激素（ADH/vasopressin）之神經細胞本體位於下視丘之神經核",
+        "C": "腦下垂體前葉內，分泌激乳素（prolactin）或生長激素（growth hormone）的細胞是嗜酸性細胞 （acidophil）",
+        "D": "嬰兒吸吮母親乳頭會刺激催產素（oxytocin）之釋放"
       },
       "answer": "A",
       "explanation": "",
@@ -85850,10 +85850,10 @@
       "number": 45,
       "question": "有關梅毒（Syphilis）之敘述，何者錯誤？",
       "options": {
-        "A": "梅毒螺旋體特異性抗體試驗（TP-PA）可用於追蹤梅毒治療成效。",
-        "B": "梅毒是由梅毒螺旋體（Treponema pallidum）所引起之疾病。",
-        "C": "第一期梅毒（Primary syphilis）的典型症狀為無痛性硬下疳。",
-        "D": "青黴素（Penicillin）是治療梅毒的優先選擇藥物。"
+        "A": "其致病原為Borrelia burgdorferi",
+        "B": "主要為性接觸傳染之疾病",
+        "C": "婦女懷孕時若感染梅毒則可能導致胎兒患有先天性梅毒",
+        "D": "一般感染後2 年內最具傳染性"
       },
       "answer": "A",
       "explanation": "",
@@ -86397,10 +86397,10 @@
       "number": 69,
       "question": "有關主要組織相容性複合體（major histocompatibility complex，MHC）的功能描述，下列何者錯誤？",
       "options": {
-        "A": "主要組織相容性複合體（MHC）負責將胜肽抗原呈遞給T淋巴球。",
-        "B": "MHC class II 分子表現於所有有核細胞。",
-        "C": "MHC class II 分子主要表現於抗原呈遞細胞（APCs）。",
-        "D": "MHC 分子在免疫系統中區分自我與非我抗原扮演重要角色。"
+        "A": "第一型MHC 蛋白可在體內所有有核的細胞上發現",
+        "B": "第二型MHC 蛋白只在巨噬細胞及T 細胞上發現",
+        "C": "毒殺性T 細胞可辨識與第一型MHC 蛋白結合的抗原",
+        "D": "輔助型T 細胞可辨識與第二型MHC 蛋白結合的抗原"
       },
       "answer": "B",
       "explanation": "",
@@ -86486,12 +86486,12 @@
       "number": 74,
       "question": "以生物製劑（biologics） 抗B 細胞單株抗體（rituximab）治療疾病，下列何者為正確？",
       "options": {
-        "A": "利妥昔單抗的主要作用是抑制T細胞的增殖與活化，以達到免疫調節效果。",
-        "B": "利妥昔單抗是一種口服的小分子藥物，透過抑制多種細胞激素的產生來緩解發炎反應。",
-        "C": "利妥昔單抗是一種作用於B細胞表面CD20抗原的單株抗體，主要用於治療某些淋巴瘤和自體免疫疾病。",
-        "D": "接受利妥昔單抗治療的患者，其身體對病原體的抵抗力會顯著增強，大幅降低感染機率。"
+        "A": "人類抗原是CD（clusters of differentiation）52",
+        "B": "治療 Hodgkin's lymphoma",
+        "C": "經基因工程處理，免疫刺激性（immunogenic）低",
+        "D": "可以清除體內之漿細胞（plasma cells）"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": "考選部本題送分（答B或C者均給分），標示為其中一個可接受答案。",
       "disputed": true,
       "_original_number": 74
@@ -86691,10 +86691,10 @@
       "number": 83,
       "question": "關於生命統計（vital statistics）數據的判讀，下列何者錯誤？",
       "options": {
-        "A": "粗死亡率（crude death rate）是評估不同人口群體健康狀況最直接且最精確的指標。",
-        "B": "比較不同地區或不同時間的粗死亡率時，應注意其人口年齡結構的差異，必要時需進行年齡標準化。",
-        "C": "生命統計數據的判讀必須考慮資料來源的可靠性及數據登錄的完整性與正確性。",
-        "D": "單純從死亡率的變化無法直接推論特定疾病的發病率或流行程度。"
+        "A": "某地區粗死亡率（crude mortality rate）高，表示該區醫療及公共衛生水準差",
+        "B": "某地區嬰兒死亡率（infant mortality rate）高，表示該區醫療及公共衛生水準差",
+        "C": "某地區出生時平均餘命（life expectancy）高，表示該區國民健康水準佳",
+        "D": "某地區潛在生命（人）年損失（years of potential life lost）少，表示該區國民健康水準佳"
       },
       "answer": "A",
       "explanation": "",

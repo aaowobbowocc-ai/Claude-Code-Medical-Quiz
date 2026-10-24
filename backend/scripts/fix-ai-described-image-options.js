@@ -73,11 +73,22 @@ const find = (e, code, sub, num) => load(e).arr.find(q =>
 for (const [e, code, sub, num, why] of TO_FIGURE) {
   const q = find(e, code, sub, num)
   if (!q) { console.log(`✗ 找不到 ${e} ${code} ${sub} #${num}`); continue }
-  if (L.every(k => String(q.options?.[k]) === '(圖)')) { console.log(`－ ${e} ${code} #${num} 已經是 (圖)`); continue }
-  console.log(`${e} ${code} ${sub} #${num} 答${q.answer} → (圖)×4`)
+  const alreadyFig = L.every(k => String(q.options?.[k]) === '(圖)')
+  const alreadyMarked = q.incomplete === 'image_options'
+  if (alreadyFig && alreadyMarked) { console.log(`－ ${e} ${code} #${num} 已處理`); continue }
+  console.log(`${e} ${code} ${sub} #${num} 答${q.answer} → (圖)×4${alreadyMarked ? '' : ' + incomplete=image_options'}`)
   console.log(`   依據: ${why}`)
-  console.log(`   抹掉: ${String(q.options.A).replace(/\s+/g, ' ').slice(0, 68)}…`)
-  if (APPLY) { q.options = { A: '(圖)', B: '(圖)', C: '(圖)', D: '(圖)' }; load(e).touched = true }
+  if (!alreadyFig) console.log(`   抹掉: ${String(q.options.A).replace(/\s+/g, ' ').slice(0, 68)}…`)
+  if (APPLY) {
+    q.options = { A: '(圖)', B: '(圖)', C: '(圖)', D: '(圖)' }
+    // ⚠️ 只換成 (圖) 還不夠。健康報告對 (圖)×4 的豁免條件是 option_images
+    //    有 ≥4 把鑰匙；還沒補圖的要標 incomplete='image_options'，
+    //    前端才會顯示「本題選項為圖片，可能無法正常對應選項」並從出題排除
+    //    （server.js 把 q.incomplete 的題過濾掉）。全站已有 49 題是這個狀態。
+    q.incomplete = 'image_options'
+    q.incomplete_reason = '選項在原卷是圖，待補 option_images'
+    load(e).touched = true
+  }
   n++
 }
 

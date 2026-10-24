@@ -100623,7 +100623,9 @@
         "/question-images/tcm1_102428_1.webp",
         "/question-images/tcm1_102428_2.webp",
         "/question-images/tcm1_102428_3.webp"
-      ]
+      ],
+      "incomplete": "image_options",
+      "incomplete_reason": "選項在原卷是圖，待補 option_images"
     },
     {
       "id": 102429,
@@ -100649,7 +100651,9 @@
         "/question-images/tcm1_102429_1.webp",
         "/question-images/tcm1_102429_2.webp",
         "/question-images/tcm1_102429_3.webp"
-      ]
+      ],
+      "incomplete": "image_options",
+      "incomplete_reason": "選項在原卷是圖，待補 option_images"
     },
     {
       "id": 102430,
@@ -100669,7 +100673,9 @@
         "D": "(圖)"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "image_options",
+      "incomplete_reason": "選項在原卷是圖，待補 option_images"
     },
     {
       "id": "115090_0_1",

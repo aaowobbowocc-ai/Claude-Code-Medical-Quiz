@@ -4785,13 +4785,14 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": false,
+      "incomplete": "image_options",
       "images": [
         "/question-images/radiology_118081_0.webp",
         "/question-images/radiology_118081_1.webp",
         "/question-images/radiology_118081_2.webp",
         "/question-images/radiology_118081_3.webp"
-      ]
+      ],
+      "incomplete_reason": "選項在原卷是圖，待補 option_images"
     },
     {
       "id": 118082,

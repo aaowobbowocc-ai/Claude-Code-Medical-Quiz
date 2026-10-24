@@ -65944,10 +65944,11 @@
     },
     "answer": "B",
     "explanation": "",
-    "incomplete": false,
+    "incomplete": "image_options",
     "images": [
       "/question-images/medlab_10957_0.webp"
-    ]
+    ],
+    "incomplete_reason": "選項在原卷是圖，待補 option_images"
   },
   {
     "id": 10958,
@@ -105962,7 +105963,9 @@
     "explanation": "",
     "images": [
       "/question-images/medlab_12424_0.webp"
-    ]
+    ],
+    "incomplete": "image_options",
+    "incomplete_reason": "選項在原卷是圖，待補 option_images"
   },
   {
     "id": 12425,
@@ -154376,10 +154379,11 @@
     },
     "answer": "A",
     "explanation": "",
-    "incomplete": false,
+    "incomplete": "image_options",
     "images": [
       "/question-images/medlab_107100_immuno_q13_0.webp"
-    ]
+    ],
+    "incomplete_reason": "選項在原卷是圖，待補 option_images"
   },
   {
     "id": 7098,

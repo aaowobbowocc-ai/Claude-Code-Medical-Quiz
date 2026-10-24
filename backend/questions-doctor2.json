@@ -94568,13 +94568,14 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": false,
+      "incomplete": "image_options",
       "case_context": "第 21 題：病人因單耳聽力不佳，到耳鼻喉科看診，耳鏡檢查如下圖，最可能之診斷為：",
       "images": [
         "/question-images/doctor2_115023190_0.webp",
         "/question-images/doctor2_115023190_1.webp"
       ],
-      "grouped": true
+      "grouped": true,
+      "incomplete_reason": "選項在原卷是圖，待補 option_images"
     },
     {
       "id": 115023192,

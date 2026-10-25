@@ -62,3 +62,9 @@ backend/questions-civil-senior.json
 
 # 下載的 Cloud Billing 費用表 CSV（含帳單帳戶 ID 與應付憑據號碼，不入庫）
 backend/_finance/
+
+# 題庫備份檔（questions-*.json.bak）——正本在 git history，不需要再進版控。
+# 2026-10-26：連同 backend/_tmp 一起 untrack，當時追蹤量 3.2 GB → 575 MB。
+# backend/_tmp 的規則上面早就有了，但那些檔是在加規則之前就 commit 進去的，
+# gitignore 不會 untrack 既有檔案，要 git rm -r --cached 才會生效。
+*.bak

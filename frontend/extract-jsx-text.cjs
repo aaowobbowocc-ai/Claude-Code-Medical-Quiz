@@ -29,6 +29,31 @@ const ENT = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'
 const decode = s => s.replace(/&(?:amp|lt|gt|quot|#39|nbsp);/g, m => ENT[m] || m)
 
 /**
+ * 頁面裡會用 {`涵蓋 ${SITE.exams} 種國考`} 這種模板字串帶入全站數字。
+ * stripBraces() 會把整段 {…} 丟掉，所以要先在這裡展開，
+ * 否則 prerender 出來的 /privacy、/contact 會少掉那幾句。
+ *
+ * 只支援 ${識別字.屬性}，值從 site-stats.json 來。
+ * 碰到解不掉的運算式就把**整段**丟掉（維持原本保守的行為：
+ * 寧可少一句，也不要把 `${...}` 原封不動印給使用者看）。
+ */
+let SITE = {}
+try { SITE = require('./src/site-stats.json') } catch { /* 還沒產生就當沒有 */ }
+const VARS = { SITE }
+
+function resolveTemplates(src) {
+  return src.replace(/\{\s*`([^`]*)`\s*\}/g, (_, body) => {
+    let bad = false
+    const out = body.replace(/\$\{\s*([A-Za-z_$][\w$]*)\.([\w$]+)\s*\}/g, (__, obj, key) => {
+      const v = VARS[obj] && VARS[obj][key]
+      if (v === undefined) { bad = true; return '' }
+      return String(v)
+    })
+    return (bad || out.includes('${')) ? '' : out
+  })
+}
+
+/**
  * 回傳 [{ tag: 'h1'|'h2'|'p'|'li', text }]，抽不到回 null。
  */
 function extractBlocks(src) {
@@ -36,8 +61,10 @@ function extractBlocks(src) {
   const i = src.indexOf('return (')
   let body = i >= 0 ? src.slice(i + 'return ('.length) : src
 
-  // 註解、JSX 運算式（className、onClick、變數）全部拿掉
+  // 註解先拿掉，接著展開 {`…${SITE.x}…`} 模板，最後才把其餘 JSX 運算式
+  // （className、onClick、變數）整段丟掉 —— 順序不能反，反了模板也會被吃掉。
   body = body.replace(/\{\/\*[\s\S]*?\*\/\}/g, ' ')
+  body = resolveTemplates(body)
   body = stripBraces(body)
 
   const blocks = []
@@ -81,8 +108,13 @@ function blocksToHtml(blocks) {
  * 抓不到回 null。
  */
 function extractPageMeta(src) {
-  const m = src.match(/usePageMeta\(\s*(['"])([\s\S]*?)\1\s*,\s*(['"])([\s\S]*?)\3\s*\)/)
-  return m ? { title: m[2], description: m[4] } : null
+  const m = src.match(/usePageMeta\(\s*(['"`])([\s\S]*?)\1\s*,\s*(['"`])([\s\S]*?)\3\s*\)/)
+  if (!m) return null
+  // 第二個參數可能是 `…${SITE.questionsRounded}…` 的模板字串
+  const unwrap = (raw, quote) => quote !== '`' ? raw : (resolveTemplates('{`' + raw + '`}') || null)
+  const title = unwrap(m[2], m[1])
+  const description = unwrap(m[4], m[3])
+  return (title && description) ? { title, description } : null
 }
 
 function fromFile(p) {

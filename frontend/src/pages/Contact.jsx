@@ -2,12 +2,15 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { usePageMeta } from '../hooks/usePageMeta'
+import SITE from '../site-stats.json'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
 export default function Contact() {
   const navigate = useNavigate()
-  usePageMeta('關於我們', '國考知識王：免費國考練習平台，涵蓋醫事、法律、公職、駕照筆試 26 類、150,000+ 題、即時對戰、AI 解說。')
+  // 數字一律從 site-stats.json 來（backend/scripts/sync-total-q.js 產生），
+  // 不要寫死 —— 以前寫死在 6 個地方，結果各說各話（26 類/27 類、150,000+/193,000+）。
+  usePageMeta('關於我們', `國考知識王：免費國考練習平台，涵蓋醫事、法律、公職、國營、教師資格、駕照筆試等 ${SITE.exams} 種考試、${SITE.questionsRounded} 題、即時對戰、AI 解說。`)
   const [feedbackText, setFeedbackText] = useState('')
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -63,8 +66,8 @@ export default function Contact() {
           <section>
             <h3 className="font-bold text-base text-medical-dark mb-2">平台特色</h3>
             <ul className="list-disc pl-5 space-y-1.5">
-              <li><strong>193,000+ 考古題：</strong>涵蓋 100–115 年醫事、法律、公職各類國考歷屆題目</li>
-              <li><strong>多元國考類別：</strong>醫事 17 類（醫師/牙醫/藥師/中醫/護理/物治/職治/醫檢/放射/營養/獸醫/社工/呼吸治療等）、律師一試、公職 8 類（高考三等/普考/初考/關務/司法特考/警察等）、汽機車駕照筆試，合計 27 類</li>
+              <li><strong>{`${SITE.questionsRounded} 考古題：`}</strong>{`涵蓋 ${SITE.yearRange} 年醫事、法律、公職、國營事業、教師資格、大學入學等各類考試歷屆題目`}</li>
+              <li><strong>多元考試類別：</strong>{`醫事 25 類（醫師/牙醫/藥師/中醫/護理/物治/職治/醫檢/放射/營養/獸醫/社工/呼吸治療/聽力/語言治療/心理師/驗光/公衛/牙體技術等）、法律 2 類（律師一試、司法特考）、公職 8 類（高考三等/普考/初考/關務/警察等）、國營及公營事業 8 類（台電等聯招、中華郵政、台鐵）、教師資格 5 類、大學入學（學測/分科）、汽機車駕照筆試，合計 ${SITE.exams} 種`}</li>
               <li><strong>即時對戰：</strong>與好友或 AI 即時搶答，讓讀書不再孤單</li>
               <li><strong>AI 題目解說：</strong>每題都有 AI 生成的詳細解析，幫你理解觀念</li>
               <li><strong>模擬考試：</strong>完全模擬真實國考流程，依各科及格制評分</li>

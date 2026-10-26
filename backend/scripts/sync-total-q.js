@@ -66,3 +66,56 @@ for (const u of updates.slice(0, 30)) {
 if (updates.length > 30) console.log(`   ... 還有 ${updates.length - 30}`)
 console.log(``)
 console.log(`📊 全站合計：${siteTotal.toLocaleString()} 題`)
+
+/*
+ * 把「幾種考試、幾題」寫成前端可以 import 的單一來源。
+ *
+ * 2026-10-27 之前這兩個數字是手寫在 6 個地方（index.html ×3、Home.jsx ×2、
+ * Contact.jsx ×3、Privacy.jsx ×1），結果各說各話：
+ *   Home「26 類國考 · 150,000+ 題」、Contact meta「26 類、150,000+」、
+ *   Contact 內文「193,000+」「合計 27 類」、Privacy「合計 27 類、193,000+」
+ * 而實際是 52 種考試、229,968 題。對外文案過期比沒寫還糟。
+ *
+ * ⚠️ 不能用 sum(totalQ) 當全站題數 —— 共用題庫被好幾個考試共用，
+ *    加起來會灌水成 241,592。siteTotal 是上面自己累加、跳過 sharedBanks 的。
+ */
+const STATS_PATH = path.resolve(__dirname, '..', '..', 'frontend', 'src', 'site-stats.json')
+const examCount = fs.readdirSync(CONFIG_DIR).filter(f => f.endsWith('.json'))
+  .filter(f => { try { return !!JSON.parse(fs.readFileSync(path.join(CONFIG_DIR, f), 'utf-8')).id } catch { return false } })
+  .length
+const rounded = Math.floor(siteTotal / 10000) * 10000
+const stats = {
+  _comment: '由 backend/scripts/sync-total-q.js 產生，不要手改。題庫有增減就重跑那支。',
+  exams: examCount,
+  questions: siteTotal,
+  // 對外文案用的保守整數，例如 229,968 → "220,000+"
+  questionsRounded: rounded.toLocaleString('en-US') + '+',
+  yearRange: '100-115',
+  updated: new Date().toISOString().slice(0, 10),
+}
+if (fs.existsSync(path.dirname(STATS_PATH))) {
+  atomicWriteJson(STATS_PATH, stats)
+  console.log(`📝 site-stats.json：${stats.exams} 種考試、${stats.questions.toLocaleString()} 題（文案用 ${stats.questionsRounded}）`)
+}
+
+/*
+ * index.html 的 meta/JSON-LD 是手寫的散文（七處），沒辦法安全地自動改寫，
+ * 所以只做漂移檢查：裡面的數字跟 site-stats 對不上就出聲。
+ * 2026-10-27 修之前它停在「17 類 / 合計 27 類 / 193,000+」，
+ * 而 Home 寫「26 類 / 150,000+」、Contact 內文寫「193,000+」——
+ * 四個地方四個說法，實際是 52 種、229,968 題。
+ */
+const INDEX_HTML = path.resolve(__dirname, '..', '..', 'frontend', 'index.html')
+if (fs.existsSync(INDEX_HTML)) {
+  const html = fs.readFileSync(INDEX_HTML, 'utf-8')
+  const nums = [...new Set(html.match(/[0-9]{1,3},000\+/g) || [])]
+  const stale = nums.filter(n => n !== stats.questionsRounded)
+  const examNums = [...new Set((html.match(/合計 (\d+) 種考試/g) || []).map(m => m.match(/\d+/)[0]))]
+  const staleExams = examNums.filter(n => Number(n) !== stats.exams)
+  if (stale.length || staleExams.length) {
+    console.log('')
+    console.log(`⚠️  frontend/index.html 的數字跟 site-stats 對不上，要手動改：`)
+    if (stale.length) console.log(`    題數寫 ${stale.join('、')}，應為 ${stats.questionsRounded}`)
+    if (staleExams.length) console.log(`    考試數寫 ${staleExams.join('、')}，應為 ${stats.exams}`)
+  }
+}

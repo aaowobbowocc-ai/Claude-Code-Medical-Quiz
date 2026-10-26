@@ -300,6 +300,92 @@ const STATIC_PAGES = [
   { route: 'contact', src: 'Contact.jsx', keywords: '關於我們,聯絡方式,國考題庫,國考知識王' },
 ]
 
+/*
+ * 功能頁。這些頁的 JSX 內容是互動 UI，抽不出有意義的散文，
+ * 所以**不**走 extract-jsx-text，改用這裡手寫的一兩句說明。
+ *
+ * 重點不在「生出內容」，而在**停止宣告 canonical 指向首頁**：
+ * 2026-10-27 之前這 12 條全部送出與首頁 byte 相同的 HTML，
+ * canonical 都寫 https://examking.tw/，等於 Google 把它們併成一頁。
+ *
+ * personal: true 的是個人化頁面（要登入才有內容），加 noindex 並且
+ * 從 sitemap 移除 —— 它們本來就不該被索引。
+ */
+const APP_ROUTES = [
+  { route: 'browse', title: '題庫瀏覽',
+    desc: '依考試、年度與科目瀏覽歷屆試題，可直接翻看題目與官方答案。',
+    links: [['/practice', '練習模式'], ['/mock-exam', '歷屆模擬考'], ['/coverage', '題庫覆蓋率']] },
+  { route: 'practice', title: '練習模式',
+    desc: '選定考試與科目後連續作答，答錯的題目自動進入錯題本，可開啟 AI 解說逐題理解。',
+    links: [['/browse', '題庫瀏覽'], ['/mock-exam', '歷屆模擬考']] },
+  { route: 'mock-exam', title: '歷屆模擬考',
+    desc: '依各考試實際的卷別、題數與作答時限應考，並依官方及格標準計分。',
+    links: [['/practice', '練習模式'], ['/browse', '題庫瀏覽']] },
+  { route: 'map', title: '學習地圖',
+    desc: '以科目為單位檢視各考試的作答進度與熟練度分布。',
+    links: [['/practice', '練習模式']] },
+  { route: 'leaderboard', title: '排行榜',
+    desc: '每週重置的答題排行，依名次分段顯示。',
+    links: [['/board', '留言板']] },
+  { route: 'board', title: '留言板',
+    desc: '使用者交流與回報題目問題的公開留言板。',
+    links: [['/contact', '關於我們']] },
+  { route: 'changelog', title: '更新公告',
+    desc: '題庫更新、功能調整與使用者回饋處理紀錄。',
+    links: [['/coverage', '題庫覆蓋率'], ['/contact', '關於我們']] },
+  { route: 'coverage', title: '題庫覆蓋率',
+    desc: '各考試、各年度已收錄的題數與缺題狀況。',
+    links: [['/browse', '題庫瀏覽'], ['/changelog', '更新公告']] },
+
+  { route: 'notes', title: '筆記', personal: true, desc: '個人筆記，需登入後才有內容。' },
+  { route: 'history', title: '作答紀錄', personal: true, desc: '個人作答紀錄，需登入後才有內容。' },
+  { route: 'favorites', title: '收藏題目', personal: true, desc: '個人收藏的題目，需登入後才有內容。' },
+  { route: 'weakness', title: '弱點分析', personal: true, desc: '依個人作答紀錄產生的弱點分析，需登入後才有內容。' },
+]
+
+function buildAppRouteShell(tpl, r) {
+  const title = `${r.title}｜國考知識王`
+  const description = trim(r.desc, 150)
+  const canonical = `https://examking.tw/${r.route}`
+  let html = tpl
+
+  html = replaceTag(html, /<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`)
+  html = replaceTag(html, /<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${esc(description)}" />`)
+  html = replaceTag(html, /<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${canonical}" />`)
+  html = replaceTag(html, /<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${esc(title)}" />`)
+  html = replaceTag(html, /<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${esc(description)}" />`)
+  html = replaceTag(html, /<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${canonical}" />`)
+  html = replaceTag(html, /<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${esc(title)}" />`)
+  html = replaceTag(html, /<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${esc(description)}" />`)
+
+  // 個人化頁面明確告訴爬蟲不要索引（它們沒登入就沒有內容）
+  if (r.personal) {
+    html = html.replace(/<link rel="canonical"/, '<meta name="robots" content="noindex,follow" />\n    <link rel="canonical"')
+  }
+
+  const linkHtml = (r.links || []).map(([href, label]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join('\n')
+  const staticBody = `
+      <div style="max-width:720px;margin:40px auto;padding:20px;font-family:'Noto Sans TC',sans-serif;color:#333;line-height:1.7">
+        <h1 style="font-size:1.6rem;color:#1A6B9A">${esc(r.title)}</h1>
+        <p>${esc(r.desc)}</p>
+${linkHtml ? `        <h2 style="font-size:1.2rem;margin-top:1.5rem">相關頁面</h2>\n        <ul>\n${linkHtml}\n        </ul>` : ''}
+        <nav style="margin-top:1.5rem;font-size:0.9rem;color:#666">
+          <a href="/">首頁</a> |
+          <a href="/privacy">隱私權政策</a> |
+          <a href="/tos">服務條款</a> |
+          <a href="/contact">關於我們</a>
+        </nav>
+      </div>`
+
+  html = html.replace(
+    /(<div id="root">)[\s\S]*?<!-- \/static-seo -->/,
+    `$1${staticBody}\n      <!-- /static-seo -->`
+  )
+  html = html.replace(/<noscript>\s*<div style="max-width:6[\s\S]*?<\/noscript>/,
+    `<noscript>${staticBody}\n      <p>請啟用 JavaScript 以使用完整功能。</p>\n    </noscript>`)
+  return html
+}
+
 function buildStaticPageShell(tpl, page, blocks) {
   const meta = blocks.meta || {}
   const title = `${meta.title || page.route}｜國考知識王`
@@ -411,6 +497,17 @@ function main() {
     staticCount++
   }
   console.log(`[generate-shells] wrote ${staticCount} static pages → dist/{privacy,tos,contact}/index.html`)
+
+  // 功能頁：不是為了生內容，是為了讓它們不要再宣告 canonical 指向首頁
+  let appCount = 0, noindexCount = 0
+  for (const r of APP_ROUTES) {
+    const outDir = path.join(DIST, r.route)
+    fs.mkdirSync(outDir, { recursive: true })
+    fs.writeFileSync(path.join(outDir, 'index.html'), buildAppRouteShell(tpl, r))
+    appCount++
+    if (r.personal) noindexCount++
+  }
+  console.log(`[generate-shells] wrote ${appCount} app routes (${noindexCount} noindex) → dist/<route>/index.html`)
 }
 
 main()

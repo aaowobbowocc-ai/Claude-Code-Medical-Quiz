@@ -77,6 +77,102 @@
       "destination": "/contact/index.html"
     },
     {
+      "source": "/browse/",
+      "destination": "/browse/index.html"
+    },
+    {
+      "source": "/browse",
+      "destination": "/browse/index.html"
+    },
+    {
+      "source": "/practice/",
+      "destination": "/practice/index.html"
+    },
+    {
+      "source": "/practice",
+      "destination": "/practice/index.html"
+    },
+    {
+      "source": "/mock-exam/",
+      "destination": "/mock-exam/index.html"
+    },
+    {
+      "source": "/mock-exam",
+      "destination": "/mock-exam/index.html"
+    },
+    {
+      "source": "/map/",
+      "destination": "/map/index.html"
+    },
+    {
+      "source": "/map",
+      "destination": "/map/index.html"
+    },
+    {
+      "source": "/leaderboard/",
+      "destination": "/leaderboard/index.html"
+    },
+    {
+      "source": "/leaderboard",
+      "destination": "/leaderboard/index.html"
+    },
+    {
+      "source": "/board/",
+      "destination": "/board/index.html"
+    },
+    {
+      "source": "/board",
+      "destination": "/board/index.html"
+    },
+    {
+      "source": "/changelog/",
+      "destination": "/changelog/index.html"
+    },
+    {
+      "source": "/changelog",
+      "destination": "/changelog/index.html"
+    },
+    {
+      "source": "/coverage/",
+      "destination": "/coverage/index.html"
+    },
+    {
+      "source": "/coverage",
+      "destination": "/coverage/index.html"
+    },
+    {
+      "source": "/notes/",
+      "destination": "/notes/index.html"
+    },
+    {
+      "source": "/notes",
+      "destination": "/notes/index.html"
+    },
+    {
+      "source": "/history/",
+      "destination": "/history/index.html"
+    },
+    {
+      "source": "/history",
+      "destination": "/history/index.html"
+    },
+    {
+      "source": "/favorites/",
+      "destination": "/favorites/index.html"
+    },
+    {
+      "source": "/favorites",
+      "destination": "/favorites/index.html"
+    },
+    {
+      "source": "/weakness/",
+      "destination": "/weakness/index.html"
+    },
+    {
+      "source": "/weakness",
+      "destination": "/weakness/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

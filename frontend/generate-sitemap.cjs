@@ -15,17 +15,16 @@ const PUBLIC = path.resolve(__dirname, 'public')
 const SNAPSHOT = path.resolve(__dirname, 'src', 'exam-configs-snapshot')
 
 const STATIC_ROUTES = [
+  // ⚠️ 不要把個人化頁面（/weakness、/notes、/history、/favorites）放進來。
+  //    它們沒登入就沒有內容，prerender 的 shell 已經標 noindex
+  //    （build-shells.cjs 的 APP_ROUTES personal:true）。
   { path: '/', priority: 1.0, changefreq: 'weekly' },
   { path: '/browse', priority: 0.8, changefreq: 'monthly' },
   { path: '/practice', priority: 0.8, changefreq: 'monthly' },
   { path: '/mock-exam', priority: 0.8, changefreq: 'monthly' },
-  { path: '/weakness', priority: 0.7, changefreq: 'monthly' },
   { path: '/map', priority: 0.7, changefreq: 'monthly' },
   { path: '/leaderboard', priority: 0.6, changefreq: 'weekly' },
   { path: '/board', priority: 0.6, changefreq: 'weekly' },
-  { path: '/notes', priority: 0.6, changefreq: 'weekly' },
-  { path: '/history', priority: 0.5, changefreq: 'monthly' },
-  { path: '/favorites', priority: 0.5, changefreq: 'monthly' },
   { path: '/changelog', priority: 0.5, changefreq: 'weekly' },
   { path: '/coverage', priority: 0.5, changefreq: 'monthly' },
   { path: '/privacy', priority: 0.3, changefreq: 'yearly' },

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { usePageMeta } from '../hooks/usePageMeta'
+import SITE from '../site-stats.json'
 
 export default function Privacy() {
   const navigate = useNavigate()
@@ -24,7 +25,7 @@ export default function Privacy() {
           <section>
             <h2 className="font-bold text-base text-medical-dark mb-2">一、總則</h2>
             <p>
-              「國考知識王」（以下簡稱「本平台」）為一免費國家考試題庫練習平台，涵蓋醫事（醫師、牙醫師、藥師、護理師、中醫、獸醫、醫檢、物治、職治、放射、營養、社工、呼吸治療等 17 類）、法律（律師一試、司法特考）、公職（高考三等、普考、初考、關務、警察等 8 類）、汽機車駕照筆試合計 27 類國考，收錄 100-115 年 193,000+ 題考古題，致力於保護使用者的隱私權。
+              {`「國考知識王」（以下簡稱「本平台」）為一免費國家考試題庫練習平台，涵蓋醫事（醫師、牙醫師、藥師、護理師、中醫、獸醫、醫檢、物治、職治、放射、營養、社工、呼吸治療、聽力、語言治療、心理師、驗光等 25 類）、法律（律師一試、司法特考）、公職（高考三等、普考、初考、關務、警察等 8 類）、國營及公營事業（台電等聯招、中華郵政、台鐵共 8 類）、教師資格（5 類）、大學入學（學測、分科測驗）、汽機車駕照筆試，合計 ${SITE.exams} 種考試，收錄 ${SITE.yearRange} 年 ${SITE.questionsRounded} 題考古題，致力於保護使用者的隱私權。`}
               本政策說明我們如何蒐集、使用與保護您的個人資訊。使用本平台即表示您同意本隱私權政策的內容。
             </p>
           </section>

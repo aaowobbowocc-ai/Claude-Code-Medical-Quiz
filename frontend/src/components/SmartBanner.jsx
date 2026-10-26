@@ -9,7 +9,22 @@ const IS_NATIVE = isNativeApp()
 
 export default function SmartBanner() {
   const [dismissed, setDismissed] = useState(false)
-  const [adFailed, setAdFailed] = useState(!AD_CLIENT || !AD_SLOT) // 未設定則直接 fallback
+  // ⚠️ 2026-10-26：直接進 fallback（贊助卡），不要再嘗試 AdSense。
+  //
+  // AD_CLIENT 與 AD_SLOT 都是寫死的非空字串，所以舊的
+  // `useState(!AD_CLIENT || !AD_SLOT)` 初始值其實是 false ——
+  // 這個元件掛在 Practice／MockExam／Results／Review 四個最常用的頁面上，
+  // 等於每個使用者都被送一次請求到 googlesyndication，然後看 3 秒空廣告位
+  // 才 fallback 成贊助卡。
+  //
+  // 而那些請求永遠不會有填充：發布商帳戶 pub-3134321405509741 的網站審查
+  // 一直被判「缺乏價值的內容」，AdSense 從來沒在 examking.tw 上放送過。
+  // （真正在賺錢的是 App 的 AdMob Rewarded，走同一個發布商帳戶收款，
+  //   跟這個網頁廣告無關。）
+  //
+  // FixedBottomAd 早就這樣關掉了，這裡補上。
+  // 日後網站真的過審，改回 useState(!AD_CLIENT || !AD_SLOT) 即可恢復。
+  const [adFailed, setAdFailed] = useState(true)
   const adRef = useRef(null)
 
   useEffect(() => {

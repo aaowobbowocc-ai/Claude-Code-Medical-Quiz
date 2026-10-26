@@ -13,6 +13,7 @@
  */
 const fs = require('fs')
 const path = require('path')
+const { fromFile: fromJsxFile, blocksToHtml } = require('./extract-jsx-text.cjs')
 
 const DIST = path.resolve(__dirname, 'dist')
 // Prefer in-tree snapshot (works on Vercel where ../backend isn't in build context).
@@ -281,6 +282,64 @@ ${list}
   return html
 }
 
+/*
+ * 靜態頁（隱私權政策／服務條款／關於我們）。
+ *
+ * 2026-10-26 以前這三頁沒有 prerender，走 vercel.json 的 /(.*)→/index.html，
+ * 所以爬蟲抓 /privacy 拿到的是**首頁的 HTML**，連 canonical 都指向首頁
+ * （實測 /、/practice、/privacy、/coverage 的 md5 一模一樣）。
+ * 結果是法律頁面對搜尋引擎等於不存在 —— 而 AdSense 明文要求看得到隱私權政策。
+ *
+ * 內容與 title/description 都從 .jsx 原始碼抽（extract-jsx-text.cjs），
+ * 不另外維護一份靜態副本；否則改了頁面而忘了改這裡，爬蟲會看到過期的政策
+ * （[[feedback_legal_pages]]）。抽不到就跳過該頁並印警告，不要生出半截頁面。
+ */
+const STATIC_PAGES = [
+  { route: 'privacy', src: 'Privacy.jsx', keywords: '隱私權政策,Cookie,Google 廣告,個人資料,國考知識王' },
+  { route: 'tos', src: 'Terms.jsx', keywords: '服務條款,使用規範,免責聲明,題庫來源,國考知識王' },
+  { route: 'contact', src: 'Contact.jsx', keywords: '關於我們,聯絡方式,國考題庫,國考知識王' },
+]
+
+function buildStaticPageShell(tpl, page, blocks) {
+  const meta = blocks.meta || {}
+  const title = `${meta.title || page.route}｜國考知識王`
+  const description = trim(meta.description || '', 150)
+  // ⚠️ 不加結尾斜線 —— generate-sitemap.cjs 的 STATIC_ROUTES 寫的是
+  //    '/privacy'、'/tos'、'/contact'（考試頁與 guides 才是帶斜線的）。
+  //    canonical 跟 sitemap 不一致會讓 Google 兩邊互相打架。
+  const canonical = `https://examking.tw/${page.route}`
+  let html = tpl
+
+  html = replaceTag(html, /<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`)
+  html = replaceTag(html, /<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${esc(description)}" />`)
+  html = replaceTag(html, /<meta name="keywords" content="[^"]*" \/>/, `<meta name="keywords" content="${esc(page.keywords)}" />`)
+  html = replaceTag(html, /<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${canonical}" />`)
+  html = replaceTag(html, /<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${esc(title)}" />`)
+  html = replaceTag(html, /<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${esc(description)}" />`)
+  html = replaceTag(html, /<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${canonical}" />`)
+  html = replaceTag(html, /<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${esc(title)}" />`)
+  html = replaceTag(html, /<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${esc(description)}" />`)
+
+  const staticBody = `
+      <div style="max-width:720px;margin:40px auto;padding:20px;font-family:'Noto Sans TC',sans-serif;color:#333;line-height:1.8">
+${blocksToHtml(blocks)}
+        <nav style="margin-top:2rem;font-size:0.9rem;color:#666">
+          <a href="/">首頁</a> |
+          <a href="/privacy">隱私權政策</a> |
+          <a href="/tos">服務條款</a> |
+          <a href="/contact">關於我們</a>
+        </nav>
+      </div>`
+
+  html = html.replace(
+    /(<div id="root">)[\s\S]*?<!-- \/static-seo -->/,
+    `$1${staticBody}\n      <!-- /static-seo -->`
+  )
+  html = html.replace(/<noscript>\s*<div style="max-width:6[\s\S]*?<\/noscript>/,
+    `<noscript>${staticBody}\n      <p>請啟用 JavaScript 以使用完整功能。</p>\n    </noscript>`)
+  return html
+}
+
 function main() {
   if (!fs.existsSync(TEMPLATE)) {
     console.error(`[generate-shells] ${TEMPLATE} not found — run vite build first`)
@@ -336,6 +395,22 @@ function main() {
       console.warn(`[generate-shells] guides skip: ${e.message}`)
     }
   }
+
+  // 靜態頁：/privacy、/tos、/contact
+  let staticCount = 0
+  for (const page of STATIC_PAGES) {
+    const srcPath = path.resolve(__dirname, 'src', 'pages', page.src)
+    const blocks = fromJsxFile(srcPath)
+    if (!blocks) {
+      console.warn(`[generate-shells] warn: 抽不到 ${page.src} 的內容，/${page.route} 不產生靜態頁`)
+      continue
+    }
+    const outDir = path.join(DIST, page.route)
+    fs.mkdirSync(outDir, { recursive: true })
+    fs.writeFileSync(path.join(outDir, 'index.html'), buildStaticPageShell(tpl, page, blocks))
+    staticCount++
+  }
+  console.log(`[generate-shells] wrote ${staticCount} static pages → dist/{privacy,tos,contact}/index.html`)
 }
 
 main()

@@ -6,41 +6,107 @@
     {
       "source": "/:path*",
       "has": [
-        { "type": "host", "value": "(?<host>.*\\.vercel\\.app)" }
+        {
+          "type": "host",
+          "value": "(?<host>.*\\.vercel\\.app)"
+        }
       ],
       "destination": "https://examking.tw/:path*",
       "permanent": true
     }
   ],
   "rewrites": [
-    { "source": "/robots.txt", "destination": "/robots.txt" },
-    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
-    { "source": "/ads.txt", "destination": "/ads.txt" },
-    { "source": "/guides/", "destination": "/guides/index.html" },
-    { "source": "/guides", "destination": "/guides/index.html" },
-    { "source": "/guides/:slug/", "destination": "/guides/:slug/index.html" },
-    { "source": "/guides/:slug", "destination": "/guides/:slug/index.html" },
-    { "source": "/:examId(ast|audiologist|civil-elementary-general|civil-junior-civil-affairs|civil-junior-general|civil-senior-general|civil-senior|clinical-psychology|counseling-psychology|customs|dental-tech|dental1|dental2|doctor1|doctor2|driver-car|driver-moto|gsat|judicial|lawyer1|medlab|nursing|nutrition|optometrist|optometrist-junior|ot|pharma1|pharma2|police|police4|post-indoor|post-outdoor|pt|public-health|radiology|railway-admin|railway-transport|rt|social-worker|speech-therapist|state-finance|state-hr|state-it|state-mgmt|teacher-elementary|teacher-kindergarten|teacher-secondary|teacher-special|teacher-special-gifted|tcm1|tcm2|vet)/", "destination": "/:examId/index.html" },
-    { "source": "/:examId(ast|audiologist|civil-elementary-general|civil-junior-civil-affairs|civil-junior-general|civil-senior-general|civil-senior|clinical-psychology|counseling-psychology|customs|dental-tech|dental1|dental2|doctor1|doctor2|driver-car|driver-moto|gsat|judicial|lawyer1|medlab|nursing|nutrition|optometrist|optometrist-junior|ot|pharma1|pharma2|police|police4|post-indoor|post-outdoor|pt|public-health|radiology|railway-admin|railway-transport|rt|social-worker|speech-therapist|state-finance|state-hr|state-it|state-mgmt|teacher-elementary|teacher-kindergarten|teacher-secondary|teacher-special|teacher-special-gifted|tcm1|tcm2|vet)", "destination": "/:examId/index.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/ads.txt",
+      "destination": "/ads.txt"
+    },
+    {
+      "source": "/guides/",
+      "destination": "/guides/index.html"
+    },
+    {
+      "source": "/guides",
+      "destination": "/guides/index.html"
+    },
+    {
+      "source": "/guides/:slug/",
+      "destination": "/guides/:slug/index.html"
+    },
+    {
+      "source": "/guides/:slug",
+      "destination": "/guides/:slug/index.html"
+    },
+    {
+      "source": "/:examId(ast|audiologist|civil-elementary-general|civil-junior-civil-affairs|civil-junior-general|civil-senior-general|civil-senior|clinical-psychology|counseling-psychology|customs|dental-tech|dental1|dental2|doctor1|doctor2|driver-car|driver-moto|gsat|judicial|lawyer1|medlab|nursing|nutrition|optometrist|optometrist-junior|ot|pharma1|pharma2|police|police4|post-indoor|post-outdoor|pt|public-health|radiology|railway-admin|railway-transport|rt|social-worker|speech-therapist|state-finance|state-hr|state-it|state-mgmt|teacher-elementary|teacher-kindergarten|teacher-secondary|teacher-special|teacher-special-gifted|tcm1|tcm2|vet)/",
+      "destination": "/:examId/index.html"
+    },
+    {
+      "source": "/:examId(ast|audiologist|civil-elementary-general|civil-junior-civil-affairs|civil-junior-general|civil-senior-general|civil-senior|clinical-psychology|counseling-psychology|customs|dental-tech|dental1|dental2|doctor1|doctor2|driver-car|driver-moto|gsat|judicial|lawyer1|medlab|nursing|nutrition|optometrist|optometrist-junior|ot|pharma1|pharma2|police|police4|post-indoor|post-outdoor|pt|public-health|radiology|railway-admin|railway-transport|rt|social-worker|speech-therapist|state-finance|state-hr|state-it|state-mgmt|teacher-elementary|teacher-kindergarten|teacher-secondary|teacher-special|teacher-special-gifted|tcm1|tcm2|vet)",
+      "destination": "/:examId/index.html"
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/privacy/index.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy/index.html"
+    },
+    {
+      "source": "/tos/",
+      "destination": "/tos/index.html"
+    },
+    {
+      "source": "/tos",
+      "destination": "/tos/index.html"
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ],
   "headers": [
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/icons/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
       ]
     },
     {
       "source": "/sw.js",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
       ]
     }
   ]

@@ -72083,14 +72083,15 @@
       "number": 18,
       "question": "牛馬在下列何種情況,通常只能施行剖腹產術處理?",
       "options": {
-        "A": "影像為胎兒在子宮內呈橫向胎位。",
-        "B": "此選項無內容。",
-        "C": "此選項無內容。",
-        "D": "此選項無內容。"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "broken_options"
+      "incomplete": "image_options",
+      "incomplete_reason": "選項在原卷是圖，待補 option_images"
     },
     {
       "id": "103090_44_19",

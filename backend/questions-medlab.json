@@ -166565,14 +166565,15 @@
     "number": 60,
     "question": "已知某癌症病患腫瘤組織座落在第17對染色體的TP53基因有大片段的缺失（deletion）；利用array",
     "options": {
-      "A": "該區域探針訊號強度明顯上升，提示基因擴增。",
-      "B": "該區域探針訊號無明顯變化，但基因表達水平顯著降低。",
-      "C": "在第17對染色體TP53基因座位的探針訊號強度明顯下降，顯示該區域有基因劑量缺失。",
-      "D": "該區域的DNA甲基化程度顯著升高，導致基因沉默。"
+      "A": "a",
+      "B": "b",
+      "C": "c",
+      "D": "d"
     },
     "answer": "C",
     "explanation": "",
-    "incomplete": false
+    "incomplete": "missing_image",
+    "incomplete_reason": "題幹的 array CGH 圖未收錄，選項 a/b/c/d 是圖上的區段標記"
   },
   {
     "id": 9087,
@@ -178294,14 +178295,15 @@
     "number": 5,
     "question": "下列革蘭氏染色結果，何者最有可能是炭疽菌？",
     "options": {
-      "A": "革蘭氏陰性球菌，呈雙球菌狀排列，形狀似腎形。",
-      "B": "革蘭氏陽性球菌，呈葡萄串狀排列。",
-      "C": "革蘭氏陰性桿菌，單獨或散在排列，大小不一。",
-      "D": "革蘭氏陽性大桿菌，呈鏈狀排列，兩端平截，形狀似「火柴盒」或「方磚」。"
+      "A": "(圖)",
+      "B": "(圖)",
+      "C": "(圖)",
+      "D": "(圖)"
     },
     "answer": "D",
     "explanation": "",
-    "incomplete": false
+    "incomplete": "image_options",
+    "incomplete_reason": "選項在原卷是圖，待補 option_images"
   },
   {
     "id": 8341,

@@ -49,6 +49,15 @@ const TO_FIGURE = [
   ['tcm1', '103030', '中醫基礎醫學(二)', 78, '原卷「78下列藥物中，何者常與破故紙，一木一火配合…？79…80…」三題連續完全沒有選項文字，選項是藥材照片'],
   ['tcm1', '103030', '中醫基礎醫學(二)', 79, '同 #78'],
   ['tcm1', '103030', '中醫基礎醫學(二)', 80, '同 #78'],
+
+  // 第三批（2026-10-27）：用 show-official-question.js 逐題抓原卷全文確認，
+  // 選項位置都是「A.B.C.D.」沒有任何文字
+  ['doctor2', '105100', '醫學(三)', 2, '原卷「…以下何心電圖最可能是胡小姐的心律不整？A.B.C.D.」四選項是心電圖'],
+  ['medlab', '109020', '微生物學與臨床微生物學', 5, '原卷「5.下列革蘭氏染色結果，何者最有可能是炭疽菌？A.B.C.D.」四選項是染色照片'],
+  ['pharma1', '105020', '卷三', 69, '原卷「69.…下列關於Michaelis-Mentenequation之敘述何者錯誤？A.B.C.D.」四選項是公式圖'],
+  ['pharma1', '106100', '卷三', 74, '原卷「74.…關於Michaelis-Mentenequation之敘述，下列何者正確？A.B.C.D.」四選項是公式圖'],
+  ['radiology', '112100', '核子醫學診療原理與技術學', 57, '原卷「57.正子掃描的訊號來源中，下列何者為隨機偶合事件（randomcoincidenceevents）？A.B.C.D.」'],
+  ['vet', '103090', '獸醫普通疾病學', 18, '原卷「18.牛馬在下列何種情況，通常只能施行剖腹產術處理？A.B.C.D.」'],
 ]
 
 /** 選項其實有文字，但題庫那組是別題的 → 用原卷逐字覆寫。 */
@@ -56,6 +65,18 @@ const TO_TEXT = [
   ['doctor2', '104030', '醫學(六)', 33,
     { A: 'positive', B: 'negative', C: 'reactive', D: 'nonreactive' }, 'C',
     '原卷全文「33承上題，下列四者中最可能的檢查結果為何？positivenegativereactivenonreactive」；答案卷 C。題庫原本是「白血球計數正常，無貧血現象」等，整組是別題的'],
+
+  ['doctor1', '109020', '醫學(一)', 99,
+    { A: '前者的受體在細胞膜上，而後者在細胞內',
+      B: '在血液中前者有攜帶蛋白（carrier protein），後者沒有攜帶蛋白',
+      C: '前者如副甲狀腺荷爾蒙（parathyroid hormone）和細胞膜上受體結合後可產生cAMP',
+      D: '後者和受體結合後會和DNA結合' }, 'B',
+    '原卷全文逐字：「99.下列關於胜肽類…何者錯誤？A.前者的受體在細胞膜上，而後者在細胞內B.在血液中前者有攜帶蛋白（carrierprotein），後者沒有攜帶蛋白C.…可產生cAMPD.後者和受體結合後會和DNA結合」。答 B 正確——有攜帶蛋白的是類固醇不是胜肽。題庫原本是 AI 改寫版'],
+
+  ['medlab', '108030', '醫學分子檢驗學與臨床鏡檢學', 60,
+    { A: 'a', B: 'b', C: 'c', D: 'd' }, 'C',
+    '原卷「60.…圖中的區段何者最有可能是TP53基因的位置？A.aB.bC.cD.d」——選項就是圖上的區段標記 a/b/c/d。題庫原本是 AI 編的描述（「該區域探針訊號強度明顯上升，提示基因擴增。」）。因為題幹要看圖才答得出來而題庫沒有圖，另外標 incomplete',
+    { incomplete: 'missing_image', incomplete_reason: '題幹的 array CGH 圖未收錄，選項 a/b/c/d 是圖上的區段標記' }],
 ]
 
 let n = 0
@@ -92,13 +113,20 @@ for (const [e, code, sub, num, why] of TO_FIGURE) {
   n++
 }
 
-for (const [e, code, sub, num, opts, ansLetter, why] of TO_TEXT) {
+for (const [e, code, sub, num, opts, ansLetter, why, extra] of TO_TEXT) {
   const q = find(e, code, sub, num)
   if (!q) { console.log(`✗ 找不到 ${e} ${code} ${sub} #${num}`); continue }
-  console.log(`${e} ${code} ${sub} #${num} 答${q.answer}${String(q.answer) !== ansLetter ? '→' + ansLetter : ''}`)
+  console.log(`${e} ${code} ${sub} #${num} 答${q.answer}${String(q.answer) !== ansLetter ? '→' + ansLetter : ''}${extra ? '  + ' + JSON.stringify(extra) : ''}`)
   console.log(`   依據: ${why}`)
   for (const k of L) console.log(`   ${k} 舊「${String(q.options[k]).replace(/\s+/g, ' ').slice(0, 44)}」→ 新「${opts[k]}」`)
-  if (APPLY) { q.options = { ...opts }; q.answer = ansLetter; load(e).touched = true }
+  if (APPLY) {
+    q.options = { ...opts }
+    q.answer = ansLetter
+    // extra：少數題目換完文字還是答不出來（例如選項是圖上的 a/b/c/d 標記，
+    // 但題庫沒有那張圖），要一併標 incomplete 讓前端擋掉。
+    if (extra) Object.assign(q, extra)
+    load(e).touched = true
+  }
   n++
 }
 

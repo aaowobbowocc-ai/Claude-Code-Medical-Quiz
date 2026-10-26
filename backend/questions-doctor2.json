@@ -173824,13 +173824,15 @@
       "number": 2,
       "question": "胡小姐44歲，無過往心臟病病史，主訴突發性心悸。於急診室病人意識清楚，血壓為104/60 mmHg，心電圖顯示心律不整，經 施打adenosine後恢復正常竇性心律，以下何心電圖最可能是胡小姐的心律不整？",
       "options": {
-        "A": "心房顫動 (Atrial Fibrillation): 不規則且不規律的窄QRS波心動過速，無明顯P波。",
-        "B": "室上性心動過速 (Supraventricular Tachycardia - AVNRT/Orthodromic AVRT): 規律的窄QRS波心動過速，P波常隱藏在QRS波內或緊隨其後。",
-        "C": "心房撲動 (Atrial Flutter): 規律或不規律的窄QRS波心動過速，伴有鋸齒狀F波。",
-        "D": "心室性心動過速 (Ventricular Tachycardia): 規律的寬QRS波心動過速。"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "image_options",
+      "incomplete_reason": "選項在原卷是圖，待補 option_images"
     },
     {
       "id": 115027044,

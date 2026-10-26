@@ -250439,14 +250439,15 @@
       "number": 57,
       "question": "正子掃描的訊號來源中，下列何者為隨機偶合事件（random coincidence events）？",
       "options": {
-        "A": "來自同一衰變事件的兩個光子，同時被偵測器捕捉。",
-        "B": "來自不同衰變事件的兩個光子，在設定的時間窗內同時被偵測器捕捉。",
-        "C": "一個或兩個光子在與體內組織相互作用（散射）後，被偵測器捕捉。",
-        "D": "偵測器本身的電子雜訊，或環境背景輻射。"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": false
+      "incomplete": "image_options",
+      "incomplete_reason": "選項在原卷是圖，待補 option_images"
     },
     {
       "id": 4207,

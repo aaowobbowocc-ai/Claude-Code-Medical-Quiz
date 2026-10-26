@@ -53596,13 +53596,15 @@
       "number": 69,
       "question": "若V為代謝速率，C為藥物濃度，K M 為藥物與代謝酵素的親合常數，V max 為代謝最大反應速率，下 列關於Michaelis-Menten equation之敘述何者錯誤？",
       "options": {
-        "A": "當藥物濃度C遠小於K M 時，代謝速率V與藥物濃度C呈一級反應關係。",
-        "B": "當藥物濃度C遠大於K M 時，代謝速率V接近V max，呈零級反應關係。",
-        "C": "K M 值與藥物對代謝酵素的親和力成正比。",
-        "D": "當藥物濃度C等於K M 時，代謝速率V為V max 的一半。"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "image_options",
+      "incomplete_reason": "選項在原卷是圖，待補 option_images"
     },
     {
       "id": 115023240,
@@ -68375,13 +68377,15 @@
       "number": 74,
       "question": "若V為代謝速率，C為藥物濃度，K M 為藥物與代謝酵素的親合常數，V max 為代謝最大反應速率，關於 Michaelis-Menten equation之敘述，下列何者正確？",
       "options": {
-        "A": "當藥物濃度C等於K M 時，代謝速率V為最大代謝反應速率V max 的一半。",
-        "B": "K M 值越大，表示藥物與代謝酵素的親合力越強。",
-        "C": "V max 是隨著藥物濃度C增加而增加的變數。",
-        "D": "當藥物濃度C遠大於K M 時，代謝速率V與藥物濃度C成正比。"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "image_options",
+      "incomplete_reason": "選項在原卷是圖，待補 option_images"
     },
     {
       "id": "106100_s33_75",

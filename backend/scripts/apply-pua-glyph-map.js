@@ -65,8 +65,10 @@ for (const b of banks) {
       for (const ch of s) {
         const cp = ch.codePointAt(0)
         if (cp >= 0xE000 && cp <= 0xF8FF) {
-          const to = MAP.get(cp)
-          if (to) { out += to; n++; continue }
+          // ⚠️ 用 has() 不要用真假值 —— Symbol 字型的多行括號分段字元
+          //    （⎡⎢⎣⎤⎥⎦⎛⎜⎝⎞⎟⎠）與箭頭延長線在攤平的文字裡是雜訊，
+          //    對照表給的是空字串「刪掉」，而空字串是 falsy。
+          if (MAP.has(cp)) { out += MAP.get(cp); n++; continue }
           const hex = 'U+' + cp.toString(16).toUpperCase()
           if (!left.has(hex)) left.set(hex, { n: 0, ex: '' })
           const e = left.get(hex); e.n++

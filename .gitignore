@@ -68,3 +68,11 @@ backend/_finance/
 # backend/_tmp 的規則上面早就有了，但那些檔是在加規則之前就 commit 進去的，
 # gitignore 不會 untrack 既有檔案，要 git rm -r --cached 才會生效。
 *.bak
+
+# 2026-10-27 untrack：舊的題庫備份與爬蟲中間檔（本機還在，--cached 只動索引）。
+# backend/_archive 刻意**不**列入 —— 那是封存的申論／計算卷（94 份 post-essay
+# + state-essay.json），archive-post-essay.js 與 scrape-taipower-essay.js 會用，
+# 日後要做申論練習功能，重抓成本高。
+backend/_backup_*/
+backend/tmp-gap/
+backend/tmp/

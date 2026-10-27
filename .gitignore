@@ -76,3 +76,7 @@ backend/_finance/
 backend/_backup_*/
 backend/tmp-gap/
 backend/tmp/
+
+# App Store Connect API 私鑰（.p8）。只能下載一次，外洩等於別人能讀你的財務報表。
+*.p8
+backend/.appstore-key.p8

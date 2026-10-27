@@ -41,6 +41,8 @@ const DIR = path.join(__dirname, '..')
 const OUT = path.join(DIR, '..', 'frontend', 'public', 'question-images')
 const SCALE = 3
 const MIN_H = 40          // 選項區塊至少要這麼高才可能是圖
+// 選項標記基線之上要留的邊距（pt）。結構式的苯環頂端與上標會超出基線。
+const TOP_PAD = 6
 
 ;(async () => {
   const mupdf = await import('mupdf')
@@ -125,8 +127,15 @@ const MIN_H = 40          // 選項區塊至少要這麼高才可能是圖
       let bad = false
       for (let oi = 0; oi < 4 && !bad; oi++) {
         const cur = marks[oi], nxt = marks[oi + 1]
-        const top = cur.y + cur.h
+        // ⚠️ 不能從標記那一行的下緣直接切。化學結構式會畫到標記基線**之上**
+        //    （苯環頂端、F₃C 這種上標），切出來會把頂端削掉——
+        //    藥師一階 101100 卷一 #76 的 flutamide 就被削掉「F₃C」的上半。
+        //    往上留一點邊距；上一個選項的下界同步讓開，免得互相吃到。
+        const top = Math.max(0, cur.y + cur.h - TOP_PAD)
         let bottom
+        // ⚠️ 下界**不要**也減 TOP_PAD。本來的 nxt.y - 2 已經在下一個標記之上，
+        //    不會跟下一張重疊；再減只會把這一張的底部內容切掉
+        //    （flutamide 的下方 CH₃ 下標就被削掉過）。
         if (nxt && nxt.pi === cur.pi) bottom = nxt.y - 2
         else {
           // 該頁最後一個選項：切到下一題題號或頁尾

@@ -44822,8 +44822,13 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "incomplete_reason": "選項在原卷是圖，待補 option_images"
+      "incomplete_reason": "選項在原卷是圖，待補 option_images",
+      "option_images": {
+        "A": "/question-images/optometrist_61_optA.webp",
+        "B": "/question-images/optometrist_61_optB.webp",
+        "C": "/question-images/optometrist_61_optC.webp",
+        "D": "/question-images/optometrist_61_optD.webp"
+      }
     },
     {
       "id": 62,
@@ -49824,6 +49829,6 @@
   ],
   "total": 2500,
   "metadata": {
-    "last_updated": "2026-09-17T17:11:22.966Z"
+    "last_updated": "2026-10-26T16:27:21.825Z"
   }
 }

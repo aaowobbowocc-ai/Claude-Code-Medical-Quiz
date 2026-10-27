@@ -154379,11 +154379,16 @@
     },
     "answer": "A",
     "explanation": "",
-    "incomplete": "image_options",
     "images": [
       "/question-images/medlab_107100_immuno_q13_0.webp"
     ],
-    "incomplete_reason": "選項在原卷是圖，待補 option_images"
+    "incomplete_reason": "選項在原卷是圖，待補 option_images",
+    "option_images": {
+      "A": "/question-images/medlab_7097_voptA.webp",
+      "B": "/question-images/medlab_7097_voptB.webp",
+      "C": "/question-images/medlab_7097_voptC.webp",
+      "D": "/question-images/medlab_7097_voptD.webp"
+    }
   },
   {
     "id": 7098,
@@ -178302,8 +178307,13 @@
     },
     "answer": "D",
     "explanation": "",
-    "incomplete": "image_options",
-    "incomplete_reason": "選項在原卷是圖，待補 option_images"
+    "incomplete_reason": "選項在原卷是圖，待補 option_images",
+    "option_images": {
+      "A": "/question-images/medlab_8340_voptA.webp",
+      "B": "/question-images/medlab_8340_voptB.webp",
+      "C": "/question-images/medlab_8340_voptC.webp",
+      "D": "/question-images/medlab_8340_voptD.webp"
+    }
   },
   {
     "id": 8341,
@@ -215153,7 +215163,12 @@
     },
     "answer": "D",
     "explanation": "",
-    "incomplete": "image_options"
+    "option_images": {
+      "A": "/question-images/medlab_2156_voptA.webp",
+      "B": "/question-images/medlab_2156_voptB.webp",
+      "C": "/question-images/medlab_2156_voptC.webp",
+      "D": "/question-images/medlab_2156_voptD.webp"
+    }
   },
   {
     "id": 2157,

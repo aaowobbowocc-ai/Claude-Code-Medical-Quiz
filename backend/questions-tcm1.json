@@ -4,7 +4,7 @@
     "label": "中醫師(一)",
     "scraped_at": "2026-04-14T11:34:33.968Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-09-17T17:08:08.092Z",
+    "last_updated": "2026-10-26T16:27:23.713Z",
     "total": 4955
   },
   "total": 5120,
@@ -100624,8 +100624,13 @@
         "/question-images/tcm1_102428_2.webp",
         "/question-images/tcm1_102428_3.webp"
       ],
-      "incomplete": "image_options",
-      "incomplete_reason": "選項在原卷是圖，待補 option_images"
+      "incomplete_reason": "選項在原卷是圖，待補 option_images",
+      "option_images": {
+        "A": "/question-images/tcm1_102428_optA.webp",
+        "B": "/question-images/tcm1_102428_optB.webp",
+        "C": "/question-images/tcm1_102428_optC.webp",
+        "D": "/question-images/tcm1_102428_optD.webp"
+      }
     },
     {
       "id": 102429,
@@ -100652,8 +100657,13 @@
         "/question-images/tcm1_102429_2.webp",
         "/question-images/tcm1_102429_3.webp"
       ],
-      "incomplete": "image_options",
-      "incomplete_reason": "選項在原卷是圖，待補 option_images"
+      "incomplete_reason": "選項在原卷是圖，待補 option_images",
+      "option_images": {
+        "A": "/question-images/tcm1_102429_optA.webp",
+        "B": "/question-images/tcm1_102429_optB.webp",
+        "C": "/question-images/tcm1_102429_optC.webp",
+        "D": "/question-images/tcm1_102429_optD.webp"
+      }
     },
     {
       "id": 102430,
@@ -100674,8 +100684,13 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "incomplete_reason": "選項在原卷是圖，待補 option_images"
+      "incomplete_reason": "選項在原卷是圖，待補 option_images",
+      "option_images": {
+        "A": "/question-images/tcm1_102430_optA.webp",
+        "B": "/question-images/tcm1_102430_optB.webp",
+        "C": "/question-images/tcm1_102430_optC.webp",
+        "D": "/question-images/tcm1_102430_optD.webp"
+      }
     },
     {
       "id": "115090_0_1",

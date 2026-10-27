@@ -4316,8 +4316,13 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options",
-      "incomplete_reason": "選項在原卷是圖，待補 option_images"
+      "incomplete_reason": "選項在原卷是圖，待補 option_images",
+      "option_images": {
+        "A": "/question-images/pharma1_115021367_optA.webp",
+        "B": "/question-images/pharma1_115021367_optB.webp",
+        "C": "/question-images/pharma1_115021367_optC.webp",
+        "D": "/question-images/pharma1_115021367_optD.webp"
+      }
     },
     {
       "id": 115021368,
@@ -9410,8 +9415,13 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "image_options",
-      "incomplete_reason": "選項在原卷是圖，待補 option_images"
+      "incomplete_reason": "選項在原卷是圖，待補 option_images",
+      "option_images": {
+        "A": "/question-images/pharma1_115023945_optA.webp",
+        "B": "/question-images/pharma1_115023945_optB.webp",
+        "C": "/question-images/pharma1_115023945_optC.webp",
+        "D": "/question-images/pharma1_115023945_optD.webp"
+      }
     },
     {
       "id": 115023946,
@@ -16299,8 +16309,13 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "incomplete_reason": "選項在原卷是圖，待補 option_images"
+      "incomplete_reason": "選項在原卷是圖，待補 option_images",
+      "option_images": {
+        "A": "/question-images/pharma1_115024043_voptA.webp",
+        "B": "/question-images/pharma1_115024043_voptB.webp",
+        "C": "/question-images/pharma1_115024043_voptC.webp",
+        "D": "/question-images/pharma1_115024043_voptD.webp"
+      }
     },
     {
       "id": 115024044,
@@ -17774,8 +17789,13 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options",
-      "incomplete_reason": "選項在原卷是圖，待補 option_images"
+      "incomplete_reason": "選項在原卷是圖，待補 option_images",
+      "option_images": {
+        "A": "/question-images/pharma1_115024113_voptA.webp",
+        "B": "/question-images/pharma1_115024113_voptB.webp",
+        "C": "/question-images/pharma1_115024113_voptC.webp",
+        "D": "/question-images/pharma1_115024113_voptD.webp"
+      }
     },
     {
       "id": 115024114,
@@ -43431,8 +43451,13 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options",
-      "incomplete_reason": "選項在原卷是圖，待補 option_images"
+      "incomplete_reason": "選項在原卷是圖，待補 option_images",
+      "option_images": {
+        "A": "/question-images/pharma1_115022086_voptA.webp",
+        "B": "/question-images/pharma1_115022086_voptB.webp",
+        "C": "/question-images/pharma1_115022086_voptC.webp",
+        "D": "/question-images/pharma1_115022086_voptD.webp"
+      }
     },
     {
       "id": 115022087,
@@ -59505,7 +59530,12 @@
         "/question-images/pharma1_115020559_3.webp",
         "/question-images/pharma1_115020559_4.webp"
       ],
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/pharma1_115020559_voptA.webp",
+        "B": "/question-images/pharma1_115020559_voptB.webp",
+        "C": "/question-images/pharma1_115020559_voptC.webp",
+        "D": "/question-images/pharma1_115020559_voptD.webp"
+      }
     },
     {
       "id": 115020560,
@@ -68019,8 +68049,13 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options",
-      "incomplete_reason": "選項在原卷是圖，待補 option_images"
+      "incomplete_reason": "選項在原卷是圖，待補 option_images",
+      "option_images": {
+        "A": "/question-images/pharma1_106100_s33_56_voptA.webp",
+        "B": "/question-images/pharma1_106100_s33_56_voptB.webp",
+        "C": "/question-images/pharma1_106100_s33_56_voptC.webp",
+        "D": "/question-images/pharma1_106100_s33_56_voptD.webp"
+      }
     },
     {
       "id": "106100_s33_57",
@@ -70077,7 +70112,12 @@
       "answer": "A",
       "explanation": "",
       "vision_uncertain": false,
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/pharma1_115020749_voptA.webp",
+        "B": "/question-images/pharma1_115020749_voptB.webp",
+        "C": "/question-images/pharma1_115020749_voptC.webp",
+        "D": "/question-images/pharma1_115020749_voptD.webp"
+      }
     },
     {
       "id": 115020750,
@@ -75040,12 +75080,7 @@
       "answer": "A",
       "explanation": "",
       "vision_uncertain": false,
-      "option_images": {
-        "A": "/question-images/pharma1_115020831_voptA.webp",
-        "B": "/question-images/pharma1_115020831_voptB.webp",
-        "C": "/question-images/pharma1_115020831_voptC.webp",
-        "D": "/question-images/pharma1_115020831_voptD.webp"
-      }
+      "incomplete": "image_options"
     },
     {
       "id": 115020832,
@@ -103764,7 +103799,12 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/pharma1_115020329_voptA.webp",
+        "B": "/question-images/pharma1_115020329_voptB.webp",
+        "C": "/question-images/pharma1_115020329_voptC.webp",
+        "D": "/question-images/pharma1_115020329_voptD.webp"
+      }
     },
     {
       "id": 115020330,
@@ -103785,7 +103825,12 @@
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/pharma1_115020330_voptA.webp",
+        "B": "/question-images/pharma1_115020330_voptB.webp",
+        "C": "/question-images/pharma1_115020330_voptC.webp",
+        "D": "/question-images/pharma1_115020330_voptD.webp"
+      }
     },
     {
       "id": 115020331,
@@ -103949,7 +103994,12 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/pharma1_115020338_voptA.webp",
+        "B": "/question-images/pharma1_115020338_voptB.webp",
+        "C": "/question-images/pharma1_115020338_voptC.webp",
+        "D": "/question-images/pharma1_115020338_voptD.webp"
+      }
     },
     {
       "id": 115020339,
@@ -104050,7 +104100,12 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/pharma1_115020343_voptA.webp",
+        "B": "/question-images/pharma1_115020343_voptB.webp",
+        "C": "/question-images/pharma1_115020343_voptC.webp",
+        "D": "/question-images/pharma1_115020343_voptD.webp"
+      }
     },
     {
       "id": 115020344,
@@ -104241,7 +104296,12 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/pharma1_115020352_voptA.webp",
+        "B": "/question-images/pharma1_115020352_voptB.webp",
+        "C": "/question-images/pharma1_115020352_voptC.webp",
+        "D": "/question-images/pharma1_115020352_voptD.webp"
+      }
     },
     {
       "id": 115020353,
@@ -154406,6 +154466,6 @@
   ],
   "total": 7673,
   "metadata": {
-    "last_updated": "2026-10-17T19:59:27.469Z"
+    "last_updated": "2026-10-27T02:36:39.230Z"
   }
 }

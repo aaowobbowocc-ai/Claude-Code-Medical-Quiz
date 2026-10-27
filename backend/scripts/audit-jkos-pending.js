@@ -22,7 +22,14 @@ require('dotenv').config()
 const { createClient } = require('@supabase/supabase-js')
 const { inquireJkosOrder } = require('../payment-jkos')
 
-const TEST_USERS = new Set(['0e727540-2fae-499a-bca2-3218cecc3600'])
+// 排除自己測試的單。跟 finance-report.js 用同一組來源，不要各寫各的 ——
+// 多一個測試帳號就要記得兩邊都加，遲早漏掉。
+// 預設是開發者本人（AAO）；其他測試帳號用環境變數加：
+//   FINANCE_TEST_USER_IDS=uuid1,uuid2
+const TEST_USERS = new Set([
+  '0e727540-2fae-499a-bca2-3218cecc3600',
+  ...String(process.env.FINANCE_TEST_USER_IDS || '').split(',').map(s => s.trim()).filter(Boolean),
+])
 
 ;(async () => {
   const host = process.env.JKOS_API_HOST || ''

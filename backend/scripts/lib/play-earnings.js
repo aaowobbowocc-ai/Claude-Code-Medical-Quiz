@@ -134,11 +134,28 @@ function parseCsv(text) {
     .map(r => Object.fromEntries(head.map((h, i) => [h, (r[i] || '').trim()])))
 }
 
-/** 抓某個月的收益報表。ym 格式 'YYYYMM'。 */
+/**
+ * 抓某個月的收益報表。ym 格式 'YYYYMM'。
+ *
+ * ⚠️ 檔名**不是** earnings_YYYYMM.zip。實際長這樣：
+ *      earnings/earnings_202609_86132638-1.zip
+ *    後面那串是 Google 的帳戶／批次編號，猜不到也沒有文件寫。
+ *    所以一定要先 list 再用 prefix 比對，不能直接組檔名
+ *    （Google 自己的說明文件寫的是 earnings_YYYYMM.zip，但實際不是）。
+ */
 async function fetchEarnings(ym) {
   const b = bucketName()
   if (!b) return { ok: false, error: '沒有設 PLAY_EARNINGS_BUCKET' }
-  const obj = encodeURIComponent(`earnings/earnings_${ym}.zip`)
+
+  const ls = await listEarnings()
+  if (!ls.ok) return { ok: false, status: ls.status, error: ls.error }
+  const hit = ls.items.find(i => i.name.startsWith(`earnings/earnings_${ym}`))
+  if (!hit) {
+    const got = ls.items.map(i => i.name.replace('earnings/', '')).join('、') || '（空）'
+    return { ok: false, error: `bucket 裡沒有 ${ym} 的收益報表。現有：${got}` }
+  }
+
+  const obj = encodeURIComponent(hit.name)
   try {
     const c = await client()
     const r = await c.request({

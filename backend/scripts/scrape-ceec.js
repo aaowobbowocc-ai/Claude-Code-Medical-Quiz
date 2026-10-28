@@ -18,6 +18,8 @@ const http   = require('http');
 const fs     = require('fs');
 const path   = require('path');
 const pdfParse = require('pdf-parse');
+const { stripPageFurniture } = require('./lib/ceec-page-furniture');
+const { decodeSymbolFont } = require('./lib/symbol-font');
 
 const BASE    = 'https://www.ceec.edu.tw';
 const OUT_DIR = path.join(__dirname, '..');   // backend/
@@ -242,26 +244,105 @@ function parseAnswers(text) {
 // ─── Question PDF parser ────────────────────────────────────────────────────
 // Returns array of { num, question, options:{A,B,C,D} }
 // Only questions with ALL of (A)(B)(C)(D) are returned.
+/*
+ * 題組的題文（閱讀測驗的文章、題文資訊框）不是以「N.」開頭，
+ * 所以舊版 parser 完全沒有處理：在第一題之前的被丟掉，
+ * 夾在兩題之間的被接到**前一題**的區塊，然後被選項的正規表示式
+ * 吃進最後一個選項。使用者回報的兩個症狀就是這樣來的 ——
+ *   「題組沒有敘述只有題目」「題目敘述出現在後續的答案裡」
+ *
+ * pdf-parse 會把標記拆行，實際長這樣：
+ *   9-11
+ *   為題組。閱讀下文，回答
+ *   9-11
+ *   題。
+ *   記得小學四年級以前寫自己的名字是「楨」…      ← 題文
+ *   9.                                              ← 第一個子題
+ *
+ * 所以要認「單獨一行的數字區間 + 下一個非空行是『為題組』」，
+ * 同時支援寫在同一行的版本。
+ */
+const RANGE_ONLY = /^(\d{1,2})\s*[-－~～至]\s*(\d{1,2})\s*$/;
+const GROUP_INLINE = /^(\d{1,2})\s*[-－~～至]\s*(\d{1,2})\s*為題組/;
+
 function parseQuestions(text) {
   const lines = text.split('\n').map(l => l.trimEnd());
-  const blocks = [];   // [{ num, lines[] }]
+  const blocks = [];    // [{ num, lines[] }]
+  const passages = [];  // [{ from, to, lines[] }]
   let cur = null;
+  let passage = null;
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
+
+    // ── 題組標記 ───────────────────────────────────────────────
+    let g = line.match(GROUP_INLINE);
+    if (!g) {
+      const r = line.match(RANGE_ONLY);
+      if (r) {
+        for (let j = i + 1; j < Math.min(i + 4, lines.length); j++) {
+          if (!lines[j].trim()) continue;
+          if (/^為題組/.test(lines[j].trim())) g = r;
+          break;
+        }
+      }
+    }
+    if (g) {
+      if (cur) { blocks.push(cur); cur = null; }
+      passage = { from: parseInt(g[1]), to: parseInt(g[2]), lines: [] };
+      passages.push(passage);
+      continue;
+    }
+
     // New question: "1. text"  OR  "1." alone on line (text on next line)
     const m = line.match(/^(\d{1,2})[\.．]\s*(.*)$/);
     if (m) {
       const num = parseInt(m[1]);
       if (cur) blocks.push(cur);
+      passage = null;              // 題號一出現，題文就結束
       cur = { num, lines: [] };
       // If text is on same line, add it; otherwise next line will be added in the loop
       if (m[2].trim()) cur.lines.push(m[2].trim());
+    } else if (passage) {
+      passage.lines.push(line);
     } else if (cur) {
       cur.lines.push(line);
     }
   }
   if (cur) blocks.push(cur);
+
+  /*
+   * 標記被 pdf-parse 拆成好幾行（「為題組。閱讀下文，回答」／「9-11」／「題。」），
+   * 逐行清不乾淨——有的行是兩個殘句黏在一起。改成先組起來，
+   * 再反覆剝掉開頭的殘句，直到不再變短。
+   */
+  const HEAD = [
+    /^\s*為題組[。．]?/,
+    /^\s*閱讀下[文列][，,]?/,
+    /^\s*回答/,
+    /^\s*\d{1,2}\s*[-－~～至]\s*\d{1,2}\s*/,
+    /^\s*題[。．]?/,
+    /^\s*[，,、。．]\s*/,
+  ];
+  function stripHead(s) {
+    for (let i = 0; i < 12; i++) {
+      const before = s;
+      for (const re of HEAD) s = s.replace(re, '');
+      if (s === before) break;
+    }
+    return s.trim();
+  }
+
+  // 題號 → 題文
+  const passageOf = new Map();
+  for (const p of passages) {
+    // 頁首頁尾會夾進題文中間（pdf-parse 把整頁攤平），一併清掉
+    const [txt0] = stripPageFurniture(stripHead(p.lines.join('\n').replace(/\s*\n\s*/g, '').trim()));
+    // Symbol 字型的數學符號在 PDF 裡是 U+F0xx 私用區，會變豆腐字
+    const [txt] = decodeSymbolFont(txt0);
+    if (txt.length < 20) continue;            // 太短的不是題文
+    for (let n = p.from; n <= p.to; n++) passageOf.set(n, txt);
+  }
 
   const results = [];
   for (const block of blocks) {
@@ -280,6 +361,22 @@ function parseQuestions(text) {
     }
     if (!options.A || !options.B || !options.C || !options.D) continue;
 
+    /*
+     * 最後一個選項會吞掉後面的東西，因為它的終止條件是「下一個 (A)-(D) 或**結尾**」。
+     * 試卷上常有沒帶題組標記的「框內資訊」排在某題選項後面，就整段被吃進選項 D。
+     * 例：111 學測國文 #6 的 D 變成
+     *   「朗朗／瑟瑟／纖纖 斯卡羅族居住於海拔三百公尺以下，在清代已接觸…」
+     *   （後面那段其實是 #4「依據下列框內資訊」要用的）
+     *
+     * 判準不猜內容：選項 D 比最長的同伴長 4 倍以上、而且多出來的尾巴 ≥60 字，
+     * 才在空白處切掉。四個選項本來就都很長的題（閱讀測驗）比例不會到 4 倍。
+     */
+    const sibMax = Math.max(options.A.length, options.B.length, options.C.length);
+    if (options.D.length > sibMax * 4 && options.D.length - sibMax >= 60) {
+      const cut = options.D.slice(0, Math.ceil(sibMax * 1.5)).lastIndexOf(' ');
+      if (cut > 0 && options.D.length - cut >= 60) options.D = options.D.slice(0, cut).trim();
+    }
+
     // Question text = everything before the first (A) or ( A )
     const firstOpt = raw.search(/\(\s*[A-D]\s*\)/);
     const questionText = (firstOpt > 0 ? raw.slice(0, firstOpt) : raw)
@@ -288,6 +385,7 @@ function parseQuestions(text) {
     if (!questionText) continue;
 
     results.push({
+      passage: passageOf.get(block.num) || null,
       num: block.num,
       question: questionText,
       options,
@@ -410,6 +508,6 @@ async function main() {
 }
 
 // REGISTRY（各年度各科目的試題／答案 PDF 網址）是補圖腳本唯一的來源，匯出共用
-module.exports = { REGISTRY, BASE };
+module.exports = { REGISTRY, BASE, parseQuestions, parseAnswers };
 
 if (require.main === module) main().catch(e => { console.error(e); process.exit(1); });

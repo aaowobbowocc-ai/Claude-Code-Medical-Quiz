@@ -20,6 +20,7 @@
 const fs = require('fs')
 const path = require('path')
 const { atomicWriteJson } = require('./lib/atomic-write')
+const { symbolChar } = require('./lib/symbol-font')
 
 const BK = path.join(__dirname, '..')
 const APPLY = process.argv.includes('--apply')
@@ -65,6 +66,10 @@ for (const b of banks) {
       for (const ch of s) {
         const cp = ch.codePointAt(0)
         if (cp >= 0xE000 && cp <= 0xF8FF) {
+          // U+F020–F0FF 是 Symbol 字型，整段是系統性編碼，用表換不要一個個列
+          // （2026-10-27 先一個個加進 map，10-28 補學測題文時又冒出 12 個新碼位）
+          const sym = symbolChar(cp)
+          if (sym !== null) { out += sym; n++; continue }
           // ⚠️ 用 has() 不要用真假值 —— Symbol 字型的多行括號分段字元
           //    （⎡⎢⎣⎤⎥⎦⎛⎜⎝⎞⎟⎠）與箭頭延長線在攤平的文字裡是雜訊，
           //    對照表給的是空字串「刪掉」，而空字串是 falsy。

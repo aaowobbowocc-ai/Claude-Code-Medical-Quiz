@@ -218,7 +218,24 @@ async function pdfFor(exam, year, tag) {
           // 右欄常常整欄都沒有「正文」行，top 會一路退到上一題去，把題幹一起裁進來。
           if (cap.pg === head.pg) top = Math.max(top, head.y - 4);
           const inFig = pls.filter(l => l.y >= top && l.y <= cap.y + (cap.h || 12) && l.x >= colMin);
-          const left = inFig.length ? Math.max(0, Math.min(...inFig.map(l => l.x)) - 12) : 0;
+          /*
+           * ⚠️ left 不能只看「圖內文字的最左緣」。圖若沒有左側標籤
+           *    （史料照片、地圖這種純影像），inFig 只剩圖說本身或右側的標註，
+           *    left 就會跑到圖的中間，裁出一條窄長條
+           *    —— gsat 111 社會 #38 裁成 194x206，整張史料圖只剩右邊一條。
+           *
+           *    圖說通常是置中對齊的，所以用「圖說中心往左鏡射」當保底下界：
+           *    左緣至少要到 capCenter - (右緣 - capCenter)，再留一點邊。
+           */
+          const capCx = cap.x + (cap.w || 0) / 2;
+          const figRight = inFig.length
+            ? Math.max(cap.x + (cap.w || 0), ...inFig.map(l => l.x + (l.w || 0)))
+            : cap.x + (cap.w || 0);
+          const mirrored = capCx - (figRight - capCx);
+          const byText = inFig.length ? Math.min(...inFig.map(l => l.x)) - 12 : colMin;
+          // 純影像的圖（史料照片、地圖）在 inFig 裡只剩圖說自己，鏡射推不出寬度，
+          // 這時要退到欄位起點，否則會裁成窄長條（gsat 111 社會 #38 的史料圖）。
+          const left = Math.max(0, Math.min(byText, mirrored - 12, colMin));
           const h = cap.y + (cap.h || 12) + 6 - top;
           // 圖說正上方就是正文時會算出很窄的框（圖其實在更上面或跨欄）。
           // 這種情況不要硬裁，讓它退回下面兩種模式。

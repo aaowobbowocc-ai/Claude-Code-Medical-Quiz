@@ -38,13 +38,8 @@ const BILLING_DATASET = process.env.GCP_BILLING_DATASET || ''
 // 自己測試用的帳號。IAP 一定要用真錢跑一次才知道整條金流通不通，
 // 但那不是收入——不扣掉的話報表會把自己的測試當成業績
 // （2026-10 那三筆 NT$300/94/31 就是本人測 coins_35000/10000/2500）。
-const TEST_USER_IDS = new Set([
-  '0e727540-2fae-499a-bca2-3218cecc3600', // 開發者本人（AAO）
-])
-// 用環境變數比較好維護：FINANCE_TEST_USER_IDS=uuid1,uuid2
-for (const id of String(process.env.FINANCE_TEST_USER_IDS || '').split(',').map(s => s.trim()).filter(Boolean)) {
-  TEST_USER_IDS.add(id)
-}
+const { testUserIds } = require('./lib/test-users')
+const TEST_USER_IDS = testUserIds()
 
 const money = n => (n < 0 ? '−NT$' : 'NT$') + Math.abs(Math.round(n)).toLocaleString('en-US')
 const ym = d => String(d).slice(0, 7)

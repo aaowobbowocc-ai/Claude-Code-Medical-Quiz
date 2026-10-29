@@ -20,7 +20,7 @@ const path = require('path');
 const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve');
 const { markerOptions } = require('./lib/moex-marker-options');
 const { paperQuestions } = require('./fill-civil-gaps');
-const { paperPassages } = require('./fill-passage-context');
+const { paperPassages, markBlanks } = require('./fill-passage-context');
 const { sheetMap } = require('./lib/moex-answer-geo');
 const { atomicWriteJson } = require('./lib/atomic-write');
 
@@ -28,23 +28,6 @@ const BK = path.join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
 const FILE = e => e === 'doctor1' ? 'questions.json' : `questions-${e}.json`;
 const PUA = /[-]/;
-
-/**
- * 文章裡的空格是裸露的題號。
- * 兩邊都必須是空白才算——只擋「前面不是數字」會把年份切開的
- * 「In 20 10, a South Korean couple…」的 10 當成第 10 格（實測 customs 108050）。
- * 而且要依序往後找，後面的空格不可能出現在前一個空格之前。
- */
-function markBlanks(passage, from, to) {
-  // 不要用 RegExp 字面量／樣板字串組 \s —— 反斜線在多層轉義裡會被吃掉，
-  // 變成 (^|s) 而靜默地一個都標不到。直接照空白切 token 比較穩。
-  const parts = passage.split(' ');   // passages() 已把空白正規化成單一空格
-  let n = 0, k = from;
-  for (let i = 0; i < parts.length && k <= to; i++) {
-    if (parts[i] === String(k)) { parts[i] = `__${k}__`; k++; n++; }
-  }
-  return { text: parts.join(' '), marked: n };
-}
 
 const optsOf = o => ['A', 'B', 'C', 'D'].map(k => String(o[k] || '').trim());
 const usable = a => a.length === 4 && a.every(t => t) && new Set(a).size === 4 && !a.some(t => PUA.test(t));

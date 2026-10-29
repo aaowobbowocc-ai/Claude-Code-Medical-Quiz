@@ -14,6 +14,7 @@
 const fs = require('fs');
 const path = require('path');
 const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve');
+const { skeleton } = require('./lib/moex-normalize');
 
 const BK = path.join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
@@ -83,6 +84,28 @@ async function paperLines(code, c, s) {
   return lines;
 }
 
+/**
+ * 文章裡的空格是裸露的題號。標成 __N__，使用者才看得出哪裡是第幾格
+ * （不標的話「The 41 season to visit」讀起來像錯字）。
+ *
+ * 兩邊都必須是空白才算——只擋「前面不是數字」會把年份切開的
+ * 「In 20 10, a South Korean couple…」的 10 當成第 10 格（實測 customs 108050）。
+ * 而且要依序往後找，後面的空格不可能出現在前一個空格之前。
+ *
+ * marked === 0 表示這段文章裡沒有空格 —— 那是閱讀測驗題組，不是克漏字，
+ * 原文照附就好。
+ */
+function markBlanks(passage, from, to) {
+  // 不要用 RegExp 字面量／樣板字串組 \s —— 反斜線在多層轉義裡會被吃掉，
+  // 變成 (^|s) 而靜默地一個都標不到。直接照空白切 token 比較穩。
+  const parts = passage.split(' ');   // passages() 已把空白正規化成單一空格
+  let n = 0, k = from;
+  for (let i = 0; i < parts.length && k <= to; i++) {
+    if (parts[i] === String(k)) { parts[i] = `__${k}__`; k++; n++; }
+  }
+  return { text: parts.join(' '), marked: n };
+}
+
 /** 回傳 [{from,to,passage}]，passage 已去掉選項標記 */
 function passages(lines) {
   const out = [];
@@ -124,7 +147,7 @@ function passages(lines) {
 }
 
 async function paperPassages(code, c, s) { return passages(await paperLines(code, c, s)); }
-module.exports = { paperLines, passages, paperPassages };
+module.exports = { paperLines, passages, paperPassages, markBlanks };
 
 if (require.main !== module) return;
 
@@ -151,11 +174,21 @@ if (require.main !== module) return;
       if (!ps.length) continue;
       let n = 0;
       for (const pg of ps) {
+        // 題幹裡已經有這段文章的題就跳過。克漏字是靠
+        // repair-english-group-items.js 把文章直接寫進題幹的（空格要標在文章裡，
+        // 不能分開放），兩邊都放會讓使用者看到同一篇兩次。
+        const head = skeleton(pg.passage).slice(0, 40);
+        // 克漏字題組的空格是裸題號，要標成 __N__ 才看得懂；
+        // marked === 0 就是閱讀測驗題組，原文照附。
+        const { text, marked } = markBlanks(pg.passage, pg.from, pg.to);
+        const body = marked ? text : pg.passage;
         for (const it of items) {
           const num = +it.number;
           if (num < pg.from || num > pg.to) continue;
           if (it.case_context) continue;
-          if (APPLY) { it.case_context = `（第 ${pg.from}～${pg.to} 題共用下文）${pg.passage}`; touched = true; }
+          if (head && skeleton(it.question || '').includes(head)) continue;
+          const which = marked ? `，本題問第 ${num} 格` : '';
+          if (APPLY) { it.case_context = `（第 ${pg.from}～${pg.to} 題共用下文${which}）${body}`; touched = true; }
           n++; tAdd++;
         }
       }

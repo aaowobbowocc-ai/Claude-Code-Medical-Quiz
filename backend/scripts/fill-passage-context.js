@@ -35,6 +35,36 @@ function declRange(m) {
   return m[1] ? [+m[1], +m[2]] : [+m[4], +m[5]];
 }
 
+/**
+ * 第五種：宣告裡**完全沒寫題號範圍**。
+ *   「篇章結構題組，下列各題請依文意從四個選項中選出最合適者，答案選用不能重覆。」
+ *   （關務 108050 英文 #11-15 實測）
+ * 題號只能從後面跟著的題號行推出來。
+ */
+const NORANGE = /題組[^。]{0,40}(?:請依文意|選出最[合適]{2})/;
+
+/**
+ * 從宣告行往後找題號行，推出這個題組涵蓋哪幾題。
+ * 判準：題號行是「整行只有數字」且靠左（x<80），而且必須**連號**；
+ * 一跳號就結束（下一段的題號不會接在這一段後面）。
+ * 文章裡的數字不會成為獨立一行，所以不會被誤認。
+ */
+function inferRange(lines, i) {
+  let from = null, to = null;
+  for (let k = i + 1; k < lines.length; k++) {
+    const L = lines[k];
+    if (DECL.test(L.t) || NORANGE.test(L.t)) break;        // 碰到下一段宣告
+    const num = /^(\d{1,3})\s*$/.exec(L.t.trim());
+    if (!num || L.x >= 80) continue;
+    const n = +num[1];
+    if (from === null) { from = to = n; continue; }
+    if (n === to + 1) { to = n; continue; }
+    if (n <= to) continue;                                  // 同一題內重複出現的數字
+    break;                                                  // 跳號 → 題組到此為止
+  }
+  return from === null ? null : [from, to];
+}
+
 async function paperLines(code, c, s) {
   const buf = await fetchSheet('Q', code, c, s);
   const mupdf = await import('mupdf');
@@ -58,16 +88,23 @@ function passages(lines) {
   const out = [];
   for (let i = 0; i < lines.length; i++) {
     const m = DECL.exec(lines[i].t);
-    if (!m) continue;
-    const [from, to] = declRange(m);
-    // 宣告行本身在冒號之後可能就接了文章開頭
-    const after = lines[i].t.slice(lines[i].t.indexOf(m[0]) + m[0].length);
+    let from, to, after;
+    if (m) {
+      [from, to] = declRange(m);
+      // 宣告行本身在冒號之後可能就接了文章開頭
+      after = lines[i].t.slice(lines[i].t.indexOf(m[0]) + m[0].length);
+    } else if (NORANGE.test(lines[i].t)) {
+      const r = inferRange(lines, i);
+      if (!r) continue;
+      [from, to] = r;
+      after = '';                 // 這種宣告自成一行，文章從下一行開始
+    } else continue;
     const buf = [after];
     for (let k = i + 1; k < lines.length; k++) {
       const L = lines[k];
       const num = /^(\d{1,3})\s*$/.exec(L.t.trim());
       if (num && L.x < 80 && +num[1] === from) break;      // 碰到第一題的題號行，文章結束
-      if (DECL.test(L.t)) break;                            // 碰到下一段文章宣告
+      if (DECL.test(L.t) || NORANGE.test(L.t)) break;       // 碰到下一段文章宣告
       buf.push(L.t);
     }
     // 有些卷的行文字不帶行尾空白，直接串接會黏成「familymembers」「becomes16their」，

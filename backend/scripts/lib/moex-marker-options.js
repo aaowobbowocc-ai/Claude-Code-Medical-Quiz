@@ -35,6 +35,17 @@ const clean = s => String(s || '')
   .replace(/\s+/g, ' ')
   .trim()
 
+/**
+ * 跟 clean() 一樣，但**保留頭尾各一個空白**。
+ *
+ * 選項文字是好幾個 run 接起來的，而 PDF 裡的空格就在 run 的邊緣：
+ *   "The" + " Intelligence of Human Beings. "
+ * 每段都 trim 再 join('') 就變成「TheIntelligence of Human Beings.」。
+ * 全站有 87 題的選項帶著這種黏字（medlab 36、pt 8、police4 7…）。
+ * 用 PDF 自己的空白判斷，不是靠猜哪裡該斷詞。
+ */
+const keep = s => (/^\s/.test(String(s || '')) ? ' ' : '') + clean(s) + (/\s$/.test(String(s || '')) ? ' ' : '')
+
 /** 一頁的 run → 依 y 分列，列內依 x 排序。 */
 function rowsOf(runs) {
   const sorted = [...runs].sort((a, b) => a.y - b.y || a.x - b.x)
@@ -98,14 +109,14 @@ async function markerOptions(buf) {
           // 一段裡可能黏著多個標記，依標記切開
           for (const seg of t.split(/(?=[-])/)) {
             const k = MARK[seg[0]]
-            if (k) { cur = k; const rest = clean(seg.slice(1)); if (rest) opts[cur].push(rest) }
-            else if (cur) opts[cur].push(clean(seg))
-            else stemParts.push(clean(seg))
+            if (k) { cur = k; const rest = keep(seg.slice(1)); if (rest.trim()) opts[cur].push(rest) }
+            else if (cur) opts[cur].push(keep(seg))
+            else stemParts.push(keep(seg))
           }
           continue
         }
-        if (cur) opts[cur].push(clean(t))
-        else stemParts.push(clean(t))
+        if (cur) opts[cur].push(keep(t))
+        else stemParts.push(keep(t))
       }
     }
     const options = {}

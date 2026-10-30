@@ -62,10 +62,15 @@ async function coinRevenue(sb) {
     if (o.status === 'refunded') b.refund += amt
     else { b.gross += amt; b.byProvider[o.provider] = (b.byProvider[o.provider] || 0) + amt }
   }
-  // 沒付款的單子單獨算，拿來看結帳流失
-  const abandoned = data.filter(o => o.status === 'pending').length
-  const paid = data.filter(o => o.status === 'paid' && !TEST_USER_IDS.has(o.user_id)).length
-  return { byMonth, abandoned, paid, testTwd, testN }
+  // 沒付款的單子單獨算，拿來看結帳流失。
+  // ⚠️ 測試單一定要跟 paid 一樣排除掉。原本只有 paid 排除，abandoned 沒排，
+  //    於是報表印「完成 25 / 未完成 44」—— 真實的未完成是 39，另外 5 筆是
+  //    我自己測結帳流程留下的 pending。流失率被算高了。
+  const real = data.filter(o => !TEST_USER_IDS.has(o.user_id))
+  const abandoned = real.filter(o => o.status === 'pending').length
+  const abandonedTwd = real.filter(o => o.status === 'pending').reduce((s, o) => s + Number(o.amount_twd || 0), 0)
+  const paid = real.filter(o => o.status === 'paid').length
+  return { byMonth, abandoned, abandonedTwd, paid, testTwd, testN }
 }
 
 /**
@@ -252,15 +257,18 @@ function fixedCosts() {
     }
   } else console.log(`雲端成本                        （未接上，見檔頭說明）`)
   console.log(`固定成本攤提                    ${money(fixed.monthly)}／月`)
-  console.log(`結帳流失                        完成 ${rev.paid} 筆 / 未完成 ${rev.abandoned} 筆`)
+  const conv = rev.paid + rev.abandoned ? Math.round(rev.paid / (rev.paid + rev.abandoned) * 100) : 0
+  console.log(`結帳流失                        完成 ${rev.paid} 筆 / 未完成 ${rev.abandoned} 筆（${money(rev.abandonedTwd)}）→ 完成率 ${conv}%`)
   if (rev.testN) console.log(`（已排除自己測試的 ${rev.testN} 筆 / ${money(rev.testTwd)}，那不是收入）`)
   if (fixed.warnings.length) {
     console.log('\n⚠️ ' + fixed.warnings.join('\n⚠️ '))
   }
   console.log(`
+※ 上面的金幣銷售是**買家付的錢**，沒扣平台抽成。
+  扣完抽成的實收要跑：node scripts/fetch-store-revenue.js
+  （2026-10 實測 Apple 抽 21.1%：買家付 NT$180 → 實收 NT$142）
+
 還沒接上的資料來源：
-  Google Play 實收 → Play Console 的財務報表 GCS bucket（現在看到的是使用者付的錢，沒扣 Google 抽成）
-  Apple 實收     → App Store Connect API（需要 Finance 角色的金鑰；上架後才有數字）
-  AdMob 收益     → AdMob API（只支援 OAuth）`)
+  AdMob 收益 → AdMob API（只支援 OAuth，要手動去後台對）`)
   if (!bq) console.log(`  ${'（BigQuery 帳單匯出已設定，還在等 Google 寫第一批資料）'}`)
 })().catch(e => { console.error(e.stack); process.exit(1) })

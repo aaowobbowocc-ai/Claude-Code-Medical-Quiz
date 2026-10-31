@@ -15,6 +15,9 @@ const fs = require('fs');
 const path = require('path');
 const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve');
 const { skeleton } = require('./lib/moex-normalize');
+// markBlanks 已收斂到 lib/cloze-blanks.js（scrape-ceec.js 也用同一份）；
+// 這裡 re-export 給 repair-english-group-items.js 沿用原本的 import 路徑。
+const { markBlanks } = require('./lib/cloze-blanks');
 
 const BK = path.join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
@@ -82,28 +85,6 @@ async function paperLines(code, c, s) {
   }
   lines.sort((a, b) => a.p - b.p || Math.round(a.y / 6) - Math.round(b.y / 6) || a.x - b.x);
   return lines;
-}
-
-/**
- * 文章裡的空格是裸露的題號。標成 __N__，使用者才看得出哪裡是第幾格
- * （不標的話「The 41 season to visit」讀起來像錯字）。
- *
- * 兩邊都必須是空白才算——只擋「前面不是數字」會把年份切開的
- * 「In 20 10, a South Korean couple…」的 10 當成第 10 格（實測 customs 108050）。
- * 而且要依序往後找，後面的空格不可能出現在前一個空格之前。
- *
- * marked === 0 表示這段文章裡沒有空格 —— 那是閱讀測驗題組，不是克漏字，
- * 原文照附就好。
- */
-function markBlanks(passage, from, to) {
-  // 不要用 RegExp 字面量／樣板字串組 \s —— 反斜線在多層轉義裡會被吃掉，
-  // 變成 (^|s) 而靜默地一個都標不到。直接照空白切 token 比較穩。
-  const parts = passage.split(' ');   // passages() 已把空白正規化成單一空格
-  let n = 0, k = from;
-  for (let i = 0; i < parts.length && k <= to; i++) {
-    if (parts[i] === String(k)) { parts[i] = `__${k}__`; k++; n++; }
-  }
-  return { text: parts.join(' '), marked: n };
 }
 
 /** 回傳 [{from,to,passage}]，passage 已去掉選項標記 */

@@ -18,7 +18,16 @@ const http   = require('http');
 const fs     = require('fs');
 const path   = require('path');
 const pdfParse = require('pdf-parse');
-const { stripPageFurniture } = require('./lib/ceec-page-furniture');
+const { stripPageFurniture, TOKENS } = require('./lib/ceec-page-furniture');
+const { passageContext } = require('./lib/cloze-blanks');
+/**
+ * 「整行都是版面家具」的行。
+ * stripPageFurniture 刻意要求「連續 2 個以上 token」才動手，因為單獨一個
+ * 「第5頁」可能是內文。但**整行只有它**就不可能是內文 —— 這個條件本身
+ * 就是安全的證據。英文卷的頁尾常常只有一個「- 5 -」自成一行，
+ * 以前接行後變成「-5-」夾在句子中間，兩種清法都碰不到它。
+ */
+const FURNITURE_ONLY = new RegExp(`^(?:\\s*(?:${TOKENS.join('|')})\\s*)+$`);
 const { decodeSymbolFont } = require('./lib/symbol-font');
 
 const BASE    = 'https://www.ceec.edu.tw';
@@ -262,8 +271,48 @@ function parseAnswers(text) {
  * 所以要認「單獨一行的數字區間 + 下一個非空行是『為題組』」，
  * 同時支援寫在同一行的版本。
  */
-const RANGE_ONLY = /^(\d{1,2})\s*[-－~～至]\s*(\d{1,2})\s*$/;
-const GROUP_INLINE = /^(\d{1,2})\s*[-－~～至]\s*(\d{1,2})\s*為題組/;
+/*
+ * 2026-10-31：英文卷的宣告寫法完全不同，上面兩個 regex 一個都抓不到。
+ *   國文／社會／自然：「9-11」＋下一行「為題組。閱讀下文，回答」
+ *   英文：          「第16至20題為題組」 ← 開頭有「第」、用「至」、
+ *                    數字後面還有一個「題」；103 年還是「第16至20 題為題組」
+ *                    （「題」前面多一個空格）
+ * 兩條都錨在 `^(\d{1,2})`，開頭那個「第」就讓整條失效 ——
+ * 於是學測英文 16 個年度的題組文章**全部沒抓到**，298 題只剩題目沒有文章
+ * （2026-10-31 使用者回報 103 #27「只有選項」、106 #47「題目不完整」）。
+ *
+ * 所以把開頭的「第」、第二個數字前的「第」、數字後的「題」都設成可選。
+ * 說明段的「第 16 題至第 30 題，每題一個空格」不會誤中：
+ * GROUP_INLINE 要求緊接著是「為題組」，那邊接的是「，每題」。
+ */
+const RANGE_ONLY = /^第?\s*(\d{1,2})\s*[-－~～至到]\s*第?\s*(\d{1,2})\s*題?\s*$/;
+const GROUP_INLINE = /^第?\s*(\d{1,2})\s*[-－~～至到]\s*第?\s*(\d{1,2})\s*題?\s*為題組/;
+
+/**
+ * 把題文的多行接成一段。**接法要看語言**：
+ *   中文不用空白分詞 → 直接黏（原本就是這樣寫的，對國文／社會／自然正確）
+ *   英文黏起來就毀了 → 「and」+「rituals」變成「andrituals」、
+ *                      「martial」+「art」變成「martialart」
+ *                      （學測 106 英文 Capoeira 那篇實測）
+ * 判準是斷行兩側的字元：兩邊都是拉丁字母／數字（或左邊是英文句讀）才補一個空白。
+ * 行尾是連字號的是被斷開的單字，連字號一起去掉、不補空白。
+ */
+const JOIN_L = /[A-Za-z0-9.,;:!?)\]'"’”%]/;
+const JOIN_R = /[A-Za-z0-9(\[‘“'"$]/;
+function joinPassageLines(s) {
+  const t = String(s)
+    // 整行都是頁首頁尾的，接行前先丟掉
+    .split('\n').filter(l => !FURNITURE_ONLY.test(l)).join('\n')
+    // 斷字的連字號。**前面必須是字母** —— 不限制的話，頁碼「- 5 -」
+    // 行尾那個連字號也會被當成斷字而吃掉，變成「- 5 」黏進句子裡。
+    .replace(/([A-Za-z])[-‐]\s*\n\s*/g, '$1');
+  return t.replace(/\s*\n\s*/g, (m, off) => {
+    const a = t.slice(0, off).slice(-1);
+    const b = t.slice(off + m.length, off + m.length + 1);
+    if (!a || !b) return '';
+    return JOIN_L.test(a) && JOIN_R.test(b) ? ' ' : '';
+  });
+}
 
 function parseQuestions(text) {
   const lines = text.split('\n').map(l => l.trimEnd());
@@ -337,11 +386,13 @@ function parseQuestions(text) {
   const passageOf = new Map();
   for (const p of passages) {
     // 頁首頁尾會夾進題文中間（pdf-parse 把整頁攤平），一併清掉
-    const [txt0] = stripPageFurniture(stripHead(p.lines.join('\n').replace(/\s*\n\s*/g, '').trim()));
+    const [txt0] = stripPageFurniture(stripHead(joinPassageLines(p.lines.join('\n')).trim()));
     // Symbol 字型的數學符號在 PDF 裡是 U+F0xx 私用區，會變豆腐字
     const [txt] = decodeSymbolFont(txt0);
     if (txt.length < 20) continue;            // 太短的不是題文
-    for (let n = p.from; n <= p.to; n++) passageOf.set(n, txt);
+    // 題組範圍一起存：克漏字要把文章裡的裸題號標成 __N__，
+    // markBlanks() 需要 from/to 才知道要找哪幾個號碼。
+    for (let n = p.from; n <= p.to; n++) passageOf.set(n, { txt, from: p.from, to: p.to });
   }
 
   const results = [];
@@ -357,7 +408,14 @@ function parseQuestions(text) {
     while ((m2 = optRe.exec(raw)) !== null) {
       const key = m2[1];
       // collapse whitespace in option text
-      options[key] = m2[2].replace(/\s+/g, ' ').trim();
+      // 頁尾一定要在這裡清掉。pdf-parse 把整頁攤平，最後一個選項後面緊接著
+      // 的就是頁尾，於是選項 D 變成
+      //   「animal skin 112 年學測 請記得在答題卷簽名欄位以正楷簽全名
+      //     第 6 頁 英文考科 共 11 頁 - 6 -」
+      // （112 學測英文 #38/#42、社會 #41 實測）。
+      // 題庫裡現有的選項是後來人工修乾淨的，但爬蟲重跑會再寫髒一次。
+      const [clean] = stripPageFurniture(m2[2].replace(/\s+/g, ' ').trim());
+      options[key] = clean;
     }
     if (!options.A || !options.B || !options.C || !options.D) continue;
 
@@ -384,8 +442,11 @@ function parseQuestions(text) {
 
     if (!questionText) continue;
 
+    const pg = passageOf.get(block.num) || null;
     results.push({
-      passage: passageOf.get(block.num) || null,
+      passage: pg ? pg.txt : null,
+      groupFrom: pg ? pg.from : null,
+      groupTo: pg ? pg.to : null,
       num: block.num,
       question: questionText,
       options,
@@ -418,6 +479,11 @@ function buildQuestions({ examId, year, subjectTag, subjectName, parsedQs, answe
       answer: ans,
       explanation: '',
     });
+    // 題組的共用文章。parseQuestions 一直解得出來，但 buildQuestions 從來沒有
+    // 寫出去 —— 於是閱讀測驗題只剩「What is the author's attitude…」、
+    // 克漏字只剩選項列。前端 5 個頁面都會顯示 case_context。
+    const ctx = passageContext(pq);
+    if (ctx) results[results.length - 1].case_context = ctx;
   }
   return results;
 }

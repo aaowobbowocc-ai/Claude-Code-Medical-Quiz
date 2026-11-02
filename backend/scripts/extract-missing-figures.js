@@ -35,8 +35,17 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
     if (exam === 'gsat' || exam === 'ast') continue;
     const j = JSON.parse(fs.readFileSync(path.join(BK, f), 'utf8'));
     const arr = Array.isArray(j) ? j : j.questions; if (!arr) continue;
+    // 候選不再只看題幹文字。needsImage() 的 regex 漏掉第三種寫法了：
+    //   rt 111100 #63「下列肺功能測量之流速體積曲線圖，何者顯示阻塞性通氣障礙？」
+    //   —— 「下列」後面接的是「肺」不是「圖」，整串 token 一個都沒中
+    //   （2026-11-02 使用者回報「題目中說有圖片，但是畫面沒有顯示出來」）。
+    // 試過把 regex 加寬成「下列…圖，」，全站新增 23 筆**多半是誤報**
+    //   （「編製的藍圖」是比喻、「下列何種狀況會影響病人之心電圖」不需要圖）；
+    // 也試過「選項全是圈號①②③④」，6,483 筆，圈號其實指題幹裡列的項目。
+    // 所以不加寬文字判準，改用直接證據：**原卷在題幹與第一個選項之間
+    // 真的有一塊嵌入圖片**。下面 byImage 那條路就是這樣判的。
     const targets = arr.filter(q => !(q.images && q.images.length) && !q.image_url && !q.option_images
-      && !q.no_image_in_source && !q.incomplete && needsImage(q));
+      && !q.no_image_in_source && !q.incomplete);
     if (!targets.length) continue;
     const groups = {};
     for (const q of targets) { const k = q.exam_code + '|' + q.subject; (groups[k] = groups[k] || []).push(q); }
@@ -52,7 +61,26 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
       } catch (e) { errs++; continue; }
       // 逐頁收行，記下每個題號與每個選項標記的位置
       const marks = [];
+      // 嵌入圖片區塊。'preserve-images' 才會吐 type!=='text' 的 block。
+      // 掃描檔要擋掉：整頁就是一張圖的話，每一題都會「有圖」。
+      const figs = [];
       for (let pg = 0; pg < doc.countPages(); pg++) {
+        try {
+          const pageObj = doc.loadPage(pg);
+          const si = JSON.parse(pageObj.toStructuredText('preserve-images').asJSON());
+          // 頁面尺寸要從 getBounds() 拿。StructuredText 的 JSON **沒有 bbox 欄位**，
+          // 本來寫 si.bbox 導致 pageArea 退成 1，於是每一頁都被判成掃描檔、
+          // 圖片區塊整批被丟掉（找了一輪才發現是 fail-closed）。
+          const bnd = pageObj.getBounds();           // [x0,y0,x1,y1]
+          const pageArea = (bnd && bnd.length === 4) ? Math.abs((bnd[2] - bnd[0]) * (bnd[3] - bnd[1])) : 0;
+          const blocks = (si.blocks || []).filter(b => b.type && b.type !== 'text' && b.bbox);
+          // 掃描檔要擋掉，但尺寸拿不到時**不要**擋 —— 寧可多裁一張也不要整批靜默消失
+          const scanned = pageArea > 0 && blocks.some(b => (b.bbox.w * b.bbox.h) > pageArea * 0.6);
+          if (!scanned) for (const b of blocks) {
+            if (b.bbox.w < 40 || b.bbox.h < 25) continue;        // 小圖示／印章
+            figs.push({ pg, y: b.bbox.y, x: b.bbox.x, w: b.bbox.w, h: b.bbox.h });
+          }
+        } catch { /* 這一頁抽不出圖，照舊走空白帶 */ }
         const st = JSON.parse(doc.loadPage(pg).toStructuredText('preserve-whitespace').asJSON());
         for (const b of st.blocks || []) for (const l of b.lines || []) {
           const t = (l.text || '').normalize('NFC'); if (!t.trim()) continue;
@@ -82,6 +110,22 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
           prevBottom = Math.max(prevBottom, m.y + (m.h || 12));
         }
         if (firstOpt.y - prevBottom >= 40 && (!band || firstOpt.y - prevBottom > band.h)) band = { top: prevBottom, h: firstOpt.y - prevBottom };
+
+        // 直接證據優先：題幹與第一個選項之間真的有嵌入圖片，就照它的 bbox 裁。
+        // 比空白帶準 —— 空白帶會把長題幹整段框起來變成一張多餘的文字圖
+        // （lawyer1 105110 #44 實測，那題根本沒有圖）。
+        const inBand = figs.filter(g => g.pg === head.pg
+          && g.y >= head.y - 2 && g.y + g.h <= firstOpt.y + 2);
+        let byImage = false;
+        if (inBand.length) {
+          const top = Math.min(...inBand.map(g => g.y));
+          const bot = Math.max(...inBand.map(g => g.y + g.h));
+          band = { top, h: bot - top };
+          byImage = true;
+        }
+        // 沒有嵌入圖片時才退回空白帶，而且只在題幹文字真的提到圖的時候 ——
+        // 考選部有很多圖是向量繪製的，不會變成 image block，那些只能靠空白帶。
+        if (!byImage && !needsImage(q)) { skip++; why['題幹沒提到圖、原卷也沒有嵌入圖片'] = (why['題幹沒提到圖、原卷也沒有嵌入圖片'] || 0) + 1; continue; }
         if (!band) { skip++; why['題幹與選項間沒有空白帶(應無圖)'] = (why['題幹與選項間沒有空白帶(應無圖)'] || 0) + 1; continue; }
         const name = `${exam}_${code}_q${n}_fig.webp`;
         if (APPLY) {

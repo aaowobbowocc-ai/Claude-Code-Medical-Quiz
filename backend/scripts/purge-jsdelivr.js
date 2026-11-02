@@ -55,7 +55,39 @@ if (sha) {
   files = fs.readdirSync(BK).filter(f => /^questions(-[a-z0-9-]*)?\.json$/.test(f));
 }
 
+/**
+ * 12 小時窗口檢查。
+ *
+ * purge 只清 edge，**清不掉「@master → 哪個 commit」的解析快取**
+ * （那層在 jsDelivr origin，s-maxage=43200）。所以一個 12 小時窗口裡
+ * 只有第一次 push 會即時生效，第二次之後都要等。
+ *
+ * 這件事檔頭與 memory 都寫了，但「今天是不是已經推過一次」要自己記，
+ * 很容易漏。改成**跑的時候直接把 12 小時內的題庫 commit 列出來**。
+ *
+ * ⚠️ 另外注意：purge 完馬上去驗，edge 還要幾十秒才傳播完，
+ *    這時候拿到舊版是正常的，**不要誤判成 ref 快取卡住**
+ *    （2026-11-02 就這樣誤判過一次；回應標頭的 age 很小就是剛回源的意思）。
+ */
+function windowWarning() {
+  try {
+    const log = execFileSync('git', ['log', '--since=12.hours', '--pretty=format:%h %ad %s',
+      '--date=format:%m-%d %H:%M', '--', 'backend/questions*.json'],
+      { cwd: path.join(BK, '..') }).toString().trim();
+    const lines = log ? log.split('\n').filter(Boolean) : [];
+    if (lines.length <= 1) return;
+    console.log(`\n⚠️  過去 12 小時內有 ${lines.length} 個 commit 動到題庫：`);
+    lines.forEach((l, i) => console.log(`   ${i === lines.length - 1 ? '←最早' : '      '} ${l.slice(0, 88)}`));
+    console.log('   jsDelivr 的「@master → commit」解析快取 12 小時，**只有最早那次即時生效**，');
+    console.log('   後面的要等窗口過。purge 清的是 edge，清不掉這一層。');
+    console.log('   下次把題庫改動合併成一次 push。');
+    console.log('   卡住期間不要動 CACHE_VERSION／examRegistry 的 CACHE_KEY —— ');
+    console.log('   App 會把舊資料寫進新 key，再等 24 小時 TTL 才自救。\n');
+  } catch { /* 不在 git repo 裡就算了 */ }
+}
+
 (async () => {
+  windowWarning();
   console.log('要清', files.length, '個檔案');
   let ok = 0, fail = 0;
   for (const f of files) {

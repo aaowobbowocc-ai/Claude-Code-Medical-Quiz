@@ -127,9 +127,26 @@ async function pdfFor(exam, year, tag) {
         doc = mupdf.Document.openDocument(buf, 'application/pdf');
       } catch (e) { groups[key].forEach(() => bump('PDF 取得失敗: ' + e.message.slice(0, 30))); continue; }
 
-      // 逐頁收行
+      // 「嵌入圖片」這條路為什麼沒走成 —— 分開計數才知道要往哪裡調
+      const figWhy = stats.figWhy || (stats.figWhy = {});
+      const bumpFig = w => { figWhy[w] = (figWhy[w] || 0) + 1; };
+
+      // 逐頁收行；同時收「嵌入圖片區塊」（'preserve-images' 才會吐 type!=='text'）
       const pages = [];
+      const figBlocks = [];
       for (let pg = 0; pg < doc.countPages(); pg++) {
+        try {
+          const pageObj = doc.loadPage(pg);
+          const si = JSON.parse(pageObj.toStructuredText('preserve-images').asJSON());
+          // 頁面尺寸要從 getBounds() 拿；StructuredText 的 JSON 沒有 bbox 欄位，
+          // 誤用會讓面積退成 1、每頁都被判成掃描檔（extract-missing-figures 踩過）
+          const bnd = pageObj.getBounds();
+          const area = (bnd && bnd.length === 4) ? Math.abs((bnd[2] - bnd[0]) * (bnd[3] - bnd[1])) : 0;
+          const bs = (si.blocks || []).filter(b => b.type && b.type !== 'text' && b.bbox
+            && b.bbox.w > 50 && b.bbox.h > 40);
+          const scanned = area > 0 && bs.some(b => (b.bbox.w * b.bbox.h) > area * 0.6);
+          if (!scanned) for (const b of bs) figBlocks.push({ pg, x: b.bbox.x, y: b.bbox.y, w: b.bbox.w, h: b.bbox.h });
+        } catch { /* 這頁抽不出圖，走其他定位方式 */ }
         const st = JSON.parse(doc.loadPage(pg).toStructuredText('preserve-whitespace').asJSON());
         const ls = [];
         for (const b of st.blocks || []) for (const l of b.lines || []) {
@@ -242,6 +259,63 @@ async function pdfFor(exam, year, tag) {
           if (h >= 50) { box = { left, top, height: h, page: cap.pg }; mode = '圖說定位'; }
           }
         }
+        /*
+         * 圖說找不到時的第二條路：**原卷真的有一塊嵌入圖片，而且就落在這一題自己的範圍內**。
+         *
+         * 下面關掉的那兩條退路是「這題 y 範圍裡右欄有東西就裁」，會掛到隔壁題的圖。
+         * 這條不一樣，它要求的是圖片區塊本身的 bbox，而且四個條件全部成立才用：
+         *   1. 這題範圍內**只有一塊**圖（兩塊以上分不清哪塊是這題的）
+         *   2. 那塊圖的上下範圍內**沒有別題的題號**（跨題號的是題組共用圖或隔壁題的）
+         *   3. 題幹有指名「圖N」時，圖的正下方若有圖說，編號必須相符
+         *      （編號對不上就是隔壁題的圖 —— 正是 ast 114 地理 #21 那種錯誤）
+         *   4. 題幹沒指名編號時，圖的正下方也不能有別的圖說編號
+         */
+        if (!box) {
+          /*
+           * 題組的圖排在**情境段裡**，位置在第一小題的題號之上
+           *（gsat 101 社會 #23/#24 的圖在 y=167，兩題的題號在 375/480），
+           * 所以搜尋上界要延伸到「題組第一小題的前一個題號」。
+           *
+           * **只有題組才延伸。** 一般題延伸上去就會抓到上一題的圖 ——
+           * 那正是下面兩條退路被關掉的原因。題組的判定用我們自己存的
+           * 【題組情境】標記：同一組的情境文字逐字相同，取最小題號當錨點。
+           */
+          let anchorHead = head;
+          const ctx = /^【題組情境】/.test(String(q.question || '')) ? String(q.question).slice(0, 60) : null;
+          if (ctx) {
+            // 要用**整卷**的題去找題組的第一小題。只看 groups[key]（待補圖的那些）
+            // 會在「第一小題已經有圖」時把錨點算到後面去，上界就延伸不到情境段。
+            const sameGroup = arr.filter(x => x && x.exam_code === q.exam_code && x.subject === q.subject
+              && String(x.question || '').slice(0, 60) === ctx);
+            const firstN = Math.min(...sameGroup.map(x => +x.number));
+            const fh = heads.find(h => h.n === firstN);
+            if (fh && fh.pg === head.pg) anchorHead = fh;
+          }
+          const prev = [...heads].reverse().find(h => h.pg === anchorHead.pg && h.y < anchorHead.y - 5);
+          const searchTop = (anchorHead !== head && prev) ? prev.y : head.y;
+          const onPage = figBlocks.filter(g => g.pg === head.pg);
+          const inQ = onPage.filter(g => g.y >= searchTop - 2
+            && g.y + g.h <= (yBot === Infinity ? 1e9 : yBot) + 2);
+          if (!onPage.length) bumpFig('該頁沒有嵌入圖片區塊');
+          else if (!inQ.length) bumpFig('有圖但不在這題的 y 範圍內');
+          else if (inQ.length > 1) bumpFig(`這題範圍內有 ${inQ.length} 塊圖，分不清`);
+          if (inQ.length === 1) {
+            const g = inQ[0];
+            const spans = heads.some(h => h.pg === g.pg && h.n !== n && h.y > g.y && h.y < g.y + g.h);
+            // 圖的正下方 24pt 內的圖說
+            const near = capsOf(pages).filter(c => c.pg === g.pg
+              && c.y >= g.y + g.h - 6 && c.y <= g.y + g.h + 24
+              && c.x + 40 >= g.x && c.x <= g.x + g.w + 40);
+            const clash = refN ? !near.some(c => c.kind === ref[1] && c.n === refN)
+                               : near.length > 0;
+            if (spans) bumpFig('圖的範圍跨到別題的題號（題組共用或隔壁題的）');
+            else if (near.length && clash) bumpFig('圖說編號與題幹指名的對不上');
+            else {
+              box = { left: Math.max(0, g.x - 6), top: Math.max(0, g.y - 6), height: g.h + 12, page: g.pg };
+              mode = '嵌入圖片';
+            }
+          }
+        }
         // ⚠️ 沒有圖說就不要補。
         // 「裁這題 y 範圍裡右欄的東西」看似合理，實測是把**隔壁題的圖**掛上來：
         //   ast 114 地理 #21 問「表1」→ 裁出一張世界地圖
@@ -319,4 +393,5 @@ async function pdfFor(exam, year, tag) {
 
   console.log(`${APPLY ? '已產生' : '可產生'} ${stats.made} 張圖｜跳過 ${stats.skip}`);
   if (Object.keys(why).length) console.log('跳過原因:', JSON.stringify(why, null, 1));
+  if (stats.figWhy && Object.keys(stats.figWhy).length) console.log('【嵌入圖片】這條路沒走成的原因:', JSON.stringify(stats.figWhy, null, 1));
 })().catch(e => { console.error(e.stack); process.exit(1); });

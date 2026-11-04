@@ -21,7 +21,32 @@ const { pdfText, pdfQuestions }=require(path.join(__dirname,'..','scripts','lib'
 const { skeleton }=require(path.join(__dirname,'..','scripts','lib','moex-normalize'));
 
 const fsx=require('fs');
-// 全站掃「題幹被截成只剩開頭」的題，不再逐筆列 id
+/*
+ * 第二種截斷：**開頭**被切掉，不是結尾。
+ *   audiologist 104100 #2 「）會隨著時間而減少。此過程稱之為何？」
+ *   audiologist 104100 #30「/s）對ABR的影響，下列敘述何者最正確？」
+ *   dental1 115020 #23   「在一顆被拔下來的牙齒上面發現有3 個 system)最可能是下列那一顆牙齒?」
+ * 上面那條簽章（短、以英數結尾、沒有句尾標點）抓不到這種 —— 它們不短，
+ * 而且結尾好好的。
+ *
+ * 簽章用結構：**出現右括號，但前面沒有對應的左括號**。正常題幹不會這樣。
+ * 長度與中文比例都試過，都不行：
+ *   「≤40 字且沒有問句詞」→ 6,861 筆，絕大多數是正常的「…被稱為:」
+ *     （中文題幹本來就常以冒號結尾）
+ *   「中文字比例 <25%」  → 把「有關於 Electrocochleography(ECochG),
+ *     下列何者錯誤?」這種正常的醫學題也掃進來
+ * 用括號配對，全站只有 36 筆。
+ */
+function unbalancedParen(t){
+ let d=0;
+ for(const c of String(t)){
+  if('（('.includes(c))d++;
+  else if('）)'.includes(c)){ if(d===0)return true; d--; }
+ }
+ return false;
+}
+
+// 全站掃「題幹被截斷」的題（頭尾兩種），不再逐筆列 id
 const TARGETS=[];
 for(const f of fsx.readdirSync(path.join(__dirname,'..')).filter(x=>/^questions(-[a-z0-9-]*)?\.json$/.test(x))){
  const j=JSON.parse(fsx.readFileSync(path.join(__dirname,'..',f),'utf8'));
@@ -29,7 +54,10 @@ for(const f of fsx.readdirSync(path.join(__dirname,'..')).filter(x=>/^questions(
  const exam=f.replace('questions-','').replace('questions.json','doctor1').replace('.json','');
  for(const q of a){
   const t=String(q.question||'').trim();
-  if(t.length<45&&/[0-9A-Za-z]$/.test(t)&&!/[？?。：:]$/.test(t))TARGETS.push([f,exam,String(q.id)]);
+  if(q&&q.incomplete)continue;
+  const tailCut=t.length<45&&/[0-9A-Za-z]$/.test(t)&&!/[？?。：:]$/.test(t);
+  const headCut=unbalancedParen(t);
+  if(tailCut||headCut)TARGETS.push([f,exam,String(q.id)]);
  }
 }
 console.log('掃到疑似截斷題幹', TARGETS.length, '題');
@@ -75,11 +103,40 @@ const banks={},cache={};
   // 一定要用 skeleton（NFKC）比，考選部 PDF 夾帶康熙部首等相容字元
   // （離「子」U+5B50 vs 離「⼦」U+2F26 字形相同碼位不同）
   const ours=skeleton(q.question), theirs=skeleton(src.stem);
-  const head=ours.slice(0,Math.min(12,ours.length));
+  // 開頭被截斷的題，前 12 字正好是壞掉的那一段（「）會隨著時間」），
+  // 拿它去比一定對不上。先把開頭殘餘的標點／斜線剝掉再取樣。
+  const core=skeleton(String(q.question).replace(/^[\s）)\/、，,。．:：；;]+/,''));
+  const head=(core.length>=8?core:ours).slice(0,Math.min(12,Math.max(core.length,ours.length)));
   if(!theirs.startsWith(head)&&!theirs.includes(head)){
    console.log('✗',f,id,'#'+q.number,'原卷該題號是不同的題,拒絕寫入');
    console.log('     我們:',String(q.question).replace(/\s+/g,' ').slice(0,50));
    console.log('     原卷:',src.stem.replace(/\s+/g,' ').slice(0,50));
+   continue;
+  }
+  /*
+   * 原卷的題幹有時候比我們的還糟。run 幾何重疊會解出疊字 ——
+   * speech-therapist 115100 #13 原卷解成「依序**序**為下列何者？」
+   * 「thyroarytenoid **muuscle**」，寫進去就是把好題幹改壞
+   * （成因見 lib/moex-run-overlap.js）。
+   *
+   * 守衛：**新題幹必須完整包含舊題幹的內容**。
+   *   結尾被截的 → 舊的是新的前綴，成立
+   *   開頭被截的 → 先把開頭的殘餘標點剝掉再比
+   *   疊字壞掉的 → 包不住，擋下
+   */
+  /*
+   * 題幹根本沒被截斷就不要動。
+   * 上面那條簽章（短、以英數結尾、沒有句尾標點）誤判率很高：
+   * 「下列那些抗體可以活化補體？ ①IgG ②IgD ③IgE ④IgA ⑤IgM」
+   * 本來就以選項清單結尾，完全正常。這種題原卷解回來與現有逐字相同，
+   * 真正會被換掉的只有選項 —— 那些選項沒壞，很多還是人工核對過的，
+   * 重寫一遍只有風險沒有好處。這支腳本的職責是修截斷，不是重刷選項。
+   */
+  if(theirs===ours){console.log('✗',f,id,'#'+q.number,'題幹沒有被截斷（原卷與現有逐字相同）');continue;}
+  if(core.length>=8&&!theirs.includes(core)){
+   console.log('✗',f,id,'#'+q.number,'原卷題幹沒有完整包含我們的內容（可能原卷解出疊字），拒絕寫入');
+   console.log('     我們:',String(q.question).replace(/\s+/g,' ').slice(0,56));
+   console.log('     原卷:',src.stem.replace(/\s+/g,' ').slice(0,56));
    continue;
   }
   console.log('✓',f.replace('questions-','').replace('.json',''),q.exam_code,'#'+q.number);

@@ -73,7 +73,13 @@ for (const f of files) {
     if (nonEmpty.length >= 2 && new Set(nonEmpty).size < nonEmpty.length) bump('visible', '選項重複', exam)
     if (IMAGE_REF.test(stem) && !q.images && !q.image && !q.no_image_in_source) bump('visible', '提到圖但沒有圖', exam)
 
-    const k = `${q.exam_code}|${q.subject}||${skeleton(stem)}||${vals.map(skeleton).join('|')}`
+    // 看圖辨識題的題幹與選項本來就一模一樣，**差別在圖**：
+    //   dental2 102020 卷二 #68/#69「下圖中有何種牙齒相關的病變？」答 A / D
+    //   rt 106020 #19/#20「下圖為何種通氣模式？」答 B / A
+    // 兩題各有自己的圖，是兩道不同的題，不是重複。圖要一起進比對鍵，
+    // 否則這類題會永遠掛在「同卷內完全重複」裡誤導人。
+    const imgKey = JSON.stringify(q.images || q.image || q.option_images || null)
+    const k = `${q.exam_code}|${q.subject}||${skeleton(stem)}||${vals.map(skeleton).join('|')}||${imgKey}`
     if (skeleton(stem).length >= 8) {
       if (dupKeys.has(k)) bump('visible', '同卷內完全重複', exam)
       else dupKeys.set(k, 1)

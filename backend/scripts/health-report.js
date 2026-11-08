@@ -72,6 +72,10 @@ for (const f of files) {
     const nonEmpty = optImg ? [] : vals.filter(v => v.trim()).map(v => normText(v))
     if (nonEmpty.length >= 2 && new Set(nonEmpty).size < nonEmpty.length) bump('visible', '選項重複', exam)
     if (IMAGE_REF.test(stem) && !q.images && !q.image && !q.no_image_in_source) bump('visible', '提到圖但沒有圖', exam)
+    // 組合題「①②③」的圈號被 PDF 字型全壓成 ①（見 decode-circled-options.js）。
+    // 這種壞法原本完全看不見：只有剛好壓成四個選項一模一樣時才會被「選項重複」抓到，
+    // 壓成「①①①／①①②」就靜默錯下去。一個選項裡出現兩個以上同一個圈號就是壞的。
+    if (vals.some(v => /(①).*\1/.test(v))) bump('visible', '選項圈號塌掉', exam)
 
     // 看圖辨識題的題幹與選項本來就一模一樣，**差別在圖**：
     //   dental2 102020 卷二 #68/#69「下圖中有何種牙齒相關的病變？」答 A / D

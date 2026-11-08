@@ -44,10 +44,14 @@ function acquireLock(filePath) {
 
 // Write JSON atomically: serialize → tmp → rename. Caller is responsible for
 // holding the lock (use withLock() wrapper for one-shot writes).
+// Keep the file's existing trailing newline. Without this, every rewrite adds a
+// stray "\ No newline at end of file" line to the diff of a 300k-line bank file,
+// which buries the real change.
 function atomicWriteJson(filePath, data) {
   const tmp = filePath + '.tmp';
-  const json = JSON.stringify(data, null, 2);
-  fs.writeFileSync(tmp, json);
+  let eol = '\n';
+  try { eol = fs.readFileSync(filePath, 'utf-8').endsWith('\n') ? '\n' : ''; } catch { /* new file */ }
+  fs.writeFileSync(tmp, JSON.stringify(data, null, 2) + eol);
   fs.renameSync(tmp, filePath);
 }
 

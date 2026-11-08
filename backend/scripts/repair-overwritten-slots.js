@@ -30,6 +30,25 @@ const FIXES = [
   { file: 'questions-tcm1.json', id: '102110_0202_60', expectAns: 'C',
     question: '下列何藥為活血調經之要藥，並為治頭痛之要藥？',
     options: { A: '', B: '', C: '', D: '' }, incomplete: 'image_options' },
+
+  /*
+   * 2026-11-09：諮商心理師 103 年三題，症狀是題幹整個空的、選項是**鄰題的**。
+   *   諮商與心理治療理論 #23  選項被 #40（心理劇）蓋掉
+   *   團體諮商與心理治療 #16  選項被 #40（籌組兒童諮商團體）蓋掉
+   *   團體諮商與心理治療 #39  同上
+   * 三題的答案都與官方標準答案卷一致（C / D / C），所以被蓋掉的只有題幹與選項。
+   * 選項是組合題圈號，原卷文字層全塌成 ①，用 decode-circled-options.js --probe
+   * 配跨卷字形庫解回來的 —— 題幹空白時沒辦法用題幹定位，所以才需要 --probe。
+   */
+  { file: 'questions-counseling-psychology.json', id: '103100_2_23', expectAns: 'C',
+    question: '下列對認知治療之敘述，何者正確？①認知三元組（cognitive triad）是指憂鬱患者對他人、世界和未來常持一種負向觀點 ②強調「專家－學生」之角色 ③認知治療係1960 年代Beck 從事憂鬱症的研究而開始 ④Bandura 和Mahoney 的實務工作影響認知治療的發展',
+    options: { A: '僅①②', B: '僅②③', C: '僅③④', D: '僅②④' } },
+  { file: 'questions-counseling-psychology.json', id: 695, expectAns: 'D',
+    question: '下列敘述何者屬團體倫理守則的範疇？①團體帶領者應依成員的成熟度、團體性質與目的，解釋加入團體的程序、時間、付費方式及終結的程序 ②團體帶領者應就成員及諮商員的角色期待、權利、責任，和成員溝通 ③團體帶領者應和特殊成員，如：酗酒、毒癮、情緒障礙等之配偶或監護人，商討參與團體之情事 ④團體帶領者應說明在特殊結構下，團體可提供及不能提供的服務內容',
+    options: { A: '①②③', B: '②③④', C: '①③④', D: '①②④' } },
+  { file: 'questions-counseling-psychology.json', id: 718, expectAns: 'C',
+    question: '帶領者帶領多樣性的青少年團體，下列那一個組合是為了滿足成員需求宜注意的事項？①篩選成員只需考慮具有類似問題者，以形成同質性團體，彼此的和睦關係不是重點 ②在團體初期設計相關及有趣的活動，吸引他們的興趣及參與 ③發現團體進行中負面消極的能量，帶領者要以創造力和改革力面對並處理 ④團體成員若為非志願性參與，一開始不宜正式提出規範，約束成員遵守紀律',
+    options: { A: '①②③', B: '①③④', C: '②③④', D: '①②④' } },
 ];
 
 let n = 0;
@@ -41,6 +60,11 @@ for (const fx of FIXES) {
   if (!q) { console.log(`✗ ${fx.file} id=${fx.id} 找不到`); continue; }
   // 答案字母必須與稽核當下一致，否則代表資料又動過，停手
   if (q.answer !== fx.expectAns) { console.log(`✗ ${fx.file} id=${fx.id} 答案已變成 ${q.answer}（預期 ${fx.expectAns}），不動`); continue; }
+  // ⚠️ 題幹已經是修好的樣子就跳過，不要重寫。
+  //    這是一份歷史帳本，重跑會把**後來的改進蓋回去** ——
+  //    2026-11-09 加新案例時重跑了一次，就把 tcm1 102110 #60 的選項
+  //    從後來改好的「(圖)」倒回成空字串（前端靠它顯示選項圖）。
+  if (String(q.question) === fx.question) { console.log(`· ${fx.file} #${q.number} 已修過，跳過`); continue; }
   console.log(`✓ ${fx.file} #${q.number}\n    舊: ${String(q.question).replace(/\s+/g, ' ').slice(0, 60)}\n    新: ${fx.question.slice(0, 70)}`);
   if (APPLY) {
     q.question = fx.question;

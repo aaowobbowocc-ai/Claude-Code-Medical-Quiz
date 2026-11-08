@@ -297,6 +297,33 @@ async function doPaper(exam, code, subject, targets, stats) {
   const ftext = chars.map(c => c.c).join('').replace(/\s+/g, '');
   const map = []; chars.forEach((c, i) => { if (!/\s/.test(c.c)) map.push(i); });
 
+  /*
+   * --probe：不改題庫，只把原卷「每一組四個選項標記」前面的題幹與解好的選項列出來。
+   * 用在槽位被覆蓋、題庫裡題幹是空的、沒辦法用題幹定位的時候
+   * （counseling-psychology 103100 的三題就是這樣）。
+   * 圈號一律查跨卷字形庫，查不到就原樣印出來，由人判讀。
+   */
+  if (process.argv.includes('--probe')) {
+    const mkAll = [];
+    chars.forEach((c, i) => { if (MARKER.test(c.c)) mkAll.push(i); });
+    for (let k = 0; k + 3 < mkAll.length; k += 4) {
+      const stemFrom = k === 0 ? 0 : mkAll[k - 1];
+      const stem = chars.slice(Math.max(stemFrom, mkAll[k] - 420), mkAll[k]).map(c => c.c).join('').replace(/\s+/g, ' ').trim();
+      const opts = [];
+      for (let o = 0; o < 4; o++) {
+        const a = mkAll[k + o] + 1, b = o === 3 ? Math.min(chars.length, mkAll[k + 4] !== undefined ? mkAll[k + 4] : chars.length) : mkAll[k + o + 1];
+        opts.push(chars.slice(a, b).map(c => {
+          if (c.g === undefined) return c.c;
+          const d = lib.lookup(clusters[c.g].rep.sig);
+          return d ? String.fromCodePoint(0x245F + d) : c.c + '?';
+        }).join('').replace(/\s+/g, ' ').trim().slice(0, 90));
+      }
+      console.log('\n--- 題幹: ' + stem.slice(-200));
+      ['A', 'B', 'C', 'D'].forEach((L, i) => console.log('    ' + L + '. ' + opts[i]));
+    }
+    return false;
+  }
+
   // 第一趟：把每一題的選項區段與項目數定位出來
   const cases = [];
   for (const q of items) {

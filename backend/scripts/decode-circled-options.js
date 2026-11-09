@@ -52,7 +52,12 @@ const PIN = (arg('pin') || '').split(',').filter(Boolean).reduce((m, kv) => {
 const FILE = e => (e === 'doctor1' ? 'questions.json' : 'questions-' + e + '.json');
 const CIRCLED = /[①-⑳]/;            // ①..⑳
 const MARKER = /[-]/;             // ⒶⒷⒸⒹ 的 PUA 標記
-const flat = s => String(s).replace(/\s+/g, '');
+// 定位題幹時要忽略的字元：空白、PUA 選項標記、C1 控制字元，
+// 以及 C1 被 cp1252 解碼過一次變成的那幾個罕用標點（‚ƒ„…†‡ˆ‰Š‹ŒŽ）與對不到字碼的 U+FFFD。
+// nursing 105030 #50 的題庫與原卷就是同一個標記的兩種編碼，不忽略就對不上。
+const MARKERS = /[\u0080-\u009F\u00AD\u200B-\u200D\uFEFF\uE000-\uF8FF\u201A\u0192\u201E\u2026\u2020\u2021\u02C6\u2030\u0160\u2039\u0152\u017D\uFFFD]/g;        // 選項標記：PUA、C1，以及 C1 被 cp1252 解過一次的那幾個罕用標點
+const NOISE = /[\s\u0080-\u009F\u00AD\u200B-\u200D\uFEFF\uE000-\uF8FF\u201A\u0192\u201E\u2026\u2020\u2021\u02C6\u2030\u0160\u2039\u0152\u017D\uFFFD]/;    // 定位題幹時一併忽略空白
+const flat = s => String(s).replace(new RegExp(NOISE.source, 'g'), '');
 const Z = 8, S = 112, Q = 32;
 const LIB = path.join(__dirname, "data", "circled-glyph-lib.json");
 
@@ -203,9 +208,25 @@ function buildRefs(chars, clusters) {
  *
  * cases: [{ seqs:[[群號…]×4], K }]  回傳 { ok, map:{群號→數字}, margin }
  */
-function decodePaper(cases, clusters, refs) {
+function decodePaper(cases, clusters, refs, forced) {
+  forced = forced || {};
   const used = [...new Set(cases.flatMap(c => c.seqs.flat()))];
   if (!used.length) return { why: '沒有圈號' };
+  /*
+   * 題幹序位把用到的字形全部釘死時，答案已經唯一確定，不必搜尋 ——
+   * 也**不能**套遞增約束：「下列處置順序何者正確」這種題型的選項是排列，
+   * 本來就不遞增（tcm2 106030 #46 暈針處置八步驟）。
+   * 唯一還要過的是「同一題四個選項必須互不相同」，不過就放棄整卷。
+   */
+  if (used.every(g => forced[g] !== undefined)) {
+    for (const c of cases) {
+      const keys = c.seqs.map(s => s.map(g => forced[g]).join(','));
+      if (new Set(keys).size !== keys.length) return { why: '題幹序位解出的四個選項有重複' };
+    }
+    const conf = {};
+    for (const g of used) conf[g] = true;
+    return { ok: true, map: forced, confident: conf, shaky: [], feasible: {} };
+  }
   const maxK = Math.max.apply(null, cases.map(c => c.K));
   if (used.length > 16 || maxK > 12) return { why: '字形群或項目數過多' };
   // 每個字形群的上限 = 它出現過的題目裡最小的 K
@@ -229,9 +250,21 @@ function decodePaper(cases, clusters, refs) {
         : (refs[d] ? dist(clusters[g].rep, refs[d].rep) : 15);
     }
   }
-  // 相鄰約束：序列裡前一個一定小於後一個
-  const pairs = [];
-  for (const c of cases) for (const s of c.seqs) for (let i = 1; i < s.length; i++) pairs.push([s[i - 1], s[i]]);
+  /*
+   * 相鄰約束：序列裡前一個一定小於後一個。
+   * ⚠️ 只對「組合題」成立。「下列處置順序何者正確」這種**排列題**的選項
+   *    是 1..K 的重排，本來就不遞增（tcm2 106030 #46 暈針處置八步驟）。
+   *    特徵很好認：四個選項的圈號個數都剛好等於 K。
+   *    這種題改用「同一個選項裡的數字互不重複」當約束。
+   */
+  const pairs = [], distinctIn = [];
+  for (const c of cases) {
+    const perm = c.K >= 4 && c.seqs.every(s => s.length === c.K);
+    for (const s of c.seqs) {
+      if (perm) distinctIn.push(s);
+      else for (let i = 1; i < s.length; i++) pairs.push([s[i - 1], s[i]]);
+    }
+  }
 
   // minScore[g][d] = 「把字形 g 指派成數字 d」時，整卷能達到的最低總分。
   // 用它判斷每個字形**各自**有多確定，比看整卷總分的次佳差距細緻得多：
@@ -255,6 +288,7 @@ function decodePaper(cases, clusters, refs) {
     }
     const g = used[i];
     for (let d = 1; d <= cap[g]; d++) {
+      if (forced[g] !== undefined && forced[g] !== d) continue;   // 題幹序位釘死的字形
       asg[g] = d;
       // 兩端都指派好的相鄰約束，馬上檢查
       let bad = false;
@@ -262,6 +296,11 @@ function decodePaper(cases, clusters, refs) {
         if (pr[0] !== g && pr[1] !== g) continue;
         if (asg[pr[0]] === undefined || asg[pr[1]] === undefined) continue;
         if (!(asg[pr[0]] < asg[pr[1]])) { bad = true; break; }
+      }
+      if (!bad) for (const seq of distinctIn) {
+        if (!seq.includes(g)) continue;
+        const vs = seq.map(x => asg[x]).filter(v => v !== undefined);
+        if (new Set(vs).size !== vs.length) { bad = true; break; }
       }
       if (!bad) dfs(i + 1);
     }
@@ -289,6 +328,21 @@ function decodePaper(cases, clusters, refs) {
   return { ok: true, map: best.map, confident: confident, shaky: shaky, feasible: feasible };
 }
 
+/*
+ * 排序題的分隔符「＞」「→」在原卷常被排成一個獨立的直欄，
+ * 文字層就變成「>>>>①④②⑤③」這種讀不了的樣子
+ * （clinical-psychology 106030 #34 思覺失調症家族風險排序）。
+ * 分隔符數量剛好是數字數量減一時把它們交錯回去 —— 字元組成不變，只動順序。
+ */
+function weave(t) {
+  const m = /^([>＞→]{2,})([①-⑳]{3,})$/.exec(t) || /^([①-⑳]{3,})([>＞→]{2,})$/.exec(t);
+  if (!m) return t;
+  const sep = /[>＞→]/.test(m[1]) ? m[1] : m[2];
+  const dig = sep === m[1] ? m[2] : m[1];
+  if (dig.length !== sep.length + 1) return t;
+  return [...dig].map((d, i) => (i ? sep[i - 1] + d : d)).join('');
+}
+
 async function doPaper(exam, code, subject, targets, stats) {
   const p0 = path.join(BK, FILE(exam));
   const rawText = fs.readFileSync(p0, "utf8");
@@ -302,8 +356,11 @@ async function doPaper(exam, code, subject, targets, stats) {
   const r0 = await readPaper(buf);
   const chars = r0.chars, clusters = r0.clusters;
   const refs = buildRefs(chars, clusters);
-  const ftext = chars.map(c => c.c).join('').replace(/\s+/g, '');
-  const map = []; chars.forEach((c, i) => { if (!/\s/.test(c.c)) map.push(i); });
+  // ⚠️ 定位題幹時要連 PUA 選項標記一起忽略：nursing 105030 #50 的題幹項目
+  //    「①<PUA>入睡時間…」在 ① 後面夾了一個標記，害題庫題幹在原卷裡找不到。
+  const keep = c => !NOISE.test(c);
+  const ftext = chars.map(c => c.c).filter(keep).join('');
+  const map = []; chars.forEach((c, i) => { if (keep(c.c)) map.push(i); });
 
   /*
    * --probe：不改題庫，只把原卷「每一組四個選項標記」前面的題幹與解好的選項列出來。
@@ -334,12 +391,31 @@ async function doPaper(exam, code, subject, targets, stats) {
 
   // 第一趟：把每一題的選項區段與項目數定位出來
   const cases = [];
+  /*
+   * 題幹的項目清單必然是 ①②③…N 依序排列。若清單長度剛好等於 K，
+   * 就可以反過來把清單裡第 i 個字形釘死成數字 i —— 這比字形距離可靠得多。
+   * ⚠️ 驗證只能拿 buildRefs 挑出來的「可信字形」比對，不能拿解碼字元比。
+   *    壞字型會把好幾個不同字形都解成 ①，直接比會把正確的假設否決掉：
+   *    tcm2 106030 #46 的題幹前五項全塌成 ①，但 ⑥⑦⑧ 解對了，
+   *    它們落在第 6/7/8 個位置，正好印證「清單＝依序」。
+   * 兩題對同一個字形釘出不同數字 → 整個放棄那個字形。
+   */
+  const forced = {}, forcedBad = new Set();
   for (const q of items) {
     if (!targets.includes(q.number)) continue;
-    const probe = flat(q.question).slice(0, 20);
+    /*
+     * 題組題的題幹被 inline-followup-context.js 在前面接上了整組的情境與前面各題
+     * （【題組情境】…承上題…承上題…），原卷裡當然找不到。真正的題目是最後一段。
+     */
+    const qtext = /【題組情境】/.test(q.question) ? String(q.question).split(/\n\s*\n/).pop() : q.question;
+    const probe = flat(qtext).slice(0, 20);
     if (probe.length < 10) { console.log('  ⚠ #' + q.number + ' 題幹太短，略過'); stats.skip++; continue; }
     const fi = ftext.indexOf(probe);
-    if (fi < 0) { console.log('  ⚠ #' + q.number + ' 原卷找不到題幹'); stats.skip++; continue; }
+    if (fi < 0) {
+      console.log('  ⚠ #' + q.number + ' 原卷找不到題幹');
+      if (process.env.DBG) { console.log('    probe=' + JSON.stringify(probe)); const z = ftext.indexOf(probe.slice(0, 8)); console.log('    前8字位置=' + z + '  原卷=' + JSON.stringify(ftext.slice(z, z + 40))); }
+      stats.skip++; continue;
+    }
     if (ftext.indexOf(probe, fi + 1) >= 0) { console.log('  ⚠ #' + q.number + ' 題幹在原卷出現多次'); stats.skip++; continue; }
     const start = map[fi];
     const mk = [];
@@ -393,13 +469,51 @@ async function doPaper(exam, code, subject, targets, stats) {
       runs.push(run);
       seqs.push(run.filter(c => c.g !== undefined).map(c => c.g));
     }
+    /*
+     * 排序題的選項在原卷文字層常整體位移一格：每個選項的第一個圈號
+     * 被排在前一個選項的尾巴（speech-therapist 107110 #16 的治療順序題）。
+     * 簽章很乾淨 —— 四段的圈號個數是 K+1, K, K, K-1，總數剛好 4K。
+     * 往後推一格就補正了；非圈號的字（→）數量不變，所以安全檢查照樣擋得住。
+     */
+    const lens = seqs.map(s => s.length);
+    if (K >= 3 && lens[0] === K + 1 && lens[1] === K && lens[2] === K && lens[3] === K - 1) {
+      for (let k = 0; k < 3; k++) {
+        let z = runs[k].length - 1;
+        while (z >= 0 && runs[k][z].g === undefined) z--;
+        if (z < 0) break;
+        runs[k + 1] = runs[k].splice(z).concat(runs[k + 1]);
+      }
+      seqs.length = 0;
+      for (const r of runs) seqs.push(r.filter(c => c.g !== undefined).map(c => c.g));
+      console.log('  （#' + q.number + ' 選項整體位移一格，已往後推回）');
+    }
     if (seqs.some(s => !s.length)) { console.log('  ⚠ #' + q.number + ' 有選項不含圈號'); stats.skip++; continue; }
+    const sc = chars.slice(start, mk[0]).filter(c => c.g !== undefined);
+    const sg = sc.map(c => c.g);
+    if (sg.length === K && K >= 3) {
+      // 用題幹自己的解碼字元驗證順序假設：
+      //   verified = 解出來剛好等於序位的個數（壞字型解不出這種巧合）
+      //   contra   = 解出來比序位**大**的個數。塌掉只會塌成較小的數字
+      //              （整批壓成 ①），所以出現比序位大的就不是單純塌掉，假設作廢。
+      let verified = 0, contra = 0, deep = false;
+      sc.forEach((c, i) => {
+        const d = c.c.codePointAt(0) - 0x245F;
+        if (d === i + 1) { verified++; if (i >= 2) deep = true; }
+        else if (d > i + 1) contra++;
+      });
+      if (verified >= 2 && deep && !contra) sg.forEach((g, i) => {
+        if (forced[g] !== undefined && forced[g] !== i + 1) forcedBad.add(g);
+        forced[g] = i + 1;
+      });
+    }
     cases.push({ q: q, runs: runs, seqs: seqs, K: K, stemRun: chars.slice(start, mk[0]) });
   }
 
   let changed = 0;
   if (!cases.length) { if (MONTAGE && clusters.length) await writeMontage(exam, code, subject, clusters); return false; }
-  const r = decodePaper(cases, clusters, refs);
+  for (const g of forcedBad) delete forced[g];
+  if (Object.keys(forced).length) console.log('  （題幹序位釘死 ' + Object.keys(forced).length + ' 個字形）');
+  const r = decodePaper(cases, clusters, refs, forced);
   if (!r.ok) {
     console.log('  ✗ 整卷解不出來：' + r.why);
     stats.skip += cases.length;
@@ -446,7 +560,7 @@ async function doPaper(exam, code, subject, targets, stats) {
     const q = cs.q, runs = cs.runs, seqs = cs.seqs, K = cs.K;
     const un = [...new Set(seqs.flat())].filter(g => !r.confident[g]);
     if (un.length) { console.log('  ⚠ #' + q.number + ' 用到沒釘死的字形 ' + un.map(g => 'g' + g).join(',')); stats.skip++; continue; }
-    const rebuilt = runs.map(run => run.map(c => (c.g !== undefined ? String.fromCodePoint(0x245F + r.map[c.g]) : c.c)).join('').replace(/\s+/g, ' ').trim());
+    const rebuilt = runs.map(run => weave(run.map(c => (c.g !== undefined ? String.fromCodePoint(0x245F + r.map[c.g]) : c.c)).join('').replace(/\s+/g, ' ').trim()));
     // 安全檢查：非圈號的字必須跟題庫現存的一致（確認抓到的是同一題的選項）
     const strip = s => String(s).replace(/[①-⑳\s]/g, '');
     const keys = ['A', 'B', 'C', 'D'];
@@ -462,12 +576,33 @@ async function doPaper(exam, code, subject, targets, stats) {
      *   4. 原卷題幹的圈號是 ①②③…K 嚴格遞增不重複（證明題幹那套字型沒壞）
      */
     let newStem = null;
-    if (mismatch === 0 && keys.slice(1).every((k, i) => strip((q.options || {})[k]) === strip(rebuilt[i + 1]))) {
-      const ps = cs.stemRun.map(c => c.c).join('').replace(/\s+/g, ' ').trim();
+    if (mismatch >= 0) {
+      // 原卷題幹會夾著選項標記（PUA／C1／被 cp1252 解過的標點），
+      // 那些字元不能跟著寫進題庫，但要保留空白結構。
+      const ps = cs.stemRun.map(c => c.c).join('')
+        .replace(MARKERS, '')
+        .replace(/\s+/g, ' ').trim();
       const ds = [...ps].filter(c => CIRCLED.test(c)).map(c => c.codePointAt(0) - 0x245F);
+      // 原卷題幹的圈號必須是 ①②③…K 嚴格遞增不重複 —— 證明題幹那套字型沒壞，重建才有意義
       const wellFormed = ds.length === K && ds.every((d, i) => d === i + 1);
-      // 兩邊都要用 strip（去圈號＋去空白）比，否則原卷題幹裡夾著的 ⑤⑥⑦ 會讓 includes 永遠失敗
-      if (strip(ps).includes(strip(q.options.A)) && flat(ps).startsWith(flat(q.question)) && wellFormed) newStem = ps;
+      // bare = 去圈號＋去空白＋去標記字元。兩邊都要這樣比，
+      // 否則原卷題幹裡夾著的 ⑤⑥⑦ 或 mojibake 標記會讓比對永遠失敗。
+      const bare = s => flat(String(s).replace(/[①-⑳]/g, ''));
+      if (wellFormed) {
+        // (a) 選項 A 只是題幹尾巴的複本（題幹沒缺，只有 A 被污染）
+        if (mismatch === 0 && keys.slice(1).every((k, i) => strip((q.options || {})[k]) === strip(rebuilt[i + 1]))
+            && bare(ps).includes(bare(q.options.A)) && flat(ps).startsWith(flat(q.question))) newStem = ps;
+        // (b) 題幹被切斷，前 m 個選項其實是題幹的後半段。
+        //     nursing 105030 #50：題幹只到「…有1/3」，A/B/C 是它的續段，
+        //     真正的四個選項全擠在 D 裡。要求「題幹＋前 m 個選項」剛好等於原卷題幹，
+        //     而且剩下的選項只剩圈號（沒有會被蓋掉的內容），才敢整題重建。
+        for (let m = 1; m <= 3 && !newStem; m++) {
+          const joined = String(q.question) + keys.slice(0, m).map(k => (q.options || {})[k]).join('');
+          if (bare(joined) !== bare(ps)) continue;
+          if (!keys.slice(m).every(k => !bare((q.options || {})[k]))) continue;
+          newStem = ps;
+        }
+      }
     }
     if (mismatch >= 0 && !newStem) {
       console.log('  ⚠ #' + q.number + ' 選項 ' + keys[mismatch] + ' 的非圈號文字對不上，略過');

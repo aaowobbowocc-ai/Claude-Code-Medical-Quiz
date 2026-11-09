@@ -16,6 +16,7 @@ const { IMAGE_REF } = require('./lib/image-ref')
 const DIR = path.join(__dirname, '..')
 const PUA = /[-]/
 const HEADER = /^(代號|頁次|座號|等別|類科名稱|科目名稱|考試時間|考試名稱)\s*[：:]/
+const INVIS = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F\u00AD\u200B-\u200D\u2060\uFEFF]/
 
 const files = fs.readdirSync(DIR).filter(f => /^questions(-.*)?\.json$/.test(f) && !/\.bak/.test(f))
 const tally = { total: 0, incomplete: {}, visible: {} }
@@ -61,6 +62,10 @@ for (const f of files) {
     else if (filled.slice(0, nOpt).some(x => !x)) bump('visible', '選項中間有空洞', exam)
     if (vals.some(v => HEADER.test(v))) bump('visible', '選項是頁首頁尾', exam)
     if (PUA.test(stem) || vals.some(v => PUA.test(v))) bump('visible', 'PUA 豆腐字', exam)
+    // 看不見的字元：題源的選項標記被當 cp1252 解過一次變成 C1 控制字元，黏在選項開頭。
+    // 畫面上完全看不出來，但字串比對會靜默失效（見 strip-invisible-chars.js）。
+    // PUA 那條規則抓不到它們 —— 2026-11-09 全站 805 題就是這樣躲了很久。
+    if (INVIS.test(stem) || vals.some(v => INVIS.test(v))) bump('visible', '看不見的控制字元', exam)
     // 複選題的答案是 "A,B,C"，那是正常資料（律師一試、部分公職考）。
     const ansRaw = String(q.answer ?? '').trim()
     const ansOk = /^[A-E](\s*[,、]\s*[A-E])*$/.test(ansRaw) || /^[○✕]/.test(ansRaw)
@@ -78,7 +83,20 @@ for (const f of files) {
     // 組合題「①②③」的圈號被 PDF 字型全壓成 ①（見 decode-circled-options.js）。
     // 這種壞法原本完全看不見：只有剛好壓成四個選項一模一樣時才會被「選項重複」抓到，
     // 壓成「①①①／①①②」就靜默錯下去。一個選項裡出現兩個以上同一個圈號就是壞的。
-    if (vals.some(v => /(①).*\1/.test(v))) bump('visible', '選項圈號塌掉', exam)
+    // ⚠️ 光看「同一個圈號出現兩次」會大量誤報，重複往往是題目本意：
+    //      dental2 101010 #69「①② 正確，且 ② 為 ① 之合理解釋」（正誤＋理由題型）
+    //      pt 110101 #21「①①①①①①→休息一分鐘→②②②②②②」（集團練習排程）
+    //      radiology 115090 #37「線性衰減係數：①＞②＞③＞④；CT值：①＞②＞③＞④」
+    //    真的塌掉的選項幾乎只剩圈號 —— 去掉圈號與連接詞後留不下兩個字以上的內容。
+    //    另外，排序題的選項會用滿題幹的 ①..K（只是順序不同、可以重複）：
+    //      radiology 115090 #55 線圈由內而外 ④③①②①（真空層出現兩次）
+    //      rt 101100 #73 PALS 去顫循環 ⑤②④③⑤②①
+    //    字型真的塌掉時，四個選項湊不滿題幹的 ①..K —— 用這點把排序題擇出來。
+    const kStem = Math.max(0, ...[...stem].filter(c => /[①-⑳]/.test(c)).map(c => c.codePointAt(0) - 0x245F))
+    const seen = new Set(vals.join('').match(/[①-⑳]/g) || [])
+    const covers = kStem > 0 && seen.size >= kStem
+    const bare = vals.map(v => v.replace(/[①-⑳\s、，和及僅]/g, ''))
+    if (!covers && vals.some((v, i) => /(①)[^①]*\1/.test(v) && bare[i].length <= 2)) bump('visible', '選項圈號塌掉', exam)
 
     // 看圖辨識題的題幹與選項本來就一模一樣，**差別在圖**：
     //   dental2 102020 卷二 #68/#69「下圖中有何種牙齒相關的病變？」答 A / D

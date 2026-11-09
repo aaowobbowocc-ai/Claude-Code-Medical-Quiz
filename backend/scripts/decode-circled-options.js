@@ -40,6 +40,14 @@ const arg = k => {
 const APPLY = process.argv.includes('--apply');
 const ALL = process.argv.includes('--all');
 const MONTAGE = process.argv.includes('--montage');
+// --pin g12=8,g5=6：人工看字形圖後把字形釘進跨卷字形庫。
+// 只在三個條件都成立時才寫：該字形目前是「沒釘死」的、要釘的數字在可行解集合內、
+// 而且會先把它單獨放大重繪一次（_tmp/pin-*.png）讓人覆核。釘完不套用，要再跑一次。
+const PIN = (arg('pin') || '').split(',').filter(Boolean).reduce((m, kv) => {
+  const mm = /^g(\d+)=(\d+)$/.exec(kv.trim());
+  if (!mm) { console.error('--pin 格式應為 g12=8'); process.exit(1); }
+  m[+mm[1]] = +mm[2]; return m;
+}, {});
 
 const FILE = e => (e === 'doctor1' ? 'questions.json' : 'questions-' + e + '.json');
 const CIRCLED = /[①-⑳]/;            // ①..⑳
@@ -278,7 +286,7 @@ function decodePaper(cases, clusters, refs) {
     confident[g] = feasible[g].size === 1 || lib.lookup(clusters[g].rep.sig) === best.map[g];
     if (!confident[g]) shaky.push('g' + g + '(' + [...feasible[g]].sort().join('/') + '?)');
   }
-  return { ok: true, map: best.map, confident: confident, shaky: shaky };
+  return { ok: true, map: best.map, confident: confident, shaky: shaky, feasible: feasible };
 }
 
 async function doPaper(exam, code, subject, targets, stats) {
@@ -347,6 +355,28 @@ async function doPaper(exam, code, subject, targets, stats) {
       const a = mk[k] + 1;
       const b = k === 3 ? (mk[4] !== undefined ? mk[4] : chars.length) : mk[k + 1];
       let run = chars.slice(a, b);
+      // 選項跨頁時會把下一頁的頁首（「代號：」「頁次：」）吃進來。任何選項都可能遇到。
+      // （字元索引要用陣列位置算，不能用 join 後的字串索引 —— 一個字元可能佔兩個 UTF-16 單位）
+      for (let i = 1; i < run.length; i++) {
+        if (!/[代頁座等類科考]/.test(run[i].c)) continue;
+        const t = run.slice(i, i + 8).map(c => c.c).join('');
+        if (/^(代號|頁次|座號|等別|類科名稱|科目名稱|考試時間|考試名稱)\s*[：:]/.test(t)) { run = run.slice(0, i); break; }
+      }
+      if (k === 3) {
+        // 最精確的判準：下一題的題號一定是本題 + 1。
+        // ⚠️ 原本只靠「數字後面接漢字」，碰到下一題以英文開頭就失效
+        //    （speech-therapist 105090 #15 的選項 D 吃進了「16 Lee Silverman Voice Treatment…」，
+        //     害整題被當成選項文字對不上而略過）。
+        const nxt = String(q.number + 1);
+        for (let i = 1; i < run.length; i++) {
+          if (!/\d/.test(run[i].c) || !/\s/.test(run[i - 1].c)) continue;
+          let jx = i; while (jx + 1 < run.length && /\d/.test(run[jx + 1].c)) jx++;
+          if (run.slice(i, jx + 1).map(c => c.c).join('') !== nxt) continue;
+          // 題號前面必須已經出現過圈號，否則可能只是選項裡的數字
+          if (!run.slice(0, i).some(c => c.g !== undefined)) continue;
+          run = run.slice(0, i); break;
+        }
+      }
       if (k === 3) {
         // 最後一個選項要在「下一題題號」處打住。
         // ⚠️ 題號與題幹之間、題號與前一個選項之間都可能有空白，
@@ -355,14 +385,16 @@ async function doPaper(exam, code, subject, targets, stats) {
           if (!/\d/.test(run[i].c)) continue;
           let jx = i; while (jx + 1 < run.length && /[\d\s]/.test(run[jx + 1].c)) jx++;
           const after = run.slice(jx).find(c => !/[\d\s]/.test(c.c));
-          if (after && /[一-鿿①-⑳]/.test(after.c)) { run = run.slice(0, i); break; }
+          // ⚠️ 下一題的題幹不一定以漢字開頭：social-worker 105090 #11 開頭是「，
+          //    漏掉全形標點就會把整段下一題當成選項 D。
+          if (after && /[一-鿿①-⑳「『（《〈【〔]/.test(after.c)) { run = run.slice(0, i); break; }
         }
       }
       runs.push(run);
       seqs.push(run.filter(c => c.g !== undefined).map(c => c.g));
     }
     if (seqs.some(s => !s.length)) { console.log('  ⚠ #' + q.number + ' 有選項不含圈號'); stats.skip++; continue; }
-    cases.push({ q: q, runs: runs, seqs: seqs, K: K });
+    cases.push({ q: q, runs: runs, seqs: seqs, K: K, stemRun: chars.slice(start, mk[0]) });
   }
 
   let changed = 0;
@@ -376,6 +408,33 @@ async function doPaper(exam, code, subject, targets, stats) {
   }
 
   if (r.shaky.length) console.log('  （沒釘死的字形：' + r.shaky.join(' ') + '，用到它們的題會略過）');
+  if (Object.keys(PIN).length) {
+    const ok = [];
+    for (const gs of Object.keys(PIN)) {
+      const g = +gs, d = PIN[g];
+      if (!clusters[g]) { console.log('  ✗ 這張卷沒有 g' + g); continue; }
+      if (r.confident[g]) { console.log('  ✗ g' + g + ' 本來就釘死了（=' + r.map[g] + '），不用人工釘'); continue; }
+      if (!r.feasible[g] || !r.feasible[g].has(d)) {
+        console.log('  ✗ g' + g + '=' + d + ' 不在可行解 (' + [...(r.feasible[g] || [])].sort().join('/') + ') 內，判讀有誤');
+        continue;
+      }
+      ok.push([g, d]);
+    }
+    if (ok.length) {
+      await writePinMontage(exam, code, subject, clusters, ok);
+      // 字形庫被污染過兩次，而且污染是靜默的（下一張卷才錯）。所以釘入分兩步：
+      // --pin 只出覆核圖，看過沒問題再加 --pin-confirm 才寫進庫。
+      if (!process.argv.includes('--pin-confirm')) {
+        console.log('  （只出覆核圖，沒有寫入。看過確認無誤後加 --pin-confirm）');
+        return false;
+      }
+      let n = 0;
+      for (const [g, d] of ok) if (lib.add(clusters[g].rep.sig, d, 'pin:' + exam + ' ' + code)) n++;
+      const dr = lib.save();
+      console.log('  （人工釘入 ' + n + ' 個字形' + (dr ? '，剔除衝突 ' + dr : '') + '；覆核圖已輸出，再跑一次才會套用）');
+    }
+    return false;
+  }
   // 只從**真的被採用**的題學字形。
   // ⚠️ 早期版本是「凡是釘死的字形都學」，結果 clinical-psychology 106030
   //    整題被略過（兩個字形沒釘死），卻還是把 4 個字形寫進庫，其中一個 ② 被標成 ①，
@@ -392,18 +451,37 @@ async function doPaper(exam, code, subject, targets, stats) {
     const strip = s => String(s).replace(/[①-⑳\s]/g, '');
     const keys = ['A', 'B', 'C', 'D'];
     const mismatch = keys.findIndex((k, i) => strip((q.options || {})[k]) !== strip(rebuilt[i]));
-    if (mismatch >= 0) {
+    /*
+     * 「題幹的項目清單掉進選項 A」—— 另一種壞法，跟圈號塌掉疊在一起。
+     *   speech-therapist 105090 #41：題幹只剩「…包含那些階段？」，
+     *   選項 A 是「①口腔準備期 ②口腔期 ③咽部期 ④食道期」，真正的 A 是「①②③④」。
+     * 只在四個前提都成立時連題幹一起重建，否則寧可略過：
+     *   1. 只有 A 對不上（BCD 的非圈號文字都對得上）
+     *   2. 題庫的 A 文字確實出現在**原卷的題幹區段**裡（證明它是題幹不是選項）
+     *   3. 原卷題幹以題庫題幹開頭（只補尾巴，不換題）
+     *   4. 原卷題幹的圈號是 ①②③…K 嚴格遞增不重複（證明題幹那套字型沒壞）
+     */
+    let newStem = null;
+    if (mismatch === 0 && keys.slice(1).every((k, i) => strip((q.options || {})[k]) === strip(rebuilt[i + 1]))) {
+      const ps = cs.stemRun.map(c => c.c).join('').replace(/\s+/g, ' ').trim();
+      const ds = [...ps].filter(c => CIRCLED.test(c)).map(c => c.codePointAt(0) - 0x245F);
+      const wellFormed = ds.length === K && ds.every((d, i) => d === i + 1);
+      // 兩邊都要用 strip（去圈號＋去空白）比，否則原卷題幹裡夾著的 ⑤⑥⑦ 會讓 includes 永遠失敗
+      if (strip(ps).includes(strip(q.options.A)) && flat(ps).startsWith(flat(q.question)) && wellFormed) newStem = ps;
+    }
+    if (mismatch >= 0 && !newStem) {
       console.log('  ⚠ #' + q.number + ' 選項 ' + keys[mismatch] + ' 的非圈號文字對不上，略過');
       console.log('      題庫:' + JSON.stringify(String((q.options || {})[keys[mismatch]]).slice(0, 40)) + '  原卷:' + JSON.stringify(rebuilt[mismatch].slice(0, 40)));
       stats.skip++; continue;
     }
     const before = keys.map(k => (q.options || {})[k]).join(' / ');
     const after = rebuilt.join(' / ');
+    if (newStem && flat(newStem) !== flat(q.question)) console.log('  #' + q.number + ' 題幹補回項目清單：…' + newStem.slice(Math.max(0, flat(q.question).length - 10)).slice(0, 60));
     seqs.flat().forEach(g => learnFrom.add(g));
-    if (before === after) { stats.nochange++; continue; }
+    if (before === after && !newStem) { stats.nochange++; continue; }
     if (MONTAGE) console.log("      群序: " + seqs.map(function(s,i){return "ABCD"[i]+"="+s.map(function(g){return "g"+g+"→"+r.map[g]}).join(" ")}).join("  "));
     console.log("  #" + q.number + '  ' + before + '   →   ' + after + '   (K=' + K + ')');
-    if (APPLY) keys.forEach((k, i) => { q.options[k] = rebuilt[i]; });
+    if (APPLY) { keys.forEach((k, i) => { q.options[k] = rebuilt[i]; }); if (newStem) q.question = newStem; }
     changed++; stats.fixed++;
   }
   let learned = 0;
@@ -414,6 +492,22 @@ async function doPaper(exam, code, subject, targets, stats) {
   // 保留原本的檔尾換行，否則每個題庫檔都會多一筆「\ No newline at end of file」的雜訊 diff
   if (APPLY && changed) fs.writeFileSync(p0, JSON.stringify(j, null, 2) + (rawText.endsWith('\n') ? '\n' : ''), 'utf8');
   return changed > 0;
+}
+
+// 釘字形前的覆核圖：只畫要釘的那幾個，原始解析度不縮，避免在幾十格的全卷圖上把 ⑥ 看成 ⑧。
+async function writePinMontage(exam, code, subject, clusters, pins) {
+  const mupdf = await import('mupdf');
+  const PAD = 10, CW = S + PAD * 2, W2 = CW * pins.length, H2 = S + PAD * 2;
+  const pm = new mupdf.Pixmap(mupdf.ColorSpace.DeviceGray, [0, 0, W2, H2], false);
+  const dst = pm.getPixels(); dst.fill(255);
+  pins.forEach(([g], i) => {
+    for (let y = 0; y < S; y++) for (let x = 0; x < S; x++) dst[(y + PAD) * W2 + i * CW + PAD + x] = clusters[g].rep.g[y * S + x];
+    for (let y = 0; y < H2; y++) dst[y * W2 + i * CW] = 0;
+  });
+  fs.mkdirSync(path.join(BK, '_tmp'), { recursive: true });
+  const f = path.join(BK, '_tmp', 'pin-' + exam + '-' + code + '-' + subject.replace(/[^\w一-鿿]/g, '') + '.png');
+  fs.writeFileSync(f, pm.asPNG());
+  console.log('  [覆核圖] ' + f + '  左到右：' + pins.map(([g, d]) => 'g' + g + '→' + d).join('  '));
 }
 
 async function writeMontage(exam, code, subject, clusters) {

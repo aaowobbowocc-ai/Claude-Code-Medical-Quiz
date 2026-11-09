@@ -48,7 +48,10 @@ for (const f of files) {
     if (!stem.trim()) { if (!hasImg) bump('visible', '題幹空白且無圖', exam) }
     // 題幹短不一定壞：「汽車油箱加油時：」就是完整的題目。
     // 真正壞的是短到不成句、選項也撐不住語意的（例如只剩 "lasted"）。
-    else if (skeleton(stem).length < 5 && !hasImg) bump('visible', '題幹殘缺(<5字)', exam)
+    // 收尾是冒號或問號就是完整的提問，不管多短 ——「膽囊位於：」「何謂主刑？」
+    // 都是好題。加這條之後 10 筆剩 5 筆，而剩下的「8 m / s ）」「有一 60」
+    // 確實是題幹被截斷。
+    else if (skeleton(stem).length < 5 && !hasImg && !/[：:？?。]\s*$/.test(stem)) bump('visible', '題幹殘缺(<5字)', exam)
     // 選項數量不是一律 4 個：駕照是非題只有 ○/✕ 兩個、部分選擇題只有三個。
     // 一律要求 ABCD 齊全會把 2,405 題正常的駕照題算成壞題。
     // 真正的壞是「可選的選項少於兩個」或「中間有洞」（A、C 有但 B 空）。

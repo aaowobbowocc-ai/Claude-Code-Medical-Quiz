@@ -90,7 +90,35 @@ const SUBJECT_ALIASES = {
 
 const readJson = (p) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return {}; } };
 const codeCache = readJson(CODE_CACHE);
-const resolveCache = readJson(RESOLVE_CACHE);
+
+/**
+ * 解析結果的磁碟快取。
+ *
+ * ⚠️ 連「對不到卷」的 null 也會寫進去——這是故意的（重試一次要重抓好幾份 PDF），
+ * 但它會踩一個很難查的坑：**在 SUBJECT_ALIASES 補了新別名之後，舊的 null 還在，
+ * 新別名永遠不會生效**。2026-11-10 補「鐵路運輸學大意 → 運輸學大意」時就是這樣，
+ * 加完別名測三次都還是 null，清掉 8 筆 null 才對到卷（命中率 1.0）。
+ *
+ * 所以把別名表的簽章一起存起來，別名一改就把所有 null 作廢（有值的留著，
+ * 那些是驗證過的結果，不受別名影響）。
+ */
+const ALIAS_SIG = require('crypto').createHash('sha1')
+  .update(JSON.stringify(SUBJECT_ALIASES, (_, v) => (v instanceof RegExp ? v.source : v)))
+  .digest('hex').slice(0, 12);
+const resolveCache = (() => {
+  const raw = readJson(RESOLVE_CACHE);
+  if (raw.__aliasSig === ALIAS_SIG) return raw;
+  let dropped = 0;
+  for (const k of Object.keys(raw)) if (raw[k] === null) { delete raw[k]; dropped++; }
+  raw.__aliasSig = ALIAS_SIG;
+  // 立刻落地，否則下一支腳本又會重算一次、重印一次訊息
+  try {
+    fs.mkdirSync(path.dirname(RESOLVE_CACHE), { recursive: true });
+    fs.writeFileSync(RESOLVE_CACHE, JSON.stringify(raw, null, 2), 'utf8');
+  } catch { /* 唯讀環境就算了，純快取 */ }
+  if (dropped) console.error(`（科目別名表變了，作廢 ${dropped} 筆「對不到卷」的快取）`);
+  return raw;
+})();
 
 /** 反查某場次所有 (c, s, 科目名)。結果寫進 _tmp/moex-codes.json 共用。 */
 function probeCodes(code, year) {
@@ -252,6 +280,7 @@ async function resolvePaper(p, opts = {}) {
   }
 
   resolveCache[key] = picked;
+  resolveCache.__aliasSig = ALIAS_SIG;
   fs.writeFileSync(RESOLVE_CACHE, JSON.stringify(resolveCache, null, 2), 'utf8');
   return picked;
 }

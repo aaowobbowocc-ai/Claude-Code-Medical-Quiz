@@ -12389,13 +12389,13 @@
       "A": "①④⑤",
       "B": "①②④",
       "C": "②③⑤",
-      "D": ""
+      "D": "①②④"
     },
     "answer": "A",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30000650,
-    "incomplete": "broken_options"
+    "duplicate_in_source": true
   },
   {
     "id": "speech_100140_p1_60",
@@ -157588,15 +157588,14 @@
     "number": 22,
     "question": "下列4位個案的構音表現，何者最適合使用區辨特徵治療法（distinctive feature therapy）介入？",
     "options": {
-      "A": "「烤肉」說成",
-      "B": "「烤肉」說成",
-      "C": "「烤肉」說成",
-      "D": "「烤肉」說成"
+      "A": "「烤肉」說成［ɑʊˇ ʐoʊˋ］",
+      "B": "「烤肉」說成［tɑʊˇ ʐoʊˋ］",
+      "C": "「烤肉」說成［kɑʊˇ ʐoʊˋ］",
+      "D": "「烤肉」說成［niˇ nuˋ］"
     },
     "answer": "C",
     "explanation": "",
-    "exam_type": "high",
-    "incomplete": "broken_options"
+    "exam_type": "high"
   },
   {
     "id": "speech_114100_s0505_23",

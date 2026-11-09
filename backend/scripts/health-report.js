@@ -76,8 +76,11 @@ for (const f of files) {
     // 這裡只做 NFC＋去空白，保留所有符號。
     // 選項是圖的題（中藥材辨識、血球圖、化學結構式），options 文字就是
     // 「(圖)(圖)(圖)(圖)」，前端靠 option_images 顯示。那不是重複，是正常資料。
+    // 還有一種：**原卷自己就印了兩個一模一樣的選項**（考選部的排版錯誤）。
+    // 逐字還原就一定會重複，改掉反而是竄改試題。核對過原卷的題標 duplicate_in_source，
+    // 跟「原卷就沒有圖」的 no_image_in_source 同一個用法。
     const optImg = q.option_images && Object.keys(q.option_images).length >= 4
-    const nonEmpty = optImg ? [] : vals.filter(v => v.trim()).map(v => normText(v))
+    const nonEmpty = (optImg || q.duplicate_in_source) ? [] : vals.filter(v => v.trim()).map(v => normText(v))
     if (nonEmpty.length >= 2 && new Set(nonEmpty).size < nonEmpty.length) bump('visible', '選項重複', exam)
     if (IMAGE_REF.test(stem) && !q.images && !q.image && !q.no_image_in_source) bump('visible', '提到圖但沒有圖', exam)
     // 組合題「①②③」的圈號被 PDF 字型全壓成 ①（見 decode-circled-options.js）。

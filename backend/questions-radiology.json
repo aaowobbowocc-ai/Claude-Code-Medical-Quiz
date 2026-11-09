@@ -100664,14 +100664,13 @@
       "number": 51,
       "question": " 當MRI取樣的頻寬變成2倍時，對訊雜比（signal-to-noise ratio）之影響為何？",
       "options": {
-        "A": "訊雜比變成  倍",
-        "B": "訊雜比變成  倍",
+        "A": "訊雜比變成√2倍",
+        "B": "訊雜比變成1/√2倍",
         "C": "訊雜比變成2倍",
         "D": "和訊雜比無關"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 118374,
@@ -155719,16 +155718,15 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 13,
-      "question": "若已知某位置的假體劑量為Dmed，對電子射束而言，在電子通量不變的情形下，其相對應等效位置的水中劑 量Dwater為下列何者？（：mean mass energy absorption coefficient，：average restricted mass collision stopping power，：mass attenuation coefficient，：average mass stopping power）",
+      "question": "若已知某位置的假體劑量為Dmed，對電子射束而言，在電子通量不變的情形下，其相對應等效位置的水中劑量Dwater為下列何者？（μ̄en/ρ：mean mass energy absorption coefficient，L̄/ρ：average restricted mass collision stopping power，μ/ρ：mass attenuation coefficient，S̄/ρ：average mass stopping power）",
       "options": {
-        "A": "Dwater＝Dmed×( /ρ)water/(/ρ)med",
-        "B": "Dwater＝Dmed×(/ρ)water/(/ρ)med",
-        "C": "Dwater＝Dmed×(µ/ρ)water/(µ/ρ)med",
-        "D": "water ＝D med ×(    /ρ) water /(    /ρ) med"
+        "A": "Dwater＝Dmed×(μ̄en/ρ)water/(μ̄en/ρ)med",
+        "B": "Dwater＝Dmed×(L̄/ρ)water/(L̄/ρ)med",
+        "C": "Dwater＝Dmed×(μ/ρ)water/(μ/ρ)med",
+        "D": "Dwater＝Dmed×(S̄/ρ)water/(S̄/ρ)med"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 6714,
@@ -185316,12 +185314,11 @@
       "options": {
         "A": "3倍",
         "B": "9倍",
-        "C": "倍",
-        "D": "倍"
+        "C": "1/√3倍",
+        "D": "1/√9倍"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 8170,

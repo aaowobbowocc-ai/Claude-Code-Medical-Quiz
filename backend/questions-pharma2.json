@@ -36288,14 +36288,13 @@
       "number": 59,
       "question": "一藥物分別經靜脈注射（IV）與口服（PO）給予受試者後，所得到的藥物血中濃度對時間曲 線下的面積分別為［AUC］ IV 及［AUC］ PO ，若所給予的劑量分別以Ｄ IV 與D PO 表示之，則該藥 的生體可用率為：",
       "options": {
-        "A": "此頁面無此題",
-        "B": "此頁面無此題",
-        "C": "此頁面無此題",
-        "D": "此頁面無此題"
+        "A": "（[AUC]IV／[AUC]PO）×（DIV／DPO）",
+        "B": "（[AUC]PO／[AUC]IV）×（DIV／DPO）",
+        "C": "（[AUC]IV／[AUC]PO）×（DPO／DIV）",
+        "D": "（[AUC]PO／[AUC]IV）×（DPO／DIV）"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 115023459,
@@ -36715,15 +36714,14 @@
       "number": 80,
       "question": "【題組情境】林小姐在第一次化學治療後第五天，體溫39°C，白血球（WBC）1100 cells / mm 3 ， polymorphonuclear leukocytes（seg）9%，bands 1%，lymphocytes 60%。則林小姐的絕 對嗜中性球數（absolute neutrophil count）為多少（cells / mm 3 ）？\n\n承上題，設phenobarbital符合一室模式的藥動學特性，估算在透析儀使用時（on）與關閉後 （off），phenobarbital的排除相半衰期各為多少h？",
       "options": {
-        "A": ";",
-        "B": ";",
-        "C": ";",
-        "D": ";"
+        "A": "t1/2,on＝115；t1/2,off＝8",
+        "B": "t1/2,on＝6.93；t1/2,off＝0.46",
+        "C": "t1/2,off＝115；t1/2,on＝8",
+        "D": "t1/2,off＝6.93；t1/2,on＝0.46"
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "第 79 題：已知phenobarbital之藥動參數如下： 今在一洗腎病患上，得到下列數據：引血流到血液透析儀之血流速率為350 mL/min。藥品濃 度分析顯示：phenobarbital進與出透析儀之濃度分別為：30及24 mg/L。請估算 phenobarbital在此血液透析儀的透析清除率（dialysance，dialysis clearance）？ 藥品 擬似分布體積（L） 清除率（mL/min） phenobarbital                50              5",
-      "incomplete": "broken_options"
+      "case_context": "第 79 題：已知phenobarbital之藥動參數如下： 今在一洗腎病患上，得到下列數據：引血流到血液透析儀之血流速率為350 mL/min。藥品濃 度分析顯示：phenobarbital進與出透析儀之濃度分別為：30及24 mg/L。請估算 phenobarbital在此血液透析儀的透析清除率（dialysance，dialysis clearance）？ 藥品 擬似分布體積（L） 清除率（mL/min） phenobarbital                50              5"
     },
     {
       "id": 115023480,

@@ -182434,16 +182434,15 @@
       "subject_name": "解剖與生理",
       "stage_id": 1,
       "number": 62,
-      "question": "關於肺泡通氣量（ventilation ）與灌流量（perfusion）的比值（/），下列敘述何者正 確？",
+      "question": "關於肺泡通氣量（ventilation）與灌流量（perfusion）的比值（V̇/Q̇），下列敘述何者正確？",
       "options": {
-        "A": "降低/會造成肺泡  增加",
-        "B": "降低/會造成肺泡  增加",
-        "C": "增加/會造成肺泡  降低",
-        "D": "增加/會造成肺泡  降低"
+        "A": "降低V̇/Q̇會造成肺泡PCO增加",
+        "B": "降低V̇/Q̇會造成肺泡PN2增加",
+        "C": "增加V̇/Q̇會造成肺泡PO2降低",
+        "D": "增加V̇/Q̇會造成肺泡PCO2降低"
       },
       "answer": "D",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 9109,
@@ -201721,16 +201720,15 @@
       "subject_name": "解剖與生理",
       "stage_id": 1,
       "number": 65,
-      "question": "關於吐氣時，  與  的變化，下列敘述何者正確？",
+      "question": "關於吐氣時，PCO2與PO2的變化，下列敘述何者正確？",
       "options": {
-        "A": "吐氣終了的  比剛開始吐氣的  低",
-        "B": "吐氣終了的  比剛開始吐氣的  低",
-        "C": "吐氣終了的  與剛開始吐氣的  相等",
-        "D": "吐氣終了的  與剛開始吐氣的  相等"
+        "A": "吐氣終了的PCO2比剛開始吐氣的PCO2低",
+        "B": "吐氣終了的PO2比剛開始吐氣的PO2低",
+        "C": "吐氣終了的PCO2與剛開始吐氣的PCO2相等",
+        "D": "吐氣終了的PO2與剛開始吐氣的PO2相等"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 10072,

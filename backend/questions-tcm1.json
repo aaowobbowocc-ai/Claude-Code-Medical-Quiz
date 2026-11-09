@@ -86270,16 +86270,16 @@
       "subject_name": "中醫基礎醫學(二)",
       "stage_id": 2,
       "number": 47,
-      "question": "下列何藥可用「炒黑」、炮製增強止血功能？",
+      "question": "下列何藥可用「炒黑」炮製增強止血功能？",
       "options": {
-        "A": "如圖所示",
-        "B": "如圖所示",
-        "C": "如圖所示",
-        "D": "如圖所示"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "broken_options"
+      "incomplete": "image_options"
     },
     {
       "id": 4592,
@@ -86371,16 +86371,16 @@
       "subject_name": "中醫基礎醫學(二)",
       "stage_id": 2,
       "number": 52,
-      "question": "下列何藥不具溫胃熱，止嘔吐之功效？",
+      "question": "下列何藥不具清胃熱、止嘔吐之功效？",
       "options": {
-        "A": "如圖所示",
-        "B": "如圖所示",
-        "C": "如圖所示",
-        "D": "如圖所示"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "broken_options"
+      "incomplete": "image_options"
     },
     {
       "id": 4597,
@@ -86452,16 +86452,15 @@
       "subject_name": "中醫基礎醫學(二)",
       "stage_id": 2,
       "number": 56,
-      "question": "下列藥物中，何者用於縮尿兒，常與山楂、烏藥、桑螵蛸等同用，可用於遺尿、小便頻數？",
+      "question": "下列藥物中，何者用於縮泉丸，常與山藥、烏藥、桑螵蛸等同用，可用於遺尿、小便頻數？",
       "options": {
         "A": "益智仁",
-        "B": "石蓮子",
-        "C": "石蓮子",
+        "B": "覆盆子",
+        "C": "五味子",
         "D": "肉豆蔻"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 4601,
@@ -86513,16 +86512,16 @@
       "subject_name": "中醫基礎醫學(二)",
       "stage_id": 2,
       "number": 59,
-      "question": "市場上常見的袖脾臟骨，補腎溫精的藥物中，為下列何者？",
+      "question": "市場上常見的補脾養胃、補腎澀精的藥物中，為下列何者？",
       "options": {
-        "A": "如圖所示",
-        "B": "如圖所示",
-        "C": "如圖所示",
-        "D": "如圖所示"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "B",
       "explanation": "",
-      "incomplete": "broken_options"
+      "incomplete": "image_options"
     },
     {
       "id": 4604,
@@ -86536,17 +86535,17 @@
       "number": 60,
       "question": "下列何種藥材用於汗出過多而致血氣耗散、身體倦怠？",
       "options": {
-        "A": "如圖所示",
-        "B": "如圖所示",
-        "C": "如圖所示",
-        "D": "如圖所示"
+        "A": "(圖)",
+        "B": "(圖)",
+        "C": "(圖)",
+        "D": "(圖)"
       },
       "answer": "D",
       "explanation": "",
       "images": [
         "/question-images/tcm1_4604_0.webp"
       ],
-      "incomplete": "broken_options"
+      "incomplete": "image_options"
     },
     {
       "id": 4605,
@@ -86907,16 +86906,15 @@
       "subject_name": "中醫基礎醫學(二)",
       "stage_id": 2,
       "number": 78,
-      "question": "雷丸用於蟲蛔蟲，宜以下列何種劑型最佳？",
+      "question": "雷丸用於驅蟲，宜以下列何種劑型最佳？",
       "options": {
         "A": "丸劑",
         "B": "散劑",
-        "C": "膏劑",
+        "C": "煎劑",
         "D": "膏劑"
       },
       "answer": "B",
-      "explanation": "",
-      "incomplete": "broken_options"
+      "explanation": ""
     },
     {
       "id": 4623,
@@ -93791,7 +93789,7 @@
         "C": "/question-images/tcm1_102110_0202_78_optC.webp",
         "D": "/question-images/tcm1_102110_0202_78_optD.webp"
       },
-      "incomplete": "broken_options"
+      "incomplete": "image_options"
     },
     {
       "id": "102110_0202_79",
@@ -93841,7 +93839,7 @@
         "C": "/question-images/tcm1_102110_0202_80_optC.webp",
         "D": "/question-images/tcm1_102110_0202_80_optD.webp"
       },
-      "incomplete": "broken_options"
+      "incomplete": "image_options"
     },
     {
       "id": "102110_0202_40",

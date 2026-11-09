@@ -4,7 +4,7 @@
     "label": "中醫師(一)",
     "scraped_at": "2026-04-14T11:34:33.968Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-10-26T16:27:23.713Z",
+    "last_updated": "2026-11-09T19:40:19.818Z",
     "total": 4955
   },
   "total": 5120,
@@ -93721,7 +93721,12 @@
       },
       "answer": "C",
       "explanation": "",
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/tcm1_102110_0202_60_optA.webp",
+        "B": "/question-images/tcm1_102110_0202_60_optB.webp",
+        "C": "/question-images/tcm1_102110_0202_60_optC.webp",
+        "D": "/question-images/tcm1_102110_0202_60_optD.webp"
+      }
     },
     {
       "id": "102110_0202_65",
@@ -93811,7 +93816,12 @@
       "answer": "D",
       "explanation": "",
       "image_url": "/question-images/tcm1_102110_p1_79_0.webp",
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/tcm1_102110_0202_79_optA.webp",
+        "B": "/question-images/tcm1_102110_0202_79_optB.webp",
+        "C": "/question-images/tcm1_102110_0202_79_optC.webp",
+        "D": "/question-images/tcm1_102110_0202_79_optD.webp"
+      }
     },
     {
       "id": "102110_0202_80",

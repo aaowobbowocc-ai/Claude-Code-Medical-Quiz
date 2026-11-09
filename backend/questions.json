@@ -8,7 +8,7 @@
     "description": "醫師國考第一階段文字題題庫（已過濾圖片題）",
     "scraped_at": "2026-04-01",
     "total_questions": 2000,
-    "last_updated": "2026-09-17T17:05:56.728Z"
+    "last_updated": "2026-11-09T19:43:01.997Z"
   },
   "total": 6359,
   "questions": [
@@ -29532,7 +29532,12 @@
       "original_answer": "D",
       "correction_note": "第77題一律給分（原答案 D）",
       "image_url": "/question-images/doctor1_114020_p0_77_0.webp",
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/doctor1_114020_1_77_voptA.webp",
+        "B": "/question-images/doctor1_114020_1_77_voptB.webp",
+        "C": "/question-images/doctor1_114020_1_77_voptC.webp",
+        "D": "/question-images/doctor1_114020_1_77_voptD.webp"
+      }
     },
     {
       "id": "114020_1_78",

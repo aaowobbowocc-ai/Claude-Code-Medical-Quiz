@@ -85,17 +85,41 @@ const MIN_DIM = 40
       }
 
       for (const q of list) {
-        const re = new RegExp(`^${q.number}[.．、]?$`)
+        // 題號有兩種版型：獨占一行的「78.」，與題幹同一行的「78 依《本草備要》…」。
+        // 只認前者的話，後者那種卷整張定位不到（中醫一階 102110、聽力師 101110 等），
+        // 而且更糟的是會「找到下下題的題號」當下界，範圍橫跨兩題 → 圖數變 8 張。
+        const re = new RegExp(`^${q.number}\\s*(?:[.．、]|\\s|$)`)
         let hit = null
         for (let p = 0; p < pages.length && !hit; p++) {
           const { lines } = pages[p]
           const i = lines.findIndex(l => re.test(l.t) && l.x < 70)
           if (i < 0) continue
-          const nx = lines.findIndex((l, m) => m > i && /^\d{1,3}[.．、]?$/.test(l.t) && l.x < 70)
+          const nx = lines.findIndex((l, m) => m > i && /^\d{1,3}\s*(?:[.．、]|\s|$)/.test(l.t) && l.x < 70)
           hit = { p, top: lines[i].y - 2, bot: nx > 0 ? lines[nx].y - 2 : 1e4 }
         }
         if (!hit) { skipped++; continue }
-        const within = pages[hit.p].imgs.filter(b => b.y >= hit.top && b.y < hit.bot)
+        let within = pages[hit.p].imgs.filter(b => b.y >= hit.top && b.y < hit.bot)
+        // 同一張照片在 PDF 裡可能被切成上下兩塊 image block（中醫一階 102110 #79、#60）。
+        // 不合併的話圖數變 5、8 張，整題被當成「對不上 4 張」跳過。
+        // 判準很緊：左緣與寬度都幾乎一樣，而且上一塊的底邊接著下一塊的頂邊。
+        within.sort((a, b) => a.x - b.x || a.y - b.y)
+        const merged = []
+        for (const b of within) {
+          const last = merged[merged.length - 1]
+          if (last && Math.abs(last.x - b.x) <= 3 && Math.abs(last.w - b.w) <= 3
+              && b.y >= last.y + last.h - 3 && b.y <= last.y + last.h + 3) {
+            last.h = b.y + b.h - last.y
+            continue
+          }
+          merged.push({ x: b.x, y: b.y, w: b.w, h: b.h })
+        }
+        // ⚠️ 選項直排時（化學結構式那種），相鄰兩個**不同選項**的圖也會上下相接，
+        //    一律合併會把 4 張併成 3 張，反而把本來切得出來的題弄壞。
+        //    所以原始張數剛好 4 就不要動，只有對不上時才試合併版。
+        if (within.length !== 4 && merged.length === 4) {
+          console.log(`  （#${q.number} 有圖被拆成兩塊，已合併 ${within.length}→4）`)
+          within = merged
+        }
         if (within.length !== 4) {
           console.log(`  ${exam} ${code} #${q.number}: 該範圍有 ${within.length} 張圖（需要剛好 4 張），跳過`)
           skipped++; continue

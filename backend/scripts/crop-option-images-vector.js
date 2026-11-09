@@ -42,7 +42,9 @@ const OUT = path.join(DIR, '..', 'frontend', 'public', 'question-images')
 const SCALE = 3
 const MIN_H = 40          // 選項區塊至少要這麼高才可能是圖
 // 選項標記基線之上要留的邊距（pt）。結構式的苯環頂端與上標會超出基線。
-const TOP_PAD = 6
+// 上緣留白。6pt 不夠：腺嘌呤環、苯環頂端還是會被削掉（doctor1 114020 #77）。
+// 設成接近一整行高，剛好讓這一張的上界貼齊上一張的下界（nxt.y - 2），不會互相吃到。
+const TOP_PAD = 14
 
 ;(async () => {
   const mupdf = await import('mupdf')
@@ -159,12 +161,11 @@ const TOP_PAD = 6
           const box = { left: 0, top: y0, width: p.w, height: Math.max(1, y1 - y0) }
           const st2 = await sharp(p.png).extract(box).stats()
           if (st2.channels.every(c => c.stdev < 3)) { bad = true; break }   // 全白＝切到空白
-          let cut
-          try {
-            cut = await sharp(p.png).extract(box).trim().webp({ quality: 85 }).toBuffer()
-          } catch {
-            cut = await sharp(p.png).extract(box).webp({ quality: 85 }).toBuffer()
-          }
+          // ⚠️ .extract().trim() 串在同一條 pipeline 裡會丟例外，被 catch 接走之後
+          //    寫出去的是**沒裁過**的整頁寬圖（1786px 寬、底下一大片空白）。
+          //    錯誤訊息長得像座標錯，其實座標是對的。分兩段做才會真的裁到。
+          let cut = await sharp(p.png).extract(box).webp({ quality: 85 }).toBuffer()
+          try { cut = await sharp(cut).trim().webp({ quality: 85 }).toBuffer() } catch { /* 全白才會失敗，上面已擋掉 */ }
           if (APPLY) fs.writeFileSync(path.join(OUT, name), cut)
         } catch (e) {
           console.log(`      ✖ #${q.number} ${'ABCD'[oi]}: ${e.message} (top=${y0} bottom=${y1} pixmap=${p.w}x${p.h})`)

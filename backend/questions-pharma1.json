@@ -20797,7 +20797,12 @@
       },
       "answer": "D",
       "explanation": "",
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/pharma1_115022160_optA.webp",
+        "B": "/question-images/pharma1_115022160_optB.webp",
+        "C": "/question-images/pharma1_115022160_optC.webp",
+        "D": "/question-images/pharma1_115022160_optD.webp"
+      }
     },
     {
       "id": 115022161,
@@ -40518,7 +40523,12 @@
       },
       "answer": "A",
       "explanation": "",
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/pharma1_115021938_optA.webp",
+        "B": "/question-images/pharma1_115021938_optB.webp",
+        "C": "/question-images/pharma1_115021938_optC.webp",
+        "D": "/question-images/pharma1_115021938_optD.webp"
+      }
     },
     {
       "id": 115021939,
@@ -75166,7 +75176,12 @@
       "answer": "A",
       "explanation": "",
       "vision_uncertain": false,
-      "incomplete": "image_options"
+      "option_images": {
+        "A": "/question-images/pharma1_115020831_optA.webp",
+        "B": "/question-images/pharma1_115020831_optB.webp",
+        "C": "/question-images/pharma1_115020831_optC.webp",
+        "D": "/question-images/pharma1_115020831_optD.webp"
+      }
     },
     {
       "id": 115020832,
@@ -154635,6 +154650,6 @@
   ],
   "total": 7673,
   "metadata": {
-    "last_updated": "2026-10-27T02:36:39.230Z"
+    "last_updated": "2026-11-09T19:40:18.671Z"
   }
 }

@@ -7221,7 +7221,8 @@
       "C": "於單一車道依道路線型行駛且無變換車道，無須使用方向燈"
     },
     "answer": "C",
-    "type": "choice"
+    "type": "choice",
+    "no_image_in_source": true
   },
   {
     "id": "moto_449",
@@ -7317,7 +7318,8 @@
       "C": "視同闖紅燈，應依處罰條例第53條舉發"
     },
     "answer": "B",
-    "type": "choice"
+    "type": "choice",
+    "no_image_in_source": true
   },
   {
     "id": "moto_455",

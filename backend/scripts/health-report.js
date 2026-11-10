@@ -22,6 +22,16 @@ const files = fs.readdirSync(DIR).filter(f => /^questions(-.*)?\.json$/.test(f) 
 const tally = { total: 0, incomplete: {}, visible: {} }
 const detail = {}
 
+// image_url 是相對於 frontend/public 的網址路徑（/signs/… 或 /question-images/…）。
+// 這些圖走 Vercel 不走 jsDelivr，所以檔案就在隔壁的 frontend/public 底下。
+const PUBLIC = path.join(DIR, '..', 'frontend', 'public')
+const existCache = new Map()
+const imgExists = url => {
+  const u = String(url).replace(/^\//, '').split('?')[0]
+  if (!existCache.has(u)) existCache.set(u, fs.existsSync(path.join(PUBLIC, u)))
+  return existCache.get(u)
+}
+
 const bump = (bucket, key, exam) => {
   tally[bucket][key] = (tally[bucket][key] || 0) + 1
   const d = (detail[key] = detail[key] || {})
@@ -46,13 +56,20 @@ for (const f of files) {
     // 標誌辨識題的題幹本來就是空的——題目就是那張標誌圖，選項是它的含義。
     // 駕照 127+100 題都是這種，把它們算成壞題會讓數字虛胖。有圖就不算。
     const hasImg = !!(q.image_url || q.image || (q.images && q.images.length))
+    const headStyle = /[一-鿿]\s*$/.test(stem) && Math.max(0, ...vals.map(v => skeleton(v).length)) >= 6
     if (!stem.trim()) { if (!hasImg) bump('visible', '題幹空白且無圖', exam) }
     // 題幹短不一定壞：「汽車油箱加油時：」就是完整的題目。
     // 真正壞的是短到不成句、選項也撐不住語意的（例如只剩 "lasted"）。
     // 收尾是冒號或問號就是完整的提問，不管多短 ——「膽囊位於：」「何謂主刑？」
     // 都是好題。加這條之後 10 筆剩 5 筆，而剩下的「8 m / s ）」「有一 60」
-    // 確實是題幹被截斷。
-    else if (skeleton(stem).length < 5 && !hasImg && !/[：:？?。]\s*$/.test(stem)) bump('visible', '題幹殘缺(<5字)', exam)
+    // 確實是題幹被截斷（兩筆都已修回原卷：ast 114 物理其實是 #6、radiology 106100 #3）。
+    //
+    // 2026-11-11 再收一次誤報：公路局題庫有一種「題幹是句子的開頭、由選項接完」的
+    // 寫法，機車法規 930 題裡有 379 題結尾沒有任何標點 ——
+    //   「機車」＋「不可以借用他車牌照行駛」、「騎車時應」＋「正視前方並注意左右來車」
+    // 短不代表壞。而剛修掉的那兩筆真截斷，收尾是 `）` 與數字，不是中文字。
+    // 判準：**收尾是中文字、而且選項撐得起語意**（最長的選項 ≥6 字）就當它是完整的。
+    else if (skeleton(stem).length < 5 && !hasImg && !headStyle && !/[：:？?。]\s*$/.test(stem)) bump('visible', '題幹殘缺(<5字)', exam)
     // 選項數量不是一律 4 個：駕照是非題只有 ○/✕ 兩個、部分選擇題只有三個。
     // 一律要求 ABCD 齊全會把 2,405 題正常的駕照題算成壞題。
     // 真正的壞是「可選的選項少於兩個」或「中間有洞」（A、C 有但 B 空）。
@@ -82,7 +99,13 @@ for (const f of files) {
     const optImg = q.option_images && Object.keys(q.option_images).length >= 4
     const nonEmpty = (optImg || q.duplicate_in_source) ? [] : vals.filter(v => v.trim()).map(v => normText(v))
     if (nonEmpty.length >= 2 && new Set(nonEmpty).size < nonEmpty.length) bump('visible', '選項重複', exam)
-    if (IMAGE_REF.test(stem) && !q.images && !q.image && !q.no_image_in_source) bump('visible', '提到圖但沒有圖', exam)
+    // ⚠️ 這條與下面的 imgKey 原本各自寫 `!q.images && !q.image`，**漏掉 image_url**——
+    //    而同一個檔案上面的 hasImg 是認得的。全站 1,104 題走 image_url（駕照標誌題、
+    //    醫事類含圖題；前端 QuestionImages 的 imageUrl prop 一直在顯示它），
+    //    於是 42 題明明有圖卻被報成「提到圖但沒有圖」。一律用 hasImg。
+    if (IMAGE_REF.test(stem) && !hasImg && !q.no_image_in_source) bump('visible', '提到圖但沒有圖', exam)
+    // 反過來的風險：image_url 變成「不必修也能閉嘴」的後門。所以檔案不在就照樣報。
+    if (q.image_url && !imgExists(q.image_url)) bump('visible', '圖片路徑指到不存在的檔', exam)
     // 組合題「①②③」的圈號被 PDF 字型全壓成 ①（見 decode-circled-options.js）。
     // 這種壞法原本完全看不見：只有剛好壓成四個選項一模一樣時才會被「選項重複」抓到，
     // 壓成「①①①／①①②」就靜默錯下去。一個選項裡出現兩個以上同一個圈號就是壞的。
@@ -106,7 +129,11 @@ for (const f of files) {
     //   rt 106020 #19/#20「下圖為何種通氣模式？」答 B / A
     // 兩題各有自己的圖，是兩道不同的題，不是重複。圖要一起進比對鍵，
     // 否則這類題會永遠掛在「同卷內完全重複」裡誤導人。
-    const imgKey = JSON.stringify(q.images || q.image || q.option_images || null)
+    // image_url 也要進鍵：駕照 car_sign_5/10/14/86 題幹都只有「狹路」、選項都是 ○/✕，
+    // 答案 A/B/B/B —— 差別整個在那張標誌圖（sign_005/010/014/086.png）。
+    // 危險感知題同理，差別在**影片**：moto_hazard_72/74 題幹與選項一字不差、
+    // 答案都是 B，看的是 4213 與 4215 兩支不同的影片。
+    const imgKey = JSON.stringify(q.images || q.image || q.image_url || q.video_url || q.option_images || null)
     const k = `${q.exam_code}|${q.subject}||${skeleton(stem)}||${vals.map(skeleton).join('|')}||${imgKey}`
     if (skeleton(stem).length >= 8) {
       if (dupKeys.has(k)) bump('visible', '同卷內完全重複', exam)

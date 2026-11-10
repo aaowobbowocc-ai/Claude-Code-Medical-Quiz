@@ -244040,14 +244040,17 @@
       "subject_name": "獸醫病理學",
       "stage_id": 1,
       "number": 40,
-      "question": "",
+      "question": "A、B 圖所呈現的牛隻肺臟病灶，何者錯誤？",
       "options": {
         "A": "此病灶主要發生在急性感染期",
         "B": "鄰近肺臟可能發生肺塌陷（atelectasis）",
         "C": "鏡下應可見病灶周圍有殘留的支氣管壁包圍",
         "D": "鏡下支氣管上皮可能發生鱗狀化生（squamous metaplasia）"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/vet_115090_40_0.webp"
+      ]
     },
     {
       "id": "115090_0_41",

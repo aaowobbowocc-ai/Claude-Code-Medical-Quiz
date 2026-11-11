@@ -57,7 +57,11 @@ for (const f of files) {
     // 駕照 127+100 題都是這種，把它們算成壞題會讓數字虛胖。有圖就不算。
     const hasImg = !!(q.image_url || q.image || (q.images && q.images.length))
     const headStyle = /[一-鿿]\s*$/.test(stem) && Math.max(0, ...vals.map(v => skeleton(v).length)) >= 6
-    if (!stem.trim()) { if (!hasImg) bump('visible', '題幹空白且無圖', exam) }
+    // 英文克漏字的題幹**本來就該是空的**：空格在共用引文裡，題目沒有自己的問句。
+    // 引文放在 case_context（前端 Practice.jsx 會單獨渲染一塊），裡面已經標了
+    // 「本題問第 N 格」。要求這種題有題幹，只會逼人去塞上一題的選項進去 ——
+    // repair-cloze-group-stems.js 清掉的正是那種假題幹。
+    if (!stem.trim()) { if (!hasImg && !q.case_context) bump('visible', '題幹空白且無圖', exam) }
     // 題幹短不一定壞：「汽車油箱加油時：」就是完整的題目。
     // 真正壞的是短到不成句、選項也撐不住語意的（例如只剩 "lasted"）。
     // 收尾是冒號或問號就是完整的提問，不管多短 ——「膽囊位於：」「何謂主刑？」

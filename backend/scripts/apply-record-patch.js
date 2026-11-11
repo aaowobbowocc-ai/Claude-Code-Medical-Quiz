@@ -63,7 +63,12 @@ for (const [file, items] of byFile) {
     }
 
     if (APPLY) {
-      for (const [k, v] of Object.entries(p.set)) q[k] = (k === 'options') ? { ...v } : v
+      // null 當成「刪掉這個欄位」。留著 incomplete: null 雖然也是 falsy、健康報告看得懂，
+      // 但題庫裡會多一堆沒有意義的 null 欄位，之後 grep 旗標時還要多想一層。
+      for (const [k, v] of Object.entries(p.set)) {
+        if (v === null) delete q[k]
+        else q[k] = (k === 'options') ? { ...v } : v
+      }
       dirty = true
     }
     changed++

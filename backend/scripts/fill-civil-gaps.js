@@ -318,8 +318,14 @@ function labelParse(lines) {
     if (!cur) continue;
     const optM = /^([A-D])[.、](.*)$/.exec(t);
     if (optM) { cur.options[optM[1]] = optM[2].trim(); cur.last = optM[1]; continue; }
-    if (cur.last) cur.options[cur.last] += t;
-    else cur.stem += t;
+    // 跨列接起來時要補空白，否則換行處的兩個英文字會黏成一個：
+    //   「…遠心牙根凹陷（distal root」＋「depression）？」→「rootdepression」
+    //   「…急性冠狀動脈症候群（acute」＋「coronary syndrome…」→「acutecoronary」
+    // 規則與上面的 appendRun 一致：**前後都是英數才補**，中文不能補
+    //   （中文是在詞中間斷行的，補了會變成「中文 字」）。
+    const glue = (acc, nxt) => (/[A-Za-z0-9]$/.test(acc) && /^[A-Za-z0-9]/.test(nxt)) ? acc + ' ' + nxt : acc + nxt;
+    if (cur.last) cur.options[cur.last] = glue(cur.options[cur.last], t);
+    else cur.stem = glue(cur.stem, t);
   }
   flush();
   return out;

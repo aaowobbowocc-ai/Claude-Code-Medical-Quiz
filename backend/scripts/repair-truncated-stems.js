@@ -18,6 +18,7 @@
 const fs=require('fs'),path=require('path');
 const { resolvePaper, fetchSheet }=require(path.join(__dirname,'..','scripts','lib','moex-paper-resolve'));
 const { pdfText, pdfQuestions }=require(path.join(__dirname,'..','scripts','lib','moex-pdf-parse'));
+const { paperQuestions }=require(path.join(__dirname,'fill-civil-gaps'));
 const { skeleton }=require(path.join(__dirname,'..','scripts','lib','moex-normalize'));
 
 const fsx=require('fs');
@@ -57,7 +58,19 @@ for(const f of fsx.readdirSync(path.join(__dirname,'..')).filter(x=>/^questions(
   if(q&&q.incomplete)continue;
   const tailCut=t.length<45&&/[0-9A-Za-z]$/.test(t)&&!/[？?。：:]$/.test(t);
   const headCut=unbalancedParen(t);
-  if(tailCut||headCut)TARGETS.push([f,exam,String(q.id)]);
+  // 第三種：**中文字結尾**的截斷。tailCut 只認英數結尾，所以
+  //   「下列為四種陶瓷-金屬界面可能的破」「下列何種免疫組織化學染色標記,可」
+  //   「有關脊髓損傷患者呼吸功能的問題與處置方式」（使用者 2026-11-11 回報）
+  // 一題都抓不到，而且它們常常超過 45 字，長度那關也擋掉。
+  // 改用語意訊號：**提問句式開頭、整句卻連一個問號或冒號都沒有**。
+  // 只看「結尾沒有標點」會撈到 5,830 筆，絕大多數是組合題
+  //   （「…下列何種組合正確?①耳蝸基底部較狹小,故較rigid,」問號在中間），
+  // 所以條件是整句都沒有，不是只看結尾。收斂到 156 筆。
+  // 駕照排除（題幹本來就是句子開頭、由選項接完），學測／分科排除（不是考選部卷）。
+  const askLead=/^(有關|關於|下列|以下|針對)/.test(t);
+  const noAsk=askLead&&!/[？?：:﹖]/.test(t)&&!/[。．！!]$/.test(t)
+    &&!['driver-car','driver-moto','gsat','ast'].includes(exam);
+  if(tailCut||headCut||noAsk)TARGETS.push([f,exam,String(q.id)]);
  }
 }
 console.log('掃到疑似截斷題幹', TARGETS.length, '題');
@@ -75,8 +88,15 @@ const banks={},cache={};
    const items=banks[f].a.filter(x=>x.exam_code===q.exam_code&&x.subject===q.subject);
    try{
     const p=await resolvePaper({exam,code:q.exam_code,subject:q.subject,year:String(q.exam_code).slice(0,3),items});
+    // spaced：fill-civil-gaps 的 paperQuestions 在接 run 時會依**間隙寬度**補空白
+    //   （見 appendRun：英數之間 >2px 補一個空白、換行處前後都是英數才補）。
+    //   pdfQuestions 沒有這一層，所以它吐出來的是「overactivebladder」「rootdepression」
+    //   這種黏在一起的英文 —— 拿去補題幹等於把一種壞法換成另一種。
+    //   題號與選項的配對仍然用 pdfQuestions（它的防呆與排序邏輯在下面用著），
+    //   只有**題幹文字**改取 spaced 的版本，而且要 skeleton 相同才敢用。
     cache[key]=p?{qs:await pdfQuestions(await fetchSheet('Q',q.exam_code,p.c,p.s)),
-                  txt:flat(await pdfText(await fetchSheet('Q',q.exam_code,p.c,p.s)))}:null;
+                  txt:flat(await pdfText(await fetchSheet('Q',q.exam_code,p.c,p.s))),
+                  spaced:await (async()=>{try{return await paperQuestions(q.exam_code,p.c,p.s)}catch{return null}})()}:null;
    }catch(e){cache[key]=null;}
   }
   const pc=cache[key];
@@ -139,14 +159,55 @@ const banks={},cache={};
    console.log('     原卷:',src.stem.replace(/\s+/g,' ').slice(0,56));
    continue;
   }
+  /*
+   * 上面那條「新的要包含舊的」守衛只看得到舊題幹那一段，**補回來的尾巴沒人驗**。
+   * 2026-11-11 實測 31 筆候選裡有 10 筆的尾巴自己就是壞的：
+   *   疊字（run 幾何重疊）：「下列有關carvedilol 之敘述，何者錯誤**誤**？」
+   *                        「下列何者不是多切面螺旋式CT 之優點**點**？」
+   *   英文黏在一起（換行處沒補空白）：「overactive**bladde**」「acute**coronar**」
+   *                        「occlusocervical**dimen**」「Aggregatibacter**actinomycet**」
+   * 寫進去等於拿一個壞法換另一個壞法。這兩種都只出現在新增的那一段，所以只驗尾巴。
+   * 判準刻意保守：中文字「立刻重複一次」在正常題幹幾乎不出現（「一一」「個個」
+   * 這類疊詞不會緊接在句尾標點前），英文連續 18 個字母以上則一定是黏起來的。
+   */
+  // ❗ 疊字常常**跨在接縫上**（舊題幹收尾「錯誤」、補回來的是「誤？」），
+  //    只看 added 會漏，要往前多拿一個字。
+  // ⚠️ 比對**一定要用原字串**，不能用 theirs/ours —— 那兩個是 skeleton()，
+  //    空白全被刪掉了，拿來看「英文有沒有黏在一起」會每一筆都中。
+  const rawOld=String(q.question), rawNew=String(src.stem)
+  const dupCJK=/([一-鿿])\1/.test(rawNew) && !/([一-鿿])\1/.test(rawOld)
+  // 16 個以上的連續英文字母：真正的單字到這個長度已經很少
+  //   （immunohistochemical 是 19，所以有誤擋；但誤擋只是少修一題，
+  //    寫進去則是把題幹弄壞，寧可偏安全那邊）。
+  // 「16 個字母」還是擋不住**兩個短字黏在一起**：rootdepression(14)、acutecoronary(13)、
+  // forClubhouse(12)、overactivebladder(17 擋得到但 occlusocervicaldimension 這種才是多數)。
+  // 成因是 pdfQuestions 在換行處沒補空白（見 reference_moex_parser_variants 第 7 條：
+  // 前後都是英數才補空白，中文不能補），而這支腳本拿的是它的輸出。
+  // 在那之前，**補回來的那一段只要多出英文字母就一律不寫** ——
+  // 純中文的尾巴（「，下列敘述何者錯誤？」）沒有這個問題，那些照修。
+  // 改抓 spaced 版的題幹。兩邊 skeleton 必須完全相同 —— 相同就表示
+  // 「字一個不差，只差空白」，那正是我們要的；不同就是兩支解析器看法不一致，不冒險。
+  const sp=pc.spaced && pc.spaced.get(+q.number)
+  const spacedStem=(sp && skeleton(sp.stem)===theirs) ? sp.stem : null
+  if(!spacedStem){
+   console.log('✗',f,id,'#'+q.number,'拿不到保留空白的題幹（'+(sp?'兩支解析器的題幹不一致':'spaced 解析不出這題')+'），拒絕寫入');
+   continue;
+  }
+  const latin=t=>(String(t).match(/[A-Za-z]/g)||[]).length
+  const glued=latin(spacedStem)>latin(rawOld)&&/[A-Za-z]{16,}/.test(spacedStem)&&!/[A-Za-z]{16,}/.test(rawOld)
+  if(dupCJK||glued){
+   console.log('✗',f,id,'#'+q.number,'補回來的那一段本身是壞的（'+(dupCJK?'疊字':'')+(dupCJK&&glued?'＋':'')+(glued?'英文黏在一起':'')+'），拒絕寫入');
+   console.log('     補回:',src.stem.replace(/\s+/g,' ').slice(Math.max(0,String(q.question).length-6),String(q.question).length+40));
+   continue;
+  }
   console.log('✓',f.replace('questions-','').replace('.json',''),q.exam_code,'#'+q.number);
   console.log('   舊題幹:',String(q.question).replace(/\s+/g,' ').slice(0,70));
-  console.log('   新題幹:',src.stem.replace(/\s+/g,' ').slice(0,70));
+  console.log('   新題幹:',spacedStem.replace(/\s+/g,' ').slice(0,70));
   console.log('   新選項:',opts.map(o=>String(o).replace(/\s+/g,' ').slice(0,26)).join(' | '));
   if(APPLY){
    // 寫入時做 NFC：原卷夾帶康熙部首/相容表意文字，直接寫進去會讓搜尋與比對靜默失效
    const nfc=t=>String(t).normalize('NFC').replace(/[⼀-⿟]/g,c=>String.fromCodePoint(c.codePointAt(0)-0x2F00+0x4E00>0?c.normalize('NFKC').codePointAt(0):c.codePointAt(0)));
-   q.question=nfc(src.stem);
+   q.question=nfc(spacedStem);
    q.options={A:nfc(opts[0]),B:nfc(opts[1]),C:nfc(opts[2]),D:nfc(opts[3])};
    if(q.incomplete&&/broken_options|truncated/.test(q.incomplete))delete q.incomplete;
    touched.add(f);

@@ -6899,7 +6899,9 @@
       "answer": "B",
       "explanation": "",
       "source": "svc.tabf.org.tw",
-      "incomplete": "missing_image"
+      "images": [
+        "/question-images/post-outdoor_111_geo_q48_fig.webp"
+      ]
     },
     {
       "id": "post-outdoor-111-geo-49",
@@ -6932,17 +6934,16 @@
       "subject_name": "臺灣自然及人文地理",
       "stage_id": 0,
       "number": 50,
-      "question": "【圖50】為臺灣四周離島的分布圖，其中「戊」島的居民，目前主要是下列哪一個族群？漢人",
+      "question": "【圖50】為臺灣四周離島的分布圖，其中「戊」島的居民，目前主要是下列哪一個族群？",
       "options": {
-        "A": "達悟族",
-        "B": "卑南族",
-        "C": "阿美族",
-        "D": "【圖50】"
+        "A": "漢人",
+        "B": "達悟族",
+        "C": "卑南族",
+        "D": "阿美族"
       },
       "answer": "A",
       "explanation": "",
       "source": "svc.tabf.org.tw",
-      "incomplete": "broken_options",
       "images": [
         "/question-images/post-outdoor_111_geo_q50_fig.webp"
       ]
@@ -7107,17 +7108,19 @@
       "subject_name": "臺灣自然及人文地理",
       "stage_id": 0,
       "number": 58,
-      "question": "【圖58】為臺灣北部、中部、南部、東部（未按照順序）四個區域的年降水量圖，請問南部地區最可能是圖中哪一選項？甲",
+      "question": "【圖58】為臺灣北部、中部、南部、東部（未按照順序）四個區域的年降水量圖，請問南部地區最可能是圖中哪一選項？",
       "options": {
-        "A": "乙",
-        "B": "丙",
-        "C": "丁",
-        "D": "【圖58】"
+        "A": "甲",
+        "B": "乙",
+        "C": "丙",
+        "D": "丁"
       },
       "answer": "D",
       "explanation": "",
       "source": "svc.tabf.org.tw",
-      "incomplete": "broken_options"
+      "images": [
+        "/question-images/post-outdoor_111_geo_q58_fig.webp"
+      ]
     },
     {
       "id": "post-outdoor-111-geo-59",
@@ -8683,17 +8686,16 @@
       "subject_name": "臺灣自然及人文地理",
       "stage_id": 0,
       "number": 23,
-      "question": "【圖23】是東亞地區某季節的地面天氣圖，根據氣壓和鋒面判斷，此時臺灣最可能是哪個季節？春季",
+      "question": "【圖23】是東亞地區某季節的地面天氣圖，根據氣壓和鋒面判斷，此時臺灣最可能是哪個季節？",
       "options": {
-        "A": "夏季",
-        "B": "秋季",
-        "C": "【圖23】",
+        "A": "春季",
+        "B": "夏季",
+        "C": "秋季",
         "D": "冬季"
       },
       "answer": "B",
       "explanation": "",
       "source": "svc.tabf.org.tw",
-      "incomplete": "broken_options",
       "images": [
         "/question-images/post-outdoor_112_geo_q23_fig.webp"
       ]
@@ -8813,17 +8815,16 @@
       "subject_name": "臺灣自然及人文地理",
       "stage_id": 0,
       "number": 29,
-      "question": "【圖29】為臺灣某地區的等高線地圖，若圖中甲~戊各地均有聚落發展，則何地的地名最可能有「崙」字出現？甲",
+      "question": "【圖29】為臺灣某地區的等高線地圖，若圖中甲~戊各地均有聚落發展，則何地的地名最可能有「崙」字出現？",
       "options": {
-        "A": "乙",
-        "B": "丙",
-        "C": "丁",
-        "D": "【圖29】"
+        "A": "甲",
+        "B": "乙",
+        "C": "丙",
+        "D": "丁"
       },
       "answer": "C",
       "explanation": "",
       "source": "svc.tabf.org.tw",
-      "incomplete": "broken_options",
       "images": [
         "/question-images/post-outdoor_112_geo_q29_fig.webp"
       ]
@@ -8859,17 +8860,19 @@
       "subject_name": "臺灣自然及人文地理",
       "stage_id": 0,
       "number": 31,
-      "question": "臺灣在日治時期曾有詩人寫了一首詩詞：「萬頃荒埔傍海邊，經營美利勝良田。本淵海尾衣多白，知是鹽埕大發錢」，【圖31】臺灣四個國家公園的標誌中，此詩詞最可能是在描述哪一個國家公園附近過去的地理景觀？甲",
+      "question": "臺灣在日治時期曾有詩人寫了一首詩詞：「萬頃荒埔傍海邊，經營美利勝良田。本淵海尾衣多白，知是鹽埕大發錢」，【圖31】臺灣四個國家公園的標誌中，此詩詞最可能是在描述哪一個國家公園附近過去的地理景觀？",
       "options": {
-        "A": "丙",
-        "B": "戊",
-        "C": "【圖31】",
+        "A": "甲",
+        "B": "丙",
+        "C": "戊",
         "D": "己"
       },
       "answer": "A",
       "explanation": "",
       "source": "svc.tabf.org.tw",
-      "incomplete": "broken_options"
+      "images": [
+        "/question-images/post-outdoor_112_geo_q31_fig.webp"
+      ]
     },
     {
       "id": "post-outdoor-112-geo-32",
@@ -8906,13 +8909,15 @@
       "options": {
         "A": "布農族",
         "B": "排灣族",
-        "C": "【圖33】",
-        "D": "魯凱族"
+        "C": "魯凱族",
+        "D": "泰雅族"
       },
       "answer": "A",
       "explanation": "",
       "source": "svc.tabf.org.tw",
-      "incomplete": "broken_options"
+      "images": [
+        "/question-images/post-outdoor_112_geo_q33_fig.webp"
+      ]
     },
     {
       "id": "post-outdoor-112-geo-34",
@@ -9034,17 +9039,19 @@
       "subject_name": "臺灣自然及人文地理",
       "stage_id": 0,
       "number": 39,
-      "question": "【圖39】為臺灣連續兩日單日累積降水量分布圖，當時臺灣最可能發生下列何種天氣現象？梅雨鋒面經過",
+      "question": "【圖39】為臺灣連續兩日單日累積降水量分布圖，當時臺灣最可能發生下列何種天氣現象？",
       "options": {
-        "A": "強烈高氣壓籠罩",
-        "B": "旺盛西南氣流移入",
-        "C": "颱風外圍環流影響",
-        "D": "【圖39】"
+        "A": "梅雨鋒面經過",
+        "B": "強烈高氣壓籠罩",
+        "C": "旺盛西南氣流移入",
+        "D": "颱風外圍環流影響"
       },
       "answer": "D",
       "explanation": "",
       "source": "svc.tabf.org.tw",
-      "incomplete": "broken_options"
+      "images": [
+        "/question-images/post-outdoor_112_geo_q39_fig.webp"
+      ]
     },
     {
       "id": "post-outdoor-112-geo-40",
@@ -9104,13 +9111,12 @@
       "options": {
         "A": "八堡圳",
         "B": "瑠公圳",
-        "C": "【圖41】",
-        "D": "曹公圳"
+        "C": "曹公圳",
+        "D": "嘉南大圳"
       },
       "answer": "B",
       "explanation": "",
-      "source": "svc.tabf.org.tw",
-      "incomplete": "broken_options"
+      "source": "svc.tabf.org.tw"
     },
     {
       "id": "post-outdoor-112-geo-43",
@@ -9227,17 +9233,16 @@
       "subject_name": "臺灣自然及人文地理",
       "stage_id": 0,
       "number": 48,
-      "question": "【圖48】呈現的地景為海岸邊的石滬，其景觀最可能出現在臺灣哪一縣市？連江縣",
+      "question": "【圖48】呈現的地景為海岸邊的石滬，其景觀最可能出現在臺灣哪一縣市？",
       "options": {
-        "A": "臺南市",
-        "B": "澎湖縣",
-        "C": "【圖48】",
+        "A": "連江縣",
+        "B": "臺南市",
+        "C": "澎湖縣",
         "D": "臺東縣"
       },
       "answer": "C",
       "explanation": "",
       "source": "svc.tabf.org.tw",
-      "incomplete": "broken_options",
       "images": [
         "/question-images/post-outdoor_112_geo_q48_fig.webp"
       ]
@@ -9484,17 +9489,19 @@
       "subject_name": "臺灣自然及人文地理",
       "stage_id": 0,
       "number": 60,
-      "question": "【圖60】為臺灣本島沿著北迴歸線從西至東的地形橫剖面圖，依實際的自然與地理分析，下列何者正確？甲地附近海岸屬於岬灣海岸",
+      "question": "【圖60】為臺灣本島沿著北迴歸線從西至東的地形橫剖面圖，依實際的自然與地理分析，下列何者正確？",
       "options": {
-        "A": "乙地位於嘉南平原",
-        "B": "戊為海岸山脈",
-        "C": "庚為雪山山脈",
-        "D": "【圖60】"
+        "A": "甲地附近海岸屬於岬灣海岸",
+        "B": "乙地位於嘉南平原",
+        "C": "戊為海岸山脈",
+        "D": "庚為雪山山脈"
       },
       "answer": "B",
       "explanation": "",
       "source": "svc.tabf.org.tw",
-      "incomplete": "broken_options"
+      "images": [
+        "/question-images/post-outdoor_112_geo_q60_fig.webp"
+      ]
     },
     {
       "id": "post-outdoor-112-law-1",

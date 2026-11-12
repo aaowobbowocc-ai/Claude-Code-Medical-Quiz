@@ -120,7 +120,10 @@ function jobs() {
       const pp = pages[a.pg];
       const next = anchors.filter(x => x.pg === a.pg && colOf(x.x) === col && x.y > a.y + 4)
         .sort((x, y) => x.y - y.y)[0];
-      const yTop = a.y - 2, yBot = next ? next.y - 4 : 1e9;
+      // 圖的上緣常比題號那一行還高一點（圖與題幹第一行切齊、甚至在它上面）：
+      // 外勤 112 地理 #33 的分布圖在 y17、題號行在 y28，用 a.y - 2 當上界整張漏掉。
+      // 往上放寬 24pt；再鬆就會碰到上一題的東西。
+      const yTop = a.y - 24, yBot = next ? next.y - 4 : 1e9;
       const minX = colLeft(col) + SIDE_GAP;
       const right = col === 0 ? split - 10 : pp.width - 10;
 
@@ -135,12 +138,30 @@ function jobs() {
       const isOption = t => /^[\u0080-\u009f-①-⑳Ⓐ-Ⓓ]|^[（(]?[A-EＡ-Ｅ][）).、]/.test(t);
 
       const boxes = [];
-      for (const g of pp.figs)
-        if (g.y >= yTop && g.y + g.h <= yBot + 4 && g.x >= minX && g.x < right)
-          boxes.push({ x: g.x, y: g.y, w: g.w, h: g.h });
-      for (const l of pp.lines)
-        if (l.y >= yTop && l.y <= yBot && l.x >= minX && l.x < right && !isOption(l.t))
-          boxes.push({ x: l.x, y: l.y, w: l.w, h: l.h });
+      /*
+       * 先找圖說。郵局卷的圖說就是「【圖39】」這種一行，而且**編號等於題號**，
+       * 所以它比「排在選項右邊」這個幾何條件可靠得多：
+       *   外勤 112 地理 #39 的圖在 x288，離欄位左緣 268 < SIDE_GAP(300)，
+       *   幾何那條路差 12pt 就整張漏掉；圖說那條路一次就對上。
+       * 圖說有時印在圖的下緣**裡面**（y 落在圖塊的範圍內），所以兩者要取聯集。
+       */
+      const capRe = new RegExp('^【\\s*[圖表]\\s*' + (+q.number) + '\\s*】\\s*$');
+      const cap = pp.lines.find(l => l.y >= yTop && l.y <= yBot
+        && colOf(l.x) === col && capRe.test(l.t));
+      if (cap) {
+        boxes.push({ x: cap.x, y: cap.y, w: cap.w, h: cap.h || 12 });
+        for (const g of pp.figs)
+          if (g.y >= yTop && g.y <= yBot + 4 && colOf(g.x) === col)
+            boxes.push({ x: g.x, y: g.y, w: g.w, h: g.h });
+      }
+      if (!boxes.length) {
+        for (const g of pp.figs)
+          if (g.y >= yTop && g.y + g.h <= yBot + 4 && g.x >= minX && g.x < right)
+            boxes.push({ x: g.x, y: g.y, w: g.w, h: g.h });
+        for (const l of pp.lines)
+          if (l.y >= yTop && l.y <= yBot && l.x >= minX && l.x < right && !isOption(l.t))
+            boxes.push({ x: l.x, y: l.y, w: l.w, h: l.h });
+      }
       if (!boxes.length) { bump('選項右邊沒有圖也沒有表'); continue; }
 
       let x0 = Math.min(...boxes.map(b => b.x)), x1 = Math.max(...boxes.map(b => b.x + b.w));

@@ -13,7 +13,11 @@
  * 用 y 分行 x 分欄重組 4 個選項。
  */
 
-const PUA_RE = /[-�]/g
+const PUA_RE = /[--�]/g
+// ↑ 加上 C1 控制字元 U+0080-U+009F：郵局卷的選項標記（ⒶⒷⒸⒹ）在字型裡的碼位被當 cp1252 解
+// 成了看不見的控制字元，而且每個自己佔一行—— parser 會把「U+0083」本身當成選項 A
+// （內勤 111 企管 #9 的 A/C 就是長度 1 的控制字元）。清掉之後該行變空行被跳過，
+// 真正的四個選項才走到 splitByColumn。
 const BULLETS = '\\s　•·‧∙●◦○▲△■□◆◇※☆★'
 const HEAD_BULLET_RE = new RegExp(`^[${BULLETS}]+`)
 const TAIL_BULLET_RE = new RegExp(`[${BULLETS}]+$`)
@@ -33,10 +37,18 @@ function clean(s) {
 }
 
 // 【X】題號. ：擷取答案與題號。X 可為「4」「1,2,3,4」「1或2」「本題送分」
-const ANCHOR_RE = /^【\s*([^】]{1,16})\s*】\s*(\d{1,3})\s*[.．、]?\s*(.*)$/
+// ↑ 標記內容原本限 16 字，但官方卷有更長的書法：
+//   【答2 或3 皆給分，未作答者不予計分】34.……   （內勤 114 企管、112 法規）
+// 超長的標記不被認得 → 整題沒被切出來，而是被前一題吞掉
+//   （post-indoor-112-law-51 的題幹裡面藏著 #52 整題）。所以放寬到 40 字，
+// 由 interpretMarker() 負責擋掉「【表53】」「【圖 5】」這種非答案標記。
+const ANCHOR_RE = /^【\s*([^】]{1,40})\s*】\s*(\d{1,3})\s*[.．、]?\s*(.*)$/
 
 // 解讀【】內容 → { answer, disputed }；answer 為 'A'-'D'
 function interpretMarker(raw) {
+  // 【表53】【圖 5】【第16-20 題為題組】—— 長得像答案標記卻不是。
+  // 不擋的話【表53】裡的 3 會被當成答案 C。
+  if (/[表圖題組第]/.test(raw)) return null
   const nums = (raw.match(/[1-4]/g) || []).map(Number)
   const hasGive = /送分|給分|一律|皆可/.test(raw)
   if (nums.length === 0) return null                       // 非答案標記
@@ -47,6 +59,25 @@ function interpretMarker(raw) {
   return { answer: toLetter(nums[0]), disputed: false }
 }
 
+/**
+ * 試卷的頁眉、注意事項、分段指示 —— 這些行夾在題與題之間，
+ * 會被 collectOptions() 當成一個選項：
+ *   外勤 111 地理 #40 的選項 D 被寫成「第二部分：第41-60 題（每題2 分）」，
+ *   真正的 C、D 兩個諺語又被擠進同一個選項。
+ * 全卷 60 題裡只有 #40 壞 —— 因為「第一部分／第二部分」的分界就在第 40 題後面。
+ *
+ * 判準用的是試務術語（答案卡、入場通知書、監試人員、倒扣…）而不是版面座標，
+ * 因為這些字在選項裡幾乎不可能出現。❗ 但題錨本身有「【…不予計分】」這種
+ * 寫法（爭議題），所以下面套的時候要先排除 ANCHOR_RE 對上的行。
+ */
+const FURNITURE_RE = new RegExp([
+  '請接續背面', '入場通知書', '答案卡', '答案卷', '監試人員', '不倒扣',
+  '2B\s*鉛筆', '與答案無關之任何文字',
+  '^第[一二三四五六七八九十]+部分[：:]', '^注意[：:]', '^本試卷[一為]',
+  '^【第\s*\d+\s*[-–~至]\s*\d+\s*題為題組】$',
+  '^[壹貳參肆伍]、[^。]{0,12}【[^】]*題',
+  '^[一二三四五六七八九十]、[^。]{0,12}【[^】]*題',
+].join('|'))
 // mupdf：取每頁的 text lines（含座標）
 async function loadPages(buf) {
   const mupdf = await import('mupdf')
@@ -122,6 +153,10 @@ function splitByColumn(part, colXs) {
   for (let d = 1; d <= 14; d++) for (const j of [idx - d, idx + d]) {
     const s = score(j); if (s > bs) { bs = s; best = j }
   }
+  // 切点必須是真的断點（空白或收尾標點）。不要這條的話，一個好好的中文選項
+  // 會被按 x 預估的位置斬成兩半：「是指能將抽象或複」＋「雜的情境予以概念化的能力」
+  // （內勤 111 企管 #9）。colXs 裡夾有表格的欄位 x，所以 span 不能當唯一依據。
+  if (bs < 80) return null
   const left = clean(text.slice(0, best)), right = clean(text.slice(best))
   if (!left || !right) return null
   return [
@@ -288,7 +323,8 @@ async function parsePostPdf(buf) {
     // 同頁同欄、y 在 a 之後的內容行
     let content = lines.filter(ln =>
       colOf(ln.x) === aCol && ln.y > a.y + 2 &&
-      !ln.text.match(ANCHOR_RE)
+      !ln.text.match(ANCHOR_RE) &&
+      !FURNITURE_RE.test(ln.text)        // 頁眉/注意事項/分段指示不是選項
     )
     // 結束邊界
     if (next && next.pi === a.pi && colOf(next.x) === aCol) {

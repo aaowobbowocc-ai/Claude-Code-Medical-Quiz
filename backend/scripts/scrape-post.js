@@ -55,7 +55,7 @@ function classifySanmin(rel, subject) {
 function classifyOfficial(p) {
   if (!p.isMcqPaper) return null
   const subj = p.subject || ''
-  if (/國文|英文|臺灣自然|人文地理/.test(subj)) return null            // 國文英文、臺灣地理另計
+  if (/國文|英文/.test(subj)) return null                                // 國文英文另計
   if (p.rank === '專業職二內勤') {
     if (!/櫃台業務/.test(p.category || '')) return null                 // 跳過「櫃台(資訊)」特殊類科
     if (/企業管理/.test(subj)) return { exam: 'post-indoor', tag: 'post_mgmt', subjectName: subj }
@@ -64,11 +64,22 @@ function classifyOfficial(p) {
   if (p.rank === '專業職二外勤') {
     if (!/郵遞業務/.test(p.category || '')) return null
     if (/郵政法規/.test(subj)) return { exam: 'post-outdoor', tag: 'post_law', subjectName: subj }
+    // 外勤的第二專業科目後來從企業管理大意換成臺灣自然及人文地理（111 年起官方卷都有）。
+    // 原本這裡把它當「另計」跳過，結果 107/111/112/114 外勤只剩郵政法一卷，模考那一卷永遠 0 題。
+    if (/臺灣自然|人文地理/.test(subj)) return { exam: 'post-outdoor', tag: 'post_geo', subjectName: subj }
   }
   return null
 }
 
-const SHORT = { post_mgmt: 'mgmt', post_law: 'law' }
+const SHORT = { post_mgmt: 'mgmt', post_law: 'law', post_geo: 'geo' }
+
+// subject 要寫**該卷的名字**，不能寫「專業科目」—— 前端 getRandomPaper 是
+// q.subject === paper.subject，寫成通稱的話每一卷都撈到 0 題，模考直接壞掉
+//（fix-post-subject-field.js 修過一次 1,098 題，別讓重跑爬蟲把它洗回去）。
+const PAPER_NAME = {
+  'post-indoor': { post_mgmt: '企業管理大意', post_law: '郵政三法大意' },
+  'post-outdoor': { post_mgmt: '企業管理大意', post_law: '郵政法大意及交通安全常識', post_geo: '臺灣自然及人文地理' },
+}
 
 function toQuestion(exam, tag, year, subjectName, source, q) {
   return {
@@ -76,7 +87,7 @@ function toQuestion(exam, tag, year, subjectName, source, q) {
     roc_year: year,
     session: '第一次',
     exam_code: `post-${year}`,
-    subject: '專業科目',
+    subject: PAPER_NAME[exam][tag],
     subject_tag: tag,
     subject_name: subjectName,
     stage_id: 0,
@@ -106,6 +117,13 @@ async function main() {
 
   // ── 來源 A：三民 104/105/107 ──
   console.log('\n── 來源 A：三民輔考 ──')
+  // ⚠️ 這支是**整檔覆寫**：跑完會把 questions-post-*.json 整個重建，後續的修題腳本
+  // （repair-post-by-parser / repair-post-furniture-shift / add-post-geography）改過的部分會被洗掉。
+  // 要補新年度請先確定兩個索引都在，跑完再把修題腳本依序重跑一遍。
+  if (!fs.existsSync(CLASSIFIED)) {
+    console.log(`  ✗ 找不到 ${CLASSIFIED}，先跑 probe-post.js + _classify-post.js`)
+    process.exit(1)
+  }
   const { rows } = JSON.parse(fs.readFileSync(CLASSIFIED, 'utf-8'))
   for (const p of rows.filter(r => r.rank === '專業職二' && r.verdict === '選擇題')) {
     const targets = classifySanmin(p.rel, p.subject)

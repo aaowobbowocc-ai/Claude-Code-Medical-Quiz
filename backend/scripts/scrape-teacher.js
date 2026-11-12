@@ -413,4 +413,8 @@ async function main() {
   console.table(report)
 }
 
-main().catch(e => { console.error(e); process.exit(1) })
+// 被 require 時不要自己跑起來 —— extract-teacher-figures.js 要借用 fetchListing
+// 去拿同一份 PDF（別再抄一份 ASP.NET postback 流程）。
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1) })
+
+module.exports = { fetchListing, request, EXAMS, SUBJECTS, PAGE }

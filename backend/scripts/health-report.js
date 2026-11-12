@@ -55,7 +55,10 @@ for (const f of files) {
 
     // 標誌辨識題的題幹本來就是空的——題目就是那張標誌圖，選項是它的含義。
     // 駕照 127+100 題都是這種，把它們算成壞題會讓數字虛胖。有圖就不算。
-    const hasImg = !!(q.image_url || q.image || (q.images && q.images.length))
+    // option_images 也算有圖：選項本身就是圖的題（「下列何種心電圖…」「下列何圖中之病症」），
+    // 使用者看得到那四張圖，不該被報成「提到圖但沒有圖」。
+    const hasImg = !!(q.image_url || q.image || (q.images && q.images.length)
+      || (q.option_images && Object.keys(q.option_images).length >= 4))
     const headStyle = /[一-鿿]\s*$/.test(stem) && Math.max(0, ...vals.map(v => skeleton(v).length)) >= 6
     // 英文克漏字的題幹**本來就該是空的**：空格在共用引文裡，題目沒有自己的問句。
     // 引文放在 case_context（前端 Practice.jsx 會單獨渲染一塊），裡面已經標了

@@ -8451,8 +8451,11 @@
       "answer": "C",
       "explanation": "",
       "source": "svc.tabf.org.tw",
-      "incomplete": "missing_image",
-      "incomplete_note": "選項在原卷只是 A/B/C/D，四個備選方案的成本資料在【表2】裡，缺表無法作答"
+      "incomplete": "broken_options",
+      "incomplete_note": "選項在原卷只是 A/B/C/D，四個備選方案的成本資料在【表2】裡，缺表無法作答",
+      "images": [
+        "/question-images/post-indoor_111_mgmt_q2_fig.webp"
+      ]
     },
     {
       "id": "post-indoor-111-mgmt-3",
@@ -8515,7 +8518,10 @@
       },
       "answer": "C",
       "explanation": "",
-      "source": "svc.tabf.org.tw"
+      "source": "svc.tabf.org.tw",
+      "images": [
+        "/question-images/post-indoor_111_mgmt_q5_fig.webp"
+      ]
     },
     {
       "id": "post-indoor-111-mgmt-6",

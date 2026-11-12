@@ -17743,7 +17743,7 @@
       "number": 79,
       "question": "抗生素azaserine 可抑制嘌呤的形成，其主要作用機制為下列何者？",
       "options": {
-        "A": "抑制N",
+        "A": "抑制N10-formyl tetrahydrofolate 合成",
         "B": "抑制5-phospho-α-D-ribosyl-pyrophosphate（PRPP）合成",
         "C": "抑制ribose 5-phosphate 合成以降低核苷酸形成",
         "D": "抑制glutamine 作為嘌呤核苷酸合成原料"
@@ -21388,7 +21388,7 @@
       "subject_name": "生理學",
       "stage_id": 2,
       "number": 62,
-      "question": "某健康者在海平面呼吸一般空氣，正常情況下，比較各處氧分壓（①吸入的氣體（inspired air，在鼻腔中測量） ②肺泡內氣體（alveolar air） ③呼出的氣體（expired air，在鼻腔中測量）",
+      "question": "某健康者在海平面呼吸一般空氣，正常情況下，比較各處氧分壓（ ）的大小關係，下列排序何者正確？�①吸入的氣體（inspired air，在鼻腔中測量）　②肺泡內氣體（alveolar air）　③呼出的氣體（expired air，在鼻腔中測量）",
       "options": {
         "A": "①＞②＞③",
         "B": "①＞③＞②",
@@ -36517,8 +36517,8 @@
       "options": {
         "A": "孕婦的年齡不影響染色體21 三倍體（trisomy 21）的發生率",
         "B": "性染色體三倍症（trisomy of sex chromosomes），常在青春期時才發現",
-        "C": "透納氏症（Turner syndrome）多為男",
-        "D": "具有染色體四倍體（tetrasomy）的胎"
+        "C": "透納氏症（Turner syndrome）多為男性，且具有性腺及第二性徵的發育",
+        "D": "具有染色體四倍體（tetrasomy）的胎兒不易流產，仍可足月生產"
       },
       "answer": "B",
       "explanation": ""
@@ -37098,7 +37098,7 @@
         "A": "H+-K+-ATPase 位於細胞膜的底側面（basolateral membrane）",
         "B": "anion exchanger 位於細胞膜的底側面（basolateral membrane）",
         "C": "cystic fibrosis transmembrane conductance regulator（CFTR）位於細胞膜的底側面（basolateral membrane）",
-        "D": "peptide transporter 1（PepT1）位於細胞膜的頂端面（apical membrane）"
+        "D": "peptide transporter 1（PepT1）位於細胞膜的的頂端面（apical membrane）"
       },
       "answer": "B",
       "explanation": ""
@@ -41256,10 +41256,10 @@
       "number": 75,
       "question": "下列何者數值越大，表示酵素之催化效率越佳？",
       "options": {
-        "A": "1 /k",
+        "A": "1 /kcat",
         "B": "K M",
         "C": "at",
-        "D": "K M / k"
+        "D": "K M / kcat"
       },
       "answer": "C",
       "explanation": ""
@@ -41394,7 +41394,7 @@
       "subject_name": "生物化學",
       "stage_id": 3,
       "number": 82,
-      "question": "大腸桿菌進行同源性重組（homologous recombination）時，下列何種蛋白質會包覆於此過程中產生之單股",
+      "question": "大腸桿菌進行同源性重組（homologous recombination）時，下列何種蛋白質會包覆於此過程中產生之單股DNA上，形成螺旋的細絲（helical filaments）結構？",
       "options": {
         "A": "DNA polymerase",
         "B": "RuvC",
@@ -41654,7 +41654,7 @@
       "subject_name": "生物化學",
       "stage_id": 3,
       "number": 95,
-      "question": "酪胺酸（tyrosine）與苯丙胺酸（phenylalanine）在體內皆可經由酵素催化形成反丁烯二酸（fumarate）或 乙醯 乙酸",
+      "question": "酪胺酸（tyrosine）與苯丙胺酸（phenylalanine）在體內皆可經由酵素催化形成反丁烯二酸（fumarate）或 乙醯 乙酸（acetoacetate），這兩種胺基酸具有下列何種特性？",
       "options": {
         "A": "絕對葡萄糖生成性（glucogenic）",
         "B": "絕對生酮性（ketogenic）",
@@ -45713,8 +45713,8 @@
       "options": {
         "A": "TPase）",
         "B": "紅血球陰離子運輸器（anion transporter）",
-        "C": "氫離子-鉀離子三磷酸腺苷酶（H + -K +",
-        "D": "鈣離子三磷酸腺苷酶（Ca 2+"
+        "C": "氫離子-鉀離子三磷酸腺苷酶（H + -K + ATPase）",
+        "D": "鈣離子三磷酸腺苷酶（Ca 2+ATPase）"
       },
       "answer": "C",
       "explanation": "",
@@ -45775,7 +45775,7 @@
       "subject_name": "生物化學",
       "stage_id": 3,
       "number": 95,
-      "question": "一新生兒發生非常嚴重乳酸中毒（lactic acidosis），進一步檢查發現有丙酮酸脫氫酵素（pyruvate",
+      "question": "一新生兒發生非常嚴重乳酸中毒（lactic acidosis），進一步檢查發現有丙酮酸脫氫酵素（pyruvate dehydrogenase）缺乏，下列敘述何者正確？",
       "options": {
         "A": "在有氧狀況下，丙酮酸轉化為乳酸（lactic acid）及乙醇（ethanol）",
         "B": "在無氧狀況下，丙酮酸在粒線體轉化為乙醯輔酶A（acetyl-CoA）",
@@ -51425,7 +51425,7 @@
         "A": "受體",
         "B": "抑制dopamine受體",
         "C": "抑制NMDA受體",
-        "D": "抑制GABA"
+        "D": "抑制GABAA受體"
       },
       "answer": "C",
       "explanation": ""
@@ -52526,7 +52526,7 @@
       "subject_name": "解剖學",
       "stage_id": 1,
       "number": 29,
-      "question": "下肢的內側迴旋股動脈（medial circumflex femoral artery）與外側迴旋股動脈（lateral circumflex femoral",
+      "question": "下肢的內側迴旋股動脈（medial circumflex femoral artery）與外側迴旋股動脈（lateral circumflex femoral artery）是下列何者的直接分⽀？",
       "options": {
         "A": "股動脈（femoral artery）",
         "B": "深股動脈（deep femoral artery）",
@@ -55332,7 +55332,7 @@
       "question": "靜脈注射型麻醉劑 ketamine 的主要作用機轉為何？",
       "options": {
         "A": "受體",
-        "B": "抑制GABA",
+        "B": "抑制GABAA受體",
         "C": "活化NMDA受體",
         "D": "抑制NMDA受體"
       },
@@ -57451,7 +57451,7 @@
       "subject_name": "生物化學",
       "stage_id": 3,
       "number": 78,
-      "question": "紅血球生成素（erythropoietin; EPO）的作用機制牽涉到JAK-STAT（Janus kinase-signal transducers and",
+      "question": "紅血球生成素（erythropoietin; EPO）的作用機制牽涉到JAK-STAT（Janus kinase-signal transducers and activators of transcription）系統。下列敘述何者正確？",
       "options": {
         "A": "EPO受體為JAK蛋白質",
         "B": "EPO與受體結合後，受體蛋白質會被JAK磷酸化",
@@ -58031,7 +58031,7 @@
       "subject_name": "微生物與免疫",
       "stage_id": 5,
       "number": 8,
-      "question": "一名受EB病毒（Epstein-Barr virus, EBV）感染的病人，其血清學檢查如下：anti-VCA IgM (+)、anti-VCA IgG (+)、anti-EA (+/-)、anti-EBNA (-)，此病人的情況屬於下列何者？[VCA：病毒殼蛋白質抗原（viral capsid",
+      "question": "一名受EB病毒（Epstein-Barr virus, EBV）感染的病人，其血清學檢查如下：anti-VCA IgM (+)、anti-VCA IgG (+)、anti-EA (+/-)、anti-EBNA (-)，此病人的情況屬於下列何者？[VCA：病毒殼蛋白質抗原（viral capsid antigen）；EA：早期抗原（early antigen）; EBNA：EB病毒核抗原（Epstein-Barr nuclear antigen）]",
       "options": {
         "A": "EB病毒感染的急性期（acute primary infection）",
         "B": "EB病毒慢性感染期（chronic primary infection）",
@@ -58251,7 +58251,7 @@
       "subject_name": "組織學",
       "stage_id": 4,
       "number": 19,
-      "question": "進入組織之單核球（monocytes），經下列何種細胞素[cytokine(s)]刺激，可以分化成樹突細胞（dendritic",
+      "question": "進入組織之單核球（monocytes），經下列何種細胞素[cytokine(s)]刺激，可以分化成樹突細胞（dendritic cells）？",
       "options": {
         "A": "M-CSF",
         "B": "M-CSF＋TNF-α",
@@ -61075,7 +61075,7 @@
       "subject_name": "生理學",
       "stage_id": 2,
       "number": 61,
-      "question": "以血壓計測得血壓為130/90 毫米汞柱（mmHg）。測量時，下列那一狀況可聽到敲擊且間斷的聲音（tapping",
+      "question": "以血壓計測得血壓為130/90 毫米汞柱（mmHg）。測量時，下列那一狀況可聽到敲擊且間斷的聲音（tapping and intermittent sound）？",
       "options": {
         "A": "扣帶壓（cuff pressure）＞130 mmHg",
         "B": "130 mmHg＞扣帶壓（cuff pressure）＞90 mmHg",
@@ -61219,7 +61219,7 @@
       "options": {
         "A": "TPase參與其中",
         "B": "thyroxine（T 4 ）藉pendrin轉變為triiodothyronine（T 3 ）",
-        "C": "在iodide trapping步驟中，有Na + /I - symporter及 Na + /K +",
+        "C": "在iodide trapping步驟中，有Na + /I - symporter及 Na + /K + ATPase參與其中",
         "D": "MIT（monoiodotyrosine）和DIT（diiodotyrosine）能結合（coupling）而產生thyroxine（T 4 ）分子"
       },
       "answer": "C",
@@ -67166,7 +67166,7 @@
       "subject_name": "藥理學",
       "stage_id": 7,
       "number": 69,
-      "question": "當病人罹患發作性睡病（narcolepsy）時，使用下列何種藥物可以減低其睡意，而該藥物是一種inverse H 3",
+      "question": "當病人罹患發作性睡病（narcolepsy）時，使用下列何種藥物可以減低其睡意，而該藥物是一種inverse H 3 agonist？",
       "options": {
         "A": "triprolidine",
         "B": "tiotidine",

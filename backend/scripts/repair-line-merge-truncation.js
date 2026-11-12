@@ -67,6 +67,10 @@ function isTruncationOf(bankRaw, fullRaw) {
   if (f.length > b.length + 150) return false;
   // 補的那一段裡不能出現「12.…」這種題號，那代表框到下一題了
   if (/\d{1,3}[.．、][^\d]{10,}/.test(f.slice(Math.max(0, b.length - 4)))) return false;
+  // 題庫那一欄已經以問號／句號收尾，卻還要往後接字 —— 那個字八成是**上下標被甩到行尾**，
+  // 本來屬於句子中間（放射師 105100 #54「造成骨 板（epiphyseal plate）閉合？」＋「骺」）。
+  // 這一類交給 fix-subscript-shift.js，不要在這裡硬接。
+  if (/[？?。！!]$/.test(String(bankRaw).trim()) && f.startsWith(b)) return false;
   if (f.startsWith(b)) return 'prefix';                 // 純粹被截尾
   // 前綴＋後綴：找最長共同前綴，剩下的必須是 full 的結尾
   let i = 0;
@@ -112,6 +116,7 @@ function tailAfter(fullRaw, keepN) {
       const subject = rest.join('|');
       const items = groups[key];
       let doc;
+      if (process.env.TRACE) console.log('>>', exam, key);
       try {
         const p = await resolvePaper({ exam, code, subject, year: String(code).slice(0, 3), items });
         if (!p) { bump('對不到官方卷'); continue; }

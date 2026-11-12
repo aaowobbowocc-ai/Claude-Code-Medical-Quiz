@@ -120195,7 +120195,7 @@
       "A": "Na+",
       "B": "K+",
       "C": "Cl--",
-      "D": "HCO3"
+      "D": "HCO3-"
     },
     "answer": "B",
     "explanation": ""
@@ -121414,7 +121414,7 @@
     "question": "以培養液大量稀釋法（broth macrodilution test）測定MIC時，下列敘述何者錯誤？",
     "options": {
       "A": "接種原調好後，應在30分鐘內接種109",
-      "B": "最後接種濃度應達1.5 × 10 9",
+      "B": "最後接種濃度應達1.5 × 10 9 CFU/ml",
       "C": "培養18～24小時後觀察",
       "D": "以能抑制細菌生長（沒有混濁）的最低抗生素濃度為MIC"
     },
@@ -128182,7 +128182,7 @@
     "subject_name": "醫學分子檢驗學",
     "stage_id": 6,
     "number": 68,
-    "question": "一癌症病人的正常組織DNA以紅色螢光標定，腫瘤組織的DNA則以綠色螢光標定，經comparative genomic hybridization分析 後其中一染色體的結果如圖示，該染色體區段",
+    "question": "一癌症病人的正常組織DNA以紅色螢光標定，腫瘤組織的DNA則以綠色螢光標定，經comparative genomic hybridization分析 後其中一染色體的結果如圖示，該染色體區段 a 最有可能發生下列何種情形？",
     "options": {
       "A": "Duplication",
       "B": "Deletion",
@@ -131248,10 +131248,10 @@
     "number": 61,
     "question": "在厭氧菌的抗生素藥敏試驗中，微量培養液稀釋法（broth microdilution method）需要接種多少的菌量？",
     "options": {
-      "A": "5 × 10 4",
-      "B": "5 × 10 5",
+      "A": "5 × 10 4 CFU/ml",
+      "B": "5 × 10 5 CFU/ml",
       "C": "FU/ml",
-      "D": "1 × 10 7"
+      "D": "1 × 10 7 CFU/ml"
     },
     "answer": "C",
     "explanation": ""
@@ -141827,7 +141827,7 @@
     "number": 26,
     "question": "二氧化碳在紅血球內的命運，下列何者錯誤？",
     "options": {
-      "A": "經水化作用（hydration）形成H 2",
+      "A": "經水化作用（hydration）形成H 2CO3，與HCO3-、H+平衡，其中約70%HCO3-會進入血液",
       "B": "使氯離子（Cl - ）自紅血球釋出，使血液的滲透壓減少",
       "C": "部分形成carbamino-Hb",
       "D": "部分被溶解"
@@ -148079,7 +148079,7 @@
     "subject_name": "生物化學",
     "stage_id": 8,
     "number": 18,
-    "question": "血液氣體分析PCO2 為80 mmHg，HCO3 - 為24 mmol/L時，血液之pH約為下列何者？（公式：pH＝pKa＋log",
+    "question": "血液氣體分析PCO2 為80 mmHg，HCO3 - 為24 mmol/L時，血液之pH約為下列何者？（公式：pH＝pKa＋log【bicarbonate／pCO2 × 0.03】）",
     "options": {
       "A": "6.1",
       "B": "6.8",
@@ -150466,9 +150466,9 @@
     "question": "抗微生物製劑感受性試驗所配製的細菌濁度0.5 McFarland standard，其濃度為何？",
     "options": {
       "A": "1.5×107CFU/mL",
-      "B": "1.5 × 10 8",
+      "B": "1.5 × 10 8 CFU/mL",
       "C": "FU/mL",
-      "D": "1.5 × 10 10"
+      "D": "1.5 × 10 10 CFU/mL"
     },
     "answer": "B",
     "explanation": ""
@@ -150526,9 +150526,9 @@
     "question": "一般需氧菌以瓊脂稀釋法（agar dilution method）進行抗微生物製劑感受性試驗時，每個spot會接種的菌量 為何？",
     "options": {
       "A": "1×103CFU",
-      "B": "1 × 10 4",
+      "B": "1 × 10 4 CFU",
       "C": "105×CFU",
-      "D": "1 × 10 6"
+      "D": "1 × 10 6 CFU"
     },
     "answer": "B",
     "explanation": ""
@@ -154791,7 +154791,7 @@
     "subject_name": "臨床血清免疫學",
     "stage_id": 10,
     "number": 32,
-    "question": "有一位手指關節疼痛的年輕女性，檢驗報告紅血球沉降速率（ESR）＞55mm/hr，抗環瓜氨酸抗體（anti-cyclicitrullinatedpeptide）IgG（+），anti-nuclearantibody（+），她最可能罹患之疾病為何？",
+    "question": "有一位手指關節疼痛的年輕女性，檢驗報告紅血球沉降速率（ESR）＞55 mm/hr，抗環瓜氨酸抗體（anti-cyclic citrullinated peptide） IgG（+），anti-nuclear antibody（+），她最可能罹患之疾病為何？",
     "options": {
       "A": "骨癌",
       "B": "僵直性脊椎炎",
@@ -172725,7 +172725,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 45,
-    "question": "出生兩天之嬰兒發生新生兒溶血症，其血型相關檢驗結果如下：anti-A（0）、anti-B（4＋）、A 1",
+    "question": "出生兩天之嬰兒發生新生兒溶血症，其血型相關檢驗結果如下：anti-A（0）、anti-B（4＋）、A 1 cells（2＋）、B cells（1＋），母親抗體篩檢陰性，則嬰兒與母親血型最可能為何？",
     "options": {
       "A": "嬰兒為A型，母親為O型",
       "B": "嬰兒為A型，母親為AB型",
@@ -189047,7 +189047,7 @@
     "subject_name": "微生物學",
     "stage_id": 7,
     "number": 58,
-    "question": "Cornmeal agar with tween 80 and trypan blue培養基之何種成份可促進Candida albicans之厚壁孢子",
+    "question": "Cornmeal agar with tween 80 and trypan blue培養基之何種成份可促進Candida albicans之厚壁孢子（chlamydospore）形成？",
     "options": {
       "A": "glucose",
       "B": "tween 80",
@@ -196370,7 +196370,7 @@
     "subject_name": "生物化學",
     "stage_id": 8,
     "number": 21,
-    "question": "以Cellulose acetate進行血清蛋白質電泳分析，發現Albumin area為120 units，β-Globulin area為20 units，Total",
+    "question": "以Cellulose acetate進行血清蛋白質電泳分析，發現Albumin area為120 units，β-Globulin area為20 units，Total area為180 units，Total protein為6.3 g/dL，則β-Globulin的含量為多少g/dL？",
     "options": {
       "A": "4.2",
       "B": "2.7",
@@ -202050,7 +202050,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 64,
-    "question": "下列何種血癌細胞的細胞化學染色為peroxidase (PO) negative, chloroacetate esterase (CAE) negative, periodic",
+    "question": "下列何種血癌細胞的細胞化學染色為peroxidase (PO) negative, chloroacetate esterase (CAE) negative, periodic acid-Schiff (PAS) diffusely strong positive, terminal deoxynucleotidyl transferase (TdT) negative？",
     "options": {
       "A": "Acute myeloid leukemia with maturation (AML M2)",
       "B": "Acute promyelocytic leukemia (AML M3)",
@@ -208491,7 +208491,7 @@
       "A": "若同一檢體中分離出三種以上不同微生物，表示病人嚴重感染",
       "B": "中段排尿液檢體若培養出任何細菌，皆須做進一步鑑定",
       "C": "FU且為單一菌落形態，則具臨床意義",
-      "D": "中段排尿液檢體若每毫升超過10 5"
+      "D": "中段排尿液檢體若每毫升超過10 5 CFU且為單一菌落形態，則具臨床意義"
     },
     "answer": "D",
     "explanation": ""
@@ -239977,7 +239977,7 @@
     "question": "有關嗜酸性球（eosinophil）之特性，下列敘述何者最適當？",
     "options": {
       "A": "初級顆粒主要含有酸性蛋白質",
-      "B": "次級顆粒主要含有Charcot-Leyden結晶蛋白質",
+      "B": "次級顆粒主要含有Chartcot-Leyden 結晶蛋白質",
       "C": "骨髓中的嗜酸性球，多屬髓前（promyelocytic）細胞期",
       "D": "成熟的嗜酸性球，細胞核常為雙葉（bilobed）型"
     },
@@ -240245,7 +240245,7 @@
     "subject_name": "臨床血液學",
     "stage_id": 3,
     "number": 40,
-    "question": "Multiple myeloma及Waldenström macroglobulinemia",
+    "question": "Multiple myeloma及Waldenström macroglobulinemia 所產生的M-protein，其最主要的免疫球蛋白類別分別為何？",
     "options": {
       "A": "IgA；IgD",
       "B": "IgD；IgE",
@@ -240605,7 +240605,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 58,
-    "question": "圖A與圖B分別為病人血漿VWF multimers 列何者最可能為此病人的診斷結果？",
+    "question": "圖A 與圖B 分別為病人血漿VWF multimers 電泳分析及不同濃度ristocetin 刺激血小板的凝集試驗曲線，則下列何者最可能為此病人的診斷結果？",
     "options": {
       "A": "Type 2A VWD",
       "B": "Type 1 VWD",
@@ -240628,7 +240628,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 59,
-    "question": "下列有關免疫性血小板減少症（immune thrombocytopenia, ITP",
+    "question": "下列有關免疫性血小板減少症（immune thrombocytopenia, ITP）的敘述，何者錯誤？",
     "options": {
       "A": "骨髓中megakaryocyte數量下降",
       "B": "血液中出現抗血小板抗體 下列何者錯誤？ 但仍須經水解而發揮功能",
@@ -259538,7 +259538,7 @@
       "A": "T 細胞通常在 thymus 發育成熟，B 細胞發育自 bone marrow",
       "B": "周邊血中，T 細胞約占淋巴球的 20%，B 細胞約占淋巴球的 80%",
       "C": "T 細胞標記為 CD1、CD2、CD3、CD5、CD6、CD7，B 細胞為 CD19、CD20、CD22、CD79",
-      "D": "細胞膜上的抗原受體：T 細胞是 TCR，B 細胞是 BCR"
+      "D": "細胞膜上的抗原受體：T 細胞是TCRCR，B 細胞是BCR"
     },
     "answer": "B",
     "explanation": "T 細胞與 B 細胞比例：周邊血淋巴球中 **T 細胞約占 60-80%**，**B 細胞約占 10-20%**。**B 選項錯誤**之處是把比例顛倒。其他選項皆正確：(A) T 細胞於胸腺成熟，B 細胞於骨髓發育；(C) CD 標記正確（T 細胞 CD1/2/3/5/6/7，B 細胞 CD19/20/22/79）；(D) 抗原受體 T 細胞為 TCR、B 細胞為 BCR。"
@@ -259677,7 +259677,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 45,
-    "question": "一位帶有 A型血友病基因但凝血功能正常的女性與 常小孩的機率？",
+    "question": "一位帶有A 型血友病基因但凝血功能正常的女性與A 型血友病的男性結婚。下列何者是他們生下凝血功能正常小孩的機率？",
     "options": {
       "A": "25%",
       "B": "50%",
@@ -259829,7 +259829,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 52,
-    "question": "Hemophilia B 之檢驗結果，下列何者正確",
+    "question": "Hemophilia B 之檢驗結果，下列何者正確？",
     "options": {
       "A": "PT 正常、APTT 延長、TT 延長、PFA-100 closure time 正常",
       "B": "PT 正常、APTT 延長、TT 正常、PFA-100 closure time 正常",
@@ -279999,7 +279999,7 @@
     "number": 12,
     "question": "下列有關體外淋巴球的增生試驗，何者錯誤？",
     "options": {
-      "A": "使用 51",
+      "A": "使用 51Cr 標定細胞",
       "B": "使用PHA刺激T細胞",
       "C": "使用ConA刺激T細胞",
       "D": "一般需要培養3～6天左右"
@@ -281101,7 +281101,7 @@
     "subject_name": "臨床病毒學",
     "stage_id": 11,
     "number": 67,
-    "question": "造成發熱伴血小板減少綜合症（severe fever with thrombocytopenia syndrome, SFTS）的致病原屬於",
+    "question": "造成發熱伴血小板減少綜合症（severe fever with thrombocytopenia syndrome, SFTS）的致病原屬於Bunyaviridae 的SFTSV。有關SFTSV 的敘述，下列何者錯誤？",
     "options": {
       "A": "在山區活動時應注意預防各種蚊蟲叮咬，可有效預防被SFTSV傳染",
       "B": "SFTSV病毒為有外套膜，內含三段負向單股RNA之病毒顆粒",
@@ -283024,7 +283024,7 @@
     "subject_name": "生物化學",
     "stage_id": 8,
     "number": 3,
-    "question": "根據臨床實驗室標準協會（Clinical and Laboratory Standards Institute, CLSI），臨床實驗室試劑水",
+    "question": "根據臨床實驗室標準協會（Clinical and Laboratory Standards Institute, CLSI），臨床實驗室試劑水（Clinical Laboratory Reagent water, CLRW）規格，下列何者正確？",
     "options": {
       "A": "顆粒物須通過0.45 μm濾紙",
       "B": "25°C時電阻≧8 MΩ/cm",
@@ -285469,7 +285469,7 @@
     "subject_name": "微生物學",
     "stage_id": 7,
     "number": 45,
-    "question": "下列何種細菌具有形成孢子的能力？①Bacteroides fragilis ②Bacillus cereus ③Clostridioides",
+    "question": "下列何種細菌具有形成孢子的能力？①Bacteroides fragilis ②Bacillus cereus ③Clostridioides difficile ④Mycobacterium tuberculosis",
     "options": {
       "A": "①②",
       "B": "②③",
@@ -286012,7 +286012,7 @@
     "subject_name": "微生物學",
     "stage_id": 7,
     "number": 72,
-    "question": "下列那些真菌具有關節孢子（arthroconidia）？①Trichosporon beigelli ②Candida tropicalis ③",
+    "question": "下列那些真菌具有關節孢子（arthroconidia）？①Trichosporon beigelli ②Candida tropicalis ③Coccidioides immitis ④Geotrichum candidum ⑤Histoplasma capsulatum",
     "options": {
       "A": "僅①②③",
       "B": "僅①③④",
@@ -292493,7 +292493,7 @@
     "subject_name": "醫學分子檢驗學",
     "stage_id": 6,
     "number": 73,
-    "question": "油滴數位化聚合酶連鎖反應（droplet digital PCR, ddPCR）是藉由單分子油滴式隔離進行核酸拷貝數的絕 對定量；對檢測腫瘤微量突變等位比例（mutation allele frequency, MAF）有極高敏感度。圖示為利用",
+    "question": "油滴數位化聚合酶連鎖反應（droplet digital PCR, ddPCR）是藉由單分子油滴式隔離進行核酸拷貝數的絕 對定量；對檢測腫瘤微量突變等位比例（mutation allele frequency, MAF）有極高敏感度。圖示為利用ddPCR 收取16,000 顆油滴，進行A 基因野生型與突變型之螢光訊號強度的分析結果，超過閾值的油滴數目以紅字標示。此突變等位比例為何？",
     "options": {
       "A": "3.8%",
       "B": "14.3%",
@@ -294900,7 +294900,7 @@
     "subject_name": "微生物學",
     "stage_id": 7,
     "number": 33,
-    "question": "下列何種醣類測試可以區別大部分Aggregatibacter aphrophilus與Aggregatibacter",
+    "question": "下列何種醣類測試可以區別大部分Aggregatibacter aphrophilus與Aggregatibacter actinomycetemcomitans 菌株？",
     "options": {
       "A": "葡萄糖（glucose）",
       "B": "乳糖（lactose）",
@@ -295959,7 +295959,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 5,
-    "question": "心肌梗塞的病理性 Q 波與正常 q波的不同",
+    "question": "心肌梗塞的病理性 Q 波與正常 q波的不同，不包括下列何者？",
     "options": {
       "A": "病理性Q波深度至少大於R波高度的1/4",
       "B": "病理性 Q 波時間大於 0.04 秒",
@@ -296062,7 +296062,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 10,
-    "question": "心室再極化 （ repolarization）產生於心電圖的那部分",
+    "question": "心室再極化 （ repolarization）產生於心電圖的那部分？",
     "options": {
       "A": "P 波",
       "B": "PR 區間 （ PR interval）",
@@ -297370,7 +297370,7 @@
     "subject_name": "病理學",
     "stage_id": 2,
     "number": 75,
-    "question": "腦脊髓液中之隱球菌（cryptococcus）最常利用下列何種染色方法觀察其多醣體莢膜（polysaccharide",
+    "question": "腦脊髓液中之隱球菌（cryptococcus）最常利用下列何種染色方法觀察其多醣體莢膜（polysaccharide capsule）？",
     "options": {
       "A": "India ink stain",
       "B": "Sudan black stain",
@@ -297552,7 +297552,7 @@
     "number": 4,
     "question": "有關惡性貧血（pernicious anemia）的敘述，下列何者正確？",
     "options": {
-      "A": "anti-proton pump H",
+      "A": "anti-proton pump H+/K+‐ATPase 自體抗體陽性，則可以作為惡性貧血的專一性診斷",
       "B": "罹患惡性貧血的比率男多於女",
       "C": "惡性貧血主因是嚴重缺乏葉酸",
       "D": "幽門螺旋桿菌（H. pylori）是引起老年人惡性貧血的原因之一"
@@ -297902,7 +297902,7 @@
     "subject_name": "臨床血液學",
     "stage_id": 3,
     "number": 21,
-    "question": "73 歲男病人之周邊血液的WBC 數目為15.2  ×10 3 /uL  ，其白血球的分類結果為promyelocyte (11.1％)，blasts (70.1％)；其骨髓抹片的有核細胞之細胞質可見許多顆粒且成束的 Auer rods。細胞免疫分型結果為",
+    "question": "73 歲男病人之周邊血液的WBC 數目為15.2  ×10 3 /uL  ，其白血球的分類結果為promyelocyte (11.1％)，blasts (70.1％)；其骨髓抹片的有核細胞之細胞質可見許多顆粒且成束的 Auer rods。細胞免疫分型結果為CD13(+)、CD33(+)、CD3(-)、CD10(-)、CD19(-)，myeloperoxidase(+)，TdT(-)及染色體檢驗結果為t(15;17)(q24;q21)。此病人最可能罹患下列何種疾病？",
     "options": {
       "A": "B-acute lymphoblastic leukemia",
       "B": "T-acute lymphoblastic leukemia",
@@ -298102,7 +298102,7 @@
     "subject_name": "臨床血液學",
     "stage_id": 3,
     "number": 31,
-    "question": "76 歲女性周邊血液檢驗結果：血色素Hb 6 g/dL、血小板30 K/μL、白血球1.4 K/μL，白血球分類為",
+    "question": "76 歲女性周邊血液檢驗結果：血色素Hb 6 g/dL、血小板30 K/μL、白血球1.4 K/μL，白血球分類為blast 9％、band 7％、segmented 45％、monocyte 4％、lymphocyte 35％；骨髓抹片紅血球分化異常，骨髓性芽細胞（myeloblast）11％，此病人最可能罹患下列何種疾病？",
     "options": {
       "A": "acute myeloblastic leukemia（AML  ）",
       "B": "myelodysplastic syndrome（MDS  ）",
@@ -298229,7 +298229,7 @@
     "subject_name": "臨床血液學",
     "stage_id": 3,
     "number": 37,
-    "question": "根據2022世界衛生組織（WHO）的標準，下列何者是符合chronic myeloid leukemia（CML  ）進入加速期",
+    "question": "根據2022世界衛生組織（WHO）的標準，下列何者是符合chronic myeloid leukemia（CML  ）進入加速期（accelerated phase）的最重要的特徵之一？",
     "options": {
       "A": "blasts 5～9％ in blood or bone marrow",
       "B": "blood basophilia≧20％",
@@ -299078,7 +299078,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 79,
-    "question": "下列那些細胞標記陽性時可以反映急性淋巴性白血病的淋巴前驅細胞（lymphoblast）之不成熟度 （immaturity）？①CD24  ②CD34  ③terminal deoxynucleotidyl transferase（TdT）  ④CD123  ⑤",
+    "question": "下列那些細胞標記陽性時可以反映急性淋巴性白血病的淋巴前驅細胞（lymphoblast）之不成熟度 （immaturity）？①CD24  ②CD34  ③terminal deoxynucleotidyl transferase（TdT）  ④CD123  ⑤CD117",
     "options": {
       "A": "②③",
       "B": "④⑤",
@@ -301366,7 +301366,7 @@
     "subject_name": "臨床鏡檢學",
     "stage_id": 5,
     "number": 33,
-    "question": "改良式的Kinyoun’s 快速酸染色法（acid-fast stain）可提升下列何種寄生蟲卵囊（oocyst）的辨識度？ ①隱孢子蟲（Cryptosporidium parvum）  ②貝氏等孢子蟲（Isospora belli）  ③環孢子蟲（Cyclospora",
+    "question": "改良式的Kinyoun’s 快速酸染色法（acid-fast stain）可提升下列何種寄生蟲卵囊（oocyst）的辨識度？ ①隱孢子蟲（Cryptosporidium parvum）  ②貝氏等孢子蟲（Isospora belli）  ③環孢子蟲（Cyclospora cayetanensis）",
     "options": {
       "A": "僅①②",
       "B": "僅①③",

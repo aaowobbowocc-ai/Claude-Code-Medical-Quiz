@@ -32,7 +32,10 @@ const num = s => (/^\d+$/.test(s) ? +s : CN[s] || 0);
 const COUNT_RE = /回答下列\s*([0-9]+|[一二三四五六七八九十])\s*[個]?題/;
 const RANGE_RE = /第\s*([0-9]{1,3})\s*[-－–~～至]\s*([0-9]{1,3})\s*題/;
 const hasImg = q => !!(q.images && q.images.length) || !!q.image || !!q.image_url;
-const ctxOf = s => (/^(【題組情境】)+/.test(s) ? s.replace(/^(【題組情境】)+/, '').slice(0, 40) : null);
+// 題組的標記有兩種：考選部卷是我們自己加的【題組情境】，教檢卷原本就寫〈閱讀測驗〉。
+// 只認前者的話，教檢的閱讀測驗題組接不上（112 資優 課程教學與評量 #20~#22）。
+const GROUP_MARK = /^(【題組情境】|〈閱讀測驗〉|\(閱讀測驗\))+\s*/;
+const ctxOf = s => (GROUP_MARK.test(s) ? s.replace(GROUP_MARK, '').slice(0, 40) : null);
 const refsOf = s => new Set((w2a(s).match(/[圖表]\s*([0-9]{1,2}|[一二三四五六七八九十]{1,3})/g) || [])
   .map(t => t.replace(/\s/g, '')));
 
@@ -69,7 +72,7 @@ for (const f of fs.readdirSync(BK).filter(x => /^questions(-[a-z0-9-]*)?\.json$/
       const inSpan = span && +q.number <= +L.number + span - 1;
       // 領頭不一定帶【題組情境】標記（它就是情境本身），所以比的是
       // 「領頭的題幹是不是以這一段情境開頭」，不是兩邊的標記相不相等。
-      const lHead = String(L.question || '').replace(/^(【題組情境】)+/, '');
+      const lHead = String(L.question || '').replace(GROUP_MARK, '');
       const sameCtx = myCtx && (ctxOf(String(L.question || '')) === myCtx || lHead.startsWith(myCtx));
       const carry = /^(【題組情境】)*\s*承上題/.test(stem) || /承上題/.test(stem.slice(0, 80));
       if (!inSpan && !sameCtx && !carry) continue;

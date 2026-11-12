@@ -116,6 +116,20 @@ const OPTLINE = /^[（(]\s*[A-DＡ-Ｄ]\s*[）)]/;
           if (firstOpt.y - prevBottom >= 40 && (!band || firstOpt.y - prevBottom > band.h)) {
             band = { top: prevBottom, h: firstOpt.y - prevBottom };
           }
+          /*
+           * 統計圖的**座標標籤**自己就是文字行（「400」「200」「成績分數(分)」），
+           * 一條一條把空白切碎，最大空白帶要嘛不到 40pt、要嘛只框到圖裡的一條縫
+           * （特教 110 學習者發展 #25 的累積人數圖只裁到下面三分之二）。
+           * 單欄版面可以直接定義：**題幹結束到第一個選項之間，整段都是圖**。
+           * 題幹＝貼左邊界（題號那一欄）而且夠長的行；圖的標題與標籤都是縮排的短行。
+           */
+          let stemBot = head.y + (head.h || 12);
+          for (const l of between) {
+            if (l.x <= head.x + 20 && l.t.length > 12) stemBot = Math.max(stemBot, l.y + (l.h || 12));
+          }
+          if (firstOpt.y - stemBot >= 60 && (!band || firstOpt.y - stemBot > band.h)) {
+            band = { top: stemBot, h: firstOpt.y - stemBot };
+          }
         }
         if (!band) { bump('題幹與選項間沒有空白帶(應無圖)'); continue; }
 

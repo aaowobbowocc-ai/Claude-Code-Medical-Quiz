@@ -92,7 +92,7 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
           if (num) marks.push({ pg, y: l.bbox.y, h: l.bbox.h, kind: 'num', n: +num[1], x: l.bbox.x });
           // 選項標記同樣有兩種：PUA 的 ⒶⒷⒸⒹ，與醫事類明示的「A.」
           else if (MARK[t[0]] || /^[A-D]\s*[.、]/.test(t.trim())) marks.push({ pg, y: l.bbox.y, h: l.bbox.h, kind: 'opt' });
-          else marks.push({ pg, y: l.bbox.y, h: l.bbox.h, kind: 'text' });
+          else marks.push({ pg, y: l.bbox.y, h: l.bbox.h, kind: 'text', len: t.trim().length });
         }
       }
       for (const q of groups[k]) {
@@ -106,6 +106,15 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
         for (const h of heads) {
           const same = marks.find(m => m.kind === 'opt' && m.pg === h.pg && m.y > h.y);
           if (same) { head = h; firstOpt = same; break; }
+          /*
+           * 有些卷的選項**完全沒有標記**：ⒶⒷⒸⒹ 是字型私用區的字，mupdf 直接丟掉，
+           * 文字層只剩四行光禿禿的選項（公衛 110180 生統整卷都是這樣）。
+           * 這時用「下一個題號之前的最後四行」當選項區 —— 一題一定是題幹 + 四個選項。
+           */
+          const nextNum = marks.find(m => m.kind === 'num' && m.pg === h.pg && m.y > h.y + 4);
+          const body = marks.filter(m => m.pg === h.pg && m.y > h.y
+            && (!nextNum || m.y < nextNum.y - 2) && m.kind === 'text').sort((a, b) => a.y - b.y);
+          if (body.length >= 5) { head = h; firstOpt = body[body.length - 4]; break; }
           // 題幹排在頁尾、選項翻到次頁：圖就印在次頁頁首（題幹結尾與選項之間）。
           // 這種卷佔「找不到第一個選項」的大宗（全站 347 筆）。
           const onNext = marks.filter(m => m.pg === h.pg + 1).sort((a, b) => a.y - b.y);
@@ -128,6 +137,41 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
           prevBottom = Math.max(prevBottom, m.y + (m.h || 12));
         }
         if (firstOpt.y - prevBottom >= 40 && (!band || firstOpt.y - prevBottom > band.h)) band = { top: prevBottom, h: firstOpt.y - prevBottom };
+
+        /*
+         * 向量圖（統計圖、殘差圖）裡的**座標標籤**本身就是文字行，
+         * 一條一條把空白切碎，於是「最大空白帶」永遠不到 40pt，整題被判成「應無圖」
+         * （公衛 110180 生統 #29 的殘差圖、#38 的 Kaplan-Meier 曲線）。
+         * 題幹確實指名有圖、而且中間那些行全是**很短的標籤**時，
+         * 就把那一串標籤的前後兩行之間整段當成圖。
+         * ⚠️ 不能只在「找不到空白帶」時才做：標籤之間的縫隙常常剛好超過 40pt，
+         *    上面那套會挑中圖**裡面**的一條縫（#29 實測挑到 98pt 的一段，圖只剩一半）。
+         *    所以兩種都算，取高的那個。
+         */
+        {
+          // 找「最長的一串短行」——那就是圖裡的座標標籤。
+          // 框的上下界取這串的前後兩行，而不是一路切到第一個選項：
+          // 圖的下方通常還有一句「下列敘述何者錯誤？」，那是題幹不是圖。
+          // 座標軸標籤："Residuals" 就有 9 個字；而「2」「140」這種刻度**會被當成題號**
+          // （題號的 regex 就是「整行只有數字」），所以縮排過的題號也要算進來。
+          const isShort = m => (m.kind === 'text' && (m.len || 99) <= 10)
+            || (m.kind === 'num' && m.x >= 90);
+          let best = null, i = 0;
+          while (i < between.length) {
+            if (!isShort(between[i])) { i++; continue; }
+            let j = i;
+            while (j + 1 < between.length && isShort(between[j + 1])) j++;
+            if (!best || j - i > best.j - best.i) best = { i, j };
+            i = j + 1;
+          }
+          if (best && best.j - best.i + 1 >= 2) {
+            const prev = between[best.i - 1];
+            const nextLine = between[best.j + 1];
+            const top = prev ? prev.y + (prev.h || 12) : bandTop0;
+            const bot = nextLine ? nextLine.y : firstOpt.y;
+            if (bot - top >= 60 && (!band || bot - top > band.h)) band = { top, h: bot - top };
+          }
+        }
 
         // 直接證據優先：題幹與第一個選項之間真的有嵌入圖片，就照它的 bbox 裁。
         // 比空白帶準 —— 空白帶會把長題幹整段框起來變成一張多餘的文字圖

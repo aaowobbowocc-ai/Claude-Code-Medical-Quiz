@@ -264,6 +264,8 @@ async function pdfFor(exam, year, tag) {
           box.top = Math.min(box.top, b.top);
           box.left = Math.min(box.left, b.left);
           box.height = bottom - box.top;
+          // 右界只要有一塊沒界線，合起來就沒有界線（裁到頁緣）
+          box.right = (box.right != null && b.right != null) ? Math.max(box.right, b.right) : null;
           if (m !== mode) mode = '多圖合框';
         };
 
@@ -284,10 +286,32 @@ async function pdfFor(exam, year, tag) {
           //（ast 113 歷史 #17 的「表1」在 y=466，表身在它下面）。
           if (cap.kind === '表') {
             let bot = Infinity;
+            /*
+             * 「遇到第一條長行就收」會收在**表格自己的欄位標題**上。
+             * gsat 101 社會 表五 的標題列「夏（6-8 月）秋（9-11 月）」有 17 字，
+             * bot 於是停在圖說下方 14pt、整張表只剩一條，高度不足 50 被丟掉
+             * （101/102/105 社會、111 分科公民整批都是這樣掉的）。
+             * 要停的是**正文**，不是表格的列：正文貼左邊界，或帶選項／題號標籤；
+             * 表格的儲存格再長也縮排在欄位裡。
+             */
+            const prose = l => {
+              const t = l.t.trim();
+              // 標籤要先認。選項行「(B)甲丙丁」只有 5 個字，先比長度就被當成表格的列，
+              // 整排選項會被裁進表裡（分科 111 地理 #8 實測）。
+              if (/^\(?[A-E][).]/.test(t)) return true;
+              // 題號要寫成「點後面不是數字」。少了這個，表格裡的「2.79」「46.67」
+              // 會被當成題號 2.／46.，bot 停在第一列數字上，整張表只剩標題列。
+              if (/^\d{1,3}\s*[.．](?!\d)/.test(t)) return true;
+              return t.length > 15 && l.x < 150;
+            };
             for (const l of pls) {
               if (l.y <= cap.y + (cap.h || 12)) continue;
               if (l.x + (l.w || 0) <= cap.x) continue;        // 沒擋在表的正下方
-              if (l.t.trim().length > 15) { bot = l.y - 4; break; }
+              if (prose(l)) { bot = l.y - 4; break; }
+            }
+            // 下一個圖說＝下一張圖表，表身不可能跨過去
+            for (const c2 of allCaps) {
+              if (c2.pg === cap.pg && c2.y > cap.y + 20 && c2.y - 4 < bot) bot = c2.y - 4;
             }
             if (nextHead && nextHead.pg === cap.pg) bot = Math.min(bot, nextHead.y - 4);
             if (bot === Infinity) bot = cap.y + 320;
@@ -303,12 +327,37 @@ async function pdfFor(exam, year, tag) {
               && (l.t.trim().length > 20 || /^\(?[A-E][).]/.test(l.t.trim())));
             // 沒有題幹／選項擋路時就整段都是表，左界取「表內所有行的最左緣」，
             // 不能再退回 x>=150 的欄位起點，否則列標籤欄一樣會被切掉。
-            const lf = leftText.length
-              ? Math.max(...leftText.map(l => l.x + (l.w || 0))) + 8
-              : (band.length ? Math.max(0, Math.min(cap.x, ...band.map(l => l.x)) - 12) : colMin);
+            /*
+             * 表排在右欄時（圖說 x ≥ 分欄線），左欄整段都是情境文字，
+             * 一行也不會超過 20 字（直排窄欄，一行 17~18 字），leftText 因此是空的，
+             * 左界就退到 min(band.x) = 情境文字的 x，整段文字被裁進表裡
+             * （gsat 102 社會 #62/#63 實測）。右欄的表要用**左欄文字的右緣**當左界。
+             */
+            const leftCol = band.filter(l => l.x < 150);
+            const lf = sideBySide
+              ? Math.max(colMin, leftCol.length
+                ? Math.max(...leftCol.map(l => l.x + (l.w || 0))) + 8 : colMin)
+              : (leftText.length
+                ? Math.max(...leftText.map(l => l.x + (l.w || 0))) + 8
+                : (band.length ? Math.max(0, Math.min(cap.x, ...band.map(l => l.x)) - 12) : colMin));
             const hh = bot - cap.y + 6;
             if (hh >= 50) addBox({ left: lf, top: cap.y - 6, height: hh, page: cap.pg }, '表說定位');
           } else {
+          /*
+           * 圖說正上方剛好有嵌入圖片區塊、而且水平涵蓋圖說中心 → 那就是這張圖的本體，
+           * 直接用它的 bbox，不要再從文字行往上推。
+           * 分科 111 公民的「資訊卡」整張圖就是一段說明文字，往上走的那套會停在
+           * 卡片**裡面**的字上，框只剩 46pt 高而被丟掉（#21~#25 五題）。
+           * 右界也要跟著圖塊收 —— 兩張卡片並排，不收就把隔壁的圖2 一起裁進來。
+           */
+          const capCx0 = cap.x + (cap.w || 0) / 2;
+          const blks = figBlocks.filter(g => g.pg === cap.pg
+            && g.y + g.h <= cap.y + 6 && g.y >= cap.y - 420
+            && g.x - 8 <= capCx0 && g.x + g.w + 8 >= capCx0);
+          // 只拿它的**上緣**。左右界還是交給下面的文字路 —— 圖常常是
+          // 「圖片＋說明文字」的組合，光用圖塊的 bbox 會把旁邊的字切掉
+          //（分科 115 公民 #9 的貼文圖實測裁成半張）。
+          const blkTop = blks.length ? Math.min(...blks.map(g => g.y)) - 6 : null;
           // 從圖說往上走，遇到正文行就停。
           // 這行有沒有「擋在圖的正上方」：看它的右緣有沒有越過**圖說的 x**。
           // 用固定分欄線會出事——選項「(D) 磁場B 對線圈的磁作用力：甲＞乙」的右緣
@@ -366,6 +415,14 @@ async function pdfFor(exam, year, tag) {
             if (before && before.y < upper) upper = before.y;
           }
           if (cap.pg === head.pg) top = Math.max(top, upper - 4);
+          // 圖說正上方有嵌入圖片時，上緣以圖塊為準。往上走文字行那套會停在
+          // 圖**裡面**的說明文字上（分科 111 公民的資訊卡整張都是字，
+          // 框只剩 46pt 被丟掉）。圖塊不會低於 upper，所以照樣不會吃到上一題。
+          if (blkTop != null) {
+            const floor = cap.pg === head.pg ? upper - 4 : 0;
+            const t2 = Math.max(blkTop, floor);
+            if (t2 < top) top = t2;
+          }
           const inFig = pls.filter(l => l.y >= top && l.y <= cap.y + (cap.h || 12) && l.x >= colMin);
           /*
            * ⚠️ left 不能只看「圖內文字的最左緣」。圖若沒有左側標籤
@@ -389,6 +446,16 @@ async function pdfFor(exam, year, tag) {
           // 圖說正上方就是正文時會算出很窄的框（圖其實在更上面或跨欄）。
           // 這種情況不要硬裁，讓它退回下面兩種模式。
           if (h >= 50) addBox({ left, top, height: h, page: cap.pg }, '圖說定位');
+          else if (blks.length) {
+            // 文字路算不出框（圖說正上方就是正文）但下方確實有圖塊 —— 直接用圖塊的
+            // bbox。這是最後一條，所以右界也收（gsat 104 自然 #63 的凌日光變曲線）。
+            const bt = Math.min(...blks.map(g => g.y)) - 6;
+            const h2 = cap.y + (cap.h || 12) + 6 - bt;
+            if (h2 >= 50) addBox({
+              left: Math.max(0, Math.min(...blks.map(g => g.x)) - 6), top: bt, height: h2,
+              page: cap.pg, right: Math.max(...blks.map(g => g.x + g.w), cap.x + (cap.w || 0)) + 6,
+            }, '圖塊定位');
+          }
           }
         }
         /*
@@ -491,7 +558,8 @@ async function pdfFor(exam, year, tag) {
           const left = Math.max(0, Math.round(box.left * SCALE));
           const top = Math.max(0, Math.round(box.top * SCALE));
           const height = Math.min(meta.height - top, Math.round(box.height * SCALE));
-          const width = meta.width - left;
+          const width = (box.right != null
+            ? Math.min(meta.width, Math.round(box.right * SCALE)) : meta.width) - left;
           if (height < 60 || width < 60) { bump('裁出來太小'); continue; }
           const base = await sharp(png).extract({ left, top, width, height }).png().toBuffer();
           // 近乎全白就代表原卷那裡根本沒有圖；直接 .trim() 會拋 extract_area 例外

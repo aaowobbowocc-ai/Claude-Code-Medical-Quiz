@@ -44,8 +44,10 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
     // 也試過「選項全是圈號①②③④」，6,483 筆，圈號其實指題幹裡列的項目。
     // 所以不加寬文字判準，改用直接證據：**原卷在題幹與第一個選項之間
     // 真的有一塊嵌入圖片**。下面 byImage 那條路就是這樣判的。
+    // incomplete==='missing_image' 本來被排除，但那個旗標的意思正是「這題缺圖」——
+    // 它才是最該補的一批。補到圖就把旗標清掉放回前端（下面有選項健全性檢查把關）。
     const targets = arr.filter(q => !(q.images && q.images.length) && !q.image_url && !q.option_images
-      && !q.no_image_in_source && !q.incomplete);
+      && !q.no_image_in_source && (!q.incomplete || q.incomplete === 'missing_image'));
     if (!targets.length) continue;
     const groups = {};
     for (const q of targets) { const k = q.exam_code + '|' + q.subject; (groups[k] = groups[k] || []).push(q); }
@@ -95,16 +97,32 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
       }
       for (const q of groups[k]) {
         const n = +q.number;
-        const head = marks.find(m => m.kind === 'num' && m.n === n && m.x < 90);
-        if (!head) { skip++; why['定位不到題號'] = (why['定位不到題號'] || 0) + 1; continue; }
-        const firstOpt = marks.find(m => m.kind === 'opt' && m.pg === head.pg && m.y > head.y);
+        // 題號可能在別處也出現一次（表格裡的「20.」、頁碼）。所以不要只取第一個，
+        // **取第一個「後面真的接得到選項」的**。原本寫 marks.find 會定位到假題號，
+        // 於是整題被記成「找不到第一個選項」（dental2 105020 卷四 #20 實測）。
+        const heads = marks.filter(m => m.kind === 'num' && m.n === n && m.x < 90);
+        if (!heads.length) { skip++; why['定位不到題號'] = (why['定位不到題號'] || 0) + 1; continue; }
+        let head = null, firstOpt = null, crossPage = false;
+        for (const h of heads) {
+          const same = marks.find(m => m.kind === 'opt' && m.pg === h.pg && m.y > h.y);
+          if (same) { head = h; firstOpt = same; break; }
+          // 題幹排在頁尾、選項翻到次頁：圖就印在次頁頁首（題幹結尾與選項之間）。
+          // 這種卷佔「找不到第一個選項」的大宗（全站 347 筆）。
+          const onNext = marks.filter(m => m.pg === h.pg + 1).sort((a, b) => a.y - b.y);
+          const fo = onNext.find(m => m.kind === 'opt');
+          const otherNum = onNext.find(m => m.kind === 'num' && m.n !== n);
+          if (fo && (!otherNum || otherNum.y > fo.y)) { head = h; firstOpt = fo; crossPage = true; break; }
+        }
         if (!firstOpt) { skip++; why['找不到第一個選項'] = (why['找不到第一個選項'] || 0) + 1; continue; }
+        // 翻頁時這一段的起點是次頁頁首（頁眉會被下面的 between 逐行推掉）。
+        const bandPg = crossPage ? head.pg + 1 : head.pg;
+        const bandTop0 = crossPage ? 0 : head.y + (head.h || 12);
         // 圖在「題幹與選項之間、沒有任何文字行的那一段空白」。
         // 不能直接裁 head→firstOpt：長題幹會被整段框起來變成一張多餘的文字圖
         // （lawyer1 105110 #44 實測，那題根本沒有圖）。
-        const between = marks.filter(m => m.pg === head.pg && m.y > head.y && m.y < firstOpt.y)
+        const between = marks.filter(m => m.pg === bandPg && m.y > bandTop0 && m.y < firstOpt.y)
           .sort((a, b) => a.y - b.y);
-        let band = null, prevBottom = head.y + (head.h || 12);
+        let band = null, prevBottom = bandTop0;
         for (const m of between) {
           if (m.y - prevBottom >= 40 && (!band || m.y - prevBottom > band.h)) band = { top: prevBottom, h: m.y - prevBottom };
           prevBottom = Math.max(prevBottom, m.y + (m.h || 12));
@@ -114,8 +132,8 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
         // 直接證據優先：題幹與第一個選項之間真的有嵌入圖片，就照它的 bbox 裁。
         // 比空白帶準 —— 空白帶會把長題幹整段框起來變成一張多餘的文字圖
         // （lawyer1 105110 #44 實測，那題根本沒有圖）。
-        const inBand = figs.filter(g => g.pg === head.pg
-          && g.y >= head.y - 2 && g.y + g.h <= firstOpt.y + 2);
+        const inBand = figs.filter(g => g.pg === bandPg
+          && g.y >= bandTop0 - 2 && g.y + g.h <= firstOpt.y + 2);
         let byImage = false;
         if (inBand.length) {
           const top = Math.min(...inBand.map(g => g.y));
@@ -130,7 +148,7 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
         const name = `${exam}_${code}_q${n}_fig.webp`;
         if (APPLY) {
           try {
-            const page = doc.loadPage(head.pg);
+            const page = doc.loadPage(bandPg);
             const pm = page.toPixmap(mupdf.Matrix.scale(2, 2), mupdf.ColorSpace.DeviceRGB, false, true);
             const png = Buffer.from(pm.asPNG());
             const meta = await sharp(png).metadata();
@@ -150,12 +168,23 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
             catch (_) { out = sharp(buf); }                      // trim 失敗就用未裁邊的
             await out.webp({ quality: 88 }).toFile(path.join(IMG, name));
             q.images = [`/question-images/${name}`];
+            // 補上圖不等於修好這一題。清掉 missing_image 會把題目放回前端，
+            // 要是選項本身是壞的（空的、四個重複），使用者立刻看到「選項重複」。
+            // 郵局內勤 111 企管 #2 就是這樣放出去的，所以這裡先驗選項。
+            if (q.incomplete === 'missing_image') {
+              const vals = ['A', 'B', 'C', 'D'].map(key =>
+                String((q.options || {})[key] == null ? '' : q.options[key]).replace(/\s+/g, ''));
+              if (vals.every(Boolean) && new Set(vals).size === 4) delete q.incomplete;
+              else q.incomplete = 'broken_options';
+            }
             touched = true;
           } catch (e) {
             skip++; const key = '裁圖失敗:' + String(e.message).slice(0, 30);
             why[key] = (why[key] || 0) + 1; continue;
           }
         }
+        if (process.env.FIG_DEBUG) console.log(`  + ${exam} ${code} ${subject} #${n} p${bandPg}`
+          + `${crossPage ? ' 翻頁' : ''} ${byImage ? '嵌圖' : '空白帶'} top=${Math.round(band.top)} h=${Math.round(band.h)}`);
         made++;
       }
     }

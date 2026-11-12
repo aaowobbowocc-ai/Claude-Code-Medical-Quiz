@@ -26,6 +26,7 @@
 const fs = require('fs');
 const path = require('path');
 const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve');
+const { needsImage } = require('./lib/image-ref');
 
 const BK = path.join(__dirname, '..');
 const IMG = path.join(BK, '..', 'frontend', 'public', 'question-images');
@@ -49,9 +50,12 @@ const SIDE = /([左右])圖/g;
     const j = JSON.parse(fs.readFileSync(path.join(BK, f), 'utf8'));
     const arr = Array.isArray(j) ? j : j.questions;
     if (!arr) continue;
-    const targets = arr.filter(q => !q.incomplete && !q.no_image_in_source
+    // 候選放寬成 needsImage()：題幹沒講方位、但卷上確實有一塊圖排在旁邊的
+    // 也要補（中醫二階 103030「圖示衝脈…」）。方位只影響下面挑圖塊的那一步。
+    const targets = arr.filter(q => (!q.incomplete || q.incomplete === 'missing_image')
+      && !q.no_image_in_source
       && !(q.images && q.images.length) && !q.image_url && !q.image && !q.option_images
-      && /[左右]圖/.test(String(q.question || '')));
+      && needsImage(q));
     if (!targets.length) continue;
 
     const groups = {};
@@ -103,7 +107,10 @@ const SIDE = /([左右])圖/g;
         const yBot = next ? next.y : head.y + 320;
 
         const sides = new Set(String(q.question).match(SIDE) || []);
-        const wantRight = [...sides].some(s => s[0] === '右');
+        // 題幹沒講方位時（中醫二階「圖示衝脈在腹部並何經而上行？」「圖中的針法」），
+        // 預設找右邊：中文卷的圖排在左邊的極少，而且這條路要求範圍內**剛好一塊**圖，
+        // 真的排在左邊就會以「這題範圍內沒有嵌入圖塊」跳過，不會掛錯圖。
+        const wantRight = sides.size === 0 || [...sides].some(s => s[0] === '右');
         const wantLeft = [...sides].some(s => s[0] === '左');
         const both = wantRight && wantLeft;
 
@@ -136,10 +143,14 @@ const SIDE = /([左右])圖/g;
         const nextFig = figs.filter(g => g.pg === head.pg && g.y >= y1 - 2)
           .sort((a, b) => a.y - b.y)[0];
         const capLimit = Math.min(y1 + 24, nextFig ? nextFig.y - 2 : Infinity);
+        // 圖說不會從圖的左邊很遠的地方開始。原本寫 l.x + l.w < x0 - 20（只要
+        // 右緣碰得到就算），於是貼左邊界的題幹短行也被收進來，x0 被拉到 72，
+        // 整段題幹與選項都裁進圖裡（中醫二階 103030 #4、#45 實測）。
+        const origX0 = x0;
         for (const l of lines) {
           if (l.pg !== head.pg) continue;
           if (l.y < y1 - 2 || l.y > capLimit) continue;
-          if (l.x + l.w < x0 - 20 || l.x > x1 + 20) continue;
+          if (l.x < origX0 - 20 || l.x > x1 + 20) continue;
           if (l.t.length > 20 || OPTLINE.test(l.t) || MARK[l.t[0]]) continue;
           y1 = Math.max(y1, l.y + (l.h || 12));
           x0 = Math.min(x0, l.x); x1 = Math.max(x1, l.x + l.w);

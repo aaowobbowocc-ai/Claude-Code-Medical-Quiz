@@ -83,7 +83,12 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
             figs.push({ pg, y: b.bbox.y, x: b.bbox.x, w: b.bbox.w, h: b.bbox.h });
           }
         } catch { /* 這一頁抽不出圖，照舊走空白帶 */ }
-        const st = JSON.parse(doc.loadPage(pg).toStructuredText('preserve-whitespace').asJSON());
+        // 有些卷的某一頁會讓 mupdf 在 new_stext_page_from_page 丟例外
+        //（放射師 102 年某一卷實測）。沒有 try 的話整個 process 死掉，
+        // 後面幾十卷全都不會跑 —— 跳過那一頁就好。
+        let st;
+        try { st = JSON.parse(doc.loadPage(pg).toStructuredText('preserve-whitespace').asJSON()); }
+        catch { continue; }
         for (const b of st.blocks || []) for (const l of b.lines || []) {
           const t = (l.text || '').normalize('NFC'); if (!t.trim()) continue;
           // 題號有兩種排法：獨立一行的「12」（公職卷），以及「9.」後面直接接題幹（醫事類）。

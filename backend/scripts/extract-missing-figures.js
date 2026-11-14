@@ -136,9 +136,19 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
           if (fo && (!otherNum || otherNum.y > fo.y)) { head = h; firstOpt = fo; crossPage = true; break; }
         }
         if (!firstOpt) { skip++; why['找不到第一個選項'] = (why['找不到第一個選項'] || 0) + 1; continue; }
-        // 翻頁時這一段的起點是次頁頁首（頁眉會被下面的 between 逐行推掉）。
-        const bandPg = crossPage ? head.pg + 1 : head.pg;
-        const bandTop0 = crossPage ? 0 : head.y + (head.h || 12);
+        /*
+         * 翻頁時這一段的起點是次頁頁首（頁眉會被下面的 between 逐行推掉）。
+         * ⚠️ 但圖不一定跟著翻頁：題幹排在頁尾、圖**就接在題幹下面**、只有選項翻過去
+         *   （醫師二階 112080 醫學(四) #46 的腦部 CT／MRI 在第 9 頁 y580，選項在第 10 頁）。
+         *   所以翻頁時先看本頁題幹下面有沒有圖塊，有就用本頁。
+         */
+        let bandPg = crossPage ? head.pg + 1 : head.pg;
+        let bandTop0 = crossPage ? 0 : head.y + (head.h || 12);
+        if (crossPage && figs.some(g => g.pg === head.pg && g.y >= head.y)) {
+          bandPg = head.pg;
+          bandTop0 = head.y + (head.h || 12);
+          firstOpt = { pg: head.pg, y: 1e6, h: 0, kind: 'opt' };   // 本頁沒有選項，下界放到頁尾
+        }
         // 圖在「題幹與選項之間、沒有任何文字行的那一段空白」。
         // 不能直接裁 head→firstOpt：長題幹會被整段框起來變成一張多餘的文字圖
         // （lawyer1 105110 #44 實測，那題根本沒有圖）。

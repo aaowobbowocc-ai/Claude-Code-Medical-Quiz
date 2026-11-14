@@ -698,7 +698,13 @@
         "D": "D"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "option_images": {
+        "A": "/question-images/dental2_115023295_optA.webp",
+        "B": "/question-images/dental2_115023295_optB.webp",
+        "C": "/question-images/dental2_115023295_optC.webp",
+        "D": "/question-images/dental2_115023295_optD.webp"
+      }
     },
     {
       "id": 115023296,
@@ -114346,7 +114352,8 @@
         "D": "D"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "image_options"
     },
     {
       "id": 115022445,
@@ -127344,7 +127351,8 @@
         "D": "D"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "image_options"
     },
     {
       "id": 115023084,
@@ -205406,6 +205414,6 @@
   ],
   "total": 10240,
   "metadata": {
-    "last_updated": "2026-09-17T17:06:13.073Z"
+    "last_updated": "2026-11-14T07:55:20.367Z"
   }
 }

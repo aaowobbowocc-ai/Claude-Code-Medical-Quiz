@@ -4,7 +4,7 @@
     "label": "中醫師(二)",
     "scraped_at": "2026-04-14T11:34:53.579Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-10-17T19:59:15.515Z"
+    "last_updated": "2026-11-14T07:53:37.528Z"
   },
   "total": 10249,
   "questions": [
@@ -24507,7 +24507,13 @@
         "D": "(D)"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "option_images": {
+        "A": "/question-images/tcm2_9479_optA.webp",
+        "B": "/question-images/tcm2_9479_optB.webp",
+        "C": "/question-images/tcm2_9479_optC.webp",
+        "D": "/question-images/tcm2_9479_optD.webp"
+      }
     },
     {
       "id": 9480,

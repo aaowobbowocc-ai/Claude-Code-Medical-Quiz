@@ -24051,7 +24051,13 @@
         "D": "(D)"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "option_images": {
+        "A": "/question-images/public-health_43_optA.webp",
+        "B": "/question-images/public-health_43_optB.webp",
+        "C": "/question-images/public-health_43_optC.webp",
+        "D": "/question-images/public-health_43_optD.webp"
+      }
     },
     {
       "id": 44,
@@ -27931,6 +27937,6 @@
   ],
   "total": 1401,
   "metadata": {
-    "last_updated": "2026-09-17T17:10:53.513Z"
+    "last_updated": "2026-11-14T07:53:34.344Z"
   }
 }

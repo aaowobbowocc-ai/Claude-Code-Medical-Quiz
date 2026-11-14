@@ -4,7 +4,7 @@
     "label": "物理治療師",
     "scraped_at": "2026-04-10T01:55:58.342Z",
     "source": "wwwq.moex.gov.tw",
-    "last_updated": "2026-11-12T16:08:25.266Z"
+    "last_updated": "2026-11-14T07:53:34.000Z"
   },
   "total": 15360,
   "questions": [
@@ -22720,7 +22720,13 @@
         "D": "D"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "option_images": {
+        "A": "/question-images/pt_9827_optA.webp",
+        "B": "/question-images/pt_9827_optB.webp",
+        "C": "/question-images/pt_9827_optC.webp",
+        "D": "/question-images/pt_9827_optD.webp"
+      }
     },
     {
       "id": 9828,

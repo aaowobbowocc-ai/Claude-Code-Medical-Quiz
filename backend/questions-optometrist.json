@@ -44773,7 +44773,13 @@
         "D": "(D)"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "option_images": {
+        "A": "/question-images/optometrist_58_optA.webp",
+        "B": "/question-images/optometrist_58_optB.webp",
+        "C": "/question-images/optometrist_58_optC.webp",
+        "D": "/question-images/optometrist_58_optD.webp"
+      }
     },
     {
       "id": 59,
@@ -49841,6 +49847,6 @@
   ],
   "total": 2500,
   "metadata": {
-    "last_updated": "2026-10-26T16:27:21.825Z"
+    "last_updated": "2026-11-14T07:53:33.311Z"
   }
 }

@@ -208,6 +208,26 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
           band = { top, h: bot - top };
           byImage = true;
         }
+        /*
+         * 題組的圖印在**情境段裡**，也就是第一小題的題號**上面**：
+         *   「情況：下圖為舌外肌簡圖。請回答下列第75 題至第80 題。」
+         *   <圖>
+         *   75. 何者為舌骨舌肌？
+         * 只看 head→firstOpt 的話，整個題組一張圖都補不到。
+         * 題幹帶【題組情境】時，往上找到前一個題號為止。
+         */
+        if (!byImage && /^【題組情境】/.test(String(q.question || ''))) {
+          const prevHead = marks.filter(m => m.kind === 'num' && m.pg === head.pg
+            && m.y < head.y - 5 && m.x < 90).sort((a, b) => b.y - a.y)[0];
+          const topLimit = prevHead ? prevHead.y : 0;
+          const above = figs.filter(g => g.pg === head.pg && g.y >= topLimit && g.y + g.h <= head.y + 4);
+          if (above.length) {
+            const top = Math.min(...above.map(g => g.y));
+            const bot = Math.max(...above.map(g => g.y + g.h));
+            band = { top, h: bot - top };
+            byImage = true;
+          }
+        }
         // 沒有嵌入圖片時才退回空白帶，而且只在題幹文字真的提到圖的時候 ——
         // 考選部有很多圖是向量繪製的，不會變成 image block，那些只能靠空白帶。
         if (!byImage && !needsImage(q)) { skip++; why['題幹沒提到圖、原卷也沒有嵌入圖片'] = (why['題幹沒提到圖、原卷也沒有嵌入圖片'] || 0) + 1; continue; }

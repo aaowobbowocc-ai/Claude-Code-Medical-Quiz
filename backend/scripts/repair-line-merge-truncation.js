@@ -100,6 +100,7 @@ function tailAfter(fullRaw, keepN) {
   const why = {};
   const bump = k => { why[k] = (why[k] || 0) + 1; };
 
+  const kill = o => { try { o && o.destroy && o.destroy(); } catch { /* 已經釋放過 */ } };
   for (const f of fs.readdirSync(BK).filter(x => /^questions(-[a-z0-9-]*)?\.json$/.test(x))) {
     const exam = f.replace('questions-', '').replace('questions.json', 'doctor1').replace('.json', '');
     if (only && exam !== only) continue;
@@ -127,14 +128,20 @@ function tailAfter(fullRaw, keepN) {
       const heads = [], pageLines = [];
       for (let pg = 0; pg < doc.countPages(); pg++) {
         let runs = [];
+        let pageObj = null, stObj = null;
         try {
-          const st = JSON.parse(doc.loadPage(pg).toStructuredText('preserve-whitespace').asJSON());
+          // mupdf 是 WASM，page 與 structured-text 不會自己回收。卷數一多（放射師 192 卷）
+          // 堆積就爆，openDocument 開始丟例外，看起來像「抓不到卷」。用完就 destroy。
+          pageObj = doc.loadPage(pg);
+          stObj = pageObj.toStructuredText('preserve-whitespace');
+          const st = JSON.parse(stObj.asJSON());
           for (const b of st.blocks || []) for (const l of b.lines || []) {
             const t = (l.text || '').normalize('NFC');
             if (!t.trim()) continue;
             runs.push({ x: l.bbox.x, y: l.bbox.y, w: l.bbox.w, t });
           }
         } catch { /* 這頁抽不到文字 */ }
+        kill(stObj); kill(pageObj);
         runs.sort((a, b) => a.y - b.y || a.x - b.x);
         const rows = [];
         for (const r of runs) {
@@ -208,6 +215,7 @@ function tailAfter(fullRaw, keepN) {
         if (APPLY) touched = true;
         fixed++;
       }
+      kill(doc);            // 一份卷用完就釋放，否則卷數一多 WASM 堆積會爆
     }
     if (APPLY && touched) fs.writeFileSync(path.join(BK, f), JSON.stringify(j, null, 2), 'utf8');
   }

@@ -115,7 +115,7 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
         // 於是整題被記成「找不到第一個選項」（dental2 105020 卷四 #20 實測）。
         const heads = marks.filter(m => m.kind === 'num' && m.n === n && m.x < 90);
         if (!heads.length) { skip++; why['定位不到題號'] = (why['定位不到題號'] || 0) + 1; continue; }
-        let head = null, firstOpt = null, crossPage = false;
+        let head = null, firstOpt = null, crossPage = false, syntheticOpt = false;
         for (const h of heads) {
           const same = marks.find(m => m.kind === 'opt' && m.pg === h.pg && m.y > h.y);
           if (same) { head = h; firstOpt = same; break; }
@@ -134,6 +134,20 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
           const fo = onNext.find(m => m.kind === 'opt');
           const otherNum = onNext.find(m => m.kind === 'num' && m.n !== n);
           if (fo && (!otherNum || otherNum.y > fo.y)) { head = h; firstOpt = fo; crossPage = true; break; }
+        }
+        /*
+         * 最後一條退路：**整張卷的選項標記都讀不出來**（語言治療 101110 的選項是
+         * 圈號①②③④，字型把它們壓成私用區的字，mupdf 多半只吐出空字串，
+         * 四個選項又橫排在同一列），上面每一條都找不到「第一個選項」。
+         * 這時用「下一個題號」當這一題的下界 —— 範圍還是這一題自己的，不會吃到別題。
+         */
+        if (!firstOpt) {
+          for (const h of heads) {
+            const nx = marks.filter(m => m.kind === 'num' && m.pg === h.pg && m.y > h.y + 4)
+              .sort((a, b) => a.y - b.y)[0];
+            // 同一頁的下一個題號；離太遠的多半是假題號（表格裡的數字）
+            if (nx && nx.y - h.y < 300) { head = h; firstOpt = { pg: h.pg, y: nx.y, h: 0, kind: 'opt' }; syntheticOpt = true; break; }
+          }
         }
         if (!firstOpt) { skip++; why['找不到第一個選項'] = (why['找不到第一個選項'] || 0) + 1; continue; }
         /*
@@ -231,7 +245,25 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
         // 沒有嵌入圖片時才退回空白帶，而且只在題幹文字真的提到圖的時候 ——
         // 考選部有很多圖是向量繪製的，不會變成 image block，那些只能靠空白帶。
         if (!byImage && !needsImage(q)) { skip++; why['題幹沒提到圖、原卷也沒有嵌入圖片'] = (why['題幹沒提到圖、原卷也沒有嵌入圖片'] || 0) + 1; continue; }
+        // 下界是「下一個題號」推出來的（整卷讀不到選項標記）時，空白帶那條路不能用 ——
+        // 範圍裡整片都是選項文字，裁出來會是一塊字（呼吸 114090 #59 實測裁出別題的選項）。
+        if (!byImage && syntheticOpt) { skip++; why['沒有選項標記、只好靠圖塊，但這題沒有圖塊'] = (why['沒有選項標記、只好靠圖塊，但這題沒有圖塊'] || 0) + 1; continue; }
         if (!band) { skip++; why['題幹與選項間沒有空白帶(應無圖)'] = (why['題幹與選項間沒有空白帶(應無圖)'] || 0) + 1; continue; }
+        /*
+         * 最後一道防呆：框裡面不能有一整片文字。
+         * 掃描卷的「圖片區塊」有時就是一整段**排版過的文字**（呼吸 114090 #59 的
+         * 框裡印的是別題的選項與題幹），scanned 那條只擋整頁大小的，擋不到它。
+         * 真的圖頂多幾行標籤，不會有四行以上的長句。
+         */
+        {
+          const inBox = marks.filter(m => m.pg === bandPg
+            && m.y >= band.top - 2 && m.y <= band.top + band.h + 2);
+          // 框裡有**別題的題號**或一整排選項標記 → 那是一段排版過的文字，不是圖。
+          // （呼吸 114090 #59 框出來的是第 62、63 題的題幹與 A./B./C./D.）
+          const numsIn = inBox.filter(m => m.kind === 'num' && m.x < 90 && m.n !== n).length;
+          const optsIn = inBox.filter(m => m.kind === 'opt').length;
+          if (numsIn >= 2 || optsIn >= 3) { skip++; why['框裡是別題的文字(不是圖)'] = (why['框裡是別題的文字(不是圖)'] || 0) + 1; continue; }
+        }
         const name = `${exam}_${code}_q${n}_fig.webp`;
         if (APPLY) {
           try {

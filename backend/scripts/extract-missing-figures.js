@@ -66,10 +66,13 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
       // 嵌入圖片區塊。'preserve-images' 才會吐 type!=='text' 的 block。
       // 掃描檔要擋掉：整頁就是一張圖的話，每一題都會「有圖」。
       const figs = [];
+      const kill = o => { try { o && o.destroy && o.destroy(); } catch { /* 已經釋放過 */ } };
       for (let pg = 0; pg < doc.countPages(); pg++) {
+        let pageObj = null, siObj = null;
         try {
-          const pageObj = doc.loadPage(pg);
-          const si = JSON.parse(pageObj.toStructuredText('preserve-images').asJSON());
+          pageObj = doc.loadPage(pg);
+          siObj = pageObj.toStructuredText('preserve-images');
+          const si = JSON.parse(siObj.asJSON());
           // 頁面尺寸要從 getBounds() 拿。StructuredText 的 JSON **沒有 bbox 欄位**，
           // 本來寫 si.bbox 導致 pageArea 退成 1，於是每一頁都被判成掃描檔、
           // 圖片區塊整批被丟掉（找了一輪才發現是 fail-closed）。
@@ -83,12 +86,17 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
             figs.push({ pg, y: b.bbox.y, x: b.bbox.x, w: b.bbox.w, h: b.bbox.h });
           }
         } catch { /* 這一頁抽不出圖，照舊走空白帶 */ }
+        kill(siObj); kill(pageObj);
         // 有些卷的某一頁會讓 mupdf 在 new_stext_page_from_page 丟例外
         //（放射師 102 年某一卷實測）。沒有 try 的話整個 process 死掉，
         // 後面幾十卷全都不會跑 —— 跳過那一頁就好。
-        let st;
-        try { st = JSON.parse(doc.loadPage(pg).toStructuredText('preserve-whitespace').asJSON()); }
-        catch { continue; }
+        let st, p2 = null, st2 = null;
+        try {
+          p2 = doc.loadPage(pg);
+          st2 = p2.toStructuredText('preserve-whitespace');
+          st = JSON.parse(st2.asJSON());
+        } catch { kill(st2); kill(p2); continue; }
+        kill(st2); kill(p2);
         for (const b of st.blocks || []) for (const l of b.lines || []) {
           const t = (l.text || '').normalize('NFC'); if (!t.trim()) continue;
           // 題號有兩種排法：獨立一行的「12」（公職卷），以及「9.」後面直接接題幹（醫事類）。
@@ -236,6 +244,10 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
           + `${crossPage ? ' 翻頁' : ''} ${byImage ? '嵌圖' : '空白帶'} top=${Math.round(band.top)} h=${Math.round(band.h)}`);
         made++;
       }
+      // 一份卷用完就釋放。mupdf 是 WASM，記憶體不會自己回收 ——
+      // 放射師 192 卷跑到一半 openDocument 就開始丟例外（「71 卷失敗」其實是堆積爆了，
+      // 不是考選部擋下載）。
+      kill(doc);
     }
     if (APPLY && touched) fs.writeFileSync(path.join(BK, f), JSON.stringify(j, null, 2), 'utf8');
   }

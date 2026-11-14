@@ -77,12 +77,22 @@ const norm = s => String(s == null ? '' : s).normalize('NFC')
         lines.sort((a, b) => a.y - b.y || a.x - b.x);
         for (let i = 0; i < lines.length; i++) {
           if (!CASE_HEAD.test(lines[i].t)) continue;
-          // 收到下一個題號行為止
+          /*
+           * 收到下一個題號行為止。但「情況：」與題號之間常常還夾著**圖**，
+           * 圖裡的標籤（①②③、「舌骨」）也是文字行，一起收進來就變成
+           * 「…請回答下列第75 題至第80 題。①⑤②⑥③④舌骨」這種垃圾
+           *（語言治療 101110 實測，而且那些標籤是私用區的字，會變成豆腐）。
+           * 圖的標籤的簽章：縮排比「情況：」那一行深很多，而且很短。
+           */
+          const baseX = lines[i].x;
           const parts = [lines[i].t];
           for (let k = i + 1; k < lines.length; k++) {
             const t = lines[k].t;
             if (/^\d{1,3}\s*$/.test(t) || /^\d{1,3}\s*[.．、]/.test(t)) break;
-            parts.push(t);
+            const bare = t.replace(/[--�]/g, '').trim();
+            if (lines[k].x > baseX + 60 && bare.length <= 6) continue;   // 圖裡的標籤
+            if (!bare) continue;                                        // 整行都是私用區的字
+            parts.push(bare);
           }
           const text = parts.join('');
           const m = RANGE.exec(text);

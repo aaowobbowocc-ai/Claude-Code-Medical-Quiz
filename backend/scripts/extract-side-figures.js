@@ -114,7 +114,15 @@ const SIDE = /([左右])圖/g;
         const wantLeft = [...sides].some(s => s[0] === '左');
         const both = wantRight && wantLeft;
 
-        let cand = figs.filter(g => g.pg === head.pg && g.y >= head.y - 14 && g.y + g.h <= yBot + 4);
+        /*
+         * 圖排在右欄時常常**比這一題還高**：下一題的題號已經在左欄排下去了，
+         * 圖還在右邊往下長（聽力師 100140 #1 的測試流程圖 y275~505，#2 的題號在 y340）。
+         * 題幹自己講了方位的，就只要求「圖的上緣」落在這一題範圍內；
+         * 沒講方位的仍要求整塊都在範圍內 —— 那條路沒有別的證據，不能放寬。
+         */
+        const loose = sides.size > 0;
+        let cand = figs.filter(g => g.pg === head.pg && g.y >= head.y - 14
+          && (loose ? g.y <= yBot + 4 : g.y + g.h <= yBot + 4));
         if (!both) cand = cand.filter(g => wantRight ? g.x >= head.x + 180 : g.x < head.x + 180);
         if (!cand.length) { bump('這題範圍內沒有嵌入圖塊'); continue; }
         // 一張照片常被 PDF 切成上下相接的幾條：x 範圍幾乎相同、上下幾乎沒有縫。

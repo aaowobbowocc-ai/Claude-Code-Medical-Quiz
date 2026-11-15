@@ -5990,8 +5990,8 @@
     "options": {
       "A": "P-selectin",
       "B": "CD63",
-      "C": "lectinlike oxidized low",
-      "D": "density lipoprotein receptor von Willebrand factor"
+      "C": "lectinlike oxidized low density lipoprotein receptor",
+      "D": "von Willebrand factor"
     },
     "answer": "D",
     "explanation": ""
@@ -7939,14 +7939,13 @@
     "number": 71,
     "question": "下列那些病毒在懷孕期間感染，容易造成嬰兒先天性缺陷？①Cytomegalovirus ②HSV ③Adenovirus④Rubella virus",
     "options": {
-      "A": "(圖)",
-      "B": "(圖)",
-      "C": "(圖)",
-      "D": "(圖)"
+      "A": "①②③",
+      "B": "①②④",
+      "C": "②③④",
+      "D": "①③④"
     },
     "answer": "B",
-    "explanation": "",
-    "incomplete": "image_options"
+    "explanation": ""
   },
   {
     "id": 9587,
@@ -18279,8 +18278,8 @@
     "question": "下列何者不會產生紅色尿液？",
     "options": {
       "A": "血管內溶血",
-      "B": "服用rifampin",
-      "C": "抗生素 含有血紫質",
+      "B": "服用rifampin 抗生素",
+      "C": "含有血紫質",
       "D": "含有膽紅素"
     },
     "answer": "D",

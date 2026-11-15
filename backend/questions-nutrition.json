@@ -12315,14 +12315,13 @@
       "number": 3,
       "question": "佛教徒不吃下列那些食物：①芹菜 ②薑 ③大蒜 ④洋蔥 ⑤青蔥 ⑥韭黃 ⑦青椒？",
       "options": {
-        "A": "(圖)",
-        "B": "(圖)",
-        "C": "(圖)",
-        "D": "(圖)"
+        "A": "③④⑤⑥",
+        "B": "②③⑤⑥",
+        "C": "①③⑥⑦",
+        "D": "①②⑤⑦"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": "image_options"
+      "explanation": ""
     },
     {
       "id": 114223,
@@ -12396,14 +12395,13 @@
       "number": 7,
       "question": "下列那些為良好之庫房操作管理？①每天檢查庫溫，定期檢查各類食物保存期限 ②冷凍食品解凍後未使用完，立即凍結入庫貯存 ③乾貨食材與清潔用品不可存放於同一層架 ④物品放置固定位置，以後進先出為原則 ⑤魚、肉、蛋等食物不要混在一起放置 ⑥洗切之蔬菜肉品等冷藏存放時需覆蓋完整",
       "options": {
-        "A": "(圖)",
-        "B": "(圖)",
-        "C": "(圖)",
-        "D": "(圖)"
+        "A": "①②③④",
+        "B": "①②③⑤",
+        "C": "①③⑤⑥",
+        "D": "①④⑤⑥"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": "image_options"
+      "explanation": ""
     },
     {
       "id": 114227,
@@ -12577,14 +12575,13 @@
       "number": 16,
       "question": "製作酸辣湯的過程有4 個步驟，其順序應為？①煮開 ②芶芡 ③加醋 ④灑胡椒",
       "options": {
-        "A": "(圖)",
-        "B": "(圖)",
-        "C": "(圖)",
-        "D": "(圖)"
+        "A": "①②③④",
+        "B": "①③②④",
+        "C": "①③④②",
+        "D": "①④③②"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": "image_options"
+      "explanation": ""
     },
     {
       "id": 114236,
@@ -12758,14 +12755,13 @@
       "number": 25,
       "question": "下列那些是團膳公司管理者合理管束（discipline）員工之項目？①常常遲到 ②員工理財方式 ③上班時大聲喧嘩 ④體重",
       "options": {
-        "A": "(圖)",
-        "B": "(圖)",
-        "C": "(圖)",
-        "D": "(圖)"
+        "A": "①④",
+        "B": "①②",
+        "C": "①③",
+        "D": "②④"
       },
       "answer": "C",
-      "explanation": "",
-      "incomplete": "image_options"
+      "explanation": ""
     },
     {
       "id": 114245,
@@ -12859,14 +12855,13 @@
       "number": 30,
       "question": "團體膳食公司編製預算時，最常考慮下列那些因素？①過去的銷售所得的報告和統計 ②未來產品的定價策略、營運政策 ③國家和當地的經濟狀況 ④過去幾年實際運作與預算的差異 ⑤膳食營養量",
       "options": {
-        "A": "(圖)",
-        "B": "(圖)",
-        "C": "(圖)",
-        "D": "(圖)"
+        "A": "①②③④",
+        "B": "①②③⑤",
+        "C": "①②④⑤",
+        "D": "①③④⑤"
       },
       "answer": "A",
-      "explanation": "",
-      "incomplete": "image_options"
+      "explanation": ""
     },
     {
       "id": 114250,
@@ -28847,8 +28842,8 @@
       "number": 35,
       "question": "下列何者不是cancer cachexia 的臨床表徵？",
       "options": {
-        "A": "progressive weight",
-        "B": "loss immunosuppression",
+        "A": "progressive weight loss",
+        "B": "immunosuppression",
         "C": "gall stone",
         "D": "muscle wasting"
       },
@@ -41292,10 +41287,10 @@
       "number": 27,
       "question": "下列何者可直接提供甲基以供磷脂醯膽鹼（phosphatidylcholine）之合成？",
       "options": {
-        "A": "-腺核苷甲硫胺酸（S-adenosylmethione）",
-        "B": "S",
-        "C": "乙醇胺（ethanolamine）",
-        "D": "甲硫胺酸（methionine）"
+        "A": "-腺核苷甲硫胺酸（S-adenosylmethione）S",
+        "B": "乙醇胺（ethanolamine）",
+        "C": "甲硫胺酸（methionine）",
+        "D": "膽鹼（choline）"
       },
       "answer": "A",
       "explanation": ""
@@ -44596,9 +44591,9 @@
       "question": "為防止骨質疏鬆症的發生，可建議增加下列何種營養素組合的攝取？",
       "options": {
         "A": "銅和鉻",
-        "B": "-6 脂肪酸和水",
-        "C": "n",
-        "D": "維生素D 和K"
+        "B": "-6 脂肪酸和水n",
+        "C": "維生素D 和K",
+        "D": "-葡聚醣和維生素Aβ"
       },
       "answer": "C",
       "explanation": ""
@@ -48998,8 +48993,8 @@
       "options": {
         "A": "lipoprotein lipase、carnitine transferase I",
         "B": "acetyl-CoA carboxylase、fatty acid synthetase",
-        "C": "acetyl-CoA carboxylase、hormone",
-        "D": "sensitive lipase carnitine transferase II、hormone sensitive lipase"
+        "C": "acetyl-CoA carboxylase、hormone sensitive lipase",
+        "D": "carnitine transferase II、hormone sensitive lipase"
       },
       "answer": "B",
       "explanation": ""
@@ -50356,10 +50351,10 @@
       "number": 31,
       "question": "有關社區營養計畫的策略性規劃，下列何階段可使用SWOT 分析？",
       "options": {
-        "A": "（action）行動計畫",
-        "B": "A",
-        "C": "（situation）現況分析",
-        "D": "S"
+        "A": "（action）行動計畫A",
+        "B": "（situation）現況分析S",
+        "C": "（strategy）策略S",
+        "D": "（tactics）戰術T"
       },
       "answer": "B",
       "explanation": ""
@@ -58469,9 +58464,9 @@
       "question": "下列何項飲食因子對大腸癌的預防最有幫助？",
       "options": {
         "A": "礦物質的補充",
-        "B": "胡蘿蔔素的補充",
-        "C": "β",
-        "D": "增加蔬果攝取"
+        "B": "胡蘿蔔素的補充β",
+        "C": "增加蔬果攝取",
+        "D": "禁食治療"
       },
       "answer": "C",
       "explanation": ""
@@ -74227,10 +74222,10 @@
       "number": 31,
       "question": "社區營養計畫的內容,有關「訂定目標」的敘述,下列何者錯誤?",
       "options": {
-        "A": "依達成程度可分為三個層次:最高目標(goal)、直接目標(objectives)、工作達成目標(targets)",
-        "B": "最高目標(goal)是一種理想和宗旨,無法測量,只能透過推行直接目標(objectives)來朝最高",
-        "C": "目標前進",
-        "D": "「全民達到均衡營養」是直接目標(objectives)"
+        "A": "依達成程度可分為三個層次：最高目標（goal）、直接目標（objectives）、工作達成目標（targets）",
+        "B": "最高目標（goal）是一種理想和宗旨，無法測量，只能透過推行直接目標（objectives）來朝最高目標前進",
+        "C": "「全民達到均衡營養」是直接目標（objectives）",
+        "D": "「二年內將兒童肥胖率降低20%」是工作達成目標（targets）"
       },
       "answer": "C",
       "explanation": "",
@@ -76714,10 +76709,10 @@
       "number": 36,
       "question": "「自主衛生檢查」是指團膳業者應自動建立一套符合自己機構需求的檢查制度,以確保餐廳廚房 的最佳衛生狀態,則下列敘述何者錯誤?",
       "options": {
-        "A": "對於調理用膳等場所衛生,加熱保溫食品不得低於65°C",
-        "B": "對於餐盒業衛生管理中「調理」項目,熱藏溫度在60°C以上,並有溫度指示裝置",
-        "C": "對於調理用膳等場所衛生,應有足夠而清潔之冷凍、冷藏設備,溫度須保持冷藏溫度在0~10°C",
-        "D": "以上;冷凍-18°C以上"
+        "A": "對於調理用膳等場所衛生，加熱保溫食品不得低於65℃",
+        "B": "對於餐盒業衛生管理中「調理」項目，熱藏溫度在60℃以上，並有溫度指示裝置",
+        "C": "對於調理用膳等場所衛生，應有足夠而清潔之冷凍、冷藏設備，溫度須保持冷藏溫度在0～10℃以上；冷凍－18℃以上",
+        "D": "對於餐盒業衛生管理中「調理」項目，冷藏溫度在0～7℃以上；冷凍溫度在－18℃以下；並有溫度指示裝置"
       },
       "answer": "C",
       "explanation": "",
@@ -95997,9 +95992,9 @@
       "number": 1,
       "question": "欲探討飲食攝取與慢性疾病的關係，使用下列何種飲食評估方法最適當？",
       "options": {
-        "A": "Daily food record",
+        "A": "24-hour recall",
         "B": "Food frequency questionnaire",
-        "C": "24-hour recall",
+        "C": "Daily food record",
         "D": "Diet history"
       },
       "answer": "B",

@@ -123,7 +123,29 @@ const SIDE = /([左右])圖/g;
         const loose = sides.size > 0;
         let cand = figs.filter(g => g.pg === head.pg && g.y >= head.y - 14
           && (loose ? g.y <= yBot + 4 : g.y + g.h <= yBot + 4));
-        if (!both) cand = cand.filter(g => wantRight ? g.x >= head.x + 180 : g.x < head.x + 180);
+        /*
+         * 「圖在右邊」原本只看固定的 x ≥ 題號 x + 180。選項很短的時候圖會往左靠，
+         * 這條就擋掉了真的排在旁邊的圖（中醫二階 101110 #27 的耳穴圖 x181，
+         * 選項「甲乙丙丁」只有一個字、排在 x72）。
+         * 補一條幾何退路：圖所在的那一段 y 範圍裡，**沒有任何一行文字從圖的左邊
+         * 穿進圖裡**，就表示它確實站在文字欄旁邊的空白。
+         * ⚠️ 只看「起點在圖左邊、右緣越過圖左緣」的行 —— 圖**裡面**的標籤
+         *   （起點就在圖內）不算，否則有標籤的圖全部會被判成跟文字重疊。
+         */
+        const clearOfText = g => {
+          // 不能用「一行都不准穿進來」：題幹的第一行本來就與圖的上緣齊平
+          //（#27 的題幹 y572 就壓在圖 y569 的頭上），那樣每一題都會被擋掉。
+          // 改看**被文字穿過的高度佔圖多少**，兩成以內就算站在旁邊的空白。
+          const crossed = lines.filter(l => l.pg === g.pg
+            && l.x < g.x - 6 && l.x + (l.w || 0) > g.x + 6
+            && l.y + (l.h || 12) > g.y && l.y < g.y + g.h);
+          const covered = crossed.reduce((s, l) =>
+            s + Math.min(l.y + (l.h || 12), g.y + g.h) - Math.max(l.y, g.y), 0);
+          return covered <= g.h * 0.2;
+        };
+        if (!both) cand = cand.filter(g => wantRight
+          ? (g.x >= head.x + 180 || (g.x > head.x + 60 && clearOfText(g)))
+          : g.x < head.x + 180);
         if (!cand.length) { bump('這題範圍內沒有嵌入圖塊'); continue; }
         // 一張照片常被 PDF 切成上下相接的幾條：x 範圍幾乎相同、上下幾乎沒有縫。
         // 這種要合起來當一張（tcm1 102030 #41 的 x299-480 y607-694＋y694-781），
@@ -141,6 +163,16 @@ const SIDE = /([左右])圖/g;
 
         let x0 = Math.min(...cand.map(g => g.x)), x1 = Math.max(...cand.map(g => g.x + g.w));
         let y0 = Math.min(...cand.map(g => g.y)), y1 = Math.max(...cand.map(g => g.y + g.h));
+        // 圖的上緣常常跟題幹**最後一行**齊平（圖塊的外框比實際的畫面高一點），
+        // 照 bbox 裁會在左上角留下半句題幹（tcm2 101110 #27 裁出「何處？」）。
+        // 上緣那 20% 之內若有文字行橫穿過去，就把上緣壓到那一行的下方 ——
+        // 圖塊上面那一截本來就是空白，不會裁掉畫面。
+        for (const l of lines) {
+          if (l.pg !== head.pg) continue;
+          if (l.x >= x0 - 6 || l.x + (l.w || 0) <= x0 + 6) continue;
+          const bot = l.y + (l.h || 12);
+          if (bot > y0 && bot <= y0 + (y1 - y0) * 0.2) y0 = bot + 1;
+        }
         // 圖下方 24pt 內、橫向對得上的短行是圖說（「（每格0.1 公分）」），一起框進來。
         // ⚠️ 選項與題號也是短行：圖排在左欄時選項就貼在圖下面，
         //    一起框進來會把答案選項裁進圖裡（speech-therapist 105090 #56 實測，

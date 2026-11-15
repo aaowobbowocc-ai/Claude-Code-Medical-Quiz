@@ -231,14 +231,41 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
          * 題幹帶【題組情境】時，往上找到前一個題號為止。
          */
         if (!byImage && /^【題組情境】/.test(String(q.question || ''))) {
-          const prevHead = marks.filter(m => m.kind === 'num' && m.pg === head.pg
-            && m.y < head.y - 5 && m.x < 90).sort((a, b) => b.y - a.y)[0];
+          /*
+           * ⚠️ 第二小題之後，「往上找到前一個題號」會停在**同組的上一小題**，
+           *   圖在更上面的情境段裡 → 整組只有第一小題補得到圖。而第一小題只要標過
+           *   incomplete 就被排除在候選外，於是整組一張都補不到
+           *   （聽語 101110 基礎言語科學 #75-80 的舌外肌簡圖就是這樣漏掉的）。
+           *   情境段通常寫明範圍「請回答下列第 75 題至第 80 題」——拿範圍的第一題當錨點。
+           */
+          const rng = String(q.question).match(/第\s*(\d{1,3})\s*題\s*(?:至|到|[-~～])\s*第?\s*(\d{1,3})\s*題/);
+          let anchor = head;
+          if (rng) {
+            const a0 = +rng[1], b0 = +rng[2];
+            if (a0 <= q.number && q.number <= b0 && b0 - a0 <= 8) {
+              const h0 = marks.filter(m => m.kind === 'num' && m.n === a0 && m.x < 90
+                && (m.pg < head.pg || (m.pg === head.pg && m.y <= head.y)))
+                .sort((x, y) => y.pg - x.pg || y.y - x.y)[0];
+              if (h0) anchor = h0;
+            }
+          }
+          const prevHead = marks.filter(m => m.kind === 'num' && m.pg === anchor.pg
+            && m.y < anchor.y - 5 && m.x < 90).sort((a, b) => b.y - a.y)[0];
           const topLimit = prevHead ? prevHead.y : 0;
-          const above = figs.filter(g => g.pg === head.pg && g.y >= topLimit && g.y + g.h <= head.y + 4);
+          const above = figs.filter(g => g.pg === anchor.pg && g.y >= topLimit && g.y + g.h <= anchor.y + 4);
           if (above.length) {
-            const top = Math.min(...above.map(g => g.y));
-            const bot = Math.max(...above.map(g => g.y + g.h));
+            // 錨點是整頁第一題時 topLimit 退成 0，上面可能還躺著**前一個題組**的圖。
+            // 只取離錨點最近的那一叢（相鄰 30pt 內算同一叢）。
+            above.sort((a, b) => b.y - a.y);
+            const cluster = [above[0]];
+            for (let i = 1; i < above.length; i++) {
+              const topNow = Math.min(...cluster.map(g => g.y));
+              if (topNow - (above[i].y + above[i].h) <= 30) cluster.push(above[i]); else break;
+            }
+            const top = Math.min(...cluster.map(g => g.y));
+            const bot = Math.max(...cluster.map(g => g.y + g.h));
             band = { top, h: bot - top };
+            bandPg = anchor.pg;
             byImage = true;
           }
         }

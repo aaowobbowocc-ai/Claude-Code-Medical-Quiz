@@ -221,7 +221,13 @@ async function pdfFor(exam, year, tag) {
           if (fh && fh.pg === head.pg) anchorHead = fh;
         }
         const prevHead = [...heads].reverse().find(h => h.pg === anchorHead.pg && h.y < anchorHead.y - 5);
-        const searchTop = (anchorHead !== head && prevHead) ? prevHead.y : head.y;
+        /*
+         * ⚠️ 原本只有「不是題組第一小題」才往上退。但題組的圖就印在情境段裡，
+         *   也就是**第一小題題號的上方** —— 第一小題自己反而永遠搜不到那張圖
+         *   （分科 112 歷史 #27 的進士人數統計圖、111 地理 #24 的人口金字塔）。
+         *   只要這題屬於題組，上界就退到「題組錨點之前的那個題號」。
+         */
+        const searchTop = (ctx && prevHead) ? prevHead.y : head.y;
 
         let box = null, mode = '';
         // 優先靠圖說定位：題幹寫「圖8」，PDF 裡就有一行「圖8」當圖說。
@@ -376,7 +382,18 @@ async function pdfFor(exam, year, tag) {
               if (HEADER.test(l.t.trim())) return l.y + (l.h || 12) + 4;
               if (l.x + (l.w || 0) <= cap.x) continue;
               if (l.x < minX) continue;
-              if (l.t.trim().length > 15) return l.y + (l.h || 12) + 4;
+              /*
+               * 「長度 > 15」會把**圖自己的座標標籤**當成正文。
+               * 人口金字塔的橫軸是「8 7 6 5 4 3 2 1 0 1 2 3 4 5 6 7 8」、
+               * 縱軸是「100+ 95-99 90-94 …」，都超過 15 個字元，於是 top 停在
+               * 圖的下緣，框只剩 3pt 被丟掉（分科 111 地理 #24/#25 整組補不到圖）。
+               * 擋路的要是**有字的句子**：中日韓字或拉丁字母夠多才算，
+               * 純數字與符號的刻度不算。
+               */
+              const t = l.t.trim();
+              const solid = (t.match(/[㐀-鿿぀-ヿ]/g) || []).length
+                + (t.match(/[A-Za-z]/g) || []).length;
+              if (solid > 12) return l.y + (l.h || 12) + 4;
             }
             return 0;
           };
@@ -494,7 +511,24 @@ async function pdfFor(exam, year, tag) {
             if (spans) bumpFig('圖的範圍跨到別題的題號（題組共用或隔壁題的）');
             else if (near.length && clash) bumpFig('圖說編號與題幹指名的對不上');
             else {
-              box = { left: Math.max(0, g.x - 6), top: Math.max(0, g.y - 6), height: g.h + 12, page: g.pg };
+              /*
+               * 圖塊的 bbox 只有畫面本身，**標在圖旁邊的字不在裡面**：
+               * gsat 106 國文 #8 的太極圖左右標著「孤獨」「交會」「太極圖→」，
+               * 照 bbox 裁出來三個標籤全沒了，剩一顆看不出在講什麼的陰陽魚。
+               * 把與圖同一水平帶、貼在左右 120pt 內的**短標籤**一起框進來
+               * （長行是題幹，選項與題號也要擋掉）。
+               */
+              let x0 = g.x - 6, x1 = g.x + g.w + 6;
+              for (const l of (pages[g.pg] || [])) {
+                if (l.y + (l.h || 12) < g.y + 4 || l.y > g.y + g.h - 4) continue;
+                const t = l.t.trim();
+                if (!t || t.length > 8) continue;
+                if (/^\(?[A-E][).]/.test(t) || /^\d{1,3}\s*[.、．]/.test(t)) continue;
+                if (l.x + (l.w || 0) < g.x - 120 || l.x > g.x + g.w + 120) continue;
+                x0 = Math.min(x0, l.x - 4);
+                x1 = Math.max(x1, l.x + (l.w || 0) + 4);
+              }
+              box = { left: Math.max(0, x0), top: Math.max(0, g.y - 6), height: g.h + 12, page: g.pg, right: x1 };
               mode = '嵌入圖片';
             }
           }

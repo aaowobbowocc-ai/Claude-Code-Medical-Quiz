@@ -114,12 +114,20 @@ const nz = s => decode(s).normalize('NFKC')
       if (!lines.some(l => MARK[l.t[0]])) { bump('認不得選項標記'); continue; }
       papers++;
 
-      // 題號 → { A,B,C,D } 的「原卷首行」
+      // 題號 → { A,B,C,D } 的「原卷首行」，另外收題幹用來判斷題號有沒有對上
       const pdf = {};
+      const stems = {};
       let cur = null;
       for (const l of lines) {
         const hm = /^(\d{1,3})\s*$/.exec(l.t.trim()) || /^(\d{1,3})\s*[.、．]/.exec(l.t.trim());
-        if (hm && l.x < 90) { cur = +hm[1]; pdf[cur] = pdf[cur] || {}; continue; }
+        if (hm && l.x < 90) {
+          cur = +hm[1]; pdf[cur] = pdf[cur] || {}; stems[cur] = stems[cur] || '';
+          // 題號與題幹同一行時（「12 下列何者…」），題號後面那段就是題幹開頭
+          const tail = l.t.trim().replace(/^\d{1,3}\s*[.、．]?\s*/, '');
+          if (tail) stems[cur] += tail;
+          continue;
+        }
+        if (cur && !MARK[l.t[0]] && !Object.keys(pdf[cur]).length) stems[cur] += l.t;
         if (!cur || !MARK[l.t[0]]) continue;
         /*
          * ⚠️ 一行裡常常印著**好幾個選項**：選項很短時四個會排在同一列，
@@ -153,8 +161,19 @@ const nz = s => decode(s).normalize('NFKC')
           bad.push({ k, head, mine, elsewhere: elsewhere || null });
         }
         if (!bad.length) continue;
+        /*
+         * 先問一個更基本的問題：這個題號在原卷上**是不是同一題**？
+         * 不先分這一刀的話，「題庫這題的選項壞了」與「題庫這題整個排錯位置／
+         * 對到別張卷」會混在一起 —— 前者可以照原卷修，後者照著修會把好題蓋掉。
+         * 判準用題幹開頭 10 個字互為子字串（題幹被截斷、被加情境前綴都還對得上）。
+         */
+        const bStem = nz(String(q.question || '').replace(/^【題組情境】/, '')).slice(0, 10);
+        const pStem = nz(stems[+q.number] || '');
+        const stemOk = bStem.length >= 6 && pStem.length >= 6
+          && (pStem.includes(bStem) || nz(q.question).includes(pStem.slice(0, 10)));
         // 分類
-        let kind = '選項文字與原卷不符';
+        let kind = stemOk ? '選項文字與原卷不符' : '題號對不上(題幹也不符)';
+        if (!stemOk) { rows.push({ exam, code, subject, number: +q.number, incomplete: q.incomplete || null, kind, bad }); continue; }
         // 四個都不一樣、而且彼此毫無包含關係 → 題庫這一題的選項整組是**別題的**
         //（聽語 100090 神經性溝通障礙學 #21 實測：四個選項跟原卷完全無關）。
         const alien = bad.length === 4 && bad.every(b =>

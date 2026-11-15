@@ -68873,10 +68873,10 @@
     "number": 41,
     "question": "聽覺中樞神經，包括耳蝸神經核（cochlear nucleus, CN）、上橄欖體（superior olivary complex, SOC）、下丘（inferior colliculus, IC）、外側丘系（lateral lemniscus, LL），從內側膝狀體（medial geniculate body）起，由中樞往末梢的排列順序，下列何者正確？LL",
     "options": {
-      "A": "ÆICÆSOCÆCN          CN",
-      "B": "ÆSOCÆLLÆIC          CN",
-      "C": "ÆSOCÆICÆLL          IC",
-      "D": "ÆLLÆSOCÆCN"
+      "A": "→IC→SOC→CN          CN",
+      "B": "→SOC→LL→IC          CN",
+      "C": "→SOC→IC→LL          IC",
+      "D": "→LL→SOC→CN"
     },
     "answer": "D",
     "explanation": "",
@@ -70777,10 +70777,10 @@
     "number": 49,
     "question": "以噪音刺激右耳會造成左耳的耳聲傳射反應（OAE response）受到抑制（suppression），請問這樣的抑制主要是經由下列那些構造？",
     "options": {
-      "A": "左側內橄欖核（medial olivary complex, MOC）Æ非交叉橄欖耳蝸束（uncrossed olivocochlear bundle,UCOCB）Æ左耳外毛細胞（outer hair cell, OHC）",
-      "B": "右側MOCÆ交叉橄欖核耳蝸束（crossed olivocochlear bundle, COCB）Æ左耳OHC",
-      "C": "左側MOCÆUCOCBÆ左耳內毛細胞（inner hair cell, IHC）",
-      "D": "右側MOCÆCOCBÆ左耳IHC"
+      "A": "左側內橄欖核（medial olivary complex, MOC）→非交叉橄欖耳蝸束（uncrossed olivocochlear bundle,UCOCB）→左耳外毛細胞（outer hair cell, OHC）",
+      "B": "右側MOC→交叉橄欖核耳蝸束（crossed olivocochlear bundle, COCB）→左耳OHC",
+      "C": "左側MOC→UCOCB→左耳內毛細胞（inner hair cell, IHC）",
+      "D": "右側MOC→COCB→左耳IHC"
     },
     "answer": "B",
     "explanation": "",

@@ -38106,10 +38106,10 @@
     "number": 54,
     "question": "擦音的噪音能量集中頻率，隨構音位置不同而改變，中文語音ㄏ、ㄙ、ㄒ的頻譜峰值，由低而高排 列依序為何？",
     "options": {
-      "A": "ㄒÆㄙÆㄏ",
-      "B": "ㄏÆㄒÆㄙ",
-      "C": "ㄙÆㄏÆㄒ",
-      "D": "ㄙÆㄒÆㄏ"
+      "A": "ㄒ→ㄙ→ㄏ",
+      "B": "ㄏ→ㄒ→ㄙ",
+      "C": "ㄙ→ㄏ→ㄒ",
+      "D": "ㄙ→ㄒ→ㄏ"
     },
     "answer": "B",
     "explanation": "",
@@ -38556,15 +38556,17 @@
     "number": 73,
     "question": "【題組情境】根據下圖，請回答下列第70 題至第74 題。\n\n下列何者與編號①的肌肉具有相同的神經支配？",
     "options": {
-      "A": "(圖)",
-      "B": "(圖)",
-      "C": "(圖)",
-      "D": "(圖)"
+      "A": "⑩",
+      "B": "⑧",
+      "C": "⑦",
+      "D": "⑤"
     },
     "answer": "D",
     "explanation": "",
     "_legacy_id": 114100050758,
-    "incomplete": "image_options"
+    "images": [
+      "/question-images/speech-therapist_101110_q73_fig.webp"
+    ]
   },
   {
     "id": "speech_101110_p3_74",
@@ -38605,15 +38607,17 @@
     "number": 75,
     "question": "【題組情境】下圖為舌外肌簡圖。請回答下列第75 題至第80 題。\n\n何者為舌骨舌肌（hyoglossus muscle）？",
     "options": {
-      "A": "(圖)",
-      "B": "(圖)",
-      "C": "(圖)",
-      "D": "(圖)"
+      "A": "③",
+      "B": "⑦",
+      "C": "⑧",
+      "D": "⑨"
     },
     "answer": "D",
     "explanation": "",
     "_legacy_id": 114100050759,
-    "incomplete": "image_options"
+    "images": [
+      "/question-images/speech-therapist_101110_q75_fig.webp"
+    ]
   },
   {
     "id": "speech_101110_p3_76",
@@ -38628,15 +38632,17 @@
     "number": 76,
     "question": "【題組情境】下圖為舌外肌簡圖。請回答下列第75 題至第80 題。\n\n若請病人伸出舌頭再縮回，須靠那一塊肌肉運動？",
     "options": {
-      "A": "(圖)",
-      "B": "(圖)",
-      "C": "(圖)",
-      "D": "(圖)"
+      "A": "③",
+      "B": "⑦",
+      "C": "⑧",
+      "D": "⑨"
     },
     "answer": "A",
     "explanation": "",
     "_legacy_id": 114100050760,
-    "incomplete": "image_options"
+    "images": [
+      "/question-images/speech-therapist_101110_q76_fig.webp"
+    ]
   },
   {
     "id": "speech_101110_p3_77",
@@ -38651,15 +38657,17 @@
     "number": 77,
     "question": "【題組情境】下圖為舌外肌簡圖。請回答下列第75 題至第80 題。\n\n若要發出鼻音，須靠那一塊肌肉運動？",
     "options": {
-      "A": "(圖)",
-      "B": "(圖)",
-      "C": "(圖)",
-      "D": "(圖)"
+      "A": "③",
+      "B": "⑦",
+      "C": "⑧",
+      "D": "⑨"
     },
     "answer": "B",
     "explanation": "",
     "_legacy_id": 114100050761,
-    "incomplete": "image_options"
+    "images": [
+      "/question-images/speech-therapist_101110_q77_fig.webp"
+    ]
   },
   {
     "id": "speech_101110_p3_78",
@@ -56410,10 +56418,10 @@
     "number": 47,
     "question": "當兒童說出「小猴子，香蕉」，語言治療師回以：「哇！小猴子吃香蕉。小猴子在樹上吃香蕉。小 猴子喜歡吃香蕉。大象也喜歡吃香蕉唷！你看，香蕉是水果，長得彎彎的，有黃色的外皮，咬起來 軟軟的，吃起來甜甜的。」以上語言治療師所運用的語言治療技巧依序為：",
     "options": {
-      "A": "示範（modeling）Æ 擴展（expansion）Æ 延伸（extension）",
-      "B": "詳述（expatiation） Æ 延伸（extension）Æ 擴展（expansion）",
-      "C": "擴展（expansion）Æ 延伸（extension）Æ 詳述（expatiation）",
-      "D": "延伸（extension）Æ 自我談話（self talk）Æ 擴展（expansion）"
+      "A": "示範（modeling）→ 擴展（expansion）→ 延伸（extension）",
+      "B": "詳述（expatiation） → 延伸（extension）→ 擴展（expansion）",
+      "C": "擴展（expansion）→ 延伸（extension）→ 詳述（expatiation）",
+      "D": "延伸（extension）→ 自我談話（self talk）→ 擴展（expansion）"
     },
     "answer": "C",
     "explanation": "",
@@ -64322,10 +64330,10 @@
     "number": 71,
     "question": "Guitar（2006）建議兒童口吃的語言治療應該循序漸進，需要建立類化的流暢性階梯，下列順序何者 正確？",
     "options": {
-      "A": "單詞Æ 片語Æ 句子Æ 對話Æ 演講",
-      "B": "母音Æ 子音Æ 片語Æ 句子Æ 對話",
-      "C": "母音Æ 子音Æ 片語Æ 句子Æ 2-4 個句子",
-      "D": "單詞Æ 片語Æ 句子Æ 2-4 個句子Æ 對話"
+      "A": "單詞→ 片語→ 句子→ 對話→ 演講",
+      "B": "母音→ 子音→ 片語→ 句子→ 對話",
+      "C": "母音→ 子音→ 片語→ 句子→ 2-4 個句子",
+      "D": "單詞→ 片語→ 句子→ 2-4 個句子→ 對話"
     },
     "answer": "D",
     "explanation": "",

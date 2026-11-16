@@ -60336,7 +60336,7 @@
       "number": 6,
       "question": "下列何種攝影技術屬於載重攝影（ weight-bearing ）？",
       "options": {
-        "A": "膝關節的Rosenbergmethod",
+        "A": "膝關節的Rosenberg method B.肩關節的Grashey method C.肘關節的Jones method",
         "B": "肩關節的 Grasheymethod",
         "C": "肘 關節的 Jonesmethod",
         "D": "頭部的Haasmethod"
@@ -60397,7 +60397,7 @@
       "question": "下列何種穿刺引流術最可以紓緩急性膽囊炎的症狀？",
       "options": {
         "A": "PTBD（percutaneoustranshepaticbiliarydrainage）",
-        "B": "ENBD （ endoscopicnasalbiliarydrainage ）",
+        "B": "ENBD（endoscopic nasal biliary drainage）C.PTGBD（percutaneous transhepatic GB drainage）",
         "C": "PTGBD （ percutaneoustranshepaticGBdrainage ）",
         "D": "PAOD（peripheralarterialocclusivedisease）"
       },
@@ -60457,7 +60457,7 @@
       "number": 12,
       "question": "下列有關食道攝影右前斜位（RAO）之敘述，何者最正確？",
       "options": {
-        "A": "病人從俯臥轉 35 ～ 40 度，使身體之右前部貼住檢查台",
+        "A": "病人從俯臥轉35～40度，使身體之右前部貼住檢查台B.病人從仰臥轉35～40度，使身體之左後部貼住檢查台",
         "B": "病 人從仰臥轉 35 ～ 40 度，使身體之左後部貼住檢查台",
         "C": "病人從俯臥轉5～10度，使身體之右前部貼住檢查台",
         "D": "病人從仰臥轉 5 ～ 10 度，使身體之左後部貼住檢查台"
@@ -60930,7 +60930,7 @@
       "number": 35,
       "question": "做眼部磁振造影檢查時，下列敘述何者最正確？",
       "options": {
-        "A": "可使用頭部線圈或表面線圈",
+        "A": "可使用頭部線圈或表面線圈B.通常不需移除隱形眼鏡",
         "B": "通常不需移除隱 形眼鏡",
         "C": "頭部偏向疑有疾病的一面",
         "D": "適合偵測眼框內順磁性之異物"
@@ -61092,7 +61092,7 @@
       "question": "膝關節 MRI 檢查時發生左圖所示之假影，改善後影像如右圖。最可能的原因為 何？",
       "options": {
         "A": "截斷假影（truncationartifact）",
-        "B": "血流假影（ flowartifact ）",
+        "B": "血流假影（flow artifact）C.反褶假影（aliasing artifact）D.移動假影（motion artifact）",
         "C": "反褶假影（aliasingartifact）",
         "D": "移動假影（ motionartifact ）"
       },
@@ -61115,7 +61115,7 @@
       "question": "腹部MRI檢查時發生左圖箭號所指之假影，改善後影像如右圖。改善之造影技術最可能為何？",
       "options": {
         "A": "增加激發次數（numberofexcitation）",
-        "B": "使用流動補償（ flowcompensation ）",
+        "B": "使用流動補償（flow compensation）C.調整相位編碼方向（phase encoding direction）D.增加切面厚度（slice thickness）",
         "C": "調整相位 編碼方向（ phaseencodingdirection ）",
         "D": "增加切面 厚度（slicethickness）"
       },
@@ -61186,7 +61186,7 @@
       "options": {
         "A": "三叉神經（trigeminalnerve）",
         "B": "動眼神經（ oculomotornerve ）",
-        "C": "聽神經（acousticnerve）",
+        "C": "聽神經（acoustic nerve）D.迷走神經（vagal nerve）",
         "D": "迷 走神經（ vagalnerve ）"
       },
       "answer": "C",
@@ -61392,7 +61392,7 @@
       "options": {
         "A": "腎皮質（cortex）的回音較正常的肝臟低或相近",
         "B": "腎錐體（ pyramid ）呈低回音，並呈橢圓型排列",
-        "C": "腎竇部（renalsinus）常呈現低回音",
+        "C": "腎竇部（renal sinus）常呈現低回音D.腎臟長徑約9～12公分，左腎通常比右腎大",
         "D": "腎臟長徑 約 9 ～ 12 公分，左腎通常比右腎大"
       },
       "answer": "C",
@@ -220332,7 +220332,7 @@
       "options": {
         "A": "cutoff frequency越高，影像越平滑",
         "B": "Butterworth filter對於原始訊號改變最少",
-        "C": "對於高頻雜訊的去除，使用Butterworth",
+        "C": "對於高頻雜訊的去除，使用Butterworth 較Hann 效果佳",
         "D": "Parzen filter去除的訊號最少 對於原始訊號改變最少 Butterworth 較Hann效果佳"
       },
       "answer": "B",
@@ -305439,10 +305439,10 @@
       "number": 49,
       "question": "工作人員佩戴人員劑量計後需評估劑量結果，下列何種人員劑量計，可用於有效重複計讀？",
       "options": {
-        "A": "CaF:Mn 2",
-        "B": "LiBO:Cu 2 4 7",
-        "C": "CaSO:Tm 4",
-        "D": "AlO:C 2 3"
+        "A": "CaF2:Mn",
+        "B": "Li2B4O7:Cu",
+        "C": "CaSO4:Tm",
+        "D": "Al2O3:C"
       },
       "answer": "D"
     },

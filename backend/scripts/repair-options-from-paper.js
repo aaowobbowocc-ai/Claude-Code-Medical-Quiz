@@ -23,6 +23,7 @@ const fs = require('fs');
 const path = require('path');
 const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve');
 const { nz, decode, readPaperOptions } = require('./lib/moex-paper-options');
+const { answerMap } = require('./lib/moex-answer-geo');
 
 const BK = path.join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
@@ -53,15 +54,35 @@ const KEYS = ['A', 'B', 'C', 'D'];
       const subject = rest.join('|');
       const items = groups[key];
       // 先看這一卷有沒有可能有事：全部都對得上就不必抓 PDF
-      let paper;
+      let paper, resolved;
       try {
         const p = await resolvePaper({ exam, code, subject, year: String(code).slice(0, 3), items });
         if (!p) continue;
         const buf = await fetchSheet('Q', code, p.c, p.s);
         if (!buf) continue;
         paper = readPaperOptions(mupdf, buf);
+        resolved = p;
       } catch { continue; }
       if (!paper.ok) continue;
+      /*
+       * 選項整組換掉時，答案字母就不能假設還是對的 —— 它當初是跟著**錯的選項**
+       * 存進來的（police4 106070 英文 #36 題庫寫 D，原卷選項換成正確的四個之後
+       * 對應的是別的字母）。只好回頭抓考選部的答案卷。
+       * 延遲抓：整卷沒有這類候選時完全不碰網路。
+       */
+      let ansMap;
+      const officialAnswer = async n => {
+        if (ansMap === undefined) {
+          ansMap = null;
+          try {
+            const expected = Math.max(...items.map(q => +q.number || 0));
+            // t=S 答案卷優先、拿不到再退到 t=A 全類科清冊（舊年度只有清冊）
+            const r = await answerMap(code, resolved.c, resolved.s, expected, resolved.subject);
+            if (r && r.map && r.map.size) ansMap = r.map;
+          } catch { /* 沒有答案卷 */ }
+        }
+        return ansMap ? ansMap.get(n) : undefined;
+      };
 
       for (const q of items) {
         const got = paper.opts[+q.number]; if (!got) continue;
@@ -149,6 +170,36 @@ const KEYS = ['A', 'B', 'C', 'D'];
           continue;
         }
 
+        // ── 2.5 題庫這一格被切掉後半 ─────────────────────────────────
+        /*
+         * 題庫的選項是原卷那一格的**開頭**，後面整段不見：
+         *   dental1 112020 卷二 #46 A
+         *     原卷「長石系陶瓷具有良好的美觀性，可用於前牙牙冠鑲面（veneer）」
+         *     題庫「長石系陶瓷具有良好的美觀性，可用」
+         * 使用者看到的是半句話。判準是這個壞法自己的簽章——**題庫是原卷的前綴**，
+         * 所以補回去只會長出東西，不會改掉任何既有的字。
+         *
+         * 原卷那一格仍要通過理智檢查：選項不會有 200 字，中間也不會夾著題號
+         * （續行黏到下一題時會）。
+         */
+        const paperFull = k => (got[k] ? nz(got[k].fullRaw) : '');
+        const truncFix = mismatch.filter(k =>
+          mine(k).length >= 10
+          && paperFull(k).length > mine(k).length
+          && paperFull(k).startsWith(mine(k))
+          && got[k].fullRaw.length <= 200
+          && !/\s\d{1,3}\s*[.、．]\s*\S/.test(got[k].fullRaw));
+        if (truncFix.length === mismatch.length && (!onlyKind || onlyKind === 'truncated')) {
+          console.log(`${APPLY ? '✓' : '·'} [被切掉後半] ${exam} ${code} ${subject} #${q.number}`);
+          for (const k of truncFix) {
+            const after = got[k].fullRaw.replace(/\s+/g, ' ').trim();
+            console.log(`    ${k}: ${JSON.stringify(bank[k])} → ${JSON.stringify(after)}`);
+            if (APPLY) { q.options[k] = after; touched = true; changed++; }
+          }
+          tally['被切掉後半'] = (tally['被切掉後半'] || 0) + 1;
+          continue;
+        }
+
         // ── 3. 開頭多了上一個選項的尾巴 ──────────────────────────────
         const spill = [];
         for (const k of mismatch) {
@@ -181,7 +232,7 @@ const KEYS = ['A', 'B', 'C', 'D'];
          * 這種只能整組照原卷重建。護欄：題庫現有的每一段都必須**找得到出處**
          * （是原卷四個選項串起來的子字串），否則就是對到別張卷，不能覆蓋。
          */
-        if (!spill.length && (!onlyKind || onlyKind === 'rebuild')) {
+        if (!spill.length && (!onlyKind || onlyKind === 'rebuild' || onlyKind === 'alien')) {
           const complete = KEYS.every(k => got[k] && nz(got[k].fullRaw).length >= 2);
           /*
            * 護欄要夠窄才敢自動覆蓋。用的是這個壞法**自己的簽章**：
@@ -220,6 +271,101 @@ const KEYS = ['A', 'B', 'C', 'D'];
             for (const k of KEYS) console.log(`    ${k}: ${JSON.stringify(bank[k])} → ${JSON.stringify(next[k])}`);
             if (APPLY) { q.options = next; touched = true; changed++; }
             tally['整組重建'] = (tally['整組重建'] || 0) + 1;
+            continue;
+          }
+
+          // ── 5. 四個選項整組是別題的 ────────────────────────────────
+          /*
+           * 題幹對得上，四個選項卻跟原卷**毫無關係**：
+           *   聽力師 102030 行為聽力學 #20
+           *     題庫 A「Frequency in Hertz (Hz)」B「Hearing Threshold Levels…」
+           *          ← 這是聽力圖的座標軸標籤，爬蟲把圖上的字當成選項收了
+           *     原卷 A「250Hz, 1000Hz, 4000Hz」…
+           *   聽力師 104100 #57：題庫整組是隔壁題的選項。
+           * 答案字母來自考選部答案卷、是跟著**題號**走的，所以字母留著、
+           * 只換文字，整題就對了。
+           *
+           * 這一類沒有「前綴」那種簽章可用，唯一的依據是題幹。10 個字的門檻
+           * 在這裡太鬆 ——「下列敘述何者錯誤？」這種題幹滿卷都是，配錯了就
+           * 把四個選項整組換成別題的。所以改成**兩邊各取 16 字互相包含**。
+           */
+          const bFull = nz(String(q.question || '').replace(/^【題組情境】/, ''));
+          const pFull = nz(paper.stems[+q.number] || '');
+          const stemStrict = bFull.length >= 16 && pFull.length >= 16
+            && pFull.includes(bFull.slice(0, 16)) && bFull.includes(pFull.slice(0, 16));
+          /*
+           * 「毫無關係」不能只檢查互為子字串。原卷自己解壞的時候，兩邊會長得
+           * 幾乎一樣卻又不互相包含：
+           *   nursing 104100 基礎醫學 #76
+           *     題庫「A、B、C型流行性感冒病毒」 ← 對的
+           *     原卷「、B、C 型流行性感冒病毒A」 ← 開頭的 A 被字型丟掉、跑到尾巴
+           * 照這個「不符」去覆蓋會把對的題庫改壞。改用最長共同子字串：
+           * 兩邊有六成以上的字連在一起相同，就不是別題，是同一句話的兩種解法。
+           */
+          const lcs = (a, b) => {
+            let best = 0;
+            const dp = new Array(b.length + 1).fill(0);
+            for (let i = 1; i <= a.length; i++) {
+              let diag = 0;
+              for (let j = 1; j <= b.length; j++) {
+                const tmp = dp[j];
+                dp[j] = a[i - 1] === b[j - 1] ? diag + 1 : 0;
+                if (dp[j] > best) best = dp[j];
+                diag = tmp;
+              }
+            }
+            return best;
+          };
+          const unrelated = KEYS.every(k => {
+            const m = mine(k), h = paperFull(k);
+            if (m.length < 4 || h.length < 4) return false;
+            if (m.includes(h) || h.includes(m)) return false;
+            if (lcs(m, h) >= Math.min(m.length, h.length) * 0.6) return false;
+            return !KEYS.some(o => mine(o).startsWith(head(k)));
+          });
+          /*
+           * 題庫寫「（見圖 A）」是**刻意**的：題幹明說「完整選項見下圖」，
+           * 選項本來就在圖上。換成文字反而跟題幹打架。
+           * 原卷解出豆腐字（字型沒有對應）的也不能拿來覆蓋。
+           */
+          const placeholder = KEYS.some(k => /^[（(]\s*見圖/.test(String(bank[k] || '').trim()));
+          const garbled = KEYS.some(k => !got[k] || /[�]|[-]/.test(decode(got[k].fullRaw)));
+          /*
+           * 四格長度要相稱。整組換掉是最沒有「簽章」可憑的一種修法，唯一還能
+           * 看的是版面常識：同一題的四個選項不會一個 12 字、一個 120 字。
+           * 長度爆掉＝那一格把後面的東西吸進來了（警特四等 111070 英文 #36 的
+           * D 吸到下一篇克漏字的本文），不能拿來覆蓋題庫。
+           */
+          const lens = KEYS.map(k => paperFull(k).length);
+          const balanced = Math.max(...lens) <= Math.min(...lens) * 2 + 12;
+          if (stemStrict && unrelated && complete && sane && textual && balanced
+              && !placeholder && !garbled
+              && (!onlyKind || onlyKind === 'alien')) {
+            /*
+             * 答案一定要拿考選部答案卷重新對一次。答案欄不是單一個 A~D 的
+             * （「#」、送分、一律給分）就整題跳過，交給人看 —— 那是爭議題，
+             * 規則見 feedback_official_corrections。
+             */
+            const off = await officialAnswer(+q.number);
+            if (!off || !/^[A-D]$/.test(String(off).trim())) {
+              tally['整組是別題的(查不到官方答案，跳過)'] = (tally['整組是別題的(查不到官方答案，跳過)'] || 0) + 1;
+              continue;
+            }
+            const ans = String(off).trim();
+            const next = {};
+            for (const k of KEYS) next[k] = got[k].fullRaw.replace(/\s+/g, ' ').trim();
+            console.log(`${APPLY ? '✓' : '·'} [整組是別題的] ${exam} ${code} ${subject} #${q.number} ` +
+              `ans=${q.answer}${ans !== q.answer ? ` → ${ans}` : ''}`);
+            console.log(`    題幹: ${JSON.stringify(String(q.question).slice(0, 60))}`);
+            for (const k of KEYS) console.log(`    ${k}: ${JSON.stringify(bank[k])} → ${JSON.stringify(next[k])}`);
+            const answerMoved = ans !== q.answer;
+            if (APPLY) {
+              q.options = next;
+              if (answerMoved) q.answer = ans;
+              touched = true; changed++;
+            }
+            tally['整組是別題的'] = (tally['整組是別題的'] || 0) + 1;
+            if (answerMoved) tally['其中答案也改了'] = (tally['其中答案也改了'] || 0) + 1;
             continue;
           }
         }

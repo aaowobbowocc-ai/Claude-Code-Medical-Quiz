@@ -47063,10 +47063,10 @@
       "number": 4,
       "question": "對比敏感度（contrast sensitivity）的定義為下列何者？",
       "options": {
-        "A": "（L－L）/（L +L）max min max min",
-        "B": "（L + L）/（L +L）max min max min",
-        "C": "（L－L）/（L－L）max min max min",
-        "D": "（L +L）/（L－L）max min max min"
+        "A": "（Lmax－Lmin）/（Lmax+Lmin）",
+        "B": "（Lmax+ Lmin）/（Lmax+Lmin）",
+        "C": "（Lmax－Lmin）/（Lmax－Lmin）",
+        "D": "（Lmax+Lmin）/（Lmax－Lmin）"
       },
       "answer": "A"
     },

@@ -10695,10 +10695,10 @@
       "number": 15,
       "question": "關於冠心病與年齡的研究。收集14 位冠心病患者與18 位沒有冠心病的人之年齡資料以羅吉斯迴歸（logistic regression）分析結果如下，下列敘述何者正確？95% C.I. for Exp(B)BS.E.WalddfSig.Exp(B)",
       "options": {
-        "A": "Lower",
-        "B": "Upper",
-        "C": "Age（years）",
-        "D": "0.130"
+        "A": "年齡每增加一歲，冠心病的風險（risk）增加13.9%",
+        "B": "年齡每增加兩歲，冠心病的勝算比（odds ratio, OR）增加29.7%",
+        "C": "係數的顯著性根據Wald 檢定，Wald 是自由度為1 的t 分布",
+        "D": "因為Exp(B)的95%信賴區間不包含0，所以相對應的p 值小於0.05"
       },
       "answer": "B",
       "explanation": ""

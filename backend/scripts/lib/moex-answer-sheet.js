@@ -85,6 +85,7 @@ async function parseAnswerSheet(buf) {
       const glued = halfWidth(ansRow.items[0].t).replace(/^答案\s*/, '');
       if (glued) ans.unshift({ x: ansRow.items[0].x + 34, t: glued });
 
+      let paired = 0;
       for (const n of nums) {
         // 取 x 最接近的答案格
         let best = null;
@@ -92,7 +93,24 @@ async function parseAnswerSheet(buf) {
           const d = Math.abs(a.x - n.x);
           if (d <= X_TOL && (!best || d < best.d)) best = { d, t: a.t };
         }
-        if (best) out[n.n] = best.t.trim();
+        if (best) { out[n.n] = best.t.trim(); paired++; }
+      }
+      if (paired) continue;
+      /*
+       * 第三種版型（99 年的更正卷）：一列被切成好幾段 text run，每段塞好幾格，
+       * 而且兩列的切法不一樣：
+       *   題序列 ["題序 01 02 03 04 05", "06 07 08 09 10", …]
+       *   答案列 ["答案 B D A", "#", "A", "D B B C A", …]
+       * 段落邊界對不起來，所以 x 配對與「第N題」那條都失敗（醫師一階 99-2
+       * 醫學(二) 實測 0 筆）。但同一列的閱讀順序必然對應，數量一致就按順序配。
+       * ⚠️ 要用**空白**把 run 接起來，直接 join('') 會把「01」「02」黏成「0102」。
+       */
+      const spaced = (row) => row.items.map(x => x.t).join(' ').replace(/\s+/g, ' ').trim();
+      const zipNums = (spaced(rows[i]).replace(/^題(號|序)/, '').match(/\d{1,3}/g) || []).map(Number);
+      const zipAns = (halfWidth(spaced(ansRow)).replace(/^答案/, '').match(/[A-D#＃]/g) || []);
+      if (zipNums.length >= 2 && zipNums.length === zipAns.length
+        && zipNums.every((n, k) => k === 0 || n === zipNums[k - 1] + 1)) {
+        zipNums.forEach((n, k) => { out[n] = zipAns[k].replace('＃', '#'); });
       }
     }
   }

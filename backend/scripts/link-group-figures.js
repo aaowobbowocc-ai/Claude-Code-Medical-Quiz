@@ -20,7 +20,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { IMAGE_REF } = require('./lib/image-ref');
+const { mentionsFigure } = require('./lib/image-ref');
 
 const BK = path.join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
@@ -56,7 +56,7 @@ for (const f of fs.readdirSync(BK).filter(x => /^questions(-[a-z0-9-]*)?\.json$/
   for (const q of arr) {
     const stem = String(q.question || '');
     if (hasImg(q) || q.option_images || q.no_image_in_source) continue;
-    if (!IMAGE_REF.test(stem)) continue;
+    if (!mentionsFigure(stem)) continue;
     const sib = by[q.exam_code + '|' + q.subject] || [];
     const myCtx = ctxOf(stem);
     const myRefs = refsOf(stem);

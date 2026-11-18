@@ -5,7 +5,7 @@ const dir = path.join(__dirname, '..')
 
 // 判定共用 lib/image-ref.js —— 這支與 add-missing-images.js 必須用同一份名單，
 // 否則會出現「盤點說缺 75 題、補圖工具卻說 0 個候選」的假象。
-const { IMAGE_REF: RX_IMG } = require('./lib/image-ref')
+const { mentionsFigure: RX_IMG } = require('./lib/image-ref')
 
 // 不能只認 questions-*.json：醫師一階存成 questions.json（沒有 dash），
 // 這個 glob 曾讓它 6,297 題完全不在盤點範圍內。
@@ -20,7 +20,7 @@ for (const f of files) {
   for (const q of qs) {
     if (q.incomplete) continue
     if (!q.question) continue
-    if (!RX_IMG.test(q.question)) continue
+    if (!RX_IMG(q.question)) continue
     if (q.image || q.images || q.image_url) continue
     // 已經拿原卷驗證過「那題本來就沒有圖」的，不要再算成待辦
     if (q.no_image_in_source) continue

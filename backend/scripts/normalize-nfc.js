@@ -30,9 +30,21 @@ const COMPAT = /[豈-﫿]/g;
 let totalChars = 0, totalFields = 0, totalQ = 0;
 const per = {};
 
-for (const file of fs.readdirSync(DIR).filter(f => /^questions(-.*)?\.json$/.test(f) && !/\.bak/.test(f))) {
+// shared-banks 也要掃：它是主題庫的快照，不跟著正規化的話，
+// 同步腳本用題幹配對時會對不上（2026-11-18 實測殘留 270 個相容字）。
+const SHARED = path.join(DIR, 'shared-banks');
+const targets = fs.readdirSync(DIR)
+  .filter(f => /^questions(-.*)?\.json$/.test(f) && !/\.bak/.test(f))
+  .map(f => ({ file: f, full: path.join(DIR, f) }));
+if (fs.existsSync(SHARED)) {
+  for (const f of fs.readdirSync(SHARED)) {
+    if (f.endsWith('.json')) targets.push({ file: 'shared-banks/' + f, full: path.join(SHARED, f) });
+  }
+}
+
+for (const { file, full } of targets) {
   let json;
-  try { json = JSON.parse(fs.readFileSync(path.join(DIR, file), 'utf8')); } catch { continue; }
+  try { json = JSON.parse(fs.readFileSync(full, 'utf8')); } catch { continue; }
   const arr = Array.isArray(json) ? json : json.questions;
   if (!arr) continue;
 
@@ -57,7 +69,7 @@ for (const file of fs.readdirSync(DIR).filter(f => /^questions(-.*)?\.json$/.tes
   if (qs) {
     per[file.replace('questions-', '').replace('questions.json', 'doctor1').replace('.json', '')] = { qs, chars };
     totalQ += qs; totalFields += fields; totalChars += chars;
-    if (APPLY) fs.writeFileSync(path.join(DIR, file), JSON.stringify(json, null, 2), 'utf8');
+    if (APPLY) fs.writeFileSync(full, JSON.stringify(json, null, 2), 'utf8');
   }
 }
 

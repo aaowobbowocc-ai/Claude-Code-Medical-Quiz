@@ -11,7 +11,7 @@
 const fs = require('fs')
 const path = require('path')
 const { skeleton, normText } = require('./lib/moex-normalize')
-const { IMAGE_REF } = require('./lib/image-ref')
+const { mentionsFigure } = require('./lib/image-ref')
 
 const DIR = path.join(__dirname, '..')
 const PUA = /[-]/
@@ -110,7 +110,7 @@ for (const f of files) {
     //    而同一個檔案上面的 hasImg 是認得的。全站 1,104 題走 image_url（駕照標誌題、
     //    醫事類含圖題；前端 QuestionImages 的 imageUrl prop 一直在顯示它），
     //    於是 42 題明明有圖卻被報成「提到圖但沒有圖」。一律用 hasImg。
-    if (IMAGE_REF.test(stem) && !hasImg && !q.no_image_in_source) bump('visible', '提到圖但沒有圖', exam)
+    if (mentionsFigure(stem) && !hasImg && !q.no_image_in_source) bump('visible', '提到圖但沒有圖', exam)
     // 反過來的風險：image_url 變成「不必修也能閉嘴」的後門。所以檔案不在就照樣報。
     if (q.image_url && !imgExists(q.image_url)) bump('visible', '圖片路徑指到不存在的檔', exam)
     // 組合題「①②③」的圈號被 PDF 字型全壓成 ①（見 decode-circled-options.js）。

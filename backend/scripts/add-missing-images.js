@@ -23,7 +23,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const { IMAGE_REF: STRICT } = require('./lib/image-ref')
+const { mentionsFigure: STRICT } = require('./lib/image-ref')
 
 // We reach into fix-images.js by re-requiring its module after monkey-patching.
 // Easiest: copy the helpers we need here. Avoid duplicating code by exporting
@@ -598,7 +598,7 @@ async function processExamCode(examTag, code, opts) {
     filter = q => q.exam_code === code && (!q.images || !q.images.length)
   } else {
     filter = q => q.exam_code === code && (!q.images || !q.images.length) &&
-            STRICT.test((q.question || '') + ' ' + Object.values(q.options || {}).join(' '))
+            STRICT((q.question || '') + ' ' + Object.values(q.options || {}).join(' '))
   }
   const candidates = qs.filter(filter)
   if (!candidates.length) return { added: 0, skipped: 0 }
@@ -846,7 +846,7 @@ async function main() {
         codes.add(q.exam_code)
       } else {
         const txt = (q.question || '') + ' ' + Object.values(q.options || {}).join(' ')
-        if (STRICT.test(txt)) codes.add(q.exam_code)
+        if (STRICT(txt)) codes.add(q.exam_code)
       }
     }
     for (const code of [...codes].sort()) targets.push({ examTag, code })

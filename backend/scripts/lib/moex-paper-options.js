@@ -71,7 +71,10 @@ function readPaperOptions(mupdf, buf) {
       st = page.toStructuredText('preserve-whitespace');
       const si = JSON.parse(st.asJSON());
       for (const b of si.blocks || []) for (const l of b.lines || []) {
-        const t = (l.text || '').replace(FURNITURE, ''); if (!t.trim()) continue;
+        // 考選部的 PDF 夾帶大量 CJK 相容表意文字（力 U+F98A 看起來跟 U+529B 一樣），
+        // 不在這裡收掉的話會一路寫進題庫，搜尋與比對全部靜默失效
+        // ——99 年那批就這樣帶進 44,469 個字。見 project_nfc_normalize。
+        const t = (l.text || '').normalize('NFC').replace(FURNITURE, ''); if (!t.trim()) continue;
         lines.push({ pg, y: l.bbox.y, x: l.bbox.x, w: l.bbox.w || 0, t });
       }
     } catch { /* 這頁抽不到文字 */ }

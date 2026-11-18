@@ -86,10 +86,52 @@ const IMAGE_REF = new RegExp(
   + NOT_FIGNO + '[圖表]\\s*[0-9０-９]{1,2}(?![0-9０-９．.\\-/／])|'
   + NOT_FIGNO + '[圖表]\\s*[一二三四五六七八九十]{1,3}(?![' + FIG_QUANT + '])');
 
+/*
+ * 「X圖中」「X圖為」「X圖譜」裡的 X 是**圖表的種類**時，講的是一般知識，不是卷上那張圖：
+ *   「正常心電圖中，QRS 的負波通常見於下列何誘導？」
+ *   「某病例有傳導型聽損，且鼓室圖為 Ad」
+ *   「乙酸乙酯之氫-核磁共振圖譜中，下列敘述何者錯誤？」
+ * 這些題不需要圖，卻一路被當成「缺圖」。全站 71 題是人工一題一題標
+ * `no_image_in_source` 壓下去的，剩下的還在害補圖工具空轉。
+ *
+ * ⚠️ 不能一律擋掉：有指示詞的時候就是真的在指卷上那張
+ *   （「這張心電圖中的PR區間」「下列質譜圖中 Y 軸係指何者」「此心電圖為」）。
+ *   所以只有**前面沒有指示詞**的才當成泛稱切掉。
+ */
+const CHART_WORD = '心電|腦電|肌電|聽力|鼓室|質譜|聲譜|頻譜|光譜|色譜|能譜|波譜|指紋|關係|森林|品管|描計';
+const DEICTIC = '(?:這|此|該|如下|如上|下列|以下|上列|右列|左列|附|下|上|右|左)[張幅個的]?';
+// 「圖譜」除非前面有指示詞，一律是泛稱：核磁共振圖譜／質譜圖譜／UV-VIS 圖譜／
+// DNA 指紋圖譜 都是在講那一類圖的性質。真的指著卷上那張時會寫「如圖譜所示」，
+// 「如圖」自己會命中，不靠這個詞。
+const GENERIC_CHART = new RegExp(
+  `(?<!${DEICTIC})(?:${CHART_WORD})圖(?=[中為])|(?<!${DEICTIC})圖譜`, 'g');
+
+/** 把泛稱的圖表名詞拿掉之後，文字裡還提到圖嗎？ */
+function mentionsFigure(text) {
+  return IMAGE_REF.test(String(text || '').replace(GENERIC_CHART, ''));
+}
+
 /** 題幹＋選項一起看：有些卷把圖放在選項裡。 */
 function needsImage(q) {
   const txt = (q.question || '') + ' ' + Object.values(q.options || {}).join(' ');
-  return IMAGE_REF.test(txt);
+  return mentionsFigure(txt);
 }
 
-module.exports = { IMAGE_REF, needsImage };
+/**
+ * 補圖檔名的單一來源。
+ *
+ * ⚠️ 原本是 `${exam}_${code}_q${n}_fig.webp`，**沒有科目**。
+ * 醫事類的 exam_code 是「場次」，一個場次底下有好幾卷
+ * （醫師二階 099010 同時有醫學(三)(四)(五)(六)），四卷的題號都從 1 開始，
+ * 於是「醫學(三) #74」與「醫學(五) #74」寫進同一個檔名 ——
+ * 後寫的蓋掉先寫的，兩題一起指向同一張圖（2026-11-18 盤點：44 張、95 題）。
+ * 帶上考選部的科目碼（s=100/200…）才分得開。
+ *
+ * 舊檔名不動：已經掛好的題目照樣能開，這條只管新產生的圖。
+ */
+function figName(exam, code, subjectCode, n) {
+  const s = String(subjectCode == null ? '' : subjectCode).replace(/[^A-Za-z0-9]/g, '');
+  return s ? `${exam}_${code}_p${s}_q${n}_fig.webp` : `${exam}_${code}_q${n}_fig.webp`;
+}
+
+module.exports = { IMAGE_REF, mentionsFigure, needsImage, figName };

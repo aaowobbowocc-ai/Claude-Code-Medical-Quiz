@@ -13,7 +13,7 @@
 const fs = require('fs');
 const path = require('path');
 const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve');
-const { needsImage } = require('./lib/image-ref');
+const { needsImage, figName } = require('./lib/image-ref');
 
 const BK = path.join(__dirname, '..');
 const IMG = path.join(BK, '..', 'frontend', 'public', 'question-images');
@@ -291,7 +291,7 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
           const optsIn = inBox.filter(m => m.kind === 'opt').length;
           if (numsIn >= 2 || optsIn >= 3) { skip++; why['框裡是別題的文字(不是圖)'] = (why['框裡是別題的文字(不是圖)'] || 0) + 1; continue; }
         }
-        const name = `${exam}_${code}_q${n}_fig.webp`;
+        const name = figName(exam, code, p && p.s, n);
         if (APPLY) {
           try {
             const page = doc.loadPage(bandPg);

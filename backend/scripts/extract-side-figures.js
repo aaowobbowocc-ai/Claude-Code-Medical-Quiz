@@ -26,7 +26,7 @@
 const fs = require('fs');
 const path = require('path');
 const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve');
-const { needsImage } = require('./lib/image-ref');
+const { needsImage, figName } = require('./lib/image-ref');
 
 const BK = path.join(__dirname, '..');
 const IMG = path.join(BK, '..', 'frontend', 'public', 'question-images');
@@ -66,10 +66,11 @@ const SIDE = /([左右])圖/g;
       const [code, ...rest] = key.split('|');
       const subject = rest.join('|');
       const items = arr.filter(q => q.exam_code === code && q.subject === subject);
-      let doc;
+      let doc, paperS = '';
       try {
         const p = await resolvePaper({ exam, code, subject, year: String(code).slice(0, 3), items });
         if (!p) { groups[key].forEach(() => bump('對不到官方卷')); continue; }
+        paperS = p.s;
         doc = mupdf.Document.openDocument(await fetchSheet('Q', code, p.c, p.s), 'application/pdf');
       } catch (e) { groups[key].forEach(() => bump('取卷失敗: ' + String(e.message).slice(0, 24))); continue; }
 
@@ -173,6 +174,27 @@ const SIDE = /([左右])圖/g;
           const bot = l.y + (l.h || 12);
           if (bot > y0 && bot <= y0 + (y1 - y0) * 0.2) y0 = bot + 1;
         }
+        /*
+         * 上一題的選項／題幹最後一行常常**壓在圖的上緣**：放射師 099010 #64 的圖
+         * 從 y150 開始，#63 的選項「2-4 cm」在 y141、字高 12，字腳 y153 已經進到
+         * 圖裡了。照 bbox 裁（再加 3pt 邊距）就在圖的頂端印半行別題的選項
+         * （實測中醫二階 099130 #77 裁進「(B)督脈 (C)足少陽經 (D)手太陽經」、
+         *  物治 099130 #63 裁進半行題幹）。
+         * 上面那條只擋「從左邊穿進圖裡」的行，這種整行在圖**上方**、只有字腳越線的擋不到。
+         * ⚠️ 只看起點在 y0 之上的行 —— 圖裡面的標籤 y 都 ≥ y0，不會被這條動到。
+         */
+        let topGuard = 0;
+        for (const l of lines) {
+          if (l.pg !== head.pg) continue;
+          const bot = l.y + (l.h || 12);
+          // 字腳只差幾 pt 沒碰到上緣的也要擋：裁圖會往上留 3pt 邊距，
+          // 那半行照樣被邊距吃回來（物治 099130 #63 實測）。
+          if (l.y >= y0 || bot <= y0 - 4) continue;
+          if (l.x + (l.w || 0) < x0 - 4 || l.x > x1 + 4) continue;
+          topGuard = Math.max(topGuard, bot + 1);
+        }
+        if (topGuard) y0 = Math.max(y0, topGuard);
+
         // 圖下方 24pt 內、橫向對得上的短行是圖說（「（每格0.1 公分）」），一起框進來。
         // ⚠️ 選項與題號也是短行：圖排在左欄時選項就貼在圖下面，
         //    一起框進來會把答案選項裁進圖裡（speech-therapist 105090 #56 實測，
@@ -196,7 +218,20 @@ const SIDE = /([左右])圖/g;
           x0 = Math.min(x0, l.x); x1 = Math.max(x1, l.x + l.w);
         }
 
-        const name = `${exam}_${code}_q${n}_fig.webp`;
+        /*
+         * 下緣同理：裁圖往下留 6pt，下一行題幹的字頭就露在圖的底部
+         *（醫師二階 099130 #18 的食道攝影下面印著半行「體重減少 10 公斤」）。
+         * 圖說已經在上面收進 y1 了，這裡只看**還在 y1 下面**的行。
+         */
+        let botGuard = Infinity;
+        for (const l of lines) {
+          if (l.pg !== head.pg) continue;
+          if (l.y < y1 - 1) continue;
+          if (l.x + (l.w || 0) < x0 - 4 || l.x > x1 + 4) continue;
+          botGuard = Math.min(botGuard, l.y - 1);
+        }
+
+        const name = figName(exam, code, paperS, n);
         console.log(`${APPLY ? '✓' : '·'} ${exam} ${code} #${n}  ${both ? '左右兩張' : (wantRight ? '右圖' : '左圖')}` +
           `  ${cand.length} 塊  x${Math.round(x0)}-${Math.round(x1)} y${Math.round(y0)}-${Math.round(y1)}`);
         if (APPLY) {
@@ -206,9 +241,12 @@ const SIDE = /([左右])圖/g;
             const png = Buffer.from(pm.asPNG());
             const meta = await sharp(png).metadata();
             const L = Math.max(0, Math.round(x0 * 3) - 9);
-            const T = Math.max(0, Math.round(y0 * 3) - 9);
+            // 上緣的邊距不能越過 topGuard，否則剛擋掉的那半行又被邊距吃回來
+            const T = Math.max(topGuard ? Math.round(topGuard * 3) : 0, Math.round(y0 * 3) - 9);
             const W = Math.min(meta.width - L, Math.round((x1 - x0) * 3) + 18);
-            const H = Math.min(meta.height - T, Math.round((y1 - y0) * 3) + 18);
+            const H = Math.min(meta.height - T,
+              Number.isFinite(botGuard) ? Math.max(0, Math.round(botGuard * 3) - T) : Infinity,
+              Math.round((y1 - y0) * 3) + 18);
             if (W < 90 || H < 60) { bump('成品尺寸過小'); continue; }
             // sharp 0.34：extract 與 trim 不能串在同一條 pipeline，要分兩段
             const buf = await sharp(png).extract({ left: L, top: T, width: W, height: H }).png().toBuffer();
@@ -218,6 +256,15 @@ const SIDE = /([左右])圖/g;
             try { out = sharp(await sharp(buf).trim({ threshold: 12 }).toBuffer()); } catch { out = sharp(buf); }
             await out.webp({ quality: 88 }).toFile(path.join(IMG, name));
             q.images = [`/question-images/${name}`];
+            // 補上圖不等於修好這一題：清掉 missing_image 會把題目放回前端，
+            // 選項本身要是壞的（空的、四個重複），使用者馬上看到「選項重複」。
+            // 與 extract-missing-figures.js 同一道把關。
+            if (q.incomplete === 'missing_image') {
+              const vals = ['A', 'B', 'C', 'D'].map(key =>
+                String((q.options || {})[key] == null ? '' : q.options[key]).replace(/\s+/g, ''));
+              if (vals.every(Boolean) && new Set(vals).size === 4) delete q.incomplete;
+              else q.incomplete = 'broken_options';
+            }
             touched = true;
           } catch (e) { bump('裁圖失敗: ' + String(e.message).slice(0, 26)); continue; }
         }

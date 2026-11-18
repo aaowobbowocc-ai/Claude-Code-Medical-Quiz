@@ -28,7 +28,7 @@
 const fs = require('fs');
 const path = require('path');
 const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve');
-const { needsImage } = require('./lib/image-ref');
+const { needsImage, figName } = require('./lib/image-ref');
 
 const BK = path.join(__dirname, '..');
 const IMG = path.join(BK, '..', 'frontend', 'public', 'question-images');
@@ -70,10 +70,11 @@ const REF = /[圖表]\s*([0-9０-９]{1,2}|[一二三四五六七八九十]{1,3}
       const [code, ...rest] = key.split('|');
       const subject = rest.join('|');
       const items = arr.filter(q => q.exam_code === code && q.subject === subject);
-      let doc;
+      let doc, paperS = '';
       try {
         const p = await resolvePaper({ exam, code, subject, year: String(code).slice(0, 3), items });
         if (!p) { bump('對不到官方卷'); continue; }
+        paperS = p.s;
         doc = mupdf.Document.openDocument(await fetchSheet('Q', code, p.c, p.s), 'application/pdf');
       } catch (e) { bump('卷開不起來'); continue; }
 
@@ -118,7 +119,7 @@ const REF = /[圖表]\s*([0-9０-９]{1,2}|[一二三四五六七八九十]{1,3}
         const x1 = Math.max(...right.map(l => l.x + (l.w || 0))) + 10;
         if (x1 - x0 < 60) { bump('框太窄'); continue; }
 
-        const name = `${exam}_${code}_q${n}_fig.webp`;
+        const name = figName(exam, code, paperS, n);
         if (APPLY) {
           try {
             const page = doc.loadPage(head.pg);

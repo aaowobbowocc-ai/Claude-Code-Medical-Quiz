@@ -1,0 +1,33 @@
+name: CDN Health
+
+# 每天掃 jsDelivr 上的 46 份題庫，看有沒有取不到的。
+#
+# 為什麼：整包 repo 已超過 jsDelivr 的 50 MB package 上限，edge 快取掉了
+# 就會回 403「Package size exceeded」。平常靠快取撐著沒事，所以
+# 「抽幾個檔驗 hash 都對」看不出問題 —— 中彈的是沒快取到的那幾個。
+# 前端有 GitHub raw 退路（使用者不會看到錯誤），但 403 比例一直上升
+# 就代表 CDN 實質失效，該把題庫搬家了（見 memory project_repo_bloat）。
+#
+# 這支失敗（有檔取不到）會寄 Actions 失敗通知，不碰線上任何東西。
+
+on:
+  schedule:
+    # 每天 19:00 UTC（台灣 03:00，低流量時段，跟備份錯開一小時）
+    - cron: '0 19 * * *'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 不需要 npm ci —— 這支只用 node 內建的 fetch 與 fs
+      - name: Scan jsDelivr
+        run: |
+          cd backend
+          node scripts/check-cdn-health.js

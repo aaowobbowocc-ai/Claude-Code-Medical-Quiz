@@ -27,6 +27,28 @@
  *    卡在舊版期間**絕對不要動 CACHE_VERSION / examRegistry 的 CACHE_KEY**，
  *    否則就是上面那個「舊資料寫進新 key、再等 24 小時」的坑。
  *
+ * ⚠️⚠️ 2026-11-19：**purge 之後那幾個檔會有一段時間回 403。**
+ *    整包 repo 已經 578 MB（question-images 305 MB ＋ 題庫 JSON 170 MB），
+ *    超過 jsDelivr 的 50 MB package 上限。purge 清掉 edge 之後 jsDelivr
+ *    要重新 fetch 整包才能回那個檔，fetch 不到就回
+ *      403 Package size exceeded the configured limit of 50 MB
+ *
+ *    實測行為**不穩定，而且會自己好**：
+ *      - 全站 46 檔一次 purge 之後，第一次掃 nursing / nutrition 403，
+ *        十分鐘後換成 state-mgmt / teacher-elementary / teacher-kindergarten，
+ *        再過一陣子全部 200 —— 中彈的檔會「轉」
+ *      - 單獨 purge questions-customs.json：第一次連續 5 次 GET/HEAD 全 403，
+ *        約 48 秒後恢復 200；第二次再 purge 同一個檔，47 次探測全是 200
+ *    所以它看節點、看時機，不是「purge 完必壞」也不是「purge 完必好」。
+ *
+ *    使用者端不會看到錯誤 —— frontend/src/lib/cdnQuestions.js 在 CDN 失敗時
+ *    會改走 GitHub raw（commit 51cfcc00）。但那段時間等於沒有 CDN。
+ *
+ *    → purge 完**不要只抽幾個檔驗**（中彈的正是沒快取到的那幾個），
+ *      跑 scripts/check-cdn-health.js --wait 整批掃到收斂為止。
+ *      急著生效而不想 purge 的話，改 CACHE_VERSION 讓 App 重抓，
+ *      或用 @<完整 sha> 的 URL 確認 GitHub 端已經是新版。
+ *
  *   node scripts/purge-jsdelivr.js                 清所有 questions*.json
  *   node scripts/purge-jsdelivr.js --commit <sha>  只清該 commit 改到的檔
  */

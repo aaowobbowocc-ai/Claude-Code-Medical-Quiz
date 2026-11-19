@@ -77,6 +77,20 @@ const EXPECTED_MISSING = (() => {
   const m = {}
   // 115年第二次 not held yet (typical 8月 timing) — applies to all exams
   for (const e of EXAMS) m[e] = new Set(['115-2'])
+  /*
+   * 99 年：哪個考試有哪一場，直接讀爬蟲用的同一份對照表
+   * （099010/099020 ＝ 第一次，099110/099130 ＝ 第二次），
+   * 不在表上的一律視為「本來就沒有」。
+   * 下面那些手寫規則都是從 100 年起算、不涵蓋 99 年，
+   * 而且 99 年的場次跟後來的規律不一樣
+   * （聽力師 99 年只有第二次，100 年起反而只有第一次）。
+   */
+  const Y99 = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'year-99-papers.json'), 'utf8'))
+  const y99 = new Set()
+  for (const t of Y99) y99.add(t.exam + '|' + (['099010', '099020'].includes(String(t.code)) ? '1' : '2'))
+  for (const e of EXAMS) {
+    for (const sid of ['1', '2']) if (!y99.has(e + '|' + sid)) m[e].add('99-' + sid)
+  }
   // 職治師/獸醫師 從 110 起只辦第二次（年度單試）
   for (const e of ['ot', 'vet']) {
     for (let y = 110; y <= 115; y++) m[e].add(`${y}-1`)
@@ -130,7 +144,7 @@ const EXPECTED_MISSING = (() => {
 })()
 
 function reportMissingYears() {
-  console.log('\n=== 100-115 全年度覆蓋檢查 ===')
+  console.log('\n=== 99-115 全年度覆蓋檢查 ===')
   for (const examId of EXAMS) {
     const cfg = loadConfig(examId)
     if (!cfg || !cfg.questionsFile) continue
@@ -142,7 +156,7 @@ function reportMissingYears() {
       }
     }
     const missing = []
-    for (let y = 100; y <= 115; y++) {
+    for (let y = 99; y <= 115; y++) {
       for (const sid of ['1', '2']) {
         const key = `${y}-${sid}`
         if (!present.has(key) && !EXPECTED_MISSING[examId].has(key)) missing.push(key)
@@ -151,7 +165,7 @@ function reportMissingYears() {
     if (missing.length) {
       console.log(`❌ ${cfg.name} (${examId}): 真實缺漏 ${missing.join(', ')}`)
     } else {
-      console.log(`✅ ${cfg.name} (${examId}): 100-115 已知該辦的場次都有`)
+      console.log(`✅ ${cfg.name} (${examId}): 99-115 已知該辦的場次都有`)
     }
   }
 }

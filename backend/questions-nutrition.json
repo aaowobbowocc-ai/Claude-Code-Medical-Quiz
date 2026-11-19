@@ -7,7 +7,7 @@
     "last_updated": "2026-10-27T02:36:18.137Z",
     "total": 1111
   },
-  "total": 8332,
+  "total": 8371,
   "questions": [
     {
       "id": "100030_0705_1",
@@ -168624,6 +168624,786 @@
         "D": "繁殖試驗"
       },
       "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 114100011121,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 1,
+      "question": "高蛋白質飲食會促進何種營養素從尿液流失，加重腎臟的負擔？",
+      "options": {
+        "A": "Ca",
+        "B": "Zn",
+        "C": "Fe",
+        "D": "Mg"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 114100011122,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 2,
+      "question": "那一種細胞的代謝主要依賴無氧代謝過程所產生的能量？",
+      "options": {
+        "A": "肝細胞",
+        "B": "腸細胞",
+        "C": "脂肪細胞",
+        "D": "紅血球"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 114100011123,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 3,
+      "question": "有關健康食品管理法所稱之「健康食品」，下列何者錯誤？",
+      "options": {
+        "A": "非以治療、矯正人類疾病為目的之食品",
+        "B": "提供特殊營養素或具有特定之保健功效之食品",
+        "C": "提供特殊營養素或具有治療功效之食品",
+        "D": "標示或廣告具有保健功效之食品"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 114100011124,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 4,
+      "question": "Broccoli 中含有下列何種植物化學成分？",
+      "options": {
+        "A": "Triterpenoids",
+        "B": "Allyl sulfides",
+        "C": "Isothiocyanates",
+        "D": "Isoflavones"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 114100011125,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 5,
+      "question": "對於3～4 個月大的嬰兒而言，下列何種胺基酸屬於條件式必需胺基酸（Conditional essential amino acid）？",
+      "options": {
+        "A": "Cysteine",
+        "B": "Glycine",
+        "C": "Histidine",
+        "D": "Valine"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 114100011126,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 6,
+      "question": "補充下列何種礦物質可舒緩孕婦發生leg cramps 的情況？",
+      "options": {
+        "A": "Phosphorus",
+        "B": "Magnesium",
+        "C": "Potassium",
+        "D": "Chromium"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011127,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 7,
+      "question": "懷孕婦女攝取下列何種營養素過量時，可能導致胎兒畸形？",
+      "options": {
+        "A": "Folic acid",
+        "B": "Riboflavin",
+        "C": "Retinol",
+        "D": "Pyridoxine"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 114100011128,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 8,
+      "question": "鼓勵學童多攝取牛奶，是因牛奶中富含那些營養素？①Calcium ②Protein ③Biotin ④Riboflavin",
+      "options": {
+        "A": "①②③",
+        "B": "①②④",
+        "C": "①③④",
+        "D": "②③④"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011129,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 9,
+      "question": "下列何者會抑制非血紅素（non-heme）鐵的吸收？",
+      "options": {
+        "A": "維生素C",
+        "B": "乳酸",
+        "C": "茶",
+        "D": "肉類"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 114100011130,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 10,
+      "question": "下列何種礦物質同時存在於紅血球內外，在血紅素形成的過程中，占了催化的重要地位？",
+      "options": {
+        "A": "Zinc",
+        "B": "Iron",
+        "C": "Copper",
+        "D": "Magnesium"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 114100011131,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 11,
+      "question": "服用大量鐵補充劑時，會影響那些礦物質之吸收？①銅 ②鎂 ③錳 ④鋅",
+      "options": {
+        "A": "①②",
+        "B": "①④",
+        "C": "②③",
+        "D": "③④"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011132,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 12,
+      "question": "飲食中採用下列何種食物可解決地方性甲狀腺腫（endemic goiter）？",
+      "options": {
+        "A": "高麗菜",
+        "B": "花椰菜",
+        "C": "樹薯",
+        "D": "加碘鹽"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 114100011133,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 14,
+      "question": "下列有關氯的敘述，何者正確？",
+      "options": {
+        "A": "是細胞內液中的重要陰離子",
+        "B": "長期嘔吐及營養貧乏的病人，會造成氯的流失",
+        "C": "無法維持電解質的平衡",
+        "D": "不是構成胃酸之成分"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011134,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 15,
+      "question": "下列有關Phosphorus 的敘述，何者錯誤？",
+      "options": {
+        "A": "存在於細胞外液",
+        "B": "不構成DNA 及RNA 的重要成分",
+        "C": "參與酸鹼平衡",
+        "D": "存在於細胞膜"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011135,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 16,
+      "question": "不適當的減重或糖尿病控制不佳所造成的ketonuria 和glucosuria，均會導致下列何種礦物質的流失增加？",
+      "options": {
+        "A": "鈣（calcium）",
+        "B": "鐵（iron）",
+        "C": "鎂（magnesium）",
+        "D": "鈉（sodium）"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 114100011136,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 17,
+      "question": "下列何種族群最容易有維生素K 缺乏的情形？",
+      "options": {
+        "A": "新生兒",
+        "B": "學童",
+        "C": "青少年",
+        "D": "老年人"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 114100011137,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 18,
+      "question": "下列敘述何者錯誤？",
+      "options": {
+        "A": "鈣的吸收在酸性條件下較有利",
+        "B": "乳糖不利於鈣的吸收",
+        "C": "維生素D 對鈣的吸收有促進作用",
+        "D": "草酸、植酸對鈣的吸收不利"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011138,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 19,
+      "question": "下列何者是維生素E 之主要食物來源？",
+      "options": {
+        "A": "奶油",
+        "B": "豬油",
+        "C": "植物油",
+        "D": "牛油"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 114100011139,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 20,
+      "question": "Retinol binding protein 是將下列那一個維生素帶出肝臟之物質？",
+      "options": {
+        "A": "維生素B",
+        "B": "維生素K",
+        "C": "維生素E",
+        "D": "維生素A"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 114100011140,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 21,
+      "question": "下列何者為維生素B12 豐富的食物來源？",
+      "options": {
+        "A": "牡蠣",
+        "B": "菠菜",
+        "C": "番茄",
+        "D": "李子"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 114100011141,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 22,
+      "question": "下列何者為維生素C 的缺乏症？",
+      "options": {
+        "A": "Megaloblastic anemia",
+        "B": "Scurvy",
+        "C": "Pellagra",
+        "D": "Beriberi"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011142,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 23,
+      "question": "Intrinsic factor 在人體內之功能為何？",
+      "options": {
+        "A": "幫助Vitamin B12 吸收",
+        "B": "協助胃酸分泌",
+        "C": "協助胰臟分泌Trypsin",
+        "D": "幫助Folic acid 吸收"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 114100011143,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 24,
+      "question": "測定紅血球transketolase 活性，可作為評估下列何者之營養狀況？",
+      "options": {
+        "A": "Vitamin B6",
+        "B": "Thiamin",
+        "C": "Riboflavin",
+        "D": "Folate"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011144,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 25,
+      "question": "就成年女性而言，下列何者會增加疾病的危險性？ ≥",
+      "options": {
+        "A": "身體質量指數為18.5～24",
+        "B": "體脂肪量為25～27%",
+        "C": "腰圍",
+        "D": "臀圍≥90 公分"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 114100011145,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 26,
+      "question": "能量代謝時，呼吸商（respiratory quotient）等於：",
+      "options": {
+        "A": "[CO2]/[O2]",
+        "B": "[CO2]/[H2O]",
+        "C": "[O2]/[CO2]",
+        "D": "[H2O]/[CO2]"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 114100011146,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 27,
+      "question": "下列何者為呼吸商數值最低的飲食？",
+      "options": {
+        "A": "高脂飲食",
+        "B": "高醣飲食",
+        "C": "高蛋白飲食",
+        "D": "混合型飲食"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 114100011147,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 28,
+      "question": "某30 歲女性，身高155 公分，體重65 公斤，想藉低熱量均衡飲食並配合運動減重，若平均每一天少吃500 大卡，並增加運動量消耗200 大卡，經30 天，理論上約可減體重多少公斤？",
+      "options": {
+        "A": "2.7",
+        "B": "3.7",
+        "C": "4.7",
+        "D": "5.7"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 114100011148,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 29,
+      "question": "下列何者在血液中濃度增加時，有助於預防心血管疾病之發生？",
+      "options": {
+        "A": "LDL",
+        "B": "VLDL",
+        "C": "HDL",
+        "D": "Chylomicron"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 114100011149,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 30,
+      "question": "下列有關亞麻油酸（Linoleic acid）的敘述，何者錯誤？",
+      "options": {
+        "A": "亞麻油酸是相當安定的脂肪酸，所以比油酸（Oleic acid）更難於產生過氧化物",
+        "B": "亞麻油酸的碳數為18，含有二個雙鍵的多元不飽和脂肪酸",
+        "C": "亞麻油酸在人的體內可合成碳數20 的花生油酸",
+        "D": "亞麻油酸是必需脂肪酸的一種"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 114100011150,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 31,
+      "question": "極低密度脂蛋白（VLDL）中的何種脂質比例含量最高？",
+      "options": {
+        "A": "膽固醇",
+        "B": "三酸甘油酯",
+        "C": "磷脂質",
+        "D": "醣脂質"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011151,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 32,
+      "question": "膽酸（Bile acids）是由身體何種組織／器官所合成之一種乳化劑？",
+      "options": {
+        "A": "肝臟",
+        "B": "胰臟",
+        "C": "胃臟",
+        "D": "膽囊"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 114100011152,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 33,
+      "question": "人體合成尿素的主要器官為：",
+      "options": {
+        "A": "脾臟",
+        "B": "肝臟",
+        "C": "胰臟",
+        "D": "腎臟"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011153,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 34,
+      "question": "體重為67 公斤的40 歲男性之膳食蛋白質參考攝取量約為多少？",
+      "options": {
+        "A": "50 公克／天",
+        "B": "60 公克／天",
+        "C": "100 公克／天",
+        "D": "120 公克／天"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011154,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 35,
+      "question": "食物中的限制胺基酸所代表的意義為何？",
+      "options": {
+        "A": "所提供之胺基酸中含量最低者",
+        "B": "所提供之必需胺基酸含量最不能滿足人體需求者",
+        "C": "所提供之胺基酸中莫耳數百分比最低者",
+        "D": "所提供之必需胺基酸中含量最低者"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011155,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 36,
+      "question": "下列有關瓜希奧科兒症（Kwashiorkor）之敘述，何者正確？",
+      "options": {
+        "A": "因短期的熱量、蛋白質不足所引起",
+        "B": "通常發生於貧窮地區的新生兒",
+        "C": "四肢因缺少蛋白質而細瘦、無肌肉",
+        "D": "會造成重要器官不可逆的耗損"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 114100011156,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 37,
+      "question": "胰島素是胰臟何種細胞所分泌？",
+      "options": {
+        "A": "α 細胞",
+        "B": "β 細胞",
+        "C": "T 細胞",
+        "D": "γ 細胞"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 114100011157,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 38,
+      "question": "下列那個飲食是形成大腸癌的最高危險因子？",
+      "options": {
+        "A": "高膳食纖維／低油脂",
+        "B": "低膳食纖維／低油脂",
+        "C": "高膳食纖維／高油脂",
+        "D": "低膳食纖維／高油脂"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 114100011158,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 39,
+      "question": "下列有關硒（selenium）的敘述，何者正確？",
+      "options": {
+        "A": "綠色蔬菜是主要飲食來源",
+        "B": "大量服用可以治療癌症",
+        "C": "藉超氧歧化酶（superoxide dismutase, SOD）還原過氧化物",
+        "D": "藉麩胱甘過氧化酶（glutathione peroxidase）還原過氧化物"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 114100011159,
+      "roc_year": "99",
+      "session": "第二次",
+      "exam_code": "099130",
+      "subject": "營養學",
+      "subject_tag": "nutrition_science",
+      "subject_name": "營養學",
+      "stage_id": 4,
+      "number": 40,
+      "question": "與血糖調控無關的激素為：",
+      "options": {
+        "A": "生長激素",
+        "B": "腎上腺素",
+        "C": "催產素",
+        "D": "腎上腺皮質醇"
+      },
+      "answer": "C",
       "explanation": ""
     }
   ]

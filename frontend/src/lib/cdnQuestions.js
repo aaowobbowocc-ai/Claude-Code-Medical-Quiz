@@ -185,11 +185,30 @@ export async function loadExamQuestions(examId, { forceFresh = false } = {}) {
   // Cache-bust query string forces jsDelivr edge to fetch fresh from GitHub
   // when @master ref is updated. CACHE_VERSION bump invalidates this batch.
   // forceFresh 另加時戳，連瀏覽器 HTTP 快取一起繞過（題目修正後同版本 URL 仍可能命中瀏覽器快取）。
-  const url = forceFresh
-    ? `${RAW_BASE}/${file}?_=${Date.now()}`            // 永遠最新（GitHub raw）
-    : `${CDN_BASE}/${file}?v=${CACHE_VERSION}`
-  const r = await fetchWithTimeout(url, 8000)
-  if (!r.ok) throw new Error(`CDN fetch failed: ${r.status}`)
+  /*
+   * 2026-11-19：jsDelivr 開始對這個 repo 回 403
+   *   「Package size exceeded the configured limit of 50 MB」
+   * ——整包 repo 已經 578 MB（question-images 305 MB + 題庫 JSON 170 MB），
+   * 超過 jsDelivr 的 package 上限。已經在它 edge 快取裡的檔還是 200，
+   * 沒快取到的（當天實測 questions-nursing / questions-nutrition）就 403，
+   * 而且 purge 之後會變多——purge 清掉 edge，下一次就要重新 fetch 整包。
+   *
+   * 所以 CDN 失敗時改走 GitHub raw（同一個 commit、永遠最新），
+   * 不要直接 throw —— 那會讓呼叫端整個 fall back 到自架後端，
+   * 等於把 CDN 省下來的流量全部還給 Oracle。
+   * raw 只當退路，正常路徑還是走 jsDelivr 的 edge。
+   */
+  const urls = forceFresh
+    ? [`${RAW_BASE}/${file}?_=${Date.now()}`]            // 永遠最新（GitHub raw）
+    : [`${CDN_BASE}/${file}?v=${CACHE_VERSION}`, `${RAW_BASE}/${file}?v=${CACHE_VERSION}`]
+  let r = null
+  for (const u of urls) {
+    try {
+      const res = await fetchWithTimeout(u, 8000)
+      if (res.ok) { r = res; break }
+    } catch { /* timeout / 連不上 → 換下一個來源 */ }
+  }
+  if (!r) throw new Error(`CDN fetch failed for ${file}`)
   const data = await r.json()
   const questions = Array.isArray(data) ? data : (data.questions || [])
 

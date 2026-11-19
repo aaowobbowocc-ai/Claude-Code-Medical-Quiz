@@ -12,17 +12,21 @@ const FRONTEND_SNAPSHOT = path.resolve(__dirname, '..', '..', 'frontend', 'src',
 const CONFIG_DIR = path.join(BACKEND, 'exam-configs')
 
 let siteTotal = 0
+const siteYears = new Set()
 const updates = []
 
 for (const file of fs.readdirSync(CONFIG_DIR).filter(f => f.endsWith('.json'))) {
   const cfgPath = path.join(CONFIG_DIR, file)
   const cfg = JSON.parse(fs.readFileSync(cfgPath, 'utf-8'))
   let actual
+  const years = []
   if (cfg.questionsFile) {
     const qPath = path.join(BACKEND, cfg.questionsFile)
     if (!fs.existsSync(qPath)) continue
     const data = JSON.parse(fs.readFileSync(qPath, 'utf-8'))
-    actual = (data.questions || data).length
+    const rows = data.questions || data
+    actual = rows.length
+    years.push(...rows.map(q => Number(q.roc_year)))
     siteTotal += actual
   } else if ((cfg.sharedBanks || []).length) {
     // 公職／司法的 shell 考試沒有自己的題庫檔，題目全部來自共用題庫。
@@ -35,7 +39,9 @@ for (const file of fs.readdirSync(CONFIG_DIR).filter(f => f.endsWith('.json'))) 
       const p = path.join(BACKEND, 'shared-banks', b + '.json')
       if (!fs.existsSync(p)) continue
       const bank = JSON.parse(fs.readFileSync(p, 'utf-8'))
-      actual += (bank.questions || []).filter(q => !level || q.level === level).length
+      const rows = (bank.questions || []).filter(q => !level || q.level === level)
+      actual += rows.length
+      years.push(...rows.map(q => Number(q.roc_year)))
     }
     // 共用題庫會被好幾個考試共用，重複加進全站合計會灌水，所以不計入 siteTotal
   } else continue
@@ -51,6 +57,25 @@ for (const file of fs.readdirSync(CONFIG_DIR).filter(f => f.endsWith('.json'))) 
     cfg.seo.totalQ = actual
     changed = true
   }
+  /*
+   * seo.years 原本是手寫的（「100-115」「103 起」「104 至 115」三種寫法都有），
+   * Home.jsx 直接把它印成「收錄 X 年度超過 N 題考古題」。
+   * 99 年與 115 年補進題庫之後，26 個考試的這句話全都過期了
+   *（獸醫寫 106-114、語言治療師寫 103 起，實際都是 99-115）。
+   * 既然題數已經從題庫推，年度也一起推，才不會再漂。
+   * 駕照題庫沒有 roc_year（用「113.11版」這種版本字串），沒有年度時不動。
+   */
+  const ys = [...new Set(years.filter(y => Number.isFinite(y) && y > 50 && y < 200))].sort((a, b) => a - b)
+  for (const y of ys) siteYears.add(y)
+  if (ys.length && cfg.seo) {
+    const range = ys.length === 1 ? String(ys[0]) : `${ys[0]}-${ys[ys.length - 1]}`
+    if (cfg.seo.years !== range) {
+      updates.push({ file, field: 'seo.years', from: cfg.seo.years, to: range })
+      cfg.seo.years = range
+      changed = true
+    }
+  }
+
   if (changed) {
     atomicWriteJson(cfgPath, cfg)
     // mirror to frontend snapshot
@@ -90,7 +115,11 @@ const stats = {
   questions: siteTotal,
   // 對外文案用的保守整數，例如 229,968 → "220,000+"
   questionsRounded: rounded.toLocaleString('en-US') + '+',
-  yearRange: '100-115',
+  // 全站年度也從題庫推（手寫的那個停在 100-115，99 年補完就過期了）
+  yearRange: (() => {
+    const a = [...siteYears].sort((x, y) => x - y)
+    return a.length ? `${a[0]}-${a[a.length - 1]}` : '100-115'
+  })(),
   updated: new Date().toISOString().slice(0, 10),
 }
 if (fs.existsSync(path.dirname(STATS_PATH))) {

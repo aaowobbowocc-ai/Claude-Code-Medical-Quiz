@@ -679,7 +679,14 @@ io.on('connection', (socket) => {
     stats.questionsAnswered++;
 
     const q = room.questions[room.qIndex];
-    const isCorrect = answer === q.answer;
+    // 「答 B 或 D 均給分」的題 answer 欄是「B,D」，「一律給分」是「送分」。
+    // 直接比字串會把官方也給分的那個選項判成錯（2026-11-20 使用者回報
+    // 物理治療師 114020 骨科 #43「B D都對」）。前端走 utils/scoring.js，
+    // 對戰的計分在後端，要自己比照。
+    const accepted = String(q.answer || '');
+    const isCorrect = accepted === '送分'
+      || (accepted.includes(',') ? accepted.split(',').map(x => x.trim()).includes(answer)
+                                 : answer === accepted);
 
     // Track per-question stats
     if (q.id && !player.isAI) {

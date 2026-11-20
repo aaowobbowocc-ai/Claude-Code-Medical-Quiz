@@ -103144,7 +103144,7 @@
         "C": "itraconazole可有效進入腦脊髓液，可治療隱球菌引起之腦膜炎（cryptococcal meningitis）",
         "D": "voriconazole可能產生視覺障礙之副作用"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
       "disputed": true,
       "original_answer": "C",
@@ -103388,7 +103388,7 @@
         "C": "fibrinolytic inhibitor",
         "D": "plasmin inhibitor"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
       "disputed": true,
       "original_answer": "C",
@@ -106400,7 +106400,7 @@
         "C": "500",
         "D": "1,000"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
       "disputed": true,
       "original_answer": "C",
@@ -106564,7 +106564,7 @@
         "C": "Apparatus 5",
         "D": "Apparatus 6"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
       "disputed": true,
       "original_answer": "A",
@@ -107805,7 +107805,7 @@
       "subject_name": "生物藥劑學",
       "stage_id": 6,
       "number": 76,
-      "question": "承上題，若將此藥以相同輸注速率從靜脈持續給與病人G和病人H後，則此藥品在兩位病人的血中濃度（C）經時關係趨勢，下列何者最適當？",
+      "question": "【題組情境】某藥品以靜脈快速注射單劑量100 mg於病人G和病人H後，兩者之血中濃度（C：mg/L）與時間（hr）關係圖 如下。則有關此藥品在二位病人藥動學參數之敘述，下列何者最適當？\n\n承上題，若將此藥以相同輸注速率從靜脈持續給與病人G和病人H後，則此藥品在兩位病人的血中濃度（C）經時關係趨勢，下列何者最適當？",
       "options": {
         "A": "(圖)",
         "B": "(圖)",
@@ -107819,7 +107819,10 @@
         "B": "/question-images/pharma1_115020516_voptB.webp",
         "C": "/question-images/pharma1_115020516_voptC.webp",
         "D": "/question-images/pharma1_115020516_voptD.webp"
-      }
+      },
+      "images": [
+        "/question-images/pharma1_110101_q75_fig.webp"
+      ]
     },
     {
       "id": 115020517,
@@ -113504,7 +113507,7 @@
         "C": "articaine",
         "D": "prilocaine"
       },
-      "answer": "D",
+      "answer": "C,D",
       "disputed": true,
       "original_answer": "D",
       "correction_note": "第47題更正為 C,D（原答案 D）",
@@ -117761,7 +117764,7 @@
         "C": "risperidone",
         "D": "quetiapine"
       },
-      "answer": "A",
+      "answer": "A,D",
       "disputed": true,
       "original_answer": "A",
       "correction_note": "第25題更正為 A,D（原答案 A）",
@@ -118012,7 +118015,7 @@
         "C": "phenobarbital",
         "D": "secobarbital"
       },
-      "answer": "C",
+      "answer": "A,C",
       "disputed": true,
       "original_answer": "C",
       "correction_note": "第38題更正為 A,C（原答案 C）",
@@ -131678,7 +131681,7 @@
         "C": "抑制angiotensin converting enzyme同時抑制kallikrein活性,造成bradykinin, substance P累積所致",
         "D": "抑制angiotensin converting enzyme同時抑制kininogen代謝,造成bradykinin, prostaglandin累積所致"
       },
-      "answer": "A",
+      "answer": "A,B",
       "disputed": true,
       "original_answer": "A",
       "correction_note": "第17題更正為 A,B（原答案 A）",
@@ -138892,7 +138895,7 @@
         "C": "具抗氧化活性",
         "D": "具抗血小板凝集作用"
       },
-      "answer": "B",
+      "answer": "B,C",
       "valid_answers": [
         "B",
         "C"
@@ -141244,7 +141247,7 @@
         "C": "可能引起肝毒性",
         "D": "可能加重NSAID 藥物對胃腸道的毒性"
       },
-      "answer": "B",
+      "answer": "B,D",
       "valid_answers": [
         "B",
         "D"
@@ -143439,7 +143442,7 @@
         "C": "tubocurarine chloride",
         "D": "strychnine"
       },
-      "answer": "A",
+      "answer": "A,C",
       "disputed": true,
       "original_answer": "A",
       "correction_note": "第60題更正為 A,C（原答案 A）",
@@ -144756,7 +144759,7 @@
       "subject_name": "生物藥劑學",
       "stage_id": 6,
       "number": 49,
-      "question": "承上題,已知此藥品在病人I之排除半衰期為16 hr,則病人I於其給藥頻率下,其穩定狀態時之蓄積指數 (accumulation index)約為多少?",
+      "question": "【題組情境】某藥品之體內動態遵循線性一室模式,今以單次靜脈注射360 mg,及固定給藥間隔(間隔時間依病人而異) 方式多次靜脈注射360 mg 於I、II、III、IV四位病人。其單次給藥後之血中濃度曲線下面積(AUC0-∞)及多 次靜脈注射給藥之穩定狀態平均血中濃度( )之參數如圖所示。有關四位病人給藥間隔時間(hr)之大 小比較,下列何者正確?\n\n承上題,已知此藥品在病人I之排除半衰期為16 hr,則病人I於其給藥頻率下,其穩定狀態時之蓄積指數 (accumulation index)約為多少?",
       "options": {
         "A": "1.0",
         "B": "1.3",
@@ -145708,7 +145711,7 @@
         "C": "spironolactone",
         "D": "amiloride"
       },
-      "answer": "B",
+      "answer": "A,B",
       "valid_answers": [
         "A",
         "B"
@@ -146077,7 +146080,7 @@
         "C": "腹瀉(diarrhea)",
         "D": "遲發性運動困難(tardive dyskinesia)"
       },
-      "answer": "C",
+      "answer": "C,D",
       "valid_answers": [
         "C",
         "D"
@@ -147378,7 +147381,7 @@
         "C": "fluorescence spectrophotometry",
         "D": "atomic absorption spectrophotometry"
       },
-      "answer": "B",
+      "answer": "B,D",
       "disputed": true,
       "original_answer": "B",
       "correction_note": "第17題更正為 B,D（原答案 B）",
@@ -149182,7 +149185,7 @@
         "C": "減少造粒過程細粉的比例",
         "D": "增加黏合劑的含量"
       },
-      "answer": "D",
+      "answer": "C,D",
       "disputed": true,
       "original_answer": "D",
       "correction_note": "第30題更正為 C,D（原答案 D）",
@@ -154074,14 +154077,17 @@
       "subject_name": "藥劑學",
       "stage_id": 5,
       "number": 50,
-      "question": "承上題，已知此抗生素在病人D之排除半衰期為10 hr，則其分布體積約為多少L？",
+      "question": "【題組情境】A、B、C、D 四位病人接受某線性一室模式抗生素治療，今分別以單次靜脈注射200 mg，並依病人分別設計給藥間隔以每次200 mg 進行多次靜脈注射。其單次給藥後之血中濃度曲線下面積（AUC0-infinity）及多次給藥後達穩定狀態平均血中濃度（Css.avg）之參數如圖所示。該藥品在A、B、C、D 四位病人的清除率大小比較，下列何者正確？\n\n承上題，已知此抗生素在病人D之排除半衰期為10 hr，則其分布體積約為多少L？",
       "options": {
         "A": "240",
         "B": "360",
         "C": "480",
         "D": "600"
       },
-      "answer": "B"
+      "answer": "B",
+      "images": [
+        "/question-images/pharma1_115090_3_49_0.webp"
+      ]
     },
     {
       "id": "115090_2_51",
@@ -154112,7 +154118,7 @@
       "subject_name": "藥劑學",
       "stage_id": 5,
       "number": 52,
-      "question": "承上題，達穩定狀態之平均血中濃度約為多少mg/L？",
+      "question": "【題組情境】某抗生素之體內動態遵循線性一室模式，其清除率為4.6 L/hr，分布體積為0.5 L/kg。今以每6小時靜脈注射1,000 mg於一體重80 kg之病人，達穩定狀態時最高血中濃度約為多少mg/L？\n\n承上題，達穩定狀態之平均血中濃度約為多少mg/L？",
       "options": {
         "A": "24",
         "B": "30",
@@ -154150,7 +154156,7 @@
       "subject_name": "藥劑學",
       "stage_id": 5,
       "number": 54,
-      "question": "承上題，此抗生素之血中濃度曲線下總面積約為多少？",
+      "question": "【題組情境】已知某抗生素之口服生體可用率為0.8，經口服該藥100 mg後，體內血中濃度經時變化為C＝45（e-0.17t－e- p 1.5t），該藥無flip-flop現象，則其在體內之清除率為多少？（C：mg/L，t：hr）p\n\n承上題，此抗生素之血中濃度曲線下總面積約為多少？",
       "options": {
         "A": "14（mg．min）/mL",
         "B": "14（mg．hr）/L",
@@ -154321,7 +154327,7 @@
       "subject_name": "藥劑學",
       "stage_id": 5,
       "number": 63,
-      "question": "承上題，已知此抗生素在林先生之體內分布體積為10 L，若林先生治療所需之血中穩定濃度調整為10 mg/L時，則其輸注速率應為多少mg/h？",
+      "question": "【題組情境】某抗生素在體內之血中濃度循一室模式，已知其平均半衰期為3.5±1小時。林先生以靜脈輸注給藥8小時及24小時之血中濃度分別為5 mg/L及6 mg/L。該抗生素在林先生之排除半衰期約為多少小時？\n\n承上題，已知此抗生素在林先生之體內分布體積為10 L，若林先生治療所需之血中穩定濃度調整為10 mg/L時，則其輸注速率應為多少mg/h？",
       "options": {
         "A": "19.4",
         "B": "22.4",

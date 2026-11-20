@@ -620,7 +620,7 @@ function PracticeGame({ config, onFinish, onExit }) {
     resetExplain()
     setExplainRequested(false)
     if (qIdx + 1 >= questions.length) {
-      const finalScore = myScore + (myAnswer === q?.answer ? 100 : 0)
+      const finalScore = myScore + (isAnswerCorrect(myAnswer, q?.answer) ? 100 : 0)
       onFinish({ myScore: finalScore, aiScore, total: questions.length, log: sessionLog.current })
       return
     }
@@ -812,7 +812,7 @@ function PracticeGame({ config, onFinish, onExit }) {
           <div className="mt-3 bg-white rounded-xl px-4 py-3 shadow-sm border border-gray-100 text-sm text-gray-500 flex items-center gap-2">
             <span>🤖</span>
             <span>AI 選了 <strong>{aiAnswer}</strong>（
-              {aiAnswer === q.answer ? <span className="text-green-600">答對了</span> : <span className="text-red-500">答錯了</span>}）
+              {isAnswerCorrect(aiAnswer, q.answer) ? <span className="text-green-600">答對了</span> : <span className="text-red-500">答錯了</span>}）
             </span>
           </div>
         )}

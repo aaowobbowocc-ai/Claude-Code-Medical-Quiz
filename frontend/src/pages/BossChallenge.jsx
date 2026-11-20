@@ -8,6 +8,7 @@ import ShareChallengeButton from '../components/ShareChallengeButton'
 import { getExamConfig } from '../config/examRegistry'
 import { supabase } from '../lib/supabase'
 import { isNativeApp } from '../lib/admob'
+import { isAnswerCorrect, isOptionCorrect } from '../utils/scoring'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const BOSS_FEE = 50
@@ -24,7 +25,7 @@ function BossCard({ q, index, onAnswer, answered }) {
     navigator.vibrate?.(15)
     setPicked(letter)
     setRevealed(true)
-    onAnswer(letter === q.answer)
+    onAnswer(isAnswerCorrect(letter, q.answer))
   }
 
   return (
@@ -44,7 +45,7 @@ function BossCard({ q, index, onAnswer, answered }) {
         <HazardVideo src={q.video_url} sourceUrl={q.source_url} />
         <div className="flex flex-col gap-2">
           {Object.entries(q.options).map(([letter, text]) => {
-            const isCorrect = revealed && q.answer === letter
+            const isCorrect = revealed && isOptionCorrect(letter, q.answer)
             const isWrong = revealed && picked === letter && !isCorrect
             const isPicked = picked === letter
 

@@ -61895,7 +61895,10 @@
       "answer": "B",
       "explanation": "",
       "case_context": "第 79 題：頭頸部CT檢查通常要注射含碘對比劑，否則頸部太多圓形構造難以區分，對照左、右圖，箭號1 所指的是：",
-      "image_url": "/question-images/radiology_103020_p3_79_0.webp"
+      "image_url": "/question-images/radiology_103020_p3_79_0.webp",
+      "images": [
+        "/question-images/radiology_116804_0.webp"
+      ]
     },
     {
       "id": 116646,
@@ -131330,7 +131333,10 @@
       },
       "answer": "A",
       "explanation": "",
-      "case_context": "第 79 題：56歲肺癌男性，最近兩天頭痛，肢體無力，CT顯示右側腦部白質（white matter）一片低密度區域，請問這低 密度區域所指主要為何？"
+      "case_context": "第 79 題：56歲肺癌男性，最近兩天頭痛，肢體無力，CT顯示右側腦部白質（white matter）一片低密度區域，請問這低 密度區域所指主要為何？",
+      "images": [
+        "/question-images/radiology_106100_q79_fig.webp"
+      ]
     },
     {
       "id": 5828,
@@ -308091,14 +308097,17 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 26,
-      "question": "承上題，病灶支配的血管為：",
+      "question": "【題組情境】一病患非創傷性左側額頂葉大腦皮質出血後之血管攝影如下圖，最有可能的診斷為：\n\n承上題，病灶支配的血管為：",
       "options": {
         "A": "anterior cerebral artery",
         "B": "middle cerebral artery",
         "C": "middle meningeal artery",
         "D": "occipital artery"
       },
-      "answer": "A"
+      "answer": "A",
+      "images": [
+        "/question-images/radiology_115090_3_25_0.webp"
+      ]
     },
     {
       "id": "115090_3_27",
@@ -313293,7 +313302,7 @@
       "subject_name": "基礎醫學",
       "stage_id": 1,
       "number": 50,
-      "question": "承上題，下列何者可以控制休克，避免持續惡化？",
+      "question": "【題組情境】小明四歲，去新朋友家，吃了花生醬三明治，不到三十分鐘，他的嘴唇腫脹、呼吸困難。緊急送醫診治後推斷應是吃花生醬而導致休克（Shock）。下列何者最可能是花生醬導致小明休克的原因？\n\n承上題，下列何者可以控制休克，避免持續惡化？",
       "options": {
         "A": "增加感壓受器（Baroreceptor）放電頻率",
         "B": "服用組織胺（Histamine）類似藥物",
@@ -316862,7 +316871,7 @@
       "subject_name": "放射器材",
       "stage_id": 3,
       "number": 78,
-      "question": "承上題，不常使用此filter 的主要原因為何？",
+      "question": "【題組情境】附圖中有四種low-pass filter，其中那一種濾波器因為會使影像平滑化過多，在核子醫學SPECT 影像處理中，最不常被使用到？ 1.0Amplitude 0 0.5Frequency（cycles/pixel）\n\n承上題，不常使用此filter 的主要原因為何？",
       "options": {
         "A": "程式太複雜，難以計算",
         "B": "在高頻區濾掉太多訊號，導致主要訊號的遺失",
@@ -316870,7 +316879,10 @@
         "D": "在低頻區濾掉太多訊號，導致主要訊號的遺失"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/radiology_099010_q77_fig.webp"
+      ]
     },
     {
       "id": 114090010724,
@@ -317945,7 +317957,7 @@
       "subject_name": "放射診斷",
       "stage_id": 4,
       "number": 52,
-      "question": "承上題，這張影像的TR，TE 最可能是：",
+      "question": "【題組情境】所附之MRI 腦部影像，是：\n\n承上題，這張影像的TR，TE 最可能是：",
       "options": {
         "A": "TR：4000 msec、TE：120 msec",
         "B": "TR：500 msec、TE：20 msec",
@@ -322692,7 +322704,7 @@
       "subject_name": "基礎醫學",
       "stage_id": 1,
       "number": 60,
-      "question": "承上題，計算全身血管阻力，下列何者最接近正確值（mmHg/L/min）？",
+      "question": "【題組情境】一位資深女性國小教師年過 40 歲，體重 60 公斤，身高 170 公分。經體檢 X 光檢查發覺一異常黑影位於右肺上葉。經診斷確定為初期肺腫瘤，須進行肺葉切除手術。肺葉切除後立即偵測各項壓力參數，其數值如下表， 則其平均動脈壓（mmHg）為何？\n\n承上題，計算全身血管阻力，下列何者最接近正確值（mmHg/L/min）？",
       "options": {
         "A": "17",
         "B": "27",
@@ -322700,7 +322712,10 @@
         "D": "47"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/radiology_099110_p100_q59_fig.webp"
+      ]
     },
     {
       "id": 114090011015,
@@ -324672,7 +324687,7 @@
       "subject_name": "醫學物理與輻安",
       "stage_id": 2,
       "number": 80,
-      "question": "承上題，該處皮膚（淺部）劑量率為何？",
+      "question": "【題組情境】某醫院之迴旋加速器管路穿越室內，有一個閥洩漏須檢修，在距離閥座30公分處，儀器開窗讀數36微西弗/小時，閉窗讀數30微西弗/小時，試計算該處深部劑量率為何？\n\n承上題，該處皮膚（淺部）劑量率為何？",
       "options": {
         "A": "6微西弗/小時",
         "B": "30微西弗/小時",
@@ -329379,7 +329394,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 79,
-      "question": "承上題，子宮頸腔內近接放射治療中，置入體腔內的applicator包括有那些？",
+      "question": "【題組情境】在子宮頸腔內近接放射治療中，如圖，AR及AL二點的位置是定義在何處？\n\n承上題，子宮頸腔內近接放射治療中，置入體腔內的applicator包括有那些？",
       "options": {
         "A": "2個ovoids，1個tandem",
         "B": "2個tandems，1個ovoid",
@@ -329387,7 +329402,10 @@
         "D": "2個ovoids，2個tandems"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/radiology_099110_q78_fig.webp"
+      ]
     },
     {
       "id": 114090011348,
@@ -329399,7 +329417,7 @@
       "subject_name": "放射治療",
       "stage_id": 5,
       "number": 80,
-      "question": "承上題，此近接治療為下列何種技術？",
+      "question": "【題組情境】【題組情境】在子宮頸腔內近接放射治療中，如圖，AR及AL二點的位置是定義在何處？\n\n承上題，子宮頸腔內近接放射治療中，置入體腔內的applicator包括有那些？\n\n承上題，此近接治療為下列何種技術？",
       "options": {
         "A": "Parterson-Parker system",
         "B": "Quimby system",
@@ -329407,7 +329425,10 @@
         "D": "Memorial system"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/radiology_099110_q78_fig.webp"
+      ]
     },
     {
       "id": 114090011349,
@@ -330999,7 +331020,7 @@
       "subject_name": "核子醫學",
       "stage_id": 6,
       "number": 80,
-      "question": "承上題，以該問題製劑造影，除了前述之甲狀腺、唾液腺顯影外，尚可能看見下列那一部位吸收該問題製劑？",
+      "question": "【題組情境】若99mTc-MAA 因製備或存放不當，在注入病患兩側下肢靜脈後，掃描結果發現放射藥劑多數聚集於甲狀腺與唾液腺，則下列何者是最可能的原因？\n\n承上題，以該問題製劑造影，除了前述之甲狀腺、唾液腺顯影外，尚可能看見下列那一部位吸收該問題製劑？",
       "options": {
         "A": "胃",
         "B": "腦",

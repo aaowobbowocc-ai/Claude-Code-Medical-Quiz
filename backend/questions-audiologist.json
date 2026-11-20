@@ -12421,7 +12421,10 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30002433
+    "_legacy_id": 30002433,
+    "images": [
+      "/question-images/audiologist_100140_q57_fig.webp"
+    ]
   },
   {
     "id": "audiologist_100140_p2_59",
@@ -41251,7 +41254,10 @@
     "answer": "C",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30003110
+    "_legacy_id": 30003110,
+    "images": [
+      "/question-images/audiologist_101110_q30_fig.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_32",
@@ -41274,7 +41280,10 @@
     "answer": "A",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30003111
+    "_legacy_id": 30003111,
+    "images": [
+      "/question-images/audiologist_101110_q30_fig.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_33",
@@ -42148,7 +42157,10 @@
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30003145,
-    "no_image_in_source": true
+    "no_image_in_source": true,
+    "images": [
+      "/question-images/audiologist_audiologist_101110_p5_67_0.webp"
+    ]
   },
   {
     "id": "audiologist_101110_p5_70",
@@ -67051,7 +67063,7 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 38,
-    "question": "承上題，聽力師對小傑媽媽的建議，下列何者正確？",
+    "question": "【題組情境】小傑是位3 歲的男孩，母親說小傑偶爾會喊耳朵疼痛，語言發展正常，僅有一些構音問題，母親認為是年齡小的關係，長大就會好。小傑是由耳鼻喉專科醫師轉介到聽力中心做完整的聽力評估，以下是行為聽力檢查結果：①鼓室圖：雙耳Type B（平坦） ②SRT：雙耳35-40 dB HL ③AC：雙耳250-4000 Hz 在40-50 dB HL ④BC：500-1000 Hz 為5 和15 dB HL（未遮蔽）。綜合以上結果，書寫報告如下，下列敘述何者錯誤？\n\n承上題，聽力師對小傑媽媽的建議，下列何者正確？",
     "options": {
       "A": "應要轉介給耳鼻喉專科醫師，進一步治療小傑中耳炎部分",
       "B": "小傑在中高頻部分聽損，可能涉及到耳蝸部分，因此建議轉介給耳鼻喉醫生進一步的查驗原因（etiology）",
@@ -67589,7 +67601,7 @@
     "paper_id": "paper2",
     "stage_id": 0,
     "number": 63,
-    "question": "承上題,針對上述個案,下一步的聽力檢查,何者比較不恰當?",
+    "question": "【題組情境】某甲的右耳純音聽力正常、左耳除高頻輕微聽損外，其餘正常；兩側鼓室圖正常；ART結果為：右耳同側、對側皆正常，左耳同側、對側皆消失。依上述結果，你會懷疑某甲比較可能有何種異常？\n\n承上題,針對上述個案,下一步的聽力檢查,何者比較不恰當?",
     "options": {
       "A": "施行不同音量的語音聽辨測驗",
       "B": "AR decay",
@@ -70397,7 +70409,7 @@
     "subject_name": "電生理聽力學",
     "stage_id": 3,
     "number": 32,
-    "question": "承上題，依照聽力檢查的結果，下列診斷何者最適當？",
+    "question": "【題組情境】35 歲男性病患,初診主訴右側聽損約半年,純音聽力檢查和鼓室圖結果如下圖,下列敘述何者正確?\n\n承上題，依照聽力檢查的結果，下列診斷何者最適當？",
     "options": {
       "A": "耳硬化症",
       "B": "右側聽小骨脫位",
@@ -70406,7 +70418,11 @@
     },
     "answer": "B",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/audiologist_audiologist_103100_p3_31_0.webp",
+      "/question-images/audiologist_audiologist_103100_p3_31_1.webp"
+    ]
   },
   {
     "id": "audiologist_103100_s0903_33",
@@ -70418,7 +70434,7 @@
     "subject_name": "電生理聽力學",
     "stage_id": 3,
     "number": 33,
-    "question": "承上題，經治療後，再安排純音聽力檢查結果如下，請問病患應該是接受何種治療？",
+    "question": "【題組情境】【題組情境】35 歲男性病患,初診主訴右側聽損約半年,純音聽力檢查和鼓室圖結果如下圖,下列敘述何者正確?\n\n承上題，依照聽力檢查的結果，下列診斷何者最適當？\n\n承上題，經治療後，再安排純音聽力檢查結果如下，請問病患應該是接受何種治療？",
     "options": {
       "A": "接受高劑量類固醇治療",
       "B": "配戴助聽器",
@@ -70468,7 +70484,7 @@
     "subject_name": "電生理聽力學",
     "stage_id": 3,
     "number": 35,
-    "question": "承上題，配合病人症狀與初步檢查，下面那一項疾病最符合上述的表現？",
+    "question": "【題組情境】45 歲女性病患，初診主訴15 天前第一次暈眩發作，經治療已經改善，聽力檢查結果如下圖，溫差測試（caloric test）時刺激左耳有明顯暈眩發作，右耳則沒有感覺，下列敘述何者正確？\n\n承上題，配合病人症狀與初步檢查，下面那一項疾病最符合上述的表現？",
     "options": {
       "A": "右耳迷路炎（labyrinthitis）",
       "B": "右耳前庭神經炎（vestibular neuritis）",
@@ -70477,7 +70493,10 @@
     },
     "answer": "B",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/audiologist_audiologist_103100_p3_34_0.webp"
+    ]
   },
   {
     "id": "audiologist_103100_s0903_36",
@@ -71278,7 +71297,7 @@
     "subject_name": "電生理聽力學",
     "stage_id": 3,
     "number": 72,
-    "question": "承上題，該病童也同時接受雙耳短聲之聽覺皮質反應（slow  cortical  response  with  binaural  clicks）〔記錄電極：Ai（+），Cz（-）〕，結果如下圖。請問該圖中波峰（peak）A的命名應該是下列何者？",
+    "question": "【題組情境】2.5 歲男童出生時因黃疸（hyperbilirubinemia）換血（exchange blood），有腦性麻痺史（cerebral palsy）。因被父母懷疑聽力不良而求診。行為聽力檢查反應無法確定（inconclusive）。鼓室圖兩側type A，但兩耳同側聽反射消失。TEOAE、click ABR 的結果如下圖。請問根據病史及檢查，該病童的臨床診斷最有可能是下列何者？\n\n承上題，該病童也同時接受雙耳短聲之聽覺皮質反應（slow  cortical  response  with  binaural  clicks）〔記錄電極：Ai（+），Cz（-）〕，結果如下圖。請問該圖中波峰（peak）A的命名應該是下列何者？",
     "options": {
       "A": "N1",
       "B": "P1",
@@ -84315,7 +84334,7 @@
     "subject_name": "聽覺與平衡系統之創健與復健學",
     "stage_id": 5,
     "number": 35,
-    "question": "承上題，共振峰（formants）對辨識韻母提供重要的聲學線索，下列敘述何者最正確？",
+    "question": "【題組情境】言語聲學特性與人類對語音的聽覺感知有關,下列言語音強參數的敘述何者最正確?\n\n承上題，共振峰（formants）對辨識韻母提供重要的聲學線索，下列敘述何者最正確？",
     "options": {
       "A": "第一共振峰：/a/低於/i/",
       "B": "第二共振峰：/a/高於/i/",
@@ -85144,7 +85163,7 @@
     "subject_name": "聽覺與平衡系統之創健與復健學",
     "stage_id": 5,
     "number": 76,
-    "question": "承上題，病患之病灶在何側？",
+    "question": "【題組情境】某36歲男性自前一天清晨起眩暈開始發作，沒有聽力減低及耳鳴，目前主訴眩暈略有緩解，理學檢查發現自發性向右眼振。此病患最有可能為：\n\n承上題，病患之病灶在何側？",
     "options": {
       "A": "左側",
       "B": "右側",
@@ -85680,7 +85699,8 @@
     "_legacy_id": 30003484,
     "images": [
       "/question-images/audiologist_104100_q19_patrol.webp"
-    ]
+    ],
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_104100_s0904_21",
@@ -85866,7 +85886,7 @@
     "subject_name": "聽覺輔具原理與實務學",
     "stage_id": 0,
     "number": 29,
-    "question": "承上題,若在同一耳使用相同深度、相同外觀的耳模,在助聽器未開機的情況下,搭配下列那種孔徑的通氣孔,在2,000Hz處REOG-REUG得到的數值最小?",
+    "question": "【題組情境】在耳道中放入耳模與助聽器，在關機的狀態下，其真耳閉塞增益（REOG）與真耳裸耳增益（REUG）的差值叫做什麼？\n\n承上題,若在同一耳使用相同深度、相同外觀的耳模,在助聽器未開機的情況下,搭配下列那種孔徑的通氣孔,在2,000Hz處REOG-REUG得到的數值最小?",
     "options": {
       "A": "1 mm",
       "B": "2 mm",
@@ -91636,7 +91656,10 @@
     },
     "answer": "D",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/audiologist_105090_q60_fig.webp"
+    ]
   },
   {
     "id": "audiologist_105090_s0903_62",
@@ -91787,7 +91810,8 @@
     "exam_type": "high",
     "images": [
       "/question-images/audiologist_audiologist_105090_s0903_68_0.webp"
-    ]
+    ],
+    "no_image_in_source": true
   },
   {
     "id": "audiologist_105090_s0903_69",
@@ -109940,7 +109964,11 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high",
-    "no_image_in_source": true
+    "no_image_in_source": true,
+    "images": [
+      "/question-images/audiologist_audiologist_107110_s0903_26_0.webp",
+      "/question-images/audiologist_audiologist_107110_s0903_26_1.webp"
+    ]
   },
   {
     "id": "audiologist_107110_s0903_28",
@@ -109962,7 +109990,11 @@
     "answer": "D",
     "explanation": "",
     "exam_type": "high",
-    "no_image_in_source": true
+    "no_image_in_source": true,
+    "images": [
+      "/question-images/audiologist_audiologist_107110_s0903_26_0.webp",
+      "/question-images/audiologist_audiologist_107110_s0903_26_1.webp"
+    ]
   },
   {
     "id": "audiologist_107110_s0903_29",
@@ -159713,14 +159745,17 @@
     "subject_name": "行為聽力學",
     "stage_id": 0,
     "number": 45,
-    "question": "承上題，接下來聽力師可進行那些聽力學測驗組合以證實心中假設？①ABR②OAE③speech test④Stenger test",
+    "question": "【題組情境】成人個案在耳鼻喉科診間主訴雙耳突然聽不見，聽力師進行常規檢查後發現個案雙耳鼓室圖type A；聽反射正常；純音聽力檢查呈現雙耳重度到極重度感音神經性聽損（參見附圖），下列何者是較為可能之臨床診斷？\n\n承上題，接下來聽力師可進行那些聽力學測驗組合以證實心中假設？①ABR②OAE③speech test④Stenger test",
     "options": {
       "A": "僅①③",
       "B": "僅②③",
       "C": "僅①②③",
       "D": "①②③④"
     },
-    "answer": "C"
+    "answer": "C",
+    "images": [
+      "/question-images/audiologist_115100_1_44_0.webp"
+    ]
   },
   {
     "id": "115100_1_46",
@@ -162519,7 +162554,7 @@
     "subject_name": "聽覺與平衡系統之創健與復健學",
     "stage_id": 0,
     "number": 43,
-    "question": "承上題，採用上題姿勢之主要目的為何？",
+    "question": "【題組情境】執行溫差測試（caloric test）時，下列何種姿勢最為適當？\n\n承上題，採用上題姿勢之主要目的為何？",
     "options": {
       "A": "讓上半規管（superior SCC）平行地面，接受最大刺激向量",
       "B": "讓後半規管（posterior SCC）垂直地面，接受最大刺激向量",
@@ -165696,7 +165731,7 @@
     "subject_name": "行為聽力學",
     "stage_id": 0,
     "number": 20,
-    "question": "承上題，信號偵測理論使用的心理聲學方法為何？",
+    "question": "【題組情境】在純音聽力檢查測試聽閾的過程當中，若運用信號偵測理論（theory of signal detection），其目的為何？\n\n承上題，信號偵測理論使用的心理聲學方法為何？",
     "options": {
       "A": "限制法（method of limits）",
       "B": "強迫選擇法（forced choice）",
@@ -165756,7 +165791,7 @@
     "subject_name": "行為聽力學",
     "stage_id": 0,
     "number": 23,
-    "question": "承上題，執行噪音下語音聽力檢查（Hearing in Noise Test, HINT）時，是使用喇叭做聲場測試，下列何種安排不包括在內？",
+    "question": "【題組情境】噪音下語音聽力檢查（Hearing in Noise Test, HINT）之測試紀錄是：\n\n承上題，執行噪音下語音聽力檢查（Hearing in Noise Test, HINT）時，是使用喇叭做聲場測試，下列何種安排不包括在內？",
     "options": {
       "A": "信號在前，噪音在前",
       "B": "信號在前，噪音在右",
@@ -165816,7 +165851,7 @@
     "subject_name": "行為聽力學",
     "stage_id": 0,
     "number": 26,
-    "question": "承上題，下列何種測試之反應方式是屬開放式（open set）？",
+    "question": "【題組情境】幼兒在接受語音聽力檢查時，可依年齡或其他狀況而使用不同之測試及反應方式，請依「由難至易」排列下列測試之反應方式：①指認玩具 ②口語複誦 ③指認身體部位 ④指認圖片\n\n承上題，下列何種測試之反應方式是屬開放式（open set）？",
     "options": {
       "A": "指認玩具",
       "B": "口語複誦",
@@ -166662,7 +166697,7 @@
     "subject_name": "行為聽力學",
     "stage_id": 0,
     "number": 68,
-    "question": "承上題，下列敘述何者錯誤？",
+    "question": "【題組情境】個案是個7 歲男童，語音閾（左：45 dB HL，右：10 dB HL），字詞聽辨得分（左：98%，右：96%），MCL（左：80 dB HL，右：50 dB HL），UCL（兩耳都是110 dB HL），鼓室圖（左：B 型，右：A型），家長主訴個案在學校中不能正確回答問題，尤其教室有噪音時。根據這些數據，判斷下列敘述何者正確？ Frequency in Hertz 200040008000 125 250 500 1000-100 10 20 HEARING LEVEL IN DECIBELS (dB) 30 40 50 60 70 80 90 100 110 120 AirConduction BoneConduction Plateau levels of masking in non-test ear\n\n承上題，下列敘述何者錯誤？",
     "options": {
       "A": "SRT 與PTA 吻合",
       "B": "個案的左耳可能有中耳炎",
@@ -166670,7 +166705,10 @@
       "D": "個案應當為左耳（測驗結果顯示有聽力損失）配置助聽器，減少上課中遭遇的困難"
     },
     "answer": "D",
-    "explanation": ""
+    "explanation": "",
+    "images": [
+      "/question-images/audiologist_099130_q67_fig.webp"
+    ]
   },
   {
     "id": 147,
@@ -166902,7 +166940,7 @@
     "subject_name": "行為聽力學",
     "stage_id": 0,
     "number": 80,
-    "question": "承上題，此篩檢測驗的假陽性（false positive）是多少？",
+    "question": "【題組情境】某個新發展的篩檢測驗，其結果如下表所示，此篩檢測驗的敏感性（sensitivity）是多少？ 確診結果 異常 正常 不通過 7 4 篩檢結果 通過 2 27\n\n承上題，此篩檢測驗的假陽性（false positive）是多少？",
     "options": {
       "A": "36%",
       "B": "22%",
@@ -167662,7 +167700,7 @@
     "subject_name": "電生理聽力學",
     "stage_id": 0,
     "number": 38,
-    "question": "承上題，聽性腦幹電位檢查的專一性（specificity）為何？",
+    "question": "【題組情境】若有25 人被懷疑有聽神經瘤，其先前之聽性腦幹電位檢查結果如下：懷疑retrocochlear hearing loss者有15 人，其中由磁振照影證實有5 人罹患之，另有10 人不認定是retrocochlear hearing loss，則試問腦幹電位檢查的敏感度（sensitivity）為何？\n\n承上題，聽性腦幹電位檢查的專一性（specificity）為何？",
     "options": {
       "A": "100%",
       "B": "75%",
@@ -167722,7 +167760,7 @@
     "subject_name": "電生理聽力學",
     "stage_id": 0,
     "number": 41,
-    "question": "承上題，若不知道患者的純音聽力閾值，僅以兩耳間第五波潛時差（IT5）作為耳蝸後病灶的診斷工具，若懷疑耳有腫瘤，對側耳卻有高頻聽損造成IT5<0.2 ms，此情況會造成IT5 測量的何種影響？",
+    "question": "【題組情境】若不知道患者的純音聽力閾值，僅以兩耳間第五波潛時差（IT5）作為耳蝸後病灶的診斷工具，若懷疑耳沒有腫瘤，卻有高頻聽損造成IT5>0.2 ms，對側耳聽力正常，此情況會造成IT5 測量的何種影響？\n\n承上題，若不知道患者的純音聽力閾值，僅以兩耳間第五波潛時差（IT5）作為耳蝸後病灶的診斷工具，若懷疑耳有腫瘤，對側耳卻有高頻聽損造成IT5<0.2 ms，此情況會造成IT5 測量的何種影響？",
     "options": {
       "A": "敏感度增高",
       "B": "敏感度降低",
@@ -168922,7 +168960,7 @@
     "subject_name": "聽覺輔具原理與實務學",
     "stage_id": 0,
     "number": 22,
-    "question": "承上題，若要考慮聽能復健效能，又兼顧解決上述問題，下列何者是最適當方案？",
+    "question": "【題組情境】75 歲的老王抱怨看電視常聽不清楚，可是又常會被家人在耳邊大喊時嚇一大跳，老王問題的最佳敘述是下列那一項？\n\n承上題，若要考慮聽能復健效能，又兼顧解決上述問題，下列何者是最適當方案？",
     "options": {
       "A": "Peak clipping",
       "B": "Directional microphone",
@@ -169362,7 +169400,7 @@
     "subject_name": "聽覺輔具原理與實務學",
     "stage_id": 0,
     "number": 46,
-    "question": "承上題，一般沒有上述選擇開關的助聽器，可依下列那一變數選擇麥克風或直接音源放大？",
+    "question": "【題組情境】關於助聽器選擇開關的敘述何者不適當？\n\n承上題，一般沒有上述選擇開關的助聽器，可依下列那一變數選擇麥克風或直接音源放大？",
     "options": {
       "A": "外在音源輸入音量（input volume）與麥克風比較",
       "B": "外在音源輸出音量（output volume）與麥克風比較",
@@ -172082,7 +172120,7 @@
     "subject_name": "聽語溝通障礙學（包括專業倫理）",
     "stage_id": 0,
     "number": 23,
-    "question": "承上題，王先生與王太太的子女有多少百分比的機率會是聽力正常但是攜帶著隱性基因？",
+    "question": "【題組情境】王先生的失聰是隱性基因造成，他的太太聽力正常但是也帶著相同的隱性基因，他們的子女有多少百分比的機率會是失聰者？\n\n承上題，王先生與王太太的子女有多少百分比的機率會是聽力正常但是攜帶著隱性基因？",
     "options": {
       "A": "0%",
       "B": "25%",

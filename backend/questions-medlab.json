@@ -56125,7 +56125,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 80,
-    "question": "承上題，此疾病出現的 atypical lymphocytes 通常為下列何種 lymphocyte ？",
+    "question": "【題組情境】【題組情境】一位 17 歲的女性病患，因數天的倦怠、頭痛、扁桃腺發炎與淋巴腺腫而來醫院檢查。 CBC 檢查結果： WBC=25,000/μL ； 血液抹片出現如下圖的現象（有 15% 的 atypical lymphocytes ）；血清學檢查發現嗜異抗體（ heterophile antibody ）增 加，則此人最可能得到下列何種疾病？\n\n承上題，此疾病是由下列何種病原體感染而引起的？\n\n承上題，此疾病出現的 atypical lymphocytes 通常為下列何種 lymphocyte ？",
     "options": {
       "A": "T cell",
       "B": "B cell",
@@ -97628,7 +97628,7 @@
     "subject_name": "臨床鏡檢學",
     "stage_id": 5,
     "number": 40,
-    "question": "承上題，此有形成份最有可能是由下列何者所構成？",
+    "question": "【題組情境】下圖A是尿沉渣檢體明視野顯微鏡鏡檢結果，圖B是此檢體同一視野偏光顯微鏡鏡檢呈現 Maltese cross結果，其為下列何者？\n\n承上題，此有形成份最有可能是由下列何者所構成？",
     "options": {
       "A": "WBC",
       "B": "transitional epithelial cell",
@@ -97636,7 +97636,10 @@
       "D": "squamous epithelial cell"
     },
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "images": [
+      "/question-images/medlab_104090_molmicro_q39_0.webp"
+    ]
   },
   {
     "id": 13150,
@@ -105168,7 +105171,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 77,
-    "question": "承上題，這位病人最有可能罹患下列何種疾病？",
+    "question": "【題組情境】箭頭所指的細胞最有可能是下列何者？\n\n承上題，這位病人最有可能罹患下列何種疾病？",
     "options": {
       "A": "Burkitt lymphoma",
       "B": "myelodysplastic syndrome",
@@ -105177,7 +105180,10 @@
     },
     "answer": "D",
     "explanation": "",
-    "no_image_in_source": true
+    "no_image_in_source": true,
+    "images": [
+      "/question-images/medlab_105020_q76_0.webp"
+    ]
   },
   {
     "id": 12147,
@@ -105234,7 +105240,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 80,
-    "question": " 承上題，下列何種檢查最能幫助診斷此種疾病？",
+    "question": "【題組情境】一位70歲的男性病患因為骨頭痛、貧血、蛋白尿與高尿酸血症到醫院檢查，血液抹片出現下 圖的異常現象，骨骼X光片檢查發現蝕骨性病變，則此病患最有可能為下列何種疾病？\n\n承上題，下列何種檢查最能幫助診斷此種疾病？",
     "options": {
       "A": "serum protein electrophoresis",
       "B": "serum total binding protein",
@@ -105242,7 +105248,8 @@
       "D": "periodic acid-Schiff stain"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "image_url": "/question-images/medlab_105020_hematology_q79_0.webp"
   },
   {
     "id": 12390,
@@ -115377,7 +115384,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 80,
-    "question": " 承上題，此病患最可能得到下列何種疾病？",
+    "question": "【題組情境】一25歲男性病患，因為輕度發燒不退、盜汗、食慾不佳，頸部淋巴結腫大到醫院檢查，淋巴結切片染色發現如圖箭頭所指的異 常細胞，此異常細胞最可能為下列何種細胞？\n\n承上題，此病患最可能得到下列何種疾病？",
     "options": {
       "A": "Hodgkin lymphoma",
       "B": "hairy cell leukemia",
@@ -115385,7 +115392,10 @@
       "D": "acute promyelocytic leukemia"
     },
     "answer": "A",
-    "explanation": ""
+    "explanation": "",
+    "images": [
+      "/question-images/medlab_105100_blood_q79_0.webp"
+    ]
   },
   {
     "id": 12870,
@@ -125142,7 +125152,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 77,
-    "question": "承上題，此種血球最常發生於下列何種疾病？",
+    "question": "【題組情境】箭頭所指的細胞有特殊的細胞質內涵物（inclusion），呈現一捆棒狀物的樣子，這種細胞稱為：\n\n承上題，此種血球最常發生於下列何種疾病？",
     "options": {
       "A": "myelodysplastic syndrome",
       "B": "acute promyelocytic leukemia",
@@ -125151,7 +125161,10 @@
     },
     "answer": "B",
     "explanation": "",
-    "case_context": "第 76 題：箭頭所指的細胞有特殊的細胞質內涵物（inclusion），呈現一捆棒狀物的樣子，這種細胞稱為："
+    "case_context": "第 76 題：箭頭所指的細胞有特殊的細胞質內涵物（inclusion），呈現一捆棒狀物的樣子，這種細胞稱為：",
+    "images": [
+      "/question-images/medlab_106020_blood_q76_0.webp"
+    ]
   },
   {
     "id": 5437,
@@ -125186,7 +125199,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 79,
-    "question": "承上題，此人的flow immunophenotyping的結果如下圖，則下列何種細胞標記的結果正確？",
+    "question": "【題組情境】一位75歲的男性病患，CBC檢查結果Hb=13.5 g/dL、WBC=150,000/μL、platelet=80,000/μL；血液抹片如下圖，則此血液抹 片可觀察到那些異常現象？①lymphocytosis ②increased smudge cells ③prolymphocytes ④Reed-Sternberg cells ⑤Faggot cells\n\n承上題，此人的flow immunophenotyping的結果如下圖，則下列何種細胞標記的結果正確？",
     "options": {
       "A": "CD5(－)、CD19(＋)、CD23(－)、FMC7(＋)、KAPPA(－)、LAMBDA(＋)",
       "B": "CD5(＋)、CD19(＋)、CD23(＋)、FMC7(－)、KAPPA(＋)、LAMBDA(－)",
@@ -125210,7 +125223,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 80,
-    "question": "承上題，此人最可能為下列何種疾病？",
+    "question": "【題組情境】【題組情境】一位75歲的男性病患，CBC檢查結果Hb=13.5 g/dL、WBC=150,000/μL、platelet=80,000/μL；血液抹片如下圖，則此血液抹 片可觀察到那些異常現象？①lymphocytosis ②increased smudge cells ③prolymphocytes ④Reed-Sternberg cells ⑤Faggot cells\n\n承上題，此人的flow immunophenotyping的結果如下圖，則下列何種細胞標記的結果正確？\n\n承上題，此人最可能為下列何種疾病？",
     "options": {
       "A": "CLL",
       "B": "T-ALL",
@@ -163751,7 +163764,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 78,
-    "question": "承上題，下列何種表面標記組合最能代表圖中的腫瘤細胞？",
+    "question": "【題組情境】小章最近臉色蒼白，醫師發現他血中白血球超標（過高），血液抹片如下圖。 下列何者是最可能的診斷？\n\n承上題，下列何種表面標記組合最能代表圖中的腫瘤細胞？",
     "options": {
       "A": "CD5(+)CD19(+)CD23(+)",
       "B": "CD5(+)CD19(-)CD23(+)",
@@ -163798,7 +163811,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 80,
-    "question": "承上題，其LAP score為12，則此病例的血液細胞最可能發生下列那種染色體轉位？",
+    "question": "【題組情境】35歲男性因腹脹就醫，CBC檢驗結果為WBC 65.6×10 9 /L、RBC 3.05×10 12 /L、Hb 9.1g/dL、PLT 280×10 9 /L，周邊血液抹片如圖，箭頭所指為下列何種細胞？\n\n承上題，其LAP score為12，則此病例的血液細胞最可能發生下列那種染色體轉位？",
     "options": {
       "A": "t(9;22)BCR-ABL1",
       "B": "t(12;21)ETV6-RUNX1",
@@ -204173,7 +204186,7 @@
       "C": "會影響激素分析",
       "D": "會使尿酸沉澱"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
     "original_answer": "B",
     "correction_note": "第9題更正為 B,C（原答案 B）",
@@ -206256,7 +206269,7 @@
       "C": "是黑色素（Melatonin）的前驅物",
       "D": "含有咪唑（Imidazole）環狀結構"
     },
-    "answer": "D",
+    "answer": "C,D",
     "explanation": "",
     "disputed": true,
     "original_answer": "D",
@@ -210615,7 +210628,7 @@
       "C": "Pappenheimer bodies",
       "D": "Heinz bodies"
     },
-    "answer": "D",
+    "answer": "A,B,C,D",
     "explanation": "",
     "original_answer": "D",
     "correction_note": "第9題更正為 A,B,C,D（原答案 D）",
@@ -216861,7 +216874,7 @@
       "C": "血清丙酮（serum acetone）",
       "D": "尿中草酸鹽（urine oxalate）"
     },
-    "answer": "B",
+    "answer": "A,B,C",
     "explanation": "",
     "disputed": true,
     "original_answer": "B",
@@ -219642,7 +219655,7 @@
       "C": "第一類主要組織相容性複合體（class I MHC）",
       "D": "第二類主要組織相容性複合體（class II MHC）"
     },
-    "answer": "D",
+    "answer": "C,D",
     "explanation": "",
     "disputed": true,
     "original_answer": "D",
@@ -220951,7 +220964,7 @@
     "subject_name": "血庫學",
     "stage_id": 4,
     "number": 42,
-    "question": "承上題，該疾病的嗜中性球之何種功能最不受影響?",
+    "question": "【題組情境】下圖所示之白血球形態，最可能出現於下列何種疾病？\n\n承上題，該疾病的嗜中性球之何種功能最不受影響?",
     "options": {
       "A": "Adhesion",
       "B": "Phagocytosis",
@@ -225664,7 +225677,7 @@
       "C": "mg/dL",
       "D": "μg/kg"
     },
-    "answer": "B",
+    "answer": "B,D",
     "explanation": "",
     "disputed": true,
     "original_answer": "B",
@@ -228140,7 +228153,7 @@
       "C": "Spirillum minus",
       "D": "Legionella pneumophila"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "",
     "disputed": true,
     "original_answer": "C",
@@ -228352,7 +228365,7 @@
       "C": "正常",
       "D": "無法判定"
     },
-    "answer": "A",
+    "answer": "A,C",
     "explanation": "",
     "disputed": true,
     "original_answer": "A",
@@ -235119,7 +235132,7 @@
       "C": "葡萄糖脫氫酶（glucose dehydrogenase）",
       "D": "旋轉酶（mutarotase）"
     },
-    "answer": "B",
+    "answer": "A,B",
     "explanation": "",
     "disputed": true,
     "original_answer": "B",
@@ -238307,7 +238320,7 @@
     "subject_name": "臨床生理學",
     "stage_id": 1,
     "number": 24,
-    "question": "承上題，其酸鹼障礙的可能原因，下列何者最不可能？",
+    "question": "【題組情境】一位糖尿病患者腹痛數日，血液氣體分析結果為pH 7.26、：28.6 mmHg、：90 mmHg、HCO3-：11.0mmol/L，下列診斷結果何者最合理？\n\n承上題，其酸鹼障礙的可能原因，下列何者最不可能？",
     "options": {
       "A": "可能持續嘔吐造成",
       "B": "可能有吃metformin 而乳酸中毒",
@@ -243475,7 +243488,7 @@
       "C": "報告主管",
       "D": "接受HIV預防處理"
     },
-    "answer": "C",
+    "answer": "C,D",
     "explanation": "",
     "disputed": true,
     "original_answer": "C",
@@ -244873,7 +244886,7 @@
       "C": "β-羥基丁酸（β-hydroxybutyrate）",
       "D": "醋酸（acetate）"
     },
-    "answer": "A",
+    "answer": "A,D",
     "explanation": "",
     "original_answer": "A",
     "correction_note": "第29題更正為 A,D（原答案 A）",
@@ -246879,7 +246892,7 @@
       "C": "Metronidazole",
       "D": "Vancomycin"
     },
-    "answer": "B",
+    "answer": "B,D",
     "explanation": "",
     "disputed": true,
     "original_answer": "B",
@@ -247023,7 +247036,7 @@
       "C": "1×10 5",
       "D": "1×10 6"
     },
-    "answer": "C",
+    "answer": "B,C",
     "explanation": "",
     "disputed": true,
     "original_answer": "C",
@@ -247270,7 +247283,7 @@
       "C": "Piedraia hortae",
       "D": "Hortaea werneckii"
     },
-    "answer": "C",
+    "answer": "C,D",
     "explanation": "",
     "disputed": true,
     "original_answer": "C",
@@ -253756,7 +253769,7 @@
       "C": "Tag polymerase的stoffel fragment具有3'端至5'端exonuclease活性",
       "D": "Tag polymerase的stoffel fragment適合擴增高GC比的片段"
     },
-    "answer": "C",
+    "answer": "C,D",
     "explanation": "",
     "disputed": true,
     "original_answer": "C",
@@ -262894,7 +262907,7 @@
       "C": "UGC＞UGA",
       "D": "AGA＞AGG"
     },
-    "answer": "C",
+    "answer": "C,D",
     "explanation": "",
     "original_answer": "C",
     "correction_note": "第44題更正為 C,D（原答案 C）",
@@ -264558,7 +264571,7 @@
       "C": "硫化血紅素（sulfhemoglobin）",
       "D": "氧合血紅素（oxyhemoglobin）"
     },
-    "answer": "D",
+    "answer": "A,B,D",
     "explanation": "",
     "original_answer": "D",
     "correction_note": "第46題更正為 A,B,D（原答案 D）",
@@ -269586,7 +269599,7 @@
       "C": "③",
       "D": "④"
     },
-    "answer": "D",
+    "answer": "B,C,D",
     "explanation": "",
     "original_answer": "D",
     "correction_note": "第55題更正為 B,C,D（原答案 D）",
@@ -274240,7 +274253,7 @@
       "C": "零級反應指反應速率與酵素活性成正比",
       "D": "溫度每增加攝氏1度，反應速率增加10%"
     },
-    "answer": "B",
+    "answer": "B,D",
     "explanation": "",
     "original_answer": "B",
     "correction_note": "第46題更正為 B,D（原答案 B）",
@@ -275663,7 +275676,7 @@
       "C": "僅②③",
       "D": "僅③"
     },
-    "answer": "D",
+    "answer": "C,D",
     "explanation": "",
     "disputed": true,
     "original_answer": "D",
@@ -285236,7 +285249,7 @@
       "C": "抑制腸細胞（enterocyte）G protein的活化，進而造成cyclic adenosine monophosphate（cAMP）的產量 上升",
       "D": "可以促進電解質（electrolytes）由細胞內分泌至腸腔，造成水狀下痢"
     },
-    "answer": "A",
+    "answer": "A,C",
     "explanation": "",
     "disputed": true,
     "original_answer": "A",
@@ -289617,7 +289630,7 @@
       "C": "AID能夠對單股及雙股DNA的胞嘧啶核苷（cytidine）進行脫氨基的作用",
       "D": "AID能夠啟動免疫球蛋白之類別轉換（class switch recombination）"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "考選部一律給分（送分）：本題「何者錯誤」中，A（「只有」生發中心 B 細胞表現 AID 過於絕對）與 C（AID 僅作用於單股 DNA，「單股及雙股」有誤）皆有爭議，故官方一律給分。原標準答案為 C。",
     "original_answer": "C",
     "correction_note": "第10題更正為 A,C（原答案 C）",
@@ -295337,7 +295350,7 @@
       "C": "levofloxacin",
       "D": "tetracycline"
     },
-    "answer": "C",
+    "answer": "B,C",
     "explanation": "",
     "disputed": true,
     "original_answer": "C",
@@ -296957,7 +296970,7 @@
       "C": "超過標準體重 10％以上稱為過重",
       "D": "超過標準體重 30％以上為輕度肥胖"
     },
-    "answer": "D",
+    "answer": "C,D",
     "explanation": "",
     "disputed": true,
     "original_answer": "D",
@@ -299969,7 +299982,7 @@
       "C": "dNTP",
       "D": "HSV-1 specific primers"
     },
-    "answer": "A",
+    "answer": "A,D",
     "explanation": "",
     "disputed": true,
     "original_answer": "A",
@@ -313569,7 +313582,7 @@
     "subject_name": "臨床血液學",
     "stage_id": 3,
     "number": 23,
-    "question": "承上題，B 細胞為：",
+    "question": "【題組情境】附圖為某病患血液抹片Wright stain 相片，A 細胞所含內涵物為：\n\n承上題，B 細胞為：",
     "options": {
       "A": "giant platelet",
       "B": "target cell",
@@ -313577,7 +313590,10 @@
       "D": "normoblast"
     },
     "answer": "C",
-    "explanation": ""
+    "explanation": "",
+    "images": [
+      "/question-images/medlab_099010_q22_fig.webp"
+    ]
   },
   {
     "id": 100140239,
@@ -322664,7 +322680,7 @@
     "subject_name": "臨床血液學",
     "stage_id": 3,
     "number": 2,
-    "question": "承上題，最不易發生不正確數據的分析項目是：",
+    "question": "【題組情境】Cold agglutinin disease 病人的檢體在一般自動血球分析儀的分析中，全血計數檢查報告中最常發現下列何現象？\n\n承上題，最不易發生不正確數據的分析項目是：",
     "options": {
       "A": "WBC",
       "B": "platelet",
@@ -330241,7 +330257,7 @@
     "subject_name": "臨床病毒學",
     "stage_id": 11,
     "number": 64,
-    "question": "承上題，下列關於此病毒的敘述，何者正確？",
+    "question": "【題組情境】某36 歲女性嘴角長疱，她7 個月前也有相同的病徵。實驗室診斷證明為一具有套膜的DNA 病毒造成。下列何者為最可能的致病原？\n\n承上題，下列關於此病毒的敘述，何者正確？",
     "options": {
       "A": "此病毒初次感染的症狀較復發時嚴重",
       "B": "此病毒在嘴部皮膚的巨噬細胞完成複製",

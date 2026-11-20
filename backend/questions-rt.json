@@ -199238,7 +199238,10 @@
         "D": "病人自主呼吸時"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/rt_110100_q74_fig.webp"
+      ]
     },
     {
       "id": "110100_44_76",
@@ -199284,7 +199287,10 @@
       },
       "answer": "D",
       "explanation": "",
-      "no_image_in_source": true
+      "no_image_in_source": true,
+      "images": [
+        "/question-images/rt_110100_44_76_0.webp"
+      ]
     },
     {
       "id": "110100_44_78",
@@ -207405,7 +207411,10 @@
         "D": "標號4變小"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/rt_111100_q61_fig.webp"
+      ]
     },
     {
       "id": "111100_33_63",
@@ -208195,7 +208204,13 @@
       },
       "answer": "C",
       "explanation": "",
-      "no_image_in_source": true
+      "no_image_in_source": true,
+      "images": [
+        "/question-images/rt_111100_44_18_0.webp",
+        "/question-images/rt_111100_44_18_1.webp",
+        "/question-images/rt_111100_44_18_2.webp",
+        "/question-images/rt_111100_44_18_3.webp"
+      ]
     },
     {
       "id": "111100_44_20",
@@ -259352,14 +259367,29 @@
       "subject_name": "呼吸器原理及應用",
       "stage_id": 0,
       "number": 66,
-      "question": "承上題，造成此問題最可能的原因有那些？①呼吸器的敏感度設定不恰當 ②吐氣閥瓣膜破損 ③熱濕交換器阻塞 ④auto-PEEP ⑤潮氣容積過小",
+      "question": "【題組情境】病人的呼吸器發生警報，波形如下圖，箭頭所指處的問題為何？\n\n承上題，造成此問題最可能的原因有那些？①呼吸器的敏感度設定不恰當 ②吐氣閥瓣膜破損 ③熱濕交換器阻塞 ④auto-PEEP ⑤潮氣容積過小",
       "options": {
         "A": "①②⑤",
         "B": "①②④",
         "C": "②③④⑤",
         "D": "①③④"
       },
-      "answer": "D"
+      "answer": "D",
+      "images": [
+        "/question-images/rt_115090_3_65_0.webp",
+        "/question-images/rt_115090_3_65_1.webp",
+        "/question-images/rt_115090_3_65_2.webp",
+        "/question-images/rt_115090_3_65_3.webp",
+        "/question-images/rt_115090_3_65_4.webp",
+        "/question-images/rt_115090_3_65_5.webp",
+        "/question-images/rt_115090_3_65_6.webp",
+        "/question-images/rt_115090_3_65_7.webp",
+        "/question-images/rt_115090_3_65_8.webp",
+        "/question-images/rt_115090_3_65_9.webp",
+        "/question-images/rt_115090_3_65_10.webp",
+        "/question-images/rt_115090_3_65_11.webp",
+        "/question-images/rt_115090_3_65_12.webp"
+      ]
     },
     {
       "id": "115090_3_67",
@@ -261081,7 +261111,7 @@
       "subject_name": "重症呼吸治療學",
       "stage_id": 0,
       "number": 77,
-      "question": "承上題，病人接受純氧治療30分鐘後，動脈血氣體分析結果：pH 7.4，PaO 95 mm Hg，PaCO 39 mm Hg，2 2 HCO3- 24 mmol/L，此病人低血氧的原因為何？",
+      "question": "【題組情境】55歲男性，四肢發紺，右下肺呼吸音變弱。未使用氧氣時，動脈血氣體分析結果：pH 7.45，PaO 50 mm 2 Hg，PaCO 35 mm Hg，HCO- 24 mEq/L，血比容（Hct）65％，此時肺泡－動脈氧壓差（A-a gradient）約為多2 3少？\n\n承上題，病人接受純氧治療30分鐘後，動脈血氣體分析結果：pH 7.4，PaO 95 mm Hg，PaCO 39 mm Hg，2 2 HCO3- 24 mmol/L，此病人低血氧的原因為何？",
       "options": {
         "A": "通氣不足",
         "B": "通氣／灌流失衡",
@@ -269066,7 +269096,7 @@
       "subject_name": "呼吸器原理及應用",
       "stage_id": 0,
       "number": 78,
-      "question": "承上題，P2 與P3 壓力差所代表的意義與何者最符合？",
+      "question": "【題組情境】呼吸器的壓力－時間波形如圖，下列敘述何者錯誤？\n\n承上題，P2 與P3 壓力差所代表的意義與何者最符合？",
       "options": {
         "A": "肺水腫嚴重度",
         "B": "肺泡間的時間常數（time constant）差異大所致",
@@ -269074,7 +269104,10 @@
         "D": "支氣管阻力的大小"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/rt_099020_q77_fig.webp"
+      ]
     },
     {
       "id": 4639,
@@ -269106,7 +269139,7 @@
       "subject_name": "呼吸器原理及應用",
       "stage_id": 0,
       "number": 80,
-      "question": "承上題，王先生經過上述治療後症狀明顯改善，四個月後因吸入性肺炎併發呼吸衰竭住院，拔管一週後又發生吸入性肺炎，病人覺得輕微呼吸困難，檢查發現痰量不多，呼吸次數25/分，心跳100/分，血氧飽和度95%，則下列何種處置方式最適當？",
+      "question": "【題組情境】王先生是一位68 歲男性，半年前因上肢肌肉無力被診斷為肌萎縮性側索硬化症（amyotrophic lateral sclerosis），最近常出現睡眠不安及頭痛的症狀，病人並無明顯呼吸及吞嚥困難的症狀，則下列何種呼吸支持方式最適合此病人？\n\n承上題，王先生經過上述治療後症狀明顯改善，四個月後因吸入性肺炎併發呼吸衰竭住院，拔管一週後又發生吸入性肺炎，病人覺得輕微呼吸困難，檢查發現痰量不多，呼吸次數25/分，心跳100/分，血氧飽和度95%，則下列何種處置方式最適當？",
       "options": {
         "A": "增加氧氣流量",
         "B": "如果病人使用非侵襲性正壓呼吸器，提高吸氣氣道正壓並延長呼吸器使用時間",
@@ -278748,7 +278781,7 @@
       "subject_name": "呼吸器原理及應用",
       "stage_id": 0,
       "number": 80,
-      "question": "承上題，此時該如何處置？",
+      "question": "【題組情境】當呼吸衰竭患者無法與呼吸器配合，呼吸費力，使用呼吸輔助肌，出現呼吸窘迫現象，此時壓力－時間與流量－時間波形如圖，最可能的原因為何？\n\n承上題，此時該如何處置？",
       "options": {
         "A": "給予支氣管擴張劑噴霧治療",
         "B": "查出管路漏氣處並加以適當處置",
@@ -278756,7 +278789,10 @@
         "D": "降低呼吸器的潮氣容積設定"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/rt_099110_q79_fig.webp"
+      ]
     },
     {
       "id": 5121,
@@ -281957,7 +281993,7 @@
       "subject_name": "呼吸疾病學",
       "stage_id": 0,
       "number": 80,
-      "question": "承上題，最不可能之原因為何？",
+      "question": "【題組情境】慢性咳嗽，依時間長短而定，症狀應該持續大於幾週為診斷依據？\n\n承上題，最不可能之原因為何？",
       "options": {
         "A": "胃食道逆流",
         "B": "上呼吸道感染",

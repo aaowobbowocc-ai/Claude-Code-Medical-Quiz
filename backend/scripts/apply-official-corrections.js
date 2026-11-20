@@ -32,18 +32,14 @@ const fileOf = e => (e === 'doctor1' ? 'questions.json' : `questions-${e}.json`)
 const FW = { 'Ａ': 'A', 'Ｂ': 'B', 'Ｃ': 'C', 'Ｄ': 'D', 'Ｅ': 'E' };
 const half = s => String(s).replace(/[ＡＢＣＤＥ]/g, c => FW[c]);
 
-function parseRemarks(text) {
-  const out = {};
-  const t = half(String(text || '')).replace(/\s+/g, '');
-  const re = /第(\d{1,3})題[，,]?([^第]{0,120}?給分)/g;
-  let m;
-  while ((m = re.exec(t))) {
-    const n = +m[1], body = m[2];
-    const letters = [...new Set((body.match(/[A-E]/g) || []))].sort();
-    out[n] = letters.length ? letters.join(',') : '送分';
-  }
-  return out;
-}
+/*
+ * 備註的解析**只有一份**，在 fetch-session-corrections.js。
+ * 原本這裡自己寫了一份，兩份判斷不一樣：
+ *   「第65題除未作答者不給分外，其餘均給分」
+ * 這裡的版本要求出現「一律給分」或字母才算數，於是這一筆被當成「更正卷沒提這一題」，
+ * 另一支卻正確地當成送分 —— 同一份 PDF 兩個答案，稽核就失去意義。
+ */
+const { parseRemark: parseRemarks } = require('./fetch-session-corrections');
 
 (async () => {
   const files = {};
@@ -83,7 +79,7 @@ function parseRemarks(text) {
           if (APPLY) { q.answer = String(orig); touched.add(exam); }
         }
         unproven.push(`${key} #${q.number}  這一卷沒有更正卷，註記「${String(q.correction_note).slice(0, 36)}」`);
-        if (APPLY) { q.correction_note = `⚠這一卷沒有更正卷：${q.correction_note}`; touched.add(exam); }
+        if (APPLY) { if (!String(q.correction_note).startsWith('⚠')) q.correction_note = `⚠這一卷沒有更正卷：${q.correction_note}`; touched.add(exam); }
       }
       continue;
     }
@@ -112,7 +108,7 @@ function parseRemarks(text) {
         if (APPLY) { q.answer = String(orig); touched.add(exam); }
       }
       unproven.push(`${key} #${q.number}  註記「${String(q.correction_note).slice(0, 36)}」更正卷沒提`);
-      if (APPLY) { q.correction_note = `⚠未獲更正卷佐證：${q.correction_note}`; touched.add(exam); }
+      if (APPLY) { if (!String(q.correction_note).startsWith('⚠')) q.correction_note = `⚠未獲更正卷佐證：${q.correction_note}`; touched.add(exam); }
     }
   }
 

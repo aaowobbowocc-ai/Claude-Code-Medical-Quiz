@@ -29576,9 +29576,11 @@
         "C": "呼吸性鹼中毒： ②④",
         "D": "呼吸性酸中毒： ①③"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第10題 → A,B"
     },
     {
       "id": 10490,
@@ -29637,9 +29639,11 @@
         "C": "爆烈囉音（ crackle ）",
         "D": "哮鳴聲（ wheeze ）"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第13題 → B,D"
     },
     {
       "id": 10493,
@@ -29738,9 +29742,11 @@
         "C": "①③④",
         "D": "②③④"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第18題 → 送分"
     },
     {
       "id": 10498,
@@ -29919,9 +29925,11 @@
         "C": "韌帶拉傷慢性期",
         "D": "血栓靜脈炎（ thrombophlebitis ）"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第27題 → A,D"
     },
     {
       "id": 10507,
@@ -30240,9 +30248,11 @@
         "C": "環境（ environment ）",
         "D": "身體功能（ body function ）"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第43題 → B,C"
     },
     {
       "id": 10523,
@@ -30341,9 +30351,11 @@
         "C": "平衡功能",
         "D": "移位能力"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第48題 → B,C"
     },
     {
       "id": 10528,
@@ -30402,9 +30414,11 @@
         "C": "三頭肌（ triceps ）",
         "D": "二頭肌（ biceps ）"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第51題 → 送分"
     },
     {
       "id": 10531,
@@ -32726,9 +32740,11 @@
         "C": "肱肌（ Brachialis ）",
         "D": "肱橈肌（ Brachioradialis ）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第7題 → 送分"
     },
     {
       "id": 10087,
@@ -33227,9 +33243,11 @@
         "C": "會造成細胞膜電位增加",
         "D": "會造成心臟痙攣性收縮"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第32題 → A,B"
     },
     {
       "id": 10112,
@@ -36189,9 +36207,11 @@
         "C": "社會參與受限",
         "D": "環境因素受限"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第20題 → B,D"
     },
     {
       "id": 10340,
@@ -36590,9 +36610,11 @@
         "C": "動作幅度可以由小到大",
         "D": "視覺刺激可以由張眼到閉眼"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第40題 → 送分"
     },
     {
       "id": 10360,
@@ -38453,10 +38475,12 @@
         "C": "此複合體被移除會增加遠端尺骨的承重（ weight bearing ）",
         "D": "此複合體可能在手腕伸直和前臂旋前（ pronation ）時遭受傷害"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_101100_c309_s55.pdf"
+      "answer_source": "vision-recheck-v2:S_101100_c309_s55.pdf",
+      "original_answer": "D",
+      "correction_note": "更正清冊：第53題 → C,D"
     },
     {
       "id": 10453,
@@ -38861,9 +38885,11 @@
         "C": "保持呼吸道暢通",
         "D": "心肺復甦術"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第73題 → 送分"
     },
     {
       "id": 10473,
@@ -48886,9 +48912,11 @@
         "C": "3",
         "D": "4"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第12題 → B"
     },
     {
       "id": 11452,
@@ -66689,9 +66717,11 @@
         "C": "膕旁肌的問題會出現在髖關節抬高約 50 °到 70 °的位置，而薦髂關節（ sacroiliac joint ）的問題約 出現在抬高 70 °到 90 °的位置",
         "D": "為鑑別是腰部還是臀部損傷，可將下肢抬到末端範圍後再加上膝屈曲，如髖關節屈曲角度增 加，則傷害可能在臀部"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第19題 → A,D"
     },
     {
       "id": 11859,
@@ -66750,9 +66780,11 @@
         "C": "當維持拇指壓力時，病人慢慢伸直膝關節，在膝屈曲 60 到 70 度時有嚴重疼痛產生時就是陽性測 試",
         "D": "患者通常會指出檢查所誘發的疼痛與平時所感到的疼痛相同"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第22題 → B,C"
     },
     {
       "id": 11862,
@@ -66891,9 +66923,11 @@
         "C": "②③",
         "D": "②④"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第29題 → C,D"
     },
     {
       "id": 11869,
@@ -67832,9 +67866,11 @@
         "C": "僅 ②④",
         "D": "①②③"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第76題 → 送分"
     },
     {
       "id": 11916,
@@ -69936,9 +69972,11 @@
         "C": "③①②",
         "D": "三者感覺同時發生"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第21題 → 送分"
     },
     {
       "id": 12181,
@@ -72100,10 +72138,12 @@
         "C": "肱橈肌",
         "D": "橈側屈腕肌"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_103090_c309_s11.pdf"
+      "answer_source": "vision-recheck-v2:S_103090_c309_s11.pdf",
+      "original_answer": "D",
+      "correction_note": "更正清冊：第49題 → A,D"
     },
     {
       "id": 12049,
@@ -73328,9 +73368,11 @@
         "C": "50",
         "D": "60"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第30題 → 送分"
     },
     {
       "id": 12110,
@@ -76270,9 +76312,11 @@
         "C": "應建議轉子滑囊炎（trochanteric bursitis）的病人於坐姿時使用坐墊",
         "D": "髂恥滑囊炎（iliopectineal bursitis）的病人最常抱怨坐骨周圍疼痛"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第17題 → A,B"
     },
     {
       "id": 12337,
@@ -76511,9 +76555,11 @@
         "C": "左後肩胛與肩峰處",
         "D": "腋下與左胸肌附近"
       },
-      "answer": "D",
+      "answer": "B,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第29題 → B,C,D"
     },
     {
       "id": 12349,
@@ -76872,9 +76918,11 @@
         "C": "開放鏈與閉鎖鏈運動訓練效果不相上下",
         "D": "開放鏈與閉鎖鏈運動訓練效果無法比較"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第47題 → B,C"
     },
     {
       "id": 12367,
@@ -77393,9 +77441,11 @@
         "C": "僅①③④",
         "D": "僅②③④"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第73題 → 送分"
     },
     {
       "id": 12393,
@@ -77835,9 +77885,11 @@
         "C": "僅①③④",
         "D": "僅①②④"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第15題 → 送分"
     },
     {
       "id": 12895,
@@ -84777,9 +84829,11 @@
         "C": "上肢D2彎曲（D2F）",
         "D": "上肢D2伸直（D2E）"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第41題 → A,C"
     },
     {
       "id": 12761,
@@ -87041,9 +87095,11 @@
         "C": "過度疲倦無力、抽筋",
         "D": "過度攝食液體、氣喘"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第74題 → A,C"
     },
     {
       "id": 12874,
@@ -87122,9 +87178,11 @@
         "C": "僅①②",
         "D": "僅②③④"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第78題 → 送分"
     },
     {
       "id": 12878,
@@ -87652,9 +87710,11 @@
         "C": "嬰幼兒的胸壁很薄，容易產生聽診誤差",
         "D": "常使用叩診檢查低體重早產兒是否出現氣胸和橫膈疝氣"
       },
-      "answer": "B",
+      "answer": "B,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第23題 → B,C,D"
     },
     {
       "id": 14343,
@@ -87737,9 +87797,11 @@
         "C": "類型6E：和換氣功能失能（ventilatory pump dysfunction）或衰竭的換氣與呼吸/氣體交換 不良",
         "D": "類型6F：和呼吸衰竭（respiratory failure）有關的換氣與呼吸/氣體交換不良"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第27題 → A"
     },
     {
       "id": 14347,
@@ -88011,9 +88073,11 @@
         "C": "參與低強度運動前宜進行運動測試",
         "D": "參與中高強度運動前宜進行運動測試"
       },
-      "answer": "D",
+      "answer": "A,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第40題 → A,C,D"
     },
     {
       "id": 14360,
@@ -88516,9 +88580,11 @@
         "C": "原始病理變化發生於動作神經細胞膜上",
         "D": "小腿肌肉內脂肪細胞及結締組織增生"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第64題 → B,C"
     },
     {
       "id": 14384,
@@ -89903,9 +89969,11 @@
         "C": "治療師左手抓病人的左手腕關節，治療師右手抓病人的右手腕關節",
         "D": "治療師左手抓病人的左手肘關節，治療師右手抓病人的右手肘關節"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第50題 → A,D"
     },
     {
       "id": 14130,
@@ -91485,9 +91553,11 @@
         "C": "掌長肌（palmaris longus）與橈側伸腕短肌（extensor carpi radialis brevis）",
         "D": "掌長肌（palmaris longus）與尺側伸腕肌（extensor carpi ulnaris）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第45題 → 送分"
     },
     {
       "id": 13965,
@@ -92822,9 +92892,11 @@
         "C": "60",
         "D": "90"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第28題 → B,C"
     },
     {
       "id": 14028,
@@ -93411,9 +93483,11 @@
         "C": "好發於慢性腎衰竭的病人",
         "D": "藥物治療常需半年以上才易有療效"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第56題 → A,B"
     },
     {
       "id": 14056,
@@ -96571,9 +96645,11 @@
         "C": "如果沒有明顯骨折，治療方法是使用副木將遠端手指關節保持在正中或是稍微彎曲，固定 6～8 週",
         "D": "在停止副木使用後，4 週內不要嘗試被動彎曲手指來重新得到關節活動度"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第46題 → C,D"
     },
     {
       "id": 14286,
@@ -97079,9 +97155,11 @@
         "C": "內側蹠神經（medial plantar nerve）的感覺異常出現在整個腳掌（plantar side）",
         "D": "蹠趾關節炎的疼痛通常會出現在蹠骨頭或蹠趾關節（metatarsophalangeal joint）處"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第70題 → A,C"
     },
     {
       "id": 14310,
@@ -97101,9 +97179,11 @@
         "C": "股四頭肌腱炎",
         "D": "阿基里斯肌腱炎"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第71題 → 送分"
     },
     {
       "id": 14311,
@@ -97837,9 +97917,11 @@
         "C": "PaO2 小於或等於55 mmHg，血氧飽和度小於88%",
         "D": "PaO2 小於或等於55 mmHg，血氧飽和度小於55%"
       },
-      "answer": "C",
+      "answer": "A,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第26題 → A,C,D"
     },
     {
       "id": 13386,
@@ -97901,9 +97983,11 @@
         "C": "僅①③",
         "D": "僅①②④"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第29題 → 送分"
     },
     {
       "id": 13389,
@@ -101928,9 +102012,11 @@
         "C": "臀大肌",
         "D": "閉孔內肌（obturator internus）"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第60題 → A,B"
     },
     {
       "id": 13020,
@@ -102667,9 +102753,11 @@
         "C": "將負刑法洩漏業務秘密罪",
         "D": "將負民法侵害隱私權罪"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第15題 → C,D"
     },
     {
       "id": 13055,
@@ -103886,9 +103974,11 @@
         "C": "系列個案研究（case series）",
         "D": "系統性文獻回顧（systematic review）"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第73題 → A,D"
     },
     {
       "id": 13113,
@@ -106392,9 +106482,11 @@
         "C": "胸小肌（pectoralis minor）",
         "D": "肩胛下肌（subscapularis）"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第32題 → B,D"
     },
     {
       "id": 13312,
@@ -107863,9 +107955,11 @@
         "C": "動脈狹窄（aortic stenosis）",
         "D": "休息收縮血壓大於 200 mmHg"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第22題 → B,C"
     },
     {
       "id": 13862,
@@ -111398,9 +111492,11 @@
         "C": "終板電位（endplate potentials）－鈉離子傳導度增加",
         "D": "慢速興奮性突觸後電位（slow IPSPs）－鉀離子傳導度增加"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第30題 → C,D"
     },
     {
       "id": 13470,
@@ -112641,9 +112737,11 @@
         "C": "全民健保局開放社區物理治療所的設置，使物理治療師由單一固守醫療機構等候病患，至進入社區直接嘉惠病患",
         "D": "物理治療學會協助推動「921重建區傷殘者復健醫療照護計畫」，聘任物理治療師投入當地衛生所，提供社區定點或巡迴點"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第9題 → B,D"
     },
     {
       "id": 13529,
@@ -112936,9 +113034,11 @@
         "C": "執業報償",
         "D": "支持研究活動"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第23題 → 送分"
     },
     {
       "id": 13543,
@@ -113021,9 +113121,11 @@
         "C": "180公分",
         "D": "200公分"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第27題 → B"
     },
     {
       "id": 13547,
@@ -113232,9 +113334,11 @@
         "C": "將物理治療師證照租借他人使用",
         "D": "物理治療師受停業處分者，仍執行業務者"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第37題 → 送分"
     },
     {
       "id": 13557,
@@ -113695,9 +113799,11 @@
         "C": "迷走神經",
         "D": "下喉神經"
       },
-      "answer": "A",
+      "answer": "A,B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第59題 → A,B,C"
     },
     {
       "id": 13579,
@@ -114605,9 +114711,11 @@
         "C": "可傳導溫度及疼痛等感覺",
         "D": "較無法辨識感覺的位置"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第22題 → A,B"
     },
     {
       "id": 13702,
@@ -115089,9 +115197,11 @@
         "C": "雙側周邊前庭病變",
         "D": "中樞性前庭病變"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第45題 → A,B"
     },
     {
       "id": 13725,
@@ -116521,9 +116631,11 @@
         "C": "肩盂唇曲柄測試（labral crank test）",
         "D": "喀拉聲測試（clunk test）"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第33題 → B,C"
     },
     {
       "id": 13793,
@@ -117071,9 +117183,11 @@
         "C": "膝內翻（genu varum）或脛骨內扭（medial tibial torsion）",
         "D": "膝內翻（genu varum）或脛骨外扭（lateral tibial torsion）"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第59題 → A,B"
     },
     {
       "id": 13819,
@@ -119940,8 +120054,11 @@
         "C": "僅①④⑤",
         "D": "僅③④⑤"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第40題 → A,D"
     },
     {
       "id": 5721,
@@ -123586,8 +123703,11 @@
         "C": "前十字韌帶之後外束（posterolateral bundle）",
         "D": "前十字韌帶之後內束（posteromedial bundle）"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第62題 → B,C"
     },
     {
       "id": 5663,
@@ -123726,8 +123846,11 @@
         "C": "後內側shin splints",
         "D": "距骨後突（posterior process of talus）過大造成軟組織夾擠"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第69題 → A,C"
     },
     {
       "id": 5670,
@@ -123967,8 +124090,11 @@
         "C": "第一蹠骨（first metatarsal bone）",
         "D": "骰骨（cuboid bone）"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "D",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第1題 → D"
     },
     {
       "id": 5282,
@@ -124933,8 +125059,11 @@
         "C": "僅肩胛骨上轉",
         "D": "僅肩胛骨下轉"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第49題 → A,C"
     },
     {
       "id": 5330,
@@ -126457,9 +126586,11 @@
         "C": "15",
         "D": "18"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第45題 → 送分"
     },
     {
       "id": 5406,
@@ -127000,8 +127131,11 @@
         "C": "弱證據力",
         "D": "無證據力"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第72題 → C"
     },
     {
       "id": 5433,
@@ -129312,14 +129446,17 @@
         "C": "(圖)",
         "D": "(圖)"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
       "option_images": {
         "A": "/question-images/pt_6186_voptA.webp",
         "B": "/question-images/pt_6186_voptB.webp",
         "C": "/question-images/pt_6186_voptC.webp",
         "D": "/question-images/pt_6186_voptD.webp"
-      }
+      },
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第26題 → 送分"
     },
     {
       "id": 6187,
@@ -129758,8 +129895,11 @@
         "C": "治療師由腋下抱著兒童懸空直立時，快速由上往下朝支撐地面讓兒童的腳放在地面，觀察到他的腳會短暫伸 直承重",
         "D": "治療師將俯臥的兒童，騰空自腹部舉起時，兒童的頭會向上伸直，並會將他的背部凹向上伸直；當將兒童的 頭往下做彎曲動作，兒童的背會屈曲凹向下"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第48題 → A,C"
     },
     {
       "id": 6209,
@@ -129878,8 +130018,11 @@
         "C": "法洛氏四重畸型（Tetralogy of Fallot）",
         "D": "肺動脈狹窄（pulmonary artery stenosis）"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第54題 → C,D"
     },
     {
       "id": 6215,
@@ -131924,8 +132067,11 @@
         "C": "23",
         "D": "13"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第76題 → C,D"
     },
     {
       "id": 6077,
@@ -132724,8 +132870,11 @@
         "C": "尼爾測試（Neer test）",
         "D": "洛克伍德測試（Rockwood test）"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第36題 → A,C"
     },
     {
       "id": 6117,
@@ -132744,8 +132893,11 @@
         "C": "凹槽變形常伴隨出現三角肌（deltoid）平坦的外觀",
         "D": "手臂水平內收時，梯狀變形會加劇"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第37題 → A,B"
     },
     {
       "id": 6118,
@@ -136703,9 +136855,11 @@
         "C": "僅②③⑤",
         "D": "僅②④⑤"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第74題 → 送分"
     },
     {
       "id": 5915,
@@ -140483,8 +140637,11 @@
         "C": "球狀囊",
         "D": "橢圓囊"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第21題 → A,B"
     },
     {
       "id": 6502,
@@ -143427,8 +143584,11 @@
         "C": "三叉神經（trigeminal nerve）",
         "D": "舌下神經（hypoglossal nerve）"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第8題 → A,B"
     },
     {
       "id": 6249,
@@ -147630,11 +147790,14 @@
         "C": "設定右側輪椅腿靠角度為90度（垂直式腿靠）",
         "D": "設定左側輪椅腿靠角度為90度（垂直式腿靠）"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
       "images": [
         "/question-images/pt_6937_0.webp"
-      ]
+      ],
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第57題 → B,C"
     },
     {
       "id": 6938,
@@ -149327,8 +149490,11 @@
         "C": "監測模式（monitoring model）",
         "D": "專業模式（professional model）"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第60題 → A,C"
     },
     {
       "id": 7181,
@@ -149727,8 +149893,11 @@
         "C": "會發現股四頭肌有假性肌肉肥大的現象",
         "D": "站起時，會出現由地上直接跳起來的高爾氏現象（Gower's sign）"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第80題 → B,C"
     },
     {
       "id": 6961,
@@ -150997,9 +151166,11 @@
         "C": "半規管的開口端為橢圓囊，頭部動作引發橢圓囊內碳酸鈣結晶震動而產生感覺訊號",
         "D": "良性偶發性姿勢性眩暈（BPPV）最常發生於水平半規管"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第63題 → 送分"
     },
     {
       "id": 7024,
@@ -151580,8 +151751,11 @@
         "C": "若膝關節無法完全伸直，則股四頭肌群扮演主要的穩定角色",
         "D": "髖關節在放鬆的站姿下，主要由髂股韌帶（iliofemoral ligament）提供穩定度，不需要依賴肌肉出力"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,D",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第12題 → B,D"
     },
     {
       "id": 7053,
@@ -152947,8 +153121,11 @@
         "C": "60 mmHg",
         "D": "80 mmHg"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第80題 → B,C"
     },
     {
       "id": 6721,
@@ -153427,9 +153604,11 @@
         "C": "收縮速度越大，可產生的最大力量越小",
         "D": "收縮速度為0 cm/sec時，可產生的最大力量為0 kg"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第24題 → B,C"
     },
     {
       "id": 6745,
@@ -154472,11 +154651,14 @@
         "C": "1.5",
         "D": "2"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
       "images": [
         "/question-images/pt_6796_0.webp"
-      ]
+      ],
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第76題 → 送分"
     },
     {
       "id": 6797,
@@ -156667,9 +156849,11 @@
         "C": "較容易引發強烈的麻刺與疼痛感",
         "D": "較好的肌肉幫浦（muscle pumping）作用"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第25題 → 送分"
     },
     {
       "id": 7386,
@@ -159934,8 +160118,11 @@
         "C": "泛指大腦白質深部大血管問題引發的中風",
         "D": "會有純粹的運動麻痺"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第27題 → A,C"
     },
     {
       "id": 7468,
@@ -167957,8 +168144,11 @@
         "C": "僅①②③",
         "D": "僅①④"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第25題 → A,D"
     },
     {
       "id": 8106,
@@ -170685,9 +170875,11 @@
         "C": "前斜角肌（anterior scalenus）",
         "D": "頸半棘肌（semispinalis cervicis）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第1題 → 送分"
     },
     {
       "id": 8002,
@@ -178536,9 +178728,11 @@
         "C": "離心收縮動作的肢力不足問題大於向心收縮動作的肢力不足",
         "D": "肢力不足與肌肉長度的改變有關"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第71題 → 送分"
     },
     {
       "id": 8630,
@@ -181167,8 +181361,11 @@
         "C": "前臂旋後（supination）－肱二頭肌",
         "D": "手臂置於體側，作外轉（external rotation）－棘上肌"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "A",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第42題 → A"
     },
     {
       "id": 8521,
@@ -189213,9 +189410,11 @@
         "C": "跗骨間關節（inter-tarsal joint）：移行（translation）或轉動（rotation）",
         "D": "第二指到第四指的腕掌關節（carpometacarpal joint ）：滑行（glide）"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第42題 → 送分"
     },
     {
       "id": 8921,
@@ -191108,9 +191307,11 @@
         "C": "18～26",
         "D": "17～27"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第56題 → C,D"
     },
     {
       "id": 9015,
@@ -191149,9 +191350,11 @@
         "C": "腰大肌",
         "D": "臀大肌"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第58題 → A,D"
     },
     {
       "id": 9017,
@@ -191353,9 +191556,11 @@
         "C": "MRI檢查對於診斷PCL斷裂有非常高的敏感度及專一性",
         "D": "對於第一級不穩定之PCL受傷，物理治療為有效的治療方式"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第68題 → A"
     },
     {
       "id": 9027,
@@ -192758,9 +192963,11 @@
         "C": "早期極少出現反射過度、痙攣等上運動神經元疾病症狀",
         "D": "頸屈肌容易無力，因而會造成頭部呈現後仰姿勢"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第58題 → 送分"
     },
     {
       "id": 8697,
@@ -193221,9 +193428,11 @@
         "C": "右側頸夾肌（splenius cervicis）",
         "D": "右側頭夾肌（splenius capitis）"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第1題 → 送分"
     },
     {
       "id": 8720,
@@ -204371,10 +204580,10 @@
         "C": "關節本體感覺測試達到對側的80%",
         "D": "功能動作測試恢復至與對側相同"
       },
-      "answer": "A,B,C,D",
+      "answer": "送分",
       "explanation": "",
       "original_answer": "A",
-      "correction_note": "第74題更正為 A,B,C,D（原答案 A）",
+      "correction_note": "更正清冊：第74題 → 送分",
       "disputed": true
     },
     {
@@ -278262,9 +278471,11 @@
         "C": "維生素C",
         "D": "維生素D"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第63題 → 送分"
     },
     {
       "id": 382,
@@ -293383,9 +293594,11 @@
         "C": "①③④⑥",
         "D": "①②⑤⑥"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第13題 → 送分"
     },
     {
       "id": 892,
@@ -301661,8 +301874,10 @@
         "C": "採用「是」與「否」的方法詢問個案",
         "D": "採用視、聽、觸覺的輔助"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "A,C",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第21題 → A,C"
     },
     {
       "id": "115090_0_22",
@@ -304292,8 +304507,10 @@
         "C": "7",
         "D": "8"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第76題 → C,D"
     },
     {
       "id": "115090_1_77",
@@ -304787,8 +305004,11 @@
         "C": "顫抖",
         "D": "心率過慢"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第22題 → A,D"
     },
     {
       "id": "115090_2_23",
@@ -306602,8 +306822,10 @@
         "C": "24",
         "D": "48"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第37題 → 送分"
     },
     {
       "id": "115090_3_38",
@@ -306622,8 +306844,10 @@
         "C": "0.75 mg/min",
         "D": "0.75 ml/min"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第38題 → 送分"
     },
     {
       "id": "115090_3_39",
@@ -306718,7 +306942,7 @@
         "C": "屈曲超過90度到完全屈曲（圖二）的過程，肱三頭肌為主動肌（agonist），作正功（positive work）",
         "D": "伸直超過90度到近乎完全伸直（圖三）的過程，肱二頭肌為主動肌（agonist），作負功（negative work）"
       },
-      "answer": "D",
+      "answer": "送分",
       "disputed": true,
       "images": [
         "/question-images/pt_115090_3_43_0.webp",
@@ -306726,7 +306950,9 @@
         "/question-images/pt_115090_3_43_2.webp",
         "/question-images/pt_115090_3_43_3.webp",
         "/question-images/pt_115090_3_43_4.webp"
-      ]
+      ],
+      "original_answer": "D",
+      "correction_note": "更正清冊：第43題 → 送分"
     },
     {
       "id": "115090_3_44",
@@ -306802,8 +307028,10 @@
         "C": "70至85度",
         "D": "85至100度"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第47題 → C,D"
     },
     {
       "id": "115090_3_48",
@@ -308308,8 +308536,10 @@
         "C": "義齒、義眼、助聽器",
         "D": "居家物理治療"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "B,D",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第44題 → B,D"
     },
     {
       "id": "115090_4_45",

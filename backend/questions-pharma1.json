@@ -35798,9 +35798,11 @@
         "C": "5-FU",
         "D": "Cyclophosphamide"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第74題 → A,D"
     },
     {
       "id": 115021705,
@@ -37438,9 +37440,11 @@
         "C": "金印草（golden seal root）—小蘗科",
         "D": "吐根（ipecacuanha）—桔梗科"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第75題 → C,D"
     },
     {
       "id": 115021786,
@@ -39449,9 +39453,11 @@
         "C": "減少preload",
         "D": "減少心跳速率"
       },
-      "answer": "D",
+      "answer": "B,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第15題 → B,C,D"
     },
     {
       "id": 115021886,
@@ -39870,9 +39876,11 @@
         "C": "Codeine",
         "D": "Methadone"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第36題 → C,D"
     },
     {
       "id": 115021907,
@@ -40631,9 +40639,11 @@
         "C": "此兩個氯原子會提高化學安定性",
         "D": "會形成親電子性的carbonium ion"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第73題 → B,D"
     },
     {
       "id": 115021944,
@@ -44191,9 +44201,11 @@
         "C": "可通過血腦障壁用於治療腦癌",
         "D": "是一種antimetabolite的抗癌藥"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第9題 → A,D"
     },
     {
       "id": 115023500,
@@ -46564,9 +46576,11 @@
         "C": "個體發生史（ontogeny）",
         "D": "環境（environment）"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第41題 → 送分"
     },
     {
       "id": 115023612,
@@ -49501,9 +49515,11 @@
         "C": "Nadolol",
         "D": "Verapamil"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第21題 → 送分"
     },
     {
       "id": 115023032,
@@ -49562,12 +49578,14 @@
         "C": "Furosemide",
         "D": "ADH（antidiuretic hormone）antagonist"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
       "images": [
         "/question-images/pharma1_115023034_0.webp"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第24題 → 送分"
     },
     {
       "id": 115023035,
@@ -49946,9 +49964,11 @@
         "C": "1.5",
         "D": "2.0"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第43題 → A,B"
     },
     {
       "id": 115023054,
@@ -52597,9 +52617,11 @@
         "C": "擴散速度較溶液劑大",
         "D": "粒子會沉降"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第14題 → B,D"
     },
     {
       "id": 115023185,
@@ -54097,9 +54119,11 @@
         "C": "可改變細胞膜的通透性",
         "D": "臨床上通常以生理食鹽水配合，進行靜脈注射"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第8題 → A,D"
     },
     {
       "id": 115023259,
@@ -57232,9 +57256,11 @@
         "C": "異醇酏內含之矯味劑為苦杏仁",
         "D": "通常以滲漉法或浸漬法來製備"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第4題 → A,B"
     },
     {
       "id": 115023415,
@@ -58073,9 +58099,11 @@
         "C": "根據分室理論，本藥為二室模式藥品",
         "D": "此例中，口服後所得1.386 h -1 為真正的吸收速率常數"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第46題 → 送分"
     },
     {
       "id": 115023457,
@@ -58299,9 +58327,11 @@
         "C": "膜孔運輸（pore transport）",
         "D": "被動擴散（passive diffusion）"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第57題 → A"
     },
     {
       "id": 115023468,
@@ -58644,9 +58674,11 @@
         "C": "0.556",
         "D": "0.733"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第74題 → 送分"
     },
     {
       "id": 115023485,
@@ -62580,9 +62612,11 @@
         "C": "提高藥物生體可用率",
         "D": "加速藥物排空至小腸"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第25題 → D"
     },
     {
       "id": "106020_s33_26",
@@ -62661,9 +62695,11 @@
         "C": "20",
         "D": "30"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第29題 → D"
     },
     {
       "id": "106020_s33_30",
@@ -62822,9 +62858,11 @@
         "C": "150 °C；60分鐘",
         "D": "300 °C；30分鐘"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第37題 → C"
     },
     {
       "id": "106020_s33_38",
@@ -62883,9 +62921,11 @@
         "C": "isophane insulin",
         "D": "insulin glargine"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第40題 → A,B"
     },
     {
       "id": "106020_s33_41",
@@ -64194,10 +64234,12 @@
         "C": "Procainamide可抑制鈣離子管道",
         "D": "Flecainide可抑制鈣離子管道"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第24題 → C,D"
     },
     {
       "id": 115020622,
@@ -64486,10 +64528,12 @@
         "C": "D1 > α1 > 5-HT2A = D2",
         "D": "D2 = D1 = α1 > 5-HT2A"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第38題 → 送分"
     },
     {
       "id": 115020636,
@@ -65136,9 +65180,11 @@
         "C": "dantrolene",
         "D": "phenytoin"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第67題 → C,D"
     },
     {
       "id": 115020665,
@@ -67823,9 +67869,11 @@
         "C": "600",
         "D": "3,000"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第40題 → 送分"
     },
     {
       "id": "106100_s33_41",
@@ -68004,9 +68052,11 @@
         "C": "0.44",
         "D": "0.55"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第49題 → 送分"
     },
     {
       "id": "106100_s33_50",
@@ -68025,9 +68075,11 @@
         "C": "C·腎排除速率常數為0.16 h⁻¹",
         "D": "腎清除率為1.6 L/h"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第50題 → 送分"
     },
     {
       "id": "106100_s33_51",
@@ -68581,9 +68633,11 @@
         "C": "0.25",
         "D": "0.05"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第77題 → A,C"
     },
     {
       "id": "106100_s33_78",
@@ -69186,9 +69240,11 @@
         "C": "Methacholine",
         "D": "Demecarium"
       },
-      "answer": "D",
+      "answer": "A,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第26題 → A,C,D"
     },
     {
       "id": 115020703,
@@ -71982,9 +72038,11 @@
         "C": "antihistamines",
         "D": "diuretic drugs"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第1題 → 送分"
     },
     {
       "id": "107020_s33_2",
@@ -72063,9 +72121,11 @@
         "C": "HgCl",
         "D": "HgCl 2"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第5題 → 送分"
     },
     {
       "id": "107020_s33_6",
@@ -73718,9 +73778,11 @@
         "C": "可以和Ticarcillin合併用於治療綠膿桿菌之感染",
         "D": "主要由肝臟代謝使其失去藥效"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第7題 → A,C"
     },
     {
       "id": 115020763,
@@ -73861,9 +73923,11 @@
         "C": "抑制前列腺素的濃度",
         "D": "抑制碘離子的吸收"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第14題 → A,B"
     },
     {
       "id": 115020770,
@@ -75368,9 +75432,11 @@
         "C": "camphor",
         "D": "aspirin"
       },
-      "answer": "D",
+      "answer": "A,B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第5題 → A,B,C"
     },
     {
       "id": "107100_s22_6",
@@ -77127,9 +77193,11 @@
         "C": "3.6×10⁻⁵ cm/s",
         "D": "2.0×10⁻⁷ cm/s"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第12題 → 送分"
     },
     {
       "id": "107100_s33_13",
@@ -79099,10 +79167,12 @@
         "C": "diphenoxylate",
         "D": "octreotide"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第29題 → A,C"
     },
     {
       "id": 115020864,
@@ -81941,9 +82011,11 @@
         "C": "cocoa syrup",
         "D": "raspberry syrup"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第6題 → C,D"
     },
     {
       "id": "108030_s33_7",
@@ -83112,9 +83184,11 @@
         "C": "CYP 3A4－nifedipine增加低血壓危機",
         "D": "CYP 2C9－warfarin增加出血性危機"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第64題 → A,B"
     },
     {
       "id": "108030_s33_65",
@@ -84722,9 +84796,11 @@
         "C": "tamsulosin",
         "D": "terazosin"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第61題 → 送分"
     },
     {
       "id": 115020976,
@@ -86849,9 +86925,11 @@
         "C": "將氫氧化鈣放在比較低溫的環境可以達到提高氫氧化鈣溶解度的目的",
         "D": "在溶解過程中加快攪拌的速度可以提高該物質的溶解度"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第4題 → B,C"
     },
     {
       "id": "108100_s33_5",
@@ -87250,9 +87328,11 @@
         "C": "溶離裝置IV",
         "D": "尚未收載經皮貼片溶離度試驗"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第24題 → 送分"
     },
     {
       "id": "108100_s33_25",
@@ -88456,9 +88536,11 @@
         "C": "metronidazole會產生類似disulfiram所造成的酒精代謝症狀",
         "D": "rifaximin對革蘭氏陰性或陽性菌皆有效"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第4題 → A,B"
     },
     {
       "id": 115020999,
@@ -90279,9 +90361,11 @@
         "C": "aminoglycoside antibiotics",
         "D": "heparin sodium"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第10題 → 送分"
     },
     {
       "id": "109020_s22_11",
@@ -92260,9 +92344,11 @@
         "C": "硬度應大於5公斤",
         "D": "壓錠壓力應大於3,650磅"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第28題 → C,D"
     },
     {
       "id": "109020_s33_29",
@@ -92894,9 +92980,11 @@
         "C": "①②③",
         "D": "①②④"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第59題 → 送分"
     },
     {
       "id": "109020_s33_60",
@@ -93754,10 +93842,12 @@
         "C": "ivabradine可減慢心跳，可能對心律快速之急性心臟衰竭病患有利",
         "D": "hydralazine可減少後負荷（afterload），對治療有缺血性心臟病之急性心衰竭病患有利"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第20題 → 送分"
     },
     {
       "id": 115021095,
@@ -95509,9 +95599,11 @@
         "C": "糊漿法",
         "D": "薄膜法"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第22題 → A,C"
     },
     {
       "id": "109100_s22_23",
@@ -95797,11 +95889,13 @@
         "C": "2.5",
         "D": "5"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
       "image_url": "/question-images/pharma1_109100_p1_45_0.webp",
       "disputed": true,
-      "no_image_in_source": true
+      "no_image_in_source": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第36題 → 送分"
     },
     {
       "id": "109100_s22_37",
@@ -96713,9 +96807,11 @@
         "C": "177,836",
         "D": "425,019"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第1題 → 送分"
     },
     {
       "id": "109100_s33_2",
@@ -98193,9 +98289,11 @@
         "C": "①③④",
         "D": "②③④"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第74題 → 送分"
     },
     {
       "id": "109100_s33_75",
@@ -99325,7 +99423,7 @@
       "answer": "A",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第52題一律給分（原答案 A）"
+      "correction_note": "⚠未獲更正卷佐證：第52題一律給分（原答案 A）"
     },
     {
       "id": "110020_53",
@@ -100294,14 +100392,16 @@
         "C": "可檢測白喉疫苗中的鈣含量",
         "D": "可檢測血液檢品中的鋰濃度"
       },
-      "answer": "D",
+      "answer": "送分",
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第21題 → 送分"
     },
     {
       "id": "110020_1_22",
@@ -102443,14 +102543,16 @@
         "C": "62",
         "D": "53"
       },
-      "answer": "D",
+      "answer": "送分",
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第52題 → 送分"
     },
     {
       "id": "110020_2_53",
@@ -108638,7 +108740,7 @@
       "answer": "D",
       "disputed": true,
       "original_answer": "D",
-      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第38題更正為 B,C（原答案 D）",
+      "correction_note": "⚠未獲更正卷佐證：第38題更正為 B,C（原答案 D）",
       "isMultiAnswer": true
     },
     {
@@ -111798,11 +111900,14 @@
         "C": "47",
         "D": "55"
       },
-      "answer": "C",
+      "answer": "B,C",
       "valid_answers": [
         "B",
         "C"
-      ]
+      ],
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第38題 → B,C"
     },
     {
       "id": "111020_2_39",
@@ -112106,14 +112211,17 @@
         "C": "8 隻，體溫分別上升0.6℃、0.6℃、0.4℃、0.4℃、0.2℃、0.2℃、0.2℃、0.2℃",
         "D": "8 隻，體溫分別上升0.6℃、0.6℃、0.4℃、0.4℃、0.4℃、0.4℃、0.2℃、0.2℃"
       },
-      "answer": "A",
+      "answer": "送分",
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
       ],
-      "explanation": ""
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第54題 → 送分"
     },
     {
       "id": "111020_2_55",
@@ -114881,12 +114989,14 @@
         "C": "靜相被覆愈薄且均勻",
         "D": "流速愈慢"
       },
-      "answer": "D",
+      "answer": "A,D",
       "valid_answers": [
         "A",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第35題 → A,D"
     },
     {
       "id": "111100_1_36",
@@ -116650,12 +116760,14 @@
         "C": "可利用形成樹脂–藥物複合物特性以達到extended-release的效果",
         "D": "為延長控釋效果,可在交換樹脂藥物複合物外加上適當包衣"
       },
-      "answer": "D",
+      "answer": "C,D",
       "valid_answers": [
         "C",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第47題 → C,D"
     },
     {
       "id": "111100_2_48",
@@ -117062,11 +117174,13 @@
         "C": "僅23",
         "D": "123"
       },
-      "answer": "C",
+      "answer": "B",
       "valid_answers": [
         "B"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第68題 → B"
     },
     {
       "id": "111100_2_69",
@@ -117775,7 +117889,7 @@
       "answer": "A",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第25題更正為 A,D（原答案 A）",
+      "correction_note": "⚠未獲更正卷佐證：第25題更正為 A,D（原答案 A）",
       "isMultiAnswer": true
     },
     {
@@ -118026,7 +118140,7 @@
       "answer": "C",
       "disputed": true,
       "original_answer": "C",
-      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第38題更正為 A,C（原答案 C）",
+      "correction_note": "⚠未獲更正卷佐證：第38題更正為 A,C（原答案 C）",
       "isMultiAnswer": true
     },
     {
@@ -120943,12 +121057,14 @@
         "C": "正常的膠囊殼含6~10%的水分",
         "D": "一般膠囊殼呈透明狀,通常係因其殼內含明膠、水、蔗糖、及甘油所致"
       },
-      "answer": "A",
+      "answer": "A,D",
       "valid_answers": [
         "A",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第25題 → A,D"
     },
     {
       "id": "112020_2_26",
@@ -121195,12 +121311,14 @@
         "C": "在靜脈注射液中只要有微量存在即可引起發燒,甚至死亡",
         "D": "熱原是無機的,無法將它們氧化成容易排除的氣體,進而除掉"
       },
-      "answer": "A",
+      "answer": "A,C",
       "valid_answers": [
         "A",
         "C"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第38題 → A,C"
     },
     {
       "id": "112020_2_39",
@@ -124323,14 +124441,16 @@
         "C": "使用溶劑量較少",
         "D": "適用於微量檢品"
       },
-      "answer": "D",
+      "answer": "送分",
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第37題 → 送分"
     },
     {
       "id": "112100_1_38",
@@ -125704,12 +125824,14 @@
         "C": "chewable tablets",
         "D": "molded tablets"
       },
-      "answer": "B",
+      "answer": "B,C",
       "valid_answers": [
         "B",
         "C"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第29題 → B,C"
     },
     {
       "id": "112100_2_30",
@@ -127299,7 +127421,7 @@
       "answer": "B",
       "disputed": true,
       "original_answer": "B",
-      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第32題更正為 A,D（原答案 B）",
+      "correction_note": "⚠未獲更正卷佐證：第32題更正為 A,D（原答案 B）",
       "isMultiAnswer": true
     },
     {
@@ -129307,12 +129429,14 @@
         "C": "methoxsalen-flavonolignan",
         "D": "podophyllotoxin-lignan"
       },
-      "answer": "C",
+      "answer": "B,C",
       "valid_answers": [
         "B",
         "C"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第54題 → B,C"
     },
     {
       "id": "113020_1_55",
@@ -130426,12 +130550,14 @@
         "C": "網架提升高度為5.3~5.7公分",
         "D": "篩網應浸在液面下2.5公分"
       },
-      "answer": "A",
+      "answer": "A,D",
       "valid_answers": [
         "A",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第32題 → A,D"
     },
     {
       "id": "113020_2_33",
@@ -131696,7 +131822,7 @@
       "answer": "A",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第17題更正為 A,B（原答案 A）",
+      "correction_note": "⚠未獲更正卷佐證：第17題更正為 A,B（原答案 A）",
       "isMultiAnswer": true
     },
     {
@@ -132848,7 +132974,7 @@
       "answer": "A",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第75題更正為 A,D（原答案 A）",
+      "correction_note": "⚠未獲更正卷佐證：第75題更正為 A,D（原答案 A）",
       "isMultiAnswer": true,
       "option_images": {
         "A": "/question-images/pharma1_113090_75_voptA.webp",
@@ -134484,8 +134610,10 @@
         "C": "具有紓解腸道痙攣功效",
         "D": "苦味成分為matrine"
       },
-      "answer": "D",
-      "disputed": true
+      "answer": "A,D",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第79題 → A,D"
     },
     {
       "id": "113090_1_80",
@@ -134830,8 +134958,10 @@
         "C": "裝置 V",
         "D": "裝置 VI"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第17題 → A,B"
     },
     {
       "id": "113090_2_18",
@@ -135939,8 +136069,10 @@
         "C": "年齡",
         "D": "人種"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "A,D",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第75題 → A,D"
     },
     {
       "id": "113090_2_76",
@@ -150501,8 +150633,10 @@
         "C": "dasatinib",
         "D": "cetuximab"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第17題 → 送分"
     },
     {
       "id": "115090_0_18",
@@ -150920,8 +151054,10 @@
         "C": "砷中毒可用unithiol及dimercaprol治療",
         "D": "高血壓是無機砷中毒的症狀之一"
       },
-      "answer": "D",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第39題 → 送分"
     },
     {
       "id": "115090_0_40",
@@ -151437,8 +151573,10 @@
         "C": "amiodarone",
         "D": "testosterone"
       },
-      "answer": "D",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第68題 → 送分"
     },
     {
       "id": "115090_0_69",
@@ -152174,8 +152312,10 @@
         "C": "B值與eddy diffusion有關",
         "D": "C值與分子在液相中擴散速率有關"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "A,D",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第29題 → A,D"
     },
     {
       "id": "115090_1_30",
@@ -152251,8 +152391,10 @@
         "C": "形狀選擇性α 越大，極性檢品之滯留時間越長T/O",
         "D": "氫鍵結力α 越大，極性檢品之滯留時間越長C/P"
       },
-      "answer": "D",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第33題 → 送分"
     },
     {
       "id": "115090_1_34",
@@ -153657,8 +153799,10 @@
         "C": "水和性基劑",
         "D": "水溶性基劑"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "B,C",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第27題 → B,C"
     },
     {
       "id": "115090_2_28",
@@ -154386,8 +154530,10 @@
         "C": "AUC比值及C比值皆為1.2 max",
         "D": "AUC比值及清除率比值皆為1.1"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第65題 → 送分"
     },
     {
       "id": "115090_2_66",

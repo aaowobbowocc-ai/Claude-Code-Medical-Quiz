@@ -30082,9 +30082,11 @@
         "C": "當腫瘤直徑大於 100 nm 以上即會出現缺氧區",
         "D": "血癌細胞也會缺氧"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第31題 → B,D"
     },
     {
       "id": 115397,
@@ -30852,9 +30854,11 @@
         "C": "5",
         "D": "7"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第69題 → B,C"
     },
     {
       "id": 115435,
@@ -33603,9 +33607,11 @@
         "C": "切面選擇梯度是和 RF 一起開啟",
         "D": "訊號會隨 T 2 * 衰減"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第43題 → 送分"
     },
     {
       "id": 115249,
@@ -34359,9 +34365,11 @@
         "C": "比例計數器",
         "D": "液態閃爍偵檢器"
       },
-      "answer": "D",
+      "answer": "A,B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第80題 → A,B,C"
     },
     {
       "id": 115446,
@@ -35780,9 +35788,11 @@
         "C": "89 Sr",
         "D": "90 Y"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第71題 → 送分"
     },
     {
       "id": 115517,
@@ -36061,9 +36071,11 @@
         "C": "第 7 週",
         "D": "第 9 週"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第5題 → 送分"
     },
     {
       "id": 115051,
@@ -38465,10 +38477,12 @@
         "C": "0.15 cm -1",
         "D": "0.10 cm -1"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_101100_c308_s22.pdf"
+      "answer_source": "vision-recheck-v2:S_101100_c308_s22.pdf",
+      "original_answer": "B",
+      "correction_note": "更正清冊：第44題 → B,C"
     },
     {
       "id": 115170,
@@ -39127,9 +39141,11 @@
         "C": "正子放射斷層掃描儀",
         "D": "迴旋加速器"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第77題 → A,C"
     },
     {
       "id": 115203,
@@ -49583,9 +49599,11 @@
         "C": "gonads>thyroid>lung",
         "D": "thyroid>lung>gonads"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第34題 → 送分"
     },
     {
       "id": 116360,
@@ -50436,9 +50454,11 @@
         "C": "1",
         "D": "2"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第76題 → 送分"
     },
     {
       "id": 116402,
@@ -50691,9 +50711,11 @@
         "C": "可採用立姿側面攝影，雙手掛重物，並且自然下垂",
         "D": "中心線宜設為 60 ～ 72 英吋"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第8題 → B,D"
     },
     {
       "id": 116254,
@@ -55103,10 +55125,12 @@
         "C": "90 Y-DTPA",
         "D": "188 Re(Sn)-HEDP"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_102100_c308_s66.pdf"
+      "answer_source": "vision-recheck-v2:S_102100_c308_s66.pdf",
+      "original_answer": "D",
+      "correction_note": "更正清冊：第66題 → C,D"
     },
     {
       "id": 116472,
@@ -56065,9 +56089,11 @@
         "C": "黃體生成激素（ luteinizing hormone ）",
         "D": "催產素（ oxytocin ）"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第34題 → B,C"
     },
     {
       "id": 116040,
@@ -57046,9 +57072,11 @@
         "C": "6.66 × 10 3",
         "D": "3.53 × 10 4"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第3題 → 送分"
     },
     {
       "id": 116089,
@@ -57510,9 +57538,11 @@
         "C": "60 Co",
         "D": "131 I"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第26題 → 送分"
     },
     {
       "id": 116112,
@@ -57571,9 +57601,11 @@
         "C": "減少 2 倍",
         "D": "減少 4 倍"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第29題 → A,C"
     },
     {
       "id": 116115,
@@ -58597,10 +58629,12 @@
         "C": "8 mGy",
         "D": "已經超過法規限值"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
       "case_context": "第 79 題：設在一年內，一名工作人員受到沉積在肺中的 α 粒子授予的體內吸收劑量 8 mGy ，甲狀腺中的 β 粒 子所致劑量 180 mGy 以及體外全身均勻 γ 曝露 14 mGy ，則此工作人員的有效劑量為多少 mSv ？ （組織加權因數分別為肺： 0.12 ，甲狀腺： 0.05 ，紅骨髓： 0.12 ）",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第80題 → 送分"
     },
     {
       "id": 116806,
@@ -63226,9 +63260,11 @@
         "C": "中子",
         "D": "重荷電粒子"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第66題 → B,D"
     },
     {
       "id": 116712,
@@ -67358,9 +67394,11 @@
         "C": "2",
         "D": "5"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第31題 → 送分"
     },
     {
       "id": 116597,
@@ -69680,9 +69718,11 @@
         "C": "6",
         "D": "8"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第66題 → 送分"
     },
     {
       "id": 117352,
@@ -72202,9 +72242,11 @@
         "C": "1",
         "D": "5"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第29題 → 送分"
     },
     {
       "id": 117155,
@@ -73280,9 +73322,11 @@
         "C": "配位數 （coordination number）",
         "D": "製備時要加熱"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第2題 → 送分"
     },
     {
       "id": 117368,
@@ -74211,9 +74255,11 @@
         "C": "抗原濃度為0時之結合計數",
         "D": "抗體濃度為0時之結合計數"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第48題 → C"
     },
     {
       "id": 117414,
@@ -77077,10 +77123,12 @@
         "C": "高解析度準直儀會使幾何效率（geometry efficiency）下降",
         "D": "高敏感度準直儀會使偵檢器的計數率（counting rate）下降"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_103090_c308_s22.pdf"
+      "answer_source": "vision-recheck-v2:S_103090_c308_s22.pdf",
+      "original_answer": "D",
+      "correction_note": "更正清冊：第31題 → B,D"
     },
     {
       "id": 117077,
@@ -82057,9 +82105,11 @@
         "C": "10,000",
         "D": "25,000"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第36題 → 送分"
     },
     {
       "id": 117642,
@@ -86744,10 +86794,12 @@
         "C": "0.31",
         "D": "0.17"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_104020_c308_s22.pdf"
+      "answer_source": "vision-recheck-v2:S_104020_c308_s22.pdf",
+      "original_answer": "C",
+      "correction_note": "更正清冊：第29題 → B,C"
     },
     {
       "id": 117555,
@@ -88969,9 +89021,11 @@
         "C": "病人躺於固定器位置的誤差",
         "D": "病人於治療時因不舒服導致的身體移動"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第57題 → 送分"
     },
     {
       "id": 119420,
@@ -89604,9 +89658,11 @@
         "C": "mastoid",
         "D": "nasal bone"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第7題 → B,C"
     },
     {
       "id": 119290,
@@ -90329,9 +90385,11 @@
         "C": "±15",
         "D": "±20"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第41題 → 送分"
     },
     {
       "id": 119324,
@@ -91371,12 +91429,14 @@
         "C": "A為Se；B為screen film；C為CsI(Tl)",
         "D": "A為Se；B為CsI(Tl)；C為screen film"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "",
       "images": [
         "/question-images/radiology_119211_0.webp"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第9題 → C"
     },
     {
       "id": 119212,
@@ -96946,9 +97006,11 @@
         "C": "10",
         "D": "100"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第32題 → 送分"
     },
     {
       "id": 119155,
@@ -97393,9 +97455,11 @@
         "C": "4，1.73",
         "D": "4，2"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第53題 → 送分"
     },
     {
       "id": 119176,
@@ -103748,9 +103812,11 @@
         "C": "pin-hole collimator",
         "D": "medium-energy collimator"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第32題 → B,D"
     },
     {
       "id": 118515,
@@ -110459,9 +110525,11 @@
         "C": "postpatient collimator",
         "D": "gantry angle"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第29題 → B"
     },
     {
       "id": 118832,
@@ -111806,9 +111874,11 @@
         "C": "Silver",
         "D": "Gold"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第11題 → A,D"
     },
     {
       "id": 118734,
@@ -112235,9 +112305,11 @@
         "C": "造成訊號中心頻率下降",
         "D": "造成訊號中心頻率上升與下降皆有可能"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第31題 → B,C"
     },
     {
       "id": 118754,
@@ -112788,9 +112860,11 @@
         "C": "直線加速器 (Linear Accelerator)",
         "D": "磁振造影儀 (MRI Scanner)"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第57題 → B,C"
     },
     {
       "id": 118780,
@@ -114775,9 +114849,11 @@
         "C": "制動輻射",
         "D": "光電效應"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第71題 → A,D"
     },
     {
       "id": 119034,
@@ -118035,9 +118111,11 @@
         "C": "僅③④",
         "D": "①②③④"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第65題 → 送分"
     },
     {
       "id": 118708,
@@ -125806,9 +125884,11 @@
         "C": "皆為負壓",
         "D": "皆為正壓"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第48題 → 送分"
     },
     {
       "id": 5238,
@@ -129334,9 +129414,11 @@
         "C": "①②③",
         "D": "僅①②"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第63題 → B,C"
     },
     {
       "id": 6049,
@@ -131475,9 +131557,11 @@
         "C": "時間減贅（temporal subtraction）：比較不同時間的影像變化，以兩個相連時段的影像相減",
         "D": "混合減贅（hybrid subtraction）：結合時間減贅及能量減贅兩種模式"
       },
-      "answer": "B",
+      "answer": "A,B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第7題 → A,B,C"
     },
     {
       "id": 5835,
@@ -131636,9 +131720,11 @@
         "C": "perfusion",
         "D": "mammography"
       },
-      "answer": "A",
+      "answer": "A,B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第15題 → A,B,C"
     },
     {
       "id": 5843,
@@ -133738,9 +133824,11 @@
         "C": "20分鐘",
         "D": "33分鐘"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第39題 → 送分"
     },
     {
       "id": 6105,
@@ -139159,9 +139247,11 @@
         "C": "為確定效應",
         "D": "因劑量高低而有嚴重程度的差別，所以稱作機率效應"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第68題 → A,B"
     },
     {
       "id": 6529,
@@ -143567,9 +143657,11 @@
         "C": "99m Tc 5+ -DMSA",
         "D": "123 I-MIBG"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第45題 → C,D"
     },
     {
       "id": 6586,
@@ -145897,9 +145989,11 @@
         "C": "131 I、 131 Xe是同重素（isobar）",
         "D": "130 I、 131 I是同質異構物（isomer）"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第1題 → A,D"
     },
     {
       "id": 6227,
@@ -148381,9 +148475,11 @@
         "C": "口腔癌",
         "D": "乳癌"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第44題 → 送分"
     },
     {
       "id": 6983,
@@ -149134,9 +149230,11 @@
         "C": "病患仰臥時無法進行攝影",
         "D": "以肩部上5公分以內作為IP板上界為佳"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第1題 → B,D"
     },
     {
       "id": 6862,
@@ -153824,9 +153922,11 @@
         "C": "99m Tc-DMSA 腎掃描（4靜態影像），matrix size 256×256",
         "D": "心搏出分率檢查（multigate study﹐16 frame/cycle），matrix size 64×64"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第72題 → 送分"
     },
     {
       "id": 7090,
@@ -156008,9 +156108,11 @@
         "C": "2",
         "D": "10"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第21題 → C,D"
     },
     {
       "id": 6722,
@@ -165944,9 +166046,11 @@
         "C": "①③⑤⑥",
         "D": "②③④⑥"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第32題 → 送分"
     },
     {
       "id": 7210,
@@ -167748,9 +167852,11 @@
         "C": "876",
         "D": "1000"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第42題 → 送分"
     },
     {
       "id": 7935,
@@ -169182,9 +169288,11 @@
         "C": "筆型游離腔",
         "D": "化學劑量計"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第33題 → A,C"
     },
     {
       "id": 7847,
@@ -172364,9 +172472,11 @@
         "C": "18 F-FDG PET可以取代前哨淋巴結定位法",
         "D": "甲基藍染色劑也可用來定位前哨淋巴結"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第30題 → B,C"
     },
     {
       "id": 8003,
@@ -173607,9 +173717,11 @@
         "C": "出現於第一腕掌關節",
         "D": "僅做單軸活動"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第11題 → B,D"
     },
     {
       "id": 7588,
@@ -178417,9 +178529,11 @@
         "C": "降低輻射劑量",
         "D": "操作方便性，避免直接碰觸"
       },
-      "answer": "A",
+      "answer": "A,B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第10題 → A,B,C"
     },
     {
       "id": 8302,
@@ -178988,9 +179102,11 @@
         "C": "雙能CT掃描在劑量和掃描時間，大約都是常規掃描的兩倍以上",
         "D": "雙能CT或能譜CT主要都是利用相同的物質在不同能量，具有不同衰減係數的原理"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第38題 → B,C"
     },
     {
       "id": 8329,
@@ -179029,12 +179145,14 @@
         "C": "shaded volume display（SVD）",
         "D": "volume rendering（VR）"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
       "images": [
         "/question-images/radiology_8330_0.webp"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第40題 → B,D"
     },
     {
       "id": 8331,
@@ -194026,9 +194144,11 @@
         "C": "擾流（turbulent flow）",
         "D": "牛頓流（Newtonian flow）"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第60題 → A,B"
     },
     {
       "id": 8588,
@@ -198149,9 +198269,11 @@
         "C": "platelet level",
         "D": "alpha-fetoprotein level"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第25題 → B,C"
     },
     {
       "id": 1626,
@@ -198519,12 +198641,14 @@
         "C": "膽汁外漏",
         "D": "胃液外漏"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
       "images": [
         "/question-images/radiology_1643_0.webp"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第43題 → 送分"
     },
     {
       "id": 1644,
@@ -199594,9 +199718,11 @@
         "C": "因而形成足跟效應（heel effect）",
         "D": "一個旋轉陽極X光管之靶極最多只能有一個斜角"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第15題 → A,D"
     },
     {
       "id": 1536,
@@ -201139,9 +201265,11 @@
         "C": "18 F-FDOPA",
         "D": "99m Tc-ECD"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第11題 → 送分"
     },
     {
       "id": 1772,
@@ -207032,9 +207160,11 @@
         "C": "材料可為聚苯乙烯",
         "D": "材料可為合成樹脂"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第64題 → 送分"
     },
     {
       "id": 2225,
@@ -209133,9 +209263,11 @@
         "C": "512000",
         "D": "524288"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第7題 → C,D"
     },
     {
       "id": 2008,
@@ -213025,9 +213157,11 @@
         "C": "魯斐尼氏小體（Ruffini corpuscle）",
         "D": "神經末梢傷害感受器 （Nociceptors）"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第38題 → A,D"
     },
     {
       "id": 1879,
@@ -224214,8 +224348,11 @@
         "C": "0.625",
         "D": "0.8"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第32題 → 送分"
     },
     {
       "id": 2433,
@@ -230105,9 +230242,11 @@
         "C": "82 Rb＞ 15 O＞ 11 C＞ 68 Ga＞ 18 Ｆ",
         "D": "15 O＞ 82 Rb＞ 11 C＞ 18 Ｆ＞ 68 G"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第2題 → 送分"
     },
     {
       "id": 3192,
@@ -241830,9 +241969,11 @@
         "C": "由卵（oocyte）旁邊的顆粒細胞（granulosa cell）分泌的雌激素（estrogen）幫助女性生殖器官的發育",
         "D": "由黃體（corpus luteum）分泌的黃體激素（progesterone）能幫助維持子宮內膜的厚度，幫助著床"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第22題 → 送分"
     },
     {
       "id": 3292,
@@ -245127,9 +245268,11 @@
         "C": "12 MeV",
         "D": "15 MeV"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第26題 → B,C"
     },
     {
       "id": 4096,
@@ -246448,9 +246591,11 @@
         "C": "僅①③",
         "D": "①②③"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第11題 → 送分"
     },
     {
       "id": 4001,
@@ -248086,9 +248231,11 @@
         "C": "①④",
         "D": "②③"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第11題 → 送分"
     },
     {
       "id": 3921,
@@ -250404,9 +250551,11 @@
         "C": "2～3天",
         "D": "7～10天"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第45題 → B,C"
     },
     {
       "id": 4195,
@@ -253646,9 +253795,11 @@
         "C": "腎臟",
         "D": "膀胱"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第46題 → B,D"
     },
     {
       "id": 3876,
@@ -255977,9 +256128,11 @@
         "C": "jugular notch",
         "D": "diaphragm"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第2題 → 送分"
     },
     {
       "id": 4472,
@@ -264846,9 +264999,11 @@
         "C": "32 P",
         "D": "60 Co"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第40題 → A,D"
     },
     {
       "id": 5070,
@@ -265968,9 +266123,11 @@
         "C": "duodenum",
         "D": "spleen"
       },
-      "answer": "A",
+      "answer": "A,B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第16題 → A,B,C"
     },
     {
       "id": 4966,
@@ -268678,12 +268835,14 @@
         "C": "III",
         "D": "IV"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
       "images": [
         "/question-images/radiology_4938_0.webp"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第69題 → 送分"
     },
     {
       "id": 4939,
@@ -273687,9 +273846,11 @@
         "C": "①②④",
         "D": "①③④"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第77題 → 送分"
     },
     {
       "id": 4867,
@@ -274331,9 +274492,11 @@
         "C": "腮腺（parotid gland）的接受30 Gy劑量的體積建議小於50%",
         "D": "脊髓（spinal cord）最大接受劑量點低於50 Gy"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第29題 → A,D"
     },
     {
       "id": 350,
@@ -276078,9 +276241,11 @@
         "C": "④③①②",
         "D": "④①③②"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第36題 → B,C"
     },
     {
       "id": 277,
@@ -284290,9 +284455,11 @@
         "C": "所需射源活性（activity required）較小",
         "D": "所需屏蔽厚度較厚"
       },
-      "answer": "D",
+      "answer": "A,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第43題 → A,C,D"
     },
     {
       "id": 1244,
@@ -284577,9 +284744,11 @@
         "C": "和全乳房照射相比，ACPI的毒性一般較少",
         "D": "不建議用於病理型態為浸液性小葉（invasive lobular histology）的病患"
       },
-      "answer": "A",
+      "answer": "A,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第57題 → A,C,D"
     },
     {
       "id": 1258,
@@ -287672,9 +287841,11 @@
         "C": "為修正游離腔的極性效應（polarity effect），應分別使用正電壓及負電壓量測，再將讀值分別取絕對值 後相加除二",
         "D": "游離腔使用前應送國家實驗室進行校正"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第48題 → A,D"
     },
     {
       "id": 1089,
@@ -290378,9 +290549,11 @@
         "C": "促泌尿激素（antidiuretic hormone）分泌過少時，會造成尿崩症（diabetes insipidus）",
         "D": "促濾泡激素（follicle-stimulating hormone）分泌過多時，會阻礙性成熟"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第21題 → C,D"
     },
     {
       "id": "114090_s0104_22",
@@ -291842,9 +292015,11 @@
         "C": "β > 1",
         "D": "不一定"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第14題 → B,C"
     },
     {
       "id": 975,
@@ -291963,9 +292138,11 @@
         "C": "11.5",
         "D": "13.5"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第20題 → A,B"
     },
     {
       "id": 981,
@@ -292064,9 +292241,11 @@
         "C": "CT-SIM",
         "D": "診斷CT、PET/CT、CT-SIM三者一致"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第25題 → 送分"
     },
     {
       "id": 986,
@@ -295790,9 +295969,11 @@
         "C": "拉摩頻率（Larmor frequency）與旋進（precession）的快慢有關",
         "D": "原子核的能階數取決於於自身的自旋量子數（spin quantum number）的大小"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第48題 → A,B"
     },
     {
       "id": 769,
@@ -298751,9 +298932,11 @@
         "C": "若要給予人工合成甲促素（Thyrogen ® ），要以靜脈注射給藥",
         "D": "人工合成甲促素（Thyrogen ® ）可刺激外生性甲狀腺素的產生"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第31題 → C,D"
     },
     {
       "id": 912,
@@ -299202,9 +299385,11 @@
         "C": "111 In-Octreotide造影",
         "D": "131 I-NP59造影"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第52題 → C"
     },
     {
       "id": 933,
@@ -301813,9 +301998,11 @@
         "C": "增感屏－底片系統中不須使用 AEC",
         "D": "AEC 通常放置於影像接受器之後"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第22題 → B,D"
     },
     {
       "id": 583,
@@ -302006,9 +302193,11 @@
         "C": "彗尾假影（comet tail）",
         "D": "焦點增強（focal enhancement）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第31題 → 送分"
     },
     {
       "id": 592,
@@ -302587,9 +302776,11 @@
         "C": "12.9",
         "D": "0.08"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第60題 → 送分"
     },
     {
       "id": 621,
@@ -303122,8 +303313,10 @@
         "C": "腹內斜肌（internal oblique）",
         "D": "腹橫肌（transversus abdominis）"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第7題 → 送分"
     },
     {
       "id": "115090_0_8",
@@ -303275,8 +303468,10 @@
         "C": "靜脈（vein）",
         "D": "小動脈（arteriole）"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "B,D",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第15題 → B,D"
     },
     {
       "id": "115090_0_16",
@@ -304264,8 +304459,10 @@
         "C": "MLH1",
         "D": "TP53"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第67題 → 送分"
     },
     {
       "id": "115090_0_68",
@@ -306267,8 +306464,10 @@
         "C": "15 mT/s，15 ms，10 ms",
         "D": "20 mT/s，5 ms，10 ms"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第12題 → 送分"
     },
     {
       "id": "115090_2_13",
@@ -307429,8 +307628,10 @@
         "C": "ionization chamber",
         "D": "gamma counter"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "A,B,D",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第72題 → A,B,D"
     },
     {
       "id": "115090_2_73",
@@ -307498,8 +307699,10 @@
         "C": "medium energy（ME）",
         "D": "low energy high sensitivity（LEHS）"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第75題 → A,B"
     },
     {
       "id": "115090_2_76",
@@ -311722,8 +311925,11 @@
         "C": "200",
         "D": "900"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第50題 → B,C"
     },
     {
       "id": "115090_5_51",

@@ -9259,7 +9259,10 @@
         "C": "戒斷症狀包括無力、嗜睡",
         "D": "對於中毒病人,重要治療包括支持療法及給與足夠鎮定劑"
       },
-      "answer": "C"
+      "answer": "送分",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第77題 → 送分"
     },
     {
       "id": "111020_1_78",
@@ -46749,8 +46752,11 @@
         "C": "恐慌症（panic disorder）女性罹病率高於男性",
         "D": "強迫症（obsessive-compulsive disorder）女性罹病率高於男性"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第65題 → 送分"
     },
     {
       "id": 115020846,
@@ -48415,8 +48421,11 @@
         "C": "與WT2基因表現有關",
         "D": "最常轉移到肺臟及肝臟"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第67題 → 送分"
     },
     {
       "id": 115020928,
@@ -63793,9 +63802,11 @@
         "C": "除了使用內視鏡來做靜脈結紮術（variceal ligation）外，藥物治療並無法有效的預防胃食道靜脈曲張出 血",
         "D": "就算發生胃食道靜脈曲張出血，只要還沒有黃疸，沒有腹水，沒有肝性腦病變，就還不算是肝失代償 （decompensation）"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第22題 → 送分"
     },
     {
       "id": 115021682,
@@ -64598,9 +64609,11 @@
         "C": "美國疾病管制局（US Centers for Disease Control and Prevention）2015年的性病治療指引對於早期梅 毒（early syphilis）治療，針對penicillin過敏，但沒有神經病徵者，建議使用doxycycline 100 mg， 每日兩次，服用14天",
         "D": "此病人梅毒治療後的療效評估，是在治療後6個月與12個月追蹤TPPA檢測，確認抗體效價下降至少4倍或以 上"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第62題 → B,D"
     },
     {
       "id": 115021722,
@@ -64922,9 +64935,11 @@
         "C": "sulfonylureas（例如glipizide）",
         "D": "α-glucosidase inhibitors（例如acarbose）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第78題 → 送分"
     },
     {
       "id": 115021738,
@@ -65183,9 +65198,11 @@
         "C": "肥胖（obesity）",
         "D": "全靜脈營養（total parenteral nutrition）"
       },
-      "answer": "C",
+      "answer": "B,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第11題 → B,C,D"
     },
     {
       "id": 115021751,
@@ -65304,9 +65321,11 @@
         "C": "最常見的JIA類型是少關節炎型（oligoarthritis）",
         "D": "疾病開始的6週內少於或等於5個關節發炎，屬於少關節炎型（oligoarthritis）"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第17題 → C,D"
     },
     {
       "id": 115021757,
@@ -65325,9 +65344,11 @@
         "C": "10歲以下兒童的骨腫瘤，伊文氏肉瘤（Ewing sarcoma）的發生率較骨肉瘤高",
         "D": "長骨幹骺處（metaphyses of long bone）是伊文氏肉瘤（Ewing sarcoma）的好發位置"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第18題 → C,D"
     },
     {
       "id": 115021758,
@@ -65506,9 +65527,11 @@
         "C": "抗生素（antibiotics）",
         "D": "類固醇（steroid）"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第27題 → B,D"
     },
     {
       "id": 115021767,
@@ -65607,8 +65630,11 @@
         "C": "心搏過速是休克的早期表現",
         "D": "過敏性反應造成阻塞性休克（obstructive shock）"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第32題 → A,C"
     },
     {
       "id": 115021772,
@@ -66738,9 +66764,11 @@
         "C": "錳（Mn）",
         "D": "維生素（vitamins）"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第7題 → B,C"
     },
     {
       "id": 115021827,
@@ -67633,9 +67661,11 @@
         "C": "enema",
         "D": "magnesium citrate solution"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第51題 → B,D"
     },
     {
       "id": 115021871,
@@ -67734,9 +67764,11 @@
         "C": "乳癌常產生蝕骨性病灶（osteolytic lesions）",
         "D": "攝護腺癌常產生成骨性轉移病灶（osteoblastic lesions）"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第56題 → C,D"
     },
     {
       "id": 115021876,
@@ -70469,9 +70501,11 @@
         "C": "將幽門螺旋桿菌殺菌清除後，一定會增加胃食道逆流疾病之機會",
         "D": "胃潰瘍患者之幽門螺旋桿菌之罹患率低於十二指腸潰瘍患者"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第29題 → B,D"
     },
     {
       "id": 115022009,
@@ -70590,9 +70624,11 @@
         "C": "此CCP之形成，是由精氨酸（arginine）經由PAD酶轉換成瓜氨酸（citrulline）",
         "D": "使用anti-TNFα治療RA，anti-CCP抗體不會下降"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第35題 → B,D"
     },
     {
       "id": 115022015,
@@ -70611,9 +70647,11 @@
         "C": "①②③⑤",
         "D": "①②⑥⑦"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第36題 → 送分"
     },
     {
       "id": 115022016,
@@ -71032,9 +71070,11 @@
         "C": "linezolid-皮疹",
         "D": "vancomycin-紅人症候群（red man syndrome）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第58題 → 送分"
     },
     {
       "id": 115022037,
@@ -71155,9 +71195,11 @@
         "C": "肺癌併發厭食",
         "D": "肺癌併發抗利尿激素分泌不當"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第64題 → B,D"
     },
     {
       "id": 115022043,
@@ -71682,9 +71724,11 @@
         "C": "吸入型類固醇（inhaled corticosteroid）",
         "D": "吸入型類固醇倂用口服白三烯素受體結抗劑（inhaled corticosteroid + oral leukotriene receptor antagonist）"
       },
-      "answer": "A",
+      "answer": "A,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第10題 → A,C,D"
     },
     {
       "id": 115022069,
@@ -71932,9 +71976,11 @@
         "C": "normal anion gap metabolic acidosis with respiratory compensation",
         "D": "normal anion gap metabolic acidosis with respiratory alkalosis"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第22題 → A,B"
     },
     {
       "id": 115022081,
@@ -71973,9 +72019,11 @@
         "C": "1歲6個月",
         "D": "9個月"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第24題 → A,C"
     },
     {
       "id": 115022083,
@@ -72463,9 +72511,11 @@
         "C": "先給預防性降血壓藥，並安排加護中心病床",
         "D": "若上述檢查皆正常，儘早給予血栓溶解劑 rt-PA"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第48題 → C,D"
     },
     {
       "id": 115022107,
@@ -72544,9 +72594,11 @@
         "C": "在病人的角膜常出現具有診斷價值的凱斯-佛來斯環（Kayser-Fleischer ring）",
         "D": "所有病人都是先以神經學的功能異常先出現，之後才出現肝功能的異常"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第52題 → 送分"
     },
     {
       "id": 115022111,
@@ -73055,13 +73107,15 @@
         "C": "皮膚病灶稱為焦痂（Eschar），是大多數病患者皆會出現的特徵",
         "D": "是經由恙蟲媒介"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115022135_0.webp"
       ],
       "image_dependent": true,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第77題 → 送分"
     },
     {
       "id": 115022136,
@@ -73325,9 +73379,11 @@
         "C": "L3 －quadriceps muscle",
         "D": "S1 －gastronemius muscle"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第10題 → 送分"
     },
     {
       "id": 115022149,
@@ -73369,9 +73425,11 @@
         "C": "使用的藥物是methylprednisolone",
         "D": "此高劑量的皮質類固醇有相當大的副作用"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第12題 → 送分"
     },
     {
       "id": 115022151,
@@ -73894,9 +73952,11 @@
         "C": "儘可能以手術切除metastatic islet cell carcinoma（cytoreduction surgery）後，肝臟轉移的部分可以肝動脈栓塞來治療",
         "D": "轉移到骨骼的metastatic islet cell carcinoma還是可以考慮以手術切除之"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第38題 → 送分"
     },
     {
       "id": 115022177,
@@ -74035,9 +74095,11 @@
         "C": "測量血液中CEA、CA 15-3 濃度以排除乳癌可能性",
         "D": "應儘快安排手術切除"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第45題 → C,D"
     },
     {
       "id": 115022184,
@@ -74501,8 +74563,11 @@
         "C": "逼尿肌尿道外括約肌共濟失調（detrusor- external sphincter dyssynergia）",
         "D": "低順應性（low compliance）"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第68題 → 送分"
     },
     {
       "id": 115022207,
@@ -75629,9 +75694,11 @@
         "C": "子宮頸錐狀切除",
         "D": "子宮切除"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第43題 → B,C"
     },
     {
       "id": 115022262,
@@ -76139,9 +76206,11 @@
         "C": "中樞痛在病發後一年內發生的比率非常高",
         "D": "大部分中樞痛病人之溫覺（temperature perception）不受影響"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第68題 → A,C"
     },
     {
       "id": 115022287,
@@ -76966,9 +77035,11 @@
         "C": "B細胞胃淋巴癌（B cell gastric lymphoma）",
         "D": "十二指腸潰瘍（duodenal ulcer）"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第28題 → 送分"
     },
     {
       "id": 115022327,
@@ -77087,9 +77158,11 @@
         "C": "一般人口中，20%之HLA-B27陽性者，可出現僵直性脊椎炎",
         "D": "HLA-B27在北美之印第安人（Indians）其盛行率，遠高於臺灣原住民"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第35題 → C,D"
     },
     {
       "id": 115022333,
@@ -77237,9 +77310,11 @@
         "C": "必要時可以監測Factor Xa activity看LMWH的藥量是否恰當",
         "D": "LMWH主要由腎臟代謝排出"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第42題 → A,B"
     },
     {
       "id": 115022340,
@@ -77678,9 +77753,11 @@
         "C": "小心置放氣管內管以保護氣道",
         "D": "反覆施行去顫術（defibrillation）以矯正心室顫動"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第64題 → C"
     },
     {
       "id": 115022362,
@@ -77801,9 +77878,11 @@
         "C": "①③④⑤⑥",
         "D": "①②⑤⑧"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第70題 → 送分"
     },
     {
       "id": 115022368,
@@ -77928,9 +78007,11 @@
         "C": "懷孕",
         "D": "糖尿病"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第76題 → 送分"
     },
     {
       "id": 115022374,
@@ -79764,9 +79845,11 @@
         "C": "medulloblastoma是孩童primary brain tumor最常見的種類",
         "D": "medulloblastoma可能隨著CSF轉移至中樞神經系統的其他位置"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第6題 → B,C"
     },
     {
       "id": 115022463,
@@ -79845,13 +79928,15 @@
         "C": "①③⑤",
         "D": "①④⑤"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115022466_0.webp"
       ],
       "image_dependent": true,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第10題 → 送分"
     },
     {
       "id": 115022467,
@@ -79870,9 +79955,11 @@
         "C": "靠肌肉之血管（myocutaneous perforators）",
         "D": "只靠真皮之微血管（subdermal plexus）"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第11題 → A,C"
     },
     {
       "id": 115022468,
@@ -80316,8 +80403,11 @@
         "C": "對於occult breast cancer之病人為相當有用的檢查",
         "D": "對於高風險 ( high risk ) 病人可作為篩檢 ( screening ) 檢查"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第33題 → 送分"
     },
     {
       "id": 115022490,
@@ -80556,9 +80646,11 @@
         "C": "假如懷疑是心內膜炎（endocarditis），至少要給予抗生素四到六週",
         "D": "若是嚴重的敗血症或是免疫抑制（immunosuppression）的病人，抗生素藥效須涵蓋gram-positive cocci和 fungus"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第45題 → B,D"
     },
     {
       "id": 115022502,
@@ -80828,9 +80920,11 @@
         "C": "對於較複雜的骨折，除了使用X光檢查之外，可輔以三度空間重建的電腦斷層掃描（computerized tomography with three-dimensional reconstruction）協助判讀骨折型態",
         "D": "對健康情況不良的老年人而言，若對於肘關節的功能需求不高時，則不論其遠端肱骨骨折的型態為何，皆可 考慮保守治療"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第57題 → B,D"
     },
     {
       "id": 115022514,
@@ -80889,9 +80983,11 @@
         "C": "脊椎體塌陷大於50%為不穩定骨折",
         "D": "與脊椎的壓迫性骨折（compression fracture）相比，較少發生神經損傷"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第60題 → B,C"
     },
     {
       "id": 115022517,
@@ -81110,9 +81206,11 @@
         "C": "HCG + recombinant FSH注射治療",
         "D": "testosterone補充療法"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第71題 → C,D"
     },
     {
       "id": 115022528,
@@ -83919,9 +84017,11 @@
         "C": "不會呈現陽性之支氣管激發試驗（bronchial provocation test）",
         "D": "經支氣管擴張試驗（bronchodilator test）後之「一秒量（FEV 1 ）」小於0.7"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第50題 → C,D"
     },
     {
       "id": 115022666,
@@ -84926,9 +85026,11 @@
         "C": "抗利尿激素不適當分泌症候群（syndrome of inappropriate antidiuretic hormone secretion）",
         "D": "腎病症候群（nephrotic syndrome）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第21題 → 送分"
     },
     {
       "id": 115022716,
@@ -85127,9 +85229,11 @@
         "C": "心肌炎（myocarditis）",
         "D": "心內膜炎（endocarditis）"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第31題 → 送分"
     },
     {
       "id": 115022726,
@@ -85990,9 +86094,11 @@
         "C": "與物質濫用有關者，只在物質戒斷（substance withdrawal）時才會發生",
         "D": "通常都緩慢發生，不容易注意到"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第73題 → A,B"
     },
     {
       "id": 115022768,
@@ -86114,9 +86220,11 @@
         "C": "抽血驗染色體後才能放棄急救",
         "D": "立即轉送加護病房使用呼吸器"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第80題 → A,B"
     },
     {
       "id": 115022774,
@@ -86892,9 +87000,11 @@
         "C": "低血糖症狀、血糖低於50 mg/dL及靜脈注射葡萄糖後可改善症狀",
         "D": "低血糖症狀、血糖低於50 mg/dL及有使用胰島素注射史"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第38題 → B,C"
     },
     {
       "id": 115022812,
@@ -87416,9 +87526,11 @@
         "C": "負荷重量的長骨之X光片影像中，皆可常見Looser氏轉型區（Looser's transformation zone）的變化",
         "D": "確切的診斷依據皆是骨活體組織切片"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第63題 → A,B"
     },
     {
       "id": 115022837,
@@ -87457,9 +87569,11 @@
         "C": "格里森分數（Gleason score）高於7分者較易發生癌症進展",
         "D": "腫瘤侵犯至貯精囊時屬T3a期"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第65題 → B,D"
     },
     {
       "id": 115022839,
@@ -88678,9 +88792,11 @@
         "C": "70歲以上，骨質流失速率女性比男性快",
         "D": "抗地心引力之運動，可以增加骨質密度"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第45題 → A,C"
     },
     {
       "id": 115022899,
@@ -89653,9 +89769,11 @@
         "C": "肥胖",
         "D": "糖尿病"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第13題 → 送分"
     },
     {
       "id": 115022946,
@@ -89838,9 +89956,11 @@
         "C": "Gilbert's Syndrome",
         "D": "Rotor Syndrome"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第22題 → 送分"
     },
     {
       "id": 115022955,
@@ -91774,9 +91894,11 @@
         "C": "二期梅毒皮疹典型發生在chancre出現的3~12週後，但在HIV病患出現的時間可能與chancre有所重疊",
         "D": "血液專一性treponemal test是監測梅毒治療效果的最佳指標"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第39題 → B,C"
     },
     {
       "id": 115023051,
@@ -91968,9 +92090,11 @@
         "C": "惡性腫瘤",
         "D": "服用口服避孕藥"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第48題 → A,B"
     },
     {
       "id": 115023060,
@@ -92735,9 +92859,11 @@
         "C": "太晚減壓，死亡率可能高達七成",
         "D": "腹腔壓力的表現可由下腔靜脈壓力來表示最為準確"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第7題 → A,D"
     },
     {
       "id": 115023098,
@@ -92856,9 +92982,11 @@
         "C": "4,050",
         "D": "4,550"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第13題 → 送分"
     },
     {
       "id": 115023104,
@@ -93281,9 +93409,11 @@
         "C": "迴腸（ileum）",
         "D": "結腸（colon）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第34題 → 送分"
     },
     {
       "id": 115023125,
@@ -93422,9 +93552,11 @@
         "C": "手術與否端視病人是否有症狀，無症狀者不必手術",
         "D": "如果進行手術是做囊腫切除與Roux-en-Y肝管空腸吻合"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第42題 → C,D"
     },
     {
       "id": 115023132,
@@ -93736,9 +93868,11 @@
         "C": "彎曲牽開性骨折（flexion-distraction fracture）",
         "D": "骨折脫位（fracture dislocation）"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第57題 → A,C"
     },
     {
       "id": 115023147,
@@ -93925,9 +94059,11 @@
         "C": "不需要接受任何膀胱內化學藥物或 BCG 灌注輔助治療",
         "D": "需要接受放射輔助治療"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第66題 → B,C"
     },
     {
       "id": 115023156,
@@ -94233,9 +94369,11 @@
         "C": "僅①④",
         "D": "僅②③④"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第1題 → 送分"
     },
     {
       "id": 115023171,
@@ -95382,9 +95520,11 @@
         "C": "上肢創傷性截肢的位置大多集中在手腕以下，以手指頭截肢（digital amputation）為大多數",
         "D": "不論是上肢或下肢的截肢，腫瘤（tumor）是在兒童族群最常見的原因"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第58題 → B,D"
     },
     {
       "id": 115023226,
@@ -95543,9 +95683,11 @@
         "C": "多產婦（multiparous mothers）",
         "D": "高出生體重（大於4,500公克）"
       },
-      "answer": "A",
+      "answer": "A,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第66題 → A,C,D"
     },
     {
       "id": 115023234,
@@ -95800,9 +95942,11 @@
         "C": "如使用電擊器去顫（Defibrillation），位置與劑量和一般成人急救是一樣的",
         "D": "緊急剖腹產，對於22週的胎兒有存活的機會，同時也可以提升母親救活的機會"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第78題 → A,B"
     },
     {
       "id": 115023246,
@@ -96513,9 +96657,11 @@
         "C": "應立即用高劑量類固醇治療",
         "D": "加上新型抗凝血藥物（new oral anticoagulants, NOAC）"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第33題 → 送分"
     },
     {
       "id": 115023281,
@@ -97978,9 +98124,11 @@
         "C": "肺功能檢查常見到阻塞性的異常",
         "D": "美觀為手術的考量主因之一"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第25題 → B,C"
     },
     {
       "id": 115023353,
@@ -98453,9 +98601,11 @@
         "C": "顱內囊狀（saccular type）動脈瘤",
         "D": "顱內梭狀（fusiform type）動脈瘤"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第47題 → A,C"
     },
     {
       "id": 115023375,
@@ -99554,9 +99704,11 @@
         "C": "高血脂",
         "D": "糖尿病"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第22題 → 送分"
     },
     {
       "id": 115023430,
@@ -101774,9 +101926,11 @@
         "C": "正常懷孕從受孕到產後的這段期間，側躺休息時的心輸出量最大的時期在妊娠週數第28至32週間",
         "D": "一般妊娠20週後，孕婦側躺時，心輸出量及心臟打出的容積量（stroke volume）比坐著時高，但每分鐘心 跳數則比坐著時低。此外，懷孕時左側躺的收縮壓、舒張壓均較仰臥時低"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第53題 → 送分"
     },
     {
       "id": 115023540,
@@ -103872,9 +104026,11 @@
         "C": "腹瀉",
         "D": "失眠"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第77題 → C,D"
     },
     {
       "id": 115023643,
@@ -105433,13 +105589,15 @@
         "C": "胎便吸入（meconium aspiration）",
         "D": "右肋膜積液"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "images": [
         "/question-images/doctor2_115023719_0.webp"
       ],
-      "image_dependent": true
+      "image_dependent": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第74題 → 送分"
     },
     {
       "id": 115023720,
@@ -105721,9 +105879,11 @@
         "C": "步態不穩",
         "D": "半身無力"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第9題 → A,C"
     },
     {
       "id": 115023734,
@@ -107267,9 +107427,11 @@
         "C": "propofol",
         "D": "midazolam"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第4題 → B,C"
     },
     {
       "id": 115023809,
@@ -107636,9 +107798,11 @@
         "C": "septodermoplasty",
         "D": "vascular embolization"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第22題 → 送分"
     },
     {
       "id": 115023827,
@@ -109171,9 +109335,11 @@
         "C": "若需使用nucleoside analogue或nucleotide analogue治療，建議使用到HBsAg seroconversion後3個月，或是 HBeAg seroconversion後6個月",
         "D": "約99%病患不會成為慢性帶原"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第17題 → B,D"
     },
     {
       "id": 115023902,
@@ -111038,9 +111204,11 @@
         "C": "此類缺損不屬於感染性心內膜炎（Infective endocarditis）之高風險族群",
         "D": "若因過多左向右分流而造成明顯的肺高壓，即使臨床症狀可用藥物控制，仍建議盡早接受手術修補"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第28題 → B,C"
     },
     {
       "id": 115023993,
@@ -111877,9 +112045,11 @@
         "C": "症狀必須造成明顯的社交、學業或工作功能的損害",
         "D": "必須和廣泛性發展障礙（pervasive developmental disorder）、思覺失調症（schizophrenia）、其他精神病 態、情緒疾患、焦慮症、解離症、人格疾患作區辨"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第69題 → A,B"
     },
     {
       "id": 115024034,
@@ -112371,9 +112541,11 @@
         "C": "氫氟酸（hydrofluoric acid）灼傷應立即以2.5%葡萄糖酸鈣凝膠（calcium gluconate gel）局部患處治療",
         "D": "水泥灼傷是酸性化學灼傷"
       },
-      "answer": "D",
+      "answer": "A,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第13題 → A,C,D"
     },
     {
       "id": 115024058,
@@ -115209,13 +115381,15 @@
         "C": "bone metastasis",
         "D": "primary osteoblastic bone tumor"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "images": [
         "/question-images/doctor2_115024196_0.webp"
       ],
-      "image_dependent": true
+      "image_dependent": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第73題 → 送分"
     },
     {
       "id": 115024197,
@@ -115438,9 +115612,11 @@
         "C": "2.25",
         "D": "1.12"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第4題 → 送分"
     },
     {
       "id": 115024208,
@@ -115519,9 +115695,11 @@
         "C": "6",
         "D": "7"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第8題 → B,C"
     },
     {
       "id": 115024212,
@@ -115707,9 +115885,11 @@
         "C": "糖尿病患發生Klebsiella pneumoniae肝膿瘍時，可能併發endophthalmitis",
         "D": "目前之標準處理方式為膿瘍引流（drainage）加上抗生素注射治療"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第17題 → 送分"
     },
     {
       "id": 115024221,
@@ -117024,13 +117204,15 @@
         "C": "Roseola infantum",
         "D": "Erythema multiforme"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
       "disputed": true,
       "images": [
         "/question-images/doctor2_115024285_0.webp"
       ],
-      "image_dependent": true
+      "image_dependent": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第2題 → B,D"
     },
     {
       "id": 115024286,
@@ -117249,9 +117431,11 @@
         "C": "泡泡浴（Bubble bath）",
         "D": "膀胱輸尿管逆流（Vesicoureteral reflux）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第13題 → 送分"
     },
     {
       "id": 115024297,
@@ -117270,9 +117454,11 @@
         "C": "血清滲透壓（Serum osmolality）﹤280 mOsm/kg 合併血鈉值（serum sodium）﹤135 mEq/L",
         "D": "限水治療後無法改變低血鈉的情形"
       },
-      "answer": "D",
+      "answer": "B,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第14題 → B,C,D"
     },
     {
       "id": 115024298,
@@ -118064,9 +118250,11 @@
         "C": "胸椎第十節（T10）",
         "D": "馬尾（cauda equina）"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第53題 → 送分"
     },
     {
       "id": 115024337,
@@ -118752,9 +118940,11 @@
         "C": "胰臟癌",
         "D": "大腸癌"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第7題 → 送分"
     },
     {
       "id": 115024371,
@@ -119501,13 +119691,15 @@
         "C": "該患兒之疾病以Gross type C最常見",
         "D": "若沒有其他更緊急的狀況，患兒應儘速接受手術治療"
       },
-      "answer": "A",
+      "answer": "D",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115024407_0.webp"
       ],
       "image_dependent": true,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第44題 → D"
     },
     {
       "id": 115024408,
@@ -122609,10 +122801,12 @@
         "C": "1/10 病人會發生蜘蛛網膜下出血（Subarachnoid hemorrhage）",
         "D": "囊腫可見於其他器官，如肝、脾、胰等"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_101030_c102_s0103.pdf"
+      "answer_source": "vision-recheck-v2:S_101030_c102_s0103.pdf",
+      "original_answer": "A",
+      "correction_note": "更正清冊：第21題 → A,C"
     },
     {
       "id": 115024561,
@@ -122631,9 +122825,11 @@
         "C": "病人出現低鈉血症，是由於體液過多所致",
         "D": "病人的尿液鈉濃度通常大於10 mmol/L，且滲透壓大於100 mOsm/kgH2O"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第22題 → C,D"
     },
     {
       "id": 115024562,
@@ -123572,9 +123768,11 @@
         "C": "以病人為中心的診治模式",
         "D": "以家庭為中心的診治模式"
       },
-      "answer": "B",
+      "answer": "A,B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第69題 → A,B,C"
     },
     {
       "id": 115024609,
@@ -124338,10 +124536,12 @@
         "C": "急性白血病（acute leukemia）",
         "D": "神經母細胞瘤（neuroblastoma）"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_101030_c102_s0104.pdf"
+      "answer_source": "vision-recheck-v2:S_101030_c102_s0104.pdf",
+      "original_answer": "D",
+      "correction_note": "更正清冊：第27題 → B,D"
     },
     {
       "id": 115024647,
@@ -124901,9 +125101,11 @@
         "C": "Myotonia congenita",
         "D": "Episodic ataxia"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第54題 → A,D"
     },
     {
       "id": 115024672,
@@ -124962,9 +125164,11 @@
         "C": "sumatriptan",
         "D": "ergotamine"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第57題 → A,D"
     },
     {
       "id": 115024675,
@@ -125303,9 +125507,11 @@
         "C": "約一半的人到青春期或成人仍有症狀",
         "D": "第一線藥物治療為中樞神經刺激劑（stimulant），其主要副作用為食慾降低及失眠"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第74題 → 送分"
     },
     {
       "id": 115024692,
@@ -126461,13 +126667,15 @@
         "C": "幽門保留胰十二指腸切除術（pylorus-preserving pancreaticoduodenectomy）",
         "D": "十二指腸胰頭切除術（duodenum-preserving proximal pancreatectomy）"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
       "images": [
         "/question-images/doctor2_115024748_0.webp"
       ],
       "image_dependent": true,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第52題 → C,D"
     },
     {
       "id": 115024749,
@@ -127540,10 +127748,12 @@
         "C": "須給Antibiotics 藥物",
         "D": "須給Anti-viral 及Antibiotics 治療"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_101030_c102_s0106.pdf"
+      "answer_source": "vision-recheck-v2:S_101030_c102_s0106.pdf",
+      "original_answer": "A",
+      "correction_note": "更正清冊：第23題 → A,B"
     },
     {
       "id": 115024800,
@@ -128433,9 +128643,11 @@
         "C": "30 個月大時開始可以雙腳併立跳躍（jumping）",
         "D": "4 歲大時開始可以騎三輪車（pedals tricycle）"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第67題 → C,D"
     },
     {
       "id": 115024844,
@@ -137383,9 +137595,11 @@
         "C": "血友病（hemophilia）",
         "D": "von Willebrand 病"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第20題 → A,B"
     },
     {
       "id": 115025276,
@@ -137484,9 +137698,11 @@
         "C": "臺灣漢人患者的突變種類變異性比原住民大",
         "D": "臺灣原住民表兄妹結婚相當普遍"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第25題 → B,D"
     },
     {
       "id": 115025281,
@@ -139633,9 +139849,11 @@
         "C": "切除病灶腸段，做腸造口",
         "D": "切除病灶腸段並吻合"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第50題 → A,D"
     },
     {
       "id": 115025384,
@@ -140233,9 +140451,11 @@
         "C": "因黃先生並未以書面文件明確陳述，故不須理會他先前的心願",
         "D": "因不確認黃先生目前之真正意願，故應積極搶救、等黃先生活下來再說"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第79題 → B,D"
     },
     {
       "id": 115025413,
@@ -140618,9 +140838,11 @@
         "C": "沖洗液內溶物毒性",
         "D": "失血過多"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第18題 → C,D"
     },
     {
       "id": 115025432,
@@ -141281,11 +141503,13 @@
         "C": "透納氏症的胎兒常合併有先天性心臟病，尤其是主動脈狹窄",
         "D": "鑲嵌型的透納氏症胎兒若為45,X/46,XX 則可以存活，若為45,X/46,XY 則不能存活"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
       "case_context": "第 49 題：劉太太今年38 歲，丈夫劉先生今年52 歲，接受人工生殖進行試管嬰兒而順利懷孕。劉太太擔心自己是高齡產婦，關於她此次懷孕的敘述，下列何者錯誤？",
       "grouped": true,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第51題 → B,D"
     },
     {
       "id": 115025465,
@@ -143538,9 +143762,11 @@
         "C": "若有sharp objects in the esophagus, disc button batteries 或異物合併呼吸道症狀者，應立即取出",
         "D": "即使病人無臨床症狀，blunt objects and coins lodged in the esophagus 也必須儘早取出，以避免食道破裂"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第12題 → 送分"
     },
     {
       "id": 115025574,
@@ -145133,9 +145359,11 @@
         "C": "抽菸和肥胖為相對禁忌症",
         "D": "皮瓣血流僅來自單一血管根蒂時，zone IV 的血液循環最差"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第20題 → 送分"
     },
     {
       "id": 115025652,
@@ -145769,9 +145997,11 @@
         "C": "腹部會陰聯合切除術（abdominoperineal resection）是轉移性病況（metastatic disease）時的治療首選",
         "D": "鼠蹊部淋巴腺是可能的轉移位置，且發生此處轉移時，通常患者的預後較為不好"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第52題 → B,C"
     },
     {
       "id": 115025683,
@@ -147834,9 +148064,11 @@
         "C": "目前心臟復健計畫的使用率仍偏低",
         "D": "可以改善短期及長期的死亡率"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第78題 → A,B"
     },
     {
       "id": 115025784,
@@ -161737,9 +161969,11 @@
         "C": "fibroblast",
         "D": "adipose cell"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第44題 → 送分"
     },
     {
       "id": 115026446,
@@ -161798,9 +162032,11 @@
         "C": "有機磷中毒（organophosphate intoxication）",
         "D": "吸入性傷害（inhalation injury）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第47題 → 送分"
     },
     {
       "id": 115026449,
@@ -162270,9 +162506,11 @@
         "C": "是否可以「發ㄅㄚ、ㄇㄚ音」",
         "D": "是否可以「扶走」"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第69題 → 送分"
     },
     {
       "id": 115026471,
@@ -163836,9 +164074,11 @@
         "C": "使用精神科藥物治療功能性腸胃道疾患時，須監測其藥物副作用",
         "D": "許多心理治療模式對於這些患者的治療具有療效，例如長期之精神分析治療"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第64題 → A,D"
     },
     {
       "id": 115026546,
@@ -164306,9 +164546,11 @@
         "C": "六到十八個月",
         "D": "兩歲以上"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第7題 → B,C"
     },
     {
       "id": 115026569,
@@ -165198,9 +165440,11 @@
         "C": "經由淋巴系統轉移",
         "D": "經由血管轉移"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第51題 → C,D"
     },
     {
       "id": 115026613,
@@ -165433,9 +165677,11 @@
         "C": "98%的鈣會被腎臟再吸收，主要是在遠端腎小管",
         "D": "1,25-(OH) 2 vitamin D可增加腸道的鈣結合蛋白（calcium binding protein）來增進鈣質吸 收"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第62題 → B,C"
     },
     {
       "id": 115026624,
@@ -165454,9 +165700,11 @@
         "C": "最常見的原因是創傷性引起",
         "D": "股骨頭內骨髓腔壓力（intraosseous pressure）通常不會升高"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第63題 → 送分"
     },
     {
       "id": 115026625,
@@ -165964,9 +166212,11 @@
         "C": "針對傷性腦組織損傷進行低溫療法，已確認可有效降低死亡率",
         "D": "目前多中心研究顯示，以類固醇治療創傷性腦組織損傷，會增加致病與死亡率"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第8題 → 送分"
     },
     {
       "id": 115026650,
@@ -166500,9 +166750,11 @@
         "C": "pubococcygeus muscle",
         "D": "anal sphincter muscle"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第34題 → C,D"
     },
     {
       "id": 115026676,
@@ -166541,9 +166793,11 @@
         "C": "預防FSH surge是人工生殖技術中很重要的一環",
         "D": "誘導排卵時，GnRH-antagonist可抑制FSH surge"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第36題 → 送分"
     },
     {
       "id": 115026678,
@@ -168319,9 +168573,11 @@
         "C": "分化（differentiation）",
         "D": "計畫凋亡（programmed death）"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第43題 → A,C"
     },
     {
       "id": 115026765,
@@ -168380,9 +168636,11 @@
         "C": "血鈉過低症",
         "D": "血氯過高症"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第46題 → B,C"
     },
     {
       "id": 115026768,
@@ -168461,9 +168719,11 @@
         "C": "腫瘤或淋巴腺壓迫造成聲帶麻痺、聲音沙啞",
         "D": "惡性肋膜積水"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第50題 → A,B"
     },
     {
       "id": 115026772,
@@ -168822,9 +169082,11 @@
         "C": "口服葡萄糖耐性試驗",
         "D": "B型肝炎表面抗原檢查"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第68題 → 送分"
     },
     {
       "id": 115026790,
@@ -169111,9 +169373,11 @@
         "C": "年齡小於5歲",
         "D": "持續嘔吐"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第2題 → A,C"
     },
     {
       "id": 115026804,
@@ -169232,9 +169496,11 @@
         "C": "脂肪，須分解成單一脂肪酸才能吸收",
         "D": "乳糖，分解成半乳糖及葡萄糖，才能吸收"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第8題 → A,C"
     },
     {
       "id": 115026810,
@@ -170735,9 +171001,11 @@
         "C": "帶因者基因檢測應該經雙方家族會議後決定",
         "D": "待子女成年後，由他們自己決定是否接受帶因者基因檢測"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第80題 → A,D"
     },
     {
       "id": 115026882,
@@ -171628,9 +171896,11 @@
         "C": "放射線治療",
         "D": "標靶治療"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第44題 → A,C"
     },
     {
       "id": 115026926,
@@ -171669,9 +171939,11 @@
         "C": "第一顆可能轉移的腋下淋巴結",
         "D": "第二顆可能轉移的腋下淋巴結"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第46題 → A,C"
     },
     {
       "id": 115026928,
@@ -171830,9 +172102,11 @@
         "C": "8小時",
         "D": "12小時"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第54題 → C,D"
     },
     {
       "id": 115026936,
@@ -171851,11 +172125,13 @@
         "C": "12小時",
         "D": "24小時"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
       "case_context": "第 54 題：急診來一名左姆指掌指骨關節metacarpophalangeal joint完全截肢傷，該斷指可承受的warm ischemia time為：",
       "grouped": true,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第55題 → C,D"
     },
     {
       "id": 115026937,
@@ -172939,9 +173215,11 @@
         "C": "trisomy 21",
         "D": "monosomy"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第28題 → C,D"
     },
     {
       "id": 115026990,
@@ -173428,9 +173706,11 @@
         "C": "胎兒出生後會因為媽媽本身胰島素過高（hyperinsulinemia）而造成血糖過低 （hypoglycemia）的情形",
         "D": "小穎下胎發生妊娠糖尿病的機會比起一般孕婦高30～50%"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第52題 → C"
     },
     {
       "id": 115027014,
@@ -173598,9 +173878,11 @@
         "C": "拉赫曼試驗（Lachman’s test）比前拉試驗（anterior drawer test）敏感",
         "D": "對於運動選手，建議在受傷1～2週後才進行重建手術"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第60題 → 送分"
     },
     {
       "id": 115027022,
@@ -174260,9 +174542,11 @@
         "C": "加護病房住院治療",
         "D": "立即施打肺炎疫苗"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第12題 → B,C"
     },
     {
       "id": 115027054,
@@ -174676,9 +174960,11 @@
         "C": "腎小球旁器（juxtaglomerular apparatus）釋出腎素（renin），引發入球小動脈（afferent arteriole）之收縮",
         "D": "抑制腎小管產生腺苷（adenosine），可造成入球小動脈（afferent arteriole）之擴張"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第32題 → C,D"
     },
     {
       "id": 115027074,
@@ -174977,9 +175263,11 @@
         "C": "JNK",
         "D": "HIF-1α"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第47題 → A,B"
     },
     {
       "id": 115027089,
@@ -175604,9 +175892,11 @@
         "C": "Hypokalemia",
         "D": "Hypocalcemia"
       },
-      "answer": "D",
+      "answer": "A,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第78題 → A,C,D"
     },
     {
       "id": 115027120,
@@ -176307,9 +176597,11 @@
         "C": "男嬰有重度脫水現象",
         "D": "男嬰有休克現象"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第32題 → 送分"
     },
     {
       "id": 115027154,
@@ -176328,11 +176620,13 @@
         "C": "前8個小時先給500 mL生理食鹽水，後16小時再給500 mL輸液",
         "D": "前8個小時先給600 mL生理食鹽水，後16小時再給1000 mL輸液"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
       "case_context": "第 32 題：9個月大的男嬰，上週健康檢查時體重10公斤。過去一週他持續有腹瀉的現象。今天尿布只換了2次，晚上父母送來急診就診。 身體檢查發現男嬰體重9.2公斤，男嬰眼窩下凹，哭鬧不安，但是很少眼淚。男嬰血壓82/46 mmHg，心跳每分鐘170下，呼吸 每分鐘21下。男嬰的脫水程度為：",
       "grouped": true,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第33題 → 送分"
     },
     {
       "id": 115027155,
@@ -176700,9 +176994,11 @@
         "C": "絕大部分的失神性癲癇在青少年期開始發作",
         "D": "失神性癲癇發作時常有眨眼、咀嚼或上肢肌張力微增的現象"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第50題 → A,C"
     },
     {
       "id": 115027172,
@@ -176781,9 +177077,11 @@
         "C": "通常同時侵犯肢體之近端及遠端肌肉",
         "D": "肌腱反射常會下降或消失"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第54題 → A,C"
     },
     {
       "id": 115027176,
@@ -176862,9 +177160,11 @@
         "C": "絕大多數是心理因素引起",
         "D": "與免疫功能異常無關"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第58題 → 送分"
     },
     {
       "id": 115027180,
@@ -177673,9 +177973,11 @@
         "C": "五",
         "D": "六"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第18題 → C,D"
     },
     {
       "id": 115027220,
@@ -177914,9 +178216,11 @@
         "C": "成年之後",
         "D": "12～18歲"
       },
-      "answer": "B",
+      "answer": "B,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第30題 → B,C,D"
     },
     {
       "id": 115027232,
@@ -178135,9 +178439,11 @@
         "C": "由下方進入sternocleidomastoid muscle",
         "D": "radical surgery可清除"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第41題 → B,C"
     },
     {
       "id": 115027243,
@@ -178599,9 +178905,11 @@
         "C": "預防結石生長及復發要酸化尿液",
         "D": "沒有已知的結石抑制因子"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第64題 → C,D"
     },
     {
       "id": 115027266,
@@ -178994,9 +179302,11 @@
         "C": "electromyography",
         "D": "wake-up test"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第3題 → 送分"
     },
     {
       "id": 115027285,
@@ -179115,9 +179425,11 @@
         "C": "中央視網膜動脈阻塞（central retinal artery occlusion）",
         "D": "老年性黃斑病變（age-related macular degeneration）"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第9題 → A,D"
     },
     {
       "id": 115027291,
@@ -179416,9 +179728,11 @@
         "C": "甲狀腺掃描是治療前的必要檢查項目",
         "D": "有症狀才需手術切除"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第24題 → 送分"
     },
     {
       "id": 115027306,
@@ -179537,8 +179851,11 @@
         "C": "advanced maternal age",
         "D": "chronic hypertension"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第30題 → B,C"
     },
     {
       "id": 115027312,
@@ -180498,9 +180815,11 @@
         "C": "Etomidate可使用於輕度技術鎮靜和止痛",
         "D": "Propofol可使用於中度技術鎮靜和止痛"
       },
-      "answer": "C",
+      "answer": "A,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第76題 → A,C,D"
     },
     {
       "id": 115027358,
@@ -180696,9 +181015,11 @@
         "C": "橫隔膜雙平",
         "D": "肋膜腔積液"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第7題 → 送分"
     },
     {
       "id": 115027367,
@@ -189543,9 +189864,11 @@
         "C": "教育如何每個月做乳房自我檢查",
         "D": "安排乳房X 光攝影（mammography）"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第68題 → A"
     },
     {
       "id": 115027779,
@@ -190021,9 +190344,11 @@
         "C": "小便培養",
         "D": "紅血球沈澱速率（erythrocyte sedimentation rate）"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第10題 → A,C"
     },
     {
       "id": 115027801,
@@ -190169,9 +190494,11 @@
         "C": "gabapentin",
         "D": "tiagabine"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第17題 → 送分"
     },
     {
       "id": 115027808,
@@ -190238,9 +190565,11 @@
         "C": "血清1,25-dihydroxyvitamin D 濃度正常",
         "D": "治療時需同時給予磷酸鹽及calcitriol"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第20題 → B,C"
     },
     {
       "id": 115027811,
@@ -190910,9 +191239,11 @@
         "C": "服用大量維生素A",
         "D": "惡性貧血"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第50題 → 送分"
     },
     {
       "id": 115027841,
@@ -191373,9 +191704,11 @@
         "C": "重度",
         "D": "無智力障礙"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第72題 → A,D"
     },
     {
       "id": 115027863,
@@ -191416,9 +191749,11 @@
         "C": "靜脈注射鎮靜劑：diazepam",
         "D": "口服乙型腎上腺素受體阻斷劑（β-adrenergic receptor blocker）：propranolol"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第74題 → A"
     },
     {
       "id": 115027865,
@@ -191438,9 +191773,11 @@
         "C": "廣泛性焦慮症（generalized anxiety disorder）患者以女性較多",
         "D": "近期酒精過度飲用及支持系統不佳，均為創傷後壓力症候群的危險因子"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第75題 → 送分"
     },
     {
       "id": 115027866,
@@ -191611,9 +191948,11 @@
         "C": "抑制cytokine 的產生",
         "D": "抑制淋巴球進入移植體"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第3題 → A,C"
     },
     {
       "id": 115027874,
@@ -192265,9 +192604,11 @@
         "C": "刺激迷走神經引起心跳加快",
         "D": "尿量減少"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第34題 → A,C"
     },
     {
       "id": 115027905,
@@ -192476,9 +192817,11 @@
         "C": "放置胃管",
         "D": "動脈及靜脈導管"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第44題 → B,D"
     },
     {
       "id": 115027915,
@@ -193048,9 +193391,11 @@
         "C": "聽覺",
         "D": "味覺"
       },
-      "answer": "B",
+      "answer": "A,B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第71題 → A,B,C"
     },
     {
       "id": 115027942,
@@ -193238,9 +193583,11 @@
         "C": "表示理解楊伯伯，但誠實才是正確之途，指導楊伯伯一些溝通的技巧",
         "D": "同意隱瞞並教導如何與楊太太作應對"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第79題 → B,C"
     },
     {
       "id": 115027950,
@@ -193703,9 +194050,11 @@
         "C": "食道期（esophageal phase）由環咽部的開啟（cricopharyngeal opening）開始",
         "D": "防止氣管吸入的三個括約肌機制包括：會厭（epiglottis）、假聲帶（false cord）、真聲帶（truecord）"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第21題 → A,D"
     },
     {
       "id": 115027972,
@@ -194039,9 +194388,11 @@
         "C": "經陰道縫合瘻管",
         "D": "先給予類固醇及抗生素"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第36題 → 送分"
     },
     {
       "id": 115027987,
@@ -201691,9 +202042,11 @@
         "C": "為第 IIIa 期",
         "D": "為第 IIb 期"
       },
-      "answer": "C",
+      "answer": "B,C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第4題 → B,C,D"
     },
     {
       "id": 115028276,
@@ -202296,8 +202649,10 @@
         "C": "20～80歲左心室的功能會改變",
         "D": "血清中睪固酮在30歲以後開始下降"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "A,C,D",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第1題 → A,C,D"
     },
     {
       "id": "115070_0_2",
@@ -202433,8 +202788,10 @@
         "C": "血管平滑肌細胞緊張度的調解主要是靠自主神經系統和內皮細胞來協調",
         "D": "在健康且完整的內皮功能狀態，乙醯膽鹼（acetylcholine）會促進血管平滑肌細胞的收縮"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第8題 → 送分"
     },
     {
       "id": "115070_0_9",
@@ -202472,8 +202829,10 @@
         "C": "心搏緩慢",
         "D": "老化"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第10題 → 送分"
     },
     {
       "id": "115070_0_11",
@@ -202971,8 +203330,10 @@
         "C": "ypTNM分期是指病人在接受手術後的初次病理分期",
         "D": "TNM分期有時會結合腫瘤的組織學分級（grading）"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第36題 → C,D"
     },
     {
       "id": "115070_0_37",
@@ -203010,8 +203371,10 @@
         "C": "腺癌（adenocarcinoma）",
         "D": "默克細胞癌（Merkel cell carcinoma）"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第38題 → C,D"
     },
     {
       "id": "115070_0_39",
@@ -203049,8 +203412,10 @@
         "C": "mucosa-associated lymphoid tissue subtype的胃淋巴瘤若併有t(11;18) translocation，該基因變異將形成一API1與MALT1的chimeric protein",
         "D": "diffuse large B-cell lymphoma可能是原生型（de novo），也可能是mucosa-associated lymphoid tissue subtype轉變而來，原生型多為BCL-2及CD10陽性"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "B,C",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第40題 → B,C"
     },
     {
       "id": "115070_0_41",
@@ -204083,8 +204448,10 @@
         "C": "誤食一枚錢幣在胃中，可先觀察一個月，若無排出，則建議用胃鏡移除",
         "D": "青少年或成人如胃中有長度超過5公分的異物，建議先使用胃鏡移除"
       },
-      "answer": "D",
-      "disputed": true
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第14題 → C,D"
     },
     {
       "id": "115070_1_15",
@@ -204350,8 +204717,10 @@
         "C": "H7N9病毒株屬於季節流感病毒（seasonal influenza virus）的一種",
         "D": "抗流感病毒藥物oseltamivir作用屬於cap-dependent endonuclease inhibitor"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第28題 → 送分"
     },
     {
       "id": "115070_1_29",
@@ -205526,8 +205895,10 @@
         "C": "導管手術關閉心房中膈缺損（ASD）",
         "D": "居家氧氣治療"
       },
-      "answer": "D",
-      "disputed": true
+      "answer": "B,D",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第9題 → B,D"
     },
     {
       "id": "115070_2_10",
@@ -205641,8 +206012,10 @@
         "C": "體內最主要可吸收二氧化碳提供緩衝以減少產生呼吸性酸中毒的組織為肌肉",
         "D": "高碳血症（hypercarbia）會造成心搏過緩（bradycardia）及降低全身性血管阻力（systemic vascular resistance）"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第16題 → 送分"
     },
     {
       "id": "115070_2_17",
@@ -205661,8 +206034,10 @@
         "C": "咀嚼口香糖及使用紅黴素（erythromycin）是目前已被證實有效治療ileus的方式",
         "D": "類固醇類消炎止痛藥（nonsteroidal anti-inflammatory drug, NSAIDs）相較於嗎啡藥物，造成ileus的機率較低，可考慮作為術後止痛使用"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第17題 → C,D"
     },
     {
       "id": "115070_2_18",
@@ -206007,8 +206382,10 @@
         "C": "新型隱球菌（Cryptococcusneoformans）",
         "D": "腦膜炎奈瑟菌（Neisseriameningitidis）"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第35題 → 送分"
     },
     {
       "id": "115070_2_36",
@@ -206662,8 +207039,10 @@
         "C": "強力證據支持抗利尿激素類似物desmopressin與夜尿警鈴作為單一症狀尿床的第一線治療。Desmopressin其效果是立即的，若在最初一週內沒有反應，則沒有證據支持繼續長期使用",
         "D": "在第6號與第11號染色體的兩個基因座上發現基因變異，這些可能的夜尿症風險基因與睡眠、尿液生成及膀胱功能相關"
       },
-      "answer": "D",
-      "disputed": true
+      "answer": "C,D",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第69題 → C,D"
     },
     {
       "id": "115070_2_70",
@@ -206938,8 +207317,10 @@
         "C": "臨床症狀可能出現頭痛、噁心、無力、意識混亂、休克等",
         "D": "先給與100％之氧氣面罩治療，高壓氧可加速降低體內一氧化碳血紅素（carboxyhemoglobin）"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第3題 → A,B"
     },
     {
       "id": "115070_3_4",
@@ -207325,8 +207706,10 @@
         "C": "免疫球蛋白E依賴性黴菌發炎（IgE dependent fungal inflammation）",
         "D": "阿斯匹靈敏感性鼻息肉症（aspirin-sensitive nasal polyposis）"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第23題 → 送分"
     },
     {
       "id": "115070_3_24",
@@ -208155,8 +208538,10 @@
         "C": "先天性肌肉性斜頸症（congenital muscular torticollis）患者要評估有無髖關節發育不良（developmental dysplasia of the hip）的發生",
         "D": "先天性肌肉性斜頸症（congenital muscular torticollis）的發生率較髖關節發育不良（developmental dysplasia of the hip）的發生率為低"
       },
-      "answer": "D",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第66題 → 送分"
     },
     {
       "id": "115070_3_67",

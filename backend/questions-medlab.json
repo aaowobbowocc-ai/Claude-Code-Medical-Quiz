@@ -27863,10 +27863,12 @@
       "C": "B 型肝炎病毒疫苗（hepatitis B vaccine）",
       "D": "狂犬病疫苗（rabies vaccine）"
     },
-    "answer": "B",
+    "answer": "A,B",
     "explanation": "",
     "disputed": true,
-    "answer_source": "vision-recheck-v2:S_101030_c104_s0305.pdf"
+    "answer_source": "vision-recheck-v2:S_101030_c104_s0305.pdf",
+    "original_answer": "B",
+    "correction_note": "更正清冊：第80題 → A,B"
   },
   {
     "id": 9754,
@@ -34176,9 +34178,11 @@
       "C": "僅③④",
       "D": "僅④"
     },
-    "answer": "B",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第64題 → 送分"
   },
   {
     "id": 13921,
@@ -35337,9 +35341,11 @@
       "C": "10~60 min",
       "D": "5~9 min"
     },
-    "answer": "B",
+    "answer": "A,B",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第39題 → A,B"
   },
   {
     "id": 13975,
@@ -37569,9 +37575,11 @@
       "C": "砂粒病毒科（Arenaviridae）",
       "D": "絲狀病毒科（Filoviridae）"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第65題 → A,C"
   },
   {
     "id": 14313,
@@ -41081,9 +41089,11 @@
       "C": "前者狀況會使體內氯離子回收增加",
       "D": "嚴重嘔吐會造成前者狀況；嚴重下痢則會造成後者狀況"
     },
-    "answer": "C",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第72題 → 送分"
   },
   {
     "id": 14717,
@@ -52358,9 +52368,11 @@
       "C": "具鞭毛",
       "D": "目前無培養基供培養鑑定"
     },
-    "answer": "C",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第53題 → 送分"
   },
   {
     "id": 10364,
@@ -57443,9 +57455,11 @@
       "C": "腸胃道感染",
       "D": "紅眼症"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第65題 → 送分"
   },
   {
     "id": 10536,
@@ -69317,9 +69331,11 @@
       "C": "鎂",
       "D": "鈣"
     },
-    "answer": "A",
+    "answer": "A,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第15題 → A,C"
   },
   {
     "id": 11365,
@@ -70158,11 +70174,13 @@
       "C": "cortisol",
       "D": "dihydroxyphenylalanine"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
     "disputed": true,
     "orig_answer": "B",
-    "disputed_note": "考選部更正：第57題答 B 或 C 者均給分。"
+    "disputed_note": "考選部更正：第57題答 B 或 C 者均給分。",
+    "original_answer": "B",
+    "correction_note": "更正清冊：第57題 → B,C"
   },
   {
     "id": 11407,
@@ -70581,9 +70599,11 @@
       "C": "鈣、磷",
       "D": "血糖、醣化血色素"
     },
-    "answer": "B",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第78題 → 送分"
   },
   {
     "id": 11428,
@@ -72005,10 +72025,12 @@
       "C": "P. glaucum",
       "D": "P. funiculosum"
     },
-    "answer": "B",
+    "answer": "A,B",
     "explanation": "",
     "disputed": true,
-    "answer_source": "vision-recheck-v2:S_103090_c311_s44.pdf"
+    "answer_source": "vision-recheck-v2:S_103090_c311_s44.pdf",
+    "original_answer": "B",
+    "correction_note": "更正清冊：第69題 → A,B"
   },
   {
     "id": 11339,
@@ -75106,9 +75128,11 @@
       "C": "Activated protein C",
       "D": "vWF"
     },
-    "answer": "A",
+    "answer": "A,B",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第63題 → A,B"
   },
   {
     "id": 11173,
@@ -77031,9 +77055,11 @@
       "C": "複製時，均不產生次基因體mRNA（sub-genomic mRNA）",
       "D": "病毒殼蛋白均呈二十面體對稱（icosahedron symmetry）"
     },
-    "answer": "C",
+    "answer": "C,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第79題 → C,D"
   },
   {
     "id": 11509,
@@ -77252,10 +77278,12 @@
       "C": "1.007",
       "D": "1.015"
     },
-    "answer": "C",
+    "answer": "C,D",
     "explanation": "",
     "disputed": true,
-    "answer_source": "vision-recheck-v2:S_103090_c311_s33.pdf"
+    "answer_source": "vision-recheck-v2:S_103090_c311_s33.pdf",
+    "original_answer": "C",
+    "correction_note": "更正清冊：第10題 → C,D"
   },
   {
     "id": 11200,
@@ -77794,9 +77822,11 @@
       "C": "關節液",
       "D": "尿液"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第37題 → B,C"
   },
   {
     "id": 11227,
@@ -89437,9 +89467,11 @@
       "C": "正常成人參考值為4.0～5.6%",
       "D": "濃度會受飲食影響"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第52題 → 送分"
   },
   {
     "id": 13322,
@@ -91055,9 +91087,11 @@
       "C": "③④",
       "D": "①④"
     },
-    "answer": "C",
+    "answer": "C,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第49題 → C,D"
   },
   {
     "id": 13239,
@@ -91392,9 +91426,11 @@
       "C": "有性生殖產生的孢子具感染",
       "D": "酵母菌的出芽及分裂皆為無性生殖"
     },
-    "answer": "D",
+    "answer": "C,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第65題 → C,D"
   },
   {
     "id": 13255,
@@ -91438,9 +91474,11 @@
       "C": "白色念珠菌在嬰兒不會造成口腔的感染",
       "D": "莢膜組織漿菌（Histoplasma capsulatum）為AIDS重要的伺機感染菌"
     },
-    "answer": "B",
+    "answer": "B,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第67題 → B,D"
   },
   {
     "id": 13257,
@@ -92901,9 +92939,11 @@
       "C": "B 淋巴細胞（B lymphocyte）",
       "D": "漿細胞（plasma cell）"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第56題 → B,C"
   },
   {
     "id": 13006,
@@ -93805,9 +93845,11 @@
       "C": "IL-3",
       "D": "SCF"
     },
-    "answer": "D",
+    "answer": "C,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第19題 → C,D"
   },
   {
     "id": 13049,
@@ -97148,9 +97190,11 @@
       "C": "α 2 球蛋白",
       "D": "β球蛋白"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第17題 → B,C"
   },
   {
     "id": 13127,
@@ -98310,9 +98354,11 @@
       "C": "單股結構多型性（Single-strand conformation polymorphism; SSCP）",
       "D": "增幅阻礙突變系統（Amplification refractory mutation system; ARMS）"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第72題 → 送分"
   },
   {
     "id": 13182,
@@ -99004,9 +99050,11 @@
       "C": "ALP activity",
       "D": "renin activity"
     },
-    "answer": "D",
+    "answer": "B",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第25題 → B"
   },
   {
     "id": 12335,
@@ -100244,9 +100292,11 @@
       "C": "促使巨噬細胞分泌IL-2與TNF-α",
       "D": "誘導T細胞增生"
     },
-    "answer": "A",
+    "answer": "A,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第4題 → A,C"
   },
   {
     "id": 12234,
@@ -107741,9 +107791,11 @@
       "C": "腹水",
       "D": "腦脊髓液"
     },
-    "answer": "A",
+    "answer": "A,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第38題 → A,D"
   },
   {
     "id": 12188,
@@ -110283,9 +110335,11 @@
       "C": "thiosulfate無助於氰化物的排除",
       "D": "氰化物會與氧氣結合而造成組織缺氧"
     },
-    "answer": "A",
+    "answer": "A,B",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第79題 → A,B"
   },
   {
     "id": 12869,
@@ -110305,9 +110359,11 @@
       "C": "pKa＝pH＋log（［salt］／［acid］）",
       "D": "pH＝pKa＋log（［salt］／［acid］）"
     },
-    "answer": "D",
+    "answer": "A,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第80題 → A,D"
   },
   {
     "id": 12710,
@@ -111587,9 +111643,11 @@
       "C": "退件",
       "D": "直接進抺片確認即可"
     },
-    "answer": "B",
+    "answer": "A,B",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第61題 → A,B"
   },
   {
     "id": 12771,
@@ -112340,9 +112398,11 @@
       "C": "第一心音出現的時間相當於心室射血期（ventricular ejection）",
       "D": "主動脈瓣持續開啟是在等容心室收縮期（isovolumetric ventricular contraction）"
     },
-    "answer": "B",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第16題 → 送分"
   },
   {
     "id": 12486,
@@ -113880,9 +113940,11 @@
       "C": "serum ferritin level",
       "D": "hemoglobin value"
     },
-    "answer": "B",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第9題 → 送分"
   },
   {
     "id": 12559,
@@ -114091,9 +114153,11 @@
       "C": "target cells",
       "D": "Howell-Jolly body"
     },
-    "answer": "D",
+    "answer": "C,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第19題 → C,D"
   },
   {
     "id": 12569,
@@ -116846,9 +116910,11 @@
       "C": "病毒培養",
       "D": "polymerase chain reaction（PCR）"
     },
-    "answer": "C",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第69題 → 送分"
   },
   {
     "id": 12939,
@@ -117267,9 +117333,11 @@
       "C": "小腸",
       "D": "大腸"
     },
-    "answer": "D",
+    "answer": "C,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第9題 → C,D"
   },
   {
     "id": 12639,
@@ -117814,9 +117882,11 @@
       "C": "冰醋酸",
       "D": "高張鹽水"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第35題 → B,C"
   },
   {
     "id": 12665,
@@ -118559,9 +118629,11 @@
       "C": "促進硫基化（Sulfation）",
       "D": "促進氧化（Oxidation）"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第70題 → 送分"
   },
   {
     "id": 12700,
@@ -119191,9 +119263,11 @@
       "C": "cortisol",
       "D": "somatostatin"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第21題 → 送分"
   },
   {
     "id": 5620,
@@ -121232,9 +121306,11 @@
       "C": "esculin",
       "D": "H 2 S"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第43題 → 送分"
   },
   {
     "id": 5563,
@@ -121552,9 +121628,11 @@
       "C": "group A streptococci",
       "D": "E. coli"
     },
-    "answer": "A",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第59題 → 送分"
   },
   {
     "id": 5578,
@@ -121840,9 +121918,11 @@
       "C": "Haemophilus influenzae",
       "D": "Chlamydophila pneumoniae"
     },
-    "answer": "A",
+    "answer": "A,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第73題 → A,D"
   },
   {
     "id": 5592,
@@ -121941,9 +122021,11 @@
       "C": "Mycobacterium gordonae",
       "D": "Yersinia enterocolitica"
     },
-    "answer": "C",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第78題 → 送分"
   },
   {
     "id": 5597,
@@ -122860,9 +122942,11 @@
       "C": "白三烯素（leukotrienes）",
       "D": "脂氧素（lipoxins）"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第43題 → A,C"
   },
   {
     "id": 5323,
@@ -126354,9 +126438,11 @@
       "C": "此藥物可以抑制RNA polymerase的功能",
       "D": "可用來治療巨細胞病毒性視網膜炎（cytomegalovirus retinitis）"
     },
-    "answer": "C",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第56題 → B,C"
   },
   {
     "id": 5735,
@@ -127174,9 +127260,11 @@
       "C": "微生物學檢查的檢體應置於冷藏",
       "D": "成人側躺時壓力為90～180 mm水柱"
     },
-    "answer": "C",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第17題 → B,C"
   },
   {
     "id": 5457,
@@ -127375,9 +127463,11 @@
       "C": "受精卵著床後7天",
       "D": "懷孕10週"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第27題 → B,C"
   },
   {
     "id": 5467,
@@ -128930,9 +129020,11 @@
       "C": "維他命B 6 和肝醣代謝有關",
       "D": "維他命E和神經及生殖功能有關"
     },
-    "answer": "B",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第24題 → 送分"
   },
   {
     "id": 6097,
@@ -129731,9 +129823,11 @@
       "C": "2倍K m",
       "D": "10倍K m"
     },
-    "answer": "D",
+    "answer": "A",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第64題 → A"
   },
   {
     "id": 6137,
@@ -130611,9 +130705,11 @@
       "C": "阻止乙醯膽鹼（acetylcholine）的釋放",
       "D": "活化細胞內腺核苷環狀酶致使cAMP增加"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第28題 → 送分"
   },
   {
     "id": 6023,
@@ -131867,9 +131963,11 @@
       "C": "ST段（ST segment）上升",
       "D": "缺口型U波"
     },
-    "answer": "C",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第10題 → B,C"
   },
   {
     "id": 5768,
@@ -133221,9 +133319,11 @@
       "C": "磷酸銨鎂（magnesium ammonium phosphate）結石",
       "D": "尿酸（uric acid）結石"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第77題 → A,C"
   },
   {
     "id": 5835,
@@ -133262,9 +133362,11 @@
       "C": "幼年型類風濕性關節炎（juvenile rheumatoid arthritis）",
       "D": "Lesch-Nyhan症候群（Lesch-Nyhan syndrome）"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第79題 → B,C"
   },
   {
     "id": 5837,
@@ -136764,9 +136866,11 @@
       "C": "糞便白血球鏡檢",
       "D": "糞便脂肪定量"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第13題 → 送分"
   },
   {
     "id": 5929,
@@ -138791,9 +138895,11 @@
       "C": "偽陰性為15%",
       "D": "陽性預測值為85%"
     },
-    "answer": "B",
+    "answer": "B,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第34題 → B,D"
   },
   {
     "id": 6575,
@@ -138872,9 +138978,11 @@
       "C": "allantoin",
       "D": "一氧化碳"
     },
-    "answer": "C",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第38題 → B,C"
   },
   {
     "id": 6579,
@@ -139233,9 +139341,11 @@
       "C": "肌酸激酶",
       "D": "過氧化酶"
     },
-    "answer": "B",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第56題 → 送分"
   },
   {
     "id": 6597,
@@ -140812,9 +140922,11 @@
       "C": "imidazoles服用時可能影響病人肝功能,長期服用需定期檢查肝功能",
       "D": "terbinafine是目前唯一真正具有殺菌效果之口服抗黴菌藥物"
     },
-    "answer": "B",
+    "answer": "B,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第55題 → B,D"
   },
   {
     "id": 6516,
@@ -141313,9 +141425,11 @@
       "C": "catalase",
       "D": "H 2 S"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第80題 → A,C"
   },
   {
     "id": 6232,
@@ -141769,9 +141883,11 @@
       "C": "P3",
       "D": "T5"
     },
-    "answer": "B",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第22題 → 送分"
   },
   {
     "id": 6254,
@@ -142550,9 +142666,11 @@
       "C": "18%",
       "D": "36%"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第61題 → B,C"
   },
   {
     "id": 6293,
@@ -144883,9 +145001,11 @@
       "C": "第二和第三型",
       "D": "第一和第四型"
     },
-    "answer": "B",
+    "answer": "B,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第17題 → B,D"
   },
   {
     "id": 6638,
@@ -148927,9 +149047,11 @@
       "C": "AST",
       "D": "CK"
     },
-    "answer": "A",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第59題 → 送分"
   },
   {
     "id": 7064,
@@ -149807,9 +149929,11 @@
       "C": "可耐受6.5％NaCl",
       "D": "可耐受4％bile salts"
     },
-    "answer": "A",
+    "answer": "A,B",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第23題 → A,B"
   },
   {
     "id": 6949,
@@ -150128,9 +150252,11 @@
       "C": "流行性嗜血桿菌（Haemophilus influenzae）",
       "D": "鮑氏不動桿菌（Acinetobacter baumannii）"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第39題 → 送分"
   },
   {
     "id": 6965,
@@ -152859,9 +152985,11 @@
       "C": "Acid phosphatase stain 陽性則可能為T-ALL或AML(M3)",
       "D": "Non-specific esterase stain 陽性則可能為急性淋巴性白血病"
     },
-    "answer": "C",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第15題 → 送分"
   },
   {
     "id": 6787,
@@ -153362,12 +153490,14 @@
       "C": "anti-D與SI之反應變弱",
       "D": "anti-E與SI之反應變強"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
     "disputed": true,
     "images": [
       "/question-images/medlab_107100_q40_fig.webp"
-    ]
+    ],
+    "original_answer": "D",
+    "correction_note": "更正清冊：第40題 → 送分"
   },
   {
     "id": 9075,
@@ -155374,9 +155504,11 @@
       "C": "水泡液（vesicle fluid）",
       "D": "關節液（synovial fluid）"
     },
-    "answer": "C",
+    "answer": "A,B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第60題 → A,B,C"
   },
   {
     "id": 7143,
@@ -155814,9 +155946,11 @@
       "C": "40倍物鏡，15倍目鏡",
       "D": "40倍物鏡，20倍目鏡"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第2題 → 送分"
   },
   {
     "id": 6852,
@@ -156375,9 +156509,11 @@
       "C": "母親血液α-胎兒蛋白異常降低",
       "D": "母親尿液α-胎兒蛋白異常升高"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第30題 → B,C"
   },
   {
     "id": 6880,
@@ -158557,9 +158693,11 @@
       "C": "E 2 ，E 1 ，E 3",
       "D": "E 2 ，E 3 ，E 1"
     },
-    "answer": "A",
+    "answer": "A,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第59題 → A,C"
   },
   {
     "id": 7532,
@@ -158798,9 +158936,11 @@
       "C": "blood Pi上升，urine Pi上升",
       "D": "blood Pi上升，urine Pi下降"
     },
-    "answer": "D",
+    "answer": "B",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第71題 → B"
   },
   {
     "id": 7544,
@@ -159118,9 +159258,11 @@
       "C": "Staphylococcus aureus",
       "D": "Mycobacterium tuberculosis"
     },
-    "answer": "B",
+    "answer": "A,B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第7題 → A,B,C"
   },
   {
     "id": 7403,
@@ -160128,9 +160270,11 @@
       "C": "daptomycin",
       "D": "rifampin"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第57題 → B,C"
   },
   {
     "id": 7453,
@@ -164364,9 +164508,11 @@
       "C": "奈米金顆粒",
       "D": "細菌"
     },
-    "answer": "C",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第27題 → 送分"
   },
   {
     "id": 7579,
@@ -165482,9 +165628,11 @@
       "C": "福馬林",
       "D": "麝香草酚"
     },
-    "answer": "A",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第3題 → 送分"
   },
   {
     "id": 7322,
@@ -166832,9 +166980,11 @@
       "C": "TP53 gene mutation",
       "D": "EGFR gene mutation"
     },
-    "answer": "A",
+    "answer": "A,B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第70題 → A,B,C"
   },
   {
     "id": 7387,
@@ -170452,9 +170602,11 @@
       "C": "腦波圖",
       "D": "超音波圖"
     },
-    "answer": "C",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第11題 → B,C"
   },
   {
     "id": 7640,
@@ -171880,9 +172032,11 @@
       "C": "Hb E",
       "D": "Hb G"
     },
-    "answer": "B",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第2題 → 送分"
   },
   {
     "id": 7711,
@@ -173058,9 +173212,11 @@
       "C": "於肝門脈循環或體循環中，都必須和血漿中的haptocorrin（transcobalamin I）結合",
       "D": "身體儲存量比每日需求量高出許多，短期的缺乏並不會立即造成顯著的影響"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第60題 → A,C"
   },
   {
     "id": 7767,
@@ -175564,9 +175720,11 @@
       "C": "50",
       "D": "60"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第25題 → B,C"
   },
   {
     "id": 7812,
@@ -180107,9 +180265,11 @@
       "C": "50",
       "D": "100"
     },
-    "answer": "A",
+    "answer": "A,B",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第11題 → A,B"
   },
   {
     "id": 8109,
@@ -180268,9 +180428,11 @@
       "C": "僅①③",
       "D": "①②③"
     },
-    "answer": "A",
+    "answer": "A,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第19題 → A,C"
   },
   {
     "id": 8117,
@@ -182286,9 +182448,11 @@
       "C": "病人血中大分子VWF（VWF multimers）顯著增加",
       "D": "Ristocetin活化病人血小板凝集反應明顯上升"
     },
-    "answer": "A",
+    "answer": "A,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第39題 → A,D"
   },
   {
     "id": 8217,
@@ -183591,9 +183755,11 @@
       "C": "檢體中beta-lipoprotein含量多會造成ASO假陽性",
       "D": "健康人體內亦有低量ASO，但感染時會升高"
     },
-    "answer": "A",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第24題 → 送分"
   },
   {
     "id": 8512,
@@ -188753,9 +188919,11 @@
       "C": "耶爾森結腸炎桿菌（Yersinia enterocolitica）",
       "D": "克雷伯氏肺炎桿菌（Klebsiella pneumoniae）"
     },
-    "answer": "B",
+    "answer": "B,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第42題 → B,D"
   },
   {
     "id": 8849,
@@ -191360,9 +191528,11 @@
       "C": "4：1",
       "D": "6：1"
     },
-    "answer": "C",
+    "answer": "C,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第11題 → C,D"
   },
   {
     "id": 8658,
@@ -194207,9 +194377,11 @@
       "C": "Hendra virus",
       "D": "human metapneumovirus"
     },
-    "answer": "A",
+    "answer": "A,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第72題 → A,D"
   },
   {
     "id": 9039,
@@ -195472,9 +195644,11 @@
       "C": "6個月",
       "D": "12個月"
     },
-    "answer": "C",
+    "answer": "C,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第55題 → C,D"
   },
   {
     "id": 8782,
@@ -210628,10 +210802,10 @@
       "C": "Pappenheimer bodies",
       "D": "Heinz bodies"
     },
-    "answer": "A,B,C,D",
+    "answer": "送分",
     "explanation": "",
     "original_answer": "D",
-    "correction_note": "第9題更正為 A,B,C,D（原答案 D）",
+    "correction_note": "更正清冊：第9題 → 送分",
     "disputed": true
   },
   {
@@ -302735,8 +302909,10 @@
       "C": "振幅減少，波寬減少（small amplitude，short duration）",
       "D": "振幅減少，波寬增加（small amplitude，long duration）"
     },
-    "answer": "B",
-    "disputed": true
+    "answer": "B,D",
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第20題 → B,D"
   },
   {
     "id": "115090_0_21",
@@ -302988,8 +303164,10 @@
       "C": "須用血紅素數值來校正",
       "D": "坐姿測量值比平躺測量值低"
     },
-    "answer": "B",
-    "disputed": true
+    "answer": "A,B",
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第33題 → A,B"
   },
   {
     "id": "115090_0_34",
@@ -303065,8 +303243,10 @@
       "C": "color Doppler",
       "D": "M-mode"
     },
-    "answer": "D",
-    "disputed": true
+    "answer": "A,D",
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第37題 → A,D"
   },
   {
     "id": "115090_0_38",
@@ -304348,8 +304528,10 @@
       "C": "具有PML::RARA突變",
       "D": "具有CARL或MPL突變"
     },
-    "answer": "C",
-    "disputed": true
+    "answer": "C,D",
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第25題 → C,D"
   },
   {
     "id": "115090_1_26",
@@ -307253,8 +307435,10 @@
       "C": "脫皮毒素（exfoliative toxin）會切割上皮組織的黏多醣而產生水泡",
       "D": "腸毒素（enterotoxin）屬於超級抗原（superantigen）會引起嘔吐及腹瀉"
     },
-    "answer": "B",
-    "disputed": true
+    "answer": "B,C",
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第16題 → B,C"
   },
   {
     "id": "115090_3_17",
@@ -308288,8 +308472,10 @@
       "C": "Basidiomycota",
       "D": "Fungi imperfecti"
     },
-    "answer": "D",
-    "disputed": true
+    "answer": "B,D",
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第70題 → B,D"
   },
   {
     "id": "115090_3_71",
@@ -308669,8 +308855,10 @@
       "C": "運鐵蛋白（transferrin）",
       "D": "低密度脂蛋白（LDL）"
     },
-    "answer": "A",
-    "disputed": true
+    "answer": "送分",
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第10題 → 送分"
   },
   {
     "id": "115090_4_11",
@@ -309260,8 +309448,10 @@
       "C": "hydroxyapatite",
       "D": "HPO- 2 4"
     },
-    "answer": "D",
-    "disputed": true
+    "answer": "送分",
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第41題 → 送分"
   },
   {
     "id": "115090_4_42",
@@ -310762,8 +310952,10 @@
       "C": "次單位（subunit）",
       "D": "活性減毒（live attenuated）"
     },
-    "answer": "A",
-    "disputed": true
+    "answer": "A,D",
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第40題 → A,D"
   },
   {
     "id": "115090_5_41",
@@ -311466,8 +311658,10 @@
       "C": "治療目標為達到治療的終點反應（end therapeutic response, ETR），即到治療結束時測不到HCV RNA",
       "D": "持續病毒學反應（sustained virologic response, SVR）的定義為治療結束後1個月仍測不到HCV RNA"
     },
-    "answer": "B",
-    "disputed": true
+    "answer": "送分",
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第77題 → 送分"
   },
   {
     "id": "115090_5_78",

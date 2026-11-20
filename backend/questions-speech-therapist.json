@@ -2292,11 +2292,13 @@
       "C": "增強聲帶振動的幅度",
       "D": "縮小聲門閉鎖不全的範圍"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "",
     "exam_type": "special_high",
     "_legacy_id": 30000093,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第20題 → A,C"
   },
   {
     "id": "speech_100090_p5_21",
@@ -2362,11 +2364,13 @@
       "C": "運動過度型吶吃症",
       "D": "運動失調型吶吃症"
     },
-    "answer": "D",
+    "answer": "B,D",
     "explanation": "",
     "exam_type": "special_high",
     "_legacy_id": 30000096,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第23題 → B,D"
   },
   {
     "id": "speech_100090_p5_24",
@@ -7965,11 +7969,13 @@
       "C": "空韻",
       "D": "韻尾"
     },
-    "answer": "A",
+    "answer": "B",
     "explanation": "",
     "exam_type": "special_high",
     "_legacy_id": 30000332,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第25題 → B"
   },
   {
     "id": "speech_100090_p4_26",
@@ -9406,10 +9412,13 @@
       "C": "高度抽象",
       "D": "低度抽象"
     },
-    "answer": "D",
+    "answer": "A,B,C",
     "explanation": "",
     "exam_type": "special_high",
-    "_legacy_id": 30000390
+    "_legacy_id": 30000390,
+    "original_answer": "D",
+    "disputed": true,
+    "correction_note": "更正清冊：第8題 → A,B,C"
   },
   {
     "id": "speech_100090_p6_9",
@@ -35055,11 +35064,13 @@
       "C": "運動失調型吶語症",
       "D": "遲緩型吶語症"
     },
-    "answer": "A",
+    "answer": "送分",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30000975,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第2題 → 送分"
   },
   {
     "id": "speech_101110_p5_3",
@@ -35447,11 +35458,13 @@
       "C": "調節腦脊髓液",
       "D": "加速神經傳導"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30000992,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第19題 → 送分"
   },
   {
     "id": "speech_101110_p5_20",
@@ -39591,11 +39604,13 @@
       "C": "也可以透過改變聲道(vocal tract)的形狀來修飾、調整嗓音",
       "D": "喉內肌之間透過互相的拮抗和協同作用,方能發出無數種不同的嗓音"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30001168,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第37題 → A,C"
   },
   {
     "id": "speech_101110_p2_38",
@@ -39638,11 +39653,13 @@
       "C": "環杓關節的作用可以調整聲帶內旋及外轉的位置",
       "D": "喉部透過與甲狀舌骨膜和舌根部的舌骨相連,懸吊在頸部中央"
     },
-    "answer": "B",
+    "answer": "A,B",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30001170,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第39題 → A,B"
   },
   {
     "id": "speech_101110_p2_40",
@@ -43853,10 +43870,13 @@
       "C": "頭控滑鼠",
       "D": "雷射棒"
     },
-    "answer": "A",
+    "answer": "送分",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30001348
+    "_legacy_id": 30001348,
+    "original_answer": "A",
+    "disputed": true,
+    "correction_note": "更正清冊：第61題 → 送分"
   },
   {
     "id": "speech_101110_p6_62",

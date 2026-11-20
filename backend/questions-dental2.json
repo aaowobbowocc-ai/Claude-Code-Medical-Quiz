@@ -21793,13 +21793,15 @@
         "C": "11 mm",
         "D": "8 mm"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
       "images": [
         "/question-images/dental2_115023576_0.webp"
       ],
       "case_context": "第 76 題：有一位 20 歲女性要求製作上顎右側正中門牙假牙，經臨床及 X 光檢查結果，該顆門牙因極度蛀牙 至舌側牙齦下 1.5 mm ，牙髓已無活性，病人口內的其他牙齒狀況都算良好，如下圖所示，該患者 有 gummy smile ，兩顆正中門牙唇側牙齦皆在同一水平上。經評估後決定保留該顆牙齒製作鑄造 金屬根柱冠心（ casting post and core ）及瓷金屬融合牙冠（ porcelain fused to metal crown ）， 該位女性非常注重美觀，要製作出健康及美觀的牙冠，下列何種步驟較宜採用？",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第78題 → B,C"
     },
     {
       "id": 115023579,
@@ -23722,9 +23724,11 @@
         "C": "味覺敏感性隨著年齡增加而降低，特別是有阿茲罕默症（ Alzheimer ’ s disease ）的老年人",
         "D": "第VI、IX、X對腦神經和味覺有關"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第11題 → A,D"
     },
     {
       "id": 115023672,
@@ -26105,9 +26109,11 @@
         "C": "溝隙封填劑即使有部分脫落，仍足以提供對抗齲齒發生的保護作用",
         "D": "牙齒萌發的程度會影響溝隙封填劑的固位"
       },
-      "answer": "C",
+      "answer": "A,B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第46題 → A,B,C"
     },
     {
       "id": 101100047,
@@ -35051,9 +35057,11 @@
         "C": "結核桿菌不會產生孢子",
         "D": "肺結核病人所使用過的器械須以高溫或 ethylene oxide gas 做滅菌處理"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第3題 → 送分"
     },
     {
       "id": 115024064,
@@ -40930,9 +40938,11 @@
         "C": "失活牙（ nonvital tooth ）漂白時可加熱至比活牙可忍受的溫度高 10 o C ，以增加反應速率",
         "D": "使用 pH 9.5 的過氧化氫會比 pH 10.8 的漂白速率慢"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第48題 → A,C"
     },
     {
       "id": 115024269,
@@ -42174,9 +42184,11 @@
         "C": "三叉神經（ trigeminal nerve ）",
         "D": "舌下神經（ hypoglossal nerve ）"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第30題 → A,C"
     },
     {
       "id": 115024331,
@@ -52334,9 +52346,11 @@
         "C": "表現出一些獨立自主的技能（shows many independent self-help skills）",
         "D": "可與同伴一起玩耍（plays cooperatively with peers）"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第45題 → 送分"
     },
     {
       "id": 103090046,
@@ -73029,9 +73043,11 @@
         "C": "Feldspathic glass ceramic",
         "D": "Zirconia"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第27題 → 送分"
     },
     {
       "id": 115025048,
@@ -75072,9 +75088,11 @@
         "C": "顎間段（intermaxillary segment），4週",
         "D": "顎間段（intermaxillary segment），8週"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第48題 → A,B"
     },
     {
       "id": "105100_44_49",
@@ -75173,9 +75191,11 @@
         "C": "軟骨瘤（chondroma）",
         "D": "關節盤前方移位（disc anterior displacement）"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第53題 → A,B"
     },
     {
       "id": "105100_44_54",
@@ -75274,9 +75294,11 @@
         "C": "使用正方形的瞄準儀（collimator）有最佳的防護效果",
         "D": "X光機電壓在70 kV以下應使用1.5 mm的鋁濾片"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第58題 → B,C"
     },
     {
       "id": "105100_44_59",
@@ -78344,9 +78366,11 @@
         "C": "原發性軟骨（primary cartilage）首先出現在頭部時約為胚胎期第十週",
         "D": "梅克氏軟骨日後發育成為下顎骨的顳顎關節"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第49題 → C,D"
     },
     {
       "id": "105100_66_50",
@@ -81250,9 +81274,11 @@
         "C": "前者通常會影響上顎之生長，後者不會",
         "D": "前者通常不合併咬合錯咬"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第33題 → A,B"
     },
     {
       "id": 115020814,
@@ -86232,9 +86258,11 @@
         "C": "可能由不當的修形（tooth preparation）所致",
         "D": "填補後沒有拋光（polish）所致"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第38題 → B,C"
     },
     {
       "id": 115021058,
@@ -87785,9 +87813,11 @@
         "C": "急性期大約可以持續八到十二週",
         "D": "慢性期的疼痛比急性期較輕微"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第35題 → C,D"
     },
     {
       "id": 115021135,
@@ -91065,12 +91095,14 @@
         "C": "立即做空間獲得器（space regainer）",
         "D": "立即製作活動假牙（removable denture）"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
       "images": [
         "/question-images/dental2_115021296_0.webp"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第37題 → A,B"
     },
     {
       "id": 115021297,
@@ -93158,9 +93190,11 @@
         "C": "Aggregatibacter actinomycetemcomitans",
         "D": "Campylobacter rectus"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第60題 → C,D"
     },
     {
       "id": 115021400,
@@ -106576,9 +106610,11 @@
         "C": "發炎期是組織受傷後12小時才開始進行",
         "D": "發炎期是傷口癒合的第一期"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第3題 → B,C"
     },
     {
       "id": 115022062,
@@ -114082,10 +114118,12 @@
         "C": "T 4 N 1 M 0 ，Stage IV",
         "D": "T 4 N 1 M 0 ，Stage III"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
       "case_context": "第 53 題：一位54歲男性前來就診，主訴左舌部潰瘍持續半年之久，門診檢查發現病患舌背側有5×4 cm之不動硬塊，舌 部活動受限導致病患發音異常，二側頸部有多個小於1 cm之活動性淋巴結，切片檢查結果為舌癌，應為病患 安排何種檢查？①Liver ultrasonography②Whole body bone scan③CT scan or MRI scan④Chest X-ray ⑤Panoramic X-ray",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第54題 → A,C"
     },
     {
       "id": 115022431,
@@ -114722,9 +114760,11 @@
         "C": "張腭帆肌（m. tensor veli palatini）以水平走向通過此處",
         "D": "上顎全口義齒後邊緣需將此處之軟組織排開（displace）"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第4題 → 送分"
     },
     {
       "id": 115022461,
@@ -116825,9 +116865,11 @@
         "C": "可以遵守規則（agree with rules）",
         "D": "模仿成人及朋友（copy adults and friends）"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第29題 → B,C"
     },
     {
       "id": 115022565,
@@ -125537,9 +125579,11 @@
         "C": "牙齦過度發炎",
         "D": "懷孕或使用避孕藥物"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第59題 → 送分"
     },
     {
       "id": 115022993,
@@ -127205,9 +127249,11 @@
         "C": "長距長方型",
         "D": "短距長方型"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第62題 → A,C"
     },
     {
       "id": 115023076,
@@ -128566,9 +128612,11 @@
         "C": "chlorine compound",
         "D": "2% glutaraldehyde"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第48題 → A,C"
     },
     {
       "id": 115023142,
@@ -128747,9 +128795,11 @@
         "C": "在瓷金屬界面的瓷厚度最少要0.5 mm",
         "D": "在講究美觀的區域瓷厚度最少要0.7 mm"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第57題 → C,D"
     },
     {
       "id": 115023151,
@@ -131043,7 +131093,7 @@
       "answer": "B",
       "disputed": true,
       "original_answer": "B",
-      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第12題一律給分（原答案 B）"
+      "correction_note": "⚠未獲更正卷佐證：第12題一律給分（原答案 B）"
     },
     {
       "id": "110020_65",
@@ -139530,11 +139580,11 @@
         "C": "頭頂骨（calvarial bone）",
         "D": "脛骨近端（proximal tibia）"
       },
-      "answer": "A,B,C,D",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第45題更正為 A,B,C,D（原答案 A）",
+      "correction_note": "更正清冊：第45題 → 送分",
       "isMultiAnswer": true
     },
     {
@@ -143567,7 +143617,10 @@
         "C": "多形核白血球(polymorphonuclear neutrophils /PMNs)",
         "D": "巨噬細胞(macrophages)"
       },
-      "answer": "A"
+      "answer": "送分",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第56題 → 送分"
     },
     {
       "id": "111020_57",
@@ -150820,8 +150873,10 @@
         "C": "頦成形術(genioplasty)可以矯正顏面的不對稱",
         "D": "患有下顎骨過長(mandibular excess)之病人,嚴重時會使嘴唇閉合困難"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第33題 → 送分"
     },
     {
       "id": "111100_1_34",
@@ -152736,7 +152791,7 @@
       "answer": "D",
       "disputed": true,
       "original_answer": "D",
-      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第80題一律給分（原答案 D）"
+      "correction_note": "⚠未獲更正卷佐證：第80題一律給分（原答案 D）"
     },
     {
       "id": "111100_2_1",
@@ -155061,8 +155116,10 @@
         "C": "白內障",
         "D": "壽命減短"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第80題 → 送分"
     },
     {
       "id": "111100_3_21",
@@ -156727,8 +156784,10 @@
         "C": "改善營養",
         "D": "控制體溫"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第18題 → 送分"
     },
     {
       "id": "112020_1_19",
@@ -162098,7 +162157,7 @@
       "answer": "C",
       "disputed": true,
       "original_answer": "C",
-      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第5題更正為 C,D（原答案 C）",
+      "correction_note": "⚠未獲更正卷佐證：第5題更正為 C,D（原答案 C）",
       "isMultiAnswer": true
     },
     {
@@ -168759,8 +168818,10 @@
         "C": "可能會有導致部分組織功能受限或喪失的現象",
         "D": "會產生水腫(edema)現象"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第4題 → 送分"
     },
     {
       "id": "113020_1_5",
@@ -168874,8 +168935,10 @@
         "C": "ќў",
         "D": "ћќѝ"
       },
-      "answer": "D",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第10題 → 送分"
     },
     {
       "id": "113020_1_11",
@@ -174480,7 +174543,7 @@
       "answer": "A",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第7題更正為 A,B（原答案 A）",
+      "correction_note": "⚠未獲更正卷佐證：第7題更正為 A,B（原答案 A）",
       "isMultiAnswer": true
     },
     {
@@ -179808,8 +179871,10 @@
         "C": "拆除陶瓷矯正器較不會損傷牙釉質,但拆除金屬矯正器較可能會引起牙釉質裂紋(enamel fracture)",
         "D": "拆除金屬矯正器及陶瓷矯正器均可能會引起牙釉質裂紋(enamel fracture)"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "B,D",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第22題 → B,D"
     },
     {
       "id": "113090_3_23",
@@ -189848,12 +189913,14 @@
         "C": "不可延伸至鈎狀切迹(hamular notch)處,以防止義齒脫位",
         "D": "可於個人牙托邊緣成形(border molding)時進行設置,以評估義齒的固持性"
       },
-      "answer": "C",
+      "answer": "B,C",
       "valid_answers": [
         "B",
         "C"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第5題 → B,C"
     },
     {
       "id": "114090_2_6",
@@ -203459,8 +203526,10 @@
         "C": "研究中指出男性比女性較易擁有high smile",
         "D": "high smile係指微笑時會露出75%～100%上顎正中門齒及牙齦"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第61題 → 送分"
     },
     {
       "id": "115090_2_62",
@@ -204539,8 +204608,10 @@
         "C": "融合牙也是常發生的巨齒症型態",
         "D": "巨齒症可見於耳齒症候群（otodental syndrome）"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第37題 → A,B"
     },
     {
       "id": "115090_3_38",

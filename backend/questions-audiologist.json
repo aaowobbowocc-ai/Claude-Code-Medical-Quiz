@@ -8254,11 +8254,13 @@
       "C": "增益超過60 dB,容易產生回饋音",
       "D": "極重度聽損者,其助聽後的聽閾很少為30 dB HL 以內"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": "",
     "exam_type": "special_high",
     "_legacy_id": 30002178,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第38題 → C"
   },
   {
     "id": "audiologist_100090_p5_39",
@@ -9309,11 +9311,13 @@
       "C": "上升型聽損(rising hearing loss)且4k 至8k Hz 的聽力閾值高於70 dB HL",
       "D": "上升型聽損且4k 至8k Hz 的聽力閾值低於70 dB HL"
     },
-    "answer": "B",
+    "answer": "A,B",
     "explanation": "",
     "exam_type": "special_high",
     "_legacy_id": 30002066,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第4題 → A,B"
   },
   {
     "id": "audiologist_100090_p4_5",
@@ -9862,11 +9866,13 @@
       "C": "6~8 英吋",
       "D": "9~11 英吋"
     },
-    "answer": "C",
+    "answer": "A,B,C",
     "explanation": "",
     "exam_type": "special_high",
     "_legacy_id": 30002090,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第28題 → A,B,C"
   },
   {
     "id": "audiologist_100090_p4_29",
@@ -43286,10 +43292,12 @@
       "C": "③④",
       "D": "①④"
     },
-    "answer": "C",
+    "answer": "送分",
     "explanation": "",
     "_legacy_id": 114100060787,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第38題 → 送分"
   },
   {
     "id": "audiologist_101110_p4_39",
@@ -44681,11 +44689,13 @@
       "C": "20 dB",
       "D": "25 dB"
     },
-    "answer": "D",
+    "answer": "C,D",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30004237,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第19題 → C,D"
   },
   {
     "id": "audiologist_102030_p2_20",
@@ -45628,10 +45638,12 @@
       "C": "60",
       "D": "70"
     },
-    "answer": "A",
+    "answer": "A,B",
     "explanation": "",
     "_legacy_id": 114100060793,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第60題 → A,B"
   },
   {
     "id": "audiologist_102030_p2_61",
@@ -46109,11 +46121,13 @@
       "C": "軟骨部與骨質部皆有分布耳垢與皮脂腺",
       "D": "成人外耳道入口之平均直徑大小約為0.7 cm"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30004144,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第1題 → B,C"
   },
   {
     "id": "audiologist_102030_p1_2",
@@ -46870,11 +46884,13 @@
       "C": "temporal discrimination",
       "D": "timbre discrimination"
     },
-    "answer": "A",
+    "answer": "A,B",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30004177,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第34題 → A,B"
   },
   {
     "id": "audiologist_102030_p1_35",
@@ -47260,11 +47276,13 @@
       "C": "成年女性的F0比小孩的F0高",
       "D": "體型較小者的F0,比體型高大者的F0高"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30004193,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第51題 → A,C"
   },
   {
     "id": "audiologist_102030_p1_52",
@@ -51126,11 +51144,13 @@
       "C": "男性居多",
       "D": "純音聽力檢查結果異常"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30004582,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第59題 → 送分"
   },
   {
     "id": "audiologist_102030_p6_60",
@@ -51587,11 +51607,13 @@
       "C": "靠影片或動畫獨自學習的效果十分有限",
       "D": "學習手語較不需要其他人的回饋或情緒上的支持"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30004602,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第79題 → D"
   },
   {
     "id": "audiologist_102030_p6_80",
@@ -51680,11 +51702,13 @@
       "C": "語音的清晰度主要決定於子音",
       "D": "發音方法的線索主要由高頻率攜帶"
     },
-    "answer": "D",
+    "answer": "B,D",
     "explanation": "",
     "exam_type": "high",
     "_legacy_id": 30004455,
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第3題 → B,D"
   },
   {
     "id": "audiologist_102030_p5_4",

@@ -35425,8 +35425,11 @@
         "C": "直腸、尿道產品需檢查綠膿桿菌和黴菌",
         "D": "直腸、尿道產品需檢查綠膿桿菌和酵母菌"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第16題 → A,B"
     },
     {
       "id": 115023416,
@@ -38456,9 +38459,11 @@
         "C": "桃園市政府文化局",
         "D": "國家通訊傳播委員會"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第6題 → A,B"
     },
     {
       "id": 115024196,
@@ -41775,9 +41780,11 @@
         "C": "無論有無糖尿病，angiotensin-converting enzyme inhibitors均有保護腎臟的效果",
         "D": "CKD病人不須限制蛋白質的攝取量，以免營養不良"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第34題 → B,C"
     },
     {
       "id": 115024144,
@@ -43081,9 +43088,11 @@
         "C": "藥事法",
         "D": "藥劑生公會全聯會決議"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第16題 → A,C"
     },
     {
       "id": 115023786,
@@ -47201,9 +47210,11 @@
         "C": "新成分新藥許可證核發之日起5年後，其他藥商得依本法及相關法規有關藥品查驗登記審查之規定提出同成分、同劑型、同 劑量及同單位含量藥品之查驗登記申請，符合規定者，得於新成分新藥許可證核發屆滿5年之翌日起發給藥品許可證",
         "D": "新藥專利權不及於藥商申請查驗登記前所進行之研究、教學或試驗"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第2題 → B,C"
     },
     {
       "id": 115023982,
@@ -47748,9 +47759,11 @@
         "C": "輸入藥品其製造廠之廠名及廠址之籤條，得委託國內符合藥品優良製造規範之藥廠執行",
         "D": "以塑膠為包裝容器之大型輸注液，應於容器上標示其與藥品接觸之材質名稱"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第28題 → 送分"
     },
     {
       "id": 115024008,
@@ -50017,9 +50030,11 @@
         "C": "與dexamethasone合併用於止吐時，dexamethasone的口服劑量須減少",
         "D": "可用於孩童"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第6題 → C,D"
     },
     {
       "id": 115023906,
@@ -50564,9 +50579,11 @@
         "C": "糖尿病、高血壓及腎絲球腎炎是最常見CKD的起始因子（initiation factors）",
         "D": "除了糖尿病、高血壓及蛋白尿之外，吸菸及肥胖也是CKD的進展因子（progression factors）"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第32題 → A,B"
     },
     {
       "id": 115023932,
@@ -59541,9 +59558,11 @@
         "C": "infliximab",
         "D": "etanercept"
       },
-      "answer": "D",
+      "answer": "A,B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第58題 → A,B,D"
     },
     {
       "id": 115020805,
@@ -60024,9 +60043,11 @@
         "C": "10ppm",
         "D": "20ppm"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第2題 → C"
     },
     {
       "id": 115021038,
@@ -60085,9 +60106,11 @@
         "C": "製造、輸入之中藥材，需符合臺灣中藥典第二版之規定",
         "D": "申請新成分新藥查驗登記，得免附出產國許可製售證明及採用證明"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第5題 → 送分"
     },
     {
       "id": 115021041,
@@ -61226,9 +61249,11 @@
         "C": "remophor",
         "D": "polyethylene glycol"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第12題 → A,D"
     },
     {
       "id": 115020889,
@@ -64318,9 +64343,11 @@
         "C": "食品之境外管理作業",
         "D": "防疫藥物、生物製劑之供應"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第6題 → B,D"
     },
     {
       "id": 115021249,
@@ -64659,9 +64686,11 @@
         "C": "以劣藥處以罰鍰",
         "D": "以偽藥罪處3年以下有期徒刑"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第23題 → A,B"
     },
     {
       "id": 115021266,
@@ -66177,9 +66206,11 @@
         "C": "衛生福利部食品藥物管理署",
         "D": "衛生福利部中央健康保險署"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第49題 → B,C"
     },
     {
       "id": 115021132,
@@ -66358,9 +66389,11 @@
         "C": "每日4次以上",
         "D": "每日5次以上"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第58題 → 送分"
     },
     {
       "id": 115021141,
@@ -76303,9 +76336,11 @@
         "C": "①②",
         "D": "③④"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第54題 → B,C"
     },
     {
       "id": 115021632,
@@ -114521,8 +114556,10 @@
         "C": "產品標籤、仿單及包裝設計稿樣",
         "D": "最近二年內出具之出產國許可製售證明"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第42題 → 送分"
     },
     {
       "id": "113090_2_43",
@@ -114978,8 +115015,10 @@
         "C": "Class 10,000每m3中≧0.5 μm粒子的最大數為352,000",
         "D": "Class 10,000每m3中≧5 μm粒子的最大數為2,900"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "B,D",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第16題 → B,D"
     },
     {
       "id": "113090_17",
@@ -116652,8 +116691,10 @@
         "C": "首選藥品為β-blockers",
         "D": "首選藥品為loop diuretics"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第24題 → A,B"
     },
     {
       "id": "113090_1_25",
@@ -116710,8 +116751,10 @@
         "C": "ticagrelor本身即為活性藥品,不需要經由肝臟代謝成活性物",
         "D": "ticagrelor不得使用於曾有顱內出血病史的病人"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "A,B",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第27題 → A,B"
     },
     {
       "id": "113090_1_28",
@@ -131615,8 +131658,10 @@
         "C": "medium-dose budesonide",
         "D": "high-dose budesonide併用formoterol"
       },
-      "answer": "C",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第15題 → 送分"
     },
     {
       "id": "115090_1_16",

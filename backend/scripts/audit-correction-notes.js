@@ -29,23 +29,14 @@ const fileOf = e => (e === 'doctor1' ? 'questions.json' : `questions-${e}.json`)
 const FW = { 'Ａ': 'A', 'Ｂ': 'B', 'Ｃ': 'C', 'Ｄ': 'D', 'Ｅ': 'E' };
 const half = s => String(s).replace(/[ＡＢＣＤＥ]/g, c => FW[c]);
 
-/** 從備註文字抓出「第N題 → 哪些答案給分」。 */
-function parseRemarks(text) {
-  const out = {};
-  const t = half(String(text || '')).replace(/\s+/g, '');
-  // 「第N題答B或D或BD者均給分」「第N題，答C給分」「第N題一律給分」
-  const re = /第(\d{1,3})題[，,]?([^第]{0,120}?給分)/g;
-  let m;
-  while ((m = re.exec(t))) {
-    const n = +m[1];
-    const body = m[2];
-    if (/一律給分|均給分.*送分|送分/.test(body) && !/[A-E]/.test(body)) { out[n] = '送分'; continue; }
-    // 單一字母的組合（BD、ABD）不另外算，字母集合就是答案集合
-    const letters = [...new Set((body.match(/[A-E]/g) || []))].sort();
-    if (letters.length) out[n] = letters.join(',');
-  }
-  return out;
-}
+/*
+ * 備註的解析**只有一份**，在 fetch-session-corrections.js。
+ * 原本這裡自己寫了一份，兩份判斷不一樣：
+ *   「第65題除未作答者不給分外，其餘均給分」
+ * 這裡的版本要求出現「一律給分」或字母才算數，於是這一筆被當成「更正卷沒提這一題」，
+ * 另一支卻正確地當成送分 —— 同一份 PDF 兩個答案，稽核就失去意義。
+ */
+const { parseRemark: parseRemarks } = require('./fetch-session-corrections');
 
 (async () => {
   const groups = {};
@@ -80,8 +71,13 @@ function parseRemarks(text) {
       const want = remarks[+q.number];
       const note = String(q.correction_note);
       if (!want) { bad.push(`✗ ${k} #${q.number}  更正卷沒提這一題，註記卻說「${note.slice(0, 32)}」`); continue; }
+      // 「答A、B、C、D給分」＝一律給分，題庫存「送分」。兩邊要用同一套寫法比，
+      // 否則 26 筆正確的資料會被報成不符。
+      const opts = Object.keys(q.options || {});
+      const norm = (want !== '送分' && opts.length && want.split(',').length === opts.length
+        && opts.every(k => want.split(',').includes(k))) ? '送分' : want;
       const cur = String(q.answer || '');
-      if (cur !== want) bad.push(`△ ${k} #${q.number}  更正卷：${want}｜題庫 answer=${cur}｜註記「${note.slice(0, 32)}」`);
+      if (cur !== norm) bad.push(`△ ${k} #${q.number}  更正卷：${norm}｜題庫 answer=${cur}｜註記「${note.slice(0, 32)}」`);
     }
   }
   console.log(`對過 ${checked} 筆註記｜抓不到更正卷 ${noSheet} 筆\n`);

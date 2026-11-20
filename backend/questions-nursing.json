@@ -17488,9 +17488,11 @@
       "C": "代謝性鹼中毒合併呼吸性部分代償",
       "D": "代謝性鹼中毒合併呼吸性完全代償"
     },
-    "answer": "A",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第54題 → 送分"
   },
   {
     "id": 114312,
@@ -20113,9 +20115,11 @@
       "C": "囊狀帶（zona fasciculata）",
       "D": "絲狀帶（zona glomerulosa）"
     },
-    "answer": "D",
+    "answer": "C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第25題 → C"
   },
   {
     "id": 114126,
@@ -24902,9 +24906,11 @@
       "C": "呼吸時有吸吮的聲音",
       "D": "呼吸時胸廓出現逆行性呼吸運動（Paradoxical respiration）"
     },
-    "answer": "A",
+    "answer": "A,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第23題 → A,C"
   },
   {
     "id": 117500,
@@ -25113,9 +25119,11 @@
       "C": "常侵犯手肘後方",
       "D": "皮膚斑塊會有搔癢感"
     },
-    "answer": "C",
+    "answer": "B,C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第33題 → B,C"
   },
   {
     "id": 117510,
@@ -27255,9 +27263,11 @@
       "C": "先以優碘溶液清洗後再取樣",
       "D": "不要作任何傷口清洗，直接取樣"
     },
-    "answer": "D",
+    "answer": "A,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第55題 → A,D"
   },
   {
     "id": 117452,
@@ -28307,9 +28317,11 @@
       "C": "180",
       "D": "270"
     },
-    "answer": "B",
+    "answer": "D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第25題 → D"
   },
   {
     "id": 117343,
@@ -202580,9 +202592,11 @@
       "C": "扁平骨",
       "D": "不規則骨"
     },
-    "answer": "D",
+    "answer": "C,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第6題 → C,D"
   },
   {
     "id": 114100020563,
@@ -203652,9 +203666,11 @@
       "C": "cholesterol absorption inhibitors",
       "D": "statins"
     },
-    "answer": "D",
+    "answer": "C,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第57題 → C,D"
   },
   {
     "id": 114100020614,
@@ -204556,9 +204572,11 @@
       "C": "②③",
       "D": "③④"
     },
-    "answer": "A",
+    "answer": "B",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第20題 → B"
   },
   {
     "id": 114100020657,
@@ -206573,9 +206591,11 @@
       "C": "慢性貧血病人使用，可降低心臟負荷",
       "D": "輸注1 單位PRBC，可使Hb 上升2 gm/dL"
     },
-    "answer": "A",
+    "answer": "A,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第36題 → A,D"
   },
   {
     "id": 114100020753,
@@ -206637,9 +206657,11 @@
       "C": "依醫囑給病人阿斯匹靈，以控制體溫和畏寒",
       "D": "依醫囑給病人軟便劑，以預防發生便秘"
     },
-    "answer": "D",
+    "answer": "B,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第39題 → B,D"
   },
   {
     "id": 114100020756,
@@ -207016,9 +207038,11 @@
       "C": "依醫囑給予止痛劑",
       "D": "通知醫師有大量氣泡自胸管引流出"
     },
-    "answer": "C",
+    "answer": "C,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第57題 → C,D"
   },
   {
     "id": 114100020774,
@@ -207500,9 +207524,11 @@
       "C": "第三級",
       "D": "第四級"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第80題 → C"
   },
   {
     "id": 114100020797,
@@ -209013,9 +209039,11 @@
       "C": "高張性脫水",
       "D": "輕度脫水"
     },
-    "answer": "C",
+    "answer": "B",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第72題 → B"
   },
   {
     "id": 114100020869,
@@ -210842,9 +210870,11 @@
       "C": "胸主動脈",
       "D": "迷走神經"
     },
-    "answer": "D",
+    "answer": "A,D",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第1題 → A,D"
   },
   {
     "id": 114100020956,
@@ -216324,9 +216354,11 @@
       "C": "母乳的維生素D 比配方奶粉低",
       "D": "母乳中的乳清蛋白比配方奶粉高"
     },
-    "answer": "C",
+    "answer": "送分",
     "explanation": "",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第26題 → 送分"
   },
   {
     "id": 114100021217,

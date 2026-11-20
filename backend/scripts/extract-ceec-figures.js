@@ -76,12 +76,16 @@ function capsOf(pages) {
   const sub = new RegExp('^([圖表])\\s*' + FIGNO + '\\s*[a-zA-Z]\\s*$');
   // 第四種：「表2 某項疾病盛行率（罹病人口的百分比）」—— 編號後面直接接標題、沒有冒號。
   // 這種跟題幹的開頭長得一樣（「表1 中的平均距離、質量、公轉週期…」），所以**只靠版面分**：
-  //   圖說是置中的短行（x ≥ 150、長度 ≤ 24 字），題幹是貼左邊界的長行。
+  //   圖說是置中的行（x ≥ 150），題幹是貼左邊界的長行。
+  //   ⚠️ 長度上限原本是 24 字，太緊：學測參考卷社會的
+  //   「圖6 不同年齡世代在家裡最常說的語言（2013 年調查）」是 28 字，
+  //   整個題組（#40~#43）因此定位不到圖。擋題幹的其實是 x ≥ 150 那一條
+  //   （題幹與它的接續行都貼左邊界），長度只是第二道，放寬到 40 字。
   const loose = new RegExp('^([圖表])\\s*' + FIGNO + '\\s');
   const out = [];
   pages.forEach((ls, pg) => ls.forEach(l => {
     const t = l.t.trim();
-    const looseOk = loose.test(t) && l.x >= 150 && t.length <= 24;
+    const looseOk = loose.test(t) && l.x >= 150 && t.length <= 40;
     const shape = pure.test(t) ? '純編號' : sub.test(t) ? '子圖'
       : titled.test(t) ? '編號加標題' : looseOk ? '編號加標題(無冒號)' : null;
     if (!shape) return;
@@ -148,7 +152,10 @@ async function pdfFor(exam, year, tag) {
 
       // 「嵌入圖片」這條路為什麼沒走成 —— 分開計數才知道要往哪裡調
       const figWhy = stats.figWhy || (stats.figWhy = {});
-      const bumpFig = w => { figWhy[w] = (figWhy[w] || 0) + 1; };
+      // 理由也存成 lastFig，CEEC_DEBUG 印單題時才知道是卡在哪一條
+      // （只看彙總的 figWhy 永遠對不回具體哪一題）
+      let lastFig = null;
+      const bumpFig = w => { figWhy[w] = (figWhy[w] || 0) + 1; lastFig = w; };
 
       // 逐頁收行；同時收「嵌入圖片區塊」（'preserve-images' 才會吐 type!=='text'）
       const pages = [];
@@ -161,8 +168,15 @@ async function pdfFor(exam, year, tag) {
           // 誤用會讓面積退成 1、每頁都被判成掃描檔（extract-missing-figures 踩過）
           const bnd = pageObj.getBounds();
           const area = (bnd && bnd.length === 4) ? Math.abs((bnd[2] - bnd[0]) * (bnd[3] - bnd[1])) : 0;
+          /*
+           * 門檻改成**看面積**。原本是 w>50 && h>40，一張圖被切成好幾塊時
+           * 細長的那幾塊會整個消失：學測 102 自然 #16 的五連圖，
+           * 「(戊)收集氫氣」那塊是 49x77（寬差 1pt）、另一塊 109x40（高差 1pt），
+           * 兩塊都被濾掉，補出來的圖少了戊 —— 而選項正在問甲戊／乙戊／丁戊。
+           * 小圓點、圖例色塊（7x7、63x10）仍然會被面積門檻擋掉。
+           */
           const bs = (si.blocks || []).filter(b => b.type && b.type !== 'text' && b.bbox
-            && b.bbox.w > 50 && b.bbox.h > 40);
+            && b.bbox.w >= 24 && b.bbox.h >= 24 && b.bbox.w * b.bbox.h >= 1500);
           const scanned = area > 0 && bs.some(b => (b.bbox.w * b.bbox.h) > area * 0.6);
           if (!scanned) for (const b of bs) figBlocks.push({ pg, x: b.bbox.x, y: b.bbox.y, w: b.bbox.w, h: b.bbox.h });
         } catch { /* 這頁抽不出圖，走其他定位方式 */ }
@@ -176,10 +190,37 @@ async function pdfFor(exam, year, tag) {
         ls.sort((a, b) => a.y - b.y || a.x - b.x);
         pages.push(ls);
       }
-      // 題號行：「5.」開頭且在左邊界
+      /*
+       * 題組範圍直接從卷上抓：大考中心每個題組前面都印一行「27-28為題組」
+       * （也有「15-16題為題組」的寫法）。
+       *
+       * 原本是拿題庫裡【題組情境】的前 60 字當分組依據，**那會分不出組** ——
+       * 情境短的時候前 60 字已經吃到各小題自己的題目文字：
+       *   #27「…進士人數統計圖：\n\n根據圖中不同地區第一期…」
+       *   #28「…進士人數統計圖：\n\n比較圖中第一期和第二期…」
+       * 前 60 字不相等 → 每題自己一組 → 下界取到下一小題的題號，
+       * 把題組共用的圖切掉（分科 112 歷史 #27/#28 的進士人數統計圖）。
+       * 卷上那一行是原始資料，比我們存的題幹可靠。
+       */
+      const groupRanges = [];
+      pages.forEach(ls => ls.forEach(l => {
+        const m = /^(\d{1,3})\s*[-－~～—]\s*(\d{1,3})\s*題?\s*為題組/.exec(l.t.trim());
+        if (m && +m[2] > +m[1] && +m[2] - +m[1] <= 12) groupRanges.push([+m[1], +m[2]]);
+      }));
+
+      /*
+       * 題號行：「5.」開頭且在左邊界。
+       *
+       * ⚠️ 點後面不能再接數字 —— **圖裡的百分比標籤會被當成題號**。
+       * 參考卷社會圖6 的長條圖上標著「32.6%」（x=111，貼左邊界），
+       * 於是多出一個「第 32 題」，上界被壓到 y=418，整張圖的上半截
+       * （57.3%、43.6% 那兩根長條與「華語」圖例）全被裁掉。
+       * 同一份卷的「43.6%」「23.2%」也都中招。
+       * 這個護欄在這支腳本的表格那一段早就有了，題號行這裡漏掉。
+       */
       const heads = [];
       pages.forEach((ls, pg) => ls.forEach(l => {
-        const m = /^(\d{1,3})\s*[.、]/.exec(l.t.trim());
+        const m = /^(\d{1,3})\s*[.、](?!\d)/.exec(l.t.trim());
         if (m && l.x < 120) heads.push({ pg, y: l.y, h: l.h, n: +m[1] });
       }));
 
@@ -188,7 +229,40 @@ async function pdfFor(exam, year, tag) {
         const n = +q.number;
         const head = heads.find(h => h.n === n);
         if (!head) { bump('PDF 裡定位不到題號'); continue; }
-        const nextHead = heads.find(h => (h.pg > head.pg) || (h.pg === head.pg && h.y > head.y + 5));
+        /*
+         * 題組的判定要在算下界之前做 —— 題組共用的圖是跨小題的，
+         * 用「下一個題號」當下界會把圖切斷。
+         * 分科 112 歷史 #27/#28 的進士人數統計圖：圖塊 y=519~686，
+         * #27 的題號在 537、#28 在 600，下界取 600 → 圖的 y+h=686 超出範圍，
+         * 整組被判「有圖但不在這題的 y 範圍內」。
+         */
+        const groupNums = new Set();          // 同一題組的所有題號
+        let firstGroupN = null;
+        const range = groupRanges.find(([a, b]) => n >= a && n <= b);
+        if (range) {
+          for (let k = range[0]; k <= range[1]; k++) groupNums.add(k);
+          firstGroupN = range[0];
+        }
+        // 卷上沒印題組行時（有些年份的英文閱讀沒印），退回題庫的【題組情境】比對
+        const hasCtx = /^【題組情境】/.test(String(q.question || ''));
+        if (!range && hasCtx) {
+          // 情境段與各小題的題目文字之間是空行，所以**最後一個空行之前**才是情境。
+          // 用前 60 字會分不出組（見上面 groupRanges 的說明）。
+          const ctxOf = x => {
+            const t = String(x.question || '');
+            const i = t.lastIndexOf('\n\n');
+            return i > 0 ? t.slice(0, i) : t;
+          };
+          const mine = ctxOf(q);
+          const sameGroup = arr.filter(x => x && x.exam_code === q.exam_code
+            && x.subject === q.subject && ctxOf(x) === mine);
+          for (const x of sameGroup) groupNums.add(+x.number);
+          firstGroupN = Math.min(...sameGroup.map(x => +x.number));
+        }
+        const ctx = range || hasCtx ? true : null;
+        // 下界＝本題之後第一個**不屬於同題組**的題號
+        const nextHead = heads.find(h => ((h.pg > head.pg) || (h.pg === head.pg && h.y > head.y + 5))
+          && !groupNums.has(h.n));
         const ls = pages[head.pg];
         const yTop = head.y, yBot = (nextHead && nextHead.pg === head.pg) ? nextHead.y : Infinity;
         const inRange = ls.filter(l => l.y >= yTop - 2 && l.y < yBot);
@@ -208,19 +282,14 @@ async function pdfFor(exam, year, tag) {
          * 【題組情境】標記：同一組的情境文字逐字相同，取最小題號當錨點。
          */
         let anchorHead = head;
-        const groupNums = new Set();          // 同一題組的所有題號
-        const ctx = /^【題組情境】/.test(String(q.question || '')) ? String(q.question).slice(0, 60) : null;
-        if (ctx) {
-          // 要用**整卷**的題去找題組的第一小題。只看 groups[key]（待補圖的那些）
-          // 會在「第一小題已經有圖」時把錨點算到後面去，上界就延伸不到情境段。
-          const sameGroup = arr.filter(x => x && x.exam_code === q.exam_code && x.subject === q.subject
-            && String(x.question || '').slice(0, 60) === ctx);
-          for (const x of sameGroup) groupNums.add(+x.number);
-          const firstN = Math.min(...sameGroup.map(x => +x.number));
-          const fh = heads.find(h => h.n === firstN);
+        if (firstGroupN != null) {
+          const fh = heads.find(h => h.n === firstGroupN);
           if (fh && fh.pg === head.pg) anchorHead = fh;
         }
-        const prevHead = [...heads].reverse().find(h => h.pg === anchorHead.pg && h.y < anchorHead.y - 5);
+        // 往上退要跳過**同一題組的小題** —— 題組共用的圖印在情境段裡，
+        // 停在同組的前一小題上，就把圖整個排除在搜尋範圍外了。
+        const prevHead = [...heads].reverse().find(h => h.pg === anchorHead.pg
+          && h.y < anchorHead.y - 5 && !groupNums.has(h.n));
         /*
          * ⚠️ 原本只有「不是題組第一小題」才往上退。但題組的圖就印在情境段裡，
          *   也就是**第一小題題號的上方** —— 第一小題自己反而永遠搜不到那張圖
@@ -393,7 +462,15 @@ async function pdfFor(exam, year, tag) {
               const t = l.t.trim();
               const solid = (t.match(/[㐀-鿿぀-ヿ]/g) || []).length
                 + (t.match(/[A-Za-z]/g) || []).length;
-              if (solid > 12) return l.y + (l.h || 12) + 4;
+              /*
+               * 「有 12 個以上的實字就算正文」會把**圖例**當成正文。
+               * 參考卷社會圖6 的圖例「客語、原住民族語及其他語言」是 13 個字，
+               * top 於是停在圖例上，長條圖的上半截（57.3%、43.6%、華語那一列）
+               * 整個被裁掉。
+               * 正文的特徵是**貼左邊界**；圖例、座標標籤縮在圖自己那一欄裡。
+               * 右欄真的有正文時（並排版型）通常也長得多，所以留一條 25 字的後路。
+               */
+              if (solid > 12 && (l.x < 150 || solid > 25)) return l.y + (l.h || 12) + 4;
             }
             return 0;
           };
@@ -487,21 +564,56 @@ async function pdfFor(exam, year, tag) {
          *   4. 題幹沒指名編號時，圖的正下方也不能有別的圖說編號
          */
         if (!box) {
+          lastFig = null;
+          let merged = false;   // 這題的圖是由好幾個圖塊合起來的
           // searchTop 已在上面算好（題組會延伸到前一個題號，一般題就是本題題號）
           const onPage = figBlocks.filter(g => g.pg === head.pg);
           const inQ = onPage.filter(g => g.y >= searchTop - 2
             && g.y + g.h <= (yBot === Infinity ? 1e9 : yBot) + 2);
           if (!onPage.length) bumpFig('該頁沒有嵌入圖片區塊');
           else if (!inQ.length) bumpFig('有圖但不在這題的 y 範圍內');
-          else if (inQ.length > 1) bumpFig(`這題範圍內有 ${inQ.length} 塊圖，分不清`);
+          /*
+           * 範圍內不只一塊圖時原本直接放棄。但實測這些**幾乎都是同一張圖被切成
+           * 好幾塊**（實驗器材四連圖、分子模型五連圖、圖＋圖例），不是「好幾題的
+           * 圖混在一起」—— 跨題的情況下面的 spans 已經擋掉了。改成合併成外接矩形。
+           *
+           * ⚠️ 合併要有上限，否則整頁散落的圖塊合起來就變成「裁整頁」：
+           *   只合併彼此靠得夠近的（垂直間距 ≤ 60pt），合完高度不能超過 480pt。
+           *   裁壞了還有後面三道閘（太小／空白／太扁）擋著。
+           */
+          else if (inQ.length > 1) {
+            const sorted = [...inQ].sort((a, b) => a.y - b.y);
+            const cluster = [sorted[0]];
+            for (let i = 1; i < sorted.length; i++) {
+              const prevBot = Math.max(...cluster.map(g => g.y + g.h));
+              if (sorted[i].y - prevBot <= 60) cluster.push(sorted[i]);
+            }
+            const top = Math.min(...cluster.map(g => g.y));
+            const bot = Math.max(...cluster.map(g => g.y + g.h));
+            if (cluster.length < 2 || bot - top > 480) bumpFig(`這題範圍內有 ${inQ.length} 塊圖，分不清`);
+            else {
+              merged = true;
+              inQ.splice(0, inQ.length, {
+                pg: cluster[0].pg, y: top, h: bot - top,
+                x: Math.min(...cluster.map(g => g.x)),
+                w: Math.max(...cluster.map(g => g.x + g.w)) - Math.min(...cluster.map(g => g.x)),
+              });
+            }
+          }
           // 這條路一次只能認一塊圖。題目要比較好幾張（「甲圖…乙圖…」）時，
           // 掛上其中一塊等於給使用者半張圖 —— gsat 107 國文 #24 實測只裁到「乙」那格，
           // 選項卻在問甲圖與乙圖的差別。寧可不補。
-          const soloOk = !(multiFig && inQ.length === 1);
+          // 合併過的框本來就涵蓋好幾張圖，不該再被「題目要好幾張圖」擋下來
+          const soloOk = merged || !(multiFig && inQ.length === 1);
           if (!soloOk) bumpFig('題目要好幾張圖，只找到一塊');
           if (soloOk && inQ.length === 1) {
             const g = inQ[0];
-            const spans = heads.some(h => h.pg === g.pg && h.n !== n && h.y > g.y && h.y < g.y + g.h);
+            /*
+             * 題組共用的圖本來就跨自己這一組的小題（#27 的圖身蓋過 #28 的題號），
+             * 把同組題號算成「別題」會讓整組都補不到圖。
+             */
+            const spans = heads.some(h => h.pg === g.pg && h.n !== n && !groupNums.has(h.n)
+              && h.y > g.y && h.y < g.y + g.h);
             // 圖的正下方 24pt 內的圖說
             const near = capsOf(pages).filter(c => c.pg === g.pg
               && c.y >= g.y + g.h - 6 && c.y <= g.y + g.h + 24
@@ -528,7 +640,39 @@ async function pdfFor(exam, year, tag) {
                 x0 = Math.min(x0, l.x - 4);
                 x1 = Math.max(x1, l.x + (l.w || 0) + 4);
               }
-              box = { left: Math.max(0, x0), top: Math.max(0, g.y - 6), height: g.h + 12, page: g.pg, right: x1 };
+              /*
+               * 下緣也要處理，而且是兩件相反的事：
+               *
+               * 1. **圖的標籤在圖塊外面**。實驗器材四連圖的「(甲)傾倒液體入量筒
+               *    (乙)向試管裡放入粉末…」排在圖塊下方 1~4pt，照 bbox 裁會把這行
+               *    切成兩半 —— 題目問的正是甲乙丙丁哪個操作正確，標籤看不清就等於沒補。
+               * 2. **下一行正文不能裁進來**。學測 104 自然 #54 的圖塊下面就是
+               *    「下列哪些屬於醛類化合物？」，+12pt 的邊距剛好吃到它的上半截。
+               *
+               * 分法：短行（≤ 20 字）且橫向落在圖的範圍內 → 是圖的標籤，整行收進來；
+               * 其他 → 是正文，下緣停在它上面。
+               */
+              let yb = g.y + g.h;
+              let stop = Infinity;
+              for (const l of (pages[g.pg] || [])) {
+                if (l.y < g.y + g.h - 2 || l.y > g.y + g.h + 16) continue;
+                const t = l.t.trim();
+                if (!t) continue;
+                const label = t.length <= 20 && !/^\(?[A-E][).]/.test(t) && !/^\d{1,3}\s*[.、．]/.test(t)
+                  && l.x + (l.w || 0) >= x0 - 20 && l.x <= x1 + 20;
+                if (label) {
+                  yb = Math.max(yb, l.y + (l.h || 12) + 2);
+                  // 標籤常常比圖本身還寬（「(甲)傾倒液體入量筒」從 x=61 起，
+                  // 圖塊卻從 x=72 起），左右界沒跟著撐開就會把「(甲」切掉
+                  x0 = Math.min(x0, l.x - 4);
+                  x1 = Math.max(x1, l.x + (l.w || 0) + 4);
+                } else stop = Math.min(stop, l.y - 2);
+              }
+              const bottom = Math.min(Math.max(yb, g.y + g.h + 6), stop);
+              box = {
+                left: Math.max(0, x0), top: Math.max(0, g.y - 6),
+                height: Math.max(20, bottom - Math.max(0, g.y - 6)), page: g.pg, right: x1,
+              };
               mode = '嵌入圖片';
             }
           }
@@ -545,7 +689,9 @@ async function pdfFor(exam, year, tag) {
             console.log(`  × ${exam} ${year} ${tag} #${n}  指名 ${ref ? ref[1] + refN : '（沒指名）'}` +
               `  題號 p${head.pg} y${Math.round(head.y)}  searchTop ${Math.round(searchTop)}` +
               `  同號圖說 ${cs.map(c => `p${c.pg} x${Math.round(c.x)} y${Math.round(c.y)}`).join(' / ') || '無'}` +
-              `  ${ctx ? '題組' : ''}`)
+              `  ${ctx ? '題組' : ''}` +
+              `  圖塊路：${lastFig || '-'}  yBot ${yBot === Infinity ? '∞' : Math.round(yBot)}` +
+              `  本頁圖塊 ${figBlocks.filter(g => g.pg === head.pg).map(g => `y${Math.round(g.y)}+${Math.round(g.h)}`).join(',') || '無'}`)
           }
           bump(refN ? '題幹指名的圖說找不到' : '沒有圖說可定位'); continue;
         }
@@ -583,6 +729,12 @@ async function pdfFor(exam, year, tag) {
         // 檔名用科目 tag 不用中文科目名：圖片路徑會直接進 URL，
         // 中文檔名得靠瀏覽器／CDN 編碼一致才不會 404，沒必要冒這個險。
         const name = `${exam}_${year}_${tag}_q${n}_fig.webp`;
+        // 成功的也要印得出來 —— 只印失敗的話，「補到了但裁壞了」完全看不出是哪一步算的
+        if (process.env.CEEC_DEBUG) {
+          console.log(`  ✓ ${exam} ${year} ${tag} #${n}  ${mode}  p${box.page != null ? box.page : head.pg}` +
+            `  left ${Math.round(box.left)} top ${Math.round(box.top)} h ${Math.round(box.height)}` +
+            ` right ${box.right != null ? Math.round(box.right) : '-'}`);
+        }
         if (!APPLY) { stats.made++; continue; }
         try {
           const page = doc.loadPage(box.page != null ? box.page : head.pg);

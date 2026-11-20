@@ -98872,12 +98872,14 @@
         "C": "頭昏",
         "D": "尿失禁"
       },
-      "answer": "B",
+      "answer": "B,C",
       "valid_answers": [
         "B",
         "C"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正答案卷：第29題 → B,C"
     },
     {
       "id": "110020_30",
@@ -99323,7 +99325,7 @@
       "answer": "A",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第52題一律給分（原答案 A）"
+      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第52題一律給分（原答案 A）"
     },
     {
       "id": "110020_53",
@@ -108018,11 +108020,14 @@
         "C": "penicillin",
         "D": "erythromycin"
       },
-      "answer": "D",
+      "answer": "B,D",
       "valid_answers": [
         "B",
         "D"
-      ]
+      ],
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正答案卷：第6題 → B,D"
     },
     {
       "id": "111020_7",
@@ -108633,7 +108638,7 @@
       "answer": "D",
       "disputed": true,
       "original_answer": "D",
-      "correction_note": "第38題更正為 B,C（原答案 D）",
+      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第38題更正為 B,C（原答案 D）",
       "isMultiAnswer": true
     },
     {
@@ -108767,10 +108772,13 @@
         "C": "tamoxifen 療效減弱、tolterodine 副作用增加",
         "D": "tamoxifen 療效減弱、tolterodine 副作用降低"
       },
-      "answer": "A",
+      "answer": "C",
       "valid_answers": [
         "C"
-      ]
+      ],
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正答案卷：第45題 → C"
     },
     {
       "id": "111020_46",
@@ -113507,10 +113515,10 @@
         "C": "articaine",
         "D": "prilocaine"
       },
-      "answer": "C,D",
+      "answer": "D",
       "disputed": true,
       "original_answer": "D",
-      "correction_note": "第47題更正為 C,D（原答案 D）",
+      "correction_note": "⚠這一卷沒有更正卷：第47題更正為 C,D（原答案 D）",
       "isMultiAnswer": true
     },
     {
@@ -113947,7 +113955,7 @@
       ],
       "disputed": true,
       "original_answer": "B",
-      "correction_note": "第68題更正為 B（原答案 B）"
+      "correction_note": "⚠這一卷沒有更正卷：第68題更正為 B（原答案 B）"
     },
     {
       "id": "111100_69",
@@ -117764,10 +117772,10 @@
         "C": "risperidone",
         "D": "quetiapine"
       },
-      "answer": "A,D",
+      "answer": "A",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第25題更正為 A,D（原答案 A）",
+      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第25題更正為 A,D（原答案 A）",
       "isMultiAnswer": true
     },
     {
@@ -118015,10 +118023,10 @@
         "C": "phenobarbital",
         "D": "secobarbital"
       },
-      "answer": "A,C",
+      "answer": "C",
       "disputed": true,
       "original_answer": "C",
-      "correction_note": "第38題更正為 A,C（原答案 C）",
+      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第38題更正為 A,C（原答案 C）",
       "isMultiAnswer": true
     },
     {
@@ -118174,14 +118182,16 @@
         "C": "vortioxetine",
         "D": "lorcaserin"
       },
-      "answer": "D",
+      "answer": "送分",
       "valid_answers": [
         "A",
         "B",
         "C",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正答案卷：第46題 → 送分"
     },
     {
       "id": "112020_47",
@@ -122567,7 +122577,7 @@
       "answer": "A",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第29題更正為 B,C（原答案 A）",
+      "correction_note": "⚠這一卷沒有更正卷：第29題更正為 B,C（原答案 A）",
       "isMultiAnswer": true
     },
     {
@@ -127289,7 +127299,7 @@
       "answer": "B",
       "disputed": true,
       "original_answer": "B",
-      "correction_note": "第32題更正為 A,D（原答案 B）",
+      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第32題更正為 A,D（原答案 B）",
       "isMultiAnswer": true
     },
     {
@@ -127404,12 +127414,14 @@
         "C": "saw palmetto",
         "D": "St. John's wort"
       },
-      "answer": "B",
+      "answer": "B,D",
       "valid_answers": [
         "B",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正答案卷：第38題 → B,D"
     },
     {
       "id": "113020_39",
@@ -131681,10 +131693,10 @@
         "C": "抑制angiotensin converting enzyme同時抑制kallikrein活性,造成bradykinin, substance P累積所致",
         "D": "抑制angiotensin converting enzyme同時抑制kininogen代謝,造成bradykinin, prostaglandin累積所致"
       },
-      "answer": "A,B",
+      "answer": "A",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第17題更正為 A,B（原答案 A）",
+      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第17題更正為 A,B（原答案 A）",
       "isMultiAnswer": true
     },
     {
@@ -132612,8 +132624,10 @@
         "C": "可作用於FXR受體",
         "D": "可與insulin合併使用"
       },
-      "answer": "B",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正答案卷：第64題 → 送分"
     },
     {
       "id": "113090_65",
@@ -132831,10 +132845,10 @@
         "C": "選項 C（見圖）",
         "D": "選項 D（見圖）"
       },
-      "answer": "A,D",
+      "answer": "A",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第75題更正為 A,D（原答案 A）",
+      "correction_note": "⚠未獲更正卷佐證：⚠未獲更正卷佐證：第75題更正為 A,D（原答案 A）",
       "isMultiAnswer": true,
       "option_images": {
         "A": "/question-images/pharma1_113090_75_voptA.webp",
@@ -140557,10 +140571,10 @@
         "C": "2,000",
         "D": "4,000"
       },
-      "answer": "A",
+      "answer": "送分",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第73題一律給分（原答案 A）"
+      "correction_note": "更正答案卷：第73題 → 送分"
     },
     {
       "id": "114020_2_74",

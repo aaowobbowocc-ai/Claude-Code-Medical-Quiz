@@ -6281,7 +6281,7 @@
         "C": "HA",
         "D": "NA"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "**✅ 為什麼答案是 A**\n紓伏效（baloxavir marboxil）是一種抗流感病毒藥物，主要通過抑制病毒的 PB2 基因來發揮作用。PB2 基因負責病毒的 RNA 複製，紓伏效通過結合 PB2 基因，干擾病毒的 RNA 複製過程，從而抑制病毒的生長。\n\n**❌ 排除其他選項**\nB. M2 基因主要涉及病毒的抗藥性和藥物抵抗性，不是紓伏效的抑制對象。\nC. HA 基因負責病毒的蛋白質表現和結合宿主細胞，不是紓伏效的抑制對象。\nD. NA 基因負責病毒的糖蛋白表現和結合宿主細胞，不是紓伏效的抑制對象。\n\n**🧠 記憶關鍵字**\n\"PB2 是紓伏效的靶點\"\n\n**🏥 臨床應用**\n紓伏效的臨床應用是用於治療流感病毒感染，尤其是在抗藥性流感病毒中，具有較好的療效。",
       "valid_answers": [
         "A",
@@ -6289,7 +6289,9 @@
         "C",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正答案卷：第12題 → 送分"
     },
     {
       "id": "111020_2_13",
@@ -7031,7 +7033,7 @@
         "C": "效用極大化（utility maximization）",
         "D": "服務量極大化（service maximization）"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "**✅ 為什麼答案是 A**\n醫院的市場行為通常被視為一種生產決策過程，然而價值極大化（value maximization）並不是常見的解釋模式。這是因為醫院的決策通常受到多種因素的影響，包括社會責任、醫療需求和資源限制等，而價值極大化的模式過於簡化，忽略了這些複雜的因素。\n\n**❌ 排除其他選項**\n利潤極大化（profit maximization）是常見的解釋模式，因為醫院的經營者通常希望最大化收益。效用極大化（utility maximization）也是一種可能的解釋模式，因為醫院的決策者可能希望最大化患者的滿意度和整體效用。服務量極大化（service maximization）則是醫院為了滿足患者需求而提供服務的結果。\n\n**🧠 記憶關鍵字**\n\"價值極大化\" 的第一個字母 \"V\" 可以記住 \"Value\" 的意思，但它並不是醫院市場行為的常見模式。\n\n**🏥 臨床應用**\n了解醫院市場行為的模式對於醫療政策制定和醫院管理有重要意義，可以幫助醫療系統更有效地分配資源和提供服務。",
       "valid_answers": [
         "A",
@@ -7039,7 +7041,9 @@
         "C",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正答案卷：第49題 → 送分"
     },
     {
       "id": "111020_2_50",
@@ -9386,7 +9390,7 @@
         "C": "近端腎小管和遠端腎小管均再吸收HCO3 -",
         "D": "近端腎小管和遠端腎小管均分泌H+"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "**✅ 為什麼答案是 A**\n腎臟的酸鹼平衡功能主要是通過近端腎小管再吸收碳酸氫離子（HCO3-），遠端腎小管分泌氫離子（H+）來實現。這樣可以幫助身體維持酸鹼平衡。\n\n**❌ 排除其他選項**\nB. 錯誤，因為遠端腎小管主要是分泌氫離子，而不是再吸收碳酸氫離子。\nC. 錯誤，因為近端腎小管主要是再吸收碳酸氫離子，而不是分泌氫離子。\nD. 錯誤，因為遠端腎小管主要是分泌氫離子，而不是分泌氫離子。\n\n**🧠 記憶關鍵字**\n\"近端吸收遠端分泌\"（近端腎小管吸收碳酸氫離子，遠端腎小管分泌氫離子）。\n\n**🏥 臨床應用**\n這個機制對於診斷和治療酸中毒或鹼中毒非常重要，例如在治療代謝性酸中毒時，醫生可能會使用藥物來增加腎臟對碳酸氫離子的再吸收。",
       "valid_answers": [
         "A",
@@ -9394,7 +9398,9 @@
         "C",
         "D"
       ],
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正答案卷：第65題 → 送分"
     },
     {
       "id": "111100_1_66",
@@ -29521,7 +29527,7 @@
         "C": "(圖)",
         "D": "(圖)"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
       "valid_answers": [
         "A",
@@ -29530,14 +29536,15 @@
         "D"
       ],
       "original_answer": "D",
-      "correction_note": "第77題一律給分（原答案 D）",
+      "correction_note": "更正答案卷：第77題 → 送分",
       "image_url": "/question-images/doctor1_114020_p0_77_0.webp",
       "option_images": {
         "A": "/question-images/doctor1_114020_1_77_voptA.webp",
         "B": "/question-images/doctor1_114020_1_77_voptB.webp",
         "C": "/question-images/doctor1_114020_1_77_voptC.webp",
         "D": "/question-images/doctor1_114020_1_77_voptD.webp"
-      }
+      },
+      "disputed": true
     },
     {
       "id": "114020_1_78",

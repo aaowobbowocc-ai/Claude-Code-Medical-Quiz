@@ -2145,10 +2145,10 @@
         "C": "接受Blalock-Taussig shunt術後",
         "D": "大型的肺動脈-肺靜脈瘻管(Pulmonary arteriovenous fistula)"
       },
-      "answer": "D",
+      "answer": "送分",
       "disputed": true,
       "original_answer": "D",
-      "correction_note": "第30題一律給分（原答案 D）"
+      "correction_note": "更正答案卷：第30題 → 送分"
     },
     {
       "id": "110020_1_31",
@@ -2412,10 +2412,10 @@
         "C": "nail pitting與發生乾癬性關節病變有強烈相關性",
         "D": "oil spots是具高度專一性的乾癬指甲病變"
       },
-      "answer": "C",
+      "answer": "送分",
       "disputed": true,
       "original_answer": "C",
-      "correction_note": "第43題一律給分（原答案 C）"
+      "correction_note": "更正答案卷：第43題 → 送分"
     },
     {
       "id": "110020_1_44",
@@ -2757,10 +2757,10 @@
         "C": "lamotrigine使用可能與胎兒唇口裂(oral cleft)有關",
         "D": "carbamazepine使用與胎兒發生神經管異常有關"
       },
-      "answer": "B",
+      "answer": "送分",
       "disputed": true,
       "original_answer": "B",
-      "correction_note": "第61題一律給分（原答案 B）"
+      "correction_note": "更正答案卷：第61題 → 送分"
     },
     {
       "id": "110020_1_62",
@@ -11317,7 +11317,10 @@
         "C": "Moraxella catarrhalis",
         "D": "Staphylococcus aureus"
       },
-      "answer": "D"
+      "answer": "送分",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正答案卷：第23題 → 送分"
     },
     {
       "id": "111020_3_24",
@@ -13337,10 +13340,10 @@
         "C": "氣喘治療採階梯式治療原則",
         "D": "每一階段的治療至少要2個月以上才能考慮降階"
       },
-      "answer": "D",
+      "answer": "送分",
       "disputed": true,
       "original_answer": "D",
-      "correction_note": "第47題一律給分（原答案 D）"
+      "correction_note": "更正答案卷：第47題 → 送分"
     },
     {
       "id": "112020_48",
@@ -23034,10 +23037,10 @@
         "C": "在高血壓族群的發生率較一般族群為高",
         "D": "注射Clostridial collagenase 是非手術治療方式之一"
       },
-      "answer": "C",
+      "answer": "送分",
       "disputed": true,
       "original_answer": "C",
-      "correction_note": "第69題一律給分（原答案 C）"
+      "correction_note": "更正答案卷：第69題 → 送分"
     },
     {
       "id": "113020_2_70",
@@ -23159,10 +23162,10 @@
         "C": "脊椎或硬膜外麻醉,比全身麻醉易造成急性尿滯留",
         "D": "肛門直腸手術,比其他手術易造成急性尿滯留"
       },
-      "answer": "A",
+      "answer": "送分",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第75題一律給分（原答案 A）"
+      "correction_note": "更正答案卷：第75題 → 送分"
     },
     {
       "id": "113020_2_76",
@@ -25246,10 +25249,10 @@
         "C": "糖尿病",
         "D": "高血脂症"
       },
-      "answer": "B",
+      "answer": "送分",
       "disputed": true,
       "original_answer": "B",
-      "correction_note": "第23題一律給分（原答案 B）"
+      "correction_note": "更正答案卷：第23題 → 送分"
     },
     {
       "id": "114020_24",
@@ -29961,10 +29964,10 @@
         "C": "三叉神經(trigeminal nerve)",
         "D": "迷走神經(vagus nerve)"
       },
-      "answer": "C",
+      "answer": "送分",
       "disputed": true,
       "original_answer": "C",
-      "correction_note": "第26題一律給分（原答案 C）"
+      "correction_note": "更正答案卷：第26題 → 送分"
     },
     {
       "id": "114020_3_27",
@@ -32690,10 +32693,10 @@
         "C": "大型的主動脈到肺動脈側枝血管(major aortopulmonary collateral arteries, MAPCAs)",
         "D": "肺動脈-肺靜脈瘻管(pulmonary arteriovenous fistula)"
       },
-      "answer": "D",
+      "answer": "送分",
       "disputed": true,
       "original_answer": "D",
-      "correction_note": "第6題一律給分（原答案 D）"
+      "correction_note": "更正答案卷：第6題 → 送分"
     },
     {
       "id": "115020_1_7",
@@ -33130,10 +33133,10 @@
         "C": "目前對於自閉症的核心症狀已有很有效的藥物治療",
         "D": "自閉症約有50%病患有智能不足的問題"
       },
-      "answer": "D",
+      "answer": "送分",
       "disputed": true,
       "original_answer": "D",
-      "correction_note": "第29題一律給分（原答案 D）"
+      "correction_note": "更正答案卷：第29題 → 送分"
     },
     {
       "id": "115020_1_30",
@@ -33550,8 +33553,10 @@
         "C": "模仿檢查者使用槌子",
         "D": "用剪刀剪出一直線"
       },
-      "answer": "A",
-      "disputed": true
+      "answer": "送分",
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正答案卷：第50題 → 送分"
     },
     {
       "id": "115020_1_51",
@@ -35137,7 +35142,7 @@
         "C": "第二對鰓裂瘻管（2nd branchial fistula）",
         "D": "梨狀竇瘻管（pyriform sinus fistula）"
       },
-      "answer": "C",
+      "answer": "送分",
       "images": [
         "/question-images/doctor2_115020_2_52_0.webp",
         "/question-images/doctor2_115020_2_52_1.webp",
@@ -35149,7 +35154,7 @@
       ],
       "disputed": true,
       "original_answer": "C",
-      "correction_note": "第52題一律給分（原答案 C）",
+      "correction_note": "更正答案卷：第52題 → 送分",
       "image_dependent": true
     },
     {
@@ -39214,11 +39219,11 @@
         "C": "藥物引起急性腎小管壞死（Acute tubular necrosis）",
         "D": "泌尿道阻塞（Urinary tract obstruction）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "original_answer": "C",
-      "correction_note": "第15題一律給分（原答案 C）"
+      "correction_note": "更正答案卷：第15題 → 送分"
     },
     {
       "id": 115020476,
@@ -40689,11 +40694,11 @@
         "C": "整個肝葉都為包膜下血腫覆蓋，可能為第五級",
         "D": "總共分五級"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "original_answer": "D",
-      "correction_note": "第7題一律給分（原答案 D）"
+      "correction_note": "更正答案卷：第7題 → 送分"
     },
     {
       "id": 115020548,
@@ -49157,8 +49162,11 @@
         "C": "與逆流性咽喉炎（laryngopharyngeal reflux）相關",
         "D": "在病人的聲門下瘢痕組織中有可能檢出胃蛋白酶（pepsin）"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正答案卷：第24題 → 送分"
     },
     {
       "id": 115020965,
@@ -49277,8 +49285,11 @@
         "C": "胎盤表面經膜內胎兒血管流入（intramembranous flow across fetal vessels on the placental surface）",
         "D": "母體循環經羊膜流入（transmembranous flow across amnionic membrane）"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正答案卷：第30題 → 送分"
     },
     {
       "id": 115020971,
@@ -49881,8 +49892,11 @@
         "C": "正中神經",
         "D": "肌皮神經"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正答案卷：第60題 → 送分"
     },
     {
       "id": 115021001,
@@ -52753,11 +52767,11 @@
         "C": "針對廣泛性反覆發作的病灶，手術切除合併皮瓣重建是一個合理的治療選項",
         "D": "長期發炎的病灶會有產生鱗狀上皮細胞癌的可能"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第42題一律給分（原答案 A）"
+      "correction_note": "更正答案卷：第42題 → 送分"
     },
     {
       "id": 115021142,
@@ -52879,11 +52893,11 @@
         "C": "乙醯膽鹼（acetylcholine）",
         "D": "多巴胺（dopamine）"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "original_answer": "C",
-      "correction_note": "第48題一律給分（原答案 C）"
+      "correction_note": "更正答案卷：第48題 → 送分"
     },
     {
       "id": 115021148,
@@ -55442,11 +55456,11 @@
         "C": "當外傷或手術造成內皮細胞傷害過度時，將可能造成角膜不可逆之水腫",
         "D": "不可逆之角膜水腫造成病人視力衰退時，可考慮以角膜移植治療"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第13題一律給分（原答案 A）"
+      "correction_note": "更正答案卷：第13題 → 送分"
     },
     {
       "id": 115021273,
@@ -55605,11 +55619,11 @@
         "C": "上頜竇（maxillary sinus）的快速增長約在青春期",
         "D": "蝶竇（sphenoid sinus）是最晚開始發育且最晚完成的鼻竇"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "original_answer": "B",
-      "correction_note": "第21題一律給分（原答案 B）"
+      "correction_note": "更正答案卷：第21題 → 送分"
     },
     {
       "id": 115021281,
@@ -57072,11 +57086,11 @@
         "C": "鈣離子通道阻斷劑（calcium channel blocker）可有效降低血壓，但不應與長效硝化物（nitrate）合用， 以免發生水腫",
         "D": "dipyridamole可抑制血小板凝集，建議應常規給與"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "original_answer": "B",
-      "correction_note": "第13題一律給分（原答案 B）"
+      "correction_note": "更正答案卷：第13題 → 送分"
     },
     {
       "id": 115021353,
@@ -57911,9 +57925,11 @@
         "C": "carbimazole",
         "D": "Lugol's solution"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正答案卷：第54題 → 送分"
     },
     {
       "id": 115021394,
@@ -60375,9 +60391,11 @@
         "C": "六星期",
         "D": "三個月"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正答案卷：第15題 → 送分"
     },
     {
       "id": 115021515,
@@ -60920,8 +60938,11 @@
         "C": "放射狀疤痕（radial scar）",
         "D": "纖維腺瘤（fibroadenoma）"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正答案卷：第42題 → 送分"
     },
     {
       "id": 115021542,
@@ -62859,11 +62880,11 @@
         "C": "以遠端肌肉群（distal musculature）無力較為明顯",
         "D": "常常有疼痛（pain）的症狀"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "original_answer": "D",
-      "correction_note": "第58題一律給分（原答案 D）"
+      "correction_note": "更正答案卷：第58題 → 送分"
     },
     {
       "id": 115021638,
@@ -63062,11 +63083,11 @@
         "C": "嚼食檳榔者在手術前不易有牙關緊閉的現象",
         "D": "牙關緊閉的復健治療最好是在後期病情穩定之後再開始"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
       "disputed": true,
       "original_answer": "A",
-      "correction_note": "第68題一律給分（原答案 A）"
+      "correction_note": "更正答案卷：第68題 → 送分"
     },
     {
       "id": 115021648,

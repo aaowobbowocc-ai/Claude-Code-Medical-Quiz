@@ -148456,9 +148456,11 @@
         "C": "oncotic pressure 超過hydrostatic pressure，容易引起肺水腫",
         "D": "腎病症候群（nephrotic syndrome）或肝硬化病人，因血液中白蛋白低，故常發生肺水腫"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第17題 → 送分"
     },
     {
       "id": 115025803,
@@ -148637,9 +148639,11 @@
         "C": "女性高密度膽固醇小於50 mg/dL",
         "D": "空腹血糖大於110 mg/dL"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第26題 → A,D"
     },
     {
       "id": 115025812,
@@ -149665,9 +149669,11 @@
         "C": "立即做5 個循環的CPR，然後立刻電擊",
         "D": "因為是VF，故趕快電擊，然後做5 個循環的CPR"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第77題 → B,D"
     },
     {
       "id": 115025863,
@@ -151051,9 +151057,11 @@
         "C": "0.8 g / kg / day",
         "D": "1.5 g / kg / day"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第3題 → 送分"
     },
     {
       "id": 115025931,
@@ -151232,9 +151240,11 @@
         "C": "[此選項未提供]",
         "D": "正確。中央脊髓症候群最常見的機制是頸椎過度伸張（hyperextension）損傷，但也可能由過度屈曲（hyperflexion）損傷引起，尤其常見於老年人伴有頸椎病變者。"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第12題 → B,D"
     },
     {
       "id": 115025940,
@@ -151461,9 +151471,11 @@
         "C": "②④",
         "D": "僅④"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第23題 → A"
     },
     {
       "id": 115025951,
@@ -152802,9 +152814,11 @@
         "C": "趴姿（prone position）目前建議應用在持續血氧過低ARDS 病人",
         "D": "使用吸入性一氧化氮（Inhaled NO）目前可以應用在持續血氧過低ARDS 病人，但對於死亡率沒有影響"
       },
-      "answer": "A",
+      "answer": "A,B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第8題 → A,B,C"
     },
     {
       "id": 115026016,
@@ -152843,9 +152857,11 @@
         "C": "早期服用抗病毒藥物（如acyclovir）可降低發生疱疹後神經痛（post-herpetic neuralgia）的機率",
         "D": "口服類固醇為絕對禁忌"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第10題 → C,D"
     },
     {
       "id": 115026018,
@@ -153619,9 +153635,11 @@
         "C": "α-agonist medications",
         "D": "經陰道電刺激法（electric stimulation）"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第47題 → A,B"
     },
     {
       "id": 115026055,
@@ -153740,9 +153758,11 @@
         "C": "分期（stage）比照子宮內膜癌",
         "D": "復發時採用化學治療效果良好"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第53題 → B,C"
     },
     {
       "id": 115026061,
@@ -155121,10 +155141,12 @@
         "C": "僵直性脊椎炎合併後房葡萄膜炎（posterior uveitis）及SLE 合併視網膜病變",
         "D": "乾癬性關節炎合併鞏膜炎及僵直性脊椎炎合併前房葡萄膜炎（anterior uveitis）"
       },
-      "answer": "B",
+      "answer": "B,D",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第42題 → B,D"
     },
     {
       "id": 115026126,
@@ -155441,10 +155463,12 @@
         "C": "肋膜液白血球＞10000/mm3 應引流治療",
         "D": "肋膜液葡萄糖＜60 mg/dL 應引流治療"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第57題 → 送分"
     },
     {
       "id": 115026141,
@@ -155505,10 +155529,12 @@
         "C": "伴有智能不足",
         "D": "伴有上顎缺損"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第60題 → 送分"
     },
     {
       "id": 115026144,
@@ -156310,9 +156336,11 @@
         "C": "問她身體部位，不會用手比",
         "D": "不會說「不」"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第18題 → A,D"
     },
     {
       "id": 115026182,
@@ -157711,10 +157739,12 @@
         "C": "30 天",
         "D": "1 年"
       },
-      "answer": "C",
+      "answer": "A,B,C",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第7題 → A,B,C"
     },
     {
       "id": 115026249,
@@ -157909,10 +157939,12 @@
         "C": "頸椎",
         "D": "腰椎"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第16題 → A,B"
     },
     {
       "id": 115026258,
@@ -158134,10 +158166,12 @@
         "C": "急性心肌梗塞合併梗塞後心室中隔破裂",
         "D": "三條冠狀動脈堵塞合併心室收縮功能不良"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第26題 → A,B"
     },
     {
       "id": 115026268,
@@ -158328,10 +158362,12 @@
         "C": "此類肝腫瘤對於手術切除，無線電射頻消融（RFA）或是經動脈化學栓塞治療（TACE）都是可以考慮的治療選項",
         "D": "有些病人會出現荷爾蒙相關症狀，此時長效somatostatin analogues 會有幫助"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第35題 → A,B"
     },
     {
       "id": 115026277,
@@ -159068,10 +159104,12 @@
         "C": "有時anticholinergics 會造成排尿更困難，因為它會造成膀胱逼尿肌收縮力變較差",
         "D": "α-adrenergic blockers 常見到的副作用為姿態性低血壓及腹瀉"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第69題 → 送分"
     },
     {
       "id": 115026311,
@@ -159090,10 +159128,12 @@
         "C": "如果男孩站立時，理學檢查托起陰囊會減輕疼痛，比較像是急性副睪丸炎",
         "D": "有時不易分辨睪丸扭轉或急性副睪丸炎時，必須開刀探查"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第70題 → 送分"
     },
     {
       "id": 115026312,
@@ -160063,10 +160103,12 @@
         "C": "顫抖 (Tremor)",
         "D": "低血糖 (Hypoglycemia)"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第34題 → A,D"
     },
     {
       "id": 115026356,
@@ -160263,10 +160305,12 @@
         "C": "快速生長（height spurt）",
         "D": "初經（menarche）"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第43題 → B,C"
     },
     {
       "id": 115026365,

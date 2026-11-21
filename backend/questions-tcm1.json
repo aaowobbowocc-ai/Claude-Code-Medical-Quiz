@@ -51072,10 +51072,12 @@
         "C": "《女科證治準繩》－王士雄",
         "D": "《達生篇》－陳修園"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:tcm1_S_108110_c101_s0101.pdf"
+      "answer_source": "vision-recheck-v2:tcm1_S_108110_c101_s0101.pdf",
+      "original_answer": "A",
+      "correction_note": "更正清冊：第7題 → B"
     },
     {
       "id": 2552,
@@ -67381,10 +67383,12 @@
         "C": "64 歲",
         "D": "72 歲"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_104100_c101_s0101.pdf"
+      "answer_source": "vision-recheck-v2:S_104100_c101_s0101.pdf",
+      "original_answer": "C",
+      "correction_note": "更正清冊：第14題 → B"
     },
     {
       "id": 3358,
@@ -68003,9 +68007,11 @@
         "C": "足陽明經",
         "D": "足厥陰經"
       },
-      "answer": "B",
+      "answer": "A,B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第45題 → A,B,D"
     },
     {
       "id": 3389,
@@ -73525,9 +73531,11 @@
         "C": "除濕",
         "D": "益精血"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第80題 → 送分"
     },
     {
       "id": 3664,
@@ -75661,10 +75669,12 @@
         "C": "丁香杮蒂湯主治胃氣虛寒、氣逆不降",
         "D": "橘皮竹茹湯主治胃虛有熱、胃失和降"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第26題 → 送分"
     },
     {
       "id": 3769,
@@ -75936,10 +75946,12 @@
         "C": "2",
         "D": "1"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
       "vision_uncertain": false,
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第39題 → C,D"
     },
     {
       "id": 3782,
@@ -76088,9 +76100,11 @@
         "C": "薏苡仁",
         "D": "萆薢"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第46題 → B,C"
     },
     {
       "id": 3789,
@@ -76961,9 +76975,11 @@
         "C": "英國傳教士合信（Hobson）譯著不少西醫著作，對西洋醫學的傳播貢獻很大",
         "D": "日據時期臺灣開始引入西洋醫學"
       },
-      "answer": "送分",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "送分",
+      "correction_note": "更正清冊：第6題 → A,D"
     },
     {
       "id": 4146,
@@ -77743,9 +77759,11 @@
         "C": "衝脈、帶脈",
         "D": "衝脈、督脈"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第44題 → 送分"
     },
     {
       "id": 4183,

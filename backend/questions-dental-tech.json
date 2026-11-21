@@ -1260,9 +1260,11 @@
         "C": "犬齒",
         "D": "大臼齒"
       },
-      "answer": "C",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第15題 → A,C"
     },
     {
       "id": "107110_2_16",
@@ -3290,9 +3292,11 @@
         "C": "由於定位器主要是以橡膠或軟性塑膠材料製作，彈性好，佩戴舒服，病患多數可以全天候佩戴",
         "D": "如預計將定位器當作固位器長期使用，建議將模型在樞紐軸的位置下安裝到可調式咬合器上製作定位器"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第18題 → A,D"
     },
     {
       "id": "107110_4_19",
@@ -5454,9 +5458,11 @@
         "C": "內含性孔洞可能是因為鑄道包埋材脫落",
         "D": "具有光滑圓鈍的不完全鑄造，可能是因為包埋材膨脹不足"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第28題 → B,D"
     },
     {
       "id": "108110_2_29",
@@ -13675,9 +13681,11 @@
         "C": "僅①②③",
         "D": "①②③④"
       },
-      "answer": "C",
+      "answer": "A",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第43題 → A"
     },
     {
       "id": "110111_2_44",
@@ -15109,9 +15117,11 @@
         "C": "Angle III 級深咬合",
         "D": "Angle I 級開咬合"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第15題 → B,C"
     },
     {
       "id": "110111_4_16",
@@ -16034,11 +16044,13 @@
         "C": "上顎第一大臼齒近心隅角較遠心隅角為鈍角",
         "D": "上顎第一小臼齒近心隅角較遠心隅角為銳角"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
       "orig_answer": "D",
       "disputed": true,
-      "disputed_note": "考選部更正：第12題一律給分。"
+      "disputed_note": "考選部更正：第12題一律給分。",
+      "original_answer": "D",
+      "correction_note": "更正清冊：第12題 → C,D"
     },
     {
       "id": "111110_1_13",
@@ -18109,9 +18121,11 @@
         "C": "加熱溫度過低導致單體殘留",
         "D": "包埋盒關（flask closure）時壓力不足"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第17題 → A,D"
     },
     {
       "id": "111110_3_18",
@@ -18150,9 +18164,11 @@
         "C": "②③",
         "D": "僅①⑤"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第19題 → 送分"
     },
     {
       "id": "111110_3_20",
@@ -18801,11 +18817,13 @@
         "C": "A：遠心頰側咬頭的三角隆線；B：頰側溝",
         "D": "A：遠心頰側咬頭的三角隆線；B：遠心頰側溝"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
       "orig_answer": "A",
       "disputed": true,
-      "disputed_note": "考選部更正：第1題一律給分。"
+      "disputed_note": "考選部更正：第1題一律給分。",
+      "original_answer": "A",
+      "correction_note": "更正清冊：第1題 → A,B"
     },
     {
       "id": "111110_4_2",
@@ -19124,9 +19142,11 @@
         "C": "將上顎第一大臼齒後移",
         "D": "易造成下顎門齒往舌側傾斜"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第17題 → B,C"
     },
     {
       "id": "111110_4_18",
@@ -19145,11 +19165,13 @@
         "C": "其施力需導向髁突頭",
         "D": "對下顎生長有具體的抑制作用"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
       "orig_answer": "D",
       "disputed": true,
-      "disputed_note": "考選部更正：第18題一律給分。"
+      "disputed_note": "考選部更正：第18題一律給分。",
+      "original_answer": "D",
+      "correction_note": "更正清冊：第18題 → 送分"
     },
     {
       "id": "111110_4_19",
@@ -23627,9 +23649,11 @@
         "C": "5000",
         "D": "6000"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第45題 → A,B"
     },
     {
       "id": "112110_4_46",
@@ -27680,9 +27704,11 @@
         "C": "上顎骨",
         "D": "顴骨"
       },
-      "answer": "C",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第1題 → C,D"
     },
     {
       "id": "114100_1_2",

@@ -292,9 +292,11 @@
         "C": "人一生都會不斷面對許多問題，因此協助案主解決問題，需要長時間的逐步介入",
         "D": "工作方法強調界定問題、討論目標與策略、評估執行情形，都需與案主一同討論"
       },
-      "answer": "C",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第14題 → B,C"
     },
     {
       "id": 3113,
@@ -4040,10 +4042,12 @@
         "C": "任務中心",
         "D": "基變取向"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_104100_c107_s0602.pdf"
+      "answer_source": "vision-recheck-v2:S_104100_c107_s0602.pdf",
+      "original_answer": "D",
+      "correction_note": "更正清冊：第36題 → B,D"
     },
     {
       "id": 2461,
@@ -4382,9 +4386,11 @@
         "C": "社會指標方法",
         "D": "資源清點法"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第13題 → 送分"
     },
     {
       "id": 2478,
@@ -4803,9 +4809,11 @@
         "C": "方案預算",
         "D": "零基預算"
       },
-      "answer": "A",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第34題 → A,B"
     },
     {
       "id": 2499,
@@ -5224,9 +5232,11 @@
         "C": "要不要幫助",
         "D": "幫助什麼樣的人"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第15題 → C"
     },
     {
       "id": 2520,
@@ -5245,9 +5255,11 @@
         "C": "案主無法具有建設性決定的能力時，必要時社會工作者得以專業權威來介入",
         "D": "在自我決定的情況下，社會工作者不必為案主自我決定權的適當與否而奮戰"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第16題 → 送分"
     },
     {
       "id": 2521,
@@ -5266,9 +5278,11 @@
         "C": "案主自決氾濫",
         "D": "社會工作者個人價值涉入"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第17題 → 送分"
     },
     {
       "id": 2522,
@@ -7787,10 +7801,12 @@
         "C": "諮商團體",
         "D": "心理治療團體"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_105090_c107_s0601.pdf"
+      "answer_source": "vision-recheck-v2:S_105090_c107_s0601.pdf",
+      "original_answer": "B",
+      "correction_note": "更正清冊：第20題 → A,B"
     },
     {
       "id": 2644,
@@ -10509,9 +10525,11 @@
         "C": "社區發展等同於社區工作",
         "D": "社區發展是發展中國家的自助行動"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第36題 → 送分"
     },
     {
       "id": 517,
@@ -15890,9 +15908,11 @@
         "C": "重視過程或強調結果之間的衝突",
         "D": "個人本能論或傳統主義之間的衝突"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第25題 → 送分"
     },
     {
       "id": 784,
@@ -16692,9 +16712,11 @@
         "C": "他國人至本國提供志願服務時，比照志願服務法各項規定辦理",
         "D": "基於利他的志願服務動機考量，當志工因故意或過失不法侵犯他人權益時，無需承擔損害賠償責任"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第25題 → B,C"
     },
     {
       "id": 824,
@@ -17173,9 +17195,11 @@
         "C": "精神分析觀點→認知行為理論→心理暨社會學派→人本主義觀點",
         "D": "精神分析觀點→危機介入模型→認知行為理論→人本主義觀點"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第9題 → 送分"
     },
     {
       "id": 848,
@@ -22216,8 +22240,11 @@
         "C": "僅②③④",
         "D": "僅①②"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第21題 → A,B"
     },
     {
       "id": 1096,
@@ -27983,9 +28010,11 @@
         "C": "③⑤",
         "D": "②④"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第26題 → A,D"
     },
     {
       "id": 1379,
@@ -37128,9 +37157,11 @@
         "C": "2015",
         "D": "2016"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第40題 → C,D"
     },
     {
       "id": 2228,
@@ -41809,9 +41840,11 @@
         "C": "應積極協助轉介從事3K 工作原住民職訓，以提升職能，擺脫貧窮",
         "D": "都市社區原住民服務中心應依部落特性設計服務內容"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第34題 → 送分"
     },
     {
       "id": 2778,
@@ -48633,9 +48666,11 @@
         "C": "主張個人問題的形成，受目前內在心理與外在環境壓力互動影響",
         "D": "主張個人因長期無力和掌控感喪失，故需協助個人積極運用內在資源"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第12題 → B,C"
     },
     {
       "id": 195,
@@ -51514,9 +51549,11 @@
         "C": "透過手機GPS定位跟蹤或監視他人活動的「網路跟蹤」是其中一種類型",
         "D": "「數位/網路性別暴力」可以透過聲請保護令加以救濟"
       },
-      "answer": "D",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第36題 → 送分"
     },
     {
       "id": 3015,
@@ -62299,8 +62336,11 @@
         "C": "現為或曾為直系血親或直系姻親",
         "D": "現為或曾為三親等以內之旁系血親或旁系姻親"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第25題 → 送分"
     },
     {
       "id": 3382,
@@ -63519,8 +63559,11 @@
         "C": "等距尺度（interval measure）",
         "D": "等比尺度（ratio measure）"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第7題 → B,C"
     },
     {
       "id": 3443,
@@ -63779,8 +63822,11 @@
         "C": "同組研究（panel study）",
         "D": "非典型調查法（non-typical survey）"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第21題 → 送分"
     },
     {
       "id": 3456,
@@ -63819,8 +63865,11 @@
         "C": "偏誤的問題（biased）",
         "D": "模擬兩可或雙重的問題（double-barreled questions）"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "B,D",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第23題 → B,D"
     },
     {
       "id": 3458,
@@ -64319,8 +64368,11 @@
         "C": "各級政府機關、公立學校及公營事業機構員工總人數34 人以上者，進用具有就業能力之身心障礙者人數，不得低於員工總人數3%",
         "D": "私校、團體及民營事業機構員工總人數在76 人以上者，進用具有就業能力之身心障礙者人數，不得低於員工總人數1%，且不得少於一人"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第8題 → C"
     },
     {
       "id": 3483,
@@ -65359,8 +65411,11 @@
         "C": "大麻",
         "D": "海洛因"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第36題 → A,C"
     },
     {
       "id": 3535,
@@ -66420,8 +66475,11 @@
         "C": "參加政府主辦或委辦全日制職業訓練，其失業或參加職業訓練期間得不計算工作收入",
         "D": "最近一年度之財稅資料查無工作收入，且未能提出薪資證明者"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第18題 → B,C"
     },
     {
       "id": 3588,
@@ -71600,8 +71658,11 @@
         "C": "懷孕的前3 個月及兒童中期",
         "D": "懷孕的後3 個月及青春期前"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第4題 → 送分"
     },
     {
       "id": 3847,
@@ -71980,8 +72041,11 @@
         "C": "顯示同性戀在不同社會背景意味著不同的事情",
         "D": "同性戀者並不接受和認同異性戀的社會角色"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第23題 → 送分"
     },
     {
       "id": 3866,
@@ -73400,8 +73464,11 @@
         "C": "性騷擾防治法",
         "D": "性騷擾暴力防治法"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第16題 → B,C"
     },
     {
       "id": 3937,
@@ -74000,8 +74067,11 @@
         "C": "電視的暴力節目對已有攻擊行為的兒童有較大的影響，對原本無攻擊行為的兒童幾乎無影響",
         "D": "幼兒已有蓄意傷害他人的敵對性攻擊行為"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第13題 → A,C"
     },
     {
       "id": 3967,
@@ -76240,8 +76310,11 @@
         "C": "Kohlberg 的理論被批判有性別偏見",
         "D": "Kohlberg 的理論係以Freud 的心理動力理論為基礎"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "A,D",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第12題 → A,D"
     },
     {
       "id": 4079,
@@ -77042,8 +77115,11 @@
         "C": "分層抽樣（stratified sampling）",
         "D": "系統抽樣（systematic sampling）"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,C",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第12題 → B,C"
     },
     {
       "id": 4119,
@@ -78622,8 +78698,11 @@
         "C": "男性更年期容易被忽視",
         "D": "更年期是荷爾蒙分泌的改變"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第11題 → A,B"
     },
     {
       "id": 4198,
@@ -78822,8 +78901,11 @@
         "C": "性虐待",
         "D": "情緒（心理）虐待"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第21題 → A,B"
     },
     {
       "id": 4208,
@@ -81042,8 +81124,11 @@
         "C": "攻擊",
         "D": "同理心"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "D",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第14題 → D"
     },
     {
       "id": 4319,
@@ -81182,8 +81267,11 @@
         "C": "經常使用某一種特定的符號或圖案",
         "D": "成員可以掌握某個區域，或一些在地青少年供差遣"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第21題 → A,B"
     },
     {
       "id": 4326,
@@ -81542,8 +81630,11 @@
         "C": "適應離家期",
         "D": "培育婚姻關係"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第39題 → 送分"
     },
     {
       "id": 4344,
@@ -81963,8 +82054,11 @@
         "C": "實驗對象的流失",
         "D": "統計迴歸的威脅"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,B",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第21題 → A,B"
     },
     {
       "id": 4365,
@@ -90924,8 +91018,11 @@
         "C": "說原住民加分是公平者",
         "D": "所有人都可能是"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第34題 → 送分"
     },
     {
       "id": 4813,
@@ -90984,8 +91081,11 @@
         "C": "臺灣所有縣市每年最低生活費（貧窮線）都調整",
         "D": "108 年臺北市最低生活費（低收入戶標準）調高為16,580 元，中低收入戶標準也因此調高至23,686 元，代表設籍在臺北市家庭總收入分配到全家人口，若平均每人每月低於此數，就屬低收入戶或中低收入戶"
       },
-      "answer": "C",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "original_answer": "C",
+      "disputed": true,
+      "correction_note": "更正清冊：第37題 → C,D"
     },
     {
       "id": 4816,
@@ -93004,8 +93104,11 @@
         "C": "生長陡增",
         "D": "皮膚改變"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第18題 → 送分"
     },
     {
       "id": 4917,
@@ -96287,8 +96390,11 @@
         "C": "網路調查的回覆率與郵寄問卷調查的回覆率差不多",
         "D": "現金報酬無法提升郵寄問卷調查的回覆率"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第22題 → C,D"
     },
     {
       "id": 5081,
@@ -99970,8 +100076,11 @@
         "C": "即使有發生任何變化，系統會自動恢復現狀",
         "D": "系統理論透過使用正向反饋來調節家庭系統以恢復舒適的平衡"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "A,C",
+      "explanation": "",
+      "original_answer": "A",
+      "disputed": true,
+      "correction_note": "更正清冊：第7題 → A,C"
     },
     {
       "id": 5265,
@@ -100350,8 +100459,11 @@
         "C": "具體運思期兒童未具演繹及歸納能力",
         "D": "具體運思期兒童對符號能運用自如、有心理操作的能力"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "B,D",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第27題 → B,D"
     },
     {
       "id": 5284,
@@ -109531,8 +109643,11 @@
         "C": "適應及接受退休，並能維持穩定及有品質的生活",
         "D": "適應喪偶及獨居生活"
       },
-      "answer": "B",
-      "explanation": ""
+      "answer": "送分",
+      "explanation": "",
+      "original_answer": "B",
+      "disputed": true,
+      "correction_note": "更正清冊：第7題 → 送分"
     },
     {
       "id": 5743,
@@ -109711,8 +109826,11 @@
         "C": "7 個月至不足2 歲",
         "D": "2 歲以後"
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C,D",
+      "explanation": "",
+      "original_answer": "D",
+      "disputed": true,
+      "correction_note": "更正清冊：第16題 → C,D"
     },
     {
       "id": 5752,

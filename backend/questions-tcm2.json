@@ -46960,9 +46960,11 @@
         "C": "邪在營分",
         "D": "邪在血分"
       },
-      "answer": "送分",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "送分",
+      "correction_note": "更正清冊：第27題 → B,C"
     },
     {
       "id": 6704,
@@ -47683,9 +47685,11 @@
         "C": "①③",
         "D": "②④"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第63題 → 送分"
     },
     {
       "id": 6739,
@@ -49669,10 +49673,12 @@
         "C": "年高病人，患如腦疽、背疽而局部雖紅腫發熱，也可用溫托法治療",
         "D": "腫瘍皮膚搔癢，日久不癒，體質屬陰虛，絕不可以溫補法治療"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_104100_c102_s0105.pdf"
+      "answer_source": "vision-recheck-v2:S_104100_c102_s0105.pdf",
+      "original_answer": "D",
+      "correction_note": "更正清冊：第2題 → A,D"
     },
     {
       "id": 6838,
@@ -62888,10 +62894,12 @@
         "C": "膿淺而深切，則內膿雖出，而好肉受傷",
         "D": "膿熟而遲不切開，則腐爛加深，瘡口難歛"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
       "disputed": true,
-      "answer_source": "vision-recheck-v2:S_105090_c102_s0105.pdf"
+      "answer_source": "vision-recheck-v2:S_105090_c102_s0105.pdf",
+      "original_answer": "B",
+      "correction_note": "更正清冊：第3題 → A,B"
     },
     {
       "id": 7477,
@@ -63911,9 +63919,11 @@
         "C": "陽谿穴部位（鼻煙窩處），局部有明顯壓痛",
         "D": "骨折的位置若在腰部近端或體部，常導致遠側骨折塊發生缺血而影響骨折癒合"
       },
-      "answer": "D",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第53題 → A,D"
     },
     {
       "id": 7527,
@@ -91796,9 +91806,11 @@
         "C": "3",
         "D": "4"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第80題 → C,D"
     },
     {
       "id": 4467,
@@ -125562,9 +125574,11 @@
         "C": "氣鬱阻肺證，治以柴胡疏肝湯",
         "D": "肺腎陰虛證，治以當歸六黃湯"
       },
-      "answer": "送分",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "送分",
+      "correction_note": "更正清冊：第2題 → A,D"
     },
     {
       "id": 2315,
@@ -126488,9 +126502,11 @@
         "C": "腎岩",
         "D": "上石疽"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第48題 → 送分"
     },
     {
       "id": 2361,
@@ -127913,9 +127929,11 @@
         "C": "腎虛",
         "D": "寢臥濕地"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第39題 → A,B"
     },
     {
       "id": 2431,
@@ -129586,9 +129604,11 @@
         "C": "三陰交穴：為足三陰之交會穴，有補脾統血的功效",
         "D": "太衝穴：是肝經的俞穴、原穴，有疏肝理氣，活絡通血的作用"
       },
-      "answer": "送分",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "送分",
+      "correction_note": "更正清冊：第42題 → A,B"
     },
     {
       "id": 2513,
@@ -129907,9 +129927,11 @@
         "C": "局部取穴肩髃、肩貞；加風池、外關、列缺、陰陵泉",
         "D": "局部取穴肩髃、臂臑；加陽陵泉、足三里、崑崙"
       },
-      "answer": "B,C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B,C",
+      "correction_note": "更正清冊：第58題 → 送分"
     },
     {
       "id": 2529,
@@ -130068,9 +130090,11 @@
         "C": "天柱",
         "D": "大杼"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第66題 → B,C"
     },
     {
       "id": 2537,

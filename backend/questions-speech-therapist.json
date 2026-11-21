@@ -73294,10 +73294,12 @@
       "C": "響度下降複元音",
       "D": "響度上升複元音"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "",
     "exam_type": "high",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第3題 → A,C"
   },
   {
     "id": "speech_103100_s0805_4",
@@ -73316,10 +73318,12 @@
       "C": "主要元音",
       "D": "聲調"
     },
-    "answer": "A",
+    "answer": "A,B,D",
     "explanation": "",
     "exam_type": "high",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第4題 → A,B,D"
   },
   {
     "id": "speech_103100_s0805_5",
@@ -73821,10 +73825,12 @@
       "C": "塞音化（Stopping）",
       "D": "省略（Omission）"
     },
-    "answer": "A",
+    "answer": "送分",
     "explanation": "",
     "exam_type": "high",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "A",
+    "correction_note": "更正清冊：第28題 → 送分"
   },
   {
     "id": "speech_103100_s0805_29",
@@ -76113,9 +76119,12 @@
       "C": "老師與學生距離",
       "D": "以上皆不改善"
     },
-    "answer": "C",
+    "answer": "A,B,C",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "original_answer": "C",
+    "disputed": true,
+    "correction_note": "更正清冊：第57題 → A,B,C"
   },
   {
     "id": "speech_103100_s0806_58",
@@ -79839,7 +79848,7 @@
       "C": "①②④⑦",
       "D": "②④⑤⑦"
     },
-    "answer": "C",
+    "answer": "送分",
     "explanation": "",
     "exam_type": "high",
     "vision_uncertain": false,
@@ -79847,7 +79856,9 @@
     "_legacy_id": 30001498,
     "images": [
       "/question-images/speech-therapist_speech_104100_p5_56_0.webp"
-    ]
+    ],
+    "original_answer": "C",
+    "correction_note": "更正清冊：第56題 → 送分"
   },
   {
     "id": "speech_104100_p5_57",
@@ -116351,10 +116362,12 @@
       "C": "想要跟服務生招手時，忘記如何做手勢來招手示意",
       "D": "用餐中突然有人放了一個響屁，王先生想笑卻無法很順暢地做出笑的動作"
     },
-    "answer": "C",
+    "answer": "A",
     "explanation": "",
     "exam_type": "high",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第29題 → A"
   },
   {
     "id": "speech_108110_s0802_30",
@@ -119639,10 +119652,12 @@
       "C": "拉長聲音（prolongation）是其中一類",
       "D": "不論口吃者或非口吃者說話時都可能會出現"
     },
-    "answer": "C",
+    "answer": "A,C,D",
     "explanation": "",
     "exam_type": "high",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第34題 → A,C,D"
   },
   {
     "id": "speech_108110_s0805_35",
@@ -132353,10 +132368,12 @@
       "C": "僅①②③",
       "D": "僅①③④"
     },
-    "answer": "C",
+    "answer": "A",
     "explanation": "",
     "exam_type": "high",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第21題 → A"
   },
   {
     "id": "speech_110111_s0805_22",
@@ -140114,9 +140131,12 @@
       "C": "影像醫學科",
       "D": "耳鼻喉科"
     },
-    "answer": "B",
+    "answer": "B,D",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "original_answer": "B",
+    "disputed": true,
+    "correction_note": "更正清冊：第39題 → B,D"
   },
   {
     "id": "speech_111110_s0606_40",
@@ -142885,10 +142905,12 @@
       "C": "舌背",
       "D": "舌根"
     },
-    "answer": "D",
+    "answer": "送分",
     "explanation": "",
     "exam_type": "high",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "D",
+    "correction_note": "更正清冊：第20題 → 送分"
   },
   {
     "id": "speech_112110_s0501_21",
@@ -154573,10 +154595,12 @@
       "C": "γ運動神經元",
       "D": "δ運動神經元"
     },
-    "answer": "C",
+    "answer": "A,C",
     "explanation": "",
     "exam_type": "high",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "C",
+    "correction_note": "更正清冊：第24題 → A,C"
   },
   {
     "id": "speech_114100_s0502_25",
@@ -155543,10 +155567,12 @@
       "C": "發聲時，聲帶振動最大的部位為固有層的深層",
       "D": "甲杓肌構成聲帶體"
     },
-    "answer": "B",
+    "answer": "B,C",
     "explanation": "",
     "exam_type": "high",
-    "disputed": true
+    "disputed": true,
+    "original_answer": "B",
+    "correction_note": "更正清冊：第20題 → B,C"
   },
   {
     "id": "speech_114100_s0501_21",

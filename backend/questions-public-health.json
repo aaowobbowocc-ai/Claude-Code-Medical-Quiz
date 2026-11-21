@@ -317,9 +317,11 @@
         "C": "研究對象為13 歲之未成年人時，如能取得其父母之同意，即可進行研究",
         "D": "胎兒及屍體，因無法取得其本人同意，人體研究法基於倫理考量，均不得以之進行人體研究"
       },
-      "answer": "B",
+      "answer": "A,B",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第16題 → A,B"
     },
     {
       "id": "111110_1_17",
@@ -3168,9 +3170,11 @@
         "C": "常備材料，如藥品、衛材等，以採「複倉制（two-bins system）」方式管理為宜",
         "D": "表單及事務性用品等，以採「定期訂購制（fixed period ordering system）」方式管理為宜"
       },
-      "answer": "B",
+      "answer": "B,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第38題 → B,C"
     },
     {
       "id": "111110_4_39",
@@ -3389,9 +3393,11 @@
         "C": "重力沉降（gravitational settling）",
         "D": "靜電吸引（electrostatic attraction）"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第9題 → 送分"
     },
     {
       "id": "111110_5_10",
@@ -5907,13 +5913,15 @@
         "C": "模型一中，可推得腰圍和收縮壓的皮爾森（Pearson）相關係數為0.404",
         "D": "在模型四中，顯示交互作用不存在，表示腰圍和收縮壓之間的相關，不受年齡不同而改變"
       },
-      "answer": "送分",
+      "answer": "B,D",
       "explanation": "",
       "images": [
         "/question-images/ph_112110_q14.webp"
       ],
       "disputed": true,
-      "disputed_note": "考選部更正：第15題一律給分。"
+      "disputed_note": "考選部更正：第15題一律給分。",
+      "original_answer": "送分",
+      "correction_note": "更正清冊：第15題 → B,D"
     },
     {
       "id": "112110_2_16",
@@ -6990,9 +6998,11 @@
         "C": "族群肺癌的致死率為C/（B-0.5C）",
         "D": "族群肺癌的盛行率為B/A"
       },
-      "answer": "C",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "C",
+      "correction_note": "更正清冊：第29題 → 送分"
     },
     {
       "id": "112110_3_30",
@@ -7051,9 +7061,11 @@
         "C": "曝露勝算比為有病組曝露因子的比率除以沒有病組曝露因子的比率",
         "D": "曝露勝算比小於1 表示暴露因子有保護的效果"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第32題 → C"
     },
     {
       "id": "112110_3_33",
@@ -7072,9 +7084,11 @@
         "C": "控制干擾因子干擾的方法為分層分析",
         "D": "在控制干擾因子後，曝露因子與疾病之間就不會有相關"
       },
-      "answer": "A",
+      "answer": "A,C",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第33題 → A,C"
     },
     {
       "id": "112110_3_34",
@@ -7753,9 +7767,11 @@
         "C": "原住民",
         "D": "外僱船員"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第27題 → 送分"
     },
     {
       "id": "112110_4_28",
@@ -15355,9 +15371,11 @@
         "C": "-0.25",
         "D": "-0.33"
       },
-      "answer": "A",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第7題 → 送分"
     },
     {
       "id": "114100_2_8",
@@ -17099,9 +17117,11 @@
         "C": "供給者誘發需求（supplier-induced demand）",
         "D": "醫療服務提供者可能承擔過高之財務風險"
       },
-      "answer": "A",
+      "answer": "A,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "A",
+      "correction_note": "更正清冊：第14題 → A,D"
     },
     {
       "id": "114100_4_15",
@@ -20040,9 +20060,11 @@
         "C": "85%",
         "D": "99%"
       },
-      "answer": "B",
+      "answer": "送分",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "B",
+      "correction_note": "更正清冊：第1題 → 送分"
     },
     {
       "id": "110180_2_2",
@@ -20973,9 +20995,11 @@
         "C": "有人吸菸長達數十年，卻未罹患肺癌，此類慢性病發病現象無法以三角致病模式解釋，須以餅狀致病模式解釋",
         "D": "遺傳或環境因子對疾病的影響，可以用三角致病模式或是餅狀致病模式解釋"
       },
-      "answer": "D",
+      "answer": "C,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第7題 → C,D"
     },
     {
       "id": "110180_3_8",
@@ -23814,9 +23838,11 @@
         "C": "態度（attitude）",
         "D": "自我效能（self efficacy）"
       },
-      "answer": "D",
+      "answer": "B,D",
       "explanation": "",
-      "disputed": true
+      "disputed": true,
+      "original_answer": "D",
+      "correction_note": "更正清冊：第31題 → B,D"
     },
     {
       "id": "110180_6_32",

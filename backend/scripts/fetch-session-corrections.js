@@ -46,22 +46,56 @@ function parseRemark(text) {
   return out;
 }
 
-/** 整份清冊 → 每個科目一筆 */
+/**
+ * 整份清冊 → 每個科目一筆。
+ *
+ * ⚠️ 版面至少有四種，欄位順序、科目代碼位置、題數寫法都不一樣：
+ *   A（近年）  等級名稱：… 科目代碼： 科目名稱：…（…） 1301
+ *              每題配分：1.0分 題數：100題 題號 … 類科名稱：醫師(一) 備註: …
+ *   B（103 前後）科目代碼： 類科名稱:醫師(一) 科目名稱：…（…） 1101
+ *              題號 … 備註: … 每題配分：1.00分 題數：100題
+ *   C（108 前後）等級名稱：… 科目代碼：1101 … 類科名稱:中醫師(一)
+ *              科目名稱：…（…） 題數：80題 備註: 第7題答Ｂ給分。
+ *   D（107 前後）等級名稱：高考 **類科名稱：社會工作師 科目代號：1107**
+ *              科目名稱：社會工作 **單選題數：40 題** … 備註：無更正紀錄
+ *
+ * D 有兩個陷阱：「科目代**號**」不是「科目代碼」，而且**類科名稱排在科目代號前面**，
+ * 切段之後會落在前一段裡 —— 所以段內找不到類科時要往前找最近的一個。
+ *
+ * ⚠️ 版面認不得時**不會報錯**，只會解出 0 個科目，然後在配對時變成
+ * 「清冊沒有這個類科」。看到大量「對不到」要先懷疑解析，不要先懷疑配對。
+ */
 function parseSheet(text) {
-  const t = String(text || '').replace(/[ \t　]+/g, ' ');
+  const t = String(text || '').replace(/[ \t\u3000]+/g, ' ');
+  const STOP = '(?=每題配分|單選題數|複選題數|題數|題號|備註|類科名稱|科別名稱|等級名稱|科目代[碼號]|答案|$)';
+  // 「類科名稱」也有寫成「科別名稱」的（110180 公共衛生師那一場）
+  const KLASS_RE = /(?:類科|科別)名稱[：:]\s*([^\s]+)/g;
+  const marks = [...t.matchAll(/科目代[碼號]：/g)].map(m => m.index);
   const out = [];
-  for (const seg of t.split('等級名稱：').slice(1)) {
-    const subj = /科目名稱[：:]\s*([^\n]+?)\s+(\d{3,4})\s+每題配分/.exec(seg);
-    const cnt = /題數[：:]\s*(\d{1,3})\s*題/.exec(seg);
-    const cls = /類科名稱[：:]\s*([^\s]+)/.exec(seg);
-    const note = /備註[：:]\s*([\s\S]*?)(?=\s*\d{2,3} - \d{2,3}|\s*等級名稱|$)/.exec(seg);
-    if (!subj) continue;
+  for (let i = 0; i < marks.length; i++) {
+    const seg = t.slice(marks[i], marks[i + 1] === undefined ? t.length : marks[i + 1]);
+    const sm = new RegExp('科目名稱[：:]\\s*([\\s\\S]+?)\\s*' + STOP).exec(seg);
+    if (!sm) continue;
+    // 名稱後面可能黏著科目代碼（版面 A、B），拆掉
+    const nameRaw = sm[1].replace(/\s+/g, '');
+    const tail = /^(.*?)(\d{3,4})$/.exec(nameRaw);
+    const subject = tail ? tail[1] : nameRaw;
+    if (!subject) continue;
+    let klass = '';
+    const inSeg = /(?:類科|科別)名稱[：:]\s*([^\s]+)/.exec(seg);
+    if (inSeg) klass = inSeg[1].trim();
+    else {
+      const before = [...t.slice(0, marks[i]).matchAll(KLASS_RE)];
+      if (before.length) klass = before[before.length - 1][1].trim();
+    }
+    const cnt = /(?:單選)?題數[：:]\s*(\d{1,3})\s*題/.exec(seg);
+    const note = /備註[：:]\s*([\s\S]*?)(?=\s*每題配分|\s*等級名稱|\s*科目代[碼號]|\s*\d{2,3} ?- ?\d{2,3}|$)/.exec(seg);
     const remark = note ? note[1].replace(/\s+/g, ' ').trim() : '';
     out.push({
-      subject: subj[1].trim(),
-      subjectCode: subj[2],
+      subject,
+      subjectCode: tail ? tail[2] : (/^\s*(\d{3,4})/.exec(seg) || [])[1] || '',
+      klass,
       count: cnt ? +cnt[1] : null,
-      klass: cls ? cls[1].trim() : '',
       remark,
       corrections: /無更正紀錄/.test(remark) ? {} : parseRemark(remark),
     });

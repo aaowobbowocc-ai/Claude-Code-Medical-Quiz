@@ -65,9 +65,39 @@ const KLASS = {
       if (!recs) continue;
       const mine = recs.filter(r => KLASS[exam].test(r.klass));
       if (!mine.length) { missed.push(`${exam} ${code} ${subject}  清冊沒有這個類科`); continue; }
-      const { list } = nameCandidates(exam, subject, mine);
+      const maxN = Math.max(...papers[key].map(x => +x.number || 0));
+      let { list } = nameCandidates(exam, subject, mine);
       if (!list.length) { missed.push(`${exam} ${code} ${subject}  科目名稱對不到`); continue; }
-      if (list.length > 1) { ambiguous.push(`${exam} ${code} ${subject}  對到 ${list.length} 個科目`); continue; }
+      if (list.length > 1) {
+        /*
+         * 對到好幾個要先收斂，收斂不了才放棄。兩種成因：
+         * 1. **名稱比對是前綴比對**：社工師的「社會工作」會同時命中清冊上的
+         *    「社會工作」「社會工作直接服務」「社會工作管理」。先挑**完全相同**的。
+         * 2. **同一個場次有兩個類科開同名科目**：102110 同時有「中醫師」與
+         *    「中醫師(二)」，中醫臨床醫學(一) 兩邊都有。挑**名稱比較長**的那個類科
+         *    （分階段之後的正式類科名），bare 的是舊制殘留。
+         * 都收斂不了才用題數挑。
+         */
+        const norm = x => String(x).replace(/\s/g, '').normalize('NFC');
+        const exact = list.filter(r => norm(r.subject) === norm(subject));
+        if (exact.length) list = exact;
+        if (list.length > 1) {
+          const longest = Math.max(...list.map(r => r.klass.length));
+          const bySpecific = list.filter(r => r.klass.length === longest);
+          if (bySpecific.length) list = bySpecific;
+        }
+        if (list.length > 1) {
+          const byCount = list.filter(r => r.count && Math.abs(r.count - maxN) <= 2);
+          if (byCount.length === 1) list = byCount;
+        }
+        // 候選的更正內容完全一樣時，挑哪一個都沒差（聽力師 102110 同一科出現兩次，
+        // 科目代碼不同但兩邊備註都是空的）
+        if (list.length > 1) {
+          const same = new Set(list.map(r => JSON.stringify(r.corrections)));
+          if (same.size === 1) list = [list[0]];
+        }
+      }
+      if (list.length > 1) { ambiguous.push(`${exam} ${code} ${subject}  對到 ${list.length} 個科目（${list.map(r => r.klass + '/' + r.subject.slice(0, 12)).join('、')}）`); continue; }
       const rec = list[0];
       /*
        * 配對防呆：清冊上寫的題數要跟我們這一卷的題號上限對得起來。
@@ -75,7 +105,6 @@ const KLASS = {
        * 一旦配錯，下面就會把**別卷的更正**套到這一卷的答案上。
        * 題數是清冊自己印的，拿來當獨立佐證最省事。
        */
-      const maxN = Math.max(...papers[key].map(x => +x.number || 0));
       if (rec.count && Math.abs(rec.count - maxN) > 2) {
         missed.push(`${exam} ${code} ${subject}  題數對不上（清冊 ${rec.count} vs 題庫最大題號 ${maxN}）`);
         continue;
@@ -108,11 +137,11 @@ const KLASS = {
   }
   console.log(`配對成功 ${matched} 卷｜清冊上的更正 ${checked} 題｜答案不符 ${diff.length} 題`);
   console.log(`對不到 ${missed.length}｜一個科目對到多筆 ${ambiguous.length}\n`);
-  const CAP = process.argv.includes('--full') ? diff.length : 40;
+  const CAP = process.argv.includes('--full') ? 1e9 : 40;
   diff.slice(0, CAP).forEach(s => console.log('   ' + s));
   if (diff.length > CAP) console.log(`   …還有 ${diff.length - CAP}`);
-  if (missed.length) { console.log('\n--- 對不到（抽前 12）---'); missed.slice(0, 12).forEach(s => console.log('   ' + s)); }
-  if (ambiguous.length) { console.log('\n--- 多筆候選（抽前 8）---'); ambiguous.slice(0, 8).forEach(s => console.log('   ' + s)); }
+  if (missed.length) { console.log('\n--- 對不到 ---'); missed.slice(0, CAP).forEach(s => console.log('   ' + s)); }
+  if (ambiguous.length) { console.log('\n--- 多筆候選 ---'); ambiguous.slice(0, CAP).forEach(s => console.log('   ' + s)); }
   if (APPLY) {
     for (const e of touched) fs.writeFileSync(path.join(BK, fileOf(e)), JSON.stringify(files[e], null, 2));
     console.log(`\n✅ 已寫入 ${[...touched].join(', ')}`);

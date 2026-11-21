@@ -29,6 +29,17 @@ const { atomicWriteJson } = require('./lib/atomic-write')
 
 const BK = path.join(__dirname, '..')
 const APPLY = process.argv.includes('--apply')
+const GAPS = process.argv.includes('--gaps')
+/*
+ * --only=4,20：只補這幾個題號。
+ * 四道閘擋得住「選項空的」，擋不住「選項被段落文字灌成四段不一樣的垃圾」——
+ * 克漏字與閱讀測驗段就是這樣：題幹是空的，四個選項是引文的四行
+ * （警察 108070 #37-#50 實測）。那種卷只能挑乾淨的題補，所以要能指定題號。
+ */
+const ONLY = (() => {
+  const v = (process.argv.find(a => a.startsWith('--only=')) || '').split('=')[1]
+  return v ? new Set(v.split(',').map(x => +x.trim()).filter(Boolean)) : null
+})()
 const arg = k => (process.argv.find(a => a.startsWith(`--${k}=`)) || '').split('=').slice(1).join('=')
 const L = ['A', 'B', 'C', 'D']
 const FILE = e => e === 'doctor1' ? 'questions.json' : `questions-${e}.json`
@@ -46,10 +57,18 @@ const bare = t => String(t).replace(/[-​-‏﻿\s　]/g, '')
   const fp = path.join(BK, FILE(exam))
   const j = JSON.parse(fs.readFileSync(fp, 'utf8'))
   const arr = j.questions || j
-  if (arr.some(q => String(q.exam_code) === code && q.subject === subject)) {
-    console.error(`${exam} ${code} ${subject} 已經有資料，不重複補`)
+  /*
+   * 預設是「補一整張缺的卷」，所以這一卷只要已經有題就拒絕，免得整卷重複塞進去。
+   * --gaps 是另一種情形：卷在、但缺幾題（常見於表格／公式多的卷，當初解析器
+   * 只吃下幾題）。這時只補題號不存在的那幾題。
+   */
+  const mine = arr.filter(q => String(q.exam_code) === code && q.subject === subject)
+  const have = new Set(mine.map(q => +q.number))
+  if (mine.length && !GAPS) {
+    console.error(`${exam} ${code} ${subject} 已經有 ${mine.length} 題，不重複補（只缺幾題請加 --gaps）`)
     process.exit(1)
   }
+  if (GAPS) console.log(`既有 ${mine.length} 題，只補缺的題號`)
 
   const buf = await fetchSheet('Q', code, c, s)
   if (!buf) { console.error('抓不到試題 PDF'); process.exit(1) }
@@ -67,7 +86,7 @@ const bare = t => String(t).replace(/[-​-‏﻿\s　]/g, '')
   // 同科目既有的 id 樣板，例如 speech_100090_p6_1 → speech_115100_p6_N
   const sib = arr.find(q => q.subject === subject) || arr.find(q => q.subject_tag)
   const mkId = n => {
-    if (sib && typeof sib.id === 'string' && /^[a-z]/i.test(sib.id)) {
+    if (sib && typeof sib.id === 'string' && /\D/.test(sib.id)) {
       const m = String(sib.id).match(/^(.*?)(\d{5,6})(.*?)(\d+)$/)
       if (m) return `${m[1]}${code}${m[3]}${n}`
     }
@@ -80,6 +99,8 @@ const bare = t => String(t).replace(/[-​-‏﻿\s　]/g, '')
   const skip = {}
   const bump = k => { skip[k] = (skip[k] || 0) + 1 }
   for (const n of [...new Set([...parsed.keys(), ...(marker ? marker.keys() : [])])].sort((a, b) => a - b)) {
+    if (have.has(n)) { bump('已經有了'); continue }
+    if (ONLY && !ONLY.has(n)) { bump('不在 --only 清單'); continue }
     let o = parsed.get(n)
     if (!ok(o) && marker && ok(marker.get(n))) o = marker.get(n)
     if (!ok(o)) { bump('選項不乾淨'); continue }

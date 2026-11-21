@@ -1,5 +1,5 @@
 {
-  "total": 1123,
+  "total": 1125,
   "questions": [
     {
       "id": 302,
@@ -12676,8 +12676,9 @@
         "C": "橫看成嶺側成峯，遠近高低各不同。不識廬山真面目，只緣身在此山中",
         "D": "料峭春風吹酒醒，微冷、山頭斜照卻相迎。回首向來蕭瑟處，歸去、也無風雨也無晴"
       },
-      "answer": "A",
-      "explanation": ""
+      "answer": "B",
+      "explanation": "",
+      "original_answer": "A"
     },
     {
       "id": 588,
@@ -22529,6 +22530,46 @@
       "answer": "C",
       "explanation": "",
       "case_context": "（第 46～50 題共用下文）In New Zealand’s Westland District the closure of the local indigenous timber industry alongside rapid growth of the dairy and tourism sectors has produced dilemmas for families and communities as they attempt to adjust to the social consequences of rapid industry change. Drawing on a social capital perspective and a case study of 12 Westland families, this project examines how rural families bring balance to aspects of the three actions defined by Arendt as being essential to the human condition: family, work and community life. The findings reveal significant insights into how social capital is effectively reproduced in times of change. These insights are discussed in terms of their social policy implications. Fifty years ago Hannah Arendt published The Human Condition. In this work she contended that there are three types of action required to be “fully human.” The first two of these actions, engagement in family life and paid work, are necessary for human existence in contemporary society. The third action she called vita activa, or public life: a life that is actioned within jointly built civil spaces. Within these spaces we are capable of debate, we share actions and we resolve collective dilemmas. Arendt reminds us that the absence of, or over-attention to, any one aspect of the human condition is likely to be problematic. A half a century on from Arendt’s original thesis, public policy continues to debate aspects of vita activa and democratic governments still seek to engage vita activa in economically and socially productive ways. Working out the shifting balance between family life, paid work and vita activa is a crucial aspect of responding effectively to significant social change, be it local issues (such as natural disaster relief) or meeting the challenges that arise as a consequence of external or global forces (such as the loss of a core industry). The concept of social capital has been used as a way to recognise and gauge vita activa. The term “social capital” originated, in part, in an attempt to understand how features of social organisation, such as trust, norms and networks can improve the efficiency of society by facilitating coordinated actions. Voluntary or joint social actions provide the opportunity to resolve collective dilemmas. Individuals achieve this through the development and use of social bonds and networks as resources to facilitate productive activity. By maintaining the social relationships and structures necessary for collective activity, individuals, families and communities are able to realise some of these benefits, and in doing so can resolve some of the issues they face in common."
+    },
+    {
+      "id": 1028,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108070",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 4,
+      "question": "依司法院釋字第472 號解釋，有關全民健康保險制度，下列敘述何者錯誤？",
+      "options": {
+        "A": "對於無力繳納保費者，國家應給予適當之救助",
+        "B": "對遲延繳納保費者，亦不得加徵滯納金",
+        "C": "基於危險分擔之考量，需強制納保",
+        "D": "已參加公、勞、農保者，仍應參加全民健康保險"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 1044,
+      "roc_year": "108",
+      "session": "第一次",
+      "exam_code": "108070",
+      "subject": "法學知識與英文",
+      "subject_tag": "law_knowledge_english",
+      "subject_name": "法學知識與英文",
+      "stage_id": 0,
+      "number": 20,
+      "question": "舊懲治走私條例第2 條第1 項規定：「私運管制物品進口、出口逾公告數額者，處7 年以下有期徒刑，得併科新臺幣3 百萬元以下罰金。」第3 項規定：「第一項所稱管制物品及其數額，由行政院公告之。」，司法院釋字第680 號解釋宣告上開規定違憲，主要係因其違反下列何者？",
+      "options": {
+        "A": "法律優位原則",
+        "B": "法律不溯及既往原則",
+        "C": "不當聯結禁止原則",
+        "D": "授權明確性原則"
+      },
+      "answer": "D",
+      "explanation": ""
     }
   ]
 }

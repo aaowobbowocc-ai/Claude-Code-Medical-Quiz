@@ -44833,14 +44833,15 @@
         "C": "(C)",
         "D": "(D)"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "",
       "option_images": {
         "A": "/question-images/optometrist_58_optA.webp",
         "B": "/question-images/optometrist_58_optB.webp",
         "C": "/question-images/optometrist_58_optC.webp",
         "D": "/question-images/optometrist_58_optD.webp"
-      }
+      },
+      "original_answer": "A"
     },
     {
       "id": 59,
@@ -45026,8 +45027,9 @@
         "C": "Image of an executive bifocal lens.",
         "D": "Image of a curved-top bifocal lens."
       },
-      "answer": "D",
-      "explanation": ""
+      "answer": "C",
+      "explanation": "",
+      "original_answer": "D"
     },
     {
       "id": 68,

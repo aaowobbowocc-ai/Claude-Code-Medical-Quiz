@@ -29,6 +29,8 @@ const BK = path.join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
 const only = (process.argv.find(a => a.startsWith('--exam=')) || '').split('=')[1];
 const onlyKind = (process.argv.find(a => a.startsWith('--kind=')) || '').split('=')[1];
+// 「整格換掉」那一類的風險太高，要逐題核對過才寫入（見 2.8 的註解）
+const REVIEWED = process.argv.includes('--reviewed');
 const KEYS = ['A', 'B', 'C', 'D'];
 
 (async () => {
@@ -198,6 +200,59 @@ const KEYS = ['A', 'B', 'C', 'D'];
           }
           tally['被切掉後半'] = (tally['被切掉後半'] || 0) + 1;
           continue;
+        }
+
+        // ── 2.8 這一格被同題別格的碎片取代 ──────────────────────────
+        /*
+         * pt 112100 物理治療技術學 #36（使用者回報 id 966）
+         *   原卷 B「測試肌力等級3～5時…前臂旋後（supination），主要是要測試brachialis」
+         *   題庫 B「rachioradialis」  ← 是 C 續行尾巴「…brachioradialis」少一個字母
+         * 答案正好是 B，所以使用者看到的是「正確答案只有一個單字」。
+         *
+         * 跟「被切掉後半」的差別：那種題庫是原卷的**前綴**（只少不多），
+         * 這種題庫那一格跟原卷**完全無關**，是別格漏過來的碎片。
+         *
+         * 共同判準：只有這一格對不上（另外三格還能前綴對上原卷 → 卷沒抓錯、
+         * 題號沒錯位），題庫這一格的內容在**原卷同一題的四格裡找得到**
+         * （→ 覆蓋不會弄丟任何字），原卷這一格是完整一行（next !== 'text'）。
+         *
+         * 然後分成兩種，因為風險差很多（2026-11-21 全站實測 3,764 題）：
+         *
+         *   alien-cell（193 題，可自動套用）
+         *     原卷那一格**以題庫這一格結尾**，只多出 1-2 個字 ——
+         *     就是「開頭字母被選項標記吃掉」：opamine→Dopamine、ctivity→activity、
+         *     DP直接與游離之Pi→ADP直接與游離之Pi。補回去只長出那 1-2 個字。
+         *
+         *   alien-cell-replaced（3,571 題，**預設只報告**，要 --reviewed 才寫入）
+         *     原卷那一格是**完全不同的內容**，等於把遺失的選項救回來。方向通常對，
+         *     但不能整批自動做：
+         *       · dental1 106100 卷二 #67 題庫 A「moxicillin」→ 原卷 A「Ampicillin」
+         *         Amoxicillin 與 Ampicillin 是不同的藥，誰對要逐題看
+         *       · **dental1 099020 的試題 PDF 本身夾著「<正確答案>」標記**
+         *         （99 年考選部把題目與答案印在同一份），照抄會把答案寫進選項
+         *     pt 的 11 題是逐題核對原卷後用 --reviewed 套用的。
+         */
+        if (mismatch.length === 1 && (!onlyKind || onlyKind === 'alien-cell' || onlyKind === 'alien-cell-replaced')) {
+          const k = mismatch[0];
+          const cat = KEYS.map(x => (got[x] ? nz(got[x].fullRaw) : '')).join('');
+          const v = mine(k);
+          const want = paperFull(k);
+          const isAlien = v.length >= 4 && v.length <= 60 && cat.includes(v)
+            && !want.startsWith(v) && !v.startsWith(head(k))
+            && full(k) && want.length >= 6 && got[k].fullRaw.length <= 200
+            && !/<正確答案>/.test(got[k].fullRaw);
+          // 只補回開頭的 1-2 個字＝不會改掉任何既有的字
+          const narrow = isAlien && want.endsWith(v) && want.length - v.length <= 2;
+          const kind = narrow ? '別格的碎片' : '別格的碎片（整格換掉）';
+          if (isAlien && (!onlyKind || onlyKind === (narrow ? 'alien-cell' : 'alien-cell-replaced'))) {
+            const after = got[k].fullRaw.replace(/\s+/g, ' ').trim();
+            const write = APPLY && (narrow || REVIEWED);
+            console.log(`${write ? '✓' : narrow ? '·' : '?'} [${kind}] ${exam} ${code} ${subject} #${q.number} ans=${q.answer}`);
+            console.log(`    ${k}: ${JSON.stringify(bank[k])} → ${JSON.stringify(after)}`);
+            if (write) { q.options[k] = after; touched = true; changed++; }
+            tally[kind] = (tally[kind] || 0) + 1;
+            continue;
+          }
         }
 
         // ── 3. 開頭多了上一個選項的尾巴 ──────────────────────────────

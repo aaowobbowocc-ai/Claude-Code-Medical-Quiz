@@ -168,11 +168,22 @@ function cutTable(stem, cells, minAnchor = 4) {
       const xc = {};
       rows.forEach(r => { xc[r.x] = (xc[r.x] || 0) + 1; });
       const stemX = +Object.entries(xc).sort((a, b) => b[1] - a[1])[0][0];
+      /*
+       * 題號有兩種版型（見 reference_moex_label_layout）：
+       *   一般卷：題號自成一列，在最左邊          40 "22 "        / 72 "下表為…"
+       *   醫事類：題號**黏在題幹同一列的開頭**    28 "78.研究者想瞭解…"
+       * 只認第一種的話，獸醫、醫檢這些醫事類的卷整個找不到題號（實測 vet 6 題全掉）。
+       */
+      const numOf = (r) => {
+        const t = r.t.trim();
+        if (r.x >= stemX - 5) return null;
+        const solo = NUMROW.exec(t);
+        if (solo) return +solo[1];
+        const inline = /^(\d{1,3})\s*[.．、]\s*\S/.exec(t);
+        return inline ? +inline[1] : null;
+      };
       const numAt = {};
-      rows.forEach((r, i) => {
-        const m = NUMROW.exec(r.t.trim());
-        if (m && r.x < stemX - 10 && numAt[+m[1]] == null) numAt[+m[1]] = i;
-      });
+      rows.forEach((r, i) => { const v = numOf(r); if (v != null && numAt[v] == null) numAt[v] = i; });
 
       for (const n of groups[key]) {
         const q = items.find(x => x.number === n);
@@ -180,10 +191,14 @@ function cutTable(stem, cells, minAnchor = 4) {
         if (q.images && q.images.length) { note('已經有圖'); continue; }
         const i0 = numAt[n];
         if (i0 == null) { note('原卷找不到題號'); continue; }
+        // 下界：下一題的題號，或第一個選項。選項標記也有兩種——PUA（一般卷）
+        // 與「A.」開頭（醫事類），後者要限定在題幹欄位的 x 才不會打到內文。
         let i1 = rows.length;
         for (let i = i0 + 1; i < rows.length; i++) {
-          const m = NUMROW.exec(rows[i].t.trim());
-          if ((m && rows[i].x < stemX - 10 && +m[1] === n + 1) || MK.test(rows[i].t)) { i1 = i; break; }
+          const r = rows[i];
+          const isOpt = MK.test(r.t)
+            || (r.x >= stemX - 2 && r.x <= stemX + 18 && /^\s*[A-E]\s*[.．]\s*\S/.test(r.t));
+          if (numOf(r) === n + 1 || isOpt) { i1 = i; break; }
         }
         const span = rows.slice(i0, i1);
         const indent = span.filter(r => r.x > stemX + 18);
@@ -209,9 +224,14 @@ function cutTable(stem, cells, minAnchor = 4) {
          * doctor1 100030 #99 刪成「某種的篩選方法」（表格有一格是「疾病」）。
          * 短格的表就讓它走情況 B：圖照掛，題幹不動。
          */
-        const tblHit = tbl.some(r => nz(r.t).length >= 4 && nz(q.question).includes(nz(r.t)));
+        const longHit = tbl.some(r => nz(r.t).length >= 4 && nz(q.question).includes(nz(r.t)));
+        const shortHit = tbl.filter(r => nz(r.t).length >= 2 && nz(q.question).includes(nz(r.t))).length >= 4;
         const proseHit = span.some(r => r.x >= stemX - 2 && r.x <= stemX + 18
           && nz(r.t).length >= 8 && nz(q.question).includes(nz(r.t)));
+        // 短錨點（2-3 字的格子）只在「題幹正文對得上」時才准用 —— 因為擋過刪的那道閘
+        // 正是拿正文來驗的，正文對不上的話那道閘形同虛設。doctor1 100030 #99 就是
+        // 正文一行都對不上，短錨點把「某種疾病的篩選方法」刪成「某種的篩選方法」。
+        const tblHit = longHit || (shortHit && proseHit);
         if (!tblHit && !proseHit) { note('原卷這一題對不到題庫題幹'); continue; }
 
         const pg = tbl[0].pg;
@@ -243,6 +263,7 @@ function cutTable(stem, cells, minAnchor = 4) {
         let stem = q.question, removed = 0;
         if (tblHit) {
           [stem, removed] = cutTable(q.question, tbl.map(r => r.t));
+          if (!removed && shortHit && proseHit) [stem, removed] = cutTable(q.question, tbl.map(r => r.t), 2);
           stem = stem.replace(/\s+/g, ' ').replace(/\s+([，。？！：；])/g, '$1').replace(/_{3,}/g, ' ').replace(/\s+/g, ' ').trim();
           if (!removed) { note('題幹裡對不到連續的表格文字'); continue; }
         }

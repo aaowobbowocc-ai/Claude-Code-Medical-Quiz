@@ -140459,7 +140459,7 @@
       "subject_name": "呼吸疾病學",
       "stage_id": 0,
       "number": 10,
-      "question": "氣喘急性發作（acute asthma attack），病情惡化，動脈血氣體分析狀況如下表，何者最危急？ 血氧分析狀況 PaO2 PaCO2 pH I normal decreased increased II decreased decreased increased III decreased normal normal",
+      "question": "氣喘急性發作（acute asthma attack），病情惡化，動脈血氣體分析狀況如下表，何者最危急？",
       "options": {
         "A": "I",
         "B": "II",
@@ -140467,7 +140467,10 @@
         "D": "條件不足無法判斷"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/rt_107020_66_10_tbl.webp"
+      ]
     },
     {
       "id": "107020_66_11",

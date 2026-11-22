@@ -27331,7 +27331,7 @@
       "subject_name": "團體膳食設計",
       "stage_id": 2,
       "number": 2,
-      "question": "下表為某自助餐銷售分析表，則菜單中的烤雞腿的預估份數為何？菜餚名稱預估份數實際銷售份數未出售份數未出售份數百分比烤雞腿？",
+      "question": "下表為某自助餐銷售分析表，則菜單中的烤雞腿的預估份數為何？",
       "options": {
         "A": "250",
         "B": "500",
@@ -27339,7 +27339,10 @@
         "D": "1000"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/nutrition_102110_0304_2_tbl.webp"
+      ]
     },
     {
       "id": 116138,

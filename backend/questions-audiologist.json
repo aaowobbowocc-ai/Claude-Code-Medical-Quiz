@@ -5395,7 +5395,10 @@
     "answer": "B",
     "explanation": "",
     "exam_type": "special_high",
-    "_legacy_id": 30002058
+    "_legacy_id": 30002058,
+    "images": [
+      "/question-images/audiologist_100090_0503_74_tbl.webp"
+    ]
   },
   {
     "id": "audiologist_100090_p3_75",
@@ -71230,7 +71233,7 @@
     "paper_id": "paper3",
     "stage_id": 0,
     "number": 67,
-    "question": "下表是一個電生理檢查，在給予有訊號的刺激音（stimulus trial）100 次以及沒有訊號的刺激音（catchtrial）100 次時受測者的反應（response）統計。受試者有反應（次數）受試者無反應（次數）8020有訊號的刺激音（次數）無訊號刺激音（次數）1090根據訊號偵測理論（theory of signal detection）的計算，請問該檢查的修正後正確率（corrected hit rate）是下列何者？",
+    "question": "下表是一個電生理檢查，在給予有訊號的刺激音（stimulus trial）100 次以及沒有訊號的刺激音（catchtrial）100 次時受測者的反應（response）統計。根據訊號偵測理論（theory of signal detection）的計算，請問該檢查的修正後正確率（corrected hit rate）是下列何者？",
     "options": {
       "A": "0.90",
       "B": "0.80",
@@ -71241,7 +71244,10 @@
     "exam_type": "high",
     "explanation": "",
     "_legacy_id": 30006956,
-    "incomplete": "image_options"
+    "incomplete": "image_options",
+    "images": [
+      "/question-images/audiologist_103100_0903_67_tbl.webp"
+    ]
   },
   {
     "id": "audiologist_103100_s0903_68",
@@ -107754,7 +107760,7 @@
     "subject_name": "行為聽力學",
     "stage_id": 2,
     "number": 22,
-    "question": "下表為聽力篩檢的決策矩陣，下列敘述何者錯誤？黃金標準測驗結果有聽損 聽力正常 合計篩檢結果不通過                       A                       B                       A+B通過                         C                         D                         C+D合計                       A+C                       B+D                       A+B+C+D",
+    "question": "下表為聽力篩檢的決策矩陣，下列敘述何者錯誤？",
     "options": {
       "A": "盛行率的計算為[（A+C）/（A+B+C+D）] ×100",
       "B": "敏感度的計算為[A/（A+C）] × 100",
@@ -107763,7 +107769,10 @@
     },
     "answer": "C",
     "explanation": "",
-    "exam_type": "high"
+    "exam_type": "high",
+    "images": [
+      "/question-images/audiologist_107110_0902_22_tbl.webp"
+    ]
   },
   {
     "id": "audiologist_107110_s0902_23",
@@ -166974,7 +166983,7 @@
     "subject_name": "行為聽力學",
     "stage_id": 0,
     "number": 79,
-    "question": "某個新發展的篩檢測驗，其結果如下表所示，此篩檢測驗的敏感性（sensitivity）是多少？ 確診結果 異常 正常 不通過 7 4 篩檢結果 通過 2 27",
+    "question": "某個新發展的篩檢測驗，其結果如下表所示，此篩檢測驗的敏感性（sensitivity）是多少？",
     "options": {
       "A": "87%",
       "B": "78%",
@@ -166982,7 +166991,10 @@
       "D": "93%"
     },
     "answer": "B",
-    "explanation": ""
+    "explanation": "",
+    "images": [
+      "/question-images/audiologist_099130_200_79_tbl.webp"
+    ]
   },
   {
     "id": 158,

@@ -821,7 +821,10 @@
         "D": "0.632"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_111110_0902_1_tbl.webp"
+      ]
     },
     {
       "id": "111110_2_2",
@@ -981,7 +984,10 @@
         "D": "單一樣本Z 檢定"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_111110_0902_9_tbl.webp"
+      ]
     },
     {
       "id": "111110_2_10",
@@ -1061,7 +1067,10 @@
         "D": "95%信賴區間（95% confidence interval）"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_111110_0902_13_tbl.webp"
+      ]
     },
     {
       "id": "111110_2_14",
@@ -1241,7 +1250,10 @@
         "D": "這個表格的結果是使用羅吉斯迴歸（logistic regression）計算而得"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_111110_0902_22_tbl.webp"
+      ]
     },
     {
       "id": "111110_2_23",
@@ -1967,7 +1979,10 @@
         "D": "Aspirin 與Warfarin 對缺血性心臟疾病風險有加成拮抗作用"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_111110_0903_18_tbl.webp"
+      ]
     },
     {
       "id": "111110_3_19",
@@ -10596,7 +10611,10 @@
         "D": "0.4322"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_113100_0802_9_tbl.webp"
+      ]
     },
     {
       "id": "113100_2_10",
@@ -10749,7 +10767,7 @@
       "subject_name": "生物統計學",
       "stage_id": 0,
       "number": 17,
-      "question": "研究顯示，美國女性罹患乳癌的平均年齡比加拿大女性乳癌患者年輕。分析美國某醫院女性乳癌患者的年齡資料，檢定其平均年齡是否不同於2020 年加拿大女性乳癌患者的平均年齡（單位：歲）如下表。假設該醫院的女性乳癌患者年齡之母體平均為A，=0.05，下列敘述何者錯誤？Test value = 5495% C.I. of the difference",
+      "question": "研究顯示，美國女性罹患乳癌的平均年齡比加拿大女性乳癌患者年輕。分析美國某醫院女性乳癌患者的年齡資料，檢定其平均年齡是否不同於2020 年加拿大女性乳癌患者的平均年齡（單位：歲）如下表。假設該醫院的女性乳癌患者年齡之母體平均為A，=0.05，下列敘述何者錯誤？",
       "options": {
         "A": "t",
         "B": "df",
@@ -10757,7 +10775,10 @@
         "D": "Mean difference"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_113100_0802_17_tbl.webp"
+      ]
     },
     {
       "id": "113100_2_18",
@@ -11970,7 +11991,10 @@
         "D": "陰性概似比為0.32"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_113100_0803_37_tbl.webp"
+      ]
     },
     {
       "id": "113100_3_38",
@@ -20416,7 +20440,7 @@
       "subject_name": "生物統計學",
       "stage_id": 0,
       "number": 19,
-      "question": "下表為A、B 兩個地區發生疾病D 的分布：疾病D是否A地區819922000B地區169841000若要估算及檢定地區與疾病D 的關聯，下列那一種統計方法最不適當？",
+      "question": "下表為A、B 兩個地區發生疾病D 的分布：若要估算及檢定地區與疾病D 的關聯，下列那一種統計方法最不適當？",
       "options": {
         "A": "Two-sample t test",
         "B": "Fisher exact test",
@@ -20424,7 +20448,10 @@
         "D": "Logistic regression"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "images": [
+        "/question-images/public-health_110180_1402_19_tbl.webp"
+      ]
     },
     {
       "id": "110180_2_20",

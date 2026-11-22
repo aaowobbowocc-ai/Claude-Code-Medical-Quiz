@@ -24134,6 +24134,790 @@
       "explanation": ""
     },
     {
+      "id": "115100_1_1",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 1,
+      "question": "想了解抽菸和動脈硬化症間的相關性，利用世代研究得到下面列聯表：請問有抽菸者有動脈硬化症的機率相對於無抽菸者有動脈硬化症的機率約為多少？（選出最接近的選項）",
+      "options": {
+        "A": "2.67",
+        "B": "0.38",
+        "C": "1.56",
+        "D": "0.65"
+      },
+      "answer": "C",
+      "images": [
+        "/question-images/public-health_115100_1_1_0.webp"
+      ]
+    },
+    {
+      "id": "115100_1_2",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 2,
+      "question": "利用X 光來篩檢結核病，敏感度為84.8%、特異度為95.6%，若結核病的盛行率為0.0001，隨機抽取一個人進行檢查，其胸部X 光的檢查為陽性，其真正有病的機率約為多少？",
+      "options": {
+        "A": "0.152",
+        "B": "0.0019",
+        "C": "0.044",
+        "D": "<0.0001"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_3",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 3,
+      "question": "下表為沙克疫苗的大型試驗結果，注射沙克疫苗或是安慰劑之後得到小兒麻痺的人數，由試驗結果得到注射沙克疫苗相對安慰劑得到小兒麻痺的勝算比（odds ratio）為何？",
+      "options": {
+        "A": "0.000164",
+        "B": "0.000572",
+        "C": "0.2875",
+        "D": "0.3301"
+      },
+      "answer": "C",
+      "images": [
+        "/question-images/public-health_115100_1_3_0.webp"
+      ]
+    },
+    {
+      "id": "115100_1_4",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 4,
+      "question": "臺灣母親懷孕滿38 週之新生兒體重分布為常態分布，平均值為μ（單位：g），標準差為σ（單位：g）。若μ = 2800、σ = 400，從母體隨機抽取樣本數（n）為25 的一組樣本，則其樣本平均數會大於3300 g 的機率約為多少？（Z0.005 = 2.58、Z0.023 = 2、Z0.025 = 1.96、Z0.05 = 1.645、Z0.1 = 1.28、Z0.159 = 1）",
+      "options": {
+        "A": "0.300",
+        "B": "0.100",
+        "C": "0.050",
+        "D": "< 0.005"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_5",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 5,
+      "question": "若母體標準差已知，樣本數夠大的情形下，估計單一母體平均數的95%信賴區間，對於此區間的描述，下列敘述何者錯誤？",
+      "options": {
+        "A": "重複抽取100 組樣本後，可建構100 個信賴區間，大約有95%的區間會包含母體平均數",
+        "B": "母體平均數的95%信賴區間寬度約為4 個標準誤（Standard error）",
+        "C": "95%信賴區間表示此信賴區間包含95%的樣本觀測值",
+        "D": "母體平均數的信賴區間估計必定包含樣本平均數"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_6",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 6,
+      "question": "全國健康調查50 歲到74 歲去年為健康且無失智的族群，今年將使用簡易心智量表（MMSE，滿分為30 分）進行失智檢測，已知平均值μ=27 分，標準差為σ=4 分。在進行樣本數估算時，要多少樣本數，其母體平均數的95%信賴區間寬度為2？（選出最接近的）",
+      "options": {
+        "A": "約62 人",
+        "B": "約31 人",
+        "C": "約16 人",
+        "D": "約101 人"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_7",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 7,
+      "question": "北區衛生局進行地區性的收縮壓調查，共收集100 個人的收縮壓數值，根據這個樣本計算出收縮壓母體平均數的95%信賴區間為（109, 130）mmHg。若在調查前已由往年資料得知，收縮壓母體分配為常態分配且母體標準差已知，則下列推測何者錯誤？",
+      "options": {
+        "A": "此調查得到的樣本收縮壓平均數為119.5 mmHg",
+        "B": "樣本收縮壓平均數抽樣分配的標準誤約為5.36 mmHg",
+        "C": "收縮壓母體標準差約為43 mmHg",
+        "D": "依中央極限定理，收縮壓平均數的抽樣分配會服從常態分配"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_8",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 8,
+      "question": "一位研究生進行一項關於大學生吸菸習慣的研究。他先從所有大學中隨機抽取10 所大學，然後再從這10 所大學中隨機選取了500 位大學生進行研究，這個研究的母群體為何？",
+      "options": {
+        "A": "本研究來自10 所大學的500 位學生",
+        "B": "所有大學的大學生",
+        "C": "本研究所選取10 所大學的所有大學生",
+        "D": "所有吸菸者"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_9",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 9,
+      "question": "在生產流感快篩試劑的品管部門，若要檢定不良率(p)是否不足0.01，其虛無假設及對立假設為何？",
+      "options": {
+        "A": "H0：p = 0.01 vs HA：p ≠ 0.01",
+        "B": "H0：p ≠ 0.01 vs HA：p = 0.01",
+        "C": "H0：p ≤ 0.01 vs HA：p > 0.01",
+        "D": "H0：p ≥ 0.01 vs HA：p < 0.01"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_10",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 10,
+      "question": "臺北兩家教學醫院共收集300 位不足月出生的嬰兒樣本資料，假設男、女嬰的血氧濃度為常態分配，欲檢定這些不足月出生的嬰兒男孩的平均血氧濃度是否低於女孩的平均血氧濃度，其虛無假設及對立假設為何？（μ0為女嬰之血氧濃度平均數、μ1為男嬰之血氧濃度平均數）",
+      "options": {
+        "A": "H0：μ1 − μ0 < 0 vs HA：μ1 − μ0 ≥ 0",
+        "B": "H0：μ1 − μ0 ≤ 0 vs HA：μ1 − μ0 > 0",
+        "C": "H0：μ1 − μ0 = 0 vs HA：μ1 − μ0 ≠ 0",
+        "D": "H0：μ1 − μ0 ≥ 0 vs HA：μ1 − μ0 < 0"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_11",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 11,
+      "question": "已知臺灣地區北、中、南三地區65 歲以上健康者的空腹血糖值分布皆呈常態分布，且三地的空腹血糖值變異數皆相等，有一研究在北、中、南三地區進行隨機抽樣，測量65 歲以上健康者的空腹血糖值，得到變異數分析表，如下所示：估計臺灣這三個地區65 歲以上健康者空腹血糖值的母體變異數約為多少？（依上述表格數值進行計算）",
+      "options": {
+        "A": "6.239",
+        "B": "9.358",
+        "C": "0.292",
+        "D": "37.596"
+      },
+      "answer": "D",
+      "images": [
+        "/question-images/public-health_115100_1_11_0.webp"
+      ]
+    },
+    {
+      "id": "115100_1_12",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 12,
+      "question": "承上題，假設α=0.05，同時假設μ北、μ中、μ南分別代表三地65 歲以上健康者的空腹血糖值母群體平均數，試比較三地空腹血糖值平均值是否有差異。在設立虛無假設及對立假設，下列何者正確？",
+      "options": {
+        "A": "H0：μ北= μ中= μ南 vs HA：H0 至少有一個等號不成立",
+        "B": "H0：μ北= μ中= μ南 vs HA：μ北≠μ中≠μ南",
+        "C": "H0：μ北= μ中= μ南= 0 vs HA：μ北≠μ中≠μ南≠ 0",
+        "D": "H0：μ北≠μ中≠μ南 vs HA：μ北= μ中= μ南"
+      },
+      "answer": "A",
+      "images": [
+        "/question-images/public-health_115100_1_11_0.webp"
+      ]
+    },
+    {
+      "id": "115100_1_13",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 13,
+      "question": "想比較男生及女生的血清膽固醇在過去半年內的變化，某研究進行兩組之血清膽固醇的改變量是否有差異的比較，抽出樣本數各約300 人，應使用下列那個統計方法進行比較？",
+      "options": {
+        "A": "One-way ANOVA",
+        "B": "威爾考克森符號等級檢定（Wilcoxon signed rank test）",
+        "C": "獨立雙樣本平均數檢定",
+        "D": "成對樣本平均數檢定"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_14",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 14,
+      "question": "某研究收集8 位女生與10 位男生樣本，每月的運動天數如下，若要比較男、女的運動天數是否相同，要使用何種統計方法最合適？",
+      "options": {
+        "A": "獨立雙樣本平均數檢定",
+        "B": "威爾考克森等級和檢定（Wilcoxon rank sum test）",
+        "C": "威爾考克森符號等級檢定（Wilcoxon signed rank test）",
+        "D": "成對樣本平均數檢定"
+      },
+      "answer": "B",
+      "images": [
+        "/question-images/public-health_115100_1_14_0.webp"
+      ]
+    },
+    {
+      "id": "115100_1_15",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 15,
+      "question": "有一研究欲觀察第二型糖尿病患者的風險因子，想了解這個群組中，肥胖對腎臟病變的效應，將BMI 分為三組：BMI 過低、BMI 正常、BMI 過高，並比較這三組母群體的平均腎絲球過濾率（eGFR）的差異，使用ANOVA 進行分析，利用Bonferroni 多重比較來進行事後檢定，並進行檢定顯著水準的調整，調整後的顯著水準約為多少？（整體顯著水準為0.05）",
+      "options": {
+        "A": "0.05",
+        "B": "0.0167",
+        "C": "0.0125",
+        "D": "0.0083"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_16",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 16,
+      "question": "想了解大學中的性別如何分布，抽樣調查某大學的學生250 名，其中112 名為男生，138 名為女生。利用此調查資料檢定男女比例是否為1：1，下列那種檢定最為適合？",
+      "options": {
+        "A": "單一樣本比例檢定",
+        "B": "獨立雙樣本平均數檢定",
+        "C": "獨立雙樣本比例檢定",
+        "D": "威爾考克森等級和檢定（Wilcoxon rank sum test）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_17",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 17,
+      "question": "生技公司為確保檢驗結果的正確性，將6 名受試者血液檢體同時送交甲檢驗室與乙檢驗室，以了解甲檢驗室與乙檢驗室的紅血球數量的檢驗結果是否有差異。應使用何種方法檢定？",
+      "options": {
+        "A": "威爾考克森符號等級檢定（Wilcoxon signed rank test）",
+        "B": "威爾考克森等級和檢定（Wilcoxon rank sum test）",
+        "C": "獨立雙樣本平均數檢定",
+        "D": "One-way ANOVA"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_18",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 18,
+      "question": "檢定兩個母群體變異數是否相等應採用下列那一個檢定？",
+      "options": {
+        "A": "卡方（Chi-square）檢定",
+        "B": "F 檢定",
+        "C": "t 檢定",
+        "D": "Z 檢定"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_19",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 19,
+      "question": "下列對於Receiver Operating Characteristic Curve（ROC 曲線）的敘述何者錯誤？",
+      "options": {
+        "A": "ROC 曲線的線下面積可作為預測模式的效度指標",
+        "B": "一般線性模式可用以建構ROC 曲線",
+        "C": "比較兩個預測模式的ROC 曲線線下面積可以反應兩個預測模式的預測能力",
+        "D": "若ROC 曲線的座標原點為0，則X 軸與Y 軸分別是1 −specificity 與sensitivity"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_20",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 20,
+      "question": "檢定某樣本是否來自平均值為μ0 的母族群，若在該樣本確非來自μ0 的母族群前提下，且檢定結果為拒絕H0 的機率是指下列那一個機率？",
+      "options": {
+        "A": "第一型錯誤（Type I error）",
+        "B": "第二型錯誤（Type II error）",
+        "C": "檢定力（power）",
+        "D": "顯著水準（significant level）"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_21",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 21,
+      "question": "若單因子變異數分析（One-way ANOVA）的虛無假設（null hypothesis）為真時，檢定F 值會：",
+      "options": {
+        "A": "接近1",
+        "B": "接近0",
+        "C": "大於3.84",
+        "D": "接近MSE 的值"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_22",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 22,
+      "question": "若滿足大樣本的假設下，何者情況較不適合使用成對樣本平均數的檢定方法？",
+      "options": {
+        "A": "死亡組的高血壓病人與存活組的高血壓病人，比較兩組的舒張壓是否有所差異",
+        "B": "比較班上期中考與期末考成績是否有差異，以學生自己的期末考與期中考成績作為比較基礎",
+        "C": "生活在相同環境且同為高血脂的夫妻，比較醫療支出是否有所差異",
+        "D": "高血糖病人治療前與治療後血糖值是否有改變"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_23",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 23,
+      "question": "某研究想得知麥片（x1 = 1）及碳水化合物（x1 = 0）攝取，對於血中總膽固醇（Y）的影響，並調整性別（x2 = 1，男生；x2 = 0，女生）變項，並考慮交互作用項，得到以下多元線性迴歸模型：μ̂y = α̂-13.25× x1-5.21× x2 +3.38× x1 × x2，根據此模型，若考量性別為男生時，食用麥片與食用碳水化合物（參考組），兩者血中總膽固醇平均差值為何？",
+      "options": {
+        "A": "-9.87",
+        "B": "3.38",
+        "C": "-8.59",
+        "D": "-18.46"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_24",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 24,
+      "question": "想了解某醫學大學學生的睡眠狀況與學習表現的相關性，睡眠狀況評估是使用匹茲堡睡眠品質量表（PSQI，滿分21 分）、學習表現是以學期等第成績（A+, A, A－…C+, C, C－）評估。要使用那個統計方法較為合適？",
+      "options": {
+        "A": "Intra-class correlation coefficient",
+        "B": "Pearson’s correlation coefficient",
+        "C": "Spearman’s correlation coefficient",
+        "D": "Cohen’s kappa statistic"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_25",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 25,
+      "question": "若想了解性別與年齡對於中風的影響，是否為中風為Y（Y=1 為中風；Y=0 為無中風），其自變數年齡（age）（x1，單位：歲）、性別（gender1）（x2=1 為男性；x2=0 為女性），並考慮其交互作用項age:gender1，利用R 分析的結果如下，請判斷是否需要加入交互作用項？（顯著水準為0.05）",
+      "options": {
+        "A": "因交互作用項的p 值大於0.05，故此模型不需考慮加入交互作用項",
+        "B": "因交互作用項的p 值大於0.05，故此模型需考慮加入交互作用項",
+        "C": "因交互作用項係數估計為-0.00668，小於0，故此模型需考慮加入交互作用項",
+        "D": "因交互作用項係數估計為-0.00668，很接近0，故此模型不需考慮加入交互作用項"
+      },
+      "answer": "A",
+      "images": [
+        "/question-images/public-health_115100_1_25_0.webp"
+      ]
+    },
+    {
+      "id": "115100_1_26",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 26,
+      "question": "一個簡單線性迴歸模式分析30 名民眾的身高（x）與體重（y）的相關性，這些樣本民眾的身高介於150 至185 公分之間，體重則是介於40 至110 公斤之間，迴歸方程式如下：μ̂y = −120 + 1.14x，下列那一個敘述正確？",
+      "options": {
+        "A": "該迴歸線不排除身高與體重之間存在非線性關係",
+        "B": "可以用此迴歸方程式來預測一名190 公分民眾的體重",
+        "C": "利用此迴歸線來預測一名170 公分民眾體重所得到的預測誤差會比預測10 名170 公分民 眾平均體重所得到的預測誤差大",
+        "D": "該迴歸線顯示民眾的身高與體重間存在顯著的正相關性"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_27",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 27,
+      "question": "線性迴歸模型和羅吉斯迴歸模型之異同點的描述，下列何者錯誤？（X 代表自變項，Y 代表依變項）",
+      "options": {
+        "A": "線性迴歸模型和羅吉斯迴歸模型都可處理多個自變項X 的分析，稱為複迴歸模型",
+        "B": "線性迴歸模型只能推得X 與Y 的相關性，而羅吉斯迴歸模型則可斷定X 與Y 的因果相關性",
+        "C": "線性迴歸模型的Y 為連續變項（常態分配），羅吉斯迴歸的Y 可以為二元變項（二項式分配）",
+        "D": "線性迴歸模型和羅吉斯迴歸模型的X 的變數型態皆不受限定，可以是連續型變項、間斷型 變項、類別變項或序位變項"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_28",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 28,
+      "question": "若想了解性別與年齡對於中風的影響，建立以下模型，中風與否為Y（Y=1 為中風；Y=0 為無中風），其年齡（x1，單位：歲）、性別（x2=1 為男性；x2=0 為女性）的係數如下：logit (P̂(Y = 1|x1, x2))=1.10+0.02× x1+1.21× x2 一名年齡為40 歲且為男性，與一名年齡為30 歲且為女性相比，兩人發生中風的勝算比（odds ratio）約為多少？",
+      "options": {
+        "A": "1.020",
+        "B": "1.410",
+        "C": "4.096",
+        "D": "3.353"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_29",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 29,
+      "question": "一組成對資料，包含肱骨長度（x，單位：公分）和性別（y），其中0 代表女性，1 代表男性，以此計算出以下羅吉斯方程式（logistic equation）：ln(p / (1 − p)) = −5.1 + 0.236x 若某人肱骨長度為31 公分，則其為男性的機率最接近下列何值？",
+      "options": {
+        "A": "2.216",
+        "B": "0.902",
+        "C": "0.098",
+        "D": "0.796"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_30",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 30,
+      "question": "下列有關線性相關係數的敘述，那些是正確的？I：若兩變數之線性相關係數為零，則這兩個變數之間沒有關係。II：若迴歸線的斜率為負，則線性相關係數為負。III：線性相關係數的值介於-1 到1 之間。IV：線性相關係數為0.62 的線性關係比線性相關係數為-0.82 的線性關係更強。",
+      "options": {
+        "A": "I and IV",
+        "B": "III and IV",
+        "C": "II and III",
+        "D": "I and II"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_31",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 31,
+      "question": "以一組成對資料建立迴歸模型，得到總變異量（total variation）為20.711，解釋變異量（explainedvariation）為18.592，未解釋變異量（unexplained variation）為2.119，則此模型的判定係數（coefficient of determination）為：",
+      "options": {
+        "A": "1.114",
+        "B": "0.102",
+        "C": "0.898",
+        "D": "0.114"
+      },
+      "answer": "C"
+    },
+    {
+      "id": "115100_1_32",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 32,
+      "question": "迴歸方程式ŷ=1150+58.3x，迴歸係數檢定的p 值為0.017，R²=0.792。下列何者正確？",
+      "options": {
+        "A": "當x 變化一個單位時，y 的邊際變化為0.792",
+        "B": "迴歸線解釋y 的變異量為0.017",
+        "C": "當y 增加一個單位時，x 的邊際變化為58.3",
+        "D": "由於p 值< 0.05，迴歸係數與0 有顯著差異"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_33",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 33,
+      "question": "若想了解自變數（X）與依變數（Y）的相關性，進行簡單線性迴歸模型及皮爾森（Pearson’s）相關係數的估計，其模型的截距項及自變數之迴歸係數分別為β0 及β1，根據估計結果，下列敘述何者錯誤？",
+      "options": {
+        "A": "簡單線性迴歸的判定係數剛好是皮爾森相關係數的平方",
+        "B": "估計得到皮爾森相關係數的方向，將與β1 的方向一致",
+        "C": "可使用最大概似估計法或最小平方估計簡單線性迴歸係數",
+        "D": "若估計後的β1 大於0 時，可推得X 與Y 具有正相關性"
+      },
+      "answer": "D"
+    },
+    {
+      "id": "115100_1_34",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 34,
+      "question": "想了解中風（Y=0,1）與抽菸量（X=0,1,2）的相關性，利用羅吉斯迴歸進行分析，抽菸量為0代表無抽菸者（參考組），抽菸量為1 代表每天平均一包，抽菸量為2 代表每天平均為兩包或兩包以上，依變項為中風，Y=1 代表中風、Y=0 代表沒有中風。利用R 分析得到以下結果（smoking_level 1 與smoking_level 2 為兩個虛擬變項分別代表抽菸量1 與抽菸量2）。抽菸量為2 與抽菸量為1 相比，發生中風的勝算比（odds ratio）約為多少？",
+      "options": {
+        "A": "1.429",
+        "B": "1.132",
+        "C": "1.263",
+        "D": "0.700"
+      },
+      "answer": "C",
+      "images": [
+        "/question-images/public-health_115100_1_34_0.webp"
+      ]
+    },
+    {
+      "id": "115100_1_35",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 35,
+      "question": "我們知道在進行抽樣時，隨機抽樣可以避免偏差發生，也比較能夠得到具有代表母群體特性的樣本，下列那一種隨機抽樣方法所獲得的樣本較常有資料非獨立（non-independence）的問題？",
+      "options": {
+        "A": "群集隨機抽樣（Cluster random sampling）",
+        "B": "分層隨機抽樣（Stratified random sampling）",
+        "C": "簡單隨機抽樣（Simple random sampling）",
+        "D": "系統隨機抽樣（Systematic random sampling）"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_36",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 36,
+      "question": "下列Kaplan-Meier 圖（KM plot）為存活分析結果，資料來自肺癌病患資料，事件為死亡發生，追蹤記錄治療後多久發生死亡的時間，橫軸為存活時間（單位：月），縱軸為存活機率（survival probability），實線為女性、虛線為男性，並顯示利用對數等級檢定（log-rank test）的p 值，如圖所示。請依下圖結果，選出正確選項：",
+      "options": {
+        "A": "圖中顯示在顯著水準=0.05 下，我們有充分證據證明男、女兩組平均存活天數具顯著差異",
+        "B": "圖中出現垂直向下的階梯（steps），代表該時間點有病患失聯或退出研究（設限資料）",
+        "C": "圖中顯示所有的病患皆觀察到死亡事件發生",
+        "D": "此圖男性存活中位數大約為59 個月，女性的存活中位數大約為82 個月"
+      },
+      "answer": "D",
+      "images": [
+        "/question-images/public-health_115100_1_36_0.webp"
+      ]
+    },
+    {
+      "id": "115100_1_37",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 37,
+      "question": "研究人員利用統計軟體分析了四種肺癌細胞類型患者的存活資料，並在輸出報告中得到分層相等性檢定（Test of Equality over Strata）的結果，其中Log-Rank 與Wilcoxon 檢定的p-value均小於0.0001。下列關於此統計結果的解讀，何者最適當？",
+      "options": {
+        "A": "檢定結果表明，這四種癌細胞患者的存活曲線之間存在顯著的差異",
+        "B": "檢定結果顯示四種癌細胞患者的存活曲線高度同質，沒有達到統計學上的顯著差異",
+        "C": "Log-Rank 與Wilcoxon 檢定結果互相矛盾，因此無法做出任何有效結論",
+        "D": "此結果僅能證明各組中位數存活時間相同，但存活曲線的形狀不同"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_38",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 38,
+      "question": "生產一種實驗性疫苗時，為了評估產品容量的變異性，在產線上每200 支疫苗進行隨機抽樣，這種抽樣方案能得到隨機樣本嗎？以及是否為簡單隨機樣本？",
+      "options": {
+        "A": "兩者皆是",
+        "B": "是隨機樣本，但非簡單隨機樣本",
+        "C": "非隨機樣本，但為簡單隨機樣本",
+        "D": "兩者皆非"
+      },
+      "answer": "B"
+    },
+    {
+      "id": "115100_1_39",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 39,
+      "question": "一個樣本有50 個數值，已知該樣本來自一個偏態分布的母群體，母群體標準差未知。要建立此狀況下母群體分布平均值µ 的信賴區間，需要使用何種統計量分布？",
+      "options": {
+        "A": "學生t 分布",
+        "B": "常態分布",
+        "C": "卡方分布",
+        "D": "不適用任何分布"
+      },
+      "answer": "A"
+    },
+    {
+      "id": "115100_1_40",
+      "roc_year": "115",
+      "session": "第二次",
+      "exam_code": "115100",
+      "subject": "生物統計學",
+      "subject_tag": "ph_biostat",
+      "subject_name": "生物統計學",
+      "stage_id": 0,
+      "number": 40,
+      "question": "成對樣本（paired-sample）t 檢定的檢定結果會與下列那一種檢定方法的結果一致？",
+      "options": {
+        "A": "卡方分布的McNemar 檢定",
+        "B": "成對樣本差異值的單一樣本t 檢定",
+        "C": "小樣本的單一樣本平均值Z 檢定",
+        "D": "無母數的Wilcoxon signed rank test"
+      },
+      "answer": "B"
+    },
+    {
       "id": "115100_0_1",
       "roc_year": "115",
       "session": "第二次",
@@ -24891,25 +25675,6 @@
         "B": "疫情期間因防疫需求，由國外回來的旅客應隔離一段時間。此舉涉及人身自由的限制，難通過公共衛生倫理檢驗",
         "C": "傳染病快篩資源不足時，若分配標準具風險依據，並兼顧公平與透明，政府可優先提供給症狀明顯者、高風險接觸者及醫療照護人員",
         "D": "疫情期間實施簡訊實聯制，已能掌握染疫者及其接觸者的足跡；為確保資料正確，可再要求民眾拍照或蒐集指紋，以增加可追溯性"
-      },
-      "answer": "C"
-    },
-    {
-      "id": "115100_1_1",
-      "roc_year": "115",
-      "session": "第二次",
-      "exam_code": "115100",
-      "subject": "生物統計學",
-      "subject_tag": "ph_biostat",
-      "subject_name": "生物統計學",
-      "stage_id": 0,
-      "number": 1,
-      "question": "交互作用項age:gender1，利用R分析的結果如下，請判斷是否需要加入交互作用項？（顯著   水準為0.05）",
-      "options": {
-        "A": "因交互作用項的p值大於0.05，故此模型不需考慮加入交互作用項",
-        "B": "因交互作用項的p值大於0.05，故此模型需考慮加入交互作用項",
-        "C": "因交互作用項係數估計為-0.00668，小於0，故此模型需考慮加入交互作用項",
-        "D": "因交互作用項係數估計為-0.00668，很接近0，故此模型不需考慮加入交互作用項一個簡單線性迴歸模式分析30名民眾的身高（x）與體重（y）的相關性，這些樣本民眾的身高介於150至185公分之間，體重則是介於40至110公斤之間，迴歸方程式如下：，下列那一個敘述正確？"
       },
       "answer": "C"
     },

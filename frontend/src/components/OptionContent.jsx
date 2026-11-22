@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { assetUrl } from '../lib/assetUrl'
+import ImageLightbox from './ImageLightbox'
 
 export default function OptionContent({ text, imageUrl, letter }) {
   const [zoom, setZoom] = useState(false)
@@ -17,14 +18,8 @@ export default function OptionContent({ text, imageUrl, letter }) {
         style={{ maxHeight: 180, objectFit: 'contain' }}
       />
       <span>{text}</span>
-      {zoom && (
-        <div
-          className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4"
-          onClick={(e) => { e.stopPropagation(); setZoom(false) }}
-        >
-          <img src={src} alt="放大" className="max-w-full max-h-full rounded-xl bg-white p-2 shadow-2xl" />
-        </div>
-      )}
+      {/* 選項圖也吃到反轉／對比／縮放（切圖後的選項圖常常只有一小塊，更需要放大） */}
+      {zoom && <ImageLightbox src={src} alt={`選項 ${letter}`} onClose={() => setZoom(false)} />}
     </>
   )
 }

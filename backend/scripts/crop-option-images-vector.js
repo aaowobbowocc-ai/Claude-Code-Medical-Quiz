@@ -159,8 +159,44 @@ const TOP_PAD = 14
           //    看起來像是裁切座標錯，實際上座標完全正確，害我追錯方向很久。
           //    先裁固定區域、用像素統計判斷是不是空白，確定有內容才 trim。
           const box = { left: 0, top: y0, width: p.w, height: Math.max(1, y1 - y0) }
-          const st2 = await sharp(p.png).extract(box).stats()
-          if (st2.channels.every(c => c.stdev < 3)) { bad = true; break }   // 全白＝切到空白
+          /*
+           * ⚠️ sharp 的 .stats() **不吃 pipeline 前面的 extract()** —— 它量的是
+           * 輸入影像本身。所以 sharp(p.png).extract(box).stats() 回來的一直是
+           * **整頁**的統計值，三塊完全不同的區域會回報一模一樣的 stdev。
+           * 這道「整片空白就丟掉」的檢查因此從來沒有真的擋下任何東西。
+           * 要先把區域落成 buffer，再對那個 buffer 量。
+           */
+          const regionBuf = await sharp(p.png).extract(box).png().toBuffer()
+          const st2 = await sharp(regionBuf).stats()
+          if (st2.channels.every(c => c.stdev < 3)) {
+            console.log(`      ✖ #${q.number} ${'ABCD'[oi]}: 切到的範圍整片空白`)
+            bad = true; break
+          }
+          /*
+           * ⚠️ 整片白度檢查擋不住最常見的壞結果：**只切到選項標記那個字母**。
+           * 上界為了保住苯環頂端會往上留 TOP_PAD，所以「D.」這個字本身一定在
+           * 框裡，它提供的對比足以讓 stdev 過關，trim 完就剩一張 33×27 的「D.」。
+           *
+           * 藥師一階 109020 卷一 #74 就是這樣：原卷那一頁 A/B/C 三個結構式都畫
+           * 得好好的，D 底下**空的**（mupdf 渲染不出那一塊），工具卻照樣輸出了
+           * 一張只有字母的圖，而且順手把 incomplete 清掉 —— 等於把一題本來
+           * 「藏起來待辦」的題，變成「放出來但 D 是張空圖」，比原狀更糟。
+           *
+           * 所以另外量一次**標記基線底下**那一段：真正的結構式一定畫在那裡。
+           * 那一段是白的，就代表這個選項的圖根本不在這個範圍內，整題跳過。
+           */
+          const underY = Math.min(p.h, Math.floor((cur.y + cur.h + 1) * SCALE))
+          if (y1 - underY < MIN_H * SCALE * 0.5) {
+            console.log(`      ✖ #${q.number} ${'ABCD'[oi]}: 標記底下沒剩多少空間`)
+            bad = true; break
+          }
+          const underBuf = await sharp(p.png)
+            .extract({ left: 0, top: underY, width: p.w, height: y1 - underY }).png().toBuffer()
+          const under = await sharp(underBuf).stats()
+          if (under.channels.every(c => c.stdev < 3)) {
+            console.log(`      ✖ #${q.number} ${'ABCD'[oi]}: 標記底下是空白（原卷這一格沒畫東西）`)
+            bad = true; break
+          }
           // ⚠️ .extract().trim() 串在同一條 pipeline 裡會丟例外，被 catch 接走之後
           //    寫出去的是**沒裁過**的整頁寬圖（1786px 寬、底下一大片空白）。
           //    錯誤訊息長得像座標錯，其實座標是對的。分兩段做才會真的裁到。

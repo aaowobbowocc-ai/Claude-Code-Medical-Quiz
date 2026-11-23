@@ -127432,7 +127432,7 @@
       "options": {
         "A": "14 N(n,2n) 13 N， 1 H(n,n’) 1 H",
         "B": "14 N(n, n’) 14 N， 1 H(n,γ) 2 H",
-        "C": "， 1 H(n,γ) 2 H",
+        "C": "14N(n, p) 14C，1H(n, n’) 1H",
         "D": "14 N(n, p) 14C，1H(n,γ) 2H"
       },
       "answer": "D",
@@ -132149,7 +132149,7 @@
       "options": {
         "A": "在所有其它掃描參數都相同的情況下，訊雜比（SNR）減少",
         "B": "氫原子核平行（spin-up）磁偶矩和反平行（spin-down）磁偶矩的能量差增加",
-        "C": "原子核T1弛緩時間增加",
+        "C": "16O原子核拉莫頻率（Larmor frequency）減少",
         "D": "12C原子核T1弛緩時間增加"
       },
       "answer": "B",
@@ -132532,7 +132532,7 @@
       "options": {
         "A": "中子射束",
         "B": "質子射束",
-        "C": "s光子射束",
+        "C": "137Cs光子射束",
         "D": "負π粒子射束"
       },
       "answer": "C",
@@ -140374,7 +140374,7 @@
       "number": 44,
       "question": "下圖為MRI的脈衝波序簡圖，下列有關圖中A及B的敘述何者正確？",
       "options": {
-        "A": "為TE 1 ，B為TE 2",
+        "A": "A為TR，B為TE",
         "B": "A為T1，B為T2",
         "C": "A為TR，B為TI",
         "D": "A為TE1，B為TE2"
@@ -144063,7 +144063,7 @@
       "options": {
         "A": "112 Sn→ 113 Sn",
         "B": "14 N→ 14C",
-        "C": "d→ 111 In",
+        "C": "98Mo→99Mo",
         "D": "111Cd→111In"
       },
       "answer": "B",
@@ -152388,7 +152388,7 @@
       "number": 76,
       "question": "SPECT的影像品管校正項目，不包括下列何者？",
       "options": {
-        "A": "ttenuation",
+        "A": "uniformity",
         "B": "center of rotation",
         "C": "attenuation",
         "D": "spatial resolution"
@@ -159961,7 +159961,7 @@
       "options": {
         "A": "N-acetyl aspartate",
         "B": "choline",
-        "C": "reatine",
+        "C": "lactate",
         "D": "creatine"
       },
       "answer": "C",
@@ -160023,7 +160023,7 @@
       "number": 55,
       "question": "磁振造影診斷急性腦梗塞的影像變化，下列何者錯誤？",
       "options": {
-        "A": "DC map上呈現高訊號",
+        "A": "DWI上呈現⾼訊號",
         "B": "ADC map上呈現⾼訊號",
         "C": "MRA上呈現血管阻塞",
         "D": "MR perfusion上呈現血流降低"
@@ -165011,7 +165011,7 @@
       "question": "下列何種分子最有可能造成嗜中性白血球滾動缺陷？",
       "options": {
         "A": "NADPH氧化酶",
-        "B": "4白三烯素（leukotriene）",
+        "B": "整合素（integrin）",
         "C": "選擇素（selectin）",
         "D": "B4⽩三烯素（leukotriene）"
       },
@@ -166986,7 +166986,7 @@
       "options": {
         "A": "醫用直線加速器",
         "B": "移動型X光機",
-        "C": "o之遠隔治療機",
+        "C": "含60Co之遠隔治療機",
         "D": "含放射性物質之遙控後荷式近接治療設備"
       },
       "answer": "B",
@@ -171441,7 +171441,7 @@
       "question": "下圖所示，病患口中所含的裝置名稱為何？",
       "options": {
         "A": "thermoplastic immobilization mask",
-        "B": "ite block",
+        "B": "face mask",
         "C": "bite block",
         "D": "stereotactic cranial fixation"
       },
@@ -182898,7 +182898,7 @@
       "options": {
         "A": "11C-raclopride",
         "B": "99m Tc-TRODAT-1",
-        "C": "-NMSP",
+        "C": "11C-NMSP",
         "D": "123 I-IBZM"
       },
       "answer": "B",
@@ -187240,7 +187240,7 @@
       "number": 40,
       "question": "有關永久性組織插種治療，下列敘述何者錯誤？",
       "options": {
-        "A": "u的光子能量比 125 I高",
+        "A": "通常使用較低光子能量的同位素射源以減少對正常組織的穿透度",
         "B": "125 I及 103 Pd可用於永久性組織插種治療",
         "C": "198Au的光子能量比125I高",
         "D": "同位素射源的射線穿透度與其比活度有正相關"
@@ -187971,7 +187971,7 @@
       "options": {
         "A": "高劑量率光子亦可由中子侖目計（BF 3 rem counter）進行測量",
         "B": "蓋革計數器（Geiger-Műller counters）主要用於輻射偵測",
-        "C": "ounters可用來偵測高劑量率質子",
+        "C": "大體積的游離腔非常適合用來偵測高劑量率X光",
         "D": "BF 3 counters可用來偵測高劑量率質子"
       },
       "answer": "B",
@@ -195572,7 +195572,7 @@
       "question": "下列何種為光激發光劑量計（optically stimulated luminescence dosimeter, OSLD），進行環境輻射劑量偵檢常 使用的材料？",
       "options": {
         "A": "Al 2 O 3 ：C",
-        "B": "4 O 7 ：Cu",
+        "B": "CaSO4：Tm",
         "C": "Li 2B4O7：Cu",
         "D": "CaF 2 ：Mn"
       },

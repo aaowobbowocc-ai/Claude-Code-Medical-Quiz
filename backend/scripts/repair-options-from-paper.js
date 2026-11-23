@@ -17,7 +17,10 @@
  * 三種都要求原卷那個選項是**完整的一行**（後面緊接著下一個標記或下一題），
  * 不然拿半行去覆蓋會把題庫原本正確的下半段砍掉。
  *
- *   node scripts/repair-options-from-paper.js [--exam=xxx] [--kind=rotate|letter|spill] [--apply]
+ *   node scripts/repair-options-from-paper.js [--exam=xxx] [--kind=…] [--apply]
+ *     --kind: circled | rotate | letter | truncated | spill | rebuild | alien
+ *             alien-cell | alien-cell-headless | alien-cell-fragment（可自動套用）
+ *             alien-cell-replaced（只報告，要 --reviewed 才寫入）
  */
 const fs = require('fs');
 const path = require('path');
@@ -31,6 +34,9 @@ const only = (process.argv.find(a => a.startsWith('--exam=')) || '').split('=')[
 const onlyKind = (process.argv.find(a => a.startsWith('--kind=')) || '').split('=')[1];
 // 「整格換掉」那一類的風險太高，要逐題核對過才寫入（見 2.8 的註解）
 const REVIEWED = process.argv.includes('--reviewed');
+// 把 2.8「整格換掉」的候選連同判斷依據倒成 JSONL，拿去分風險層級
+const JSONL = (process.argv.find(a => a.startsWith('--jsonl=')) || '').split('=')[1];
+const jsonlRows = [];
 const KEYS = ['A', 'B', 'C', 'D'];
 
 (async () => {
@@ -66,6 +72,15 @@ const KEYS = ['A', 'B', 'C', 'D'];
         resolved = p;
       } catch { continue; }
       if (!paper.ok) continue;
+      /*
+       * 99 年考選部把題目與答案印在同一份 PDF（見 project_year_99_coverage）。
+       * 原本只擋「要寫進去的那一格」含 <正確答案>，但同一張卷的別格也可能夾著，
+       * 所以整卷標記，後面照抄之前先看這一面旗子。
+       */
+      const paperLeaksAnswer =
+        Object.values(paper.opts || {}).some(o => Object.values(o || {})
+          .some(c => /<正確答案>/.test(String((c && c.fullRaw) || '')))) ||
+        Object.values(paper.stems || {}).some(t => /<正確答案>/.test(String(t || '')));
       /*
        * 選項整組換掉時，答案字母就不能假設還是對的 —— 它當初是跟著**錯的選項**
        * 存進來的（police4 106070 英文 #36 題庫寫 D，原卷選項換成正確的四個之後
@@ -232,7 +247,7 @@ const KEYS = ['A', 'B', 'C', 'D'];
          *         （99 年考選部把題目與答案印在同一份），照抄會把答案寫進選項
          *     pt 的 11 題是逐題核對原卷後用 --reviewed 套用的。
          */
-        if (mismatch.length === 1 && (!onlyKind || onlyKind === 'alien-cell' || onlyKind === 'alien-cell-replaced')) {
+        if (mismatch.length === 1 && (!onlyKind || /^alien-cell/.test(onlyKind))) {
           const k = mismatch[0];
           const cat = KEYS.map(x => (got[x] ? nz(got[x].fullRaw) : '')).join('');
           const v = mine(k);
@@ -240,14 +255,59 @@ const KEYS = ['A', 'B', 'C', 'D'];
           const isAlien = v.length >= 4 && v.length <= 60 && cat.includes(v)
             && !want.startsWith(v) && !v.startsWith(head(k))
             && full(k) && want.length >= 6 && got[k].fullRaw.length <= 200
-            && !/<正確答案>/.test(got[k].fullRaw);
+            // 原卷這一格不能夾著答案，也不能夾著題號（夾題號＝續行黏到下一題了）
+            && !paperLeaksAnswer && !/正確答案|【答案】/.test(want)
+            && !/\s\d{1,3}\s*[.、．]\s*\S/.test(got[k].fullRaw);
           // 只補回開頭的 1-2 個字＝不會改掉任何既有的字
           const narrow = isAlien && want.endsWith(v) && want.length - v.length <= 2;
-          const kind = narrow ? '別格的碎片' : '別格的碎片（整格換掉）';
-          if (isAlien && (!onlyKind || onlyKind === (narrow ? 'alien-cell' : 'alien-cell-replaced'))) {
+          /*
+           * 要不要自動套用，看「題庫這一格的字是從哪裡來的」——能指出來源，
+           * 就證明這一格是碎片（垃圾），覆蓋它不會弄丟任何原本正確的字：
+           *
+           *   headless  v 整段就在原卷這一格裡（只是開頭被切掉）
+           *             doctor2 112080 醫學(四) #45 D
+           *               題庫「S2-VASc分數為0分之非瓣膜性心房顫動…」
+           *               原卷「CHA2DS2-VASc分數為0分之非瓣膜性心房顫動…」
+           *             覆蓋後是原本內容的超集，等於 2.5「被切掉後半」的鏡像。
+           *
+           *   fragment  v 在同題**別格**裡找得到 ＝ 別格漏過來的碎片
+           *             ot 106020 生理疾病職能治療學 #49 C
+           *               題庫「lassIV無法達成大於2METs之活動」← D 少第一個字
+           *               原卷「ClassIII可行走大約2.5英里之距離」← 真正的 C
+           *             這一型最多，而且常常壞在正確答案那一格（使用者看到
+           *             正確答案是半截亂碼）。2026-11-21 擔心的
+           *             dental1「moxicillin→Ampicillin 誰對」其實不是兩說：
+           *             moxicillin 是別格 Amoxicillin 的碎片，原卷那一格才是真的。
+           *
+           *   replaced  兩者都指不出來 ＝ v 要跨格拼接才找得到（多半是兩格黏在
+           *             一起）。方向大概也對，但**留著人看**，要 --reviewed 才寫。
+           */
+          const headless = isAlien && want.includes(v);
+          const fromOther = isAlien && KEYS.some(x => x !== k && paperFull(x).includes(v));
+          const slug = narrow ? 'alien-cell'
+            : headless ? 'alien-cell-headless'
+            : fromOther ? 'alien-cell-fragment'
+            : 'alien-cell-replaced';
+          const kind = {
+            'alien-cell': '別格的碎片',
+            'alien-cell-headless': '開頭被切掉',
+            'alien-cell-fragment': '別格的碎片（整格換掉）',
+            'alien-cell-replaced': '整格換掉（指不出來源）',
+          }[slug];
+          if (isAlien && (!onlyKind || onlyKind === slug)) {
             const after = got[k].fullRaw.replace(/\s+/g, ' ').trim();
-            const write = APPLY && (narrow || REVIEWED);
-            console.log(`${write ? '✓' : narrow ? '·' : '?'} [${kind}] ${exam} ${code} ${subject} #${q.number} ans=${q.answer}`);
+            const write = APPLY && (slug !== 'alien-cell-replaced' || REVIEWED);
+            if (JSONL) {
+              // v 是從哪一格漏過來的？是不是那一格的結尾？——分風險層級要靠這個
+              const src = KEYS.filter(x => x !== k && paperFull(x).includes(v));
+              jsonlRows.push({
+                exam, code, subject, n: +q.number, id: q.id, ans: q.answer, k, narrow,
+                v, want, src, srcTail: src.filter(x => paperFull(x).endsWith(v)),
+                inSelf: paperFull(k).includes(v), leaky: paperLeaksAnswer,
+                bank: KEYS.map(x => nz(bank[x])), paper: KEYS.map(x => paperFull(x)),
+              });
+            }
+            console.log(`${write ? '✓' : slug === 'alien-cell-replaced' ? '?' : '·'} [${kind}] ${exam} ${code} ${subject} #${q.number} ans=${q.answer}`);
             console.log(`    ${k}: ${JSON.stringify(bank[k])} → ${JSON.stringify(after)}`);
             if (write) { q.options[k] = after; touched = true; changed++; }
             tally[kind] = (tally[kind] || 0) + 1;
@@ -439,6 +499,10 @@ const KEYS = ['A', 'B', 'C', 'D'];
       }
     }
     if (APPLY && touched) fs.writeFileSync(fp, JSON.stringify(j, null, 2) + '\n');
+  }
+  if (JSONL) {
+    fs.writeFileSync(JSONL, jsonlRows.map(r => JSON.stringify(r)).join('\n') + '\n');
+    console.log('JSONL:', JSONL, jsonlRows.length, '筆');
   }
   console.log(`\n${APPLY ? '已改' : '可改'} ${changed} 處`, JSON.stringify(tally));
   if (!APPLY) console.log('(試跑；加 --apply 才寫入)');

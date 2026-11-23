@@ -18,50 +18,13 @@
 const fs = require('fs');
 const path = require('path');
 const { atomicWriteJson } = require('./lib/atomic-write');
+const { cleanTail } = require('./lib/ceec-tail');
 
 const BK = path.join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
 const FILES = ['questions-ast.json', 'questions-gsat.json'];
 
-// 卷面殘渣的起點。命中就從那裡切掉，沒命中就整段留著。
-const JUNK = [
-  /\s*\d{2,3}\s*年\s*(分科|學測)/,          // 111 年分科 / 110 年學測
-  /\s*第\s*\d+\s*頁/,
-  /\s*共\s*\d+\s*頁/,
-  /\s*[-－]\s*\d+\s*[-－]\s*$/,
-  /\s*[一二三四五六]\s*、\s*(單|多)選題/,
-  /\s*第\s*[壹貳參肆]\s*部分/,
-  /\s*說明\s*[：:︰]/,
-  /\s*（\s*占\s*\d+\s*分\s*）/,
-  /\s*\d+\s*[-－~～至]\s*\d+\s*題?\s*為題組/,
-  /\s*第\s*\d+\s*題至第\s*\d+\s*題/,
-  // 圖號／表號只在**尾巴**才算殘渣，而且後面不能接「所示/中/的/之」
-  //（「如圖7所示」是選項正文的一部分，切了就把句子砍斷）
-  /\s+[圖表]\s*[一二三四五六\d]+\s*(?![所中的之])/,
-];
-
-/**
- * 圖的座標軸文字被 PDF 一起吐出來時，同一段會**重複好幾次**
- * （104 自然 #22 的「密度（公斤/立方公尺） 深度︵公尺︶」出現三遍）。
- * 正常的選項不會把一段 12 字以上的文字再講一次，所以看到重複就從第二次那裡切。
- */
-// ⚠️ 試過兩條「看形狀」的規則，兩條都把好選項切壞了，已移除：
-//   「連續 4 組以上的數字當座標軸」→ 109 學測自然 #58 的
-//      「1.0×10⁻⁶ M」被削掉，四個選項變成兩兩重複；
-//      108 社會 #57 的「1707、1800 年的聯合法」也不見了。
-//   「同一段重複出現就切」→ 106 國文 #13 的「孔乙己還欠十九個錢呢！」
-//      原文就是講兩次；114 地理 #40 的「減去平日日間活動人數的欄位數值」也是。
-// 圖表座標軸的文字就留著，宁可少修。
-
-function cleanTail(t) {
-  let out = t;
-  for (const re of JUNK) {
-    const m = re.exec(out);
-    if (m && m.index > 0) out = out.slice(0, m.index);
-  }
-  return out.trim();
-}
-
+// 殘渣清單與 cleanTail 搬到 lib/ceec-tail.js，repair-ceec-missing-fifth.js 共用同一份。
 let total = 0, skipped = 0;
 for (const f of FILES) {
   const p = path.join(BK, f);

@@ -344,8 +344,16 @@ function parseQuestions(text) {
     }
 
     // New question: "1. text"  OR  "1." alone on line (text on next line)
-    const m = line.match(/^(\d{1,2})[\.．]\s*(.*)$/);
-    if (m) {
+    //
+    // ⚠️ 小數會被當成題號。`(?![0-9])` 這道負向判斷是必要的：
+    //    115 分科物理 #5 的題幹裡有「（光速 3.0 10⁸ m/s）」，「3.0」被當成
+    //    第 3 題，於是那一整題掛上 #3 的答案。答案是用**題號**去答案卷查的，
+    //    題號一錯答案一定錯（見 [[project_ceec_coverage]] 記的兩筆舊事故）。
+    //
+    //    第二道：題號在一份卷裡只會遞增。比前一題小或相等的一律不當題號 ——
+    //    頁尾的「- 12 -」、圖裡的「1.」「2.」都會被這條擋掉。
+    const m = line.match(/^(\d{1,2})[\.．](?![0-9])\s*(.*)$/);
+    if (m && (!cur || parseInt(m[1]) > cur.num)) {
       const num = parseInt(m[1]);
       if (cur) blocks.push(cur);
       passage = null;              // 題號一出現，題文就結束
@@ -398,12 +406,17 @@ function parseQuestions(text) {
   const results = [];
   for (const block of blocks) {
     const raw = block.lines.join('\n');
-    // Extract options (A)-(D).  Handle both:
+    // Extract options (A)-(E).  Handle both:
     //   "(A) text (B) text (C) text (D) text"  (single line)
     //   "(A) text\n(B) text\n..."               (multi-line)
+    //
+    // ⚠️ 原本只抓到 (D)。學測**自然**與分科**物理／化學**的單選題本來就是
+    //    五個選項，於是第五格整格沒進題庫 —— 而且題庫裡 A~D 四格是乾淨的，
+    //    健康報告、選項重複、整格比對一條都抓不到（全站 239 題，見
+    //    repair-ceec-missing-fifth.js）。
     const options = {};
     // Handle both "(A)" and "( A )" formats (CEEC PDFs are inconsistent)
-    const optRe = /\(\s*([A-D])\s*\)\s*([\s\S]*?)(?=\s*\(\s*[A-D]\s*\)|$)/g;
+    const optRe = /\(\s*([A-E])\s*\)\s*([\s\S]*?)(?=\s*\(\s*[A-E]\s*\)|$)/g;
     let m2;
     while ((m2 = optRe.exec(raw)) !== null) {
       const key = m2[1];
@@ -420,23 +433,27 @@ function parseQuestions(text) {
     if (!options.A || !options.B || !options.C || !options.D) continue;
 
     /*
-     * 最後一個選項會吞掉後面的東西，因為它的終止條件是「下一個 (A)-(D) 或**結尾**」。
-     * 試卷上常有沒帶題組標記的「框內資訊」排在某題選項後面，就整段被吃進選項 D。
+     * 最後一個選項會吞掉後面的東西，因為它的終止條件是「下一個 (A)-(E) 或**結尾**」。
+     * 試卷上常有沒帶題組標記的「框內資訊」排在某題選項後面，就整段被吃進最後一格。
      * 例：111 學測國文 #6 的 D 變成
      *   「朗朗／瑟瑟／纖纖 斯卡羅族居住於海拔三百公尺以下，在清代已接觸…」
      *   （後面那段其實是 #4「依據下列框內資訊」要用的）
      *
-     * 判準不猜內容：選項 D 比最長的同伴長 4 倍以上、而且多出來的尾巴 ≥60 字，
+     * 判準不猜內容：最後一格比最長的同伴長 4 倍以上、而且多出來的尾巴 ≥60 字，
      * 才在空白處切掉。四個選項本來就都很長的題（閱讀測驗）比例不會到 4 倍。
+     *
+     * ⚠️ 「最後一格」不一定是 D —— 五選一的題是 E。寫死 D 的話，五選一的
+     *    E 吃到框內資訊就沒人擋。
      */
-    const sibMax = Math.max(options.A.length, options.B.length, options.C.length);
-    if (options.D.length > sibMax * 4 && options.D.length - sibMax >= 60) {
-      const cut = options.D.slice(0, Math.ceil(sibMax * 1.5)).lastIndexOf(' ');
-      if (cut > 0 && options.D.length - cut >= 60) options.D = options.D.slice(0, cut).trim();
+    const last = options.E ? 'E' : 'D';
+    const sibMax = Math.max(...Object.keys(options).filter(k => k !== last).map(k => options[k].length));
+    if (options[last].length > sibMax * 4 && options[last].length - sibMax >= 60) {
+      const cut = options[last].slice(0, Math.ceil(sibMax * 1.5)).lastIndexOf(' ');
+      if (cut > 0 && options[last].length - cut >= 60) options[last] = options[last].slice(0, cut).trim();
     }
 
     // Question text = everything before the first (A) or ( A )
-    const firstOpt = raw.search(/\(\s*[A-D]\s*\)/);
+    const firstOpt = raw.search(/\(\s*[A-E]\s*\)/);
     const questionText = (firstOpt > 0 ? raw.slice(0, firstOpt) : raw)
       .replace(/\s+/g, ' ').trim();
 
@@ -460,8 +477,14 @@ function buildQuestions({ examId, year, subjectTag, subjectName, parsedQs, answe
   const results = [];
   for (const pq of parsedQs) {
     const ans = answerMap[String(pq.num)];
-    // Single-choice only: answer must be exactly one letter A/B/C/D
-    if (!ans || ans.length !== 1 || !'ABCD'.includes(ans)) continue;
+    // Single-choice only: answer must be exactly one letter A~E
+    //
+    // ⚠️ 原本只認 A~D。學測自然與分科物理的單選題是五選一，**答案是 E 的那些
+    //    整題被丟掉**（學測 123 題、分科 12 題），而且丟得無聲無息：缺題盤點
+    //    用的是題庫自己的題號，看不出少了一整類。
+    if (!ans || ans.length !== 1 || !'ABCDE'.includes(ans)) continue;
+    // 答案是 E 卻沒有 E 選項 = 這題的選項沒解析完整，收進去使用者永遠答不對。
+    if (ans === 'E' && !pq.options.E) continue;
 
     const id = `${examId}_${year}_${subjectTag}_${String(pq.num).padStart(3, '0')}`;
     results.push({
@@ -530,13 +553,13 @@ async function main() {
           const qBuf  = await download(urls.q);
           const qData = await pdfParse(qBuf);
           const parsedQs = parseQuestions(qData.text);
-          console.log(`  ${parsedQs.length} questions with (A)-(D) options parsed`);
+          console.log(`  ${parsedQs.length} questions with (A)-(E) options parsed`);
 
           // Download + parse answer PDF
           const aBuf  = await download(urls.a);
           const aData = await pdfParse(aBuf);
           const ansMap = parseAnswers(aData.text);
-          const singleChoice = Object.values(ansMap).filter(v => v.length === 1 && 'ABCD'.includes(v)).length;
+          const singleChoice = Object.values(ansMap).filter(v => v.length === 1 && 'ABCDE'.includes(v)).length;
           console.log(`  ${Object.keys(ansMap).length} answers parsed, ${singleChoice} single-choice`);
 
           // Build question objects
@@ -574,6 +597,8 @@ async function main() {
 }
 
 // REGISTRY（各年度各科目的試題／答案 PDF 網址）是補圖腳本唯一的來源，匯出共用
-module.exports = { REGISTRY, BASE, parseQuestions, parseAnswers };
+// buildQuestions 也匯出：fill-ceec-missing.js 要用同一套組題邏輯，
+// 自己再寫一份就會跟爬蟲漂開（欄位、題組文章、答案過濾都要一致）。
+module.exports = { REGISTRY, BASE, parseQuestions, parseAnswers, buildQuestions };
 
 if (require.main === module) main().catch(e => { console.error(e); process.exit(1); });

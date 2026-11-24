@@ -40,6 +40,8 @@ async function paperSegments(tag, dir = CACHE_DIR) {
   mupdf = mupdf || await import('mupdf');
   const doc = mupdf.Document.openDocument(fs.readFileSync(p), 'application/pdf');
   const segs = [], nums = [];
+  // 正在收題幹的那個題號。碰到第一個 (X) 標記就停 —— 題幹只到選項開始為止。
+  let openNum = null;
   for (let i = 0; i < doc.countPages(); i++) {
     const st = JSON.parse(doc.loadPage(i).toStructuredText('preserve-whitespace').asJSON());
     for (const b of st.blocks || []) for (const l of b.lines || []) {
@@ -49,16 +51,22 @@ async function paperSegments(tag, dir = CACHE_DIR) {
       // 圖說裡的「1.」「2.」都會被這條擋掉。
       const qm = line.match(QNUM);
       const lastNum = nums.length ? nums[nums.length - 1].num : 0;
-      if (qm && +qm[1] > lastNum) nums.push({ num: +qm[1], ord: segs.length });
+      if (qm && +qm[1] > lastNum) {
+        openNum = { num: +qm[1], ord: segs.length, stem: line.replace(QNUM, '').slice(0, 0) + line.replace(/^\s*\d{1,2}\s*[.．]\s*/, '') };
+        nums.push(openNum);
+      }
       MARK.lastIndex = 0;
       const hits = [...line.matchAll(MARK)];
       if (!hits.length) {
+        // 題幹常跨好幾行，收到第一個選項標記為止
+        if (openNum && !qm) openNum.stem += line;
         const last = segs[segs.length - 1];
         if (!last || last.closed) continue;
         if (qm || x + 2 < last.x) { last.closed = true; continue; }
         last.text += ' ' + line;
         continue;
       }
+      if (openNum) { openNum.stem += line.slice(0, hits[0].index); openNum = null; }
       for (let h = 0; h < hits.length; h++) {
         const from = hits[h].index + hits[h][0].length;
         const to = h + 1 < hits.length ? hits[h + 1].index : line.length;

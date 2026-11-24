@@ -59,6 +59,12 @@ const SUBJ = {
       if (real === null) { bump('選項之前找不到題號'); continue; }
       if (real === +q.number) { bump('題號正確'); continue; }
 
+      // ⚠️ 題號流有缺口時不能下判斷。numberBefore 回的是「這段選項之前最後
+      //    出現的題號」—— 卷上根本沒抓到 #5 的話，#5 的選項會被歸給 #2，
+      //    於是一整串好題全被報成錯的（gsat_ref 國文漏了 3~9，一次誤報 6 題）。
+      //    只有在卷上確實看到題庫那個題號時，這個比對才有意義。
+      if (!S.nums.some(n => n.num === +q.number)) { bump('卷上沒抓到這個題號，確認不了'); continue; }
+
       bump('⚠️ 題號對不上');
       const row = {
         file: f, id: q.id, exam: q.exam_code, subject: q.subject,

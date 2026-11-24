@@ -1056,7 +1056,8 @@
       "images": [
         "/question-images/gsat_100_science_q6_fig.webp"
       ],
-      "image_mode": "圖說定位"
+      "image_mode": "圖說定位",
+      "incomplete": "wrong_question_number"
     },
     {
       "id": "gsat_100_science_007",
@@ -1668,7 +1669,8 @@
         "D": "推論四"
       },
       "answer": "D",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "wrong_question_number"
     },
     {
       "id": "gsat_100_social_004",
@@ -1872,7 +1874,8 @@
         "D": "丙、戊、己"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "wrong_question_number"
     },
     {
       "id": "gsat_100_social_014",
@@ -2122,7 +2125,8 @@
       "images": [
         "/question-images/gsat_100_social_q27_fig.webp"
       ],
-      "image_mode": "圖說定位"
+      "image_mode": "圖說定位",
+      "incomplete": "wrong_question_number"
     },
     {
       "id": "gsat_100_social_028",
@@ -2790,7 +2794,8 @@
       "images": [
         "/question-images/gsat_100_social_q60_fig.webp"
       ],
-      "image_mode": "圖說定位"
+      "image_mode": "圖說定位",
+      "incomplete": "wrong_question_number"
     },
     {
       "id": "gsat_100_social_065",
@@ -9802,7 +9807,7 @@
       "subject_tag": "social",
       "subject_name": "社會",
       "stage_id": 0,
-      "number": 63,
+      "number": 66,
       "question": "【題組情境】◎ 近年來，有些地理學家從均衡區域發展和區域合作的角度，研議將   中國的  三大經濟地帶調整。建議調整後的新三大地帶為：   東北及東部區（黑龍江、吉林、遼寧、河北、北京、天津、山東、江蘇、上海、浙江、福建、廣東、海南）；中部及近西部區（山西、陜西、寧夏、甘肅、河南、安徽、江西、湖北、湖南、重慶、四川、廣西、貴州、雲南）和遠西部區（內蒙古、新疆、青海、西藏）。表4是三大經濟地帶和調整後新三大地帶各區三級產業就業人口比例資料，請問：\n\n中國水資源分布不均，近年來，有些地區缺水問題日益嚴重，南水北調計畫應 運而生。南水北調計畫的「中線」，調水路線分別跨越「三大經濟地帶」和「新 三大地帶」的哪兩區？",
       "options": {
         "A": "甲乙丁丙",
@@ -11634,7 +11639,8 @@
         "E": "100"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "wrong_question_number"
     },
     {
       "id": "gsat_103_science_049",
@@ -19652,7 +19658,8 @@
       "explanation": "",
       "images": [
         "/question-images/gsat_105_social_36.webp"
-      ]
+      ],
+      "incomplete": "wrong_question_number"
     },
     {
       "id": "gsat_105_social_037",
@@ -21993,7 +22000,8 @@
       "images": [
         "/question-images/gsat_106_science_q17_fig.webp"
       ],
-      "image_mode": "圖說定位"
+      "image_mode": "圖說定位",
+      "incomplete": "wrong_question_number"
     },
     {
       "id": "gsat_106_science_018",
@@ -37296,7 +37304,8 @@
         "E": "0"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "wrong_question_number"
     },
     {
       "id": "gsat_110_science_067",
@@ -55830,7 +55839,7 @@
       "subject_tag": "zh",
       "subject_name": "國文",
       "stage_id": 0,
-      "number": 12,
+      "number": 14,
       "question": "【題組情境】下列圖表摘自文化部《105年臺灣出版產業調查報告》有關民眾105年閱讀及消費行為的統計，「圖一」是受訪者對「是否去過實體書店」的調查結果，「表一」是各類受訪者「去實體書店的平均次數」，請於閱讀後回答11-12題。表一類別次數類別次數類別次數性別男\n\n關於圖一與表一的解讀，最不適當的是：",
       "options": {
         "A": "山靜似太古，日長如小年",

@@ -98,10 +98,21 @@ function findOptionRuns(segs, options, keys) {
   return hits;
 }
 
-/** 這段選項之前最後出現的題號 */
+/**
+ * 這段選項之前最後出現的題號。分不出來時回 null。
+ *
+ * ⚠️ 有些卷（參考試卷英文）是雙欄排版，PDF 的閱讀順序把好幾題的題幹先排完
+ *    才排選項，於是 1.、2.、3.、4. 四個題號**落在同一個位置**。這時「最後
+ *    出現的那個」會固定選到 4，把 #1~#3 全報成錯的。擠在一起就代表這份卷的
+ *    題號流在這裡沒有解析度，要說不知道，不能猜。
+ */
 function numberBefore(nums, ord) {
-  for (let k = nums.length - 1; k >= 0; k--) if (nums[k].ord <= ord) return nums[k].num;
-  return null;
+  let k = -1;
+  for (let i = nums.length - 1; i >= 0; i--) if (nums[i].ord <= ord) { k = i; break; }
+  if (k < 0) return null;
+  const at = nums[k].ord;
+  if ((k > 0 && nums[k - 1].ord === at) || (k + 1 < nums.length && nums[k + 1].ord === at)) return null;
+  return nums[k].num;
 }
 
 module.exports = { paperSegments, findOptionRuns, numberBefore, nz, pref };

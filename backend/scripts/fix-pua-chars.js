@@ -17,21 +17,16 @@
 const fs = require('fs')
 const path = require('path')
 const { warnZero, summary } = require('./lib/coverage-guard')
+const { decodeSymbolFont } = require('./lib/symbol-font')
 
 const APPLY = process.argv.includes('--apply')
 const DIR = path.join(__dirname, '..')
 
 // 純視覺標記，刪掉即可
 const MARKS = /[-]/g
-// Symbol 字型對照（只列查證過的；F0xx 其餘碼位不動）
-const SYMBOL = {
-  '': '×', '': '÷', '': '±', '': '≥', '': '≤',
-  '': '×', '': '→', '': '→', '': '←',
-  '': '≤', '': '≠', '': 'α', '': 'β', '': 'γ',
-  '': 'δ', '': 'λ', '': 'μ', '': 'π', '': 'σ',
-  '': 'ω', '': 'Ω', '': 'Δ',
-}
-const SYMBOL_RE = new RegExp('[' + Object.keys(SYMBOL).join('') + ']', 'g')
+// Symbol 字型的對照改走 lib/symbol-font.js（整張 Adobe Symbol 编碼表）。
+// 原本這裡是一張手寫的 22 筆清單，比表短很多 —— 漏掉的碼位就静默留在
+// 題庫裡當豆腐字（= > + × α β ε λ τ 那一批）。表外的碼位回 null，文字不動。
 const ANY_PUA = /[-]/
 
 let marksFixed = 0, symbolsFixed = 0
@@ -49,22 +44,24 @@ for (const f of fs.readdirSync(DIR).filter(x => /^questions(-.*)?\.json$/.test(x
     let out = t
     const m = out.match(MARKS)
     if (m) { marksFixed += m.length; out = out.replace(MARKS, '') }
-    const sy = out.match(SYMBOL_RE)
-    if (sy) { symbolsFixed += sy.length; out = out.replace(SYMBOL_RE, c => SYMBOL[c]) }
+    const [dec, n] = decodeSymbolFont(out)
+    if (n) { symbolsFixed += n; out = dec }
     return out.replace(/\s{2,}/g, ' ').trim()
   }
 
   for (const q of arr) {
-    const before = JSON.stringify([q.question, q.options])
+    // case_context（題組共用文章）也會夾豆腐字，而它在前端五個頁面都會顯示
+    const before = JSON.stringify([q.question, q.options, q.case_context])
     const nq = clean(q.question)
+    const nctx = clean(q.case_context)
     const nopts = {}
     for (const k of Object.keys(q.options || {})) nopts[k] = clean(q.options[k])
-    if (JSON.stringify([nq, nopts]) !== before) {
-      if (APPLY) { q.question = nq; q.options = nopts }
+    if (JSON.stringify([nq, nopts, nctx]) !== before) {
+      if (APPLY) { q.question = nq; q.options = nopts; if (q.case_context !== undefined) q.case_context = nctx }
       touched++
     }
     // 清完還有殘留的，記下來給人看——那些是沒把握的符號，不該亂刪
-    const rest = String(nq) + Object.values(nopts).join('')
+    const rest = String(nq) + Object.values(nopts).join('') + String(nctx || '')
     if (ANY_PUA.test(rest)) {
       for (const c of rest.match(/[-]/g) || []) {
         const k = 'U+' + c.codePointAt(0).toString(16).toUpperCase()

@@ -53,6 +53,9 @@ const KEYS = ['A', 'B', 'C', 'D', 'E'];
     let dirty = false;
 
     for (const q of arr) {
+      // 已經標起來的壞紀錄不要碰 —— 那些是「整題錯位」，換選項只會把它變成
+      // 「題幹是說明文件、選項是別題」的新組合（gsat_ref 國文 #2 實測）。
+      if (q.incomplete) continue;
       if (ONLY && !String(q.exam_code).startsWith(ONLY)) continue;
       const o = q.options || {};
       if (!o.A || !o.B || !o.C || !o.D) continue;

@@ -110,7 +110,7 @@ function SimilarQuestionsSheet({ open, onClose, examId, questionId, questionText
                 {opts.length > 0 && (
                   <div className="mt-2 space-y-0.5">
                     {opts.map((opt, i) => {
-                      const letter = opt.match(/^([A-D])\./)?.[1]
+                      const letter = opt.match(/^([A-J])\./)?.[1]
                       const isCorrect = letter && letter === h.answer
                       return (
                         <p key={i}

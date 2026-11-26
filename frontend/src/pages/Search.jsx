@@ -136,7 +136,7 @@ export default function Search() {
     const stem = lines[0] || ''
     const options = {}
     for (const l of lines.slice(1)) {
-      const m = l.match(/^\s*([A-D])[.．、]\s*(.*)$/)
+      const m = l.match(/^\s*([A-J])[.．、]\s*(.*)$/)
       if (m) options[m[1]] = m[2].trim()
     }
     return {
@@ -304,7 +304,7 @@ export default function Search() {
                   {opts.length > 0 && (
                     <div className="space-y-1 mb-3">
                       {opts.map((opt, i) => {
-                        const letter = opt.match(/^([A-D])\./)?.[1]
+                        const letter = opt.match(/^([A-J])\./)?.[1]
                         const isCorrect = letter && letter === h.answer
                         return (
                           <p key={i}

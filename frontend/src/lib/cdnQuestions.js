@@ -1,3 +1,4 @@
+import { Capacitor } from '@capacitor/core'
 // CDN questions loader — pulls full exam JSON from jsDelivr (GitHub raw via CDN)
 // and caches in IndexedDB. Replaces backend /questions/* API calls for read-only data.
 // Render bandwidth → ~0 (CDN serves all reads).
@@ -12,6 +13,16 @@ const CDN_BASE = 'https://cdn.jsdelivr.net/gh/aaowobbowocc-ai/Claude-Code-Medica
 // GitHub raw 永遠是最新（無 jsDelivr 的 ~12h edge 快取）。forceFresh（錯題夾 re-hydrate）改用此來源，
 // 確保題目修正後立即拿到最新版，不受 jsDelivr edge 快取/purge 傳播延遲影響。
 const RAW_BASE = 'https://raw.githubusercontent.com/aaowobbowocc-ai/Claude-Code-Medical-Quiz/master/backend'
+// 帶 commit sha 的網址沒有「@master → commit」那層 12 小時快取，所以改題 push 完立即生效。
+// 放在第一順位，失敗就跳回 @master、再跳 raw，所以只會比現在新，不會比現在興。
+//
+// ⚠️ **原生 App 不能用。** App 裝包上架後要活好幾週幾個月，sha 是裝包那天的，
+//    釣到那個 commit 就永遠抿不到之後的任何修正 —— 比 12 小時窗口嚴重很多。
+//    網頁版因為 Vercel 每次 push 都重建，所以 sha 永遠跟題庫同步。
+const COMMIT_SHA = typeof __COMMIT_SHA__ === 'string' ? __COMMIT_SHA__ : ''
+const PINNED_BASE = /^[0-9a-f]{40}$/.test(COMMIT_SHA) && !Capacitor.isNativePlatform()
+  ? `https://cdn.jsdelivr.net/gh/aaowobbowocc-ai/Claude-Code-Medical-Quiz@${COMMIT_SHA}/backend`
+  : ''
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000  // 24h
 // v3 (2026-05-15): doctor2/tcm/nursing 102 大量題幹+選項重抽，強制刷新 jsDelivr + IndexedDB cache
 // v4 (2026-06-08): 護理112精神社區整卷校正、speech/audio位移、PUA/答案修正等大量更新，強制刷新
@@ -200,7 +211,11 @@ export async function loadExamQuestions(examId, { forceFresh = false } = {}) {
    */
   const urls = forceFresh
     ? [`${RAW_BASE}/${file}?_=${Date.now()}`]            // 永遠最新（GitHub raw）
-    : [`${CDN_BASE}/${file}?v=${CACHE_VERSION}`, `${RAW_BASE}/${file}?v=${CACHE_VERSION}`]
+    : [
+        PINNED_BASE && `${PINNED_BASE}/${file}?v=${CACHE_VERSION}`,   // 跟這次 build 同一個 commit
+        `${CDN_BASE}/${file}?v=${CACHE_VERSION}`,
+        `${RAW_BASE}/${file}?v=${CACHE_VERSION}`,
+      ].filter(Boolean)
   let r = null
   for (const u of urls) {
     try {

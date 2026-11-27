@@ -9,6 +9,7 @@ import { usePlayerStore } from '../store/gameStore'
 import QuestionImages from '../components/QuestionImages'
 import HazardVideo from '../components/HazardVideo'
 import CommentSection from '../components/CommentSection'
+import { isOptionCorrect } from '../utils/scoring'
 
 function FavCard({ q, index, onRemove }) {
   const [open, setOpen] = useState(false)
@@ -66,7 +67,7 @@ function FavCard({ q, index, onRemove }) {
       {open && (
         <div className="px-4 pb-4 flex flex-col gap-1.5 border-t border-gray-50">
           {Object.entries(q.options || {}).map(([letter, text]) => {
-            const isAnswer = q.answer === '送分' || (q.answer?.includes(',') ? q.answer.split(',').includes(letter) : q.answer === letter)
+            const isAnswer = isOptionCorrect(letter, q.answer)
             return (
               <div key={letter}
                 className={`flex items-start gap-2.5 px-3 py-2.5 rounded-xl text-sm border ${isAnswer ? 'bg-green-50 text-green-800 border-green-300' : 'bg-gray-50 text-gray-600 border-transparent'}`}>

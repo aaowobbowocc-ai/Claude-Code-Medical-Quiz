@@ -10,6 +10,7 @@ import CommentSection from '../components/CommentSection'
 import { useBookmarks } from '../hooks/useBookmarks'
 import { usePageMeta } from '../hooks/usePageMeta'
 import ReadingModePopover, { useReadingMode } from '../components/ReadingModePopover'
+import { isOptionCorrect } from '../utils/scoring'
 import { browseQuestions, isExamSupportedByCDN } from '../lib/cdnQuestions'
 import { formatYearSession } from '../utils/sessionLabel'
 
@@ -22,7 +23,7 @@ const _paperColors = { paper1: '#3B82F6', paper2: '#10B981', paper3: '#8B5CF6', 
 function getStageColor(tag) {
   return _getStageStyle(tag)?.color || _paperColors[tag] || '#94A3B8'
 }
-const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F97316', D: '#EF4444' }
+const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F97316', D: '#EF4444', E: '#8B5CF6' }
 
 const SUBJECTS = [
   { tag: 'anatomy',      name: '解剖學',      color: '#3B82F6' },
@@ -245,7 +246,7 @@ function QuestionCard({ q, stageMap, readingStyle, readingPrefs, updateReadingPr
           )}
           {Object.entries(q.options).map(([letter, text]) => {
             const isVoided = q.answer === '送分'
-            const isAnswer = isVoided ? false : (q.answer?.includes(',') ? q.answer.split(',').includes(letter) : q.answer === letter)
+            const isAnswer = isVoided ? false : isOptionCorrect(letter, q.answer)
             return (
               <div key={letter}
                    className={`flex items-start gap-2.5 px-3 py-2.5 rounded-xl text-sm

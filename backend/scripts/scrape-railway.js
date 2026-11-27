@@ -121,7 +121,9 @@ function extractOptions(items) {
   return opts
 }
 
-function parseQuestions(lines) {
+// maxOpts: 佐級國文的複選題是**五個**選項（A-E）。預設 4 維持原本行為，
+// 補複選題的 fill-railway-multi-select.js 會傳 5。
+function parseQuestions(lines, maxOpts = 4) {
   const filtered = lines.filter(l => {
     const t = l.text
     if (/^(代號|類\s*科|科\s*目|考試|頁次|等\s*別|本試題|本科目|座號|※|禁止|共\d+題|請以|不必|不得|說明|一、|二、|三、|甲、|乙、|類科組別)/.test(t)) return false
@@ -158,8 +160,22 @@ function parseQuestions(lines) {
     const stemText = block[0].text.slice(String(num).length).trim()
     const rest = block.slice(1)
 
+    // 題幹到哪裡結束：找第一個出現「？」或「：」的行。
+    // ⚠️ 引號還開著的時候不能算 —— 國文題先引一大段古文再問，引文裡幾乎一定有
+    // 問號（「她有哪一點可愛呢？」），在那裡切斷的話引文後半段會依序填進選項格，
+    // 真正的選項被整組擠掉（104070 國文 #40 五格有四格是引文）。
+    // 所以要累計引號深度，只在引文已經收尾（深度回到 0）的行上收題幹。
+    const qdepth = (t) => (String(t).split('「').length - 1) - (String(t).split('」').length - 1)
     let stemEndIdx = 0
-    let ended = /[？：︰?]/.test(stemText)
+    let depth = qdepth(stemText)
+    let ended = /[？：︰?]/.test(stemText) && depth <= 0
+    if (!ended) {
+      for (let ri = 0; ri < rest.length; ri++) {
+        depth += qdepth(rest[ri].text)
+        if (/[？：︰?]/.test(rest[ri].text) && depth <= 0) { stemEndIdx = ri + 1; ended = true; break }
+      }
+    }
+    // 引號從頭到尾都沒收（原卷解析本身就缺字）就退回舊判準，不要整題都變選項
     if (!ended) {
       for (let ri = 0; ri < rest.length; ri++) {
         if (/[？：︰?]/.test(rest[ri].text)) { stemEndIdx = ri + 1; ended = true; break }
@@ -167,11 +183,31 @@ function parseQuestions(lines) {
     }
     const stemParts = [stemText]
     for (let ri = 0; ri < stemEndIdx; ri++) stemParts.push(rest[ri].text)
-    const opts = extractOptions(rest.slice(stemEndIdx))
+    let opts = extractOptions(rest.slice(stemEndIdx))
+    // 題幹收完了，但「問句那一行」被切到選項裡去：引文／現代詩先鋪一大段，
+    // 真正的提問（「下列敘述，符合詩中作者想法的選項是：」）自己獨立一行，
+    // 上面那條規則在引文中途就收了題幹，提問行於是變成選項 A，
+    // 五個選項整組往後擠一格、最後一個整個掉出去（105070 國文 #42 實測）。
+    // 選項**不會**用問號或冒號收尾，所以這種格子一定是題幹的一部分。
+    const PROMPT = /(下列|下述|何者|那一|哪一|為何|請問|選出|符合|正確的|錯誤的|敘述)/
+    // 以問號收尾的格子幾乎不可能是選項 —— 但「下列哪個句子屬於…」這種題**四格
+    // 都是問句**，那是真的選項，所以全部都以問號收尾時不能動。
+    const allQ = opts.length >= 3 && opts.every(t => /[？?]\s*$/.test(String(t).trim()))
+    let cut = -1
+    for (let oi = 0; oi < opts.length - 2; oi++) {
+      const t = String(opts[oi]).trim()
+      const short = t.replace(/\s/g, '').length <= 45
+      if (/[？?]$/.test(t) && !allQ) { cut = oi; continue }
+      if (/[：︰:]$/.test(t) && PROMPT.test(t) && short) cut = oi
+    }
+    if (cut >= 0) {
+      for (let oi = 0; oi <= cut; oi++) stemParts.push(opts[oi])
+      opts = opts.slice(cut + 1)
+    }
     if (opts.length >= 2) {
       const options = {}
-      const labels = ['A', 'B', 'C', 'D']
-      for (let oi = 0; oi < Math.min(opts.length, 4); oi++) options[labels[oi]] = stripPUA(opts[oi])
+      const labels = ['A', 'B', 'C', 'D', 'E']
+      for (let oi = 0; oi < Math.min(opts.length, maxOpts); oi++) options[labels[oi]] = stripPUA(opts[oi])
       questions.push({ number: num, question: stripPUA(stemParts.join(' ').trim()), options })
     }
   }
@@ -372,4 +408,7 @@ async function main() {
     await scrapeExam(e, map, yearArg)
   }
 }
-main().catch(e => { console.error(e); process.exit(1) })
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1) })
+
+// 補複選題的腳本要重用同一套版面解析（別再自己抄一份，見 reference_moex_shared_libs）
+module.exports = { extractPositionedText, buildLogicalLines, parseQuestions, extractOptions, stripPUA, EXAMS, resolveS, BASE, atomicWrite }

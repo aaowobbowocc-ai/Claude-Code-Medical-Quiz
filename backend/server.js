@@ -641,7 +641,9 @@ io.on('connection', (socket) => {
     }
 
     const stages = (room.stages && room.stages.length) ? room.stages : [room.stage || 0];
-    const pool = getQuestionsByStage(stages, room.exam);
+    // 對戰是「點一下就送出」的快問快答，真複選題（is_multi）在這裡只能點一個，
+    // 不管怎麼判都不對（點中任一個就算對 = 送分，全對才算對 = 永遠錯）→ 不收複選題。
+    const pool = getQuestionsByStage(stages, room.exam).filter(q => !q.is_multi);
     if (pool.length < QUESTIONS_PER_GAME) {
       socket.emit('error', { message: `所選科目題目不足（${pool.length}題），請增加科目或改選` });
       return;

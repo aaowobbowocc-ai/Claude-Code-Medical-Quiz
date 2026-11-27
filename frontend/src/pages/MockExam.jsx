@@ -10,7 +10,7 @@ import HazardVideo from '../components/HazardVideo'
 import OptionContent from '../components/OptionContent'
 import { supabase } from '../lib/supabase'
 import { getExamYears, getHistoricalPaper, getRandomPaper, isExamSupportedByCDN } from '../lib/cdnQuestions'
-import { isAnswerCorrect } from '../utils/scoring'
+import { isAnswerCorrect, isMultiSelect, togglePick, answerLetters } from '../utils/scoring'
 import { addWrong } from '../lib/wrongBank'
 import { addFlags } from '../lib/flagBank'
 import { saveSession, getSessions, clearSession, describeSession } from '../lib/mockExamSession'
@@ -98,7 +98,7 @@ function getTimeLimitText(papers) {
 
 // isAnswerCorrect now lives in utils/scoring.js (also used by Practice).
 
-const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444' }
+const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444', E: '#8B5CF6' }
 
 // ── Fee calculation ──────────────────────────────────────────────
 // 完整模考：總題數 × 4，單科：該卷題數 × 5
@@ -467,6 +467,16 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
 
   const selectAnswer = (letter) => {
     navigator.vibrate?.(15)
+    // 複選題可多選：存成排序後的字母字串（'ACE'），交卷時整組比
+    if (isMultiSelect(questions[qIdx])) {
+      setAnswers(prev => {
+        const next = togglePick(prev[qIdx], letter)
+        const copy = { ...prev }
+        if (next) copy[qIdx] = next; else delete copy[qIdx]
+        return copy
+      })
+      return
+    }
     setAnswers(prev => ({ ...prev, [qIdx]: letter }))
   }
 
@@ -535,6 +545,7 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
           <div className="flex items-center gap-2 mb-2">
             <p className="text-xs text-gray-400 flex-1">
               第 {qIdx + 1} / {questions.length} 題{q.subject_name ? `　·　${q.subject_name}` : ''}
+              {isMultiSelect(q) && <span className="ml-1 text-amber-600 font-bold">· 複選題（全對才給分）</span>}
             </p>
             <button onClick={toggleFlag}
               className={`text-xs font-bold px-2.5 py-1 rounded-full border active:scale-95 transition-all shrink-0
@@ -554,7 +565,9 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
         </div>
         <div className="flex flex-col gap-2.5">
           {Object.entries(q.options).map(([letter, text]) => {
-            const selected = answers[qIdx] === letter
+            const selected = isMultiSelect(q)
+              ? answerLetters(answers[qIdx]).includes(letter)
+              : answers[qIdx] === letter
             return (
               <button key={letter} onClick={() => selectAnswer(letter)}
                 className={`flex items-start gap-3 px-4 py-3.5 rounded-2xl border-2 text-sm text-left transition-all active:scale-95 shadow-sm
@@ -733,7 +746,7 @@ function ExamResults({ papers, navigate }) {
   //   3. 結果頁底部「檢討錯題」按鈕
   const wrongQuestions = allQuestions.map((q, i) => {
     const myAnswer = allAnswers[i] || null
-    return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer) }
+    return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer, q.is_multi) }
   }).filter(q => !q.correct)
 
   // 全部作答紀錄的**輕量參照**（回饋：想一直看到當初作答的所有題目，而不是只有剛交卷時）。
@@ -744,14 +757,14 @@ function ExamResults({ papers, navigate }) {
     const myAnswer = allAnswers[i] || null
     return {
       id: q.id, examId: q.examId || usePlayerStore.getState().exam,
-      myAnswer, correct: isAnswerCorrect(myAnswer, q.answer), flagged: !!allFlagged[i],
+      myAnswer, correct: isAnswerCorrect(myAnswer, q.answer, q.is_multi), flagged: !!allFlagged[i],
     }
   }).filter(r => r.id != null)
 
   // 手動 🚩 標記題（不論對錯）→ 存進標記夾(flagBank)供日後永久回顧
   const flaggedQuestions = allQuestions.map((q, i) => {
     const myAnswer = allAnswers[i] || null
-    return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer) }
+    return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer, q.is_multi) }
   }).filter((q, i) => allFlagged[i])
 
   useEffect(() => {
@@ -785,7 +798,7 @@ function ExamResults({ papers, navigate }) {
     addFlags(flaggedQuestions, usePlayerStore.getState().exam)
     // Submit per-question stats
     const stats = allQuestions.map((q, i) => ({
-      questionId: q.id, correct: isAnswerCorrect(allAnswers[i], q.answer),
+      questionId: q.id, correct: isAnswerCorrect(allAnswers[i], q.answer, q.is_multi),
     })).filter(s => s.questionId)
     if (stats.length > 0) {
       fetch(`${BACKEND}/questions/track`, {
@@ -926,7 +939,7 @@ function ExamResults({ papers, navigate }) {
           // 改成傳「全部題目（含答對 + 答錯）」給 Review，Review 預設只顯示錯題、但有「看全部」切換
           const allQs = allQuestions.map((q, i) => {
             const myAnswer = allAnswers[i] || null
-            return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer), flagged: !!allFlagged[i] }
+            return { ...q, myAnswer, correct: isAnswerCorrect(myAnswer, q.answer, q.is_multi), flagged: !!allFlagged[i] }
           })
           return (
             <button onClick={() => navigate('/review', { state: { questions: allQs, stage: isFullExam ? '完整模擬考' : papers[0].paperName } })}
@@ -1165,7 +1178,7 @@ export default function MockExam() {
 
   const handleFinishPaper = (answers, flagged = {}) => {
     const timeUsed = Math.floor((Date.now() - startTime.current) / 1000)
-    const correct = questions.filter((q, i) => isAnswerCorrect(answers[i], q.answer)).length
+    const correct = questions.filter((q, i) => isAnswerCorrect(answers[i], q.answer, q.is_multi)).length
     const result = {
       paperName: currentPaper.name,
       questions: [...questions],
@@ -1181,7 +1194,7 @@ export default function MockExam() {
     const batchResults = questions
       .map((q, i) => ({
         tag: q.subject_tag || q.subject_tags?.[0] || q.subject_name,
-        isCorrect: isAnswerCorrect(answers[i], q.answer),
+        isCorrect: isAnswerCorrect(answers[i], q.answer, q.is_multi),
         sharedBankId: q.isSharedBank ? q.sourceBankId : null,
         qid: q.id,
         isDeprecated: !!q.is_deprecated,

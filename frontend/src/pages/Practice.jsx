@@ -4,7 +4,7 @@ import { usePlayerStore } from '../store/gameStore'
 import { useSound } from '../hooks/useSound'
 import { useExplain, useReview } from '../hooks/useAI'
 import { getSubjectColor } from '../utils/subjectColors'
-import { isAnswerCorrect, isOptionCorrect } from '../utils/scoring'
+import { isAnswerCorrect, isOptionCorrect, isMultiSelect, togglePick, answerLetters } from '../utils/scoring'
 import { ExplainPanel, ReviewPanel } from '../components/AIPanel'
 import SmartBanner from '../components/SmartBanner'
 import QuestionImages from '../components/QuestionImages'
@@ -74,7 +74,7 @@ const CUSTOM_TIME_MAX = 120
 const CUSTOM_COUNT_MIN = 5
 const CUSTOM_COUNT_MAX = 50
 
-const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F97316', D: '#EF4444' }
+const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F97316', D: '#EF4444', E: '#8B5CF6' }
 
 const PRACTICE_HISTORY_KEY = 'practice-history'
 const PRACTICE_MAX_RECORDS = 50
@@ -558,6 +558,9 @@ function PracticeGame({ config, onFinish, onExit }) {
   }, [])
 
   const q = questions[qIdx]
+  // 真複選題（要全選才算對）：點選項只是先存起來，按「送出答案」才判分
+  const multi = isMultiSelect(q)
+  const picks = multi ? answerLetters(myAnswer) : []
 
   // Timer
   useEffect(() => {
@@ -569,8 +572,9 @@ function PracticeGame({ config, onFinish, onExit }) {
 
   const handleTimeUp = useCallback(() => {
     if (revealed) return
-    reveal(null)
-  }, [q, revealed])
+    // 複選題時間到：把已經點的那幾個當成作答送出
+    reveal(multi ? myAnswer : null)
+  }, [q, revealed, multi, myAnswer])
 
   const reveal = (chosen) => {
     if (revealed) return
@@ -579,11 +583,11 @@ function PracticeGame({ config, onFinish, onExit }) {
     setRevealed(true)
 
     const correct = q?.answer
-    const isCorrect = isAnswerCorrect(chosen, correct)
+    const isCorrect = isAnswerCorrect(chosen, correct, multi)
 
-    // AI answer
+    // AI answer（複選題不派 AI 對手：它只會選一個字母，算分與標示都對不上）
     let aiChoice = null
-    if (diffConfig.ai) {
+    if (diffConfig.ai && !multi) {
       const rand = Math.random()
       if (rand < diffConfig.aiAcc) {
         aiChoice = correct
@@ -613,6 +617,8 @@ function PracticeGame({ config, onFinish, onExit }) {
   const handleAnswer = (letter) => {
     if (revealed) return
     navigator.vibrate?.(15)
+    // 複選題：先加減選項，等按「送出答案」才判分
+    if (multi) { setMyAnswer(prev => togglePick(prev, letter)); return }
     reveal(letter)
   }
 
@@ -620,7 +626,7 @@ function PracticeGame({ config, onFinish, onExit }) {
     resetExplain()
     setExplainRequested(false)
     if (qIdx + 1 >= questions.length) {
-      const finalScore = myScore + (isAnswerCorrect(myAnswer, q?.answer) ? 100 : 0)
+      const finalScore = myScore + (isAnswerCorrect(myAnswer, q?.answer, multi) ? 100 : 0)
       onFinish({ myScore: finalScore, aiScore, total: questions.length, log: sessionLog.current })
       return
     }
@@ -770,7 +776,7 @@ function PracticeGame({ config, onFinish, onExit }) {
 
         <div className="flex flex-col gap-2.5">
           {Object.entries(q.options).map(([letter, text]) => {
-            const isMyPick   = myAnswer === letter
+            const isMyPick   = multi ? picks.includes(letter) : myAnswer === letter
             const isAiPick   = aiAnswer === letter && diffConfig.ai
             const isCorrect  = revealed && isOptionCorrect(letter, q.answer)
             const isWrong    = revealed && isMyPick && !isCorrect
@@ -806,6 +812,21 @@ function PracticeGame({ config, onFinish, onExit }) {
             )
           })}
         </div>
+
+        {/* 複選題：要全部選齊再送出（少選一個就不給分，跟考選部一樣） */}
+        {multi && !revealed && (
+          <div className="mt-3 flex items-center gap-2">
+            <span className="text-xs text-gray-500 flex-1">
+              複選題 · 可多選，全對才給分{picks.length ? `（已選 ${picks.join('、')}）` : ''}
+            </span>
+            <button onClick={() => { navigator.vibrate?.(15); reveal(myAnswer) }}
+              disabled={!picks.length}
+              className={`text-sm font-bold px-4 py-2 rounded-xl active:scale-95 transition-all shrink-0
+                ${picks.length ? 'bg-medical-blue text-white' : 'bg-gray-100 text-gray-400'}`}>
+              送出答案
+            </button>
+          </div>
+        )}
 
         {/* AI answer hint (when not picked same) */}
         {revealed && diffConfig.ai && aiAnswer && aiAnswer !== myAnswer && (
@@ -913,13 +934,13 @@ function PracticeResults({ result, config, onRestart, onHome }) {
     if (reward) addCoins(reward)
     addExp(correct * 10)
     // 整理錯題（含 myAnswer）供歷史紀錄檢討 + 錯題夾
-    const wrongQuestions = (result.log || []).filter(q => q && !isAnswerCorrect(q.user_answer, q.answer)).map(q => ({
+    const wrongQuestions = (result.log || []).filter(q => q && !isAnswerCorrect(q.user_answer, q.answer, q.is_multi)).map(q => ({
       ...q, myAnswer: q.user_answer, correct: false,
     }))
     addWrong(wrongQuestions, usePlayerStore.getState().exam)
     // 錯題練習：這次答對的題目 → 從錯題夾移除（精熟即消）；keepOnCorrect 時保留供反覆複習
     if (config.wrongMode && !config.keepOnCorrect) {
-      (result.log || []).forEach(q => { if (q && isAnswerCorrect(q.user_answer, q.answer)) removeWrong(q) })
+      (result.log || []).forEach(q => { if (q && isAnswerCorrect(q.user_answer, q.answer, q.is_multi)) removeWrong(q) })
     }
     savePracticeRecord({
       stage: config.stage, diff: config.diff, count: config.count,
@@ -930,7 +951,7 @@ function PracticeResults({ result, config, onRestart, onHome }) {
     if (result.log && result.log.length > 0) {
       const stats = result.log.filter(q => q.id && !q.is_deprecated).map(q => ({
         questionId: q.id,
-        correct: isAnswerCorrect(q.user_answer, q.answer),
+        correct: isAnswerCorrect(q.user_answer, q.answer, q.is_multi),
       }))
       if (stats.length > 0) {
         fetch(`${BACKEND}/questions/track`, {

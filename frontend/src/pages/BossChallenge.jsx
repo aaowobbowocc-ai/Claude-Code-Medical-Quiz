@@ -8,13 +8,13 @@ import ShareChallengeButton from '../components/ShareChallengeButton'
 import { getExamConfig } from '../config/examRegistry'
 import { supabase } from '../lib/supabase'
 import { isNativeApp } from '../lib/admob'
-import { isAnswerCorrect, isOptionCorrect } from '../utils/scoring'
+import { isAnswerCorrect, isOptionCorrect, isMultiSelect } from '../utils/scoring'
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const BOSS_FEE = 50
 // Web 端不開放看廣告（等 App 上線）；Native App 才顯示看廣告入口。
 const IS_NATIVE = isNativeApp()
-const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444' }
+const OPTION_COLORS = { A: '#3B82F6', B: '#10B981', C: '#F59E0B', D: '#EF4444', E: '#8B5CF6' }
 
 function BossCard({ q, index, onAnswer, answered }) {
   const [picked, setPicked] = useState(null)
@@ -25,7 +25,7 @@ function BossCard({ q, index, onAnswer, answered }) {
     navigator.vibrate?.(15)
     setPicked(letter)
     setRevealed(true)
-    onAnswer(isAnswerCorrect(letter, q.answer))
+    onAnswer(isAnswerCorrect(letter, q.answer, q.is_multi))
   }
 
   return (
@@ -97,7 +97,8 @@ export default function BossChallenge() {
     const examType = usePlayerStore.getState().exam || 'doctor1'
     fetch(`${BACKEND}/questions/hardest?count=10&exam=${examType}`)
       .then(r => r.json())
-      .then(data => { setQuestions(data.questions || []); setLoading(false) })
+      // 魔王題是「點一下就判分」的快問快答，複選題在這裡只會被判錯 → 不收複選題
+      .then(data => { setQuestions((data.questions || []).filter(q => !isMultiSelect(q))); setLoading(false) })
       .catch(() => { setLoading(false); addCoins(BOSS_FEE) }) // refund on error
   }, [])
 

@@ -10,6 +10,7 @@ import HazardVideo from '../components/HazardVideo'
 import OptionContent from '../components/OptionContent'
 import CommentSection from '../components/CommentSection'
 import { useAccuracyStore } from '../store/accuracyStore'
+import { isOptionCorrect, isMultiSelect, answerLetters } from '../utils/scoring'
 import { usePlayerStore } from '../store/gameStore'
 import { getNote, setNote } from '../lib/questionNotes'
 
@@ -133,8 +134,8 @@ function ReviewCard({ q, index }) {
       {open && (
         <div className="px-4 pb-4 flex flex-col gap-1.5 border-t border-gray-50">
           {Object.entries(q.options).map(([letter, text]) => {
-            const isCorrect  = q.answer === '送分' || (q.answer?.includes(',') ? q.answer.split(',').includes(letter) : q.answer === letter)
-            const isMyWrong  = q.myAnswer === letter && !q.correct
+            const isCorrect  = isOptionCorrect(letter, q.answer)
+            const isMyWrong  = answerLetters(q.myAnswer).includes(letter) && !q.correct
 
             let bg = 'bg-gray-50'
             let textCls = 'text-gray-600'
@@ -159,7 +160,9 @@ function ReviewCard({ q, index }) {
           {!q.correct && q.myAnswer && (
             <p className="text-xs text-gray-400 mt-1 px-1">
               你選了 <span className="font-semibold text-red-500">{q.myAnswer}</span>，
-              正確答案是 <span className="font-semibold text-green-600">{q.answer === '送分' ? '一律給分' : q.answer?.replace(',', ' 或 ')}</span>
+              正確答案是 <span className="font-semibold text-green-600">{q.answer === '送分' ? '一律給分'
+                : isMultiSelect(q) ? answerLetters(q.answer).join('、') + '（複選，全對才算對）'
+                : answerLetters(q.answer).join(' 或 ')}</span>
             </p>
           )}
           {!q.myAnswer && (

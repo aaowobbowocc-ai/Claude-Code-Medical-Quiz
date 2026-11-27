@@ -6,6 +6,7 @@ import { useSound } from '../hooks/useSound'
 import ConnectionStatus from '../components/ConnectionStatus'
 import { getSubjectColor } from '../utils/subjectColors'
 import QuestionImages from '../components/QuestionImages'
+import { isOptionCorrect } from '../utils/scoring'
 import HazardVideo from '../components/HazardVideo'
 import OptionContent from '../components/OptionContent'
 import AvatarText from '../components/AvatarText'
@@ -15,7 +16,10 @@ const OPTION_COLORS = {
   B: { base: 'bg-green-50 border-green-300 text-green-800', active: 'bg-green-500 border-green-500 text-white' },
   C: { base: 'bg-amber-50 border-amber-300 text-amber-800', active: 'bg-amber-500 border-amber-500 text-white' },
   D: { base: 'bg-rose-50  border-rose-300  text-rose-800',  active: 'bg-rose-500  border-rose-500  text-white' },
+  // 學測／分科是五選一，少了 E 會 OPTION_COLORS[letter].active 直接噴 TypeError
+  E: { base: 'bg-violet-50 border-violet-300 text-violet-800', active: 'bg-violet-500 border-violet-500 text-white' },
 }
+const OPTION_FALLBACK = { base: 'bg-gray-50 border-gray-300 text-gray-700', active: 'bg-gray-500 border-gray-500 text-white' }
 
 const QUICK_PHRASES = ['加油！💪', '哈哈哈😂', '這題好難😅', '我知道了！', '太強了！', '運氣好🍀']
 const STICKERS = ['🔥','⚡','🎯','👍','😭','🤯','🏆','💀','🥲','🎉']
@@ -346,8 +350,10 @@ export default function Game() {
         <div className="flex flex-col gap-3">
           {Object.entries(currentQuestion.options).map(([letter, text]) => {
             const isSelected = myAnswer === letter
-            const isCorrect  = correctAnswer === letter
-            const isWrong    = myAnswer === letter && correctAnswer && correctAnswer !== letter
+            // 「答 B 或 D 均給分」的題 answer 是「B,D」，直接比字串會把官方也給分的
+            // 那個選項畫成答錯（後端 submit_answer 已經照給分範圍算分了）
+            const isCorrect  = isOptionCorrect(letter, correctAnswer) && !!correctAnswer
+            const isWrong    = myAnswer === letter && correctAnswer && !isCorrect
 
             let cls = `border-2 rounded-2xl px-4 py-3.5 text-left transition-all active:scale-95 flex items-start gap-3`
             if (isCorrect && correctAnswer) {
@@ -355,9 +361,9 @@ export default function Game() {
             } else if (isWrong) {
               cls += ' bg-medical-danger border-medical-danger text-white animate-shake'
             } else if (isSelected) {
-              cls += ` ${OPTION_COLORS[letter].active}`
+              cls += ` ${(OPTION_COLORS[letter] || OPTION_FALLBACK).active}`
             } else {
-              cls += ` ${OPTION_COLORS[letter].base} ${!myAnswer && !correctAnswer ? 'cursor-pointer' : 'opacity-60'}`
+              cls += ` ${(OPTION_COLORS[letter] || OPTION_FALLBACK).base} ${!myAnswer && !correctAnswer ? 'cursor-pointer' : 'opacity-60'}`
             }
 
             return (

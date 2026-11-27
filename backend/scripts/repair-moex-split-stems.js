@@ -41,7 +41,18 @@ const APPLY = process.argv.includes('--apply');
 const ONLY = (process.argv.find((a) => a.startsWith('--exam=')) || '').split('=')[1];
 const MIN_HIT = 0.6;
 
-const endsWithQ = (t) => /[？?]\s*$/.test(String(t).trim()) && String(t).trim().length >= 10;
+const endsWithQ = (t) => /[？?]\s*$/.test(String(t).trim()) && String(t).trim().length >= 5;
+// 題組題的題幹前面黏著「【題組情境】…」，情境裡幾乎一定有問號，
+// 「題幹沒問號」這條判準會永遠不成立 —— 要先把情境切掉再看真正的題幹。
+const bareStem = (t) => String(t || '').replace(/^【題組情境】[\s\S]*?(?=承上題|$)/, '');
+// 題幹**斷在句子中間**才可以只憑訊號就藏起來。收尾是「：」「。」的那種
+// 可能本來就完整，而某一格剛好是個問句 —— 例如
+//   ot 099110 #55 題幹「此時，治療師應：」 D「問個案他在做什麼？」 是好題。
+const midSentence = (t) => !/[。！：；?？」』)）]\s*$/.test(String(t).trim());
+// 但那一格要是**明擺著是題幹的問句**（帶「下列」「何者」「為何」這類命題用語），
+// 就算題幹收得乾淨也算壞的 —— customs 108050 #4 的 C 格是「下列選項，何者最符合上文旨意？」，
+// 真正的答案「己所不欲，勿施於人」被擠到 D，而答案字母還指著引文碎片。
+const STEMQ = /(下列|下述|何者|那一|哪一|為何|請問)/;
 // 有些題的題組情境是**寫在題幹裡**的（沒有 case_context）。原卷重解出來的題幹
 // 只有「承上題…」那一句，直接覆寫會把上下文弄不見，題目變成答不了。
 // 覆寫前要先把「【題組情境】…」那段搬進 case_context。
@@ -49,7 +60,7 @@ const GRP = /^【題組情境】([\s\S]*?)(?=承上題|$)/;
 
 /** 題幹沒問號、恰好一格是問句 → 題幹在那裡被截斷了 */
 function splitAt(q) {
-  if (/[？?]/.test(String(q.question || ''))) return null;
+  if (/[？?]/.test(bareStem(q.question))) return null;
   const o = q.options || {};
   const hit = Object.keys(o).filter((k) => endsWithQ(o[k]));
   return hit.length === 1 ? hit[0] : null;
@@ -156,6 +167,8 @@ function splitAt(q) {
       const ai = ORD.indexOf(String(q.answer));
       const fi = ORD.indexOf(key);
       if (ai >= 0 && fi >= 0 && ai < fi) { keep.push({ exam, q, key }); continue; }
+      // 題幹收得乾淨（「：」「。」結尾）就不能只憑訊號藏掉 —— 那一格可能是真的選項
+      if (!midSentence(bareStem(q.question)) && !STEMQ.test(String(q.options[key]))) { keep.push({ exam, q, key, why: '題幹收尾乾淨，那一格可能本來就是個問句' }); continue; }
       hide.push({ exam, q, key });
       if (APPLY) { q.incomplete = 'stem_split_into_options'; dirty = true; }
     }
@@ -165,7 +178,7 @@ function splitAt(q) {
     console.log(`\n   答案格在碎片格之後（選不到正解）${APPLY ? '，已藏起來' : '，會藏起來'}：${hide.length} 題`);
     for (const h of hide) console.log(`     ${h.exam} ${h.q.exam_code} ${h.q.subject} #${h.q.number}  ans=${h.q.answer} 碎片在 ${h.key}`);
     console.log(`   答案格在碎片格之前（選項沒位移，只是題幹被截斷），留著：${keep.length} 題`);
-    for (const h of keep) console.log(`     ${h.exam} ${h.q.exam_code} ${h.q.subject} #${h.q.number}  ans=${h.q.answer} 碎片在 ${h.key}`);
+    for (const h of keep) console.log(`     ${h.exam} ${h.q.exam_code} ${h.q.subject} #${h.q.number}  ans=${h.q.answer} 碎片在 ${h.key}${h.why ? '  （' + h.why + '）' : ''}`);
   }
   console.log(`\n${APPLY ? '已修' : '可修'} ${fixed.length} 題｜${APPLY ? '已藏' : '會藏'} ${hide.length} 題｜留著 ${keep.length} 題`);
   if (Object.keys(skipped).length) console.log('跳過:', JSON.stringify(skipped, null, 1));

@@ -6227,7 +6227,8 @@
         "D": "己所不欲，勿施於人"
       },
       "answer": "A",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "quote_spill"
     },
     {
       "id": 438,
@@ -6267,7 +6268,8 @@
         "D": "若無宦達，何妨寄懷詩詠"
       },
       "answer": "B",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "quote_spill"
     },
     {
       "id": 440,
@@ -6287,7 +6289,8 @@
         "D": "根據上文，賈伯斯認為「該做些改變」意味著甚麼？人應該活在當下，把握住每一寸光陰如果要做出改變，應該今日事今日畢每日自我反思，調整自己要走的道路"
       },
       "answer": "C",
-      "explanation": ""
+      "explanation": "",
+      "incomplete": "quote_spill"
     },
     {
       "id": 441,
@@ -7816,7 +7819,8 @@
       },
       "answer": "C",
       "explanation": "",
-      "case_context": "（第 21～25 題共用下文）Post-traumatic stress disorder is a malady of memory. Sufferers are often haunted by recurrent nightmares, distressing thoughts and flashbacks so intense in color, smell and sound that they feel as if they are reliving the trauma. But what if these unbearable memories could be selectively erased? Sheena Josselyn, a professor of physiology and psychology, who studies how the brain encodes, stores and uses information, is intrigued by the idea and has been investigating how to “silence” memories --make them temporarily inaccessible-- in mice. She thinks it’s possible that a variation of this technique could one day help treat post-traumatic stress disorder in humans. Studies with mice have found that although their brains contain billions of neurons, only a few are necessary to form a fearful memory. Researchers working with mice began by teaching them to fear a tone: when it sounds, they feel a mild shock to their feet (not to hurt them, just to scare them). The next time the mice hear the tone, they crouch and freeze, signaling fear. The researchers discovered that they could trigger the memory of that fear even without presenting the tone. They did this by stimulating the small group of nerve cells holding that memory through a technology called optogenetics. Using the same technology, they found they could also suppress the fearful memory. With optogenetics, scientists insert proteins into neurons to make them sensitive to light. Depending on the type of protein and color of light used, these cells can then be activated or deactivated by shining pulses of the light directly into the brain. If the light activates the cells, the mice freeze as if they’ve just heard the tone. If the light deactivates the cells, the memory is suppressed. While optogenetics is an invasive procedure and technologically not feasible with humans, Josselyn hopes that the general principles learned from these studies could eventually help scientists create new drugs for treating memory disorders such as post-traumatic stress disorder and Alzheimer’s. But should you erase a bad memory? Absolutely not, says Josselyn. She emphasizes that this future technology should not be applied to everyday bad things, and that these discoveries need to go hand in hand with a real thinking about the ethics involved in potentially manipulating memories in people. Their use would only be considered in extreme cases after all other treatment options have been explored. The goal is not to sanitize life or make people super happy, but rather to make everyone a functional person, capable of moments of joy."
+      "case_context": "（第 21～25 題共用下文）Post-traumatic stress disorder is a malady of memory. Sufferers are often haunted by recurrent nightmares, distressing thoughts and flashbacks so intense in color, smell and sound that they feel as if they are reliving the trauma. But what if these unbearable memories could be selectively erased? Sheena Josselyn, a professor of physiology and psychology, who studies how the brain encodes, stores and uses information, is intrigued by the idea and has been investigating how to “silence” memories --make them temporarily inaccessible-- in mice. She thinks it’s possible that a variation of this technique could one day help treat post-traumatic stress disorder in humans. Studies with mice have found that although their brains contain billions of neurons, only a few are necessary to form a fearful memory. Researchers working with mice began by teaching them to fear a tone: when it sounds, they feel a mild shock to their feet (not to hurt them, just to scare them). The next time the mice hear the tone, they crouch and freeze, signaling fear. The researchers discovered that they could trigger the memory of that fear even without presenting the tone. They did this by stimulating the small group of nerve cells holding that memory through a technology called optogenetics. Using the same technology, they found they could also suppress the fearful memory. With optogenetics, scientists insert proteins into neurons to make them sensitive to light. Depending on the type of protein and color of light used, these cells can then be activated or deactivated by shining pulses of the light directly into the brain. If the light activates the cells, the mice freeze as if they’ve just heard the tone. If the light deactivates the cells, the memory is suppressed. While optogenetics is an invasive procedure and technologically not feasible with humans, Josselyn hopes that the general principles learned from these studies could eventually help scientists create new drugs for treating memory disorders such as post-traumatic stress disorder and Alzheimer’s. But should you erase a bad memory? Absolutely not, says Josselyn. She emphasizes that this future technology should not be applied to everyday bad things, and that these discoveries need to go hand in hand with a real thinking about the ethics involved in potentially manipulating memories in people. Their use would only be considered in extreme cases after all other treatment options have been explored. The goal is not to sanitize life or make people super happy, but rather to make everyone a functional person, capable of moments of joy.",
+      "incomplete": "stem_split_into_options"
     },
     {
       "id": 515,
@@ -7930,12 +7934,12 @@
       "subject_name": "國文（測驗）",
       "stage_id": 0,
       "number": 4,
-      "question": "屈原曰：「舉世皆濁我獨清，眾人皆醉我獨醒，是以見放。」漁父曰：「聖人不凝",
+      "question": "屈原曰：「舉世皆濁我獨清，眾人皆醉我獨醒，是以見放。」漁父曰：「聖人不凝滯於物，而能與世推移。世人皆濁，何不淈其泥而揚其波？眾人皆醉，何不餔其糟而歠其釃？何故深思高舉，自令放為？」（屈原〈漁父〉）根據這段文意，下列選項與文中漁父處世觀念相似的是：",
       "options": {
-        "A": "滯於物，而能與世推移。世人皆濁，何不淈其泥而揚其波？眾人皆醉，何不餔其糟",
-        "B": "而歠其釃？何故深思高舉，自令放為？」（屈原〈漁父〉）",
-        "C": "根據這段文意，下列選項與文中漁父處世觀念相似的是：",
-        "D": "推己及人，兼善天下"
+        "A": "推己及人，兼善天下",
+        "B": "君子德行，其道中庸",
+        "C": "與波上下，以全吾軀",
+        "D": "亦余心之所善兮，雖九死其猶未悔"
       },
       "answer": "C",
       "explanation": ""
@@ -9682,12 +9686,12 @@
       "subject_name": "國文（測驗）",
       "stage_id": 0,
       "number": 6,
-      "question": "「生年不滿百，常懷千歲憂。晝短苦夜長，何不秉燭游？為樂當及時，何能待來",
+      "question": "「生年不滿百，常懷千歲憂。晝短苦夜長，何不秉燭游？為樂當及時，何能待來茲？愚者愛惜費，但為後世嗤。仙人王子喬，難可與等期。」此詩主旨與下列何者最接近？",
       "options": {
-        "A": "茲？愚者愛惜費，但為後世嗤。仙人王子喬，難可與等期。」此詩主旨與下列何者最接近？",
-        "B": "荷葉披披一浦涼，青蘆奕奕夜吟商",
-        "C": "春風又綠江南岸，明月何時照我還",
-        "D": "人生得意須盡歡，莫使金樽空對月"
+        "A": "荷葉披披一浦涼，青蘆奕奕夜吟商",
+        "B": "春風又綠江南岸，明月何時照我還",
+        "C": "人生得意須盡歡，莫使金樽空對月",
+        "D": "勸君更進一杯酒，西出陽關無故人"
       },
       "answer": "C",
       "explanation": ""
@@ -9702,12 +9706,12 @@
       "subject_name": "國文（測驗）",
       "stage_id": 0,
       "number": 7,
-      "question": "「正因為有釣勝於魚的觀念作基礎，所以不會產生向上爬的習慣，也不會產生學 而優則仕的風氣。每一個學者一旦發現了自己的興趣所在，往往畢其一生專注研 究。發明小兒麻痺症預防針的沙克，最近對人說：『我所確知的是：科學家不是",
+      "question": "「正因為有釣勝於魚的觀念作基礎，所以不會產生向上爬的習慣，也不會產生學而優則仕的風氣。每一個學者一旦發現了自己的興趣所在，往往畢其一生專注研究。發明小兒麻痺症預防針的沙克，最近對人說：『我所確知的是：科學家不是政治家。我不是明星，讓我回到實驗室去。』然而，不是為魚的釣者，卻常常釣上大的魚來，因為他終年在水濱，總有機遇到來，非如緣木而求魚的『智者』，徒勞心力而已。」下列敘述，最符合上文觀點的是：",
       "options": {
-        "A": "政治家。我不是明星，讓我回到實驗室去。』然而，不是為魚的釣者，卻常常釣",
-        "B": "上大的魚來，因為他終年在水濱，總有機遇到來，非如緣木而求魚的『智者』，徒勞心力而已。」下列敘述，最符合上文觀點的是：",
-        "C": "與其緣木求魚，不如潛心守株待兔",
-        "D": "放下名利之心，常能獲致理想成果"
+        "A": "與其緣木求魚，不如潛心守株待兔",
+        "B": "放下名利之心，常能獲致理想成果",
+        "C": "放下明星身段，有助研究集思廣益",
+        "D": "水清常致無魚，行事宜有容人雅量"
       },
       "answer": "B",
       "explanation": ""
@@ -11419,12 +11423,12 @@
       "subject_name": "國文（測驗）",
       "stage_id": 0,
       "number": 8,
-      "question": "「那天，對了斜陽，霞光滿天，一個人騎著腳踏車徜徉於滿街輝煌華麗的紅葉與黃 葉間，正穿梭入京都古城的涼凜氣候，由京都大學文學部馳回位居『修學院』的京 大國際交流會館路上，突然想起了《楚辭》中種種描寫秋景的辭句，也想到了屈原 〈惜往日〉的篇名。自然含冤受屈不是我的經驗，但是『典型在宿昔』的懷念，卻 在我的心頭激盪不已。他們不正是以其『紅於二月花』的秋光晚照燦爛了我的青春， 照亮了我的人生？而不論當時他們的年齡幾何，曾經親浴這些師長友朋的生命輝",
+      "question": "「那天，對了斜陽，霞光滿天，一個人騎著腳踏車徜徉於滿街輝煌華麗的紅葉與黃葉間，正穿梭入京都古城的涼凜氣候，由京都大學文學部馳回位居『修學院』的京大國際交流會館路上，突然想起了《楚辭》中種種描寫秋景的辭句，也想到了屈原〈惜往日〉的篇名。自然含冤受屈不是我的經驗，但是『典型在宿昔』的懷念，卻在我的心頭激盪不已。他們不正是以其『紅於二月花』的秋光晚照燦爛了我的青春，照亮了我的人生？而不論當時他們的年齡幾何，曾經親浴這些師長友朋的生命輝光，為他們的智慧，為他們的性情所照耀，所溫暖，難道不是我所擁有過，也將永遠擁有的至福之一？於是，決定返臺之後，以《昔往的輝光》將它們集結出版。」根據上文，可知《昔往的輝光》書中主要抒發的感情是：",
       "options": {
-        "A": "光，為他們的智慧，為他們的性情所照耀，所溫暖，難道不是我所擁有過，也將永",
-        "B": "遠擁有的至福之一？於是，決定返臺之後，以《昔往的輝光》將它們集結出版。」",
-        "C": "根據上文，可知《昔往的輝光》書中主要抒發的感情是：",
-        "D": "舐犢之情"
+        "A": "舐犢之情",
+        "B": "懷鄉之情",
+        "C": "首丘之情",
+        "D": "孺慕之情"
       },
       "answer": "D",
       "explanation": ""

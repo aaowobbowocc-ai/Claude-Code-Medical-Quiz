@@ -36364,17 +36364,18 @@
     "paper_id": "paper1",
     "stage_id": 0,
     "number": 60,
-    "question": "【題組情境】最小可聽聲場閾值MAF(minimal audible field)曲線在中頻率處,通常會比最小可聽音壓閾值MAP\n\n承上題,造成最小可聽聲場閾值(MAF)與最小可聽音壓閾值(MAP)之間差異的原因,不包括",
+    "question": "承上題，造成最小可聽聲場閾值（MAF）與最小可聽音壓閾值（MAP）之間差異的原因，不包括下列那一項？",
     "options": {
-      "A": "下列那一項?",
-      "B": "binaural hearing 與monaral hearing 間的差異",
-      "C": "real ear 與coupler measurement 間的差異",
-      "D": "physiological noise 有無的差異 psychological factor 的差異"
+      "A": "binaural hearing 與monaral hearing 間的差異",
+      "B": "real ear 與coupler measurement 間的差異",
+      "C": "physiological noise 有無的差異",
+      "D": "psychological factor 的差異"
     },
     "answer": "D",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30002829
+    "_legacy_id": 30002829,
+    "case_context": "最小可聽聲場閾值MAF(minimal audible field)曲線在中頻率處,通常會比最小可聽音壓閾值MAP"
   },
   {
     "id": "audiologist_101110_p1_61",
@@ -38650,17 +38651,18 @@
     "paper_id": "paper3",
     "stage_id": 0,
     "number": 78,
-    "question": "【題組情境】當新生兒接受聽力初篩沒通過,需使用傳統聽性腦幹反應檢查(ABR)進行複篩,1 次只做單耳ABR\n\n承上題,如果兩耳同時做ABR(兩耳同時給刺激音),發現兩耳ABR 第五波在60 dB nHL 才會",
+    "question": "承上題，如果兩耳同時做ABR（兩耳同時給刺激音），發現兩耳ABR 第五波在60 dB nHL 才會出現，然後再分別用80 dB nHL 刺激右耳及左耳，發現右耳第五波出現，左耳無反應，以下何者是預估的聽力？",
     "options": {
-      "A": "出現,然後再分別用80 dB nHL 刺激右耳及左耳,發現右耳第五波出現,左耳無反應,以下何者",
-      "B": "是預估的聽力?",
-      "C": "兩耳聽閾都約80 dB HL",
-      "D": "右耳聽閾約80 dB HL 右耳聽閾約60 dB HL 兩耳聽閾都約60 dB HL"
+      "A": "兩耳聽閾都約80 dB HL",
+      "B": "右耳聽閾約80 dB HL",
+      "C": "右耳聽閾約60 dB HL",
+      "D": "兩耳聽閾都約60 dB HL"
     },
     "answer": "C",
     "explanation": "",
     "exam_type": "high",
-    "_legacy_id": 30003001
+    "_legacy_id": 30003001,
+    "case_context": "當新生兒接受聽力初篩沒通過,需使用傳統聽性腦幹反應檢查(ABR)進行複篩,1 次只做單耳ABR"
   },
   {
     "id": "audiologist_101110_p3_79",
@@ -86774,18 +86776,19 @@
     "paper_id": "paper4",
     "stage_id": 0,
     "number": 69,
-    "question": "【題組情境】根據平方反比定律,若與說話者距離4公尺時的音量為65分貝,那距離16公尺時的音量為多少分貝?\n\n承上題,如果說話者處在一間背景噪音為65 分貝的教室,請問下列聽者與說話者的距離,那一個可",
+    "question": "承上題，如果說話者處在一間背景噪音為65 分貝的教室，請問下列聽者與說話者的距離，那一個可以達到3 分貝以上的訊噪比（signal to noise ratio, SNR）？",
     "options": {
-      "A": "以達到3 分貝以上的訊噪比(signal to noise ratio, SNR)?",
-      "B": "2 公尺",
-      "C": "4 公尺",
-      "D": "8 公尺 題目所提供的資訊不足,無從判斷"
+      "A": "2 公尺",
+      "B": "4 公尺",
+      "C": "8 公尺",
+      "D": "題目所提供的資訊不足，無從判斷"
     },
     "answer": "A",
     "explanation": "",
     "exam_type": "high",
     "vision_uncertain": false,
-    "_legacy_id": 30003529
+    "_legacy_id": 30003529,
+    "case_context": "根據平方反比定律,若與說話者距離4公尺時的音量為65分貝,那距離16公尺時的音量為多少分貝?"
   },
   {
     "id": "audiologist_104100_p4_70",

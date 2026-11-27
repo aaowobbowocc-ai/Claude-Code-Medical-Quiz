@@ -13,6 +13,8 @@
 const fs = require('fs');
 const path = require('path');
 const { resolvePaper, fetchSheet } = require('./lib/moex-paper-resolve');
+// resolvePaper 配不到科目名稱時的退路（見下面 identifyPaper 那段註解）
+const { identifyPaper } = require('./lib/moex-one-question-rebuild');
 const { needsImage, figName } = require('./lib/image-ref');
 
 const BK = path.join(__dirname, '..');
@@ -58,6 +60,15 @@ const MARK = { '': 'A', '': 'B', '': 'C', '': 'D' };
       let doc, p;
       try {
         p = await resolvePaper({ exam, code, subject, year: String(code).slice(0, 3), items });
+        if (!p) {
+          // resolvePaper 是拿科目名稱去配的，名稱對不上就**整卷靜默跳過**——
+          // 聽力師 101110 電生理聽力學 80 題就是這樣整卷掉的，報表只寫
+          // 「對不到官方卷 80」，看不出掉的是哪一卷。
+          // 退一步改用命中率認卷：拿同一卷上健康題的題幹去打每個候選，
+          // 命中最高而且 >= 0.6 的才算（跟 repair-moex-* 那幾支同一套）。
+          const ip = await identifyPaper({ exam, code, subject, siblings: items, broken: groups[k] });
+          if (ip && ip.hit >= 0.6) p = ip.c;
+        }
         if (!p) { why['對不到官方卷'] = (why['對不到官方卷'] || 0) + groups[k].length; continue; }
         doc = mupdf.Document.openDocument(await fetchSheet('Q', code, p.c, p.s), 'application/pdf');
       } catch (e) { errs++; continue; }

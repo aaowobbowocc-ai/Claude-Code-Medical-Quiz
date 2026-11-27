@@ -32,11 +32,17 @@ async function identifyPaper({ exam, code, subject, siblings, broken, maxProbe =
   const { list: cands } = nameCandidates(exam, subject, codes);
   if (!cands.length) return null;
 
-  const probe = siblings
-    .filter((q) => !broken.includes(q) && String(q.question || '').length > 20)
+  const makeProbe = (skipBroken) => siblings
+    .filter((q) => (!skipBroken || !broken.includes(q)) && String(q.question || '').length > 20)
     .map((q) => skeleton(q.question).replace(/^【題組情境】/, '').slice(0, 18))
     .filter((s) => s.length >= 14)
     .slice(0, maxProbe);
+  // 「壞的那些」原本一律排除在探針之外，但呼叫方有時把**整卷**都當候選
+  // （extract-missing-figures 的 targets 就是整卷 80 題），排掉之後一支探針都
+  // 不剩，命中率算出來是 0，整卷被判成「對不到官方卷」靜默跳過。
+  // 探針數不夠時就連壞的一起拿去打 —— 壞的那些頂多打不中，不會造成誤認。
+  let probe = makeProbe(true);
+  if (probe.length < 4) probe = makeProbe(false);
 
   let picked = null;
   for (const c of cands) {

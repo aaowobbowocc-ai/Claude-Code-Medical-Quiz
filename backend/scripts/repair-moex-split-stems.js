@@ -78,7 +78,10 @@ function splitAt(q) {
     const arr = Array.isArray(j) ? j : j.questions;
     if (!Array.isArray(arr)) continue;
 
-    const bad = arr.filter((q) => !q.incomplete && splitAt(q));
+    // 自己標過的也要再試一次：原卷抓不到是當下的網路狀況、解析器後來也會變好，
+    // 都不代表這題永遠救不回來。偵測訊號是算出來的、不是硬編清單，所以重跑安全
+    // （對照 feedback_fix_ledger_rerun 那種不能重跑的腳本）。
+    const bad = arr.filter((q) => (!q.incomplete || q.incomplete === 'stem_split_into_options') && splitAt(q));
     if (!bad.length) continue;
 
     const groups = new Map();
@@ -117,7 +120,9 @@ function splitAt(q) {
           if (m && m[1].trim().length >= 10) ctx = m[1].trim();
         }
         fixed.push({ exam, q, key, before: String(q.question), beforeOpts: { ...q.options }, r, hit: paper.hit, ctx });
-        if (APPLY) { applyRebuild(q, r); if (ctx) q.case_context = ctx; dirty = true; }
+        // 修好了就要把旗標拿掉，不然前端照樣藏著（這支現在會重試自己標過的，
+        // 不清旗標的話「已修 N 題」是假的）
+        if (APPLY) { applyRebuild(q, r); if (ctx) q.case_context = ctx; delete q.incomplete; dirty = true; }
       }
     }
     if (APPLY && dirty) atomicWriteJson(fp, j);
@@ -152,6 +157,7 @@ function splitAt(q) {
    */
   const ORD = 'ABCDEF';
   const hide = [], keep = [];
+  const unflag = [];
   for (const f of fs.readdirSync(BK).filter((x) => /^questions(-.*)?\.json$/.test(x) && !/\.bak/.test(x))) {
     const exam = f === 'questions.json' ? 'doctor1' : f.replace(/^questions-|\.json$/g, '');
     if (ONLY && exam !== ONLY) continue;
@@ -161,8 +167,14 @@ function splitAt(q) {
     if (!Array.isArray(arr)) continue;
     let dirty = false;
     for (const q of arr) {
-      if (q.incomplete) continue;
+      if (q.incomplete && q.incomplete !== 'stem_split_into_options') continue;
       const key = splitAt(q);
+      // 旗標要跟偵測訊號一致：已經不再符合壞法（上一輪修好了、或判準變嚴了）
+      // 就把旗標拿掉，不然題目內容是對的卻一直被藏在前端看不到。
+      if (!key && q.incomplete === 'stem_split_into_options') {
+        unflag.push({ exam, q }); if (APPLY) { delete q.incomplete; dirty = true; }
+        continue;
+      }
       if (!key) continue;
       const ai = ORD.indexOf(String(q.answer));
       const fi = ORD.indexOf(key);
@@ -173,6 +185,11 @@ function splitAt(q) {
       if (APPLY) { q.incomplete = 'stem_split_into_options'; dirty = true; }
     }
     if (APPLY && dirty) atomicWriteJson(fp, j);
+  }
+  if (unflag.length) {
+    console.log(`
+   已經不符合壞法${APPLY ? '，旗標已拿掉（重新顯示）' : '，會拿掉旗標'}：${unflag.length} 題`);
+    for (const u of unflag) console.log(`     ${u.exam} ${u.q.exam_code} ${u.q.subject} #${u.q.number}`);
   }
   if (hide.length || keep.length) {
     console.log(`\n   答案格在碎片格之後（選不到正解）${APPLY ? '，已藏起來' : '，會藏起來'}：${hide.length} 題`);

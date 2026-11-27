@@ -63,54 +63,80 @@ async function parseAnswerSheet(buf) {
         const m = String(t).replace(/\s/g, '').match(/^第?(\d{1,3})題?$/);
         return m ? +m[1] : null;
       };
-      const nums = rows[i].items.slice(1)
-        .map(x => ({ ...x, n: numOf(x.t) }))
-        .filter(x => x.n !== null);
-
-      // 表格版型：整列常黏成一兩個 text run（"題號第1題第2題…"、"答案BBACCCACAC"），
-      // 切不出獨立的格子就配不到 x 座標。這時改成「把整列文字抽乾淨再照順序配」——
-      // 題號列與答案列是同一個表格的上下兩行，順序必然對應。
       // ⚠️ 不能用 slice(1) 跳過標籤：標籤會跟第一個題號黏在一起（"題號第1題"），
       // 跳掉就少一格，配對整個錯位一格——比解析不出來更糟。
       const rowText = (row) => row.items.map(x => x.t).join('').replace(/\s/g, '');
+      const spaced = (row) => row.items.map(x => x.t).join(' ').replace(/\s+/g, ' ').trim();
+
+      // 這一列有哪些題號（閱讀順序 = x 由左到右）
       const seqNums = [...rowText(rows[i]).matchAll(/第(\d{1,3})題/g)].map(m => +m[1]);
-      const seqAns = halfWidth(rowText(ansRow)).replace(/^答案/, '').match(/[A-D#＃]/g) || [];
-      if (seqNums.length >= 2 && seqNums.length === seqAns.length) {
-        seqNums.forEach((n, k) => { out[n] = seqAns[k]; });
+      const zipNums = (spaced(rows[i]).replace(/^題(號|序)/, '').match(/\d{1,3}/g) || []).map(Number);
+      const nums = seqNums.length >= 2 ? seqNums : zipNums;
+      if (nums.length < 2) continue;
+
+      // 答案格：每一格一個 text run。標籤有時跟第一格黏在一起（"答案Ａ"），
+      // 把後面那截當成該 x 位置的答案補回去。
+      const cells = ansRow.items.map(a => ({ x: a.x, t: halfWidth(a.t).trim() }));
+      const glued = halfWidth(ansRow.items[0].t).replace(/^答\s*案\s*/, '').trim();
+      cells.shift();
+      if (glued) cells.unshift({ x: ansRow.items[0].x + 34, t: glued });
+      const filled = cells.filter(c => c.t);
+      if (!filled.length) continue;
+
+      // 題號格的 x 座標（配對用）。黏成一個 run 的時候就配不到，只能靠順序。
+      const numItems = rows[i].items.map(x => ({ x: x.x, n: numOf(x.t) })).filter(x => x.n !== null);
+      const put = (n, t) => { out[n] = String(t).replace('＃', '#').trim(); };
+
+      // ① 格數與題號數一樣 -> 照 x 由左到右對齊。
+      //    複選題的答案是「AD」「ABCE」這種多字母，一格就是一題，所以這條最可靠。
+      if (filled.length === nums.length) {
+        // 有 x 座標的話順便驗一下真的對齊（避免中間空格剛好湊成一樣的格數）
+        const aligned = numItems.length !== nums.length
+          || numItems.every((ni, k) => Math.abs(filled[k].x - ni.x) <= 40);
+        if (aligned) { nums.forEach((n, k) => put(n, filled[k].t)); continue; }
+      }
+
+      // ② 整列答案黏成一格（"答案BBACCCACAC"）-> 一個字母一題。
+      //    ⚠️ 只在**全部都是單字母**湊得剛好時才成立；複選題黏成一格
+      //    （"BEBDCDACEABC"）切不開，寧可不配也不要配錯。
+      if (filled.length === 1 && /^[A-E]+$/.test(filled[0].t) && filled[0].t.length === nums.length) {
+        nums.forEach((n, k) => put(n, filled[0].t[k]));
         continue;
       }
 
-      const ans = ansRow.items.slice(1).map(a => ({ ...a, t: halfWidth(a.t) }));
-      // 「答案Ａ」這種黏在一起的，把後面那截當成該 x 位置的答案補回去
-      const glued = halfWidth(ansRow.items[0].t).replace(/^答案\s*/, '');
-      if (glued) ans.unshift({ x: ansRow.items[0].x + 34, t: glued });
-
-      let paired = 0;
-      for (const n of nums) {
-        // 取 x 最接近的答案格
-        let best = null;
-        for (const a of ans) {
-          const d = Math.abs(a.x - n.x);
-          if (d <= X_TOL && (!best || d < best.d)) best = { d, t: a.t };
+      // ③ 格數比題號少（後段留白、或整卷題數不滿一列）-> 每一格認最近的題號。
+      //    ⚠️ 題號格與答案格的 x 會差 6~15px 而且**每一列差得不一樣**，
+      //    所以不能用固定的小容差去框，要取最近的那一個。
+      if (numItems.length === nums.length && filled.length < nums.length) {
+        const used = new Set();
+        let ok = 0;
+        for (const c of filled) {
+          let best = null;
+          for (const ni of numItems) {
+            if (used.has(ni.n)) continue;
+            const d = Math.abs(ni.x - c.x);
+            if (d <= 30 && (!best || d < best.d)) best = { d, n: ni.n };
+          }
+          if (best) { used.add(best.n); put(best.n, c.t); ok++; }
         }
-        if (best) { out[n.n] = best.t.trim(); paired++; }
+        if (ok) continue;
       }
-      if (paired) continue;
+
       /*
-       * 第三種版型（99 年的更正卷）：一列被切成好幾段 text run，每段塞好幾格，
+       * ④ 第三種版型（99 年的更正卷）：一列被切成好幾段 text run，每段塞好幾格，
        * 而且兩列的切法不一樣：
        *   題序列 ["題序 01 02 03 04 05", "06 07 08 09 10", …]
        *   答案列 ["答案 B D A", "#", "A", "D B B C A", …]
-       * 段落邊界對不起來，所以 x 配對與「第N題」那條都失敗（醫師一階 99-2
-       * 醫學(二) 實測 0 筆）。但同一列的閱讀順序必然對應，數量一致就按順序配。
+       * 段落邊界對不起來，所以前面幾條都失敗（醫師一階 99-2 醫學(二) 實測 0 筆）。
+       * 但同一列的閱讀順序必然對應，數量一致就按順序配。
        * ⚠️ 要用**空白**把 run 接起來，直接 join('') 會把「01」「02」黏成「0102」。
+       * ⚠️ 而且只有**每一格都是單字母**時才能這樣拆：複選題的「BE」會被拆成
+       *   B、E 兩格，湊巧湊成一樣的格數就整列錯位（2026-11-27 的 E 漏字 bug）。
        */
-      const spaced = (row) => row.items.map(x => x.t).join(' ').replace(/\s+/g, ' ').trim();
-      const zipNums = (spaced(rows[i]).replace(/^題(號|序)/, '').match(/\d{1,3}/g) || []).map(Number);
-      const zipAns = (halfWidth(spaced(ansRow)).replace(/^答案/, '').match(/[A-D#＃]/g) || []);
-      if (zipNums.length >= 2 && zipNums.length === zipAns.length
-        && zipNums.every((n, k) => k === 0 || n === zipNums[k - 1] + 1)) {
-        zipNums.forEach((n, k) => { out[n] = zipAns[k].replace('＃', '#'); });
+      const toks = halfWidth(spaced(ansRow)).replace(/^答\s*案/, '').match(/[A-E#＃]+/g) || [];
+      if (toks.length === nums.length && toks.every(t => t.length === 1)
+        && nums.every((n, k) => k === 0 || n === nums[k - 1] + 1)) {
+        nums.forEach((n, k) => put(n, toks[k]));
       }
     }
   }

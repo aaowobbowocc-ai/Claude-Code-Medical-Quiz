@@ -114,25 +114,50 @@ async function getSheet(code, c, s) {
       // 更正為多答案時，我們的答案只要落在給分範圍內就算正確
       if (Array.isArray(o)) {
         total++;
+        // 「一律給分」我們存「送分」，考選部的更正卷寫法是把**所有選項**都列為給分
+        //（parseCorrections 展開成 A,B,C,D）。意思一樣，不是答案錯。
+        // 不這樣處理的話光這一類就有 21 筆假警報，真正要看的被埋在裡面。
+        const allOptions = Object.keys(q.options || {}).filter(k => /^[A-E]$/.test(k));
+        if (String(q.answer).trim() === '送分'
+          && allOptions.length && allOptions.every(k => o.includes(k))) { same++; continue; }
         const ours = String(q.answer).split(/[,、\s]+/).filter(Boolean);
         if (ours.length && ours.every(x => o.includes(x))) same++;
         else diffs.push({ n: q.number, ours: q.answer, official: o.join(','), id: q.id, corrected: true });
         continue;
       }
       if (o === '送分') { total++; same++; continue; }   // 一律給分，存什麼都不算錯
-      if (!/^[A-D]$/.test(String(o).trim())) continue;
+      // 我們存多個字母（「A,C」）而標準答案卷只給一個：這是考選部**更正**成兩個都
+      // 給分，標準答案卷不會反映更正（更正在 M 卷的備註裡）。官方那個字母有被我們
+      // 收進去就不是答案錯。correction_note／disputed 是這類題的來源證據。
+      if (/[,、]/.test(String(q.answer)) && (q.correction_note || q.disputed || q.isMultiAnswer)
+        && String(q.answer).split(/[,、\s]+/).filter(Boolean).includes(String(o).trim())) {
+        total++; same++; continue;
+      }
+      // 多字母（複選題的標準答案，例如「ACE」）：跟題庫的答案當成集合比。
+      // 題庫沒有複選題時這類題號根本不存在，不會進到這裡。
+      if (/^[A-E]{2,}$/.test(String(o).trim())) {
+        const ours = String(q.answer).replace(/[^A-E]/g, '').split('').sort().join('');
+        const off = String(o).trim().split('').sort().join('');
+        total++;
+        if (ours === off) same++;
+        else diffs.push({ n: q.number, ours: q.answer, official: String(o).trim(), id: q.id, multi: true });
+        continue;
+      }
+      // ⚠️ 只認 A-D 會讓**答案是 E 的題（複選、五選一）整題跳過稽核**，
+      // 那些題永遠查不到答案錯。答案卷解析器 2026-11-27 才學會認 E。
+      if (!/^[A-E]$/.test(String(o).trim())) continue;
       total++;
       if (String(o).trim() === String(q.answer).trim()) { same++; continue; }
       // 字母不同 → 再比選項文字，一樣就是排序差異，不是答案錯
       const off = official && official.get(q.number);
       if (off) {
         const ourTxt = skeleton((q.options || {})[q.answer] || '');
-        const offTxt = skeleton(off.options['ABCD'.indexOf(String(o).trim())] || '');
+        const offTxt = skeleton(off.options['ABCDE'.indexOf(String(o).trim())] || '');
         if (ourTxt && offTxt && (ourTxt.includes(offTxt) || offTxt.includes(ourTxt))) { same++; continue; }
       }
       diffs.push({ n: q.number, ours: q.answer, official: String(o).trim(), id: q.id,
         oursText: String((q.options || {})[q.answer] || '').slice(0, 40),
-        officialText: off ? String(off.options['ABCD'.indexOf(String(o).trim())] || '').slice(0, 40) : null });
+        officialText: off ? String(off.options['ABCDE'.indexOf(String(o).trim())] || '').slice(0, 40) : null });
     }
     if (total < 10) { skipped++; continue; }
     const rate = same / total;

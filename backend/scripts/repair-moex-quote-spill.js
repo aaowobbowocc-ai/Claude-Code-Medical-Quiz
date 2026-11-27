@@ -64,6 +64,17 @@ function spillAt(q) {
     // 那是當下的網路狀況，不是這題救不回來。偵測訊號是算引號、不是硬編清單，
     // 所以重跑是安全的（對照 feedback_fix_ledger_rerun 那種不能重跑的腳本）。
     const bad = arr.filter((q) => (!q.incomplete || q.incomplete === 'quote_spill') && spillAt(q));
+    // 旗標要跟偵測訊號一致：標過 quote_spill 但現在已經不符合壞法的（上一輪修好了、
+    // 或解析器變好了）要把旗標拿掉，不然內容是對的卻一直被藏著。
+    let cleared = 0, dirty0 = false;
+    for (const q of arr) {
+      if (q.incomplete === 'quote_spill' && !spillAt(q)) {
+        cleared++;
+        if (APPLY) { delete q.incomplete; dirty0 = true; }
+      }
+    }
+    if (cleared) console.log(`${exam}：${cleared} 題已經不符合壞法，${APPLY ? '旗標已拿掉' : '會拿掉旗標'}`);
+    if (APPLY && dirty0) atomicWriteJson(fp, j);
     if (!bad.length) continue;
 
     const groups = new Map();
@@ -94,7 +105,12 @@ function spillAt(q) {
         const r = rebuildOne(paper, q, (stem, o) => {
           const sk = skeleton(stem);
           if (tail.length >= 8 && !sk.includes(tail)) return '原卷那一題跟題庫的題幹對不起來';
-          if (unclosed(stem) > 0) return '原卷重解出來的題幹，引號還是沒收';
+          // 引號要**平衡**，不能只檢查「沒有多開」：少了開頭的「而多一個」，
+          // 表示原卷重解出來的題幹**開頭被截掉**（引文少了前半段）。
+          // 那樣換上去等於把一種壞法換成另一種壞法，閱讀題照樣答不了。
+          if (unclosed(stem) !== 0) return unclosed(stem) > 0
+            ? '原卷重解出來的題幹，引號還是沒收'
+            : '原卷重解出來的題幹，開頭被截掉（有」沒有「）';
           if (KEYS.some((x) => unclosed(o[x]) !== 0)) return '原卷重解出來的選項引號不平衡';
           return null;
         });

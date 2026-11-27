@@ -35,7 +35,10 @@ function normText(t) {
  */
 function skeleton(t) {
   return String(t ?? '').normalize('NFKC').replace(/[\s　]/g, '')
-    .replace(/[（）()［］\[\]【】、，,。．.：:；;？?！!"'`~～－\-—–_]/g, '');
+    // 彎引號（’‘“”「」『』）要跟直引號一起去掉：NFKC **不會**把 ’ 正規化成 '，
+    // 所以「Bartholin's gland cyst」與「Bartholin’s gland cyst」比起來會不一樣，
+    // 整卷稽核就報一筆假的「答案有誤」。
+    .replace(/[（）()［］\[\]【】、，,。．.：:；;？?！!"'`~～－\-—–_‘’“”「」『』·・]/g, '');
 }
 
 /**

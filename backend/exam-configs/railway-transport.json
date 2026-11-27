@@ -16,7 +16,7 @@
     "longText": false
   },
   "questionsFile": "questions-railway-transport.json",
-  "totalQ": 2452,
+  "totalQ": 2479,
   "passScore": null,
   "passRate": null,
   "papers": [
@@ -27,7 +27,15 @@
       "subjects": "國文（包括公文格式用語）",
       "count": 45,
       "timeLimit": null,
-      "note": "單選 35 題（每題 2 分）＋複選 10 題（每題 3 分）；100-102 年全為單選 35 題"
+      "note": "單選 35 題（每題 2 分）＋複選 10 題（每題 3 分，選項獨立判定：錯一個選項得 1.8 分、錯兩個得 0.6 分、錯更多或未作答 0 分）；100-102 年為單選 50 題（每題 2 分）",
+      "pointsPerQ": 2,
+      "multiPointsPerQ": 3,
+      "multiPartial": [
+        3,
+        1.8,
+        0.6
+      ],
+      "multiCount": 10
     },
     {
       "id": "civics_english",
@@ -35,7 +43,8 @@
       "subject": "公民與英文",
       "subjects": "公民（70%）、英文（30%）",
       "count": 50,
-      "timeLimit": null
+      "timeLimit": null,
+      "pointsPerQ": 2
     },
     {
       "id": "business_mgmt",
@@ -43,7 +52,8 @@
       "subject": "企業管理大意",
       "subjects": "企業管理大意",
       "count": 50,
-      "timeLimit": null
+      "timeLimit": null,
+      "pointsPerQ": 2
     },
     {
       "id": "transport_studies",
@@ -51,7 +61,8 @@
       "subject": "鐵路運輸學大意",
       "subjects": "鐵路運輸學大意",
       "count": 50,
-      "timeLimit": null
+      "timeLimit": null,
+      "pointsPerQ": 2
     }
   ],
   "stages": [
@@ -104,9 +115,9 @@
     "shortName": "台鐵運輸營業",
     "studentType": "台鐵招考考生、轉職應考者",
     "years": "100-112",
-    "totalQ": 2452,
+    "totalQ": 2479,
     "examDesc": "台鐵運輸營業佐級職缺主要辦理車站售票、列車服務、運務及客貨運業務。本題庫收錄鐵路特考佐級運輸營業類科 100-112 年歷屆試題，鐵路特考於 112 年後因台鐵公司化停辦，現由台鐵公司自辦招考，考試科目與佐級高度相同，歷屆試題仍是最佳練習教材。",
-    "paperDesc": "共同科目國文（含公文格式用語）、公民與英文；專業科目企業管理大意、鐵路運輸學大意。全為單選測驗題（國文複選題不納入題庫）。",
+    "paperDesc": "共同科目國文（含公文格式用語）、公民與英文；專業科目企業管理大意、鐵路運輸學大意。全為測驗題；國文含複選題 10 題（每題 3 分、選項獨立判定），其餘均為單選每題 2 分，每卷滿分 100 分。",
     "subjects": "國文、公民與英文、企業管理大意、鐵路運輸學大意",
     "mockDesc": "台鐵招考運輸營業模擬考（鐵路特考佐級 100-112 年歷屆試題）",
     "subjectDetails": [
@@ -184,5 +195,6 @@
   },
   "meta": {
     "officialSystem": "鐵路特考"
-  }
+  },
+  "totalPoints": 400
 }

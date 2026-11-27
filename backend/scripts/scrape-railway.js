@@ -22,6 +22,12 @@ const pdfParse = require('pdf-parse')
 const BASE = 'https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx'
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 const PUA_RE = new RegExp("[\uE000-\uF8FF]", "g")
+// 選項標記 Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ = U+E18C ~ U+E190（見 reference_option_markers）。
+// 這是切選項最可靠的訊號：靠 x 間距猜會失手 —— 103070 國文 #2 的四個選項擠在
+// 同一列、字距全部小於門檻，整列被當成一個選項，那一題於是整題消失。
+// ⚠️ 範圍只到 U+E190。同一張卷還有 U+E1C0~E1C3（題幹裡的 ①②③④），
+//    那些不是選項標記，掃進來會把題幹切碎。
+const OPT_MARK_RE = /[\uE18C-\uE190]/
 // Old (100-105) PDFs use CJK Compatibility Ideographs (U+F900-FAFF, e.g. 路=U+F937).
 // NFC canonical normalisation maps them to unified ideographs without touching
 // fullwidth punctuation (that would be NFKC).
@@ -57,10 +63,86 @@ function buildLogicalLines(items) {
   const lines = []
   for (const row of rows) {
     row.sort((a, b) => a.x - b.x)
+
+    // 被字型甩到標記左邊的數字。
+    // 107070 事務管理 #7 的四個選項是「1年」「2年」「5年」「7年」，而文字層把
+    // 2 5 7 印在**各自標記的左邊**：Ⓐ 1 年 ⟨2⟩ Ⓑ 年 ⟨5⟩ Ⓒ 年 ⟨7⟩ Ⓓ 年。
+    // 照 x 切會變成「1年2」「年5」「年7」「年」—— 四個選項全毀，而且答案
+    // 指到不存在的選項，那一題於是整題進不了題庫。
+    // 只認有縮排的純數字（x >= 50）：題號也是數字，但它在最左邊那一欄（x 約 30~41），
+    // 退過去的話克漏字那種「41 Ⓐ… Ⓑ…」會連題號一起吃進選項。
+    const strayNum = (it) => /^\s*\d+(\.\d+)?\s*$/.test(it.str) && it.x >= 50 && !OPT_MARK_RE.test(it.str)
+
+    // 這一列的選項是「數字在前」還是「數字在後」？拿選項 A 判 —— 它前面只有 Ⓐ，
+    // 沒有別的選項的數字會混進來（把尾巴那串可能屬於 B 的數字先剪掉再看）。
+    //
+    //   「1年」「2年」…      數字在前，結尾是「年」 -> 夾在中間的數字屬於**後面**那格
+    //   「千分之5」「千分之3.5」… 數字在後          -> 那串數字屬於**自己**這格，不能退
+    //
+    // 少了這一條，109070 運輸學 #49 會被切成「千分之」「5千分之3.5」。
+    const optMarks = row.map((it, i) => (OPT_MARK_RE.test(it.str) ? i : -1)).filter((i) => i >= 0)
+    let numberFirst = false
+    if (optMarks.length >= 2) {
+      const a = row.slice(optMarks[0] + 1, optMarks[1]).map((r) => r.str).join('')
+        .replace(/[\s\d.]+$/, '').trim()
+      numberFirst = /^\d/.test(a) && !/\d$/.test(a)
+    }
+    // 切點往前退過甩位的數字。兩個條件都要成立才退：
+    //
+    //  ① 切點本來就落在標記上。落在數字上表示那串數字已經被分到後面那一格了
+    //     （105 年公民與英文 #16 的「6歲的小明…」就是這種，再退會把選項 A 的尾巴切掉）。
+    //  ② 標記後面緊接著的是**非數字**。這條是防「選項本身就是一串數字」——
+    //     「20／12／15／5」那種題，每一格的數字都在自己標記的左邊，退了會整排
+    //     位移一格（第一格變空的、最後一格裝兩個數字）。實測會弄壞 22 題。
+    //     真的甩位長這樣：Ⓐ 1 年 ⟨2⟩ Ⓑ 年 —— 標記後面是「年」，
+    //     一個選項不可能只有「年」，所以那個 2 一定是它的。
+    const retreat = (cut, floor) => {
+      if (!numberFirst) return cut
+      if (!OPT_MARK_RE.test(row[cut]?.str || '')) return cut
+      if (!/^[^\d\s]/.test(row[cut + 1]?.str || '')) return cut
+      let b = cut
+      while (b > floor && strayNum(row[b - 1])) b--
+      return b
+    }
+
     const gaps = []
     for (let i = 1; i < row.length; i++) {
       const prevEnd = row[i - 1].x + row[i - 1].str.length * 11
-      if (row[i].x - prevEnd > 30 || row[i].x - row[i - 1].x > 80) gaps.push(i)
+      if (row[i].x - prevEnd > 30 || row[i].x - row[i - 1].x > 80) {
+        gaps.push(retreat(i, gaps.length ? gaps[gaps.length - 1] + 1 : 1))
+      }
+    }
+    // 間距切出來的某一格裡**有兩個以上的選項標記** -> 那一格其實裝了好幾個選項，
+    // 改用標記切。Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ (U+E18C~E190) 是最可靠的訊號。
+    //
+    //   103070 國文 #2   四個選項擠在同一列，字距全小於門檻 -> 整列一格 -> 整題消失
+    //   107070 運輸學 #4 選項排成 2×2，一格裝 A+B、一格裝 C+D -> 只剩兩個選項
+    //
+    // ⚠️ 間距已經一格一個標記的列**不要碰**：105 年公民與英文 #16 的選項 Ⓑ 是
+    //    「6歲的小明…」，而文字層把那個 6 印在標記 Ⓑ 的左邊（x=262 vs 313）。
+    //    照標記切會把 6 併進上一個選項，間距切法反而剛好切對。
+    //    把標記當主判準實測會讓 46 題變壞、只救回 1 題。
+    const markCount = (chunk) => chunk.filter(it => OPT_MARK_RE.test(it.str)).length
+    const gapBreaks = [0, ...gaps, row.length]
+    let crowded = false
+    for (let b = 0; b < gapBreaks.length - 1; b++) {
+      if (markCount(row.slice(gapBreaks[b], gapBreaks[b + 1])) >= 2) { crowded = true; break }
+    }
+    if (crowded) {
+      const marks = row.map((it, i) => (OPT_MARK_RE.test(it.str) ? i : -1)).filter(i => i >= 0)
+      const cuts = []
+      for (const m of marks) cuts.push(retreat(m, cuts.length ? cuts[cuts.length - 1] + 1 : 0))
+      const breaks = cuts[0] > 0 ? [0, ...cuts, row.length] : [...cuts, row.length]
+      for (let b = 0; b < breaks.length - 1; b++) {
+        const chunk = row.slice(breaks[b], breaks[b + 1])
+        const text = chunk.map(r => r.str).join('').trim()
+        // 這一段是選項，還是跟選項擠在同一列的題幹？
+        // 有標記、而且標記前面只剩（甩位的）數字 -> 是選項。
+        const mi = chunk.findIndex(it => OPT_MARK_RE.test(it.str))
+        const isOpt = mi >= 0 && chunk.slice(0, mi).every(strayNum)
+        if (text) lines.push({ text, x: chunk[0].x, y: row[0].y, col: isOpt ? 'C' + b : 'F' })
+      }
+      continue
     }
     if (gaps.length >= 3) {
       const breaks = [0, ...gaps, row.length]
@@ -140,9 +222,27 @@ function parseQuestions(lines, maxOpts = 4) {
     const line = filtered[i]
     if (line.x > 62) continue
     const m = line.text.match(/^(\d{1,2})(.*)$/)
-    if (!m || !m[2]) continue
+    if (!m) continue
     const num = parseInt(m[1])
     const rest = m[2]
+    // 題號自己佔一行：題幹接在下面（101 年國文 #48 的柬帖整個排成一塊，
+    // 題號「48」孤零零在左邊那一欄）。原本要求題號後面一定要有字，
+    // 那一題於是整題消失 —— 而且題幹選項都還在卷上，只有缺題盤點看得到。
+    // 放寬會多認到表格裡的數字，所以只在「剛好是下一個題號」而且
+    // 下一行是縮排的題幹（不是帶標記的選項）時才算。
+    if (!rest) {
+      const nxt = filtered[i + 1]
+      if (num !== expect) continue
+      // 下一行就是選項（克漏字那種「41 Ⓐ… Ⓑ… Ⓒ… Ⓓ…」，題幹是上面那篇文章）
+      // -> 這一題建不出來，但**題號還是要往前推**。
+      // 不推的話 expect 會卡在 41，而題號窗口只容許 +4，
+      // 於是第46題以後整段被判成雜訊 —— 一個解不出來的題組害死半張卷
+      // （110 年公民與英文的閱讀測驗 #45-50 實測）。
+      if (!nxt || nxt.x <= line.x + 8 || OPT_MARK_RE.test(nxt.text)) { expect = num + 1; continue }
+      qStarts.push({ idx: i, number: num })
+      expect = num + 1
+      continue
+    }
     if (num < expect || num > expect + 4) continue   // keep sequence monotonic
     // a digit right after the number is ambiguous ("162022年…") — only trust it
     // when the number is exactly the next expected one.

@@ -20030,12 +20030,12 @@
     "paper_id": "paper5",
     "stage_id": 0,
     "number": 69,
-    "question": "佑佑是一位三歲的聽損兒童,目前尚未接受任何學前教育,其聽力圖如下:",
+    "question": "佑佑是一位三歲的聽損兒童，目前尚未接受任何學前教育，其聽力圖如下：Pure-Tone AudiogramImpedancemetry1252505001k2k4k8kTympanogram-10-300-200-1000 +100+2000Hearing threshold Level in dB(ANSI-1969)Tuning-fork10Test:101020W9930RCompliance88407766505560E-tube Function44703380Rt221190Lt00100110-300-200-1000+100+200120Pressure mmH2O1306kFrequency in Mz15003k下列何者是最佳聽覺輔具建議？",
     "options": {
-      "A": "Pure-Tone Audiogram",
-      "B": "Impedancemetry",
-      "C": "下列何者是最佳聽覺輔具建議?",
-      "D": "骨導式助聽器 類比式助聽器 耳掛式助聽器 人工電子耳"
+      "A": "骨導式助聽器",
+      "B": "類比式助聽器",
+      "C": "耳掛式助聽器",
+      "D": "人工電子耳"
     },
     "answer": "D",
     "explanation": "",
@@ -22701,17 +22701,18 @@
     "paper_id": "paper2",
     "stage_id": 0,
     "number": 25,
-    "question": "【題組情境】考量幼兒VRA(visual reinforcement audiometry)的可信度,年齡是重要因素。一般早產兒(prematurity)\n\n承上題,如果受試者是多重障礙者,如唐氏症患者,也需考量developmental age。一般developmental",
+    "question": "承上題，如果受試者是多重障礙者，如唐氏症患者，也需考量developmental age。一般developmentalage 要達到多少歲時，VRA 才會成功？",
     "options": {
-      "A": "age 要達到多少歲時,VRA 才會成功?",
-      "B": "> 6 months old",
-      "C": "8 ~ 9 months old",
-      "D": "9 ~ 12 months old > 12 months old"
+      "A": "> 6 months old",
+      "B": "8 ~ 9 months old",
+      "C": "9 ~ 12 months old",
+      "D": "> 12 months old"
     },
     "answer": "D",
     "explanation": "",
     "exam_type": "special_high",
-    "_legacy_id": 30004240
+    "_legacy_id": 30004240,
+    "case_context": "考量幼兒VRA(visual reinforcement audiometry)的可信度,年齡是重要因素。一般早產兒(prematurity)"
   },
   {
     "id": "audiologist_101070_p2_26",
@@ -40901,12 +40902,12 @@
     "paper_id": "paper5",
     "stage_id": 0,
     "number": 16,
-    "question": "下圖為語音訊號/pæ/、/tæ/與/kæ/之聲波圖(sound pressure wave)以及功率頻譜圖(power",
+    "question": "下圖為語音訊號/pæ/、/tæ/與/kæ/之聲波圖（sound pressure wave）以及功率頻譜圖（powerspectrogram），雙箭頭處（�）為子音發聲的時間點，請問下列關於此不同類型塞音（stop consonant）頻譜特徵的敘述，何者錯誤？",
     "options": {
-      "A": "spectrogram),雙箭頭處為子音發聲的時間點,請問下列關於此不同類型塞音(stop consonant)",
-      "B": "頻譜特徵的敘述,何者錯誤?",
-      "C": "原則上雙唇塞音(labial stop)之聲學能量相對集中在高頻帶,齒槽塞音(alveolar stop)之能量相",
-      "D": "對集中在中頻帶,而軟塞音(velar stop)之能量則相對集中在低頻帶 題中頻譜圖顯示不同子音,會因為聲道(vocal tract)中空氣阻塞摩擦的位置不同以及構音位置不 同,因而造成不同的聲學特徵 影響不同類型塞音語音辨識度(phonetic identification)之因素,不僅包含該塞音本身的構音位置,其 後接續之母音內容在不同塞音區辨上亦有其重要性 若以塞音之頻譜(spectrum)觀之,軟塞音(velar stop)容易呈現出高偏度(skewness), 高峰態(kurtosis)之頻譜特徵"
+      "A": "原則上雙唇塞音（labial stop）之聲學能量相對集中在高頻帶，齒槽塞音（alveolar stop）之能量相對集中在中頻帶，而軟塞音（velar stop）之能量則相對集中在低頻帶",
+      "B": "題中頻譜圖顯示不同子音，會因為聲道（vocal tract）中空氣阻塞摩擦的位置不同以及構音位置不同，因而造成不同的聲學特徵",
+      "C": "影響不同類型塞音語音辨識度（phonetic identification）之因素，不僅包含該塞音本身的構音位置，其後接續之母音內容在不同塞音區辨上亦有其重要性",
+      "D": "若以塞音之頻譜（spectrum）觀之，軟塞音（velar stop）容易呈現出高偏度（skewness），高峰態（kurtosis）之頻譜特徵"
     },
     "answer": "A",
     "explanation": "",
@@ -41253,12 +41254,12 @@
     "paper_id": "paper5",
     "stage_id": 0,
     "number": 31,
-    "question": "【題組情境】耳科門診時媽媽帶來一位5 歲男孩,主訴老師注意到最近男孩在校無法專心學習,老師發問時都不回答。\n\n承上題,如果以40 感覺分貝(dB SL)幫該男孩做單字辨識率(word recognition score, WRS),其",
+    "question": "承上題，如果以40 感覺分貝（dB SL）幫該男孩做單字辨識率（word recognition score, WRS），其結果最可能是下列何者？",
     "options": {
-      "A": "結果最可能是下列何者?",
-      "B": "右耳62%,左耳64%",
-      "C": "右耳60%,左耳80%",
-      "D": "右耳86%,左耳90% 右耳100%,左耳70%"
+      "A": "右耳62%，左耳64%",
+      "B": "右耳60%，左耳80%",
+      "C": "右耳86%，左耳90%",
+      "D": "右耳100%，左耳70%"
     },
     "answer": "C",
     "explanation": "",
@@ -41266,7 +41267,8 @@
     "_legacy_id": 30003110,
     "images": [
       "/question-images/audiologist_101110_q30_fig.webp"
-    ]
+    ],
+    "case_context": "耳科門診時媽媽帶來一位5 歲男孩,主訴老師注意到最近男孩在校無法專心學習,老師發問時都不回答。"
   },
   {
     "id": "audiologist_101110_p5_32",
@@ -42129,12 +42131,12 @@
     "paper_id": "paper5",
     "stage_id": 0,
     "number": 68,
-    "question": "【題組情境】下圖為施作前庭功能檢查之示意圖,圖中檢查者位於受測者的前方,雙手扶於受測者的頭部兩側。\n\n承上題,請問該測試所測試的前庭系統反應,一般大約相當於頭部多少轉速(rotational speed)以及",
+    "question": "承上題，請問該測試所測試的前庭系統反應，一般大約相當於頭部多少轉速（rotational speed）以及峰值角加速度（peak angular acceleration）的轉動？",
     "options": {
-      "A": "峰值角加速度(peak angular acceleration)的轉動?",
-      "B": "20 Hz,2000°/s2",
-      "C": "5 Hz,500°/s2",
-      "D": "0.5 Hz,50°/s2 0.01 Hz,1°/s2"
+      "A": "20 Hz，2000°/s2",
+      "B": "5 Hz，500°/s2",
+      "C": "0.5 Hz，50°/s2",
+      "D": "0.01 Hz，1°/s2"
     },
     "answer": "B",
     "explanation": "",
@@ -42142,7 +42144,8 @@
     "_legacy_id": 30003144,
     "images": [
       "/question-images/audiologist_audiologist_101110_p5_67_0.webp"
-    ]
+    ],
+    "case_context": "下圖為施作前庭功能檢查之示意圖,圖中檢查者位於受測者的前方,雙手扶於受測者的頭部兩側。"
   },
   {
     "id": "audiologist_101110_p5_69",
@@ -64037,7 +64040,8 @@
     "_legacy_id": 30004964,
     "images": [
       "/question-images/audiologist_audiologist_102110_p5_59_0.webp"
-    ]
+    ],
+    "incomplete": "stem_split_into_options"
   },
   {
     "id": "audiologist_102110_p5_61",

@@ -37,10 +37,7 @@
 const fs = require('fs');
 const path = require('path');
 const { atomicWriteJson } = require('./lib/atomic-write');
-const { probeCodes, nameCandidates, fetchSheet } = require('./lib/moex-paper-resolve');
-const { pdfQuestions } = require('./lib/moex-pdf-parse');
-const { parseAnswerSheet } = require('./lib/moex-answer-sheet');
-const { skeleton } = require('./lib/moex-normalize');
+const { identifyPaper, rebuildOne, applyRebuild, KEYS, cmp } = require('./lib/moex-one-question-rebuild');
 
 const BK = path.join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
@@ -61,8 +58,6 @@ const FURNITURE = [
   /\d{2,3}\s*年[^。\n]{0,60}?考\s*試\s*試\s*題/,
 ];
 const isFurniture = (t) => FURNITURE.some((re) => re.test(String(t || '')));
-const cmp = (t) => String(t).normalize('NFKC').replace(/\s+/g, '');
-const KEYS = ['A', 'B', 'C', 'D'];
 
 /** 家具在這個字串裡最早出現的位置（沒有就回 -1） */
 function furnitureAt(t) {
@@ -96,6 +91,15 @@ function trimOne(q) {
 
 (async () => {
   const fixed = [], trimmed = [], hidden = [], skipped = {};
+  /** 試「只有一格的尾巴帶家具」這條輕症路；切得動就記下來並回 true */
+  let curExam = '';
+  const tryTrim = (q) => {
+    const t = trimOne(q);
+    if (!t) return false;
+    trimmed.push({ exam: curExam, q, key: t.key, before: t.before, after: t.after });
+    if (APPLY) q.options[t.key] = t.after;
+    return true;
+  };
   const skip = (r) => { skipped[r] = (skipped[r] || 0) + 1; };
 
   for (const f of fs.readdirSync(BK).filter((x) => /^questions(-.*)?\.json$/.test(x) && !/\.bak/.test(x))) {
@@ -104,6 +108,7 @@ function trimOne(q) {
     const arr = Array.isArray(j) ? j : j.questions;
     if (!Array.isArray(arr)) continue;
     const exam = f === 'questions.json' ? 'doctor1' : f.replace(/^questions-|\.json$/g, '');
+    curExam = exam;
 
     const bad = arr.filter((q) => !q.incomplete
       && (isFurniture(q.question) || Object.values(q.options || {}).some(isFurniture)));
@@ -121,89 +126,36 @@ function trimOne(q) {
     for (const [k, qs] of groups) {
       const [code, subject] = k.split('|');
       const siblings = arr.filter((q) => String(q.exam_code) === code && q.subject === subject);
-      const codes = probeCodes(code, String(code).slice(0, 3));
-      const { list: cands } = nameCandidates(exam, subject, codes);
+      const paper = await identifyPaper({ exam, code, subject, siblings, broken: qs });
       // 找不到原卷時不要「略過」—— 會被抓出來就是因為記錄裡有卷面家具，
-      // 那已經証明這筆是壞的；修不起來就藏起來，比讓卷頭碎片當選項顯示好。
-      if (!cands.length) { for (const q of qs) { hidden.push({ exam, q, reason: '反查不到這一科的卷' }); if (APPLY) { q.incomplete = 'header_swallowed'; dirty = true; } } continue; }
-
-      // 用**健康的那些題**去認卷：命中率最高的才是對的卷
-      const probe = siblings.filter((q) => !qs.includes(q) && String(q.question || '').length > 20)
-        .map((q) => skeleton(q.question).replace(/^【題組情境】/, '').slice(0, 18))
-        .filter((s) => s.length >= 14).slice(0, 20);
-      let picked = null;
-      for (const c of cands) {
-        let off;
-        try {
-          const b = await fetchSheet('Q', code, c.c, c.s);
-          if (!b) continue;
-          off = await pdfQuestions(b);
-        } catch { continue; }
-        if (!off || !off.size) continue;
-        const all = [...off.values()].map((x) => skeleton(x.stem)).join('|');
-        const hit = probe.length ? probe.filter((s) => all.includes(s)).length / probe.length : 0;
-        if (!picked || hit > picked.hit) picked = { c, off, hit };
-        if (hit >= 0.9) break;
+      // 那已經證明這筆是壞的；修不起來就藏起來，比讓卷頭碎片當選項顯示好。
+      // （輕症還有一條 trimOne 的路，在下面。）
+      if (!paper) {
+        for (const q of qs) { if (!tryTrim(q)) { hidden.push({ exam, q, reason: '原卷抓不到或解不出題目' }); if (APPLY) q.incomplete = 'header_swallowed'; } dirty = true; }
+        continue;
       }
-      if (!picked) { for (const q of qs) { hidden.push({ exam, q, reason: '原卷解不出題目（選項標記掉光了）' }); if (APPLY) { q.incomplete = 'header_swallowed'; dirty = true; } } continue; }
-      if (picked.hit < MIN_HIT) {
-        for (const q of qs) {
-          hidden.push({ exam, q, reason: `認不出是哪張卷（最高命中率 ${(picked.hit * 100).toFixed(0)}%）` });
-          if (APPLY) { q.incomplete = 'header_swallowed'; dirty = true; }
-        }
+      if (paper.hit < MIN_HIT) {
+        for (const q of qs) { if (!tryTrim(q)) { hidden.push({ exam, q, reason: `認不出是哪張卷（最高命中率 ${(paper.hit * 100).toFixed(0)}%）` }); if (APPLY) q.incomplete = 'header_swallowed'; } dirty = true; }
         continue;
       }
 
-      let answers = {};
-      try {
-        const sb = await fetchSheet('S', code, picked.c.c, picked.c.s);
-        if (sb) answers = await parseAnswerSheet(sb);
-      } catch { /* 沒有答案卷 */ }
-
       for (const q of qs) {
-        const src = picked.off.get(+q.number) || picked.off.get(String(q.number));
-        const ans = answers[String(q.number)];
-        let o = null;
-        const reason = (() => {
-          if (!src) return '原卷解不到這個題號';
-          const stem = String(src.stem || '').replace(/^[\s.．、]+/, '').trim();
-          if (stem.length < 8) return '原卷這一題的題幹是空的';
+        const r = rebuildOne(paper, q, (stem, o) => {
           if (isFurniture(stem)) return '原卷解出來的題幹還是卷面家具';
-          o = { A: src.options[0], B: src.options[1], C: src.options[2], D: src.options[3] };
-          if (!KEYS.every((x) => o[x] && String(o[x]).trim())) return '原卷這一題的選項解不齊';
-          if (KEYS.some((x) => /^[A-D]\s*[.．、]/.test(String(o[x])))) return '原卷選項還帶著 A. 標記';
           if (KEYS.some((x) => isFurniture(o[x]))) return '原卷選項裡還有卷面家具';
-          if (new Set(KEYS.map((x) => cmp(o[x]))).size !== 4) return '原卷這一題的選項有重複';
-          if (!ans || !/^[ABCD]$/.test(String(ans))) return '答案卷沒給這題的單一字母答案';
           return null;
-        })();
-
-        if (reason) {
+        });
+        if (!r.ok) {
           // 原卷救不回來之前，先試「只是某一格的尾巴吃到換頁的卷頭」這種輕症：
           //   police 107070 行政學 #8 D「控制幅度愈小，組織層級化數量愈多（請接背面）107年…科目：行政學」
           // 這種原卷重解也沒用（PDF 文字層就是把頁首併在那一格），但切掉尾巴就對了。
-          // 只在**題幹與其他三格都乾淨、只有一格帶家具**時才切 —— 多格中彈代表
-          // 整題錯位（題幹把選項吃進去、選項格裝的是頁首碎片），那不是切得回來的。
-          const t = trimOne(q);
-          if (t) {
-            trimmed.push({ exam, q, key: t.key, before: t.before, after: t.after });
-            if (APPLY) { q.options[t.key] = t.after; dirty = true; }
-            continue;
-          }
-          hidden.push({ exam, q, reason });
+          if (tryTrim(q)) { dirty = true; continue; }
+          hidden.push({ exam, q, reason: r.reason });
           if (APPLY) { q.incomplete = 'header_swallowed'; dirty = true; }
           continue;
         }
-        const stem = String(src.stem).replace(/^[\s.．、]+/, '').trim();
-        fixed.push({ exam, q, stem, o, oldAns: q.answer, newAns: String(ans), hit: picked.hit });
-        if (APPLY) {
-          q.question = stem;
-          q.options = o;
-          q.answer = String(ans);
-          q.explanation = '';
-          delete q.disputed;
-          dirty = true;
-        }
+        fixed.push({ exam, q, stem: r.stem, o: r.options, oldAns: q.answer, newAns: r.answer, hit: paper.hit });
+        if (APPLY) { applyRebuild(q, r); dirty = true; }
       }
     }
     if (APPLY && dirty) atomicWriteJson(fp, j);

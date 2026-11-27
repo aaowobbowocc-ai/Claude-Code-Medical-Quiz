@@ -10,7 +10,7 @@ import HazardVideo from '../components/HazardVideo'
 import OptionContent from '../components/OptionContent'
 import { supabase } from '../lib/supabase'
 import { getExamYears, getHistoricalPaper, getRandomPaper, isExamSupportedByCDN } from '../lib/cdnQuestions'
-import { isAnswerCorrect, isMultiSelect, togglePick, answerLetters } from '../utils/scoring'
+import { isAnswerCorrect, isMultiSelect, togglePick, answerLetters, gradePaper, paperScoring } from '../utils/scoring'
 import { addWrong } from '../lib/wrongBank'
 import { addFlags } from '../lib/flagBank'
 import { saveSession, getSessions, clearSession, describeSession } from '../lib/mockExamSession'
@@ -27,7 +27,10 @@ function getExamConfig(examType) {
   const et = types.find(e => e.id === examType) || types[0]
   const isWeighted = et.papers.some(p => p.pointsPerQ && p.pointsPerQ !== 1)
   const ppqs = et.papers.map(p => p.pointsPerQ || 1)
-  const uniformPointsPerQ = ppqs.every(v => v === ppqs[0]) ? ppqs[0] : null
+  // 有複選題另外配分的卷（鐵路國文：單選 2 分、複選 3 分），一張卷裡的「每題幾分」
+  // 就不是單一數字了，不能再用它回推「需答對幾題」。
+  const hasMultiPoints = et.papers.some(p => p.multiPointsPerQ && p.multiPointsPerQ !== (p.pointsPerQ || 1))
+  const uniformPointsPerQ = (!hasMultiPoints && ppqs.every(v => v === ppqs[0])) ? ppqs[0] : null
   return {
     examId: et.id,
     papers: et.papers,
@@ -69,19 +72,50 @@ function getExtraPassRules(examId) {
   }
 }
 
-// Calculate weighted score for a paper result
-function calcPaperScore(correct, total, paper) {
+// 一卷的得分。
+// 交卷時就用 gradePaper 按考選部配分算好存在 result.score（複選題有部分給分，
+// 不是「答對題數 × 每題分數」算得出來的），所以有 score 就直接用。
+// 舊的歷史紀錄沒有 score 欄位，才退回「答對題數 × 每題分數」。
+function calcPaperScore(result, paper) {
+  if (result && typeof result.score === 'number') return result.score
+  const correct = result?.correct || 0
   if (paper?.pointsPerQ && paper.pointsPerQ !== 1) {
     return +(correct * paper.pointsPerQ).toFixed(2)
   }
   return correct
 }
 
+/**
+ * 配分說明。國文那種混合卷不能寫「每題 2 分」——單選 2 分、複選 3 分。
+ */
+function pointsText(paper) {
+  const single = paper?.pointsPerQ || 1
+  const multi = paper?.multiPointsPerQ || single
+  if (single === 1 && multi === 1) return ''
+  if (multi !== single) return ` · 單選 ${single} 分、複選 ${multi} 分`
+  return ` · 每題 ${single} 分`
+}
+
+/**
+ * 作答時提示這題怎麼算分。有部分給分的卷要講清楚，不然使用者以為沒全對就是零分
+ * 而乾脆不作答 —— 考選部的規則剛好相反：完全不作答一定零分，猜錯一格還有 1.8 分。
+ */
+function multiHint(paper) {
+  const sc = paperScoring(paper)
+  if (!sc.partial) return '複選題（全對才給分）'
+  const one = sc.partial[1]
+  return one ? `複選題 ${sc.multi} 分（錯一個選項得 ${one} 分，未作答 0 分）` : `複選題 ${sc.multi} 分（全對才給分）`
+}
+
+/** 一卷的滿分（複選題比單選題值錢，所以要看實際抽到哪些題） */
+function calcPaperFull(result, paper) {
+  if (result && typeof result.full === 'number') return result.full
+  const total = result?.total || paper?.count || 0
+  return +(total * (paper?.pointsPerQ || 1)).toFixed(2)
+}
+
 function calcTotalScore(papers, examPapers) {
-  return papers.reduce((sum, p, i) => {
-    const paper = examPapers?.[i]
-    return sum + calcPaperScore(p.correct, p.total, paper)
-  }, 0)
+  return +papers.reduce((sum, p, i) => sum + calcPaperScore(p, examPapers?.[i]), 0).toFixed(2)
 }
 
 const DEFAULT_TIME_LIMIT = 120 // minutes
@@ -371,7 +405,7 @@ function ExamSetup({ onStart, onStartFull, onStartHistorical, onBack, coins, onR
                       <div>
                         <p className="font-bold text-lg text-medical-dark">{p.name}</p>
                         <p className="text-gray-400 text-xs mt-1">{p.subjects}</p>
-                        <p className="text-gray-300 text-xs">{p.count} 題{p.pointsPerQ && p.pointsPerQ !== 1 ? ` · 每題 ${p.pointsPerQ} 分` : ''} / {getPaperTimeLimitMin(p)} 分鐘</p>
+                        <p className="text-gray-300 text-xs">{p.count} 題{pointsText(p)} / {getPaperTimeLimitMin(p)} 分鐘</p>
                       </div>
                       <span className="text-sm font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">🪙 {singleFee}</span>
                     </div>
@@ -545,7 +579,7 @@ function ExamInProgress({ paper, questions, onFinish, onBack, initialState, onSa
           <div className="flex items-center gap-2 mb-2">
             <p className="text-xs text-gray-400 flex-1">
               第 {qIdx + 1} / {questions.length} 題{q.subject_name ? `　·　${q.subject_name}` : ''}
-              {isMultiSelect(q) && <span className="ml-1 text-amber-600 font-bold">· 複選題（全對才給分）</span>}
+              {isMultiSelect(q) && <span className="ml-1 text-amber-600 font-bold">· {multiHint(paper)}</span>}
             </p>
             <button onClick={toggleFlag}
               className={`text-xs font-bold px-2.5 py-1 rounded-full border active:scale-95 transition-all shrink-0
@@ -666,7 +700,8 @@ function Intermission({ paper1Result, onContinue, onFinishSingle, nextPaperName,
   const pct = Math.round((correct / total) * 100)
   const mm = Math.floor(timeUsed / 60)
   const ss = timeUsed % 60
-  const paperScore = isWeighted && paperConfig ? calcPaperScore(correct, total, paperConfig) : correct
+  const paperScore = isWeighted && paperConfig ? calcPaperScore(paper1Result, paperConfig) : correct
+  const paperFull = isWeighted && paperConfig ? calcPaperFull(paper1Result, paperConfig) : total
   const scoreDisplay = isWeighted ? (paperScore % 1 === 0 ? paperScore : paperScore.toFixed(1)) : correct
 
   return (
@@ -678,7 +713,7 @@ function Intermission({ paper1Result, onContinue, onFinishSingle, nextPaperName,
       <div className="flex-1 px-5 py-6 flex flex-col items-center gap-5">
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 w-full text-center">
           {isWeighted ? (
-            <p className="text-4xl font-black text-medical-dark">{scoreDisplay}<span className="text-lg text-gray-400">/100 分</span></p>
+            <p className="text-4xl font-black text-medical-dark">{scoreDisplay}<span className="text-lg text-gray-400">/{paperFull} 分</span></p>
           ) : (
             <p className="text-4xl font-black text-medical-dark">{correct}<span className="text-lg text-gray-400">/{total}</span></p>
           )}
@@ -721,6 +756,13 @@ function ExamResults({ papers, navigate }) {
   const totalQuestions = papers.reduce((s, p) => s + p.total, 0)
   const totalTime = papers.reduce((s, p) => s + p.timeUsed, 0)
   const totalScore = isWeighted ? calcTotalScore(papers, PAPERS) : totalCorrect
+  // 滿分不能寫死：複選題一題 3 分，隨機卷抽到幾題複選會影響這一卷的滿分
+  const totalFull = isWeighted
+    ? +papers.reduce((s, p, i) => s + calcPaperFull(p, PAPERS[i]), 0).toFixed(2)
+    : totalQuestions
+  // 用實際考到的題算，而不是 config 的 totalPoints —— 隨機卷抽到的複選題題數
+  // 可能跟原卷不一樣，寫死 400 會變成「398/400」那種對不起來的分數。
+  const fullMarks = totalFull || TOTAL_POINTS
   const hasZeroPaper = isFullExam && papers.some(p => p.correct === 0)
   const passed = (isFullExam && TOTAL_PASS != null) ? (totalScore >= TOTAL_PASS && !hasZeroPaper) : null
   const pct = Math.round((totalCorrect / totalQuestions) * 100)
@@ -785,7 +827,7 @@ function ExamResults({ papers, navigate }) {
       prev.unshift({
         date: new Date().toISOString(), paper: paperName,
         score: isWeighted ? totalScore : totalCorrect,
-        total: isWeighted ? TOTAL_POINTS : totalQuestions,
+        total: isWeighted ? fullMarks : totalQuestions,
         pct, passed, timeUsed: totalTime,
         wrongQuestions,   // 存錯題 → 之後可從歷史紀錄再次檢討
         allRefs,          // 全部作答的輕量參照 → 歷史紀錄可檢討整份考卷
@@ -861,7 +903,7 @@ function ExamResults({ papers, navigate }) {
           ) : isWeighted ? (
             <>
               <span className="text-4xl font-black text-white">{totalScore % 1 === 0 ? totalScore : totalScore.toFixed(1)}</span>
-              <span className="text-white/60 text-xs">/ {TOTAL_POINTS} 分</span>
+              <span className="text-white/60 text-xs">/ {fullMarks} 分</span>
             </>
           ) : (
             <>
@@ -887,12 +929,13 @@ function ExamResults({ papers, navigate }) {
         {isFullExam && (
           <div className="flex gap-3 w-full max-w-xs">
             {papers.map((p, i) => {
-              const paperScore = isWeighted ? calcPaperScore(p.correct, p.total, PAPERS[i]) : p.correct
+              const paperScore = isWeighted ? calcPaperScore(p, PAPERS[i]) : p.correct
+              const paperFull = isWeighted ? calcPaperFull(p, PAPERS[i]) : p.total
               return (
               <div key={i} className="flex-1 bg-white/10 rounded-xl px-3 py-2 text-center">
                 <p className="text-white/50 text-xs">{p.paperName}</p>
                 {isWeighted ? (
-                  <p className="text-white font-bold text-lg">{paperScore % 1 === 0 ? paperScore : paperScore.toFixed(1)}<span className="text-white/40 text-xs">/100</span></p>
+                  <p className="text-white font-bold text-lg">{paperScore % 1 === 0 ? paperScore : paperScore.toFixed(1)}<span className="text-white/40 text-xs">/{paperFull}</span></p>
                 ) : (
                   <p className="text-white font-bold text-lg">{p.correct}/{p.total}</p>
                 )}
@@ -1061,11 +1104,14 @@ export default function MockExam() {
           count: paper.count || 80,
           subject: paper.mixed ? undefined : (paper.subject || paper.name),
           years,
+          // 卷上有複選題區的要照原卷結構抽（鐵路國文：單選 35 + 複選 10）
+          multiCount: paper.multiCount || 0,
         })
         if (data.questions.length >= 10) return data.questions
       } catch (e) { console.warn('CDN loadQuestions failed:', e) }
     }
     let params = `count=${paper.count || 80}&exam=${et}`
+    if (paper.multiCount) params += `&multiCount=${paper.multiCount}`
     if (!paper.mixed) params += `&subject=${encodeURIComponent(paper.subject || paper.name)}`
     if (years) params += `&years=${years.join(',')}`
     const res = await fetch(`${BACKEND}/questions/exam?${params}`)
@@ -1178,14 +1224,18 @@ export default function MockExam() {
 
   const handleFinishPaper = (answers, flagged = {}) => {
     const timeUsed = Math.floor((Date.now() - startTime.current) / 1000)
-    const correct = questions.filter((q, i) => isAnswerCorrect(answers[i], q.answer, q.is_multi)).length
+    // 按考選部配分算分（複選題 3 分、選項獨立判定有部分給分），
+    // 答對題數另外算：部分給分的題有分數但不算「答對」。
+    const graded = gradePaper(questions, answers, currentPaper)
     const result = {
       paperName: currentPaper.name,
       questions: [...questions],
       answers: { ...answers },
       flagged: { ...flagged },
-      correct,
+      correct: graded.correct,
       total: questions.length,
+      score: graded.score,
+      full: graded.full,
       timeUsed,
     }
 

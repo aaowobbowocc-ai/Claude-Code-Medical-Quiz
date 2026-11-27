@@ -20,6 +20,16 @@ function isSingleAnswer(q) {
   return q.incomplete === 'image_options';
 }
 
+// 真複選題能不能拿來考：答案的每個字母都要有對應的選項。
+// isSingleAnswer 要求 answer.length === 1，所以複選題（答案是 'A,C,E'）一律進不了
+// 隨機題庫 —— 這是刻意的，點一下就送出的模式（練習、對戰、魔王題）判不了複選。
+// 只有模擬考會用 multiCount 明確要求它。
+function isMockMulti(q) {
+  if (!q.is_multi || q.incomplete || !q.options) return false;
+  const letters = String(q.answer || '').toUpperCase().match(/[A-Z]/g) || [];
+  return letters.length >= 2 && letters.every(k => q.options[k]);
+}
+
 // Doctor1 paper-constraint: 101+ has strict paper/tag mapping.
 // 醫學(一) = anatomy/embryology/histology/physiology/biochemistry
 // 醫學(二) = microbiology/parasitology/public_health/pharmacology/pathology
@@ -195,7 +205,7 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     const mode = isQuota ? 'pure' : resolveMode(req, examId);
     const questionsData = examData[examId] || examData.doctor1;
     const pool = loadExamQuestions(examId, { mode });
-    const { stages, count = 100, year, session, subject, years } = req.query;
+    const { stages, count = 100, year, session, subject, years, multiCount } = req.query;
 
     // Historical mode: return ALL questions (including multi-answer & voided) for authentic exam simulation.
     // Sort by question number to preserve original order — critical for 承上題 (carryover)
@@ -214,14 +224,25 @@ function registerRoutes(app, examData, stats, examConfigs, { staticCache, browse
     // If years is given (comma-separated ROC years), restrict the pool to those years.
     if (!stages) {
       const target = parseInt(count);
-      let valid = pool.filter(isSingleAnswer);
-      if (subject) {
-        valid = valid.filter(q => q.subject === subject);
+      const yset = years
+        ? new Set(String(years).split(',').map(s => s.trim()).filter(Boolean))
+        : null;
+      const inPaper = (q) => (!subject || q.subject === subject)
+        && (!yset || !yset.size || yset.has(q.roc_year));
+      const valid = pool.filter(q => isSingleAnswer(q) && inPaper(q));
+
+      // 卷上有複選題區的（鐵路國文：單選 35 + 複選 10）要照原卷結構抽，
+      // 不然隨機卷永遠抽不到複選題、滿分也湊不到 100 分。
+      // 抽不到足夠的複選題就用單選補，分數照實算。
+      const wantMulti = Math.min(parseInt(multiCount) || 0, target || 0);
+      if (wantMulti > 0) {
+        const multis = shuffle(pool.filter(q => isMockMulti(q) && inPaper(q))).slice(0, wantMulti);
+        const singles = shuffle(valid).slice(0, target - multis.length);
+        // 單選在前、複選在後 —— 跟印在卷上的順序一樣
+        const picked = [...singles, ...multis];
+        return res.json({ total: picked.length, questions: picked, mode: 'random' });
       }
-      if (years) {
-        const yset = new Set(String(years).split(',').map(s => s.trim()).filter(Boolean));
-        if (yset.size) valid = valid.filter(q => yset.has(q.roc_year));
-      }
+
       const picked = shuffle(valid).slice(0, target);
       return res.json({ total: picked.length, questions: picked, mode: 'random' });
     }

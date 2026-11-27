@@ -276,6 +276,16 @@ function isSingleAnswer(q) {
   return q.answer && q.answer.length === 1 && q.options && q.options[q.answer] && !q.incomplete
 }
 
+// 真複選題能不能拿來考：答案的每個字母都要有對應的選項。
+// isSingleAnswer 要求 answer.length === 1，所以複選題（答案是 'A,C,E'）
+// 一律不會進隨機題庫 —— 這是刻意的，因為點一下就送出的模式（對戰、魔王題）
+// 判不了複選。只有模擬考會明確要求它（見 getRandomPaper 的 multiCount）。
+function isMockMulti(q) {
+  if (!q.is_multi || q.incomplete || !q.options) return false
+  const letters = String(q.answer || '').toUpperCase().match(/[A-Z]/g) || []
+  return letters.length >= 2 && letters.every(k => q.options[k])
+}
+
 // doctor1 paper-constraint (mirror of backend)
 const DOCTOR1_MED1_TAGS = new Set(['anatomy', 'embryology', 'histology', 'physiology', 'biochemistry'])
 const DOCTOR1_MED2_TAGS = new Set(['microbiology', 'parasitology', 'public_health', 'pharmacology', 'pathology'])
@@ -388,15 +398,27 @@ export async function getHistoricalPaper(examId, { year, session, subject } = {}
 // Replace `/questions/exam?exam=X&count=N&subject=S` (random mode without stages)
 //   Returns N random single-answer questions, optionally filtered to a paper subject
 //   and/or a set of ROC years (years: string[] — empty/undefined = all years).
-export async function getRandomPaper(examId, { count = 100, subject, years } = {}) {
+export async function getRandomPaper(examId, { count = 100, subject, years, multiCount = 0 } = {}) {
   const pool = await loadExamQuestions(examId)
-  let valid = pool.filter(isSingleAnswer)
-  if (subject) valid = valid.filter(q => q.subject === subject)
-  if (Array.isArray(years) && years.length) {
-    const yset = new Set(years.map(String))
-    valid = valid.filter(q => yset.has(q.roc_year))
+  const inPaper = (q) => {
+    if (subject && q.subject !== subject) return false
+    if (Array.isArray(years) && years.length && !years.map(String).includes(q.roc_year)) return false
+    return true
   }
+  let valid = pool.filter(q => isSingleAnswer(q) && inPaper(q))
   const target = parseInt(count) || 100
+
+  // 卷上有複選題區的（鐵路國文：單選 35 + 複選 10）要照原卷的結構抽，
+  // 不然隨機卷永遠抽不到複選題（isSingleAnswer 把它們擋掉了），
+  // 滿分也湊不到 100 分。抽不到足夠的複選題就用單選補，分數照實算。
+  const wantMulti = Math.min(parseInt(multiCount) || 0, target)
+  if (wantMulti > 0) {
+    const multis = shuffle(pool.filter(q => isMockMulti(q) && inPaper(q))).slice(0, wantMulti)
+    const singles = shuffle(valid).slice(0, target - multis.length)
+    // 單選在前、複選在後 —— 跟印在卷上的順序一樣
+    return { total: singles.length + multis.length, questions: [...singles, ...multis], mode: 'random' }
+  }
+
   const picked = shuffle(valid).slice(0, target)
   return { total: picked.length, questions: picked, mode: 'random' }
 }

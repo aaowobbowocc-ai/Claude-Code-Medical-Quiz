@@ -33,38 +33,8 @@ const MIN = +(arg('min') || 0.95);
 const SKIP = new Set(arg('skip-file') ? JSON.parse(fs.readFileSync(arg('skip-file'), 'utf8')) : []);
 const fileOf = e => (e === 'doctor1' ? 'questions.json' : `questions-${e}.json`);
 
-/**
- * 我們的考試 id → 清冊上的（等級名稱, 類科名稱）。
- *
- * 等級一定要篩：警察三等與四等的「國文」是不同的卷，鐵路佐級與員級也是。
- * 類科要用「包含」比而不是 `^` 比：共同科目那幾列的類科名稱是一長串
- *   事務管理、機械工程、機檢工程、電力工程、電子工程、養路工程
- * 而且會被印到一半就截斷（107070 行政警察人員、…、警察）。
- */
-const MATCH = {
-  // 醫事類：類科名稱就是一個名字，沒有等級之分（都是高考）
-  doctor1: { klass: /^醫師[（(]一/ }, doctor2: { klass: /^醫師[（(]二/ },
-  dental1: { klass: /^牙醫師[（(]一/ }, dental2: { klass: /^牙醫師[（(]二/ },
-  pharma1: { klass: /^藥師[（(]一/ }, pharma2: { klass: /^藥師[（(]二/ },
-  tcm1: { klass: /^中醫師[（(]一/ }, tcm2: { klass: /^中醫師[（(]二|^中醫師$/ },
-  nursing: { klass: /^護理師/ }, nutrition: { klass: /^營養師/ }, medlab: { klass: /^醫事檢驗師/ },
-  radiology: { klass: /^醫事放射師/ }, pt: { klass: /^物理治療師/ }, ot: { klass: /^職能治療師/ },
-  rt: { klass: /^呼吸治療師/ }, vet: { klass: /^獸醫師/ }, audiologist: { klass: /^聽力師/ },
-  'speech-therapist': { klass: /^語言治療師/ }, 'clinical-psychology': { klass: /^臨床心理師/ },
-  'counseling-psychology': { klass: /^諮商心理師/ }, 'social-worker': { klass: /^社會工作師/ },
-  'dental-tech': { klass: /^牙體技術師/ }, optometrist: { klass: /^驗光師/ },
-  'optometrist-junior': { klass: /^驗光生/ }, 'public-health': { klass: /^公共衛生師/ },
-  // 公職／特考類：要連等級一起篩
-  lawyer1: { klass: /^(司法官|律師|司法官及律師)/ },
-  police: { level: /三等/, klass: /警察|公共安全|國家安全|消防|水上警察|刑事|交通警察|國境|犯罪防治|外事/ },
-  police4: { level: /四等/, klass: /警察|公共安全|消防|水上警察|刑事|交通警察|國境|犯罪防治|外事/ },
-  customs: { klass: /關稅|關務|財稅行政|一般行政/ },
-  'railway-admin': { level: /佐級/, klass: /^事務管理$/ },
-  'railway-transport': { level: /佐級/, klass: /^運輸營業$/ },
-};
-
-const pieces = s => String(s || '').split(/[、,，]/).map(x => x.trim()).filter(Boolean);
-const hitKlass = (re, rec) => !re || re.test(rec.klass) || pieces(rec.klassFull).some(p => re.test(p));
+// MATCH / pieces / hitKlass 搬到 lib/moex-session-answers.js 共用（重建腦本也要用）。
+const { MATCH, hitKlass } = require('./lib/moex-session-answers');
 
 (async () => {
   const files = {};

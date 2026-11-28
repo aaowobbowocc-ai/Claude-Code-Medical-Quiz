@@ -19,10 +19,19 @@ const { probeCodes, nameCandidates, fetchSheet } = require('./moex-paper-resolve
 const { pdfQuestions } = require('./moex-pdf-parse');
 const { parseColumnAware } = require('./moex-column-parser');
 const { parseAnswerSheet } = require('./moex-answer-sheet');
+const { sessionAnswers } = require('./moex-session-answers');
 const { skeleton } = require('./moex-normalize');
 
 const KEYS = ['A', 'B', 'C', 'D'];
 const cmp = (t) => String(t).normalize('NFKC').replace(/\s+/g, '');
+/*
+ * 「看起來是空的、但 .trim() 誤以為有東西」的格。原卷的選項標記被字型丟到
+ * 私用區或 C1 控制區（見 project_invisible_chars），黃掉標記以後格子裡只剩
+ * 不可見字元；不收掉的話 rebuildOne 的「四格都有字」驗收會騙過去，
+ * 聲語 101110 #70 就會被寫成 A=② B=④ C= D=（圖標題的圈號選項）。
+ */
+const INVISIBLE = /[\u0000-\u0020\u007f-\u00a0\u00ad\u200b-\u200f\u2028-\u202e\u2060-\u206f\u3000\ue000-\uf8ff\ufeff]/g;
+const visible = (t) => String(t == null ? '' : t).replace(INVISIBLE, '');
 
 /**
  * parseColumnAware 回「題號 -> {question, options:{A,B,C,D}}」的物件，
@@ -73,6 +82,28 @@ async function railwayMap(buf, maxOpts) {
 }
 
 /**
+ * 第四條退路：版面幾何那一支（readPaperOptions）。
+ * pdfQuestions 有時整個題號都不吐（牙醫二階 114090 卷三 #56、聲語 101110 #70/#72），
+ * 而這一支読得到 —— 但它回的 raw 只有「原卷那一行」，
+ * 所以只收 next !== 'text'（後面緊接著下一個標記或下一題）的整格，
+ * 不然會把跜行的選項寫成半句。
+ */
+async function paperOptsMap(buf) {
+  const mupdf = await import('mupdf');
+  const { readPaperOptions } = require('./moex-paper-options');
+  const r = readPaperOptions(mupdf, buf);
+  const m = new Map();
+  for (const [num, o] of Object.entries((r && r.opts) || {})) {
+    const cells = KEYS.map((k) => o && o[k]);
+    if (!cells.every((x) => x && String(x.raw || '').trim() && x.next && x.next !== 'text')) continue;
+    const stem = String(((r && r.stems) || {})[num] || '').trim();
+    if (!stem) continue;
+    m.set(+num, { stem, options: cells.map((x) => String(x.raw).trim()) });
+  }
+  return m;
+}
+
+/**
  * 認出某一場某一科的原卷。
  * @returns {Promise<{c, off, hit, answers}|null>} hit 是「健康題命中率」
  */
@@ -118,8 +149,9 @@ async function identifyPaper({ exam, code, subject, siblings, broken, maxProbe =
   for (const c of cands) {
     let off = null;
     let hit = 0;
+    let b = null;
     try {
-      const b = await fetchSheet('Q', code, c.c, c.s);
+      b = await fetchSheet('Q', code, c.c, c.s);
       if (!b) continue;
       off = await pdfQuestions(b);
       hit = rate(off);
@@ -143,7 +175,7 @@ async function identifyPaper({ exam, code, subject, siblings, broken, maxProbe =
       }
     } catch { continue; }
     if (!off || !off.size) continue;
-    if (!picked || hit > picked.hit) picked = { c, off, hit };
+    if (!picked || hit > picked.hit) picked = { c, off, hit, buf: b };
     if (hit >= 0.9) break;
   }
   if (!picked) return null;
@@ -153,7 +185,30 @@ async function identifyPaper({ exam, code, subject, siblings, broken, maxProbe =
     const sb = await fetchSheet('S', code, picked.c.c, picked.c.s);
     if (sb) answers = await parseAnswerSheet(sb);
   } catch { /* 沒有答案卷 */ }
-  return { ...picked, answers };
+  /*
+   * 一卷一份的答案卷舊年度與非醫事類很多根本沒有，或是版型認不得
+   * （營養師 100030 食品衞生與安全：S 不存在、A 解出 0 題）。
+   * 退回整場次清冊拿整卷答案，但只補「答案卷沒給的題號」而且要在
+   * trustMax 以内（清冊的表格只有前段的配法是確定的）。
+   */
+  const need = siblings.some((q) => !/^[ABCDE]$/.test(String(answers[String(q.number)] || '')));
+  if (need) {
+    try {
+      const maxN = Math.max(...siblings.map((q) => +q.number || 0));
+      const sa = await sessionAnswers({ exam, code, subject, maxN });
+      if (sa && sa.answers) {
+        for (const [n, a] of Object.entries(sa.answers)) {
+          if (+n > sa.trustMax) continue;
+          if (!/^[ABCDE]$/.test(String(answers[n] || ''))) answers[n] = a;
+        }
+      }
+    } catch { /* 清冊也沒有 */ }
+  }
+  // pdfQuestions 解不到的題號，用版面幾何那一支再補一份。off 優先，
+  // 所以現有行為不變，只是多了一條路。
+  let off2 = null;
+  try { off2 = await paperOptsMap(picked.buf); } catch { /* 補不到就算了 */ }
+  return { ...picked, off2, answers };
 }
 
 /**
@@ -162,12 +217,13 @@ async function identifyPaper({ exam, code, subject, siblings, broken, maxProbe =
  * @returns {{ok:true, stem, options, answer}|{ok:false, reason:string}}
  */
 function rebuildOne(paper, q, reject) {
-  const src = paper.off.get(+q.number) || paper.off.get(String(q.number));
+  const src = paper.off.get(+q.number) || paper.off.get(String(q.number))
+    || (paper.off2 && (paper.off2.get(+q.number) || paper.off2.get(String(q.number))));
   if (!src) return { ok: false, reason: '原卷解不到這個題號' };
   const stem = String(src.stem || '').replace(/^[\s.．、]+/, '').trim();
   if (stem.length < 8) return { ok: false, reason: '原卷這一題的題幹是空的' };
   const o = { A: src.options[0], B: src.options[1], C: src.options[2], D: src.options[3] };
-  if (!KEYS.every((x) => o[x] && String(o[x]).trim())) return { ok: false, reason: '原卷這一題的選項解不齊' };
+  if (!KEYS.every((x) => visible(o[x]))) return { ok: false, reason: '原卷這一題的選項解不齊（有格子只剩不可見字元）' };
   if (KEYS.some((x) => /^[A-D]\s*[.．、]/.test(String(o[x])))) return { ok: false, reason: '原卷選項還帶著 A. 標記' };
   if (new Set(KEYS.map((x) => cmp(o[x]))).size !== 4) return { ok: false, reason: '原卷這一題的選項有重複' };
   const ans = paper.answers[String(q.number)];

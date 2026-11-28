@@ -12,6 +12,16 @@
 // parseAnswers, parseAnswersColumnAware). If you fix bugs here, check whether
 // scrape-gaps-2026-04.js needs the same fix — the copies will drift otherwise.
 
+// 接兩段文字。parsePage 已經把每一行 trim 過，所以英文換行接起來會黏成
+// 一個字：「…NOT a major concern of the practice of」＋「prostitution?」
+// → 「ofprostitution?」（customs 111050 英文 #16 實測）。
+// 兩邊都是英數字才補一個空格；中文不補，連字號收尾（passport-＋free）也不補。
+const glue = (a, b) => {
+  if (!a) return b || ''
+  if (!b) return a
+  return (/[A-Za-z0-9]$/.test(a) && /^[A-Za-z0-9]/.test(b)) ? a + ' ' + b : a + b
+}
+
 const stripPUA = s => s.replace(/[\uE000-\uF8FF]/g, '')
 
 async function parseColumnAware(buf) {
@@ -73,7 +83,7 @@ async function parseColumnAware(buf) {
       if (r.parts.length === 1 && r.parts[0].x > minX + 8) {
         const prev = rows[i - 1]
         const lastPart = prev.parts[prev.parts.length - 1]
-        lastPart.text += r.parts[0].text
+        lastPart.text = glue(lastPart.text, r.parts[0].text)
         rows.splice(i, 1)
       }
     }
@@ -218,7 +228,7 @@ async function parseColumnAware(buf) {
 
     if (optionParts.length < 4) return null
     const opts = optionParts.slice(0, 4).map(p => p.text.trim())
-    const question = questionRows.map(r => r.parts.map(p => p.text).join('')).join('').trim()
+    const question = questionRows.map(r => r.parts.map(p => p.text).reduce(glue, '')).reduce(glue, '').trim()
     if (!question) return null
     return { question, options: { A: opts[0], B: opts[1], C: opts[2], D: opts[3] } }
   }

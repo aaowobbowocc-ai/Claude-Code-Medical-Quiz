@@ -97,7 +97,8 @@ function trimOne(q) {
     const t = trimOne(q);
     if (!t) return false;
     trimmed.push({ exam: curExam, q, key: t.key, before: t.before, after: t.after });
-    if (APPLY) q.options[t.key] = t.after;
+    // 切掉尾巴也是修好了，旗標要跟著拿掉（重跑自己標過的那些才有意義）
+    if (APPLY) { q.options[t.key] = t.after; if (q.incomplete === 'header_swallowed') delete q.incomplete; }
     return true;
   };
   const skip = (r) => { skipped[r] = (skipped[r] || 0) + 1; };
@@ -110,8 +111,23 @@ function trimOne(q) {
     const exam = f === 'questions.json' ? 'doctor1' : f.replace(/^questions-|\.json$/g, '');
     curExam = exam;
 
-    const bad = arr.filter((q) => !q.incomplete
-      && (isFurniture(q.question) || Object.values(q.options || {}).some(isFurniture)));
+    // 自己標過的 header_swallowed 也要再試一次 —— 偵測訊號是算出來的
+    // （題幹或某一格裡有卷面家具），不是硬編清單，所以重跑是安全的，
+    // 而且解析器變好之後上一輪放棄的那些才有機會救回來（對照
+    // feedback_fix_ledger_rerun 那種不能重跑的腳本）。
+    const isBad = (q) => isFurniture(q.question) || Object.values(q.options || {}).some(isFurniture);
+    const bad = arr.filter((q) => (!q.incomplete || q.incomplete === 'header_swallowed') && isBad(q));
+    // 旗標要跟偵測訊號一致：標過但現在已經不符合壞法的要把旗標拿掉，
+    // 不然內容是對的卻一直被藏在前端看不到。
+    let cleared = 0, dirty0 = false;
+    for (const q of arr) {
+      if (q.incomplete === 'header_swallowed' && !isBad(q)) {
+        cleared++;
+        if (APPLY) { delete q.incomplete; dirty0 = true; }
+      }
+    }
+    if (cleared) console.log(`${exam}：${cleared} 題已經不符合壞法，${APPLY ? '旗標已拿掉' : '會拿掉旗標'}`);
+    if (APPLY && dirty0) atomicWriteJson(fp, j);
     if (!bad.length) continue;
 
     // 按「場次＋科目」分組，一組只抓一次原卷
@@ -155,7 +171,8 @@ function trimOne(q) {
           continue;
         }
         fixed.push({ exam, q, stem: r.stem, o: r.options, oldAns: q.answer, newAns: r.answer, hit: paper.hit });
-        if (APPLY) { applyRebuild(q, r); dirty = true; }
+        // 修好了旗標就要拿掉，不然前端照樣藏著、「已修 N 題」是假的
+        if (APPLY) { applyRebuild(q, r); delete q.incomplete; dirty = true; }
       }
     }
     if (APPLY && dirty) atomicWriteJson(fp, j);

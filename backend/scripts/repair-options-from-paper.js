@@ -18,7 +18,7 @@
  * 不然拿半行去覆蓋會把題庫原本正確的下半段砍掉。
  *
  *   node scripts/repair-options-from-paper.js [--exam=xxx] [--kind=…] [--apply]
- *     --kind: circled | rotate | letter | truncated | spill | rebuild | alien
+ *     --kind: circled | rotate | letter | digits | truncated | spill | rebuild | alien
  *             alien-cell | alien-cell-headless | alien-cell-fragment（可自動套用）
  *             alien-cell-replaced（只報告，要 --reviewed 才寫入）
  */
@@ -200,6 +200,58 @@ const KEYS = ['A', 'B', 'C', 'D'];
          * （續行黏到下一題時會）。
          */
         const paperFull = k => (got[k] ? nz(got[k].fullRaw) : '');
+
+        // ── 2.2 只差在下標數字擺到哪裡 ───────────────────────────────
+        /*
+         * 把數字全部拿掉之後題庫與原卷一模一樣，差別只在下標排到哪裡：
+         *   獸醫 115090 獸醫實驗診斷學 #79 A
+         *     題庫「PaCO2輕微降低、HCO3- 輕微降低、HCO-/HCO比值輕微降低2 3 3」
+         *     原卷「PaCO2輕微降低、HCO3- 輕微降低、HCO3-/H2CO3比值輕微降低」
+         * 這種不要用 regex 猜 —— 光看題庫分不出第二個 HCO 是 HCO3 還是 H2CO3，
+         * 猜錯就把酸鹼平衡的比值寫成別的東西。原卷的版面幾何已經把下標放回
+         * 正確位置了，直接照抄。
+         * 沒有原卷可對（或原卷那一格不完整）時才退回 fix-subscript-shift.js
+         * 與 repair-flung-subscript.js 的 regex 路線。
+         */
+        const nodig = (s) => nz(s).replace(/[0-9]/g, '');
+        /*
+         * 數字要對帳：兩邊的數字**多重集必須完全一樣**，只是位置不同。
+         * 沒這一條會把「原卷那一格被吃掉開頭數字」當成下標跑掉：
+         *   聽力師 103100 #33 題庫「3-Flange Plug」→ 原卷「-Flange Plug」（3 不見了）
+         *   牙醫二階 112020 #15 題庫「+1.0 mm」→ 原卷「+11.0 mm」（凭空多出一個 1）
+         */
+        const digs = (s) => (String(s).match(/[0-9]/g) || []).sort().join('');
+        const digitFix = mismatch.filter((k) =>
+          full(k) && nodig(bank[k]).length >= 6
+          && nodig(bank[k]) === nodig(paperFull(k))
+          && digs(nz(bank[k])) === digs(paperFull(k))
+          /*
+           * 圈號不是 ASCII 數字，digs() 管不到它們 —— 放进來會把「圈號被重排」
+           * 當成下標跑掉（放射師 105100 #18：A 題庫 (a)-② 對原卷 (a)-④）。
+           * 那是另一種壞法，走 project_circled_option_collapse 那一套。
+           * ↑ 要比**原始字串**：nz() 裡的 NFKC 會把 ① 轉成 ASCII 的 1，
+           *   比 nz 過的版本永遠抓不到圈號，而且圈號重排會被 digs() 當成「數字多重集相同」。
+           */
+          && !/[①-⓿㈠-㈩]/.test(String(bank[k]) + decode(got[k].fullRaw))
+          && nz(bank[k]) !== paperFull(k)
+          && got[k].fullRaw.length <= 200
+          /*
+           * 原卷那一格不能有豆腐字。中醫二階 113020 #77 的圈號在原卷文字層
+           * 是認不得的私用區碼位，nz 把它們抹掉之後兩邊剛好相等，
+           * 照抄會把「①+⑤」換成一排豆腐 —— 題庫那一格本來是對的。
+           */
+          && !/[�-]/.test(decode(got[k].fullRaw)));
+        if (digitFix.length && digitFix.length === mismatch.length && (!onlyKind || onlyKind === 'digits')) {
+          console.log(`${APPLY ? '✓' : '·'} [下標擺錯位置] ${exam} ${code} ${subject} #${q.number}`);
+          for (const k of digitFix) {
+            const after = got[k].fullRaw.replace(/\s+/g, ' ').trim();
+            console.log(`    ${k}: ${JSON.stringify(bank[k])} → ${JSON.stringify(after)}`);
+            if (APPLY) { q.options[k] = after; touched = true; changed++; }
+          }
+          tally['下標擺錯位置'] = (tally['下標擺錯位置'] || 0) + 1;
+          continue;
+        }
+
         const truncFix = mismatch.filter(k =>
           mine(k).length >= 10
           && paperFull(k).length > mine(k).length

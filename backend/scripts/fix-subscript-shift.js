@@ -69,10 +69,22 @@ function fixTrailing(text) {
 
 function escape(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
+/*
+ * HO2· 是過氧化氫自由基（hydroperoxyl），不是 H2O 掉了下標。
+ * 放射師 107020 #63 D 的原卷就是「HO2·及OH·」（水的輻射分解產物）；
+ * 110020 #63 更明顯 —— 四個選項就是 OH• / H2O- / H2O2 / HO2 四種產物，
+ * D 改成 H2O 整題就不成立了（兩卷都回原卷驗過）。
+ * fixAdjacent（HO＋2）與 fixTrailing（字尾孤立的 2）兩條路都會改到它，
+ * 所以遮罩要包住兩支；只有 cm / mm 壓力單位語境裡的 HO2 才當成 cmH2O 的掉下標。
+ */
+const KEEP = '\u0001';
+const RADICAL = /(?<![cm]m\s*)HO2/g;
 function fixText(text) {
   if (typeof text !== 'string') return text;
-  let out = fixAdjacent(text);
+  let out = String(text).replace(RADICAL, KEEP);
+  out = fixAdjacent(out);
   out = fixTrailing(out);
+  out = out.split(KEEP).join('HO2');
   return out;
 }
 

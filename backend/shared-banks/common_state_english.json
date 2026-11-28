@@ -2,8 +2,8 @@
   "bankId": "common_state_english",
   "name": "國營聯招英文",
   "description": "經濟部國營事業聯招 共同科目「英文」測驗題（字彙、文法、克漏字、閱讀測驗），100–114 年。",
-  "bankVersion": 4,
-  "last_synced_at": "2026-05-21T05:56:42.677Z",
+  "bankVersion": 5,
+  "last_synced_at": "2026-11-28T11:24:43.853Z",
   "levels": [
     "state"
   ],
@@ -5020,7 +5020,7 @@
         "A": "toxic",
         "B": "solid",
         "C": "mimic",
-        "D": "tasty 6"
+        "D": "tasty"
       },
       "answer": "A",
       "case_context": null,
@@ -5046,7 +5046,7 @@
         "A": "rumbled",
         "B": "rustled",
         "C": "bumped",
-        "D": "tinkled 9"
+        "D": "tinkled"
       },
       "answer": "B",
       "case_context": null,
@@ -5072,7 +5072,7 @@
         "A": "cargo",
         "B": "brook",
         "C": "fund",
-        "D": "pedal 12"
+        "D": "pedal"
       },
       "answer": "A",
       "case_context": null,
@@ -5124,7 +5124,7 @@
         "A": "inscription",
         "B": "description",
         "C": "prescription",
-        "D": "subscription 18"
+        "D": "subscription"
       },
       "answer": "D",
       "case_context": null,
@@ -5150,7 +5150,7 @@
         "A": "contaminated",
         "B": "introduced",
         "C": "supervised",
-        "D": "requested 21"
+        "D": "requested"
       },
       "answer": "A",
       "case_context": null,
@@ -5176,7 +5176,7 @@
         "A": "Extravagant",
         "B": "Excessive",
         "C": "Inclusive",
-        "D": "Endemic 24"
+        "D": "Endemic"
       },
       "answer": "B",
       "case_context": null,
@@ -5202,7 +5202,7 @@
         "A": "supernatural",
         "B": "neutral",
         "C": "bland",
-        "D": "detrimental 1"
+        "D": "detrimental"
       },
       "answer": "D",
       "case_context": null,
@@ -5228,7 +5228,7 @@
         "A": "lavish",
         "B": "prodigal",
         "C": "frugal",
-        "D": "improvident 4"
+        "D": "improvident"
       },
       "answer": "C",
       "case_context": null,
@@ -5254,7 +5254,7 @@
         "A": "documents",
         "B": "commodities",
         "C": "pamphlets",
-        "D": "monuments 7"
+        "D": "monuments"
       },
       "answer": "B",
       "case_context": null,
@@ -5280,7 +5280,7 @@
         "A": "masticate",
         "B": "matriculate",
         "C": "mandate",
-        "D": "mediate 10"
+        "D": "mediate"
       },
       "answer": "B",
       "case_context": null,
@@ -5306,7 +5306,7 @@
         "A": "disposed",
         "B": "exposed",
         "C": "apposed",
-        "D": "imposed 13"
+        "D": "imposed"
       },
       "answer": "D",
       "case_context": null,
@@ -5332,7 +5332,7 @@
         "A": "defiance",
         "B": "deficiency",
         "C": "definition",
-        "D": "deflection 16"
+        "D": "deflection"
       },
       "answer": "B",
       "case_context": null,
@@ -5358,7 +5358,7 @@
         "A": "resign",
         "B": "retain",
         "C": "refresh",
-        "D": "remedy 19"
+        "D": "remedy"
       },
       "answer": "D",
       "case_context": null,
@@ -5384,7 +5384,7 @@
         "A": "at random",
         "B": "at hand",
         "C": "at sea",
-        "D": "at stake 22"
+        "D": "at stake"
       },
       "answer": "D",
       "case_context": null,
@@ -5410,7 +5410,7 @@
         "A": "get off",
         "B": "litter about",
         "C": "buckle up",
-        "D": "tear apart 25"
+        "D": "tear apart"
       },
       "answer": "C",
       "case_context": null,
@@ -5436,7 +5436,7 @@
         "A": "pick on",
         "B": "mull over",
         "C": "rub in",
-        "D": "size up 2"
+        "D": "size up"
       },
       "answer": "B",
       "case_context": null,
@@ -5462,7 +5462,7 @@
         "A": "call up",
         "B": "give in",
         "C": "hang on",
-        "D": "let in 5"
+        "D": "let in"
       },
       "answer": "C",
       "case_context": null,
@@ -5488,7 +5488,7 @@
         "A": "not to eat",
         "B": "from eating",
         "C": "to not eat",
-        "D": "without eating 8"
+        "D": "without eating"
       },
       "answer": "B",
       "case_context": null,
@@ -5514,7 +5514,7 @@
         "A": "learned",
         "B": "was learning",
         "C": "had been learning",
-        "D": "learning 11"
+        "D": "learning"
       },
       "answer": "D",
       "case_context": null,
@@ -5540,7 +5540,7 @@
         "A": "Although his",
         "B": "His",
         "C": "Despite his",
-        "D": "Because of his 14"
+        "D": "Because of his"
       },
       "answer": "C",
       "case_context": null,
@@ -5592,7 +5592,7 @@
         "A": "it is a disease affecting one in four Americans",
         "B": "is a disease affecting one out of four Americans",
         "C": "a disease affecting one in four Americans",
-        "D": "one in four Americans are affected by this disease 20"
+        "D": "one in four Americans are affected by this disease"
       },
       "answer": "C",
       "case_context": null,
@@ -5618,7 +5618,7 @@
         "A": "which",
         "B": "some of which",
         "C": "each of which",
-        "D": "of which 23"
+        "D": "of which"
       },
       "answer": "C",
       "case_context": null,
@@ -5930,7 +5930,7 @@
         "A": "Biofuels can increase crops production in the United States.",
         "B": "Biofuels made from corns and other crops are called bioethanol.",
         "C": "Biofuels may also lead to global warming and climate change.",
-        "D": "Biofuels have drawn increased attention in spite of their limitations. 36"
+        "D": "Biofuels have drawn increased attention in spite of their limitations."
       },
       "answer": "D",
       "case_context": "Biofuels are a wide range of fuels which are in some way derived from biomass. The term covers solid biomass, liquid fuels and various biogases. With the recent rise in oil prices, along with growing concern about global warming caused by carbon dioxide emissions, biofuels are gaining increased public and scientific attention. One type of biofuel, blended with much of the gasoline in the United States, is called bioethanol. It is the same stuff as in alcoholic drinks, except that it's made from corn that has been heavily processed. There are various ways of making biofuels, but they generally use chemical reactions, fermentation, and heat to break down the starches, sugars, and other small particles in plants. On the face of it, biofuels look like a great solution. Unlike underground oil reserves, biofuels are a renewable resource since we can always grow more crops to turn into fuel. Unfortunately, it's not so simple. The process of growing the crops, making fertilizers and pesticides, and processing the plants into fuel consumes a lot of energy. It's so much energy that there is debate about whether ethanol from corn actually provides more energy than is required to grow and process it. Also, because much of the energy used in production comes from coal and natural gas, biofuels don't replace as much oil as they use. 38",
@@ -5956,7 +5956,7 @@
         "A": "They gain popularity because of the rise of oil prices.",
         "B": "They only cover gases that are made from plants.",
         "C": "They can be made through a variety of methods.",
-        "D": "They still rely on other types of fuels during the production. 39"
+        "D": "They still rely on other types of fuels during the production."
       },
       "answer": "B",
       "case_context": "Biofuels are a wide range of fuels which are in some way derived from biomass. The term covers solid biomass, liquid fuels and various biogases. With the recent rise in oil prices, along with growing concern about global warming caused by carbon dioxide emissions, biofuels are gaining increased public and scientific attention. One type of biofuel, blended with much of the gasoline in the United States, is called bioethanol. It is the same stuff as in alcoholic drinks, except that it's made from corn that has been heavily processed. There are various ways of making biofuels, but they generally use chemical reactions, fermentation, and heat to break down the starches, sugars, and other small particles in plants. On the face of it, biofuels look like a great solution. Unlike underground oil reserves, biofuels are a renewable resource since we can always grow more crops to turn into fuel. Unfortunately, it's not so simple. The process of growing the crops, making fertilizers and pesticides, and processing the plants into fuel consumes a lot of energy. It's so much energy that there is debate about whether ethanol from corn actually provides more energy than is required to grow and process it. Also, because much of the energy used in production comes from coal and natural gas, biofuels don't replace as much oil as they use. 38",
@@ -5982,7 +5982,7 @@
         "A": "Making wine from grapes",
         "B": "Making coffee tables out of logs",
         "C": "Making sweet bean soup",
-        "D": "Making leather sandals 37"
+        "D": "Making leather sandals"
       },
       "answer": "A",
       "case_context": "Biofuels are a wide range of fuels which are in some way derived from biomass. The term covers solid biomass, liquid fuels and various biogases. With the recent rise in oil prices, along with growing concern about global warming caused by carbon dioxide emissions, biofuels are gaining increased public and scientific attention. One type of biofuel, blended with much of the gasoline in the United States, is called bioethanol. It is the same stuff as in alcoholic drinks, except that it's made from corn that has been heavily processed. There are various ways of making biofuels, but they generally use chemical reactions, fermentation, and heat to break down the starches, sugars, and other small particles in plants. On the face of it, biofuels look like a great solution. Unlike underground oil reserves, biofuels are a renewable resource since we can always grow more crops to turn into fuel. Unfortunately, it's not so simple. The process of growing the crops, making fertilizers and pesticides, and processing the plants into fuel consumes a lot of energy. It's so much energy that there is debate about whether ethanol from corn actually provides more energy than is required to grow and process it. Also, because much of the energy used in production comes from coal and natural gas, biofuels don't replace as much oil as they use. 38",
@@ -6008,7 +6008,7 @@
         "A": "They are a renewable resource.",
         "B": "They consume a lot of energy during the production.",
         "C": "They can replace a large amount of oil consumption.",
-        "D": "The process of making them is too complicated. 40"
+        "D": "The process of making them is too complicated."
       },
       "answer": "B",
       "case_context": "Biofuels are a wide range of fuels which are in some way derived from biomass. The term covers solid biomass, liquid fuels and various biogases. With the recent rise in oil prices, along with growing concern about global warming caused by carbon dioxide emissions, biofuels are gaining increased public and scientific attention. One type of biofuel, blended with much of the gasoline in the United States, is called bioethanol. It is the same stuff as in alcoholic drinks, except that it's made from corn that has been heavily processed. There are various ways of making biofuels, but they generally use chemical reactions, fermentation, and heat to break down the starches, sugars, and other small particles in plants. On the face of it, biofuels look like a great solution. Unlike underground oil reserves, biofuels are a renewable resource since we can always grow more crops to turn into fuel. Unfortunately, it's not so simple. The process of growing the crops, making fertilizers and pesticides, and processing the plants into fuel consumes a lot of energy. It's so much energy that there is debate about whether ethanol from corn actually provides more energy than is required to grow and process it. Also, because much of the energy used in production comes from coal and natural gas, biofuels don't replace as much oil as they use. 38",
@@ -6060,7 +6060,7 @@
         "A": "arrogance",
         "B": "bitterness",
         "C": "fulfillment",
-        "D": "accomplishment 6"
+        "D": "accomplishment"
       },
       "answer": "D",
       "case_context": null,
@@ -6086,7 +6086,7 @@
         "A": "embraced",
         "B": "appeased",
         "C": "related",
-        "D": "spurred 9"
+        "D": "spurred"
       },
       "answer": "A",
       "case_context": null,
@@ -6138,7 +6138,7 @@
         "A": "overcome",
         "B": "reject",
         "C": "reflect",
-        "D": "reform 4"
+        "D": "reform"
       },
       "answer": "A",
       "case_context": null,
@@ -6164,7 +6164,7 @@
         "A": "disrupt",
         "B": "pervade",
         "C": "strengthen",
-        "D": "correlate 7"
+        "D": "correlate"
       },
       "answer": "C",
       "case_context": null,
@@ -6190,7 +6190,7 @@
         "A": "clothes",
         "B": "trousers",
         "C": "clothing",
-        "D": "dress 10"
+        "D": "dress"
       },
       "answer": "D",
       "case_context": null,
@@ -6216,7 +6216,7 @@
         "A": "absorbe d",
         "B": "required",
         "C": "involved",
-        "D": "appealed 2"
+        "D": "appealed"
       },
       "answer": "C",
       "case_context": null,
@@ -6242,7 +6242,7 @@
         "A": "precise",
         "B": "passive",
         "C": "permanent",
-        "D": "portable 5"
+        "D": "portable"
       },
       "answer": "A",
       "case_context": null,
@@ -6268,7 +6268,7 @@
         "A": "imploding",
         "B": "penetrating",
         "C": "pilling",
-        "D": "polling 8"
+        "D": "polling"
       },
       "answer": "B",
       "case_context": null,
@@ -6320,7 +6320,7 @@
         "A": "worth seeing",
         "B": "worthy seeing",
         "C": "worthwhile seeing",
-        "D": "worth to see 16"
+        "D": "worth to see"
       },
       "answer": "A",
       "case_context": null,
@@ -6346,7 +6346,7 @@
         "A": "a lot stronger",
         "B": "even stronger",
         "C": "the more strongly",
-        "D": "more strongly 19"
+        "D": "more strongly"
       },
       "answer": "C",
       "case_context": null,
@@ -6372,7 +6372,7 @@
         "A": "eloquent like",
         "B": "so eloquently like",
         "C": "as eloquent as",
-        "D": "as eloquently as 22"
+        "D": "as eloquently as"
       },
       "answer": "D",
       "case_context": null,
@@ -6398,7 +6398,7 @@
         "A": "nor had the laundry been done",
         "B": "nor was the laundry done",
         "C": "the laundry was not done either",
-        "D": "the laundry had not done either 25"
+        "D": "the laundry had not done either"
       },
       "answer": "A",
       "case_context": null,
@@ -6424,7 +6424,7 @@
         "A": "break up",
         "B": "break down",
         "C": "shut down",
-        "D": "turn down 11"
+        "D": "turn down"
       },
       "answer": "B",
       "case_context": null,
@@ -6450,7 +6450,7 @@
         "A": "came up trumps",
         "B": "had his moments",
         "C": "had the last laugh",
-        "D": "went off without a hitch 14"
+        "D": "went off without a hitch"
       },
       "answer": "A",
       "case_context": null,
@@ -6476,7 +6476,7 @@
         "A": "which",
         "B": "who",
         "C": "whose",
-        "D": "what 17"
+        "D": "what"
       },
       "answer": "C",
       "case_context": null,
@@ -6502,7 +6502,7 @@
         "A": "foods of high in fat",
         "B": "of foods high in fat",
         "C": "in foods hi gh of fat",
-        "D": "of foods in fat high 20"
+        "D": "of foods in fat high"
       },
       "answer": "B",
       "case_context": null,
@@ -6528,7 +6528,7 @@
         "A": "During",
         "B": "In",
         "C": "It was in",
-        "D": "When in 23"
+        "D": "When in"
       },
       "answer": "C",
       "case_context": null,
@@ -6554,7 +6554,7 @@
         "A": "In spite of",
         "B": "However",
         "C": "Nevertheless",
-        "D": "Although 12"
+        "D": "Although"
       },
       "answer": "D",
       "case_context": null,
@@ -6580,7 +6580,7 @@
         "A": "Growing",
         "B": "For growing",
         "C": "Grown",
-        "D": "Grew 15"
+        "D": "Grew"
       },
       "answer": "A",
       "case_context": null,
@@ -6632,7 +6632,7 @@
         "A": "almost variety an endless",
         "B": "an almost endless variety",
         "C": "endless variet y an almost",
-        "D": "variety an almost endless 21"
+        "D": "variety an almost endless"
       },
       "answer": "B",
       "case_context": null,
@@ -6658,7 +6658,7 @@
         "A": "mixes",
         "B": "has mixed",
         "C": "was mixed",
-        "D": "had mixed 24"
+        "D": "had mixed"
       },
       "answer": "D",
       "case_context": null,
@@ -6918,7 +6918,7 @@
         "A": "in spite of",
         "B": "when",
         "C": "which",
-        "D": "while 35"
+        "D": "while"
       },
       "answer": "D",
       "case_context": "Taiwan’s Environmental Protection Administration (EPA) said it will include plastic straws as part of its measure to reduce plastic use. The EPA is (31) the public to reduce or eliminate the use of plastic straws in our daily lives, for it is the third most found plastic waste in the ocean. The EPA also planned to inhibit tea shops (32) customers plastic straws starting next year. According to the Liberty Times, the Taiwanese use about 3 billion straws every year. The straws reportedly take up to 500 years to rot, and they (33) in the sea and landfill and contribute to the pollution problem which kills marine wildlife and leaves tones of litter on beaches.... The public has different opinions on this issue. Some think it will be very inconvenient when buying drinks from tea shops, (34) others feel that it is environmental friendly and tea shops should come up with new designs of cups enabling customers (35) the beverage without using single-use plastic straws. 31",
@@ -6970,7 +6970,7 @@
         "A": "the technique of making clothes",
         "B": "the art of spinning",
         "C": "the skill of sheerin g sheep",
-        "D": "the way of combing wool fibers 36"
+        "D": "the way of combing wool fibers"
       },
       "answer": "B",
       "case_context": "Today, when we want new clothes, we can go to a clothing store and buy whatever you like. But fo r people two or three hundred years ago, getting new clothes was not so easy. Not only did they make their own clothing, but sometimes people wove their own cloth at home. And if they owed their own sheep, they even spun the wool into yarn themselves. Wool cannot just be taken from the sheep and spun. First, it must be cleaned and then carded. In a large family, carding was usually the children’s job, because it is easy but tiresome. Carding is done with two wide combs that have rows of steel teeth. The person carding puts a piece of wool on one comb, then pulls the other comb across the wool again and again. This combing makes the wool fibers straight and smooth so they can be spun. Finally, the mother or older sister of the family could use the wool for spinning. Spinning just means twisting and stretching the fibers into yarn. You have spun yarn if you have ever pulled and twisted a cotton ball into a long string. Usually, though, a spinning wheel helps make the pulling and twisting easier. The spinner holds the wool in her hands and twists one end unto the yarn already on the spindle, or long winding stick. The spinning wheel turns the spindle, pulling the wool into yarn and winding i t onto the spindle at the same time. Finally, the yarn is ready for weaving. Today, machines can spin yarn much faster than people can. But in some places, people still make their own yarn because they love the old art of spinning. 38",
@@ -6996,7 +6996,7 @@
         "A": "childre n",
         "B": "mother",
         "C": "old sister",
-        "D": "a big family 39"
+        "D": "a big family"
       },
       "answer": "A",
       "case_context": "Today, when we want new clothes, we can go to a clothing store and buy whatever you like. But fo r people two or three hundred years ago, getting new clothes was not so easy. Not only did they make their own clothing, but sometimes people wove their own cloth at home. And if they owed their own sheep, they even spun the wool into yarn themselves. Wool cannot just be taken from the sheep and spun. First, it must be cleaned and then carded. In a large family, carding was usually the children’s job, because it is easy but tiresome. Carding is done with two wide combs that have rows of steel teeth. The person carding puts a piece of wool on one comb, then pulls the other comb across the wool again and again. This combing makes the wool fibers straight and smooth so they can be spun. Finally, the mother or older sister of the family could use the wool for spinning. Spinning just means twisting and stretching the fibers into yarn. You have spun yarn if you have ever pulled and twisted a cotton ball into a long string. Usually, though, a spinning wheel helps make the pulling and twisting easier. The spinner holds the wool in her hands and twists one end unto the yarn already on the spindle, or long winding stick. The spinning wheel turns the spindle, pulling the wool into yarn and winding i t onto the spindle at the same time. Finally, the yarn is ready for weaving. Today, machines can spin yarn much faster than people can. But in some places, people still make their own yarn because they love the old art of spinning. 38",
@@ -7022,7 +7022,7 @@
         "A": "the yarn is spun into a wool ball",
         "B": "the wool is twisted with a spindle into a long thread",
         "C": "a ball of wool is spun into the yarn",
-        "D": "the yarn is ready to be pulled onto the spindle 37"
+        "D": "the yarn is ready to be pulled onto the spindle"
       },
       "answer": "C",
       "case_context": "Today, when we want new clothes, we can go to a clothing store and buy whatever you like. But fo r people two or three hundred years ago, getting new clothes was not so easy. Not only did they make their own clothing, but sometimes people wove their own cloth at home. And if they owed their own sheep, they even spun the wool into yarn themselves. Wool cannot just be taken from the sheep and spun. First, it must be cleaned and then carded. In a large family, carding was usually the children’s job, because it is easy but tiresome. Carding is done with two wide combs that have rows of steel teeth. The person carding puts a piece of wool on one comb, then pulls the other comb across the wool again and again. This combing makes the wool fibers straight and smooth so they can be spun. Finally, the mother or older sister of the family could use the wool for spinning. Spinning just means twisting and stretching the fibers into yarn. You have spun yarn if you have ever pulled and twisted a cotton ball into a long string. Usually, though, a spinning wheel helps make the pulling and twisting easier. The spinner holds the wool in her hands and twists one end unto the yarn already on the spindle, or long winding stick. The spinning wheel turns the spindle, pulling the wool into yarn and winding i t onto the spindle at the same time. Finally, the yarn is ready for weaving. Today, machines can spin yarn much faster than people can. But in some places, people still make their own yarn because they love the old art of spinning. 38",
@@ -7048,7 +7048,7 @@
         "A": "The procedure of cleaning the wool.",
         "B": "The procedure of spinning the wool.",
         "C": "The procedure of weaving the wool.",
-        "D": "The procedure of carding the wool. 40"
+        "D": "The procedure of carding the wool."
       },
       "answer": "D",
       "case_context": "Today, when we want new clothes, we can go to a clothing store and buy whatever you like. But fo r people two or three hundred years ago, getting new clothes was not so easy. Not only did they make their own clothing, but sometimes people wove their own cloth at home. And if they owed their own sheep, they even spun the wool into yarn themselves. Wool cannot just be taken from the sheep and spun. First, it must be cleaned and then carded. In a large family, carding was usually the children’s job, because it is easy but tiresome. Carding is done with two wide combs that have rows of steel teeth. The person carding puts a piece of wool on one comb, then pulls the other comb across the wool again and again. This combing makes the wool fibers straight and smooth so they can be spun. Finally, the mother or older sister of the family could use the wool for spinning. Spinning just means twisting and stretching the fibers into yarn. You have spun yarn if you have ever pulled and twisted a cotton ball into a long string. Usually, though, a spinning wheel helps make the pulling and twisting easier. The spinner holds the wool in her hands and twists one end unto the yarn already on the spindle, or long winding stick. The spinning wheel turns the spindle, pulling the wool into yarn and winding i t onto the spindle at the same time. Finally, the yarn is ready for weaving. Today, machines can spin yarn much faster than people can. But in some places, people still make their own yarn because they love the old art of spinning. 38",
@@ -7100,7 +7100,7 @@
         "A": "expatriation",
         "B": "immigrations",
         "C": "integration",
-        "D": "migrations 6"
+        "D": "migrations"
       },
       "answer": "D",
       "case_context": null,
@@ -7126,7 +7126,7 @@
         "A": "herbivorous",
         "B": "carnivorous",
         "C": "utilitarian",
-        "D": "transitory 9"
+        "D": "transitory"
       },
       "answer": "B",
       "case_context": null,
@@ -7152,7 +7152,7 @@
         "A": "atmosphere",
         "B": "hemisphere",
         "C": "zenith",
-        "D": "pole 1"
+        "D": "pole"
       },
       "answer": "B",
       "case_context": null,
@@ -7204,7 +7204,7 @@
         "A": "dramatic",
         "B": "climactic",
         "C": "traumatic",
-        "D": "automatic 7"
+        "D": "automatic"
       },
       "answer": "C",
       "case_context": null,
@@ -7230,7 +7230,7 @@
         "A": "deserves",
         "B": "inherits",
         "C": "recommends",
-        "D": "stumbles 10"
+        "D": "stumbles"
       },
       "answer": "C",
       "case_context": null,
@@ -7256,7 +7256,7 @@
         "A": "premature",
         "B": "unconventional",
         "C": "unconditional",
-        "D": "conventional 2"
+        "D": "conventional"
       },
       "answer": "B",
       "case_context": null,
@@ -7282,7 +7282,7 @@
         "A": "wealth",
         "B": "excuse",
         "C": "rigor",
-        "D": "intake 5"
+        "D": "intake"
       },
       "answer": "A",
       "case_context": null,
@@ -7308,7 +7308,7 @@
         "A": "fasten",
         "B": "import",
         "C": "regret",
-        "D": "pursue 8"
+        "D": "pursue"
       },
       "answer": "D",
       "case_context": null,
@@ -7360,7 +7360,7 @@
         "A": "in turn",
         "B": "by degrees",
         "C": "by and large",
-        "D": "for instance 16"
+        "D": "for instance"
       },
       "answer": "D",
       "case_context": null,
@@ -7386,7 +7386,7 @@
         "A": "a worth visiting",
         "B": "a visit worthy",
         "C": "visiting a worth",
-        "D": "worth a visit 19"
+        "D": "worth a visit"
       },
       "answer": "D",
       "case_context": null,
@@ -7412,7 +7412,7 @@
         "A": "fall",
         "B": "falling",
         "C": "falls",
-        "D": "fallen 22"
+        "D": "fallen"
       },
       "answer": "B",
       "case_context": null,
@@ -7438,7 +7438,7 @@
         "A": "which",
         "B": "that",
         "C": "of which",
-        "D": "what 25"
+        "D": "what"
       },
       "answer": "A",
       "case_context": null,
@@ -7464,7 +7464,7 @@
         "A": "as much as",
         "B": "as many as",
         "C": "as good as",
-        "D": "as well as 11"
+        "D": "as well as"
       },
       "answer": "D",
       "case_context": null,
@@ -7490,7 +7490,7 @@
         "A": "As to",
         "B": "Because of",
         "C": "Now that",
-        "D": "In fact 14"
+        "D": "In fact"
       },
       "answer": "C",
       "case_context": null,
@@ -7516,7 +7516,7 @@
         "A": "where",
         "B": "whereas",
         "C": "since",
-        "D": "notwithstanding 17"
+        "D": "notwithstanding"
       },
       "answer": "B",
       "case_context": null,
@@ -7542,7 +7542,7 @@
         "A": "where",
         "B": "so",
         "C": "which",
-        "D": "that 20"
+        "D": "that"
       },
       "answer": "C",
       "case_context": null,
@@ -7568,7 +7568,7 @@
         "A": "have gone",
         "B": "go",
         "C": "be going",
-        "D": "have been going 23"
+        "D": "have been going"
       },
       "answer": "A",
       "case_context": null,
@@ -7594,7 +7594,7 @@
         "A": "puts up",
         "B": "puts down",
         "C": "puts on",
-        "D": "puts in 12"
+        "D": "puts in"
       },
       "answer": "C",
       "case_context": null,
@@ -7620,7 +7620,7 @@
         "A": "drop by",
         "B": "have access to",
         "C": "make up of",
-        "D": "turn down 15"
+        "D": "turn down"
       },
       "answer": "B",
       "case_context": null,
@@ -7646,7 +7646,7 @@
         "A": "I wrote a note and gave it to my teacher",
         "B": "a note was given to my teacher",
         "C": "my teacher had given a note",
-        "D": "my teacher was written a note 18"
+        "D": "my teacher was written a note"
       },
       "answer": "A",
       "case_context": null,
@@ -7958,7 +7958,7 @@
         "A": "features",
         "B": "featuring",
         "C": "was featured",
-        "D": "have featured 35"
+        "D": "have featured"
       },
       "answer": "A",
       "case_context": "Approximately six to eight million adults in the United States eat no meat, fish, or poultry. Several million more have (31) red meat but still eat chicken or fish. About two million have become vegans, forgoing not only animal flesh but also animal-based products such as milk, cheese, eggs, and gelatin. Traditionally, research into vegetarianism focused mainly on potential nutritional deficiencies, but in recent years, the ( 32) has swung the other way, and studies are confirming the health benefits of meat-free eating. Nowadays, plant-based eating is recognized as not only nutritionally sufficient but also as a way to reduce the risk for many (33) illnesses. You can get many of the health benefits of being vegetarian without going all the way. For example, a Mediterranean eating pattern — known to be associated with longer life and reduced risk of several illnesses — (34) an emphasis on plant foods with a sparing use of meat. Even if you don't want to become a complete vegetarian, you can steer your diet in that direction ( 35) a few simple substitutions, such as plant-based sources of protein — beans or tofu, for example — or fish instead of meat a couple of times a week. 31",
@@ -8010,7 +8010,7 @@
         "A": "Erasmus was extremely disappointed with people’s ill manners.",
         "B": "Family dinner is a great time for parents to teach good manners.",
         "C": "Formulating theories is one of the important jobs of a sociologist.",
-        "D": "It took hundreds of years for Western people to develop etiquette rules. 36"
+        "D": "It took hundreds of years for Western people to develop etiquette rules."
       },
       "answer": "D",
       "case_context": "Much of the theory of manners was formulated by the sociologist Norbert Elias in his book, The Civilizing Process. Elias notes that medieval culture initially gave powerful men the ability to act like children—to live without any physical or psychic restraints. Over a span of several centuries, beginning in the 11 th or 12 th and maturing in the 17 th and 18 th , Europeans increasingly inhibited their impulses, anticipated the long-term consequences of their actions, and took other people’s thoughts and feelings into consideration. A culture of honor—the readiness to take revenge—gave way to a culture of dignity—the readiness to control one’s emotions. In the 16 th century, the great Erasmus penned the first etiquette book—The Handbook of Good Manners for Children. Several other writers also published similar guidebooks. The books included such rules as: Don’t urinate in the hallway; don’t use the tablecloth to blow your nose; don’t use your personal knife to pop food into your mouth, etc. Interestingly, those rules had less to do with good hygiene than we might imagine. An understanding of microbes and infection did not arrive until well into the 19 th century. The only explicit rationales stated in those books are to avoid acting like an animal and to avoid offending others. This civilizing process was long and slow. King David I of Scotland proposed that citizens who learned to eat more properly should get a tax refund. Disappointingly, that idea never caught on. The much-traveled Thomas Coryat introduced the table fork to Britain. When he returned from Italy in 1608 with this fancy novelty, he met with a torrent of ridicule. But that idea did eventually catch on. And a quarter of a century later, the table fork reached America. 38",
@@ -8036,7 +8036,7 @@
         "A": "defended",
         "B": "invented",
         "C": "knocked",
-        "D": "wrote 39"
+        "D": "wrote"
       },
       "answer": "D",
       "case_context": "Much of the theory of manners was formulated by the sociologist Norbert Elias in his book, The Civilizing Process. Elias notes that medieval culture initially gave powerful men the ability to act like children—to live without any physical or psychic restraints. Over a span of several centuries, beginning in the 11 th or 12 th and maturing in the 17 th and 18 th , Europeans increasingly inhibited their impulses, anticipated the long-term consequences of their actions, and took other people’s thoughts and feelings into consideration. A culture of honor—the readiness to take revenge—gave way to a culture of dignity—the readiness to control one’s emotions. In the 16 th century, the great Erasmus penned the first etiquette book—The Handbook of Good Manners for Children. Several other writers also published similar guidebooks. The books included such rules as: Don’t urinate in the hallway; don’t use the tablecloth to blow your nose; don’t use your personal knife to pop food into your mouth, etc. Interestingly, those rules had less to do with good hygiene than we might imagine. An understanding of microbes and infection did not arrive until well into the 19 th century. The only explicit rationales stated in those books are to avoid acting like an animal and to avoid offending others. This civilizing process was long and slow. King David I of Scotland proposed that citizens who learned to eat more properly should get a tax refund. Disappointingly, that idea never caught on. The much-traveled Thomas Coryat introduced the table fork to Britain. When he returned from Italy in 1608 with this fancy novelty, he met with a torrent of ridicule. But that idea did eventually catch on. And a quarter of a century later, the table fork reached America. 38",
@@ -8062,7 +8062,7 @@
         "A": "The emotional demands of children",
         "B": "The importance of public health",
         "C": "The need to control one’s impulses",
-        "D": "The value of the culture of honor 37"
+        "D": "The value of the culture of honor"
       },
       "answer": "C",
       "case_context": "Much of the theory of manners was formulated by the sociologist Norbert Elias in his book, The Civilizing Process. Elias notes that medieval culture initially gave powerful men the ability to act like children—to live without any physical or psychic restraints. Over a span of several centuries, beginning in the 11 th or 12 th and maturing in the 17 th and 18 th , Europeans increasingly inhibited their impulses, anticipated the long-term consequences of their actions, and took other people’s thoughts and feelings into consideration. A culture of honor—the readiness to take revenge—gave way to a culture of dignity—the readiness to control one’s emotions. In the 16 th century, the great Erasmus penned the first etiquette book—The Handbook of Good Manners for Children. Several other writers also published similar guidebooks. The books included such rules as: Don’t urinate in the hallway; don’t use the tablecloth to blow your nose; don’t use your personal knife to pop food into your mouth, etc. Interestingly, those rules had less to do with good hygiene than we might imagine. An understanding of microbes and infection did not arrive until well into the 19 th century. The only explicit rationales stated in those books are to avoid acting like an animal and to avoid offending others. This civilizing process was long and slow. King David I of Scotland proposed that citizens who learned to eat more properly should get a tax refund. Disappointingly, that idea never caught on. The much-traveled Thomas Coryat introduced the table fork to Britain. When he returned from Italy in 1608 with this fancy novelty, he met with a torrent of ridicule. But that idea did eventually catch on. And a quarter of a century later, the table fork reached America. 38",
@@ -8088,7 +8088,7 @@
         "A": "In medieval times, powerful men would be criticized if they acted like children.",
         "B": "King David I of Scotland encouraged his people to blow noses while eating.",
         "C": "Modern European people no longer follow the rules stated in Erasmus’s book.",
-        "D": "People did not accept the use of the table fork when it was first introduced to Britain. 40"
+        "D": "People did not accept the use of the table fork when it was first introduced to Britain."
       },
       "answer": "D",
       "case_context": "Much of the theory of manners was formulated by the sociologist Norbert Elias in his book, The Civilizing Process. Elias notes that medieval culture initially gave powerful men the ability to act like children—to live without any physical or psychic restraints. Over a span of several centuries, beginning in the 11 th or 12 th and maturing in the 17 th and 18 th , Europeans increasingly inhibited their impulses, anticipated the long-term consequences of their actions, and took other people’s thoughts and feelings into consideration. A culture of honor—the readiness to take revenge—gave way to a culture of dignity—the readiness to control one’s emotions. In the 16 th century, the great Erasmus penned the first etiquette book—The Handbook of Good Manners for Children. Several other writers also published similar guidebooks. The books included such rules as: Don’t urinate in the hallway; don’t use the tablecloth to blow your nose; don’t use your personal knife to pop food into your mouth, etc. Interestingly, those rules had less to do with good hygiene than we might imagine. An understanding of microbes and infection did not arrive until well into the 19 th century. The only explicit rationales stated in those books are to avoid acting like an animal and to avoid offending others. This civilizing process was long and slow. King David I of Scotland proposed that citizens who learned to eat more properly should get a tax refund. Disappointingly, that idea never caught on. The much-traveled Thomas Coryat introduced the table fork to Britain. When he returned from Italy in 1608 with this fancy novelty, he met with a torrent of ridicule. But that idea did eventually catch on. And a quarter of a century later, the table fork reached America. 38",
@@ -8140,7 +8140,7 @@
         "A": "cultivates",
         "B": "portrays",
         "C": "encounters",
-        "D": "abolishes 6"
+        "D": "abolishes"
       },
       "answer": "B",
       "case_context": null,
@@ -8166,7 +8166,7 @@
         "A": "converse",
         "B": "concise",
         "C": "consistent",
-        "D": "contagious 9"
+        "D": "contagious"
       },
       "answer": "C",
       "case_context": null,
@@ -8218,7 +8218,7 @@
         "A": "profound",
         "B": "mandatory",
         "C": "ultimate",
-        "D": "believable 4"
+        "D": "believable"
       },
       "answer": "A",
       "case_context": null,
@@ -8244,7 +8244,7 @@
         "A": "pseudonym",
         "B": "eccentricity",
         "C": "skepticism",
-        "D": "connivance 7"
+        "D": "connivance"
       },
       "answer": "D",
       "case_context": null,
@@ -8270,7 +8270,7 @@
         "A": "prohibited",
         "B": "installed",
         "C": "exaggerated",
-        "D": "digested 10"
+        "D": "digested"
       },
       "answer": "A",
       "case_context": null,
@@ -8296,7 +8296,7 @@
         "A": "impertinent",
         "B": "reluctant",
         "C": "proficient",
-        "D": "frequent 2"
+        "D": "frequent"
       },
       "answer": "C",
       "case_context": null,
@@ -8322,7 +8322,7 @@
         "A": "sustainable",
         "B": "dispensable",
         "C": "execrable",
-        "D": "erasable 5"
+        "D": "erasable"
       },
       "answer": "A",
       "case_context": null,
@@ -8348,7 +8348,7 @@
         "A": "diversity",
         "B": "qualification",
         "C": "satisfaction",
-        "D": "classification 8"
+        "D": "classification"
       },
       "answer": "D",
       "case_context": null,
@@ -8400,7 +8400,7 @@
         "A": "Despite",
         "B": "Though",
         "C": "Since",
-        "D": "Similarly 16"
+        "D": "Similarly"
       },
       "answer": "A",
       "case_context": null,
@@ -8426,7 +8426,7 @@
         "A": "as well as",
         "B": "so as to",
         "C": "in spite of",
-        "D": "so that 19"
+        "D": "so that"
       },
       "answer": "D",
       "case_context": null,
@@ -8452,7 +8452,7 @@
         "A": "all of a sudden",
         "B": "all in all",
         "C": "above all",
-        "D": "in all 22"
+        "D": "in all"
       },
       "answer": "A",
       "case_context": null,
@@ -8478,7 +8478,7 @@
         "A": "The proposal concerning",
         "B": "Concerning the proposal",
         "C": "To concern the proposal",
-        "D": "The proposal is concerned 25"
+        "D": "The proposal is concerned"
       },
       "answer": "B",
       "case_context": null,
@@ -8504,7 +8504,7 @@
         "A": "a number of",
         "B": "an amount of",
         "C": "a piece of",
-        "D": "a great deal of 11"
+        "D": "a great deal of"
       },
       "answer": "A",
       "case_context": null,
@@ -8530,7 +8530,7 @@
         "A": "who",
         "B": "whom",
         "C": "that",
-        "D": "which 14"
+        "D": "which"
       },
       "answer": "C",
       "case_context": null,
@@ -8556,7 +8556,7 @@
         "A": "gets",
         "B": "got",
         "C": "has got",
-        "D": "will get 17"
+        "D": "will get"
       },
       "answer": "B",
       "case_context": null,
@@ -8582,7 +8582,7 @@
         "A": "to / in",
         "B": "on / of",
         "C": "at / at",
-        "D": "in / on 20"
+        "D": "in / on"
       },
       "answer": "D",
       "case_context": null,
@@ -8608,7 +8608,7 @@
         "A": "take",
         "B": "takes",
         "C": "to take",
-        "D": "taking 23"
+        "D": "taking"
       },
       "answer": "A",
       "case_context": null,
@@ -8634,7 +8634,7 @@
         "A": "put off",
         "B": "called off",
         "C": "sent off",
-        "D": "laid off 12"
+        "D": "laid off"
       },
       "answer": "D",
       "case_context": null,
@@ -8686,7 +8686,7 @@
         "A": "in the dark blue shirt",
         "B": "with the blue dark shirt",
         "C": "with a blue dark shirt",
-        "D": "wears a dark blue shirt 18"
+        "D": "wears a dark blue shirt"
       },
       "answer": "A",
       "case_context": null,
@@ -8712,7 +8712,7 @@
         "A": "stuck around",
         "B": "pulled her leg",
         "C": "bit her head off",
-        "D": "stood her up 21"
+        "D": "stood her up"
       },
       "answer": "D",
       "case_context": null,
@@ -8738,7 +8738,7 @@
         "A": "breath",
         "B": "laugh",
         "C": "straw",
-        "D": "bet 24"
+        "D": "bet"
       },
       "answer": "B",
       "case_context": null,
@@ -8998,7 +8998,7 @@
         "A": "attendant",
         "B": "audience",
         "C": "attorney",
-        "D": "astronaut 35"
+        "D": "astronaut"
       },
       "answer": "C",
       "case_context": "In 2017 and 2018, terrible wildfires (31) California. The company PG&E provides gas and electricity to an area in California, and it (32) financial troubles since the fires. Many victims of the fires claimed damage accidentally caused by PG&E equipment. About 100,000 victims are (33) for money, but about 70,000 victims still have not filed for the money. They have little time to do this because the deadline is next Monday. Lawyers say that some victims did not understand the process or they thought they needed an (34) . Some people believed that they could not file a (35) because they already got insurance money. 31",
@@ -9050,7 +9050,7 @@
         "A": "The origin of organic food including its prices in various stores.",
         "B": "The purpose of having organic food including how to cook.",
         "C": "The types and numbers of organic products including where to purchase them.",
-        "D": "The introduction of organic food, including its growing processes and pros and cons. 36"
+        "D": "The introduction of organic food, including its growing processes and pros and cons."
       },
       "answer": "D",
       "case_context": "These days, food safety has become a big issue and a major public concern. People are worried about the overuse of chemicals on plants and livestock. Because of increasing health awareness, the number of people switching from traditional food to organic food is on the rise. It is usually thought that chemicals used on plants and animals are harmful for a person’s health. Unlike traditional farms, organic farmers use natural methods to control insects and diseases on their agriculture. Animals like pigs and chickens on organic farms are kept in open spaces so that they may walk around and therefore be better cared for. In addition, they are not fed the type of medicine that helps them grow or recover from illness very quickly. Fruits and vegetables are also planted in such a way where only natural substances are used to make them grow well. Supporters claim several advantages in choosing organic food, such as no chemicals, eco- friendliness, high nutritional values, and better taste. On the other hand, opponents note the disadvantages of organic food. First, organic food is usually more expensive than non-organic food. Second, organic food is produced using no artificial preservatives, and as such it may go bad more quickly. Third, it is not easy to find organic food at every store. Finally, some studies have questioned whether organic food is truly more nutritious than traditional food. Is it really good and safe to eat organic food? The answer may depend upon one’s personal choice. 38",
@@ -9076,7 +9076,7 @@
         "A": "Organic farmers do not use chemicals.",
         "B": "Fruits and vegetables planted on traditional farms are healthier.",
         "C": "Organic food grows well and is more appealing to customers.",
-        "D": "Animals and plants raised on organic farms are free from diseases. 39"
+        "D": "Animals and plants raised on organic farms are free from diseases."
       },
       "answer": "A",
       "case_context": "These days, food safety has become a big issue and a major public concern. People are worried about the overuse of chemicals on plants and livestock. Because of increasing health awareness, the number of people switching from traditional food to organic food is on the rise. It is usually thought that chemicals used on plants and animals are harmful for a person’s health. Unlike traditional farms, organic farmers use natural methods to control insects and diseases on their agriculture. Animals like pigs and chickens on organic farms are kept in open spaces so that they may walk around and therefore be better cared for. In addition, they are not fed the type of medicine that helps them grow or recover from illness very quickly. Fruits and vegetables are also planted in such a way where only natural substances are used to make them grow well. Supporters claim several advantages in choosing organic food, such as no chemicals, eco- friendliness, high nutritional values, and better taste. On the other hand, opponents note the disadvantages of organic food. First, organic food is usually more expensive than non-organic food. Second, organic food is produced using no artificial preservatives, and as such it may go bad more quickly. Third, it is not easy to find organic food at every store. Finally, some studies have questioned whether organic food is truly more nutritious than traditional food. Is it really good and safe to eat organic food? The answer may depend upon one’s personal choice. 38",
@@ -9102,7 +9102,7 @@
         "A": "Organic food can be bought nearly everywhere.",
         "B": "People prefer organic food mainly because of environmental concern.",
         "C": "Organic food is less expensive but more nutritious.",
-        "D": "Organic food cannot be kept for a long time. 37"
+        "D": "Organic food cannot be kept for a long time."
       },
       "answer": "D",
       "case_context": "These days, food safety has become a big issue and a major public concern. People are worried about the overuse of chemicals on plants and livestock. Because of increasing health awareness, the number of people switching from traditional food to organic food is on the rise. It is usually thought that chemicals used on plants and animals are harmful for a person’s health. Unlike traditional farms, organic farmers use natural methods to control insects and diseases on their agriculture. Animals like pigs and chickens on organic farms are kept in open spaces so that they may walk around and therefore be better cared for. In addition, they are not fed the type of medicine that helps them grow or recover from illness very quickly. Fruits and vegetables are also planted in such a way where only natural substances are used to make them grow well. Supporters claim several advantages in choosing organic food, such as no chemicals, eco- friendliness, high nutritional values, and better taste. On the other hand, opponents note the disadvantages of organic food. First, organic food is usually more expensive than non-organic food. Second, organic food is produced using no artificial preservatives, and as such it may go bad more quickly. Third, it is not easy to find organic food at every store. Finally, some studies have questioned whether organic food is truly more nutritious than traditional food. Is it really good and safe to eat organic food? The answer may depend upon one’s personal choice. 38",
@@ -9128,7 +9128,7 @@
         "A": "people who approve of a certain behavior",
         "B": "people who disagree with something",
         "C": "people who promote something",
-        "D": "people who make progress 40"
+        "D": "people who make progress"
       },
       "answer": "B",
       "case_context": "These days, food safety has become a big issue and a major public concern. People are worried about the overuse of chemicals on plants and livestock. Because of increasing health awareness, the number of people switching from traditional food to organic food is on the rise. It is usually thought that chemicals used on plants and animals are harmful for a person’s health. Unlike traditional farms, organic farmers use natural methods to control insects and diseases on their agriculture. Animals like pigs and chickens on organic farms are kept in open spaces so that they may walk around and therefore be better cared for. In addition, they are not fed the type of medicine that helps them grow or recover from illness very quickly. Fruits and vegetables are also planted in such a way where only natural substances are used to make them grow well. Supporters claim several advantages in choosing organic food, such as no chemicals, eco- friendliness, high nutritional values, and better taste. On the other hand, opponents note the disadvantages of organic food. First, organic food is usually more expensive than non-organic food. Second, organic food is produced using no artificial preservatives, and as such it may go bad more quickly. Third, it is not easy to find organic food at every store. Finally, some studies have questioned whether organic food is truly more nutritious than traditional food. Is it really good and safe to eat organic food? The answer may depend upon one’s personal choice. 38",
@@ -11182,7 +11182,7 @@
         "A": "assistance",
         "B": "concentration",
         "C": "connection",
-        "D": "enclosure 37"
+        "D": "enclosure"
       },
       "answer": "C",
       "case_context": "Recent biological research indicates that there is a biochemical basis to love, which explains why people in love feel as if they were in a more beautiful world. Psychologists such as Dr. Elaine Hatfield, Robert Sternberg and Zick Rubin posit that love consists of three or more stages. The three main stages are lust, attraction, and attachment, while some of the other stages are intimacy, trust, and jealousy. Each stage is ruled or initiated by specific hormonal controllers. In their studies, every love passes through some of these stages and occurs due to the mediation of certain molecules in these specific chemical controllers. Biological research has shown that the hormones dominant in the different phases include testosterone and estrogen (the sexual hormones); dopamine, norepinephrine and serotonin (these are the “pleasure chemicals” - the hormones invoking feelings of pleasure and excitement); and oxytocin (the “cuddle chemical” - the hormone producing feelings of attachment to another person). For example, in the second phase of attraction, when people have the feeling of being in love, the little molecule phenylethylamine (known as PEA), controlling the love chemicals dopamine and noreinephrine, can cause feelings of elation, exhilaration and euphoria. People feel excited and fulfilled. Additionally, biological anthropologist Helen Fisher, an expert on romantic love, discusses what happens in the brain when people are in love and proposes that there is a dramatic increase in the amount of dopamine and norepinephrine present in the brain when one first becomes infatuated with another person. 38",

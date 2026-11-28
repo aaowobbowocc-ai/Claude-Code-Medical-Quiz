@@ -101,13 +101,52 @@ function parseTaipowerPdf(text) {
     prev = num
   }
 
+  /*
+   * 原卷每題的 [答案] 前面還印著一個左邊欄的數字（答案卡的劃記列號），
+   * 每題遞增 3、到頂繞回來（…21, 24, 1, 4…，模 26）：
+   *
+   *      7 [B] 11. 依政府採購法第65條規定，得標廠商應自行履行勞務契約，下列何者正確？
+   *    (A)得轉包、不得分包  (B)不得轉包、得分包
+   *    (C)不得轉包、不得分包 (D)得轉包、得分包
+   *     10 [B] 12. 公開招標廢標後大幅修改招標文件後再行辦理招標，必須多少家以上廠商投標始得開標？
+   *    (A) 1家 (B) 3家 (C)由機關決定 (D)視招標文件之規定
+   *     13 [D] 13. 機關辦理採購…
+   *
+   * 題塊原本切在下一個「[」的位置，那個數字於是留在**前一題**的尾巴，
+   * 黏成「(D)視招標文件之規定 13」。全站 378 個選項中了，
+   * 而且最後一格常常就是正解（84 個）。切點要往前退過那個數字。
+   *
+   * 兩道防呆：
+   *   · **整卷判定**。103／106 資訊、112 企管那幾年沒有這一欄（「[C]」自己佔一行），
+   *     那種卷一個都不能動 —— 不然會把選項尾巴的上下標當成邊欄數字削掉
+   *     （state-it「(D) (1100111.011) 2」是 (1100111.011)₂、「(D) 1×10 8」是 1×10⁸）。
+   *   · **要接得上前後那一個**（模 26 遞增 3）。某一題漏印邊欄數字時，
+   *     抓到的會是那一格自己的尾數，接不上就不要退。
+   */
+  const marginRe = /(\d{1,3})\s*$/;
+  const margins = markers.map((mk) => {
+    const g = marginRe.exec(body.slice(0, mk.markerStart));
+    return g ? { val: +g[1], at: mk.markerStart - g[0].length } : null;
+  });
+  const fits = (a, b) => !!a && !!b && ((b.val - a.val - 3) % 26 + 26) % 26 === 0;
+  const chained = margins.map((cur, i) => !!cur
+    && (fits(margins[i - 1], cur) || fits(cur, margins[i + 1])));
+  // 整卷判定要看**接得上序列的比例**，不是「有抓到數字的比例」。
+  // 沒有這一欄的卷照樣會零星抓到東西（103 資訊 40 題抓到 9 個、
+  // 106 資訊科目C 抓到「900」「0」），但一個都接不上 3 的等差。
+  const n = markers.length;
+  const hasMarginCol = n >= 10 && chained.filter(Boolean).length / n >= 0.7;
+  const useMargin = chained.map((ok) => hasMarginCol && ok);
+
   const questions = []
   let pendingPassage = null
   for (let i = 0; i < markers.length; i++) {
     const mk = markers[i]
-    const end = i + 1 < markers.length ? markers[i + 1].markerStart : body.length
-    const block = body.slice(mk.contentStart, end)
-    const split = splitOptions(block)
+    const nextEnd = i + 1 < markers.length
+      ? (useMargin[i + 1] ? margins[i + 1].at : markers[i + 1].markerStart)
+      : body.length;
+    const block = body.slice(mk.contentStart, nextEnd);
+    const split = splitOptions(block);
     if (!split) continue
 
     const optCount = Object.values(split.options).filter(Boolean).length
